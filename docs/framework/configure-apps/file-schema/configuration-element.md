@@ -11,14 +11,14 @@ ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2d75b25734b92df062d3dc46824da44883ab46d5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5146ed8326b12e90d0fe6247b0c4aba3a69dd77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745945"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485784"
 ---
-# <a name="configuration-element"></a>\<Konfiguracja > — element
+# <a name="configuration-element"></a>\<Konfiguracja > element
 
 Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.
 
@@ -44,21 +44,21 @@ Brak
 
 |     | Opis |
 | --- | ----------- |
-| [**\<assemblybinding — >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Określa zestaw powiązania zasad na poziomie konfiguracji.|
-| [**\<Uruchamianie >** schemat ustawień](~/docs/framework/configure-apps/file-schema/startup/index.md) | Wszystkie elementy w schemat ustawień uruchamiania. |
-| [**\<środowisko uruchomieniowe >** schemat ustawień](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Wszystkie elementy w schemat ustawień środowiska uruchomieniowego. |
-| [**\<System.Runtime.Remoting >** schemat ustawień](http://msdn.microsoft.com/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) | Wszystkie elementy w schemacie ustawień komunikacji zdalnej. |
-| [**\<system.Net >** schemat ustawień](~/docs/framework/configure-apps/file-schema/network/index.md) | Wszystkie elementy w schemacie ustawień sieci. |
+| [**\<assemblybinding — >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Określa politykę powiązania zestawu na poziomie konfiguracji.|
+| [**\<Uruchamianie >** schemat ustawień](~/docs/framework/configure-apps/file-schema/startup/index.md) | Wszystkie elementy w schemacie ustawień uruchamiania. |
+| [**\<środowisko uruchomieniowe >** schemat ustawień](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Wszystkie elementy w schemacie ustawień środowiska uruchomieniowego. |
+| [**\<System.Runtime.Remoting >** schemat ustawień](https://msdn.microsoft.com/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) | Wszystkie elementy w schemacie ustawień komunikacji zdalnej. |
+| [**\<przestrzeni nazw system.Net >** schemat ustawień](~/docs/framework/configure-apps/file-schema/network/index.md) | Wszystkie elementy w schemacie ustawień sieci. |
 | [**\<cryptographysettings — >** schemat ustawień](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | Wszystkie elementy w schemacie ustawień kryptograficznych. |
-| [**\<Konfiguracja >** schemat sekcji](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Wszystkie elementy w schemacie ustawienia w sekcji konfiguracji. |
-| [Schemat ustawień śledzenia i debugowania](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | Wszystkie elementy w schemacie ustawienia śledzenia i debugowania. |
-| [Schemat ustawień konfiguracji programu ASP.NET](https://msdn.microsoft.com/library/b5ysx397(v=vs.100).aspx) | Wszystkie elementy w schemacie konfiguracji ASP.NET zawiera elementy dotyczące konfigurowania witryny sieci Web ASP.NET i aplikacji. Używane w *Web.config* plików. |
-| [**\<< webServices >** schemat ustawień](http://msdn.microsoft.com/f84d6d55-1add-4eb7-ae46-33df5833ea2e) | Wszystkie elementy w schemacie ustawienia usług sieci Web. |
-| [Schemat ustawień internetowych](~/docs/framework/configure-apps/file-schema/web/index.md) | Wszystkie elementy w schemat ustawień sieci Web, który zawiera elementy dotyczące konfigurowania, jak działa ASP.NET przy użyciu aplikacji hosta, takich jak IIS. Używane w *konfigurację aspnet.config* plików. |
+| [**\<Konfiguracja >** schemat sekcji](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Wszystkie elementy w schemacie ustawień sekcji konfiguracji. |
+| [Schemat ustawień śledzenia i debugowania](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | Wszystkie elementy w schemacie ustawień śledzenia i debugowania. |
+| [Schemat ustawień konfiguracji programu ASP.NET](https://msdn.microsoft.com/library/b5ysx397(v=vs.100).aspx) | Wszystkie elementy w schemacie konfiguracji platformy ASP.NET, które zawierają elementy umożliwiające konfigurację witryn sieci Web platformy ASP.NET i aplikacji. Używane w *Web.config* plików. |
+| [**\<usługi sieci Web >** schemat ustawień](https://msdn.microsoft.com/f84d6d55-1add-4eb7-ae46-33df5833ea2e) | Wszystkie elementy w schemacie ustawień usług sieci Web. |
+| [Schemat ustawień internetowych](~/docs/framework/configure-apps/file-schema/web/index.md) | Wszystkie elementy w schemacie ustawień sieci Web zawierają elementy umożliwiające konfigurację działania programu ASP.NET z aplikacją hosta, takich jak usługi IIS. Używane w *aspnet.config* plików. |
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy plik konfiguracyjny musi zawierać dokładnie jeden  **\<konfiguracji >** elementu.
+Każdy plik konfiguracji musi zawierać dokładnie jeden  **\<konfiguracji >** elementu.
 
 ## <a name="see-also"></a>Zobacz także
 

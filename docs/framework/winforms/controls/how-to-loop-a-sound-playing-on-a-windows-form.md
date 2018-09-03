@@ -10,15 +10,15 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 67e1f8abe6872358a29ab8f6734b58c1c1bc809c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6b227915a98bb757b559d229ebc1ee757ffb25c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533760"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480120"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Porady: odtwarzanie dźwięku w pętli w formularzu systemu Windows
-Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingButton_Click` uruchamia program obsługi zdarzeń, wszystkie obecnie odtwarzanie zatrzymuje dźwięku. Jeśli żaden dźwięk jest odtwarzany, nic się nie dzieje.  
+Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingButton_Click` programu obsługi zdarzeń uruchamia wszystkie obecnie odtwarzanie zatrzymuje dźwięku. Jeśli żaden dźwięk jest odtwarzany, nic się nie dzieje.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
@@ -27,18 +27,18 @@ Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingB
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów systemu i System.Windows.Forms.  
+-   Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
   
--   Aby zastąpić nazwę pliku `"c:\Windows\Media\chimes.wav"` z prawidłową nazwą pliku.  
+-   Zastąp nazwę pliku `"c:\Windows\Media\chimes.wav"` z prawidłową nazwą pliku.  
   
- Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby uzyskać informacje o tworzeniu tego przykładu z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Operacje na plikach, powinna zostać ujęta w odpowiednie bloki obsługi wyjątków.  
+ Operacje na plikach powinna zostać ujęta w odpowiednie bloki obsługi wyjątków.  
   
  Następujące warunki mogą spowodować wyjątek:  
   
--   Nazwa ścieżki jest nieprawidłowo sformułowany. Na przykład zawiera znaki, które nie są prawidłowe, lub jest tylko znak odstępu (<xref:System.ArgumentException> klasy).  
+-   Nazwa ścieżki jest nieprawidłowo sformułowany. Na przykład zawiera znaki, które nie są prawidłowe, lub jest tylko spacją (<xref:System.ArgumentException> klasy).  
   
 -   Ścieżka jest tylko do odczytu (<xref:System.IO.IOException> klasy).  
   
@@ -48,10 +48,10 @@ Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingB
   
 -   Ścieżka jest nieprawidłowa (<xref:System.IO.DirectoryNotFoundException> klasy).  
   
--   Ścieżka jest tylko dwukropka ":" (<xref:System.NotSupportedException> klasy).  
+-   Ścieżka jest tylko dwukropek ":" (<xref:System.NotSupportedException> klasy).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1.vb nie może być plik źródłowy języka Visual Basic. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
+ Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1.vb może nie być plik źródłowy w języku Visual Basic. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Media.SoundPlayer.PlayLooping%2A>  

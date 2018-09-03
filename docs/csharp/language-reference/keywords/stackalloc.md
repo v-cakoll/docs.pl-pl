@@ -6,15 +6,15 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 905873cf7f576ff35a9bc1c182ce7ebe17920288
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5926550eea1f5a2f8fb74645f22ca54c2bed3136
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269171"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484057"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (odwołanie w C#)
-`stackalloc` — Słowo kluczowe jest używane w kontekście niebezpieczny kod można przydzielić bloku pamięci na stosie.
+`stackalloc` Słowo kluczowe jest używane w kontekście niebezpieczny kod można przydzielić blok pamięci na stosie.
 
 ```csharp
 int* block = stackalloc int[100];
@@ -22,7 +22,7 @@ int* block = stackalloc int[100];
 
 ## <a name="remarks"></a>Uwagi
 
-Słowo kluczowe jest prawidłowy tylko w lokalnej zmiennej inicjatory. Poniższy kod powoduje, że błędy kompilatora.
+Słowo kluczowe jest prawidłowy tylko w inicjatorach zmiennej lokalnej. Poniższy kod powoduje błędy kompilatora.
 
 ```csharp
 int* block;
@@ -32,7 +32,7 @@ int* block;
 block = stackalloc int[100];
 ```
 
-Począwszy od 7.3 C#, można użyć składni inicjatora tablicy dla `stackalloc` tablic. Następujące deklaracje zadeklarować tablicę z trzech elementów, których wartości są liczby całkowite `1`, `2`, i `3`:
+Począwszy od języka C# 7.3, można użyć składni inicjatora tablicy dla `stackalloc` tablic. Następujące deklaracje jest zadeklarowanie tablicy za pomocą trzech elementów, których wartości są liczbami całkowitymi `1`, `2`, i `3`:
 
 ```csharp
 // Valid starting with C# 7.3
@@ -41,30 +41,31 @@ int* second = stackalloc int[] { 1, 2, 3 };
 int* third = stackalloc[] { 1, 2, 3 };
 ```
 
-Ponieważ są związane z typów wskaźnika, `stackalloc` wymaga [niebezpieczne](unsafe.md) kontekstu. Aby uzyskać więcej informacji, zobacz [niebezpieczny kod i wskaźniki](../../programming-guide/unsafe-code-pointers/index.md) 
+Ponieważ typy wskaźników, `stackalloc` wymaga [niebezpieczne](unsafe.md) kontekstu. Aby uzyskać więcej informacji, zobacz [niebezpieczny kod i wskaźniki](../../programming-guide/unsafe-code-pointers/index.md) 
 
-`stackalloc` przypomina [_alloca](/cpp/c-runtime-library/reference/alloca) biblioteki wykonawcze języka C.
+`stackalloc` przypomina [_alloca](/cpp/c-runtime-library/reference/alloca) biblioteki wykonawczej C.
 
 ## <a name="examples"></a>Przykłady
 
-Poniższy przykład oblicza i wyświetla najpierw 20 cyfr w sekwencji Fibonacci. Każdą liczbę to suma poprzednich dwóch liczb. W kodzie bloku pamięci wystarczający rozmiar ma 20 elementów typu `int` został przydzielony na stosie nie stosu. Adres bloku są przechowywane we wskaźniku `fib`. Ta pamięć nie podlega wyrzucanie elementów bezużytecznych i dlatego nie trzeba przypięty (przy użyciu [stałej](fixed-statement.md)). Okres istnienia blok pamięci jest ograniczona do istnienia metody, która definiuje ją. Nie można zwolnić pamięć, przed metoda zwraca.
+Poniższy przykład oblicza i wyświetla pierwszych 20 cyfr w sekwencji Fibonacci. Każdy numer to suma poprzednich dwóch liczb. W kodzie, blok pamięci wystarczająco duży, aby zawierała 20 elementów typu `int` jest przydzielony na stosie nie sterty. Adres bloku jest przechowywany we wskaźniku `fib`. Ta pamięć nie podlega wyrzucania elementów bezużytecznych i w związku z tym nie trzeba przypiąć (przy użyciu [stałej](fixed-statement.md)). Okres istnienia blok pamięci jest ograniczona do okresu istnienia metody, który go definiuje. Nie można zwolnić pamięć, przed powrotem z metody.
 
 [!code-csharp[csrefKeywordsOperator#15](../../../../samples/snippets/csharp/keywords/StackAllocExamples.cs#1)]
 
-W poniższym przykładzie inicjowane `stackalloc` tablica liczb całkowitych na maska bitowa o jeden bit, ustaw w każdym elemencie. Oznacza to, nowej składni inicjatora dostępne począwszy od 7.3 C#:
+Poniższy przykład inicjuje `stackalloc` tablica liczb całkowitych do maski bitowej o jeden bit ustawiona w każdym elemencie. W tym przykładzie pokazano, jak nowa składnia inicjatora dostępnych w języku C# 7.3:
 
 [!code-csharp[csrefKeywordsOperator#15](../../../../samples/snippets/csharp/keywords/StackAllocExamples.cs#2)]
 
 ## <a name="security"></a>Zabezpieczenia
 
-Niebezpieczny kod jest mniej bezpieczna niż bezpiecznych metod. Jednak użycie `stackalloc` automatycznie włączone funkcje wykrywania przepełnienie buforu w środowisku uruchomieniowym języka (wspólnego CLR). W przypadku wykrycia przepełnienie buforu, proces jest zakończony tak szybko jak to możliwe, aby zminimalizować ryzyko, że złośliwy kod jest wykonywany.
+Niebezpieczny kod jest mniej bezpieczna niż bezpiecznych metod. Jednak użycie `stackalloc` automatycznie włącza funkcje wykrywania przepełnienia buforu, w środowisku uruchomieniowym języka (wspólnego CLR). W przypadku wykrycia przepełnienie buforu tak szybko, jak to możliwe, aby zminimalizować prawdopodobieństwo, że złośliwy kod jest wykonywany zakończenia procesu.
 
 ## <a name="c-language-specification"></a>Specyfikacja języka C#
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Zobacz też
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)  
- [Niebezpieczny kod i wskaźniki](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+- [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)  
+- [Niebezpieczny kod i wskaźniki](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

@@ -1,6 +1,6 @@
 ---
-title: GetErrorInfo — funkcja (niezarządzany wykaz interfejsów API)
-description: Funkcja GetErrorInfo pobiera informacje o błędzie z poprzedniego wywołania funkcji.
+title: Geterrorinfo — funkcja (niezarządzany wykaz interfejsów API)
+description: Funkcja geterrorinfo — pobiera informacje o błędzie z poprzedniego wywołania funkcji.
 ms.date: 11/06/2017
 api_name:
 - GetErrorInfo
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef52a4e503597e08eae407571f02bf63adafc4e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f25777402fa31e72cbbf36f58a6c4cc65542979
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455961"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482239"
 ---
-# <a name="geterrorinfo-function"></a>GetErrorInfo — funkcja
+# <a name="geterrorinfo-function"></a>Geterrorinfo — funkcja
 Pobiera informacje o błędzie z poprzedniego wywołania funkcji.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -36,11 +36,11 @@ IErrorInfo* GetErrorInfo();
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [IErrorInfo](https://msdn.microsoft.com/library/windows/desktop/ms221233(v=vs.85).aspx) obiektu, jeśli wywołanie funkcji zakończy się pomyślnie, lub `null` w przypadku niepowodzenia.
+Wskaźnik do [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) obiektu, jeśli wywołanie funkcji zakończy się pomyślnie, lub `null` Jeśli zakończy się niepowodzeniem.
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IComThreadingInfo::GetErrorInfo](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) metody.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -50,4 +50,4 @@ Ta funkcja jest zawijana wywołanie [IComThreadingInfo::GetErrorInfo](https://ms
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

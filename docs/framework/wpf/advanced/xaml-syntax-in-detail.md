@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: f2c3aab20dc5bcf9b0f9f7053323ccd7a04443cc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755054"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485732"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 W tym temacie opisano terminy, które są używane do opisywania elementy składni XAML. Te warunki są często stosowane w pozostałej części tej dokumentacji, zarówno dla dokumentacji WPF specjalnie i dla innych platform, które używają XAML lub włączane przez obsługę języka XAML na poziomie System.Xaml podstawowe pojęcia dotyczące XAML. W tym temacie omówiono w podstawowej terminologii opisanymi w temacie [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -45,7 +45,7 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
 ## <a name="the-xaml-language-specification"></a>Specyfikacja języka XAML  
  Terminologia składni XAML, które są zdefiniowane w tym miejscu jest również zdefiniowana lub odwołania w specyfikacji języka XAML. XAML jest językiem oparte na języku XML i następuje lub rozszerza strukturalnych reguł XML. Niektóre terminologii został udostępniony z lub opiera się na terminologii często używane podczas opisywania język XML lub XML document object model.  
   
- Aby uzyskać więcej informacji na temat specyfikacji języka XAML, Pobierz [ \[MS-XAML\] ](http://go.microsoft.com/fwlink/?LinkId=114525) z Microsoft Download Center.  
+ Aby uzyskać więcej informacji na temat specyfikacji języka XAML, Pobierz [ \[MS-XAML\] ](https://go.microsoft.com/fwlink/?LinkId=114525) z Microsoft Download Center.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML i środowiska CLR  

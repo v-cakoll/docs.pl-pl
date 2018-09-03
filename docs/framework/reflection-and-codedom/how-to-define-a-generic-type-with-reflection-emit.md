@@ -12,116 +12,116 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ed0d4752eb42f0bd3df8167d498b99d7af1080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396922"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483830"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Porady: definiowanie typu ogólnego przy użyciu emisji odbicia
-W tym temacie przedstawiono sposób tworzenia prostego typu ogólnego z dwoma parametrami typu, jak zastosować ograniczenia klasy, interfejsu, ograniczenia i ograniczeń specjalnych do parametrów typu i sposobu tworzenia elementów członkowskich, które używają parametrów typu klasy jako typy parametrów i zwracanych typów.  
+W tym temacie pokazano, jak utworzyć prosty typ ogólny z dwoma parametrami typu, jak zastosować ograniczenia klasy, interfejsu, ograniczenia i ograniczenia specjalne do parametrów typu oraz sposobu tworzenia elementów członkowskich, które używają parametrów typu klasy jako typy parametrów i zwracanych typów.  
   
 > [!IMPORTANT]
->  Metoda nie jest rodzajowa tak, ponieważ należy do typu ogólnego i używa parametrów typu tego typu. Metody jest rodzajowy, tylko wtedy, gdy ma własną listy parametrów typu. Większość metody na typach ogólnych nie są ogólny, jak w poniższym przykładzie. Na przykład emitowania metody rodzajowej zobacz [porady: definiowanie metody ogólnej przy emisja odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+>  Metoda nie jest ogólna tylko w przypadku, ponieważ należy do typu ogólnego i używa parametrów typu tego typu. Metoda jest ogólna tylko wtedy, gdy ma ona własną lista parametrów typu. Większość metod w typach ogólnych nie są ogólny, jak w poniższym przykładzie. Aby uzyskać przykład emitowania metody rodzajowej, zobacz [porady: definiowanie metody ogólnej przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
   
-### <a name="to-define-a-generic-type"></a>Aby zdefiniować typu ogólnego  
+### <a name="to-define-a-generic-type"></a>Aby zdefiniować typ ogólny  
   
-1.  Zdefiniuj zestawie dynamicznym o nazwie `GenericEmitExample1`. W tym przykładzie zestaw jest wykonywane i zapisywane na dysku, dlatego <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> jest określona.  
+1.  Definiowanie zestawu dynamicznego o nazwie `GenericEmitExample1`. W tym przykładzie zestawu jest wykonywane i zapisywane na dysku, dlatego <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> jest określony.  
   
      [!code-cpp[EmitGenericType#2](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#2)]
      [!code-csharp[EmitGenericType#2](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#2)]
      [!code-vb[EmitGenericType#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#2)]  
   
-2.  Zdefiniuj module dynamicznym. Zestaw składa się z modułów pliku wykonywalnego. Dla zestawu jednego modułu Nazwa modułu jest taka sama jak nazwa zestawu i nazwa pliku jest nazwa modułu oraz rozszerzenia.  
+2.  Definiowanie modułu dynamicznego. Zestaw składa się modułów wykonywalnych. Dla zestawu pojedynczego modułów Nazwa modułu jest taka sama jak nazwa zestawu i nazwa pliku jest nazwa modułu, plus rozszerzenie.  
   
      [!code-cpp[EmitGenericType#3](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#3)]
      [!code-csharp[EmitGenericType#3](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#3)]
      [!code-vb[EmitGenericType#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#3)]  
   
-3.  Zdefiniuj klasę. W tym przykładzie klasa o nazwie `Sample`.  
+3.  Zdefiniuj klasę. W tym przykładzie klasę o nazwie `Sample`.  
   
      [!code-cpp[EmitGenericType#4](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#4)]
      [!code-csharp[EmitGenericType#4](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#4)]
      [!code-vb[EmitGenericType#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#4)]  
   
-4.  Zdefiniuj parametry typu ogólnego `Sample` przez przekazanie tablica ciągów zawierająca nazwy parametrów w celu <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> metody. Dzięki temu klasy typu ogólnego. Wartość zwracana jest tablicą <xref:System.Reflection.Emit.GenericTypeParameterBuilder> obiekty reprezentujące parametrów typu, które mogą być używane w kodzie emitowany.  
+4.  Definiowanie parametrów typu ogólnego `Sample` , przekazując tablicę ciągów, które zawierają nazwy parametrów w celu <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> metody. To sprawia, że klasy typu ogólnego. Wartość zwracana jest tablicą <xref:System.Reflection.Emit.GenericTypeParameterBuilder> obiekty reprezentujące parametrami typu, które mogą być używane w emitowany kod.  
   
-     W poniższym kodzie `Sample` staje się typem ogólnym z parametrami typu `TFirst` i `TSecond`. Aby czytelność kodu, każdy <xref:System.Reflection.Emit.GenericTypeParameterBuilder> znajduje się w zmiennej z taką samą nazwę jak parametr typu.  
+     W poniższym kodzie `Sample` staje się typem ogólnym z parametrami typu `TFirst` i `TSecond`. Aby ułatwić interpretowanie każdy kod <xref:System.Reflection.Emit.GenericTypeParameterBuilder> jest umieszczana w zmiennej z taką samą nazwę jak parametr typu.  
   
      [!code-cpp[EmitGenericType#5](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#5)]
      [!code-csharp[EmitGenericType#5](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#5)]
      [!code-vb[EmitGenericType#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#5)]  
   
-5.  Dodaj ograniczeń specjalnych parametrów typu. W tym przykładzie parametr typu `TFirst` jest ograniczone do typów, które mają konstruktorów bez parametrów i typy referencyjne.  
+5.  Dodaj specjalne ograniczenia parametrów typu. W tym przykładzie parametr typu `TFirst` jest ograniczony do typów, które mają konstruktorów bez parametrów i na typy odwołań.  
   
      [!code-cpp[EmitGenericType#6](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#6)]
      [!code-csharp[EmitGenericType#6](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#6)]
      [!code-vb[EmitGenericType#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#6)]  
   
-6.  Opcjonalnie można dodać ograniczenia klasy i interfejs do parametrów typu. W tym przykładzie parametr typu `TFirst` jest ograniczona do typów wyprowadzonych z klasy podstawowej reprezentowany przez <xref:System.Type> obiektów zawartych w zmiennej `baseType`, i implementują interfejsy, których typy są zawarte w zmiennych `interfaceA` i `interfaceB`. Zobacz przykład kodu dla deklaracji i przypisanie tych zmiennych.  
+6.  Opcjonalnie można dodać ograniczenia klasy i interfejs do parametrów typu. W tym przykładzie parametr typu `TFirst` jest ograniczony do typów wyprowadzonych z klasy bazowej, reprezentowane przez <xref:System.Type> obiektów znajdujących się w zmiennej `baseType`, i implementują interfejsy, których typy są zawarte w zmiennych `interfaceA` i `interfaceB`. Zobacz przykład kodu dla deklarację i przypisanie tych zmiennych.  
   
      [!code-cpp[EmitGenericType#7](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#7)]
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  Zdefiniuj pola. W tym przykładzie typ pola jest określony przez parametr typu `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> pochodną <xref:System.Type>, dzięki czemu można używać parametrów typu ogólnego, można użyć typu dowolnego miejsca.  
+7.  Zdefiniuj pola. W tym przykładzie typ pola jest określony przez parametr typu `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> pochodzi od klasy <xref:System.Type>, aby można było używać parametrów typu ogólnego, gdziekolwiek typ może być używany.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8.  Zdefiniuj metody, która używa parametrów typu ogólnego typu. Należy pamiętać, że takie metody nie są ogólny, chyba że mają własne listy parametrów typu. Poniższy kod definiuje `static` — metoda (`Shared` w języku Visual Basic) pobierającej tablicę `TFirst` i zwraca `List<TFirst>` (`List(Of TFirst)` w języku Visual Basic) zawierający wszystkie elementy tablicy. Aby zdefiniować tej metody, należy utworzyć typ `List<TFirst>` przez wywołanie metody <xref:System.Type.MakeGenericType%2A> w definicji typu ogólnego `List<T>`. ( `T` Zostanie pominięty, gdy używasz `typeof` — operator (`GetType` w języku Visual Basic) można pobrać definicji typu ogólnego.) Typ parametru jest tworzona przy użyciu <xref:System.Type.MakeArrayType%2A> metody.  
+8.  Należy zdefiniować metodę, która używa parametrów typu ogólnego typu. Należy pamiętać, że takie metody nie są rodzajowe, chyba że mają swoje własne listy parametrów typu. Poniższy kod definiuje `static` — metoda (`Shared` w języku Visual Basic), przyjmuje tablicę `TFirst` i zwraca `List<TFirst>` (`List(Of TFirst)` w języku Visual Basic) zawierający wszystkie elementy tablicy. Aby zdefiniować tę metodę, jest to konieczne utworzyć typ `List<TFirst>` przez wywołanie metody <xref:System.Type.MakeGenericType%2A> w definicji typu ogólnego `List<T>`. ( `T` Zostanie pominięty, gdy używasz `typeof` — operator (`GetType` w języku Visual Basic) można pobrać definicji typu ogólnego.) Typ parametru jest tworzona przy użyciu <xref:System.Type.MakeArrayType%2A> metody.  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
      [!code-vb[EmitGenericType#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#22)]  
   
-9. Emituj treści metody. Treści metody składa się z trzech kody operacji, które ładują tablicy wejściowej na stosie, należy wywołać `List<TFirst>` konstruktora przyjmującego `IEnumerable<TFirst>` (które wykonuje całą pracę umieszczania elementów wejściowych na liście) i zwróć (pozostawiając nowe <xref:System.Collections.Generic.List%601> obiektu na stosie). Trudne część emitowanie ten kod będzie niedługo konstruktora.  
+9. Emituj treści metody. Treść metody składa się z trzech rozkazów, które ładują tablicy wejściowej na stosie, wywołaj `List<TFirst>` konstruktora przyjmującego `IEnumerable<TFirst>` (który wykonuje całą pracę, umieszczając elementów wejściowych na listę) i zwróć (pozostawiając nowy <xref:System.Collections.Generic.List%601> obiektu na stosie). Trudna część emitowania ten kod będzie niedługo konstruktora.  
   
-     <xref:System.Type.GetConstructor%2A> Metoda nie jest obsługiwana na <xref:System.Reflection.Emit.GenericTypeParameterBuilder>, więc nie można pobrać konstruktora `List<TFirst>` bezpośrednio. Najpierw należy pobrać konstruktora definicji typu ogólnego `List<T>` , a następnie wywołaj metodę, który konwertuje go do odpowiedniego konstruktora `List<TFirst>`.  
+     <xref:System.Type.GetConstructor%2A> Metoda nie jest obsługiwana na <xref:System.Reflection.Emit.GenericTypeParameterBuilder>, więc nie jest możliwe uzyskanie konstruktora `List<TFirst>` bezpośrednio. Najpierw należy go pobrać konstruktora definicji typu ogólnego `List<T>` a następnie wywołać metodę, która konwertuje go do odpowiedniego konstruktora `List<TFirst>`.  
   
-     Konstruktor używany w tym przykładzie kodu pobiera `IEnumerable<T>`. Należy jednak pamiętać, że nie jest definicji typu ogólnego <xref:System.Collections.Generic.IEnumerable%601> interfejs ogólny; zamiast tego parametru typu `T` z `List<T>` musi zastąpić dla parametru typu `T` z `IEnumerable<T>`. (Prawdopodobnie mylące tylko, ponieważ oba typy ma parametry typu o nazwie `T`. That is, dlaczego w tym przykładzie kodu używane nazwy `TFirst` i `TSecond`.) Aby uzyskać typu argumentu konstruktora, uruchom przy użyciu definicji typu ogólnego `IEnumerable<T>` i Wywołaj <xref:System.Type.MakeGenericType%2A> z pierwszy parametr typu ogólnego `List<T>`. Lista argumentów konstruktora muszą być przekazywane jako tablica, z tylko jednym argumentem. w takim przypadku.  
+     Konstruktor używany dla tego przykładu kodu przyjmuje `IEnumerable<T>`. Należy jednak pamiętać, że nie jest definicja typu ogólnego <xref:System.Collections.Generic.IEnumerable%601> interfejs ogólny; zamiast tego parametru typu `T` z `List<T>` musi podstawiane za parametr typu `T` z `IEnumerable<T>`. (Zajmuje to nieco mylące tylko w przypadku, ponieważ oba typy ma parametry typu o nazwie `T`. That is, dlaczego ten przykład kodu używa nazwy `TFirst` i `TSecond`.) Aby uzyskać typ argumentu konstruktora, rozpoczynać się definicji typu ogólnego `IEnumerable<T>` i wywołać <xref:System.Type.MakeGenericType%2A> z pierwszym parametrem typu ogólnego `List<T>`. Lista argumentów konstruktora musi zostać przekazany jako tablicę z tylko jednym argumentem w tym przypadku.  
   
     > [!NOTE]
-    >  Definicji typu ogólnego jest wyrażony jako `IEnumerable<>` korzystając `typeof` operatora w języku C# lub `IEnumerable(Of )` korzystając `GetType` operatora w języku Visual Basic.  
+    >  Definicja typu ogólnego jest wyrażona jako `IEnumerable<>` zastosowania `typeof` operatora w języku C# lub `IEnumerable(Of )` zastosowania `GetType` operatora w języku Visual Basic.  
   
-     Teraz można pobrać konstruktora `List<T>` przez wywołanie metody <xref:System.Type.GetConstructor%2A> w definicji typu ogólnego. Aby przekonwertować tego konstruktora odpowiedniego konstruktora `List<TFirst>`, Przekaż `List<TFirst>` i konstruktora z `List<T>` do statycznego <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29?displayProperty=nameWithType> — metoda.  
+     Teraz można pobrać konstruktora z `List<T>` przez wywołanie metody <xref:System.Type.GetConstructor%2A> w definicji typu ogólnego. Aby przekonwertować tego konstruktora odpowiedniego konstruktora `List<TFirst>`, przekazać `List<TFirst>` i konstruktora z `List<T>` statycznej <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29?displayProperty=nameWithType> metody.  
   
      [!code-cpp[EmitGenericType#23](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#23)]
      [!code-csharp[EmitGenericType#23](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#23)]
      [!code-vb[EmitGenericType#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#23)]  
   
-10. Utwórz typ i Zapisz plik.  
+10. Tworzenie typu, a następnie zapisz plik.  
   
      [!code-cpp[EmitGenericType#8](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#8)]
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. Wywołanie metody. `ExampleMethod` nie jest rodzajowa, ale należy do typu jest ogólny, tak aby można było pobrać <xref:System.Reflection.MethodInfo> może być wywoływany jest niezbędne do utworzenia skonstruowanego typu z definicji typu dla `Sample`. Używa utworzony typ `Example` klasy, która spełnia ograniczenia na `TFirst` ponieważ jest typem referencyjnym i ma domyślny konstruktor bez parametrów i `ExampleDerived` klasy, która spełnia ograniczenia na `TSecond`. (Kod `ExampleDerived` można znaleźć w sekcji z przykładowym kodem.) Te dwa typy są przekazywane do <xref:System.Type.MakeGenericType%2A> do utworzenia skonstruowanego typu. <xref:System.Reflection.MethodInfo> Następnie są uzyskiwane przy użyciu <xref:System.Type.GetMethod%2A> metody.  
+11. Wywołanie metody. `ExampleMethod` nie jest ogólna, ale ogólny, dlatego w celu uzyskania typu należy do <xref:System.Reflection.MethodInfo> może być wywoływany jest niezbędne do utworzenia skonstruowanego typu w definicji typu dla `Sample`. Skonstruowany typ używa `Example` klasy, która spełnia ograniczenia na `TFirst` ponieważ jest typem odwołania, a ma domyślny konstruktor bez parametrów i `ExampleDerived` klasę, która spełnia ograniczenia na `TSecond`. (Kod `ExampleDerived` można znaleźć w sekcji przykładu kodu.) Te dwa typy są przekazywane do <xref:System.Type.MakeGenericType%2A> w celu utworzenia skonstruowanego typu. <xref:System.Reflection.MethodInfo> Następnie uzyskuje się za pomocą <xref:System.Type.GetMethod%2A> metody.  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]
      [!code-vb[EmitGenericType#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#9)]  
   
-12. Poniższy kod tworzy tablicę `Example` obiektów, umieszcza tablicy w tablicy typu <xref:System.Object> reprezentujących argumenty metody do wywołania i przekazuje je do <xref:System.Reflection.MethodBase.Invoke%28System.Object%2CSystem.Object%5B%5D%29> metody. Pierwszy argument funkcji <xref:System.Reflection.MethodBase.Invoke%2A> metoda jest odwołanie o wartości null, ponieważ metoda jest `static`.  
+12. Poniższy kod tworzy tablicę `Example` obiektów, umieszcza tę tablicę w tablicy typu <xref:System.Object> reprezentujący argumenty metody do wywołania i przekazuje je do <xref:System.Reflection.MethodBase.Invoke%28System.Object%2CSystem.Object%5B%5D%29> metody. Pierwszy argument <xref:System.Reflection.MethodBase.Invoke%2A> metoda jest odwołanie o wartości null, ponieważ ta metoda jest `static`.  
   
      [!code-cpp[EmitGenericType#10](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#10)]
      [!code-csharp[EmitGenericType#10](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#10)]
      [!code-vb[EmitGenericType#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#10)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje klasę o nazwie `Sample`, wraz z klasy podstawowej i dwa interfejsy. Program definiuje dwa parametry typu ogólnego `Sample`, włączając w typie podstawowym. Parametrów typu są jedynym elementem, który sprawia, że typ jest rodzajowy. Powoduje wyświetlenie to poprzez wyświetlenie komunikatu testowego przed i po definicji parametrów typu.  
+ Poniższy kod definiuje klasę o nazwie `Sample`, wraz z klasy bazowej i dwa interfejsy. Program definiuje dwa parametry typu ogólnego dla `Sample`, włączając je w typie podstawowym. Parametry typu są jedynym elementem, który sprawia, że typ ogólny. Program pokazuje to poprzez wyświetlenie komunikatu testowego przed i po definicji parametrów typu.  
   
- Parametr typu `TSecond` służy do zaprezentowania ograniczenia klasy i interfejs, za pomocą klasy podstawowej i interfejsów, a parametr typu `TFirst` służy do zaprezentowania ograniczeń specjalnych.  
+ Parametr typu `TSecond` jest używany do przedstawiania ograniczenia klasy i interfejs, za pomocą klasy bazowej i interfejsów, a parametr typu `TFirst` jest używany do przedstawiania ograniczeń specjalnych.  
   
- Przykładowy kod definiuje pole i przy użyciu parametrów typu klasy, dla typu pola i dla parametru metody i zwracany typ metody.  
+ Przykładowy kod definiuje pola i metody za pomocą parametrów typu klasy, dla typu pola, a dla parametru i zwracany typ metody.  
   
- Po `Sample` klasa została utworzona, jest wywoływana metoda.  
+ Po `Sample` klasa została utworzona, metoda jest wywoływana.  
   
- Program zawiera metodę, która zawiera informacje dotyczące typu ogólnego i metody, która zawiera listę ograniczeń specjalnych w parametrze typu. Te metody są używane do wyświetlania informacji na temat gotowe `Sample` klasy.  
+ Program obejmuje metodę, która wyświetla informacje dotyczące typu ogólnego i metody, która zawiera specjalne ograniczenia dla parametru typu. Te metody są używane do wyświetlania informacji na temat gotowe `Sample` klasy.  
   
- Program zapisze Zakończono modułu na dysku jako `GenericEmitExample1.dll`, więc możesz otworzyć go z [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) i sprawdź, czy MSIL dla `Sample` klasy.  
+ Program zapisze Zakończono modułu na dysku jako `GenericEmitExample1.dll`, dzięki czemu można je otworzyć z [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) i sprawdzić MSIL dla `Sample` klasy.  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]
@@ -129,13 +129,13 @@ W tym temacie przedstawiono sposób tworzenia prostego typu ogólnego z dwoma pa
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Zawiera kod C# `using` instrukcje (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
+-   Zawiera kod języka C# `using` instrukcji (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
   
--   Nie odwołania do zestawów dodatkowe są wymagane.  
+-   Nie odwołania do zestawu dodatkowe są wymagane.  
   
--   Kompilowanie kodu w wierszu polecenia przy użyciu csc.exe, vbc.exe lub cl.exe. Aby skompilować kod w programie Visual Studio, należy umieścić w szablonie Projekt aplikacji konsoli.  
+-   Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Emituj za pomocą odbicia](http://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Emisja odbicia scenariuszy w zestawie dynamicznym](http://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+ [Używanie emisji odbicia](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [Scenariusze zestawów dynamicznych emisji odbicia](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

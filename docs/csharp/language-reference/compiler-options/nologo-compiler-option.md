@@ -9,15 +9,15 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: cede0d730e0c0bdaaa1b9b39c729b49677b81ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213643"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480598"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (opcje kompilatora C#)
-**- Nologo** opcja Pomija wyświetlanie logowania jednokrotnego transparentu podczas uruchamiania kompilatora i wyświetlanie wiadomości informacyjnych podczas kompilacji.  
+**- Nologo** opcja Pomija wyświetlanie transparentu logowania podczas uruchamiania kompilatora i wyświetlanie wiadomości informacyjnych podczas kompilacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,10 +26,11 @@ ms.locfileid: "33213643"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Ta opcja nie jest dostępne w środowisku programistycznym; jest on dostępny tylko wtedy, podczas kompilowania z wiersza polecenia.  
+ Ta opcja nie jest dostępne z poziomu środowiska programistycznego; jest on dostępny tylko wtedy, podczas kompilowania z wiersza polecenia.  
   
  Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można zmienić programowo.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

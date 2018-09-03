@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: f6500fa5f8f5022c4e910da894f182dcc5525be5
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 04561adb254d001b5e4c7867a4017ede74972011
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207383"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486199"
 ---
-# <a name="c-programming-guide"></a>Podręcznik programowania C#
+# <a name="c-programming-guide"></a>Przewodnik programowania C#
 Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# oraz o funkcjach tego języka dostępnych przez platformę .NET Framework.  
   
- W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania. Jeśli pełne początkujących programowania lub w języku C#, warto odwiedź [C# — przewodniki szybkiego startu](../quick-starts/index.md) lub [wprowadzenie do języka C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) interaktywny samouczek, w których jest wymagane nie znajomość programowania.  
+ W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania. Jeśli jesteś kompletnym nowicjuszem programowania lub w języku C#, możesz chcieć znaleźć [Przewodniki Szybki Start języka C#](../quick-starts/index.md) lub [wprowadzenie do języka C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) interaktywny samouczek, w których jest wymagane nie uprzednia programowania.  
   
  Aby uzyskać informacje dotyczące określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz sekcję [Dokumentacja języka C#](../../csharp/language-reference/index.md). Informacje o specyfikacji języka C# można znaleźć w temacie [Specyfikacja języka C#](../../csharp/language-reference/language-specification/index.md).  
   
@@ -69,7 +69,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
  [Komentarze dokumentacji XML](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>Sekcje platformy  
- [Domeny aplikacji (C# i Visual Basic)](http://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [Domeny aplikacji (C# i Visual Basic)](https://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [Zestawy i globalna pamięć podręczna zestawów](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   
@@ -79,7 +79,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
  [Wyjątki i obsługa wyjątków](../../csharp/programming-guide/exceptions/index.md)  
   
- [System plików i rejestr (C# przewodnik programowania w języku)](../../csharp/programming-guide/file-system/index.md)  
+ [System plików i rejestr (C# Programming Guide)](../../csharp/programming-guide/file-system/index.md)  
   
  [Współdziałanie](../../csharp/programming-guide/interop/index.md)  
   

@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7f729e845fe552d523a46a1783404baf4e0bbfca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807986"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487213"
 ---
 # <a name="tracing-and-message-logging"></a>Śledzenie i rejestrowanie komunikatów
-W tym przykładzie pokazano, jak włączyć śledzenie i rejestrowanie komunikatów. Wynikowa śladów i dzienników komunikatów wyświetlane przy użyciu [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+Niniejszy przykład pokazuje, jak włączyć śledzenie i rejestrowanie komunikatów. Wynikowy ślady i dzienniki komunikatów są wyświetlane przy użyciu [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
 ## <a name="tracing"></a>Śledzenie  
- Windows Communication Foundation (WCF) używa mechanizmu śledzenia zdefiniowanych w <xref:System.Diagnostics> przestrzeni nazw. W tym modelu śledzenie danych śledzenia jest generowany przez źródła śledzenia, które implementują aplikacji. Każde źródło jest identyfikowane przez nazwę. Śledzenia konsumenci tworzą obiekty nasłuchujące śledzenia dla źródła śledzenia, dla których chcesz pobrać informacji. Aby odbierać dane śledzenia, należy utworzyć odbiornik źródła śledzenia. W programie WCF, można to zrobić, dodając następujący kod do pliku konfiguracji usługi lub klienta przez ustawienie źródło śladu modelu usługi `switchValue`:  
+ Windows Communication Foundation (WCF) używa mechanizmu śledzenia, zdefiniowane w <xref:System.Diagnostics> przestrzeni nazw. W tym modelu śledzenia danych śledzenia jest produkowanych przez źródła śledzenia, które implementują aplikacji. Każde źródło jest identyfikowane przez nazwę. Śledzenie konsumenci tworzą obiekty nasłuchujące śledzenia dla źródła śledzenia, dla których chcesz pobrać informacji. Aby odbierać dane śledzenia, należy utworzyć odbiornik dla źródła śledzenia. W programie WCF, można to zrobić, dodając następujący kod do pliku konfiguracji usługi lub klienta przez ustawienie źródło śladu modelu usługi `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -43,25 +43,25 @@ W tym przykładzie pokazano, jak włączyć śledzenie i rejestrowanie komunikat
 </system.diagnostics>  
 ```  
   
- Aby uzyskać więcej informacji na temat źródeł śledzenia, zobacz sekcję źródła śledzenia w [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) tematu.  
+ Aby uzyskać więcej informacji na temat źródła śledzenia, zobacz sekcję źródła śledzenia w [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) tematu.  
   
-## <a name="activity-tracing-and-propagation"></a>Śledzenie działania i propagacji  
- O `ActivityTracing` włączone i `propagateActivity` ustawioną `true` w `system.ServiceModel` źródła śledzenia dla klienta i usługi dostarczać korelacji śladów w ramach przetwarzania (działania), jednostki logiczne działań wykonywanych w ciągu (punkty końcowe za pomocą działania przesyłania) i działań wykonywanych obejmujących wiele punktów końcowych (za pośrednictwem Propagacja Identyfikatora działania).  
+## <a name="activity-tracing-and-propagation"></a>Śledzenie działania i propagację  
+ Posiadanie `ActivityTracing` włączone i `propagateActivity` równa `true` w `system.ServiceModel` źródła śledzenia dla klienta i usługi zapewnienia działania w ramach punktów końcowych (korelacja ślady w ramach przetwarzania (działalności), jednostki logiczne za pośrednictwem przesyłania działania) i na różnych działań, obejmujące wiele punktów końcowych (za pośrednictwem Propagacja Identyfikatora działania).  
   
- Mechanizmy te trzy (działania, przesyłania i propagacji) może pomóc więcej szybko przy użyciu narzędzia podglądu śledzenia usługi Znajdź przyczynę błędu. Aby uzyskać więcej informacji, zobacz [przy użyciu przeglądarki śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ Te trzy mechanizmy (działań transferu i propagację) pomóc Ci znaleźć przyczynę błędu, więcej szybko przy użyciu narzędzia przeglądarki danych śledzenia usługi. Aby uzyskać więcej informacji, zobacz [za pomocą przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów z](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
- Istnieje możliwość rozszerzenia śledzenie zapewnianej przez ServiceModel przez utworzenie śladów działania zdefiniowane przez użytkownika. Śledzenie działania zdefiniowane przez użytkownika umożliwia użytkownikom tworzenie śledzenia działań do:  
+ Istnieje możliwość rozszerzyć śledzenia, dostarczone przez ServiceModel, tworząc śledzenia działań użytkownika. Śledzenie aktywności użytkownika umożliwia użytkownikowi utworzenie śledzenia działań:  
   
 -   Grupa śledzenia w logiczne jednostki pracy.  
   
--   Korelowanie działania za pośrednictwem przesyłania i propagacji.  
+-   Korelowanie działań przy użyciu transferu i propagacji.  
   
--   Ogranicza koszty wydajności śledzenia WCF (na przykład kosztu miejsca na dysku w pliku dziennika).  
+-   Ogranicza koszty wydajności śledzenia WCF (na przykład koszt miejsca na dysku w pliku dziennika).  
   
- Aby uzyskać więcej informacji dotyczących śledzenia zdefiniowanych przez użytkownika działań, zobacz [rozszerzanie śledzenia](../../../../docs/framework/wcf/samples/extending-tracing.md) próbki.  
+ Aby uzyskać więcej informacji na temat śledzenia działań użytkownika, zobacz [rozszerzanie śledzenia](../../../../docs/framework/wcf/samples/extending-tracing.md) próbki.  
   
 ## <a name="message-logging"></a>Rejestrowanie komunikatów  
- Zarówno na kliencie i usługi WCF dowolnej aplikacji, można włączyć rejestrowanie komunikatów. Aby włączyć rejestrowanie komunikatów, musi Dodaj następujący kod do klienta lub usługi:  
+ Można ją włączyć rejestrowanie komunikatów, zarówno na kliencie i usługi aplikacji WCF. Aby włączyć rejestrowanie komunikatów, należy dodać następujący kod do klienta lub usługi:  
   
 ```xml  
 <configuration>  
@@ -79,9 +79,9 @@ W tym przykładzie pokazano, jak włączyć śledzenie i rejestrowanie komunikat
 </configuration>  
 ```  
   
- Gdy komunikat jest rejestrowany, śledzenia zależy od tego, czy jest są śledzone na klienta lub serwera. Na przykład komunikat "Dodaj", który jest wysyłany do klienta jest śledzone w kategorii "TransportWrite" po stronie klienta, podczas gdy ten sam komunikat śledzonego w kategorii "TransportRead" w punkcie usług.  
+ Gdy komunikat jest rejestrowany, typ śledzenia jest zależna od tego, czy jest on śledzone na klienta lub serwera. Na przykład "Dodaj". komunikat o błędzie jest wysyłany do klienta śledzonego w kategorii "TransportWrite" po stronie klienta, natomiast śledzona jest ten sam komunikat w kategorii "TransportRead" na usługę.  
   
- Skonfiguruj odbiornik śledzenia, dodając następujący kod do <xref:System.Diagnostics> sekcji w pliku App.config klienta lub usługi w pliku Web.config:  
+ Konfigurowanie odbiornika śledzenia, dodając następujący kod do <xref:System.Diagnostics> sekcji w pliku App.config klienta lub plik Web.config usługi:  
   
 ```xml  
 <system.diagnostics>  
@@ -106,32 +106,32 @@ W tym przykładzie pokazano, jak włączyć śledzenie i rejestrowanie komunikat
   </system.diagnostics>  
 ```  
   
- Komunikaty są rejestrowane w formacie XML w katalog docelowy określony w pliku konfiguracji.  
+ Komunikaty są rejestrowane w formacie XML w katalogu docelowym, określone w pliku konfiguracji.  
   
 > [!NOTE]
->  Pliki śledzenia nie są tworzone bez początkowo tworzenia katalogu dziennika. Upewnij się, że istnieje katalog C:\logs\, lub określ katalog rejestrowania alternatywny w konfiguracji odbiornika. Zapoznaj się z instrukcjami instalacji początkowej na końcu tego dokumentu, aby uzyskać więcej informacji.  
+>  Pliki śledzenia nie są tworzone bez początkowo tworzenia katalogu dziennika. Upewnij się, że katalog C:\logs\ istnieje, lub określ katalog rejestrowania alternatywne w konfiguracji odbiornika. Zapoznaj się z instrukcjami instalacji początkowej na końcu tego dokumentu, aby uzyskać więcej informacji.  
   
  Aby uzyskać więcej informacji na temat rejestrowania komunikatów, zobacz [Konfigurowanie rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) tematu.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Przed uruchomieniem przykładowe śledzenie i rejestrowanie komunikatów, należy utworzyć katalog C:\logs\ usługi do zapisania plików .svclog do. Nazwa tego katalogu jest zdefiniowana w pliku konfiguracyjnym jako ścieżkę do śledzenia i komunikaty, które mają być rejestrowane i może być zmieniona. W katalogu dzienników, należy przyznać użytkownikowi dostęp do zapisu usługi sieciowej.  
+2.  Przed uruchomieniem przykładu śledzenia i rejestrowania komunikatów, należy utworzyć katalog C:\logs\ usługi do zapisania plików .svclog do. Nazwa tego katalogu jest zdefiniowana w pliku konfiguracyjnym jako ścieżki dla danych śledzenia i komunikaty, które mają być rejestrowane i można je zmienić. Przyznaj użytkownikowi dostęp do zapisu usługi sieciowej do katalogu logs.  
   
-3.  Tworzenie wersji języka C#, C++ lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Aby kompilować rozwiązania w wersji języka C#, C++ lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Przykłady monitorowania AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

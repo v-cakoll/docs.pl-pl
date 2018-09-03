@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03e3ff2adc238640034309e0f9eab6e786472631
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82dbacdcf89a44455bb4963e73dc5e91bda1cbc7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446095"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482453"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx — Metoda
-Pobiera klucz publiczny z pary kluczy publiczny/prywatny i określa algorytm wyznaczania wartości skrótu i algorytm podpisu.  
+Pobiera klucz publiczny z pary kluczy publiczny/prywatny, a następnie określa algorytm wyznaczania wartości skrótu i algorytm podpisu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,43 +43,43 @@ HRESULT StrongNameGetPublicKey (
   
 #### <a name="parameters"></a>Parametry  
  `pwzKeyContainer`  
- [in] Nazwa kontenera klucza, który zawiera pary kluczy publiczny/prywatny. Jeśli `pbKeyBlob` ma wartość null, `szKeyContainer` należy określić prawidłowy kontener w ramach dostawcy usług kryptograficznych (CSP). W takim przypadku `StrongNameGetPublicKeyEx` metody wyodrębnia klucza publicznego z pary kluczy przechowywanych w kontenerze.  
+ [in] Nazwa kontenera kluczy, który zawiera pary kluczy publiczny/prywatny. Jeśli `pbKeyBlob` ma wartość null, `szKeyContainer` należy określić prawidłowy kontener w ramach dostawcy usług kryptograficznych (CSP). W tym przypadku `StrongNameGetPublicKeyEx` metoda wyodrębnia klucz publiczny z pary kluczy, przechowywane w kontenerze.  
   
- Jeśli `pbKeyBlob` nie ma wartości null, zakłada, że pary kluczy muszą być zawarte w klucza dużego obiektu binarnego (BLOB).  
+ Jeśli `pbKeyBlob` nie ma wartości null, zakłada, że pary kluczy muszą być zawarte w kluczowych duży obiekt binarny (BLOB).  
   
- Klucze muszą być Rivest-Shamir-Adleman (RSA 1024-bitowe) kluczy podpisywania. Żadne inne typy klucze są obsługiwane w tej chwili.  
+ Klucze muszą być Rivest-Shamir-Adleman 1024-bitowy (RSA) kluczy podpisywania. Żadne inne typy kluczy są obsługiwane w tej chwili.  
   
  `pbKeyBlob`  
- [in] Wskaźnik do pary kluczy publiczny/prywatny. Tej pary jest w formacie utworzone przez Win32 `CryptExportKey` funkcji. Jeśli `pbKeyBlob` jest null, określony przez kontener klucza `szKeyContainer` założono, że zawiera pary kluczy.  
+ [in] Wskaźnik do pary kluczy publiczny/prywatny. Ta para jest w formacie utworzone przez Win32 `CryptExportKey` funkcji. Jeśli `pbKeyBlob` jest null, kontenerze klucza określonym przez `szKeyContainer` założono, że zawiera pary kluczy.  
   
  `cbKeyBlob`  
  [in] Rozmiar w bajtach z `pbKeyBlob`.  
   
  `ppbPublicKeyBlob`  
- [out] Zwrócony klucza publicznego obiektu BLOB. `ppbPublicKeyBlob` Parametr jest przydzielany przez środowisko uruchomieniowe języka wspólnego i zwracany do obiektu wywołującego. Obiekt wywołujący musi zwolnić pamięć przy użyciu [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metody.  
+ [out] Zwrócone klucza publicznego obiektu BLOB. `ppbPublicKeyBlob` Parametr jest przydzielany przez środowisko uruchomieniowe języka wspólnego i zwracany do wywołującego. Obiekt wywołujący musi zwolnić pamięć przy użyciu [iclrstrongname::strongnamefreebuffer —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metody.  
   
  `pcbPublicKeyBlob`  
  [out] Rozmiar zwróconego obiektu BLOB klucza publicznego.  
   
  `uHashAlgId`  
- [in] Algorytm wyznaczania wartości skrótu zestawu. Zobacz sekcję uwag listę akceptowane wartości.  
+ [in] Algorytm wyznaczania wartości skrótu zestawu. Zobacz sekcję Spostrzeżenia, aby listy akceptowanych wartości.  
   
  `uReserved`  
- [in] Zarezerwowane do użytku w przyszłości; Wartość domyślna to null.  
+ [in] Zarezerwowane dla przyszłego użytku; Wartość domyślna to null.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje niepowodzenie (zobacz [wspólne wartości HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) lista).  
+ `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
- Klucz publiczny jest zawarta w [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) struktury.  
+ Klucz publiczny jest zawarty w [publickeyblob —](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) struktury.  
   
 ## <a name="remarks"></a>Uwagi  
- W poniższej tabeli przedstawiono zbiór akceptowane wartości dla `uHashAlgId` parametru.  
+ W poniższej tabeli przedstawiono zestaw dopuszczalne wartości dla `uHashAlgId` parametru.  
   
 |Nazwa|Wartość|  
 |----------|-----------|  
 |Brak|0|  
-|ALGORYTM SHA-1|0x8004|  
+|SHA-1|0x8004|  
 |SHA-256|0x800c|  
 |ALGORYTM SHA-384|0x800d|  
 |ALGORYTM SHA-512.|0x800e|  
@@ -89,7 +89,7 @@ HRESULT StrongNameGetPublicKey (
   
  **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

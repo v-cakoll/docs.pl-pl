@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94d17b6c8150744d4beca5e74827d235f81af08c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33aab5ee23a1f0d30d1f9f3079856ca30d46d2ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433318"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487245"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile — Metoda
-Generuje skrót za pośrednictwem zawartość określonego pliku.  
+Generuje skrót nad zawartość określonego pliku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,29 +44,29 @@ HRESULT GetHashFromFile (
  [in] Nazwa pliku do wyznaczania wartości skrótu.  
   
  `piHashAlg`  
- [w, out] Algorytm używany podczas generowania skrótu. Prawidłowe algorytmy są zdefiniowane przez interfejs CryptoAPI Win32. Jeśli `piHashAlg` jest ustawiona na 0, CALG_SHA 1 jest używany domyślny algorytm.  
+ [out w] Algorytm, który ma być używana podczas generowania skrótów. Nieprawidłowa algorytmy są identyczne ze zdefiniowanymi przez interfejs CryptoAPI Win32. Jeśli `piHashAlg` jest równa 0, CALG_SHA 1 jest używany domyślny algorytm.  
   
  `pbHash`  
- [out] Tablica bajtów zawierająca wygenerowanego wyznaczania wartości skrótu.  
+ [out] Tablica bajtów zawierająca wygenerowanego skrótu.  
   
  `cchHash`  
  [in] Maksymalny rozmiar buforu, który `pbHash` wskazuje.  
   
  `pchHash`  
- [out] Rozmiar w bajtach, zwracana `pbHash`.  
+ [out] Rozmiar w bajtach zwracanego `pbHash`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje niepowodzenie (zobacz [wspólne wartości HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) lista).  
+ `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest taka sama jak [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) metoda, z wyjątkiem tego, że nazwa pliku specyfikacji jest ANSI znaków Unicode.  
+ Ta metoda jest taka sama jak [iclrstrongname::gethashfromfilew —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) metody, z tą różnicą, że specyfikacji nazwa pliku jest ANSI zamiast Unicode.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

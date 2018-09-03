@@ -1,28 +1,28 @@
 ---
-title: Mapowanie niejawnych relacji między elementami zagnieżdżonych schematu
+title: Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 1bce0c2815ac94787055794942807777232df295
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3c0b5356479d31a3caad8438618e7cf7dc4e10e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763631"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485576"
 ---
-# <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapowanie niejawnych relacji między elementami zagnieżdżonych schematu
-Schemat schematu XML definition language (XSD) może mieć typów złożonych zagnieżdżona siebie nawzajem. W takim przypadku proces mapowania stosuje domyślne mapowanie i tworzy następujące opcje w <xref:System.Data.DataSet>:  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
+Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnieżdżone wewnątrz siebie nawzajem. W takim przypadku proces mapowania stosuje domyślne mapowanie i tworzy następujące <xref:System.Data.DataSet>:  
   
--   Jedna tabela dla każdego z typów złożonych (nadrzędnych i podrzędnych).  
+-   Jedną tabelę dla każdego z typów złożonych (nadrzędnych i podrzędnych).  
   
--   Jeśli nie ograniczenia unique istnieje w nadrzędnej, co dodatkowe kolumny klucza podstawowego dla definicji tabeli o nazwie *TableName*_Id gdzie *TableName* jest nazwą tabeli nadrzędnej.  
+-   Jeśli nie ograniczenia unique znajduje się na element nadrzędny, co dodatkowe kolumny klucza podstawowego dla definicji tabeli o nazwie *TableName*_identyfikator gdzie *TableName* jest nazwą tabeli nadrzędnej.  
   
--   Ograniczenia klucza podstawowego w tabeli nadrzędnej identyfikowanie dodatkowych kolumn jako klucz podstawowy (przez ustawienie **IsPrimaryKey** właściwości **True**). Ograniczenie o nazwie ograniczenie*#* gdzie *#* 1, 2, 3 i tak dalej. Na przykład domyślna nazwa ograniczenia pierwszy to Constraint1.  
+-   Ograniczenia klucza podstawowego w tabeli nadrzędnej identyfikowanie dodatkową kolumnę jako klucz podstawowy (przez ustawienie **IsPrimaryKey** właściwości **True**). Ograniczenie o nazwie ograniczenie*#* gdzie *#* to 1, 2, 3 i tak dalej. Na przykład domyślna nazwa pierwszego ograniczenia jest Constraint1.  
   
--   Ograniczenie klucza obcego w tabeli podrzędnej identyfikację dodatkowych kolumn jako klucz obcy odwołujących się do klucza podstawowego tabeli nadrzędnej. Ograniczenie o nazwie *ParentTable_ChildTable* gdzie *ParentTable* jest nazwą tabeli nadrzędnej i *ChildTable* jest nazwą tabeli podrzędnej.  
+-   Ograniczenia klucza obcego dla tabeli podrzędnej identyfikuje dodatkową kolumnę jako klucz obcy odwołujące się do klucza podstawowego tabeli nadrzędnej. Ograniczenie o nazwie *ParentTable_ChildTable* gdzie *ParentTable* jest nazwą tabeli nadrzędnej i *ChildTable* jest nazwą tabeli podrzędnej.  
   
--   Dane relacji między tabelą nadrzędną i podrzędną.  
+-   Relacje danych między tabelami nadrzędnymi i podrzędnymi.  
   
- W poniższym przykładzie przedstawiono schematu gdzie **OrderDetail** jest elementem podrzędnym **kolejności**.  
+ Poniższy przykład przedstawia schematu gdzie **OrderDetail** jest elementem podrzędnym **kolejności**.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,7 +54,7 @@ Schemat schematu XML definition language (XSD) może mieć typów złożonych za
 </xs:schema>  
 ```  
   
- Proces mapowania schematu XML tworzy następujące opcje w **zestawu danych**:  
+ Proces mapowania schematu XML tworzy następujące **zestawu danych**:  
   
 -   **Kolejności** i **OrderDetail** tabeli.  
   
@@ -84,7 +84,7 @@ Schemat schematu XML definition language (XSD) może mieć typów złożonych za
     RelatedColumns: Order_Id   
     ```  
   
--   Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** ma ustawioną wartość właściwości dla tej relacji **True** ponieważ **kolejności** i **OrderDetail** elementy są zagnieżdżone w schemacie .  
+-   Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** dla tej relacji jest właściwością **True** ponieważ **kolejności** i **OrderDetail** elementów jest zagnieżdżanych w schemacie .  
   
     ```  
     ParentTable: Order  
@@ -100,4 +100,4 @@ Schemat schematu XML definition language (XSD) może mieć typów złożonych za
 ## <a name="see-also"></a>Zobacz też  
  [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

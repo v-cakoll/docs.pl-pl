@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f097a14486b9a07df867ffa5514da33f3db6d4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb2485f2ecf0426360dba80d443500a92b5a7af6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744528"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482226"
 ---
 # <a name="add-ins-and-extensibility"></a>Dodatki i rozszerzalność
-<a name="top"></a> Dodatki Podaj rozszerzonych funkcji lub usług dla aplikacji hosta. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia model programowania, w której deweloperzy mogą używać w celu opracowywania dodatków i aktywować je w aplikacji hosta. Model osiąga to, tworząc potok komunikacji między hostem a dodatku. Model jest zaimplementowana przy użyciu typów w <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, i <xref:System.AddIn.Contract> przestrzeni nazw.  
+<a name="top"></a> Dodatki zapewniają rozszerzone funkcje lub usługi dla aplikacji hosta. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia model programowania, które deweloperzy mogą używać do tworzenia dodatków i ich aktywowania w aplikacji hosta. Model osiąga to, tworząc potok komunikacji między hostem a dodatkiem. Model jest implementowany przy użyciu typów w <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, i <xref:System.AddIn.Contract> przestrzeni nazw.  
   
  Ten przegląd zawiera następujące sekcje:  
   
--   [Dodatek modelu](#addin_model)  
+-   [Model dodatku](#addin_model)  
   
 -   [Dodatki i hostów](#distinguishing_between_addins_and_hosts)  
   
@@ -35,68 +35,68 @@ ms.locfileid: "32744528"
 -   [Dokumentacja](#reference)  
   
 > [!NOTE]
->  Dla budynku potoków dodatku, można znaleźć dodatkowe przykładowy kod i wersji zapoznawczych platformy technologię klienta narzędzi w [zarządzanych rozszerzeń i Dodaj w ramach lokacji w witrynie CodePlex](http://go.microsoft.com/fwlink/?LinkId=121190).  
+>  Do tworzenia potoków dodatku, można znaleźć dodatkowe przykłady kodu i narzędzia klienta z podglądem technologii w [zarządzanych rozszerzeń i Dodaj w ramach lokacji w witrynie CodePlex](https://go.microsoft.com/fwlink/?LinkId=121190).  
   
 <a name="addin_model"></a>   
-## <a name="add-in-model"></a>Dodatek modelu  
- Model dodatku składa się z szeregu segmentów, które tworzą dodatku potoku (znanej także jako potok komunikacji), która jest odpowiedzialna za całą komunikację między dodatek i hostem. Potok to model symetryczny komunikacji segmentów, które wymiany danych między dodatek i jej hosta. Tworzenie te segmenty między hostem a dodatek zawiera wymagane warstwy abstrakcji, które obsługuje przechowywanie wersji i izolacja dodatku.  
+## <a name="add-in-model"></a>Model dodatku  
+ Model dodatku składa się z szeregu segmentów, które tworzą dodatku potoku (znany także jako potok komunikacji), który jest odpowiedzialny za całej komunikacji między dodatkiem a hostem. Potok jest model symetryczne komunikacji segmenty wymianę danych między dodatek i jej hostem. Tworzenie te segmenty między hostem a dodatkiem zapewnia wymagane warstwy abstrakcji, które obsługuje przechowywanie wersji i izolacji dodatku.  
   
- Na poniższej ilustracji przedstawiono potoku.  
+ Poniższa ilustracja przedstawia potoku.  
   
- ![Dodaj&#45;w potoku modelu. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Dodaj&#45;w modelu potoku. ](../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Potok dodatku  
   
- Zestawy dla te segmenty nie są wymagane w tej samej domenie aplikacji. Można załadować dodatku do jego własnej nowej domeny aplikacji, do istniejącej domeny aplikacji lub nawet w domenie aplikacji hosta. Do tej samej domenie aplikacji, umożliwiający dodatki współużytkowanie zasobów i kontekstów zabezpieczeń można załadować wiele dodatków.  
+ Zestawy dla te segmenty nie są wymagane w tej samej domenie aplikacji. Możesz załadować dodatek do jego własnej nowej domeny aplikacji, do istniejącej domeny aplikacji lub nawet do domeny aplikacji hosta. W tej samej domenie aplikacji, która umożliwia dodatków udostępnić zasoby obliczeniowe i konteksty zabezpieczeń, należy załadować wielu dodatków.  
   
- Obsługuje modelu dodatku i zaleca, opcjonalne granicę między hostem a dodatku, nazywanego granica izolacji (znanej także jako granic zdalnych). Tę granicę można granice domeny lub procesu aplikacji.  
+ Obsługuje model dodatku, a zaleceniem, opcjonalnie granic między hostem a dodatek, który nazywa się granic izolacji (znany także jako granic wywołaniem funkcji zdalnych). Tą granicą może być granic domeny lub procesu aplikacji.  
   
- Segment kontraktu w środku potoku jest ładowany do zarówno domeny aplikacji hosta, jak i dodatku domeny aplikacji. Kontrakt definiuje metody wirtualne który hoście i Użyj dodatku do programu exchange typów ze sobą.  
+ Segment umowy w trakcie wykonywania potoku są ładowane do zarówno w domenie aplikacji hosta, jak i dodatku w domenie aplikacji. Kontrakt definiuje metody wirtualnej, hosta i Użyj dodatku do programu exchange typy ze sobą.  
   
- Do przekazywania granica izolacji, typy muszą być umów lub typów możliwych do serializacji. Typy, które nie umów lub typów możliwych do serializacji muszą zostać skonwertowane do kontraktów segmentami karty w potoku.  
+ Aby przekazać za pośrednictwem granic izolacji, typy muszą być kontraktów lub typów możliwych do serializacji. Typy, które są nie kontraktów lub typów możliwych do serializacji, muszą zostać skonwertowane do umów segmentami karty w potoku.  
   
- Widok segmentów potoku są abstrakcyjnych klas podstawowych lub interfejsów, które dostarczają hosta i Dodaj w widoku metody, które mają, zgodnie z umową.  
+ Widok segmenty potoku są abstrakcyjne klasy bazowe lub interfejsów, które umożliwiają hosta i dodatek przy użyciu widoku metody, które współużytkują one zgodnie z definicją w umowie.  
   
- Aby uzyskać więcej informacji o tworzeniu segmentów potoku, zobacz [rozwój potoku](../../../docs/framework/add-ins/pipeline-development.md).  
+ Aby uzyskać więcej informacji o tworzeniu potoku segmentów, zobacz [opracowywanie potoku](../../../docs/framework/add-ins/pipeline-development.md).  
   
- W kolejnych sekcjach opisano funkcje modelu dodatku.  
+ W kolejnych sekcjach opisano funkcje modelu dodatków.  
   
 ### <a name="independent-versioning"></a>Niezależnie od wersji  
- Model dodatku pozwala niezależnie hostów i dodatki do wersji. W związku z tym modelem dodatku umożliwia następujące scenariusze:  
+ Model dodatku pozwala niezależnie hostów i dodatki do wersji. W rezultacie modelu dodatków umożliwia następujące scenariusze:  
   
--   Tworzenie kart, które umożliwia hosta dodatku skompilowany dla wcześniejszych wersji programu host.  
+-   Tworzenie adaptera, który umożliwia hosta do użycia dodatku stworzona z myślą o poprzednią wersję hosta.  
   
--   Tworzenie adaptera, które umożliwia hosta dodatku utworzony przy użyciu nowszej wersji hosta.  
+-   Tworzenie adaptera, który umożliwia hosta do użycia dodatku stworzona z myślą o późniejszą wersję hosta.  
   
--   Tworzenie adaptera hosta do użycia dodatków umożliwia skompilowany dla innego hosta.  
+-   Tworzenie karty, która umożliwia hosta na używanie dodatków stworzona z myślą o innego hosta.  
   
-### <a name="discovery-and-activation"></a>Odnajdywanie i aktywacji  
- Dodatek można aktywować przy użyciu tokenu z kolekcji, reprezentująca dodatki znaleziono z magazynu informacji. Dodatki są znaleziony podczas przeszukiwania dla typu, który definiuje widoku hosta dodatku. Można również znaleźć określonego dodatku według typu, który definiuje dodatku. Magazyn informacji składa się z dwóch plików pamięci podręcznej: Magazyn potoku i Magazyn dodatków.  
+### <a name="discovery-and-activation"></a>Odnajdywanie i aktywacja  
+ Dodatek można aktywować przy użyciu tokenu z kolekcji, reprezentująca dodatki znalezione na podstawie magazynu informacji. Dodatki można znaleźć, wyszukując typ, który definiuje widok hosta dodatków. Można również znaleźć określonego dodatku, typ, który definiuje dodatku. Magazyn informacji składa się z dwóch plików w pamięci podręcznej: store potoku i sklepie dodatku.  
   
- Aby uzyskać informacji na temat aktualizowania i ponowne kompilowanie magazynu informacji, zobacz [dodatku odnajdywania](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Uzyskać informacji o aktywacji dodatków, zobacz [dodatku aktywacji](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) i [porady: uaktywnić dodatki z różnych izolacji i zabezpieczeń](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Aby uzyskać informacji na temat aktualizowania i ponownie skompilować Magazyn informacji, zobacz [dodatku odnajdywania](https://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Aby dowiedzieć się, jak uaktywnianie dodatków, zobacz [dodatku aktywacji](https://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) i [jak: Aktywacja dodatków z różnymi ustawieniami izolacji i zabezpieczeń](https://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
-### <a name="isolation-levels-and-external-processes"></a>Poziom izolacji i procesów zewnętrznych  
- Model dodatku obsługuje kilka poziomów izolacji między dodatek i jej hosta lub dodatków. Te poziomy od najmniej izolowanym, są następujące:  
+### <a name="isolation-levels-and-external-processes"></a>Poziomy izolacji i procesy zewnętrzne  
+ Model dodatku obsługuje kilka poziomy izolacji między dodatek i jej hostem lub między dodatków. Począwszy od najmniej izolowane, te poziomy są następujące:  
   
--   Dodatek jest uruchamiany w tej samej domenie aplikacji hosta. Nie jest to zalecane, ponieważ utratę izolacji i zwalniania możliwości, które można uzyskać, korzystając z różnych domen aplikacji.  
+-   Dodatek jest uruchamiany w tej samej domenie aplikacji hosta. Nie jest to zalecane, ponieważ utracisz izolacji i zwalnianie możliwości, które można uzyskać, korzystając z różnych domenach aplikacji.  
   
--   Wiele dodatki są ładowane do tej samej domenie aplikacji, która różni się od domeny aplikacji używana przez hosta.  
+-   Wielu dodatków są ładowane do tej samej domenie aplikacji, która jest inna niż domena aplikacji używana przez hosta.  
   
--   Każdy dodatek jest załadowany wyłącznie do własnej domeny aplikacji. Jest to najbardziej typowe poziom izolacji.  
+-   Każdy dodatek jest ładowany wyłącznie do własnej domeny aplikacji. Jest to najbardziej typowe poziom izolacji.  
   
--   Wiele dodatki są ładowane do tej samej domeny aplikacji w procesie zewnętrznym.  
+-   Wielu dodatków są ładowane do tej samej domenie aplikacji w procesie zewnętrznym.  
   
--   Każdy dodatek jest załadowany wyłącznie do własnej domeny aplikacji w procesie zewnętrznym. Jest to najbardziej izolowanego scenariusz.  
+-   Każdy dodatek jest ładowany wyłącznie do własnej domeny aplikacji w procesie zewnętrznym. Jest to najbardziej izolowane scenariusz.  
   
- Aby uzyskać więcej informacji o używaniu procesów zewnętrznych, zobacz [porady: uaktywnić dodatki z różnych izolacji i zabezpieczeń](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Aby uzyskać więcej informacji o korzystaniu z zewnętrznego procesów, zobacz [jak: Aktywacja dodatków z różnymi ustawieniami izolacji i zabezpieczeń](https://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="lifetime-management"></a>Zarządzanie okresem istnienia  
- Ponieważ model dodatku obejmuje granic domeny i procesu aplikacji, wyrzucanie elementów bezużytecznych przez samego siebie nie wystarcza do wydania i odzyskiwanie obiektów. Model dodatku zapewnia mechanizm zarządzania okresu istnienia, który korzysta z tokenów i liczenie odwołań i zwykle nie wymaga dodatkowego programowania. Aby uzyskać więcej informacji, zobacz [Zarządzanie okresem istnienia](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Ponieważ model dodatku obejmuje granic domeny i procesu aplikacji, wyrzucanie elementów bezużytecznych samodzielnie nie jest wystarczające, aby zwolnić i odzyskać obiekty. Model dodatku zapewnia mechanizm zarządzania okresem istnienia, który używa tokenów i zliczanie odwołań i zazwyczaj nie wymaga dodatkowego programowania. Aby uzyskać więcej informacji, zobacz [Zarządzanie okresem istnienia](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
  [Powrót do początku](#top)  
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>Dodatki i hostów  
- Różnica między dodatek i hosta jest jedynie, że host jest taki, który uaktywnia dodatku. Host może być większy dwóch, takie jak aplikacja edytora i jego pisowni; lub hosta może być mniejszy z dwóch, takich jak klientem obsługi wiadomości błyskawicznych osadza odtwarzacza multimedialnego. Model dodatku obsługuje dodatki w scenariuszach klienta i serwera. Przykładami dodatki serwera dodatków, które dostarczają serwerów poczty antywirusowym, filtry i ochrony IP. Klient dodatku przykładami odwołanie dodatków dla edytory tekstów, specjalne funkcje dla programów grafiki i gry i antywirusowe dla klientów lokalnych poczty e-mail.  
+ Różnica między dodatek i hosta jest jedynie, że host jest taki, który aktywuje dodatek. Host może być większy z nich, takie jak aplikacja edytora tekstów i jego pisowni; lub host może być mniejszy z nich, takich jak klient wiadomości błyskawicznych, który uwzględnia Windows media player. Model dodatku obsługuje dodatków w scenariuszach klienta i serwera. Przykładami dodatki serwera dodatki, które dostarczają serwerów poczty skanowania antywirusowego, filtry i ochrona. Klient dodatku przykładami dodatki odwołania dla edytorów tekstów specjalne funkcje dla programów grafika i gry i antywirusowe dla klientów poczty e-mail lokalnego.  
   
  [Powrót do początku](#top)  
   
@@ -105,8 +105,8 @@ Potok dodatku
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Opracowywanie potoku](../../../docs/framework/add-ins/pipeline-development.md)|W tym artykule opisano potok komunikacji segmentów z aplikacji hosta do dodatku. Przykłady kodu w wskazówki tematach opisano sposób tworzenia potoku i sposobu wdrażania segmentów potoku w programie Visual Studio.|  
-|[Domeny aplikacji i zestawy](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Opisuje relację między domenami aplikacji, które zapewniają granica izolacji zabezpieczeń, niezawodności i przechowywanie wersji i zestawów.|  
+|[Opracowywanie potoku](../../../docs/framework/add-ins/pipeline-development.md)|W tym artykule opisano potok komunikacji segmentów aplikacji hosta, aby dodatek. Przykłady kodu w tematach wskazówki, które opisują jak do budowy potoku oraz jak wdrożyć segmentów potoku w programie Visual Studio.|  
+|[Domeny aplikacji i zestawy](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|W tym artykule opisano relację między domenami aplikacji, które umożliwiają wyznaczanie granic izolacji zabezpieczeń, niezawodności i przechowywanie wersji i zestawy.|  
   
  [Powrót do początku](#top)  
   

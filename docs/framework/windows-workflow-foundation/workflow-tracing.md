@@ -2,30 +2,30 @@
 title: Śledzenie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: f4ce25efae0e42fa7c95ce5dffe8da8e31db05a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518180"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480873"
 ---
 # <a name="workflow-tracing"></a>Śledzenie przepływu pracy
-Śledzenie przepływu pracy daje możliwość przechwytywania informacji diagnostycznych za pomocą obiektów nasłuchujących śledzenia .NET Framework. Śledzenie można włączone, jeśli zostanie wykryty problem z aplikacją i następnie wyłączone ponownie po usunięciu problemu. Istnieją dwa sposoby można włączyć śledzenie debugowania dla przepływów pracy. Można skonfigurować przy użyciu przeglądarki śledzenia zdarzeń lub użyć <xref:System.Diagnostics> do wysyłania zdarzeń śledzenia w pliku.  
+Śledzenie przepływu pracy pozwala do przechwytywania informacji diagnostycznych za pomocą obiektów nasłuchujących śledzenia .NET Framework. Śledzenie można włączone, jeśli zostanie wykryty problem z aplikacją i następnie ponownie wyłączona po problem został rozwiązany. Istnieją dwa sposoby, można włączyć śledzenie debugowania dla przepływów pracy. Możesz skonfigurować używanie przeglądarki danych śledzenia zdarzeń lub użyć <xref:System.Diagnostics> do wysyłania zdarzeń śledzenia w pliku.  
   
-## <a name="enabling-debug-tracing-in-etw"></a>Włączanie debugowania śledzenia w funkcji ETW  
- Aby włączyć śledzenie za pomocą funkcji ETW, Włącz kanału debugowania w Podglądzie zdarzeń:  
+## <a name="enabling-debug-tracing-in-etw"></a>Włączanie debugowania, śledzenie zdarzeń systemu Windows  
+ Aby włączyć śledzenie za pomocą funkcji ETW, Włącz kanał debugowania w Podglądzie zdarzeń:  
   
-1.  Przejdź do analityczne i debugowania węzła Dzienniki w Podglądzie zdarzeń.  
+1.  Przejdź do analityczne i debugowania dzienniki węzła w Podglądzie zdarzeń.  
   
-2.  W widoku drzewa w Podglądzie zdarzeń, przejdź do **aplikacji -> Podgląd zdarzeń i dzienników usług -> Microsoft -> Windows -> aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **aplikacji serwerowych aplikacji** i wybierz **Widok -> Pokaż analityczne i debugowania dzienniki**. Kliknij prawym przyciskiem myszy **debugowania** i wybierz **Włącz dziennik**.  
+2.  W widoku drzewa w Podglądzie zdarzeń, przejdź do **Podgląd zdarzeń -> aplikacji i usług -> Microsoft -> Windows -> aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **aplikacje serwera aplikacji** i wybierz **Widok -> Pokaż analityczne i debugowania dzienniki**. Kliknij prawym przyciskiem myszy **debugowania** i wybierz **Włącz dziennik**.  
   
-3.  Podczas debugowania działania przepływu pracy i ślady są emitowane do kanału debugowania ETW, można można wyświetlić w Podglądzie zdarzeń. Przejdź do **aplikacji -> Podgląd zdarzeń i dzienników usług -> Microsoft -> Windows -> aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **debugowania** i wybierz **Odśwież**.  
+3.  Podczas działania przepływu pracy debugowania i śledzenia są emitowane do kanału debugowania funkcji ETW, mogą być wyświetlane w Podglądzie zdarzeń. Przejdź do **Podgląd zdarzeń -> aplikacji i usług -> Microsoft -> Windows -> aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **debugowania** i wybierz **Odśwież**.  
   
-4.  Domyślny rozmiar buforu śledzenia analitycznego jest tylko 4 kilobajtów (KB); Zaleca się zwiększenie rozmiaru 32 KB. Aby to zrobić, wykonaj następujące czynności.  
+4.  Domyślny rozmiar buforu śledzenia analitycznego jest tylko 4 kilobajtów (KB); zalecane jest, aby zwiększyć rozmiar na 32 KB. Aby to zrobić, wykonaj następujące czynności.  
   
-    1.  Uruchom następujące polecenie w bieżącym katalogu framework (na przykład C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  Wykonaj następujące polecenie w bieżącym katalogu framework (na przykład C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
-    2.  Zmień \<bufferSize > wartość w pliku Windows.ApplicationServer.Applications.man 32 znaków.  
+    2.  Zmiana \<bufferSize > wartość w pliku Windows.ApplicationServer.Applications.man do 32.  
   
         ```xml  
         <channel name="Microsoft-Windows-Application Server-Applications/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" >  
@@ -35,13 +35,13 @@ ms.locfileid: "33518180"
                   </channel>  
         ```  
   
-    3.  Uruchom następujące polecenie w bieżącym katalogu framework (na przykład C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  Wykonaj następujące polecenie w bieżącym katalogu framework (na przykład C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
->  Jeśli używasz platformy .NET Framework 4 Client Profile, najpierw należy zarejestrować ETW manifest, uruchamiając następujące polecenie z katalogu programu .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
+>  Jeśli używasz platformy .NET Framework 4 Client Profile, najpierw musisz się zarejestrować manifestu ETW, uruchamiając następujące polecenie z katalogu .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>Włączanie debugowania śledzenia przy użyciu System.Diagnostics  
- Te odbiorniki można skonfigurować w pliku App.config aplikacji przepływu pracy lub w pliku Web.config dla usługi przepływu pracy. W tym przykładzie [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424) jest skonfigurowany, aby zapisać informacje śledzenia do pliku MyTraceLog.txt w bieżącym katalogu.  
+ Te detektorów można skonfigurować w pliku App.config aplikacji przepływu pracy lub w pliku Web.config dla usługi przepływu pracy. W tym przykładzie [TextWriterTraceListener](https://go.microsoft.com/fwlink/?LinkId=165424) jest skonfigurowany, aby zapisać informacje śledzenia do pliku MyTraceLog.txt w bieżącym katalogu.  
   
 ```xml  
 <configuration>  
@@ -70,5 +70,5 @@ ms.locfileid: "33518180"
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Windows Server AppFabric monitorowania](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

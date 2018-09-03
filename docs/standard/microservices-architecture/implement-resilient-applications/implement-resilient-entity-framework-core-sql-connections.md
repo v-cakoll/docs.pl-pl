@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Im
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: c1324eafc9dc0286128e8e942f95ad7c4c0a5d98
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 59db9cdb894f76f54e77732be47dc6140a594121
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874939"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484689"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementowanie odpornych na błędy połączeń Entity Framework Core SQL
 
@@ -94,4 +94,5 @@ Jest pierwszym DbContext \_catalogContext, a druga DbContext mieści się w \_in
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 >[!div class="step-by-step"]
-[Poprzednie](implement-retries-exponential-backoff.md) [Next]explore-custom-http-call-retries-exponential-backoff.md)
+[Poprzednie](implement-retries-exponential-backoff.md)
+[dalej](explore-custom-http-call-retries-exponential-backoff.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 349cc10062cd73def0b8b3966a17ae9cbd0deab5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 90357b96d570ec1b2f80f8809ccfde69977bbc25
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003089"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481913"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Dublowania w programie SQL Server
 Funkcja dublowania baz danych w programie SQL Server pozwala na zachowanie kopiowania lub dublowania bazy danych programu SQL Server na serwerze wstrzymania. Dublowanie gwarantuje, że dwie oddzielne kopie danych istnieją przez cały czas, zapewniając wysoką dostępność i ukończyć nadmiarowości danych. .NET Data Provider for SQL Server obsługuje niejawne dublowania bazy danych, tak aby deweloper nie trzeba podejmować żadnych działań lub pisania kodu, gdy został skonfigurowany dla bazy danych programu SQL Server. Ponadto <xref:System.Data.SqlClient.SqlConnection> obiekt obsługuje tryb jawne połączenie, który umożliwia podanie nazwy serwera partnerskiego trybu failover, w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -64,4 +64,4 @@ string activeServer = connection.DataSource;
 |[Funkcja dublowania baz danych](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Opisuje sposób instalowania i konfigurowania dublowania w programie SQL Server.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: a7f9539cd3ac571977a91cd4e7dce07d641af3b6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932324"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480026"
 ---
 # <a name="storyboards-overview"></a>Przegląd Scenorysy
 W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyboard> obiekty do organizowania i stosowanie animacji. Opis interaktywnie manipulowania <xref:System.Windows.Media.Animation.Storyboard> obiektów i opisuje właściwość pośrednich, przeznaczone dla składni.  
@@ -63,7 +63,7 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> i <xref:System.Windows.EventTrigger>|Tak|Tak|Tak|Tak|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> i właściwości <xref:System.Windows.Trigger>|Nie|Tak|Tak|Tak|[Wyzwalanie animacji w przypadku zmiany wartości właściwości](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> a <xref:System.Windows.DataTrigger>|Nie|Tak|Tak|Tak|[Porady: wyzwalanie animacji w przypadku zmiany danych](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> a <xref:System.Windows.DataTrigger>|Nie|Tak|Tak|Tak|[Porady: wyzwalanie animacji w przypadku zmiany danych](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> — Metoda|Tak|Nie|Nie|Nie|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.Storyboard> animować <xref:System.Windows.FrameworkElement.Width%2A> z <xref:System.Windows.Shapes.Rectangle> elementu i <xref:System.Windows.Media.SolidColorBrush.Color%2A> z <xref:System.Windows.Media.SolidColorBrush> używany do rysowania, które <xref:System.Windows.Shapes.Rectangle>.  

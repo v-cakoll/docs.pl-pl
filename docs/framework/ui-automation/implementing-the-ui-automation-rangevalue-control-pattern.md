@@ -9,36 +9,36 @@ ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 219f460906d2892ae6cd76d13a2b17378e02b9b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3736d1e8b23b8e05882a3fe016be0ac1a18ef51d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399332"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484194"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implementacja wzorca kontrolki RangeValue dla automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.IRangeValueProvider>, wraz z informacjami dotyczącymi zdarzeń i właściwości. Łącza do dodatkowe informacje są wyświetlane na końcu tego tematu.  
   
- <xref:System.Windows.Automation.RangeValuePattern> — Wzorzec formantu jest używana do obsługi formantów, które można ustawić na wartość w zakresie. Przykłady formantów, które implementują wzorzec tego formantu można znaleźć [formantu wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.RangeValuePattern> — Wzorzec kontrolki jest używana do obsługi formantów, które mogą być ustawione na wartość w zakresie. Przykłady formantów, które implementują wzorzec tej kontrolki, zobacz [kontroli wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementacja — wskazówki i konwencje  
- Gdy implementacja wzorca formantu wartości zakresu, należy zwrócić uwagę następujące wskazówki i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
+ Jeśli implementacja wzorca kontrolki wartości zakresu, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Formanty umożliwiają przekalibrowanie ich obsługiwanych właściwości ustalane na podstawie preferencji użytkownika lub ustawień regionalnych. Na przykład jest formantem termometru, który można ustawić, aby wyświetlić temperatura w f lub c.  
+-   Formanty umożliwiają przekalibrowanie ich obsługiwanych właściwości, w zależności od preferencji użytkownika lub ustawień regionalnych. Na przykład jest formantem termometru ustawioną wyświetlający temperaturę w stopniach Celsjusza lub w Fahrenheita.  
   
--   Formanty, które ma niejednoznaczne zakres wartości, takich jak paski postępu lub suwaki, powinien mieć tych wartości z znormalizowanych.  
+-   Formanty, które mają wartości zakresu niejednoznaczny, takich jak paski postępu lub suwaki, powinien mieć tych wartości znormalizowane.  
   
- ![Pasek postępu. ] (../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
-Przykład pasek postępu, gdzie jest wartość typu Integer i właściwości minimalne i maksymalne wartości są odpowiednio znormalizowane do 0 do 100,  
+ ![Pasek postępu. ](../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+Przykład pasek postępu, gdy wartość jest typu Integer i właściwości minimalne i maksymalne wartości są znormalizowane zgodnie z 0-100, odpowiednio  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
 ## <a name="required-members-for-irangevalueprovider"></a>Wymagane elementy IRangeValueProvider  
   
-|Wymagany element członkowski|Typ elementu członkowskiego|Uwagi|  
+|Wymagany|Typ elementu członkowskiego|Uwagi|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Właściwość|Brak|  
 |<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Właściwość|Brak|  
@@ -48,11 +48,11 @@ Przykład pasek postępu, gdzie jest wartość typu Integer i właściwości min
 |<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Właściwość|Brak|  
 |<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Metody|Brak|  
   
- Wzorzec ten formant nie ma żadnych zdarzeń skojarzone.  
+ Ten wzorzec formantu nie ma żadnych skojarzonych zdarzeń.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Dostawców należy zgłosić następujące wyjątki.  
+ Dostawcy należy zgłaszać następujące wyjątki.  
   
 |Typ wyjątku|Warunek|  
 |--------------------|---------------|  

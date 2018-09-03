@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: af5b7e3efdc98910ebbe7e061eba250cbe2d0c50
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 384cc442e51ec96cafe9b44ef945bb913b0e65f6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207352"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484044"
 ---
 # <a name="virtual-c-reference"></a>virtual (odwołanie w C#)
-`virtual` — Słowo kluczowe służy do modyfikowania deklaracji — metoda, właściwość, indeksator lub zdarzenie i zezwalają na zastąpienia w klasie pochodnej. Na przykład tej metody może zostać przesłonięta przez wszystkie klasy, która dziedziczy on:  
+`virtual` Słowo kluczowe jest używane do modyfikowania deklaracji metody, właściwości, indeksatora lub zdarzenia i umożliwia jej zastąpienie w klasie pochodnej. Na przykład tej metody może zostać przesłonięta przez wszystkie klasy, która dziedziczy on:  
   
 ```csharp  
 public virtual double Area()   
@@ -24,45 +24,46 @@ public virtual double Area()
 }  
 ```  
   
- Implementacja elementu członkowskiego wirtualnego może zostać zmieniona przez [zastępowanie elementu członkowskiego](../../../csharp/language-reference/keywords/override.md) w klasie pochodnej. Aby uzyskać więcej informacji o sposobie używania `virtual` — słowo kluczowe, zobacz [przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) i [wiedząc, gdy Użyj zastępowania i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
+ Implementacja członka wirtualnego mogą zostać zmienione przez [zastępującej składowej](../../../csharp/language-reference/keywords/override.md) w klasie pochodnej. Aby uzyskać więcej informacji o sposobie używania `virtual` — słowo kluczowe, zobacz [przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) i [, wiedząc, gdy Użyj zastępowania i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="remarks"></a>Uwagi  
- Po wywołaniu metody wirtualnej typ środowiska wykonawczego obiektu jest sprawdzany pod kątem zastępowanie elementu członkowskiego. Zastępowanie elementu członkowskiego w klasie pochodnej najbardziej nosi nazwę, która może być oryginalnego elementu członkowskiego, jeśli nie Klasa pochodna przesłoniła element członkowski.  
+ Po wywołaniu metody wirtualnej typu run-time obiektu jest sprawdzane pod kątem zastępującej składowej. Zastępującej składowej w klasie najbardziej pochodnej jest wywoływana, który może być oryginalnego elementu członkowskiego, jeśli nie Klasa pochodna przesłoniła elementu członkowskiego.  
   
- Domyślnie są niewirtualną metody. Nie można zastąpić metody niewirtualnej.  
+ Domyślnie metody są inne niż wirtualny. Nie można zastąpić metody niewirtualnej.  
   
- Nie można użyć `virtual` modyfikator z `static`, `abstract`, `private`, lub `override` modyfikatorów. W poniższym przykładzie przedstawiono właściwości wirtualnych:  
+ Nie można użyć `virtual` modyfikator z `static`, `abstract`, `private`, lub `override` modyfikatorów. Właściwość wirtualną można znaleźć w poniższym przykładzie:  
   
  [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
- Właściwości wirtualnych przypominają metody abstrakcyjne, z wyjątkiem różnice w deklaracji i wywołanie składni.  
+ Właściwości wirtualne zachowują się jak metody abstrakcyjne, z wyjątkiem różnic w składni deklaracji i wywoływania.  
   
--   Jest błędem `virtual` modyfikator na właściwość statyczna.  
+-   Jest to błąd, aby użyć `virtual` modyfikator na właściwość statyczna.  
   
--   Wirtualne właściwość dziedziczona może zostać przesłonięta w klasie pochodnej przez tym deklaracji właściwości, która używa `override` modyfikator.  
+-   Wirtualne właściwość dziedziczona może zostać przesłonięta w klasie pochodnej przez tym deklaracja właściwości, która używa `override` modyfikator.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie `Shape` klasa zawiera dwie współrzędne `x`, `y`i `Area()` metoda wirtualna. Kształt różnych klas takich jak `Circle`, `Cylinder`, i `Sphere` dziedziczą `Shape` klasy i powierzchni jest obliczana dla każdego elementu. Każda klasa pochodna ma własną implementację przesłonięcia `Area()`.  
+ W tym przykładzie `Shape` klasa zawiera dwie współrzędne `x`, `y`i `Area()` metodę wirtualną. Klasy innego kształtu, takie jak `Circle`, `Cylinder`, i `Sphere` dziedziczą `Shape` klasy i obszar powierzchni jest obliczana dla każdego elementu. Każda klasa pochodna ma własną implementację zastąpienie `Area()`.  
   
- Zwróć uwagę, że klasy dziedziczone `Circle`, `Sphere`, i `Cylinder` używają konstruktorów zainicjować klasy podstawowej, jak pokazano w poniższych deklaracji.  
+ Należy zauważyć, że klasy dziedziczone `Circle`, `Sphere`, i `Cylinder` używają konstruktorów, które inicjowania klasy bazowej, jak pokazano w poniższej deklaracji.  
   
 ```csharp  
 public Cylinder(double r, double h): base(r, h) {}  
 ```  
   
- Następujący program oblicza i wyświetla odpowiedniego obszaru dla każdego elementu za pomocą odpowiedniej implementacji `Area()` metody zgodnie z obiektu, który jest skojarzony z metodą.  
+ Następujący program oblicza i wyświetla odpowiedni obszar dla każdego elementu przez wywołanie odpowiedniej implementacji `Area()` metodę, zgodnie z obiektu, który jest skojarzony z metodą.  
   
  [!code-csharp[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Polimorfizm](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
- [abstract](../../../csharp/language-reference/keywords/abstract.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [new](../../../csharp/language-reference/keywords/new.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+- [Polimorfizm](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+- [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [new](../../../csharp/language-reference/keywords/new.md)

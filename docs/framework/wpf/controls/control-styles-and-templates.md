@@ -10,28 +10,28 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 0fe20ffa19d14dcaecac30198c5c0e2d19fb9fa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556916"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482979"
 ---
 # <a name="control-styles-and-templates"></a>Style i szablony formantu
-Formanty w systemie Windows Presentation Foundation (WPF) mają <xref:System.Windows.Controls.ControlTemplate> zawierający drzewa wizualnego tego formantu. Struktura i wyglądu formantu można zmienić, modyfikując <xref:System.Windows.Controls.ControlTemplate> tego formantu. Nie istnieje sposób zastąpić tylko część wizualnym drzewie kontrolki; Aby zmienić wizualnym drzewie kontrolki, należy ustawić <xref:System.Windows.Controls.Control.Template%2A> właściwości formantu do nowych i pełne <xref:System.Windows.Controls.ControlTemplate>.  
+Formanty w Windows Presentation Foundation (WPF) mają <xref:System.Windows.Controls.ControlTemplate> zawiera drzewo wizualne tej kontrolki. Struktury i wyglądu kontrolki można zmienić, modyfikując <xref:System.Windows.Controls.ControlTemplate> tej kontrolki. Nie ma możliwości zastąpienia tylko drzewie wizualnym kontrolki; Aby zmienić drzewie wizualnym kontrolki, należy ustawić <xref:System.Windows.Controls.Control.Template%2A> właściwości formantu do nowych i kompletne <xref:System.Windows.Controls.ControlTemplate>.  
   
- Kompozycje pulpitu określić słownik zasobów, który jest używany. Aby pobrać słowniki zasobów dla kompozycji pulpitu, zobacz [domyślnej kompozycji WPF](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ Kompozycje pulpitu określają słownik zasobów, który jest używany. Aby uzyskać słowniki zasobów na kompozycje pulpitu, zobacz [domyślne motywy WPF](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
- W poniższej tabeli opisano nazwy pliku słownika zasobów i ich odpowiednich kompozycji pulpitu.  
+ W poniższej tabeli opisano nazwy pliku słownika zasobów i ich odpowiednich kompozycje pulpitu.  
   
-|Plik motywu|Kompozycja pulpitu|  
+|Plik motywu|Motyw pulpitu|  
 |----------------|-------------------|  
-|Classic.XAML|Windows klasyczny (z systemem Windows 95, Windows 98 i Windows 2000) w systemie operacyjnym Windows XP.|  
-|Luna.NormalColor.xaml|Motyw domyślny niebieski w systemie Windows XP.|  
+|Classic.XAML|Windows wygląd klasyczny (z Windows 95, Windows 98 i Windows 2000) w systemie operacyjnym Windows XP...|  
+|Luna.NormalColor.xaml|Motyw domyślny niebieski Windows XP.|  
 |Luna.Homestead.xaml|Motyw oliwek w systemie Windows XP.|  
-|Luna.Metallic.xaml|Motyw srebrny w systemie Windows XP.|  
-|Royale.NormalColor.xaml|Motyw domyślny, w systemie operacyjnym Windows XP Media Center Edition.|  
-|Aero.NormalColor.xaml|Motyw domyślny, w systemie operacyjnym Windows Vista.|  
+|Luna.Metallic.xaml|Srebrny motyw na systemie Windows XP.|  
+|Royale.NormalColor.xaml|Motyw domyślny w systemie operacyjnym Windows XP Media Center Edition.|  
+|Aero.NormalColor.xaml|Motyw domyślny w systemie operacyjnym Windows Vista.|  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Style i szablony przycisków](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
@@ -50,18 +50,18 @@ Formanty w systemie Windows Presentation Foundation (WPF) mają <xref:System.Win
  [ListView — style i szablony](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
  [Style i szablony menu](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
  [NavigationWindow — style i szablony](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [Style PasswordBox i szablony](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [PasswordBox — style i szablony](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [ProgressBar — style i szablony](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
  [RadioButton — style i szablony](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [Style RepeatButton i szablony](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [RepeatButton — style i szablony](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
  [ScrollBar — style i szablony](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [ScrollViewer — style i szablony](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
  [Style i szablony suwaka](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
  [StatusBar — style i szablony](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
  [TabControl — style i szablony](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox — style i szablony](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Style przycisku przewijania i szablony](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [Style ToggleButton i szablony](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [Thumb — style i szablony](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [ToggleButton — style i szablony](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar — style i szablony](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip — style i szablony](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [TreeView — style i szablony](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  

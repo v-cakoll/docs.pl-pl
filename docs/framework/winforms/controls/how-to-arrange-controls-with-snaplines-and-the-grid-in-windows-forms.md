@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: 9b6a4dbf90ea3541c5919ac1d7c8470b6f0dfcc4
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bbe6ae2adfe364e41f6627e6b067aa8e18e6e079
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253394"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488084"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Porady: aranżowanie formantów z liniami przyciągania oraz siatki w formularzach systemu Windows
 Korzystanie z funkcji układu w wersji programu Visual Studio, można dokładnie kierować rozmieszczenie kontrolek w formularzu. Formantów dodana do formularza lub przeniesione w formularzu można automatycznie wyrównywane do wierszy i kolumn siatki projektanta Windows Forms, lub można wyrównać formanty, używając funkcji linii przyciągania.  
@@ -25,7 +25,7 @@ Korzystanie z funkcji układu w wersji programu Visual Studio, można dokładnie
   
 -   Wybierz **SnapToGrid** tryb układu w programie Windows Forms Designer **opcje** okno dialogowe.  
   
-     Aby uzyskać więcej informacji, zobacz [ogólne, Windows Forms Designer, okno dialogowe Opcje](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Wszystkie formanty teraz wyrównać się wzdłuż punktów danych na siatce.  
+     Aby uzyskać więcej informacji, zobacz [ogólne, Windows Forms Designer, okno dialogowe Opcje](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Wszystkie formanty teraz wyrównać się wzdłuż punktów danych na siatce.  
   
      Przyciągaj z poszczególnych formantów do siatki, blokując w miejscu. Jednakże gdy są one zablokowane one nie można przenosić ani ze zmienionym rozmiarem. Aby uzyskać więcej informacji na temat blokowania formantów, zobacz [porady: blokowanie kontrolek do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
   
@@ -36,7 +36,7 @@ Korzystanie z funkcji układu w wersji programu Visual Studio, można dokładnie
      Aby uzyskać więcej informacji, zobacz [wskazówki: rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Teraz można linii przyciągania wyrównywanie i rozmieszczanie formantów w formularzu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Ogólne, Windows Forms Designer, okno dialogowe Opcje](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Ogólne, Windows Forms Designer, okno dialogowe Opcje](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Przewodnik: rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

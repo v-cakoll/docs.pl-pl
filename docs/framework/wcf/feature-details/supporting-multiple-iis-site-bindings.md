@@ -2,29 +2,29 @@
 title: Obsługa wielu powiązań witryny usług IIS
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 9b92243bb7aaea5c8ecf708ce863e6979bc9f17c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c42ba7cf3713e5d165d10ce7049df8200d612fb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497623"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482210"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Obsługa wielu powiązań witryny usług IIS
-Hosting usługi Windows Communication Foundation (WCF) w obszarze Internet informacji Services (IIS) 7.0, możesz podać wiele adres podstawowy, które używają tego samego protokołu na tej samej lokacji. Dzięki tej samej usługi odpowiedzieć na szereg różnych identyfikatorów URI. Jest to przydatne, jeśli chcesz obsługiwać usługę, która nasłuchuje na http://www.contoso.com i http://contoso.com. Warto również utworzyć usługę, która ma adres podstawowy dla użytkowników wewnętrznych i oddzielne adres podstawowy dla użytkowników zewnętrznych. Na przykład: http://internal.contoso.com i http://www.contoso.com.  
+W przypadku hostowania usługi Windows Communication Foundation (WCF) w obszarze Internetowe usługi informacji (IIS) 7.0, można podać wiele podstawowych adresów, które używają tego samego protokołu w tej samej lokacji. Dzięki temu tę samą usługę odpowiedzieć na szereg różnych identyfikatorów URI. Jest to przydatne, gdy chcesz umieścić to usługa, która nasłuchuje na http://www.contoso.com i http://contoso.com. Jest to również przydatne utworzyć usługę, która ma adres podstawowy dla użytkowników wewnętrznych i oddzielnych adres podstawowy dla użytkowników zewnętrznych. Na przykład: http://internal.contoso.com i http://www.contoso.com.  
   
 > [!NOTE]
 >  Ta funkcja jest dostępna tylko przy użyciu protokołu HTTP.  
   
-## <a name="multiple-base-addresses"></a>Wiele adresów bazowych  
- Ta funkcja jest dostępna tylko do usług WCF, które są obsługiwane w środowisku usług IIS. Ta funkcja nie jest włączona domyślnie. Aby ją włączyć, należy dodać `multipleSiteBindingsEnabled` atrybutu <`serviceHostingEnvironment`> elementu w pliku Web.config pliku i ustaw ją na `true`, jak pokazano w poniższym przykładzie.  
+## <a name="multiple-base-addresses"></a>Wiele adresów podstawowy  
+ Ta funkcja jest dostępna tylko do usług WCF, które są hostowane w usługach IIS. Ta funkcja nie jest włączona domyślnie. Aby ją włączyć, należy dodać `multipleSiteBindingsEnabled` atrybutu <`serviceHostingEnvironment`> elementu w z pliku Web.config plik i ustaw ją na `true`, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  
 ```  
   
- Odnośnie do hostowania usługi WCF w środowisku usług IIS, usługi IIS tworzą jeden adres podstawowy, na podstawie identyfikatora URI do katalogu wirtualnego, który zawiera aplikację. Możesz dodać dodatkowe adresy podstawowy, które używają tego samego protokołu za pomocą Menedżera internetowych usług informacyjnych dodać co najmniej jednego powiązania do witryny sieci Web. Dla każdego powiązania określić protokół (HTTP lub HTTPS), adres IP, portu i nazwy hosta. Aby uzyskać więcej informacji na temat korzystania z Menedżera internetowych usług informacyjnych, zobacz [Menedżera internetowych usług informacyjnych (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164057). Aby uzyskać więcej informacji na temat dodania powiązań do witryny, zobacz [utworzyć witrynę sieci Web (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164060)  
+ W przypadku hostowania usługi WCF w środowisku usług IIS, usługi IIS tworzą jeden adres bazowy na podstawie identyfikatora URI do katalogu wirtualnego, który zawiera aplikację. Możesz dodać dodatkowe adresy podstawowy, które używają tego samego protokołu za pomocą Menedżera internetowych usług informacyjnych, aby dodać co najmniej jedno powiązanie do witryny sieci Web. Dla każdego powiązania określić protokół (HTTP lub HTTPS), adres IP, portu i nazwy hosta. Aby uzyskać więcej informacji na temat używania Menedżera internetowych usług informacyjnych, zobacz [Menedżera internetowych usług informacyjnych (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=164057). Aby uzyskać więcej informacji na temat dodawania powiązania witryny zobacz [Utwórz witrynę sieci Web (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=164060)  
   
- Określanie wielu adresu podstawowego dla tej samej lokacji dotyczy zawartości strony pomocy WCF Importowanie schematu i informacji WSDL/MEX wygenerowanej przez usługę. Strona pomocy WCF wyświetla wiersz polecenia używany do generowania klienta WCF, który może komunikować się z usługą. Ten wiersz polecenia zawiera tylko pierwszy adres określony w powiązaniu usługi IIS dla witryny sieci Web. Podobnie podczas importowania schematu, tylko adres podstawowy pierwszego określony w powiązaniu usług IIS jest używana. Dane WSDL oraz MEX zawierać adres podstawowy określony w powiązania usługi IIS.  
+ Określanie wielu adresami podstawowymi dla tej samej lokacji ma wpływ na zawartość strony pomocy usługi WCF, importowanie schematu i informacje o WSDL/MEX, generowane przez usługę. Stronę pomocy WCF wyświetla wiersz poleceń do generowania klienta WCF, który może komunikować się z usługą. Ten wiersz polecenia zawiera tylko pierwszy adres określonej w powiązaniu usługi IIS dla witryny sieci Web. Podobnie podczas importowania schematu, tylko adres podstawowy pierwszego określonej w powiązaniu usług IIS jest używana. Dane WSDL oraz MEX zawierać wszystkie adresy podstawowy określony w powiązań usług IIS.  
   
 > [!WARNING]
->  Oznacza to, że jeśli usługa ma dwa adresy podstawowy, jeden dla użytkowników wewnętrznych i jeden dla użytkowników zewnętrznych, są określone w informacji WSDL/MEX wygenerowanej przez usługę.
+>  Oznacza to, że jeśli usługa ma dwa adresy podstawowy, jeden dla użytkowników wewnętrznych i jeden dla użytkowników zewnętrznych, są określone oba w informacjach o WSDL/MEX wygenerowanej przez usługę.

@@ -1,18 +1,19 @@
 ---
-title: ML.NET zasobów
-description: Zapoznaj się z zasobami tych ML.NET, co ułatwi niestandardowe tworzenie rozwiązań AI i integracji w aplikacji platformy .NET.
-ms.date: 06/05/2018
-ms.openlocfilehash: 8cda1321e1b4a5d16e14ca73e709498341fe04e9
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+title: Zasoby strukturze ML.NET
+description: Zapoznaj się z tych zasobów strukturze ML.NET uzyskanymi niestandardowe tworzenie rozwiązań sztucznej Inteligencji i integracji w aplikacjach .NET.
+ms.date: 07/27/2018
+ms.openlocfilehash: cea0f8fe30e01340c5eb671f39f28a6cbf33884c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "35017290"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485009"
 ---
-# <a name="mlnet-resources"></a>ML.NET zasobów
+# <a name="mlnet-resources"></a>Zasoby strukturze ML.NET
 
-Następujące [ML.NET](../index.md) zasoby mogą być przydatne do tworzenia niestandardowych rozwiązań AI i integrowanie aplikacji platformy .NET:
+Następujące [strukturze ML.NET](../index.md) zasoby mogą być przydatne do tworzenia niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET:
 
 - [Machine learning słownik](glossary.md): zawiera definicje terminy dotyczące uczenia maszynowego ważne.
-- [Machine learning podstawy](basics.md): zawiera linki do zasobów, aby rozpocząć korzystanie z usługi machine learning szkoleniowych.
-- [Machine learning zadania](tasks.md): opis różnych machine learning obsługiwane przez ML.NET scenariusze użycia.
+- [Podstawy uczenia maszynowego](basics.md): łącza do zasoby szkoleniowe umożliwiające Rozpoczynanie pracy z usługą machine learning.
+- [Zadania uczenia maszynowego](tasks.md): w tym artykule opisano różne usługi machine learning scenariuszy użycia, obsługiwanych przez strukturze ML.NET.
+- [Przekształcenia danych](transforms.md): zawiera omówienie przekształcenia danych obsługiwanych przez strukturze ML.NET.

@@ -1,5 +1,5 @@
 ---
-title: return (odwołanie w C#)
+title: Return — instrukcja (odwołanie w C#)
 ms.date: 07/20/2015
 f1_keywords:
 - return_CSharpKeyword
@@ -8,30 +8,33 @@ helpviewer_keywords:
 - return statement [C#]
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
-ms.openlocfilehash: 1b6a1ce2a8587c8630fece3d5c9a2186fbbc9c22
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0d20da39d3f56220c4499f699e542bd24ded93ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43001479"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480532"
 ---
 # <a name="return-c-reference"></a>return (odwołanie w C#)
-`return` Kończy wykonywanie metody, w którym występuje i zwraca kontrolę do metody wywołującej. Może również zwracać wartość opcjonalna. Jeśli metoda jest `void` typu `return` instrukcji, można pominąć.  
-  
- Jeśli znajduje się wewnątrz instrukcji return `try` bloku `finally` bloku, jeśli taki istnieje, zostanie wykonana zanim sterowanie powraca do wywoływania metody.  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie metoda `CalculateArea()` zwraca zmienna lokalna `area` jako [double](../../../csharp/language-reference/keywords/double.md) wartość.  
-  
- [!code-csharp[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]  
-  
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [return, instrukcja](/cpp/cpp/return-statement-cpp)  
-- [Instrukcje skoku](../../../csharp/language-reference/keywords/jump-statements.md)
+`return` Kończy wykonywanie metody, w którym występuje i zwraca kontrolę do metody wywołującej. Może również zwracać wartość opcjonalna. Jeśli metoda jest `void` typu `return` instrukcji, można pominąć.
+
+ Jeśli znajduje się wewnątrz instrukcji return `try` bloku `finally` bloku, jeśli taki istnieje, zostanie wykonana zanim sterowanie powraca do wywoływania metody.
+
+## <a name="example"></a>Przykład
+
+ W poniższym przykładzie metoda `CalculateArea()` zwraca zmienna lokalna `area` jako [double](double.md) wartość.
+
+[!code-csharp[csrefKeywordsJump#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#6)]  
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [return, instrukcja](/cpp/cpp/return-statement-cpp)
+- [Instrukcje skoku](jump-statements.md)

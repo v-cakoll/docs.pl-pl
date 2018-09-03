@@ -11,12 +11,12 @@ ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8842bb47ad32ae1e26eaa503398ea91afb7fd1dd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 2c9b3b1c647d74444fed01e38b65c1b2fe8364c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257981"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480951"
 ---
 # <a name="internet-protocol-version-6"></a>Protokół internetowy w wersji 6
 Protokołu internetowego w wersji 6 (IPv6) to nowy zestaw standardowych protokołów służący do warstwy sieci Internet. Protokół IPv6 pozwala rozwiązać wiele problemów w bieżącej wersji pakietu Internet Protocol (nazywane IPv4) w odniesieniu do adresów wyczerpanie, zabezpieczeń, konfiguracji automatycznego, rozszerzalność i tak dalej. Protokół IPv6 rozszerza możliwości Internetu, aby włączyć nowych rodzajów aplikacji, w tym aplikacji peer-to-peer i na urządzeniach przenośnych. Oto główne kwestie bieżącego protokołu IPv4:  
@@ -58,7 +58,7 @@ Protokołu internetowego w wersji 6 (IPv6) to nowy zestaw standardowych protoko�
   
 -   RFC 2374, Format się agregowaniu globalnego adresu emisji pojedynczej protokołu IPv6.  
   
- Można również znaleźć informacje dotyczące protokołu IPv6 na [obszaru protokołu IPv6 w witrynie Technet](http://go.microsoft.com/fwlink/?LinkID=179658).  
+ Można również znaleźć informacje dotyczące protokołu IPv6 na [obszaru protokołu IPv6 w witrynie Technet](https://go.microsoft.com/fwlink/?LinkID=179658).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe gniazda IPv6](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  

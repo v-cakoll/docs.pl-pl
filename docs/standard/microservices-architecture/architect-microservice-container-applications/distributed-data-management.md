@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Pr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998687"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480668"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi
 
@@ -43,7 +43,7 @@ Jednak jeśli projektu aplikacji obejmuje stale agregując informacje z wielu mi
 
 Jak wspomniano wcześniej, dane należące do poszczególnych mikrousług są prywatne tego mikrousług i może zostać oceniony jedynie przy użyciu jego mikrousług interfejsu API. Dlatego żądanie prezentowane jest sposób implementacji procesów biznesowych end-to-end przy jednoczesnym zachowaniu spójności w wielu mikrousługach.
 
-Aby analizować ten problem, Spójrzmy na przykład z [ramach aplikacji eShopOnContainers odwołania aplikacji](http://aka.ms/eshoponcontainers). Mikrousługi katalogu przechowuje informacje o wszystkich produktów, w tym ich poziom podstawowy. Mikrousługi porządkowanie zarządza zamówień i należy sprawdzić, nowe zamówienie nie przekracza stock produktu dostępna katalogu. (Lub scenariusz może obejmować logiki, która obsługuje produkty wycofane). Hipotetyczny monolityczne wersji tej aplikacji szeregowania podsystemu można po prostu użyć transakcji ACID Sprawdź dostępnych zasobów, Utwórz zamówienie w tabeli zamówienia i zaktualizować dostępnych zasobów w tabeli Produkty.
+Aby analizować ten problem, Spójrzmy na przykład z [ramach aplikacji eShopOnContainers odwołania aplikacji](https://aka.ms/eshoponcontainers). Mikrousługi katalogu przechowuje informacje o wszystkich produktów, w tym ich poziom podstawowy. Mikrousługi porządkowanie zarządza zamówień i należy sprawdzić, nowe zamówienie nie przekracza stock produktu dostępna katalogu. (Lub scenariusz może obejmować logiki, która obsługuje produkty wycofane). Hipotetyczny monolityczne wersji tej aplikacji szeregowania podsystemu można po prostu użyć transakcji ACID Sprawdź dostępnych zasobów, Utwórz zamówienie w tabeli zamówienia i zaktualizować dostępnych zasobów w tabeli Produkty.
 
 Jednak w przypadku aplikacji opartych na mikrousługach w tabelach zamówienie i produkt są własnością ich odpowiednich mikrousług. Nie mikrousług nigdy nie powinna zawierać własnością innego mikrousług w tej samej transakcji lub zapytań bazy danych, jak pokazano w rysunek 4 – 9.
 
@@ -51,7 +51,7 @@ Jednak w przypadku aplikacji opartych na mikrousługach w tabelach zamówienie i
 
 **Rysunek 4 – 9**. Mikrousługi nie może uzyskać bezpośredni dostęp do tabeli w innej mikrousług
 
-Mikrousługi porządkowanie powinna nie zaktualizować tabeli produkty bezpośrednio, ponieważ tabeli Produkty jest własnością mikrousług katalogu. Aby mikrousług wykazu aktualizacji, mikrousługi porządkowanie tylko nigdy nie należy używać komunikacji asynchronicznej, takich jak zdarzenia integracji (wiadomości i komunikacji oparte na zdarzeniu). Jest to sposób, w jaki [ramach aplikacji eShopOnContainers](http://aka.ms/eshoponcontainers) odwołania aplikacja wykonuje ten typ aktualizacji.
+Mikrousługi porządkowanie powinna nie zaktualizować tabeli produkty bezpośrednio, ponieważ tabeli Produkty jest własnością mikrousług katalogu. Aby mikrousług wykazu aktualizacji, mikrousługi porządkowanie tylko nigdy nie należy używać komunikacji asynchronicznej, takich jak zdarzenia integracji (wiadomości i komunikacji oparte na zdarzeniu). Jest to sposób, w jaki [ramach aplikacji eShopOnContainers](https://aka.ms/eshoponcontainers) odwołania aplikacja wykonuje ten typ aktualizacji.
 
 Podane przez [kolejnego elementu teorii CAP](https://en.wikipedia.org/wiki/CAP_theorem), musisz wybrać między dostępnością i ACID silnej spójności. Większość scenariuszy opartych na mikrousługach wymaga dostępności i wysokiej skalowalności w przeciwieństwie do silnej spójności. Aplikacji o krytycznym znaczeniu musi znajdować się, a następnie uruchomiona i deweloperów można obejść wysoki poziom spójności przy użyciu technik do pracy z słabych lub ostateczną spójność. To podejście stosowane przez większość opartych na mikrousługach architektury.
 

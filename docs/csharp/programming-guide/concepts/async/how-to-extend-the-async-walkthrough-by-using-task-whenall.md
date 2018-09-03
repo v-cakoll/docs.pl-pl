@@ -1,35 +1,35 @@
 ---
-title: 'Porady: rozszerzanie async wskazówki za pomocą Task.WhenAll (C#)'
+title: 'Porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 4bdd3f32d2fa502de8ada352c522198a89a17f97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7df5c1f1ffbcc8c60fd6ed0596088f0842ef9ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339472"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482817"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Porady: rozszerzanie async wskazówki za pomocą Task.WhenAll (C#)
-Może poprawić wydajność rozwiązania asynchronicznych w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) przy użyciu <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> metody. Ta metoda asynchronicznie oczekujące na wiele operacji asynchronicznych, które są reprezentowane jako kolekcji zadań.  
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (C#)
+Może poprawić wydajność rozwiązania asynchronicznego w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) przy użyciu <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> metody. Ta metoda asynchronicznie czeka na wiele operacji asynchronicznych, które są reprezentowane jako kolekcję zadań.  
   
- Zwróć uwagę, w tym przewodnikiem czy witryn sieci Web Pobierz w różnym tempie. Czasami jednej z witryn sieci Web jest bardzo wolno, który wybrano opcję opóźnienia wszystkie pozostałe pliki do pobrania. Po uruchomieniu asynchroniczne rozwiązania, które można utworzyć w tym przewodnikiem, można łatwo zakończyć program, jeśli nie chcesz czekać, ale lepszym rozwiązaniem byłoby uruchomić wszystkie pobrane pliki w tym samym czasie i pozwól szybsze pobieranie kontynuować bez oczekiwania na to, że w  opóźnione.  
+ Można zauważyć w instruktażu, witryn sieci Web pobierane w różnym tempie. Czasami jednej z witryn sieci Web działa bardzo powoli, co opóźnia wszystkie pozostałe pobrania. Po uruchomieniu asynchronicznych rozwiązań, które kompilujesz w instruktażu, można łatwo zakończyć program, jeśli nie chcesz czekać, ale lepszym rozwiązaniem byłoby Uruchom wszystkie akcje pobierania w tym samym czasie i umożliwiają szybsze pobieranie bez oczekiwania na tym, który firmy  opóźnione.  
   
- Należy zastosować `Task.WhenAll` metody do kolekcji zadań. Stosowanie `WhenAll` zwraca pojedyncze zadanie, które nie są kompletne, do czasu ukończenia każdego zadania w kolekcji. Wyświetlanie zadań do uruchomienia równoległego, ale nie dodatkowe wątki są tworzone. Zadania można wykonać w dowolnej kolejności.  
+ Należy zastosować `Task.WhenAll` metodę do kolekcji zadań. Stosowanie `WhenAll` zwrócenie pojedynczego zadania, które nie zostało zakończone, aż do zakończenia wszystkich zadań w kolekcji. Zadania wydają się być uruchamiane równolegle, ale żadne dodatkowe wątki nie są tworzone. Zadania można wykonywać w dowolnej kolejności.  
   
 > [!IMPORTANT]
->  Poniższe procedury opisują rozszerzeń aplikacji async, które są opracowywane w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Aplikacje można tworzyć spełniając wskazówki lub pobieranie kodu z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
+>  Poniższe procedury opisują rozszerzenia aplikacji asynchronicznych, które są opracowywane w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Można opracować aplikacje przez wykonanie kroków przewodnika lub ściągając kod z [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
 >   
->  Aby uruchomić przykład, musi mieć programu Visual Studio 2012 lub nowszy jest zainstalowany na tym komputerze.  
+>  Aby uruchomić przykład, jest posiadanie programu Visual Studio 2012 lub nowszy jest zainstalowany na tym komputerze.  
   
-### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>Aby dodać do rozwiązania GetURLContentsAsync Task.WhenAll  
+### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>Aby dodać Task.WhenAll do rozwiązania GetURLContentsAsync  
   
-1.  Dodaj `ProcessURLAsync` metody do pierwszej aplikacji, który został napisany w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Dodaj `ProcessURLAsync` metody do pierwszego wniosku opracowywanego w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Jeśli pobrano kod z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), otwórz projekt AsyncWalkthrough, a następnie dodaj `ProcessURLAsync` do pliku MainWindow.xaml.cs.  
+    -   Jeśli pobrano kod ze [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), otwórz projekt AsyncWalkthrough, a następnie dodaj `ProcessURLAsync` plik MainWindow.xaml.cs.  
   
-    -   Jeśli kod jest rozwinięte, wykonując przewodnika, Dodaj `ProcessURLAsync` do aplikacji, która obejmuje `GetURLContentsAsync` metody. Plik MainWindow.xaml.cs dla tej aplikacji jest pierwszym przykładzie w sekcji "Pełny kod przykłady z przewodnik".  
+    -   Jeśli kod jest opracowany przez wykonanie kroków przewodnika, Dodaj `ProcessURLAsync` do aplikacji, która obejmuje `GetURLContentsAsync` metody. Plik MainWindow.xaml.cs dla tej aplikacji to pierwszy przykład w sekcji "Przykłady pełnego kodu z przewodnika".  
   
-     `ProcessURLAsync` Metody konsoliduje akcje w treści `foreach` pętli w `SumPageSizesAsync` w oryginalnym wskazówki. Metoda asynchronicznie pobiera zawartość z określonej witryny sieci Web jako tablicę bajtów, a następnie wyświetla i zwraca długość tablicy bajtów.  
+     `ProcessURLAsync` Metoda konsoliduje akcje w treści `foreach` pętli w `SumPageSizesAsync` w oryginalnym przewodniku. Metoda asynchronicznie pobiera zawartość określonej witryny sieci Web jako tablicę bajtów i następnie wyświetla i zwraca długość tablicy bajtów.  
   
     ```csharp  
     private async Task<int> ProcessURLAsync(string url)  
@@ -40,7 +40,7 @@ Może poprawić wydajność rozwiązania asynchronicznych w [wskazówki: uzyskiw
     }  
     ```  
   
-2.  Komentarz lub usunąć `foreach` pętli w `SumPageSizesAsync`, jak pokazano w następującym kodem.  
+2.  Skomentuj lub usuń `foreach` pętli w `SumPageSizesAsync`, jak pokazano w poniższym kodzie.  
   
     ```csharp  
     //var total = 0;  
@@ -61,9 +61,9 @@ Może poprawić wydajność rozwiązania asynchronicznych w [wskazówki: uzyskiw
     //}  
     ```  
   
-3.  Utwórz kolekcję zadań. Poniższy kod definiuje [zapytania](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , gdy wykonywane przez <xref:System.Linq.Enumerable.ToArray%2A> metoda, tworzy zbiór zadań, które pobrania zawartości z poszczególnych witryn. Zadania są uruchamiane podczas szacowania zapytania.  
+3.  Utwórz kolekcję zadań. Poniższy kod definiuje [zapytania](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , podczas wykonywania przez <xref:System.Linq.Enumerable.ToArray%2A> metody, tworzy kolekcję zadań pobierających zawartość każdej witryny sieci Web. Zadania są uruchamiane, gdy zapytanie jest obliczane.  
   
-     Dodaj następujący kod do metody `SumPageSizesAsync` po deklaracji `urlList`.  
+     Dodaj następujący kod do metody `SumPageSizesAsync` po zadeklarowaniu `urlList`.  
   
     ```csharp  
     // Create a query.   
@@ -74,9 +74,9 @@ Może poprawić wydajność rozwiązania asynchronicznych w [wskazówki: uzyskiw
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Zastosuj `Task.WhenAll` do kolekcji zadań, `downloadTasks`. `Task.WhenAll` Zwraca pojedyncze zadanie, która kończy się po zakończeniu wszystkich zadań w kolekcji zadań.  
+4.  Zastosuj `Task.WhenAll` do kolekcji zadań, `downloadTasks`. `Task.WhenAll` Zwraca pojedyncze zadanie, który kończy się po zakończeniu wszystkich zadań w kolekcji zadań.  
   
-     W poniższym przykładzie `await` wyrażenie oczekujące na ukończenie pojedynczego zadanie, które `WhenAll` zwraca. Wyrażenie do tablicy liczb całkowitych, w którym każdy liczba całkowita jest długość pobrany witryny sieci Web. Dodaj następujący kod do `SumPageSizesAsync`, tylko po kodzie dodanym w poprzednim kroku.  
+     W poniższym przykładzie `await` wyrażenie czeka na zakończenie pojedynczego zadania, które `WhenAll` zwraca. Wyrażenie daje w wyniku tablicę liczb całkowitych, gdzie każda liczba całkowita jest długością pobranej witryny sieci Web. Dodaj następujący kod do `SumPageSizesAsync`, zaraz za kodem dodanym w poprzednim kroku.  
   
     ```csharp  
     // Await the completion of all the running tasks.  
@@ -87,23 +87,23 @@ Może poprawić wydajność rozwiązania asynchronicznych w [wskazówki: uzyskiw
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  Na koniec użyj <xref:System.Linq.Enumerable.Sum%2A> metodę obliczania sumę długości wszystkich witryn sieci Web. Dodaj następujący wiersz do `SumPageSizesAsync`.  
+5.  Na koniec użyj <xref:System.Linq.Enumerable.Sum%2A> metody w celu obliczenia sumy długości wszystkich witryn sieci Web. Dodaj następujący wiersz do `SumPageSizesAsync`.  
   
     ```csharp  
     int total = lengths.Sum();  
     ```  
   
-### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>Aby dodać Task.WhenAll rozwiązania HttpClient.GetByteArrayAsync  
+### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>Aby dodać Task.WhenAll do rozwiązania HttpClient.GetByteArrayAsync  
   
-1.  Dodaj następujące wersję `ProcessURLAsync` do drugiego aplikacji utworzoną w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Dodaj następującą wersję `ProcessURLAsync` do drugiej aplikacji opracowywanej w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Jeśli pobrano kod z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), otwórz projekt AsyncWalkthrough_HttpClient, a następnie dodaj `ProcessURLAsync` do pliku MainWindow.xaml.cs.  
+    -   Jeśli pobrano kod ze [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), otwórz projekt AsyncWalkthrough_HttpClient, a następnie dodaj `ProcessURLAsync` plik MainWindow.xaml.cs.  
   
-    -   Jeśli kod jest rozwinięte, wykonując przewodnika, Dodaj `ProcessURLAsync` do aplikacji, która używa `HttpClient.GetByteArrayAsync` metody. Plik MainWindow.xaml.cs dla tej aplikacji jest drugi przykład w sekcji "Pełny kod przykłady z przewodnik".  
+    -   Jeśli kod jest opracowany przez wykonanie kroków przewodnika, Dodaj `ProcessURLAsync` do aplikacji, która używa `HttpClient.GetByteArrayAsync` metody. Plik MainWindow.xaml.cs dla tej aplikacji to drugi przykład w sekcji "Przykłady pełnego kodu z przewodnika".  
   
-     `ProcessURLAsync` Metody konsoliduje akcje w treści `foreach` pętli w `SumPageSizesAsync` w oryginalnym wskazówki. Metoda asynchronicznie pobiera zawartość z określonej witryny sieci Web jako tablicę bajtów, a następnie wyświetla i zwraca długość tablicy bajtów.  
+     `ProcessURLAsync` Metoda konsoliduje akcje w treści `foreach` pętli w `SumPageSizesAsync` w oryginalnym przewodniku. Metoda asynchronicznie pobiera zawartość określonej witryny sieci Web jako tablicę bajtów i następnie wyświetla i zwraca długość tablicy bajtów.  
   
-     Jedyną różnicą z `ProcessURLAsync` metody w poprzedniej procedurze jest używana <xref:System.Net.Http.HttpClient> wystąpienia, `client`.  
+     Jedyną różnicą między `ProcessURLAsync` metoda w poprzedniej procedurze jest użycie <xref:System.Net.Http.HttpClient> wypadku `client`.  
   
     ```csharp  
     async Task<int> ProcessURL(string url, HttpClient client)  
@@ -114,7 +114,7 @@ Może poprawić wydajność rozwiązania asynchronicznych w [wskazówki: uzyskiw
     }  
     ```  
   
-2.  Komentarz lub usunąć `For Each` lub `foreach` pętli w `SumPageSizesAsync`, jak pokazano w następującym kodem.  
+2.  Skomentuj lub usuń `For Each` lub `foreach` pętli w `SumPageSizesAsync`, jak pokazano w poniższym kodzie.  
   
     ```csharp  
     //var total = 0;  
@@ -136,9 +136,9 @@ Może poprawić wydajność rozwiązania asynchronicznych w [wskazówki: uzyskiw
     //}  
     ```  
   
-3.  Zdefiniuj [zapytania](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , gdy wykonywane przez <xref:System.Linq.Enumerable.ToArray%2A> metoda, tworzy zbiór zadań, które pobrania zawartości z poszczególnych witryn. Zadania są uruchamiane podczas szacowania zapytania.  
+3.  Zdefiniuj [zapytania](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , podczas wykonywania przez <xref:System.Linq.Enumerable.ToArray%2A> metody, tworzy kolekcję zadań pobierających zawartość każdej witryny sieci Web. Zadania są uruchamiane, gdy zapytanie jest obliczane.  
   
-     Dodaj następujący kod do metody `SumPageSizesAsync` po deklaracji `client` i `urlList`.  
+     Dodaj następujący kod do metody `SumPageSizesAsync` po zadeklarowaniu `client` i `urlList`.  
   
     ```csharp  
     // Create a query.  
@@ -149,9 +149,9 @@ Może poprawić wydajność rozwiązania asynchronicznych w [wskazówki: uzyskiw
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Następnie Zastosuj `Task.WhenAll` do kolekcji zadań, `downloadTasks`. `Task.WhenAll` Zwraca pojedyncze zadanie, która kończy się po zakończeniu wszystkich zadań w kolekcji zadań.  
+4.  Następnie Zastosuj `Task.WhenAll` do kolekcji zadań, `downloadTasks`. `Task.WhenAll` Zwraca pojedyncze zadanie, który kończy się po zakończeniu wszystkich zadań w kolekcji zadań.  
   
-     W poniższym przykładzie `await` wyrażenie oczekujące na ukończenie pojedynczego zadanie, które `WhenAll` zwraca. Po zakończeniu `await` wyrażenie ma tablicę liczb całkowitych, w którym każdy liczba całkowita jest długość pobrany witryny sieci Web. Dodaj następujący kod do `SumPageSizesAsync`, tylko po kodzie dodanym w poprzednim kroku.  
+     W poniższym przykładzie `await` wyrażenie czeka na zakończenie pojedynczego zadania, które `WhenAll` zwraca. Po zakończeniu `await` wyrażenie daje w wyniku tablicę liczb całkowitych, gdzie każda liczba całkowita jest długością pobranej witryny sieci Web. Dodaj następujący kod do `SumPageSizesAsync`, zaraz za kodem dodanym w poprzednim kroku.  
   
     ```csharp  
     // Await the completion of all the running tasks.  
@@ -162,18 +162,18 @@ Może poprawić wydajność rozwiązania asynchronicznych w [wskazówki: uzyskiw
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  Na koniec użyj <xref:System.Linq.Enumerable.Sum%2A> metodę, aby pobrać sumę długości wszystkich witryn sieci Web. Dodaj następujący wiersz do `SumPageSizesAsync`.  
+5.  Na koniec użyj <xref:System.Linq.Enumerable.Sum%2A> metody w celu uzyskania sumy długości wszystkich witryn sieci Web. Dodaj następujący wiersz do `SumPageSizesAsync`.  
   
     ```csharp  
     int total = lengths.Sum();
     ```  
   
-### <a name="to-test-the-taskwhenall-solutions"></a>Aby przetestować rozwiązań Task.WhenAll  
+### <a name="to-test-the-taskwhenall-solutions"></a>Aby przetestować rozwiązania Task.WhenAll  
   
--   Dla obu rozwiązań wybierz klawisz F5, aby uruchomić program, a następnie wybierz **Start** przycisku. Dane wyjściowe powinny przypominać dane wyjściowe z rozwiązań asynchronicznych w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Jednak zauważyć, że witryn sieci Web są wyświetlane w innej kolejności zawsze.  
+-   Dla dowolnego z rozwiązań, wybierz klawisz F5, aby uruchomić program, a następnie wybierz **Start** przycisku. Dane wyjściowe powinny przypominać dane wyjściowe z rozwiązań asynchronicznych w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Jednak należy zauważyć, że witryny sieci Web są wyświetlane w innej kolejności każdorazowo.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia rozszerzeń w projekcie, który używa `GetURLContentsAsync` metodę, aby pobrać zawartość z sieci web.  
+ Poniższy kod przedstawia rozszerzenia projektu, który używa `GetURLContentsAsync` metody do pobierania zawartości z sieci web.  
   
 ```csharp  
 // Add the following using directives, and add a reference for System.Net.Http.  
@@ -315,7 +315,7 @@ namespace AsyncExampleWPF_WhenAll
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia rozszerzenia do projektu, który używa metody `HttpClient.GetByteArrayAsync` na pobieranie zawartości z sieci web.  
+ Poniższy kod przedstawia rozszerzenia projektu, który używa metody `HttpClient.GetByteArrayAsync` można pobrać zawartości z sieci web.  
   
 ```csharp  
 // Add the following using directives, and add a reference for System.Net.Http.  

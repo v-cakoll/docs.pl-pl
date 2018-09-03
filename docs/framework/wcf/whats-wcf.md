@@ -6,91 +6,91 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: e49b393b9dd09a513066a6cb3612ad9f938e9adb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5838422b1f7c4b0b88a6085e5120d5e3b85b0abb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807420"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483979"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
-Windows Communication Foundation (WCF) to platforma do tworzenia aplikacji korzystających z usług. Za pomocą usługi WCF, możesz wysłać dane jako asynchroniczne komunikaty z jednego punktu końcowego na inny. Punkt końcowy usługi mogą być częścią stale dostępna usługa hostowana przez usługi IIS, lub można ją z usługą hostowaną w aplikacji. Punkt końcowy może być klienta usługi, która wysyła żądanie danych z punktu końcowego usługi. Komunikaty może być tak proste, jak pojedynczy znak lub słowo wysyłane w formacie XML lub złożonym, strumień danych binarnych. Kilka przykładowych scenariuszy obejmują:  
+Windows Communication Foundation (WCF) to architektura służąca do budowania aplikacji usługowych. Przy użyciu usługi WCF, możesz wysłać danych jako asynchroniczną komunikaty z punktu końcowego z jednej usługi do innego. Punkt końcowy usługi może być częścią stale dostępnych usług hostowanych przez usługi IIS lub może być usługą hostowaną w aplikacji. Punkt końcowy może być klientem usługi, która żąda danych z punktu końcowego usługi. Komunikaty można tak proste, jak pojedynczy znak lub słowo wysłana w formacie XML, lub tak złożonego jako strumień danych binarnych. Kilka przykładowe scenariusze obejmują:  
   
--   Usługa bezpiecznego przetwarzania transakcji.  
+-   Usługa bezpiecznego przetwarzania transakcji biznesowych.  
   
--   Usługa, która dostarcza bieżące dane do innych użytkowników, na przykład raport ruchu lub inne usługi monitorowania.  
+-   Usługa, która dostarcza bieżące dane dla innych osób, takich jak raport ruchu lub inną usługą monitorowania.  
   
--   Usługa rozmowy, która umożliwia dwóch osób do komunikowania się lub wymiany danych w czasie rzeczywistym.  
+-   Usługi rozmowy, który umożliwia użytkownikom dwóch komunikacji lub wymiany danych w czasie rzeczywistym.  
   
--   Aplikacja pulpitu nawigacyjnego sondowania jeden lub więcej usług danych, który prezentuje je w prezentacji logiczne.  
+-   Aplikacja pulpit nawigacyjny, który odpytuje co najmniej jeden usług danych i prezentuje je w prezentacji logiczne.  
   
--   Udostępnianie implementowane za pomocą programu Windows Workflow Foundation jako usługa WCF przepływ pracy.  
+-   Udostępnianie przepływu pracy implementowana przy użyciu programu Windows Workflow Foundation jako usługa WCF.  
   
--   Aplikacja Silverlight sondowanie usługę najnowsze źródła danych.  
+-   Źródła danych aplikacji Silverlight, aby sondować usługę najnowsze dane.  
   
- Podczas tworzenia takich aplikacji jest możliwe przed istnienie WCF, WCF ułatwia programowanie punktów końcowych niż kiedykolwiek wcześniej. Podsumowując WCF jest przeznaczona do proste w zarządzaniu podejście do tworzenia usług sieci Web i klientami usługi sieci Web.  
+ Podczas tworzenia takich aplikacji jest możliwe przed istnienie WCF, WCF ułatwia projektowanie punktów końcowych łatwiejsze niż kiedykolwiek wcześniej. Podsumowując WCF jest przeznaczony do oferuje proste w zarządzaniu podejście do tworzenia usług sieci Web i klientów usługi sieci Web.  
   
 ## <a name="features-of-wcf"></a>Funkcje programu WCF  
  Usługi WCF zawiera następujący zestaw funkcji. Aby uzyskać więcej informacji, zobacz [Szczegóły funkcji WCF](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **Orientacji usługi**  
   
-     W wyniku użycia standardów WS jest WCF umożliwia tworzenie *na usługach* aplikacji. Zorientowane na usługę architektura (SOA) jest zależność od usługi sieci Web do wysyłania i odbierania danych. Usługi mają ogólne zaletą jest luźno połączonych zamiast ustalony z jednej aplikacji do innej. Relację luźno połączonych oznacza to, czy każdy klient utworzony na dowolnej platformie połączenie usługi tak długo, jak kontrakty niezbędne są spełnione.  
+     W wyniku wprowadzenia przy użyciu standardów WS jest, że WCF pozwala na tworzenie *zorientowanej na usługi* aplikacji. Dotycząca architektury zorientowanej na usługi (SOA) jest zależność od usługi sieci Web do wysyłania i odbierania danych. Usługi muszą ogólne zaletą jest luźno powiązanych zamiast zakodowanych z jednej aplikacji na inny. Relację luźno powiązane oznacza dowolnego klienta, utworzony na dowolnej platformie można nawiązywać połączenie do dowolnej usługi tak długo, jak kontrakty niezbędne są spełnione.  
   
 -   **Współdziałanie**  
   
-     Usługi WCF zaimplementowano standardy branżowe nowoczesnych współdziałania usługi sieci Web. Aby uzyskać więcej informacji na temat obsługiwanych standardów zobacz [współdziałanie i integracja](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     Usługi WCF implementuje nowoczesnych standardów współdziałania w ramach usługi sieci Web. Aby uzyskać więcej informacji na temat obsługiwanych standardów zobacz [współdziałanie i integracja](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
   
--   **Wiele wzorców wiadomości**  
+-   **Wielu wzorców wiadomości**  
   
-     Komunikaty są wymieniane w jednym z kilku. Najbardziej typowe wzorzec jest wzorzec żądanie/odpowiedź, gdzie jeden punkt końcowy żąda danych od drugiego punktu końcowego. Drugi odpowiedzi punktu końcowego. Istnieją inne wzorców, takich jak komunikat jednokierunkowy, w której jeden punkt końcowy wysyła wiadomość bez żadnych oczekiwania odpowiedzi. Bardziej złożone wzorzec jest wzorzec dupleksu programu exchange, gdy dwa punkty końcowe nawiązania połączenia i wysyłania danych i z powrotem, podobnie jak program obsługi wiadomości błyskawicznych. Aby uzyskać więcej informacji na temat implementowania wymiany wiadomości różnych wzorców przy użyciu programu WCF zobacz [kontrakty](../../../docs/framework/wcf/feature-details/contracts.md).  
+     Komunikaty są wymieniane w jednym z kilku wzorców. Najczęstszym wzorcem jest wzorzec żądanie/nietypizowana odpowiedź, w której jeden punkt końcowy żąda danych od drugiego punktu końcowego. Drugi odpowiedzi punktu końcowego. Istnieją inne wzorców, takich jak komunikat jednokierunkowy, w którym jeden punkt końcowy jest wysyłany komunikat bez żadnych oczekiwania na odpowiedź. Bardziej złożonym wzorcem jest dupleksowy wymiany gdzie dwa punkty końcowe nawiązania połączenia i wysyłanie danych i z powrotem, podobne do programu obsługi wiadomości błyskawicznych. Aby uzyskać więcej informacji o sposobie wdrażania programu exchange w inny komunikat Zobacz wzorce przy użyciu usługi WCF [umów](../../../docs/framework/wcf/feature-details/contracts.md).  
   
 -   **Metadane usługi**  
   
-     Usługi WCF obsługuje publikowania metadanych usługi formatu określonego w standardy branżowe, takie jak WSDL, schemat XML i WS-Policy. Te metadane można automatycznie wygenerować i skonfigurować klientów do uzyskiwania dostępu do usługi WCF. Metadane mogą być publikowane za pośrednictwem protokołu HTTP i HTTPS lub przy użyciu standardu wymiany metadanych usługi sieci Web. Aby uzyskać więcej informacji, zobacz [metadanych](../../../docs/framework/wcf/feature-details/metadata.md).  
+     Usługi WCF obsługuje Publikowanie metadanych usługi przy użyciu formatów określone w standardy branżowe, takie jak WSDL, schemat XML i WS-Policy. Te metadane może służyć do automatycznego generowania i skonfiguruj klientów do uzyskiwania dostępu do usług WCF. Metadane mogą być publikowane za pośrednictwem protokołów HTTP i HTTPS lub przy użyciu standardu wymiany metadanych usługi sieci Web. Aby uzyskać więcej informacji, zobacz [metadanych](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **Kontrakty danych**  
   
-     Ponieważ WCF jest utworzony przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], zawiera także kod przyjaznego metod podawania kontrakty mają zostać wymuszone. Jeden z uniwersalnych typów kontraktów jest kontraktu danych. W zasadzie jak kodu usługi za pomocą Visual C# lub Visual Basic, najprostszym sposobem obsługi danych jest przez utworzenie klas reprezentujących jednostki danych z właściwościami, które należą do obiektu danych. Usługi WCF zawiera kompleksowe system do pracy z danymi w ten sposób łatwe. Po utworzeniu klasy, które przedstawiają dane z usługą automatycznie generuje metadanych, które umożliwia klientom są zgodne z typami danych, które zostały zaprojektowane. Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     Ponieważ WCF został skompilowany przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], obejmuje także przyjaznego dla kodu metody podawania kontrakty, które chcesz zastosować. Jeden z typów universal zamówień jest kontraktu danych. W zasadzie zgodnie z kodem usługi za pomocą programu Visual C# lub Visual Basic, najprostszym sposobem obsługi danych jest utworzenie klas, które reprezentują jednostki danych z właściwościami, które należą do jednostki danych. Usługi WCF zawiera kompleksowe system do pracy z danymi w ten sposób łatwe. Po utworzeniu klasy reprezentujące danych usługa automatycznie generuje metadanych, które umożliwia klientom są zgodne z typami danych, które zostały tak zaprojektowane. Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **Zabezpieczenia**  
   
-     Komunikaty mogą być szyfrowane, aby chronić prywatność i można wymagać od użytkowników uwierzytelnić się przed uzyskaniem dostępu do odbierania wiadomości. Za pomocą dobrze znanych standardy, takie jak protokół SSL lub WS-SecureConversation można zaimplementować zabezpieczeń. Aby uzyskać więcej informacji, zobacz [zabezpieczeń](../../../docs/framework/wcf/feature-details/security.md).  
+     Komunikaty mogą być szyfrowane w celu ochrony prywatności i można wymagać od użytkowników uwierzytelniania się przed uzyskaniem dostępu do odbierania komunikatów. Za pomocą dobrze znanych standardów, takich jak protokół SSL lub WS-SecureConversation można zaimplementować zabezpieczenia. Aby uzyskać więcej informacji, zobacz [zabezpieczeń](../../../docs/framework/wcf/feature-details/security.md).  
   
 -   **Wiele transport i kodowanie**  
   
-     Na dowolnym kilka wbudowanych protokołów i kodowania można wysłać wiadomości. Najbardziej typowe protokołu i kodowanie jest wysłanie wiadomości SOAP przy użyciu protokołu HTTP (HyperText Transfer) do użytku w sieci World Wide Web kodowany tekst. Alternatywnie WCF umożliwia wysyłanie komunikatów za pośrednictwem protokołu TCP, o nazwie potoków lub usługi MSMQ. Te komunikaty mogą być kodowane jako tekst lub za pomocą zoptymalizowanego formatu binarnego.  Dane binarne mogą być wysyłane efektywne wykorzystanie standardowego mechanizmu MTOM. Brak podanego transportu lub kodowania własnych potrzeb można utworzyć własny transportu lub kodowania. Aby uzyskać więcej informacji na temat transport i kodowanie obsługiwane przez usługę WCF zobacz [transportów](../../../docs/framework/wcf/feature-details/transports.md).  
+     Komunikaty mogą być wysyłane na dowolnym z kilku wbudowanych protokołów i kodowania. Najbardziej typowe protokołami i kodowaniem jest wysłanie ich tekst zakodowany komunikaty protokołu SOAP, przy użyciu protokołu HTTP (HyperText Transfer) do użytku w sieci World Wide Web. Alternatywnie WCF umożliwia wysyłanie komunikatów za pośrednictwem protokołu TCP, o nazwie potoków lub usługi MSMQ. Te komunikaty mogą być zakodowane jako tekst lub przy użyciu zoptymalizowanego format binarny.  Dane binarne mogą być wysyłane efektywnie są używane standardowe MTOM. Podana transportów ani kodowania własnych potrzeb można utworzyć własną niestandardową transportu lub kodowania. Aby uzyskać więcej informacji na temat transport i kodowanie obsługiwane przez architekturę WCF zobacz [transportów](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Niezawodne i umieszczonych w kolejce wiadomości**  
   
-     Usługi WCF obsługuje wymianę komunikatów niezawodnej przy użyciu sesji niezawodnej implementowane za pośrednictwem usługi WS-Reliable Messaging i przy użyciu usługi MSMQ. Aby uzyskać więcej informacji na temat obsługi komunikatów niezawodnej i umieszczonych w kolejce w programie WCF, zobacz [kolejki i sesje niezawodne](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     Usługi WCF obsługuje exchange niezawodnych komunikatów za pomocą niezawodnej sesji implementowane za pośrednictwem usługi WS-Reliable Messaging i przy użyciu usługi MSMQ. Aby uzyskać więcej informacji o niezawodnych i umieszczonych w kolejce obsługi komunikatów w architekturze WCF zobacz [kolejki i sesje niezawodne](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
   
 -   **Trwałe wiadomości**  
   
-     Trwałe komunikatu to taki, który nigdy nie zostaną utracone z powodu przerw w działaniu w komunikacie. Wiadomości we wzorcu komunikatów trwałe zawsze są zapisywane w bazie danych. W przypadku zakłóceń bazy danych umożliwia wznowienie wymiany wiadomości po przywróceniu połączenia. Można również utworzyć trwałe wiadomości przy użyciu systemu Windows Workflow Foundation (WF). Aby uzyskać więcej informacji, zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Trwały komunikat jest taki, który nigdy nie jest utracone z powodu przerw w działaniu w komunikacie. Wiadomości we wzorcu komunikatów trwałe są zawsze zapisywane do bazy danych. W przypadku przerwy w działaniu bazy danych umożliwia wznowienie wymianę komunikatów, po przywróceniu połączenia. Można również utworzyć trwały komunikat przy użyciu Windows Workflow Foundation (WF). Aby uzyskać więcej informacji, zobacz [usług przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **Transakcje**  
   
-     Usługi WCF obsługuje również transakcji przy użyciu jednej z trzech modele transakcji: WS-AtomicTtransactions, interfejsy API w <xref:System.Transactions> przestrzeni nazw i Microsoft Distributed Transaction Coordinator. Aby uzyskać więcej informacji o transakcji w temacie pomocy technicznej w programie WCF [transakcji](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
+     Usługi WCF obsługuje również transakcji przy użyciu jednej z trzech modele transakcji: WS AtomicTtransactions, interfejsów API w <xref:System.Transactions> przestrzeni nazw i Microsoft Distributed Transaction Coordinator. Aby uzyskać więcej informacji o transakcji zobacz temat pomocy technicznej w programie WCF [transakcji](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
   
--   **AJAX i obsługa REST**  
+-   **AJAX i pomoc techniczna REST**  
   
-     REST jest przykładem rozwijającą się technologia Web 2.0. Usługi WCF można skonfigurować do przetwarzania danych XML "zwykły", który nie jest opakowany koperty protokołu SOAP. Można również rozszerzać WCF do obsługi określonych formatów XML, takie jak ATOM popularnych RSS (standardowe), a nawet z systemem innym niż XML formatach, takich jak JavaScript Object Notation (JSON).  
+     POZOSTAŁE elementy są przykładem rozwijające się technologie sieci Web 2.0. Usługi WCF można skonfigurować do przetwarzania danych XML "zwykły" nie jest ujęty w kopercie SOAP. Można również rozszerzać WCF do obsługi określonych formatów XML, takie jak ATOM popularnych RSS (standardowa), a nawet XML inny niż formatów, takich jak JavaScript Object Notation (JSON).  
   
 -   **Rozszerzalność**  
   
-     Architektura WCF ma liczbę punktów rozszerzalności. Jeśli wymagana jest dodatkowa możliwość, istnieje wiele punktów wejścia, które pozwalają dostosować zachowanie usługi. Aby uzyskać więcej informacji na temat rozszerzeń dostępnych punktów zobacz [rozszerzanie WCF](../../../docs/framework/wcf/extending/index.md).  
+     Architektura WCF numerem punkty rozszerzeń. Jeśli wymagane jest dodatkowe możliwości, istnieje wiele punktów wejścia, które umożliwiają dostosowanie zachowania usługi. Aby uzyskać więcej informacji na temat rozszerzania dostępne punkty zobacz [rozszerzenia WCF](../../../docs/framework/wcf/extending/index.md).  
   
-## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integracja WCF z innych technologii firmy Microsoft  
- Usługi WCF jest uniwersalną platformą. Ze względu na to wyjątkową elastyczność WCF jest również używane w kilku innych produktów firmy Microsoft. Zrozumienie podstaw WCF, masz przewagę natychmiastowego Jeśli również przy użyciu jednej z tych produktów.  
+## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integracja usług WCF za pomocą innych technologii firmy Microsoft  
+ Usługi WCF jest elastyczna platforma. Z powodu tej elastyczności skrajne WCF jest również używany w kilku innych produktów firmy Microsoft. Poznawszy podstawy usługi WCF, masz natychmiastowe korzyści, gdy również użyć dowolnego z tych produktów.  
   
- Pierwszy technologię tak, aby skojarzyć WCF została Windows Workflow Foundation (WF). Przepływy pracy uprościć tworzenie aplikacji przez Hermetyzowanie kroki w przepływie pracy jako "działania". W pierwszej wersji programu Windows Workflow Foundation Deweloper było utworzenie hosta przepływu pracy. Na następną wersję programu Windows Workflow Foundation zostało zintegrowane z usługą WCF. Dozwolony każdy przepływ pracy ma być łatwo obsługiwana w usłudze WCF; Można to zrobić, wybierając automatycznie WCF/WF typu projektu w [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+ Pierwszy technologii parowanie WCF jest Windows Workflow Foundation (WF). Przepływy pracy uprościć tworzenie aplikacji dzięki hermetyzowany kroki w przepływie pracy jako "działania". W pierwszej wersji programu Windows Workflow Foundation Deweloper było utworzenie hosta przepływu pracy. Następna wersja programu Windows Workflow Foundation została zintegrowana z usługą WCF. Dopuszczalna każdy przepływ pracy łatwo znajdować się w usłudze WCF; Można to zrobić, wybierając automatycznie WF/WCF typu projektu w [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
- Microsoft BizTalk Server R2 korzysta również WCF technologii komunikacji. BizTalk zaprojektowano w celu odbierania i przekształcanie danych z jednego formatu standardowych. Wiadomości musi być dostarczane do jej centralnej komunikat w przypadku, gdy wiadomość można je przekształcać za pomocą strict mapowania lub za pomocą funkcji BizTalk, takie jak jego aparatu przepływu pracy. BizTalk można teraz używać karty WCF Linia biznesowych (LOB) na dostarczenie wiadomości do okna komunikatu.  
+ Program Microsoft BizTalk Server R2 również korzysta z usługi WCF jako technologia komunikacji. BizTalk zaprojektowano w celu odbierania i przekształcać dane z jednego standardowego formatu do innego. Wiadomości musi być dostarczana do jej centralnej komunikat w przypadku, gdy komunikat mogą zostać przekształcone przy użyciu strict mapowania lub przy użyciu jednej z funkcje BizTalk, takie jak jego aparatu przepływu pracy. BizTalk mogą teraz używać karty WCF Line of Business (LOB), dostarczania wiadomości do okna komunikatu.  
   
- Program Microsoft Silverlight to platforma do tworzenia interoperacyjne, rozbudowanych aplikacji sieci Web, które umożliwiają deweloperom tworzenie witryn sieci Web intensywnie nośnika (na przykład klip wideo przesyłany strumieniowo). Począwszy od wersji 2, Silverlight, ma włączone WCF technologii komunikacji, aby połączyć aplikacje Silverlight do punktów końcowych WCF.  
+ Program Microsoft Silverlight to platforma do tworzenia międzyoperacyjnych, rozbudowanych aplikacji sieci Web, które umożliwiają deweloperom tworzenie witryn sieci Web intensywnie korzystających z multimediów (np. przesyłania strumieniowego wideo). Począwszy od wersji 2, Silverlight, ma włączone WCF jako technologia komunikacji do łączenia aplikacji Silverlight z punktami końcowymi programu WCF.  
   
- [!INCLUDE[dublin](../../../includes/dublin-md.md)] Serwera aplikacji w szczególności zaprojektowano pod kątem wdrażania i zarządzania aplikacjami, które używają WCF do komunikacji. [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] Obejmuje zaawansowane opcje narzędzi i konfiguracji zaprojektowane specjalnie dla aplikacji obsługujących usługi WCF.  
+ [!INCLUDE[dublin](../../../includes/dublin-md.md)] Serwera aplikacji specjalnie zaprojektowano pod kątem wdrażania i zarządzania aplikacji, które używają usługi WCF do komunikacji. [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] Zawiera zaawansowane narzędzia i opcje konfiguracji zaprojektowane specjalnie dla aplikacji obsługujących usługi WCF.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel>  
@@ -100,4 +100,4 @@ Windows Communication Foundation (WCF) to platforma do tworzenia aplikacji korzy
  [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [Przewodnik po dokumentacji](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  [Podstawy programowania przy użyciu programu WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Windows Communication Foundation — przykłady](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+ [Windows Communication Foundation — przykłady](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

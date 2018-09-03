@@ -1,19 +1,19 @@
 ---
-title: ChildViews i relacji
+title: Elementy Childview i relacje
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: e55e28fd3acdb145e03f0916e3681e95cc7a041a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755386"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486545"
 ---
-# <a name="childviews-and-relations"></a>ChildViews i relacji
-Jeśli istnieje relacja między tabelami w <xref:System.Data.DataSet>, można utworzyć <xref:System.Data.DataView> zawierająca wiersze z tabeli podrzędnych za pomocą <xref:System.Data.DataRowView.CreateChildView%2A> metody <xref:System.Data.DataRowView> dla wierszy w tabeli nadrzędnej. Na przykład poniższy kod przedstawia **kategorii** i ich pokrewnych **produktów** w kolejności alfabetycznej posortowane według **CategoryName** i **ProductName** .  
+# <a name="childviews-and-relations"></a>Elementy Childview i relacje
+Jeśli istnieje relacja między tabelami w <xref:System.Data.DataSet>, możesz utworzyć <xref:System.Data.DataView> zawierające wiersze z pokrewną tabelę podrzędną przy użyciu <xref:System.Data.DataRowView.CreateChildView%2A> metody <xref:System.Data.DataRowView> wierszy w tabeli nadrzędnej. Na przykład, poniższy kod wyświetla **kategorie** i ich pokrewnych **produktów** w kolejności alfabetycznej, posortowane według **CategoryName** i **ProductName** .  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -78,4 +78,4 @@ foreach (DataRowView catDRV in catView)
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  
  [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332568"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486834"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Porady: ustawianie kolejności tabulacji na formularzach systemu Windows
 Kolejność tabulacji polega na kolejności, w którym użytkownik przenosi fokus z jednego formantu do drugiego, naciskając klawisz TAB. Każdy formularz ma swój własny kolejności tabulacji. Domyślnie kolejność dostępu jest taka sama jak kolejność, w którym utworzono kontrolki. Kolejność tabulacji numerowania rozpoczyna się od zera.  

@@ -12,30 +12,30 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 1a2a25f2e7eaa6618c0bf535a34f7dc6a28d51fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d67d9b204c316dce5f3818496d791ed4c1b352f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533689"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478048"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Porady: tworzenie warstw obiektów na formularzach systemu Windows
-Tworzenie interfejsu użytkownika złożonych lub praca wielu dokumentów (MDI) interfejsu, często można warstwy zarówno kontroli, jak i formularze podrzędne, aby utworzyć bardziej złożoną interfejsy użytkownika (UI). Aby przenieść i śledzenie kontrolek i systemu windows w ramach grupy, manipulować ich porządek osi z. *Porządek osi* jest visual warstwy formantów w formularzu wzdłuż osi z formularza (głębokość). Okno w górnej części porządek nakłada się na wszystkich innych okien. Wszystkie inne okna nakładać się na okna w dolnej części porządek osi z.  
+Podczas tworzenia interfejsu użytkownika złożonych lub praca wielu dokumentów (MDI) interfejsu często warto warstwy kontroli i formularze podrzędne, aby utworzyć bardziej złożone interfejsy użytkownika (UI). Aby przenieść i śledzenie kontrolek i systemu windows w ramach grupy, manipulować ich porządek osi z. *Porządek* jest warstwy visual kontrolek w formularzu wzdłuż osi z formularza (na głębokości). Okno w górnej części porządek nakłada się na inne okna. Inne okna nakładać się na okna w dolnej części porządku osi z.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-layer-controls-at-design-time"></a>Do warstwy formantów w czasie projektowania  
+### <a name="to-layer-controls-at-design-time"></a>Warstwa kontrolek w czasie projektowania  
   
-1.  Wybierz kontrolkę, która ma być warstwy.  
+1.  Zaznacz kontrolkę, którą chcesz warstwy.  
   
-2.  Na **Format** menu wskaż **kolejności**, a następnie kliknij przycisk **Przesuń na wierzch** lub **Wyślij ponownie**.  
+2.  Na **Format** menu wskaż **kolejności**, a następnie kliknij przycisk **Przesuń na wierzch** lub **Przesuń na spód**.  
   
 ### <a name="to-layer-controls-programmatically"></a>Aby programowo warstwy formantów  
   
--   Użyj <xref:System.Windows.Forms.Control.BringToFront%2A> i <xref:System.Windows.Forms.Control.SendToBack%2A> metoda manipulowania porządek osi z kontrolki.  
+-   Użyj <xref:System.Windows.Forms.Control.BringToFront%2A> i <xref:System.Windows.Forms.Control.SendToBack%2A> metody do manipulowania porządek kontrolki.  
   
-     Na przykład jeśli <xref:System.Windows.Forms.TextBox> kontroli, `txtFirstName`, jest underneath inny formant i chcesz ma go w górnej części, użyj następującego kodu:  
+     Na przykład jeśli <xref:System.Windows.Forms.TextBox> kontroli `txtFirstName`, jest poniżej innej kontrolki, a chcesz ma go na początku, użyj następującego kodu:  
   
     ```vb  
     txtFirstName.BringToFront()  
@@ -50,7 +50,7 @@ Tworzenie interfejsu użytkownika złożonych lub praca wielu dokumentów (MDI) 
     ```  
   
 > [!NOTE]
->  Formularze systemu Windows obsługuje *zawieranie kontrolek*. Zawierania formantów obejmuje umieszczenie kontrolki w formancie zawierającego, takie jak liczba <xref:System.Windows.Forms.RadioButton> steruje w obrębie <xref:System.Windows.Forms.GroupBox> formantu. Następnie można warstwy kontrolki wewnątrz formantu zawierającego. Przenoszenie pole grupy przenosi również formanty, ponieważ są one zawarte w nim.  
+>  Formularze Windows obsługuje *zawieranie kontrolek*. Zawieranie kontrolek obejmuje umieszczenie kontrolki w ramach zawierający kontrolki, takie jak liczba <xref:System.Windows.Forms.RadioButton> kontrolki w ramach <xref:System.Windows.Forms.GroupBox> kontroli. Można następnie warstwy kontrolek w kontrolce zawierającego. Przesunięcie pole grupy przenosi, formanty, ponieważ są zawarte wewnątrz niego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  

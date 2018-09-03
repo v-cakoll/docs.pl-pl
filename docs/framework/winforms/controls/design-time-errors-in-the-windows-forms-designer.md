@@ -8,52 +8,52 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 00296b51563a5f973b8e5d64c55867568ff0324e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527790"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480938"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Błędy czasu projektowania w narzędziu Projektant dla formularzy systemu Windows
-W tym temacie opisano, co oznacza i użyj listy błędów czasu projektowania, który jest wyświetlany w programie Microsoft Visual Studio, gdy projektant formularzy systemu Windows nie udało się załadować. Jeśli zostanie wyświetlona lista ten błąd, użytkownik powinien nie go zinterpretować jako błąd w projektancie, ale jako pomoc do poprawiania błędów w kodzie.  
+W tym temacie wyjaśniono znaczenie i użycie listy błędów podczas projektowania, który pojawia się w programie Microsoft Visual Studio, gdy Windows Forms Designer nie można załadować. Jeśli zostanie wyświetlona lista ten błąd, należy nie ich interpretacji jako błąd w projektancie, ale także jako pomoc do poprawiania błędów w kodzie.  
   
- Podstawową wiedzę na temat tej listy błędów pomoże Ci debugowania aplikacji, zapewniając szczegółowe informacje o błędach i sugerowanie możliwych rozwiązań.  
+ Podstawową wiedzę na temat tej listy błędów są pomocne podczas debugowania aplikacji, zapewniając szczegółowe informacje na temat błędów i sugerowanie możliwych rozwiązań.  
   
-## <a name="the-design-time-error-list-interface"></a>Interfejs listy błędów w czasie projektowania  
- Jeśli projektant formularzy systemu Windows nie może załadować, w Projektancie pojawi się lista błędów. Błędy są podzielone na kategorie. Na przykład jeśli cztery wystąpienia niezadeklarowany zmiennych, te zostaną zgrupowane w tej samej kategorii błąd. Każda kategoria błędu zawiera krótki opis podsumowujący błędu.  
+## <a name="the-design-time-error-list-interface"></a>Interfejs listę błędów podczas projektowania  
+ W przypadku niepowodzenia można załadować projektanta formularzy Windows w Projektancie pojawi się lista błędów. Błędy są podzielone na kategorie. Na przykład jeśli cztery wystąpienia niezadeklarowany zmiennych, te są grupowane w tej samej kategorii błędów. Każda kategoria błędu zawiera krótki opis, który znajduje się podsumowanie błędu.  
   
- Można rozwinąć lub zwinąć kategorię błędu, albo klikając nagłówek kategorii błąd lub klikając ikonę strzałki Rozwiń/Zwiń. Po rozwinięciu kategorię błędu, wyświetlane są następujące dodatkowe pomocy:  
+ Można rozwinąć lub zwinąć do kategorii błędów, klikając nagłówek kategorii błędów lub przez kliknięcie przycisku cudzysłów ostrokątny rozwijania/zwijania. Po rozwinięciu do kategorii błędów, zostanie wyświetlony następujący dodatkowej pomocy:  
   
 -   Wystąpienia tego błędu.  
   
--   Pomoc dotyczącą tego błędu.  
+-   Pomoc dotycząca tego błędu.  
   
 -   Posty na forum dotyczące tego błędu.  
   
 ### <a name="instances-of-this-error"></a>Wystąpienia tego błędu  
- Dodatkowej pomocy, wyświetlić listę wszystkich wystąpień błędu w bieżącym projekcie. Wiele błędów obejmują dokładna lokalizacja w następującym formacie: *[Nazwa projektu]* *[nazwa formularza]* wiersza:*[numer]* kolumny:*[numer kolumny]*. **Przejdź do kodu** łącze prowadzi do lokalizacji w kodzie, w którym występuje błąd.  
+ Dodatkową pomoc, listę wszystkich wystąpień błąd w bieżącym projekcie. Wiele błędów obejmują dokładną lokalizację, w następującym formacie: *[Nazwa projektu]* *[nazwa formularza]* wiersza:*[numer wiersza]* kolumny:*— kolumny numer*. **Przejdź do kodu** link umożliwia przejście do lokalizacji w kodzie, w którym występuje błąd.  
   
- Jeśli stos wywołań jest skojarzony z powodu błędu, możesz kliknąć **Pokaż stos wywołań** łącza, które dodatkowo rozszerza błędu można wyświetlić stosu wywołań. Badanie stosu zapewniają cenne informacje debugowania. Na przykład można śledzić funkcje, które zostały wywołane przed wystąpieniem błędu. Stos wywołań jest możliwy, dzięki czemu można skopiować i zapisać go.  
+ Jeśli stos wywołań jest skojarzony z powodu błędu, możesz kliknąć **Pokaż stos wywołań** łącze, które bardziej rozszerza błędu, aby wyświetlić stos wywołań. Badanie stosu może dostarczyć cennych informacji debugowania. Na przykład można śledzić funkcje, które zostały wywołane przed wystąpieniem błędu. Stos wywołań jest możliwy, tak, aby skopiować i zapisać go.  
   
 > [!NOTE]
->  W języku Visual Basic listy błędów czasu projektowania nie są wyświetlane więcej niż jeden błąd, ale mogą wyświetlać wiele wystąpień tego samego błędu. W programie Visual C++ błędy nie mają przejdź do kodu numer łącza łącza/linii.  
+>  W języku Visual Basic na liście błędów podczas projektowania nie są wyświetlane więcej niż jeden błąd, ale mogą być wyświetlane wiele wystąpień tego samego błędu. W programie Visual C++ błędy nie mają przejdź do kodu łączy/linii numer łącza.  
   
-### <a name="help-with-this-error"></a>Pomoc dotyczącą tego błędu  
- Jeśli błąd zawiera łącze do skojarzonego tematu pomocy MSDN, uzyskać dodatkową pomoc zawiera łącze do tematu Pomocy. Po kliknięciu łącza skojarzonego tematu Pomocy pojawia się w programie Visual Studio.  
+### <a name="help-with-this-error"></a>Pomoc dotycząca tego błędu  
+ Jeśli błąd zawiera łącze do skojarzonego tematu pomocy MSDN, dodatkowej pomocy zawiera łącze do tematu Pomocy. Po kliknięciu łącza, skojarzonego tematu Pomocy pojawia się w programie Visual Studio.  
   
 ### <a name="forum-posts-about-this-error"></a>Posty na forum dotyczące tego błędu  
- Uzyskać dodatkową pomoc zawiera łącze do wpisów forum MSDN dotyczące błędu. Fora przeszukiwane są oparte na ciąg komunikatu o błędzie. Można też spróbować wyszukiwanie fora następujące:  
+ Dodatkową pomoc zawiera łącze do wpisy na forum MSDN dotyczące błędu. Fora są przeszukiwane w oparciu o ciąg komunikatu o błędzie. Możesz też spróbować przeszukiwanie forów następujące:  
   
--   [Forum projektanta formularzy systemu Windows](http://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Forum projektanta programu Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Fora formularzy systemu Windows](http://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [Windows Forms forów](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Ignoruj i Kontynuuj  
- Można zignorować błąd i kontynuować ładowania projektanta. Wybranie tej akcji może spowodować nieoczekiwane zachowanie. Na przykład formanty nie może występować na powierzchni projektu.  
+ Można zignorować warunek błędu i kontynuowania ładowania projektanta. Wybranie tej akcji może spowodować nieoczekiwane zachowanie. Na przykład formanty nie może występować na powierzchni projektowej.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Rozwiązywanie problemów z Programowanie w czasie projektowania](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [Rozwiązywanie problemów podczas projektowania](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
  [Rozwiązywanie problemów związanych z kontrolkami oraz tworzeniem składników](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Komunikaty projektanta formularzy systemu Windows](http://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+ [Windows Forms komunikaty o błędach projektanta](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

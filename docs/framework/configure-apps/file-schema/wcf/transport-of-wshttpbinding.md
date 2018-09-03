@@ -2,15 +2,15 @@
 title: '&lt;transport&gt; w &lt;wsHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: d6095c2cc9a315855db03f3a3f44547b1f64b9df
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 771866a83d54ca9e4fc7f3ed6d351b4a6c755b4c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767586"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483856"
 ---
 # <a name="lttransportgt-of-ltwshttpbindinggt"></a>&lt;transport&gt; w &lt;wsHttpBinding&gt;
-Definiuje ustawienia uwierzytelniania dla transportu HTTP.  
+Definiuje ustawienia uwierzytelniania dla protokołu HTTP.  
   
  \<system.serviceModel>  
 \<powiązania >  
@@ -49,9 +49,9 @@ Definiuje ustawienia uwierzytelniania dla transportu HTTP.
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |`clientCredentialType`|Określa poświadczenia używane do uwierzytelniania klienta do usługi. Ten atrybut jest typu <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|`proxyCredentialType`|Określa poświadczenia używane do uwierzytelniania klienta na serwerze proxy domeny. Ten atrybut jest typu <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|`realm`|Ciąg określający obszar uwierzytelniania dla uwierzytelniania podstawowego lub szyfrowanego. Wartość domyślna to ciąg pusty.<br /><br /> Obszar uwierzytelniania określa co najmniej nazwę hosta, który przeprowadza uwierzytelnianie. Można również określić zbiór użytkowników, które ma dostęp. Użytkownik może zapytania obszaru uwierzytelniania, aby upewnić się, co kilka możliwych nazwy użytkownika i hasła może służyć.|  
-|`policyEnforcement`|To wyliczenie Określa, kiedy <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> powinny być wymuszane.<br /><br /> 1.  Nigdy nie — zasady nigdy nie są wymuszane (ochrona rozszerzona jest wyłączona).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochrony rozszerzonej.<br />3.  Zawsze — zasady zawsze są wymuszane. Klienci, którzy nie obsługują ochrony rozszerzonej będzie mogło uwierzytelnić.|  
+|`proxyCredentialType`|Określa poświadczenia używane do uwierzytelniania klienta do domeny serwera proxy. Ten atrybut jest typu <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|`realm`|Ciąg, który określa obszar uwierzytelniania dla uwierzytelniania podstawowego lub szyfrowanego. Wartość domyślna to ciąg pusty.<br /><br /> Obszar uwierzytelniania co najmniej Określa nazwę hosta, który przeprowadza uwierzytelnianie. Można również określić zbiór użytkowników, które ma dostęp. Użytkownika można badać obszaru uwierzytelniania, aby upewnić się, co kilka możliwych nazw użytkowników i haseł może służyć.|  
+|`policyEnforcement`|To wyliczenie Określa, kiedy <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> powinny być wymuszane.<br /><br /> 1.  Nigdy nie — zasady nigdy nie są wymuszane (ochrony rozszerzonej jest wyłączone).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochrony rozszerzonej.<br />3.  Zawsze — zasady zawsze są wymuszane. Klienci, którzy nie obsługują ochrony rozszerzonej zakończy się niepowodzeniem do uwierzytelniania.|  
   
 ## <a name="clientcredentialtype-attribute"></a>właściwości ClientCredentialType o wartości atrybutu  
   
@@ -60,9 +60,9 @@ Definiuje ustawienia uwierzytelniania dla transportu HTTP.
 |`None`|Zabezpieczenia są wyłączone.|  
 |`Basic`|Korzysta z uwierzytelniania podstawowego.|  
 |`Digest`|Uwierzytelnianie szyfrowane używa.|  
-|`Ntlm`|Korzysta z uwierzytelniania NTLM, jako rezerwowe z domeny systemu Windows.|  
-|`Windows`|Używa zintegrowanego uwierzytelniania systemu Windows.|  
-|`Certificate`|Używa certyfikatów X.509 do uwierzytelniania klienta.|  
+|`Ntlm`|Korzysta z uwierzytelniania NTLM, jako rezerwowe z domeną systemu Windows.|  
+|`Windows`|Używa zintegrowanego uwierzytelniania Windows.|  
+|`Certificate`|Przy użyciu certyfikatów X.509 do uwierzytelniania klienta.|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType atrybutu  
   
@@ -71,9 +71,9 @@ Definiuje ustawienia uwierzytelniania dla transportu HTTP.
 |`None`|Zabezpieczenia są wyłączone.|  
 |`Basic`|Korzysta z uwierzytelniania podstawowego.|  
 |`Digest`|Uwierzytelnianie szyfrowane używa.|  
-|`Ntlm`|Używa protokołu NTLM jako rezerwowe z domeny systemu Windows.|  
-|`Windows`|Używa zintegrowanego uwierzytelniania systemu Windows.|  
-|`Certificate`|Używa certyfikatów X.509 do uwierzytelniania klienta.|  
+|`Ntlm`|Wykorzystuje NTLM jako rezerwowe z domeną systemu Windows.|  
+|`Windows`|Używa zintegrowanego uwierzytelniania Windows.|  
+|`Certificate`|Przy użyciu certyfikatów X.509 do uwierzytelniania klienta.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -92,5 +92,5 @@ Definiuje ustawienia uwierzytelniania dla transportu HTTP.
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
 ms.openlocfilehash: 7266c9486524e962a859c34c9be5ab8f6d7bf7d5
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256700"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486717"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>Porady: poruszanie się wstecz historii nawigacji
 Ten przykład ilustruje sposób przejścia do wpisów na spód historii nawigacji.  

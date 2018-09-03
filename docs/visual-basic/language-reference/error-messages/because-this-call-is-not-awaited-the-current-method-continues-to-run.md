@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 754fc6750e63f6d9f39da94041fc452829bca46d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591437"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480896"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane do czasu ukończenia wywołania
-Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane ukończenia wywołania. Należy rozważyć zastosowanie operatora "Await" do wyniku wywołania.  
+Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane bez oczekiwania na ukończenie wywołania. Należy rozważyć zastosowanie operatora "Await" do wyniku wywołania.  
   
- Bieżąca metoda wywołuje metody asynchronicznej, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> i nie ma zastosowania [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator do wyniku. Wywołanie metody asynchronicznej uruchamia zadanie asynchroniczne. Jednakże ponieważ nie `Await` zastosować operatora, program będzie kontynuowane bez oczekiwania na zakończenie zadania. W większości przypadków tego zachowania nie jest oczekiwany. Zazwyczaj inne aspekty wywołania metody są zależne od wyników wywołania, lub migrację wywołaną metodę oczekuje na ukończenie zwracany przez metodę, która zawiera wywołanie.  
+ Bieżąca metoda wywołuje metody asynchronicznej, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> i nie ma zastosowania [Await](../../../visual-basic/language-reference/operators/await-operator.md) operatora do wyniku. Wywołanie metody asynchronicznej uruchamia zadanie asynchroniczne. Jednakże ponieważ nie `Await` jest stosowany operator, działanie programu jest kontynuowane bez oczekiwania na zakończenie zadania. W większości przypadków to zachowanie nie jest oczekiwany. Zazwyczaj inne aspekty wywoływania metody są zależne od wyników wywołania, lub co najmniej wywoływana metoda oczekuje na ukończenie powrocie z metody, która zawiera wywołanie.  
   
- Problem równie ważne jest, co się dzieje z wyjątków, które są wywoływane w metodzie async o nazwie. Wyjątek jest zgłaszany w metodę, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> znajduje się w zwracanych zadań. Jeśli nie await zadania lub jawnie sprawdziła wyjątków, wyjątki zostaną utracone. Jeśli await zadania, jego wyjątku jest zgłoszony.  
+ Równie ważne problem polega na tym, co się dzieje z wyjątków, które są wywoływane w wywołanej metody asynchronicznej. Wyjątek, który jest wywoływany w metodzie, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> jest przechowywany w zwróconym zadaniu. Jeśli nie poczekać na zadanie, lub jawnie szukać wyjątków, wyjątki zostaną utracone. Jeśli włączysz zadania, jego wyjątek jest zgłaszany ponownie.  
   
- Najlepszym rozwiązaniem zawsze należy poczekać na wywołanie.  
+ Najlepszym rozwiązaniem jest zawsze należy poczekać na wywołanie.  
   
- Domyślnie ten komunikat jest ostrzeżenie. Aby uzyskać więcej informacji na temat ukrywanie ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać więcej informacji na temat ukrywania ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42358  
   
-### <a name="to-address-this-warning"></a>W celu rozwiązania tego ostrzeżenia  
+### <a name="to-address-this-warning"></a>Aby rozwiązać tego ostrzeżenia  
   
--   Należy rozważyć tylko wtedy, gdy wiesz, że nie chcesz czekać na wywołanie asynchroniczne do ukończenia i że wywołaną metodę nie będą zgłaszać wyjątki z pominięciem ostrzeżenia. W takim przypadku można pominąć to ostrzeżenie, przypisując wyniku zadania wywołania do zmiennej.  
+-   Należy rozważyć pominięcie ostrzeżenia, tylko wtedy, gdy wiesz, że nie chcesz czekać na ukończenie asynchronicznego wywołania i czy wywoływanej metody nie będzie zgłaszać żadnych wyjątków. W takim przypadku można pominąć to ostrzeżenie, przypisując wynik zadania wywołania ze zmienną.  
   
-     Poniższy przykład przedstawia sposób spowodować ostrzeżenia, sposób wyłączania go oraz sposobu await wywołania.  
+     Poniższy przykład pokazuje, jak spowodować, że to ostrzeżenie, jak pomijanie go i instrukcje await wywołania.  
   
     ```vb  
     Async Function CallingMethodAsync() As Task  
@@ -81,7 +81,7 @@ Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będz
     End Function  
     ```  
   
-     W tym przykładzie wybierz wywołać #1 lub wywołać #2 metody asynchronicznej unawaited (`CalledMethodAsync`) kończy się po obu wywołującego (`CallingMethodAsync`) i wywołującego wywołującego (`StartButton_Click`) są spełnione. W ostatnim wierszu następujących danych wyjściowych zawiera po zakończeniu wywołaną metodę. Wejście do i wyjście z obsługi zdarzeń, który wywołuje `CallingMethodAsync` w pełny przykład są oznaczone w danych wyjściowych.  
+     W przykładzie, jeśli wybierzesz wywołać #1 lub wywołać nr 2, metoda unawaited async (`CalledMethodAsync`) kończy się po obu obiektu wywołującego (`CallingMethodAsync`) i element wywołujący wywołującego (`StartButton_Click`) są kompletne. W ostatnim wierszu następujące dane wyjściowe pokazuje, po zakończeniu wywoływanej metody. Wpisu i wyjścia z programu obsługi zdarzeń, który wywołuje `CallingMethodAsync` w pełnym przykładzie są oznaczone w danych wyjściowych.  
   
     ```  
     Entering the Click event handler.  
@@ -93,15 +93,15 @@ Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będz
     ```  
   
 ## <a name="example"></a>Przykład  
- Następującej aplikacji Windows Presentation Foundation (WPF) zawiera metody z poprzedniego przykładu. Poniższe kroki skonfigurować aplikację.  
+ Następującej aplikacji Windows Presentation Foundation (WPF) zawiera metody z poprzedniego przykładu. Poniższe kroki. Konfigurowanie aplikacji.  
   
 1.  Tworzenie aplikacji WPF i nadaj mu nazwę `AsyncWarning`.  
   
-2.  Wybierz w Visual Studio Code edytorze **MainWindow.xaml** kartę.  
+2.  W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.  
   
-     Jeśli karta jest niewidoczna, otwórz menu skrótów MainWindow.xaml w **Eksploratora rozwiązań**, a następnie wybierz pozycję **kod widoku**.  
+     Jeśli karta nie jest widoczna, otwórz menu skrótów dla pliku MainWindow.xaml w **Eksploratora rozwiązań**, a następnie wybierz **Wyświetl kod**.  
   
-3.  Zastąp kod w **XAML** widoku MainWindow.xaml następującym kodem.  
+3.  Zastąp kod w **XAML** widok pliku MainWindow.xaml w następującym kodem.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -115,9 +115,9 @@ Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będz
     </Window>  
     ```  
   
-     Proste okna, który zawiera przycisk i pole tekstowe zostanie wyświetlony w **projekt** widoku MainWindow.xaml.  
+     Proste okno, która zawiera przycisk i pole tekstowe, pojawia się w **projektowania** widoku MainWindow.xaml.  
   
-     Aby uzyskać więcej informacji na temat projektanta XAML, zobacz [Tworzenie interfejsu użytkownika przy użyciu projektanta XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Aby dowiedzieć się, jak tworzyć własne prostego interfejsu użytkownika, zobacz "Aby utworzyć aplikację programu WPF" i "projektowania proste właściwości MainWindow WPF" sekcje [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     Aby uzyskać więcej informacji dotyczących projektanta XAML, zobacz [Tworzenie interfejsu użytkownika przy użyciu projektanta XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Aby uzyskać informacje dotyczące sposobu tworzenia własnych prostego interfejsu użytkownika, zobacz "Aby utworzyć aplikację programu WPF" i "projektowania proste MainWindow WPF" sekcje [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](https://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
   
 4.  Zastąp kod w MainWindow.xaml.vb następującym kodem.  
   
@@ -201,7 +201,7 @@ Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będz
   
 5.  Wybierz klawisz F5, aby uruchomić program, a następnie wybierz **Start** przycisku.  
   
-     Oczekiwane dane wyjściowe pojawia się na końcu kodu.  
+     Oczekiwane dane wyjściowe pojawia się na końcu kod.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)  

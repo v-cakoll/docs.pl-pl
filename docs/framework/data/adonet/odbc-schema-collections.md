@@ -2,18 +2,18 @@
 title: Kolekcje schematów ODBC
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: 36d0859b897bfcea33803c219ade14722ed90421
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bdedbb11960f02b99dcca6388abf663635238f74
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766650"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479983"
 ---
 # <a name="odbc-schema-collections"></a>Kolekcje schematów ODBC
-W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla programu Microsoft SQL Server, Oracle i Microsoft Jet.  
+W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla programu Microsoft SQL Server, Oracle i Microsoft Jet.  
   
-## <a name="microsoft-sql-server-odbc-driver"></a>Sterownik ODBC programu Microsoft SQL Server  
- Sterownik ODBC programu Microsoft SQL Server obsługuje następujące kolekcje określonego schematu, oprócz typowych kolekcje schematów:  
+## <a name="microsoft-sql-server-odbc-driver"></a>Sterownik ODBC usługi Microsoft SQL Server  
+ Sterownik ODBC firmy Microsoft SQL Server obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
 -   Tabele  
   
@@ -31,7 +31,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="tables-and-views"></a>Tabele i widoki  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CAT|String|  
 |TABLE_SCHEM|String|  
@@ -41,7 +41,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="indexes"></a>Indeksy  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CAT|String|  
 |TABLE_SCHEM|String|  
@@ -61,7 +61,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="columns"></a>Kolumny  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CAT|String|  
 |TABLE_SCHEM|String|  
@@ -73,7 +73,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
-|DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
+|DOPUSZCZA WARTOŚCI NULL|Int16|  
 |REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
@@ -87,7 +87,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="procedures"></a>Procedury  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_CAT|String|  
 |PROCEDURE_SCHEM|String|  
@@ -100,7 +100,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_CAT|String|  
 |PROCEDURE_SCHEM|String|  
@@ -113,7 +113,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
-|DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
+|DOPUSZCZA WARTOŚCI NULL|Int16|  
 |REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
@@ -127,7 +127,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_CAT|String|  
 |PROCEDURE_SCHEM|String|  
@@ -140,7 +140,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
-|DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
+|DOPUSZCZA WARTOŚCI NULL|Int16|  
 |REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
@@ -152,8 +152,8 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |SS_TYPE_SCHEMA|String|  
 |SS_DATA_TYPE|Byte|  
   
-## <a name="microsoft-oracle-odbc-driver"></a>Sterownik ODBC rozwiązań Microsoft Oracle  
- Sterownik ODBC programu Oracle do programu Microsoft SQL Server obsługuje następujące kolekcje określonego schematu, oprócz typowych kolekcje schematów:  
+## <a name="microsoft-oracle-odbc-driver"></a>Sterownik ODBC firmy Microsoft Oracle  
+ Sterownik ODBC programu Oracle do programu Microsoft SQL Server obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
 -   Tabele  
   
@@ -171,7 +171,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="tables-and-views"></a>Tabele i widoki  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|String|  
 |TABLE_OWNER|String|  
@@ -181,7 +181,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="columns"></a>Kolumny  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|String|  
 |TABLE_OWNER|String|  
@@ -189,17 +189,17 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |COLUMN_NAME|String|  
 |DATA_TYPE|Int16|  
 |TYPE_NAME|String|  
-|DOKŁADNOŚĆ|Int32|  
+|PRECYZJA|Int32|  
 |DŁUGOŚĆ|Int32|  
-|SKALI|Int16|  
-|PODSTAWA|Int16|  
-|DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
+|SKALA|Int16|  
+|PODSTAWY|Int16|  
+|DOPUSZCZA WARTOŚCI NULL|Int16|  
 |REMARKS|String|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedures"></a>Procedury  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|String|  
 |PROCEDURE_OWNER|String|  
@@ -212,7 +212,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|String|  
 |PROCEDURE_OWNER|String|  
@@ -221,17 +221,17 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |COLUMN_TYPE|Int16|  
 |DATA_TYPE|Int16|  
 |TYPE_NAME|String|  
-|DOKŁADNOŚĆ|Int32|  
+|PRECYZJA|Int32|  
 |DŁUGOŚĆ|Int32|  
-|SKALI|Int16|  
-|PODSTAWA|Int16|  
-|DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
+|SKALA|Int16|  
+|PODSTAWY|Int16|  
+|DOPUSZCZA WARTOŚCI NULL|Int16|  
 |REMARKS|String|  
-|PRZECIĄŻENIA|Int32|  
+|PRZECIĄŻENIE|Int32|  
 |ORDINAL_POSITION|Int32|  
   
-## <a name="microsoft-jet-odbc-driver"></a>Sterownik ODBC dla programu Microsoft Jet  
- Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje określonego schematu, oprócz typowych kolekcje schematów:  
+## <a name="microsoft-jet-odbc-driver"></a>Sterownik ODBC firmy Microsoft Jet  
+ Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
 -   Tabele  
   
@@ -249,7 +249,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="tables-and-views"></a>Tabele i widoki  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|String|  
 |TABLE_OWNER|String|  
@@ -259,7 +259,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="columns"></a>Kolumny  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|String|  
 |TABLE_OWNER|String|  
@@ -267,17 +267,17 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |COLUMN_NAME|String|  
 |DATA_TYPE|Int16|  
 |TYPE_NAME|String|  
-|DOKŁADNOŚĆ|Int32|  
+|PRECYZJA|Int32|  
 |DŁUGOŚĆ|Int32|  
-|SKALI|Int16|  
-|PODSTAWA|Int16|  
-|DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
+|SKALA|Int16|  
+|PODSTAWY|Int16|  
+|DOPUSZCZA WARTOŚCI NULL|Int16|  
 |REMARKS|String|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedures"></a>Procedury  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|String|  
 |PROCEDURE_OWNER|String|  
@@ -290,7 +290,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|String|  
 |PROCEDURE_OWNER|String|  
@@ -299,18 +299,18 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |COLUMN_TYPE|Int16|  
 |DATA_TYPE|Int16|  
 |TYPE_NAME|String|  
-|DOKŁADNOŚĆ|Int32|  
+|PRECYZJA|Int32|  
 |DŁUGOŚĆ|Int32|  
-|SKALI|Int16|  
-|PODSTAWA|Int16|  
-|DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
+|SKALA|Int16|  
+|PODSTAWY|Int16|  
+|DOPUSZCZA WARTOŚCI NULL|Int16|  
 |REMARKS|String|  
-|PRZECIĄŻENIA|Int32|  
+|PRZECIĄŻENIE|Int32|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_CAT|String|  
 |PROCEDURE_SCHEM|String|  
@@ -323,7 +323,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
-|DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
+|DOPUSZCZA WARTOŚCI NULL|Int16|  
 |REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
@@ -333,4 +333,4 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |IS_NULLABLE|String|  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

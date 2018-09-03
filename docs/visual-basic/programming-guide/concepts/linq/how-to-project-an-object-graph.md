@@ -3,11 +3,11 @@ title: 'Porady: projektowanie wykresu obiektu (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
 ms.openlocfilehash: 0a8bf33075ada306cf639006ab099115aad43348
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238467"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487146"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Porady: projektowanie wykresu obiektu (Visual Basic)
 W tym temacie pokazano, jak projekt lub wypełnić grafu obiektów z pliku XML.  

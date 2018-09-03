@@ -8,23 +8,23 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: 76bae6ba3b2a36e9dfa527528fe1e4322a87426c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e04234b4f2f18738567c3f9846d8ae0c94780fcb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539779"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482753"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Porady: zmienianie granic formularzy systemu Windows
-Masz kilka style obramowania do wyboru przy ustalaniu wygląd i zachowanie formularzy systemu Windows. Zmieniając <xref:System.Windows.Forms.Form.FormBorderStyle%2A> właściwości, można kontrolować zachowanie zmiany rozmiaru formularza. Ponadto ustawienie <xref:System.Windows.Forms.Form.FormBorderStyle%2A> wpływa na sposób wyświetlania paska podpisu oraz przyciski wygląda na nim. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.FormBorderStyle>.  
+Masz kilka style obramowania do wyboru przy ustalaniu wygląd i zachowanie formularzy Windows. Zmieniając <xref:System.Windows.Forms.Form.FormBorderStyle%2A> właściwości, można kontrolować zachowanie zmiany rozmiaru formularza. Ponadto, ustawienie <xref:System.Windows.Forms.Form.FormBorderStyle%2A> ma wpływ na sposób wyświetlania pasek podpisu oraz jakie przycisków może pojawić się na nim. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.FormBorderStyle>.  
   
- Brak kompleksową obsługę tego zadania w programie Visual Studio.  
+ Brak zaawansowaną obsługę dla tego zadania w programie Visual Studio.  
   
- Zobacz też [porady: Zmienianie granic formularzy systemu Windows przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/yettzh3e\(v=vs.110\)).  
+ Zobacz też [porady: Zmienianie granic formularzy Windows za pomocą projektanta](https://msdn.microsoft.com/library/yettzh3e\(v=vs.110\)).  
   
-### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a>Aby ustawić programowo styl obramowania formularzy systemu Windows  
+### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a>Aby programowo ustawić styl obramowania formularzy Windows Forms  
   
--   Ustaw <xref:System.Windows.Forms.Form.FormBorderStyle%2A> właściwości stylu ma. Poniższy przykład kodu ustawia styl obramowania formularza `DlgBx1` do <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.  
+-   Ustaw <xref:System.Windows.Forms.Form.FormBorderStyle%2A> właściwość żądany styl. Poniższy przykład kodu ustawia styl obramowania w postaci `DlgBx1` do <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.  
   
     ```vb  
     DlgBx1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog  
@@ -39,9 +39,9 @@ Masz kilka style obramowania do wyboru przy ustalaniu wygląd i zachowanie formu
        System::Windows::Forms::FormBorderStyle::FixedDialog;  
     ```  
   
-     Zobacz też [porady: tworzenie okien dialogowych w czasie projektowania](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).  
+     Zobacz też [porady: tworzenie okien dialogowych w czasie projektowania](https://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).  
   
-     Ponadto jeśli wybrano styl obramowania formularza, który zapewnia opcjonalne **Minimalizuj** i **Maksymalizuj** przycisków, użytkownik może określić, czy jednego lub obu tych przycisków, aby działała. Przyciski te są przydatne, gdy chcesz ściśle kontrolują środowisko użytkownika. **Minimalizuj** i **Maksymalizuj** przyciski są domyślnie włączone, a ich funkcjonalność steruje się za pośrednictwem **właściwości** okna.  
+     Ponadto jeśli wybrano opcję Styl obramowania formularza, który zawiera opcjonalne **Minimalizuj** i **Maksymalizuj** przyciski, użytkownik może określić, czy jednego lub obu tych przycisków, aby działała prawidłowo. Przyciski te są przydatne, jeśli chcesz ściśle kontrolować środowiska użytkownika. **Minimalizuj** i **Maksymalizuj** przyciski są domyślnie włączone, a ich funkcjonalność jest przetwarzany przez **właściwości** okna.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.FormBorderStyle>  

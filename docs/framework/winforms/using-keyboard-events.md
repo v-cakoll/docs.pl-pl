@@ -9,34 +9,34 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 706b4d87ddbb6afadfd90af866520e6feaa58ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542265"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484912"
 ---
 # <a name="using-keyboard-events"></a>Używanie zdarzeń klawiatury
-Większość programów formularzy systemu Windows przetwarzania danych wprowadzonych z klawiatury poprzez obsługi zdarzenia klawiatury. Ten temat zawiera omówienie zdarzenia klawiatury, w tym informacji o tym, kiedy należy używać każdego zdarzenia i dane, które jest dostarczone dla każdego zdarzenia.  Zobacz też [Przegląd obsługi zdarzeń (formularze systemu Windows)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Przegląd zdarzeń (formularze systemu Windows)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
+Większość programów Windows Forms przetwarzać dane wejściowe z klawiatury dzięki obsłudze zdarzeń klawiatury. Ten temat zawiera omówienie zdarzenia klawiatury, w tym informacji o tym, kiedy należy używać każdego zdarzenia i dane, która jest dostarczana dla każdego zdarzenia.  Zobacz też [Przegląd obsługi zdarzeń (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Przegląd zdarzeń (systemu Windows Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
   
 ## <a name="keyboard-events"></a>Zdarzenia klawiatury  
- Formularze systemu Windows udostępnia dwa zdarzenia, które wystąpić, gdy użytkownik naciśnie klawisz i jedno zdarzenie, gdy użytkownik zwolni klawisz:  
+ Formularze Windows oferuje dwa zdarzenia, które występują, gdy użytkownik naciśnie klawisz i jedno zdarzenie, kiedy użytkownik zwolni klawisz:  
   
 -   <xref:System.Windows.Forms.Control.KeyDown> Po wystąpieniu zdarzenia  
   
--   <xref:System.Windows.Forms.Control.KeyPress> Zdarzenie, które mogą wystąpić wiele razy, gdy użytkownik posiada w dół tego samego klucza.  
+-   <xref:System.Windows.Forms.Control.KeyPress> Zdarzenie, które mogą wystąpić wiele razy, gdy użytkownik przechowuje szczegółów tego samego klucza.  
   
--   <xref:System.Windows.Forms.Control.KeyUp> Zdarzenie po gdy użytkownik zwolni klawisz.  
+-   <xref:System.Windows.Forms.Control.KeyUp> Zdarzenie występuje, gdy po użytkownik zwolni klawisz.  
   
- Po naciśnięciu klawisza, formularzy systemu Windows określa, które zdarzeń, aby podnieść oparte na czy komunikatów klawiatury określa znakowy klucz lub klucz fizycznych. Aby uzyskać więcej informacji o znaków i fizycznej kluczy, zobacz [sposób działania wejście klawiatury](../../../docs/framework/winforms/how-keyboard-input-works.md).  
+ Po naciśnięciu klawisza formularzy Windows określa, które zdarzenie, aby zgłosić oparte na tego, czy komunikatu z klawiatury określa znakowy klucz lub klucz fizycznych. Aby uzyskać więcej informacji o znak i kluczach fizycznych, zobacz [sposób działania wejście klawiatury](../../../docs/framework/winforms/how-keyboard-input-works.md).  
   
  W poniższej tabeli opisano zdarzenia klawiatury trzy.  
   
-|Zdarzenia klawiatury|Opis|Wyniki|  
+|Zdarzenia klawiatury|Opis|wyniki|  
 |--------------------|-----------------|-------------|  
-|<xref:System.Windows.Forms.Control.KeyDown>|To zdarzenie jest wywoływane, gdy użytkownik naciśnie klawisz fizycznych.|Program obsługi dla <xref:System.Windows.Forms.Control.KeyDown> odbiera:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> parametru zapewnia <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> właściwości (który określa przycisku klawiatury fizycznych).</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Właściwości (SHIFT, CTRL lub ALT).</li><li><xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> Właściwości (które łączy kod klucza i modyfikatora). <xref:System.Windows.Forms.KeyEventArgs> Udostępnia również parametr:<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs.Handled%2A> Właściwość, którą można ustawić, aby uniemożliwić odbieranie klucz podstawowy formantu.</li><li><xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> Właściwość, która może służyć do pomijania <xref:System.Windows.Forms.Control.KeyPress> i <xref:System.Windows.Forms.Control.KeyUp> zdarzeń związanych z tym naciśnięcie klawisza.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyPress>|To zdarzenie jest wywoływane po klucz lub klucze wynik znakiem. Na przykład naciśnięciu klawisza SHIFT i małej litery "" klucze, które powoduje wielkiej litery "" znaków.|<xref:System.Windows.Forms.Control.KeyPress> jest wywoływane po wykonaniu <xref:System.Windows.Forms.Control.KeyDown>.<br /><br /> <ul><li>Program obsługi dla <xref:System.Windows.Forms.Control.KeyPress> odbiera:</li><li>A <xref:System.Windows.Forms.KeyPressEventArgs> parametr, który zawiera kod znaku klucza, który został naciśnięty. Ten kod znaku jest unikatowa dla każdej kombinacji znakowy klucz i klawisz modyfikujący.<br /><br />     Na przykład generuje klucz "":<br /><br /> <ul><li>Kod znaku 65, gdy zostanie naciśnięty klawisz SHIFT</li><li>Lub klawisz CAPS LOCK 97, gdy zostanie naciśnięty</li><li>I 1, gdy zostanie naciśnięty klawisz CTRL.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyUp>|To zdarzenie jest wywoływane, gdy użytkownik zwolni klawisz fizycznych.|Program obsługi dla <xref:System.Windows.Forms.Control.KeyUp> odbiera:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> parametru:<br /><br /> <ul><li>Zapewniające <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> właściwości (który określa przycisku klawiatury fizycznych).</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Właściwości (SHIFT, CTRL lub ALT).</li><li><xref:System.Globalization.SortKey.KeyData%2A> Właściwości (które łączy kod klucza i modyfikatora).</li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyDown>|To zdarzenie jest wywoływane, gdy użytkownik naciśnie klawisz fizycznych.|Obsługa <xref:System.Windows.Forms.Control.KeyDown> odbiera:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> parametr, który zapewnia <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> właściwości (który określa przycisku klawiatury fizycznych).</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Właściwości (SHIFT, CTRL lub ALT).</li><li><xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> Właściwości, (które łączy klucza kodu i modyfikator). <xref:System.Windows.Forms.KeyEventArgs> Udostępnia również parametr:<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs.Handled%2A> Właściwości można ustawić, aby uniemożliwić odbierania klucz podstawowy kontroli.</li><li><xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> Właściwość, która może służyć do pomijania <xref:System.Windows.Forms.Control.KeyPress> i <xref:System.Windows.Forms.Control.KeyUp> zdarzenia dla tego naciśnięcia klawisza.</li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyPress>|To zdarzenie jest zgłaszane w przypadku klucza lub kluczy naciśnięty wynik w znaku. Na przykład użytkownik naciśnie klawisz SHIFT i małej litery "" klucze, które powoduje "" znak wielkiej litery.|<xref:System.Windows.Forms.Control.KeyPress> jest wywoływane po wykonaniu <xref:System.Windows.Forms.Control.KeyDown>.<br /><br /> <ul><li>Obsługa <xref:System.Windows.Forms.Control.KeyPress> odbiera:</li><li>A <xref:System.Windows.Forms.KeyPressEventArgs> parametr, który zawiera kod znaku klawisza, który został naciśnięty. Ten kod znaku jest unikatowy dla każdej kombinacji znaków klucza i klawisz modyfikujący.<br /><br />     Na przykład generuje "" klucz:<br /><br /> <ul><li>Kod znaku 65, jeśli jest wciśnięty klawisz SHIFT</li><li>Klawisz CAPS LOCK, 97, jeśli jest wciśnięty samodzielnie, lub</li><li>Do 1, jeśli jest wciśnięty klawisz CTRL.</li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyUp>|To zdarzenie jest wywoływane, gdy użytkownik zwolni klawisz fizycznych.|Obsługa <xref:System.Windows.Forms.Control.KeyUp> odbiera:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> parametru:<br /><br /> <ul><li>Co zapewnia <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> właściwości (który określa przycisku klawiatury fizycznych).</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Właściwości (SHIFT, CTRL lub ALT).</li><li><xref:System.Globalization.SortKey.KeyData%2A> Właściwości, (które łączy klucza kodu i modyfikator).</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzanie z klawiatury w aplikacjach Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  

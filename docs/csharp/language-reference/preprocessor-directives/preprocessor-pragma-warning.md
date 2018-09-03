@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 079045f4eb52f03afa8733620029396d80cb75fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89ff8151d55ac58a1b114f7727297704ce26b9a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273660"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481933"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (odwołanie w C#)
 Dyrektywa `#pragma warning` służy do włączania i wyłączania określonych ostrzeżeń.  
@@ -59,8 +59,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Dyrektywy preprocesora C#](../../../csharp/language-reference/preprocessor-directives/index.md)  
- [Błędy kompilatora C#](../../../csharp/language-reference/compiler-messages/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Dyrektywy preprocesora C#](../../../csharp/language-reference/preprocessor-directives/index.md)  
+- [Błędy kompilatora C#](../../../csharp/language-reference/compiler-messages/index.md)

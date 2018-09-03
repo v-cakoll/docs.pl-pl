@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: fa76236cc4144cd591a5bfd7cb9cb85f26f7f82c
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: ef3a411bc51fcc5f644f9d53bde67f7116289678
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253342"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481582"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Porady: użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania (Przewodnik programowania w języku C#)
 Niejawnie wpisane zmienne lokalne można użyć w każdym przypadku, gdy chcesz, aby kompilator, aby określić typ zmiennej lokalnej. Niejawnie wpisane zmienne lokalne musi być przechowywanie anonimowych typów, które są często używane w wyrażeniach zapytań. Poniższe przykłady ilustrują wymagane i opcjonalne zastosowań niejawnie wpisane zmienne lokalne w zapytaniach.  
@@ -29,5 +29,6 @@ Niejawnie wpisane zmienne lokalne można użyć w każdym przypadku, gdy chcesz,
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Metody rozszerzeń](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [LINQ (Language-Integrated Query)](../../../csharp/linq/index.md) [var](../../../csharp/language-reference/keywords/var.md)  
+ [LINQ (Language-Integrated Query)](../../../csharp/linq/index.md)  
+ [var](../../../csharp/language-reference/keywords/var.md)  
  [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

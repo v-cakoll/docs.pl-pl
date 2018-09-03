@@ -2,12 +2,12 @@
 title: '&lt;httpDigest&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 8ea4597dbfc704f669a514b0d6c5976c80c5c3a6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4f3edb4a525429bfc55c4e4cfaffbfc5726dcef8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748896"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43477961"
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt;, element
 Określa szyfrowany typ poświadczenia używany podczas uwierzytelniania klienta do usługi.  
@@ -32,7 +32,7 @@ Określa szyfrowany typ poświadczenia używany podczas uwierzytelniania klienta
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`impersonationLevel`|Ustawia preferencje personifikacji, który klient komunikuje się z serwerem. Tryb personifikacji, w którym klient wybiera nie są wymuszane na serwerze. Prawidłowe wartości są następujące:<br /><br /> — Identyfikator: Serwera można uzyskać tożsamości i uprawnienia klienta, ale nie można spersonifikować klienta.<br />-Personifikacji: Serwer może personifikować klienta kontekstu zabezpieczeń w systemie lokalnym.<br />-Delegowania: Serwer może personifikować klienta kontekstu zabezpieczeń w systemach zdalnych.<br />-Anonimowe: Serwer nie może Cię personifikacji lub identyfikacji klienta.<br />-Brak: Poziom personifikacji nie jest przypisany.<br /><br /> Wartość domyślna to identyfikator. Ten atrybut jest typu <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`impersonationLevel`|Ustawia preferencje personifikacji, który klient komunikuje się z serwerem. Tryb personifikacji, który klient wybiera nie są wymuszane na serwerze. Prawidłowe wartości są następujące:<br /><br /> — Identyfikator: Serwer można uzyskać tożsamości i uprawnień klienta, ale nie można spersonifikować klienta.<br />-Personifikacji: Serwer może personifikować klienta kontekstu zabezpieczeń w systemie lokalnym.<br />-Delegowania: Serwer może personifikować klienta kontekstu zabezpieczeń w systemach zdalnych.<br />-Anonimowe: Serwer nie może Cię personifikacji lub identyfikacji klienta.<br />-Brak: Poziom personifikacji nie jest przypisany.<br /><br /> Wartość domyślna to identyfikator. Ten atrybut jest typu <xref:System.Security.Principal.TokenImpersonationLevel>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -44,9 +44,9 @@ Określa szyfrowany typ poświadczenia używany podczas uwierzytelniania klienta
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
- Skrót jest skrót ustalić przy użyciu algorytmu i zestaw danych wejściowych. Wystawca uwierzytelnienia uwierzytelniony uzgodnić algorytm i wymiany danych używane jako dane wejściowe. Klienta można obliczyć skrótu i wysłać go do usługi. Usługa również oblicza skrót i porównuje wartości. Dopasowanie weryfikuje klienta.  
+ Podsumowanie jest skrót, określić przy użyciu algorytmu i zestaw danych wejściowych. Wystawca uwierzytelnienia uwierzytelnionego zgody na algorytm i wymiany danych, używane jako dane wejściowe. Klient może obliczenia skrótu i wysyłać je do usługi. Ta usługa również oblicza skrót i porównuje wartości. Dopasowanie weryfikuje klienta.  
   
- Ta funkcja musi być włączona w usłudze Active Directory w systemach Windows i usługi Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [uwierzytelnianie szyfrowane w usługach IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Ta funkcja wymaga włączenia w usłudze Active Directory, Windows i Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [uwierzytelnianie szyfrowane w usługach IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

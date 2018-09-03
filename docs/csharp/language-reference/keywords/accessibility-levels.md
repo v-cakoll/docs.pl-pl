@@ -5,57 +5,57 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 085e99dd96074bd0f5bfe9d26d4364033f442404
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4679fd2564454e7f1ade5cb4813729b65f433012
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216694"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484554"
 ---
 # <a name="accessibility-levels-c-reference"></a>Poziomy ułatwień dostępu (odwołanie w C#)
 
-Modyfikatory dostępu, użyj `public`, `protected`, `internal`, lub `private`, aby określić jedną z następujących poziomów zadeklarowane ułatwień dostępu dla członków.  
+Użyj modyfikatory dostępu `public`, `protected`, `internal`, lub `private`, aby określić jedną z następujących poziomów deklarowana dostępność metody dla elementów członkowskich.  
   
-|Zadeklarowane ułatwień dostępu|Znaczenie|  
+|Deklarowana dostępność metody|Znaczenie|  
 |----------------------------|-------------|  
-|[`public`](public.md)|Dostęp nie jest ograniczone.|  
-|[`protected`](protected.md)|Dostęp jest ograniczony do zawierający klasy lub typy pochodzące od klasy zawierającego.|  
+|[`public`](public.md)|Dostęp nie jest ograniczona.|  
+|[`protected`](protected.md)|Dostęp jest ograniczony do zawierający klasy lub typy pochodzące z klasy zawierającej.|  
 |[`internal`](internal.md)|Dostęp jest ograniczony do bieżącego zestawu.|  
-|[`protected internal`](protected-internal.md)|Dostęp jest ograniczony do bieżącego zestawu lub typy pochodzące od klasy zawierającego.|  
+|[`protected internal`](protected-internal.md)|Dostęp jest ograniczony do bieżącego zestawu lub typy pochodzące z klasy zawierającej.|  
 |[`private`](private.md)|Dostęp jest ograniczony do typu zawierającego.|  
-|[`private protected`](private-protected.md)|Dostęp jest ograniczony do zawierającego klasę lub typy pochodzące od klasy zawierające w bieżącym zestawie. Dostępne od C# 7.2. |  
+|[`private protected`](private-protected.md)|Dostęp jest ograniczony do zawierający klasy lub typów pochodnych typu zawierającego klasy w bieżącym zestawie. Dostępne od C# 7.2. |  
   
- Modyfikator dostępu tylko jeden jest dozwolone dla elementu członkowskiego lub typu, z wyjątkiem, korzystając z `protected internal` lub `private protected` kombinacji.  
+ Modyfikator dostępu tylko jeden jest dozwolona dla elementu członkowskiego lub typu, z wyjątkiem sytuacji, gdy używasz `protected internal` lub `private protected` kombinacje.  
   
- Modyfikatory dostępu są niedozwolone w przestrzeni nazw. Przestrzenie nazw nie ma ograniczeń dostępu.  
+ Modyfikatory dostępu są niedozwolone w przypadku przestrzeni nazw. Przestrzenie nazw nie ma ograniczeń dostępu.  
   
- W zależności od kontekstu, w którym występuje deklaracji elementu członkowskiego dozwolone są tylko niektórych zadeklarowane dostępności. Jeśli nie modyfikator dostępu został określony w deklaracji elementu członkowskiego, dostępność domyślny jest używany.  
+ W zależności od kontekstu, w którym występuje deklaracja elementu członkowskiego dozwolone są tylko niektóre zadeklarowane możliwości dostępu do. Jeśli modyfikator dostępu, nie jest określony w deklaracji elementu członkowskiego, jest używana domyślna dostępu.  
   
- Typy najwyższego poziomu, które nie są zagnieżdżone w innych typów, może mieć tylko `internal` lub `public` ułatwień dostępu. Dostępność domyślne dla tych typów jest `internal`.  
+ Typy najwyższego poziomu, które nie są zagnieżdżone w innych typach, może mieć tylko `internal` lub `public` ułatwień dostępu. Wartość domyślna dostępu dla tych typów `internal`.  
   
- Zagnieżdżone typy, które są członkami innych typów, można zadeklarować dostępności, opisane w poniższej tabeli.  
+ Zagnieżdżone typy, które należą do innych typów, może zadeklarowana możliwości dostępu, zgodnie z instrukcjami w poniższej tabeli.  
   
-|Elementy członkowskie|Domyślny element członkowski dostępności|Dozwolone zadeklarowane dostępność elementu członkowskiego|  
+|Elementy członkowskie|Domyślny element członkowski w ułatwienia dostępu|Dozwolone zadeklarowanej dostępności członka|  
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|Brak|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
 |`interface`|`public`|Brak|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
- Zależy od dostępności typu zagnieżdżonego jego [domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md), który jest określany przez oba zadeklarowane dostępność elementu członkowskiego i domena dostępności typu natychmiast zawierającego. Jednak domena dostępności typu zagnieżdżonego nie może przekraczać, który typu zawierającego.  
+ Dostępność typu zagnieżdżonego zależy od jego [domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md), która jest określona przez oba deklarowana dostępność metody elementu członkowskiego i domena dostępności typu zawierającego. Jednakże domena dostępności typu zagnieżdżonego nie może przekraczać tego dla typu zawierającej.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md)  
- [Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
- [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [private](../../../csharp/language-reference/keywords/private.md)  
- [protected](../../../csharp/language-reference/keywords/protected.md)  
- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+- [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)  
+- [Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md)  
+- [Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
+- [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [private](../../../csharp/language-reference/keywords/private.md)  
+- [protected](../../../csharp/language-reference/keywords/protected.md)  
+- [internal](../../../csharp/language-reference/keywords/internal.md)

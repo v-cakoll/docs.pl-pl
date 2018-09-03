@@ -4,40 +4,40 @@ ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 65523fcc1d08bd48a432e6cf599dfcb73ade8747
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805749"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486912"
 ---
 # <a name="reliable-secure-profile"></a>Niezawodny bezpieczny profil
-W tym przykładzie pokazano, jak utworzyć WCF i [niezawodny bezpieczny profil](http://go.microsoft.com/fwlink/?LinkId=178140) (źródło). W tym przykładzie pokazano wykonania [Utwórz połączenie](http://go.microsoft.com/fwlink/?LinkId=178141) kanału, które mogą być składane, wraz z niezawodna obsługa komunikatów i opcjonalnie bezpiecznego kanału do tworzenia bezpiecznego niezawodna powiązania oparte na specyfikacji źródło.  
+W tym przykładzie przedstawiono sposób tworzenia usług WCF i [niezawodny bezpieczny profil](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Niniejszy przykład pokazuje implementację [Utwórz połączenie](https://go.microsoft.com/fwlink/?LinkId=178141) kanału, który może być składana, wraz z niezawodną obsługę komunikatów i opcjonalnie bezpiecznego kanału do tworzenia niezawodnych bezpiecznych powiązań, na podstawie RSP specyfikacji.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
-## <a name="discussion"></a>Omówienie  
- W przykładzie pokazano scenariusza exchange niezawodnej komunikatów dwukierunkowe asynchronicznych. Usługa ma kontraktu dwukierunkowego i klient implementuje kontraktu dwustronnego wywołania zwrotnego. Klient inicjuje żądanie do usługi, dla którego odpowiedzi jest oczekiwany w ramach oddzielnego połączenia. Niezawodnie jest wysyłany komunikat żądania. Klient nie chce się otworzyć punktu końcowego nasłuchiwania na jej końcu. W związku z tym sonduje usługę za pomocą żądań tworzenia połączenia usługi do odesłania odpowiedzi na kanału zwrotnego tego żądania tworzenia połączenia. W tym przykładzie pokazano, jak ma bezpiecznej komunikacji dupleksowej niezawodnej za pośrednictwem protokołu HTTP bez klienta udostępnianie punktu końcowego nasłuchiwania (i tworzenie wyjątek zapory).  
+## <a name="discussion"></a>Dyskusja  
+ Niniejszy przykład pokazuje scenariusz exchange niezawodnych komunikatów dwukierunkowe asynchronicznych. Usługa ma kontrakt dupleksowy, a klient implementuje kontraktu dwustronnego wywołania zwrotnego. Klient inicjuje żądanie do usługi, dla którego odpowiedź jest oczekiwana w ramach oddzielnego połączenia. Komunikat żądania są wysyłane w niezawodny sposób. Klient nie chce otworzyć punkcie końcowym nasłuchiwania na jej końcu. W związku z tym sonduje usługę za pomocą żądań tworzenia połączenia usługi do odesłania odpowiedź na kanale kopii tego żądania Utwórz połączenie. Niniejszy przykład pokazuje, jak bezpieczne, niezawodne paradygmacie komunikacji za pośrednictwem protokołu HTTP bez klient udostępnianie nasłuchiwania punktu końcowego (i utworzenie wyjątku zapory).  
   
-## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
 1.  Otwórz **ReliableSecureProfile** rozwiązania.  
   
-2.  Kliknij prawym przyciskiem myszy **usługi** projektu w **Eksploratora rozwiązań**, wybierz pozycję **debugowania**, **Start nowe wystąpienie** z menu kontekstowego. Spowoduje to uruchomienie skonfigurować hosta usługi.  
+2.  Kliknij prawym przyciskiem myszy **usługi** projektu w **Eksploratora rozwiązań**, wybierz opcję **debugowania**, **Uruchom nowe wystąpienie** z menu kontekstowego. Spowoduje to uruchomienie się hosta usługi.  
   
-3.  Kliknij prawym przyciskiem myszy **klienta** projektu w **Eksploratora rozwiązań**, wybierz pozycję **debugowania**, **Start nowe wystąpienie** z menu kontekstowego. Spowoduje to uruchomienie klienta.  
+3.  Kliknij prawym przyciskiem myszy **klienta** projektu w **Eksploratora rozwiązań**, wybierz opcję **debugowania**, **Uruchom nowe wystąpienie** z menu kontekstowego. Spowoduje to uruchomienie się klient.  
   
-4.  Wpisz dowolny ciąg w wierszu polecenia dla okna konsoli klienta, a następnie naciśnij klawisz ENTER. Ciąg wejściowy to wysyła do usługi, która oblicza skrót tego ciągu.  
+4.  Wpisz dowolny ciąg, w wierszu polecenia w oknie konsoli klienta, a następnie naciśnij klawisz ENTER. Spowoduje to wysłanie ciągu wejściowego do usługi, która oblicza skrót ciągu.  
   
-5.  Wyświetlić wynik w systemie windows klienta, gdy usługa wywołuje operacja kontraktu dwustronnego wywołania zwrotnego, aby wyświetlić wyniki w oknie konsoli klienta. W usłudze, aby symulować długotrwałej operacji przetwarzania danych jest zamierzone opóźnienia.  
+5.  Wyniki można wyświetlać w systemie windows klienta, gdy usługi ponownie wywołuje operacji kontraktu dwustronnego wywołania zwrotnego, aby wyświetlić wynik, w oknie konsoli klienta. Brak zamierzone opóźnienie w usłudze, aby zasymulować długotrwałej operacji przetwarzania danych.  
   
-6.  Monitorowanie ruchu HTTP (przy użyciu jednej z sieci online monitorowania takich narzędzi jak Monitor sieci, Fiddler i tak dalej) pokazuje, że między klientem a usługą nawiązaniu sekwencji komunikacji ustanowione przez niezawodny bezpieczny profil i w jaki sposób klienta Przystawka sonduje usługę za pomocą żądań tworzenia połączenia. Gdy usługa pobiera gotowy do odesłania przetworzonych odpowiedzi, używa kanału zwrotnego z ostatniego żądania tworzenia połączenia do odesłania wyniki.  
+6.  Monitorowanie ruchu HTTP (przez żaden z narzędziami, takimi jak Monitor sieci, narzędzie Fiddler i tak dalej do monitorowania sieci online) pokazuje, że między klientem a usługą ustanowione sekwencji do komunikacji, zgodnie z niezawodny bezpieczny profil oraz w jaki sposób klienta sonduje usługę za pomocą żądań Utwórz połączenie. Gdy usługa pobiera gotowy do odesłania przetwarzania odpowiedzi, używa kanału zwrotnego z ostatniego żądania Utwórz połączenie do odesłania wyniki.  
   
-7.  W oknie konsoli usługi, aby zamknąć tę usługę, naciśnij klawisz ENTER. Dla okna konsoli klienta, aby zamknąć klienta, naciśnij klawisz ENTER.
+7.  Naciśnij klawisz ENTER w oknie konsoli usługi, aby zamknąć tę usługę. Naciśnij klawisz ENTER w oknie konsoli klienta, aby zamknąć klienta.

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: 412c3af39af33ab52d2a255b03c6452adf7a2637
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8542076ca9552ae0d5ace74f1a287f5cd39aff21
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555054"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481805"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox — Tematy porad
-Ta sekcja zawiera przykłady, które pokazują, jak wykonywać typowe zadania za pomocą <xref:System.Windows.Controls.RichTextBox> formantu.  
+Ta sekcja zawiera przykłady pokazujące, jak wykonywać typowe zadania za pomocą <xref:System.Windows.Controls.RichTextBox> kontroli.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wyodrębnianie zawartości tekstu z kontrolki RichTextBox](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
  [Zmienianie wyboru RichTextBox za pomocą programowania](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [Zapisywanie, ładowanie i drukowanie zawartości kontrolki RichTextBox](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [Ustawianie położenia menu kontekstowego w kontrolce RichTextBox](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [Porady: Zamień na domyślnym hoście zawartości kontrolce RichTextBox](http://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+ [Porady: Zastąp domyślny Host zawartości dla kontrolki RichTextBox](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.TextBox>  

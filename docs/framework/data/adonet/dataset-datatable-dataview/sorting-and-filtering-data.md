@@ -5,42 +5,42 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 02a67a490eb8339663aac08c97c665ffee09f0df
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ade08deca909b32090b7d2d7cf8c6ba9ce9e7679
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760612"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480577"
 ---
 # <a name="sorting-and-filtering-data"></a>Sortowanie i filtrowanie danych
-<xref:System.Data.DataView> Udostępnia kilka sposobów, sortowanie i filtrowanie danych w <xref:System.Data.DataTable>:  
+<xref:System.Data.DataView> Oferuje kilka sposobów, sortowania i filtrowania danych w <xref:System.Data.DataTable>:  
   
--   Można użyć <xref:System.Data.DataView.Sort%2A> właściwości w celu określenia jednej lub wielu kolumn sortowanie zleceń i mają (rosnąco) ASC i DESC (malejąco) parametry.  
+-   Możesz użyć <xref:System.Data.DataView.Sort%2A> właściwości w celu określenia jednej lub wielu kolumn, sortowanie zleceń i mają (rosnąco) ASC i DESC (malejąco) parametry.  
   
--   Można użyć <xref:System.Data.DataView.ApplyDefaultSort%2A> właściwość, aby automatycznie utworzyć porządek sortowania, w kolejności rosnącej na podstawie kolumny klucza podstawowego lub kolumny tabeli. <xref:System.Data.DataView.ApplyDefaultSort%2A> ma zastosowanie tylko w przypadku **sortowania** właściwość jest odwołanie o wartości null lub pusty ciąg, i gdy tabela ma zdefiniowany klucz podstawowy.  
+-   Możesz użyć <xref:System.Data.DataView.ApplyDefaultSort%2A> właściwości, aby automatycznie utworzyć porządek sortowania, w kolejności rosnącej na podstawie kolumny klucza podstawowego lub kolumny tabeli. <xref:System.Data.DataView.ApplyDefaultSort%2A> ma zastosowanie tylko jeśli **sortowania** właściwość jest odwołaniem do wartości null ani być pustym ciągiem, a jeśli ma zdefiniowany klucz podstawowy w tabeli.  
   
--   Można użyć <xref:System.Data.DataView.RowFilter%2A> właściwości w celu określenia podzbiór wierszy na podstawie ich kolumny wartości. Aby uzyskać więcej informacji o prawidłowe wyrażenia dla **RowFilter** właściwości, zobacz informacje referencyjne dotyczące <xref:System.Data.DataColumn.Expression%2A> właściwość <xref:System.Data.DataColumn> klasy.  
+-   Możesz użyć <xref:System.Data.DataView.RowFilter%2A> właściwości w celu określenia podzbiór wierszy na podstawie ich wartości w kolumnach. Szczegółowe informacje na temat prawidłowych wyrażeń dla **RowFilter** właściwości, zobacz informacje referencyjne dotyczące <xref:System.Data.DataColumn.Expression%2A> właściwość <xref:System.Data.DataColumn> klasy.  
   
-     Jeśli chcesz zwrócić wyników określonego zapytania na danych, a nie udostępnia dynamiczny widok podzbiór danych, użyj <xref:System.Data.DataView.Find%2A> lub <xref:System.Data.DataView.FindRows%2A> metody **DataView** Aby uzyskać najlepszą wydajność, a nie ustawienie **RowFilter** właściwości. Ustawienie **RowFilter** właściwości odtwarza indeksu dla danych narzut dodawanie do swojej aplikacji i zmniejszenie wydajności. **RowFilter** właściwości najlepiej sprawdza się w aplikacji powiązanych z danymi gdzie powiązanej kontrolki wyświetla filtrowane wyniki. **Znaleźć** i **FindRows** metody wykorzystać bieżącego indeksu bez konieczności indeksu, który ma zostać również przebudowany. Aby uzyskać więcej informacji na temat **znaleźć** i **FindRows** metod, zobacz [znajdowanie wierszy](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
+     Jeśli chcesz przywrócić, użyj wyników określonego zapytania na danych, zapewniając dynamiczny widok podzbiór danych, w przeciwieństwie <xref:System.Data.DataView.Find%2A> lub <xref:System.Data.DataView.FindRows%2A> metody **DataView** do osiągnięcia najlepszej wydajności zamiast ustawienie **RowFilter** właściwości. Ustawienie **RowFilter** właściwość odbudowania indeksu dla danych, obciążenie dodawanie do aplikacji i zmniejszenie wydajności. **RowFilter** właściwość najlepiej sprawdza się w aplikacji powiązanych z danymi gdzie powiązanej kontrolki Wyświetla wyfiltrowanych wyników. **Znaleźć** i **FindRows** metody wykorzystać bieżącego indeksu bez konieczności indeksu odbudowania. Aby uzyskać więcej informacji na temat **znaleźć** i **FindRows** metod, zobacz [znajdowanie wierszy](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
   
--   Można użyć <xref:System.Data.DataView.RowStateFilter%2A> właściwości w celu określenia, które wersje wierszy do wyświetlenia. **DataView** niejawnie zarządza wersji wierszy do udostępnienia, w zależności od **RowState** podstawowej wiersza. Na przykład jeśli **Element RowStateFilter** ustawiono **DataViewRowState.Deleted**, **DataView** przedstawia **oryginalnego** wersja wiersza wszystkie **usunięte** wierszy, ponieważ nie istnieje żadne **bieżącego** wersja wiersza. Można określić wersji wiersza wiersza jest ujawniany przy użyciu **RowVersion** właściwość **DataRowView**.  
+-   Możesz użyć <xref:System.Data.DataView.RowStateFilter%2A> właściwości w celu określenia, które wersje wierszy do wyświetlenia. **DataView** niejawnie zarządza której wersji wiersza do udostępnienia, w zależności od **RowState** bazowego wiersza. Na przykład jeśli **Element RowStateFilter** ustawiono **DataViewRowState.Deleted**, **DataView** udostępnia **oryginalnego** wersji wierszy wszystkie **usunięte** wiersze, ponieważ nie istnieje żadne **bieżącego** wiersza wersji. Można określić, której wersji wiersza wiersza jest ujawniany przy użyciu **RowVersion** właściwość **DataRowView**.  
   
      W poniższej tabeli przedstawiono opcje **DataViewRowState**.  
   
     |Opcje DataViewRowState|Opis|  
     |------------------------------|-----------------|  
-    |**CurrentRows**|**Bieżącego** wersja wiersza wszystkich **Unchanged**, **Added**, i **zmodyfikowane** wierszy. Domyślnie włączone.|  
-    |**Dodane**|**Bieżącego** wersja wiersza wszystkich **Added** wierszy.|  
-    |**usunięte**|**Oryginalnego** wersja wiersza wszystkich **usunięte** wierszy.|  
-    |**ModifiedCurrent**|**Bieżącego** wersja wiersza wszystkich **zmodyfikowane** wierszy.|  
-    |**ModifiedOriginal**|**Oryginalnego** wersja wiersza wszystkich **zmodyfikowane** wierszy.|  
-    |**Brak**|Żadne wiersze.|  
-    |**OriginalRows**|**Oryginalnego** wersja wiersza wszystkich **Unchanged**, **zmodyfikowane**, i **usunięte** wierszy.|  
-    |**Bez zmian**|**Bieżącego** wersja wiersza wszystkich **Unchanged** wierszy.|  
+    |**CurrentRows**|**Bieżącego** wiersz wersję wszystkich **Unchanged**, **dodano**, i **zmodyfikowane** wierszy. Domyślnie włączone.|  
+    |**Dodano**|**Bieżącego** wiersz wersję wszystkich **dodano** wierszy.|  
+    |**Usunięto**|**Oryginalnego** wiersz wersję wszystkich **usunięte** wierszy.|  
+    |**ModifiedCurrent**|**Bieżącego** wiersz wersję wszystkich **zmodyfikowane** wierszy.|  
+    |**ModifiedOriginal**|**Oryginalnego** wiersz wersję wszystkich **zmodyfikowane** wierszy.|  
+    |**Brak**|Brak wierszy.|  
+    |**OriginalRows**|**Oryginalnego** wiersz wersję wszystkich **Unchanged**, **zmodyfikowane**, i **usunięte** wierszy.|  
+    |**bez zmian**|**Bieżącego** wiersz wersję wszystkich **Unchanged** wierszy.|  
   
  Aby uzyskać więcej informacji na temat stany wiersza i wersje wiersza, zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
- Poniższy przykład kodu tworzy widok czy przedstawia wszystkie produkty, których liczba jednostek w magazynie jest mniejsza lub równa poziomu zmiany kolejności, w najpierw posortowane według Identyfikatora dostawcy, a następnie według nazwy produktu.  
+ Poniższy przykład kodu tworzy widok, przedstawia wszystkie produkty, których liczba jednostek w magazynie jest mniejsza lub równa z poziomu której kolejność chcesz zmienić, najpierw posortowane według Identyfikatora dostawcy, a następnie według nazwy produktu.  
   
 ```vb  
 Dim prodView As DataView = New DataView(prodDS.Tables("Products"), _  
@@ -62,4 +62,4 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
  <xref:System.Data.DataTable>  
  <xref:System.Data.DataView>  
  [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

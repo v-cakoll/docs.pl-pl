@@ -1,35 +1,35 @@
 ---
 title: Narzędzia dotnet svcutil Microsoft WCF
-description: Omówienie narzędzia dotnet svcutil Microsoft WCF, który dodaje funkcje platformy .NET Core i ASP.NET Core projektów, podobnie jak narzędzia svcutil WCF dla projektów .NET Framework.
+description: Omówienie narzędzia dotnet svcutil Microsoft WCF, który dodaje funkcje dla projektów .NET Core i ASP.NET Core, podobny do narzędzia svcutil WCF dla projektów programu .NET Framework.
 author: mlacouture
 ms.author: jralexander
-ms.date: 06/04/2018
-ms.openlocfilehash: c40dd9b437afe7381244b944228b6b2efe046eb2
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.date: 08/20/2018
+ms.openlocfilehash: bb4d8e5f3997318b720535b0f1e07fc33d13338a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753425"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484124"
 ---
 # <a name="microsoft-wcf-dotnet-svcutil-tool"></a>Narzędzia dotnet svcutil Microsoft WCF
 
-Windows Communication Foundation (WCF) **dotnet svcutil** narzędzie to narzędzie .NET Core interfejsu wiersza polecenia, które pobiera metadane z usługi sieci web w lokalizacji sieciowej lub z pliku WSDL, a następnie generuje WCF klasy zawierające metody serwera proxy klienta który dostęp do operacji usługi sieci web.
+Windows Communication Foundation (WCF) **narzędzia svcutil dotnet** narzędzie to narzędzie wiersza polecenia platformy .NET Core, pobiera metadane z usługi sieci web w lokalizacji sieciowej lub z pliku WSDL, która generuje klasę usługi WCF, zawierająca metody serwera proxy klienta, dostęp do operacji usługi sieci web.
 
-Podobnie jak [ **metadanych modelu usługi - svcutil** ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzi dla projektów .NET Framework **dotnet svcutil** to narzędzie wiersza polecenia do generowania odwołania do usługi sieci web zgodny z projektów .NET Core i .NET Standard.
+Podobnie jak [ **metadanych modelu usługi - svcutil** ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia dla projektów programu .NET Framework **narzędzia svcutil dotnet** jest narzędziem wiersza polecenia do generowania odwołanie do usługi sieci web zgodne z projektami .NET Core i .NET Standard.
 
-**Dotnet svcutil** narzędzie jest dostępna opcja alternatywnych [ **odwołania do usługi sieci Web WCF** ](wcf-web-service-reference-guide.md) programu Visual Studio połączenia usługodawcy, najpierw dostarczonej z programem Visual Studio v15.5 2017 r. **Dotnet svcutil** narzędzie jako narzędzie .NET Core interfejsu wiersza polecenia, jest dostępny i platform w systemie Linux, macOS i systemu Windows.
+**Narzędzia svcutil dotnet** narzędzie jest alternatywnych opcji [ **WCF Web Service Reference** ](wcf-web-service-reference-guide.md) dostawcy usług, które po raz pierwszy wysłane połączona programu Visual Studio z programem Visual Studio v15.5 2017 r. **Narzędzia svcutil dotnet** narzędzia jako narzędzie wiersza polecenia platformy .NET Core, są dostępne dla wielu platform w systemie Linux, macOS i Windows.
 
 > [!IMPORTANT]
-> Użytkownik powinien odwoływać się tylko usługi z zaufanego źródła. Dodawanie odwołań z niezaufanego źródła może naruszyć bezpieczeństwo.
+> Użytkownik powinien odwoływać się tylko do usług z zaufanego źródła. Dodawanie odwołań z niezaufanego źródła może naruszyć bezpieczeństwo.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Zestaw SDK programu .NET core](https://www.microsoft.com/net/download) v1.0.4 lub nowszy
-* Edytor kodu ulubionych
+* [Zestaw .NET core SDK](https://www.microsoft.com/net/download) v1.0.4 lub nowsze wersje
+* Wybrany edytor kodu
 
 ## <a name="getting-started"></a>Wprowadzenie
 
-Poniższy przykład przeprowadzi Cię przez kroki wymagane do dodawania odwołania do usługi sieci web do projektu konsoli .NET Core i wywoływanie usługi. Spowoduje utworzenie aplikacji konsoli .NET Core o nazwie _HelloSvcutil_ oraz zostanie dodane odwołanie do usługi sieci web implementujący kontrakt następujące:
+Poniższy przykład przeprowadzi Cię przez kroki wymagane do Dodaj odwołanie do usługi sieci web, aby projekt konsoli .NET Core i wywołać usługę. Utworzysz aplikację konsolową .NET Core, o nazwie _HelloSvcutil_ i doda odwołanie do usługi sieci web, który implementuje ten kontrakt następujące:
 
 ```csharp
 [ServiceContract]
@@ -40,51 +40,51 @@ public interface ISayHello
 }
 ```
 
-Na przykład usługi sieci web będzie traktowane jako hostowany pod następującym adresem: `http://contoso.com/SayHello.svc`
+W tym przykładzie Usługa sieci web zostanie przyjęta wartość będzie hostowana pod następującym adresem: `http://contoso.com/SayHello.svc`
 
-W oknie polecenia systemu Windows, system macOS lub Linux, wykonaj następujące czynności:
+Z poziomu okna polecenia Windows, macOS lub Linux, wykonaj następujące czynności:
 
-1. Utwórz katalog o nazwie _HelloSvcutil_ dla projektu i przekształcenie go w bieżącym katalogu, jak w poniższym przykładzie:
+1. Utwórz katalog o nazwie _HelloSvcutil_ dla projektu i udostępnić go w bieżącym katalogu, jak w poniższym przykładzie:
 
 ```console
 mkdir HelloSvcutil
 cd HelloSvcutil
 ```
 
-2. Utwórz nowy projekt console C# w tym katalogu przy użyciu [ `dotnet new` ](../tools/dotnet-new.md) polecenia w następujący sposób:
+2. Utwórz nowy projekt konsoli języka C#, w tym katalogu przy użyciu [ `dotnet new` ](../tools/dotnet-new.md) polecenia w następujący sposób:
 
 ```console
 dotnet new console
 ```
 
-3. Otwórz `HelloSvcutil.csproj` projekt plik w edytorze, Edytuj `Project` element i Dodaj [ `dotnet-svcutil` pakietu NuGet](https://nuget.org/packages/dotnet-svcutil) jako odwołanie narzędzia interfejsu wiersza polecenia, używając następującego kodu:
+3. Otwórz `HelloSvcutil.csproj` projektu plik w edytorze, Edytuj `Project` element i Dodaj [ `dotnet-svcutil` pakietu NuGet](https://nuget.org/packages/dotnet-svcutil) jako odwołanie narzędzie interfejsu wiersza polecenia, używając następującego kodu:
 
 ```xml
 <ItemGroup>
-  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.0" />
+  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
 </ItemGroup>
 ```
 
-4. Przywróć _dotnet svcutil_ pakietu przy użyciu [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia w następujący sposób:
+4. Przywróć _narzędzia svcutil dotnet_ pakietu przy użyciu [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia w następujący sposób:
 
 ```console
 dotnet restore
 ```
 
-5. Uruchom _dotnet_ z _svcutil_ polecenie w celu wygenerowania pliku odwołań do usługi sieci web w następujący sposób:
+5. Uruchom _dotnet_ z _svcutil_ polecenie, aby wygenerować plik odwołanie do usługi sieci web w następujący sposób:
 
 ```console
 dotnet svcutil http://contoso.com/SayHello.svc
 ```
-Wygenerowany plik zostanie zapisany jako _HelloSvcutil/ServiceReference1/Reference.cs_. _Dotnet_svcutil_ narzędzie również dodaje do projektu odpowiednich pakietów WCF wymagane przez kod serwera proxy jako odwołania do pakietu.
+Wygenerowany plik jest zapisywany jako _HelloSvcutil/ServiceReference1/Reference.cs_. _Dotnet_svcutil_ narzędzie automatycznie dodaje również do projektu odpowiednich pakietów WCF wymagane przez kod serwera proxy jako odwołania do pakietu.
 
-6. Przywracanie pakietów WCF za pomocą [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia w następujący sposób:
+6. Przywróć pakiety programu WCF za pomocą [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia w następujący sposób:
 
 ```console
 dotnet restore
 ```
 
-7. Otwórz `Program.cs` plik w edytorze, Edytuj `Main()` metodę i Zastąp automatycznego generowania kodu przy użyciu następujący kod, aby wywołać usługę sieci web:
+7. Otwórz `Program.cs` plik w edytorze, Edytuj `Main()` metodę i Zastąp automatycznego generowania kodu za pomocą następującego kodu, aby wywołać usługę sieci web:
 
 ```csharp
 static void Main(string[] args)
@@ -99,9 +99,9 @@ static void Main(string[] args)
 ```console
 dotnet run
 ```
-Powinny pojawić się następujące dane wyjściowe: "tekst Hello dotnet svcutil!"
+Powinien zostać wyświetlony następujący komunikat: "Hello narzędzia svcutil dotnet"!
 
-Aby uzyskać szczegółowy opis `dotnet-svcutil` narzędzie parametrów, wywołania narzędzia przekazywanie parametru pomocy w następujący sposób:
+Aby uzyskać szczegółowy opis `dotnet-svcutil` narzędzia parametrów, wywołaj narzędzie przekazywania parametru pomocy w następujący sposób:
 
 ```console
 dotnet svcutil --help
@@ -111,7 +111,7 @@ dotnet svcutil --help
 
 ### <a name="feedback--questions"></a>Opinie i pytania
 
-Jeśli masz pytania lub opinie, [Otwórz problemu w serwisie GitHub](https://github.com/dotnet/wcf/issues/new). Można także przejrzeć wszystkie istniejące pytania lub problemy [w repozytorium usługi WCF w usłudze GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
+Jeśli masz pytania lub opinie, [Otwórz problem w serwisie GitHub](https://github.com/dotnet/wcf/issues/new). Możesz również sprawdzić wszelkie istniejące pytania lub problemy [w repozytorium usługi WCF w usłudze GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
 
 ### <a name="release-notes"></a>Uwagi do wersji
 
@@ -119,4 +119,4 @@ Jeśli masz pytania lub opinie, [Otwórz problemu w serwisie GitHub](https://git
 
 ### <a name="information"></a>Informacje
 
-* [Pakiet NuGet DotNet svcutil](https://nuget.org/packages/dotnet-svcutil)
+* [Pakiet NuGet narzędzia svcutil DotNet](https://nuget.org/packages/dotnet-svcutil)

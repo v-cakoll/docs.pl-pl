@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
 ms.openlocfilehash: 4ec498fd57fb7100a58edec93941ec7602e4b98f
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42751890"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485628"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports — Obiekt
 Udostępnia właściwości i metody do uzyskiwania dostępu do portów szeregowych na komputerze.  

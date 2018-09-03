@@ -5,20 +5,20 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 ms.openlocfilehash: e5f8429b3ff02678bf8bf3e9e32bef6eb1a56831
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652873"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483622"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Porady: tworzenie literałów XML (Visual Basic)
-Można utworzyć dokumentu XML, fragment lub element bezpośrednio w kodzie za pomocą literału XML. Przykłady w tym temacie przedstawiają, jak utworzyć element XML, który ma trzy elementy podrzędne oraz sposobu tworzenia dokumentu XML.  
+Można utworzyć dokumentu XML, fragment lub element bezpośrednio w kodzie za pomocą literał XML. Przykłady w tym temacie pokazują, jak utworzyć element XML, który ma trzy elementy podrzędne i tworzenie dokumentu XML.  
   
  Można również użyć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsów API, aby utworzyć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektów. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Linq.XElement>.  
   
 ### <a name="to-create-an-xml-element"></a>Aby utworzyć XML element  
   
--   Utwórz tekście XML przy użyciu składni literału XML, która jest taka sama jak rzeczywista składni XML.  
+-   Utwórz w tekście XML przy użyciu składni literał XML, która jest taka sama jak rzeczywista składni XML.  
   
      [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
@@ -36,7 +36,7 @@ Można utworzyć dokumentu XML, fragment lub element bezpośrednio w kodzie za p
   
 ### <a name="to-create-an-xml-document"></a>Aby utworzyć dokumentu XML  
   
--   Utworzyć wbudowane dokumentu XML. Poniższy kod tworzy składni literału, deklaracja XML, instrukcji przetwarzania, komentarz i element, który zawiera inny element dokumentu XML.  
+-   Utwórz w tekście dokumentu XML. Poniższy kod tworzy dokument XML, który ma składni literału, deklaracja XML, instrukcję przetwarzania, komentarz i element, który zawiera inny element.  
   
      [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   

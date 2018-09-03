@@ -1,6 +1,6 @@
 ---
 title: Funkcja GetDemultiplexedStub (niezarządzany wykaz interfejsów API)
-description: Funkcja GetDemultiplexedStub tworzy obiekt sink usługi przesyłania dalej ułatwiających klienta odbieranie wywołania asynchroniczne z zarządzania systemu Windows.
+description: Funkcja GetDemultiplexedStub tworzy obiektu sink usługi przesyłania dalej ułatwiających klienta odbieranie wywołań asynchronicznych z zarządzania Windows.
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b195d3a512c537ca409bd2039add9e69abaf4df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456365"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482359"
 ---
-# <a name="getdemultiplexedstub-function"></a>Funkcja GetDemultiplexedStub
-Tworzy obiekt sink usługi przesyłania dalej ułatwiających klienta odbieranie wywołania asynchroniczne z zarządzania systemu Windows.
+# <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub — funkcja
+Tworzy obiektu sink usługi przesyłania dalej ułatwiających klienta odbieranie wywołań asynchronicznych z zarządzania Windows.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,19 +41,19 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>Parametry
 
 `pObject`  
-[in] Wskaźnik do klienta w trakcie stosowania [funkcji IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx).
+[in] Wskaźnik do klienta w trakcie wykonania [funkcji IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).
 
 `isLocal`  
-[in] Flaga, która wskazuje, czy zdarzenie jest lokalny (`true`); w przeciwnym razie `false`.
+[in] Flagę wskazującą, czy zdarzenie jest lokalny (`true`); w przeciwnym razie `false`.
 
 `ppObject`  
-[out] Obiekt sink usługi przesyłania dalej ułatwiających klienta odbieranie wywołania asynchroniczne z zarządzania systemu Windows.
+[out] Obiektu sink usługi przesyłania dalej pomagać klientowi w odbieranie wywołań asynchronicznych z zarządzania Windows.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja zakończy się powodzeniem, jest zwracana wartość `S_OK` (0).
+Jeśli funkcja się powiedzie, wartość zwracana jest `S_OK` (0).
 
-Jeśli funkcja nie powiedzie się, wartość zwracana jest kodu zera błędu. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetErrorInfo](geterrorinfo.md) funkcji.
+Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu różny od zera. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [geterrorinfo —](geterrorinfo.md) funkcji.
     
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -63,4 +63,4 @@ Jeśli funkcja nie powiedzie się, wartość zwracana jest kodu zera błędu. Ab
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

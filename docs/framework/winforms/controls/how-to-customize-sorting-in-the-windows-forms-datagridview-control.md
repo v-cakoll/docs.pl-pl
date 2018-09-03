@@ -9,42 +9,42 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sorting
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
-ms.openlocfilehash: d781da54a8db8a0af01690f08e9cfd8958adec74
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34a92af246e1145e8d0d1d6874b2d64d7dee7846
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533419"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482572"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Porady: dostosowywanie sortowania w formancie DataGridView formularzy systemu Windows
-<xref:System.Windows.Forms.DataGridView> Kontrola zapewnia automatyczne sortowanie, ale w zależności od potrzeb, może być konieczne dostosowanie operacji sortowania. Na przykład można sortowanie programowe tworzenie alternatywny interfejs użytkownika (UI). Alternatywnie można obsługiwać <xref:System.Windows.Forms.DataGridView.SortCompare> zdarzenia lub wywołanie `Sort(IComparer)` przeciążenia z <xref:System.Windows.Forms.DataGridView.Sort%2A> metodę większą elastyczność sortowania, takich jak sortowania wielu kolumn.  
+<xref:System.Windows.Forms.DataGridView> Control oferuje automatyczne sortowanie, ale w zależności od potrzeb, może być konieczne dostosowanie operacjach sortowania. Na przykład umożliwia sortowanie programowe tworzenie alternatywny interfejs użytkownika (UI). Alternatywnie, można obsługiwać <xref:System.Windows.Forms.DataGridView.SortCompare> zdarzenia lub wywołanie `Sort(IComparer)` przeciążenia <xref:System.Windows.Forms.DataGridView.Sort%2A> metody sortowania funkcje i elastyczność, takich jak sortowanie wielu kolumn.  
   
- W poniższych przykładach kodu pokazano te trzy sposoby sortowanie niestandardowe. Aby uzyskać więcej informacji, zobacz [Tryb sortowania kolumn w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md).  
+ Poniższe przykłady kodu ilustrują te trzy sposoby sortowania niestandardowych. Aby uzyskać więcej informacji, zobacz [Tryb sortowania kolumn w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md).  
   
-## <a name="programmatic-sorting"></a>Sortowanie programowe  
- Poniższy przykład kodu pokazuje programowe sortowania za pomocą <xref:System.Windows.Forms.DataGridView.SortOrder%2A> i <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> właściwości, aby określić kierunek sortowania i <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A> właściwości na ręczne ustawienie sortowania symbolu. `Sort(DataGridViewColumn,ListSortDirection)` Przeciążenia z <xref:System.Windows.Forms.DataGridView.Sort%2A> metoda jest używana do sortowania danych tylko w jednej kolumnie.  
+## <a name="programmatic-sorting"></a>Programowe sortowanie  
+ Poniższy przykład kodu demonstruje programowe sortowanie, za pomocą <xref:System.Windows.Forms.DataGridView.SortOrder%2A> i <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> właściwości, aby określić kierunek sortowania, a <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A> właściwości, aby ręcznie ustawić symbol sortowania. `Sort(DataGridViewColumn,ListSortDirection)` Przeciążenia <xref:System.Windows.Forms.DataGridView.Sort%2A> metoda jest używana do sortowania danych tylko w przypadku zaznaczenia jednej kolumny.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewProgrammaticSort#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewProgrammaticSort/CS/form1.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewProgrammaticSort#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewProgrammaticSort/VB/form1.vb#00)]  
   
-## <a name="custom-sorting-using-the-sortcompare-event"></a>Za pomocą tego zdarzenia SortCompare sortowanie niestandardowe  
- Poniższy przykład kodu pokazuje sortowanie niestandardowe przy użyciu <xref:System.Windows.Forms.DataGridView.SortCompare> obsługi zdarzeń. Wybrane <xref:System.Windows.Forms.DataGridViewColumn> jest sortowana i, jeśli występują zduplikowane wartości w kolumnie, w kolumnie Identyfikator służy do określania kolejności końcowego.  
+## <a name="custom-sorting-using-the-sortcompare-event"></a>Niestandardowe sortowanie, za pomocą zdarzenia SortCompare  
+ Poniższy przykład kodu demonstruje, niestandardowe sortowanie, za pomocą <xref:System.Windows.Forms.DataGridView.SortCompare> programu obsługi zdarzeń. Wybrane <xref:System.Windows.Forms.DataGridViewColumn> jest sortowana i, jeśli istnieją zduplikowane wartości w kolumnie, kolumna Identyfikatora służy do określenia końcowego zamówienia.  
   
  [!code-csharp[System.Windows.Forms.DataGridView.SortCompare#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/CS/form1.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridView.SortCompare#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.SortCompare/VB/form1.vb#00)]  
   
 ## <a name="custom-sorting-using-the-icomparer-interface"></a>Sortowanie niestandardowe przy użyciu interfejsu IComparer  
- Poniższy przykład kodu pokazuje sortowanie niestandardowe przy użyciu `Sort(IComparer)` przeciążenia z <xref:System.Windows.Forms.DataGridView.Sort%2A> metodę, która przyjmuje implementacja <xref:System.Collections.IComparer> interfejs do wykonania sortowania wiele kolumn.  
+ Poniższy przykład kodu demonstruje, niestandardowe sortowanie, za pomocą `Sort(IComparer)` przeciążenia <xref:System.Windows.Forms.DataGridView.Sort%2A> metody, która przyjmuje implementację <xref:System.Collections.IComparer> interfejsu, aby wykonać sortowanie wielu kolumn.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewIComparerSort#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewIComparerSort/CS/form1.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewIComparerSort#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewIComparerSort/VB/form1.vb#00)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Wymagaj te przykłady:  
+ Wymagaj tych przykładach:  
   
--   Odwołania do zestawów systemu, System.Drawing i System.Windows.Forms.  
+-   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
- Dla informacji o tworzeniu tych przykładów z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby uzyskać informacje o tworzeniu tych przykładów z poziomu wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.DataGridView>  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a13912d006b522e86997fc7850befb996db4b7bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3de5b196d6ec35febe4ba30f7ac41bacacf884cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400253"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487435"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Narzędzie instalacji usług .NET)
 Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:  
@@ -27,7 +27,7 @@ Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:
   
 -   Konfiguruje usługi, które zostały programowo dodane do klasy użytkownika.  
   
- Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -43,12 +43,12 @@ Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:
   
 |Argument|Opis|  
 |--------------|-----------------|  
-|*assemblyFile.dll*|Plik zestawu źródłowego. Zestaw musi być podpisany za pomocą silnej nazwy. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu o silnej nazwie](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
+|*assemblyFile.dll*|Plik zestawu źródłowego. Zestaw musi być podpisany za pomocą silnej nazwy. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
   
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/appdir:** *ścieżki*|Określa katalog główny aplikacji.|  
-|**elementów/appname:** *applicationName*|Określa nazwę aplikacji COM+, która ma zostać znaleziona lub utworzona.|  
+|**operacji:** *applicationName*|Określa nazwę aplikacji COM+, która ma zostać znaleziona lub utworzona.|  
 |**/c**|Tworzy aplikację docelową.|  
 |**componly**|Konfiguruje tylko składniki; ignoruje metody i interfejsy.|  
 |**/exapp**|Określa, że narzędzie ma oczekiwać istniejącej aplikacji.|  
@@ -59,28 +59,28 @@ Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**/parname:** *nazwy*|Określa nazwę lub identyfikator aplikacji COM+, która ma zostać znaleziona lub utworzona.|  
 |**/reconfig**|Konfiguruje ponownie istniejącą aplikację docelową. Domyślnie włączone.|  
-|**/ TLB:** *typelibraryfile*|Określa plik biblioteki typów do zainstalowania.|  
+|**/ TLB:** *plik_biblioteki_typów*|Określa plik biblioteki typów do zainstalowania.|  
 |**/u**|Odinstalowuje aplikację docelową.|  
 |**/quiet**|Określa tryb cichy; pomija wyświetlanie logo i komunikatów o sukcesie.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Regsvcs.exe wymaga pliku zestawu źródłowego określonego przez *assemblyFile.dll*. Ten zestaw musi być podpisany za pomocą silnej nazwy. Aby uzyskać więcej informacji dotyczących podpisywanie silną nazwą, zobacz [podpisywanie zestawu o silnej nazwie](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). Nazwy aplikacji docelowej i pliku biblioteki typów są opcjonalne. *ApplicationName* argument mogą być generowane ze źródłowego pliku zestawu i zostanie utworzony przez Regsvcs.exe, jeśli jeszcze nie istnieje. *Typelibraryfile* argument można określić nazwy biblioteki typów. Jeśli nie zostanie określona nazwa biblioteki typów, program Regsvcs.exe użyje nazwy zestawu jako wartości domyślnej.  
+ Regsvcs.exe wymaga pliku zestawu źródłowego określonego przez *Plikzestawu.dll*. Ten zestaw musi być podpisany za pomocą silnej nazwy. Aby uzyskać więcej informacji na temat podpisywania silnymi nazwami, zobacz [podpisywanie zestawu za pomocą silnej nazwy](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). Nazwy aplikacji docelowej i pliku biblioteki typów są opcjonalne. *ApplicationName* argument może zostać wygenerowany na podstawie pliku zestawu źródłowego i zostanie utworzona przez Regsvcs.exe, jeśli jeszcze nie istnieje. *Plik_biblioteki_typów* argument może określać nazwę biblioteki typów. Jeśli nie zostanie określona nazwa biblioteki typów, program Regsvcs.exe użyje nazwy zestawu jako wartości domyślnej.  
   
- Regsvcs.exe rejestrujący metod składnika, jest warunkiem [wymagań](http://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48) i [link zapotrzebowanie](../../../docs/framework/misc/link-demands.md) na jednej z tych metod. To narzędzie działa we w pełni zaufanym środowisku, więc większość żądań uprawnienia kończy się pomyślnie. Jednak Regsvcs.exe nie można zarejestrować składników za pomocą metod chroniony przez żądanie lub linkdemand dla <xref:System.Security.Permissions.StrongNameIdentityPermission> lub <xref:System.Security.Permissions.PublisherIdentityPermission>.  
+ Gdy Regsvcs.exe rejestruje metody składnika, jest podlegają [zapotrzebowanie](https://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48) i [link zapotrzebowanie](../../../docs/framework/misc/link-demands.md) w tych metodach. To narzędzie działa we w pełni zaufanym środowisku, więc większość żądań uprawnienia kończy się pomyślnie. Jednak Regsvcs.exe nie może rejestrować składników z metodami chronionymi przez żądania demand lub linkdemand dla <xref:System.Security.Permissions.StrongNameIdentityPermission> lub <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   
  Aby używać programu Regsvcs.exe, trzeba mieć uprawnienia administracyjne na komputerze lokalnym.  
   
  Jeśli podczas wykonywania dowolnej z tych akcji w programie Regsvcs.exe wystąpi błąd, zostaną wyświetlone odpowiednie komunikaty o błędach.  
   
 ## <a name="examples"></a>Przykłady  
- Polecenie dodaje wszystkie klasy publicznej zawarte w `myTest.dll` do `myTargetApp` (istniejącej aplikacji COM +) i tworzy `myTest.tlb` biblioteki typów.  
+ Następujące polecenie dodaje wszystkie klasy publiczne zawarte w `myTest.dll` do `myTargetApp` (istniejąca aplikacja COM +) i tworzy `myTest.tlb` biblioteki typów.  
   
 ```  
 regsvcs /appname:myTargetApp myTest.dll  
 ```  
   
- Polecenie dodaje wszystkie klasy publicznej zawarte w `myTest.dll` do `myTargetApp` (istniejącej aplikacji COM +) i tworzy `newTest.tlb` biblioteki typów.  
+ Następujące polecenie dodaje wszystkie klasy publiczne zawarte w `myTest.dll` do `myTargetApp` (istniejąca aplikacja COM +) i tworzy `newTest.tlb` biblioteki typów.  
   
 ```  
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  

@@ -1,27 +1,27 @@
 ---
-title: Zmienna i śledzenia argumentu
+title: Zmienna śledzenie argumentów i
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: f1938da55d2e1d88c88f83ff75f357e23f1eb81f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516987"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481495"
 ---
-# <a name="variable-and-argument-tracking"></a>Zmienna i śledzenia argumentu
-Podczas śledzenia wykonywanie przepływu pracy, często jest przydatne w celu wyodrębnienia danych. Zapewnia dodatkowy kontekst podczas uzyskiwania dostępu do wykonywania post rekordu śledzenia. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], można wyodrębnić wszelkie widoczne zmiennej lub argumentu w zakresie wszystkie działania w przepływie pracy za pomocą śledzenia. Śledzenie profile ułatwiają wyodrębnić dane.  
+# <a name="variable-and-argument-tracking"></a>Zmienna śledzenie argumentów i
+Podczas śledzenia wykonywania przepływu pracy, jest często przydatne w celu wyodrębnienia danych. Umożliwia to dodatkowy kontekst podczas uzyskiwania dostępu do śledzenia rekordów post wykonywania. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], można wyodrębnić wszystkie widoczne zmiennej lub argumentu w zakresie wszelkie działania w przepływie pracy przy użyciu śledzenia. Profile śledzenia ułatwiają do wyodrębniania danych.  
   
-## <a name="variables-and-arguments"></a>Argumenty i zmienne  
- Gdy działanie emituje ActivityStateRecord są wyodrębniane zmienne i argumentów.  Zmienna jest niedostępna do wyodrębnienia tylko wtedy, gdy znajduje się w zakresie działania. Zmienna do wyodrębnienia w działaniu jest określony w następujący sposób:  
+## <a name="variables-and-arguments"></a>Zmienne i argumenty  
+ Zmienne i argumenty są wyodrębniane, gdy działanie wyemituje ActivityStateRecord.  Zmienna jest dostępna do wyodrębnienia, tylko wtedy, gdy jest w zakresie działania. Zmienna ma zostać wyodrębniony w ramach działania jest określony w następujący sposób:  
   
--   Jeśli zmienna jest określona przez nazwę zmiennej, śledzenie wygląda zmiennej w ramach bieżącego działania jest włączone śledzenie i działania nadrzędnego. Zmienna jest przeszukiwane w bieżącym zakresie działania i w zakresie nadrzędnym.  
+-   Jeśli zmienna jest określona przez nazwę zmiennej, śledzenie wygląda zmiennej w ramach bieżącego działania, które są śledzone i działania nadrzędnego. Zmienna jest przeszukiwany w bieżącym zakresie działania, a także w zakresie nadrzędnym.  
   
--   Jeśli zmienne, które mają zostać wyodrębnione są określane przy użyciu nazwy = "*", a następnie są wyodrębniane wszystkie zmienne w ramach bieżącego działania, które są śledzone. W takim przypadku zmienne znajdują się w zakresie ale zdefiniowany w obiekcie nadrzędnym, które nie są wyodrębniane działań.  
+-   Jeśli określono za pomocą nazwy zmiennych, które ma zostać wyodrębniony = "*", a następnie są wyodrębniane wszystkie zmienne w obrębie bieżącego działania, które są śledzone. W tym przypadku zmienne znajdują się w zakresie ale zdefiniowany w elemencie nadrzędnym, które nie zostały wyodrębnione działań.  
   
- Podczas wyodrębniania argumenty, argumenty wyodrębnione zależą od stanu działania. Gdy stan działania to Executing, następnie tylko `InArguments` są dostępne do wyodrębnienia. Wszystkie inne działania stanu (zamknięte, Faulted Canceled) wszystkie argumenty, zarówno InArguments i OutArguments, są dostępne do wyodrębnienia.  
+ Podczas wyodrębniania argumentów, argumenty wyodrębnione zależą od stanu działania. Jeśli stan działania jest wykonywanie, następnie tylko `InArguments` są dostępne do wyodrębnienia. Dla dowolnego innego działania stanu (zamknięte, Faulted anulowane) wszystkie argumenty InArguments i OutArguments, są dostępne do wyodrębnienia.  
   
- W poniższym przykładzie przedstawiono kwerendy stanu działania, która wyodrębnia zmiennych i argumenty podczas działania `Closed` śledzenia rekord jest emitowany. Argumenty i zmienne można wyodrębnić tylko z <xref:System.Activities.Tracking.ActivityStateRecord> i w związku z tym jest subskrybowana w ramach śledzenia profilowania za pomocą <xref:System.Activities.Tracking.ActivityStateQuery>.  
+ W poniższym przykładzie pokazano kwerendą stanu działania, który wyodrębnia zmienne i argumenty podczas działania `Closed` rekord śledzenia jest emitowane. Zmienne i argumenty wyodrębniania tylko z <xref:System.Activities.Tracking.ActivityStateRecord> i w związku z tym subskrybują w ramach śledzenia profilu przy użyciu <xref:System.Activities.Tracking.ActivityStateQuery>.  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -37,15 +37,15 @@ Podczas śledzenia wykonywanie przepływu pracy, często jest przydatne w celu w
 </activityStateQuery>  
 ```  
   
-## <a name="protecting-information-stored-within-variables-and-arguments"></a>Chroni dane przechowywane w zmiennych i argumenty  
- Śledzonych zmiennej lub argumentu jest domyślnie widoczne przez środowisko uruchomieniowe programu WF. Projektant przepływu pracy można chronić przed dostępem w następujący sposób:  
+## <a name="protecting-information-stored-within-variables-and-arguments"></a>Ochrona informacji przechowywanych w ramach zmienne i argumenty  
+ Śledzone zmiennej lub argumentu jest domyślnie widoczny przez środowisko uruchomieniowe programu WF. Projektant przepływu pracy można go chronić przed dostępem, wykonując następujące czynności:  
   
-1.  Wartość zmiennej szyfrowania.  
+1.  Szyfrowanie wartość zmiennej.  
   
-2.  Formant tworzenia profilu śledzenia, aby zapobiec wyodrębniania zmiennej lub argumentu.  
+2.  Formant tworzenia profilu śledzenia, aby uniknąć wyodrębniania zmiennej lub argumentu.  
   
-3.  Uczestników śledzenia niestandardowych upewnij się, że kodzie WF nie ujawnia poufne informacje, które są przechowywane w zmiennych lub argumentów.  
+3.  Dla uczestników śledzenia niestandardowego upewnij się, że kod WF nie ujawniają poufne informacje, które są przechowywane w zmiennych lub argumentów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Windows Server AppFabric monitorowania](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

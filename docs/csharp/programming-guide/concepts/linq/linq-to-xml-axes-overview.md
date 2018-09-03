@@ -2,17 +2,17 @@
 title: LINQ to XML — Przegląd osi (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: 0fe8766e3bcde17b59d78f0659043b8d4f017066
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 9b771e0157d1fcfbbb4643d24ccdbf096787f08b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961290"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486860"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML — Przegląd osi (C#)
 Po drzewa XML utworzone lub ładowany dokument XML do drzewa XML można tworzyć zapytania, do znajdowania elementów i atrybutów i pobierania ich wartości. Pobieranie kolekcji za pomocą *metody osi*, nazywane również *osi*. Niektóre z osi są metody <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> klasy, które zwraca <xref:System.Collections.Generic.IEnumerable%601> kolekcji. Niektóre z osi są metody rozszerzające w <xref:System.Xml.Linq.Extensions> klasy. Osi, które są implementowane jako metody rozszerzenia działają w kolekcjach, a następnie zwracają kolekcje.  
   
- Zgodnie z opisem w [Przegląd klasy XElement](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), <xref:System.Xml.Linq.XElement> obiekt reprezentuje węzeł pojedynczy element. Zawartość elementu może być złożonym procesem (czasami nazywany zawartość ze strukturą) lub może być prosty element. Prosty element może być pusta lub może zawierać wartość. Jeśli węzeł zawiera zawartość ze strukturą, można użyć różnych metod osi do pobrania wyliczenia elementów podrzędnych. Metody osi najczęściej używane są <xref:System.Xml.Linq.XContainer.Elements%2A> i <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+ Zgodnie z opisem w [Przegląd klasy XElement](https://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), <xref:System.Xml.Linq.XElement> obiekt reprezentuje węzeł pojedynczy element. Zawartość elementu może być złożonym procesem (czasami nazywany zawartość ze strukturą) lub może być prosty element. Prosty element może być pusta lub może zawierać wartość. Jeśli węzeł zawiera zawartość ze strukturą, można użyć różnych metod osi do pobrania wyliczenia elementów podrzędnych. Metody osi najczęściej używane są <xref:System.Xml.Linq.XContainer.Elements%2A> i <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
  Oprócz metody osi, które zwracają kolekcje, istnieją dwie metody więcej, które będzie najczęściej używany w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania. <xref:System.Xml.Linq.XContainer.Element%2A> Metoda zwraca pojedynczą <xref:System.Xml.Linq.XElement>. <xref:System.Xml.Linq.XElement.Attribute%2A> Metoda zwraca pojedynczą <xref:System.Xml.Linq.XAttribute>.  
   

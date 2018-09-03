@@ -4,30 +4,30 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 92eb7a79c0e7522d1474537aeefbfdb083a11dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d334459b0d530ec37925c98abfd061c04ce1290
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332042"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485654"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Porady: uzyskiwanie dostępu do elementu tablicy za pomocą wskaźnika (Przewodnik programowania w języku C#)
-W niebezpiecznym kontekście uzyskujesz dostęp elementu w pamięci przy użyciu wskaźnika elementu dostępu, jak pokazano w poniższym przykładzie:  
+W niebezpiecznym kontekście uzyskujesz dostęp elementu w pamięci, używając dostępu do elementu wskaźnika, jak pokazano w poniższym przykładzie:  
   
-```  
- char* charPointer = stackalloc char[123];  
+```csharp  
+char* charPointer = stackalloc char[123];  
 for (int i = 65; i < 123; i++)  
 {  
     charPointer[i] = (char)i; //access array elements  
 }  
 ```  
   
- Wyrażenia w nawiasach kwadratowych musi istnieć możliwość niejawnego przekonwertowania do `int`, `uint`, `long`, lub `ulong`. Operacja p [e] jest odpowiednikiem *(p+e). Podobnie jak C i C++, dostęp do elementu wskaźnik nie sprawdza liczbach błędy.  
+ Wyrażenie w nawiasach kwadratowych musi umożliwiać niejawną konwersję na `int`, `uint`, `long`, lub `ulong`. Operacja p [e] jest odpowiednikiem *(p+e). Podobnie jak C i C++, dostępu do elementu wskaźnik nie sprawdza obecności liczbach błędy.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie 123 lokalizacji pamięci są przydzielone do tablicy znaków, `charPointer`. Tablica jest używana do wyświetlania listy małe i wielkie litery w dwóch [dla](../../../csharp/language-reference/keywords/for.md) pętli.  
+ W tym przykładzie 123 lokalizacji pamięci są przydzielane do tablicy znaków `charPointer`. Tablica jest używana do wyświetlania małe litery i wielkie litery w dwóch [dla](../../../csharp/language-reference/keywords/for.md) pętli.  
   
- Zwróć uwagę, że wyrażenie `charPointer[i]` jest równoznaczne z wyrażeniem `*(charPointer + i)`, i można uzyskać ten sam rezultat przy użyciu jednej z dwóch wyrażeń.  
+ Należy zauważyć, że wyrażenie `charPointer[i]` jest równoważne wyrażeniu `*(charPointer + i)`, i ten sam efekt można uzyskać przy użyciu jednej z dwóch wyrażeń.  
   
  [!code-csharp[csProgGuidePointers#11](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-access-an-array-element-with-a-pointer_1.cs)]  
   

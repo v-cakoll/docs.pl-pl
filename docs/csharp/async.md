@@ -5,11 +5,11 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256043"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484970"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 

@@ -3,11 +3,11 @@ title: 'Porady: Tworzenie dokumentu z przestrzeniami nazw (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
 ms.openlocfilehash: 5937639fc48b82ee155450a3eaa1c7715ee3f9b9
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256729"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478029"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Porady: Tworzenie dokumentu z przestrzeniami nazw (C#) (LINQ to XML)
 W tym temacie przedstawiono sposób tworzenia dokumentów z przestrzeni nazw.  

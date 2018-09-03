@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
 ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331853"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487068"
 ---
 # <a name="value-types-c-reference"></a>Typy wartości (odwołanie w C#)
 Typy wartości obejmują dwie główne kategorie:  

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 88ae18b11a48fd8b9610032e913c97d4c15d1c21
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472415"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479841"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opcje kompilatora C# w rozbiciu na kategorie
 
-Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać alfabetyczną listę, zobacz [C# kompilatora opcje wymienione alfabetycznie](listed-alphabetically.md).
+Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać alfabetyczną listę, zobacz [C# kompilatora opcji na liście alfabetycznie](listed-alphabetically.md).
 
 ## <a name="optimization"></a>Optymalizacja
 
@@ -28,46 +28,46 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 
 |Opcja|Cel|
 |------------|-------------|
-|[-deterministic](deterministic-compiler-option.md)|Powoduje, że kompilator output zestawu, którego zawartość binarna jest identyczna w kompilacji, jeśli dane wejściowe są identyczne.|
-|[-doc](doc-compiler-option.md)|Określa plik XML, których komentarzy do dokumentacji przetworzonych do zapisania.|
+|[-deterministic](deterministic-compiler-option.md)|Powoduje, że kompilator do wyjściowego zestawu, którego zawartość binarna jest identyczna w kompilacjach, jeśli dane wejściowe są identyczne.|
+|[-doc](doc-compiler-option.md)|Określa plik XML, gdzie mają być zapisywane komentarzy dokumentacji przetworzone.|
 |[-out](out-compiler-option.md)|Określa plik wyjściowy.|
-|[-pathmap](pathmap-compiler-option.md)|Określone mapowanie dla danych wyjściowych nazwy ścieżki źródłowej przez kompilator|
-|[-pdb](pdb-compiler-option.md)|Określa nazwę pliku i lokalizację pliku PDB.|
-|[-platform](platform-compiler-option.md)|Określ platformę danych wyjściowych.|
+|[-pathmap](pathmap-compiler-option.md)|Określanie mapowania dla źródła danych wyjściowych z nazw ścieżki przez kompilator|
+|[-pdb](pdb-compiler-option.md)|Określa nazwę pliku i lokalizację pliku .pdb.|
+|[-platform](platform-compiler-option.md)|Określanie platformy wyjściowej.|
 |[-preferreduilang](preferreduilang-compiler-option.md)|Określanie języka danych wyjściowych kompilatora.|
-|[-refout](refout-compiler-option.md)|Wygeneruj zestaw odwołania, oprócz podstawowego zestawu.|
-|[-refonly](refonly-compiler-option.md)|Wygeneruj zestaw odwołania, a nie podstawowy zestaw.|
-|[-target](target-compiler-option.md)|Określa format pliku wyjściowego przy użyciu jednej z pięciu opcji: [-docelowych: appcontainerexe](target-appcontainerexe-compiler-option.md), [-docelowych: exe](target-exe-compiler-option.md), [— docelowa: Biblioteka](target-library-compiler-option.md), [-docelowych: moduł ](target-module-compiler-option.md), [-docelowych: winexe](target-winexe-compiler-option.md), lub [-docelowych: winmdobj](target-winmdobj-compiler-option.md).|
+|[-refout](refout-compiler-option.md)|Generowanie zestawu odwołania oprócz podstawowego zestawu.|
+|[-refonly](refonly-compiler-option.md)|Generowanie zestawu odwołania zamiast podstawowego zestawu.|
+|[-target](target-compiler-option.md)|Określa format pliku wyjściowego przy użyciu jednego z pięciu opcji: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: library](target-library-compiler-option.md), [-target: module ](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), lub [-target: winmdobj](target-winmdobj-compiler-option.md).|
 |-modulename:\<ciąg >|Określ nazwę modułu źródła|
 
-## <a name="net-framework-assemblies"></a>Zestawów platformy .NET framework
+## <a name="net-framework-assemblies"></a>Zestawy .NET framework
 
 |Opcja|Cel|
 |------------|-------------|
-|[-addmodule](addmodule-compiler-option.md)|Określa co najmniej jednego modułu należeć do tego zestawu.|
-|[-delaysign](delaysign-compiler-option.md)|Instruuje kompilator, aby dodać klucz publiczny, ale pozostawić zestawu bez znaku.|
+|[-addmodule](addmodule-compiler-option.md)|Określa jeden lub wiele modułów jako część tego zestawu.|
+|[-delaysign](delaysign-compiler-option.md)|Instruuje kompilator, Dodaj klucz publiczny, ale pozostawić zestawu bez znaku.|
 |[-keycontainer](keycontainer-compiler-option.md)|Określa nazwę kontenera kluczy kryptograficznych.|
 |[-keyfile](keyfile-compiler-option.md)|Określa nazwę pliku zawierającego klucz kryptograficzny.|
-|[-lib](lib-compiler-option.md)|Określa lokalizację zestawy, do których odwołuje się za pomocą klasy [— odwołanie](reference-compiler-option.md).|
-|[-nostdlib](nostdlib-compiler-option.md)|Instruuje kompilator, aby nie Importuj biblioteki standardowej (mscorlib.dll).|
-|[-publicsign](publicsign-compiler-option.md)|Zastosuj klucz publiczny bez podpisywania zestawu, ale ustawiony bit w zestawie wskazujący, że zestaw jest podpisany.|
+|[-lib](lib-compiler-option.md)|Określa lokalizację zestawów, do których odwołuje się poprzez [— dokumentacja](reference-compiler-option.md).|
+|[-nostdlib](nostdlib-compiler-option.md)|Instruuje kompilator, aby nie importuje biblioteki standardowej (mscorlib.dll).|
+|[-publicsign](publicsign-compiler-option.md)|Zastosuj klucz publiczny bez podpisywania zestawu, ale ustawiony bit w zestawie, wskazujący, że zestaw jest podpisany.|
 |[-reference](reference-compiler-option.md)|Importuje metadane z pliku, który zawiera zestaw.|
-|-analyzer|Uruchom analizatorów z tego zestawu (krótka wersja: /)|
-|-additionalfile|Nazwy dodatkowych plików bezpośrednio nie wpływają na generowanie kodu, które mogą być używane przez analizatory do produkcji błędy lub ostrzeżenia.|
+|-analyzer|Uruchom analizatorów z tego zestawu (skrócona forma: /)|
+|-additionalfile|Nazwy dodatkowe pliki, bezpośrednio nie wpływa na generowanie kodu, które mogą być używane przez analizatory do produkcji, błędy lub ostrzeżenia.|
 
 ## <a name="debuggingerror-checking"></a>Sprawdzanie Debugowanie błędów
 
 |Opcja|Cel|
 |------------|-------------|
-|[-bugreport](bugreport-compiler-option.md)|Tworzy plik zawierający informacje, które ułatwia zgłosić usterkę.|
-|[-checked](checked-compiler-option.md)|Określa, czy liczba całkowita arytmetyczne, który przepełnienie granic o typie danych spowoduje, że wystąpił wyjątek w czasie wykonywania.|
-|[-debug](debug-compiler-option.md)|Poinstruuj kompilator Emituj informacje debugowania.|
-|[-errorreport](errorreport-compiler-option.md)|Ustawia zachowanie raportowania błędów.|
-|[-fullpaths](fullpaths-compiler-option.md)|Określa bezwzględną ścieżkę do pliku w danych wyjściowych kompilatora.|
+|[-bugreport](bugreport-compiler-option.md)|Tworzy plik, który zawiera informacje, które można łatwo Zgłoś usterkę.|
+|[-checked](checked-compiler-option.md)|Określa, czy liczba całkowita arytmetyczny, który przepełnienie granic o typie danych spowoduje, że wyjątek w czasie wykonywania.|
+|[-debug](debug-compiler-option.md)|Poinstruować kompilator, aby wyemitować informacji debugowania.|
+|[-errorreport](errorreport-compiler-option.md)|Ustawienie zachowania raportowania błędów.|
+|[-fullpaths](fullpaths-compiler-option.md)|Określa ścieżkę bezwzględną do pliku w danych wyjściowych kompilatora.|
 |[-nowarn](nowarn-compiler-option.md)|Pomija generację określonych ostrzeżeń kompilatora.|
 |[-warn](warn-compiler-option.md)|Ustawia poziom ostrzeżeń.|
-|[-warnaserror](warnaserror-compiler-option.md)|Zamienia ostrzeżenia błędy.|
-|zestaw reguł-:\<pliku >|Określ plik zestaw reguł, który powoduje wyłączenie diagnostyczne zależne.|
+|[-warnaserror](warnaserror-compiler-option.md)|Podwyższa poziom ostrzeżeń do błędów.|
+|-zestaw reguł:\<pliku >|Określ plik zestawu reguł, który wyłącza działania diagnostyczne zależne.|
 
 ## <a name="preprocessor"></a>Preprocesor
 
@@ -75,15 +75,15 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 |------------|-------------|
 |[-define](define-compiler-option.md)|Definiuje symbole preprocesora.|
 
-## <a name="resources"></a>Zasoby
+## <a name="resources"></a>Resources
 
 |Opcja|Cel|
 |------------|-------------|
-|[-link](link-compiler-option.md)|Udostępnia informacje o typie modelu COM w określonych zestawów do projektu.|
-|[-linkresource](linkresource-compiler-option.md)|Tworzy łącze do zasobów zarządzanych.|
-|[-resource](resource-compiler-option.md)|Osadza zasobu .NET Framework do pliku wyjściowego.|
+|[-link](link-compiler-option.md)|Udostępnia informacje o typie modelu COM w określonych zestawach do projektu.|
+|[-linkresource](linkresource-compiler-option.md)|Tworzy łącze do zarządzanego zasobem.|
+|[-resource](resource-compiler-option.md)|Osadza zasób .NET Framework do pliku wyjściowego.|
 |[-win32icon](win32icon-compiler-option.md)|Określa plik .ico, aby wstawić do pliku wyjściowego.|
-|[-win32res](win32res-compiler-option.md)|Określa zasób Win32 do wstawienia do pliku wyjściowego.|
+|[-win32res](win32res-compiler-option.md)|Określa zasób Win32, aby wstawić do pliku wyjściowego.|
 
 ## <a name="miscellaneous"></a>Różne
 
@@ -92,19 +92,19 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 |[@](response-file-compiler-option.md)|Określa plik odpowiedzi.|
 |[-?](help-compiler-option.md)|Wyświetla listę opcji kompilatora stdout.|
 |[-baseaddress](baseaddress-compiler-option.md)|Określa preferowany adres podstawowy, w którym można załadować biblioteki DLL.|
-|[-codepage](codepage-compiler-option.md)|Określa stronę kodową do używania wszystkich plików kodu źródłowego w kompilacji.|
+|[-codepage](codepage-compiler-option.md)|Określa stronę kodową do użycia dla wszystkich plikach kodu źródłowego w kompilacji.|
 |[-help](help-compiler-option.md)|Wyświetla listę opcji kompilatora stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Określa, że plik wykonywalny obsługuje randomizacji układu przestrzeni adresowej (ASLR).|
-|[-langversion](langversion-compiler-option.md)|Określ wersję językową: domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 lub najnowsze |
+|[-langversion](langversion-compiler-option.md)|Określ wersję języka: domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 lub najnowsze |
 |[-main](main-compiler-option.md)|Określa lokalizację **Main** metody.|
-|[-noconfig](noconfig-compiler-option.md)|Instruuje kompilator, aby nie kompilacji z csc.rsp.|
-|[-nologo](nologo-compiler-option.md)|Pomija informacje transparentu kompilatora.|
-|[-recurse](recurse-compiler-option.md)|Podkatalogi wyszukiwania dla plików źródłowych do skompilowania.|
-|[-subsystemversion](subsystemversion-compiler-option.md)|Określa minimalną wersję podsystemu, który można użyć pliku wykonywalnego.|
-|[-unsafe](unsafe-compiler-option.md)|Włącza kompilację kodu korzystającego z [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe.|
-|[-utf8output](utf8output-compiler-option.md)|Wyświetla kompilatora, dane wyjściowe przy użyciu kodowania UTF-8.|
-|-równoległe [+&#124;—]|Określa, czy używać współbieżnych kompilacji (+).|
-|-checksumalgorithm:\<alg >|Określ algorytm oblicza sumę kontrolną pliku źródłowego, przechowywane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (ustawienie domyślne) lub SHA256.|
+|[-noconfig](noconfig-compiler-option.md)|Instruuje kompilator, nie można skompilować przy użyciu csc.rsp.|
+|[-nologo](nologo-compiler-option.md)|Pomija informacji o transparencie kompilatora.|
+|[-recurse](recurse-compiler-option.md)|Podkatalogi wyszukiwania dla plików źródłowych do kompilowania.|
+|[-subsystemversion](subsystemversion-compiler-option.md)|Określa minimalną wersję podsystemu, którego można użyć pliku wykonywalnego.|
+|[-unsafe](unsafe-compiler-option.md)|Włącza kompilację kodu, który używa [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe.|
+|[-utf8output](utf8output-compiler-option.md)|Kompilator wyświetla dane wyjściowe przy użyciu kodowania UTF-8.|
+|-równoległe [+&#124;-]|Określa, czy używać współbieżną kompilację (+).|
+|-checksumalgorithm:\<algorytmu podpisu >|Określić algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (domyślna) lub SHA256.|
 
 ## <a name="obsolete-options"></a>Opcje przestarzałe
 
@@ -114,6 +114,6 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 
 ## <a name="see-also"></a>Zobacz też
 
- [Opcje kompilatora C#](index.md)  
- [Opcje kompilatora C# w porządku alfabetycznym](listed-alphabetically.md)  
- [Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Opcje kompilatora C#](index.md)  
+- [Opcje kompilatora C# w porządku alfabetycznym](listed-alphabetically.md)  
+- [Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

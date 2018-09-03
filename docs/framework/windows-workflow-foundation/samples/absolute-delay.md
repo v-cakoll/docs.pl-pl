@@ -2,71 +2,71 @@
 title: Opóźnienie bezwzględne
 ms.date: 03/30/2017
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-ms.openlocfilehash: 3a104f6b879e9cdc899bad2201ad1ed320a38a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30719a4340b738a7462584c4dca00f6d5d90ac72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518388"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486105"
 ---
 # <a name="absolute-delay"></a>Opóźnienie bezwzględne
-Główne scenariusz dla tego przykładu jest opóźnienia do określonej <xref:System.DateTime> przy użyciu czasomierze trwałe w aplikacji przepływu pracy. To jest inny niż przy użyciu wbudowanych <xref:System.Activities.Statements.Delay> działania, jak to tylko umożliwi to opóźnienie dla danego <xref:System.TimeSpan> (lub liczba minut i sekund).  
+Główne scenariusz, w tym przykładzie jest opóźnienie do określonego <xref:System.DateTime> pomocą timerów trwałe w aplikacji przepływu pracy. To różni się od przy użyciu wbudowanych <xref:System.Activities.Statements.Delay> działania, ponieważ tylko umożliwi opóźnienia, zanim danego <xref:System.TimeSpan> (lub liczba minut i sekund).  
   
- Niektóre scenariusze rzeczywistych, w których warto utworzyć tę różnicę, są następujące:  
+ Niektóre rzeczywistych scenariuszy, w których warto takiego rozróżnienia, obejmują następujące elementy:  
   
-1.  Chcesz Opóźnij wysyłanie wiadomości przez 30 sekund, upewnij się, że wszystkie błędy nie zostały wprowadzone.  
+1.  Chcesz Opóźnij wysyłanie wiadomości przez 30 sekund upewnić się, że zostało zgłoszone przez Ciebie wszelkie błędy.  
   
-2.  Czy działa zbyt długo i opóźnić wszystkie Twoje wysyła pocztę do normalnego godzinami pracy (na przykład 8 am).  
+2.  Jesteś przeciążonego i ma być opóźnienie wszystkie swoje wiadomości e-mail do normalnego godzinach (na przykład 8: 00).  
   
 ## <a name="demonstrates"></a>Demonstracje  
   
-1.  <xref:System.Activities.Statements.DurableTimerExtension> Bezwzględny opóźnienie wykonywania  
+1.  <xref:System.Activities.Statements.DurableTimerExtension> implementowania opóźnienie bezwzględne  
   
-2.  Konfigurowanie przy użyciu trwałości <xref:System.Activities.WorkflowApplication> dla trwałego czasomierze  
+2.  Konfigurowanie trwałości za pomocą <xref:System.Activities.WorkflowApplication> dla trwałego czasomierzy  
   
-3.  Użycie <xref:System.Activities.NativeActivity%601> z punktów rozszerzalności  
+3.  Korzystanie z <xref:System.Activities.NativeActivity%601> z punktów rozszerzeń  
   
-4.  Użycie <xref:System.Activities.CodeActivity%601> w działaniu SendEmail  
+4.  Korzystanie z <xref:System.Activities.CodeActivity%601> w działaniu SendEmail  
   
 5.  <xref:System.Activities.Statements.Delay>  
   
 6.  Tylko do XAML przepływu pracy  
   
- Ten przykład przedstawia sposób tworzenia działań niestandardowych, który przyjmuje <xref:System.DateTime> i używa czasomierze trwałe, aby zarejestrować czas trwania opóźnienia. Korzystając z czasomierze trwałe, należy użyć <xref:System.Activities.NativeActivity> utworzyć zakładki, ponieważ będzie on potrzebny do zarejestrowania tego zakładki z rozszerzeniem czasomierza. W tym przykładzie, po wygaśnięciu czasomierza trwałe `OnTimerExpired` metoda zostanie wywołana. Upewnij się, że dodawania rozszerzenia czasomierza <xref:System.Activities.NativeActivity%601.CacheMetadata%2A> zdarzenia w celu zapewnienia udostępniasz środowiska uruchomieniowego z tymi informacjami. Tylko innych implementacji szczegółów jest należy wdrożyć logikę do przekonwertowania z <xref:System.DateTime> do <xref:System.TimeSpan>, ponieważ czasomierze trwałe tylko <xref:System.DateTime>. Należy pamiętać, że małych wygasną dokładności za pomocą ćwiczeń  
+ W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, które pobiera <xref:System.DateTime> i używa czasomierzy trwałe, aby zarejestrować czas trwania opóźnienia. Korzystając z czasomierzy trwałe, należy użyć <xref:System.Activities.NativeActivity> utworzyć zakładki, ponieważ będzie potrzebny do zarejestrowania tego zakładki z rozszerzeniem czasomierza. W tym przykładzie, po upływie okresu działania czasomierza trwałe `OnTimerExpired` metoda zostanie wywołana. Upewnij się, którego dodajesz rozszerzenie czasomierza w <xref:System.Activities.NativeActivity%601.CacheMetadata%2A> zdarzenie, aby upewnić się, udostępniasz środowisko uruchomieniowe z tymi informacjami. Tylko inne szczegółowo opisuje implementacja jest, musisz zaimplementować logikę do konwersji z <xref:System.DateTime> do <xref:System.TimeSpan>, ponieważ czasomierze trwałe tylko <xref:System.DateTime>. Należy pamiętać, że wygaśnięcie małych dokładność wykonując  
   
 > [!NOTE]
->  Brak małych utratę dokładności poprzez konwersję z <xref:System.DateTime> do <xref:System.TimeSpan>.  
+>  Istnieje mały utratą dokładności przez konwersję z <xref:System.DateTime> do <xref:System.TimeSpan>.  
   
- W tym przykładzie również pokazano, jak włączyć trwałości dla <xref:System.Activities.WorkflowApplication>. Dla tego konkretnego przykładu użyjemy czasomierze trwałe, w których dane przepływu pracy zostanie usunięty w bazie danych trwałości w czasie bezczynności podczas oczekiwania na czasomierz wygaśnie. Ta implementacja można również dla innych akcji trwałości. W tym przykładzie pokazano, jak skonfigurować trwałości parametry połączenia z programem SQL Server oraz sposobu tworzenia w magazynie wystąpień w celu utrwalenia danych dla wystąpienia przepływu pracy. Logika znajduje się na temat sposobu wznowienie działania przepływu pracy, gdy zdarzenie jest zgłaszane, co sprawia, że wystąpienie przepływu pracy do uruchomienia.  
+ Ten przykład pokazuje również, jak włączanie stanów trwałych dla <xref:System.Activities.WorkflowApplication>. Dla tego konkretnego przykładu użyjemy czasomierzy trwałe, w których danych przepływu pracy zostanie usunięty w bazie danych trwałości w czasie bezczynności podczas oczekiwania na czasomierz wygaśnie. Ta implementacja można również dla innych akcji trwałości. Niniejszy przykład pokazuje, jak skonfigurować stan trwały parametry połączenia z programem SQL Server oraz sposób tworzenia magazynu wystąpienia w celu utrwalenia danych dla wystąpienia przepływu pracy. Logika znajduje się na temat sposobu wznowić przepływ pracy, gdy zdarzenie jest zgłaszane, co sprawia, że wystąpienie przepływu pracy jest możliwy do uruchomienia.  
   
- Podczas wykonywania kroków za pomocą tego przykładu, pojawi się, że czas, w którym wbudowane opóźnienie rozpoczyna się i zakończeniu, który z kolei spowoduje wysłanie wiadomości e-mail. Z tego miejsca, działanie AbsoluteDelay spowoduje zatrzymanie do określonej <xref:System.DateTime> (lub 0 sekund, jeśli <xref:System.DateTime> wygasł) który z kolei spowoduje wysłanie wiadomości e-mail po wygaśnięciu. Wyświetli dwóch różnych zastosowań wbudowanych <xref:System.Activities.Statements.Delay> funkcjonalność w porównaniu z użyciem działania AbsoluteDelay.  
+ Podczas wykonywania kroków za pośrednictwem tego przykładu, zobaczysz, że czas, w którym wbudowane opóźnienie rozpoczyna się i kończy, który z kolei spowoduje, że wiadomość e-mail do wysłania. W efekcie działania AbsoluteDelay zatrzyma się aż do określonej <xref:System.DateTime> (lub 0 (w sekundach) Jeśli <xref:System.DateTime> wygasła) co z kolei spowoduje wysłanie wiadomość e-mail po upływie. Spowoduje to wyświetlenie dwóch różnych zastosowań wbudowanych <xref:System.Activities.Statements.Delay> funkcjonalność w porównaniu z użyciem AbsoluteDelay działania.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że program SQL Server Express (lub nowszej) zainstalowane na tym komputerze  
+1.  Upewnij się, że program SQL Server Express (lub nowszy) zainstalowane na tym komputerze  
   
-2.  Uruchom setup.cmd (z WF/Basic/Services/AbsoluteDelay/CS) [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] wiersza polecenia, aby utworzyć bazę danych AbsoluteDelaySampleDB, tworzony jest schemat trwałości i tworzenia logiki trwałości.  
+2.  Uruchom plik setup.cmd (z programu WF/Basic/Services/AbsoluteDelay/CS) [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] wiersza polecenia, aby utworzyć bazę danych AbsoluteDelaySampleDB, tworzony jest schemat trwałości i tworzenie logiki trwałości.  
   
 3.  Otwórz rozwiązanie w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-4.  Określ czas trwania w działaniu Delay.  
+4.  Określ czas trwania w działaniu opóźnienia.  
   
-5.  Określ ExpirationTime w działaniu AbsoluteDelay.  
+5.  Określ czas wygaśnięcia w działaniu AbsoluteDelay.  
   
-6.  Zaktualizuj pola SendMailTo, SendMailFrom SendMailSubject, SendMailBody i SmtpHost w działaniu SendMail.  
+6.  Zaktualizuj pola SendMailTo, SendMailFrom, SendMailSubject, SendMailBody i SmtpHost w działaniu SendMail.  
   
     > [!NOTE]
-    >  Jeśli nie podasz prawidłowego hosta SMTP aplikacji spowoduje zgłoszenie wyjątku SMTP.  
+    >  Jeśli nie zostanie wprowadzony nieprawidłowy host SMTP, aplikacji spowoduje zgłoszenie wyjątku SMTP.  
   
 7.  Skompiluj rozwiązanie, wybierając **kompilacji**, **Kompiluj rozwiązanie**.  
   
 8.  Uruchom rozwiązanie, naciskając klawisz **F5**.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

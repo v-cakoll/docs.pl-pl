@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 0b83369a00cdd21b64c53834a7f6e7bcea09a26a
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258566"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482925"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aby uwidocznić dane jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje formaty Atom i JavaScript Object Notation (JSON) dla źródła danych. Gdy używasz źródła danych, Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zapewnia standardową metodę do serializowania danych, takich jak jednostek i relacji w formacie XML, które mogą być zawarte w treści komunikatu HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Definiuje mapowanie właściwości jednostki domyślne między danych, które znajduje się w jednostkach i elementów Atom. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](http://go.microsoft.com/fwlink/?LinkID=185794).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aby uwidocznić dane jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje formaty Atom i JavaScript Object Notation (JSON) dla źródła danych. Gdy używasz źródła danych, Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zapewnia standardową metodę do serializowania danych, takich jak jednostek i relacji w formacie XML, które mogą być zawarte w treści komunikatu HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Definiuje mapowanie właściwości jednostki domyślne między danych, które znajduje się w jednostkach i elementów Atom. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
   
  Może być scenariusz aplikacji, która wymaga, że danych właściwości zwracane przez usługę danych można serializować w sposób dostosowany, a nie w standardzie format źródła. Za pomocą [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], można dostosować serializacji w danych kanału informacyjnego, tak, aby właściwości jednostki mogą być mapowane do nieużywanych elementów i atrybutów wpisu lub elementy niestandardowe wpisu w źródle danych.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "43258566"
 >  Podczas definiowania niestandardowego źródła danych musi zagwarantować, że wszystkie właściwości jednostki, które mają niestandardowe mapowania zdefiniowane są uwzględniane w projekcji. Gdy właściwość zamapowanego jednostki nie jest uwzględniony w projekcji, może dojść do utraty danych. Aby uzyskać więcej informacji, zobacz [projekcje zapytania](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Dostosowywanie źródła danych za pomocą dostawcy programu Entity Framework  
- Model danych używany z [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy jest reprezentowana jako kod XML w pliku edmx. W tym przypadku atrybutów, które definiują niestandardowego źródła danych są dodawane do `EntityType` i `Property` elementy, które reprezentują typy jednostek i właściwości w modelu danych. Te atrybuty Dostosowywanie źródła danych nie są zdefiniowane w [ \[MC CSDL\]: koncepcyjny formatu pliku definicji schematu](http://go.microsoft.com/fwlink/?LinkId=159072), czyli format, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] używa dostawcy w celu zdefiniowania modelu danych. W związku z tym, należy zadeklarować atrybutów dostosowywania kanału informacyjnego w przestrzeni nazw określonego schematu, która jest zdefiniowana jako `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Poniższy fragment XML zawiera atrybuty kanału informacyjnego dostosowania stosowane do `Property` elementy `Products` typu jednostki, które definiują `ProductName`, `ReorderLevel`, i `UnitsInStock` właściwości.  
+ Model danych używany z [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy jest reprezentowana jako kod XML w pliku edmx. W tym przypadku atrybutów, które definiują niestandardowego źródła danych są dodawane do `EntityType` i `Property` elementy, które reprezentują typy jednostek i właściwości w modelu danych. Te atrybuty Dostosowywanie źródła danych nie są zdefiniowane w [ \[MC CSDL\]: koncepcyjny formatu pliku definicji schematu](https://go.microsoft.com/fwlink/?LinkId=159072), czyli format, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] używa dostawcy w celu zdefiniowania modelu danych. W związku z tym, należy zadeklarować atrybutów dostosowywania kanału informacyjnego w przestrzeni nazw określonego schematu, która jest zdefiniowana jako `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Poniższy fragment XML zawiera atrybuty kanału informacyjnego dostosowania stosowane do `Property` elementy `Products` typu jednostki, które definiują `ProductName`, `ReorderLevel`, i `UnitsInStock` właściwości.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "43258566"
  Aby uzyskać więcej informacji, zobacz [porady: Dostosowywanie źródła danych przy użyciu dostawcy programu Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Ponieważ rozszerzenia do modelu danych nie są obsługiwane przez Projektanta obiektów, należy ręcznie zmodyfikować plik XML, który zawiera model danych. Aby uzyskać więcej informacji o plik edmx, który jest generowany przez [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] narzędzia, zobacz [Omówienie pliku edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Ponieważ rozszerzenia do modelu danych nie są obsługiwane przez Projektanta obiektów, należy ręcznie zmodyfikować plik XML, który zawiera model danych. Aby uzyskać więcej informacji o plik edmx, który jest generowany przez [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] narzędzia, zobacz [Omówienie pliku edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
   
 ### <a name="custom-feed-attributes"></a>Atrybuty źródła niestandardowego  
  W poniższej tabeli przedstawiono atrybuty XML, które Dostosowywanie źródła danych, które można dodać do język definicji schematu koncepcyjnego (CSDL), który definiuje model danych. Te atrybuty są odpowiednikiem właściwości <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> używany przy użyciu dostawcy odbicia.  

@@ -1,6 +1,6 @@
 ---
 title: Usuwanie funkcji (niezarządzany wykaz interfejsów API)
-description: Funkcja usuwania usuwa określonej właściwości i wszystkie jego kwalifikatory z definicji klasy modelu wspólnych informacji.
+description: Funkcja usuwania usuwa określonej właściwości i wszystkich jego kwalifikatory z definicji klasy modelu wspólnych informacji.
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460246"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479867"
 ---
-# <a name="delete-function"></a>Usuń — funkcja
-Usuwa określonej właściwości i wszystkie jego kwalifikatory z definicji klasy modelu wspólnych informacji.
+# <a name="delete-function"></a>Usuwanie funkcji
+Usuwa określoną właściwość i wszystkich jego kwalifikatory z definicji klasy modelu wspólnych informacji.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,17 +41,17 @@ HRESULT Delete (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `wszName`  
-[in] Nazwa właściwości do usunięcia. `wszName` musi być wskaźnikiem do prawidłowej `LPCWSTR`.
+[in] Nazwa właściwości do usunięcia. `wszName` musi być wskaźnikiem do prawidłowego `LPCWSTR`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -60,14 +60,14 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszzName` jest nieprawidłowy. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Określona właściwość nie istnieje. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci do ukończenia tej operacji. |
-| `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | Właściwość jest dziedziczona z klasy podstawowej. |
+| `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | Właściwość jest dziedziczona z klasy bazowej. |
 | `WBEM_E_SYSTEM_PROPERTY` | | Właściwość jest właściwością systemu. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | Funkcja usunąć zastąpienie wartości domyślne dla bieżącej klasy. Wartość domyślna tej właściwości w klasie nadrzędnej została reactiviated. | 
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | Funkcja usunięte wartość domyślną zastępowania bieżącej klasy. Wartość domyślna tej właściwości w klasie nadrzędnej została reactiviated. | 
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::Delete](https://msdn.microsoft.com/library/aa391438(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) metody.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -77,4 +77,4 @@ Ta funkcja jest zawijana wywołanie [IWbemClassObject::Delete](https://msdn.micr
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

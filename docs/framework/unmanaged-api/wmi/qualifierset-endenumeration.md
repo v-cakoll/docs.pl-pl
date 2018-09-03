@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e24acdde486f377cc9187aac088ce7a611cd4eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbf47dbfddac7d48b78c9d52969de1ef03385c15
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460753"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486821"
 ---
-# <a name="qualifiersetendenumeration-function"></a>Funkcja QualifierSet_EndEnumeration
-Kończy wyliczenie uruchomione za pomocą wywołania [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) funkcji.  
+# <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration — funkcja
+Kończy wyliczenie uruchomione z wywołaniem [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) funkcji.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -40,14 +40,14 @@ HRESULT QualifierSet_EndEnumeration (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`   
-[in] Wskaźnik do [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) wystąpienia.
+[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następującą wartość zwracana przez tę funkcję jest zdefiniowany w *WbemCli.h* pliku nagłówka, lub można zdefiniować ją jako stała w kodzie:
+Następującą wartość zwrócona przez tę funkcję jest zdefiniowany w *WbemCli.h* pliku nagłówka, lub można zdefiniować ją jako stała w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -55,9 +55,9 @@ Następującą wartość zwracana przez tę funkcję jest zdefiniowany w *WbemCl
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) metody.
 
-To wywołanie jest zalecane, ale nie jest wymagane. Natychmiast zwalnia zasoby skojarzone z wyliczenia.
+To wywołanie jest zalecane, ale nie jest wymagane. Go natychmiast zwalnia zasoby skojarzone z wyliczenia.
 
 ## <a name="requirements"></a>Wymagania  
 
@@ -68,4 +68,4 @@ To wywołanie jest zalecane, ale nie jest wymagane. Natychmiast zwalnia zasoby s
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932967"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482707"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;obejmują&gt; (Visual Basic)
 Odnosi się do innego pliku, który opisuje typy i elementy członkowskie w kodzie źródłowym.  

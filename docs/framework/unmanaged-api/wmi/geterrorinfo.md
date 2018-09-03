@@ -1,6 +1,6 @@
 ---
-title: GetErrorInfo — funkcja (niezarządzany wykaz interfejsów API)
-description: Funkcja GetErrorInfo pobiera informacje o błędzie z poprzedniego wywołania funkcji.
+title: Geterrorinfo — funkcja (niezarządzany wykaz interfejsów API)
+description: Funkcja geterrorinfo — pobiera informacje o błędzie z poprzedniego wywołania funkcji.
 ms.date: 11/06/2017
 api_name:
 - GetErrorInfo
@@ -16,38 +16,38 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef52a4e503597e08eae407571f02bf63adafc4e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f25777402fa31e72cbbf36f58a6c4cc65542979
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455961"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482239"
 ---
-# <a name="geterrorinfo-function"></a><span data-ttu-id="193ea-103">GetErrorInfo — funkcja</span><span class="sxs-lookup"><span data-stu-id="193ea-103">GetErrorInfo function</span></span>
-<span data-ttu-id="193ea-104">Pobiera informacje o błędzie z poprzedniego wywołania funkcji.</span><span class="sxs-lookup"><span data-stu-id="193ea-104">Retrieves error information from the previous function call.</span></span>  
+# <a name="geterrorinfo-function"></a><span data-ttu-id="1a917-103">Geterrorinfo — funkcja</span><span class="sxs-lookup"><span data-stu-id="1a917-103">GetErrorInfo function</span></span>
+<span data-ttu-id="1a917-104">Pobiera informacje o błędzie z poprzedniego wywołania funkcji.</span><span class="sxs-lookup"><span data-stu-id="1a917-104">Retrieves error information from the previous function call.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="193ea-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="193ea-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a917-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="1a917-105">Syntax</span></span>  
   
 ```  
 IErrorInfo* GetErrorInfo(); 
 ```  
 
-## <a name="return-value"></a><span data-ttu-id="193ea-106">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="193ea-106">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="1a917-106">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="1a917-106">Return value</span></span>
 
-<span data-ttu-id="193ea-107">Wskaźnik do [IErrorInfo](https://msdn.microsoft.com/library/windows/desktop/ms221233(v=vs.85).aspx) obiektu, jeśli wywołanie funkcji zakończy się pomyślnie, lub `null` w przypadku niepowodzenia.</span><span class="sxs-lookup"><span data-stu-id="193ea-107">An pointer to an [IErrorInfo](https://msdn.microsoft.com/library/windows/desktop/ms221233(v=vs.85).aspx) object if the function call succeeds, or `null` if it fails.</span></span>
+<span data-ttu-id="1a917-107">Wskaźnik do [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) obiektu, jeśli wywołanie funkcji zakończy się pomyślnie, lub `null` Jeśli zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="1a917-107">An pointer to an [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) object if the function call succeeds, or `null` if it fails.</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="193ea-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="193ea-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1a917-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1a917-108">Remarks</span></span>
 
-<span data-ttu-id="193ea-109">Ta funkcja jest zawijana wywołanie [IComThreadingInfo::GetErrorInfo](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) metody.</span><span class="sxs-lookup"><span data-stu-id="193ea-109">This function wraps a call to the [IComThreadingInfo::GetErrorInfo](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="1a917-109">Ta funkcja zawija wywołanie do [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) metody.</span><span class="sxs-lookup"><span data-stu-id="1a917-109">This function wraps a call to the [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="193ea-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="193ea-110">Requirements</span></span>  
- <span data-ttu-id="193ea-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="193ea-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1a917-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1a917-110">Requirements</span></span>  
+ <span data-ttu-id="1a917-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1a917-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="193ea-112">**Nagłówek:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="193ea-112">**Header:** WMINet_Utils.def</span></span>  
+ <span data-ttu-id="1a917-112">**Nagłówek:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="1a917-112">**Header:** WMINet_Utils.def</span></span>  
   
- <span data-ttu-id="193ea-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="193ea-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="1a917-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="1a917-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="193ea-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="193ea-114">See also</span></span>  
-[<span data-ttu-id="193ea-115">Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI</span><span class="sxs-lookup"><span data-stu-id="193ea-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="1a917-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1a917-114">See also</span></span>  
+[<span data-ttu-id="1a917-115">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="1a917-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

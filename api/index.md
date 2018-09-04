@@ -16,4 +16,4 @@ ms.locfileid: "34728709"
 ---
 # <a name="net-api-browser"></a>Przeglądarka interfejsów API na platformie .NET
 
-Witamy w przeglądarce interfejsów API .NET — Twoim punkcie kompleksowej obsługi dla wszystkich API opartych na .NET firmy Microsoft. Rozpocznij wyszukiwanie dowolnych zarządzanych interfejsów API, wpisując polecenie w polu poniżej. Możesz dowiedzieć się więcej o przeglądarce interfejsów API [na naszym blogu](https://aka.ms/apibrowser). Jeśli masz jakieś uwagi, utwórz nowy problem w [repozytorium MicrosoftDocs/feedback w serwisie GitHub](https://github.com/MicrosoftDocs/feedback/issues). 
+Witamy w przeglądarce interfejsów API platformy .NET — znajdziesz tu w jednym miejscu wszystkie interfejsy API firmy Microsoft oparte na platformie .NET. Rozpocznij wyszukiwanie dowolnych zarządzanych interfejsów API, wpisując zapytanie w polu poniżej. Aby dowiedzieć się więcej o przeglądarce interfejsów API, odwiedź [nasz blog](https://aka.ms/apibrowser). Jeśli masz jakieś uwagi, utwórz nowy problem w [repozytorium MicrosoftDocs/feedback w serwisie GitHub](https://github.com/MicrosoftDocs/feedback/issues).  

@@ -6,26 +6,26 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 43ac92cefe717b4bfa64969839b289e944980b7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a299ba0bfb2d6f49b449e2f1e567a06d09da49e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591888"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500020"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Wskazówki: filtrowanie danych wyjściowych My.Application.Log (Visual Basic)
-W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania `My.Application.Log` obiekt, aby kontrolować, jakie informacje są przekazywane z `Log` obiektu odbiorniki i jakie informacje są zapisywane przez odbiorniki. Zachowanie rejestrowania można zmienić nawet po tworzenia aplikacji, ponieważ informacje o konfiguracji są przechowywane w pliku konfiguracji aplikacji.  
+W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.Application.Log` obiektu, aby kontrolować, jakie informacje są przekazywane z `Log` obiekt do odbiorników i jakie informacje są zapisywane przez odbiorniki. Możesz zmienić sposób rejestrowania, nawet po zakończeniu tworzenia aplikacji, ponieważ informacje o konfiguracji są przechowywane w pliku konfiguracji aplikacji.  
   
 ## <a name="getting-started"></a>Wprowadzenie  
- Każdy komunikat, który `My.Application.Log` zapisy ma poziom ważności skojarzony, w których mechanizmy filtrowania umożliwia sterowanie wpisu w dzienniku. Ta przykładowa aplikacja korzysta `My.Application.Log` metod można zapisać kilka komunikaty dziennika z różne poziomy ważności.  
+ Każdy komunikat, który `My.Application.Log` zapisów ma poziom ważności skojarzone, który mechanizmy filtrowania użyć, aby kontrolować dane wyjściowe dziennika. Ta przykładowa aplikacja używa `My.Application.Log` metod można zapisać kilka rejestrowania komunikatów za pomocą różne poziomy ważności.  
   
 #### <a name="to-build-the-sample-application"></a>Do tworzenia przykładowej aplikacji  
   
-1.  Otwórz nowy projekt aplikacji systemu Windows w języku Visual Basic.  
+1.  Otwórz nowy projekt aplikacji Windows Visual Basic.  
   
-2.  Dodawanie przycisku o nazwie Button1 do Form1.  
+2.  Dodaj przycisk o nazwie Button1 do formularza Form1.  
   
-3.  W <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń dla Button1, Dodaj następujący kod:  
+3.  W <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń dla Button1, Dodaj następujący kod:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
@@ -33,7 +33,7 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
   
 5.  Naciśnij klawisz **Button1**.  
   
-     Aplikacja zapisuje następujące informacje do pliku wyjściowego i dziennika debugowania aplikacji.  
+     Aplikacja zapisuje następujące informacje do pliku danych wyjściowych i dzienników debugowania aplikacji.  
   
      `DefaultSource Information: 0 : In Button1_Click`  
   
@@ -41,19 +41,19 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
   
 6.  Zamknij aplikację.  
   
-     Aby uzyskać informacje o sposobie wyświetlania okno danych wyjściowych debugowania aplikacji, zobacz [okno danych wyjściowych](/visualstudio/ide/reference/output-window). Aby uzyskać informacje o lokalizacji pliku dziennika aplikacji, zobacz [wskazówki: Ustalanie gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+     Aby uzyskać informacje o sposobie wyświetlania okna danych wyjściowych debugowania aplikacji, zobacz [okno danych wyjściowych](/visualstudio/ide/reference/output-window). Aby uzyskać informacje o lokalizacji pliku dziennika aplikacji, zobacz [Instruktaż: określająca, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
     > [!NOTE]
-    >  Domyślnie aplikacja Opróżnia dane wyjściowe pliku dziennika, po zamknięciu aplikacji.  
+    >  Domyślnie aplikacja czyści dane wyjściowe pliku dziennika, po zamknięciu aplikacji.  
   
-     W przykładzie powyżej, drugie wywołanie <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> — metoda i wywołania w celu <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> generuje danych wyjściowych dziennika podczas wywołania imię i nazwisko `WriteEntry` — metoda nie. Jest to spowodowane poziomy ważności `WriteEntry` i `WriteException` "Informacje" i "Błąd", które są dozwolone w `My.Application.Log` obiektu domyślne dziennika filtrowania. Jednak zdarzenia z poziomami ważności "Start" i "Stop" nie generuje danych wyjściowych dziennika.  
+     W przykładzie powyżej, drugie wywołanie <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> metody i wywołanie <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> generuje dane wyjściowe dziennika podczas wywołania imię i nazwisko `WriteEntry` metody nie obsługują. Jest to spowodowane poziomy ważności `WriteEntry` i `WriteException` "Informacje" i "Error", które są dozwolone przez `My.Application.Log` obiektu domyślne filtrowanie dziennika. Jednak zdarzeń za pomocą "Start" i "Zatrzymaj" poziomy ważności nie generuje danych wyjściowych dzienników.  
   
-## <a name="filtering-for-all-myapplicationlog-listeners"></a>Filtrowanie w przypadku wszystkich odbiorników My.Application.Log  
- `My.Application.Log` Obiekt używa <xref:System.Diagnostics.SourceSwitch> o nazwie `DefaultSwitch` kontrolowanie, które komunikaty go przekazuje z `WriteEntry` i `WriteException` metody odbiorniki dzienników. Można skonfigurować `DefaultSwitch` w pliku konfiguracyjnym aplikacji przez ustawienie jej wartość na jedną z <xref:System.Diagnostics.SourceLevels> wartości wyliczenia. Domyślna wartość to "Informacje".  
+## <a name="filtering-for-all-myapplicationlog-listeners"></a>Filtrowanie wszystkich odbiorników My.Application.Log  
+ `My.Application.Log` Obiektu używa <xref:System.Diagnostics.SourceSwitch> o nazwie `DefaultSwitch` kontrolowanie komunikaty go — dostęp próbny od `WriteEntry` i `WriteException` metody odbiorniki logu. Można skonfigurować `DefaultSwitch` w pliku konfiguracyjnym aplikacji, ustawiając jej wartość na jedną z <xref:System.Diagnostics.SourceLevels> wartości wyliczenia. Domyślna wartość to "Informacje".  
   
- W poniższej tabeli przedstawiono poziom ważności wymagane dla dziennika do zapisu komunikatu odbiorników, podane określonego `DefaultSwitch` ustawienie.  
+ W poniższej tabeli przedstawiono poziom ważności, wymaganych do dziennika zapisać komunikat do odbiorników, biorąc pod uwagę określonego `DefaultSwitch` ustawienie.  
   
-|Wartość DefaultSwitch|Ważność komunikatu wymagane dla danych wyjściowych|  
+|Wartość DefaultSwitch|Ważność wiadomości wymagane dla danych wyjściowych|  
 |---|---| 
 |`Critical`|`Critical`|  
 |`Error`|`Critical` lub `Error`|  
@@ -62,36 +62,36 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
 |`Verbose`|`Critical`, `Error`, `Warning`, `Information`, lub `Verbose`|  
 |`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume`, lub `Transfer`|  
 |`All`|Wszystkie komunikaty są dozwolone.|  
-|`Off`|Wszystkie komunikaty są zablokowane.|  
+|`Off`|Wszystkie komunikaty są blokowane.|  
   
 > [!NOTE]
->  `WriteEntry` i `WriteException` metody mają przeciążenia, która nie określa poziom ważności. Poziom ważności niejawne `WriteEntry` jest przeciążenie "Informacje", a poziom ważności niejawne `WriteException` jest przeciążenie "Error".  
+>  `WriteEntry` i `WriteException` metody mają przeciążenia, które nie określa poziom ważności. Poziom ważności niejawne `WriteEntry` przeciążenie jest "Informacje", a poziom ważności niejawne `WriteException` przeciążenie to "Error".  
   
- W następującej tabeli opisano w poprzednim przykładzie wpisu w dzienniku: przy użyciu domyślnego `DefaultSwitch` ustawienie "Informacje", tylko drugie wywołanie `WriteEntry` — metoda i wywołania w celu `WriteException` danych wyjściowych metody produktu dziennika.  
+ W następującej tabeli opisano w poprzednim przykładzie dane wyjściowe dziennika: przy użyciu domyślnego `DefaultSwitch` ustawienie "Informacje", tylko drugie wywołanie `WriteEntry` metody i wywołanie `WriteException` dane wyjściowe dziennika produktu metody.  
   
 #### <a name="to-log-only-activity-tracing-events"></a>Aby rejestrować zdarzenia śledzenia tylko działania  
   
-1.  Kliknij prawym przyciskiem myszy app.config w **Eksploratora rozwiązań** i wybierz **Otwórz**.  
+1.  Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań** i wybierz **Otwórz**.  
   
      —lub—  
   
-     Jeśli plik app.config, nie istnieje:  
+     Jeśli nie ma żadnego pliku app.config:  
   
     1.  Na **projektu** menu, wybierz **Dodaj nowy element**.  
   
-    2.  Z **Dodaj nowy element** oknie dialogowym wybierz **pliku konfiguracji aplikacji**.  
+    2.  Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
   
     3.  Kliknij przycisk **Dodaj**.  
   
-2.  Zlokalizuj `<switches>` sekcję, co jest `<system.diagnostics>` sekcję, co jest najwyższego poziomu `<configuration>` sekcji.  
+2.  Znajdź `<switches>` sekcji, która znajduje się w `<system.diagnostics>` sekcji, która znajduje się w najwyższego poziomu `<configuration>` sekcji.  
   
-3.  Znajdź element, który dodaje `DefaultSwitch` do kolekcji parametrów. Powinien być podobny do tego elementu:  
+3.  Znajdź element, który dodaje `DefaultSwitch` w kolekcji parametrów. Powinny one wyglądać podobnie do tego elementu:  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  Zmień wartość `value` atrybutu "ActivityTracing".  
+4.  Zmień wartość właściwości `value` atrybutu "ActivityTracing".  
   
-5.  Zawartość pliku app.config powinny być podobne do następującego kodu XML:  
+5.  Zawartość pliku app.config powinien wyglądać podobnie jak następujący kod XML:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -124,7 +124,7 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
   
 7.  Naciśnij klawisz **Button1**.  
   
-     Aplikacja zapisuje następujące informacje w pliku danych wyjściowych i dziennika debugowania aplikacji:  
+     Aplikacja zapisuje następujące informacje do pliku danych wyjściowych i dzienników debugowania aplikacji:  
   
      `DefaultSource Start: 4 : Entering Button1_Click`  
   
@@ -132,37 +132,37 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
   
 8.  Zamknij aplikację.  
   
-9. Zmień wartość `value` atrybutu "Informacje".  
+9. Zmień wartość właściwości `value` atrybutu "Informacje".  
   
     > [!NOTE]
-    >  `DefaultSwitch` Przełącznika tylko formanty ustawienie `My.Application.Log`. Nie zmienia sposób [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> i <xref:System.Diagnostics.Debug?displayProperty=nameWithType> zachowanie klasy.  
+    >  `DefaultSwitch` Przełącz ustawienie określa `My.Application.Log`. Nie zmienia sposób, w jaki [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> i <xref:System.Diagnostics.Debug?displayProperty=nameWithType> zachowują się klasy.  
   
-## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Poszczególne filtrowanie w przypadku odbiorników My.Application.Log  
- Poprzednim przykładzie pokazano, jak zmienić ustawienia filtrowania dla wszystkich `My.Application.Log` danych wyjściowych. W tym przykładzie przedstawiono sposób filtrowania odbiornik osobny dziennik. Domyślnie aplikacja ma dwa odbiorniki tego zapisu w danych wyjściowych debugowania aplikacji i pliku dziennika.  
+## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Osoba filtrowanie odbiorników My.Application.Log  
+ Poprzedni przykład pokazuje, jak zmienić ustawienia filtrowania dla wszystkich `My.Application.Log` danych wyjściowych. W tym przykładzie pokazano, jak filtrować odbiornik osobny dziennik. Domyślnie aplikacja ma dwa odbiorniki ten zapis w danych wyjściowych debugowania aplikacji i plik dziennika.  
   
- Plik konfiguracji steruje zachowaniem odbiorniki logu zezwalając każdej z nich ma filtr, który jest podobny do przełącznika dla `My.Application.Log`. Odbiornik dziennika dane wyjściowe obejmują wiadomości tylko wtedy, gdy ważność komunikatu jest dozwolony w obu dziennika `DefaultSwitch` i odbiornika dziennika filtru.  
+ Plik konfiguracyjny steruje zachowaniem odbiorniki logu, umożliwiając każdej z nich ma filtr, który jest podobny do przełącznika dla `My.Application.Log`. Odbiornik dziennika wiadomość wyjściową, tylko wtedy, gdy ważność komunikatu jest dozwolony w obu dziennika `DefaultSwitch` i Filtruj odbiornika dziennika.  
   
- W tym przykładzie pokazano, jak skonfigurować filtrowanie dla nowego odbiornika debugowania i dodaj go do `Log` obiektu. Odbiornik debugowania domyślna powinna zostać usunięta z `Log` obiektu, więc jest jasne, czy komunikaty debugowania pochodzą z nowego odbiornika debugowania.  
+ W tym przykładzie pokazano, jak skonfigurować filtrowanie, aby uzyskać nowy odbiornik debugowania i dodać go do `Log` obiektu. Odbiornik debugowania domyślne powinny zostać usunięte z `Log` obiektu, dzięki czemu jest jasne, że komunikaty debugowania pochodzą z nowy odbiornik debugowania.  
   
-#### <a name="to-log-only-activity-tracing-events"></a>Do rejestrowania tylko działania śledzenia zdarzeń  
+#### <a name="to-log-only-activity-tracing-events"></a>Aby rejestrować tylko zdarzenia śledzenie aktywności  
   
-1.  Kliknij prawym przyciskiem myszy app.config w **Eksploratora rozwiązań** i wybierz polecenie **Otwórz**.  
+1.  Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań** i wybierz polecenie **Otwórz**.  
   
      —lub—  
   
-     Jeśli plik app.config, nie istnieje:  
+     Jeśli nie ma żadnego pliku app.config:  
   
     1.  Na **projektu** menu, wybierz **Dodaj nowy element**.  
   
-    2.  Z **Dodaj nowy element** oknie dialogowym wybierz **pliku konfiguracji aplikacji**.  
+    2.  Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
   
     3.  Kliknij przycisk **Dodaj**.  
   
-2.  Kliknij prawym przyciskiem myszy app.config w **Eksploratora rozwiązań**. Wybierz **Otwórz**.  
+2.  Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań**. Wybierz **Otwórz**.  
   
-3.  Zlokalizuj `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource", która znajduje się w `<sources>` sekcji. `<sources>` Znajduje się w sekcji `<system.diagnostics>` części, lokacja najwyższego poziomu `<configuration>` sekcji.  
+3.  Znajdź `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource", która jest w trakcie `<sources>` sekcji. `<sources>` Znajduje się w sekcji `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   
-4.  Ten element, aby dodać `<listeners>` sekcji:  
+4.  Dodaj ten element, aby `<listeners>` sekcji:  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,7 +171,7 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
     <add name="NewDefault"/>  
     ```  
   
-5.  Zlokalizuj `<sharedListeners>` sekcji w `<system.diagnostics>` części, lokacja najwyższego poziomu `<configuration>` sekcji.  
+5.  Znajdź `<sharedListeners>` sekcji w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   
 6.  Dodaj ten element, do którego `<sharedListeners>` sekcji:  
   
@@ -186,9 +186,9 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
     </add>  
     ```  
   
-     <xref:System.Diagnostics.EventTypeFilter> Filtru przyjmuje jeden z <xref:System.Diagnostics.SourceLevels> wyliczenia wartości jako jego `initializeData` atrybutu.  
+     <xref:System.Diagnostics.EventTypeFilter> Filtr ma jedną z <xref:System.Diagnostics.SourceLevels> wyliczenia wartości zgodnie z jego `initializeData` atrybutu.  
   
-7.  Zawartość pliku app.config powinny być podobne do następującego kodu XML:  
+7.  Zawartość pliku app.config powinien wyglądać podobnie jak następujący kod XML:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -239,7 +239,7 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
   
      `Default Error: 2 : Error in the application.`  
   
-     Aplikacja zapisuje mniej informacje w danych wyjściowych debugowania aplikacji ze względu na bardziej restrykcyjne filtrowania.  
+     Aplikacja zapisuje mniej informacji debugowania aplikacji w danych wyjściowych ze względu na bardziej restrykcyjne filtrowania.  
   
      `Default Error   2   Error`  
   
@@ -253,4 +253,4 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
  [Przewodnik: tworzenie odbiorców dzienników niestandardowych](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  [Instrukcje: zapisywanie komunikatów dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
  [Przełączniki śledzenia](../../../../framework/debug-trace-profile/trace-switches.md)  
- [Rejestrowanie informacji z aplikacji](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+ [Rejestrowanie informacji z aplikacji](../../../../visual-basic/developing-apps/programming/log-info/index.md)

@@ -3,11 +3,11 @@ title: Programowanie i zagadnienia dotyczące wdrażania
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
 ms.openlocfilehash: d516877d1fc3a064f5275e226379b7e5011fbcdf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425861"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507334"
 ---
 # <a name="development-and-deployment-considerations"></a>Programowanie i zagadnienia dotyczące wdrażania
 Tematy w tej sekcji rozwiązania problemów pod uwagę podczas opracowywania lub wdrażania aplikacji, która opiera się na platformie ADO.NET Entity Framework.  

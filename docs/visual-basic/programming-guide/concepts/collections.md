@@ -2,44 +2,44 @@
 title: Kolekcje (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 563cef59c0e52d41dcdeaa51b5bc4d7b8f9554f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 510abe7d818b3a45869824bc52dc4fde38238f7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644319"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504447"
 ---
 # <a name="collections-visual-basic"></a>Kolekcje (Visual Basic)
-Dla wielu aplikacji, dla których chcesz Utwórz i Zarządzaj grupami powiązanych obiektów. Istnieją dwa sposoby do obiektów grup: tworzenie tablic obiektów oraz tworzenie kolekcji obiektów.  
+W przypadku wielu aplikacji, dla których chcesz utworzyć grupy i zarządzać nimi powiązanych obiektów. Istnieją dwa sposoby grupowania obiektów: poprzez tworzenie tablic obiektów oraz poprzez tworzenie kolekcji obiektów.  
   
- Tablice są najbardziej przydatne do tworzenia i Praca z stała liczba silnie typizowanych obiektów. Aby uzyskać informacje dotyczące tablic, zobacz [tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Tablice są najbardziej przydatne do tworzenia i pracy ze stałą liczbą jednoznacznie silnych obiektów. Aby uzyskać informacje na temat tablic, zobacz [tablic](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
- Kolekcje umożliwiają bardziej elastyczne do pracy z grupy obiektów. W przeciwieństwie do tablic grupy obiektów, którymi współpracujesz można zwiększyć lub zmniejszyć dynamicznie, musi mieć zmiany aplikacji. Niektóre zbiory klucza można przypisać do wszystkich obiektów, które można umieścić w kolekcji, tak, aby szybko można pobrać obiektu przy użyciu klucza.  
+ Kolekcje zapewniają bardziej elastyczny sposób pracy z grupami obiektów. W odróżnieniu od tablic grupa obiektów, którymi pracujesz można zwiększyć lub zmniejszyć dynamicznie, potrzeb zmiany aplikacji. W niektórych kolekcjach można przypisać klawisz do dowolnych obiektów umieszczonych do kolekcji, tak aby pozwala na szybkie pobranie obiektu przy użyciu klucza.  
   
- Kolekcja jest klasa, więc należy zadeklarować wystąpienia klasy, aby można było dodać elementy do tej kolekcji.  
+ Kolekcja jest klasą, więc należy zadeklarować wystąpienia klasy, aby można było dodać elementy do tej kolekcji.  
   
- Jeśli kolekcja zawiera elementy tylko jednego typu danych, możesz użyć jednej z klas w <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw. Ogólnej kolekcji wymusza zabezpieczenie typów, dzięki czemu można dodać do niego inny typ danych. Podczas pobierania elementu z kolekcji uniwersalnej, nie trzeba określić jego typu danych albo przekonwertować go.  
+ Jeśli kolekcja zawiera elementy tylko jednego typu danych, możesz użyć jednej z klas w <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw. Ogólna kolekcja wymusza typ bezpieczeństwa tak, aby żaden typ danych można dodać do niego. Po pobraniu elementu z kolekcji generycznej, nie trzeba określać jego typu danych, ani go konwertować.  
   
 > [!NOTE]
->  Przykłady w tym temacie, można dołączyć [importów](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instrukcje dla `System.Collections.Generic` i `System.Linq` przestrzeni nazw.  
+>  W przykładach w tym temacie zawierają [Importy](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instrukcji dla `System.Collections.Generic` i `System.Linq` przestrzeni nazw.  
   
  **W tym temacie**  
   
--   [Przy użyciu prostych kolekcji](#BKMK_SimpleCollection)  
+-   [Za pomocą prostej kolekcji](#BKMK_SimpleCollection)  
   
--   [Typy kolekcji](#BKMK_KindsOfCollections)  
+-   [Rodzaje kolekcji](#BKMK_KindsOfCollections)  
   
     -   [System.Collections.Generic Classes](#BKMK_Generic)  
   
     -   [Klasy System.Collections.Concurrent](#BKMK_Concurrent)  
   
-    -   [System.Collections — klasy](#BKMK_Collections)  
+    -   [Klasy System.Collections](#BKMK_Collections)  
   
     -   [Klasa kolekcji Visual Basic](#BKMK_VisualBasic)  
   
--   [Implementowanie kolekcję par klucz/wartość](#BKMK_KeyValuePairs)  
+-   [Implementowanie kolekcji par klucz/wartość](#BKMK_KeyValuePairs)  
   
--   [Otwieranie kolekcji za pomocą LINQ](#BKMK_LINQ)  
+-   [Za pomocą LINQ do dostępu do kolekcji](#BKMK_LINQ)  
   
 -   [Sortowanie kolekcji](#BKMK_Sorting)  
   
@@ -48,10 +48,10 @@ Dla wielu aplikacji, dla których chcesz Utwórz i Zarządzaj grupami powiązany
 -   [Iteratory](#BKMK_Iterators)  
   
 <a name="BKMK_SimpleCollection"></a>
-## <a name="using-a-simple-collection"></a>Przy użyciu prostych kolekcji  
- Przykłady w tej sekcji używać ogólnych <xref:System.Collections.Generic.List%601> klasy, która umożliwia pracę z silnie typizowaną listę obiektów.  
+## <a name="using-a-simple-collection"></a>Za pomocą prostej kolekcji  
+ W przykładach w tej sekcji użyto ogólnego <xref:System.Collections.Generic.List%601> klasy, która umożliwia pracę z silnie typizowanej listy obiektów.  
   
- Poniższy przykład tworzy listę ciągów i następnie iteruje ciągi za pomocą [For Each... Następny](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrukcji.  
+ Poniższy przykład tworzy listę ciągów i następnie iterację przez ciągi przy użyciu [For Each... Następny](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrukcji.  
   
 ```vb  
 ' Create a list of strings.  
@@ -68,9 +68,9 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Jeśli zawartość kolekcji są znane z wyprzedzeniem, możesz użyć *inicjatora kolekcji* do zainicjowania dla kolekcji. Aby uzyskać więcej informacji, zobacz [inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
+ Jeśli zawartość kolekcji jest znana z wyprzedzeniem, można użyć *inicjatora kolekcji* do zainicjowania dla kolekcji. Aby uzyskać więcej informacji, zobacz [inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
- Poniższy przykład jest taki sam, jak poprzedni przykład, z wyjątkiem inicjatora kolekcji służy do dodawania elementów do kolekcji.  
+ Poniższy przykład jest taka sama, jak w poprzednim przykładzie, z wyjątkiem inicjatora kolekcji jest używana do dodawania elementów do kolekcji.  
   
 ```vb  
 ' Create a list of strings by using a  
@@ -84,9 +84,9 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Można użyć [dla... Następny](../../../visual-basic/language-reference/statements/for-next-statement.md) instrukcji zamiast `For Each` instrukcji do iterowania po kolekcji. Można to zrobić, należy podczas uzyskiwania dostępu do elementów kolekcji przez indeks. Indeks elementów rozpoczyna się od 0 i kończy się liczbę element pomniejszonej o 1.  
+ Możesz użyć [dla... Następny](../../../visual-basic/language-reference/statements/for-next-statement.md) instrukcji zamiast `For Each` instrukcję do iterowania po kolekcji. Osiągniesz to uzyskując dostęp do elementów kolekcji przez pozycję indeksu. Indeks elementów zaczyna się od 0 i kończy się liczbą elementów pomniejszoną o 1.  
   
- Poniższy przykład iterację elementów kolekcji za pomocą `For…Next` zamiast `For Each`.  
+ Poniższy przykład wykonuje iterację przez elementy kolekcji za pomocą `For…Next` zamiast `For Each`.  
   
 ```vb  
 Dim salmons As New List(Of String) From  
@@ -98,7 +98,7 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Poniższy przykład umożliwia usunięcie elementu z kolekcji, określając obiekt do usunięcia.  
+ Poniższy przykład usuwa element z kolekcji określając obiekt do usunięcia.  
   
 ```vb  
 ' Create a list of strings by using a  
@@ -116,7 +116,7 @@ Next
 'Output: chinook pink sockeye  
 ```  
   
- Poniższy przykład umożliwia usunięcie elementów z listy ogólnej. Zamiast `For Each` instrukcji [dla... Następny](../../../visual-basic/language-reference/statements/for-next-statement.md) używana jest instrukcja, która wykonuje iterację w kolejności malejącej. Jest to spowodowane <xref:System.Collections.Generic.List%601.RemoveAt%2A> metoda powoduje elementów po usunięty element ma niższą wartość indeksu.  
+ Poniższy przykład usuwa elementy z listy ogólnej. Zamiast `For Each` instrukcji [dla... Następny](../../../visual-basic/language-reference/statements/for-next-statement.md) używana jest instrukcja, która dokonuje iteracji w kolejności malejącej. Jest to spowodowane <xref:System.Collections.Generic.List%601.RemoveAt%2A> metoda powoduje, że elementy po usuniętym elemencie muszą mieć niższą wartość indeksu.  
   
 ```vb  
 Dim numbers As New List(Of Integer) From  
@@ -139,7 +139,7 @@ numbers.ForEach(
 ' Output: 0 2 4 6 8  
 ```  
   
- Dla typu elementów w <xref:System.Collections.Generic.List%601>, możesz również definiować własne klasy. W poniższym przykładzie `Galaxy` klasy, która jest używana przez <xref:System.Collections.Generic.List%601> jest zdefiniowany w kodzie.  
+ Aby uzyskać typ elementów w <xref:System.Collections.Generic.List%601>, można również definiować własne klasy. W poniższym przykładzie `Galaxy` klasę, która jest używana przez <xref:System.Collections.Generic.List%601> jest zdefiniowana w kodzie.  
   
 ```vb  
 Private Sub IterateThroughList()  
@@ -171,8 +171,8 @@ End Class
 ```  
   
 <a name="BKMK_KindsOfCollections"></a>
-## <a name="kinds-of-collections"></a>Typy kolekcji   
- Wielu typowych kolekcji są dostarczane przez program .NET Framework. Każdy typ kolekcji jest przeznaczony dla określonego celu.  
+## <a name="kinds-of-collections"></a>Rodzaje kolekcji   
+ Wiele typowych kolekcji jest dostarczanych przez program .NET Framework. Każdy typu kolekcji jest przeznaczony do określonego celu.  
   
  W tej sekcji opisano niektóre typowe klasy kolekcji:  
   
@@ -182,67 +182,67 @@ End Class
   
 -   <xref:System.Collections> Klasy  
   
--   Visual Basic `Collection` — klasa  
+-   Visual Basic `Collection` klasy  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic Classes  
 
- Można utworzyć kolekcję ogólną za pomocą jednej z klas w <xref:System.Collections.Generic> przestrzeni nazw. Ogólnej kolekcji jest przydatne, gdy każdy element w kolekcji ma ten sam typ danych. Wymusza ogólnej kolekcji silne wpisywanie, zezwalając tylko żądanych danych typu do dodania.  
+ Możesz utworzyć ogólną kolekcję używając jednej z klas w <xref:System.Collections.Generic> przestrzeni nazw. Ogólna kolekcja jest przydatna w przypadku, gdy każdy element w kolekcji ma ten sam typ danych. Ogólna kolekcja wymusza silne wpisywanie, zezwalając tylko na żądane dane typu ma zostać dodana.  
   
- W poniższej tabeli przedstawiono niektóre często używane klasy <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw:  
+ W poniższej tabeli wymieniono niektóre z najczęściej używanych klas <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw:  
   
 |Class|Opis|  
 |---|---|  
-|<xref:System.Collections.Generic.Dictionary%602>|Reprezentuje kolekcję pary klucz wartość, które są zorganizowane według klucza.|  
+|<xref:System.Collections.Generic.Dictionary%602>|Przedstawia kolekcję par klucz wartość, które są zorganizowane na podstawie klucza.|  
 |<xref:System.Collections.Generic.List%601>|Reprezentuje listę obiektów, które mogą być udostępniane przez indeks. Udostępnia metody do wyszukiwania, sortowania i modyfikowania list.|  
-|<xref:System.Collections.Generic.Queue%601>|Reprezentuje pierwszy w pierwszym FIFO kolekcji obiektów.|  
-|<xref:System.Collections.Generic.SortedList%602>|Reprezentuje kolekcję par klucz/wartość, które są sortowane według klucza opartego na skojarzonym <xref:System.Collections.Generic.IComparer%601> implementacji.|  
-|<xref:System.Collections.Generic.Stack%601>|Reprezentuje ostatni w pierwszym LIFO kolekcji obiektów.|  
+|<xref:System.Collections.Generic.Queue%601>|Reprezentuje pierwszy na wejściu, pierwszy FIFO kolekcji obiektów.|  
+|<xref:System.Collections.Generic.SortedList%602>|Przedstawia kolekcję par klucz wartość, które są sortowane według klucza, w oparciu o związaną <xref:System.Collections.Generic.IComparer%601> implementacji.|  
+|<xref:System.Collections.Generic.Stack%601>|Reprezentuje ostatni na wejściu, pierwszy LIFO kolekcji obiektów.|  
   
- Aby uzyskać dodatkowe informacje, zobacz [często używane typy kolekcji](../../../standard/collections/commonly-used-collection-types.md), [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md), i <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ Aby uzyskać więcej informacji, zobacz [powszechnie używane typy kolekcji](../../../standard/collections/commonly-used-collection-types.md), [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md), i <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent Classes   
- W programie .NET Framework 4 lub nowszego, kolekcje w <xref:System.Collections.Concurrent> przestrzeni nazw zapewniają wydajność operacji wątkowo do uzyskiwania dostępu do kolekcji elementów, wiele wątków.  
+ W .NET Framework 4 lub nowszej, kolekcje w programie <xref:System.Collections.Concurrent> przestrzeni nazw zapewniają efektywne działania wątków do uzyskiwania dostępu do elementów kolekcji z wielu wątków.  
   
- Klasy w <xref:System.Collections.Concurrent> przestrzeń nazw powinna być używana zamiast odpowiednie typy w <xref:System.Collections.Generic?displayProperty=nameWithType> i <xref:System.Collections?displayProperty=nameWithType> przestrzeni nazw w każdym przypadku, gdy wiele wątków jednocześnie uzyskują kolekcji. Aby uzyskać więcej informacji, zobacz [kolekcje obsługujące wielowątkowość](../../../standard/collections/thread-safe/index.md) i <xref:System.Collections.Concurrent>.  
+ Klasy w <xref:System.Collections.Concurrent> przestrzeni nazw powinny być używane zamiast odpowiednich typów w <xref:System.Collections.Generic?displayProperty=nameWithType> i <xref:System.Collections?displayProperty=nameWithType> przestrzeni nazw w każdym przypadku, gdy wiele wątków jednocześnie uzyskują kolekcji. Aby uzyskać więcej informacji, zobacz [kolekcje obsługujące wielowątkowość](../../../standard/collections/thread-safe/index.md) i <xref:System.Collections.Concurrent>.  
   
- Niektóre klasy uwzględnione w <xref:System.Collections.Concurrent> przestrzeni nazw są <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, i <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
+ Niektóre klasy uwzględnione w <xref:System.Collections.Concurrent> nazw są <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, i <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 <a name="BKMK_Collections"></a>
-### <a name="systemcollections-classes"></a>System.Collections — klasy    
- Klasy w <xref:System.Collections?displayProperty=nameWithType> przestrzeni nazw nie należy przechowywać elementów, w szczególności obiektów określonego typu, ale jako obiekty typu `Object`.  
+### <a name="systemcollections-classes"></a>Klasy System.Collections    
+ Klasy w <xref:System.Collections?displayProperty=nameWithType> przestrzeni nazw nie przechowują elementów jako specjalnie typowanych obiektów, ale jako obiekty typu `Object`.  
   
- Jeśli to możliwe, należy użyć kolekcje ogólne w <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw lub <xref:System.Collections.Concurrent> przestrzeni nazw zamiast starsze typy w `System.Collections` przestrzeni nazw.  
+ Jeśli to możliwe, należy używać ogólnych kolekcji w <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw lub <xref:System.Collections.Concurrent> przestrzeni nazw, zamiast typów odziedziczonych w `System.Collections` przestrzeni nazw.  
   
- W poniższej tabeli przedstawiono niektóre często używane klasy w `System.Collections` przestrzeni nazw:  
+ W poniższej tabeli wymieniono niektóre z najczęściej używanych klas w `System.Collections` przestrzeni nazw:  
   
 |Class|Opis|  
 |---|---|  
-|<xref:System.Collections.ArrayList>|Reprezentuje tablicę obiektów, którego rozmiar jest dynamicznie zwiększony jako wymagane.|  
-|<xref:System.Collections.Hashtable>|Reprezentuje kolekcję pary klucz wartość, które są podzielone na podstawie kodu skrótu klucza.|  
-|<xref:System.Collections.Queue>|Reprezentuje pierwszy w pierwszym FIFO kolekcji obiektów.|  
-|<xref:System.Collections.Stack>|Reprezentuje ostatni w pierwszym LIFO kolekcji obiektów.|  
+|<xref:System.Collections.ArrayList>|Reprezentuje tablicę obiektów, których rozmiar jest dynamicznie zwiększany w miarę wymagane.|  
+|<xref:System.Collections.Hashtable>|Przedstawia kolekcję par klucz wartość, które są zorganizowane na podstawie kodu skrótu klucza.|  
+|<xref:System.Collections.Queue>|Reprezentuje pierwszy na wejściu, pierwszy FIFO kolekcji obiektów.|  
+|<xref:System.Collections.Stack>|Reprezentuje ostatni na wejściu, pierwszy LIFO kolekcji obiektów.|  
   
- <xref:System.Collections.Specialized> Przestrzeń nazw zawiera klasy specjalistyczne i jednoznacznie kolekcji, takie jak kolekcji tylko do ciągów i słowników połączone listy i hybrydowych.  
+ <xref:System.Collections.Specialized> Przestrzeń nazw zawiera specjalistyczne i silnie typizowanych klas kolekcji, takich jak kolekcje wyłącznie ciągów i listy powiązane i słowniki hybrydowe.  
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Klasa kolekcji Visual Basic  
- Korzystając z języka Visual Basic <xref:Microsoft.VisualBasic.Collection> klasa do dostępu do elementu przy użyciu liczbowym indeksem kolekcji lub a `String` klucza. Elementy można dodać do obiektu kolekcji lub bez określenia klucza. Jeśli dodasz do elementu bez klucza, należy użyć jego indeksu liczbowego dostępu do niego.  
+ Visual Basic można użyć <xref:Microsoft.VisualBasic.Collection> klasy dostęp do elementu kolekcji, korzystając albo z indeksu numerycznego lub a `String` klucza. Można dodać elementy do obiektu kolekcji z lub bez określenia klucza. Jeśli dodajesz element bez klucza, należy użyć jego indeksu liczbowego do niego dostęp.  
   
- Visual Basic `Collection` klasy wszystkie jego elementy są przechowywane jako typ `Object`, dzięki czemu można dodać elementu każdego typu danych. Nie ma żadnych zabezpieczenie przed typy danych nieodpowiednie dodawany.  
+ Visual Basic `Collection` klasa przechowuje wszystkie elementy jako typ `Object`, więc można dodać element każdego typu danych. Nie ma zabezpieczenia nieprawidłowych typów danych dodawane.  
   
- Jeśli używasz programu Visual Basic `Collection` klasy, pierwszy element w kolekcji ma indeks równy 1. To różni się od klasy kolekcji .NET Framework, dla których początkowy indeks jest 0.  
+ Jeśli używasz języka Visual Basic `Collection` klasy, pierwszy element kolekcji posiada indeks 1. To różni się od klas kolekcji .NET Framework, dla których indeks początkowy to 0.  
   
- Jeśli to możliwe, należy użyć kolekcje ogólne w <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw lub <xref:System.Collections.Concurrent> przestrzeni nazw zamiast Visual Basic `Collection` klasy.  
+ Jeśli to możliwe, należy używać ogólnych kolekcji w <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw lub <xref:System.Collections.Concurrent> przestrzeni nazw, a nie Visual Basic `Collection` klasy.  
   
  Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Collection>.  
   
 <a name="BKMK_KeyValuePairs"></a>
-## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Implementowanie kolekcję par klucz/wartość   
- <xref:System.Collections.Generic.Dictionary%602> Kolekcji ogólnych umożliwia dostęp do elementów w kolekcji przy użyciu klucza każdego elementu. Każda dodatkowa do słownika składa się z wartością i skojarzonego z nim klucza. Pobieranie wartości przy użyciu swojego klucza jest szybkie, ponieważ `Dictionary` klasy jest zaimplementowany jako tablicy skrótów.  
+## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Implementowanie kolekcji par klucz/wartość   
+ <xref:System.Collections.Generic.Dictionary%602> Kolekcji ogólnej umożliwia dostęp do elementów w kolekcji za pomocą klucza każdego elementu. Każdy dodatkem do słownika składa się z wartości i skojarzonego z nim klucza. Pobieranie wartości przy użyciu własnego klucza jest szybkie ponieważ `Dictionary` klasy jest implementowany jako tabelę mieszania.  
   
- Poniższy przykład tworzy `Dictionary` kolekcji i iteruje po słowniku przy użyciu `For Each` instrukcji.  
+ Poniższy przykład tworzy `Dictionary` kolekcji i wykonuje iteracje przez słownik za pomocą `For Each` instrukcji.  
   
 ```vb  
 Private Sub IterateThroughDictionary()  
@@ -288,7 +288,7 @@ Public Class Element
 End Class  
 ```  
   
- Aby zamiast tego użyj inicjatora kolekcji, aby utworzyć `Dictionary` kolekcji, można zastąpić `BuildDictionary` i `AddToDictionary` metody przy użyciu następującej metody.  
+ Zamiast tego za pomocą inicjatora kolekcji tworzyć `Dictionary` kolekcji, można zastąpić `BuildDictionary` i `AddToDictionary` metody przy użyciu następującej metody.  
   
 ```vb  
 Private Function BuildDictionary2() As Dictionary(Of String, Element)  
@@ -306,7 +306,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function  
 ```  
   
- W poniższym przykładzie użyto <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> — metoda i <xref:System.Collections.Generic.Dictionary%602.Item%2A> właściwość `Dictionary` można szybko znaleźć elementu według klucza. `Item` Właściwość umożliwia dostęp do elementu w `elements` kolekcji przy użyciu `elements(symbol)` kodu w języku Visual Basic.  
+ W poniższym przykładzie użyto <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> metody i <xref:System.Collections.Generic.Dictionary%602.Item%2A> właściwość `Dictionary` szybko znaleźć element według klucza. `Item` Właściwość pozwala na dostęp do elementu w `elements` kolekcji przy użyciu `elements(symbol)` kodu w języku Visual Basic.  
   
 ```vb  
 Private Sub FindInDictionary(ByVal symbol As String)  
@@ -321,7 +321,7 @@ Private Sub FindInDictionary(ByVal symbol As String)
 End Sub  
 ```  
   
- W poniższym przykładzie zamiast niego użyto <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> metody szybko znaleźć elementu według klucza.  
+ W poniższym przykładzie zamiast użyto <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> metoda szybko znaleźć element według klucza.  
   
 ```vb  
 Private Sub FindInDictionary2(ByVal symbol As String)  
@@ -337,10 +337,10 @@ End Sub
 ```  
   
 <a name="BKMK_LINQ"></a> 
-##  <a name="using-linq-to-access-a-collection"></a>Otwieranie kolekcji za pomocą LINQ  
- LINQ (zapytania język Language-Integrated) można uzyskać dostępu do kolekcji. Zapytania LINQ zapewniają filtrowanie, kolejność i grupowanie możliwości. Aby uzyskać więcej informacji, zobacz [wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+##  <a name="using-linq-to-access-a-collection"></a>Za pomocą LINQ do dostępu do kolekcji  
+ LINQ (Language-Integrated Query) może służyć do dostępu do kolekcji. Zapytania LINQ zapewniają filtrowanie, porządkowanie i możliwości grupowania. Aby uzyskać więcej informacji, zobacz [wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
- W poniższym przykładzie uruchamiane zapytania LINQ względem ogólnego `List`. Zapytania LINQ zwraca innej kolekcji z wynikami.  
+ Poniższy przykład wykonuje zapytanie LINQ na ogólnej `List`. Zapytanie LINQ zwraca inną kolekcję, która zawiera wyniki.  
   
 ```vb  
 Private Sub ShowLINQ()  
@@ -384,11 +384,11 @@ End Class
   
  <a name="BKMK_Sorting"></a> 
 ## <a name="sorting-a-collection"></a>Sortowanie kolekcji  
- Poniższy przykład przedstawia procedurę sortowanie kolekcji. Przykład sortuje wystąpienia `Car` klasy, które są przechowywane w <xref:System.Collections.Generic.List%601>. `Car` Klasa implementuje <xref:System.IComparable%601> interfejs, który wymaga, aby <xref:System.IComparable%601.CompareTo%2A> metoda zaimplementowana.  
+ Poniżej przedstawiono przykładową procedurę sortowania zbioru. Przykład sortuje wystąpienia `Car` klasy, które są przechowywane w <xref:System.Collections.Generic.List%601>. `Car` Klasy implementuje <xref:System.IComparable%601> interfejs, który wymaga, aby <xref:System.IComparable%601.CompareTo%2A> metoda zaimplementowana.  
   
- Każde wywołanie <xref:System.IComparable%601.CompareTo%2A> metoda pozwala jednym porównanie, które jest używane do sortowania. Napisany przez użytkownika kod `CompareTo` metoda zwraca wartość dla każdego porównania bieżący obiekt z innym obiektem. Wartość zwracana jest mniejsza niż zero, jeśli bieżący obiekt jest mniejsza od drugiego obiektu, większa niż zero, jeśli bieżący obiekt jest większy niż drugi obiekt i zero czy są równe. Dzięki temu można zdefiniować w kodzie kryteria większa niż poniżej, a równa.  
+ Każde wywołanie <xref:System.IComparable%601.CompareTo%2A> metody tworzy pojedyncze porównanie, który jest używane do sortowania. Kod napisany przez użytkownika w `CompareTo` metoda zwraca wartość dla każdego porównania bieżącego obiektu z innego obiektu. Wartość zwracana jest mniejsza niż zero, jeżeli bieżący obiekt jest mniejszy niż inny obiekt, większa niż zero, jeśli bieżący obiekt jest większy niż inny obiekt i zero czy są równe. Umożliwia to definiowanie w kodzie kryteriów dla większych niż, mniejsze więc równa.  
   
- W `ListCars` metody `cars.Sort()` instrukcji sortuje listę. To wywołanie <xref:System.Collections.Generic.List%601.Sort%2A> metody <xref:System.Collections.Generic.List%601> powoduje, że `CompareTo` wywoływanej automatycznie dla metody `Car` obiekty w `List`.  
+ W `ListCars` metody `cars.Sort()` instrukcji sortuje listy. To wywołanie <xref:System.Collections.Generic.List%601.Sort%2A> metody <xref:System.Collections.Generic.List%601> powoduje, że `CompareTo` metoda zostaje wywołana automatycznie dla `Car` obiekty w `List`.  
   
 ```vb  
 Public Sub ListCars()  
@@ -462,13 +462,13 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>Definiowanie kolekcji niestandardowej  
- Należy zdefiniować kolekcję zaimplementowanie <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Collections.IEnumerable> interfejsu. Aby uzyskać dodatkowe informacje, zobacz [wyliczanie kolekcji](http://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
+ Można zdefiniować kolekcję implementując <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Collections.IEnumerable> interfejsu. Aby uzyskać więcej informacji, zobacz [wyliczania kolekcji](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
   
- Mimo że można zdefiniować niestandardowej kolekcji, jest zazwyczaj lepiej jest użyć kolekcje, które znajdują się w programie .NET Framework, które zostały opisane w [rodzaje kolekcji](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) wcześniej w tym temacie.  
+ Chociaż można zdefiniować kolekcję niestandardową, to zazwyczaj lepiej jest użyć zamiast tego kolekcje, które znajdują się w .NET Framework, które są opisane w [rodzaje kolekcji](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) we wcześniejszej części tego tematu.  
   
  W poniższym przykładzie zdefiniowano klasę kolekcji niestandardowej o nazwie `AllColors`. Ta klasa implementuje <xref:System.Collections.IEnumerable> interfejs, który wymaga, aby <xref:System.Collections.IEnumerable.GetEnumerator%2A> metoda zaimplementowana.  
   
- `GetEnumerator` Metoda zwraca wystąpienie klasy `ColorEnumerator` klasy. `ColorEnumerator` implementuje <xref:System.Collections.IEnumerator> interfejs, który wymaga, aby <xref:System.Collections.IEnumerator.Current%2A> właściwość <xref:System.Collections.IEnumerator.MoveNext%2A> metody i <xref:System.Collections.IEnumerator.Reset%2A> metoda zaimplementowana.  
+ `GetEnumerator` Metoda zwraca wystąpienie `ColorEnumerator` klasy. `ColorEnumerator` implementuje <xref:System.Collections.IEnumerator> interfejs, który wymaga, aby <xref:System.Collections.IEnumerator.Current%2A> właściwości <xref:System.Collections.IEnumerator.MoveNext%2A> metody i <xref:System.Collections.IEnumerator.Reset%2A> metoda zaimplementowana.  
   
 ```vb  
 Public Sub ListColors()  
@@ -540,13 +540,13 @@ End Class
   
 <a name="BKMK_Iterators"></a>
 ##  <a name="iterators"></a>Iteratory  
- *Iterator* służy do przeprowadzania niestandardowej iteracji w kolekcji. Iterator może być metodą lub `get` dostępu. Używa iteratora [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) instrukcji, aby zwracany był każdy element kolekcji jednym naraz.  
+ *Iteratora* służy do wykonywania niestandardowych iteracji przez kolekcję. Iteracją może być metodą lub `get` metody dostępu. Używa iteratora [uzyskanie](../../../visual-basic/language-reference/statements/yield-statement.md) instrukcja zwraca każdy element kolekcji naraz.  
   
- Należy wywołać przy użyciu iteratora [For Each... Następny](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrukcji. Każdej iteracji `For Each` pętli wywołuje iteratora. Gdy `Yield` iteratora osiągnie instrukcję, wyrażenie jest zwracany i są przechowywane w bieżącej lokalizacji w kodzie. Wykonanie jest ponownie z tej lokalizacji iteratora jest wywoływana przy następnym uruchomieniu.  
+ Wywołujesz iterację używając [For Each... Następny](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrukcji. Każda iteracja `For Each` pętli wywołuje iteratora. Gdy `Yield` osiągnięciu instrukcji w iteratorze, wyrażenie jest zwracane, a bieżąca lokalizacja w kodzie jest zachowywana. Wykonanie jest uruchamiane ponownie z tej lokalizacji w przy następnym wywołaniu iteratora.  
   
  Aby uzyskać więcej informacji, zobacz [Iteratory (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).  
   
- W poniższym przykładzie użyto metody iteracyjnej. Iterator — metoda ma `Yield` instrukcji, która znajduje się wewnątrz [dla... Następny](../../../visual-basic/language-reference/statements/for-next-statement.md) pętli. W `ListEvenNumbers` metoda, każdej iteracji `For Each` treść instrukcji tworzy wywołanie do metody iteracyjne, który przechodzi do następnego `Yield` instrukcji.  
+ Poniższy przykład wykorzystuje metodę iteratora. Metoda iteratora ma `Yield` instrukcji, która znajduje się wewnątrz [dla... Następny](../../../visual-basic/language-reference/statements/for-next-statement.md) pętli. W `ListEvenNumbers` metody, każda iteracja `For Each` treść instrukcji tworzy wywołanie metody iteracyjnej, która przechodzi do następnej `Yield` instrukcji.  
   
 ```vb  
 Public Sub ListEvenNumbers()  
@@ -574,10 +574,10 @@ End Function
  [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
  [Koncepcje programowania (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
  [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [LINQ do obiektów (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [Kolekcje i struktury danych](../../../standard/collections/index.md)  
- [Tworzenie i operowanie nimi kolekcje](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Tworzenie kolekcji i manipulowanie nimi](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)  
  [Porównywanie i sortowanie w ramach kolekcji](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)

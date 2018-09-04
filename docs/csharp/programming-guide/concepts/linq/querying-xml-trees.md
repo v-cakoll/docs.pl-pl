@@ -2,12 +2,12 @@
 title: Tworzenie zapytań drzew XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
-ms.openlocfilehash: 5d2e40da26f30a0ece570acf2fd25684d1cba40f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 349235689dba125f697d0df5ff90bd10a69432c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925588"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501054"
 ---
 # <a name="querying-xml-trees-c"></a>Tworzenie zapytań drzew XML (C#)
 Ta sekcja zawiera przykłady [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania.  
@@ -26,6 +26,7 @@ Ta sekcja zawiera przykłady [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md
 |[LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)|Przedstawia informacje o liczbie wyrażenia XPath i ich [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] odpowiedniki.|  
 |[Czyste Przekształcanie funkcjonalne kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|Przedstawia informacje o małej samouczek dotyczący Pisanie zapytań w stylu programowania funkcjonalnego.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
- [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+- [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

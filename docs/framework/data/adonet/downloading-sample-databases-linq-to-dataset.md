@@ -3,11 +3,11 @@ title: Pobieranie przykładowych baz danych (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
 ms.openlocfilehash: 7830095b7c98c0926783324ee7dc2bc1eb345aca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469846"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502818"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Pobieranie przykładowych baz danych (LINQ to DataSet)
 Przykłady i wskazówki w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] dokumentacji Użyj przykładowej bazy danych AdventureWorks. Ten produkt bezpłatna można pobrać z witryny pobierania firmy Microsoft. Przykłady i wskazówki w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] dokumentacji używania programu SQL Server do przechowywania danych. SQL Server Express Edition, który jest dostępny bez opłat, również może służyć do przechowywania danych, zamiast programu SQL Server.  

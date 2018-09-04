@@ -2,12 +2,12 @@
 title: LINQ to XML — Przegląd klas (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: 619bf59c2b10cbb699f8e5b177991da9a0a2b238
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: d1454909591ff060f9d2a1d2484302e7112be149
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753950"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502394"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML — Przegląd klas (C#)
 Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] klas w <xref:System.Xml.Linq> przestrzeni nazw oraz krótki opis każdego z nich.  
@@ -86,5 +86,6 @@ Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] k
 ### <a name="xtext-class"></a>Klasa XText  
  <xref:System.Xml.Linq.XText> reprezentuje węzeł tekstowy. W większości przypadków nie trzeba używać tej klasy. Ta klasa służy przede wszystkim dla zawartości mieszanej.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ to XML — przegląd programowania (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Zobacz też
+
+- [LINQ to XML — przegląd programowania (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

@@ -3,11 +3,11 @@ title: '&lt;peer&gt; w &lt;clientCredentials&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
 ms.openlocfilehash: 9d63aaaa6404b791559d1288730098075f1fd8eb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385479"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504486"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;peer&gt; w &lt;clientCredentials&gt;, element
 Określa poświadczenia używane podczas uwierzytelniania klientów peer-to-peer.  

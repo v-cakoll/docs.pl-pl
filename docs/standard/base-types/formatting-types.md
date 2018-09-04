@@ -28,11 +28,11 @@ ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484867"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502218"
 ---
 # <a name="formatting-types-in-net"></a>Typy formatowania na platformie .NET
 <a name="Introduction"></a> Formatowanie jest procesem konwertowania instancji klasy, struktury lub wartości wyliczenia na jego reprezentację ciągu często tak, aby wynikowy ciąg znaków, które mogą być wyświetlane użytkownikom lub deserializowany w celu przywrócenia oryginalnego typu danych. Ta konwersja może stwarzać wiele wyzwań:  

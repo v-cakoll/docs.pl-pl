@@ -2,96 +2,96 @@
 title: 'Instrukcje: Hostowanie usługi przepływu pracy przy użyciu rozwiązania AppFabric w systemie Windows Server'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: a1e2312beed61b340e034a48c36f739e799b1bf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d71052edaccd34bab7354c93431a260f41647f2b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495844"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500033"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Instrukcje: Hostowanie usługi przepływu pracy przy użyciu rozwiązania AppFabric w systemie Windows Server
-Hostowanie usług przepływu pracy w aplikacji sieci szkieletowej jest podobny do hostingu w środowisku usług IIS / WAS. Jedyna różnica polega na te narzędzia, które zapewnia AppFabric wdrażania, monitorowania i zarządzania usług przepływu pracy. W tym temacie korzysta z usługi przepływu pracy utworzone w [Tworzenie usługi przepływu pracy długotrwałe](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Ten temat przeprowadzi Cię przez proces tworzenia usługi przepływu pracy. W tym temacie objaśnia sposób hosta usługi przepływu pracy przy użyciu aplikacji sieci szkieletowej. Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric zobacz [dokumentacją sieci szkieletowej systemu Windows Server aplikacji](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Przed wykonaniem poniższych instrukcji upewnij się, że masz systemu Windows Server AppFabric zainstalowane.  Aby zrobić to open zapasowej Internetowe usługi informacyjne (inetmgr.exe), kliknij nazwę serwera w **połączeń** wyświetlić, kliknij przycisk witryny, a następnie kliknij przycisk **domyślna witryna sieci Web**. W prawej części ekranu powinna być widoczna sekcja o nazwie **AppFabric**. Jeśli nie widzisz tej sekcji (będzie górnej części okienka po prawej stronie) nie masz AppFabric zainstalowane. Aby uzyskać więcej informacji o instalowaniu systemu Windows Server AppFabric zobacz [Instalowanie systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193136).  
+Hostowanie usług przepływu pracy w sieci szkieletowej aplikacji jest podobny do hostowania w usługach IIS / WAS. Jedyna różnica polega na narzędzia, których App Fabric umożliwia wdrażanie, monitorowanie i zarządzanie usług przepływu pracy. Ten temat używa usługi przepływu pracy utworzone w [tworzenie długo działającej usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Ten temat przeprowadzi Cię Tworzenie usługi przepływu pracy. W tym temacie wyjaśniono, jak hostowanie usługi przepływu pracy przy użyciu App Fabric. Aby uzyskać więcej informacji na temat AppFabric w systemie Windows Server, zobacz [dodatku App Fabric dokumentację dla systemu Windows Server](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Przed wykonaniem poniższych kroków upewnij się, że masz systemu Windows Server AppFabric zainstalowane.  Aby zrobić to open się Internet Information Services (inetmgr.exe), kliknij nazwę serwera w **połączeń** wyświetlić, kliknij pozycję witryny, a następnie kliknij przycisk **domyślna witryna sieci Web**. W prawym rogu ekranu, powinien zostać wyświetlony sekcję o nazwie **App Fabric**. Jeśli nie widzisz tej sekcji (będą mieć wartość górnej części okienka po prawej stronie) nie masz App Fabric zainstalowane. Aby uzyskać więcej informacji na temat instalowania systemu Windows Server AppFabric zobacz [instalacji systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
   
-### <a name="creating-a-simple-workflow-service"></a>Tworzenie usługi Simple przepływu pracy  
+### <a name="creating-a-simple-workflow-service"></a>Tworzenie usługi prostego przepływu pracy  
   
-1.  Otwórz [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] i załadowania rozwiązania OrderProcessing utworzony w [Tworzenie usługi przepływu pracy długotrwałe](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md) tematu.  
+1.  Otwórz [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] i załaduj rozwiązanie OrderProcessing został utworzony w [tworzenie długo działającej usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md) tematu.  
   
-2.  Kliknij prawym przyciskiem myszy **OrderService** projekt i wybierz **właściwości** i wybierz **Web** kartę.  
+2.  Kliknij prawym przyciskiem myszy **OrderService** projektu, a następnie wybierz **właściwości** i wybierz **Web** kartę.  
   
-3.  W **Akcja uruchamiania** strony właściwości zaznacz **określonej strony** i wpisz Service1.xamlx w polu edycji.  
+3.  W **Akcja uruchamiania** sekcji na stronie właściwości wybierz **konkretnej strony** i wpisz Service1.xamlx w polu edycji.  
   
-4.  W **serwerów** strony właściwości zaznacz **użycia lokalnego serwera sieci Web usług IIS** i wprowadź następujący adres URL: `http://localhost/OrderService`.  
+4.  W **serwerów** sekcji na stronie właściwości wybierz **użycia lokalnego serwera sieci Web usług IIS** i wpisz następujący adres URL: `http://localhost/OrderService`.  
   
-5.  Kliknij przycisk **utworzyć katalog wirtualny** przycisku. Spowoduje to utworzenie nowego katalogu wirtualnego i konfigurowanie projektu Aby skopiować pliki potrzebne do katalogu wirtualnego, podczas tworzenia projektu.  Alternatywnie można ręcznie skopiować .xamlx pliku web.config i wszystkie wymagane biblioteki dll do katalogu wirtualnego.  
+5.  Kliknij przycisk **Utwórz katalog wirtualny** przycisku. Spowoduje to utworzenie nowego katalogu wirtualnego i skonfigurowanie projektu, aby skopiować pliki potrzebne do katalogu wirtualnego, podczas kompilowania projektu.  Alternatywnie możesz można ręcznie skopiować .xamlx pliku web.config i wszelkich wymaganych bibliotek DLL do katalogu wirtualnego.  
   
-### <a name="configuring-a-workflow-service-hosted-in-windows-server-app-fabric"></a>Konfigurowanie usługi przepływu pracy w systemu Windows Server AppFabric  
+### <a name="configuring-a-workflow-service-hosted-in-windows-server-app-fabric"></a>Konfigurowanie przepływu pracy usługi hostowanej w systemie Windows Server AppFabric  
   
 1.  Otwórz Menedżera internetowych usług informacyjnych (inetmgr.exe).  
   
 2.  Przejdź do katalogu wirtualnego OrderService w **połączeń** okienka.  
   
-3.  OrderService kliknij prawym przyciskiem myszy i wybierz **Zarządzanie WCF i WF usług**, **Konfiguruj...** . **Konfigurowanie usługi WCF i WF dla aplikacji** zostanie wyświetlone okno dialogowe.  
+3.  OrderService kliknij prawym przyciskiem myszy i wybierz **Zarządzanie WCF i usługami WF**, **Konfigurowanie...** . **Konfigurowanie usług WCF i WF aplikacji** zostanie wyświetlone okno dialogowe.  
   
 4.  Wybierz **ogólne** kartę, aby wyświetlić ogólne informacje o aplikacji, jak pokazano na poniższym zrzucie ekranu.  
   
-     ![Na karcie Ogólne okna dialogowego konfiguracji sieci szkieletowej aplikacji](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-general.gif "AppFabricConfiguration — ogólne")  
+     ![Karta Ogólne, okno dialogowe Konfiguracja sieci szkieletowej aplikacji](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-general.gif "AppFabricConfiguration — ogólne")  
   
 5.  Wybierz **monitorowanie** kartę. Zawiera różne ustawienia monitorowania, jak pokazano na poniższym zrzucie ekranu.  
   
-     ![Karta sieci szkieletowej konfiguracji monitorowania aplikacji](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration monitorowania")  
+     ![Aplikacja monitorowanie konfiguracji sieci szkieletowej kartę](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration monitorowanie")  
   
-     Aby uzyskać więcej informacji o konfigurowaniu usługi przepływu pracy monitorowanie aplikacji sieci szkieletowej zobacz [konfigurowania monitorowania przy użyciu rozwiązania AppFabric](http://go.microsoft.com/fwlink/?LinkId=193153).  
+     Aby uzyskać więcej informacji o konfigurowaniu usługi przepływu pracy monitorowania w sieci szkieletowej aplikacji zobacz [konfigurowania monitorowania przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193153).  
   
-6.  Wybierz **utrwalania przepływu pracy** kartę. Dzięki temu można skonfigurować aplikację do używania dostawcy trwałości domyślnej aplikacji sieci szkieletowej jak pokazano na poniższym zrzucie ekranu.  
+6.  Wybierz **trwałość przepływu pracy** kartę. Dzięki temu można skonfigurować aplikację do używania App Fabric domyślne trwałość dostawcy jak pokazano na poniższym zrzucie ekranu.  
   
-     ![Konfiguracja aplikacji sieci szkieletowej &#45; trwałości](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration trwałości")  
+     ![Konfiguracja aplikacji w sieci szkieletowej &#45; trwałości](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration trwałości")  
   
-     Aby uzyskać więcej informacji o konfigurowaniu trwałości przepływu pracy w systemu Windows Server AppFabric zobacz [Konfigurowanie trwałości przepływu pracy w aplikacji sieci szkieletowej](http://go.microsoft.com/fwlink/?LinkId=193148).  
+     Aby uzyskać więcej informacji o konfigurowaniu trwałości przepływu pracy w AppFabric w systemie Windows Server, zobacz [Konfigurowanie trwałość przepływu pracy w sieci szkieletowej aplikacji](https://go.microsoft.com/fwlink/?LinkId=193148).  
   
-7.  Wybierz **przepływu pracy zarządzania hostem** kartę. Dzięki temu można określić, kiedy bezczynne wystąpienia przepływu pracy usługi powinny być zwolnione i utrwalone, jak pokazano na poniższym zrzucie ekranu.  
+7.  Wybierz **przepływu pracy zarządzania hostem** kartę. Dzięki temu można określić, kiedy wystąpień usługi przepływu pracy bezczynności powinien być zwolnione i utrwalane, jak pokazano na poniższym zrzucie ekranu.  
   
-     ![AppFabric w konfiguracji przepływu pracy hosta zarządzania](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration zarządzania")  
+     ![Programu AppFabric w konfiguracji przepływu pracy zarządzania hostem](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration zarządzania")  
   
-     Aby uzyskać więcej informacji o konfiguracji zarządzania hosta przepływu pracy zobacz [Konfigurowanie zarządzania hosta przepływu pracy w aplikacji sieci szkieletowej](http://go.microsoft.com/fwlink/?LinkId=193151).  
+     Aby uzyskać więcej informacji na temat konfiguracji zarządzania hosta przepływu pracy zobacz [konfigurowania zarządzania hostem przepływu pracy w sieci szkieletowej aplikacji](https://go.microsoft.com/fwlink/?LinkId=193151).  
   
 8.  Wybierz **Auto-Start** kartę. Dzięki temu można określić ustawienia automatycznego uruchamiania usługi przepływu pracy w aplikacji, jak pokazano na poniższym zrzucie ekranu.  
   
-     ![Aplikacji sieci szkieletowej automatycznie&#45;uruchomić konfigurację](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![App Service Fabric automatycznie&#45;konfiguracji](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
   
-     Aby uzyskać więcej informacji o konfigurowaniu Auto-Start zobacz [Konfigurowanie automatycznego uruchamiania przy użyciu rozwiązania AppFabric](http://go.microsoft.com/fwlink/?LinkId=193150).  
+     Aby uzyskać więcej informacji o konfigurowaniu Auto-Start zobacz [Konfigurowanie automatycznego uruchamiania przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193150).  
   
-9. Wybierz **ograniczania** kartę. Dzięki temu można skonfigurować ustawienia ograniczenia przepustowości usługi przepływu pracy, jak pokazano na poniższym zrzucie ekranu.  
+9. Wybierz **ograniczania** kartę. Dzięki temu można skonfigurować ustawienia ograniczania przepustowości usługi przepływu pracy, jak pokazano na poniższym zrzucie ekranu.  
   
-     ![Ograniczanie konfiguracji aplikacji sieci szkieletowej](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
+     ![Ograniczanie konfiguracji App Fabric](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
   
-     Aby uzyskać więcej informacji na temat konfigurowania ograniczania zobacz [Konfigurowanie ograniczania przy użyciu rozwiązania AppFabric](http://go.microsoft.com/fwlink/?LinkId=193149).  
+     Aby uzyskać więcej informacji na temat konfigurowania ograniczania zobacz [konfigurowania ograniczania przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193149).  
   
-10. Wybierz **zabezpieczeń** kartę. Dzięki temu można skonfigurować ustawień zabezpieczeń dla aplikacji, jak pokazano na poniższym zrzucie ekranu.  
+10. Wybierz **zabezpieczeń** kartę. Dzięki temu można skonfigurować ustawienia zabezpieczeń dla aplikacji, jak pokazano na poniższym zrzucie ekranu.  
   
-     ![Konfiguracja zabezpieczeń aplikacji sieci szkieletowej](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration zabezpieczeń")  
+     ![Konfiguracja zabezpieczeń aplikacji w sieci szkieletowej](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration zabezpieczeń")  
   
-     Aby uzyskać więcej informacji na temat konfigurowania zabezpieczeń przy użyciu rozwiązania Windows Server AppFabric zobacz [Konfigurowanie zabezpieczeń przy użyciu rozwiązania AppFabric](http://go.microsoft.com/fwlink/?LinkId=193152).  
+     Aby uzyskać więcej informacji na temat konfigurowania zabezpieczeń przy użyciu rozwiązania Windows Server AppFabric zobacz [konfigurowania zabezpieczeń przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193152).  
   
 ### <a name="using-windows-server-app-fabric"></a>Przy użyciu systemu Windows Server AppFabric  
   
-1.  Skompiluj rozwiązanie, które można skopiować pliki niezbędne do katalogu wirtualnego.  
+1.  Kompiluj rozwiązanie, skopiuj niezbędne pliki do katalogu wirtualnego.  
   
-2.  Kliknij prawym przyciskiem myszy projekt OrderClient i wybierz **debugowania**, **uruchomić nowe wystąpienie** można uruchomić aplikacji klienckiej.  
+2.  Kliknij prawym przyciskiem myszy projekt OrderClient, a następnie wybierz pozycję **debugowania**, **Uruchom nowe wystąpienie** można uruchomić aplikacji klienckiej.  
   
-3.  Klient zostanie wykonane, a program Visual Studio spowoduje wyświetlenie **dołączyć ostrzeżenie o zabezpieczeniach** okno dialogowe, kliknij przycisk **nie dołączyć** przycisku. Ta wartość informuje Visual Studio, aby nie dołączyć do procesu programu IIS do debugowania.  
+3.  Klient zostanie wykonane, a program Visual Studio wyświetli **ostrzeżenie o zabezpieczeniach dołączania** okno dialogowe, kliknij przycisk **nie dołączaj** przycisku. Oznacza to, Visual Studio, aby nie dołączać do procesu usługi IIS do debugowania.  
   
-4.  Aplikacja kliencka będzie natychmiast wywołania usługi przepływu pracy, a następnie poczekaj. Usługa przepływ pracy zostanie umieszczona w stanie bezczynności i utrwalone. Można to sprawdzić, uruchamianie Internetowe usługi informacyjne (inetmgr.exe), przechodząc do OrderService w okienku połączenia i wybranie go. Następnie kliknij ikonę pulpitu nawigacyjnego aplikacji sieci szkieletowej w okienku po prawej stronie. W obszarze utrwalone wystąpień WF pojawi się, że istnieje jedno wystąpienie usługi utrwalonych przepływów pracy, jak pokazano na poniższym zrzucie ekranu.  
+4.  Aplikacja kliencka będzie powodują natychmiastowe wywołanie metody usługi przepływu pracy, a następnie poczekaj. Usługa przepływu pracy zostanie umieszczona w stanie bezczynności i utrwalone. Można to sprawdzić, uruchamianie programu Internet Information Services (inetmgr.exe), przechodząc do OrderService w okienku połączenia i wybierając ją. Następnie kliknij ikonę Pulpit nawigacyjny aplikacji Service Fabric, w okienku po prawej stronie. W ramach wystąpienia WF utrwalone zobaczysz, że istnieje jeden utrwalonego wystąpienia przepływu pracy usługi jak pokazano na poniższym zrzucie ekranu.  
   
-     ![Pulpit nawigacyjny aplikacji sieci szkieletowej](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")  
+     ![Pulpit nawigacyjny aplikacji w sieci szkieletowej](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")  
   
-     **Historii wystąpienia WF** Wyświetla informacje na temat usługi przepływu pracy, takich jak liczbę aktywacji usługi przepływu pracy, liczbę zakończeń wystąpienia usługi przepływu pracy i liczba wystąpień przepływów pracy z błędami. W obszarze wystąpienia aktywności lub bezczynności, które zostanie wyświetlony link klikając łącze wyświetli więcej informacji na temat wystąpień bezczynności przepływu pracy, jak pokazano na poniższym zrzucie ekranu.  
+     **Historii wystąpienia WF** Wyświetla informacje na temat usługi przepływu pracy, takich jak liczbę aktywacji usługi przepływu pracy, liczba ukończenia wystąpienia usługi przepływu pracy i liczbę wystąpień przepływu pracy z błędami. W obszarze aktywności lub bezczynności wystąpienia, zostaną wyświetlone łącze kliknięcie łącza spowoduje wyświetlenie więcej informacji na temat wystąpienia bezczynności przepływu pracy, jak pokazano na poniższym zrzucie ekranu.  
   
      ![Szczegóły wystąpienia przepływu pracy utrwalone](../../../../docs/framework/wcf/feature-details/media/persisteddetail.gif "PersistedDetail")  
   
-     Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric funkcje i sposobu ich używania, zobacz [Hosting funkcje systemu Windows Server aplikacji sieci szkieletowej](http://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
+     Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric funkcji i jak ich używać, zobacz [hostingu funkcje systemu Windows Server App Service Fabric](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie długo działającej usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
- [Windows Server AppFabric funkcje hostingu](http://go.microsoft.com/fwlink/?LinkId=193143)  
- [Instalowanie systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193136)  
- [Dokumentację systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)
+ [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=193143)  
+ [Instalowanie systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193136)  
+ [Dokumentacja programu systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)

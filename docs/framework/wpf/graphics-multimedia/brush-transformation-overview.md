@@ -10,11 +10,11 @@ helpviewer_keywords:
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
 ms.openlocfilehash: 8b5a7f7d428925590236351d56073024f6ad32b7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467023"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506823"
 ---
 # <a name="brush-transformation-overview"></a>Przegląd Przekształcanie pędzla
 Klasa pędzla udostępnia dwie właściwości transformacji: <xref:System.Windows.Media.Brush.Transform%2A> i <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Właściwości umożliwiają obracanie, skalowanie, pochylanie i tłumaczenie zawartość pędzla. W tym temacie opisano różnice między te dwie właściwości i przykłady ich użycia.  

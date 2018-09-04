@@ -4,11 +4,11 @@ description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391251"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504416"
 ---
 # <a name="the-history-of-c"></a>Historia języka C# #
 

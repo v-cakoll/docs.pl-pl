@@ -7,34 +7,34 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-ms.openlocfilehash: 896aa61f3f0900760dffd09bcab6a08bbc01628d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86ab8bc979765fe79ccc76db9a0566459fde6e46
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499916"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Porady: ustawianie tła panelu formularzy systemu Windows przy użyciu narzędzia Projektant
-Formularze systemu Windows <xref:System.Windows.Forms.Panel> formant może wyświetlać zarówno kolor tła i obraz tła. <xref:System.Windows.Forms.Control.BackColor%2A> Właściwość określa kolor tła dla kontrolek, które są zawarte w panelu, takich jak etykiety i przyciski radiowe. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> nie ustawiono właściwości <xref:System.Windows.Forms.Control.BackColor%2A> wyboru spowoduje wypełnienie wszystkich panelu. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość jest ustawiona, obrazu będzie wyświetlany za formantów, które są zawarte w panelu.  
+Formularze Windows <xref:System.Windows.Forms.Panel> formant może wyświetlić kolor tła i obraz tła. <xref:System.Windows.Forms.Control.BackColor%2A> Właściwość ustawia kolor tła kontrolki, które są zawarte w panelu, takich jak etykiety i przycisków radiowych. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> nie ustawiono właściwości <xref:System.Windows.Forms.Control.BackColor%2A> wypełni wszystkie panelu wyboru. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość jest ustawiona, obraz, który pojawi się za zaporą formantów, które są zawarte w panelu.  
   
- Poniższa procedura wymaga **aplikacji systemu Windows** projektu z formularza, który zawiera <xref:System.Windows.Forms.Panel> formantu. Informacje dotyczące sposobu konfigurowania tych projektu, zobacz [jak: utworzyć projekt aplikacji systemu Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) i [porady: dodawanie formantów do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Poniższa procedura wymaga **aplikacji Windows** projektu za pomocą formularza, który zawiera <xref:System.Windows.Forms.Panel> kontroli. Uzyskać informacji o tym, jak skonfigurować taki projekt, zobacz [instrukcje: Tworzenie projektu aplikacji Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) i [porady: dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-set-the-background-in-the-windows-forms-designer"></a>Aby ustawić tła w narzędziu Projektant dla formularzy systemu Windows  
+### <a name="to-set-the-background-in-the-windows-forms-designer"></a>Aby ustawić tło w programie Windows Forms Designer  
   
-1.  Wybierz <xref:System.Windows.Forms.Panel> formantu.  
+1.  Wybierz <xref:System.Windows.Forms.Panel> kontroli.  
   
-2.  W **właściwości** , kliknij strzałkę przycisk Dalej, aby <xref:System.Windows.Forms.Control.BackColor%2A> właściwość, aby wyświetlić okno z trzema kartami.  
+2.  W **właściwości** , kliknij strzałkę znajdujący się obok <xref:System.Windows.Forms.Control.BackColor%2A> właściwość, aby wyświetlić okno z trzema kartami.  
   
-3.  Wybierz **niestandardowy** kartę, aby wyświetlić paletę kolorów.  
+3.  Wybierz **niestandardowe** kartę, aby wyświetlić paletę kolorów.  
   
-4.  Wybierz **Web** lub **systemu** karty, aby wyświetlić listę wstępnie zdefiniowane nazwy kolorów, a następnie wybierz kolor.  
+4.  Wybierz **Web** lub **systemu** kartę, aby wyświetlić listę nazw wstępnie zdefiniowanych kolorów, a następnie wybierz kolor.  
   
-5.  W **właściwości** , kliknij strzałkę przycisk Dalej, aby <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwości.  
+5.  W **właściwości** , kliknij strzałkę znajdujący się obok <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwości.  
   
-6.  W **Otwórz** oknie dialogowym Wybierz plik, który chcesz wyświetlić.  
+6.  W **Otwórz** oknie dialogowym Wybierz plik który chcesz wyświetlić.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Control.BackColor%2A>  

@@ -5,11 +5,11 @@ author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
 ms.openlocfilehash: 74c2fdc3443741790549845eae3dabe83b46278c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507468"
 ---
 # <a name="repair-the-net-framework"></a>Naprawianie programu .NET Framework
 

@@ -1,23 +1,23 @@
 ---
-title: 'Porady: znajdowanie elementów z określonym atrybutem (XPath-LINQ do XML) (C#)'
+title: 'Porady: znajdowanie elementów o określonym atrybucie (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: 18dbd3170b5e3f8f8b3e11c66430d71ba6acd0da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da7633b34ddd61577bfc62f4f76d8f8929be1cc4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318091"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500283"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Porady: znajdowanie elementów z określonym atrybutem (XPath-LINQ do XML) (C#)
-Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut. Nie masz obawy zawartości atrybutu. Zamiast tego chcesz wybrać na podstawie istnienia atrybutu.  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Porady: znajdowanie elementów o określonym atrybucie (XPath-LINQ to XML) (C#)
+Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut. Nie masz zajmującym się ochroną zawartości atrybutu. Zamiast tego chcesz wybrać na podstawie istnienia atrybutu.  
   
  Wyrażenie XPath jest:  
   
  `./*[@Select]`  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wybiera tylko elementów, które mają `Select` atrybutu.  
+ Poniższy kod wybiera tylko elementy, które mają `Select` atrybutu.  
   
 ```csharp  
 XElement doc = XElement.Parse(  
@@ -56,5 +56,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do XML dla użytkowników XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Zobacz też
+
+- [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

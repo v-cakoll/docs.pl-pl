@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408402"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504309"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Włączanie wielu aktywnych zestawów wyników
 Wiele aktywnych zestawów wyników (MARS) jest funkcją, która współdziała z programem SQL Server, aby umożliwić wykonywanie wielu instancji na pojedyncze połączenie. Po włączeniu MARS do użytku z programem SQL Server każdego obiektu polecenia używane dodaje sesji połączenia.  

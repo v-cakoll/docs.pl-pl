@@ -15,16 +15,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 72c45e821a59c1e910b5c8422df02978046eb56b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425227"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500511"
 ---
-# <a name="iclrdatatarget3getexceptioncontextrecord-method"></a><span data-ttu-id="8cad6-102">Metoda ICLRDataTarget3::GetExceptionContextRecord</span><span class="sxs-lookup"><span data-stu-id="8cad6-102">ICLRDataTarget3::GetExceptionContextRecord Method</span></span>
-<span data-ttu-id="8cad6-103">Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych w celu pobrania rekordu kontekstu skojarzonego z procesem docelowym.</span><span class="sxs-lookup"><span data-stu-id="8cad6-103">Called by the common language runtime (CLR) data access services to retrieve the context record associated with the target process.</span></span> <span data-ttu-id="8cad6-104">Na przykład dla elementu docelowego zrzutu jest to równoważne z rekordu kontekstu przekazaną za pomocą `ExceptionParam` argument [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) funkcji w Windows debugowania pomóc w bibliotece (DbgHelp).</span><span class="sxs-lookup"><span data-stu-id="8cad6-104">For example, for a dump target, this would be equivalent to the context record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
+# <a name="iclrdatatarget3getexceptioncontextrecord-method"></a><span data-ttu-id="9f5f4-102">Metoda ICLRDataTarget3::GetExceptionContextRecord</span><span class="sxs-lookup"><span data-stu-id="9f5f4-102">ICLRDataTarget3::GetExceptionContextRecord Method</span></span>
+<span data-ttu-id="9f5f4-103">Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych w celu pobrania rekordu kontekstu skojarzonego z procesem docelowym.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-103">Called by the common language runtime (CLR) data access services to retrieve the context record associated with the target process.</span></span> <span data-ttu-id="9f5f4-104">Na przykład dla elementu docelowego zrzutu jest to równoważne z rekordu kontekstu przekazaną za pomocą `ExceptionParam` argument [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) funkcji w Windows debugowania pomóc w bibliotece (DbgHelp).</span><span class="sxs-lookup"><span data-stu-id="9f5f4-104">For example, for a dump target, this would be equivalent to the context record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8cad6-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="8cad6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f5f4-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="9f5f4-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionContextRecord(  
@@ -34,40 +34,40 @@ HRESULT GetExceptionContextRecord(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8cad6-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="8cad6-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9f5f4-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="9f5f4-106">Parameters</span></span>  
  `bufferSize`  
- <span data-ttu-id="8cad6-107">[in] Rozmiar buforu wejściowego w bajtach.</span><span class="sxs-lookup"><span data-stu-id="8cad6-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="8cad6-108">Musi to być wystarczająco duży, aby pomieścić rekordu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="8cad6-108">This must be large enough to accommodate the context record.</span></span>  
+ <span data-ttu-id="9f5f4-107">[in] Rozmiar buforu wejściowego w bajtach.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="9f5f4-108">Musi to być wystarczająco duży, aby pomieścić rekordu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-108">This must be large enough to accommodate the context record.</span></span>  
   
  `bufferUsed`  
- <span data-ttu-id="8cad6-109">[out] Wskaźnik do `ULONG32` typu, który odbiera liczbę bajtów, które rzeczywiście zapisanych w buforze.</span><span class="sxs-lookup"><span data-stu-id="8cad6-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
+ <span data-ttu-id="9f5f4-109">[out] Wskaźnik do `ULONG32` typu, który odbiera liczbę bajtów, które rzeczywiście zapisanych w buforze.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
   
  `buffer`  
- <span data-ttu-id="8cad6-110">[out] Wskaźnik do buforu pamięci, który otrzymuje kopię rekordu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="8cad6-110">[out] A pointer to a memory buffer that receives a copy of the context record.</span></span> <span data-ttu-id="8cad6-111">Rekordu wyjątku jest zwracana jako [KONTEKSTU](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) typu.</span><span class="sxs-lookup"><span data-stu-id="8cad6-111">The exception record is returned as a [CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) type.</span></span>  
+ <span data-ttu-id="9f5f4-110">[out] Wskaźnik do buforu pamięci, który otrzymuje kopię rekordu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-110">[out] A pointer to a memory buffer that receives a copy of the context record.</span></span> <span data-ttu-id="9f5f4-111">Rekordu wyjątku jest zwracana jako [KONTEKSTU](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) typu.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-111">The exception record is returned as a [CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8cad6-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="8cad6-112">Return Value</span></span>  
- <span data-ttu-id="8cad6-113">Wartość zwracana jest `S_OK` na powodzenie lub niepowodzenie `HRESULT` kod błędu.</span><span class="sxs-lookup"><span data-stu-id="8cad6-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="8cad6-114">`HRESULT` Mogą obejmować kody, ale nie są ograniczone do następujących:</span><span class="sxs-lookup"><span data-stu-id="8cad6-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9f5f4-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="9f5f4-112">Return Value</span></span>  
+ <span data-ttu-id="9f5f4-113">Wartość zwracana jest `S_OK` na powodzenie lub niepowodzenie `HRESULT` kod błędu.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="9f5f4-114">`HRESULT` Mogą obejmować kody, ale nie są ograniczone do następujących:</span><span class="sxs-lookup"><span data-stu-id="9f5f4-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="8cad6-115">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="8cad6-115">Return code</span></span>|<span data-ttu-id="8cad6-116">Opis</span><span class="sxs-lookup"><span data-stu-id="8cad6-116">Description</span></span>|  
+|<span data-ttu-id="9f5f4-115">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="9f5f4-115">Return code</span></span>|<span data-ttu-id="9f5f4-116">Opis</span><span class="sxs-lookup"><span data-stu-id="9f5f4-116">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="8cad6-117">Metody powiodło się.</span><span class="sxs-lookup"><span data-stu-id="8cad6-117">Method succeeded.</span></span> <span data-ttu-id="8cad6-118">Rekordu kontekstu został skopiowany do buforu danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="8cad6-118">The context record has been copied to the output buffer.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="8cad6-119">Nie rekordu kontekstu jest skojarzony z obiektem docelowym.</span><span class="sxs-lookup"><span data-stu-id="8cad6-119">No context record is associated with the target.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="8cad6-120">Rozmiar buforu wejściowego nie jest wystarczająco duży, aby pomieścić rekordu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="8cad6-120">The input buffer size is not large enough to accommodate the context record.</span></span>|  
+|`S_OK`|<span data-ttu-id="9f5f4-117">Metody powiodło się.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-117">Method succeeded.</span></span> <span data-ttu-id="9f5f4-118">Rekordu kontekstu został skopiowany do buforu danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-118">The context record has been copied to the output buffer.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="9f5f4-119">Nie rekordu kontekstu jest skojarzony z obiektem docelowym.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-119">No context record is associated with the target.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="9f5f4-120">Rozmiar buforu wejściowego nie jest wystarczająco duży, aby pomieścić rekordu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-120">The input buffer size is not large enough to accommodate the context record.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8cad6-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8cad6-121">Remarks</span></span>  
- <span data-ttu-id="8cad6-122">[KONTEKST](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) to struktura specyficzne dla platformy, zdefiniowane w nagłówki udostępnione przez zestaw Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="8cad6-122">[CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) is a platform-specific structure defined in headers provided by the Windows SDK.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f5f4-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9f5f4-121">Remarks</span></span>  
+ <span data-ttu-id="9f5f4-122">[KONTEKST](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) to struktura specyficzne dla platformy, zdefiniowane w nagłówki udostępnione przez zestaw Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-122">[CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) is a platform-specific structure defined in headers provided by the Windows SDK.</span></span>  
   
- <span data-ttu-id="8cad6-123">Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="8cad6-123">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="9f5f4-123">Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="9f5f4-123">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8cad6-124">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8cad6-124">Requirements</span></span>  
- <span data-ttu-id="8cad6-125">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8cad6-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f5f4-124">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9f5f4-124">Requirements</span></span>  
+ <span data-ttu-id="9f5f4-125">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f5f4-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8cad6-126">**Nagłówek:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="8cad6-126">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="9f5f4-126">**Nagłówek:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="9f5f4-126">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="8cad6-127">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8cad6-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9f5f4-127">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9f5f4-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8cad6-128">**Wersje programu .NET framework:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8cad6-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
+ <span data-ttu-id="9f5f4-128">**Wersje programu .NET framework:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f5f4-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8cad6-129">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8cad6-129">See Also</span></span>  
- [<span data-ttu-id="8cad6-130">ICLRDataTarget3, interfejs</span><span class="sxs-lookup"><span data-stu-id="8cad6-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
- [<span data-ttu-id="8cad6-131">GetExceptionRecord, metoda</span><span class="sxs-lookup"><span data-stu-id="8cad6-131">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)  
- [<span data-ttu-id="8cad6-132">GetExceptionThreadID, metoda</span><span class="sxs-lookup"><span data-stu-id="8cad6-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+## <a name="see-also"></a><span data-ttu-id="9f5f4-129">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="9f5f4-129">See Also</span></span>  
+ [<span data-ttu-id="9f5f4-130">ICLRDataTarget3, interfejs</span><span class="sxs-lookup"><span data-stu-id="9f5f4-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
+ [<span data-ttu-id="9f5f4-131">GetExceptionRecord, metoda</span><span class="sxs-lookup"><span data-stu-id="9f5f4-131">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)  
+ [<span data-ttu-id="9f5f4-132">GetExceptionThreadID, metoda</span><span class="sxs-lookup"><span data-stu-id="9f5f4-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)

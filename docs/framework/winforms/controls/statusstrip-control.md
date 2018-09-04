@@ -6,11 +6,11 @@ helpviewer_keywords:
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
 ms.openlocfilehash: 157db8b9fbbbb6e1c6af41b4cf3903f4a762d763
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385729"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528100"
 ---
 # <a name="statusstrip-control"></a>StatusStrip — Formant
 Formularze Windows `StatusStrip` formant jest używany w formularzach jako obszar, zwykle są wyświetlane w dolnej części okna, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. `StatusStrip` Formanty zazwyczaj mają `ToolStripStatusLabel` formantów na nich, które wyświetlają tekst lub ikony do wskazywania stanu, lub <xref:System.Windows.Forms.ToolStripProgressBar> , wyświetla w postaci graficznej stan ukończenia procesu.  

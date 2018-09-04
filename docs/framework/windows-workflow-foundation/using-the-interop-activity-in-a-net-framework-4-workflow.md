@@ -3,11 +3,11 @@ title: Używanie działania Interop w przepływie pracy programu .NET Framework 
 ms.date: 03/30/2017
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
 ms.openlocfilehash: 02eeaf5bb7ff484ba5982197fc395e247cd5a87f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466728"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528113"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Używanie działania Interop w przepływie pracy programu .NET Framework 4
 Działania utworzone za pomocą [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] lub [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] mogą być używane w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy przy użyciu <xref:System.Activities.Statements.Interop> działania. Ten temat zawiera omówienie sposobu użycia <xref:System.Activities.Statements.Interop> działania.  

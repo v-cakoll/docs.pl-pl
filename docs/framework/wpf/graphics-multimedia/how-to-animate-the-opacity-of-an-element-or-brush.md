@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
 ms.openlocfilehash: 549d3eab0d6d75403e962eeb146be8d7995cc931
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525856"
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Jak animować nieprzezroczystość elementu lub pędzla
 Aby element framework zanikanie i widok, można animować jego <xref:System.Windows.UIElement.Opacity%2A> można animować właściwości lub <xref:System.Windows.Media.Brush.Opacity%2A> właściwość <xref:System.Windows.Media.Brush> (lub pędzle) używany do rysowania go. Animowanie nieprzezroczystości elementu sprawia, że i jego elementów podrzędnych zanikanie pojęcie widoku, ale animowanie pędzel używany do rysowania elementu pozwala na należy przemyśleć zanika część elementu. Na przykład można animować nieprzezroczystość pędzel używany do rysowania tła przycisku. To spowoduje, że tło przycisku do zastosowania blaknięcia wewnątrz i na zewnątrz widoku, przy równoczesnym zachowaniu jego tekstu jest całkowicie nieprzezroczyste.  

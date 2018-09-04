@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
 ms.openlocfilehash: 24657f541daf5bb098f8db3b59a3241ecf832d39
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398868"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515082"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transakcja i operacje kopiowania zbiorczego
 Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać operacji kopiowania zbiorczego. Tę opcję, ostatnie pozwala wykonać kilka operacji kopiowania zbiorczego w ramach tej samej transakcji, a także wykonywać inne operacje bazy danych (na przykład wstawiania, aktualizacji i usuwania) przy zachowaniu możliwości Zatwierdź lub Wycofaj całą transakcję.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
 ms.openlocfilehash: 9c7a656e82198568c39b9bb58f8708f563d6caa2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482318"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520830"
 ---
 # <a name="creating-expression-columns"></a>Tworzenie kolumn wyrażeń
 Można zdefiniować wyrażenie dla kolumny, dzięki czemu może zawierać wartość obliczana z innych wartości kolumn, w tym samym wierszu lub wartości w kolumnach wiele wierszy w tabeli. Aby określić wyrażenie, które ma zostać obliczone, użyj <xref:System.Data.DataColumn.Expression%2A> właściwość kolumna docelowa i użyj <xref:System.Data.DataColumn.ColumnName%2A> właściwości do odwoływania się do innych kolumn w wyrażeniu. <xref:System.Data.DataColumn.DataType%2A> Wyrażenia kolumny musi być zgodna wartość, która zwraca wartość wyrażenia.  

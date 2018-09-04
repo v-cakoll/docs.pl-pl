@@ -1,25 +1,25 @@
 ---
-title: 'Porady: filtrowanie atrybutów (XPath-LINQ do XML) (C#)'
+title: 'Porady: filtrowanie atrybutu (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 12ecf4c2c4b74cd58c4df0c355351232d09a84ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d99387be6683dcc46d36b5fdefbcd09f998eab1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326121"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516240"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Porady: filtrowanie atrybutów (XPath-LINQ do XML) (C#)
-W tym temacie pokazano, jak można uzyskać elementów podrzędnych o określonej nazwie i z atrybutem o określonej wartości.  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Porady: filtrowanie atrybutu (XPath-LINQ to XML) (C#)
+W tym temacie pokazano, jak można pobrać elementów podrzędnych o określonej nazwie i z atrybutem z określoną wartością.  
   
  Wyrażenie XPath jest:  
   
  `.//Address[@Type='Shipping']`  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie znajduje wszystkie elementy podrzędne elementy o nazwie `Address`oraz `Type` atrybutu o wartości "Wysyłki".  
+ W tym przykładzie wyszukuje wszystkie obiekty zależne elementy o nazwie `Address`i `Type` atrybutu o wartości "Wysyłania".  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: wiele zakupów (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -72,5 +72,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do XML dla użytkowników XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Zobacz też
+
+- [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

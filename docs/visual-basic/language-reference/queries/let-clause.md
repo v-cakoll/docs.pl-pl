@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
 ms.openlocfilehash: 34c0fd239d9e08dab4a107cb8447941e7ab3ecbe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480375"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516766"
 ---
 # <a name="let-clause-visual-basic"></a>Let — Klauzula (Visual Basic)
 Oblicza wartość i przypisuje go do nowej zmiennej w ramach zapytania.  

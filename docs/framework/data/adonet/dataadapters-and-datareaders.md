@@ -3,11 +3,11 @@ title: Elementy DataAdapter i DataReaders
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43476225"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516780"
 ---
 # <a name="dataadapters-and-datareaders"></a>Elementy DataAdapter i DataReaders
 Możesz użyć ADO.NET **DataReader** można pobrać tylko do odczytu, tylko do przodu strumienia danych z bazy danych. Wyniki są zwracane jako zapytanie wykonuje i są przechowywane w buforze sieci na komputerze klienckim, dopóki ich zażądać przy użyciu **odczytu** metody **DataReader**. Za pomocą **DataReader** może zwiększyć wydajność aplikacji, zarówno przez pobranie danych, jak tylko będzie dostępny, a (domyślnie) przechowywanie tylko jeden wiersz jednocześnie w pamięci, co zmniejsza obciążenie systemu.  

@@ -2,12 +2,12 @@
 title: 'Porady: znajdowanie elementów podrzędnych na podstawie położenia (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: ffe10bd5b263e56b6f2ee1708688523a2b0dd018
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5d62418fe6d89c8dc5c7ddb4975404f1a7e0aa2d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245057"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517096"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Porady: znajdowanie elementów podrzędnych na podstawie położenia (XPath-LINQ to XML) (C#)
 Czasami trzeba znajdowanie elementów na podstawie ich pozycji. Możesz chcieć znaleźć drugiego elementu, lub możesz chcieć znaleźć trzeci za pośrednictwem piąty element.  
@@ -78,5 +78,6 @@ Results are identical
 </Test>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Zobacz też
+
+- [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -5,11 +5,11 @@ ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 764e7fba31a7fb3fc40ec85ab4d0fb6e18e57390
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931775"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519048"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET Web Forms przy użyciu programu WIF
 ## <a name="applies-to"></a>Dotyczy:  

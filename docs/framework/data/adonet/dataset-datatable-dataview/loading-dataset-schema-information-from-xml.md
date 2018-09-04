@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
 ms.openlocfilehash: a076dcbbe79a7ec0dfbd727e0d0c752bd4675eef
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398609"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515985"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Ładowanie informacji o schemacie elementu DataSet z pliku XML
 Schemat <xref:System.Data.DataSet> (jego tabele, kolumny, relacje i ograniczenia) mogą być definiowane programowo, utworzone przez **wypełnienia** lub **FillSchema** metody <xref:System.Data.Common.DataAdapter>, lub załadowany z Dokument XML. Ładowanie **zestawu danych** informacji o schemacie z dokumentu XML, można użyć dowolnego **ReadXmlSchema** lub **InferXmlSchema** metody **zestawudanych**. **ReadXmlSchema** umożliwia ładowanie lub wywnioskować **DataSet** informacji o schemacie z dokumentu zawierającego schematu języka (XSD) definicji schematu XML lub dokumentu XML z wbudowanego schematu XML. **InferXmlSchema** pozwala na wnioskowanie schematu z dokumentów XML podczas ignoruje niektóre obszary nazw XML, który określisz.  

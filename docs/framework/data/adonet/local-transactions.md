@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
 ms.openlocfilehash: 17bf06864016ece571b21bee2c180b5781a62959
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480740"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528262"
 ---
 # <a name="local-transactions"></a>Transakcje lokalne
 Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używane, gdy chcesz powiązać ze sobą wiele zadań, tak, aby są wykonywane jako pojedyncza jednostka pracy. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw aktualizuje tabelę z informacjami o kolejności. Po drugie aktualizuje tabelę, która zawiera informacje dotyczące spisu, obciążenie elementy uporządkowane. Zadanie nie powiedzie się, zarówno aktualizacje zostaną wycofane.  

@@ -2,37 +2,37 @@
 title: Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: f2b43bd982b7dcd1f4641ae55f95595d14d70b0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef0d3da41fdabaf8745dff083d37fcd89e3a2700
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339764"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521631"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (C#)
-Po dołączeniu kodu asynchroniczne w aplikacji należy wziąć pod uwagę i prawdopodobnie zapobiec ponowne wejście, który odwołuje się do ponownego wprowadzania operację asynchroniczną, zanim została ukończona. Jeśli nie identyfikowania i obsługi możliwości ponownego rozpoczęcia, może spowodować nieoczekiwane wyniki.  
+Po dołączeniu asynchronicznego kodu w aplikacji należy wziąć pod uwagę i ewentualnie zapobiec współużytkowaniu wątkowości, która odwołuje się do ponownego wprowadzania operacji asynchronicznej, zanim została ukończona. Jeśli nie zidentyfikujesz i obsłużysz możliwości współużytkowania wątkowości, może to spowodować nieoczekiwane wyniki.  
   
  **W tym temacie**  
   
--   [Rozpoznawanie Wielobieżność](#BKMK_RecognizingReentrancy)  
+-   [Uznawanie współużytkowania wątkowości](#BKMK_RecognizingReentrancy)  
   
--   [Obsługa ponownego rozpoczęcia](#BKMK_HandlingReentrancy)  
+-   [Obsługa współużytkowania wątkowości](#BKMK_HandlingReentrancy)  
   
     -   [Wyłącz przycisk Start](#BKMK_DisableTheStartButton)  
   
     -   [Anuluj i ponownie uruchom operację](#BKMK_CancelAndRestart)  
   
-    -   [Uruchamianie wielu operacji i danych wyjściowych w kolejce](#BKMK_RunMultipleOperations)  
+    -   [Uruchom wiele operacji i Zakolejkuj dane wyjściowe](#BKMK_RunMultipleOperations)  
   
--   [Przeglądanie i uruchamianie przykładową aplikację](#BKMD_SettingUpTheExample)  
+-   [Przeglądanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
->  Aby uruchomić przykład, musi mieć program Visual Studio 2012 lub nowszej i .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
+>  Aby uruchomić przykład, konieczne jest posiadanie programu Visual Studio 2012 lub nowszego oraz programu .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
   
-##  <a name="BKMK_RecognizingReentrancy"></a> Rozpoznawanie Wielobieżność  
- W przykładzie w tym temacie, wybierz opcję użytkownicy **Start** przycisk, aby zainicjować asynchronicznego aplikację, która pobiera szereg witryn sieci Web, a następnie oblicza całkowita liczba bajtów, które zostaną pobrane. Synchroniczną wersję przykładu będzie odpowiadać taki sam sposób niezależnie od ile razy użytkownik wybierze przycisk, ponieważ po pierwszym uruchomieniu wątku interfejsu użytkownika ignoruje te zdarzenia, dopóki nie zakończy się aplikacja działa. W aplikacji asynchroniczne jednak wątku interfejsu użytkownika w dalszym ciągu odpowiada i może ponownie operację asynchroniczną, zanim została ukończona.  
+##  <a name="BKMK_RecognizingReentrancy"></a> Uznawanie współużytkowania wątkowości  
+ W przykładzie w tym temacie, wybierz opcję użytkownicy **Start** przycisk, aby zainicjować asynchroniczną aplikację, która pobiera szereg witryn sieci Web, a następnie oblicza całkowita liczba bajtów, które są pobierane. Synchroniczna wersja przykładu reaguje w taki sam sposób, bez względu ile razy użytkownik wybierze przycisk, ponieważ po pierwszym uruchomieniu wątek interfejsu użytkownika ignoruje te zdarzenia, dopóki nie zakończy się uruchamianie aplikacji. W asynchronicznej aplikacji jednak wątku interfejsu użytkownika w dalszym ciągu odpowiada i można ponownie wprowadzić operację asynchroniczną przed jego ukończeniem.  
   
- W poniższym przykładzie przedstawiono oczekiwanych danych wyjściowych, jeśli użytkownik wybierze **Start** przycisk tylko raz. Zostanie wyświetlona lista pobranych witryn sieci Web z rozmiar w bajtach, w każdej lokacji. Całkowita liczba bajtów pojawia się na końcu.  
+ Poniższy przykład ukazuje oczekiwane dane wyjściowe, jeśli użytkownik wybierze **Start** przycisk tylko raz. Zostanie wyświetlona lista pobranych stron internetowych z rozmiar, w bajtach, w każdej lokacji. Całkowita liczba bajtów pojawia się na końcu.  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -47,7 +47,7 @@ Po dołączeniu kodu asynchroniczne w aplikacji należy wziąć pod uwagę i pra
 TOTAL bytes returned:  890591  
 ```  
   
- Jednak jeśli użytkownik wybierze przycisk więcej niż raz, program obsługi zdarzeń jest wywoływany wielokrotnie i proces pobierania jest ponownie wprowadzić hasło zawsze. W związku z tym kilka operacji asynchronicznych są uruchomione w tym samym czasie, dane wyjściowe przeplata wyniki, a całkowita liczba bajtów jest myląca.  
+ Jednak jeśli użytkownik wybierze przycisk więcej niż jeden raz, program obsługi zdarzeń jest wywoływany kilkakrotnie i proces pobierania jest ponownie inicjowany każdorazowo. W rezultacie kilka operacji asynchronicznych jest uruchomionych w tym samym czasie, dane wyjściowe przeplatają wyniki i całkowita liczba bajtów jest myląca ze.  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -84,27 +84,27 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Możesz przejrzeć kod, który generuje dane wyjściowe w tym przewijając na końcu tego tematu. Możesz eksperymentować z kodem pobrać rozwiązanie na komputerze lokalnym, a następnie uruchamiając projekt WebsiteDownload lub przy użyciu kodu na końcu tego tematu, aby utworzyć własny projekt. Aby uzyskać więcej informacji oraz instrukcje, zobacz [przeglądanie i uruchamianie aplikacji przykład](#BKMD_SettingUpTheExample).  
+ Możesz przejrzeć kod, który generuje te dane wyjściowe przewijając do końca tego tematu. Możesz eksperymentować z kodem pobierając rozwiązanie na komputer lokalny, a następnie uruchamiając projekt WebsiteDownload, lub za pomocą kodu na końcu tego tematu, aby utworzyć własny projekt. Aby uzyskać więcej informacji oraz instrukcje, zobacz [recenzowanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample).  
   
-##  <a name="BKMK_HandlingReentrancy"></a> Obsługa ponownego rozpoczęcia  
- Wielobieżność na różne sposoby, w zależności od tego, co ma aplikację w celu może obsłużyć. W tym temacie przedstawiono następujące przykłady:  
+##  <a name="BKMK_HandlingReentrancy"></a> Obsługa współużytkowania wątkowości  
+ Może obsługiwać współużytkowanie wątkowości na wiele sposobów, w zależności od tego, co ma robić Twoja aplikacja. Ten temat przedstawia następujące przykłady:  
   
 -   [Wyłącz przycisk Start](#BKMK_DisableTheStartButton)  
   
-     Wyłącz **Start** przycisk podczas operacji jest uruchomiona, dzięki czemu użytkownik nie może przerwać go.  
+     Wyłącz **Start** przycisku, gdy operacja jest uruchomiony, dzięki czemu użytkownik nie mógł jej przerwać.  
   
 -   [Anuluj i ponownie uruchom operację](#BKMK_CancelAndRestart)  
   
-     Anuluj wszelkie operacje, który jest nadal uruchomiona, gdy użytkownik wybierze **Start** przycisk ponownie, a następnie kontynuuj let najbardziej ostatnio żądanej operacji.  
+     Anulować wszelkie operacje, które wciąż działają, gdy użytkownik wybierze **Start** ponownie przycisk, a następnie kontynuuj umożliwiają niedawno żądanej operacji.  
   
--   [Uruchamianie wielu operacji i danych wyjściowych w kolejce](#BKMK_RunMultipleOperations)  
+-   [Uruchom wiele operacji i Zakolejkuj dane wyjściowe](#BKMK_RunMultipleOperations)  
   
-     Zezwalaj na wszystkie żądane operacje wykonywane asynchronicznie, ale koordynuje wyświetlania danych wyjściowych, aby jednocześnie i w kolejności zostaną wyświetlone wyniki z każdej operacji.  
+     Zezwalaj wszystkim wymaganym operacjom na uruchamianie asynchronicznie, ale Koordynuj dane wyjściowe, tak aby wyniki z każdej operacji były wyświetlane razem i w kolejności.  
   
 ###  <a name="BKMK_DisableTheStartButton"></a> Wyłącz przycisk Start  
- Możesz zablokować **Start** przycisk uruchomionej operacji przez wyłączenie przycisku w górnej części `StartButton_Click` obsługi zdarzeń. Następnie można ponownie włączyć za pomocą przycisku `finally` blokować po zakończeniu operacji, dzięki czemu użytkownicy mogą ponownie uruchom aplikację.  
+ Możesz zablokować **Start** przycisk uruchomionej operacji przez wyłączenie przycisku u góry `StartButton_Click` programu obsługi zdarzeń. Następnie możesz ponownie włączyć przycisk od wewnątrz `finally` blokować po zakończeniu operacji, dzięki czemu użytkownicy mogą uruchamiać aplikację ponownie.  
   
- Aby skonfigurować ten scenariusz, wprowadź następujące zmiany do podstawowego kodu, który znajduje się w [przeglądanie i uruchamianie aplikacji przykład](#BKMD_SettingUpTheExample). Możesz również pobrać Zakończono aplikacji z [przykłady Async: ponownego rozpoczęcia w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa projektu jest DisableStartButton.  
+ Aby skonfigurować ten scenariusz, należy wprowadzić następujące zmiany do kodu podstawowego, który znajduje się w [recenzowanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample). Możesz również pobrać gotową aplikację z [próbki asynchroniczne: współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa projektu to DisableStartButton.  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -131,16 +131,16 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }  
 ```  
   
- W wyniku zmian, przycisk przestaje odpowiadać podczas `AccessTheWebAsync` pobierania witryny sieci Web, więc nie można ponownie wprowadzić hasło procesu.  
+ W wyniku zmian przycisk przestaje odpowiadać podczas `AccessTheWebAsync` pobiera strony internetowe, dzięki czemu nie trzeba ponownie wprowadzić ten proces.  
   
 ###  <a name="BKMK_CancelAndRestart"></a> Anuluj i ponownie uruchom operację  
- Zamiast wyłączenie **Start** przycisku, można zachować aktywnego przycisku, ale, jeśli użytkownik wybierze ponownie, ten przycisk Anuluj operację, która jest już uruchomiona i kontynuowania operacji najbardziej ostatnio uruchomiono.  
+ Zamiast wyłączać **Start** przycisku możesz zachować aktywny przycisk, ale, jeśli użytkownik wybierze ten przycisk ponownie, Anuluj operację, która jest już uruchomiona i umożliwić kontynuowanie operacji ostatnio rozpoczętej.  
   
- Aby uzyskać więcej informacji na temat anulowania, zobacz [Fine-Tuning Twoja aplikacja Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
+ Aby uzyskać więcej informacji dotyczących anulowania, zobacz [Fine-Tuning aplikacji asynchronicznej (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Aby skonfigurować ten scenariusz, wprowadź następujące zmiany do podstawowego kodu, który znajduje się w [przeglądanie i uruchamianie aplikacji przykład](#BKMD_SettingUpTheExample). Możesz również pobrać Zakończono aplikacji z [przykłady Async: ponownego rozpoczęcia w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa projektu jest CancelAndRestart.  
+ Aby skonfigurować ten scenariusz, należy wprowadzić następujące zmiany do kodu podstawowego, który znajduje się w [recenzowanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample). Możesz również pobrać gotową aplikację z [próbki asynchroniczne: współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa projektu to CancelAndRestart.  
   
-1.  Deklarowanie <xref:System.Threading.CancellationTokenSource> zmiennej `cts`, który znajduje się w zakresie dla wszystkich metod.  
+1.  Zadeklaruj <xref:System.Threading.CancellationTokenSource> zmiennej `cts`, który znajduje się w zakresie dla wszystkich metod.  
   
     ```csharp  
     public partial class MainWindow : Window   // Or class MainPage  
@@ -149,7 +149,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
         CancellationTokenSource cts;  
     ```  
   
-2.  W `StartButton_Click`, określić, czy operacja jest już przetwarzane. Jeśli wartość `cts` jest wartość null, nie jest operacja już aktywne. Jeśli wartość nie jest pusta, zostaną anulowane operacja, która jest już uruchomiona.  
+2.  W `StartButton_Click`, określić, czy operacja jest już w toku. Jeśli wartość `cts` jest wartość null, operacja nie jest już aktywny. Jeśli wartość nie jest null, operacja, która jest już uruchomiona zostanie anulowane.  
   
     ```csharp  
     // *** If a download process is already underway, cancel it.  
@@ -168,7 +168,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     cts = newCTS;  
     ```  
   
-4.  Na koniec `StartButton_Click`, bieżący proces zostanie zakończony, a więc ustaw wartość `cts` do wartości null.  
+4.  Na koniec `StartButton_Click`, bieżący proces się zakończy, więc ustaw wartość `cts` powrót do wartości null.  
   
     ```csharp  
     // *** When the process is complete, signal that another process can begin.  
@@ -176,7 +176,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
         cts = null;  
     ```  
   
- Poniższy kod przedstawia wszystkie zmiany w `StartButton_Click`. Dodatki są oznaczone gwiazdki.  
+ Poniższy kod pokazuje wszystkie zmiany w `StartButton_Click`. Dodatki są oznaczone gwiazdkami.  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -217,13 +217,13 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  W `AccessTheWebAsync`, wprowadź następujące zmiany.  
   
--   Dodawanie parametru do akceptowania token anulowania z `StartButton_Click`.  
+-   Dodaj parametr do akceptowania tokenu odwołania z `StartButton_Click`.  
   
--   Użyj <xref:System.Net.Http.HttpClient.GetAsync%2A> metodę, aby pobrać witryn sieci Web, ponieważ `GetAsync` akceptuje <xref:System.Threading.CancellationToken> argumentu.  
+-   Użyj <xref:System.Net.Http.HttpClient.GetAsync%2A> metody do pobierania witryn sieci Web, ponieważ `GetAsync` akceptuje <xref:System.Threading.CancellationToken> argumentu.  
   
--   Przed wywołaniem `DisplayResults` do wyświetlenia wyników dla poszczególnych witryn pobrany, sprawdź `ct` Aby sprawdzić, czy bieżąca operacja nie została anulowana.  
+-   Przed wywołaniem `DisplayResults` do wyświetlania wyników dla każdej pobranej witryny sieci Web, sprawdź `ct` Aby sprawdzić, czy bieżąca operacja nie została anulowana.  
   
- Poniższy kod przedstawia te zmiany, które są oznaczone ikoną z gwiazdki.  
+ Poniższy kod przedstawia te zmiany, które są oznaczone gwiazdkami.  
   
 ```csharp  
 // *** Provide a parameter for the CancellationToken from StartButton_Click.  
@@ -263,7 +263,7 @@ async Task AccessTheWebAsync(CancellationToken ct)
 }     
 ```  
   
- Jeśli wybierzesz **Start** przycisk kilka razy uruchomiona ta aplikacja powinna generować wyniki podobne do następujących danych wyjściowych.  
+ Jeśli wybierzesz **Start** przycisk kilka razy ta aplikacja jest uruchomiona, powinno to dawać wyniki podobne do następujących danych wyjściowych.  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -291,16 +291,16 @@ Download canceled.
 TOTAL bytes returned:  890591  
 ```  
   
- Aby wyeliminować częściowej listy, usuń znaczniki komentarza pierwszego wiersza kodu w `StartButton_Click` do wyczyść pola tekstowego użytkownik uruchamia ponownie wykonać operację.  
+ Aby wyeliminować częściowe listy, Usuń komentarz z pierwszego wiersza kodu w `StartButton_Click` aby czyścić pole tekstowe za każdym razem, kiedy użytkownik uruchamia operację.  
   
-###  <a name="BKMK_RunMultipleOperations"></a> Uruchamianie wielu operacji i danych wyjściowych w kolejce  
- W tym przykładzie trzeci jest najbardziej skomplikowanych, że operacja asynchroniczna za każdym razem, użytkownik zdecyduje się na uruchomieniu aplikacji **Start** przycisk, a wszystkie operacje uruchomienia aż do ukończenia. Żądanych operacji pobierania witryny sieci Web z listy asynchronicznie, ale dane wyjściowe z działania są prezentowane sekwencyjnie. Oznacza to, że przeplatana rzeczywistego działania pobierania jako danych wyjściowych w [rozpoznawanie Wielobieżność](#BKMK_RecognizingReentrancy) pokazuje, ale lista wyników dla każdej grupy są przedstawione oddzielnie.  
+###  <a name="BKMK_RunMultipleOperations"></a> Uruchom wiele operacji i Zakolejkuj dane wyjściowe  
+ Trzeci przykład jest najbardziej skomplikowany, w tym, że aplikacja rozpoczyna kolejną operację asynchroniczną za każdym razem, gdy użytkownik wybierze **Start** przycisk, a wszystkie operacje do zakończenia. Wszystkie żądane operacje pobierają witryny sieci Web z listy asynchronicznie, ale dane wyjściowe operacji są przedstawiane sekwencyjnie. Oznacza to, że rzeczywiste działanie pobierania odbywa się z przeplotem, jako dane wyjściowe w [rozpoznawaniu współużytkowania wątkowości](#BKMK_RecognizingReentrancy) pokazuje, ale lista wyników dla każdej grupy jest prezentowana oddzielnie.  
   
- Operacje udostępniania globalnym <xref:System.Threading.Tasks.Task>, `pendingWork`, która służy jako kontroler proces wyświetlania.  
+ Operacje współkorzystają z globalnego <xref:System.Threading.Tasks.Task>, `pendingWork`, który służy jako strażnik dla procesu wyświetlania.  
 
- Aby skonfigurować ten scenariusz, wprowadź następujące zmiany do podstawowego kodu, który znajduje się w [przeglądanie i uruchamianie aplikacji przykład](#BKMD_SettingUpTheExample). Możesz również pobrać Zakończono aplikacji z [przykłady Async: ponownego rozpoczęcia w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa projektu jest QueueResults.  
+ Aby skonfigurować ten scenariusz, należy wprowadzić następujące zmiany do kodu podstawowego, który znajduje się w [recenzowanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample). Możesz również pobrać gotową aplikację z [próbki asynchroniczne: współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa projektu jest QueueResults.  
    
- Następujące dane wyjściowe przedstawia wynik, jeśli użytkownik wybierze **Start** przycisk tylko raz. Etykieta litera, A, wskazuje, że wynik jest od momentu pierwszego **Start** przycisk zostanie wybrany. Numery wyświetlić kolejność adresów URL na liście elementów docelowych pobierania.  
+ Następujące dane wyjściowe pokazują wynik, jeśli użytkownik wybierze **Start** przycisk tylko raz. Etykieta litery A, wskazuje, że wynik dotyczy po raz pierwszy **Start** wciśnięcia przycisku. Liczby pokazują kolejność adresów URL na liście elementów docelowych pobierania.  
   
 ```  
 #Starting group A.  
@@ -320,7 +320,7 @@ TOTAL bytes returned:  918876
 #Group A is complete.  
 ```  
   
- Jeśli użytkownik zdecyduje się **Start** trzy razy przycisk, aplikacja generuje dane wyjściowe podobne następujące wiersze. Wiersze informacji rozpoczynających się od krzyżyk podpisać śledzenia (#) postęp aplikacji.  
+ Jeśli użytkownik wybierze **Start** przycisk trzy razy, aplikacja generuje dane wyjściowe podobne do następujących wierszy. Linie informacyjne, rozpoczynające się od znaku funta Zaloguj (#) śledzą postęp aplikacji.  
   
 ```  
 #Starting group A.  
@@ -376,12 +376,12 @@ TOTAL bytes returned:  920526
 #Group C is complete.  
 ```  
   
- Grupy B i C uruchomić przed zakończył grupy A, ale dane wyjściowe dla każdej grupy jest wyświetlany osobno. Wszystkie dane wyjściowe dla grupy A występuje jako pierwszy, a następnie wszystkie dane wyjściowe dla grupy B, a następnie wszystkie dane wyjściowe dla grupy C. Aplikacja zawsze wyświetla grup w kolejności i dla każdej grupy zawsze wyświetla informacje o poszczególnych witrynach sieci Web w kolejności adresy URL są wyświetlane na liście adresów URL.  
+ Grupy B i C uruchomić przed grupy A zostało zakończone, ale dane wyjściowe dla każdej grupy pojawiają się oddzielnie. Wszystkie dane wyjściowe dla grupy A pojawiają się pierwsze, wszystkie dane wyjściowe dla grupy B, a następnie wszystkie dane wyjściowe dla grupy C. Aplikacja zawsze wyświetla grupy w kolejności i, dla każdej grupy zawsze wyświetla informacje o poszczególnych witrynach sieci Web w kolejności, adresy URL są wyświetlane na liście adresów URL.  
   
- Jednak nie można przewidzieć kolejność, w którym rzeczywistego wystąpienia pliki do pobrania. Po uruchomieniu wielu grup zadań pobierania, które generują one są wszystkie aktywne. Nie można zakładać, że a – 1 zostaną pobrane przed b-1 i nie można zakładać, że a – 1 zostaną pobrane przed A-2.  
+ Jednak nie można przewidzieć kolejności, w której rzeczywiście wystąpi pobieranie. Po uruchomieniu wielu grup zadań pobierania, które generują wszystkie są aktywne. Nie można zakładać, że A-1 będą pobierane przed b-1 i nie można zakładać, że A-1 będą pobierane przed A-2.  
   
-#### <a name="global-definitions"></a>Definicje globalnej  
- Przykładowy kod zawiera następujące dwa deklaracje globalne, które są widoczne na wszystkie metody.  
+#### <a name="global-definitions"></a>Globalne definicje  
+ Przykładowy kod zawiera poniższe dwie deklaracje globalne, które są widoczne ze wszystkich metod.  
   
 ```csharp  
 public partial class MainWindow : Window  // Class MainPage in Windows Store app.  
@@ -391,10 +391,10 @@ public partial class MainWindow : Window  // Class MainPage in Windows Store app
     private char group = (char)('A' - 1);  
 ```  
   
- `Task` Zmiennej `pendingWork`, nadzoruje proces wyświetlania i uniemożliwia dowolną grupę zakłócania pracy wyświetlania innej grupy. Zmienna znak `group`, dane wyjściowe z różnych grup, aby sprawdzić, czy wyniki są wyświetlane w oczekiwanej kolejności etykiet.  
+ `Task` Zmiennej `pendingWork`, nadzoruje proces wyświetlania i zapobiega żadnej grupy zakłócania pracy wyświetlania innej grupy. Zmienna znaku `group`, oznacza dane wyjściowe z różnych grup, aby sprawdzić, czy wyniki są wyświetlane w oczekiwanej kolejności.  
   
-#### <a name="the-click-event-handler"></a>Obsługi zdarzeń kliknięcia  
- Program obsługi zdarzeń, `StartButton_Click`, rośnie litery grupy za każdym razem, użytkownik wybierze **Start** przycisku. Następnie wywołań obsługi `AccessTheWebAsync` się uruchomić operacji pobierania.  
+#### <a name="the-click-event-handler"></a>Program obsługi zdarzeń kliknięcie  
+ Program obsługi zdarzeń `StartButton_Click`, rośnie literę grupy za każdym razem, użytkownik wybierze **Start** przycisku. Następnie program obsługi zdarzeń wywołuje `AccessTheWebAsync` można uruchomić operację pobierania.  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -421,11 +421,11 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 ```  
   
 #### <a name="the-accessthewebasync-method"></a>The AccessTheWebAsync Method  
- W tym przykładzie dzieli `AccessTheWebAsync` do dwóch metod. Pierwsza metoda `AccessTheWebAsync`, uruchamia wszystkie zadania pobierania grupy i konfiguruje `pendingWork` kontrolować proces wyświetlania. Metoda używa języka zapytanie zintegrowanym (LINQ query) i <xref:System.Linq.Enumerable.ToArray%2A> uruchomić wszystkie zadania pobierania w tym samym czasie.  
+ Ten przykład dzieli `AccessTheWebAsync` na dwie metody. Pierwsza metoda `AccessTheWebAsync`, uruchamia wszystkie zadania pobierania dla grupy i konfiguruje `pendingWork` kontrolować proces wyświetlania. Metoda wykorzystuje Language Integrated Query (zapytanie LINQ) i <xref:System.Linq.Enumerable.ToArray%2A> można uruchomić zadania pobierania w tym samym czasie.  
   
- `AccessTheWebAsync` następnie wywołuje `FinishOneGroupAsync` poczekać na ukończenie każdego pobrania i wyświetlenia jej długość.  
+ `AccessTheWebAsync` następnie wywołuje `FinishOneGroupAsync` oczekiwać na zakończenie każdego pobrania i wyświetlić jego długość.  
   
- `FinishOneGroupAsync` Zwraca klasę task, która jest przypisana do `pendingWork` w `AccessTheWebAsync`. Czy wartość zapobiega przerwania przez inną operację przed ukończeniem zadania.  
+ `FinishOneGroupAsync` Zwraca klasę task, która jest przypisana do `pendingWork` w `AccessTheWebAsync`. Ta wartość zapobiega przerywaniu przez inną operację przed zakończeniem zadania.  
   
 ```csharp  
 private async Task<char> AccessTheWebAsync(char grp)  
@@ -453,9 +453,9 @@ private async Task<char> AccessTheWebAsync(char grp)
 ```  
   
 #### <a name="the-finishonegroupasync-method"></a>Metoda FinishOneGroupAsync  
- Ta metoda przełączanie po kolei zadania pobierania w grupie, oczekiwanie na każdym z nich, wyświetlanie długość pobrany witryny sieci Web i dodawanie długość do całkowitej.  
+ Ta metoda przechodzi cyklicznie przez zadania pobierania w grupie, oczekujące na każdym z nich, wyświetlając długość pobranej witryny sieci Web i dodając długość do całkowitej.  
   
- Pierwsza instrukcja w `FinishOneGroupAsync` używa `pendingWork` aby upewnić się, że wprowadzanie metody zakłócał operacja, która jest już w procesie wyświetlania lub już jest oczekiwane. Jeśli takie działanie jest w toku, wprowadzając operacji oczekiwania kolei.  
+ Pierwsza instrukcja w `FinishOneGroupAsync` używa `pendingWork` aby upewnić się, że wprowadzenie metody nie koliduje z operacją, która jest już w procesie wyświetlania lub która już oczekuje. Jeśli taka operacja jest w toku, wchodząca operacja musi czekać na swoją kolej.  
   
 ```csharp  
 private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] contentTasks, char grp)  
@@ -482,12 +482,12 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 ```  
   
    
-#### <a name="points-of-interest"></a>Ważne  
- Wiersze informacji rozpoczynające się znakiem numeru (#) w danych wyjściowych wyjaśnienie, jak działa w tym przykładzie.  
+#### <a name="points-of-interest"></a>Punktów orientacyjnych  
+ Linie informacyjne, rozpoczynające się od znaku funta (#) w danych wyjściowych objaśnić, jak działa ten przykład.  
   
- Dane wyjściowe zawierają następujące wzorce.  
+ Dane wyjściowe pokazują następujące wzorce.  
   
--   Grupy można uruchomić podczas poprzedniej grupy są wyświetlane dane wyjściowe, ale nie jest przerywana wyświetlanie wynik poprzedniego grupy.  
+-   Grupę można uruchomić podczas poprzedniej grupy jest wyświetlanie danych wyjściowych, ale wyświetlanie danych wyjściowych poprzedniej grupy nie zostanie przerwane.  
   
     ```  
     #Starting group A.  
@@ -523,61 +523,61 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     TOTAL bytes returned:  915908  
     ```  
   
--   `pendingWork` Zadań ma wartość null na początku `FinishOneGroupAsync` tylko dla grupy A, które uruchamiane jako pierwsze. Grupy A jeszcze nie ukończone wyrażenie await, po osiągnięciu `FinishOneGroupAsync`. W związku z tym kontroli nie zwróciła do `AccessTheWebAsync`, a pierwsze przypisanie do `pendingWork` nie wystąpił.  
+-   `pendingWork` Zadania ma wartość null na początku `FinishOneGroupAsync` tylko dla grupy A, uruchomionej w pierwszej kolejności. Grupa A jeszcze nie zakończyła wykonywania wyrażenia oczekiwania, po osiągnięciu `FinishOneGroupAsync`. W związku z tym, formant nie wrócił do `AccessTheWebAsync`, a pierwsze przypisanie do `pendingWork` nie wystąpiło.  
   
--   Następujące dwa wiersze zawsze występować razem w danych wyjściowych. Ten kod nie przerywa pracy między uruchamiania operacji grupy `StartButton_Click` i przypisywanie zadań dla grupy w celu `pendingWork`.  
+-   Następujące dwa wiersze zawsze pojawiają się razem w danych wyjściowych. Kod nigdy nie jest przerywany między rozpoczęciem operacji grupy `StartButton_Click` i przypisywaniem zadania dla grupy w celu `pendingWork`.  
   
     ```  
     #Starting group B.  
     #Task assigned for group B. Download tasks are active.  
     ```  
   
-     Po wprowadzeniu grupy `StartButton_Click`, operacja nie wykona wyrażenie await do czasu operacji wejścia `FinishOneGroupAsync`. W związku z tym żadnych innych operacji przejąć kontrolę podczas tego segmentu kodu.  
+     Po przejściu grupy do stanu `StartButton_Click`, operacja nie kończy się i wyrażenie oczekuje, aż operacja wejdzie w stan `FinishOneGroupAsync`. Dlatego żadna inna operacja może przejmować kontroli w tym segmencie kodu.  
   
-##  <a name="BKMD_SettingUpTheExample"></a> Przeglądanie i uruchamianie przykładową aplikację  
- Aby lepiej zrozumieć przykładową aplikację, można go pobrać, kompilacji samodzielnie lub przejrzeć kod na końcu tego tematu bez stosowania aplikacji.  
+##  <a name="BKMD_SettingUpTheExample"></a> Przeglądanie i uruchamianie aplikacji przykładowych  
+ Aby lepiej zrozumieć przykładową aplikację, możesz ją pobrać, skompilować ją samodzielnie lub przejrzeć kod na końcu tego tematu bez wdrażania aplikacji.  
   
 > [!NOTE]
->  Do uruchomienia w przykładzie jako aplikację pulpitu systemu Windows Presentation Foundation (WPF), musi mieć program Visual Studio 2012 lub nowszej i .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
+>  Aby uruchomić przykład jako aplikację pulpitu Windows Presentation Foundation (WPF), konieczne jest posiadanie programu Visual Studio 2012 lub nowszego oraz programu .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
   
 ###  <a name="BKMK_DownloadingTheApp"></a> Pobieranie aplikacji  
   
-1.  Pobierz skompresowany plik z [przykłady Async: ponownego rozpoczęcia w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
+1.  Pobierz skompresowany plik z [próbki asynchroniczne: współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
-2.  Dekompresja pobranego pliku, a następnie uruchom program Visual Studio.  
+2.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
-3.  Na pasku menu wybierz **pliku**, **Otwórz**, **projektu/rozwiązania**.  
+3.  Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
   
-4.  Przejdź do folderu, który przechowuje zdekompresowanych przykładowy kod, a następnie otwórz plik rozwiązania (sln).  
+4.  Przejdź do folderu, który posiada zdekompresowany kod przykładu, a następnie otwórz plik rozwiązania (.sln).  
   
-5.  W **Eksploratora rozwiązań**, otwórz menu skrótów projektu, który chcesz uruchomić, a następnie wybierz pozycję **Ustaw jako StartUpProject**.  
+5.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, który chcesz uruchomić, a następnie wybierz **Ustaw jako projekt startowy**.  
   
-6.  Wybierz klawisze CTRL + F5, aby skompilować i uruchomić projekt.  
+6.  Wybierz kombinację klawiszy CTRL + F5 Aby skompilować i uruchomić projekt.  
   
-###  <a name="BKMK_BuildingTheApp"></a> Tworzenie aplikacji  
- W poniższej sekcji przedstawiono kod służący do kompilacji w przykładzie jako aplikacji WPF.  
+###  <a name="BKMK_BuildingTheApp"></a> Kompilowanie aplikacji  
+ W poniższej sekcji przedstawiono kod, aby zbudować przykład jako aplikację WPF.  
   
-##### <a name="to-build-a-wpf-app"></a>Do utworzenia aplikacji WPF  
+##### <a name="to-build-a-wpf-app"></a>Aby utworzyć aplikację WPF  
   
 1.  Uruchom program Visual Studio.  
   
-2.  Na pasku menu wybierz **pliku**, **nowy**, **projektu**.  
+2.  Na pasku menu wybierz **pliku**, **New**, **projektu**.  
   
      **Nowy projekt** zostanie otwarte okno dialogowe.  
   
 3.  W **zainstalowane szablony** okienku rozwiń **Visual C#**, a następnie rozwiń węzeł **Windows**.  
   
-4.  Lista typów projektów, wybranie **aplikacji WPF**.  
+4.  Na liście typów projektów, wybierz opcję **aplikacji WPF**.  
   
-5.  Nazwij projekt `WebsiteDownloadWPF`, a następnie wybierz pozycję **OK** przycisku.  
+5.  Nadaj projektowi nazwę `WebsiteDownloadWPF`, a następnie wybierz **OK** przycisku.  
   
-     Nowy projekt zostanie wyświetlony w **Eksploratora rozwiązań**.  
+     Nowy projekt, który pojawia się w **Eksploratora rozwiązań**.  
   
-6.  Wybierz w Visual Studio Code edytorze **MainWindow.xaml** kartę.  
+6.  W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.  
   
-     Jeśli karta jest niewidoczna, otwórz menu skrótów MainWindow.xaml w **Eksploratora rozwiązań**, a następnie wybierz pozycję **kod widoku**.  
+     Jeśli karta nie jest widoczna, otwórz menu skrótów dla pliku MainWindow.xaml w **Eksploratora rozwiązań**, a następnie wybierz **Wyświetl kod**.  
   
-7.  W **XAML** widoku MainWindow.xaml, Zastąp kod następującym kodem.  
+7.  W **XAML** wyświetlić pliku mainwindow.XAML, Zastąp kod następującym kodem.  
   
     ```csharp  
     <Window x:Class="WebsiteDownloadWPF.MainWindow"  
@@ -595,11 +595,11 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     </Window>  
     ```  
   
-     Proste okna, który zawiera pole tekstowe i przycisk pojawia się w **projekt** widoku MainWindow.xaml.  
+     Proste okno, które zawiera pole tekstowe i przycisk pojawia się w **projektowania** widoku MainWindow.xaml.  
   
 8.  Dodaj odwołanie do <xref:System.Net.Http>.  
   
-9. W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.cs, a następnie wybierz **kod widoku**.  
+9. W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.cs, a następnie wybierz **Wyświetl kod**.  
   
 10. W MainWindow.xaml.cs Zastąp kod następującym kodem.  
   
@@ -706,10 +706,11 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     }  
     ```  
   
-11. Wybierz klawiszy CTRL + F5, uruchom program, a następnie wybierz pozycję **Start** przycisk kilka razy.  
+11. Wybierz klawisze CTRL + F5, aby uruchomić program, a następnie wybierz **Start** przycisk kilka razy.  
   
-12. Wprowadź zmiany z [Wyłącz przycisk Start](#BKMK_DisableTheStartButton), [Anuluj i ponownie uruchom operację](#BKMK_CancelAndRestart), lub [uruchomić wiele operacji i kolejki danych wyjściowych](#BKMK_RunMultipleOperations) do obsługi ponownego rozpoczęcia.  
+12. Wprowadź zmiany w [Wyłącz przycisk Start](#BKMK_DisableTheStartButton), [anulowania i ponownego uruchamiania operacji](#BKMK_CancelAndRestart), lub [uruchomić wiele operacji i kolejki danych wyjściowych](#BKMK_RunMultipleOperations) do obsługi współużytkowania wątkowości.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: 0dc0ddaa1f64b75c0b4ccc1f5e73638576ea3da2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408455"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523485"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ustawienia zabezpieczeń może spowodować aplikację do uruchamiania inaczej w środowisku częściowej relacji zaufania, niż na komputerze lokalnym. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ogranicza dostęp do takich krytycznych zasobów lokalnych, jak system plików, sieci i niezarządzanych interfejsów API, między innymi. Ustawienia zabezpieczeń wpływają na możliwość wywołania interfejsu API Win32 firmy Microsoft lub innych interfejsów API, którego nie można zweryfikować przez system zabezpieczeń. Zabezpieczenia wpływa również na innych aspektach związanych z aplikacji, w tym pliku i dostęp do danych i drukowania. Aby uzyskać więcej informacji na temat plików i dostęp do danych w środowisku częściowej relacji zaufania, zobacz [więcej bezpieczny plik i dostęp do danych w formularzach Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Aby uzyskać więcej informacji na temat Drukowanie w środowisku częściowej relacji zaufania, zobacz [więcej Secure drukowanie w formularzach Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  

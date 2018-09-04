@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 4370a7a700a01943548bf067827e6640245caf4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482167"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516794"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Pobieranie danych przy użyciu elementu DataReader
 Trwa pobieranie danych przy użyciu **DataReader** obejmuje utworzenie wystąpienia **polecenia** obiektu, a następnie utworzenie **DataReader** przez wywołanie metody  **Command.ExecuteReader** pobieranie wierszy ze źródła danych. Poniższy przykład ilustruje użycie **DataReader** gdzie `reader` reprezentuje prawidłowy element DataReader i `command` reprezentuje prawidłowy obiekt polecenia.  

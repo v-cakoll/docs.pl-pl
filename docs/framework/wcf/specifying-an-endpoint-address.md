@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 718a0c086181546ba7b7fb3b31fce0732dd99382
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401770"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517119"
 ---
 # <a name="specifying-an-endpoint-address"></a>Określanie adresu punktu końcowego
 Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się za pośrednictwem jego punktów końcowych. Każdy <xref:System.ServiceModel.Description.ServiceEndpoint> zawiera <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>, a <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Kontrakt określa, jakie operacje są dostępne. Powiązanie określa sposób komunikowania się z usługą i określa adres, gdzie można znaleźć tę usługę. Każdy punkt końcowy musi mieć unikatowy adres. Adres punktu końcowego jest reprezentowany przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera jednolite zasobów identyfikator (URI) reprezentujący adres usługi, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, która reprezentuje tożsamość zabezpieczeń usługi, a kolekcja opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Opcjonalne nagłówki zawierają więcej szczegółowych informacji adresowania, aby zidentyfikować lub nawiązać kontakt z punktem końcowym. Na przykład nagłówków, można wskazać sposób przetwarzania wiadomości przychodzących, gdzie wysłać komunikat odpowiedzi punktu końcowego lub które wystąpienie usługi do przetwarzania wiadomości przychodzących konkretnego użytkownika, jeśli wiele wystąpień są dostępne.  

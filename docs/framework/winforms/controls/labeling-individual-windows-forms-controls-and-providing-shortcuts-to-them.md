@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
 ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409023"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521007"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich
 Dodano do formularzy Windows Forms kontrolki mają właściwości i metod, które są używane do dalszego specialize użytkownika środowiska. Dostosowywanie interfejsu użytkownika do potrzeb użytkownika jest niezwykle ważna we dobrze zaprojektowanego aplikacji Windows.  

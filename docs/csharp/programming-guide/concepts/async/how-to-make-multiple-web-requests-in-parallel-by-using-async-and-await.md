@@ -2,21 +2,21 @@
 title: 'Porady: wiele żądań sieci Web równolegle za pomocą async i await (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: e3e94c6ba475a56b5a2b7069eac1f1bbe45498c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8fc5cad11f862884d64c9e7fc6a38f2edaf0a43
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337759"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513924"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Porady: wiele żądań sieci Web równolegle za pomocą async i await (C#)
-W metodzie asynchronicznej zadania są uruchamiane, gdy są tworzone. [Await](../../../../csharp/language-reference/keywords/await.md) operator jest stosowany do zadań w momencie w metodzie, której nie można kontynuować przetwarzania przed zakończeniem zadania. Często zadania jest oczekiwane, natychmiast po utworzeniu, jak przedstawiono na poniższym przykładzie.  
+W metodzie asynchronicznej zadania są uruchamiane po ich utworzeniu. [Await](../../../../csharp/language-reference/keywords/await.md) operator jest stosowany do zadania w tym punkcie metody, których nie można kontynuować przetwarzania przed zakończeniem zadania. Często zadanie jest oczekiwane, zaraz po jego utworzeniu, co ilustruje poniższy przykład.  
   
 ```csharp  
 var result = await someWebAccessMethodAsync(url);  
 ```  
   
- Jednak można oddzielić Tworzenie zadania z oczekiwanie na zadanie, jeśli program ma wykonywać inne zadania, które nie są zależne od ukończenia zadania.  
+ Jednakże można oddzielić Tworzenie zadania od oczekiwania na zadanie, jeśli w programie trzeba wykonać inne prace, które nie są zależne od zakończenia tego zadania.  
   
 ```csharp  
 // The following line creates and starts the task.  
@@ -30,22 +30,22 @@ var myTask = someWebAccessMethodAsync(url);
 var result = await myTask;  
 ```  
   
- Między uruchamianie zadania i oczekujące na on, można uruchomić inne zadania. Dodatkowe zadania niejawnie równolegle, ale nie dodatkowe wątki są tworzone.  
+ Między rozpoczęciem zadania i oczekiwaniem na, możesz uruchomić inne zadania. Dodatkowe zadania w sposób niejawny uruchamiane równolegle, ale żadne dodatkowe wątki nie są tworzone.  
   
- Następujący program uruchamia trzy pobieranie asynchroniczne sieci web i Oczekiwanie je w kolejności, w którym są nazywane. Powiadomienia i po uruchomieniu programu, w której zadania nie zawsze kończy się w kolejności, w którym są tworzone i oczekiwane. Decydując się uruchomić, kiedy są tworzone i co najmniej jednego zadania może zakończyć się pomyślnie przed metody osiągnie wyrażenia await.  
+ Następujący program uruchamia trzy asynchroniczne web pobierania, a następnie oczekuje na ich zakończenie w kolejności, w którym są nazywane. Zwróć uwagę, po uruchomieniu programu, który zadania nie są zawsze kończone w kolejności, w którym są tworzone i oczekiwane. Zaczynają działać, gdyż zostały utworzone, gdy jeden lub więcej zadań może zakończyć zanim metoda osiągnie wyrażenie await.  
   
 > [!NOTE]
->  Aby ukończyć ten projekt, musi mieć program Visual Studio 2012 lub nowszym i .NET Framework 4.5 lub nowszy jest zainstalowany na tym komputerze.  
+>  Aby wykonać ten projekt, jest posiadanie programu Visual Studio 2012 lub nowszym i .NET Framework 4.5 lub nowszy jest zainstalowany na tym komputerze.  
   
- Na przykład innego uruchamiania wielu zadań jednocześnie, zobacz [porady: rozszerzanie async wskazówki za pomocą Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Inny przykład, który rozpoczyna się wiele zadań, w tym samym czasie, zobacz [porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
- Można pobrać kodu w tym przykładzie z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
+ Możesz pobrać kod dla tego przykładu z [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Aby skonfigurować projekt  
   
-1.  Aby skonfigurować aplikacji WPF, wykonaj następujące kroki. Szczegółowe instrukcje w tych krokach można znaleźć [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Aby skonfigurować aplikację programu WPF, wykonaj następujące czynności. Można znaleźć szczegółowe instrukcje tych kroków w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Tworzenie aplikacji programu WPF, która zawiera pole tekstowe i przycisk. Nazwa przycisku `startButton`oraz nazwę pola tekstowego `resultsTextBox`.  
+    -   Tworzenie aplikacji WPF, która zawiera pole tekstowe i przycisk. Nazwij przycisk `startButton`i pole tekstowego `resultsTextBox`.  
   
     -   Dodaj odwołanie do <xref:System.Net.Http>.  
   
@@ -53,9 +53,9 @@ var result = await myTask;
   
 ### <a name="to-add-the-code"></a>Aby dodać kod  
   
-1.  W oknie projektowania MainWindow.xaml, kliknij dwukrotnie przycisk, aby utworzyć `startButton_Click` obsługi zdarzeń w MainWindow.xaml.cs.  
+1.  W oknie projektu, MainWindow.xaml, kliknij dwukrotnie przycisk, aby utworzyć `startButton_Click` programu obsługi zdarzeń w MainWindow.xaml.cs.  
   
-2.  Skopiuj poniższy kod i wklej go do treści `startButton_Click` w MainWindow.xaml.cs.  
+2.  Skopiuj poniższy kod i wklej go w treść `startButton_Click` w MainWindow.xaml.cs.  
   
     ```csharp  
     resultsTextBox.Clear();  
@@ -63,15 +63,15 @@ var result = await myTask;
     resultsTextBox.Text += "\r\n\r\nControl returned to startButton_Click.\r\n";  
     ```  
   
-     Kod wywołuje metodę asynchroniczną `CreateMultipleTasksAsync`, które dyski aplikacji.  
+     Kod wywołuje metodę asynchroniczną, `CreateMultipleTasksAsync`, która steruje aplikacją.  
   
 3.  Dodaj następujące metody pomocy technicznej do projektu:  
   
-    -   `ProcessURLAsync` używa <xref:System.Net.Http.HttpClient> metodę, aby pobrać zawartość witryny sieci Web w postaci tablicy bajtów. Metoda obsługi `ProcessURLAsync` następnie wyświetla i zwraca długość tablicy.  
+    -   `ProcessURLAsync` używa <xref:System.Net.Http.HttpClient> metody do pobierania zawartości witryny sieci Web w postaci tablicy bajtów. Metoda pomocnicza `ProcessURLAsync` następnie wyświetla i zwraca długość tablicy.  
   
-    -   `DisplayResults` Wyświetla liczbę bajtów w tablicy bajtowej dla każdego adresu URL. Pokazuje to wyświetlenie podczas każdego zadania został pobrany.  
+    -   `DisplayResults` Wyświetla liczbę bajtów w tablicy bajtowej dla każdego adresu URL. To wyświetlane, gdy każde zadanie zakończy pobieranie.  
   
-     Skopiuj następujące metody i wklej je po `startButton_Click` obsługi zdarzeń w MainWindow.xaml.cs.  
+     Kopiuj poniższe metody i wklej je za `startButton_Click` programu obsługi zdarzeń w MainWindow.xaml.cs.  
   
     ```csharp  
     async Task<int> ProcessURLAsync(string url, HttpClient client)  
@@ -93,17 +93,17 @@ var result = await myTask;
     }  
     ```  
   
-4.  Na koniec zdefiniować metody `CreateMultipleTasksAsync`, która wykonuje następujące czynności.  
+4.  Na koniec zdefiniuj metodę `CreateMultipleTasksAsync`, który wykonuje następujące czynności.  
   
-    -   Deklaruje metody `HttpClient` obiektu, który chcesz uzyskać dostęp do metody <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> w `ProcessURLAsync`.  
+    -   Metoda deklaruje `HttpClient` obiektu, który jest potrzebny na dostęp do metody <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> w `ProcessURLAsync`.  
   
-    -   Metoda utworzenie i uruchomienie zadania trzy typu <xref:System.Threading.Tasks.Task%601>, gdzie `TResult` jest liczbą całkowitą. Jak każdego zadania zakończeniu `DisplayResults` Wyświetla adres URL zadania i długość zawartości pobrane. Ponieważ zadania są uruchomione asynchronicznie, kolejność wyświetlania wyników może się różnić od kolejności, w której była zadeklarowana.  
+    -   Metoda tworzy i uruchamia trzy zadania typu <xref:System.Threading.Tasks.Task%601>, gdzie `TResult` jest liczbą całkowitą. Gdy poszczególne podzadania zakończą, `DisplayResults` Wyświetla adres URL tego zadania i długość pobranej treści. Ponieważ zadania odbywają się asynchronicznie, kolejność, w jakiej są wyświetlane wyniki mogą różnić się od kolejności, w którym zostały zadeklarowane.  
   
-    -   Metoda oczekujące na zakończenie wszystkich zadań. Każdy `await` operator wstrzymuje wykonywanie `CreateMultipleTasksAsync` dopiero po zakończeniu zadania oczekiwano. Operator pobiera również wartość zwrotna z wywołania `ProcessURLAsync` z każdego ukończonego zadania.  
+    -   Metoda czeka na zakończenie każdego zadania. Każdy `await` operator zawiesza wykonywanie `CreateMultipleTasksAsync` aż oczekiwane zadanie się zakończy. Operator pobiera również wartość zwracaną z wywołania `ProcessURLAsync` z każdego ukończonego zadania.  
   
-    -   Po zakończeniu zadania i wartości całkowite zostały pobrane, metoda sumuje długości witryn sieci Web i wyświetlane wyniki.  
+    -   Kiedy zadania zostały ukończone i pobraniu wartości całkowitych, metoda sumuje długość witryn sieci Web i wyświetla wynik.  
   
-     Następująca metoda skopiuj i wklej go do rozwiązania.  
+     Kopiuj następującą metodę i wkleić go do rozwiązania.  
   
     ```csharp  
     private async Task CreateMultipleTasksAsync()  
@@ -137,7 +137,7 @@ var result = await myTask;
   
 5.  Wybierz klawisz F5, aby uruchomić program, a następnie wybierz **Start** przycisku.  
   
-     Uruchom program kilka razy, aby sprawdzić, czy trzy zadania nie zawsze zakończone w tej samej kolejności i kolejność ich Zakończ nie musi być koniecznie kolejność, w którym są tworzone i oczekiwane.  
+     Uruchom program kilka razy, aby sprawdzić, czy te trzy zadania nie zawsze kończą się w tej samej kolejności i czy kolejność ich zakończenia niekoniecznie jest kolejnością w którym są tworzone i oczekiwane.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod zawiera pełny przykład.  
@@ -226,7 +226,8 @@ namespace AsyncExample_MultipleTasks
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Porady: rozszerzanie async wskazówki za pomocą Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

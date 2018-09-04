@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 3b43e7e3aafda5ee5b6a49f271f725fb8eeeca59
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 22b6cc8fc8c8d9ffd1c2cf4063994ce94cea8e45
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198172"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520846"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Porady: zwracanie podzbiorów właściwości elementu w zapytaniu (Przewodnik programowania w języku C#)
 Użyj typu anonimowego w wyrażeniu zapytania, gdy oba te warunki zostaną spełnione:  
@@ -45,7 +45,8 @@ Console.WriteLine(student.First + " " + student.Last);
   
 -   Aby uruchomić ten kod, skopiuj i Wklej klasy Visual C# projekt aplikacji konsoli, która została utworzona w programie Visual Studio. Domyślnie ten projekt jest przeznaczony dla wersji 3.5 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], które będzie mieć odwołania do System.Core.dll i `using` dyrektywy dla System.Linq. Jeśli co najmniej jeden z tych wymagań brakuje z projektu, możesz je dodać ręcznie.   
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

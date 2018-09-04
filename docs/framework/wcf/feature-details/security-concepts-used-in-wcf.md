@@ -5,11 +5,11 @@ ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: c309b5e5c461b58e887ea634bf3b5177b7c0329b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399934"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521344"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Pojęcia zabezpieczeń użyte dla programu WCF
 Zabezpieczenia usług Windows Communication Foundation (WCF) jest utworzonych na podstawie pojęcia już w użyciu i wdrożone w różnych infrastrukturach zabezpieczeń.  

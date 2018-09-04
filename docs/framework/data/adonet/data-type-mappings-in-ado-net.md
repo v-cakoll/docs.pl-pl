@@ -3,11 +3,11 @@ title: Mapowanie typu danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
 ms.openlocfilehash: aba1eb4fdaaf43d66337ca764fe01b7d3f4624bd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423666"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516930"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Mapowanie typu danych w ADO.NET
 .NET Framework jest oparty na wspólny system typów definiuje, jak typy są deklarowane, używane i zarządzane w środowisku uruchomieniowym. Składa się z typami wartości i typami odwołań, które wynikają z <xref:System.Object> typ podstawowy. Podczas pracy ze źródłem danych, typ danych jest wnioskowany z dostawcy danych, jeśli nie jest jawnie określona. Na przykład <xref:System.Data.DataSet> obiektu jest niezależna od wszelkich określonego źródła danych. Dane w `DataSet` jest pobierany ze źródła danych, a zmiany są utrwalane w źródle danych przy użyciu `DataAdapter`. Oznacza to, że w przypadku `DataAdapter` wypełnia <xref:System.Data.DataTable> w `DataSet` wartościami ze źródła danych, wynikowy typy danych kolumn w `DataTable` są [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów, zamiast specyficzne dla typów [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] danych Dostawca, który jest używany do połączenia ze źródłem danych.  

@@ -3,11 +3,11 @@ title: Program Hello World z usługą routingu
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
 ms.openlocfilehash: 490d91da22b11c269c4d3c11d376087919a608e0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401662"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519202"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Program Hello World z usługą routingu
 Niniejszy przykład pokazuje usługi routingu Windows Communication Foundation (WCF). Usługa routingu jest składnikiem usługi WCF, który ułatwia to dołączenie routerem na podstawie zawartości do aplikacji. W tym przykładzie dostosowuje się standardowej próbki Kalkulator WCF do komunikowania się za pomocą usługi routingu. W tym przykładzie klient Kalkulator jest skonfigurowany do wysyłania wiadomości do punktu końcowego uwidocznionego przez router. Usługa routingu jest skonfigurowana do akceptowania wszystkie komunikaty wysyłane do niej i przekazują je do punktu końcowego, który odnosi się do usługi kalkulatora. Ten sposób wiadomości wysłanych z klienta są odebrany przez router i ponownie kierowane do rzeczywistej usługi kalkulatora. Komunikaty z Kalkulatora usługi są wysyłane do routera, który z kolei przekazuje je do klienta kalkulatora.  

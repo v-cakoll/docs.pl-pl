@@ -5,44 +5,45 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 43012ec1190117b1905b5e44010d5f57a1e543aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b60ad4ce20a1977d309b275b530d03cbb8e1f7d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339829"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514689"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Używanie wyjątków (Przewodnik programowania w języku C#)
-W języku C# błędów w programie w czasie wykonywania są propagowane za pośrednictwem programu przy użyciu mechanizmu o nazwie wyjątków. Wyjątki są zgłaszane przez kod, który wystąpi błąd i przechwycony przez kod, który może poprawić ten błąd. Wyjątki może zostać wygenerowany przez .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) lub kodu w programie. Po wyjątku rozprzestrzenia się górę stosu wywołań do `catch` instrukcji dla wyjątku został znaleziony. Nieprzechwyconych wyjątków są obsługiwane przez program obsługi wyjątków ogólnych obsługiwanych przez system, który wyświetla okno dialogowe.  
+W języku C# błędów w programie w czasie wykonywania są propagowane przez program za pomocą mechanizmu o nazwie wyjątków. Wyjątki są zgłaszane przez kod, który wystąpi błąd i przechwycony przez kod, który można rozwiązać problem. Wyjątki mogą zostać wygenerowane przez .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) lub kodu w programie. Gdy wyjątek jest generowany, rozprzestrzenia się górę stosu wywołań, dopóki `catch` znajduje się instrukcji, dla wyjątku. Nieobsłużone wyjątki są obsługiwane przez wyjątek ogólny program obsługi, dostarczone przez system, który wyświetla okno dialogowe.  
   
- Wyjątki są reprezentowane przez klasy pochodzące od <xref:System.Exception>. Ta klasa zawiera typ wyjątku i zawiera właściwości, które zawierały wszystkie szczegółowe informacje o wyjątku. Zgłaszanie wyjątku obejmuje tworzenie wystąpienia klasy pochodnej wyjątek, opcjonalnie konfigurowania właściwości wyjątku i następnie zgłaszanie obiektu przy użyciu `throw` — słowo kluczowe. Na przykład:  
+ Wyjątki są reprezentowane przez klasy pochodne <xref:System.Exception>. Ta klasa identyfikuje typ wyjątku i zawiera właściwości, które będzie zawierał szczegółowe informacje o wyjątku. Zostanie zgłoszony wyjątek dotyczy tworzenia wystąpienia klasy pochodnej wyjątek, opcjonalnie konfigurowania właściwości wyjątku i następnie zgłaszanie obiektu za pomocą `throw` — słowo kluczowe. Na przykład:  
   
  [!code-csharp[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
   
- Po wyjątek środowiska uruchomieniowego sprawdza bieżącej instrukcji, aby zobaczyć, czy znajduje się w `try` bloku. Jeśli tak jest, wszelkie `catch` bloki skojarzone z `try` bloku jest sprawdzenie, czy ich catch wyjątku. `Catch` bloki zazwyczaj określić typy wyjątków; Jeśli typ `catch` blok jest taki sam typ jak wyjątek lub klasę podstawową wyjątku, `catch` bloku może obsługiwać metodę. Na przykład:  
+ Po jest zgłaszany wyjątek, środowisko uruchomieniowe sprawdza bieżącą instrukcję, aby zobaczyć, czy znajduje się w `try` bloku. Jeśli tak jest, dowolny `catch` bloki skojarzony `try` bloku jest sprawdzenie, czy ich może przechwycić wyjątek. `Catch` bloki zazwyczaj określenie typów wyjątków. Jeśli typ `catch` blok jest taki sam typ co wyjątek lub klasa bazowa wyjątku, `catch` bloku mogą obsługiwać metody. Na przykład:  
   
  [!code-csharp[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
   
- Jeśli instrukcja, która zgłasza wyjątek, nie jest w `try` bloku lub, jeśli `try` bloku ograniczający go nie posiada odpowiadającego `catch` bloku, środowisko uruchomieniowe sprawdza wywołania metody `try` instrukcji i `catch` bloków. Środowisko uruchomieniowe nadal górę stosu wywołania, wyszukiwanie zgodnego `catch` bloku. Po `catch` blok jest znaleziono i wykonać, kontrola jest przekazywana do następnej instrukcji, po którym `catch` bloku.  
+ Jeśli instrukcja, która zgłosiła wyjątek nie jest w ramach `try` bloku lub jeśli `try` blok, który otacza go nie ma odpowiadającego `catch` bloku, środowisko uruchomieniowe sprawdza wywoływania metody dla `try` instrukcji i `catch` bloków. Środowisko uruchomieniowe kontynuuje wywołania stosu, wyszukiwanie zgodnych `catch` bloku. Po `catch` blok zostanie odnaleziony i wykonywane, kontrola przechodzi do następnej instrukcji po tym `catch` bloku.  
   
- A `try` instrukcji może zawierać więcej niż jedną `catch` bloku. Pierwszy `catch` instrukcji, która może obsłużyć wyjątek jest wykonywane; wszystkie następujące `catch` instrukcje, nawet jeśli są one zgodne, są ignorowane. W związku z tym catch bloki zawsze powinna być wyświetlana z najbardziej określonego (lub pochodnego większość) do najmniej specyficznych. Na przykład:  
+ A `try` instrukcji może zawierać więcej niż jedną `catch` bloku. Pierwszy `catch` zostaje wykonana instrukcja, która może obsłużyć wyjątek; wszystkie następujące `catch` instrukcji, nawet jeśli są one zgodne, są ignorowane. W związku z tym, catch bloki zawsze powinny być uporządkowane od najbardziej określonego (lub najbardziej pochodnego) do najmniej specyficznych. Na przykład:  
   
  [!code-csharp[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
   
- Przed `catch` wykonaniu bloku środowiska uruchomieniowego sprawdza, czy `finally` bloków. `Finally` bloki włączyć programisty wyczyścić niejednoznaczne stan może być pozostałe z przerwane `try` bloku, lub aby zwolnić dowolnych zasobów zewnętrznych (na przykład grafiki dojść, połączenia z bazą danych lub plików strumieni) bez oczekiwania na odzyskiwanie Moduł zbierający w środowisku uruchomieniowym finalize obiektów. Na przykład:  
+ Przed `catch` blok jest wykonywany, środowisko uruchomieniowe sprawdza, czy `finally` bloków. `Finally` bloki Włącz programisty wyczyścić stan niejednoznaczny, który może pozostać za pośrednictwem z przerwane `try` bloku, lub zwolnij wszystkie zasoby zewnętrzne (na przykład grafiki obsługuje połączenia z bazą danych lub strumieni plików) bez konieczności oczekiwania na wyrzucanie elementów Moduł zbierający w środowisku uruchomieniowym do sfinalizowania obiektów. Na przykład:  
   
  [!code-csharp[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
   
- Jeśli `WriteByte()` zwrócił wyjątek, kod w ciągu sekundy `try` bloku, który próbuje ponownie otworzyć plik będą się kończyć niepowodzeniem, jeśli `file.Close()` nie jest wywoływany, a plik pozostanie zablokowane. Ponieważ `finally` bloki są wykonywane, nawet jeśli wyjątek `finally` umożliwia bloku w poprzednim przykładzie plik zostanie zamknięty poprawnie i pozwala uniknąć wystąpił błąd.  
+ Jeśli `WriteByte()` zgłosiło wyjątek, kod w drugim `try` blok, który próbuje ponownie otworzyć plik może zakończyć się niepowodzeniem, jeśli `file.Close()` nie jest wywoływana, a plik pozostanie zablokowany. Ponieważ `finally` bloki są wykonywane nawet wtedy, gdy wyjątek jest generowany, `finally` bloku w poprzednim przykładzie pozwala na plik Aby zostać poprawnie zamknięty i pomaga uniknąć błąd.  
   
  Jeśli zgodnego `catch` bloku znajduje się w stosie wywołań po wyjątek wystąpi jedno z trzech zdarzeń:  
   
--   Jeśli wyjątek jest w finalizator, finalizator zostało przerwane i podstawowej finalizator, jest wywoływana.  
+-   Jeśli wyjątek znajduje się w finalizator, finalizator został przerwany, a podstawowy finalizator, nosi nazwę.  
   
--   Jeśli stos wywołań zawiera w konstruktorze statycznym lub inicjatorze pola statycznego <xref:System.TypeInitializationException> jest zgłaszany, z wyjątkiem oryginalnego przypisane do <xref:System.Exception.InnerException%2A> właściwości nowej wyjątek.  
+-   Jeśli zawiera stos wywołań w konstruktorze statycznym lub inicjatorze pola statycznego <xref:System.TypeInitializationException> jest generowany przy użyciu oryginalnego wyjątku, które są przypisane do <xref:System.Exception.InnerException%2A> właściwość nowy wyjątek.  
   
--   Osiągnięto początek wątku zakończenia wątku.  
+-   Po osiągnięciu początek wątek, wątek jest zakończony.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)

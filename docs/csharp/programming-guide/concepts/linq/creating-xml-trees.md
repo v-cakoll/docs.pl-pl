@@ -2,12 +2,12 @@
 title: Tworzenie drzew XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-ms.openlocfilehash: a9e9cfd82434de0fabc8119aa500ad9d9ef8155a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1245c0f087bb63f12d9f17389bf752330ccc7670
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481378"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521541"
 ---
 # <a name="creating-xml-trees-c"></a>Tworzenie drzew XML (C#)
 Jednym z najbardziej typowych zadań XML jest Konstruowanie drzewa XML. W tej sekcji opisano kilka sposobów, aby je tworzyli.  
@@ -23,5 +23,6 @@ Jednym z najbardziej typowych zadań XML jest Konstruowanie drzewa XML. W tej se
 |[Porady: weryfikowanie przy użyciu XSD (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|Przedstawiono sposób sprawdzania poprawności drzewa XML przy użyciu XSD.|  
 |[Weryfikowanie zawartości obiektów XElement i XDocument](../../../../csharp/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md)|W tym artykule opisano prawidłowe argumenty, które mogą być przekazywane do konstruktorów i metod, które są używane do dodawania zawartości do elementów i dokumentów.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

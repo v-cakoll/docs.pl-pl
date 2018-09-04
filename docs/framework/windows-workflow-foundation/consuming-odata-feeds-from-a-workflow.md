@@ -2,12 +2,12 @@
 title: Zużyć OData, źródła danych z przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: 7b9b55d92d81772ed1601ec246cfc2e8aa96c016
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752269"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562483"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Zużyć OData, źródła danych z przepływu pracy
 
@@ -15,7 +15,7 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Za pomocą przykładowej usługi Northwind OData
 
-Przykłady w tym temacie Użyj przykładu Northwind usługi danych znajdującym się w [ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426). Ta usługa jest dostarczana jako część [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) i zapewnia dostęp tylko do odczytu do przykładowej bazy danych Northwind. Jeśli dostęp do zapisu lub razie lokalnej usługi danych WCF można postępuj zgodnie z instrukcjami z [Szybki Start usług danych WCF](http://go.microsoft.com/fwlink/?LinkID=131076) do utworzenia lokalnej usługi OData, która zapewnia dostęp do bazy danych Northwind. W przypadku użycia opcji szybkiego startu, Zastąp lokalny identyfikator URI dla podano w przykładowym kodzie, w tym temacie.
+Przykłady w tym temacie Użyj przykładu Northwind usługi danych znajdującym się w [ http://services.odata.org/Northwind/Northwind.svc/ ](https://go.microsoft.com/fwlink/?LinkID=187426). Ta usługa jest dostarczana jako część [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248) i zapewnia dostęp tylko do odczytu do przykładowej bazy danych Northwind. Jeśli dostęp do zapisu lub razie lokalnej usługi danych WCF można postępuj zgodnie z instrukcjami z [Szybki Start usług danych WCF](https://go.microsoft.com/fwlink/?LinkID=131076) do utworzenia lokalnej usługi OData, która zapewnia dostęp do bazy danych Northwind. W przypadku użycia opcji szybkiego startu, Zastąp lokalny identyfikator URI dla podano w przykładowym kodzie, w tym temacie.
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Korzystanie ze źródłem danych OData przy użyciu biblioteki klienta
 
@@ -30,14 +30,14 @@ Aby wygenerować Northwind bibliotek klienta, można użyć **Dodaj odwołanie d
 Należy pamiętać, że nie istnieją żadne operacje usługi udostępniane przez usługę, a następnie w **usług** listy istnieją elementów reprezentujących podmioty udostępnianych przez usługę danych Northwind. Po dodaniu odwołania do usługi, klas, które będą generowane dla tych jednostek i mogą być używane w kodzie klienta. W przykładach w tym temacie używany w ramach tych zajęć i `NorthwindEntities` klasy do wykonywania zapytań.
 
 > [!NOTE]
-> Aby uzyskać więcej informacji, zobacz [Generowanie biblioteki klienta usługi danych (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=191611).
+> Aby uzyskać więcej informacji, zobacz [Generowanie biblioteki klienta usługi danych (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkID=191611).
 
 ### <a name="using-asynchronous-methods"></a>Używanie metod asynchronicznych
 
 Do adresu możliwych problemów z opóźnieniem, które mogą wystąpić podczas uzyskiwania dostępu do zasobów w sieci Web, zaleca się korzystanie z usług danych WCF asynchronicznie. Biblioteki klienta usługi danych WCF zawierają metody asynchroniczne wywoływanie zapytania, a także Windows Workflow Foundation (WF) <xref:System.Activities.AsyncCodeActivity> klasa do tworzenia działań asynchronicznych. <xref:System.Activities.AsyncCodeActivity> pochodne działania mogą być zapisywane z zalet [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] klas, które mają metod asynchronicznych lub kod, aby być wykonywany asynchronicznie, które mogą być wprowadzane do metody i wywoływane za pomocą delegata. Ta sekcja zawiera dwa przykłady <xref:System.Activities.AsyncCodeActivity> działanie pochodne; taki, który korzysta z biblioteki klienta usługi danych WCF metod asynchronicznych i jedną, która używa delegata.
 
 > [!NOTE]
-> Aby uzyskać więcej informacji, zobacz [operacji asynchronicznych (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396) i [tworzenie działań asynchronicznych](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).
+> Aby uzyskać więcej informacji, zobacz [operacji asynchronicznych (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193396) i [tworzenie działań asynchronicznych](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).
 
 ### <a name="using-client-library-asynchronous-methods"></a>Używanie metod asynchronicznych biblioteki klienta
 
@@ -77,7 +77,7 @@ Oprócz asynchroniczne wywołanie metody z [!INCLUDE[dnprdnshort](../../../inclu
 W poniższym przykładzie `ListCustomers` działania jest zdefiniowana. To działanie wysyła zapytanie usługi przykładowych danych Northwind i zwraca `List<Customer>` zawierającą wszystkich klientów w bazie danych Northwind. Asynchroniczne zadanie jest wykonywane przez `GetCustomers` metody. Ta metoda wysyła zapytanie do usługi dla wszystkich klientów, a następnie kopiuje je do `List<Customer>`. Następnie sprawdza, jeśli są stronicowane wyniki. Jeśli tak, wysyła zapytanie do usługi dla następnej strony wyników, dodaje je do listy i jest powtarzany do momentu pobraniu wszystkich danych klientów.
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat stronicowania w usługach danych programu WCF Zobacz. [Porady: ładowanie stronicowanych wyników (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).
+> Aby uzyskać więcej informacji na temat stronicowania w usługach danych programu WCF Zobacz. [Porady: ładowanie stronicowanych wyników (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193452).
 
 Po dodaniu wszystkich klientów, zwracana jest lista. `GetCustomers` Metoda jest określona w działaniu <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> zastąpienia. Ponieważ metoda nie zwraca wartości, `Func<string, List<Customer>>` zostanie utworzony, aby określić metodę.
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-W tym przykładzie zawiera jedną metodę, która umożliwia używanie nieprzetworzonych danych zwróconych z usługi OData autorzy aplikacji przepływu pracy. Aby uzyskać więcej informacji na temat uzyskiwania dostępu do usługi danych programu WCF za pomocą identyfikatorów URI, zobacz [uzyskiwania dostępu do zasobów usługi danych (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) i [OData: identyfikator URI konwencje](http://go.microsoft.com/fwlink/?LinkId=185564).
+W tym przykładzie zawiera jedną metodę, która umożliwia używanie nieprzetworzonych danych zwróconych z usługi OData autorzy aplikacji przepływu pracy. Aby uzyskać więcej informacji na temat uzyskiwania dostępu do usługi danych programu WCF za pomocą identyfikatorów URI, zobacz [uzyskiwania dostępu do zasobów usługi danych (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193397) i [OData: identyfikator URI konwencje](https://go.microsoft.com/fwlink/?LinkId=185564).

@@ -3,11 +3,11 @@ title: '&lt;transport&gt; w &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
 ms.openlocfilehash: 03e245acd8cb31630d6154e01d934ce6d293f4e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386883"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507967"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;transport&gt; w &lt;netHttpBinding&gt;
 Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu HTTP.  

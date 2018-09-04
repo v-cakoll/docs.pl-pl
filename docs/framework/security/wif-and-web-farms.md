@@ -1,38 +1,38 @@
 ---
-title: WIF i farmy serwerów sieci Web
+title: Program WIF i farmy serwerów sieci Web
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ed6a7fbe550dad85cf505eaf20a446803b84c96f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365416a82881c32b8fdcd3211aa42acb9f273483
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410419"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502732"
 ---
-# <a name="wif-and-web-farms"></a>WIF i farmy serwerów sieci Web
-Korzystając z programu Windows Identity Foundation (WIF) do zabezpieczania zasobów jednostki uzależnionej aplikacji firmy (RP), które zostało wdrożone w farmie sieci web, należy wykonać określone kroki, aby upewnić się, że WIF może przetwarzać tokenów z wystąpień RP aplikacji uruchomionych na różnych komputery z farmy. Proces przetwarzania obejmuje sprawdzanie poprawności Podpisy tokenu sesji, szyfrowania i odszyfrowywania tokenów sesji, buforowanie tokeny sesji i wykrywanie odtwarzany tokenów zabezpieczających.  
+# <a name="wif-and-web-farms"></a>Program WIF i farmy serwerów sieci Web
+Korzystając z programu Windows Identity Foundation (WIF) można zabezpieczyć zasobów jednostki uzależnionej aplikacji innych firm (RP), które zostało wdrożone w ramach farmy sieci web, należy wykonać określone kroki, aby upewnić się, że program WIF może przetwarzać tokenów z wystąpień aplikacji jednostki Uzależnionej, uruchomione na różnych komputery z farmy. Proces przetwarzania obejmuje sprawdzanie podpisów tokenów sesji, szyfrowania i odszyfrowywania tokenów sesji, buforowanie tokenów sesji i wykrywanie powtórzone tokenów zabezpieczających.  
   
- W przypadku typowej gdy WIF służy do zabezpieczania zasobów aplikacji RP — czy RP działa na pojedynczym komputerze lub w kolektywie serwerów sieci web--sesji jest nawiązywane z klienta na podstawie tokenów zabezpieczeń, który został uzyskany z usługi tokenu zabezpieczającego (STS). Pozwoli to uniknąć wymuszania klienta do uwierzytelniania na STS dla każdego zasobu jest zabezpieczone przy użyciu WIF aplikacji. Aby uzyskać więcej informacji na temat obsługi WIF sesji, zobacz [WIF sesji zarządzania](../../../docs/framework/security/wif-session-management.md).  
+ W typowych przypadkach stosowania programu WIF do zabezpieczania zasobów aplikacji jednostki Uzależnionej — czy punktu przywracania jest uruchomiona na tym samym komputerze lub w ramach farmy sieci web — ustanowiono połączenie z klientem, oparte na token zabezpieczający, który został uzyskany z usługi tokenu zabezpieczającego (STS). Pozwoli to uniknąć, wymuszając od klienta do uwierzytelniania w STS dla każdego zasobu aplikacji, która jest zabezpieczony za pomocą programu WIF. Aby uzyskać więcej informacji na temat obsługi sesjami programu WIF, zobacz [Zarządzanie sesjami programu WIF](../../../docs/framework/security/wif-session-management.md).  
   
- Gdy używane są ustawienia domyślne, WIF wykonuje następujące czynności:  
+ Gdy używane są ustawienia domyślne, program WIF wykonuje następujące czynności:  
   
--   Używa wystąpienia <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> klasy do odczytu i zapisu tokenu sesji (wystąpienie <xref:System.IdentityModel.Tokens.SessionSecurityToken> klasy) która prowadzi oświadczenia i innych informacji o tokenie zabezpieczającym, który był używany do uwierzytelniania, a także informacje o sesji samego siebie. Tokenu sesji zostaje spakowany i przechowywane w pliku cookie sesji. Domyślnie <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> używa <xref:System.IdentityModel.ProtectedDataCookieTransform> klasy, która używa interfejsu API ochrony danych (DPAPI), aby chronić tokenu sesji. DPAPI zapewnia ochronę przy użyciu poświadczeń użytkownika lub komputera i przechowuje dane klucza w profilu użytkownika.  
+-   Używa wystąpienia <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> klasy na odczytywanie i zapisywanie tokenu sesji (wystąpienie <xref:System.IdentityModel.Tokens.SessionSecurityToken> klasy), niesie ze sobą oświadczenia i inne informacje o tokenie zabezpieczającym, który był używany do uwierzytelniania, a także informacje o sesji samego siebie. Token sesji jest spakowany i przechowywane w pliku cookie sesji. Domyślnie <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> używa <xref:System.IdentityModel.ProtectedDataCookieTransform> klasy, która korzysta z interfejsu API ochrony danych (DPAPI), aby chronić tokenu sesji. DPAPI zapewnia ochronę przy użyciu poświadczeń użytkownika lub komputera i zapisuje dane klucza w profilu użytkownika.  
   
--   Używa domyślnej, wykonania w pamięci <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> klasy do przechowywania i przetwarzania tokenu sesji.  
+-   Używa domyślnie, implementacja w pamięci <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> klasy w celu przechowywania i przetwarzania tokenu sesji.  
   
- Te ustawienia domyślne działają w scenariuszach, w których aplikacja RP jest wdrażana na pojedynczym komputerze; Jednak po wdrożeniu na farmie sieci web każde żądanie HTTP mogą być wysyłane do i przetwarzane przez inne wystąpienie aplikacji planu odzyskiwania uruchomiony na innym komputerze. Domyślne ustawienia WIF opisane powyżej w tym scenariuszu nie będą działać, ponieważ token ochrony i buforowania tokenu są zależne od określonego komputera.  
+ Te domyślne ustawienia działają w scenariuszach, w których wdrożono aplikację jednostki Uzależnionej na jednym komputerze. Jednak po wdrożeniu w ramach farmy sieci web, każde żądanie HTTP może być wysyłane do i przetworzone przez inne wystąpienie aplikacji jednostki Uzależnionej uruchomiony na innym komputerze. Domyślne ustawienia programu WIF opisanych powyżej w tym scenariuszu nie będą działać, ponieważ token ochrony i buforowaniem tokena są zależne od określonego komputera.  
   
- Aby wdrożyć aplikację planu odzyskiwania w farmie sieci web, należy upewnić przetwarzania tokenów sesji (a także powtórzony tokenów) nie jest zależna od aplikacja była uruchomiona na określonym komputerze. Aby zrobić to do wdrożenia aplikacji planu odzyskiwania, tak aby były używane funkcje udostępniane przez platformę ASP.NET `<machineKey>` element konfiguracji zawiera systemy buforowania rozproszonego przetwarzania tokenów sesji i odtwarzany tokenów. `<machineKey>` Element umożliwia określenie klucze wymagane do weryfikacji, szyfrowania i odszyfrowywania tokenów w pliku konfiguracji, który umożliwia określenie tych samych kluczy na różnych komputerach w farmie sieci web. WIF zawiera specjalne sesji programu obsługi tokenów, <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>, która chroni tokeny przy użyciu kluczy określona w `<machineKey>` elementu. Do wdrożenia tej strategii, należy wykonać następujące wytyczne:  
+ Aby wdrożyć aplikację jednostki Uzależnionej w ramach farmy sieci web, upewnij się, że przetwarzania tokenów, sesji (a także powtórzonym tokenów) nie jest zależny od aplikacja była uruchomiona na określonym komputerze. Jednym ze sposobów, aby zrobić to do wdrożenia aplikacji jednostki Uzależnionej, tak aby używał funkcje udostępniane przez platformę ASP.NET `<machineKey>` element konfiguracji i udostępnia funkcję buforowania rozproszonego przetwarzania tokenów sesji i odtwarzany tokenów. `<machineKey>` Element umożliwia określenie kluczy wymaganych do weryfikacji, szyfrowania i odszyfrowywania tokenów w pliku konfiguracji, który pozwala na określenie tych samych kluczy na różnych komputerach w farmie internetowej. Program WIF oferuje specjalne sesji programu obsługi tokenów, <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>, która chroni tokeny przy użyciu kluczy, określone w `<machineKey>` elementu. Aby zaimplementować tę strategię, należy przestrzegać następujących zasad:  
   
--   Za pomocą programu ASP.NET `<machineKey>` element w konfiguracji, aby jawnie określić klucze podpisywania i szyfrowania, które mogą być używane na komputerach w farmie. Następujący kod XML zawiera specyfikację `<machineKey>` elementu w obszarze `<system.web>` w pliku konfiguracji.  
+-   Za pomocą programu ASP.NET `<machineKey>` element konfiguracji, aby jawnie określić kluczy podpisywania i szyfrowania, które mogą być używane na komputerach w farmie. Następujący kody XML pokazuje specyfikację `<machineKey>` pod `<system.web>` elementu w pliku konfiguracji.  
   
     ```xml  
     <machineKey compatibilityMode="Framework45" decryptionKey="CC510D … 8925E6" validationKey="BEAC8 … 6A4B1DE" />  
     ```  
   
--   Konfigurowanie aplikacji do korzystania z <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> przez dodanie go do kolekcji programu obsługi tokenów. Należy najpierw usunąć <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (lub pochodny żadnych obsługi <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> klasy) z kolekcji programu obsługi tokenów, jeśli program obsługi jest obecny. <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> Używa <xref:System.IdentityModel.Services.MachineKeyTransform> klasy, która chroni dane pliku cookie sesji przy użyciu kryptograficznych materiałów, określonych w `<machineKey>` elementu. Następujący kod XML przedstawiono sposób dodawania <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> do kolekcji programu obsługi tokenów.  
+-   Konfigurowanie aplikacji do korzystania z <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> , dodając ją do kolekcji programu obsługi tokenów. Należy najpierw usunąć <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (lub dowolnej procedury obsługi pochodzący od <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> klasy) z kolekcji programu obsługi tokenów, jeśli program obsługi jest obecny. <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> Używa <xref:System.IdentityModel.Services.MachineKeyTransform> klasy, która chroni dane pliku cookie sesji przy użyciu materiałami kryptograficznymi określone w `<machineKey>` elementu. Następujący kody XML pokazuje sposób dodawania <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> do kolekcji programu obsługi tokenów.  
   
     ```xml  
     <securityTokenHandlers>  
@@ -41,7 +41,7 @@ Korzystając z programu Windows Identity Foundation (WIF) do zabezpieczania zaso
     </securityTokenHandlers>  
     ```  
   
--   Pochodzić od <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> i wdrożenie rozproszone buforowania, czyli pamięci podręcznej, który jest dostępny ze wszystkich komputerów w farmie serwerów, na którym planu odzyskiwania mogą zostać uruchomione. Konfigurowanie planu odzyskiwania, aby użyć rozproszonej pamięci podręcznej, określając [ \<sessionSecurityTokenCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) w pliku konfiguracji. Można zastąpić <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> metody w klasie pochodnej, aby zaimplementować elementy podrzędne `<sessionSecurityTokenCache>` elementu, jeśli są wymagane.  
+-   Pochodzi od <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> i implementowanie rozproszonej pamięci podręcznej, oznacza to, że pamięć podręczna, która jest dostępna ze wszystkich komputerów w farmie serwerów, na którym mogą zostać uruchomione jednostki Uzależnionej. Konfigurowanie jednostki Uzależnionej do określania za pomocą rozproszonej pamięci podręcznej [ \<sessionSecurityTokenCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) elementu w pliku konfiguracji. Można zastąpić <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> metodę w pochodnej klasie do zaimplementowania elementów podrzędnych `<sessionSecurityTokenCache>` elementu, jeśli są one wymagane.  
   
     ```xml  
     <caches>  
@@ -51,19 +51,19 @@ Korzystając z programu Windows Identity Foundation (WIF) do zabezpieczania zaso
     </caches>  
     ```  
   
-     Jednym ze sposobów zaimplementować systemy buforowania rozproszonego jest zapewnienie WCF frontonu dla niestandardowych pamięci podręcznej. Aby uzyskać więcej informacji o implementacji WCF, buforowanie usługi, zobacz [usługi WCF buforowanie](#BKMK_TheWCFCachingService). Aby uzyskać więcej informacji o implementacji klienta WCF, służącego do wywoływania usługi buforowania aplikacji planu odzyskiwania, zobacz [WCF buforowanie klient](#BKMK_TheWCFClient).  
+     Jednym ze sposobów implementuje się buforowanie rozproszonej jest zapewnienie WCF frontonu dla swojej niestandardowej pamięci podręcznej. Aby uzyskać więcej informacji na temat implementowania WCF z pamięci podręcznej usługi zobacz [usługi pamięć podręczna WCF](#BKMK_TheWCFCachingService). Aby uzyskać więcej informacji o implementowaniu klienta WCF, który aplikacja jednostki Uzależnionej można użyć do wywołania usługi buforowania, zobacz [WCF buforowania klient](#BKMK_TheWCFClient).  
   
--   W przypadku wykrycia przez aplikację tokenów powtórzony należy wykonać podobne rozproszonej pamięci podręcznej strategii dla pamięci podręcznej powtórzeń tokenów przez wynikających z <xref:System.IdentityModel.Tokens.TokenReplayCache> i wskazujący Twojej powtórzeń tokenów buforowanie usługi w [ \< tokenReplayCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) element konfiguracji.  
+-   Jeśli aplikacja wykryje powtórzonym tokeny należy wykonać podobne rozproszonej pamięci podręcznej strategii dla pamięci podręcznej powtórzeń tokenów, wynikające z <xref:System.IdentityModel.Tokens.TokenReplayCache> i wskazanie swoje powtarzania tokenu buforowania usługi w [ \< tokenReplayCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) element konfiguracji.  
   
 > [!IMPORTANT]
->  Wszystkie przykładowe XML i kodu w tym temacie jest pobierana z [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) próbki.  
+>  Przykładowy kod XML i kodu, w tym temacie są pobierane z [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) próbki.  
   
 > [!IMPORTANT]
 >  Przykłady w tym temacie podano jako — jest i nie są przeznaczone do użycia w kodzie produkcyjnym bez żadnych modyfikacji.  
   
 <a name="BKMK_TheWCFCachingService"></a>   
-## <a name="the-wcf-caching-service"></a>Buforowanie usługi WCF  
- Następujący interfejs definiuje kontrakt między usługą buforowania WCF i klienta WCF, używany przez aplikację jednostki uzależnionej strony do komunikowania się z nim. Zasadniczo udostępnia metody <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> klasy jako operacji usługi.  
+## <a name="the-wcf-caching-service"></a>Usługa pamięć podręczna WCF  
+ Następujący interfejs definiuje kontrakt między buforowania usługi WCF i klienta WCF, używany przez aplikację jednostki uzależnionej do komunikowania się z nim. Zasadniczo udostępnia metody <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> klasy jako operacji usługi.  
   
 ```  
 [ServiceContract()]  
@@ -89,7 +89,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- Poniższy kod przedstawia implementację usługi WCF buforowanie usługi. W tym przykładzie wartość domyślna implementowane przez WIF pamięci podręcznej tokenu sesji w pamięci jest używany. Alternatywnie można zaimplementować trwałej pamięci podręcznej przechowywana w bazie danych. `ISessionSecurityTokenCacheService` definiuje interfejs przedstawionych powyżej. W tym przykładzie nie wszystkie metody, musi implementować interfejs są wyświetlane dla skrócenia.  
+ Poniższy kod przedstawia implementację WCF usługi buforowania. W tym przykładzie, domyślnie jest używany implementowany przez program WIF pamięci podręcznej tokenu sesji w pamięci. Alternatywnie można zaimplementować trwałość pamięci podręcznej, wspierana przez bazę danych. `ISessionSecurityTokenCacheService` definiuje interfejs przedstawionych powyżej. W tym przykładzie nie wszystkie metody, trzeba do zaimplementowania interfejsu są wyświetlane dla skrócenia programu.  
   
 ```  
 using System;  
@@ -137,8 +137,8 @@ namespace WcfSessionSecurityTokenCacheService
 ```  
   
 <a name="BKMK_TheWCFClient"></a>   
-## <a name="the-wcf-caching-client"></a>Buforowanie klienta WCF  
- W tej sekcji przedstawiono implementacji klasy, która jest pochodną <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> oraz że delegatów wywołania do usługi buforowania. Konfigurowanie aplikacji RP do korzystania z tej klasy przy użyciu [ \<sessionSecurityTokenCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) element jak następujący kod XML  
+## <a name="the-wcf-caching-client"></a>Pamięć podręczna klienta platformy WCF  
+ W tej sekcji przedstawiono implementację klasy, która pochodzi od klasy <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> i że delegaty usługę buforowania. Konfigurowanie aplikacji jednostki Uzależnionej, aby użyć tej klasy przy użyciu [ \<sessionSecurityTokenCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) elementu, tak jak następujący kod XML  
   
 ```xml  
 <caches>  
@@ -149,7 +149,7 @@ namespace WcfSessionSecurityTokenCacheService
 </caches>  
 ```  
   
- Przesłonięć klasy <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> metodę, aby uzyskać punkt końcowy usługi z niestandardowego `<cacheServiceAddress>` elementem podrzędnym `<sessionSecurityTokenCache>` elementu. Używa tego punktu końcowego, aby zainicjować `ISessionSecurityTokenCacheService` kanału, przez który może komunikować się z usługą.  W tym przykładzie nie wszystkie metody wymagane do zaimplementowania <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> klasy są wyświetlane dla skrócenia.  
+ Przesłonięć klasy <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> metodę, aby uzyskać punkt końcowy usługi z niestandardowego `<cacheServiceAddress>` element podrzędny elementu `<sessionSecurityTokenCache>` elementu. Używa ona tego punktu końcowego, aby zainicjować `ISessionSecurityTokenCacheService` kanału, przez który może komunikować się z usługą.  W tym przykładzie, nie wszystkie metody trzeba do zaimplementowania <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> klasy są wyświetlane w celu skrócenia programu.  
   
 ```  
 using System;  

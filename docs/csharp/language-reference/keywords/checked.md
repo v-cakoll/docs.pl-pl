@@ -8,11 +8,11 @@ helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
 ms.openlocfilehash: 892b24b0283314f5aded0405df55a93069cf91e2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404032"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505258"
 ---
 # <a name="checked-c-reference"></a>checked (odwołanie w C#)
 

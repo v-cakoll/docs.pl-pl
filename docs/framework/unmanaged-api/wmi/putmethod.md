@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f74b0d30a1a8899d3c8d0a2bf0f108ea11165cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cdf34ff6ae506ba209300685da3752820b250a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461860"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516753"
 ---
-# <a name="putmethod-function"></a>Funkcja PutMethod
+# <a name="putmethod-function"></a>PutMethod — funkcja
 Tworzy metodę.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,55 +44,55 @@ HRESULT PutMethod (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `wszName`  
 [in] Nazwa metody do utworzenia. 
 
 `lFlags`  
-[in] Zastrzeżone. Ten parametr musi wynosić 0.
+[in] Zastrzeżone. Ten parametr musi być 0.
 
 `pSignatureIn`  
-[in] Wskaźnik do kopię [klasy systemu __Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx) zawierający `in` parametry metody. Ten parametr jest ignorowana, jeśli ustawiono `null`.  
+[in] Wskaźnik do kopię [klasy systemu __Parameters](/windows/desktop/WmiSdk/--parameters) zawierający `in` parametrów dla metody. Ten parametr jest ignorowany, jeśli ustawiono `null`.  
 
 `pSignatureOut`  
-[in]  Wskaźnik do kopię [klasy systemu __Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx) zawierający `out` parametry metody. Ten parametr jest ignorowana, jeśli ustawiono `null`.
+[in]  Wskaźnik do kopię [klasy systemu __Parameters](/windows/desktop/WmiSdk/--parameters) zawierający `out` parametrów dla metody. Ten parametr jest ignorowany, jeśli ustawiono `null`.
  
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Jeden lub więcej parametrów nie są prawidłowe. |
-| `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | `[in, out]` Określony zarówno parametr metody *pInSignature* i *pOutSignature* obiekty mają różne kwalifikatorów.
-| `WBEM_E_MISSING_PARAMETER_ID` | 0x80041036 | Parametr metody jest Brak specyfikacji **identyfikator** kwalifikatora. |
-| `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS` | 0x80041038 | Serii identyfikator, która jest przypisana do parametry metody nie jest kolejnych lub nie rozpoczynają się od 0. |
-| `WBEM_E_PARAMETER_ID_ON_RETVAL` | 0x80041039 | Wartość zwracana dla metody ma **identyfikator** kwalifikatora. |
-| `WBEM_E_PROPAGATED_METHOD` | 0x80041034 | Podjęto próbę ponownego użycia istniejącej nazwy metody z klasy nadrzędnej, a podpisy nie jest zgodny. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Jeden lub więcej parametrów są nieprawidłowe. |
+| `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | `[in, out]` Parametru metody, określona w obu *pInSignature* i *pOutSignature* obiekty mają różne kwalifikatorów.
+| `WBEM_E_MISSING_PARAMETER_ID` | 0x80041036 | Parametr metody brakuje specyfikacji **identyfikator** kwalifikator. |
+| `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS` | 0x80041038 | Serii identyfikator, która jest przypisana do parametrów metody nie jest kolejnych lub nie rozpoczyna się od 0. |
+| `WBEM_E_PARAMETER_ID_ON_RETVAL` | 0x80041039 | Wartość zwracana dla metody ma **identyfikator** kwalifikator. |
+| `WBEM_E_PROPAGATED_METHOD` | 0x80041034 | Nastąpiła próba ponownego użycia istniejącej nazwy metody z klasy nadrzędnej, a podpisy jest niezgodny. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie. |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::PutMethod](https://msdn.microsoft.com/library/aa391456(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) metody.
 
-Wywołanie tej metody jest obsługiwana tylko, jeśli `ptr` jest definicję klasy modelu wspólnych informacji. Metoda manipulowania nie jest dostępna z [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) wskaźników, które wskazują wystąpienia modelu CIM.
+Wywołanie tej metody jest obsługiwana tylko wtedy, gdy `ptr` jest definicją klasy modelu wspólnych informacji. Metoda manipulowania nie jest dostępna z [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) wskaźniki prowadzące do wystąpienia modelu CIM.
 
-Użytkownicy nie mogą tworzyć metody o nazwach rozpoczynać się ani kończyć się od znaku podkreślenia. Jest to zarezerwowana dla systemu klas i właściwości.
+Użytkownicy nie mogą tworzyć metody z nazwami będącymi zaczynać się ani kończyć znakiem podkreślenia. Jest on zarezerwowany dla klas systemowych i właściwości.
 
-W przypadku metody `in` i `out` parametry są opisane jako właściwości [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) obiektów.
+Dla metody `in` i `out` parametry są określane jako właściwości w [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) obiektów.
 
-`[in/out]` Dodając oba obiekty wskazywanej przez tę samą właściwość można zdefiniować parametr `pInSignature` i `pOutSignature` parametrów. W takim przypadku udziału takie same właściwości **identyfikator** wartość kwalifikatora.
+`[in/out]` Można zdefiniować, dodając tę samą właściwość do obu obiektów wskazywany przez parametr `pInSignature` i `pOutSignature` parametrów. W tym przypadku właściwości współużytkować ten sam **identyfikator** wartość kwalifikatora.
 
-Każdej właściwości w [__Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx) innych niż klasa obiektu `ReturnValue` musi mieć **identyfikator** kwalifikator, wartość liczbową liczony od zera, który określa kolejność wyświetlania parametrów. Nie dwa parametry mają takie same **identyfikator** wartość i nie **identyfikator** wartość może być pominięte. W przypadku obu warunku `PutMethod` funkcja zwraca `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`.
+Każdej właściwości w [__Parameters](/windows/desktop/WmiSdk/--parameters) klasy obiektów innych niż `ReturnValue` musi mieć **identyfikator** kwalifikator, zaczynający się od zera wartość liczbowa, która określa kolejność, w jakiej są wyświetlane parametry. Nie dwa parametry można mieć taką samą **identyfikator** wartości i nie **identyfikator** wartość może zostać pominięte. W przypadku obu warunku `PutMethod` funkcja zwraca `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`.
 
 ## <a name="example"></a>Przykład
 
-Na przykład zobacz [IWbemClassObject::PutMethod](https://msdn.microsoft.com/library/aa391456(v=vs.85).aspx) metody.
+Aby uzyskać przykład, zobacz [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) metody.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -102,4 +102,4 @@ Na przykład zobacz [IWbemClassObject::PutMethod](https://msdn.microsoft.com/lib
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

@@ -3,11 +3,11 @@ title: Funkcje zdefiniowane przez użytkownika CLR
 ms.date: 03/30/2017
 ms.assetid: 1c59d9d3-6ff9-411b-8b29-b1494d80fdf1
 ms.openlocfilehash: 592a8232f30db075add7bd6b1d61a25352309853
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481405"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502985"
 ---
 # <a name="clr-user-defined-functions"></a>Funkcje zdefiniowane przez użytkownika CLR
 Funkcje zdefiniowane przez użytkownika są procedury, które przyjmują parametry, wykonywanie obliczeń lub inne czynności i zwracają wynik. Funkcje zdefiniowane przez użytkownika można pisać w dowolnej architektury Microsoft .NET, język programowania, takich jak Microsoft Visual Basic .NET lub Microsoft Visual C#.  

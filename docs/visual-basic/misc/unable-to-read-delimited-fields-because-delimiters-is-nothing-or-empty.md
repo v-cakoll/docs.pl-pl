@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_DelimitersNothing
 ms.assetid: 94f64c48-8e17-449d-b92a-0426efec879c
 ms.openlocfilehash: 98d9cbde8262e1b9329275a0bc8ea371b0a18abd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390873"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500397"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>Nie można odczytać rozdzielonych pól, ponieważ nic nie stoi ograniczniki lub jest pusty
 `TextFieldParser` Nie może odczytać z pliku, ponieważ `Delimiters` właściwość jest ustawiona na `Nothing` lub jest pusty.  

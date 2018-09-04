@@ -15,11 +15,11 @@ ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eb2485f2ecf0426360dba80d443500a92b5a7af6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482226"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510057"
 ---
 # <a name="add-ins-and-extensibility"></a>Dodatki i rozszerzalność
 <a name="top"></a> Dodatki zapewniają rozszerzone funkcje lub usługi dla aplikacji hosta. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia model programowania, które deweloperzy mogą używać do tworzenia dodatków i ich aktywowania w aplikacji hosta. Model osiąga to, tworząc potok komunikacji między hostem a dodatkiem. Model jest implementowany przy użyciu typów w <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, i <xref:System.AddIn.Contract> przestrzeni nazw.  

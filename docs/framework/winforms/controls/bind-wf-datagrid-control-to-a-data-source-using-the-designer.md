@@ -12,37 +12,37 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: 1be8a31957bc439c140c1b6c5fc24e3221860c80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 409d94e46cae3e4daf7df930097f0a3d46360633
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529512"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500589"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Porady: powiązywanie formantu DataGrid formularzy systemu Windows ze źródłem danych przy użyciu narzędzia Projektant
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcje do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> formantu są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Formularze systemu Windows <xref:System.Windows.Forms.DataGrid> kontrolki przeznaczone do wyświetlania informacji ze źródła danych. Powiązywanie formantu w czasie projektowania, ustawiając <xref:System.Windows.Forms.DataGrid.DataSource%2A> i <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwości, lub w czasie wykonywania, wywołując <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody. Choć można wyświetlać danych z różnych źródeł danych, najbardziej typowe źródła są widoków danych i zestawów danych.  
+ Formularze Windows <xref:System.Windows.Forms.DataGrid> kontroli jest specjalnie przeznaczona do wyświetlania informacji ze źródła danych. Powiązywanie formantu w czasie projektowania, ustawiając <xref:System.Windows.Forms.DataGrid.DataSource%2A> i <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwości, lub w czasie wykonywania przez wywołanie metody <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody. Choć można wyświetlać dane z różnych źródeł danych, najbardziej typowe źródła są zestawy danych i widokami danych.  
   
- Jeśli źródło danych jest dostępne w czasie projektowania — na przykład, jeśli formularz zawiera wystąpienia wartość dataset lub widok danych — siatki można powiązać źródła danych w czasie projektowania. Następnie możesz przeglądać dane wyglądu w siatce.  
+ Jeśli źródło danych jest dostępna w czasie projektowania — na przykład, jeśli formularz zawiera wystąpienie zestawu danych lub widoku danych — Siatka można powiązać ze źródłem danych w czasie projektowania. Możesz przeglądać dane jak będzie wyglądał w siatce.  
   
- Siatka może także powiązać programowo, w czasie wykonywania. Jest to przydatne, jeśli chcesz ustawić źródło danych na podstawie informacji, które pojawia się w czasie wykonywania. Na przykład aplikacja może pozwolić użytkownika, określ nazwę tabeli, aby wyświetlić. Konieczne jest również w sytuacji, gdy źródło danych nie istnieje w czasie projektowania. W tym źródeł danych, takich jak tablic, kolekcje nietypizowane zbiory danych i czytniki danych.  
+ Możesz również powiązać siatki programowo, w czasie wykonywania. Jest to przydatne, jeśli chcesz ustawić źródło danych, w oparciu o informacje, które otrzymujesz w czasie wykonywania. Na przykład aplikacja może zezwolić użytkownikom na Określ nazwę tabeli, aby wyświetlić. Konieczne jest również w sytuacji, gdy źródło danych nie istnieje w czasie projektowania. W tym źródeł danych, takich jak tablice, kolekcje, nietypizowanych zbiorów danych oraz czytniki danych.  
   
- Poniższa procedura wymaga **aplikacji systemu Windows** projekt zawierający formularz <xref:System.Windows.Forms.DataGrid> formantu. Informacje o konfigurowaniu tych projektu, zobacz [jak: utworzyć projekt aplikacji systemu Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) i [porady: dodawanie formantów do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). W [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> formant nie ma na liście **przybornika** domyślnie. Uzyskać informacje dotyczące dodawania go, zobacz [porady: Dodawanie elementów do przybornika](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0). Ponadto w [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], można użyć **źródeł danych** okna dla powiązania danych czasu projektowania. Aby uzyskać więcej informacji, zobacz [powiązywanie formantów z danymi w Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
+ Poniższa procedura wymaga **aplikacji Windows** projektu za pomocą zawierający formularz <xref:System.Windows.Forms.DataGrid> kontroli. Uzyskać informacji o konfigurowaniu taki projekt, zobacz [jak: Tworzenie projektu aplikacji Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) i [porady: dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). W [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> formantu nie znajduje się w **przybornika** domyślnie. Aby uzyskać informacje dotyczące dodawania go, zobacz [porady: Dodawanie elementów do przybornika](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0). Dodatkowo w [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], możesz użyć **źródeł danych** okna dla powiązania danych w czasie projektowania. Aby uzyskać więcej informacji, zobacz [powiązywanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Do wiązania danych formantu DataGrid do pojedynczej tabeli w Projektancie  
+### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Aby powiązanie danych kontrolki DataGrid z pojedynczej tabeli w Projektancie  
   
-1.  Ustawianie formantu <xref:System.Windows.Forms.DataGrid.DataSource%2A> właściwości do obiektu zawierającego elementy danych, aby powiązać.  
+1.  Ustaw dla formantu <xref:System.Windows.Forms.DataGrid.DataSource%2A> właściwości do obiektu zawierającego elementy danych, aby powiązać.  
   
-2.  Jeśli źródło danych jest zestawu danych, ustaw <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwości do nazwy tabeli, aby powiązać.  
+2.  Jeśli źródło danych zestawu danych, ustaw <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwość na nazwę tabeli dla powiązania.  
   
-3.  Jeśli źródło danych jest wartość dataset lub widok danych na podstawie tabeli zestawu danych, należy dodać kodu do formularza, aby wypełnić dataset.  
+3.  W przypadku zestawu danych lub widoku danych, na podstawie tabeli zestawu danych źródła danych należy dodać kod do formularza, aby wypełnić dataset.  
   
-     Dokładnego kodu, używanego zależy od tego, gdzie zestawu danych jest pobieranie danych. Jeśli jest on wypełnione zestawu danych bezpośrednio z bazy danych, należy zwykle wywołują `Fill` metody adapter danych, jak w poniższym przykładzie kodu, który wypełnia zestawu danych o nazwie `DsCategories1`:  
+     Dokładne kod, który możesz użyć zależy od tego, gdzie zestaw danych jest wprowadzenie danych. Jeśli trwa wypełnianie zestawu danych bezpośrednio z bazy danych, zazwyczaj wywołujesz `Fill` metody w obrębie adaptera danych, jak w poniższym przykładzie kodu, który wypełnia zestaw danych o nazwie `DsCategories1`:  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -56,17 +56,17 @@ ms.locfileid: "33529512"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (Opcjonalnie) Dodaj style właściwe tabeli i Style kolumn do tabeli.  
+4.  (Opcjonalnie) Dodaj style odpowiedniej tabeli i kolumn do siatki.  
   
-     Jeśli nie ma żadnych stylów tabeli, zobaczysz tabeli, ale z minimalnym formatowanie i widoczne wszystkie kolumny.  
+     Jeśli nie ma żadnych style tabeli, tabeli, zostanie wyświetlony, ale z minimalnym formatowania i widoczne dla wszystkich kolumn.  
   
-### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Do wiązania danych formantu DataGrid z wieloma tabelami w zestawie danych w Projektancie  
+### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Aby powiązanie danych kontrolki DataGrid z wielu tabel w zestawie danych w Projektancie  
   
-1.  Ustawianie formantu <xref:System.Windows.Forms.DataGrid.DataSource%2A> właściwości do obiektu zawierającego elementy danych, aby powiązać.  
+1.  Ustaw dla formantu <xref:System.Windows.Forms.DataGrid.DataSource%2A> właściwości do obiektu zawierającego elementy danych, aby powiązać.  
   
-2.  Jeśli zestaw danych zawiera tabele powiązane (to znaczy, jeśli zawiera obiekt relacji), ustaw <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwości do nazwy tabeli nadrzędnej.  
+2.  Jeśli zestaw danych zawiera tabele powiązane (to znaczy, jeśli zawiera on obiektu relacji), ustaw <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwość na nazwę tabeli nadrzędnej.  
   
-3.  Napisać kod, aby wypełnić dataset.  
+3.  Pisz kod, aby wypełnić dataset.  
   
 ## <a name="see-also"></a>Zobacz też  
  [DataGrid, kontrolka — omówienie](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  

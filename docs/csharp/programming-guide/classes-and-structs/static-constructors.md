@@ -5,42 +5,43 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 52c52f68bc3612807b810047044aedbd2c457cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22be72547e96c66df3be115dac30a16559b23659
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315714"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502771"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Konstruktory statyczne (Przewodnik programowania w języku C#)
-Statyczny Konstruktor używany do inicjowania żadnego [statycznych](../../../csharp/language-reference/keywords/static.md) danych, lub wykonania określonej akcji, która musi zostać wykonana tylko raz. Jest ona wywoływana automatycznie przed utworzeniu pierwszego wystąpienia lub odwołuje się żadnych statycznych elementów członkowskich.  
+Statyczny Konstruktor jest wykorzystywany do inicjacji dowolne [statyczne](../../../csharp/language-reference/keywords/static.md) danych, lub do wykonania określonej akcji, która musi zostać wykonana tylko raz. Jest wywoływana automatycznie przed pierwsze wystąpienie jest tworzone lub żadnych statycznych składowych są wywoływane.  
   
  [!code-csharp[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
   
- Konstruktory statyczne mieć następujące właściwości:  
+ Konstruktory statyczne mają następujące właściwości:  
   
--   Konstruktor statyczny zająć modyfikatory dostępu lub nie ma parametrów.  
+-   Statyczny Konstruktor zająć modyfikatory dostępu lub nie mieć parametrów.  
   
--   Konstruktor statyczny jest wywoływana automatycznie zainicjować [klasy](../../../csharp/language-reference/keywords/class.md) przed utworzeniu pierwszego wystąpienia lub odwołuje się żadnych statycznych elementów członkowskich.  
+-   Statyczny Konstruktor jest wywoływana automatycznie zainicjować [klasy](../../../csharp/language-reference/keywords/class.md) przed pierwsze wystąpienie jest tworzone lub żadnych statycznych składowych są wywoływane.  
   
 -   Konstruktor statyczny nie może wywołać bezpośrednio.  
   
--   Użytkownik nie ma kontroli na kiedy Konstruktor statyczny jest wykonywane w programie.  
+-   Użytkownik nie ma kontroli na gdy Konstruktor statyczny jest wykonywane w programie.  
   
--   Typowym zastosowaniem konstruktorów statycznych jest po klasie jest używany plik dziennika i Konstruktor jest używany do zapisywania wpisów do tego pliku.  
+-   Typowym zastosowaniem konstruktorów statycznych jest, gdy klasa korzysta z pliku dziennika i konstruktora jest używany do zapisywania wpisów w tym pliku.  
   
--   Konstruktory statyczne są także przydatne podczas tworzenia klasy otoki dla niezarządzanego kodu, gdy można wywołać konstruktora `LoadLibrary` metody.  
+-   Konstruktory statyczne są także przydatne przy tworzeniu klas otoki dla niezarządzanego kodu podczas można wywołać konstruktora `LoadLibrary` metody.  
   
--   Jeśli w konstruktorze statycznym zgłasza wyjątek, środowisko uruchomieniowe nie wywoła go po raz drugi, a typ pozostanie niezainicjowanej przez czas ich istnienia domeny aplikacji, w którym jest uruchomiony program.  
+-   Jeśli statyczny Konstruktor zgłasza wyjątek, środowisko wykonawcze nie wywoła go drugi raz, a typ pozostanie niezainicjowanej okres istnienia domeny aplikacji, w którym jest uruchomiony program.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie klasa `Bus` ma Konstruktor statyczny. Po pierwsze wystąpienie `Bus` utworzeniu (`bus1`), Konstruktor statyczny jest wywoływane w celu zainicjowania klasy. Przykładowe dane wyjściowe sprawdza, czy Konstruktor statyczny uruchamiane tylko jeden raz, nawet jeśli dwa wystąpienia `Bus` są tworzone i że będzie ono przeprowadzane przed uruchomieniem konstruktora wystąpienia.  
+ W tym przykładzie klasa `Bus` ma Konstruktor statyczny. Po pierwsze wystąpienie `Bus` zostanie utworzony (`bus1`), statyczny Konstruktor jest wywoływane w celu zainicjowania klasy. Przykładowe dane wyjściowe weryfikuje, że Konstruktor statyczny działa tylko jeden raz, nawet jeśli dwa wystąpienia `Bus` są tworzone, to jest uruchamiane przed uruchomieniem konstruktora wystąpienia.  
   
  [!code-csharp[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+- [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)

@@ -11,83 +11,83 @@ helpviewer_keywords:
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 047cd7a2b8a6d315c6cadb9b535b84f744fd2d09
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744580"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504888"
 ---
 # <a name="pipeline-development"></a>Opracowywanie potoku
-Potok dodatku jest ścieżką segmentów potoku, w których aplikacja hosta i jego dodatku musi komunikować się ze sobą.  
+Potok dodatku jest ścieżka segmenty potoku, których aplikacja hosta i jego dodatku musi komunikować się ze sobą.  
   
  Na poniższej ilustracji przedstawiono potok komunikacji i jego segmentów.  
   
- ![Dodaj&#45;w potoku modelu. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Dodaj&#45;w modelu potoku. ](../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Potok dodatku  
   
- Aplikacja hosta znajduje się na końcu jednego potoku i dodatek jest na końcu. Począwszy od każdego końca i przenoszenie kierunku środka, zarówno aplikacji hosta, jak i dodatku mają abstrakcyjna klasa podstawowa, definiujący widok modelu obiektu, który zarówno mają. Te typy (klasy) tworzą segmentów potoku dodatku widoku oraz widoku hosta segmentu potoku dodatku. Segment potoku dodatku widoku często zawiera więcej niż jednej klasy abstrakcyjnej, ale klasa, która dodatek dziedziczy jest znany jako podstawy dodatku.  
+ Aplikacja hosta jest na jednym końcu potoku i dodatek jest na końcu. Począwszy od zakończenia każdego przenoszenie kierunku środka, zarówno aplikacji hosta, jak i dodatku się abstrakcyjna klasa bazowa, definiujący widok modelu obiektów, które współużytkują one zarówno. Te typy (grupy) tworzą segmentów potoku dodatku widoku oraz widoku hosta segmentów potoku dodatku. Segmentów potoku dodatku widoku często zawiera więcej niż jednej klasy abstrakcyjnej, ale klasa, która dodatek dziedziczy jest znany jako podstawowy dodatek.  
   
- Segment potoku serwerowe w Dodaj kartę i po stronie hosta karty potoku segmentu convert przepływ typów między ich segmentów potoku widoku i segmentów potoku kontraktu. Centralnej segmentów potoku jest kontraktu, która jest pochodną <xref:System.AddIn.Contract.IContract> interfejsu. Ten kontrakt definiuje metody korzystające z hosta aplikacji i jej dodatek zarówno.  
+ Segment potoku karty add w side i Konwertuj segment potoku adaptery po stronie hosta przepływu typów między ich segmenty potoku widoku i segmentów potoku kontraktu. Centralna segmentów potoku jest kontraktu, który jest tworzony na podstawie <xref:System.AddIn.Contract.IContract> interfejsu. Ten kontrakt definiuje metody, które aplikacja hosta i jego dodatek zarówno użyje.  
   
- Jeśli ładowania hosta i dodatek do domeny innej aplikacji, należy granica izolacji oddzielający zakresu aplikacji hosta z zakresu od dodatku. Umowa jest tylko zestawu, który jest ładowany w hosta i domeny aplikacji dodatku. Hosta i Dodaj w każdym odwoływać się tylko do ich widoku metody kontraktu. W związku z tym są rozdzielone przez warstwę abstrakcji z umowy.  
+ Jeśli załadujesz hostem a dodatkiem do domen aplikacji w oddzielnych, masz izolującą granicę oddzielający zakresu aplikacji hosta z zakresu od dodatku. Kontrakt jest tylko zestaw, który jest załadowany do hosta i domen aplikacji w dodatku. Hosta i Dodaj do każdego dotyczą tylko swój widok metody kontraktu. W związku z tym są rozdzielone przez warstwę abstrakcji z umowy.  
   
- Aby opracować segmentów potoku, należy utworzyć struktury katalogów, które je zawiera. Aby uzyskać więcej informacji na temat wymagań rozwoju i wskazówki w zakresie, zobacz [wymagania rozwój potoku](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Aby opracować segmenty potoku, należy utworzyć strukturę katalogów, która będzie zawierać je. Aby uzyskać więcej informacji o wymaganiach dotyczących tworzenia i wytyczne dotyczące zakresu, zobacz [wymagania dotyczące opracowywania potoku](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
- Na poniższej ilustracji przedstawiono typy, które tworzą segmentów potoku. Nazwy typów pokazany na rysunku są dowolne, ale wszystkie typy oprócz hosta i host wyświetlania atrybutów wymagają dodatku, może być rozpoznana za pomocą metod, które utworzyć magazyn informacji.  
+ Poniższa ilustracja przedstawia typy, które tworzą segmenty potoku. Nazwy typów przedstawiono na rysunku są dowolne, ale wszystkich typów, z wyjątkiem hosta i hosta wyświetlić atrybutów wymagają dodatku, dzięki czemu mogą oni zostać odnalezieni za pomocą metod, które konstruowania Magazyn informacji.  
   
- ![Dodaj&#45;w modelu z wymaganymi atrybutami typów. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![Dodaj&#45;w modelu z wymaganych atrybutów dla typów. ](../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Potok dodatku z typami  
   
- W poniższej tabeli opisano segmentów potoku dla aktywacji dodatku. Aby uzyskać więcej informacji na temat te segmenty, zobacz [kontrakty, widoków i kart](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
+ W poniższej tabeli opisano segmenty potoku do aktywacji dodatku. Aby uzyskać więcej informacji na temat tych segmentach zobacz [kontrakty, widoki i adaptery](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
   
 |Segment potoku|Opis|  
 |----------------------|-----------------|  
-|Host|Zestaw aplikacji, która tworzy wystąpienie dodatku.|  
-|Widoku hosta dodatku|Reprezentuje widok aplikacji hosta typy obiektów i metody używane do komunikacji z dodatku. W widoku hosta to abstrakcyjna klasa podstawowa lub interfejs.|  
-|Adaptery po stronie hosta|Zestaw z co najmniej jednej klasy, który dostosowuje metod do i z umowy.<br /><br /> Ten segment potoku jest identyfikowane za pomocą <xref:System.AddIn.Pipeline.HostAdapterAttribute> atrybutu.<br /><br /> Zestawy wielomodułowe nie są obsługiwane.|  
-|Kontrakt|Interfejs, który jest pochodną <xref:System.AddIn.Contract.IContract> interfejsu i który definiuje protokół komunikacji typów między hostem a jego dodatku.<br /><br /> Ten segment potoku jest identyfikowany przez ustawienie <xref:System.AddIn.Pipeline.AddInContractAttribute> atrybutu.|  
-|Dodawanie strony karty|Zestaw z co najmniej jednej klasy, który dostosowuje metod do i z umowy.<br /><br /> Ten segment potoku jest identyfikowane za pomocą <xref:System.AddIn.Pipeline.AddInAdapterAttribute> atrybutu.<br /><br /> Każdy zestaw w katalogu serwerowe w Dodaj karty, który zawiera typ, który ma <xref:System.AddIn.Pipeline.AddInAdapterAttribute> atrybutu jest ładowany do dodatku domeny aplikacji.<br /><br /> Każdy zestaw w katalogu Dodaj w stronie jest ładowany w domenie aplikacji.<br /><br /> Zestawy wielomodułowe nie są obsługiwane.|  
-|Dodaj w widoku|Zestaw, który reprezentuje Widok dodatku typy obiektów i metod, które są używane do komunikacji z hostem. Widok dodatku jest abstrakcyjna klasa podstawowa lub interfejsu.<br /><br /> Ten segment potoku jest identyfikowane za pomocą <xref:System.AddIn.Pipeline.AddInBaseAttribute> atrybutu.<br /><br /> Każdy zestaw w katalogu AddInViews, który zawiera typ, który ma <xref:System.AddIn.Pipeline.AddInBaseAttribute> atrybutu jest ładowany do dodatku domeny aplikacji.|  
-|Dodatek|Typem skonkretyzowanym wykonuje usługi hosta.|  
+|Host|Zestaw aplikacji, który tworzy wystąpienie klasy dodatku.|  
+|Widok hosta dodatków|Reprezentuje widok aplikacji hosta typy obiektów i metod używanych do komunikowania się z dodatku. Widok hosta jest abstrakcyjna klasa bazowa lub interfejs.|  
+|Adaptery po stronie hosta|Zestaw z co najmniej jedną klasę, która dostosowuje się metody do i z umowy.<br /><br /> Ten segment potoku jest identyfikowany przy użyciu <xref:System.AddIn.Pipeline.HostAdapterAttribute> atrybutu.<br /><br /> Zestawy wielu modułów są nieobsługiwane.|  
+|Kontrakt|Interfejs, który jest tworzony na podstawie <xref:System.AddIn.Contract.IContract> interfejsu i który definiuje protokół komunikacji typów między hostem a jego dodatku.<br /><br /> Ten segment potoku jest identyfikowany przez ustawienie <xref:System.AddIn.Pipeline.AddInContractAttribute> atrybutu.|  
+|Dodawanie strony karty|Zestaw z co najmniej jedną klasę, która dostosowuje się metody do i z umowy.<br /><br /> Ten segment potoku jest identyfikowany przy użyciu <xref:System.AddIn.Pipeline.AddInAdapterAttribute> atrybutu.<br /><br /> Każdego zestawu w katalogu karty Dodaj strony, który zawiera typ, który ma <xref:System.AddIn.Pipeline.AddInAdapterAttribute> atrybutu jest ładowany do dodatku w domenie aplikacji.<br /><br /> Każdego zestawu w katalogu add w side jest ładowany w domenie aplikacji.<br /><br /> Zestawy wielu modułu nie są obsługiwane.|  
+|Widok dodatku|Zestaw, który reprezentuje Widok dodatku typy obiektów i metod, które są używane do komunikacji z hostem. Widok dodatku jest abstrakcyjna klasa bazowa lub interfejs.<br /><br /> Ten segment potoku jest identyfikowany przy użyciu <xref:System.AddIn.Pipeline.AddInBaseAttribute> atrybutu.<br /><br /> Każdego zestawu w katalogu AddInViews, który zawiera typ, który ma <xref:System.AddIn.Pipeline.AddInBaseAttribute> atrybutu jest ładowany do dodatku w domenie aplikacji.|  
+|Dodatek|Skonkretyzowany typ, który wykonuje usług dla hosta.|  
   
 ## <a name="pipeline-activation-path"></a>Ścieżka aktywacji potoku  
- Na poniższej ilustracji przedstawiono aktywacji typów, gdy dodatek jest aktywny. Przedstawiono również przekazywanie obiektów do hosta, takich jak wyników obliczeń lub kolekcja obiektów. Jest to najbardziej typowym scenariuszem.  
+ Poniższa ilustracja przedstawia aktywacji typów, gdy dodatek jest aktywny. Zawiera również przekazywanie obiektów do hosta, takie jak wyniki obliczeń lub kolekcji obiektów. Jest to najbardziej typowym scenariuszem.  
   
- ![Dodaj&#45;w modelu ze ścieżką aktywacji. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
-Ścieżka aktywacji z dodatku do hosta  
+ ![Dodaj&#45;w modelu przy użyciu ścieżki aktywacji. ](../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+Ścieżka aktywacji w dodatku do hosta  
   
  Ścieżka aktywacji potoku odbywa się w następujący sposób:  
   
-1.  Aktywuje aplikacji hosta z dodatku <xref:System.AddIn.Hosting.AddInToken.Activate%2A> metody.  
+1.  Aplikacja hosta aktywuje dodatek za pomocą <xref:System.AddIn.Hosting.AddInToken.Activate%2A> metody.  
   
-2.  Widok dodatku, dodatku, Dodaj w stronie karty i zestawów kontraktu są ładowane do dodatku domeny aplikacji.  
+2.  Widok dodatku, dodatek, karta add w side i zestawy umowy są ładowane do dodatku w domenie aplikacji.  
   
-3.  Wystąpienia karty Dodaj w stronie jest tworzony przy użyciu widoku Dodaj (przy użyciu klasy oznaczona <xref:System.AddIn.Pipeline.AddInBaseAttribute> atrybut) jako jego konstruktora. Dodaj w stronie karty dziedziczy kontraktu.  
+3.  Przy użyciu widoku dodatku, tworzone jest wystąpienie karty add w side (przy użyciu klasy identyfikowane przez <xref:System.AddIn.Pipeline.AddInBaseAttribute> atrybutu) jako jego konstruktora. Karta Dodaj w side dziedziczy z umowy.  
   
-4.  Karty Dodaj strony, która jest typu kontraktu, są przekazywane granicy izolacji (opcjonalnie) do konstruktora karty po stronie hosta.  
+4.  Karty Dodaj strony, która jest jako wpisana nazwa kontraktu, jest przekazywany przez granicę izolacji (opcjonalnie) do konstruktora adapter po stronie hosta.  
   
-5.  Adapter dodatku, po stronie hosta i zestawów kontraktu widoku hosta są ładowane do domeny aplikacji hosta.  
+5.  Widok hosta karty dodatku, po stronie hosta i zestawy umowy są ładowane do domeny aplikacji hosta.  
   
-6.  Tworzone jest wystąpienie karty po stronie hosta przy użyciu kontraktu, ponieważ jego konstruktora. Adaptery po stronie hosta dziedziczy widoku hosta dodatku.  
+6.  Tworzone jest wystąpienie adapter po stronie hosta, za pomocą umowy jako jej konstruktora. Adaptery po stronie hosta dziedziczy widok hosta dodatków.  
   
-7.  Host ma dodatku, którego typem hosta widok dodatek i można kontynuować podczas wywoływania metody.  
+7.  Host ma dodatku, którego typem hosta Widok dodatku i można kontynuować wywoływania jego metody.  
   
 ## <a name="walkthroughs"></a>Wskazówki  
- Istnieją trzy tematy wskazówki dotyczące sposobu tworzenia potoki przy użyciu programu Visual Studio:  
+ Istnieją trzy instruktaże, które zawierają opis sposobu tworzenia potoków przy użyciu programu Visual Studio:  
   
 -   [Przewodnik: tworzenie aplikacji rozszerzalnej](../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)  
   
-     Opisuje dodatku Kalkulator, który wykonuje dodawania, odejmowania mnożenia i dzielenia obliczeń dla hosta.  
+     W tym artykule opisano dodatek Kalkulator, który wykonuje Dodawanie, odejmowanie, mnożenie i dzielenie obliczeń dla hosta.  
   
--   [Wskazówki: Włączanie zgodności z poprzednimi wersjami zmiana hosta](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [Przewodnik: Włączanie zgodności z poprzednimi wersjami w miarę zmieniania hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
-     Opisuje dodać Kalkulator w możliwości udoskonalone Obliczanie i sposób zachować zgodność z pierwszego Kalkulator dodatku.  
+     W tym artykule opisano Kalkulator dodatek za pomocą obliczeń rozszerzone możliwości oraz sposobu utrzymania zgodności z pierwszą Kalkulator dodatku programu.  
   
--   [Wskazówki: Przekazywanie kolekcje między hostami oraz dodatki](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [Wskazówki: Przekazywanie kolekcji między hostami i dodatkami](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
-     Opisuje sposób przekazywania zbierania danych za pośrednictwem potoku książki scenariusz magazynu.  
+     W tym artykule opisano sposób przekazywania zbierania danych przez potok przy użyciu scenariusza magazynu książki.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Scenariusze potoku dodatku](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [Scenariusze potoku dodatku](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [Dodatki i rozszerzalność](../../../docs/framework/add-ins/index.md)

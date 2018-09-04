@@ -1,62 +1,72 @@
 ---
 title: Tabela typów wbudowanych (odwołanie w C#)
-ms.date: 07/20/2015
+description: Słowa kluczowe dla typy wbudowane C#
+ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 120347e5bff7f0d6c7120af0cb250936ca39ea16
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: fd9ba878d77bdb219542db55bb38023c60c7bec4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172269"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507315"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabela typów wbudowanych (odwołanie w C#)
+
 W poniższej tabeli przedstawiono typy wbudowane C#, które są aliasy wstępnie zdefiniowanych typów słowa kluczowe w <xref:System> przestrzeni nazw.  
   
-|Typ języka C#|Typ architektury .NET framework|  
+|Typ C#|Typ architektury .NET|  
 |--------------|-------------------------|  
-|[bool](../../../csharp/language-reference/keywords/bool.md)|`System.Boolean`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`System.Byte`|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`System.SByte`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`System.Char`|  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|`System.Decimal`|  
-|[double](../../../csharp/language-reference/keywords/double.md)|`System.Double`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`System.Single`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`System.Int32`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`System.UInt32`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`System.Int64`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`System.UInt64`|  
-|[object](../../../csharp/language-reference/keywords/object.md)|`System.Object`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`System.Int16`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`System.UInt16`|  
-|[string](../../../csharp/language-reference/keywords/string.md)|`System.String`|  
+|[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
+|[byte](byte.md)|<xref:System.Byte?displayProperty=nameWithType>|  
+|[sbyte](sbyte.md)|<xref:System.SByte?displayProperty=nameWithType>|  
+|[char](char.md)|<xref:System.Char?displayProperty=nameWithType>|  
+|[decimal](decimal.md)|<xref:System.Decimal?displayProperty=nameWithType>|  
+|[double](double.md)|<xref:System.Double?displayProperty=nameWithType>|  
+|[float](float.md)|<xref:System.Single?displayProperty=nameWithType>|  
+|[int](int.md)|<xref:System.Int32?displayProperty=nameWithType>|  
+|[uint](uint.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
+|[long](long.md)|<xref:System.Int64?displayProperty=nameWithType>|  
+|[ulong](ulong.md)|<xref:System.UInt64?displayProperty=nameWithType>|  
+|[object](object.md)|<xref:System.Object?displayProperty=nameWithType>|  
+|[short](short.md)|<xref:System.Int16?displayProperty=nameWithType>|  
+|[ushort](ushort.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
+|[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
   
-## <a name="remarks"></a>Uwagi  
- Wszystkie typy w tabeli, z wyjątkiem `object` i `string`, są określane jako typów prostych.  
+## <a name="remarks"></a>Uwagi
+
+Wszystkie typy w tabeli, z wyjątkiem `object` i `string`, są nazywane typów prostych.  
   
- Słowa kluczowe typu C# i ich aliasy są wymienne. Na przykład można zadeklarować zmiennej całkowitą przy użyciu jednej z następujących deklaracji:  
-  
-```csharp  
-int x = 123;  
-System.Int32 x = 123;  
-```  
-  
- Aby wyświetlić rzeczywisty typ dla dowolnego typu C#, należy użyć metody systemu `GetType()`. Na przykład następująca instrukcja wyświetla alias systemu, który reprezentuje typ `myVariable`:  
-  
-```csharp  
-Console.WriteLine(myVariable.GetType());  
-```  
-  
- Można również użyć [typeof](../../../csharp/language-reference/keywords/typeof.md) operatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Typy wartości](../../../csharp/language-reference/keywords/value-types.md)  
- [Tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Formatowanie tabeli wyników liczbowych](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Tabele odwołań dla typów](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+Słowa kluczowe typu C# i ich aliasy są wymienne. Na przykład można zadeklarować zmienną całkowitoliczbową przy użyciu jednej z następujących deklaracje:  
+
+```csharp
+int x = 123;
+System.Int32 y = 123;
+```
+
+Użyj [typeof](typeof.md) operatorem w celu uzyskania <xref:System.Type?displayProperty=nameWithType> wystąpienia, który reprezentuje określony typ:
+
+```csharp
+Type stringType = typeof(string);
+Console.WriteLine(stringType.FullName);
+
+Type doubleType = typeof(System.Double);
+Console.WriteLine(doubleType.FullName);
+
+// Output:
+// System.String
+// System.Double
+```
+
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Tabele odwołań dla typów](reference-tables-for-types.md)
+- [Typy wartości](value-types.md)
+- [Typy odwołań](reference-types.md)
+- [Tabela wartości domyślnych](default-values-table.md)
+- [dynamic](dynamic.md)

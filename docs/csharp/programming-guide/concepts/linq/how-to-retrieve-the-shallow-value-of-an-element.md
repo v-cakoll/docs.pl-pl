@@ -1,23 +1,23 @@
 ---
-title: 'Porady: pobieranie skrócona wartość elementu (C#)'
+title: 'Porady: pobieranie płytkiej wartości elementu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 47c7cdd118a14070ea3a005bda88b55cc7075185
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e1a5b216a02ca72fa49785e50ed262a89abfcdf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325945"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505307"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Porady: pobieranie skrócona wartość elementu (C#)
-W tym temacie pokazano, jak pobrać pobieżną wartości elementu. Skrócona wartość jest wartością tylko określonego elementu zamiast dokładnego wartość, która zawiera wartości wszystkich elementów podrzędnych połączone w jeden ciąg.  
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Porady: pobieranie płytkiej wartości elementu (C#)
+W tym temacie przedstawiono sposób pobieranie płytkiej wartości elementu. Płytkiej wartości jest wartość określonego elementu, w przeciwieństwie do głębokiego wartość, która zawiera wartości wszystkie elementy potomne połączonych w jeden ciąg.  
   
- Podczas pobierania wartości elementu przy użyciu albo rzutowanie lub <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości, można pobrać wartości bezpośrednich. Aby pobrać pobieżną wartości, można użyć `ShallowValue` — metoda rozszerzenia, jak pokazano w przykładzie Oto. Pobieranie pobieżną wartości jest przydatne, gdy chcesz wybrać elementy na podstawie ich zawartości.  
+ Podczas pobierania wartości elementu przy użyciu obu rzutowania lub <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości pobrania głębokiego wartości. Aby pobieranie płytkiej wartości, można użyć `ShallowValue` metodę rozszerzenia, jak pokazano w przykładzie follwing. Trwa pobieranie płytkiej wartości jest przydatne w przypadku, gdy chcesz wybrać elementy, na podstawie ich zawartości.  
   
- Poniższy przykład deklaruje metodę rozszerzenia, która pobiera skrócona wartość elementu. Następnie używa metody rozszerzenia w zapytaniu Aby wyświetlić listę wszystkich elementów, które zawierają obliczonej wartości.  
+ Poniższy przykład deklaruje metodę rozszerzenia, która pobiera płytkiej wartości elementu. Następnie używa metody rozszerzenia w zapytaniu, aby wyświetlić listę wszystkich elementów, które zawierają obliczoną wartość.  
   
 ## <a name="example"></a>Przykład  
- Następujący plik tekstowy, Report.xml, jest źródła w ramach tego przykładu.  
+ W następującym pliku tekstowym Report.xml, jest źródłem w tym przykładzie.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -79,5 +79,6 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do osi XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Zobacz też
+
+- [LINQ do XML osi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

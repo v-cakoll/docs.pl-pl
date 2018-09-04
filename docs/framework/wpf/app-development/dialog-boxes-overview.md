@@ -11,11 +11,11 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 649d60a2d50237827d5f334e934103b234a42724
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387943"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506337"
 ---
 # <a name="dialog-boxes-overview"></a>Przegląd okien dialogowych
 Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetlenie danych głównych, względem której aplikacja działa i uwidacznia funkcje przetwarzania tych danych za pośrednictwem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanizmów, takich jak pasek menu, paski narzędzi i pasków stanu. — Prosta aplikacja może również wyświetlić dodatkowe okna, wykonaj następujące czynności:  

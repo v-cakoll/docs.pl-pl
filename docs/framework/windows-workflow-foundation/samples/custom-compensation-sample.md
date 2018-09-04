@@ -3,11 +3,11 @@ title: Przykładowe Kompensacja niestandardowa
 ms.date: 03/30/2017
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
 ms.openlocfilehash: ac141a48f87f5b14f6b528f7b3ceb7fdddeaf2d2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475871"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503722"
 ---
 # <a name="custom-compensation-sample"></a>Przykładowe Kompensacja niestandardowa
 Ten przykład ilustruje sposób używania <xref:System.Activities.Statements.CompensableActivity> i jego procedurę obsługi do definiowania logiki Kompensacja niestandardowa. Scenariusz, w tym przykładzie w modelu jest agencji wypożyczeń Truck.  

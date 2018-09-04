@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
 ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474297"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508202"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Formatowanie tabeli wyników liczbowych (odwołanie w C#)
 Wyników liczbowych można sformatować za pomocą <xref:System.String.Format%2A?displayProperty=nameWithType> metoda, za pomocą <xref:System.Console.Write%2A?displayProperty=nameWithType> lub <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> metod, które wymagają `String.Format`, lub za pomocą [Interpolacja ciągów](../tokens/interpolated.md). Format jest określony za pomocą ciągów formatu. Poniższa tabela zawiera ciągi obsługiwany formatu standardowego. Ciąg formatu ma następującą postać: `Axx`, gdzie `A` jest specyfikatorem formatu i `xx` jest Specyfikator dokładności. Specyfikator formatu określa typ sformatowane wartości liczbowej, a Specyfikator dokładności określa liczbę cyfr znaczących lub miejsc dziesiętnych sformatowanych danych wyjściowych. Wartość zakresu Specyfikator dokładności, od 0 do 99.  

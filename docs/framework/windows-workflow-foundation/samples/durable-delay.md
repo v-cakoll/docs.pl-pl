@@ -3,11 +3,11 @@ title: Trwałe opóźnienie
 ms.date: 03/30/2017
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
 ms.openlocfilehash: 2a7692e28d60232913ae5d11a90025e59664c0e5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406579"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507636"
 ---
 # <a name="durable-delay"></a>Trwałe opóźnienie
 Ten przykład pokazuje sposób użycia trwałe opóźnienie z opóźnieniem, która utrzymuje przepływu pracy na trwałe urządzenie podczas opóźnienie. Przykładowy przepływ pracy zawiera dwa komunikaty wyjściowe do konsoli, które są oddzielone opóźnienia. Po wyzwoleniu opóźnienie przepływu pracy jest zwalniana i oczekuje na 5 sekund magazynu wystąpień przepływu pracy ładowane w pamięci.  

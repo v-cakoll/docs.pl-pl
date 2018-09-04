@@ -2,12 +2,12 @@
 title: Synchronizacja wątku (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 4ed6cad647c965882a63282ce32c998cec138eec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6f0fe42c06b27369612cf586c7a93ce098822162
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463159"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509389"
 ---
 # <a name="thread-synchronization-c"></a>Synchronizacja wątku (C#)
 W następujących sekcjach opisano funkcje i klasy, które mogą służyć do synchronizowania dostępu do zasobów w aplikacjach wielowątkowych.  
@@ -142,26 +142,27 @@ class ThreadingExample
 ## <a name="deadlocks"></a>Zakleszczenia  
  Synchronizacji wątków jest bezcenne w aplikacjach wielowątkowych, ale zawsze istnieje zagrożenie tworzenia `deadlock`, gdy wiele wątków oczekują na siebie nawzajem i aplikacji, który jest dostarczany do zatrzymania. Zakleszczenie jest analogiczne do sytuacji, w której samochodów zostały zatrzymane w stop czterokierunkowego i każda osoba oczekuje na inne przejść. Unikanie zakleszczenia jest ważny; klucz jest starannego planowania. Można często prognozowania sytuacjach zakleszczenia na podstawie diagramów aplikacji wielowątkowych, przed rozpoczęciem kodowania.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.WaitHandle.WaitOne%2A>  
- <xref:System.Threading.WaitHandle.WaitAny%2A>  
- <xref:System.Threading.WaitHandle.WaitAll%2A>  
- <xref:System.Threading.Thread.Join%2A>  
- <xref:System.Threading.Thread.Start%2A>  
- <xref:System.Threading.Thread.Sleep%2A>  
- <xref:System.Threading.Monitor>  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- <xref:System.Threading.Interlocked>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading>  
- <xref:System.Threading.EventWaitHandle.Set%2A>  
- <xref:System.Threading.Monitor>  
- [lock, instrukcja](../../../../csharp/language-reference/keywords/lock-statement.md)  
- [Muteksy](../../../../standard/threading/mutexes.md)  
- [Operacje blokowane](../../../../standard/threading/interlocked-operations.md)  
- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
- [Synchronizowanie danych na potrzeby wielowątkowości](../../../../standard/threading/synchronizing-data-for-multithreading.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.WaitHandle.WaitOne%2A>  
+- <xref:System.Threading.WaitHandle.WaitAny%2A>  
+- <xref:System.Threading.WaitHandle.WaitAll%2A>  
+- <xref:System.Threading.Thread.Join%2A>  
+- <xref:System.Threading.Thread.Start%2A>  
+- <xref:System.Threading.Thread.Sleep%2A>  
+- <xref:System.Threading.Monitor>  
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- <xref:System.Threading.Interlocked>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading>  
+- <xref:System.Threading.EventWaitHandle.Set%2A>  
+- <xref:System.Threading.Monitor>  
+- [lock, instrukcja](../../../../csharp/language-reference/keywords/lock-statement.md)  
+- [Muteksy](../../../../standard/threading/mutexes.md)  
+- [Operacje blokowane](../../../../standard/threading/interlocked-operations.md)  
+- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
+- [Synchronizowanie danych na potrzeby wielowątkowości](../../../../standard/threading/synchronizing-data-for-multithreading.md)

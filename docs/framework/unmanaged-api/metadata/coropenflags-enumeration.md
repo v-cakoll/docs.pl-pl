@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c08b1f6be41de63886115e5aed6bcad901658bb5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258336"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509223"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags — Wyliczenie
 Zawiera wartości flagi, które kontrolują zachowanie metadanych podczas otwierania plików manifestu.  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|Wskazuje, że dla odczytu, które można otworzyć pliku wywołanie `QueryInterface` dla [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) nie może zostać wykonana.|  
 |`ofTakeOwnership`|Wskazuje, że pamięć została przydzielona za pomocą wywołania [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) i zostanie zwolniona w metadanych.|  
 |`ofNoTypeLib`|Nieaktualne. Ta flaga jest ignorowana.|  
-|`ofNoTransform`|Wskazuje, należy wyłączyć automatyczne transformacje plików winmd. Innymi słowy należy wyłączyć projekcji typu środowiska wykonawczego Windows, aby typ .NET Framework. Aby uzyskać więcej informacji, zobacz [poniżej składniki przy użyciu platformy .NET i środowiska wykonawczego Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Wskazuje, należy wyłączyć automatyczne transformacje plików winmd. Innymi słowy należy wyłączyć projekcji typu środowiska wykonawczego Windows, aby typ .NET Framework. Aby uzyskać więcej informacji, zobacz [poniżej składniki przy użyciu platformy .NET i środowiska wykonawczego Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Zarezerwowane do użytku wewnętrznego.|  
 |`ofReserved2`|Zarezerwowane do użytku wewnętrznego.|  
 |`ofReserved`|Zarezerwowane do użytku wewnętrznego.|  

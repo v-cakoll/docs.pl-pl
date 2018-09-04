@@ -5,11 +5,11 @@ ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 596cab4494ef3ba200fd0a046d7935f648fb7c4f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503218"
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
 Usuwa programu obsługi tokenów zabezpieczeń określone z kolekcji programu obsługi tokenów.  

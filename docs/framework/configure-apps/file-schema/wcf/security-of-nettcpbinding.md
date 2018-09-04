@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: f58dd0ee1b00785e82628e5442c736866ffe7db5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 13aeb3261fdb9689caa1dea1ec7382fdb9d9b1ce
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751236"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516976"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;security&gt; w &lt;netTcpBinding&gt;
 Definiuje ustawienia zabezpieczeń dla powiązania.  
@@ -34,22 +34,22 @@ Definiuje ustawienia zabezpieczeń dla powiązania.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty i elementy podrzędne, elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Opcjonalna. Określa typ zabezpieczeń, która została zastosowana. Poniżej przedstawiono prawidłowe wartości. Wartość domyślna to `Transport`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.SecurityMode>.|  
+|tryb|Opcjonalna. Określa typ zabezpieczeń, która jest stosowana. Poniżej przedstawiono prawidłowe wartości. Wartość domyślna to `Transport`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Tryb atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Brak|Zabezpieczenia są wyłączone.|  
-|Transportu|Zabezpieczenia transportu są udostępniane za pośrednictwem protokołu TCP lub SPNego przy użyciu protokołu TLS. Usługa może być konieczne można skonfigurować za pomocą certyfikatów SSL. Jest możliwe kontrolowanie poziomu ochrony, w tym trybie.|  
-|Komunikat|Zabezpieczenia korzystanie z zabezpieczeń komunikatów SOAP. Domyślnie treści protokołu SOAP zostaje zaszyfrowany i podpisany. W tym trybie oferuje wiele funkcji, takich jak określa, czy poświadczenia usługi są dostępne pod adresem klientem poza pasmem, pakiet algorytmów do użycia, a poziom ochrony do zastosowania do treści wiadomości. Uwierzytelnianie klienta jest wykonywane raz na sesji i wyniki uwierzytelniania są buforowane na czas trwania sesji.|  
-|TransportWithMessageCredential|Zabezpieczenia transportu jest sprzężona z zabezpieczeń wiadomości. Zabezpieczenia transportu są dostarczane przez TLS za pośrednictwem protokołu TCP lub SPNego i zapewnia integralność, poufności i uwierzytelniania serwera. Zabezpieczenia komunikatów SOAP zapewnia uwierzytelnianie klienta. Domyślnie uwierzytelnianie klienta jest wykonywane raz na sesji i wyniki uwierzytelniania są buforowane na czas trwania sesji.|  
+|Transportu|Zabezpieczenia transportu znajduje się za pośrednictwem protokołu TCP lub SPNego przy użyciu protokołu TLS. Usługa może być konieczne można skonfigurować za pomocą certyfikatów SSL. Istnieje możliwość kontrolować poziom ochrony w tym trybie.|  
+|Komunikat|Zabezpieczenia korzystanie z zabezpieczeń komunikatów protokołu SOAP. Domyślnie treści protokołu SOAP jest zaszyfrowany i podpisany. Ten tryb zapewnia szeroką gamę funkcji, takich jak tego, czy poświadczenia usługi są dostępne pod adresem klientem poza pasmem, pakiet algorytmów, używać oraz poziom ochrony w celu zastosowania do treści wiadomości. Uwierzytelnianie klienta jest wykonywane raz na sesji i wyniki uwierzytelniania są buforowane na czas trwania sesji.|  
+|TransportWithMessageCredential|Zabezpieczenia transportu jest sprzężona z zabezpieczeń komunikatów. Zabezpieczenia transportu znajduje się przez protokół TLS za pośrednictwem protokołu TCP lub SPNego i zapewnia integralność, poufności i uwierzytelniania serwera. Zabezpieczenia komunikatów SOAP zapewnia uwierzytelnianie klienta. Domyślnie uwierzytelnianie klienta jest wykonywane raz na sesję, a wyniki uwierzytelniania są buforowane na czas trwania sesji.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -65,11 +65,11 @@ Definiuje ustawienia zabezpieczeń dla powiązania.
 |powiązanie|Element powiązania [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- Każdy powiązań standardowych zawiera parametry kontrolowanie wymagania dotyczące zabezpieczeń transferu. Te parametry obejmują zazwyczaj tryb zabezpieczeń, które określone, czy używany jest zabezpieczeń na poziomie transportu lub poziom wiadomości i wybór typu poświadczeń klienta. Na podstawie wyboru opcji parametrów nie istnieje stosu kanał jest tworzony z odpowiednich ustawień zabezpieczeń.  
+ Każda standardowa powiązania udostępnia parametry do kontrolowania wymagania w zakresie zabezpieczeń transferu. Te parametry obejmują zazwyczaj tryb zabezpieczeń, który określono, czy zabezpieczeń na poziomie transportu lub poziomie wiadomości jest używany i wybór typu poświadczeń klienta. Na podstawie wybranego opcji Parametry te obecny, stos kanał jest zbudowany z odpowiednie zabezpieczenia.  
   
- Powiązania dostarczane przez system dostarczane przez Windows Communication Foundation (WCF) są zestawem zaprojektowane pod kątem niektórych wymagań najbardziej typowych scenariuszy. Każdy z tych powiązań umożliwia określenie wymagań dotyczących zabezpieczeń dla niektórych konkretnych scenariuszy docelowych.  
+ Powiązania dostarczane przez system, dostarczonych przez Windows Communication Foundation (WCF) to zestaw zaprojektowanych do spełniania niektóre z najczęściej stawianych wymagań scenariusza. Każda z tych powiązań umożliwia określenie wymagań dotyczących zabezpieczeń w niektórych określonych scenariuszach docelowych.  
   
- Ten element konfiguracji zawiera specyfikacji zabezpieczenia dla `netTcpBinding`. Jest to bezpieczne, niezawodne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami. Domyślnie generuje stosu komunikacji środowiska uruchomieniowego obsługi protokołu TCP dla dostarczanie komunikatów i zabezpieczenia systemu Windows dla komunikatów zabezpieczeń i uwierzytelniania, WS-ReliableMessaging, niezawodności i kodowanie komunikatu binarnego.  
+ Ten element konfiguracji zawiera specyfikacje zabezpieczeń `netTcpBinding`. Jest to bezpieczne, niezawodne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami. Domyślnie generuje stosu komunikacji środowiska uruchomieniowego obsługi protokołu TCP dla dostarczania wiadomości i zabezpieczeń Windows dla zabezpieczenia wiadomości i każde uwierzytelnienie, WS-ReliableMessaging, niezawodność i kodowania komunikatu binarnego.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.NetTcpSecurity>  
@@ -79,5 +79,5 @@ Definiuje ustawienia zabezpieczeń dla powiązania.
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

@@ -7,82 +7,82 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: ca21aeb6ae1cf53bc3ff4edbcf575b733a52a1cf
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472493"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525688"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opcje kompilatora C# w porządku alfabetycznym
 
-Następujące opcje kompilatora są sortowane w kolejności alfabetycznej. Lista kategorii, [C# kompilatora opcje rozbiciu na kategorie](listed-by-category.md).
+Następujące opcje kompilatora są sortowane alfabetycznie. Aby uzyskać listę kategorii, zobacz [C# opcje kompilatora wymienione według kategorii](listed-by-category.md).
 
 |Opcja|Cel|
 |------------|-------------|
 |[@](response-file-compiler-option.md)|Odczytuje plik odpowiedzi, aby wyświetlić więcej opcji.|
-|[-?](help-compiler-option.md)|Wyświetla komunikat o sposobie użycia stdout.|
-|-additionalfile|Nazwy dodatkowych plików bezpośrednio nie wpływają na generowanie kodu, które mogą być używane przez analizatory do produkcji błędy lub ostrzeżenia.|
+|[-?](help-compiler-option.md)|Wyświetla komunikat o sposobie użycia do strumienia wyjściowego stdout.|
+|-additionalfile|Nazwy dodatkowe pliki, bezpośrednio nie wpływa na generowanie kodu, które mogą być używane przez analizatory do produkcji, błędy lub ostrzeżenia.|
 |[-addmodule](addmodule-compiler-option.md)|Łączy określone moduły z tym zestawem|
-|-analyzer|Uruchom analizatorów z tego zestawu (krótka wersja: -)|
-|[-appconfig](appconfig-compiler-option.md)|Określa lokalizację pliku app.config w czasie powiązanie zestawu.|
+|-analyzer|Uruchom analizatorów z tego zestawu (skrócona forma: -)|
+|[-appconfig](appconfig-compiler-option.md)|Określa lokalizację pliku app.config w czasie powiązania zestawu.|
 |[-baseaddress](baseaddress-compiler-option.md)|Określa adres podstawowy biblioteki, który ma zostać utworzony.|
-|[-bugreport](bugreport-compiler-option.md)|Tworzy plik "Usterek — raport". Ten plik zostanie wysłana wraz z informacjami awarii, jeśli jest używana z - errorreport: wiersz lub - errorreport: wysyłania.|
-|[-checked](checked-compiler-option.md)|Umożliwia kompilatorowi Generowanie sprawdzanie nadmiaru dla operacji.|
-|-checksumalgorithm:\<alg >|Określa algorytm oblicza sumę kontrolną pliku źródłowego, przechowywane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (ustawienie domyślne) lub SHA256.|
-|[-codepage](codepage-compiler-option.md)|Określa stronę kodową do używania podczas otwierania plików źródłowych.|
-|[-debug](debug-compiler-option.md)|Emituje informacje o debugowaniu.|
+|[-bugreport](bugreport-compiler-option.md)|Tworzy plik "Raport o usterce". Ten plik będzie wysyłane wraz z informacjami o awariach, jeśli jest używane z parametrem-errorreport: wiersz lub - errorreport: wysyłanie.|
+|[-checked](checked-compiler-option.md)|Powoduje, że kompilatorowi Generowanie sprawdzenia przepełnienia.|
+|-checksumalgorithm:\<algorytmu podpisu >|Określa algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (domyślna) lub SHA256.|
+|[-codepage](codepage-compiler-option.md)|Określa stronę kodową do użycia przy otwieraniu plików źródłowych.|
+|[-debug](debug-compiler-option.md)|Emituje informacje debugowania.|
 |[-define](define-compiler-option.md)|Definiuje symbole kompilacji warunkowej.|
-|[-delaysign](delaysign-compiler-option.md)|Opóźnienie znaki zestawu za pomocą tylko publicznej części klucza silnej nazwy.|
-|[-deterministic](deterministic-compiler-option.md)|Powoduje, że kompilator output zestawu, którego zawartość binarna jest identyczna w kompilacji, jeśli dane wejściowe są identyczne.|
+|[-delaysign](delaysign-compiler-option.md)|Podpisuje testowo opóźnienie zestawie, używając tylko publicznej części klucza silnej nazwy.|
+|[-deterministic](deterministic-compiler-option.md)|Powoduje, że kompilator do wyjściowego zestawu, którego zawartość binarna jest identyczna w kompilacjach, jeśli dane wejściowe są identyczne.|
 |[-doc](doc-compiler-option.md)|Określa plik dokumentacji XML do wygenerowania.|
-|[-errorreport](errorreport-compiler-option.md)|Określa sposób obsługiwać wewnętrzne błędy kompilatora: wiersza, Wyślij lub none. Domyślna wartość to Brak.|
-|[-filealign](filealign-compiler-option.md)|Określa wyrównanie używane w sekcjach pliku wyjściowego.|
-|[-fullpaths](fullpaths-compiler-option.md)|Umożliwia kompilatorowi Generowanie pełni kwalifikowane ścieżki.|
-|[-help](help-compiler-option.md)|Wyświetla komunikat o sposobie użycia stdout.|
-|[-highentropyva](highentropyva-compiler-option.md)|Określa, że wysokiej entropii ASLR jest obsługiwana.|
-|-przyrostowe|Włącza kompilację przyrostową [przestarzały].|
-|[-keycontainer](keycontainer-compiler-option.md)|Określa kontener klucza o silnej nazwie.|
+|[-errorreport](errorreport-compiler-option.md)|Określa sposób obsługiwać wewnętrzne błędy kompilatora: wiersz, Wyślij lub Brak. Domyślna wartość to Brak.|
+|[-filealign](filealign-compiler-option.md)|Określa wyrównanie stosowane dla sekcji plików wyjściowych.|
+|[-fullpaths](fullpaths-compiler-option.md)|Powoduje, że kompilatorowi Generowanie ścieżek w pełni kwalifikowanych.|
+|[-help](help-compiler-option.md)|Wyświetla komunikat o sposobie użycia do strumienia wyjściowego stdout.|
+|[-highentropyva](highentropyva-compiler-option.md)|Określa, że o wysokiej entropii, obsługiwany jest ASLR.|
+|-przyrostowe|Włącza kompilację przyrostową [nieaktualne].|
+|[-keycontainer](keycontainer-compiler-option.md)|Określa kontener klucza silnej nazwy.|
 |[-keyfile](keyfile-compiler-option.md)|Określa plik klucza o silnej nazwie.|
-|[-langversion:\<ciąg >](langversion-compiler-option.md)|Określ wersję językową: domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 lub najnowsze |
-|[-lib](lib-compiler-option.md)|Określa dodatkowe katalogi, w których będą poszukiwane odwołań.|
-|[-link](link-compiler-option.md)|Udostępnia informacje o typie modelu COM w określonych zestawów do projektu.|
-|[-linkresource](linkresource-compiler-option.md)|Dołącza określony zasób z tym zestawem.|
+|[-langversion:\<ciąg >](langversion-compiler-option.md)|Określ wersję języka: domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 lub najnowsze |
+|[-lib](lib-compiler-option.md)|Określa dodatkowe katalogi, w których należy szukać odwołania.|
+|[-link](link-compiler-option.md)|Udostępnia informacje o typie modelu COM w określonych zestawach do projektu.|
+|[-linkresource](linkresource-compiler-option.md)|Łączy określony zasób do tego zestawu.|
 |[-main](main-compiler-option.md)|Określa typ zawierający punkt wejścia (Ignoruj wszystkie pozostałe możliwe punkty wejścia).|
-|[-moduleassemblyname](moduleassemblyname-compiler-option.md)|Określa, których typy niepublicznych modułu .netmodule mogą uzyskiwać dostęp do zestawu.|
+|[-moduleassemblyname](moduleassemblyname-compiler-option.md)|Określa, których typy bez publicznego .netmodule mogą uzyskiwać dostęp do zestawu.|
 |-modulename:\<ciąg >|Określ nazwę modułu źródła|
-|[-noconfig](noconfig-compiler-option.md)|Instruuje kompilator, nie można automatycznie dołączyć CSC. Źródło pliku.|
+|[-noconfig](noconfig-compiler-option.md)|Instruuje kompilator, nie można automatycznie dołączyć Centrum obsługi klienta. Plik RSP.|
 |[-nologo](nologo-compiler-option.md)|Pomija komunikat o prawach autorskich kompilatora.|
 |[-nostdlib](nostdlib-compiler-option.md)|Instruuje kompilator, aby nie odwołanie do biblioteki standardowej (mscorlib.dll).|
-|[-nowarn](nowarn-compiler-option.md)|Wyłącza określone komunikaty ostrzegawcze|
-|[-nowin32manifest](nowin32manifest-compiler-option.md)|Instruuje kompilator, aby nie Osadź manifest aplikacji w pliku wykonywalnego.|
+|[-nowarn](nowarn-compiler-option.md)|Wyłącza określone ostrzeżenia|
+|[-nowin32manifest](nowin32manifest-compiler-option.md)|Instruuje kompilator, nie można osadzić manifest aplikacji w pliku wykonywalnym.|
 |[-optimize](optimize-compiler-option.md)|Włącza/wyłącza optymalizacje.|
 |[-out](out-compiler-option.md)|Określa nazwę pliku wyjściowego (domyślne: Nazwa podstawowa pliku z klasą główną lub pierwszym plikiem).|
-|-równoległe [+&#124;—]|Określa, czy używać współbieżnych kompilacji (+).|
-|[-pathmap](pathmap-compiler-option.md)|Określa mapowania dla danych wyjściowych nazwy ścieżki źródłowej przez kompilator.|
-|[-pdb](pdb-compiler-option.md)|Określa nazwę pliku i lokalizację pliku PDB.|
-|[-platform](platform-compiler-option.md)|Limity platformy, których można uruchamiać ten kod na: x86, Itanium, x 64, wartość anycpu, lub anycpu32bitpreferred. Wartość domyślna to anycpu.|
-|[-preferreduilang](preferreduilang-compiler-option.md)|Określa język do użycia dla danych wyjściowych kompilatora.|
-|[-publicsign](publicsign-compiler-option.md)|Zastosuj klucz publiczny bez podpisywania zestawu, ale ustawiony bit w zestawie wskazujący, że zestaw jest podpisany.|
-|[-recurse](recurse-compiler-option.md)|Zawiera wszystkie pliki w bieżącym katalogu i jego podkatalogach zgodnie ze specyfikacją symboli wieloznacznych.|
-|[-reference](reference-compiler-option.md)|Odwołania do metadanych z określonych plików zestawów.|
-|[-refout](refout-compiler-option.md)|Wygeneruj zestaw odwołania, oprócz podstawowego zestawu.|
-|[-refonly](refonly-compiler-option.md)|Wygeneruj zestaw odwołania, a nie podstawowy zestaw.|
-|[-resource](resource-compiler-option.md)|Osadza określonego zasobu.|
-|zestaw reguł-:\<pliku >|Określ plik zestaw reguł, który powoduje wyłączenie diagnostyczne zależne.|
-|[-subsystemversion](subsystemversion-compiler-option.md)|Określa minimalną wersję podsystemu, który można użyć pliku wykonywalnego.|
-|[-target](target-compiler-option.md)|Określa format pliku wyjściowego przy użyciu jednej z czterech opcji: [-docelowych: appcontainerexe](target-appcontainerexe-compiler-option.md), [— docelowych: exe](target-exe-compiler-option.md), [— docelowa: Biblioteka](target-library-compiler-option.md), [-docelowych: Moduł](target-module-compiler-option.md), [-docelowych: winexe](target-winexe-compiler-option.md), [-docelowych: winmdobj](target-winmdobj-compiler-option.md).|
+|-równoległe [+&#124;-]|Określa, czy używać współbieżną kompilację (+).|
+|[-pathmap](pathmap-compiler-option.md)|Określa mapowania dla źródła danych wyjściowych z nazw ścieżki przez kompilator.|
+|[-pdb](pdb-compiler-option.md)|Określa nazwę pliku i lokalizację pliku .pdb.|
+|[-platform](platform-compiler-option.md)|Ograniczenia platform, których można uruchamiać ten kod na: x86, Itanium, x 64, anycpu, lub anycpu32bitpreferred. Wartość domyślna to anycpu.|
+|[-preferreduilang](preferreduilang-compiler-option.md)|Określa język, który ma być używany dla danych wyjściowych kompilatora.|
+|[-publicsign](publicsign-compiler-option.md)|Zastosuj klucz publiczny bez podpisywania zestawu, ale ustawiony bit w zestawie, wskazujący, że zestaw jest podpisany.|
+|[-recurse](recurse-compiler-option.md)|Uwzględnia wszystkie pliki w bieżącym katalogu i jego podkatalogach zgodnie ze specyfikacją symboli wieloznacznych.|
+|[-reference](reference-compiler-option.md)|Odwołuje się do metadanych z określonych plików zestawów.|
+|[-refout](refout-compiler-option.md)|Generowanie zestawu odwołania oprócz podstawowego zestawu.|
+|[-refonly](refonly-compiler-option.md)|Generowanie zestawu odwołania zamiast podstawowego zestawu.|
+|[-resource](resource-compiler-option.md)|Osadza określony zasób.|
+|-zestaw reguł:\<pliku >|Określ plik zestawu reguł, który wyłącza działania diagnostyczne zależne.|
+|[-subsystemversion](subsystemversion-compiler-option.md)|Określa minimalną wersję podsystemu, którego można użyć pliku wykonywalnego.|
+|[-target](target-compiler-option.md)|Określa format pliku wyjściowego przy użyciu jednej z czterech opcji: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: library](target-library-compiler-option.md), [-docelowej: Moduł](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|
 |[-unsafe](unsafe-compiler-option.md)|Umożliwia [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) kodu.|
 |[-utf8output](utf8output-compiler-option.md)|Dane wyjściowe komunikaty kompilatora przy użyciu kodowania UTF-8.|
 |[-warn](warn-compiler-option.md)|Ustawia poziom ostrzeżeń (0-4).|
 |[-warnaserror](warnaserror-compiler-option.md)|Raporty określone ostrzeżenia jako błędy.|
 |[-win32icon](win32icon-compiler-option.md)|Używa tej ikony dla danych wyjściowych.|
-|[-win32manifest](win32manifest-compiler-option.md)|Określa plik manifestu win32 niestandardowych.|
+|[-win32manifest](win32manifest-compiler-option.md)|Określa niestandardowego pliku manifestu win32.|
 |[-win32res](win32res-compiler-option.md)|Określa plik zasobów win32 (.res).|
 
 ## <a name="see-also"></a>Zobacz też
 
- [Opcje kompilatora C#](index.md)  
- [Opcje kompilatora C# w rozbiciu na kategorie](listed-by-category.md)  
- [Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
- [\<Kompilator > — Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [Opcje kompilatora C#](index.md)  
+- [Opcje kompilatora C# w rozbiciu na kategorie](listed-by-category.md)  
+- [Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [\<Kompilator > Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

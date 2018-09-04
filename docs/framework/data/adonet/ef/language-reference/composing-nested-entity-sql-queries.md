@@ -1,19 +1,19 @@
 ---
-title: Tworzenie zapytań SQL zagnieżdżonych jednostki
+title: Tworzenie zagnieżdżonych zapytań jednostki SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 92e3153350787ef75c48ee52f1b6c68e09e15b4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a0efa672a57a9255af2d90af1725b34be75600e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760859"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528160"
 ---
-# <a name="composing-nested-entity-sql-queries"></a>Tworzenie zapytań SQL zagnieżdżonych jednostki
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest bogaty język funkcjonalności. Blokiem konstrukcyjnym [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażenie. W przeciwieństwie do konwencjonalnych SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jest ograniczone do zestawu wyników tabelarycznym: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje tworzenie złożonych wyrażeń, które mogą mieć literały, parametry lub zagnieżdżonych wyrażeń. Wartość w wyrażeniu można sparametryzowanych lub składa się z niektórych innych wyrażenia.  
+# <a name="composing-nested-entity-sql-queries"></a>Tworzenie zagnieżdżonych zapytań jednostki SQL
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest bogaty język funkcjonalności. Elementem składowym [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażeniem. W przeciwieństwie do poziomu konwencjonalnego SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jest ograniczona do zestawu wyniku tabelarycznym: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje tworzenie złożonych wyrażeń, które mogą mieć literały, parametry lub zagnieżdżonych wyrażeń. Wartości w wyrażeniu można ustawiać parametry lub składa się z niektóre inne wyrażenie.  
   
-## <a name="nested-expressions"></a>Zagnieżdżone wyrażenia  
- Zagnieżdżone wyrażenia można umieścić w dowolnym wartości typu, zwracana jest akceptowany. Na przykład:  
+## <a name="nested-expressions"></a>Zagnieżdżonych wyrażeń  
+ Zagnieżdżone wyrażenie można umieścić w dowolnym miejscu wartości typu, zwracana jest akceptowany. Na przykład:  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -35,7 +35,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- W [!INCLUDE[esql](../../../../../../includes/esql-md.md)], zapytania zagnieżdżone zawsze musi być ujęta w nawiasy:  
+ W [!INCLUDE[esql](../../../../../../includes/esql-md.md)], zapytań zagnieżdżonej zawsze muszą być ujęte w nawiasach:  
   
 ```  
 -- Pseudo-Entity SQL  
@@ -46,19 +46,19 @@ UNION ALL
 FROM … );  
 ```  
   
- W poniższym przykładzie pokazano sposób poprawnie zagnieździć wyrażenia w [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [porady: kolejność Unii o dwa zapytania](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
+ Poniższy przykład pokazuje, jak poprawnie zagnieździć wyrażeń w [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [porady: kolejność Unii z obu zapytań](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
   
 ## <a name="nested-queries-in-projection"></a>Zapytania zagnieżdżone w projekcji  
- Zapytania zagnieżdżone w klauzuli projektu może pobrać przetłumaczyć iloczyn kartezjański zapytania na serwerze. W niektórych serwerów wewnętrznej bazy danych, w tym SQL Server może to spowodować tabeli bazy danych TempDB uzyskanie bardzo duży, które może niekorzystnie wpłynąć na wydajność serwera.  
+ Zapytania zagnieżdżone w klauzuli projektu może uzyskać przetłumaczone na zapytania formułuje iloczyn na serwerze. W niektórych serwerów wewnętrznej bazy danych, w tym SQL Server może to spowodować tabeli bazy danych TempDB, aby stać się bardzo duże, który może niekorzystnie wpłynąć na wydajność serwera.  
   
- Poniżej przedstawiono przykład takiego kwerendy:  
+ Oto przykład w przypadku takiego zapytania:  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="ordering-nested-queries"></a>Porządkowanie zapytania zagnieżdżone  
- W ramach jednostki zagnieżdżone wyrażenia można umieścić dowolne miejsce w zapytaniu. Ponieważ SQL jednostki pozwala dużą elastyczność w Pisanie zapytań, istnieje możliwość Napisz zapytanie, które zawiera kolejność kwerend zagnieżdżonych. Kolejność zapytanie zagnieżdżone nie są zachowywane.  
+## <a name="ordering-nested-queries"></a>Określanie kolejności zapytań zagnieżdżonej  
+ Platformy Entity Framework zagnieżdżone wyrażenie można umieścić dowolne miejsce w zapytaniu. Ponieważ jednostka SQL pozwala na większą elastyczność w pisaniu zapytań, istnieje możliwość napisania zapytanie, które zawiera kolejność zapytań zagnieżdżonej. Kolejność zapytanie zagnieżdżone nie są zachowywane.  
   
 ```  
 -- The following query will order the results by last name.  

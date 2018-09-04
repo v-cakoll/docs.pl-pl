@@ -2,12 +2,12 @@
 title: Wyzwalacze CLR
 ms.date: 03/30/2017
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
-ms.openlocfilehash: c526e16949c76272ba6c6e17233c86daf9d0d1d2
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 98123cf60ac2e1727b12a79f60c1c55f22f0ea48
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253963"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503586"
 ---
 # <a name="clr-triggers"></a>Wyzwalacze CLR
 Wyzwalacz jest specjalny rodzaj procedury przechowywanej, która uruchamia się automatycznie podczas wykonywania zdarzenia języka. Dzięki integracji programu Microsoft SQL Server przy użyciu .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) można użyć dowolnego języka .NET Framework do tworzenia wyzwalaczy CLR.  
@@ -19,5 +19,5 @@ Wyzwalacz jest specjalny rodzaj procedury przechowywanej, która uruchamia się 
 1. [Wyzwalacze CLR](/sql/database-engine/dev-guide/clr-triggers)
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

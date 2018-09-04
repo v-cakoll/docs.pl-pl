@@ -3,11 +3,11 @@ title: Podstawowe użycia sposoby i ReceiveParameters działań
 ms.date: 03/30/2017
 ms.assetid: 1b6b1681-3d41-403f-bfe2-3f600f24aa8c
 ms.openlocfilehash: c13999ad1571a6413e30e801b6c642000f8e4654
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467698"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504011"
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a>Podstawowe użycia sposoby i ReceiveParameters działań
 W tym przykładzie przedstawiono użycie <xref:System.ServiceModel.Activities.SendParametersContent> i <xref:System.ServiceModel.Activities.ReceiveParametersContent> działań. Usługa udostępnia jedna operacja, która przyjmuje argument ciąg i zwraca dane wejściowe do klienta. Przykład przedstawia sposób ustawiania parametrów dla tych działań dotyczących komunikatów.  

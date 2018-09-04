@@ -14,11 +14,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 84000d8762c5d5cfd8d2359a377ffcd5b50ab07c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486756"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502853"
 ---
 # <a name="ltcompilergt-element"></a>&lt;Kompilator&gt; — Element
 

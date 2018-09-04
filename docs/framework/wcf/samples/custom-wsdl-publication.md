@@ -3,11 +3,11 @@ title: Niestandardowa publikacja WSDL
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
 ms.openlocfilehash: 725b62a26d640e242010a01ff810ea90d5cc53bc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418438"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508423"
 ---
 # <a name="custom-wsdl-publication"></a>Niestandardowa publikacja WSDL
 Niniejszy przykład pokazuje, jak:  

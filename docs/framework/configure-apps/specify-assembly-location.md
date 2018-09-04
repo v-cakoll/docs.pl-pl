@@ -10,11 +10,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4a83f1e67377a5ce699301770ff0369f8f760884
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387331"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508472"
 ---
 # <a name="specifying-an-assembly39s-location"></a>Określanie zestawu&#39;lokalizacji s
 Istnieją dwa sposoby, aby określić lokalizację zestawu:  

@@ -4,12 +4,12 @@ description: Dowiedz się, jak zdefiniować i zastosować zwracane ref i wartoś
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33339621"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510568"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Wartości zwracane ref i zmienne lokalne ref
 
@@ -122,7 +122,7 @@ W poniższym przykładzie pokazano sposób, w jaki `FindNumber` metody, które m
 
 Ta druga wersja jest bardziej wydajne, za pomocą sekwencji dłużej w scenariuszach, gdzie numer poszukiwane jest bliżej końca tablicy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[ref keyword](../../language-reference/keywords/ref.md)  
-[Semantyka odwołań z typami wartości](../../../csharp/reference-semantics-with-value-types.md)
+- [ref keyword](../../language-reference/keywords/ref.md)  
+- [Semantyka odwołań z typami wartości](../../../csharp/reference-semantics-with-value-types.md)

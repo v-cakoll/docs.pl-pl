@@ -11,7 +11,7 @@
 | Windows Phone              | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
 | Windows Phone Silverlight  | 8.0   |        |       |       |       |            |            |            |
 
-<sup>1 wersje wymienione na platformie .NET dotyczą .NET Core SDK 2.0 i nowsze wersje zestawu narzędzi. Starsze wersje używane innego mapowania dla platformy .NET Standard w wersji 1.5 lub nowszej. </sup>
+<sup>1 wersje wymienione na platformie .NET dotyczą .NET Core SDK 2.0 i nowsze wersje zestawu narzędzi. Starsze wersje używane innego mapowania dla platformy .NET Standard w wersji 1.5 lub nowszej. Możesz [Pobierz narzędzia dla platformy .NET Core tools for Visual Studio 2015](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) Jeśli nie można uaktualnić do programu Visual Studio 2017.</sup>
 
 - Kolumny reprezentują wersji .NET Standard. Każda komórka nagłówek jest łącze do dokumentu, który pokazuje, w których interfejsy API stało się dodane w tej wersji programu .NET Standard.
 - Wiersze reprezentują różne implementacje platformy .NET.

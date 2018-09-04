@@ -1,39 +1,39 @@
 ---
-title: Zainstaluj program .NET Framework w systemie Windows Vista
-description: Dowiedz się, jak zainstalować program .NET Framework w systemie Windows Vista.
+title: Instalowanie programu .NET Framework w systemie Windows Vista
+description: Dowiedz się, jak zainstalować program .NET Framework w Windows Vista.
 ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: 595533b9f7c0dcc766914a1812001772d0ffa247
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54679292fb8bce16ec572e5a2fee12c1b47292a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397848"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393929"
 ---
-# <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Zainstaluj program .NET Framework w systemie Windows Vista i Windows Server 2008
+# <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Instalowanie programu .NET Framework w systemach Windows Vista i Windows Server 2008
 
-.NET Framework jest wymagana do uruchamiania wielu aplikacji w systemie Windows. Poniższe instrukcje umożliwia go zainstalować. Użytkownik może następować na tej stronie po próby uruchomienia aplikacji i sprawdzając następujące okno dialogowe na tym komputerze.
+.NET Framework jest wymagana do uruchamiania wielu aplikacji na Windows. Można użyć zgodnie z poniższymi instrukcjami, aby go zainstalować. Użytkownik może już korzystać na tej stronie po próby uruchomienia aplikacji i obserwowanie następujące okno dialogowe na swojej maszynie.
 
 ![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-Te instrukcje pomoże Ci zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Nie jest obsługiwana w systemie Windows Vista i Windows Server 2008. Jest on dołączony [Windows Update 10 kwietnia 2018](https://www.microsoft.com/software-download/windows10).
+Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Nie jest obsługiwana w systemach Windows Vista i Windows Server 2008. Nie jest dołączony [Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) jest najnowsza wersja obsługiwanych wersji platformy .NET w systemie Windows Vista i Windows Server 2008.
+[.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) jest najnowszej obsługiwanej wersji .NET Framework w systemach Windows Vista i Windows Server 2008.
 
-[.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) obsługuje aplikacje utworzone dla programu .NET Framework 4.0 za pośrednictwem 4.6.
+[.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) obsługuje aplikacje opracowane dla programu .NET Framework 4.0, za pośrednictwem 4.6.
 
 ## <a name="net-framework-35"></a>Program .NET Framework 3,5
 
-Można zainstalować [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) w systemie Windows Vista.
+Możesz zainstalować [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) w Windows Vista.
 
-.NET Framework 3.5 obsługuje aplikacje platformy .NET Framework 1.0 za pośrednictwem 3.5.
+.NET Framework 3.5 obsługuje aplikacje są kompilowane dla .NET Framework 1.0 za pośrednictwem 3.5.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pobieranie programu .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Rozwiązywanie problemów z zablokowaną .NET Framework i odinstalowywaniem programu](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Zainstaluj program .NET Framework dla deweloperów](guide-for-developers.md)
+[Pobierz program .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
+[Rozwiązywanie problemów z zablokowanych .NET Framework i odinstalowywaniem programu](troubleshoot-blocked-installations-and-uninstallations.md)   
+[Instalowanie programu .NET Framework dla deweloperów](guide-for-developers.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925507"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389780"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Transport Layer Security (TLS) najlepszych rozwiązań za pomocą programu .NET Framework
 
@@ -231,7 +231,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-schannel-protocols-in-the-windows-registry"></a>Konfigurowanie protokoły Schannel w rejestrze systemu Windows
 
-Za pomocą rejestru dla szczegółową kontrolę nad tym protokoły, które negocjuje aplikację klienta i/lub serwerem. Aplikacji sieci przechodzi przez Schannel (czyli inną nazwę dla [bezpiecznego kanału](https://msdn.microsoft.com/library/windows/desktop/aa380123). Konfigurując `Schannel`, można skonfigurować zachowanie aplikacji.
+Za pomocą rejestru dla szczegółową kontrolę nad tym protokoły, które negocjuje aplikację klienta i/lub serwerem. Aplikacji sieci przechodzi przez Schannel (czyli inną nazwę dla [bezpiecznego kanału](/windows/desktop/SecAuthN/secure-channel). Konfigurując `Schannel`, można skonfigurować zachowanie aplikacji.
 
 Rozpoczynać `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` klucza rejestru. W tym kluczu można utworzyć wszystkie podklucze w zestawie `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1`, i `TLS 1.2`. W ramach każdej z tych podkluczach, można utworzyć podkluczy `Client` i/lub `Server`. W obszarze `Client` i `Server`, można utworzyć wartości DWORD `DisabledByDefault` (0 lub 1) i `Enabled` (0 lub 0xFFFFFFFF).
 
@@ -239,8 +239,8 @@ Rozpoczynać `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProvid
 
 Gdy jest włączone (domyślnie przez `AppContext` przełączyć się, lub w rejestrze systemu Windows), .NET Framework używa `SCH_USE_STRONG_CRYPTO` Flaga, gdy aplikacja żąda protokołu zabezpieczeń TLS. `SCH_USE_STRONG_CRYPTO` Flagę można włączyć domyślnie za pomocą `AppContext` przełączyć, lub za pomocą rejestru. System operacyjny przekazuje flagi `Schannel`można wydać polecenie wyłączenia znanych stosowania słabych algorytmów kryptograficznych, cipher zestawów i wersji protokołu TLS/SSL, które może być inaczej włączona dla lepsze współdziałanie. Aby uzyskać więcej informacji, zobacz:
 
-- [Należy zabezpieczyć kanał](https://msdn.microsoft.com/library/windows/desktop/aa380123)
-- [Struktura SCHANNEL_CRED](https://msdn.microsoft.com/library/windows/desktop/aa379810)
+- [Należy zabezpieczyć kanał](/windows/desktop/SecAuthN/secure-channel)
+- [Struktura SCHANNEL_CRED](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
 
 `SCH_USE_STRONG_CRYPTO` Flagi również jest przekazywany do `Schannel` jawnie zastosowania `Tls` (TLS 1.0) `Tls11`, lub `Tls12` wyliczonych wartości <xref:System.Net.SecurityProtocolType> lub <xref:System.Security.Authentication.SslProtocols>.
 

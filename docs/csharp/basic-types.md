@@ -4,11 +4,11 @@ description: Dowiedz się więcej o podstawowych typów (wartości numeryczne, c
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
 ms.openlocfilehash: dc91452bb261b7c799cf3b69cab5b33175148b8a
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
-ms.translationtype: MT
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253785"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417184"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 

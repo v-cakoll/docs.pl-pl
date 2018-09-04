@@ -10,16 +10,16 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
-ms.translationtype: MT
+ms.openlocfilehash: 4b846dfdd7c19a515c759fbeac1762cb47ca8876
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258580"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395481"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern i obiekty osadzone — omówienie
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Ten przegląd zawiera opis sposobu [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ujawnia osadzonych obiektów lub elementy podrzędne, w ramach kontenera lub dokument tekstowy.  
   
@@ -46,7 +46,7 @@ Przykład strumienia tekstu przy użyciu osadzonych obiektów i ich zakresy zakr
   
  Gdy jest to konieczne przechodzenie przez zawartość zakres tekstu, szereg kroków biorących udział w tle, aby <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> pomyślnie wykonać metodę.  
   
-1.  Zakres tekstu jest znormalizować; oznacza to, że zakres tekstu jest zwinięte do wymiaru degeneracji zakresu na <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> punktu końcowego, co sprawia, że <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> zbędny punktu końcowego. Ten krok jest niezbędny usunąć niejednoznaczność w sytuacjach, w którym obejmuje zakres tekstu <xref:System.Windows.Automation.Text.TextUnit> granice: na przykład "{N} RL [ http://www.microsoft.com ](http://www.microsoft.com) jest osadzony w tekście" gdzie "{" i "}" są wartościami tekstowymi punkty końcowe zakresu.  
+1.  Zakres tekstu jest znormalizować; oznacza to, że zakres tekstu jest zwinięte do wymiaru degeneracji zakresu na <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> punktu końcowego, co sprawia, że <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> zbędny punktu końcowego. Ten krok jest niezbędny usunąć niejednoznaczność w sytuacjach, w którym obejmuje zakres tekstu <xref:System.Windows.Automation.Text.TextUnit> granice: na przykład "{N} RL [ http://www.microsoft.com ](https://www.microsoft.com) jest osadzony w tekście" gdzie "{" i "}" są wartościami tekstowymi punkty końcowe zakresu.  
   
 2.  Wynikowy zakres zostaje przeniesiony do tyłu <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> na początku żądany <xref:System.Windows.Automation.Text.TextUnit> granic.  
   
@@ -71,7 +71,7 @@ Przykłady jak zakres tekstu jest uwzględniany Move() i ExpandToEnclosingUnit()
 ### <a name="hyperlink"></a>Hyperlink  
  **Przykład 1 - zakres tekstu, który zawiera hiperłącze osadzonego tekstu**  
   
- {Adres URL [ http://www.microsoft.com ](http://www.microsoft.com) jest osadzony w tekście}.  
+ {Adres URL [ http://www.microsoft.com ](https://www.microsoft.com) jest osadzony w tekście}.  
   
 |Metoda wywoływana|Wynik|  
 |-------------------|------------|  
@@ -92,7 +92,7 @@ Przykłady jak zakres tekstu jest uwzględniany Move() i ExpandToEnclosingUnit()
   
  **Przykład 3 - zakres tekstu, które częściowo obejmuje zawartość kontenerów tekstu. Kontener tekst ma hiperłącze osadzonego tekstu, który nie jest częścią zakresu tekstu.**  
   
- {URL} [ http://www.microsoft.com ](http://www.microsoft.com) jest osadzony w tekście.  
+ {URL} [ http://www.microsoft.com ](https://www.microsoft.com) jest osadzony w tekście.  
   
 |Metoda wywoływana|Wynik|  
 |-------------------|------------|  
@@ -159,4 +159,4 @@ Przykłady jak zakres tekstu jest uwzględniany Move() i ExpandToEnclosingUnit()
  [Uzyskiwanie dostępu do obiektów osadzonych przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [Przenoszenie tekstu przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern wyszukiwania i wybór próbki](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [TextPattern wyszukiwania i wybór próbki](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

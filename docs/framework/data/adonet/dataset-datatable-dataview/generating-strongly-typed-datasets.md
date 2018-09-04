@@ -1,39 +1,39 @@
 ---
-title: Generowanie silnie Typizowane zbiory danych
+title: Generowanie silnie typizowanych elementów DataSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 95bb536416a043fc392d0c4e94378239ae3ee37f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9accfb68c57384e12a59bae40ebe30a2d3e22877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758032"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489724"
 ---
-# <a name="generating-strongly-typed-datasets"></a>Generowanie silnie Typizowane zbiory danych
-Podany schemat XML, który jest zgodny ze schematu XML definicji języka (XSD) standard, można wygenerować silnie typizowaną <xref:System.Data.DataSet> przy użyciu dostarczonego z narzędzia XSD.exe [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  
+# <a name="generating-strongly-typed-datasets"></a>Generowanie silnie typizowanych elementów DataSet
+Biorąc pod uwagę schematu XML, który jest zgodny z języka definicji schematu XML (XSD) standard, możesz wygenerować silnie typizowaną <xref:System.Data.DataSet> korzystania z narzędzia XSD.exe dołączonym [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  
   
- (Aby utworzyć xsd z tabel bazy danych, zobacz <xref:System.Data.DataSet.WriteXmlSchema%2A> lub [Praca z zestawami danych w programie Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ (Aby utworzyć xsd z tabel bazy danych, zobacz <xref:System.Data.DataSet.WriteXmlSchema%2A> lub [Praca z zestawami danych w programie Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
   
- Poniższy kod przedstawia składnię generowania **zestawu danych** za pomocą tego narzędzia.  
+ Poniższy kod przedstawia składnię do generowania **DataSet** za pomocą tego narzędzia.  
   
 ```  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- W tej składni `/d` dyrektywy informuje narzędzie do generowania **DataSet**i `/l:` informuje narzędzie język do użycia (na przykład C# i Visual Basic .NET). Opcjonalny `/eld` dyrektywa określa, czy możesz używać [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] do zapytania dotyczącego wygenerowany **zestawu danych.** Ta opcja jest używana podczas `/d` jest także określona opcja. Aby uzyskać więcej informacji, zobacz [zapytań wpisanych zestawów danych](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). Opcjonalny `/n:` dyrektywy informuje narzędzie do generowania również przestrzeń nazw dla **DataSet** o nazwie **XSDSchema.Namespace**. Dane wyjściowe polecenia jest XSDSchemaFileName.cs, który może być skompilowany i używane w aplikacji ADO.NET. Wygenerowany kod, mogą być kompilowane jako modułu lub biblioteki.  
+ W tej składni `/d` dyrektywy informuje narzędzie w celu wygenerowania **DataSet**i `/l:` nakazuje narzędziu język do użycia (na przykład w języku C# lub Visual Basic .NET). Opcjonalny `/eld` dyrektywa określa, że można użyć [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] do wykonywania zapytań względem wygenerowany **zestawu danych.** Ta opcja jest używana podczas `/d` jest także określona opcja. Aby uzyskać więcej informacji, zobacz [zapytań wpisanych zestawów danych](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). Opcjonalny `/n:` dyrektywy informuje o narzędzia można również wygenerować przestrzeni nazw **DataSet** o nazwie **XSDSchema.Namespace**. Dane wyjściowe polecenia jest XSDSchemaFileName.cs, który zostanie skompilowany i używane w aplikacji ADO.NET. Wygenerowany kod może być kompilowane jako bibliotekę lub modułu.  
   
- Poniższy kod przedstawia składnię kompilowania wygenerowanego kodu jako bibliotekę przy użyciu kompilatora C# (csc.exe).  
+ Poniższy kod przedstawia składnię do kompilowania wygenerowanego kodu jako biblioteki za pomocą kompilatora C# (csc.exe).  
   
 ```  
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
- `/t:` Dyrektywy informuje narzędzie do kompilowania w bibliotece i `/r:` dyrektywy Określ zależnej biblioteki wymagane do kompilacji. Dane wyjściowe polecenia jest XSDSchemaFileName.dll, które mogą zostać przekazane do kompilatora podczas kompilowania aplikacji ADO.NET z `/r:` dyrektywy.  
+ `/t:` Dyrektywy informuje o narzędzia do kompilowania w bibliotece i `/r:` dyrektywy Określ zależne biblioteki wymaganego do skompilowania. Dane wyjściowe polecenia jest XSDSchemaFileName.dll, które mogą być przekazywane do kompilator podczas kompilowania aplikacji ADO.NET za pomocą `/r:` dyrektywy.  
   
- Poniższy kod przedstawia składnię do uzyskiwania dostępu do aplikacji ADO.NET przekazano XSD.exe przestrzeni nazw.  
+ Poniższy kod przedstawia składnię do uzyskiwania dostępu do przestrzeni nazw, przekazywane do XSD.exe w aplikacji ADO.NET.  
   
 ```vb  
 Imports XSDSchema.Namespace  
@@ -43,7 +43,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- Poniższy przykład kodu wykorzystuje maszynowy **DataSet** o nazwie **CustomerDataSet** można załadować listy klientów z **Northwind** bazy danych. Po załadowaniu danych przy użyciu **wypełnienia** metody przykładzie pętli każdego klienta w **klientów** tabeli, używając wpisanego **CustomersRow** ( **Element DataRow**) obiektu. To zapewnia bezpośredni dostęp do **CustomerID** kolumny, w przeciwieństwie do za pomocą **DataColumnCollection**.  
+ Poniższy przykład kodu wykorzystuje wpisane **DataSet** o nazwie **CustomerDataSet** załadować listę klientów z **Northwind** bazy danych. Po załadowaniu danych za pomocą **wypełnienia** metody przykład w pętli każdego klienta w **klientów** tabeli, używając wpisanego **CustomersRow** ( **DataRow**) obiektu. To zapewnia bezpośredni dostęp do **CustomerID** kolumny, w przeciwieństwie do za pomocą **DataColumnCollection**.  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -73,7 +73,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- Poniżej znajduje się schematu XML używanego w przykładzie.  
+ Poniżej przedstawiono schematu XML, używany dla przykładu.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -99,4 +99,4 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
  <xref:System.Data.DataSet>  
  [Typizowane elementy DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
  [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,28 +1,28 @@
 ---
-title: Typizowane zbiory danych
+title: Typizowanych elementów DataSet
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
-ms.openlocfilehash: 67c1d3a190c5a4f046d7c7da5ebbf98395a96341
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762458"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489750"
 ---
-# <a name="typed-datasets"></a>Typizowane zbiory danych
-Wraz z późne powiązania dostęp do wartości za pośrednictwem słabo zmienne typu <xref:System.Data.DataSet> zapewnia dostęp do danych za pośrednictwem jednoznacznie metaphor. Tabele i kolumny, które są częścią **DataSet** można uzyskać dostęp za pomocą nazw przyjaznych dla użytkownika i silnie typizowane zmiennych.  
+# <a name="typed-datasets"></a>Typizowanych elementów DataSet
+Wraz z dostępu do wartości za pomocą ze słabą kontrolą typów zmiennych <xref:System.Data.DataSet> zapewnia dostęp do danych za pośrednictwem metaphor silnie typizowanych. Tabele i kolumny, które są częścią **DataSet** można uzyskać dostęp za pomocą nazw przyjaznych dla użytkownika i silnie typizowane zmiennych.  
   
- Typizowany **DataSet** jest klasą pochodną **zestawu danych**. W efekcie dziedziczy wszystkie metody, zdarzeń i właściwości **zestawu danych**. Ponadto maszynowy **DataSet** udostępnia silnie typizowane metody, zdarzeń i właściwości. Oznacza to, że są dostępne tabele i kolumny według nazwy, zamiast za pomocą metody opartej na kolekcji. Jako uzupełnienie Ulepszona czytelność kodu, typu **DataSet** umożliwia również kodu programu Visual Studio .NET edytora automatycznie wypełnić wierszy podczas pisania.  
+ Wpisane **DataSet** to klasa, która jest pochodną **zestawu danych**. W efekcie dziedziczy wszystkie metody, zdarzenia i właściwości **zestawu danych**. Ponadto wpisane **DataSet** udostępnia silnie typizowane metody, zdarzenia i właściwości. Oznacza to, że ma dostęp do tabel i kolumn, według nazwy, zamiast korzystać z metody oparte na kolekcji. Oprócz lepszej czytelności kodu z kontrolą typów **DataSet** umożliwia także kodu programu Visual Studio .NET automatycznego zakończenia wierszy podczas wpisywania w edytorze.  
   
- Ponadto silnie typizowaną **DataSet** zapewnia dostęp do wartości jako poprawnego typu w czasie kompilacji. Z silnie typizowaną **DataSet**, błędy niezgodności typów są przechwytywane, gdy kod jest skompilowany, a nie w czasie wykonywania.  
+ Ponadto silnie typizowaną **DataSet** zapewnia dostęp do wartości jako poprawnego typu w czasie kompilacji. Za pomocą silnie typizowanej **DataSet**, błędy niezgodności wpisywania są wyłapywane, gdy kod jest kompilowany, a nie w czasie wykonywania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Generowanie silnie typizowanych elementów DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  Opisuje sposób tworzenia i używania silnie typizowaną **zestawu danych**.  
   
  [Dodawanie adnotacji do typizowanych elementów DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
- Opisuje, jak dodawać adnotacje schematu języka (XSD) definicja schematu XML służący do generowania silnie typizowaną do **DataSet**, aby zapewnić **zestawu danych** przyjaznych nazw elementów bez zmiany podstawowego schematu.  
+ Opisuje, jak dodawać adnotacje do schematu języka (XSD) definicji schematu XML, używany do generowania silnie typizowanej **zestawu danych**, aby zapewnić **zestawu danych** przyjaznych nazw elementów bez zmiany podstawowego schematu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

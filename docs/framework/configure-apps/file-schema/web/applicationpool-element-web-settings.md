@@ -1,5 +1,5 @@
 ---
-title: '&lt;applicationPool&gt; elementu (ustawienia sieci Web)'
+title: '&lt;applicationPool&gt; — Element (ustawienia internetowe)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applicationPool element
@@ -8,22 +8,22 @@ ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a2eafc6b5ad1446fd07518f877a8ec001ad8dbd6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1a129abca5888120d03c42689ac825d768733a9d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757700"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489945"
 ---
-# <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; elementu (ustawienia sieci Web)
-Określa ustawienia konfiguracji, które są używane przez program ASP.NET do zarządzania zachowanie całego procesu, gdy aplikacja ASP.NET działa w trybie zintegrowanym z [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowszym.  
+# <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; — Element (ustawienia internetowe)
+Określa ustawienia konfiguracyjne, które są używane przez program ASP.NET do zarządzania zachowaniem całego procesu, gdy aplikacja ASP.NET działa w trybie zintegrowanym z [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowszej.  
   
 > [!IMPORTANT]
->  Ten element i funkcji obsługuje działa tylko, jeśli aplikacja ASP.NET jest hostowany na [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowszy.  
+>  Ten element i funkcja obsługuje działają tylko, jeśli Twoja aplikacja ASP.NET jest hostowana w [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowszej wersji.  
   
  \<Konfiguracja >  
-\<System.Web > elementu (ustawienia sieci Web)  
-\<applicationPool > elementu (ustawienia sieci Web)  
+\<System.Web >, Element (ustawienia sieci Web)  
+\<applicationPool >, Element (ustawienia sieci Web)  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,9 +41,9 @@ Określa ustawienia konfiguracji, które są używane przez program ASP.NET do z
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`maxConcurrentRequestsPerCPU`|Określa liczbę jednoczesnych żądań ASP.NET umożliwia dla każdego procesora CPU.|  
-|`maxConcurrentThreadsPerCPU`|Określa, jak wiele wątków jednoczesnych może być uruchomiony dla każdego procesora CPU dla puli aplikacji. Zapewnia to alternatywny sposób sterowania współbieżnością ASP.NET, ponieważ można ograniczyć liczbę wątków zarządzanych, których można użyć dla każdego procesora CPU do obsługi żądań. Domyślnie to ustawienie jest 0, co oznacza, że ASP.NET nie ogranicza liczbę wątków, które mogą zostać utworzone dla każdego Procesora, mimo że pula wątków CLR również ogranicza liczbę wątków, które mogą zostać utworzone.|  
-|`requestQueueLimit`|Określa maksymalną liczbę żądań, które można umieścić w kolejce dla ASP.NET w ramach jednego procesu. Uruchomienie dwóch lub więcej aplikacji ASP.NET w jednej puli aplikacji zbiorczego zestawu żądań wysyłanych do aplikacji w puli podlega to ustawienie.|  
+|`maxConcurrentRequestsPerCPU`|Określa liczbę równoczesnych żądań ASP.NET umożliwia dla każdego procesora CPU.|  
+|`maxConcurrentThreadsPerCPU`|Określa, jak wiele wątków jednocześnie może być uruchomiony dla puli aplikacji dla każdego Procesora. Zapewnia alternatywny sposób sterowania współbieżnością ASP.NET, ponieważ pozwala ograniczyć liczbę zarządzanych wątkach, których można użyć na procesor CPU, aby obsłużyć żądania. Domyślnie to ustawienie jest 0, co oznacza, że ASP.NET nie ogranicza liczbę wątków, które mogą być tworzone dla każdego Procesora, mimo że ogranicza liczbę wątków, które można utworzyć puli wątków CLR.|  
+|`requestQueueLimit`|Określa maksymalną liczbę żądań, które można umieścić w kolejce dla platformy ASP.NET w pojedynczym procesie. Po uruchomieniu co najmniej dwóch aplikacji ASP.NET w jednej puli aplikacji zbiorczego zestawu żądań wysyłanych do dowolnej aplikacji w puli podlega tego ustawienia.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -52,30 +52,30 @@ Określa ustawienia konfiguracji, które są używane przez program ASP.NET do z
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Zawiera informacje na temat współdziałania ASP.NET z aplikacji hosta.|  
+|[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Zawiera informacje na temat współdziałania platformy ASP.NET z aplikacją hosta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po uruchomieniu [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowszym w trybie zintegrowanym tej kombinacji elementu umożliwia skonfigurowanie, jak ASP.NET zarządza żądaniami wątków i kolejek, kiedy aplikacja znajduje się w puli aplikacji usług IIS. Jeśli uruchomienie programu IIS 6 lub uruchomiony [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] w trybie klasycznym lub trybu ISAPI, te ustawienia są ignorowane.  
+ Po uruchomieniu [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub jego nowsza wersja w trybie zintegrowanym tej kombinacji elementu umożliwia skonfigurowanie, jak ASP.NET zarządza żądaniami wątków i kolejki, gdy aplikacja jest obsługiwana w puli aplikacji usług IIS. Jeśli uruchomienie usług IIS 6 lub uruchomiony [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] w trybie klasycznym lub trybu ISAPI, te ustawienia są ignorowane.  
   
- `applicationPool` Ustawienia mają zastosowanie do wszystkich pul aplikacji uruchomionych w określonej wersji programu .NET Framework. Ustawienia są zawarte w pliku konfigurację aspnet.config. Dostępna jest wersja tego pliku w wersjach 2.0 i 4.0 programu .NET Framework. (W wersji 3.0 i 3.5 programu .NET Framework udostępnianie pliku konfigurację aspnet.config w wersji 2.0).  
+ `applicationPool` Ustawienia mają zastosowanie do wszystkich pul aplikacji działających w określonej wersji programu .NET Framework. Ustawienia są zawarte w plikach aspnet.config. Dostępna jest wersja tego pliku dla wersji 2.0 i 4.0 programu .NET Framework. (W wersji 3.0 i 3.5 programu .NET Framework Udostępnij plik aspnet.config w wersji 2.0).  
   
 > [!IMPORTANT]
->  Po uruchomieniu [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] na [!INCLUDE[win7](../../../../../includes/win7-md.md)], można skonfigurować plik konfigurację aspnet.config osobne dla każdej puli aplikacji. Dzięki temu można dostosować wydajność wątków dla każdej puli aplikacji.  
+>  Jeśli uruchamiasz [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] na [!INCLUDE[win7](../../../../../includes/win7-md.md)], można skonfigurować plik aspnet.config osobne dla każdej puli aplikacji. Dzięki temu można dostosować wydajność wątków dla każdej puli aplikacji.  
   
- Aby uzyskać `maxConcurrentRequestsPerCPU` ustawienie domyślne ustawienie "5000" [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] skutecznie wyłącza ograniczanie żądań, który jest kontrolowany przez platformę ASP.NET, chyba że masz faktycznie 5000 lub więcej żądań dla każdego procesora CPU. Domyślne ustawienie zależy od zamiast puli wątków CLR automatycznie zarządzać współbieżności dla każdego procesora CPU. Aplikacji, który należy zwiększone użycie asynchronicznego przetwarzania żądania lub wiele żądań długotrwałe zablokowane w sieci We/Wy, będą korzystać z zwiększenia domyślnego limitu w [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Ustawienie `maxConcurrentRequestsPerCPU` na zero spowoduje wyłączenie używanie zarządzanych wątków do przetwarzania żądań ASP.NET. Po uruchomieniu aplikacji w puli aplikacji usług IIS żądań pozostać w wątku usługi IIS we/wy i w związku z tym współbieżności jest ograniczany przez usługi IIS ustawienia wątku.  
+ Aby uzyskać `maxConcurrentRequestsPerCPU` ustawienie domyślne ustawienie "5000" [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] skutecznie wyłącza ograniczanie żądań, oznacza to kontrolowane przez platformę ASP.NET, chyba że faktycznie mieć co najmniej 5000 żądań na CPU. Domyślne ustawienie zależy od zamiast puli wątków CLR automatycznie zarządzać współbieżności dla każdego procesora CPU. Aplikacji, które składają się zwiększone użycie asynchronicznego przetwarzania żądania lub wiele długotrwałych żądań, zablokowane na We/Wy, sieci będą mogli korzystać z zwiększenia domyślnego limitu w [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Ustawienie `maxConcurrentRequestsPerCPU` na zero spowoduje wyłączenie korzystanie z zarządzanych wątków do przetwarzania żądań ASP.NET. Po uruchomieniu aplikacji w puli aplikacji usług IIS, żądań, pozostają w wątku usługi IIS operacji We/Wy i w związku z tym współbieżności jest ograniczany przez usługi IIS wątek ustawienia.  
   
- `requestQueueLimit` Ustawienie działa tak samo jak `requestQueueLimit` atrybutu [processModel](http://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) element, który jest ustawiony w plikach Web.config dla aplikacji ASP.NET. Jednak `requestQueueLimit` zastępuje ustawienia w pliku konfigurację aspnet.config `requestQueueLimit` ustawienia w pliku Web.config. Innymi słowy Jeśli oba atrybuty są ustawiane (domyślnie jest to wartość true,) `requestQueueLimit` pierwszeństwo ma ustawienie w pliku konfigurację aspnet.config.  
+ `requestQueueLimit` Ustawienie działa w taki sam sposób jak `requestQueueLimit` atrybutu [processModel](https://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) element, który jest ustawiony w plikach Web.config dla aplikacji ASP.NET. Jednak `requestQueueLimit` zastępuje ustawienia w pliku konfigurację aspnet.config `requestQueueLimit` ustawienia w pliku Web.config. Innymi słowy Jeśli ustawiono obu atrybutów (domyślnie jest to wartość true,) `requestQueueLimit` pierwszeństwo ma ustawienie w pliku konfigurację aspnet.config.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób skonfigurować działanie całego procesu ASP.NET w pliku konfigurację aspnet.config w następujących okolicznościach:  
+ Poniższy przykład pokazuje, jak skonfigurować zachowanie całego procesu ASP.NET w pliku konfigurację aspnet.config w następujących okolicznościach:  
   
--   Aplikacja jest hostowana w [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] puli aplikacji.  
+-   Aplikacja jest obsługiwana w [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] puli aplikacji.  
   
 -   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] działa w trybie zintegrowanym.  
   
--   Aplikacja używa [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] lub nowszym.  
+-   Aplikacja używa [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] lub nowszej.  
   
- Wartości w tym przykładzie są wartościami domyślnymi.  
+ Wartości w przykładzie są wartości domyślne.  
   
 ```xml  
 <configuration>  
@@ -94,8 +94,8 @@ Określa ustawienia konfiguracji, które są używane przez program ASP.NET do z
 |-|-|  
 |Przestrzeń nazw||  
 |Nazwa schematu||  
-|Sprawdzanie poprawności pliku||  
+|Plik walidacji||  
 |Może być pusta||  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<System.Web > elementu (ustawienia sieci Web)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+ [\<System.Web >, Element (ustawienia sieci Web)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

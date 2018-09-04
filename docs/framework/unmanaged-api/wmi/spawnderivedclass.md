@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 04df65a29584f7e2de44389d815b915a541e38f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462302"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489802"
 ---
-# <a name="spawnderivedclass-function"></a>Funkcja SpawnDerivedClass
+# <a name="spawnderivedclass-function"></a>SpawnDerivedClass — funkcja
 Tworzy obiekt klasy pochodnej nowo od określonego obiektu.    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,37 +41,37 @@ HRESULT SpawnDerivedClass (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `lFlags`  
-[in] Zastrzeżone. Ten parametr musi wynosić 0.
+[in] Zastrzeżone. Ten parametr musi być 0.
 
 `ppNewClass`  
-[out] Uzyskuje wskaźnik do nowego obiektu definicji klasy. Jeśli wystąpi błąd, nowy obiekt nie jest zwracany, i `ppNewClass` jest lewej nie mają być modyfikowane. Wartość nie może być `null`.
+[out] Otrzymuje wskaźnik do nowego obiektu definicji klasy. Jeśli wystąpi błąd, nowy obiekt nie jest zwracana, i `ppNewClass` się po lewej stronie w niezmienionej postaci. Jego wartość nie może być `null`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Wystąpił błąd ogólny. |
-| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Zażądano nieprawidłową operację, takiej jak duplikowanie klasy z wystąpienia. |
-| `WBEM_E_INCOMPLETE_CLASS` | Klasa źródłowa całkowicie nie została zdefiniowana lub jest zarejestrowana w usłudze zarządzania systemu Windows, więc nowej klasy pochodnej nie jest dozwolone. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
+| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Zażądano Nieprawidłowa operacja, takiej jak duplikowanie klasy z wystąpienia usługi. |
+| `WBEM_E_INCOMPLETE_CLASS` | Klasa źródłowa nie jest całkowicie zdefiniowano lub zarejestrowane w usłudze zarządzania Windows, więc nowej klasy pochodnej nie jest dozwolone. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` jest `null`. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::SpawnDerivedClass](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) metody.
 
-`ptr` musi być definicją klasy, która staje się klasy nadrzędnej uruchomionego obiektu. Zwrócony obiekt staje się podklasą bieżącego obiektu.
+`ptr` musi być definicją klasy, która staje się klasy nadrzędnej obiektu zduplikowanych. Zwrócony obiekt staje się podklasą bieżący obiekt.
 
-Nowy obiekt zwracane w `ppNewClass` automatycznie staje się podklasą bieżącego obiektu. Nie można zastąpić to zachowanie. Brak żadnej innej metody, za pomocą którego można utworzyć podklasy (klasy pochodne).
+Nowy obiekt zwrócony w `ppNewClass` automatycznie wybrana zostaje pierwsza podklasę bieżącego obiektu. Nie można zastąpić to zachowanie. Nie ma żadnej innej metody, za pomocą którego można utworzyć podklasy (klas pochodnych).
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -81,4 +81,4 @@ Nowy obiekt zwracane w `ppNewClass` automatycznie staje się podklasą bieżące
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

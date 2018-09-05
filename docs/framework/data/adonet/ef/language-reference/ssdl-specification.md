@@ -1,15 +1,15 @@
 ---
-title: Specyfikacja pliku SSDL
+title: Specyfikacja SSDL
 ms.date: 03/30/2017
 ms.assetid: 9d6b29da-b363-4930-ba57-989f9d6dbf3f
-ms.openlocfilehash: a335c97dede60bae304d2d0fb0c6f3dabcf517f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9c6a37cc4f7c06e3d7d4e78e7637a42335264efd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762770"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510628"
 ---
-# <a name="ssdl-specification"></a><span data-ttu-id="e095b-102">Specyfikacja pliku SSDL</span><span class="sxs-lookup"><span data-stu-id="e095b-102">SSDL Specification</span></span>
-<span data-ttu-id="e095b-103">[Msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) lokacja działa teraz głównej lokalizacji zawartości programu Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="e095b-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
+# <a name="ssdl-specification"></a><span data-ttu-id="4f0da-102">Specyfikacja SSDL</span><span class="sxs-lookup"><span data-stu-id="4f0da-102">SSDL Specification</span></span>
+<span data-ttu-id="4f0da-103">[Msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) lokacji jest teraz lokalizacji głównej zawartości platformy Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="4f0da-103">The [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
   
- <span data-ttu-id="e095b-104">Zawartość tego tematu jest teraz dostępna na następującej stronie: [specyfikacji pliku SSDL](http://msdn.microsoft.com/data/jj652016).</span><span class="sxs-lookup"><span data-stu-id="e095b-104">The content for this topic is now available on the following page: [SSDL Specification](http://msdn.microsoft.com/data/jj652016).</span></span>
+ <span data-ttu-id="4f0da-104">Zawartość tego tematu jest teraz dostępna na następującej stronie: [Specyfikacja SSDL](https://msdn.microsoft.com/data/jj652016).</span><span class="sxs-lookup"><span data-stu-id="4f0da-104">The content for this topic is now available on the following page: [SSDL Specification](https://msdn.microsoft.com/data/jj652016).</span></span>

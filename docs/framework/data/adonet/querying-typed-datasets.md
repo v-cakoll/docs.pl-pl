@@ -1,62 +1,65 @@
 ---
-title: Wykonywanie zapytania Typizowane zbiory danych
-ms.date: 03/30/2017
+title: Podczas badania zestawów
+ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-ms.openlocfilehash: 30a6512202615590a4b399b8ce7173b213a8873c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d956fd5f07c108146d20623bcf811266380c132c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353488"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560250"
 ---
-# <a name="querying-typed-datasets"></a><span data-ttu-id="1a4c9-102">Wykonywanie zapytania Typizowane zbiory danych</span><span class="sxs-lookup"><span data-stu-id="1a4c9-102">Querying Typed DataSets</span></span>
-<span data-ttu-id="1a4c9-103">Jeśli schemat <xref:System.Data.DataSet> jest znany w czasie projektowania aplikacji, zalecane jest użycie typu <xref:System.Data.DataSet> przy użyciu [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1a4c9-103">If the schema of the <xref:System.Data.DataSet> is known at application design time, we recommend that you use a typed <xref:System.Data.DataSet> when using [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span> <span data-ttu-id="1a4c9-104">Typizowany <xref:System.Data.DataSet> jest klasą pochodną <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="1a4c9-104">A typed <xref:System.Data.DataSet> is a class that derives from a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="1a4c9-105">W efekcie dziedziczy wszystkie metody, zdarzeń i właściwości <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="1a4c9-105">As such, it inherits all the methods, events, and properties of a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="1a4c9-106">Ponadto maszynowy <xref:System.Data.DataSet> udostępnia silnie typizowane metody, zdarzeń i właściwości.</span><span class="sxs-lookup"><span data-stu-id="1a4c9-106">Additionally, a typed <xref:System.Data.DataSet> provides strongly typed methods, events, and properties.</span></span> <span data-ttu-id="1a4c9-107">Oznacza to, że masz dostęp tabele i kolumny według nazwy, zamiast za pomocą metody opartej na kolekcji.</span><span class="sxs-lookup"><span data-stu-id="1a4c9-107">This means that you can access tables and columns by name, instead of using collection-based methods.</span></span> <span data-ttu-id="1a4c9-108">Dzięki temu zapytania prostszy i bardziej czytelne.</span><span class="sxs-lookup"><span data-stu-id="1a4c9-108">This makes queries simpler and more readable.</span></span> <span data-ttu-id="1a4c9-109">Aby uzyskać więcej informacji, zobacz [wpisanych zestawów danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).</span><span class="sxs-lookup"><span data-stu-id="1a4c9-109">For more information, see [Typed DataSets](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).</span></span>  
-  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="1a4c9-110"> obsługuje również obsługę zapytań typu <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="1a4c9-110"> also supports querying over a typed <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="1a4c9-111">Z typu <xref:System.Data.DataSet>, nie trzeba używać ogólnych <xref:System.Data.DataRowExtensions.Field%2A> metody lub <xref:System.Data.DataRowExtensions.SetField%2A> metodę dostępu do danych kolumny.</span><span class="sxs-lookup"><span data-stu-id="1a4c9-111">With a typed <xref:System.Data.DataSet>, you do not have to use the generic <xref:System.Data.DataRowExtensions.Field%2A> method or <xref:System.Data.DataRowExtensions.SetField%2A> method to access column data.</span></span>  <span data-ttu-id="1a4c9-112">Nazwy właściwości są dostępne w czasie kompilacji, ponieważ zawiera informacje o typie <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="1a4c9-112">Property names are available at compile time because the type information is included in the <xref:System.Data.DataSet>.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="1a4c9-113"> zapewnia dostęp do wartości w kolumnie jako poprawny typ, dzięki czemu błędy niezgodności typów są przechwytywane podczas kompilowania kodu zamiast w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="1a4c9-113"> provides access to column values as the correct type, so that type mismatch errors are caught when the code is compiled instead of at run time.</span></span>  
-  
- <span data-ttu-id="1a4c9-114">Przed rozpoczęciem wykonywania zapytania typu <xref:System.Data.DataSet>, należy wygenerować za pomocą Projektanta obiektów DataSet w klasie [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1a4c9-114">Before you can begin querying a typed <xref:System.Data.DataSet>, you must generate the class by using the DataSet Designer in [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].</span></span>  <span data-ttu-id="1a4c9-115">Aby uzyskać więcej informacji, zobacz [tworzenie i konfigurowanie zestawów danych](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="1a4c9-115">For more information, see [Create and configure datasets](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="1a4c9-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="1a4c9-116">Example</span></span>  
- <span data-ttu-id="1a4c9-117">W poniższym przykładzie przedstawiono zapytania za pośrednictwem typu <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="1a4c9-117">The following example shows a query over a typed <xref:System.Data.DataSet>:</span></span>  
-  
-```csharp  
-var query = from o in orders  
-            where o.OnlineOrderFlag == true  
-            select new { o.SalesOrderID,  
-                         o.OrderDate,  
-                         o.SalesOrderNumber };  
-  
-foreach(var order in query)   
-{  
-    Console.WriteLine("{0}\t{1:d}\t{2}",   
-order.SalesOrderID,   
-order.OrderDate,   
-order.SalesOrderNumber);  
-}  
-```  
-  
-```vb  
-Dim orders = ds.Tables("SalesOrderHeader")  
-  
-Dim query = _  
-       From o In orders _  
-       Where o.OnlineOrderFlag = True _  
-       Select New {SalesOrderID := o.SalesOrderID, _  
-                   OrderDate := o.OrderDate, _  
-                   SalesOrderNumber := o.SalesOrderNumber}  
-  
-For Each Dim onlineOrder In query  
- Console.WriteLine("{0}\t{1:d}\t{2}", _  
- onlineOrder.SalesOrderID, _  
- onlineOrder.OrderDate, _  
- onlineOrder.SalesOrderNumber)  
-Next  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="1a4c9-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1a4c9-118">See Also</span></span>  
- [<span data-ttu-id="1a4c9-119">Wykonywanie zapytania do zestawów danych</span><span class="sxs-lookup"><span data-stu-id="1a4c9-119">Querying DataSets</span></span>](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [<span data-ttu-id="1a4c9-120">Zapytania wielotabelowe</span><span class="sxs-lookup"><span data-stu-id="1a4c9-120">Cross-Table Queries</span></span>](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
- [<span data-ttu-id="1a4c9-121">Zapytania jednotabelowe</span><span class="sxs-lookup"><span data-stu-id="1a4c9-121">Single-Table Queries</span></span>](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
+# <a name="query-typed-datasets"></a><span data-ttu-id="89266-102">Zapytanie wpisanych zestawów danych</span><span class="sxs-lookup"><span data-stu-id="89266-102">Query typed DataSets</span></span>
+
+<span data-ttu-id="89266-103">Jeśli schemat <xref:System.Data.DataSet> jest znany w czasie projektowania aplikacji, zalecamy użycie wpisane <xref:System.Data.DataSet> podczas korzystania z LINQ to DataSet.</span><span class="sxs-lookup"><span data-stu-id="89266-103">If the schema of the <xref:System.Data.DataSet> is known at application design time, we recommend that you use a typed <xref:System.Data.DataSet> when using LINQ to DataSet.</span></span> <span data-ttu-id="89266-104">Wpisane <xref:System.Data.DataSet> jest klasa, która pochodzi od klasy <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="89266-104">A typed <xref:System.Data.DataSet> is a class that derives from a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="89266-105">W efekcie dziedziczy wszystkie metody, zdarzenia i właściwości <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="89266-105">As such, it inherits all the methods, events, and properties of a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="89266-106">Ponadto wpisane <xref:System.Data.DataSet> udostępnia silnie typizowane metody, zdarzenia i właściwości.</span><span class="sxs-lookup"><span data-stu-id="89266-106">Additionally, a typed <xref:System.Data.DataSet> provides strongly typed methods, events, and properties.</span></span> <span data-ttu-id="89266-107">Oznacza to, że masz dostęp tabele i kolumny, według nazwy, zamiast korzystać z metody oparte na kolekcji.</span><span class="sxs-lookup"><span data-stu-id="89266-107">This means that you can access tables and columns by name, instead of using collection-based methods.</span></span> <span data-ttu-id="89266-108">To sprawia, że zapytania prostszy i bardziej czytelny.</span><span class="sxs-lookup"><span data-stu-id="89266-108">This makes queries simpler and more readable.</span></span> <span data-ttu-id="89266-109">Aby uzyskać więcej informacji, zobacz [wpisanych zestawów danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).</span><span class="sxs-lookup"><span data-stu-id="89266-109">For more information, see [Typed DataSets](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).</span></span>
+
+<span data-ttu-id="89266-110">LINQ do zestawu danych obsługuje również zapytań wpisane <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="89266-110">LINQ to DataSet also supports querying over a typed <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="89266-111">Z kontrolą typów <xref:System.Data.DataSet>, będą musieli używać ogólnych <xref:System.Data.DataRowExtensions.Field%2A> metody lub <xref:System.Data.DataRowExtensions.SetField%2A> metody dostępu do kolumny danych.</span><span class="sxs-lookup"><span data-stu-id="89266-111">With a typed <xref:System.Data.DataSet>, you do not have to use the generic <xref:System.Data.DataRowExtensions.Field%2A> method or <xref:System.Data.DataRowExtensions.SetField%2A> method to access column data.</span></span> <span data-ttu-id="89266-112">Nazwy właściwości są dostępne w czasie kompilacji, ponieważ informacje o typie jest uwzględniony w <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="89266-112">Property names are available at compile time because the type information is included in the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="89266-113">LINQ do zestawu danych zapewnia dostęp do wartości w kolumnie jako odpowiedniego typu, tak aby błędy niezgodności wpisywania są wyłapywane, gdy kod jest kompilowany zamiast w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="89266-113">LINQ to DataSet provides access to column values as the correct type, so that type mismatch errors are caught when the code is compiled instead of at run time.</span></span>
+
+<span data-ttu-id="89266-114">Przed rozpoczęciem wykonywania zapytań wpisane <xref:System.Data.DataSet>, należy wygenerować klasę za pomocą **Projektanta obiektów DataSet** w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="89266-114">Before you can begin querying a typed <xref:System.Data.DataSet>, you must generate the class by using the **DataSet Designer** in Visual Studio.</span></span> <span data-ttu-id="89266-115">Aby uzyskać więcej informacji, zobacz [tworzenie i konfigurowanie zestawów danych](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="89266-115">For more information, see [Create and configure DataSets](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).</span></span>
+
+## <a name="example"></a><span data-ttu-id="89266-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="89266-116">Example</span></span>
+
+<span data-ttu-id="89266-117">W poniższym przykładzie przedstawiono zapytanie, za pośrednictwem wpisane <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="89266-117">The following example shows a query over a typed <xref:System.Data.DataSet>:</span></span>
+
+```csharp
+var query = from o in orders
+            where o.OnlineOrderFlag == true
+            select new { o.SalesOrderID,
+                         o.OrderDate,
+                         o.SalesOrderNumber };
+
+foreach(var order in query)
+{
+    Console.WriteLine("{0}\t{1:d}\t{2}",
+      order.SalesOrderID,
+      order.OrderDate,
+      order.SalesOrderNumber);
+}
+```
+
+```vb
+Dim orders = ds.Tables("SalesOrderHeader")
+
+Dim query = _
+       From o In orders _
+       Where o.OnlineOrderFlag = True _
+       Select New {SalesOrderID := o.SalesOrderID, _
+                   OrderDate := o.OrderDate, _
+                   SalesOrderNumber := o.SalesOrderNumber}
+
+For Each Dim onlineOrder In query
+ Console.WriteLine("{0}\t{1:d}\t{2}", _
+ onlineOrder.SalesOrderID, _
+ onlineOrder.OrderDate, _
+ onlineOrder.SalesOrderNumber)
+Next
+```
+
+## <a name="see-also"></a><span data-ttu-id="89266-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="89266-118">See also</span></span>
+
+- [<span data-ttu-id="89266-119">Wykonywanie zapytania do zestawów danych</span><span class="sxs-lookup"><span data-stu-id="89266-119">Querying DataSets</span></span>](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [<span data-ttu-id="89266-120">Zapytania wielotabelowe</span><span class="sxs-lookup"><span data-stu-id="89266-120">Cross-Table Queries</span></span>](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
+- [<span data-ttu-id="89266-121">Zapytania jednotabelowe</span><span class="sxs-lookup"><span data-stu-id="89266-121">Single-Table Queries</span></span>](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)

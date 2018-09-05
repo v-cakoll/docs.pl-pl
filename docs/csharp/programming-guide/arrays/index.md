@@ -5,53 +5,57 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: e01b9463eca88858633b847be256ae5b063459b2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1469336bf034fd22c9d7355b2f8dd8be32721fdf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42936014"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510641"
 ---
-# <a name="arrays-c-programming-guide"></a><span data-ttu-id="c8e06-102">Tablice (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="c8e06-102">Arrays (C# Programming Guide)</span></span>
-<span data-ttu-id="c8e06-103">W strukturze danych tablicy można przechowywać wiele zmiennych tego samego typu.</span><span class="sxs-lookup"><span data-stu-id="c8e06-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="c8e06-104">Można zadeklarować tablicy, określając typ jej elementów.</span><span class="sxs-lookup"><span data-stu-id="c8e06-104">You declare an array by specifying the type of its elements.</span></span>  
+# <a name="arrays-c-programming-guide"></a><span data-ttu-id="545ec-102">Tablice (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="545ec-102">Arrays (C# Programming Guide)</span></span>
+
+<span data-ttu-id="545ec-103">W strukturze danych tablicy można przechowywać wiele zmiennych tego samego typu.</span><span class="sxs-lookup"><span data-stu-id="545ec-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="545ec-104">Można zadeklarować tablicy, określając typ jej elementów.</span><span class="sxs-lookup"><span data-stu-id="545ec-104">You declare an array by specifying the type of its elements.</span></span>  
   
  `type[] arrayName;`  
   
- <span data-ttu-id="c8e06-105">Poniższe przykłady tworzą tablice jednowymiarowe, wielowymiarowe i nieregularne:</span><span class="sxs-lookup"><span data-stu-id="c8e06-105">The following examples create single-dimensional, multidimensional, and jagged arrays:</span></span>  
+ <span data-ttu-id="545ec-105">Poniższe przykłady tworzą tablice jednowymiarowe, wielowymiarowe i nieregularne:</span><span class="sxs-lookup"><span data-stu-id="545ec-105">The following examples create single-dimensional, multidimensional, and jagged arrays:</span></span>  
   
  [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="array-overview"></a><span data-ttu-id="c8e06-106">Omówienie macierzy</span><span class="sxs-lookup"><span data-stu-id="c8e06-106">Array Overview</span></span>  
- <span data-ttu-id="c8e06-107">Tablica ma następujące właściwości:</span><span class="sxs-lookup"><span data-stu-id="c8e06-107">An array has the following properties:</span></span>  
+## <a name="array-overview"></a><span data-ttu-id="545ec-106">Omówienie macierzy</span><span class="sxs-lookup"><span data-stu-id="545ec-106">Array Overview</span></span>
+
+ <span data-ttu-id="545ec-107">Tablica ma następujące właściwości:</span><span class="sxs-lookup"><span data-stu-id="545ec-107">An array has the following properties:</span></span>  
   
--   <span data-ttu-id="c8e06-108">Tablica może być [Single-Dimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [wielowymiarowe](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) lub [poszarpana](../../../csharp/programming-guide/arrays/jagged-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="c8e06-108">An array can be [Single-Dimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [Multidimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) or [Jagged](../../../csharp/programming-guide/arrays/jagged-arrays.md).</span></span>  
+-   <span data-ttu-id="545ec-108">Tablica może być [Single-Dimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [wielowymiarowe](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) lub [poszarpana](../../../csharp/programming-guide/arrays/jagged-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="545ec-108">An array can be [Single-Dimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [Multidimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) or [Jagged](../../../csharp/programming-guide/arrays/jagged-arrays.md).</span></span>  
   
--   <span data-ttu-id="c8e06-109">Liczba wymiarów i długość każdego wymiaru są określane podczas tworzenia instancji tabeli.</span><span class="sxs-lookup"><span data-stu-id="c8e06-109">The number of dimensions and the length of each dimension are established when the array instance is created.</span></span> <span data-ttu-id="c8e06-110">Te wartości nie można zmienić w trakcie okresu istnienia wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="c8e06-110">These values can't be changed during the lifetime of the instance.</span></span>  
+-   <span data-ttu-id="545ec-109">Liczba wymiarów i długość każdego wymiaru są określane podczas tworzenia instancji tabeli.</span><span class="sxs-lookup"><span data-stu-id="545ec-109">The number of dimensions and the length of each dimension are established when the array instance is created.</span></span> <span data-ttu-id="545ec-110">Te wartości nie można zmienić w trakcie okresu istnienia wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="545ec-110">These values can't be changed during the lifetime of the instance.</span></span>  
   
--   <span data-ttu-id="c8e06-111">Wartości domyślne elementów tablicy liczbowej są ustawiane na zero, a elementy odniesienia są ustawiane na wartość null.</span><span class="sxs-lookup"><span data-stu-id="c8e06-111">The default values of numeric array elements are set to zero, and reference elements are set to null.</span></span>  
+-   <span data-ttu-id="545ec-111">Wartości domyślne elementów tablicy liczbowej są ustawiane na zero, a elementy odniesienia są ustawiane na wartość null.</span><span class="sxs-lookup"><span data-stu-id="545ec-111">The default values of numeric array elements are set to zero, and reference elements are set to null.</span></span>  
   
--   <span data-ttu-id="c8e06-112">Nieregularna tablica jest tablicy tablic, a zatem jej elementy są typami odwołań i są inicjowane na `null`.</span><span class="sxs-lookup"><span data-stu-id="c8e06-112">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
+-   <span data-ttu-id="545ec-112">Nieregularna tablica jest tablicy tablic, a zatem jej elementy są typami odwołań i są inicjowane na `null`.</span><span class="sxs-lookup"><span data-stu-id="545ec-112">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
   
--   <span data-ttu-id="c8e06-113">Tablice są indeksowane zero: tablia z `n` elementami jest indeksowana z `0` do `n-1`.</span><span class="sxs-lookup"><span data-stu-id="c8e06-113">Arrays are zero indexed: an array with `n` elements is indexed from `0` to `n-1`.</span></span>  
+-   <span data-ttu-id="545ec-113">Tablice są indeksowane zero: tablia z `n` elementami jest indeksowana z `0` do `n-1`.</span><span class="sxs-lookup"><span data-stu-id="545ec-113">Arrays are zero indexed: an array with `n` elements is indexed from `0` to `n-1`.</span></span>  
   
--   <span data-ttu-id="c8e06-114">Elementy tablicy mogą być dowolnego typu, w tym typu tablicowego.</span><span class="sxs-lookup"><span data-stu-id="c8e06-114">Array elements can be of any type, including an array type.</span></span>  
+-   <span data-ttu-id="545ec-114">Elementy tablicy mogą być dowolnego typu, w tym typu tablicowego.</span><span class="sxs-lookup"><span data-stu-id="545ec-114">Array elements can be of any type, including an array type.</span></span>  
   
--   <span data-ttu-id="c8e06-115">Typy tablic mają [typy odwołań](../../../csharp/language-reference/keywords/reference-types.md) pochodzące z abstrakcyjnego typy podstawowego <xref:System.Array>.</span><span class="sxs-lookup"><span data-stu-id="c8e06-115">Array types are [reference types](../../../csharp/language-reference/keywords/reference-types.md) derived from the abstract base type <xref:System.Array>.</span></span> <span data-ttu-id="c8e06-116">Ponieważ ten typ implementuje <xref:System.Collections.IEnumerable> i <xref:System.Collections.Generic.IEnumerable%601>, możesz użyć [foreach](../../../csharp/language-reference/keywords/foreach-in.md) iteracji na wszystkich tablicach w C#.</span><span class="sxs-lookup"><span data-stu-id="c8e06-116">Since this type implements <xref:System.Collections.IEnumerable> and <xref:System.Collections.Generic.IEnumerable%601>, you can use [foreach](../../../csharp/language-reference/keywords/foreach-in.md) iteration on all arrays in C#.</span></span>  
+-   <span data-ttu-id="545ec-115">Typy tablic mają [typy odwołań](../../../csharp/language-reference/keywords/reference-types.md) pochodzące z abstrakcyjnego typy podstawowego <xref:System.Array>.</span><span class="sxs-lookup"><span data-stu-id="545ec-115">Array types are [reference types](../../../csharp/language-reference/keywords/reference-types.md) derived from the abstract base type <xref:System.Array>.</span></span> <span data-ttu-id="545ec-116">Ponieważ ten typ implementuje <xref:System.Collections.IEnumerable> i <xref:System.Collections.Generic.IEnumerable%601>, możesz użyć [foreach](../../../csharp/language-reference/keywords/foreach-in.md) iteracji na wszystkich tablicach w C#.</span><span class="sxs-lookup"><span data-stu-id="545ec-116">Since this type implements <xref:System.Collections.IEnumerable> and <xref:System.Collections.Generic.IEnumerable%601>, you can use [foreach](../../../csharp/language-reference/keywords/foreach-in.md) iteration on all arrays in C#.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="c8e06-117">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="c8e06-117">Related Sections</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="545ec-117">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="545ec-117">Related Sections</span></span>  
   
--   [<span data-ttu-id="c8e06-118">Użycie tablic jako obiektów</span><span class="sxs-lookup"><span data-stu-id="c8e06-118">Arrays as Objects</span></span>](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
+-   [<span data-ttu-id="545ec-118">Użycie tablic jako obiektów</span><span class="sxs-lookup"><span data-stu-id="545ec-118">Arrays as Objects</span></span>](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
   
--   [<span data-ttu-id="c8e06-119">Używanie instrukcji foreach z tablicami</span><span class="sxs-lookup"><span data-stu-id="c8e06-119">Using foreach with Arrays</span></span>](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
+-   [<span data-ttu-id="545ec-119">Używanie instrukcji foreach z tablicami</span><span class="sxs-lookup"><span data-stu-id="545ec-119">Using foreach with Arrays</span></span>](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
   
--   [<span data-ttu-id="c8e06-120">Przekazywanie tablic jako argumentów</span><span class="sxs-lookup"><span data-stu-id="c8e06-120">Passing Arrays as Arguments</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
+-   [<span data-ttu-id="545ec-120">Przekazywanie tablic jako argumentów</span><span class="sxs-lookup"><span data-stu-id="545ec-120">Passing Arrays as Arguments</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
--   [<span data-ttu-id="c8e06-121">Przekazywanie tablic za pomocą ref i out</span><span class="sxs-lookup"><span data-stu-id="c8e06-121">Passing Arrays Using ref and out</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
+-   [<span data-ttu-id="545ec-121">Przekazywanie tablic za pomocą ref i out</span><span class="sxs-lookup"><span data-stu-id="545ec-121">Passing Arrays Using ref and out</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
   
-## <a name="c-language-specification"></a><span data-ttu-id="c8e06-122">Specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="c8e06-122">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="545ec-122">Specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="545ec-122">C# Language Specification</span></span>
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c8e06-123">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c8e06-123">See Also</span></span>  
- [<span data-ttu-id="c8e06-124">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="c8e06-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="c8e06-125">Kolekcje</span><span class="sxs-lookup"><span data-stu-id="c8e06-125">Collections</span></span>](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [<span data-ttu-id="c8e06-126">Typ kolekcji tablic</span><span class="sxs-lookup"><span data-stu-id="c8e06-126">Array Collection Type</span></span>](http://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+## <a name="see-also"></a><span data-ttu-id="545ec-123">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="545ec-123">See Also</span></span>
+
+- [<span data-ttu-id="545ec-124">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="545ec-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="545ec-125">Kolekcje</span><span class="sxs-lookup"><span data-stu-id="545ec-125">Collections</span></span>](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+- [<span data-ttu-id="545ec-126">Typ kolekcji tablic</span><span class="sxs-lookup"><span data-stu-id="545ec-126">Array Collection Type</span></span>](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

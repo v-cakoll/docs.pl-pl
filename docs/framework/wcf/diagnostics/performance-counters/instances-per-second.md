@@ -3,18 +3,18 @@ title: Wystąpienia na sekundę
 ms.date: 03/30/2017
 ms.assetid: 74579397-1058-4278-80cf-2d00854a480f
 ms.openlocfilehash: f0797c38a5eb7399817eaf6aad9fb5b6ecbfab89
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387910"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519473"
 ---
-# <a name="instances-per-second"></a><span data-ttu-id="faeea-102">Wystąpienia na sekundę</span><span class="sxs-lookup"><span data-stu-id="faeea-102">Instances Per Second</span></span>
-<span data-ttu-id="faeea-103">Nazwa licznika: Wystąpienia, utworzony na sekundę.</span><span class="sxs-lookup"><span data-stu-id="faeea-103">Counter Name: Instances Created Per Second.</span></span>  
+# <a name="instances-per-second"></a><span data-ttu-id="8b3d9-102">Wystąpienia na sekundę</span><span class="sxs-lookup"><span data-stu-id="8b3d9-102">Instances Per Second</span></span>
+<span data-ttu-id="8b3d9-103">Nazwa licznika: Wystąpienia, utworzony na sekundę.</span><span class="sxs-lookup"><span data-stu-id="8b3d9-103">Counter Name: Instances Created Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="faeea-104">Opis</span><span class="sxs-lookup"><span data-stu-id="faeea-104">Description</span></span>  
- <span data-ttu-id="faeea-105">Łączna liczba wystąpień usługi utworzone w ciągu sekundy.</span><span class="sxs-lookup"><span data-stu-id="faeea-105">Total number of service instances created in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="8b3d9-104">Opis</span><span class="sxs-lookup"><span data-stu-id="8b3d9-104">Description</span></span>  
+ <span data-ttu-id="8b3d9-105">Łączna liczba wystąpień usługi utworzone w ciągu sekundy.</span><span class="sxs-lookup"><span data-stu-id="8b3d9-105">Total number of service instances created in a second.</span></span>  
   
- <span data-ttu-id="faeea-106">Ten licznik jest typ licznika wydajności [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), którego wartość jest obliczana przy użyciu następującej formuły.</span><span class="sxs-lookup"><span data-stu-id="faeea-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="8b3d9-106">Ten licznik jest typ licznika wydajności [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), którego wartość jest obliczana przy użyciu następującej formuły.</span><span class="sxs-lookup"><span data-stu-id="8b3d9-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="faeea-107">(N: 1 - N 0) / ((D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="faeea-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="8b3d9-107">(N: 1 - N 0) / ((D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="8b3d9-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

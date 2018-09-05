@@ -2,12 +2,12 @@
 title: LINQ do XML osi (C#)
 ms.date: 07/20/2015
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
-ms.openlocfilehash: d12d35a6f9b02056946ba201a7bd5a961f64ba36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6a27adb1c7e1dcfefda13a355700202ccda3ffab
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408658"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673278"
 ---
 # <a name="linq-to-xml-axes-c"></a>LINQ do XML osi (C#)
 Po drzewa XML utworzone lub ładowany dokument XML do drzewa XML można tworzyć zapytania, do znajdowania elementów i atrybutów i pobierania ich wartości.  
@@ -29,6 +29,7 @@ Po drzewa XML utworzone lub ładowany dokument XML do drzewa XML można tworzyć
 |[Porady: pobieranie wartości atrybutu (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|Pokazuje, jak można pobrać wartości atrybutów.|  
 |[Porady: pobieranie płytkiej wartości elementu (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|Pokazuje, jak pobieranie płytkiej wartości elementu.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Metody rozszerzeń](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Metody rozszerzeń](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+- [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

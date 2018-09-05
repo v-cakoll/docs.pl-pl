@@ -9,70 +9,70 @@ ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 2ad93923ecc41b7a8b564d2f53129a09a78b1085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69fe598fc38d9a82d0b95318774d16a49bbdf49f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410114"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673930"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ListItem
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Ten temat zawiera informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] obsługę <xref:System.Windows.Automation.ControlType.ListItem> kontroli typem. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], typu formantu to zestaw warunków, które muszą spełniać formantu, aby można było używać <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> właściwości. Takie szczegółowe wytyczne dla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wartości właściwości i wzorce formantu.  
+ Ten temat zawiera informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Obsługa <xref:System.Windows.Automation.ControlType.ListItem> kontrolowanie typu. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], typ formantu to zestaw warunków, które kontrolki muszą spełnić, aby można było używać <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> właściwości. Warunki obejmują konkretne wskazówki dotyczące [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wartości właściwości i wzorce kontrolki.  
   
- Kontrolki elementu listy są przykładem formantów, które implementują ListItem — typ formantu.  
+ Kontrolki elementu listy są przykładem kontrolki, które implementują kontrolek typu ListItem.  
   
- Następujące sekcje definiują wymaganych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury, właściwości, wzorców formantu i zdarzenia dla typu formantu ListItem drzewa. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Wymagania dotyczą wszystkich kontrolek listy, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], lub [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Poniższe sekcje definiują wymagane [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury, właściwości, wzorców kontrolek i zdarzeń dla kontrolek typu ListItem drzewa. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Wymagania mają zastosowanie do wszystkich kontrolek listy, czy [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], lub [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Struktura drzewa automatyzacji interfejsu użytkownika wymagane  
- Poniższa tabela przedstawia kontroli i widok zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontrolki drzewa, które odnoszą się do elementu listy, a w tym artykule opisano, jakie mogą być zawarte w każdym widoku. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, zobacz [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ Poniższa tabela przedstawia kontroli i widok zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontroluje drzewo, które odnoszą się do elementu listy, a w tym artykule opisano, jakie mogą być zawarte w poszczególnych widokach. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, zobacz [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
-|Kontrolki widoku|Widok zawartości|  
+|Formant widoku|Widok zawartości|  
 |------------------|------------------|  
-|ListItem<br /><br /> -Obrazu (0 lub więcej)<br />-Tekst (0 lub więcej)<br />-Edytuj (0 lub więcej)|ListItem|  
+|ListItem<br /><br /> -Image (0 lub więcej)<br />-Text (0 lub więcej)<br />-Edycji (0 lub więcej)|ListItem|  
   
- Elementy podrzędne kontrolki elementu listy, widok zawartości z [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa zawsze musi mieć wartość "0". Jeśli struktura formantu jest taka, że inne elementy znajdują się poniżej elementu listy, a następnie należy wykonać, wymagania dotyczące [Obsługa automatyzacji interfejsu użytkownika dla typu formantu TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md) kontroli typem.  
+ Elementy podrzędne kontrolki elementu listy, widok zawartości z [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa zawsze musi być "0". Jeśli struktura kontrolki jest taka, że inne elementy znajdują się poniżej elementu listy, a następnie należy wykonać, wymagania dotyczące [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md) kontrolowanie typu.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Właściwości automatyzacji interfejsu użytkownika wymagane  
- W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, której wartość lub definicji jest szczególnie istotne kontrolki elementu listy. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, których wartość lub definicji jest szczególnie istotne kontrolki elementu listy. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Właściwość|Wartość|Uwagi|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Zobacz uwagi.|Wartość tej właściwości musi być unikatowy w obrębie wszystkich kontrolek w aplikacji.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Zobacz uwagi.|Ta wartość tej właściwości powinna zawierać obszaru obrazu i tekstu treści elementu listy.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Zależy od|Jeśli formant listy ma kliknięcia (punkt, który można kliknąć, aby spowodować, że na liście, aby przyjąć fokus) tego punktu, muszą być widoczne za pośrednictwem tej właściwości. Jeśli formant listy jest całkowicie objęte elementy podrzędne listy zgłosi <xref:System.Windows.Automation.NoClickablePointException> wskaż, klient musi poprosić element wewnątrz kontrolki listy dla elementu do kliknięcia.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Zobacz uwagi.|Wartość właściwości nazwy kontrolki elementu listy pochodzi z zawartość tekstu elementu.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Zobacz uwagi.|Jeśli brak jest etykiety tekst statyczny tej właściwości musi ujawniać odwołanie do tego formantu.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ListItem|Ta wartość jest taka sama dla wszystkich platform interfejsu użytkownika.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"element listy"|Zlokalizowany ciąg odpowiadający ListItem — typ formantu.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Formant listy zawsze znajduje się w widoku zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Formant listy zawsze znajduje się w widoku kontrolki [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Jeśli kontener może akceptować wejście klawiatury wartość tej właściwości powinien mieć wartość PRAWDA.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|Tekst pomocy dla kontrolek listy należy wyjaśnić, dlaczego użytkownik jest pytany o dokonanie wyboru z listy opcji, która zwykle jest tego samego typu informacji przedstawionych w etykietce narzędzia. Na przykład "Wybierz element, aby ustawić rozdzielczość ekranu dla monitora."|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemTypeProperty>|Zależy od|Ta właściwość powinna być udostępniane dla kontrolki elementu listy, które są reprezentujący obiekt. Te kontrolki elementu listy ma zazwyczaj ikony skojarzone z formantu, który użytkownicy mogą skojarzyć z obiektu źródłowego.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Zależy od|Ta właściwość musi zwracać wartość określa, czy element listy jest aktualnie wyświetlony w wyniku przewijania w ramach kontenera nadrzędnego, który implementuje Scroll — wzorzec formantu.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Zobacz uwagi.|Wartość tej właściwości musi być unikatowa wśród wszystkich kontrolek w aplikacji.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Zobacz uwagi.|Ta wartość tej właściwości powinno obejmować obszar zawartości obraz i tekst elementu listy.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Zależy od|Jeśli kontrolka listy ma kliknięcia (punkt, który można kliknąć, aby spowodować, że na liście, aby przyjąć fokus) tego punktu, musi być wystawiony przez tę właściwość. Jeśli kontrolka listy jest całkowicie objęte elementy podrzędne listy zgłosi <xref:System.Windows.Automation.NoClickablePointException> do wskazania, że klienta muszą uzyskać element wewnątrz kontrolki listy elementu do kliknięcia.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Zobacz uwagi.|Wartość właściwości nazwy kontrolki elementu listy pochodzi z zawartość tekstową elementu.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Zobacz uwagi.|Jeśli brak jest etykiety tekst statyczny tej właściwości należy ujawnić odwołanie do tego formantu.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ListItem|Ta wartość jest taka sama dla wszystkich platform tworzenia interfejsu użytkownika.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"element listy"|Zlokalizowany ciąg odpowiadający typowi kontroli wyszczególnij.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Kontrolka listy zawsze znajduje się w widoku zawartości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Kontrolka listy zawsze znajduje się w widoku kontrolnym [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Jeśli kontener może akceptować dane wejściowe z klawiatury wartość tej właściwości powinna być prawdziwe.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|Tekst pomocy dla kontrolek listy należy wyjaśnić, dlaczego użytkownik zażądano dokonania wyboru z listy opcji, zwykle jest to ten sam typ informacje znajdujące się za pośrednictwem etykietka narzędzia. Na przykład "Wybierz element, aby ustawić rozdzielczość ekranu dla monitora."|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemTypeProperty>|Zależy od|Ta właściwość powinny zostać ujawnione dla kontrolki elementu listy, które są reprezentujący obiekt. Te kontrolki elementu listy ma zazwyczaj ikony skojarzony formant, który użytkownicy mogą skojarzyć z obiektu źródłowego.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Zależy od|Ta właściwość musi zwracać wartość dla tego, czy element listy aktualnie jest przewijane do wyświetlenia w ramach kontenera nadrzędnego, który implementuje wzorca kontrolki przewijania.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## <a name="required-ui-automation-control-patterns"></a>Wzorce formantów automatyzacji interfejsu użytkownika wymagane  
- W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontrolować wzorce wymagane do obsługi przez kontrolki elementu listy. Aby uzyskać więcej informacji na wzorce formantów, zobacz [Przegląd wzorców formantu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
+ W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontrolować wzorców, trzeba być obsługiwana przez kontrolki elementu listy. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|— Wzorzec formantu|Obsługa|Uwagi|  
+|— Wzorzec kontrolki|Obsługa|Uwagi|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Tak|Kontrolki elementu listy musi implementować wzorzec tego formantu. Dzięki temu listy elementów kontroli w celu przedstawienia po jej wybraniu.|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Zależy od|Jeśli element listy znajduje się w kontenerze, który jest przewijany tego wzorca formantu musi być implementowana.|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|Zależy od|Jeśli element listy jest dostępne do kontroli i akcji nie przeprowadza zmiana stanu zaznaczenia tego wzorca formantu musi być implementowana.|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Zależy od|Jeśli element może operować, aby pokazać lub ukryć informacje tego wzorca formantu musi być implementowana.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Zależy od|Jeśli element można edytować tego wzorca formantu musi być implementowana. Zmiany kontrolki elementu listy mogą spowodować zmiany wartości <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>, i <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Zależy od|Jeśli element do elementu przestrzennego nawigacji jest obsługiwana w kontenerze listy i kontenerze są rozmieszczone w wiersze i kolumny elementu siatki — wzorzec kontrolki musi być implementowana.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Zależy od|Jeśli element ma polecenie, które można wykonywać na nim, niezależnie od wyboru, następnie tego wzorca musi być implementowana. Jest to zazwyczaj akcję skojarzoną z dwukrotnie kontrolki elementu listy. Przykłady czy uruchamiania dokumentu z [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)], lub odtwarzanie plików muzycznych [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)].|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Tak|Kontrolki elementu listy musi implementować ten — wzorzec kontrolki. Dzięki temu listy kontrolek elementów do przekazania, gdy są zaznaczone.|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Zależy od|Jeśli element listy znajduje się w kontenerze, który jest przewijany można zaimplementować ten wzorzec kontroli.|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|Zależy od|Jeśli element listy jest dostępne do kontroli, a akcja nie powoduje wykonania zmiana stanu zaznaczenia można zaimplementować ten wzorzec kontroli.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Zależy od|Jeśli element mogą być zmieniane, aby pokazać lub ukryć informacje można zaimplementować ten wzorzec kontroli.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Zależy od|Jeśli element może być edytowany można zaimplementować ten wzorzec kontroli. Zmiany wartości spowoduje, że zmiany do kontrolki elementu listy <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>, i <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Zależy od|Jeśli element-element przestrzenny nawigacji jest obsługiwana w kontenerze listy i kontener są rozmieszczone w wiersze i kolumny można zaimplementować elementu siatki — wzorzec kontrolki.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Zależy od|Jeśli element ma polecenia, które mogą być wykonywane na nim, niezależnie od wyboru, następnie tego wzorca należy zaimplementować. Jest to zazwyczaj akcję skojarzoną z dwukrotne kliknięcie formantu elementu listy. Przykłady spowoduje uruchomienie dokumentu z [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)], lub odtwarzanie plików muzycznych w [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)].|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## <a name="required-ui-automation-events"></a>Zdarzeń automatyzacji interfejsu użytkownika wymagane  
- W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane obsługiwane przez wszystkie kontrolki elementu listy. Aby uzyskać więcej informacji dotyczących zdarzeń, zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
+ W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie kontrolki elementu listy. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Obsługa|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  

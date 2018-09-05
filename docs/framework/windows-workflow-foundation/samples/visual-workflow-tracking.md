@@ -3,11 +3,11 @@ title: Wizualne śledzenie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
 ms.openlocfilehash: 7433d2497b9a9993093e13e88e073fb40403e3b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402165"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562262"
 ---
 # <a name="visual-workflow-tracking"></a>Wizualne śledzenie przepływu pracy
 W tym przykładzie przedstawiono sposób pisania przepływu pracy visual śledzenia aplikacji przy użyciu funkcji debugowania dostępnych za pośrednictwem [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].  

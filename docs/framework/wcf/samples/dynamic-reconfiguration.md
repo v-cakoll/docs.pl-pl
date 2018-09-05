@@ -3,11 +3,11 @@ title: Dynamiczna ponowna konfiguracja
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
 ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541255"
 ---
 # <a name="dynamic-reconfiguration"></a>Dynamiczna ponowna konfiguracja
 Niniejszy przykład pokazuje usługi routingu Windows Communication Foundation (WCF). Usługa routingu jest składnikiem usługi WCF, który ułatwia to dołączenie routerem na podstawie zawartości do aplikacji. W tym przykładzie dostosowuje się standardowa przykładowe Kalkulator WCF do komunikowania się za pomocą usługi routingu. Niniejszy przykład pokazuje, jak usługa routingu można dynamicznie tak skonfigurować, podczas wykonywania.  

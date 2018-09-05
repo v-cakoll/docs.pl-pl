@@ -1,19 +1,19 @@
 ---
-title: 'Porady: serializacji przy użyciu elementu XmlSerializer (C#)'
+title: 'Instrukcje: serializowanie przy użyciu elementu XmlSerializer (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 2f68253f2ce1efaaabb971350496898ab012706b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32a23792947639c2c0eb1dc14b640c3786bdfd4c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319900"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535766"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a>Porady: serializacji przy użyciu elementu XmlSerializer (C#)
-W tym temacie przedstawiono przykładową, który serializuje i deserializuje przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.  
+# <a name="how-to-serialize-using-xmlserializer-c"></a>Instrukcje: serializowanie przy użyciu elementu XmlSerializer (C#)
+W tym temacie przedstawiono przykład, który serializuje i deserializuje przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy wiele obiektów, które zawierają <xref:System.Xml.Linq.XElement> obiektów. Serializuje je do strumienia pamięci i deserializuje je ze strumienia pamięci.  
+ Poniższy przykład tworzy wiele obiektów, które zawierają <xref:System.Xml.Linq.XElement> obiektów. Szereguje je do strumienia pamięci i deserializuje ze strumienia pamięci.  
   
 ```csharp  
 using System;  
@@ -89,5 +89,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Serializacja wykresów obiektów, które zawierają obiekty klasy XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Serializowanie wykresów obiektów, które zawierają obiekty XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

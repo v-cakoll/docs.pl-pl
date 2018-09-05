@@ -2,20 +2,20 @@
 title: Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 8272ece5fcaf395b0ec8191afae8eabc998c7f8b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496828"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534157"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Umożliwia korzystanie z deklaratywne mechanizm buforowania już dostępne w programie ASP.NET w usługach WCF Web HTTP. Dzięki temu można do pamięci podręcznej odpowiedzi z operacji usługi WCF Web HTTP. Gdy użytkownik wysyła do usługi, który jest skonfigurowany dla buforowania GET protokołu HTTP, ASP.NET odsyła odpowiedź buforowana i nie wywołano metody usługi. Po wygaśnięciu pamięci podręcznej, przy następnym użytkownik wysyła HTTP GET, jest wywoływana przez metodę usługi i ponownie buforowaną odpowiedź. Aby uzyskać więcej informacji na temat buforowania platformy ASP.NET, zobacz [omówienie pamięci podręcznej programu ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Umożliwia użycie deklaratywne mechanizm buforowania, dostępnych w programie ASP.NET w usługach WCF Web HTTP. Dzięki temu można buforowanie odpowiedzi z operacji usługi WCF Web HTTP. Gdy użytkownik wysyła żądania HTTP GET do usługi, który jest skonfigurowany do buforowania, ASP.NET odsyła odpowiedzi z pamięci podręcznej i nie jest wywoływana metoda usługi. Po wygaśnięciu pamięci podręcznej, następnym razem użytkownik wysyła żądania HTTP GET, wywoływana jest metoda swoje usługi i odpowiedź jest zbuforowana z jeszcze raz. Aby uzyskać więcej informacji na temat buforowania platformy ASP.NET, zobacz [omówienie buforowania programu ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
   
-## <a name="basic-web-http-service-caching"></a>Usługa HTTP sieci Web podstawowe buforowanie  
- Aby włączyć protokół HTTP sieci WEB usługi buforowania, należy najpierw włączyć zgodności z platformą ASP.NET, stosując <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> do ustawienia usługi <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> do <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> lub <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
+## <a name="basic-web-http-service-caching"></a>Usługa HTTP Basic Web buforowania  
+ Aby włączyć protokół HTTP sieci WEB usługi pamięci podręcznej, należy najpierw włączyć zgodność platformy ASP.NET, stosując <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> do ustawienia usługi <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> do <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> lub <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wprowadzono nowy atrybut o nazwie <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> który pozwala określić nazwę profilu pamięci podręcznej. Ten atrybut jest stosowany do operacji usługi. Następujący przykład dotyczy <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> do usługi w celu włączenia zgodności z platformą ASP.NET i konfiguruje `GetCustomer` operacji do buforowania. <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` Atrybut określa profil pamięci podręcznej, który zawiera ustawienia pamięci podręcznej do użycia.  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wprowadza nowy atrybut o nazwie <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> pozwala określić nazwę profilu pamięci podręcznej. Ten atrybut jest stosowany do operacji usługi. Następujący przykład dotyczy <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> do usługi, aby włączyć zgodności z platformą ASP.NET i konfiguruje `GetCustomer` operacji do buforowania. <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` Atrybut określa profil pamięci podręcznej, który zawiera ustawienia pamięci podręcznej, który ma być używany.  
   
 ```csharp
 [ServiceContract] 
@@ -40,9 +40,9 @@ public class Service
 ```
   
 > [!WARNING]
->  Jeśli nie włączono tryb zgodności ASP.NET i <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> jest używany jest zgłaszany wyjątek.  
+>  Jeśli tryb zgodności ASP.NET nie jest włączona i <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> jest używana jest zgłaszany wyjątek.  
   
- Nazwa profilu pamięci podręcznej, określony przez <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> identyfikuje profil pamięci podręcznej, który jest dodawany do pliku konfiguracji Web.config. Profil pamięci podręcznej jest zdefiniowana z w <`outputCacheSetting`> element, jak pokazano w poniższym przykładzie konfiguracji.  
+ Nazwa profilu pamięci podręcznej, które są określone przez <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> identyfikuje profil pamięci podręcznej, który jest dodawany do pliku konfiguracji Web.config. Profil pamięci podręcznej jest zdefiniowana za pomocą w <`outputCacheSetting`> elementu, jak pokazano w poniższym przykładzie konfiguracji.  
   
 ```xml
 <!-- ...  -->
@@ -58,10 +58,10 @@ public class Service
 </system.web>  
 ```  
   
- Jest to tego samego elementu konfiguracji, która jest dostępna dla aplikacji ASP.NET. Aby uzyskać więcej informacji na temat profilów pamięci podręcznej programu ASP.NET, zobacz <xref:System.Web.Configuration.OutputCacheProfile>. Dla usług HTTP sieci Web, są najważniejsze atrybuty w profilu pamięci podręcznej: `cacheDuration` i `varyByParam`. Oba te atrybuty są wymagane. `cacheDuration` Ustawia czas, które mają być buforowane odpowiedzi w sekundach. `varyByParam` można określić parametr ciągu zapytania używanego do odpowiedzi z pamięci podręcznej. Wszystkie żądania z wartościami parametrów ciągu zapytania różnych są buforowane oddzielnie. Na przykład po wysłaniu żądania początkowego do http://MyServer/MyHttpService/MyOperation?param=10 wszystkie kolejne żądania o tym samym identyfikatorze URI będzie zwracany buforowanej odpowiedzi (o ile nie upłynął czas trwania pamięci podręcznej). Odpowiedzi na żądania podobne jest taki sam, ale ma inną wartość dla parametru ciągu zapytania parametru są buforowane oddzielnie. Jeśli nie chcesz, aby to zachowanie buforowania w oddzielnych, ustaw `varyByParam` "none".  
+ Jest to ten sam element konfiguracji, która jest dostępna dla aplikacji ASP.NET. Aby uzyskać więcej informacji na temat profilów w pamięci podręcznej programu ASP.NET, zobacz <xref:System.Web.Configuration.OutputCacheProfile>. Dla usług HTTP w sieci Web są najważniejsze atrybutów w pamięci podręcznej profilu: `cacheDuration` i `varyByParam`. Te atrybuty są wymagane. `cacheDuration` Określa ilość czasu, które mają być buforowane odpowiedzi w ciągu kilku sekund. `varyByParam` Pozwala określić parametr ciągu zapytania używanego do buforowanie odpowiedzi. Wszystkie żądania przekazywane za inne wartości parametrów ciągów są buforowane osobno. Na przykład, po nawiązaniu początkowego żądania do http://MyServer/MyHttpService/MyOperation?param=10 wszystkich kolejnych żądań wykonywanych przy użyciu tego samego identyfikatora URI zostałyby zwrócone w odpowiedzi z pamięci podręcznej (, dopóki nie upłynie czas trwania pamięci podręcznej). Odpowiedzi dla podobne żądania, która jest taka sama, ale ma inną wartość dla parametru ciągu zapytania parametr są buforowane osobno. Jeśli nie mają oddzielne zachowania buforowania, ustaw `varyByParam` na "none".  
   
-## <a name="sql-cache-dependency"></a>Zależności bufora SQL  
- Odpowiedzi usługi HTTP sieci Web można buforować w taki sposób, w zależności buforu SQL. Jeśli usługi WCF Web HTTP zależy od danych przechowywanych w bazie danych SQL, można buforować odpowiedzi usługi akcji i unieważnić buforowanej odpowiedzi podczas zmiany tabeli bazy danych SQL danych. To zachowanie jest całkowicie skonfigurowany w pliku Web.config. Należy określić parametry połączenia w <`connectionStrings`> elementu.  
+## <a name="sql-cache-dependency"></a>Zależności pamięci podręcznej SQL  
+ Odpowiedzi usługi HTTP sieci Web można buforować w taki sposób, w przypadku zależności pamięci podręcznej SQL. Jeśli usługi WCF Web HTTP jest zależna od danych przechowywanych w bazie danych SQL, można buforować odpowiedzi usługi i unieważnić buforowaną odpowiedź, gdy danych w SQL bazy danych zmian w tabeli. To zachowanie jest całkowicie skonfigurowany w pliku Web.config. Należy określić ciąg połączenia w <`connectionStrings`> element.  
   
 ```xml
 <connectionStrings>
@@ -71,7 +71,7 @@ public class Service
 </connectionStrings>
 ```  
   
- Następnie należy włączyć zależność buforu SQL w ramach <`caching`> w elemencie <`system.web`> element, jak pokazano w poniższym przykładzie konfiguracji.  
+ Następnie należy włączyć zależności pamięci podręcznej SQL w ramach <`caching`> elemencie <`system.web`> elementu, jak pokazano w poniższym przykładzie konfiguracji.  
   
 ```xml  
 <system.web>
@@ -87,7 +87,7 @@ public class Service
 </system.web>
 ```  
   
- W tym miejscu zależności bufora SQL jest włączona i godzina sondowania, 1000 milisekund jest ustawiona. Zawsze sondowania upłynie tabeli bazy danych jest sprawdzany pod kątem aktualizacji. Jeśli zostaną wykryte zmiany zawartość pamięci podręcznej są usuwane i przy następnej operacji usługi jest wywoływany nowej odpowiedzi są buforowane. W ramach <`sqlCacheDependency`> element Dodaj bazy danych i referencyjne parametry połączenia w <`databases`> element, jak pokazano w poniższym przykładzie.  
+ W tym miejscu zależności pamięci podręcznej SQL jest włączona i ustawiono czas sondowania 1000 milisekund. Każdorazowo podczas sondowania upływa tabeli bazy danych jest sprawdzane pod kątem aktualizacji. Jeśli wykryto zmiany zawartości pamięci podręcznej są usuwane, a przy następnej operacji usługi jest wywoływany nowej odpowiedzi są buforowane. W ramach <`sqlCacheDependency`> elementu Dodawanie baz danych i odwoływać się do parametrów połączenia w ramach <`databases`> elementu, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <system.web>
@@ -103,7 +103,7 @@ public class Service
 </system.web>  
 ```  
   
- Następnie należy skonfigurować ustawienia wyjściowej pamięci podręcznej w <`caching`> element, jak pokazano w poniższym przykładzie.  
+ Następnie należy skonfigurować ustawienia wyjściowej pamięci podręcznej w ramach <`caching`> elementu, jak pokazano w poniższym przykładzie.  
   
 ```xml
 <system.web>
@@ -119,21 +119,21 @@ public class Service
 </system.web>
 ```  
   
- W tym miejscu czas buforowania ma ustawioną wartość 60 sekund, `varyByParam` ma wartość none i `sqlDependency` ma ustawioną wartość listy rozdzielanych średnikami oddzielone dwukropkiem pary nazwa/tabeli bazy danych. Gdy dane w `MyTable` zostanie zmieniona buforowanej odpowiedzi dla operacji usługi zostanie usunięty i po wywołaniu operacji nową odpowiedź jest generowany (przez wywołanie operacji usługi), w pamięci podręcznej i zwracany do klienta.  
+ W tym miejscu czas trwania pamięci podręcznej jest ustawiona na 60 sekund, `varyByParam` jest ustawiona na wartość none i `sqlDependency` ustawiono rozdzielaną średnikami listę par nazwa/table bazy danych, rozdzielone średnikami. Gdy dane w `MyTable` zostanie zmieniony buforowane odpowiedzi dla operacji usługi zostanie usunięty, a podczas wywoływania operacji nowej odpowiedzi wygenerowanych (według wywoływanie operacji usługi), pamięci podręcznej i zwracany do klienta.  
   
 > [!IMPORTANT]
->  Dla platformy ASP.NET dostępu do bazy danych SQL, należy użyć [ASP.NET SQL Server Registration Tool](http://go.microsoft.com/fwlink/?LinkId=152536). Ponadto musisz zezwolić na odpowiedniego użytkownika konta dostępu do bazy danych i tabeli. Aby uzyskać więcej informacji, zobacz [podczas uzyskiwania dostępu do programu SQL Server z aplikacji sieci Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
+>  W technologii ASP.NET dostępu do bazy danych SQL, należy użyć [narzędzia rejestracji serwera SQL platformy ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152536). Ponadto muszą zezwalać na do odpowiedniego dostępu do bazy danych i tabeli. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do programu SQL Server z aplikacji sieci Web](https://go.microsoft.com/fwlink/?LinkId=178988).  
   
-## <a name="conditional-http-get-based-caching"></a>Warunkowe HTTP GET na podstawie buforowanie  
- W scenariuszach protokołu HTTP sieci Web warunkowego HTTP GET jest często używane przez usługi do zaimplementowania inteligentne buforowanie HTTP zgodnie z opisem w [specyfikacji HTTP](http://go.microsoft.com/fwlink/?LinkId=165800). W tym celu usługi należy ustawić wartość nagłówka ETag w odpowiedzi HTTP. On również sprawdzić nagłówka If-None-Match w żądaniu HTTP, czy dowolne ETag określony odpowiada bieżącej ETag.  
+## <a name="conditional-http-get-based-caching"></a>Warunkowe UZYSKAĆ oparty na protokole HTTP buforowania  
+ W scenariuszach protokołu HTTP sieci Web warunkowego HTTP GET jest często używana przez usługi do zaimplementowania buforowania inteligentnego HTTP, zgodnie z opisem w [specyfikację protokołu HTTP](https://go.microsoft.com/fwlink/?LinkId=165800). W tym celu usługa należy ustawić wartość nagłówka ETag w odpowiedzi HTTP. On także sprawdzić nagłówek If-None-Match w żądaniu HTTP, aby sprawdzić, czy dowolny element ETag określony odpowiada bieżący element ETag.  
   
- Dla żądania GET i HEAD <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> przyjmuje wartość ETag i porównuje ją z nagłówka If-None-Match żądania. Jeśli istnieje nagłówek i są zgodne, <xref:System.ServiceModel.Web.WebFaultException> protokołu HTTP jest generowany kod stanu 304 (nie jest modyfikowany) i dodaniu nagłówka ETag do odpowiedzi z pasującego tagu ETag.  
+ W przypadku żądań GET i HEAD <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> przyjmuje wartość elementu ETag i porównuje ją z nagłówka If-None-Match żądania. Nagłówek jest obecny, jeśli ma dopasowania <xref:System.ServiceModel.Web.WebFaultException> za pośrednictwem protokołu HTTP jest generowany kod stanu 304 (nie zmodyfikowano), a nagłówka ETag jest dodawany do odpowiedzi z pasującego tagu ETag.  
   
- Jednego przeciążenia <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> metoda pobiera daty ostatniej modyfikacji i porównuje ją z nagłówka If-Modified-Since żądania. Jeśli istnieje nagłówek i zasób nie został zmodyfikowany od czasu, <xref:System.ServiceModel.Web.WebFaultException> protokołu HTTP jest generowany kod stanu 304 (nie jest modyfikowany).  
+ Jednego przeciążenia <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> metoda przyjmuje daty ostatniej modyfikacji i porównuje ją z nagłówka If-Modified-Since żądania. Jeśli nagłówek a zasób nie został zmodyfikowany od czasu, <xref:System.ServiceModel.Web.WebFaultException> za pośrednictwem protokołu HTTP jest generowany kod stanu 304 (nie zmodyfikowano).  
   
- Dla żądania PUT, POST i DELETE <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalUpdate%2A> przejście do bieżącej wartości ETag dla zasobu. Jeśli do bieżącej wartości ETag ma wartość null, metoda sprawdza, czy nagłówek If-None-Match ma wartość "*".  Jeśli do bieżącej wartości ETag nie jest wartością domyślną, metoda sprawdza do bieżącej wartości ETag dla nagłówka If - Match żądania. W obu przypadkach metoda zgłasza <xref:System.ServiceModel.Web.WebFaultException> ze stanem HTTP code oczekiwano nagłówka nie znajduje się w żądaniu lub jego wartość nie spełnia warunkowego sprawdzenia i ustawia nagłówek ETag odpowiedzi do bieżącego tagu ETag 412 (warunek wstępny nie powiodła się.) wartość.  
+ Dla żądania PUT, POST i DELETE <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalUpdate%2A> przyjmuje bieżącej wartości zasobu element ETag. Jeśli bieżąca wartość elementu ETag ma wartość null, metoda sprawdza, czy nagłówek If-None-Match ma wartość "*".  Jeśli bieżąca wartość elementu ETag nie jest wartość domyślna, metoda sprawdza bieżącą wartość elementu ETag dla nagłówka If - Match żądania. W obu przypadkach, metoda zgłasza <xref:System.ServiceModel.Web.WebFaultException> ze stanem HTTP kodu oczekiwano nagłówka nie znajduje się w żądaniu lub jego wartość nie spełnia warunkowego wyboru i ustawia dla nagłówka ETag odpowiedzi na bieżący element ETag 412 (niepowodzenie warunku wstępnego) wartość.  
   
- Zarówno `CheckConditional` metod i <xref:System.ServiceModel.Web.OutgoingWebResponseContext.SetETag%2A> — metoda gwarantuje, że wartość ETag w nagłówku odpowiedzi jest prawidłowy element ETag według specyfikacji HTTP. Obejmuje to otaczającego wartość ETag w podwójne cudzysłowy, jeśli nie istnieją już i poprawnie anulowanie znaków podwójnego cudzysłowu wewnętrznego. Słaby element ETag porównania nie jest obsługiwane.  
+ Zarówno `CheckConditional` metod i <xref:System.ServiceModel.Web.OutgoingWebResponseContext.SetETag%2A> metoda gwarantuje, że wartość elementu ETag w nagłówku odpowiedzi jest prawidłowy element ETag zgodnie ze specyfikacją protokołu HTTP. Obejmuje to otaczające wartość elementu ETag w cudzysłów, jeśli nie są jeszcze obecne i prawidłowo anulowania zapewnianego element znaków wewnętrznego podwójnego cudzysłowu. Słabe porównania element ETag nie jest obsługiwane.  
   
  Poniższy przykład przedstawia sposób użycia tych metod.  
   
@@ -163,4 +163,4 @@ public Customer GetCustomer(string id)
 ```  
   
 ## <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
- Żądania, które wymagają autoryzacji nie powinna mieć odpowiedzi pamięci podręcznej, autoryzacji nie jest wykonywana po udostępnieniu odpowiedzi z pamięci podręcznej.  Buforowanie odpowiedzi na takie spowodowałoby to powstanie luki w zabezpieczeniach poważne.  Zazwyczaj żądania, które wymagają autoryzacji zawierają dane specyficzne dla użytkownika i dlatego buforowanie po stronie serwera nie jest jeszcze korzystne.  W takich sytuacjach buforowanie po stronie klienta lub po prostu nie buforowanie na wszystkich będą bardziej odpowiednie.
+ Żądania, które wymagają autoryzacji nie powinny mieć ich odpowiedzi w pamięci podręcznej, ponieważ autoryzacji nie jest przeprowadzane, gdy odpowiedź jest obsługiwany z pamięci podręcznej.  Buforowanie odpowiedzi na takie spowodowałoby to powstanie luk w zabezpieczeniach z powodu poważnego naruszenia zabezpieczeń.  Zazwyczaj żądania, które wymagają autoryzacji dostarczać dane specyficzne dla użytkownika, i w związku z tym buforowanie po stronie serwera nie jest nawet korzystne.  W takich sytuacjach buforowanie po stronie klienta lub po prostu nie buforowania w ogóle będzie bardziej odpowiednie.

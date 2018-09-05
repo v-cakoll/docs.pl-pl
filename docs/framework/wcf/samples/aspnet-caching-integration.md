@@ -2,64 +2,64 @@
 title: Integracja buforowania platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 744ecbff8b51565906ff4c619ba8c8aecff123c7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805411"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555763"
 ---
 # <a name="aspnet-caching-integration"></a>Integracja buforowania platformy ASP.NET
-W tym przykładzie pokazano, jak korzystać z pamięci podręcznej danych wyjściowych programu ASP.NET z modelem programowania protokołu HTTP sieci WEB WCF. Zobacz [podstawowej usługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md) próbkowania dla siebie wersji tego scenariusza, który opisano szczegółowo implementacji usługi. Ten temat koncentruje się na funkcji Integracja z pamięci podręcznej danych wyjściowych programu ASP.NET.  
+Niniejszy przykład pokazuje sposób wykorzystywania wyjściowej pamięci podręcznej platformy ASP.NET przy użyciu modelu programowania protokołu HTTP sieci WEB WCF. Zobacz [podstawowej usługi do zasobu](../../../../docs/framework/wcf/samples/basic-resource-service.md) próbki Self-Hosted wersję tego scenariusza, który w tym artykule omówiono szczegółowo implementacji usługi. Ten temat koncentruje się na funkcji Integracja z pamięci podręcznej danych wyjściowych platformy ASP.NET.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- Integracja z pamięci podręcznej danych wyjściowych programu ASP.NET  
+ Integracja z pamięci podręcznej danych wyjściowych platformy ASP.NET  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`  
   
-## <a name="discussion"></a>Omówienie  
- W przykładzie użyto <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> mogą korzystać z ASP.NET dane wyjściowe pamięci podręcznej z usługą Windows Communication Foundation (WCF). <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Jest stosowany do operacji usługi, a także nazwę profilu pamięci podręcznej w pliku konfiguracji, który ma zostać zastosowany do odpowiedzi od danej operacji.  
+## <a name="discussion"></a>Dyskusja  
+ W przykładzie użyto <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> korzystanie z platformy ASP.NET buforowania danych wyjściowych za pomocą usługi Windows Communication Foundation (WCF). <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Jest stosowany do operacji usługi i zawiera nazwę profilu pamięci podręcznej w pliku konfiguracji, który ma zostać zastosowany do odpowiedzi od danej operacji.  
   
- W pliku Service.cs przykładowy projekt usługi zarówno `GetCustomer` i `GetCustomers` operacji są oznaczone ikoną z <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, która zawiera nazwę profilu pamięci podręcznej "CacheFor60Seconds". W pliku Web.config projektu usługi, profil pamięci podręcznej "CacheFor60Seconds" znajduje się w obszarze <`caching`> elementu <`system.web`>. Dla tego profilu pamięci podręcznej, wartość `duration` atrybutu jest "60", dlatego skojarzone z tym profilem odpowiedzi są buforowane w pamięci podręcznej danych wyjściowych programu ASP.NET przez 60 sekund. Ponadto dla tego profilu pamięci podręcznej `varmByParam` atrybut jest ustawiony na "format" wniosek o różnych wartościach dla `format` zapytania parametr ciągu ma odpowiedzi w pamięci podręcznej oddzielnie. Ponadto pamięć podręczna profilu `varyByHeader` atrybut jest ustawiony na "Akceptuj", więc żądania za pomocą innej wartości nagłówka Accept oddzielnie buforowane odpowiedzi.  
+ W pliku Service.cs przykładowego projektu usługi zarówno `GetCustomer` i `GetCustomers` operacje są oznaczone <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, który zapewnia nazwa profilu pamięci podręcznej "CacheFor60Seconds". W pliku Web.config projektu usługi profilu pamięci podręcznej "CacheFor60Seconds" znajduje się w obszarze <`caching`> elementu <`system.web`>. Dla tego profilu pamięci podręcznej wartości `duration` atrybut jest "60", więc odpowiedzi skojarzony z tym profilem są buforowane w pamięci podręcznej danych wyjściowych platformy ASP.NET w 60 sekund. Ponadto w przypadku tego profilu pamięci podręcznej `varmByParam` ma ustawioną wartość atrybutu "format" tego zażąda z różnymi wartościami dla `format` zapytania parametr ciągu ma ich odpowiedzi na buforowane osobno. Na koniec pamięci podręcznej profilu `varyByHeader` ma ustawioną wartość atrybutu "Akceptuj", więc ich odpowiedzi na buforowane osobno żądania z różnych wartości nagłówka Accept.  
   
- Program.CS w projekcie klienta pokazano, jak takiego klienta mogą być tworzone za pomocą <xref:System.Net.HttpWebRequest>. Należy pamiętać, że jest tylko jeden sposób uzyskiwania dostępu do usługi WCF. Istnieje również możliwość uzyskania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak fabryki kanałów WCF i <xref:System.Net.WebClient>. Inne przykłady w zestawie SDK (takich jak [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) próbki i [automatycznego wyboru formatu](../../../../docs/framework/wcf/samples/automatic-format-selection.md) przykładowe) ilustrują sposób używania tych klas do komunikowania się z usługą WCF.  
+ Plik program.CS w projekcie klienta pokazuje, jak takiego klienta mogą być tworzone za pomocą <xref:System.Net.HttpWebRequest>. Należy pamiętać, że jest to tylko jeden sposób uzyskiwania dostępu do usługi WCF. Istnieje również możliwość uzyskania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak WCF fabryki kanałów i <xref:System.Net.WebClient>. Inne przykłady w zestawie SDK (takie jak [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) próbki i [automatyczne wybieranie formatu](../../../../docs/framework/wcf/samples/automatic-format-selection.md) przykładowy) ilustrują sposób korzystania z tych klas do komunikowania się z usługą WCF.  
   
-## <a name="to-run-the-sample"></a>Aby uruchomić przykładowy  
+## <a name="to-run-the-sample"></a>Aby uruchomić przykład  
  Przykład obejmuje trzy projekty:  
   
--   **Usługa**: projekt aplikacji sieci Web A, która obejmuje usługi HTTP usług WCF hostowanych w programie ASP.NET.  
+-   **Usługa**: projekt aplikacji sieci Web, która obejmuje usługi HTTP programu WCF hostowanych w programie ASP.NET.  
   
--   **Klient**: projekt aplikacji konsoli wykonywania wywołań do usługi.  
+-   **Klient**: projekt aplikacji konsoli, która sprawia, że wywołań do usługi.  
   
--   **Typowe**: biblioteki udostępnionej, którą zawiera typ klienta używany przez klienta i usługi.  
+-   **Typowe**: biblioteki udostępnionej, który zawiera typ klienta używany przez klienta i usługi.  
   
- Podczas działania aplikacji konsoli klienta, klient wysyła żądania do usługi i zapisuje istotnych informacji z odpowiedzi w oknie konsoli.  
+ Po uruchomieniu aplikacji konsolowej klienta klient wysyła żądania do usługi i zapisuje odpowiednie informacje z odpowiedzi w oknie konsoli.  
   
-#### <a name="to-run-the-sample"></a>Aby uruchomić przykładowy  
+#### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
-1.  Otwórz rozwiązanie przykładowej integracja buforowania platformy ASP.NET.  
+1.  Otwórz rozwiązanie dla przykładu integracja buforowania platformy ASP.NET.  
   
-2.  Naciśnij klawisze CTRL + SHIFT + B w celu skompilowania rozwiązania.  
+2.  Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
-3.  Jeśli **Eksploratora rozwiązań** okno nie jest jeszcze otwarty, naciśnij kombinację klawiszy CTRL + P + S.  
+3.  Jeśli **Eksploratora rozwiązań** okno nie jest jeszcze otwarty, naciśnij klawisze CTRL + W + S.  
   
-4.  Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **usługi** projekt i wybierz **uruchomić nowe wystąpienie**. Spowoduje to uruchomienie ASP.NET development server, który obsługuje usługę.  
+4.  Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **usługi** projektu, a następnie wybierz **Uruchom nowe wystąpienie**. Spowoduje to uruchomienie oprogramowania ASP.NET development server, który hostuje usługę.  
   
-5.  Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **klienta** projekt i wybierz **uruchomić nowe wystąpienie**.  
+5.  Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **klienta** projektu, a następnie wybierz **Uruchom nowe wystąpienie**.  
   
-6.  Okno konsoli klienta pojawia się i zawiera identyfikator URI uruchomionej usługi i identyfikator URI elementu HTML pomocy strony uruchomionej usługi. W dowolnym momencie można wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce.  
+6.  Okna konsoli klienta pojawia się i zawiera identyfikator URI uruchomioną usługę i identyfikator URI elementu HTML pomocy strony dla uruchomionej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce.  
   
-7.  Jak działa próbki, klient zapisuje stan bieżącego działania.  
+7.  Po uruchomieniu przykładu klienta zapisuje stan bieżącego działania.  
   
-8.  Naciśnij dowolny klawisz, aby zakończyć działanie aplikacji konsoli klienta.  
+8.  Naciśnij dowolny klawisz, aby zakończyć aplikację konsoli klienta.  
   
-9. Naciśnij klawisz SHIFT + F5, aby zatrzymać debugowanie usługi.  
+9. Naciśnij klawisze SHIFT + F5, aby zatrzymać debugowanie usługi.  
   
-10. W obszarze powiadomień systemu Windows kliknij prawym przyciskiem myszy ikonę ASP.NET development serwera i wybierz **zatrzymać**.
+10. W obszarze powiadomień Windows kliknij prawym przyciskiem myszy ikonę serwera rozwoju platformy ASP.NET, a następnie wybierz **zatrzymać**.

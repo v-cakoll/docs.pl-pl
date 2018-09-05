@@ -1,25 +1,25 @@
 ---
-title: 'Porady: znajdowanie węzłami tego samego poziomu (XPath-LINQ do XML) (C#)'
+title: 'Porady: znajdowanie węzłów elementów równorzędnych (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: a448be9d86f9f2e2f85d45f9bc1f019b3f72305c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e10b23c311e4e7debf228c01c898f3582e2ac8d4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324164"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557252"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Porady: znajdowanie węzłami tego samego poziomu (XPath-LINQ do XML) (C#)
-Można znaleźć wszystkich elementów równorzędnych węzła, które ma określoną nazwę. Wynikowa kolekcji może zawierać węzeł kontekstu, jeśli węzeł kontekstu ma również określonej nazwy.  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Porady: znajdowanie węzłów elementów równorzędnych (XPath-LINQ to XML) (C#)
+Możesz chcieć znaleźć wszystkie elementy równorzędne węzła, które mają określoną nazwę. Wynikowy kolekcji mogą obejmować węzeł kontekstu, jeśli węzeł kontekstu ma również określonej nazwy.  
   
  Wyrażenie XPath jest:  
   
  `../Book`  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie najpierw znajduje `Book` elementu i wszystkich elementów równorzędnych o nazwie uzna `Book`. Wynikowa kolekcja zawiera węzeł kontekstu.  
+ W tym przykładzie najpierw wyszukuje `Book` elementu, a następnie znajduje wszystkich elementów równorzędnych o nazwie `Book`. Wynikowy kolekcja zawiera węzła kontekstu.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: książek (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: książki (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -74,5 +74,6 @@ Results are identical
 </Book>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do XML dla użytkowników XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Zobacz też
+
+- [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

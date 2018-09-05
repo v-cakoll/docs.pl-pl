@@ -12,11 +12,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 9883f9166007405c3f47a9a1d66a3f4c546197d0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468264"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536365"
 ---
 # <a name="varieties-of-custom-controls"></a>Różne typy formantów niestandardowych
 Za pomocą programu .NET Framework można opracowanie i wdrożenie nowych kontrolek. Możesz rozszerzyć funkcjonalność formantu użytkownika z dobrze znanych również jako istniejących kontrolek poprzez dziedziczenie. Można także napisać niestandardowe formanty, które narysowania swoje własne.  

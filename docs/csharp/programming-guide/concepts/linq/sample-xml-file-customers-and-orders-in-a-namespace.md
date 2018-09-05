@@ -2,12 +2,12 @@
 title: 'Przykładowy plik XML: Klienci i zamówienia w Namespace2'
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
-ms.openlocfilehash: 53ad3633361772dc4a9be337df7ae2e1b8a60a5a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1af227118f5c3c03d1559797d5977f5c71469678
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929719"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43657964"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Przykładowy plik XML: Klienci i zamówienia w Namespace
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera klienci i zamówienia. Kod XML jest w przestrzeni nazw.  
@@ -430,5 +430,6 @@ Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlin
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

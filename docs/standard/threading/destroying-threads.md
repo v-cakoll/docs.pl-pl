@@ -12,11 +12,11 @@ ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cd6e85dca7c4c32361b964573f318b165e8d683
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385022"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562940"
 ---
 # <a name="destroying-threads"></a>Niszczenie wątków
 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> Metoda jest używana do zatrzymywania wątków zarządzanych trwałe. Gdy wywołujesz <xref:System.Threading.Thread.Abort%2A>, środowisko uruchomieniowe języka wspólnego generuje <xref:System.Threading.ThreadAbortException> w wątek docelowy może przechwycić wątek docelowy. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  

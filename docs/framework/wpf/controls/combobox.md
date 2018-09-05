@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
 ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466359"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554906"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox> Formant wyświetli użytkowników z listy opcji. Lista jest wyświetlane i ukryte jak rozwija i zwija kontrolki. W stanie domyślnym listy jest zwinięte, wyświetlanie tylko jedną opcję. Użytkownik klika przycisk, aby wyświetlić pełną listę opcji.  

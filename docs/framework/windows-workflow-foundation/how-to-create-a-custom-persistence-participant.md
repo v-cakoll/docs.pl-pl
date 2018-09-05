@@ -3,11 +3,11 @@ title: 'Porady: Tworzenie niestandardowego uczestnika stanów trwałych'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
 ms.openlocfilehash: 8daf4924db48c79486e85660357e3b28a2583836
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422080"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558529"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Porady: Tworzenie niestandardowego uczestnika stanów trwałych
 Poniższa procedura zawiera kroki, aby utworzyć uczestnika stanów trwałych. Zobacz [uczestniczących w trwałości](https://go.microsoft.com/fwlink/?LinkID=177735) próbki i [rozszerzalności Store](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) tematu w przykładowej implementacji uczestnicy stanów trwałych.  

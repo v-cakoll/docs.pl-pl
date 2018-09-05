@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
 ms.openlocfilehash: 07a4de944e36b0be1a6196d08df33c4f3ab24bcc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387041"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560135"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Porady: opracowywanie prostego formantu formularzy systemu Windows
 W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu Windows Forms. Prosty formant opracowanych w tym przewodniku umożliwia wyrównanie jego <xref:System.Windows.Forms.Control.Text%2A> właściwości, które mają być zmienione. Nie podnieść lub obsługi zdarzeń.  

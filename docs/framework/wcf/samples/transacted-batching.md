@@ -3,11 +3,11 @@ title: Obsługa wsadowa w ramach transakcji
 ms.date: 03/30/2017
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
 ms.openlocfilehash: abada9aaf5fac8f05599467f385e708e1898832f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416651"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558511"
 ---
 # <a name="transacted-batching"></a>Obsługa wsadowa w ramach transakcji
 Niniejszy przykład pokazuje jak dzielić na partie transakcyjne operacje odczytu za pomocą usługi kolejkowania komunikatów (MSMQ). Transakcyjne przetwarzania wsadowego jest funkcja optymalizacji wydajności dla odczytów transakcyjne w komunikacie w kolejce.  

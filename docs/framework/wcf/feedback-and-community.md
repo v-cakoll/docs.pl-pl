@@ -5,14 +5,14 @@ helpviewer_keywords:
 - feedback [WCF]
 - customer feedback [WCF]
 ms.assetid: ba0fd32b-cbcb-4f5b-b913-d98514ab5650
-ms.openlocfilehash: 0f21a4abc7134fbfd5369ae2b3f7f5cf56915c01
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5067495aa24d5ae7e60633ed6a0ce5c0af081367
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810164"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538626"
 ---
 # <a name="feedback-and-community"></a>Opinie i społeczność
-Dziękujemy za Twoje komentarze i problemy dotyczące systemu Windows Communication Foundation (WCF) lub [!INCLUDE[infocard](../../../includes/infocard-md.md)] dokumentacji. U dołu każdej strony w zestawie SDK to zdanie "Wyślij komentarze dotyczące tego tematu do firmy Microsoft." Kliknij łącze "Komentarze", aby wysłać widoki lub sugestie dotyczące konkretnego zagadnienia.  
+Jesteśmy wdzięczni za swoje komentarze i uwagi dotyczące Windows Communication Foundation (WCF) lub [!INCLUDE[infocard](../../../includes/infocard-md.md)] dokumentacji. U dołu każdej strony w zestawie SDK jest zdania "Wyślij komentarze dotyczące tego tematu do firmy Microsoft." Kliknij link "Komentarze", aby wysłać widoków lub sugestie dotyczące określonego tematu.  
   
- Jeśli chce się dowiedzieć, aby uzyskać więcej informacji, lub chcesz udostępnić techniki zainteresowanych WCF, spróbuj [forum MSDN Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=186463).
+ Jeśli szukasz informacji lub chcesz udostępniać innym użytkownikom, którzy są zainteresowani WCF techniki, spróbuj [forum MSDN Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=186463).

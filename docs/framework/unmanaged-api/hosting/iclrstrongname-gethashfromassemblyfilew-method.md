@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36e4f07f04968579be2e42efad666b0453cc4796
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7686a84759f8ac40a123d2c9a7b8f1b9b8096cb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434794"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672603"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW — Metoda
-Generuje skrót za pośrednictwem zawartość pliku określona przez ciąg Unicode.  
+Generuje skrót nad zawartość pliku określonego przez ciąg Unicode.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,29 +41,29 @@ HRESULT GetHashFromAssemblyFileW (
   
 #### <a name="parameters"></a>Parametry  
  `wszFilePath`  
- [in] Ścieżka do pliku, aby być mieszany. Ten parametr musi być ciągiem Unicode.  
+ [in] Ścieżka do pliku ma zostać obliczona wartość skrótu. Ten parametr musi być ciąg Unicode.  
   
  `piHashAlg`  
- [w, out] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślny algorytm skrótu.  
+ [out w] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślnego algorytmu wyznaczania wartości skrótu.  
   
  `pbHash`  
- [out] Bufor zwrócony wyznaczania wartości skrótu.  
+ [out] Bufor zwrócone wyznaczania wartości skrótu.  
   
  `cchHash`  
- [in] Maksymalny rozmiar żądanej z `pbHash`.  
+ [in] Żądany maksymalny rozmiar `pbHash`.  
   
  `pchHash`  
- [out] Zwrócony rozmiar w bajtach z `pbHash`.  
+ [out] Zwrócone rozmiar w bajtach, z `pbHash`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje niepowodzenie (zobacz [wspólne wartości HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) lista).  
+ `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

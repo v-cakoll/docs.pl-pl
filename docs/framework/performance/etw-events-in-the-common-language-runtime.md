@@ -8,32 +8,32 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7855007c7566d3be0012bbff2cb124ee2681cb6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59416ea2d9a2d7b001421271b9907bb3e84c086
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398056"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536956"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Zdarzenia ETW w środowisku CLR
-Środowisko uruchomieniowe języka wspólnego (CLR) zawiera przydatne zdarzenia śledzenia dla systemu Windows (ETW) informacje diagnostyczne do szerokiej gamy debugowanie i profilowania zdarzenia. Zdarzenia CLR ETW wykorzystać systemu śledzenia ETW systemu Windows można rozszerzyć istniejące profilowania i debugowanie udostępniane przez środowisko uruchomieniowe języka wspólnego pomocy technicznej.  
+Środowisko uruchomieniowe języka wspólnego (CLR) zapewnia śledzenie zdarzeń użyteczne informacje diagnostyczne Windows (ETW) przy użyciu szerokiej gamy debugowania i profilowania zdarzenia. Zdarzenia CLR ETW korzystać z systemu Windows funkcji ETW śledzenia, rozszerzyć istniejące profilowanie i debugowanie pomoc techniczna jest świadczona przez środowisko uruchomieniowe języka wspólnego.  
   
- Więcej informacji na temat funkcji ETW jest dostępna w artykule [poprawy debugowania i dostrajania wydajności za pomocą funkcji ETW](http://go.microsoft.com/fwlink/?LinkID=161142) w witrynie MSDN. Informacje o program Xperf można znaleźć we wpisie [Toolkit wydajności systemu Windows — program Xperf](http://go.microsoft.com/fwlink/?LinkID=161144) w blogu NTDebugging.  
+ Więcej informacji na temat funkcji ETW jest dostępna w artykule [poprawić debugowania i dostrajania wydajności za pomocą funkcji ETW](https://go.microsoft.com/fwlink/?LinkID=161142) w witrynie MSDN. Informacji dotyczących narzędzia Xperf można znaleźć we wpisie [narzędzi wydajności systemu Windows — narzędzia Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) w blogu NTDebugging.  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] Lub nowszy jest wymagany na potrzeby wszystkie zdarzenia opisane w przypadku tematów. System operacyjny Windows Vista jest minimalny obsługiwany klient i systemu Windows Server 2008 jest minimalna obsługiwana serwera.  
+ [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] Lub nowszy jest wymagany na potrzeby wszystkich zdarzeń w zdarzeniu opisane tematów. System operacyjny Windows Vista jest minimalny obsługiwany klient, a system Windows Server 2008 jest minimalny obsługiwany serwer.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Kontrolowanie logowania w programie .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
- W tym artykule opisano narzędzia i polecenia służące do przechwytywania i wyświetlanie zdarzenia ETW.  
+ W tym artykule opisano narzędzia i polecenia do przechwytywania i wyświetlania zdarzeń ETW.  
   
  [Dostawcy CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)  
- Udostępnia informacje na temat środowiska uruchomieniowego i stert dostawców i używania ich do zbierania danych funkcji ETW.  
+ Zawiera informacje na temat środowiska uruchomieniowego i podsumowania dostawców i jak ich używać do zbierania danych zdarzeń systemu Windows.  
   
  [Słowa kluczowe i poziomy ETW CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
- W tym artykule opisano słowa kluczowe dla środowiska uruchomieniowego i stert dostawców, które umożliwiają filtrowanie zdarzenia według kategorii.  
+ W tym artykule opisano kluczowe dla środowiska uruchomieniowego i podsumowania dostawców, które umożliwiają filtrowanie zdarzeń według kategorii.  
   
  [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)  
- Zawiera szczegółowe informacje dotyczące CLR ETW zdarzenia, słowa kluczowe, poziomy i dane zdarzenia.  
+ Zawiera szczegółowe informacje na temat CLR ETW, zdarzenia, ich słów kluczowych, poziomy i dane zdarzenia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zdarzenia ETW w programie .NET Framework](../../../docs/framework/performance/etw-events.md)

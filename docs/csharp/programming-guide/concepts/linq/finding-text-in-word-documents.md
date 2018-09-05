@@ -2,22 +2,22 @@
 title: Wyszukiwanie tekstu w dokumentach programu Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: bd9f128fd50587b88fd899d0180e3d2ca8a8df6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333931"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540195"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Wyszukiwanie tekstu w dokumentach programu Word (C#)
-W tym temacie rozszerza poprzednich zapytań do zrobienia czegoś przydatne: Znajdź wszystkie wystąpienia ciągu w dokumencie.  
+Ten temat rozszerza poprzednich zapytań, aby zrobić coś, co jest użyteczne: Znajdź wszystkie wystąpienia ciągu w dokumencie.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przetwarza schemat WordprocessingML dokumentu, aby znaleźć wszystkie wystąpienia określonych fragment tekstu w dokumencie. Aby to zrobić, używamy kwerendę, która wyszukuje ciąg "Hello". W tym przykładzie kompilacje w poprzednich przykładach, w tym samouczku. Nowe zapytanie jest podana w komentarzach w poniższym kodzie.  
+ W tym przykładzie przetwarza dokument WordprocessingML, aby znaleźć wszystkie wystąpienia określonego fragmentu tekstu w dokumencie. Aby to zrobić, używamy kwerendę, która wyszukuje ciąg "Hello". W tym przykładzie opiera się na poprzednich przykładach w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach, w poniższym kodzie.  
   
- Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [tworzenie źródło dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego, w tym przykładzie, zobacz [tworzenie źródłowego dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- W tym przykładzie użyto znaleziony w zestawie WindowsBase klasy. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym przykładzie użyto klasy znalezione w zestawie WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -172,7 +172,7 @@ StyleName:Code >        Console.WriteLine("Hello World");<
 StyleName:Code >Hello World<  
 ```  
   
- Oczywiście można zmodyfikuj wyszukiwanie, tak, aby wyszukiwania wierszy z określonego stylu. Następujące zapytanie wyszukuje wszystkie puste wiersze, które mają stylu kodu:  
+ Oczywiście można zmodyfikować wyszukiwania, tak, aby wyszukiwania wierszy z konkretnego stylu. Następujące zapytanie znajdzie wszystkie puste wiersze, które mają styl kodu:  
   
 ```csharp  
 public static class LocalExtensions  
@@ -318,16 +318,17 @@ class Program
 StyleName:Code ><  
 ```  
   
- Oczywiście w tym przykładzie można wzbogacić na kilka sposobów. Na przykład firma Microsoft może użyć wyrażeń regularnych do wyszukiwania tekstu, firma Microsoft może wykonać iterację wszystkie pliki programu Word w określonym katalogu i tak dalej.  
+ Oczywiście w tym przykładzie można wzbogacić wiele sposobów. Na przykład moglibyśmy użyć wyrażeń regularnych do wyszukiwania tekstu, firma Microsoft może wykonać iterację pliki programu Word w określonym katalogu i tak dalej.  
   
- Należy pamiętać, że w tym przykładzie około wykonuje również tak, jakby zostały zapisane jako pojedynczego zapytania. Ponieważ każde zapytanie jest zaimplementowana w sposób opóźnieniem, odroczone, każdego zapytania nie przekazuje wyniki, dopóki zapytanie jest iterowane. Aby uzyskać więcej informacji na temat wykonywania i obliczanie leniwe, zobacz [wykonanie odroczone i obliczanie leniwe w składniku LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Należy pamiętać, że w tym przykładzie wykonuje około również tak, jakby zostały napisane w jednym zapytaniu. Ponieważ każda kwerenda jest implementowany w sposób z opóźnieniem, odroczone, każde zapytanie nie daje równoważne wyniki do czasu postanowiliśmy jest zapytanie. Aby uzyskać więcej informacji na temat wykonywania i obliczanie z opóźnieniem, zobacz [wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 ## <a name="next-steps"></a>Następne kroki  
- Następna sekcja zawiera więcej informacji na temat schemat WordprocessingML dokumentów:  
+ Następna sekcja zawiera więcej informacji na temat dokumentów WordprocessingML:  
   
--   [Szczegóły pakietu Office otwieranie dokumentów schemat WordprocessingML XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+-   [Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Samouczek: Manipulowanie zawartości w dokumencie schemat WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Refaktoryzacja przy użyciu czystej funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
- [Wykonanie odroczone i obliczanie leniwe w składniku LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [Refaktoryzacja przy użyciu czystej funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

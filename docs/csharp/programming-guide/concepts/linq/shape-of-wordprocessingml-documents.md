@@ -1,26 +1,26 @@
 ---
-title: Kształt schemat WordprocessingML dokumentów (C#)
+title: Kształt dokumentów WordprocessingML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 0d8a80a8e7d33facd452e3b7fb31793c1ed55c58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aeb047f23f60ba6951950a85a6e2ef57fcbd9dda
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331990"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557977"
 ---
-# <a name="shape-of-wordprocessingml-documents-c"></a>Kształt schemat WordprocessingML dokumentów (C#)
-W tym temacie przedstawiono kształtu XML dokumentu schemat WordprocessingML.  
+# <a name="shape-of-wordprocessingml-documents-c"></a>Kształt dokumentów WordprocessingML (C#)
+W tym temacie przedstawiono kształt XML w dokumencie WordprocessingML.  
   
 ## <a name="microsoft-office-formats"></a>Formaty pakietu Microsoft Office  
- Format natywny plik pakietu Microsoft Office system 2007 jest Office Open XML (często nazywany Open XML). Otwieranie pliku XML jest oparte na języku XML format standardu Ecma i jest obecnie przechodzi przez proces normy ISO IEC. Język znaczników dla edytora plików w Open XML nosi nazwę schemat WordprocessingML. Ten samouczek używa plików źródłowych schemat WordprocessingML jako dane wejściowe dla przykładów.  
+ Format pliku natywnych dla systemu 2007 Microsoft Office to Office Open XML (często nazywany Open XML). Otwieranie pliku XML jest oparty na składni XML format standard Ecma i jest obecnie wykonywana przez proces normy ISO IEC. Język znaczników dla plików przetwarzania tekstu w Open XML nosi nazwę WordprocessingML. Ten samouczek używa plików źródłowych WordprocessingML jako dane wejściowe dla przykładów.  
   
- Jeśli używasz programu Microsoft Office 2003 można zapisywać dokumenty w formacie Office Open XML po zainstalowaniu pakietu zgodności Microsoft Office dla programów Word, Excel i PowerPoint 2007.  
+ Jeśli używasz programu Microsoft Office 2003 można zapisywać dokumenty w format Office Open XML, jeśli zainstalowano pakiet zgodności programu Microsoft Office Word, Excel i PowerPoint 2007 File Formats.  
   
-## <a name="the-shape-of-wordprocessingml-documents"></a>Kształt schemat WordprocessingML dokumentów  
- Najpierw zrozumieć jest kształtu schemat WordprocessingML dokumentów. Schemat WordprocessingML dokument zawiera body element (o nazwie `w:body`) zawierający akapitów dokumentu. Każdego akapitu zawiera co najmniej jeden przebieg tekstu (o nazwie `w:r`). Każdego tekstu Uruchom zawiera jeden lub kilka fragmentów tekstu (o nazwie `w:t`).  
+## <a name="the-shape-of-wordprocessingml-documents"></a>Kształt dokumentów WordprocessingML  
+ Pierwszą rzeczą, aby dowiedzieć się, jest kształt dokumentów WordprocessingML. Dokument WordprocessingML zawiera body element (o nazwie `w:body`) zawierający akapitów dokumentu. Każdego akapitu zawiera co najmniej jeden przebieg tekstu (o nazwie `w:r`). Każdego tekstu, uruchom zawiera jeden lub kilka fragmentów tekstu (o nazwie `w:t`).  
   
- Poniżej znajduje się bardzo proste dokumentu schemat WordprocessingML:  
+ Poniżej przedstawiono bardzo prosty dokumentu WordprocessingML:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -51,11 +51,11 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
 </w:document>  
 ```  
   
- Ten dokument zawiera dwa akapitów. Zawierają jeden tekst Uruchom, a każdy tekst Uruchom zawiera element jeden tekst.  
+ Ten dokument zawiera dwa akapitach. Zawierają jeden tekst, uruchom, a każdy tekst Uruchom zawiera element jeden tekst.  
   
- Najprostszym sposobem wyświetlenia zawartości dokumentu schemat WordprocessingML w postaci XML jest aby go utworzyć za pomocą programu Microsoft Word, zapisz go, a następnie uruchom następujący program, który wyświetla kod XML do konsoli.  
+ Najprostszym sposobem wyświetlenia zawartości dokumentu WordprocessingML w postaci XML jest ją utworzyć za pomocą programu Microsoft Word, zapisz go, a następnie uruchom następujący program, który wyświetla kod XML do konsoli.  
   
- W tym przykładzie użyto znaleziony w zestawie WindowsBase klasy. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym przykładzie użyto klasy znalezione w zestawie WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
 ```csharp  
 const string documentRelationshipType =  
@@ -89,10 +89,11 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  [Wprowadzenie do formatów pakietu Office (2007) Open XML](https://msdn.microsoft.com/library/ms406049.aspx)  
- [Omówienie schemat WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx)  
- [Anatomia pliku schemat WordProcessingML](http://officeopenxml.com/anatomyofOOXML.php)  
- [Wprowadzenie do schemat WordprocessingML](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
- [Pakietu Office 2003: Strona pobierania schematy odwołanie XML](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
+ [Omówienie WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx)  
+ [Anatomia pliku WordProcessingML](http://officeopenxml.com/anatomyofOOXML.php)  
+ [Wprowadzenie do WordprocessingML](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
+ [Office 2003: XML odwołanie schematów strony plików do pobrania](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
   
-## <a name="see-also"></a>Zobacz też  
- [Samouczek: Manipulowanie zawartości w dokumencie schemat WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

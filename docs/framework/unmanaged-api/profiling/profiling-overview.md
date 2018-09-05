@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416963"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554031"
 ---
 # <a name="profiling-overview"></a>Omówienie profilowania
 <a name="top"></a> Program profilujący to narzędzie, które monitoruje wykonanie innej aplikacji. Typowe profiler środowiska uruchomieniowego (języka wspólnego CLR) języka jest biblioteki dołączanej dynamicznie (DLL), która składa się z funkcji, które odbierają wiadomości ze i wysyłanie komunikatów do środowiska CLR przy użyciu profilowania interfejsu API. Program profilujący DLL jest ładowany przez środowisko CLR w czasie wykonywania.  

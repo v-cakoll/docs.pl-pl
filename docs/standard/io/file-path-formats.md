@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933608"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535455"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżki plików w systemach Windows
 
@@ -117,7 +117,7 @@ Prawie wszystkie ścieżki przekazany do Windows API są znormalizowane. Podczas
 - Ocenia składniki względna katalogu (`.` dla bieżącego katalogu i `..` dla katalogu nadrzędnego).
 - Przycina niektórych znaków.
 
-Ta normalizacji lubi niejawnie, ale możesz zrobić to jawnie przez wywołanie metody <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> metody, która zawija wywołanie do [funkcja GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx). Można również wywołać Windows [funkcja GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) bezpośrednio przy użyciu metody P/Invoke. Można również wywołać 
+Ta normalizacji lubi niejawnie, ale możesz zrobić to jawnie przez wywołanie metody <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> metody, która zawija wywołanie do [funkcja GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). Można również wywołać Windows [funkcja GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) bezpośrednio przy użyciu metody P/Invoke. Można również wywołać 
 
 ### <a name="identifying-the-path"></a>Identyfikowanie ścieżki
 

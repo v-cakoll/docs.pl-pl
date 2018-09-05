@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 1658db83c809f875914036e9e10ac86cc6a821c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9c395ffe4f715b6d6ea034c848cbb277d60d560
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501973"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553645"
 ---
 # <a name="multiple-endpoints"></a>Wiele punktów końcowych
-Przykładowe wiele punktów końcowych przedstawiono, jak skonfigurować wiele punktów końcowych w usłudze oraz do komunikowania się z każdego punktu końcowego z klienta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Konfiguracja usługi została zmodyfikowana, aby zdefiniować dwa punkty końcowe, które obsługują `ICalculator` kontraktu, ale każdy na inny adres przy użyciu inne powiązanie. Konfiguracja klienta i kod został zmodyfikowany w celu komunikacji zarówno z punktów końcowych usługi.  
+Przykład wiele punktów końcowych pokazuje, jak skonfigurować wiele punktów końcowych usługi oraz jak komunikować się z każdego punktu końcowego z klienta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Konfiguracja usługi została zmodyfikowana, aby zdefiniować dwa punkty końcowe, które obsługują `ICalculator` kontraktu, ale każdy na inny adres za pomocą różnych powiązania. Konfiguracja klienta i kod zostały zmodyfikowane w celu komunikacji zarówno z punktów końcowych usługi.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Aby zdefiniować dwa punkty końcowe, każda taka sama obsługuje został zmodyfikowany plik Web.config usługi `ICalculator` kontraktu, ale pod różnymi adresami przy użyciu różnych powiązań. Pierwszy punkt końcowy nie jest zdefiniowany przy użyciu adresu podstawowego `basicHttpBinding` powiązanie, która nie ma włączoną obsługą zabezpieczeń. Drugi punkt końcowy jest zdefiniowana w {baseaddress} / secure przy użyciu `wsHttpBinding` powiązania, który jest domyślnie bezpieczne, za pomocą usługi WS-Security z uwierzytelnianiem systemu Windows.  
+ Plik Web.config usługi została zmodyfikowana, aby zdefiniować dwa punkty końcowe, każda obsługuje takie same `ICalculator` kontraktu, ale pod różnymi adresami przy użyciu różnych powiązania. Pierwszy punkt końcowy jest zdefiniowana na adres bazowy przy użyciu `basicHttpBinding` powiązanie, które nie ma włączoną obsługą zabezpieczeń. Drugi punkt końcowy jest zdefiniowany w {baseaddress} / bezpieczne korzystają `wsHttpBinding` powiązania, który jest domyślnie bezpieczny, za pomocą usługi WS-Security przy użyciu uwierzytelniania Windows.  
   
 ```xml  
 <service   
@@ -37,7 +37,7 @@ Przykładowe wiele punktów końcowych przedstawiono, jak skonfigurować wiele p
 </service>  
 ```  
   
- Oba punkty końcowe są również skonfigurowane na kliencie. Te punkty końcowe są podanej nazwy, co obiekt wywołujący może przekazać nazwa żądanego punktu końcowego do konstruktora klienta.  
+ Oba punkty końcowe są również skonfigurowane na komputerze klienckim. Te punkty końcowe są podanej nazwy, co obiekt wywołujący może przekazywać nazwę jednostki żądanego punktu końcowego do konstruktora obiektu klienta.  
   
 ```xml  
 <client>  
@@ -50,15 +50,15 @@ Przykładowe wiele punktów końcowych przedstawiono, jak skonfigurować wiele p
   <!-- Passing "secure" into the constructor of the CalculatorClient  
        class selects this endpoint.-->  
   <endpoint name="secure"  
-address="http://localhost/servicemodelsamples/service.svc/secure"   
+            address="http://localhost/servicemodelsamples/service.svc/secure"   
             binding="wsHttpBinding"   
             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 </client>  
 ```  
   
- Klient używa oba punkty końcowe, jak pokazano w poniższym kodzie.  
+ Klient używa zarówno punkty końcowe, jak pokazano w poniższym kodzie.  
   
-```  
+```csharp  
 static void Main()  
 {  
     // Create a client to the basic endpoint configuration.  
@@ -85,7 +85,7 @@ static void Main()
 }  
 ```  
   
- Po uruchomieniu klienta, interakcji z oba punkty końcowe są wyświetlane.  
+ Po uruchomieniu klienta, interakcji z obu punkty końcowe są wyświetlane.  
   
 ```  
 Communicate with basic endpoint.  
@@ -102,20 +102,20 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
   

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238419"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534797"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Architektura logiczna a architektura fizyczna
 
@@ -17,7 +17,7 @@ Jest to przydatne w tym momencie zatrzymać, a omówić rozróżnienia między A
 
 Aby rozpocząć, tworzenia mikrousług nie wymaga użycia każdej określonej technologii. Na przykład kontenery platformy Docker nie są wymagane, aby można było utworzyć opartych na mikrousługach architektury. Te mikrousług może także uruchomić jako zwykły procesy. Mikrousługi to architektura logiczna.
 
-Ponadto, nawet wtedy, gdy mikrousługi można fizycznie zaimplementować jako pojedynczą usługę, procesu lub kontenera (sake firmy prostotę, to podejście w pierwotnej wersji [ramach aplikacji eShopOnContainers](http://aka.ms/MicroservicesArchitecture)), to parzystość mikrousługi biznesowych i fizycznych usługi lub kontenera nie jest zawsze wymagany we wszystkich przypadkach podczas kompilowania dużych i złożonych aplikacji, składające się z wielu dziesiątek, jak i nawet setki usług.
+Ponadto, nawet wtedy, gdy mikrousługi można fizycznie zaimplementować jako pojedynczą usługę, procesu lub kontenera (sake firmy prostotę, to podejście w pierwotnej wersji [ramach aplikacji eShopOnContainers](https://aka.ms/MicroservicesArchitecture)), to parzystość mikrousługi biznesowych i fizycznych usługi lub kontenera nie jest zawsze wymagany we wszystkich przypadkach podczas kompilowania dużych i złożonych aplikacji, składające się z wielu dziesiątek, jak i nawet setki usług.
 
 To jest, gdy istnieje różnica między Architektura logiczna a architektura fizyczna aplikacji. Architektura logiczna a logiczne granice systemu nie są zawsze mapowane jeden do jednego z architekturą fizycznej lub wdrożenia. Może się zdarzyć, ale często nie.
 

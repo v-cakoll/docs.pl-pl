@@ -4,44 +4,45 @@ ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 57356fbf4bff218932d1f1b4c62532f10c175757
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f99b84d5b21261fa81c02d028d1f913be7290dbb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319936"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564372"
 ---
 # <a name="nested-types-c-programming-guide"></a>Zagnieżdżone typy (Przewodnik programowania w języku C#)
-Typ zdefiniowany w ramach [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) nosi nazwę typu zagnieżdżonego. Na przykład:  
+Typ zdefiniowany w [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) nosi nazwę typu zagnieżdżonego. Na przykład:  
   
 [!code-csharp[csProgGuideObjects#68](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_1.cs)]  
   
-Niezależnie od tego, czy zewnętrznego typu klasy lub struktury, domyślnie zagnieżdżone typy [prywatnego](../../../csharp/language-reference/keywords/private.md); są one dostępne tylko z ich typu zawierającego. W poprzednim przykładzie `Nested` klasy jest niedostępna dla typów zewnętrznych. 
+Niezależnie od tego, czy zewnętrzny typ jest klasą lub strukturą, zagnieżdżone typy domyślnie [prywatnej](../../../csharp/language-reference/keywords/private.md); są one dostępne tylko z ich typem zawierającym. W poprzednim przykładzie `Nested` klasa jest niedostępna dla typów zewnętrznych. 
 
-Można również określić [modyfikator dostępu](../../language-reference/keywords/access-modifiers.md) do definiowania ułatwień dostępu typu zagnieżdżonego w następujący sposób:
+Można również określić [modyfikator dostępu](../../language-reference/keywords/access-modifiers.md) do definiowania dostępności typu zagnieżdżonego w następujący sposób:
 
-- Zagnieżdżone typy **klasy** może być [publicznego](../../../csharp/language-reference/keywords/public.md), [chronione](../../../csharp/language-reference/keywords/protected.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), [chronionych wewnętrznych](../../../csharp/language-reference/keywords/protected-internal.md), [prywatnej](../../../csharp/language-reference/keywords/private.md) lub [prywatne chronione](../../../csharp/language-reference/keywords/private-protected.md). 
+- Zagnieżdżone typy **klasy** może być [publicznych](../../../csharp/language-reference/keywords/public.md), [chronione](../../../csharp/language-reference/keywords/protected.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), [chronionych wewnętrznych](../../../csharp/language-reference/keywords/protected-internal.md), [prywatnej](../../../csharp/language-reference/keywords/private.md) lub [prywatny chroniony](../../../csharp/language-reference/keywords/private-protected.md). 
 
-   Jednak definiowanie `protected`, `protected internal` lub `private protected` zagnieżdżona klasa wewnątrz [zapieczętowane klasy](../../language-reference/keywords/sealed.md) generuje ostrzeżenie kompilatora [CS0628](../../misc/cs0628.md), "w klasie zapieczętowanej zadeklarowano nowy chroniony element członkowski."
+   Jednak definiowanie `protected`, `protected internal` lub `private protected` klasy wewnątrz zagnieżdżonej [zapieczętowane klasy](../../language-reference/keywords/sealed.md) generuje ostrzeżenie kompilatora [CS0628](../../misc/cs0628.md), "w klasie zapieczętowanej została zadeklarowana nowa chroniona składowa."
   
-- Zagnieżdżone typy **struktury** może być [publicznego](../../../csharp/language-reference/keywords/public.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), lub [prywatnej](../../../csharp/language-reference/keywords/private.md).
+- Zagnieżdżone typy **struktury** może być [publicznych](../../../csharp/language-reference/keywords/public.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), lub [prywatnej](../../../csharp/language-reference/keywords/private.md).
   
-Poniższy przykład powoduje, że `Nested` publicznej klasy:
+Poniższy przykład wykonuje `Nested` publiczne klasy:
   
 [!code-csharp[csProgGuideObjects#69](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_2.cs)]  
   
- Typ zagnieżdżony lub wewnętrznej, ma dostęp do typu zawierającego lub zewnętrzne. Aby uzyskać dostęp do typu zawierającego, przekaż go jako argument do konstruktora typu zagnieżdżonego. Na przykład:  
+ Typ zagnieżdżony lub wewnętrzny, można uzyskać dostęp do typu zawierającego lub zewnętrznego. Aby uzyskać dostęp zgodny z typem, przekaż go jako argumentu do konstruktora typu zagnieżdżonego. Na przykład:  
   
  [!code-csharp[csProgGuideObjects#70](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_3.cs)]  
   
- Zagnieżdżony typ ma dostęp do wszystkich elementów członkowskich, które są dostępne dla jego typu zawierającego. Dostęp można uzyskać prywatnych i chronionych elementów członkowskich typu zawierającego tym dziedziczone chronionych elementów członkowskich.  
+ Zagnieżdżony typ ma dostęp do wszystkich elementów członkowskich, które są dostępne dla zawierającego ją typu. Będzie miał dostęp do prywatnych i chronionych członków typu zawierającego, włączając wszelkie elementy chronione dziedziczone.  
   
- W poprzedniej deklaracji, pełna nazwa klasy `Nested` jest `Container.Nested`. Jest to nazwa użyty do utworzenia nowego wystąpienia klasy zagnieżdżone w następujący sposób:  
+ W poprzedniej deklaracji pełną nazwą klasy `Nested` jest `Container.Nested`. Jest to nazwa, użyty do utworzenia nowego wystąpienia klasy zagnieżdżonej, w następujący sposób:  
   
  [!code-csharp[csProgGuideObjects#71](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_4.cs)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)

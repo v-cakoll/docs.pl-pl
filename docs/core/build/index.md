@@ -5,11 +5,11 @@ author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
 ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672165"
 ---
 # <a name="build-net-core-from-source"></a>Kompilacja platformy .NET Core ze źródła
 

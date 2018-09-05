@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 6b349876a60ad277ca933a4b4fbcbfffed2bd188
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7a09fa34b88c024bdaa0197bf82471a6bd6c2ae8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452680"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672548"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Porady: implementowanie i wywołanie niestandardowej metody rozszerzenia (Przewodnik programowania w języku C#)
 W tym temacie pokazano, jak można implementować własne metody rozszerzenia dla dowolnego typu platformy .NET. Kod klienta można użyć metody rozszerzenia przez dodanie odwołania do biblioteki DLL, która je zawiera i dodawanie [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywę, który określa obszar nazw, w którym zdefiniowano metody rozszerzenia.  
@@ -41,13 +41,14 @@ W tym temacie pokazano, jak można implementować własne metody rozszerzenia dl
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Metody rozszerzenia udostępniają nie luk w zabezpieczeniach określone. One nigdy nie można dokonać personifikacji istniejących metod w danym typie ponieważ wszystkich konfliktów nazw są rozpoznawane na rzecz wystąpienia lub statycznej metody zdefiniowane przez samego typu. Metody rozszerzenia nie może uzyskać dostęp do wszelkich danych prywatnych w rozszerzona klasa.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Metody rozszerzeń](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [LINQ (Language-Integrated Query)](../../../csharp/linq/linq-in-csharp.md)  
- [Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [protected](../../../csharp/language-reference/keywords/protected.md)  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [this](../../../csharp/language-reference/keywords/this.md)  
- [namespace](../../../csharp/language-reference/keywords/namespace.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Metody rozszerzeń](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+- [LINQ (Language-Integrated Query)](../../../csharp/linq/linq-in-csharp.md)  
+- [Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+- [protected](../../../csharp/language-reference/keywords/protected.md)  
+- [internal](../../../csharp/language-reference/keywords/internal.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [this](../../../csharp/language-reference/keywords/this.md)  
+- [namespace](../../../csharp/language-reference/keywords/namespace.md)

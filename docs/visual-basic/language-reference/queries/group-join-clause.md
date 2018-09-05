@@ -12,11 +12,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
 ms.openlocfilehash: f4c0d7fa9f14868404cde6201692e26b919198be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420640"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564051"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join — Klauzula (Visual Basic)
 Łączy dwie kolekcje w jedną hierarchiczną kolekcję. Operacja łączenia jest oparta na zgodności kluczy.  

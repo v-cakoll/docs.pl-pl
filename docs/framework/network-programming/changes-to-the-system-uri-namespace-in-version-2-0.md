@@ -5,17 +5,17 @@ ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392451"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565580"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Zmiany w przestrzeni nazw System.Uri w wersji 2.0
-Wprowadzono kilka zmian <xref:System.Uri?displayProperty=nameWithType> klasy. Te zmiany stałej niepoprawnego zachowania, rozszerzone użyteczność i zwiększonych zabezpieczeń.  
+Wprowadzono kilka zmian <xref:System.Uri?displayProperty=nameWithType> klasy. Te zmiany stałej nieprawidłowe zachowanie, rozszerzone użyteczność i lepsze zabezpieczenia.  
   
-## <a name="obsolete-and-deprecated-members"></a>Przestarzałe i przestarzałe elementy członkowskie  
+## <a name="obsolete-and-deprecated-members"></a>Elementy członkowskie przestarzała i przestarzałe  
  Konstruktory:  
   
 -   Wszystkie konstruktory, które mają `dontEscape` parametru.  
@@ -40,37 +40,37 @@ Wprowadzono kilka zmian <xref:System.Uri?displayProperty=nameWithType> klasy. Te
   
 ## <a name="changes"></a>Zmiany  
   
--   Dla schematy identyfikatorów URI, które nie mają części zapytania (pliku, ftp i inne) '?' znaków zawsze miały zmienione znaczenie i nie jest uważana za początku <xref:System.Uri.Query%2A> części.  
+-   Dla schematów identyfikator URI, które nie mają części kwerendy (plik, ftp i inne) "?" znak jest zawsze poprzedzone znakiem zmiany znaczenia i nie jest uważany za początku <xref:System.Uri.Query%2A> części.  
   
--   Niejawne pliku identyfikatory URI (w postaci "c:\directory\file@name.txt"), fragment znak (#) zawsze została zmieniona, chyba że wymagane jest pełne unescaping lub <xref:System.Uri.LocalPath%2A> jest `true`.  
+-   Niejawne pliku identyfikatorów URI (w postaci `c:\directory\file@name.txt`), znaku fragmentu ("#") jest zawsze poprzedzone znakiem zmiany znaczenia, chyba że wymagane są pełne unescaping lub <xref:System.Uri.LocalPath%2A> jest `true`.  
   
--   Została usunięta obsługa hostname UNC; przyjęto w specyfikacji IDN reprezentujący międzynarodowe nazwy hostów.  
+-   Obsługa hostname UNC została usunięta; przyjęto Specyfikacja IDN, reprezentujący międzynarodowych nazw hostów.  
   
--   <xref:System.Uri.LocalPath%2A> zawsze zwraca wartość typu ciąg całkowicie niezmienionym znaczeniu.  
+-   <xref:System.Uri.LocalPath%2A> zawsze zwraca ciąg całkowicie o niezmienionym znaczeniu.  
   
--   <xref:System.Uri.ToString%2A> nie unescape zmienionym '%', '?', lub znaku "#".  
+-   <xref:System.Uri.ToString%2A> nie unescape o zmienionym znaczeniu '%', '?', lub znaku "#".  
   
--   <xref:System.Uri.Equals%2A> teraz obejmuje <xref:System.Uri.Query%2A> części w sprawdzania równości.  
+-   <xref:System.Uri.Equals%2A> zawiera teraz <xref:System.Uri.Query%2A> wchodzi w skład w sprawdzanie równości.  
   
--   Operatory "=="i"! =" zastąpione i połączone z <xref:System.Uri.Equals%2A> metody.  
+-   Operatory "=="i"! =" zastąpione i połączony z <xref:System.Uri.Equals%2A> metody.  
   
 -   <xref:System.Uri.IsLoopback%2A> teraz tworzy spójne wyniki.  
   
--   Identyfikator URI "`file:///path`" jest już przetłumaczyć "file://path".  
+-   Identyfikator URI "`file:///path`" nie jest już przetłumaczyć `file://path`.  
   
--   "#" teraz jest rozpoznawana jako terminatora nazwy hosta. Oznacza to, że "http://consoto.com#fragment"teraz jest konwertowany na"http://contoso.com/#fragment".  
+-   "#" teraz jest rozpoznawana jako terminatora nazwy hosta. Oznacza to, że `http://consoto.com#fragment` teraz jest konwertowany na `http://contoso.com/#fragment`.  
   
--   Błąd podczas łączenia z fragmentem podstawowy identyfikator URI został rozwiązany.  
+-   Błąd podczas łączenia podstawowy identyfikator URI z fragmentem został rozwiązany.  
   
 -   Błąd w <xref:System.Uri.HostNameType%2A> został rozwiązany.  
   
--   Błąd podczas analizowania NNTP jest stała.  
+-   Naprawiono usterkę podczas analizowania NNTP.  
   
 -   Identyfikator URI w postaci HTTP:contoso.com teraz zgłasza wyjątek podczas analizowania.  
   
--   Platformę poprawnie obsługuje informacje o użytkowniku w identyfikatorze URI.  
+-   Struktura poprawnie przetwarza informacje o użytkowniku w identyfikatorze URI.  
   
--   Kompresja ścieżka identyfikatora URI jest ustalony tak, aby przerwane identyfikatora URI nie można przejść przez system plików główny.  
+-   Kompresja ścieżki identyfikatora URI jest stała, tak, aby uszkodzone URI nie może przechodzić przez system plików powyżej katalogu głównego.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Uri?displayProperty=nameWithType>

@@ -2,12 +2,12 @@
 title: Praca z przestrzeniami nazw XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416244"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561957"
 ---
 # <a name="working-with-xml-namespaces-c"></a>Praca z przestrzeniami nazw XML (C#)
 W tematach w tej sekcji opisano, jak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obsługuje przestrzenie nazw.  
@@ -22,5 +22,6 @@ W tematach w tej sekcji opisano, jak [!INCLUDE[sqltecxlinq](~/includes/sqltecxli
 |[Zakres domyślnych przestrzeni nazw w C#](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Pokazuje stosownego sposobu pisania zapytań dla formatu XML w domyślnej przestrzeni nazw.|  
 |[Porady: Pisanie zapytań dotyczących kodu XML w przestrzeniach nazw (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Pokazuje sposób określania przestrzeni nazw XML w C# LINQ do kwerendy XML.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

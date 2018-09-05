@@ -1,16 +1,16 @@
 ---
-title: 'Porady: łączenie kwerend LINQ za pomocą wyrażeń regularnych (C#)'
+title: 'Porady: łączenie zapytań LINQ z wyrażeniami regularnymi (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: c90c9ffcede1a3fd0095e919840608b9feadf878
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c535620f2dee1ec9cd1b6ee994fbf860629601ba
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328363"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552684"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Porady: łączenie kwerend LINQ za pomocą wyrażeń regularnych (C#)
-Ten przykład przedstawia sposób użycia <xref:System.Text.RegularExpressions.Regex> klasa do tworzenia wyrażenia regularnego do dopasowania bardziej złożone w ciągów tekstowych. Zapytania LINQ ułatwia filtr na dokładnie te pliki, które chcesz wyszukiwania z wyrażeniem regularnym i kształtu wyniki.  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Porady: łączenie zapytań LINQ z wyrażeniami regularnymi (C#)
+W tym przykładzie pokazano, jak używać <xref:System.Text.RegularExpressions.Regex> klasy w celu utworzenia wyrażenia regularnego do dopasowania bardziej złożone w ciągów tekstowych. Zapytania LINQ można łatwo filtrować dane według dokładnie pliki, które chcesz przeszukać z wyrażeniem regularnym i kształtów wyników.  
   
 ## <a name="example"></a>Przykład  
   
@@ -93,11 +93,12 @@ class QueryWithRegEx
 }  
 ```  
   
- Należy pamiętać, że możesz także zbadać <xref:System.Text.RegularExpressions.MatchCollection> obiektu, który jest zwracany przez `RegEx` wyszukiwania. W tym przykładzie wartość każdego dopasowanie jest generowany w wynikach. Jednak istnieje również możliwość używania LINQ do wykonywania wszystkich rodzajów filtrowanie, sortowanie i grupowanie w tej kolekcji. Ponieważ <xref:System.Text.RegularExpressions.MatchCollection> jest inny niż ogólny <xref:System.Collections.IEnumerable> kolekcji, trzeba jawnie określać typu zmienną zakresu w zapytaniu.  
+ Należy zauważyć, że możesz także zbadać <xref:System.Text.RegularExpressions.MatchCollection> obiektu, który jest zwracany przez `RegEx` wyszukiwania. W tym przykładzie wartość każdego dopasowania jest generowany w wynikach. Jednak użytkownik może również używać programu LINQ do wykonywania wszystkich rodzajów filtrowanie, sortowanie i grupowanie w tej kolekcji. Ponieważ <xref:System.Text.RegularExpressions.MatchCollection> jest nieogólnego <xref:System.Collections.IEnumerable> kolekcji, trzeba jawnie określać typu zmiennej zakresu w zapytaniu.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
+ Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Zobacz też
+
+- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

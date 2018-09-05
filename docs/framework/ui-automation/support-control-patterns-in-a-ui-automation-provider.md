@@ -12,11 +12,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 98fcc601979579719d0133a081dcd9c111bb7fe0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392161"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558564"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika
 > [!NOTE]

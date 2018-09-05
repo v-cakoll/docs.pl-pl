@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: d1e132093cc59c7b41a3f7d5b522fca2e224f779
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961222"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539187"
 ---
 # <a name="how-to-search-strings"></a>Porady: wyszukiwanie ciągów
 
@@ -68,7 +68,6 @@ W poniższym kodzie użyto wyrażenia regularne, aby sprawdzić poprawność for
 | \d{4}    | Dopasowuje dokładnie 4 znaki cyfr  |
 | $        | Dopasowuje koniec ciągu       |
 
-
 [!code-csharp-interactive[csProgGuideStrings#4](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#4)]
 
 Ten wzorzec wyszukiwania pojedynczego pasuje wiele prawidłowe ciągi. Wyrażenia regularne są lepiej wyszukiwania lub przeprowadzić walidacji względem wzorca, a nie jeden ciąg tekstowy.
@@ -77,10 +76,10 @@ Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHu
 
 ## <a name="see-also"></a>Zobacz też  
 
- [Przewodnik programowania w języku C#](../programming-guide/index.md)  
- [Ciągi](../programming-guide/strings/index.md)  
- [LINQ i ciągi](../programming-guide/concepts/linq/linq-and-strings.md)   
- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>     
- [Wyrażeń regularnych programu .NET framework](../../standard/base-types/regular-expressions.md)   
- [Język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md)   
- [Najlepsze rozwiązania dotyczące używania ciągów w programie .NET](../../standard/base-types/best-practices-strings.md)  
+- [Przewodnik programowania w języku C#](../programming-guide/index.md)  
+- [Ciągi](../programming-guide/strings/index.md)  
+- [LINQ i ciągi](../programming-guide/concepts/linq/linq-and-strings.md)
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
+- [Wyrażeń regularnych programu .NET framework](../../standard/base-types/regular-expressions.md)
+- [Język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Najlepsze rozwiązania dotyczące używania ciągów w programie .NET](../../standard/base-types/best-practices-strings.md)  

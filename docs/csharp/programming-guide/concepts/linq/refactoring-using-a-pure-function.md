@@ -2,20 +2,20 @@
 title: Refaktoryzacja przy użyciu czystej funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: ac0cd63790d5600a96c868a8c7f446ceda737eb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340687"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555212"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refaktoryzacja przy użyciu czystej funkcji (C#)
-Poniższy przykład refaktoryzuje poprzedni przykład, [refaktoryzacji za pomocą metody rozszerzenia (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), aby użyć czystej funkcji w tym przykładzie kodu można znaleźć tekst akapitu zostanie przeniesiony do czystej metody statycznej `ParagraphText`.  
+Poniższy przykład refactors poprzedni przykład [Refaktoryzacja przy użyciu metody rozszerzenia (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), aby używać czystej funkcji w tym przykładzie kod, aby znaleźć tekst akapitu jest przenoszony do czystych statycznej metody `ParagraphText`.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przetwarza dokument schemat WordprocessingML pobieranie węzłów akapitu z dokumentem schemat WordprocessingML. Identyfikuje styl każdego akapitu. W tym przykładzie kompilacje w poprzednich przykładach, w tym samouczku. Refactored kodu jest podana w komentarzach w poniższym kodzie.  
+ W tym przykładzie przetwarza dokumentu WordprocessingML pobieranie węzłów akapit w dokumencie WordprocessingML. Określa on styl każdego akapitu. W tym przykładzie opiera się na poprzednich przykładach w tym samouczku. Refaktoryzować kod jest wywoływane w komentarzach, w poniższym kodzie.  
   
- Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [tworzenie źródło dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego, w tym przykładzie, zobacz [tworzenie źródłowego dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  W tym przykładzie użyto klasy z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
@@ -154,7 +154,7 @@ class Program
 }  
 ```  
   
- W tym przykładzie daje takie same dane wyjściowe jako przed refaktoryzację:  
+ Ten przykład generuje takie same dane wyjściowe sprzed refaktoryzacji:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -175,11 +175,12 @@ StyleName:Code >Hello World<
 ```  
   
 ### <a name="next-steps"></a>Następne kroki  
- W kolejnym przykładzie pokazano sposób projektu XML do innego kształtu:  
+ Następny przykład pokazuje, jak projekt XML do innego kształtu:  
   
--   [Prognozowanie XML w różnych kształtu (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [Projektowanie kodu XML w innym kształcie (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Samouczek: Manipulowanie zawartości w dokumencie schemat WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Refaktoryzacja za pomocą metody rozszerzenia (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
- [Refaktoryzacja do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [Refaktoryzacja przy użyciu metody rozszerzenia (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Refaktoryzacja do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

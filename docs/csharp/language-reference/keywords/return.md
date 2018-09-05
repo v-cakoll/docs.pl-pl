@@ -9,11 +9,11 @@ helpviewer_keywords:
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
 ms.openlocfilehash: 0d20da39d3f56220c4499f699e542bd24ded93ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480532"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672302"
 ---
 # <a name="return-c-reference"></a>return (odwołanie w C#)
 

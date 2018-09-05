@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: c5ff9d097c0660956a9751a23511d8273766227c
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245677"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671794"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Rozwiązywanie problemów związanych z typami danych (Visual Basic)
 Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpić podczas wykonywania operacji na typy danych wewnętrznych.  
@@ -117,6 +117,6 @@ Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpi�
  [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)  
  [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Skuteczne stosowanie typów danych](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

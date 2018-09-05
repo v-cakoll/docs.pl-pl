@@ -4,11 +4,11 @@ description: Dowiedz się, jak znaleźć każdy węzeł w drzewie wyrażeń podc
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
 ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463726"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537516"
 ---
 # <a name="translating-expression-trees"></a>Tłumaczenie drzew wyrażeń
 

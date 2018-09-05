@@ -7,11 +7,11 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
 ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404388"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534559"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Dostosowywanie projektów i rozszerzanie My za pomocą Visual Basic
 Można dostosować szablony projektów, aby zapewnić dodatkowe `My` obiektów. Dzięki temu można łatwo innym deweloperom do znalezienia i użycia obiektów.  

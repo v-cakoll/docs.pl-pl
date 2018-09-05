@@ -3,11 +3,11 @@ title: Niestandardowy filtr komunikatów
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
 ms.openlocfilehash: c9a6e436548d4d1f009833f80899721c4c085513
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400142"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555955"
 ---
 # <a name="custom-message-filter"></a>Niestandardowy filtr komunikatów
 Niniejszy przykład pokazuje, jak zastąpić filtry komunikatów, używane przez program Windows Communication Foundation (WCF) do wysyłania wiadomości do punktów końcowych.  

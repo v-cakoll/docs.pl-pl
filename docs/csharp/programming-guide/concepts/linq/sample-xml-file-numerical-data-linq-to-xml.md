@@ -2,12 +2,12 @@
 title: 'Przykładowy plik XML: Dane liczbowe (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 365cae86-a166-46df-b56a-0209d9771c27
-ms.openlocfilehash: 6528175407c29a17667c33769643d15502e98f90
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d0351ed8cf4960174fdc45db5d7a15a385c90a61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387318"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671467"
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Przykładowy plik XML: Dane liczbowe (LINQ to XML)
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera dane liczbowe, sumowanie, średniej i grupowania.  
@@ -55,5 +55,6 @@ Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlin
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

@@ -2,34 +2,34 @@
 title: System typów (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 3470ad17ae16e57edbbef13f30186b7e58fd0d2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 270b0981214e674d220025ad52c7c94ee3a66224
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763855"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534766"
 ---
 # <a name="type-system-entity-sql"></a>System typów (jednostka SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje kilka typów:  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje wiele typów:  
   
 -   Typy pierwotne (proste), takich jak `Int32` i `String.`  
   
--   Nominalnego typy, które są zdefiniowane w schemacie, takich jak <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType>, i <xref:System.Data.Metadata.Edm.RelationshipType>.  
+-   Nominalna typy, które są zdefiniowane w schemacie, takie jak <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType>, i <xref:System.Data.Metadata.Edm.RelationshipType>.  
   
 -   Typy anonimowe, które nie są zdefiniowane w schemacie na jawnie: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType>, i <xref:System.Data.Metadata.Edm.RefType>.  
   
- W tej sekcji omówiono typy anonimowe, które nie są w schemacie jawnie zdefiniowane, ale są obsługiwane przez [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Informacje o typach pierwotnych i nominalnego, zobacz [typu modelu koncepcyjnego (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4).  
+ W tej sekcji opisano typy anonimowe, które nie są zdefiniowane w schemacie na jawnie, ale są obsługiwane przez [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Informacje o typach pierwotnych i nominalną, zobacz [koncepcyjny modelu typy (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4).  
   
 ## <a name="rows"></a>Wiersze  
- Struktura wiersza zależy sekwencja maszynowy i nazwanych elementów członkowskich, które wiersz składa się z. Typ wiersza ma nie tożsamość i nie może być dziedziczona z. Wystąpienia tego samego typu wiersza są równoważne, jeśli elementy członkowskie są odpowiednio równoważne. Wiersze nie zachowują się poza ich równoważność strukturalnych i nie mają odpowiednika w środowisko uruchomieniowe języka wspólnego. Struktury zawierające wierszy lub kolekcji wierszy może spowodować zapytania. Interfejs API powiązania między [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania i języka hosta definiuje sposób wierszy są realizowane w zapytaniu wytworzonego wynik. Aby uzyskać informacje na temat sposobu tworzenia wystąpienia wiersza, zobacz [konstruowania typy](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ Struktura wiersz zależy od sekwencji nazwane i wpisane elementów członkowskich, które składają się wiersz. Typ wiersza jest Brak tożsamości i nie może być dziedziczona z. Wystąpienia tego samego typu wiersza są równoważne, jeżeli elementy członkowskie są odpowiednio równoważne. Wiersze nie zachowanie poza ich równoważność strukturalnych i nie mają odpowiednika w środowisko uruchomieniowe języka wspólnego. Zapytania może spowodować struktur, które zawierają wiersze lub kolekcji wierszy. Interfejs API powiązania między [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania i języka hosta definiuje, jak wiersze są realizowane w zapytaniu, wytworzonego wynik. Aby uzyskać informacji na temat sposobu tworzenia wystąpienia wiersza, zobacz [konstruowanie typów](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
   
 ## <a name="collections"></a>Kolekcje  
- Typy kolekcji reprezentują zero lub więcej wystąpień innych obiektów. Aby uzyskać informacje o sposobie tworzenia kolekcji, zobacz [konstruowania typy](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ Typy kolekcji reprezentują zero lub więcej wystąpień innych obiektów. Aby uzyskać informacje na temat sposobu tworzenia kolekcji, zobacz [konstruowanie typów](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
   
 ## <a name="references"></a>Odwołania  
- Odwołanie jest logiczną wskaźnika do określonej jednostki w zestawie określonej jednostki.  
+ Odwołanie jest logiczną wskaźnik do określonej jednostki w zestawie określonej jednostki.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje następujące operatory utworzenia deconstruct i przejdź do odwołania:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje następujące operatory do konstruowania, dekonstruować i nawigowanie po odwołania:  
   
 -   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   
@@ -39,14 +39,14 @@ ms.locfileid: "32763855"
   
 -   [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
   
- Odwołania można nawigować przy użyciu operatora dostępu (kropką) elementu członkowskiego (`.`). Poniższy fragment wyodrębnia właściwości identyfikatora (kolejność), przechodząc za pośrednictwem właściwości r (odwołanie).  
+ Możesz przejść przez odwołanie za pomocą operatora dostępu (kropka) elementu członkowskiego (`.`). Poniższy fragment kodu wyodrębnia Właściwość Id (zamówienia), przechodząc za pomocą właściwości r (odwołania).  
   
 ```  
 select o2.r.Id   
 from (select ref(o) as r from LOB.Orders as o) as o2   
 ```  
   
- Jeśli wartość odwołania ma wartość null, lub jeśli elementem docelowym odwołania nie istnieje, wynikiem jest null.  
+ Jeśli ma wartość odniesienia null, lub jeśli celem odwołania nie istnieje, wynikiem jest wartość null.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  

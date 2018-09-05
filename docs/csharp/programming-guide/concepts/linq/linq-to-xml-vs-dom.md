@@ -2,12 +2,12 @@
 title: LINQ to XML a. MODELU DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 432240ce9c51c4faa3fb3a7d0cb58b8d53531399
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 603e7a15911fce408592575753ef33b2ae451216
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478172"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554814"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML a. MODELU DOM (C#)
 W tej sekcji opisano niektóre podstawowe różnice między [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i bieżącej dominujący XML programowania interfejsu API, W3C Document Object Model (DOM).  
@@ -131,5 +131,6 @@ doc.AppendChild(name);
 ## <a name="support-for-schema-information"></a>Obsługa informacji o schemacie  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia obsługę walidację XSD za pośrednictwem metody rozszerzające w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw. Aby zweryfikować, że drzewa XML jest zgodny z XSD. Możesz wypełnić drzewa XML z zestaw informacji po weryfikacji (PSVI). Aby uzyskać więcej informacji, zobacz [porady: weryfikowanie przy użyciu XSD](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b) i <xref:System.Xml.Schema.Extensions>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

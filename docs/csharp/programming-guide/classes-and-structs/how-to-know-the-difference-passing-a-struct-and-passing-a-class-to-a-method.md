@@ -6,27 +6,28 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: a6dae35d31cf1553bdca8ebf0345c49b120ae13b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 670dfad3b9fc22709a0ad7f8048a0468bce54a2e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315662"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561944"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Porady: różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody (Przewodnik programowania w języku C#)
-W poniższym przykładzie pokazano, jak przekazywanie [struktury](../../../csharp/language-reference/keywords/struct.md) do metody różni się od przekazywanie [klasy](../../../csharp/language-reference/keywords/class.md) wystąpienie do metody. W tym przykładzie jednego z argumentów (wystąpienia struktury i klasy) są przekazywane przez wartość, a obie metody zmienić wartość pola jednego argumentu. Jednak wyniki z dwóch metod nie są takie same ponieważ jak wartości przekazane podczas przekazywania struktury różni się od jak wartości przekazane podczas przekazywania wystąpienia klasy.  
+W poniższym przykładzie pokazano, jak przekazywanie [struktury](../../../csharp/language-reference/keywords/struct.md) do metody różni się od przekazywanie [klasy](../../../csharp/language-reference/keywords/class.md) wystąpienia do metody. W tym przykładzie oba argumenty (wystąpienia struktury i klasy) są przekazywane przez wartość, a obie metody Zmień wartość pola jednego argumentu. Jednak wyniki z dwóch metod nie są takie same ponieważ przekazywana jest, jeśli przekazujesz struktury różni się od co to jest przekazywana, jeśli przekazujesz wystąpienia klasy.  
   
- Ponieważ struktury jest [typu wartości](../../../csharp/language-reference/keywords/value-types.md), gdy użytkownik [przekazanie przez wartość struktury](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md) do metody, metoda odbiera i działa na kopię argumentu struktury. Metoda nie ma dostępu do oryginalnej struktury w przypadku wywołania metody i dlatego nie można go zmienić w dowolny sposób. Metoda, można zmienić tylko kopiowania.  
+ Ponieważ struktura jest [typu wartości](../../../csharp/language-reference/keywords/value-types.md), gdy użytkownik [przekazać wartość do struktury](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md) do metody, metody odbiera i przetwarza kopię argumentu struktury. Metoda nie ma dostępu do oryginalnej struktury w przypadku wywoływania metody i w związku z tym nie można go zmienić w dowolny sposób. Metoda można zmienić tylko kopii.  
   
- To wystąpienie klasy [zawierają odwołania do typu](../../../csharp/language-reference/keywords/reference-types.md), nie jest typem wartości. Gdy [Typ referencyjny jest przekazywany przez wartość](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) do metody, metoda wysyłana kopia odwołania do wystąpienia klasy. Oznacza to, że metoda wysyłana kopia adres obiektu, nie Kopiuj wystąpienia samej siebie. Wystąpienie klasy w przypadku wywołania metody ma adres parametru w metodzie wywołane ma kopię adres, przez co oba adresy odwoływać się do tego samego obiektu. Ponieważ parametr zawiera tylko kopii adresu, wywołaną metodę nie można zmienić adres wystąpienie klasy w przypadku wywołania metody. Jednak wywołaną metodę umożliwia adres: dostęp do elementów członkowskich klasy, które odwołują się zarówno oryginalnego adresu i kopii. W przypadku wywołaną metodę zmiany elementu członkowskiego klasy, zmieniają się także do oryginalnego wystąpienia klasy w przypadku wywołania metody  
+ To wystąpienie klasy [odwołania do typu](../../../csharp/language-reference/keywords/reference-types.md), nie jest typem wartości. Gdy [typ odwołania jest przekazywany przez wartość](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) do metody, metoda otrzymuje kopię odwołanie do wystąpienia klasy. Oznacza to, że metoda otrzymuje kopię adres obiektu, nie kopia samego wystąpienia. Adres jest wystąpienie klasy w przypadku wywoływania metody z parametrem w metodzie wywoływanej ma kopię adres i oba adresy odnoszą się do tego samego obiektu. Ponieważ parametr zawiera tylko kopię adres, wywoływanej metody nie można zmienić adres wystąpienia klasy w przypadku wywołania metody. Jednak wywoływanej metody umożliwia adres: dostęp do elementów członkowskich klasy, odwołujące się do oryginalnego adresu i kopiowania. Jeśli wywoływanej metody zmieni składowej klasy, zmienia się również oryginalnego wystąpienia klasy, w przypadku wywoływania metody  
   
- Poniższy przykład ilustruje różnicy. Wartość `willIChange` pola wystąpienia klasy zostanie zmieniona przez wywołanie do metody `ClassTaker` ponieważ metoda używa adresu w parametrze, aby znaleźć określone pole wystąpienia klasy. `willIChange` Pola struktury wywołanie metody nie ulega zmianie przez wywołanie do metody `StructTaker` , ponieważ wartość argumentu jest kopią struktury, nie Kopiuj adresu. `StructTaker` zmiany kopii, a następnie skopiuj zostaną utracone podczas wywołania `StructTaker` zostało zakończone.  
+ Poniższy przykład ilustruje różnicę. Wartość `willIChange` pola wystąpienia klasy zostanie zmieniony przez wywołanie metody `ClassTaker` ponieważ metoda używa adresu w parametrze można znaleźć określonego pola wystąpienia klasy. `willIChange` Pola struktury w przypadku wywołania metody nie jest zmieniany przez wywołanie metody `StructTaker` ponieważ wartość argumentu jest kopią struktury, nie kopia jego adres. `StructTaker` zmiany kopii i kopii zostaną utracone podczas wywołania `StructTaker` zostało zakończone.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Struktury](../../../csharp/programming-guide/classes-and-structs/structs.md)  
- [Przekazywanie parametrów](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Struktury](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Przekazywanie parametrów](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

@@ -6,32 +6,33 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 948281af45d04714ed6fc308b60341e87abeb830
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47e9bb368deb077ef10ce474683d81e0cb56cef8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331711"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552634"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Porady: wykonywanie czyszczenia kodu za pomocą instrukcji finally (Przewodnik programowania w języku C#)
-Celem `finally` instrukcji ma upewnij się, że niezbędne obiektów, zwykle obiektów, które są zawierający zasobów zewnętrznych, przeprowadzane jest oczyszczanie natychmiast, nawet wtedy, gdy jest zgłaszany wyjątek. Przykładem takich oczyszczania powoduje wywołanie <xref:System.IO.Stream.Close%2A> na <xref:System.IO.FileStream> natychmiast po użyciu zamiast czekać na obiekt jako bezużytecznych przez środowisko uruchomieniowe języka wspólnego, w następujący sposób:  
+Celem `finally` instrukcji jest zapewnienie, niezbędne czyszczenia obiektów, zazwyczaj te obiekty, które są zawierający zasoby zewnętrzne, następuje natychmiast, nawet wtedy, gdy zostanie zgłoszony wyjątek. Przykładem takiego oczyszczania jest wywołanie <xref:System.IO.Stream.Close%2A> na <xref:System.IO.FileStream> natychmiast po ich użyciu, zamiast czekać, aż obiekt jest bezużyteczne przez środowisko uruchomieniowe języka wspólnego, w następujący sposób:  
   
  [!code-csharp[csProgGuideExceptions#16](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_1.cs)]  
   
 ## <a name="example"></a>Przykład  
- Aby włączyć poprzedni kod do `try-catch-finally` instrukcji, oczyszczanie kodu jest oddzielony od kodu pracy w następujący sposób.  
+ Aby włączyć poprzedni kod do `try-catch-finally` instrukcji, kod porządkujący jest oddzielony od kodu, pracy, w następujący sposób.  
   
  [!code-csharp[csProgGuideExceptions#17](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_2.cs)]  
   
- Ponieważ wyjątek może wystąpić w dowolnym momencie w obrębie `try` blokować przed `OpenWrite()` wywołać, lub `OpenWrite()` samo w sobie może zakończyć się niepowodzeniem, firma Microsoft nie ma gwarancji, że plik jest otwarty przy próbie go zamknąć. `finally` Bloku dodaje wyboru, aby upewnić się, że <xref:System.IO.FileStream> obiekt nie jest `null` przed wywołaniem <xref:System.IO.Stream.Close%2A> metody. Bez `null` sprawdzić, `finally` bloku może wywoływać własną <xref:System.NullReferenceException>, ale zgłaszanie wyjątków `finally` bloki należy unikać, jeśli jest to możliwe.  
+ Ponieważ wyjątek może występować w dowolnym momencie, w ramach `try` blokować przed `OpenWrite()` wywołać, lub `OpenWrite()` wywołanie może się nie powieść, firma Microsoft nie ma gwarancji, plik jest otwarty, gdy podejmowane są próby zamknij go. `finally` Bloku dodaje wyboru, aby upewnić się, że <xref:System.IO.FileStream> obiekt nie jest `null` przed wywołaniem <xref:System.IO.Stream.Close%2A> metody. Bez `null` sprawdzić, `finally` bloku można zgłosić swój własny <xref:System.NullReferenceException>, ale zgłaszanie wyjątków `finally` unikać bloki, jeśli jest to możliwe.  
   
- Połączenie z bazą danych jest inny odpowiednimi kandydatami do zamykania `finally` bloku. Czasami jest dozwoloną liczbę połączeń z serwerem bazy danych, należy zamknąć połączenia bazy danych tak szybko jak to możliwe. Jeśli przed zamknięciem połączenie, jest zgłaszany wyjątek, jest inny przypadek w przypadku, gdy przy użyciu `finally` blok jest lepsze niż czekanie, aż wyrzucanie elementów bezużytecznych.  
+ Połączenia z bazą danych jest zamykana innym dobrym kandydatem `finally` bloku. Ponieważ liczba połączeń z serwerem bazy danych, czasami jest ograniczona, tak szybko, jak to możliwe należy zamknąć połączenia z bazą danych. Jeśli jest zgłaszany wyjątek, zanim zamkniesz połączenie, jest to inny przypadek w przypadku, gdy za pomocą `finally` bloku jest lepsze niż czekanie, aż wyrzucania elementów bezużytecznych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)  
- [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)  
- [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)  
+- [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

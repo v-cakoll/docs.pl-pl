@@ -1,29 +1,29 @@
 ---
-title: Oracle obiektów LOB
+title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 04789b385d7a956b65b7cd99594fc92001183af3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758779"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560220"
 ---
-# <a name="oracle-lobs"></a>Oracle obiektów LOB
-.NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleLob> klasy, która jest używana do pracy z bazą danych Oracle **LOB** typów danych.  
+# <a name="oracle-lobs"></a>Oracle LOB
+.NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleLob> klasę, która zostanie użyta do pracy z bazą danych Oracle **LOB** typów danych.  
   
- **OracleLob** może być jedną z tych <xref:System.Data.OracleClient.OracleType> typów danych:  
+ **OracleLob** może być jednym z następujących <xref:System.Data.OracleClient.OracleType> typów danych:  
   
 |Typ danych|Opis|  
 |---------------|-----------------|  
-|**Blob**|Oracle **obiektu BLOB** typ danych zawierający dane binarne o maksymalnym rozmiarze 4 gigabajty. Mapuje to **tablicy** typu **bajtów**.|  
-|**Clob**|Oracle **CLOB** na serwerze, o maksymalnym rozmiarze 4 gigabajty ustawić typ danych zawierający dane znakowe, oparte na domyślny znak. Mapuje to **ciąg**.|  
-|**NClob**|Oracle **NCLOB** typ danych zawierający dane znakowe oparte na zestaw na serwerze o maksymalnym rozmiarze 4 gigabajty national znaków. Mapuje to **ciąg**.|  
+|**Blob**|Oracle **BLOB** typu danych, który zawiera dane binarne o maksymalnym rozmiarze 4 gigabajty. To jest mapowany **tablicy** typu **bajt**.|  
+|**Clob**|Oracle **CLOB** na serwerze, o maksymalnym rozmiarze 4 gigabajty ustawić typ danych, która zawiera znak danych na podstawie domyślny znak. To jest mapowany **ciąg**.|  
+|**NClob**|Oracle **NCLOB** typu danych, który zawiera znak danych oparte na national zestawu znaków na serwerze o maksymalnym rozmiarze 4 gigabajty. To jest mapowany **ciąg**.|  
   
- **OracleLob** różni się od <xref:System.Data.OracleClient.OracleBFile> ponieważ dane są przechowywane na serwerze zamiast w pliku fizycznego w systemie operacyjnym. Może to być także obiekt odczytu i zapisu w odróżnieniu od **OracleBFile**, która zawsze jest tylko do odczytu.  
+ **OracleLob** różni się od <xref:System.Data.OracleClient.OracleBFile> , dane są przechowywane na serwerze, a nie w pliku fizycznego w systemie operacyjnym. Może to być także obiekt odczytu i zapisu, w odróżnieniu od **OracleBFile**, który jest zawsze tylko do odczytu.  
   
-## <a name="creating-retrieving-and-writing-to-a-lob"></a>Tworzenie, pobieranie i zapisywanie do obiektu LOB  
- W poniższym przykładzie C# pokazano, jak można tworzyć obiektów LOB w tabeli programu Oracle, a następnie pobrać i zapisać je w postaci **OracleLob** obiektów. W przykładzie pokazano, za pomocą <xref:System.Data.OracleClient.OracleDataReader> obiektu i **OracleLob** **odczytu** i **zapisu** metody. W przykładzie użyto Oracle **obiektu BLOB**, **CLOB**, i **NCLOB** typów danych.  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a>Tworzenie, pobieranie i zapisywanie obiektu LOB  
+ W poniższym przykładzie C# pokazuje, jak można tworzyć obiektów LOB w tabeli bazy danych Oracle i pobrać i był na nich zapis w formie **OracleLob** obiektów. W przykładzie pokazano, za pomocą <xref:System.Data.OracleClient.OracleDataReader> obiektu i **OracleLob** **odczytu** i **zapisu** metody. W przykładzie użyto Oracle **BLOB**, **CLOB**, i **NCLOB** typów danych.  
   
 ```csharp  
 using System;  
@@ -249,4 +249,4 @@ tx.Commit();
   
 ## <a name="see-also"></a>Zobacz też  
  [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

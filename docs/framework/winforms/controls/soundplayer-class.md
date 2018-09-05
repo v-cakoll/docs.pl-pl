@@ -6,49 +6,49 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 39d3c9d54eb61c0220a13870d5bd2ff69f8dfc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538825"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672894"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer — Klasa
-`SoundPlayer` Klasa umożliwia łatwe dołączanie dźwięków w aplikacji.  
+`SoundPlayer` Klasy umożliwia łatwe uwzględnianie dźwięki w aplikacji.  
   
- Można również użyć <xref:System.Media.SystemSounds> klasę, aby odtwarzać dźwięki systemu typowych, w tym sygnału dźwiękowego.  
+ Można również użyć <xref:System.Media.SystemSounds> klasy, aby odtwarzać dźwięki systemu typowych, w tym sygnał dźwiękowy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [SoundPlayer, klasa — omówienie](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
- Wprowadza klasy i jego właściwości często używane, metod i zdarzeń.  
+ Wprowadza klasy i jej często używanych właściwości, metod i zdarzeń.  
   
  [Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- Zawiera kod, aby odtwarzać dźwięk określona za pomocą ścieżki pliku, ścieżka UNC lub ścieżki HTTP.  
+ Zawiera kod, aby odtworzyć dźwięk określony przy użyciu ścieżki pliku, ścieżka UNC lub ścieżki HTTP.  
   
  [Instrukcje: odtwarzanie sygnału dźwiękowego za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
- Zawiera kod, aby odtwarzać dźwięk dźwiękowy komputera.  
+ Zawiera kod, aby odtworzyć dźwięk dźwiękowego komputera.  
   
  [Instrukcje: odtwarzanie dźwięku osadzonego w zasobie za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
- Zawiera kod, aby odtwarzać dźwięk do zasobu.  
+ Zawiera kod, aby odtworzyć dźwięk z zasobu.  
   
  [Instrukcje: odtwarzanie dźwięku systemowego za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
  Zawiera kod, aby odtworzyć ten dźwięki systemu.  
   
  [Instrukcje: ładowanie dźwięku asynchronicznie w formularzu systemu Windows](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- Zawiera kod, aby ładowanie dźwięku asynchronicznie z adresu URL i go odtworzyć.  
+ Zawiera kod, aby ładowanie dźwięku asynchronicznie z adresu URL i odtwarzać je.  
   
  [Instrukcje: odtwarzanie dźwięku w pętli w formularzu systemu Windows](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
  Zawiera kod, który odtwarza dźwięk wielokrotnie.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Media.SoundPlayer>  
- Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- Zawiera łącza do innych tematów dotyczących kontrolek zaprojektowany specjalnie w celu pracy z formularzami systemu Windows.  
+ Zawiera łącza do tematów dotyczących kontrolek, zaprojektowany specjalnie w celu pracy z formularzami Windows Forms.  
   
  [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.  
+ Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
   
- Zobacz też [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer — obiekt](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) lub [My.Computer — obiekt](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).
+ Zobacz też [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer — obiekt](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) lub [My.Computer — obiekt](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).

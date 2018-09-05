@@ -2,12 +2,12 @@
 title: Projekcje i przekształcenia (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: bb0457ab-1823-47e6-9d2d-c93c958cc913
-ms.openlocfilehash: dfd10011646fb758215c8d472dacf7e16296493f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 835383e472362d38ded3862042609eaaa508efbe
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929798"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560099"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>Projekcje i przekształcenia (LINQ to XML) (C#)
 Ta sekcja zawiera przykłady [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] projekcje i przekształcenia.  
@@ -25,5 +25,6 @@ Ta sekcja zawiera przykłady [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md
 |[Porady: generowanie plików tekstowych z pliku XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|Przedstawia sposób przekształcania pliku XML do pliku tekstowego-XML.|  
 |[Porady: generowanie kodu XML z plików CSV (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|Ilustruje sposób używania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] można przeanalizować pliku CSV i generowanie kodu XML z niego.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie zapytań drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Tworzenie zapytań drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

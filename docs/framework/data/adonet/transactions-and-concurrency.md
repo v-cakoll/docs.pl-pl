@@ -3,11 +3,11 @@ title: Transakcje i współbieżność
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
 ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386688"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563390"
 ---
 # <a name="transactions-and-concurrency"></a>Transakcje i współbieżność
 Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykonywane w pakiecie. Transakcje pozwala połączyć wiele operacji w pojedynczą jednostkę pracy. Jeśli wystąpi awaria w jednym punkcie w transakcji, wszystkie aktualizacje można wycofać do stanu wstępnego transakcji.  

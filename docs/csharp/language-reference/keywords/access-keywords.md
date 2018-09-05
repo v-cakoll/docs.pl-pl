@@ -5,11 +5,11 @@ helpviewer_keywords:
 - access keywords [C#]
 ms.assetid: 3b680d9c-0998-42df-8ba7-5783f7abda75
 ms.openlocfilehash: 7700c49a609a90faf9b3b8b90719a223952d7e9e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391633"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661207"
 ---
 # <a name="access-keywords-c-reference"></a>Słowa kluczowe dostępu (odwołanie w C#)
 W tej sekcji przedstawiono następujące słowa kluczowe dostępu:  

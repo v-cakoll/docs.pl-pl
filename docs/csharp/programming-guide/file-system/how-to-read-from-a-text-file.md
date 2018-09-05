@@ -9,17 +9,17 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: a42f98a81ff9e9bdbbf6c61554667aa223c7c269
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb7f5c0239273c04f9f89b4e63335e67fdf5419a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331675"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557030"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Porady: odczyt z pliku tekstowego (Przewodnik programowania w języku C#)
-Ten przykład odczytuje zawartość pliku tekstowego za pomocą metod statycznych <xref:System.IO.File.ReadAllText%2A> i <xref:System.IO.File.ReadAllLines%2A> z <xref:System.IO.File?displayProperty=nameWithType> klasy.  
+Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod statycznych <xref:System.IO.File.ReadAllText%2A> i <xref:System.IO.File.ReadAllLines%2A> z <xref:System.IO.File?displayProperty=nameWithType> klasy.  
   
- Na przykład, który używa <xref:System.IO.StreamReader>, zobacz [porady: jeden wiersz pliku tekstowego do odczytu w czasie](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
+ Aby uzyskać przykład, który używa <xref:System.IO.StreamReader>, zobacz [porady: Odczyt jeden wiersz pliku tekstowego w danym momencie](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
   
 > [!NOTE]
 >  Pliki, które są używane w tym przykładzie są tworzone w temacie [porady: zapis do pliku tekstowego](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
@@ -30,7 +30,7 @@ Ten przykład odczytuje zawartość pliku tekstowego za pomocą metod statycznyc
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Skopiuj kod i wklej go w aplikacji konsolowej C#.  
   
- Jeśli nie używasz plików tekstowych z [porady: zapis do pliku tekstowego](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), Zastąp argument `ReadAllText` i `ReadAllLines` z odpowiednią ścieżkę i nazwę komputera.  
+ Jeśli nie używasz plików tekstowych z [porady: zapis do pliku tekstowego](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), Zastąp argument `ReadAllText` i `ReadAllLines` z odpowiednią ścieżkę i nazwę pliku na komputerze.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
@@ -38,9 +38,10 @@ Ten przykład odczytuje zawartość pliku tekstowego za pomocą metod statycznyc
 -   Plik nie istnieje lub nie istnieje w określonej lokalizacji. Sprawdź ścieżkę i pisownię nazwy pliku.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Nie należy polegać na nazwę pliku, aby określić zawartość pliku. Na przykład plik `myFile.cs` może nie być pliku źródłowego C#.  
+ Nie należy polegać na nazwę pliku, aby określić zawartość pliku. Na przykład plik `myFile.cs` może nie być plik źródłowy C#.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IO?displayProperty=nameWithType>  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [System plików i rejestr (C# przewodnik programowania w języku)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)

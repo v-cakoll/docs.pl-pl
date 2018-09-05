@@ -1,5 +1,5 @@
 ---
-title: '#Const-dyrektywa'
+title: '##Const — dyrektywa (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: a3b3318f6b44f7d1798e08195be5aeb920b61c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588070"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541617"
 ---
 # <a name="const-directive"></a>#Const — dyrektywa
-Definiuje warunkowe stałe kompilatora Visual Basic.  
+Definiuje stałe warunkowe kompilatora dla języka Visual Basic.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,15 +33,15 @@ Definiuje warunkowe stałe kompilatora Visual Basic.
   
 ## <a name="parts"></a>Części  
  `constname`  
- Wymagana. Nazwa stała jest zdefiniowany.  
+ Wymagane. Nazwa — stała definiowanego.  
   
  `expression`  
- Wymagana. Literał, inne warunkowego kompilatora stałej lub dowolnej kombinacji, która obejmuje dowolnych lub wszystkich operatorów arytmetycznych i logicznych z wyjątkiem `Is`.  
+ Wymagane. Literał, inne stałe warunkowe kompilatora lub dowolną kombinację, który zawiera dowolnych lub wszystkich operatorów arytmetycznych lub logiczne, z wyjątkiem `Is`.  
   
 ## <a name="remarks"></a>Uwagi  
- Warunkowe stałe kompilatora są zawsze prywatne dla pliku, w jakiej widnieją. Nie można utworzyć stałe kompilatora publiczny przy użyciu `#Const` dyrektywy; tylko w interfejsie użytkownika lub można je utworzyć `/define` — opcja kompilatora.  
+ Warunkowe stałe kompilatora są zawsze prywatne dla pliku, w jakiej są wyświetlane. Nie można utworzyć stałe kompilatora publicznych, przy użyciu `#Const` dyrektywę; można je utworzyć, tylko w interfejsie użytkownika lub za pomocą `/define` — opcja kompilatora.  
   
- Można użyć tylko warunkowe stałe kompilatora i literały w `expression`. Przy użyciu standardowych stałą zdefiniowane z `Const` powoduje błąd. Z drugiej strony, można użyć stałe zdefiniowane z `#Const` — słowo kluczowe tylko dla kompilacji warunkowej. Stałe również może być niezdefiniowana, w takim przypadku mają wartość `Nothing`.  
+ Można użyć tylko warunkowe stałe kompilatora i literały w `expression`. Przy użyciu standardowych stałą zdefiniowane za pomocą `Const` powoduje błąd. Z drugiej strony, można użyć stałe zdefiniowane za pomocą `#Const` — słowo kluczowe tylko w przypadku kompilacji warunkowej. Stałe również może być niezdefiniowana, w którym to przypadku mają wartość `Nothing`.  
   
 ## <a name="example"></a>Przykład  
  Dyrektywa `#Const` została użyta w poniższym przykładzie.  
@@ -53,4 +53,4 @@ Definiuje warunkowe stałe kompilatora Visual Basic.
  [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
  [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
  [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- [If...Then...Else, instrukcja](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+ [Dyrektywa #If...Then...#Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

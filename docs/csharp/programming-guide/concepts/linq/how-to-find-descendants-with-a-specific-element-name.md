@@ -1,19 +1,19 @@
 ---
-title: 'Porady: znajdowanie elementów podrzędnych o nazwie określonego elementu (C#)'
+title: 'Porady: wyszukiwanie elementów potomnych o określonej nazwie elementu (C#)'
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
-ms.openlocfilehash: f95551f0c1506a56474d497622b90090cc4c8865
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c5e035b4ee0168a0c41a34754314e18d089b1ef
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320235"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556574"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Porady: znajdowanie elementów podrzędnych o nazwie określonego elementu (C#)
-Czasami chcesz znaleźć wszystkich elementów podrzędnych o określonej nazwie. Można napisać kod, aby wykonać iterację wszystkich elementów podrzędnych, ale jest łatwiejsze w <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
+# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Porady: wyszukiwanie elementów potomnych o określonej nazwie elementu (C#)
+Czasami chcesz znaleźć wszystkie elementy podrzędne o określonej nazwie. Można napisać kod, aby wykonać iterację przez wszystkie elementy podrzędne, ale jest łatwiejszy w obsłudze <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak można znaleźć elementów podrzędnych na podstawie nazwy elementu.  
+ Poniższy przykład pokazuje, jak można znaleźć elementy podrzędne na podstawie nazwy elementu.  
   
 ```csharp  
 XElement root = XElement.Parse(@"<root>  
@@ -52,7 +52,7 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeni nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ```csharp  
 XElement root = XElement.Parse(@"<root xmlns='http://www.adatum.com'>  
@@ -91,6 +91,7 @@ Console.WriteLine(str);
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
- [Podstawowe zapytania (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- [Podstawowe zapytania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

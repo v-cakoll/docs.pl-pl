@@ -2,15 +2,15 @@
 title: Standardowe operatory zapytań w technologii LINQ do zapytań jednostki
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 1085e43ef1db8eb0017f9ff87acba2da4be46377
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: 302fa281767fc95e9a9a2192382034b3a519cd92
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238566"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560491"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardowe operatory zapytań w technologii LINQ do zapytań jednostki
-W zapytaniu należy określić informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje powinny można sortowane, grupowane i kształtowane przed zwróceniem. LINQ zapewnia zestaw metod standardowego zapytania, które można użyć w zapytaniu. Większość z tych metod działają na sekwencje; w tym kontekście sekwencji jest obiektem, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. Funkcjonalność zapytań operatorów standardowej kwerendy obejmuje filtrowania, projekcji, agregacji, sortowanie, grupowanie, stronicowanie i więcej. Niektórych często używane standardowego zapytania, operatory są wyposażone w dedykowane składni słowa kluczowego, dzięki czemu można wywołać przy użyciu składni wyrażeń zapytania. Wyrażenie kwerendy jest inny, bardziej czytelny sposób wyrażania kwerendę, niż odpowiednik oparte na metodzie. Klauzule wyrażenia zapytania są tłumaczone na wywołania do metody zapytania w czasie kompilacji. Aby uzyskać listę standardowych operatorów zapytań, które mają klauzule wyrażenia zapytania równoważne, zobacz [standardowe operatory zapytań — Przegląd](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+W zapytaniu należy określić informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje powinny można sortowane, grupowane i kształtowane przed zwróceniem. LINQ zapewnia zestaw metod standardowego zapytania, które można użyć w zapytaniu. Większość z tych metod działają na sekwencje; w tym kontekście sekwencji jest obiektem, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. Funkcjonalność zapytań operatorów standardowej kwerendy obejmuje filtrowania, projekcji, agregacji, sortowanie, grupowanie, stronicowanie i więcej. Niektórych często używane standardowego zapytania, operatory są wyposażone w dedykowane składni słowa kluczowego, dzięki czemu można wywołać przy użyciu składni wyrażeń zapytania. Wyrażenie kwerendy jest inny, bardziej czytelny sposób wyrażania kwerendę, niż odpowiednik oparte na metodzie. Klauzule wyrażenia zapytania są tłumaczone na wywołania do metody zapytania w czasie kompilacji. Aby uzyskać listę standardowych operatorów zapytań, które mają klauzule wyrażenia zapytania równoważne, zobacz [standardowe operatory zapytań — Przegląd](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
  Nie wszystkie standardowe operatory zapytań są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Aby uzyskać więcej informacji, zobacz [obsługiwane i nieobsługiwane LINQ metody (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Ten temat zawiera informacje o standardowych operatorów zapytań, które są specyficzne dla [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Aby uzyskać więcej informacji o znanych problemach w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytań, zobacz [znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
@@ -67,7 +67,7 @@ W zapytaniu należy określić informacje, które mają zostać pobrane ze źró
 |`Sum`|Zwraca wartość null.|Zwraca wartość null.|Zwraca sumę wartości innej niż null w sekwencji.|Oblicza sumę sekwencję wartości liczbowych.|  
   
 ## <a name="type-methods"></a>Typ metody  
- Te dwie metody LINQ, które zajmują się konwersji typu i testowanie są zarówno obsługiwane w kontekście [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Oznacza to, że tylko obsługiwane typy to typy, które mapują do odpowiedniego [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] typu. Aby uzyskać listę tych typów, zobacz [koncepcyjny modelu typy (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Metody typu są `Convert` i `OfType`.  
+ Te dwie metody LINQ, które zajmują się konwersji typu i testowanie są zarówno obsługiwane w kontekście [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Oznacza to, że tylko obsługiwane typy to typy, które mapują do odpowiedniego [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] typu. Aby uzyskać listę tych typów, zobacz [koncepcyjny modelu typy (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Metody typu są `Convert` i `OfType`.  
   
  `OfType` jest obsługiwane dla typów jednostek. `Convert` jest obsługiwane dla typów pierwotnych modelu koncepcyjnego.  C# `is` i `as` metody są również obsługiwane.  
   
@@ -78,4 +78,4 @@ W zapytaniu należy określić informacje, które mają zostać pobrane ze źró
   
 ## <a name="see-also"></a>Zobacz też  
  [Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
- [Standardowe operatory zapytań — przegląd](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [Standardowe operatory zapytań — przegląd](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

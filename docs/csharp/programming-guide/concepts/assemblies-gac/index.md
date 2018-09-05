@@ -2,12 +2,12 @@
 title: Zestawy i Globalna pamięć podręczna zestawów (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 07ee54fc19abecba5e8335f063277418ede80b36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408921"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534326"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Zestawy i Globalna pamięć podręczna zestawów (C#)
 Zespoły tworzą podstawową jednostką wdrażania, kontroli wersji, ponownego użycia, określania zakresu aktywacji i uprawnień zabezpieczeń. Aplikacja oparta na sieci. Zestawy formę dołączana dynamicznie biblioteka (dll) pliku lub plik wykonywalny (.exe) i są blokami konstrukcyjnymi programu .NET Framework. Zapewniają one środowiska uruchomieniowego języka wspólnego informacje, które musi być znane implementacje typu. Można potraktować zestawu jako kolekcję typów i zasobów, które tworzą jednostkę logiczną funkcji i zostały opracowane w celu współpracują ze sobą.  
@@ -50,13 +50,14 @@ Zespoły tworzą podstawową jednostką wdrażania, kontroli wersji, ponownego u
 > [!NOTE]
 >  Tworzenie zestawu w programie Visual Studio na **kompilacji** menu wybierz opcję **kompilacji**.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)  
- [Zestawy w środowisku uruchomieniowym CLR](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Przyjazne zestawy (C#)](friend-assemblies.md)  
- [Porady: dzielenie się zestawem z innymi aplikacjami (C#)](how-to-share-an-assembly-with-other-applications.md)  
- [Porady: ładowanie i zwalnianie zestawów (C#)](how-to-load-and-unload-assemblies.md)  
- [Porady: Określanie, jeśli plik jest zestawem (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
- [Porady: tworzenie i używanie zestawów przy użyciu wiersza polecenia (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
- [Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)  
+- [Zestawy w środowisku uruchomieniowym CLR](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Przyjazne zestawy (C#)](friend-assemblies.md)  
+- [Porady: dzielenie się zestawem z innymi aplikacjami (C#)](how-to-share-an-assembly-with-other-applications.md)  
+- [Porady: ładowanie i zwalnianie zestawów (C#)](how-to-load-and-unload-assemblies.md)  
+- [Porady: Określanie, jeśli plik jest zestawem (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
+- [Porady: tworzenie i używanie zestawów przy użyciu wiersza polecenia (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+- [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

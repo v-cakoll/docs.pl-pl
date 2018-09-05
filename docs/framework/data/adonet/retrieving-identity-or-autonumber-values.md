@@ -1,39 +1,39 @@
 ---
-title: Pobieranie tożsamości lub wartości automatyczny numer
+title: Pobieranie tożsamości lub wartości automatycznych numerów
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-ms.openlocfilehash: ce3c888ce9e96d1f5768ce9cf3f3eef8cf8624e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca739f703267f27932ec7450a59d7f4afaffd64b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357154"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670980"
 ---
-# <a name="retrieving-identity-or-autonumber-values"></a>Pobieranie tożsamości lub wartości automatyczny numer
-Klucz podstawowy relacyjnej bazy danych jest kolumna lub połączenie kolumn, które zawsze zawiera unikatowe wartości. Wiedzy o wartości klucza podstawowego można zlokalizować wiersza, który go zawiera. Relacyjnych baz danych, takich jak SQL Server, Oracle i Microsoft Access/Jet obsługuje tworzenie automatycznie zwiększany kolumn, które mogą być oznaczone jako klucze podstawowe. Wartości te są generowane przez serwer jako wiersze są dodawane do tabeli. W programie SQL Server ustaw właściwość identity kolumny w oprogramowaniu Oracle tworzenia sekwencji i programu Microsoft Access tworzenia automatycznie numerowane kolumny.  
+# <a name="retrieving-identity-or-autonumber-values"></a>Pobieranie tożsamości lub wartości automatycznych numerów
+Klucz podstawowy w relacyjnej bazie danych jest kolumna lub połączenie kolumn, które zawsze zawierać unikatowe wartości. Wartość klucza podstawowego, wiedząc, umożliwia Znajdź wiersz, który go zawiera. Tworzenie automatycznego przyrostu o wartości kolumn, które mogą być oznaczone jako klucze podstawowe obsługują aparatów relacyjnych baz danych, takich jak SQL Server, Oracle i Microsoft Access/Jet. Te wartości są generowane przez serwer w miarę dodawania wierszy do tabeli. W programie SQL Server Ustaw właściwości tożsamości kolumny, Oracle, należy utworzyć sekwencję, a w programie Microsoft Access utworzyć automatycznie numerowane kolumny.  
   
- A <xref:System.Data.DataColumn> mogą służyć do generowania wartości automatycznie zwiększającą przez ustawienie <xref:System.Data.DataColumn.AutoIncrement%2A> właściwości na wartość true. Jednak może być na końcu zduplikowanych wartości w osobnych wystąpień <xref:System.Data.DataTable>, jeśli wiele aplikacji klienckich niezależnie jest generowany automatycznie zwiększającą wartości. Serwer generowania wartości automatycznie zwiększającą eliminuje potencjalnych konfliktów przez każdego użytkownika do pobierania wartości wygenerowany dla każdego wstawionego wiersza.  
+ A <xref:System.Data.DataColumn> może również służyć do generowania wartości automatycznie zwiększającej się wartości, ustawiając <xref:System.Data.DataColumn.AutoIncrement%2A> właściwości na wartość true. Jednak może się to zakończyć ze zduplikowanymi wartościami w osobnych wystąpień <xref:System.Data.DataTable>, jeśli wiele aplikacji klienckich niezależnie generują wartości automatycznie zwiększającej się wartości. Serwer generowania wartości automatycznie zwiększającą eliminuje konflikty, dzięki czemu każdy użytkownik pobrać wygenerowaną wartość dla każdego wiersza wstawiono.  
   
- Podczas wywoływania `Update` metody `DataAdapter`, bazy danych może wysyłać dane do aplikacji ADO.NET jako parametry wyjściowe lub pierwszy rekord zwróconego zestawu wyników w instrukcji SELECT wykonywane w tej samej partii jako instrukcji INSERT. ADO.NET można pobierać te wartości i zaktualizuj odpowiednie kolumny w <xref:System.Data.DataRow> aktualizowana.  
+ Podczas wywoływania `Update` metody `DataAdapter`, baza danych może wysyłać dane do aplikacji ADO.NET jako parametry wyjściowe lub jako pierwszy rekord zwróconego zestawu wyników instrukcji SELECT, wykonywane w tej samej partii jako instrukcji INSERT. ADO.NET może pobrać te wartości i zaktualizuj odpowiednie kolumny w <xref:System.Data.DataRow> aktualizowana.  
   
- Niektórych baz danych, takich jak aparat bazy danych programu Microsoft Jet dostępu nie obsługuje parametrów wyjściowych i nie może przetwarzać wiele instrukcji w jednym zadaniu wsadowym. Podczas pracy z aparatu bazy danych Jet, można pobrać wartość Automatyczny numer wygenerowany dla wstawionego wiersza, wykonując osobne polecenie SELECT w obsłudze zdarzeń dla `RowUpdated` zdarzenie `DataAdapter`.  
+ Niektóre aparaty bazy danych, takich jak aparat bazy danych Microsoft Jet dostępu nie obsługują parametrów wyjściowych i nie może przetworzyć wielu instrukcji w jednej partii. Podczas pracy z aparatu bazy danych Jet, można pobrać wartość automatycznie numerowane generowane dla wstawionego wiersza, wykonując osobne polecenie SELECT w obsłudze zdarzeń dla `RowUpdated` zdarzenia `DataAdapter`.  
   
 > [!NOTE]
->  Jest to alternatywa dla użycia automatyczne zwiększanie wartości do użycia <xref:System.Guid.NewGuid%2A> metody <xref:System.Guid> obiektu do generowania identyfikatora GUID lub Unikatowy identyfikator globalny, na komputerze klienckim, który można skopiować do serwera jako dodaje się każdego nowego wiersza. `NewGuid` Metoda generuje 16-bajtową wartość binarna, która jest tworzona przy użyciu algorytmu, który zapewnia w dużym prawdopodobieństwem zostaną zduplikowane wartości. W bazie danych programu SQL Server, identyfikator GUID jest przechowywany w `uniqueidentifier` kolumny, której program SQL Server może automatycznie generować przy użyciu języka Transact-SQL `NEWID()` funkcji. Przy użyciu identyfikatora GUID jako klucz podstawowy może niekorzystnie wpłynąć na wydajność. SQL Server zapewnia obsługę `NEWSEQUENTIALID()` funkcji, która generuje sekwencyjnych identyfikator GUID nie jest gwarantowana globalnie unikatowa, ale które mogą być indeksowane wydajniej.  
+>  Alternatywa dla użycia automatyczne zwiększanie wartości jest użycie <xref:System.Guid.NewGuid%2A> metody <xref:System.Guid> obiektu umożliwiającą wygenerowanie identyfikatora GUID lub Unikatowy identyfikator globalny, na komputerze klienckim, który można skopiować do serwera jako wstawieniu każdego nowego wiersza. `NewGuid` Metoda generuje 16-bajtową wartość binarna, która jest tworzona przy użyciu algorytmu, który zapewnia wysokie prawdopodobieństwo wartość nie będzie można zduplikować. W bazie danych programu SQL Server, identyfikator GUID jest przechowywany w `uniqueidentifier` kolumnę, która programu SQL Server może automatycznie generować za pomocą instrukcji języka Transact-SQL `NEWID()` funkcji. Przy użyciu identyfikatora GUID jako klucz podstawowy może niekorzystnie wpłynąć na wydajność. Program SQL Server zapewnia obsługę `NEWSEQUENTIALID()` funkcji, która generuje sekwencyjny identyfikatora GUID, nie musi być globalnie unikatowa, ale które mogą być indeksowane wydajniej.  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>Pobieranie wartości kolumny tożsamości serwera SQL  
- Podczas pracy z programem Microsoft SQL Server, można utworzyć procedury składowanej z parametrem wyjściowym, aby zwrócić wartości tożsamości dla wstawionego wiersza. W poniższej tabeli opisano trzy funkcje języka Transact-SQL w programie SQL Server, który może służyć do pobierania wartości w kolumnach tożsamości.  
+ Podczas pracy z programem Microsoft SQL Server, można utworzyć procedurę przechowywaną z parametru wyjściowego do zwrócenia wartości tożsamości dla wstawionego wiersza. W poniższej tabeli opisano trzy funkcje języka Transact-SQL w programie SQL Server, który może służyć do pobierania wartości w kolumnach tożsamości.  
   
 |Funkcja|Opis|  
 |--------------|-----------------|  
-|SCOPE_IDENTITY|Zwraca ostatnią wartość tożsamości w bieżącym zakresie wykonywania. SCOPE_IDENTITY jest zalecane dla większości scenariuszy.|  
-|@@IDENTITY|Zawiera wygenerowane w dowolnej tabeli w bieżącej sesji, ostatnią wartość tożsamości. @@IDENTITY mogą mieć wpływ wyzwalaczy i nie może zwracać wartości tożsamości, z oczekiwaniami.|  
-|IDENT_CURRENT|Zwraca ostatnią wartość tożsamości wygenerowany dla określonej tabeli w dowolnej sesji oraz wszelkich zakresach.|  
+|SCOPE_IDENTITY|Zwraca ostatnią wartość tożsamości w bieżącym zakresie wykonywania. SCOPE_IDENTITY jest zalecane w przypadku większości scenariuszy.|  
+|@@IDENTITY|Zawiera ostatnią wartość tożsamości wygenerowanego w dowolnej tabeli w bieżącej sesji. @@IDENTITY mogą mieć wpływ wyzwalaczy i mogą nie zwracać wartości tożsamości, których oczekujesz.|  
+|IDENT_CURRENT|Zwraca ostatnią wartość tożsamości wygenerowanego dla określonej tabeli w dowolnej sesji i dowolnego zakresu.|  
   
- Poniższe procedury składowanej pokazano, jak wstawienia wiersza do **kategorii** tabeli i użyj parametru wyjściowego, aby zwrócić wartość tożsamości wygenerowane przez funkcję SCOPE_IDENTITY() języka Transact-SQL.  
+ Następujące procedury składowanej pokazano, jak wstawić nowy wiersz do **kategorie** tabeli i użyj parametru wyjściowego, aby zwrócić wartość tożsamości wygenerowane przez funkcję SCOPE_IDENTITY() języka Transact-SQL.  
   
 ```  
 CREATE PROCEDURE dbo.InsertCategory  
@@ -44,37 +44,37 @@ INSERT INTO Categories (CategoryName) VALUES(@CategoryName)
 SET @Identity = SCOPE_IDENTITY()  
 ```  
   
- Następnie można określić procedurę składowaną jako źródło <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> z <xref:System.Data.SqlClient.SqlDataAdapter> obiektu. <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> Właściwość <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> musi mieć ustawioną <xref:System.Data.CommandType.StoredProcedure>. Tożsamość dane wyjściowe są pobierane przez utworzenie <xref:System.Data.SqlClient.SqlParameter> mający <xref:System.Data.ParameterDirection> z <xref:System.Data.ParameterDirection.Output>. Podczas `InsertCommand` jest przetwarzane, wartość automatycznie zwiększana tożsamości jest zwracana i umieszczane w **CategoryID** kolumny bieżącego wiersza. Jeśli ustawisz <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> właściwość polecenia insert do `UpdateRowSource.OutputParameters` lub `UpdateRowSource.Both`.  
+ Następnie można określić procedurę składowaną jako źródło <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> z <xref:System.Data.SqlClient.SqlDataAdapter> obiektu. <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> Właściwość <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> musi być równa <xref:System.Data.CommandType.StoredProcedure>. Dane wyjściowe tożsamości jest pobierana, tworząc <xref:System.Data.SqlClient.SqlParameter> zawierający <xref:System.Data.ParameterDirection> z <xref:System.Data.ParameterDirection.Output>. Podczas `InsertCommand` jest przetwarzany, wartość tożsamości automatycznie zwiększana został zwrócony, a umieszczone w **CategoryID** kolumnę bieżącego wiersza. Jeśli ustawisz <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> właściwości polecenia insert do `UpdateRowSource.OutputParameters` lub `UpdateRowSource.Both`.  
   
- Jeśli polecenia insert wykonuje partii, który zawiera zarówno w instrukcji INSERT, jak i w instrukcji SELECT, która zwraca nową wartość tożsamości, a następnie można pobrać nowej wartości przez ustawienie `UpdatedRowSource` właściwość polecenia insert do `UpdateRowSource.FirstReturnedRecord`.  
+ Jeśli polecenia insert wykonuje plik wsadowy, który zawiera zarówno w instrukcji INSERT, jak i w instrukcji SELECT, która zwraca nową wartość tożsamości, a następnie można pobrać nową wartość przez ustawienie `UpdatedRowSource` właściwości polecenia insert do `UpdateRowSource.FirstReturnedRecord`.  
   
  [!code-csharp[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/VB/source.vb#1)]  
   
 ## <a name="merging-new-identity-values"></a>Scalanie nowych wartości tożsamości  
- Typowy scenariusz polega na wywołaniu `GetChanges` metody `DataTable` do tworzenia kopii, która zawiera tylko zmienionych wierszy i użyj nowej kopii podczas wywoływania metody `Update` metody `DataAdapter`. Jest to szczególnie przydatne, jeśli musisz kierować zmienionych wierszy do oddzielnych składnika, który wykonuje aktualizację. Po aktualizacji kopii może zawierać nowe wartości tożsamości, które muszą zostać połączone następnie wrócić do oryginalnej `DataTable`. Nowe wartości tożsamości mogą się różnić od oryginalnej wartości w `DataTable`. Do wykonania scalenia oryginalnej wartości **AutoIncrement** kolumn w kopii muszą zostać zachowane, aby można było odnaleźć i zaktualizować istniejące wiersze w oryginalnym `DataTable`, zamiast dodanie nowych wierszy zawierających nowe wartości tożsamości. Jednak domyślnie tych oryginalnych wartości zostaną utracone po wywołaniu `Update` metody `DataAdapter`, ponieważ `AcceptChanges` jest wywoływany niejawnie dla każdej aktualizacji `DataRow`.  
+ Typowy scenariusz polega na wywołaniu `GetChanges` metody `DataTable` do utworzenia kopii, który zawiera tylko zmienione wiersze, a nowa kopia podczas wywoływania `Update` metody `DataAdapter`. Jest to szczególnie przydatne w przypadku, gdy trzeba zorganizować zmienionych wierszy do oddzielnych składnika, który wykonuje aktualizację. Po aktualizacji kopii może zawierać nowe wartości tożsamości, które następnie muszą zostać połączone z powrotem do oryginalnego `DataTable`. Nowe wartości tożsamości prawdopodobnie może różnić się od oryginalnej wartości w `DataTable`. Aby wykonać scalanie, oryginalne wartości parametru **AutoIncrement** kolumn w kopii muszą zostać zachowane, aby można było znaleźć i zaktualizować istniejące wiersze w oryginalnym `DataTable`, zamiast dołączać nowych wierszy zawierających nowe wartości tożsamości. Jednak domyślnie tych oryginalnych wartości zostaną utracone po wywołaniu `Update` metody `DataAdapter`, ponieważ `AcceptChanges` jest wywoływany niejawnie dla każdej aktualizacji `DataRow`.  
   
- Istnieją dwa sposoby, aby zachować oryginalne wartości `DataColumn` w `DataRow` podczas `DataAdapter` aktualizacji:  
+ Istnieją dwa sposoby, aby zachować oryginalne wartości parametru `DataColumn` w `DataRow` podczas `DataAdapter` aktualizacji:  
   
--   Pierwsza metoda zachowania oryginalnych wartości jest skonfigurowanie `AcceptChangesDuringUpdate` właściwość `DataAdapter` do `false`. Ma to wpływ na każdy `DataRow` w `DataTable` aktualizowana. Aby uzyskać więcej informacji i przykładowego kodu, zobacz <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A>.  
+-   Pierwsza metoda zachować oryginalne wartości, jest ustalenie `AcceptChangesDuringUpdate` właściwość `DataAdapter` do `false`. Ma to wpływ na co `DataRow` w `DataTable` aktualizowana. Aby uzyskać więcej informacji i przykładowy kod, zobacz <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A>.  
   
--   Drugi sposób polega na pisania kodu `RowUpdated` obsługi zdarzeń `DataAdapter` można ustawić <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> do <xref:System.Data.UpdateStatus.SkipCurrentRow>. `DataRow` Jest aktualizowana, ale oryginalna wartość `DataColumn` są zachowywane. Ta metoda umożliwia zachować oryginalne wartości dla niektórych wierszy, a nie do innych użytkowników. Na przykład kodu można zachować oryginalne wartości dodanych wierszy, a nie do edycji lub usuniętych wierszy sprawdzając najpierw <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> , a następnie ustawienie <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> do <xref:System.Data.UpdateStatus.SkipCurrentRow> tylko dla wierszy z `StatementType` z `Insert`.  
+-   Druga metoda jest pisanie kodu w `RowUpdated` program obsługi zdarzeń `DataAdapter` można ustawić <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> do <xref:System.Data.UpdateStatus.SkipCurrentRow>. `DataRow` Jest aktualizowana, ale oryginalna wartość `DataColumn` są zachowywane. Ta metoda pozwala zachować oryginalne wartości dla niektórych wierszy, a nie dla innych użytkowników. Na przykład, kod można zachować oryginalne wartości dodanymi wierszami, a nie edytowane lub usuniętych wierszy sprawdzając najpierw <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> , a następnie ustawiając <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> do <xref:System.Data.UpdateStatus.SkipCurrentRow> tylko dla wierszy z `StatementType` z `Insert`.  
   
- Każda z tych metod stosowania zachować oryginalne wartości w `DataRow` podczas `DataAdapter` aktualizacji ADO.NET wykonuje szereg akcji można ustawić bieżące wartości `DataRow` do nowych wartości zwracane przez parametry wyjściowe lub pierwszy zwrócony wiersza w zestawie wyników, zachowując nadal oryginalnej wartości w każdym `DataColumn`. Najpierw `AcceptChanges` metoda `DataRow` jest wywoływana, aby zachować bieżące wartości jako oryginalnych wartości, a następnie nowe wartości. Te akcje po `DataRows` które ich <xref:System.Data.DataRow.RowState%2A> ustawioną właściwość <xref:System.Data.DataRowState.Added> będzie mieć ich `RowState` ustawioną właściwość <xref:System.Data.DataRowState.Modified>, które mogą być nieoczekiwany.  
+ Gdy każda z tych metod służy do zachowania oryginalnych wartości w `DataRow` podczas `DataAdapter` aktualizacji ADO.NET wykonuje szereg działań, aby ustawić bieżące wartości `DataRow` do nowych wartości zwracane przez parametry wyjściowe lub pierwszy zwracany wiersz z zestawu wyników, zachowując przy tym nadal oryginalnej wartości w każdym `DataColumn`. Najpierw `AcceptChanges` metody `DataRow` jest wywoływana, aby zachować bieżące wartości jako oryginalne wartości, a następnie nowe wartości są przypisane. Zgodnie z tych akcji `DataRows` którym wykorzystano ich <xref:System.Data.DataRow.RowState%2A> właściwością <xref:System.Data.DataRowState.Added> będzie mieć ich `RowState` właściwością <xref:System.Data.DataRowState.Modified>, może być nieoczekiwany.  
   
- Sposób wyniki poleceń są stosowane do każdego <xref:System.Data.DataRow> aktualizacji jest określany przez <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> właściwości każdego <xref:System.Data.Common.DbCommand>. Ta właściwość ma ustawioną wartość z zakresu od `UpdateRowSource` wyliczenia.  
+ Jak wyniki polecenia są stosowane do każdego <xref:System.Data.DataRow> aktualizowana jest określana przez <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> właściwości każdego <xref:System.Data.Common.DbCommand>. Ta właściwość jest ustawiona na wartość z zakresu od `UpdateRowSource` wyliczenia.  
   
- W poniższej tabeli opisano sposób `UpdateRowSource` wartości wyliczenia mają wpływ na <xref:System.Data.DataRow.RowState%2A> właściwości Zaktualizowano wierszy.  
+ W poniższej tabeli opisano sposób, w jaki `UpdateRowSource` wartości wyliczenia mają wpływ na <xref:System.Data.DataRow.RowState%2A> właściwość zaktualizowanych wierszy.  
   
 |Nazwa elementu członkowskiego|Opis|  
 |-----------------|-----------------|  
-|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges` nazywa się i obie wartości parametrów w danych wyjściowych i/lub wartości w pierwszym wierszu każdy zestaw wyników zwrócony są umieszczane w `DataRow` aktualizowana. Jeśli nie znajdują się wartości do zastosowania, `RowState` będzie <xref:System.Data.DataRowState.Unchanged>.|  
-|<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Jeśli wiersz został zwrócony, `AcceptChanges` nosi nazwę i wiersz jest zamapowana na wiersz zmienione w `DataTable`, ustawienie `RowState` do `Modified`. Jeśli nie wiersza jest zwracany, następnie `AcceptChanges` nie jest wywoływany i `RowState` pozostaje `Added`.|  
-|<xref:System.Data.UpdateRowSource.None>|Parametry zwracane ani wierszy są ignorowane. Brak Brak wywołania `AcceptChanges` i `RowState` pozostaje `Added`.|  
-|<xref:System.Data.UpdateRowSource.OutputParameters>|`AcceptChanges` jest nazywana i wszelkie parametry wyjściowe są mapowane na zmienionych wierszy w `DataTable`, ustawienie `RowState` do `Modified`. Jeśli nie ma żadnych parametrów wyjściowych `RowState` będzie `Unchanged`.|  
+|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges` nazywa się i obie wartości parametrów w danych wyjściowych i/lub wartości w pierwszym wierszu dowolnego zestawu wyników zwracanego są umieszczane w `DataRow` aktualizowana. Jeśli nie znajdują się wartości do zastosowania, `RowState` będzie <xref:System.Data.DataRowState.Unchanged>.|  
+|<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Jeśli wiersz został zwrócony, `AcceptChanges` nosi nazwę i wiersz jest mapowany do zmienionego wiersza w `DataTable`, ustawiając `RowState` do `Modified`. Jeśli nie jest zwracany wiersz, następnie `AcceptChanges` nie jest wywoływany i `RowState` pozostaje `Added`.|  
+|<xref:System.Data.UpdateRowSource.None>|Wiersze lub parametrów zwracane są ignorowane. Brak Brak wywołania `AcceptChanges` i `RowState` pozostaje `Added`.|  
+|<xref:System.Data.UpdateRowSource.OutputParameters>|`AcceptChanges` nosi nazwę oraz wszelkie parametry wyjściowe są mapowane do zmienionego wiersza w `DataTable`, ustawiając `RowState` do `Modified`. Jeśli nie ma żadnych parametrów danych wyjściowych `RowState` będzie `Unchanged`.|  
   
 ### <a name="example"></a>Przykład  
- W tym przykładzie pokazano wyodrębniania zmienionych wierszy z `DataTable` i przy użyciu <xref:System.Data.SqlClient.SqlDataAdapter> do aktualizowania źródła danych i pobierania nowych wartości kolumny tożsamości. <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> Wykonuje dwie instrukcji języka Transact-SQL; pierwsza z nich jest instrukcji INSERT, a drugi jest instrukcji SELECT, która wykorzystuje funkcję SCOPE_IDENTITY można pobrać wartości tożsamości.  
+ W tym przykładzie przedstawiono wyodrębniania zmienionych wierszy z `DataTable` i przy użyciu <xref:System.Data.SqlClient.SqlDataAdapter> zaktualizować źródło danych do pobrania nowej wartości kolumny tożsamości. <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> Wykonuje dwie instrukcje języka Transact-SQL; pierwsza z nich jest instrukcji INSERT, a drugi jest instrukcji SELECT, która używa funkcji SCOPE_IDENTITY do pobierania wartości tożsamości.  
   
 ```  
 INSERT INTO dbo.Shippers (CompanyName)   
@@ -83,40 +83,40 @@ SELECT ShipperID, CompanyName FROM dbo.Shippers
 WHERE ShipperID = SCOPE_IDENTITY();  
 ```  
   
- `UpdatedRowSource` Ma ustawioną właściwość polecenia insert `UpdateRowSource.FirstReturnedRow` i <xref:System.Data.MissingSchemaAction> właściwość `DataAdapter` ma ustawioną wartość `MissingSchemaAction.AddWithKey`. `DataTable` Jest wypełniony i kod dodaje nowy wiersz do `DataTable`. Następnie wyodrębnieniu zmienionych wierszy do nowego `DataTable`, która jest przekazywana do `DataAdapter`, który następnie zaktualizowanie danych na serwerze.  
+ `UpdatedRowSource` Polecenia insert zostaje ustalona `UpdateRowSource.FirstReturnedRow` i <xref:System.Data.MissingSchemaAction> właściwość `DataAdapter` ustawiono `MissingSchemaAction.AddWithKey`. `DataTable` Jest wypełniony i kod dodaje nowy wiersz do `DataTable`. Zmienione wiersze następnie są wyodrębniane do nowego `DataTable`, która jest przekazywana do `DataAdapter`, który następnie zaktualizowanie danych na serwerze.  
   
  [!code-csharp[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#1)]  
   
- `OnRowUpdated` Kontroli programu obsługi zdarzeń <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> z <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs> do ustalenia, czy wiersz jest insert. Jeśli tak jest, a następnie <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> właściwość jest ustawiona na <xref:System.Data.UpdateStatus.SkipCurrentRow>. Zaktualizować wiersza, ale zostaną zachowane oryginalnych wartości w wierszu. W głównej części procedura <xref:System.Data.DataSet.Merge%2A> wywoływana jest metoda Scal nową wartość tożsamości w oryginalnym `DataTable`, a na końcu `AcceptChanges` jest wywoływana.  
+ `OnRowUpdated` Kontroli programu obsługi zdarzeń <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> z <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs> do ustalenia, czy wiersz jest wstawieniem. Jeśli tak jest, a następnie <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> właściwość jest ustawiona na <xref:System.Data.UpdateStatus.SkipCurrentRow>. Wiersz jest aktualizowany, ale są zachowywane, oryginalnym wartości w wierszu. W głównej części procedura <xref:System.Data.DataSet.Merge%2A> metoda jest wywoływana, aby scalić nową wartość tożsamości w oryginalnym `DataTable`, a na koniec `AcceptChanges` jest wywoływana.  
   
  [!code-csharp[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#2)]
  [!code-vb[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#2)]  
   
-## <a name="retrieving-microsoft-access-autonumber-values"></a>Pobieranie wartości automatycznie numerowane programu Microsoft Access  
- Ta sekcja zawiera przykład, który pokazuje, jak pobrać `Autonumber` wartości z bazy danych Jet 4.0. Aparat bazy danych Jet nie obsługuje wykonywania wielu instrukcji w partii lub użyj parametrów wyjściowych, dlatego nie jest możliwe, użyj jednej z następujących metod, aby zwrócić nowe `Autonumber` wartość przypisana do wstawionego wiersza. Można jednak dodać kod `RowUpdated` obsługi zdarzeń, która wykonuje oddzielne wybierz @@IDENTITY instrukcji, aby pobrać nowe `Autonumber` wartość.  
+## <a name="retrieving-microsoft-access-autonumber-values"></a>Pobieranie wartości automatycznych numerów programu Microsoft Access  
+ Ta sekcja zawiera przykład przedstawiający sposób pobierania `Autonumber` wartości z bazy danych Jet 4.0. Aparat bazy danych Jet nie obsługuje wykonanie wielu instrukcji w zadaniu wsadowym lub użyj parametrów wyjściowych, więc nie jest możliwe, użyj jednej z następujących metod, aby zwrócić nowe `Autonumber` wartość przypisana do wstawionego wiersza. Można jednak dodać kod `RowUpdated` programu obsługi zdarzeń, który wykonuje oddzielne wybierz @@IDENTITY instrukcję, aby pobrać nowy `Autonumber` wartość.  
   
 ### <a name="example"></a>Przykład  
- Zamiast opcji dodawania informacji schematu za pomocą `MissingSchemaAction.AddWithKey`, ten przykład konfiguruje `DataTable` z prawidłowego schematu przed wywołaniem <xref:System.Data.OleDb.OleDbDataAdapter> do wypełnienia `DataTable`. W takim przypadku **CategoryID** kolumny jest skonfigurowany do zmniejszyć wartość przypisana do każdego wstawiony wiersz, rozpoczynając od zera, ustawiając <xref:System.Data.DataColumn.AutoIncrement%2A> do `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 0 i <xref:System.Data.DataColumn.AutoIncrementStep%2A> -1. Kod następnie dodaje dwa nowe wiersze i używa `GetChanges` dodać zmienionych wierszy do nowego `DataTable` przekazywany do `Update` metody.  
+ Zamiast opcji dodawania informacji przy użyciu schematu `MissingSchemaAction.AddWithKey`, ten przykład umożliwia skonfigurowanie `DataTable` przy użyciu poprawnego schematu przed wywołaniem <xref:System.Data.OleDb.OleDbDataAdapter> do wypełnienia `DataTable`. W tym przypadku **CategoryID** kolumny jest skonfigurowany do wartość przypisaną każdy wiersz wstawiony, zaczynając od zera, ustawiając zmniejszenia <xref:System.Data.DataColumn.AutoIncrement%2A> do `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 0, i <xref:System.Data.DataColumn.AutoIncrementStep%2A> na -1. Kodzie następnie dodaje dwa nowe wiersze i używa `GetChanges` dodać zmienionych wierszy na nową `DataTable` przekazana do `Update` metody.  
   
  [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
  [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]  
   
- `RowUpdated` Obsługi zdarzeń używa tego samego Otwórz <xref:System.Data.OleDb.OleDbConnection> jako `Update` instrukcja `OleDbDataAdapter`. Sprawdza `StatementType` z <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> dla wstawić wierszy. Dla każdego wstawiony wiersz nowy <xref:System.Data.OleDb.OleDbCommand> utworzeniu można wykonać instrukcji "SELECT" @@IDENTITY instrukcji połączenia i zwraca nowy `Autonumber` wartość, która znajduje się w **CategoryID** kolumny `DataRow`. `Status` Następnie ustawioną właściwość `UpdateStatus.SkipCurrentRow` do pomijania ukryte wywołanie `AcceptChanges`. W głównej części procedura `Merge` metoda jest wywoływana w celu scalenia dwa `DataTable` obiektów, a na końcu `AcceptChanges` jest wywoływana.  
+ `RowUpdated` Obsługa zdarzeń używa tego samego open <xref:System.Data.OleDb.OleDbConnection> jako `Update` instrukcja `OleDbDataAdapter`. Sprawdza `StatementType` z <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> dla wstawione wiersze. Dla każdego wstawiony wiersz nową <xref:System.Data.OleDb.OleDbCommand> służy do wykonywania wybierz @@IDENTITY instrukcji na połączenie, zwracając nowy `Autonumber` wartość, która jest umieszczany w **CategoryID** kolumny `DataRow`. `Status` Zostanie następnie ustawiona właściwość `UpdateStatus.SkipCurrentRow` pominąć wywołanie ukryte `AcceptChanges`. W głównej części procedura `Merge` metoda jest wywoływana, aby scalić dwa `DataTable` obiektów, a na koniec `AcceptChanges` jest wywoływana.  
   
  [!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
  [!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]  
   
-### <a name="retrieving-identity-values"></a>Pobieranie wartości tożsamości  
- Kolumna możemy często ustawiona jako tożsamości, gdy wartości w kolumnie muszą być unikatowe. I czasami potrzebujemy wartości tożsamości nowych danych. W tym przykładzie pokazano, jak można pobrać wartości tożsamości:  
+### <a name="retrieving-identity-values"></a>Podczas pobierania wartości tożsamości  
+ Firma Microsoft często należy ustawić kolumny jako tożsamość, gdy wartości w kolumnie muszą być unikatowe. I czasami potrzebujemy wartości tożsamości nowych danych. Ten przykład przedstawia sposób pobierania wartości tożsamości:  
   
--   Tworzy procedury składowanej wstawiania danych i zwracają wartość tożsamości.  
+-   Tworzy procedurę przechowywaną, aby wstawić dane i zwracają wartość tożsamości.  
   
--   Wykonuje polecenie wstawiać nowe dane i wyświetlić wyniki.  
+-   Wykonuje polecenie, aby wstawić nowe dane i wyświetlić wyniki.  
   
--   Używa <xref:System.Data.SqlClient.SqlDataAdapter> można wstawiać nowe dane i wyświetlić wyniki.  
+-   Używa <xref:System.Data.SqlClient.SqlDataAdapter> Wstaw nowe dane do wyświetlenia wyniku.  
   
- Aby skompilować i uruchomić przykładowy, należy utworzyć przykładowej bazy danych, za pomocą następującego skryptu:  
+ Aby skompilować i uruchomić przykład, należy utworzyć przykładowej bazy danych, za pomocą następującego skryptu:  
   
 ```  
 USE [master]  
@@ -344,10 +344,10 @@ ALTER TABLE [dbo].[StudentGrade] CHECK CONSTRAINT [FK_StudentGrade_Student]
 GO  
 ```  
   
- Kod, listę w następujący sposób:  
+ Listing kodu poniżej:  
   
 > [!IMPORTANT]
->  Przykładowy kod odwołuje się do pliku bazy danych programu Access o nazwie MySchool.mdb. Można pobrać MySchool.mdb (jako część pełnej projektu próbki C# lub Visual Basic) albo [próbki programu Visual Studio 2012](http://code.msdn.microsoft.com/How-to-retrieve-the-95b4ee43) lub [próbki programu Visual Studio 2013](http://code.msdn.microsoft.com/How-to-Retrieve-the-511acece).  
+>  Przykładowy kod odwołuje się do pliku bazy danych programu Access, o nazwie MySchool.mdb. Możesz pobrać MySchool.mdb (jako część pełnej języka C# lub Visual Basic przykładowy projekt), albo [przykładowy program Visual Studio 2012](https://code.msdn.microsoft.com/How-to-retrieve-the-95b4ee43) lub [przykład Visual Studio 2013](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece).  
   
 ```  
 using System;  
@@ -536,4 +536,4 @@ class Program {
  [Metody AcceptChanges i RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  [Scalanie zawartości elementu DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
  [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,18 +2,18 @@
 title: 'Porady: grupowanie plików według rozszerzenia (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 4b2200799a7623bf9d47540f922798f5161be1bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 320d89c78a317f49d98d4dc139aaa3df05fcd6f3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319296"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538102"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Porady: grupowanie plików według rozszerzenia (LINQ) (C#)
-Ten przykład przedstawia, jak LINQ może służyć do wykonywania zaawansowanych grupowanie i sortowanie operacje na listach plików lub folderów. Przedstawiono również sposób strony danych wyjściowych w oknie konsoli przy użyciu <xref:System.Linq.Enumerable.Skip%2A> i <xref:System.Linq.Enumerable.Take%2A> metody.  
+Ten przykład pokazuje, jak LINQ może służyć do wykonywania zaawansowanych grupowania i sortowania operacje na listach plików lub folderów. Pokazano również, jak stronicować danych wyjściowych w oknie konsoli przy użyciu <xref:System.Linq.Enumerable.Skip%2A> i <xref:System.Linq.Enumerable.Take%2A> metody.  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie Wyświetla sposób grupowania zawartość drzewa katalogów określonego przez rozszerzenie nazwy pliku.  
+ Następujące zapytanie pokazuje, jak, według których chcesz pogrupować zawartość drzewa katalogów określonego rozszerzenia nazwy pliku.  
   
 ```csharp  
 class GroupByExtension  
@@ -102,11 +102,12 @@ class GroupByExtension
 }  
 ```  
   
- Dane wyjściowe z tego programu może trwać długo, zależnie od szczegóły lokalnego systemu plików i `startFolder` ma ustawioną wartość. Aby umożliwić wyświetlanie wszystkich wyników, w tym przykładzie przedstawiono sposób przeglądania wyników. Te same techniki może odnosić się do systemu Windows i aplikacji sieci Web. Należy zauważyć, że ponieważ kod strony elementów w grupie, zagnieżdżone `foreach` pętli jest wymagana. Istnieje również dodatkową logikę do obliczenia bieżącej pozycji na liście i aby umożliwić użytkownikowi Zatrzymaj stronicowania, a następnie zamknij program. W tym przypadku stronicowania zapytanie jest wykonywane na buforowanych wyników z oryginalnego zapytania. W innych kontekstach, takich jak LINQ do SQL takich buforowanie nie jest wymagana.  
+ Dane wyjściowe z tego programu może być długi, w zależności od szczegółów lokalnego systemu plików i `startFolder` jest równa. Aby umożliwić wyświetlanie wszystkich wyników, w tym przykładzie przedstawiono sposób przeglądania wyników. Te same techniki można zastosować do aplikacji sieci Web i Windows. Należy zauważyć, że ponieważ kod strony elementów w grupie, zagnieżdżoną `foreach` pętli jest wymagana. Istnieje również logikę dodatkowe obliczenia bieżącej pozycji na liście i umożliwić użytkownikowi zatrzymać stronicowania i zakończyć program. W tym konkretnym przypadku kwerendy stronicowania jest wykonywany dla pamięci podręcznej wyników z oryginalnego zapytania. W innych kontekstach, takich jak LINQ to SQL takie pamięci podręcznej nie jest wymagana.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
+ Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do obiektów (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Zobacz też
+
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

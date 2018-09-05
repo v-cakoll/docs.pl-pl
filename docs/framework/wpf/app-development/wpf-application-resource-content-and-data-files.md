@@ -18,11 +18,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 5bf1a0e1d4d8f620f83aab50aa50009a0f6a6cf4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417518"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561447"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplikacje często są zależne od plików, które zawierają dane niewykonywalne, takich jak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], obrazy, wideo i audio. Windows Presentation Foundation (WPF) oferuje specjalne obsługę konfigurowania, identyfikowania i stosowania tych typów plików danych, które są wywoływane, pliki danych aplikacji. Ta obsługa dotyczy tego określonego zestawu typów plików danych aplikacji, w tym:  

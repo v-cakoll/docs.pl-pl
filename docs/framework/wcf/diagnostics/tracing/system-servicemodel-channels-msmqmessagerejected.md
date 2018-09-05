@@ -2,27 +2,28 @@
 title: System.ServiceModel.Channels.MsmqMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
-ms.openlocfilehash: 2bd64263a2374c10a3514cbed75f9224542051dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0addf987eac62c750a3c418e1b1c431d3f9bc1b0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564440"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
-Usługa MSMQ odrzucone wiadomości.  
+Usługa MSMQ odrzucił komunikat.  
   
 ## <a name="description"></a>Opis  
- Ślad wskazuje, że wiadomości MSMQ został odrzucony.  
+ Ślad wskazuje, że wiadomości usługi MSMQ została odrzucona.  
   
- Gdy (używany z NetMsmqBinding lub MsmqIntegrationBinding) systemu Windows Communication Foundation (WCF) nie może ich przetworzyć można odrzucić wiadomości usługi MSMQ. Takie komunikaty są określane jako skażone wiadomości. Trująca wiadomość zostało odrzucone po `ReceiveErrorHandling` ma ustawioną właściwość NetMsmqBinding lub MsmqIntegrationBinding `Reject`. Odrzucone wiadomości jest dostarczany do nadawcy [kolejki utraconych wiadomości](http://go.microsoft.com/fwlink/?LinkID=99544).  
+ Gdy (używany z NetMsmqBinding lub MsmqIntegrationBinding) Windows Communication Foundation (WCF) nie będzie mógł je przetworzyć można odrzucić wiadomości usługi MSMQ. Takie wiadomości są określane jako skażone komunikaty. Zarządzanie skażonymi komunikatami zostanie odrzucone po `ReceiveErrorHandling` NetMsmqBinding lub MsmqIntegrationBinding zostaje ustalona `Reject`. Odrzucone komunikat jest dostarczany do nadawcy [kolejki utraconych wiadomości](https://go.microsoft.com/fwlink/?LinkID=99544).  
   
- Zobacz [obsługi wiadomości Poison](http://go.microsoft.com/fwlink/?LinkID=99546) więcej szczegółów na kiedy zaczynają skażone wiadomości i konfigurowania usługi do odpowiednią obsługę.  
+ Zobacz [obsługi komunikatów Poison](https://go.microsoft.com/fwlink/?LinkID=99546) więcej informacji na temat po wiadomości stają się zanieczyszczone oraz sposób konfigurowania usługi odpowiednio je obsłużyć.  
   
- Zobacz [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkID=99548) uzyskać więcej informacji dotyczących komunikatów odrzuconych oznacza w usłudze MSMQ.  
+ Zobacz [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548) dodatkowe szczegóły dotyczące odrzuconych komunikatów oznacza w usłudze MSMQ.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Poison komunikat — Obsługa](http://go.microsoft.com/fwlink/?LinkID=99546)  
- [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkID=99548)
+ [Obsługa komunikatów poison](https://go.microsoft.com/fwlink/?LinkID=99546)  
+ [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)

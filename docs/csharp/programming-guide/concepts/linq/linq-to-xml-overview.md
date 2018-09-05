@@ -2,12 +2,12 @@
 title: LINQ to XML — Przegląd (C#)
 ms.date: 07/20/2015
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 1cb4a0cd50abe579bdbf78d388b73af30cbdd6f0
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 5b557c95993d7f1e907a8eb6ef1e5ec23a2988ab
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539073"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML — Przegląd (C#)
 XML ma powszechnie zaakceptowany jako sposób na formatowanie danych w wielu kontekstach. Na przykład możesz znaleźć XML w sieci Web, w plikach konfiguracji, pliki programu Microsoft Office Word i baz danych.  
@@ -87,6 +87,7 @@ new XElement("Contacts",
   
  Aby uzyskać więcej informacji, zobacz [tworzenie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Linq>  
- [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Xml.Linq>  
+- [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

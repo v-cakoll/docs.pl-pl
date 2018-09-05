@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: aaf57e666faf18010c7f267f96e6958c73e58bcf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 4b5c246bee21697590130225679a250b43e86b8d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935141"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564822"
 ---
 # <a name="c-walkthroughs"></a>C# — wskazówki
 Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariuszy, które sprawia, że ich dobrym miejscem do uruchomienia, informacje o strefie dana funkcja lub produktu.  
@@ -69,6 +69,7 @@ Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariu
  [Wskazówki i przykłady wdrażania](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  Zawiera instrukcje krok po kroku przykłady typowych scenariuszy wdrożenia.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../csharp/programming-guide/index.md)  
- [Przykłady w Visual Studio](/visualstudio/ide/visual-studio-samples)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../csharp/programming-guide/index.md)  
+- [Przykłady w Visual Studio](/visualstudio/ide/visual-studio-samples)

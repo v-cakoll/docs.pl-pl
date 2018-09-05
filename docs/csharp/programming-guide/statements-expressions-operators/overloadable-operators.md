@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: 96a23e71b6b7dbfd9c7ccf99bc58366e7f99f59b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f819e94fd532c10478ac39da9485126aa4380dd5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451678"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540745"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>Operatory z możliwością przeciążenia (C# Programming Guide)
 
@@ -32,7 +32,7 @@ C# umożliwia typy zdefiniowane przez użytkownika próby przeciążania operato
 
 Aby uzyskać informacje o tym, jak próby przeciążania operatora, zobacz [operator](../../language-reference/keywords/operator.md) artykułu — słowo kluczowe.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Instrukcje, wyrażenia i operatory](index.md)

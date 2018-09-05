@@ -8,11 +8,11 @@ helpviewer_keywords:
 - division operator [C#]
 ms.assetid: d155e496-678f-4efa-bebe-2bd08da2c5af
 ms.openlocfilehash: bddf6d234f3536ad64f0cd876cc7ade4494916d9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394856"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557696"
 ---
 # <a name="-operator-c-reference"></a>/ — Operator (odwołanie w C#)
 Operator dzielenia (`/`) dzieli pierwszy argument operacji za drugim argumentem. Wszystkie typy liczbowe zostały wstępnie zdefiniowane operatory dzielenia.

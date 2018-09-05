@@ -1,50 +1,50 @@
 ---
-title: Za pomocą działania InvokePowerShell
+title: Używanie działania InvokePowerShell
 ms.date: 03/30/2017
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa42cddd930b755e9938a02a137ee77ee273fad0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520243"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538870"
 ---
-# <a name="using-the-invokepowershell-activity"></a>Za pomocą działania InvokePowerShell
-InvokePowerShell przykładowych pokazano, jak można wywołać za pomocą poleceń programu Windows PowerShell `InvokePowerShell` działania.  
+# <a name="using-the-invokepowershell-activity"></a>Używanie działania InvokePowerShell
+Przykładowe InvokePowerShell przedstawia sposób wywołania poleceń programu Windows PowerShell przy użyciu `InvokePowerShell` działania.  
   
 ## <a name="demonstrates"></a>Demonstracje  
   
 -   Proste innowacji poleceń programu Windows PowerShell.  
   
--   Pobieranie wartości z potoku dane wyjściowe programu Windows PowerShell i zapisanie ich w zmiennych przepływu pracy.  
+-   Pobieranie wartości z potoku danych wyjściowych programu Windows PowerShell i zapisanie ich w zmiennych przepływu pracy.  
   
--   Przekazywanie danych w systemie windows PowerShell jako wejściowych potoku wykonywania polecenia.  
+-   Przekazywanie danych do systemu windows PowerShell jako danych wejściowych potoku wykonywania polecenia.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
-## <a name="discussion"></a>Omówienie  
+## <a name="discussion"></a>Dyskusja  
  Ten przykład zawiera następujące trzy projekty.  
   
-|Nazwa projektu|Opis|Główne pliki|  
+|Nazwa projektu|Opis|Pliki główne|  
 |------------------|-----------------|----------------|  
-|CodedClient|Przykładowej aplikacji klienta, który używa działanie programu PowerShell.|-   **Plik program.cs**: programowane tworzy na podstawie sekwencji przepływu pracy, który wywołuje InvokePowerShell działania.|  
-|DesignerClient|Zestaw działań niestandardowych, które zawierają `InvokePowerShell` działań niestandardowych i innych dodatkowych działań niestandardowych i przepływu pracy, który używa ich.|<ul><li>Działania:<br /><br /> <ul><li>**PrintCollection.cs**: działanie pomocnika, która wyświetla wszystkie elementy kolekcji do konsoli.</li><li>**ReadLine.cs**: działaniem pomocnika dla danych wejściowych odczytu z konsoli.</li></ul></li><li>System plików:<br /><br /> <ul><li>**Copy.XAML**: działanie, które kopiuje plik.</li><li>**CreateFile.xaml**: działanie, które tworzy plik.</li><li>**DeleteFile.xaml**: działanie, które usuwa plik.</li><li>**MakeDir.xaml**: działanie, które tworzy katalog.</li><li>**Move.XAML**: działanie, które przenosi plik.</li><li>**ReadFile.xaml**: działanie, które umożliwia odczytanie pliku i zwraca jego zawartość.</li><li>**TestPath.xaml**: działanie, które sprawdza istnienie ścieżki.</li></ul></li><li>Proces:<br /><br /> <ul><li>**GetProcess.xaml**: działanie, które pobiera listę uruchomionych procesów.</li><li>**StopProcess.xaml**: działanie, które zatrzymuje określonego procesu.</li></ul></li><li>**Plik program.cs**: wywołanie Sequence1 przepływu pracy.</li><li>**Sequence1.XAML**: przepływ pracy oparty na sekwencji.</li></ul>|  
-|PowerShell|`InvokePowerShell` Działanie i jego skojarzony projektantów.|Pliki działań<br /><br /> -   **ExecutePowerShell.cs**: logiki główny wykonywania działania.<br />-   **InvokePowerShell.cs**: otokę z logiką wykonywania głównych, zawiera ogólne (wartość zwrotna) i wersji nierodzajową (wartość-return). Jest to interfejs publiczny dla działania.<br />-   **NoPersistZone.cs**: działanie uniemożliwia utrwalanie żadnych działań podrzędnych. Ta klasa jest używana w ramach `InvokePowerShell` implementacji działania uniemożliwi działanie utrwalone pośredniej wykonywania.<br /><br /> Projektant plików:<br /><br /> 1.  **ArgumentDictionaryEditor.cs**: okno dialogowe systemu Windows, który umożliwia użytkownikom edytowanie argumenty `InvokePowerShell` działania.<br />2.  **GenericInvokePowerShellDesigner.xaml** i **GenericInvokePowerShellDesigner.xaml.cs**: Określa wygląd ogólnego `InvokePowerShell` działania w [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].<br />3.  **InvokePowerShellDesigner.xaml** i **InvokePowerShellDesigner.cs**: Określa wygląd nieogólnego `InvokePowerShell` działania w [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].|  
+|CodedClient|Przykładową aplikację klienta, który używa działania programu PowerShell.|-   **Plik program.cs**: programowe tworzy na podstawie sekwencji przepływu pracy, który wywołuje działania InvokePowerShell.|  
+|DesignerClient|Zestaw działań niestandardowych, które zawierają `InvokePowerShell` niestandardowe działanie oraz innych dodatkowych działań niestandardowych i przepływu pracy, który używa tych.|<ul><li>Działania:<br /><br /> <ul><li>**PrintCollection.cs**: działanie pomocnika, która wyświetla wszystkie elementy w kolekcji do konsoli.</li><li>**ReadLine.cs**: pomocnika dotyczące wprowadzania odczytywanie z konsoli.</li></ul></li><li>System plików:<br /><br /> <ul><li>**Copy.XAML**: działanie, które służy do kopiowania pliku.</li><li>**CreateFile.xaml**: działanie, które tworzy plik.</li><li>**DeleteFile.xaml**: działanie, które usuwa plik.</li><li>**MakeDir.xaml**: działanie, które tworzy katalog.</li><li>**Move.XAML**: działania przenoszenia pliku.</li><li>**ReadFile.xaml**: działanie, które odczytuje plik i zwraca jego zawartość.</li><li>**TestPath.xaml**: działanie, które sprawdza istnienie ścieżki.</li></ul></li><li>Proces:<br /><br /> <ul><li>**GetProcess.xaml**: działanie, które pobiera listę uruchomionych procesów.</li><li>**StopProcess.xaml**: działanie, które zatrzymuje określonego procesu.</li></ul></li><li>**Plik program.cs**: wywołuje Sequence1 przepływu pracy.</li><li>**Sequence1.XAML**: przepływ pracy na podstawie sekwencji.</li></ul>|  
+|PowerShell|`InvokePowerShell` Działanie i jego skojarzone projektantów.|Pliki działań<br /><br /> -   **ExecutePowerShell.cs**: logika wykonania głównego działania.<br />-   **InvokePowerShell.cs**: otokę z logiką wykonywania głównych, zawiera ogólny (wartość zwracana) i wersji nieogólnego (zwrotny wartość). Jest to interfejs publiczny dla działania.<br />-   **NoPersistZone.cs**: to działanie zapobiega utrwalanie wszystkie działania podrzędne. Ta klasa jest używana w ramach `InvokePowerShell` implementacji działania, aby uniemożliwić działanie utrwalone w środku wykonywania.<br /><br /> Pliki projektanta:<br /><br /> 1.  **ArgumentDictionaryEditor.cs**: okno dialogowe Windows, który umożliwia użytkownikowi edytowanie argumenty `InvokePowerShell` działania.<br />2.  **GenericInvokePowerShellDesigner.xaml** i **GenericInvokePowerShellDesigner.xaml.cs**: definiuje wygląd ogólnego `InvokePowerShell` działania w [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].<br />3.  **InvokePowerShellDesigner.xaml** i **InvokePowerShellDesigner.cs**: definiuje wygląd elementów nieogólnego `InvokePowerShell` działania w [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].|  
   
- Projektów klienckich omówiono najpierw, ponieważ jest łatwiejsze do zrozumienia funkcji wewnętrznego działania programu PowerShell, po jego użycia jest rozpoznawany.  
+ Projektów klienckich omówiono najpierw się łatwiejsze do zrozumienia funkcje wewnętrzne działanie programu PowerShell, po jego użycie jest zrozumiały.  
   
 ## <a name="using-this-sample"></a>Za pomocą tego przykładu  
- W poniższych sekcjach opisano sposób użycia trzy projekty w próbce.  
+ Poniżej opisano sposób użycia trzy projekty w próbce.  
   
-### <a name="using-the-coded-client-project"></a>Za pomocą programu Project kodowane klienta  
- Klient próbki programowo tworzy działania sequence, który zawiera przykłady kilka różnych metod za pomocą `InvokePowerShell` działania. Pierwsze uruchomienie uruchamia Notatnik.  
+### <a name="using-the-coded-client-project"></a>Za pomocą projektu kodowanego klienta  
+ Klient przykładowy tworzy programowo działania sekwencji, który zawiera przykłady kilka różnych metod przy użyciu `InvokePowerShell` działania. Pierwsze wywołanie powoduje uruchomienie programu Notatnik.  
   
 ```  
 new InvokePowerShell()  
@@ -63,19 +63,19 @@ new InvokePowerShell<Process>()
 },  
 ```  
   
- `Output` zmienna jest używana do przechowywania danych wyjściowych polecenia.  
+ `Output` Zmienna służy do przechowywania danych wyjściowych polecenia.  
   
- Następne wywołanie pokazuje, jak przetwarzanie końcowe krok zostanie uruchomiony na każdej poszczególnych danych wyjściowych wywołania programu PowerShell. `InitializationAction` ustawiono funkcji, które generuje reprezentację ciągu dla każdego procesu. Kolekcja te ciągi, jest zwracany w `Output` zmiennej przez `InvokePowerShell<string>` działania.  
+ Następne wywołanie pokazuje, jak uruchomić krok przetwarzania końcowego na każdy poszczególne dane wyjściowe wywołania programu PowerShell. `InitializationAction` jest ustawiona na funkcję, która generuje reprezentację ciągu znaków dla każdego procesu. Kolekcja tych ciągów jest zwracany w `Output` zmiennej przez `InvokePowerShell<string>` działania.  
   
- Pomyślne `InvokePowerShell` wywołania pokazują przekazywanie danych do działania i pobierania danych wyjściowych i błędów wychodzących.  
+ Pomyślne wykonanie `InvokePowerShell` wywołania zademonstrować przekazywanie danych do działania i pobieranie danych wyjściowych i występuje.  
   
-### <a name="using-the-designer-client-project"></a>Przy użyciu klienta projektanta projektu  
- Projekt DesignerClient składa się z zestawu działań niestandardowych prawie wszystkie są wbudowane, zawierający `InvokePowerShell` działania. Większość działań wywołać wersja nieogólnego `InvokePowerShell` działania i nie oczekuje wartości zwracanej. Inne działania przy użyciu wersji ogólnego `InvokePowerShell` działania i użyj `InitializationAction` argument po przetwarzaniu wyniki.  
+### <a name="using-the-designer-client-project"></a>Za pomocą projektu Projektanta klienta  
+ Projekt DesignerClient składa się z zestawu działań niestandardowych są prawie wszystkie wbudowane zawierający `InvokePowerShell` działania. Większość działań związanych z wywołania nieogólnego wersję `InvokePowerShell` działania i nie powinna mieć wartość zwracaną. Inne działania przy użyciu ogólnych wersji `InvokePowerShell` działanie i użyj `InitializationAction` argument do przetwarzania wyników, po utworzeniu.  
   
-## <a name="using-the-powershell-project"></a>Przy użyciu programu PowerShell projektu  
- Akcja główna działania ma miejsce w `ExecutePowerShell` klasy. Ponieważ wykonanie polecenia programu PowerShell nie powinny blokować wątku głównego przepływu pracy, działanie jest tworzony za działanie asynchroniczne poprzez dziedziczenie z <xref:System.Activities.AsyncCodeActivity> klasy.  
+## <a name="using-the-powershell-project"></a>Za pomocą projektu programu PowerShell  
+ Akcja główna działania odbywa się w `ExecutePowerShell` klasy. Ponieważ wykonanie polecenia programu PowerShell nie powinny blokować wątku głównego przepływu pracy, działanie jest tworzona jako asynchroniczną działania przez dziedziczenie z <xref:System.Activities.AsyncCodeActivity> klasy.  
   
- <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> Metoda jest wywoływana przez środowisko uruchomieniowe przepływu pracy, aby rozpocząć uruchomienia działania. Rozpoczyna się przez wywoływanie interfejsów API środowiska PowerShell, aby utworzyć potok programu PowerShell.  
+ <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> Metoda jest wywoływana przez środowisko wykonawcze przepływów pracy, aby rozpocząć działania. Uruchamia przez wywołanie interfejsów API programu PowerShell w celu utworzenia potoku programu PowerShell.  
   
 ```  
 runspace = RunspaceFactory.CreateRunspace();  
@@ -92,19 +92,19 @@ Command cmd = new Command(this.CommandText, this.IsScript);
 pipeline.Commands.Add(cmd);  
 ```  
   
- Dane wejściowe przekazywane w potoku w są także wysyłane do potoku w tym momencie. Na koniec potoku jest ujęte w `PipelineInvokerAsyncResult` obiektu i zwracane. `PipelineInvokerAsyncResult` Obiektu rejestruje odbiornik i wywołuje potok.  
+ Dane wejściowe potokiem w również są wysyłane do potoku w tym momencie. Na koniec otoczona potoku `PipelineInvokerAsyncResult` obiektu i zwracana. `PipelineInvokerAsyncResult` Obiektu rejestruje odbiornik i wywołuje potok.  
   
 ```  
 pipeline.InvokeAsync();  
 ```  
   
- Po zakończeniu wykonywania, danych wyjściowych i błędów są przechowywane w tym samym `PipelineInvokerAsyncResult` obiektu i kontroli jest zwracane do środowiska uruchomieniowego przepływu pracy, wywołując metodę wywołania zwrotnego oryginalnie przekazana do <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>.  
+ Po zakończeniu wykonywania, dane wyjściowe i błędów są przechowywane w tej samej `PipelineInvokerAsyncResult` obiektu i kontroli jest zwracane do środowiska wykonawczego przepływów pracy za pomocą wywołania metody wywołania zwrotnego pierwotnie przekazana do <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>.  
   
- Po zakończeniu wykonywania metody środowiska uruchomieniowego przepływu pracy wywołuje działania <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> metody.  
+ Na końcu metody wykonywania przepływu pracy środowisko wykonawcze wywołuje działania <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> metody.  
   
- `InvokePowerShell` Klasy zawija `ExecutePowerShellCommand` klasy i tworzy dwie wersje działanie; ogólny wersja oraz wersja nierodzajową. Wersja nieogólnego zwraca dane wyjściowe wykonania programu PowerShell bezpośrednio, natomiast ogólnego wersji przekształca poszczególne wyniki do typu ogólnego.  
+ `InvokePowerShell` Klasy zawija `ExecutePowerShellCommand` klasy i tworzy dwie wersje działanie; ogólny wersja oraz wersja nieogólnego. Wersja nieogólnego zwraca dane wyjściowe wykonania programu PowerShell bezpośrednio, natomiast ogólnego wersji przekształca wyniki poszczególnych do typu ogólnego.  
   
- Wersja ogólnego działania jest zaimplementowany jako sekwencyjnego przepływu pracy, który wywołuje `ExecutePowerShellCommand` i przetwarza po jego wyniki. Dla każdego elementu w kolekcji wynik przetwarzania końcowego krok wywołuje `InitializationAction` Jeśli jest ustawiona. W przeciwnym razie ma prosty rzutowania.  
+ Wersja ogólnego działania jest implementowany jako sekwencyjny przepływ pracy, który wywołuje `ExecutePowerShellCommand` i przetwarza po jego wyniki. Dla każdego elementu w kolekcji wynik wywołania krok przetwarzania końcowego `InitializationAction` Jeśli jest ustawiona. W przeciwnym razie jest proste rzutowania.  
   
 ```  
 new ForEach<PSObject>  
@@ -143,7 +143,7 @@ new ForEach<PSObject>
 },  
 ```  
   
- Dla każdego z tych `InvokePowerShell` działania (ogólne i inny niż ogólny), projektanta został utworzony. InvokePowerShellDesigner.xaml i jego plik skojarzony CS określenia jej wyglądu w [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] wersji nieogólnego `InvokePowerShell` działania. Wewnątrz InvokePowerShellDesigner.xaml <xref:System.Windows.Controls.DockPanel> jest używana do reprezentowania interfejsu graficznego.  
+ Dla każdego z dwóch `InvokePowerShell` działań (ogólnych i nieogólnego), Projektant został utworzony. InvokePowerShellDesigner.xaml i jego pliku .cs skojarzone zdefiniować wygląd w [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] nieogólnego wersję `InvokePowerShell` działania. Wewnątrz InvokePowerShellDesigner.xaml <xref:System.Windows.Controls.DockPanel> jest używana do reprezentowania interfejsu graficznego.  
   
 ```  
 <DockPanel x:Uid="DockPanel_1" LastChildFill="True">  
@@ -154,9 +154,9 @@ new ForEach<PSObject>
     </DockPanel>  
 ```  
   
- Należy pamiętać, że `Text` właściwości pola tekstowego jest wiązanie dwukierunkowe, który zapewnia, że wartość działania `CommandText` właściwości jest odpowiednikiem wartości danych wejściowych do projektanta.  
+ Należy pamiętać, że `Text` właściwości pola tekstowego jest dwukierunkowego powiązania, które zapewnia, że wartość tego działania `CommandText` właściwość jest równoważna wartości danych wejściowych do projektanta.  
   
- GenericInvokePowerShellDesigner.xaml i jego plik skojarzony CS definiują interfejsu graficznego dla ogólnego `InvokePowerShell` działania. Projektant jest nieco bardziej skomplikowane, ponieważ umożliwia użytkownikom ustawianie `InitializationAction`. Użycie jest kluczowym elementem <xref:System.Activities.Presentation.WorkflowItemPresenter> zezwalająca przeciągnij i upuść działań podrzędnych na `InvokePowerShell` powierzchnię projektanta.  
+ GenericInvokePowerShellDesigner.xaml i jego pliku .cs skojarzone definiują interfejs graficzny dla ogólnego `InvokePowerShell` działania. Projektant jest nieco bardziej skomplikowane, ponieważ umożliwia użytkownikom ustawienie `InitializationAction`. Kluczowym elementem jest użycie <xref:System.Activities.Presentation.WorkflowItemPresenter> umożliwia przeciąganie i upuszczanie działania podrzędne na `InvokePowerShell` powierzchni projektowej.  
   
 ```  
 <sap:WorkflowItemPresenter x:Uid="sap:WorkflowItemPresenter_1" Margin="0,10,0,10"  
@@ -166,18 +166,18 @@ new ForEach<PSObject>
     Grid.Row="1" Grid.Column="1" />  
 ```  
   
- Dostosowywanie projektanta nie zatrzymuje z plikami .xaml definiujących wygląd działania w obszarze roboczym projekt. Okna dialogowe używany do wyświetlania parametry działania można również dostosować. Te parametry i zmienne środowiska PowerShell wpływają na zachowanie poleceń programu PowerShell. Działanie udostępnia je jako <!--zz <xref:System.Collections.Generic.Dictionary%601>--> `System.Collections.Generic.Dictionary` typów. ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml i PropertyEditorResources.cs zdefiniować okno dialogowe, które umożliwia edytowanie tych typów.  
+ Dostosowywanie projektanta nie zatrzymuje się z plikami XAML zdefiniować wygląd działania na kanwę projektu. Okna dialogowe, używany do wyświetlania parametrów działania można również dostosować. Te parametry i zmienne programu PowerShell mają wpływ na zachowanie poleceń programu PowerShell. Działanie udostępnia je jako <!--zz <xref:System.Collections.Generic.Dictionary%601>--> `System.Collections.Generic.Dictionary` typów. ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml i PropertyEditorResources.cs zdefiniować okno dialogowe, które służy do edytowania tych typów.  
   
-## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
- Należy zainstalować program Windows PowerShell, aby uruchomić ten przykład. Z tej lokalizacji można zainstalować programu Windows PowerShell: [programu Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383).  
+## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+ Należy zainstalować program Windows PowerShell, aby uruchomić ten przykład. Windows PowerShell można zainstalować z tej lokalizacji: [programu Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=150383).  
   
-#### <a name="to-run-the-coded-client"></a>Do uruchomienia kodowanych klienta  
+#### <a name="to-run-the-coded-client"></a>Aby uruchomić kodowane klienta  
   
 1.  Otwórz za pomocą PowerShell.sln [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Kliknij prawym przyciskiem myszy rozwiązanie i jego tworzenia.  
+2.  Kliknij prawym przyciskiem myszy rozwiązanie i skompiluj je.  
   
-3.  Kliknij prawym przyciskiem myszy **CodedClient** projekt i wybierz **Ustaw jako projekt startowy**.  
+3.  Kliknij prawym przyciskiem myszy **CodedClient** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
   
 4.  Naciśnij klawisze CTRL + F5, aby uruchomić aplikację.  
   
@@ -185,25 +185,25 @@ new ForEach<PSObject>
   
 1.  Otwórz za pomocą PowerShell.sln [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Kliknij prawym przyciskiem myszy rozwiązanie i jego tworzenia.  
+2.  Kliknij prawym przyciskiem myszy rozwiązanie i skompiluj je.  
   
-3.  Kliknij prawym przyciskiem myszy **DesignerClient** projekt i wybierz **Ustaw jako projekt startowy**.  
+3.  Kliknij prawym przyciskiem myszy **DesignerClient** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
   
 4.  Naciśnij klawisze CTRL + F5, aby uruchomić aplikację.  
   
 ## <a name="known-issues"></a>Znane problemy  
   
-1.  Jeśli odwołuje się do `InvokePowerShell` zestawu działań lub projektu z innego projektu spowoduje błąd kompilacji, może być konieczne ręczne dodanie `<SpecificVersion>True</SpecificVersion>` elementu do pliku .csproj nowy projekt w wierszu, który odwołuje się do `InvokePowerShell`.  
+1.  Jeśli odwołanie do `InvokePowerShell` zestawu działań lub projekt z innego projektu spowoduje błąd kompilacji, może być konieczne ręczne dodawanie `<SpecificVersion>True</SpecificVersion>` elementu do nowego projektu w wierszu, który odwołuje się plik .csproj `InvokePowerShell`.  
   
-2.  Jeśli nie zainstalowano programu Windows PowerShell, komunikat o błędzie jest wyświetlany w programie Visual Studio, natychmiast po dodaniu `InvokePowerShell` działania do przepływu pracy: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
+2.  Jeśli nie zainstalowano programu Windows PowerShell, następujący komunikat o błędzie jest wyświetlany w programie Visual Studio, zaraz po dodaniu `InvokePowerShell` działanie do przepływu pracy: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
   
-3.  W programie Windows PowerShell 2.0 programowo wywoływania `$input.MoveNext()` kończy się niepowodzeniem i skrypty, używając `$input.MoveNext()` niezamierzone błędów i wyników. Aby obejść ten problem, należy wziąć pod uwagę przy użyciu programu PowerShell zlecenie `foreach` zamiast wywoływać metodę `MoveNext()` podczas iteracji tablicy.  
+3.  W programie Windows PowerShell 2.0 programowo wywoływania `$input.MoveNext()` kończy się niepowodzeniem i skrypty, używając `$input.MoveNext()` generuje błędy niezamierzone i wyników. Aby obejść ten problem, należy rozważyć użycie zlecenie PowerShell `foreach` zamiast wywoływać metodę `MoveNext()` podczas iteracji tablicy.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

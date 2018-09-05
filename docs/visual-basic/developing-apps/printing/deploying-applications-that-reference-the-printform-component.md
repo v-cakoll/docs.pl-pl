@@ -5,11 +5,11 @@ helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
 ms.openlocfilehash: 6384ad6e3bf0520362267eddc8f7bbb05b37f283
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400429"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557164"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Wdrażanie aplikacji, które odwołują się do wyniku składnik PrintForm (Visual Basic)
 Jeśli chcesz wdrożyć aplikację, która odwołuje się <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> składnik składnika musi być zainstalowany na komputerze docelowym.  

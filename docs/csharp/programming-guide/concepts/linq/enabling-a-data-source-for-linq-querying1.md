@@ -2,12 +2,12 @@
 title: Włączanie źródła danych dla LINQ Querying1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221000"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541721"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Włączanie źródła danych do zapytań LINQ
 Istnieją różne sposoby rozszerzania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] umożliwiające dowolnego źródła danych można wykonać zapytania w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wzorca. Źródłem danych może być między innymi struktura danych, usługi sieci Web, system plików lub baza danych. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Wzorzec ułatwia klientom badanie źródła danych, dla którego [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytań jest włączony, ponieważ składnia i wzorzec kwerendy nie zmienia się. W ten sposób [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] można rozszerzyć do tych danych źródeł obejmują następujące elementy:  
@@ -39,9 +39,10 @@ Istnieją różne sposoby rozszerzania [!INCLUDE[vbteclinq](~/includes/vbteclinq
   
  Złożony `IQueryable` dostawcy, takich jak [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] dostawcy, może tłumaczyć kompletne [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania wyrażeniowy język zapytań, takich jak SQL. Złożony dostawca jest bardziej ogólny niż dostawca mniej skomplikowany, ponieważ może obsługiwać szerszą gamy pytań w kwerendzie. Ma także system typu otwartego i dlatego musi zawierać rozległe infrastruktury do mapowania typów zdefiniowanych przez użytkownika. Opracowywanie złożonego dostawcy wymaga znacznej ilości wysiłku.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Linq.IQueryable%601>  
- <xref:System.Collections.Generic.IEnumerable%601>  
- <xref:System.Linq.Enumerable>  
- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Linq.IQueryable%601>  
+- <xref:System.Collections.Generic.IEnumerable%601>  
+- <xref:System.Linq.Enumerable>  
+- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

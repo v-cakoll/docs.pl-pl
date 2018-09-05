@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 875a9f3a20b7bb5e66ecf3f6b5e3b3cf229e2bf9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481068"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659812"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementacja wzorca kontrolki dokowania automatyzacji interfejsu użytkownika
 > [!NOTE]

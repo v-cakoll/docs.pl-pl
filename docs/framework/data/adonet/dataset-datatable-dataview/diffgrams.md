@@ -3,11 +3,11 @@ title: DataSets
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: fd452efff2a26b66c06a7762b215df140047286d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402050"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558330"
 ---
 # <a name="diffgrams"></a>DataSets
 Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna wersja elementów danych. <xref:System.Data.DataSet> Używa formatu w formacie DiffGram do ładowania i utrzymują się jego zawartość i do wykonywania serializacji jego zawartość dla transportu połączenia sieciowego. Gdy <xref:System.Data.DataSet> są zapisywane jako element w formacie DiffGram, wypełnia ją w formacie DiffGram wszystkie niezbędne informacje dokładnie odtworzyć zawartość, jednak nie schematu z <xref:System.Data.DataSet>, w tym wartości kolumn z obu **oryginalnego** i **bieżącego** wersji wierszy, informacje o błędzie wiersza i kolejności wierszy.  

@@ -11,11 +11,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 178d1d39e0301a4d2fefa17c3ffca77575c7b137
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482766"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556147"
 ---
 # <a name="ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika
 > [!NOTE]

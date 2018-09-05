@@ -1,28 +1,28 @@
 ---
-title: Tworzenie dokumentu źródłowego Office Open XML (C#)
+title: Tworzenie źródłowego dokumentu Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: c5884d1e34558d01be4c873c3f44222396e588ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7941864e5dc2401a27df151c8c7806218609fcd4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324502"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558236"
 ---
-# <a name="creating-the-source-office-open-xml-document-c"></a>Tworzenie dokumentu źródłowego Office Open XML (C#)
-W tym temacie przedstawiono sposób tworzenia dokumentu schemat WordprocessingML Office Open XML używanego przez inne przykłady w tym samouczku. Jeśli wykonaj te instrukcje, danych wyjściowych będzie zgodny w każdym przykładzie danych wyjściowych.  
+# <a name="creating-the-source-office-open-xml-document-c"></a>Tworzenie źródłowego dokumentu Office Open XML (C#)
+W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML WordprocessingML, używanego przez inne przykłady w tym samouczku. Jeśli wykonasz te instrukcje, dane wyjściowe będą zgodne dane wyjściowe w każdym przykładzie.  
   
- Jednak przykłady w tym samouczku będzie działać z dowolnego prawidłowego dokumentu schemat WordprocessingML.  
+ Jednak na potrzeby przykładów w tym samouczku będą działać z dowolny prawidłowy dokument WordprocessingML.  
   
- Aby utworzyć dokument, który korzysta z tego samouczka, muszą mieć Microsoft Office 2007 lub nowszej lub Microsoft Office 2003 z pakietu Microsoft Office zgodności musi mieć dla programów Word, Excel i PowerPoint 2007.  
+ Aby utworzyć dokument, który korzysta z tego samouczka, musi mieć pakietu Microsoft Office 2007 lub nowszy zainstalowany lub konieczne jest posiadanie programu Microsoft Office 2003 za pomocą pakietu Microsoft Office zgodności dla programu Word, Excel i PowerPoint 2007 formatów.  
   
-## <a name="creating-the-wordprocessingml-document"></a>Tworzenie dokumentu schemat WordprocessingML  
+## <a name="creating-the-wordprocessingml-document"></a>Tworzenie dokumentu WordprocessingML  
   
-#### <a name="to-create-the-wordprocessingml-document"></a>Aby utworzyć schemat WordprocessingML dokumentu  
+#### <a name="to-create-the-wordprocessingml-document"></a>Aby utworzyć dokument WordprocessingML  
   
 1.  Utwórz nowy dokument programu Microsoft Word.  
   
-2.  Wklej poniższy tekst do nowego dokumentu:  
+2.  Wklej następujący tekst do nowego dokumentu:  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,16 +42,17 @@ W tym temacie przedstawiono sposób tworzenia dokumentu schemat WordprocessingML
     Hello World  
     ```  
   
-3.  Pierwszy wiersz należy sformatować przy użyciu stylu "Nagłówek 1".  
+3.  Formatuj pierwszy wiersz ze stylem "Nagłówek 1".  
   
-4.  Wybierz wiersze, które zawierają kod C#. Pierwszy wiersz rozpoczyna się od `using` — słowo kluczowe. Ostatni wiersz jest ostatnim zamykający nawias klamrowy. Formatuj linie czcionką courier. Sformatowane nowy styl i nazwę nowego stylu 'Code'.  
+4.  Wybierz wiersze, które zawierają kod C#. Pierwszy wiersz zaczyna się od `using` — słowo kluczowe. Ostatni wiersz jest ostatni nawias zamykający. Formatuj wierszy przy użyciu czcionki courier. Formatuj je przy użyciu nowego stylu i nazwę nowego stylu "Code".  
   
-5.  Na koniec wybierz cały wiersz, który zawiera dane wyjściowe i sformatować go przy użyciu `Code` stylu.  
+5.  Na koniec zaznacz całą linię, która zawiera dane wyjściowe i sformatować je za pomocą `Code` stylu.  
   
-6.  Zapisz dokument i nadaj mu nazwę SampleDoc.docx.  
+6.  Zapisz dokument, a następnie nadaj mu nazwę SampleDoc.docx.  
   
     > [!NOTE]
-    >  Jeśli korzystasz z programu Microsoft Word 2003, wybierz **dokument programu Word 2007** w **Zapisz jako typ** listy rozwijanej.  
+    >  Jeśli używasz programu Microsoft Word 2003, wybierz opcję **dokument programu Word 2007** w **Zapisz jako typ** listy rozwijanej.  
   
-## <a name="see-also"></a>Zobacz też  
- [Samouczek: Manipulowanie zawartości w dokumencie schemat WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

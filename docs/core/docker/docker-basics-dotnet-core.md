@@ -6,23 +6,23 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 02b6b3fc9e149f5d1d5d78e310c7df257be983c1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 543b9454e826022a72752d9a24bc43b77d2501f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961550"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558728"
 ---
 # <a name="learn-docker-basics-with-net-core"></a>Dowiedz się, podstawy platformy Docker z platformą .NET Core
 
-W tym samouczku pokazano Docker kontenera, twórz i wdrażaj zadania dla aplikacji .NET Core. W trakcie tego samouczka dowiesz się:
+W tym samouczku pokazano Docker kontenera, twórz i wdrażaj zadania dla aplikacji .NET Core. [Platforma Docker](https://docs.docker.com/engine/docker-overview/#the-docker-platform) używa [aparat platformy Docker](https://docs.docker.com/engine/docker-overview/#docker-engine) umożliwiają szybkie tworzenie i pakowanie aplikacji jako [obrazów platformy Docker](https://docs.docker.com/glossary/?term=image). Te obrazy są zapisywane [pliku Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) format zostaną wdrożone i uruchomione [warstwie kontenerów](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
+
+W trakcie tego samouczka dowiesz się:
 
 > [!div class="checklist"]
 > * Jak utworzyć plik Dockerfile
 > * Jak utworzyć aplikację platformy .NET Core.
 > * Jak wdrożyć aplikację w kontenerze platformy Docker.
-
-[Platforma Docker](https://docs.docker.com/engine/docker-overview/#the-docker-platform) używa [aparat platformy Docker](https://docs.docker.com/engine/docker-overview/#docker-engine) umożliwiają szybkie tworzenie i pakowanie aplikacji jako [obrazów platformy Docker](https://docs.docker.com/glossary/?term=image). Te obrazy są zapisywane [pliku Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) format zostaną wdrożone i uruchomione [warstwie kontenerów](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
 
 ## <a name="net-core-easiest-way-to-get-started"></a>.NET core: Najłatwiejszym sposobem na rozpoczęcie pracy
 
@@ -283,7 +283,7 @@ Następujące obrazy platformy Docker są używane w tym przykładzie
 
 ## <a name="related-resources"></a>Powiązane zasoby
 
-* [Przykłady Docker w programie .NET core](https://github.com/dotnet/dotnet-docker-samples/README.md)
+* [Przykłady Docker w programie .NET core](https://github.com/dotnet/dotnet-docker/tree/master/samples)
 * [Plik Dockerfile kontenerów Windows](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Przykłady Docker w programie .NET framework](https://github.com/Microsoft/dotnet-framework-docker-samples)
 * [Platforma ASP.NET Core w witrynie DockerHub](https://hub.docker.com/r/microsoft/aspnetcore/)

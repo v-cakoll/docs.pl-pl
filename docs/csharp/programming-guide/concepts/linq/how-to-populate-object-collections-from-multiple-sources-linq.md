@@ -2,27 +2,27 @@
 title: 'Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 5f0c0e92c7448eebc6f395fcdb16cfca840bb2ea
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 377b4a21c78be2b53d2bcd0e88d39d06609c462b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071087"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536041"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)
 
 W tym przykładzie przedstawiono sposób scalania danych z różnych źródeł w sekwencji nowych typów.
 
 > [!NOTE]
-> Nie należy próbować dołączyć dane w pamięci lub dane w systemie plików z danymi, które jest nadal w bazie danych. Takie sprzężenia między domenami może spowodować niezdefiniowane wyniki ze względu na różne sposoby, w którym można zdefiniować operacji łączenia dla zapytań bazy danych i innych źródeł. Ponadto istnieje ryzyko, że takie działanie może spowodować wyjątek braku pamięci, jeżeli jest wystarczająco duże ilości danych w bazie danych. Aby dołączyć dane z bazy danych do danych w pamięci, należy najpierw wywołać `ToList` lub `ToArray` w bazie danych zapytania, a następnie wykonaj sprzężenia w zwracanej kolekcji.
+> Nie należy próbować dołączyć dane w pamięci lub dane w systemie plików z danymi, które są nadal w bazie danych. Takie sprzężeń między domenami może przynieść niezdefiniowane wyniki ze względu na różne sposoby, w którym można zdefiniować operacji łączenia zapytań bazy danych i innych typów źródeł. Ponadto istnieje ryzyko, takie działanie może spowodować wyjątek braku pamięci, gdy ilość danych w bazie danych jest wystarczająco duży. Aby dołączyć dane z bazy danych do danych w pamięci, należy najpierw wywołać `ToList` lub `ToArray` w bazie danych zapytania, a następnie wykonaj sprzężenia na zwrócona kolekcja.
 
 ## <a name="to-create-the-data-file"></a>Aby utworzyć plik danych
 
-Skopiuj pliki names.csv i scores.csv do folderu projektu, zgodnie z opisem w [porady: Dołącz zawartości z plikami niepodobnych (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+Skopiuj pliki names.csv i scores.csv w folderze projektu, zgodnie z opisem w [jak: Dołącz do zawartości z plikami niepodobnych (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia użycie typu o nazwie `Student` do przechowywania danych scalone z dwie kolekcje w pamięci ciągów symulujących danych z arkusza kalkulacyjnego w formacie CSV. Pierwsza kolekcja ciągów reprezentuje uczniów nazwy i identyfikatory, a druga kolekcja — identyfikator uczniów (w pierwszej kolumnie) i cztery egzaminu wyniki. Ten identyfikator jest używany jako klucz obcy.
+Poniższy przykład pokazuje, jak używać typu nazwanego `Student` do przechowywania scalane dane z dwóch kolekcji w pamięci ciągów, które symulują dane arkusza kalkulacyjnego w formacie CSV. Pierwsza kolekcja ciągów reprezentuje identyfikatory i nazwy studentów, a druga kolekcja reprezentuje identyfikator uczniów (w pierwszej kolumnie) i cztery wyniki egzamin. Identyfikator jest używany jako klucza obcego.
 
 ```csharp
 using System;
@@ -107,9 +107,9 @@ class PopulateCollection
  */
 ```
 
-W [wybierz](../../../../csharp/language-reference/keywords/select-clause.md) , inicjatora obiektów jest używana do każdego nowego wystąpienia `Student` obiektu przy użyciu danych z dwóch źródeł.
+W [wybierz](../../../../csharp/language-reference/keywords/select-clause.md) klauzuli inicjatora obiektu jest używany do utworzenia wystąpienia każdy nowość `Student` obiektu przy użyciu danych z dwóch źródeł.
 
-Jeśli nie masz do przechowywania wyników zapytania, może być wygodniejsze niż nazwanymi typami typy anonimowe. Nazwane typy są wymagane w przypadku przekazania wyników zapytania poza metodą wykonywania zapytania. Poniższy przykład wykonuje tego samego zadania, co w poprzednim przykładzie, ale używa typy anonimowe zamiast typów o nazwie:
+Jeśli nie masz do przechowywania wyników zapytania, typy anonimowe może być bardziej wygodne niż nazwane typy. Nazwane typy są wymagane w przypadku przekazania wyników zapytania, poza metodą wykonywania zapytania. Poniższy przykład wykonuje tego samego zadania, jak w poprzednim przykładzie, ale używa typów anonimowych zamiast nazwane typy:
 
 ```csharp
 // Merge the data sources by using an anonymous type.
@@ -143,12 +143,12 @@ foreach (var student in queryNamesScores2)
 
 Utwórz i skompiluj projekt, który jest przeznaczony dla jednego z następujących opcji:
 
-- .NET framework w wersji 3.5 z odwołania do System.Core.dll.
+- .NET framework w wersji 3.5 za pomocą odwołania do System.Core.dll.
 - .NET framework w wersji 4.0 lub nowszy.
-- Wersja platformy .NET core wersji 1.0 lub nowszej.
+- .NET core w wersji 1.0 lub nowszej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-[Inicjatory obiektów i kolekcji](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-[Typy anonimowe](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [Inicjatory obiektów i kolekcji](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [Typy anonimowe](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  

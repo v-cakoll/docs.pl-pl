@@ -1,19 +1,19 @@
 ---
-title: 'Porady: tworzenie złożenia C i C++ za pomocą atrybutów (C#)'
+title: 'Porady: tworzenie Unii C-C++ za pomocą atrybutów (C#)'
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: 30a8be9021495aa4cf61010508762999cdf91ff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315844"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558008"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Porady: tworzenie złożenia C/C++ za pomocą atrybutów (C#)
-Za pomocą atrybutów można dostosować sposób struktury są określone w pamięci. Na przykład można utworzyć, co jest nazywane Unii w języku C/C++ za pomocą `StructLayout(LayoutKind.Explicit)` i `FieldOffset` atrybutów.  
+Za pomocą atrybutów można dostosować, jak struktury są ułożone w pamięci. Na przykład można utworzyć, co jest nazywane Unia w języku C/C++ za pomocą `StructLayout(LayoutKind.Explicit)` i `FieldOffset` atrybutów.  
   
 ## <a name="example"></a>Przykład  
- W tym segmencie kodu, wszystkie pola z `TestUnion` uruchomić w tej samej lokalizacji w pamięci.  
+ W tym segmencie kodu, wszystkie pola z `TestUnion` rozpoczynają się od tej samej lokalizacji w pamięci.  
   
 ```csharp  
 // Add a using directive for System.Runtime.InteropServices.  
@@ -36,7 +36,7 @@ Za pomocą atrybutów można dostosować sposób struktury są określone w pami
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się przykład innego gdzie pola zaczynają się w różnych jawnie ustawić lokalizacje.  
+ Oto inny przykład gdzie pola zaczynają się w różnych jawnie ustawić lokalizacje.  
   
 ```csharp  
 // Add a using directive for System.Runtime.InteropServices.  
@@ -64,14 +64,15 @@ Za pomocą atrybutów można dostosować sposób struktury są określone w pami
        }  
 ```  
   
- Pola dwóch całkowitą `i1` i `i2`, udostępniać te same lokalizacje pamięci jako `lg`. Tego rodzaju kontrolę nad układzie struktury jest przydatne, gdy za pomocą wywołania platformy.  
+ Pola dwóch liczb całkowitych, `i1` i `i2`, Udostępnij te same lokalizacje pamięci jako `lg`. Tego rodzaju kontrolę nad układzie struktury jest przydatne, gdy za pomocą wywołania platformy.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)  
- [Atrybuty](../../../../../docs/standard/attributes/index.md)  
- [Odbicie (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Atrybuty (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Tworzenie atrybutów niestandardowych (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)  
+- [Atrybuty](../../../../../docs/standard/attributes/index.md)  
+- [Odbicie (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [Atrybuty (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [Tworzenie atrybutów niestandardowych (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

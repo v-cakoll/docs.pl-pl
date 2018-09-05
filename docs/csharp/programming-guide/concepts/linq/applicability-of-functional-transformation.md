@@ -1,38 +1,39 @@
 ---
-title: Zastosowanie transformacji funkcjonalności (C#)
+title: Zastosowanie przekształcania funkcjonalnego (C#)
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-ms.openlocfilehash: b913c8e43c5e7a9ede6cb693ff6d3c34f3631607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: baa3866c8c2c148a3080522d7c02e28e9d0fd945
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319154"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661051"
 ---
-# <a name="applicability-of-functional-transformation-c"></a>Zastosowanie transformacji funkcjonalności (C#)
-Czysty przekształcenia funkcjonalności mają zastosowanie w różnych sytuacjach.  
+# <a name="applicability-of-functional-transformation-c"></a>Zastosowanie przekształcania funkcjonalnego (C#)
+Czyste Przekształcanie funkcjonalne mają zastosowanie w wielu różnych sytuacjach.  
   
- Metoda przekształcania funkcjonalności doskonale nadaje się do badania i manipulowania nimi danych strukturalnych; w związku z tym mieścił się prawidłowo w technologii LINQ. Jednak funkcjonalności przekształcania ma znacznie większą zastosowania niż LINQ. Żaden proces, w którym głównego skoncentrować się na przekształcenia danych z jednej formy prawdopodobnie należy traktować jako potencjalny funkcjonalności transformacji.  
+ Przekształcanie funkcjonalne podejście idealnie nadaje się do wykonywania zapytań i manipulowania ustrukturyzowanych danych; w związku z tym dopasowuje również przy użyciu technologii LINQ. Przekształcanie funkcjonalne ma jednak znacznie szerszy stosowania niż korzystanie z LINQ. Prawdopodobnie należy rozważyć żaden proces, której głównym celem jest przekształcania danych z jednego formularza jako kandydat do Przekształcanie funkcjonalne.  
   
- Takie podejście ma zastosowanie do wiele problemów, które nie mogą być wyświetlane na pierwszy rzut oka jako kandydata. Używane w połączeniu ze LINQ, lub oddzielnie, przekształcania funkcjonalności należy rozważyć obejmujące następujące zagadnienia:  
+ Takie podejście stosuje się do wielu problemów, które nie mogą być wyświetlane na pierwszy rzut oka jako kandydata. Używany w połączeniu z LINQ, lub oddzielnie, przekształcanie funkcjonalne mają być uwzględniane w następujących obszarach:  
   
--   Dokumenty opartych na języku XML. Poprawnie sformułowanych danych dowolnego dialekt XML może manipulować łatwo za pomocą przekształcania funkcjonalności. Aby uzyskać więcej informacji, zobacz [funkcjonalności transformacji XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
+-   Oparte na języku XML dokumenty. Poprawnie sformułowanych danych dowolnego dialekt XML można łatwo modyfikować poprzez przekształcanie funkcjonalne. Aby uzyskać więcej informacji, zobacz [funkcjonalności transformacji XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
   
--   Inne formaty plików strukturalnych. Z plików Windows.ini do dokumentów w formacie zwykłego tekstu większość plików ma niektórych strukturę, która pozwala na analizy i przekształcania.  
+-   Inne formaty plików ze strukturą. Z plików Windows.ini do dokumentów w formacie zwykłego tekstu większość plików mają pewne struktury, która pozwala na analizy i przekształcania.  
   
--   Dane protokołów przesyłania strumieniowego. Dane kodowania i dekodowania danych z protokołów komunikacyjnych często może być reprezentowany przez prosty przekształcenia funkcjonalności.  
+-   Protokołów przesyłania strumieniowego danych. Dane kodowania i dekodowania danych z protokołów komunikacyjnych często może być reprezentowany przez proste przekształcanie funkcjonalne.  
   
--   RDBMS i OODBMS dane. Relacyjnych i zorientowanym obiektowo baz danych, podobnie jak XML, są powszechnie używane dane strukturalne źródeł.  
+-   System RDBMS i OODBMS dane. Relacyjne i zorientowane obiektowo baz danych, tak jak XML, są powszechnie używane danych strukturalnych źródeł.  
   
--   Mathematic, statystyki i naukowe rozwiązania. Zwykle tych pól do manipulowania dużych zestawów danych ułatwiających użytkownika wizualizacji, szacowanie lub faktycznie Rozwiązywanie problemów z systemem innym niż prosta.  
+-   Rozwiązania matematycznych, statystyk i analizy. Te pola są zwykle do manipulowania dużych zestawów danych, aby pomóc użytkownikowi w wizualizacji, szacowanie lub faktycznie Rozwiązywanie problemów z nietrywialnymi.  
   
- Zgodnie z opisem w [refaktoryzacji do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md), przy użyciu czystych funkcji jest przykładem programowanie funkcjonalne. W dodatkowych do ich natychmiastowe korzyści przy użyciu czystych funkcji zapewnia przydatna w myślenia o problemach z punktu widzenia funkcjonalności transformacji. Takie podejście również może mieć istotny wpływ na projekt programu i klasy. Jest to szczególnie istotne, gdy problem pozwala na rozwiązanie przekształcania danych zgodnie z powyższym opisem.  
+ Zgodnie z opisem w [Refaktoryzacja do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md), przy użyciu czystej funkcji znajduje się przykład programowania funkcjonalnego. W dodatkowej ich natychmiastowe korzyści przy użyciu czystej funkcji udostępnia cenne doświadczenie w myśleć o problemach z punktu widzenia Przekształcanie funkcjonalne. Takie podejście może mieć istotny wpływ na program i klasy projektu. Jest to szczególnie istotne w przypadku, gdy problem jest przydatna w rozwiązaniu przekształcania danych zgodnie z powyższym opisem.  
   
- Chociaż są one poza zakres tego samouczka, projekty, które wpływało funkcjonalności transformacja perspektywy mają tendencję do środka na procesy więcej niż na obiekty jako złośliwych użytkowników i wynikowa rozwiązania zwykle wdrażane jako serię na dużą skalę przekształcenia w odróżnieniu od zmian stanu pojedynczego obiektu.  
+ Mimo że są one poza zakres tego samouczka, projekty, które wpływało perspektywy Przekształcanie funkcjonalne mają tendencję do Centrum na więcej niż na obiekty aktorów procesy, a wynikowy rozwiązania zwykle można zaimplementować jako serię na dużą skalę przekształcenia, a nie pojedynczego obiektu po zmianie stanu.  
   
- Ponownie należy pamiętać, że C# obsługuje zarówno nadrzędnych, jak i funkcjonalności podejścia, dlatego najlepiej projekt aplikacji może uwzględniać oba elementy.  
+ Ponownie należy pamiętać, że języka C# obsługuje podejścia imperatywnego i funkcjonalności, dzięki czemu najlepsze projekt aplikacji może uwzględniać oba elementy.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do przekształcenia funkcjonalności Pure (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Funkcjonalności transformacji XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
- [Refaktoryzacja do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Wprowadzenie do czystych przekształceń funkcjonalnych (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Przekształcanie funkcjonalne kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
+- [Refaktoryzacja do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

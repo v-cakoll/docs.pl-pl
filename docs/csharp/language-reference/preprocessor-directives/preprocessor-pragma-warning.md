@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
 ms.openlocfilehash: 89ff8151d55ac58a1b114f7727297704ce26b9a7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481933"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557608"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (odwołanie w C#)
 Dyrektywa `#pragma warning` służy do włączania i wyłączania określonych ostrzeżeń.  

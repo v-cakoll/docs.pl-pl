@@ -14,11 +14,11 @@ ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 748b4170e9e4c0df048c542d06bcb64a56ccf677
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254649"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541595"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Wykonywanie operacji na ciągach niezależnych od kultury
 Większość metod .NET Framework, które wykonują operacje na ciągach wrażliwych na kulturę domyślnie zapewniają przeciążenia metody, które pozwalają na określenie jawnie kultura używana przez przekazanie <xref:System.Globalization.CultureInfo> parametru. Te przeciążone funkcje umożliwiają wyeliminować różnice kulturowe w przypadku mapowania i sortowanie reguł i zagwarantować wyników niezależnych od kultury.  

@@ -9,97 +9,97 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208459"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540089"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Dwukierunkowa obsługa aplikacji Windows Forms
-Visual Studio służy do tworzenia aplikacji opartych na systemie Windows, które obsługują dwukierunkowego (od prawej do lewej) języków, takich jak arabski i hebrajski. Obejmuje to standardowych formularzy, okien dialogowych, formularze MDI i wszystkie formanty można pracować w nich — to znaczy, że wszystkie obiekty w <xref:System.Windows.Forms.Control> przestrzeni nazw.  
+Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługują dwukierunkowej języków (od prawej do lewej), takich jak arabski i hebrajski. W tym standardowych formularzy, okna dialogowe, formularze MDI i wszystkich kontrolek, można pracować w nich — oznacza to, że wszystkie obiekty w <xref:System.Windows.Forms.Control> przestrzeni nazw.  
   
 ## <a name="culture-support"></a>Obsługa kultury  
- Culture i ustawienia kultury interfejsu użytkownika należy ustalić, jak aplikacja działa z daty, godziny, waluty i inne informacje. Obsługa kultury i kultury interfejsu użytkownika jest taka sama dla języków dwukierunkowych, podobnie jak w przypadku innych języków.   Zobacz też [klasy specyficzne dla kultury dla globalnych formularzy systemu Windows i formularzy sieci Web](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) lub [klasy specyficzne dla kultury dla globalnych formularzy systemu Windows i formularzy sieci Web](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
+ Kultura i ustawienia kultury interfejsu użytkownika można określić za pomocą daty, godziny, waluty i inne informacje, jak działa aplikacja. Obsługa kultury i kultury UI, jest taka sama dla języków dwukierunkowych, podobnie jak w przypadku innych języków.   Zobacz też [klasy specyficzne dla kultury dla globalnych formularzy Windows i formularzy sieci Web](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) lub [klasy specyficzne dla kultury dla globalnych formularzy Windows i formularzy sieci Web](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft i właściwości RightToLeftLayout zostanie zmieniona  
- Podstawowym <xref:System.Windows.Forms.Control> zawiera klasy, z którego pochodzi formularzy, <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości, które można ustawić, aby zmienić kolejność odczytu formularza i jego formantów. Jeśli ustawisz formularza <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwość przez domyślny kontrolek w formularzu dziedziczy to ustawienie. Jednak można również ustawić <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości indywidualnie dla większości kontrolek. Zobacz też [porady: Tekst wyświetlania od prawej do lewej w formularzach systemu Windows dla globalizacji](http://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+ Podstawa <xref:System.Windows.Forms.Control> zawiera klasy, z którego pochodzi formularzy, <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości, które można ustawić, aby zmienić kolejność czytania formularza i jej kontrolek. Jeśli ustawisz formularza <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości domyślne kontrolki na formularzu dziedziczą ustawienie. Jednak możesz również ustawić <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwość indywidualnie dla większości kontrolek. Zobacz też [jak: Tekst wyświetlania od prawej do lewej w formularzach Windows Forms dla globalizacji](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
   
- Efekt <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości może się różnić od jeden formant do innego. W niektórych formantów właściwość określa tylko kolejność czytania, podobnie jak w <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> i <xref:System.Windows.Forms.ToolTip> kontrolki. W innych kontrolek <xref:System.Windows.Forms.Control.RightToLeft%2A> zarówno kolejność czytania, jak i układ zmiany właściwości. Obejmuje to <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.Forms.CheckBox> kontrolki. Inne formanty wymagają, aby <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> właściwości można zastosować do duplikatów jego układ od prawej do lewej. W poniższej tabeli przedstawiono szczegółowe informacje, w jaki sposób <xref:System.Windows.Forms.Control.RightToLeft%2A> i <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> właściwości na pojedynczych formantów formularzy systemu Windows.  
+ Efekt <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości może się różnić z jednego formantu do drugiego. W niektórych kontrolek właściwość określa tylko kolejność odczytu, podobnie jak w <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> i <xref:System.Windows.Forms.ToolTip> kontrolki. W innych formantów <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwość zmienia kolejność czytania i układ. Obejmuje to <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.Forms.CheckBox> kontrolki. Inne formanty wymagającą <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> właściwości można zastosować do utworzenia duplikatów jej układ od prawej do lewej. Poniższa tabela zawiera szczegółowe informacje dotyczące sposobu <xref:System.Windows.Forms.Control.RightToLeft%2A> i <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> właściwości na poszczególnych kontrolek Windows Forms.  
   
-|Formant/składnika|Efekt właściwość RightToLeft|Efekt właściwości RightToLeftLayout zostanie zmieniona|Wymaga dublowania?|  
+|Kontrolka/składnika|Efekt RightToLeft właściwość|Efekt właściwości RightToLeftLayout zostanie zmieniona|Wymaga dublowania?|  
 |------------------------|------------------------------------|------------------------------------------|-------------------------|  
-|<xref:System.Windows.Forms.Button>|Ustawia RTL kolejność odczytu. Odwraca <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>, i <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Nie działa|Nie|  
-|<xref:System.Windows.Forms.CheckBox>|Pole wyboru jest wyświetlane po prawej stronie tekstu|Nie działa|Nie|  
-|<xref:System.Windows.Forms.CheckedListBox>|Wszystkie pola wyboru są wyświetlane po prawej stronie tekstu|Nie działa|Nie|  
-|<xref:System.Windows.Forms.ColorDialog>|Nie dotyczy to; zależy od języka systemu operacyjnego|Nie działa|Nie|  
-|<xref:System.Windows.Forms.ComboBox>|Elementy kontrolki pola kombi są wyrównane do lewej|Nie działa|Nie|  
-|<xref:System.Windows.Forms.ContextMenu>|Zostanie wyświetlone wyrównany z RTL kolejność czytania|Nie działa|Nie|  
-|<xref:System.Windows.Forms.DataGrid>|Zostanie wyświetlone wyrównany z RTL kolejność czytania|Nie działa|Nie|  
-|<xref:System.Windows.Forms.DataGridView>|Dotyczy zarówno od prawej do lewej układ kolejności i kontroli do czytania|Nie działa|Nie|  
-|<xref:System.Windows.Forms.DateTimePicker>|Nie dotyczy to; zależy od języka systemu operacyjnego|Odzwierciedla formantu|Tak|  
-|<xref:System.Windows.Forms.DomainUpDown>|Po lewej Wyrównuje górę i w dół przycisków|Nie działa|Nie|  
-|<xref:System.Windows.Forms.ErrorProvider>|Nieobsługiwane|Nie działa|Nie|  
-|<xref:System.Windows.Forms.FontDialog>|Zależy od języka systemu operacyjnego|Nie działa|Nie|  
-|<xref:System.Windows.Forms.Form>|Ustawia kolejność czytania RTL i odwraca paski przewijania|Odzwierciedla formularza|Tak|  
-|<xref:System.Windows.Forms.GroupBox>|Podpis jest wyświetlany w prawej. Formanty podrzędne mogą dziedziczyć tej właściwości.|Użyj <xref:System.Windows.Forms.TableLayoutPanel> w formancie dublowania od prawej do lewej obsługuje|Nie|  
-|<xref:System.Windows.Forms.HScrollBar>|Rozpoczyna się wyrównany do prawej strony pola przewijania (przenośny)|Nie działa|Nie|  
-|<xref:System.Windows.Forms.ImageList>|Niewymagane|Nie działa|Nie|  
-|<xref:System.Windows.Forms.Label>|Wyświetlane wyrównany do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Nie działa|Nie|  
-|<xref:System.Windows.Forms.LinkLabel>|Wyświetlane wyrównany do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Nie działa|Nie|  
-|<xref:System.Windows.Forms.ListBox>|Elementy są wyrównane do lewej|Nie działa|Nie|  
-|<xref:System.Windows.Forms.ListView>|Ustawia kolejność czytania od prawej do lewej; elementy pozostają wyrównane do lewej|Odzwierciedla formantu|Tak|  
-|<xref:System.Windows.Forms.MainMenu>|Wyświetlane wyrównany z RTL kolejność czytania w czasie wykonywania (nie w czasie projektowania)|Nie działa|Nie|  
-|<xref:System.Windows.Forms.MaskedTextBox>|Wyświetla tekst od prawej do lewej.|Nie działa|Nie|  
-|<xref:System.Windows.Forms.MonthCalendar>|Nie dotyczy to; zależy od języka systemu operacyjnego|Odzwierciedla formantu|Tak|  
+|<xref:System.Windows.Forms.Button>|Ustawia RTL kolejność odczytu. Odwraca <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>, i <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.CheckBox>|Pole wyboru jest wyświetlane po prawej stronie tekstu|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.CheckedListBox>|Wszystkie pola wyboru są wyświetlane po prawej stronie tekstu|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.ColorDialog>|Nie wpływa na; w zależności od języka systemu operacyjnego|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.ComboBox>|Elementy w kontrolce pola kombi są wyrównane do prawej|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.ContextMenu>|Zostanie wyświetlony wyrównany do prawej od prawej do lewej kolejność odczytu|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.DataGrid>|Zostanie wyświetlony wyrównany do prawej od prawej do lewej kolejność odczytu|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.DataGridView>|Dotyczy zarówno od prawej do lewej kolejności i kontrolowania układu do czytania|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.DateTimePicker>|Nie wpływa na; w zależności od języka systemu operacyjnego|Odzwierciedla kontrolki|Tak|  
+|<xref:System.Windows.Forms.DomainUpDown>|Lewy wyrównuje w górę i w dół przycisków|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.ErrorProvider>|Nieobsługiwane|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.FontDialog>|W zależności od języka systemu operacyjnego|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.Form>|Ustawia kolejność czytania RTL i odwraca paski przewijania|Formularz odzwierciedla|Tak|  
+|<xref:System.Windows.Forms.GroupBox>|Podpis jest wyświetlany, wyrównanie do prawej. Formanty podrzędne mogą dziedziczyć tej właściwości.|Użyj <xref:System.Windows.Forms.TableLayoutPanel> w kontrolce dublowanie od prawej do lewej pomocy technicznej|Nie|  
+|<xref:System.Windows.Forms.HScrollBar>|Rozpoczyna się od pola przewijania (thumb) wyrównany do prawej|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.ImageList>|Nie jest wymagane|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.Label>|Wyświetlane wyrównany do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.LinkLabel>|Wyświetlane wyrównany do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.ListBox>|Elementy są wyrównane do prawej|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.ListView>|Ustawia kolejność czytania od prawej do lewej; elementy pozostają wyrównane do lewej|Odzwierciedla kontrolki|Tak|  
+|<xref:System.Windows.Forms.MainMenu>|Wyświetlana wyrównany do prawej od prawej do lewej kolejność odczytu w czasie wykonywania (nie w czasie projektowania)|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.MaskedTextBox>|Wyświetla tekst od prawej do lewej.|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.MonthCalendar>|Nie wpływa na; w zależności od języka systemu operacyjnego|Odzwierciedla kontrolki|Tak|  
 |<xref:System.Windows.Forms.NotifyIcon>|Nieobsługiwane|Nieobsługiwane|Nie|  
-|<xref:System.Windows.Forms.NumericUpDown>|Przyciski w górę i w dół są wyrównane do lewej|Nie działa|Nie|  
-|<xref:System.Windows.Forms.OpenFileDialog>|W systemach operacyjnych od prawej do lewej, ustawienie zawierający formularz <xref:System.Windows.Forms.Control.RightToLeft> właściwości <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> lokalizuje okna dialogowego |Nie działa|Nie|  
-|<xref:System.Windows.Forms.PageSetupDialog>|Nie dotyczy to; zależy od języka systemu operacyjnego|Nie działa|Nie|  
-|<xref:System.Windows.Forms.Panel>|Formanty podrzędne mogą dziedziczyć tej właściwości|Użyj <xref:System.Windows.Forms.TableLayoutPanel> wewnątrz formantu dla prawej do lewej pomocy technicznej|Tak|  
-|<xref:System.Windows.Forms.PictureBox>|Nieobsługiwane|Nie działa|Nie|  
-|<xref:System.Windows.Forms.PrintDialog>|Nie dotyczy to; zależy od języka systemu operacyjnego|Nie działa|Nie|  
-|<xref:System.Drawing.Printing.PrintDocument>|Pionowy pasek przewijania stają się wyrównane do lewej i poziomy pasek przewijania rozpoczyna się od lewej|Nie działa|Nie|  
+|<xref:System.Windows.Forms.NumericUpDown>|Przyciski w górę i w dół są wyrównane do lewej|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.OpenFileDialog>|W systemach operacyjnych od prawej do lewej, ustawienie zawierający formularz <xref:System.Windows.Forms.Control.RightToLeft> właściwość <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> lokalizuje okna dialogowego |Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.PageSetupDialog>|Nie wpływa na; w zależności od języka systemu operacyjnego|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.Panel>|Formanty podrzędne mogą dziedziczyć tę właściwość|Użyj <xref:System.Windows.Forms.TableLayoutPanel> znajdujących się pod kontrolą w prawo do działu pomocy technicznej po lewej stronie|Tak|  
+|<xref:System.Windows.Forms.PictureBox>|Nieobsługiwane|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.PrintDialog>|Nie wpływa na; w zależności od języka systemu operacyjnego|Nie wpływu|Nie|  
+|<xref:System.Drawing.Printing.PrintDocument>|Stają się wyrównane do lewej pasek przewijania pionowego i poziomego paska przewijania rozpoczyna się od lewej strony|Nie wpływu|Nie|  
 |<xref:System.Windows.Forms.PrintPreviewDialog>|Nieobsługiwane|Nieobsługiwane|Nie|  
-|<xref:System.Windows.Forms.ProgressBar>|Nie ma wpływu na przez tę właściwość|Odzwierciedla formantu|Tak|  
-|<xref:System.Windows.Forms.RadioButton>|Przycisk radiowy jest wyświetlana po prawej stronie tekstu|Nie działa|Nie|  
-|<xref:System.Windows.Forms.RichTextBox>|Elementy kontroli, które zawierają tekst są wyświetlane od prawej do lewej kolejność czytania od prawej do lewej|Nie działa|Nie|  
-|<xref:System.Windows.Forms.SaveFileDialog>|Nie dotyczy to; zależy od języka systemu operacyjnego|Nie działa|Nie|  
-|<xref:System.Windows.Forms.SplitContainer>|Układ panelu została odwrócona; pionowy pasek przewijania pojawia się po lewej stronie; poziomy pasek przewijania rozpoczyna się od prawej strony|Użyj <xref:System.Windows.Forms.TableLayoutPanel> w kolejności formanty podrzędne dublowania|Nie|  
-|<xref:System.Windows.Forms.Splitter>|Nieobsługiwane|Nie działa|Nie|  
-|<xref:System.Windows.Forms.StatusBar>|Nieobsługiwane. Użyj <xref:System.Windows.Forms.StatusStrip> zamiast niego|Żadnego wpływu; Użyj <xref:System.Windows.Forms.StatusStrip> zamiast niego|Nie|  
-|<xref:System.Windows.Forms.TabControl>|Nie dotyczy tej właściwości|Odzwierciedla formantu|Tak|  
-|<xref:System.Windows.Forms.TextBox>|Wyświetla tekst od prawej do lewej z RTL kolejność czytania|Nie działa|Nie|  
-|<xref:System.Windows.Forms.Timer>|Niewymagane|Niewymagane|Nie|  
-|<xref:System.Windows.Forms.ToolBar>|Nie dotyczy tej właściwości; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast niego|Żadnego wpływu; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast niego|Tak|  
-|<xref:System.Windows.Forms.ToolTip>|Ustawia RTL kolejność czytania|Nie działa|Nie|  
-|<xref:System.Windows.Forms.TrackBar>|Przewijania lub ścieżkę rozpoczyna się od prawej; gdy <xref:System.Windows.Forms.TrackBar.Orientation%2A> jest pionowy, wystąpić znaczniki osi po prawej stronie|Nie działa|Nie|  
-|<xref:System.Windows.Forms.TreeView>|Ustawia RTL tylko kolejność czytania|Odzwierciedla formantu|Tak|  
-|<xref:System.Windows.Forms.UserControl>|Pionowy pasek przewijania pojawia się po lewej stronie; poziomy pasek przewijania ma przycisku przewijania w prawo|Nie obsługuje bezpośredniego; Użyj <xref:System.Windows.Forms.TableLayoutPanel>|Nie|  
-|<xref:System.Windows.Forms.VScrollBar>|Wyświetlane po lewej stronie zamiast po prawej stronie przewijanego formantów|Nie działa|Nie|  
+|<xref:System.Windows.Forms.ProgressBar>|Nie ma wpływu na przez tę właściwość|Odzwierciedla kontrolki|Tak|  
+|<xref:System.Windows.Forms.RadioButton>|Przycisk radiowy jest wyświetlany po prawej stronie tekstu|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.RichTextBox>|Elementy kontrolki, które zawierają tekst są wyświetlane od prawej do lewej kolejność czytania od prawej do lewej|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.SaveFileDialog>|Nie wpływa na; w zależności od języka systemu operacyjnego|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.SplitContainer>|Układ panelu została odwrócona; pionowy pasek przewijania jest wyświetlany po lewej stronie; poziomy pasek przewijania rozpoczyna się od prawej strony|Użyj <xref:System.Windows.Forms.TableLayoutPanel> kolejności dublowanie formantów podrzędnych|Nie|  
+|<xref:System.Windows.Forms.Splitter>|Nieobsługiwane|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.StatusBar>|Nieobsługiwane. Użyj <xref:System.Windows.Forms.StatusStrip> zamiast tego|Żadnego wpływu; Użyj <xref:System.Windows.Forms.StatusStrip> zamiast tego|Nie|  
+|<xref:System.Windows.Forms.TabControl>|Nie dotyczy tej właściwości|Odzwierciedla kontrolki|Tak|  
+|<xref:System.Windows.Forms.TextBox>|Wyświetla tekst od prawej do lewej od prawej do lewej kolejność odczytu|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.Timer>|Nie jest wymagane|Nie jest wymagane|Nie|  
+|<xref:System.Windows.Forms.ToolBar>|Nie dotyczy tej właściwości; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast tego|Żadnego wpływu; Użyj <xref:System.Windows.Forms.ToolStrip> zamiast tego|Tak|  
+|<xref:System.Windows.Forms.ToolTip>|Ustawia RTL kolejność odczytu|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.TrackBar>|Przewijania lub śledzenie rozpoczyna się od prawej; gdy <xref:System.Windows.Forms.TrackBar.Orientation%2A> , jest pionowa impulsów wystąpić z prawej strony|Nie wpływu|Nie|  
+|<xref:System.Windows.Forms.TreeView>|Ustawia RTL tylko kolejność odczytu|Odzwierciedla kontrolki|Tak|  
+|<xref:System.Windows.Forms.UserControl>|Pionowy pasek przewijania jest wyświetlany po lewej stronie; poziomy pasek przewijania jest thumb po prawej stronie|Brak bezpośredniej obsługi; Użyj <xref:System.Windows.Forms.TableLayoutPanel>|Nie|  
+|<xref:System.Windows.Forms.VScrollBar>|Wyświetlane po lewej stronie zamiast po prawej stronie kontrolki przewijany|Nie wpływu|Nie|  
   
 ## <a name="encoding"></a>Kodowanie  
- Formularze systemu Windows obsługują standardu Unicode, więc może zawierać znaków po utworzeniu aplikacji dwukierunkowych. Jednak nie wszystkie formanty formularzy systemu Windows obsługują standardu Unicode na wszystkich platformach. Aby uzyskać więcej informacji, zobacz [kodowanie i globalizacja formularzy systemu Windows](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
+ Formularze Windows obsługują standardu Unicode, dzięki czemu może zawierać dowolny znak, po utworzeniu aplikacji dwukierunkowej. Jednak nie wszystkie formanty Windows Forms obsługują znaki Unicode na wszystkich platformach. Aby uzyskać więcej informacji, zobacz [kodowanie i globalizacja formularzy Windows](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
- Można użyć [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Rysowanie tekstu w kolejności odczytywania od prawej do lewej. <xref:System.Drawing.Graphics.DrawString%2A> Obsługuje metodę, która jest używany do rysowania tekstu, `StringFormat` parametr, który można ustawić <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> członkiem <xref:System.Drawing.StringFormatFlags> wyliczenia, aby odwrócić punkt początkowy dla tekstu.  
+ Możesz użyć [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Rysowanie tekstu za pomocą kolejność czytania od prawej do lewej. <xref:System.Drawing.Graphics.DrawString%2A> Obsługuje metodę, która służy do rysowania tekstu, `StringFormat` parametr, który można ustawić <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> członkiem <xref:System.Drawing.StringFormatFlags> wyliczenie, aby można było odwrócić punkt początkowy dla tekstu.  
   
 ## <a name="common-dialog-boxes"></a>Wspólne okna dialogowe  
- Narzędzia systemowe, takie jak okno dialogowe Otwieranie pliku są pod kontrolą systemu Windows. Elementy języka dziedziczą z systemu operacyjnego. Jeśli używasz wersji systemu Windows przy użyciu ustawień języka, tych okien dialogowych będzie działać poprawnie w językach dwukierunkowych.  
+ Narzędzia systemowe, takie jak okno dialogowe Otwieranie pliku będące pod kontrolą systemu Windows. Dziedziczą one elementy języka systemu operacyjnego. Korzystania z wersji systemu Windows przy użyciu ustawień języka tych okien dialogowych za pomocą języków dwukierunkowych będzie działać poprawnie.  
   
- Podobnie komunikatów przejść przez system operacyjny i obsługuje tekstu dwukierunkowego. Podpisy na przyciskach pola wiadomości są oparte na bieżącym ustawieniem języka. Domyślnie pola wiadomości nie używaj kolejność czytania od prawej do lewej, ale można określić parametr, aby zmienić kolejność czytania, gdy są wyświetlane pola wiadomości.  
+ Podobnie komunikatów przechodzą przez system operacyjny i obsługuje tekstu dwukierunkowego. Napisy na przyciskach okno komunikatu opierają się na bieżącym ustawieniem języka. Domyślnie okien komunikatów nie należy używać kolejność czytania od prawej do lewej, ale można określić parametr, aby zmienić kolejność czytania, po wyświetleniu okna komunikatu.  
   
-## <a name="righttoleft-scrollbars-and-scrollablecontrol"></a>RightToLeft pasków przewijania i elementu ScrollableControl  
- Obecnie jest to ograniczenie w formularzach systemu Windows, który uniemożliwia wszystkie klasy wywodzące się z <xref:System.Windows.Forms.ScrollableControl> z działa prawidłowo po obu <xref:System.Windows.Forms.Control.RightToLeft%2A> jest włączona i <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> ma ustawioną wartość <xref:System.Windows.Forms.RightToLeft.Yes>. Na przykład, załóżmy, że takie jak Umieść formant <xref:System.Windows.Forms.Panel>— lub kontener klasą pochodną <xref:System.Windows.Forms.Panel> (takich jak <xref:System.Windows.Forms.FlowLayoutPanel> lub <xref:System.Windows.Forms.TableLayoutPanel>) — w formularzu. Jeśli ustawisz <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> w kontenerze na <xref:System.Windows.Forms.RightToLeft.Yes> , a następnie ustaw <xref:System.Windows.Forms.Control.Anchor%2A> właściwości na co najmniej jedna z kontrolek w kontenerze na <xref:System.Windows.Forms.AnchorStyles.Right>, następnie kiedykolwiek pojawia się nie pasek przewijania. Klasy pochodne <xref:System.Windows.Forms.ScrollableControl> zachowuje się tak, jakby <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> ustawiono <xref:System.Windows.Forms.RightToLeft.No>.  
+## <a name="righttoleft-scrollbars-and-scrollablecontrol"></a>RightToLeft, paski przewijania i elementu ScrollableControl  
+ Obecnie jest to ograniczenie w formularzach Windows, który uniemożliwia wszystkie klasy pochodne od <xref:System.Windows.Forms.ScrollableControl> z działają prawidłowo po obu <xref:System.Windows.Forms.Control.RightToLeft%2A> jest włączona i <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> jest ustawiona na <xref:System.Windows.Forms.RightToLeft.Yes>. Na przykład, załóżmy, że takie jak umieścić formant <xref:System.Windows.Forms.Panel>— lub pochodną klasy kontenera <xref:System.Windows.Forms.Panel> (takie jak <xref:System.Windows.Forms.FlowLayoutPanel> lub <xref:System.Windows.Forms.TableLayoutPanel>) — w formularzu. Jeśli ustawisz <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> kontenera do <xref:System.Windows.Forms.RightToLeft.Yes> , a następnie ustaw <xref:System.Windows.Forms.Control.Anchor%2A> właściwości jednego lub kilku kontrolek wewnątrz kontenera, na <xref:System.Windows.Forms.AnchorStyles.Right>, a następnie Brak paska przewijania kiedykolwiek pojawia się. Klasa jest pochodną <xref:System.Windows.Forms.ScrollableControl> działa tak, jakby <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> ustawiono <xref:System.Windows.Forms.RightToLeft.No>.  
   
- Obecnie jest tylko obejście Aby zagnieździć <xref:System.Windows.Forms.ScrollableControl> wewnątrz innego <xref:System.Windows.Forms.ScrollableControl>. Na przykład jeśli potrzebujesz <xref:System.Windows.Forms.TableLayoutPanel> do pracy w takiej sytuacji należy umieścić go w <xref:System.Windows.Forms.Panel> kontroli oraz ustawić <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> na <xref:System.Windows.Forms.Panel> do <xref:System.Windows.Forms.RightToLeft.Yes>.  
+ Obecnie jedynym obejściem jest aby zagnieździć <xref:System.Windows.Forms.ScrollableControl> wewnątrz innego <xref:System.Windows.Forms.ScrollableControl>. Na przykład jeśli potrzebujesz <xref:System.Windows.Forms.TableLayoutPanel> pracę w sytuacji, można umieścić go w <xref:System.Windows.Forms.Panel> i ustaw <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> na <xref:System.Windows.Forms.Panel> do <xref:System.Windows.Forms.RightToLeft.Yes>.  
   
 ## <a name="mirroring"></a>Funkcja dublowania  
- *Dublowanie* odwołuje się do cofania układ elementów interfejsu użytkownika, tak aby ich przepływać od prawej do lewej. W dublowanych formularza systemu Windows na przykład Minimalizuj, Maksymalizuj i zamknij przyciski wyświetlane lewej na pasku tytułu nie prawej krawędzi.  
+ *Dublowanie* odwołuje się do cofania układu elementów interfejsu użytkownika, tak aby przepływały od prawej do lewej. W formularzu Windows dublowane dla przykładu, Minimalizuj, Maksymalizuj i zamknij pojawiają się skrajnie po lewej na pasku tytułu, a nie najdalej z prawej strony.  
   
- Ustawienie formularza lub kontrolki <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości `true` Odwraca kolejność czytania elementów na formularzu, ale ustawienie to nie wstecznego układu się od prawej do lewej — to znaczy, że nie spowoduje to dublowania. Na przykład ustawienie dla tej właściwości nie przenosi **Minimalizuj**, **Maksymalizuj**, i **Zamknij** przycisków na pasku tytułu formularza po lewej stronie formularza. Podobnie, niektóre formanty, takie jak <xref:System.Windows.Forms.TreeView> kontrolować, wymagają dublowania, aby zmienić sposób ich wyświetlania odpowiednio dla arabskiego lub hebrajski. Formanty te ustawienia mogą być dublowane <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> właściwości.  
+ Ustawienie formularza lub formantu <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwość `true` Odwraca kolejność czytania elementów na formularzu, ale ustawienie to zmieniają układ od prawej do lewej — oznacza to, że nie spowoduje to dublowania. Na przykład ustawienie tej właściwości nie przenosi **Minimalizuj**, **Maksymalizuj**, i **Zamknij** przycisków na pasku tytułu formularza do lewej części formularza. Podobnie, niektóre kontrolki, takie jak <xref:System.Windows.Forms.TreeView> sterowania, wymagają dublowania w celu zmiany ich wyświetlania, aby były odpowiednie dla arabski lub hebrajski. Można dublować tych kontrolek, za pomocą ustawień <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> właściwości.  
   
- Można tworzyć dublowanego wersje następujące sterowniki:  
+ Można tworzyć wersje dublowany z następujących formantów:  
   
 -   <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
   
@@ -115,9 +115,9 @@ Visual Studio służy do tworzenia aplikacji opartych na systemie Windows, któr
   
 -   <xref:System.Windows.Forms.TreeView>  
   
- Niektóre kontrolki są zapieczętowane. W związku z tym nie może pochodzić nową kontrolkę z nich. Obejmują one <xref:System.Windows.Forms.ImageList> i <xref:System.Windows.Forms.ProgressBar> kontrolki.  
+ Niektóre kontrolki są zamknięte. W związku z tym nie możesz wywodzić nowej kontrolki z nich. Obejmują one <xref:System.Windows.Forms.ImageList> i <xref:System.Windows.Forms.ProgressBar> kontrolki.  
   
 ## <a name="see-also"></a>Zobacz także
 
-[Dwukierunkowa obsługa aplikacji sieci Web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[Dwukierunkowa obsługa aplikacji sieci Web ASP.NET](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
 [Globalizowanie aplikacji Windows Forms](globalizing-windows-forms.md)

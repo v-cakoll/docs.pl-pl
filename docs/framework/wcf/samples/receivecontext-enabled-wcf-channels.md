@@ -3,11 +3,11 @@ title: Kanały programu WCF z obsługą elementu ReceiveContext
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
 ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43442749"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515933"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>Kanały programu WCF z obsługą elementu ReceiveContext
 W tym przykładzie przedstawiono przydatność <xref:System.ServiceModel.Channels.ReceiveContext>— włączone kanały programu WCF. Przykład implementuje usługi można znaleźć iloczyn dwóch liczb przy użyciu kanału NetMSMQ.  

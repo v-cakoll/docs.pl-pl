@@ -1,37 +1,37 @@
 ---
-title: Izolacja sieci dla aplikacji ze Sklepu Windows
+title: Izolacja sieci dla aplikacji Windows Store
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d3a26d6c3fc500691fa007abfe9c8fd069f9e812
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d26b6df5d26a96bb8fa41dd3a8151fcb4a08b75
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398095"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534051"
 ---
-# <a name="network-isolation-for-windows-store-apps"></a>Izolacja sieci dla aplikacji ze Sklepu Windows
-Klasy w <xref:System.Net>, <xref:System.Net.Http>, i <xref:System.Net.Http.Headers> przestrzeni nazw może służyć do tworzenia aplikacji ze Sklepu Windows lub aplikacji klasycznych. Gdy są używane w aplikacji ze Sklepu Windows, klas w tych obszarach nazw dotyczy izolacji sieci, część używany przez model zabezpieczeń aplikacji [!INCLUDE[win8](../../../includes/win8-md.md)]. Możliwości odpowiedniej sieci musi być włączony w manifeście aplikacji dla aplikacji ze Sklepu Windows dla systemu w celu umożliwienia dostępu do sieci.  
+# <a name="network-isolation-for-windows-store-apps"></a>Izolacja sieci dla aplikacji Windows Store
+Klasy w <xref:System.Net>, <xref:System.Net.Http>, i <xref:System.Net.Http.Headers> przestrzeni nazw może służyć do tworzenia aplikacji Windows Store lub aplikacjami pulpitu. W przypadku użycia w aplikacji Windows Store, klas w tych obszarach nazw dotyczy izolacji sieci, częścią modelu zabezpieczeń aplikacji, które są używane przez [!INCLUDE[win8](../../../includes/win8-md.md)]. Możliwości odpowiedniej sieci musi być włączony w manifeście aplikacji dla aplikacji Windows Store dla systemu zezwolić na dostęp do sieci.  
   
-## <a name="checklist-for-network-isolation"></a>Lista kontrolna dotycząca izolacji sieci  
- Użyj tej listy kontrolnej, należy upewnić się, że izolacja sieci jest skonfigurowany dla aplikacji ze Sklepu Windows.  
+## <a name="checklist-for-network-isolation"></a>Lista kontrolna na potrzeby izolacji sieciowej  
+ Użyj tej listy kontrolnej, należy upewnić się, że izolacja sieciowa jest skonfigurowany dla aplikacji Windows Store.  
   
-1.  Określ kierunek wymagane przez aplikację żądań dostępu do sieci. Może to być żądań wychodzących inicjowanej przez klienta lub niechciane żądania przychodzące lub może być kombinację obu typów sieci żądania.  
+1.  Określ kierunek żądań dostępu do sieci wymagane przez aplikację. Może to być wychodzącego zainicjowane przez klienta żądania lub żądania przychodzące niechciane lub może być kombinację obu tych typów żądań sieci.  
   
-2.  Określ typ tej aplikacji będą komunikować się z zasobów sieciowych. Aplikacja może być konieczne do komunikowania się z zaufanych zasobów w sieci w domu lub pracy. Aplikacja może być konieczne do komunikowania się z zasobami przez Internet. Aplikacja może potrzebować dostępu do obu typów zasobów sieciowych.  
+2.  Określanie typu zasobów sieciowych, które ta aplikacja będzie komunikować się z. Aplikacja może być konieczne do komunikowania się z zaufanych zasobów w domu lub pracy sieci. Aplikacja może być konieczne do komunikowania się z zasobami przez Internet. Aplikacja może potrzebować dostępu do obu rodzajów zasobów sieciowych.  
   
-3.  Minimalna wymagana możliwości izolacji sieci należy skonfigurować w manifeście aplikacji.  
+3.  Skonfiguruj minimalną wymaganą możliwości izolacji sieci w manifeście aplikacji.  
   
-4.  Wdrażanie i uruchamianie aplikacji w taki sposób, aby przetestować go przy użyciu narzędzia izolacji sieci, które są dostępne w celu rozwiązywania problemów.  
+4.  Wdrażanie i uruchamianie aplikacji, aby przetestować go za pomocą narzędzia izolacji sieci, które są dostarczane do rozwiązywania problemów.  
   
- Aby uzyskać bardziej szczegółowe informacje na temat konfigurowania funkcji sieciowych i izolacja narzędzi używanych do rozwiązywania problemów w przypadku izolacji sieci, zobacz [sposobu konfigurowania możliwości izolacji sieci](http://go.microsoft.com/fwlink/?LinkID=228265) w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] developer dokumentacja.  
+ Aby uzyskać bardziej szczegółowe informacje dotyczące sposobu konfigurowania funkcji sieciowych i izolacji narzędzi używanych do rozwiązywania problemów izolacji sieci, zobacz [sposobu konfigurowania możliwości izolacji sieci](https://go.microsoft.com/fwlink/?LinkID=228265) w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] dla deweloperów dokumentacja.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Łączenie z usługą sieci web](http://go.microsoft.com/fwlink/?LinkID=245696)  
- [Wskazówki i Lista kontrolna dotycząca izolacji sieci](http://go.microsoft.com/fwlink/?LinkID=228265)  
- [Szybki Start: Łączenie za pomocą elementu HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)  
- [Jak używać HttpClient obsługi](http://go.microsoft.com/fwlink/?LinkId=245699)  
- [Jak zabezpieczyć połączenia HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)  
- [Przykładowe HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)
+ [Łączenie z usługą sieci web](https://go.microsoft.com/fwlink/?LinkID=245696)  
+ [Wskazówki i listy kontrolne do izolacji sieci](https://go.microsoft.com/fwlink/?LinkID=228265)  
+ [Szybki Start: Łączenie za pomocą elementu HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697)  
+ [Jak używać klasy HttpClient obsługi](https://go.microsoft.com/fwlink/?LinkId=245699)  
+ [Jak zabezpieczyć HttpClient połączeń](https://go.microsoft.com/fwlink/?LinkId=245698)  
+ [Przykładowe klasy HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)

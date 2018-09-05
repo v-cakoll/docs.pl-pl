@@ -6,32 +6,32 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 6c73c8bbfcf7631094ddf89641de9af38f86f88e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549519"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672634"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Style dla Fokusu w formantach i FocusVisualStyle
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia dwa mechanizmy równoległych zmiany wygląd formantu, gdy odbierze fokus klawiatury. Pierwszy mechanizm jest używać metody ustawiające właściwości dla właściwości, takich jak <xref:System.Windows.UIElement.IsKeyboardFocused%2A> w stylu lub szablonie, która jest stosowana do formantu. Drugi mechanizmu jest zapewnienie oddzielne styl jako wartość <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> właściwości; "skoncentrowane stylu wizualnego" tworzy oddzielne drzewa wizualnego dla modułu definiowania układu kodu, który rysuje na górze kontrolki, zamiast zmieniać wizualnym drzewie kontrolki lub innych interfejsu użytkownika Element poprzez zastąpienie jej. W tym temacie opisano scenariusze, w których każdy z tych mechanizmów jest właściwe.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia dwa mechanizmy równoległe zmieniać wygląd kontrolki, gdy otrzymuje fokus klawiatury. Pierwszy mechanizm jest używać metod ustawiających właściwości dla właściwości, takich jak <xref:System.Windows.UIElement.IsKeyboardFocused%2A> w stylu lub szablonu, która jest stosowana do formantu. Mechanizm drugi ma na celu dostarczenie oddzielne styl jako wartość <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> właściwości "skupić stylu wizualnego" tworzy osobne drzewo wizualne dla moduł definiowania układu, który rysuje na górze kontrolki, zamiast zmieniania drzewie wizualnym kontrolki lub innego interfejsu użytkownika element przez zastąpienie. W tym temacie opisano scenariusze, w których każdy z tych mechanizmów jest właściwe.  
    
   
 <a name="Purpose"></a>   
-## <a name="the-purpose-of-focus-visual-style"></a>Celem fokus stylu wizualnego.  
- Funkcja stylu wizualnego fokus zapewnia wspólny "model obiektu" wprowadzenie opinie użytkowników visual oparte na nawigacji klawiatury do dowolnego elementu interfejsu użytkownika. Jest to możliwe bez stosowania nowy szablon do formantu lub wiedząc kompozycji określonego szablonu.  
+## <a name="the-purpose-of-focus-visual-style"></a>Celem styl wizualny fokusu  
+ Funkcja styl wizualny fokusu zapewnia typowe "object model" wprowadzenie do visual opinii klientów oparte na nawigacji za pomocą klawiatury do dowolnego elementu interfejsu użytkownika. Jest to możliwe bez zastosowania nowego szablonu do formantu lub wiedząc kompozycji określonego szablonu.  
   
- Jednak mówiąc, ponieważ funkcja stylu wizualnego fokus działa bez uprzedniego uzyskania informacji o szablonach formantów, wizualne, które mogą być wyświetlane dla formantu przy użyciu stylu wizualnego fokus jest z konieczności ograniczony. Jej faktycznie działanie jest nakładki innego drzewa wizualnego (moduł definiowania układu) na drzewie wizualnym tworzony przez renderowanie formantu za pomocą szablonu. Zdefiniuj to oddzielne drzewa wizualnego przy użyciu stylu, które wypełnia <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> właściwości.  
+ Mówiąc, ponieważ funkcja styl wizualny fokusu działa bez znajomości szablony kontrolek, wizualną opinię, która może być wyświetlany formantu za pomocą styl wizualny fokusu jest jednak zawsze ograniczony. Faktycznie działania funkcji jest nakładki innego drzewa wizualnego (moduł definiowania układu) na podstawie drzewa wizualnego, utworzonemu renderowania formantu za pomocą szablonu. Zdefiniuj to oddzielne drzewa wizualnego, przy użyciu stylu, który wypełnia <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> właściwości.  
   
 <a name="Default"></a>   
-## <a name="default-focus-visual-style-behavior"></a>Domyślne zachowanie stylu wizualnego fokus  
- Style wizualne fokus działa tylko wtedy, gdy akcja fokus została zainicjowana za pomocą klawiatury. Dowolną akcję myszy lub zmień fokus programowe wyłącza tryb style wizualne fokus. Aby uzyskać więcej informacji na temat różnice między trybami fokus, zobacz [omówienie fokus](../../../../docs/framework/wpf/advanced/focus-overview.md).  
+## <a name="default-focus-visual-style-behavior"></a>Domyślne zachowanie styl wizualny fokusu  
+ Styl wizualny fokusu działają tylko wtedy, gdy akcja fokus został zainicjowany przez klawiatury. Dowolną akcję myszy lub Zmień zespół programistyczny wyłącza tryb koncentracji uwagi stylów wizualnych. Aby uzyskać więcej informacji na temat różnice między trybami fokus zobacz [Przegląd fokus](../../../../docs/framework/wpf/advanced/focus-overview.md).  
   
- Motywy dla formantów obejmują domyślne zachowanie stylu wizualnego fokus staje się fokus stylu dla wszystkich kontrolek w motywie. Ten styl motywu jest identyfikowany przez wartość klucza statycznych <xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>. Przy deklarowaniu własnego stylu wizualnego fokus na poziomie aplikacji, możesz zastąpić to domyślne zachowanie stylu z kompozycji. Można również w przypadku definiowania motywu całego, następnie należy używać tego samego klucza do zdefiniowania stylu domyślne zachowanie dla całego motywu.  
+ Kompozycje dla kontrolek obejmują domyślne zachowanie styl wizualny fokusu staje się styl wizualny fokusu dla wszystkich kontrolek w motywie. Ten styl motywu jest identyfikowany przez wartość klucza statyczne <xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>. Kiedy Deklarujesz własny styl wizualny fokusu na poziomie aplikacji, można zastąpić domyślne zachowanie styl z tematów. Alternatywnie Jeśli zdefiniujesz całego motywu, użyj tego samego klucza do zdefiniowania stylu domyślnego zachowania dla całej motywu.  
   
- W kompozycji domyślny styl wizualny fokus jest zazwyczaj bardzo proste. Poniżej przedstawiono nierównej zbliżenia:  
+ W kompozycji domyślny styl wizualny fokusu jest zazwyczaj bardzo proste. Poniżej przedstawiono zgrubne przybliżenie:  
   
-```  
+```xaml  
 <Style x:Key="{x:Static SystemParameters.FocusVisualStyleKey}">  
   <Setter Property="Control.Template">  
     <Setter.Value>  
@@ -47,34 +47,34 @@ ms.locfileid: "33549519"
 ```  
   
 <a name="When"></a>   
-## <a name="when-to-use-focus-visual-styles"></a>Kiedy należy używać stylów wizualnych fokus  
- Koncepcyjnie wygląd fokus style wizualne stosowana do formantów powinny być spójne z formantami. Zmień styl wizualny tylko wtedy, gdy redagowania całego motywu, gdzie każdego formantu, który jest zdefiniowany w motywie pobiera samego stylu wizualnego fokus lub różnice w stylu które wizualnie jest związany z kontroli Pobi jest jednym ze sposobów zapewnienia spójności Formant Karta. Alternatywnie można użyć tego samego styl (lub podobny style) stylu co focusable klawiatury elementu na stronie lub w interfejsie użytkownika.  
+## <a name="when-to-use-focus-visual-styles"></a>Kiedy należy używać stylów wizualnych z fokusem  
+ Model wygląd fokus stylów wizualnych zastosować do kontrolek powinna być spójne z formantami. Jednym ze sposobów na zapewnienie spójności jest fokusu stylu wizualnego tylko wtedy, gdy redagowania całego motywu, w którym każdy formant, który jest zdefiniowany w motywie pobiera styl wizualny fokusu tej samej lub różnice w stylu, wizualnie jest powiązane z kontrolki do kontynuacji roli. Alternatywnie można użyć stylu tego samego (lub podobny style) do nadawania stylu każdy element focusable klawiatury, na stronie lub w interfejsie użytkownika.  
   
- Ustawienie <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> na style poszczególnych kontrolek, które nie są częścią kompozycji jest nie przeznaczenia fokus stylów wizualnych. Jest to spowodowane niespójne zachowanie visual między formantami może prowadzić do mylące czynności użytkownika dotyczących fokus klawiatury. Jeśli są mają zostać zachowania kontroli specyficzne dla fokus klawiatury, które celowo nie są spójne w kompozycji, znacznie lepszym rozwiązaniem jest używać Wyzwalacze w stylach właściwości poszczególnych stanu danych wejściowych, takich jak <xref:System.Windows.UIElement.IsFocused%2A> lub <xref:System.Windows.UIElement.IsKeyboardFocused%2A>.  
+ Ustawienie <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> na stylów poszczególnych kontrolek, które nie są częścią kompozycji jest nie zamierzonego użycia fokus stylów wizualnych. Jest to spowodowane niespójne zachowanie visual między kontrolkami może prowadzić do mylące czynności użytkownika dotyczących fokus klawiatury. Sygnalizuje pomyślny przebieg operacji specyficznej dla kontroli zachowania fokus klawiatury, które celowo nie są spójne w kompozycji, można znacznie lepszym rozwiązaniem jest Użyj wyzwalaczy w stylach właściwości poszczególnych stanu danych wejściowych, takich jak <xref:System.Windows.UIElement.IsFocused%2A> lub <xref:System.Windows.UIElement.IsKeyboardFocused%2A>.  
   
- Style wizualne fokus działa wyłącznie do fokus klawiatury. Tak fokus style wizualne są typu funkcji ułatwień dostępu. Jeśli chcesz zmiany interfejsu użytkownika dla dowolnego typu fokus, czy za pomocą myszy, klawiatury lub programowo, następnie należy nie należy używać stylów wizualnych fokus i zamiast tego należy użyć metody ustawiające i jest wyzwalane w style lub szablonów, które pracują z wartości właściwości ogólne fokus takie jak `IsFocused` lub `IsFocusWithin`.  
+ Styl wizualny fokusu działają wyłącznie dla fokus klawiatury. W efekcie stylów wizualnych koncentracji uwagi są typem funkcji ułatwień dostępu. Jeśli chcesz, aby zmiany interfejsu użytkownika dla dowolnego typu fokus, czy za pomocą myszy, klawiatury lub programowo, następnie nie należy używać stylów wizualnych fokus i zamiast tego należy używać metod ustawiających i wyzwalaczy w style lub szablony, które pracują z wartości właściwości ogólne fokus takie jak <xref:System.Windows.UIElement.IsFocused%2A> lub <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>.  
   
 <a name="How"></a>   
-## <a name="how-to-create-a-focus-visual-style"></a>Jak utworzyć fokus stylu wizualnego  
- Styl tworzony w stylu wizualnego fokus powinien zawsze mieć <xref:System.Windows.Style.TargetType%2A> z <xref:System.Windows.Controls.Control>. Styl powinien zawierać głównie <xref:System.Windows.Controls.ControlTemplate>. Nie należy określać typ docelowy jako typ, gdy styl wizualny fokus jest przypisany do <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>.  
+## <a name="how-to-create-a-focus-visual-style"></a>Jak utworzyć styl wizualny fokusu  
+ Styl możesz utworzyć styl wizualny fokusu powinny zawsze występować <xref:System.Windows.Style.TargetType%2A> z <xref:System.Windows.Controls.Control>. Styl powinna składać się głównie z <xref:System.Windows.Controls.ControlTemplate>. Nie określaj typ docelowy jako typ, gdy styl wizualny fokusu jest przypisany do <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>.  
   
- Ponieważ typ docelowy jest zawsze <xref:System.Windows.Controls.Control>, musi być styl za pomocą właściwości, które są wspólne dla wszystkich kontrolek (za pomocą właściwości <xref:System.Windows.Controls.Control> klasy i jej klas podstawowych). Należy utworzyć szablon, który prawidłowo będzie działać jako nakładkę do elementu interfejsu użytkownika, a który nie będzie przesłaniać obszarów funkcjonalnych formantu. Ogólnie rzecz biorąc oznacza to, że wizualny powinien pojawić się poza marginesy kontrolki lub jako efekty tymczasowe lub dyskretnego kodu, które nie powoduje blokowania testowania trafień w formancie których stosowane jest stylu wizualnego fokus. Właściwości używanych w powiązaniu szablonu, które są przydatne do określenia rozmiaru i pozycjonowania szablonu nakładki obejmują <xref:System.Windows.FrameworkElement.ActualHeight%2A>, <xref:System.Windows.FrameworkElement.ActualWidth%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, i <xref:System.Windows.Controls.Control.Padding%2A>.  
+ Ponieważ typ docelowy jest zawsze <xref:System.Windows.Controls.Control>, musi być stylu za pomocą właściwości, które są wspólne dla wszystkich kontrolek (przy użyciu właściwości <xref:System.Windows.Controls.Control> klasy i jej klasy bazowe). Należy utworzyć szablon, który prawidłowo będzie działać jako nakładkę z elementem interfejsu użytkownika i będzie, nie mogą zasłaniać obszarów funkcjonalnych formantu. Ogólnie rzecz biorąc oznacza to, że wizualną opinię powinien pojawić się poza marginesy kontrolki lub jako tymczasowy lub dyskretny kod efektów, które nie będzie blokować testowania trafień w kontrolce której stosowana jest styl wizualny fokusu. Właściwości, które można użyć w powiązaniu szablonu, które są przydatne do określania rozmiaru i pozycjonowania szablonu nakładki obejmują <xref:System.Windows.FrameworkElement.ActualHeight%2A>, <xref:System.Windows.FrameworkElement.ActualWidth%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, i <xref:System.Windows.Controls.Control.Padding%2A>.  
   
 <a name="Alternatives"></a>   
-## <a name="alternatives-to-using-a-focus-visual-style"></a>Alternatywy dla przy użyciu stylu wizualnego fokus  
- W sytuacjach, gdzie przy użyciu stylu wizualnego fokus jest nieodpowiedni, ponieważ są tylko style formantów pojedynczego lub ma większą kontrolę nad kontroli szablonu istnieje wiele dostępnych właściwości i techniki, które można utworzyć visual zachowanie w odpowiedzi na zmiany fokusu.  
+## <a name="alternatives-to-using-a-focus-visual-style"></a>Alternatywy dla przy użyciu styl wizualny fokusu  
+ W sytuacjach, w którym przy użyciu styl wizualny fokusu jest nieodpowiednia, ponieważ są tylko style kontrolki jednego lub mają większą kontrolę nad szablonu kontrolki istnieje wiele dostępnych właściwości i technik, które można utworzyć wizualizację zachowanie w odpowiedzi na zmiany w trybie koncentracji uwagi.  
   
- Wyzwalacze, metody ustawiające i ustawiające zdarzeń są omówiona szczegółowo w [stylami i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md). Obsługa zdarzeń trasowane została szczegółowo opisana w [kierowane Przegląd zdarzeń](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Wyzwalacze, metody ustawiające i ustawiające zdarzeń są omówiono szczegółowo w [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md). Obsługa zdarzenia trasowane została omówiona w [Przegląd zdarzeń kierowane](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
- Jeśli interesuje Cię w szczególności fokus klawiatury <xref:System.Windows.UIElement.IsKeyboardFocused%2A> właściwości zależności można używać właściwości <xref:System.Windows.Trigger>. Wyzwalacz właściwości w stylu lub szablonie jest odpowiedniejsze techniki do definiowania zachowania fokus klawiatury jest bardzo specjalnie z myślą o jeden formant i które mogą być wizualnie niezgodne zachowanie fokus klawiatury dla innych formantów.  
+ Jeśli interesuje Cię specjalnie fokus klawiatury <xref:System.Windows.UIElement.IsKeyboardFocused%2A> właściwości zależności można używać właściwości <xref:System.Windows.Trigger>. Wyzwalacz właściwości w stylu lub szablonu jest techniką bardziej odpowiednie do definiowania zachowania fokus klawiatury jest bardzo specjalnie dla pojedynczego kontrola i który może być wizualnie niezgodny zachowanie fokus klawiatury dla innych kontrolek.  
   
- Inny podobny właściwość zależności jest <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>, może być odpowiednie do użycia, aby wizualnie wyróżnienia tego fokus klawiatury jest gdzieś w ramach składania lub Obszar funkcjonalny formantu. Na przykład użytkownik może umieścić <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> wyzwalacz tak, aby panelu, który grupuje kilku formantów pojawia się inaczej, nawet jeśli fokus klawiatury może być bardziej precyzyjnie znajdować się na pojedynczego elementu w obrębie tego panelu.  
+ Jest inna właściwość zależności podobne <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>, który może być odpowiednie do użycia, jeśli chcesz wizualnie wyróżnienia że fokus klawiatury jest gdzieś w ramach składania lub obszaru funkcjonalnego formantu. Na przykład może umieścić <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> wyzwalacza w taki sposób, że panel, który grupuje kilka formantów pojawia się inaczej, mimo że fokus klawiatury może być bardziej precyzyjne włączenia pojedynczego elementu poziomu tego panelu.  
   
- Można również użyć zdarzenia <xref:System.Windows.UIElement.GotKeyboardFocus> i <xref:System.Windows.UIElement.LostKeyboardFocus> (a także ich odpowiedniki wersja zapoznawcza). Można użyć tych zdarzeń jako podstawę <xref:System.Windows.EventSetter>, lub możesz pisać programy obsługi dla zdarzenia związane z kodem.  
+ Możesz również użyć zdarzenia <xref:System.Windows.UIElement.GotKeyboardFocus> i <xref:System.Windows.UIElement.LostKeyboardFocus> (a także ich odpowiedników w wersji zapoznawczej). Zdarzenia te można użyć jako podstawy dla <xref:System.Windows.EventSetter>, lub można napisać procedury obsługi zdarzeń w związanym z kodem.  
   
-### <a name="other-focus-properties"></a>Inne właściwości fokus  
- Jeśli chcesz, aby wszystkie możliwe przyczyny zmiany fokusu do tworzenia wizualnego zachowanie, podstawowa metody ustawiającej lub wyzwalane w <xref:System.Windows.UIElement.IsFocused%2A> właściwości zależności, albo na <xref:System.Windows.UIElement.GotFocus> lub <xref:System.Windows.UIElement.LostFocus> zdarzenia używane na potrzeby <xref:System.Windows.EventSetter>.  
+### <a name="other-focus-properties"></a>Inne właściwości koncentracji uwagi  
+ Jeśli chcesz, aby wszystkie możliwe przyczyny zmieniania fokusu do tworzenia wizualnych zachowanie, podstawowej metody ustawiającej lub Wyzwalaj w momencie <xref:System.Windows.UIElement.IsFocused%2A> właściwość zależności lub alternatywnie w <xref:System.Windows.UIElement.GotFocus> lub <xref:System.Windows.UIElement.LostFocus> zdarzenia używane do <xref:System.Windows.EventSetter>.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  

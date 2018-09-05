@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
 ms.openlocfilehash: 77801fcf443556515e6f1414490a1deeb4fa7bc4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390117"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513298"
 ---
 # <a name="ascending-c-reference"></a>ascending (odwołanie w C#)
 `ascending` Kontekstowe słowo kluczowe jest używane w [klauzuli orderby](../../../csharp/language-reference/keywords/orderby-clause.md) w wyrażeniach zapytań, aby określić, że kolejność sortowania jest od najmniejszej do największej. Ponieważ `ascending` jest sortowanie domyślne zamówienie, nie masz go określić.  

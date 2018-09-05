@@ -7,11 +7,11 @@ helpviewer_keywords:
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
 ms.openlocfilehash: 9ed549cb1e10b22c4fa34d984133a6be11dfab44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481165"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525115"
 ---
 # <a name="application-settings-attributes"></a>Atrybuty ustawień aplikacji
 Architektura ustawień aplikacji zawiera wiele atrybutów, które mogą być stosowane do klasy otoki ustawień aplikacji lub jego poszczególnych właściwości. Te atrybuty są sprawdzane w czasie wykonywania przez infrastrukturę ustawienia aplikacji, często specjalnie Dostawca ustawień, aby dostosować jego funkcjonowania określone potrzeby niestandardowej otoki.  

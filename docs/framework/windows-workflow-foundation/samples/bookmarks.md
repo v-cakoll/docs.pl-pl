@@ -3,11 +3,11 @@ title: Bookmarks2
 ms.date: 03/30/2017
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
 ms.openlocfilehash: 6bcc4e27566b9c8553e0792558c281a6b1f1caf4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387392"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528993"
 ---
 # <a name="bookmarks"></a>Zakładki
 Niniejszy przykład pokazuje, jak pisać niestandardowe działanie, które tworzy zakładki dla danych wejściowych zewnętrznych. Przykład obejmuje również podstawowa Aplikacja konsoli używa niestandardowego działania w przepływie pracy, który pokazuje, jak odnaleźć i wznowienie zakładki skojarzone z uruchomionego wystąpienia przepływu pracy. Aby uzyskać więcej informacji na temat zakładek, zobacz [zakładki](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

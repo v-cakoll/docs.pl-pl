@@ -9,87 +9,87 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c844a81da036c5e96c2c619e3a3aae85f70f8ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 255c7e068cc83b7dcb9489eeeda5ce33be983c81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397861"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522094"
 ---
 # <a name="overview-of-the-net-framework"></a>Przegląd programu .NET Framework
 
-.NET Framework jest technologia, która obsługuje tworzenie i uruchamianie nowej generacji aplikacji i usług XML sieci Web. .NET Framework zaprojektowano w celu spełnienia następujących celów:
+.NET Framework jest technologią, która obsługuje tworzenie i używanie kolejnej generacji aplikacji i usług sieci Web XML. .NET Framework jest zaprojektowany, aby wypełnić następujące cele:
 
-- Aby zapewnić spójny zorientowane obiektowo środowiska programowania, czy kod obiektu są przechowywane i wykonywane lokalnie, wykonywane lokalnie, ale rozproszonych Internet lub zdalnie wykonać.
+- Zapewnianie spójnego zorientowane obiektowo środowiska programowania, czy kod obiektu jest przechowywany i wykonywany lokalnie, wykonywany lokalnie, ale rozproszony w Internecie, czy wykonywany zdalnie.
 
-- Zapewnienie środowiska wykonywanie kodu, który minimalizuje konfliktów wdrożenia i przechowywanie wersji oprogramowania.
+- Zapewnienie środowiska wykonania kodu, które minimalizuje konflikty wdrażaniem i przechowywaniem wersji oprogramowania.
 
-- Aby zapewnić środowisko wykonawcze kodu, które ułatwia bezpieczne wykonywanie kodu, w tym kod tworzony przez nieznaną lub częściowo zaufanych innych firm.
+- Zapewnienie środowiska wykonania kodu, które ułatwia bezpieczne wykonywanie kodu, w tym kodu utworzonego przez nieznaną lub na wpół zaufanych stronę trzecią.
 
-- Umożliwia wykonanie kodu środowiska, aby wyeliminować problemy z wydajnością z inicjowanych przez skrypty lub interpretowane środowisk.
+- Aby zapewnić wykonywanie kodu środowiska, które eliminuje problemy z wydajnością inicjowanych przez skrypty lub interpretowane środowiska.
 
-- Aby można było spójne developer wystąpić powszechnie różnych typów aplikacji, takich jak aplikacje systemu Windows i aplikacji sieci Web.
+- Aby doświadczenia dewelopera spójne w różnych typach aplikacji, takich jak aplikacje oparte na Windows i aplikacji opartych na sieci Web.
 
-- Aby utworzyć całej komunikacji na standardach, aby upewnić się, że kodu opartego na programie .NET Framework integruje się z innego kodu.
+- Tworzenie całej komunikacji na podstawie standardów przemysłowych w celu zapewnienia, że kod oparty na programie .NET Framework integruje się z innym kodem.
 
 > [!NOTE]
-> Aby uzyskać ogólne wprowadzenie do programu .NET Framework dla użytkowników i deweloperów, zobacz [wprowadzenie](../../../docs/framework/get-started/index.md).
+> Aby uzyskać ogólne wprowadzenie do programu .NET Framework dla użytkowników i deweloperów — zobacz [wprowadzenie](../../../docs/framework/get-started/index.md).
 
-.NET Framework zawiera środowisko uruchomieniowe języka wspólnego (CLR) i bibliotece klas programu .NET Framework. Środowisko uruchomieniowe języka wspólnego jest podstawą środowiska .NET Framework. Środowisko uruchomieniowe można traktować jako agenta, który zarządza kodu w czasie wykonywania, podając podstawowe usługi, takie jak zarządzanie pamięci, wątku i komunikacji zdalnej, również wymuszając ścisłe zasady zabezpieczeń i inne formy dokładności kodu, które podwyższyć poziom bezpieczeństwa i niezawodności. W rzeczywistości pojęcie zarządzania kodem jest podstawą środowiska uruchomieniowego. Kod, że elementy docelowe środowisko uruchomieniowe nosi nazwę kodu zarządzanego podczas kod, który nie docelowe środowisko uruchomieniowe nosi nazwę kodu niezarządzanego. Biblioteka klas jest kompleksowe, zorientowany obiektowo kolekcją typów wielokrotnego użytku, które umożliwia tworzenie aplikacji od tradycyjnych wiersza polecenia i graficzny interfejs użytkownika (GUI) aplikacje oparte na najnowszych rozwiązań dotyczących dostarczane przez platformę ASP.NET, takich jak Web apps Formularze oraz usługi XML sieci Web.
+.NET Framework składa się środowisko uruchomieniowe języka wspólnego (CLR) i biblioteki klas programu .NET Framework. Środowisko uruchomieniowe języka wspólnego jest podstawą środowiska .NET Framework. Środowisko wykonawcze można traktować jak agenta zarządzającego kodem w czasie wykonywania, dostarczającego usługi podstawowe, takie jak zarządzanie pamięcią, zarządzanie wątkami i obsługa zdalna, również wymuszając ścisłe zasady zabezpieczeń i inne formy dokładności kodu, które promują bezpieczeństwo i niezawodność. W rzeczywistości koncepcja zarządzania kodem jest podstawową zasadą środowiska wykonawczego. Kod, elementy docelowe środowisko uruchomieniowe jest znany jako kodu zarządzanego, gdy kod, który nie jest kierowana środowiska uruchomieniowego jest znany jako kod niezarządzany. Biblioteka klas jest kompleksowe, zorientowana obiektowo Kolekcja typów wielokrotnego użytku, które umożliwia tworzenie aplikacji od tradycyjnych użytkownika z wiersza polecenia lub graficznego interfejsu aplikacji (GUI) do aplikacji opartych na najnowszych innowacjach dostępnych w ASP.NET, takich jak sieci Web Formularze i usługi XML sieci Web.
 
-.NET Framework może być obsługiwany przez niezarządzane składników, które załadować środowisko uruchomieniowe języka wspólnego do ich procesów i zainicjować wykonywanie kodu zarządzanego, tworząc środowisko oprogramowania, który wykorzystuje funkcje zarządzane i niezarządzane. .NET Framework nie tylko udostępnia kilka hosty w czasie wykonywania, ale obsługuje również rozwoju hosty w czasie wykonywania innych firm.
+.NET Framework może być obsługiwany przez składniki niezarządzane, których ładowanie środowiska uruchomieniowego języka wspólnego w swoje procesy i inicjują wykonywanie kodu zarządzanego, tworząc w ten sposób środowisko oprogramowania, które wykorzystuje funkcje zarządzanych i niezarządzanych. .NET Framework nie tylko udostępnia kilka hostów wykonawczych, ale również wspiera projektowanie hostów środowiska uruchomieniowego innych firm.
 
-Na przykład ASP.NET obsługuje środowisko wykonawcze zapewniające skalowalne, po stronie serwera środowisko dla kodu zarządzanego. Program ASP.NET działa bezpośrednio ze środowiskiem uruchomieniowym, aby umożliwić aplikacji ASP.NET i usługi XML sieci Web, które zostały omówione w dalszej części tego tematu.
+Na przykład platforma ASP.NET hostuje środowisko wykonawcze zapewniające skalowalne i po stronie serwera środowisko dla kodu zarządzanego. ASP.NET współpracuje bezpośrednio ze środowiska uruchomieniowego, aby umożliwić aplikacji ASP.NET i usługi XML sieci Web, które zostały omówione w dalszej części tego tematu.
 
-Program Internet Explorer jest przykładem niezarządzanych aplikacji, która obsługuje środowisko uruchomieniowe (w formie rozszerzenia typu MIME). Przy użyciu programu Internet Explorer do obsługi środowiska uruchomieniowego umożliwia osadzanie składników zarządzanych lub formanty formularzy systemu Windows w dokumentach HTML. Hostowanie środowiska uruchomieniowego w ten sposób umożliwia przenośnych kodu zarządzanego, ale z lepsza oferuje tylko kodu zarządzanego, takich jak wykonanie częściowo zaufanych i pliku izolowanego magazynu.
+Program Internet Explorer jest przykładem niezarządzanej aplikacji, która hostuje środowisko wykonawcze (w formie rozszerzeń typu MIME). Obsługa środowiska uruchomieniowego za pomocą programu Internet Explorer umożliwia osadzanie składników zarządzanych lub formantów formularzy Windows w dokumentach HTML. Hostowanie środowiska uruchomieniowego w ten sposób umożliwia zarządzanego kodu mobilnego, ale z znaczne ulepszenia oferuje tylko kod zarządzany, takie jak wykonanie półzaufane i izolowany magazyn plików.
 
-Na poniższej ilustracji przedstawiono relacji środowiska CLR i biblioteki klas do aplikacji i całego systemu. Na rysunku przedstawiono również sposób zarządzany kod działa w większych architektury.
+Poniższa ilustracja pokazuje relację środowiska uruchomieniowego języka wspólnego i biblioteki klas, aplikacjach i całego systemu. Na ilustracji pokazano również działanie kodu zarządzanego działa w większej architekturze.
 
-![Zarządzany kod w większych architektura](../../../docs/framework/get-started/media/circle.gif "koło") .NET Framework w kontekście
+![Zarządzany kod w obrębie większej architekturze](../../../docs/framework/get-started/media/circle.gif "okrąg") .NET Framework w kontekście
 
-W poniższych sekcjach opisano główne funkcje programu .NET Framework większej liczby szczegółów.
+Główne funkcje programu .NET Framework większej liczby szczegółów można znaleźć w poniższych sekcjach.
 
-## <a name="features-of-the-common-language-runtime"></a>Funkcje środowisko uruchomieniowe języka wspólnego
+## <a name="features-of-the-common-language-runtime"></a>Funkcje środowiska uruchomieniowego języka wspólnego
 
-Środowisko uruchomieniowe języka wspólnego zarządza pamięci, wykonywanie wątków wykonywania kodu, weryfikowania bezpieczeństwa kodu, kompilacji i innych usługach system. Te funkcje są wewnętrzne do kodu zarządzanego, który jest uruchamiany na środowisko uruchomieniowe języka wspólnego.
+Środowisko uruchomieniowe języka wspólnego zarządza, pamięci, wykonywaniem wątków, wykonywaniem kodu, weryfikacją bezpieczeństwa kodu, kompilacji i innych usług systemu. Funkcje te są nierozerwalnie związane z kodem zarządzanym, które jest uruchamiane na środowisko uruchomieniowe języka wspólnego.
 
-Dotyczących zabezpieczeń zarządzane składniki są przyznawane różnych stopni zaufania, w zależności od szeregu czynników, które obejmują ich pochodzenia (np. Internet, sieci przedsiębiorstwa lub komputer lokalny). Oznacza to, że zarządzanego składnika może lub nie można wykonać operacji dostępu do plików, operacji dostępu do rejestru lub innych ważnych funkcji, nawet wtedy, gdy jest on używany w tej samej aktywnej aplikacji.
+Dotyczące zabezpieczeń składnikom zarządzanym są przyznawane różne stopnie zaufania w zależności od szeregu czynników, w tym ich pochodzenia (na przykład Internet, sieć przedsiębiorstwa lub komputer lokalny). Oznacza to, że zarządzany składnik może lub nie może być możliwe do wykonania operacji uzyskiwania dostępu do plików, operacje dostępu do rejestru lub innych ważnych funkcji, nawet jeśli jest on używany w tej samej aktywnej aplikacji.
 
-Środowisko uruchomieniowe wymusza także niezawodność kodu zaimplementowanie strict infrastruktury sprawdzania typu i kod wywołuje wspólny system typów (CTS). CTS zapewnia samoopisujące całego kodu zarządzanego. Różne firmy Microsoft i Kompilatory języka innych firm generowanie kodu zarządzanego, który odpowiada CTS. Oznacza to, że może on korzystać inne typy zarządzane i wystąpień, wymuszając ściśle typu wierności i typ bezpieczeństwa.
+Środowisko wykonawcze wymusza także niezawodność kodu poprzez implementację strict infrastruktury weryfikacji typu i kodu o nazwie system typu wspólnego (CTS). CTS zapewnia, że cały zarządzany kod jest samoopisujący. Różne firmy Microsoft i Kompilatory języka innych firm, generowanie kodu zarządzanego, który odpowiada CTS. Oznacza to, że kod zarządzany może zużywać inne zarządzane typy i wystąpienia, jednocześnie ściśle wymuszając wierność i bezpieczeństwo typów.
 
-Ponadto zarządzanego środowiska wykonawczego eliminuje wiele typowych problemów z oprogramowaniem. Na przykład środowiska uruchomieniowego obsługuje układ obiektu i automatycznie zarządza odwołania do obiektów, zwalniając je, gdy są one już używane. To automatyczne zarządzanie pamięcią rozpoznaje dwie typowe błędy aplikacji, przecieki pamięci i błędne odwołania do pamięci.
+Ponadto zarządzane środowisko wykonawcze eliminuje wiele typowych problemów z oprogramowaniem. Na przykład środowisko wykonawcze automatycznie obsługuje układ obiektu i zarządza odwołaniami do obiektów, zwalniając je, gdy są one już używane. To automatyczne zarządzanie pamięcią usuwa dwa najbardziej typowych błędów aplikacji, przecieki pamięci i błędne odwołania do pamięci.
 
-Środowisko uruchomieniowe przyspiesza również produktywność deweloperów. Na przykład programistów pisać aplikacje w z wybranego języka programowania jeszcze w pełni korzystać z programu obsługi, biblioteki klas i składników napisanych w innych językach przez innych. Dowolnego dostawcy kompilatora, który chce docelowe środowisko uruchomieniowe można to zrobić. Kompilatory języka, które odnoszą się do programu .NET Framework udostępnia funkcje programu .NET Framework istniejący kod napisany w tym języku znacznie łatwiejszym proces migracji w przypadku istniejących aplikacji.
+Środowisko wykonawcze przyspiesza również wydajność deweloperów. Na przykład programiści pisać aplikacje w ich z wybranego języka programowania, ale umożliwiają pełne wykorzystywanie zalet środowisko uruchomieniowe, biblioteki klas i składników napisanych w innych językach przez innych programistów. Każdy dostawca kompilatora, który chce przeznaczone dla środowiska uruchomieniowego można to zrobić. Kompilatory języka, które obsługują program .NET Framework udostępnia funkcje programu .NET Framework z istniejącym kodem w tym języku, znacznie ułatwianie proces migracji istniejących aplikacji.
 
-Gdy środowiska uruchomieniowego zaprojektowano pod kątem oprogramowania w przyszłości, obsługuje ona również oprogramowania dzisiaj i wczoraj. Współdziałanie zarządzane i niezarządzane kod umożliwia deweloperom nadal używać niezbędne składniki modelu COM i bibliotek DLL.
+Chociaż środowisko uruchomieniowe jest przeznaczone dla przyszłego oprogramowania, obsługuje również oprogramowanie działające dzisiaj i wczoraj. Współdziałanie między kodem zarządzanym i niezarządzanym umożliwia deweloperom kontynuować używanie niezbędnych składników COM i bibliotek DLL.
 
-Środowisko wykonawcze ma na celu poprawę wydajności. Mimo że środowisko uruchomieniowe języka wspólnego udostępnia wiele standardowych usług czasu wykonania, nigdy nie jest interpretowany kodu zarządzanego. Funkcja o nazwie just in time (JIT) kompilowanie umożliwia zarządzanego kodu do uruchomienia w języku macierzystym maszyny systemu, na którym jest wykonywany. W tym samym czasie Menedżer pamięci usuwa możliwości fragmentacji pamięci i zwiększa pamięci miejscowości z — odwołanie do dalszego zwiększenia wydajności.
+Środowisko wykonawcze jest przeznaczone do zwiększenia wydajności. Chociaż środowisko uruchomieniowe języka wspólnego udostępnia wiele standardowych usług czasu wykonywania, kod zarządzany nigdy nie jest interpretowany. Funkcja o nazwie just-in-time (JIT) kompilacja umożliwia wszystkich zarządzanych uruchamianie kodu w macierzystym języku maszyny, systemu, na którym jest wykonywany. W międzyczasie Menedżer pamięci eliminuje ewentualność fragmentacji pamięci i zwiększa pamięci miejscowość odniesienia do dalszego zwiększenia wydajności.
 
-Na koniec środowisko uruchomieniowe może być obsługiwany przez aplikacje wysokiej wydajności, po stronie serwera, takie jak Microsoft SQL Server i usługi Internet Information Services (IIS). Ta infrastruktura umożliwia umożliwia zapisanie logiki biznesowej podczas nadal korzystających z wyższego poziomu wydajności branży najlepsze enterprise serwerów, które obsługuje środowisko uruchomieniowe hostingu kodu zarządzanego.
+Wreszcie środowisko wykonawcze może być obsługiwany przez aplikacje o wysokiej wydajności, po stronie serwera, takie jak Microsoft SQL Server i usług Internet Information Services (IIS). Infrastruktura ta umożliwia zapisanie logiki biznesowej, a przy tym nadal najwyższej wydajności w branży najlepsze serwerów korporacyjnych, obsługujących hosta runtime przy użyciu kodu zarządzanego.
 
 ## <a name="net-framework-class-library"></a>Biblioteka klas programu .NET Framework
 
-Biblioteka klas programu .NET Framework jest kolekcją typów wielokrotnego użytku, które ścisła integracja z środowisko uruchomieniowe języka wspólnego. Biblioteka klas jest obiektowej, zapewniając typów, z których kod zarządzany pochodzi funkcji. To nie tylko sprawia, że typy .NET Framework jest łatwy w użyciu, ale zmniejsza czas związany z poznanie nowych funkcji programu .NET Framework. Ponadto składników innych firm integrują się z klas w programie .NET Framework.
+Biblioteka klas .NET Framework jest kolekcją typów wielokrotnego użytku, które są ściśle zintegrowane ze środowiska uruchomieniowego języka wspólnego. Biblioteka klas jest zorientowana obiektowo, zapewniając typy, z której wywodzi się funkcji we własnym kodzie zarządzanym. To nie tylko sprawia, że typy programu .NET Framework jest łatwa w użyciu, ale również skraca czas związany z poznawaniem nowych funkcji programu .NET Framework. Ponadto składników innych firm bezproblemowo integrować z klas w programie .NET Framework.
 
-Na przykład klasy kolekcji .NET Framework implementuje zestaw interfejsów do tworzenia własnych klas kolekcji. W klasach kolekcji programu blend bezproblemowo z klas w programie .NET Framework.
+Na przykład klas kolekcji .NET Framework implementują zbiór interfejsów do tworzenia własnych klas kolekcji. Twoje klasy kolekcji mieszają się niezauważalnie z klasami W.NET Framework.
 
-Zgodnie z regułami z biblioteki klas zorientowane obiektowo, typy .NET Framework umożliwiają wykonywanie szeregu typowych zadań programowania, w tym zadań, takich jak zarządzanie ciągu, zbierania danych łączność z bazą danych i uzyskiwania dostępu do plików. Oprócz tych typowych zadań biblioteki klas zawiera typy, które obsługi różnych scenariuszy projektowych. Umożliwia tworzenie następujących typów aplikacji i usług .NET Framework:
+Jak można oczekiwać od biblioteki klas obiektowych, typy programu .NET Framework umożliwiają wykonywanie szeregu typowych zadań programistycznych, w tym zadań takich jak zarządzanie ciągami, zbieranie danych, łączność z bazą danych i uzyskiwania dostępu do plików. Oprócz tych wspólnych zadań Biblioteka klas zawiera typy, które obsługują wiele specjalistycznych scenariuszy projektowych. Użyj programu .NET Framework do tworzenia następujących typów aplikacji i usług:
 
 - Aplikacje konsoli. Zobacz [Kompilowanie aplikacji konsoli](../../../docs/standard/building-console-apps.md).
 
-- Graficzny interfejs użytkownika aplikacji (formularze systemu Windows) w systemie Windows. Zobacz [formularzy systemu Windows](../../../docs/framework/winforms/index.md).
+- Windows aplikacje graficznego interfejsu użytkownika (Windows Forms). Zobacz [Windows Forms](../../../docs/framework/winforms/index.md).
 
 - Windows Presentation Foundation (WPF) aplikacji. Zobacz [Windows Presentation Foundation](../../../docs/framework/wpf/index.md).
 
-- Aplikacje programu ASP.NET. Zobacz [aplikacji ASP.NET sieci Web](../../../docs/framework/develop-web-apps-with-aspnet.md).
+- Aplikacje platformy ASP.NET. Zobacz [aplikacje ASP.NET sieci Web](../../../docs/framework/develop-web-apps-with-aspnet.md).
 
-- Usługi systemu Windows. Zobacz [wprowadzenie do systemu Windows usługi aplikacji](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md).
+- Usługi systemu Windows. Zobacz [wprowadzenie do Windows usługi aplikacji](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md).
 
 - Aplikacje zorientowane na usługę przy użyciu usługi Windows Communication Foundation (WCF). Zobacz [zorientowane na usługę aplikacje z usługą WCF](../../../docs/framework/wcf/index.md).
 
-- Aplikacje z obsługą przepływu pracy przy użyciu systemu Windows Workflow Foundation (WF). Zobacz [tworzenia przepływów pracy w programie .NET Framework](http://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Aplikacje współdziałające z przepływu pracy przy użyciu Windows Workflow Foundation (WF). Zobacz [tworzenia przepływów pracy w programie .NET Framework](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
 
-Klasy formularzy systemu Windows są rozbudowany zestaw typów wielokrotnego użytku, które znacząco upraszcza programowanie graficznego interfejsu użytkownika systemu Windows. Jeśli piszesz aplikację formularza sieci Web ASP.NET, można użyć klasy formularzy sieci Web.
+Klas formularzy Windows są kompleksowymi zestawami typów wielokrotnego użytku, które znacznie upraszczają proces tworzenia graficznego interfejsu użytkownika Windows. Jeśli piszesz aplikację formularza sieci Web platformy ASP.NET, można użyć klas formularzy sieci Web.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -97,5 +97,5 @@ Klasy formularzy systemu Windows są rozbudowany zestaw typów wielokrotnego uż
 [Przewodnik instalacji](../../../docs/framework/install/index.md)   
 [Podręcznik programowania](../../../docs/framework/development-guide.md)   
 [Narzędzia](../../../docs/framework/tools/index.md)   
-[.NET framework — przykłady](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
-[Biblioteka klas programu .NET framework](http://go.microsoft.com/fwlink/?LinkID=227195)
+[Przykłady dla platformy .NET framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+[Biblioteka klas programu .NET framework](https://go.microsoft.com/fwlink/?LinkID=227195)

@@ -2,59 +2,59 @@
 title: Utrwalanie aplikacji przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: abcff14c-f047-4195-ba26-d27f4a82c24e
-ms.openlocfilehash: e5c0cf23dd238c0c5a81519b5e6c415f4ef75f1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c225a9ed56a742fce0aaff3704bab31dabb0b9a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519190"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500007"
 ---
 # <a name="persisting-a-workflow-application"></a>Utrwalanie aplikacji przepływu pracy
-W tym przykładzie pokazano, jak uruchomić <xref:System.Activities.WorkflowApplication>, zwolnić ją, gdy przechodzi on bezczynny, a następnie ponownie załaduj może kontynuować działania.  
+W tym przykładzie pokazano, jak uruchomić <xref:System.Activities.WorkflowApplication>zwolnić ją, gdy usługa zostanie wprowadzona bezczynności i ponownie załadować go, aby kontynuować wykonywanie.  
   
-## <a name="sample-details"></a>Szczegóły próbki  
- <xref:System.Activities.WorkflowApplication> jest hostem dla wystąpienia jednym przepływie pracy, który udostępnia prosty interfejs i umożliwia kilka więcej typowych scenariuszy hostingu. Taki scenariusz jest długa uruchamiania przepływów pracy w ramach trwałości. Host kontroli trwałości jest wykonywana albo przez wywołanie operacji trwałości w <xref:System.Activities.WorkflowApplication>, lub obsługa <xref:System.Activities.WorkflowApplication> zdarzeń i wskazujący, że <xref:System.Activities.WorkflowApplication> ma utrwalić.  
+## <a name="sample-details"></a>Przykład szczegółów  
+ <xref:System.Activities.WorkflowApplication> jest hostem dla wystąpienia jeden przepływ pracy, która zapewnia prosty interfejs oraz umożliwia niektóre typowe scenariusze hostingu. Taki scenariusz jest długa uruchamiania przepływów pracy wspieranego przez stan trwały. Sterowanie hostem trwałość odbywa się to przez wywołanie operacji trwałości na <xref:System.Activities.WorkflowApplication>, lub obsługując <xref:System.Activities.WorkflowApplication> zdarzeń i wskazuje, że <xref:System.Activities.WorkflowApplication> utrwalać.  
   
- Przykładowy przepływ pracy jest <xref:System.Activities.Statements.WriteLine> działania monitowania użytkownika o ich nazw, `ReadLine` działania odbierania nazwę jako dane wejściowe do wznowienia <xref:System.Activities.Bookmark>i innym <xref:System.Activities.Statements.WriteLine> do wyświetlania pozdrowienia użytkownikowi. Gdy przepływ pracy oczekuje na dane wejściowe, zapewnia punkt fizycznych trwałości. Jest to często określane jako <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> punktu. <xref:System.Activities.WorkflowApplication> zgłasza <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> zdarzeń zawsze, gdy program przepływu pracy może zostać utrwalony, oczekuje na wznowienie zakładki, i jest wykonywane żadne inne czynności. W tym przykładowym przepływie pracy, punkt dołączanego bezpośrednio po `ReadLine` rozpoczyna się działanie wykonywania.  
+ Przykładowy przepływ pracy jest <xref:System.Activities.Statements.WriteLine> działania monitowania użytkownika o ich nazwy `ReadLine` działania do odbierania nazwę jako dane wejściowe do wznowienia <xref:System.Activities.Bookmark>, a inny <xref:System.Activities.Statements.WriteLine> do wyświetlania pozdrowienia do użytkownika. Gdy przepływ pracy jest oczekiwanie na dane wejściowe, dzięki temu naturalny punkt potrzeby stanu trwałego. To jest często nazywany <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> punktu. <xref:System.Activities.WorkflowApplication> wywołuje <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> wydarzenie w dowolnym momencie może być utrwalony program przepływu pracy, trwa oczekiwanie na wznowienie zakładki, a nie innych zadań jest wykonywana. W tym przykładowym przepływie pracy, dostarczanego przez punkt natychmiast po `ReadLine` działania rozpoczyna wykonywanie.  
   
- A <xref:System.Activities.WorkflowApplication> jest skonfigurowany do wykonywania trwałości z <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`. W przykładzie użyto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` Musi być przypisany do <xref:System.Activities.WorkflowApplication.InstanceStore%2A> właściwości przed <xref:System.Activities.WorkflowApplication> jest uruchamiany.  
+ A <xref:System.Activities.WorkflowApplication> jest skonfigurowany do wykonywania trwałości za pomocą <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`. W tym przykładzie użyto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` Muszą być przypisane do <xref:System.Activities.WorkflowApplication.InstanceStore%2A> właściwości przed <xref:System.Activities.WorkflowApplication> jest uruchamiany.  
   
- Przykład dodaje program obsługi do <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> zdarzeń. Program obsługi dla tego zdarzenia wskazuje co <xref:System.Activities.WorkflowApplication> zrobić, zwracając <xref:System.Activities.PersistableIdleAction>. Gdy <xref:System.Activities.PersistableIdleAction.Unload> jest zwracany, <xref:System.Activities.WorkflowApplication> zostanie zwolniona.  
+ Przykładowa aplikacja dodaje program obsługi do <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> zdarzeń. Obsługa to zdarzenie wskazuje, co <xref:System.Activities.WorkflowApplication> należy wykonać, zwracając <xref:System.Activities.PersistableIdleAction>. Gdy <xref:System.Activities.PersistableIdleAction.Unload> zwracany jest <xref:System.Activities.WorkflowApplication> jest zwalniana.  
   
- Przykład następnie akceptuje dane wejściowe użytkownika i ładuje utrwalonych przepływów pracy w nowym <xref:System.Activities.WorkflowApplication>. Robi to przez utworzenie nowej <xref:System.Activities.WorkflowApplication>, odtwarzanie <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`i kojarzenie została zakończona i zwolniony zdarzenia do wystąpienia, a następnie podczas wywoływania <xref:System.Activities.WorkflowApplication.Load%2A> o identyfikatorze wystąpienia przepływu pracy docelowej. Gdy wystąpienie jest uzyskiwana, `ReadLine` wznowieniu działania zakładki. Przepływ pracy prowadzi wykonywania z poziomu `ReadLine` działanie i uruchamia do zakończenia. Po zakończeniu przepływu pracy i zwalnia, <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` jest wywoływana raz ostatni, aby usunąć przepływ pracy.  
+ Przykład następnie akceptuje dane wejściowe od użytkownika i ładuje utrwalonych przepływów pracy w nowym <xref:System.Activities.WorkflowApplication>. Robi to przez utworzenie nowego <xref:System.Activities.WorkflowApplication>, odtwarzanie <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`oraz skojarzyć ukończone i nie załadowany zdarzenia do wystąpienia, a następnie wywołując <xref:System.Activities.WorkflowApplication.Load%2A> z identyfikatorem wystąpienia docelowego przepływu pracy. Gdy wystąpienie jest uzyskana, `ReadLine` zakładki tego działania zostanie wznowione. Przepływ pracy niesie ze sobą na wykonywanie z poziomu `ReadLine` działania i uruchomienia do ukończenia. Gdy przepływ pracy zakończy i zwalnia, <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` jest wywoływana raz ostatni, aby usunąć przepływ pracy.  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
 1.  Otwórz [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] wiersza polecenia.  
   
-     W tym przykładzie wymaga programu SQL Server Express, który jest instalowany domyślnie z [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+     Ten przykładowy skrypt wymaga programu SQL Server Express, który jest instalowany domyślnie z [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
 2.  Przejdź do katalogu próbki (\WF\Basic\Persistence\InstancePersistence\CS), a następnie uruchom CreateInstanceStore.cmd.  
   
     > [!CAUTION]
-    >  Skrypt CreateInstanceStore.cmd próbuje utworzyć bazę danych w domyślnym wystąpieniu programu SQL Server 2008 Express. Jeśli chcesz zainstalować bazy danych w innym wystąpieniu, należy zmodyfikować skrypt, aby to zrobić.  
+    >  Skrypt CreateInstanceStore.cmd próbuje utworzyć bazę danych w domyślnym wystąpieniu programu SQL Server 2008 Express. Jeśli chcesz zainstalować bazę danych w innym wystąpieniu, należy zmodyfikować skrypt, aby to zrobić.  
   
-3.  Przy użyciu [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania Persistence.sln i naciśnij klawisze CTRL + SHIFT + B, aby go skompilować.  
+3.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania Persistence.sln i naciśnij klawisze CTRL + SHIFT + B do jego tworzenia.  
   
     > [!CAUTION]
-    >  Jeśli zainstalowano bazy danych w innych niż domyślne wystąpienie programu SQL Server, należy zaktualizować parametry połączenia w kodzie przed kompilacją rozwiązania.  
+    >  Jeśli baza danych jest zainstalowana na innych niż domyślne wystąpienie programu SQL Server, należy zaktualizować parametry połączenia w kodzie przed kompilowania rozwiązania.  
   
-4.  Uruchom próbki z uprawnieniami administratora, przechodząc do katalogu bin projektu (\WF\Basic\Persistence\InstancePersistence\bin\Debug) w [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], klikając prawym przyciskiem myszy Workflow.exe i wybierając **Uruchom jako Administrator**.  
+4.  Uruchom aplikację przykładową z uprawnieniami administratora, przejdź do katalogu bin projektu (\WF\Basic\Persistence\InstancePersistence\bin\Debug) w [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], klikając prawym przyciskiem myszy Workflow.exe i wybierając opcję **Uruchom jako Administrator**.  
   
-#### <a name="to-remove-the-instance-store-database"></a>Aby usunąć bazę danych magazynu wystąpienia  
+#### <a name="to-remove-the-instance-store-database"></a>Aby usunąć wystąpienie bazy danych magazynu  
   
 1.  Otwórz [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] wiersza polecenia.  
   
-2.  Przejdź do katalogu próbki i uruchom RemoveInstanceStore.cmd.  
+2.  Przejdź do katalogu próbki, a następnie uruchom RemoveInstanceStore.cmd.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\InstancePersistence`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykłady trwałości i hostingu AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

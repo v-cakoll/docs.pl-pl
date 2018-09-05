@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
 ms.openlocfilehash: 7931da2e5f5c493b54eb1f33a1d6f57b38592f6e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530195"
 ---
 # <a name="struct-c-reference"></a>struct (odwołanie w C#)
 A `struct` typ jest typem wartości, które jest zazwyczaj używany do hermetyzacji mniejszym grupom powiązanych zmiennych, takich jak współrzędnych prostokąta lub właściwości elementu w magazynie. Poniższy przykład przedstawia deklarację prostą strukturą:  

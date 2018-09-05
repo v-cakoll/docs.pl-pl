@@ -2,43 +2,43 @@
 title: Pobieranie informacji o schemacie bazy danych
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: 1ac39a556fd7539550b12cb71b701c4bd3224a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00cf0e36dd7886897c26adf50102f32892ebb18e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562707"
 ---
 # <a name="retrieving-database-schema-information"></a>Pobieranie informacji o schemacie bazy danych
-Uzyskiwanie informacji o schemacie z bazy danych odbywa się z procesem odnajdywania schematu. Odnajdywanie schematu umożliwia aplikacjom żądanie czy zarządzanego dostawcy znaleźć i zwraca informacje dotyczące schematu bazy danych, nazywane również *metadanych*, danego bazy danych. Elementów schematu innej bazy danych, takich jak tabele, kolumny i procedury składowane są udostępniane za pomocą kolekcji schematu. Każdej kolekcji schematu zawiera szereg informacji o schemacie specyficzne dla używanego dostawcy.  
+Uzyskiwanie informacji o schemacie bazy danych odbywa się z procesem odnajdywania schematu. Wykrywanie schematu umożliwia aplikacjom żądanie czy zarządzanego dostawcy Znajdź i zwrócone informacje na temat schematu bazy danych, nazywane również *metadanych*, z określoną bazą danych. Elementy schematu innej bazy danych, takie jak tabele, kolumny i procedur składowanych są udostępniane za pośrednictwem kolekcje schematów. Każda kolekcja schemat zawiera szereg informacji o schemacie specyficzne dla używanego dostawcy.  
   
- Każda implementacja zarządzanego dostawcy .NET Framework **GetSchema** metody w **połączenia** klasy i informacji o schemacie, która jest zwracana z **GetSchema**metody jest dostarczany w formie <xref:System.Data.DataTable>. **GetSchema** metody jest przeciążona metoda, która zapewnia następujące parametry opcjonalne określanie kolekcji schematów, aby wrócić i ograniczanie ilość zwracanych informacji.  
+ Każda implementacja zarządzanego dostawcy .NET Framework **GetSchema** method in Class metoda **połączenia** klasy i informacji o schemacie, który jest zwracany z **GetSchema**metody jest dostarczany w formie <xref:System.Data.DataTable>. **GetSchema** metodą jest przeciążona metoda, która zapewnia następujące parametry opcjonalne określanie kolekcji schematów, aby powrócić i ograniczając ilość zwracanych informacji.  
   
- Podaj dostawców danych .NET Framework dla OLE DB, ODBC, Oracle i SqlClient **GetSchemaTable** metodę, która zwraca DataTable opisujące metadane kolumny **DataReader**.  
+ Podaj dostawcy danych .NET Framework dla OLE DB i ODBC, Oracle oraz SqlClient **GetSchemaTable** metodę, która zwraca DataTable opisujące kolumny metadanych **DataReader**.  
   
- .NET Framework Data Provider for OLE DB przedstawia również informacje o schemacie przy użyciu <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A> metody <xref:System.Data.OleDb.OleDbConnection> obiektu. Jako argumenty **Element GetOleDbSchemaTable** przyjmuje <xref:System.Data.OleDb.OleDbSchemaGuid> identyfikującym informacji o schemacie, aby wrócić i zwrócił tablicę ograniczeń dotyczących tych kolumn. **Element GetOleDbSchemaTable** zwraca <xref:System.Data.DataTable> wypełnione informacjami żądany schemat.  
+ .NET Framework Data Provider for OLE DB udostępnia również informacje o schemacie przy użyciu <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A> metody <xref:System.Data.OleDb.OleDbConnection> obiektu. Jako argumenty **Element GetOleDbSchemaTable** przyjmuje <xref:System.Data.OleDb.OleDbSchemaGuid> określający informacji o schemacie, aby powrócić i Tablica ograniczeń na te zwracane kolumny. **Element GetOleDbSchemaTable** zwraca <xref:System.Data.DataTable> wypełniony informacjami żądany schemat.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [GetSchema i kolekcje schematów](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- W tym artykule opisano **GetSchema** — metoda i jak może służyć do pobierania i ograniczanie informacji schematu z bazy danych.  
+ W tym artykule opisano **GetSchema** metody i jak może służyć do pobierania i ograniczyć informacji o schemacie bazy danych.  
   
  Ograniczenia schematu  
  W tym artykule opisano ograniczenia schematu, które mogą być używane z **GetSchema**.  
   
  [Typowe kolekcje schematów](../../../../docs/framework/data/adonet/common-schema-collections.md)  
- Zawiera opis wszystkich typowych kolekcji schematu obsługiwane przez wszystkich dostawców zarządzane w programie .NET Framework.  
+ W tym artykule opisano, wszystkie Typowe kolekcje schematów obsługiwane przez wszystkich dostawców zarządzanych w programie .NET Framework.  
   
  [Kolekcje schematów programu SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
- Opis kolekcji schematów, obsługiwane przez dostawcę .NET Framework dla programu SQL Server.  
+ W tym artykule opisano kolekcji schematów, obsługiwany przez dostawcę .NET Framework dla programu SQL Server.  
   
  [Kolekcje schematów Oracle](../../../../docs/framework/data/adonet/oracle-schema-collections.md)  
- Opis kolekcji schematów, obsługiwane przez dostawcę .NET Framework dla programu Oracle.  
+ W tym artykule opisano kolekcji schematów, obsługiwany przez dostawcę .NET Framework dla programu Oracle.  
   
  [Kolekcje schematów ODBC](../../../../docs/framework/data/adonet/odbc-schema-collections.md)  
- Opis kolekcji schematu dla sterowników ODBC.  
+ Opisuje kolekcje schematów dla sterowników ODBC.  
   
  [Kolekcje schematów OLE DB](../../../../docs/framework/data/adonet/ole-db-schema-collections.md)  
- Opis kolekcji schematu dla dostawcy OLE DB.  
+ Opisuje kolekcje schematów dla dostawcy OLE DB.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Data.Common.DbConnection.GetSchema%2A>  
@@ -73,4 +73,4 @@ Uzyskiwanie informacji o schemacie z bazy danych odbywa się z procesem odnajdyw
   
 ## <a name="see-also"></a>Zobacz też  
  [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

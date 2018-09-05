@@ -2,43 +2,43 @@
 title: Działanie RangeEnumeration
 ms.date: 03/30/2017
 ms.assetid: ca5b78f4-94fa-4aa7-830d-26039ac422c8
-ms.openlocfilehash: 9aa04c80f20e2d410fb49e2d07d836c8c5ab1b4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9cf522227620422b414adc26cbc0bf338bf57d4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516581"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556295"
 ---
 # <a name="rangeenumeration-activity"></a>Działanie RangeEnumeration
-Ten przykład przedstawia sposób tworzenia działań niestandardowych, który przechodzi przez kolekcję liczb. W poniższej tabeli przedstawiono główne pliki uwzględnione w próbce.  
+W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, który iteruje po kolekcji liczb. W poniższej tabeli przedstawiono główne pliki zawarte w przykładzie.  
   
 |Nazwa pliku|Opis|  
 |---------------|-----------------|  
-|RangeEnumeration.cs|Definiuje niestandardowe działanie o nazwie `RangeEnumeration` który zastępuje <xref:System.Activities.NativeActivity> klasy i pętlę seria liczb.|  
-|RangeEnumerationSample.cs|Aplikacji klienckiej, która używa `RangeEnumeration` działanie Iterowanie przez kolekcję liczb.|  
+|RangeEnumeration.cs|Definiuje niestandardowe działanie o nazwie `RangeEnumeration` , zastępuje <xref:System.Activities.NativeActivity> klasy i pętle w kolejnych seriach liczb.|  
+|RangeEnumerationSample.cs|Aplikacja kliencka, która używa `RangeEnumeration` działania do iteracji przez kolekcję liczb.|  
   
  W poniższej tabeli przedstawiono właściwości `RangeEnumeration` działania.  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
-|Uruchamianie|Liczba całkowita, można uruchomić z pętli.|  
-|Zatrzymywanie|Liczba całkowita, można zatrzymać w pętli.|  
-|Krok|Określa, ile dotyczące iteracji po każdym.|  
-|Treści|Określa kod do wykonania podczas każdej iteracji.|  
+|Uruchamianie|Liczba całkowita, aby rozpocząć pętli z.|  
+|Zatrzymywanie|Liczba całkowita, aby zatrzymać pętlę w.|  
+|Krok|Określa, ile iteracyjne każdorazowo.|  
+|Treść|Określa kod, do wykonania podczas każdej iteracji.|  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Przy użyciu [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania RangeEnumeration.sln.  
+1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania RangeEnumeration.sln.  
   
-2.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-3.  Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.  
+3.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\RangeEnumeration`

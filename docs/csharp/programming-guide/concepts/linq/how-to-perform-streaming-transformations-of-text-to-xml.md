@@ -1,21 +1,21 @@
 ---
-title: 'Porady: wykonania przesyłania strumieniowego przekształcenia tekstu do pliku XML (C#)'
+title: 'Porady: wykonywanie przekształceń strumieniowych tekstu do pliku XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 4313c5263b6a219ec3c8d05a7b7938c41c7cc028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98fa8bd9ae393e9c87b67ae3f2874a2c279415af
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526950"
 ---
-# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Porady: wykonania przesyłania strumieniowego przekształcenia tekstu do pliku XML (C#)
-Jeden ze sposobów przetwarzania pliku tekstowego służy do zapisania — metoda rozszerzenia pliku tekstowego strumieni linii w czasie przy użyciu `yield return` utworzenia. Następnie można pisać zapytania LINQ, który przetwarza w pliku tekstowym w sposób odroczonego opóźnieniem. Jeśli następnie użyć <xref:System.Xml.Linq.XStreamingElement> do strumienia wyjściowego, następnie utworzyć transformację z pliku tekstowego z kod XML, który używa minimalnej ilości pamięci, niezależnie od rozmiaru pliku źródłowego.  
+# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Porady: wykonywanie przekształceń strumieniowych tekstu do pliku XML (C#)
+Jedno z podejść do przetwarzania pliku tekstowego jest napisanie metody rozszerzenia, która przesyła strumieniowo plik tekstowy linię w chwili `yield return` konstruowania. Następnie można napisać zapytanie LINQ, która przetwarza plik tekstowy, który w sposób odroczonego z opóźnieniem. Jeśli używasz <xref:System.Xml.Linq.XStreamingElement> do strumienia wyjściowego, będzie można utworzyć przekształcenie z pliku tekstowego do pliku XML, który używa minimalnej ilości pamięci, bez względu na rozmiar do źródłowego pliku tekstowego.  
   
- Istnieją pewne ostrzeżenia dotyczące przesyłania strumieniowego przekształcenia. Transformację przesyłania strumieniowego najlepiej jest stosowane w sytuacji, w którym można przetwarzać cały plik po i może przetwarzać wierszy w kolejności występowania w dokumencie źródłowym. Jeśli masz więcej niż raz przetworzyć pliku lub jeśli zajdzie potrzeba sortowania wierszy przed ich przetwarzania, utracisz wiele korzyści wynikające ze stosowania technik przesyłania strumieniowego.  
+ Istnieją pewne zastrzeżenia dotyczące przekształceń strumieniowych. Przekształcenie przesyłania strumieniowego najlepiej jest stosowany w sytuacjach, w którym może przetwarzać cały plik po i może przetwarzać wierszy w kolejności występowania w dokumencie źródłowym. Jeśli masz więcej niż jeden raz przetworzyć pliku lub jeśli trzeba posortować wiersze przed ich przetwarzania, utracisz wiele korzyści z używania przesyłania strumieniowego techniki.  
   
 ## <a name="example"></a>Przykład  
- Następujący plik tekstowy, People.txt, jest źródła w ramach tego przykładu.  
+ W następującym pliku tekstowym People.txt, jest źródłem w tym przykładzie.  
   
 ```  
 #This is a comment  
@@ -24,7 +24,7 @@ Jeden ze sposobów przetwarzania pliku tekstowego służy do zapisania — metod
 3,David,Wright,Inventor  
 ```  
   
- Poniższy kod zawiera metody rozszerzenia, które wiersze w pliku tekstowym w sposób odroczonego strumieni.  
+ Poniższy kod zawiera metodę rozszerzenia, która przesyła strumieniowo wierszy w pliku tekstowym w sposób odroczone.  
   
 ```csharp  
 public static class StreamReaderSequence  
@@ -86,6 +86,7 @@ class Program
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Linq.XStreamingElement>  
- [Zaawansowane techniki zapytania (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Xml.Linq.XStreamingElement>  
+- [Zaawansowane techniki zapytań (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

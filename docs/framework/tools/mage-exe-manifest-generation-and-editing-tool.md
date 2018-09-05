@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: d3922d9a81e350fd9ce95ffaa51dc3534873fb97
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754995"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672763"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Narzędzie generowania manifestu i edytowania)
 
@@ -63,7 +63,7 @@ W poniższej tabeli przedstawiono opcje obsługiwane przez `-New` i `-Update` po
 |**-pu,** **- ProviderURL** `url`||Manifesty wdrożenia.|Określa adres URL, pod którym technologia ClickOnce będzie szukać aktualizacji aplikacji.|
 |**-pub,-wydawcy** `publisherName`||Manifesty aplikacji.<br /><br /> Manifesty wdrożenia.|Dodaje nazwę wydawcy do opisu elementu manifestu wdrożenia lub aplikacji. Gdy jest używana w manifeście aplikacji **- UseManifestForTrust** musi być także określona wartość "true" lub "t"; w przeciwnym razie ten parametr zgłosi błąd.|
 |**-s, - SupportURL**  `url`||Manifesty aplikacji.<br /><br /> Manifesty wdrożenia.|Określa łącze, które pojawia się w aplecie Dodaj lub usuń programy dla aplikacji ClickOnce.|
-|**-oś, - TimestampUri** `uri`||Manifesty aplikacji.<br /><br /> Manifesty wdrożenia.|Adres URL usługi cyfrowego oznaczania znacznikami czasu. Oznaczenie manifestu znacznikiem czasu zapobiega konieczności ponownego podpisania manifestu, jeśli certyfikat cyfrowy wygaśnie przed wdrożeniem następnej wersji aplikacji. Aby uzyskać więcej informacji, zobacz [Windows członkowie programu głównych certyfikatów](http://go.microsoft.com/fwlink/?LinkId=159000).|
+|**-oś, - TimestampUri** `uri`||Manifesty aplikacji.<br /><br /> Manifesty wdrożenia.|Adres URL usługi cyfrowego oznaczania znacznikami czasu. Oznaczenie manifestu znacznikiem czasu zapobiega konieczności ponownego podpisania manifestu, jeśli certyfikat cyfrowy wygaśnie przed wdrożeniem następnej wersji aplikacji. Aby uzyskać więcej informacji, zobacz [Windows członkowie programu głównych certyfikatów](https://go.microsoft.com/fwlink/?LinkId=159000).|
 |**-t, - ToFile** `filePath`|-New:<br />-Wdrożenie: odpowiednio deploy.application<br />-Aplikacji: application.exe.manifest<br />-Aktualizacja:<br />-Plik wejściowy.|Wszystkie typy plików.|Określa ścieżkę wyjściową utworzonego lub zmodyfikowanego pliku.<br /><br /> Jeśli **- ToFile** nie jest podany, gdy używasz **— nowe**, plik wyjściowy zostanie zapisany w bieżącym katalogu roboczym. Jeśli **- ToFile** nie jest podany, gdy używasz **— aktualizacja**, *Mage.exe* zapisze ten plik ponownie do pliku wejściowego.|
 |**-tr, - TrustLevel** `level`|Wartość określana na podstawie strefy, w której znajduje się adres URL aplikacji.|Manifesty aplikacji.|Poziom zaufania, który zostanie przyznany aplikacji na komputerach klientów. Dostępne wartości to Internet, Intranet i FullTrust.|
 |**-um, - UseManifestForTrust** `willUseForTrust`|False|Manifesty aplikacji.|Określa, czy podpis cyfrowy manifestu aplikacji będzie używany do podejmowania decyzji dotyczących zaufania, gdy aplikacja zostanie uruchomiona na komputerze klienckim. Określenie wartości „true” lub „t” wskazuje, że manifest aplikacji zostanie użyty do podejmowania decyzji dotyczących zaufania. Określenie wartości „false” lub „f” wskazuje, że zostanie użyty podpis manifestu wdrożenia.|

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 82dfc2e11d6a8a025aa9b7557255a13b69ffa508
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 29097dc4aa0bf712b9b2beda4450820a66472ba7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208405"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671854"
 ---
 # <a name="-operator-c-reference"></a>() — Operator (odwołanie w C#)
 Oprócz określania kolejności operacji w wyrażeniach nawiasy są też używane do następujących zadań:  
@@ -22,7 +22,7 @@ Oprócz określania kolejności operacji w wyrażeniach nawiasy są też używan
   
      [!code-csharp[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
   
-2.  Wywołanie metod lub obiektów delegowanych.  
+2.  Wywoływanie metody lub delegatów.  
   
      [!code-csharp[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
   
@@ -38,7 +38,8 @@ Oprócz określania kolejności operacji w wyrażeniach nawiasy są też używan
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)

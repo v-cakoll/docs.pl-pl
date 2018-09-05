@@ -1,22 +1,22 @@
 ---
-title: 'Porady: aktualizowanie definicji działania wystąpienia przepływu pracy'
+title: 'Porady: aktualizowanie definicji działającego wystąpienia przepływu pracy'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: 6492b08b45cf9e7767a14233c6aeb0dd648a3c82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3d870e9e5ad8129a5cf24c63c2a7884e91f9630
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520305"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43498990"
 ---
-# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Porady: aktualizowanie definicji działania wystąpienia przepływu pracy
-Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami aplikacji, aby zaktualizować wystąpienia przepływu pracy utrwalonych definicji przepływu pracy. Wymagana zmiana można wdrożyć poprawkę, nowe wymagania lub uwzględnienia nieoczekiwane. Ten krok samouczka przedstawiono sposób użycia aktualizacji dynamicznej można zmodyfikować wystąpienia utrwalonego `v1` numer odgadnięcie przepływu pracy do dopasowania nowych funkcji wprowadzonych w [porady: wiele wersji hosta przepływu pracy Side-by-Side ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Porady: aktualizowanie definicji działającego wystąpienia przepływu pracy
+Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów aplikacji, aby zaktualizować definicję przepływu pracy z istniejącym wystąpieniem przepływu pracy. Wymagana zmiana można zaimplementować poprawki, nowe wymagania lub uwzględnić nieoczekiwanych zmian. Ten krok, w tym samouczku przedstawiono sposób użycia aktualizacji dynamicznej do modyfikowania utrwalonego wystąpienia `v1` numer zgadywania przepływu pracy w celu dopasowania nowych funkcji wprowadzonych w [jak: wielu wersji przepływu pracy Side-by-Side hosta ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
 > [!NOTE]
->  Aby pobrać wersję zakończone lub wyświetlić Przewodnik wideo samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Aby pobrać wersję inną ukończone lub wyświetlić Przewodnik wideo tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-topic"></a>W tym temacie:  
   
@@ -30,40 +30,40 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
   
 -   [Aby skompilować i uruchomić aplikację CreateUpdateMaps](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
   
--   [Tworzenie zestawu zaktualizowany przepływ pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
+-   [Tworzenie zestawu zaktualizowanego przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
   
 -   [Aby zaktualizować WorkflowVersionMap do nowych wersji](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
   
 -   [Aby zastosować aktualizacje dynamiczne](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
   
--   [Aby uruchomić aplikację zaktualizowane przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
+-   [Aby uruchomić aplikację przy użyciu zaktualizowanych przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
   
--   [Aby włączyć uruchamianie poprzednich wersji przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
+-   [Aby włączyć uruchamianie wcześniejszych wersji przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
 ###  <a name="BKMK_CreateProject"></a> Aby utworzyć projekt CreateUpdateMaps  
   
 1.  Kliknij prawym przyciskiem myszy **WF45GettingStartedTutorial** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **nowy projekt**.  
   
-2.  W **zainstalowana** węzła, wybierz opcję **Visual C#**, **Windows** (lub **Visual Basic**, **Windows**).  
+2.  W **zainstalowane** węzeł **Visual C#**, **Windows** (lub **języka Visual Basic**, **Windows**).  
   
     > [!NOTE]
-    >  W zależności od tego, jaki język programowania jest skonfigurowany jako podstawowy język w programie Visual Studio, **Visual C#** lub **Visual Basic** węzeł może być w obszarze **inne języki** w węźle **zainstalowana** węzła.  
+    >  Zależności od tego, jaki język programowania jest skonfigurowany jako podstawowy język w programie Visual Studio, **Visual C#** lub **języka Visual Basic** węzła może znajdować się w **inne języki** w węźle **zainstalowane** węzła.  
   
-     Upewnij się, że **.NET Framework 4.5** jest zaznaczony na liście rozwijanej wersji .NET Framework. Wybierz **aplikacji konsoli** z **Windows** listy. Typ **CreateUpdateMaps** do **nazwa** polu i kliknij przycisk **OK**.  
+     Upewnij się, że **.NET Framework 4.5** jest zaznaczony na liście rozwijanej wersji .NET Framework. Wybierz **aplikację Konsolową** z **Windows** listy. Typ **CreateUpdateMaps** do **nazwa** pole, a następnie kliknij przycisk **OK**.  
   
 3.  Kliknij prawym przyciskiem myszy **CreateUpdateMaps** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj odwołanie**.  
   
-4.  Wybierz **Framework** z **zestawy** w węźle **Dodaj odwołanie** listy. Typ **elementu System.Activities** do **wyszukiwania zestawów** pole, aby filtrować zestawy i ułatwiają wybierz żądany odwołań.  
+4.  Wybierz **Framework** z **zestawy** w węźle **Dodaj odwołanie** listy. Typ **System.Activities** do **wyszukiwania zestawów** pola do filtrowania zestawów i ułatwić wybierz żądane odwołania.  
   
-5.  Zaznacz pole wyboru obok **elementu System.Activities** z **wyniki wyszukiwania** listy.  
+5.  Zaznacz pole wyboru obok pozycji **System.Activities** z **wyniki wyszukiwania** listy.  
   
-6.  Typ **serializacji** do **wyszukiwania zestawów** polu, a następnie zaznacz pole wyboru obok **System.Runtime.Serialization** z **wyniki wyszukiwania**  listy.  
+6.  Typ **serializacji** do **wyszukiwania zestawów** polu, a następnie zaznacz pole wyboru obok pozycji **System.Runtime.Serialization** z **wyników wyszukiwania**  listy.  
   
-7.  Typ **System.Xaml** do **wyszukiwania zestawów** polu, a następnie zaznacz pole wyboru obok **System.Xaml** z **wyniki wyszukiwania** listy.  
+7.  Typ **System.Xaml** do **wyszukiwania zestawów** polu, a następnie zaznacz pole wyboru obok pozycji **System.Xaml** z **wyniki wyszukiwania** listy.  
   
-8.  Kliknij przycisk **OK** zamknąć **Menedżera odwołań** i dodać odwołań.  
+8.  Kliknij przycisk **OK** zamknąć **Menadżer odwołań** i dodać odwołania.  
   
-9. Dodaj następujące `using` (lub `Imports`) instrukcje w górnej części pliku z innym `using` (lub `Imports`) instrukcje.  
+9. Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
   
     ```vb  
     Imports System.Activities  
@@ -89,7 +89,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     using Microsoft.CSharp.Activities;  
     ```  
   
-10. Dodaj następujące dwa parametry elementy członkowskie `Program` klasy (lub `Module1`).  
+10. Dodaj następujące składowe dwa parametry w celu `Program` klasy (lub `Module1`).  
   
     ```vb  
     Const mapPath = "..\..\..\PreviousVersions"  
@@ -101,7 +101,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     const string definitionPath = @"..\..\..\NumberGuessWorkflowActivities_du";  
     ```  
   
-11. Dodaj następujące `StartUpdate` metodę `Program` klasy (lub `Module1`). Ta metoda Ładuje określony xaml definicji przepływu pracy do `ActivityBuilder`, a następnie wywołuje `DynamicUpdate.PrepareForUpdate`. `PrepareForUpdate` Tworzy kopię pliku definicji przepływu pracy wewnątrz `ActivityBuilder`. Po zmodyfikowaniu definicji przepływu pracy tej kopii jest używana wraz z definicji przepływu pracy zmodyfikowane do tworzenia mapy aktualizacji.  
+11. Dodaj następujący kod `StartUpdate` metody `Program` klasy (lub `Module1`). Ta metoda ładuje się definicji przepływu pracy określonego języka xaml do `ActivityBuilder`, a następnie wywołuje `DynamicUpdate.PrepareForUpdate`. `PrepareForUpdate` Tworzy kopię definicji przepływu pracy wewnątrz `ActivityBuilder`. Po zmodyfikowaniu definicji przepływu pracy tej kopii jest używana wraz z definicji modyfikacji przepływu pracy do tworzenia mapy aktualizacji.  
   
     ```vb  
     Private Function StartUpdate(name As String) As ActivityBuilder  
@@ -165,7 +165,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     }  
     ```  
   
-12. Następnie dodaj następujące `CreateUpdateMethod` do `Program` klasy (lub `Module1`). Tworzy mapę aktualizacja dynamiczna przez wywołanie DynamicUpdateServices.CreateUpdateMap, a następnie zapisuje mapy aktualizacji przy użyciu określonej nazwy. Ta mapa aktualizacji zawierają informacje wymagane przez środowisko wykonawcze przepływu pracy można zaktualizować wystąpienia utrwalonego przepływu pracy, która została uruchomiona z użyciem zawarte w oryginalnej definicji przepływu pracy `ActivityBuilder` tak, aby ukończy za pomocą definicji zaktualizowany przepływ pracy.  
+12. Następnie dodaj następujące `CreateUpdateMethod` do `Program` klasy (lub `Module1`). Tworzy mapę aktualizacja dynamiczna przez wywołującego DynamicUpdateServices.CreateUpdateMap, a następnie zapisuje mapy aktualizacji przy użyciu określonej nazwy. Ta mapa aktualizacji zawiera informacje wymagane przez środowisko wykonawcze przepływów pracy można zaktualizować wystąpienia utrwalonych przepływów pracy, która została uruchomiona z użyciem oryginalnej definicji przepływu pracy zawarte w `ActivityBuilder` tak, aby kończy, przy użyciu definicji zaktualizowany przepływ pracy.  
   
     ```vb  
     Private Sub CreateUpdateMaps(wf As ActivityBuilder, name As String)  
@@ -199,7 +199,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     }  
     ```  
   
-13. Dodaj następujące `SaveUpdatedDefinition` metodę `Program` klasy (lub `Module1`). Taka metoda ogranicza definicji zaktualizowany przepływ pracy po utworzeniu Mapa aktualizacji.  
+13. Dodaj następujący kod `SaveUpdatedDefinition` metody `Program` klasy (lub `Module1`). Ta metoda zapisuje definicji przepływu pracy zaktualizowane po utworzeniu update map.  
   
     ```vb  
     Private Sub SaveUpdatedDefinition(wf As ActivityBuilder, name As String)  
@@ -240,7 +240,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     }  
     ```  
   
-2.  Wywoływania `StartUpdate` , a następnie pobrać odwołanie do elementu głównego `StateMachine` działania przepływu pracy.  
+2.  Wywołanie `StartUpdate` i następnie odwołać się do katalogu głównego `StateMachine` działania przepływu pracy.  
   
     ```vb  
     Dim wf As ActivityBuilder = StartUpdate("StateMachineNumberGuessWorkflow.xaml")  
@@ -256,7 +256,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     StateMachine sm = wf.Implementation as StateMachine;  
     ```  
   
-3.  Następnie zaktualizuj wyrażenia dwóch `WriteLine` działań, które stwierdzenie, czy wynik użytkownika jest za duży lub za mały, aby były one zgodne aktualizacje wprowadzone w [porady: wiele wersji hosta przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+3.  Następnie zaktualizuj wyrażeń dwa `WriteLine` działań, które wyświetlają czy odgadnięcia użytkownika jest zbyt duże lub zbyt nisko, tak aby były zgodne aktualizacje wprowadzone w [jak: Host wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
     ```vb  
     'Update the Text of the two WriteLine activities that write the  
@@ -288,7 +288,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     tooHigh.Text = new CSharpValue<string>("Guess.ToString() + \" is too high.\"");  
     ```  
   
-4.  Następnie dodaj nowe `WriteLine` działania, w którym jest wyświetlany komunikat zamknięcia.  
+4.  Następnie dodaj nową `WriteLine` działań, która wyświetla komunikat zamknięcia.  
   
     ```vb  
     'Create the new WriteLine that displays the closing message.  
@@ -317,7 +317,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     sm.States[1].Transitions[0].Action = wl;  
     ```  
   
-5.  Po zaktualizowaniu przepływu pracy Wywołaj `CreateUpdateMaps` i `SaveUpdatedDefinition`. `CreateUpdateMaps` Tworzy i zapisuje `DynamicUpdateMap`, i `SaveUpdatedDefinition` zapisuje definicji zaktualizowany przepływ pracy.  
+5.  Po zaktualizowaniu przepływu pracy, należy wywołać `CreateUpdateMaps` i `SaveUpdatedDefinition`. `CreateUpdateMaps` Tworzy i zapisuje `DynamicUpdateMap`, i `SaveUpdatedDefinition` zapisuje definicji zaktualizowanego przepływu pracy.  
   
     ```vb  
     'Create the update map.  
@@ -335,7 +335,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     SaveUpdatedDefinition(wf, "StateMachineNumberGuessWorkflow_du.xaml");  
     ```  
   
-     Poniższy przykład jest wypełniony `CreateStateMachineUpdateMap` metody.  
+     Poniższy przykład jest gotowy `CreateStateMachineUpdateMap` metody.  
   
     ```vb  
     Private Sub CreateStateMachineUpdateMap()  
@@ -419,7 +419,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
   
 ###  <a name="BKMK_Flowchart"></a> Aby zaktualizować FlowchartNumberGuessWorkflow  
   
-1.  Dodaj następujące `CreateFlowchartUpdateMethod` do `Program` klasy (lub `Module1`). Ta metoda jest podobna do `CreateStateMachineUpdateMap`. Rozpoczyna się wywołanie `StartUpdate`, aktualizacje definicji przepływu pracy schemat blokowy i zakończeniu zapisując mapy aktualizacji, jak i definicja zaktualizowany przepływ pracy.  
+1.  Dodaj następujący kod `CreateFlowchartUpdateMethod` do `Program` klasy (lub `Module1`). Ta metoda jest podobna do `CreateStateMachineUpdateMap`. Rozpoczyna się po wywołaniu `StartUpdate`, aktualizacje definicji przepływu pracy schematu blokowego i zakończeniu pracy przez zapisanie mapy aktualizacji, jak i definicja zaktualizowany przepływ pracy.  
   
     ```vb  
     Private Sub CreateFlowchartUpdateMap()  
@@ -533,7 +533,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
   
 ###  <a name="BKMK_Sequential"></a> Aby zaktualizować SequentialNumberGuessWorkflow  
   
-1.  Dodaj następujące `CreateSequentialUpdateMethod` do `Program` klasy (lub `Module1`). Ta metoda jest podobna do innych metod. Rozpoczyna się wywołanie `StartUpdate`, aktualizacje definicji sekwencyjnego przepływu pracy i zakończeniu zapisując mapy aktualizacji, jak i definicja zaktualizowany przepływ pracy.  
+1.  Dodaj następujący kod `CreateSequentialUpdateMethod` do `Program` klasy (lub `Module1`). Ta metoda jest podobne do innych metod. Rozpoczyna się po wywołaniu `StartUpdate`, aktualizacje definicji sekwencyjnego przepływu pracy i zakończeniu pracy przez zapisanie mapy aktualizacji, jak i definicja zaktualizowany przepływ pracy.  
   
     ```vb  
     Private Sub CreateSequentialUpdateMap()  
@@ -613,7 +613,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
   
 ###  <a name="BKMK_CreateUpdateMaps"></a> Aby skompilować i uruchomić aplikację CreateUpdateMaps  
   
-1.  Aktualizacja `Main` — metoda i dodaj następujące wywołania trzy metody. Te metody są dodawane w poniższych sekcjach. Każda metoda aktualizacji odpowiedniego przepływu pracy numer argumentu i tworzy `DynamicUpdateMap` opisujący aktualizacji.  
+1.  Aktualizacja `Main` metody i dodaj następujące trzy metody wywołania. Te metody są dodawane w poniższych sekcjach. Każda metoda aktualizuje odpowiedni numer przepływ pracy odgadnięcia i tworzy `DynamicUpdateMap` opisujący aktualizacji.  
   
     ```vb  
     Sub Main()  
@@ -638,51 +638,51 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
   
 2.  Kliknij prawym przyciskiem myszy **CreateUpdateMaps** w **Eksploratora rozwiązań** i wybierz polecenie **Ustaw jako projekt startowy**.  
   
-3.  Naciśnij klawisze CTRL + SHIFT + B w celu skompilowania rozwiązania, a następnie klawisz CTRL + F5, aby uruchomić `CreateUpdateMaps` aplikacji.  
+3.  Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie i CTRL + F5, aby uruchomić `CreateUpdateMaps` aplikacji.  
   
     > [!NOTE]
-    >  `CreateUpdateMaps` Aplikacji nie są wyświetlane wszystkie informacje o stanie podczas uruchamiania, ale dostępne **NumberGuessWorkflowActivities_du** folderu i **PreviousVersions** folderu zostanie wyświetlony pliki definicji zaktualizowany przepływ pracy i mapowania aktualizacji.  
+    >  `CreateUpdateMaps` Aplikacji nie są wyświetlane wszystkie informacje o stanie podczas uruchamiania, ale Jeśli sprawdzasz **NumberGuessWorkflowActivities_du** folder i **PreviousVersions** folderu zostanie wyświetlony Zaktualizowany przepływ pracy plikami definicji oraz maps aktualizacji.  
   
-     Po mapy aktualizacji są tworzone i definicji przepływu pracy, zaktualizować, następnym krokiem jest zaktualizowany przepływ pracy zestawu zawierającego aktualizacji definicji kompilacji.  
+     Po mapy aktualizacji są tworzone i definicje przepływów pracy, zaktualizować, następnym krokiem jest zestaw zaktualizowanego przepływu pracy zawierający zaktualizowane definicje kompilacji.  
   
-###  <a name="BKMK_BuildAssembly"></a> Tworzenie zestawu zaktualizowany przepływ pracy  
+###  <a name="BKMK_BuildAssembly"></a> Tworzenie zestawu zaktualizowanego przepływu pracy  
   
-1.  Otwórz drugie wystąpienie parametru [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+1.  Otwórz drugie wystąpienie [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
-2.  Wybierz **Otwórz**, **projektu/rozwiązania** z **pliku** menu.  
+2.  Wybierz **Otwórz**, **projekt/rozwiązanie** z **pliku** menu.  
   
-3.  Przejdź do **NumberGuessWorkflowActivities_du** folder utworzony w [porady: wiele wersji hosta przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), wybierz pozycję **NumberGuessWorkflowActivities.csproj**  (lub **vbproj**) i kliknij przycisk **Otwórz**.  
+3.  Przejdź do **NumberGuessWorkflowActivities_du** folderu utworzonego w [jak: Host wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), wybierz opcję **NumberGuessWorkflowActivities.csproj**  (lub **vbproj**) i kliknij przycisk **Otwórz**.  
   
-4.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **SequentialNumberGuessWorkflow.xaml** i wybierz polecenie **wykluczyć z projektu**. Tak samo postąpić w **FlowchartNumberGuessWorkflow.xaml** i **StateMachineNumberGuessWorkflow.xaml**. Ten krok powoduje usunięcie poprzednich wersji definicji przepływu pracy z projektu.  
+4.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **SequentialNumberGuessWorkflow.xaml** i wybierz polecenie **Wyklucz z projektu**. Tak samo jak w przypadku **FlowchartNumberGuessWorkflow.xaml** i **StateMachineNumberGuessWorkflow.xaml**. Ten krok usuwa poprzednich wersji definicji przepływu pracy z projektu.  
   
 5.  Wybierz **Dodaj istniejący element** z **projektu** menu.  
   
-6.  Przejdź do **NumberGuessWorkflowActivities_du** folder utworzony w [porady: wiele wersji hosta przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+6.  Przejdź do **NumberGuessWorkflowActivities_du** folderu utworzonego w [jak: Host wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
-7.  Wybierz **plików XAML (\*.xaml;\*. xoml)** z **pliki typu** listy rozwijanej.  
+7.  Wybierz **pliki XAML (\*.xaml;\*. xoml)** z **pliki typu** listy rozwijanej.  
   
 8.  Wybierz **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, i **StateMachineNumberGuessWorkflow_du.xaml** i kliknij przycisk  **Dodaj**.  
   
     > [!NOTE]
-    >  CTRL + kliknięcie, aby zaznaczyć wiele elementów naraz.  
+    >  CTRL + kliknięcie, aby zaznaczyć wiele elementów w danym momencie.  
   
      Ten krok powoduje dodanie zaktualizowanych wersji definicji przepływu pracy do projektu.  
   
 9. Naciśnij kombinację klawiszy CTRL+SHIFT+B. Projekt zostanie skompilowany.  
   
-10. Wybierz **Zamknij rozwiązanie** z **pliku** menu. Plik rozwiązania dla projektu nie jest wymagana, więc klikamy **nr** zamknięcie programu Visual Studio bez zapisywania pliku rozwiązania. Wybierz **zakończenia** z **pliku** menu, aby zamknąć program Visual Studio.  
+10. Wybierz **Zamknij rozwiązanie** z **pliku** menu. Plik rozwiązania dla projektu nie jest wymagana, więc kliknij **nie** umożliwia zamknięcie programu Visual Studio bez zapisywania pliku rozwiązania. Wybierz **zakończenia** z **pliku** menu, aby zamknąć program Visual Studio.  
   
-11. Otwórz Eksploratora Windows i przejdź do **NumberGuessWorkflowActivities_du\bin\Debug** folder (lub **bin\Release** w zależności od ustawienia projektu).  
+11. Otwórz Eksploratora Windows i przejdź do **NumberGuessWorkflowActivities_du\bin\Debug** folder (lub **bin\Release** w zależności od ustawień projektu).  
   
-12. Zmień nazwę **NumberGuessWorkflowActivities.dll** do **NumberGuessWorkflowActivities_v15.dll**i skopiuj go do **PreviousVersions** folder utworzony w [Porady: hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+12. Zmień nazwę **NumberGuessWorkflowActivities.dll** do **NumberGuessWorkflowActivities_v15.dll**, a następnie skopiuj go do **PreviousVersions** folderu utworzonego w [Instrukcje: hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
 ###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Aby zaktualizować WorkflowVersionMap do nowych wersji  
   
-1.  Wrócić do początkowej wystąpienie [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+1.  Przejdź z powrotem do pierwszego wystąpienia elementu [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
 2.  Kliknij dwukrotnie **WorkflowVersionMap.cs** (lub **WorkflowVersionMap.vb**) w obszarze **NumberGuessWorkflowHost** projektu, aby go otworzyć.  
   
-3.  Dodaj trzy nowe tożsamości przepływu pracy poniżej sześciu istniejących deklaracji tożsamości przepływu pracy. W tym samouczku `1.5.0.0` jest używany jako `WorkflowIdentity.Version` tożsamości aktualizacji dynamicznej. Te nowe `v15` tożsamości będą używane w przepływie pracy zawierają definicje poprawne przepływu pracy dla wystąpień aktualizowany dynamicznie utrwalonych przepływów pracy.  
+3.  Dodaj trzy nowe tożsamości przepływu pracy tuż poniżej sześciu istniejące deklaracje tożsamości przepływu pracy. W tym samouczku `1.5.0.0` służy jako `WorkflowIdentity.Version` tożsamości aktualizacji dynamicznej. Te nowe `v15` przepływu pracy będą używane tożsamości udostępniają definicje poprawne przepływu pracy dla wystąpień dynamicznie aktualizowanej utrwalonych przepływów pracy.  
   
     ```vb  
     'Current version identities.  
@@ -718,7 +718,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     static public WorkflowIdentity SequentialNumberGuessIdentity_v15;  
     ```  
   
-4.  Dodaj następujący kod na końcu konstruktora. Ten kod inicjuje tożsamości przepływu pracy aktualizacji dynamicznej, ładuje odpowiedniej definicji przepływu pracy i dodaje je do słownika wersji przepływu pracy.  
+4.  Dodaj następujący kod na końcu konstruktora. Ten kod inicjuje tożsamości przepływu pracy aktualizacji dynamicznych, ładuje odpowiedniej definicji przepływu pracy i dodaje je do słownika wersji przepływu pracy.  
   
     ```vb  
     'Initialize the dynamic update workflow identities.  
@@ -796,7 +796,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
         v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
     ```  
   
-     Poniższy przykład jest wypełniony `WorkflowVersionMap` klasy.  
+     Poniższy przykład jest gotowy `WorkflowVersionMap` klasy.  
   
     ```vb  
     Public Module WorkflowVersionMap  
@@ -1067,30 +1067,30 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
   
 1.  Kliknij prawym przyciskiem myszy **WF45GettingStartedTutorial** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **nowy projekt**.  
   
-2.  W **zainstalowana** węzła, wybierz opcję **Visual C#**, **Windows** (lub **Visual Basic**, **Windows**).  
+2.  W **zainstalowane** węzeł **Visual C#**, **Windows** (lub **języka Visual Basic**, **Windows**).  
   
     > [!NOTE]
-    >  W zależności od tego, jaki język programowania jest skonfigurowany jako podstawowy język w programie Visual Studio, **Visual C#** lub **Visual Basic** węzeł może być w obszarze **inne języki** w węźle **zainstalowana** węzła.  
+    >  Zależności od tego, jaki język programowania jest skonfigurowany jako podstawowy język w programie Visual Studio, **Visual C#** lub **języka Visual Basic** węzła może znajdować się w **inne języki** w węźle **zainstalowane** węzła.  
   
-     Upewnij się, że **.NET Framework 4.5** jest zaznaczony na liście rozwijanej wersji .NET Framework. Wybierz **aplikacji konsoli** z **Windows** listy. Typ **ApplyDynamicUpdate** do **nazwa** polu i kliknij przycisk **OK**.  
+     Upewnij się, że **.NET Framework 4.5** jest zaznaczony na liście rozwijanej wersji .NET Framework. Wybierz **aplikację Konsolową** z **Windows** listy. Typ **ApplyDynamicUpdate** do **nazwa** pole, a następnie kliknij przycisk **OK**.  
   
 3.  Kliknij prawym przyciskiem myszy **ApplyDynamicUpdate** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj odwołanie**.  
   
-4.  Kliknij przycisk **rozwiązania** i zaznacz pole wyboru obok pozycji **NumberGuessWorkflowHost**. To odwołanie jest wymagane, aby `ApplyDynamicUpdate` można użyć `NumberGuessWorkflowHost.WorkflowVersionMap` klasy.  
+4.  Kliknij przycisk **rozwiązania** i zaznacz pole wyboru obok pozycji **NumberGuessWorkflowHost**. Ta dokumentacja jest wymagana, aby `ApplyDynamicUpdate` służy `NumberGuessWorkflowHost.WorkflowVersionMap` klasy.  
   
-5.  Wybierz **Framework** z **zestawy** w węźle **Dodaj odwołanie** listy. Typ **elementu System.Activities** do **wyszukiwania zestawów** pole. Spowoduje to Filtrowanie zestawów i ułatwiają wybierz żądane odwołania.  
+5.  Wybierz **Framework** z **zestawy** w węźle **Dodaj odwołanie** listy. Typ **System.Activities** do **wyszukiwania zestawów** pole. Spowoduje wyfiltrowanie zestawów i ułatwienia wybierz żądane odwołania.  
   
-6.  Zaznacz pole wyboru obok **elementu System.Activities** z **wyniki wyszukiwania** listy.  
+6.  Zaznacz pole wyboru obok pozycji **System.Activities** z **wyniki wyszukiwania** listy.  
   
-7.  Typ **serializacji** do **wyszukiwania zestawów** polu, a następnie zaznacz pole wyboru obok **System.Runtime.Serialization** z **wyniki wyszukiwania**  listy.  
+7.  Typ **serializacji** do **wyszukiwania zestawów** polu, a następnie zaznacz pole wyboru obok pozycji **System.Runtime.Serialization** z **wyników wyszukiwania**  listy.  
   
-8.  Typ **DurableInstancing** do **wyszukiwania zestawów** polu, a następnie zaznacz pole wyboru obok **System.Activities.DurableInstancing** i  **System.Runtime.DurableInstancing** z **wyniki wyszukiwania** listy.  
+8.  Typ **DurableInstancing** do **wyszukiwania zestawów** polu, a następnie zaznacz pole wyboru obok pozycji **System.Activities.DurableInstancing** i  **System.Runtime.DurableInstancing** z **wyniki wyszukiwania** listy.  
   
-9. Kliknij przycisk **OK** zamknąć **Menedżera odwołań** i dodać odwołań.  
+9. Kliknij przycisk **OK** zamknąć **Menadżer odwołań** i dodać odwołania.  
   
-10. Kliknij prawym przyciskiem myszy **ApplyDynamicUpdate** w Eksploratorze rozwiązań i wybierz polecenie **Dodaj**, **klasy**. Typ `DynamicUpdateInfo` do **nazwa** polu i kliknij przycisk **Dodaj**.  
+10. Kliknij prawym przyciskiem myszy **ApplyDynamicUpdate** w Eksploratorze rozwiązań i wybierz polecenie **Dodaj**, **klasy**. Typ `DynamicUpdateInfo` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.  
   
-11. Dodaj następujące dwa elementy członkowskie `DynamicUpdateInfo` klasy. Poniższy przykład jest wypełniony `DynamicUpdateInfo` klasy. Ta klasa zawiera informacje na temat mapy aktualizacji i nowy identyfikator przepływu pracy używane po zaktualizowaniu wystąpienia przepływu pracy.  
+11. Dodaj następujące dwa elementy członkowskie do `DynamicUpdateInfo` klasy. Poniższy przykład jest gotowy `DynamicUpdateInfo` klasy. Ta klasa zawiera informacje na temat aktualizacji mapy i nowy identyfikator przepływu pracy używane po zaktualizowaniu wystąpienia przepływu pracy.  
   
     ```vb  
     Public Class DynamicUpdateInfo  
@@ -1107,7 +1107,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     }  
     ```  
   
-12. Dodaj następujące `using` (lub `Imports`) instrukcje w górnej części pliku z innym `using` (lub `Imports`) instrukcje.  
+12. Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
   
     ```vb  
     Imports System.Activities  
@@ -1121,7 +1121,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
   
 13. Kliknij dwukrotnie **Program.cs** (lub **Module1.vb**) w Eksploratorze rozwiązań.  
   
-14. Dodaj następujące `using` (lub `Imports`) instrukcje w górnej części pliku z innym `using` (lub `Imports`) instrukcje.  
+14. Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
   
     ```vb  
     Imports NumberGuessWorkflowHost  
@@ -1144,7 +1144,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     using System.Activities.DurableInstancing;  
     ```  
   
-15. Dodaj następujący element członkowski ciąg połączenia do `Program` klasy (lub `Module1`).  
+15. Dodawanie następującej składowej ciąg połączenia do `Program` klasy (lub `Module1`).  
   
     ```vb  
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"  
@@ -1155,9 +1155,9 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     ```  
   
     > [!NOTE]
-    >  W zależności od posiadanej wersji programu SQL Server nazwę serwera w ciągu połączenia może być różne.  
+    >  W zależności od posiadanej wersji programu SQL Server nazwę serwera w ciągu połączenia może być inny.  
   
-16. Dodaj następujące `GetIDs` metodę `Program` klasy (lub `Module1`). Ta metoda zwraca listę identyfikatorów wystąpienia utrwalonego przepływu pracy.  
+16. Dodaj następujący kod `GetIDs` metody `Program` klasy (lub `Module1`). Ta metoda zwraca listę identyfikatorów wystąpień utrwalonych przepływów pracy.  
   
     ```vb  
     Function GetIds() As IList(Of Guid)  
@@ -1210,7 +1210,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     }  
     ```  
   
-17. Dodaj następujące `LoadMap` metodę `Program` klasy (lub `Module1`). Ta metoda tworzy słownik, który mapuje `v1` tożsamości mapy aktualizacji przepływu pracy i nowej tożsamości przepływu pracy używane do aktualizowania odpowiadającego utrwalone wystąpienia przepływu pracy.  
+17. Dodaj następujący kod `LoadMap` metody `Program` klasy (lub `Module1`). Ta metoda tworzy słownik, który mapuje `v1` tożsamości przepływu pracy do społeczności maps aktualizacji i nowych tożsamości przepływu pracy, używane do aktualizowania odpowiednich utrwalone wystąpienia przepływu pracy.  
   
     ```vb  
     Function LoadMap(mapName As String) As DynamicUpdateMap  
@@ -1253,7 +1253,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     }  
     ```  
   
-18. Dodaj następujące `LoadMaps` metodę `Program` klasy (lub `Module1`). Ta metoda ładuje trzy mapy aktualizacji i tworzy słownik mapujący `v1` tożsamości mapy aktualizacji przepływu pracy.  
+18. Dodaj następujący kod `LoadMaps` metody `Program` klasy (lub `Module1`). Ta metoda ładuje trzy mapy aktualizacji i tworzy słownik mapujący `v1` tożsamości przepływu pracy do mapowania aktualizacji.  
   
     ```vb  
     Function LoadMaps() As IDictionary(Of WorkflowIdentity, DynamicUpdateInfo)  
@@ -1325,7 +1325,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     }  
     ```  
   
-19. Dodaj następujący kod do `Main`. Ten kod iteruje utrwalonych przepływów pracy wystąpień i sprawdza, czy każdy `WorkflowIdentity`. Jeśli `WorkflowIdentity` mapuje `v1` wystąpienia przepływu pracy `WorkflowApplication` skonfigurowano definicji zaktualizowany przepływ pracy i tożsamością zaktualizowany przepływ pracy. Następnie `WorkflowApplication.Load` nosi nazwę wystąpienia i Mapa aktualizacji, która ma zastosowanie mapy aktualizacji dynamicznej. Po zastosowaniu aktualizacji zaktualizowane wystąpienie jest utrwalone w wyniku wywołania `Unload`.  
+19. Dodaj następujący kod do `Main`. Ten kod wykonuje iteracje utrwalonych przepływów pracy wystąpień i sprawdza, czy każdy `WorkflowIdentity`. Jeśli `WorkflowIdentity` mapuje `v1` wystąpienia przepływu pracy `WorkflowApplication` jest skonfigurowany z definicji przepływu pracy zaktualizowane i tożsamość zaktualizowany przepływ pracy. Następnie `WorkflowApplication.Load` nosi nazwę wystąpienia i map aktualizacji, które dotyczą mapy aktualizacji dynamicznej. Po zastosowaniu aktualizacji zaktualizowane wystąpienia są utrwalane wywołaniem `Unload`.  
   
     ```vb  
     Dim store = New SqlWorkflowInstanceStore(connectionString)  
@@ -1410,71 +1410,71 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
   
 20. Kliknij prawym przyciskiem myszy **ApplyDynamicUpdate** w **Eksploratora rozwiązań** i wybierz polecenie **Ustaw jako projekt startowy**.  
   
-21. Naciśnij klawisze CTRL + SHIFT + B w celu skompilowania rozwiązania, a następnie naciśnij kombinację klawiszy CTRL + F5, aby uruchomić `ApplyDynamicUpdate` aplikacji i zaktualizować wystąpień utrwalonych przepływów pracy. Powinny pojawić się dane wyjściowe podobne do następującego. Przepływy pracy w wersji 1.0.0.0 są zaktualizowany do wersji 1.5.0.0, gdy wersji 2.0.0.0 przepływy pracy nie zostały zaktualizowane.  
+21. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie, a następnie naciśnij klawisze CTRL + F5, aby uruchomić `ApplyDynamicUpdate` aplikacji i zaktualizować wystąpienia utrwalonych przepływu pracy. Dane wyjściowe powinny być podobne do następujących. Przepływy pracy w wersji 1.0.0.0 zaktualizowali system do wersji 1.5.0.0, podczas, gdy nie są aktualizowane w przepływach pracy w wersji 2.0.0.0 lub nowszej.  
   
- **Sprawdzanie: StateMachineNumberGuessWorkflow; W wersji = 1.0.0.0**  
+ **Inspekcja: StateMachineNumberGuessWorkflow; W wersji = 1.0.0.0**  
 **Zaktualizowano w celu: StateMachineNumberGuessWorkflow; Wersja = 1.5.0.0**   
-**Sprawdzanie: StateMachineNumberGuessWorkflow; W wersji = 1.0.0.0**   
+**Inspekcja: StateMachineNumberGuessWorkflow; W wersji = 1.0.0.0**   
 **Zaktualizowano w celu: StateMachineNumberGuessWorkflow; Wersja = 1.5.0.0**   
-**Sprawdzanie: FlowchartNumberGuessWorkflow; W wersji = 1.0.0.0**   
+**Inspekcja: FlowchartNumberGuessWorkflow; W wersji = 1.0.0.0**   
 **Zaktualizowano w celu: FlowchartNumberGuessWorkflow; Wersja = 1.5.0.0**   
-**Sprawdzanie: FlowchartNumberGuessWorkflow; W wersji = 1.0.0.0**   
+**Inspekcja: FlowchartNumberGuessWorkflow; W wersji = 1.0.0.0**   
 **Zaktualizowano w celu: FlowchartNumberGuessWorkflow; Wersja = 1.5.0.0**   
-**Sprawdzanie: SequentialNumberGuessWorkflow; W wersji = 1.0.0.0**   
+**Inspekcja: SequentialNumberGuessWorkflow; W wersji = 1.0.0.0**   
 **Zaktualizowano w celu: SequentialNumberGuessWorkflow; Wersja = 1.5.0.0**   
-**Sprawdzanie: SequentialNumberGuessWorkflow; W wersji = 1.0.0.0**   
+**Inspekcja: SequentialNumberGuessWorkflow; W wersji = 1.0.0.0**   
 **Zaktualizowano w celu: SequentialNumberGuessWorkflow; Wersja = 1.5.0.0**   
-**Sprawdzanie: SequentialNumberGuessWorkflow; W wersji = 1.0.0.0**   
+**Inspekcja: SequentialNumberGuessWorkflow; W wersji = 1.0.0.0**   
 **Zaktualizowano w celu: SequentialNumberGuessWorkflow; Wersja = 1.5.0.0**   
-**Sprawdzanie: StateMachineNumberGuessWorkflow; W wersji = 1.0.0.0**   
+**Inspekcja: StateMachineNumberGuessWorkflow; W wersji = 1.0.0.0**   
 **Zaktualizowano w celu: StateMachineNumberGuessWorkflow; Wersja = 1.5.0.0**   
-**Sprawdzanie: FlowchartNumberGuessWorkflow; W wersji = 1.0.0.0**   
+**Inspekcja: FlowchartNumberGuessWorkflow; W wersji = 1.0.0.0**   
 **Zaktualizowano w celu: FlowchartNumberGuessWorkflow; Wersja = 1.5.0.0**   
-**Sprawdzanie: StateMachineNumberGuessWorkflow; Wersja = 2.0.0.0**   
-**Sprawdzanie: StateMachineNumberGuessWorkflow; Wersja = 2.0.0.0**   
-**Sprawdzanie: FlowchartNumberGuessWorkflow; Wersja = 2.0.0.0**   
-**Sprawdzanie: FlowchartNumberGuessWorkflow; Wersja = 2.0.0.0**   
-**Sprawdzanie: SequentialNumberGuessWorkflow; Wersja = 2.0.0.0**   
-**Sprawdzanie: SequentialNumberGuessWorkflow; Wersja = 2.0.0.0**   
+**Inspekcja: StateMachineNumberGuessWorkflow; W wersji = 2.0.0.0**   
+**Inspekcja: StateMachineNumberGuessWorkflow; W wersji = 2.0.0.0**   
+**Inspekcja: FlowchartNumberGuessWorkflow; W wersji = 2.0.0.0**   
+**Inspekcja: FlowchartNumberGuessWorkflow; W wersji = 2.0.0.0**   
+**Inspekcja: SequentialNumberGuessWorkflow; W wersji = 2.0.0.0**   
+**Inspekcja: SequentialNumberGuessWorkflow; W wersji = 2.0.0.0**   
 **Naciśnij dowolny klawisz, aby kontynuować...**  
   
-###  <a name="BKMK_BuildAndRun"></a> Aby uruchomić aplikację zaktualizowane przepływów pracy  
+###  <a name="BKMK_BuildAndRun"></a> Aby uruchomić aplikację przy użyciu zaktualizowanych przepływów pracy  
   
 1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Ustaw jako projekt startowy**.  
   
 2.  Naciśnij klawisze CTRL + F5, aby uruchomić aplikację.  
   
-3.  Kliknij przycisk **nowej gry** można uruchomić nowego przepływu pracy i Zapisz informacje o wersji poniżej okno stanu, która wskazuje przepływu pracy jest `v2` przepływu pracy.  
+3.  Kliknij przycisk **nową grę** Aby uruchomić nowy przepływ pracy i zwrócić uwagę na wersję informacje poniżej okno stanu, który wskazuje przepływu pracy jest `v2` przepływu pracy.  
   
-4.  Wybierz jedną z `v1` przepływy pracy na początku [porady: wiele wersji hosta przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) tematu. Należy pamiętać, że informacje o wersji w obszarze okno stanu wskazuje, że przepływ pracy jest wersja **1.5.0.0** przepływu pracy. Należy pamiętać, że nie ma żadnych informacji wskazane o poprzednich prób innych niż czy był zbyt duży lub za mały.  
+4.  Wybierz jedną z `v1` przepływów pracy na początku [jak: Host wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) tematu. Należy pamiętać, że informacje o wersji w obszarze okno stanu wskazuje, że przepływ pracy jest wersji **1.5.0.0** przepływu pracy. Należy zauważyć, że nie ma żadnych informacji wykazały o poprzednich prób innych niż czy były zbyt duże lub zbyt nisko.  
   
- **Wprowadź liczbę z przedziału od 1 do 10**  
-**Twoje wynik jest za mała.**  
+ **Wprowadź liczbę między 1 a 10**  
+**Przypuszczenie jest zbyt mała.**  
   
-5.  Zanotuj `InstanceId` , a następnie wprowadź liczbę prób do momentu ukończenia przepływu pracy. Okno stanu wyświetla informacje o zawartości argumentu, ponieważ `WriteLine` działania zostały zaktualizowane przez aktualizację dynamiczną.  
+5.  Zwróć uwagę na `InstanceId` , a następnie wprowadź liczbę prób, do momentu ukończenia przepływu pracy. Okno stanu wyświetla informacje o zawartości odgadnięcia, ponieważ `WriteLine` działania zostały zaktualizowane przez aktualizację dynamiczną.  
   
- **Wprowadź liczbę z przedziału od 1 do 10**  
-**Twoje wynik jest za mała.**   
-**Wprowadź liczbę z przedziału od 1 do 10**   
-**5 jest zbyt niski.**   
-**Wprowadź liczbę z przedziału od 1 do 10**   
+ **Wprowadź liczbę między 1 a 10**  
+**Przypuszczenie jest zbyt mała.**   
+**Wprowadź liczbę między 1 a 10**   
+**5 jest zbyt mała.**   
+**Wprowadź liczbę między 1 a 10**   
 **7 jest zbyt duża.**   
-**Wprowadź liczbę z przedziału od 1 do 10**   
-**Gratulacje, odgadnąć numer w włącza 4.**  
+**Wprowadź liczbę między 1 a 10**   
+**Gratulacje, złamać numer w włącza 4.**  
   
-6.  Otwórz Eksploratora Windows i przejdź do **NumberGuessWorkflowHost\bin\debug** folder (lub **bin\release** w zależności od ustawienia projektu), a następnie otwórz plik śledzenia za pomocą Notatnika, który odpowiada Ukończono przepływ pracy. Jeśli nie wprowadzono uwagę `InstanceId` można zidentyfikować przy użyciu pliku śledzenia poprawne **Data modyfikacji** informacji w Eksploratorze Windows. Informacje o śledzeniu ostatni wiersz zawiera dane wyjściowe nowo dodanego `WriteLine` działania.  
+6.  Otwórz Eksploratora Windows i przejdź do **NumberGuessWorkflowHost\bin\debug** folder (lub **bin\release** w zależności od ustawień projektu), a następnie otwórz plik śledzenia za pomocą Notatnika, który odpowiada Aby ukończony przepływ pracy. Jeśli nie została wprowadzona Zanotuj `InstanceId` można zidentyfikować plik śledzenia poprawne przy użyciu **Data modyfikacji** informacji w Eksploratorze Windows. Ostatni wiersz informacje o śledzeniu zawiera dane wyjściowe nowo dodanych `WriteLine` działania.  
   
- **Wprowadź liczbę z przedziału od 1 do 10**  
-**Twoje wynik jest za mała.**   
-**Wprowadź liczbę z przedziału od 1 do 10**   
-**5 jest zbyt niski.**   
-**Wprowadź liczbę z przedziału od 1 do 10**   
+ **Wprowadź liczbę między 1 a 10**  
+**Przypuszczenie jest zbyt mała.**   
+**Wprowadź liczbę między 1 a 10**   
+**5 jest zbyt mała.**   
+**Wprowadź liczbę między 1 a 10**   
 **7 jest zbyt duża.**   
-**Wprowadź liczbę z przedziału od 1 do 10**   
-**6 jest poprawna. Odgadnięto go w włącza 4.**  
+**Wprowadź liczbę między 1 a 10**   
+**6 jest poprawna. Odgadnięto go w 4 wyłącza.**  
   
-###  <a name="BKMK_StartPreviousVersions"></a> Aby włączyć uruchamianie poprzednich wersji przepływów pracy  
- Po uruchomieniu poza przepływy pracy do aktualizacji, można zmodyfikować `NumberGuessWorkflowHost` aplikacji, aby umożliwić uruchamianie poprzednich wersji przepływów pracy.  
+###  <a name="BKMK_StartPreviousVersions"></a> Aby włączyć uruchamianie wcześniejszych wersji przepływów pracy  
+ Gdy wyczerpią się przepływy pracy służące do aktualizacji, można zmodyfikować `NumberGuessWorkflowHost` aplikacji, aby umożliwić uruchamianie wcześniejszych wersji przepływów pracy.  
   
 1.  Kliknij dwukrotnie **WorkflowHostForm** w **Eksploratora rozwiązań**i wybierz **WorkflowType** pola kombi.  
   
@@ -1488,7 +1488,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     SequentialNumberGuessWorkflow v1  
     ```  
   
-     Wypełniony `Items` kolekcji będą mieć sześć elementów.  
+     Gotowy `Items` kolekcja będzie mieć sześć elementów.  
   
     ```
     StateMachineNumberGuessWorkflow  
@@ -1499,9 +1499,9 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     SequentialNumberGuessWorkflow v1  
     ```  
   
-4.  Kliknij dwukrotnie **WorkflowHostForm** w **Eksploratora rozwiązań**i wybierz **kod widoku**.  
+4.  Kliknij dwukrotnie **WorkflowHostForm** w **Eksploratora rozwiązań**i wybierz **Wyświetl kod**.  
   
-5.  Dodaj trzy nowych przypadków `switch` (lub `Select Case`) instrukcji w `NewGame_Click` obsługi do mapowania nowych elementów w **WorkflowType** pola kombi do dopasowania tożsamości przepływu pracy.  
+5.  Dodaj trzy nowe przypadki do `switch` (lub `Select Case`) instrukcji w `NewGame_Click` program obsługi, aby zamapować nowe elementy w **WorkflowType** pola kombi pasującego tożsamości przepływu pracy.  
   
     ```vb  
     Case "SequentialNumberGuessWorkflow v1"  
@@ -1581,4 +1581,4 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami 
     };  
     ```  
   
-6.  Naciśnij klawisze CTRL + F5, aby skompilować i uruchomić aplikację. Można teraz uruchomić `v1` wersji przepływu pracy, jak również w bieżącej wersji. Aby dynamicznie aktualizować te nowe wystąpienia, należy uruchomić **ApplyDynamicUpdate** aplikacji.
+6.  Naciśnij klawisze CTRL + F5, aby skompilować i uruchomić aplikację. Możesz teraz rozpocząć `v1` wersji przepływu pracy, a także bieżących wersji. Aby dynamicznie aktualizować te nowe wystąpienia, należy uruchomić **ApplyDynamicUpdate** aplikacji.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 8222985e803972fb8d19159cfeaad93c9b08954d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244817"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515764"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Porady: iterowanie drzewa katalogów (Przewodnik programowania w języku C#)
 Wyrażenie "Iterowanie drzewa katalogów" oznacza, że dostęp do każdego pliku w każdej zagnieżdżonej podkatalogu w folderze określonym katalogu głównym, na dowolnym poziomie. Zawsze, nie trzeba otwierać każdego pliku. Możesz po prostu pobrać nazwę pliku lub podkatalog jako `string`, lub można pobrać dodatkowe informacje w formie <xref:System.IO.FileInfo?displayProperty=nameWithType> lub <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> obiektu.  
@@ -56,7 +56,8 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Kod iteracji niezawodne pliku należy wziąć pod uwagę wiele złożoności systemu plików. Aby uzyskać więcej informacji w systemie plików Windows, zobacz [informacje techniczne dotyczące systemu plików NTFS](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IO>  
- [LINQ i katalogi plików](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.IO>  
+- [LINQ i katalogi plików](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)

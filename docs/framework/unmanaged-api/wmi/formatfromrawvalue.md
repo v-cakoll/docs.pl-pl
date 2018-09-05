@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460424"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542170"
 ---
 # <a name="formatfromrawvalue-function"></a>Funkcja FormatFromRawValue
-Konwertuje jedną wartość danych pierwotnych wydajności w określonym formacie lub dwóch wartości danych wydajność pierwotna, jeśli Konwersja formatu jest oparte na czasie.   
+Konwertuje jedną wartość danych pierwotnych wydajności w określonym formacie lub dwóch wartości danych pierwotnych wydajności, jeśli Konwersja formatu jest oparte na czasie.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,30 +44,30 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parametry
 
 `dwCounterType`  
-[in] Typ licznika. Listę typów licznika, zobacz [typy licznika wydajności WMI](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType` mogą być dowolnego typu licznika, z wyjątkiem `PERF_LARGE_RAW_FRACTION` i `PERF_LARGE_RAW_BASE`. 
+[in] Typ licznika. Aby uzyskać listę typów liczników, zobacz [typy licznika wydajności WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` mogą być dowolnego typu liczników, z wyjątkiem `PERF_LARGE_RAW_FRACTION` i `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`  
-[in] Format, do którego można przekonwertować pierwotnych danych wydajności. Może być jedną z następujących wartości:
+[in] Format, do którego można przekonwertować pierwotnych danych wydajności. Może to być jedna z następujących wartości:
 
 |Stała  |Wartość  |Opis |
 |---------|---------|---------|
-| `PDH_FMT_DOUBLE` |0x00000200 | Zwraca obliczoną wartość jako wartość podwójnej precyzji ruchomy punkt. | 
+| `PDH_FMT_DOUBLE` |0x00000200 | Zwraca obliczoną wartość jako wartość punktu zmiennoprzecinkową podwójnej precyzji. | 
 | `PDH_FMT_LARGE` | 0x00000400 | Zwraca obliczoną wartość jako 64-bitową liczbę całkowitą. |
-| `PDH_FMT_LONG` | 0x00000100 | Zwraca obliczoną wartość jako liczba całkowita 32-bitowych. |
+| `PDH_FMT_LONG` | 0x00000100 | Zwraca obliczoną wartość jako 32-bitową liczbę całkowitą. |
 
-Jedną z poprzednimi wartościami może być operacja logiczna z jednym z następujących flag skalowania:
+Jedną z poprzednimi wartościami może być operacja logiczna przy użyciu jednego z następujących flag skalowania:
 
 |Stała  |Wartość  |Opis |
 |---------|---------|---------|
-| `PDH_FMT_NOSCALE` | 0x00001000 | Nie stosuj czynniki skalowania licznika. |
-| `PDH_FMT_1000` | 0x00002000 | Należy pomnożyć końcowej przez 1000. | 
+| `PDH_FMT_NOSCALE` | 0x00001000 | Nie należy stosować ten licznik skalowania czynników. |
+| `PDH_FMT_1000` | 0x00002000 | Za 1000, należy pomnożyć wartość końcową. | 
 
 `pTimeBase`  
-[in] Wskaźnik do podstawy czasu, jeśli to konieczne do konwersji na format. Jeśli podstawowe informacje o czasie nie jest niezbędna dla Konwersja formatu, wartość tego parametru jest ignorowana.
+[in] Wskaźnik do podstawowego czasu, jeśli jest to niezbędne do konwersji formatów. Jeśli podstawowy informacje o czasie nie jest niezbędne do konwersji formatów, wartość tego parametru jest ignorowana.
 
-`pRawValue1` [in] Wskaźnik do [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) strukturę, która reprezentuje wydajność pierwotna wartość.
+`pRawValue1` [in] Wskaźnik do [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) strukturę, która reprezentuje wartość wydajność pierwotna.
 
-`pRawValue2` [in] Wskaźnik do [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) strukturę, która reprezentuje druga wartość wydajność pierwotna. Jeśli drugiej wartości wydajność pierwotna nie jest konieczne, ten parametr powinien być `null`.
+`pRawValue2` [in] Wskaźnik do [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) strukturę, która reprezentuje wartość drugiego wydajność pierwotna. Jeśli drugiej wartości pierwotnych wydajności nie jest konieczne, ten parametr powinien być `null`.
 
 `pFmtValue` [out] Wskaźnik do [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) struktury, który odbiera wartość wydajności sformatowany.
 
@@ -78,12 +78,12 @@ Następujące wartości są zwracane przez tę funkcję:
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | Wywołanie funkcji zakończy się pomyślnie. |
-| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Wymagany argument jest niewystarczające lub niepoprawne. | 
+| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Wymagany argument jest brakujące lub nieprawidłowe. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | Dojście nie jest prawidłowym obiektem PDH. |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx) funkcji.
+Ta funkcja zawija wywołanie do [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx) funkcji.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -93,4 +93,4 @@ Ta funkcja jest zawijana wywołanie [FormatFromRawValue](https://msdn.microsoft.
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

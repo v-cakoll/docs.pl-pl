@@ -1,19 +1,19 @@
 ---
-title: 'Porady: serializacji przy użyciu elementu DataContractSerializer (C#)'
+title: 'Instrukcje: serializowanie przy użyciu elementu DataContractSerializer (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 1b2ec431698f23ea0c3e690cd57261bad8b1e4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c0324b1eeeab9f6cf9223e2a3e201771b188749
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329287"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510994"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a>Porady: serializacji przy użyciu elementu DataContractSerializer (C#)
-W tym temacie przedstawiono przykładową, który serializuje i deserializuje przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a>Instrukcje: serializowanie przy użyciu elementu DataContractSerializer (C#)
+W tym temacie przedstawiono przykład, który serializuje i deserializuje przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy wiele obiektów, które zawierają <xref:System.Xml.Linq.XElement> obiektów. Serializuje je w plikach tekstowych i deserializuje je z plików tekstowych.  
+ Poniższy przykład tworzy wiele obiektów, które zawierają <xref:System.Xml.Linq.XElement> obiektów. Szereguje je w plikach tekstowych i deserializuje z plików tekstowych.  
   
 ```csharp  
 using System;  
@@ -91,5 +91,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Serializacja wykresów obiektów, które zawierają obiekty klasy XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Serializowanie wykresów obiektów, które zawierają obiekty XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

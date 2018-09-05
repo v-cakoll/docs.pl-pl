@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
 ms.openlocfilehash: 62e2d05ec724b633de42c4b8e7183676d411791d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468829"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513594"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Wywołania operacji usługi (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Definiuje operacji usługi dla usługi danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia zdefiniowanie takich operacji jako metody na usługę danych. Podobnie jak inne zasoby usługi data operacje te usługi są adresowane za pomocą identyfikatorów URI. Operacja usługi może zwracać kolekcji typów jednostek, wystąpienia typu pojedynczej jednostki i typy pierwotne, takie jak liczba całkowita i ciąg. Operacja usługi może również zwracać `null` (`Nothing` w języku Visual Basic). [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta może służyć do dostępu do operacji usługi, które obsługują żądania HTTP GET. Te rodzaje operacji usługi są zdefiniowane jako metody, które mają <xref:System.ServiceModel.Web.WebGetAttribute> stosowane. Aby uzyskać więcej informacji, zobacz [operacji usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

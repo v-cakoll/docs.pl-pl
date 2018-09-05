@@ -1,40 +1,40 @@
 ---
-title: Definicja schematu tabeli DataTable
+title: Definicja schematu elementu DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 81da3937b709d4ef046eb1c470546f168bde4132
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 60e7f6a13bd7fd10398d300690bd73c3abc0d700
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757765"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552156"
 ---
-# <a name="datatable-schema-definition"></a>Definicja schematu tabeli DataTable
-Schemat lub struktura tabeli jest reprezentowana przez kolumn i ograniczeń. Zdefiniuj schemat <xref:System.Data.DataTable> przy użyciu <xref:System.Data.DataColumn> obiektów oraz <xref:System.Data.ForeignKeyConstraint> i <xref:System.Data.UniqueConstraint> obiektów. Kolumn w tabeli można mapować do kolumn w źródle danych, zawierać obliczone wartości w wyrażeniach, automatycznie zwiększyć ich wartości lub wartości klucza podstawowego.  
+# <a name="datatable-schema-definition"></a>Definicja schematu elementu DataTable
+Schemat lub struktura tabeli jest reprezentowany przez kolumn i ograniczeń. Należy zdefiniować schemat <xref:System.Data.DataTable> przy użyciu <xref:System.Data.DataColumn> obiektów także <xref:System.Data.ForeignKeyConstraint> i <xref:System.Data.UniqueConstraint> obiektów. Kolumny w tabeli można zamapować do kolumny w źródle danych, zawierać obliczone wartości w wyrażeniach, automatycznie zwiększyć ich wartości lub wartości klucza podstawowego.  
   
- Odwołania według nazwy kolumny, relacji i ograniczeń w tabeli jest rozróżniana wielkość liter. W tabeli, które mają taką samą nazwę, ale które różnią się wielkością liter w związku z tym może istnieć co najmniej dwie kolumny, relacji lub ograniczenia. Na przykład można mieć **Col1** i **col1**. W przypadku, np. odwołanie do jednej z kolumn o nazwie muszą być zgodne wielkość liter nazwy kolumny; w przeciwnym razie jest zwracany wyjątek. Na przykład jeśli tabela **myTable** zawiera kolumny **Col1** i **col1**, czy odwołanie **Col1** według nazwy jako  **myTable.Columns["Col1"]**, i **col1** jako **myTable.Columns["col1"]**. Próby odwołania z kolumn jako **myTable.Columns["COL1"]** wygenerowanie wyjątku.  
+ Odwołania według nazwy kolumny, relacje i ograniczenia w tabeli jest rozróżniana wielkość liter. W tabeli, które mają taką samą nazwę, ale które różnią się w przypadku w związku z tym może istnieć co najmniej dwóch kolumn, relacji lub ograniczenia. Na przykład można mieć **Col1** i **col1**. W takich jak przypadek, odwołanie do jednej z kolumn według nazwy musi być zgodny wielkość liter nazwy kolumny; w przeciwnym razie jest zgłaszany wyjątek. Na przykład jeśli tabela **myTable** zawiera kolumny **Col1** i **col1**, czy odwołanie **Col1** według nazwy, jako  **myTable.Columns["Col1"]**, i **col1** jako **myTable.Columns["col1"]**. Podjęto próbę odwoływać się do jednej z kolumn jako **myTable.Columns["COL1"]** wygeneruje wyjątek.  
   
- Reguła uwzględnianie wielkości liter nie ma zastosowania, jeśli tylko jednej kolumny, relacji lub ograniczenia o określonej nazwie istnieje. Oznacza to jeśli nie kolumny, relacji lub obiekt ograniczenie w tabeli jest zgodna z nazwą tej określonej kolumny, relacji lub ograniczenia obiektu, może odwoływać do obiektu o nazwie wszystkie wielkie i małe litery, a nie wyjątek. Na przykład, jeśli tabela zawiera tylko **Col1**, można odwoływać się za pomocą **Moje. Kolumny ["COL1"]**.  
+ Zasada uwzględnianie wielkości liter nie ma zastosowania, jeśli tylko jednej kolumny, relacji lub ograniczenie o określonej nazwie istnieje. Oznacza to jeśli nie kolumny, relacji lub obiektu ograniczeń w tabeli jest zgodna z nazwą tej konkretnej kolumny, relacji lub obiektu ograniczeń, według nazwy przy użyciu każdy przypadek może odwoływać się obiekt i jest zgłaszany żaden wyjątek. Na przykład, jeśli tabela ma tylko **Col1**, możesz odwoływać się za pomocą **Moje. Kolumny ["COL1"]**.  
   
 > [!NOTE]
->  <xref:System.Data.DataTable.CaseSensitive%2A> Właściwość **DataTable** nie ma wpływu na tego zachowania. **CaseSensitive** właściwość jest stosowana do danych w tabeli i wpływa na sortowanie, wyszukiwanie, filtrowanie, wymuszanie ograniczenia i tak dalej, ale nie do odwołania do kolumny, relacji i ograniczeń.  
+>  <xref:System.Data.DataTable.CaseSensitive%2A> Właściwość **DataTable** nie wpływa na to zachowanie. **CaseSensitive** właściwość ma zastosowanie do danych w tabeli i ma wpływ na sortowanie, wyszukiwanie, filtrowanie, wymuszanie ograniczeń i tak dalej, ale nie do odwołania do kolumny, relacje i ograniczenia.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Dodawanie kolumn do elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
- Opisuje sposób definiowania kolumn tabeli, używając **DataColumn** obiektów.  
+ W tym artykule opisano sposób definiowania kolumn tabeli przy użyciu **DataColumn** obiektów.  
   
  [Tworzenie kolumn wyrażeń](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
- Wyjaśniono, jak **wyrażenie** właściwość kolumny może być używane do obliczania wartości na podstawie wartości z innych kolumn w wierszu.  
+ Wyjaśnia sposób, w jaki **wyrażenie** właściwość kolumny może służyć do obliczania wartości na podstawie wartości z innych kolumn w wierszu.  
   
  [Tworzenie kolumn typu AutoIncrement](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
- W tym artykule opisano, jak kolumny można ustawić na automatyczne zwiększenie wartości liczbowe, aby upewnić się, wartość unikatową kolumnę w wierszu.  
+ W tym artykule opisano, jak można ustawić kolumny, aby automatycznie Zwiększ wartości liczbowych, aby upewnić się, wartością unikatową kolumnę na wiersz.  
   
  [Definiowanie kluczy podstawowych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
- Opisuje sposób określenia klucza podstawowego tabeli z jednej lub wielu **DataColumn** obiektów.  
+ Opisuje sposób określenia klucza podstawowego w tabeli z jednej lub wielu **DataColumn** obiektów.  
   
  [Ograniczenia elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
- Opisuje sposób zdefiniowania foreign key i ograniczenia unikalne dla kolumn w tabeli.  
+ W tym artykule opisano sposób definiowania foreign key i ograniczenia unikatowe dla kolumn w tabeli.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Elementy DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

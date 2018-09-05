@@ -3,11 +3,11 @@ title: Mostkowanie i obsługa błędów
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
 ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389071"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514545"
 ---
 # <a name="bridging-and-error-handling"></a>Mostkowanie i obsługa błędów
 Niniejszy przykład pokazuje, jak usługa routingu Windows Communication Foundation (WCF) służy do mostkowanie komunikacji między klientem a usługą, używanego przez różnych powiązania. Ten przykład pokazuje także sposób korzystania z usługi tworzenia kopii zapasowych dla scenariusze trybu failover. Usługa routingu jest składnikiem usługi WCF, który ułatwia to dołączenie routerem na podstawie zawartości do aplikacji. W tym przykładzie dostosowuje się standardowa przykładowe Kalkulator WCF do komunikowania się za pomocą usługi routingu.  

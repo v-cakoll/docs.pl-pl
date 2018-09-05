@@ -3,11 +3,11 @@ title: Omówienie ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
 ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489815"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529926"
 ---
 # <a name="adonet-overview"></a>Omówienie ADO.NET
 ADO.NET zapewnia spójny dostęp do źródeł danych, takie jak SQL Server i XML i źródła danych dostępne za pośrednictwem OLE DB i ODBC. Udostępnianie danych aplikacje komercyjne umożliwia ADO.NET nawiązać połączenie z tymi źródłami danych i pobierania, obsługiwać i zaktualizować dane, które zawierają.  

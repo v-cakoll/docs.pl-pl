@@ -12,11 +12,11 @@ helpviewer_keywords:
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
 ms.openlocfilehash: feca4713fe0e704799e2abbae3818edd0f3a5c84
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407740"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523178"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (opcje kompilatora C#)
 Tworzy łącze do zasobów .NET Framework w pliku wyjściowym. Plik zasobu nie zostanie dodany do pliku wyjściowego. To różni się od [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) opcję, która osadzić pliku zasobów w pliku wyjściowym.  

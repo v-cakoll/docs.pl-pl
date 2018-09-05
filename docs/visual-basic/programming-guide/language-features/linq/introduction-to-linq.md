@@ -1,6 +1,6 @@
 ---
 title: Wprowadzenie do LINQ w Visual Basic
-ms.date: 07/20/2015
+ms.date: 08/28/2018
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], about LINQ in Visual Basic queries
 - query execution [LINQ in Visual Basic]
@@ -12,165 +12,218 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 7e6d299bafff2a5a34a8f0942ba6dc9c25fcdd83
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805740"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509055"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Wprowadzenie do LINQ w Visual Basic
-Zapytanie języku zintegrowanym (LINQ) dodaje możliwość wykonywania kwerend do języka Visual Basic i udostępnia prosta i skuteczna możliwości podczas pracy z wszystkich typów danych. Zamiast Wysyłanie zapytania do bazy danych w celu przetworzenia lub Praca z inną składnię dla każdego typu danych, które w przypadku wyszukiwania, LINQ wprowadza zapytania jako część języka Visual Basic. Używa ujednoliconego składni niezależnie od typu danych.  
+Language-Integrated Query (LINQ) umożliwia wykonywanie zapytań do Visual Basic i dostarcza proste oraz wydajne narzędzia podczas pracy z danymi wszelkiego rodzaju. Zamiast wysyłania kwerendy do bazy danych w celu przetworzenia lub posługiwanie się różną składnią kwerendy dla każdego typu danych, które przeszukujesz, LINQ wprowadza kwerendy jako część języka Visual Basic. Używa zunifikowaną składnię, bez względu na typ danych.  
   
- LINQ można wykonać zapytania o dane z bazy danych programu SQL Server, XML, tablic w pamięci i kolekcje, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawami danych lub innych danych lokalnych lub zdalnych źródła obsługiwane przez LINQ. Można to zrobić wszystkie z typowymi elementami języka Visual Basic. Ponieważ zapytania są napisane w języku Visual Basic, wyniki zapytania są zwracane jako silnie typizowanych obiektów. Te obiekty obsługują technologię IntelliSense, co pozwala na szybsze pisanie kodu i catch błędy zapytania w czasie kompilacji zamiast w czasie wykonywania. Można zapytań LINQ jako źródło dodatkowych zapytań do ograniczania wyników. One może również być powiązana do formantów tak, aby użytkownicy łatwo można wyświetlać i modyfikować wyniki zapytania.  
+ LINQ umożliwia zapytania o dane z bazy danych programu SQL Server, XML, tablic w pamięci i kolekcje, zestawami danych ADO.NET lub dowolnego innego źródła danych w lokalnym lub zdalnym, który obsługuje LINQ. Można zrobić to wszystko stosując typowe elementy języka Visual Basic. Ponieważ zapytania są napisane w języku Visual Basic, wyniki zapytania są zwracane jako obiekty jednoznaczne. Obiekty te obsługują IntelliSense, co pozwala na szybsze pisanie kodu i wyłapywanie błędów w zapytaniach w czasie kompilacji, a nie w czasie wykonywania. Zapytania LINQ może służyć jako źródło dodatkowych kwerend w uściślaniu wyników. Mogą być również powiązane z kontrolkami, aby użytkownicy mogli łatwo przeglądać i modyfikować wyniki zapytania.  
   
- Na przykład poniższy przykładowy kod przedstawia zapytanie LINQ, które zwraca listę klientów z kolekcji i grup, które je na podstawie ich lokalizacji.  
+ Na przykład poniższy kod pokazuje zapytanie LINQ, która zwraca listę klientów z kolekcji i grup, które je na podstawie ich lokalizacji.  
   
- [!code-vb[VbVbalrIntroToLINQ#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_1.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#1](codesnippet/VisualBasic/introduction-to-linq_1.vb)]  
   
- W tym temacie można znaleźć informacje o następujących obszarów:  
+## <a name="running-the-examples"></a>Uruchamianie przykładów  
+ Aby uruchomić przykłady we wstępie i w [struktura zapytania LINQ](#structure-of-a-linq-query) sekcji, Dołącz następujący kod, który zwróci listę klientów i zamówień.  
   
--   [Uruchamianie przykładów](#RunningtheExamples)  
+ [!code-vb[VbVbalrIntroToLINQ#31](codesnippet/VisualBasic/introduction-to-linq_2.vb)]  
   
--   [Dostawcy LINQ](#LINQProviders)  
+## <a name="linq-providers"></a>Dostawcy LINQ  
+ A *dostawcy LINQ* mapuje zapytań LINQ Visual Basic do źródła danych, którego dotyczy kwerenda. Kiedy piszesz zapytanie LINQ, dostawca zapytanie i przekształca je w poleceń, które źródła danych będą mogli wykonać. Dostawca konwertuje również dane ze źródła do obiektów, które tworzą wyników zapytania. Na koniec Konwertuje obiekty do danych podczas wysyłania aktualizacji do źródła danych.  
   
--   [Struktura zapytań LINQ](#StructureOfALINQQuery)  
-  
--   [Operatory zapytań LINQ w Visual Basic](#VisualBasicLINQQueryOperators)  
-  
--   [Połączenia z bazą danych za pomocą LINQ do SQL](#ConnectingToADatabase)  
-  
--   [Funkcje Visual Basic obsługujące LINQ](#VisualBasicFeaturesThatSupportLINQ)  
-  
--   [Wykonanie odroczone i bezpośrednie kwerendy](#QueryExecution)  
-  
--   [XML w Visual Basic](#XMLInVisualBasic)  
-  
--   [Zasoby pokrewne](#RelatedResources)  
-  
--   [Porady i wskazówki — tematy](#HowToAndWalkthroughTopics)  
-  
-##  <a name="RunningtheExamples"></a> Uruchamianie przykładów  
- Aby uruchomić w przykładach w wprowadzenia i w sekcji "Struktura z zapytania LINQ", obejmują następujący kod, który zwraca listę klientów i zamówienia.  
-  
- [!code-vb[VbVbalrIntroToLINQ#31](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_2.vb)]  
-  
-##  <a name="LINQProviders"></a> Dostawcy LINQ  
- A *dostawcy LINQ* mapuje zapytań LINQ w Visual Basic w źródle danych, której dotyczy zapytanie. Podczas pisania zapytań LINQ przyjmuje zapytania i przekłada się on na polecenia, które źródło danych będzie możliwe wykonywanie dostawcy. Dostawca również konwertuje dane ze źródła do obiektów, które tworzą wyników zapytania. Na koniec konwertuje obiektów danych podczas wysyłania aktualizacji do źródła danych.  
-  
- Visual Basic zawierają następujących dostawców LINQ.  
+ Visual Basic obejmuje następujących dostawców LINQ.  
   
 |Dostawcy|Opis|  
 |---|---|  
-|LINQ do obiektów|LINQ do obiektów dostawcy umożliwia zapytania w pamięci kolekcji i tablic. Jeśli obiekt obsługuje albo <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> interfejsu LINQ do obiektów dostawcy umożliwia on zapytania.<br /><br /> LINQ do obiektów dostawcy można włączyć, importując <xref:System.Linq> przestrzeni nazw, który jest importowany domyślnie dla wszystkich projektów Visual Basic.<br /><br /> Aby uzyskać więcej informacji na temat LINQ do obiektów dostawcy, zobacz [LINQ do obiektów](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).|  
-|LINQ do SQL|LINQ do SQL dostawcy umożliwia zapytania i modyfikować danych w bazie danych programu SQL Server. Ułatwia to mapowania modelu obiektu do tabel i obiektów w bazie danych aplikacji.<br /><br /> Visual Basic ułatwia pracy ze składnika LINQ to SQL tym Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych). Ten Projektant służy do tworzenia modeli obiektów w aplikacji, która mapuje do obiektów w bazie danych. Projektant obiektów relacyjnych również zapewnia funkcje do mapowania procedury składowane i funkcje, które mają <xref:System.Data.Linq.DataContext> obiektu, który zarządza komunikacji z bazą danych i zapisuje stan kontroli optymistycznej współbieżności.<br /><br /> Aby uzyskać więcej informacji na temat LINQ do SQL dostawcy, zobacz [LINQ do SQL](../../../../framework/data/adonet/sql/linq/index.md). Aby uzyskać więcej informacji na temat Projektant obiektów relacyjnych, zobacz [składnika LINQ to SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
-|LINQ do XML|LINQ do XML dostawcy umożliwia zapytania i modyfikować XML. Można zmodyfikować XML w pamięci, albo można ładowanie XML z, a następnie zapisz XML w pliku.<br /><br /> Ponadto LINQ do XML dostawcy umożliwia literały XML i właściwości osi XML, które pozwalają na zapis XML bezpośrednio w kodzie języka Visual Basic. Aby uzyskać więcej informacji, zobacz [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ do DataSet|LINQ do DataSet dostawcy umożliwia utworzenie zapytania i aktualizacji danych w [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawu danych. Możesz dodać możliwości LINQ do aplikacji, które używają zestawów danych w celu uproszczenia i rozszerzyć możliwości zapytań, agregację i aktualizowanie danych w zestawie danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [LINQ do DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|LINQ do obiektów|Dostawca LINQ to Objects umożliwia zapytania w pamięci, kolekcje i tablice. Jeśli obiekt obsługuje <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> interfejsu, dostawca LINQ to Objects umożliwia przeprowadzenie w nim zapytania.<br /><br /> Możesz włączyć LINQ do dostawcy obiektów importując <xref:System.Linq> przestrzeń nazw, która jest importowana domyślnie dla wszystkich projektów w języku Visual Basic.<br /><br /> Aby uzyskać więcej informacji dotyczących dostawcy LINQ to Objects, zobacz [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
+|LINQ do SQL|Dostawca LINQ to SQL umożliwia zapytania i modyfikację danych w bazie danych programu SQL Server. Ułatwia to mapowanie modelu obiektu dla aplikacji do tabel i obiektów w bazie danych.<br /><br /> Visual Basic sprawia, że łatwiej jest pracować z LINQ to SQL, umieszczając Object Relational Designer (O/R Designer). Projektant jest używany do tworzenia modelu obiektów w aplikacji, która mapuje do obiektów w bazie danych. O/R Designer również zapewnia funkcje procedurom składowanym w mapie i funkcje <xref:System.Data.Linq.DataContext> obiektu, który zarządza komunikacją z bazą danych i zapisuje stan kontroli optymistycznej współbieżności.<br /><br /> Aby uzyskać więcej informacji dotyczących dostawcy LINQ to SQL, zobacz [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Aby uzyskać więcej informacji dotyczących Object Relational Designer, zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ do XML|Dostawca LINQ to XML oferuje zapytania i modyfikację XML. Możesz zmodyfikować XML w pamięci lub załadować XML z, a następnie zapisz XML do pliku.<br /><br /> Ponadto dostawca LINQ to XML umożliwia literały XML i właściwości osi XML, które umożliwiają pisanie XML bezpośrednio w kodzie języka Visual Basic. Aby uzyskać więcej informacji, zobacz [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
+|LINQ do DataSet|Dostawca LINQ to DataSet umożliwia utworzenie zapytania i aktualizację danych w [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawu danych. Możesz dodać moc LINQ do aplikacji, które używają zestawów danych, aby uprościć i rozszerzyć swoje zdolności zapytań, agregowania i aktualizowanie danych w zestawie danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
-##  <a name="StructureOfALINQQuery"></a> Struktura zapytań LINQ  
- Zapytania LINQ, często nazywane *zapytania wyrażenie*, składa się z kombinacji klauzule zapytań, które identyfikują źródła danych i zmienne iteracji w zapytaniu. Wyrażenia zapytania można także instrukcje dotyczące sortowanie, filtrowanie, grupowanie i dołączenie lub obliczenia dotyczące źródła danych. Składnia wyrażeń jest podobny składni SQL; w związku z tym może być znacznie składni znane.  
+## <a name="structure-of-a-linq-query"></a>Struktura zapytania LINQ  
+ Kwerenda LINQ, często nazywane *wyrażeniu zapytania*, składa się z kombinacji zdań zapytania, które identyfikują źródła danych i zmiennych iteracji dla zapytania. Wyrażenie zapytania może również obejmować instrukcje dotyczące sortowania, filtrowania, grupowania i łączenie lub obliczeń do zastosowania do źródła danych. Składnia wyrażenia kwerendy przypomina składnię SQL; w związku z tym można znaleźć wiele składni znane.  
   
- Rozpoczyna się od wyrażenia zapytania `From` klauzuli. Klauzulę identyfikuje źródło danych pod kątem zapytania i zmienne, które są używane do odwoływania się do każdego elementu danych źródłowych pojedynczo. Te zmienne są nazywane *zmienne zakresu* lub *zmienne iteracji*. `From` Jest wymagana klauzula dla zapytania, z wyjątkiem `Aggregate` kwerendy, gdzie `From` klauzula jest opcjonalne. Po zakresu i źródłem zapytania są identyfikowane w `From` lub `Aggregate` klauzule, może zawierać dowolną kombinację klauzule zapytań, aby zawęzić kryteria zapytania. Aby uzyskać więcej informacji o klauzule zapytań Zobacz operatorów zapytań LINQ w Visual Basic w dalszej części tego tematu. Na przykład poniższe zapytanie określa zbiór źródła danych klienta jako `customers` zmienną i zmiennej iteracji o nazwie `cust`.  
+ Wyrażenie zapytania zaczyna się od `From` klauzuli. Ta klauzula identyfikuje dane źródłowe dla zapytania i zmienne, które służą do odwoływania się do każdego elementu Źródło danych indywidualnie. Te zmienne nazywane są *należeć do zakresu zmiennych* lub *zmienne iteracji*. `From` Klauzula jest wymagana dla zapytania, z wyjątkiem `Aggregate` zapytań, gdzie `From` klauzula jest opcjonalne. Po, zakres i źródła zapytania są identyfikowane w `From` lub `Aggregate` zdań, może zawierać dowolną kombinację zdań zapytania w celu doprecyzowania zapytania. Aby uzyskać szczegółowe informacje dotyczące klauzul kwerendy Zobacz operatory zapytań LINQ w Visual Basic w dalszej części tego tematu. Na przykład poniższe zapytanie identyfikuje kolekcję źródłową danych klienta jako `customers` zmienną i zmienną iteracji o nazwie `cust`.  
   
- [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#2](codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
- W tym przykładzie jest prawidłowa kwerenda siebie. jednak zapytanie staje się znacznie bardziej wydajne, po dodaniu więcej klauzule zapytań, aby doprecyzować wynik. Na przykład można dodać `Where` klauzuli do filtrowania według wartości co najmniej jeden wynik. Wyrażenia zapytania są pojedynczy wiersz kodu; klauzule dodatkowe zapytania można dodać tylko na końcu zapytania. Zapytania można podzielić na wiele wierszy tekstu, aby poprawić czytelność przy użyciu znak kontynuacji wiersza podkreślenia (_). Poniższy przykładowy kod przedstawia przykład kwerendę, która obejmuje `Where` klauzuli.  
+ W tym przykładzie jest poprawnym zapytaniem siebie. jednak zapytanie staje się mocniejsze po dodaniu większej liczby klauzul zapytania, aby udoskonalić wynik. Na przykład można dodać `Where` klauzuli, aby filtrować wynik według co najmniej jedną wartość. Wyrażenia kwerendy są jednowierszowym kodem; klauzule dodatkowe kwerendy można dołączyć tylko na końcu zapytania. Możesz rozbić zapytanie w wielu wierszach tekstu, aby polepszyć czytelność za pomocą znaku podkreślenia (\_) znak kontynuacji wiersza. Poniższy przykład kodu pokazuje przykład zapytania, które obejmuje `Where` klauzuli.  
   
- [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#3](codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
   
- Inną klauzulę zaawansowane zapytania jest `Select` klauzuli, która umożliwia zwracanie tylko wybrane pola z źródła danych. Zapytania LINQ zwracają wyliczalny kolekcje silnie typizowanych obiektów. Zapytanie może zwrócić zbiór typy anonimowe lub typy nazwane. Można użyć `Select` klauzuli, aby zwrócić tylko jedno pole w źródle danych. Po wykonaniu tej typem kolekcji, zwracany jest typ tego jednego pola. Można również użyć `Select` klauzuli zwrócić wielu pól ze źródła danych. Po wykonaniu tej czynności typem kolekcji, zwracana jest nowego typu anonimowego. Można także dopasować pola zwróconych przez zapytanie do pól określonego typu nazwanego. Poniższy przykładowy kod przedstawia zapytanie zwracające kolekcję typów anonimowych, które mają elementy członkowskie wypełniane przy użyciu danych z wybranego pola ze źródła danych.  
+ Innym potęrżnym zdaniem zapytania jest `Select` zdanie, które pozwala zwrócić tylko wybrane pola ze źródła danych. Zapytania LINQ zwracają przeliczalne kolekcje obiektów silnie typizowanych. Zapytanie może zwracać kolekcją typów anonimowych lub nazwanych. Możesz użyć `Select` klauzulę, aby zwrócić tylko jedno pole ze źródła danych. Gdy to zrobisz, typ zwracanej kolekcji jest typem tego pojedynczego pola. Można również użyć `Select` klauzulę, aby zwrócić wiele pól ze źródła danych. Gdy to zrobisz, typ zwracanej kolekcji jest nowym typem anonimowym. Można również przeprowadzać Dopasowywanie pola zwróconych przez zapytanie do pól określonego typu nazwanego. Poniższy przykład kodu pokazuje wyrażenie zapytania, które zwraca kolekcję typów anonimowe, mających członków wypełnionych danymi z wybranych pól ze źródła danych.  
   
- [!code-vb[VbVbalrIntroToLINQ#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_5.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#4](codesnippet/VisualBasic/introduction-to-linq_5.vb)]  
   
- Zapytania LINQ można również łączyć wiele źródeł danych i zwracać jeden wynik. Można to zrobić z co najmniej jednym `From` klauzule, lub za pomocą `Join` lub `Group Join` klauzule zapytań. Poniższy przykład kodu pokazuje łączy danych klienta i kolejność, która zwraca kolekcję typów anonimowych zawierające klienta i dane kolejności wyrażenia zapytania.  
+ Zapytania LINQ można również połączyć wiele źródeł danych i zwrócenia pojedynczego wyniku. Można to zrobić za pomocą co najmniej jeden `From` zdań, lub za pomocą `Join` lub `Group Join` klauzul zapytania. Poniższy przykład kodu pokazuje wyrażenie zapytania, które łączy dane klienta i zamówienia i zwraca kolekcję typów anonimowych, zawierające dane klienta i zamówienia.  
   
- [!code-vb[VbVbalrIntroToLINQ#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_6.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#5](codesnippet/VisualBasic/introduction-to-linq_6.vb)]  
   
- Można użyć `Group Join` klauzuli można utworzyć wyniku zapytania hierarchiczne, który zawiera kolekcję obiektów klienta. Każdy obiekt klienta ma właściwość, która zawiera kolekcję wszystkich zleceń dla tego klienta. Poniższy przykład kodu pokazuje wyrażenia zapytania, która łączy danych klienta i kolejność jako wyników hierarchicznych i zwraca kolekcję typów anonimowych. Zapytanie zwraca typ, który zawiera `CustomerOrders` właściwość, która zawiera kolekcję danych kolejności dla klienta. Zawiera także `OrderTotal` właściwość, która zawiera sumę sumy dla wszystkich zleceń dla tego klienta. (To zapytanie jest odpowiednikiem LEFT OUTER JOIN).  
+ Możesz użyć `Group Join` klauzulę, aby utworzyć hierarchiczny wynik zapytania, który zawiera kolekcję obiektów klienta. Każdy obiekt klienta ma właściwość, która zawiera zbiór wszystkich zamówień tego klienta. Poniższy przykład kodu pokazuje wyrażenie zapytania, które łączy dane klienta i zamówienia w postaci wyniku hierarchicznego i zwraca kolekcję typów anonimowych. Zapytanie zwraca typ, który zawiera `CustomerOrders` właściwość, która zawiera kolekcję danych zamówienia dla klienta. Obejmuje również `OrderTotal` właściwość, która zawiera sumę dla wszystkich zamówień tego klienta. (To zapytanie jest równoważne z LEFT OUTER JOIN).  
   
- [!code-vb[VbVbalrIntroToLINQ#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#6](codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
   
- Istnieje kilka dodatkowych LINQ operatorów zapytań, które służy do tworzenia wyrażenia zaawansowanych zapytań. W następnej sekcji tego tematu opisano różne klauzule zapytań, które można uwzględnić w wyrażeniu zapytania. Aby uzyskać więcej informacji o klauzule zapytań języka Visual Basic, zobacz [zapytania](../../../../visual-basic/language-reference/queries/queries.md).  
+ Istnieje kilka dodatkowych operatorów zapytań LINQ, które można użyć do utworzenia mocnych wyrażeń zapytania. Następna sekcji tego tematu omawia różne klauzule zapytań, które można uwzględnić w wyrażeniu zapytania. Aby uzyskać szczegółowe informacje dotyczące klauzul kwerendy w języku Visual Basic, zobacz [zapytania](../../../../visual-basic/language-reference/queries/index.md).  
   
-##  <a name="VisualBasicLINQQueryOperators"></a> Operatory zapytań LINQ w Visual Basic  
- Klasy w <xref:System.Linq> przestrzeni nazw i innych przestrzeniach nazw obsługujące zapytań LINQ zawiera metody, które można wywołać w celu utworzenia i Dostosuj zapytań, w zależności od potrzeb aplikacji. Visual Basic zawiera słowa kluczowe dla najbardziej typowych klauzule zapytań, zgodnie z opisem w poniższej tabeli.  
+## <a name="visual-basic-linq-query-operators"></a>Operatory zapytań LINQ Visual Basic  
+
+Klasy w <xref:System.Linq> przestrzeni nazw i inne obszary nazw obsługi zapytań LINQ to metody, które można wywołać, aby utworzyć i dostosować zapytania, w zależności od potrzeb aplikacji. Visual Basic zawiera słowa kluczowe dla następujących wspólnych klauzul kwerendy. Aby uzyskać szczegółowe informacje dotyczące klauzul kwerendy w języku Visual Basic, zobacz [zapytania](../../../language-reference/queries/index.md).
+
+### <a name="from-clause"></a>Klauzula From
+
+Albo [ `From` klauzuli](../../../../visual-basic/language-reference/queries/from-clause.md) lub `Aggregate` zdanie jest wymagane do rozpoczęcia zapytania. A `From` klauzula Określa, kolekcji źródłowej i zmienną iteracji dla zapytania. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#7](codesnippet/VisualBasic/introduction-to-linq_8.vb)]
+
+### <a name="select-clause"></a>Select — Klauzula
+
+Opcjonalna. A [ `Select` klauzuli](../../../../visual-basic/language-reference/queries/select-clause.md) deklaruje zestaw zmiennych iteracji dla zapytania. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#8](codesnippet/VisualBasic/introduction-to-linq_9.vb)]
+
+Jeśli `Select` klauzuli nie zostanie określona, zmienne iteracji dla zapytania składają się ze zmiennych iteracji, określony przez `From` lub `Aggregate` klauzuli.
+
+### <a name="where-clause"></a>Klauzula Where
+
+Opcjonalna. A [ `Where` klauzuli](../../../../visual-basic/language-reference/queries/where-clause.md) określa warunek filtrowania dla zapytania. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#9](codesnippet/VisualBasic/introduction-to-linq_10.vb)]
+
+### <a name="order-by-clause"></a>Klauzula Order By]
+
+| Opcjonalnie. [ `Order By` Klauzuli](../../../../visual-basic/language-reference/queries/order-by-clause.md) określa porządek sortowania dla kolumn w zapytaniu. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#10](codesnippet/VisualBasic/introduction-to-linq_11.vb)]
+
+### <a name="join-clause"></a>Join — Klauzula
+
+Opcjonalna. A [ `Join` klauzuli](../../../../visual-basic/language-reference/queries/join-clause.md) łączy dwie kolekcje w jedną kolekcję. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#11](codesnippet/VisualBasic/introduction-to-linq_12.vb)]
+
+### <a name="group-by-clause"></a>Group By — Klauzula
+
+Opcjonalna. A [ `Group By` klauzuli](../../../../visual-basic/language-reference/queries/group-by-clause.md) grupuje elementy wyników zapytań. Może służyć do zastosowania funkcji agregujących do każdej grupy. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#12](codesnippet/VisualBasic/introduction-to-linq_13.vb)]
+
+### <a name="group-join-clause"></a>Group Join — Klauzula
+
+Opcjonalna. A [ `Group Join` klauzuli](../../../../visual-basic/language-reference/queries/group-join-clause.md) łączy dwie kolekcje w jedną hierarchiczną kolekcję. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#13](codesnippet/VisualBasic/introduction-to-linq_14.vb)]
+
+### <a name="aggregate-clause"></a>Aggregate — Klauzula
+
+Albo [ `Aggregate` klauzuli](../../../../visual-basic/language-reference/queries/aggregate-clause.md) lub `From` zdanie jest wymagane do rozpoczęcia zapytania. `Aggregate` Klauzuli stosuje jedną lub więcej funkcji agregujących do kolekcji. Na przykład, można użyć `Aggregate` klauzuli, aby obliczyć sumę wszystkich elementów zwróconych przez kwerendę, tak jak w poniższym przykładzie.
+
+[!code-vb[VbVbalrIntroToLINQ#14](codesnippet/VisualBasic/introduction-to-linq_15.vb)]
+
+Można również użyć `Aggregate` klauzulę, aby zmodyfikować zapytanie. Na przykład, można użyć `Aggregate` klauzuli w celu wykonywania obliczeń na kolekcji powiązanych zapytań. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#15](codesnippet/VisualBasic/introduction-to-linq_16.vb)]
+
+### <a name="let-clause"></a>Let — Klauzula
+
+Opcjonalna. A [ `Let` klauzuli](../../../../visual-basic/language-reference/queries/let-clause.md) oblicza wartość i przypisuje go do nowej zmiennej w zapytaniu. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#16](codesnippet/VisualBasic/introduction-to-linq_17.vb)]
+
+### <a name="distinct-clause"></a>Distinct — Klauzula
+
+Opcjonalna. A `Distinct` klauzuli ogranicza wartości bieżącej zmiennej iteracji w celu wyeliminowania zduplikowanych wartości w wynikach kwerendy. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#17](codesnippet/VisualBasic/introduction-to-linq_18.vb)]
+
+### <a name="skip-clause"></a>Skip — Klauzula
+
+Opcjonalna. A [ `Skip` klauzuli](../../../../visual-basic/language-reference/queries/skip-clause.md) pomija określoną liczbę elementów w kolekcji, a następnie zwraca pozostałe elementy. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#18](codesnippet/VisualBasic/introduction-to-linq_19.vb)]
+
+### <a name="skip-while-clause"></a>Skip While — Klauzula
+
+Opcjonalna. A [ `Skip While` klauzuli](../../../../visual-basic/language-reference/queries/skip-while-clause.md) omija elementy w kolekcji, tak długo, jak długo określony warunek przyjmuje `true` , a następnie zwraca pozostałe elementy. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#19](codesnippet/VisualBasic/introduction-to-linq_20.vb)]
+
+### <a name="take-clause"></a>Take — Klauzula
+
+Opcjonalna. A [ `Take` klauzuli](../../../../visual-basic/language-reference/queries/take-clause.md) zwraca określoną liczbę elementów sąsiadujących z początku kolekcji. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#20](codesnippet/VisualBasic/introduction-to-linq_21.vb)]
+
+### <a name="take-while-clause"></a>Take While — Klauzula
+
+Opcjonalna. A [ `Take While` klauzuli](../../../../visual-basic/language-reference/queries/take-while-clause.md) zawiera elementy w kolekcji, tak długo, jak długo określony warunek przyjmuje `true` i pomija pozostałe elementy. Na przykład:
+
+[!code-vb[VbVbalrIntroToLINQ#21](codesnippet/VisualBasic/introduction-to-linq_22.vb)]
   
-|Termin|Definicja|  
-|---|---|  
-|[From, klauzula](../../../../visual-basic/language-reference/queries/from-clause.md)|Albo `From` klauzuli lub `Aggregate` klauzuli jest wymagane do rozpoczęcia zapytania. A `From` klauzuli określa kolekcji źródłowej i zmiennej iteracji dla zapytania. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#7](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_8.vb)]|  
-|[Select, klauzula](../../../../visual-basic/language-reference/queries/select-clause.md)|Opcjonalna. Deklaruje zestaw zmiennych iteracji dla zapytania. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#8](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_9.vb)]<br /><br /> Jeśli `Select` klauzuli nie zostanie określony, zmienne iteracji w zapytaniu składają się z zmienne iteracji, określony przez `From` lub `Aggregate` klauzuli.|  
-|[Where, klauzula](../../../../visual-basic/language-reference/queries/where-clause.md)|Opcjonalna. Określa warunek filtrowania dla zapytania. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#9](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_10.vb)]|  
-|[Order By, klauzula](../../../../visual-basic/language-reference/queries/order-by-clause.md)|Opcjonalna. Określa porządek sortowania dla kolumn w zapytaniu. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_11.vb)]|  
-|[Join, klauzula](../../../../visual-basic/language-reference/queries/join-clause.md)|Opcjonalna. Łączy dwie kolekcje do jednej kolekcji. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_12.vb)]|  
-|[Group By, klauzula](../../../../visual-basic/language-reference/queries/group-by-clause.md)|Opcjonalna. Grupuje elementy w wyniku zapytania. Może służyć do zastosowania funkcji agregujących do każdej grupy. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_13.vb)]|  
-|[Group Join, klauzula](../../../../visual-basic/language-reference/queries/group-join-clause.md)|Opcjonalna. Łączy dwie kolekcje do jednej kolekcji hierarchicznej. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_14.vb)]|  
-|[Aggregate, klauzula](../../../../visual-basic/language-reference/queries/aggregate-clause.md)|Albo `From` klauzuli lub `Aggregate` klauzuli jest wymagane do rozpoczęcia zapytania. `Aggregate` Klauzuli dotyczy kolekcji jednego lub więcej funkcji agregujących. Na przykład można użyć `Aggregate` klauzuli do obliczania sum dla wszystkich elementów zwróconych przez kwerendę.<br /><br /> [!code-vb[VbVbalrIntroToLINQ#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_15.vb)]<br /><br /> Można również użyć `Aggregate` klauzuli zmodyfikować zapytanie. Na przykład można użyć `Aggregate` klauzuli do przeprowadzenia obliczeń na kolekcję powiązane zapytania.<br /><br /> [!code-vb[VbVbalrIntroToLINQ#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_16.vb)]|  
-|[Let, klauzula](../../../../visual-basic/language-reference/queries/let-clause.md)|Opcjonalna. Oblicza wartość i przypisuje go do nowej zmiennej w zapytaniu. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_17.vb)]|  
-|[Distinct, klauzula](../../../../visual-basic/language-reference/queries/distinct-clause.md)|Opcjonalna. Ogranicza wartości bieżąca zmienna iteracji w celu wyeliminowania zduplikowanych wartości w wynikach zapytania. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#17](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_18.vb)]|  
-|[Skip, klauzula](../../../../visual-basic/language-reference/queries/skip-clause.md)|Opcjonalna. Pomija określoną liczbę elementów w kolekcji, a następnie zwraca wszystkie pozostałe elementy. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#18](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_19.vb)]|  
-|[Skip While, klauzula](../../../../visual-basic/language-reference/queries/skip-while-clause.md)|Opcjonalna. Pomija elementy w kolekcji, tak długo, jak jest określony warunek `true` , a następnie zwraca wszystkie pozostałe elementy. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#19](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_20.vb)]|  
-|[Take, klauzula](../../../../visual-basic/language-reference/queries/take-clause.md)|Opcjonalna. Zwraca określoną liczbę elementów ciągłe na początku kolekcji. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#20](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_21.vb)]|  
-|[Take While, klauzula](../../../../visual-basic/language-reference/queries/take-while-clause.md)|Opcjonalna. Zawiera elementy w kolekcji, tak długo, jak jest określony warunek `true` i pomija pozostałe elementy. Na przykład:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#21](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_22.vb)]|  
+## <a name="use-additional-linq-query-features"></a>Korzystanie z dodatkowych funkcji zapytania LINQ  
   
- Aby uzyskać więcej informacji o klauzule zapytań języka Visual Basic, zobacz [zapytania](../../../../visual-basic/language-reference/queries/queries.md).  
+Można użyć dodatkowych funkcji zapytania LINQ, wywołując elementy wyliczalnych lub odpytywalnych typów dostarczonych przez LINQ. Te dodatkowe możliwości można użyć poprzez wywołanie konkretnego operatora zapytania w wyniku wyrażenia zapytania. Na przykład w poniższym przykładzie użyto <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> metodę, aby połączyć dwa wyniki zapytań w jeden wynik zapytania. Używa ona <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> metodę, aby zwrócić wynik kwerendy w postaci listy ogólnej.
   
- Można użyć dodatkowych funkcji zapytania LINQ członkom wywoływania udostępnione przez składnik LINQ typy wyliczalny oraz umożliwia zadawanie zapytań. Te dodatkowe możliwości można użyć poprzez wywołanie operator zapytania określonego w wyniku wyrażenia zapytania. Na przykład poniższy przykład kodu wykorzystuje <xref:System.Linq.Enumerable.Union%2A> metodę, aby połączyć wyniki dwa zapytania w wyniku jednego zapytania. Używa <xref:System.Linq.Enumerable.ToList%2A> metodę, aby zwrócić wynik kwerendy w postaci listy ogólnej.  
+ [!code-vb[VbVbalrIntroToLINQ#22](codesnippet/VisualBasic/introduction-to-linq_23.vb)]  
   
- [!code-vb[VbVbalrIntroToLINQ#22](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_23.vb)]  
+ Aby uzyskać szczegółowe informacje o dodatkowych możliwościach LINQ, zobacz [standardowe operatory zapytań — Przegląd](../../concepts/linq/standard-query-operators-overview.md).  
   
- Aby uzyskać więcej informacji o dodatkowe funkcje LINQ, zobacz [standardowe operatory zapytań — omówienie](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+## <a name="connect-to-a-database-by-using-linq-to-sql"></a>Połączenie z bazą danych za pomocą LINQ to SQL  
+ W języku Visual Basic należy zidentyfikować obiekty bazy danych programu SQL Server, takie jak tabele, widoki i procedury składowane, które chcesz uzyskać dostęp za pomocą LINQ do pliku SQL. Plik LINQ to SQL ma rozszerzenie .dbml.  
   
-##  <a name="ConnectingToADatabase"></a> Połączenia z bazą danych za pomocą LINQ do SQL  
- W języku Visual Basic należy zidentyfikować obiekty bazy danych programu SQL Server, takich jak tabele, widoki i procedury składowane, które chcesz uzyskać dostęp za pomocą LINQ do SQL pliku. LINQ do SQL pliku ma rozszerzenie .dbml.  
+ Jeśli masz prawidłowe połączenie z bazą danych programu SQL Server, możesz dodać **klasy LINQ do SQL** szablonu elementu projektu. Wyświetli to Object Relational Designer (O/R designer). O/R Designer umożliwia przeciąganie elementów, które chcesz uzyskać dostęp w swoim kodzie z **Eksploratora serwera**/**Eksplorator bazy danych** na powierzchnię projektanta. Plik LINQ to SQL dodaje <xref:System.Data.Linq.DataContext> obiektu do projektu. Ten obiekt zawiera właściwości i kolekcje dla tabel i widoków, które mają dostęp do i metody dla procedur przechowywanych, które ma zostać wywołana. Po zapisaniu zmian do programu LINQ to SQL (.dbml) plik, te obiekty są dostępne w kodzie, odwołując się do <xref:System.Data.Linq.DataContext> obiekt, który jest zdefiniowany przez projektanta O/R. <xref:System.Data.Linq.DataContext> Obiektu dla Twojego projektu jest nazwany na podstawie nazwy użytkownika plik LINQ to SQL. Na przykład plik LINQ to SQL o nazwie Northwind.dbml utworzy <xref:System.Data.Linq.DataContext> obiektu o nazwie `NorthwindDataContext`.  
   
- Jeśli masz prawidłowe połączenie z bazą danych programu SQL Server można dodać **klasy LINQ do SQL** szablon elementu do projektu. Spowoduje to wyświetlenie Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych). Projektant obiektów relacyjnych umożliwia przeciągnij elementy, które chcesz uzyskać dostęp w kodzie z **Eksploratora serwera**/**Eksploratora bazy danych** na powierzchnię projektanta. LINQ do SQL pliku dodaje <xref:System.Data.Linq.DataContext> obiektu do projektu. Ten obiekt zawiera właściwości i kolekcje dla tabele i widoki, które mają dostęp do i metody dla procedur składowanych, które ma zostać wywołana. Po zapisaniu zmian do składnika LINQ to SQL (.dbml) plików, są dostępne te obiekty w kodzie za pomocą odwołań do <xref:System.Data.Linq.DataContext> obiekt, który jest definiowana za pomocą Projektanta obiektów relacyjnych. <xref:System.Data.Linq.DataContext> Obiektu dla nosi nazwę projektu na podstawie nazwy użytkownika składnika LINQ to SQL pliku. Na przykład utworzy składnika LINQ to SQL pliku o nazwie Northwind.dbml <xref:System.Data.Linq.DataContext> obiektu o nazwie `NorthwindDataContext`.  
+ Przykłady z instrukcjami krok po kroku, zobacz [porady: zapytanie dotyczące bazy danych](how-to-query-a-database-by-using-linq.md) i [porady: wywoływanie procedury przechowywane](how-to-call-a-stored-procedure-by-using-linq.md).  
   
- Przykłady z instrukcjami krok po kroku, zobacz [porady: zapytanie dotyczące bazy danych](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md) i [porady: wywołaj procedurę składowaną](../../../../visual-basic/programming-guide/language-features/linq/how-to-call-a-stored-procedure-by-using-linq.md).  
+## <a name="visual-basic-features-that-support-linq"></a>Funkcje Visual Basic obsługujące LINQ  
+ Visual Basic obejmuje inne zauważalne cechy, które upewnij korzystanie z LINQ jest proste i zmniejszyć ilość kodu, który trzeba napisać, aby wykonać zapytania LINQ. Należą do nich między innymi:  
   
-##  <a name="VisualBasicFeaturesThatSupportLINQ"></a> Funkcje Visual Basic obsługujące LINQ  
- Visual Basic zawiera inne ważne funkcje, które wykorzystać LINQ proste i zmniejszyć ilość kodu, który musi być zapisana do wykonywania zapytań LINQ. Należą do nich między innymi:  
+-   **Typy anonimowe**, które umożliwiają tworzenie nowego typu opartego na wynikach zapytania.  
   
--   **Typy anonimowe**, które umożliwiają tworzenie nowego typu na podstawie wyniku zapytania.  
+-   **Niejawnie wpisane zmienne**, które umożliwiają odroczenie określania typu i umożliwiają kompilator wywnioskować typ bazując na wyniku zapytania.  
   
--   **Niejawnie wpisane zmienne**, umożliwiają odroczenie Określanie typu i umożliwiają kompilator wnioskować o typie, na podstawie wyniku zapytania.  
+-   **Metody rozszerzenia**, które pozwalają rozszerzyć istniejący typ własnymi metodami bez modyfikowania samego typu.  
   
--   **Metody rozszerzenia**, umożliwiają rozszerzanie istniejącego typu z własnych metody bez modyfikowania samego typu.  
+ Aby uzyskać więcej informacji, zobacz [Visual Basic funkcji czy obsługa LINQ](../../concepts/linq/features-that-support-linq.md).  
   
- Aby uzyskać więcej informacji, zobacz [Visual Basic funkcji czy obsługa LINQ](../../../../visual-basic/programming-guide/concepts/linq/features-that-support-linq.md).  
+## <a name="deferred-and-immediate-query-execution"></a>Wykonanie odroczonych i natychmiastowych zapytań
+
+ Wykonywanie kwerendy różni się od tworzenia kwerendy. Po utworzeniu zapytania, jego wykonanie zostanie wywołane przez oddzielny mechanizm. Zapytania mogą być wykonywane natychmiast po tym, jak to zdefiniowano (*natychmiastowe wykonanie*), lub definicji mogą być przechowywane i zapytania, które może być wykonane później (*wykonanie odroczone*).  
   
-##  <a name="QueryExecution"></a> Wykonanie odroczone i bezpośrednie kwerendy  
- Wykonywanie zapytania jest oddzielony od tworzenia zapytania. Po utworzeniu zapytania, jego wykonanie jest wyzwalane przez mechanizm, oddzielne. Można było wykonać zapytanie, jak jest zdefiniowany (*natychmiastowego wykonania*), lub definicji mogą być przechowywane i można było wykonać zapytanie później (*odroczonego wykonania*).  
+ Domyślnie podczas tworzenia zapytania, samo zapytanie nie jest wykonywane natychmiast. Zamiast tego definicja kwerendy jest przechowywana w zmiennej, która jest używana do odwoływać się do wyniku zapytania. Gdy zmienna wynik zapytania odbywa się w dalszej części kodu, takich jak w `For…Next` pętli, zapytanie jest wykonywane. Ten proces jest nazywany *wykonanie odroczone*.  
   
- Domyślnie podczas tworzenia zapytania, zapytanie sam nie wykonuje natychmiast. Zamiast tego definicja zapytania jest przechowywana w zmiennej, która jest używana do utworzenia odwołania wyniku zapytania. Gdy zmiennej wynik zapytania jest dostępny w dalszej części kodu, takie jak w `For…Next` pętli, zapytanie jest wykonywane. Ten proces jest nazywany *odroczonego wykonania*.  
+ Zapytania mogą być również wykonywane gdy są zdefiniowane, co jest określane jako *natychmiastowe wykonanie*. Możesz wyzwolić natychmiastowe wykonanie, stosując metodę która wymaga dostępu do indywidualnych elementów wyniku zapytania. Może to być wynikiem dodania funkcji agregującej, takich jak `Count`, `Sum`, `Average`, `Min`, lub `Max`. Aby uzyskać więcej informacji na temat funkcji agregujących, zobacz [Aggregate — klauzula](../../../language-reference/queries/aggregate-clause.md).  
   
- Zapytania mogą być również wykonywane, gdy są zdefiniowane, które jest określone jako *natychmiastowego wykonania*. Możesz wyzwolić natychmiastowego wykonania, stosując metodę, która wymaga dostępu do poszczególnych elementów w wyniku zapytania. Może to być wynik, w tym funkcji agregującej, takich jak `Count`, `Sum`, `Average`, `Min`, lub `Max`. Aby uzyskać więcej informacji na temat funkcji agregujących, zobacz [Aggregate — klauzula](../../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Za pomocą `ToList` lub `ToArray` metody również wymusi natychmiastowe wykonanie. Może to być przydatne, gdy użytkownik chce przeprowadzić zapytanie natychmiastowo i wyniki w pamięci podręcznej. Aby uzyskać więcej informacji o tych metodach, zobacz [konwertowanie typów danych](../../concepts/linq/converting-data-types.md).  
   
- Przy użyciu `ToList` lub `ToArray` metody zostanie też wymusić natychmiastowe wykonanie. Może to być przydatne, jeśli chcesz natychmiast wykonać zapytania i wyników buforowania. Aby uzyskać więcej informacji na temat tych metod, zobacz [konwertowanie typów danych](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
+ Aby uzyskać więcej informacji na temat wykonywania zapytań, zobacz [Your pierwszego zapytania LINQ pisania](../../concepts/linq/writing-your-first-linq-query.md).  
   
- Aby uzyskać więcej informacji na temat wykonywania zapytania, zobacz [Your pierwszego zapytania LINQ zapisu](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+## <a name="xml-in-visual-basic"></a>XML w Visual Basic  
+ Funkcje języka XML w Visual Basic obejmują literały XML i właściwości osi XML, które umożliwiają łatwe tworzenie, dostęp, zapytania i modyfikację XML w kodzie. Literały XML umożliwiają pisanie XML bezpośrednio w kodzie. Kompilator Visual Basic traktuje XML jako obiekt pierwszej klasy.  
   
-##  <a name="XMLInVisualBasic"></a> Kod XML w Visual Basic  
- Funkcje języka XML w Visual Basic obejmują literały XML i właściwości osi XML, które umożliwiają łatwe tworzenie, dostęp, zapytania i modyfikować w kodzie XML. Literały XML pozwalają na zapis bezpośrednio w kodzie XML. Kompilator Visual Basic traktuje XML jako obiekt danych biletu.  
+ Poniższy przykład kodu pokazuje, jak utworzyć XML element, dostęp do jego elementów podrzędnych i atrybutów i zbadać zawartość elementu za pomocą LINQ.  
   
- Poniższy przykład kodu pokazuje, jak utworzyć XML element, dostęp do jego elementów podrzędnych i atrybuty i zapytanie o zawartość elementu za pomocą LINQ.  
+ [!code-vb[VbXmlSamples#8](../../../language-reference/operators/codesnippet/VisualBasic/introduction-to-linq_24.vb)]  
   
- [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/introduction-to-linq_24.vb)]  
+ Aby uzyskać więcej informacji, zobacz [XML](../xml/index.md).  
   
- Aby uzyskać więcej informacji, zobacz [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).  
-  
-##  <a name="RelatedResources"></a> Zasoby pokrewne  
+## <a name="related-resources"></a>Powiązane zasoby  
   
 |Temat|Opis|  
 |---|---|  
-|[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|Zawiera opis funkcji XML w Visual Basic, który można wykonać zapytania i które umożliwiają włączenia XML jako najwyższej jakości danych obiektów w kodzie języka Visual Basic.|  
-|[Zapytania](../../../../visual-basic/language-reference/queries/queries.md)|Udostępnia informacje na temat klauzule zapytań, które są dostępne w języku Visual Basic.|  
-|[LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)|Zawiera informacje ogólne, programowania wskazówki i przykłady dla LINQ.|  
-|[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Zawiera informacje ogólne, programowania wskazówki i przykłady dla składnika LINQ to SQL.|  
-|[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)|Zawiera informacje ogólne, programowania wskazówki i przykłady dla LINQ do obiektów.|  
-|[LINQ to ADO.NET (strona portalu)](http://msdn.microsoft.com/library/dd7d3c6a-ff98-47e9-a1a7-2d4cfc42d150)|Zawiera linki do informacji ogólnych, programowania wskazówki i przykłady dla składnika LINQ to [!INCLUDE[vstecado](~/includes/vstecado-md.md)].|  
-|[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)|Zawiera informacje ogólne, programowania wskazówki i przykłady dla LINQ do XML.|  
+|[XML](../../language-features/xml/index.md)|Opisuje funkcje języka XML w Visual Basic, które mogą być wyszukiwane i które umożliwiają objęcie XML jako obiekty najwyższej jakości danych kodu języka Visual Basic.|  
+|[Zapytania](../../../language-reference/queries/index.md)|Zawiera dodatkowe informacje dotyczące klauzul kwerendy, które są dostępne w języku Visual Basic.|  
+|[LINQ (Language-Integrated Query)](../../concepts/linq/index.md)|Zawiera ogólne informacje, wskazówki programowania i przykłady dla programu LINQ.|  
+|[LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)|Zawiera ogólne informacje, wskazówki programowania i przykłady dla programu LINQ to SQL.|  
+|[LINQ to Objects](../../concepts/linq/linq-to-objects.md)|Zawiera ogólne informacje, wskazówki programowania i przykłady dla programu LINQ do obiektów.|  
+|[LINQ to ADO.NET (strona portalu)](../../concepts/linq/linq-to-adonet-portal-page.md)|Zawiera łącza do ogólne informacje, wskazówki programowania i przykłady dla programu LINQ to ADO.NET.|  
+|[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Zawiera ogólne informacje, wskazówki programowania i przykłady dla programu LINQ to XML.|  
   
-##  <a name="HowToAndWalkthroughTopics"></a> Porady i wskazówki — tematy  
+## <a name="how-to-and-walkthrough-topics"></a>Jak wskazówki i porady
  [Porady: zapytanie dotyczące bazy danych](how-to-query-a-database-by-using-linq.md)  
   
  [Porady: wywoływanie procedury przechowywanej](how-to-call-a-stored-procedure-by-using-linq.md)  
@@ -183,19 +236,20 @@ Zapytanie języku zintegrowanym (LINQ) dodaje możliwość wykonywania kwerend d
   
  [Porady: filtrowanie wyników zapytania](how-to-filter-query-results-by-using-linq.md)  
   
- [Porady: liczba, Sum lub uśrednianie danych](how-to-count-sum-or-average-data-by-using-linq.md)  
+ [Porady: liczba, Suma lub średnia danych](how-to-count-sum-or-average-data-by-using-linq.md)  
   
  [Porady: znajdowanie wartości minimalnej lub maksymalnej w wyniku zapytania](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
- [Porady: przypisywanie procedur składowanych do wykonywania aktualizacji, wstawienia i usunięcia (Projektanta obiektów relacyjnych)](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
+ [Instrukcje: przypisywanie procedur składowanych na potrzeby wykonywania aktualizacji, wstawiania i usuwania (O/R Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>Polecane rozdziały książki  
- [Rozdział 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) w [programowania w języku Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
+ [17 rozdziałów: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) w [Programming Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [Przegląd LINQ do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- [Omówienie LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [LINQ do SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- [Metody DataContext (Projektanta obiektów relacyjnych)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>Zobacz także
+
+- [LINQ (Language-Integrated Query)](../../concepts/linq/index.md)  
+- [Przegląd interfejsu LINQ to XML w Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)  
+- [Omówienie LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
+- [Narzędzia LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+- [Metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

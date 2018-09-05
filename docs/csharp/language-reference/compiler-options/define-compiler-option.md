@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: a48a2e44da0b748cea718d97026b4df24dcce11f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17bb0f246407804306a0ea0142f8944b5cf1ee30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218719"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524287"
 ---
 # <a name="-define-c-compiler-options"></a>-Definiowanie (opcje kompilatora C#)
 **— Zdefiniuj** opcja definiuje `name` jako symbol w kodzie źródłowym wszystkie pliki programu.  
@@ -29,33 +29,33 @@ ms.locfileid: "33218719"
   
 ## <a name="arguments"></a>Argumenty  
  `name`, `name2`  
- Nazwa jednego lub wielu symboli, które chcesz zdefiniować.  
+ Nazwa co najmniej jeden symboli, które chcesz zdefiniować.  
   
 ## <a name="remarks"></a>Uwagi  
- **— Zdefiniuj** opcja działa tak samo jak przy użyciu [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) dyrektywy preprocesora z tą różnicą, że opcja kompilatora jest włączona dla wszystkich plików w projekcie. Symbol pozostaje zdefiniowane w pliku źródłowym do [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) dyrektywy w pliku źródłowym usuwa definicję. Jeśli używasz define — opcja, `#undef` dyrektywy w jednym pliku nie ma wpływu na inne pliki kodu źródłowego w projekcie.  
+ **— Zdefiniuj** opcja ma taki sam skutek jak przy użyciu [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) dyrektywy preprocesora z tą różnicą, że opcja kompilatora jest aktywna dla wszystkich plików w projekcie. Symbol pozostaje zdefiniowany w pliku źródłowym, dopóki [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) dyrektywy w pliku źródłowym usuwa definicję. Jeśli używasz define — opcja, `#undef` dyrektywy w jednym pliku nie ma wpływu na inne pliki kodu źródłowego w projekcie.  
   
- Można użyć symboli utworzone przez tę opcję z [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), i [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) warunkowo skompilować plików źródłowych.  
+ Można użyć symboli utworzone przez tę opcję z [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), i [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) Aby warunkowo skompilować pliki źródłowe.  
   
  **-d** jest krótka forma **— Zdefiniuj**.  
   
- Można zdefiniować wiele symboli z **— Zdefiniuj** przy użyciu symbolu nazwy średnikami lub przecinkami. Na przykład:  
+ Można zdefiniować wiele symboli z **— Zdefiniuj** przy użyciu nazwy symbolu średnikami lub przecinkami. Na przykład:  
   
 ```console  
 -define:DEBUG;TUESDAY  
 ```  
   
- Kompilator języka C#, sam definiuje nie symboli lub makra używane w kodzie źródłowym; wszystkie definicje symbolu muszą być zdefiniowane przez użytkownika.  
+ Kompilator języka C#, sama definiuje nie symboli lub makra używane w kodzie źródłowym; wszystkie definicje symboli muszą być zdefiniowane przez użytkownika.  
   
 > [!NOTE]
->  C# `#define` nie zezwala na symbolu, należy podać wartość, jak języków, takich jak C++. Na przykład `#define` nie może służyć do tworzenia makr lub zdefiniuj stałą. Jeśli musisz zdefiniować stałą, użyj `enum` zmiennej. Jeśli chcesz utworzyć makro styl C++, należy wziąć pod uwagę rozwiązań alternatywnych, takich jak ogólne. Ponieważ makra są bardzo podatne na błędy, C# nie zezwala na ich użycia, ale zapewnia bezpieczniejszych alternatyw.  
+>  C# `#define` nie zezwala na symbol należy podać wartości, tak jak w językach takich jak C++. Na przykład `#define` nie można użyć, aby utworzyć makro lub aby zdefiniować stałą. Jeśli potrzebujesz zdefiniować stałą, użyj `enum` zmiennej. Jeśli chcesz utworzyć makro styl C++, należy wziąć pod uwagę rozwiązań alternatywnych, takich jak typy ogólne. Ponieważ makra są bardzo podatne na błędy, C# nie zezwalają na ich użycia, ale zapewnia bezpieczniejszych alternatyw.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
 1.  Otwórz projekt **właściwości** strony.  
   
-2.  Na **kompilacji** , wpisz symbol, który ma być zdefiniowana w **symbole kompilacji warunkowej** pole. Na przykład, jeśli używasz przykładowy kod, który następuje po prostu wpisz `xx` w polu tekstowym.  
+2.  Na **kompilacji** karty, wpisz symbol, który ma zostać określona w **symbole kompilacji warunkowej** pole. Na przykład, jeśli używasz przykładu kodu, który następuje po prostu wpisz `xx` w polu tekstowym.  
   
- Aby uzyskać informacje dotyczące ustawiania tej opcji kompilatora programowo, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
+ Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
   
 ## <a name="example"></a>Przykład  
   
@@ -79,5 +79,6 @@ public class Test
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

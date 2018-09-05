@@ -4,42 +4,42 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: 8baae818db114567804d3796192249d6738fbb17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a938f2f4d4cc790fe03db1e2b57862e54af48a7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520084"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661012"
 ---
 # <a name="workflow-persistence"></a>Trwałość przepływu pracy
-Trwałość przepływu pracy jest trwałe przechwytywania stanu wystąpienia przepływu pracy, niezależnie od informacji procesu lub komputera. Jest to zrobić, aby przekazać dobrze znanego punktu odzyskiwania dla wystąpienia przepływu pracy w przypadku awarii systemu lub zachować pamięci przez zwalnianie wystąpienia przepływu pracy, które są aktywnie niewykonania pracy lub przenoszenie stanu wystąpienia przepływu pracy z jednego węzła do innego węzeł w farmie serwerów.  
+Trwałość przepływu pracy jest trwały przechwytywania stanu wystąpienia przepływu pracy, niezależnie od informacji proces lub komputer. Ma to na zapewnienie znanego punktu odzyskiwania dla wystąpienia przepływu pracy w przypadku awarii systemu lub zachować pamięci przez zwalnianie wystąpienia przepływu pracy, które nie wykonują aktywnie pracy lub przenieść stanu wystąpienia przepływu pracy z jednego węzła do innego węzeł w farmie serwerów.  
   
- Trwałość umożliwia elastyczność procesu, skalowalność, odzyskiwania w wypadku awarii i możliwość bardziej wydajnie zarządzać pamięcią. Proces trwałości obejmuje określenie punktu trwałości, zbieranie danych można zapisać i na koniec delegowania rzeczywistego magazynu danych do dostawcy trwałości.  
+ Stan trwały umożliwia procesu elastyczność, skalowalności, odzyskiwania w przypadku awarii i możliwość bardziej wydajne zarządzanie pamięcią. Proces trwałości obejmuje określenie punktu trwałości, zbieranie danych, które mają być zapisywane i na koniec delegowanie rzeczywisty magazyn danych do dostawcy stanów trwałych.  
   
- Włączanie utrwalania przepływu pracy, należy skojarzyć magazyn wystąpienia z **WorkflowApplication** lub **obiektu WorkflowServiceHost** wymienionych w [jak: Włącz trwałość dla Przepływy pracy i przepływ pracy usług](../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** i **obiektu WorkflowServiceHost** umożliwiają w magazynie wystąpień skojarzonych z nimi utrwalanie wystąpienia przepływu pracy w magazynie informacji o trwałości i ładowanie wystąpienia przepływu pracy do pamięć oparte na dane wystąpienia przepływu pracy, które są przechowywane w magazynie informacji o trwałości.  
+ Aby włączyć opcję trwałości dla przepływu pracy, należy skojarzyć magazyn wystąpienia z **WorkflowApplication** lub **WorkflowServiceHost** zgodnie z opisem w [porady: Włączanie stanów trwałych dla Przepływy pracy i usług przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** i **WorkflowServiceHost** umożliwiają magazyn wystąpienia skojarzonych z nimi utrwalanie wystąpienia przepływu pracy w magazynie w trwałości i ładowanie wystąpienia przepływu pracy do pamięć, w oparciu o dane wystąpienia przepływu pracy, które są przechowywane w magazynie w trwałości.  
   
- [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z **SqlWorkflowInstanceStore** klasy, która zezwala na trwałość danych i metadane dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Zobacz [magazyn wystąpienia przepływu pracy SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) więcej szczegółów.  
+ [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z **SqlWorkflowInstanceStore** klasy, która zezwala na trwałości danych oraz metadane dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Zobacz [Store wystąpienia przepływu pracy SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) Aby uzyskać więcej informacji.  
   
- Do przechowywania i załaduj swoje dane specyficzne dla aplikacji, oraz informacje dotyczące wystąpienia przepływu pracy, można utworzyć uczestników trwałości, które rozszerzają <xref:System.Activities.Persistence.PersistenceParticipant> klasy. Uczestnika trwałości uczestniczy w procesie trwałości można zapisać w magazynie informacji o trwałości, aby załadować dane z magazynu wystąpień w pamięci i wykonywać żadnych dodatkowych logiki w ramach transakcji trwałości niestandardowe dane do serializacji. Aby uzyskać więcej informacji, zobacz [uczestników trwałości](../../../docs/framework/windows-workflow-foundation/persistence-participants.md).  
+ Aby przechowywać i załadować dane specyficzne dla aplikacji wraz z informacjami dotyczącego wystąpienia przepływu pracy, należy utworzyć uczestnicy stanów trwałych, które rozszerzają <xref:System.Activities.Persistence.PersistenceParticipant> klasy. Uczestnika stanów trwałych bierze udział w procesie trwałości zapisanie danych niestandardowych do serializacji w magazynie w trwałości, aby załadować dane z magazynu wystąpień w pamięci i przeprowadzenie dodatkowej logiki w ramach transakcji trwałości. Aby uzyskać więcej informacji, zobacz [uczestnicy stanów trwałych](../../../docs/framework/windows-workflow-foundation/persistence-participants.md).  
   
- Windows Server AppFabric upraszcza proces konfigurowania trwałości. Aby uzyskać więcej informacji, zobacz [koncepcji trwałości z systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201200)  
+ Windows Server AppFabric upraszcza proces konfigurowania trwałości. Aby uzyskać więcej informacji, zobacz [trwałości koncepcji z systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201200)  
   
 ## <a name="implicit-persistence-points"></a>Niejawne punktów trwałości  
- Poniższa lista zawiera przykłady warunków, od których przepływu pracy jest trwały, gdy magazyn wystąpienia jest skojarzony z przepływem pracy.  
+ Poniższa lista zawiera przykłady warunki, na których jest trwały przepływu pracy, gdy magazyn wystąpienia jest skojarzony z przepływem pracy.  
   
--   Gdy **TransactionScope** zakończeniu działania lub **TransactedReceiveScope** ukończeniu działania.  
+-   Gdy **TransactionScope** zakończy działanie lub **TransactedReceiveScope** zakończy działanie.  
   
--   Kiedy zostanie bezczynne wystąpienia przepływu pracy i **WorkflowIdleBehavior** jest ustawiony na hosta przepływu pracy. Dzieje się tak, na przykład, korzystając z komunikatów działania lub w **opóźnienie** działania.  
+-   Gdy wystąpienie przepływu pracy staje się bezczynności i **WorkflowIdleBehavior** jest ustawiona na hosta przepływu pracy. Ten problem wystąpi, na przykład, gdy używasz działań dotyczących komunikatów lub w **opóźnienie** działania.  
   
--   Gdy obiekt WorkflowApplication staje się bezczynności i **PersistableIdle** właściwości aplikacji ustawiono **PersistableIdleAction.Persist**.  
+-   Gdy WorkflowApplication staje się bezczynności i **PersistableIdle** aplikacji zostaje ustalona **PersistableIdleAction.Persist**.  
   
--   Gdy aplikacja hosta jest instrukcją utrwalić lub zwolnić wystąpienia przepływu pracy.  
+-   Gdy aplikacja hosta jest zobowiązany do utrwalenia lub zwolnij wystąpienia przepływu pracy.  
   
--   Jeśli wystąpienia przepływu pracy zostało zakończone lub zakończeniu.  
+-   Gdy wystąpienie przepływu pracy zostanie zakończony, lub zakończy się.  
   
--   Gdy **utrwalanie** wykonuje działania.  
+-   Gdy **utrwalanie** wykonuje działanie.  
   
--   Gdy wystąpienia przepływu pracy utworzony przy użyciu poprzedniej wersji programu Windows Workflow Foundation napotkał punkt trwałości podczas wykonywania interoperacyjne.  
+-   Gdy wystąpienie przepływu pracy opracowanych za pomocą poprzedniej wersji programu Windows Workflow Foundation napotyka punktu trwałości podczas wykonywania interoperacyjne.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   

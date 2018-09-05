@@ -5,12 +5,12 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bdeb0e92dca723b64ee82b70f58fe910fd0c2edb
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fe3b10e17c3cdf181f0b33b4305008655047fb0f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931053"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557533"
 ---
 # <a name="certificate-selection-and-validation"></a>Wybór certyfikatu i sprawdzanie poprawności
 <xref:System.Net> Klasy obsługują kilka sposobów, aby wybrać i zweryfikować <xref:System.Security.Cryptography.X509Certificates> dla połączeń Secure Socket Layer (SSL). Klient może wybrać jeden lub kilka certyfikatów, aby uwierzytelniać się z serwerem. Serwer może wymagać, że jeden lub więcej określonych atrybutów do uwierzytelniania certyfikatu klienta.  
@@ -41,13 +41,13 @@ ms.locfileid: "42931053"
 ## <a name="tools-for-certificate-configuration"></a>Narzędzia do konfiguracji certyfikatu  
  Wiele narzędzi, są dostępne dla klienta i serwera konfiguracji certyfikatu.  
   
- *Winhttpcertcfg.exe* narzędzie może służyć do konfigurowania certyfikatów klienta. *Winhttpcertcfg.exe* narzędzie jest dostarczane jako jedno z narzędzi w programie Windows Server 2003 Resource Kit. To narzędzie jest również dostępny do pobrania w ramach systemu Windows Server 2003 Resource Kit Tools w www.microsoft.com.  
+ *Winhttpcertcfg.exe* narzędzie może służyć do konfigurowania certyfikatów klienta. *Winhttpcertcfg.exe* narzędzie jest dostarczane jako jedno z narzędzi w programie Windows Server 2003 Resource Kit. To narzędzie jest również dostępny do pobrania w ramach systemu Windows Server 2003 Resource Kit Tools w [www.microsoft.com](https://www.microsoft.com).  
   
 *HttpCfg.exe* narzędzie może służyć do konfigurowania certyfikatów serwera wdrażania <xref:System.Net.HttpListener> klasy. *HttpCfg.exe* narzędzie jest dostarczane jako jedno z narzędzi obsługi systemu Windows Server 2003 i Windows XP Service Pack 2. *HttpCfg.exe* i inne narzędzia pomocy technicznej nie są instalowane domyślnie w systemie Windows Server 2003 lub Windows XP. W systemie Windows Server 2003. narzędzia pomocy technicznej są instalowane osobno od następujący folder i plik na dysku CD systemu Windows Server 2003:  
   
  \Support\Tools\Suptools.msi  
   
- Do użytku z systemu Windows XP Service Pack 2, Windows XP obsługi narzędzia są dostępne do pobrania z www.microsoft.com.  
+ Do użytku z systemu Windows XP Service Pack 2, narzędzia obsługi Windows XP są dostępne do pobrania z [www.microsoft.com](https://www.microsoft.com).  
   
  Kod źródłowy do wersji *HttpCfg.exe* narzędzie jest także podany jako przykład z zestawem SDK systemu Windows Server. Kod źródłowy w celu *HttpCfg.exe* próbki jest instalowany domyślnie w z przykładami sieci, jako część zestawu Windows SDK w następującym folderze:  
   

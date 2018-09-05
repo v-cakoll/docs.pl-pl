@@ -2,51 +2,52 @@
 title: Operacje na zestawie (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 45b828f89b380b2649ab5ee80f5438d822de9443
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c91ec399e7c3bccd4ef937d5f7f3f871f86f00be
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334415"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530062"
 ---
 # <a name="set-operations-c"></a>Operacje na zestawie (C#)
-Operacje na zestawie w składniku LINQ odwoływać się do operacji zapytania, które wywołują zestaw wyników, który jest oparty na obecności lub braku równoważne elementów w obrębie tego samego lub oddzielne kolekcje (lub zestawy).  
+Operacje na zestawie w składniku LINQ dotyczą operacje zapytań, które tworzą zestaw wyników, który zależy od obecności lub braku równoważne elementów w obrębie tego samego lub oddzielne kolekcje (lub zestawy).  
   
- Metody operator standardowe zapytań, które wykonują operacje na zestawie są wymienione w poniższej sekcji.  
+ Metody standardowego operatora zapytań, które wykonują operacje na zestawie są wymienione w poniższej sekcji.  
   
 ## <a name="methods"></a>Metody  
   
-|Nazwa metody|Opis|Składnia wyrażenia zapytania C#|Więcej informacji|  
+|Nazwa metody|Opis|Składnia wyrażeń zapytania języka C#|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Distinct|Usuwa zduplikowane wartości z kolekcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
-|Z wyjątkiem|Zwraca różnicę zestawu, co oznacza elementy jednej kolekcji, które nie są widoczne w druga kolekcja.|Nie dotyczy.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
-|INTERSECT|Zwraca część wspólną zestawu, co oznacza elementy, które są wyświetlane w każdym z dwóch kolekcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|  
-|Union|Zwraca zestaw, co oznacza unikatowych elementów, które pojawiają się w jednym z dwóch kolekcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|  
+|Z wyjątkiem|Zwraca różnicę zestawu, który oznacza, że elementy jednej kolekcji, które nie są wyświetlane w drugiej kolekcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
+|INTERSECT|Zwraca część wspólną zestawu, co oznacza, elementy, które są wyświetlane w każdym dwie kolekcje.|Nie dotyczy.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|  
+|Union|Zwraca Unię zestawu, co oznacza unikatowych elementów, które pojawiają się w jednej z dwóch kolekcjach.|Nie dotyczy.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|  
   
 ## <a name="comparison-of-set-operations"></a>Porównanie operacje na zestawie  
   
 ### <a name="distinct"></a>Distinct  
- Na poniższej ilustracji przedstawiono zachowania <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> metody w sekwencji znaków. Zwrócony sekwencja zawiera elementy unikatowe z sekwencji wejściowych.  
+ Poniższa ilustracja przedstawia zachowanie <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> metody w sekwencji znaków. Zwracana sekwencja zawiera unikatowych elementów z sekwencji wejściowych.  
   
- ![Grafika przedstawiająca zachowanie Distinct&#40;&#41;. ] (../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Różne")  
+ ![Grafika przedstawiająca zachowanie słowa kluczowego DISTINCT&#40;&#41;. ](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Odrębne")  
   
 ### <a name="except"></a>Z wyjątkiem  
- Na poniższej ilustracji przedstawiono zachowania <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Zwrócony sekwencja zawiera tylko elementy z pierwszego sekwencji wejściowych, które nie znajdują się w drugim sekwencji wejściowych.  
+ Poniższa ilustracja przedstawia zachowanie <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Zwracana sekwencja zawiera tylko elementy z pierwszej sekwencji wejściowych, które nie znajdują się w drugiej sekwencji wejściowych.  
   
- ![Grafika przedstawiająca działania z wyjątkiem&#40;&#41;. ] (../../../../csharp/programming-guide/concepts/linq/media/except.png "z wyjątkiem")  
+ ![Grafika przedstawiająca działania z wyjątkiem&#40;&#41;. ](../../../../csharp/programming-guide/concepts/linq/media/except.png "z wyjątkiem")  
   
 ### <a name="intersect"></a>INTERSECT  
- Na poniższej ilustracji przedstawiono zachowania <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Zwrócony sekwencja zawiera elementy, które są wspólne dla obu sekwencji wejściowych.  
+ Poniższa ilustracja przedstawia zachowanie <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Zwracana sekwencja zawiera elementy, które są wspólne dla obu sekwencji wejściowych.  
   
- ![Grafika przedstawiająca część wspólną dwóch sekwencji. ] (../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
+ ![Grafika przedstawiająca części wspólnych dwóch sekwencji. ](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
   
 ### <a name="union"></a>Union  
- Na poniższej ilustracji przedstawiono Unii operacji na dwóch sekwencji znaków. Zwrócony sekwencja zawiera elementy unikatowe z obu sekwencji wejściowych.  
+ Poniższa ilustracja przedstawia operacji union na dwie sekwencje znaków. Zwracana sekwencja zawiera unikatowych elementów z obu sekwencji wejściowych.  
   
- ![Grafika przedstawiająca złożenie dwóch sekwencji. ] (../../../../csharp/programming-guide/concepts/linq/media/union.png "Unii")  
+ ![Grafika przedstawiająca sumę dwóch sekwencji. ](../../../../csharp/programming-guide/concepts/linq/media/union.png "Unii")  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Linq>  
- [Operatory standardowe zapytań — omówienie (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
- [Porady: znajdowanie różnicy pomiędzy dwoma listami (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Linq>  
+- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
+- [Porady: znajdowanie różnicy pomiędzy dwoma listami (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

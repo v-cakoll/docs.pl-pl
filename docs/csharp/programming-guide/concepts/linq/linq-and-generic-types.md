@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: f9bb4ec21685d21d0975529c7460944b5f0f9fc6
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 45bc5cbbdd1c0721797aed38636892e731c2883f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925775"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513889"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ i typy ogólne (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania są oparte na typach ogólnych, które zostały wprowadzone w wersji 2.0 programu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Nie potrzebujesz dogłębnej znajomości ogólne przed rozpoczęciem pisania zapytań. Jednak warto zrozumieć dwa podstawowe pojęcia:  
@@ -36,6 +36,7 @@ ms.locfileid: "42925775"
   
  `var` — Słowo kluczowe jest przydatne w przypadku, gdy typ zmiennej jest oczywisty lub gdy nie jest to ważne, jawnie określić zagnieżdżonych typów ogólnych, takich jak te, które są produkowane przez grupy zapytań. Ogólnie rzecz biorąc, zalecamy użycie `var`, należy pamiętać, że może sprawić, że Twój kod trudniejsze dla innych użytkowników. Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Typy ogólne](../../../../csharp/programming-guide/generics/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Typy ogólne](../../../../csharp/programming-guide/generics/index.md)

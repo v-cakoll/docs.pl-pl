@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2a0d716c3689b506ad29d99f006f1a4bb7c53a3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61e8be6f7f621340a684bff69ec5c9d64ab36c61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507032"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565193"
 ---
 # <a name="custom-binding-security"></a>Zabezpieczenia powiązania niestandardowego
-W tym przykładzie pokazano, jak skonfigurować zabezpieczenia przy użyciu niestandardowego powiązania. Widoczny jest sposób umożliwiają niestandardowego powiązania zabezpieczeń na poziomie komunikatu wraz z bezpiecznego transportu. Jest to przydatne, gdy do przesyłania wiadomości między klientem a usługą jest wymagane bezpieczne transportu i jednocześnie wiadomości musi być bezpieczny na poziomie wiadomości. Ta konfiguracja nie jest obsługiwana przez powiązania dostarczane przez system.  
+Niniejszy przykład pokazuje sposób konfigurowania zabezpieczeń przy użyciu niestandardowego powiązania. Widoczny jest sposób użyć niestandardowego powiązania, aby włączyć zabezpieczenia na poziomie komunikatu wraz z bezpiecznym transportem. Jest to przydatne, gdy bezpiecznym transportem jest wymagana do przesyłania komunikatów między klientem a usługą i jednocześnie komunikaty muszą być bezpieczne na poziomie komunikatu. Ta konfiguracja nie jest obsługiwana przez powiązania dostarczane przez system.  
   
- W tym przykładzie składa się z konsoli klienta programu (EXE) i usługi konsoli programu (EXE). Usługa implementuje kontraktu dwukierunkowego. Kontrakt jest definiowana za pomocą `ICalculatorDuplex` interfejsu, który udostępnia operacji matematycznych (Dodawanie, odjąć mnożenia i dzielenia). `ICalculatorDuplex` Interfejs umożliwia klientowi wykonywania operacji matematycznych, obliczania wyniku uruchomiona przez sesję. Niezależnie od siebie, usługa może zwrócić wyniki na `ICalculatorDuplexCallback` interfejsu. Kontrakt dupleksowy wymaga elementu session, ponieważ kontekst muszą być ustalane do skorelowania zestaw komunikatów przesyłanych między klientem a usługą. Powiązania niestandardowego zdefiniowano obsługującego komunikację dupleksową, który jest bezpieczne.  
+ W tym przykładzie składa się z konsoli klienta programu (EXE) i program konsoli usługi (EXE). Usługa implementuje kontraktu dwukierunkowego. Kontrakt jest definiowany przez `ICalculatorDuplex` interfejs, który udostępnia operacje matematyczne (dodawania, odejmowania, mnożenia i dzielenia). `ICalculatorDuplex` Interfejs umożliwia klientowi do wykonywania operacji matematycznych obliczania wyniku uruchomionych w sesji. Niezależnie od siebie, usługa może zwrócić wyniki na `ICalculatorDuplexCallback` interfejsu. Kontrakt dupleksowy wymaga elementu session, ponieważ kontekst muszą być ustalane do skorelowania zestaw komunikatów przesyłanych między klientem a usługą. Powiązanie niestandardowe zdefiniowano obsługującego komunikację dupleksową, która jest bezpieczna.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
  Konfiguracja usługi definiuje niestandardowego powiązania, który obsługuje następujące funkcje:  
   
--   Komunikacja TCP chronione za pomocą protokołu TLS/SSL.  
+-   Komunikację TCP chronionych z użyciem protokołu TLS/SSL.  
   
--   Zabezpieczenia komunikatów systemu Windows.  
+-   Zabezpieczenia komunikatów Windows.  
   
- Konfiguracja wiązania niestandardowego pozwala bezpiecznego transportu równocześnie umożliwiając zabezpieczeń na poziomie wiadomości. Kolejność elementów wiązania jest ważne podczas definiowania niestandardowego powiązania, ponieważ każdy reprezentuje warstwę stosu kanał (zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md)). Niestandardowego powiązania jest zdefiniowany w plikach konfiguracji usługi i klienta, jak pokazano w poniższych Przykładowa konfiguracja.  
+ Konfiguracja powiązania niestandardowego pozwala bezpiecznym transportem, jednocześnie umożliwiając zabezpieczenia na poziomie komunikatu. Określanie kolejności elementów wiązania jest ważny w celu definiowania niestandardowego powiązania, ponieważ każdy z nich reprezentuje warstwę w stosie kanału (zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md)). Powiązania niestandardowego jest zdefiniowany w plikach konfiguracji usługi i klienta, jak pokazano w poniższym Przykładowa konfiguracja.  
   
 ```xml  
 <bindings>  
@@ -43,7 +43,7 @@ W tym przykładzie pokazano, jak skonfigurować zabezpieczenia przy użyciu nies
 </bindings>  
 ```  
   
- Wiązanie niestandardowe używa certyfikatu usługi do uwierzytelniania usługi na poziomie transportu oraz chronić przed komunikaty podczas transmisji między klientem a usługą. Jest to osiągane przez `sslStreamSecurity` element powiązania. Certyfikat usługi jest skonfigurowany przy użyciu zachowania usługi, jak pokazano w poniższych Przykładowa konfiguracja.  
+ Niestandardowego powiązania z certyfikatem usługi do uwierzytelniania usługi na poziomie transportu i do ochrony komunikatów podczas transmisji między klientem a usługą. Jest to osiągane przez `sslStreamSecurity` element powiązania. Certyfikat usługi jest skonfigurowany za pomocą zachowanie usługi, jak pokazano w poniższym Przykładowa konfiguracja.  
   
 ```xml  
 <behaviors>  
@@ -59,9 +59,9 @@ W tym przykładzie pokazano, jak skonfigurować zabezpieczenia przy użyciu nies
 </behaviors>  
 ```  
   
- Ponadto niestandardowego powiązania używa zabezpieczenia komunikatów z typu poświadczeń systemu Windows — jest to domyślny typ poświadczeń. Jest to osiągane przez `security` element powiązania. Zarówno klient, jak i usługa są uwierzytelniane przy użyciu zabezpieczeń na poziomie komunikatu, jeśli mechanizmu uwierzytelniania Kerberos jest dostępne. Dzieje się tak, jeśli próbka jest uruchamiany w środowisku usługi Active Directory. Jeśli mechanizm uwierzytelniania Kerberos jest niedostępna, jest używane uwierzytelnianie NTLM. NTLM uwierzytelnia klienta do usługi, ale nie uwierzytelnienia usługi dla klienta. `security` Element powiązania jest skonfigurowana do używania `SecureConversation``authenticationType`, które powoduje utworzenia sesji zabezpieczeń zarówno klient, jak i usługi. Jest to wymagane do włączenia usługi kontraktu dwukierunkowego do pracy.  
+ Ponadto niestandardowego powiązania za pomocą zabezpieczeń wiadomości typ poświadczeń Windows — jest to domyślny typ poświadczeń. Jest to osiągane przez `security` element powiązania. Zarówno klient, jak i usługi są uwierzytelniane przy użyciu zabezpieczeń na poziomie komunikatu, jeśli mechanizm uwierzytelniania Kerberos jest dostępna. Dzieje się tak, jeśli na przykład jest uruchamiany w środowisku usługi Active Directory. Jeśli mechanizm uwierzytelniania Kerberos jest niedostępny, zostanie użyte uwierzytelnianie NTLM. NTLM uwierzytelnia klienta do usługi, ale nie uwierzytelnia usługi do klienta. `security` Element powiązania jest skonfigurowany do używania `SecureConversation``authenticationType`, co powoduje, że w przypadku tworzenia sesji zabezpieczeń zarówno klient, jak i usługi. Jest to wymagane do włączenia usługi kontraktu dwukierunkowego do pracy.  
   
- Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
 ```  
 Press <ENTER> to terminate client.  
@@ -72,15 +72,15 @@ Result(441.25)
 Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)  
 ```  
   
- Po uruchomieniu próbki, zobacz wiadomości zwracana do klienta na interfejs wywołania zwrotnego wysyłane z usługi. Zostanie wyświetlona poszczególnych pośrednia wynik, następuje całe równanie po zakończeniu wszystkich operacji. Naciśnij klawisz ENTER, aby zamknąć klienta.  
+ Po uruchomieniu przykładu, zobacz komunikaty zwracane do klienta na interfejs wywołania zwrotnego wysyłane z usługi. Jest wyświetlany wynik każdego pośrednich następuje całe równanie po ukończeniu wszystkich operacji. Naciśnij klawisz ENTER, aby zamknąć klienta.  
   
- Dołączony pliku Setup.bat umożliwia konfigurowanie klienta i serwera z certyfikatem odpowiedniej usługi uruchamianie hostowanej aplikacji, która wymaga zabezpieczeń oparte na certyfikatach. Ten plik wsadowy muszą zostać zmodyfikowane, aby pracować na komputerach lub do pracy w przypadku z systemem innym niż obsługiwany.  
+ Dołączony plik Setup.bat umożliwia konfigurowanie klienta i serwera przy użyciu certyfikatu odpowiednie usługi uruchamianie hostowanej aplikacji, która wymaga zabezpieczeń oparte na certyfikatach. Ten plik wsadowy muszą zostać zmodyfikowane, działają na różnych komputerach lub działać w przypadku innych obsługiwanych.  
   
- Poniżej przedstawiono krótkie omówienie różnych sekcji pliki wsadowe, które dotyczą tego przykładu tak, aby można modyfikować w prawidłowej konfiguracji:  
+ Poniżej zawiera krótkie omówienie różnych sekcji plików wsadowych, które dotyczą tego przykładu tak, aby ich można modyfikować, aby uruchomić w prawidłowej konfiguracji:  
   
 -   Tworzenie certyfikatu serwera.  
   
-     Następujące wiersze z pliku pliku Setup.bat utworzenie certyfikatu serwera do użycia. `%SERVER_NAME%` Zmiennej określa nazwę serwera. Zmień tę wartość, aby określić nazwę serwera. Ten plik wsadowy domyślnie nazwę serwera, aby localhost.  
+     Następujące wiersze z pliku Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. `%SERVER_NAME%` Zmienna Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Ten plik wsadowy wartością domyślną jest nazwa serwera, na hoście lokalnym.  
   
      Certyfikat jest przechowywany w magazynie CurrentUser usług hostowanych w sieci Web.  
   
@@ -96,37 +96,37 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 -   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.  
   
-     Następujące wiersze w pliku Setup.bat kopii pliku certyfikatu serwera do klienta zaufanych osób magazynu. Ten krok jest wymagany, ponieważ certyfikaty generowane przez Makecert.exe nie są jawnie ufa systemu klienta. Jeśli masz już znajdującym się w klienta zaufanego certyfikatu głównego certyfikatu — na przykład certyfikat wystawiony przez Microsoft — ten krok zapełnianie magazynu certyfikatów klienta przy użyciu certyfikatu serwera nie jest wymagane.  
+     Przechowywać następujące wiersze w Setup.bat jest kopiowanie plików certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
     > [!NOTE]
-    >  Plik wsadowy pliku Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2010 wiersz polecenia. Wymaga ona, że zmienna środowiskowa MSSDK odwołują się do katalogu, w którym jest zainstalowany zestaw SDK. Ta zmienna środowiskowa jest automatycznie ustawiana w Visual Studio 2010 wiersz polecenia.  
+    >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2010 wiersz polecenia. Wymaga to, że zmienna środowiskowa MSSDK odwołują się do katalogu, w którym jest zainstalowany zestaw SDK. Ta zmienna środowiskowa jest automatycznie ustawiana w ramach programu Visual Studio 2010 wiersz polecenia.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1.  Otwórz okno Wiersz polecenia programu Visual Studio z uprawnieniami administratora i uruchom pliku Setup.bat z folderu instalacyjnego próbki. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.  
+1.  Otwórz okno wiersza polecenia programu Visual Studio z uprawnieniami administratora i uruchom Setup.bat jest z poziomu folderu instalacji przykładowej. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.  
   
     > [!NOTE]
-    >  Plik wsadowy pliku Setup.bat jest przeznaczony do uruchamiania z [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wiersza polecenia. Wartość zmiennej środowiskowej PATH w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wskazuje katalog zawierający pliki wykonywalne wymagane przez pliku Setup.bat skryptu wiersza polecenia.  
+    >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wiersza polecenia. Ustawić zmiennej środowiskowej PATH, w ramach [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] polecenia wskazuje katalog, który zawiera pliki wykonywalne wymagane przez skrypt Setup.bat jest.  
   
 2.  Uruchom Service.exe z \service\bin.  
   
-3.  Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsoli klienta.  
+3.  Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
   
-4.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na komputerach  
+### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach  
   
 1.  Na komputerze usługi:  
   
@@ -134,38 +134,38 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     2.  Skopiuj pliki programu usługi z \inetpub\wwwroot\servicemodelsamples do katalogu wirtualnego na komputerze usługi. Upewnij się, skopiuj pliki w podkatalogu \bin.  
   
-    3.  Skopiuj pliki pliku Setup.bat i Cleanup.bat komputer usługi.  
+    3.  Skopiuj pliki Setup.bat i Cleanup.bat komputer usługi.  
   
-    4.  Uruchom następujące polecenie w wierszu polecenia programu Visual Studio została otwarta z uprawnieniami administratora: `Setup.bat service`. Spowoduje to utworzenie certyfikatu usługi z nazwą podmiotu pasującego do nazwy komputera, na którym uruchomiono plik wsadowy na.  
+    4.  Uruchom następujące polecenie w wierszu polecenia programu Visual Studio otwartych z uprawnieniami administratora: `Setup.bat service`. Spowoduje to utworzenie certyfikatu usługi o nazwie podmiotu, pasujące do nazwy komputera, na którym uruchomiono plik wsadowy na.  
   
         > [!NOTE]
-        >  Plik wsadowy pliku Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2010 wiersz polecenia. Wymaga, aby zmiennej środowiskowej path punktu do katalogu, w którym jest zainstalowany zestaw SDK. Ta zmienna środowiskowa jest automatycznie ustawiana w Visual Studio 2010 wiersz polecenia.  
+        >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2010 wiersz polecenia. Wymaga to, że zmiennej środowiskowej path odwołują się do katalogu, w którym jest zainstalowany zestaw SDK. Ta zmienna środowiskowa jest automatycznie ustawiana w ramach programu Visual Studio 2010 wiersz polecenia.  
   
-    5.  Zmień [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) wewnątrz pliku Service.exe.config w celu odzwierciedlenia nazwy podmiotu certyfikatu generowane w poprzednim kroku.  
+    5.  Zmiana [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) wewnątrz pliku Service.exe.config, aby odzwierciedlić nazwę podmiotu certyfikatu, wygenerowany w poprzednim kroku.  
   
-    6.  Uruchom Service.exe z wiersza polecenia.  
+    6.  Uruchom Service.exe z poziomu wiersza polecenia.  
   
 2.  Na komputerze klienckim:  
   
     1.  Skopiuj pliki programu klienta z folderu \client\bin\ na komputerze klienckim. Również skopiować plik Cleanup.bat.  
   
-    2.  Uruchom Cleanup.bat, aby usunąć wszelkie stare certyfikaty z poprzedniej próbki.  
+    2.  Uruchom Cleanup.bat, aby usunąć wszelkie stare certyfikaty z poprzednich przykładów.  
   
-    3.  Wyeksportuj certyfikat usługi, otwierając wiersz polecenia programu Visual Studio z uprawnieniami administracyjnymi i uruchom następujące polecenie na komputerze usługi (Zastąp `%SERVER_NAME%` z w pełni kwalifikowaną nazwę komputera, na którym usługa jest uruchomiona):  
+    3.  Eksportowanie certyfikatu usługi Otwieranie wiersza polecenia programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze usługi (Zastąp `%SERVER_NAME%` z w pełni kwalifikowaną nazwę komputera, na których ta usługa jest Uruchamianie):  
   
         ```  
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer  
         ```  
   
-    4.  Skopiuj %SERVER_NAME%.cer na komputerze klienckim (substitute nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na którym jest uruchomiona usługa).  
+    4.  Skopiuj %SERVER_NAME%.cer komputer kliencki (Zastąp nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na którym jest uruchomiona usługa).  
   
-    5.  Zaimportuj certyfikat usługi, otwierając wiersz polecenia programu Visual Studio z uprawnieniami administracyjnymi i uruchom następujące polecenie na komputerze klienckim (substitute nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na którym usługa jest uruchomiona):  
+    5.  Zaimportuj certyfikat usługi, otwierając wiersza polecenia programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze klienckim (Zastąp nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na których ta usługa jest Uruchamianie):  
   
         ```  
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople  
         ```  
   
-         Kroki nie są konieczne, jeśli certyfikat został wystawiony przez zaufany wystawcy c, d i e.  
+         Kroki nie są konieczne, jeśli certyfikat został wystawiony przez zaufanego wystawcy c, d i e.  
   
     6.  Zmodyfikuj plik App.config klienta w następujący sposób:  
   
@@ -180,12 +180,12 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>  
         ```  
   
-    7.  Jeśli usługa jest uruchomiona w ramach konta innego niż Usługa sieciowa lub konta System lokalny w środowisku domeny, może być konieczne zmodyfikowanie tożsamość punktu końcowego dla punktu końcowego usługi w pliku App.config klienta można ustawić odpowiednie nazwy UPN lub nazwy SPN na podstawie konta używanego do uruchamiania usługi. Aby uzyskać więcej informacji o tożsamości punktu końcowego, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) tematu.  
+    7.  Jeśli usługa jest uruchomiona w ramach konta innego niż Usługa sieciowa lub konta System lokalny w środowisku domeny, może być konieczne zmodyfikowanie tożsamość punktu końcowego dla punktu końcowego usługi w pliku App.config klienta można ustawić odpowiednie nazwy UPN lub nazwy SPN na podstawie na koncie, które jest używane do uruchamiania usługi. Aby uzyskać więcej informacji o tożsamości punktu końcowego, zobacz [uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) tematu.  
   
-    8.  Uruchom Client.exe z wiersza polecenia.  
+    8.  Uruchom Client.exe z poziomu wiersza polecenia.  
   
-### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po próbki  
+### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
--   Uruchamianie Cleanup.bat w folderze Przykłady po ukończeniu działania próbki.  
+-   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
 ## <a name="see-also"></a>Zobacz też

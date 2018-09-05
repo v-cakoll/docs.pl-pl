@@ -7,24 +7,24 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 55ff87ef51f00a803276083052d4d86960e702e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f11ba3981b219d3b3a7817afd75fa78f2ccf78a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332858"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521756"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Porady: konwertowanie ciągu na liczbę (Przewodnik programowania w języku C#)
-Możesz przekonwertować [ciąg](../../../csharp/language-reference/keywords/string.md) na liczbę za pomocą metod w <xref:System.Convert> klasy lub przy użyciu `TryParse` znaleziono metody na różne typy liczbowe (int, long, float, itp.).  
+Można przekonwertować [ciąg](../../../csharp/language-reference/keywords/string.md) do liczby przy użyciu metod w <xref:System.Convert> klasy lub przy użyciu `TryParse` znaleźć metodę na różne typy liczbowe (int, long, float, itp.).  
   
- Jeśli masz ciąg jest nieco bardziej wydajne i bezpośrednie wywoływanie `TryParse` — metoda (na przykład `int.TryParse("11")`).  Przy użyciu `Convert` metoda jest bardziej użyteczna w przypadku ogólnych obiekty, które implementują <xref:System.IConvertible>.  
+ Jeśli masz ciąg, jest nieco bardziej efektywne i prostego do wywołania `TryParse` — metoda (na przykład [ `int.TryParse("11", out number)` ](xref:System.Int32.TryParse%2A)).  Za pomocą <xref:System.Convert> metoda jest bardziej użyteczna w przypadku ogólnych obiekty, które implementują <xref:System.IConvertible>.  
   
- Można użyć `Parse` lub `TryParse` metody na typ liczbowy oczekiwany ciąg zawiera, takich jak <xref:System.Int32?displayProperty=nameWithType> typu.  <xref:System.Convert.ToUInt32%2A?displayProperty=nameWithType> Używa metody <xref:System.Int32.Parse%2A> wewnętrznie.  Jeśli ciąg nie jest prawidłowym formatem `Parse` zgłasza wyjątek `TryParse` zwraca [false](../../../csharp/language-reference/keywords/false.md).  
+ Możesz użyć `Parse` lub `TryParse` metody na typ liczbowy, oczekujesz, że zawiera ciąg, taki jak <xref:System.Int32?displayProperty=nameWithType> typu.  <xref:System.Convert.ToUInt32%2A?displayProperty=nameWithType> Metoda używa <xref:System.Int32.Parse%2A> wewnętrznie.  Jeśli ciąg nie jest w prawidłowym formacie `Parse` zgłasza wyjątek `TryParse` zwraca [false](../../../csharp/language-reference/keywords/false.md).  
   
 ## <a name="example"></a>Przykład  
- `Parse` i `TryParse` metody Ignoruj biały znak na początku i na końcu ciągu, ale wszystkie inne znaki muszą być znaki, które tworzą odpowiedni typ liczbowy (int, long, ulong, float, decimal, itp.).  Wszelkie biały znak w ciągu znaków, które tworzą numer spowodować wystąpienie błędu.  Na przykład można użyć `decimal.TryParse` można przeanalizować "10", "10.3", "10", ale nie można użyć tej metody można przeanalizować 10 "10 X", "1 0" (Uwaga miejsca), "10. 3" (Uwaga miejsca), "10e1" (`float.TryParse` działa w tym miejscu) i tak dalej.  
+ `Parse` i `TryParse` metody Ignoruj biały znak na początku i na końcu ciągu, ale wszystkie inne znaki musi być znaki, które tworzą odpowiedni typ liczbowy (int, long, ulong, float, dziesiętny, itp.).  Dowolny biały obszar w ciągu znaków, które tworzą numer powodują wystąpienie błędu.  Na przykład, można użyć `decimal.TryParse` można przeanalizować "10", "10.3", "10", ale możesz nie można użyć tej metody można przeanalizować 10 z "10 X", "1 0" (Uwaga miejsca), "10. 3" (Uwaga miejsca), "10e1" (`float.TryParse` działające w tym miejscu), i tak dalej.  
   
- Poniższe przykłady pokazują zarówno zakończone powodzeniem i niepowodzeniem wywołania `Parse` i `TryParse`.  
+ W przykładach pokazano zarówno pomyślnie, jak i nieudane wywołania `Parse` i `TryParse`.  
   
  [!code-csharp[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-csharp[csProgGuideTypes#25](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_2.cs)]  
@@ -34,7 +34,7 @@ Możesz przekonwertować [ciąg](../../../csharp/language-reference/keywords/str
 [!code-csharp[csProgGuideTypes#100](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_6.cs)]  
   
 ## <a name="example"></a>Przykład  
- W poniższej tabeli przedstawiono niektóre metody z <xref:System.Convert> klasy, który można użyć.  
+ W poniższej tabeli wymieniono niektóre metody z <xref:System.Convert> klasę, która umożliwia.  
   
 |Typ liczbowy|Metoda|  
 |------------------|------------|  
@@ -48,12 +48,13 @@ Możesz przekonwertować [ciąg](../../../csharp/language-reference/keywords/str
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- W tym przykładzie wywołuje <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> metody można skonwertować danych wejściowych [ciąg](../../../csharp/language-reference/keywords/string.md) do [int](../../../csharp/language-reference/keywords/int.md) . Dwa najczęściej wyjątki, które mogą być generowane przez tę metodę przechwytuje kod <xref:System.FormatException> i <xref:System.OverflowException>. Jeśli liczbę można zwiększyć bez przepełnienia lokalizacji magazynu liczb całkowitych, program dodaje do wyniku 1 i drukuje dane wyjściowe.  
+ Ten przykład wywołuje <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> metodę, aby konwertować dane wejściowe [ciąg](../../../csharp/language-reference/keywords/string.md) do [int](../../../csharp/language-reference/keywords/int.md) . Ten kod przechwytuje dwa najpopularniejsze wyjątki, które mogą zostać wyrzucone przez tę metodę <xref:System.FormatException> i <xref:System.OverflowException>. Jeśli liczbę można zwiększyć bez przepełnienia lokalizacji magazynu liczb całkowitych, program dodaje do wyniku 1 i drukuje dane wyjściowe.  
   
  [!code-csharp[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-csharp[csProgGuideTypes#24](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_7.cs)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy](../../../csharp/programming-guide/types/index.md)  
- [Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
- [Narzędzie formatowania programu .NET framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Zobacz też
+
+- [Typy](../../../csharp/programming-guide/types/index.md)  
+- [Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+- [Narzędzie formatowania programu .NET framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

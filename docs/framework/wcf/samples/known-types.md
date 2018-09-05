@@ -2,20 +2,20 @@
 title: Znane typy
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 003f2e39804bb393c9d8c54a6fc208fdd1b22e97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503822"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554953"
 ---
 # <a name="known-types"></a>Znane typy
-W tym przykładzie pokazano, jak określić informacje o typach pochodnych w kontraktu danych. Kontrakty danych umożliwiają przekazywania strukturalnych danych do i z usług. W programowanie zorientowane obiektowo typu, który dziedziczy z typu można użyć zamiast oryginalnego typu. W programowaniu zorientowane na usługę, zamiast typów schematów są przekazywane i w związku z tym relacji między typami nie są zachowywane. <xref:System.Runtime.Serialization.KnownTypeAttribute> Atrybutu umożliwia informacji na temat typów pochodnych, które mają zostać uwzględnione w umowie dotyczącej danych. Jeśli ten mechanizm nie jest używany, typu pochodnego nie wysłania lub odebrania gdzie oczekiwany jest typ podstawowy.  
+W tym przykładzie pokazano, jak Podaj informacje o typach pochodnych w kontraktu danych. Kontrakty danych umożliwia przekazanie ze strukturą danych do i z usługi. W programowanie zorientowane obiektowo, typu, który dziedziczy z innego typu, może służyć zamiast oryginalnego typu. Podczas programowania zorientowanego na usługi, schematów, a nie typy są przekazywane, a w związku z tym, nie są zachowywane relacji między typami. <xref:System.Runtime.Serialization.KnownTypeAttribute> Atrybut umożliwia informacji na temat typów pochodnych, które mają zostać uwzględnione w kontraktu danych. Mechanizm ten nie jest używany, typem pochodnym nie wysyłane lub odbierane, gdy oczekiwany jest typ podstawowy.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Kontrakt usługi dla usługi używa liczby złożone, jak pokazano w poniższym kodzie próbki.  
+ Umowa serwisowa usługi używa liczby zespolone, jak pokazano w poniższym przykładowym kodzie.  
   
 ```  
 // Define a service contract.  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> jest stosowany do `ComplexNumber` klasy, aby wskazać pola klasy, które mogą być przekazywane między klientem a usługą. Pochodne `ComplexNumberWithMagnitude` klasa może być używana zamiast `ComplexNumber`. <xref:System.Runtime.Serialization.KnownTypeAttribute> Atrybutu `ComplexNumber` typ wskazuje to.  
+ <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> jest stosowany do `ComplexNumber` klasy, aby wskazać, które pola klasy mogą być przekazywane między klientem a usługą. Pochodnej `ComplexNumberWithMagnitude` klasa może być używana zamiast `ComplexNumber`. <xref:System.Runtime.Serialization.KnownTypeAttribute> Atrybutu na `ComplexNumber` typ wskazuje na to.  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -53,7 +53,7 @@ public class ComplexNumber
 }  
 ```  
   
- `ComplexNumberWithMagnitude` Typ pochodzi z `ComplexNumber` , ale dodaje dodatkowe dane elementu członkowskiego, `Magnitude`.  
+ `ComplexNumberWithMagnitude` Typ pochodzi z `ComplexNumber` , ale dodaje element członkowski danych dodatkowych `Magnitude`.  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -71,7 +71,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Aby zademonstrować funkcji znanych typów, usługa jest wdrażana w taki sposób, który zwraca `ComplexNumberWithMagnitude` tylko w przypadku dodawania i odejmowania. (Mimo że kontrakt Określa `ComplexNumber`, jest to dozwolone, ponieważ `KnownTypeAttribute` atrybutu). Mnożenia i dzielenia nadal zwracać wartość base `ComplexNumber` typu.  
+ Aby zademonstrować tę funkcję znane typy, usługa jest wdrażana w taki sposób, który zwraca `ComplexNumberWithMagnitude` tylko w przypadku dodawania i odejmowania. (Mimo że kontrakt Określa `ComplexNumber`, jest to dozwolone z powodu `KnownTypeAttribute` atrybutu). Mnożenia i dzielenia, nadal zwracają base `ComplexNumber` typu.  
   
 ```  
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -114,7 +114,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- Na komputerze klienckim, zarówno kontraktu usługi, jak i kontraktu danych są zdefiniowane w generatedClient.cs pliku źródłowego, która jest generowana przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z metadanych usługi. Ponieważ <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybut został określony w kontrakcie danych usługi, klient jest w stanie odbierać zarówno `ComplexNumber` i `ComplexNumberWithMagnitude` klasy podczas korzystania z usługi. Klient wykryje, czy otrzymano `ComplexNumberWithMagnitude` i generować odpowiednie dane wyjściowe:  
+ Na komputerze klienckim, kontrakt usługi i kontraktu danych są zdefiniowane w generatedClient.cs pliku źródłowego, który jest generowany przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z metadanych usługi. Ponieważ <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybut jest określony w umowie danych usługi, klient jest możliwość odbierania zarówno `ComplexNumber` i `ComplexNumberWithMagnitude` klasy podczas korzystania z usługi. Klient wykrywa, czy masz `ComplexNumberWithMagnitude` i wygenerować odpowiednie dane wyjściowe:  
   
 ```  
 // Create a client  
@@ -139,7 +139,7 @@ else
 }  
 ```  
   
- Po uruchomieniu próbki żądań i odpowiedzi operacji są wyświetlane w oknie konsoli klienta. Należy pamiętać, że wielkością wydrukowaniu do dodawania i odejmowania, ale nie dla mnożenia i dzielenia ze względu na sposób usługa została zaimplementowana. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu, żądań i odpowiedzi operacji są wyświetlane w oknie konsoli klienta. Należy pamiętać, że powstanie zostanie wydrukowany do dodawania i odejmowania, ale nie dla mnożenia i dzielenia, ze względu na sposób usługa została zaimplementowana. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
 ```  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -154,20 +154,20 @@ No magnitude was sent from the service
     Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   

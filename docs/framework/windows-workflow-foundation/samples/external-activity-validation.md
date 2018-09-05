@@ -3,11 +3,11 @@ title: Walidacja działania zewnętrznego
 ms.date: 03/30/2017
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
 ms.openlocfilehash: 4805bec3deed0779b02687b11dd487e673802925
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423897"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527810"
 ---
 # <a name="external-activity-validation"></a>Walidacja działania zewnętrznego
 Niniejszy przykład pokazuje, jak dodać logikę walidacji do wbudowanego działania, których nie jesteś autorem. Logikę weryfikacji, który składa się z wymuszenie stałego włączenia wszystkie <xref:System.Activities.Statements.If> działania obecne w przepływie pracy, albo mieć ich <xref:System.Activities.Statements.If.Then%2A> zestaw właściwości lub ich <xref:System.Activities.Statements.If.Else%2A> zestaw właściwości. Ponadto logikę weryfikacji obejmuje sprawdzanie wszystkich <xref:System.Activities.Statements.Pick> działania w przepływie pracy mają więcej niż jednej gałęzi, a jeśli tak nie jest rzeczywiście, generowane jest ostrzeżenie.  

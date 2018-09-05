@@ -3,11 +3,11 @@ title: Typy danych i funkcje
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418068"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520742"
 ---
 # <a name="data-types-and-functions"></a>Typy danych i funkcje
 Tematy wymienione w poniższej tabeli opisano LINQ do SQL działu pomocy technicznej dla członków, konstrukcje i rzutowania środowisko uruchomieniowe języka wspólnego (CLR). Obsługiwane elementy członkowskie i konstrukcje są dostępne do użycia w Twojej zapytania LINQ to SQL.  

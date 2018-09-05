@@ -1,16 +1,16 @@
 ---
-title: LINQ do DataSet przykłady
+title: Przykłady LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: f0b836e4f19011dc3d75f0681f7205cec6cb9110
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 09a5d652d1d75a02966f3ed38fe9d3aa7901a87b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764973"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524845"
 ---
-# <a name="linq-to-dataset-examples"></a>LINQ do DataSet przykłady
-Ta sekcja zawiera [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programowania, przykłady, które używają standardowych operatorów zapytań. <xref:System.Data.DataSet> Używane w tym przykładzie jest wypełniany przy użyciu `FillDataSet` metodę, która została określona w [podczas ładowania danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — omówienie](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+# <a name="linq-to-dataset-examples"></a>Przykłady LINQ to DataSet
+Ta sekcja zawiera [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programowaniu przykłady, które używają standardowych operatorów zapytań. <xref:System.Data.DataSet> Używanego w tych przykładach jest wypełniana przy użyciu `FillDataSet` metody, która została określona w [podczas ładowania danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Przegląd](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przykłady wyrażeń zapytania](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
@@ -50,7 +50,7 @@ Ta sekcja zawiera [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.m
 -   [Łączenie](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
  [Przykłady operatorów specyficznych dla zestawu danych](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- Zawiera przykłady, które prezentują sposób użycia <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> — metoda i <xref:System.Data.DataRowComparer> klasy.  
+ Zawiera przykłady demonstrujące sposób użycia <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metody i <xref:System.Data.DataRowComparer> klasy.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  

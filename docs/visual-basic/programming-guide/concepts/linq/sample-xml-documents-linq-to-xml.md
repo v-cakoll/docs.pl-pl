@@ -2,12 +2,12 @@
 title: Przykładowe dokumenty XML (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: 1110a4b89158e0230401c449aa95d74be72eccc7
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f1860eed059de4b6922976da8d3b9190cf96bbed
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244536"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533271"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Przykładowe dokumenty XML (LINQ to XML)
 Następujące pliki przykładowe są używane w przykłady kodu i fragmenty kodu w całym [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.  
@@ -26,7 +26,7 @@ Następujące pliki przykładowe są używane w przykłady kodu i fragmenty kodu
 |[Przykładowy plik XML: konfiguracja testowa (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|Dokumentu XML, który zawiera dane konfiguracji pseudo testowe.|  
 |[Przykładowy plik XML: konfiguracja testowa w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|Dokument XML w przestrzeni nazw, która zawiera dane konfiguracji pseudo testowe.|  
 |[Przykładowy plik XML: klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|Dokument XML, który zawiera klienci i zamówienia.|  
-|[Przykładowy plik XSD: klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Schemat definicji Xml (XSD) weryfikującego [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
+|[Przykładowy plik XSD: klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Schemat definicji Xml (XSD) weryfikującego [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](https://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
 |[Przykładowy plik XML: klienci i zamówienia w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|Dokument XML w przestrzeni nazw, która zawiera klientów i zamówień.|  
 |[Przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|Dokumentu XML, który zawiera dane, które są odpowiednie dla sumowanie i grupowania.|  
 |[Przykładowy plik XML: dane liczbowe w przestrzeni nazw](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|Dokument XML w przestrzeni nazw, która zawiera dane, które są odpowiednie dla sumowanie i grupowania.|  

@@ -2,22 +2,22 @@
 title: Trasa według treści
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: e9a0c947a1dd7ac2a6c7af74baaa072aae67358c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef463f7a7c46387ba3779ef6c674d9c3b022116e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504237"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521842"
 ---
 # <a name="route-by-body"></a>Trasa według treści
-W tym przykładzie pokazano, jak wdrożyć usługi, która akceptuje obiekty komunikatów z dowolną akcję SOAP. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator. Usługa implementuje pojedynczy `Calculate` operacja, która akceptuje <xref:System.ServiceModel.Channels.Message> żądań parametrów i zwraca <xref:System.ServiceModel.Channels.Message> odpowiedzi.  
+Ten przykład demonstruje sposób implementacji to usługa, która akceptuje obiekty wiadomości z dowolnego akcją SOAP. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora. Usługa implementuje jedną `Calculate` operacji, który akceptuje <xref:System.ServiceModel.Channels.Message> żądań parametrów i zwraca <xref:System.ServiceModel.Channels.Message> odpowiedzi.  
   
- W tym przykładzie klient jest aplikacji konsoli (.exe), a usługa jest obsługiwana w usługach IIS.  
+ W tym przykładzie klient to aplikacja konsoli (.exe), a usługa jest hostowana w usługach IIS.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- W przykładzie pokazano wysyłania wiadomości na podstawie zawartości treści. Wbudowany komunikat modelu usługi Windows Communication Foundation (WCF): wysyłania mechanizm jest oparta na komunikat akcji. Istnieją jednak wielu istniejących usług sieci Web, definiujące wszystkich ich operacji z wartością Action = "". Nie jest możliwe kompilacji usługi oparte na WSDL, który przechowuje wysyła komunikaty żądań informacje o akcji. W przykładzie pokazano umowy serwisowej, która jest oparta na WSDL (WSDL znajduje się w Service.wsdl dołączonego przykładu). Kontrakt usługi jest Kalkulator, podobnie jak używaną w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Jednak `[OperationContract]` Określa `Action=""` dla wszystkich operacji.  
+ W przykładzie pokazano wysyłania komunikatów na podstawie zawartości treści. Wbudowany komunikat modelu usługi Windows Communication Foundation (WCF): wysyłania mechanizm opiera się na komunikat akcji. Istnieją jednak wiele istniejących usług sieci Web, które definiują wszystkie operacje przy użyciu akcji = "". Nie jest możliwe tworzenie usługi języka WSDL, który przechowuje wysyła komunikaty żądań informacji o akcji. Niniejszy przykład pokazuje kontraktu usługi, który jest oparty na języku WSDL (WSDL jest zawarty w Service.wsdl, który jest dołączony do przykładu). Umowa serwisowa jest Kalkulator, podobnie jak komentarzowi użytemu w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Jednak `[OperationContract]` Określa `Action=""` dla wszystkich operacji.  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),    
@@ -35,17 +35,17 @@ W tym przykładzie pokazano, jak wdrożyć usługi, która akceptuje obiekty kom
     }  
 ```  
   
- Biorąc pod uwagę kontrakt, usługa wymaga zachowania wysyłania niestandardowych `DispatchByBodyBehavior` wiadomości wysyłanych między operacjami. To zachowanie wysyłania inicjuje `DispatchByBodyElementOperationSelector` selektor operacji niestandardowych z tabelą nazw operacji, wyznaczaną przez QName otoki odpowiednich elementów. `DispatchByBodyElementOperationSelector` przegląda tagu początkowego pierwszego elementu podrzędnego treści i wybiera operację, używając w tabeli powyżej.  
+ Biorąc pod uwagę kontrakt, usługa wymaga zachowania wysyłania niestandardowych `DispatchByBodyBehavior` wiadomości wysyłanych między operacjami. To zachowanie wysyłania inicjuje `DispatchByBodyElementOperationSelector` selektor operacji niestandardowego za pomocą tabeli nazw operacji opartych na kluczach QName otoki odpowiednich elementów. `DispatchByBodyElementOperationSelector` analizuje tagu początkowego pierwszego elementu podrzędnego treści i wybiera tej operacji z użyciem w tabeli powyżej.  
   
- Klient korzysta z serwera proxy automatycznie generowanej z WSDL wyeksportowane za pomocą usługi [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Klient korzysta z serwera proxy, wygenerowany automatycznie z danych WSDL wyeksportowane za pomocą usługi [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ```  
 svcutil.exe  /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples /uxs http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedProxy.cs  
 ```  
   
- Fakt, że akcje wszystkie operacje są puste nie ma wpływu na kod klienta, z wyjątkiem parametry akcji w obiekcie pośredniczącym wygenerowany automatycznie.  
+ Fakt, że akcje wszystkie operacje są puste nie ma wpływu na kod klienta, z wyjątkiem parametry akcji na serwerze proxy generowany automatycznie.  
   
- Kod klienta wykonuje kilka obliczeń. Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Kod klienta wykonuje kilka obliczeń. Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
 ```  
 Add(100, 15.99) = 115.99  
@@ -56,20 +56,20 @@ Divide(22, 7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
   

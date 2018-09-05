@@ -6,11 +6,11 @@ helpviewer_keywords:
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
 ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408564"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515385"
 ---
 # <a name="client-application-services-overview"></a>Przegląd usług aplikacji klienta
 Usługi aplikacji klienta zapewniają uproszczony dostęp do [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] logowania, ról i usług profilu z aplikacji Windows Forms i Windows Presentation Foundation (WPF). [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji znajdują się w firmy Microsoft w wersji 2.0 rozszerzenia AJAX programu ASP.NET, który jest dołączony do [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] i [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Te usługi umożliwiają wielu sieci Web i aplikacji opartych na Windows, aby udostępnić funkcje zarządzania użytkownikami z jednego serwera i informacji o użytkowniku.  

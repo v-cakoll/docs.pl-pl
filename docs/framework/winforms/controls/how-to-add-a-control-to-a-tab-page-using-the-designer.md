@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
 ms.openlocfilehash: 07326156fabbb8b991538a7e3bbaff7d807a1e94
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486480"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534072"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Porady: dodawanie formantu do strony karty przy użyciu narzędzia Projektant
 Użyj formularzy Windows Forms <xref:System.Windows.Forms.TabControl> jest wyświetlenie innych kontrolek w sposób zorganizowany. Te instrukcje służy do wyświetlania obrazu w głównej części strony karty. Aby dowiedzieć się, jak dodawanie ikony etykieta części karty, zobacz [porady: Zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

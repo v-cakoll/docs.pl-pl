@@ -4,41 +4,42 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: ceab0dbb2ded070fc7de4f5a59d778be2a54f9cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8ec3a96534693142d37d26ac0c08eec9298b178
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332013"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526209"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Porady: użycie przestrzeni nazw typu My (Przewodnik programowania w języku C#)
-<xref:Microsoft.VisualBasic.MyServices> Przestrzeni nazw (`My` w języku Visual Basic) udostępnia proste i intuicyjne szereg klas .NET Framework, dzięki któremu można napisać kod, który współdziała z komputera, aplikacji, ustawień, zasobów i tak dalej. Mimo że pierwotnie przeznaczony do użytku z programem Visual Basic `MyServices` przestrzeni nazw mogą być używane w aplikacji C#.  
+<xref:Microsoft.VisualBasic.MyServices> Przestrzeni nazw (`My` w języku Visual Basic) udostępnia proste i intuicyjne szereg klas .NET Framework, dzięki któremu można napisać kod, który wchodzi w interakcję z komputera, aplikacji, ustawień, zasobów i tak dalej. Mimo że początkowo przeznaczona dla języka Visual Basic `MyServices` przestrzeni nazw mogą być używane w aplikacji w języku C#.  
   
- Aby uzyskać więcej informacji o korzystaniu z `MyServices` przestrzeni nazw z języka Visual Basic, zobacz [programowanie z mojej](../../../visual-basic/developing-apps/development-with-my/index.md).  
+ Aby uzyskać więcej informacji o korzystaniu z `MyServices` obszaru nazw w języku Visual Basic, zobacz [tworzenie aplikacji przy użyciu mojego](../../../visual-basic/developing-apps/development-with-my/index.md).  
   
 ## <a name="adding-a-reference"></a>Dodawanie odwołania  
- Przed użyciem `MyServices` klas w rozwiązaniu, należy dodać odwołanie do biblioteki języka Visual Basic.  
+ Przed użyciem `MyServices` klas w Twoim rozwiązaniu, należy dodać odwołanie do biblioteki języka Visual Basic.  
   
 #### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Aby dodać odwołanie do biblioteki języka Visual Basic  
   
 1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** , a następnie wybierz węzeł **Dodaj odwołanie**.  
   
-2.  Gdy **odwołania** zostanie wyświetlone okno dialogowe, przewiń listę w dół i wybierz pliku Microsoft.VisualBasic.dll.  
+2.  Gdy **odwołania** pojawi się okno dialogowe, przewiń listę w dół i wybierz Microsoft.VisualBasic.dll.  
   
-     Można także zawierać następujący wiersz w `using` sekcji podczas uruchamiania programu.  
+     Możesz również umieścić następujący wiersz w `using` sekcji przy uruchamianiu programu.  
   
      [!code-csharp[csProgGuideNamespaces#18](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_1.cs)]  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wywołuje różnych metod statycznych zawartych w `MyServices` przestrzeni nazw. W przypadku ten kod, aby skompilować odwołanie do pliku Microsoft.VisualBasic.DLL należy dodać do projektu.  
+ Ten przykład wywołuje różnych metod statycznych zawarte w `MyServices` przestrzeni nazw. Dla tego kodu do kompilacji należy dodać odwołania do pliku Microsoft.VisualBasic.DLL w do projektu.  
   
  [!code-csharp[csProgGuideNamespaces#19](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_2.cs)]  
   
- Nie wszystkie klasy w `MyServices` przestrzeni nazw może zostać wywołana z aplikacji C#: na przykład <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> klasy nie jest zgodny. W tym przypadku metod statycznych które są częścią <xref:Microsoft.VisualBasic.FileIO.FileSystem>, które również znajdują się w VisualBasic.dll, w zamian można używać. Na przykład poniżej przedstawiono sposób zduplikowane katalogu przy użyciu jednego takiego metody:  
+ Nie wszystkie klasy w `MyServices` przestrzeni nazw mogą być wywoływane z aplikacji w języku C#: na przykład <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> klasy nie jest zgodny. W tym konkretnym przypadku metody statyczne, są częścią <xref:Microsoft.VisualBasic.FileIO.FileSystem>, które również znajdują się w VisualBasic.dll, można zamiast tego. Na przykład Oto jak duplikowanie katalogu za pomocą jedną z metod:  
   
  [!code-csharp[csProgGuideNamespaces#20](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_3.cs)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)  
- [Używanie przestrzeni nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)  
+- [Używanie przestrzeni nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)

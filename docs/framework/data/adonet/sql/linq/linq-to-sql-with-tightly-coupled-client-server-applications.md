@@ -3,11 +3,11 @@ title: LINQ to SQL ze ściśle powiązanymi aplikacjami klient serwer
 ms.date: 03/30/2017
 ms.assetid: e083d805-dcf6-459d-b9af-9ef0563f2dd7
 ms.openlocfilehash: 9c36fc1f402d3791611af47a3a6d997db4f31167
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408963"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521883"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ to SQL ze ściśle powiązanymi aplikacjami klient serwer
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] może służyć w warstwie środkowej za pomocą ściśle powiązane klienci Inteligentni w warstwie prezentacji. W scenariuszach, które wymagają dostępu do danych tylko do odczytu, nie kontroli optymistycznej współbieżności lub optymistycznej współbieżności z sygnaturami czasowymi nie istnieje znacznie więcej złożoności niż w przypadku ze scenariuszami zdalną. Jednak kiedy bazy danych wymaga optymistycznej współbieżności sprawdza oryginalne wartości, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie wymaga poziomu wsparcia Pełna zgodnooć wersji danych, który można znaleźć w zestawach danych. Jednak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] warstwy środkowej mogą wymieniać dane z klientami na dowolnej platformie.  

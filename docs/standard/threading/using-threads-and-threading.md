@@ -9,11 +9,11 @@ ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 871a0a06c9f1cc09fb86f20c85163fb8fcdf4100
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934134"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526291"
 ---
 # <a name="using-threads-and-threading"></a>Używanie wątków i wątkowości
 

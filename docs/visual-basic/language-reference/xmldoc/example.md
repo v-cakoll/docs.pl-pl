@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
 ms.openlocfilehash: 2de91d828fd9706b66f4c810486e54e2d3062de0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384234"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524520"
 ---
 # <a name="ltexamplegt-visual-basic"></a>&lt;przykład&gt; (Visual Basic)
 Określa przykład dla elementu członkowskiego.  

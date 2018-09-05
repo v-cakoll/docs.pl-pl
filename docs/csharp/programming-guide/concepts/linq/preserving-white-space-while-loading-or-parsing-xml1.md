@@ -2,12 +2,12 @@
 title: Zachowywanie białych znaków podczas ładowania lub analizowania XML1
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: f863a80d3e949ddc2cfe630ae3c309009315d020
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 019b4452bcd76fff462edab6a584cf5ae0276ee7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220974"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514451"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Zachowywanie białych znaków podczas ładowania lub analizowania kodu XML
 W tym temacie opisano sposób kontrolowania zachowania białe [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -37,5 +37,6 @@ W tym temacie opisano sposób kontrolowania zachowania białe [!INCLUDE[sqltecxl
   
  Można utworzyć drzewa XML przy użyciu <xref:System.Xml.XmlWriter>. Węzły, które są zapisywane w <xref:System.Xml.XmlWriter> są wypełnione w drzewie. Jednak w przypadku tworzenia drzewa XML przy użyciu tej metody, wszystkie węzły są zachowanych, niezależnie od tego, czy węzeł jest biały znak, czy nie, oraz czy biały istotne lub nie.  
   
-## <a name="see-also"></a>Zobacz też  
- [Analizowanie kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Analizowanie kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

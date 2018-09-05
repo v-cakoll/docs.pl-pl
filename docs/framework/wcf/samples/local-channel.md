@@ -2,39 +2,39 @@
 title: Lokalny kanał
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-ms.openlocfilehash: 2473704c751ad0ea2d2a00bf7f3ea43d6e39498f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 731fcfde52a6b1277551f7d70f795c721fc99dd8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501510"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533791"
 ---
 # <a name="local-channel"></a>Lokalny kanał
-Lokalny kanał to kanał transportu Windows Communication Foundation (WCF) używanego do komunikacji w obrębie tej samej domenie aplikacji. Jest to przydatne w przypadku scenariuszy, w którym klient i usługa są uruchomione w tej samej domenie aplikacji należy unikać obciążenie typowe stosu kanału WCF (serializacji i deserializacji wiadomości).  
+Lokalny kanał jest Windows Communication Foundation (WCF) kanał transportu, który jest używany do komunikacji w ramach tej samej domenie aplikacji. Jest to przydatne w scenariuszach, w którym klient i usługa są uruchomione w tej samej domenie aplikacji i należy unikać obciążenie typowe stosu kanału WCF (serializacji i deserializacji komunikatów).  
   
 ## <a name="demonstrates"></a>Demonstracje  
  Lokalny kanał  
   
-## <a name="discussion"></a>Omówienie  
- Przykład obejmuje dwa pliki projektu:  
+## <a name="discussion"></a>Dyskusja  
+ Przykład składa się z dwóch plików projektu:  
   
--   **LocalChannel**: programowe reprezentację lokalnego kanału w bieżącej domenie aplikacji. W tym projekcie wysyłania składnika umieszcza wiadomości w kolejce w pamięci, a odbierania składnika cofnąć kolejki wiadomości odebrane.  
+-   **LocalChannel**: programowe reprezentacja kanałów lokalnych w bieżącej domenie aplikacji. W tym projekcie wysyłania składnika umieszcza komunikat w kolejce w pamięci i odbieranie składnika cofnąć kolejki komunikatów do jej otrzymania.  
   
--   **ClientAndService**: ten projekt obsługuje usługę w aplikacji konsoli, a następnie uruchomi klienta do wywołania przez usługę w tej samej domenie aplikacji.  
+-   **ClientAndService**: ten projekt hostuje usługę w aplikacji konsoli, a następnie uruchamia klienta do wywołania z usług w ramach tej samej domenie aplikacji.  
   
- Projekt lokalnego kanału pomija zarówno stosu kanału i przyspieszyć proces serializacji. Kanał transportu lokalnego jest zaimplementowany przy użyciu kolejki transportu wywołań usługi z klienta do usługi i zwraca wartość z powrotem do klienta. Zamiast serializacji, parametrów i zwracanych wartości, próbki kopiuje obiektów.  
+ Projekt lokalny kanał pomija stosu kanału i zwiększyć szybkość procesu serializacji. Kanał transportowy lokalnego jest implementowany przy użyciu kolejki w celu transportu wywołań usługi od klienta do usługi i zwraca wartość z powrotem do klienta. Zamiast serializacji, parametrów i zwracanych wartości, przykładowy skrypt kopiuje obiektów.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Tworzenie i uruchamianie rozwiązania LocalChannel.  
+1.  Twórz i uruchamiaj rozwiązania LocalChannel.  
   
-2.  Host usługi jest uruchomiona, a klient wywołuje usługę za pomocą lokalnego kanału. Aby wyświetlić wyniki wywołania usługi pojawi się okno konsoli.  
+2.  Host usługi jest uruchomiona, a klient wywołuje usługę za pomocą lokalnego kanału. Aby wyświetlić wyniki wywołania usługi zostanie wyświetlone okno konsoli.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\LocalChannel`

@@ -3,11 +3,11 @@ title: Niestandardowy dyspozytor kanału
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
 ms.openlocfilehash: 20574b4c849f312cb2cf55709d8d5e2a9b5dbca7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462382"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519893"
 ---
 # <a name="custom-channel-dispatcher"></a>Niestandardowy dyspozytor kanału
 W tym przykładzie przedstawiono sposób tworzenia kanału stosu w niestandardowy sposób przez zaimplementowanie <xref:System.ServiceModel.ServiceHostBase> bezpośrednio oraz sposób tworzenia dyspozytora niestandardowym kanale w środowisku hosta sieci Web. Dyspozytor kanału wchodzi w interakcję z <xref:System.ServiceModel.Channels.IChannelListener> do akceptowania kanałów oraz pobiera komunikaty ze stosu kanału. W tym przykładzie przedstawiono również podstawowy przykład, aby pokazać, jak utworzyć stos kanału w środowisku hosta sieci Web przy użyciu <xref:System.ServiceModel.Activation.VirtualPathExtension>.  

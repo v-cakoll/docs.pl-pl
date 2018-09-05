@@ -3,11 +3,11 @@ title: Konfiguracja klienta
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
 ms.openlocfilehash: eef3d4743c26a06bd114618522aff9f68e46628c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423758"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527719"
 ---
 # <a name="client-configuration"></a>Konfiguracja klienta
 Konfiguracja klienta usługi Windows Communication Foundation (WCF) można użyć, aby określić adres, powiązanie, zachowanie i umowy, właściwości "ABC" punkt końcowy klienta, w których klienci używają połączyć się z punktami końcowymi usługi. [ \<Klienta >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) element ma [ \<punktu końcowego >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu, w których atrybuty są używane do konfigurowania punktu końcowego podstawy. Te atrybuty są omówione w sekcji "Konfigurowanie punkty końcowe" tego tematu.  

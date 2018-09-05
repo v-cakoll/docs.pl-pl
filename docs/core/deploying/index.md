@@ -4,12 +4,12 @@ description: Wdrażanie aplikacji .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792429"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562009"
 ---
 # <a name="net-core-application-deployment"></a>Wdrażanie aplikacji .NET core
 
@@ -21,7 +21,7 @@ Można tworzyć dwa typy wdrożeń dla aplikacji .NET Core:
 
 ## <a name="framework-dependent-deployments-fdd"></a>Zależny od struktury wdrożeń (stacje)
 
-STACJE wdrożysz tylko aplikacji i wszelkich zależności innych firm. Nie trzeba wdrażać platformy .NET Core, ponieważ Twoja aplikacja będzie używać wersji programu .NET Core, który znajduje się w systemie docelowym. Jest to domyślny model wdrażania dla aplikacji platformy .NET Core.
+STACJE wdrożysz swojej aplikacji i zależności innych firm. Nie trzeba wdrażać platformy .NET Core, ponieważ Twoja aplikacja będzie używać wersji programu .NET Core, który znajduje się w systemie docelowym. Jest to domyślny model wdrażania dla aplikacji platformy .NET Core i ASP.NET Core, przeznaczonych dla platformy .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Dlaczego warto tworzyć wdrożenia zależny od struktury?
 
@@ -70,9 +70,9 @@ Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą narzędzi int
 - Niezależne wdrożenia
 - Niezależne wdrożenia przy użyciu zależności innych firm
 
-# <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 
-[Wdrażanie aplikacji programu .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md)   
-[Wdrażanie aplikacji programu .NET Core z programem Visual Studio](deploy-with-vs.md)   
-[Pakiety, Metapakiety i struktury](../packages.md)   
-[Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)
+* [Wdrażanie aplikacji programu .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md)
+* [Wdrażanie aplikacji programu .NET Core z programem Visual Studio](deploy-with-vs.md)
+* [Pakiety, metapakiety i struktury](../packages.md)
+* [Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)

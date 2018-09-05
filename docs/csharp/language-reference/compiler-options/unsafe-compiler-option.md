@@ -7,15 +7,15 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: e308cae4a46efd53a77baf5b175e9069b5371fa4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 138c7cce83fd069f44025c57e52b2d01bcb23432
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214042"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518053"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (opcje kompilatora C#)
-**-Unsafe** — opcja kompilatora umożliwia kodu korzystającego z [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe do skompilowania.  
+**-Unsafe** — opcja kompilatora umożliwia kod, który używa [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe, aby skompilować.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,13 +30,13 @@ ms.locfileid: "33214042"
   
 1.  Otwórz projekt **właściwości** strony.  
   
-2.  Kliknij przycisk **kompilacji** strony właściwości.  
+2.  Kliknij przycisk **kompilacji** stronę właściwości.  
   
-3.  Wybierz **Zezwalaj niebezpieczny kod** pole wyboru.  
+3.  Wybierz **Zezwalaj na niebezpieczny kod** pole wyboru.  
   
-### <a name="to-add-this-option-in-a-csproj-file"></a>Aby dodać tę opcję w plik csproj
+### <a name="to-add-this-option-in-a-csproj-file"></a>Aby dodać tę opcję w pliku csproj
 
-Otwórz pliku .csproj dla projektu i dodaj następujące elementy:
+Otwórz plik csproj projektu i dodaj następujące elementy:
 
 ```xml
   <PropertyGroup>
@@ -44,15 +44,16 @@ Otwórz pliku .csproj dla projektu i dodaj następujące elementy:
   </PropertyGroup>
 ```
 
- Aby dowiedzieć się, jak ustawić tę opcję kompilatora programowo, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.  
+ Aby dowiedzieć się, jak programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.  
   
 ## <a name="example"></a>Przykład  
- Kompiluj `in.cs` dla trybu niebezpiecznego:  
+ Skompilować `in.cs` dla trybu niebezpiecznego:  
   
 ```console  
 csc -unsafe in.cs  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

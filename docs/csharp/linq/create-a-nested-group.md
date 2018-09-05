@@ -3,12 +3,12 @@ title: Tworzenie grup zagnieżdżonych (LINQ w C#)
 description: Dowiedz się, jak tworzenie grup zagnieżdżonych w wyrażeniu zapytania LINQ w C#.
 ms.date: 12/1/2016
 ms.assetid: e9f00708-362e-4d13-98c5-d77549347ba0
-ms.openlocfilehash: c973048d0859f61596c62c294131b8c00d0039f8
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 82b07c303215200fa974ce614a2d5a77882dcf4c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404752"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509971"
 ---
 # <a name="create-a-nested-group"></a>Tworzenie grup zagnieżdżonych
 
@@ -25,4 +25,4 @@ Należy zauważyć, że trzy zagnieżdżone `foreach` pętle są wymagane do wyk
 
 ## <a name="see-also"></a>Zobacz także
 
-[Language Integrated Query (LINQ)](index.md)
+- [Language Integrated Query (LINQ)](index.md)

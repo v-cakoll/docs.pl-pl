@@ -1,29 +1,29 @@
 ---
-title: CBC standardowych operatorów zapytań razem (C#)
+title: Łańcucha standardowych operatorów zapytań razem (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 9e59c12873b8e8afeaad43b8ffbe400b43b55747
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07cc6769646f8f3f924b488e30ce2415c587ebe0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326153"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520871"
 ---
-# <a name="chaining-standard-query-operators-together-c"></a>CBC standardowych operatorów zapytań razem (C#)
-Jest ostatnim tematu w [samouczek: tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) samouczka.  
+# <a name="chaining-standard-query-operators-together-c"></a>Łańcucha standardowych operatorów zapytań razem (C#)
+To jest ostatnim temacie w [samouczek: tworzenie łańcuchów zapytania ze sobą (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) samouczka.  
   
- Standardowe operatory zapytań można również zostaną połączone. Na przykład można interject <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operatora, a także działa w sposób opóźnieniem. Brak wyników pośrednich materializować są przez nią.  
+ Standardowe operatory zapytań można również łączyć w łańcuch. Na przykład można interject <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operatora, a także działa w sposób z opóźnieniem. Nie wyników pośrednich zmaterializowanego są przez nią.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie <xref:System.Linq.Enumerable.Where%2A> metoda jest wywoływana przed wywołaniem `ConvertCollectionToUpperCase`. <xref:System.Linq.Enumerable.Where%2A> Metoda działa w prawie dokładnie tak samo jak opóźnieniem metody używane w poprzednich przykładach, w tym samouczku `ConvertCollectionToUpperCase` i `AppendString`.  
+ W tym przykładzie <xref:System.Linq.Enumerable.Where%2A> metoda jest wywoływana przed wywołaniem `ConvertCollectionToUpperCase`. <xref:System.Linq.Enumerable.Where%2A> Metoda działa w prawie dokładnie tak samo jak z opóźnieniem metody używane w poprzednich przykładach w tym samouczku `ConvertCollectionToUpperCase` i `AppendString`.  
   
- Jedną różnicą jest to, że w takim przypadku <xref:System.Linq.Enumerable.Where%2A> metody iteruje po jego kolekcji źródłowej Określa pierwszy element predykatu nie zostały spełnione, a następnie pobiera następnego elementu przekazywania. Powoduje ona następnie drugiego elementu.  
+ Jedną różnicą jest to, że w tym przypadku <xref:System.Linq.Enumerable.Where%2A> metoda iteruje przez jej kolekcji źródłowej Określa pierwszy element nie zostały spełnione predykat, a następnie pobiera następny element przekazać. Daje drugiego elementu.  
   
- Jednak podstawową koncepcją jest taka sama: pośredni kolekcje nie są zmaterializowany, chyba że mają być.  
+ Podstawowa koncepcja jest jednak takie same: pośredni kolekcje nie są zmaterializowanego, chyba że mają być.  
   
- W przypadku używania wyrażenia zapytania są konwertowane na wywołania standardowych operatorów zapytań i Zastosuj te same zasady.  
+ W przypadku używania wyrażeń zapytania są konwertowane na wywołania do standardowych operatorów zapytań i obowiązują te same zasady.  
   
- Przykłady w tej sekcji, w których jest kwerenda dokumentów pakietu Office Open XML używają tej samej zasadzie. Wykonanie odroczone i obliczanie leniwe przedstawiono niektóre podstawowe założenia, że rozumiesz musi wykorzystywać LINQ (i LINQ do XML).  
+ Wszystkie przykłady w tej sekcji, które są wykonywanie zapytań względem dokumentów Office Open XML używać tej samej zasadzie. Wykonanie odroczone i obliczanie z opóźnieniem przedstawiono niektóre podstawowe pojęcia, które należy poznać efektywne wykorzystanie LINQ (i LINQ to XML).  
   
 ```csharp  
 public static class LocalExtensions  
@@ -86,5 +86,6 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Samouczek: Tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Samouczek: Tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

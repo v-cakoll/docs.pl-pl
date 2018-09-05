@@ -1,37 +1,37 @@
 ---
-title: LINQ do SQL próbki
+title: Przykład LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 83dc8433459f64860baaca2e8309fbc85e2bb3a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515371"
 ---
-# <a name="linq-to-sql-sample"></a>LINQ do SQL próbki
-Ten przykład przedstawia sposób tworzenia działania, aby używać LINQ do jednostek zapytania SQL z tabel w bazach danych programu SQL Server.  
+# <a name="linq-to-sql-sample"></a>Przykład LINQ to SQL
+W tym przykładzie pokazano, jak utworzyć działanie używać programu LINQ do jednostek zapytania SQL z tabel bazy danych programu SQL Server.  
   
 > [!IMPORTANT]
 >  Przykłady WCF może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
->  Jeśli ten katalog nie istnieje, kliknij łącze próbki pobierania w górnej części strony. Należy pamiętać, że to łącze pobiera i instaluje wszystkie [!INCLUDE[wf1](../../../../includes/wf1-md.md)], WCF, i [!INCLUDE[infocard](../../../../includes/infocard-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, kliknij link pobierania próbki, w górnej części tej strony. Należy pamiętać, że ten link pobiera i instaluje wszystkie [!INCLUDE[wf1](../../../../includes/wf1-md.md)], WCF, i [!INCLUDE[infocard](../../../../includes/infocard-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   
-## <a name="activity-details-for-findinsqltable"></a>Szczegóły działania FindInSqlTable  
- To działanie umożliwia użytkownikom do jednostek zapytania z tabel w bazie danych przy użyciu składnika LINQ to SQL. Użytkownicy działania można też podać predykat LINQ w postaci wyrażenia lambda do filtrowania wyników. Jeśli predykat nie zostanie podany, jest zwracana całą tabelę. W poniższej tabeli przedstawiono wartości właściwości i przywrócenie działania.  
+## <a name="activity-details-for-findinsqltable"></a>Szczegóły działań dla FindInSqlTable  
+ To działanie umożliwia użytkownikom wykonywanie zapytań dotyczących jednostek z tabel w bazie danych za pomocą LINQ to SQL. Użytkownicy, działania mogą także podać predykat LINQ w postaci wyrażenia lambda do filtrowania wyników. Jeśli nie podano żadnych predykat, zwracany jest całą tabelę. W poniższej tabeli przedstawiono właściwości i zwrócenie wartości dla działania.  
   
 |Właściwości lub wartości zwracanej|Opis|  
 |------------------------------|-----------------|  
-|`Collection` Właściwość|Wymaganą właściwość, która określa kolekcji źródłowej.|  
-|`Predicate` Właściwość|Wymaganą właściwość, która określa filtr do kolekcji w postaci wyrażenia lambda.|  
-|Wartość zwracana|Filtrowane kolekcji.|  
+|`Collection` Właściwość|Wymagana właściwość, która określa, kolekcji źródłowej.|  
+|`Predicate` Właściwość|Wymagana właściwość, która określa filtr dla kolekcji w postaci wyrażenia lambda.|  
+|Wartość zwracana|Kolekcja filtrowane.|  
   
-## <a name="code-sample-that-uses-the-custom-activity"></a>Przykładem kodu, który używa działania niestandardowe  
- Poniższy przykład kodu wykorzystuje `FindInSqlTable` działania niestandardowego można znaleźć wszystkie wiersze w tabeli programu SQL Server o nazwie `Employee` gdzie `Role` kolumny jest równa `SDE`.  
+## <a name="code-sample-that-uses-the-custom-activity"></a>Przykładowy kod, który używa działania niestandardowe  
+ Poniższy przykład kodu wykorzystuje `FindInSqlTable` niestandardowe działanie, aby znaleźć wszystkie wiersze w tabeli programu SQL Server o nazwie `Employee` gdzie `Role` kolumny jest równa `SDE`.  
   
 ```csharp  
 new FindInSqlTable<Employee>   
@@ -48,26 +48,26 @@ new FindInSqlTable<Employee>
   
 2.  Przejdź do folderu, który zawiera ten przykład.  
   
-3.  Uruchom plik polecenia Setup.cmd.  
+3.  Uruchom plik Setup.cmd pliku polecenia.  
   
     > [!NOTE]
-    >  Skrypt Setup.cmd próbuje zainstalować przykładową bazę danych w komputerze lokalnym programu SQL Server Express. Jeśli użytkownik chce go zainstalować w inne wystąpienie programu SQL server, należy edytować Setup.cmd.  
+    >  Plik Setup.cmd skrypt próbuje zainstalować przykładową bazę danych na komputerze lokalnym programu SQL Server Express. Jeśli chcesz zainstalować go w inne wystąpienie programu SQL server, należy edytować plik Setup.cmd.  
   
-     Skrypt Setup.cmd wykonuje następujące akcje.:  
+     Skrypt plik Setup.cmd wykonuje następujące akcje.:  
   
     -   Tworzy bazę danych o nazwie LinqToSqlSample.  
   
     -   Tworzy tabelę ról.  
   
-    -   Tworzy tabelę pracowników.  
+    -   Tworzy tabelę Pracownicy.  
   
-    -   Wstawia 3 rekordy do tabeli ról.  
+    -   Wstawia 3 rekordy w tabeli ról.  
   
-    -   Wstawia 12 rekordów do tabeli pracowników.  
+    -   Wstawia 12 rekordów do tabel pracownikami.  
   
-4.  Przy użyciu [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania LinqToSQL.sln.  
+4.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania LinqToSQL.sln.  
   
-5.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+5.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
 6.  Aby uruchomić rozwiązanie, naciśnij klawisz F5.  
   
@@ -80,14 +80,14 @@ new FindInSqlTable<Employee>
 3.  Uruchom plik polecenia Cleanup.cmd.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
   
 ## <a name="see-also"></a>Zobacz też  
- [LINQ to SQL](http://go.microsoft.com/fwlink/?LinkId=150376)  
- [Wprowadzenie (LINQ to SQL)](http://go.microsoft.com/fwlink/?LinkId=150377)
+ [LINQ to SQL](https://go.microsoft.com/fwlink/?LinkId=150376)  
+ [Wprowadzenie (LINQ to SQL)](https://go.microsoft.com/fwlink/?LinkId=150377)

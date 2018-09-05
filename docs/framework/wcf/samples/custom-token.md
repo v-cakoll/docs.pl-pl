@@ -2,31 +2,31 @@
 title: Token niestandardowy
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 03472f76310fa99568f13f0aa49d9e2a3453ac30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809852"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671102"
 ---
 # <a name="custom-token"></a>Token niestandardowy
-Ten przykład przedstawia sposób dodawania niestandardowych implementacji token do aplikacji Windows Communication Foundation (WCF). W przykładzie użyto `CreditCardToken` do bezpieczne przekazywanie informacji o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowana przy użyciu elementu powiązania zabezpieczeń symetrycznego wraz z treści wiadomości i innych nagłówków komunikatów. Jest to przydatne w sytuacjach, gdy wbudowanych tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczeń niestandardowej z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.  
+Niniejszy przykład pokazuje, jak dodać niestandardową implementację tokenu w aplikacji Windows Communication Foundation (WCF). W przykładzie użyto `CreditCardToken` można bezpiecznie przekazać informacje o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowane przy użyciu elementu powiązania zabezpieczeń symetryczne, wraz z treści wiadomości i innych nagłówków wiadomości. Jest to przydatne w przypadkach, gdzie wbudowany tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczającego niestandardowe z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Krótko mówiąc, w tym przykładzie przedstawiono poniżej:  
+ Aby podsumować, w przykładzie pokazano poniżej:  
   
--   Jak klient może przekazać tokenu zabezpieczającego niestandardowych do usługi.  
+-   Jak klient może przekazać token zabezpieczający niestandardowego do usługi.  
   
--   Jak usługa może wykorzystywać i zweryfikować tokenu zabezpieczającego niestandardowych.  
+-   Jak usługa korzystać i sprawdzanie poprawności tokenu zabezpieczającego niestandardowych.  
   
--   Jak kodu usługi WCF można uzyskać informacje na temat tokeny zabezpieczające odebrane wraz z tokenem niestandardowy zabezpieczeń.  
+-   Jak kod usługi WCF można uzyskać informacje na temat tokenów zabezpieczających odebrane, wraz z tokenem zabezpieczeń niestandardowych.  
   
--   Jak certyfikat X.509 służy do ochrony klucz symetryczny stosowany do szyfrowania wiadomości i podpis.  
+-   Jak certyfikat X.509 umożliwia ochronę klucz symetryczny, używany do szyfrowania wiadomości i podpis.  
   
-## <a name="client-authentication-using-a-custom-security-token"></a>Uwierzytelnianie klienta przy użyciu tokenu zabezpieczającego niestandardowych  
- Usługa udostępnia pojedynczy punkt końcowy, który jest tworzony programowo przy użyciu `BindingHelper` i `EchoServiceHost` klasy. Punkt końcowy składa się z adresu, powiązania i kontrakt. Powiązanie jest skonfigurowane z niestandardowego powiązania za pomocą `SymmetricSecurityBindingElement` i `HttpTransportBindingElement`. W tym przykładzie ustawia `SymmetricSecurityBindingElement` do użycia certyfikat X.509 usługi ochrony klucza symetrycznego podczas transmisji oraz przekazywanie niestandardowej `CreditCardToken` w nagłówku wiadomości WS-Security jako tokenu zabezpieczającego podpisane i zaszyfrowane. Zachowanie Określa poświadczenia usługi, które mają być używane uwierzytelnianie klienta, a także informacje o certyfikat X.509 usługi.  
+## <a name="client-authentication-using-a-custom-security-token"></a>Uwierzytelnianie klienta przy użyciu tokenu zabezpieczającego niestandardowe  
+ Usługa udostępnia pojedynczy punkt końcowy, który programowo jest tworzony przy użyciu `BindingHelper` i `EchoServiceHost` klasy. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane z niestandardowego powiązania za pomocą `SymmetricSecurityBindingElement` i `HttpTransportBindingElement`. W tym przykładzie ustawia `SymmetricSecurityBindingElement` do użycia certyfikatu X.509 usługi ochrony klucza symetrycznego podczas przesyłania i przekazać niestandardową `CreditCardToken` w nagłówku wiadomości WS-Security jako token zabezpieczający podpisane i zaszyfrowane. Zachowanie Określa poświadczenia usługi, które mają być używane do uwierzytelniania klienta, a także informacje o certyfikacie X.509.  
   
 ```  
 public static class BindingHelper  
@@ -47,7 +47,7 @@ public static class BindingHelper
 }  
 ```  
   
- Użycie karty kredytowej token w komunikacie, próbki używa usług niestandardowych poświadczeń do tej funkcji. Klasa poświadczenia usługi znajduje się w `CreditCardServiceCredentials` klasy i zostanie dodany do kolekcji zachowań usługi hosta w `EchoServiceHost.InitializeRuntime` metody.  
+ Korzystanie z kartą kredytową tokenu w wiadomości, w przykładzie użyto niestandardowego poświadczenia do tej funkcji. Klasa poświadczenia usługi znajduje się w `CreditCardServiceCredentials` klasy i jest dodawany do kolekcji zachowań usługi hosta w `EchoServiceHost.InitializeRuntime` metody.  
   
 ```  
 class EchoServiceHost : ServiceHost  
@@ -84,7 +84,7 @@ class EchoServiceHost : ServiceHost
 }  
 ```  
   
- Punkt końcowy klienta jest skonfigurowany w sposób podobny jako punktu końcowego usługi. Klient używa takie same `BindingHelper` klasy w celu utworzenia powiązania. Pozostała konfiguracja znajduje się w `Client` klasy. Klient ustawia również informacje zawarte w `CreditCardToken` i informacji dotyczących certyfikatu X.509 usługi w kodzie instalacji przez dodanie `CreditCardClientCredentials` wystąpienia o odpowiednie dane do kolekcji zachowań klienta punktu końcowego. W przykładzie użyto certyfikatu X.509 z nazwą podmiotu ustawioną `CN=localhost` jako certyfikat usługi.  
+ Punkt końcowy klienta skonfigurowano w podobny sposób jak punkt końcowy usługi. Klient używa tych samych `BindingHelper` klasy, aby utworzyć powiązanie. Pozostała konfiguracja zostanie znajduje się w `Client` klasy. Klient ustawia również informacje zawarte w `CreditCardToken` i informacji o certyfikacie X.509 usługi w kodzie Instalatora, dodając `CreditCardClientCredentials` wystąpienia odpowiednie dane do kolekcji zachowań punktu końcowego klienta. W przykładzie użyto certyfikatu X.509 z nazwą podmiotu równa `CN=localhost` jako certyfikat usługi.  
   
 ```  
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();  
@@ -115,9 +115,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>Implementacja tokenu zabezpieczeń niestandardowych  
- Aby włączyć tokenu zabezpieczającego niestandardowych w programie WCF, Utwórz obiekt reprezentację tokenu zabezpieczającego niestandardowych. Próbka ma taka reprezentacja w `CreditCardToken` klasy. Reprezentacja obiektu odpowiada do przechowywania wszystkich informacji o tokenie zabezpieczeń oraz zamieszczono listę kluczy zabezpieczeń zawartych w tokenie zabezpieczającym. W takim przypadku tokenu zabezpieczającego karty kredytowej nie zawiera żadnych klucz zabezpieczeń.  
+ Aby włączyć token zabezpieczający niestandardowych w programie WCF, Utwórz reprezentację obiektu w tokenie zabezpieczającym niestandardowych. Przykład powoduje to reprezentacja `CreditCardToken` klasy. Reprezentacja obiektu odpowiada do przechowywania wszystkich informacji o tokenie zabezpieczeń i podać listę kluczy zabezpieczeń zawartych w tokenie zabezpieczającym. W tym przypadku token zabezpieczający karty kredytowej nie zawiera żadnych klucz zabezpieczeń.  
   
- W następnej sekcji opisano, co należy wykonać, aby włączyć niestandardowy token przesyłane przez sieć i używane przez punkt końcowy usługi WCF.  
+ W następnej sekcji opisano, co musi być wykonane, aby umożliwić niestandardowy token mają być przekazywane przewodowo i używane przez punkt końcowy usługi WCF.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -154,12 +154,12 @@ class CreditCardToken : SecurityToken
 }  
 ```  
   
-## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Pobieranie tokenu z komunikatu i niestandardowe karty kredytowej  
- Serializatorów tokenu zabezpieczeń w programie WCF są odpowiedzialne za tworzenie obiektu reprezentację tokeny zabezpieczające z pliku XML w komunikacie i tworzenie formularza XML tokenów zabezpieczających. Są one również odpowiedzialne za inne funkcje, takie jak odczytywanie i zapisywanie klucza identyfikatory wskazujący tokeny zabezpieczające, ale w tym przykładzie użyto tylko funkcji związanych z tokenu zabezpieczeń. Aby włączyć niestandardowy token należy zaimplementować własny Serializator tokenu zabezpieczającego. W przykładzie użyto `CreditCardSecurityTokenSerializer` klasy w tym celu.  
+## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Pobieranie tokenu do i z komunikatu niestandardowej karty kredytowej  
+ Serializatory tokenu zabezpieczeń programu WCF jest odpowiedzialny za tworzenie reprezentację obiektu w tokeny zabezpieczające z pliku XML w komunikacie i tworzenie tokenów zabezpieczających w formacie XML. Są one również odpowiedzialny za inne funkcje, takie jak odczytywanie i zapisywanie klucza identyfikatory wskazujący tokenów zabezpieczających, ale w tym przykładzie użyto tylko funkcji skojarzone z tokenem zabezpieczeń. Aby włączyć niestandardową tokenu należy zaimplementować własny Serializator tokenów zabezpieczeń. W tym przykładzie użyto `CreditCardSecurityTokenSerializer` klasy, w tym celu.  
   
- W usłudze serializatora niestandardowego odczytuje formularz XML tokenu niestandardowego i tworzy reprezentację niestandardowego obiektu tokenu z niego.  
+ W usłudze niestandardowy serializator odczytuje w formacie XML niestandardowy token i tworzy reprezentację niestandardowego obiektu tokenu z niego.  
   
- Na komputerze klienckim `CreditCardSecurityTokenSerializer` klasy zapisuje informacje zawarte w reprezentacji obiektu tokenu zabezpieczeń do edytora XML.  
+ Na komputerze klienckim `CreditCardSecurityTokenSerializer` klasy zapisuje informacji zawartych w reprezentacji obiektu tokenu zabezpieczeń do edytora XML.  
   
 ```  
 public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer  
@@ -242,18 +242,18 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 }  
 ```  
   
-## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a>Sposób tworzenia dostawcy tokenu i klasy wystawcy uwierzytelnienia tokenu  
- Klient i usługa poświadczenia spoczywa odpowiedzialność za zapewnienie wystąpienia Menedżer tokenów zabezpieczeń. Wystąpienia Menedżer tokenów zabezpieczeń jest używany do pobierania tokenu dostawców, wystawcy uwierzytelnienia tokenu i serializatorów tokenu.  
+## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a>Sposób tworzenia dostawcy tokenów i tokenów klasy wystawcy uwierzytelnienia  
+ Poświadczenia klienta i usługi są odpowiedzialne za świadczenie wystąpienia Menedżer tokenów zabezpieczeń. Wystąpienia Menedżer tokenów zabezpieczeń jest używany do dostawcy tokenów, wystawców uwierzytelnienia tokenu i serializatorów tokenu.  
   
- Dostawca tokenu tworzy reprezentację obiektu tokenu na podstawie informacji zawartych w poświadczeniach klienta lub usługi. Reprezentacja obiektu tokenu następnie jest zapisywany komunikat przy użyciu serializatora tokenu (opisanych w poprzedniej sekcji).  
+ Dostawcy tokenu, który tworzy reprezentację obiektu tokenu, na podstawie informacji zawartych w poświadczeniach klienta lub usługę. Reprezentacja obiektu tokenu są następnie zapisywane do wiadomości za pomocą Serializator tokenów (opisanych w poprzedniej sekcji).  
   
- Wystawcy uwierzytelnienia tokenu weryfikuje tokeny pojawiające się w komunikacie. Przychodzącego reprezentację obiektu tokenu jest tworzony przez Serializator tokenów. Taka reprezentacja obiektu są następnie przekazywane wystawcy uwierzytelnienia tokenu dla weryfikacji. Po pomyślnym uwierzytelnieniu token wystawcy uwierzytelnienia tokenu zwraca kolekcję `IAuthorizationPolicy` obiektów, które reprezentują informacji zawartych w tokenie. Te informacje jest używana później podczas przetwarzania komunikatu do wykonywania decyzji dotyczących autoryzacji i dostarczania oświadczeń dla aplikacji. W tym przykładzie używa wystawcy uwierzytelnienia tokenu karty kredytowej `CreditCardTokenAuthorizationPolicy` w tym celu.  
+ Wystawca uwierzytelnienia tokenów sprawdza poprawność tokenów, które zostaną odebrane w wiadomości. Przychodzący reprezentację obiektu tokenu jest tworzony przez Serializator tokenów. Taka reprezentacja obiektu jest następnie przekazywany do wystawcy uwierzytelniania tokenu weryfikacji. Po pomyślnym zweryfikowaniu tokenu, wystawca uwierzytelnienia tokenów zwraca kolekcję `IAuthorizationPolicy` obiektami, które reprezentują informacje zawarte w tokenie. Te informacje jest później używane podczas przetwarzania komunikatu do wykonywania decyzji dotyczących autoryzacji i dostarczanie oświadczeń dla aplikacji. W tym przykładzie używa wystawcy uwierzytelniania tokenu karty kredytowej `CreditCardTokenAuthorizationPolicy` do tego celu.  
   
- Serializator tokenów jest odpowiedzialny za pobieranie reprezentację obiektu tokenu do i z sieci. Jest to opisanych w poprzedniej sekcji.  
+ Serializator tokenów jest odpowiedzialny za pobieranie reprezentacja obiektu tokenu do i z sieci. Zostało to omówione w poprzedniej sekcji.  
   
- W tym przykładzie używamy dostawcę tokenów tylko na kliencie i wystawcy uwierzytelnienia tokenu tylko w ramach usługi, ponieważ chcemy, aby przesyłać token karty kredytowej tylko w kierunku usługi klienta.  
+ W tym przykładzie używamy dostawcę tokenów tylko na kliencie i wystawcy uwierzytelnienia tokenu tylko w usłudze, ponieważ chcemy, aby przesyłać token karty kredytowej, tylko w kierunku usługi klienta.  
   
- Funkcje klienta znajduje się w `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` i `CreditCardTokenProvider` klasy.  
+ Funkcje na komputerze klienckim znajdują się w `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` i `CreditCardTokenProvider` klasy.  
   
  W usłudze funkcji znajduje się w `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` i `CreditCardTokenAuthorizationPolicy` klasy.  
   
@@ -499,8 +499,8 @@ public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentia
     }  
 ```  
   
-## <a name="displaying-the-callers-information"></a>Wyświetlanie informacji wywołań  
- Aby wyświetlić informacje o wywołującym, użyj `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` jak pokazano w poniższym kodzie próbki. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Zawiera autoryzacji oświadczeń skojarzone z bieżącym obiektem wywołującym. Oświadczenia są dostarczane przez `CreditCardToken` klasy w jego `AuthorizationPolicies` kolekcji.  
+## <a name="displaying-the-callers-information"></a>Wyświetlanie informacji o wywołującym  
+ Aby wyświetlić informacje o wywołującym, użyj `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` jak pokazano w poniższym przykładowym kodzie. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Zawiera autoryzacji oświadczenia skojarzone z bieżącego obiektu wywołującego. Oświadczenia są dostarczane przez `CreditCardToken` klasy w jego `AuthorizationPolicies` kolekcji.  
   
 ```  
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)  
@@ -541,18 +541,18 @@ string GetCallerCreditCardNumber()
 }  
 ```  
   
- Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
 ## <a name="setup-batch-file"></a>Instalacyjny plik wsadowy  
- Plik wsadowy pliku Setup.bat uwzględnionych w tym przykładzie pozwala na skonfigurowanie serwera z odpowiednich certyfikatów na uruchamianie aplikacji hostowanych przez usługi IIS wymaga zabezpieczeń na podstawie certyfikatu serwera. Ten plik wsadowy muszą zostać zmodyfikowane, aby pracować na komputerach lub do pracy w przypadku z systemem innym niż obsługiwany.  
+ Plik wsadowy Setup.bat jest dołączone do tego przykładu umożliwia skonfigurowanie serwera za pomocą odpowiednich certyfikatów do uruchamiania aplikacji hostowanych przez usługi IIS wymaga zabezpieczeń na podstawie certyfikatu serwera. Ten plik wsadowy muszą zostać zmodyfikowane, działają na różnych komputerach lub działać w przypadku innych obsługiwanych.  
   
- Poniżej zawiera krótki przegląd różnych sekcji pliki wsadowe tak, aby można modyfikować w prawidłowej konfiguracji.  
+ Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji.  
   
 -   Tworzenie certyfikatu serwera:  
   
-     Następujące wiersze z `Setup.bat` plik wsadowy utworzenie certyfikatu serwera do użycia. `%SERVER_NAME%` Zmiennej określa nazwę serwera. Zmień tę wartość, aby określić nazwę serwera. Domyślnie ten plik wsadowy jest localhost. Jeśli zmienisz `%SERVER_NAME%` zmiennej, należy przejść przez pliki Client.cs i Service.cs i Zastąp wszystkie wystąpienia zmiennej localhost z nazwą serwera używanego w pliku Setup.bat skryptu.  
+     Następujące wiersze z `Setup.bat` plik wsadowy utworzenie certyfikatu serwera, który ma być używany. `%SERVER_NAME%` Zmienna Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Domyślnie ten plik wsadowy jest localhost. Jeśli zmienisz `%SERVER_NAME%` zmiennych, musisz przejść przez pliki Client.cs i Service.cs i Zamień wszystkie wystąpienia elementu localhost nazwę serwera, którego używasz w skrypt Setup.bat jest.  
   
-     Certyfikat jest przechowywany w magazynie My (osobistych) w obszarze `LocalMachine` lokalizacji magazynu. Certyfikat jest przechowywany w magazynie LocalMachine usług hostowanych przez usługi IIS. Hostowanie Samoobsługowe usług należy zmodyfikować plik wsadowy do przechowywania certyfikatu klienta w lokalizacji magazynu CurrentUser, zastępując ciąg LocalMachine CurrentUser.  
+     Certyfikat jest przechowywany w magazynie użytkownika (osobistych) w obszarze `LocalMachine` lokalizacji magazynu. Certyfikat jest przechowywany w magazynie usług hostowanych przez usługi IIS. Samodzielnie hostowany usług należy zmodyfikować plik wsadowy do przechowywania certyfikatu klienta w lokalizacji magazynu CurrentUser, zastępując ciąg LocalMachine CurrentUser.  
   
     ```  
     echo ************  
@@ -566,7 +566,7 @@ string GetCallerCreditCardNumber()
   
 -   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:  
   
-     Następujące wiersze w pliku Setup.bat kopii pliku wsadowego certyfikatu serwera do klienta zaufanych osób magazynu. Ten krok jest wymagany, ponieważ certyfikaty generowane przez Makecert.exe nie są jawnie ufa systemu klienta. Jeśli masz już znajdującym się w klienta zaufanego certyfikatu głównego certyfikatu — na przykład Microsoft wystawiony certyfikat — ten krok zapełnianie magazynu certyfikatów klienta przy użyciu certyfikatu serwera nie jest wymagane.  
+     Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony firmy Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.  
   
     ```  
     echo ************  
@@ -575,7 +575,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   Aby włączyć dostęp do klucza prywatnego certyfikatu usługi hostowanych przez usługi IIS, konto użytkownika, na którym uruchomiono proces hostowanych przez usługi IIS musi otrzymać odpowiednie uprawnienia dostępu do klucza prywatnego. Jest to osiągane przez ostatnich kroków w skrypcie pliku Setup.bat.  
+-   Aby włączyć dostęp do klucza prywatnego certyfikatu z usług hostowanych przez usługi IIS, konto użytkownika, na którym uruchomiono proces hostowanych przez usługi IIS musi otrzymać odpowiednie uprawnienia dla klucza prywatnego. Jest to realizowane przez ostatnie kroki skrypt Setup.bat jest.  
   
     ```  
     echo ************  
@@ -589,49 +589,49 @@ string GetCallerCreditCardNumber()
     ```  
   
 > [!NOTE]
->  Plik wsadowy pliku Setup.bat jest przeznaczony do uruchamiania z [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wiersza polecenia. Wartość zmiennej środowiskowej PATH w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wskazuje katalog zawierający pliki wykonywalne wymagane przez pliku Setup.bat skryptu wiersza polecenia.  
+>  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wiersza polecenia. Ustawić zmiennej środowiskowej PATH, w ramach [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] polecenia wskazuje katalog, który zawiera pliki wykonywalne wymagane przez skrypt Setup.bat jest.  
   
-#### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i tworzyć przykładowy kod  
+#### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1.  Otwórz [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] okno wiersza polecenia z uprawnieniami administratora i wykonywania pliku Setup.bat z folderu instalacyjnego próbki. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu. Upewnij się, że ścieżka zawiera folder, w którym znajduje się Makecert.exe.  
+1.  Otwórz [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] okna wiersza polecenia z uprawnieniami administratora i uruchom Setup.bat z poziomu folderu instalacji przykładowej. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu. Upewnij się, że ścieżka zawiera folder, w którym znajduje się Makecert.exe.  
   
 > [!NOTE]
->  Pamiętaj usunąć certyfikaty, uruchamiając Cleanup.bat po zakończeniu próbki. Inne przykłady zabezpieczeń za pomocą tego samego certyfikatów.  
+>  Pamiętaj usunąć certyfikaty, uruchamiając Cleanup.bat po zakończeniu pracy z przykładem. Inne przykłady zabezpieczeń za pomocą tych samych certyfikatów.  
   
-1.  Uruchom Client.exe z katalogu client\bin. Aktywność klienta jest wyświetlany w aplikacji konsoli klienta.  
+1.  Uruchom Client.exe z katalogu client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
   
-2.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-run-the-sample-across-computer"></a>Aby uruchomić przykład na komputerze  
+#### <a name="to-run-the-sample-across-computer"></a>Do uruchomienia przykładu na komputer  
   
-1.  Utwórz katalog na komputerze usługi dla usługi danych binarnych.  
+1.  Utwórz katalog na komputerze usługi, aby pliki binarne usługi.  
   
-2.  Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Pamiętaj skopiować CreditCardFile.txt; w przeciwnym razie wystawcy uwierzytelnienia karty kredytowej nie można sprawdzić poprawności informacji o karcie kredytowej wysłanych z klienta. Także skopiować pliki pliku Setup.bat i Cleanup.bat na komputerze usługi.  
+2.  Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Pamiętaj skopiować CreditCardFile.txt; w przeciwnym razie authenticator karta kredytowa nie można zweryfikować informacji o karcie kredytowej wysłanych z klienta. Także skopiować pliki Setup.bat i Cleanup.bat na komputerze usługi.  
   
-3.  Musi mieć certyfikat serwera z nazwą podmiotu, który zawiera w pełni kwalifikowaną nazwą domeny komputera. Można go utworzyć przy użyciu pliku Setup.bat, jeśli zmienisz `%SERVER_NAME%` zmiennej w pełni kwalifikowaną nazwę komputera, na którym jest hostowana usługa. Należy pamiętać, że plik pliku Setup.bat musi zostać uruchomiony w wierszu polecenia programu Visual Studio została otwarta z uprawnieniami administratora.  
+3.  Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Możesz je utworzyć za pomocą Setup.bat, jeśli zmienisz `%SERVER_NAME%` zmiennej do w pełni kwalifikowaną nazwę komputera, na którym jest hostowana usługa. Należy pamiętać, że plik Setup.bat jest należy uruchomić polecenie w wierszu polecenia programu Visual Studio, otwartych z uprawnieniami administratora.  
   
-4.  Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople na kliencie. Należy to zrobić tylko, jeśli certyfikat serwera nie jest wystawiany przez zaufanych wystawców.  
+4.  Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople na komputerze klienckim. Należy to zrobić tylko wtedy, gdy certyfikat serwera nie jest wystawiony przez zaufanego wystawcy.  
   
-5.  W pliku EchoServiceHost.cs Zmień wartość nazwy podmiotu certyfikatu do określenia nazwy komputera w pełni kwalifikowana, zamiast localhost.  
+5.  W pliku EchoServiceHost.cs należy zmienić wartość Nazwa podmiotu certyfikatu, aby określić nazwę komputera w pełni kwalifikowaną, zamiast nazwy localhost.  
   
-6.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze danego języka na komputerze klienckim.  
+6.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
   
-7.  W pliku Client.cs Zmień wartość adresu punktu końcowego, aby dopasować nowego adresu usługi.  
+7.  W pliku Client.cs Zmień wartość adresu punktu końcowego, aby dopasować nowy adres usługi.  
   
-8.  W pliku Client.cs Zmień nazwę podmiotu certyfikatu X.509 usługi, aby dopasować komputera w pełni kwalifikowaną nazwę hosta zdalnego zamiast localhost.  
+8.  W pliku Client.cs należy zmienić nazwę podmiotu certyfikatu X.509 service, aby pasować do nazwy komputera w pełni kwalifikowana hosta zdalnego zamiast nazwy localhost.  
   
-9. Na komputerze klienckim uruchom Client.exe z poziomu okna wiersza polecenia.  
+9. Na komputerze klienckim, aby uruchomić Client.exe z okna wiersza polecenia.  
   
-10. Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po próbki  
+#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
-1.  Uruchamianie Cleanup.bat w folderze Przykłady po ukończeniu działania próbki.  
+1.  Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
 ## <a name="see-also"></a>Zobacz też

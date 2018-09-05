@@ -3,11 +3,11 @@ title: Sekwencje Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 4c1829cc3f9506b0317e6638fd2760a91c7d19d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403974"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520341"
 ---
 # <a name="oracle-sequences"></a>Sekwencje Oracle
 .NET Framework Data Provider for Oracle zapewnia obsługę pobierania wartości generowanych przez serwer Oracle sekwencja klucza po wykonaniu operacji wstawienia przy użyciu <xref:System.Data.OracleClient.OracleDataAdapter>.  

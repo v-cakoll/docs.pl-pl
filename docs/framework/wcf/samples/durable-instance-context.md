@@ -2,35 +2,35 @@
 title: Kontekst niezawodnej instancji
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f5c066ae06e44f6cac4b9a7b98487aa6226b969f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808611"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524429"
 ---
 # <a name="durable-instance-context"></a>Kontekst niezawodnej instancji
-W tym przykładzie pokazano, jak dostosować włączyć kontekst niezawodnej instancji środowiska uruchomieniowego systemu Windows Communication Foundation (WCF). SQL Server 2005 używa jako magazynu zapasowego, jego (SQL Server 2005 Express w tym przypadku). Jednak umożliwia także sposób uzyskać dostępu do magazynu niestandardowych mechanizmów.  
+Niniejszy przykład pokazuje sposób dostosowywania środowiska uruchomieniowego Windows Communication Foundation (WCF), aby włączyć kontekst niezawodnej instancji. Jako jej zapasowy magazyn (SQL Server 2005 Express w tym przypadku) używa programu SQL Server 2005. Jednak także zapewnia możliwość dostępu do magazynu niestandardowego mechanizmów.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Ten przykład obejmuje zarówno warstwie kanału, jak i warstwy modelu usług WCF. W związku z tym należy zrozumieć podstawowe pojęcia przed przejściem do szczegóły implementacji.  
+ Ten przykład obejmuje rozszerzanie warstwy kanału i warstwy modelu usług WCF. Dlatego jest niezbędne do zrozumienia podstawowych pojęć przed przejściem do szczegółów implementacji.  
   
- Konteksty wystąpienia trwałych znajduje się w rzeczywistych scenariuszach bardzo często. Na przykład aplikację koszyka zakupów ma możliwość wstrzymać zakupy w połowie za pośrednictwem i kontynuować go innym dnia. Tak, aby po firma Microsoft odwiedź koszyka następnego dnia, naszych oryginalnego kontekst został przywrócony. Należy pamiętać, że aplikacja koszyka zakupów (na serwerze) nie przechowuje wystąpienie koszyka zakupów odłączeniu możemy są. Zamiast tego utrwala swój stan na trwałe nośników i używa go podczas tworzenia nowego wystąpienia dla kontekstu przywrócone. W związku z tym wystąpienie usługi, która może obsłużyć tego samego kontekstu nie jest taka sama jak poprzedniego wystąpienia (to znaczy, że nie ma ten sam adres pamięci).  
+ Kontekst niezawodnej instancji znajdują się w rzeczywistych scenariuszach bardzo często. Uwzględnić aplikację zakupową koszyka na przykład, ma możliwość wstrzymania widoczny w połowie zakupów za pośrednictwem i kontynuować kolejny dzień. Dlatego, że gdy odwiedza koszyka następnego dnia, zostanie przywrócony naszych oryginalnego kontekstu. Należy zauważyć, że aplikacji koszyka zakupów, (na serwerze) nie są zachowywane wystąpienie koszyka zakupów podczas, gdy firma Microsoft jest odłączony. Zamiast tego będzie się powtarzał stanu do nośnika trwałego magazynu i używa go podczas tworzenia nowego wystąpienia dla kontekstu przywrócona. W związku z tym wystąpienie usługi, która może obsłużyć na tym samym kontekście nie jest taka sama jak poprzednie wystąpienie (oznacza to, że nie ma tego samego adresu pamięci).  
   
- Kontekst niezawodnej instancji jest możliwe przez małe protokół, który wymienia identyfikator kontekstu między klientem a usługą. Ten identyfikator kontekstu jest tworzony na kliencie i przesyłane do usługi. Po utworzeniu wystąpienia usługi, czas wykonywania usługi próbuje załadować stan utrwalony odpowiadający ten identyfikator kontekstu z magazynu trwałego (domyślnie jest bazą danych programu SQL Server 2005). Jeśli stan nie jest dostępny nowe wystąpienie ma stanu domyślnego. Implementacji usługi używa atrybutu niestandardowego, aby oznaczyć działania, zmienić stan wdrożenia usługi, dzięki czemu środowiska uruchomieniowego można zapisać wystąpienia usługi po wywołaniu ich.  
+ Kontekst niezawodnej instancji jest możliwe dzięki małej protokołu, który wymienia identyfikator kontekstu między klientem a usługą. Ten identyfikator kontekstu jest tworzony na komputerze klienckim i przesyłane do usługi. Po utworzeniu wystąpienia usługi, środowisko wykonawcze usług próbuje załadować utrwalonego stanu, który odnosi się do tego Identyfikatora kontekstu z magazynu trwałego (domyślnie jest bazę danych programu SQL Server 2005). Jeśli stan nie jest dostępne nowe wystąpienie ma stanu domyślnego. Implementacji usługi używa atrybutu niestandardowego, aby oznaczyć operacje, aby zmienić stan wdrożenia usługi, dzięki czemu środowisko uruchomieniowe można zapisać wystąpienia usługi po ich wywoływania.  
   
- W opisie poprzednich aby osiągnąć łatwo można rozróżnić dwa kroki:  
+ Według opisu w poprzednich do osiągnięcia celu, łatwo można wyróżnić dwa kroki:  
   
-1.  Zmień komunikat, który przechodzi umieszczonego do przenoszenia identyfikatora kontekstu.  
+1.  Zmienić komunikat, który przechodzi na potrzeby przesyłu, żeby identyfikator kontekstu.  
   
-2.  Zmień zachowanie lokalnej usługi do zaimplementowania niestandardowej logiki wystąpień.  
+2.  Zmień zachowanie lokalnej usługi, aby zaimplementować logikę niestandardową wystąpień.  
   
- Ponieważ pierwsza z nich na liście dotyczy wiadomości przesyłania powinny zostać wdrożone jako niestandardowy kanał i można podłączyć do warstwy kanału. Drugie wpływa tylko na zachowanie lokalnej usługi i może być implementowana przez rozszerzenie kilka punktów rozszerzalności usługi. W kolejnych sekcjach kilka omówiono każdego z tych rozszerzeń.  
+ Ponieważ pierwszy z nich na liście ma wpływ na wiadomości na łączu powinny zostać wdrożone jako niestandardowy kanał i być podłączony do warstwy kanału. Ten ostatni ma wpływ tylko na zachowanie lokalnej usługi i może być implementowana przez rozszerzenie kilka punktów rozszerzeń usługi. W kolejnych sekcjach opisano każdy z tych rozszerzeń.  
   
-## <a name="durable-instancecontext-channel"></a>Niezawodny kanał InstanceContext  
- Przede wszystkim należy przyjrzeć się to rozszerzenie warstwy kanału. Pierwszą czynnością przy tworzeniu niestandardowym kanale jest podjęcie decyzji, struktura komunikacji kanału. Ponieważ wprowadzono nowy Protokół kanału powinien współpracować z prawie każdego innego kanału w stosie kanału. W związku z tym go powinien obsługiwać wszystkie wzorce wymiany wiadomości. Jednak do podstawowych funkcji kanał jest taki sam, niezależnie od jego struktury komunikacji. W szczególności od klienta go zapisać identyfikator kontekstu w wiadomości i z usługi należy przeczytać ten identyfikator kontekstu z wiadomości i przekaż go do wyższe poziomy. Z tego powodu `DurableInstanceContextChannelBase` utworzyć działającego jako abstrakcyjna klasa podstawowa dla wszystkich implementacji kanału kontekst niezawodnej instancji klasy. Ta klasa zawiera typowe funkcje zarządzania maszyny stanu i dwa chronionych elementów członkowskich, aby zastosować i przeczytaj informacje o kontekście do i z wiadomości.  
+## <a name="durable-instancecontext-channel"></a>Trwałość InstanceContext kanału  
+ Najpierw Przyjrzyj się to rozszerzenie warstwy kanału. Pierwszym krokiem w niestandardowym kanale w pisaniu jest podjęcie decyzji, struktura komunikacji kanału. Jak wprowadzono nowy protokół przewodowy kanał powinny współpracować z prawie każdego innego kanału w stosie kanału. W związku z tym go powinien obsługiwać wszystkie wzorce wymiany komunikatów. Jednak podstawowe funkcje kanału jest taki sam, niezależnie od jego strukturę komunikacji. W szczególności od klienta jego powinien zapisać identyfikator kontekstu do wiadomości i z usługi należy przeczytać ten identyfikator kontekstu od wiadomości i przekazać go do wyższych poziomów. Z tego powodu `DurableInstanceContextChannelBase` klasa jest tworzona, który działa jako abstrakcyjna klasa bazowa dla wszystkich implementacjach kanału kontekst niezawodnej instancji. Ta klasa zawiera typowe funkcje zarządzania maszyny stanu i dwa chronionych elementów członkowskich, aby zastosować i przeczytaj informacje o kontekście do i z wiadomości.  
   
 ```  
 class DurableInstanceContextChannelBase  
@@ -47,13 +47,13 @@ class DurableInstanceContextChannelBase
 }  
 ```  
   
- Te dwie metody należy korzystać z `IContextManager` implementacje do zapisu i odczytu identyfikator kontekstu do lub z komunikatu. (`IContextManager` jest niestandardowy interfejs używany do definiowania kontrakt dla wszystkich menedżerów kontekstu.) Kanał można dołączyć identyfikator kontekstu niestandardowego nagłówka SOAP lub nagłówka pliku cookie HTTP. Każda implementacja menedżera kontekstu dziedziczy `ContextManagerBase` klasy, która zawiera typowe funkcje menedżerom kontekstu. `GetContextId` Metoda ta klasa służy do pochodzą z Identyfikatorem kontekstu z klienta. Jeśli kontekst, w których identyfikator jest pochodzi po raz pierwszy, ta metoda zapisuje do pliku tekstowego, którego nazwa jest tworzony za pomocą adresu zdalnego punktu końcowego (nieprawidłowy plik znaków nazwy w typowych identyfikatory URI są zastępowane @ znaków).  
+ Te dwie metody użytkowania `IContextManager` implementacji do zapisu i odczytu identyfikator kontekstu do lub z komunikatu. (`IContextManager` jest niestandardowy interfejs używany do definiowania kontrakt dla wszystkich menedżerów kontekstu.) Kanał można dołączyć identyfikator kontekstu w niestandardowy nagłówek SOAP lub w nagłówku pliku cookie HTTP. Każda implementacja menedżera kontekstowego dziedziczy `ContextManagerBase` klasę, która zawiera funkcje wspólne dla wszystkich menedżerów kontekstu. `GetContextId` Metody tej klasy jest używany tak, jakby pochodził identyfikator kontekstu od klienta. Jeśli kontekst, w których identyfikator jest tworzone po raz pierwszy, ta metoda zapisuje do pliku tekstowego, którego nazwa jest tworzona przy użyciu adresu zdalnego punktu końcowego (nieprawidłowy plik znaków nazwy w typowych identyfikatorów URI są zastępowane @ Zn.).  
   
- Później, gdy do tego samego zdalny punkt końcowy wymagany jest identyfikator kontekstu, sprawdza, czy istnieje odpowiedni plik. Jeśli tak, odczytuje identyfikator kontekstu i zwraca. W przeciwnym razie zwraca identyfikator nowo wygenerowanym kontekście i zapisuje go w pliku. Z konfiguracji domyślnej pliki te są umieszczane w katalogu o nazwie ContextStore, który znajduje się w katalogu temp bieżącego użytkownika. Ta lokalizacja jest jednak można skonfigurować za pomocą elementu powiązania.  
+ Później podczas identyfikator kontekstu jest wymagany do tego samego zdalnego punktu końcowego, sprawdza, czy istnieje odpowiedni plik. Jeśli tak jest, odczytuje identyfikator kontekstu i zwraca. W przeciwnym razie zwraca identyfikator nowo wygenerowane kontekstu i zapisuje go do pliku. W przypadku domyślnej konfiguracji tych plików są umieszczane w katalogu o nazwie ContextStore, która znajduje się w katalogu tymczasowym bieżącego użytkownika. Jednak ta lokalizacja jest można skonfigurować za pomocą elementu powiązania.  
   
- Konfiguruje się mechanizm używany do transportu identyfikator kontekstu. Go można albo zapisania nagłówka pliku cookie HTTP lub niestandardowy nagłówek SOAP. Niestandardowe podejście nagłówek SOAP sprawia, że możliwość korzystania z protokołów innych niż HTTP (np. TCP lub Named Pipes) tego protokołu. Istnieją dwie klasy, a mianowicie `MessageHeaderContextManager` i `HttpCookieContextManager`, który implementuje te dwie opcje.  
+ Mechanizm służący do transportu kontekstowy identyfikator jest konfigurowany. Jego można albo zapisywane do nagłówka pliku cookie HTTP lub niestandardowy nagłówek SOAP. Niestandardowe podejście nagłówek SOAP umożliwia tego protokołu za pomocą protokołów innych niż HTTP (na przykład, TCP lub Named Pipes). Istnieją dwie klasy, a mianowicie `MessageHeaderContextManager` i `HttpCookieContextManager`, która implementuje te dwie opcje.  
   
- Oba identyfikator kontekstu do zapisu komunikatu odpowiednio. Na przykład `MessageHeaderContextManager` klasy zapisuje go do nagłówka SOAP w `WriteContext` metody.  
+ Obydwaj zapisu identyfikator kontekstu do wiadomości odpowiednio. Na przykład `MessageHeaderContextManager` klasy zapisuje go do nagłówka SOAP w `WriteContext` metody.  
   
 ```  
 public override void WriteContext(Message message)  
@@ -70,7 +70,7 @@ public override void WriteContext(Message message)
 }   
 ```  
   
- Zarówno `ApplyContext` i `ReadContextId` metod w `DurableInstanceContextChannelBase` klasy wywołania `IContextManager.ReadContext` i `IContextManager.WriteContext`odpowiednio. Jednak te menedżerów kontekstu nie są bezpośrednio tworzone przez `DurableInstanceContextChannelBase` klasy. Zamiast tego używa `ContextManagerFactory` klasę, aby wykonać to zadanie.  
+ Zarówno `ApplyContext` i `ReadContextId` metody `DurableInstanceContextChannelBase` wywołać klasy `IContextManager.ReadContext` i `IContextManager.WriteContext`, odpowiednio. Jednak te menedżerów kontekstu nie są bezpośrednio tworzone przez `DurableInstanceContextChannelBase` klasy. Zamiast tego używa `ContextManagerFactory` klasie w celu wykonania tego zadania.  
   
 ```  
 IContextManager contextManager =  
@@ -79,15 +79,15 @@ IContextManager contextManager =
                 this.endpointAddress);  
 ```  
   
- `ApplyContext` Metoda jest wywoływana przez wysyłanie kanałów. Identyfikator kontekstu w komunikatach wychodzących go injects. `ReadContextId` Metoda jest wywoływana przez kanały odbierania. Ta metoda gwarantuje, że identyfikator kontekstu jest dostępny w komunikatach przychodzących i dodaje go do `Properties` Kolekcja `Message` klasy. Również zgłasza `CommunicationException` w przypadku awarii odczytać Identyfikatora kontekstu i w związku z tym powoduje, że kanał przerwanie.  
+ `ApplyContext` Metoda jest wywoływana przez wysyłanie kanałów. Wprowadza ona identyfikator kontekstu do wiadomości wychodzących. `ReadContextId` Metoda jest wywoływana przez odbieranie kanałów. Ta metoda zapewnia, że identyfikator kontekstu jest dostępny w wiadomości przychodzących i dodaje go do `Properties` zbiór `Message` klasy. Zgłasza również `CommunicationException` w razie awarii można odczytać Identyfikatora kontekstu i dlatego powoduje, że kanał przerwanie.  
   
 ```  
 message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextId);  
 ```  
   
- Przed kontynuowaniem, ważne jest, aby zrozumieć użycie `Properties` kolekcji w `Message` klasy. Zwykle to `Properties` kolekcja jest używana, gdy przekazywanie danych z niższym na wyższe poziomy w warstwie kanału. W ten sposób żądanych danych można podać na wyższe poziomy w sposób ciągły, niezależnie od tego, szczegóły protokołu. Innymi słowy warstwie kanału wysyłać i odbierać identyfikator kontekstu jako nagłówka SOAP lub nagłówka pliku cookie HTTP. Ale nie jest niezbędna dla wyższe poziomy wiedzieć o te informacje, ponieważ w warstwie kanału sprawia, że te informacje są dostępne w `Properties` kolekcji.  
+ Zanim przejdziesz dalej, jest ważne, aby zrozumieć wykorzystanie `Properties` kolekcji w `Message` klasy. Zwykle to `Properties` kolekcja jest używana, gdy przekazywanie danych od niższych do wyższych poziomów z warstwy kanału. W ten sposób żądane dane można przekazać do wyższych poziomów w spójny sposób niezależnie od tego, szczegóły protokołu. Innymi słowy warstwy kanału można wysyłać i odbierać identyfikator kontekstu jako nagłówek SOAP lub nagłówka pliku cookie HTTP. Ale nie jest konieczne wyższe poziomy wiedzieć o te informacje, ponieważ warstwy kanału sprawia, że te informacje są dostępne w `Properties` kolekcji.  
   
- Teraz z `DurableInstanceContextChannelBase` klasy w miejscu wszystkich dziesięciu niezbędne interfejsów (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, Musi być implementowana IDuplexChannel, IDuplexSessionChannel). Są one podobne do każdej dostępnej wymiany komunikatów (datagram, jednostronny, dupleks i ich warianty sesyjnych). Każda z tych implementacji dziedziczyć klasy podstawowej opisany powyżej i wywołania `ApplyContext` i `ReadContexId` odpowiednio. Na przykład `DurableInstanceContextOutputChannel` — która implementuje interfejs IOutputChannel - wywołuje `ApplyContext` metody z każdej metody, która wysyła komunikaty.  
+ Teraz dzięki `DurableInstanceContextChannelBase` klasy w miejscu wszystkie dziesięć niezbędne interfejsy (IOutputChannel IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, Można zaimplementować IDuplexChannel, IDuplexSessionChannel). Są one podobne do każdego wymiany dostępnego komunikatu (datagram, jednostronny, komunikacja dwukierunkowa i ich warianty sesji). Każda z tych implementacji dziedziczą z klasy bazowej, opisany wcześniej i wywołania `ApplyContext` i `ReadContexId` odpowiednio. Na przykład `DurableInstanceContextOutputChannel` — który implementuje interfejs IOutputChannel - wywołuje `ApplyContext` metody z każdej metody, która wysyła komunikaty.  
   
 ```  
 public void Send(Message message, TimeSpan timeout)  
@@ -98,7 +98,7 @@ public void Send(Message message, TimeSpan timeout)
 }   
 ```  
   
- Z drugiej strony `DurableInstanceContextInputChannel` — z zaimplementowanym `IInputChannel` interface - wywołania `ReadContextId` metody w każdej metodzie, który odbiera komunikaty.  
+ Z drugiej strony `DurableInstanceContextInputChannel` — które implementują `IInputChannel` interface - wywołania `ReadContextId` metody w każdej metody, która odbiera komunikaty.  
   
 ```  
 public Message Receive(TimeSpan timeout)  
@@ -109,7 +109,7 @@ public Message Receive(TimeSpan timeout)
 }  
 ```  
   
- Oprócz tego tych implementacji kanału delegowanie wywołań metod do kanału znajdującą się pod nimi w stosie kanału. Przekroczono wariantów jednak podstawowa logika, aby upewnić się, że identyfikator kontekstu są wysyłane i jest do odczytu tylko dla pierwszego komunikat, który powoduje, że sesja ma zostać utworzony.  
+ Niezależnie od tego tych implementacji kanału delegowanie wywołań metod do kanału pod nimi w stosie kanału. Przekroczono wariantów jednak podstawową logikę, aby upewnić się, że identyfikator kontekstu jest wysyłana i jest tylko do odczytu dla pierwszego komunikatu, który powoduje, że sesja ma zostać utworzony.  
   
 ```  
 if (isFirstMessage)  
@@ -120,10 +120,10 @@ if (isFirstMessage)
 }  
 ```  
   
- Implementacje tych kanałów jest następnie dodawana do środowiska wykonawczego kanału WCF przez `DurableInstanceContextBindingElement` klasy i `DurableInstanceContextBindingElementSection` odpowiednio klasy. Zobacz [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) kanału przykładowej dokumentacji więcej szczegółów na temat elementów wiązania i powiązania elementu sekcje.  
+ Tych implementacji kanału zostaną następnie dodane do środowiska uruchomieniowego kanału WCF, `DurableInstanceContextBindingElement` klasy i `DurableInstanceContextBindingElementSection` klasy odpowiednio. Zobacz [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) kanału przykładowa dokumentacja, aby uzyskać więcej szczegółów na temat elementów wiązania i powiązania sekcje elementu.  
   
 ## <a name="service-model-layer-extensions"></a>Rozszerzenia warstwy modelu usług  
- Teraz, identyfikator kontekstu ma pokonać za pośrednictwem warstwy kanału, można zaimplementować zachowanie usługi do dostosowywania wystąpienia. W tym przykładzie Menedżer magazynowania służy do ładowania i zapisać stanu z lub do magazynu trwałego. Jak opisano wcześniej, w tym przykładzie przedstawiono Menedżer magazynowania, który używa programu SQL Server 2005 jako jego magazynu zapasowego. Jednak również jest możliwie dodanie mechanizmów magazynu niestandardowego do tego rozszerzenia. W tym celu interfejs publiczny jest zadeklarowana, musi być implementowana przez wszystkich menedżerów magazynu.  
+ Teraz, gdy identyfikator kontekstu ma przejść przez warstwy kanału, można zaimplementować zachowanie usługi do dostosowywania procesu tworzenia wystąpienia. W tym przykładzie Menedżer magazynowania służy do ładowania i Zapisz stan z lub do magazynu trwałego. Jak wyjaśniono wcześniej, w tym przykładzie przedstawiono Menedżer magazynowania, który używa programu SQL Server 2005 jako jego magazyn zapasowy. Jednak użytkownik może również dodać mechanizmów magazynu niestandardowego do tego rozszerzenia. W tym interfejs publiczny jest zadeklarowana, muszą być zaimplementowane przez wszystkich menedżerów magazynu.  
   
 ```  
 public interface IStorageManager  
@@ -133,7 +133,7 @@ public interface IStorageManager
 }  
 ```  
   
- `SqlServerStorageManager` Klasa zawiera domyślne `IStorageManager` implementacji. W jego `SaveInstance` metody dany obiekt jest zserializowanym przy użyciu elementu XmlSerializer i jest zapisywana w bazie danych programu SQL Server.  
+ `SqlServerStorageManager` Klasy zawiera domyślną `IStorageManager` implementacji. W jego `SaveInstance` metody dany obiekt jest serializowana, przy użyciu elementu XmlSerializer i jest zapisywany w bazie danych programu SQL Server.  
   
 ```  
 XmlSerializer serializer = new XmlSerializer(state.GetType());  
@@ -168,7 +168,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }  
 ```  
   
- W `GetInstance` — metoda odczytu danych serializacji dla Identyfikatora podanego kontekstu i utworzone na podstawie jego obiekt jest zwracany do obiektu wywołującego.  
+ W `GetInstance` metoda serializowane dane do odczytu dla Identyfikatora podanym kontekście i obiekt skonstruowany z niego jest zwracany do obiektu wywołującego.  
   
 ```  
 object data;  
@@ -195,7 +195,7 @@ if (data != null)
 }  
 ```  
   
- Użytkownicy tych magazynu menedżerów nie powinien bezpośrednio utworzyć ich wystąpienia. Używają `StorageManagerFactory` klasy, która abstracts z szczegóły tworzenie Menedżera magazynu. Ta klasa ma jeden statyczny element członkowski `GetStorageManager`, co powoduje wystąpienie typu Menedżera danego magazynu. Jeśli parametr typu jest `null`, ta metoda tworzy wystąpienie domyślne `SqlServerStorageManager` klasy i zwraca go. Jest również sprawdzane danego typu, aby upewnić się, że implementuje `IStorageManager` interfejsu.  
+ Użytkownicy tych magazynu menedżerów nie powinien bezpośrednio utworzyć ich wystąpienia. Używają `StorageManagerFactory` klasy, która przenosi dane tworzenie Menedżera magazynu. Ta klasa ma jeden statyczny element członkowski `GetStorageManager`, która tworzy wystąpienie typu Menedżera magazynowania. Jeśli parametr typu jest `null`, ta metoda tworzy wystąpienie domyślne `SqlServerStorageManager` klasy i zwraca go. Również sprawdza poprawność danego typu, aby upewnić się, że implementuje `IStorageManager` interfejsu.  
   
 ```  
 public static IStorageManager GetStorageManager(Type storageManagerType)  
@@ -227,19 +227,19 @@ else
 }   
 ```  
   
- Zaimplementowano infrastruktury wymaganej do odczytu i zapisu z magazynu trwałego wystąpienia. Teraz czynności niezbędnych do zmiany zachowania usługi muszą zostać pobrane.  
+ Zaimplementowano infrastruktury wymaganej do odczytu i zapisu wystąpienia z magazynu trwałego. Teraz niezbędne kroki, aby zmienić zachowanie usługi muszą zostać pobrane.  
   
- W pierwszym kroku procesu mamy do zapisania Identyfikatora kontekstu, która pochodzi za pośrednictwem warstwy kanału do bieżącego obiektu InstanceContext. Obiekt InstanceContext jest składnika środowiska uruchomieniowego, który pełni rolę łącza między dyspozytora WCF i wystąpienie usługi. Może służyć do dodatkowych stanie i zachowanie do wystąpienia usługi. Jest to konieczne, ponieważ w komunikacie sesyjnych identyfikator kontekstu jest wysyłane tylko z pierwszego komunikatu.  
+ W pierwszym kroku tego procesu trzeba zapisać identyfikator kontekstu, który pochodzi za pośrednictwem warstwy kanału do bieżącego obiektu InstanceContext. Obiekt InstanceContext jest składnika środowiska uruchomieniowego, który działa jako łącze między dyspozytora WCF i wystąpienie usługi. Umożliwia zapewnienie dodatkowy stan i zachowanie do wystąpienia usługi. Jest to ważne, ponieważ w ramach sesji komunikacji identyfikator kontekstu są wysyłane tylko w przypadku pierwszego komunikatu.  
   
- Usługi WCF umożliwia rozszerzanie jej składnika środowiska wykonawczego InstanceContext przez dodanie nowego stanu i zachowanie przy użyciu jego wzorca rozszerzonego obiektu. Wzorzec extensible obiekt jest używany w programie WCF wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub dodawania nowych funkcji stanu do obiektu. Istnieją trzy interfejsy we wzorcu rozszerzonego obiektu - interfejs IExtensibleObject\<T >, IExtension\<T >, a IExtensionCollection\<T >:  
+ Usługi WCF umożliwia rozszerzanie jego składnika środowiska wykonawczego typu InstanceContext przez dodanie nowego Państwa i zachowanie przy użyciu jego wzorzec extensible object. Wzorzec extensible object jest używany w programie WCF, albo rozszerzanie istniejących klas środowiska uruchomieniowego przy użyciu nowych funkcji lub dodać nowe funkcje stan z obiektem. Istnieją trzy interfejsy we wzorcu extensible object - IExtensibleObject\<T >, IExtension\<T >, a IExtensionCollection\<T >:  
   
--   Interfejs IExtensibleObject\<T > Interfejs jest implementowany przez obiekty, które umożliwia rozszerzenia umożliwiające dostosowanie ich funkcje.  
+-   IExtensibleObject\<T > Interfejs jest implementowany przez obiekty, które umożliwia rozszerzenia umożliwiające dostosowanie ich funkcje.  
   
--   IExtension\<T > Interfejs jest implementowany przez obiekty, które mają rozszerzenia klasy typu T.  
+-   IExtension\<T > Interfejs jest implementowany przez obiekty, które mają rozszerzenia klas typu T.  
   
--   IExtensionCollection\<T > interfejsu jest kolekcją IExtensions, która umożliwia pobieranie IExtensions według typu.  
+-   IExtensionCollection\<T > Interfejs jest zbiorem IExtensions, która umożliwia pobieranie IExtensions według ich typu.  
   
- W związku z tym klasy InstanceContextExtension należy utworzyć implementuje interfejs IExtension, który definiuje stan wymagane do zapisania identyfikatora kontekstu. Ta klasa udostępnia także stanu do przechowywania magazynu Menedżera używane. Po zapisaniu nowy stan nie powinny być go zmodyfikować. W związku z tym stan ma być dostarczana i zapisywane do wystąpienia w czasie, które są skonstruowane i następnie dostępna tylko za pomocą właściwości tylko do odczytu.  
+ W związku z tym klasę InstanceContextExtension powinny zostać utworzone implementuje interfejs IExtension, który definiuje wymagany stan do zapisania identyfikatora kontekstu. Ta klasa udostępnia także stanu do przechowywania magazynu manager używane. Po zapisaniu nowego stanu nie powinna być go zmodyfikować. W związku z tym stan ma być dostarczana i zapisywane do wystąpienia w czasie, który jest zbudowany, a następnie dostępny tylko za pomocą właściwości tylko do odczytu.  
   
 ```  
 // Constructor  
@@ -262,7 +262,7 @@ public IStorageManager StorageManager
 }   
 ```  
   
- Klasa InstanceContextInitializer implementuje interfejs IInstanceContextInitializer i dodaje do kolekcji rozszerzenia InstanceContext budowany rozszerzenie kontekstu wystąpienia.  
+ Klasa InstanceContextInitializer implementuje interfejs IInstanceContextInitializer i dodaje do kolekcji rozszerzeń typu InstanceContext budowany rozszerzenie kontekstu wystąpienia.  
   
 ```  
 public void Initialize(InstanceContext instanceContext, Message message)  
@@ -277,9 +277,9 @@ public void Initialize(InstanceContext instanceContext, Message message)
 }  
 ```  
   
- Zgodnie z wcześniejszym opisem identyfikator kontekstu zostanie odczytany z `Properties` Kolekcja `Message` klasy i przekazany do konstruktora klasy extension. Oznacza to, jak informacje może być wymieniane między warstwami w sposób ciągły.  
+ Zgodnie z wcześniejszym opisem identyfikator kontekstu są odczytywane z `Properties` zbiór `Message` klasy i przekazany do konstruktora klasy extension. W tym przykładzie pokazano, jak informacje mogą być wymieniane między warstwami w spójny sposób.  
   
- Następnym krokiem ważne zastępuje procesu tworzenia wystąpienia usługi. Usługi WCF umożliwia Implementowanie niestandardowego wystąpienia zachowania i przechwytywanie je do środowiska uruchomieniowego przy użyciu interfejsu IInstanceProvider. Nowe `InstanceProvider` zaimplementowana jest klasa, aby wykonać to zadanie. W Konstruktorze jest akceptowany oczekiwano od dostawcy wystąpienia typu usługi. Później służy to tworzenia nowych wystąpień. W `GetInstance` tworzone jest wystąpienie Menedżera magazynu implementacji wyszukiwanie trwałego wystąpienia. Jeśli zmienna zwraca `null` utworzone nowe wystąpienie typu usługi i zwracany do obiektu wywołującego.  
+ Następnym krokiem ważne zastępują procesu tworzenia wystąpienia usługi. Usługi WCF umożliwia Implementowanie zachowań niestandardowych podczas tworzenia wystąpienia i przechwytywanie je do środowiska uruchomieniowego przy użyciu interfejsu IInstanceProvider. Nowy `InstanceProvider` klasy zaimplementowany, aby wykonać to zadanie. W Konstruktorze jest akceptowana oczekiwano od dostawcy wystąpienia typu usługi. Później służy do tworzenia nowych wystąpień. W `GetInstance` tworzone jest wystąpienie Menedżera magazynu implementacji szukasz utrwalonego wystąpienia. Jeśli zostanie zwrócona `null` , a następnie nowe wystąpienie typu usługi jest tworzone i zwracany do wywołującego.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -303,11 +303,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }  
 ```  
   
- Ważne następnym krokiem jest zainstalowanie `InstanceContextExtension`, `InstanceContextInitializer` i `InstanceProvider` klasy w czasie wykonywania modelu usługi. Atrybut niestandardowy może służyć do oznaczenie klasy implementacji usługi do zainstalowania zachowanie. `DurableInstanceContextAttribute` Zawiera implementację tego atrybutu i implementuje `IServiceBehavior` interfejs do rozszerzania środowiska uruchomieniowego całej usługi.  
+ Dalej ważnym krokiem jest zainstalowanie `InstanceContextExtension`, `InstanceContextInitializer` i `InstanceProvider` klas w czasie wykonywania modelu usługi. Niestandardowy atrybut może służyć do oznaczania zachowanie podczas instalowania klasy implementacji usługi. `DurableInstanceContextAttribute` Zawiera implementację tego atrybutu i implementuje `IServiceBehavior` interfejsu, aby rozszerzyć środowisko uruchomieniowe całą usługę.  
   
- Ta klasa ma właściwość, która akceptuje typ Menedżera magazynu, który ma być używany. W ten sposób wykonania pozwala użytkownikom na określenie własnych `IStorageManager` implementacji jako parametr tego atrybutu.  
+ Ta klasa posiada właściwości, które akceptuje typ Menedżera magazynu do użycia. W ten sposób implementacji umożliwia użytkownikom określenie własnych `IStorageManager` implementacji jako parametr tego atrybutu.  
   
- W `ApplyDispatchBehavior` implementacji `InstanceContextMode` bieżącego `ServiceBehavior` atrybutu jest weryfikowany. Jeśli ta właściwość jest ustawiona na pojedyncze, włączanie trwałe wystąpień nie jest możliwe i `InvalidOperationException` jest generowany, by powiadomić hosta.  
+ W `ApplyDispatchBehavior` implementacji `InstanceContextMode` bieżącego `ServiceBehavior` atrybutu jest weryfikowana. Jeśli ta właściwość jest ustawiona na pojedyncze, umożliwiając niezawodne tworzenie wystąpienia nie jest możliwe i `InvalidOperationException` jest zgłaszany w celu powiadomienia hosta.  
   
 ```  
 ServiceBehaviorAttribute serviceBehavior =  
@@ -321,7 +321,7 @@ if (serviceBehavior != null &&
 }  
 ```  
   
- Po tym wystąpienia Menedżera magazynowania, wystąpienie kontekstu inicjatora i dostawcy wystąpienia są tworzone i zainstalowane w `DispatchRuntime` utworzone dla każdego punktu końcowego.  
+ Po tym wystąpienia Menedżera magazynu, wystąpienia kontekstu inicjatora i dostawca wystąpień są tworzone i zainstalowane w `DispatchRuntime` utworzone dla każdego punktu końcowego.  
   
 ```  
 IStorageManager storageManager =   
@@ -348,17 +348,17 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 }  
 ```  
   
- W podsumowaniu wykonanej do tej pory w tym przykładzie ma utworzyło kanału, który jest włączony protokół przewodowy niestandardowych dla programu exchange identyfikator kontekstu niestandardowe, a także zastępuje domyślne zachowanie można załadować wystąpienia z magazynu trwałego wystąpień.  
+ W podsumowaniu do tej pory w tym przykładzie tworzył kanału, który jest włączony protokół przewodowy niestandardowe wymiana identyfikator kontekstu niestandardowe, a także zastępuje domyślne zachowanie, aby załadować wystąpień z magazynu trwałego wystąpień.  
   
- Pozostała to sposób Zapisz do magazynu trwałego wystąpienia usługi. Jak wspomniano wcześniej, jest już wymagane funkcje można zapisać stanu w `IStorageManager` implementacji. Mamy teraz należy zintegrować to ze środowiskiem uruchomieniowym WCF. Inny atrybut jest wymagany, które mają zastosowanie do metody w klasie implementacji usługi. Ten atrybut powinien można zastosować do metody, które spowodują zmianę stanu wystąpienia usługi.  
+ Zachowasz pozostałe jest sposób można zapisać wystąpienia usługi w magazynie trwałym. Jak wspomniano wcześniej, jest już wymaganych funkcji, która ma być zapisany stan w `IStorageManager` implementacji. Firma Microsoft teraz muszą zintegrować to ze środowiskiem uruchomieniowym usługi WCF. Inny atrybut jest wymagany, które mają zastosowanie do metody w klasie implementacji usługi. Ten atrybut powinien ma zostać zastosowany do metody, które zmieniają stan wystąpienia usługi.  
   
- `SaveStateAttribute` Klasa implementuje tę funkcję. Implementuje również `IOperationBehavior` klasę, aby zmodyfikować środowiska uruchomieniowego WCF dla każdej operacji. Podczas metoda jest oznaczona atrybutem tego atrybutu, wywołuje środowiska uruchomieniowego WCF `ApplyBehavior` metoda podczas odpowiednie `DispatchOperation` jest tworzona. W tej implementacji metody jest pojedynczy wiersz kodu:  
+ `SaveStateAttribute` Klasa implementuje tę funkcję. Implementuje także `IOperationBehavior` klasy, aby zmodyfikować środowisko wykonawcze programu WCF dla każdej operacji. Gdy metoda jest oznaczona za pomocą tego atrybutu, środowisko wykonawcze programu WCF wywołuje `ApplyBehavior` metody podczas odpowiednie `DispatchOperation` jest budowany. W tej implementacji metoda ma nawet jednego wiersza kodu:  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
 ```  
   
- Ta instrukcja tworzy wystąpienie `OperationInvoker` typu, a następnie przypisuje go do `Invoker` właściwość `DispatchOperation` tworzona. `OperationInvoker` Klasy jest otoki dla wywołującego operacji domyślny utworzony dla `DispatchOperation`. Ta klasa implementuje `IOperationInvoker` interfejsu. W `Invoke` implementacji metody wywołania metody rzeczywistego jest delegowane do wywoływania operacji wewnętrznej. Jednak przed zwracania wyników Menedżer magazynowania w `InstanceContext` służy do zapisania wystąpienia usługi.  
+ Ta instrukcja tworzy wystąpienie `OperationInvoker` typu, a następnie przypisuje go do `Invoker` właściwość `DispatchOperation` budowany. `OperationInvoker` Klasy jest otoką element wywołujący operacji domyślne, które zostały utworzone dla `DispatchOperation`. Ta klasa implementuje `IOperationInvoker` interfejsu. W `Invoke` implementacji metody wywołania metody rzeczywisty jest delegowane do wywoływania operacji wewnętrznej. Jednak przed zwracania wyników Menedżer magazynowania w `InstanceContext` służy do zapisania wystąpienia usługi.  
   
 ```  
 object result = innerOperationInvoker.Invoke(instance,  
@@ -374,7 +374,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>Przy użyciu rozszerzenia  
- Zarówno warstwy kanału i rozszerzeń warstwy modelu usług są wykonywane, i teraz można używać w aplikacji WCF. Usługi trzeba dodać do stosu kanału, za pomocą niestandardowego powiązania kanału, a następnie oznaczenie klasy implementacji usługi z odpowiednich atrybutów.  
+ Zarówno warstwy kanału i rozszerzenia warstwy modelu usług są wykonywane, i ich można teraz używać w aplikacjach usługi WCF. Usługi trzeba dodać kanał do stosu kanału, za pomocą niestandardowego powiązania, a następnie oznacz klas implementacji usług z odpowiednimi atrybutami.  
   
 ```  
 [DurableInstanceContext]  
@@ -391,7 +391,7 @@ public class ShoppingCart : IShoppingCart
  }  
 ```  
   
- Aplikacje klienckie należy dodać DurableInstanceContextChannel do stosu kanału, za pomocą niestandardowego powiązania. Aby skonfigurować kanał deklaratywnie w pliku konfiguracji, sekcja element powiązania ma ma zostać dodany do kolekcji rozszerzeń element powiązania.  
+ Aplikacje klienckie należy dodać DurableInstanceContextChannel do stosu kanału, za pomocą niestandardowego powiązania. Aby skonfigurować kanał deklaratywnie w pliku konfiguracji, sekcja element powiązania ma ma zostać dodany do kolekcji rozszerzenia elementu powiązania.  
   
 ```xml  
 <system.serviceModel>  
@@ -403,7 +403,7 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
  </extensions>  
 ```  
   
- Element powiązania można teraz używać z niestandardowego powiązania, podobnie jak inne elementy Powiązanie standardowe:  
+ Element powiązania można teraz za pomocą niestandardowego powiązania, podobnie jak inne elementy powiązania standardowe:  
   
 ```xml  
 <bindings>  
@@ -419,13 +419,13 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
 ```  
   
 ## <a name="conclusion"></a>Wniosek  
- W tym przykładzie pokazano sposób tworzenia kanału protokołu niestandardowego oraz jak dostosować zachowanie usługi, aby ją włączyć.  
+ W tym przykładzie pokazano sposób tworzenia kanału protokołu niestandardowego i jak dostosować zachowanie usługi, aby ją włączyć.  
   
- Rozszerzenie można dodatkowo zwiększyć, umożliwiając użytkownikom określanie `IStorageManager` wdrożenia przy użyciu sekcji konfiguracji. Dzięki temu można modyfikować magazynu zapasowego bez konieczności ponownego kompilowania kodu usługi.  
+ Rozszerzenie można dodatkowo zwiększyć, umożliwiając użytkownikom określanie `IStorageManager` wdrożenia przy użyciu sekcji konfiguracji. Dzięki temu można modyfikować magazyn zapasowy bez konieczności ponownego kompilowania kodu usługi.  
   
- Ponadto użytkownik może próbować Implementowanie klasy (na przykład `StateBag`), który hermetyzuje stan wystąpienia. Tej klasy jest odpowiedzialny za utrwalanie stanu zawsze, gdy zmieni się. W ten sposób możesz uniknąć używania `SaveState` atrybutu i dokładniej wykonywania utrwalanie pracy (na przykład można utrwalić stanu, gdy stan faktycznie zostanie zmieniona zamiast zapisywać dokument każdorazowo po metodę o `SaveState` atrybutu wywołuje się).  
+ Ponadto użytkownik może próbować Implementowanie klasy (na przykład `StateBag`), która hermetyzuje stan wystąpienia. Ta klasa jest odpowiedzialne za utrwalanie stanu zawsze wtedy, gdy zmienia się. W ten sposób możesz uniknąć używania `SaveState` atrybutu i wykonywania pracy utrwalanie dokładniej (na przykład można utrwalić stanu rzeczywiście zmiana stanu zamiast zapisywać każdym razem gdy metody z `SaveState` atrybutu wywołuje się).  
   
- Po uruchomieniu próbki następujące dane wyjściowe są wyświetlane. Klient dodaje dwa elementy do jego koszyk i następnie pobiera listę elementów w jego koszyk z usługi. Naciśnij klawisz ENTER w każdym okna konsoli można zamknąć usługę i klienta.  
+ Po uruchomieniu przykładu, następujące dane wyjściowe są wyświetlane. Klient dodaje dwa elementy do jego koszyka zakupów i następnie pobiera listę elementów w jego koszyk sklepowy z usługi. Naciśnij klawisz ENTER każdego okna konsoli, aby zamknąć usługę i klienta.  
   
 ```  
 Enter the name of the product: apples  
@@ -438,25 +438,25 @@ Press ENTER to shut down client
 ```  
   
 > [!NOTE]
->  Ponowne tworzenie usługi spowoduje zastąpienie pliku bazy danych. Aby przyjrzeć się stanu zachowanego przez wiele przebiegów próbki, należy nie odbudować próbki między działa.  
+>  Ponowne tworzenie usługi zastępuje plik bazy danych. Aby obserwować stanu zachowanego wielu uruchomień próbki, należy nie ponownie skompiluj przykładowy między działa.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  SQL Server 2005 lub SQL Express 2005, aby uruchomić ten przykład, użytkownik musi być uruchomiona. Jeśli używasz programu SQL Server 2005, należy zmodyfikować konfigurację parametrów połączenia usługi. Podczas uruchamiania między komputerami, programu SQL Server jest wymagana tylko na komputerze z serwerem.  
+>  Musi działać program SQL Server 2005 lub SQL Express 2005, aby uruchomić ten przykład. Jeśli używasz programu SQL Server 2005, należy zmodyfikować konfigurację parametrów połączenia usługi. Podczas uruchamiania między komputerami, programu SQL Server jest wymagana tylko na komputerze z serwerem.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   

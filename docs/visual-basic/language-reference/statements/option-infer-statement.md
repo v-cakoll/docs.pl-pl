@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245794"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672588"
 ---
 # <a name="option-infer-statement"></a>Option Infer — Instrukcja
 Umożliwia użycie wnioskowania o typie lokalnym w zadeklarowania zmiennych.  
@@ -41,12 +41,12 @@ Option Infer { On | Off }
   
  Na poniższej ilustracji `Option Infer` jest włączona. Zmienna w deklaracji `Dim someVar = 2` jest zadeklarowany jako liczba całkowita, wnioskowanie o typie.  
   
- ![Widok funkcji IntelliSense deklaracji. ] (../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
+ ![Widok funkcji IntelliSense deklaracji. ](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
 Funkcje IntelliSense dostępne podczas Option Infer znajduje się na  
   
  Na poniższej ilustracji `Option Infer` jest wyłączona. Zmienna w deklaracji `Dim someVar = 2` jest zadeklarowany jako `Object` przez wnioskowanie o typie. W tym przykładzie **Option Strict** jest ustawiana **poza** na [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
- ![Widok funkcji IntelliSense deklaracji. ] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
+ ![Widok funkcji IntelliSense deklaracji. ](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
 Funkcje IntelliSense dostępne podczas Option Infer jest wyłączona  
   
 > [!NOTE]
@@ -99,6 +99,6 @@ Funkcje IntelliSense dostępne podczas Option Infer jest wyłączona
  [Option Compare, instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
  [Option Explicit, instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
  [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Okno dialogowe Opcje domyślne, projektów języka Visual Basic](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)  
+ [Domyślne ustawienia programu Visual Basic, Projekty, Opcje — okno dialogowe](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)  
  [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
  [Konwersja boxing i konwersja unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

@@ -9,11 +9,11 @@ ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7e45a863c46090dd62d5e1c80b5f0149d9460cf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43424080"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530006"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator używa [Menedżera ponownego uruchamiania](https://go.microsoft.com/fwlink/?LinkId=231425) do uniemożliwić systemu powoduje ponowne uruchomienie zawsze, gdy jest to możliwe podczas instalacji. Jeśli program instalacyjny aplikacji instaluje program .NET Framework, mogą łączyć się za pomocą Menedżera ponownego uruchamiania, aby móc korzystać z tej funkcji. Aby uzyskać więcej informacji, zobacz [porady: pobieranie postęp Instalatora programu .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  

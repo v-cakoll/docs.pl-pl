@@ -7,26 +7,26 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: d1565e262fbd3ebcee2d1576a2a0c8ed3ba8ce38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9216cf61b6b9368112f769d952457df4aab4297
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288229"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670772"
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; Operator (odwołanie w C#)
 
-`=>` Operator może być używany na dwa sposoby w języku C#:
+`=>` Operator może być używany na dwa sposoby, w języku C#:
 
-- Jako [operatora lambda](#lamba-operator) w [wyrażenia lambda](../../lambda-expressions.md), zmienne wejściowe go oddziela od treści lambda.
+- Jako [operatora lambda](#lamba-operator) w [wyrażenia lambda](../../lambda-expressions.md), z treści lambda są dzielone zmienne wejściowe.
  
-- W [definicja treść wyrażenia](#expression-body-definition), jego oddziela nazwę elementu członkowskiego z implementacją elementu. 
+- W [definicja treści wyrażenia](#expression-body-definition), nazwa elementu członkowskiego rozdziela od implementacji elementu członkowskiego. 
 
 ## <a name="lambda-operator"></a>Lambda operator
 
-`=>` Token jest nazywany operatora lambda. Jest on używany w *wyrażenia lambda* do oddzielania zmienne wejściowe po lewej stronie z treści lambda po prawej stronie. Wyrażenia lambda są wbudowane wyrażenia podobna do metody anonimowe, ale bardziej elastyczne. są często używane w zapytań LINQ, które są wyrażane w składni metody. Aby uzyskać więcej informacji, zobacz [wyrażenia Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+`=>` Wywołanie operatora lambda tokenu. Jest on używany w *wyrażeń lambda* do oddzielania zmienne wejściowe po lewej stronie z treści lambda po prawej stronie. Wyrażenia lambda są wbudowane wyrażenia podobne do metod anonimowych, ale bardziej elastyczne. one są często używane w zapytaniach LINQ, które są wyrażone w składni metody. Aby uzyskać więcej informacji, zobacz [wyrażeń Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- Poniższy przykład przedstawia dwa sposoby, aby znaleźć i wyświetlić długość ciągu najkrótszy w tablicy ciągów. Pierwsza część przykładzie zastosowanie wyrażenia lambda (`w => w.Length`) do każdego elementu `words` tablicy, a następnie używa <xref:System.Linq.Enumerable.Min%2A> metody do znalezienia najmniejszej długości. Do porównania drugiej części przykładzie pokazano dłużej używaną do tak samo postąpić w składni zapytania.  
+ Poniższy przykład przedstawia dwa sposoby, aby znaleźć i wyświetlić długość ciągu najkrótszej w tablicy ciągów. Pierwsza część przykładu stosuje się do wyrażenia lambda (`w => w.Length`) do każdego elementu `words` tablicy, a następnie używa <xref:System.Linq.Enumerable.Min%2A> metody do znalezienia najmniejszej długości. Dla porównania druga część przykład pokazuje dłużej rozwiązanie, które używa składni zapytań, aby zrobić to samo.  
   
 ```csharp  
 string[] words = { "cherry", "apple", "blueberry" };  
@@ -50,16 +50,16 @@ Console.WriteLine(shortestWordLength2);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `=>` Operator ma takie samo pierwszeństwo jako operator przypisania (`=`) i jest łączny prawo.  
+ `=>` Operator ma takie samo pierwszeństwo jak operator przypisania (`=`) i jest zespolony z prawej.  
   
- Można jawnie określić typ zmiennej wejściowy lub pozwolić kompilatora wnioskować w obu przypadkach zmienna jest silnie typizowane w czasie kompilacji. Po określeniu typu, należy ująć w nazwy typu i nazwy zmiennych w nawiasach, jak przedstawiono na poniższym przykładzie.  
+ Możesz jawnie określić typ zmienna wejściowa lub pozwolić kompilatorowi wydedukować w obu przypadkach zmienna zdecydowanie jest wpisane w czasie kompilacji. Po określeniu typu, należy ująć nazwę typu, a nazwa zmiennej w nawiasach, co ilustruje poniższy przykład.  
   
 ```csharp  
 int shortestWordLength = words.Min((string w) => w.Length);  
 ```  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób wyrażenia lambda przeciążenia operatora standardowej kwerendy <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> który przyjmuje dwa argumenty. Wyrażenie lambda ma więcej niż jeden parametr, parametry muszą być ujęte w nawiasy. Drugi parametr `index`, reprezentuje indeks bieżącego elementu w kolekcji. `Where` Wyrażenie zwraca wszystkie ciągi o długości są mniejsze niż ich położenia indeks w tablicy.  
+ Poniższy przykład pokazuje, jak wyrażenia lambda przeciążenie metody standardowego operatora zapytania <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> która przyjmuje dwa argumenty. Ponieważ wyrażenie lambda ma więcej niż jeden parametr, parametry muszą być ujęte w nawiasy. Drugi parametr `index`, reprezentuje indeks bieżącego elementu w kolekcji. `Where` Wyrażenie zwraca wszystkie ciągi, których długości jest mniejsza od ich pozycji indeksu w tablicy.  
   
 ```csharp  
 static void Main(string[] args)  
@@ -83,24 +83,24 @@ static void Main(string[] args)
     // nine  
 }  
 ```  
-## <a name="expression-body-definition"></a>Definicja treść wyrażenia
+## <a name="expression-body-definition"></a>Definicja treści wyrażenia
 
-Definicja treść wyrażenia udostępnia implementację elementu członkowskiego w postaci wysokiej skrócone, czytelne. Ma następującą składnię ogólne:
+Definicja treści wyrażenia dostarcza implementację elementu członkowskiego w wysoce skróconego postaci umożliwiającej odczyt. Ma następującej składni ogólnej:
 
 ```csharp
 member => expression;
 ```
-gdzie *wyrażenie* jest prawidłowym wyrażeniem. Należy pamiętać, że *wyrażenie* może być *wyrażenia instrukcji* tylko jeśli element członkowski zwracany typ jest `void`, lub jeśli element jest konstruktorem lub finalizatora.
+gdzie *wyrażenie* jest prawidłowym wyrażeniem. Należy pamiętać, że *wyrażenie* może być *wyrażenie instrukcji* tylko jeśli element członkowski zwracany typ jest `void`, lub, jeśli element jest konstruktor lub finalizatora.
 
-Definicje treść wyrażenia metody i instrukcje get właściwości są obsługiwane począwszy od języka C# 6. Wyrażenie treści definicji dla konstruktorów, finalizatory, instrukcje ustawić właściwości i indeksatorów są obsługiwane w programie C# 7.
+Definicje treści wyrażenia dla metod i właściwości, instrukcje get są obsługiwane, począwszy od C# 6. Definicje treści wyrażenia dla konstruktorów finalizatorów, ustawić właściwości instrukcji, a indeksatory są obsługiwane, począwszy od C# 7.
 
-Poniżej znajduje się definicja treść wyrażenia `Person.ToString` metody:
+Oto definicja treści wyrażenia dla `Person.ToString` metody:
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-Jest to wersja skrócona definicji następujące metody:
+Jest wersją skróconą następującą definicję metody:
 
 ```csharp
 public override string ToString()
@@ -108,10 +108,11 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-Aby uzyskać bardziej szczegółowe informacje dotyczące definicji treść wyrażenia, zobacz [zabudowanych wyrażenia elementów członkowskich](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+Aby uzyskać szczegółowe informacje na temat definicji treści wyrażenia, zobacz [elementy członkowskie z wyrażeniem](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
 
-## <a name="see-also"></a>Zobacz też  
-[Odwołanie w C#](../../../csharp/language-reference/index.md)   
-[Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)   
-[Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-[Członkowie zabudowanych wyrażenia](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)   
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)   
+- [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
+- [Elementy członkowskie z wyrażeniem](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).

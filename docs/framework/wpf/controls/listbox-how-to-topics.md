@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
 ms.openlocfilehash: 2d7f37acb2c0e09a0a9104a0bb7bd90b2d324a4d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396174"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507953"
 ---
 # <a name="listbox-how-to-topics"></a>ListBox — Tematy porad
 Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.ListBox> formantu, aby wyświetlić można wybierać listy elementów.  

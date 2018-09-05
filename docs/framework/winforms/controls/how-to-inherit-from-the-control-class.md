@@ -8,40 +8,40 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: da80d46f27d7cd721af7a9600d2b0cde84876d23
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a0eea1930699ed85fcf0eaf184ba0aabe398d73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43531748"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Porady: dziedziczenie z klasy formantów
-Jeśli chcesz utworzyć całkowicie niestandardowego formantu do użycia na formularzu systemu Windows, należy dziedziczyć z <xref:System.Windows.Forms.Control> klasy. Podczas dziedziczenia z <xref:System.Windows.Forms.Control> klasy wymaga wykonania więcej planowania i wdrażania, również zapewnia ona największą gamę opcji. Podczas dziedziczenia z <xref:System.Windows.Forms.Control>, dziedziczą bardzo podstawowe funkcje, dzięki formanty pracy. Funkcje związane z <xref:System.Windows.Forms.Control> klasy obsługi danych wejściowych użytkownika za pomocą klawiatury i myszy, definiuje granice i rozmiar formantu zapewnia obsługi systemu windows i zapewnia obsługi wiadomości i zabezpieczeń. Nie obejmuje żadnych rysowania, czyli w tym przypadku rzeczywistych renderowania formantu interfejsu graficznego, nie jest ona zawierać żadnych funkcji interakcji użytkownika. Należy podać wszystkie te aspekty za pomocą kodu niestandardowego.  
+Jeśli chcesz utworzyć formant całkowicie niestandardowy do użycia w formularzu Windows, możesz powinien dziedziczyć <xref:System.Windows.Forms.Control> klasy. Podczas dziedziczenie z <xref:System.Windows.Forms.Control> klasy wymaga wykonania więcej planowania i wdrażania go oferuje także funkcje największej gamy opcji. Gdy dziedziczenie z <xref:System.Windows.Forms.Control>, dziedziczą bardzo podstawowe funkcje, który sprawia, że formanty, które działają. Funkcje związane z <xref:System.Windows.Forms.Control> klasy obsługuje danych wejściowych użytkownika za pomocą klawiatury i myszy, definiuje granice i rozmiar formantu, zapewnia uchwytów okien i zapewnia Obsługa komunikatów i bezpieczeństwo. Zawierają wszelkie rysowania, czyli w tym przypadku rzeczywistego renderowania interfejsu graficznego kontrolki, nie jest włączyć wszystkie funkcje interakcji użytkownika. Należy podać wszystkie te aspekty poprzez kod niestandardowy.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-create-a-custom-control"></a>Można utworzyć niestandardowego formantu  
+### <a name="to-create-a-custom-control"></a>Aby utworzyć formant niestandardowy  
   
-1.  Utwórz nową **aplikacji systemu Windows** lub **Biblioteka formantów systemu Windows** projektu.  
+1.  Utwórz nową **aplikacji Windows** lub **Biblioteka formantów Windows** projektu.  
   
 2.  Z **projektu** menu, wybierz **Dodaj klasę**.  
   
-3.  W **Dodaj nowy element** okno dialogowe, kliknij przycisk **formant niestandardowy**.  
+3.  W **Dodaj nowy element** okno dialogowe, kliknij przycisk **kontrolkę niestandardową**.  
   
-     Formant niestandardowy jest dodawany do projektu.  
+     Nowy formant niestandardowy zostanie dodany do projektu.  
   
-4.  Naciśnij klawisz F7, aby otworzyć **edytora kodu** dla formantu niestandardowego.  
+4.  Naciśnij klawisz F7, aby otworzyć **Edytor kodu** kontrolki niestandardowej.  
   
-5.  Zlokalizuj <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, która będzie pusty, z wyjątkiem wywołanie <xref:System.Windows.Forms.Control.OnPaint%2A> metody klasy podstawowej.  
+5.  Znajdź <xref:System.Windows.Forms.Control.OnPaint%2A> metody, która będzie pusta, z wyjątkiem wywołanie <xref:System.Windows.Forms.Control.OnPaint%2A> metody klasy bazowej.  
   
-6.  Zmodyfikuj kod, aby uwzględnić wszystkie niestandardowe rysowania dla formantu.  
+6.  Zmodyfikuj kod, aby zastosować niestandardowe rysowania, które kontrolki.  
   
-     Aby uzyskać informacje dotyczące pisania kodu do renderowania grafiki dla formantów, zobacz [niestandardowe malowanie i renderowanie formantu](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).  
+     Informacje na temat pisania kodu w celu renderowania grafiki dla formantów, zobacz [niestandardowe malowanie i renderowanie formantu](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).  
   
-7.  Implementuje żadnych niestandardowych metod, właściwości lub zdarzeń, zawierające formantu.  
+7.  Implementuje żadnych niestandardowych metod, właściwości lub zdarzeń, zawierające Twoją kontrolą.  
   
-8.  Zapisz i przetestować formantu.  
+8.  Zapisz i przetestuj formantu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Różne typy kontrolek niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: 8e1462c7e0097bb2f04c6833a1bb279611b24133
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 2094ba308ba384feb8542e896cb1eafcf645947c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805513"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524469"
 ---
 # <a name="await-operator-visual-basic"></a>Await — Operator (Visual Basic)
-Należy zastosować `Await` operatora operandu w asynchronicznej metody lub wyrażenia lambda wstrzymania wykonywanie metody do momentu ukończenia zadania oczekiwano. Zadanie reprezentuje pracy w toku.  
+Należy zastosować `Await` operatora do argumentu operacji w asynchronicznej metody lub wyrażenia lambda wstrzymać wykonywanie metody, dopóki nie zakończy się oczekiwane zadanie. Zadanie reprezentuje pracę w toku.  
   
- Metoda, w którym `Await` służy musi mieć [Async](../../../visual-basic/language-reference/modifiers/async.md) modyfikator. Taka metoda, zdefiniowany przy użyciu `Async` modyfikator i zazwyczaj zawierającego co najmniej jeden `Await` wyrażenia, jest określany jako *metody asynchronicznej*.  
+ Metody, w którym `Await` służy musi mieć [Async](../../../visual-basic/language-reference/modifiers/async.md) modyfikator. Taka metoda, zdefiniowana za pomocą `Async` modyfikator i zwykle zawierająca co najmniej jeden `Await` wyrażeń, jest określany jako *metody asynchronicznej*.  
   
 > [!NOTE]
->  `Async` i `Await` słowa kluczowe wprowadzono w programie Visual Studio 2012. Aby obejrzeć wprowadzenie do programowania asynchronicznego Zobacz [programowanie asynchroniczne z Async i Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
+>  `Async` i `Await` słowa kluczowe zostały wprowadzone w programie Visual Studio 2012. Wprowadzenie do programowania asynchronicznego, zobacz [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
- Zwykle zadania, do którego należy zastosować `Await` operator jest wartością zwracaną przez wywołanie do metody, która implementuje [wzorca asynchronicznego opartego na zadaniach](http://go.microsoft.com/fwlink/?LinkId=204847), która jest <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>.  
+ Zwykle zadania, do którego zastosowano `Await` operator jest wartością zwracaną z wywołania do metody, która implementuje [wzorca asynchronicznego opartego na zadaniach](https://go.microsoft.com/fwlink/?LinkId=204847), która jest <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>.  
   
- W poniższym kodzie <xref:System.Net.Http.HttpClient> metody <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> zwraca `getContentsTask`, `Task(Of Byte())`. Zadanie jest obietnicę w celu utworzenia tablicy bajtowej rzeczywiste po zakończeniu operacji. `Await` Operator jest stosowany do `getContentsTask` wstrzymania wykonywania w `SumPageSizesAsync` do momentu `getContentsTask` została ukończona. Tymczasem zwróceniem sterowania do wywołującego `SumPageSizesAsync`. Gdy `getContentsTask` zostało zakończone, `Await` wyrażenie na tablicę bajtów.  
+ W poniższym kodzie <xref:System.Net.Http.HttpClient> metoda <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> zwraca `getContentsTask`, `Task(Of Byte())`. Zadanie jest obietnicą utworzenia rzeczywistej tablicy bajtowej, po zakończeniu operacji. `Await` Operator jest stosowany do `getContentsTask` w celu wstrzymania wykonywania w metodzie `SumPageSizesAsync` aż `getContentsTask` zostało zakończone. W międzyczasie formant zostaje zwrócony do obiektu wywołującego `SumPageSizesAsync`. Gdy `getContentsTask` został zakończony, `Await` wynikiem wyrażenia jest tablicą bajtów.  
   
 ```vb  
 Private Async Function SumPageSizesAsync() As Task  
@@ -43,9 +43,9 @@ End Function
 ```  
   
 > [!IMPORTANT]
->  Aby uzyskać pełny przykład, zobacz [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Możesz pobrać próbki z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) w witrynie firmy Microsoft. Przykładem jest w projekcie AsyncWalkthrough_HttpClient.  
+>  Aby uzyskać kompletny przykład, zobacz [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Możesz pobrać próbkę z [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) w witrynie internetowej firmy Microsoft. Przykład znajduje się w projekcie AsyncWalkthrough_HttpClient.  
   
- Jeśli `Await` jest stosowany do wyniku wywołania metody, która zwraca `Task(Of TResult)`, typ `Await` wyrażenie jest TResult. Jeśli `Await` jest stosowany do wyniku wywołania metody, która zwraca `Task`, `Await` wyrażenie nie zwraca wartości. Poniższy przykład przedstawia różnicy.  
+ Jeśli `Await` jest stosowany do wyniku wywołania metody, która zwraca `Task(Of TResult)`, typ `Await` wyrażenie jest TResult. Jeśli `Await` jest stosowany do wyniku wywołania metody, która zwraca `Task`, `Await` wyrażenie nie zwraca wartości. Poniższy przykład ilustruje tę różnicę.  
   
 ```vb  
 ' Await used with a method that returns a Task(Of TResult).  
@@ -55,23 +55,23 @@ Dim result As TResult = Await AsyncMethodThatReturnsTaskTResult()
 Await AsyncMethodThatReturnsTask()  
 ```  
   
- `Await` Wyrażenia lub instrukcji nie są blokowane w wątku, na którym jest wykonywany. Zamiast tego należy go powoduje, że kompilator rejestracja pozostałe metody asynchronicznej po `Await` jako kontynuacji zadania Oczekiwano wyrażenia. Formant zwraca do obiektu wywołującego metody asynchronicznej. Po ukończeniu zadania wywołuje kontynuacji i wykonywania wznawia metody asynchronicznej miejsca, w którym.  
+ `Await` Wyrażenia lub instrukcji nie blokuje wątku, na którym jest wykonywany. Zamiast tego należy go powoduje, że kompilator pozostałą metodę asynchronicznej po `Await` wyrażenia jako kontynuację w oczekiwane zadanie. Formant powraca do obiektu wywołującego metody asynchronicznej. Po zakończeniu zadania wywołuje jego kontynuację, a wykonywanie metody asynchronicznej zostaje wznowione tam, gdzie ją przerwaliśmy.  
   
- `Await` Wyrażenie może wystąpić tylko w treści natychmiastowo otaczającą metody lub wyrażenia lambda oznaczonym za `Async` modyfikator. Termin *Await* służy jako słowo kluczowe tylko w tym kontekście. W innym miejscu jest interpretowany jako identyfikator. W ramach asynchronicznej metody lub wyrażenia lambda `Await` wyrażenia nie może wystąpić w wyrażeniu zapytania w `catch` lub `finally` zablokować z [spróbuj... CATCH... Na koniec](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) instrukcji w pętli sterowania zmiennej wyrażeniu `For` lub `For Each` pętli lub w treści [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) instrukcji.  
+ `Await` Wyrażenie może wystąpić tylko w treści bezpośrednio otaczającej metody lub wyrażenia lambda, oznaczonej przez `Async` modyfikator. Termin *Await* służy jako słowo kluczowe tylko w tym kontekście. Gdzie indziej będzie interpretowany jako identyfikator. W ramach asynchronicznej metody lub wyrażenia lambda `Await` wyrażenia nie może wystąpić w wyrażeniu zapytania w `catch` lub `finally` bloku [spróbuj... CATCH... Na koniec](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) instrukcji w pętli kontroli zmiennej wyrażeniu `For` lub `For Each` pętli, lub w treści [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) instrukcji.  
   
 ## <a name="exceptions"></a>Wyjątki  
- Zwraca większości metod asynchronicznych <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Właściwości zadania zwróconego zawierać informacje o jego stan i Historia, na przykład tego, czy zadanie zostało ukończone, czy metoda asynchroniczna spowodowała wyjątek lub została anulowana i jakie wynik końcowy jest. `Await` Operator uzyskuje dostęp do tych właściwości.  
+ Większości metod asynchronicznych zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Właściwości zwracanego zadania przenoszą informacje o jego stanie i historii, takich jak tego, czy zadanie zostało ukończone, czy metoda async spowodowała wyjątek lub została anulowana i jaki jest wynik końcowy. `Await` Operator uzyskuje dostęp do tych właściwości.  
   
- Jeśli await umożliwiające zwracanie zadań metoda asynchroniczna, która powoduje zgłoszenie wyjątku `Await` operator ponownie zgłasza wyjątek.  
+ Jeśli włączysz zwracającą zadanie metodę asynchroniczną, która powoduje wyjątek `Await` operator ponownie zgłasza wyjątek.  
   
- Jeśli await umożliwiające zwracanie zadań metoda asynchroniczna, która została anulowana, `Await` operator ponownie zgłasza wyjątek <xref:System.OperationCanceledException>.  
+ Jeśli włączysz zwracającą zadanie metody asynchronicznej, która została anulowana, `Await` ponownie zgłasza operator <xref:System.OperationCanceledException>.  
   
- Pojedyncze zadanie, który jest stan można odzwierciedlać wiele wyjątków.  Na przykład zadanie może być wynikiem wywołania do <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Gdy await takie zadania, ponownie zgłasza operacji await tylko jeden z wyjątków. Jednak nie można przewidzieć który wyjątki jest zgłoszony.  
+ Pojedynczego zadania, które jest w stanie błędnym może odzwierciedlać wiele wyjątków.  Na przykład zadanie może być wynikiem wywołania <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. W przypadku takiego zadania, ponownie zgłasza operacji await, tylko jeden z wyjątków. Jednak nie można przewidzieć, który z tych wyjątków jest zgłaszany ponownie.  
   
- Przykłady obsługi błędów w metodach asynchronicznych, zobacz [spróbuj... CATCH... Instrukcji finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Aby uzyskać przykłady obsługi błędów w metodach asynchronicznych, zobacz [spróbuj... CATCH... Na koniec instrukcji](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie formularzy systemu Windows ilustruje użycie `Await` w metodzie asynchronicznej `WaitAsynchronouslyAsync`. Natomiast zachowanie tej metody z zachowaniem `WaitSynchronously`. Bez `Await` operatora, `WaitSynchronously` synchronicznie działa niezależnie od stosowania `Async` modyfikator w swojej definicji i wywołanie <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> w jego treści.  
+ Poniższy przykład Windows Forms ilustruje użycie `Await` w metodzie asynchronicznej, `WaitAsynchronouslyAsync`. Porównaj zachowanie tej metody z zachowaniem `WaitSynchronously`. Bez `Await` operatora `WaitSynchronously` działa synchronicznie, mimo zastosowania `Async` modyfikator w jej definicji i wywołania <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> w jej treści.  
   
 ```vb  
 Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click  

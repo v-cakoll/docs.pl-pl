@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423247"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519450"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML
 XAML czytników i składników zapisywania XAML, zaimplementowanego w .NET Framework XAML Services są oparte na projekt koncepcji strumienia węzłów XAML. Strumień węzłów XAML jest conceptualization zestaw węzłów XAML. W tym conceptualization procesora XAML przeprowadzi struktury relacje węzłem w XAML, jeden na raz. W dowolnym momencie tylko jeden rekord bieżący lub bieżącą pozycję w otwarty strumień węzłów XAML i występuje wiele aspektów interfejsu API zgłaszać tylko informacji dostępnych w tej pozycji. Bieżącego węzła w strumień węzłów XAML można opisać jako obiekt, elementu członkowskiego lub wartość. Traktując XAML jako strumień węzłów XAML, czytniki XAML można komunikować się ze składnikami zapisywania XAML i włączyć program, który będzie wyświetlać, wchodzić w interakcje z lub zmienić zawartość strumienia węzłów XAML podczas ścieżki ładowania lub zapisywania operacji ścieżki, która obejmuje XAML. Projekt interfejsu API czytników i składników zapisywania XAML i koncepcji strumienia węzłów XAML przypominają poprzedniego czytnika powiązane i projekty składnika zapisywania i pojęcia, takie jak [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] i <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> klasy. Ten temat zawiera omówienie koncepcji strumienia węzłów XAML, a w tym artykule opisano, jak można napisać procedury, które współdziałają z reprezentacji XAML na poziomie węzłów XAML.  

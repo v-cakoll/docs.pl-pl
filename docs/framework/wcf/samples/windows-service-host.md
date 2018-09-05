@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
 ms.openlocfilehash: 0283fd8b3fd275be9787bb75763e9395091426a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406265"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513674"
 ---
 # <a name="windows-service-host"></a>Host usług systemu Windows
 Niniejszy przykład pokazuje usługi Windows Communication Foundation (WCF), hostowana w zarządzanych usług Windows. Usługi Windows są kontrolowane za pomocą apletu usługi w **Panelu sterowania** i można je skonfigurować, aby uruchamiała się automatycznie po ponownym uruchomieniu systemu. Przykład składa się z program kliencki i programów usługi Windows. Ta usługa jest implementowany jako .exe program i zawiera swój własny kod hostingu. W innych środowiskach hostingu, takich jak Windows Process Activation usług (WAS) lub Internet Information Services (IIS) nie jest konieczne pisanie kod hostingu.  

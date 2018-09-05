@@ -3,11 +3,11 @@ title: Niestandardowy okres istnienia
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
 ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467749"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520774"
 ---
 # <a name="custom-lifetime"></a>Niestandardowy okres istnienia
 

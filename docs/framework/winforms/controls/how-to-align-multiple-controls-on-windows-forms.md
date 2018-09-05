@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417120"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524016"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Porady: wyrównywanie formantów na formularzach systemu Windows
 Aby ustandaryzować układ interfejsu użytkownika (UI), oparte na Windows aplikacji, można umieścić grup formantów za pomocą jednego polecenia.  

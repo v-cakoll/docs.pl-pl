@@ -1,19 +1,19 @@
 ---
-title: 'Porady: Praca z słowniki za pomocą LINQ do XML (C#)'
+title: 'Porady: Praca ze słownikami przy użyciu LINQ to XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 3f3b2a19f2527ef5d2fececf916c09256e90af7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afe4fafb9963b4fc429f441349f8190c9a1e5bac
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319874"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43531984"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Porady: Praca z słowniki za pomocą LINQ do XML (C#)
-Często jest to wygodny do przekonwertowania odmian struktur danych XML i XML inne struktury danych. W tym temacie przedstawiono konkretnej implementacji tego podejścia ogólne konwertując <xref:System.Collections.Generic.Dictionary%602> XML i na odwrót.  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Porady: Praca ze słownikami przy użyciu LINQ to XML (C#)
+Często jest to wygodne przekonwertować różne typy struktur danych XML i XML do innych struktur danych. W tym temacie przedstawiono określoną implementację tego podejścia ogólne, konwertując <xref:System.Collections.Generic.Dictionary%602> XML i na odwrót.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto formularza konstrukcji funkcjonalności, w którym kwerendy projektów nowych <xref:System.Xml.Linq.XElement> obiektów i kolekcji wynikowy jest przekazywany jako argument do konstruktora głównego <xref:System.Xml.Linq.XElement> obiektu.  
+ W tym przykładzie użyto formularza konstrukcja funkcjonalna, w którym zapytanie projektów nowych <xref:System.Xml.Linq.XElement> obiektów i kolekcji wynikowy jest przekazywany jako argument do konstruktora obiektu głównego <xref:System.Xml.Linq.XElement> obiektu.  
   
 ```csharp  
 Dictionary<string, string> dict = new Dictionary<string, string>();  
@@ -66,5 +66,6 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Projekcje i przekształcenia (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Projekcje i przekształcenia (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

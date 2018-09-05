@@ -4,12 +4,12 @@ description: Dowiedz się, wdrażanie aplikacji .NET Core za pomocą narzędzia 
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244754"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559598"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia (CLI)
 
@@ -26,7 +26,7 @@ Podczas pracy z poziomu wiersza polecenia, można użyć dowolnego edytora w pro
 
 ## <a name="framework-dependent-deployment"></a>Wdrożenie zależny od struktury
 
-Wdrożenie zależny od struktury bez zależności innych firm po prostu polega na tworzenia, testowania i publikowania aplikacji. Prosty przykład napisany w języku C# przedstawiono proces. 
+Wdrożenie zależny od struktury bez zależności innych firm po prostu polega na tworzenia, testowania i publikowania aplikacji. Prosty przykład napisany w języku C# przedstawiono proces.
 
 1. Utwórz katalog projektu.
 
@@ -43,7 +43,7 @@ Wdrożenie zależny od struktury bez zależności innych firm po prostu polega n
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Zależności projektu i narzędzia do aktualizacji.
- 
+
    Uruchom [dotnet restore](../tools/dotnet-restore.md) ([patrz Uwaga](#dotnet-restore-note)) polecenie, aby przywrócić zależności określony w projekcie.
 
 1. Utworzenie kompilacja do debugowania aplikacji.
@@ -105,7 +105,7 @@ Wdrożenie niezależna bez zależności innych firm obejmuje tworzenie projektu 
 
 1. Zdefiniuj platformy, dla których będzie dotyczyć aplikacji.
 
-   Tworzenie `<RuntimeIdentifiers>` tagów w `<PropertyGroup>` części Twojej *csproj* pliku, który definiuje platform aplikacji jest przeznaczony dla i określ identyfikator środowiska uruchomieniowego (RID) dla każdej z platform docelowych. Należy zauważyć, że trzeba będzie również dodać średnika do rozdzielenia identyfikatorów RID. Zobacz [katalog identyfikatora środowiska uruchomieniowego](../rid-catalog.md) Lista identyfikatorów środowisk uruchomieniowych. 
+   Tworzenie `<RuntimeIdentifiers>` tagów w `<PropertyGroup>` części Twojej *csproj* pliku, który definiuje platform aplikacji jest przeznaczony dla i określ identyfikator środowiska uruchomieniowego (RID) dla każdej z platform docelowych. Należy zauważyć, że trzeba będzie również dodać średnika do rozdzielenia identyfikatorów RID. Zobacz [katalog identyfikatora środowiska uruchomieniowego](../rid-catalog.md) Lista identyfikatorów środowisk uruchomieniowych.
 
    Na przykład następująca `<PropertyGroup>` sekcja wskazuje, że aplikacja działa w 64-bitowych systemach operacyjnych Windows 10 i 64-bitowym systemie operacyjnym OS X w wersji 10.11.
 
@@ -188,8 +188,7 @@ Należy pamiętać, że można wdrożyć tylko niezależna wdrożenia przy użyc
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 
-[Wdrożenie aplikacji programu .NET core](index.md)   
-[Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)   
-
+* [Wdrożenie aplikacji programu .NET core](index.md)
+* [Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)

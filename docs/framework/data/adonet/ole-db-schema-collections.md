@@ -2,18 +2,18 @@
 title: Kolekcje schematów OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f1cb5e1fe967088b44fa4045dfe50c1c57d963eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1ab6426875b73b400a59b7e4cf155615d7472d05
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766936"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514492"
 ---
 # <a name="ole-db-schema-collections"></a>Kolekcje schematów OLE DB
-W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla programu Microsoft SQL Server, Oracle i Microsoft Jet.  
+W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla programu Microsoft SQL Server, Oracle i Microsoft Jet.  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Dostawca programu Microsoft SQL Server OLE DB  
- Sterownik firmy Microsoft SQL Server OLE DB obsługuje następujące kolekcje określonego schematu, oprócz typowych kolekcje schematów:  
+ Sterownik firmy Microsoft SQL Server OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
 -   Tabele  
   
@@ -23,13 +23,13 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 -   ProcedureParameters  
   
--   Katalogu  
+-   Wykaz  
   
 -   Indeksy  
   
 ### <a name="tables"></a>Tabele  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -43,7 +43,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="columns"></a>Kolumny  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -81,7 +81,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="procedures"></a>Procedury  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
@@ -94,12 +94,12 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|String|  
-|NAZWA_PARAMETRU|String|  
+|PARAMETER_NAME|String|  
 |ORDINAL_POSITION|Int32|  
 |TYP_PARAMETRU|Int32|  
 |PARAMETER_HASDEFAULT|Boolean|  
@@ -114,16 +114,16 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
 |TYPE_NAME|String|  
 |LOCAL_TYPE_NAME|String|  
   
-### <a name="catalog"></a>Katalogu  
+### <a name="catalog"></a>Wykaz  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |CATALOG_NAME|String|  
 |OPIS ELEMENTU|String|  
   
 ### <a name="indexes"></a>Indeksy  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -152,7 +152,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
 |ZINTEGROWANE|Boolean|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Dostawca programu Microsoft Oracle OLE DB  
- Sterownik firmy Microsoft Oracle OLE DB obsługuje następujące kolekcje określonego schematu, oprócz typowych kolekcje schematów:  
+ Sterownik firmy Microsoft Oracle OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
 -   Tabele  
   
@@ -170,7 +170,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="tables"></a>Tabele  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -184,7 +184,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="columns"></a>Kolumny  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -217,7 +217,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="procedures"></a>Procedury  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
@@ -230,7 +230,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
@@ -248,11 +248,11 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |OPIS ELEMENTU|String|  
-|PRZECIĄŻENIA|Int16|  
+|PRZECIĄŻENIE|Int16|  
   
 ### <a name="views"></a>Widoki  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -266,7 +266,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="indexes"></a>Indeksy  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -295,7 +295,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
 |ZINTEGROWANE|Boolean|  
   
 ## <a name="microsoft-jet-ole-db-provider"></a>Dostawca programu Microsoft Jet OLE DB  
- Sterownik firmy Microsoft Jet OLE DB obsługuje następujące kolekcje określonego schematu, oprócz typowych kolekcje schematów:  
+ Sterownik firmy Microsoft Jet OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
 -   Tabele  
   
@@ -309,7 +309,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="tables"></a>Tabele  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -323,7 +323,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="columns"></a>Kolumny  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -356,7 +356,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="procedures"></a>Procedury  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
@@ -369,7 +369,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="views"></a>Widoki  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -383,7 +383,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
   
 ### <a name="indexes"></a>Indeksy  
   
-|Element columnName|Typ danych|  
+|NazwaKolumny|Typ danych|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -412,4 +412,4 @@ W tej sekcji omówiono obsługi kolekcji schematu dla dostawcy OLE DB dla progra
 |ZINTEGROWANE|Boolean|  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

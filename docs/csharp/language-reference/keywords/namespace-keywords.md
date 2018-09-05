@@ -5,11 +5,11 @@ helpviewer_keywords:
 - namespaces [C#], keywords
 ms.assetid: 091a66eb-b10d-4f54-9102-5ac0d4bdb84b
 ms.openlocfilehash: fa6110d3c344bfaa75f78624ef5e595e8c05642e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399833"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513837"
 ---
 # <a name="namespace-keywords-c-reference"></a>Słowa kluczowe przestrzeni nazw (odwołanie w C#)
 W tej sekcji opisano słów kluczowych i operatory, które są skojarzone z za pomocą przestrzeni nazw:  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f7f385f3-ffcf-4f3b-af35-de8818938e5f
 ms.openlocfilehash: 5e282bce5f2519592babad0afcf7f8a326cf936d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425570"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530571"
 ---
 # <a name="how-to-execute-a-query-that-returns-nested-collections"></a>Porady: wykonywanie zapytania, które zwraca kolekcje zagnieżdżone
 To pokazuje, jak uruchamiać polecenia względem modelu koncepcyjnego przy użyciu <xref:System.Data.EntityClient.EntityCommand> obiektu oraz jak pobierać wyniki zagnieżdżoną kolekcję przy użyciu <xref:System.Data.EntityClient.EntityDataReader>.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -utf8output compiler option [C#]
 ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
 ms.openlocfilehash: 32c239f7563101cb1dddedbf868d298806353492
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43476264"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518175"
 ---
 # <a name="-utf8output-c-compiler-options"></a>-utf8output (opcje kompilatora C#)
 **-Utf8output** opcji powoduje wyświetlenie kompilatora, dane wyjściowe przy użyciu kodowania UTF-8.  

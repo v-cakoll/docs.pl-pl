@@ -9,46 +9,46 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: f9a84a3689bfdb7c560590b73dfdffe696611163
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff113b3abfb8363e65d7ccb101973b6821d97262
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529292"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43531735"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Porady: drukowanie w formularzach systemu Windows przy użyciu podglądu wydruku
-Jest bardzo często programowania oferowanie podglądu wydruku, oprócz usługi drukowania formularzy systemu Windows. Prosty sposób dodawania usługi podglądu wydruku do aplikacji jest użycie <xref:System.Windows.Forms.PrintPreviewDialog> kontroli w połączeniu z <xref:System.Drawing.Printing.PrintDocument.PrintPage> logiki obsługi zdarzeń do drukowania pliku.  
+Często zdarza się w formularzach Windows programowania do zaoferowania podglądu wydruku oprócz usług drukowania. Łatwe dodawanie usług podglądu wydruku do aplikacji jest użycie <xref:System.Windows.Forms.PrintPreviewDialog> kontroli w połączeniu z <xref:System.Drawing.Printing.PrintDocument.PrintPage> logikę obsługi zdarzeń do drukowania pliku.  
   
-### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>Aby wyświetlić podgląd dokument tekstowy o printpreviewdialog — formant  
+### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>Aby wyświetlić podgląd dokument tekstowy o PrintPreviewDialog, kontrolka  
   
-1.  Dodaj <xref:System.Windows.Forms.PrintPreviewDialog>, <xref:System.Drawing.Printing.PrintDocument>i dwa ciągi do formularza.  
+1.  Dodaj <xref:System.Windows.Forms.PrintPreviewDialog>, <xref:System.Drawing.Printing.PrintDocument>, a dwa ciągi do formularza.  
   
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#1)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#1)]  
   
-2.  Ustaw <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> właściwości dokumentu chcesz drukowania i otwierać i odczytywać zawartość dokumentu do ciągu dodane wcześniej.  
+2.  Ustaw <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> właściwości do dokumentu, które chcesz wydrukować i Otwórz, a odczytu zawartości dokumentu na ciąg zostanie dodane wcześniej.  
   
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#2)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#2)]  
   
-3.  Jak w przypadku drukowanie dokumentu, w <xref:System.Drawing.Printing.PrintDocument.PrintPage> program obsługi zdarzeń, użyj <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> właściwość <xref:System.Drawing.Printing.PrintPageEventArgs> klasy i zawartość pliku do obliczania wierszy na stronie i renderowania zawartości dokumentu. Po każdej stronie jest, sprawdź, czy jest to ostatnia strona i ustaw <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> właściwość <xref:System.Drawing.Printing.PrintPageEventArgs> odpowiednio. <xref:System.Drawing.Printing.PrintDocument.PrintPage> Zdarzenie jest wywoływane przed <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> jest `false`. Po zakończeniu renderowania dokumentu zresetować parametry do renderowania. Upewnij się również, <xref:System.Drawing.Printing.PrintDocument.PrintPage> wydarzenie jest skojarzone z metody obsługi zdarzeń.  
+3.  Podobnie jak w przypadku drukowanie dokumentu, w <xref:System.Drawing.Printing.PrintDocument.PrintPage> programu obsługi zdarzeń, użyj <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> właściwość <xref:System.Drawing.Printing.PrintPageEventArgs> klasy i zawartość pliku do obliczania wierszy na stronie i renderują zawartość dokumentu. Po każdej stronie jest rysowana, sprawdź, czy jest ostatniej strony i ustaw <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> właściwość <xref:System.Drawing.Printing.PrintPageEventArgs> odpowiednio. <xref:System.Drawing.Printing.PrintDocument.PrintPage> Zdarzenie jest zgłaszane do momentu <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> jest `false`. Po zakończeniu renderowania dokumentu zresetować parametry do renderowania. Upewnij się również, <xref:System.Drawing.Printing.PrintDocument.PrintPage> wydarzenie jest skojarzone z jego metody obsługi zdarzeń.  
   
     > [!NOTE]
-    >  Może zostały już wykonane kroki 2 i 3, jeśli zostały zaimplementowane drukowanie w aplikacji.  
+    >  Może zostały już wykonane kroki 2 i 3, jeśli udało Ci się wdrożyć drukowanie w aplikacji.  
   
-     W poniższym przykładzie kodu programu obsługi zdarzeń służy do drukowania pliku "testPage.txt" w tej samej czcionki w formularzu.  
+     W poniższym przykładzie kodu programu obsługi zdarzeń służy do drukowania pliku "testPage.txt" w tym samym czcionki używanej w formularzu.  
   
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#3)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#3)]  
   
-4.  Ustaw <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A> właściwość <xref:System.Windows.Forms.PrintPreviewDialog> formant <xref:System.Drawing.Printing.PrintDocument> składnika w formularzu.  
+4.  Ustaw <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A> właściwość <xref:System.Windows.Forms.PrintPreviewDialog> kontrolę <xref:System.Drawing.Printing.PrintDocument> składnika w formularzu.  
   
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#5)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#5)]  
   
-5.  Wywołanie <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metoda <xref:System.Windows.Forms.PrintPreviewDialog> formantu. Zwykle możesz wywołać <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> z <xref:System.Windows.Forms.Control.Click> metoda obsługi zdarzeń przycisku. Wywoływanie <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> zgłasza <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń i renderuje dane wyjściowe do <xref:System.Windows.Forms.PrintPreviewDialog> formantu. Gdy użytkownik kliknie ikonę drukowania w oknie dialogowym <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzenie jest zgłaszane, wysyła dane wyjściowe do drukarki zamiast okna dialogowego podglądu. Jest to, dlaczego ten ciąg jest resetowany pod koniec procesu renderowania w kroku 3.  
+5.  Wywołaj <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metody <xref:System.Windows.Forms.PrintPreviewDialog> kontroli. Zazwyczaj wywoływałby <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> z <xref:System.Windows.Forms.Control.Click> metody obsługi zdarzeń przycisku. Wywoływanie <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> zgłasza <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń i renderuje dane wyjściowe do <xref:System.Windows.Forms.PrintPreviewDialog> kontroli. Gdy użytkownik kliknie ikonę drukowania w oknie dialogowym <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzenie jest zgłaszane ponownie wysyła dane wyjściowe do drukarki zamiast okna dialogowego podglądu. Jest to, dlaczego ten ciąg jest resetowany po zakończeniu procesu renderowania w kroku 3.  
   
-     Poniższy kod przedstawia przykład <xref:System.Windows.Forms.Control.Click> metoda obsługi zdarzeń dla przycisku w formularzu. Ta metoda obsługi zdarzeń wywołuje metody służące do odczytu dokumentu i wyświetlenie okna dialogowego podglądu wydruku.  
+     Poniższy kod przedstawia przykład <xref:System.Windows.Forms.Control.Click> metody obsługi zdarzeń dla przycisku w formularzu. Ta metoda obsługi zdarzeń wywołuje metody służące do odczytu, Pokaż okno dialogowe podglądu wydruku.  
   
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#4)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#4)]  
@@ -60,9 +60,9 @@ Jest bardzo często programowania oferowanie podglądu wydruku, oprócz usługi 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do systemu, System.Windows.Forms, System.Drawing zestawów.  
+-   Odwołania do systemu, przestrzeń nazw System.Windows.Forms, System.Drawing zestawów.  
   
--   Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+-   Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: wyświetlanie podglądu wydruku w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  

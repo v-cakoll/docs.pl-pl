@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 481360f731297e1c287c969e6524c68e0c9c0b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386473"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674298"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Debugowanie, śledzenie i profilowanie
-Do debugowania aplikacji .NET Framework, kompilatora i środowiska uruchomieniowego musi być skonfigurowane do włączenia debugera dołączyć do aplikacji i zarówno symbole i linii mapy, jeśli to możliwe, aplikacji i jej odpowiednie Microsoft pośredni język (MSIL). Po zarządzanej aplikacji został debugowania, mogą być profilowane zwiększania wydajności. Profilowanie ocenia i opisuje wierszy kodu źródłowego z generowaniem kodu najczęściej wykonywane, i ile czasu potrzebnego na ich wykonanie.  
+Do debugowania aplikacji .NET Framework, kompilatora i środowiska uruchomieniowego musi być skonfigurowana do włączenia debuger, który chcesz dołączyć do aplikacji i aby wygenerować symbole i linii mapy, jeśli to możliwe, dla aplikacji i jej odpowiednie Microsoft intermediate Language (MSIL). Po zarządzanych aplikacji został debugowany, mogą być profilowane do poprawienia wydajności. Profilowanie oblicza i opisuje linie kodu źródłowego, które generują kod najczęściej wykonywaną i ile czas potrzebny do ich wykonania.  
   
- Aplikacji programu .NET framework są łatwo debugować przy użyciu programu Visual Studio, która obsługuje wiele informacji konfiguracji. Jeśli nie zainstalowano programu Visual Studio, możesz sprawdzić i zwiększanie wydajności aplikacji .NET Framework za pomocą klasy debugowania w programie .NET Framework <xref:System.Diagnostics> przestrzeni nazw. Ta przestrzeń nazw zawiera <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug>, i <xref:System.Diagnostics.TraceSource> klasy śledzenia przepływu wykonywania i <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog>, i <xref:System.Diagnostics.PerformanceCounter> klasy dla profilowania kodu.  
+ Aplikacje programu .NET framework są łatwo debugować za pomocą programu Visual Studio, która obsługuje wiele szczegółów konfiguracji. Jeśli nie zainstalowano programu Visual Studio, możesz sprawdzić i zwiększyć wydajność aplikacji .NET Framework przy użyciu klas debugowania w programie .NET Framework <xref:System.Diagnostics> przestrzeni nazw. Ta przestrzeń nazw zawiera <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug>, i <xref:System.Diagnostics.TraceSource> klasy w celu śledzenia wykonywania przepływu, a <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog>, i <xref:System.Diagnostics.PerformanceCounter> klas na potrzeby profilowania kodu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Włączanie debugowania dołączania JIT](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
- Pokazuje, jak skonfigurować rejestr w celu dołączania JIT to aparat debugowania aplikacji .NET Framework.  
+ Pokazuje, jak skonfigurować rejestr w celu dołączania JIT aparatu debugowania aplikacji .NET Framework.  
   
  [Ułatwianie debugowania obrazu](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- Pokazuje, jak wyłączyć śledzenia JIT na i optymalizacji ułatwiające debugowania zestawu.  
+ Pokazuje, jak wyłączyć śledzenia JIT na i optymalizacji ułatwiają zestaw do debugowania.  
   
  [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- Opisuje sposób monitorowania wykonywanie aplikacji, gdy jest on uruchomiony i jak możliwość agregowania go, aby wyświetlić jak wykonuje czy też coś niepowodzenia.  
+ W tym artykule opisano, jak monitorować wykonywanie aplikacji, gdy jest uruchomiona i w jaki sposób do Instrumentacji go, aby wyświetlić jak dobrze działa, czy Niestety, wystąpił problem.  
   
  [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- W tym artykule opisano Asystenci zarządzanego debugowania (mda), które pomocy, które działają w połączeniu z środowisko uruchomieniowe języka wspólnego (CLR), aby podać informacje dotyczące stanu środowiska uruchomieniowego debugowania.  
+ W tym artykule opisano asystentów zarządzanego debugowania (mda), które są Debugowanie — pomoce, które działają w połączeniu z środowisko uruchomieniowe języka wspólnego (CLR) zawiera informacje na temat stanu środowiska uruchomieniowego.  
   
  [Udoskonalanie debugowania za pomocą atrybutów wyświetlania debugera](../../../docs/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes.md)  
- W tym artykule opisano, jak developer typu można określić co typu będą wyglądać po wyświetleniu go w debugerze.  
+ W tym artykule opisano, jak Deweloper typ można określić, co typ będzie wyglądać po wyświetleniu go w debugerze.  
   
  [Liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- W tym artykule opisano liczniki, które można śledzić wydajność aplikacji.  
+ W tym artykule opisano liczniki, które służą do śledzenia wydajności aplikacji.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Debugowanie aplikacji ASP.NET i AJAX](http://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
- Zawiera wymagania wstępne i instrukcje dotyczące debugowania aplikacji ASP.NET, podczas tworzenia lub po wdrożeniu.  
+ [Debugowanie aplikacji ASP.NET i AJAX](https://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ Zawiera wymagania wstępne i instrukcje dotyczące sposobu debugowania aplikacji ASP.NET, podczas tworzenia lub po wdrożeniu.  
   
  [Podręcznik programowania](../../../docs/framework/development-guide.md)  
  Przewodnik po wszystkich obszarach kluczowych technologii i zadaniach związanych z rozwojem aplikacji, takich jak tworzenie, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji, oraz informacje na temat programowania dynamicznego, interoperacyjności, rozszerzalności, zarządzania pamięcią i wątków.

@@ -1,19 +1,19 @@
 ---
-title: Pośredni Materialization (C#)
+title: Materializacja pośrednia (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: b98f9765f5c54a49f26a9d1a3ac351f3eebcf9c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56c4bb57a931362b3e14f6a8da917ae6907565d6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320641"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516546"
 ---
-# <a name="intermediate-materialization-c"></a>Pośredni Materialization (C#)
-Jeśli nie są dokładne, w niektórych sytuacjach można znacząco zmienić profil pamięci i wydajność aplikacji powodując przedwczesne materialization kolekcji zapytania. Niektóre standardowe operatory zapytań spowodować materialization ich kolekcji źródłowej przed reaguje pojedynczy element. Na przykład <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> najpierw iteruje po kolekcji jego całą źródłową, a następnie sortuje wszystkie elementy i ostatecznie zwraca pierwszy element. To oznacza, że jest kosztowne uzyskać pierwszy element uporządkowaną kolekcję; Każdy element nie jest następnie kosztowne. Jest to logiczne: byłoby niemożliwe dla operatora zapytania nie.  
+# <a name="intermediate-materialization-c"></a>Materializacja pośrednia (C#)
+Jeśli nie jesteś zachować ostrożność, w niektórych sytuacjach można znacząco zmienić profil pamięć i wydajność aplikacji, powodując przedwczesne materializacja kolekcji w zapytaniach. Niektóre standardowe operatory zapytań spowodować materializacja ich kolekcji źródłowej przed reaguje pojedynczy element. Na przykład <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> najpierw wykonuje iterację przez jego kolekcja całą źródłową, a następnie sortuje wszystkie elementy i wreszcie zwraca pierwszy element. To oznacza, że jest kosztowne uzyskać pierwszy element uporządkowaną kolekcję; Każdy element nie jest później kosztowne. Jest to logiczne: byłoby niemożliwe dla tego operatora zapytania robić.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie powoduje zmianę poprzedniego przykładu. `AppendString` Wywołania metody <xref:System.Linq.Enumerable.ToList%2A> przed iteracji w źródle. Powoduje to materialization.  
+ Ten przykład modyfikuje poprzedni przykład. `AppendString` Wywołania metody <xref:System.Linq.Enumerable.ToList%2A> przed iteracji w źródle. Powoduje to materializacja.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -80,11 +80,12 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- W tym przykładzie można stwierdzić, że wywołanie <xref:System.Linq.Enumerable.ToList%2A> powoduje, że `AppendString` wyliczyć całego źródła przed reaguje pierwszego elementu. Jeśli źródło dużą tablicę, to znacznie zmieniłaby profilu pamięci aplikacji.  
+ W tym przykładzie możesz zobaczyć, że wywołanie <xref:System.Linq.Enumerable.ToList%2A> powoduje, że `AppendString` wyliczyć całego źródła przed reaguje na pierwszy element. Źródło, gdyby dużą tablicę, znacznie zmieniłaby ten profil pamięci aplikacji.  
   
- Standardowe operatory zapytań można również zostaną połączone. Końcowe tematu w tym samouczku przedstawiono to.  
+ Standardowe operatory zapytań można również łączyć w łańcuch. Ostatnim temacie w tym samouczku przedstawiono to.  
   
--   [CBC standardowych operatorów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+-   [Łańcucha standardowych operatorów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Samouczek: Tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Samouczek: Tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

@@ -1,31 +1,31 @@
 ---
-title: Wystąpienie magazynów
+title: Magazyny wystąpień
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 0d59daeee318aaf82897517a23343065dc97d69f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ea29c3604042d773590448e31ce4ea95125ca1f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518779"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519581"
 ---
-# <a name="instance-stores"></a>Wystąpienie magazynów
-Magazyn wystąpienia jest kontenerem logicznym wystąpień. Jest to miejsce, gdzie są przechowywane dane wystąpienia i metadanych. Magazyn wystąpienia nie oznacza dedykowanych dla magazynu fizycznego. Magazyn wystąpienia mogą zawierać informacje o stanie nietrwałe w pamięci lub trwałe informacji z bazy danych programu SQL Server. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z magazynu wystąpienia SQL przepływu pracy, czyli konkretną implementację magazynu wystąpienia, który umożliwia przepływy pracy, aby zachować dane wystąpienia i metadane do bazy danych programu SQL Server 2005 lub SQL Server 2008. Ponadto AppFabric w systemie Windows Server udostępnia konkretną implementację magazynu wystąpienia. Aby uzyskać więcej informacji, zobacz [sklepu wystąpienia sieci szkieletowej dla systemu Windows Server, zapytań i dostawców kontroli](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
+# <a name="instance-stores"></a>Magazyny wystąpień
+Magazyn wystąpień jest kontenerem logicznym wystąpień. Jest miejscem, gdzie są przechowywane dane wystąpienia i metadanych. Magazyn wystąpień nie oznacza dedykowanych dla magazynu fizycznego. Magazyn wystąpień mogą zawierać informacje o stanie nietrwałe w pamięci lub trwałe informacji z bazy danych programu SQL Server. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Dostarczany z Store wystąpienia przepływu pracy SQL, który jest konkretną implementację magazyn wystąpienia, umożliwiająca przepływów pracy zachować dane wystąpienia i metadane do bazy danych programu SQL Server 2005 lub SQL Server 2008. Ponadto AppFabric w systemie Windows Server udostępnia konkretną implementację magazynu wystąpienia. Aby uzyskać więcej informacji, zobacz [systemu Windows Server App Fabric wystąpienia Store, zapytań i dostawców kontroli](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
   
- Trwałość interfejsu API jest interfejs między hostem i wystąpienie magazynu, umożliwiająca hosta do wysyłania żądań polecenia (na przykład <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> i <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) w magazynie wystąpień. Konkretną implementację tego interfejsu API nosi nazwę dostawcy trwałości. Dostawca trwałości odbiera żądania od hosta i modyfikuje w magazynie wystąpień.  
+ Utrwalanie interfejsu API jest interfejs między hostem i Magazyn wystąpienia, umożliwiająca hosta na potrzeby wysyłania żądań polecenia (na przykład <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> i <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) Magazyn wystąpienia. Wykonanie tego interfejsu API nosi nazwę dostawcy stanów trwałych. Dostawcy stanów trwałych odbiera żądania od hosta i modyfikuje magazyn wystąpienia.  
   
- Hosty i magazyny wystąpienia są podłączane, dzięki czemu hosta może być używany z wielu sklepach wystąpienia i wystąpienie magazynu mogą być używane z wielu hostach. Magazyn wystąpienia zwykle jest zoptymalizowana pod kątem wzorców użycia określonego hosta, mimo że SIS i hosta może się rozwijać na niezależne cyklu. Na przykład **obiektu WorkflowServiceHost** i **SqlWorkflowInstanceStore** zostały zaprojektowane do siebie. Można utworzyć własne wystąpienie magazynu do utrwalenia danych lub metadanych wystąpień usługi przepływu pracy i używanie tego wystąpienia magazynu z **obiektu WorkflowServiceHost**. Na przykład można utworzyć OracleWorkflowInstanceStore umożliwiający przepływy pracy utrwalenia informacji w bazie danych programu Oracle zamiast zapisywania ich w bazie danych programu SQL Server.  
+ Hosty i magazyny wystąpień są podłączane co host może być używany z wielu magazynów wystąpienia i Magazyn wystąpienia mogą być używane z wielu hostach. Magazyn wystąpień zwykle jest zoptymalizowany pod kątem wzorców użycia określonego hosta, mimo że SIS i hosta może się rozwijać na niezależne cykle życia. Na przykład **WorkflowServiceHost** i **SqlWorkflowInstanceStore** zostały zaprojektowane do pracy ze sobą współdziałały. Można utworzyć własny magazyn wystąpienia utrwalić dane i metadane wystąpień usługi przepływu pracy i używać tego magazynu wystąpienia z **WorkflowServiceHost**. Na przykład można utworzyć OracleWorkflowInstanceStore umożliwiający przepływy pracy utrwalania informacji w bazie danych programu Oracle zamiast zapisywania ich w bazie danych programu SQL Server.  
   
- Są często hostom rozszerzony o dodatkowe funkcje, które modyfikuje utrwalonych obiektów. Na przykład system utrwalania wystąpień może mieć hosta przepływu pracy, rozszerzenie, które obsługuje operację "Zawieszania" i magazynu wystąpienia SQL.  Hosta przepływu pracy może wysyłać standardowego polecenia takie jak zapisać lub obciążenia, aby zapisać lub załadować przepływu pracy z magazynu wystąpień lub do zapisywania w magazynie wystąpień przepływu pracy. Rozszerzenia zawieszenia może dodać dodatkowej semantyki do polecenia zapisywanie i ładowanie wystąpienia przepływu pracy, aby nie można załadować wystąpienia Wstrzymany przepływ pracy. Dostawca trwałości w magazynie wystąpień programu SQL rozumie polecenia zapisywanie i ładowanie wystąpienia przepływu pracy i implementuje poleceń, wywołując odpowiednie przechowywane procedury, które zmieniania tabel trwałych obiektów w bazie danych programu SQL Server.  
+ Jest to typowe dla hostów, aby można rozszerzyć za pomocą dodatkowych funkcji, która modyfikuje utrwalonych obiektów. Na przykład system trwałości wystąpienie może mieć hosta przepływu pracy, rozszerzenia, które obsługuje operację "Zawieszania" i wystąpienie magazynu danych SQL.  Hosta przepływu pracy może wysyłać standardowe polecenia takie jak zapisać lub załadować zapisać ani załadować przepływu pracy ze sklepu wystąpienia lub zapisać przepływ pracy do magazynu wystąpienia. Rozszerzenie Wstrzymaj może dodać dodatkowej semantyki do polecenia zapisywanie i ładowanie wystąpienia przepływu pracy, tak aby nie można załadować wystąpienia Wstrzymany przepływ pracy. Dostawcy stanów trwałych dla magazynu wystąpienia SQL rozumie polecenia zapisywanie i ładowanie wystąpienia przepływu pracy i implementuje poleceń przez wywołanie odpowiedniej procedury składowane, które zmieniają tabele trwałe obiekty w bazie danych programu SQL Server.  
   
- Host pełni rolę właściciela wystąpienia w magazynie wystąpień. Host mogą działać jako więcej niż jednego właściciela wystąpienia z więcej niż jeden magazyn wystąpienia w tym samym czasie. Host zawiera identyfikatory GUID, na przykład kluczy skojarzonych z wystąpieniami. Klucz wystąpienia jest unikatowego aliasu, który identyfikuje wystąpienia. System utrwalania tworzy, aktualizowanie i usuwanie informacji właściciela wystąpienia, podczas wykonywania polecenia wymaganych przez hosty.  
+ Host działa jako właściciela wystąpienia w magazynie wystąpienia. Host może działać jako więcej niż jednego właściciela wystąpienia z więcej niż jeden magazyn wystąpienia w tym samym czasie. Host zawiera identyfikatory GUID dla wystąpienia kluczy skojarzone z wystąpieniami. Klucz wystąpienia jest unikatowego aliasu, który identyfikuje wystąpienia. System trwałości tworzy, aktualizuje i usuwa informacje o właścicielu wystąpienia podczas wykonywania polecenia żądana przez hosty.  
   
- Poniższa lista zawiera ważne etapy hosta interakcji ze sklepem wystąpienie:  
+ Poniższa lista zawiera ważne czynności związane z hosta interakcji z magazynem wystąpienie:  
   
-1.  Uzyskaj **InstanceStore** od dostawcy trwałości.  
+1.  Uzyskaj **objekt InstanceStore** od dostawcy trwałości.  
 
-2.  Uzyskać dojścia do wystąpienia przez wywołanie metody <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> metoda **InstanceStore**.  
+2.  Uzyskaj dojście do wystąpienia, wywołując <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> metody **objekt InstanceStore**.  
   
-3.  Wywołanie polecenia przed dojście wystąpienia przez wywołanie metody <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> metoda **InstanceStore**.  
+3.  Wywołania poleceń względem dojście wystąpienia, wywołując <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> metody **objekt InstanceStore**.  
   
-4.  Sprawdź <xref:System.Runtime.DurableInstancing.InstanceView> zwrócony przez **wywoływania metody InstanceStore.Execute** do określenia wyników polecenia.
+4.  Sprawdź <xref:System.Runtime.DurableInstancing.InstanceView> zwrócone przez **InstanceStore.Execute** do określenia wyników poleceń.

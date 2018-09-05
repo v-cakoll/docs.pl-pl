@@ -1,62 +1,65 @@
 ---
-title: Wykonywanie zapytania Typizowane zbiory danych
-ms.date: 03/30/2017
+title: Podczas badania zestawów
+ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-ms.openlocfilehash: 30a6512202615590a4b399b8ce7173b213a8873c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d956fd5f07c108146d20623bcf811266380c132c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353488"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560250"
 ---
-# <a name="querying-typed-datasets"></a>Wykonywanie zapytania Typizowane zbiory danych
-Jeśli schemat <xref:System.Data.DataSet> jest znany w czasie projektowania aplikacji, zalecane jest użycie typu <xref:System.Data.DataSet> przy użyciu [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Typizowany <xref:System.Data.DataSet> jest klasą pochodną <xref:System.Data.DataSet>. W efekcie dziedziczy wszystkie metody, zdarzeń i właściwości <xref:System.Data.DataSet>. Ponadto maszynowy <xref:System.Data.DataSet> udostępnia silnie typizowane metody, zdarzeń i właściwości. Oznacza to, że masz dostęp tabele i kolumny według nazwy, zamiast za pomocą metody opartej na kolekcji. Dzięki temu zapytania prostszy i bardziej czytelne. Aby uzyskać więcej informacji, zobacz [wpisanych zestawów danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
-  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] obsługuje również obsługę zapytań typu <xref:System.Data.DataSet>. Z typu <xref:System.Data.DataSet>, nie trzeba używać ogólnych <xref:System.Data.DataRowExtensions.Field%2A> metody lub <xref:System.Data.DataRowExtensions.SetField%2A> metodę dostępu do danych kolumny.  Nazwy właściwości są dostępne w czasie kompilacji, ponieważ zawiera informacje o typie <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapewnia dostęp do wartości w kolumnie jako poprawny typ, dzięki czemu błędy niezgodności typów są przechwytywane podczas kompilowania kodu zamiast w czasie wykonywania.  
-  
- Przed rozpoczęciem wykonywania zapytania typu <xref:System.Data.DataSet>, należy wygenerować za pomocą Projektanta obiektów DataSet w klasie [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  Aby uzyskać więcej informacji, zobacz [tworzenie i konfigurowanie zestawów danych](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono zapytania za pośrednictwem typu <xref:System.Data.DataSet>:  
-  
-```csharp  
-var query = from o in orders  
-            where o.OnlineOrderFlag == true  
-            select new { o.SalesOrderID,  
-                         o.OrderDate,  
-                         o.SalesOrderNumber };  
-  
-foreach(var order in query)   
-{  
-    Console.WriteLine("{0}\t{1:d}\t{2}",   
-order.SalesOrderID,   
-order.OrderDate,   
-order.SalesOrderNumber);  
-}  
-```  
-  
-```vb  
-Dim orders = ds.Tables("SalesOrderHeader")  
-  
-Dim query = _  
-       From o In orders _  
-       Where o.OnlineOrderFlag = True _  
-       Select New {SalesOrderID := o.SalesOrderID, _  
-                   OrderDate := o.OrderDate, _  
-                   SalesOrderNumber := o.SalesOrderNumber}  
-  
-For Each Dim onlineOrder In query  
- Console.WriteLine("{0}\t{1:d}\t{2}", _  
- onlineOrder.SalesOrderID, _  
- onlineOrder.OrderDate, _  
- onlineOrder.SalesOrderNumber)  
-Next  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wykonywanie zapytania do zestawów danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [Zapytania wielotabelowe](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
- [Zapytania jednotabelowe](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
+# <a name="query-typed-datasets"></a>Zapytanie wpisanych zestawów danych
+
+Jeśli schemat <xref:System.Data.DataSet> jest znany w czasie projektowania aplikacji, zalecamy użycie wpisane <xref:System.Data.DataSet> podczas korzystania z LINQ to DataSet. Wpisane <xref:System.Data.DataSet> jest klasa, która pochodzi od klasy <xref:System.Data.DataSet>. W efekcie dziedziczy wszystkie metody, zdarzenia i właściwości <xref:System.Data.DataSet>. Ponadto wpisane <xref:System.Data.DataSet> udostępnia silnie typizowane metody, zdarzenia i właściwości. Oznacza to, że masz dostęp tabele i kolumny, według nazwy, zamiast korzystać z metody oparte na kolekcji. To sprawia, że zapytania prostszy i bardziej czytelny. Aby uzyskać więcej informacji, zobacz [wpisanych zestawów danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).
+
+LINQ do zestawu danych obsługuje również zapytań wpisane <xref:System.Data.DataSet>. Z kontrolą typów <xref:System.Data.DataSet>, będą musieli używać ogólnych <xref:System.Data.DataRowExtensions.Field%2A> metody lub <xref:System.Data.DataRowExtensions.SetField%2A> metody dostępu do kolumny danych. Nazwy właściwości są dostępne w czasie kompilacji, ponieważ informacje o typie jest uwzględniony w <xref:System.Data.DataSet>. LINQ do zestawu danych zapewnia dostęp do wartości w kolumnie jako odpowiedniego typu, tak aby błędy niezgodności wpisywania są wyłapywane, gdy kod jest kompilowany zamiast w czasie wykonywania.
+
+Przed rozpoczęciem wykonywania zapytań wpisane <xref:System.Data.DataSet>, należy wygenerować klasę za pomocą **Projektanta obiektów DataSet** w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [tworzenie i konfigurowanie zestawów danych](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie przedstawiono zapytanie, za pośrednictwem wpisane <xref:System.Data.DataSet>:
+
+```csharp
+var query = from o in orders
+            where o.OnlineOrderFlag == true
+            select new { o.SalesOrderID,
+                         o.OrderDate,
+                         o.SalesOrderNumber };
+
+foreach(var order in query)
+{
+    Console.WriteLine("{0}\t{1:d}\t{2}",
+      order.SalesOrderID,
+      order.OrderDate,
+      order.SalesOrderNumber);
+}
+```
+
+```vb
+Dim orders = ds.Tables("SalesOrderHeader")
+
+Dim query = _
+       From o In orders _
+       Where o.OnlineOrderFlag = True _
+       Select New {SalesOrderID := o.SalesOrderID, _
+                   OrderDate := o.OrderDate, _
+                   SalesOrderNumber := o.SalesOrderNumber}
+
+For Each Dim onlineOrder In query
+ Console.WriteLine("{0}\t{1:d}\t{2}", _
+ onlineOrder.SalesOrderID, _
+ onlineOrder.OrderDate, _
+ onlineOrder.SalesOrderNumber)
+Next
+```
+
+## <a name="see-also"></a>Zobacz także
+
+- [Wykonywanie zapytania do zestawów danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [Zapytania wielotabelowe](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
+- [Zapytania jednotabelowe](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)

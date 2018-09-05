@@ -1,19 +1,19 @@
 ---
-title: Przykład danych wyjściowych części dokumentu programu Office Open XML (C#)
+title: Przykład, który wyprowadza części dokumentu programu Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: e63f6eafb32a6426d6c3fd7296c0e8fa6595efee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dd8e4238ff4015130160b5297f807d79013ce7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325373"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505674"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Przykład danych wyjściowych części dokumentu programu Office Open XML (C#)
-W tym temacie pokazano, jak otworzyć dokument XML otwórz pakietu Office i dostępu do części w niej.  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Przykład, który wyprowadza części dokumentu programu Office Open XML (C#)
+W tym temacie przedstawiono sposób Otwórz dokument XML otwórz pakietu Office i przejdź do części znajdujący się w nim.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje otwarcie dokumentu pakietu Office Open XML, a następnie drukuje dokument i część stylu w konsoli.  
+ Poniższy przykład spowoduje otwarcie dokumentu Office Open XML i drukuje dokument i część stylu do konsoli.  
   
  W tym przykładzie użyto klasy z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
@@ -66,5 +66,6 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Szczegóły pakietu Office otwieranie dokumentów schemat WordprocessingML XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

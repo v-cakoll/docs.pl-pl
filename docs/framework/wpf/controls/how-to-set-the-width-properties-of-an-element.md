@@ -8,30 +8,30 @@ helpviewer_keywords:
 - width properties [WPF]
 - Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-ms.openlocfilehash: 72617744a8b2565857d19a1c6ef41bf4211c89ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 261318e3d1433a47eeec2069f484124efd14653f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554844"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523814"
 ---
 # <a name="how-to-set-the-width-properties-of-an-element"></a>Jak ustawić właściwości szerokości elementu
 ## <a name="example"></a>Przykład  
- W tym przykładzie przedstawiono wizualnie różnice między renderowania zachowanie spośród czterech właściwości związanych z szerokość [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+ W tym przykładzie przedstawiono wizualnie różnice między renderowania zachowanie między cztery właściwości związane z szerokość [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- <xref:System.Windows.FrameworkElement> Klasa udostępnia cztery właściwości, które opisują cechy szerokość elementu. Te właściwości cztery mogą powodować konflikt, a gdy tak robią, wartość, która ma pierwszeństwo przed jest określane w następujący sposób: <xref:System.Windows.FrameworkElement.MinWidth%2A> wartość ma pierwszeństwo przed <xref:System.Windows.FrameworkElement.MaxWidth%2A> wartość, która z kolei ma pierwszeństwo przed <xref:System.Windows.FrameworkElement.Width%2A> wartość. Właściwość czwarty <xref:System.Windows.FrameworkElement.ActualWidth%2A>, jest tylko do odczytu i raporty rzeczywista szerokość ustalany na podstawie interakcji z procesem układu.  
+ <xref:System.Windows.FrameworkElement> Klasa udostępnia cztery właściwości, które opisują właściwości szerokości elementu. Te cztery właściwości mogą powodować konflikt, a gdy tak robią, wartość, która ma pierwszeństwo przed jest określany w następujący sposób: <xref:System.Windows.FrameworkElement.MinWidth%2A> wartość ma pierwszeństwo przed <xref:System.Windows.FrameworkElement.MaxWidth%2A> wartość, która z kolei ma pierwszeństwo przed <xref:System.Windows.FrameworkElement.Width%2A> wartość. Czwarty właściwość <xref:System.Windows.FrameworkElement.ActualWidth%2A>, jest tylko do odczytu i zgłasza rzeczywista szerokość zgodnie z ustaleniami interakcji z procesem układu.  
   
- Następujące [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] przykłady rysowania <xref:System.Windows.Shapes.Rectangle> elementu (`rect1`) jako element podrzędny <xref:System.Windows.Controls.Canvas>. Można zmienić właściwości szerokość <xref:System.Windows.Shapes.Rectangle> przy użyciu serii <xref:System.Windows.Controls.ListBox> elementy, które reprezentują wartości właściwości <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, i <xref:System.Windows.FrameworkElement.Width%2A>. W ten sposób pierwszeństwo każdej właściwości wizualnie jest wyświetlany.  
+ Następujące [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Rysowanie przykłady <xref:System.Windows.Shapes.Rectangle> — element (`rect1`) jako element podrzędny elementu <xref:System.Windows.Controls.Canvas>. Można zmienić właściwości szerokości <xref:System.Windows.Shapes.Rectangle> przy użyciu szeregu <xref:System.Windows.Controls.ListBox> elementy, które reprezentują wartości właściwości <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, i <xref:System.Windows.FrameworkElement.Width%2A>. W ten sposób priorytet każdej właściwości jest wyświetlana wizualnie.  
   
  [!code-xaml[WidthMinWidthMaxWidth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#1)]  
 [!code-xaml[WidthMinWidthMaxWidth#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#2)]  
   
- W poniższych przykładach kodu powiązanego obsługiwać zdarzenia który <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> zgłasza zdarzenie. Każda metoda niestandardowych pobiera dane wejściowe z <xref:System.Windows.Controls.ListBox>, analizuje wartość jako <xref:System.Double>i dotyczy wartość określonej właściwości związanych z szerokości. Wartości szerokości są również konwertowana na ciąg i zapisywane w różnych <xref:System.Windows.Controls.TextBlock> elementów (definicja tych elementów nie znajduje się w wybranej XAML).  
+ Poniższe przykłady związane z kodem obsługi zdarzeń, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> wywołuje zdarzenia. Każda metoda niestandardowego pobiera dane wejściowe z <xref:System.Windows.Controls.ListBox>, analizuje wartość jako <xref:System.Double>i dotyczy wartość określonej właściwości związane z szerokości. Wartości szerokości również jest konwertowana na ciąg i zapisywane w różnych <xref:System.Windows.Controls.TextBlock> elementów (definicja tych elementów nie znajduje się w wybranej XAML).  
   
  [!code-csharp[WidthMinWidthMaxWidth#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml.cs#3)]
  [!code-vb[WidthMinWidthMaxWidth#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WidthMinWidthMaxWidth/VisualBasic/Window1.xaml.vb#3)]  
   
- Pełny przykład, zobacz [przykład porównania właściwości szerokość](http://go.microsoft.com/fwlink/?LinkID=160050).  
+ Aby uzyskać pełny przykład, zobacz [przykład porównania właściwości szerokości](https://go.microsoft.com/fwlink/?LinkID=160050).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.ListBox>  
@@ -42,4 +42,4 @@ ms.locfileid: "33554844"
  <xref:System.Windows.FrameworkElement.Width%2A>  
  [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [Ustawianie właściwości wysokości elementu](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [Przykład porównania właściwości szerokości](http://go.microsoft.com/fwlink/?LinkID=160050)
+ [Przykładowe porównanie właściwości szerokości](https://go.microsoft.com/fwlink/?LinkID=160050)

@@ -8,136 +8,136 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: fe8826a390abd370361b84f99540b8dacbdedc5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 773708eab617e7f4cfdffad2e5019e66c60ebf37
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549282"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562662"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Wskazówki: powiązanie z danymi w aplikacjach hybrydowych
-Powiązanie z formantem źródła danych jest istotne dla zapewnia użytkownikom dostęp do danych, czy używasz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. W tym przewodniku przedstawiono używania wiązania z danymi w aplikacjach hybrydowych, które obejmują zarówno [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki.  
+Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniając użytkownikom dostęp do danych bazowych, czy używasz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. W tym instruktażu przedstawiono sposób korzystania powiązanie danych w aplikacjach hybrydowych, które zawierają zarówno [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki.  
   
- Zadania przedstawione w tym przewodniku obejmują:  
+ Zadania zilustrowane w tym przewodniku obejmują:  
   
 -   Tworzenie projektu.  
   
 -   Definiowanie szablonu danych.  
   
--   Określenie układu formularza.  
+-   Określanie układu formularza.  
   
--   Określanie powiązań danych.  
+-   Określanie powiązania danych.  
   
--   Wyświetlanie danych przy użyciu współdziałanie.  
+-   Wyświetlanie danych za pomocą międzyoperacyjności.  
   
 -   Dodawanie źródła danych do projektu.  
   
 -   Powiązania ze źródłem danych.  
   
- Kompletny kod lista zadań przedstawione w tym przewodniku, zobacz [powiązania danych w przykładowej aplikacji hybrydowych](http://go.microsoft.com/fwlink/?LinkID=159983).  
+ Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [powiązanie danych w przykładowej aplikacji hybrydowych](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
- Po ukończeniu będzie mieć zrozumienia funkcji wiązania danych w aplikacji hybrydowych.  
+ Gdy skończysz, konieczne będzie zrozumienie funkcji wiązania danych w aplikacjach hybrydowych.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
--   Dostęp do przykładowej bazy danych Northwind uruchomione przez program Microsoft SQL Server.  
+-   Dostęp do przykładowej bazy danych Northwind uruchomiony program Microsoft SQL Server.  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
   
-#### <a name="to-create-and-set-up-the-project"></a>Tworzenie i konfigurowanie projektu  
+#### <a name="to-create-and-set-up-the-project"></a>Aby utworzyć i skonfigurować projekt  
   
-1.  Utwórz projekt aplikacji WPF o nazwie `WPFWithWFAndDatabinding`.  
+1.  Utwórz projekt aplikacji WPF, o nazwie `WPFWithWFAndDatabinding`.  
   
-2.  W Eksploratorze rozwiązań Dodaj odwołania do następujących zestawów.  
+2.  W Eksploratorze rozwiązań należy dodać odwołania do następujących zestawów.  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  Otwórz MainWindow.xaml w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+3.  Otwieranie pliku MainWindow.xaml w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-4.  W <xref:System.Windows.Window> elementu, Dodaj następujący [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mapowania przestrzeni nazw.  
+4.  W <xref:System.Windows.Window> elementu, Dodaj następujący kod [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mapowania przestrzeni nazw.  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  Nazwa domyślna <xref:System.Windows.Controls.Grid> elementu `mainGrid` przypisując <xref:System.Windows.FrameworkElement.Name%2A> właściwości.  
+5.  Nazwa domyślna <xref:System.Windows.Controls.Grid> elementu `mainGrid` , przypisując <xref:System.Windows.FrameworkElement.Name%2A> właściwości.  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
 ## <a name="defining-the-data-template"></a>Definiowanie szablonu danych  
- Listę wzorcową klientów jest wyświetlany w <xref:System.Windows.Controls.ListBox> formantu. Poniższy przykładowy kod definiuje <xref:System.Windows.DataTemplate> obiektu o nazwie `ListItemsTemplate` steruje drzewie wizualnym <xref:System.Windows.Controls.ListBox> formantu. To <xref:System.Windows.DataTemplate> jest przypisany do <xref:System.Windows.Controls.ListBox> formantu <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> właściwości.  
+ Zostanie wyświetlona lista wzorca odbiorców, w <xref:System.Windows.Controls.ListBox> kontroli. Poniższy przykład kodu przedstawia <xref:System.Windows.DataTemplate> obiektu o nazwie `ListItemsTemplate` sterującą drzewie wizualnym <xref:System.Windows.Controls.ListBox> kontroli. To <xref:System.Windows.DataTemplate> jest przypisany do <xref:System.Windows.Controls.ListBox> kontrolki <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> właściwości.  
   
 #### <a name="to-define-the-data-template"></a>Aby zdefiniować szablon danych  
   
--   Skopiuj następujące XAML do <xref:System.Windows.Controls.Grid> deklaracji elementu.  
+-   Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
-## <a name="specifying-the-form-layout"></a>Określenie układu formularza  
- Układu formularza jest zdefiniowana przez siatkę z trzy wiersze i trzy kolumny. <xref:System.Windows.Controls.Label> Formanty są dostarczane do identyfikowania każdej kolumny w tabeli Klienci.  
+## <a name="specifying-the-form-layout"></a>Określanie układu formularza  
+ Układ formularza jest definiowany przez siatka zawierająca trzy wiersze i trzy kolumny. <xref:System.Windows.Controls.Label> Dzięki kontrolkom do identyfikowania każdej kolumny w tabeli Klienci.  
   
-#### <a name="to-set-up-the-grid-layout"></a>Aby skonfigurować układ siatki  
+#### <a name="to-set-up-the-grid-layout"></a>Aby zdefiniować układ siatki  
   
--   Skopiuj następujące XAML do <xref:System.Windows.Controls.Grid> deklaracji elementu.  
+-   Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Aby skonfigurować formantów etykiet  
   
--   Skopiuj następujące XAML do <xref:System.Windows.Controls.Grid> deklaracji elementu.  
+-   Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
 ## <a name="specifying-data-bindings"></a>Określanie powiązania danych  
- Listę wzorcową klientów jest wyświetlany w <xref:System.Windows.Controls.ListBox> formantu. Dołączony `ListItemsTemplate` wiąże <xref:System.Windows.Controls.TextBlock> formant `ContactName` pole z bazy danych.  
+ Zostanie wyświetlona lista wzorca odbiorców, w <xref:System.Windows.Controls.ListBox> kontroli. Dołączony `ListItemsTemplate` wiąże <xref:System.Windows.Controls.TextBlock> kontrolę `ContactName` pola z bazy danych.  
   
- Szczegóły każdego rekordu klienta są wyświetlane w kilku <xref:System.Windows.Controls.TextBox> kontrolki.  
+ Szczegóły poszczególnych rekordów klientów są wyświetlane w kilku <xref:System.Windows.Controls.TextBox> kontrolki.  
   
-#### <a name="to-specify-data-bindings"></a>Aby określić powiązania danych  
+#### <a name="to-specify-data-bindings"></a>Aby określić powiązanie danych  
   
--   Skopiuj następujące XAML do <xref:System.Windows.Controls.Grid> deklaracji elementu.  
+-   Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
   
-     <xref:System.Windows.Data.Binding> Klasy wiązania <xref:System.Windows.Controls.TextBox> formanty do odpowiednich pól w bazie danych.  
+     <xref:System.Windows.Data.Binding> Klasy powiązań <xref:System.Windows.Controls.TextBox> formanty do odpowiednich pól w bazie danych.  
   
      [!code-xaml[WPFWithWFAndDatabinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
   
-## <a name="displaying-data-by-using-interoperation"></a>Wyświetlanie danych przy użyciu współdziałanie  
- Zamówienia odpowiadającego danego odbiorcy są wyświetlane w <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> formantu o nazwie `dataGridView1`. `dataGridView1` Kontrolka jest powiązana ze źródłem danych w pliku CodeBehind. A <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontrolka jest elementem nadrzędnym [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantu.  
+## <a name="displaying-data-by-using-interoperation"></a>Wyświetlanie danych za pomocą międzyoperacyjności  
+ Zamówienia odpowiadający wybranego klienta są wyświetlane w <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> formantu o nazwie `dataGridView1`. `dataGridView1` Kontrolka jest powiązana ze źródłem danych w pliku związanym z kodem. A <xref:System.Windows.Forms.Integration.WindowsFormsHost> formant jest elementem nadrzędnym [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli.  
   
-#### <a name="to-display-data-in-the-datagridview-control"></a>Aby wyświetlić dane w formancie DataGridView  
+#### <a name="to-display-data-in-the-datagridview-control"></a>Wyświetlanie danych w formancie DataGridView  
   
--   Skopiuj następujące XAML do <xref:System.Windows.Controls.Grid> deklaracji elementu.  
+-   Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> deklaracja elementu.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>Dodawanie źródła danych do projektu  
- Program Visual Studio można łatwo dodać źródła danych do projektu. Ta procedura dodaje silnie typizowanego zestaw danych do projektu. Dodano również kilka innych klas pomocy technicznej, takie jak karty tabeli dla wszystkich wybranych tabel.  
+ Za pomocą programu Visual Studio można łatwo dodać źródło danych do projektu. Ta procedura dodaje silnie typizowany zestaw danych do projektu. Dodano także kilka innych klas pomocy technicznej, takie jak adapterów tabel dla każdej wybranej tabeli.  
   
 #### <a name="to-add-the-data-source"></a>Aby dodać źródło danych  
   
 1.  Z **danych** menu, wybierz opcję **Dodaj nowe źródło danych**.  
   
-2.  W **Kreator konfiguracji źródła danych**, Utwórz połączenie z bazą danych Northwind przy użyciu zestawu danych. Aby uzyskać więcej informacji, zobacz [porady: łączenie z danymi w bazie danych](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
+2.  W **Kreatora konfiguracji źródła danych**, Utwórz połączenie z bazą danych Northwind za pomocą zestawu danych. Aby uzyskać więcej informacji, zobacz [porady: łączenie z danymi w bazie danych](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
   
-3.  Po wyświetleniu monitu przez **Kreator konfiguracji źródła danych**, Zapisz parametry połączenia jako `NorthwindConnectionString`.  
+3.  Po wyświetleniu monitu przez **Kreatora konfiguracji źródła danych**, Zapisz parametry połączenia jako `NorthwindConnectionString`.  
   
 4.  Po wyświetleniu monitu, aby wybrać obiekty bazy danych, wybierz `Customers` i `Orders` tabel i nazwę wygenerowanego zestawu danych `NorthwindDataSet`.  
   
 ## <a name="binding-to-the-data-source"></a>Powiązania ze źródłem danych  
- <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Stanowi ujednolicony interfejs dla źródła danych aplikacji. Powiązania ze źródłem danych jest zaimplementowana w pliku CodeBehind.  
+ <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Składnik zapewnia ujednolicony interfejs dla źródła danych aplikacji. Powiązania ze źródłem danych jest zaimplementowana w pliku związanym z kodem.  
   
 #### <a name="to-bind-to-the-data-source"></a>Aby powiązać ze źródłem danych  
   
-1.  Otwórz plik CodeBehind, który jest nazwane MainWindow.xaml.vb lub MainWindow.xaml.cs.  
+1.  Otwórz plik związany z kodem, który nosi nazwę pliku MainWindow.xaml.vb lub MainWindow.xaml.cs.  
   
 2.  Skopiuj następujący kod do `MainWindow` definicji klasy.  
   
-     Ten kod deklaruje <xref:System.Windows.Forms.BindingSource> składnika i klasy pomocnicze skojarzony, które połączenia z bazą danych.  
+     Ten kod deklaruje <xref:System.Windows.Forms.BindingSource> składników i klas pomocniczych skojarzone, łączących się z bazą danych.  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
      [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]  
@@ -153,20 +153,20 @@ Powiązanie z formantem źródła danych jest istotne dla zapewnia użytkownikom
   
 5.  W widoku projektu lub XAML, wybierz <xref:System.Windows.Window> elementu.  
   
-6.  Kliknij w oknie właściwości **zdarzenia** kartę.  
+6.  W oknie dialogowym właściwości kliknij **zdarzenia** kartę.  
   
 7.  Kliknij dwukrotnie <xref:System.Windows.FrameworkElement.Loaded> zdarzeń.  
   
-8.  Skopiuj następujący kod do <xref:System.Windows.FrameworkElement.Loaded> obsługi zdarzeń.  
+8.  Skopiuj następujący kod do <xref:System.Windows.FrameworkElement.Loaded> programu obsługi zdarzeń.  
   
-     Ten kod przypisuje <xref:System.Windows.Forms.BindingSource> składnika jako kontekst danych i wypełnienie `Customers` i `Orders` obiektów karty.  
+     Ten kod przypisuje <xref:System.Windows.Forms.BindingSource> składnika, ponieważ kontekst danych i wypełnienie `Customers` i `Orders` obiektów karty.  
   
      [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
      [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]  
   
 9. Skopiuj następujący kod do `MainWindow` definicji klasy.  
   
-     Ta metoda obsługuje <xref:System.Windows.Data.CollectionView.CurrentChanged> zdarzeń i aktualizuje bieżącego elementu powiązania danych.  
+     Ta metoda obsługuje <xref:System.Windows.Data.CollectionView.CurrentChanged> zdarzeń i aktualizacji bieżący element powiązania danych.  
   
      [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
@@ -176,7 +176,7 @@ Powiązanie z formantem źródła danych jest istotne dla zapewnia użytkownikom
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Projektant WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- [Wiązanie danych w przykładowej aplikacji hybrydowych](http://go.microsoft.com/fwlink/?LinkID=159983)  
+ [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [Powiązywanie danych w przykładowej aplikacji hybrydowych](https://go.microsoft.com/fwlink/?LinkID=159983)  
  [Przewodnik: hosting złożonej kontrolki Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
  [Przewodnik: hosting złożonej kontrolki WPF w Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

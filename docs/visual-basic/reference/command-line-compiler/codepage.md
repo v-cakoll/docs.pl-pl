@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 ms.openlocfilehash: 8aee51df3ba9f92ca662fbbfbd73998e4a3b4538
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405699"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532513"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 Określa stronę kodową dla wszystkich plików kodu źródłowego w kompilacji.  

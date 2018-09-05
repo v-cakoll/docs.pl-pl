@@ -3,12 +3,12 @@ title: Grupowanie wyników zapytania (LINQ w C#)
 description: Dowiedz się, jak należy zgrupować wyniki za pomocą LINQ w C#.
 ms.date: 12/1/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: 4da0aac6b406f588ea4f241c72d5700e8a63838c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: f768718cb1435efdc67791612776c9e9ce2b14b8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403868"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552325"
 ---
 # <a name="group-query-results"></a>Grupowanie wyników zapytania
 
@@ -76,11 +76,11 @@ Wklej następującą metodę do `StudentClass` klasy. Zmień instrukcji wywołuj
 
 ## <a name="see-also"></a>Zobacz także
 
-<xref:System.Linq.Enumerable.GroupBy%2A>  
-<xref:System.Linq.IGrouping%602>  
-[Language Integrated Query (LINQ)](index.md)  
-[group, klauzula](../language-reference/keywords/group-clause.md)  
-[Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)  
-[Wykonanie podzapytania w operacji grupowania](perform-a-subquery-on-a-grouping-operation.md)  
-[Tworzenie grup zagnieżdżonych](create-a-nested-group.md)  
-[Grupowanie danych](../programming-guide/concepts/linq/grouping-data.md)  
+- <xref:System.Linq.Enumerable.GroupBy%2A>  
+- <xref:System.Linq.IGrouping%602>  
+- [Language Integrated Query (LINQ)](index.md)  
+- [group, klauzula](../language-reference/keywords/group-clause.md)  
+- [Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)  
+- [Wykonanie podzapytania w operacji grupowania](perform-a-subquery-on-a-grouping-operation.md)  
+- [Tworzenie grup zagnieżdżonych](create-a-nested-group.md)  
+- [Grupowanie danych](../programming-guide/concepts/linq/grouping-data.md)  

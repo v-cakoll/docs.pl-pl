@@ -3,11 +3,11 @@ title: Kontrakty usług
 ms.date: 03/30/2017
 ms.assetid: 9e34b694-aa56-45b3-8dd1-2616705b4fc5
 ms.openlocfilehash: 0d44b6d0a996834c923dafee6cb6319c9dc87fd2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397747"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520608"
 ---
 # <a name="service-contracts"></a>Kontrakty usług
 Ta sekcja zawiera przykłady pokazujące, kontraktów usług w Windows Communication Foundation (WCF).  

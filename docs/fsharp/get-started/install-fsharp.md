@@ -1,13 +1,13 @@
 ---
 title: 'Zainstaluj język F #'
 description: 'Dowiedz się, jak zainstalować zależności od używanego środowiska F #.'
-ms.date: 07/03/2018
-ms.openlocfilehash: 142265a95e1d3ee1603a89f650a24c6a45709181
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.date: 08/28/2018
+ms.openlocfilehash: 6c10b958e35bf7925965d076a48839b0ce19d2c0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878771"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515900"
 ---
 # <a name="install-f"></a>Zainstaluj język F # #
 
@@ -29,34 +29,34 @@ Po zakończeniu instalacji wybierz pozycję "Uruchom Visual Studio". Można rów
 
 ## <a name="install-f-with-visual-studio-code"></a>Instalowanie języka F # za pomocą programu Visual Studio Code
 
-Konieczne jest posiadanie [zainstalowane narzędzie git](https://git-scm.com/download) i dostępne w zmiennej PATH, aby korzystanie z szablonów projektów w Ionide. Możesz sprawdzić, czy jest poprawnie zainstalowany, wpisując `git --version` w wierszu polecenia i naciskając klawisz **Enter**.
+Konieczne jest posiadanie [zainstalowane narzędzie git](https://git-scm.com/download) i dostępne w zmiennej PATH, aby użyć szablonów projektu. Możesz sprawdzić, czy jest poprawnie zainstalowany, wpisując `git --version` w wierszu polecenia i naciskając klawisz **Enter**.
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-Używa Ionide [Mono](http://www.mono-project.com). Najprostszym sposobem zainstalowania platformy Mono w systemie macOS jest za pośrednictwem Homebrew. Po prostu wpisz następujące polecenie w terminalu:
+[Narzędzie mono](http://www.mono-project.com) służy do [F # Interactive](../tutorials/fsharp-interactive/index.md) pomocy technicznej. Najprostszym sposobem zainstalowania platformy Mono w systemie macOS jest za pośrednictwem Homebrew. Po prostu wpisz następujące polecenie w terminalu:
 
 ```console
 brew install mono
 ```
 
-Należy również zainstalować [zestawu .NET Core SDK](https://www.microsoft.com/net/download).
+Zainstaluj również [zestawu .NET Core SDK](https://www.microsoft.com/net/download).
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-W systemie Linux, używa również Ionide [Mono](https://www.mono-project.com). W przypadku systemie Debian lub Ubuntu, można użyć następujących czynności:
+[Narzędzie mono](https://www.mono-project.com) służy do [F # Interactive](../tutorials/fsharp-interactive/index.md) pomocy technicznej. W przypadku systemie Debian lub Ubuntu, można użyć następujących czynności:
 
 ```console
 sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-Należy również zainstalować [zestawu .NET Core SDK](https://www.microsoft.com/net/download).
+Zainstaluj również [zestawu .NET Core SDK](https://www.microsoft.com/net/download).
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-Jeśli używasz Windows, musisz najpierw [instalacji programu Visual Studio z obsługą języka F #](#install-f-with-visual-studio). Spowoduje to zainstalowanie wszystkich składników niezbędnych do zapisu, skompilowania i wykonania kodu F #.
+Zainstaluj [programu Visual Studio z obsługi języka F #](#install-f-with-visual-studio). Spowoduje to zainstalowanie wszystkich składników niezbędnych do zapisu, skompilowania i wykonania kodu F #.
 
-Należy również zainstalować [zestawu .NET Core SDK](https://www.microsoft.com/net/download/).
+Zainstaluj również [zestawu .NET Core SDK](https://www.microsoft.com/net/download/).
 
 ---
 

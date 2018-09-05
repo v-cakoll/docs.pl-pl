@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258114"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661397"
 ---
 # <a name="getnames-function"></a>Funkcja GetNames
 Pobiera podzbiór lub wszystkie nazwy właściwości obiektu. 

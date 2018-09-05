@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfda61706af3e1043d271c0aa74264bd99a4076c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386594"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508639"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess — Metoda
 Uruchamia proces i jego podstawowym wątku pod kontrolą debugera.  

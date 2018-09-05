@@ -2,12 +2,12 @@
 title: LINQ to XML dla użytkowników metody XPath (C#)
 ms.date: 07/20/2015
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
-ms.openlocfilehash: e55e763db2169b704b0b1fcc72e21d9e339b01f6
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: c5c3d94c218f712a127ad313d3b000174644f9dd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199124"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516409"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>LINQ to XML dla użytkowników metody XPath (C#)
 Ten zbiór tematów Pokaż liczbę wyrażeń XPath i ich [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] odpowiedniki.  
@@ -36,7 +36,8 @@ Ten zbiór tematów Pokaż liczbę wyrażeń XPath i ich [!INCLUDE[sqltecxlinq](
 |[Porady: znajdowanie elementów podrzędnych na podstawie położenia (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md)|Jak znaleźć element w oparciu o jego względne położenie przy użyciu XPath porównuje i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:`"Test[position() >= 2 and position() <= 4]"`|  
 |[Porady: znajdowanie bezpośrednio poprzednich elementów równorzędnych (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Jak znaleźć bezpośrednio poprzednich elementów równorzędnych węzła przy użyciu XPath porównuje i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:`"preceding-sibling::*[1]"`|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.XPath?displayProperty=nameWithType>  
- [Tworzenie zapytań drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
- [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Xml.XPath?displayProperty=nameWithType>  
+- [Tworzenie zapytań drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
+- [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

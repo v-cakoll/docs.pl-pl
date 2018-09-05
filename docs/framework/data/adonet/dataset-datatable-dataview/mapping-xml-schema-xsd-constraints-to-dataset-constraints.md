@@ -1,47 +1,47 @@
 ---
-title: Ograniczenia (XSD) schematu XML mapowania do ograniczenia zestawu danych
+title: Mapowania XML schematów (XSD) ograniczenia elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: 0a23e7a7ab6456125559ffd8fa19ffa5eba9335d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c9cd97535a0165b82f0823c1f17f621491d4255c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760989"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534222"
 ---
-# <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Ograniczenia (XSD) schematu XML mapowania do ograniczenia zestawu danych
-Język definicji schematu XML (XSD) umożliwia ograniczenia określonych elementów i atrybutów, który definiuje. Podczas mapowania schematu XML na schemat relacyjny w <xref:System.Data.DataSet>, ograniczenia schematu XML są mapowane na odpowiednich ograniczeń relacyjnych tabel i kolumn w **zestawu danych**.  
+# <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowania XML schematów (XSD) ograniczenia elementu DataSet
+Język definicji schematu XML (XSD) umożliwia ograniczenie zezwalające na można określić elementów i atrybutów, które definiuje. Podczas mapowania schematu XML na schemat relacyjny w <xref:System.Data.DataSet>, ograniczenia schematu XML są mapowane na odpowiednie ograniczenia relacyjnych tabel i kolumn w obrębie **zestawu danych**.  
   
- W tej sekcji omówiono mapowanie schematu XML następujące ograniczenia:  
+ W tej sekcji omówiono mapowanie następujące ograniczenia schematu XML:  
   
--   Ograniczenie unikatowości określona za pomocą **unikatowy** elementu.  
+-   Ograniczenie unikatowości określony za pomocą **unikatowy** elementu.  
   
--   Ograniczenie klucza, określić przy użyciu **klucza** elementu.  
+-   Ograniczenie klucza określony za pomocą **klucz** elementu.  
   
--   Ograniczenie keyref określona za pomocą **keyref** elementu.  
+-   Ograniczenie keyref określony za pomocą **keyref** elementu.  
   
- Za pomocą ograniczenia na element lub atrybut, określeniu pewne ograniczenia w wartości elementu w żadnym wystąpieniu klasy dokumentu. Na przykład, ograniczenie klucza na **CustomerID** elementem podrzędnym **klienta** elementu w schemacie wskazuje, że wartości **CustomerID** musi być elementem podrzędnym Unikatowy w żadnym wystąpieniu dokumentów i wartości null są niedozwolone.  
+ Za pomocą ograniczenia na element lub atrybut, można określić pewne ograniczenia na podstawie wartości elementu w żadnym wystąpieniu klasy dokumentu. Na przykład: ograniczenie klucza w **CustomerID** element podrzędny elementu **klienta** elementu w schemacie wskazuje, że wartości **CustomerID** musi mieć element podrzędny Unikatowy w żadnym wystąpieniu dokumentów i wartości null są niedozwolone.  
   
- Ograniczenia można również określić między elementów i atrybutów w dokumencie, aby ustanowić relację, w tym dokumencie. Ograniczeń key i keyref są używane w schemacie można określić ograniczeń, w tym dokumencie, co w relacji między elementami dokumentu i atrybutów.  
+ Ograniczenia można również określić między elementów i atrybutów w dokumencie, aby możliwe było nawiązanie relacji w obrębie dokumentu. Ograniczenia klucza i keyref są używane w schemacie określanie ograniczeń w dokumencie skutkuje relację między dokumentu elementów i atrybutów.  
   
- Proces mapowania konwertuje tych warunków ograniczających schematu na odpowiednie ograniczenia w tabelach utworzone w ramach **zestawu danych**.  
+ Proces mapowania konwertuje te ograniczenia schematu na odpowiednie ograniczenia w tabelach, utworzone w ramach **zestawu danych**.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Zawiera opis elementów schematu XML używany do tworzenia ograniczenia unique w **zestawu danych**.  
+ Opisano elementy schematu XML, używany do tworzenia unikatowych ograniczeń w **zestawu danych**.  
   
  [Mapowanie ograniczeń key schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Zawiera opis elementów schematu XML używany do tworzenia ograniczeń klucza (ograniczenia unique, której wartości null nie są dozwolone) w **zestawu danych**.  
+ Opisano elementy schematu XML użyty do utworzenia ograniczenia klucza (ograniczenia unikatowe, której wartości null są niedozwolone) **zestawu danych**.  
   
  [Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Zawiera opis elementów schematu XML używany do tworzenia keyref ograniczeń (klucz obcy) **zestawu danych**.  
+ Opisano elementy schematu XML użyty do utworzenia keyref ograniczenia (z kluczem obcym) w **zestawu danych**.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- Opisuje relacyjne struktury lub schematu z **DataSet** która jest tworzona na podstawie schematu XSD.  
+ W tym artykule opisano relacyjnej struktury lub schematu z **DataSet** , jest tworzona na podstawie schematu XSD.  
   
  [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- Zawiera opis elementów schematu XML używany do tworzenia relacji między kolumnami tabeli w **zestawu danych**.  
+ Opisano elementy schematu XML, używany do tworzenia relacji między kolumnami tabeli w **zestawu danych**.  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

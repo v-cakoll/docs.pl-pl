@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
 ms.openlocfilehash: f3ebecda7761e6249656e0b9f8543ae1252b844e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395140"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524541"
 ---
 # <a name="line-c-reference"></a>#line (odwołanie w C#)
 `#line` Umożliwia modyfikowanie kompilatora numerowanie wierszy i (opcjonalnie) danymi wyjścia nazwy pliku, błędów i ostrzeżeń.

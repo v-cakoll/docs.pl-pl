@@ -6,38 +6,38 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: c864668026c4f8bb58a4d6c4c36f96fb07445a9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f31b1233f00147fdccde5e0816fa4839ae33d549
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561297"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552247"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Jak użyć wyzwalaczy zdarzeń, aby kontrolować scenorys po uruchomieniu
-W tym przykładzie przedstawiono sposób kontrolowania <xref:System.Windows.Media.Animation.Storyboard> po jego uruchomieniu. Aby uruchomić <xref:System.Windows.Media.Animation.Storyboard> za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], użyj <xref:System.Windows.Media.Animation.BeginStoryboard>, która dystrybuuje animacje obiektów i właściwości animacji i następnie uruchamia scenorysu. Jeśli zostanie nadana <xref:System.Windows.Media.Animation.BeginStoryboard> nazwę przez określenie jego <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> właściwości, można ustawić, którymi można sterować scenorysu. Użytkownik może interakcyjnie wybrać scenorysu po jego uruchomieniu.  
+W tym przykładzie pokazano, jak kontrolować <xref:System.Windows.Media.Animation.Storyboard> po jego uruchomieniu. Aby rozpocząć <xref:System.Windows.Media.Animation.Storyboard> przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], użyj <xref:System.Windows.Media.Animation.BeginStoryboard>, która dystrybuuje animacji do obiektów i właściwości, animować, a następnie uruchamia scenorysu. Jeśli nadasz <xref:System.Windows.Media.Animation.BeginStoryboard> nazwę, określając jego <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> właściwości, możesz obejrzeć sterowane scenorysu. Możesz następnie interaktywnie kontrolować scenorys po uruchomieniu.  
   
- Użyj następujących akcji scenorysu razem z <xref:System.Windows.EventTrigger> obiekty do kontrolowania scenorysu.  
+ Użyj następujących akcji scenorysu w połączeniu z <xref:System.Windows.EventTrigger> obiektów, aby kontrolować scenorys.  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: Wstrzymuje scenorysu.  
+-   <xref:System.Windows.Media.Animation.PauseStoryboard>: Zatrzymuje scenorysu.  
   
 -   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Wznawia działanie wstrzymanej scenorysu.  
   
 -   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Zmienia szybkość scenorysu.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Przesuwa scenorysu do końca okresu, jeśli istnieje.  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Prowadzi scenorysu do końca okresu wypełnienia, jeśli taki istnieje.  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: Przestaje scenorysu.  
+-   <xref:System.Windows.Media.Animation.StopStoryboard>: Zatrzymuje scenorysu.  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Usuwa scenorysu, zwolnić zasoby.  
+-   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Usuwa scenorysu zwalnianiu zasobów.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto akcji sterowane scenorysu do sterowania interaktywnego scenorysu.  
+ W poniższym przykładzie użyto akcji musi scenorysu, aby interaktywnie kontrolować scenorys.  
   
- **Uwaga:** Aby zapoznać się przykładem kontrolowanie scenorysu przy użyciu kodu, zobacz [kontrolować scenorysu po jego rozpoczyna się za pomocą jego interakcyjne metod](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md).  
+ **Uwaga:** aby zobaczyć przykład kontrolowanie scenorysu przy użyciu kodu, zobacz [kontrolować Scenorys po jego rozpoczyna się przy użyciu jego metod interakcyjnych](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md).  
   
  [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
   
- Aby uzyskać dodatkowe przykłady, zobacz [galerii przykład animacji](http://go.microsoft.com/fwlink/?LinkID=159969).  
+ Aby uzyskać więcej przykładów, zobacz [galerii przykład animacji](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.Animation.ResumeStoryboard>  

@@ -3,11 +3,11 @@ title: Tworzenie projektu LINQ to DataSet w programie Visual Studio
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 ms.openlocfilehash: 12544c6b5153a5f6300072d1646f2c119fb255a1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482181"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515749"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Porady: Tworzenie projektu LINQ to DataSet w programie Visual Studio
 

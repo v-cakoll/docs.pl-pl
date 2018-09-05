@@ -2,12 +2,12 @@
 title: Typowe kolekcje schematów
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: 29ccd2af4268a86ae4c2047ad2523f68b0f6489e
-ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
+ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "37072127"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735377"
 ---
 # <a name="common-schema-collections"></a>Typowe kolekcje schematów
 Typowe kolekcje schematów są kolekcjami schematu, które są implementowane przez wszystkich dostawców zarządzanych w programie .NET Framework. Można tworzyć zapytania zarządzanego dostawcy .NET Framework, aby określić listę kolekcje schematów obsługiwanych przez wywołanie metody **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcje schematów obsługiwanych, liczba ograniczeń, które obsługują one każdego i części identyfikator, których używają. Kolekcje te opisują wszystkich wymaganych kolumn. Dostawcy są bezpłatne dodać dodatkowe kolumny, jeśli chcesz, aby ich. Na przykład `SqlClient` i `OracleClient` ParameterName można dodać do kolekcji ograniczenia.  
@@ -97,4 +97,4 @@ Typowe kolekcje schematów są kolekcjami schematu, które są implementowane pr
 ## <a name="see-also"></a>Zobacz też  
  [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [GetSchema i kolekcje schematów](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Mapowanie typu SQL CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33365530"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735439"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowanie typu SQL CLR
 Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obiektów, które są jest wyrażone w wybranym języku programowania. Gdy aplikacja zostanie uruchomiona, LINQ to SQL tłumaczy języku zintegrowanym zapytania w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników programu LINQ to SQL tłumaczy wyniki z powrotem do obiektów, które może pracować w języku użytkownika, programowania.  
@@ -60,7 +60,7 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
   
 -   Program SQL Server inaczej niż dane typu równoważne zamówień niektóre typy danych w CLR. Na przykład dane programu SQL Server typu `UNIQUEIDENTIFIER` są porządkowane inaczej niż dane typu CLR <xref:System.Guid?displayProperty=nameWithType>.  
   
--   Program SQL Server obsługuje niektóre operacje porównania ciągu inaczej niż środowiska CLR. W programie SQL Server zachowanie porównania ciągu zależy od ustawienia sortowania na serwerze. Aby uzyskać więcej informacji, zobacz [Praca z ustawień sortowania](http://go.microsoft.com/fwlink/?LinkId=115330) w programie Microsoft SQL Server — książki Online.  
+-   Program SQL Server obsługuje niektóre operacje porównania ciągu inaczej niż środowiska CLR. W programie SQL Server zachowanie porównania ciągu zależy od ustawienia sortowania na serwerze. Aby uzyskać więcej informacji, zobacz [Praca z ustawień sortowania](https://go.microsoft.com/fwlink/?LinkId=115330) w programie Microsoft SQL Server — książki Online.  
   
 -   Program SQL Server może zwracać różne wartości dla niektórych funkcji zamapowanego niż środowiska CLR. Na przykład równości funkcji różnią się, ponieważ program SQL Server uwzględnia dwa ciągi równy, jeśli różnią się odstępu; Środowisko CLR uważa musiały być równe.  
   
@@ -232,11 +232,11 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
 ### <a name="sql-server-filestream"></a>Program SQL Server FILESTREAM  
  `FILESTREAM` Atrybutu dla `VARBINARY(MAX)` kolumny jest dostępna, począwszy od programu Microsoft SQL Server 2008; można mapować do niego za pomocą LINQ to SQL, począwszy od .NET Framework w wersji 3.5 z dodatkiem SP1.  
   
- Mimo że można mapować `VARBINARY(MAX)` kolumn z `FILESTREAM` atrybutu <xref:System.Data.Linq.Binary> obiektów <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metoda nie może automatycznie tworzyć kolumny z `FILESTREAM` atrybutu. Aby uzyskać więcej informacji na temat `FILESTREAM`, zobacz [Przegląd FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=115291) w programie Microsoft SQL Server — książki Online.  
+ Mimo że można mapować `VARBINARY(MAX)` kolumn z `FILESTREAM` atrybutu <xref:System.Data.Linq.Binary> obiektów <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metoda nie może automatycznie tworzyć kolumny z `FILESTREAM` atrybutu. Aby uzyskać więcej informacji na temat `FILESTREAM`, zobacz [Przegląd FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=115291) w programie Microsoft SQL Server — książki Online.  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>Serializacja binarna  
- Jeśli klasa implementuje <xref:System.Runtime.Serialization.ISerializable> interfejsu, może wykonać serializację obiektu dla dowolnego pola binarne, SQL (`BINARY`, `VARBINARY`, `IMAGE`). Obiekt jest serializacji i deserializacji zgodnie z sposób, w jaki <xref:System.Runtime.Serialization.ISerializable> interfejs jest implementowany. Aby uzyskać więcej informacji, zobacz [serializacji binarnej](http://go.microsoft.com/fwlink/?LinkId=115581).  
+ Jeśli klasa implementuje <xref:System.Runtime.Serialization.ISerializable> interfejsu, może wykonać serializację obiektu dla dowolnego pola binarne, SQL (`BINARY`, `VARBINARY`, `IMAGE`). Obiekt jest serializacji i deserializacji zgodnie z sposób, w jaki <xref:System.Runtime.Serialization.ISerializable> interfejs jest implementowany. Aby uzyskać więcej informacji, zobacz [serializacji binarnej](https://go.microsoft.com/fwlink/?LinkId=115581).  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>Różne mapowania  

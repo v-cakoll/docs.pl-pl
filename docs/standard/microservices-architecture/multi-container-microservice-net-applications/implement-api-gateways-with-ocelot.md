@@ -6,7 +6,7 @@ ms.author: wiwagn
 ms.date: 07/03/2018
 ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
 ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/01/2018
 ms.locfileid: "43453078"
@@ -580,4 +580,4 @@ Istnieją inne ważne funkcje zbadaniu i użyć w przypadku użycia Ocelot bramy
 
 
 >[!div class="step-by-step"]
-[Poprzedniego] (tła zadań z ihostedservice.md) [dalej] (.. /microservice-ddd-cqrs-patterns/index.MD)
+[Poprzedniego](background-tasks-with-ihostedservice.md) [dalej] (../microservice-ddd-cqrs-patterns/index.md)

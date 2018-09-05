@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 15f3a774255923aba83f15700540369040c02dcd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ba019d4104ec6669ef07b608f40fc1489c994cbf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961537"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525491"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 ## <a name="types-variables-and-values"></a>Typy, zmienne i wartości  
@@ -99,7 +99,7 @@ int i = 5;
 char c = 'Z';  
 ```  
   
- Typy wartości są *zapieczętowanego*, oznacza to, na przykład, że nie możesz wywodzić typu z <xref:System.Int32?displayProperty=nameWithType>, i nie możesz definiować dziedziczenia struktury od dowolnego użytkownika klasy lub struktury, ponieważ struktura może dziedziczyć tylko z <xref:System.ValueType?displayProperty=nameWithType> . Jednakże struktura może zaimplementować jeden lub więcej interfejsów. Można rzutować na typ interfejsu; typ struktury Powoduje to, że *pakowania* operację, aby opakować obiekt typu odwołania na stosie zarządzanym. Operacje na polach występują, gdy typ wartości są przekazywane do metody, która przyjmuje <xref:System.Object?displayProperty=nameWithType> jako parametr wejściowy. Aby uzyskać więcej informacji, zobacz [opakowywanie i rozpakowywanie](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
+ Typy wartości są *zapieczętowanego*, oznacza to, na przykład, że nie możesz wywodzić typu z <xref:System.Int32?displayProperty=nameWithType>, i nie możesz definiować dziedziczenia struktury od dowolnego użytkownika klasy lub struktury, ponieważ struktura może dziedziczyć tylko z <xref:System.ValueType?displayProperty=nameWithType> . Jednakże struktura może zaimplementować jeden lub więcej interfejsów. Można rzutować typu struktury dowolny typ interfejsu, który implementuje; Powoduje to, że *pakowania* operację, aby opakować obiekt typu odwołania na stosie zarządzanym. Operacje na polach występują, gdy typ wartości są przekazywane do metody, która przyjmuje <xref:System.Object?displayProperty=nameWithType> lub dowolny typ jako parametr wejściowy interfejsu. Aby uzyskać więcej informacji, zobacz [opakowywanie i rozpakowywanie](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
  Możesz użyć [struktury](../../../csharp/language-reference/keywords/struct.md) — słowo kluczowe, aby utworzyć własne typy niestandardowych wartości. Typowo, struct jest używany jako kontener dla mniejszego zestawu powiązanych zmiennych, jak pokazano w poniższym przykładzie:  
   
@@ -183,8 +183,9 @@ stringList.Add(4);
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Konwersja typów danych XML](../../../standard/data/xml/conversion-of-xml-data-types.md)  
- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Konwersja typów danych XML](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)

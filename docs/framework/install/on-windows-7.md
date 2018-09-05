@@ -6,11 +6,11 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.openlocfilehash: 828680c0591f9603d14c57dd9e82fe1f3970ede3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: HT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43476251"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563507"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Instalowanie programu .NET Framework na Windows 7 z dodatkiem SP1 i Windows Server 2008 R2
 

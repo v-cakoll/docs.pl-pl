@@ -2,12 +2,12 @@
 title: Ograniczenia (F#)
 description: 'Więcej informacji na temat ograniczeń F #, które są stosowane do parametrów typu ogólnego, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7af064159d2722256f0db8286a99fc02435a99cd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936868"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525608"
 ---
 # <a name="constraints"></a>Ograniczenia
 
@@ -35,7 +35,7 @@ Istnieje kilka różnych ograniczeń, które można zastosować, aby ograniczyć
 |Ograniczenie delegata|: delegować&lt;*krotki parametr typu*, *zwracanego typu*&gt;|Podany typ musi być typem delegowanym, który ma określone argumenty i zwraca wartości; nie są przeznaczone w typowych zastosowaniach.|
 |Ograniczenia porównania|: porównanie|Podany typ musi obsługiwać porównania.|
 |Ograniczenie równości|: równości|Podany typ musi obsługiwać równości.|
-|Ograniczenie Unmanaged|: niezarządzanych|Podany typ musi być typem niezarządzanym. Typy niezarządzanwe są albo niektóre typy pierwotne (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, lub `decimal`), Typy wyliczeniowe `nativeptr&lt;_&gt;`, lub struktury nieogólnego, których pola są wszystkie typy niezarządzanych.|
+|Ograniczenie Unmanaged|: niezarządzanych|Podany typ musi być typem niezarządzanym. Typy niezarządzanwe są albo niektóre typy pierwotne (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, lub `decimal`), Typy wyliczeniowe `nativeptr<_>`, lub struktury nieogólnego, których pola są wszystkie typy niezarządzanych.|
 Masz Dodaj ograniczenie, jeśli kod ma można użyć funkcji, która jest ogólnie dostępne na typ ograniczenia, ale nie w typach. Na przykład ograniczenia typu umożliwia określenie typu klasy, można użyć jednej z metod tej klasy, typ lub funkcja ogólna.
 
 Określanie ograniczeń czasami jest wymagana podczas zapisywania parametrów typu w sposób jawny, ponieważ bez ograniczeń, kompilator nie ma możliwości weryfikacji, że funkcje, które są używane będzie dostępna na dowolny typ, który może być dostarczane w czasie wykonywania dla typu parametr.

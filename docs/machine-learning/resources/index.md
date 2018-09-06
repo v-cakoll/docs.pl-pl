@@ -3,11 +3,11 @@ title: Zasoby strukturze ML.NET
 description: Zapoznaj się z tych zasobów strukturze ML.NET uzyskanymi niestandardowe tworzenie rozwiązań sztucznej Inteligencji i integracji w aplikacjach .NET.
 ms.date: 07/27/2018
 ms.openlocfilehash: cea0f8fe30e01340c5eb671f39f28a6cbf33884c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485009"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798039"
 ---
 # <a name="mlnet-resources"></a>Zasoby strukturze ML.NET
 

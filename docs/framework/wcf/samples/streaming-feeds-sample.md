@@ -3,11 +3,11 @@ title: Przykład strumieniowych kanałów informacyjnych
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
 ms.openlocfilehash: 17639273ece804dc531cbbc3ab9135c814ea632d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486584"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800031"
 ---
 # <a name="streaming-feeds-sample"></a>Przykład strumieniowych kanałów informacyjnych
 Niniejszy przykład pokazuje, jak zarządzać zespolone kanały informacyjne, które zawierają dużą liczbę elementów. Na serwerze, w przykładzie pokazano sposób opóźnić tworzenie poszczególnych <xref:System.ServiceModel.Syndication.SyndicationItem> obiektów w ramach źródła danych do momentu natychmiast przed zapisaniem elementu w strumieniu sieci.  

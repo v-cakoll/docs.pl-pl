@@ -3,11 +3,11 @@ title: Kolejki utraconych komunikatów
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 4f30e9486c8798e3610e13e6abe1c2612c70b69f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536056"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801888"
 ---
 # <a name="dead-letter-queues"></a>Kolejki utraconych komunikatów
 W tym przykładzie pokazano, jak obsługiwać i przetwarzać komunikaty, które dostarczania nie powiodło się. Jest on oparty na [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W tym przykładzie użyto `netMsmqBinding` powiązania. Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  

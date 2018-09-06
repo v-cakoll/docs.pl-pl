@@ -2,12 +2,12 @@
 title: Znajdowanie domyślnego stylu akapitu (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: bf25763b25b0b3e92af967ef6f6390d90a0fe857
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 77eb008ba6419e58541b60ac1ca7c1ef0344e316
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508800"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800256"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Znajdowanie domyślnego stylu akapitu (C#)
 Pierwsze zadanie w manipulowanie informacje przedstawione w samouczku dokumentu WordprocessingML jest znajdowanie domyślnego stylu akapitów w dokumencie.  
@@ -90,4 +90,4 @@ The default style is: Normal
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML](https://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

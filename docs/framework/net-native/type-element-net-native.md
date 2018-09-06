@@ -5,11 +5,11 @@ ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537690"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800381"
 ---
 # <a name="lttypegt-element-net-native"></a>Element &lt;Type&gt; (architektura .NET Native)
 Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie jak klasy lub struktury.  

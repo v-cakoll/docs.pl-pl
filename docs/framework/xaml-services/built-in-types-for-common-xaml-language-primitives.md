@@ -16,11 +16,11 @@ helpviewer_keywords:
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
 ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731355"
+ms.locfileid: "43800063"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Typy wbudowane dla wspólnych elementów podstawowych języka XAML
 XAML 2009 wprowadza wsparcie poziomu języka XAML dla kilku typów danych, które są często używanymi wartościami pierwotnymi w środowisku uruchomieniowym języka (wspólnego CLR) i w innych językach programowania. XAML 2009 dodaje obsługę tych wartości pierwotnych: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, i `x:Array`  

@@ -2,17 +2,16 @@
 title: Klasy (F#)
 description: 'Dowiedz się, jak klas F # są typy, które reprezentują obiektów, które mogą mieć właściwości, metod i zdarzeń.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 67164bd9f91c14f465bf05630259ad70cb8d90e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565889"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43802111"
 ---
 # <a name="classes"></a>Klasy
 
 *Klasy* są typy, które reprezentują obiektów, które mogą mieć właściwości, metod i zdarzeń.
-
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,52 +32,52 @@ and [access-modifier] type-name2 ...
 ```
 
 ## <a name="remarks"></a>Uwagi
-Klasy reprezentuje opis podstawowych typów obiektu .NET. Klasa jest koncepcji typu podstawowego, który obsługuje programowanie zorientowane obiektowo w języku F #.
 
-W powyższej składni `type-name` jest dowolny poprawny identyfikator. `type-params` Opisano parametry opcjonalne typu ogólnego. Składa się z nazwy parametrów typu i ograniczenia ujęte w nawiasy (`<` i `>`). Aby uzyskać więcej informacji, zobacz [ogólne](generics/index.md) i [ograniczenia](generics/constraints.md). `parameter-list` Opisuje parametrami konstruktora. Pierwszy modyfikator dostępu odnoszą się do tego typu; Druga odnosi się do podstawowego konstruktora. W obu przypadkach wartość domyślna to `public`.
+Klasy reprezentują opis podstawowych typów obiektów .NET; Klasa jest pojęciem typu podstawowego, który obsługuje programowanie zorientowane obiektowo w F #.
 
-Określ klasę podstawową dla klasy przy użyciu `inherit` — słowo kluczowe. Należy podać argumentów konstruktora klasy podstawowej, w nawiasach.
+W poprzedniej składni `type-name` jest dowolnym prawidłowym identyfikatorem. `type-params` Opisano parametry opcjonalne typu ogólnego. Składa się z nazwy parametrów typu i ograniczenia, ujęte w nawiasy (`<` i `>`). Aby uzyskać więcej informacji, zobacz [ogólne](generics/index.md) i [ograniczenia](generics/constraints.md). `parameter-list` Opisano parametry konstruktora. Pierwszy modyfikator dostępu odnoszą się do typu; druga dotyczy tylko podstawowy Konstruktor. W obu przypadkach wartość domyślna to `public`.
 
-Deklaruj pól lub wartości, które znajdują się lokalnie do klasy przy użyciu funkcji `let` powiązania i wykonaj ogólne zasady `let` powiązania. `do-bindings` Sekcja zawiera kod do wykonania po konstrukcji obiektów.
+Należy określić klasę bazową dla klasy za pomocą `inherit` — słowo kluczowe. Musisz podać argumenty w nawiasach dla konstruktora klasy bazowej.
 
-`member-list` Składa się z konstruktorów dodatkowe, wystąpienia i deklaracje metody statycznej deklaracji interfejsów, abstrakcyjny powiązania i deklaracje właściwości i zdarzenia. Te ustawienia zostały opisane w [członków](members/index.md).
+Deklaruj pól lub wartości, które są lokalne w klasie za pomocą funkcji `let` powiązania, na które należy wykonać ogólne reguły dotyczące `let` powiązania. `do-bindings` Sekcja zawiera kod do wykonania po konstrukcji obiektu.
 
-`identifier` Używany z opcjonalnym `as` — słowo kluczowe nadaje nazwę zmiennej instancji lub własnego identyfikatora, którego można użyć do odwoływania się do wystąpienia typu w definicji typu. Aby uzyskać więcej informacji zobacz sekcję samoobsługowego identyfikatorów w dalszej części tego tematu.
+`member-list` Składa się z konstruktorów dodatkowe, wystąpienia i deklaracje metody statyczne, deklaracji interfejsu, abstrakcyjna powiązania i deklaracje właściwości i zdarzenia. Te ustawienia zostały opisane w [członków](members/index.md).
+
+`identifier` Używanego z opcjonalnym `as` — słowo kluczowe umożliwia nadanie nazwy zmiennej wystąpienia lub własny identyfikator, który może służyć w definicji typu do odwoływania się do wystąpienia typu. Aby uzyskać więcej informacji zobacz sekcję Self identyfikatorów w dalszej części tego tematu.
 
 Słowa kluczowe `class` i `end` oznakowanie początek i koniec definicji są opcjonalne.
 
-Wzajemnie typy cyklicznego, do których są typy, które odwołują się do siebie, są połączone razem z `and` tak samo jak wzajemnie są funkcje rekursywne — słowo kluczowe. Na przykład zobacz sekcję wzajemnie rekursywne typów.
-
+Wzajemnie typów cyklicznych, które są typów odwołujących się do siebie nawzajem, są połączone razem z `and` — słowo kluczowe tak, ponieważ wzajemnie funkcji rekursywnych. Aby uzyskać przykład zobacz sekcję wzajemnie typów cyklicznych.
 
 ## <a name="constructors"></a>Konstruktorów
-Konstruktor jest kod, który tworzy wystąpienie typu klasy. Konstruktory klas działają trochę inaczej w F # niż w innych językach .NET. W F # klasa, jest zawsze podstawowego konstruktora, którego argumenty zostały opisane w `parameter-list` następujący nazwa typu, a których treści składa się z `let` (i `let rec`) powiązania na początku deklaracji klasy i `do`powiązania, które należy wykonać. Argumenty konstruktora głównej znajdują się w zakresie w deklaracji klasy.
 
-Możesz dodać dodatkowe konstruktorów przy użyciu `new` — słowo kluczowe, aby dodać element członkowski, w następujący sposób:
+Konstruktor jest kod, który tworzy wystąpienie typu klasy. Konstruktory dla klas działają trochę inaczej w języku F # niż w innych językach .NET. W F # klasy, jest zawsze konstruktora podstawowego, w której argumenty są opisane w `parameter-list` występujący na nazwę typu, a których treść składa się z `let` (i `let rec`) powiązania na początku deklaracji klasy `do`powiązania, które należy wykonać. Argumenty konstruktora podstawowego znajdują się w zakresie deklaracji klasy.
+
+Możesz dodać dodatkowe konstruktory przy użyciu `new` — słowo kluczowe do dodania elementu członkowskiego, w następujący sposób:
 
 `new`(`argument-list`) = `constructor-body`
 
-Treść konstruktora new należy wywołać konstruktora podstawowego, który został określony na początku deklaracji klasy.
+Treść nowego konstruktora musi zostać wywołany podstawowy Konstruktor, który jest określony na początku deklaracji klasy.
 
-Poniższy przykład ilustruje tę koncepcję. W poniższym kodzie `MyClass` ma dwa konstruktory, podstawowego konstruktora, który przyjmuje dwa argumenty i innego konstruktora, który nie przyjmuje żadnych argumentów.
+Poniższy przykład ilustruje tę koncepcję. W poniższym kodzie `MyClass` ma dwa konstruktory, podstawowy Konstruktor, który przyjmuje dwa argumenty i innego konstruktora, który nie przyjmuje żadnych argumentów.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2401.fs)]
-    
-## <a name="let-and-do-bindings"></a>Let i powiązania
 
-`let` i `do` powiązania w definicji klasy tworzą treść konstruktora klasy podstawowej i w związku z tym są uruchamiane zawsze, gdy jest tworzone wystąpienie klasy. Jeśli `let` powiązania jest funkcją, a następnie jest on skompilowany do członka. Jeśli `let` powiązanie to wartość, która nie jest używany w żadnych funkcji lub elementu członkowskiego, a następnie jest on skompilowany w zmiennej, która jest lokalny dla konstruktora. W przeciwnym razie jest kompilowana do pola klasy. `do` Wyrażeń, które należy wykonać są kompilowane do podstawowego konstruktora i wykonywanie kodu inicjowania dla każdego wystąpienia. Ponieważ żadnych dodatkowych konstruktorów zawsze wywołać konstruktora podstawowego, `let` powiązania i `do` powiązania wykonać zawsze, niezależnie od tego, które jest nazywany konstruktora.
+## <a name="let-and-do-bindings"></a>Let, a powiązania
 
-Pola, które zostały utworzone przy użyciu `let` powiązania są dostępne w ramach metod i właściwości klasy; jednak ich jest niedostępny z metody statyczne, nawet w przypadku statycznej metody przyjmują zmienna wystąpienia jako parametr. Nie były dostępne przy użyciu własnego identyfikatora, jeśli taka istnieje.
+`let` i `do` powiązania w definicji klasy tworzą treść konstruktora klasy podstawowej i dlatego są one uruchamiane zawsze, gdy tworzone jest wystąpienie klasy. Jeśli `let` powiązania jest funkcją, a następnie jest kompilowany do elementu członkowskiego. Jeśli `let` powiązanie to wartość, która nie jest używany w żadnych funkcji lub elementu członkowskiego, a następnie jest kompilowany do zmiennej, która jest lokalny dla konstruktora. W przeciwnym razie jest kompilowana do pola klasy. `do` Wyrażeń, które należy wykonać są kompilowane do konstruktora podstawowego i wykonywania kodu inicjowania dla każdego wystąpienia. Ponieważ żadnych dodatkowych konstruktorów zawsze wywołanie konstruktora podstawowego, `let` powiązania i `do` powiązania wykonania zawsze, niezależnie od tego, które wywoływany jest Konstruktor.
 
+Pola, które są tworzone przez `let` powiązania są dostępne w ramach metod i właściwości klasy; jednak nie będą dostępne z metody statyczne, nawet w przypadku statycznej metody przyjmują zmienną instance jako parametr. Nie będą dostępne za pomocą własny identyfikator, jeśli taka istnieje.
 
 ## <a name="self-identifiers"></a>Samoidentyfikatory
 
-A *własnego identyfikatora* jest nazwą, która reprezentuje bieżącego wystąpienia. Podobne samoidentyfikatory `this` słów kluczowych w języku C# lub C++ lub `Me` w języku Visual Basic. Można zdefiniować własnego identyfikatora na dwa różne sposoby, w zależności od tego, czy ma własnego identyfikatora znajdował się w zakresie dla definicji klasy całego lub tylko dla poszczególnych metod.
+A *własny identyfikator* jest nazwą, która reprezentuje bieżącego wystąpienia. Samoidentyfikatory przypominają `this` — słowo kluczowe w języku C# lub C++ lub `Me` w języku Visual Basic. Można zdefiniować własny identyfikator na dwa różne sposoby, w zależności od tego, czy ma własny identyfikator, aby się mieścić w zakresie dla definicji całą klasę lub tylko dla poszczególnych metod.
 
-Aby zdefiniować własnego identyfikatora dla całej klasy, należy użyć `as` — słowo kluczowe po nawiasów zamykających parametru konstruktora listę i określ nazwę identyfikatora.
+Aby zdefiniować własny identyfikator dla całej klasy, należy użyć `as` — słowo kluczowe po nawiasów zamykających parametru konstruktora listy, a następnie podaj nazwę identyfikatora.
 
-Aby zdefiniować własnego identyfikatora dla tylko jednej metody, podaj własnego identyfikatora w deklaracji elementu członkowskiego, bezpośrednio przed nazwę metody i kropki (.) jako separatora.
+Aby zdefiniować własny identyfikator tylko jedną metodę, Podaj własny identyfikator w deklaracji elementu członkowskiego, tuż przed nazwy metody i kropki (.) jako separatora.
 
-Poniższy przykładowy kod przedstawia dwa sposoby tworzenia własnego identyfikatora. W pierwszym wierszu `as` — słowo kluczowe jest używane do definiowania własnego identyfikatora. W wierszu piątym identyfikator `this` służy do definiowania własnego identyfikatora, których zakres jest ograniczony do metody `PrintMessage`.
+Poniższy przykładowy kod przedstawia dwa sposoby, aby utworzyć własny identyfikator. W pierwszym wierszu `as` — słowo kluczowe jest używane do definiowania własny identyfikator. W wierszu piątym identyfikator `this` służy do definiowania własny identyfikator, których zakres jest ograniczony do metody `PrintMessage`.
 
 ```fsharp
 type MyClass2(dataIn) as self =
@@ -89,58 +88,53 @@ type MyClass2(dataIn) as self =
         printf "Creating MyClass2 with Data %d" data
 ```
 
-W przeciwieństwie do innych języków .NET, można określić nazwę własnego identyfikatora jednak ma; użytkownik nie są ograniczone do nazw takich jak `self`, `Me`, lub `this`.
+Inaczej niż w innych językach .NET, możesz nazwać własny identyfikator jednak ma; nie jest ograniczona do nazw takich jak `self`, `Me`, lub `this`.
 
-Własnego identyfikatora, który jest zadeklarowana z `as` — słowo kluczowe nie został zainicjowany dopiero po `let` powiązania są wykonywane. W związku z tym nie można używać w `let` powiązania. Można użyć własnego identyfikatora w `do` sekcji powiązania.
-
+Własny identyfikator, który jest zadeklarowana za pomocą `as` — słowo kluczowe nie jest zainicjowany aż po `let` powiązania są wykonywane. W związku z tym, nie można używać w `let` powiązania. Można użyć własny identyfikator w `do` sekcję wiązania.
 
 ## <a name="generic-type-parameters"></a>Parametry typu ogólnego
 
-Parametry typu ogólnego są określone w nawiasy (`<` i `>`), w postaci pojedynczego cudzysłowu następuje identyfikator. Wiele parametrów typu ogólnego są oddzielone przecinkami. Parametr typu ogólnego jest w zakresie całego zgłoszenia. Poniższy przykład kodu pokazuje, jak określić parametry typu ogólnego.
+Parametry typu ogólnego są określone w nawiasy ostre (`<` i `>`), w postaci pojedynczy znak cudzysłowu, a następnie identyfikatora. Wiele parametrów typu ogólnego są oddzielone przecinkami. Parametr typu ogólnego znajduje się w zakresie deklaracji. Poniższy przykład kodu pokazuje sposób określania parametrów typu genetycznego.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2403.fs)]
 
-Gdy jest używany typ, są wywnioskować argumentów typu. W poniższym kodzie wnioskowany typ jest sekwencją spójnych kolekcji.
+Argumenty typu są wnioskowane, gdy typ jest używany. W poniższym kodzie wnioskowany typ to sekwencja krotek.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24031.fs)]
-    
+
 ## <a name="specifying-inheritance"></a>Określanie dziedziczenia
 
-`inherit` Klauzuli identyfikuje bezpośredniej klasie podstawowej, jeśli istnieje. W języku F # jest dozwolony tylko jeden bezpośredniej klasie podstawowej. Interfejsy, które implementuje klasy nie są traktowane jako klasy podstawowe. Interfejsy zostały omówione w [interfejsów](Interfaces.md) tematu.
+`inherit` Klauzula identyfikuje bezpośrednie klasy bazowej, jeśli taka istnieje. W języku F # jest dozwolony tylko jedną bezpośrednią klasą bazową. Interfejsy, które implementuje klasa nie są uwzględniane klas bazowych. Interfejsy są omówione w [interfejsów](Interfaces.md) tematu.
 
-Dostępne metody i właściwości klasy podstawowej z klasy pochodnej przy użyciu słowa kluczowego języka `base` identyfikatorowi następuje znak kropki (.) i nazwa elementu członkowskiego.
+Dostępne metody i właściwości klasy bazowej z klasy pochodnej za pomocą słowa kluczowego języka `base` jako identyfikator, a następnie kropka (.) i nazwę elementu członkowskiego.
 
 Aby uzyskać więcej informacji, zobacz [dziedziczenia](inheritance.md).
 
+## <a name="members-section"></a>Sekcja elementy członkowskie
 
-## <a name="members-section"></a>Elementy członkowskie sekcji
-W tej sekcji można zdefiniować statyczne lub wystąpienie metody, właściwości implementacje interfejsu, abstrakcyjne elementy członkowskie, deklaracje zdarzeń i dodatkowych konstruktorów. Pozwalają oraz czy powiązania nie może występować w tej sekcji. Ponieważ można dodawać członków do różnych typów F # oprócz klas, zostały omówione w innym temacie [członków](members/index.md).
+W tej sekcji można zdefiniować statyczne lub metody wystąpienia, właściwości, implementacje interfejsu, abstrakcyjne składowe, deklaracji zdarzeń i dodatkowych konstruktorów. Let, a następnie wykonaj wiązania nie może występować w tej sekcji. Ponieważ elementy Członkowskie mogą być dodawane do różnych typów F # oprócz klas, zostały omówione w osobnych tematach [członków](members/index.md).
 
+## <a name="mutually-recursive-types"></a>Wzajemnie typów cyklicznych
 
-## <a name="mutually-recursive-types"></a>Wzajemnie rekursywne typów
-Po zdefiniowaniu typów odwołujące się do siebie nawzajem w sposób cykliczne można łączyć ze sobą definicje typów za pomocą `and` — słowo kluczowe. `and` Zastępuje — słowo kluczowe `type` — słowo kluczowe na wszystkich z wyjątkiem pierwsza definicja w następujący sposób.
+Podczas definiowania typów odwołujące się do siebie nawzajem w sposób cykliczne, możesz łączyć ze sobą definicje typów przy użyciu `and` — słowo kluczowe. `and` Zastępuje słowo kluczowe `type` — słowo kluczowe na wszystkie z wyjątkiem pierwszej definicji, w następujący sposób.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2404.fs)]
 
 Dane wyjściowe znajduje się lista wszystkich plików w bieżącym katalogu.
 
+## <a name="when-to-use-classes-unions-records-and-structures"></a>Kiedy należy używać klas, Unii, rekordy i struktury
 
-## <a name="when-to-use-classes-unions-records-and-structures"></a>Kiedy używać klas, Unii, rekordów i struktury
-Biorąc pod uwagę różne typy do wyboru, musisz mieć dobrą znajomość co każdego typu jest przeznaczona dla wybierz odpowiedni typ dla danej sytuacji. Klasy są przeznaczone do użytku w kontekście programowania, zorientowany obiektowo. Programowanie zorientowane obiektowo jest dominującą modelu, używany w aplikacjach, które są przeznaczone dla programu .NET Framework. Jeśli ściśle współpracować z programu .NET Framework lub inną biblioteką zorientowane obiektowo kodzie języka F #, a zwłaszcza, jeśli masz system zorientowane obiektowo typów, takich jak biblioteki interfejsu użytkownika związane z klasy są prawdopodobnie odpowiednie.
+Biorąc pod uwagę różne typy do wyboru, musisz dysponować dobrą znajomością programu co każdy typ jest przeznaczona dla wybrać odpowiedni typ w konkretnej sytuacji. Klasy są przeznaczone do użytku w kontekstach programowania obiektowego. Programowanie zorientowane obiektowo jest dominującym paradygmat, używany w aplikacjach, które zostały napisane dla platformy .NET Framework. Jeśli kod F # jest bliska współpraca z .NET Framework lub innej biblioteki zorientowane obiektowo, a zwłaszcza, jeśli zajdzie potrzeba rozszerzyć system zorientowane obiektowo typów, takich jak biblioteka interfejsów użytkownika, klasy są prawdopodobnie odpowiednie.
 
-Jeśli użytkownik nie są ściśle współdziałanie z kodem zorientowane obiektowo lub pisania kodu, która jest niezależna i dlatego chronione z częste interakcji z kodem zorientowane obiektowo, należy rozważyć użycie rekordów i Suma rozłączna Unii. Jeden również myśl — limit czasu rozróżnianą Unię wraz z odpowiednią wzorzec dopasowany kodu, można często prostsze alternatywę do hierarchii obiektów. Aby uzyskać więcej informacji na temat rozłączne, zobacz [Suma rozłączna unie](discriminated-unions.md).
+Czy można nie są ściśle współdziałanie z kodem zorientowane obiektowo, czy piszesz kod, który jest niezależna i w związku z tym chronione przed interakcja z kodem zorientowane obiektowo, należy wziąć pod uwagę przy użyciu rekordów i związków wyróżniających. Jeden dobrze myślenia — limit czasu złożenia dyskryminowanego, wraz z odpowiednią wzorzec dopasowywania kodu, często może służyć jako prostszej alternatywy hierarchii obiektów. Aby uzyskać więcej informacji na temat sumy rozłączne zobacz [sumy rozłączne](discriminated-unions.md).
 
-Rekordy zostały zaletą jest łatwiejsze niż w przypadku klasy, ale rekordy nie są odpowiednie wymagania typu przekracza, co można zrobić z ich uproszczenia. Rekordy są zasadniczo proste agreguje wartości, bez konstruktorów oddzielne, które może wykonywać akcje niestandardowe, bez ukryte pola i bez implementacji dziedziczenia lub interfejsu. Mimo że elementy członkowskie, takie jak właściwości i metod można dodać do rekordów do wykonania ich zachowanie bardziej złożonych, proste agregacji wartości są nadal pola przechowywane w rekordzie. Aby uzyskać więcej informacji na temat rekordów, zobacz [rekordów](records.md).
+Rekordy mają zaletą jest prostsze niż klasy, ale rekordy nie są odpowiednie wymagania typu przekracza, co można zrobić z ich prostotę. Rekordy są zasadniczo prostych wartości zagregowanych wartości bez oddzielne konstruktorów, które mogą wykonywać akcje niestandardowe, bez ukrytych pól i bez implementacji dziedziczenie lub interfejs. Chociaż składowych, takich jak właściwości i metody mogą być dodawane do rekordów się bardziej złożone ich zachowania, pola, przechowywane w rekordzie są nadal prostych agregacji wartości. Aby uzyskać więcej informacji na temat rekordów, zobacz [rekordów](records.md).
 
-Struktury są także przydatne dla małych wartości zagregowanych danych, ale różnią się od klasy i rekordów są typy wartości .NET. Klasy i rekordów są typy referencyjne .NET. Semantyka typów wartości i typy referencyjne są różne, w tym typy wartości są przekazywane przez wartość. Oznacza to, że są one kopiowane bit bitu, gdy są one przekazywane jako parametr lub zwracane przez funkcję. Są one również przechowywane na stosie lub, jeśli są używane jako pole osadzony w obiekcie nadrzędnym zamiast przechowywane w ich własnych osobnych lokalizacji na stosie. W związku z tym struktury są odpowiednie dla często używanych danych, gdy obciążenie podczas uzyskiwania dostępu do sterty problem. Aby uzyskać więcej informacji na temat struktury, zobacz [struktury](structures.md).
+Struktury są także przydatne dla małej wartości zagregowanych danych, ale różnią się one z klas i dokumentów, ponieważ są typami wartości platformy .NET. Klasy i rekordy są typami odwołań platformy .NET. Semantyka typów wartości i typami odwołania są różne, w tym typy wartości są przekazywane przez wartość. Oznacza to, że są one kopiowane bit bitu, gdy są one przekazane jako parametr lub zwracany przez funkcję. One są także przechowywane w stosie lub, jeśli są one używane jako pole osadzone wewnątrz obiektu nadrzędnego, a nie przechowywany w ich własnych oddzielnej lokalizacji na stosie. W związku z tym struktur są odpowiednie dla rzadziej używanych danych, gdy obciążenie uzyskiwania dostępu do stosu problem. Aby uzyskać więcej informacji na temat struktur, zobacz [struktury](structures.md).
 
+## <a name="see-also"></a>Zobacz także
 
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
-
-[Elementy członkowskie](members/index.md)
-
-[Dziedziczenie](inheritance.md)
-
-[Interfejsy](interfaces.md)
-
+- [Dokumentacja języka F#](index.md)
+- [Elementy członkowskie](members/index.md)
+- [Dziedziczenie](inheritance.md)
+- [Interfejsy](interfaces.md)

@@ -3,11 +3,11 @@ title: Komunikacja za pomocą nietrwałych kolejek
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
 ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560668"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798560"
 ---
 # <a name="volatile-queued-communication"></a>Komunikacja za pomocą nietrwałych kolejek
 Niniejszy przykład pokazuje sposób wykonywania volatile komunikatu w kolejce za pomocą transportu usługi kolejkowania komunikatów (MSMQ). W tym przykładzie użyto <xref:System.ServiceModel.NetMsmqBinding>. Usługa jest w tym przypadku aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  

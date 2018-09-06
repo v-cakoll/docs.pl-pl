@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552338"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801836"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Wskazówki: tworzenie aplikacji rozszerzalnej
 W tym przewodniku opisano tworzenie potoku dodatku, który wykonuje funkcje prosty kalkulator. Nie przedstawiono tu rzeczywistych scenariuszy; zamiast pokazuje podstawową funkcjonalność potoku i jak dodatek mogą udostępniać usługi hosta.  

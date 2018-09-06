@@ -3,11 +3,11 @@ title: Transakcyjne powiązanie MSMQ
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
 ms.openlocfilehash: 381304bcef40245bac882a4fe4ae18a6998665cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558185"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801875"
 ---
 # <a name="transacted-msmq-binding"></a>Transakcyjne powiązanie MSMQ
 W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji przy użyciu usługi kolejkowania komunikatów (MSMQ).  

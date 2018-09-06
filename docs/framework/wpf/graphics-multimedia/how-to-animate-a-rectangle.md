@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
 ms.openlocfilehash: c2edf1bc8505b7bda2cc31ded2d2bf53a96243ac
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732887"
+ms.locfileid: "43800615"
 ---
 # <a name="how-to-animate-a-rectangle"></a>Jak animować prostokąt
 W tym przykładzie pokazano, jak animować zmiany rozmiaru i położenia prostokąta.  

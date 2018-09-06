@@ -1,0 +1,2 @@
+> [!IMPORTANT]
+> Ponieważ Portable Class Library projekty ukierunkowane na podzbiorze bardzo szczegółowych implementacje platformy .NET, firma Microsoft zdecydowanie odradzamy ich użycie w rozwijaniu nowych aplikacji. Zastąpienie zalecane jest biblioteki .NET Standard, który jest przeznaczony dla wszystkich implementacje platformy .NET, które obsługują określoną wersję programu .NET Standard. Aby uzyskać więcej informacji, zobacz [.NET Standard](~/docs/standard/net-standard.md).

@@ -3,11 +3,11 @@ title: 'Porady: sortowanie elementów (C#)'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
 ms.openlocfilehash: 7548f183736ac9ed0ed09d3be775b3ffde6cb255
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552551"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801115"
 ---
 # <a name="how-to-sort-elements-c"></a>Porady: sortowanie elementów (C#)
 W tym przykładzie pokazano, jak napisać zapytanie sortujące wyniki.  

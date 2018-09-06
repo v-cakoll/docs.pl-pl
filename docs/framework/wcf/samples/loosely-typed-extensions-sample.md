@@ -3,11 +3,11 @@ title: Przykład rozszerzeń z typowaniem luźnym
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
 ms.openlocfilehash: f46cf3dfcdb60669f0a02337b54de97d4af3efdc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43674179"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800147"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Przykład rozszerzeń z typowaniem luźnym
 Modelu obiektu syndykacji programu zawiera, zaawansowana obsługa Praca z danymi rozszerzenia — informacje, które są obecne w kanał w reprezentacji XML, ale nie zostały jawnie udostępnianych przez klasy takie jak <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem>. W tym przykładzie przedstawiono podstawowe techniki do pracy z danymi rozszerzenia.  

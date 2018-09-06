@@ -5,55 +5,55 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: afc19ccf476317e8c30a1cc6964c64f1a59a0ff8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25bdfaef300b001d1c052aeea4e1ad3547a6d3d7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655474"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43803814"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Używanie wyrażeń regularnych z formantem MaskedTextBox w Visual Basic
-W tym przykładzie pokazano, jak przekonwertować prostych wyrażeń regularnych do pracy z <xref:System.Windows.Forms.MaskedTextBox> formantu.  
+W tym przykładzie opisano sposób konwertowania proste wyrażenia regularnego do pracy z <xref:System.Windows.Forms.MaskedTextBox> kontroli.  
   
 ## <a name="description-of-the-masking-language"></a>Opis języka maskowania  
- Standardowe <xref:System.Windows.Forms.MaskedTextBox> maskowania języka jest oparta na używany przez `Masked Edit` kontroli w Visual Basic 6.0 i należy znać użytkownikom migrację z tej platformy.  
+ Standardowa <xref:System.Windows.Forms.MaskedTextBox> maskowania języka opiera się na używaną przez `Masked Edit` kontrolowania w Visual Basic 6.0 i powinny być dobrze znanym użytkownikom migracji z tej platformy.  
   
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Właściwość <xref:System.Windows.Forms.MaskedTextBox> kontroli określa, jakie maska wprowadzania do użycia. Maska musi być ciągiem składa się z co najmniej jeden z elementów maskowania z poniższej tabeli.  
+ <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Właściwość <xref:System.Windows.Forms.MaskedTextBox> kontroli określa, jakie maska wprowadzania do użycia. Maska musi być ciąg, który składa się z co najmniej jeden z elementów maskowania z poniższej tabeli.  
   
-|Element maskowania|Opis|Element wyrażeń regularnych|  
+|Element maskowania|Opis|Element wyrażenia regularnego|  
 |---------------------|-----------------|--------------------------------|  
-|0|Pojedynczej cyfry od 0 do 9. Wpis jest wymagany.|\d|  
+|0|Dowolna cyfra od 0 do 9. Należy wypełnić.|\d|  
 |9|Cyfra lub spacja. Pozycja opcjonalna.|[\d]?|  
-|#|Cyfra lub spacja. Pozycja opcjonalna. Jeśli ta pozycja jest puste maski, ma być odwzorowany jako spacją. Plus (+) oraz minus (-) można używać znaków.|[\d+-]?|  
-|L|Litery ASCII. Wpis jest wymagany.|[a-zA-Z]|  
+|#|Cyfra lub spacja. Pozycja opcjonalna. Jeśli ta pozycja jest puste w masce, będzie ona renderowana jako spacja. Plus (+) oraz minus (-) znaki są dozwolone.|[\d+-]?|  
+|L|Litery ASCII. Należy wypełnić.|[a-zA-Z]|  
 |?|Litery ASCII. Pozycja opcjonalna.|[a-zA-Z]?|  
-|&|Znak. Wpis jest wymagany.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|Znak. Pozycja opcjonalna.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|&|znak. Należy wypełnić.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
+|C|znak. Pozycja opcjonalna.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |ELEMENT|Alfanumeryczne. Pozycja opcjonalna.|\W|  
-|.|Odpowiednie kultury dziesiętny symbol zastępczy.|Nie jest dostępna.|  
-|,|Symbol zastępczy tysięcy odpowiednie kultury.|Nie jest dostępna.|  
-|:|Separator godziny odpowiednie kultury.|Nie jest dostępna.|  
-|/|Separator daty odpowiednie kultury.|Nie jest dostępna.|  
-|$|Symbol waluty odpowiednie kultury.|Nie jest dostępna.|  
+|.|Odpowiedni kulturowo dziesiętna symbol zastępczy.|Nie jest dostępna.|  
+|,|Symbol zastępczy tysięcy odpowiedni kulturowo.|Nie jest dostępna.|  
+|:|Separator godziny odpowiedni kulturowo.|Nie jest dostępna.|  
+|/|Separator daty odpowiedni kulturowo.|Nie jest dostępna.|  
+|$|Symbol waluty odpowiedni kulturowo.|Nie jest dostępna.|  
 |\<|Konwertuje wszystkie znaki, które należy wykonać na małe litery.|Nie jest dostępna.|  
 |>|Konwertuje wszystkie znaki, które należy wykonać na wielkie litery.|Nie jest dostępna.|  
 |&#124;|Cofa poprzedniej zmiany w górę lub w dół.|Nie jest dostępna.|  
-|\|Specjalne znak maski, włączając w literału. "\\\\" sekwencję ucieczki dla ukośnik odwrotny.|\|  
-|Wszystkie inne znaki.|Literały. Wszystkie elementy-mask pojawi się w <xref:System.Windows.Forms.MaskedTextBox>.|Wszystkie inne znaki.|  
+|&#92;|Zmienia znaczenie znaku maska, włączając je na literał. "\\\\" sekwencję ucieczki dla ukośnik odwrotny.|&#92;|  
+|Wszystkie inne znaki.|Literały. Wszystkie elementy maska nie będą wyświetlane jako siebie w ramach <xref:System.Windows.Forms.MaskedTextBox>.|Wszystkie inne znaki.|  
   
- Decimal (.), tysięczne (,), czas (:), Data (/) i domyślne symbole waluty ($) do wyświetlania tych symboli, zgodnie z definicją kultury aplikacji. Można wymusić na nich w celu wyświetlenia symboli dla kultury innego przy użyciu <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> właściwości.  
+ Dziesiętnego (.), tysięczne (,), czas (:), Data (/) i domyślne symbole określający walutę ($) do wyświetlania tych symboli, zgodnie z definicją kultury aplikacji. Można wymusić na nich w celu wyświetlenia symboli dla kultury innej przy użyciu <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> właściwości.  
   
 ## <a name="regular-expressions-and-masks"></a>Wyrażenia regularne i masek  
- Wyrażenia regularne i masek służy do sprawdzania poprawności danych wejściowych użytkownika, nie są one całkowicie równoważne. Wyrażenia regularne można wyrazić wzorce bardziej złożone niż maski, ale maski można wyrazić tych samych informacji więcej krótkiej formie i kulturalnie odpowiedni format.  
+ Chociaż można używać wyrażeń regularnych i masek, aby sprawdzić poprawność danych wejściowych użytkownika, nie są całkowicie równoważne. Wyrażeń regularnych można wyrazić wzorców bardziej skomplikowane niż masek, ale maski można wyrazić te same informacje, bardziej zwięzły i kulturalnie odpowiedni format.  
   
- W poniższej tabeli porównano cztery wyrażeń regularnych i maska równoważne dla każdego.  
+ W poniższej tabeli porównano cztery wyrażeń regularnych i równoważne maski dla każdego.  
   
 |Wyrażenie regularne|Maska|Uwagi|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/` Znak maski jest separatora operatory i będzie ono wyświetlane użytkownikowi jako separator daty odpowiednią dla bieżącej kultury aplikacji.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Data (dzień, skrót miesiąca i roku) w formacie Stanów Zjednoczonych, w którym skrót miesiąca trzyliterowy zostanie wyświetlony z początkowej wielką literę, a następnie dwa małe litery.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Numer telefonu Stanów Zjednoczonych, numer kierunkowy opcjonalne. Jeśli użytkownik nie życzy sobie wprowadź znaki opcjonalne, klika wprowadź spacji lub umieść wskaźnik myszy bezpośrednio w pozycji w masce reprezentowany przez pierwszy 0.|  
-|`$\d{6}.00`|`$999,999.00`|Wartość waluty w zakresie od 0 do 999999. Waluty, / 1000 i znaki dziesiętne zostaną zastąpione w czasie wykonywania ich odpowiedniki specyficzne dla kultury.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/` Znak maski jest separator daty logicznych i będzie ono wyświetlane użytkownikowi jako separator daty odpowiednie dla bieżącej kultury aplikacji.|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Data (dzień, skrót miesiąca i roku) w formacie Stanów Zjednoczonych, w którym miesiącu trzyliterowy skrót jest wyświetlany z początkową wielką literą, następuje dwa małe litery.|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Numer telefonu Stanów Zjednoczonych, numer kierunkowy opcjonalne. Jeśli użytkownik nie chce wprowadzić znaki opcjonalne, ona wprowadź miejsca do magazynowania lub umieść wskaźnik myszy bezpośrednio w położeniu maski reprezentowany przez pierwsze 0.|  
+|`$\d{6}.00`|`$999,999.00`|Wartość waluty z zakresu od 0 do 999 999. Waluty, tysięczną i znaki dziesiętne zostaną zastąpione w czasie wykonywania za pomocą ich odpowiedników specyficzne dla kultury.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  

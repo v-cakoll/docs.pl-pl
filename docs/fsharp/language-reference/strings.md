@@ -2,12 +2,12 @@
 title: Ciągi (F#)
 description: 'Dowiedz się, jak typu "string" F # reprezentuje niezmienny tekst jako sekwencja znaków Unicode.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7309e93bf0a6518d03a9f850804a4f580e2c96b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561294"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43799346"
 ---
 # <a name="strings"></a>Ciągi
 
@@ -17,6 +17,7 @@ ms.locfileid: "43561294"
 `string` Typu reprezentuje niezmienny tekst jako sekwencja znaków Unicode. `string` jest aliasem dla `System.String` w .NET Framework.
 
 ## <a name="remarks"></a>Uwagi
+
 Literały ciągów są rozdzielone znakiem cudzysłowu ("). Znak ukośnika odwrotnego ( \\ ) jest używany do kodowania niektórych znaków specjalnych. Ukośnik odwrotny i następny znak razem są określane jako *sekwencji unikowej*. Znak ucieczki sekwencje obsługiwane w F # ciąg, który literały są wyświetlane w poniższej tabeli.
 
 |Znak|Sekwencja unikowa|
@@ -66,23 +67,27 @@ def
 Ciągi ASCII mogą być reprezentowane przez tablice bajtów bez znaku, wpisz `byte[]`. Dodaj sufiks `B` z ciągiem literału, aby wskazać, że ciąg ASCII. Literały ciągów znaków ASCII używany z tablic bajtowych obsługują ten sam sekwencje ucieczki jako ciągi znaków Unicode, z wyjątkiem sekwencje unikowe Unicode.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
-    
+
 ## <a name="string-operators"></a>Operatory ciągów
+
 Istnieją dwa sposoby łączenia ciągów: za pomocą `+` operatora lub za pomocą `^` operatora. `+` Operator zachowuje zgodność z obsługi funkcji ciągów .NET Framework.
 
 Poniższy przykład ilustruje ciągów.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
-    
+
 ## <a name="string-class"></a>Klasa String
+
 Ponieważ typ ciągu w języku F # jest faktycznie .NET Framework `System.String` wpisz wszystkie `System.String` składowe są dostępne. Obejmuje to `+` operatora, który jest używany do łączenia ciągów, `Length` właściwości i `Chars` właściwość, która zwraca ciąg w postaci tablicy znaków Unicode. Aby uzyskać więcej informacji na temat ciągów, zobacz `System.String`.
 
 Za pomocą `Chars` właściwość `System.String`, dostęp do poszczególnych znaków w ciągu, określając indeksu, jak pokazano w poniższym kodzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
-    
+
 ## <a name="string-module"></a>Parametry modułu
+
 Dodatkowe funkcje obsługi ciągu znajduje się w `String` modułu w `FSharp.Core` przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Core.String — moduł](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
 
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka F#](index.md)

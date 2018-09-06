@@ -3,11 +3,11 @@ title: Zewnętrzne Przybornik zestawu reguł
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
 ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538673"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43803359"
 ---
 # <a name="external-ruleset-toolkit"></a>Zewnętrzne Przybornik zestawu reguł
 Zwykle, gdy zasady są używane w aplikacji przepływu pracy, reguły są częścią zestawu. W niektórych przypadkach warto zachować zestawów reguł, niezależnie od zestawu, dzięki czemu mogą być aktualizowane bez ponownego tworzenia i wdrażania zestawu przepływu pracy. Ten przykład umożliwia zarządzanie i Edytuj zestawów reguł w bazie danych i uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania. Umożliwia to uruchamianie wystąpienia przepływu pracy automatycznie zastosować zmian zestaw reguł.  

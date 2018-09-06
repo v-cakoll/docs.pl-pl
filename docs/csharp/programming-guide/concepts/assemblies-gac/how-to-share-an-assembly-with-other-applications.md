@@ -2,12 +2,12 @@
 title: 'Porady: dzielenie się zestawem z innymi aplikacjami (C#)'
 ms.date: 07/20/2015
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: 413eb5e021c782db05abd454ebfa4e7cb1a1abcb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a5b20061c759fd914193f24aa123317f13d31dce
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512911"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43799440"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>Porady: dzielenie się zestawem z innymi aplikacjami (C#)
 Zestawy mogą być prywatne lub udostępnione: domyślnie większości programów proste składają się z zestawu prywatnego, ponieważ nie są przeznaczone do użycia przez inne aplikacje.  
@@ -24,7 +24,7 @@ Zestawy mogą być prywatne lub udostępnione: domyślnie większości programó
   
 4.  Dodaj zestaw do globalnej pamięci podręcznej zestawów. Aby uzyskać więcej informacji, zobacz [porady: Instalowanie zestawu w globalnej pamięci podręcznej zestawów](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
-5.  Dostęp do typów są zawarte w zestawie z innych aplikacji. Aby uzyskać więcej informacji, zobacz [porady: odwołanie do zestawu Strong-Named](https://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
+5.  Dostęp do typów są zawarte w zestawie z innych aplikacji. Aby uzyskać więcej informacji, zobacz [porady: odwołanie do zestawu Strong-Named](../../../../framework/app-domains/how-to-reference-a-strong-named-assembly.md).  
   
 ## <a name="see-also"></a>Zobacz też
 

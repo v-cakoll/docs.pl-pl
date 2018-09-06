@@ -1,18 +1,17 @@
 ---
 title: do — Powiązania w klasach (F#)
-description: 'Dowiedz się, jak używać F # "do" powiązanie w definicji klasy, która wykonuje akcje podczas konstruowania obiektu lub przy pierwszym użyciu typu.'
+description: 'Dowiedz się, jak używać języka F # są powiązania w definicji klasy, która wykonuje akcje w przypadku, gdy obiekt jest konstruowany lub przy pierwszym użyciu typu.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 779b33c44b1518135f4c7f270173ec8124fec101
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565194"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801542"
 ---
 # <a name="do-bindings-in-classes"></a>do — Powiązania w klasach
 
-A `do` powiązanie w definicji klasy wykonuje akcje podczas konstruowania obiektu lub, w przypadku statycznego `do` powiązanie, gdy typ jest najpierw używany.
-
+A `do` powiązania w definicji klasy wykonuje akcje, gdy obiekt jest konstruowany lub, w przypadku statycznego `do` powiązania, gdy typ pierwszego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,19 +20,20 @@ A `do` powiązanie w definicji klasy wykonuje akcje podczas konstruowania obiekt
 ```
 
 ## <a name="remarks"></a>Uwagi
-A `do` powiązania pojawi się wraz z lub po `let` powiązania, ale przed definicji elementu członkowskiego w definicji klasy. Mimo że `do` — słowo kluczowe jest opcjonalne dla `do` powiązania na poziomie modułu nie jest opcjonalny w przypadku `do` powiązania w definicji klasy.
 
-Do tworzenia każdy obiekt dowolnego danego typu, niestatyczna `do` powiązania i niestatyczna `let` powiązania są wykonywane w kolejności, w jakiej występują w definicji klasy. Wiele `do` powiązania może wystąpić w jednym typie. Niestatyczna `let` powiązania i niestatyczna `do` powiązania stają się treści podstawowego konstruktora. Kod w niestatycznym `do` sekcji powiązania może odwoływać się parametrami konstruktora podstawowego oraz wartości lub funkcje, które są zdefiniowane w `let` sekcji powiązania.
+A `do` powiązania pojawi się wraz z lub po `let` powiązania, ale przed definicje elementów członkowskich w definicji klasy. Mimo że `do` — słowo kluczowe jest opcjonalny w przypadku `do` powiązania na poziomie modułu nie jest opcjonalny w przypadku `do` powiązania w definicji klasy.
 
-Niestatyczne `do` powiązania mogą uzyskiwać dostęp do elementów członkowskich klasy, tak długo, jak klasa ma własnego identyfikatora, który jest zdefiniowany przez `as` — słowo kluczowe w klasie, nagłówek i tak długo, jak wszystkie używa tych członków jest kwalifikowany za pomocą własnego identyfikatora klasy.
+Do tworzenia wszystkich obiektów dowolnego danego typu, niestatycznej `do` powiązania i niestatycznych `let` powiązania są wykonywane w kolejności, w jakiej są wyświetlane w definicji klasy. Wiele `do` powiązania mogą wystąpić w jednym typie. Niestatyczna `let` powiązania i niestatycznych `do` powiązania stają się treść konstruktora podstawowego. Kod w niestatycznej `do` może odwoływać się w sekcji wiązania podstawowy Konstruktor parametrów i wartości lub funkcje, które są zdefiniowane w `let` sekcję wiązania.
 
-Ponieważ `let` powiązania zainicjować pól prywatnych klasy, która jest często zagwarantowanie, że członkowie działać zgodnie z oczekiwaniami, `do` powiązania są zwykle umieszczane po `let` powiązania, który kod w `do` może powiązania wykonywane za pomocą obiektu pełni zainicjowany. Jeśli kod spróbuje przed zakończeniem inicjowania, należy użyć członka, InvalidOperationException jest wywoływane.
+Niestatycznych `do` powiązania mogą uzyskiwać dostęp do elementów członkowskich klasy tak długo, jak klasa ma własny identyfikator, który jest definiowany przez `as` — słowo kluczowe w klasie, nagłówek i tak długo, jak wszystkie przypadki użycia tych elementów członkowskich są kwalifikowany za pomocą własny identyfikator dla tej klasy.
 
-Statyczne `do` powiązania może odwoływać się elementy członkowskie static lub pola otaczającej klasy, ale nie wystąpienia elementów członkowskich lub pól. Statyczne `do` powiązania staną się częścią inicjator statyczny dla klasy, która może wykonać przed pierwszym użyciu tej klasy.
+Ponieważ `let` powiązania zainicjować pól prywatnych klasy, która często jest to niezbędne zagwarantować, że elementy Członkowskie zachowują się zgodnie z oczekiwaniami, `do` powiązania są zazwyczaj umieszczane po `let` powiązania tak, możesz pisać kod w `do` może powiązania są wykonywane z w pełni zainicjowanego obiektu. Jeśli kod próbuje przed zakończeniem inicjowania, należy użyć członka, zgłaszany jest InvalidOperationException.
 
-Atrybuty są ignorowane w przypadku `do` powiązania w typach. Jeśli atrybut jest wymagany dla kodu, który wykonuje `do` powiązanie, jego musi odnosić się do podstawowego konstruktora.
+Statyczne `do` powiązania mogą odwoływać się do statycznych elementów członkowskich lub pola otaczającej klasy, ale nie wystąpień elementów członkowskich lub pola. Statyczne `do` powiązania stają się częścią statycznego inicjatora dla klasy, która jest gwarantowane do wykonania przed pierwszym użyciu tej klasy.
 
-W poniższym kodzie klasa ma statycznych `do` powiązania i niestatyczną `do` powiązania. Obiekt ma konstruktora, który zawiera dwa parametry `a` i `b`, i dwa pola prywatne są zdefiniowane w `let` powiązania dla tej klasy. Również zdefiniowano dwie właściwości. Wszystkie te są w zakresie niestatyczna `do` sekcji powiązania, jak to pokazano wiersza, który wyświetla wszystkie te wartości.
+Atrybuty są ignorowane w przypadku `do` powiązania w typach. Jeśli atrybut jest wymagany dla kodu, który jest wykonywany w `do` powiązania go muszą być stosowane do konstruktora podstawowego.
+
+W poniższym kodzie klasy jest statyczną `do` powiązanie i niestatyczną `do` powiązania. Obiekt ma Konstruktor, który zawiera dwa parametry `a` i `b`, dwa pola prywatne są one definiowane w `let` powiązania dla tej klasy. Dwie właściwości są również określone. Wszystkie te znajdują się w zakresie w niestatycznej `do` sekcję wiązania, jak pokazano wiersza, który wyświetla wszystkie te wartości.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3101.fs)]
 
@@ -44,13 +44,10 @@ Initializing MyType.
 Initializing object 1 2 2 4 8 16
 ```
 
-## <a name="see-also"></a>Zobacz też
-[Elementy członkowskie](index.md)
+## <a name="see-also"></a>Zobacz także
 
-[Klasy](../classes.md)
-
-[Konstruktory](constructors.md)
-
-[`let` Powiązania w klasach](let-bindings-in-classes.md)
-
-[`do` Powiązania](../functions/do-Bindings.md)
+- [Elementy członkowskie](index.md)
+- [Klasy](../classes.md)
+- [Konstruktory](constructors.md)
+- [`let` Powiązania w klasach](let-bindings-in-classes.md)
+- [`do` Powiązania](../functions/do-Bindings.md)

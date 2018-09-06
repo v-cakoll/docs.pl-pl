@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555491"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43797849"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS — Wyliczenie
 Zawiera wartości, które wskazują zachowanie uruchamiania środowiska uruchomieniowego języka wspólnego (CLR). Domyślnie, wyrzucanie elementów bezużytecznych jest niewspółbieżne i tylko Biblioteka klasy podstawowej jest załadowana do obszaru neutralnej domeny.  

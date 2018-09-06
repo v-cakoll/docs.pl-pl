@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: f2927ea6eed0bf23f75f960f8ecef0a1ad670253
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732017"
+ms.locfileid: "43802953"
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu MenuBar
 > [!NOTE]

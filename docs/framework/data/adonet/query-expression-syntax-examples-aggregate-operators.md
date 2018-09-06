@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
 ms.openlocfilehash: fe3bd69b17b98e923c6c31fec2611e7390894e4a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398540"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43797537"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>Przykłady składni wyrażeń zapytania: Operatory agregacji (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, i <xref:System.Linq.Enumerable.Sum%2A> metod do wykonywania zapytań <xref:System.Data.DataSet> i agregowanie danych przy użyciu składni wyrażeń zapytania.  

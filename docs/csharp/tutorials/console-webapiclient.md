@@ -3,12 +3,12 @@ title: Tworzenie klienta REST przy użyciu platformy .NET Core
 description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: bc3c23b277b233efba9f32cc49b29ac905f3abc8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480159"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801032"
 ---
 # <a name="rest-client"></a>Klient REST
 
@@ -37,7 +37,7 @@ Przed rozpoczęciem wprowadzania modyfikacji, Przejdźmy przez czynności, aby u
 Po przywróceniu pakietów, możesz uruchomić `dotnet build`. Wykonuje aparat kompilacji i tworzy aplikację. Na koniec wykonaj `dotnet run` do uruchamiania aplikacji.
 
 ## <a name="adding-new-dependencies"></a>Dodawanie nowych zależności
-Jednym z celów projektowania klucza dla platformy .NET Core jest minimalizacja rozmiaru instalacji programu .NET framework. W ramach aplikacji .NET Core zawiera tylko najbardziej typowe elementy pełny .NET framework. Jeśli aplikacja wymaga dodatkowych bibliotek dla niektórych funkcji, możesz dodać te zależności w projekcie języka C# (\*.csproj) pliku. W tym przykładzie należy dodać `System.Runtime.Serialization.Json` pakietu, dzięki czemu aplikacja może przetworzyć odpowiedzi JSON.
+Jednym z celów projektowania klucza dla platformy .NET Core jest minimalizacja rozmiaru instalacji programu .NET. Jeśli aplikacja wymaga dodatkowych bibliotek dla niektórych funkcji, możesz dodać te zależności w projekcie języka C# (\*.csproj) pliku. W tym przykładzie należy dodać `System.Runtime.Serialization.Json` pakietu, dzięki czemu aplikacja może przetworzyć odpowiedzi JSON.
 
 Otwórz swoje `csproj` pliku projektu. Pierwszy wiersz w pliku powinny się wyświetlać jako:
 

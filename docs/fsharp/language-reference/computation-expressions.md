@@ -2,12 +2,12 @@
 title: Wyrażenia obliczeń (F#)
 description: 'Dowiedz się, jak utworzyć wygodnej składni do pisania obliczeń w F #, który może być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania.'
 ms.date: 07/27/2018
-ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "36207436"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800920"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
@@ -229,8 +229,6 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 W kodzie powyżej wywołania `Run` i `Delay` są pomijane, jeśli nie są zdefiniowane w klasie Konstruktor wyrażeń obliczeń. Treść wyrażenia obliczeń, w tym miejscu są oznaczone jako `{| cexpr |}`, przetłumaczyć obejmujące metod klasy konstruktora połączeń przez tłumaczenia opisane w poniższej tabeli. Wyrażenia obliczeń `{| cexpr |}` jest zdefiniowanego cyklicznie zgodnie z ich gdzie `expr` jest wyrażeniem F # i `cexpr` jest wyrażenia obliczeń.
 
-
-
 |Wyrażenie|{1&gt;Translacja&lt;1}|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
@@ -361,7 +359,7 @@ let comp = eventually {
         printfn " x = %d" x
     return 3 + 4 }
 
-// Try the remaining lines in F# interactive to see how this 
+// Try the remaining lines in F# interactive to see how this
 // computation expression works in practice.
 let step x = Eventually.step x
 
@@ -386,9 +384,11 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 Wyrażenia obliczeń ma typu podstawowego, który zwraca wartość wyrażenia. Typ podstawowy może reprezentować obliczony wynik lub opóźnione obliczenie, które mogą być wykonywane lub może ona dostarczać sposób do iteracji przez kolekcję określonego typu. W poprzednim przykładzie był typem podstawowym **ostatecznie**. To wyrażenie sekwencji jest typem podstawowym <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Wyrażenie zapytania, typ podstawowy jest <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Dla asynchronicznego przepływu pracy jest typem podstawowym [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). `Async` Obiekt reprezentuje pracy do wykonania do obliczania wyniku. Na przykład wywołać [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) do wykonywania obliczeń i zwracają wynik.
 
 ## <a name="custom-operations"></a>Operacje niestandardowe
+
 Można zdefiniować niestandardowe operacja na wyrażeniu obliczeń i użyć niestandardowych operacji jako operator w wyrażeniu obliczeń. Na przykład może zawierać operatora zapytania "w" w wyrażeniu zapytania. Podczas definiowania operacji niestandardowej, należy zdefiniować wydajność i metod w wyrażeniu obliczeń. Aby zdefiniować niestandardowe działanie, umieść go w klasę konstruktora dla wyrażenia obliczeń, a następnie Zastosuj [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Ten atrybut przyjmuje ciąg jako argument, jest to nazwa, która ma być używany w niestandardowych operacji. Ta nazwa jest dostarczany do zakresu na początku otwierającym nawiasie klamrowym wyrażenia obliczeń. Dlatego nie należy używać identyfikatorów, które mają taką samą nazwę jak niestandardowe działania w tym bloku. Na przykład należy unikać stosowanie identyfikatorów, takich jak `all` lub `last` w wyrażeniach zapytań.
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>Rozszerzanie istniejących producenci nowe operacje niestandardowe
+
 Jeśli masz już klasa konstruktora, jego operacje niestandardowe można rozszerzyć z poza tym konstruktora klasy. Rozszerzenia musi być zadeklarowany w modułach. Przestrzenie nazw nie może zawierać elementy członkowskie rozszerzeń z wyjątkiem w tym samym pliku i tej samej grupie deklaracji przestrzeni nazw, gdy typ jest zdefiniowany.
 
 Poniższy przykład pokazuje rozszerzenie istniejącej `Microsoft.FSharp.Linq.QueryBuilder` klasy.
@@ -401,11 +401,9 @@ type Microsoft.FSharp.Linq.QueryBuilder with
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
+## <a name="see-also"></a>Zobacz także
 
-[Asynchroniczne przepływy pracy](asynchronous-workflows.md)
-
-[Sekwencje](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-
-[Wyrażenia zapytania](query-expressions.md)
+- [Dokumentacja języka F#](index.md)
+- [Asynchroniczne przepływy pracy](asynchronous-workflows.md)
+- [Sekwencje](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [Wyrażenia zapytania](query-expressions.md)

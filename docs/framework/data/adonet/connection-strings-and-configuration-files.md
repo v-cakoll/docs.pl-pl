@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405978"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800933"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
 Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do problemów konserwacji i luk w zabezpieczeniach. Parametry połączenia nieszyfrowanego kompilowane do kodu źródłowego aplikacji można przeglądać za pomocą [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) narzędzia. Ponadto jeśli nigdy nie zmieni się parametry połączenia, aplikacji musi być ponownie kompilowana. Z tego względu zalecamy przechowywanie parametrów połączenia w pliku konfiguracji aplikacji.  

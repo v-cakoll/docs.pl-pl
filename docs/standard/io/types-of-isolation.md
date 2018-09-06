@@ -21,11 +21,11 @@ ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8c1d4674c84fad1b7ae6021c4868e7f5a053c5a4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489920"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43803949"
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
 Dostęp do wydzielonej pamięci masowej zawsze jest ograniczony do użytkownika, który go utworzył. Wdrożenie tego typu izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, który rozpoznaje systemu operacyjnego, czyli tożsamość skojarzoną z procesem, w którym wykonywany jest kod, gdy jest otwierany magazyn. Ta tożsamość jest tożsamość uwierzytelnionego użytkownika, ale personifikacji może spowodować, że tożsamość bieżącego użytkownika, aby zmienić dynamicznie.  

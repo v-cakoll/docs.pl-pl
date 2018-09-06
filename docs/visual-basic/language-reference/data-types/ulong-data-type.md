@@ -19,11 +19,11 @@ ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 214243f6a8a87f4e4cc15f31be23275fff00d07d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43662128"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43797978"
 ---
 # <a name="ulong-data-type-visual-basic"></a>Ulong — typ danych (Visual Basic)
 

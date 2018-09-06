@@ -3,20 +3,20 @@ title: Zastosowanie strukturze ML.NET do prognozowania cen biletów usługi New 
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu regresji.
 author: aditidugar
 ms.author: johalex
-ms.date: 06/18/2018
+ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e3ff2124a43cf42ce26cf94cfd5384387eef0ed9
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 133b7ad17a98e4eea510f1704555b690b98e9091
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937075"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801063"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Samouczek: Używanie strukturze ML.NET do prognozowania cen biletów usługi New York taksówek (Regresja)
 
 > [!NOTE]
-> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, zobacz [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 W tym samouczku pokazano, jak za pomocą strukturze ML.NET tworzyć [modelu regresji](../resources/glossary.md#regression) do przewidywania taryf taksówek w Nowym Jorku.
 
@@ -38,21 +38,21 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="understand-the-problem"></a>Omówienie problemu
 
-Ten problem skupia się wokół **Prognozowanie opłacie taksówek przełączył w Nowym Jorku**. Na pierwszy rzut oka może wydawać się po prostu zależą dystans. Jednak dostawców taksówek w Nowym Jorku jest opłata w wysokości zmiennych ilości dla innych czynników, takich jak dodatkowe osób lub płacenia kartą kredytową zamiast środków pieniężnych.
+Ten problem dotyczy Prognozowanie opłacie podróż taksówek w Nowym Jorku. Na pierwszy rzut oka może wydawać się po prostu zależą dystans. Jednak dostawców taksówek w Nowym Jorku jest opłata w wysokości zmiennych ilości dla innych czynników, takich jak dodatkowe osób lub płacenia kartą kredytową zamiast środków pieniężnych.
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Wybierz zadanie uczenia odpowiedniej maszyny
 
-Przewidywanie taryfy taksówek, najpierw wybierz zadanie uczenia odpowiedniej maszyny. Chcesz przewidzieć, wartość rzeczywista (wartość o podwójnej precyzji reprezentującą cena) na podstawie innych czynników w zestawie danych. Możesz wybrać [ **regresji** ](../resources/glossary.md#regression) zadania.
+Chcesz przewidzieć wartość ceny, który jest wartością rzeczywistego na podstawie innych czynników, w zestawie danych. Aby zrobić, możesz wybrać [regresji](../resources/glossary.md#regression) machine learning zadania.
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsoli
 
 1. Otwórz program Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W **nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** pole tekstowe, wpisz "TaxiFarePrediction", a następnie wybierz **OK** przycisku.
 
-2. Utwórz katalog o nazwie *danych* w projekcie, aby zapisać plik zestawu danych:
+1. Utwórz katalog o nazwie *danych* w projekcie do przechowywania plików modelu i zestaw danych:
 
     W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Dodaj** > **nowy Folder**. Wpisz "Dane", a następnie naciśnij klawisz Enter.
 
-3. Zainstaluj **pakietu NuGet Microsoft.ML**:
+1. Zainstaluj **Microsoft.ML** pakietu NuGet:
 
     W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz opcję **Przeglądaj** kartę, wyszukaj **Microsoft.ML**, a następnie wybierz pakiet z listy i wybierz **zainstalować** przycisku. Wybierz **OK** znajdujący się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdujący się na **akceptacja licencji** okno dialogowe Jeśli możesz Akceptuję postanowienia licencyjne dla pakietów wymienionych.
 
@@ -60,9 +60,9 @@ Przewidywanie taryfy taksówek, najpierw wybierz zadanie uczenia odpowiedniej ma
 
 1. Pobierz [taksówek taryfy train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) i [taksówek taryfy test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) danych ustawia i zapisywanie ich *danych* folderu utworzonego w poprzednim kroku. Używamy tych zestawów danych do nauczenia modelu uczenia maszynowego, a następnie ocenę, jak dokładna jest model. Te zestawy danych są pierwotnie z [zestawu danych podróży taksówek TLC NYC](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
 
-2. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy każdy z \*plików CSV, a następnie wybierz **właściwości**. W obszarze **zaawansowane**, zmień wartość właściwości **Kopiuj do katalogu wyjściowego** do **zawsze**.
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy każdy z \*plików CSV, a następnie wybierz **właściwości**. W obszarze **zaawansowane**, zmień wartość właściwości **Kopiuj do katalogu wyjściowego** do **Kopiuj Jeśli nowszy**.
 
-3. Otwórz **taksówek taryfy train.csv** dane ustawić i spójrz na nagłówki kolumn w pierwszym wierszu. Przyjrzyj się każdej z kolumn. Zrozumieć dane i zdecydować, które kolumny są **funkcji** i który z nich jest **etykiety**.
+1. Otwórz **taksówek taryfy train.csv** dane ustawić i spójrz na nagłówki kolumn w pierwszym wierszu. Przyjrzyj się każdej z kolumn. Zrozumieć dane i zdecydować, które kolumny są **funkcji** i który z nich jest **etykiety**.
 
 **Etykiety** to identyfikator kolumny, aby przewidzieć. Wskazywanego przez nią **funkcji** są używane do prognozowania etykiety.
 
@@ -92,7 +92,10 @@ Usuń istniejącą definicję klasy i Dodaj następujący kod, który zawiera dw
 
 `TaxiTrip` jest klasą danych wejściowych i ma definicje dla każdej z kolumn w zestawie danych. Użyj [kolumny](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) atrybutu, aby określić indeksów kolumny źródłowe w zestawie danych.
 
-`TaxiTripFarePrediction` Klasa jest używana do reprezentowania wyników. Ma ona pojedynczy float (`FareAmount`) pole `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) zastosowany. **Wynik** kolumna jest kolumną specjalne w strukturze ML.NET. Model danych wyjściowych przewidywane wartości w tej kolumnie.
+`TaxiTripFarePrediction` Klasa reprezentuje wyników. Ma pola pojedynczego `FareAmount`, za pomocą `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) zastosowany. W przypadku zadań regresji **wynik** kolumna zawiera wartości prognozowanej etykiet.
+
+> [!NOTE]
+> Użyj `float` typu do reprezentowania wartości zmiennoprzecinkowych w klasach danych wejściowych i prognozowania.
 
 ## <a name="define-data-and-model-paths"></a>Zdefiniować dane oraz model ścieżki
 
@@ -116,7 +119,7 @@ Dodaj następujące dodatkowe `using` dyrektywy do góry *Program.cs* pliku:
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
-W `Main`, Zastąp `Console.WriteLine("Hello World!")` następującym kodem:
+W `Main` metody, Zastąp `Console.WriteLine("Hello World!")` następującym kodem:
 
 ```csharp
 PredictionModel<TaxiTrip, TaxiTripFarePrediction> model = Train();
@@ -139,7 +142,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>Obciążenia i przekształcania danych
 
-Pierwszym krokiem, który wykonuje potok nauczania Trwa ładowanie danych z zestawu danych szkoleniowych. W naszym przypadku szkoleniowy zestaw danych znajduje się w pliku tekstowym ze ścieżką definicją `_datapath` pola. Ten plik zawiera nagłówek z nazw kolumn, więc pierwszy wiersz powinien być ignorowane podczas ładowania danych. Kolumny w pliku są oddzielone przecinkiem (","). Dodaj następujący kod do `Train` metody:
+Pierwszym krokiem do wykonania jest do ładowania danych z zestawu danych szkoleniowych. W naszym przypadku szkoleniowy zestaw danych znajduje się w pliku tekstowym ze ścieżką definicją `_datapath` pola. Ten plik ma nagłówek z nazw kolumn, więc pierwszy wiersz powinien być ignorowane podczas ładowania danych. Kolumny w pliku są oddzielone przecinkiem (","). Dodaj następujący kod do `Train` metody:
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -147,7 +150,7 @@ pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, sep
 
 W następnych krokach nazywamy kolumny według nazw zdefiniowana w `TaxiTrip` klasy.
 
-Gdy uczony model i obliczone wartości w **etykiety** kolumny będą traktowane jako prawidłowe wartości do można przewidzieć. Ponieważ chcemy przewidzieć taryfy taksówek w podróży, skopiuj `FareAmount` kolumny na **etykiety** kolumny. Aby to zrobić, należy użyć <xref:Microsoft.ML.Transforms.ColumnCopier> i Dodaj następujący kod:
+Gdy wiedzę i oceniane, domyślne wartości w modelu **etykiety** kolumny będą traktowane jako prawidłowe wartości do można przewidzieć. Ponieważ chcemy przewidzieć taryfy taksówek w podróży, skopiuj `FareAmount` kolumny na **etykiety** kolumny. Aby to zrobić, należy użyć <xref:Microsoft.ML.Transforms.ColumnCopier> i Dodaj następujący kod:
 
 ```csharp
 pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
@@ -161,7 +164,7 @@ pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
                                              "PaymentType"));
 ```
 
-Ostatnim krokiem w przygotowaniu danych łączy wszystkie kolumny funkcji do **funkcji** przy użyciu kolumny <xref:Microsoft.ML.Transforms.ColumnConcatenator> klasy przekształcenia. Ten krok jest niezbędny, jako uczeń przetwarza tylko funkcje z **funkcji** kolumny. Dodaj następujący kod:
+Ostatnim krokiem w przygotowaniu danych łączy wszystkie kolumny funkcji do **funkcji** przy użyciu kolumny <xref:Microsoft.ML.Transforms.ColumnConcatenator> klasy przekształcenia. Domyślnie algorytmu uczenia przetwarza tylko funkcje z **funkcji** kolumny. Dodaj następujący kod:
 
 ```csharp
 pipeline.Add(new ColumnConcatenator("Features",
@@ -179,7 +182,7 @@ Należy zauważyć, że `TripTime` kolumny, która odpowiada `trip_time_in_secs`
 
 ## <a name="choose-a-learning-algorithm"></a>Wybieranie algorytmu uczenia
 
-Po dodaniu danych z potokiem i przekształcane na poprawny format danych wejściowych, wybrać algorytm uczenia (**learner**). Uczeń przygotowuje modelu. Wybrano **zadań regresji** dla tego problemu, dlatego możesz dodać <xref:Microsoft.ML.Trainers.FastTreeRegressor> learner, który jest jednym z uczących regresji, dostarczone przez strukturze ML.NET.
+Po dodaniu danych z potokiem i przekształcane na poprawny format danych wejściowych, wybrać algorytm uczenia (**learner**). Uczeń przygotowuje modelu. Wybrano **regresji** zadań dla tego problemu, dzięki czemu używasz <xref:Microsoft.ML.Trainers.FastTreeRegressor> uczeń, który jest jednym z uczących regresji, dostarczone przez strukturze ML.NET.
 
 <xref:Microsoft.ML.Trainers.FastTreeRegressor> Uczeń korzysta, wzrostu gradientu. Ulepszanie gradientu jest techniką problemów regresji uczenia maszynowego. Zbudował każdego drzewa regresji, w sposób stopniowy. Aby zmierzyć błędów w każdym kroku i popraw go w ciągu następnych widoku jest używana funkcja utraty wstępnie zdefiniowane. Wynik jest model predykcyjny, który jest faktycznie zespołu słabszy modele predykcyjne. Aby uzyskać więcej informacji na temat zwiększania wyniku gradientu zobacz [wzmocnione regresji drzewa decyzyjnego](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
 
@@ -203,7 +206,7 @@ I to wszystko! Zostały pomyślnie uczony model, który potrafi prognozować tar
 
 ### <a name="save-the-model"></a>Zapisz model
 
-Przed przejściem do następnego kroku, Zapisz model do pliku zip, dodając następujący kod na końcu `Train` metody:
+W tym momencie masz modelu, który można zintegrować wszystkich istniejących i nowych aplikacji .NET. Aby zapisać model do pliku zip, Dodaj następujący kod na końcu `Train` metody:
 
 [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#5 "Save the model asynchronously and return the model")]
 
@@ -227,7 +230,7 @@ Ponieważ `async Main` metodą jest funkcja, dodany w języku C# 7.1 i wersją j
 
 ## <a name="evaluate-the-model"></a>Ocena modelu
 
-Ocena jest procesem sprawdzania, jak model przewiduje wartości etykiet. Należy pamiętać, że model sprawia, że dobry prognozy na danych, który nie był używany do nauczenia modelu. Jednym ze sposobów, w tym celu jest podzielić dane na szkolenie i testowanie zestawów danych, co jest wykonywane w ramach tego samouczka. Skoro już uczony model danych szkolenie, możesz zobaczyć, jak sprawdzi się na danych testowych.
+Ocena jest procesem sprawdzania, jak model przewiduje wartości etykiet. Należy pamiętać, że model sprawia, że dobry prognozy na danych, który nie był używany do nauczenia modelu. Jednym ze sposobów, w tym celu jest podzielenie danych na zestaw szkoleniowy i zestawami danych testowych, co jest wykonywane w ramach tego samouczka. Skoro już uczony model na dane szkoleniowe, możesz zobaczyć, jak sprawdzi się na danych testowych.
 
 Wróć do `Main` metody i Dodaj następujący kod poniżej wywołania `Train`metody:
 
@@ -260,7 +263,7 @@ Dodaj następujący kod do ewaluacji modelu i generować metryk oceny:
 
 ## <a name="use-the-model-for-predictions"></a>Na użytek modelu prognozy
 
-Następnie Utwórz klasę do domu scenariuszy testowych, których można użyć, aby upewnić się, że model działa prawidłowo:
+Utwórz klasę do domu badanie danych wystąpień:
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, a następnie wybierz **Dodaj** > **nowy element**.
 1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **klasy** i zmień **nazwa** pole *TestTrips.cs*. Następnie wybierz **Dodaj** przycisku.
@@ -280,7 +283,7 @@ Przewidywanie opłacie określonego podróży, wróć do *Program.cs* pliku i Do
 
 Uruchom program, aby zobaczyć taryfy przewidywane taksówek dla przypadków testowych.
 
-Gratulacje! Już teraz pomyślnie wbudowany model uczenia maszynowego do przewidywania taksówek podróży opłaty, ocenić jego dokładności i używana do tworzenia prognoz. Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) repozytorium.
+Gratulacje! Już teraz pomyślnie wbudowany model uczenia maszynowego do przewidywania taksówek podróży opłaty, ocenić jego dokładności i używana do tworzenia prognoz. Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) repozytorium GitHub.
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -298,4 +301,4 @@ W tym samouczku przedstawiono sposób:
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej.
 > [!div class="nextstepaction"]
-> [Klastrowanie irysów](iris-clustering.md)
+> [Klastrowanie zestawu danych Iris](iris-clustering.md)

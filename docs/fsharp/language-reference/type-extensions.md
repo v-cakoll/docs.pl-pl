@@ -2,12 +2,12 @@
 title: Rozszerzenia typu (F#)
 description: 'Dowiedz się, jak rozszerzeń typu F # zezwala na dodawanie nowych członków do typu obiektu zdefiniowanego wcześniej.'
 ms.date: 07/20/2018
-ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33566889"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855064"
 ---
 # <a name="type-extensions"></a>Rozszerzenia typu
 
@@ -169,6 +169,5 @@ Na koniec Jeśli istnieje wiele rozszerzeń typu wewnętrznego dla jednego typu,
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka F#](index.md)
-
-[Elementy członkowskie](members/index.md)
+- [Dokumentacja języka F#](index.md)
+- [Elementy członkowskie](members/index.md)

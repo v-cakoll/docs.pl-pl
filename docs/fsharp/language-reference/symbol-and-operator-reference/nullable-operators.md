@@ -1,23 +1,23 @@
 ---
 title: Operatory dopuszczające wartość null (F#)
-description: 'Więcej informacji na temat operatory dopuszczające wartość null, które są dostępne w języku programowania w języku F #.'
+description: 'Więcej informacji na temat operatory dopuszczające wartość null, które są dostępne w F # języka programowania.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 63ad7da2d584b96eee8765b57fc671befbcbd38b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566353"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801193"
 ---
 # <a name="nullable-operators"></a>Operatory dopuszczające wartość null
 
-Operatory dopuszczające wartość null są operatorów binarnych arytmetycznego lub porównanie, które współpracują z typy dopuszczające wartości zerowe arytmetycznego na jednej lub obu stronach. Typy dopuszczające wartości zerowe pojawiają się często, podczas pracy z danymi ze źródeł, takich jak bazy danych, które dopuszcza wartości null zamiast wartości rzeczywistych. Operatory dopuszczające wartość null są często używane w wyrażeniach zapytań. Oprócz operatory dopuszczające wartość null dla arytmetyczne i porównanie operatory konwersji umożliwia konwertowanie typów dopuszczających wartości zerowe. Dostępne są również nullable wersje operatorów zapytania.
-
+Operatory dopuszczające wartość null są operatory dwuargumentowe arytmetycznych lub porównaniach, współpracujących z typami zerowalnymi arytmetyczne na jednej lub obu stronach. Typy dopuszczające wartości zerowe pojawiają się często, podczas pracy z danymi ze źródeł, takich jak bazy danych, które dopuszcza wartości null, zamiast rzeczywistych wartości. Operatory dopuszczające wartość null są często używane w wyrażeniach zapytań. Oprócz operatory dopuszczające wartość null dla operacji arytmetycznych i porównanie operatory konwersji może służyć do konwersji między typy dopuszczające wartości null. Istnieją również nullable wersje niektórych operatorów zapytań.
 
 ## <a name="table-of-nullable-operators"></a>Tabela operatory dopuszczające wartość null
-W poniższej tabeli wymieniono obsługiwane w języku F # operatory dopuszczające wartość null.
 
-|Wartości null po lewej stronie|Wartości null na prawo|Obie strony dopuszczające wartości zerowe|
+W poniższej tabeli wymieniono operatory dopuszczające wartość null, obsługiwane w języku F #.
+
+|Dopuszcza wartości null po lewej stronie|Dopuszcza wartości null w prawo|Obie strony dopuszczającego wartość null|
 |---|---|---|
 |[?>=](https://msdn.microsoft.com/library/94d29e32-a204-4f60-a527-6b0af86268f3)|[>=?](https://msdn.microsoft.com/library/0a255d8e-8cae-4160-ae61-243a5d96583f)|[?>=?](https://msdn.microsoft.com/library/3051a50f-d276-4c84-9d73-bf2efeddef94)|
 |[?>](https://msdn.microsoft.com/library/62dc0021-1312-4ac3-be87-798b60b81bb6)|[>?](https://msdn.microsoft.com/library/0ad1284b-de48-4a04-83d8-b6f13c9c8936)|[?>?](https://msdn.microsoft.com/library/dc18b6fa-30c4-47b0-9057-794439378a05)|
@@ -32,11 +32,12 @@ W poniższej tabeli wymieniono obsługiwane w języku F # operatory dopuszczają
 |[?%](https://msdn.microsoft.com/library/44297bba-1bd9-4ed2-a848-f1e1e598db87)|[%?](https://msdn.microsoft.com/library/a4c178e5-eec4-42e8-847f-90b24fc609fe)|[?%?](https://msdn.microsoft.com/library/dd555f20-1be3-4b8d-81f1-bf1921e62fda)|
 
 ## <a name="remarks"></a>Uwagi
-Operatory dopuszczające wartość null są uwzględnione w [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) moduł w przestrzeni nazw [Microsoft.fsharp.LINQ —](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). Typ danych wartości null jest `System.Nullable<'T>`.
 
-W wyrażeniach zapytań typy dopuszczające wartości zerowe wystąpić, gdy wybór danych ze źródła danych, umożliwiający zamiast wartości na wartości null. W bazie danych programu SQL Server każda kolumna danych w tabeli ma atrybut, który wskazuje, czy są dozwolone wartości null. Jeśli są dozwolone wartości null, danych zwróconych z bazy danych może zawierać wartości null, które nie może być reprezentowany przez typ danych pierwotnych takich jak `int`, `float`i tak dalej. W związku z tym dane są zwracane jako `System.Nullable<int>` zamiast `int`, i `System.Nullable<float>` zamiast `float`. Bieżąca wartość można uzyskać od `System.Nullable<'T>` obiektu za pomocą `Value` właściwości oraz można określić, czy `System.Nullable<'T>` obiekt ma wartość, wywołując `HasValue` — metoda. Inną metodą przydatne jest `System.Nullable<'T>.GetValueOrDefault` metody, dzięki czemu można uzyskać wartość lub wartość domyślną odpowiedniego typu. Wartość domyślna to jakiegoś typu "zero" wartość, na przykład 0, 0.0, lub `false`.
+Operatory dopuszczające wartość null znajdują się w [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) modułu w przestrzeni nazw [Microsoft.fsharp.LINQ —](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). Typ danych dopuszczających wartość null jest `System.Nullable<'T>`.
 
-Typy dopuszczające wartości null, mogą być konwertowane na wartości null typy pierwotne, takie jak przy użyciu operatorów konwersji zwykle `int` lub `float`. Istnieje również możliwość do konwersji z jednego typu dopuszczającego wartości null do innego typu dopuszczającego wartości null przy użyciu operatorów konwersji na typy dopuszczające wartości zerowe. Operatory konwersji odpowiednie ma taką samą nazwę jak standardowe, ale są one w oddzielnych module [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) modułu w [Microsoft.fsharp.LINQ —](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) przestrzeni nazw. Zazwyczaj możesz otworzyć ten obszar nazw, podczas pracy z wyrażenia zapytania. W takim przypadku można używać operatorów konwersji wartości null, dodając prefiks `Nullable.` operatora konwersji odpowiednie, jak pokazano w poniższym kodzie.
+Typy dopuszczające wartości null w wyrażeniach zapytań pojawiają się podczas wybierania danych ze źródła danych, które umożliwia wartości null, zamiast wartości. W bazie danych programu SQL Server każdą kolumnę danych w tabeli ma atrybut, który wskazuje, czy są dozwolone wartości null. Jeśli wartości null są dozwolone, dane zwrócone z bazy danych może zawierać wartości null, niemożliwe do przedstawienia przez typ danych pierwotnych takich jak `int`, `float`i tak dalej. W związku z tym, dane są zwracane jako `System.Nullable<int>` zamiast `int`, i `System.Nullable<float>` zamiast `float`. Można uzyskać wartości rzeczywistej `System.Nullable<'T>` obiektu za pomocą `Value` właściwości, na które można określić, czy `System.Nullable<'T>` obiekt ma wartość, przez wywołanie metody `HasValue` metody. Inną metodą przydatne jest `System.Nullable<'T>.GetValueOrDefault` metody, która umożliwia uzyskanie wartość lub wartość domyślną odpowiedniego typu. Wartość domyślna to pewnego rodzaju wartość "zero", np. 0, 0.0, lub `false`.
+
+Typy dopuszczające wartości zerowe może zostać przekonwertowana na dopuszcza typy pierwotne, takie jak korzystanie z operatorów konwersji zwykle `int` lub `float`. Istnieje również możliwość konwersji z jednego typu dopuszczającego wartość null do innego typu dopuszczającego wartość null, przy użyciu operatorów konwersji dla typów dopuszczających wartości null. Operatory konwersji odpowiednie mają taką samą nazwę jak to standardowe, ale są one oddzielny moduł [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) modułu w [Microsoft.fsharp.LINQ —](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) przestrzeni nazw. Zazwyczaj, możesz otworzyć ten obszar nazw podczas pracy z wyrażenia zapytania. W takim przypadku można używać operatorów konwersji dopuszczającego wartość null, dodając prefiks `Nullable.` operatora odpowiedniej konwersji, jak pokazano w poniższym kodzie.
 
 ```fsharp
 open Microsoft.FSharp.Linq
@@ -50,11 +51,11 @@ let nullableFloat = Nullable.float nullableInt
 printfn "%f" (float nullableFloat)
 ```
 
-Dane wyjściowe `10.000000`.
+Dane wyjściowe są `10.000000`.
 
-Zapytanie operatory na pola danych wartości null, takich jak `sumByNullable`, istnieją również do użycia w wyrażeniach zapytań. Operatory zapytań dla typów wartości null nie są typu zgodnego z typy dopuszczające wartości null, więc należy użyć wartości null wersji operator zapytania odpowiednie podczas pracy z wartościami danych o wartości null. Aby uzyskać więcej informacji, zobacz [wyrażenia zapytania](../query-expressions.md).
+Zapytanie operatorów w polach danych dopuszczających wartość null, takie jak `sumByNullable`, dostępne są także do użycia w wyrażeniach zapytań. Operatory zapytań dla typów innych niż null nie są typu zgodnego z typami zerowalnymi, więc nullable wersję operator odpowiednich zapytań należy użyć podczas pracy z wartościami danych dopuszczających wartość null. Aby uzyskać więcej informacji, zobacz [wyrażenia zapytań](../query-expressions.md).
 
-Poniższy przykład przedstawia użycie operatory dopuszczające wartość null w wyrażeniu kwerendy F #. Pierwsza kwerenda pokazuje, jak będzie napisać zapytanie bez operatora wartości null; drugiego zapytania zawiera równoważne zapytanie, które używa operatora wartości null. Pełna kontekstu, oraz o sposobie konfigurowania bazy danych, aby użyć tego przykładowego kodu, zobacz [wskazówki: uzyskiwanie dostępu do bazy danych SQL za pomocą dostawców typów](../../tutorials/type-providers/accessing-a-sql-database.md).
+Poniższy przykład pokazuje użycie operatory dopuszczające wartość null w wyrażeniu zapytania F #. Pierwsze zapytanie pokazuje, jak należy napisać zapytanie bez operatora dopuszczającego wartość null; drugie zapytanie zawiera równoważne zapytanie, które używa operatora dopuszczającego wartość null. Dla pełnego kontekstu, w tym sposób konfigurowania bazy danych, aby użyć przykładowego kodu, zobacz [wskazówki: uzyskiwanie dostępu do bazy danych SQL za pomocą dostawców typów](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System
@@ -82,8 +83,7 @@ query {
 } |> Seq.iter (fun row -> printfn "%d %s" (row.TestData1.GetValueOrDefault()) row.Name)
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dostawcy typów](../../tutorials/type-providers/index.md)
-
-[Wyrażenia zapytania](../query-expressions.md)
+- [Dostawcy typów](../../tutorials/type-providers/index.md)
+- [Wyrażenia zapytania](../query-expressions.md)

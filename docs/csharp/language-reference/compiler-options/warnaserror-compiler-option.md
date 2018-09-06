@@ -9,11 +9,11 @@ helpviewer_keywords:
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
 ms.openlocfilehash: a29b0a6095453e3d2747cad9d9f71b463d8f6b1f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733719"
+ms.locfileid: "43801011"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (opcje kompilatora C#)
 **- Warnaserror +** opcji traktuje wszystkie ostrzeżenia jako błędy  

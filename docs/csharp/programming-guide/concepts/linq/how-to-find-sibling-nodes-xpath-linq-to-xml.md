@@ -3,11 +3,11 @@ title: 'Porady: znajdowanie węzłów elementów równorzędnych (XPath-LINQ to 
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
 ms.openlocfilehash: e10b23c311e4e7debf228c01c898f3582e2ac8d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557252"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43802680"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Porady: znajdowanie węzłów elementów równorzędnych (XPath-LINQ to XML) (C#)
 Możesz chcieć znaleźć wszystkie elementy równorzędne węzła, które mają określoną nazwę. Wynikowy kolekcji mogą obejmować węzeł kontekstu, jeśli węzeł kontekstu ma również określonej nazwy.  

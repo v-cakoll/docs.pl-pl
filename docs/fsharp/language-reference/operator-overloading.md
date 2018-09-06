@@ -1,18 +1,17 @@
 ---
 title: Przeładowanie operatora (F#)
-description: 'Dowiedz się, jak przeciążenia operatorów arytmetycznych w klasie lub typ rekordu i na poziomie globalnym w języku F #.'
+description: 'Dowiedz się, jak przeciążania operatorów arytmetycznych w klasie lub typie rekordu oraz na poziomie globalnym w języku F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: fc9b7311aa746fd758930365972a187ffdfff0d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564368"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798742"
 ---
 # <a name="operator-overloading"></a>Przeciążanie operatora
 
 W tym temacie opisano sposób przeciążania operatorów arytmetycznych w klasie lub typie rekordu oraz na poziomie globalnym.
-
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,9 +24,10 @@ let [inline] (operator-symbols) parameter-list = function-body
 ```
 
 ## <a name="remarks"></a>Uwagi
-W poprzednich składni *symbol operatora* jest jednym z `+`, `-`, `*`, `/`, `=`i tak dalej. *Listy parametrów* Określa argumenty operacji w kolejności pojawią się one w zwykłym składni dla tego operatora. *Treści metody* tworzy wynikowej wartości.
 
-Przeciążenia operatorów muszą być statyczne. Operator overloads operatory jednoargumentowe, takich jak `+` i `-`, należy użyć tyldy (`~`) w *symbol operatora* do wskazywania operator Jednoargumentowy operator i nie operatora binarnego, jak pokazano w Po deklaracji.
+W poprzedniej składni *symbol operatora* jest jednym z `+`, `-`, `*`, `/`, `=`i tak dalej. *Listy parametrów* Określa argumenty operacji w kolejności, pojawiają się na typowej składni danego operatora. *Treści metody* konstruuje wartość wynikową.
+
+Przeciążenia operatorów muszą być statyczne. Przeciążenia operatorów jednoargumentowych, takich jak `+` i `-`, należy użyć tyldy (`~`) w *symbol operatora* do wskazania, że operator jest jednoargumentowy a nie operatora binarnego, jak pokazano w poniższej deklaracji.
 
 ```fsharp
 static member (~-) (v : Vector)
@@ -38,23 +38,22 @@ Kod poniżej ilustruje klasę wektorową, która ma tylko dwa operatory: jeden d
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4001.fs)]
 
 ## <a name="creating-new-operators"></a>Tworzenie nowych operatorów
-Można przeciążać wszystkie operatory standardowe, ale także tworzyć nowe operatory z sekwencji określonych znaków. Dozwolone są znaki operator `!`, `%`, `&`, `*`, `+`, `-`, `.`, `/`, `<`, `=`, `>`, `?`, `@`, `^`, `|`, i `~`. Znak `~` odgrywa specjalną rolę (oznacza operator jednoargumentowy) i nie jest częścią sekwencji znaków operatora. Nie wszystkie operatory nie jest możliwe jednoargumentowy.
+
+Można przeciążać wszystkie operatory standardowe, ale także tworzyć nowe operatory z sekwencji określonych znaków. Dozwolone znaki to `!`, `%`, `&`, `*`, `+`, `-`, `.`, `/`, `<`, `=`, `>`, `?`, `@`, `^`, `|`, i `~`. Znak `~` odgrywa specjalną rolę (oznacza operator jednoargumentowy) i nie jest częścią sekwencji znaków operatora. Nie wszystkie operatory mogą być jednoargumentowe.
 
 W zależności od konkretnej sekwencji użytych znaków operator będzie miał określone pierwszeństwo i łączność. Łączność może być typu od lewej do prawej lub od prawej do lewej. Jest wykorzystywana zawsze wtedy, gdy operatory o tym samym poziomie pierwszeństwa występują w sekwencji bez nawiasów.
 
 Znak operatora `.` nie wpływa na pierwszeństwo, dlatego na przykład w celu zdefiniowania własnej wersji mnożenia, która ma takie samo pierwszeństwo i łączność jak zwykłe mnożenie, można utworzyć operatora `.*` albo podobnego.
 
-Tylko operatory `?` i `?<-` mogą rozpoczynać się `?`.
+Tylko operatory `?` i `?<-` może się rozpoczynać `?`.
 
-Tabelę przedstawiającą priorytet wszystkich operatorów w języku F # można znaleźć w [Operator odwołanie do symbolu i](symbol-and-operator-reference/index.md).
-
+Tabelę ilustrująca pierwszeństwo wszystkich operatorów w języku F # można znaleźć w [Operator odwołanie do symbolu i](symbol-and-operator-reference/index.md).
 
 ## <a name="overloaded-operator-names"></a>Nazwy przeciążonych operatorów
+
 Gdy kompilator języka F# kompiluje wyrażenie operatora, tworzy dla tego operatora metodę o wygenerowanej przez siebie nazwie. Ta nazwa metody jest wyświetlana w składni języka Microsoft Intermediate Language (MSIL), w odbiciu oraz w narzędziu IntelliSense. Zazwyczaj nie trzeba używać tych nazw w kodzie języka F#.
 
 W tabeli poniżej pokazano standardowe operatory oraz odpowiadające im wygenerowane nazwy.
-
-
 
 |Operator|Wygenerowana nazwa|
 |--------|--------------|
@@ -95,9 +94,8 @@ W tabeli poniżej pokazano standardowe operatory oraz odpowiadające im wygenero
 |`/=`|`op_DivisionAssignment`|
 |`..`|`op_Range`|
 |`.. ..`|`op_RangeStep`|
+
 Jako operatorów można również używać innych, niewymienionych tutaj kombinacji znaków operatorów. Ich nazwy mogą powstawać z połączenia nazw poszczególnych znaków podanych w tabeli poniżej. Na przykład +! staje się `op_PlusBang`.
-
-
 
 |Znak operatora|Nazwa|
 |------------------|----|
@@ -124,7 +122,8 @@ Jako operatorów można również używać innych, niewymienionych tutaj kombina
 |`]`|`RBrack`|
 
 ## <a name="prefix-and-infix-operators"></a>Operatory przedrostkowe i wrostkowe
-*Prefiks* operatory powinny można umieścić operand lub argumentów operacji, podobnie jak w funkcji. *Element infiksu* operatory powinny być umieszczone między dwóch argumentów operacji.
+
+*Prefiks* operatory powinny należy umieszczać przed argumentami operacji, podobnie jak funkcje. *Wrostkowe* operatory powinny być umieszczona między dwoma argumentami operacji.
 
 Jako operatorów przedrostkowych można używać tylko niektórych operatorów. Niektóre operatory są zawsze operatorami przedrostkowymi, inne mogą być wrostkowe lub przedrostkowe, a pozostałe są zawsze operatorami wrostkowymi. Operatory, które zaczynają się znakiem `!` (z wyjątkiem `!=`), oraz operator `~` lub powtarzające się sekwencje operatora `~`, są zawsze operatorami przedrostkowymi. Operatory `+`, `-`, `+.`, `-.`, `&`, `&&`, `%` i `%%` mogą być przedrostkowe lub wrostkowe. Przedrostkowe wersje tych operatorów można odróżnić od wersji wrostkowych przez dodanie znaku `~` na początku operatora przedrostkowego podczas jego definiowania. Znak `~` nie jest wykorzystywany podczas używania operatora, a tylko podczas jego definiowania.
 
@@ -145,6 +144,7 @@ Poniższy kod ilustruje zastosowania przeciążenia operatora w celu zaimplement
 ```
 
 ## <a name="operators-at-the-global-level"></a>Operatory na poziomie globalnym
+
 Operatory można również definiować na poziomie globalnym. Poniższy kod definiuje operator `+?`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4003.fs)]
@@ -153,7 +153,8 @@ Danymi wyjściowymi powyższego kodu jest wartość `12`.
 
 W ten sposób można zmieniać definicje zwykłych operatorów arytmetycznych, ponieważ reguły określania zakresów w języku F# narzucają pierwszeństwo nowo definiowanych operatorów przed operatorami wbudowanymi.
 
-W połączeniu z operatorami globalnymi często używa się słowa kluczowego `inline`, ponieważ operatory te są przeważnie małymi funkcjami, które najlepiej integrować w kodzie wywołującym. Wbudowanie funkcji operatorów umożliwia im także współpracę z parametrami typów rozpoznawanymi statycznie i dzięki temu generowanie statycznie rozpoznawanego kodu ogólnego. Aby uzyskać więcej informacji, zobacz [funkcji śródwierszowych](functions/inline-functions.md) i [statycznie rozwiązane parametrów typu](generics/statically-resolved-type-parameters.md).
+W połączeniu z operatorami globalnymi często używa się słowa kluczowego `inline`, ponieważ operatory te są przeważnie małymi funkcjami, które najlepiej integrować w kodzie wywołującym. Wbudowanie funkcji operatorów umożliwia im także współpracę z parametrami typów rozpoznawanymi statycznie i dzięki temu generowanie statycznie rozpoznawanego kodu ogólnego. Aby uzyskać więcej informacji, zobacz [funkcji śródwierszowych](functions/inline-functions.md) i [statycznie rozwiązywanych parametrach typu](generics/statically-resolved-type-parameters.md).
 
-## <a name="see-also"></a>Zobacz też
-[Elementy członkowskie](members/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Elementy członkowskie](members/index.md)

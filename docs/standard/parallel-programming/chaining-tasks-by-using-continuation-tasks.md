@@ -11,11 +11,11 @@ ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f5c5cd2fd4d9c334d45a52e23bb0d320abd13cb5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563075"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798589"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
 W programowaniu asynchronicznych jest częste jedna operacja asynchroniczna po zakończeniu wywołuje drugą operację i przekazuje dane do niej. Tradycyjnie zostało to zrobione za pomocą metody wywołania zwrotnego. W bibliotece zadań równoległych taką samą funkcjonalność świadczą *zadań kontynuacji*. Zadanie kontynuacji (znane również jako kontynuacja) to asynchroniczne zadanie, które jest wywoływane przez inne zadanie, który jest znany jako *zadania poprzedzającego*, po jego zakończeniu.  

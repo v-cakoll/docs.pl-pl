@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
 ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735530"
+ms.locfileid: "43803333"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenariusze aplikacji (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje udostępnianie i wykorzystywanie danych jako podstawowy zestaw scenariuszy [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. W tym temacie punktów do tematów, które są istotne dla tych scenariuszy.  

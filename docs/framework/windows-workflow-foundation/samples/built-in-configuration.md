@@ -3,11 +3,11 @@ title: Wbudowana Konfiguracja
 ms.date: 03/30/2017
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
 ms.openlocfilehash: e76c019d9fc1b416e6fa8175a70b5fd01d9ff53e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661168"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801258"
 ---
 # <a name="built-in-configuration"></a>Wbudowana Konfiguracja
 Niniejszy przykład pokazuje, używania i konfigurowania magazynu wystąpień przepływu pracy SQL. Magazyn wystąpień przepływu pracy SQL stanowi implementację oparte na SQL magazynu wystąpienia. Umożliwia to wystąpienie zapisać i załadować stanu do i z bazy danych programu SQL Server lub SQL Server Express.  

@@ -3,11 +3,11 @@ title: System typów (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 270b0981214e674d220025ad52c7c94ee3a66224
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534766"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800410"
 ---
 # <a name="type-system-entity-sql"></a>System typów (jednostka SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje wiele typów:  

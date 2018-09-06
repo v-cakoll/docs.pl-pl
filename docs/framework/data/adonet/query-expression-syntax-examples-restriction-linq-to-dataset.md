@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1daf42c2-c9f4-4cda-b291-7641b9c6d3fe
 ms.openlocfilehash: 556b1cc31f42cecc19492412120b31da83eff609
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733839"
+ms.locfileid: "43800560"
 ---
 # <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>Przykłady składni wyrażeń zapytania: Ograniczenie (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.Where%2A> metody zapytania <xref:System.Data.DataSet> przy użyciu składni wyrażeń zapytania.  

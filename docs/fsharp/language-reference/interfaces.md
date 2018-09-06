@@ -1,13 +1,13 @@
 ---
 title: Interfejsy (F#)
-description: 'Dowiedz się, jak F # interfejsy określić zestawy pokrewnych elementów członkowskich, które implementują innych klas.'
+description: 'Dowiedz się, jak interfejsy F # określić zestawy powiązane elementy członkowskie, które implementują innych klas.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 54ae8a2840ce26814be25f08c3ed02e12df6b7c0
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058904"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43802823"
 ---
 # <a name="interfaces"></a>Interfejsy
 
@@ -42,55 +42,57 @@ let class-name (argument-list) =
 ```
 
 ## <a name="remarks"></a>Uwagi
-Deklaracji interfejsów przypominać deklaracji klasy, z wyjątkiem tego, czy nie elementy członkowskie są wykonywane. Zamiast tego, wszystkie elementy członkowskie są abstrakcyjnego, wskazywany przez słowo kluczowe `abstract`. Dla metody abstrakcyjne nie podawaj treści metody. Jednak udostępnia domyślną implementację dołączenie oddzielnych definicji elementu członkowskiego jako metoda razem z `default` — słowo kluczowe. W ten sposób jest odpowiednikiem tworzenia wirtualnej metody w klasie podstawowej w innych językach .NET. Metoda wirtualna może zostać przesłonięta klas implementujących interfejs.
 
-Dostępność domyślne dla interfejsów jest `public`.
+Deklaracje interfejsu przypominają deklaracji klasy, z tą różnicą, że żadne składowe są implementowane. Zamiast tego wszystkie elementy członkowskie są abstrakcyjne, wskazane przez słowo kluczowe `abstract`. Nie udostępniają treści metody metody abstrakcyjne. Jednak udostępnia domyślną implementację, umieszczając również oddzielne definicji elementu członkowskiego jako metoda wraz z `default` — słowo kluczowe. To jest odpowiednikiem tworzenie wirtualnej metody w klasie bazowej, w innych językach .NET. Metoda wirtualna może być zastąpiona w klasach, które implementują interfejs.
 
-Każdy parametr metody można opcjonalnie nadaj nazwę przy użyciu normalnego F # składni:
+Wartość domyślna dostępu dla interfejsów `public`.
+
+Każdy parametr metody można opcjonalnie nadać nazwę przy użyciu normalnego języka F # składni:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 
 W powyższych `ISprintable` przykład `Print` metoda ma jeden parametr typu `string` o nazwie `format`.
 
-Istnieją dwa sposoby implementować interfejsów: przy użyciu wyrażeń obiektów i przy użyciu typu klasy. W obu przypadkach wyrażenie typu lub obiekt klasy zawiera treść metody dla metody abstrakcyjne interfejsu. Implementacje są specyficzne dla każdego typu, który implementuje interfejs. W związku z tym metody interfejsu w różnych typów mogą się różnić od siebie.
+Istnieją dwa sposoby, aby zaimplementować interfejsów: przy użyciu wyrażeń obiektów i za pomocą typu klasy. W obu przypadkach wyrażenie typu lub obiektu klasy zawiera treści metod dla metody abstrakcyjne interfejsu. Implementacje są właściwe dla każdego typu, który implementuje interfejs. W związku z tym metod interfejsu w różnych typach może się różnić od siebie nawzajem.
 
-Słowa kluczowe `interface` i `end`, którego oznaczenie początek i koniec definicji, są opcjonalne, gdy używasz lightweight — składnia. Jeśli nie używasz słowa kluczowe, kompilator próbuje rozpoznać, czy typ jest klasą lub interfejsem, analizując konstrukcje, których używasz. Jeśli zdefiniować elementu członkowskiego lub użyj składni inne klasy, typ jest interpretowana jako klasa.
+Słowa kluczowe `interface` i `end`, które oznaczania początku i końca definicji, są opcjonalne, jeśli używasz składni lekkiej. Jeśli nie używasz tych słów kluczowych, kompilator próbuje rozpoznać, czy typ jest klasą lub interfejs, analizując konstrukcje, których używasz. Jeśli możesz definiować element członkowski lub inną składnię klasy, typ jest interpretowany jako klasa.
 
-Styl kodowania platformy .NET jest rozpoczęcie wszystkie interfejsy z wielką `I`.
+Styl kodowania platformy .NET jest rozpoczęcie wszystkie interfejsy z wielkiej litery `I`.
 
+## <a name="implementing-interfaces-by-using-class-types"></a>Implementacja interfejsów przy użyciu typów klas
 
-## <a name="implementing-interfaces-by-using-class-types"></a>Implementowanie interfejsów przy użyciu typu klasy
-Można wdrożyć jeden lub więcej interfejsów w typie klasy przy użyciu `interface` — słowo kluczowe, nazwę interfejsu i `with` — słowo kluczowe, a następnie definicji elementu członkowskiego interfejsu, jak pokazano w poniższym kodzie.
+Można wdrożyć jeden lub więcej interfejsów w typie klasy przy użyciu `interface` — słowo kluczowe, nazwy interfejsu, a `with` — słowo kluczowe, a następnie definicji składowej interfejsu, jak pokazano w poniższym kodzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2801.fs)]
 
-Implementacje interfejsu są dziedziczone, więc nie trzeba ich reimplement żadnych klas pochodnych.
+Implementacje interfejsu są dziedziczone, dzięki czemu nie trzeba ich ponownie wszystkie klasy pochodne.
 
+## <a name="calling-interface-methods"></a>Wywoływanie metody interfejsu
 
-## <a name="calling-interface-methods"></a>Wywołanie metody interfejsu
-Metody interfejsu można wywołać tylko za pośrednictwem interfejsu, nie za pomocą dowolnego obiektu typu, który implementuje interfejs. W związku z tym może być konieczne rozszerzające typ interfejsu za pomocą `:>` operator lub `upcast` operatora w celu wywołania tych metod.
+Metody interfejsu może być wywoływana tylko za pośrednictwem interfejsu, a nie przy użyciu dowolnego obiektu typu, który implementuje interfejs. W związku z tym, może być konieczne rozszerzające typ interfejsu za pomocą `:>` operatora lub `upcast` operatora w celu wywołania tych metod.
 
-Aby wywołać metodę interfejsu, gdy obiekt typu `SomeClass`, należy najpierw rozszerzające obiektu na typ interfejsu, jak pokazano w poniższym kodzie.
+Aby wywołać metodę interfejsu, w przypadku obiektu o typie `SomeClass`, należy najpierw rozszerzające obiektu do typu interfejsu, jak pokazano w poniższym kodzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2802.fs)]
 
-Alternatywą jest Zadeklaruj metodę dla obiektu z tym upcasts i wywołuje metodę interfejsu, jak w poniższym przykładzie.
+Alternatywą jest do deklarowania metody dla obiektu tego upcasts i wywołuje metodę interfejsu, jak w poniższym przykładzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2803.fs)]
-    
-## <a name="implementing-interfaces-by-using-object-expressions"></a>Implementowanie interfejsów przy użyciu wyrażeń obiektów
-Wyrażenia obiektów podaj krótki sposób implementowania interfejsu. Są one przydatne, gdy jest konieczne tworzenie typu nazwanego, i chcesz obiekt, który obsługuje metod interfejsu, bez żadnych dodatkowych metod. Poniższy kod przedstawia wyrażenie obiektu.
+
+## <a name="implementing-interfaces-by-using-object-expressions"></a>Implementacja interfejsów przy użyciu wyrażeń obiektów
+
+Wyrażenia obiektów umożliwiają krótki do implementacji interfejsu. Są one przydatne, gdy nie trzeba tworzyć nazwany typ, a Ty chcesz po prostu obiekt, który obsługuje metody interfejsu, bez żadnych dodatkowych metod. Wyrażenie obiektu to zilustrowane w poniższym kodzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2804.fs)]
-    
-## <a name="interface-inheritance"></a>Dziedziczenie — interfejs
-Interfejsy może dziedziczyć z jednego lub więcej interfejsach podstawowych.
+
+## <a name="interface-inheritance"></a>Dziedziczenia interfejsu
+
+Interfejsy mogą dziedziczyć jeden lub więcej podstawowych interfejsów.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
-    
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
 
-[Wyrażenia obiektów](object-expressions.md)
+## <a name="see-also"></a>Zobacz także
 
-[Klasy](classes.md)
+- [Dokumentacja języka F#](index.md)
+- [Wyrażenia obiektów](object-expressions.md)
+- [Klasy](classes.md)

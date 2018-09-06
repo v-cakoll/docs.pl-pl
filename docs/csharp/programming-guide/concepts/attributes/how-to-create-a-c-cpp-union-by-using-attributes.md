@@ -3,11 +3,11 @@ title: 'Porady: tworzenie Unii C-C++ za pomocą atrybutów (C#)'
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558008"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798512"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Porady: tworzenie złożenia C/C++ za pomocą atrybutów (C#)
 Za pomocą atrybutów można dostosować, jak struktury są ułożone w pamięci. Na przykład można utworzyć, co jest nazywane Unia w języku C/C++ za pomocą `StructLayout(LayoutKind.Explicit)` i `FieldOffset` atrybutów.  

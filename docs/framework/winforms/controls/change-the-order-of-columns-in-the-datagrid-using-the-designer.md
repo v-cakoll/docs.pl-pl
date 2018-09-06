@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
 ms.openlocfilehash: 7ada2124c0cfb1a14d757963f186da90c553470e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384834"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855508"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Porady: zmienianie kolejności kolumn w formancie DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Po powiązaniu formularze Windows <xref:System.Windows.Forms.DataGridView> formant ze źródłem danych, kolejność wyświetlania kolumn automatycznie generowany jest zależna od źródła danych. Jeśli ta kolejność jest nie chcesz, możesz zmienić kolejność kolumn za pomocą projektanta. Można również dodawanie niepowiązanych kolumn do kontrolki i ich kolejność wyświetlania. Aby dowiedzieć się, jak programowo zmienić kolejność kolumn, zobacz [porady: Zmienianie kolejności kolumn w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  

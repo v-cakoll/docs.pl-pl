@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
 ms.openlocfilehash: e66aebe35dd8f6443fefe3b07842b37270159e6e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475988"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858642"
 ---
 # <a name="ltcodegt-visual-basic"></a>&lt;Kod&gt; (Visual Basic)
 Wskazuje, że tekst jest wiele wierszy kodu.  

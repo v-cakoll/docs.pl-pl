@@ -8,31 +8,31 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803681"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804282"
 ---
 # <a name="guidelines-and-best-practices"></a>Wskazówki i najlepsze rozwiązania
-Ta sekcja zawiera tematy zawierające wskazówki dotyczące tworzenia aplikacji systemu Windows Communication Foundation (WCF).  
+Ta sekcja zawiera tematy, które zapewniają wskazówki dotyczące tworzenia aplikacji Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- Wyjaśniono, jak i kiedy utworzyć kontraktów danych, które nie Przerwij, gdy są tworzone w przyszłych wersjach.  
+ Wyjaśnia, jak i kiedy utworzyć kontraktów danych, które nie przerywają działania podczas tworzenia przyszłych wersji.  
   
  [Przechowywanie wersji usługi](../../../docs/framework/wcf/service-versioning.md)  
- Wyjaśniono, jak należy wziąć pod uwagę przechowywanie wersji w programie WCF. Po wdrożeniu usługi (i punktów końcowych, które udostępniają) może być konieczne zmiany, na przykład, aby spełniać zmiana wymagania biznesowe lub wymagania, lub aby rozwiązać problemy. Każda zmiana wprowadziła nową wersję usługi.  
+ Wyjaśnia, jak należy wziąć pod uwagę przechowywanie wersji w programie WCF. Po wdrożeniu usługi (i punktów końcowych eksponowanie) może być konieczne do można zmienić, na przykład, aby spełnić zmiany wymagań biznesowych lub wymagań IT lub w celu rozwiązywania problemów. Każda zmiana wprowadza nową wersję usługi.  
   
  [Równoważenie obciążenia](../../../docs/framework/wcf/load-balancing.md)  
- Zawiera wskazówki dotyczące równoważenia obciążenia z farmy sieci Web.  
+ Zawiera wskazówki dotyczące równoważenia obciążenia za pomocą farmy sieci Web.  
   
  [Kontrolowanie zużycia zasobów i zwiększanie wydajności](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
- Opisuje właściwości, które pomagają zapobiec zużycie zasobów niepotrzebnych i poprawy zabezpieczeń i wskazuje na pełniejsze informacje na temat ich używania.  
+ Opisuje właściwości, które pomagają zapobiec zużycia zasobów zatrudniany oraz poprawę zabezpieczeń i wskazuje na bardziej szczegółowe informacje dotyczące ich używania.  
   
  [Wdrażanie aplikacji WCF za pomocą technologii ClickOnce](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
- Zawiera opis zagadnień, które ma zostać wykonane podczas korzystania z funkcji ClickOnce.  
+ W tym artykule opisano zagadnienia, które ma zostać wykonane podczas korzystania z funkcji ClickOnce.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel>  
@@ -46,6 +46,6 @@ Ta sekcja zawiera tematy zawierające wskazówki dotyczące tworzenia aplikacji 
   
 ## <a name="see-also"></a>Zobacz też  
  [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation — przykłady](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation — przykłady](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)  
  [Kompilowanie klientów](../../../docs/framework/wcf/building-clients.md)

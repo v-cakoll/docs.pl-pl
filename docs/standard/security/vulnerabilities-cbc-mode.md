@@ -1,121 +1,121 @@
 ---
-title: Luki w zabezpieczeniach chronometrażu z trybie CBC odszyfrowywania symetrycznego za pomocą wypełnienia
-description: Dowiedz się, jak wykrywanie i usuwanie luk w zabezpieczeniach chronometrażu z odszyfrowanie symetryczne tryb Cipher-Block Chaining (CBC) za pomocą wypełnienia.
+title: Chronometraż luk, wraz z trybie CBC odszyfrowanie symetryczne, za pomocą wypełnienia
+description: Dowiedz się, jak wykrywać i eliminowanie luk w zabezpieczeniach chronometrażu przy użyciu trybu odszyfrowanie symetryczne Cipher-Block Chaining (CBC), za pomocą wypełnienia.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208516"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881372"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Luki w zabezpieczeniach chronometrażu z trybie CBC odszyfrowywania symetrycznego za pomocą wypełnienia
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Chronometraż luk, wraz z trybie CBC odszyfrowanie symetryczne, za pomocą wypełnienia
 
-Firma Microsoft uzna, że nie jest już bezpieczne odszyfrowanie danych zaszyfrowanych w trybie Cipher-Block Chaining (CBC) szyfrowania symetrycznego, gdy zweryfikowania dopełnienie zostało zastosowane bez pierwszy zapewniania integralności tekstu szyfrowanego, z wyjątkiem bardzo szczegółowej okoliczności. Tej oceny jest oparta na aktualnie znane badań kryptograficznych. 
+Microsoft uważa, że nie jest już awaryjny do odszyfrowania danych zaszyfrowanych za pomocą trybu Cipher-Block Chaining (CBC) szyfrowania symetrycznego, gdy możliwe do zweryfikowania dopełnienie została zastosowana bez pierwszy zapewniania integralności szyfrowany, z wyjątkiem bardzo szczegółowych okoliczności. Tej oceny jest oparty na znane obecnie badań kryptograficznych. 
 
 ## <a name="introduction"></a>Wprowadzenie
 
-Atak oracle uzupełnienie jest typem ataku przeciwko zaszyfrowanych danych, który umożliwia osobie atakującej na odszyfrowywanie zawartości danych, bez uprzedniego uzyskania informacji o kluczu.
+Atak oracle dopełnienie to rodzaj ataku zaszyfrowanych danych, która umożliwia osobie atakującej na odszyfrowywanie zawartości danych, nie wiedząc o tym kluczu.
 
-Oracle odnosi się do "Powiadom" które daje atakująca informacje są one wykonywania akcji jest prawidłowa lub nie. Wyobraź sobie odtwarzanie tablicę lub kart gry z elementem podrzędnym. Po jej krój podświetlony z dużą uśmiech ponieważ Agnieszka przebywa o dokonanie dobry ruch, który jest oracle. Jako przeciwnika, można to oracle odpowiednio zaplanować przejście dalej.
+Oracle odnosi się do "Przekaż", które zapewnia osoby atakującej o akcji, które są one wykonywane jest prawidłowy lub nie. Wyobraź sobie odtwarzanie tablicy lub karty grę z elementem podrzędnym. Gdy twarzy świeci się za pomocą uśmiechu big Data, ponieważ Agnieszka jest ona o decyzji o dobrej, który jest oracle. Jako przeciwnik, umożliwia to oracle odpowiednio zaplanować przejście dalej.
 
-Uzupełnienie jest kryptograficznych określonego wyrażenia. Niektóre szyfrów, które są algorytmy używane do szyfrowania danych, działają na bloki danych, gdzie każdy blok jest o stałym rozmiarze. Jeśli dane, które chcesz zaszyfrować nie ma właściwego rozmiaru w celu wypełnienia bloki, danych jest wypełniane, dopóki nie robi. Wiele form uzupełnienia wymagają tego uzupełnienia zawsze być obecne, nawet jeśli oryginalny wprowadzono właściwego rozmiaru. Dzięki temu uzupełnienia zawsze można bezpiecznie usunąć po odszyfrowywania.
+Potrzebne jest dopełnienie konkretny termin kryptograficznych. Niektóre mechanizmów szyfrowania, które są algorytmy, używany do szyfrowania danych, pracować na bloki danych, w którym każdy blok ma stały rozmiar. Jeśli dane, które chcesz szyfrować nie wielkości do wypełnienia bloków, dane są dopełniane dopóki nie robi. Wiele form uzupełnienia wymagają tego uzupełnienia zawsze być obecne, nawet jeśli oryginalne dane wejściowe o wielkości. Dzięki temu uzupełnienia zawsze można bezpiecznie usunąć podczas odszyfrowywania.
 
-Zestawienie dwie rzeczy, wdrożenia oprogramowania z oracle dopełnienie wykazuje, czy odszyfrowane dane mają prawidłowy dopełnienie. Programu oracle można coś najprostszą zwracanie wartości informacją "Nieprawidłowy dopełnienie" lub coś bardziej skomplikowany, takich jak widoczny różnych czasu przetwarzania prawidłowy blok przeciwieństwie nieprawidłowy blok.
+Zestawiania dwie rzeczy, implementacji oprogramowania z firmą oracle dopełnienie, co spowoduje wyświetlenie czy odszyfrowane dane ma prawidłową dopełnienia. Coś, co jest proste i polega na zwrócenie wartości, która jest wyświetlany komunikat "Nieprawidłowe dopełnienie" lub coś bardziej skomplikowane, jak zdejmowanie znaczącym ulepszaniu warunków życia innym czasie do przetworzenia prawidłowe bloku, w przeciwieństwie do nieprawidłowy blok, może być programu oracle.
 
-Szyfry opartej na blokach ma inna właściwość o nazwie tryb, który określa relacji danych w pierwszym bloku danych w drugim bloku, i tak dalej. Jeden z trybów najczęściej używane jest CBC. CBC wprowadza początkowej blok losowych, znane jako inicjowania wektora (IV) i łączy poprzedniego bloku z wynikiem statycznych szyfrowania, aby była w taki sposób, że szyfrowanie ten sam komunikat z tym samym kluczem zawsze nie tworzy tych samych zaszyfrowanych danych wyjściowych.
+Szyfry opartej na blokach ma inną właściwość o nazwie trybu, który określa relację danych w pierwszym bloku z danymi w drugi blok, i tak dalej. Jest jednym z najczęściej używanych trybów CBC. CBC wprowadza początkowego bloku losowych, znane jako inicjowania wektora (IV) i łączy poprzedniego bloku z wynikiem statyczne szyfrowanie się to w taki sposób, że szyfrowania ten sam komunikat przy użyciu tego samego klucza nie zawsze generuje ten sam wynik w zaszyfrowanych.
 
-Osobie atakującej wykorzystanie programu oracle dopełnienie, w połączeniu z struktury danych CBC, do wysyłania wiadomości nieco zmienione do kodu, który ujawnia programu oracle i zachować wysyłanie danych do czasu programu oracle dowie się, dane są poprawne. Osoba atakująca może odszyfrować wiadomości po bicie, z tej odpowiedzi.
+Osoba atakująca może użyć wypełnienie bazy danych oracle, w połączeniu z struktury danych CBC, wysyłanie komunikatów nieco zmiany do kodu, który udostępnia programu oracle i nadal wysyłać danych do momentu programu oracle dowie się, dane są poprawne. Z tej odpowiedzi osoba atakująca może odszyfrować komunikatu bajt po bajcie.
 
-Nowoczesne komputera sieci są takie wysokiej jakości, że osoba atakująca może wykryć bardzo małe (mniej niż 0,1 ms) różnice w wykonywania czasu w systemach zdalnych. Aplikacje, które są przy założeniu, że pomyślnie odszyfrowywania tylko zdarzyć, gdy dane nie został zmieniony przez niepowołane może być narażony na ataki z narzędzia, które są przeznaczone do przestrzegania różnice w odszyfrowywania zakończone powodzeniem i niepowodzeniem. Ta różnica czasu może być bardziej znaczących w niektórych językach lub biblioteki niż inne, teraz uważa się, że jest to praktyczne zagrożenie dla wszystkich języków i bibliotek, gdy aplikacji odpowiedzi na błędy jest brana pod uwagę.
+Sieci nowoczesnych komputerowe są takie wysokiej jakości, że osoba atakująca może wykryć bardzo mały (mniej niż 0,1 ms) różnice w realizacji czasu w systemach zdalnych. Aplikacje, które są przy założeniu, że pomyślne odszyfrowywania tylko zdarzyć, gdy dane nie został naruszony, może być narażony na ataki z narzędzia, które są przeznaczone do zaobserwować różnice w odszyfrowywania zakończone powodzeniem i niepowodzeniem. Ta różnica czasu może być bardziej znaczące w niektórych językach i bibliotekach niż inne, teraz uważa się, to jest praktyczne przed zagrożeniami dla wszystkich języków i bibliotek w przypadku odpowiedzi awaria aplikacji jest brana pod uwagę.
 
-Atak polega na możliwość zmieniania zaszyfrowanych danych i testowania wynik z programu oracle. Jedynym sposobem, aby ograniczyć pełni ataku jest wykrywa zmiany do zaszyfrowanych danych i odmówić wykonywać w niej żadnych akcji. Standardowy sposób, w tym celu jest utworzenie podpisu dla danych i sprawdź poprawność tego podpisu, przed wykonaniem jakichkolwiek operacji. Podpis musi być możliwe do zweryfikowania, nie można utworzyć przez osobę atakującą, w przeciwnym razie ich czy zmienić zaszyfrowane dane, a następnie obliczyć podpisu nowy, oparty na zmienione dane. Jeden typ wspólnego z odpowiednim podpisem nosi nazwę kod uwierzytelniania wiadomości z kluczem skrótu (HMAC). HMAC różni się od sumy kontrolnej, że trwa klucz tajny, znane tylko osoby HMAC generująca lub osoby jej skuteczność. Bez posiadaniu klucza nie można utworzyć poprawne HMAC. Podczas odbierania danych, należy wykonać zaszyfrowane dane, niezależnie obliczeniowe HMAC przy użyciu klucza tajnego, możesz i nadawcy udziału, a następnie porównaj HMAC one wysyłane za jedną należy obliczyć. To porównanie musi być stałą czasu, w przeciwnym razie dodaniu innego oracle wykrywalny, co pozwala na inny rodzaj ataku.
+Ten rodzaj ataku opiera się na możliwość zmieniania zaszyfrowanych danych i testowania wyników za pomocą programu oracle. Jedynym sposobem, aby w pełni zminimalizowania skuteczności ataku jest wykrywanie zmian w postaci zaszyfrowanych danych i odmawiają wykonywać w niej żadnych akcji. Standardowy sposób, w tym celu jest utworzenie sygnatury dla danych i zweryfikować ten podpis, zanim wszystkie operacje są wykonywane. Podpis musi być do sprawdzenia, nie można utworzyć przez osobę atakującą, w przeciwnym razie one może zmienić zaszyfrowane dane, a następnie obliczeń nowa sygnatura na podstawie zmienionych danych. Jeden typ wspólnego z odpowiednim podpisem jest znany jako kod uwierzytelniania wiadomości opartych na kluczach skrótu (metoda HMAC). HMAC różni się od sumy kontrolnej, w tym, że zajmuje klucza tajnego znanego tylko osoby produkujących HMAC i osoby, sprawdzanie poprawności go. Bez posiadania klucza nie można utworzyć poprawne HMAC. Po otrzymaniu dane będą zaszyfrowane dane, niezależnie obliczenia HMAC przy użyciu klucza tajnego, możesz i nadawcy udziału, a następnie porównaj HMAC one wysyłane przeciwko jednemu zostanie obliczona. To porównanie musi być stałą czasu, w przeciwnym razie po dodaniu innego oracle wykrywalny, pozwalając na inny rodzaj ataku.
 
-Podsumowując do używania dopełniane szyfrów bloku CBC bezpiecznie, należy połączyć je z HMAC (lub innego sprawdzania integralności danych), który weryfikacji przy użyciu porównanie stałej czasu przed przystąpieniem do odszyfrowania danych. Ponieważ wszystkie komunikaty zmieniony zająć jednocześnie Kwota do tworzenia odpowiedzi, nie będzie mógł ataku.
+Podsumowując używać dopełniana szyfrów blokowych CBC bezpiecznie, połączyć je z HMAC (lub innego sprawdzania integralności danych), który sprawdzania poprawności, porównanie stałym czasie przed podjęciem próby do odszyfrowania danych. Ponieważ wszystkie komunikaty zmienionego Poświęć chwilę kwota w tym samym, aby odpowiedź z informacją, nie będzie mógł ataku.
 
-## <a name="who-is-vulnerable"></a>Kto jest zagrożony
+## <a name="who-is-vulnerable"></a>Kto jest zagrożone
 
-Ta luka w zabezpieczeniach dotyczy zarządzane i natywne aplikacje, które wykonują własne szyfrowanie i odszyfrowywanie. Obejmuje to, na przykład:
+Tę lukę w zabezpieczeniach dotyczy zarządzane i natywne aplikacje, które wykonują swoje własne szyfrowanie i odszyfrowywanie. Dane te obejmują na przykład:
 
-- Aplikacja, która powoduje zaszyfrowanie pliku cookie do nowszej odszyfrowywania na serwerze.
-- Aplikacja bazy danych, która zapewnia możliwość przez użytkowników do wstawiania danych do tabeli, w których kolumny są później odszyfrować.
-- Aplikacja transferu danych, która korzysta z szyfrowania do ochrony danych podczas przesyłania przy użyciu klucza wspólnego.
+- Aplikacja, która szyfruje pliku cookie do odszyfrowywania nowszej na serwerze.
+- Aplikacja bazy danych, która umożliwia użytkownikom wstawić dane do tabeli, w których kolumny są później odszyfrować.
+- Aplikacja transferu danych, która opiera się na szyfrowanie przy użyciu klucza wstępnego, aby chronić dane podczas przesyłania.
 - Aplikacja, która szyfruje i odszyfrowuje wiadomości "od wewnątrz" tunelu TLS.
 
-Należy pamiętać, że używają wyłącznie protokołu TLS może nie chronią w tych scenariuszach.
+Należy pamiętać, że przy użyciu protokołu TLS samodzielnie może nie chronią w tych scenariuszach.
 
-Usterce aplikacji:
+Narażone aplikacji:
 
-- Odszyfrowuje dane w trybie CBC szyfrowania z trybem dopełnienie podlegające weryfikacji, takie jak PKCS #7 lub ANSI X.923.
-- Wykonuje odszyfrowywanie bez o wykonywane sprawdzanie integralności (za pośrednictwem MAC lub asymetrycznego podpisu cyfrowego).
+- Odszyfrowuje dane przy użyciu trybu szyfrowania CBC z trybem weryfikowalny dopełnienie, takie jak ANSI X.923 lub PKCS #7.
+- Wykonuje odszyfrowywania bez konieczności wykonywane sprawdzania integralności danych (za pośrednictwem komputera MAC lub asymetrycznego podpisu cyfrowego).
 
-Dotyczy to również aplikacje, rozszerzający abstrakcje w górnej części tych podstawowych, takich jak struktury EnvelopedData składni wiadomości kryptograficznych (PKCS #7/CMS).
+Dotyczy to również aplikacji utworzonych na szczycie abstrakcje w górnej części tych wartości pierwotnych, takie jak struktury EnvelopedData składnię wiadomości kryptograficznych (PKCS #7/CMS).
 
-## <a name="related-areas-of-concern"></a>Powiązane obszary zainteresowania
+## <a name="related-areas-of-concern"></a>Pokrewne obszary zainteresowania
 
-Badania spowodowało Microsoft w celu dalszego zajmującym CBC wiadomości, które są dopełniane przy ISO 10126-równoważne wypełnienia podczas wiadomości ma strukturę stopki dobrze znanego lub prognozowanych. Na przykład zawartość przygotowany zgodnie z regułami W3C XML szyfrowania składni i przetwarzania zalecenie (xmlenc EncryptedXml). Gdy wskazówki W3C do podpisania wiadomości, a następnie szyfrować uznano za właściwe, w tym czasie, firma Microsoft zaleca teraz zawsze podczas szyfrowania to znak.
+Badania doprowadziło firmy Microsoft, aby dodatkowo zajmującym wiadomości CBC, które są dopełniane ekwiwalent ISO 10126 wypełnienia podczas wiadomości ma strukturę stopki dobrze znanego lub przewidywalne. Na przykład zawartość przygotowany zgodnie z regułami składni szyfrowanie XML W3C i przetwarzanie zalecenie (xmlenc EncryptedXml). Gdy wskazówki W3C podpisywanie komunikatów, a następnie szyfrować została uznana za odpowiednie w czasie, firma Microsoft zaleca teraz zawsze podczas szyfrowania następnie logowania.
 
-Deweloperzy aplikacji powinien zawsze mieć sprawdzanie możliwości zastosowania danego klucza asymetrycznego podpisu, mając na uwadze, ponieważ nie ma żadnych relacji zaufania związane między klucza asymetrycznego i dowolnego komunikatu.
+Deweloperzy aplikacji powinny zawsze być w trosce o sprawdzanie możliwości zastosowania klucza asymetrycznego podpis nie ma zaufania nieprzerwaną pracę relacji między klucza asymetrycznego i dowolnego komunikatu.
 
 ## <a name="details"></a>Szczegóły
 
-W przeszłości ma zostać konsensu, które są ważne do szyfrowania i uwierzytelniania ważnych danych, przy użyciu środków, takich jak HMAC lub RSA podpisów. Jednak było w niej mniej wyraźnych wskazówek sposobów sekwencji operacji szyfrowania i uwierzytelniania. Z powodu usterki szczegółowo opisane w tym artykule wskazówkami firmy Microsoft jest teraz zawsze używaj modelu "szyfrowania następnie znaku". Oznacza to najpierw szyfrowania danych przy użyciu klucza symetrycznego, a następnie obliczeniowego MAC lub podpisu asymetrycznego za pośrednictwem tekstu szyfrowanego (zaszyfrowanych danych). Podczas deszyfrowania danych, należy przeprowadzić odwrotnej. Najpierw upewnij się, MAC lub podpis tekstu szyfrowanego, a następnie go odszyfrować.
+W przeszłości było zgodne, które są ważne do szyfrowania i uwierzytelniania ważnych danych za pomocą środków, takich jak sygnatury HMAC lub RSA. Jednak nastąpiła mniej wyraźne wskazówki dotyczące sposobu sekwencji operacji szyfrowania i uwierzytelniania. Ze względu na usterkę szczegółowo opisane w tym artykule wskazówki dotyczące firmy Microsoft jest teraz zawsze używaj modelu "szyfrowania następnie logowania". Oznacza to najpierw szyfrowania danych przy użyciu klucza symetrycznego, a następnie obliczenia MAC lub podpis asymetrycznego za pośrednictwem szyfrowanego (zaszyfrowanych danych). Podczas deszyfrowania danych, należy przeprowadzić odwrotnej. Najpierw upewnij się, MAC lub podpis szyfrowany, a następnie go odszyfrować.
 
-Klasa jest ogólnie znana jako "padding ataków oracle" znane istnieje ponad 10 lat luk w zabezpieczeniach. Te luki w zabezpieczeniach osoba atakująca na odszyfrowanie danych zaszyfrowanych przez blok symetryczne algorytmy, takie jak AES i 3DES, przy użyciu nie więcej niż 4096 prób na blok danych. Wprowadź te luki w zabezpieczeniach korzystanie z faktu, że zablokowanie szyfrów najczęściej używanych z danymi weryfikowalny dopełnienie na końcu. Okazało się, że jeśli osoba atakująca może manipulować tekstu szyfrowanego i sprawdzić, czy o naruszeniu spowodował błąd w formacie wypełnienia na końcu, osoba atakująca może odszyfrować danych.
+Klasa określane jako "dopełnienie oracle ataków" znane istniał ponad 10 lat luk w zabezpieczeniach. Te luki w zabezpieczeniach umożliwia atakującemu odszyfrować dane szyfrowane przez algorytmy symetryczne bloku, takie jak AES i 3DES, przy użyciu nie więcej niż 4096 prób na bloku danych. Wprowadź te luki w zabezpieczeniach użytkowania fakt, że block szyfry są najczęściej używane przy użyciu danych uzupełniania weryfikowalne na końcu. Ustalono, że jeśli osoba atakująca może manipulować tekstu szyfrowanego i Dowiedz się, czy naruszanie spowodował błąd w formacie uzupełnienia na końcu, osoba atakująca może odszyfrować danych.
 
-Początkowo praktyczne ataków znajdowały się na usługami zwracającymi kody błędów różnych oparte na czy dopełnienie była prawidłowa, taka jak luki w zabezpieczeniach ASP.NET [MS10-070](https://technet.microsoft.com/library/security/ms10-070.aspx). Jednak firma Microsoft teraz uzna, że jest to możliwe przeprowadzenie podobne ataki za pomocą tylko różnice czasu między przetwarzania dopełnienie prawidłowe oraz nieprawidłowe.
+Początkowo praktyczne ataków znajdowały się na usługami zwracającymi kody błędów różnych oparte na czy dopełnienie był prawidłowy, takich jak ASP.NET luk w zabezpieczeniach [MS10-070](https://technet.microsoft.com/library/security/ms10-070.aspx). Jednak program Microsoft teraz uważa, jest praktyczne przeprowadzenie podobne ataków przy użyciu tylko różnice czasu między przetwarzania dopełnienie prawidłowe i nieprawidłowe.
 
-Pod warunkiem, że podpis wykorzystuje schemat szyfrowania i weryfikacja podpisu jest wykonywane z stałym środowiska uruchomieniowego dla podanej długości danych (niezależnie od zawartości), bez emitowanie informacji, które można sprawdzić spójność danych Osoba atakująca za pośrednictwem [kanału po stronie](https://en.wikipedia.org/wiki/Side-channel_attack). Ponieważ sprawdzania integralności odrzuca komunikaty zmodyfikowany, skuteczność została osłabiona zagrożeń oracle dopełnienia.
+Pod warunkiem, że schemat szyfrowania wykorzystuje sygnatury i weryfikacji podpisu jest wykonywane przy użyciu stałej środowiska uruchomieniowego dla podanej długości data (niezależnie od zawartości), bez żadnych informacji do emitowania można zweryfikować integralności danych Osoba atakująca za pośrednictwem [kanału po stronie](https://en.wikipedia.org/wiki/Side-channel_attack). Ponieważ sprawdzania integralności odrzuca komunikaty zmodyfikowany, jest zmniejszany dopełnienie zagrożeń bazy danych oracle.
 
 ## <a name="guidance"></a>Wskazówki
 
-Najpierw i, firma Microsoft zaleca musi być przekazywane za pośrednictwem zabezpieczeń TLS (Transport Layer), następnika do Secure Sockets Layer (SSL) zawierający poufności danych.
+Najpierw firma Microsoft zaleca, muszą być przekazywane za pośrednictwem zabezpieczeń TLS (Transport Layer), następca do Secure Sockets Layer (SSL) żadnych danych, który ma poufności.
 
-Następnie analizować aplikacji:
+Następnie analizowania aplikacji w taki sposób, aby:
 
-- Dowiedz się dokładnie szyfrowania, jaką wykonujesz i jakie szyfrowanie jest świadczona przez platform i interfejsów API używasz.
-- Się upewnić, że każdy użycia w każdej warstwie symetrycznego [algorytmu szyfrowania bloku](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers), takie jak AES i 3DES w trybie CBC zawierają stosowania sprawdzania integralności danych klucze tajne (podpisu asymetrycznego HMAC lub zmienić tryb szyfrowania do [uwierzytelniony szyfrowania](https://en.wikipedia.org/wiki/Authenticated_encryption) trybu (AE), takim jak GCM lub CCM).
+- Dowiedz się dokładnie szyfrowania, jakie wykonujesz i jakie szyfrowanie jest świadczona przez platform i interfejsów API, używasz.
+- Mieć pewność, że każdy użycia w każdej warstwie symetryczne [algorytmu szyfrowania bloku](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers), takie jak AES i 3DES w trybie CBC zawierają użytkowania sprawdzania integralności danych opartych na kluczach klucz tajny (asymetrycznego sygnatury HMAC lub zmienić tryb szyfrowania do [uwierzytelnione szyfrowanie](https://en.wikipedia.org/wiki/Authenticated_encryption) trybu (AE), takich jak usługa GCM lub CCM).
 
-W oparciu o bieżący badań, ogólnie uważa się, że w przypadku uwierzytelnianie i szyfrowanie kroki są wykonywane niezależnie dla trybów AE bez szyfrowania, uwierzytelniania szyfrowanego (szyfrowanie następnie Podpisz) jest najlepszą opcją ogólne. Niestety nie są bez pasującego poprawną odpowiedź na kryptografii i jak ukierunkowanej poradę professional cryptographer nie jest to generalizacji.
+Oparte na bieżących badaniach, ogólnie uważa się, że w przypadku uwierzytelniania i szyfrowania kroki są wykonywane niezależnie dla trybów AE bez szyfrowania, uwierzytelniania szyfrowanego (szyfrowanie następnie logowania) jest najlepszym rozwiązaniem ogólne. Jednak istnieje nie opracowanie poprawną odpowiedź na kryptografii i to uogólnienie nie jest tak dobre, jak ukierunkowanej porady z profesjonalnych cryptographer.
 
-Aplikacje, które można zmienić ich format wiadomości, jednak wykonywać nieuwierzytelnione odszyfrowywania CBC zaleca się spróbuj zastosować środki zaradcze, takich jak:
+Aplikacje, które są nie można zmienić ich format wiadomości, ale wykonać nieuwierzytelnione CBC odszyfrowywania są zachęcani do próby takich jak zastosować środki zaradcze:
 
-- Odszyfrowywania bez możliwości odszyfrowujący weryfikacji lub usunąć uzupełnienie:
-  - Wszelkie uzupełnienia, która została zastosowana nadal musi zostać usunięte lub zignorowane, przenoszenia obciążeń w aplikacji.
-  - Korzyścią jest to, że dopełnienie weryfikacji i usuwania mogą być włączone w innych logikę weryfikacji danych aplikacji. Dopełnienie weryfikacji i weryfikacja danych mogą być przeprowadzane w czasie stałej, ograniczono zagrożenia.
-  - Ponieważ interpretacji wypełnienia zmienia długość komunikatu postrzegana, może nadal być informacji wyemitowanego z tej metody.
+- Odszyfrowywanie, bez udzielania praw odszyfrowujący Sprawdź lub usunąć dopełnienie:
+  - Wszelkie dopełnienie, które zostały zastosowane nadal musi zostać usunięta albo ignorowane, przenosisz obciążenia w aplikacji.
+  - Korzyścią jest to, że wypełnienie weryfikacji i usuwania można zintegrować inną logikę weryfikacji danych aplikacji. Jeśli weryfikacja dopełnienie i weryfikacja danych może odbywać się w stałym czasie, zostanie zmniejszona zagrożenia.
+  - Ponieważ interpretacji uzupełnienie Zmienia długość komunikatu postrzegany, może nadal być informacje o czasie emitowane przez to podejście.
 - Zmień tryb uzupełniania odszyfrowywania ISO10126:
-  - Dopełnienie odszyfrowywania ISO10126 jest zgodny z zarówno wypełnienie PKCS7 i wypełnienie ANSIX923.
-  - Zmienianie trybu ogranicza wiedzy oracle uzupełnienie do 1 bajt zamiast całego bloku. Jeśli zawartość ma dobrze znanego stopki, takich jak zamykającego elementu XML pokrewne ataków jednak na ataki pozostałej części wiadomości.
-  - To również nie uniemożliwia odzyskiwanie zwykłego tekstu w sytuacji, gdy osoba atakująca można przekształcić tego samego zwykły tekst do zaszyfrowania wiele razy z przesunięciem inny komunikat.
-- Brama obliczania wywołania odszyfrowywania Rozmoczenie sygnału czasu:
-  - Obliczenia czasu blokady musi mieć co najmniej przekracza maksymalną ilość czasu, który wykonać operacji odszyfrowywania dla żadnego z segmentów danych zawierający dopełnienia.
-  - Obliczenia czas należy przeprowadzić zgodnie z instrukcjami podanymi w [pobierania sygnatur czasowych wysokiej rozdzielczości](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), nie za pomocą <xref:System.Environment.TickCount?displayProperty=nameWithType> (może ulec roll-over/przepełnienie) lub usunięcie dwóch systemu sygnatur czasowych (zgodnie z korekty NTP błędy).
-  - Obliczenia czas musi być tym operacji odszyfrowywania wszystkich potencjalnych wyjątków w tym zarządzane lub aplikacje w języku C++ nie tylko. dopełniane na końcu.
-  - Jeśli powodzenie lub niepowodzenie odnalezieniu jeszcze bramy chronometrażu musi zwracać błąd, po jego wygaśnięciu.
-- Usługi, które działają nieuwierzytelnione odszyfrowywania powinien mieć monitorowania w celu wykrycia, czy powódź "nieprawidłowe" komunikatów do trybu za pośrednictwem.
-  - Przy tym pamiętać, że ten sygnał prowadzi zarówno fałszywych alarmów (legalnie uszkodzone dane), jak i fałszywych wyników negatywnych (rozkładanie ataków za pośrednictwem wystarczająco dużo czasu uniknięcia wykrywania).
+  - Dopełnienie odszyfrowywania ISO10126 jest zgodny z wypełnienie PKCS7 i wypełnienie ANSIX923.
+  - Zmienianie trybu zmniejsza wiedzy oracle uzupełnienia do 1 bajt zamiast całego bloku. Jeśli zawartość ma dobrze znanych stopki, takich jak zamykającego elementu XML powiązane ataków jednak na ataki pozostałej części wiadomości.
+  - To także nie uniemożliwia odzyskiwanie zwykłego tekstu w sytuacjach, w których osoba atakująca może przekształcić tego samego zwykłego tekstu do zaszyfrowania wiele razy z przesunięciem inny komunikat.
+- Brama oceny Rozmoczenie sygnału czasu wywołania odszyfrowywania:
+  - Obliczanie czasu wstrzymania musi mieć co najmniej przekraczające maksymalną ilość czasu, jaki zajęłoby operacji odszyfrowywania każdego segmentu danych, który zawiera dopełnienie.
+  - Obliczeń czasu powinna być podejmowana zgodnie z zaleceniami w [uzyskiwania sygnatury czasowe o wysokiej rozdzielczości](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), nie za pomocą <xref:System.Environment.TickCount?displayProperty=nameWithType> (zależnie od roll-over/przepełnienie) lub usunięcie dwóch system sygnatur czasowych (zależnie od korekty NTP błędy).
+  - Obliczeń czasu musi być z uwzględnieniem operacji odszyfrowywania, w tym wszystkie potencjalne wyjątki w zarządzane lub aplikacji w języku C++, nie tylko o na końcu.
+  - W przypadku powodzenia lub niepowodzenia ustalono jeszcze, brama chronometrażu musi zwracać błąd, po jego wygaśnięciu.
+- Usługi, które wykonują nieuwierzytelnione odszyfrowywania powinny mieć monitorowania w miejscu, aby wykryć, czy powódź komunikatów "nieprawidłowy" stał się za pośrednictwem.
+  - Mieć na uwadze, że ten sygnał niesie ze sobą wyniki fałszywie dodatnie (rzeczywiście uszkodzone dane) i fałszywych wyników negatywnych (rozkładanie ataku w czasie wystarczająco długi, w celu uniknięcia wykrycia).
 
-## <a name="finding-vulnerable-code---native-applications"></a>Wyszukiwanie kodu luki w zabezpieczeniach - natywnych aplikacji
+## <a name="finding-vulnerable-code---native-applications"></a>Znajdowanie kodu luki w zabezpieczeniach — aplikacje natywne
 
-Dla programów, które utworzono przy użyciu kryptografii systemu Windows: Biblioteka nowej generacji (CNG):
+Dla programów skompilowana kryptografii Windows: Biblioteka Next Generation (CNG):
 
-- Wywołanie odszyfrowywania ma na celu [BCryptDecrypt](https://msdn.microsoft.com/library/windows/desktop/aa375391.aspx), określania `BCRYPT_BLOCK_PADDING` flagi.
-- Dojście klucza została zainicjowana przez wywołanie metody [BCryptSetProperty](https://msdn.microsoft.com/library/windows/desktop/aa375504.aspx) z [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) ustawioną `BCRYPT_CHAIN_MODE_CBC`.
-  - Ponieważ `BCRYPT_CHAIN_MODE_CBC` jest ustawienie domyślne, których to dotyczy kodu nie może przypisać wszystkie wartości `BCRYPT_CHAINING_MODE`.
+- Wywołanie odszyfrowywania ma na celu [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), określanie `BCRYPT_BLOCK_PADDING` flagi.
+- Uchwytu klucza został zainicjowany przez wywołanie metody [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) z [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) równa `BCRYPT_CHAIN_MODE_CBC`.
+  - Ponieważ `BCRYPT_CHAIN_MODE_CBC` jest zachowaniem domyślnym, wpływ na kod nie może mieć przypisany żadnej wartości dla `BCRYPT_CHAINING_MODE`.
 
-Dla programów utworzono przy użyciu starszej kryptograficznego interfejsu API systemu Windows:
+Dla programów skompilowana starsze Cryptographic API Windows:
 
-- Wywołanie odszyfrowywania ma na celu [CryptDecrypt](https://msdn.microsoft.com/library/windows/desktop/aa379913.aspx) z `Final=TRUE`.
-- Dojście klucza została zainicjowana przez wywołanie metody [CryptSetKeyParam](https://msdn.microsoft.com/library/windows/desktop/aa380272.aspx) z [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) ustawioną `CRYPT_MODE_CBC`.
-  - Ponieważ `CRYPT_MODE_CBC` jest ustawienie domyślne, których to dotyczy kodu nie może przypisać wszystkie wartości `KP_MODE`.
+- Wywołanie odszyfrowywania ma na celu [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) z `Final=TRUE`.
+- Uchwytu klucza został zainicjowany przez wywołanie metody [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) z [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) równa `CRYPT_MODE_CBC`.
+  - Ponieważ `CRYPT_MODE_CBC` jest zachowaniem domyślnym, wpływ na kod nie może mieć przypisany żadnej wartości dla `KP_MODE`.
 
-## <a name="finding-vulnerable-code---managed-applications"></a>Znajdowanie niebezpieczny kod - zarządzanych aplikacji
+## <a name="finding-vulnerable-code---managed-applications"></a>Znajdowanie kodu luki w zabezpieczeniach — usługa managed applications
 
-- Wywołanie odszyfrowywania ma na celu <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> lub <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> metody <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>.
-  - Dostępne są następujące typy pochodne w ramach programu .NET, ale mogą również obejmować typów innych firm:
+- Wywołanie odszyfrowywania ma na celu <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> lub <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> metod <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>.
+  - Zawiera następujące typy pochodne w ramach platformy .NET, ale mogą również zawierać typy innej firmy:
     - <xref:System.Security.Cryptography.Aes>
     - <xref:System.Security.Cryptography.AesCng>
     - <xref:System.Security.Cryptography.AesCryptoServiceProvider>
@@ -129,24 +129,24 @@ Dla programów utworzono przy użyciu starszej kryptograficznego interfejsu API 
     - <xref:System.Security.Cryptography.TripleDES>
     - <xref:System.Security.Cryptography.TripleDESCng>
     - <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
-- <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> Ustawiono właściwość <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>, lub <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>.
-  - Ponieważ <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> jest ustawienie domyślne, których to dotyczy kodu może nigdy nie przypisano <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> właściwości.
-- <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> Ustawiono właściwość <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
-  - Ponieważ <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> jest ustawienie domyślne, których to dotyczy kodu może nigdy nie przypisano <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> właściwości.
+- <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> Właściwość <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>, lub <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>.
+  - Ponieważ <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> jest zachowaniem domyślnym, wpływ na kod nigdy nie może mieć przypisany <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> właściwości.
+- <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> Właściwość <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
+  - Ponieważ <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> jest zachowaniem domyślnym, wpływ na kod nigdy nie może mieć przypisany <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> właściwości.
 
-## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Wyszukiwanie kodu luki w zabezpieczeniach - składni wiadomości kryptograficznych
+## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Znajdowanie kodu luki w zabezpieczeniach — składni wiadomości kryptograficznych
 
-Wiadomość CMS EnvelopedData nieuwierzytelnione którego zaszyfrowaną zawartość używa trybu CBC AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), (1.3.14.3.2.7) DES, 3DES (1.2.840.113549.3.7) lub RC2 (1.2.840.113549.3.2) jest narażony, jak również w wiadomości w trybie CBC przy użyciu innych algorytmów szyfrowania bloku.
+Nieuwierzytelnionych wiadomości CMS EnvelopedData, w których zaszyfrowaną zawartość korzysta z trybu CBC AES (2.16.840.1.101.3.4.1.2 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), DES (1.3.14.3.2.7), 3DES (1.2.840.113549.3.7) lub RC2 (1.2.840.113549.3.2) jest narażony, jak również jako komunikatów w trybie CBC przy użyciu innych algorytmów szyfrowania bloku.
 
-Gdy szyfrów strumienia nie są podatne na tę lukę w zabezpieczeniach określonego, firma Microsoft zaleca zawsze uwierzytelnianie danych za pośrednictwem sprawdzania wartości ContentEncryptionAlgorithm.
+Gdy szyfrów strumienia nie są podatne na tę lukę w zabezpieczeniach w szczególności, firma Microsoft zaleca zawsze uwierzytelnianie dane za pośrednictwem sprawdzania wartości ContentEncryptionAlgorithm.
 
-Dla zarządzanych aplikacji EnvelopedData CMS, obiektów blob może być wykryte jako żadnej wartości, który jest przekazywany do <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>.
+Dla zarządzanych aplikacji EnvelopedData CMS, obiekt blob może być wykryte wszelkie wartości, który jest przekazywany do <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>.
 
-Dla natywnych aplikacji mogą być wykrywane CMS EnvelopedData obiektu blob jako podanie do uchwytu CMS za pomocą dowolnej wartości [CryptMsgUpdate](https://msdn.microsoft.com/library/windows/desktop/aa380231.aspx) których wynikowa [CMSG_TYPE_PARAM](https://msdn.microsoft.com/library/windows/desktop/aa380227.aspx) jest `CMSG_ENVELOPED` i/lub dojście CMS później wysyłane `CMSG_CTRL_DECRYPT` instrukcji za pomocą [CryptMsgControl](https://msdn.microsoft.com/library/windows/desktop/aa380220.aspx).
+Dla natywnych aplikacji można wykryć blob CMS EnvelopedData wartością dostarczane do uchwytu CMS za pośrednictwem [CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) którego wynikowa [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) jest `CMSG_ENVELOPED` i/lub uchwyt CMS później wysyłane `CMSG_CTRL_DECRYPT` instrukcji za pomocą [CryptMsgControl](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol).
 
 ## <a name="vulnerable-code-example---managed"></a>Przykład kodu luki w zabezpieczeniach — zarządzane
 
-Ta metoda odczytuje plik cookie i odszyfrowuje ją i sprawdzanie integralności danych nie jest widoczny. W związku z tym zawartość pliku cookie, który jest odczytywany przez tę metodę można ataku przez użytkownika, który otrzymał go, lub każda osoba atakująca, która uzyskała wartość zaszyfrowanego pliku cookie.
+Ta metoda odczytuje plik cookie i odszyfrowuje je i sprawdzania integralności danych, nie jest widoczna. W związku z tym zawartość pliku cookie, który jest odczytywany przez tę metodę można zaatakowane przez użytkownika, który je lub przez każda osoba atakująca, która uzyskała wartość zaszyfrowanego pliku cookie.
 
 ```csharp
 private byte[] DecryptCookie(string cookieName)
@@ -171,17 +171,17 @@ private byte[] DecryptCookie(string cookieName)
 }
 ```
 
-## <a name="example-code-following-recommended-practices---managed"></a>Przykład kodu następujących zalecanych rozwiązań - zarządzany
+## <a name="example-code-following-recommended-practices---managed"></a>Następujące kodu przykładzie zalecane praktyki — zarządzane
 
-Następujący przykładowy kod używa komunikatu niestandardowym formacie
+Następujący przykładowy kod używa formatu komunikatów niestandardowych
 
 `cipher_algorithm_id || hmac_algorithm_id || hmac_tag || iv || ciphertext`
 
-gdzie `cipher_algorithm_id` i `hmac_algorithm_id` algorytm identyfikatory są (niestandardowy) reprezentacje tych algorytmów lokalnego aplikacji. Te identyfikatory może być uzasadniona w innych częściach z istniejącego protokołu obsługi zamiast jako systemu od zera połączonych strumienia bajtów.
+gdzie `cipher_algorithm_id` i `hmac_algorithm_id` algorytm identyfikatory są lokalnego aplikacji (niestandardowe) reprezentacje tych algorytmów. Tych identyfikatorów może mieć sens w innych częściach Twojego istniejącego protokołu obsługi komunikatów, zamiast jako bez połączonych elementu bytestream.
 
-W tym przykładzie również korzysta z jednego klucza głównego pochodzić zarówno klucz szyfrowania, jak i klucz HMAC. To jest dostępna zarówno jako udogodnienie dla Włączanie aplikacji z kluczem pojedynczo do aplikacji z kluczem procesory i zachęca utrzymywanie dwa klucze, jak różne wartości. Gwarantuje dalsze, nie można pobrać klucza HMAC i klucz szyfrowania poza synchronizacji.
+W tym przykładzie używa również jednego klucza głównego do wyprowadzenia zarówno klucz szyfrowania, jak i klucz HMAC. Jest to przewidziane zarówno jako udogodnienie włączenie aplikacji z kluczem pojedynczo do aplikacji opartych na kluczach procesory i zachęcenie utrzymywanie dwa klucze, jak różne wartości. Dodatkowo gwarantuje, nie można pobrać klucza HMAC i klucza szyfrowania tracą synchronizację.
 
-W tym przykładzie nie akceptuje <xref:System.IO.Stream> do szyfrowania lub odszyfrowywania. Bieżące dane formatu sprawia, że jeden przebieg szyfrowania trudne ponieważ `hmac_tag` wartość poprzedza tekstu szyfrowanego. Jednak ten format została wybrana, ponieważ utrzymuje wszystkich elementów o stałym rozmiarze na początku, aby zachować analizator prostsze. Z tego formatu danych odszyfrowywania jeden przebieg jest możliwe, że implementujący jest cautioned wywołać GetHashAndReset i sprawdź wynik przed wywołaniem metody TransformFinalBlock. Jeśli szyfrowanie przesyłania strumieniowego odgrywa ważną rolę, inny tryb AE mogą być wymagane.
+W tym przykładzie nie zaakceptuje <xref:System.IO.Stream> do szyfrowania lub odszyfrowywania. Bieżące dane formatu sprawia, że jeden przebieg szyfrowania trudne ponieważ `hmac_tag` wartość poprzedza tekstu szyfrowanego. Jednak ten format wybrano, ponieważ zapewnia wszystkie elementy o stałym rozmiarze na początku zapewnienie analizator prostsze. Z tego formatu danych odszyfrowywania jeden przebieg jest możliwe, chociaż implementujący jest ostrzeżenie, aby wywołać GetHashAndReset i sprawdź wynik przed wywołaniem TransformFinalBlock. Jeśli szyfrowanie przesyłania strumieniowego jest ważne, inny tryb AE może być wymagane.
 
 ```csharp
 // ==++==

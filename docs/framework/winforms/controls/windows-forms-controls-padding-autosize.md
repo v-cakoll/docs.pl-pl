@@ -15,174 +15,174 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: 8e5763bd64049ee5f3d00c3489ec0c6a35fd58f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52bc75135e4f8cf5b9c1888b2ad9f5e278c1d6e2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541635"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882447"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Wskazówki: tworzenie formantów formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize
-Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. **Projektant formularzy systemu Windows** udostępnia wiele narzędzi układu, w tym celu. Trzy najważniejsze są <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, i <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości, które znajdują się na wszystkie formanty formularzy systemu Windows.  
+Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. **Windows Forms Designer** udostępnia wiele narzędzi układu, w tym celu. Są trzy najważniejsze <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, i <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości, które znajdują się na wszystkie kontrolki Windows Forms.  
   
- <xref:System.Windows.Forms.Control.Margin%2A> Właściwość definiuje obszar wokół formantu, czy przechowuje inne formanty w określonej odległości od obramowania formantu.  
+ <xref:System.Windows.Forms.Control.Margin%2A> Właściwość definiuje miejsca wokół formantu, że przechowuje inne kontrolki w określonej odległości od obramowania formantu.  
   
- <xref:System.Windows.Forms.Control.Padding%2A> Właściwość definiuje miejsce wewnątrz kontrolkę, która zachowuje zawartość formantu (na przykład wartość jego <xref:System.Windows.Forms.Control.Text%2A> właściwości) w określonej odległości od obramowania formantu.  
+ <xref:System.Windows.Forms.Control.Padding%2A> Właściwość definiuje miejsce wewnątrz kontrolki, która zachowuje zawartość formantu (na przykład, wartość jego <xref:System.Windows.Forms.Control.Text%2A> właściwości) w określonej odległości od obramowania formantu.  
   
- Na poniższej ilustracji pokazano <xref:System.Windows.Forms.Control.Padding%2A> i <xref:System.Windows.Forms.Control.Margin%2A> właściwości formantu.  
+ Poniższa ilustracja przedstawia <xref:System.Windows.Forms.Control.Padding%2A> i <xref:System.Windows.Forms.Control.Margin%2A> właściwości formantu.  
   
- ![Formanty formularzy dopełnienia i marginesów dla systemu Windows](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![Wypełnienie i margines Windows formantów formularzy](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- <xref:System.Windows.Forms.Control.AutoSize%2A> Właściwość nakazuje, aby automatycznie zmienia swój rozmiar do jego zawartości. Nie zmieni rozmiar samego może być mniejszy niż wartość jego oryginalnej <xref:System.Windows.Forms.Control.Size%2A> wartość uwzględnia właściwości, a jego <xref:System.Windows.Forms.Control.Padding%2A> właściwości.  
+ <xref:System.Windows.Forms.Control.AutoSize%2A> Właściwość zawiera informacje dla formantu, który ma automatycznie rozmiar samego do jego zawartości. Nie będzie rozmiar samego może być mniejszy niż wartość jego oryginalnej <xref:System.Windows.Forms.Control.Size%2A> właściwość która będzie uwzględniać wartość jego <xref:System.Windows.Forms.Control.Padding%2A> właściwości.  
   
- Zadania przedstawione w tym przewodniku obejmują:  
+ Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie projektu formularzy systemu Windows  
+-   Tworzenie projektu Windows Forms  
   
 -   Ustawienie marginesów dla formantów  
   
 -   Ustawienie wypełnienia dla formantów  
   
--   Automatycznie zmiany rozmiaru formantów  
+-   Automatyczne ustalanie rozmiaru kontrolki  
   
- Gdy skończysz, konieczne będzie zrozumienia rolę odgrywaną przez te funkcje ważne układu.  
+ Gdy skończysz, masz zrozumienia rolę odgrywaną przez te funkcje ważne układu.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W celu przeprowadzenia tego instruktażu potrzebne są:  
+ Aby ukończyć ten przewodnik, potrzebne są:  
   
--   Wystarczających uprawnień, aby mieć możliwość tworzenia i uruchamiania projektów aplikacji formularzy systemu Windows na komputerze, którym jest zainstalowany program Visual Studio.  
+-   Wystarczające uprawnienia, aby można było utworzyć i uruchomić projekty aplikacji Windows Forms na komputerze, w którym jest zainstalowany program Visual Studio.  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
- Pierwszym krokiem jest utworzenie projektu i konfigurowanie formularza.  
+ Pierwszym krokiem jest tworzenie projektu i konfigurowanie formularza.  
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
-1.  Utwórz **aplikacji systemu Windows** projektu o nazwie `LayoutExample`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu aplikacji Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Tworzenie **aplikacji Windows** projekt o nazwie `LayoutExample`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu aplikacji Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
   
-2.  Wybierz formularza w **Projektant formularzy systemu Windows**.  
+2.  Wybierz formularz w **Windows Forms Designer**.  
   
 ## <a name="setting-margins-for-your-controls"></a>Ustawienie marginesów dla formantów  
- Można ustawić w domyślnej odległości między formantów przy użyciu <xref:System.Windows.Forms.Control.Margin%2A> właściwości. W przypadku przenoszenia formantu blisko inny formant, zostanie wyświetlone snapline —, pokazujący marginesów dwóch formantów. Formant, który przenosisz również spowoduje przyciąganie do odległość zdefiniowane przez marginesów.  
+ Możesz ustawić domyślnej odległości między kontrolek przy użyciu <xref:System.Windows.Forms.Control.Margin%2A> właściwości. Po przeniesieniu formantu blisko inna kontrolka, zostanie wyświetlony snapline —, pokazujący marginesy dla dwóch kontrolek. Formant, który przenosisz zostaną przyciągania do odległości definicją marginesów.  
   
-#### <a name="to-arrange-controls-on-your-form-using-the-margin-property"></a>Aby rozmieszczanie formantów w formularzu przy użyciu właściwości margines  
+#### <a name="to-arrange-controls-on-your-form-using-the-margin-property"></a>Aby rozmieścić formanty w formularzu za pomocą właściwości marginesów  
   
-1.  Przeciągnij dwa <xref:System.Windows.Forms.Button> formantów **przybornika** na formularzu.  
+1.  Przeciągnij dwa <xref:System.Windows.Forms.Button> kontrolki z **przybornika** do formularza.  
   
-2.  Wybierz jedną z <xref:System.Windows.Forms.Button> steruje i przenieść blisko innych, dopóki nie są one prawie dotknięcie.  
+2.  Wybierz jedną z <xref:System.Windows.Forms.Button> kontroluje i przenieść blisko innych, dopóki nie są one prawie dotknięcie.  
   
-     Obserwować snapline —, który pojawia się między nimi. Odległość jest sumą dwóch formantów <xref:System.Windows.Forms.Control.Margin%2A> wartości. Formant, który przenosisz przyciąganie do tej odległości. Aby uzyskać więcej informacji, zobacz [wskazówki: rozmieszczanie formantów na formularzach systemu Windows przy użyciu linie przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     Obserwuj snapline —, który pojawia się między nimi. To jest sumą dwóch kontrolek <xref:System.Windows.Forms.Control.Margin%2A> wartości. Formant, który chcesz przenieść przyciąganie do tego odległości. Aby uzyskać więcej informacji, zobacz [wskazówki: rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
-3.  Zmień <xref:System.Windows.Forms.Control.Margin%2A> właściwości formantów rozwijając <xref:System.Windows.Forms.Control.Margin%2A> wpis w **właściwości** okno i ustawienie <xref:System.Windows.Forms.Padding.All%2A> właściwości na 20.  
+3.  Zmiana <xref:System.Windows.Forms.Control.Margin%2A> właściwości formantów, rozwijając <xref:System.Windows.Forms.Control.Margin%2A> wpisu w **właściwości** okna i ustawienie <xref:System.Windows.Forms.Padding.All%2A> właściwości na 20.  
   
-4.  Wybierz jedną z <xref:System.Windows.Forms.Button> formanty i przeniesienie go blisko innych.  
+4.  Wybierz jedną z <xref:System.Windows.Forms.Button> kontroluje i przenieś ją w pobliżu innych.  
   
-     Snapline — Definiowanie sumę wartości marginesu jest większa i formantu przyciąganie do większej odległości od innych formantu.  
+     Snapline — Definiowanie sumę wartości marginesu jest większa, a kontrolka punkty przyciągania podczas większa odległość od innego formantu.  
   
-5.  Zmień <xref:System.Windows.Forms.Control.Margin%2A> właściwości zaznaczonego formantu rozwijając <xref:System.Windows.Forms.Control.Margin%2A> wpis w **właściwości** okno i ustawienie <xref:System.Windows.Forms.Padding.Top%2A> właściwości na wartość 5.  
+5.  Zmiana <xref:System.Windows.Forms.Control.Margin%2A> właściwości wybranej kontrolki, rozwijając <xref:System.Windows.Forms.Control.Margin%2A> wpisu w **właściwości** okna i ustawienie <xref:System.Windows.Forms.Padding.Top%2A> właściwości do 5.  
   
-6.  Przenieś zaznaczony formant poniżej innych sterowania i sprawdź, czy snapline — jest krótszy. Przenieś wybraną kontrolkę w lewo innych sterowania i sprawdź, czy snapline — zachowuje wartość odczytaną w kroku 4.  
+6.  Przenieś zaznaczony formant poniżej innej kontrolki i sprawdź, czy snapline — jest krótszy. Przenieś zaznaczony formant w lewo inne kontrolki i sprawdź, czy snapline — przechowuje wartość w kroku 4.  
   
-7.  Można ustawić każdy z aspektów <xref:System.Windows.Forms.Control.Margin%2A> właściwość <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, różne wartości, lub można ustawić je wszystkie do tej samej wartości z <xref:System.Windows.Forms.Padding.All%2A> właściwości.  
+7.  Możesz ustawić każdy z aspektów <xref:System.Windows.Forms.Control.Margin%2A> właściwości <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, różne wartości, lub można ustawić je wszystkie do tej samej wartości z <xref:System.Windows.Forms.Padding.All%2A> właściwości.  
   
 ## <a name="setting-padding-for-your-controls"></a>Ustawienie wypełnienia dla formantów  
- Do uzyskania dokładnych układu wymagane dla aplikacji, formantów często będzie zawierać formantów podrzędnych. Aby określić bliskości obramowania formantu podrzędnego obramowania formantu nadrzędnego, należy użyć formantu nadrzędnego <xref:System.Windows.Forms.Control.Padding%2A> właściwość w połączeniu z formant podrzędny <xref:System.Windows.Forms.Control.Margin%2A> właściwości. <xref:System.Windows.Forms.Control.Padding%2A> Jest również używana do kontrolowania zbliżeniowe zawartości formantu (na przykład <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Text%2A> właściwości) do jego granic.  
+ Aby uzyskać dokładne układ wymaganej dla aplikacji, kontrolki często zawierają formantów podrzędnych. Aby określić bliskość obramowania kontrolki podrzędnej obramowania kontrolki nadrzędnej, należy użyć kontrolki nadrzędnej <xref:System.Windows.Forms.Control.Padding%2A> właściwość w połączeniu z kontrolki podrzędnej <xref:System.Windows.Forms.Control.Margin%2A> właściwości. <xref:System.Windows.Forms.Control.Padding%2A> Jest również używana do sterowania odległości między elementami zawartości formantu (na przykład <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Text%2A> właściwość) do jego obramowania.  
   
-#### <a name="to-arrange-controls-on-your-form-using-padding"></a>Aby rozmieszczanie formantów w formularzu za pomocą wypełnienia  
+#### <a name="to-arrange-controls-on-your-form-using-padding"></a>Aby rozmieścić formanty w formularzu za pomocą wypełnienia  
   
-1.  Przeciągnij <xref:System.Windows.Forms.Button> kontrolować z **przybornika** na formularzu.  
+1.  Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do formularza.  
   
-2.  Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości `true`.  
+2.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość `true`.  
   
-3.  Zmień <xref:System.Windows.Forms.Control.Padding%2A> właściwości rozwijając <xref:System.Windows.Forms.Control.Padding%2A> wpis w **właściwości** okno i ustawienie <xref:System.Windows.Forms.Padding.All%2A> właściwości na wartość 5.  
+3.  Zmiana <xref:System.Windows.Forms.Control.Padding%2A> właściwości, rozwijając <xref:System.Windows.Forms.Control.Padding%2A> wpisu w **właściwości** okna i ustawienie <xref:System.Windows.Forms.Padding.All%2A> właściwości do 5.  
   
-     Aby zapewnić miejsce dla nowych uzupełnienie rozszerza się formantu.  
+     Kontrolka rozwija Podaj miejsce dla nowych dopełnienia.  
   
-4.  Przeciągnij <xref:System.Windows.Forms.GroupBox> kontrolować z **przybornika** na formularzu. Przeciągnij <xref:System.Windows.Forms.Button> kontrolować z **przybornika** do <xref:System.Windows.Forms.GroupBox> formantu. Pozycja <xref:System.Windows.Forms.Button> kontrolować, dlatego jest wyrównana prawym dolnym rogu <xref:System.Windows.Forms.GroupBox> formantu.  
+4.  Przeciągnij <xref:System.Windows.Forms.GroupBox> z kontrolować **przybornika** do formularza. Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do <xref:System.Windows.Forms.GroupBox> kontroli. Pozycja <xref:System.Windows.Forms.Button> kontrolować, więc w prawym dolnym rogu <xref:System.Windows.Forms.GroupBox> kontroli.  
   
-     Obserwować linie przyciągania, który pojawia się jako <xref:System.Windows.Forms.Button> kontroli zbliża się do dolnej i prawej obramowanie <xref:System.Windows.Forms.GroupBox> formantu. Te linie przyciągania odpowiadają <xref:System.Windows.Forms.Control.Margin%2A> właściwość <xref:System.Windows.Forms.Button>.  
+     Obserwuj linii przyciągania, które są wyświetlane jako <xref:System.Windows.Forms.Button> kontroli zbliża się do dołu i prawe krawędzie <xref:System.Windows.Forms.GroupBox> kontroli. Te linii przyciągania odpowiadają <xref:System.Windows.Forms.Control.Margin%2A> właściwość <xref:System.Windows.Forms.Button>.  
   
-5.  Zmień <xref:System.Windows.Forms.GroupBox> formantu <xref:System.Windows.Forms.Control.Padding%2A> właściwości rozwijając <xref:System.Windows.Forms.Control.Padding%2A> wpis w **właściwości** okno i ustawienie <xref:System.Windows.Forms.Padding.All%2A> właściwości na 20.  
+5.  Zmiana <xref:System.Windows.Forms.GroupBox> kontrolki <xref:System.Windows.Forms.Control.Padding%2A> właściwości, rozwijając <xref:System.Windows.Forms.Control.Padding%2A> wpisu w **właściwości** okna i ustawienie <xref:System.Windows.Forms.Padding.All%2A> właściwości na 20.  
   
-6.  Wybierz <xref:System.Windows.Forms.Button> kontroli w ramach <xref:System.Windows.Forms.GroupBox> kontroli i przenieś ją do środka <xref:System.Windows.Forms.GroupBox>.  
+6.  Wybierz <xref:System.Windows.Forms.Button> kontrolki w <xref:System.Windows.Forms.GroupBox> kontroli i przenieś ją w kierunku środka <xref:System.Windows.Forms.GroupBox>.  
   
-     Linie przyciągania pojawiają się w większej odległości od obramowania <xref:System.Windows.Forms.GroupBox> formantu. Odległość to suma <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Margin%2A> właściwości i <xref:System.Windows.Forms.GroupBox> formantu <xref:System.Windows.Forms.Control.Padding%2A> właściwości.  
+     Linii przyciągania pojawiają się w odległości większa od obramowania <xref:System.Windows.Forms.GroupBox> kontroli. To jest sumą <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Margin%2A> właściwości i <xref:System.Windows.Forms.GroupBox> kontrolki <xref:System.Windows.Forms.Control.Padding%2A> właściwości.  
   
-## <a name="automatically-sizing-your-controls"></a>Automatycznie zmiany rozmiaru formantów  
- W niektórych aplikacjach rozmiaru formantu nie będzie taka sama w czasie wykonywania jakim znajdował się w czasie projektowania. Tekst <xref:System.Windows.Forms.Button> kontrolki, na przykład może być pobranych z bazy danych, a jej długość nie będzie znane z wyprzedzeniem.  
+## <a name="automatically-sizing-your-controls"></a>Automatyczne ustalanie rozmiaru kontrolki  
+ W niektórych aplikacjach rozmiaru formantu nie będzie taka sama w czasie wykonywania jakim znajdował się w czasie projektowania. Tekst <xref:System.Windows.Forms.Button> kontrolki, na przykład mogą zostać podjęte z bazy danych, a jej długość nie będzie znane z wyprzedzeniem.  
   
- Gdy <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość jest ustawiona na `true`, formantu zmieni się rozmiar do jego zawartości. Aby uzyskać więcej informacji, zobacz [AutoSize — Przegląd właściwości](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
+ Gdy <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość jest ustawiona na `true`, kontrolka zostanie sam rozmiar do jego zawartości. Aby uzyskać więcej informacji, zobacz [AutoSize właściwość — omówienie](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
   
-#### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>Aby rozmieszczanie formantów w formularzu za pomocą AutoSize właściwość  
+#### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>Aby rozmieścić formanty w formularzu za pomocą właściwości AutoSize  
   
-1.  Przeciągnij <xref:System.Windows.Forms.Button> kontrolować z **przybornika** na formularzu.  
+1.  Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do formularza.  
   
-2.  Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości `true`.  
+2.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość `true`.  
   
-3.  Zmień <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Text%2A> dla właściwości "**ten przycisk jest długi ciąg dla właściwości Text**."  
+3.  Zmiana <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Text%2A> właściwość "**ten przycisk ma długi ciąg dla właściwości Text**."  
   
-     Po zatwierdzeniu zmian, <xref:System.Windows.Forms.Button> zmienia rozmiar kontrolki dopasuje nowego tekstu.  
+     Podczas zatwierdzania zmian, <xref:System.Windows.Forms.Button> zmienia rozmiar formantu dopasuje nowego tekstu.  
   
-4.  Przeciągnij kolejny <xref:System.Windows.Forms.Button> kontrolować z **przybornika** na formularzu.  
+4.  Przeciągnij kolejny <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do formularza.  
   
-5.  Zmień <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Text%2A> dla właściwości "**ten przycisk jest długi ciąg dla właściwości Text.**"  
+5.  Zmiana <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Text%2A> właściwość "**ten przycisk ma długi ciąg dla właściwości Text.**"  
   
-     Po zatwierdzeniu zmian, <xref:System.Windows.Forms.Button> formantu nie zmieniany i zostanie obcięta przez prawą krawędzią formantu.  
+     Podczas zatwierdzania zmian, <xref:System.Windows.Forms.Button> formantu nie zmieniał swój rozmiar i zostanie obcięta przez prawą krawędzią kontrolki.  
   
-6.  Zmień <xref:System.Windows.Forms.Control.Padding%2A> właściwości rozwijając <xref:System.Windows.Forms.Control.Padding%2A> wpis w **właściwości** okno i ustawienie <xref:System.Windows.Forms.Padding.All%2A> właściwości na wartość 5.  
+6.  Zmiana <xref:System.Windows.Forms.Control.Padding%2A> właściwości, rozwijając <xref:System.Windows.Forms.Control.Padding%2A> wpisu w **właściwości** okna i ustawienie <xref:System.Windows.Forms.Padding.All%2A> właściwości do 5.  
   
      Wszystkie cztery strony jest przycinany tekst wewnątrz formantu.  
   
-7.  Zmień <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości `true`.  
+7.  Zmiana <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość `true`.  
   
-     <xref:System.Windows.Forms.Button> Kontroli samodzielnie zmienia rozmiar obejmujące cały ciąg. Ponadto dodano wypełnienia wokół tekstu, co powoduje <xref:System.Windows.Forms.Button> formantu, aby rozwinąć we wszystkich czterech kierunkach.  
+     <xref:System.Windows.Forms.Button> Kontroli zmienia rozmiar, aby obejmować cały ciąg. Ponadto dodano dopełnienie wokół tekstu, co powoduje <xref:System.Windows.Forms.Button> sterowania, aby rozwinąć we wszystkich czterech kierunkach.  
   
-8.  Przeciągnij <xref:System.Windows.Forms.Button> kontrolować z **przybornika** na formularzu. Umieść go w pobliżu prawym dolnym rogu formularza.  
+8.  Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do formularza. Umieść go w pobliżu prawego dolnego rogu formularza.  
   
-9. Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości `true`.  
+9. Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość `true`.  
   
-10. Ustaw <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Anchor%2A> właściwości <xref:System.Windows.Forms.AnchorStyles.Right>, <xref:System.Windows.Forms.AnchorStyles.Bottom>.  
+10. Ustaw <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Anchor%2A> właściwości <xref:System.Windows.Forms.AnchorStyles.Right>, <xref:System.Windows.Forms.AnchorStyles.Bottom>.  
   
-11. Zmień <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Text%2A> dla właściwości "**ten przycisk jest długi ciąg dla właściwości Text.**"  
+11. Zmiana <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Text%2A> właściwość "**ten przycisk ma długi ciąg dla właściwości Text.**"  
   
-     Po zatwierdzeniu zmian, <xref:System.Windows.Forms.Button> kontroli samodzielnie zmienia rozmiar w lewo. Ogólnie rzecz biorąc, automatycznej zmiany rozmiaru spowoduje zwiększenie rozmiaru formantu w przeciwnym kierunku jej <xref:System.Windows.Forms.Control.Anchor%2A> ustawienie właściwości.  
+     Podczas zatwierdzania zmian, <xref:System.Windows.Forms.Button> kontroli rozmiaru w lewo. Ogólnie rzecz biorąc, automatycznej zmiany rozmiaru spowoduje zwiększenie rozmiaru kontrolki, w przeciwnym kierunku jego <xref:System.Windows.Forms.Control.Anchor%2A> ustawienie właściwości.  
   
-## <a name="autosize-and-autosizemode-properties"></a>AutoSize i właściwości AutoSizeMode  
- Niektóre formanty obsługują `AutoSizeMode` właściwość, która zapewnia bardziej precyzyjną kontrolę nad zachowanie automatycznej zmiany rozmiaru formantu.  
+## <a name="autosize-and-autosizemode-properties"></a>AutoSize i AutoSizeMode właściwości  
+ Niektóre formanty obsługują `AutoSizeMode` właściwość, która zapewnia bardziej precyzyjną kontrolę nad zachowaniem automatycznej zmiany rozmiaru formantu.  
   
 #### <a name="to-use-the-autosizemode-property"></a>Aby użyć AutoSizeMode właściwość  
   
-1.  Przeciągnij <xref:System.Windows.Forms.Panel> kontrolować z **przybornika** na formularzu.  
+1.  Przeciągnij <xref:System.Windows.Forms.Panel> z kontrolować **przybornika** do formularza.  
   
-2.  Ustaw wartość <xref:System.Windows.Forms.Panel> formantu <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości `true`.  
+2.  Ustaw wartość <xref:System.Windows.Forms.Panel> kontrolki <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość `true`.  
   
-3.  Przeciągnij <xref:System.Windows.Forms.Button> kontrolować z **przybornika** do <xref:System.Windows.Forms.Panel> formantu.  
+3.  Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do <xref:System.Windows.Forms.Panel> kontroli.  
   
-4.  Miejsce <xref:System.Windows.Forms.Button> formantu prawym dolnym rogu <xref:System.Windows.Forms.Panel> formantu.  
+4.  Miejsce <xref:System.Windows.Forms.Button> formant w pobliżu prawego dolnego rogu <xref:System.Windows.Forms.Panel> kontroli.  
   
-5.  Wybierz <xref:System.Windows.Forms.Panel> kontroli i przechwycić uchwyt zmiany rozmiaru w prawym dolnym. Zmień rozmiar <xref:System.Windows.Forms.Panel> formantu większych i mniejszych.  
+5.  Wybierz <xref:System.Windows.Forms.Panel> kontroli i Pobierz prawy dolny uchwyt. Zmień rozmiar <xref:System.Windows.Forms.Panel> do większych i mniejszych formant.  
   
     > [!NOTE]
-    >  Za darmo można zmienić rozmiar <xref:System.Windows.Forms.Panel> sterowania, ale nie jego rozmiaru mniejszy niż pozycja <xref:System.Windows.Forms.Button> formantu prawym dolnym rogu. To zachowanie jest określony przez wartość domyślną `AutoSizeMode` właściwość, która jest <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>.  
+    >  Możesz swobodnie zmieniać rozmiar <xref:System.Windows.Forms.Panel> kontroli, ale nie jego rozmiaru mniejszy niż pozycja <xref:System.Windows.Forms.Button> formantu prawym dolnym rogu. To zachowanie jest określony przez wartość domyślną `AutoSizeMode` właściwość, która jest <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>.  
   
-6.  Ustaw wartość <xref:System.Windows.Forms.Panel> formantu `AutoSizeMode` właściwości <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>.  
+6.  Ustaw wartość <xref:System.Windows.Forms.Panel> kontrolki `AutoSizeMode` właściwość <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>.  
   
-     <xref:System.Windows.Forms.Panel> Kontroli rozmiary sam otaczającego <xref:System.Windows.Forms.Button> formantu. Nie można zmienić rozmiaru <xref:System.Windows.Forms.Panel> formantu.  
+     <xref:System.Windows.Forms.Panel> Kontroli rozciąga się Otocz <xref:System.Windows.Forms.Button> kontroli. Nie można zmienić rozmiaru <xref:System.Windows.Forms.Panel> kontroli.  
   
-7.  Przeciągnij <xref:System.Windows.Forms.Button> kontroli kierunku lewego górnego rogu <xref:System.Windows.Forms.Panel> formantu.  
+7.  Przeciągnij <xref:System.Windows.Forms.Button> kontroli kierunku lewego górnego rogu <xref:System.Windows.Forms.Panel> kontroli.  
   
-     <xref:System.Windows.Forms.Panel> Do zmienia rozmiar kontrolki <xref:System.Windows.Forms.Button> nowego położenia kontrolki.  
+     <xref:System.Windows.Forms.Panel> Kontroli dopasowuje się do <xref:System.Windows.Forms.Button> położenie nowej kontrolki.  
   
 ## <a name="next-steps"></a>Następne kroki  
- Istnieje wiele innych funkcji układu dla rozmieszczanie formantów w aplikacjach formularzy systemu Windows. Poniżej przedstawiono niektóre kombinacje, które może podjąć:  
+ Istnieje wiele innych funkcji układu dla rozmieszczanie formantów w aplikacjach Windows Forms. Poniżej przedstawiono niektóre kombinacje, które może wypróbować:  
   
--   Tworzenie formularza za pomocą <xref:System.Windows.Forms.TableLayoutPanel> formantu. Aby uzyskać więcej informacji, zobacz [wskazówki: rozmieszczanie formantów w Windows Forms za pomocą TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Spróbuj zmienić wartości <xref:System.Windows.Forms.TableLayoutPanel> formantu <xref:System.Windows.Forms.Control.Padding%2A> właściwości, oraz z <xref:System.Windows.Forms.Control.Margin%2A> właściwości na jej kontrolkach podrzędnych.  
+-   Tworzenie formularza przy użyciu <xref:System.Windows.Forms.TableLayoutPanel> kontroli. Aby uzyskać więcej informacji, zobacz [wskazówki: rozmieszczanie formantów Windows Forms za pomocą TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Spróbuj zmienić wartości <xref:System.Windows.Forms.TableLayoutPanel> kontrolki <xref:System.Windows.Forms.Control.Padding%2A> właściwości, jak również <xref:System.Windows.Forms.Control.Margin%2A> właściwość jego formantów podrzędnych.  
   
--   Użyj tego samego eksperymentu <xref:System.Windows.Forms.FlowLayoutPanel> formantu. Aby uzyskać więcej informacji, zobacz [wskazówki: rozmieszczanie formantów w Windows Forms za pomocą FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+-   Wypróbuj, w tym samym eksperymentu przy użyciu <xref:System.Windows.Forms.FlowLayoutPanel> kontroli. Aby uzyskać więcej informacji, zobacz [wskazówki: rozmieszczanie formantów Windows Forms za pomocą FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
--   Doświadczenia z dokowanie formantów podrzędnych w <xref:System.Windows.Forms.Panel> formantu. <xref:System.Windows.Forms.Control.Padding%2A> Właściwość jest bardziej ogólne realizacji <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> właściwości oraz spełnia samodzielnie czy jest to poprzez umieszczenie kontrolki podrzędnej <xref:System.Windows.Forms.Panel> kontroli i ustawienie formant podrzędny <xref:System.Windows.Forms.Control.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Fill>. Ustaw <xref:System.Windows.Forms.Panel> formantu <xref:System.Windows.Forms.Control.Padding%2A> właściwości do różnych wartości i Uwaga efekt.  
+-   Eksperymentuj z dokowanie formantów podrzędnych w <xref:System.Windows.Forms.Panel> kontroli. <xref:System.Windows.Forms.Control.Padding%2A> Właściwość jest bardziej ogólnych realizacji <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> właściwości, na które może spełnić samodzielnie, jest to poprzez umieszczenie kontrolki podrzędnej <xref:System.Windows.Forms.Panel> kontrolki i ustawiając kontrolę rodzicielską <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>. Ustaw <xref:System.Windows.Forms.Panel> kontrolki <xref:System.Windows.Forms.Control.Padding%2A> właściwości różnych wartości i zwróć uwagę, efekt.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Control.AutoSize%2A>  

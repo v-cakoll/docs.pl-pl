@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 861942ac3ce84d75be61d7b4125ab0e17c6d86e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6419c2157281d00cf79de16d4f494fc52bcee598
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750573"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876735"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;security&gt; w &lt;msmqIntegrationBinding&gt;
-Definiuje ustawienia zabezpieczeń transportu kanał integracji usługi kolejkowania komunikatów (MSMQ).  
+Określa ustawienia zabezpieczenia transportu dla kanału Integracja usługi kolejkowania komunikatów (MSMQ).  
   
  \<system.ServiceModel>  
 \<powiązania >  
@@ -45,7 +45,7 @@ msmqIntegrationBinding
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Określa typ zabezpieczeń tej kontroli integralności, poufność i uwierzytelnianie z kanał integracji usługi kolejkowania komunikatów. Prawidłowe wartości są następujące:<br /><br /> -Brak: Powoduje wyłączenie zabezpieczeń.<br />-Transport: Ochrony i uwierzytelniania są oferowane przez transport. Dotyczy to zabezpieczenia wiadomości między menedżerami kolejki dwa. Nie ma żadnych zabezpieczeń oferowany między aplikacją a menedżera kolejek. Istniejące aplikacje usługi Msmq są taką samą funkcję z tym typem tryb zabezpieczeń.<br /><br /> Wartość domyślna to `Transport`. Ten atrybut jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
+|tryb|Określa typ zabezpieczeń tej kontroli integralności, poufność i uwierzytelnianie za pomocą kanału Integracja usługi kolejkowania komunikatów. Prawidłowe wartości są następujące:<br /><br /> -Brak: Powoduje to wyłączenie zabezpieczeń.<br />-Transport: Ochrony i uwierzytelniania oferowana przez transportu. Dotyczy to zabezpieczeń wiadomości między menedżerami kolejki dwa. Nie ma żadnych zabezpieczeń udostępniane między aplikacją i Menedżer kolejki. Istniejące aplikacje usługi Msmq są funkcjonalnie równoważne z tym typem tryb zabezpieczeń.<br /><br /> Wartość domyślna to `Transport`. Ten atrybut jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -68,6 +68,6 @@ msmqIntegrationBinding
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)  
  [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)

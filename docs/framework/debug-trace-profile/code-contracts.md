@@ -10,11 +10,11 @@ ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425759"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879848"
 ---
 # <a name="code-contracts"></a>Kontrakty kodu
 Kontrakty kodu zapewniają możliwość określenia warunków wstępnych, warunków końcowych i invariants obiektu w kodzie. Są one wymagania, które muszą zostać spełnione, podczas wprowadzania metodę lub właściwość. Warunków końcowych opisują oczekiwania w czasie, który zamyka kodu metody lub właściwości. Obiekt invariants opisują oczekiwany stan dla klasy, która jest w dobrym stanie.  

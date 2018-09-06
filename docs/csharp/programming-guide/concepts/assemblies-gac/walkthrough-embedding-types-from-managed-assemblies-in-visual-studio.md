@@ -2,12 +2,12 @@
 title: 'Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932098"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869561"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)
 W przypadku osadzenia informacji o typie z zarządzanego zestawu z silną nazwą, luźno połączyć typy w aplikacji, aby osiągnąć niezależność. Oznacza to by używał typów z wielu wersji zarządzanej biblioteki bez konieczności ponownie skompilowana dla każdej wersji można napisać program.  
@@ -232,8 +232,9 @@ W przypadku osadzenia informacji o typie z zarządzanego zestawu z silną nazwą
   
 6.  W Eksploratorze plików otwórz folder wyjściowy ścieżki (na przykład C:\TypeEquivalenceSample). Kliknij dwukrotnie TypeEquivalenceClient.exe do uruchomienia programu. Program będzie odzwierciedlać nową wersję zestawu TypeEquivalenceRuntime bez konieczności został ponownie kompilowana.  
   
-## <a name="see-also"></a>Zobacz też  
- [/ Link (opcje kompilatora C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)  
- [Programowanie za pomocą zestawów](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [/ Link (opcje kompilatora C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)  
+- [Programowanie za pomocą zestawów](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

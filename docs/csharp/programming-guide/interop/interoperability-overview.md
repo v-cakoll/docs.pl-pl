@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: d14c196babb03b7f13dde6ab5b46508a30ba26d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394533"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43860445"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Przegląd współdziałania (Przewodnik programowania w języku C#)
 Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarządzanego i niezarządzanego kodu.  
@@ -57,10 +57,11 @@ Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarzą
   
  Aby uzyskać więcej informacji, zobacz [udostępnianie składników .NET Framework modelowi COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) i [klasa COM — przykład](../../../csharp/programming-guide/interop/example-com-class.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Poprawa wydajności międzyoperacyjności](https://msdn.microsoft.com/library/ms998551.aspx)  
- [Wprowadzenie do współdziałania między COM i .NET](https://msdn.microsoft.com/library/office/bb610378.aspx)  
- [Wprowadzenie do COM Interop w języku Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- [Szeregowanie między kodem zarządzanym i niezarządzanym](../../../../docs/framework/interop/interop-marshaling.md)  
- [Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Poprawa wydajności międzyoperacyjności](https://msdn.microsoft.com/library/ms998551.aspx)  
+- [Wprowadzenie do współdziałania między COM i .NET](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+- [Wprowadzenie do COM Interop w języku Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+- [Szeregowanie między kodem zarządzanym i niezarządzanym](../../../../docs/framework/interop/interop-marshaling.md)  
+- [Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)

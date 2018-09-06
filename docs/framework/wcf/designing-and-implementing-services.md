@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: 673712912b674c48dee094859364df9b22c51c82
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425240"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877297"
 ---
 # <a name="designing-and-implementing-services"></a>Projektowanie i implementowanie usług
 W tej sekcji dowiesz się, jak zdefiniować i implementowanie kontraktów usług WCF. Kontrakt usługi określa punkt końcowy komunikuje na zewnątrz. Na poziomie bardziej konkretne takie jak żądanie/nietypizowana odpowiedź, jednokierunkowe i dwukierunkowego jest poufności informacji na temat zestawu specyficzne komunikaty dotyczące podzielone na podstawowe wiadomości programu exchange wzorców (MEPs). Kontrakt usługi to zestaw logicznie powiązanych wymianę komunikatów, operacja usługi czy exchange pojedynczym komunikacie. Na przykład `Hello` operacji oczywiście akceptują jeden komunikat (tak, aby obiekt wywołujący może poinformować o powitania) i może być lub może nie zwrócić komunikat (w zależności od grzecznościowy operacji).  

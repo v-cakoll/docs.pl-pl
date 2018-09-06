@@ -1,51 +1,51 @@
 ---
 title: Atrybuty (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: fe94f0ee778f14581fd7949f705cc22f12058b27
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956075"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892389"
 ---
 # <a name="attributes-c"></a>Atrybuty (C#)
 
-Atrybuty udostępnia zaawansowane metody kojarzenia metadanych lub deklaratywne informacji z kodu (zestawy, typy metod, właściwości i tak dalej). Po atrybutu jest skojarzony z jednostką program, ten atrybut można tworzyć zapytania w czasie wykonywania przy użyciu techniki o nazwie *odbicia*. Aby uzyskać więcej informacji, zobacz [odbicia (C#)](../reflection.md).
+Atrybuty zawierają zaawansowaną metodą kojarzenia metadanych lub informacji deklaratywne, przy użyciu kodu (zestawy, typy, metody, właściwości i tak dalej). Po atrybutu jest skojarzony z jednostką program, ten atrybut można wykonywać zapytania w czasie wykonywania za pomocą technikę o nazwie *odbicia*. Aby uzyskać więcej informacji, zobacz [odbicia (C#)](../reflection.md).
 
-Atrybuty mieć następujące właściwości:
+Atrybuty mają następujące właściwości:
 
-- Atrybuty dodawać metadane do programu. *Metadane* znajdują się informacje o typy zdefiniowane w programie. Wszystkie zestawy .NET zawierają określony zestaw metadanych, które opisują typy i elementy członkowskie typu zdefiniowany w zestawie. Można dodawać atrybuty niestandardowe, aby określić dodatkowe informacje, które jest wymagane. Aby uzyskać więcej informacji zobacz, [tworzenie niestandardowe atrybuty (C#)](creating-custom-attributes.md).
-- Co najmniej jeden atrybut można stosować do całego zestawy, moduły lub mniejsze elementy programu, takich jak klasy i właściwości.
-- Atrybuty mogą akceptować argumenty w taki sam sposób jak metody i właściwości.
-- Program można sprawdzić jego własnej ani metadanych w programach przy użyciu odbicia. Aby uzyskać więcej informacji, zobacz [podczas uzyskiwania dostępu do atrybutów przy użyciu odbicia (C#)](accessing-attributes-by-using-reflection.md).
+- Atrybuty dodawania metadanych do programu. *Metadane* obejmuje informacje dotyczące typów zdefiniowanych w programie. Wszystkie zestawy .NET zawierają określony zestaw metadane opisujące typy i elementy członkowskie typu zdefiniowane w zestawie. Możesz dodać atrybuty niestandardowe, aby określić dodatkowe informacje, która jest wymagana. Aby uzyskać więcej informacji znajduje się pozycja [Tworzenie atrybutów niestandardowych (C#)](creating-custom-attributes.md).
+- Jeden lub więcej atrybutów mogą dotyczyć całego zestawów, modułów lub mniejszych elementów programów, takich jak klasy i właściwości.
+- Atrybuty można zaakceptować argumentów w taki sam sposób jak metody i właściwości.
+- Program można sprawdzić swój własny metadanych lub metadanych w innych programach przy użyciu odbicia. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do atrybutów przy użyciu odbicia (C#)](accessing-attributes-by-using-reflection.md).
 
 ## <a name="using-attributes"></a>Przy użyciu atrybutów
 
-Atrybuty można umieścić w praktycznie dowolnej deklaracji, chociaż określony atrybut mogą ograniczać typów deklaracje, na których jest ona prawidłowa. W C# należy określić atrybut przez umieszczenie nazwy atrybutu ujęte w nawiasy kwadratowe ([]) powyżej deklaracji jednostki, której dotyczy.
+Atrybuty można umieścić w praktycznie dowolnej deklaracji, chociaż określony atrybut może ograniczyć typy deklaracji, na których jest on prawidłowy. W C# należy określić atrybut, umieszczając nazwę atrybutu, ujęte w nawiasy kwadratowe ([]) powyżej deklaracji jednostki, której dotyczy.
 
-W tym przykładzie <xref:System.SerializableAttribute> atrybut służy do stosowania określonej właściwości do klasy:
+W tym przykładzie <xref:System.SerializableAttribute> atrybut jest używany do stosowania szczególne właściwości do klasy:
 
 [!code-csharp[Using the serializable attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
-Metody z atrybutem <xref:System.Runtime.InteropServices.DllImportAttribute> zadeklarowano jak w następującym przykładzie:
+Metody z atrybutem <xref:System.Runtime.InteropServices.DllImportAttribute> jest zadeklarowana, jak w poniższym przykładzie:
 
 [!code-csharp[Declaring a method to import from an external library](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#2)]
 
-Więcej niż jeden atrybut można umieścić w deklaracji, jak przedstawiono na poniższym przykładzie:
+Więcej niż jeden atrybut można umieścić w deklaracji, co ilustruje poniższy przykład:
 
 [!code-csharp[Including the interop namespace](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
 [!code-csharp[Declaring two way marshaling for arguments](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
-Niektóre atrybuty można określić więcej niż raz dla danej jednostki. Na przykład multiuse atrybutu <xref:System.Diagnostics.ConditionalAttribute>:
+Niektóre atrybuty można określić więcej niż jeden raz dla danej jednostki. Na przykład multiuse — atrybut <xref:System.Diagnostics.ConditionalAttribute>:
 
 [!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> Według Konwencji wszystkich nazw atrybutów kończyć się wyrazem "Atrybutu", aby odróżnić je od innych elementów w bibliotekach .NET. Nie trzeba jednak określić sufiks atrybutu przy użyciu atrybutów w kodzie. Na przykład `[DllImport]` jest odpowiednikiem `[DllImportAttribute]`, ale `DllImportAttribute` jest rzeczywistą nazwą atrybutu w bibliotece klas programu .NET Framework.
+> Zgodnie z Konwencją wszystkie nazwy atrybutu kończą się wyrazem "Atrybut", aby odróżnić je od innych elementów w bibliotekach .NET. Nie musisz jednak określić sufiks atrybutu, korzystając z atrybutów w kodzie. Na przykład `[DllImport]` jest odpowiednikiem `[DllImportAttribute]`, ale `DllImportAttribute` jest rzeczywistą nazwą atrybutu w bibliotece klas programu .NET Framework.
 
 ### <a name="attribute-parameters"></a>Parametry atrybutów
 
-Wiele atrybutów ma parametry, które mogą być pozycyjnych, bez nazwy lub nazwane. Parametry pozycyjne musi być podana w odpowiedniej kolejności i nie można pominąć. Nazwane parametry są opcjonalne i może zostać określony w dowolnej kolejności. Parametry pozycyjne są określony jako pierwszy. Na przykład te trzy atrybuty są równoważne:
+Wiele atrybutów ma parametry, które mogą być pozycyjne, bez nazwy lub nazwane. Wszystkie parametry pozycyjne musi być określona w określonej kolejności i nie może być pominięty. Parametry nazwane są opcjonalne i może być określony w dowolnej kolejności. Parametry pozycyjne są określony jako pierwszy. Na przykład te trzy atrybuty są równoważne:
 
 ```csharp
 [DllImport("user32.dll")]
@@ -53,35 +53,35 @@ Wiele atrybutów ma parametry, które mogą być pozycyjnych, bez nazwy lub nazw
 [DllImport("user32.dll", ExactSpelling=false, SetLastError=false)]
 ```
 
-Pierwszy parametr Nazwa biblioteki DLL jest pozycyjnych i zawsze zostanie osiągnięty jako pierwszy; inne o nazwie. W takim przypadku nazwanych parametrów domyślna wartość to false, więc można pominąć. Parametry pozycyjne odpowiadają parametry konstruktora atrybutów. Parametry nazwane i opcjonalne odpowiada właściwości lub pola atrybutu. Zajrzyj do dokumentacji poszczególne atrybuty, aby uzyskać informacje dotyczące domyślne wartości parametrów.
+Pierwszy parametr, nazwa biblioteki DLL jest pozycyjne i zawsze wykorzystasz; pozostałe o nazwie. W tym przypadku nazwanych parametrów domyślna wartość to false, dzięki czemu można pominąć. Parametry pozycyjne odpowiadają parametrom atrybut konstruktora. Nazwana lub opcjonalne parametry odnoszą się do właściwości lub pola atrybutu. Zajrzyj do dokumentacji atrybutu Aby uzyskać informacji o domyślnych wartości parametrów.
 
 ### <a name="attribute-targets"></a>Docelowe atrybuty
 
-*Docelowej* atrybutu jest jednostki, której dotyczy ten atrybut. Na przykład atrybut mogą stosować do klasy, konkretnej metody lub całego zestawu. Domyślnie atrybut dotyczy poprzedza element. Ale można również jawnie określić, na przykład, czy atrybut jest stosowany do metody, lub jej parametr albo jego wartości zwracanej.
+*Docelowej* atrybutu jest jednostki, której dotyczy ten atrybut. Na przykład atrybut mogą dotyczyć klasy, konkretną metodę lub całego zestawu. Domyślnie atrybut stosuje się do elementu, który poprzedza. Ale można także jawnie zidentyfikować, na przykład, czy atrybut jest stosowany do metody, lub jako parametr lub wartość zwracaną.
 
-Aby jawnie określić obiekt docelowy atrybutu, należy użyć następującej składni:
+Aby jawnie określić element docelowy atrybutu, użyj następującej składni:
 
 ```csharp
 [target : attribute-list]
 ```
 
-Lista możliwości `target` w poniższej tabeli przedstawiono wartości.
+Lista możliwych `target` wartości zostały przedstawione w poniższej tabeli.
 
 |Wartość docelowa|Informacje zawarte w tym artykule dotyczą|
 |------------------|----------------|
-|`assembly`|Całego zestawu|
-|`module`|Bieżący modułu zestawu|
+|`assembly`|Cały zespół|
+|`module`|Bieżącego zestawu modułu|
 |`field`|Pole w klasie lub strukturze|
 |`event`|Zdarzenie|
-|`method`|Metoda lub `get` i `set` metod dostępu do właściwości|
+|`method`|Metoda lub `get` i `set` Akcesory właściwości|
 |`param`|Parametry metody lub `set` parametry metody dostępu właściwości|
 |`property`|Właściwość|
 |`return`|Zwraca wartość metody, właściwości indeksatora lub `get` metody dostępu właściwości|
-|`type`|Struktury, klasy, interface, enum lub delegate|
+|`type`|Struktury, klasy, interfejsu, enum lub delegata|
 
-Należy określić `field` wartości docelowej, aby zastosować atrybut do pole zapasowe utworzone dla [automatycznie implementowana właściwość](../../../properties.md).
+Należy określić `field` wartość docelową, aby zastosować atrybut do pola pomocniczego utworzone dla [automatycznie implementowana właściwość](../../../properties.md).
 
-Poniższy przykład pokazuje, jak można zastosować atrybutów do zestawów i modułów. Aby uzyskać więcej informacji, zobacz [takie same atrybuty wspólne (C#)](common-attributes.md).
+Poniższy przykład pokazuje, jak zastosować atrybutów do zestawów i modułów. Aby uzyskać więcej informacji, zobacz [atrybuty wspólne (C#)](common-attributes.md).
 
 ```csharp
 using System;
@@ -90,28 +90,28 @@ using System.Reflection;
 [module: CLSCompliant(true)]
 ```
 
-Poniższy przykład przedstawia sposób zastosować atrybutów do metod, parametrów metod i metody zwracają wartości w języku C#.
+Poniższy przykład pokazuje, jak zastosować atrybutów do metod i parametry metody, a metoda zwraca wartości w języku C#.
 
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> Niezależnie od celów, na którym `ValidatedContract` zdefiniowano był prawidłowy, `return` docelowy musi być określony, nawet jeśli `ValidatedContract` zostały zdefiniowane do stosowania tylko dla wartości zwracane. Innymi słowy, kompilator nie będzie używać `AttributeUsage` informacje umożliwiające rozwiązanie docelowe atrybuty niejednoznaczne. Aby uzyskać więcej informacji, zobacz [AttributeUsage (C#)](attributeusage.md).
+> Niezależnie od tego, obiekty docelowe, na którym `ValidatedContract` zdefiniowano był prawidłowy, `return` docelowy musi być określona, nawet wtedy, gdy `ValidatedContract` zostały zdefiniowane w celu mają zastosowanie tylko do zwracania wartości. Innymi słowy, kompilator nie będzie używać `AttributeUsage` informacje pozwalające rozwiązać niejednoznaczny atrybut elementów docelowych. Aby uzyskać więcej informacji, zobacz [AttributeUsage (C#)](attributeusage.md).
 
 ## <a name="common-uses-for-attributes"></a>Najczęstsze zastosowania dla atrybutów
 
 Poniższa lista zawiera kilka typowych zastosowań atrybutów w kodzie:
 
-- Oznaczanie za pomocą metody `WebMethod` atrybutów w usługach sieci Web, aby wskazać, że metoda powinna być wywoływana za pośrednictwem protokołu SOAP. Aby uzyskać więcej informacji, zobacz <xref:System.Web.Services.WebMethodAttribute>.
-- Zawierająca opis sposobu zorganizowania parametrów metody podczas współpracy z kodu macierzystego. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
-- Opisujących właściwości modelu COM dla klas, metod i interfejsów.
-- Wywoływanie niezarządzanych w kodzie za pomocą <xref:System.Runtime.InteropServices.DllImportAttribute> klasy.
-- Opisujące używanemu zestawowi pod względem tytułu, wersji, opis lub znakiem towarowym.
-- Opisujące członków klasy do serializacji trwałości.
-- Opisujących sposób mapowania między elementami członkowskimi klas i węzłów XML do serializacji XML.
+- Oznaczanie metod za pomocą `WebMethod` atrybutów w usługach sieci Web, aby wskazać, że metoda powinna być wywoływane za pośrednictwem protokołu SOAP. Aby uzyskać więcej informacji, zobacz <xref:System.Web.Services.WebMethodAttribute>.
+- Opisujących sposób organizowania parametry metody podczas współpracy z kodu natywnego. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Opisujących właściwości modelu COM dla klasy, metody i interfejsy.
+- Wywoływanie niezarządzanego kodu za pomocą <xref:System.Runtime.InteropServices.DllImportAttribute> klasy.
+- Opisujące zestaw pod względem tytułu, wersji, opis lub znak towarowy.
+- Opisujących członków klasy do serializacji na potrzeby stanu trwałego.
+- Opisujących sposób mapowania między elementy członkowskie klasy i węzłów XML do serializacji XML.
 - Opisujących wymagania dotyczące zabezpieczeń dla metod.
-- Określanie właściwości używanych do wymuszania zabezpieczeń.
-- Kontrolowanie optymalizacji przez kompilator just-in-time (JIT), kod jest łatwy do debugowania.
-- Uzyskiwanie informacji o elemencie wywołującym metodę.
+- Określanie właściwości używane do wymuszania zabezpieczeń.
+- Kontrolowanie optymalizacji przez kompilator just-in-time (JIT), dzięki czemu kod pozostaje ułatwia debugowanie.
+- Uzyskiwanie informacji o obiekcie wywołującym metodę.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
@@ -123,9 +123,9 @@ Aby uzyskać więcej informacji, zobacz:
 - [Atrybuty wspólne (C#)](common-attributes.md)  
 - [Informacje o wywołującym (C#)](../caller-information.md)  
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
- [Przewodnik programowania w języku C#](../../index.md)  
- [Odbicie (C#)](../reflection.md)  
- [Atrybuty](../../../../standard/attributes/index.md)  
- [Przy użyciu atrybutów w języku C#](../../../tutorials/attributes.md)  
+- [Przewodnik programowania w języku C#](../../index.md)  
+- [Odbicie (C#)](../reflection.md)  
+- [Atrybuty](../../../../standard/attributes/index.md)  
+- [Przy użyciu atrybutów w języku C#](../../../tutorials/attributes.md)  

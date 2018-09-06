@@ -12,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 03d6e7185a0a16589fb612724be52ce51e813173
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 144d03edf28464717430bd0ae83db637578d8296
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384510"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892259"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() i argumenty wiersza poleceń (C# Programming Guide)
 
@@ -41,8 +41,9 @@ Dodanie `async` i `Task`, `Task<int>` zwraca typy upraszcza kod programu, gdy ap
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz także
-[Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-[Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-[Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-[Konstrukcja programu C#](../../../csharp/programming-guide/inside-a-program/index.md)  
+## <a name="see-also"></a>Zobacz też
+
+- [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Konstrukcja programu C#](../../../csharp/programming-guide/inside-a-program/index.md)  

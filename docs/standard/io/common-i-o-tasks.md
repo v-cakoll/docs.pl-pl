@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577658"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879399"
 ---
 # <a name="common-io-tasks"></a>Typowe zadania We/Wy
-<xref:System.IO> Przestrzeń nazw zawiera szereg klas, które umożliwiają różne akcje, takie jak odczytywanie i zapisywanie do wykonania dla plików, katalogów i strumieni. Aby uzyskać więcej informacji, zobacz [plików i we/wy strumienia](../../../docs/standard/io/index.md).  
+<xref:System.IO> Przestrzeni nazw dostarcza kilka klas, które umożliwiają wykonywanie różnych akcji, takich jak odczytywanie i zapisywanie w plikach, katalogach i strumieniach. Aby uzyskać więcej informacji, zobacz [plików i we/wy Stream](../../../docs/standard/io/index.md).  
   
 ## <a name="common-file-tasks"></a>Typowe zadania związane z plikami  
   
@@ -50,10 +50,11 @@ ms.locfileid: "33577658"
 |Kopiowanie katalogu|[Instrukcje: kopiowanie katalogów](../../../docs/standard/io/how-to-copy-directories.md)|  
 |Usuwanie katalogu|<xref:System.IO.Directory.Delete%2A?displayProperty=nameWithType> — Metoda<br /><br /> <xref:System.IO.DirectoryInfo.Delete%2A?displayProperty=nameWithType> — Metoda|  
 |Wyświetlanie plików i podkatalogów w katalogu|[Instrukcje: wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)|  
-|Znajdowanie rozmiaru katalogu|<xref:System.IO.Directory?displayProperty=nameWithType> Klasy|  
+|Znajdowanie rozmiaru katalogu|<xref:System.IO.Directory?displayProperty=nameWithType> Klasa|  
 |Ustalanie, czy katalog istnieje|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType> — Metoda|  
   
-## <a name="see-also"></a>Zobacz też  
- [We/Wy plików i strumieni](../../../docs/standard/io/index.md)  
- [Tworzenie strumieni](../../../docs/standard/io/composing-streams.md)  
- [Asynchroniczne operacje We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>Zobacz także
+
+- [We/Wy plików i strumieni](../../../docs/standard/io/index.md)  
+- [Tworzenie strumieni](../../../docs/standard/io/composing-streams.md)  
+- [Asynchroniczne operacje We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)

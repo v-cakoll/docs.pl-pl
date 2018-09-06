@@ -8,11 +8,11 @@ helpviewer_keywords:
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
 ms.openlocfilehash: 5acbfd121698cf0d2b6d78ccea810baf624c7981
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738726"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879158"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Porady: konwertowanie ciągów szestnastkowych na typy liczbowe (Przewodnik programowania w języku C#)
 Te przykłady pokazują, jak wykonywać następujące zadania:  

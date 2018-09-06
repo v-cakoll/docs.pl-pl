@@ -1,23 +1,23 @@
 ---
-title: Zarządzanie DataViews
+title: Zarządzanie elementami DataView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: c292c9f7827e86d48f2006c05f6012ad95da1485
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757908"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885097"
 ---
-# <a name="managing-dataviews"></a>Zarządzanie DataViews
-Można użyć <xref:System.Data.DataViewManager> umożliwia zarządzanie ustawieniami widoku wszystkie tabele w <xref:System.Data.DataView>. Jeśli masz formant, który chcesz powiązać z wieloma tabelami, takie jak siatka która nawiguje relacje, **DataViewManager** jest idealnym rozwiązaniem.  
+# <a name="managing-dataviews"></a>Zarządzanie elementami DataView
+Możesz użyć <xref:System.Data.DataViewManager> do zarządzania ustawieniami widoku dla wszystkich tabel w <xref:System.Data.DataView>. Jeśli masz formant, który chcesz powiązać z wieloma tabelami, takie jak siatki która nawiguje relacji **DataViewManager** jest idealnym rozwiązaniem.  
   
- **DataViewManager** zawiera kolekcję <xref:System.Data.DataViewSetting> obiektów, które są używane do ustawienia widoku tabel w <xref:System.Data.DataSet>. <xref:System.Data.DataViewSettingCollection> Zawiera jeden <xref:System.Data.DataViewSetting> obiektu dla każdej tabeli w **zestawu danych**. Można określić wartość domyślną **ApplyDefaultSort**, **sortowania**, **RowFilter**, i **Element RowStateFilter** właściwości tej tabeli przez przy użyciu jego **DataViewSetting**. Możesz odwoływać się do **DataViewSetting** dla konkretnej tabeli według nazwy lub odwołania porządkowej lub przez przekazanie odwołania do tego obiektu z określonej tabeli. Można uzyskać dostępu do kolekcji **DataViewSetting** obiekty w **DataViewManager** za pomocą **DataViewSettings** właściwości.  
+ **DataViewManager** zawiera zbiór <xref:System.Data.DataViewSetting> obiekty, które są używane do ustawienia widoku tabel w <xref:System.Data.DataSet>. <xref:System.Data.DataViewSettingCollection> Zawiera jeden <xref:System.Data.DataViewSetting> obiektu dla każdej tabeli w **zestawu danych**. Można określić wartość domyślną **ApplyDefaultSort**, **sortowania**, **RowFilter**, i **Element RowStateFilter** właściwości tej tabeli przez za pomocą jego **DataViewSetting**. Możesz odwoływać się do **DataViewSetting** dla konkretnej tabeli przez nazwę lub numer porządkowy odwołanie lub przekazywaniem odwołań do tego obiektu w określonej tabeli. Możesz uzyskać dostęp kolekcję **DataViewSetting** obiekty w **DataViewManager** przy użyciu **DataViewSettings** właściwości.  
   
- Poniższy kod przykładowy wypełnienia **DataSet** z programem SQL Server **Northwind** tabel bazy danych programu **klientów**, **zamówień**i  **Szczegóły zamówienia**, tworzy relacje między tabelami, używa **DataViewManager** można ustawić domyślną **DataView** ustawienia i wiązania **DataGrid**  do **DataViewManager**. Wartość domyślna w przykładzie **DataView** ustawienia dla wszystkich tabel w **zestawu danych** Aby sortować według klucza podstawowego tabeli (**ApplyDefaultSort**  =  **wartość true,**), a następnie modyfikuje porządek sortowania **klientów** tabeli, aby posortować według **NazwaFirmy**.  
+ Poniższy kod przykładowy wypełnienia **zestawu danych** z programem SQL Server **Northwind** bazy danych tabel **klientów**, **zamówienia**i  **Szczegóły zamówienia**, tworzy relacje między tabelami, używa **DataViewManager** do ustawiania domyślnych **DataView** ustawienia i powiązań **DataGrid**  do **DataViewManager**. W przykładzie ustawiono domyślną **DataView** ustawienia dla wszystkich tabel w **DataSet** Aby posortować według klucza podstawowego tabeli (**ApplyDefaultSort**  =  **true**), a następnie zmienia kolejność sortowania **klientów** tabeli, aby posortować według **CompanyName**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -125,4 +125,4 @@ grid.SetDataBinding(viewManager, "Customers");
  <xref:System.Data.DataViewSetting>  
  <xref:System.Data.DataViewSettingCollection>  
  [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

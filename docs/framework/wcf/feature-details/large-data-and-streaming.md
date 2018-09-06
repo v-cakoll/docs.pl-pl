@@ -3,11 +3,11 @@ title: Duże ilości danych i przesyłanie strumieniowe
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: f381df2acdb370c6e84d3a00079578f8fceb69f3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467588"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44033144"
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na języku XML. Ponieważ dane XML zwykle jest zakodowane w formacie tekstu standardowego, zdefiniowane w [Specyfikacja XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), połączone systemy, deweloperów i architektów są zazwyczaj zajmującym się ochroną zużycie o komunikacji sieciowej (lub rozmiar) komunikaty wysyłane między sieć i kodowanie oparte na tekście XML stanowi szczególne wyzwanie wydajny transfer danych binarnych.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542657"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877772"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom — funkcja
 Określa, czy bieżącą klasę lub wystąpienie dziedziczy po określonej klasie nadrzędnej.

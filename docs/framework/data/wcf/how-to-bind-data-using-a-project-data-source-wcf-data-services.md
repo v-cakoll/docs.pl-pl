@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563862"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879380"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Instrukcje: wiązanie danych przy użyciu źródła danych projektu (WCF Data Services)
 

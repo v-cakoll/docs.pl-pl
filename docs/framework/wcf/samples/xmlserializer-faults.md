@@ -3,11 +3,11 @@ title: Błędy klasy XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
 ms.openlocfilehash: 760b88a6682032b8c8915fd0ea657029d2d0444e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533915"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040892"
 ---
 # <a name="xmlserializer-faults"></a>Błędy klasy XmlSerializer
 <xref:System.Xml.Serialization.XmlSerializer> Błędów kontraktu przykład pokazuje, jak komunikować się informacje o błędzie z usługi klienta, za pomocą <xref:System.Xml.Serialization.XmlSerializer>. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), za pomocą dodatkowy kod dodany do usługi, aby przekonwertować wyjątek wewnętrzny błąd. Klient próbuje wykonać dzielenie przez zero, aby wymusić warunek błędu usługi.  

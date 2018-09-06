@@ -10,86 +10,87 @@ helpviewer_keywords:
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3deaba0c8589eaa0ba24bc66669f5a76e60467f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591299"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877810"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Obsługa wyjątku (Biblioteka zadań równoległych)
-Nieobsłużonych wyjątków, które są generowane przez kod użytkownika, który działa wewnątrz zadania są propagowane do wątek wywołujący, z wyjątkiem w niektórych scenariuszach, które zostały opisane w dalszej części tego tematu. Oczekiwania były propagowane, gdy używany jest jeden statycznych lub wystąpienia <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> lub <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` metod, a ich obsługę, umieszczając wywołanie `try` / `catch` instrukcji. Jeśli zadanie ma element nadrzędny zadania podrzędne dołączone lub oczekiwania na wielu zadań, może zostać zgłoszony wiele wyjątków.  
+Nieobsługiwane wyjątki wyrzucane przez kod użytkownika, który działa wewnątrz zadaniem jest propagowany z powrotem do wywołanego wątku, z wyjątkiem w niektórych scenariuszach, które są opisane w dalszej części tego tematu. Wyjątki są propagowane podczas korzystania z jednego statycznego lub wystąpienie <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> lub <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` metody i można je obsłużyć, umieszczając wywołanie `try` / `catch` instrukcji. Czy zadanie jest elementem nadrzędnym dołączonych zadań podrzędnych, czy użytkownik czeka na wiele zadań, wiele wyjątków może zostać wygenerowany.  
   
- Wszystkie wyjątki z powrotem do wątku wywołującym propagację, infrastruktury zadań opakowuje je w <xref:System.AggregateException> wystąpienia. <xref:System.AggregateException> Wyjątek ma <xref:System.AggregateException.InnerExceptions%2A> właściwości mogą być wyliczane do Badaj wszystkie wyjątki oryginalnego, które zostały zgłoszone, a obsługa (lub nie obsługują) każdej z nich osobno. Można również obsługiwać przy użyciu oryginalnego wyjątki <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> metody.  
+ Propagacja wszystkie wyjątki z powrotem do wątku wywołującego, infrastruktury zadań opakowywanie ich w <xref:System.AggregateException> wystąpienia. <xref:System.AggregateException> Wyjątek <xref:System.AggregateException.InnerExceptions%2A> właściwości, które mogą być wyliczane zbadanie wszystkich oryginalnego wyjątki, które zostały zgłoszone i obsługiwać (lub nie obsługiwać) każdej z nich osobno. Może również obsługiwać wyjątki, oryginalnym przy użyciu <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> metody.  
   
- Nawet wtedy, gdy tylko jeden wyjątek, nadal jest ujęte w <xref:System.AggregateException> wyjątek, jak przedstawiono na poniższym przykładzie.  
+ Nawet wtedy, gdy tylko jeden wyjątek, nadal jest opakowana w <xref:System.AggregateException> wyjątku, co ilustruje poniższy przykład.  
   
  [!code-csharp[TPL_Exceptions#21](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling21.cs#21)]
  [!code-vb[TPL_Exceptions#21](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling21.vb#21)]  
   
- Wystąpił nieobsługiwany wyjątek można uniknąć, po prostu Przechwytywanie <xref:System.AggregateException> i nie stosuje wewnętrzny wyjątki. Jednak zaleca się czy nie zrobisz, ponieważ jest ono odpowiednikiem Przechwytywanie bazie <xref:System.Exception> typu w scenariuszach z systemem innym niż równoległe. Aby przechwytywać wyjątku bez konieczności przełączania określonych czynności, aby odzyskać z niego można pozostawić program w stanie nieokreślonym.  
+ Wystąpił nieobsługiwany wyjątek można uniknąć, po prostu Przechwytywanie <xref:System.AggregateException> i nie obserwowania wszystkich wyjątków wewnętrznych. Firma Microsoft zaleca jednak nie tej czynności, ponieważ jest ono odpowiednikiem przechwytywanie, podstawą <xref:System.Exception> typu w scenariuszach nierównoległy. Aby przechwytywać wyjątek, bez konieczności przełączania konkretne akcje, aby odzyskać z niego można pozostawić program w stanie nieokreślonym.  
   
- Jeśli nie chcesz wywołać <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> lub <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` metody czekać na zakończenie zadania, można również pobrać <xref:System.AggregateException> wyjątku z zadania <xref:System.Threading.Tasks.Task.Exception%2A> właściwości, jak przedstawiono na poniższym przykładzie. Aby uzyskać więcej informacji, zobacz [obserwowania wyjątków przy użyciu właściwości Task.Exception](#ExceptionProp) w tym temacie.  
+ Jeśli nie chcesz wywołać <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> lub <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` metodę, aby czekać na ukończenie zadania podrzędnego, możesz również pobrać <xref:System.AggregateException> wyjątek z zadania podrzędnego <xref:System.Threading.Tasks.Task.Exception%2A> właściwości, co ilustruje poniższy przykład. Aby uzyskać więcej informacji, zobacz [monitorowanie wyjątków za pomocą właściwości Task.Exception](#ExceptionProp) w tym temacie.  
   
  [!code-csharp[TPL_Exceptions#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling22.cs#29)]
  [!code-vb[TPL_Exceptions#29](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling22.vb#29)]  
   
- Aby nie czekać na zadanie, które propaguje wyjątku lub dostępu do jego <xref:System.Threading.Tasks.Task.Exception%2A> właściwości, wyjątek eskalacji zgodnie z zasadami wyjątek .NET po ukończeniu zadania zbierane pamięci.  
+ Jeśli użytkownik nie zaczeka na zadania, które propaguje wyjątek lub dostęp do jego <xref:System.Threading.Tasks.Task.Exception%2A> eskalacji właściwości wyjątku zgodnie z zasadami wyjątek .NET, gdy zadanie będzie jesdnostką zbierającą śmieci.  
   
- Wyjątki mogą bąbelkowy się wstecz, aby łącząca wątku, jest to możliwe, że zadania mogą w dalszym ciągu przetwarzania niektórych elementów po jest wyjątek.  
+ Wyjątki mogą pojawiać się z powrotem w sąsiednim wątku, jest to możliwe, że zadanie będzie kontynuować przetwarzanie niektórych elementy po jest wyjątek.  
   
 > [!NOTE]
->  Po włączeniu "Tylko mój kod" programu Visual Studio w niektórych przypadkach będzie podział wiersza, która zgłasza wyjątek i wyświetlony komunikat o błędzie stwierdzający "wyjątek nie obsłużony przez kod użytkownika." Ten błąd jest niegroźne. Naciśnij klawisz F5, aby kontynuować i zachowanie obsługi wyjątków, przedstawionej w tym przykładzie. Aby zapobiec dzieleniu pierwszego błędu w Visual Studio, po prostu usuń zaznaczenie pola wyboru **Włącz opcję tylko mój kod** wyboru **narzędzia, opcje, debugowanie, ogólne**.  
+>  Po włączeniu "Tylko mój kod" Visual Studio, w niektórych przypadkach przerwania w wierszu, który zgłasza wyjątek i wyświetlić komunikat o błędzie informujący, że "wyjątek nie obsłużony przez kod użytkownika." Ten błąd jest nieszkodliwe. Można nacisnąć klawisz F5, aby kontynuować, a także sprawdzić sposób obsługi wyjątków, przedstawionej w tych przykładach. Aby zapobiec istotne w przypadku pierwszego błędu programu Visual Studio, po prostu usuń zaznaczenie pola wyboru **Włącz tylko mój kod** pole wyboru w obszarze **narzędzia, opcje, debugowanie, ogólne**.  
   
-## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>Zadania podrzędne dołączone i AggregateExceptions zagnieżdżonych  
- Jeśli zadanie ma zadanie podrzędne dołączone zgłasza wyjątek, ten wyjątek jest ujęte w <xref:System.AggregateException> zanim zostanie przekazane do zadania nadrzędnego, które zawijany ten wyjątek we własnym <xref:System.AggregateException> przed jego propaguje powrót do wywoływania wątku. W takich przypadkach <xref:System.AggregateException.InnerExceptions%2A> właściwość <xref:System.AggregateException> wyjątek, który zostanie przechwycony na <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> lub <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` lub <xref:System.Threading.Tasks.Task.WaitAny%2A> lub <xref:System.Threading.Tasks.Task.WaitAll%2A> metoda zawiera jeden lub więcej <xref:System.AggregateException> wystąpienia nie oryginalny wyjątki, które spowodowało błąd. Aby uniknąć konieczności iteracja zagnieżdżone <xref:System.AggregateException> wyjątków, można użyć <xref:System.AggregateException.Flatten%2A> metody, aby usunąć wszystkie zagnieżdżone <xref:System.AggregateException> wyjątki, aby <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> właściwość zawiera oryginalnego wyjątków. W poniższym przykładzie zagnieżdżone <xref:System.AggregateException> wystąpienia są spłaszczane i obsługiwane tylko jednej pętli.  
+## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>Dołączonych zadań podrzędnych i AggregateExceptions zagnieżdżonych  
+ Jeśli zadanie ma zadanie dołączonych zadań podrzędnych, które zgłasza wyjątek, ten wyjątek jest opakowana w <xref:System.AggregateException> przed jest propagowany do zadania nadrzędnego, który otacza tego wyjątku w ramach ich własnej <xref:System.AggregateException> przed propaguje je do wątku wywołującego. W takich przypadkach <xref:System.AggregateException.InnerExceptions%2A> właściwość <xref:System.AggregateException> wyjątek, który zostanie przechwycony na <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> lub <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` lub <xref:System.Threading.Tasks.Task.WaitAny%2A> lub <xref:System.Threading.Tasks.Task.WaitAll%2A> metody zawiera jeden lub więcej <xref:System.AggregateException> wystąpień nie oryginalny wyjątki, które spowodowały błąd. Aby uniknąć konieczności iteracja zagnieżdżone <xref:System.AggregateException> wyjątki, można użyć <xref:System.AggregateException.Flatten%2A> metodę, aby usunąć wszystkie zagnieżdżonego <xref:System.AggregateException> wyjątki, tak, aby <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> właściwość zawiera oryginalny wyjątków. W poniższym przykładzie zagnieżdżone <xref:System.AggregateException> wystąpienia są spłaszczone i obsługiwane w tylko jednej pętli.  
   
  [!code-csharp[TPL_Exceptions#22](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/flatten2.cs#22)]
  [!code-vb[TPL_Exceptions#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/flatten2.vb#22)]  
   
- Można również użyć <xref:System.AggregateException.Flatten%2A?displayProperty=nameWithType> metody do ponownego zgłoszenia wyjątków wewnętrznych z wielu <xref:System.AggregateException> wystąpień zgłaszanych przez wielu zadań w pojedynczym <xref:System.AggregateException> wystąpienia, jak przedstawiono na poniższym przykładzie.  
+ Można również użyć <xref:System.AggregateException.Flatten%2A?displayProperty=nameWithType> metody, aby można było ponownie wewnętrznych wyjątków z wielu <xref:System.AggregateException> wystąpień zgłoszony przez wiele zadań w ramach pojedynczej <xref:System.AggregateException> wystąpienia, co ilustruje poniższy przykład.  
   
  [!code-csharp[TPL_Exceptions#13](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/taskexceptions2.cs#13)]
  [!code-vb[TPL_Exceptions#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/taskexceptions2.vb#13)]  
   
-## <a name="exceptions-from-detached-child-tasks"></a>Wyjątki od zadania podrzędne odłączona  
- Domyślnie zadania podrzędne są tworzone jako odłączona. Wyjątków zgłaszanych przez zadania odłączyć muszą być obsługiwane lub zgłoszony w zadaniem nadrzędnym natychmiastowego; nie są propagowane do wątku wywołującym sam sposób jak dołączone zadania podrzędne propagowane ponownie. Nadrzędnego najwyższego poziomu można ręcznie Ponowne zgłoszenie wyjątku odłączyć podrzędnej spowodować być ujęte w <xref:System.AggregateException> i propagowane wątek wywołujący.  
+## <a name="exceptions-from-detached-child-tasks"></a>Wyjątki od odłączonych zadań podrzędnych  
+ Domyślnie zadania podrzędne są tworzone jako odłączona. Wyjątków zgłaszanych przez odłączonych zadań, które muszą być obsługiwane lub zgłaszany ponownie w zadania nadrzędnym natychmiastowe; nie są propagowane do wątku wywołującego w ten sam sposób jak dołączonych zadań podrzędnych propagowany z powrotem. Najwyższego poziomu nadrzędny można ręcznie wyjątki z odłączony podrzędnych, aby spowodować, że otoczona <xref:System.AggregateException> i propagowany z powrotem do wątku wywołującego.  
   
  [!code-csharp[TPL_Exceptions#23](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/detached21.cs#23)]
  [!code-vb[TPL_Exceptions#23](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/detached21.vb#23)]  
   
- Nawet jeśli używasz utrzymania obserwować wyjątek zadania podrzędnego wyjątek nadal muszą być spełnione przez zadaniem nadrzędnym.  
+ Nawet wtedy, gdy Użyj kontynuacji, aby obserwować wyjątek zadania podrzędnego, wyjątek nadal muszą być spełnione przez zadanie nadrzędne.  
   
-## <a name="exceptions-that-indicate-cooperative-cancellation"></a>Wyjątki, które wskazują współpracy anulowania  
- Jeśli kod użytkownika zadania odpowiada na żądanie anulowania, poprawne procedura ma throw <xref:System.OperationCanceledException> przekazując token anulowania, na którym żądanie zostało przesłane. Zanim podejmie próbę propagowanie wyjątku, wystąpienie zadania porównuje token w wyjątek do tego, który został przekazany do niego, podczas jej tworzenia. Jeśli są one takie same, zadanie propaguje <xref:System.Threading.Tasks.TaskCanceledException> otoczona <xref:System.AggregateException>, i może być widoczny, gdy są sprawdzane wyjątków wewnętrznych. Jednak jeśli wątek wywołujący nie jest oczekiwanie na zadanie, ten wyjątek nie zostaną zastosowane. Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md).  
+## <a name="exceptions-that-indicate-cooperative-cancellation"></a>Wyjątki, które wskazują Kooperatywne anulowanie  
+ Gdy kod użytkownika w zadaniu odpowie na żądanie anulowania, ma poprawne procedura throw <xref:System.OperationCanceledException> przekazując token anulowania, na którym żądanie zostało przekazane. Zanim próbuje propagowanie wyjątku wystąpienia zadania porównuje token wyjątku do tego, który został przekazany do niego podczas jej tworzenia. Jeśli są takie same zadania propaguje <xref:System.Threading.Tasks.TaskCanceledException> otoczona <xref:System.AggregateException>, i może być widoczny, gdy są sprawdzane wyjątków wewnętrznych. Jednak jeśli wątek wywołujący nie oczekuje na zadanie, ten wyjątek nie zostaną zastosowane. Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
  [!code-csharp[TPL_Exceptions#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#4)]
  [!code-vb[TPL_Exceptions#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/tpl_exceptions.vb#4)]  
   
-## <a name="using-the-handle-method-to-filter-inner-exceptions"></a>Przy użyciu metody dojścia do filtru wyjątków wewnętrznych  
- Można użyć <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> metodę, aby odfiltrować wyjątki, które można traktować jako "obsługiwane" bez korzystania z żadnych dalszych logiki. W elemencie delegowanym użytkownika, który został dostarczony do <xref:System.AggregateException.Handle%28System.Func%7BSystem.Exception%2CSystem.Boolean%7D%29?displayProperty=nameWithType> metody, typ wyjątku, można sprawdzić jego <xref:System.Exception.Message%2A> właściwości lub inne informacje o tym, które pozwalają określić, czy jest niegroźne. Wszelkie wyjątki, dla których zwraca delegata `false` są zgłoszony w nowym <xref:System.AggregateException> natychmiast po wystąpieniu <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> zwraca metody.  
+## <a name="using-the-handle-method-to-filter-inner-exceptions"></a>Za pomocą metody dojścia do filtrowania wewnętrznych wyjątków  
+ Możesz użyć <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> metodę, aby filtrować bez przy użyciu dowolnej logiki dalsze wyjątki, które można traktować jako "obsługiwane". W delegacie użytkownika, która jest dostarczana do <xref:System.AggregateException.Handle%28System.Func%7BSystem.Exception%2CSystem.Boolean%7D%29?displayProperty=nameWithType> metoda, typ wyjątku, można sprawdzić jego <xref:System.Exception.Message%2A> właściwości lub inne informacje na jego temat, które pozwalają określić, czy jest nieszkodliwe. Wszelkie wyjątki, które zwraca delegata `false` jest zgłaszany ponownie w nowym <xref:System.AggregateException> natychmiast po wystąpieniu <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> metoda zwraca.  
   
- Poniższy przykład jest funkcjonalnym odpowiednikiem w tym temacie, który sprawdza, czy każdy wyjątek w pierwszym przykładzie <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> kolekcji.  Zamiast tego wywołuje ten program obsługi wyjątku <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> obiekt metody dla każdego wyjątku i tylko wyjątki ponownie zgłasza wyjątek, które nie są `CustomException` wystąpień.  
+ Poniższy przykład jest funkcjonalnie równoważny programowi pierwszego przykładu w tym temacie, który sprawdza, czy każdy wyjątek w <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> kolekcji.  Zamiast tego wywołuje program obsługi tego wyjątku <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> obiekt metody dla każdego wyjątku i jedyne ponownie zgłasza wyjątki, które nie są `CustomException` wystąpień.  
   
  [!code-csharp[TPL_Exceptions#26](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handlemethod21.cs#26)]
  [!code-vb[TPL_Exceptions#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handlemethod21.vb#26)]  
   
- Poniżej przedstawiono przykład bardziej szczegółowy, który używa <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> metodę w celu zapewnienia obsługi specjalnej dla <xref:System.UnauthorizedAccessException> wyjątek podczas wyliczania plików.  
+ Poniżej przedstawiono bardziej szczegółowy przykład, który używa <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> metody w celu zapewnienia specjalna obsługa <xref:System.UnauthorizedAccessException> wyjątek podczas wyliczania plików.  
   
  [!code-csharp[TPL_Exceptions#12](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/taskexceptions.cs#12)]
  [!code-vb[TPL_Exceptions#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/taskexceptions.vb#12)]  
   
 <a name="ExceptionProp"></a>   
-## <a name="observing-exceptions-by-using-the-taskexception-property"></a>Obserwowania wyjątków przy użyciu właściwości Task.Exception  
- Po zakończeniu zadania w <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> stanu, jego <xref:System.Threading.Tasks.Task.Exception%2A> właściwości można zbadać, aby dowiedzieć się, które określony wyjątek spowodował. Dobrym sposobem obserwować <xref:System.Threading.Tasks.Task.Exception%2A> właściwości jest użycie kontynuację, w którym działa tylko wtedy, gdy zadanie poprzedzających błędów, jak pokazano w poniższym przykładzie.  
+## <a name="observing-exceptions-by-using-the-taskexception-property"></a>Monitorowanie wyjątków za pomocą właściwości Task.Exception  
+ Jeśli zadanie zakończy się w <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> stanu, jego <xref:System.Threading.Tasks.Task.Exception%2A> właściwości można zbadać, aby dowiedzieć się, które określony wyjątek spowodował. Dobrym sposobem, aby obserwować <xref:System.Threading.Tasks.Task.Exception%2A> właściwość ma na celu to kontynuacja, która jest uruchamiana tylko wtedy, gdy zadanie poprzedzające błędów, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[TPL_Exceptions#27](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptionprop21.cs#27)]
  [!code-vb[TPL_Exceptions#27](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionprop21.vb#27)]  
   
- W rzeczywistej aplikacji delegata kontynuacji można rejestrować szczegółowe informacje o wyjątku i prawdopodobnie zduplikować nowe zadania, aby odzyskać z wyjątkiem.  
+ W rzeczywistej aplikacji delegata kontynuacji może rejestrować szczegółowe informacje o wyjątku i prawdopodobnie zduplikować nowe zadania, aby odzyskać z wyjątkiem.  
   
 ## <a name="unobservedtaskexception-event"></a>Zdarzenie UnobservedTaskException  
- W niektórych scenariuszach takich jak odnośnie do hostowania niezaufanych dodatków plug-in, wyjątki niegroźne może być wspólne, i może być zbyt trudne do ręcznie obserwować je wszystkie. W takich przypadkach można obsługiwać <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType> zdarzeń. <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> Wystąpienie, które jest przekazywane do programu obsługi można zapobiec niezaobserwowany wyjątek propagowanie do łącząca wątku.  
+ W niektórych scenariuszach takich jak hostując niezaufanych dodatków plug-in niegroźne wyjątki mogą być wspólne i może być zbyt trudne do ręcznie Sprawdź je wszystkie. W takich przypadkach można obsługiwać <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType> zdarzeń. <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> Wystąpienie, które są przekazywane do programu obsługi może służyć do uniemożliwić niewidocznego wyjątek propagowanie powrotem w sąsiednim wątku.  
   
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

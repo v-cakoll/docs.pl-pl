@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95244e2f07a78113d1164e8f6fe4534f95cb4f88
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559611"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041603"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechwytywane podciągi ciągu wejściowego. Można użyć konstrukcji grupowania, wykonaj następujące czynności:  
@@ -470,6 +470,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechw
   
  Pierwsza grupa przechwytywania pasuje do każdego wyrazu w zdaniu. Druga grupa przechwytywania pasuje do każdego wyrazu oraz znaków interpunkcyjnych i odstęp wyrazie. <xref:System.Text.RegularExpressions.Group> Obiektu, którego indeks to 2 zawiera informacje dotyczące tekst uwzględniony przez to druga grupa przechwytywania. Kompletny zestaw słów przechwycone przez grupę przechwytywania są dostępne z <xref:System.Text.RegularExpressions.CaptureCollection> obiektu zwróconego przez <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> właściwości.  
   
-## <a name="see-also"></a>Zobacz też  
- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Śledzenie wsteczne](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Śledzenie wsteczne](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

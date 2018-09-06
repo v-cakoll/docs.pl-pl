@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535793"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879819"
 ---
 # <a name="dependency-property-value-precedence"></a>Następstwo zależności wartości właściwości
 <a name="introduction"></a> W tym temacie opisano sposób pracy z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości mogą mieć wpływ na wartość właściwości zależności i opisuje pierwszeństwa, które cechy właściwości systemu zastosowania do skutecznego wartości właściwości.  

@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b50befa4346e17048598afd3d018dbde2fe8572
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458565"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032877"
 ---
-# <a name="getqualifierset-function"></a>Funkcja GetQualifierSet
-Pobiera kwalifikator dla wystąpienia klasy lub definicji klasy.
+# <a name="getqualifierset-function"></a>GetQualifierSet — funkcja
+Pobiera kwalifikator ustawione dla wystąpienia klasy lub definicji klasy.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,31 +41,31 @@ HRESULT GetQualifierSet (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `ppQualSet`  
-[out] Uzyskuje wskaźnik interfejsu, który zezwala na dostęp do kwalifikatory klasy obiektu. `ppQualSet` nie może być `null`. Jeśli wystąpi błąd, nowego obiektu nie są zwracane, a wskaźnik myszy pozostanie niezmieniona. 
+[out] Otrzymuje wskaźnik interfejsu, który umożliwia dostęp do kwalifikatory obiektu klasy. `ppQualSet` nie może być `null`. Jeśli wystąpi błąd, nowy obiekt nie jest zwracana i wskaźnik pozostanie niezmieniona. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Wystąpił błąd ogólny. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Określona metoda nie istnieje. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest `null`. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::GetQualifierSet](https://msdn.microsoft.com/library/aa391451(v=vs.85).aspx) metody. 
+Ta funkcja zawija wywołanie do [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) metody. 
 
-[Wskaźnika IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) umożliwia wywołującego dodać, edytować lub usunąć kwalifikatory. Takie kwalifikatory dodany, edycji lub usunięty mają zastosowanie do całego wystąpienia lub definicję klasy.
+[Wskaźnik IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) umożliwia obiekt wywołujący, dodawać, edytować lub usuwać kwalifikatory. Takie kwalifikatory dodano, edytowany lub usuniętych mają zastosowanie do całego wystąpienia lub definicję klasy.
 
 ## <a name="requirements"></a>Wymagania  
 **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,4 +75,4 @@ Ta funkcja jest zawijana wywołanie [IWbemClassObject::GetQualifierSet](https://
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

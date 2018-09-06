@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: ae41c535d8bc1c0a05174b9051ba34f1a0a34638
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 63f9b759621689c129fc356fe38d7e7c5ee41f30
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875069"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878564"
 ---
 # <a name="timers"></a>Czasomierze
 
@@ -58,6 +58,6 @@ Aby uzyskać więcej informacji i przykładów, zobacz <xref:System.Timers.Timer
   
 ## <a name="see-also"></a>Zobacz także
 
- <xref:System.Threading.Timer?displayProperty=nameWithType>  
- <xref:System.Timers.Timer?displayProperty=nameWithType>  
- [Wątkowość obiektów i funkcji](threading-objects-and-features.md)
+- <xref:System.Threading.Timer?displayProperty=nameWithType>  
+- <xref:System.Timers.Timer?displayProperty=nameWithType>  
+- [Wątkowość obiektów i funkcji](threading-objects-and-features.md)

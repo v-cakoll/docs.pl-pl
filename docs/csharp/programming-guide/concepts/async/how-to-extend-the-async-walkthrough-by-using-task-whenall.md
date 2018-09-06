@@ -3,11 +3,11 @@ title: 'Porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
 ms.openlocfilehash: 241bd6baf0c1133ba7603da433a7cdf8d36748c0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787561"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881081"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (C#)
 Może poprawić wydajność rozwiązania asynchronicznego w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) przy użyciu <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> metody. Ta metoda asynchronicznie czeka na wiele operacji asynchronicznych, które są reprezentowane jako kolekcję zadań.  

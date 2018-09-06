@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798862"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878765"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Inne konstrukcje w wyrażeniach regularnych
 Wyrażenia regularne w .NET obejmują trzy konstrukcji językowych różne. Jeden pozwala włączyć lub wyłączyć określonego opcje dopasowania w środku wzorca wyrażenia regularnego. Dwóch pozostałych pozwala na uwzględnianie komentarzy w wyrażeniu regularnym.  
@@ -101,5 +101,6 @@ Wyrażenia regularne w .NET obejmują trzy konstrukcji językowych różne. Jede
   
  Należy zauważyć, że zamiast podawać `(?x)` konstruowania w wyrażeniu regularnym komentarz może również zostały uznane przez wywołanie metody <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody i przekazanie do niej <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> wartość wyliczenia.  
   
-## <a name="see-also"></a>Zobacz też  
- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

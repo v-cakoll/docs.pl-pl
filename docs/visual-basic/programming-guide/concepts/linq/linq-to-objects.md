@@ -1,46 +1,46 @@
 ---
-title: LINQ do obiektów (Visual Basic)
+title: LINQ to Objects (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: dd4c30bc-1c9b-4781-a482-b5eada38deb2
-ms.openlocfilehash: f04ccc3d8541c1d4327ff9356fe7c4105681bd0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e98f5170c69c189bd2071341fa24587ff1cc4e1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645309"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891983"
 ---
-# <a name="linq-to-objects-visual-basic"></a>LINQ do obiektów (Visual Basic)
-Termin "LINQ do obiektów" odwołuje się do korzystania z LINQ zapytania ze wszystkimi <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> kolekcji bezpośrednio, bez użycia pośredniego dostawcy LINQ lub interfejsu API, takich jak [LINQ do SQL](../../../../framework/data/adonet/sql/linq/index.md) lub [LINQ do XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). Użyj rozszerzenia LINQ, takich jak zbadać wszystkie kolekcje wyliczalny <xref:System.Collections.Generic.List%601>, <xref:System.Array>, lub <xref:System.Collections.Generic.Dictionary%602>. Kolekcja może być zdefiniowana przez użytkownika lub mogą być zwrócone przez interfejs API programu .NET Framework.  
+# <a name="linq-to-objects-visual-basic"></a>LINQ to Objects (Visual Basic)
+Termin "LINQ do obiektów" odnosi się do korzystania z LINQ zapytania ze wszystkimi <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> kolekcji bezpośrednio, bez użycia pośrednie dostawcy LINQ lub interfejsu API, takie jak [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) lub [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). LINQ umożliwia zapytania wszelkie przeliczalne kolekcje, takie jak <xref:System.Collections.Generic.List%601>, <xref:System.Array>, lub <xref:System.Collections.Generic.Dictionary%602>. Kolekcja może być zdefiniowana przez użytkownika lub mogą być zwrócone przez interfejs API programu .NET Framework.  
   
- W tym sensie podstawowe LINQ do obiektów reprezentuje nowe podejście do kolekcji. W ten sposób stare, trzeba było zapisać złożonych `For Each` pętle określonych sposobu pobierania danych z kolekcji. W ujęciu LINQ pisania deklaratywne kod, który opisuje ma zostać pobrane.  
+ W tym sensie podstawowe LINQ to Objects reprezentuje nowe podejście do kolekcji. W stary sposób było zapisać złożonych `For Each` pętli, które określa sposób pobierania danych z kolekcji. W przypadku zastosowania podejścia LINQ piszesz kod deklaratywny, opisujący, co ma zostać pobrane.  
   
- Ponadto zapytań LINQ oferuje trzy główne zalet w porównaniu z tradycyjnym `For Each` pętle:  
+ Ponadto zapytań LINQ oferuje trzy główne zalety w porównaniu z tradycyjnym `For Each` pętli:  
   
-1.  Są one bardziej zwięzłe i do odczytu, szczególnie, gdy wiele warunków filtrowania.  
+1.  Są one bardziej zwięzły, czytelny, szczególnie w przypadku, gdy wiele warunków filtrowania.  
   
-2.  Udostępniają zaawansowane filtrowanie, kolejność i grupowanie możliwości z co najmniej kodu aplikacji.  
+2.  Zapewniają zaawansowane filtrowanie, porządkowanie i możliwości przy minimalnej ilości kodu aplikacji grupowania.  
   
-3.  Mogą one być przenoszone do innych źródeł danych z żadnych modyfikacji.  
+3.  Można ich przenieść do innych źródeł danych przy użyciu niewielkich modyfikacji.  
   
- W ogólności, tym bardziej złożone operację należy wykonać na danych, więcej korzyści będzie realizować za pomocą LINQ zamiast metod tradycyjnych iteracji.  
+ Ogólnie rzecz biorąc, tym bardziej złożone operację, którą chcesz wykonać na danych, więcej korzyści będą weź pod uwagę przy użyciu LINQ zamiast iteracji tradycyjnych technik.  
   
- Ta sekcja ma na celu pokazują podejście LINQ z przykładami select. Nie ma niepełna.  
+ Ta sekcja ma na celu wykazania podejście LINQ z przykładami wybierz. Nie ma niepełna.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- Wyjaśniono, jak LINQ może służyć do wykonywania zapytań i przekształcanie ciągów i kolekcji ciągów. Zawiera również linki do tematów, które przedstawiają tych zasad.  
+ W tym artykule wyjaśniono, jak LINQ może służyć do wykonywania zapytań i przekształcanie ciągów i zbiorów ciągów. Zawiera także łącza do tematów, które pokazują tych zasad.  
   
  [LINQ i odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-reflection.md)  
- Łącza na przykład, który demonstruje sposób LINQ używa odbicia.  
+ Zawiera łącza do przykładu, który demonstruje, jak LINQ używa odbicia.  
   
  [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
- Wyjaśniono, jak LINQ może służyć do interakcji z systemów plików. Zawiera również linki do tematów, które przedstawiają te pojęcia.  
+ W tym artykule wyjaśniono, jak LINQ może służyć do interakcji z systemami plików. Zawiera także łącza do tematów, które pokazują te pojęcia.  
   
  [Porady: zapytanie w ArrayList za pomocą LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
- Demonstracja zapytanie w ArrayList w języku C#.  
+ Pokazuje, jak zapytanie w ArrayList w języku C#.  
   
  [Porady: dodawanie metod niestandardowych do kwerend LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
- Wyjaśniono, jak rozszerzyć zestaw metod, których można używać do kwerend LINQ przez dodanie metody rozszerzenia umożliwiające <xref:System.Collections.Generic.IEnumerable%601> interfejsu.  
+ Wyjaśnia, jak rozszerzyć zbiór metod, które służy do zapytań LINQ, dodając metody rozszerzenia umożliwiające <xref:System.Collections.Generic.IEnumerable%601> interfejsu.  
   
  [Zapytanie o języku zintegrowanym (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- Zawiera łącza do tematów, w których opisano LINQ i zawierają przykłady kodu, które wykonywania zapytań.
+ Zawiera łącza do tematów, które wyjaśniają LINQ i podają przykłady kodu, wykonujących zapytania.

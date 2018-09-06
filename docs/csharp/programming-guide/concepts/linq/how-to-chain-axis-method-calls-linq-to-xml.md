@@ -3,11 +3,11 @@ title: 'Jak: utworzyć łańcuch wywołań metody osi (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
 ms.openlocfilehash: b486ef5cbf1f9752077cfa8d774184c7be90f6f2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786534"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881385"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Jak: utworzyć łańcuch wywołań metody osi (LINQ to XML) (C#)
 Typowy wzorzec, który będzie używany w kodzie jest wywołanie metody osi, a następnie wywołania jednej osi metody rozszerzenia.  

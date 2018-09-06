@@ -14,37 +14,38 @@ helpviewer_keywords:
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a9adb5d39eb420496030d85dacd95a1cccd6fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568761"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877770"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Kompilacja i ponowne użycie w wyrażeniach regularnych
-Aby zoptymalizować wydajność aplikacji, które wykorzystują szeroką gamę wyrażeń regularnych zrozumienie, jak aparat wyrażeń regularnych kompiluje wyrażeń i zrozumienie, jak regular wyrażenia są buforowane. W tym temacie omówiono kompilacji i buforowania.  
+Można zoptymalizować wydajność aplikacji, które zwiększone użycie wyrażeń regularnych zrozumienie, jak aparat wyrażeń regularnych kompiluje wyrażeń i zrozumienie, jak regularne wyrażenia są buforowane. W tym temacie omówiono kompilacji i buforowania.  
   
 ## <a name="compiled-regular-expressions"></a>Skompilowane wyrażenia regularne  
- Domyślnie aparat wyrażeń regularnych kompiluje wyrażenia regularnego do sekwencji wewnętrznych instrukcji (są to kody wysokiego poziomu, które są inne niż firmy Microsoft język pośredni lub MSIL). Gdy aparat wykonuje wyrażenie regularne, interpretuje kody wewnętrzne.  
+ Domyślnie aparat wyrażeń regularnych kompiluje wyrażenie regularne na sekwencję wewnętrznych instrukcji (są to kody wysokiego poziomu, które różnią się od języka Microsoft intermediate language lub MSIL). Gdy aparat wyrażeń regularnych, interpretuje kody wewnętrzne.  
   
- Jeśli <xref:System.Text.RegularExpressions.Regex> obiekt jest tworzony z <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opcji kompiluje wyrażenie regularne do jawnego kodu MSIL zamiast instrukcji wewnętrzny wysokiego poziomu wyrażenia regularnego. Dzięki temu. Kompilatora just-in-time (JIT) w sieci można przekonwertować wyrażenia na kod natywny maszyny większą wydajność.  
+ Jeśli <xref:System.Text.RegularExpressions.Regex> obiekt jest konstruowany przy użyciu <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opcji kompiluje wyrażenie regularne do jawnego kodu MSIL zamiast wewnętrznej instrukcji wysokiego poziomu wyrażenia regularnego. Dzięki temu. Kompilator just-in-time (JIT) w sieci można przekonwertować wyrażenia do macierzystego kodu maszynowego większą wydajność.  
   
-Jednak wygenerowane MSIL nie może być zwolniony. Jedynym sposobem, aby zwolnić kodu jest wyładować domeny aplikacji (oznacza to, aby zwolnienie wszystkich aplikacji do kodu.). Efektywnie gdy wyrażenie regularne jest skompilowana przy użyciu <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opcji, nigdy nie zwalnia zasoby używane przez wyrażenie skompilowane, nawet jeśli wyrażenie regularne został utworzony przez <xref:System.Text.RegularExpressions.Regex> obiekt, który jest elementem wydane wyrzucania elementów bezużytecznych do.  
+Jednak wygenerowane MSIL nie może być zwolniony. Jedynym sposobem, aby zwolnić kod jest zwolnienie domeny aplikacji (czyli do zwolnienie wszystkich aplikacji użytkownika kodu.). Efektywne gdy wyrażenie regularne jest kompilowane przy użyciu <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opcji, nigdy nie zwalnia zasoby używane przez skompilowane wyrażenie, nawet jeśli wyrażenie regularne zostało utworzone przez <xref:System.Text.RegularExpressions.Regex> obiekt, który jest ogólnie wyrzucania elementów bezużytecznych.  
   
- Należy zachować ostrożność ograniczyć liczbę różnych wyrażeń regularnych kompilacji z <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opcję, aby uniknąć zużywa zbyt wiele zasobów. Jeśli aplikacja musi używać dużych lub niepowiązany liczbę wyrażeń regularnych, każde wyrażenie powinny być rozumiane, nie został skompilowany. Jednak jeśli niewielka liczba wyrażeń regularnych są używane wielokrotnie, ich powinna być skompilowana z <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> w celu poprawy wydajności. Alternatywą jest używanie wyrażeń regularnych wstępnie skompilowana. Można skompilować wszystkie wyrażenia do wielokrotnego użytku biblioteki DLL przy użyciu <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> metody. Dzięki temu można uniknąć konieczności kompilacji w czasie wykonywania, jednocześnie nadal z szybkości skompilowane wyrażenia regularnego.  
+ Musisz być ostrożnym ograniczyć liczbę różnych wyrażeń regularnych kompilacji z <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> opcję, aby uniknąć zużywają za dużo zasobów. Jeśli aplikacja musi używać dużych lub nieograniczona liczba wyrażeń regularnych, każde wyrażenie powinny być interpretowane, nie są kompilowane. Jednak jeśli niewielka liczba wyrażeń regularnych są używane wielokrotnie, ich powinna być skompilowana przy użyciu <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> zapewnienia lepszej wydajności. Alternatywą jest używanie wstępnie skompilowanych wyrażeń regularnych. Można skompilować wszystkie wyrażenia do wielokrotnego użytku biblioteki DLL przy użyciu <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> metody. Umożliwia to uniknięcie konieczności kompilacji w czasie wykonywania przeoczeń od prędkości skompilowanych wyrażeń regularnych.  
   
 ## <a name="the-regular-expressions-cache"></a>Pamięć podręczna wyrażeń regularnych  
- Aby zwiększyć wydajność, aparat wyrażeń regularnych przechowuje podręcznej całej aplikacji skompilowanych wyrażeń regularnych. Pamięć podręczna przechowuje wzorce wyrażenie regularne, które są używane tylko w przypadku wywołania metody statycznej. (Wyrażenie regularne wzorce dostarczony do metody wystąpienia nie są buforowane.) Dzięki temu można uniknąć konieczności ponownej analizy wyrażenia do kodu bajtowego wysokiego poziomu każdym razem, gdy jest używany.  
+ Aby zwiększyć wydajność, aparat wyrażeń regularnych zachowuje pamięć podręczną całej aplikacji skompilowanych wyrażeń regularnych. Pamięć podręczna przechowuje wzorce wyrażeń regularnych, które są używane tylko w wywołaniach metody statycznej. (Wzorce wyrażeń regularnych, przekazana do metody wystąpienia nie są buforowane.) Umożliwia to uniknięcie konieczności ponownej analizy wyrażenia do kodu bajtowego wysokiego poziomu każdorazowo, gdy jest używany.  
   
- Maksymalna liczba buforowanych wyrażeń regularnych jest określana przez wartość `static` (`Shared` w języku Visual Basic) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> właściwości. Domyślnie aparat wyrażeń regularnych buforuje maksymalnie 15 skompilowane wyrażenia regularnego. Jeśli liczba skompilowanych wyrażeń regularnych przekracza rozmiar pamięci podręcznej, jest odrzucany najdawniej używaną wyrażenia regularnego i nowe wyrażenie regularne jest buforowana.  
+ Maksymalna liczba buforowanych wyrażeń regularnych jest określana przez wartość `static` (`Shared` w języku Visual Basic) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> właściwości. Domyślnie aparat wyrażenia regularnego buforuje maksymalnie 15 skompilowanych wyrażeń regularnych. Jeśli liczba skompilowanych wyrażeń regularnych przekracza rozmiar pamięci podręcznej, najdawniej używaną wyrażenia regularnego jest odrzucana i nowe wyrażenie regularne jest buforowany.  
   
- Aplikację można korzystać z wstępnie skompilowanym wyrażeń regularnych w jednym z dwóch sposobów:  
+ Aplikację można korzystać ze wstępnie skompilowanych wyrażeń regularnych w jednym z dwóch sposobów:  
   
--   Za pomocą metody statycznej z <xref:System.Text.RegularExpressions.Regex> obiekt do definiowania wyrażenia regularnego. Jeśli używasz wzorzec wyrażenia regularnego, który został już zdefiniowany w innym wywołaniu metody statycznej, aparat wyrażeń regularnych pobierze go z pamięci podręcznej. Jeśli nie, aparat będzie skompilować wyrażenia regularnego i dodaj go do pamięci podręcznej.  
+-   Za pomocą metody statycznej <xref:System.Text.RegularExpressions.Regex> obiekt do definiowania wyrażeń regularnych. Jeśli korzystasz z wzorcem wyrażenia regularnego, który został już zdefiniowany w innym wywołaniu metody statyczne, aparat wyrażeń regularnych pobierze go z pamięci podręcznej. Jeśli nie, aparat będzie kompilowania wyrażeń regularnych i dodaj go do pamięci podręcznej.  
   
--   Na podstawie istniejącej <xref:System.Text.RegularExpressions.Regex> obiekt tak długo, jak jego wzorzec wyrażenia regularnego jest wymagana.  
+-   Dzięki ponownemu wykorzystaniu istniejące <xref:System.Text.RegularExpressions.Regex> obiektu tak długo, jak jej wzorca wyrażenia regularnego jest wymagana.  
   
- Ze względu na obciążenie podczas tworzenia wystąpienia obiektu i kompilacji wyrażeń regularnych, tworzenie i szybko niszczenie wiele <xref:System.Text.RegularExpressions.Regex> obiektów jest bardzo kosztowna procesu. Dla aplikacji, które korzystają z wielu różnych wyrażeń regularnych, można zoptymalizować wydajność przy użyciu wywołań statyczne `Regex` metody i prawdopodobnie przez zwiększenie rozmiaru pamięci podręcznej wyrażenia regularnego.  
+ Ze względu na obciążenie podczas tworzenia wystąpienia obiektu i kompilowania wyrażeń regularnych, tworzenie i szybko niszczenie liczne <xref:System.Text.RegularExpressions.Regex> obiektów jest procesem bardzo kosztowna. W przypadku aplikacji korzystających z dużej liczby różnych wyrażeń regularnych można zoptymalizować wydajność przy użyciu wywołania statycznej `Regex` metody i prawdopodobnie przez zwiększenie rozmiaru pamięci podręcznej wyrażenia regularnego.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)

@@ -1,5 +1,5 @@
 ---
-title: Pobieranie węzła nieuporządkowaną przez nazwę lub indeks
+title: Pobieranie nieuporządkowanych węzłów według nazwy lub indeksu
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,15 +8,15 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 785a609455a35dd87a9593f00b58fd160ac708e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572944"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878778"
 ---
-# <a name="unordered-node-retrieval-by-name-or-index"></a>Pobieranie węzła nieuporządkowaną przez nazwę lub indeks
-**XmlNamedNodeMap** jest opisany w sieci World Wide Web konsorcjum W3C specyfikacji jako NamedNodeMap i jest wymagany do obsługi nieuporządkowaną zestaw określonych węzłów z możliwością węzłów odwołanie przez ich nazwę lub indeks. Jedynym sposobem, musisz mieć dostęp do **XmlNamedNodeMap** jest, gdy **XmlNamedNodeMap** jest zwracany za pomocą metody lub właściwości. Istnieją trzy metody lub właściwości, które zwracają **XmlNamedNodeMap**:  
+# <a name="unordered-node-retrieval-by-name-or-index"></a>Pobieranie nieuporządkowanych węzłów według nazwy lub indeksu
+**XmlNamedNodeMap** opisano w specyfikacji World Wide Web Consortium (W3C) jako NamedNodeMap i jest wymagany do obsługi nieuporządkowaną zestaw węzłów z możliwością odwołanie węzły według ich nazwy lub indeksu. Jedynym sposobem, że masz dostęp do **XmlNamedNodeMap** jest, gdy **XmlNamedNodeMap** jest zwracany przez metodę lub właściwość. Istnieją trzy metody lub właściwości, które zwracają **XmlNamedNodeMap**:  
   
 -   XmlElement.Attributes  
   
@@ -24,9 +24,9 @@ ms.locfileid: "33572944"
   
 -   XmlDocumentType.Notations  
   
- Na przykład **XmlDocumentType.Entities** właściwości pobiera kolekcję **XmlEntity** węzłów zadeklarowany w deklaracji typu dokumentu. Ta kolekcja jest zwracana jako **XmlNamedNodeMap**, i można wykonać iterację kolekcji przy użyciu **liczba** właściwości i wyświetlenia informacji jednostki. Na przykład iteracji **XmlNamedNodeMap**, zobacz <xref:System.Xml.XmlDocumentType.Entities%2A>.  
+ Na przykład **XmlDocumentType.Entities** właściwości pobiera kolekcję **XmlEntity** węzłów zadeklarowane w deklaracji typu dokumentu. Ta kolekcja jest zwracana jako **XmlNamedNodeMap**, i można wykonać iterację kolekcji przy użyciu **liczba** właściwości i wyświetlanie informacji o jednostkach. Na przykład iteracja **XmlNamedNodeMap**, zobacz <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   
- **XmlAttributeCollection** jest pochodną **XmlNamedNodeMap** i tylko atrybuty są można modyfikować, gdy notacji i jednostki są tylko do odczytu. Przy użyciu **XmlNamedNodeMap** dla atrybutów, można uzyskać węzłów dla tych atrybutów, na podstawie ich nazw XML. Zapewnia to łatwa metoda manipulowania kolekcję atrybutów w węźle elementu. Może to być contrasted bezpośrednio z **XmlNodeList**, który też implementuje **IEnumerable** interfejsu, ale akcesora indeksu, a nie w ciągu. **RemoveNamedItem** i **SetNamedItem** metody są używane tylko przed **XmlAttributeCollection**. Dodawanie lub usuwanie z kolekcji atrybutów, czy za pomocą **AttributeCollection** lub **XmlNamedNodeMap** implementacji, modyfikuje kolekcji atrybutów w elemencie. Poniższy przykład kodu pokazuje, jak przenieść atrybutu i utworzyć nowy atrybut.  
+ **XmlAttributeCollection** jest tworzony na podstawie **XmlNamedNodeMap** i można modyfikować, są tylko atrybuty, a jednostki i notacji tylko do odczytu. Za pomocą **XmlNamedNodeMap** dla atrybutów, możesz uzyskać dostęp do węzłów dla tych atrybutów, na podstawie ich nazw XML. Zapewnia to prostą metodę do manipulowania kolekcję atrybutów węzeł elementu. To może być przedstawiane jako przeciwieństwo bezpośrednio **XmlNodeList**, który implementuje również **IEnumerable** interfejsu, ale za pomocą metody dostępu indeksu, a nie w ciągu. **RemoveNamedItem** i **SetNamedItem** metody są używane tylko względem **XmlAttributeCollection**. Dodawanie lub usuwanie z kolekcji atrybutów przeprowadzanych przy użyciu **AttributeCollection** lub **XmlNamedNodeMap** implementacji modyfikuje kolekcji atrybutów w elemencie. Poniższy przykład kodu pokazuje, jak przenieść atrybut i utworzyć nowy atrybut.  
   
 ```vb  
 Imports System  
@@ -117,7 +117,8 @@ class test {
 }  
 ```  
   
- Aby wyświetlić przykład dodatkowy kod, który zawiera atrybut usuwana z **AttributeCollection**, zobacz [metody XmlNamedNodeMap.RemoveNamedItem](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Aby uzyskać więcej informacji na temat właściwości i metody, zobacz [członków XmlNamedNodeMap](AllMembers.T:System.Xml.XmlNamedNodeMap).  
+ Aby zobaczyć przykład dodatkowy kod zawierającym atrybut usuwany z **AttributeCollection**, zobacz [metoda XmlNamedNodeMap.RemoveNamedItem](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Aby uzyskać więcej informacji na temat metody i właściwości, zobacz [członków XmlNamedNodeMap](AllMembers.T:System.Xml.XmlNamedNodeMap).  
   
-## <a name="see-also"></a>Zobacz też  
- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

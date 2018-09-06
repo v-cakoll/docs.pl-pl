@@ -1,5 +1,5 @@
 ---
-title: Wyodrębnianie danych XML przy użyciu parametrem XPathNavigator
+title: Wyodrębnianie danych XML przy użyciu klasy XPathNavigator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3191528e1add5a12019c2ad3a2cd87aa73fe1df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d838f3d9f4c9400fbbef0fb24f5275eff2038c49
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572011"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877427"
 ---
-# <a name="extract-xml-data-using-xpathnavigator"></a>Wyodrębnianie danych XML przy użyciu parametrem XPathNavigator
-Istnieje kilka różnych sposobów do reprezentowania dokumentu XML w programie Microsoft .NET Framework. Obejmuje to przy użyciu <xref:System.String>, lub za pomocą <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument>, lub <xref:System.Xml.XPath.XPathDocument> klasy. Ułatwia przenoszenie między tymi różne reprezentacje dokumentu XML <xref:System.Xml.XPath.XPathNavigator> klasa udostępnia szereg metod i właściwości dla wyodrębniania XML jako <xref:System.String>, <xref:System.Xml.XmlReader> obiektu lub <xref:System.Xml.XmlWriter> obiektu.  
+# <a name="extract-xml-data-using-xpathnavigator"></a>Wyodrębnianie danych XML przy użyciu klasy XPathNavigator
+Istnieje kilka różnych sposobów, aby przedstawić dokumentu XML w programie Microsoft .NET Framework. W tym za pomocą <xref:System.String>, lub za pomocą <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument>, lub <xref:System.Xml.XPath.XPathDocument> klasy. Aby ułatwić przenoszenie między te różne reprezentacje dokumentu XML <xref:System.Xml.XPath.XPathNavigator> klasy udostępnia kilka metod i właściwości XML jako wyodrębniania <xref:System.String>, <xref:System.Xml.XmlReader> obiektu lub <xref:System.Xml.XmlWriter> obiektu.  
   
-## <a name="convert-an-xpathnavigator-to-a-string"></a>Konwertuj Element XPathNavigator na ciąg  
- <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> Właściwość <xref:System.Xml.XPath.XPathNavigator> klasy jest używany do pobierania znaczników całego dokumentu w formacie XML lub po prostu znaczników jeden węzeł i jego podrzędny węzłów.  
+## <a name="convert-an-xpathnavigator-to-a-string"></a>Konwertuj na ciąg parametrem XPathNavigator  
+ <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> Właściwość <xref:System.Xml.XPath.XPathNavigator> klasa jest używana do pobrania znaczników całego dokumentu w formacie XML lub po prostu znaczników jeden węzeł i jego podrzędny węzłów.  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Właściwość pobiera kod znaczników właśnie podrzędnych węzłów węzła.  
+>  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Właściwości pobiera znaczniki po prostu podrzędne węzły węzła.  
   
- Poniższy przykład kodu pokazuje sposób zapisywania całego dokumentu XML zawartych w <xref:System.Xml.XPath.XPathNavigator> obiekt jako <xref:System.String>, a także jeden węzeł i jego węzły podrzędne.  
+ Poniższy przykład kodu pokazuje sposób zapisywania całego dokumentu XML zawartych w <xref:System.Xml.XPath.XPathNavigator> obiektu jako <xref:System.String>, a także jeden węzeł i jego węzłami podrzędnymi.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("input.xml")  
@@ -50,14 +50,14 @@ navigator.MoveToChild(XPathNodeType.Element);
 string root = navigator.OuterXml;  
 ```  
   
-## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>Konwertuj element XmlReader parametrem XPathNavigator  
- <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> Metoda jest używana do przesyłania strumieniowego całą zawartość dokumentu XML lub jeden węzeł i jego węzły podrzędne <xref:System.Xml.XmlReader> obiektu.  
+## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>Konwertuj Element XPathNavigator do elementu XmlReader  
+ <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> Metoda jest używana do przesyłania strumieniowego całą zawartość dokumentu XML lub jeden węzeł i jego węzłami podrzędnymi, aby <xref:System.Xml.XmlReader> obiektu.  
   
- Gdy <xref:System.Xml.XmlReader> obiekt jest tworzony z bieżącego węzła i jego węzły podrzędne <xref:System.Xml.XmlReader> obiektu <xref:System.Xml.XmlReader.ReadState%2A> właściwość jest ustawiona na <xref:System.Xml.ReadState.Initial>. Gdy <xref:System.Xml.XmlReader> obiektu <xref:System.Xml.XmlReader.Read%2A> metoda jest wywoływana po raz pierwszy, <xref:System.Xml.XmlReader> zostanie przeniesiony do bieżącego węzła <xref:System.Xml.XPath.XPathNavigator>. Nowe <xref:System.Xml.XmlReader> obiektu w dalszym ciągu do odczytu do momentu osiągnięcia końca drzewo składni XML. W tym momencie <xref:System.Xml.XmlReader.Read%2A> metoda zwraca `false` i <xref:System.Xml.XmlReader> obiektu <xref:System.Xml.XmlReader.ReadState%2A> właściwość jest ustawiona na <xref:System.Xml.ReadState.EndOfFile>.  
+ Gdy <xref:System.Xml.XmlReader> obiekt zostanie utworzony przy użyciu bieżącego węzła i jego węzłów podrzędnych <xref:System.Xml.XmlReader> obiektu <xref:System.Xml.XmlReader.ReadState%2A> właściwość jest ustawiona na <xref:System.Xml.ReadState.Initial>. Gdy <xref:System.Xml.XmlReader> obiektu <xref:System.Xml.XmlReader.Read%2A> metoda jest wywoływana po raz pierwszy <xref:System.Xml.XmlReader> zostanie przeniesiony do bieżącego węzła <xref:System.Xml.XPath.XPathNavigator>. Nowy <xref:System.Xml.XmlReader> obiektu w dalszym ciągu odczyt aż do osiągnięcia końca drzewa XML. W tym momencie <xref:System.Xml.XmlReader.Read%2A> metoda zwraca `false` i <xref:System.Xml.XmlReader> obiektu <xref:System.Xml.XmlReader.ReadState%2A> właściwość jest ustawiona na <xref:System.Xml.ReadState.EndOfFile>.  
   
- <xref:System.Xml.XPath.XPathNavigator> Położenie obiektu jest taki sam jak przez utworzenie lub przepływ <xref:System.Xml.XmlReader> obiektu. <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> Metoda jest prawidłowa, gdy znajduje się w węźle elementu lub głównego tylko.  
+ <xref:System.Xml.XPath.XPathNavigator> Położenie obiektu są takie same jak za tworzenie i przenoszenie <xref:System.Xml.XmlReader> obiektu. <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> Metoda jest tylko prawidłowy w przypadku umieszczony na węźle element lub katalogu głównego.  
   
- Poniższy przykład przedstawia sposób uzyskać <xref:System.Xml.XmlReader> obiekt zawierający XML całego dokumentu w <xref:System.Xml.XPath.XPathDocument> obiektów oraz jeden węzeł i jego węzły podrzędne.  
+ Poniższy przykład pokazuje, jak uzyskać <xref:System.Xml.XmlReader> obiekt zawierający cały dokument w <xref:System.Xml.XPath.XPathDocument> obiektu, a także jeden węzeł i jego węzłami podrzędnymi.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -117,12 +117,12 @@ book.Close();
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>Konwertowanie do XmlWriter parametrem XPathNavigator  
- <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> Metoda jest używana do przesyłania strumieniowego całą zawartość dokumentu XML lub jeden węzeł i jego węzły podrzędne <xref:System.Xml.XmlWriter> obiektu.  
+## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>Konwertowanie XmlWriter parametrem XPathNavigator  
+ <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> Metoda jest używana do przesyłania strumieniowego całą zawartość dokumentu XML lub jeden węzeł i jego węzłami podrzędnymi, aby <xref:System.Xml.XmlWriter> obiektu.  
   
- <xref:System.Xml.XPath.XPathNavigator> Położenie obiektu jest taki sam jak przez utworzenie <xref:System.Xml.XmlWriter> obiektu.  
+ <xref:System.Xml.XPath.XPathNavigator> Położenie obiektu są takie same jak przez utworzenie <xref:System.Xml.XmlWriter> obiektu.  
   
- Poniższy przykład przedstawia sposób uzyskać <xref:System.Xml.XmlWriter> obiekt zawierający XML całego dokumentu w <xref:System.Xml.XPath.XPathDocument> obiektów oraz jeden węzeł i jego węzły podrzędne.  
+ Poniższy przykład pokazuje, jak uzyskać <xref:System.Xml.XmlWriter> obiekt zawierający cały dokument w <xref:System.Xml.XPath.XPathDocument> obiektu, a także jeden węzeł i jego węzłami podrzędnymi.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -160,13 +160,14 @@ navigator.WriteSubtree(book);
 book.Close();  
 ```  
   
- Przykład przyjmuje `books.xml` odnaleźć pliku wcześniej w tym temacie jako dane wejściowe.  
+ Przykład przyjmuje `books.xml` znaleźć pliku wcześniej w tym temacie jako dane wejściowe.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Nawigacja po zestawie węzłów przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [Nawigacja po atrybutach i przestrzeni nazw węzła przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
- [Uzyskiwanie dostępu do silnie typizowanych danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [Nawigacja po zestawie węzłów przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+- [Nawigacja po atrybutach i przestrzeni nazw węzła przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+- [Uzyskiwanie dostępu do silnie typizowanych danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

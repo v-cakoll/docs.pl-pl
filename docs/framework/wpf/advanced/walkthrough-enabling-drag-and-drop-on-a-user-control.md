@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: e151eb7f428fecb330970210fd7addb1603a211f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534235"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877271"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Wskazówki: włączanie przeciągania i upuszczania w kontrolce użytkownika
 W tym instruktażu pokazano, jak utworzyć formant użytkownika niestandardowego, które mogą uczestniczyć w transferu danych przeciągnij i upuść [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  

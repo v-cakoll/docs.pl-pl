@@ -2,12 +2,12 @@
 title: LINQ i ciągi (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: da7a35f0fd66d1f7b8a72550c175b5428242fbc1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480642"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886503"
 ---
 # <a name="linq-and-strings-c"></a>LINQ i ciągi (C#)
 
@@ -72,7 +72,7 @@ Wiele różnych typów plików tekstowych składają się z szeregu wiersze, cz�
   
   Pokazuje sposób wykonywania obliczeń matematycznych na danych tekstu w plikach CSV.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zapytanie o języku zintegrowanym (LINQ) (C#)](index.md)
 - [Instrukcje: generowanie kodu XML z plików CSV](how-to-generate-xml-from-csv-files.md)

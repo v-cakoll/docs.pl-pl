@@ -18,11 +18,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
 ms.openlocfilehash: cd07c883c576e917cf1aa5072505854bc906eb3f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484658"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857592"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Wyliczenie i kwantyfikacja nazwy (Visual Basic)
 Zwykle przy odwoływaniu się do elementu członkowskiego wyliczenia, masz prawo nazwę elementu członkowskiego o nazwie wyliczenia. Na przykład, aby odwołać się do `Sunday` członek Twojego `Days` wyliczenia, należy użyć następującej składni:  

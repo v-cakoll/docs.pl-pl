@@ -1,5 +1,5 @@
 ---
-title: XmlNameTable przy użyciu porównanie obiektów
+title: Porównanie obiektów przy użyciu tabeli XmlNameTable
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,15 +8,15 @@ dev_langs:
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09f717cb4c09c1e35b9472b7b549f1d3edf0dd15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814f5434dd0473b3b1dd613a2eba14a828c464d9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569281"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862785"
 ---
-# <a name="object-comparison-using-xmlnametable"></a>XmlNameTable przy użyciu porównanie obiektów
-**XmlDocuments**, podczas tworzenia tabeli nazwy specjalnie do tego dokumentu. Gdy XML jest ładowany do dokumentu lub nowych elementów lub atrybutów są tworzone, nazwy atrybutu i elementu są umieszczane w **XmlNameTable**. Można również utworzyć **XmlDocument** przy użyciu istniejącego **niepowtarzającymi** z innego dokumentu. Gdy **XmlDocuments** są tworzone za pomocą konstruktora, który przyjmuje **XmlNameTable** parametru dokument ma dostęp do nazwy węzła, obszary nazw i prefiksy już zapisana w  **XmlNameTable**. Niezależnie od tego, jak nazwa tabeli jest ładowany z nazwami po nazwy są przechowywane w tabeli nazw można porównywać szybko przy użyciu obiektu porównania zamiast porównania ciągu. Ciągi można również dodać do tabeli nazwy przy użyciu <xref:System.Xml.NameTable.Add%2A>. Poniższy przykładowy kod przedstawia tabeli nazw, tworzenia i ciąg **mójCiąg** dodawanych do tabeli. Po wykonaniu tej **XmlDocument** jest tworzony przy użyciu tej tabeli, a nazwy elementów i atrybutów w **Myfile.xml** są dodawane do istniejącej tabeli nazw.  
+# <a name="object-comparison-using-xmlnametable"></a>Porównanie obiektów przy użyciu tabeli XmlNameTable
+**XmlDocuments**, podczas tworzenia tabeli nazwę specjalnie do tego dokumentu. Gdy XML jest ładowany do dokumentu lub są tworzone nowe elementy lub atrybuty, nazwy atrybutu i elementu są umieszczane w **tabeli XmlNameTable**. Można również utworzyć **XmlDocument** korzystania z istniejącej **niepowtarzającymi** z innego dokumentu. Gdy **XmlDocuments** są tworzone przy użyciu konstruktora, który przyjmuje **tabeli XmlNameTable** parametru dokument ma dostęp do nazwy węzłów, przestrzenie nazw i prefiksy, które już są przechowywane w  **Tabeli XmlNameTable**. Niezależnie od tego, jak tabela nazw jest ładowany z nazwami, gdy nazwy są przechowywane w tabeli, nazwy można porównać szybko za pomocą obiektu porównania, zamiast porównywania ciągów. Ciągi mogą być również dodawane do tabeli nazwy przy użyciu <xref:System.Xml.NameTable.Add%2A>. Poniższy przykładowy kod przedstawia tabelę nazw, tworzonych i ciąg **mójCiąg** dodawane do tabeli. Po tym **XmlDocument** jest tworzony przy użyciu tej tabeli, a także nazw elementów i atrybutów w **Myfile.xml** są dodawane do istniejącej tabeli nazwy.  
   
 ```vb  
 Dim nt As New NameTable()  
@@ -32,7 +32,7 @@ XmlDocument doc = new XmlDocument(nt);
 doc.Load("Myfile.xml");  
 ```  
   
- W poniższym przykładzie kodu pokazano tworzenie dokumentu, dwa nowe elementy dodawany do dokumentu, który dodaje je do tabeli nazwy dokumentu, a obiekt porównania nazw.  
+ W poniższym przykładzie kodu pokazano tworzenie obiektu dokumentu, dwa nowe elementy są dodawane do dokumentu, który dodaje je do tabeli nazwę dokumentu i porównanie obiektu na nazwach.  
   
 ```vb  
 Dim doc1 As XmlDocument = imp.CreateDocument()  
@@ -51,7 +51,8 @@ if (((object)node1.Name) == ((object)node2.Name))
 { ...  
 ```  
   
- Powyższym scenariuszu tabeli nazwy przekazywane między dwa dokumenty jest typowe w przypadku, gdy ten sam typ dokumentu jest przetwarzana, takich jak dokumenty kolejności w witrynie handlu elektronicznego, które odpowiadają typ schematu XML definition language (XSD) schemat lub dokument są powtarzane definicji (DTD) i tej samej ciągów. Przy użyciu tej samej tabeli nazw zapewnia lepszą wydajność, zgodnie z takiej samej nazwie elementu występuje w wielu dokumentów.  
+ Powyższym scenariuszu tabeli nazwy przekazywane między dwoma dokumentami jest typowe w przypadku, gdy ten sam typ dokumentu jest przetwarzany wielokrotnie, takich jak dokumenty w witrynie handlu elektronicznego, które są zgodne z typ schematu XML definicji język (XSD) schematu lub dokumentu Definition (DTD) i tej samej ciągi są powtarzane. Używanie taką samą tabelą nazw zapewnia zwiększenie wydajności, zgodnie z takiej samej nazwie elementu odbywa się w wielu dokumentów.  
   
-## <a name="see-also"></a>Zobacz też  
- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
 ms.openlocfilehash: df56d3f2bfe351c38ca2e64539de13e4cc556d2a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732345"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862280"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Instrukcje: Włączanie wykrywania powtarzania komunikatu
 Atak przez powtarzanie występuje, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarza strumienia do jednego lub więcej stron. Chyba że skorygowane, komputery, które podlegają ataku przetworzy strumienia jako wiarygodnego wiadomości, co w zakresie zły konsekwencje, takie jak nadmiarowe zamówienia elementu.  

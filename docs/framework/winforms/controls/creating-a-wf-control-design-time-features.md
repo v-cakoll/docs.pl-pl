@@ -11,11 +11,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 ms.openlocfilehash: aa30842ca72bb50767513cf387f59e29e40574e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671870"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865868"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Wskazówki: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio
 Środowisko czasu projektowania formantu niestandardowego może zostać poprawione tworząc skojarzone niestandardowego projektanta.  

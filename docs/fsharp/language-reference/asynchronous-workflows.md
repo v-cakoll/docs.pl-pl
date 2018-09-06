@@ -2,12 +2,12 @@
 title: Asynchroniczne przepływy pracy (F#)
 description: 'Dowiedz się więcej o obsługę języka programowania dla asynchronicznie, wykonywanie obliczeń F # uruchamiane bez blokowania wykonywania innych zadań.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9516a281701b6c431fc950fe6881359f9c8a672b
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143510"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861565"
 ---
 # <a name="asynchronous-workflows"></a>Asynchroniczne przepływy pracy
 
@@ -65,10 +65,8 @@ W przypadku użycia funkcji [ `Async.RunSynchronously` ](https://msdn.microsoft.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet8003.fs)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka F#](index.md)
-
-[Wyrażenia obliczeń](computation-expressions.md)
-
-[Control.Async — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
+- [Dokumentacja języka F#](index.md)
+- [Wyrażenia obliczeń](computation-expressions.md)
+- [Control.Async — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)

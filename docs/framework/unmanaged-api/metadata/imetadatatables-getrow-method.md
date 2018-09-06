@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d24dbcbdd8b0ed0736f7b59564cf72dffaa5a8f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745960"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870890"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow — Metoda
 Pobiera wiersz indeksu określony wiersz w tabeli pod indeksem określonej tabeli.  

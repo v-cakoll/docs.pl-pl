@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802551"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870240"
 ---
 # <a name="white-space-processing-in-xaml"></a>Znak odstępu przetwarzanie w XAML
 Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora. W tym temacie opisano te reguły języka XAML. Również dokumenty obsługi dodatkowe biały znak, który jest definiowany przez [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementacji procesora XAML i zapisywania XAML do serializacji.  

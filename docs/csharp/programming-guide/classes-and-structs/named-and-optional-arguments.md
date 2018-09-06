@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: e369c0320ce1f918dba806e246cb4117e816116a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735283"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857985"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] wprowadza argumentów nazwanych i opcjonalnych. *Argumenty nazwane* umożliwiają określenie argumentu dla parametru określonego argumentu można skojarzyć z nazwą parametru, a nie za pomocą parametru pozycji na liście parametrów. *Argumenty opcjonalne* umożliwia pominięcie argumentów dla niektórych parametrów. Obu tych technik może służyć za pomocą metod, indeksatorów, konstruktorów i delegatów.  
@@ -101,7 +101,7 @@ Parametry opcjonalne w ExampleMethod
 ## <a name="com-interfaces"></a>Interfejsy modelu COM  
  Argumenty nazwane i opcjonalne oraz obsługę obiektów dynamicznych i inne ulepszenia znacznie poprawić współdziałanie z interfejsów API modelu COM, takich jak interfejsy API usługi Automation pakietu Office.  
   
- Na przykład [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) metodę w programie Microsoft Office Excel [zakres](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) interfejs ma siedem parametry, z których wszystkie są opcjonalne. Te parametry są wyświetlane na poniższej ilustracji.  
+ Na przykład <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> metodę w programie Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range> interfejs ma siedem parametry, z których wszystkie są opcjonalne. Te parametry są wyświetlane na poniższej ilustracji.  
   
  ![Szybkie informacje technologii IntelliSense dla metody AutoFormat. ](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 Autoformat — parametry  

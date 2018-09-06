@@ -1,5 +1,5 @@
 ---
-title: Tworzenie nowych ciągów w .NET
+title: Tworzenie nowych ciągów w programie .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,51 +15,51 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9f0c487d3d04af998fb1c3339d736e9bb043374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567822"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870113"
 ---
-# <a name="creating-new-strings-in-net"></a>Tworzenie nowych ciągów w .NET
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Umożliwia ciągów, które ma zostać utworzony przy użyciu przypisanie proste, a także overloads konstruktora klasy do obsługi tworzenia ciągu przy użyciu wielu różnych parametrów. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Udostępnia kilka metod w <xref:System.String?displayProperty=nameWithType> klasy, która utworzyć nowe parametry obiektów przez łączenie wielu ciągów, tablic ciągów, ani obiektów.  
+# <a name="creating-new-strings-in-net"></a>Tworzenie nowych ciągów w programie .NET
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Umożliwia ciągów, które ma zostać utworzony przy użyciu przypisanie proste, a także przeciążenia konstruktora klasy obsługuje tworzenie ciągów za pomocą kilku różnych parametrów. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Również udostępnia kilka metod w <xref:System.String?displayProperty=nameWithType> klasy, które tworzyć nowe parametry obiekty, łącząc kilka ciągów, tablic ciągów, lub obiektów.  
   
 ## <a name="creating-strings-using-assignment"></a>Tworzenie ciągów za pomocą przypisania  
- Najprostszym sposobem, aby utworzyć nową <xref:System.String> obiektu jest po prostu przypisanie literału ciągu na <xref:System.String> obiektu.  
+ Najprostszym sposobem utworzenia nowego <xref:System.String> obiektu jest po prostu przypisać literału ciągu na <xref:System.String> obiektu.  
   
 ## <a name="creating-strings-using-a-class-constructor"></a>Tworzenie ciągów za pomocą konstruktora klasy  
- Można użyć przeciążeń <xref:System.String> konstruktora klasy w celu utworzenia ciągów w tablice znaków. Można również utworzyć nowe parametry, duplikując określonego znaku określoną liczbę razy.  
+ Możesz użyć przeciążenia <xref:System.String> konstruktora klasy, aby utworzyć ciągów na podstawie tablic znaków. Można również utworzyć nowy ciąg, duplikując określonego znaku określoną liczbę razy.  
   
-## <a name="methods-that-return-strings"></a>Metody zwracające ciągów  
- W poniższej tabeli wymieniono kilka metod przydatne, które zwracają nowe obiekty ciągu.  
+## <a name="methods-that-return-strings"></a>Metody, które zwracają ciągów  
+ W poniższej tabeli wymieniono kilka użytecznych metod, które zwracają nowe obiekty ciągów.  
   
 |Nazwa metody|Zastosowanie|  
 |-----------------|---------|  
-|<xref:System.String.Format%2A?displayProperty=nameWithType>|Tworzy ciąg sformatowany za pomocą zestawu wejściowego obiektów.|  
-|<xref:System.String.Concat%2A?displayProperty=nameWithType>|Tworzy ciągów z co najmniej dwa parametry.|  
-|<xref:System.String.Join%2A?displayProperty=nameWithType>|Tworzy nowe parametry, łącząc tablicy ciągów.|  
-|<xref:System.String.Insert%2A?displayProperty=nameWithType>|Tworzy nowe parametry wstawiając ciąg do określonego indeksu istniejące parametry.|  
+|<xref:System.String.Format%2A?displayProperty=nameWithType>|Tworzy ciąg formatowania z zestawu danych wejściowych obiektów.|  
+|<xref:System.String.Concat%2A?displayProperty=nameWithType>|Tworzy ciągi z co najmniej dwóch ciągów.|  
+|<xref:System.String.Join%2A?displayProperty=nameWithType>|Tworzy nowy ciąg, łącząc tablicę ciągów.|  
+|<xref:System.String.Insert%2A?displayProperty=nameWithType>|Tworzy nowy ciąg wstawiając ciąg do określonego indeksu istniejącego ciągu.|  
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Kopiuje określone znaków w ciągu w określonej pozycji w tablicy znaków.|  
   
 ### <a name="format"></a>Format  
- Można użyć **String.Format** metody do tworzenia ciągi sformatowane i łączenie ciągów reprezentujących wielu obiektów. Ta metoda powoduje automatyczną konwersję dowolnego przekazanego obiektu na ciąg. Na przykład, jeśli aplikacja musi zawierać **Int32** wartość i **DateTime** wartość dla użytkownika, można łatwo utworzyć ciąg do reprezentowania te wartości przy użyciu **Format**metody. Informacje na temat formatowania konwencje używane z tą metodą, zobacz sekcję dotyczącą [złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md).  
+ Możesz użyć **String.Format** metodę, aby utworzyć sformatowane ciągi i łączenie ciągów reprezentujących wielu obiektów. Ta metoda automatycznie konwertuje każdy przekazany obiekt na ciąg. Na przykład, jeśli aplikacja musi wyświetlić **Int32** wartość i **daty/godziny** wartość dla użytkownika, można łatwo utworzyć ciąg reprezentujący te wartości przy użyciu **Format**metody. Informacje na temat formatowania Konwencji używanych przy użyciu tej metody, zobacz sekcję na [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md).  
   
- W poniższym przykładzie użyto **Format** metodę w celu utworzenia ciąg, który używa zmienna typu Liczba całkowita.  
+ W poniższym przykładzie użyto **Format** metodę, aby utworzyć ciąg, który używa zmiennej liczby całkowitej.  
   
  [!code-csharp[Strings.Creating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#1)]
  [!code-vb[Strings.Creating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#1)]  
   
- W tym przykładzie<xref:System.DateTime.Now%2A?displayProperty=nameWithType> Wyświetla bieżącą datę i godzinę w sposób określony przez kultury skojarzone z bieżącego wątku.  
+ W tym przykładzie<xref:System.DateTime.Now%2A?displayProperty=nameWithType> Wyświetla bieżącą datę i godzinę w sposób określony przez kultury skojarzonej z bieżącym wątkiem.  
   
 ### <a name="concat"></a>concat  
- **String.concat —** — metoda pozwala łatwo utworzyć nowy obiekt ciągu z dwóch lub więcej istniejących obiektów. Zapewnia sposób niezależny od języka aby ciągów. Ta metoda przyjmuje dowolnej klasy, która jest pochodną **System.Object**. Poniższy przykład tworzy ciąg z dwóch istniejących obiektów ciągu i znak oddzielający.  
+ **String.concat —** metody można łatwo utworzyć nowy obiekt ciągu z co najmniej dwóch istniejących obiektów. Umożliwia łączenie ciągów w sposób niezależny od języka. Ta metoda przyjmuje dowolną klasę pochodzącą od **System.Object**. Poniższy przykład tworzy ciąg z dwóch istniejących obiektów ciągu i znak oddzielający.  
   
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  
   
 ### <a name="join"></a>Łączenie  
- **String.Join** metoda tworzy nowego ciągu z tablicy ciągów i ciąg separatora. Ta metoda jest przydatna, jeśli chcesz łączenie wielu ciągów, tworzenie listy prawdopodobnie rozdzielonych przecinkami.  
+ **String.Join** metoda tworzy nowy ciąg z tablicy ciągów i ciągu separatora. Ta metoda jest przydatna, jeśli chcesz łączyć wiele ciągi, tworzenie listy może być rozdzielone przecinkami.  
   
  W poniższym przykładzie użyto spację, aby powiązać tablicy ciągów.  
   
@@ -67,19 +67,20 @@ ms.locfileid: "33567822"
  [!code-vb[Strings.Creating#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#3)]  
   
 ### <a name="insert"></a>Insert  
- **String.Insert** metoda tworzy nowy ciąg wstawiając ciąg do określonej pozycji w innym ciągu. Ta metoda korzysta z indeksu. Poniższy przykład wstawia ciąg do piątego indeks `MyString` i tworzy nowy ciąg o tej wartości.  
+ **String.Insert** metoda tworzy nowy ciąg wstawiając ciąg do określonej pozycji w innym ciągu. Ta metoda korzysta z indeksu. Poniższy przykład wstawia ciąg do piątego pozycja indeksu parametru `MyString` i tworzy nowy ciąg o tej wartości.  
   
  [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]
  [!code-vb[Strings.Creating#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#4)]  
   
-### <a name="copyto"></a>Wykonanie operacji kopiowania  
- **String.CopyTo** metody kopiuje części ciągu do tablicy znaków. Można określić indeksu początku ciąg i liczbę znaków do skopiowania. Ta metoda przyjmuje indeks źródła, tablicy znaków indeksu docelowego i liczbę znaków do skopiowania. Wszystkie indeksy są liczony od zera.  
+### <a name="copyto"></a>Funkcja CopyTo  
+ **String.CopyTo** metoda kopiuje części ciągu do tablicy znaków. Można określić indeksu początku ciągu i liczba znaków do skopiowania. Ta metoda przyjmuje indeks źródła, tablicę znaków, indeksu docelowego i liczba znaków do skopiowania. Wszystkie indeksy są oparte na zerze.  
   
- W poniższym przykładzie użyto **CopyTo** metodę, aby skopiować znaki Word tekst "Hello" z ciągu obiektu na pierwszym miejscu indeksu tablicy znaków.  
+ W poniższym przykładzie użyto **CopyTo** metodę, aby skopiować znaki wyraz "Hello" z ciągu obiektu do pierwszej pozycji indeksu tablicy znaków.  
   
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)  
- [Złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md)

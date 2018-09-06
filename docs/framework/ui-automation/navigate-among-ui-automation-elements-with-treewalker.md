@@ -14,11 +14,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 6a44cd16513bffa47e56064ea7e0e05692cb78a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659945"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869834"
 ---
 # <a name="navigate-among-ui-automation-elements-with-treewalker"></a>Nawigowanie po elementach automatyzacji interfejsu użytkownika przy użyciu opcji TreeWalker
 > [!NOTE]

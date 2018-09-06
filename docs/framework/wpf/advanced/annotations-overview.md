@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
 ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731631"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861705"
 ---
 # <a name="annotations-overview"></a>Przegląd Adnotacje
 Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie powszechnie używane czynnością, firma Microsoft niemal Zrób to dla przyznane. Te informacje o lub komentarze są "adnotacje" dodajemy do dokumentu do informacji lub aby wyróżnić elementy do późniejszego wykorzystania. Chociaż zapisywania notatki na drukowanych dokumentów jest proste i powszechnie używane, możliwość dodawania swoje komentarze do dokumentów elektronicznych zwykle jest bardzo ograniczona, jeśli jest dostępny w wszystkich.  

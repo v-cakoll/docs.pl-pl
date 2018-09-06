@@ -5,11 +5,11 @@ ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: dec44bf114472e19fdac131e0af6c13854957fe3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745531"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864777"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Używanie strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 

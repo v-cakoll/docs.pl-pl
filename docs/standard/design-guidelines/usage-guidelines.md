@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7bd54a2325c9721ad17943ba663e7ec0c300632e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 04e44a6b58fd334b6a23e113922b980f69de627b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925079"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869869"
 ---
 # <a name="usage-guidelines"></a>Wytyczne dotyczące użycia
 
@@ -38,4 +38,4 @@ Ta sekcja zawiera wskazówki dotyczące korzystania z popularnych typów w publi
   
 ## <a name="see-also"></a>Zobacz także
 
-[Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

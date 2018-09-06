@@ -1,37 +1,55 @@
 ---
 title: Operator % (odwołanie w C#)
-ms.date: 04/04/2018
+ms.date: 09/04/2018
 f1_keywords:
 - '%_CSharpKeyword'
 helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: 477f2491e6d2efe6b5c327efb371843d0bf12c26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723876"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866758"
 ---
 # <a name="-operator-c-reference"></a>Operator % (odwołanie w C#)
-Operator reszty (`%`) oblicza pozostałą po podzieleniu swojego pierwszego operandu przez drugi jej. Wszystkie typy liczbowe ma wstępnie zdefiniowane operatory resztę. 
-  
-## <a name="remarks"></a>Uwagi  
- Formuła `a % b` zawsze zwraca wartość w zakresie `(-b, b)`Ekskluzywna (nigdy nie może zwrócić `b` lub `-b`), utrzymywanie znak dzielna. Dzielenie liczby całkowitej, operator reszty spełnia reguły `a % b = a - (a / b) * b`.
-  
- Nie należy mylić modulo canonical, które spełniają reguły podobne, ale floored dzielenia i zwraca wartości na zakresie `[0, b)`. C# ma operator modulo kanonicznej. Jednak to zachowanie jest taki sam dla dywidendy dodatnią.
-  
- Typy definiowane przez użytkownika mogą przeciążać operator `%` — (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)). Gdy jest przeciążony operator binarny, odpowiedniego operatora przypisania, jest również niejawnie przeciążona.  
-  
-## <a name="example"></a>Przykład  
- [!code-csharp[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/remainder-operator_1.cs)]  
-  
-## <a name="comments"></a>Komentarze  
- Należy pamiętać, błędy zaokrąglania skojarzone z typem double.  
-  
-## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)
+Operator reszty `%` oblicza pozostałą po podzieleniu pierwszy argument operacji za drugim argumentem. Typy zdefiniowane przez użytkownika może [przeciążenia](../keywords/operator.md) `%` operatora. Gdy `%` jest przeciążona, [operator przypisania reszty](remainder-assignment-operator.md) `%=` jest również niejawnie przeciążona.
+
+Wszystkie typy liczbowe obsługuje operator reszty.
+
+## <a name="integer-remainder"></a>Pozostała liczba całkowita
+  
+Dla argumentów liczby całkowitej, wynik `a % b` wartość jest generowany przez `a - (a / b) * b`. Znak resztę różna od zera jest taka sama, jak w przypadku pierwszego operandu w poniższym przykładzie pokazano:
+
+[!code-csharp-interactive[integer remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#1)]
+
+## <a name="floating-point-remainder"></a>Zmiennoprzecinkową resztę
+
+Dla [float](../keywords/float.md) i [double](../keywords/double.md) operandów, wynik `x % y` dla skończonego `x` i `y` jest wartością `z` tak, aby
+
+- znak `z`, jeśli różna od zera, jest taka sama jak znak `x`;
+- wartość bezwzględna `z` wartość jest generowany przez `|x| - n * |y|` gdzie `n` jest największa możliwa liczba całkowita, która jest mniejsza niż lub równa `|x| / |y|` i `|x|` i `|y|` są wartości bezwzględne dla `x` i `y`, odpowiednio.
+
+Aby uzyskać informacje o zachowanie `%` operatora w przypadku argumentów operacji nieskończona, zobacz [operator reszty](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) części [specyfikacji języka C#](/dotnet/csharp/language-reference/language-specification/index).
+
+> [!NOTE]
+> Ta metoda obliczeniowych reszta jest odpowiednikiem używanym dla liczby całkowitej argumentów, ale różni się od IEEE 754. Operacja Reminder, który jest zgodny z IEEE 754, należy użyć <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> metody.
+
+W poniższym przykładzie pokazano zachowanie operator reszty dla `float` i `double` argumenty:
+
+[!code-csharp-interactive[float and double remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#2)]
+
+Należy pamiętać, błędy zaokrąglania, które mogą być skojarzone z typów zmiennoprzecinkowych.
+
+Dla [dziesiętna](../keywords/decimal.md) argumentów operacji, operator reszty `%` jest odpowiednikiem [operator reszty](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) z <xref:System.Decimal?displayProperty=nameWithType> typu.
+
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Operatory języka C#](index.md)
+- <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>
+- <xref:System.Math.DivRem%2A?displayProperty=nameWithType>

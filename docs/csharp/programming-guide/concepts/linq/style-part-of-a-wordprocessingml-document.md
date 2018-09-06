@@ -3,11 +3,11 @@ title: Część stylu dokument1 WordprocessingML
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
 ms.openlocfilehash: 96ed7445379d9a8ca64250ef4d923786555a3882
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746831"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866588"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Część stylu dokumentu WordprocessingML
 W tym temacie przedstawiono przykład część stylu dokumentu Office Open XML WordprocessingML.  

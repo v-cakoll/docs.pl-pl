@@ -3,11 +3,11 @@ title: Działanie promocji właściwości
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
 ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747057"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870087"
 ---
 # <a name="property-promotion-activity"></a>Działanie promocji właściwości
 W tym przykładzie zapewnia rozwiązania end-to-end, która integruje się <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> funkcja podwyższania poziomu bezpośrednio do tworzenia przepływu pracy. Kolekcja elementów konfiguracji, działania przepływu pracy i rozszerzeń przepływu pracy, które upraszczają korzystanie z funkcji podwyższania poziomu są dostarczane. Ponadto przykład zawiera prostego przepływu pracy, który demonstruje sposób skorzystania z tej kolekcji.  

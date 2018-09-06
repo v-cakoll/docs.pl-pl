@@ -7,11 +7,11 @@ helpviewer_keywords:
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
 ms.openlocfilehash: 1b55afd5938073a326789e67b66fec9cfce12015
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743823"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868526"
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>Jak animować ciąg z wykorzystaniem klatek kluczowych
 W tym przykładzie pokazano, jak animować ciąg, który w tym przykładzie jest <xref:System.Windows.Controls.ContentControl.Content%2A> właściwość <xref:System.Windows.Controls.Button> kontroli przy użyciu klatek kluczowych.  

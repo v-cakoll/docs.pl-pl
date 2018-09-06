@@ -8,11 +8,11 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
 ms.openlocfilehash: 5a826b9fc68bebfa32049a38899ddffaacd25607
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749973"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866692"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>Porady: dziedziczenie z klasy UserControl
 Aby połączyć funkcje co najmniej jednej kontrolki Windows Forms za pomocą kodu niestandardowego, można utworzyć *kontrolki użytkownika*. Formanty użytkownika połączyć rozwoju szybkiej kontroli, standardowych formularzy Windows kontrolować funkcjonalność i wszechstronności niestandardowe właściwości i metod. Po rozpoczęciu tworzenia kontrolki użytkownika, są prezentowane za pomocą projektanta widoczne, na którym można umieścić standardowych kontrolek Windows Forms. Te kontrolki zachowuje wszystkie ich używaniem funkcji, a także wygląd i zachowanie (wyglądu i działania) standardowych kontrolek. Gdy te kontrolki są wbudowane w kontrolce użytkownika, jednak nie są już dostępne za pośrednictwem kodu. Kontrolki użytkownika nie swój własny obraz, a także obsługuje wszystkie podstawowe funkcje, które są skojarzone z formantami.  

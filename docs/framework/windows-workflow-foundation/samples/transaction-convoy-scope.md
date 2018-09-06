@@ -3,11 +3,11 @@ title: Zakres konwoju transakcji
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
 ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536094"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871254"
 ---
 # <a name="transaction-convoy-scope"></a>Zakres konwoju transakcji
 Ten przykład przedstawia sposób tworzenia równoległych konwoju, obsługi komunikatów wzorzec aktywności w połączeniu z <xref:System.ServiceModel.Activities.TransactedReceiveScope> do modelowania protokołu, na której liczba operacji może się zdarzyć w dowolnej kolejności, wszystkie w ramach tej samej transakcji. Ten przykład ilustruje też sposób <xref:System.ServiceModel.Activities.TransactedReceiveScope> automatycznie tworzy nową transakcję w przypadku jednego jest nie przekazane do serwera, aby klient nie oznacza, że korzystanie z wszystkich transakcji.  

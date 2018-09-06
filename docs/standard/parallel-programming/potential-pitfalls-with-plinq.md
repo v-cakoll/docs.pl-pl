@@ -10,42 +10,42 @@ helpviewer_keywords:
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73ec2d2fb73ee95b39a15307d136c35542578c41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4decd01938500fe6330c48caa33b845916aaff
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591719"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863010"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Potencjalne pułapki związane z PLINQ
-W wielu przypadkach PLINQ można zapewnia znaczną poprawę wydajności za pośrednictwem sekwencyjnych LINQ do obiektów zapytań. Jednak pracy parallelizing wykonywania zapytania wprowadza złożoności, który może prowadzić do problemów, które w kolejnych kodu nie są jako wspólne lub w ogóle nie wystąpi. W tym temacie wymieniono niektóre praktyki, których należy unikać podczas pisania zapytania dotyczące technologii PLINQ.  
+W wielu przypadkach PLINQ może zapewnić znaczne ulepszenia wydajności za pośrednictwem sekwencyjnego LINQ do kwerendy obiekty. Jednak pracy przekształcają wykonywania zapytania wprowadza złożoności, który może prowadzić do problemów, które sekwencyjnego kodu nie są jako wspólne lub nie zostaną napotkane w ogóle. W tym temacie wymieniono niektóre rozwiązania, aby uniknąć podczas pisania zapytań PLINQ.  
   
-## <a name="do-not-assume-that-parallel-is-always-faster"></a>Nie przyjęto założenie, że równolegle jest zawsze szybsze  
- Czasami paralelizacja powoduje, że zapytania PLINQ działać wolniej niż jego LINQ do obiektów równoważne. Podstawowe zasadą to zapytań, które ma kilka elementy źródłowe i delegatów szybkiego użytkownika prawdopodobnie nie będzie przyspieszenie znacznie. Jednak ponieważ wydajności są związane z wielu czynników, zaleca się zmierzyć rzeczywiste wyniki, przed podjęciem decyzji o tym, czy używać PLINQ. Aby uzyskać więcej informacji, zobacz [przyspieszeniach w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+## <a name="do-not-assume-that-parallel-is-always-faster"></a>Nie należy zakładać, że równoległa jest zawsze szybciej  
+ Czasami przetwarzanie równoległe powoduje, że zapytanie PLINQ działać wolniej niż jego LINQ do obiekty równoważne. Podstawowa zasada mówi to kwerend, które mają kilka elementów źródła i delegatów użytkownika szybkie, prawdopodobnie nie będzie przyspieszenie znacznie. Ponieważ wiele czynników są zaangażowane w wydajności, firma Microsoft zaleca jednak pomiaru rzeczywiste wyniki, przed podjęciem decyzji o tym, czy ma być używany program PLINQ. Aby uzyskać więcej informacji, zobacz [ogólne informacje o przyspieszeniach w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
-## <a name="avoid-writing-to-shared-memory-locations"></a>Unikaj zapisywanie w lokalizacji pamięci współużytkowanej  
- W kolejnych kodu nie jest rzadko do odczytu lub zapisu zmienne statyczne lub pola klasy. Zawsze, gdy wiele wątków uzyskują dostęp do tych zmiennych współbieżnie, istnieje jednak możliwość big wyścigu. Mimo że używasz blokad synchronizujący dostęp do zmiennej, kosztów synchronizacji może pogarszać wydajność. Dlatego zalecamy można uniknąć, lub co najmniej ograniczyć dostęp do udostępniania stanu w zapytaniu PLINQ możliwie.  
+## <a name="avoid-writing-to-shared-memory-locations"></a>Należy unikać pisania do lokalizacji udostępnionej pamięci  
+ W kodzie sekwencyjnych nie jest niczym niezwykłym, aby odczytać lub zapisać zmienne statyczne lub pola klasy. Zawsze, gdy wiele wątków uzyskują dostęp do takich zmiennych jednocześnie, istnieje jednak duże prawdopodobieństwo jednoczesnego wyścigu. Mimo że blokad służy do synchronizowania dostępu do zmiennej, koszt synchronizacji może obniżyć wydajność. Dlatego zaleca się że uniknąć, lub co najmniej ograniczyć, dostęp do udostępnionego stanu w możliwie zapytanie PLINQ.  
   
-## <a name="avoid-over-parallelization"></a>Unikaj nadmiernego Paralelizacja  
- Za pomocą `AsParallel` operatora ponoszenia kosztów partycjonowania kolekcji źródłowej i synchronizowanie wątków roboczych. Korzyści równoległości dalsze są ograniczone przez liczbę procesorów w komputerze. Nie ma żadnych przyspieszenie, które można uzyskać, uruchamiając wiele wątków wiązaniem obliczeń w tylko jednym procesorze. W związku z tym należy uważać, aby nie nadmiernie parallelize zapytania.  
+## <a name="avoid-over-parallelization"></a>Unikaj nadmiernego przetwarzania równoległego  
+ Za pomocą `AsParallel` operatora ponosić kosztów ogólnych partycjonowania kolekcji źródłowej i synchronizacji wątków roboczych. Korzyści wynikające z przetwarzaniem równoległym dalsze są ograniczone przez liczbę procesorów w komputerze. Nie ma żadnych przyspieszenie, które można uzyskać, uruchamiając wiele wątków powiązany obliczeniowych w tylko jednym procesorze. W związku z tym należy uważać, aby nie nadmiernie równoległe przetwarzanie zapytania.  
   
- Najbardziej typowy scenariusz, w które nadmierne paralelizacja może wystąpić jest zapytania zagnieżdżone, jak pokazano w poniższy fragment kodu.  
+ Najbardziej typowym scenariuszem, w których nadmiernego przetwarzania równoległego może wystąpić trwa zapytań zagnieżdżonej, jak pokazano w poniższym fragmencie kodu.  
   
  [!code-csharp[PLINQ#20](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#20)]
  [!code-vb[PLINQ#20](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#20)]  
   
- W takim przypadku warto parallelize tylko zewnętrzne źródło danych (klienci), chyba że zastosowanie co najmniej jeden z następujących warunków:  
+ W takim przypadku najlepiej zrównoleglić tylko zewnętrznym źródle danych (klientów), chyba że zastosować co najmniej jeden z następujących warunków:  
   
 -   Źródło danych wewnętrzny (odbiorcy. Zamówienia) jest uznany za długa.  
   
--   Kosztowna obliczenia są wykonywane na każdej kolejności. (Operacja pokazano w przykładzie nie jest kosztowna).  
+-   Kosztowne obliczenia są wykonywane na każde zamówienie. (Operacja pokazano w przykładzie nie jest kosztowna).  
   
--   System docelowy jest znana wystarczającą do obsługi liczby wątków, które zostaną utworzone przez parallelizing zapytanie na procesorów `cust.Orders`.  
+-   System docelowy jest znana wystarczającej liczby procesorów, którą należy obsługiwać liczbę wątków, które zostaną wygenerowane przez zrównoleglić zapytanie na `cust.Orders`.  
   
- We wszystkich przypadkach najlepszy sposób, aby ustalić optymalne zapytania kształtu jest do testowania i miar. Aby uzyskać więcej informacji, zobacz [porady: wydajności zapytań PLINQ miary](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
+ We wszystkich przypadkach najlepszym sposobem określenia kształtu optymalne zapytania jest do testowania i miar. Aby uzyskać więcej informacji, zobacz [jak: wydajności zapytań PLINQ miary](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
   
-## <a name="avoid-calls-to-non-thread-safe-methods"></a>Unikaj wywołania metod innych niż wątkowo  
- Zapisywanie do metod innych niż wątkowo wystąpienia z PLINQ zapytanie może doprowadzić do uszkodzenia danych, które mogą lub nie mogą zostać wykryte w programie. Również może prowadzić do wyjątków. W poniższym przykładzie, wiele wątków czy próba wywołania `Filestream.Write` metody równocześnie, który nie jest obsługiwany przez klasę.  
+## <a name="avoid-calls-to-non-thread-safe-methods"></a>Należy unikać wywołania metod innych niż wątkowo  
+ Zapisywanie metod wystąpienia innych wątkowo z PLINQ zapytania może prowadzić do uszkodzenia danych, które mogą lub nie może być wykryte w programach. Może to również prowadzić do wyjątków. W poniższym przykładzie wielu wątków będzie próba wywołania `Filestream.Write` metoda równocześnie, które nie jest obsługiwane przez klasę.  
   
 ```vb  
 Dim fs As FileStream = File.OpenWrite(…)  
@@ -57,29 +57,29 @@ FileStream fs = File.OpenWrite(...);
 a.Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));  
 ```  
   
-## <a name="limit-calls-to-thread-safe-methods"></a>Limit wywołania metod obsługujące wielowątkowość  
- Najbardziej statycznej metody w programie .NET Framework są wątkowo i może zostać wywołana z wiele wątków jednocześnie. Jednak nawet w takich przypadkach zaangażowanych synchronizacji może prowadzić do znaczne spowolnienie w zapytaniu.  
+## <a name="limit-calls-to-thread-safe-methods"></a>Ogranicz wywołania metod metodą o bezpiecznych wątkach  
+ Najbardziej statycznych metod .NET Framework są odporne na wątki i może być wywoływana z wielu wątków jednocześnie. Jednak nawet w takich przypadkach zaangażowane synchronizacji może prowadzić do znaczne spowolnienie w zapytaniu.  
   
 > [!NOTE]
->  Można przetestować tego samodzielnie przez wstawienie pewnych wywołań <xref:System.Console.WriteLine%2A> zapytania. Mimo że ta metoda jest używana w przykładach dokumentacji dla celów demonstracyjnych, nie należy go używać zapytania dotyczące technologii PLINQ i.  
+>  Możesz sprawdzić to samodzielnie, wstawiając wywołania niektórych <xref:System.Console.WriteLine%2A> w zapytaniach. Chociaż ta metoda jest używana w przykładach dokumentacji w celach demonstracyjnych, nie należy używać go w zapytania PLINQ.  
   
-## <a name="avoid-unnecessary-ordering-operations"></a>Unikaj niepotrzebnych operacji kolejności  
- Podczas PLINQ zapytania równolegle, dzieli sekwencji źródłowej na partycje, które może być obsługiwany przez jednocześnie na wielu wątków. Domyślnie nie jest przewidywalnej kolejności partycje są przetwarzane i wyniki są dostarczane (z wyjątkiem operatorów, takich jak `OrderBy`). Możesz wydać PLINQ w celu zachowania kolejności żadnych sekwencji źródłowej, ale ma negatywny wpływ na wydajność. Najlepszym rozwiązaniem, jeśli to możliwe, jest struktura zapytania tak, aby nie należy polegać na zachowanie porządku. Aby uzyskać więcej informacji, zobacz [zamawianie zachowywania w PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).  
+## <a name="avoid-unnecessary-ordering-operations"></a>Unikaj niepotrzebnych operacji porządkowanie  
+ Gdy PLINQ jest wykonywane zapytania równolegle, dzieli sekwencję źródłową na partycje, które mogą być stosowane jednocześnie w wielu wątkach. Domyślnie nie jest przewidywalne kolejności, w którym partycje są przetwarzane, a wyniki są dostarczane (z wyjątkiem operatorów, takich jak `OrderBy`). Możesz nakazać PLINQ dla zachowania kolejności sekwencji dowolnego źródła, ale ma negatywny wpływ na wydajność. Najlepszym rozwiązaniem jest zawsze, gdy jest to możliwe, jest struktura zapytania, aby nie należy polegać na porządku. Aby uzyskać więcej informacji, zobacz [zamawianie zachowywania w PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).  
   
-## <a name="prefer-forall-to-foreach-when-it-is-possible"></a>ForAll — wolą ForEach, gdy jest to możliwe  
- Chociaż PLINQ wykonuje zapytanie na wiele wątków, jeśli korzystanie z powoduje `foreach` pętli (`For Each` w języku Visual Basic), a następnie wyniki zapytania musi być scalone jeden wątek i szeregowe używane przez moduł wyliczający. W niektórych przypadkach jest to nieuniknione; Jednak jeśli to możliwe, użyj `ForAll` metodę umożliwiającą włączenie każdy wątek do wyjściowego własną wyników, na przykład, wpisując je do kolekcji wątkowo takich jak <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>.  
+## <a name="prefer-forall-to-foreach-when-it-is-possible"></a>Wolisz ForAll ForEach, gdy jest to możliwe  
+ Mimo że PLINQ wykonuje zapytanie w wielu wątkach, jeśli wykorzystasz wyniki w `foreach` pętli (`For Each` w języku Visual Basic), a następnie wyniki zapytania musi być scalana z powrotem do jednego wątku i szeregowo uzyskiwał dostęp do modułu wyliczającego. W niektórych przypadkach jest nieuniknione; Jednak w miarę możliwości należy użyć `ForAll` metodę umożliwiającą włączenie każdy wątek w danych wyjściowych swój własny wyników, na przykład, przez napisanie kolekcji metodą o bezpiecznych wątkach, takich jak <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>.  
   
- Ten sam problem dotyczy <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> innymi słowy, `source.AsParallel().Where().ForAll(...)` powinny być silnie preferowana względem  
+ Ten sam problem dotyczy <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> innymi słowy, `source.AsParallel().Where().ForAll(...)` powinny być silnie preferowany dla wiadomości  
   
  `Parallel.ForEach(source.AsParallel().Where(), ...)`.  
   
-## <a name="be-aware-of-thread-affinity-issues"></a>Należy pamiętać o problemy koligacji wątku  
- Niektóre technologie, na przykład współdziałanie COM dla składników Single-Threaded Apartment (STA), formularze systemu Windows i Windows Presentation Foundation (WPF), nakładają ograniczenia koligacji wątków, które wymagają kodu do uruchomienia na konkretnym wątkiem. Na przykład w formularzach systemu Windows i WPF formantu można uzyskać tylko w wątku, w którym został utworzony. Jeśli spróbujesz uzyskać dostępu do udostępnionych stan formantu formularzy systemu Windows w zapytaniu PLINQ jest zgłoszony wyjątek, jeśli używasz w debugerze. (To ustawienie można wyłączyć.) Jednak zapytania jest używany w wątku interfejsu użytkownika, następnie można przejść do formantu z `foreach` wyników pętli, które wylicza zapytania, ponieważ ten kod wykonywany tylko jednego wątku.  
+## <a name="be-aware-of-thread-affinity-issues"></a>Należy pamiętać o problemów koligacji wątku  
+ Niektóre technologie, na przykład współdziałanie COM dla składników Single-Threaded apartamentu (STA), Windows Forms i Windows Presentation Foundation (WPF), nakładają ograniczenia koligacji wątku, które wymagają kod wymagany do uruchomienia w określonym wątku. Na przykład w Windows Forms i WPF formant może zostać oceniony jedynie w wątku, na którym została utworzona. Jeśli zostanie podjęta próba dostępu do udostępnionego stanu formantu Windows Forms w zapytaniu PLINQ, zgłaszany jest wyjątek, jeśli są uruchomione w debugerze. (To ustawienie może być wyłączone.) Jednak jeśli zapytanie jest używany przez wątek interfejsu użytkownika, tak powstały formant z `foreach` wyników pętli, która wylicza zapytania, ponieważ ten kod jest wykonywany tylko jednego wątku.  
   
-## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Nie należy zakładać, że iteracji ForEach, dla i ForAll — zawsze wykonywanie równoległe  
- Należy pamiętać, że poszczególne iteracji w <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> lub <xref:System.Linq.ParallelEnumerable.ForAll%2A> pętla może, ale nie ma potrzeby wykonywania równolegle. W związku z tym należy unikać pisania kodu, który jest zależny pod kątem poprawności na wykonywanie równoległe iteracji lub wykonywania iteracji w określonej kolejności.  
+## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Nie należy zakładać, że iteracji ForEach, dla i równolegle uruchomić zawsze ForAll  
+ Ważne jest, aby pamiętać, że poszczególnych iteracji w <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> lub <xref:System.Linq.ParallelEnumerable.ForAll%2A> pętli może, ale nie trzeba wykonywać równolegle. W związku z tym należy unikać pisania żadnego kodu, który zależy od pod kątem poprawności na równoległe wykonywanie iteracji lub wykonywania iteracji w określonej kolejności.  
   
- Na przykład ten kod prawdopodobnie zakleszczenie:  
+ Na przykład ten kod jest prawdopodobnie zakleszczenie:  
   
 ```vb  
 Dim mre = New ManualResetEventSlim()  
@@ -115,9 +115,10 @@ ManualResetEventSlim mre = new ManualResetEventSlim();
             }); //deadlocks  
 ```  
   
- W tym przykładzie iteracji jednego ustawia zdarzenie, a wszystkie inne iteracji oczekiwania na zdarzenie. Brak iteracji oczekiwania można wykonać dopiero po ukończeniu iteracji ustawienie zdarzenia. Jednak jest możliwe, że iteracji oczekiwania Blokuj wszystkie wątki, które są używane do wykonywania pętli równoległej, przed iteracji ustawienie zdarzenia miał możliwość wykonania. Powoduje to zakleszczenie — nigdy nie wykona iteracji ustawienie zdarzenia i nigdy nie wzbudzania iteracji oczekiwania.  
+ W tym przykładzie jednej iteracji ustawia zdarzenie, a wszystkie inne iteracje oczekiwania na zdarzenie. Brak iteracji oczekiwania można wykonać przed ukończeniem iteracji ustawienie zdarzenia. Jednak jest możliwe, że iteracji oczekujące blokuje wszystkie wątki, które są używane do wykonywania pętli równoległej, zanim iteracji ustawienie zdarzenia miała szansę, aby wykonać. Skutkuje to zakleszczenie — iteracji ustawienie zdarzenia nigdy nie zostanie wykonana i iteracje oczekiwania nigdy nie będzie wznawiania.  
   
- W szczególności jeden iteracji pętli równoległej nigdy nie należy czekać na inny iteracji pętli postęp. Jeśli równoległej pętli decyduje się na Planowanie iteracji sekwencyjnie, ale w kolejności przeciwnej, nastąpi zakleszczenie.  
+ W szczególności jednej iteracji pętli równoległej nigdy nie należy czekać na innej iteracji pętli postępu. Jeśli pętli równoległej decyduje zaplanować iteracje kolejno, ale w kolejności przeciwnej, nastąpi zakleszczenia.  
   
-## <a name="see-also"></a>Zobacz też  
- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
 ms.openlocfilehash: 5465238e4b9deaa13c76cb35122fcaded7acd7f7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736662"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864842"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>Element SqlDependency w aplikacji ASP.NET
 W przykładzie w tej sekcji pokazano sposób użycia <xref:System.Data.SqlClient.SqlDependency> pośrednio, wykorzystując platformę ASP.NET <xref:System.Web.Caching.SqlCacheDependency> obiektu. <xref:System.Web.Caching.SqlCacheDependency> Obiektu używa <xref:System.Data.SqlClient.SqlDependency> do nasłuchiwania powiadomień i poprawnie zaktualizować pamięci podręcznej.  

@@ -3,11 +3,11 @@ title: Działanie RangeEnumeration
 ms.date: 03/30/2017
 ms.assetid: ca5b78f4-94fa-4aa7-830d-26039ac422c8
 ms.openlocfilehash: c9cf522227620422b414adc26cbc0bf338bf57d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556295"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868721"
 ---
 # <a name="rangeenumeration-activity"></a>Działanie RangeEnumeration
 W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, który iteruje po kolekcji liczb. W poniższej tabeli przedstawiono główne pliki zawarte w przykładzie.  

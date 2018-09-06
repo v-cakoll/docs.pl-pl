@@ -3,11 +3,11 @@ title: Zestawy danych ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 ms.openlocfilehash: e4f2aeca72404379a9cebbfacda77f98a9e85bf3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565097"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43859494"
 ---
 # <a name="adonet-datasets"></a>Zestawy danych ADO.NET
 <xref:System.Data.DataSet> Obiekt ma decydujące znaczenie dla obsługi odłączony, rozproszone scenariusze danych za pomocą [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. **DataSet** jest rezydentnego reprezentację danych, które zapewnia spójny model programowania relacyjnych niezależnie od tego źródła danych. Mogą być używane z wieloma i różnymi źródłami danych z danymi XML lub do zarządzania danymi lokalne dla aplikacji. **DataSet** przedstawia kompletny zestaw danych, w tym powiązane tabele, ograniczenia i relacje między tabelami. Poniższa ilustracja przedstawia **DataSet** modelu obiektów.  

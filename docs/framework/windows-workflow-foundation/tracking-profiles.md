@@ -3,11 +3,11 @@ title: Profile śledzenia
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
 ms.openlocfilehash: 6651b79a474125f57c1cad773ae858dc7654d58a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532526"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861835"
 ---
 # <a name="tracking-profiles"></a>Profile śledzenia
 Śledzenie profile zawiera śledzenia zapytań, pozwalające uczestnikiem śledzenia do subskrybowania zdarzenia przepływu pracy, które są emitowane po zmianie stanu wystąpienia przepływu pracy w czasie wykonywania.  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
 ms.openlocfilehash: dcde8507eb033d0a47d5c5d3fa36176cd63b0856
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556321"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861793"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource — dyrektywa
 Wskazuje mapowanie między poszczególne wiersze kodu źródłowego, a tekstem zewnętrznym do źródła.  

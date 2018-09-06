@@ -1,21 +1,21 @@
 ---
-title: 'Porady: generowanie pliki tekstowe z pliku XML (C#)'
+title: 'Porady: generowanie plików tekstowych z pliku XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 05d1edfc236bf7fa9a6e2fffd270384d3ce1aaec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e0c57b1fa16bb1b92cabaf4afa7ff7bf40824bd
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316481"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874013"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>Porady: generowanie pliki tekstowe z pliku XML (C#)
-Ten przykład przedstawia sposób generowania pliku wartości rozdzielanych przecinkami (CSV) z pliku XML.  
+# <a name="how-to-generate-text-files-from-xml-c"></a>Porady: generowanie plików tekstowych z pliku XML (C#)
+W tym przykładzie pokazano, jak można wygenerować pliku wartości rozdzielanych przecinkami (CSV) z pliku XML.  
   
 ## <a name="example"></a>Przykład  
- Wersja języka C# w tym przykładzie jest używana składnia metody i `Aggregate` operatora, aby wygenerować plik CSV z dokumentu XML w jedno wyrażenie. Aby uzyskać więcej informacji, zobacz [składnia zapytania a składnia metody w technologii LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+ Wersja języka C#, w tym przykładzie jest używana składnia metody a `Aggregate` operatora, aby wygenerować plik CSV z dokumentu XML w jednym wyrażeniu. Aby uzyskać więcej informacji, zobacz [składnia zapytania a składnia metody w technologii LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -53,5 +53,6 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Projekcje i przekształcenia (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Projekcje i przekształcenia (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

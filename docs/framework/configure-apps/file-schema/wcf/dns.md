@@ -3,11 +3,11 @@ title: '&lt;DNS&gt;'
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
 ms.openlocfilehash: 2f5b9d5e1bc57230adbb32664e9ae15d3c71d46f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732625"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862481"
 ---
 # <a name="ltdnsgt"></a>&lt;DNS&gt;
 Określa oczekiwaną tożsamość serwera. Ta tożsamość jest nieprawidłowa dla X509 tryb uwierzytelniania certyfikatu, jeśli certyfikat serwera zawiera DNS z taką samą wartość. Ma również zastosowanie do tryb uwierzytelniania Windows, jeśli nazwa SPN ma taką samą wartość.  

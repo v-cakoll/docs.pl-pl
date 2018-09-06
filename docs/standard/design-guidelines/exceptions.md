@@ -1,5 +1,5 @@
 ---
-title: Wskazówek dotyczących wyjątków
+title: Wytyczne dotyczące projektowania dla wyjątków
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b27615ef16aa69e18d82cb97f4751dc92d2ec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570606"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876638"
 ---
-# <a name="design-guidelines-for-exceptions"></a>Wskazówek dotyczących wyjątków
-Obsługa wyjątków ma wiele zalet w porównaniu z raportowania błędów na podstawie wartości zwracane. Projektowanie dobrej framework pomaga Deweloper aplikacji wykorzystać zalety wyjątków. W tej sekcji omówiono wyjątków zalet i przedstawia wskazówki dotyczące używania ich skutecznie.  
+# <a name="design-guidelines-for-exceptions"></a>Wytyczne dotyczące projektowania dla wyjątków
+Obsługa wyjątków ma wiele zalet za pośrednictwem raportowania błędów na podstawie wartości powrotu. Dobre framework projektu pomaga Deweloper aplikacji korzystać z zalet wyjątków. W tej sekcji omówiono korzyści wynikające z wyjątków i przedstawiono wskazówki dotyczące skutecznego korzystania z nich.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Zgłaszanie wyjątku](../../../docs/standard/design-guidelines/exception-throwing.md)  
@@ -26,7 +26,8 @@ Obsługa wyjątków ma wiele zalet w porównaniu z raportowania błędów na pod
  [Wyjątki i wydajność](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

@@ -2,12 +2,12 @@
 title: 'Porady: odczytywanie danych o obiektach z pliku XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: be6e895d13bc5121f4818736079f6d77c046fd06
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535604"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872121"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Porady: odczytywanie danych o obiektach z pliku XML (C#)
 W tym przykładzie odczytuje dane obiektów, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  

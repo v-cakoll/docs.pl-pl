@@ -9,11 +9,11 @@ helpviewer_keywords:
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
 ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741334"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871809"
 ---
 # <a name="-operator-c-reference"></a>+ — Operator (odwołanie w C#)
 `+` Operator może działać jako jednoargumentowy lub binarny.  

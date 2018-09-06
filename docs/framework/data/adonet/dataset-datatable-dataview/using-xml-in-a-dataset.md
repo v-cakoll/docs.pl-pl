@@ -3,11 +3,11 @@ title: Za pomocą języka XML w zestawie danych
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
 ms.openlocfilehash: cbdc6135a819e2141426f432d163cd49a7b78ac4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489880"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856442"
 ---
 # <a name="using-xml-in-a-dataset"></a>Za pomocą języka XML w zestawie danych
 Za pomocą narzędzia ADO.NET można wypełnić <xref:System.Data.DataSet> ze strumienia XML lub dokumentu. Można użyć strumień XML lub dokument Dostarcz je do <xref:System.Data.DataSet> danych, informacje o schemacie lub obu. Informacje dostarczone z strumień XML lub dokumentu może być łączone z istniejące dane lub informacje o schemacie już istnieje w <xref:System.Data.DataSet>.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77dcdc95e0ca9d570c896fb036e0577f0475e164
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: b66881a8a42c0c34b5c2119f7404fe7787c8f3f2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42752165"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875771"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Wstrzymywanie i przerywanie wątków
 
@@ -49,10 +49,11 @@ Najbardziej typowych sposobów do synchronizowania działania wątki są bloku i
   
 -   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> Wznawia działanie wątku z dowolnym oczekiwania, mogą powodować i powoduje, że <xref:System.Threading.ThreadAbortException> zostanie wygenerowany w wątku. Aby uzyskać więcej informacji, zobacz [niszczenie wątków](../../../docs/standard/threading/destroying-threads.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadInterruptedException>  
- <xref:System.Threading.ThreadAbortException>  
- [Wątkowość](../../../docs/standard/threading/index.md)  
- [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)  
- [Przegląd elementów podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadInterruptedException>  
+- <xref:System.Threading.ThreadAbortException>  
+- [Wątkowość](../../../docs/standard/threading/index.md)  
+- [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [Przegląd elementów podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md)

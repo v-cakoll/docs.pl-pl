@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998469"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875590"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory i WSTrustChannel
 Jeśli znasz już za pomocą programu Windows Communication Foundation (WCF), wiesz, klienta programu WCF jest już pamiętać federacji. Konfigurując klienta programu WCF za pomocą <xref:System.ServiceModel.WSFederationHttpBinding> lub podobne niestandardowe powiązanie, aby umożliwić uwierzytelnianie Sfederowane z usługą.  
@@ -24,7 +24,7 @@ Jeśli znasz już za pomocą programu Windows Communication Foundation (WCF), wi
   
 -   Włączania środowiska WIF na klienta programu WCF do Wstawianie elementu ActAs lub OnBehalfOf RST do usługi STS  
   
--   Przy użyciu programu WIF samodzielnie uzyskać token z usługi STS, a następnie Włącz klienta programu WCF do uwierzytelniania za pomocą tego tokenu. Aby uzyskać więcej informacji, zobacz [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) próbki.  
+-   Przy użyciu programu WIF samodzielnie uzyskać token z usługi STS, a następnie Włącz klienta programu WCF do uwierzytelniania za pomocą tego tokenu. Aby uzyskać więcej informacji, zobacz [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) próbki.  
   
  Pierwszy scenariusz jest oczywista: WCF istniejący klienci będą nadal działać z jednostki uzależnionej stron programu WIF i usługi STS. W tym temacie omówiono dwa pozostałe scenariusze.  
   

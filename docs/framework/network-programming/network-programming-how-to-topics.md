@@ -11,11 +11,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 703d3c2260f46f46e85831f809386d5a3af647a4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731290"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873722"
 ---
 # <a name="network-programming-how-to-topics"></a>Tematy porad programowanie dla sieci
 Poniższa lista zawiera łącza do tematów instrukcje w dokumentacji koncepcyjnej programowanie dla sieci.  

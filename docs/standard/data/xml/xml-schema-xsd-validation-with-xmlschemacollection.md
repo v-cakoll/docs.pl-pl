@@ -1,5 +1,5 @@
 ---
-title: Sprawdzanie poprawności schematu (XSD) XML z kolekcji XmlSchemaCollection
+title: Walidacja schematu (XSD) XML przy użyciu klasy XmlSchemaCollection
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,20 +8,20 @@ dev_langs:
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6505229d96c6f27452776403a6e1f997dc5a8b10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c570f812ec06c6ead0d12dc14c33fcdfd1f075c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572200"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871640"
 ---
-# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Sprawdzanie poprawności schematu (XSD) XML z kolekcji XmlSchemaCollection
-Można użyć <xref:System.Xml.Schema.XmlSchemaCollection> do sprawdzania poprawności względem schematu XML definition language (XSD) schematów dokumentu XML. <xref:System.Xml.Schema.XmlSchemaCollection> Zwiększa wydajność dzięki przechowywaniu w kolekcji schematów, aby nie były załadowane do pamięci występuje każdego sprawdzania poprawności czasu. Jeśli schemat istnieje w kolekcji schematów `schemaLocation` atrybut służy do wyszukiwania schematu w kolekcji.  
+# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Walidacja schematu (XSD) XML przy użyciu klasy XmlSchemaCollection
+Możesz użyć <xref:System.Xml.Schema.XmlSchemaCollection> do weryfikowania dokumentu XML względem schematów języka (XSD) definicji schematu XML. <xref:System.Xml.Schema.XmlSchemaCollection> Zwiększa wydajność dzięki przechowywaniu schematów w kolekcji, aby nie były ładowane do pamięci występuje każdego sprawdzania poprawności czasu. Jeśli schemat istnieje w kolekcji schematów `schemaLocation` atrybut jest używany w celu wyszukania schematu w kolekcji.  
   
 > [!IMPORTANT]
->  <xref:System.Xml.Schema.XmlSchemaCollection> Klasy jest teraz przestarzałe i zostało zastąpione <xref:System.Xml.Schema.XmlSchemaSet> klasy. Aby uzyskać więcej informacji na temat <xref:System.Xml.Schema.XmlSchemaSet> , zobacz klasy [XmlSchemaSet kompilowania schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  <xref:System.Xml.Schema.XmlSchemaCollection> Klasa jest obecnie przestarzały i został zastąpiony <xref:System.Xml.Schema.XmlSchemaSet> klasy. Aby uzyskać więcej informacji na temat <xref:System.Xml.Schema.XmlSchemaSet> , zobacz klasę [klasa XmlSchemaSet na potrzeby kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
- W poniższym przykładzie pokazano element główny pliku danych.  
+ Poniższy przykład pokazuje element główny pliku danych.  
   
 ```xml  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
@@ -30,9 +30,9 @@ Można użyć <xref:System.Xml.Schema.XmlSchemaCollection> do sprawdzania popraw
     targetNamespace="urn:bookstore-schema">  
 ```  
   
- W tym przykładzie wartość `targetNamespace` atrybutu `urn:bookstore-schema`, która jest w tej samej przestrzeni nazw, która jest używana podczas dodawania schematu do <xref:System.Xml.Schema.XmlSchemaCollection>.  
+ W tym przykładzie wartość `targetNamespace` atrybut jest `urn:bookstore-schema`, który jest w tej samej przestrzeni nazw, która jest używana podczas dodawania schemat <xref:System.Xml.Schema.XmlSchemaCollection>.  
   
- Poniższy przykładowy kod dodaje schematu XML do <xref:System.Xml.Schema.XmlSchemaCollection>.  
+ Poniższy przykład kodu dodaje schematu XML do <xref:System.Xml.Schema.XmlSchemaCollection>.  
   
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
@@ -52,9 +52,9 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- `targetNamespace` Atrybut jest zwykle używany podczas dodawania `namespaceURI` właściwości w <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> metodę <xref:System.Xml.Schema.XmlSchemaCollection>. Odwołanie o wartości null można określić przed dodaniem schemat <xref:System.Xml.Schema.XmlSchemaCollection>. Ciąg pusty ("") powinny być używane do schematów bez przestrzeni nazw. <xref:System.Xml.Schema.XmlSchemaCollection> Może mieć tylko jeden schemat bez przestrzeni nazw.  
+ `targetNamespace` Atrybutu jest zazwyczaj używana podczas dodawania `namespaceURI` właściwość <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> metodę <xref:System.Xml.Schema.XmlSchemaCollection>. Odwołanie o wartości null można określić przed dodaniem schemat <xref:System.Xml.Schema.XmlSchemaCollection>. Ciąg pusty ("") powinna być używana dla schematy bez przestrzeni nazw. <xref:System.Xml.Schema.XmlSchemaCollection> Może mieć tylko jeden schemat bez przestrzeni nazw.  
   
- Poniższy przykładowy kod dodaje do schematu XML HeadCount.xsd, <xref:System.Xml.Schema.XmlSchemaCollection> i sprawdza poprawność HeadCount.xml.  
+ Poniższy przykład kodu dodaje do schematu XML HeadCount.xsd, <xref:System.Xml.Schema.XmlSchemaCollection> i sprawdza poprawność HeadCount.xml.  
   
 ```vb  
 Imports System  
@@ -125,7 +125,7 @@ namespace ValidationSample
 }  
 ```  
   
- Poniżej opisano zawartość pliku wejściowego HeadCount.xml do sprawdzenia poprawności.  
+ Poniżej opisano zawartość pliku wejściowego HeadCount.xml ma zostać zweryfikowana.  
   
 ```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
@@ -149,7 +149,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- Poniższy przykład kodu tworzy <xref:System.Xml.XmlValidatingReader> pobierającej <xref:System.Xml.XmlTextReader>. Plik wejściowy, sample4.xml, sprawdzania poprawności względem schematu XML sample4.xsd.  
+ Poniższy przykład kodu tworzy <xref:System.Xml.XmlValidatingReader> przyjmującej <xref:System.Xml.XmlTextReader>. Plik wejściowy, sample4.xml, jest weryfikowane względem schematu XML sample4.xsd.  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -173,7 +173,7 @@ while(vr.Read()) {
     }  
 ```  
   
- Poniżej opisano zawartość pliku wejściowego sample4.xml do sprawdzenia poprawności.  
+ Poniżej opisano zawartość pliku wejściowego sample4.xml ma zostać zweryfikowana.  
   
 ```xml  
 <datatypes xmlns="datatypesTest">  
@@ -208,8 +208,9 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.XmlParserContext>  
- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
- [Kompilacja schematu a klasa XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Xml.XmlParserContext>  
+- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
+- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
+- [Kompilacja schematu a klasa XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

@@ -1,18 +1,17 @@
 ---
 title: 'Pętle: while...do — Wyrażenie (F#)'
-description: Zobacz temat jak podczas... czy wyrażenie jest używana do wykonywania iteracji wykonywania (zapętlenia), podczas testu określony warunek jest spełniony.
+description: Zobacz jak podczas... zrobić wyrażenie jest używany do wykonywania iteracji wykonywanie (pętli), gdy spełniony jest warunek określony test.
 ms.date: 05/16/2016
-ms.openlocfilehash: e3198246e44bbb11b226f04da6795f3da22626e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562235"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868597"
 ---
 # <a name="loops-whiledo-expression"></a>Pętle: while...do — Wyrażenie
 
-`while...do` Wyrażenie służy do wykonywania iteracji wykonywania (zapętlenia), podczas testu określony warunek jest spełniony.
-
+`while...do` Wyrażenie jest używany do wykonywania iteracji wykonywanie (pętli), gdy spełniony jest warunek określony test.
 
 ## <a name="syntax"></a>Składnia
 
@@ -22,26 +21,25 @@ while test-expression do
 ```
 
 ## <a name="remarks"></a>Uwagi
-*Testu wyrażenie* jest oceniany; Jeśli `true`, *treść wyrażenia* jest wykonywany i ponownie obliczyć wyrażenia testu. *Treść wyrażenia* musi mieć typ `unit`. Jeśli wyrażenie testu jest `false`, zakończenia iteracji.
 
-Poniższy przykład przedstawia użycie `while...do` wyrażenia.
+*Wyrażeniu testowym* jest oceniany; Jeśli `true`, *wyrażenie treści* jest wykonywane i ponownie obliczone wyrażenie testu. *Wyrażenie treści* musi mieć typ `unit`. Jeśli wyrażenie testu jest `false`, zakończenia iteracji.
+
+Poniższy przykład ilustruje użycie `while...do` wyrażenia.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5301.fs)]
 
-Dane wyjściowe poprzedniego kodu jest strumień losowych liczb od 1 do 20, ostatni wynosi 10.
+Dane wyjściowe poprzedniego kodu jest strumienia liczb losowych z zakresu od 1 do 20, za ostatni wynosi 10.
 
 ```
 13 19 8 18 16 2 10
 Found a 10!
 ```
 
->[!NOTE] 
-Można użyć `while...do` w wyrażeniach sekwencji i inne wyrażenia obliczeń, w którym to przypadku dostosowaną wersję `while...do` wyrażenie jest używane. Aby uzyskać więcej informacji, zobacz [sekwencji](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia obliczeń](computation-expressions.md).
+>[!NOTE]
+Możesz użyć `while...do` w sekwencji, wyrażenia i inne wyrażenia obliczeń, w którym to przypadku dostosowaną wersję `while...do` wyrażenie jest używane. Aby uzyskać więcej informacji, zobacz [sekwencje](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia obliczeń](computation-expressions.md).
 
+## <a name="see-also"></a>Zobacz także
 
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
-
-[Pętle: `for...in` wyrażenia](loops-for-in-expression.md)
-
-[Pętle: `for...to` wyrażenia](loops-for-to-expression.md)
+- [Dokumentacja języka F#](index.md)
+- [Pętle: `for...in` wyrażenia](loops-for-in-expression.md)
+- [Pętle: `for...to` wyrażenia](loops-for-to-expression.md)

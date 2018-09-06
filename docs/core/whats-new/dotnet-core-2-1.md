@@ -4,12 +4,12 @@ description: Dowiedz się więcej o nowych funkcjach w programie .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 850df87666c5beb0594f0672d8f558c11653f973
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537912"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875360"
 ---
 # <a name="whats-new-in-net-core-21"></a>What's new in .NET Core 2.1
 
@@ -121,6 +121,7 @@ Publikowanie niezależne opiera się na wersje środowiska uruchomieniowego w wi
 
 Przy użyciu zestawu .NET Core 2.0 SDK, samodzielne aplikacje są publikowane w środowisku uruchomieniowym .NET Core 2.0.0 chyba że inna wersja jest określona za pomocą `RuntimeFrameworkVersion` właściwości. Za pomocą to nowe zachowanie nie jest już należy ustawić tę właściwość, aby wybrać wyższą wersję środowiska uruchomieniowego niezależna aplikacji. To najłatwiejsza metoda przechodzenia do przodu jest zawsze publikowanie przy użyciu zestawu SDK platformy .NET Core 2.1 (v 2.1.300).
 
+Aby uzyskać więcej informacji, zobacz [niezależna deploymnet środowiska uruchomieniowego przenoszenia do przodu](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Windows Compatibility Pack
 
 Jeśli przeniesiesz istniejący kod z programu .NET Framework i .NET Core, możesz użyć [systemie Windows Compatibility Pack](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Zapewnia dostęp do 20 000 więcej interfejsów API, niż jest dostępnych w programie .NET Core. Te interfejsy API i obejmuje dodatkowe typy w <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw, <xref:System.Diagnostics.EventLog> klasy, usługi WMI, liczniki wydajności, usług Windows i Windows rejestru typów i członków.

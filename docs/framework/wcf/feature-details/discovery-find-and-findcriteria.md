@@ -3,11 +3,11 @@ title: Odnajdywanie — znajdowanie i kryteria znajdowania
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534038"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856003"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Odnajdywanie — znajdowanie i kryteria znajdowania
 Operacja Znajdź odnajdywania jest inicjowane przez klienta, aby dowiedzieć się, co najmniej jednej usługi i jest jednym z głównych działań podczas odnajdywania. Wykonywanie Znajdź wysyła komunikat sondowania usługi WS-Discovery za pośrednictwem sieci. Usługi, które spełniają kryteria określone odpowiedzi przy użyciu protokołu WS Discovery ProbeMatch komunikatów. Aby uzyskać więcej informacji na temat odnajdywania wiadomości zobacz [specyfikacji WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  

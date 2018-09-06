@@ -5,22 +5,22 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 75c83dc75d1c86c89169fcc54220ced2a195bfbe
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948488"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866861"
 ---
 # <a name="dependency-properties"></a>Właściwości zależności
-Właściwości zależności (DP) jest regularne właściwość, która przechowuje wartość w magazynie właściwości zamiast magazynować je w zmiennej typu (pola), na przykład.  
+Właściwości zależności (DP) jest regularne właściwość, która przechowuje wartość w magazynie właściwości zamiast przechowywania go w zmiennej typu (pola), na przykład.  
   
- Właściwości dołączone zależności jest rodzajem modelowane jako statycznej metody Get i Set "właściwości" opisujące relacje między obiektami i ich kontenery reprezentujący właściwości zależności (np. pozycja `Button` obiekt na `Panel` kontener).  
+ Właściwości dołączone zależności jest rodzajem właściwość zależności modelowane jako statyczne metody Get i Set reprezentujący "właściwości" opisujące relacje między obiektami i ich kontenerów (np. położenie `Button` obiekt `Panel` kontener).  
   
  **✓ DO** Podaj właściwości zależności, jeśli potrzebujesz właściwości do obsługi funkcji WPF, takie jak style, wyzwalaczy, wiązania z danymi, animacji, dynamicznych zasobów i dziedziczenia.  
   
-## <a name="dependency-property-design"></a>Zależności właściwości projektu  
- **✓ DO** dziedziczyć <xref:System.Windows.DependencyObject>, lub jeden z jego podtypach podczas implementowania właściwości zależności. Typ zawiera bardzo wydajny Implementacja magazynu właściwości i automatycznie obsługuje powiązanie danych WPF.  
+## <a name="dependency-property-design"></a>Projekt właściwości zależności  
+ **✓ DO** dziedziczyć <xref:System.Windows.DependencyObject>, lub jeden z jego podtypach podczas implementowania właściwości zależności. Typ dostarcza implementację bardzo wydajny Magazyn właściwości i automatycznie obsługuje powiązanie danych WPF.  
   
  **✓ DO** Podaj regularne właściwość CLR i publicznym statycznym polem tylko do odczytu przechowywania wystąpienia <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> dla każdej właściwości zależności.  
   
@@ -30,18 +30,18 @@ Właściwości zależności (DP) jest regularne właściwość, która przechowu
   
  **X DO NOT** jawnie ustawić wartości domyślnych właściwości zależności w kodzie; ustawić je w metadanych.  
   
- Jeśli jawnie ustawione wartości domyślnej właściwości, może uniemożliwić ustawiany w sposób niejawny, takie jak style tej właściwości.  
+ Jeśli jawnie ustawiono domyślną właściwość może uniemożliwić ustawiania w sposób niejawny, np. stylów tej właściwości.  
   
  **X DO NOT** umieść kod w akcesorach właściwości innych niż standardowe kodu można uzyskać dostępu do statycznego pola.  
   
- Kod nie będzie wykonanie jeśli właściwość jest ustawiona w sposób niejawny, stylów, np. ponieważ style używa pola statycznego bezpośrednio.  
+ Kod nie będzie wykonanie jeśli właściwość jest ustawiona w sposób niejawny, np. stylów, ponieważ style bezpośrednio używa statycznego pola.  
   
- **X DO NOT** zabezpieczać danych za pomocą właściwości zależności. Właściwości zależności nawet prywatne będą dostępne publicznie.  
+ **X DO NOT** zabezpieczać danych za pomocą właściwości zależności. Właściwości zależności nawet prywatne są dostępne publicznie.  
   
-## <a name="attached-dependency-property-design"></a>Zależności dołączonych właściwości projektu  
- Właściwości zależności opisane w poprzedniej sekcji reprezentują wewnętrzne właściwości typ deklarujący; na przykład `Text` właściwość jest właściwością `TextButton`, który deklaruje element. Specjalny rodzaj właściwość zależności jest właściwości dołączonych zależności.  
+## <a name="attached-dependency-property-design"></a>Zależność dołączonych właściwości projektu  
+ Właściwości zależności opisane w poprzedniej sekcji reprezentują wewnętrzne właściwości typ deklarujący; na przykład `Text` właściwość jest właściwością `TextButton`, która deklaruje ją. Specjalny rodzaj właściwość zależności jest właściwość zależności dołączone.  
   
- Klasycznym przykład dołączona właściwość <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> właściwości. Właściwość reprezentuje pozycję w kolumnie przycisk (nie siatki), ale dotyczy on tylko jeśli przycisk jest zawarty w siatce, w związku z czym jest "dołączony" do przycisków przez siatki.  
+ Klasycznym przykładem dołączoną właściwość jest <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> właściwości. Właściwość reprezentuje pozycję w kolumnie przycisku (nie siatki), ale są tylko odpowiednie, jeśli przycisk znajduje się w siatce, więc jest "dołączony" przyciski przez siatki.  
   
 ```xaml
 <Grid>  
@@ -55,7 +55,7 @@ Właściwości zależności (DP) jest regularne właściwość, która przechowu
 </Grid>  
 ```  
   
- Definicja właściwości dołączonej wygląda przede wszystkim z właściwością zależności regularnych z tą różnicą, że metody dostępu są reprezentowane przez statycznej metody Get i Set:  
+ Definicja dołączoną właściwość wygląda przede wszystkim z właściwości zależności regularnych, z tą różnicą, że metody dostępu są reprezentowane przez statycznej metody Get i Set:  
   
 ```csharp
 public class Grid {  
@@ -77,27 +77,28 @@ public class Grid {
 }  
 ```  
   
-## <a name="dependency-property-validation"></a>Sprawdzanie poprawności właściwości zależności  
- Właściwości wdrożenia często tak zwany sprawdzania poprawności. Logikę weryfikacji wykonuje podczas próby zmiany wartości właściwości.  
+## <a name="dependency-property-validation"></a>Weryfikacja właściwości zależności  
+ Właściwości wdrożenia często tak zwany sprawdzania poprawności. Logikę weryfikacji wykonuje, gdy podejmowana jest próba zmiany wartości właściwości.  
   
- Niestety metod dostępu do właściwości zależności nie mogą zawierać dowolny kod. Zamiast tego należy określić podczas rejestracji właściwości logikę weryfikacji właściwości zależności.  
+ Niestety Akcesory właściwości zależności nie mogą zawierać dowolny kod. Logika sprawdzania poprawności właściwości zależności musi zostać określone podczas rejestracji właściwości.  
   
- **X DO NOT** umieść logikę sprawdzania poprawności właściwości zależności w akcesorach właściwości. Zamiast tego należy przekazać wywołanie zwrotne weryfikacji do `DependencyProperty.Register` metody.  
+ **X DO NOT** umieść logikę sprawdzania poprawności właściwości zależności w akcesorach właściwości. Zamiast tego Przekaż wywołanie zwrotne weryfikacji, aby `DependencyProperty.Register` metody.  
   
 ## <a name="dependency-property-change-notifications"></a>Powiadomienia o zmianie właściwości zależności  
- **X DO NOT** zaimplementować Zmień logikę powiadomień w akcesorach właściwości zależności. Właściwości zależności mają wbudowane zmiany funkcji powiadomienia, używany podając wywołania zwrotnego powiadomienia zmiany do <xref:System.Windows.PropertyMetadata>.  
+ **X DO NOT** zaimplementować Zmień logikę powiadomień w akcesorach właściwości zależności. Właściwości zależności mają zmiany wbudowanych funkcji powiadomienia, używany przez dostarczenie wywołania zwrotnego powiadomienia zmiany do <xref:System.Windows.PropertyMetadata>.  
   
-## <a name="dependency-property-value-coercion"></a>Koercja wartość właściwości zależności  
- Koercja właściwości ma miejsce, gdy wartość właściwości metody ustawiającej jest modyfikowany przez metodę ustawiającą, zanim Magazyn właściwości faktycznie jest modyfikowany.  
+## <a name="dependency-property-value-coercion"></a>Przekształcenie wartości właściwości zależności  
+ Wymuszenia właściwość ma miejsce, gdy wartość właściwości metody ustawiającej jest modyfikowany przez metody ustawiającej, zanim Magazyn właściwości faktycznie jest modyfikowany.  
   
  **X DO NOT** wdrożyć logikę koercja w akcesorach właściwości zależności.  
   
- Właściwości zależności dostępna jest funkcja wbudowana koercja i może służyć podając koercja wywołanie zwrotne do `PropertyMetadata`.  
+ Właściwości zależności jest dostępna wbudowana wymuszenia i może służyć przez dostarczenie wywołanie zwrotne wymuszenia, aby `PropertyMetadata`.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
- [Często używane wzorce projektowe](../../../docs/standard/design-guidelines/common-design-patterns.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Często używane wzorce projektowe](../../../docs/standard/design-guidelines/common-design-patterns.md)

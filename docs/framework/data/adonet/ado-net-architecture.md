@@ -3,11 +3,11 @@ title: Architektura ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773399"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870318"
 ---
 # <a name="adonet-architecture"></a>Architektura ADO.NET
 Przetwarzanie danych tradycyjnie opierało się głównie na modelu opartego na połączeniach, dwuwarstwowy. Jak przetwarzanie danych coraz większym stopniu korzysta z architektury wielowarstwowej, programistów przełączenie się do odłączonego podejście, aby zapewnić lepszą skalowalność dla swoich aplikacji.  

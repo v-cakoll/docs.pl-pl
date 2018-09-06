@@ -3,11 +3,11 @@ title: Tożsamość usług — przykład
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
 ms.openlocfilehash: 8cd6688802628a484cc9fe1fc1dffa82ddecd12a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784873"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872507"
 ---
 # <a name="service-identity-sample"></a>Tożsamość usług — przykład
 Ta tożsamość usług — przykład pokazuje, jak ustawić tożsamość usługi. W czasie projektowania klient może pobrać tożsamości przy użyciu metadanych usługi, a następnie w czasie wykonywania klienta można uwierzytelnić tożsamości usługi. Pojęcie tożsamości usługi jest umożliwienie klienta do uwierzytelniania usługi przed wywołaniem dowolnej swojego działania, w tym samym ochrony klienta przed nieuwierzytelnione wywołania. Dla bezpiecznego połączenia usługi jest również uwierzytelniany poświadczeń klienta przed zezwoleniem na jego dostęp, ale nie jest celem tego przykładu. Zobacz przykłady w [klienta](../../../../docs/framework/wcf/samples/client.md) ukazują uwierzytelniania serwera.  

@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat platformy .NET Core.
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: 7b37e5ebb53302a4f477717cf49b277bab89f187
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5a8d0a45e0113afd1dbb5f243f3ed45f4bfc0760
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912124"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868586"
 ---
 # <a name="about-net-core"></a>Temat platformy .NET Core
 
@@ -31,7 +31,7 @@ Języki C#, Visual Basic i F # może służyć do pisania aplikacji i bibliotek 
 
 .NET core udostępnia interfejsy API w wielu sytuacjach należy wykonać kilka z nich:
 
-- Typy pierwotne, takie jak [ciąg] [ string] i [int][int].
+- Typy pierwotne, takie jak [bool] [ bool] i [int][int].
 - Kolekcje, takie jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> i <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Typy narzędzia, takie jak <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>, i <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Typy danych, takich jak <xref:System.Data.DataSet?displayProperty=nameWithType>, i [DbSet][dbset].
@@ -39,7 +39,7 @@ Języki C#, Visual Basic i F # może służyć do pisania aplikacji i bibliotek 
 
 .NET core zapewnia zgodność z .NET Framework oraz interfejsów API platformy Mono przez zaimplementowanie [.NET Standard](../standard/net-standard.md) specyfikacji.
 
-[string]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string
+[bool]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool
 [int]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int
 [pipelines]: https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/
 [dbset]: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/

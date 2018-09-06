@@ -9,11 +9,11 @@ ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44ca428c028f9c3ee0a5e9a087f95af627d49f25
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557353"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861130"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Silne nazewnictwo (Niezarządzany wykaz interfejsów API)
 Silnych nazw interfejsu API umożliwia klientowi do administrowania podpisywania zestawów silnymi nazwami.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 author: tdykstra
 ms.openlocfilehash: 4d9451f99b0253d0a4de6550b64fedd7fdfeda77
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558037"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862020"
 ---
 # <a name="caching-in-net-framework-applications"></a>Buforowanie w aplikacjach .NET Framework
 Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.  

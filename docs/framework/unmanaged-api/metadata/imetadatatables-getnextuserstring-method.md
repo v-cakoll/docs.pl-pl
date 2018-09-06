@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01b326765e792bf97658d951a2d5590d22eff546
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735192"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43860395"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>IMetaDataTables::GetNextUserString — Metoda
 Pobiera indeks wiersza, który zawiera następnego ciągu ustalonych w bieżącej kolumnie tabeli.  

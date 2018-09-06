@@ -17,11 +17,11 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787756"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871783"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Porady: zapewnienie pozostawania wybranego wiersza w tabeli potomnej w prawidłowym położeniu
 Często w przypadku, gdy pracujesz z powiązanie danych w formularzach Windows Forms, będą wyświetlane dane, co jest nazywany nadrzędne/podrzędne lub wzorzec/szczegół widoku. Odnosi się do scenariusza wiązania danych, których dane z tego samego źródła są wyświetlane w dwóch kontrolek. Zmienianie zaznaczenia w jednym formancie powoduje, że dane wyświetlane w drugiej kontrolce. Na przykład pierwszy formant może zawierać listę klientów i druga lista zamówień powiązanych z wybranym klientem w pierwszej kontrolce.  

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3cfaf4cf22bba445d774c653ff7797d535bcde2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398968"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868001"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Porady: konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows
 
@@ -77,8 +77,8 @@ Strumienie programu .NET Framework nie obsługują klonowania, nawet po konwersj
   [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#2)]
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Szybki Start: Odczyt i zapis pliku (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-[Omówienie aplikacji .NET dla Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-[Aplikacje .NET for Windows Store — obsługiwane interfejsy API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Szybki Start: Odczyt i zapis pliku (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+- [Omówienie aplikacji .NET dla Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+- [Aplikacje .NET for Windows Store — obsługiwane interfejsy API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  

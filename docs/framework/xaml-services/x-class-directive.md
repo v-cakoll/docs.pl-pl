@@ -11,11 +11,11 @@ helpviewer_keywords:
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
 ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565349"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856195"
 ---
 # <a name="xclass-directive"></a>x:Class — dyrektywa
 Służy do konfigurowania kompilacji znaczników XAML do dołączenia do klas częściowych między znaczników i związane z kodem. Klasy częściowe kod jest zdefiniowany w osobnym pliku kodu w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] języka, natomiast klasy częściowej znaczników jest zwykle tworzony przy generowanie kodu podczas kompilacji XAML.  

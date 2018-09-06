@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
 ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417451"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805432"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Manipulowanie XML w Visual Basic
 Możesz użyć *literałów XML* załadować XML z zewnętrznego źródła, takich jak ciąg, pliku lub strumienia. Następnie można użyć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do manipulowania XML i użyć [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] kwerendy XML.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
 ms.openlocfilehash: 5ca052dea4ee4abc866d2b02055188b0707499d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43725075"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855181"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabela jawnych konwersji liczbowych (odwołanie w C#)
 Jawna konwersja liczbowa jest używana do konwersji dowolnego typu liczbowego do dowolnego innego typu liczbowego, dla których nie ma żadnych niejawna konwersja za pomocą wyrażenia rzutowania. W poniższej tabeli przedstawiono takiej konwersji.  

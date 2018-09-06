@@ -3,11 +3,11 @@ title: Refaktoryzacja przy użyciu czystej funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555212"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866491"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refaktoryzacja przy użyciu czystej funkcji (C#)
 Poniższy przykład refactors poprzedni przykład [Refaktoryzacja przy użyciu metody rozszerzenia (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), aby używać czystej funkcji w tym przykładzie kod, aby znaleźć tekst akapitu jest przenoszony do czystych statycznej metody `ParagraphText`.  

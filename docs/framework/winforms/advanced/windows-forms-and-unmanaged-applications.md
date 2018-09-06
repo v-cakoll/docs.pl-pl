@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 81bc100c-fa49-4614-85a6-0f7ab59eac8a
 ms.openlocfilehash: bc0c848d1c92871dacab93497c674645f3ac83fe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777580"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875489"
 ---
 # <a name="windows-forms-and-unmanaged-applications"></a>Formularze systemu Windows i niezarządzane aplikacje
 Aplikacje Windows Forms i formanty może współpracować z niezarządzanych aplikacji za pomocą niektóre zastrzeżenia. Poniżej opisano scenariusze i konfiguracje obsługujące aplikacje i formanty Windows Forms oraz te, które nie obsługują.  

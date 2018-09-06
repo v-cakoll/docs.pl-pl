@@ -2,22 +2,20 @@
 title: Materiały referencyjne dotyczące języka F#
 description: 'Informacje o F # języka funkcji z tego odwołania tokeny języka, pojęć, typów, wyrażenia i obsługiwane przez kompilator konstrukcji tematów.'
 ms.date: 05/16/2016
-ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937088"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873253"
 ---
 # <a name="f-language-reference"></a>Materiały referencyjne dotyczące języka F#
 
 Ta sekcja jest odwołanie do języka F #, wielo paradygmowym językiem programowania przeznaczonych dla platformy .NET. Język F # obsługuje modele programowania funkcjonalnego, zorientowane obiektowo i imperatywnego.
 
-
 ## <a name="f-tokens"></a>Tokeny języka F #
+
 W poniższej tabeli przedstawiono tematów odwołania, które zawierają tabele słów kluczowych, symboli i literałów używane jako tokeny w języku F #.
-
-
 
 |Tytuł|Opis|
 |-----|-----------|
@@ -26,9 +24,8 @@ W poniższej tabeli przedstawiono tematów odwołania, które zawierają tabele 
 |[Literały](literals.md)|W tym artykule opisano składnię wartości literału w F # i jak określić informacje o typie dla literałów w F #.|
 
 ## <a name="f-language-concepts"></a>Pojęcia dotyczące języka F #
+
 W poniższej tabeli przedstawiono dostępne, który opisano pojęcia języka tematy referencyjne.
-
-
 
 |Tytuł|Opis|
 |-----|-----------|
@@ -38,7 +35,7 @@ W poniższej tabeli przedstawiono dostępne, który opisano pojęcia języka tem
 |[Automatyczna generalizacja](generics/automatic-generalization.md)|W tym artykule opisano ogólny konstrukcji języka F #.|
 |[Dziedziczenie](inheritance.md)|W tym artykule opisano dziedziczenie, który służy do modelowania relacji "jest a", lub subtyping w programowanie zorientowane obiektowo.|
 |[Elementy członkowskie](members/index.md)|W tym artykule opisano elementy członkowskie obiektu typów F #.|
-|[Parametry i argumenty ](Parameters-and-Arguments.md)|W tym artykule opisano obsługę języka, aby Definiowanie parametrów i przekazanie argumentów do funkcji, metody i właściwości. Zawiera informacje dotyczące sposobu przekazywania według odwołania.|
+|[Parametry i argumenty](Parameters-and-Arguments.md)|W tym artykule opisano obsługę języka, aby Definiowanie parametrów i przekazanie argumentów do funkcji, metody i właściwości. Zawiera informacje dotyczące sposobu przekazywania według odwołania.|
 |[Przeładowanie operatora](operator-overloading.md)|W tym artykule opisano sposób przeciążania operatorów arytmetycznych w klasie lub typie rekordu oraz na poziomie globalnym.|
 |[Rzutowanie i konwersje](casting-and-conversions.md)|W tym artykule opisano obsługę konwersje typów języka F #.|
 |[Kontrola dostępu](access-control.md)|W tym artykule opisano kontroli dostępu w języku F #. Kontrola dostępu oznacza, że deklarowania, w jaki klienci będą mogli korzystać z niektórych elementów programów, takich jak typy, metody, funkcje i tak dalej.|
@@ -56,9 +53,8 @@ W poniższej tabeli przedstawiono dostępne, który opisano pojęcia języka tem
 |[Pełna składnia](verbose-syntax.md)|W tym artykule opisano składnię konstrukcje F # gdy lightweight — składnia nie jest włączone. Pełna składnia jest wskazywany przez `#light "off"` dyrektywę w górnej części pliku kodu.|
 
 ## <a name="f-types"></a>Typy F#
+
 W poniższej tabeli przedstawiono dostępne tematy referencyjne, które opisują typy obsługiwane przez język F #.
-
-
 
 |Tytuł|Opis|
 |-----|-----------|
@@ -88,6 +84,7 @@ W poniższej tabeli przedstawiono dostępne tematy referencyjne, które opisują
 |[Dostawcy typów](../tutorials/type-providers/index.md)|Opisuje typ zapewnia i zawiera łącza do przewodników na dostęp do baz danych i usług sieci web za pomocą wbudowanych dostawców typów.|
 
 ## <a name="f-expressions"></a>Wyrażeń języka F #
+
 Poniższa tabela zawiera listę tematów, które opisują wyrażeń języka F #.
 
 |Tytuł|Opis|
@@ -105,6 +102,7 @@ Poniższa tabela zawiera listę tematów, które opisują wyrażeń języka F #.
 |[Wyrażenia zapytania](query-expressions.md)|W tym artykule opisano wyrażenia zapytań funkcji języka, implementuje LINQ języka F #, która umożliwia tworzenie zapytań dotyczących źródła danych lub kolekcji wyliczalny.|
 
 ## <a name="compiler-supported-constructs"></a>Konstrukcje obsługiwane przez kompilator
+
 Poniższa tabela zawiera listę tematów opisujących konstrukcje obsługiwane przez kompilator specjalnych.
 
 |Temat|Opis|
@@ -113,5 +111,6 @@ Poniższa tabela zawiera listę tematów opisujących konstrukcje obsługiwane p
 |[Dyrektywy kompilatora](compiler-directives.md)|Opis procesora dyrektywy i dyrektywy kompilatora.|
 |[Identyfikatory wiersza źródłowego, pliku i ścieżki](source-line-file-path-identifiers.md)|W tym artykule opisano identyfikatory `__LINE__`, `__SOURCE_DIRECTORY__` i `__SOURCE_FILE__`, które są wbudowane wartości, które umożliwiają dostęp do źródła wiersza numer, katalogów i plików nazwy w kodzie.|
 
-## <a name="see-also"></a>Zobacz też
-[Visual F#](../index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Visual F#](../index.md)

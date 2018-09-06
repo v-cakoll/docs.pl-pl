@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a01da268a8347e93982604520f9dcb1d4e91327d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501618"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873776"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Wskazówki: tworzenie aplikacji kryptograficznej
 W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przykłady kodu są przeznaczone dla aplikacji Windows Forms. Ta aplikacja nie przedstawiono tu scenariusze ze świata rzeczywistego, takich jak za pomocą kart inteligentnych. Zamiast tego przedstawiono podstawowe informacje dotyczące szyfrowania i odszyfrowywania.  
@@ -210,5 +210,6 @@ W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przy
   
 2.  Kliknij przycisk `Decrypt File` i wybierz plik, po prostu szyfrowane. To powiedzie się, ponieważ masz pary pełnej kluczy do odszyfrowania.  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)

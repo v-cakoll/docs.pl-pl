@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], disabling data entry
 ms.assetid: ef9539ce-539b-404e-84b6-ac282b64b88c
 ms.openlocfilehash: 6263c92e6a981983c19e9d7f2357c581bee5ec07
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660275"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875378"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>Porady: zapobiegaj dodawaniu i usuwaniu rzędów do formantu DataGridView formularzy systemu Windows
 Czasami można uniemożliwić użytkownikom wprowadzanie nowych wierszy danych lub usunięcie istniejących wierszy w swojej <xref:System.Windows.Forms.DataGridView> kontroli. <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> Właściwość wskazuje, czy wiersza dla nowych rekordów jest obecny w dolnej części kontrolki, podczas gdy <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> właściwość wskazuje, czy można usunąć wierszy. Poniższy przykład kodu używa tych właściwości, a także ustawia <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> właściwość, aby sprawić, że formant całkowicie tylko do odczytu.  

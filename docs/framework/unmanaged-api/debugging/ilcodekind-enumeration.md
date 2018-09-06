@@ -15,11 +15,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a02c26b72fc7039a5050ee369043f081c32cd7ec
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786021"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869983"
 ---
 # <a name="ilcodekind-enumeration"></a>Wyliczenie ILCodeKind
 [Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  

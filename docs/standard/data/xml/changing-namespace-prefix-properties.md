@@ -1,5 +1,5 @@
 ---
-title: Zmiana właściwości Namespace prefiksu
+title: Zmienianie właściwości prefiksu Namespace
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,15 +8,15 @@ dev_langs:
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3f41ba7281d67cc2ce848597926f5efebf4d489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568696"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869263"
 ---
-# <a name="changing-namespace-prefix-properties"></a>Zmiana właściwości Namespace prefiksu
-**XmlNode** klasa pozwala na zmianę skojarzonych z danym węźle prefiks przestrzeni nazw. Na przykład poniższy kod przedstawia prefiks elementu zostanie zmieniona.  
+# <a name="changing-namespace-prefix-properties"></a>Zmienianie właściwości prefiksu Namespace
+**XmlNode** klasy pozwala na zmianę skojarzonych z danym węźle prefiks przestrzeni nazw. Na przykład poniższy kod przedstawia prefiks elementu zmieniany.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -40,7 +40,7 @@ Console.WriteLine(doc.InnerXml);
 <b:test xmlns:a="123" xmlns:b="456" />  
 ```  
   
- Zmiana prefiksu węzła nie zmienia jego przestrzeni nazw. Przestrzeń nazw można ustawić tylko w przypadku, gdy węzeł zostanie utworzony. Podczas utrwalania drzewa, nowe atrybuty przestrzeni nazw może się trwale do zaspokojenia prefiksu, które można ustawić. Jeśli nie można utworzyć nowej przestrzeni nazw, prefiks zostanie zmieniona, więc węzeł zachowuje lokalnej nazwy i przestrzeni nazw. W poniższym przykładzie przedstawiono dodawany atrybut przestrzeni nazw.  
+ Zmiana prefiksu węzeł nie powoduje zmiany jego przestrzeń nazw. Przestrzeń nazw można ustawić tylko w przypadku, gdy węzeł zostanie utworzony. Gdy będzie się powtarzać drzewa, nowe atrybuty z przestrzeni nazw może być utrwalone się spełnić prefiksu, gdy ustawiasz. Jeśli nie można utworzyć nowej przestrzeni nazw, prefiks zostanie zmieniona, więc węzeł zachowuje swoją nazwę lokalną i przestrzeni nazw. Trwa dodawanie atrybutu przestrzeni nazw można znaleźć w poniższym przykładzie.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -64,7 +64,8 @@ Console.WriteLine(doc.InnerXml);
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- Po drzewie został utrwalony na ciąg w wyniku wywołania **dokumentu. InnerXml**, `xmlns:a='123'` atrybut został dodany do zachowania przestrzeń nazw `test` elementu. Było `'123'`, i pozostaje `'123'`.  
+ Po drzewie został zachowany na ciąg wyniku wywołania **dokumentu. Właściwości InnerXml**, `xmlns:a='123'` atrybut został dodany do zachowania przestrzeń nazw `test` elementu. Było `'123'`, i pozostaje `'123'`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

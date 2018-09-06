@@ -5,11 +5,11 @@ helpviewer_keywords:
 - pointers [C#], comparison
 ms.assetid: fcafd514-7405-4deb-8490-cc58efda5495
 ms.openlocfilehash: fa980c944159c477c333762ffad569332fba9402
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747635"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869530"
 ---
 # <a name="pointer-comparison-c-programming-guide"></a>Porównanie wskaźników (Przewodnik programowania w języku C#)
 Można zastosować następujących operatorów porównywanie wskaźników dowolnego typu:  

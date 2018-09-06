@@ -12,11 +12,11 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], about TableLayoutPanel control
 ms.assetid: 337661c8-61cb-44ee-93e0-3662bddec327
 ms.openlocfilehash: be7ef4055d809349fe97a3d48e29158c5449576b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562145"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855806"
 ---
 # <a name="tablelayoutpanel-control-overview"></a>TableLayoutPanel — Informacje o formancie
 <xref:System.Windows.Forms.TableLayoutPanel> Kontroli rozmieszcza jego zawartość w siatce. Ponieważ układ jest wykonywane zarówno w czasie projektowania, a czas wykonywania, może zmienić dynamicznie jako zmiany środowiska aplikacji. Zapewnia kontrolki w panelu, możliwości, aby zmienić rozmiar proporcjonalnie, ich pozwalające reagować na zmiany, takie jak zmiana rozmiaru kontrolki nadrzędnej lub tekstu długości zmiana z powodu lokalizacji.  

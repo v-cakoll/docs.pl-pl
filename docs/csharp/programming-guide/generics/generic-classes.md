@@ -6,11 +6,11 @@ helpviewer_keywords:
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
 ms.openlocfilehash: 2568600c130847b3317aeb399541c61a050901ce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736169"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881019"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Klasy ogólne (Przewodnik programowania w języku C#)
 Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określonego typu danych. Jest najbardziej popularnym zastosowaniem klas ogólnych kolekcji, takich jak połączonej listy, tabele zbędnych danych, stosów, kolejek, drzewa i tak dalej. Operacje, takie jak dodawanie i usuwanie elementów z kolekcji są wykonywane w zasadzie taki sam sposób niezależnie od rodzaju przechowywanych danych.  

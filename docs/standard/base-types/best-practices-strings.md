@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8352a007cb1b9a92247db5d7a7351524ec3d4c2e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535160"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875034"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 <a name="top"></a> .NET zapewnia rozbudowaną obsługę dla rozwoju zlokalizowane i uniwersalnych aplikacji i ułatwia zastosowanie Konwencji kultury bieżącej lub określonej kultury, podczas wykonywania typowych operacji, takich jak sortowanie i wyświetlanie ciągów. Ale sortowania i porównywania ciągów nie zawsze jest to operacja wrażliwość na ustawienia kulturowe. Na przykład ciągów, które są używane wewnętrznie przez aplikację zwykle powinny być traktowane identycznie we wszystkich kulturach. Kiedy dane ciągu kulturalnie niezależne, takie jak XML tagów, HTML tagów, nazwy użytkowników, ścieżki do plików i nazwy obiektów systemowych są interpretowane tak, jakby były one zależne od kultury, kod aplikacji może być zastrzeżeniem subtelnych błędów, niską wydajnością i w niektórych przypadkach problemy z zabezpieczeniami.  
@@ -370,5 +370,6 @@ ms.locfileid: "43535160"
 18.02.1905 15:12  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Manipulowanie ciągami](../../../docs/standard/base-types/manipulating-strings.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Manipulowanie ciągami](../../../docs/standard/base-types/manipulating-strings.md)

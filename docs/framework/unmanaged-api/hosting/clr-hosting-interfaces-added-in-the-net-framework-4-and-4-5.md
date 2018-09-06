@@ -9,11 +9,11 @@ ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e9086502968fb9046237e77b76b4038a9f32f4ef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537709"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871742"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfejsy hostingu środowiska CLR dodane w programie .NET Framework 4 i 4.5
 W tej sekcji opisano niezarządzane interfejsy hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]i nowsze wersje w swoich aplikacjach. Te interfejsy dostarczać metody do hosta skonfigurować i załadowania środowiska uruchomieniowego do procesu.  

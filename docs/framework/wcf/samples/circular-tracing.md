@@ -3,11 +3,11 @@ title: Śledzenie cykliczne
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
 ms.openlocfilehash: 1f6c5287e6a53ed26ee5c9ed477e08dafc512e3f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739984"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868290"
 ---
 # <a name="circular-tracing"></a>Śledzenie cykliczne
 Niniejszy przykład pokazuje implementację odbiornik śledzenia cyklicznego buforu. Typowy scenariusz dla usług produkcyjnych jest usług, które są dostępne przez długi czas i mieć włączone na niskim poziomie rejestrowanie śledzenia. Te usługi to zajmować dużo miejsca na dysku. Podczas rozwiązywania problemów z usługą, najnowsze dane w dzienniku śledzenia dotyczy rozwiązywanie problemów. Niniejszy przykład pokazuje implementację odbiornik śledzenia cyklicznego buforu, w którym tylko najbardziej aktualne dane śledzenia są przechowywane na dysku do skonfigurowanej ilości danych. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i zawiera odbiornik śledzenia niestandardowych.  

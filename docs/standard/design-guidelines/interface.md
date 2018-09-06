@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dea5877f952869d5c84d6019617fcdc52d8ee0a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c687d7622e82ee206b2201760818827398f8543b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573042"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863725"
 ---
 # <a name="interface-design"></a>Projekt interfejsu
-Mimo że większość interfejsów API najlepiej są modelowane przy użyciu klas i struktur, istnieją przypadki, w których interfejsy są bardziej odpowiednie lub tylko opcja.  
+Mimo że większość interfejsów API najlepiej są modelowane przy użyciu klas i struktur, istnieją przypadki, w których interfejsy są bardziej odpowiednie lub są jedynym rozwiązaniem.  
   
- Środowisko CLR nie obsługuje dziedziczenie wielokrotne (tj. klasy CLR nie może dziedziczyć z więcej niż jedną klasę podstawową), ale możliwe typy zaimplementować jeden lub więcej interfejsów oprócz dziedziczenia z klasy podstawowej. W związku z tym interfejsy są często używane do uzyskania wpływu dziedziczenie wielokrotne. Na przykład <xref:System.IDisposable> jest interfejs, umożliwiający typy do obsługi disposability niezależnie od innych hierarchii dziedziczenia, w którym chcesz brać udział.  
+ Środowisko CLR nie obsługuje dziedziczenie wielokrotne (czyli klas CLR nie może dziedziczyć z więcej niż jednej klasy bazowej), ale zezwala na typy zaimplementować jeden lub więcej interfejsów oprócz dziedziczy z klasy bazowej. W związku z tym interfejsy są często używane, aby osiągnąć ten efekt wielokrotnego dziedziczenia. Na przykład <xref:System.IDisposable> jest interfejsem, który zezwala na typy do obsługi disposability niezależnie od innych hierarchii dziedziczenia, w którym chcesz uczestniczyć.  
   
- Sytuacja, w których definiowanie interfejsu jest jest przy tworzeniu wspólnego interfejsu, który może być obsługiwany przez kilka typów, w tym niektórych typów wartości. Typy wartości nie może dziedziczyć z typów innych niż <xref:System.ValueType>, ale miały zaimplementowane interfejsy, za pomocą interfejsu jest jedyną opcją w celu zapewnienia wspólnego typu podstawowego.  
+ Sytuacja, w określeniu, które jest odpowiednie interfejs znajduje się w tworzenie wspólny interfejs, który może być obsługiwany przez kilka typów, w tym niektóre typy wartości. Typy wartości nie może dziedziczyć z typu innego niż <xref:System.ValueType>, ale mogące implementować interfejsy, za pomocą interfejsu jest jedyną opcją, aby zapewnić wspólny typ podstawowy.  
   
  **✓ DO** interfejs umożliwia określenie, czy należy niektórych typowych interfejsu API, obsługiwane przez zestaw typów, który zawiera typy wartości.  
   
@@ -29,26 +29,27 @@ Mimo że większość interfejsów API najlepiej są modelowane przy użyciu kla
   
  **X AVOID** za pomocą znacznika interfejsów (interfejsy bez członków).  
   
- Jeśli potrzebujesz Oznacz klasę jako mający określonej właściwości (znacznik), ogólnie rzecz biorąc, użyj atrybutu niestandardowego zamiast interfejsu.  
+ Jeśli potrzebujesz oznaczyć klasę jako posiadające szczególne cechy (znacznik), ogólnie rzecz biorąc, użyj atrybutu niestandardowego, a nie interfejsu.  
   
  **✓ DO** Podaj co najmniej jeden typ, który jest implementacją interfejsu.  
   
- Wykonywanie dzięki temu można sprawdzić poprawności projektu interfejsu. Na przykład <xref:System.Collections.Generic.List%601> jest implementacją <xref:System.Collections.Generic.IList%601> interfejsu.  
+ Wykonując pozwala sprawdzić projekt interfejsu. Na przykład <xref:System.Collections.Generic.List%601> jest implementacją <xref:System.Collections.Generic.IList%601> interfejsu.  
   
  **✓ DO** Podaj co najmniej jeden interfejs API, który wykorzystuje każdego interfejsu należy zdefiniować (metody interfejsu jako parametr lub właściwość typu interfejsu).  
   
- Wykonywanie dzięki temu można sprawdzić poprawności projektu interfejsu. Na przykład <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> zużywa <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interfejsu.  
+ Wykonując pozwala sprawdzić projekt interfejsu. Na przykład <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> zużywa <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interfejsu.  
   
  **X DO NOT** dodawać członków do interfejsu, która została wcześniej dostarczona.  
   
- W ten sposób spowoduje przerwanie implementacji interfejsu. Aby uniknąć problemów z kontroli wersji, należy utworzyć nowy interfejs.  
+ To spowoduje przerwanie implementacje interfejsu. Aby zapobiec problemom z wersjami, należy utworzyć nowy interfejs.  
   
- Z wyjątkiem sytuacji opisanych w poniższych wskazówek ogólnie rzecz biorąc, wybierz klasy, a nie interfejsy projektowanie biblioteki do ponownego użycia kodu zarządzanego.  
+ Z wyjątkiem sytuacji określonych w niniejszych wytycznych ogólnie rzecz biorąc, wybierz klasy, a nie interfejsy projektowanie biblioteki do ponownego wykorzystania kodu zarządzanego.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

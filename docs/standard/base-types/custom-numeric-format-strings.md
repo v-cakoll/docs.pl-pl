@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf4e3a5c30190f920e35fd95d9e11a044022fba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cf1fd3ff78065430800583eb97db986bad419710
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555542"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873880"
 ---
 # <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatujące liczby
 
@@ -264,9 +264,10 @@ W poniższym przykładzie użyto obu metod, które mają zostać objęte zastrze
   
  [Powrót do tabeli](#table)  
   
-## <a name="see-also"></a>Zobacz także  
- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
- [Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Przykład: .NET Framework 4 formatowanie narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
+- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
+- [Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [Przykład: .NET Framework 4 formatowanie narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

@@ -3,11 +3,11 @@ title: Nieobsługiwane scenariusze
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 6c0ee061f754e85244bffdc06cbe23aee68d2222
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561995"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858071"
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
 Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niektóre scenariusze zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie zawiera implementacji protokołów uwierzytelniania SSPI lub protokołu Kerberos i w związku z tym WCF nie obsługuje uruchamiania usługi za pomocą uwierzytelniania Windows na tej platformie. Inne mechanizmy uwierzytelniania, takich jak nazwy użytkownika/hasła i zintegrowane uwierzytelnianie HTTP/HTTPS są obsługiwane podczas uruchamiania usługi WCF w obszarze Windows XP Home Edition.  

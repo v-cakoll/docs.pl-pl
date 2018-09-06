@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bands [Windows Forms], manipulating in Windows Forms
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
-ms.openlocfilehash: cf06e213a014a91c9738123f9d799be1669620d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93d06f0c6a19d37171eba1c4521ce55e1483ae2a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532348"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855403"
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Porady: manipulowanie paskami w formancie DataGridView formularzy systemu Windows
-Poniższy przykładowy kod przedstawia różne sposoby manipulowania <xref:System.Windows.Forms.DataGridView> wierszy i kolumn za pomocą właściwości <xref:System.Windows.Forms.DataGridViewBand> klasy, z którego <xref:System.Windows.Forms.DataGridViewRow> i <xref:System.Windows.Forms.DataGridViewColumn> pochodzi z klasy.  
+Poniższy przykład kodu pokazuje różne sposoby manipulowania <xref:System.Windows.Forms.DataGridView> wierszy i kolumn przy użyciu właściwości <xref:System.Windows.Forms.DataGridViewBand> klasa, z której <xref:System.Windows.Forms.DataGridViewRow> i <xref:System.Windows.Forms.DataGridViewColumn> klas pochodnych.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#0](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#0)]
@@ -28,9 +28,9 @@ Poniższy przykładowy kod przedstawia różne sposoby manipulowania <xref:Syste
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów systemu, System.Drawing i System.Windows.Forms.  
+-   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
- Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.DataGridView>  

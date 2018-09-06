@@ -3,11 +3,11 @@ title: Wątkowość (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
 ms.openlocfilehash: f477a36c6ffa0b5a809c8ba899b21d19a8c9a2d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555789"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861949"
 ---
 # <a name="threading-visual-basic"></a>Wątkowość (Visual Basic)
 Wątkowość Włącza program Visual Basic, aby wykonać równoczesne przetwarzanie, dzięki czemu możesz zrobić więcej niż jedną operację naraz. Na przykład umożliwia wątkowości monitorować dane wejściowe od użytkownika, wykonywanie zadań w tle i obsługi równoczesnymi strumieniami danych wejściowych.  

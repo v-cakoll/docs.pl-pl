@@ -18,23 +18,24 @@ helpviewer_keywords:
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66fe5dd1da148e8afd07ae69cec960438b53536a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3bbd25e40607bd316f1bbab974174fe5433770f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567357"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875073"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>Porady: usuwanie nieprawidłowych znaków z ciągów
-W poniższym przykładzie użyto statycznych <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metodę usuwanie nieprawidłowych znaków z ciągu.  
+W poniższym przykładzie użyto statycznego <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metody usuwanie nieprawidłowych znaków z ciągu.  
   
 ## <a name="example"></a>Przykład  
- Można użyć `CleanInput` metody zdefiniowanej w tym przykładzie do usuwanie potencjalnie szkodliwe znaków, które zostały wprowadzone do pola tekstowego, który akceptuje dane wejściowe użytkownika. W takim przypadku `CleanInput` usuwa wszystkie znaków innych niż alfanumeryczne, z wyjątkiem kropki (.) na symbole (@), łączniki (-) i zwraca wynikowy ciąg. Jednak można zmodyfikować wzorzec wyrażenia regularnego, aby go usuwa wszystkie znaki, które nie powinny znajdować się w ciągu wejściowego.  
+ Możesz użyć `CleanInput` metody zdefiniowanej w tym przykładzie w celu wyodrębnienia danych potencjalnie niebezpiecznych znaków, które zostały wprowadzone do pola tekstowego, który akceptuje dane wejściowe użytkownika. W tym przypadku `CleanInput` usuwa wszystkie znaki inne niż alfanumeryczne, z wyjątkiem kropki (.), u symbole (@), łączniki (-) i zwraca wynikowy ciąg. Można jednak zmodyfikować wzorzec wyrażenia regularnego, tak, aby go usuwa wszystkie znaki, które nie powinny być uwzględnione w ciągu wejściowym.  
   
  [!code-csharp[RegularExpressions.Examples.StripChars#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.StripChars/cs/Example.cs#1)]
  [!code-vb[RegularExpressions.Examples.StripChars#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.StripChars/vb/Example.vb#1)]  
   
- Wzorzec wyrażenia regularnego `[^\w\.@-]` dopasowuje dowolny znak, który nie jest znak słowa okres, symbol @ lub łącznika. Znak słowa jest dowolną literę, cyfrę lub łącznika znaki interpunkcyjne, takie jak podkreślenie. Zastępuje dowolny znak, który pasuje do tego wzorca <xref:System.String.Empty?displayProperty=nameWithType>, który jest zdefiniowany przez zastąpienie wzorca. Aby zezwalać na dodatkowe znaki w danych wejściowych użytkownika, należy dodać te znaki do klasy znaków w wzorzec wyrażenia regularnego. Na przykład wzorzec wyrażenia regularnego `[^\w\.@-\\%]` umożliwia również symbol procentu i ukośnik odwrotny w parametrach wejściowych.  
+ Definicję wzorca wyrażenia regularnego `[^\w\.@-]` dopasowuje dowolny znak, który nie jest znakiem słowa okres, symbol @ lub łącznik. Znak słowa jest żadnych litery, cyfry dziesiętnej lub łącznik znaki interpunkcyjne, takie jak podkreślenie. Zastępuje dowolny znak, który pasuje do tego wzorca <xref:System.String.Empty?displayProperty=nameWithType>, który jest zdefiniowany przez wzorzec zamieniania. Aby umożliwić dodatkowe znaki w danych wejściowych użytkownika, należy dodać te znaki, klasy znaku we wzorcu wyrażenia regularnego. Na przykład wzorzec wyrażenia regularnego `[^\w\.@-\\%]` umożliwia także symbol procentu i ukośnik odwrotny w ciągu wejściowym.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 4b5c246bee21697590130225679a250b43e86b8d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564822"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855047"
 ---
 # <a name="c-walkthroughs"></a>C# — wskazówki
 Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariuszy, które sprawia, że ich dobrym miejscem do uruchomienia, informacje o strefie dana funkcja lub produktu.  
@@ -50,16 +50,16 @@ Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariu
  [Pisanie zapytań w języku C# (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  Pokazuje funkcje języka C#, które są używane do zapisu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniach zapytań.  
   
- [Manipulowanie danymi (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
+ [Manipulowanie danymi (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  W tym artykule opisano [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] scenariusz dotyczący dodawania, modyfikowania i usuwania danych w bazie danych.  
   
- [Prosty Model obiektu i zapytanie (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
+ [Prosty Model obiektu i zapytanie (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
  Pokazuje, jak utworzyć klasę jednostki i prostego zapytania do filtrowania Klasa jednostki.  
   
- [Przy użyciu wyłącznie procedur składowanych (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb399407.aspx)  
+ [Przy użyciu wyłącznie procedur składowanych (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
  Pokazuje, jak na potrzeby dostępu do danych LINQ to SQL, wykonując tylko procedury składowane.  
   
- [Wykonywanie zapytań w relacjach (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
+ [Wykonywanie zapytań w relacjach (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
  Demonstruje użycie [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] skojarzenia do reprezentowania relacji klucza obcego w bazie danych.  
 
  [Pisanie wizualizatora w języku C#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  

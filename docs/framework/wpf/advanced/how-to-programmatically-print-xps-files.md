@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
 ms.openlocfilehash: 25c0b34bd33bee626df14c8dbedce0b82e895b58
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532819"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857342"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Jak za pomocą programowania drukować pliki XPS
 Możesz użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A> metodę, aby wydrukować [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] plików bez otwierania <xref:System.Windows.Controls.PrintDialog> lub w zasadzie dowolnego [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] na wszystkich.  

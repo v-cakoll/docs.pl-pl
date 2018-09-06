@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
 ms.openlocfilehash: 045a2f540a37cdea84d2bf2f3ed1e74e122bdbb5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746113"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864379"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>Jak dostosować znaczniki na suwaku
 W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls.Slider> formant, który zawiera znaczniki.  

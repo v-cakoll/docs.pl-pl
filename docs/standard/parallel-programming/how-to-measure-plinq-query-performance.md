@@ -10,23 +10,24 @@ helpviewer_keywords:
 ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c662c442f7f2cea23e1afe131704585e7a9bca7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd9e3a0ead62450e87225212f4fc6ecec6ec9489
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584608"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867232"
 ---
 # <a name="how-to-measure-plinq-query-performance"></a>Porady: mierzenie wydajności zapytań PLINQ
-W tym przykładzie przedstawiono sposób użycia <xref:System.Diagnostics.Stopwatch> klasy do mierzenia czas potrzebny na wykonanie zapytania PLINQ.  
+Ten przykład pokazuje jak używać <xref:System.Diagnostics.Stopwatch> klasy, aby zmierzyć czas potrzebny do wykonania zapytania PLINQ.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto pustą `foreach` pętli (`For Each` w języku Visual Basic) do mierzenia na czas potrzebny na wykonanie kwerendy. W kodzie rzeczywistych pętli zazwyczaj zawiera kroki dodatkowego przetwarzania, które czasu wykonywania kwerendy. Należy zauważyć, że stopera nie jest uruchomione, dopóki tylko przed pętli, ponieważ jest to, kiedy rozpoczyna się wykonanie zapytania. Jeśli potrzebujesz więcej szczegółowych pomiarów, możesz użyć `ElapsedTicks` właściwości zamiast `ElapsedMilliseconds`.  
+ W tym przykładzie użyto pustą `foreach` pętli (`For Each` w języku Visual Basic) do pomiaru czas potrzebny na wykonanie kwerendy. W kodzie rzeczywistych pętli zazwyczaj zawiera kroki dodatkowego przetwarzania, które dodać do zapytania łączny czas wykonywania. Należy zauważyć, że stoper nie jest uruchomione, dopóki tylko przed pętli, ponieważ jest to, kiedy rozpoczyna się wykonanie zapytania. Jeśli potrzebujesz więcej szczegółowych pomiarów, możesz użyć `ElapsedTicks` właściwości zamiast `ElapsedMilliseconds`.  
   
  [!code-csharp[PLINQ#19](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/measure2.cs#19)]
  [!code-vb[PLINQ#19](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/measure2.vb#19)]  
   
- Łączny czas wykonywania jest przydatne metryki, gdy są eksperymentowanie z implementacji kwerendy, ale nie zawsze powiadomi cały artykuł. Aby uzyskać bardziej i zaawansowaną widok interakcji wątków zapytania ze sobą oraz z innych procesów uruchomionych, korzystanie z wizualizatora współbieżności. Aby uzyskać więcej informacji, zobacz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).  
+ Łączny czas wykonywania jest przydatne metryki, gdy są eksperymentowanie z implementacjami zapytania, ale nie zawsze rozpozna przedstawiającym. Aby uzyskać lepszą i bardziej rozbudowane widok interakcji wątków zapytania ze sobą oraz z innych uruchomionych procesów, należy użyć narzędzia Concurrency Visualizer. Aby uzyskać więcej informacji, zobacz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).  
   
-## <a name="see-also"></a>Zobacz też  
- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

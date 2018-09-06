@@ -3,11 +3,11 @@ title: Anulowanie pozostałych zadań asynchronicznych po jednym jest pełny (Vi
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
 ms.openlocfilehash: 5dab0c4aa14710fe78d2473675aea8b8c8bb73b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562217"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874800"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Anulowanie pozostałych zadań asynchronicznych po jednym jest pełny (Visual Basic)
 Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> metoda wraz z <xref:System.Threading.CancellationToken>, możesz anulować wszystkie pozostałe zadania po wykonaniu jednego zadania. `WhenAny` Metoda przyjmuje argument, który jest kolekcją zadań. Metoda uruchamia wszystkie zadania i zwrócenie pojedynczego zadania. Pojedyncze zadanie jest ukończone po zakończeniu każdego zadania w kolekcji.  

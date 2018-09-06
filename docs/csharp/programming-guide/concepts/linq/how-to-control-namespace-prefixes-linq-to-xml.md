@@ -2,12 +2,12 @@
 title: 'Porady: kontrolowanie prefiksów Namespace (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: af864139d56bd3ebb22cca6369b82539b9d007da
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: dd2a91fde868425cadbc395d6db0f913e2be600f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417374"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868568"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Porady: kontrolowanie prefiksów Namespace (C#) (LINQ to XML)
 W tym temacie opisano, jak kontrolować prefiksy przestrzeni nazw podczas serializacji drzewa XML.  
@@ -54,5 +54,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

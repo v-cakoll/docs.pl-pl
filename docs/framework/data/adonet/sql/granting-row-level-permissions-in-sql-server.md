@@ -3,11 +3,11 @@ title: Udzielanie uprawnień na poziomie wiersza w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
 ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749158"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873708"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Udzielanie uprawnień na poziomie wiersza w programie SQL Server
 W niektórych scenariuszach istnieje wymóg do kontrolowania dostępu do danych na bardziej szczegółowym poziomie niż zapewnia jakie po prostu udzielanie, odwoływanie lub odmawianie uprawnień. Na przykład szpitali aplikacji bazy danych może wymagać poszczególnych lekarzy ograniczona do uzyskiwania dostępu do informacji dotyczących tylko pacjentów. Istnieją podobne wymagania w wielu środowiskach, w tym Finanse, prawo, instytucji rządowych i wojskowe aplikacji. Aby ułatwić obsługę tych scenariuszy, programu SQL Server 2016 zapewnia [zabezpieczenia na poziomie wiersza](https://msdn.microsoft.com/library/dn765131.aspx) funkcja, która upraszcza i umożliwia scentralizowanie logiki dostępu na poziomie wiersza w zasadach zabezpieczeń. We wcześniejszych wersjach programu SQL Server podobne funkcje można osiągnąć przy użyciu widoków wprowadzenie filtrowanie na poziomie wiersza.  

@@ -5,11 +5,11 @@ ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0e0572d2f4afb2b8637d2411102e466b25b2b703
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556435"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856819"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>Program .NET Framework i wydania poza harmonogramem (OOB)
 Program .NET Framework jest rozwijany, tak aby działał na nowych platformach, takich jak aplikacje Windows Phone i aplikacje do Sklepu Windows, a ponadto obsługiwał tradycyjne aplikacje komputerowe i aplikacje internetowe oraz maksymalizował możliwości ponownego wykorzystania kodu. Oprócz regularnych wersji programu .NET Framework nowe funkcje są udostępniane poza harmonogramem (Out of Band, OOB), aby poprawić programowanie wieloplatformowe lub wprowadzić nowe funkcje. W tym temacie omówiono kierunek rozwoju programu .NET Framework i jego wersji OOB.  

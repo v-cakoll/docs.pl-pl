@@ -3,11 +3,11 @@ title: Działania jednostki
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
 ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385807"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861156"
 ---
 # <a name="entity-activities"></a>Działania jednostki
 W tym przykładzie pokazano, jak za pomocą ADO.NET Entity Framework Windows Workflow Foundation Aby uprościć dostęp do danych.  

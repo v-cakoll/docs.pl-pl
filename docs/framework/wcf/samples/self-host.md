@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
 ms.openlocfilehash: c413a26e8e7a0e76712eb98c5ad1bb822d75ae6f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659468"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862160"
 ---
 # <a name="self-host"></a>Host samodzielny
 Niniejszy przykład pokazuje, jak zaimplementować własnym hostowanej usługi w aplikacji konsoli. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Plik konfiguracji usługi, została zmieniona z pliku Web.config na pliku App.config i zmodyfikowana, aby skonfigurować adres podstawowy, który korzysta z hosta. Kod źródłowy usługi została zmodyfikowana, aby zaimplementować statycznego `Main` funkcja, która tworzy i otwiera hosta usługi, który zawiera skonfigurowany adres podstawowy. Implementacja usługi została zmodyfikowana, aby zapisywać dane wyjściowe do konsoli dla każdej operacji. Klient został zostały zmodyfikowane, z wyjątkiem konfigurowania adresu właściwego punktu końcowego usługi.  

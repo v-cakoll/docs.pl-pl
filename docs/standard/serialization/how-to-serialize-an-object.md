@@ -1,5 +1,5 @@
 ---
-title: 'Porady: szeregowania obiektu'
+title: 'Instrukcje: serializacja obiektu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: b979d63132b44ee2e05fcc55cfdd4c79309a159b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581449"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875752"
 ---
-# <a name="how-to-serialize-an-object"></a>Porady: szeregowania obiektu
-Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być serializowany i ustaw jego właściwości publiczne oraz pól. W tym celu należy określić transportu format, w którym strumień XML mają być przechowywane jako strumień lub jako PLik. Na przykład, jeśli strumień XML musi zostać zapisany w postaci stałe, Utwórz <xref:System.IO.FileStream> obiektu.  
+# <a name="how-to-serialize-an-object"></a>Instrukcje: serializacja obiektu
+Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być serializowany i ustaw jego właściwości publiczne oraz pól. W tym celu należy określić transportu format, w którym strumień XML mają być przechowywane jako strumień lub jako PLik. Na przykład, jeśli strumień XML musi być zapisany w postaci stałe, Utwórz <xref:System.IO.FileStream> obiektu.  
   
 > [!NOTE]
 >  Aby uzyskać więcej przykładów serializacji XML, zobacz [przykłady serializacji XML](../../../docs/standard/serialization/examples-of-xml-serialization.md).  
@@ -50,6 +50,7 @@ Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być seria
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
 ms.openlocfilehash: fe7184df5d889a93f2274dfd20669701947f0965
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557853"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871009"
 ---
 # <a name="viewbox"></a>Okno widoku
 <xref:System.Windows.Controls.Viewbox> Formant jest używany do rozciąganie lub skalowanie elementu podrzędnego.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
 ms.openlocfilehash: 1d9321a1db4f68195fb914f271fb98f904d2f963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733355"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43805809"
 ---
 # <a name="datatable-edits"></a>Edycje elementu DataTable
 Podczas wprowadzania zmian do wartości kolumn <xref:System.Data.DataRow>, zmiany od razu są umieszczane w bieżącym stanie wiersza. <xref:System.Data.DataRowState> Zostanie następnie ustawiona **zmodyfikowane**, a zmiany są akceptowane lub odrzucone, za pomocą <xref:System.Data.DataRow.AcceptChanges%2A> lub <xref:System.Data.DataRow.RejectChanges%2A> metody **DataRow**. **DataRow** udostępnia trzy metody, które można użyć do zawieszenia stan wiersza podczas edytowania go. Te metody są <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>, i <xref:System.Data.DataRow.CancelEdit%2A>.  

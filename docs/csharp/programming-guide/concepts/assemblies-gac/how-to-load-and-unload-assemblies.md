@@ -3,11 +3,11 @@ title: 'Porady: ładowanie i zwalnianie zestawów (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
 ms.openlocfilehash: 2934ff07026d520f52309e50eb7da24731608292
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786592"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868555"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>Porady: ładowanie i zwalnianie zestawów (C#)
 Zestawy odwołuje się program automatycznie zostaną załadowane w czasie kompilacji, ale jest również możliwe do załadowania określonych zestawów do bieżącej domeny aplikacji w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [porady: ładowanie zestawów do domeny aplikacji](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  

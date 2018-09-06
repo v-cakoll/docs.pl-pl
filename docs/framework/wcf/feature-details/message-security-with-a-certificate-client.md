@@ -8,11 +8,11 @@ ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7aad53e9c6d5708bceca9831264c112f885fb889
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732517"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857365"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Zabezpieczenia komunikatów z klientem dysponującym certyfikatem
 Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych używających trybu zabezpieczenia wiadomości. Zarówno klient, jak i usługi są uwierzytelniane przy użyciu certyfikatów. Aby uzyskać więcej informacji, zobacz [rozproszone zabezpieczenia aplikacji](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  

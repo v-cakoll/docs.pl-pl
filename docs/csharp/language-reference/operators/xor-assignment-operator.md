@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ^= operator [C#]
 ms.assetid: 3658ff9a-61cd-467e-ad6b-8fbf1cfbaae4
 ms.openlocfilehash: d6546f23ffb6dee792339a7e3863bf58ae668d58
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540049"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857235"
 ---
 # <a name="-operator-c-reference"></a>Operator ^= (odwołanie w C#)
 Operator przypisania OR wyłączne.  

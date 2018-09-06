@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
 ms.openlocfilehash: f26e21d824420fc4ff0480de21f260309c5c2e11
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561644"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856611"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Porady: określanie ikony dla przycisku ToolBar przy użyciu narzędzia Projektant
 > [!NOTE]

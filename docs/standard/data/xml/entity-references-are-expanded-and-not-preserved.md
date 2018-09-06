@@ -5,40 +5,41 @@ ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa03532200a89aa164648c1278c9dbafc2aee214
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569535"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873737"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Odwołania do jednostek są rozwinięte i nie są zachowywane
-Gdy odwołanie do jednostki jest rozszerzony i zastępuje reprezentuje on **XmlEntityReference** węzeł nie został utworzony. Zamiast tego jest analizowana z deklaracji jednostki i węzły utworzone na podstawie zawartości w deklaracji zostaną skopiowane zamiast z **XmlEntityReference**. W związku z tym w `&publisher;` przykład `&publisher;` nie zostanie zapisana, ale zamiast tego **XmlText** jest tworzony węzeł.  
+Gdy odwołanie do jednostki jest rozwinięte i zastąpione tekstem reprezentuje on **XmlEntityReference** węzeł nie został utworzony. Zamiast tego jest analizowany deklaracji jednostek i węzłów przygotowane na podstawie zawartości w deklaracji zostaną skopiowane zamiast z **XmlEntityReference**. Dlatego w `&publisher;` przykład `&publisher;` nie zostanie zapisana, ale zamiast tego **XmlText** jest tworzony węzeł.  
   
- ![rozszerzona struktury drzewa](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
-Struktura drzewa dla odwołań do jednostek, które zostaną rozwinięte  
+ ![rozwinięte struktury drzewa](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
+Strukturę drzewa dla odwołań do jednostek, które są rozwijane  
   
- Znak jednostek, takich jak `B` lub `<` nie są zachowywane. Zamiast tego są zawsze rozwinięty i reprezentowane jako węzły tekstowe.  
+ Znak jednostki, takie jak `B` lub `<` nie są zachowywane. Zamiast tego są zawsze rozwinięte i reprezentowane jako węzły tekstowe.  
   
- Aby zachować **XmlEntityReference** węzły i węzłów podrzędnych odwołanie do jednostki dołączone do niego, ustaw **EntityHandling** flaga **ExpandCharEntities**. W przeciwnym razie pozostaw **EntityHandling** flagi na wartość domyślna, czyli **ExpandEntities**. W takim przypadku nie będzie mógł przeglądać węzłów odwołanie do jednostki w modelu DOM. Węzły zostały zastąpione przez węzły, które są kopiami węzłów podrzędnych deklaracji entity.  
+ Aby zachować **XmlEntityReference** węzłów i węzłów podrzędnych odwołania jednostki podłączone do niego, ustaw **EntityHandling** flaga **ExpandCharEntities**. W przeciwnym razie pozostaw **EntityHandling** flagi na wartość domyślna, czyli **ExpandEntities**. W tym przypadku nie będą widzieć węzłów odwołanie do jednostki w modelu DOM. Węzły są zastępowane przez węzły, które są kopiami węzłów podrzędnych deklaracji entity.  
   
- Jeden po stronie nie zachowuje odwołań do jednostek powoduje, że po zapisaniu dokumentu i przekazywane do innej aplikacji, aplikacja odbierająca nie wie, że węzły zostały wygenerowane przez odwołanie do jednostki. Jednak podczas odwołań do jednostek zostaną zachowane, aplikacja odbierająca widzi odwołania do jednostki i odczytuje podrzędnych węzłów. Okaże się, że węzły podrzędne reprezentują informacje, które były w deklaracji entity. Na przykład modelu DOM teoretycznie ma następującą strukturę, jeśli zostaną zachowane odwołań do jednostek.  
+ Jeden efekt uboczny nie zachowania odwołań do jednostek jest, czy po zapisaniu dokumentu i przekazywane do innej aplikacji, aplikacja nie wie, że węzły zostały wygenerowane przez odwołanie do jednostki. Jednak podczas odwołań do jednostek są zachowywane, aplikacja odbierająca widzi odwołania do jednostki, a odczytuje węzły podrzędne. Okaże się, że węzły podrzędne reprezentują informacje, które były w deklaracji entity. Na przykład modelu DOM synchroniczna ma następującą strukturę, jeśli odwołań do jednostek są zachowywane.  
   
- Element XmlElement: wydawcy  
+ XmlElement: wydawcy  
   
  XmlEntityReference: `&publisher;`  
   
- XmlText: Naciśnij przycisk Microsoft  
+ XmlText: Microsoft Press  
   
- Odwołania do jednostek są rozwijane w modelu DOM, który jest domyślną metodą, struktura zawiera tego typu drzewa:  
+ Odwołania do jednostek zostaną rozwinięte w modelu DOM, który jest domyślną metodą, struktura zawiera ten typ drzewa:  
   
- Element XmlElement: wydawcy  
+ XmlElement: wydawcy  
   
- XmlText: Naciśnij przycisk Microsoft  
+ XmlText: Microsoft Press  
   
- Powiadomienie ma węzeł odwołanie do jednostki, czy aplikacja odbierająca nie wiadomo, że **XmlText** węzła zawierającego "Microsoft Press" został utworzony na podstawie deklaracji entity.  
+ Zwróć uwagę, że węzeł odwołania jednostki został usunięty i aplikacja odbierająca nie wiadomo, że **XmlText** węzła zawierającego "Microsoft Press" został utworzony z deklaracji entity.  
   
- Jeśli używasz czytnik nie może rozpoznać jednostki **obciążenia** metoda zgłosi wyjątek po napotkaniu odwołania do jednostki.  
+ Jeśli korzystasz z czytnika zawartości, która nie może rozpoznać jednostki **obciążenia** metoda zgłasza wyjątek, po napotkaniu odwołania do jednostki.  
   
-## <a name="see-also"></a>Zobacz też  
- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

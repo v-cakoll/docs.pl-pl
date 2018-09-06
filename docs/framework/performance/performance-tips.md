@@ -10,11 +10,11 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 3d5d91db9256cdfb3aa0062d66333f13797ee1bb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739610"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876561"
 ---
 # <a name="net-performance-tips"></a>Wskazówki dotyczące wydajności .NET
 Termin *wydajności* zazwyczaj odnosi się do szybkości wykonywania programu. Czasami możesz zwiększyć szybkość realizacji przez następujących podstawowych reguł w kodzie źródłowym. W niektórych programach jest ważne, aby dokładnie sprawdzić kod i użyć profilerów, aby upewnić się, że działa tak szybko, jak to możliwe. W innych programach nie trzeba wykonywać takiej optymalizacji, ponieważ kod działa zadowalająco szybko, jak jest pisany. W tym artykule wymieniono niektóre typowe obszary, w których może to spowodować obniżenie wydajności i wskazówki dotyczące poprawiania go, a także łącza do tematów wyższą wydajność. Aby uzyskać więcej informacji na temat planowania i dokonywania jej pomiarów wydajności, zobacz [wydajności](../../../docs/framework/performance/index.md)  

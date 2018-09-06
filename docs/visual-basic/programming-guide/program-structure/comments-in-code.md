@@ -15,11 +15,11 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661155"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870344"
 ---
 # <a name="comments-in-code-visual-basic"></a>Komentarze w kodzie (Visual Basic)
 Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbol informuje kompilator języka Visual Basic, aby zignorować tekst następujący, lub *komentarz*. Komentarze to krótkie notatki wyjaśniające, dodane do kodu, aby ułatwić życie innym osobom, które go czytają.  

@@ -1,35 +1,32 @@
 ---
 title: Zabezpieczenia dostawcy typów
-description: 'Więcej informacji o zabezpieczenia dostawcy typów w języku F #, łącznie ze sposobem zmiany ustawień zaufania dla dostawcy typów.'
+description: 'Więcej informacji na temat zabezpieczenia dostawcy typów F #, w tym sposobu zmiany ustawień zaufania dla dostawcy typu.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 66a873a32029d706f1f6fab50dd4f93bc29bca03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563548"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861910"
 ---
 # <a name="type-provider-security"></a>Zabezpieczenia dostawcy typów
 
-Dostawcy typów to zestawy (dll) odwołuje się programu F # projekt lub skrypt zawierające kod, aby nawiązać połączenia z zewnętrznymi źródłami danych, a następnie publikować informacje o tym typie środowiska typu F #. Zazwyczaj kodu w przywoływanych zestawach jest uruchamiany tylko kompilacji, a następnie wykonania kodu (lub w przypadku skryptu, wyślij kod do narzędzia F # Interactive). Jednak zestawu dostawcy typu zostanie uruchomiony w programie Visual Studio podczas kod jest jedynie w edytorze. Dzieje się tak, ponieważ typ dostawcy muszą Uruchom, aby dodać dodatkowe informacje do edytora, takiego jak szybka podpowiedź, zakończeń IntelliSense i tak dalej. W związku z tym istnieją zagadnienia dotyczące dodatkowych zabezpieczeń dla typu zestawy dostawcy, ponieważ są automatycznie uruchamiane wewnątrz procesu programu Visual Studio.
-
+Dostawcy typów są zestawy (dll) odwołuje się z projektu języka F # lub skryptu, które zawierają kod, aby nawiązać połączenie z zewnętrznymi źródłami danych, a następnie publikować informacje o typie środowiska typu F #. Zazwyczaj w przywoływanych zestawach tylko uruchamiania kodu po skompilowaniu i następnie wykonać ten kod (lub w przypadku skryptu, wyślij kod do programu F # Interactive). Jednak zestawu dostawcy typów będą uruchamiane w programie Visual Studio, gdy jedynie przeglądania kodu w edytorze. Dzieje się tak, ponieważ dostawców typów, które należy uruchomić, aby dodać dodatkowe informacje do edytora, takiego jak etykietki szybka podpowiedź, uzupełnianiu IntelliSense i tak dalej. W wyniku istnieją zapewnienia dodatkowego bezpieczeństwa informacje dotyczące typu zestawy dostawcy, ponieważ są automatycznie uruchamiane wewnątrz procesu programu Visual Studio.
 
 ## <a name="security-warning-dialog"></a>Okno dialogowe ostrzeżenia o zabezpieczeniach
-Korzystając z zestawu dostawcy określonego typu po raz pierwszy, program Visual Studio Wyświetla okno dialogowe zabezpieczeń, które ostrzega o tym, że dostawca typów jest uruchomiony. Przed Visual Studio ładuje typ dostawcy, daje możliwość zdecydować, jeśli ufasz temu określonego dostawcy. Jeśli ufasz źródłu typu dostawcy, następnie wybierz pozycję "I zaufanie ten dostawca typów". Jeśli nie ufasz źródło typ dostawcy, następnie wybierz pozycję "I nie masz zaufania tego typu dostawcy." Zaufanie dostawcy umożliwia uruchamianie w programie Visual Studio i podaj IntelliSense i tworzenia funkcji. Jednak w przypadku złośliwego typ dostawcy samego uruchomienia jej kodu może naruszyć bezpieczeństwo komputera.
 
-Jeśli projekt zawiera kod, który odwołuje się do dostawców typów, które wybrano w oknie dialogowym niezaufane, następnie w czasie kompilacji, kompilator będzie zgłaszać błąd, który wskazuje, że dostawca typów jest niezaufanych. Żadnych typów, które są zależne od dostawcy typów niezaufanych są oznaczone czerwoną zygzaki. Jest to bezpieczne przeglądanie kodu w edytorze.
+Korzystając z zestawów dostawcy określonego typu po raz pierwszy, Visual Studio Wyświetla okno dialogowe zabezpieczeń, która ostrzega o tym, że dostawca typów zostanie uruchomiony. Przed Visual Studio ładuje dostawcę typów, daje możliwość zdecydować, jeśli ufasz temu określonego dostawcy. Jeśli ufasz źródłu dostawcy typu, wybierz "Zaufanej tego dostawcy typu". Jeśli nie ufasz źródła dostawcę typów, następnie wybierz pozycję "I nie ufasz tego typu dostawcy." Zaufaniem dostawcy włączy ją do uruchamiania w programie Visual Studio i dostarczyć IntelliSense i tworzyć funkcje. Jednak w przypadku złośliwego dostawcę typów, sama uruchamianie jej kodu mogą negatywnie wpłynąć na swojej maszynie.
 
-Jeśli zdecydujesz się zmienić ustawienie zaufania bezpośrednio w programie Visual Studio, wykonaj następujące kroki.
+Jeśli projekt zawiera kod, który odwołuje się do dostawców typów, które wybrano w oknie dialogowym nie ufać, następnie w czasie kompilacji kompilator zgłosi błąd wskazujący, że dostawca typów nie jest zaufany. Wszystkie typy, które są zależne od dostawcy typów niezaufanych są wskazywane przez czerwone symbole. Jest bezpieczne przeglądać kod w edytorze.
 
+Jeśli zdecydujesz się zmienić ustawienie relacji zaufania, bezpośrednio w programie Visual Studio, wykonaj następujące kroki.
 
-#### <a name="to-change-the-trust-settings-for-type-providers"></a>Aby zmienić ustawienia zaufania dostawców typów
+### <a name="to-change-the-trust-settings-for-type-providers"></a>Aby zmienić ustawienia zaufania dostawców typów
 
 1. Na `Tools` menu, wybierz opcję `Options`i rozwiń `F# Tools` węzła.
-<br />
 
-2. Wybierz `Type Providers`, na liście dostawców typów, zaznacz pole wyboru dla zaufanych dostawców typów i usuń zaznaczenie pola wyboru dla tych nie ufasz.
-<br />
+2. Wybierz `Type Providers`, na liście dostawców typów, zaznacz pole wyboru dla dostawców typów ufasz i usuń zaznaczenie pola wyboru dla osób nie ufasz.
 
+## <a name="see-also"></a>Zobacz także
 
-## <a name="see-also"></a>Zobacz też
-[Dostawcy typów](index.md)
+- [Dostawcy typów](index.md)

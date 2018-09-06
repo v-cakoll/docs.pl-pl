@@ -2,12 +2,12 @@
 title: 'Wskazówki dotyczące formatowania kodu F #'
 description: 'Dowiedz się, wskazówki dotyczące formatowania kodu F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 9c6e80509e9a5654e6514674d38c02e2a6b44e37
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734645"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858008"
 ---
 # <a name="f-code-formatting-guidelines"></a>Wskazówki dotyczące formatowania kodu F #
 
@@ -265,24 +265,24 @@ Zwiększ wcięcie `{` w typie definicji przez 4 spacji i umożliwia rozpoczęcie
 ```fsharp
 // OK
 type PostalAddress =
-    { Address : string
-      City : string
-      Zip : string }
+    { Address: string
+      City: string
+      Zip: string }
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
 
 // Not OK
 type PostalAddress =
-  { Address : string
-    City : string
-    Zip : string }
+  { Address: string
+    City: string
+    Zip: string }
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
     
 // Unusual in F#
 type PostalAddress =
     { 
-        Address : string
-        City : string
-        Zip : string
+        Address: string
+        City: string
+        Zip: string
     }
 ```
 
@@ -291,9 +291,9 @@ Wprowadzanie tokenu otwierania na tym samym wierszu i token zamknięcia w nowym 
 ```fsharp
 //  OK, but verbose syntax required
 type PostalAddress = { 
-    Address : string
-    City : string
-    Zip : string
+    Address: string
+    City: string
+    Zip: string
 } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
 ```

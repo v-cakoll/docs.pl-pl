@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: c9b2620ab72648ba57fe9d0eceece07ebcd17280
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 718be7e201788906fa0fad829922eb5b77b48aed
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538961"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857313"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Wskazówki: Programowanie Office (C# i Visual Basic)
 Visual Studio oferuje funkcje w języku C# i Visual Basic, które zwiększają programowania Microsoft Office. Przydatne funkcje języka C# zawierają argumenty nazwane i opcjonalne i zwracanie wartości typu `dynamic`. W programowaniu modelu COM, można pominąć `ref` — słowo kluczowe i uzyskanie dostępu do właściwości indeksowanych. Funkcje w języku Visual Basic obejmują automatycznie implementowane właściwości instrukcji w wyrażeniach lambda i inicjatory kolekcji.
 
-Obu językach umożliwiają osadzanie informacji o typie, który umożliwia wdrożenie zestawów, które współdziałają ze składnikami modelu COM. bez wdrażania podstawowych zestawów międzyoperacyjnych (PIA) na komputerze użytkownika. Aby uzyskać więcej informacji, zobacz [wskazówki: osadzanie typów z zarządzanych zestawów](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+Obu językach umożliwiają osadzanie informacji o typie, który umożliwia wdrożenie zestawów, które współdziałają ze składnikami modelu COM. bez wdrażania podstawowych zestawów międzyoperacyjnych (PIA) na komputerze użytkownika. Aby uzyskać więcej informacji, zobacz [wskazówki: osadzanie typów z zarządzanych zestawów](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
 W tym instruktażu przedstawiono te funkcje w kontekście programowania pakietu Office, ale wiele z tych funkcji są także przydatne, ogólnie rzecz biorąc programowania. W instruktażu użyjesz aplikacji dodatek programu Excel do utworzenia skoroszytu programu Excel. Następnie należy utworzyć dokument programu Word, zawierającą łącze do skoroszytu. Na koniec zobaczysz, jak włączać i wyłączać zależności PIA.  
   
@@ -93,11 +93,11 @@ Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainsta
   
      Dwie nowe funkcje języka C# są używane w przypadku tej metody. Obie te funkcje już istnieją w języku Visual Basic.  
   
-    -   Metoda [Dodaj](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) ma *opcjonalny parametr* służącą do konkretnego szablonu. Parametry opcjonalne nowego w programie [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], umożliwiają pominięto argument dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument nie jest wysyłane w poprzednim przykładzie `Add` korzysta z domyślnego szablonu i utworzy nowy skoroszyt. Równoważne instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `excelApp.Workbooks.Add(Type.Missing)`.  
+    -   Metoda [Dodaj](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) ma *opcjonalny parametr* służącą do konkretnego szablonu. Parametry opcjonalne nowego w programie [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], umożliwiają pominięto argument dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument nie jest wysyłane w poprzednim przykładzie `Add` korzysta z domyślnego szablonu i utworzy nowy skoroszyt. Równoważne instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Aby uzyskać więcej informacji, zobacz [nazwane i opcjonalne argumenty](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
-    -   `Range` i `Offset` właściwości [zakres](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) wykorzystują *właściwości indeksowanych* funkcji. Ta funkcja umożliwia korzystanie z tych właściwości z typów modelu COM za pomocą następujących typowych C# składni. Właściwości indeksowane również włączyć przy użyciu `Value` właściwość `Range` obiektu, eliminując konieczność stosowania `Value2` właściwości. `Value` Jest indeksowana właściwość, ale indeks jest opcjonalne. Argumenty opcjonalne właściwości indeksowanych współpracują w poniższym przykładzie.  
+    -   `Range` i `Offset` właściwości [zakres](<xref:Microsoft.Office.Interop.Excel.Range>) wykorzystują *właściwości indeksowanych* funkcji. Ta funkcja umożliwia korzystanie z tych właściwości z typów modelu COM za pomocą następujących typowych C# składni. Właściwości indeksowane również włączyć przy użyciu `Value` właściwość `Range` obiektu, eliminując konieczność stosowania `Value2` właściwości. `Value` Jest indeksowana właściwość, ale indeks jest opcjonalne. Argumenty opcjonalne właściwości indeksowanych współpracują w poniższym przykładzie.  
   
          [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
@@ -117,7 +117,7 @@ Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainsta
   
      Te dodatki pokazują innej funkcji w języku C#: traktowanie `Object` zwracane z hostów COM, takich jak Office tak, jakby mają typu [dynamiczne](../../../csharp/language-reference/keywords/dynamic.md). Jest to wykonywane automatycznie po **Osadź typy współdziałania** jest ustawiona na wartość domyślną `True`, lub ekwiwalentnie, gdy zestaw odwołuje się do niej [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) — opcja kompilatora. Typ `dynamic` umożliwia późnym wiązaniu już dostępna w języku Visual Basic i uniknięcie rzutowania jawnego, wymagany w Visual C# 2008 i wcześniejszych wersjach języka.  
   
-     Na przykład `excelApp.Columns[1]` zwraca `Object`, i `AutoFit` nadaje się program Excel [zakres](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) metody. Bez `dynamic`, należy rzutować obiektu zwróconego przez `excelApp.Columns[1]` jako wystąpienie `Range` przed wywołaniem metody `AutoFit`.  
+     Na przykład `excelApp.Columns[1]` zwraca `Object`, i `AutoFit` nadaje się program Excel [zakres](<xref:Microsoft.Office.Interop.Excel.Range>) metody. Bez `dynamic`, należy rzutować obiektu zwróconego przez `excelApp.Columns[1]` jako wystąpienie `Range` przed wywołaniem metody `AutoFit`.  
   
      [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
@@ -141,7 +141,7 @@ Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainsta
 
      [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
-     Ten przykład demonstruje kilka nowych funkcji w języku C#: zdolność do pominięcia `ref` — słowo kluczowe w programowaniu modelu COM, argumenty nazwane i opcjonalne argumenty. Te funkcje są już istnieje w języku Visual Basic. [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) metoda zawiera siedem parametrów, które są zdefiniowane jako parametry opcjonalne informacje dodatkowe. Argumenty nazwane i opcjonalne pozwalają określić parametry, których chcesz uzyskać dostęp przez nazwę i wysyłać argumenty do tylko tych parametrów. W tym przykładzie argumenty są wysyłane do wskazania, że można utworzyć łącza do skoroszytu w Schowku (parametr `Link`) oraz że łącza, które ma być wyświetlana w dokumencie programu Word w postaci ikony (parametr `DisplayAsIcon`). Visual C# umożliwia również pominąć `ref` — słowo kluczowe dla tych argumentów.
+     Ten przykład demonstruje kilka nowych funkcji w języku C#: zdolność do pominięcia `ref` — słowo kluczowe w programowaniu modelu COM, argumenty nazwane i opcjonalne argumenty. Te funkcje są już istnieje w języku Visual Basic. [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) metoda zawiera siedem parametrów, które są zdefiniowane jako parametry opcjonalne informacje dodatkowe. Argumenty nazwane i opcjonalne pozwalają określić parametry, których chcesz uzyskać dostęp przez nazwę i wysyłać argumenty do tylko tych parametrów. W tym przykładzie argumenty są wysyłane do wskazania, że można utworzyć łącza do skoroszytu w Schowku (parametr `Link`) oraz że łącza, które ma być wyświetlana w dokumencie programu Word w postaci ikony (parametr `DisplayAsIcon`). Visual C# umożliwia również pominąć `ref` — słowo kluczowe dla tych argumentów.
   
 ### <a name="to-run-the-application"></a>Aby uruchomić aplikację  
   
@@ -205,8 +205,8 @@ Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainsta
 - [Wyrażenia lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
 - [Lambda Expressions (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
 - [Instrukcje: użycie właściwości indeksowanych w programowaniu usługi międzyoperacyjnej modelu COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
-- [Przewodnik: osadzanie informacji o typie z zestawów Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
-- [Przewodnik: osadzanie typów z zarządzanych zestawów](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
-- [Przewodnik: Tworzenie pierwszego dodatku VSTO dla programu Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+- [Przewodnik: osadzanie informacji o typie z zestawów Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
+- [Przewodnik: osadzanie typów z zarządzanych zestawów](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Przewodnik: Tworzenie pierwszego dodatku VSTO dla programu Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
 - [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
 - [Współdziałanie](../../../csharp/programming-guide/interop/index.md)

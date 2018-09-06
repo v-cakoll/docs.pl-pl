@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
 ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559598"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855025"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia (CLI)
 

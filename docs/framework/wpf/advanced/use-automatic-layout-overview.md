@@ -6,11 +6,11 @@ helpviewer_keywords:
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
 ms.openlocfilehash: a43b3c0e008025171e3b1fdeba3bc514d01e28c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542627"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856040"
 ---
 # <a name="use-automatic-layout-overview"></a>Przegląd Użyj automatycznego układu
 W tym temacie przedstawiono wskazówki dla deweloperów dotyczące programowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji przy użyciu możliwych do zlokalizowania [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. W przeszłości, lokalizacja [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] został czasochłonny proces. Każdy język, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] została dostosowana do wymagana korekta poszczególne piksele. Dzisiaj z właściwy projekt i po prawej stronie standardy, kodowania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] można skonstruować tak, aby lokalizatorzy mają mniejsza Zmienianie rozmiaru i położenia celu. Podejścia do pisania aplikacji, które można łatwiej o zmienionym rozmiarze i zmienionym nosi nazwę automatycznego układu oraz można osiągnąć za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] projektowania aplikacji.  

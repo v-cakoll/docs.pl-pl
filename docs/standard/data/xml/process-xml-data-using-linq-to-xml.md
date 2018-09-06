@@ -1,28 +1,29 @@
 ---
-title: Dane XML procesu za pomocą LINQ do XML
+title: Przetwarzanie danych XML przy użyciu LINQ to XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3eeae02fc2e7795a3438d537dcc6521fb2779b91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d24f379bcfdb494369b84173cad4daa800fb7a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568748"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862679"
 ---
-# <a name="process-xml-data-using-linq-to-xml"></a>Dane XML procesu za pomocą LINQ do XML
-LINQ do XML to nowy model w programie .NET Framework w wersji 3.5 przetwarzania danych XML. LINQ do XML umożliwia deweloperom robić wszystko to one oczekiwać z danych XML: zapytań, modyfikowanie, tworzenia, zapisywania i serializacji dokumentów XML. Istotne zalety znajdują się w możliwości zapytań i tworzenia.  
+# <a name="process-xml-data-using-linq-to-xml"></a>Przetwarzanie danych XML przy użyciu LINQ to XML
+LINQ to XML jest nowy model w .NET Framework w wersji 3.5 do przetwarzania danych XML. LINQ to XML umożliwia deweloperom robić wszystko, czego mogą oczekiwać z danymi XML: wykonywanie zapytań, modyfikowanie, tworzenia, zapisywania i serializacja dokumentów XML. Istotne zalety znajdują się w funkcje zapytań i tworzenia.  
   
- Zapytania w składniku LINQ to XML są zwięzły i obszerne, używając składni więcej podobnej do bazy danych SQL niż XPath lub wyrażenie XQuery. Wyniki zapytania mogą być zwracane jako kolekcji elementów lub atrybutów i mogą być używane jako parametry dla obiektów klasy XElement, dlatego drzew XML można je łatwo przekształcać z jednego kształtu do innego.  
+ Zapytania w LINQ to XML są zwięzły i obszerne strategie, przy użyciu składni więcej podobnej do bazy danych SQL niż XPath lub wyrażenie XQuery. Ponieważ wyniki zapytania mogą być zwracane jako kolekcje elementów lub atrybutów i mogą być używane jako parametry dla obiektów klasy XElement, drzew XML można je łatwo przekształcać z jednego kształtu do innego.  
   
- LINQ do XML korzysta z technologii zapytanie o języku zintegrowanym (LINQ) w programie .NET Framework w wersji 3.5. LINQ rozszerza składnię języka C# i Visual Basic zapewnienie możliwości zaawansowanych zapytań, które może zostać rozszerzony do potencjalnie dowolnego magazynu danych.  
+ LINQ to XML korzysta z technologii zapytanie o języku zintegrowanym (LINQ) w programie .NET Framework w wersji 3.5. LINQ rozszerza składni języka C# i Visual Basic oraz możliwości kwerend, które można rozszerzyć na potencjalnie dowolnego magazynu danych.  
   
- Zobacz [LINQ do XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) szczegółowe omówienie użycia i zobacz [LINQ (zapytania język Language-Integrated)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) omówienie LINQ framework.  
+ Zobacz [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) szczegółowe omówienie użytkowania i zobacz [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) omówienie LINQ framework.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Linq>  
- <xref:System.Linq>  
- [LINQ to XML a DOM](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)  
- [LINQ to XML a inne technologie XML](https://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Xml.Linq>  
+- <xref:System.Linq>  
+- [LINQ to XML a DOM](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)  
+- [LINQ to XML a inne technologie XML](https://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)

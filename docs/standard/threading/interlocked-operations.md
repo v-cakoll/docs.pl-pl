@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 361e618578e836e10cf8655f027bed42eac7affd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6478ea94b6c54272a01497ac7b1cb1b197892309
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778331"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866965"
 ---
 # <a name="interlocked-operations"></a>Operacje blokowane
 <xref:System.Threading.Interlocked> Klasa dostarcza metody, które synchronizują dostęp do zmiennej, która jest współużytkowana przez wiele wątków. Wątki różnych procesów można użyć tego mechanizmu, jeśli zmienna znajduje się w pamięci współużytkowanej. Operacje blokowane są niepodzielne, cała operacja jest jednostki, która nie może zostać przerwane przez inną operację blokowane na tej samej zmiennej. Jest to ważne w systemach operacyjnych z preemptive wielowątkowości, gdzie wątek może zostać zawieszone po załadowaniu wartość z adresu pamięci, ale przed masz szansę, aby go zmienić i zapisz go.  
@@ -57,8 +57,9 @@ ms.locfileid: "43778331"
  [!code-csharp[Conceptual.Interlocked#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interlocked/cs/source2.cs#2)]
  [!code-vb[Conceptual.Interlocked#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interlocked/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.Interlocked>  
- <xref:System.Threading.Monitor>  
- [Wątkowość](../../../docs/standard/threading/index.md)  
- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Threading.Interlocked>  
+- <xref:System.Threading.Monitor>  
+- [Wątkowość](../../../docs/standard/threading/index.md)  
+- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)

@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
 ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534797"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43859465"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Architektura logiczna a architektura fizyczna
 

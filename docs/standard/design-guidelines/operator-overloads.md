@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 747fc21aceae60e362c72391ae265e45d6f8445f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ca42d25a5f3456c6a10eff76d7015656322abae
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579317"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874059"
 ---
 # <a name="operator-overloads"></a>Przeciążenia operatorów
-Przeciążenia operatorów Zezwalaj typy framework się tak, jakby były w nim elementów podstawowych języka wbudowanych.  
+Przeciążenia operatorów zezwala na typy framework są wyświetlane tak, jakby były one elementów podstawowych języka wbudowanych.  
   
- Dozwolone i w niektórych sytuacjach przydatne, przeciążenia operatora należy używać ostrożnie. Istnieje wiele przypadków, w którym operator przeładowanie ma zostały użyte, takich jak uruchomienia framework Designer na operatory dla operacji, które powinny być proste metody. Poniższe wskazówki powinny pomóc w określeniu, kiedy i jak użycie przeładowania operatora.  
+ Mimo że dozwolonych i przydatne w niektórych sytuacjach przeciążenia operatorów powinny być używane ostrożnie. Istnieje wiele przypadków, w której operator przeciążenia ma zostały użyte, takie jak podczas uruchamiania projektantów framework można używać operatorów dla operacji, które powinny być proste metody. Poniższe wskazówki powinien pomóc zdecydować, kiedy i jak użycie przeładowania operatora.  
   
  **X AVOID** Definiowanie przeciążenia operatora w typów, które powinny uznać, takich jak typy pierwotne (wbudowane).  
   
@@ -32,21 +32,21 @@ Przeciążenia operatorów Zezwalaj typy framework się tak, jakby były w nim e
   
  **X DO NOT** można cute podczas definiowania przeciążenia operatora.  
   
- Przeładowanie operatora jest przydatne w sytuacjach, w których jest od razu widoczne co wynik operacji będzie. Na przykład, warto mieć możliwość odjąć jedną <xref:System.DateTime> z innego `DateTime` i uzyskać <xref:System.TimeSpan>. Jednak nie jest odpowiedni, użyj logicznego operator union, union kwerend dwie bazy danych lub użyj operatora shift, aby zapisać do strumienia.  
+ Przeciążanie operatora jest przydatne w sytuacjach, w których jest od razu widoczne jaki będzie wynik operacji. Na przykład, dobrym pomysłem będzie mieć możliwość odjęcie jednego <xref:System.DateTime> z innego `DateTime` i Uzyskaj <xref:System.TimeSpan>. Jednak nie jest odpowiedni do użycia logiczny operator union, union zapytań dwie bazy danych lub użyć operator przesunięcia bitowego do zapisywania do strumienia.  
   
  **X DO NOT** Podaj operator overloads, chyba że jest co najmniej jeden z argumentów typu Definiowanie przeciążenia.  
   
  **✓ DO** przeciążać operatory w sposób symetrycznego.  
   
- Na przykład, jeśli można przeciążać `operator==`, powinien także przeciążać `operator!=`. Podobnie jeśli można przeciążać `operator<`, powinien także przeciążać `operator>`i tak dalej.  
+ Na przykład, jeśli przeładujesz `operator==`, powinien także przeciążać `operator!=`. Podobnie jeśli przeładujesz `operator<`, powinien także przeciążać `operator>`i tak dalej.  
   
  **✓ CONSIDER** zapewniając metod przyjaznych nazw, które odpowiadają do każdego przeciążonego operatora.  
   
- Przeładowanie operatora nie obsługują wiele języków. Z tego powodu zaleca się, że typy, które przeciążać operatory obejmuje dodatkowej metody z odpowiednią nazwę specyficznego dla domeny, która udostępnia podobne funkcje.  
+ Wiele języków nie obsługują przeciążanie operatora. Z tego powodu zaleca się, że typy, które przeciążają operatory obejmują metody pomocniczej z odpowiednią nazwę specyficznego dla domeny, która zapewnia podobne funkcje.  
   
- Poniższa tabela zawiera listę operatory i metody przyjaznej nazwy.  
+ Poniższa tabela zawiera listę operatorów i odpowiadających im nazw przyjaznych metody.  
   
-|Symbol operatora C#|Nazwa metadanych|Przyjazna nazwa|  
+|Symbol operatora w języku C#|Nazwa metadanych|Przyjazna nazwa|  
 |-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  
@@ -88,31 +88,32 @@ Przeciążenia operatorów Zezwalaj typy framework się tak, jakby były w nim e
 |`~`|`op_OnesComplement`|`OnesComplement`|  
   
 ### <a name="overloading-operator-"></a>Przeciążanie operatora ==  
- Przeciążanie `operator ==` jest dość złożone. Semantyka operatora musi być zgodna z kilku innych elementach członkowskich, takich jak <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+ Przeciążanie `operator ==` jest dość skomplikowane. Semantyki operatora muszą być zgodne z kilku innych członków, takich jak <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
   
 ### <a name="conversion-operators"></a>Operatory konwersji  
- Operatory konwersji są operatory jednoargumentowe, umożliwiających konwersja z typu na inny. Operatory musi być zdefiniowany jako statyczne elementy członkowskie na argument lub typ zwracany. Istnieją dwa typy operatory konwersji: jawne i niejawne.  
+ Operatory konwersji są operatory jednoargumentowe, które umożliwiają konwersja z jednego typu na inny. Operatory muszą być zdefiniowane jako elementy statyczne argument lub zwracany typ. Istnieją dwa typy operatory konwersji: jawne i niejawne.  
   
  **X DO NOT** Podaj operatora konwersji, jeśli takie konwersja nie jest wyraźnie oczekiwany przez użytkowników końcowych.  
   
  **X DO NOT** definiować operatory konwersji poza domeny typu.  
   
- Na przykład <xref:System.Int32>, <xref:System.Double>, i <xref:System.Decimal> są wszystkie typy liczbowe, podczas gdy <xref:System.DateTime> nie jest. W związku z tym nie powinny istnieć żaden operator konwersji, aby przekonwertować `Double(long)` do `DateTime`. W takim przypadku jest preferowane konstruktora.  
+ Na przykład <xref:System.Int32>, <xref:System.Double>, i <xref:System.Decimal> są wszystkie typy liczbowe, podczas gdy <xref:System.DateTime> nie jest. Dlatego powinny być żaden operator konwersji, aby przekonwertować `Double(long)` do `DateTime`. W takim przypadku jest preferowane konstruktora.  
   
  **X DO NOT** Podaj operator niejawnej konwersji, jeśli konwersja jest potencjalnie stratnej.  
   
- Na przykład nie należy niejawna konwersja z `Double` do `Int32` ponieważ `Double` ma większej niż `Int32`. Operator jawnej konwersji można podać, nawet jeśli konwersja jest potencjalnie stratnej.  
+ Na przykład, nie powinno być niejawna konwersja z `Double` do `Int32` ponieważ `Double` zapewnia szerszy zakres niż `Int32`. Operator jawnej konwersji można podać, nawet jeśli konwersja jest potencjalnie stratnej.  
   
  **X DO NOT** zgłaszanie wyjątków z niejawnego rzutowania.  
   
- Jest bardzo trudne dla użytkowników końcowych zorientować się, ponieważ nie może być należy pamiętać, że konwersja jest wykonywana.  
+ Jest to bardzo trudne dla użytkowników końcowych zorientować się, ponieważ nie są świadomi, że konwersja jest wykonywana.  
   
  **✓ DO** throw <xref:System.InvalidCastException?displayProperty=nameWithType> jeśli powoduje wywołanie operatora rzutowania stratnej konwersji i kontrakt operator nie zezwala stratnej konwersji.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

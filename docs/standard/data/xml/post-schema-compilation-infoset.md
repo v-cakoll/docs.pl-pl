@@ -1,5 +1,5 @@
 ---
-title: Obiekt typu Infoset schematu po kompilacji
+title: Zestaw informacji po kompilacji schematu
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,19 +9,19 @@ dev_langs:
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db1c952003e73beb756567be74ed4eb72612c989
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569632"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872247"
 ---
-# <a name="post-schema-compilation-infoset"></a>Obiekt typu Infoset schematu po kompilacji
-[Zalecenie schematu XML w sieci World Wide Web konsorcjum W3C](https://www.w3.org/XML/Schema) omówiono zestaw informacji (obiekt typu infoset) muszą być widoczne dla sprawdzanie poprawności schematu przed i po schematu kompilacji. Model obiektu schematu XML (SOM) widoków tego narażenia przed i po <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> metoda <xref:System.Xml.Schema.XmlSchemaSet> jest wywoływana.  
+# <a name="post-schema-compilation-infoset"></a>Zestaw informacji po kompilacji schematu
+[Zaleceniem schematu XML World Wide Web Consortium (W3C)](https://www.w3.org/XML/Schema) w tym artykule omówiono zestaw informacji (zestaw informacji) muszą być widoczne dla sprawdzanie poprawności schematu przed i po kompilacji schematu. Model obiektu schematu XML (SOM) widoki tego zagrożenia, przed i po nim <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> metoda <xref:System.Xml.Schema.XmlSchemaSet> jest wywoływana.  
   
- Obiekt typu infoset sprawdzanie poprawności schematu przed jest tworzona podczas edytowania schematu. Obiekt typu infoset schematu po kompilacji jest generowany po <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> metoda <xref:System.Xml.Schema.XmlSchemaSet> jest wywoływana podczas kompilowania schematu i jest udostępniany jako właściwości.  
+ Zestaw informacji sprawdzania poprawności schematu wstępnego została stworzona podczas edycji schematu. Zestaw informacji po kompilacji schematu jest generowany po <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> metoda <xref:System.Xml.Schema.XmlSchemaSet> jest wywoływana podczas kompilowania schematów i jest udostępniany jako właściwości.  
   
- SOM to model obiektu, który reprezentuje sprawdzanie poprawności schematu przed i po schematu kompilacji infosets; składa się z klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw. Wszystkie odczytu i zapisu właściwości klas w <xref:System.Xml.Schema> przestrzeni nazw należy do typu infoset sprawdzanie poprawności schematu wstępne podczas wszystkich tylko do odczytu właściwości klas w <xref:System.Xml.Schema> przestrzeni nazw należy do obiektu typu infoset schematu po kompilacji. Wyjątkiem od tej reguły są następujące właściwości, które są typu infoset sprawdzanie poprawności schematu wstępne i właściwości obiektu typu infoset schematu po kompilacji.  
+ Model SOM to model obiektów, który reprezentuje sprawdzanie poprawności schematu przed i po kompilacji schematu infosets; składa się z klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw. Wszystkie Odczyt i zapis właściwości klas w <xref:System.Xml.Schema> przestrzeni nazw należą do zestaw informacji sprawdzania poprawności schematu przed, podczas wszystkich tylko do odczytu właściwości klas w <xref:System.Xml.Schema> przestrzeni nazw należą do zestaw informacji po kompilacji schematu. Wyjątkiem od tej reguły są następujące właściwości, które są zarówno zestaw informacji sprawdzania poprawności schematu wstępne i właściwości zestaw informacji po kompilacji schematu.  
   
 |Class|Właściwość|  
 |-----------|--------------|  
@@ -32,13 +32,14 @@ ms.locfileid: "33569632"
 |<xref:System.Xml.Schema.XmlSchemaParticle>|<xref:System.Xml.Schema.XmlSchemaParticle.MaxOccurs%2A>, <xref:System.Xml.Schema.XmlSchemaParticle.MinOccurs%2A>|  
 |<xref:System.Xml.Schema.XmlSchemaComplexType>|<xref:System.Xml.Schema.XmlSchemaComplexType.AnyAttribute%2A>|  
   
- Na przykład <xref:System.Xml.Schema.XmlSchemaElement> i <xref:System.Xml.Schema.XmlSchemaComplexType> klasy zarówno mają `BlockResolved` i `FinalResolved` właściwości. Te właściwości są używane do przechowywania wartości `Block` i `Final` właściwości po schemat został skompilowany i sprawdzania poprawności. `BlockResolved` i `FinalResolved` są właściwości tylko do odczytu, które są częścią typu infoset schematu po kompilacji.  
+ Na przykład <xref:System.Xml.Schema.XmlSchemaElement> i <xref:System.Xml.Schema.XmlSchemaComplexType> mają obu klas `BlockResolved` i `FinalResolved` właściwości. Te właściwości są używane do przechowywania wartości `Block` i `Final` właściwości po schemat został skompilowany i zweryfikowane. `BlockResolved` i `FinalResolved` są właściwości tylko do odczytu, które są częścią zestaw informacji po kompilacji schematu.  
   
- W poniższym przykładzie przedstawiono <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> właściwość <xref:System.Xml.Schema.XmlSchemaElement> klasy zestawu po sprawdzania poprawności schematu. Przed sprawdzania poprawności, ta właściwość zawiera `null` odwołanie i <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> jest ustawiona na nazwę typu zagrożona. Po sprawdzeniu poprawności <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> jest rozwiązane do prawidłowego typu i jest dostępna za pośrednictwem obiektu typu <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> właściwości.  
+ W poniższym przykładzie przedstawiono <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> właściwość <xref:System.Xml.Schema.XmlSchemaElement> klasy zestawu po poprawności schematu. Przed sprawdzania poprawności, ta właściwość zawiera `null` odwołania, a <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> jest ustawiona na nazwę typu zagrożona. Po zakończeniu walidacji <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> jest tłumaczona na prawidłowy typ i obiektu typu jest dostępna za pośrednictwem <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> właściwości.  
   
  [!code-cpp[PsciSample#1](../../../../samples/snippets/cpp/VS_Snippets_Data/PsciSample/CPP/PsciSample.cpp#1)]
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

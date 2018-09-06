@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658967"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876219"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi — funkcja
 Tworzy lub aktualizuje wystąpienia istniejącej klasy. Wystąpienie jest zapisywany do repozytorium WMI. 

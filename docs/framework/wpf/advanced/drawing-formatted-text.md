@@ -11,11 +11,11 @@ helpviewer_keywords:
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
 ms.openlocfilehash: 4cbf2a9ec9b742af3895f7c30b1a4dbbdbf5a635
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659332"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804948"
 ---
 # <a name="drawing-formatted-text"></a>Rysowanie formatowanego tekstu
 Ten temat zawiera omówienie funkcji <xref:System.Windows.Media.FormattedText> obiektu. Ten obiekt zapewnia kontrolę niskiego poziomu dla Rysowanie tekstu w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  

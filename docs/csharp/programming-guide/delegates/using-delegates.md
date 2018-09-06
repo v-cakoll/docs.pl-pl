@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 5c6a18601916df6e2abf093e8d4b4d77e085bfb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 07bc0e38455335e068719137c349daf65f8fab6b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539671"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43860288"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Używanie delegatów (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, który hermetyzuje bezpiecznie metody, podobne do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji języka C obiekty delegowane są zorientowane obiektowo, typu, bezpieczeństwa i bezpieczne. Typ obiektu delegowanego jest definiowany przez nazwę obiektu delegowanego. Poniższy przykład deklaruje delegat o nazwie `Del` który umożliwiająca Hermetyzowanie metody, która przyjmuje [ciąg](../../../csharp/language-reference/keywords/string.md) jako argument i zwraca [void](../../../csharp/language-reference/keywords/void.md):  
@@ -66,9 +66,9 @@ A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, 
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
-- [Korzystanie z wariancji w delegatach](https://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)  
-- [Wariancje w delegatach](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)  
-- [Korzystanie z wariancji dla delegatów ogólnych Func i Action](https://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Delegaci](../../../csharp/programming-guide/delegates/index.md)
+- [Korzystanie z wariancji w delegatach](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [Wariancje w delegatach](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Korzystanie z wariancji dla delegatów ogólnych Func i Action](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)

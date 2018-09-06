@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 656b34a828ef6acd488cc84ca98d5a4bbaaa2cdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589808"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869996"
 ---
 # <a name="cryptographic-signatures"></a>Podpisy kryptograficzne
-<a name="top"></a> Kryptograficznych podpisów cyfrowych korzysta algorytmy kluczy publicznych w celu zapewnienia integralności danych. Podczas rejestrowania danych za pomocą podpisu cyfrowego ktoś inny może zweryfikować podpisu, a można udowodnić, że dane pochodzą od użytkownika oraz nie została zmodyfikowana po podpisaniu jej. Aby uzyskać więcej informacji na temat podpisów cyfrowych, zobacz [usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md).  
+<a name="top"></a> Podpisy cyfrowe kryptograficzne umożliwia algorytmy kluczy publicznych zapewniają integralność danych. Po zalogowaniu danych przy użyciu podpisu cyfrowego, ktoś inny może zweryfikować podpisu, a można udowodnić, że dane pochodzą od użytkownika oraz nie została zmodyfikowana po użytkownik zarejestrowany. Aby uzyskać więcej informacji na temat podpisów cyfrowych, zobacz [usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md).  
   
- W tym temacie opisano sposób generować i weryfikować podpisów cyfrowych przy użyciu klas w <xref:System.Security.Cryptography?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym temacie opisano sposób rejestrowania i weryfikowania podpisów cyfrowych przy użyciu klas w <xref:System.Security.Cryptography?displayProperty=nameWithType> przestrzeni nazw.  
   
 -   [Generowanie podpisów](#generate)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33589808"
   
 <a name="generate"></a>   
 ## <a name="generating-signatures"></a>Generowanie podpisów  
- Podpisy cyfrowe są zazwyczaj stosowane do wartości skrótu, reprezentujących większy danych. Poniższy przykład dotyczy wartości skrótu podpisu cyfrowego. Po pierwsze, nowe wystąpienie klasy <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasa jest tworzona można wygenerować pary kluczy publiczny/prywatny. Następnie <xref:System.Security.Cryptography.RSACryptoServiceProvider> jest przekazywana do nowego wystąpienia <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> klasy. Spowoduje to przesłanie klucza prywatnego <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, który wykonuje rzeczywistą podpisu cyfrowego. Aby móc zalogować skrótu, należy określić algorytm wyznaczania wartości skrótu do użycia. W tym przykładzie używa algorytmu SHA1. Na koniec <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> metoda jest wywoływana na podpisywanie.  
+ Podpisy cyfrowe są zazwyczaj stosowane do wartości skrótu, które reprezentują więcej danych. Poniższy przykład dotyczy wartości skrótu podpisu cyfrowego. Po pierwsze, nowe wystąpienie klasy <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasa została utworzona, można wygenerować pary kluczy publiczny/prywatny. Następnie <xref:System.Security.Cryptography.RSACryptoServiceProvider> jest przekazywany do nowego wystąpienia <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> klasy. To przesłanie klucza prywatnego <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, który wykonuje cyfrowego podpisywania. Przed zarejestrowaniem skrótu, należy określić algorytm wyznaczania wartości skrótu do użycia. W tym przykładzie użyto algorytmu SHA1. Na koniec <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> metoda jest wywoływana w celu wykonania podpisywania.  
   
 ```vb  
 Imports System  
@@ -103,27 +103,27 @@ class Class1
 ```  
   
 ### <a name="signing-xml-files"></a>Podpisywanie plików XML  
- Platforma .NET Framework zapewnia <xref:System.Security.Cryptography.Xml> przestrzeni nazw, która pozwala zarejestrować XML. Podpisywanie XML jest ważne, jeśli chcesz sprawdzić, czy plik XML pochodzą z danego źródła. Na przykład jeśli używasz usługi giełdowych, który jest używany plik XML możesz zweryfikować źródło XML jest podpisany.  
+ Program .NET Framework oferuje <xref:System.Security.Cryptography.Xml> przestrzeni nazw, co pozwala zarejestrować XML. Podpisywanie XML jest ważne w przypadku, gdy chcesz zweryfikować, że plik XML pochodzi z danego źródła. Na przykład jeśli używasz usługi notowań giełdowych, który używa XML możesz zweryfikować źródła XML jest podpisany.  
   
- Postępuj zgodnie z klas w tej przestrzeni nazw [składni XML podpisu i przetwarzania zalecenie](https://www.w3.org/TR/xmldsig-core/) z konsorcjum World Wide Web.  
+ Postępuj zgodnie z klas w tej przestrzeni nazw [zalecenie składni XML podpisu i przetwarzanie](https://www.w3.org/TR/xmldsig-core/) z konsorcjum World Wide Web.  
   
  [Powrót do początku](#top)  
   
 <a name="verify"></a>   
 ## <a name="verifying-signatures"></a>Weryfikowanie podpisów  
- Aby sprawdzić, czy dane został podpisany przez firmę określonego, musi mieć następujące informacje:  
+ Aby sprawdzić, czy dane został podpisany przez określoną stronę, musisz mieć następujące informacje:  
   
--   Klucz publiczny strony, który podpisał danych.  
+-   Klucz publiczny w innej firmy, który podpisał danych.  
   
 -   Podpis cyfrowy.  
   
 -   Dane, który został podpisany.  
   
--   Algorytm wyznaczania wartości skrótu używanego przez osoby podpisującej.  
+-   Algorytm skrótu używany przez osoby podpisującej.  
   
- Można zweryfikować podpisu podpisane przez <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> klasy, należy użyć <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> klasy. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> Klasa musi być dostarczony klucz publiczny podpisu. Konieczne będzie wartości resztę i wykładnik, aby określić klucz publiczny. (Strony, który wygenerował pary kluczy publiczny/prywatny należy podać te wartości.) Najpierw utwórz <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiektu do przechowywania klucz publiczny, który będzie zweryfikować podpisu, a następnie zainicjuj <xref:System.Security.Cryptography.RSAParameters> struktury modulo i wykładnik wartości, które określają klucz publiczny.  
+ Aby zweryfikować podpisu, który został podpisany przez <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> klasy, należy użyć <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> klasy. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> Klasa musi być podany klucz publiczny podpisu. Konieczne będzie wartości moduł i wykładnik, do określenia klucza publicznego. (Strona, która wygenerowała pary kluczy publiczny/prywatny podać te wartości.) Najpierw utwórz <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiekt do przechowywania klucza publicznego, zweryfikować podpisu, a następnie zainicjuj <xref:System.Security.Cryptography.RSAParameters> struktury wyznaczanie modułu i wykładnik wartości, które określają klucz publiczny.  
   
- Poniższy kod przedstawia tworzenie <xref:System.Security.Cryptography.RSAParameters> struktury. `Modulus` Właściwości ustawiono wartość tablicy bajtów o nazwie `ModulusData` i `Exponent` właściwości ustawiono wartość tablicy bajtów o nazwie `ExponentData`.  
+ Poniższy kod ilustruje tworzenie <xref:System.Security.Cryptography.RSAParameters> struktury. `Modulus` Właściwości ustawiono wartość tablicy typu byte o nazwie `ModulusData` i `Exponent` właściwości ustawiono wartość tablicy typu byte o nazwie `ExponentData`.  
   
 ```vb  
 Dim RSAKeyInfo As RSAParameters  
@@ -137,9 +137,9 @@ RSAKeyInfo.Modulus = ModulusData;
 RSAKeyInfo.Exponent = ExponentData;  
 ```  
   
- Po utworzeniu <xref:System.Security.Cryptography.RSAParameters> obiektu, należy zainicjować nowe wystąpienie klasy <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy do wartości określonej w <xref:System.Security.Cryptography.RSAParameters>. <xref:System.Security.Cryptography.RSACryptoServiceProvider> z kolei przekazany do konstruktora <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> do przeniesienia klucza.  
+ Po utworzeniu <xref:System.Security.Cryptography.RSAParameters> obiektu można zainicjować nowe wystąpienie klasy <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy wartościom określonym w <xref:System.Security.Cryptography.RSAParameters>. <xref:System.Security.Cryptography.RSACryptoServiceProvider> z kolei przekazany do konstruktora obiektu <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> celu przeniesienia klucza.  
   
- Poniższy przykład przedstawia tego procesu. W tym przykładzie `HashValue` i `SignedHashValue` są tablice bajtów dostarczonym przez firmę zdalnego. Strona zdalna została podpisana `HashValue` przy użyciu algorytmu SHA1, tworzenie podpisu cyfrowego `SignedHashValue`. Program  
+ Poniższy przykład ilustruje ten proces. W tym przykładzie `HashValue` i `SignedHashValue` to tablice bajtów dostarczonym przez firmę zdalnego. Strona zdalna została podpisana `HashValue` przy użyciu algorytmu SHA1, tworzenie podpis cyfrowy `SignedHashValue`. Program  
   
  <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> metoda sprawdza, czy podpis cyfrowy jest prawidłowa i czy został użyty do podpisania `HashValue`.  
   
@@ -170,7 +170,8 @@ else
 }  
 ```  
   
- Wyświetli fragmentu kodu "`The signature is valid`" Jeśli podpis jest nieprawidłowy i "`The signature is not valid`" Jeśli nie jest.  
+ Ten fragment kodu będą wyświetlane "`The signature is valid`" Jeśli podpis jest prawidłowy i "`The signature is not valid`" Jeśli nie jest.  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)

@@ -1,5 +1,5 @@
 ---
-title: Projekt — Konstruktor
+title: Projekt konstruktora
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,71 +14,72 @@ helpviewer_keywords:
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d7ca279dc1626cd526910af93326280bcd8301d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ad920c8028b102a13fdfe928d21768538e25b0f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575560"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868157"
 ---
-# <a name="constructor-design"></a>Projekt — Konstruktor
-Istnieją dwa rodzaje konstruktory: wpisz konstruktorów i konstruktorów wystąpienia.  
+# <a name="constructor-design"></a>Projekt konstruktora
+Istnieją dwa rodzaje konstruktorów: wpisz konstruktorów i konstruktorów wystąpienia.  
   
- Konstruktory typu są statyczne i są uruchamiane przez środowisko CLR, zanim będzie można użyć tego typu. Konstruktory wystąpień uruchamiany po utworzeniu wystąpienia typu.  
+ Konstruktorzy typów są statyczne i są uruchamiane przez środowisko CLR, zanim typ jest używany. Konstruktory wystąpień uruchamiane, gdy tworzone jest wystąpienie typu.  
   
- Konstruktorów typów nie przyjmuje żadnych parametrów. Konstruktory wystąpień może. Konstruktory wystąpień, które nie przyjmuje żadnych parametrów są często nazywane domyślnych konstruktorów.  
+ Konstruktorzy typów nie przyjmuje żadnych parametrów. Konstruktory wystąpień może. Konstruktory wystąpień, które nie przyjmuje żadnych parametrów są często nazywane domyślnych konstruktorów.  
   
- Konstruktory są najbardziej naturalny sposób można utworzyć wystąpienia typu. Większość deweloperów będzie wyszukiwanie i spróbuj użyć konstruktora przed uznają alternatywnych sposobów tworzenia wystąpień (na przykład metodami factory).  
+ Konstruktory są najbardziej naturalny sposób tworzenia wystąpień tego typu. Większość programistów poszuka i spróbuj użyć konstruktora, zanim rozważa alternatywne sposoby tworzenia wystąpień (takie jak metodach fabryki).  
   
  **✓ CONSIDER** udostępnia prostą, najlepiej domyślne, konstruktorów.  
   
- Prosty konstruktor ma bardzo małą liczbę parametrów, a wszystkie parametry są pierwotnych lub wyliczeń. Takie proste konstruktorów zwiększyć użyteczność platformy.  
+ Proste Konstruktor ma bardzo niewielkiej liczby parametrów, a wszystkie parametry są w nim elementów podstawowych lub wyliczenia. Takie proste konstruktory zwiększyć użyteczność Framework.  
   
  **✓ CONSIDER** przy użyciu metody statycznej fabryki zamiast konstruktora semantykę Żądana operacja nie mapują bezpośrednio do tworzenia nowego wystąpienia, lub zgodnie z wytycznymi projektowania konstruktora tak nienaturalnej.  
   
  **✓ DO** parametry konstruktora jako skróty do ustawiania właściwości głównego.  
   
- Nie powinna istnieć różnicy w semantyki między przy użyciu pustego konstruktora następuje niektóre zestawy właściwości i konstruktora z wieloma argumentami.  
+ Powinna istnieć nie różnice w semantyce między za pomocą pustego konstruktora, następuje niektórych zestawów właściwości i za pomocą konstruktora z wielu argumentów.  
   
  **✓ DO** Użyj takiej samej nazwy dla parametrami konstruktora a właściwością, jeśli używane są parametry konstruktora wystarczy ustawić właściwości.  
   
- Jedyną różnicą między tych parametrów i właściwości powinny być wielkość liter.  
+ Jedyną różnicą między takie parametry i właściwości powinny być wielkość liter.  
   
  **✓ DO** minimalnego pracy w konstruktorze.  
   
- Konstruktory należy wykonać dużo pracy innych niż przechwytywania parametrami konstruktora. Powinno zostać opóźnione koszt żadnych innych operacji, dopóki wymagane.  
+ Konstruktory nie powinien wykonać dużo pracy innych niż przechwytywania parametry konstruktora. Koszt dowolne inne procesy przetwarzania powinno zostać opóźnione, dopóki nie jest wymagane.  
   
  **✓ DO** zgłaszanie wyjątków z konstruktorów wystąpienia, w razie potrzeby.  
   
  **✓ DO** jawnie deklarować publicznego konstruktora domyślnego w klasach, jeśli takie Konstruktor jest wymagana.  
   
- Wszystkie konstruktory nie jawnie zadeklarowana w typie, wiele języków (na przykład C#) automatycznie doda publiczny konstruktor domyślny. (Klas abstrakcyjnych get Konstruktor chroniony).  
+ Jeśli w danym typie, nie jawnie deklarować żadnych konstruktorów, wielu języków (takich jak C#) spowoduje automatyczne dodanie publicznego konstruktora domyślnego. (Klasy abstrakcyjne uzyskać Konstruktor chroniony).  
   
- Dodawanie sparametryzowanym konstruktorze do klasy uniemożliwia kompilator Dodawanie domyślnego konstruktora. Powoduje to często przypadkowemu najważniejszych zmian.  
+ Dodawanie sparametryzowania konstruktora do klasy zapobiega dodawaniu konstruktora domyślnego przez kompilator. To często powoduje, że przypadkowe przełomowe zmiany.  
   
  **X AVOID** jawnie Definiowanie domyślnych konstruktorów w strukturach.  
   
- Dzięki temu utworzenia tablicy szybciej, ponieważ jeśli nie zdefiniowano domyślnego konstruktora, ma być uruchamiane na każdym miejsca w tablicy. Należy pamiętać, że struktury mieć konstruktorów bez parametrów z tego powodu nie zezwalaj na wiele kompilatorów, w tym C#.  
+ Ułatwia to utworzenie tablicy szybciej, ponieważ jeśli nie zdefiniowano domyślnego konstruktora, nie ma być uruchamiane na każdego miejsca, w tablicy. Należy pamiętać, że wiele kompilatorów, w tym C#, nie zezwalaj na zwracanie struktur mieć konstruktory bez parametrów, dlatego.  
   
  **X AVOID** wywoływania wirtualne elementy członkowskie dla obiekt wewnątrz jego konstruktora.  
   
- Wywołanie elementu członkowskiego wirtualnego spowoduje najdalszych pochodnych zastąpienie do wywołania, nawet wtedy, gdy Konstruktor typu najbardziej pochodnej nie pełni uruchomiono jeszcze.  
+ Wywołanie wirtualna elementu członkowskiego spowoduje zastąpienie najbardziej pochodnej, można wywołać, nawet wtedy, gdy Konstruktor typu najbardziej pochodnego nie został w pełni uruchomiony jeszcze.  
   
-### <a name="type-constructor-guidelines"></a>Wskazówki dotyczące konstruktora typu  
+### <a name="type-constructor-guidelines"></a>Wytyczne dotyczące konstruktora typu  
  **✓ DO** Oznacz jako prywatne konstruktory statyczne.  
   
- Konstruktor statyczny, nazywany również konstruktora klasy służy do inicjowania typu. Środowisko CLR wywołuje konstruktor statyczny przed utworzeniu pierwszego wystąpienia typu lub są nazywane żadnych statycznych elementów członkowskich tego typu. Użytkownik nie ma kontroli nad podczas wywołania konstruktora statycznego. Jeśli Konstruktor statyczny nie jest prywatne, może być wywoływany przez kod innych niż środowiska CLR. W zależności od operacji wykonywanych w Konstruktorze może to spowodować nieoczekiwane zachowanie. Kompilator języka C# wymusza konstruktory statyczne ma charakter prywatny.  
+ Statyczny Konstruktor, nazywany również konstruktora klasy jest używany do inicjowania typu. Środowisko CLR wywołuje statyczny Konstruktor przed utworzeniu pierwszego wystąpienia tego typu lub wszelkich statyczne elementy członkowskie tego typu są wywoływane. Użytkownik nie ma kontroli nad kiedy wywoływany jest konstruktor statyczny. Jeśli Konstruktor statyczny nie jest prywatny, może ona zostać wywołana przez kod inny niż środowiska CLR. W zależności od operacje wykonywane w Konstruktorze może to spowodować nieoczekiwane zachowanie. Kompilator języka C# wymusza konstruktorów statycznych jako prywatne.  
   
  **X DO NOT** zgłaszanie wyjątków z konstruktorów statycznych.  
   
- Jeśli z konstruktora typu jest zgłaszany wyjątek, typ nie jest użyteczne w bieżącej domenie aplikacji.  
+ Jeśli wyjątek jest zgłaszany z konstruktora typu, typ nie jest użyteczny w bieżącej domenie aplikacji.  
   
  **✓ CONSIDER** inicjowanie pól statycznych zamiast jawnie konstruktory statyczne, ponieważ środowisko uruchomieniowe jest w stanie zoptymalizować wydajność typy, które nie mają jawnie zdefiniowanych Konstruktor statyczny.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

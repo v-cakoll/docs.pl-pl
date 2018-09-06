@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
 ms.openlocfilehash: 86645396033ca1c3cfb025ba6db42b726f7e7969
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734398"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862293"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Porady: włączanie widoku Tile w formancie ListView formularzy systemu Windows przy użyciu narzędzia Projektant
 Funkcja widoku kafelków z <xref:System.Windows.Forms.ListView> kontroli umożliwia wizualne równowagi między informacje graficzne i tekstowe. Tekstowe informacje wyświetlane dla elementu w widoku kafelków jest taka sama jak informacji o kolumnie zdefiniowane dla widoku szczegółów. Funkcje widoku kafelków w połączeniu z grupowania lub wstawiania oznaczyć funkcji <xref:System.Windows.Forms.ListView> kontroli.  

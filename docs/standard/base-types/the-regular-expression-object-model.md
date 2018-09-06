@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 773c3ee1a82e8307d32750c7d055201c466707bc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561000"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868078"
 ---
 # <a name="the-regular-expression-object-model"></a>Model obiektów wyrażeń regularnych
 <a name="introduction"></a> W tym temacie opisano model obiektów używanych w pracy z wyrażeń regularnych programu .NET. Ten temat zawiera następujące sekcje:  
@@ -351,7 +351,8 @@ ms.locfileid: "43561000"
 |`;`|Dopasowuje średnikiem.|  
 |`((\w+(\s\w+)*),(\d+);)+`|Pasuje do wzorca programu word, następuje dodatkowych słów, następuje przecinek, co najmniej jedna cyfra i średnikiem, jeden lub więcej razy. Jest to pierwsza grupa przechwytywania.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Text.RegularExpressions>  
- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)  
- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Text.RegularExpressions>  
+- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

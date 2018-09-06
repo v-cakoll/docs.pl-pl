@@ -3,11 +3,11 @@ title: LINQ to XML — Przegląd (C#)
 ms.date: 07/20/2015
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
 ms.openlocfilehash: 5b557c95993d7f1e907a8eb6ef1e5ec23a2988ab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539073"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856624"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML — Przegląd (C#)
 XML ma powszechnie zaakceptowany jako sposób na formatowanie danych w wielu kontekstach. Na przykład możesz znaleźć XML w sieci Web, w plikach konfiguracji, pliki programu Microsoft Office Word i baz danych.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7bb66d9009e9843a67bbc198f1e30e14d43c9a5d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555418"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867871"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potencjalne pułapki związane z równoległością danych i zadań
 W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> może zapewnić znaczne ulepszenia wydajności za pośrednictwem zwykłych sekwencyjne pętli. Jednak pracy zrównoleglić pętlę wprowadza złożoności, który może prowadzić do problemów, które sekwencyjnego kodu nie są jako wspólne lub nie zostaną napotkane w ogóle. W tym temacie wymieniono niektóre rozwiązania, aby uniknąć podczas pisania pętli równoległych.  
@@ -80,7 +80,8 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
  [!code-csharp[TPL_Pitfalls#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#03)]
  [!code-vb[TPL_Pitfalls#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#03)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
- [Potencjalne pułapki związane z PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [Wzorce programowania równoległego: rozumienie i stosowanie równoległych wzorców z programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)
+## <a name="see-also"></a>Zobacz także
+
+- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
+- [Potencjalne pułapki związane z PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
+- [Wzorce programowania równoległego: rozumienie i stosowanie równoległych wzorców z programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38d6e979cd00bd113339a69b3ea6646c98f379d6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735166"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872839"
 ---
 # <a name="comparing-strings-in-net"></a>Porównywanie ciągów w programie .NET
 .NET zapewnia kilka metod, aby porównać wartości ciągów. Poniższej tabeli wymieniono i opisano metody porównania wartości.  
@@ -150,7 +150,7 @@ ms.locfileid: "43735166"
   
  Obie metody są przydatne, gdy jest używana w połączeniu z **String.Remove** metody. Można użyć dowolnego **IndexOf** lub **LastIndexOf** metody w celu pobrania położenie znaku, a następnie podaj tej pozycji, aby **Usuń** metody, aby usunąć znak lub słowo, które zaczyna się od znaku.  
   
-## <a name="see-also"></a>Zobacz także  
+## <a name="see-also"></a>Zobacz także
 
 - [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)  
 - [Wykonywanie niezależnych od kultury operacji na ciągach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

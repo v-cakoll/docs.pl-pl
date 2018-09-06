@@ -3,11 +3,11 @@ title: Zaawansowana obsługa błędów
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
 ms.openlocfilehash: 72fb9885408759f5781501b548f81625d258d13c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745261"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873919"
 ---
 # <a name="advanced-error-handling"></a>Zaawansowana obsługa błędów
 Niniejszy przykład pokazuje usługi routingu Windows Communication Foundation (WCF). Usługa routingu jest składnikiem usługi WCF, który ułatwia to dołączenie routerem na podstawie zawartości do aplikacji. Niniejszy przykład pokazuje, jak usługa routingu inteligentnie odzyskiwania sprawności błędów, za pomocą transakcji i inne bardziej złożonych koncepcji obsługi komunikatów, takich jak multiemisji.  

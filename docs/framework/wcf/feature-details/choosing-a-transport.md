@@ -5,11 +5,11 @@ helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 ms.openlocfilehash: c98fd4bb76074c2d96b702a37bf1964600d365e3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738849"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864631"
 ---
 # <a name="choosing-a-transport"></a>Wybieranie transportu
 W tym temacie omówiono kryteria wyboru spośród trzech głównych transportu, zawartych w Windows Communication Foundation (WCF): HTTP, TCP i nazwane potoki. Zawiera również WCF transportu MSMQ (MSMQ), ale ten dokument nie obejmuje usługi kolejkowania komunikatów.  

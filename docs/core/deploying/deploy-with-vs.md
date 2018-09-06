@@ -3,13 +3,13 @@ title: Wdrażanie aplikacji .NET core za pomocą programu Visual Studio
 description: Dowiedz się, wdrażanie aplikacji .NET Core za pomocą programu Visual Studio
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 960a5efdfd7bc9c57f9101f9ddc05efb54f19708
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734593"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868656"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Wdrażanie platformy .NET Core z aplikacji za pomocą programu Visual Studio
 
@@ -30,13 +30,14 @@ Wdrożenie zależny od struktury bez zależności innych firm po prostu polega n
 
 1. Utwórz projekt.
 
-   Wybierz **pliku** > **nowe** > **projektu**. W **nowy projekt** okno dialogowe, wybierz opcję **platformy .NET Core** w **zainstalowane** okienku typów projektu, a następnie wybierz **Aplikacja konsoli (.NET Core)** szablon w środkowym okienku. Wprowadź nazwę projektu, takich jak "Dyskietki" w **nazwa** pola tekstowego. Wybierz **OK** przycisku.
+   Wybierz **pliku** > **nowe** > **projektu**. W **nowy projekt** okno dialogowe, rozwiń węzeł kategorii danego języka (C# lub Visual Basic) projektu w **zainstalowane** okienku typów projektu, wybierz polecenie **platformy .NET Core**, a następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonów w środkowym okienku. Wprowadź nazwę projektu, takich jak "Dyskietki" w **nazwa** pola tekstowego. Wybierz **OK** przycisku.
 
 1. Dodawanie kodu źródłowego aplikacji.
 
-   Otwórz *Program.cs* w edytorze i Zastęp automatycznie wygenerowany kod następującym kodem. On monituje użytkownika o wprowadzenie tekstu i wyświetla poszczególne wyrazy wprowadzonej przez użytkownika. Używa wyrażenia regularnego `\w+` do oddzielania słów w tekście wejściowym.
+   Otwórz *Program.cs* lub *Program.vb* w edytorze i Zastęp automatycznie wygenerowany kod następującym kodem. On monituje użytkownika o wprowadzenie tekstu i wyświetla poszczególne wyrazy wprowadzonej przez użytkownika. Używa wyrażenia regularnego `\w+` do oddzielania słów w tekście wejściowym.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Utworzenie kompilacja do debugowania aplikacji.
 
@@ -48,13 +49,13 @@ Wdrożenie zależny od struktury bez zależności innych firm po prostu polega n
 
       1. Zmień konfigurację przy użyciu rozwiązania **debugowania** do **wersji** na pasku narzędzi do kompilacji w wersji (a nie na debugowanie) wersję aplikacji.
 
-      1. Kliknij prawym przyciskiem myszy nad projektem (nie rozwiązanie) **Eksploratora rozwiązań**i wybierz **Publikuj**.
+      1. Kliknij prawym przyciskiem myszy nad projektem (nie rozwiązanie) **Eksploratora rozwiązań** i wybierz **Publikuj**.
 
       1. W **Publikuj** zaznacz **Publikuj**. Program Visual Studio zapisuje pliki, wchodzące w skład aplikacji w lokalnym systemie plików.
 
       1. **Publikuj** karta zawiera teraz jeden profil **FolderProfile**. Ustawienia konfiguracji w profilu są wyświetlane w **Podsumowanie** karcie.
 
-   Pliki wynikowe są umieszczane w katalogu o nazwie `PublishOutput` znajdujący się w podkatalogu projektu *.\bin\release* podkatalogu.
+   Pliki wynikowe są umieszczane w katalogu o nazwie `Publish` na Windows i `publish` na komputerach z systemem Unix, które znajduje się w podkatalogu projektu *.\bin\release\netcoreapp2.1* podkatalogu.
 
 Wraz z plikami aplikacji proces publikowania emituje plik bazy danych (PDB) program, który zawiera informacje o debugowaniu dotyczących aplikacji. Plik jest przydatne głównie do debugowania wyjątków. Istnieje możliwość nie spakujesz ją z plikami aplikacji. Jednak należy je zapisać, w przypadku, gdy chcesz debugować kompilację wydania aplikacji.
 
@@ -76,37 +77,56 @@ Należy pamiętać, że wdrożenie zależny od struktury z zależności innych f
 
 ## <a name="simpleSelf"></a> Niezależne wdrożenia bez zależności innych firm
 
-Wdrożenie niezależna bez zależności innych firm obejmuje tworzenie projektu i modyfikując *csproj* pliku, tworzenia, testowania i publikowania aplikacji. Prosty przykład napisany w języku C# przedstawiono proces.
+Wdrożenie niezależna bez zależności innych firm obejmuje tworzenie projektu i modyfikując *csproj* pliku, tworzenia, testowania i publikowania aplikacji. Prosty przykład napisany w języku C# przedstawiono proces. Należy rozpocząć od tworzenia, kodowania i testowania projektu, tak samo jak wdrożenia zależny od struktury:
 
 1. Utwórz projekt.
 
-   Wybierz **pliku** > **nowe** > **projektu**. W **Dodaj nowy projekt** okno dialogowe, wybierz opcję **platformy .NET Core** w **zainstalowane** okienku typów projektu, a następnie wybierz **Aplikacja konsoli (.NET Core)** szablon w środkowym okienku. Wprowadź nazwę projektu, takich jak "— SCD", w **nazwa** pola tekstowego, a następnie wybierz pozycję **OK** przycisku.
+   Wybierz **pliku** > **nowe** > **projektu**. W **nowy projekt** okno dialogowe, rozwiń węzeł kategorii danego języka (C# lub Visual Basic) projektu w **zainstalowane** okienku typów projektu, wybierz polecenie **platformy .NET Core**, a następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonów w środkowym okienku. Wprowadź nazwę projektu, takich jak "— SCD", w **nazwa** pola tekstowego, a następnie wybierz pozycję **OK** przycisku.
 
 1. Dodawanie kodu źródłowego aplikacji.
 
-   Otwórz *Program.cs* plik w edytorze i Zastąp kod wygenerowany automatycznie z następującym kodem. On monituje użytkownika o wprowadzenie tekstu i wyświetla poszczególne wyrazy wprowadzonej przez użytkownika. Używa wyrażenia regularnego `\w+` do oddzielania słów w tekście wejściowym.
+   Otwórz *Program.cs* lub plik w edytorze i Zastąp kod wygenerowany automatycznie z następującym kodem. On monituje użytkownika o wprowadzenie tekstu i wyświetla poszczególne wyrazy wprowadzonej przez użytkownika. Używa wyrażenia regularnego `\w+` do oddzielania słów w tekście wejściowym.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+
+1. Określ, czy używać globalizacji niezmiennej trybu.
+
+   Szczególnie w przypadku, gdy aplikacja jest przeznaczona na systemie Linux, można zmniejszyć całkowity rozmiar wdrożenia, wykorzystując [globalizacji niezmiennej tryb](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Globalizacji niezmiennej tryb jest przydatne w przypadku aplikacji, które nie są wspierane i mogą używać konwencji formatowania Konwencji obudowy i ciąg porównywania i sortowania kolejności [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture).
+
+   Aby włączyć tryb niezmiennej, kliknij prawym przyciskiem myszy nad projektem (nie rozwiązanie) **Eksploratora rozwiązań**i wybierz **Edytuj SCD.csproj** lub **Edytuj SCD.vbproj**. Następnie dodaj następujące wiersze wyróżnione do pliku:
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
+1. Utworzenie kompilacja do debugowania aplikacji.
+
+   Wybierz **kompilacji** > **Kompiluj rozwiązanie**. Można również skompilować i uruchomić kompilację debugowania aplikacji, wybierając **debugowania** > **Rozpocznij debugowanie**. Ten krok debugowania pozwala zidentyfikować problemy z aplikacji, gdy jest uruchomiona na platformie hosta. Nadal trzeba będzie je przetestować na każdej z platform docelowych.
+
+   Po włączeniu trybu niezmiennej globalizacji, należy szczególnie sprawdzić, czy brak dane wrażliwe na ustawienia kulturowe jest odpowiedni dla twojej aplikacji.
+
+Po zakończeniu debugowania, możesz opublikować niezależna wdrożenia:
+
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 i wcześniejszych](#tab/vs156)
+
+Po utworzeniu debugowania i przetestować program, należy utworzyć pliki do wdrożenia z aplikacją, dotyczącymi poszczególnych platform, że jest ono przeznaczone dla.
+
+Aby opublikować aplikację z poziomu programu Visual Studio, wykonaj następujące czynności:
 
 1. Zdefiniuj platformy, dla których będzie dotyczyć aplikacji.
 
-   1. Kliknij prawym przyciskiem myszy nad projektem (nie rozwiązanie) **Eksploratora rozwiązań**i wybierz **Edytuj SCD.csproj**.
+   1. Kliknij prawym przyciskiem myszy nad projektem (nie rozwiązanie) **Eksploratora rozwiązań** i wybierz **Edytuj SCD.csproj**.
 
    1. Tworzenie `<RuntimeIdentifiers>` tagów w `<PropertyGroup>` części Twojej *csproj* pliku, który definiuje Twojej aplikacji jest przeznaczony dla platform i podaj identyfikator środowiska uruchomieniowego (RID) każdej z platform docelowych. Należy zauważyć, że trzeba będzie również dodać średnika do rozdzielenia identyfikatorów RID. Zobacz [katalog identyfikatora środowiska uruchomieniowego](../rid-catalog.md) Lista identyfikatorów środowisk uruchomieniowych.
 
    Na przykład w poniższym przykładzie wskazuje, że aplikacja działa w 64-bitowych systemach operacyjnych Windows 10 i 64-bitowym systemie operacyjnym OS X w wersji 10.11.
 
-```xml
-<PropertyGroup>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-</PropertyGroup>
-```
+   ```xml
+   <PropertyGroup>
+      <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+   </PropertyGroup>
+   ```
 
    Należy pamiętać, że `<RuntimeIdentifiers>` przejść do dowolnego elementu `<PropertyGroup>` zainstalowanej w swojej *csproj* pliku. Pełny przykład *csproj* plik pojawia się w dalszej części w tej sekcji.
-
-1. Utworzenie kompilacja do debugowania aplikacji.
-
-   Wybierz **kompilacji** > **Kompiluj rozwiązanie**. Można również skompilować i uruchomić kompilację debugowania aplikacji, wybierając **debugowania** > **Rozpocznij debugowanie**.
 
 1. Opublikuj aplikację.
 
@@ -146,11 +166,97 @@ Poniżej przedstawiono pełne *csproj* pliku dla tego projektu.
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
 ```
+
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 i nowsze](#tab/vs157)
+
+Po utworzeniu debugowania i przetestować program, należy utworzyć pliki do wdrożenia z aplikacją, dotyczącymi poszczególnych platform, że jest ono przeznaczone dla. Obejmuje to tworzenie osobny profil dla każdej platformy docelowej.
+
+Dla każdej platformy, że Twoje cele aplikacji, wykonaj następujące czynności:
+
+1. Utwórz profil dla danej platformy docelowej.
+
+   Jeśli jest to pierwszy profil został utworzony, kliknij prawym przyciskiem myszy nad projektem (nie rozwiązanie) **Eksploratora rozwiązań** i wybierz **Publikuj**.
+
+   Jeśli już utworzono profil, kliknij prawym przyciskiem myszy projekt, aby otworzyć **Publikuj** okno dialogowe, jeśli nie jest już otwarty. Następnie wybierz pozycję **nowy profil**.
+
+   **Wybierz miejsce docelowe publikowania** zostanie otwarte okno dialogowe.
+  
+1. Wybierz lokalizację, w którym program Visual Studio publikuje aplikację.
+
+   Jeśli publikujesz tylko na jednej platformie, możesz zaakceptować wartości domyślne w **wybierz folder** pole tekstowe; publikuje wdrożenia zależne struktury aplikacji, aby *\<katalogu projektu > \ bin\Release\netcoreapp2.1\publish\* katalogu.
+
+   Jeśli publikujesz do więcej niż jedną platformę, Dołącz ciąg, który identyfikuje platformę docelową. Na przykład jeśli ciąg "linux" dołączania do ścieżki pliku, programu Visual Studio publikuje wdrożenia zależne struktury aplikacji, aby  *\<katalogu projektu > \bin\Release\netcoreapp2.1\publish\linux*katalogu.
+
+1. Tworzenie profilu, wybierając ikonę listy rozwijanej obok **Publikuj** przycisk i wybierając polecenie **Utwórz profil**. Następnie wybierz pozycję **Utwórz profil** przycisk, aby utworzyć profil.
+
+1. Wskazują, publikują niezależna wdrożenia, a następnie zdefiniuj platformy, przeznaczony dla twojej aplikacji.
+
+   1. W **Publikuj** okno dialogowe, wybierz opcję **Konfiguruj** link umożliwiający otworzenie **ustawienia profilu** okna dialogowego.
+
+   1. Wybierz **niezależna** w **tryb wdrożenia** pola listy.
+
+   1. W **docelowe środowisko uruchomieniowe** pola listy, wybierz jedną z platform, Twoje cele aplikacji.
+
+   1. Wybierz **Zapisz** zaakceptować zmiany i zamknąć okno dialogowe.
+
+1. Nazwa profilu.
+
+   1. Wybierz **akcje** > **Zmienianie nazwy profilu** nazwy profilu.
+
+   2. Przypisywanie profilu nazwa, która określa platformę docelową, a następnie wybierz pozycję **Zapisz*.
+
+Powtórz te kroki, aby zdefiniować żadnych dodatkowych platform, Twoje cele aplikacji.
+
+Skonfigurowano profilów i są teraz gotowe do publikowania aplikacji. W tym celu:
+
+   1. Jeśli **Publikuj** okno nie jest obecnie otwarty, kliknij prawym przyciskiem myszy nad projektem (nie rozwiązanie) **Eksploratora rozwiązań** i wybierz **Publikuj**.
+
+   2. Wybierz profil, który chcesz opublikować, a następnie wybierz **Publikuj**. W tym dla każdego profilu do opublikowania.
+
+   Należy pamiętać, że każda lokalizacja docelowa (w przypadku naszym przykładzie bin\release\netcoreapp2.1\publish\\*nazwa profilu* zawiera kompletny zestaw plików (pliki aplikacji i wszystkich plików z platformy .NET Core) potrzebnych do uruchomienia aplikacji.
+
+Wraz z plikami aplikacji proces publikowania emituje plik bazy danych (PDB) program, który zawiera informacje o debugowaniu dotyczących aplikacji. Plik jest przydatne głównie do debugowania wyjątków. Istnieje możliwość nie spakujesz ją z plikami aplikacji. Jednak należy je zapisać, w przypadku, gdy chcesz debugować kompilację wydania aplikacji.
+
+Wdrażanie plików publikowanych w jakikolwiek sposób, który chcesz. Na przykład, można umieścić je w pliku Zip, użyć prostego `copy` polecenie lub wdrożyć je przy użyciu dowolnego pakietu instalacyjnego wybranych przez użytkownika.
+
+Poniżej przedstawiono pełne *csproj* pliku dla tego projektu.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
+
+Ponadto program Visual Studio tworzy oddzielny profil publikowania (\*.pubxml) dla każdej z platform docelowych. Na przykład w pliku o naszych profilu systemu linux (linux.pubxml) pojawia się w następujący sposób:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishProtocol>FileSystem</PublishProtocol>
+    <Configuration>Release</Configuration>
+    <Platform>Any CPU</Platform>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PublishDir>bin\Release\netcoreapp2.1\publish\linux</PublishDir>
+    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <_IsPortable>false</_IsPortable>
+  </PropertyGroup>
+</Project>
+```
+
+---
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>Niezależne wdrożenia przy użyciu zależności innych firm
 
@@ -164,11 +270,13 @@ Niezależna wdrożenie z co najmniej jeden zależności innych firm obejmuje dod
 
 Poniżej przedstawiono pełne *csproj* pliku dla tego projektu:
 
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 i wcześniejszych](#tab/vs156)
+
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
@@ -176,6 +284,22 @@ Poniżej przedstawiono pełne *csproj* pliku dla tego projektu:
   </ItemGroup>
 </Project>
 ```
+
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 i nowsze](#tab/vs157)
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+</Project>
+```
+
+---
 
 Podczas wdrażania aplikacji, wszelkie zależności innych firm używanych w aplikacji znajdują się również z plikami aplikacji. Bibliotek innych firm nie są wymagane w systemie, na którym działa aplikacja.
 

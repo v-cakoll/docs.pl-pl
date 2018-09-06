@@ -1,5 +1,5 @@
 ---
-title: Nadawanie nazw zasobów
+title: Nazewnictwo zasobów
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7cfda4e6a340d040de02903b9b64f0339751c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571189"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875112"
 ---
-# <a name="naming-resources"></a>Nadawanie nazw zasobów
-Ponieważ zlokalizowania zasobów można odwoływać się za pośrednictwem niektórych obiektów tak jakby były to właściwości, nazewnictwa wytyczne dotyczące zasobów są podobne do właściwości wytyczne.  
+# <a name="naming-resources"></a>Nazewnictwo zasobów
+Ponieważ lokalizowalne zasoby mogą być przywoływane za pośrednictwem niektórych obiektów, tak jakby były one właściwości, wskazówkami nazewnictwa dla zasobów są podobne do wytycznych właściwości.  
   
  **✓ DO** programu PascalCasing klucze zasobów.  
   
@@ -31,7 +31,7 @@ Ponieważ zlokalizowania zasobów można odwoływać się za pośrednictwem niek
   
  **✓ DO** używać następującej konwencji nazewnictwa dla zasobów komunikat wyjątku.  
   
- Identyfikator zasobu powinny być nazwa typu wyjątku plus krótki identyfikator wyjątku:  
+ Identyfikator zasobu powinna być nazwa typu wyjątku oraz krótki identyfikator wyjątku:  
   
  `ArgumentExceptionIllegalCharacters`  
  `ArgumentExceptionInvalidName`  
@@ -39,8 +39,9 @@ Ponieważ zlokalizowania zasobów można odwoływać się za pośrednictwem niek
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)

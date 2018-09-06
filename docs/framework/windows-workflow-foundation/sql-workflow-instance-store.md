@@ -3,11 +3,11 @@ title: Store wystąpienia przepływu pracy SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 680a233ca721cd8a0c620b797832419f460b13b6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784647"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874732"
 ---
 # <a name="sql-workflow-instance-store"></a>Store wystąpienia przepływu pracy SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Jest dostarczany z programem SQL Store wystąpienia przepływu pracy, który umożliwia przepływy pracy, aby utrwalić informacje o stanie dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Ta funkcja jest zaimplementowany głównie w formie <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> klasy, która jest pochodną abstrakcyjnej <xref:System.Runtime.DurableInstancing.InstanceStore> klasy framework trwałości. Funkcja Store wystąpienia przepływu pracy SQL stanowi dostawcy stanów trwałych programu SQL, który jest konkretną implementację trwałości interfejsu API, który korzysta z hosta do wysyłania poleceń trwałości do magazynu.  

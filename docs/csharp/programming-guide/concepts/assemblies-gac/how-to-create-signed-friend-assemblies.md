@@ -2,12 +2,12 @@
 title: 'Porady: tworzenie oznaczonych przyjaznych zestawów (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 63d4c5d8d71f401214389629ca7e586665c32c6b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521480"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874861"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Porady: tworzenie oznaczonych przyjaznych zestawów (C#)
 W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o silnych nazwach. Oba zestawy muszą silnej nazwy. Mimo że oba zestawy w tym przykładzie użyć tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.  
@@ -16,7 +16,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
   
 1.  Otwórz wiersz polecenia.  
   
-2.  Za pomocą następującej sekwencji poleceń narzędzie silnych nazw do wygenerowania pliku klucza i wyświetlić swój klucz publiczny. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnych nazw)](https://msdn.microsoft.com/library/k5b5tt23).  
+2.  Za pomocą następującej sekwencji poleceń narzędzie silnych nazw do wygenerowania pliku klucza i wyświetlić swój klucz publiczny. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnych nazw)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
     1.  Wygeneruj klucz silnej nazwy dla tego przykładu i zapisz go w pliku FriendAssemblies.snk:  
   
@@ -94,7 +94,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
 - [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
 - [Przyjazne zestawy (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
 - [Porady: tworzenie nieoznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
-- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
-- [Sn.exe (narzędzie silnych nazw)](https://msdn.microsoft.com/library/k5b5tt23)  
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)  
+- [Sn.exe (narzędzie silnych nazw)](../../../../framework/tools/sn-exe-strong-name-tool.md)  
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
 - [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)

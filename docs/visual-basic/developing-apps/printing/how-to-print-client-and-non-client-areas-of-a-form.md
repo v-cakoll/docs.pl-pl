@@ -9,11 +9,11 @@ helpviewer_keywords:
 - non-client area [Visual Basic], printing
 ms.assetid: 856bb0e4-dbc3-47e2-81cd-4b376cf07757
 ms.openlocfilehash: 5109993146a8d53d5cbeebcc52c018a6f0f57ed5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723278"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856741"
 ---
 # <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>Porady: drukowanie obszarów klienckich i nieklienckich formularza (Visual Basic)
 Składnik <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> pozwala na szybkie wydrukowanie obrazu formularza, dokładnie tak, jak wygląda on na ekranie, bez użycia składnika <xref:System.Drawing.Printing.PrintDocument>. Poniższa procedura pokazuje, jak drukowanie formularza, w tym obszar klienta i obszaru nieklienckiego. Obszaru nieklienckiego zawiera pasek tytułu, obramowania i przewijania pasków.  

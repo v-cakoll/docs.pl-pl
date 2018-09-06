@@ -5,11 +5,11 @@ helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
 ms.openlocfilehash: 30ea58b7ef3edd757c450b9fca1cc810ff9d17c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558610"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861026"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Porady: jawne implementowanie elementów interfejsu (Przewodnik programowania w języku C#)
 W tym przykładzie deklaruje [interfejsu](../../../csharp/language-reference/keywords/interface.md), `IDimensions`i klasę, `Box`, który implementuje jawnie składowe interfejsu `getLength` i `getWidth`. Elementy członkowskie są dostępne za pośrednictwem wystąpienia interfejsu `dimensions`.  

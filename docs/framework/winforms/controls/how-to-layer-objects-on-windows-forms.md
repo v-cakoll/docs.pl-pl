@@ -13,11 +13,11 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 ms.openlocfilehash: d67d9b204c316dce5f3818496d791ed4c1b352f2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748518"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875973"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Porady: tworzenie warstw obiektów na formularzach systemu Windows
 Podczas tworzenia interfejsu użytkownika złożonych lub praca wielu dokumentów (MDI) interfejsu często warto warstwy kontroli i formularze podrzędne, aby utworzyć bardziej złożone interfejsy użytkownika (UI). Aby przenieść i śledzenie kontrolek i systemu windows w ramach grupy, manipulować ich porządek osi z. *Porządek* jest warstwy visual kontrolek w formularzu wzdłuż osi z formularza (na głębokości). Okno w górnej części porządek nakłada się na inne okna. Inne okna nakładać się na okna w dolnej części porządku osi z.  

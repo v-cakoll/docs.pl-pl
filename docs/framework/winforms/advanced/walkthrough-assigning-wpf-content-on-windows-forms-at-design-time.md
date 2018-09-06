@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 ms.openlocfilehash: 6db75e9d8ec5aeb1a0c7310d39391f8f264649d3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488303"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868196"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Wskazówki: przypisywanie zawartości WPF na formularzach systemu Windows w czasie projektowania
 W tym instruktażu dowiesz się, jak wybrać typy kontrolek Windows Presentation Foundation (WPF), które mają być wyświetlane w formularzu. Możesz wybrać wszystkie typy kontrolek WPF, które są zawarte w projekcie.  

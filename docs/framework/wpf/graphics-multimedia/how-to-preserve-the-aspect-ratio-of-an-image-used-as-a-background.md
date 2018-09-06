@@ -7,11 +7,11 @@ helpviewer_keywords:
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
 ms.openlocfilehash: 8cf0a3804172b90af33318299d60aa6c7eaa53f0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43797744"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863089"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Jak zachować format obrazu użytego jako tło
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwość <xref:System.Windows.Media.ImageBrush> Aby zachować współczynnik proporcji obrazu.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731709"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864553"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Zarządzana i niezarządzana wątkowość w systemie Windows
 Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threading.Thread> klasy, w tym wątków utworzone przez środowisko uruchomieniowe języka wspólnego, a utworzone poza środowisko uruchomieniowe, które należy wprowadzić zarządzane środowisko do wykonywania kodu. Środowisko uruchomieniowe monitoruje wszystkie wątki w swoim procesie, które kiedykolwiek wykonali kod w zarządzanym środowisku wykonywania. Żądania nie Śledź innych wątków. Wątki, które można wprowadzić zarządzanym środowisku wykonywania za pomocą COM interop (ponieważ środowisko uruchomieniowe uwidacznia zarządzane obiekty jako obiekty COM do niezarządzanego świata), COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) funkcji i wywołanie platformy.  
@@ -63,9 +63,10 @@ Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threadi
 ## <a name="blocking-issues"></a>Problemy z blokowaniem  
  Jeśli wątek sprawia, że wywołanie niezarządzanych w systemie operacyjnym, który został zablokowany wątek w niezarządzanym kodzie, środowisko wykonawcze nie podejmie kontrolę nad nim dla <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> lub <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. W przypadku właściwości <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, środowisko uruchomieniowe oznacza wątku dla **przerwać** i ma kontrolę nad nim, gdy wejdzie ona ponownie kodu zarządzanego. Zaleca się, można ich używać blokowania zarządzanych zamiast blokowania niezarządzanych. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>i tak dalej wszystkie reagują na <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Ponadto jeśli wątek jest jednowątkowym apartamentem, tych zarządzanych operacji blokowania będzie poprawnie pompy komunikatów w Twojego mieszkania podczas, gdy wątek jest zablokowany.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
- <xref:System.Threading.ThreadState>  
- <xref:System.EnterpriseServices.ServicedComponent>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.Monitor>
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.ThreadState>  
+- <xref:System.EnterpriseServices.ServicedComponent>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Monitor>

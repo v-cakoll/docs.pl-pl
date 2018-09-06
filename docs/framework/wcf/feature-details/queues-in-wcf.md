@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
 ms.openlocfilehash: 46d70a0b0ccc33755666867240be8778b5638947
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537803"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858372"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Kolejki programu Windows Communication Foundation
 W tematach w tej sekcji omówiono Windows Communication Foundation (WCF), obsługa kolejek. Usługi WCF zapewnia obsługę usługi kolejkowania wiadomości, wykorzystaniem Microsoft usługi kolejkowania komunikatów (wcześniej znane jako usługi MSMQ) jako transportu i umożliwia obsługę następujących scenariuszy:  

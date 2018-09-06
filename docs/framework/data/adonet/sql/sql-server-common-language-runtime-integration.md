@@ -3,11 +3,11 @@ title: Integrację środowiska uruchomieniowego języka wspólnego serwera SQL
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: 5f6c1dcccaddeadb65e6fc949960b0232d00ed81
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406648"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869094"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integrację środowiska uruchomieniowego języka wspólnego serwera SQL
 SQL Server 2005 wprowadzono integrację składnika wspólnego języka wspólnego (CLR) programu .NET Framework dla programu Microsoft Windows. Oznacza to, że można napisać procedury składowane, wyzwalacze, typy zdefiniowane przez użytkownika, funkcje zdefiniowane przez użytkownika, agregacje zdefiniowane przez użytkownika i przesyłania strumieniowego funkcji z wartościami przechowywanymi w tabeli przy użyciu dowolnego języka .NET Framework, w tym programu Microsoft Visual Basic .NET i Microsoft Visual C#. <xref:Microsoft.SqlServer.Server> Przestrzeń nazw zawiera zestaw nowych interfejsów programowania aplikacji (API), aby kod zarządzany może wchodzić w interakcje ze środowiskiem programu Microsoft SQL Server.  

@@ -8,19 +8,20 @@ dev_langs:
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c22ebed1127be6a32a09b428b977b1ba9ca0a7eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cec2b85c55871c8a21a74e79cfcdd041fa063bec
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866627"
 ---
 # <a name="conversion-of-xml-data-types"></a>Konwersja typów danych XML
-Znaleziono większości metod w **obiekt XmlConvert** klasy służą do konwertowania danych pomiędzy ciągami a jednoznacznie formatów. Metody są niezależnie od ustawień regionalnych. Oznacza to, że nie uwzględniają wszystkie ustawienia regionalne podczas konwersji.  
+Większość metod znaleziony w **obiekt XmlConvert** klasy są używane do konwersji danych pomiędzy ciągami a silnie typizowane formatów. Metody są niezależnie od ustawień regionalnych. Oznacza to, że nie uwzględniają żadnych ustawień regionalnych podczas wykonywania konwersji.  
   
 ## <a name="reading-string-as-types"></a>Parametry odczytu jako typy  
- Poniższy przykład odczytuje ciąg i konwertuje ją na **DateTime** typu.  
+ Poniższy przykład odczytuje parametry i konwertuje ją na **daty/godziny** typu.  
   
- Należy podać następujące dane wejściowe XML:  
+ Biorąc pod uwagę następujące dane wejściowe XML:  
   
  **Dane wejściowe**  
   
@@ -28,7 +29,7 @@ Znaleziono większości metod w **obiekt XmlConvert** klasy służą do konwerto
 <Element>2001-02-27T11:13:23</Element>  
 ```  
   
- Ten kod konwertuje ciąg na **DateTime** format:  
+ Ten kod konwertuje ciąg na **daty/godziny** formatu:  
   
 ```vb  
 reader.ReadStartElement()  
@@ -45,7 +46,7 @@ Console.WriteLine(vDateTime);
 ## <a name="writing-strings-as-types"></a>Zapisywanie ciągów jako typy  
  Następujące przykładowe odczyty **Int32** i konwertuje ją na ciąg.  
   
- Należy podać następujące dane wejściowe XML:  
+ Biorąc pod uwagę następujące dane wejściowe XML:  
   
  **Dane wejściowe**  
   
@@ -65,6 +66,7 @@ Int32 vInt32=-2147483648;
 writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Konwertowanie ciągów na typy danych programu .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
- [Konwertowanie typów programu .NET Framework na ciągi](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Konwertowanie ciągów na typy danych programu .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
+- [Konwertowanie typów programu .NET Framework na ciągi](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

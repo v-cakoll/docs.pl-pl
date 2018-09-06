@@ -2,12 +2,12 @@
 title: Odwołanie do słowa kluczowego (F#)
 description: 'Znajdź łącza do informacji na temat wszystkich słów kluczowych języka F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 18bf5f00cdd5250c0fbd503d096e5415a8b9feea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526192"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856027"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
 
@@ -131,9 +131,8 @@ Następujące generatory kodów są zastrzeżone słowa kluczowe na przyszłe ro
 * `virtual`
 * `volatile`
 
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
+## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)
-
-[Opcje kompilatora](compiler-options.md)
+- [Dokumentacja języka F#](index.md)
+- [Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)
+- [Opcje kompilatora](compiler-options.md)

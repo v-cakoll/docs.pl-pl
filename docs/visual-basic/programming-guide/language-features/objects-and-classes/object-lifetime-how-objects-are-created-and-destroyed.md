@@ -23,11 +23,11 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556058"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864506"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone (Visual Basic)
 Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczowe. Inicjowanie zadania często muszą być wykonywane na nowe obiekty zanim zostaną użyte. Typowe zadania inicjowania obejmują otwierania plików, łączenie z bazami danych i odczytywania wartości kluczy rejestru. Visual Basic kontroluje inicjowania nowych obiektów za pomocą procedur o nazwie *konstruktory* (specjalne metody, które umożliwiają kontrolę nad inicjowania).  

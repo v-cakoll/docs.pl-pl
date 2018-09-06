@@ -3,11 +3,11 @@ title: Przestarzałe typy w programie Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
 ms.openlocfilehash: b25be26d4c0ad6c423b011cd7cad24a8728333f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658902"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857646"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Przestarzałe typy w programie Windows Workflow Foundation
 W .NET 4 zespołu przepływu pracy zwolnione wszystkich nowych aparatu przepływu pracy w <xref:System.Activities> przestrzeni nazw. Wersja programu .NET 4.5 w wersji Beta firma Microsoft oznaczanie większość typów w "WF 3" <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, i <xref:System.Workflow.Runtime> przestrzeni nazw jako przestarzałe.  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 270ae5a8cfa7c69c7caa0896dfe23b84db48f659
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf253ff4a25ba902c16c6d00a8be4bf291166774
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575521"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872968"
 ---
 # <a name="asynchronous-file-io"></a>Asynchroniczne We/Wy pliku
 Mechanizm operacji asynchronicznych umożliwia wykonywanie operacji We/Wy mocno obciążających zasoby bez blokowania wątku głównego. Ten aspekt dotyczący wydajności jest szczególnie ważny w aplikacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] lub aplikacjach [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)], gdzie czasochłonne operacje strumieniowe mogą zablokować wątek interfejsu użytkownika i spowodować, że aplikacja będzie wyglądać, jakby przestała działać.  
@@ -39,7 +39,7 @@ Mechanizm operacji asynchronicznych umożliwia wykonywanie operacji We/Wy mocno 
   
  Operator `Await` (Visual Basic) lub `await` (C#), który jest stosowany do wyniku metody asynchronicznej.  
   
- W celu implementowania asynchronicznych operacji We/Wy należy używać tych słów kluczowych w połączeniu z metodami asynchronicznymi, jak pokazano w przykładach poniżej. Aby uzyskać więcej informacji, zobacz [programowanie asynchroniczne z Async i Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
+ W celu implementowania asynchronicznych operacji We/Wy należy używać tych słów kluczowych w połączeniu z metodami asynchronicznymi, jak pokazano w przykładach poniżej. Aby uzyskać więcej informacji, zobacz [Asynchronous Programming with Async and Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
   
  W tym przykładzie pokazano, jak za pomocą dwóch obiektów <xref:System.IO.FileStream> skopiować pliki asynchronicznie z jednego katalogu do innego. Program obsługi zdarzeń <xref:System.Web.UI.WebControls.Button.Click> kontrolki <xref:System.Windows.Controls.Button> jest oznaczony modyfikatorem `async`, ponieważ wywołuje metodę asynchroniczną.  
   
@@ -58,7 +58,8 @@ Mechanizm operacji asynchronicznych umożliwia wykonywanie operacji We/Wy mocno 
   
  [!code-xaml[System.IO.WindowsRuntimeStorageExtensions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IO.Stream>  
- [We/Wy plików i strumieni](../../../docs/standard/io/index.md)  
- [Programowanie asynchroniczne z Async i Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.IO.Stream>  
+- [We/Wy plików i strumieni](../../../docs/standard/io/index.md)  
+- [Programowanie asynchroniczne z Async i Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)

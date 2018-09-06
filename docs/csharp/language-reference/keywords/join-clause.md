@@ -9,11 +9,11 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: dee11c1ab754e515c69f330a5919776cbcb1e775
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560001"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871692"
 ---
 # <a name="join-clause-c-reference"></a>Klauzula join (odwołanie w C#)
 

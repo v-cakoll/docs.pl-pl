@@ -10,11 +10,11 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
 ms.openlocfilehash: 3a35f6dda05cfe65811de16d76b288c8fbd618a7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43797709"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874923"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Jak obrócić obiekt z wykorzystaniem ścieżki geometrycznej (animacja Matrix)
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> i <xref:System.Windows.Media.MatrixTransform> wymienić (Tabela przestawna) wzdłuż ścieżki geometrycznej zdefiniowane przez obiekt <xref:System.Windows.Media.PathGeometry> obiektu.  

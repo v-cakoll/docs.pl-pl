@@ -3,11 +3,11 @@ title: 'Porady: wyszukiwanie elementów potomnych o określonej nazwie elementu 
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
 ms.openlocfilehash: 6c5e035b4ee0168a0c41a34754314e18d089b1ef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556574"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861422"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Porady: wyszukiwanie elementów potomnych o określonej nazwie elementu (C#)
 Czasami chcesz znaleźć wszystkie elementy podrzędne o określonej nazwie. Można napisać kod, aby wykonać iterację przez wszystkie elementy podrzędne, ale jest łatwiejszy w obsłudze <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  

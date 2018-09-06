@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421911"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878060"
 ---
 # <a name="toolstrip-technology-summary"></a>Podsumowanie informacji o technologii formantów ToolStrip
 Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klas, które obsługują jego użycia.  

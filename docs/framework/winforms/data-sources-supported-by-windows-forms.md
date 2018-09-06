@@ -16,11 +16,11 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: aee15d8d40ddd3f928c8bc5396d8bcbff17ba533
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562694"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858915"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Źródła danych obsługiwane przez formularze systemu Windows
 Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzystać z danych przechowywanych w bazach danych. Powiązanie danych formularzy Windows, umożliwia dostęp do danych z bazy danych, a także dane w innych strukturach, takich jak tablice i kolekcje, tak długo, jak niektóre minimalne wymagania zostały spełnione.  

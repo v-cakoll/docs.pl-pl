@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
 ms.openlocfilehash: 1819d468d12c03ce0c4faac11f4b20b8fe0f9c33
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731277"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43805692"
 ---
 # <a name="navigating-datarelations"></a>Nawigowanie w elementach DataRelation
 Jedną z podstawowych funkcji <xref:System.Data.DataRelation> jest umożliwienie nawigacji z jednego <xref:System.Data.DataTable> do drugiej w ramach <xref:System.Data.DataSet>. Dzięki temu można pobrać wszystkie powiązane <xref:System.Data.DataRow> obiekty w jednym **DataTable** , gdy jeden **DataRow** z powiązanych **DataTable**. Na przykład po ustanowieniu **DataRelation** między spisu klientów i tabelę zamówień, mogą pobierać wszystkie wiersze zamówienia dla wiersza określonego klienta za pomocą **GetChildRows**.  

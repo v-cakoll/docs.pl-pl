@@ -12,11 +12,11 @@ ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 831c4cce14e902697d84129e54cc54f07d26b9f3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802748"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865039"
 ---
 # <a name="throw-c-reference"></a>throw (odwołanie w C#)
 Sygnalizuje zdarzenie wyjątku podczas wykonywania programu.  

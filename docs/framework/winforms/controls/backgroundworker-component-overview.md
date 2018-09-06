@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: 1f7da963db34434ee2631e9e2c0367abbd628656
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d7d99cf87507237b23cb40c58b2308643f7f1056
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749171"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872195"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker — Informacje o składniku
 Istnieje wiele często wykonywanych operacji, które może zająć dużo czasu wykonania. Na przykład:  
@@ -60,6 +60,8 @@ Istnieje wiele często wykonywanych operacji, które może zająć dużo czasu w
   
  Aby uzyskać więcej informacji na temat korzystania z <xref:System.ComponentModel.BackgroundWorker> klasy, zobacz [porady: uruchamianie operacji w tle](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [NIE w kompilacji: Wielowątkowość w języku Visual Basic](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [Instrukcje: implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Zarządzana wątkowość](../../../../docs/standard/threading/index.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Instrukcje: implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)

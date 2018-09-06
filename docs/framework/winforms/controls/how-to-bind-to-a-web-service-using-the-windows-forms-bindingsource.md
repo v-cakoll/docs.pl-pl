@@ -13,11 +13,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
 ms.openlocfilehash: fdbf1e1b419e5ad296376ec1f06fd361077895c4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406956"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869198"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Porady: powiązanie z usługą sieci Web za pomocą formantu BindingSource formularzy systemu Windows
 Jeśli chcesz powiązać kontrolkę formularza Windows wyniki uzyskane z wywołaniem usługi sieci Web XML, możesz użyć <xref:System.Windows.Forms.BindingSource> składnika. Ta procedura jest podobna do powiązania <xref:System.Windows.Forms.BindingSource> składnik do typu. Należy utworzyć serwer proxy po stronie klienta, który zawiera metody i typy udostępnianych przez usługę sieci Web. Możesz wygenerować, serwer proxy po stronie klienta z usługi sieci Web (.asmx), samego lub plik sieci Web Services Description Language (WSDL). Ponadto serwer proxy po stronie klienta, należy ujawnić pola złożone typy używane przez usługę sieci Web jako właściwości publiczne. Następnie Powiąż <xref:System.Windows.Forms.BindingSource> do jednego z typów ujawnione w sieci Web usługi serwera proxy.  

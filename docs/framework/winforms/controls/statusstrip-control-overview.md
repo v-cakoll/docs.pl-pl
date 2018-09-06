@@ -8,11 +8,11 @@ helpviewer_keywords:
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
 ms.openlocfilehash: e40373dd05e59325cdb6c2272d5749f3828b0755
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788395"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864566"
 ---
 # <a name="statusstrip-control-overview"></a>StatusStrip — Informacje o formancie
 A <xref:System.Windows.Forms.StatusStrip> kontrolka Wyświetla informacje dotyczące obiektu są wyświetlane na <xref:System.Windows.Forms.Form>, składniki obiektu lub informacji kontekstowych, które odnoszą się do tego obiektu operacji w ramach aplikacji. Zazwyczaj <xref:System.Windows.Forms.StatusStrip> kontrola składa się z <xref:System.Windows.Forms.ToolStripStatusLabel> obiektów, z których każda wyświetla tekst i/lub ikonę. <xref:System.Windows.Forms.StatusStrip> Może również zawierać <xref:System.Windows.Forms.ToolStripDropDownButton>, <xref:System.Windows.Forms.ToolStripSplitButton>, i <xref:System.Windows.Forms.ToolStripProgressBar> kontrolki.  

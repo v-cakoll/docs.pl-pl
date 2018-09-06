@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
 ms.openlocfilehash: d5f49529a2593093a234babc22f64b591ea3cc61
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801427"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872955"
 ---
 # <a name="myresponse-object"></a>My.Response — Obiekt
 Pobiera <xref:System.Web.HttpResponse> obiekt skojarzony z <xref:System.Web.UI.Page>. Ten obiekt umożliwia wysyłanie danych odpowiedzi HTTP do klienta i zawiera informacje dotyczące tej odpowiedzi.  

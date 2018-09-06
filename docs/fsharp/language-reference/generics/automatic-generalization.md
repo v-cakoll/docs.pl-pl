@@ -1,35 +1,35 @@
 ---
 title: Automatyczna generalizacja (F#)
-description: 'Dowiedz się, jak F # automatycznie stanowi uogólnienie argumentów i typy funkcji, aby mogły działać z różnymi typami, gdy jest to możliwe.'
+description: 'Dowiedz się, jak F # automatycznie stanowi uogólnienie argumentów i typy funkcji, aby mogły działać z wieloma typami, gdy jest to możliwe.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 858c8bab4a1a37f44a700744e70ebfa8a5abf12c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565078"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855780"
 ---
 # <a name="automatic-generalization"></a>Automatyczna generalizacja
 
-F # używa wnioskowanie o typie w celu oceny typów wyrażeń i funkcji. W tym temacie opisano, jak F # automatycznie stanowi uogólnienie argumentów i typy funkcji, aby mogły działać z różnymi typami, gdy jest to możliwe.
-
+F # używa wnioskowanie o typie, aby ocenić typy funkcje i wyrażenia. W tym temacie opisano, jak F # automatycznie stanowi uogólnienie argumentów i typy funkcji, aby mogły działać z wieloma typami, gdy jest to możliwe.
 
 ## <a name="automatic-generalization"></a>Automatyczna generalizacja
-Kompilator języka F # podczas wykonywania wnioskowanie o typie dla funkcji, określa, czy dany parametr może być rodzajowy. Kompilator sprawdza każdego parametru i określa, czy funkcja ma zależność na określony typ parametru. Jeśli nie, typu jest wywnioskowany, aby wartość była ogólna.
 
-Poniższy przykładowy kod przedstawia funkcję, która wnioskuje kompilator, aby wartość była ogólna.
+Kompilator F #, gdy wykonuje wnioskowanie o typie dla funkcji określa, czy danego parametru może być ogólny. Kompilator sprawdza każdy parametr i określa, czy funkcja zależny od określonego typu parametru. Jeśli nie, typ jest wnioskowany jako ogólnego.
+
+Poniższy przykładowy kod przedstawia funkcję, która kompilator wnioskuje się ogólnego.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet101.fs)]
 
-Typ jest wywnioskowany jako `'a -> 'a -> 'a`.
+Typ jest wnioskowany jako `'a -> 'a -> 'a`.
 
-Typ wskazuje, że jest to funkcja, która przyjmuje dwa argumenty nieznanego typu tego samego i zwraca wartość tego samego typu. Jedną z przyczyn, które mogą być poprzedniej funkcji ogólnego jest to, że większa — niż — operator (`>`) jest rodzajowy. Większa-niż operator ma podpis `'a -> 'a -> bool`. Nie wszystkie operatory są ogólne, a jeśli kod w funkcji korzysta z typem parametru razem z funkcji nierodzajową lub operator, nie można uogólnić typu parametru.
+Typ wskazuje, że jest to funkcja, która przyjmuje dwa argumenty nieznanego tego samego typu i zwraca wartość tego samego typu. Jedną z przyczyn, które mogą być poprzednim funkcji ogólnego jest to, że większa-than-operator (`>`) jest sam ogólny. Większą-niż operator ma podpis `'a -> 'a -> bool`. Nie wszystkie operatory są ogólne, a jeśli typ parametru funkcji nieogólnego lub operator korzysta z kodu w funkcji, nie mogą być uogólnione typu parametru.
 
-Ponieważ `max` jest ogólny, można z typami takich jak `int`, `float`i tak dalej, jak pokazano w poniższych przykładach.
+Ponieważ `max` jest ogólny, może służyć z typami takich jak `int`, `float`i tak dalej, jak pokazano w poniższych przykładach.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet102.fs)]
 
-Jednak dwa argumenty muszą być tego samego typu. Podpis jest `'a -> 'a -> 'a`, a nie `'a -> 'b -> 'a`. W związku z tym poniższy kod tworzy błąd, ponieważ typy są niezgodne.
+Jednak dwa argumenty muszą być tego samego typu. Podpis jest `'a -> 'a -> 'a`, a nie `'a -> 'b -> 'a`. W związku z tym poniższy kod powoduje błąd, ponieważ typy nie są zgodne.
 
 ```fsharp
 // Error: type mismatch.
@@ -39,26 +39,26 @@ let biggestIntFloat = max 2.0 3
 `max` Funkcja działa także w przypadku dowolnego typu, który obsługuje większą-niż operator. W związku z tym można również użyć tego na ciąg, jak pokazano w poniższym kodzie.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet104.fs)]
-    
-## <a name="value-restriction"></a>Wartość ograniczenia
-Kompilator wykonuje automatyczna Generalizacja tylko w definicji funkcji pełną, które mają jawne argumenty i proste modyfikować wartości.
 
-Oznacza to, że kompilator generuje błąd, Jeśli spróbujesz skompilować kod, który nie jest wystarczająco ograniczone do określonego typu, ale nie jest również generalizacji. Komunikat o błędzie w przypadku tego problemu, który odwołuje się do tego ograniczenia automatyczna Generalizacja wartości jako *wartość ograniczenia*.
+## <a name="value-restriction"></a>Ograniczenie dotyczące wartości
 
-Zazwyczaj błąd ograniczenie wartości występuje, gdy konstrukcji, aby wartość była ogólna a kompilator ma za mało informacji do uogólnienia go lub jeśli pominięto przypadkowo wystarczających informacji o typie w nierodzajowe konstrukcji. Rozwiązania pod kątem błędów ograniczeń wartość ma na celu dostarczenie dokładniejsze informacje do dokładniejszego ograniczyć problem wnioskowania typu, w jednym z następujących sposobów:
+Kompilator wykonuje automatyczna Generalizacja tylko definicje pełne funkcji, które mają jawnych argumentów i prostych wartości niezmienne.
 
+Oznacza to, że kompilator generuje błąd, Jeśli spróbujesz skompilować kod, który nie jest wystarczająco ograniczony do określonego typu, ale nie jest również generalizacji. Komunikat o błędzie w przypadku tego problemu, który odwołuje się do tego ograniczenia na automatyczna Generalizacja wartości jako *wartość ograniczenia*.
 
-- Ograniczenie typu jako nierodzajowe przez dodanie jawną adnotację typu wartości lub parametr.
+Zazwyczaj błąd ograniczenia wartości występuje, gdy chcesz konstrukcję być rodzajowy, ale kompilator ma za mało informacji w celu uogólnienia go, lub przypadkowo pominąć wystarczających informacji o typie w konstrukcji nierodzajowych. Rozwiązanie do błąd ograniczenia wartości jest zapewnienie dokładniejsze informacje, aby dokładniej ograniczyć problem wnioskowania typu, w jednym z następujących sposobów:
 
-- Jeśli ten problem przy użyciu konstrukcji nongeneralizable do definiowania ogólnych funkcji, takich jak kompozycja funkcji lub nie w pełni stosowane argumenty curried funkcji, spróbuj przepisywania funkcji jako definicji zwykłej funkcji.
+- Ograniczenie typ, który ma być nierodzajowych, dodając adnotację jawnego typu wartości lub parametr.
 
-- Problem jest wyrażenie jest zbyt złożone, aby być uogólniony, aby go do funkcji przez dodanie parametru dodatkowe, nieużywane.
+- Jeśli ten problem za pomocą konstrukcji nongeneralizable do definiowania ogólnych funkcji, takich jak kompozycja funkcji lub nie w pełni zastosowane argumenty funkcji rozwinięte, próbę ponownego zapisywania pełnią definicji zwykłej funkcji.
+
+- Problem jest wyrażenie, które jest zbyt złożona, aby być uogólniony, aby ją do funkcji, dodając parametr dodatkowych, nieużywane.
 
 - Dodaj parametry jawnego typu ogólnego. Ta opcja jest rzadko używana.
 
-- Poniższe przykłady kodu przedstawiają każdego z tych scenariuszy.
+- Poniższe przykłady kodu ilustrują każdego z tych scenariuszy.
 
-Przypadek 1: Zbyt złożone wyrażenie. W tym przykładzie listy `counter` ma być `int option ref`, ale nie jest zdefiniowany jako niezmienialny wartość prostą.
+Przypadek 1: Zbyt złożone wyrażenie. W tym przykładzie lista `counter` ma być `int option ref`, ale nie jest zdefiniowany jako wartość typu prostego niezmienne.
 
 ```fsharp
 let counter = ref None
@@ -66,7 +66,7 @@ let counter = ref None
 let counter : int option ref = ref None
 ```
 
-Przypadek 2: Przy użyciu konstrukcji nongeneralizable do definiowania ogólnych funkcji. W tym przykładzie konstrukcja jest nongeneralizable, ponieważ spowodowałoby to aplikacja częściowa argumentów funkcji.
+Przypadek 2: Za pomocą konstrukcji nongeneralizable, aby zdefiniować funkcję ogólną. W tym przykładzie konstrukcja jest nongeneralizable, ponieważ spowodowałoby to częściowe stosowanie argumentów funkcji.
 
 ```fsharp
 let maxhash = max << hash
@@ -74,7 +74,7 @@ let maxhash = max << hash
 let maxhash obj = (max << hash) obj
 ```
 
-Przypadek 3: Dodanie dodatkowych, nieużywane parametru. To wyrażenie nie jest wystarczająco prosty generalizacji, kompilator generuje błąd ograniczenie wartości.
+Przypadek 3: Dodanie dodatkowych, nieużywane parametru. To wyrażenie nie jest wystarczająco prosty Generalizacja, kompilator generuje błąd ograniczenia wartości.
 
 ```fsharp
 let emptyList10 = Array.create 10 []
@@ -90,19 +90,16 @@ let arrayOf10Lists = Array.create 10 []
 let arrayOf10Lists<'T> = Array.create 10 ([]:'T list)
 ```
 
-W ostatnim przypadku wartość staje się typ funkcji, które mogą służyć do tworzenia wartości wielu różnych typów, na przykład w następujący sposób:
+W ostatnim przypadku wartość staje się funkcji typu, który może służyć do tworzenia wartości wiele różnych typów, na przykład w następujący sposób:
 
 ```fsharp
 let intLists = arrayOf10Lists<int>
 let floatLists = arrayOf10Lists<float>
 ```
 
-## <a name="see-also"></a>Zobacz też
-[Wnioskowanie o typie](../type-inference.md)
+## <a name="see-also"></a>Zobacz także
 
-[Typy ogólne](index.md)
-
-[Statycznie rozwiązywane parametry typu](statically-resolved-type-parameters.md)
-
-[Ograniczenia](constraints.md)
-
+- [Wnioskowanie o typie](../type-inference.md)
+- [Typy ogólne](index.md)
+- [Statycznie rozwiązywane parametry typu](statically-resolved-type-parameters.md)
+- [Ograniczenia](constraints.md)

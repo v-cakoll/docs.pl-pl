@@ -3,11 +3,11 @@ title: Grupa działań objętych warunkami
 ms.date: 03/30/2017
 ms.assetid: f76ef924-34ce-48ae-8c8d-48faf9697754
 ms.openlocfilehash: 144a6c76ea6314c553e201fe4e2364890d869f34
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418172"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861208"
 ---
 # <a name="conditioned-activity-group"></a>Grupa działań objętych warunkami
 W przykładzie pokazano aplikacji rezerwacji podróży. <xref:System.Workflow.Activities.ConditionedActivityGroup> (CAG) ma dwa działania kodu: działanie Car i działania linii lotniczych. W `SimpleCAGWorkflow` konstruktora obiektu ArrayList "travelNeedType" jest wypełniana przy użyciu typów rezerwacje podróży, które są wymagane. Zakomentowując jedną lub obie `travelNeeds.Add` instrukcji odpowiednio zmodyfikować zachowanie CAG. Działania samochodu i linie lotnicze mają swoje <xref:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty> wypełniony warunek <xref:System.Workflow.Activities.CodeCondition>. Działanie samochód jest wykonywane tylko wtedy, gdy `travelNeeds` kolekcja ma `TravelNeeds.Car` wejścia i linii lotniczych, działanie jest wykonywane tylko wtedy, gdy `travelNeeds` kolekcja ma `TravelNeeds.Airline` wpisu.  

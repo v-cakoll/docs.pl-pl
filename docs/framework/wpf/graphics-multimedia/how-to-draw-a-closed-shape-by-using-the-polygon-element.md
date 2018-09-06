@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing [WPF], closed shapes with Polygon elements
 ms.assetid: 4b0ca008-29ce-48dd-8bc3-f3a20ffca6a6
 ms.openlocfilehash: 89c78877e196e803f6b4139ffcfa2b4def1a07d7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732056"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873039"
 ---
 # <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Jak narysować kształt zamknięty przy użyciu elementu wielobocznego
 W tym przykładzie pokazano, jak narysować kształt zamknięty przy użyciu <xref:System.Windows.Shapes.Polygon> elementu. Aby narysować kształt zamknięty, należy utworzyć <xref:System.Windows.Shapes.Polygon> element i użyj jej <xref:System.Windows.Shapes.Polygon.Points%2A> właściwości w celu określenia wierzchołków kształtu. Wiersz jest automatycznie pobierane łączącej punkty imię i nazwisko. Ponadto określ <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>, lub obu.  

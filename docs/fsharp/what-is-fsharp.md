@@ -3,11 +3,11 @@ title: 'Co to jest F #'
 description: 'Dowiedz się więcej o jakie F # języka programowania i nowości programowanie F #. Więcej informacji na temat rozbudowane typy danych, funkcje i jak one współdziałają ze sobą.'
 ms.date: 08/03/2018
 ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564567"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863299"
 ---
 # <a name="what-is-f"></a>Co to jest F # #
 

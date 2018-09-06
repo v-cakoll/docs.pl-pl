@@ -3,11 +3,11 @@ title: Zachowanie debugowania usług
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: b87911426b6d4edf8a6f9b0172f4872fac7b9b6f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555100"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858889"
 ---
 # <a name="service-debug-behavior"></a>Zachowanie debugowania usług
 Niniejszy przykład pokazuje, jak można skonfigurować ustawienia zachowanie debugowania usług. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. W tym przykładzie jawnie definiuje zachowanie debugowania usług w pliku konfiguracji. Ponadto możesz obowiązkowo w kodzie.  

@@ -1,5 +1,5 @@
 ---
-title: Uporządkowane pobierania węzła według indeksu
+title: Pobieranie uporządkowanych węzłów za pomocą indeksu
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,15 @@ dev_langs:
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3cfa371394e76aab832c3dd4b065eb811413322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871923"
 ---
-# <a name="ordered-node-retrieval-by-index"></a>Uporządkowane pobierania węzła według indeksu
-Sieci World Wide Web konsorcjum W3C XML modelu DOM (Document Object) opisano również wstawienia, który ma możliwość obsługi uporządkowaną listę węzłów, w przeciwieństwie do zestawu nieuporządkowaną obsługiwane przez **XmlNamedNodeMap**. Wstawienia programu Microsoft .NET Framework jest nazywany **XmlNodeList**. Metody i właściwości, które zwracają **XmlNodeList** są:  
+# <a name="ordered-node-retrieval-by-index"></a>Pobieranie uporządkowanych węzłów za pomocą indeksu
+World Wide Web Consortium (W3C) XML Document Object Model (DOM) opisano również wstawienia, która ma zdolność do obsługi uporządkowaną listę węzłów, w przeciwieństwie do zestawu nieuporządkowanego obsługiwane przez **XmlNamedNodeMap**. Wstawienia programu Microsoft .NET Framework jest nazywany **XmlNodeList**. Metody i właściwości, które zwracają **XmlNodeList** są:  
   
 -   XmlNode.ChildNodes  
   
@@ -25,7 +26,7 @@ Sieci World Wide Web konsorcjum W3C XML modelu DOM (Document Object) opisano ró
   
 -   XmlNode.SelectNodes  
   
- **XmlNodeList** ma **liczba** właściwość, która może być użyty do zapisu pętli w celu wykonania iteracji w węzłach **XmlNodeList**, jak pokazano w poniższym przykładzie kodu:  
+ **XmlNodeList** ma **liczba** właściwość, która może służyć do pisania pętli do wykonywania iteracji węzłów **XmlNodeList**, jak pokazano w następującym przykładzie kodu:  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -54,7 +55,7 @@ for (int i=0; i < elemList.Count; i++)
 }   
 ```  
   
- Oprócz **liczba** właściwości, istnieje **GetEnumerator** metoda zapewniająca, `foreach` styl iteracji w kolekcji węzły w **XmlNodeList**. W poniższym przykładzie pokazano sposób użycia `foreach` instrukcji.  
+ Oprócz **liczba** właściwości, Brak **GetEnumerator** metodę, która zapewnia, `foreach` stylu iteracji przez kolekcję węzłów w **XmlNodeList**. Poniższy przykład kodu pokazuje użycie `foreach` instrukcji.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -91,7 +92,8 @@ End While
   }  
 ```  
   
- Aby uzyskać więcej informacji na temat metod i właściwości dostępnych na **XmlNodeList**, zobacz <xref:System.Xml.XmlNodeList>.  
+ Aby uzyskać więcej informacji na temat metod i właściwości dostępne na **XmlNodeList**, zobacz <xref:System.Xml.XmlNodeList>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

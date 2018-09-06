@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 493ac709123c67311ba570894fb324ae7148bfae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51aa91b1acbae9f1a15ac12441090dd4c1c2dcb1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574637"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869146"
 ---
 # <a name="attributes"></a>Atrybuty
-<xref:System.Attribute?displayProperty=nameWithType> Klasa podstawowa służy do definiowania atrybutów niestandardowych.  
+<xref:System.Attribute?displayProperty=nameWithType> Klasa bazowa służy do definiowania atrybutów niestandardowych.  
   
- Atrybuty są adnotacje, które mogą być dodawane do elementów programowania, takich jak zestawy, typy elementów członkowskich i parametry. Są przechowywane w metadanych zestawu i jest dostępny w czasie wykonywania za pomocą odbicia interfejsów API. Na przykład platformę definiuje <xref:System.ObsoleteAttribute>, które można zastosować do typu lub elementu członkowskiego, aby wskazać, że typ lub element członkowski jest przestarzała.  
+ Atrybuty są adnotacji, które mogą być dodawane do elementów programowania, takich jak zestawy, typy, elementy członkowskie i parametry. Są przechowywane w metadanych zestawu i można uzyskać dostęp w czasie wykonywania za pomocą odbicia interfejsów API. Na przykład definiuje platformę <xref:System.ObsoleteAttribute>, które można zastosować do typu lub elementu członkowskiego, aby wskazać, że typ lub składowa jest przestarzała.  
   
- Atrybuty mogą mieć co najmniej jednej właściwości zawierających dodatkowe dane powiązany z atrybutem. Na przykład `ObsoleteAttribute` może zawierać dodatkowe informacje o wersji w którym typ lub element członkowski został przestarzałe i opis nowych interfejsów API, zastępując przestarzałe interfejsu API.  
+ Atrybuty mogą mieć jedną lub więcej właściwości, wykonujących dodatkowych danych powiązany z atrybutem. Na przykład `ObsoleteAttribute` może zawierać dodatkowe informacje o wersji, w którym typu lub elementu członkowskiego stało się przestarzałe i opis nowych interfejsów API, zastępując przestarzałych API.  
   
- Niektóre właściwości atrybutu należy określić, gdy jest stosowany atrybut. Te są określane jako wymagane właściwości lub liczbą wymaganych argumentów, ponieważ są one reprezentowane jako parametry pozycyjne konstruktora. Na przykład <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> właściwość <xref:System.Diagnostics.ConditionalAttribute> jest właściwością wymaganą.  
+ Niektóre właściwości atrybutu musi być określona, jeśli ten atrybut jest stosowany. Są one określane jako wymagane właściwości lub wymagane argumenty, ponieważ są one reprezentowane jako parametry pozycyjne konstruktora. Na przykład <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> właściwość <xref:System.Diagnostics.ConditionalAttribute> jest właściwością wymaganą.  
   
- Właściwości, które nie muszą być określone, gdy jest stosowany atrybut są nazywane właściwości opcjonalnych (lub argumentów opcjonalnych). Są one reprezentowane przez można ustawić właściwości. Kompilatory Podaj specjalnej składni ustawić te właściwości, gdy jest stosowany atrybut. Na przykład <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> właściwość reprezentuje opcjonalny argument.  
+ Właściwości, które nie muszą być określone, gdy ten atrybut jest stosowany noszą nazwę właściwości opcjonalnych (lub opcjonalne argumenty). Są one reprezentowane przez właściwości do ustawienia. Kompilatory zapewniają specjalnej składni, aby ustawić te właściwości, jeśli atrybut jest stosowany. Na przykład <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> właściwość reprezentuje opcjonalny argument.  
   
  **✓ DO** nazwy klas atrybutów niestandardowych z sufiksem "Atrybutu".  
   
@@ -34,22 +34,23 @@ ms.locfileid: "33574637"
   
  **✓ DO** Podaj właściwości tylko do pobrania dla wymaganych argumentów.  
   
- **✓ DO** podać parametry konstruktora zainicjować właściwości odpowiadającej wymaganych argumentów. Każdy parametr powinien mieć taką samą nazwę (mimo że za pomocą innej wielkości liter), jak odpowiadających im właściwości.  
+ **✓ DO** podać parametry konstruktora zainicjować właściwości odpowiadającej wymaganych argumentów. Każdy parametr powinien mieć taką samą nazwę (mimo że przy użyciu innej wielkości liter), jak odpowiadającą właściwość.  
   
  **X AVOID** podając parametrami konstruktora zainicjować właściwości odpowiadającej Argumenty opcjonalne.  
   
- Innymi słowy nie ma właściwości, które można ustawić za pomocą metody konstruktora, jak i ustawiającej. Niniejsze wytyczne sprawia, że bardzo jawne argumenty, które są opcjonalne i które są wymagane i pozwala uniknąć konieczności ten sam efekt na dwa sposoby.  
+ Innymi słowy nie ma właściwości, które można ustawić za pomocą zarówno konstruktora, jak i metody ustawiającej. Ta wytyczna sprawia, że bardzo jawnych argumentów, które są opcjonalne i które są wymagane i pozwala uniknąć konieczności wykonując ten sam efekt na dwa sposoby.  
   
  **X AVOID** przeładowania konstruktorów atrybutu niestandardowego.  
   
- Wyraźnie mających tylko jeden konstruktor komunikuje się użytkownika, które argumentów wymaganych i opcjonalnych.  
+ Wyraźnie posiadanie tylko jednego konstruktora komunikuje się użytkownik, który argumentów wymaganych i opcjonalnych.  
   
- **✓ DO** zapieczętować klas atrybutów niestandardowych, jeśli to możliwe. Dzięki temu można szybciej wyszukiwania dla atrybutu.  
+ **✓ DO** zapieczętować klas atrybutów niestandardowych, jeśli to możliwe. Dzięki temu szybsze wyszukiwania dla atrybutu.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
- [Zalecenia dotyczące użytkowania](../../../docs/standard/design-guidelines/usage-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Zalecenia dotyczące użytkowania](../../../docs/standard/design-guidelines/usage-guidelines.md)

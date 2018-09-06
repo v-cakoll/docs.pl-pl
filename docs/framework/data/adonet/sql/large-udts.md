@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: a57bf400288c11e5ba651515feba42437b93148f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559822"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861991"
 ---
 # <a name="large-udts"></a>Duże UDT
 Typy zdefiniowane przez użytkownika (UDTs) umożliwiają deweloperom rozszerzenie serwera typ skalarny systemu, przechowując wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów w bazie danych programu SQL Server. Typów zdefiniowanych przez użytkownika może zawierać wiele elementów i może mieć zachowań, w przeciwieństwie do typów danych tradycyjnych aliasu, które składają się z jednego typu danych systemu programu SQL Server.  

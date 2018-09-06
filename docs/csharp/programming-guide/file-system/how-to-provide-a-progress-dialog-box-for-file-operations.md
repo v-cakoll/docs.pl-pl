@@ -5,11 +5,11 @@ helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
 ms.openlocfilehash: f80bbc94579c58210769800ad8bf74bc60878af5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558198"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43859976"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Porady: dostarczanie okna dialogowego postępu dla operacji na plikach (Przewodnik programowania w języku C#)
 Można zapewnić standardowe okno dialogowe, które wyświetla postęp w operacjach plików w Windows, jeśli używasz <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> method in Class metoda <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw.  

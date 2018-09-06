@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d820783b931195bf62b75ea76d7d0573289bab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f61b63f78ea3c6131d4d1ab4e421be25149035b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876122"
 ---
 # <a name="garbage-collection"></a>Odzyskiwanie pamięci
-. Moduł zbierający elementy bezużyteczne w NET zarządza alokacji i wersji pamięci dla aplikacji. Zawsze podczas tworzenia nowego obiektu środowisko uruchomieniowe języka wspólnego przydziela pamięć dla obiektu z zarządzanego stosu. Tak długo, jak przestrzeń adresowa jest dostępna w zarządzanym stosie, środowisko wykonawcze w dalszym ciągu przydziela miejsce dla nowych obiektów. Jednak pamięć nie jest nieskończona. Ostatecznie moduł zbierający elementy bezużyteczne musi wykonać kolekcję w celu zwolnienia pamięci. Aparat optymalizacji w module odśmiecania pamięci ustala najlepszy moment na wykonanie procesu wyrzucania w oparciu o dokonywane przydziały. Gdy moduł zbierający elementy bezużyteczne wykonuje kolekcję, sprawdza czy istnieją obiekty na zarządzanym stosie, które nie są już używane przez aplikację, i wykonuje niezbędne operacje do odzyskania ich pamięci.  
+. Moduł wyrzucania elementów bezużytecznych dla NET zarządza alokacją i zwolnieniem pamięci dla aplikacji. Zawsze podczas tworzenia nowego obiektu środowisko uruchomieniowe języka wspólnego przydziela pamięć dla obiektu z zarządzanego stosu. Tak długo, jak przestrzeń adresowa jest dostępna w zarządzanym stosie, środowisko wykonawcze w dalszym ciągu przydziela miejsce dla nowych obiektów. Jednak pamięć nie jest nieskończona. Ostatecznie moduł zbierający elementy bezużyteczne musi wykonać kolekcję w celu zwolnienia pamięci. Aparat optymalizacji w module odśmiecania pamięci ustala najlepszy moment na wykonanie procesu wyrzucania w oparciu o dokonywane przydziały. Gdy moduł zbierający elementy bezużyteczne wykonuje kolekcję, sprawdza czy istnieją obiekty na zarządzanym stosie, które nie są już używane przez aplikację, i wykonuje niezbędne operacje do odzyskania ich pamięci.  
   
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Tematy pokrewne  
@@ -60,5 +61,6 @@ ms.lasthandoff: 05/04/2018
   
  <xref:System.IDisposable?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>Zobacz też  
- [Oczyszczanie zasobów niezarządzanych](../../../docs/standard/garbage-collection/unmanaged.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Oczyszczanie zasobów niezarządzanych](../../../docs/standard/garbage-collection/unmanaged.md)

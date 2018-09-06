@@ -3,11 +3,11 @@ title: Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 5357bb4ad82f5fe9a70f15a540aba355e847ad71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538190"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857917"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server
 Iniekcja SQL to proces, za pomocą której złośliwy użytkownik wprowadza instrukcje języka Transact-SQL zamiast prawidłowych danych wejściowych. Jeśli dane wejściowe jest przekazywana bezpośrednio do serwera bez sprawdzania poprawności i aplikacja wykonuje przypadkowo wprowadzonego kodu ataku ma możliwość uszkodzenia lub zniszczenia danych.  

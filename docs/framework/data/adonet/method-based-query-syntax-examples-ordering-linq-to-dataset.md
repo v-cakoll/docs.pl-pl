@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8f9ce4fd-e84f-48c0-bb64-89e217236d3e
 ms.openlocfilehash: 13aa01fdc86e59c8cd132158df1dc4bd298b9710
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739597"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871848"
 ---
 # <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>Przykłady składni zapytania oparte na metodzie: Porządkowanie (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Reverse%2A>, i <xref:System.Linq.Enumerable.ThenBy%2A> metod do wykonywania zapytań <xref:System.Data.DataSet> i kolejność wyniki za pomocą składni zapytania metody.  

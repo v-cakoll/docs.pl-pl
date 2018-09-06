@@ -9,25 +9,25 @@ helpviewer_keywords:
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
 ms.openlocfilehash: d95fe29aa7ffab9938e8edc57999445268fe41a8
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332000"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035180"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="fc89b-102">| — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="fc89b-102">| Operator (C# Reference)</span></span>
-<span data-ttu-id="fc89b-103">Operatory binarne `|` są wstępnie zdefiniowane dla typów całkowitych i `bool`.</span><span class="sxs-lookup"><span data-stu-id="fc89b-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="fc89b-104">W przypadku typów całkowitych `|` oblicza logiczną lub jego operandu.</span><span class="sxs-lookup"><span data-stu-id="fc89b-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="fc89b-105">Dla `bool` operandów, `|` oblicza logiczne OR operandów; oznacza to wynik jest `false` tylko wtedy, gdy oba jego operandy są `false`.</span><span class="sxs-lookup"><span data-stu-id="fc89b-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="5ccba-102">| — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="5ccba-102">| Operator (C# Reference)</span></span>
+<span data-ttu-id="5ccba-103">Operatory binarne `|` są wstępnie zdefiniowane dla typów całkowitych i `bool`.</span><span class="sxs-lookup"><span data-stu-id="5ccba-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="5ccba-104">W przypadku typów całkowitych `|` oblicza logiczną lub jego operandu.</span><span class="sxs-lookup"><span data-stu-id="5ccba-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="5ccba-105">Dla `bool` operandów, `|` oblicza logiczne OR operandów; oznacza to wynik jest `false` tylko wtedy, gdy oba jego operandy są `false`.</span><span class="sxs-lookup"><span data-stu-id="5ccba-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fc89b-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="fc89b-106">Remarks</span></span>  
- <span data-ttu-id="fc89b-107">Plik binarny `|` operator ocenia oba operandy niezależnie od tego, pierwszy z nich wartości, w przeciwieństwie do [operator warunkowy OR] (warunkowych lub operator.md) `||`.</span><span class="sxs-lookup"><span data-stu-id="fc89b-107">The binary `|` operator evaluates both operands regardless of the first one's value, in contrast to the [conditional-OR operator]     (conditional-or-operator.md) `||`.</span></span>
+## <a name="remarks"></a><span data-ttu-id="5ccba-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="5ccba-106">Remarks</span></span>  
+ <span data-ttu-id="5ccba-107">Plik binarny `|` operator ocenia oba operandy niezależnie od tego, pierwszy z nich wartości, w przeciwieństwie do [operator warunkowy OR] (warunkowych lub operator.md) `||`.</span><span class="sxs-lookup"><span data-stu-id="5ccba-107">The binary `|` operator evaluates both operands regardless of the first one's value, in contrast to the [conditional-OR operator]     (conditional-or-operator.md) `||`.</span></span>
  
- <span data-ttu-id="fc89b-108">Typy definiowane przez użytkownika mogą przeciążać operator `|` — (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="fc89b-108">User-defined types can overload the `|` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+ <span data-ttu-id="5ccba-108">Typy definiowane przez użytkownika mogą przeciążać operator `|` — (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="5ccba-108">User-defined types can overload the `|` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fc89b-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="fc89b-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5ccba-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="5ccba-109">Example</span></span>  
  [!code-csharp[csRefOperators#31](../../../csharp/language-reference/operators/codesnippet/CSharp/or-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="fc89b-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="fc89b-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ccba-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5ccba-110">See Also</span></span>
 
-- [<span data-ttu-id="fc89b-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="fc89b-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="fc89b-112">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="fc89b-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="fc89b-113">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="fc89b-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="5ccba-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="5ccba-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="5ccba-112">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="5ccba-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="5ccba-113">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="5ccba-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

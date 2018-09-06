@@ -1,21 +1,21 @@
 ---
-title: 'Porady: Napisz zapytanie, które wyszukuje elementy na podstawie kontekstu (C#)'
+title: 'Porady: pisanie zapytania odnajdującego elementy na podstawie kontekstu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 3b09be121c3e1da12614d1c09a806b09386732df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322016"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723665"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a><span data-ttu-id="073e0-102">Porady: Napisz zapytanie, które wyszukuje elementy na podstawie kontekstu (C#)</span><span class="sxs-lookup"><span data-stu-id="073e0-102">How to: Write a Query that Finds Elements Based on Context (C#)</span></span>
-<span data-ttu-id="073e0-103">Czasami może być konieczne Napisz zapytanie, które wybiera elementy na podstawie ich kontekstu.</span><span class="sxs-lookup"><span data-stu-id="073e0-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="073e0-104">Można filtrować na podstawie poprzedzające lub następujące elementów równorzędnych.</span><span class="sxs-lookup"><span data-stu-id="073e0-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="073e0-105">Można filtrować na podstawie podrzędnej lub elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="073e0-105">You might want to filter based on child or ancestor elements.</span></span>  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a><span data-ttu-id="2402d-102">Porady: pisanie zapytania odnajdującego elementy na podstawie kontekstu (C#)</span><span class="sxs-lookup"><span data-stu-id="2402d-102">How to: Write a Query that Finds Elements Based on Context (C#)</span></span>
+<span data-ttu-id="2402d-103">Czasami może być napisać zapytanie wybierające elementy na podstawie ich kontekstu.</span><span class="sxs-lookup"><span data-stu-id="2402d-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="2402d-104">Można filtrować na podstawie poprzedzające lub następujące elementów równorzędnych.</span><span class="sxs-lookup"><span data-stu-id="2402d-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="2402d-105">Można filtrować na podstawie podrzędnej lub elementów nadrzędnych.</span><span class="sxs-lookup"><span data-stu-id="2402d-105">You might want to filter based on child or ancestor elements.</span></span>  
   
- <span data-ttu-id="073e0-106">Aby to zrobić, zapisywanie zapytania i przy użyciu wyników kwerendy w `where` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="073e0-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="073e0-107">Jeśli trzeba najpierw przetestować wartości null, a następnie sprawdź wartość jest wygodniejsze w zapytaniu w `let` klauzuli, a następnie użyj wyniki w `where` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="073e0-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
+ <span data-ttu-id="2402d-106">Można to zrobić przez napisanie zapytania i używanie wyniki zapytania w `where` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="2402d-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="2402d-107">Jeśli musisz najpierw testujemy współpracę z wartością null, a następnie sprawdź wartość, jest bardziej wygodne wykonać zapytanie w `let` klauzuli, a następnie użyć wyników w `where` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="2402d-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="073e0-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="073e0-108">Example</span></span>  
- <span data-ttu-id="073e0-109">Poniższy przykład wybranie wszystkich `p` elementów, które są od razu następuje `ul` elementu.</span><span class="sxs-lookup"><span data-stu-id="073e0-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="2402d-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="2402d-108">Example</span></span>  
+ <span data-ttu-id="2402d-109">Poniższy przykład powoduje zaznaczenie wszystkich `p` elementy, które są od razu następuje `ul` elementu.</span><span class="sxs-lookup"><span data-stu-id="2402d-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root>  
@@ -47,7 +47,7 @@ foreach (XElement e in items)
     Console.WriteLine("id = {0}", (string)e.Attribute("id"));  
 ```  
   
- <span data-ttu-id="073e0-110">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="073e0-110">This code produces the following output:</span></span>  
+ <span data-ttu-id="2402d-110">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="2402d-110">This code produces the following output:</span></span>  
   
 ```  
 id = 1  
@@ -55,8 +55,8 @@ id = 3
 id = 6  
 ```  
   
-## <a name="example"></a><span data-ttu-id="073e0-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="073e0-111">Example</span></span>  
- <span data-ttu-id="073e0-112">W poniższym przykładzie pokazano tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="073e0-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="073e0-113">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeni nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="073e0-113">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="2402d-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="2402d-111">Example</span></span>  
+ <span data-ttu-id="2402d-112">Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="2402d-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="2402d-113">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="2402d-113">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -90,7 +90,7 @@ foreach (XElement e in items)
     Console.WriteLine("id = {0}", (string)e.Attribute("id"));  
 ```  
   
- <span data-ttu-id="073e0-114">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="073e0-114">This code produces the following output:</span></span>  
+ <span data-ttu-id="2402d-114">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="2402d-114">This code produces the following output:</span></span>  
   
 ```  
 id = 1  
@@ -98,9 +98,10 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="073e0-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="073e0-115">See Also</span></span>  
- <xref:System.Xml.Linq.XElement.Parse%2A>  
- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
- [<span data-ttu-id="073e0-116">Podstawowe zapytania (LINQ do XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="073e0-116">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="2402d-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="2402d-115">See Also</span></span>
+
+- <xref:System.Xml.Linq.XElement.Parse%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
+- [<span data-ttu-id="2402d-116">Podstawowe zapytania (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="2402d-116">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

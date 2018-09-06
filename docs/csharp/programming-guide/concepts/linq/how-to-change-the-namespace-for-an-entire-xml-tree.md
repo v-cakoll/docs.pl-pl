@@ -3,19 +3,19 @@ title: 'Porady: Zmienianie Namespace dla całego drzewa XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
 ms.openlocfilehash: cbb7c3d332eea83d6df71812cc18633df6fbb6d0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559533"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773592"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a><span data-ttu-id="604ba-102">Porady: Zmienianie Namespace dla całego drzewa XML (C#)</span><span class="sxs-lookup"><span data-stu-id="604ba-102">How to: Change the Namespace for an Entire XML Tree (C#)</span></span>
-<span data-ttu-id="604ba-103">Czasami trzeba programowe Zmienianie przestrzeni nazw dla elementu lub atrybutu.</span><span class="sxs-lookup"><span data-stu-id="604ba-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="604ba-104">LINQ to XML ułatwia to zadanie.</span><span class="sxs-lookup"><span data-stu-id="604ba-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="604ba-105"><xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Można ustawić właściwości.</span><span class="sxs-lookup"><span data-stu-id="604ba-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="604ba-106"><xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> Nie można ustawić właściwości, ale można łatwo skopiować atrybuty do <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, Usuń istniejące atrybuty, a następnie dodaj nowe atrybuty, które znajdują się w nowej przestrzeni nazw żądaną.</span><span class="sxs-lookup"><span data-stu-id="604ba-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a><span data-ttu-id="23325-102">Porady: Zmienianie Namespace dla całego drzewa XML (C#)</span><span class="sxs-lookup"><span data-stu-id="23325-102">How to: Change the Namespace for an Entire XML Tree (C#)</span></span>
+<span data-ttu-id="23325-103">Czasami trzeba programowe Zmienianie przestrzeni nazw dla elementu lub atrybutu.</span><span class="sxs-lookup"><span data-stu-id="23325-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="23325-104">LINQ to XML ułatwia to zadanie.</span><span class="sxs-lookup"><span data-stu-id="23325-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="23325-105"><xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Można ustawić właściwości.</span><span class="sxs-lookup"><span data-stu-id="23325-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="23325-106"><xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> Nie można ustawić właściwości, ale można łatwo skopiować atrybuty do <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, Usuń istniejące atrybuty, a następnie dodaj nowe atrybuty, które znajdują się w nowej przestrzeni nazw żądaną.</span><span class="sxs-lookup"><span data-stu-id="23325-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
   
- <span data-ttu-id="604ba-107">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="604ba-107">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+ <span data-ttu-id="23325-107">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="23325-107">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="604ba-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="604ba-108">Example</span></span>  
- <span data-ttu-id="604ba-109">Poniższy kod tworzy dwa drzewa XML w żadnej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="604ba-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="604ba-110">Następnie zmiany nazw poszczególnych drzewa i łączy je w jednym drzewie.</span><span class="sxs-lookup"><span data-stu-id="604ba-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="23325-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="23325-108">Example</span></span>  
+ <span data-ttu-id="23325-109">Poniższy kod tworzy dwa drzewa XML w żadnej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="23325-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="23325-110">Następnie zmiany nazw poszczególnych drzewa i łączy je w jednym drzewie.</span><span class="sxs-lookup"><span data-stu-id="23325-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
   
 ```csharp  
 XElement tree1 = new XElement("Data",  
@@ -64,7 +64,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="604ba-111">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="604ba-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="23325-111">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="23325-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -77,6 +77,6 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="604ba-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="604ba-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23325-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="23325-112">See Also</span></span>
 
-- [<span data-ttu-id="604ba-113">Modyfikowanie drzew XML (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="604ba-113">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [<span data-ttu-id="23325-113">Modyfikowanie drzew XML (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="23325-113">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

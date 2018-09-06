@@ -3,27 +3,27 @@ title: Klienci
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
 ms.openlocfilehash: 844412b211fe6187e3475fc71b9c3ccca8dd178f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43670811"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743115"
 ---
-# <a name="clients"></a><span data-ttu-id="e8698-102">Klienci</span><span class="sxs-lookup"><span data-stu-id="e8698-102">Clients</span></span>
-<span data-ttu-id="e8698-103">Tematy w tej sekcji obejmują architektury klienta, jak uzyskać dostęp do usługi Windows Communication Foundation (WCF), jak skonfigurować klienta programu WCF i niektóre zagadnienia zabezpieczeń dla klientów usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="e8698-103">The topics in this section cover the client architecture, how to access a Windows Communication Foundation (WCF) service, how to configure a WCF client, and some security consideration for WCF clients.</span></span>  
+# <a name="clients"></a><span data-ttu-id="3226f-102">Klienci</span><span class="sxs-lookup"><span data-stu-id="3226f-102">Clients</span></span>
+<span data-ttu-id="3226f-103">Tematy w tej sekcji obejmują architektury klienta, jak uzyskać dostęp do usługi Windows Communication Foundation (WCF), jak skonfigurować klienta programu WCF i niektóre zagadnienia zabezpieczeń dla klientów usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="3226f-103">The topics in this section cover the client architecture, how to access a Windows Communication Foundation (WCF) service, how to configure a WCF client, and some security consideration for WCF clients.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e8698-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="e8698-104">In This Section</span></span>  
- [<span data-ttu-id="e8698-105">Architektura klienta programu WCF</span><span class="sxs-lookup"><span data-stu-id="e8698-105">WCF Client Architecture</span></span>](../../../../docs/framework/wcf/feature-details/client-architecture.md)  
- <span data-ttu-id="e8698-106">W tym artykule opisano Architektura klienta programu WCF.</span><span class="sxs-lookup"><span data-stu-id="e8698-106">Describes the WCF client architecture.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="3226f-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="3226f-104">In This Section</span></span>  
+ [<span data-ttu-id="3226f-105">Architektura klienta programu WCF</span><span class="sxs-lookup"><span data-stu-id="3226f-105">WCF Client Architecture</span></span>](../../../../docs/framework/wcf/feature-details/client-architecture.md)  
+ <span data-ttu-id="3226f-106">W tym artykule opisano Architektura klienta programu WCF.</span><span class="sxs-lookup"><span data-stu-id="3226f-106">Describes the WCF client architecture.</span></span>  
   
- [<span data-ttu-id="e8698-107">Uzyskiwanie dostępu do usług za pomocą klienta WCF</span><span class="sxs-lookup"><span data-stu-id="e8698-107">Accessing Services Using a WCF Client</span></span>](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)  
- <span data-ttu-id="e8698-108">W tym artykule opisano, jak uzyskać dostęp do usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="e8698-108">Describes how to access a WCF service.</span></span>  
+ [<span data-ttu-id="3226f-107">Uzyskiwanie dostępu do usług za pomocą klienta WCF</span><span class="sxs-lookup"><span data-stu-id="3226f-107">Accessing Services Using a WCF Client</span></span>](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)  
+ <span data-ttu-id="3226f-108">W tym artykule opisano, jak uzyskać dostęp do usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="3226f-108">Describes how to access a WCF service.</span></span>  
   
- [<span data-ttu-id="e8698-109">Konfiguracja klienta programu WCF</span><span class="sxs-lookup"><span data-stu-id="e8698-109">WCF Client Configuration</span></span>](../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- <span data-ttu-id="e8698-110">W tym artykule opisano sposób konfigurowania klienta programu WCF.</span><span class="sxs-lookup"><span data-stu-id="e8698-110">Describes how to configure a WCF client.</span></span>  
+ [<span data-ttu-id="3226f-109">Konfiguracja klienta programu WCF</span><span class="sxs-lookup"><span data-stu-id="3226f-109">WCF Client Configuration</span></span>](../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ <span data-ttu-id="3226f-110">W tym artykule opisano sposób konfigurowania klienta programu WCF.</span><span class="sxs-lookup"><span data-stu-id="3226f-110">Describes how to configure a WCF client.</span></span>  
   
- [<span data-ttu-id="e8698-111">Zabezpieczanie klientów</span><span class="sxs-lookup"><span data-stu-id="e8698-111">Securing Clients</span></span>](../../../../docs/framework/wcf/securing-clients.md)  
- <span data-ttu-id="e8698-112">W tym artykule opisano niektóre zagadnienia dotyczące zabezpieczeń dla klientów usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="e8698-112">Describes some security considerations for WCF clients.</span></span>  
+ [<span data-ttu-id="3226f-111">Zabezpieczanie klientów</span><span class="sxs-lookup"><span data-stu-id="3226f-111">Securing Clients</span></span>](../../../../docs/framework/wcf/securing-clients.md)  
+ <span data-ttu-id="3226f-112">W tym artykule opisano niektóre zagadnienia dotyczące zabezpieczeń dla klientów usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="3226f-112">Describes some security considerations for WCF clients.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8698-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e8698-113">See Also</span></span>  
- [<span data-ttu-id="e8698-114">Przykłady klienta</span><span class="sxs-lookup"><span data-stu-id="e8698-114">Client Samples</span></span>](https://msdn.microsoft.com/library/849fc452-8718-4d4e-ba57-905eed943f63)
+## <a name="see-also"></a><span data-ttu-id="3226f-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3226f-113">See Also</span></span>  
+ [<span data-ttu-id="3226f-114">Przykłady klienta</span><span class="sxs-lookup"><span data-stu-id="3226f-114">Client Samples</span></span>](https://msdn.microsoft.com/library/849fc452-8718-4d4e-ba57-905eed943f63)

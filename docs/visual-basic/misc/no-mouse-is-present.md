@@ -5,24 +5,24 @@ f1_keywords:
 - vbrMouse_NoMouseIsPresent
 ms.assetid: 4472fd57-4217-4463-9d3c-dc4a8fe88f1b
 ms.openlocfilehash: ee04ed880f8aa24bbd155c5658ad6de856e2c388
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43541322"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870253"
 ---
-# <a name="no-mouse-is-present"></a><span data-ttu-id="0fcbe-102">Nie ma myszy</span><span class="sxs-lookup"><span data-stu-id="0fcbe-102">No mouse is present</span></span>
-<span data-ttu-id="0fcbe-103">Jedna z właściwości obiektu `My.Computer.Mouse` obiektu zostało wywołane, ale komputer nie ma myszy lub port myszy zainstalowany.</span><span class="sxs-lookup"><span data-stu-id="0fcbe-103">One of the properties of the `My.Computer.Mouse` object was called, but the computer has no mouse or mouse port installed.</span></span>  
+# <a name="no-mouse-is-present"></a><span data-ttu-id="91ff9-102">Nie ma myszy</span><span class="sxs-lookup"><span data-stu-id="91ff9-102">No mouse is present</span></span>
+<span data-ttu-id="91ff9-103">Jedna z właściwości obiektu `My.Computer.Mouse` obiektu zostało wywołane, ale komputer nie ma myszy lub port myszy zainstalowany.</span><span class="sxs-lookup"><span data-stu-id="91ff9-103">One of the properties of the `My.Computer.Mouse` object was called, but the computer has no mouse or mouse port installed.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0fcbe-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="0fcbe-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="91ff9-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="91ff9-104">To correct this error</span></span>  
   
--   <span data-ttu-id="0fcbe-105">Dodaj `Try...Catch` bloku wokół wywołania do właściwości `My.Computer.Mouse` obiektu.</span><span class="sxs-lookup"><span data-stu-id="0fcbe-105">Add a `Try...Catch` block around the call to the property of the `My.Computer.Mouse` object.</span></span>  
+-   <span data-ttu-id="91ff9-105">Dodaj `Try...Catch` bloku wokół wywołania do właściwości `My.Computer.Mouse` obiektu.</span><span class="sxs-lookup"><span data-stu-id="91ff9-105">Add a `Try...Catch` block around the call to the property of the `My.Computer.Mouse` object.</span></span>  
   
-     <span data-ttu-id="0fcbe-106">— lub —</span><span class="sxs-lookup"><span data-stu-id="0fcbe-106">— or —</span></span>  
+     <span data-ttu-id="91ff9-106">— lub —</span><span class="sxs-lookup"><span data-stu-id="91ff9-106">— or —</span></span>  
   
--   <span data-ttu-id="0fcbe-107">Zainstaluj myszy na komputerze.</span><span class="sxs-lookup"><span data-stu-id="0fcbe-107">Install a mouse on the computer.</span></span>  
+-   <span data-ttu-id="91ff9-107">Zainstaluj myszy na komputerze.</span><span class="sxs-lookup"><span data-stu-id="91ff9-107">Install a mouse on the computer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0fcbe-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0fcbe-108">See Also</span></span>  
- [<span data-ttu-id="0fcbe-109">My.Computer.Mouse</span><span class="sxs-lookup"><span data-stu-id="0fcbe-109">My.Computer.Mouse</span></span>](xref:Microsoft.VisualBasic.Devices.Mouse)  
- [<span data-ttu-id="0fcbe-110">Wyjątek i obsługa błędów w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0fcbe-110">Exception and Error Handling in Visual Basic</span></span>](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
- [<span data-ttu-id="0fcbe-111">Try...Catch...Finally, instrukcja</span><span class="sxs-lookup"><span data-stu-id="0fcbe-111">Try...Catch...Finally Statement</span></span>](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="91ff9-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="91ff9-108">See Also</span></span>  
+ [<span data-ttu-id="91ff9-109">My.Computer.Mouse</span><span class="sxs-lookup"><span data-stu-id="91ff9-109">My.Computer.Mouse</span></span>](xref:Microsoft.VisualBasic.Devices.Mouse)  
+ [<span data-ttu-id="91ff9-110">Wyjątek i obsługa błędów w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="91ff9-110">Exception and Error Handling in Visual Basic</span></span>](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
+ [<span data-ttu-id="91ff9-111">Try...Catch...Finally, instrukcja</span><span class="sxs-lookup"><span data-stu-id="91ff9-111">Try...Catch...Finally Statement</span></span>](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

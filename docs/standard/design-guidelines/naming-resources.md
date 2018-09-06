@@ -1,5 +1,5 @@
 ---
-title: Nadawanie nazw zasobów
+title: Nazewnictwo zasobów
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,36 +11,37 @@ helpviewer_keywords:
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7cfda4e6a340d040de02903b9b64f0339751c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571189"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875112"
 ---
-# <a name="naming-resources"></a><span data-ttu-id="fd1e4-102">Nadawanie nazw zasobów</span><span class="sxs-lookup"><span data-stu-id="fd1e4-102">Naming Resources</span></span>
-<span data-ttu-id="fd1e4-103">Ponieważ zlokalizowania zasobów można odwoływać się za pośrednictwem niektórych obiektów tak jakby były to właściwości, nazewnictwa wytyczne dotyczące zasobów są podobne do właściwości wytyczne.</span><span class="sxs-lookup"><span data-stu-id="fd1e4-103">Because localizable resources can be referenced via certain objects as if they were properties, the naming guidelines for resources are similar to property guidelines.</span></span>  
+# <a name="naming-resources"></a><span data-ttu-id="b9576-102">Nazewnictwo zasobów</span><span class="sxs-lookup"><span data-stu-id="b9576-102">Naming Resources</span></span>
+<span data-ttu-id="b9576-103">Ponieważ lokalizowalne zasoby mogą być przywoływane za pośrednictwem niektórych obiektów, tak jakby były one właściwości, wskazówkami nazewnictwa dla zasobów są podobne do wytycznych właściwości.</span><span class="sxs-lookup"><span data-stu-id="b9576-103">Because localizable resources can be referenced via certain objects as if they were properties, the naming guidelines for resources are similar to property guidelines.</span></span>  
   
- <span data-ttu-id="fd1e4-104">**✓ DO** programu PascalCasing klucze zasobów.</span><span class="sxs-lookup"><span data-stu-id="fd1e4-104">**✓ DO** use PascalCasing in resource keys.</span></span>  
+ <span data-ttu-id="b9576-104">**✓ DO** programu PascalCasing klucze zasobów.</span><span class="sxs-lookup"><span data-stu-id="b9576-104">**✓ DO** use PascalCasing in resource keys.</span></span>  
   
- <span data-ttu-id="fd1e4-105">**✓ DO** Podaj opisową zamiast krótkich identyfikatorów.</span><span class="sxs-lookup"><span data-stu-id="fd1e4-105">**✓ DO** provide descriptive rather than short identifiers.</span></span>  
+ <span data-ttu-id="b9576-105">**✓ DO** Podaj opisową zamiast krótkich identyfikatorów.</span><span class="sxs-lookup"><span data-stu-id="b9576-105">**✓ DO** provide descriptive rather than short identifiers.</span></span>  
   
- <span data-ttu-id="fd1e4-106">**X DO NOT** użyj słowa kluczowe specyficzne dla języka głównego języków CLR.</span><span class="sxs-lookup"><span data-stu-id="fd1e4-106">**X DO NOT** use language-specific keywords of the main CLR languages.</span></span>  
+ <span data-ttu-id="b9576-106">**X DO NOT** użyj słowa kluczowe specyficzne dla języka głównego języków CLR.</span><span class="sxs-lookup"><span data-stu-id="b9576-106">**X DO NOT** use language-specific keywords of the main CLR languages.</span></span>  
   
- <span data-ttu-id="fd1e4-107">**✓ DO** Użyj tylko znaki alfanumeryczne oraz znaki podkreślenia w nazw zasobów.</span><span class="sxs-lookup"><span data-stu-id="fd1e4-107">**✓ DO** use only alphanumeric characters and underscores in naming resources.</span></span>  
+ <span data-ttu-id="b9576-107">**✓ DO** Użyj tylko znaki alfanumeryczne oraz znaki podkreślenia w nazw zasobów.</span><span class="sxs-lookup"><span data-stu-id="b9576-107">**✓ DO** use only alphanumeric characters and underscores in naming resources.</span></span>  
   
- <span data-ttu-id="fd1e4-108">**✓ DO** używać następującej konwencji nazewnictwa dla zasobów komunikat wyjątku.</span><span class="sxs-lookup"><span data-stu-id="fd1e4-108">**✓ DO** use the following naming convention for exception message resources.</span></span>  
+ <span data-ttu-id="b9576-108">**✓ DO** używać następującej konwencji nazewnictwa dla zasobów komunikat wyjątku.</span><span class="sxs-lookup"><span data-stu-id="b9576-108">**✓ DO** use the following naming convention for exception message resources.</span></span>  
   
- <span data-ttu-id="fd1e4-109">Identyfikator zasobu powinny być nazwa typu wyjątku plus krótki identyfikator wyjątku:</span><span class="sxs-lookup"><span data-stu-id="fd1e4-109">The resource identifier should be the exception type name plus a short identifier of the exception:</span></span>  
+ <span data-ttu-id="b9576-109">Identyfikator zasobu powinna być nazwa typu wyjątku oraz krótki identyfikator wyjątku:</span><span class="sxs-lookup"><span data-stu-id="b9576-109">The resource identifier should be the exception type name plus a short identifier of the exception:</span></span>  
   
  `ArgumentExceptionIllegalCharacters`  
  `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- <span data-ttu-id="fd1e4-110">*Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*</span><span class="sxs-lookup"><span data-stu-id="fd1e4-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="b9576-110">*Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*</span><span class="sxs-lookup"><span data-stu-id="b9576-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="fd1e4-111">*Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*</span><span class="sxs-lookup"><span data-stu-id="fd1e4-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="b9576-111">*Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*</span><span class="sxs-lookup"><span data-stu-id="b9576-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd1e4-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="fd1e4-112">See Also</span></span>  
- [<span data-ttu-id="fd1e4-113">Struktura — zalecenia dotyczące projektowania</span><span class="sxs-lookup"><span data-stu-id="fd1e4-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
- [<span data-ttu-id="fd1e4-114">Wskazówki dotyczące nazewnictwa</span><span class="sxs-lookup"><span data-stu-id="fd1e4-114">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="b9576-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b9576-112">See also</span></span>
+
+- [<span data-ttu-id="b9576-113">Struktura — zalecenia dotyczące projektowania</span><span class="sxs-lookup"><span data-stu-id="b9576-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+- [<span data-ttu-id="b9576-114">Wskazówki dotyczące nazewnictwa</span><span class="sxs-lookup"><span data-stu-id="b9576-114">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)

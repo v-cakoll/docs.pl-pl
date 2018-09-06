@@ -2,32 +2,32 @@
 title: 'Porady: Określanie, jeśli plik jest zestawem (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 51dbf2c0f37b767206d206cd86513d24c7f3c6c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ee2313677fba21624ccdb44db779633f6c4503bf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538639"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861013"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a><span data-ttu-id="89386-102">Porady: Określanie, jeśli plik jest zestawem (C#)</span><span class="sxs-lookup"><span data-stu-id="89386-102">How to: Determine If a File Is an Assembly (C#)</span></span>
-<span data-ttu-id="89386-103">Plik jest zestawem, tylko wtedy, gdy jest zarządzana i wpis zestawu w metadanych.</span><span class="sxs-lookup"><span data-stu-id="89386-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="89386-104">Aby uzyskać więcej informacji na temat zestawów i metadanych, zobacz temat [manifestu zestawu](../../../../../docs/framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="89386-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../../docs/framework/app-domains/assembly-manifest.md).</span></span>  
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a><span data-ttu-id="f6cc7-102">Porady: Określanie, jeśli plik jest zestawem (C#)</span><span class="sxs-lookup"><span data-stu-id="f6cc7-102">How to: Determine If a File Is an Assembly (C#)</span></span>
+<span data-ttu-id="f6cc7-103">Plik jest zestawem, tylko wtedy, gdy jest zarządzana i wpis zestawu w metadanych.</span><span class="sxs-lookup"><span data-stu-id="f6cc7-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="f6cc7-104">Aby uzyskać więcej informacji na temat zestawów i metadanych, zobacz temat [manifestu zestawu](../../../../../docs/framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="f6cc7-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../../docs/framework/app-domains/assembly-manifest.md).</span></span>  
   
-### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="89386-105">Jak ręcznie określić, czy plik jest zestawem</span><span class="sxs-lookup"><span data-stu-id="89386-105">How to manually determine if a file is an assembly</span></span>  
+### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="f6cc7-105">Jak ręcznie określić, czy plik jest zestawem</span><span class="sxs-lookup"><span data-stu-id="f6cc7-105">How to manually determine if a file is an assembly</span></span>  
   
-1.  <span data-ttu-id="89386-106">Rozpocznij [Ildasm.exe (dezasembler IL)](https://msdn.microsoft.com/library/f7dy01k1).</span><span class="sxs-lookup"><span data-stu-id="89386-106">Start the [Ildasm.exe (IL Disassembler)](https://msdn.microsoft.com/library/f7dy01k1).</span></span>  
+1.  <span data-ttu-id="f6cc7-106">Rozpocznij [Ildasm.exe (dezasembler IL)](../../../../framework/tools/ildasm-exe-il-disassembler.md).</span><span class="sxs-lookup"><span data-stu-id="f6cc7-106">Start the [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
   
-2.  <span data-ttu-id="89386-107">Załaduj plik, który chcesz przetestować.</span><span class="sxs-lookup"><span data-stu-id="89386-107">Load the file you wish to test.</span></span>  
+2.  <span data-ttu-id="f6cc7-107">Załaduj plik, który chcesz przetestować.</span><span class="sxs-lookup"><span data-stu-id="f6cc7-107">Load the file you wish to test.</span></span>  
   
-3.  <span data-ttu-id="89386-108">Jeśli **ILDASM** raporty, że plik nie jest plikiem przenośny plik wykonywalny (PE), a następnie nie jest zestawem.</span><span class="sxs-lookup"><span data-stu-id="89386-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="89386-109">Aby uzyskać więcej informacji, zobacz temat [porady: wyświetlanie zawartości zestawu](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span><span class="sxs-lookup"><span data-stu-id="89386-109">For more information, see the topic [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
+3.  <span data-ttu-id="f6cc7-108">Jeśli **ILDASM** raporty, że plik nie jest plikiem przenośny plik wykonywalny (PE), a następnie nie jest zestawem.</span><span class="sxs-lookup"><span data-stu-id="f6cc7-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="f6cc7-109">Aby uzyskać więcej informacji, zobacz temat [porady: wyświetlanie zawartości zestawu](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span><span class="sxs-lookup"><span data-stu-id="f6cc7-109">For more information, see the topic [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
   
-### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="89386-110">Jak programowo określić, czy plik jest zestawem</span><span class="sxs-lookup"><span data-stu-id="89386-110">How to programmatically determine if a file is an assembly</span></span>  
+### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="f6cc7-110">Jak programowo określić, czy plik jest zestawem</span><span class="sxs-lookup"><span data-stu-id="f6cc7-110">How to programmatically determine if a file is an assembly</span></span>  
   
-1.  <span data-ttu-id="89386-111">Wywołaj <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> jest metoda pełną ścieżkę i nazwę pliku, które testujesz.</span><span class="sxs-lookup"><span data-stu-id="89386-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method, passing the full file path and name of the file you are testing.</span></span>  
+1.  <span data-ttu-id="f6cc7-111">Wywołaj <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> jest metoda pełną ścieżkę i nazwę pliku, które testujesz.</span><span class="sxs-lookup"><span data-stu-id="f6cc7-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method, passing the full file path and name of the file you are testing.</span></span>  
   
-2.  <span data-ttu-id="89386-112">Jeśli <xref:System.BadImageFormatException> jest zgłaszany wyjątek, plik nie jest zestawem.</span><span class="sxs-lookup"><span data-stu-id="89386-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
+2.  <span data-ttu-id="f6cc7-112">Jeśli <xref:System.BadImageFormatException> jest zgłaszany wyjątek, plik nie jest zestawem.</span><span class="sxs-lookup"><span data-stu-id="f6cc7-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="89386-113">Przykład</span><span class="sxs-lookup"><span data-stu-id="89386-113">Example</span></span>  
- <span data-ttu-id="89386-114">W tym przykładzie testy bibliotekę DLL, aby zobaczyć, jeśli jest to zespół.</span><span class="sxs-lookup"><span data-stu-id="89386-114">This example tests a DLL to see if it is an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="f6cc7-113">Przykład</span><span class="sxs-lookup"><span data-stu-id="f6cc7-113">Example</span></span>  
+ <span data-ttu-id="f6cc7-114">W tym przykładzie testy bibliotekę DLL, aby zobaczyć, jeśli jest to zespół.</span><span class="sxs-lookup"><span data-stu-id="f6cc7-114">This example tests a DLL to see if it is an assembly.</span></span>  
   
 ```  
 class TestAssembly  
@@ -64,10 +64,10 @@ class TestAssembly
 */  
 ```  
   
- <span data-ttu-id="89386-115"><xref:System.Reflection.AssemblyName.GetAssemblyName%2A> Metoda ładuje plik testu i następnie zwalnia go po zostaną odczytane informacje.</span><span class="sxs-lookup"><span data-stu-id="89386-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
+ <span data-ttu-id="f6cc7-115"><xref:System.Reflection.AssemblyName.GetAssemblyName%2A> Metoda ładuje plik testu i następnie zwalnia go po zostaną odczytane informacje.</span><span class="sxs-lookup"><span data-stu-id="f6cc7-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89386-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="89386-116">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6cc7-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f6cc7-116">See Also</span></span>
 
 - <xref:System.Reflection.AssemblyName>  
-- [<span data-ttu-id="89386-117">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="89386-117">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="89386-118">Zestawy i Globalna pamięć podręczna zestawów (C#)</span><span class="sxs-lookup"><span data-stu-id="89386-118">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [<span data-ttu-id="f6cc7-117">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="f6cc7-117">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="f6cc7-118">Zestawy i Globalna pamięć podręczna zestawów (C#)</span><span class="sxs-lookup"><span data-stu-id="f6cc7-118">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

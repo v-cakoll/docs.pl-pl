@@ -8,11 +8,11 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
 ms.openlocfilehash: bf81384b0cecfd1ee3d438e4463949381279a181
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254882"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785195"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue — Operator (Visual Basic)
 Określa, czy wyrażenie jest `True`.  

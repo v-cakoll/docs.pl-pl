@@ -13,11 +13,11 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396552"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784884"
 ---
 # <a name="array-conversions-visual-basic"></a>Konwersje tablic (Visual Basic)
 Typ tablicy można przekonwertować na typ innej tablicy, pod warunkiem spełnienia następujących warunków:  

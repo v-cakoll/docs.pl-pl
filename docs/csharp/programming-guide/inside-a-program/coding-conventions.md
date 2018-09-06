@@ -6,48 +6,48 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: c639c5481e3ee02eaacbe33e5d118a73db3f9051
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 430cf3f1bc5e0b5ebe1a05530059516f36a473a1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336940"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733554"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>konwencje kodowania C# (Przewodnik programowania w języku C#)
  Konwencje kodowania służą do następujących celów:  
   
--   Tak, aby czytelnicy mogą skupić się na zawartości, nie układu tworzenia spójny wygląd w kodzie.  
+-   Tworzą spójnego wyglądu w kodzie, dzięki czemu czytelnicy można skupić się na treści, a nie na układzie.  
   
--   Umożliwiają one czytników zrozumienie kod szybciej przez założenie na podstawie doświadczeń w poprzedniej.  
+-   Umożliwiają one odbiorcy zrozumieć kod szybciej, wprowadzając założenia na podstawie poprzednich doświadczeń.  
   
--   Ułatwiają one kopiowanie, zmienianie i utrzymywanie kodu.  
+-   Ułatwiają one, kopiowanie, zmienianie i utrzymanie kodu.  
   
--   Pokazują one C# najlepszych rozwiązań.  
+-   Pokazują one języka C# najlepszych rozwiązań.  
 
- Wskazówki zawarte w tym temacie są używane przez firmę Microsoft do opracowywania przykłady i dokumentacja.  
+ Wskazówki zawarte w tym temacie są używane przez firmę Microsoft do tworzenia, przykłady i dokumentację.  
   
 ## <a name="naming-conventions"></a>Konwencje nazewnictwa  
   
--   W przykładach krótkie, które nie zawierają [przy użyciu dyrektyw](../../../csharp/language-reference/keywords/using-directive.md), użyj kwalifikacji przestrzeni nazw. Jeśli wiesz, że przestrzeń nazw jest importowany domyślnie w projekcie, nie masz do pełnej kwalifikacji nazwy z tego obszaru nazw. Kwalifikowane nazwy może być przerwane po kropkę (.) Jeśli są zbyt długi i jednym wierszu, jak pokazano w poniższym przykładzie.  
+-   W przykładach krótki, które nie zawierają [dyrektywy using](../../../csharp/language-reference/keywords/using-directive.md), użyj kwalifikacji przestrzeni nazw. Jeśli wiesz, że przestrzeń nazw jest importowana domyślnie w projekcie, nie masz do pełnej kwalifikacji nazwy z tego obszaru nazw. Kwalifikowane nazwy może być uszkodzone po pojedynczego znaku kropki (.) są zbyt długi dla pojedynczego wiersza, jak pokazano w poniższym przykładzie.  
   
      [!code-csharp[csProgGuideCodingConventions#1](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#1)]  
   
--   Nie trzeba zmieniać nazwy obiektów, które zostały utworzone przy użyciu narzędzia projektanta programu Visual Studio, aby je dopasować pozostałych wskazówek.  
+-   Nie masz zmiany nazw obiektów, które zostały utworzone przy użyciu narzędzia projektanta programu Visual Studio, aby je dopasować przejść do pozostałych wskazówek.  
   
 ## <a name="layout-conventions"></a>Konwencje układu  
- Dobrym układu używa formatowania, aby wyróżnić struktura kodu i czytelność kodu. Przykłady i przykłady firmy Microsoft jest zgodna z następujących konwencji:  
+ Układ dobre używa formatowania do podkreślić strukturę kodu i czytelność kodu. Przykłady firmy Microsoft i przykłady są zgodne z następujących konwencji:  
   
--   Użyj domyślnych ustawień edytora kodu (inteligentne wcięcie, wcięcia czterech znaków, karty zapisane jako spacji). Aby uzyskać więcej informacji, zobacz [opcje, Edytor tekstu, C#, formatowanie](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
+-   Użyj domyślnych ustawień edytora kodu (inteligentne tworzenie wcięć, wcięcia Czteroznakowy kartach, zapisane jako miejsca do magazynowania). Aby uzyskać więcej informacji, zobacz [opcje, Edytor tekstu, C#, formatowanie](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
--   Napisać tylko jednej instrukcji w jednym wierszu.  
+-   Zapis tylko jednej instrukcji na wiersz.  
   
--   Napisać tylko jedna deklaracja w wierszu.  
+-   Zapis tylko jednej deklaracji na wiersz.  
   
--   Jeśli kontynuacji wierszy nie są przeznaczone automatycznie, wcięcie ich jedną pozycję tabulatora (czterech spacji).  
+-   Jeśli wierszy kontynuacji nie są przeznaczone automatycznie, wcięcie ich jedną pozycję tabulatora (czterech spacji).  
   
--   Dodaj co najmniej jeden pusty wiersz między definicji metody i właściwości definicji.  
+-   Dodaj co najmniej jeden pusty wiersz między definicje metod i definicjach właściwości.  
   
--   Użyj nawiasów, aby klauzule w wyrażeniu oczywista, jak pokazano w poniższym kodzie.  
+-   Użyj nawiasów, aby wprowadzić klauzule w wyrażeniu oczywista, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[csProgGuideCodingConventions#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#2)]  
   
@@ -55,68 +55,68 @@ ms.locfileid: "33336940"
   
 -   Umieść komentarz w osobnym wierszu, a nie na końcu wiersza kodu.  
   
--   Rozpocznij tekst komentarza na wielką literę.  
+-   Rozpocznij tekst komentarza wielką literą.  
   
 -   Tekst komentarza zakończenia kropką.  
   
--   Wstawienia jedną spację między ogranicznik komentarza (/ /), a tekst komentarza, jak pokazano w poniższym przykładzie.  
+-   Wstaw jedną spację między ogranicznik komentarza (/ /) i tekst komentarza, jak pokazano w poniższym przykładzie.  
   
      [!code-csharp[csProgGuideCodingConventions#3](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#3)]  
   
--   Nie należy tworzyć sformatowany bloki gwiazdek wokół komentarze.  
+-   Nie należy tworzyć sformatowanymi blokami ani gwiazdkami wokół komentarzy.  
   
 ## <a name="language-guidelines"></a>Wytyczne dotyczące języka  
- W poniższych sekcjach opisano wskazówki, które umożliwiają przygotowanie przykłady kodu i przykłady zespołu C#.  
+ W poniższych sekcjach opisano rozwiązania, aby przygotować przykłady kodu i przykłady z zespołu C#.  
   
 ### <a name="string-data-type"></a>Typ danych ciągu  
   
--   Użyj [ciągu interpolacji](../../language-reference/tokens/interpolated.md) do ciągów krótkich, jak pokazano w poniższym kodzie.  
+-   Użyj [Interpolacja ciągów](../../language-reference/tokens/interpolated.md) do łączenia krótkich ciągów, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[csProgGuideCodingConventions#6](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#6)]  
   
--   Aby dołączyć ciągów w pętli, szczególnie w przypadku pracy z dużą ilością tekstu, należy użyć <xref:System.Text.StringBuilder> obiektu.  
+-   Aby dołączyć ciągi w pętli, szczególnie w przypadku, gdy pracujesz z dużych ilości tekstu, należy użyć <xref:System.Text.StringBuilder> obiektu.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
 ### <a name="implicitly-typed-local-variables"></a>Jawnie wpisana zmienna lokalna  
   
--   Użyj [niejawne wpisując](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) dla zmiennych lokalnych, gdy typ zmiennej jest widoczne z prawej strony przypisania lub gdy dokładny typ nie jest istotna.  
+-   Użyj [niejawnego wpisywania](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) dla zmiennych lokalnych, gdy typ zmiennej jest oczywisty z prawej strony przypisania lub gdy dokładny typ nie jest istotna.  
   
      [!code-csharp[csProgGuideCodingConventions#8](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#8)]  
   
--   Nie używaj [var](../../../csharp/language-reference/keywords/var.md) gdy typ nie jest widoczna z prawej strony przypisania.  
+-   Nie używaj [var](../../../csharp/language-reference/keywords/var.md) gdy typ nie jest jasne, z prawej strony przypisania.  
   
      [!code-csharp[csProgGuideCodingConventions#9](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#9)]  
   
--   Nie należy polegać na nazwę zmiennej, aby określić typ zmiennej. Może nie być poprawne.  
+-   Nie należy polegać na nazwę zmiennej, aby określić typ zmiennej. Być może nie być poprawne.  
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
--   Unikaj używania `var` zamiast [dynamiczne](../../../csharp/language-reference/keywords/dynamic.md).  
+-   Unikaj stosowania `var` zamiast [dynamiczne](../../../csharp/language-reference/keywords/dynamic.md).  
   
--   Umożliwia wpisanie niejawne określają typ zmiennej pętli w [dla](../../../csharp/language-reference/keywords/for.md) i [foreach](../../../csharp/language-reference/keywords/foreach-in.md) pętli.  
+-   Użyć niejawnego wpisywania, aby określić typ zmiennej pętli w [dla](../../../csharp/language-reference/keywords/for.md) i [foreach](../../../csharp/language-reference/keywords/foreach-in.md) pętli.  
   
-     W poniższym przykładzie użyto niejawne wpisanie `for` instrukcji.  
+     W poniższym przykładzie użyto niejawnego wpisywania w `for` instrukcji.  
   
      [!code-csharp[csProgGuideCodingConventions#11](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#11)]  
   
-     W poniższym przykładzie użyto niejawne wpisanie `foreach` instrukcji.  
+     W poniższym przykładzie użyto niejawnego wpisywania w `foreach` instrukcji.  
   
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
   
 ### <a name="unsigned-data-type"></a>Typ danych bez znaku  
   
--   Ogólnie rzecz biorąc, użyj `int` zamiast typy bez znaku. Korzystanie z `int` jest typowe w C# i możliwe jest łatwiejsze do interakcji z innych bibliotek, korzystając z `int`.  
+-   Ogólnie rzecz biorąc, użyj `int` zamiast niepodpisanych typów. Korzystanie z `int` często w języku C# i łatwiej wchodzić w interakcje z innymi bibliotekami, gdy używasz `int`.  
   
 ### <a name="arrays"></a>Tablice  
   
--   Podczas inicjowania tablic w wierszu deklaracji, należy użyć składni zwięzły.  
+-   Podczas inicjowania tablic w wierszu deklaracji, należy użyć zwięzłej składni.  
   
      [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
 ### <a name="delegates"></a>Delegaty  
   
--   Umożliwia utworzenie wystąpienia typu delegata zwięzłą składnią.  
+-   Aby utworzyć wystąpienia typu delegata, należy użyć składni zwięzły.  
   
      [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
@@ -124,37 +124,37 @@ ms.locfileid: "33336940"
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>Blok try-catch i przy użyciu instrukcji obsługi wyjątków  
   
--   Użyj [try-catch](../../../csharp/language-reference/keywords/try-catch.md) instrukcji dla większości obsługi wyjątków.  
+-   Użyj [try-catch —](../../../csharp/language-reference/keywords/try-catch.md) poufności informacji dla większości wyjątków.  
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
--   Uprościć kod przy użyciu języka C# [za pomocą instrukcji](../../../csharp/language-reference/keywords/using-statement.md). Jeśli masz [try-finally](../../../csharp/language-reference/keywords/try-finally.md) instrukcji, w którym tylko kod w `finally` blok jest wywołanie <xref:System.IDisposable.Dispose%2A> metody, użyj `using` instrukcji zamiast tego.  
+-   Uprość kod przy użyciu języka C# [za pomocą instrukcji](../../../csharp/language-reference/keywords/using-statement.md). Jeśli masz [try-finally](../../../csharp/language-reference/keywords/try-finally.md) instrukcji, w którym tylko kod w `finally` bloku jest wywołaniem <xref:System.IDisposable.Dispose%2A> metody, użyj `using` instrukcji zamiast tego.  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
-### <a name="-and-124124-operators"></a>& & i &#124; &#124; operatory  
+### <a name="-and-124124-operators"></a>& & i &#124; &#124; operatorów  
   
--   Aby uniknąć wyjątków i zwiększyć wydajność przez pominięcie niepotrzebnych porównań, użyj [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) zamiast [ & ](../../../csharp/language-reference/operators/and-operator.md) i [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md)zamiast [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) po wykonaniu porównań, jak pokazano w poniższym przykładzie.  
+-   Aby uniknąć wyjątków i zwiększyć wydajność przez pominięcie niepotrzebnych porównań, należy użyć [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) zamiast [ & ](../../../csharp/language-reference/operators/and-operator.md) i [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md)zamiast [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) podczas wykonywania porównań, jak pokazano w poniższym przykładzie.  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
 ### <a name="new-operator"></a>Nowy operator  
   
--   Formularz zwięzły konkretyzacji obiektu w trakcie pisania niejawne, jak pokazano w poniższych deklaracji.  
+-   Za pomocą zwięzłe formularza w przypadku tworzenia wystąpienia obiektu niejawnego wpisywania, jak pokazano w poniższej deklaracji.  
   
      [!code-csharp[csProgGuideCodingConventions#19](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#19)]  
   
-     Następujące oświadczenie odpowiada poprzedniego wiersza.  
+     Poprzedniego wiersza jest równoważna następującej deklaracji.  
   
      [!code-csharp[csProgGuideCodingConventions#20](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#20)]  
   
--   Inicjatory obiektów można użyć, aby uprościć tworzenie obiektów.  
+-   Użyj inicjatorów obiektów, aby uprościć tworzenie obiektów.  
   
      [!code-csharp[csProgGuideCodingConventions#21](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#21)]  
   
 ### <a name="event-handling"></a>Obsługa zdarzeń  
   
--   Jeśli definiujesz program obsługi zdarzeń, które trzeba usunąć później, należy użyć wyrażenia lambda.  
+-   Jeśli zamierzasz zdefiniować program obsługi zdarzeń, że nie musisz usunąć później, należy użyć wyrażenia lambda.  
   
      [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
@@ -162,39 +162,40 @@ ms.locfileid: "33336940"
   
 ### <a name="static-members"></a>Statyczne elementy członkowskie  
   
--   Wywołanie [statycznych](../../../csharp/language-reference/keywords/static.md) elementy członkowskie przy użyciu nazwy klasy: *ClassName.StaticMember*. Takie rozwiązanie sprawia, że kod jest bardziej przejrzysta dokonując statycznych dostęp, wyczyść.  Nie można rozwiązać członka statycznego zdefiniowana w klasie podstawowej z nazwą klasy pochodnej.  Kompiluje kod, jest mylące czytelność kodu i kodu mogą być dzielone w przyszłości, jeśli dodasz statyczny element członkowski o takiej samej nazwie do klasy pochodnej.  
+-   Wywołaj [statyczne](../../../csharp/language-reference/keywords/static.md) elementów członkowskich przy użyciu nazwy klasy: *ClassName.StaticMember*. Tej praktyką sprawia, że kod jest bardziej czytelny, dzięki czemu dostęp do statycznych, wyczyść.  Nie można rozwiązać członka statycznego zdefiniowana w klasie bazowej o nazwie klasy pochodnej.  Gdy kompiluje kod, jest mylące czytelność kodu i kodu mogą przestać działać w przyszłości w przypadku dodania statyczny element członkowski o takiej samej nazwie do klasy pochodnej.  
   
 ### <a name="linq-queries"></a>Zapytania LINQ  
   
--   Użyj łatwy do rozpoznania nazwy zmiennych zapytania. W poniższym przykładzie użyto `seattleCustomers` dla klientów, którzy znajdują się w Seattle.  
+-   Użyj nazw opisowych dla zmiennych kwerendy. W poniższym przykładzie użyto `seattleCustomers` dla klientów, którzy znajdują się w Seattle.  
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
--   Upewnij się, że nazwy właściwości typu anonimowego są poprawnie pisany wielkimi literami, przy użyciu Pascal za pomocą aliasów wielkości liter.  
+-   Należy stosować aliasy, aby upewnić się, że nazwy właściwości anonimowych typów są kapitalizowane poprawnie, przy użyciu obudowy Pascal wielkość liter w wyrazie.  
   
      [!code-csharp[csProgGuideCodingConventions#26](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#26)]  
   
--   Zmień nazwę właściwości, gdy nazwy właściwości w wyniku byłoby niejednoznaczne. Na przykład, jeśli zapytanie zwraca klienta nazwa i identyfikator dystrybutora, zamiast zostawiać je jako `Name` i `ID` w wyniku, zmień ich wyjaśnienia, że `Name` nazywa się klient, oraz `ID` jest Identyfikatorem dystrybutora.  
+-   Zmień nazwę właściwości, gdy nazwy właściwości w wyniku byłby niejednoznaczne. Na przykład, jeśli zapytanie zwraca klienta, nazwy i Identyfikatora dystrybutora, zamiast pozostawiania je jako `Name` i `ID` w wyniku, zmienić ich nazwy, które informuje, że `Name` nazywa się klient, oraz `ID` to identyfikator dystrybutora.  
   
      [!code-csharp[csProgGuideCodingConventions#27](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#27)]  
   
--   Użycie niejawne, wpisując w deklaracji zmiennych zapytania i zmiennych zakresu.  
+-   Należy użyć niejawnego wpisywania w deklaracji zmiennych kwerendy i zmiennych zakresu.  
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
--   Dopasuj klauzule zapytań w obszarze [z](../../../csharp/language-reference/keywords/from-clause.md) klauzuli, jak pokazano w poprzednich przykładach.  
+-   Wyrównaj klauzule zapytania pod [z](../../../csharp/language-reference/keywords/from-clause.md) klauzuli, jak pokazano w poprzednich przykładach.  
   
--   Użyj [gdzie](../../../csharp/language-reference/keywords/where-clause.md) klauzule przed inne klauzule zapytań, aby upewnić się, że nowsze klauzule zapytań działają na zmniejszenie, filtrowane zestawu danych.  
+-   Użyj [gdzie](../../../csharp/language-reference/keywords/where-clause.md) klauzule przed inne klauzule zapytania, aby upewnić się, że późniejsze klauzule kwerend działają na mniejsze, filtrowany zestaw danych.  
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
--   Używanych jest wiele `from` klauzule zamiast [sprzężenia](../../../csharp/language-reference/keywords/join-clause.md) klauzuli można uzyskać dostępu do kolekcji wewnętrznej. Na przykład kolekcja `Student` każdego obiekty mogą zawierać kolekcji wyniki testów. Po wykonaniu następujące zapytanie zwraca każdego wynik, który jest ponad 90, wraz z nazwisko studentów, który otrzymał wynik.  
+-   Używanych jest wiele `from` klauzule zamiast [sprzężenia](../../../csharp/language-reference/keywords/join-clause.md) klauzuli do dostępu do kolekcji wewnętrznego. Na przykład zbiór `Student` każdego obiektów może zawierać zbiór wyniki testów. Po wykonaniu następujące zapytanie zwraca każdy wynik, który jest ponad 90, wraz z Nazwisko ucznia, który otrzymał wynik.  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
 ## <a name="security"></a>Zabezpieczenia  
- Postępuj zgodnie z wytycznymi w [Secure wytyczne kodowania](../../../standard/security/secure-coding-guidelines.md).  
+ Postępuj zgodnie z wytycznymi podanymi w [Secure wytycznych kodowania](../../../standard/security/secure-coding-guidelines.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Visual Basic — konwencje kodowania](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
- [Wytyczne dotyczące bezpiecznego programowania](../../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Visual Basic — konwencje kodowania](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
+- [Wytyczne dotyczące bezpiecznego programowania](../../../standard/security/secure-coding-guidelines.md)

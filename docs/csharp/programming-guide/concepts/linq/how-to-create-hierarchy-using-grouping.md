@@ -1,21 +1,21 @@
 ---
-title: 'Porady: tworzenie hierarchii za pomocą grupowania (C#)'
+title: 'Porady: tworzenie hierarchii przy użyciu grupowania (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 9ad9ea723a54b50c3d5b047408fce760a8f53273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fa384ced04a90002f8f721266f163c874d6e0ff
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327515"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741549"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a>Porady: tworzenie hierarchii za pomocą grupowania (C#)
-W tym przykładzie przedstawiono sposób grupowania danych, a następnie wygeneruj XML oparte na grupowanie.  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a>Porady: tworzenie hierarchii przy użyciu grupowania (C#)
+W tym przykładzie przedstawiono sposób grupowania danych, a następnie wygeneruj XML, w oparciu o grupowania.  
   
 ## <a name="example"></a>Przykład  
- Pierwszy to przykład grupuje dane według kategorii, następnie generuje nowy plik XML, w którym hierarchii XML odzwierciedla grupowanie.  
+ Pierwszy to przykład grupuje dane według kategorii, następnie generuje nowy plik XML, w którym hierarchię XML odzwierciedla grupowania.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: dane liczbowe (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -74,5 +74,6 @@ Console.WriteLine(newData);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zaawansowane techniki zapytania (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Zaawansowane techniki zapytań (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

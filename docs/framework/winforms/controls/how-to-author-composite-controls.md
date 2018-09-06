@@ -7,76 +7,76 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: d13b2a3a89a27c8494d3efa990a1368cec55a28c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 2c7d2c94c376b671d6e9e4e4b71bc8a9b0fbc343
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528986"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731329"
 ---
 # <a name="how-to-author-composite-controls"></a>Porady: autoryzowanie formantów złożonych
-Formanty złożone można zastosować na wiele sposobów. Można tworzyć je jako część projekt aplikacji komputerowych systemu Windows i ich używać tylko w formularzach w projekcie. Lub tworzyć je w projekcie Biblioteka formantów systemu Windows, skompiluj projekt do zestawu i użyj formantów w innych projektach. Można nawet dziedziczą z nich i umożliwia szybkie dostosować je do celów specjalnych dziedziczenie visual.  
+Formanty złożone można zastosować na wiele sposobów. Można tworzyć w ramach projektu aplikacji pulpitu Windows i ich używać tylko na formularze w projekcie. Lub można je tworzyć w projekcie Biblioteka formantów Windows, skompilowanie projektu do zestawu i użyj formantów w innych projektach. Można również dziedziczyć z nich i umożliwia szybkie dostosować je do specjalnych celów dziedziczenie visual.  
   
 > [!NOTE]
->  Jeśli chcesz tworzyć formantu złożonego do używania w formularzach sieci Web, zobacz [tworzenia kontrolek serwera ASP.NET niestandardowe](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+>  Jeśli chcesz tworzyć kontrolki złożonej do użycia w formularzach sieci Web, zobacz artykuł [tworzenia formanty serwera ASP.NET niestandardowe](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
 >   
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-author-a-composite-control"></a>Do tworzenia złożonych kontrolek  
+### <a name="to-author-a-composite-control"></a>Tworzenie kontrolki złożonej  
   
-1.  Otwórz nowe **aplikacji systemu Windows** projektu o nazwie `DemoControlHost`.  
+1.  Otwórz nowy **aplikacji Windows** projekt o nazwie `DemoControlHost`.  
   
 2.  Na **projektu**menu, kliknij przycisk **Dodaj kontrolkę użytkownika**.  
   
-3.  W **Dodaj nowy element** okno dialogowe, plik klasy (plik .vb lub CS) nazwę, która ma formant złożone, aby podać.  
+3.  W **Dodaj nowy element** okno dialogowe, Dodaj plik klasy (plik .vb lub .cs) nazwę, która ma formant złożony, aby.  
   
-4.  Kliknij przycisk **Dodaj** przycisk, aby utworzyć plik klasy dla formantu złożonego.  
+4.  Kliknij przycisk **Dodaj** przycisk, aby utworzyć plik klasy dla kontrolek złożonych.  
   
-5.  Dodaj formanty z **przybornika** na powierzchnię złożonego formantu.  
+5.  Dodawanie formantów z **przybornika** do powierzchni złożonego formantu.  
   
-6.  Umieść kod w procedurach zdarzeń do obsługi zdarzeń zgłaszanych przez formantu złożonego lub jego formantów składowych.  
+6.  Umieść kod w procedurach zdarzeń, do obsługi zdarzeń wywołanych przez złożonego formantu lub jego formantów składowych.  
   
-7.  Zamknij projektanta dla formantu złożonego, a następnie zapisz plik po wyświetleniu monitu.  
+7.  Zamknij projektanta dla formantu złożonego, a następnie zapisz plik, po wyświetleniu monitu.  
   
 8.  Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
   
-     Projektu muszą zostać skompilowane w kolejności, w przypadku kontrolek niestandardowych w wynikach **przybornika**.  
+     Projekt musi być zbudowany w kolejności, w przypadku kontrolek niestandardowych, które będą wyświetlane na **przybornika**.  
   
-9. Użyj **DemoControlHost** karcie **przybornika** można dodać wystąpienia formantu do `Form1`.  
+9. Użyj **DemoControlHost** karcie **przybornika** dodać wystąpienia kontrolki do `Form1`.  
   
-### <a name="to-author-a-control-class-library"></a>Do tworzenia biblioteki klas formantu  
+### <a name="to-author-a-control-class-library"></a>Aby utworzyć bibliotekę klas formantów  
   
-1.  Otwórz nowe **Biblioteka formantów systemu Windows** projektu.  
+1.  Otwórz nowy **Biblioteka formantów Windows** projektu.  
   
-     Domyślnie projekt zawiera złożonych kontrolek.  
+     Domyślnie projektu zawiera kontrolki złożonej.  
   
-2.  Dodaj formanty i kod, zgodnie z opisem w powyższej procedurze.  
+2.  Dodaj formanty i kod, zgodnie z opisem w poprzedniej procedurze.  
   
-3.  Wybierz formant nie ma dziedziczenie klas do zmiany, a następnie ustaw **Modyfikatory** właściwości do **prywatnej**.  
+3.  Wybierz kontrolkę, która nie dziedziczy z klasy, aby zmienić i ustawić **Modyfikatory** właściwość tej kontrolki na **prywatnej**.  
   
 4.  Skompiluj bibliotekę DLL.  
   
-### <a name="to-inherit-from-a-composite-control-in-a-control-class-library"></a>Dziedziczenie z formantu złożonego w bibliotece klas formantu  
+### <a name="to-inherit-from-a-composite-control-in-a-control-class-library"></a>Dziedziczenie z kontrolki złożonej w bibliotece klas formantów  
   
-1.  Na **pliku** menu wskaż **Dodaj** i wybierz **nowy projekt** Aby dodać nowy **aplikacji systemu Windows** projektu do rozwiązania.  
+1.  Na **pliku** menu wskaż **Dodaj** i wybierz **nowy projekt** Aby dodać nowy **aplikacji Windows** projektu do rozwiązania.  
   
-2.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** folderu dla nowego projektu i wybierz polecenie **Dodaj odwołanie do** można otworzyć **Dodaj odwołanie**okno dialogowe.  
+2.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** nowy folder projektu, a następnie wybierz **Dodaj odwołanie** otworzyć **Dodaj odwołanie**okno dialogowe.  
   
-3.  Wybierz **projekty** karcie, a następnie kliknij dwukrotnie ikonę projektu biblioteki formantu.  
+3.  Wybierz **projektów** kartę, a następnie kliknij dwukrotnie ikonę kontrolki projektu biblioteki.  
   
 4.  Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
   
-5.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projektu biblioteki sterowania i wybierz **Dodaj nowy element** z menu skrótów.  
+5.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt Biblioteka kontroli i wybierz **Dodaj nowy element** z menu skrótów.  
   
 6.  Wybierz **dziedziczone kontrolki użytkownika** szablonu z **Dodaj nowy element** okno dialogowe.  
   
-7.  W **selektora dziedziczenia** okno dialogowe, kliknij dwukrotnie formant ma być dziedziczona z.  
+7.  W **selektor dziedziczenia** okna dialogowego pole, kliknij dwukrotnie formant ma być dziedziczona z.  
   
-     Nowy formant został dodany do projektu.  
+     Nowy formant zostanie dodany do projektu.  
   
-8.  Otwórz projektanta dla nowego formantu i Dodaj formanty dodatkowych składników.  
+8.  Otwórz projektanta wizualnego nowego formantu i Dodaj dodatkowe formanty składników.  
   
-     Można sprawdzić formanty składników, które zostały odziedziczone złożonych kontrolek w bibliotece DLL i można zmieniać właściwości formantów których **Modyfikatory** właściwość jest **publicznego**. Nie można zmienić właściwości formantu których **Modyfikatory** właściwość jest **prywatnej**.  
+     Możesz zobaczyć formanty składników, które zostały odziedziczone złożonej kontrolki w bibliotece DLL, a można zmienić właściwości formantów którego **Modyfikatory** właściwość jest **publicznych**. Nie można zmienić właściwości formantu którego **Modyfikatory** właściwość **prywatnej**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik: tworzenie kontrolki złożonej za pomocą języka Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  

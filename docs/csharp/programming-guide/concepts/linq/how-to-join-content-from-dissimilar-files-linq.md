@@ -2,20 +2,20 @@
 title: 'Porady: łączenie zawartości niepodobnych plików (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 444276f6ad68e988b2dbc2cd7401248a6f5da072
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0984b8fc42a8f242f6adc33e1f3c38d4f6ae94b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071838"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741620"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Porady: łączenie zawartości niepodobnych plików (LINQ) (C#)
 
-W tym przykładzie pokazano, jak sprzęgać dane z dwóch plików rozdzielanych przecinkami, które mają wspólną wartość, które jest używane jako dopasowany klucz. Ta metoda może być przydatna, jeśli masz połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego i z pliku innego formatu, który ma do nowego pliku. Można zmodyfikować przykładu do pracy z dowolnego rodzaju strukturalnych tekstu.  
+W tym przykładzie pokazano, jak połączyć dane z dwóch plików rozdzielanych przecinkami, które mają wspólne wartość, która jest używana jako zgodnego klucza. Ta technika może być przydatne, jeśli trzeba połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego i z plikiem innego formatu, który ma do nowego pliku. Można zmodyfikować przykładu tak, aby pracować z dowolnym rodzajem tekstu ze strukturą.  
   
 ## <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych
   
-1.  Skopiuj następujące wiersze do pliku o nazwie *scores.csv* i zapisać ją w folderze projektu. Plik reprezentuje dane w arkuszu. Kolumna 1 jest Identyfikatorem Studenta, a kolumny od 2 do 5 są wyniki testów.  
+1.  Skopiuj następujące wiersze do pliku o nazwie *scores.csv* i zapisz go do folderu projektu. Plik reprezentuje dane w arkuszu. Kolumna 1 jest Identyfikatorem Studenta, a kolumny od 2 do 5 są wyniki testów.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ W tym przykładzie pokazano, jak sprzęgać dane z dwóch plików rozdzielanych 
     122, 94, 92, 91, 91  
     ```  
   
-2.  Skopiuj następujące wiersze do pliku o nazwie *names.csv* i zapisać ją w folderze projektu. Arkusz danych zawierający identyfikatora dla użytkowników domowych, imię i nazwisko studenta reprezentuje plik  
+2.  Skopiuj następujące wiersze do pliku o nazwie *names.csv* i zapisz go do folderu projektu. Plik reprezentuje arkusz kalkulacyjny zawierający identyfikatora dla uczniów, imię i nazwisko studenta  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -128,11 +128,11 @@ Tucker, 94, 92, 91, 91
 
 Utwórz i skompiluj projekt, który jest przeznaczony dla jednego z następujących opcji:
 
-- .NET framework w wersji 3.5 z odwołania do System.Core.dll.
+- .NET framework w wersji 3.5 za pomocą odwołania do System.Core.dll.
 - .NET framework w wersji 4.0 lub nowszy.
-- Wersja platformy .NET core wersji 1.0 lub nowszej.
+- .NET core w wersji 1.0 lub nowszej.
   
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

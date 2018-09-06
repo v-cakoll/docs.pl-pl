@@ -5,16 +5,16 @@ helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
 ms.openlocfilehash: 6384ad6e3bf0520362267eddc8f7bbb05b37f283
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557164"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787650"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Wdrażanie aplikacji, które odwołują się do wyniku składnik PrintForm (Visual Basic)
 Jeśli chcesz wdrożyć aplikację, która odwołuje się <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> składnik składnika musi być zainstalowany na komputerze docelowym.  
   
- Formantów PowerPack znajdują się już w programie Visual Studio, ale można je pobrać [Centrum pobierania](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Kontrolki pakietu PowerPack nie są już dostępne w programie Visual Studio, ale można je pobrać w [Centrum pobierania](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="installing-the-printform-as-a-prerequisite"></a>Instalowanie PrintForm jako warunek wstępny  
  Aby pomyślnie wdrożyć aplikację, należy wdrożyć wszystkie składniki, które są przywoływane przez aplikację. Proces instalowania wstępnie wymagane składniki są znane jako *uruchamianie*.  

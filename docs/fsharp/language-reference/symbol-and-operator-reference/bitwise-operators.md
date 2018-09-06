@@ -2,18 +2,19 @@
 title: Operatory bitowe (F#)
 description: 'Więcej informacji na temat operatory bitowe, które są dostępne w F # języka programowania.'
 ms.date: 07/20/2018
-ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559559"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784371"
 ---
 # <a name="bitwise-operators"></a>Operatory bitowe
 
 W tym temacie opisano operatory bitowe, które są dostępne w języku F #.
 
 ## <a name="summary-of-bitwise-operators"></a>Podsumowanie operatory bitowe
+
 W poniższej tabeli opisano operatory bitowe, które są obsługiwane w przypadku rozpakowany typów całkowitych w języku F #.
 
 |Operator|Uwagi|
@@ -27,10 +28,8 @@ W poniższej tabeli opisano operatory bitowe, które są obsługiwane w przypadk
 
 Następujące typy mogą być używane z operatorów bitowe: `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`, `uint32`, `int64`, `uint64`, `nativeint`, i `unativeint`.
 
-## <a name="see-also"></a>Zobacz też
-[Odwołanie do symboli i operatorów](index.md)
+## <a name="see-also"></a>Zobacz także
 
-[Operatory arytmetyczne](arithmetic-operators.md)
-
-[Operatory logiczne](boolean-operators.md)
-
+- [Odwołanie do symboli i operatorów](index.md)
+- [Operatory arytmetyczne](arithmetic-operators.md)
+- [Operatory logiczne](boolean-operators.md)

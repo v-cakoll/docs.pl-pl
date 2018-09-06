@@ -3,11 +3,11 @@ title: '&lt;certificate&gt; w &lt;peer&gt;'
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
 ms.openlocfilehash: 59aaee5549aae5df173174651ee3a520a0ac10fb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423458"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736260"
 ---
 # <a name="ltcertificategt-of-ltpeergt"></a>&lt;certificate&gt; w &lt;peer&gt;
 Określa certyfikat używany przez element równorzędny.  

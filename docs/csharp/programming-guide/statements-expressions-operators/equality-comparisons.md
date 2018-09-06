@@ -5,11 +5,11 @@ helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
 ms.openlocfilehash: 07607f96acb2ca44142bd6a8b4fdd84ea0d1b532
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735153"
+ms.locfileid: "43788639"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Porównywanie równości (Przewodnik programowania w języku C#)
 Czasami jest konieczne porównanie dwóch wartości dla równości. W niektórych przypadkach testuje się *wartość równości*, znane również jako *równoważności*, co oznacza, że wartości, które są zawarte w dwóch zmiennych są równe. W innych przypadkach należy ustalić, czy dwie zmienne odnoszą się do tego samego podstawowego obiektu w pamięci. Ten typ równości jest nazywany *równości odwołań*, lub *tożsamości*. Ten temat opisuje te dwa rodzaje równości i zawiera łącza do innych tematów, aby uzyskać więcej informacji.  

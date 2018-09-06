@@ -2,26 +2,26 @@
 title: 'Porady: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 3ae21422576abccde51d7708007132a87bedbad6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3afbea647bb429d25f41f37fde268565bc5bf8a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327711"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786560"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Porady: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
-W składniku LINQ, drzew wyrażeń są używane do reprezentowania strukturyzowanych zapytań, które odnoszą się do źródła danych, który implementuje <xref:System.Linq.IQueryable%601>. Na przykład implementuje dostawcy LINQ <xref:System.Linq.IQueryable%601> interfejs na potrzeby zapytań o magazynach danych relacyjnych. Kompilator języka C# kompiluje zapytań, które odnoszą się do tych źródeł danych do kodu, która tworzy drzewo wyrażeń w czasie wykonywania. Wyślij zapytanie do dostawcy można przechodzić między nimi danych struktury drzewa wyrażenia i przekształca ją na język kwerendy odpowiednie dla źródła danych.  
+W programie LINQ, drzew wyrażeń są używane do reprezentowania strukturyzowanych zapytań, których platformą docelową źródeł danych, który implementuje <xref:System.Linq.IQueryable%601>. Na przykład implementuje dostawcę LINQ <xref:System.Linq.IQueryable%601> interfejs do wykonywania zapytań magazynów danych relacyjnych. Kompilator języka C# kompiluje zapytań przeznaczonych dla tych źródeł danych do kodu, który kompiluje do drzewa wyrażenie w czasie wykonywania. Dostawca kwerend można przechodzić przez strukturę danych drzewa wyrażeń i tłumaczenie język zapytań, odpowiednie dla źródła danych.  
   
- Drzewa wyrażeń są również używane w składniku LINQ do reprezentowania wyrażenia lambda, które są przypisane do zmiennych typu <xref:System.Linq.Expressions.Expression%601>.  
+ Drzewa wyrażeń są również używane w składniku LINQ do reprezentowania wyrażeń lambda, które są przypisane do zmiennych typu <xref:System.Linq.Expressions.Expression%601>.  
   
- W tym temacie opisano, jak używać drzew wyrażeń do tworzenia zapytań LINQ dynamicznych. Zapytania dynamiczne są przydatne, gdy szczegółowe informacje na temat zapytania nie są znane w czasie kompilacji. Na przykład aplikacja może zawierać interfejsu użytkownika, który umożliwia użytkownikowi końcowemu określić co najmniej jeden predykaty do filtrowania danych. Aby można było używać LINQ do wykonywania zapytań, tego rodzaju aplikacji musi używanie drzew wyrażeń do tworzenia zapytań LINQ w czasie wykonywania.  
+ W tym temacie opisano, jak używać drzew wyrażeń do tworzenia dynamicznych zapytań LINQ. Zapytania dynamiczne są przydatne, gdy szczegółowe informacje na temat zapytania nie są znane w czasie kompilacji. Na przykład aplikacja może dostarczyć interfejs użytkownika, który umożliwia użytkownikowi określić jeden lub więcej predykatów do filtrowania danych. Aby można było używać programu LINQ do wykonywania zapytań, tego rodzaju aplikacji należy użyć drzew wyrażeń, aby utworzyć zapytanie LINQ w czasie wykonywania.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób użycia drzew wyrażeń do utworzenia zapytania dotyczącego `IQueryable` źródła danych, a następnie wykonaj go. Kod tworzy drzewo wyrażenia do reprezentowania następujące zapytanie:  
+ Poniższy przykład pokazuje jak używanie drzew wyrażeń do utworzenia zapytania dotyczącego `IQueryable` źródła danych, a następnie uruchomić go. Kod zostanie skompilowany drzewa wyrażenie do reprezentowania następujące zapytanie:  
   
  `companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16)).OrderBy(company => company)`  
   
- Metodami factory w <xref:System.Linq.Expressions> przestrzeni nazw są używane do tworzenia drzewa wyrażeń, reprezentujące wyrażeń, które tworzą ogólną zapytania. Wyrażeń, które reprezentują wywołania metod operator standardowej kwerendy odwoływać się do <xref:System.Linq.Queryable> implementacje tych metod. Drzewo wyrażeń końcowego są przekazywane do <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> implementacji dostawcy `IQueryable` źródło danych do utworzenia pliku wykonywalnego zapytania typu `IQueryable`. Wyniki są uzyskiwane przez wyliczania tej zmiennej zapytania.  
+ Metodach fabryki w <xref:System.Linq.Expressions> przestrzeni nazw są używane do tworzenia drzew wyrażeń, które reprezentują wyrażenia, które tworzą ogólną zapytania. Wyrażenia, które reprezentują wywołania metody standardowego operatora zapytań odwoływać się do <xref:System.Linq.Queryable> implementacji tych metod. Drzewa wyrażeń końcowego jest przekazywany do <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> implementacji dostawcy `IQueryable` źródła danych do utworzenia pliku wykonywalnego zapytania typu `IQueryable`. Wyniki są uzyskać, wyliczając tej zmiennej zapytania.  
   
 ```csharp  
 // Add a using directive for System.Linq.Expressions.  
@@ -96,19 +96,20 @@ foreach (string company in results)
 */  
 ```  
   
- Ten kod zawiera stała liczba wyrażeń w predykacie, który jest przekazywany do `Queryable.Where` metody. Jednak można napisać aplikację, która łączy zmienną liczbę wyrażeń predykatu zależny od danych wejściowych użytkownika. Standardowe operatory zapytań wywoływanych w zapytaniu, w zależności od danych wejściowych od użytkownika może być różny.  
+ Ten kod używa stałej liczby wyrażeń w predykacie, który jest przekazywany do `Queryable.Where` metody. Jednakże można napisać aplikację, która łączy zmienną liczbę predykatu wyrażenia zależne od danych wejściowych użytkownika. Mogą też występować różne standardowe operatory zapytań, które są wywoływane w zapytaniu, w zależności od danych wejściowych od użytkownika.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Utwórz nową **aplikacji konsoli** projektu.  
+-   Utwórz nową **aplikację Konsolową** projektu.  
   
--   Dodaj odwołania do System.Core.dll, jeśli nie jest już używany.  
+-   Dodaj odwołanie do biblioteki System.Core.dll, jeśli nie jest wywoływany.  
   
 -   Obejmują System.Linq.Expressions przestrzeni nazw.  
   
--   Skopiuj kod z przykładu i wklej ją do `Main` metody.  
+-   Skopiuj kod z przykładu i wklej go w `Main` metody.  
   
-## <a name="see-also"></a>Zobacz też  
- [Drzewa wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Porady: wykonywanie drzew wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [Porady: dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Drzewa wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [Porady: wykonywanie drzew wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [Porady: dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)

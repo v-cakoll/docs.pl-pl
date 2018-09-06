@@ -3,11 +3,11 @@ title: Obsługiwane scenariusze wdrażania
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672621"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787938"
 ---
 # <a name="supported-deployment-scenarios"></a>Obsługiwane scenariusze wdrażania
 Podzbiór funkcji Windows Communication Foundation (WCF) obsługiwanych na częściowo zaufane aplikacje zaprojektowano w celu spełnienia wymagań niektórych, ale nie wszystkie scenariusze przy użyciu usługi WCF. Na serwerze, WCF, spełnia wymagania skali Internetu udostępniony dostawcy hostingu, którzy uruchamiają aplikacje innych producentów w [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] zestaw ze względów bezpieczeństwa uprawnień trybie średniego zaufania. Na komputerze klienckim, Obsługa częściowej relacji zaufania usługi WCF zaprojektowano w celu spełnienia wymagań technologie wdrażania, takie jak [wdrażania ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) lub [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]w aplikacji przeglądarki XAML technologii, która umożliwia bezproblemową i bezpieczną Wdrażanie aplikacji dla komputerów osobistych z niezaufanych witryn.  

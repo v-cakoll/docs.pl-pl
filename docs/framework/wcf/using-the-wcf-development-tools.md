@@ -3,11 +3,11 @@ title: Używanie narzędzi deweloperskich programu WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
 ms.openlocfilehash: 3eb349fd795b2067d4d75ff138fd9b5922110bd3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43674351"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741120"
 ---
 # <a name="using-the-wcf-development-tools"></a>Używanie narzędzi deweloperskich programu WCF
 W tej sekcji opisano narzędzia programistyczne programu Visual Studio, które mogą pomóc w rozwoju Twojej WCFservice.  

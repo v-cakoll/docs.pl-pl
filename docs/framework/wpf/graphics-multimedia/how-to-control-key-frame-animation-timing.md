@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
 ms.openlocfilehash: d65bf6f7643adf1d98d468853ae8017a4a6554ac
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401241"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787925"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Jak kontrolować chronometraż animacji kluczowych klatek
 W tym przykładzie pokazano, jak kontrolować chronometraż klatek kluczowych w animacji kluczowych klatek. Podobnie jak inne animacji mają Animacja kluczowych klatek <xref:System.Windows.Media.Animation.Timeline.Duration%2A> właściwości. Oprócz określenia czasu trwania animacji, należy określić, jaka część za ten czas jest przydzielony do każdego z jego użyciem klatek kluczowych. Aby przydzielić czas, należy określić <xref:System.Windows.Media.Animation.KeyTime> dla każdej ramki kluczowe animacji.  

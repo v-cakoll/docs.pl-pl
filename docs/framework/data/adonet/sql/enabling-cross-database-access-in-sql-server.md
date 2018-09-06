@@ -2,12 +2,12 @@
 title: Włączanie dostępu między bazami danych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 2e041a6c90940ad33e17d83e5f0400d05c645ada
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7018a500f777935d35bac0010c07258a313b08fe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934566"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742114"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Włączanie dostępu między bazami danych w programie SQL Server
 Tworzenie łańcucha własności między bazami danych występuje, gdy procedura w jednej bazie danych jest zależna od obiektów w innej bazie danych. Łańcucha własności między bazami danych działa w taki sam sposób jak łańcucha własności, w ramach pojedynczej bazy danych, z tą różnicą, że łańcucha własności nieprzerwany wymaga, że wszyscy właściciele obiektu są mapowane do tego samego konta logowania. Jeśli obiekt źródłowy w źródłowej bazie danych i obiektów docelowych w docelowych baz danych są własnością tego samego konta logowania, programu SQL Server nie sprawdza uprawnienia do obiektów docelowych.  
@@ -48,7 +48,7 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Rozszerzanie personifikacji bazy danych przy użyciu EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) i [obejmujące wiele własności DB łańcucha opcji](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)podręcznikach programu SQL Server w trybie Online.|Tematach opisano sposób konfigurowania własności między bazami danych z łańcucha dla wystąpienia programu SQL Server.|  
+|[Rozszerzanie personifikacji bazy danych przy użyciu EXECUTE AS](https://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) i [obejmujące wiele własności DB łańcucha opcji](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)podręcznikach programu SQL Server w trybie Online.|Tematach opisano sposób konfigurowania własności między bazami danych z łańcucha dla wystąpienia programu SQL Server.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -56,4 +56,4 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
  [Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Rejestrowanie procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

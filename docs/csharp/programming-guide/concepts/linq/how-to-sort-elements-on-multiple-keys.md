@@ -3,11 +3,11 @@ title: 'Porady: sortowanie elementów na wielu kluczach (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
 ms.openlocfilehash: 0e57a423e473eb6c023d49ac2b52b577c1a30e21
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555081"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742101"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>Porady: sortowanie elementów na wielu kluczach (C#)
 W tym temacie pokazano, jak ma być wykonywane sortowanie wielu kluczy.  

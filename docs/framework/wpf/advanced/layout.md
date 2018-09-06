@@ -9,21 +9,21 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 00c2b2bcb58e60c1a60d2d360f25089c079c0704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 869780f2b6a625923ce869bcaafbbd2319f6cb23
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549493"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736312"
 ---
 # <a name="layout"></a>Układ
-W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] układu systemu. Zrozumienie, jak i kiedy układu obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system układu. Zrozumienie, jak i kiedy układ obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Ten temat zawiera następujące sekcje:  
   
--   [Element pola obwiedni](#LayoutSystem_BoundingBox)  
+-   [Element blokujących pola](#LayoutSystem_BoundingBox)  
   
--   [Układ systemu](#LayoutSystem_Overview)  
+-   [System układu](#LayoutSystem_Overview)  
   
 -   [Mierzenie i rozmieszczanie elementów podrzędnych](#LayoutSystem_Measure_Arrange)  
   
@@ -31,122 +31,122 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 -   [Zagadnienia dotyczące wydajności układu](#LayoutSystem_Performance)  
   
--   [Renderowanie podrzędne pikseli i zaokrąglania układu](#LayoutSystem_LayoutRounding)  
+-   [Renderowanie podrzędnych pikseli i zaokrąglania układu](#LayoutSystem_LayoutRounding)  
   
--   [Co to jest dalej](#LayoutSystem_whatsnext)  
+-   [Jaka jest przyszłość](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
-## <a name="element-bounding-boxes"></a>Element pola obwiedni  
- W przypadku informacje o układzie w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ważne jest, aby zrozumieć obwiedni otaczający wszystkie elementy. Każdy <xref:System.Windows.FrameworkElement> używane przez układ systemu można traktować jako prostokąt, który jest prosty w układzie. <xref:System.Windows.Controls.Primitives.LayoutInformation> Klasa zwraca granice alokacji układu elementu lub miejsca. Rozmiar jest określany przez obliczanie obrazu, rozmiar żadnych ograniczeń, właściwości układu (na przykład margines i wypełnienie) i poszczególnych zachowanie elementu nadrzędnego <xref:System.Windows.Controls.Panel> elementu. Przetwarzanie tych danych, układu system jest w stanie do obliczania pozycji wszystkich elementów podrzędnych danego <xref:System.Windows.Controls.Panel>. Należy pamiętać, że zmiany rozmiaru właściwości zdefiniowane w elemencie nadrzędnym takich jak <xref:System.Windows.Controls.Border>, mają wpływ na elementy podrzędne.  
+## <a name="element-bounding-boxes"></a>Element blokujących pola  
+ Jeśli zastanawiasz się nad układu w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], jest ważne zrozumieć obwiedni, który otacza wszystkie elementy. Każdy <xref:System.Windows.FrameworkElement> używane przez układ systemu można traktować jako prostokąt, który jest prosty do odpowiedniego układu. <xref:System.Windows.Controls.Primitives.LayoutInformation> Klasa zwraca granice alokacji układu elementu lub gniazda. Rozmiar prostokąta jest określana przez obliczanie obrazu, rozmiar wszelkie ograniczenia, właściwości specyficzne dla układu (na przykład margines i wypełnienie) i poszczególnych zachowanie elementu nadrzędnego <xref:System.Windows.Controls.Panel> elementu. Przetwarzanie tych danych, układ system jest w stanie do obliczania pozycja wszystkie obiekty podrzędne danego <xref:System.Windows.Controls.Panel>. Ważne jest, aby pamiętać, że zmiany rozmiaru właściwości zdefiniowane w elemencie nadrzędnym takich jak <xref:System.Windows.Controls.Border>, mają wpływ na jego elementy podrzędne.  
   
- Na poniższej ilustracji przedstawiono prosty układ.  
+ Poniższa ilustracja przedstawia układu prostego.  
   
- ![Typowa siatka, brak nałożonego pola. ] (../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![Typowa siatka, brak nałożonego pola. ](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
   
  Ten układ można osiągnąć za pomocą następujących [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
- Pojedynczy <xref:System.Windows.Controls.TextBlock> element znajduje się w obrębie <xref:System.Windows.Controls.Grid>. Gdy tekst wypełnia tylko lewego górnego rogu pierwszej kolumny, ilość miejsca przydzielonego dla <xref:System.Windows.Controls.TextBlock> jest rzeczywiście znacznie większe. Pole dowolnego <xref:System.Windows.FrameworkElement> można pobrać przy użyciu <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> metody. Na poniższej ilustracji przedstawiono obwiedni <xref:System.Windows.Controls.TextBlock> elementu.  
+ Pojedynczy <xref:System.Windows.Controls.TextBlock> element znajduje się w obrębie <xref:System.Windows.Controls.Grid>. Gdy tekst wypełnia tylko lewym górnym rogu pierwszej kolumny, a ilość miejsca przydzielonego dla <xref:System.Windows.Controls.TextBlock> jest faktycznie znacznie większa. Pole dowolnego <xref:System.Windows.FrameworkElement> mogą być pobierane przy użyciu <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> metody. Na poniższej ilustracji przedstawiono obwiedni <xref:System.Windows.Controls.TextBlock> elementu.  
   
- ![Pole obiektu TextBlock jest teraz widoczne. ] (../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![Pole TextBlock jest teraz widoczne. ](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
   
- Jak to przedstawiono prostokąt żółty, ilość miejsca przydzielonego dla <xref:System.Windows.Controls.TextBlock> element jest rzeczywiście znacznie większe niż wydaje się. Jako dodatkowe elementy są dodawane do <xref:System.Windows.Controls.Grid>, ten przydział można powiększyć lub pomniejszyć, w zależności od typu i rozmiar elementów, które są dodawane.  
+ Jak to przedstawiono w żółtą prostokącie ilość miejsca przydzielonego dla <xref:System.Windows.Controls.TextBlock> element jest faktycznie znacznie większe niż wygląda na to. Jako dodatkowe elementy są dodawane do <xref:System.Windows.Controls.Grid>, tego przydziału można powiększyć lub pomniejszyć, w zależności od typu i rozmiaru elementów, które są dodawane.  
   
- Gniazdo układu <xref:System.Windows.Controls.TextBlock> jest przekształcana na <xref:System.Windows.Shapes.Path> przy użyciu <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> metody. Ta technika może być przydatne do wyświetlania obwiedni elementu.  
+ Gniazdo układ <xref:System.Windows.Controls.TextBlock> jest tłumaczony na <xref:System.Windows.Shapes.Path> przy użyciu <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> metody. Ta technika może być przydatne do wyświetlania obwiedni elementu.  
   
  [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
  [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
-## <a name="the-layout-system"></a>Układ systemu  
- W najprostszym systemu cykliczne, który prowadzi do elementu trwa o rozmiarze, znajduje się i rysowane jest układu. W szczególności, układ opisano proces pomiarów i rozmieszczanie elementów członkowskich <xref:System.Windows.Controls.Panel> elementu <xref:System.Windows.Controls.Panel.Children%2A> kolekcji. Układ jest procesem znacznym. Im większa <xref:System.Windows.Controls.Panel.Children%2A> kolekcji, im większa liczba obliczeń, które muszą być. Złożoność można również wprowadzić na podstawie zachowania układu zdefiniowane przez <xref:System.Windows.Controls.Panel> element będący właścicielem kolekcji. Stosunkowo proste <xref:System.Windows.Controls.Panel>, takich jak <xref:System.Windows.Controls.Canvas>, może mieć znacznie lepszą wydajność niż bardziej złożone <xref:System.Windows.Controls.Panel>, takich jak <xref:System.Windows.Controls.Grid>.  
+## <a name="the-layout-system"></a>System układu  
+ W najprostszym układ jest systemem cykliczne, który prowadzi do bycia w elemencie o rozmiarze, umieszczony i rysowania. Dokładniej mówiąc, układ w tym artykule opisano proces pomiaru i rozmieszczanie elementów członkowskich <xref:System.Windows.Controls.Panel> elementu <xref:System.Windows.Controls.Panel.Children%2A> kolekcji. Układ jest intensywnie korzystających z procesem. Im większa <xref:System.Windows.Controls.Panel.Children%2A> kolekcji, większa liczba obliczeń, które muszą być wykonane. Złożoność mogą być także wprowadzone na podstawie zachowania układu zdefiniowane przez <xref:System.Windows.Controls.Panel> element, który jest właścicielem kolekcji. Stosunkowo prosta <xref:System.Windows.Controls.Panel>, takich jak <xref:System.Windows.Controls.Canvas>, może mieć znacznie lepszą wydajność niż bardziej złożone <xref:System.Windows.Controls.Panel>, takich jak <xref:System.Windows.Controls.Grid>.  
   
- Każdej aktualizacji elementu podrzędnego <xref:System.Windows.UIElement> zmienia jego położenie go może potencjalnie do wyzwolenia nowy przebieg przez system układu. W związku z tym jest zrozumieć zdarzenia, które może wywołać systemu układu, niepotrzebne wywołania może spowodować niską wydajnością. Poniżej opisano proces, który występuje, gdy jest wywoływana układu systemu.  
+ Każdym razem, gdy program element podrzędny <xref:System.Windows.UIElement> zmienia jego pozycję go może potencjalnie do wyzwolenia nowy przebieg przez system układu. W związku z tym ważne jest zrozumienie, zdarzenia, które można wywołać systemu układu, niepotrzebne wywołanie może spowodować niską wydajność aplikacji. Poniżej opisano proces, który występuje, gdy system układu jest wywoływana.  
   
-1.  Element podrzędny <xref:System.Windows.UIElement> rozpoczyna proces układu przez jego właściwości core mierzony uprzedniego.  
+1.  Element podrzędny <xref:System.Windows.UIElement> rozpoczyna proces układ przez pierwszy jej podstawowe właściwości mierzone.  
   
-2.  Ustawianie rozmiaru właściwości zdefiniowane na <xref:System.Windows.FrameworkElement> są oceniane, takich jak <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, i <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2.  Właściwości zdefiniowane w ustalania rozmiaru <xref:System.Windows.FrameworkElement> są oceniane, takich jak <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, i <xref:System.Windows.FrameworkElement.Margin%2A>.  
   
-3.  <xref:System.Windows.Controls.Panel>— Logika charakterystyczna zostanie zastosowana, takich jak <xref:System.Windows.Controls.Dock> kierunek lub układania <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3.  <xref:System.Windows.Controls.Panel>— Logika charakterystyczna zostanie zastosowana, takich jak <xref:System.Windows.Controls.Dock> kierunku lub układania <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
   
-4.  Zawartość jest rozmieszczona po zostały zmierzone wszystkie elementy podrzędne.  
+4.  Zawartości są ułożone po zostały zmierzone wszystkie elementy podrzędne.  
   
 5.  <xref:System.Windows.Controls.Panel.Children%2A> Kolekcji jest rysowana na ekranie.  
   
-6.  Proces jest wywoływana ponownie, jeśli jest to dodatkowe <xref:System.Windows.Controls.Panel.Children%2A> są dodawane do kolekcji, <xref:System.Windows.FrameworkElement.LayoutTransform%2A> zostanie zastosowana, lub <xref:System.Windows.UIElement.UpdateLayout%2A> metoda jest wywoływana.  
+6.  Ten proces jest wywoływana ponownie, jeśli jest to dodatkowe <xref:System.Windows.Controls.Panel.Children%2A> są dodawane do kolekcji, <xref:System.Windows.FrameworkElement.LayoutTransform%2A> zostanie zastosowana, lub <xref:System.Windows.UIElement.UpdateLayout%2A> metoda jest wywoływana.  
   
- Ten proces i sposób wywoływania są zdefiniowane bardziej szczegółowo w poniższych sekcjach.  
+ Ten proces i jak jest wywoływana, są zdefiniowane bardziej szczegółowo w poniższych sekcjach.  
   
 <a name="LayoutSystem_Measure_Arrange"></a>   
 ## <a name="measuring-and-arranging-children"></a>Mierzenie i rozmieszczanie elementów podrzędnych  
- Układ systemu wykonuje dwie przejścia dla każdego członka <xref:System.Windows.Controls.Panel.Children%2A> kolekcji, przebieg miary i przekazać Rozmieść. Poszczególne elementy podrzędne <xref:System.Windows.Controls.Panel> udostępnia własny <xref:System.Windows.FrameworkElement.MeasureOverride%2A> i <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metod na osiągnięcie zachowanie określonego układu.  
+ System układu wykonuje dwa przejścia dla każdego elementu członkowskiego <xref:System.Windows.Controls.Panel.Children%2A> zbierania, przebieg miary i Rozmieść przebiegu. Każdego elementu podrzędnego <xref:System.Windows.Controls.Panel> udostępnia swoje własne <xref:System.Windows.FrameworkElement.MeasureOverride%2A> i <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metod na osiągnięcie zachowanie określonego układu.  
   
- W trakcie przebiegu miary każdy element członkowski <xref:System.Windows.Controls.Panel.Children%2A> oceny kolekcji. Proces rozpoczyna się od wywołania <xref:System.Windows.UIElement.Measure%2A> metody. Ta metoda jest wywoływana w implementacji obiektu nadrzędnego <xref:System.Windows.Controls.Panel> elementu i nie można jawnie wywołać układu występuje.  
+ W trakcie przebiegu miary każdy element członkowski <xref:System.Windows.Controls.Panel.Children%2A> kolekcji jest oceniane. Rozpocznie się proces z wywołaniem <xref:System.Windows.UIElement.Measure%2A> metody. Ta metoda jest wywoływana w implementacji obiektu nadrzędnego <xref:System.Windows.Controls.Panel> elementu i nie trzeba jawnie wywoływać dla układu występuje.  
   
- Właściwości pierwszy rozmiar natywnego <xref:System.Windows.UIElement> są oceniane, takich jak <xref:System.Windows.UIElement.Clip%2A> i <xref:System.Windows.UIElement.Visibility%2A>. Spowoduje to wygenerowanie wartość o nazwie `constraintSize` przekazywany do <xref:System.Windows.FrameworkElement.MeasureCore%2A>.  
+ Po pierwsze, natywne rozmiar właściwości <xref:System.Windows.UIElement> są oceniane, takich jak <xref:System.Windows.UIElement.Clip%2A> i <xref:System.Windows.UIElement.Visibility%2A>. Spowoduje to wygenerowanie wartość o nazwie `constraintSize` przekazana do <xref:System.Windows.FrameworkElement.MeasureCore%2A>.  
   
- Po drugie, framework właściwości zdefiniowane w <xref:System.Windows.FrameworkElement> są przetwarzane, co ma wpływ na wartość `constraintSize`. Te właściwości ogólnie opisano właściwości rozmiaru podstawowych <xref:System.Windows.UIElement>, takie jak jego <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, i <xref:System.Windows.FrameworkElement.Style%2A>. Każdej z tych właściwości można zmienić miejsca, które są niezbędne do wyświetlania elementu. <xref:System.Windows.FrameworkElement.MeasureOverride%2A> następnie jest wywoływana z `constraintSize` jako parametr.  
+ Po drugie, właściwości szablonu zdefiniowany w <xref:System.Windows.FrameworkElement> są przetwarzane, co ma wpływ na wartość `constraintSize`. Te właściwości ogólnie opisano podstawowe właściwości ustalania rozmiaru <xref:System.Windows.UIElement>, takie jak jego <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, i <xref:System.Windows.FrameworkElement.Style%2A>. Każda z tych właściwości można zmienić miejsca, które są niezbędne do wyświetlania elementu. <xref:System.Windows.FrameworkElement.MeasureOverride%2A> następnie jest wywoływana z `constraintSize` jako parametr.  
   
 > [!NOTE]
->  Ma różnicy między właściwości <xref:System.Windows.FrameworkElement.Height%2A> i <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.ActualHeight%2A> i <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Na przykład <xref:System.Windows.FrameworkElement.ActualHeight%2A> właściwości jest obliczoną wartością opartej na systemie układ i inne dane wejściowe wysokość. Wartość jest ustawiana przez system układu, oparty na przebieg rzeczywiste renderowania i może w związku z tym opóźniona nieco ustaw wartość właściwości, takie jak <xref:System.Windows.FrameworkElement.Height%2A>, które stanowią podstawę wprowadzania zmian.  
+>  Istnieje następująca różnica między właściwości <xref:System.Windows.FrameworkElement.Height%2A> i <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.ActualHeight%2A> i <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Na przykład <xref:System.Windows.FrameworkElement.ActualHeight%2A> właściwość jest wartością obliczoną na podstawie danych wejściowych innych wysokość i system układu. Wartość jest ustawiana przez system układu, oparte na rzeczywistych renderowania — dostęp próbny i może być w związku z tym opóźniona nieco ustaw wartość właściwości, takie jak <xref:System.Windows.FrameworkElement.Height%2A>, które są podstawą wprowadzania zmian.  
 >   
->  Ponieważ <xref:System.Windows.FrameworkElement.ActualHeight%2A> jest obliczoną wartością, pamiętaj, że może istnieć wiele zgłoszonych przyrostowe zmiany lub go wyniku różne operacje przez system układu. Układ systemu może obliczanie miejsca wymaganego miary dla elementów podrzędnych, ograniczenia przez element nadrzędny i tak dalej.  
+>  Ponieważ <xref:System.Windows.FrameworkElement.ActualHeight%2A> jest obliczoną wartość, należy pamiętać, że może istnieć wiele zgłaszane przyrostowe zmiany lub do niego wyniku różne operacje przez system układu. System układu może obliczania miary wymagane miejsce dla elementów podrzędnych, ograniczenia przez element nadrzędny i tak dalej.  
   
- Ostatecznym celem miary przebiegu jest podrzędny ustalić jego <xref:System.Windows.UIElement.DesiredSize%2A>, który występuje w ciągu <xref:System.Windows.FrameworkElement.MeasureCore%2A> wywołania. <xref:System.Windows.UIElement.DesiredSize%2A> Wartość jest przechowywana przez <xref:System.Windows.UIElement.Measure%2A> do użycia podczas przebiegu rozmieszczanie zawartości.  
+ Ostatecznym celem miary — dostęp próbny jest podrzędnego ustalić jego <xref:System.Windows.UIElement.DesiredSize%2A>, który występuje w ciągu <xref:System.Windows.FrameworkElement.MeasureCore%2A> wywołania. <xref:System.Windows.UIElement.DesiredSize%2A> Wartość jest przechowywana przez <xref:System.Windows.UIElement.Measure%2A> do użycia podczas przebiegu rozmieszczanie zawartości.  
   
- Przebieg Rozmieść rozpoczyna się od wywołania <xref:System.Windows.UIElement.Arrange%2A> metody. W trakcie przebiegu Rozmieść nadrzędnego <xref:System.Windows.Controls.Panel> element generuje prostokąt reprezentujący granice elementu podrzędnego. Ta wartość jest przekazywana do <xref:System.Windows.FrameworkElement.ArrangeCore%2A> metody do przetwarzania.  
+ Rozmieść — dostęp próbny rozpoczyna się od wywołania <xref:System.Windows.UIElement.Arrange%2A> metody. W trakcie przebiegu Rozmieść nadrzędnego <xref:System.Windows.Controls.Panel> element generuje prostokąt, który reprezentuje granice elementu podrzędnego. Ta wartość jest przekazywana do <xref:System.Windows.FrameworkElement.ArrangeCore%2A> metody do przetwarzania.  
   
- <xref:System.Windows.FrameworkElement.ArrangeCore%2A> Metodę <xref:System.Windows.UIElement.DesiredSize%2A> dziecka i ocenia żadne dodatkowe marginesy, które mogą mieć wpływ na rozmiar renderowanego elementu. <xref:System.Windows.FrameworkElement.ArrangeCore%2A> generuje `arrangeSize`, która jest przekazywana do <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metody <xref:System.Windows.Controls.Panel> jako parametr. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> generuje `finalSize` elementu podrzędnego. Na koniec <xref:System.Windows.FrameworkElement.ArrangeCore%2A> — metoda nie końcowego obliczania właściwości offset, takie jak margines i wyrównania i umieszcza w gnieździe układu elementu podrzędnego. Obiekt podrzędny nie musi (i często nie) wypełnienia całego miejsce przydzielone. Formant jest następnie zwracany do obiektu nadrzędnego <xref:System.Windows.Controls.Panel> i zakończeniu układu.  
+ <xref:System.Windows.FrameworkElement.ArrangeCore%2A> Metodę <xref:System.Windows.UIElement.DesiredSize%2A> dziecka i ocenia dodatkowe marginesy, które mogą mieć wpływ na rozmiar renderowanego elementu. <xref:System.Windows.FrameworkElement.ArrangeCore%2A> generuje `arrangeSize`, która jest przekazywana do <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metody <xref:System.Windows.Controls.Panel> jako parametr. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> generuje `finalSize` elementu podrzędnego. Na koniec <xref:System.Windows.FrameworkElement.ArrangeCore%2A> metody nie końcowej oceny przesunięcia właściwości, takie jak margines i wyrównanie i umieszcza elementu podrzędnego w obrębie jego gniazda układu. Element podrzędny nie będzie musiał (i często nie) Wypełnij całego miejsca przydzielonego. Następnie zwróceniem sterowania do elementu nadrzędnego <xref:System.Windows.Controls.Panel> i zakończeniu procesu układu.  
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Elementy panelu i zachowania niestandardowego układu  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera grupę elementów, które pochodzą z <xref:System.Windows.Controls.Panel>. Te <xref:System.Windows.Controls.Panel> elementy włączyć wiele układów złożonych. Na przykład układania elementów można łatwo osiągnąć za pomocą <xref:System.Windows.Controls.StackPanel> elementu, gdy bardziej złożonych wolnego przechodzenia układy i są możliwe przy użyciu <xref:System.Windows.Controls.Canvas>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera grupę elementów, które wynikają z <xref:System.Windows.Controls.Panel>. Te <xref:System.Windows.Controls.Panel> elementy włączyć wiele złożonych układów. Na przykład, układanie elementów można łatwo osiągnąć za pomocą <xref:System.Windows.Controls.StackPanel> elementu, gdy za pomocą możliwe są bardziej złożone i free układy płynące <xref:System.Windows.Controls.Canvas>.  
   
- W poniższej tabeli przedstawiono dostępne układu <xref:System.Windows.Controls.Panel> elementów.  
+ W poniższej tabeli przedstawiono dostępne układ <xref:System.Windows.Controls.Panel> elementów.  
   
-|Nazwa panelu|Opis|  
+|Panel nazwa|Opis|  
 |----------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|Definiuje obszar, w którym możesz jawnie pozycjonować elementy podrzędne współrzędnymi względem <xref:System.Windows.Controls.Canvas> obszaru.|  
-|<xref:System.Windows.Controls.DockPanel>|Definiuje obszar, w którym można rozmieścić elementy podrzędne w poziomie lub pionie względem siebie.|  
+|<xref:System.Windows.Controls.DockPanel>|Definiuje obszar, w którym można rozmieścić elementy podrzędne w poziomie lub pionie, względem siebie.|  
 |<xref:System.Windows.Controls.Grid>|Definiuje elastyczny obszar siatki złożony z kolumn i wierszy.|  
-|<xref:System.Windows.Controls.StackPanel>|Rozmieszcza elementy potomne w jednym wierszu, które mogą być rozmieszczane poziomo czy pionowo.|  
-|<xref:System.Windows.Controls.VirtualizingPanel>|Zapewnia platformę dla <xref:System.Windows.Controls.Panel> elementów, która Wirtualizuje ich potomne kolekcje danych. To jest klasą abstrakcyjną.|  
-|<xref:System.Windows.Controls.WrapPanel>|Ustawia elementy podrzędne sekwencyjnie od lewej do prawej, dzielenia zawartości do następnego wiersza na krawędzi zawierającego pola. Porządkowanie kolejnych występuje sekwencyjnie od góry do dołu lub od prawej do lewej w zależności od wartości <xref:System.Windows.Controls.WrapPanel.Orientation%2A> właściwości.|  
+|<xref:System.Windows.Controls.StackPanel>|Rozmieszcza elementy podrzędne w jednej linii, która może być zorientowana poziomo czy pionowo.|  
+|<xref:System.Windows.Controls.VirtualizingPanel>|Zapewnia ramy <xref:System.Windows.Controls.Panel> elementów, która Wirtualizuje ich potomne kolekcje danych. Jest klasą abstrakcyjną.|  
+|<xref:System.Windows.Controls.WrapPanel>|Ustawia elementy podrzędne na kolejnych pozycjach od od lewej do prawej, istotne zawartości do następnego wiersza na krawędzi zawierającego pole. Kolejne porządkowanie występuje sekwencyjnie od góry do dołu lub od prawej do lewej w zależności od wartości <xref:System.Windows.Controls.WrapPanel.Orientation%2A> właściwości.|  
   
- Dla aplikacji, które wymagają układu, który nie jest możliwe przy użyciu dowolnych predefiniowanych <xref:System.Windows.Controls.Panel> elementów, zachowania niestandardowego układu można osiągnąć poprzez dziedziczenie z <xref:System.Windows.Controls.Panel> i zastępowanie <xref:System.Windows.FrameworkElement.MeasureOverride%2A> i <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metody. Na przykład zobacz [niestandardowe promieniowego panelu Próbki](http://go.microsoft.com/fwlink/?LinkID=159982).  
+ Dla aplikacji, które wymagają układu, który nie jest możliwe przy użyciu dowolnej predefiniowanych <xref:System.Windows.Controls.Panel> elementów układu niestandardowego zachowania można osiągnąć przez dziedziczenie z <xref:System.Windows.Controls.Panel> i zastępowanie <xref:System.Windows.FrameworkElement.MeasureOverride%2A> i <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metody. Aby uzyskać przykład, zobacz [niestandardowe promieniowego panelu Przykładowe](https://go.microsoft.com/fwlink/?LinkID=159982).  
   
 <a name="LayoutSystem_Performance"></a>   
 ## <a name="layout-performance-considerations"></a>Zagadnienia dotyczące wydajności układu  
- Układ jest proces cyklicznego. Każdy element podrzędny <xref:System.Windows.Controls.Panel.Children%2A> kolekcji pobiera przetworzonych w ciągu każdego wywołania systemu układu. W związku z tym wyzwalania systemu układu należy unikać gdy nie jest konieczne. Zagadnienia przedstawione poniżej mogą pomóc osiągnąć większą wydajność.  
+ Układ jest proces cyklicznego. Każdy element podrzędny <xref:System.Windows.Controls.Panel.Children%2A> przetwarzane kolekcji podczas każdego wywołania systemu układów. W rezultacie wyzwalania system układu należy unikać podczas nie jest konieczne. Następujące zagadnienia dotyczące może pomóc Ci osiągnąć lepszą wydajność.  
   
--   Należy pamiętać o zmian wartości właściwości, które zostanie wymuszone aktualizacji cyklicznej w systemie układu.  
+-   Należy pamiętać o zmianie wartości właściwości, które wymusi aktualizacji cyklicznej przez system układu.  
   
-     Właściwości zależności, których wartości może spowodować systemu układu można było zainicjować są oznaczone ikoną z publicznego flagi. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> i <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> Podaj przydatne wskazówek określające, które właściwości zmiany wartości wymusi cyklicznej aktualizacji przez system układu. Ogólnie rzecz biorąc, powinien mieć żadnej właściwości, które mogą mieć wpływ na rozmiar elementu obwiedni <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flagi jest ustawiona na true. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Właściwości zależności, których wartości może spowodować, że system układu można zainicjować są oznaczone przy użyciu flag publicznych. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> i <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> zapewnia wskazówki przydatne do właściwości, które wymusi zmiany wartości cyklicznej aktualizacji przez system układu. Ogólnie rzecz biorąc, powinien mieć żadnych właściwości, która może mieć wpływ na rozmiar elementu obwiedni <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flagi jest ustawiona na wartość true. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
 -   Jeśli to możliwe, użyj <xref:System.Windows.UIElement.RenderTransform%2A> zamiast <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
-     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> może być bardzo przydatne sposób wpłynąć na zawartość [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Jednak jeśli efekt transformacji nie musi mieć wpływ na położenie innych elementów, najlepiej jest używać <xref:System.Windows.UIElement.RenderTransform%2A> , ponieważ <xref:System.Windows.UIElement.RenderTransform%2A> nie jest wywoływany systemu układu. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> stosuje przekształcenia i wymusza aktualizację układu cykliczne, aby uwzględnić nowe położenie danego elementu.  
+     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> może być bardzo przydatny sposób wpływają na zawartość [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Jednak jeśli efekt przekształcenia ma wpływ na położenie innych elementów, najlepiej jest używać <xref:System.Windows.UIElement.RenderTransform%2A> zamiast tego, ponieważ <xref:System.Windows.UIElement.RenderTransform%2A> nie wywoła system układu. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> stosuje przekształcenia i wymusza układ cyklicznych aktualizacji konta dla nowej pozycji danego elementu.  
   
 -   Unikaj niepotrzebnych wywołania <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
-     <xref:System.Windows.UIElement.UpdateLayout%2A> Metoda wymusza aktualizację układu cyklicznego i nie jest często konieczne. Jeśli nie wiesz, że pełnej aktualizacji jest wymagana, polegają na system układu, aby wywołać tę metodę można.  
+     <xref:System.Windows.UIElement.UpdateLayout%2A> Metoda wymusza aktualizację układu cyklicznego i często jest to konieczne. Chyba że masz pewność, że pełnej aktualizacji jest wymagany, polegają na system układu, aby wywołać tę metodę dla Ciebie.  
   
--   Podczas pracy z dużej <xref:System.Windows.Controls.Panel.Children%2A> kolekcji, należy rozważyć użycie <xref:System.Windows.Controls.VirtualizingStackPanel> zamiast zwykły <xref:System.Windows.Controls.StackPanel>.  
+-   Podczas pracy z dużą <xref:System.Windows.Controls.Panel.Children%2A> kolekcji, należy rozważyć użycie <xref:System.Windows.Controls.VirtualizingStackPanel> zamiast zwykłych <xref:System.Windows.Controls.StackPanel>.  
   
-     Dzięki wirtualizacji podrzędnej kolekcji <xref:System.Windows.Controls.VirtualizingStackPanel> przechowuje tylko obiektów w pamięci, które są obecnie w ramach elementu nadrzędnego okienka ekranu. W związku z tym znacznie poprawia wydajność w większości przypadków.  
+     Dzięki wirtualizacji kolekcji podrzędnej <xref:System.Windows.Controls.VirtualizingStackPanel> przechowuje tylko obiekty w pamięci, które są obecnie w ramach elementu nadrzędnego okienka ekranu. W rezultacie znacznie zwiększona wydajność w większości scenariuszy.  
   
 <a name="LayoutSystem_LayoutRounding"></a>   
-## <a name="sub-pixel-rendering-and-layout-rounding"></a>Renderowanie podrzędne pikseli i zaokrąglania układu  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Grafiki system używa jednostki niezależnych od urządzenia, aby umożliwić niezależność rozdzielczość i urządzenia. Każdego piksela niezależnie od urządzenia jest automatycznie skalowany w systemie [!INCLUDE[TLA#tla_dpi](../../../../includes/tlasharptla-dpi-md.md)] ustawienie. Zapewnia to [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji odpowiednie skalowanie dla różnych [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] ustawienia i powoduje, że aplikacja automatycznie [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)]— pamiętać.  
+## <a name="sub-pixel-rendering-and-layout-rounding"></a>Renderowanie podrzędnych pikseli i zaokrąglania układu  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Grafiki system używa jednostki miary niezależne od urządzenia, aby umożliwić niezależność rozdzielczość i urządzenia. Piksele niezależne urządzenie jest automatycznie skalowany przy użyciu systemu [!INCLUDE[TLA#tla_dpi](../../../../includes/tlasharptla-dpi-md.md)] ustawienie. Dzięki temu można [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji odpowiednie skalowanie dla różnych [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] ustawienia i sprawia, że aplikacja automatycznie [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)]-pamiętać.  
   
- Jednak to [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] z powodu wygładzanie niezależność można utworzyć renderowania nieregularne krawędzi. Te artefakty zwykle występuje jako rozmyte lub półprzezroczysty krawędzi, może wystąpić, gdy krawędzi wypada środku pikseli urządzenia, a nie od pikseli urządzenia. System układ zapewnia dostosowanie tego z układu zaokrąglania. Układ zaokrąglania jest gdzie systemu układu zaokrągla niecałkowity pikseli podczas przebiegu układu.  
+ Jednak to [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] niezależność można utworzyć renderowania nieregularne edge ze względu na wygładzanie. Te artefakty, zwykle widoczne jako rozmyte lub półprzezroczystym krawędzie, może wystąpić, gdy lokalizacja krawędź znajduje się w środku pikseli urządzenia, a nie od pikseli urządzenia. System układu zapewnia sposób dostosowania w tym z zaokrąglaniem układu. Zaokrąglanie układ jest gdzie system układu zaokrągla niecałkowitoliczbowego pikseli podczas przebiegu układu.  
   
- Układ zaokrąglania jest domyślnie wyłączona. Aby włączyć zaokrąglania układu, ustaw <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> właściwości `true` na dowolnym <xref:System.Windows.FrameworkElement>. Ponieważ jest to właściwość zależności, wartość będzie propagowane do wszystkich obiektów podrzędnych w drzewie wizualnym. Aby włączyć układu zaokrąglania całego interfejsu użytkownika, należy ustawić <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> do `true` w kontenerze katalogu głównego. Na przykład zobacz <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>.  
+ Zaokrąglanie układ jest domyślnie wyłączona. Aby włączyć układ zaokrąglania, należy ustawić <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> właściwości `true` na dowolnym <xref:System.Windows.FrameworkElement>. Ponieważ właściwości zależności, wartość będzie propagowany do wszystkich elementów podrzędnych w drzewie wizualnym. Aby włączyć układ zaokrąglania cały interfejs użytkownika, ustaw <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> do `true` w kontenerze katalogu głównego. Aby uzyskać przykład, zobacz <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>.  
   
 <a name="LayoutSystem_whatsnext"></a>   
-## <a name="whats-next"></a>Co to jest dalej  
- Zrozumienie, jak mierzony i rozmieszczenia elementów jest pierwszym krokiem w układzie opis. Aby uzyskać więcej informacji o dostępnych <xref:System.Windows.Controls.Panel> elementów, zobacz [omówienie panele](../../../../docs/framework/wpf/controls/panels-overview.md). Aby lepiej zrozumieć różne właściwości pozycjonowania, które mogą mieć wpływ na układ, zobacz [wyrównanie, marginesy i dopełnienia omówienie](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Na przykład niestandardowy <xref:System.Windows.Controls.Panel> elementu, zobacz [niestandardowych promieniowego próbki panelu](http://go.microsoft.com/fwlink/?LinkID=159982). Gdy wszystko będzie gotowe do zebranie wszystkich elementów w aplikacji lekki, zobacz [wskazówki: Moje pierwszą aplikację pulpitu WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+## <a name="whats-next"></a>Jaka jest przyszłość  
+ Zrozumienie, jak elementy są mierzone i uporządkowane jest pierwszym krokiem w układzie opis. Aby uzyskać więcej informacji o dostępnych <xref:System.Windows.Controls.Panel> elementów, zobacz [Przegląd panele](../../../../docs/framework/wpf/controls/panels-overview.md). Aby lepiej zrozumieć różne właściwości pozycjonowania, które mogą wpływać na układ, zobacz [wyrównanie, marginesy i dopełnienie Przegląd](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Na przykład niestandardowy <xref:System.Windows.Controls.Panel> elementu, zobacz [niestandardowe promieniowego przykładowe panelu](https://go.microsoft.com/fwlink/?LinkID=159982). Gdy wszystko jest gotowe do zebranie wszystkich aplikacji lekki, zobacz [Instruktaż: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.FrameworkElement>  

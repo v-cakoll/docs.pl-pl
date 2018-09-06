@@ -3,11 +3,11 @@ title: Projektowanie kodu XML w innym kształcie (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
 ms.openlocfilehash: fe6166a333988d4b0a4550900a9307f1c4951aec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43722882"
+ms.locfileid: "43787001"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projektowanie kodu XML w innym kształcie (C#)
 W tym temacie przedstawiono przykład przewidywania XML, który jest w innym kształcie niż źródła XML.  

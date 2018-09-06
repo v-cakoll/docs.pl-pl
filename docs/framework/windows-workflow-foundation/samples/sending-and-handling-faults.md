@@ -3,11 +3,11 @@ title: Wysyłanie i obsługa błędów
 ms.date: 03/30/2017
 ms.assetid: 98e8e04d-2ac9-4a33-ae08-462f757a7a14
 ms.openlocfilehash: 896f209e7daeeab2bb33c1fde15298aae96c8776
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406661"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733368"
 ---
 # <a name="sending-and-handling-faults"></a>Wysyłanie i obsługa błędów
 W tym przykładzie przedstawiono sposób użycia <xref:System.ServiceModel.Activities.SendReply> i <xref:System.ServiceModel.Activities.ReceiveReply> wiadomości działania do wysyłania i odbierania oczekiwane i nieoczekiwane błędy. W tym scenariuszu pierwszy klient żąda wyniki w oczekiwanym domenach błędów, która została uwzględniona w jego <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> kolekcji. Dalej kilka żądań klientów doprowadzić do odbierania nieoczekiwane błędy przed ostatnim żądanie zakończy się pomyślnie.  

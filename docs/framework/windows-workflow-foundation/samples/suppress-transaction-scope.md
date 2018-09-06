@@ -3,11 +3,11 @@ title: Pomijanie zakresu transakcji
 ms.date: 03/30/2017
 ms.assetid: 49fb6dd4-30d4-4067-925c-c5de44c8c740
 ms.openlocfilehash: 44814d66a4de4b3e72bb33eb46019eb1088ab040
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385197"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788042"
 ---
 # <a name="suppress-transaction-scope"></a>Pomijanie zakresu transakcji
 W przykładzie pokazano, jak utworzyć niestandardowy `SuppressTransactionScope` działanie, aby pominąć otoczenia transakcji czasu wykonywania, jeśli jest obecny.  

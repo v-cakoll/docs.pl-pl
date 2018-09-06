@@ -6,12 +6,12 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.openlocfilehash: b9abedb72e04cb36273b48bb609fe8e410872f8b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.openlocfilehash: 04449d99fd3e1b573333bc11a9766e9809b44785
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731822"
+ms.locfileid: "43788600"
 ---
 # <a name="in-c-reference"></a>in (odwołanie w C#)
 
@@ -20,6 +20,7 @@ ms.locfileid: "43731822"
 - [Parametry typu ogólnego](in-generic-modifier.md) w interfejsach ogólnych i delegatach.
 - Jako [modyfikator parametru](in-parameter-modifier.md), pozwalającej można przekazać argument do metody przez odwołanie, a nie przez wartość.
 - [Instrukcja foreach](foreach-in.md) instrukcji.
+- [z klauzul](from-clause.md) wyrażeniach zapytań LINQ.
 - [Dołącz do klauzul](join-clause.md) wyrażeniach zapytań LINQ.
   
 ## <a name="see-also"></a>Zobacz też

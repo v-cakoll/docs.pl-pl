@@ -3,12 +3,12 @@ title: Interpolacja ciągów w języku C#
 description: Dowiedz się, jak obejmują wyrażenie sformatowane wyniki w ciągu wynikowym w języku C# przy użyciu interpolacji ciągu.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419102"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732913"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolacja ciągów w języku C# #
 
@@ -106,9 +106,9 @@ Wraz z <xref:System.FormattableString.ToString(System.IFormatProvider)?displayPr
 
 W tym samouczku opisano typowe scenariusze użycia interpolacji ciągu. Aby uzyskać więcej informacji na temat Interpolacja ciągów, zobacz [Interpolacja ciągów](../language-reference/tokens/interpolated.md) tematu. Aby uzyskać więcej informacji na temat typy formatowania w programie .NET, zobacz [typy formatowania na platformie .NET](../../standard/base-types/formatting-types.md) i [formatowania złożonego](../../standard/base-types/composite-formatting.md) tematów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-<xref:System.String.Format%2A?displayProperty=nameWithType>  
-<xref:System.FormattableString?displayProperty=nameWithType>  
-<xref:System.IFormattable?displayProperty=nameWithType>  
-[Ciągi](../programming-guide/strings/index.md)  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>  
+- <xref:System.FormattableString?displayProperty=nameWithType>  
+- <xref:System.IFormattable?displayProperty=nameWithType>  
+- [Ciągi](../programming-guide/strings/index.md)  

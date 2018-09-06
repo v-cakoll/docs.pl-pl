@@ -7,24 +7,24 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: 97e93230658b5d1da676b029169b63bc9006ddb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbf6a83d43a1b3a69e82a35d5d0875f62422cd3f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334717"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787830"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Operatory konwersji (Przewodnik programowania w języku C#)
-C# umożliwia deweloperom zadeklarować konwersje klasy lub struktury, dzięki czemu mogą być konwertowane klasy lub struktury, aby lub z innych klas lub struktur lub typy podstawowe. Konwersje zdefiniowano like — operatory o nazwie dla typu, które umożliwiają one konwertowanie. Typ argumentu, który ma zostać przekonwertowany lub typ wyniku konwersji, ale nie oba musi być typu zawierającego.  
+C# umożliwia programistom deklarowania konwersje na klasy lub struktury, tak aby klasy lub struktury mogą być konwertowane do lub z innych klas lub struktur lub typy podstawowe. Konwersje są zdefiniowane like — operatory i są nazywane dla typu, do którego konwertują. Typ argumentu, który ma zostać przekonwertowany lub typ wyniku konwersji, ale nie obu musi być typu zawierającego.  
   
  [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
 ## <a name="conversion-operators-overview"></a>Omówienie operatorów konwersji  
- Operatory konwersji mieć następujące właściwości:  
+ Operatory konwersji mają następujące właściwości:  
   
--   Konwersje zadeklarowany jako `implicit` wykonywane automatycznie, gdy jest wymagane.  
+-   Konwersje zadeklarowane jako `implicit` wykonywane automatycznie, gdy jest to wymagane.  
   
--   Konwersje zadeklarowany jako `explicit` wymagają rzutowanie do wywołania.  
+-   Konwersje zadeklarowane jako `explicit` wymaga rzutowania do wywołania.  
   
 -   Wszystkie konwersje musi być zadeklarowany jako `static`.  
   
@@ -43,7 +43,8 @@ C# umożliwia deweloperom zadeklarować konwersje klasy lub struktury, dzięki c
   
 -   [static](../../../csharp/language-reference/keywords/static.md)  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Convert>  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Tworzenie łańcucha zdefiniowane przez użytkownika Konwersje jawne w języku C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Convert>  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Tworzenie łańcucha zdefiniowanych przez użytkownika Konwersje jawne w języku C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

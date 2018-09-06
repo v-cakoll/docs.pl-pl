@@ -3,11 +3,11 @@ title: 'Porady: znajdowanie poprzednich elementów równorzędnych (XPath-LINQ t
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
 ms.openlocfilehash: d2bd34db7bd839e50ec3e77819230f5f6410b73e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553485"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787125"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Porady: znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (C#)
 W tym temacie porównano XPath `preceding-sibling` osi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podrzędnych <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> osi.  

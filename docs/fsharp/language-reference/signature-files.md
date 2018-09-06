@@ -1,86 +1,72 @@
 ---
 title: 'Pliki podpisów (F #)'
-description: 'Dowiedz się, jak używać do przechowywania informacji o publiczne podpisów zestawu F # program elementów, takich jak typy, obszary nazw i moduły pliki sygnatur F #.'
+description: 'Dowiedz się, jak używać plików sygnatur F # do przechowywania informacji na temat podpisów publicznych zestaw elementów języka F # programów, takich jak typy, przestrzenie nazw i moduły.'
 ms.date: 06/15/2018
-ms.openlocfilehash: 21e1b1d1cb67ea64206070a947d667fd52441dd8
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208493"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745973"
 ---
 # <a name="signatures"></a>Podpisy
 
-Plik sygnatury zawiera informacje o publiczne podpisów zestawu F # program elementów, takich jak typy, obszary nazw i modułów. Może służyć do określenia dostępność tych elementów programu.
-
+Plik podpisu zawiera informacje o podpisów publicznych zestawu elementów języka F # programów, takich jak typy, przestrzenie nazw i moduły. Może służyć do określenia dostępności te elementy programu.
 
 ## <a name="remarks"></a>Uwagi
-Dla każdego języka F # pliku kod, mogą mieć *plik sygnatury*, czyli plik, który ma taką samą nazwę jak plik kodu, ale .fsi rozszerzenia zamiast języka. Pliki sygnatur można również dodać do kompilacji wiersza polecenia, korzystając z wiersza polecenia bezpośrednio. Aby odróżnić pliki kodu i pliki podpisów, pliki kodu są czasami określane jako *plików implementacji*. W projekcie plik podpisu należy poprzedzać pliku skojarzonego kodu.
 
-Plik sygnatury opisuje obszary nazw, modułów, typy i elementy członkowskie w odpowiedniego pliku implementacji. Możesz skorzystać z informacji w pliku podpisu do określenia części kodu w odpowiedniej implementacji plików są dostępne z kodu poza pliku implementacji, i jakie elementy są wewnętrzne pliku implementacji. Przestrzenie nazw, moduły i typy, które zostaną uwzględnione w pliku podpis musi być podzbiór przestrzeni nazw, moduły i typy, które znajdują się w pliku implementacji. Z pewnymi wyjątkami zauważyć w dalszej części tego tematu te elementy języka, które nie są wymienione w pliku podpisu są uznawane za prywatne do pliku implementacji. Jeśli plik podpisu nie zostanie znaleziony w projekcie lub wiersza polecenia, dostępność domyślny jest używany.
+Dla każdego języka F # pliku kodu, może mieć *plik podpisu*, czyli pliku, który ma taką samą nazwę jak plik kodu, ale .fsi rozszerzenia zamiast .fs. Pliki podpisów mogą być również dodawane do kompilacji wiersza polecenia, korzystając z wiersza polecenia bezpośrednio. Aby rozróżnić plików kodu i plików sygnatur, pliki kodu są czasami określane jako *pliki wdrożenia*. W projekcie plik podpisu powinien poprzedzać skojarzony plik kodu.
 
-Aby uzyskać więcej informacji o ułatwieniach dostępu domyślnego, zobacz [kontroli dostępu](access-control.md).
+Plik podpisu opisuje przestrzenie nazw, moduły, typy i elementy członkowskie w odpowiedni plik implementacji. Użyj informacji w pliku podpisu do określenia, jakie części kodu w odpowiedniej implementacji plików jest możliwy z kodu poza plikiem wdrożenia i jakie części są wewnętrzne w pliku implementacji. Przestrzenie nazw, moduły i typy, które znajdują się w pliku podpisu musi być podzestawem przestrzenie nazw, moduły i typy, które znajdują się w pliku implementacji. Z pewnymi wyjątkami, podane w dalszej części tego tematu te elementy języka, które nie są wymienione w pliku podpisu są uznawane za prywatne pliku implementacji. Jeśli plik podpisu nie zostanie znaleziony w projekcie lub w wierszu polecenia, jest używana wartość domyślna dostępu.
 
-W pliku podpisu nie powtarzaj definicji typów i implementacje każdej metody lub funkcji. W zamian użyj podpis dla każdej metody i funkcji, która działa jako pełną specyfikację funkcji, które jest implementowany przez fragment modułu lub przestrzeni nazw. Składnia podpis typu jest taka sama, jak używać w deklaracjach metoda abstrakcyjna w abstrakcyjnej klasy i interfejsy i jest również wyświetlany za pomocą funkcji IntelliSense i fsi.exe interpreter języka F # wyświetlanych poprawnie skompilowanych danych wejściowych.
+Aby uzyskać więcej informacji na temat ułatwień dostępu domyślne zobacz [kontroli dostępu](access-control.md).
 
-Jeśli nie ma wystarczającej ilości informacji w podpisie typu, aby wskazać, czy typ jest zapieczętowany lub czy jest to typ interfejsu, należy dodać atrybut wskazujący rodzaj typu w kompilatorze. W poniższej tabeli opisano atrybuty, które używają do tego celu.
+V souboru signatury nie Powtórz definicji typów i implementacje każdej metody lub funkcji. Zamiast tego należy użyć podpis dla każdej metody i funkcji, która działa jako pełna Specyfikacja funkcji, który jest implementowany przez fragment modułu lub przestrzeni nazw. Składnia dla podpisu typu jest taki sam sposób, który jest używany w deklaracji metody abstrakcyjnej w interfejsach i klasy abstrakcyjne i również jest wyświetlany przez funkcję IntelliSense, jak również fsi.exe interpretera F #, gdy zawiera dane wejściowe poprawnie skompilowany.
 
-
+Jeśli nie jest wystarczająco dużo informacji w podpisie typu, aby wskazać, czy typ jest zapieczętowany, lub czy jest ono typu interfejsu, należy dodać atrybut wskazujący rodzaj typu w kompilatorze. W poniższej tabeli opisano atrybuty, które używają do tego celu.
 
 |Atrybut|Opis|
 |---------|-----------|
-|`[<Sealed>]`|Dla typu, który nie ma abstrakcyjnych elementów członkowskich lub który nie ma zastosowania.|
+|`[<Sealed>]`|Dla typu, który nie ma żadnych członków abstrakcyjnych lub że nie ma zastosowania.|
 |`[<Interface>]`|Dla typu, który jest interfejsem.|
 Kompilator generuje błąd, jeśli atrybuty nie są spójne podpisu i deklaracji w pliku implementacji.
 
-Użyj słowa kluczowego `val` do tworzenia podpisu wartość lub wartość funkcji. Słowo kluczowe `type` wprowadza podpis typu.
+Użyj słowa kluczowego `val` do tworzenia podpisu dla wartości lub wartości funkcji. Słowo kluczowe `type` wprowadza sygnatura typu.
 
-Plik sygnatury można wygenerować za pomocą `--sig` — opcja kompilatora. Ogólnie rzecz biorąc możesz nie zapisuj .fsi pliki ręcznie. Zamiast tego należy wygenerować .fsi plików przy użyciu kompilatora, dodaj je do projektu, jeśli istnieje i edytować je przez usunięcie metod i funkcje, które nie mają być dostępne.
+Plik podpisu można wygenerować za pomocą `--sig` — opcja kompilatora. Ogólnie rzecz biorąc nie napiszesz .fsi pliki ręcznie. Zamiast tego należy wygenerować .fsi plików za pomocą kompilatora, dodaj je do projektu, jeśli masz i edytować je, usuwając metody i funkcje, które mają być dostępne.
 
-Istnieje kilka reguł sygnatur typu:
+Istnieje kilka reguł dla podpisy typu:
 
+- Skróty typów w pliku z implementacją nie może odpowiadać typu bez skrótu w pliku podpisu.
 
-- Skróty typów w pliku z implementacją nie musi odpowiadać typu bez skrót w pliku podpisu.
+- Rekordy i sumy rozłączne musi ujawniać wszystkich lub żadnej z ich pól oraz konstruktorów i zamówienia w podpisie musi być zgodna z kolejnością w pliku implementacji. Klasy może ujawnić niektóre, wszystkich lub żadnej z ich pól i metod w podpisie.
 
+- Klasy i struktury, które mają konstruktory musi ujawniać deklaracje ich klasami podstawowymi ( `inherits` deklaracji). Ponadto klas i struktur, które mają konstruktory musi ujawniać wszystkie metody abstrakcyjne i deklaracji interfejsu.
 
-- Rekordów i rozłączne musi ujawniać wszystkie lub żadne swoich pól i konstruktory i kolejności w sygnaturze musi odpowiadać kolejności w pliku implementacji. Klasy może ujawnić niektóre, wszystkie lub żadne swoich pól i metod w podpisie.
+- Typy interfejsu muszą ujawnić, wszystkie metody i interfejsy.
 
+Reguły dla podpisów wartości są następujące:
 
-- Klasy i struktury, które mają konstruktorów musi ujawniać deklaracji ich klas podstawowych ( `inherits` deklaracji). Ponadto klas i struktur, które mają konstruktorów musi ujawniać wszystkie metody abstrakcyjne i deklaracjami interfejs.
+- Modyfikatory dostępu (`public`, `internal`i tak dalej) i `inline` i `mutable` Modyfikatory w podpisie muszą odpowiadać nazwom w implementacji.
 
+- Liczba parametrów typu ogólnego, (lub wywnioskowane niejawnie zadeklarowany w sposób jawny) muszą być zgodne, a typy i ograniczenia typów w parametrach typu ogólnego muszą być zgodne.
 
-- Typy interfejsów muszą ujawnić, wszystkie metody i interfejsów.
+- Jeśli `Literal` atrybut jest używany, musi znajdować się zarówno w przypadku podpis, jak i implementację i taką samą wartość literału musi być używany dla obu.
 
+- Wzorzec parametrów (znany także jako *specifikaci*) podpisów i implementacje muszą być zgodne.
 
-Zasady na wartość podpisy są następujące:
+- Jeśli nazwy parametrów w pliku podpisu różnią się od odpowiedniego pliku implementacji, nazwy w pliku podpisu zostanie użyty, co może spowodować problemy podczas debugowania lub profilowania. Jeśli chcesz otrzymywać powiadomienia o takich niezgodności, Włącz ostrzeżenie 3218 w pliku projektu lub podczas wywoływania kompilator (zobacz `--warnon` w obszarze [opcje kompilatora](compiler-options.md)).
 
-
-- Modyfikatory dostępu (`public`, `internal`i tak dalej) i `inline` i `mutable` Modyfikatory w sygnaturze musi odpowiadają implementacji.
-
-
-- Musi być zgodna z liczbą parametrów typu ogólnego, (lub niejawnie wywnioskować jawnie deklarować) i typy i ograniczenia parametrów typu ogólnego typu muszą być zgodne.
-
-
-- Jeśli `Literal` atrybut jest używany, musi znajdować się w sygnaturze i implementacji i dla obu należy użyć tej samej wartości literału.
-
-
-- Wzorzec parametrów (znanej także jako *argumentów*) sygnatury i implementacji muszą być zgodne.
-
-
-- Jeśli nazwy parametrów w pliku podpisu różnią się od odpowiedniego pliku implementacji, z nazwą w pliku podpisu zostanie użyty, co może spowodować problemy podczas debugowania lub profilowania. Jeśli chcesz otrzymywać powiadomienia o takich niezgodności, Włącz ostrzeżenie 3218 w pliku projektu lub podczas wywoływania kompilator (zobacz `--warnon` w obszarze [— opcje kompilatora](compiler-options.md)).
-
-
-W poniższym przykładzie kodu przedstawiono przykład pliku podpisu z przestrzeni nazw, modułu wartość funkcji i podpisy typu wraz z odpowiednich atrybutów. Przedstawia on również odpowiedniego pliku implementacji.
+Poniższy przykład kodu pokazuje przykład pliku podpisu, który ma przestrzeń nazw, moduł, wartości funkcji i podpisy typu wraz z odpowiednich atrybutów. Zawiera również odpowiedni plik implementacji.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9002.fs)]
 
 Poniższy kod przedstawia plik implementacji.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
-    
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
 
-[Kontrola dostępu](access-control.md)
+## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](compiler-options.md)
+- [Dokumentacja języka F#](index.md)
+- [Kontrola dostępu](access-control.md)
+- [Opcje kompilatora](compiler-options.md)

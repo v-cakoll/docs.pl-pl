@@ -1,18 +1,17 @@
 ---
 title: Właściwości (F#)
-description: 'Więcej informacji na temat języka F # właściwości, które są elementami członkowskimi, które reprezentują wartości skojarzone z obiektem.'
+description: 'Więcej informacji na temat F # właściwości, które są elementami członkowskimi, które reprezentują wartości skojarzonych z obiektem.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7aa71b1801b44fedcb420b824078004c6c240dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566164"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784897"
 ---
 # <a name="properties"></a>Właściwości
 
-*Właściwości* są elementy członkowskie, które reprezentują wartości skojarzone z obiektem.
-
+*Właściwości* są elementami członkowskimi, które reprezentują wartości skojarzonych z obiektem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,17 +56,18 @@ with set parameter =
 ```
 
 ## <a name="remarks"></a>Uwagi
-Reprezentuje właściwości "ma" relacji w programowanie zorientowane obiektowo reprezentujący dane skojarzone z wystąpień obiektu lub, w przypadku statycznej właściwości, z typem.
 
-Można zadeklarować właściwości na dwa sposoby, w zależności od tego, czy mają być jawnie określić wartości podstawowej (nazywanych również magazynu zapasowego) dla właściwości lub jeśli chcesz zezwolić kompilator, aby automatycznie wygenerować magazynu zapasowego dla Ciebie. Ogólnie rzecz biorąc należy używać dokładniejsze sposób, jeśli właściwość ma nieuproszczone implementacji oraz sposób automatyczne, gdy właściwość jest tylko proste otoki dla wartości lub zmiennej. Aby jawnie deklarować właściwość, należy użyć `member` — słowo kluczowe. Ta składnia deklaratywne następuje składnię, która określa `get` i `set` metody o nazwie *metody dostępu*. Różne rodzaje jawnej składni wyświetlone w sekcji składni są używane dla właściwości tylko do odczytu i zapisu — tylko do odczytu i zapisu. Dla właściwości tylko do odczytu, możesz określić, tylko `get` metody; dla właściwości tylko do zapisu, zdefiniuj tylko `set` metody. Należy pamiętać, że jeśli właściwość ma zarówno atrybut `get` i `set` metody dostępu, alternatywne składni można określić atrybuty i modyfikatory dostępności, które są inne dla każdego dostępu, jak to pokazano w poniższym kodzie.
+Właściwości reprezentują "zawiera" relacji w programowanie zorientowane obiektowo, reprezentujący dane, który jest skojarzony z wystąpieniami obiektu lub, w przypadku statycznej właściwości, z typem.
+
+Można zadeklarować właściwości na dwa sposoby, w zależności od tego, czy chcesz jawnie określić podstawową wartość (nazywane również magazyn zapasowy) dla właściwości lub jeśli chcesz umożliwić kompilatorowi automatyczne generowanie magazyn zapasowy. Ogólnie rzecz biorąc należy użyć dokładniejsze sposób, jeśli właściwość ma nieuproszczone implementacji i automatyczny sposób, gdy właściwość jest tylko proste otoka wartość lub zmienną. Aby jawnie zadeklarować właściwości, użyj `member` — słowo kluczowe. Następuje po tej składni deklaratywnej składni, która określa `get` i `set` metody o nazwie *Akcesory*. Różne rodzaje jawnej składni przedstawione w sekcji składni są używane do właściwości tylko do odczytu i zapisu — tylko do odczytu/zapisu. Dla właściwości tylko do odczytu, należy zdefiniować tylko `get` metody; dla właściwości tylko do zapisu, zdefiniuj jedynie `set` metody. Należy pamiętać, że jeśli właściwość ma jednocześnie `get` i `set` metod dostępu, alternatywnej składni można określić atrybuty i modyfikatory dostępności, które różnią się dla każdej metody dostępu, jak pokazano w poniższym kodzie.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3201.fs)]
 
-Dla właściwości odczytu/zapisu, które mają zarówno `get` i `set` metoda, kolejność `get` i `set` można wycofać. Alternatywnie można udostępnić składni wyświetlany dla `get` tylko i składni wyświetlany dla `set` zamiast połączoną składnię. W ten sposób ułatwia komentarz jednostki `get` lub `set` metody, jeśli jest to coś, może być konieczne w celu. Ta alternatywa dla użycia połączoną składnię przedstawiono w poniższym kodzie.
+Dla właściwości odczytu/zapisu, które mają zarówno `get` i `set` metody, kolejność `get` i `set` można cofnąć. Alternatywnie, możesz podać składni przedstawionej na `get` tylko i składni przedstawionej na `set` zamiast połączoną składnię. W ten sposób sprawia, że łatwiej komentarz osoby `get` lub `set` metody, jeśli jest coś, co może być konieczne. Zamiast tego połączoną składnię pozwalającą przedstawiono w poniższym kodzie.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-Prywatne wartości blokady dane dla właściwości są nazywane *magazyny kopii*. Aby kompilator automatycznie twórz magazynu zapasowego, użyj słowa kluczowe `member val`, Pomiń własny identyfikator, a następnie podaj wyrażenie zainicjować właściwość. Jeśli właściwość ma być modyfikowalna, obejmują `with get, set`. Na przykład następujący typ klasy zawiera dwie automatycznie implementowanej właściwości. `Property1` jest tylko do odczytu które jest inicjowane z argumentem dostarczonym do podstawowego konstruktora i `Property2` jest można ustawić właściwości zainicjowana na pusty ciąg:
+Prywatne wartości danych dla właściwości są nazywane blokady *kopii magazynów*. Aby kompilator automatycznie tworzyć magazyn zapasowy, należy używać słów kluczowych `member val`, Pomiń własny identyfikator, a następnie podaj wyrażenie można zainicjować właściwości. Jeśli właściwość ma być modyfikowalny, Uwzględnij `with get, set`. Na przykład następujący typ klasy zawiera dwie automatycznie implementowanej właściwości. `Property1` jest tylko do odczytu i jest inicjowany do argumentu dostarczane do konstruktora podstawowego i `Property2` jest konfigurowalną właściwość zainicjowana na pusty ciąg:
 
 ```fsharp
 type MyClass(property1 : int) =
@@ -75,7 +75,7 @@ member val Property1 = property1
 member val Property2 = "" with get, set
 ```
 
-Automatycznie implementowanej właściwości są część inicjowania typu, więc muszą być uwzględnione przed inne definicje elementu członkowskiego, tak jak `let` powiązania i `do` powiązania w definicji typu. Należy pamiętać, że wyrażenie, które inicjuje automatycznie implementowanej właściwości jest obliczane tylko po zainicjowaniu, a nie każdorazowego uzyskiwania dostępu do właściwości. Jest to zachowanie w przeciwieństwie do zachowania jawnie implementowana właściwość. Co to oznacza to, jest to, że kod do zainicjowania te właściwości są dodawane do konstruktora klasy. Rozważmy następujący kod, który pokazuje tej różnicy:
+Automatycznie implementowanych właściwości są częścią inicjowania typu, więc muszą być uwzględnione przed inne definicje elementu członkowskiego, podobnie jak `let` powiązania i `do` powiązania w definicji typu. Należy pamiętać, że wyrażenie, które inicjuje automatycznie implementowanej właściwości jest oceniane tylko po zainicjowaniu, a nie za każdym razem, gdy uzyskano dostęp do właściwości. To zachowanie jest w przeciwieństwie do zachowania jawnie implementowanej właściwości. Skutecznie oznacza to, że kod, aby zainicjować tych właściwości jest dodawany do konstruktora klasy. Należy wziąć pod uwagę następujący kod, który pokazuje różnicę:
 
 ```fsharp
 type MyClass() =
@@ -100,50 +100,50 @@ class1.ExplicitProperty = 978922705
 class1.ExplicitProperty = 1131210765
 ```
 
-Dane wyjściowe poprzedni kod pokazuje, że wartość AutoProperty jest bez zmian po wywołaniu wielokrotnie, natomiast ExplicitProperty zmienia zawsze, gdy jest ona wywoływana. Oznacza to, że wyrażenie dla automatycznie implementowanej właściwości nie jest następuje za każdym razem, jako metoda pobierająca właściwości jawne.
-
+Dane wyjściowe dla poprzedniego kodu pokazuje, że wartość AutoProperty jest niezmieniony po wywołaniu wielokrotnie, natomiast ExplicitProperty zmienia za każdym razem, które jest wywoływane. W tym przykładzie pokazano wyrażenie dla automatycznie implementowanej właściwości nie jest oceniany za każdym razem jest metoda pobierająca właściwości jawnego.
 
 >[!WARNING]
-Istnieją pewne biblioteki, takich jak Entity Framework (`System.Data.Entity`) który wykonywać operacje niestandardowe w konstruktorów klasy podstawowej, które nie działają prawidłowo w przypadku inicjowania automatycznie implementowanej właściwości. W takim wypadku spróbuj użyć jawnego właściwości.
+Istnieją pewne bibliotek, takich jak Entity Framework (`System.Data.Entity`) które wykonują operacje niestandardowe w Konstruktory klasy bazowej, które nie działają prawidłowo w przypadku inicjowania automatycznie implementowanych właściwości. W takich przypadkach Użyj jawnego właściwości.
 
-Właściwości mogą być elementami członkowskimi klas, struktur, rozłączne, rekordy, interfejsów i rozszerzenia typu i może być także definiowane w wyrażeniach obiektów.
+Właściwości mogą być składowymi typu klasy, struktury, związki dyskryminowane, rekordy, interfejsy i rozszerzeń typu i można także definiować w wyrażeniach obiektu.
 
-Atrybuty można zastosować do właściwości. Aby zastosować atrybut do właściwości, należy zapisać atrybut w osobnym wierszu przed właściwości. Aby uzyskać więcej informacji, zobacz [atrybutów](../attributes.md).
+Atrybuty można zastosować do właściwości. Aby zastosować atrybut do właściwości, Zapisywanie atrybutu w osobnym wierszu przed właściwości. Aby uzyskać więcej informacji, zobacz [atrybuty](../attributes.md).
 
-Domyślnie właściwości są publiczne. Modyfikatory dostępności można również będą stosowane do właściwości. Aby zastosować modyfikator dostępności, dodaj go bezpośrednio przed nazwę właściwości, jeśli jest on przeznaczony do stosowania zarówno `get` i `set` metod; Dodaj go przed `get` i `set` słów kluczowych w przypadku różnych ułatwień dostępu wymagany w przypadku każdej metody dostępu. *Modyfikator dostępności* może być jedną z następujących czynności: `public`, `private`, `internal`. Aby uzyskać więcej informacji, zobacz [kontroli dostępu](../access-control.md).
+Właściwości są domyślnie publiczne. Modyfikatory dostępności można również będą stosowane do właściwości. Do zastosowania modyfikatora dostępności, dodaj go bezpośrednio przed nazwę właściwości, jeśli jest on przeznaczony do stosowania zarówno `get` i `set` metod; Dodaj przed `get` i `set` słów kluczowych, jeśli jest różnej dostępności wymagane dla każdej metody dostępu. *Modyfikator dostępności* może być jedną z następujących czynności: `public`, `private`, `internal`. Aby uzyskać więcej informacji, zobacz [kontroli dostępu](../access-control.md).
 
-Implementacje właściwości są wykonywane zawsze, gdy właściwość jest dostępna.
+Implementacje właściwości są wykonywane za każdym razem, którego uzyskano dostęp do właściwości.
 
+## <a name="static-and-instance-properties"></a>Statyczne i właściwości instancji
 
-## <a name="static-and-instance-properties"></a>Statyczne i wystąpienia właściwości
-Właściwości mogą być statyczne lub wystąpienia właściwości. Właściwości statyczne mogą być wywoływane bez wystąpienia i są używane dla wartości skojarzone z typem, a nie z poszczególnych obiektów. W przypadku statycznej właściwości pominąć własny identyfikator. Wymagany dla właściwości wystąpienia jest własny identyfikator.
+Właściwości mogą być statyczne lub wystąpienia właściwości. Właściwości statyczne mogą być wywoływane bez wystąpienia i są używane dla wartości skojarzonej z typem, nie za pomocą poszczególnych obiektów. W przypadku statycznej właściwości pominąć własny identyfikator. Własny identyfikator jest wymagany dla właściwości wystąpienia.
 
-Następujące definicja właściwość statyczna jest oparta na scenariusz, w którym zostały pola statycznego `myStaticValue` czyli magazynu zapasowego dla właściwości.
+Następująca definicja właściwość statyczna opiera się na scenariuszu, w którym masz pole statyczne `myStaticValue` oznacza to magazyn zapasowy właściwości.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3204.fs)]
 
-Właściwości można też tablicy, w którym to przypadku są nazywane *właściwości indeksowanych*. Aby uzyskać więcej informacji, zobacz [właściwości indeksowanych](indexed-properties.md).
-
+Właściwości można też tablicy, w którym to przypadku są one nazywane *właściwości indeksowanych*. Aby uzyskać więcej informacji, zobacz [właściwości indeksowanych](indexed-properties.md).
 
 ## <a name="type-annotation-for-properties"></a>Adnotacja typu dla właściwości
-W wielu przypadkach kompilator ma za mało informacji do wywnioskowania typu właściwość z typu magazynu zapasowego, ale typ można ustawić jawnie przez dodanie adnotacji typu.
+
+W wielu przypadkach kompilator ma za mało informacji do wywnioskowania typu właściwość z typu magazynu pomocniczego tak, ale można ustawić typ jawnie dodając adnotację typu.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3205.fs)]
 
-## <a name="using-property-set-accessors"></a>Za pomocą właściwości metod dostępu set
-Można ustawić właściwości, które zapewniają `set` metody dostępu za pomocą `<-` operatora.
+## <a name="using-property-set-accessors"></a>Przy użyciu właściwości zestawu metod dostępu
+
+Można ustawić właściwości, które zapewniają `set` metod dostępu za pomocą `<-` operatora.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3206.fs)]
 
-Dane wyjściowe **20**.
-
+Dane wyjściowe są **20**.
 
 ## <a name="abstract-properties"></a>Właściwości abstrakcyjne
-Właściwości mogą być abstrakcyjne. Podobnie jak w przypadku metod `abstract` oznacza brak wysyłki wirtualny skojarzony z właściwością. Właściwości abstrakcyjne mogą być naprawdę abstrakcyjne, oznacza to, bez definicji w tej samej klasy. Klasa, która zawiera właściwość elementu w związku z tym jest klasą abstrakcyjną. Alternatywnie abstrakcyjny tylko może oznaczać, że właściwość jest wirtualna i w takim przypadku definicji musi występować w tej samej klasy. Należy pamiętać, że właściwości abstrakcyjne nie może być prywatny, a jeśli jedną metodę dostępu jest abstrakcyjna, druga musi również być abstrakcyjne. Aby uzyskać więcej informacji na temat klas abstrakcyjnych, zobacz [klas abstrakcyjnych](../abstract-classes.md).
+
+Właściwości mogą być abstrakcyjne. Podobnie jak w przypadku metod, `abstract` po prostu oznacza, że istnieje wysyłania wirtualne, skojarzony z właściwością. Właściwości abstrakcyjne mogą być naprawdę abstrakcyjne, oznacza to, bez definicji w tej samej klasie. Klasa, która zawiera takie właściwości, w związku z tym jest klasą abstrakcyjną. Alternatywnie abstrakcyjny po prostu może oznaczać, czy właściwość jest wirtualna, a w takim przypadku definicję musi znajdować się w tej samej klasy. Należy pamiętać, że właściwości abstrakcyjne nie mogą być prywatne i jeśli jedną metodę dostępu są abstrakcyjne, druga również musi być abstrakcyjna. Aby uzyskać więcej informacji na temat klasy abstrakcyjne, zobacz [klasy abstrakcyjne](../abstract-classes.md).
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3207.fs)]
 
-## <a name="see-also"></a>Zobacz też
-[Elementy członkowskie](index.md)
+## <a name="see-also"></a>Zobacz także
 
-[Metody](methods.md)
+- [Elementy członkowskie](index.md)
+- [Metody](methods.md)

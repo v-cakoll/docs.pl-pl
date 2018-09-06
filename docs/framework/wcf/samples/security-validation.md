@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: f77b01633f214d3a8c4ad8d7226375c3ed2368fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0aaa88268959561cabe4613d51feb0f219275634
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504387"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746746"
 ---
 # <a name="security-validation"></a>Walidacja zabezpieczeń
-W tym przykładzie przedstawiono sposób użycia niestandardowego zachowania do sprawdzania poprawności usług na komputerze, aby upewnić się, że spełniają określone kryteria. W tym przykładzie usług są weryfikowane przez niestandardowe działanie przez skanowanie za pomocą każdego punktu końcowego w usłudze i sprawdzanie, czy zawierają one elementy bezpiecznego powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+W tym przykładzie pokazano, jak umożliwia zachowanie niestandardowe sprawdzanie poprawności usługi na komputerze, aby upewnić się, że spełniają określone kryteria. W tym przykładzie usług są weryfikowane przez niestandardowe zachowanie przez skanowanie za pomocą każdego punktu końcowego w usłudze i sprawdzanie, czy zawierają one elementy bezpiecznego powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
 ## <a name="endpoint-validation-custom-behavior"></a>Niestandardowe zachowanie weryfikacji punktu końcowego  
- Dodając kod użytkownika do `Validate` metody zawarte w <xref:System.ServiceModel.Description.IServiceBehavior> interfejsu, niestandardowe zachowanie można przydzielić do usługi lub punkt końcowy do wykonania akcji zdefiniowane przez użytkownika. Poniższy kod służy do pętli każdego punktu końcowego objętych usługą, które wyszukiwania za pomocą ich kolekcji powiązanie dla bezpiecznego powiązania.  
+ Dodając kod użytkownika do `Validate` metoda zawarte w <xref:System.ServiceModel.Description.IServiceBehavior> interfejsu, niestandardowe zachowanie można nadać usługi lub punktu końcowego do wykonywania akcji zdefiniowane przez użytkownika. Poniższy kod umożliwia jednoczesne każdy punkt końcowy znajdujących się w usłudze wyszukiwania za pomocą ich kolekcji powiązania dla bezpiecznych powiązań.  
   
 ```  
 public void Validate(ServiceDescription serviceDescription,   
@@ -49,7 +49,7 @@ public void Validate(ServiceDescription serviceDescription,
 }  
 ```  
   
- Dodawanie następujący kod do pliku Web.config dodaje `serviceValidate` rozszerzenia zachowania usługi do rozpoznania.  
+ Dodając następujący kod do pliku Web.config dodaje `serviceValidate` rozszerzenia zachowania dla usługi, rozpoznawał.  
   
 ```xml  
 <system.serviceModel>  
@@ -61,7 +61,7 @@ public void Validate(ServiceDescription serviceDescription,
 ...  
 ```  
   
- Po dodaniu rozszerzenia zachowania do usługi jest teraz można dodać `endpointValidate` zachowania do listy zachowania w pliku Web.config i w związku z tym do usługi.  
+ Po dodaniu rozszerzenia zachowania do usługi jest teraz można dodać `endpointValidate` zachowanie na liście zachowań w pliku Web.config, a w związku z usługą.  
   
 ```xml  
 <behaviors>  
@@ -74,39 +74,39 @@ public void Validate(ServiceDescription serviceDescription,
 </behaviors>  
 ```  
   
- Zachowania i ich rozszerzeń, które są dodawane do pliku Web.config dotyczą zachowania poszczególnych usług, podczas gdy dodany do pliku Machine.config zastosować zachowanie do każdej usługi, które są aktywne na komputerze.  
+ Zachowania i ich rozszerzeń, które są dodawane do pliku Web.config, zachowanie mają zastosowanie do poszczególnych usług, podczas gdy po dodaniu do pliku Machine.config zastosować zachowanie do każdej usługi, które są aktywne na komputerze.  
   
 > [!NOTE]
->  Podczas dodawania zachowania do wszystkich usług, zalecane jest aby utworzyć kopię zapasową pliku Machine.config przed wprowadzeniem zmian.  
+>  Podczas dodawania zachowanie do wszystkich usług, zalecane jest aby utworzyć kopię zapasową pliku Machine.config przed wprowadzeniem zmiany.  
   
- Teraz z klientem w katalogu client\bin tego przykładu. Wyjątek ma występuje następujący komunikat o błędzie: "żądanej usługi"http://localhost/servicemodelsamples/service.svc"nie można aktywować." Oczekuje się, ponieważ przyjęto, że punkt końcowy jest niebezpieczne przez punkt końcowy, sprawdzanie poprawności zachowania i uniemożliwia uruchomienie usługi. Zachowanie również zgłasza wyjątek wewnętrzny, który opisano, który punkt końcowy jest niebezpieczne i zapisuje komunikat do systemu Podglądu zdarzeń w źródle "System.ServiceModel 4.0.0.0" oraz kategorii "WebHost". Użytkownik może również włączyć śledzenie usługi, w tym przykładzie. Dzięki temu użytkownikowi na wyświetlanie wyjątki wyrzucane przez działanie sprawdzania poprawności punktu końcowego, otwierając wynikowy ślady usługi za pomocą narzędzia podglądu śledzenia usługi.  
+ Teraz z klientem w katalogu client\bin tego przykładu. Wyjątek występuje z następującym komunikatem: "żądanej usługi"http://localhost/servicemodelsamples/service.svc"nie można aktywować." Oczekuje się, ponieważ punkt końcowy jest uznawana za niebezpieczne przez punkt końcowy, sprawdzanie poprawności zachowanie i uniemożliwia uruchomienie usługi. Zachowanie zgłasza również wyjątek wewnętrzny, opisujący którym punktem końcowym jest niebezpieczne i zapisuje komunikat do systemu Podglądu zdarzeń w źródle "System.ServiceModel 4.0.0.0" oraz kategorii "Hostem sieci Web". Użytkownik może również włączyć śledzenie usługi w tym przykładzie. Dzięki temu można wyświetlić wyjątki generowane przez działanie sprawdzania poprawności punktu końcowego, otwierając wynikowy śladów usługi za pomocą narzędzia przeglądarki danych śledzenia usługi.  
   
-#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Aby wyświetlić nie powiodło się komunikaty o wyjątku weryfikacji punktu końcowego w Podglądzie zdarzeń  
+#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Aby wyświetlić nie powiodło się komunikaty o wyjątkach weryfikacji punktu końcowego w Podglądzie zdarzeń  
   
-1.  Kliknij przycisk **Start** menu i wybierz **Uruchom...** .  
+1.  Kliknij przycisk **Start** menu, a następnie wybierz **uruchamianie...** .  
   
 2.  Typ `eventvwr` i kliknij przycisk **OK**.  
   
-3.  W oknie Podgląd zdarzeń, kliknij przycisk **aplikacji**.  
+3.  W oknie podglądu zdarzeń kliknij **aplikacji**.  
   
-4.  Kliknij dwukrotnie zdarzenie ostatnio dodane "System.ServiceModel 4.0.0.0" w kategorii "WebHost" w **aplikacji** okna, aby wyświetlić komunikaty niezabezpieczonych punktu końcowego.  
+4.  Kliknij dwukrotnie zdarzenie ostatnio dodane "System.ServiceModel 4.0.0.0" w kategorii "WebHost" w **aplikacji** okna, aby wyświetlić komunikaty niezabezpieczone punktu końcowego.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykłady monitorowania AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

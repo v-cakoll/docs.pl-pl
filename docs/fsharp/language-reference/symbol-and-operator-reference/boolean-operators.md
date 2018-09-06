@@ -1,33 +1,32 @@
 ---
 title: Operatory logiczne (F#)
-description: 'Więcej informacji na temat operatorów logicznych, które są dostępne w języku programowania w języku F #.'
+description: 'Więcej informacji na temat operatorów logicznych, które są dostępne w F # języka programowania.'
 ms.date: 05/16/2016
-ms.openlocfilehash: f8516ceb531907400f98dc4226d2985d3119e9e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563431"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784517"
 ---
 # <a name="boolean-operators"></a>Operatory logiczne
 
 W tym temacie opisano obsługę operatorów logicznych w języku F #.
 
-
 ## <a name="summary-of-boolean-operators"></a>Podsumowanie operatory logiczne
-Poniższa tabela zawiera podsumowanie operatorów logicznych, które są dostępne w języku F #. Jest to jedyny typ obsługiwany przez te podmioty `bool` typu.
+
+Poniższa tabela zawiera podsumowanie operatorów logicznych, które są dostępne w języku F #. Jest to jedyny typ obsługiwanych przez te operatory `bool` typu.
 
 |Operator|Opis|
 |--------|-----------|
-|`not`|Logiczna Negacja|
-|<code>&#124;&#124;</code>|Wartość logiczna lub|
-|`&&`|Wartość logiczna AND|
+|`not`|Negacja logiczna|
+|<code>&#124;&#124;</code>|Logiczne OR|
+|`&&`|AND logiczne|
 
-Wykonaj logicznych AND i OR operatory *ocena zwarcia*, to znaczy umożliwiają podawanie wartości wyrażenie po prawej stronie operatora tylko w przypadku, gdy jest to niezbędne do obliczenia ogólnej wyniku wyrażenia. Drugie wyrażenie `&&` operator jest oceniany, tylko, jeśli pierwsze wyrażenie daje w wyniku `true`; drugie wyrażenie `||` operator jest oceniany, tylko, jeśli pierwsze wyrażenie daje w wyniku `false`.
+Logiczne AND i OR operatory wykonać *zwarcia*, czyli umożliwiają podawanie wartości wyrażenia po prawej stronie operatora tylko w przypadku, gdy jest to konieczne określić ogólny wynik wyrażenia. Drugie wyrażenie `&&` operator jest oceniane tylko wtedy, gdy pierwsze wyrażenie, które daje w wyniku `true`; drugie wyrażenie `||` operator jest oceniane tylko wtedy, gdy pierwsze wyrażenie, które daje w wyniku `false`.
 
-## <a name="see-also"></a>Zobacz też
-[Operatory bitowe](bitwise-operators.md)
+## <a name="see-also"></a>Zobacz także
 
-[Operatory arytmetyczne](arithmetic-operators.md)
-
-[Odwołanie do symboli i operatorów](index.md)
+- [Operatory bitowe](bitwise-operators.md)
+- [Operatory arytmetyczne](arithmetic-operators.md)
+- [Odwołanie do symboli i operatorów](index.md)

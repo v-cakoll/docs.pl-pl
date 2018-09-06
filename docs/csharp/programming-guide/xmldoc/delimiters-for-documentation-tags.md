@@ -6,36 +6,36 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 8c5e7b0e921c7720524b9fa398f2c5d451747e3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06bd997e6862bc1f86ad2e3b2afbbb5afac78d9c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325685"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43737571"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Ograniczniki tagów dokumentacji (Przewodnik programowania w języku C#)
-Korzystanie z komentarze w dokumencie XML wymaga ograniczników, które wskazują w kompilatorze, gdzie komentarzy dokumentacji rozpoczęcia i zakończenia. Można użyć następujące rodzaje ograniczniki tagów dokumentacji XML:  
+Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują kompilatora, gdzie rozpoczyna się i kończy w komentarzu dokumentacji. Za pomocą następujących rodzajów ograniczniki tagów dokumentacji XML:  
   
  `///`  
- Ogranicznik jeden wiersz. Jest to formularz, który jest wyświetlany w przykładach dokumentacji i używane przez Szablony projektów Visual C#. W przypadku biały znak po znaku ograniczającym ten znak nie jest uwzględniony w danych wyjściowych XML.  
+ Ogranicznik jeden wiersz. Jest to forma, pokazano w przykładach dokumentacji i używane przez Szablony projektu Visual C#. W przypadku biały znak po znaku ograniczającym ten znak nie znajduje się w danych wyjściowych XML.  
   
 > [!NOTE]
->  Środowiska IDE programu Visual Studio ma funkcję inteligentne komentarz edycji automatycznie wstawiany \<podsumowania > i \</summary > Znaczniki i przesuwa kursor w ramach tych tagów po wpisaniu `///` ogranicznik w edytorze kodu . Można włączyć tę funkcję lub wyłączyć [opcje — Okno dialogowe](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
+>  Środowiska IDE programu Visual Studio zawiera funkcję o nazwie inteligentne edytowanie komentarzy, automatycznie wstawi \<podsumowania > i \</summary > Znaczniki i przenosi kursor w ramach tych znaczników po wpisaniu `///` ogranicznika w edytorze kodu . Można włączyć tę funkcję lub wyłączyć [okno dialogowe Opcje](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
   
  `/** */`  
  Wielowierszowy ograniczników.  
   
- Brak niektórych reguł formatowania, które należy wykonać, korzystając z `/** */` ograniczników.  
+ Istnieją pewne reguły formatowania do wykonania, gdy używasz `/** */` ograniczników.  
   
--   W wierszu, który zawiera `/**` ogranicznik, jeśli do końca wiersza jest białe, wiersz nie został przetworzony przeznaczone do komentarzy. Jeśli pierwszym znakiem po `/**` ogranicznik jest białe, czy biały znak jest ignorowane, a pozostałe wiersz jest przetwarzany. W przeciwnym razie cały tekst wiersza po `/**` ogranicznik jest przetwarzany jako część komentarza.  
+-   W wierszu, który zawiera `/**` ogranicznik, jeśli pozostałą część wiersza jest biały znak, wiersz nie został przetworzony komentarzy. Jeśli pierwszy znak po `/**` ogranicznik jest odstępu, że biały znak jest ignorowana, a pozostała część wiersza jest przetwarzany. W przeciwnym razie cały tekst wiersza po `/**` ogranicznik jest przetwarzany jako część komentarza.  
   
--   W wierszu, który zawiera `*/` ogranicznik, jeśli istnieje tylko biały znak do `*/` ogranicznika wiersza jest ignorowana. W przeciwnym razie tekst w wierszu do `*/` ogranicznik jest przetwarzany jako część komentarza, opisane w poniższych punktor zasadom dopasowywanie do wzorca.  
+-   W wierszu, który zawiera `*/` ogranicznik, jeśli występuje maksymalnie białych znaków `*/` ogranicznik, w tym wierszu jest ignorowany. W przeciwnym razie tekst w wierszu do `*/` ogranicznik jest przetwarzany jako część komentarza, zgodnie z regułami dopasowywania wzorca opisanego w następny.  
   
--   Po tym, który rozpoczyna się od linii `/**` ogranicznik, kompilator szuka wspólnego wzorca na początku każdego wiersza. Wzorzec może zawierać białych opcjonalne i znak gwiazdki (`*`), a następnie opcjonalnie biały znak. Jeśli kompilator znajdzie wspólnego wzorca na początku każdego wiersza, który nie zaczyna się od `/**` ogranicznik lub `*/` ogranicznika ignoruje tego wzorca dla każdego wiersza.  
+-   Wiersze po ten, który rozpoczyna się od `/**` ogranicznik, kompilator szuka wspólny wzorzec na początku każdego wiersza. Wzorzec może zawierać opcjonalny odstęp i znak gwiazdki (`*`), a następnie więcej opcjonalny odstęp. Jeśli kompilator znajdzie wspólny wzorzec na początku każdego wiersza, który nie zaczyna się od `/**` ogranicznik lub `*/` ogranicznika ignoruje tego wzorca dla każdego wiersza.  
   
- Poniższe przykłady przedstawiają te reguły.  
+ Poniższe przykłady ilustrują tych reguł.  
   
--   Tylko część następujące komentarz, który zostanie przetworzona jest wiersza, który rozpoczyna się od `<summary>`. Trzy formaty utworzyć samą komentarze.  
+-   To jedyna część Poniższy komentarz, które będą przetwarzane jest wiersz, który rozpoczyna się od `<summary>`. Formaty trzech etykiet generuje ten sam komentarzy.  
   
     ```  
     /** <summary>text</summary> */   
@@ -49,7 +49,7 @@ Korzystanie z komentarze w dokumencie XML wymaga ograniczników, które wskazuj�
     */  
     ```  
   
--   Kompilator identyfikuje typowe wzorzec "*" na początku linii drugiego i trzeciego. Wzorzec nie jest uwzględniony w danych wyjściowych.  
+-   Kompilator identyfikuje wspólny wzorzec "*" na początku linii drugiego i trzeciego. Wzorzec jest niedostępna w danych wyjściowych.  
   
     ```  
     /**   
@@ -57,7 +57,7 @@ Korzystanie z komentarze w dokumencie XML wymaga ograniczników, które wskazuj�
      * text </summary>*/   
     ```  
   
--   Kompilator znajduje nie wspólnego wzorca w poniższy komentarz, ponieważ znak na trzeci wiersz nie jest znak gwiazdki. W związku z tym cały tekst w wierszach drugiego i trzeciego są przetwarzane w ramach komentarza.  
+-   Kompilator znajdzie nie wspólny wzorzec w poniższy komentarz, ponieważ drugim znakiem w trzecim wierszu nie jest znak gwiazdki. W związku z tym cały tekst w wierszach drugiej i trzeciej są przetwarzane w ramach komentarza.  
   
     ```  
     /**   
@@ -66,7 +66,7 @@ Korzystanie z komentarze w dokumencie XML wymaga ograniczników, które wskazuj�
     */   
     ```  
   
--   Kompilator znajduje nie wzorca w komentarzu następujących dwóch powodów. Po pierwsze liczbę spacji przed gwiazdka nie jest spójna. Drugie piątej wiersz rozpoczyna się od kartę, która jest niezgodna z spacji. W związku z tym cały tekst z dwa wiersze, za pomocą pięciu są przetwarzane w ramach komentarza.  
+-   Kompilator znajdzie nie wzorca w poniższy komentarz z dwóch przyczyn. Po pierwsze liczbę spacji przed gwiazdka nie jest spójna. Po drugie piąty wiersz rozpoczyna się od kartę, która jest niezgodna z miejsc do magazynowania. W związku z tym cały tekst z dwóch wierszy, za pośrednictwem pięciu osób są przetwarzane jako część komentarza.  
   
     ```  
     /**   
@@ -77,8 +77,9 @@ Korzystanie z komentarze w dokumencie XML wymaga ograniczników, które wskazuj�
     */   
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [/ doc (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [/ doc (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

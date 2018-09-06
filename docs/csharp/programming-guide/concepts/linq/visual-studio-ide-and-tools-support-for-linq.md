@@ -2,12 +2,12 @@
 title: Obsługa narzędzi dla programu LINQ (C#) i Visual Studio IDE
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-ms.openlocfilehash: fda73a8fce9dcba54e6b69bcae02f7bdb43dfd33
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e7c5a1efb8ab6e9e9aab98a2dd07e9a85c5625b7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502328"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786599"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Obsługa narzędzi dla programu LINQ (C#) i Visual Studio IDE
 Visual Studio zintegrowane środowisko programistyczne (IDE) zapewnia następujące funkcje, które obsługują programowanie aplikacji LINQ:  
@@ -16,7 +16,7 @@ Visual Studio zintegrowane środowisko programistyczne (IDE) zapewnia następuj�
  Object Relational Designer to narzędzie projektowania wizualnego, które można używać w [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) aplikacji w celu generowania klas w języku C#, które reprezentują danych relacyjnych w źródłowej bazie danych. Aby uzyskać więcej informacji, zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>Narzędzie wiersza polecenia SQLMetal  
- Program SQLMetal to narzędzie wiersza polecenia, który może służyć w procesy kompilacji do generowania klasy z istniejących baz danych do użycia w składniku LINQ do SQL aplikacji. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](https://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).  
+ Program SQLMetal to narzędzie wiersza polecenia, który może służyć w procesy kompilacji do generowania klasy z istniejących baz danych do użycia w składniku LINQ do SQL aplikacji. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="linq-aware-code-editor"></a>Edytor kodu LINQ-Aware  
  Edytor kodu C# obsługuje LINQ, często za pomocą funkcji IntelliSense i możliwości formatowania.  

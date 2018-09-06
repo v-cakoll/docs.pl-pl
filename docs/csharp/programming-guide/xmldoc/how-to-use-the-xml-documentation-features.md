@@ -1,26 +1,26 @@
 ---
-title: 'Porady: użycie funkcji dokumentacji XML (C# przewodnik programowania w języku)'
+title: 'Porady: użycie funkcji dokumentacji XML (C# Programming Guide)'
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: b82f92cc034a13e8867cfb56866200101ab77b9b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 48654968e5099164874bae8a00767d12c8fe4582
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728735"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742076"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Porady: użycie funkcji dokumentacji XML
 
-Poniższy przykład zawiera ogólne omówienie typu, który został udokumentowany.
+Poniższy przykład zawiera omówienie podstawowych typów, które zostały opisane.
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-Przykład generuje plik XML z następującą zawartość:
+Przykład generuje plik XML z następującą zawartością:
 
 ```xml
 <?xml version="1.0"?>
@@ -108,31 +108,31 @@ Przykład generuje plik XML z następującą zawartość:
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Aby skompilować w przykładzie, wpisz następujące polecenie w wierszu:
+Aby skompilować przykład, wpisz następujące polecenie w wierszu:
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-To polecenie tworzy plik XML *XMLsample.xml*, które można wyświetlić w przeglądarce lub za pomocą polecenia typu.
+To polecenie tworzy plik XML *XMLsample.xml*, które można wyświetlić w przeglądarce lub przy użyciu polecenia typu.
 
 ## <a name="robust-programming"></a>Skuteczne programowanie
 
-Plik dokumentacji XML rozpoczyna się od lokalizacje. Podczas tworzenia nowego projektu kreatorów umieść starter lokalizacje wiersze w automatycznie. Przetwarzanie komentarze ma pewne ograniczenia:
+Dokumentacja XML rozpoczyna się od / / /. Podczas tworzenia nowego projektu kreatorów umieścić niektóre modułu uruchamiającego / / / linie w dla Ciebie. Przetwarzanie te komentarze mają pewne ograniczenia:
 
-- Dokumentację musi być poprawnie sformułowanym XML. Jeśli plik XML nie jest poprawnie sformułowany, generowania ostrzeżeń i pliku dokumentacji będzie zawierać komentarz z informacją, że wystąpił błąd podczas.
+- Dokumentacja musi być poprawnie sformułowany XML. Jeśli plik XML nie jest poprawnie sformułowany, generowane jest ostrzeżenie, a plik dokumentacja będzie zawierać komentarz, który mówi, że wystąpił błąd podczas.
 
-- Deweloperzy mogą tworzyć własne zestawu tagów. Jest zalecany zestaw tagi (zobacz [zalecane tagi przeznaczone do komentarzy dokumentacji](recommended-tags-for-documentation-comments.md)). Niektóre zalecane znaczniki mają specjalne znaczenie:
+- Deweloperzy są bezpłatne tworzenie własnych zestawów tagów. Jest zalecany zestaw znaczników (patrz [zalecane tagi przeznaczone do komentarzy dokumentacji](recommended-tags-for-documentation-comments.md)). Niektóre zalecane tagi mają specjalne znaczenie:
 
-  - \<Param > tag jest używany do opisywania parametrów. Jeśli używana, kompilator sprawdza, czy parametr istnieje i że wszystkie parametry są opisane w dokumentacji. Jeśli weryfikacja nie powiodła się, kompilator generuje ostrzeżenie.
+  - \<Param > tag jest używany do opisania parametrów. Jeśli używany, kompilator sprawdza, czy parametr istnieje i czy wszystkie parametry są opisane w dokumentacji. Jeśli weryfikacja nie powiodła się, kompilator generuje ostrzeżenie.
 
-  - `cref` Atrybut może zostać dołączony do żadnych znacznik w celu zapewnienia odwołania do elementu kodu. Kompilator sprawdza, czy istnieje tego elementu kodu. Jeśli weryfikacja nie powiodła się, kompilator generuje ostrzeżenie. Kompilator szanuje żadnego `using` instrukcje podczas wyszukiwania typu opisanego w `cref` atrybutu.
+  - `cref` Atrybutu mogą być dołączane do każdego znacznika, aby zapewnić odwołanie do elementu kodu. Kompilator sprawdza, czy ten element kodu istnieje. Jeśli weryfikacja nie powiodła się, kompilator generuje ostrzeżenie. Kompilator stosuje się do dowolnej `using` instrukcji będzie szukał typu z opisem w temacie `cref` atrybutu.
 
   - \<Podsumowania > tag jest używany przez funkcję IntelliSense w programie Visual Studio, aby wyświetlić dodatkowe informacje na temat typu lub elementu członkowskiego.
 
     > [!NOTE]
-    > Plik XML nie zapewnia pełne informacje dotyczące typu i elementów członkowskich (na przykład go nie zawiera żadnych informacji o typie). Aby uzyskać pełne informacje dotyczące typu lub elementu członkowskiego, plik dokumentacji musi być używany razem odbicia na rzeczywisty typ lub element członkowski.
+    > Plik XML nie zawiera pełne informacje na temat typów i elementów członkowskich (na przykład, go nie zawiera żadnych informacji o typie). Aby uzyskać pełne informacje dotyczące typu lub elementu członkowskiego, należy użyć pliku dokumentacji wraz z odbicia na rzeczywisty typ lub element członkowski.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-[/ doc (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
-[Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [/ doc (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  

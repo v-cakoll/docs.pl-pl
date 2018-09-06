@@ -1,17 +1,17 @@
 ---
 title: 'Wyrażenie warunkowe: if... then...else (F#)'
-description: 'Dowiedz się, jak napisać wyrażenia warunkowe w języku F # do wykonywania różnych gałęziach kodu.'
+description: 'Dowiedz się, jak napisać wyrażenie warunkowe w języku F # do wykonywania różnych gałęzi kodu.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a3ca3c20a659ccf5dc432d0a747ff176ec889e9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10e4224bef772f00520cf5a0fff2f2920147c2fc
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745199"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>Wyrażenie warunkowe: `if...then...else`
 
-`if...then...else` Wyrażenie uruchamia różnych gałęziach kodu i oblicza również innej wartości w zależności od danego wyrażenie warunkowe.
-
+`if...then...else` Wyrażenie uruchamia gałęziami kodu i oblicza również innej wartości w zależności od tego, wyrażenie logiczne, biorąc pod uwagę.
 
 ## <a name="syntax"></a>Składnia
 
@@ -20,12 +20,14 @@ if boolean-expression then expression1 [ else expression2 ]
 ```
 
 ## <a name="remarks"></a>Uwagi
-W poprzednich składni *wyrażenie1* jest uruchamiany, gdy wyrażenie warunkowe daje w wyniku `true`; w przeciwnym razie *wyrażenie2* działa.
 
-W przeciwieństwie do innych języków `if...then...else` konstrukcja jest wyrażenie nie instrukcję. Oznacza to, że generuje wartość, która jest wartością ostatniego wyrażenia w gałęzi, która wykonuje. Typy wartości wygenerowane w każdej gałęzi muszą być zgodne. Jeśli nie jawne `else` gałęzi, jego typ jest `unit`. W związku z tym jeśli typ `then` gałęzi jest dowolny typ innych niż `unit`, musi być `else` gałąź o taki sam typ zwracany. Gdy łańcucha `if...then...else` wyrażenia razem, można użyć słowa kluczowego `elif` zamiast `else if`; są równoważne.
+W poprzedniej składni *wyrażenie1* jest uruchamiany, gdy wyrażenie logiczne, które daje w wyniku `true`; w przeciwnym razie *wyrażenie2* działa.
+
+W przeciwieństwie do innych języków `if...then...else` konstrukcji, stanowi wyrażenie nie instrukcję. Oznacza to generuje wartość, która jest wartością ostatniego wyrażenia w gałęzi, który jest wykonywany. Typy wartości, utworzone w każdej gałęzi, muszą być zgodne. Jeśli nie jawne `else` gałęzi, jego typ jest `unit`. W związku z tym jeśli typ `then` gałąź jest dowolnego typu innego niż `unit`, musi istnieć `else` gałęzi przy użyciu tego samego typu zwracanego. Podczas tworzenia łańcucha `if...then...else` wyrażeń razem, można użyć słowa kluczowego `elif` zamiast `else if`; są one równoważne.
 
 ## <a name="example"></a>Przykład
-Poniższy przykład przedstawia sposób użycia `if...then...else` wyrażenia.
+
+Poniższy przykład ilustruje sposób używania `if...then...else` wyrażenia.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
@@ -36,6 +38,6 @@ How old are you? 9
 You are only 9 years old and already learning F#? Wow!
 ```
 
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
+## <a name="see-also"></a>Zobacz także
 
+- [Dokumentacja języka F#](index.md)

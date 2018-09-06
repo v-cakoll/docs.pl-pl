@@ -2,12 +2,12 @@
 title: 'Porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: ed83241b31e6e8187d26b8d071f924278f6715e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 241bd6baf0c1133ba7603da433a7cdf8d36748c0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505821"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787561"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (C#)
 Może poprawić wydajność rozwiązania asynchronicznego w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) przy użyciu <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> metody. Ta metoda asynchronicznie czeka na wiele operacji asynchronicznych, które są reprezentowane jako kolekcję zadań.  
@@ -61,7 +61,7 @@ Może poprawić wydajność rozwiązania asynchronicznego w [wskazówki: uzyskiw
     //}  
     ```  
   
-3.  Utwórz kolekcję zadań. Poniższy kod definiuje [zapytania](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , podczas wykonywania przez <xref:System.Linq.Enumerable.ToArray%2A> metody, tworzy kolekcję zadań pobierających zawartość każdej witryny sieci Web. Zadania są uruchamiane, gdy zapytanie jest obliczane.  
+3.  Utwórz kolekcję zadań. Poniższy kod definiuje [zapytania](../../../../csharp/programming-guide/concepts/linq/index.md) , podczas wykonywania przez <xref:System.Linq.Enumerable.ToArray%2A> metody, tworzy kolekcję zadań pobierających zawartość każdej witryny sieci Web. Zadania są uruchamiane, gdy zapytanie jest obliczane.  
   
      Dodaj następujący kod do metody `SumPageSizesAsync` po zadeklarowaniu `urlList`.  
   
@@ -136,7 +136,7 @@ Może poprawić wydajność rozwiązania asynchronicznego w [wskazówki: uzyskiw
     //}  
     ```  
   
-3.  Zdefiniuj [zapytania](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , podczas wykonywania przez <xref:System.Linq.Enumerable.ToArray%2A> metody, tworzy kolekcję zadań pobierających zawartość każdej witryny sieci Web. Zadania są uruchamiane, gdy zapytanie jest obliczane.  
+3.  Zdefiniuj [zapytania](../../../../csharp/programming-guide/concepts/linq/index.md) , podczas wykonywania przez <xref:System.Linq.Enumerable.ToArray%2A> metody, tworzy kolekcję zadań pobierających zawartość każdej witryny sieci Web. Zadania są uruchamiane, gdy zapytanie jest obliczane.  
   
      Dodaj następujący kod do metody `SumPageSizesAsync` po zadeklarowaniu `client` i `urlList`.  
   

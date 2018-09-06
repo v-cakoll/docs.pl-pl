@@ -11,76 +11,76 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 703d3c2260f46f46e85831f809386d5a3af647a4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406537"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731290"
 ---
-# <a name="network-programming-how-to-topics"></a><span data-ttu-id="df24b-102">Tematy porad programowanie dla sieci</span><span class="sxs-lookup"><span data-stu-id="df24b-102">Network Programming How-to Topics</span></span>
-<span data-ttu-id="df24b-103">Poniższa lista zawiera łącza do tematów instrukcje w dokumentacji koncepcyjnej programowanie dla sieci.</span><span class="sxs-lookup"><span data-stu-id="df24b-103">The following list includes links to the How-to topics found in the conceptual documentation for network programming.</span></span>  
+# <a name="network-programming-how-to-topics"></a><span data-ttu-id="4187d-102">Tematy porad programowanie dla sieci</span><span class="sxs-lookup"><span data-stu-id="4187d-102">Network Programming How-to Topics</span></span>
+<span data-ttu-id="4187d-103">Poniższa lista zawiera łącza do tematów instrukcje w dokumentacji koncepcyjnej programowanie dla sieci.</span><span class="sxs-lookup"><span data-stu-id="4187d-103">The following list includes links to the How-to topics found in the conceptual documentation for network programming.</span></span>  
   
- <span data-ttu-id="df24b-104">**Żądanie danych:**</span><span class="sxs-lookup"><span data-stu-id="df24b-104">**Requesting Data:**</span></span>  
+ <span data-ttu-id="4187d-104">**Żądanie danych:**</span><span class="sxs-lookup"><span data-stu-id="4187d-104">**Requesting Data:**</span></span>  
   
--   [<span data-ttu-id="df24b-105">Instrukcje: żądanie strony internetowej i pobieranie wyników jako strumienia</span><span class="sxs-lookup"><span data-stu-id="df24b-105">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
+-   [<span data-ttu-id="4187d-105">Instrukcje: żądanie strony internetowej i pobieranie wyników jako strumienia</span><span class="sxs-lookup"><span data-stu-id="4187d-105">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
   
--   [<span data-ttu-id="df24b-106">Instrukcje: żądanie danych przy użyciu klasy WebRequest</span><span class="sxs-lookup"><span data-stu-id="df24b-106">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
+-   [<span data-ttu-id="4187d-106">Instrukcje: żądanie danych przy użyciu klasy WebRequest</span><span class="sxs-lookup"><span data-stu-id="4187d-106">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
   
--   [<span data-ttu-id="df24b-107">Instrukcje: przesyłanie danych przy użyciu klasy WebRequest</span><span class="sxs-lookup"><span data-stu-id="df24b-107">How to: Send Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)  
+-   [<span data-ttu-id="4187d-107">Instrukcje: przesyłanie danych przy użyciu klasy WebRequest</span><span class="sxs-lookup"><span data-stu-id="4187d-107">How to: Send Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)  
   
--   [<span data-ttu-id="df24b-108">Instrukcje: pobieranie elementu WebResponse specyficznego dla protokołu, który odpowiada elementowi WebRequest</span><span class="sxs-lookup"><span data-stu-id="df24b-108">How to: Retrieve a Protocol-Specific WebResponse that Matches a WebRequest</span></span>](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
+-   [<span data-ttu-id="4187d-108">Instrukcje: pobieranie elementu WebResponse specyficznego dla protokołu, który odpowiada elementowi WebRequest</span><span class="sxs-lookup"><span data-stu-id="4187d-108">How to: Retrieve a Protocol-Specific WebResponse that Matches a WebRequest</span></span>](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
   
- <span data-ttu-id="df24b-109">**Protokołów podłączanych i aplikacji:**</span><span class="sxs-lookup"><span data-stu-id="df24b-109">**Pluggable and Application Protocols:**</span></span>  
+ <span data-ttu-id="4187d-109">**Protokołów podłączanych i aplikacji:**</span><span class="sxs-lookup"><span data-stu-id="4187d-109">**Pluggable and Application Protocols:**</span></span>  
   
--   [<span data-ttu-id="df24b-110">Instrukcje: rejestrowanie protokołu niestandardowego przy użyciu elementu WebRequest</span><span class="sxs-lookup"><span data-stu-id="df24b-110">How to: Register a Custom Protocol Using WebRequest</span></span>](../../../docs/framework/network-programming/how-to-register-a-custom-protocol-using-webrequest.md)  
+-   [<span data-ttu-id="4187d-110">Instrukcje: rejestrowanie protokołu niestandardowego przy użyciu elementu WebRequest</span><span class="sxs-lookup"><span data-stu-id="4187d-110">How to: Register a Custom Protocol Using WebRequest</span></span>](../../../docs/framework/network-programming/how-to-register-a-custom-protocol-using-webrequest.md)  
   
--   [<span data-ttu-id="df24b-111">Instrukcje: rzutowanie elementu WebRequest w celu uzyskania dostępu do właściwości specyficznych dla protokołu</span><span class="sxs-lookup"><span data-stu-id="df24b-111">How to: Typecast a WebRequest to Access Protocol Specific Properties</span></span>](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
+-   [<span data-ttu-id="4187d-111">Instrukcje: rzutowanie elementu WebRequest w celu uzyskania dostępu do właściwości specyficznych dla protokołu</span><span class="sxs-lookup"><span data-stu-id="4187d-111">How to: Typecast a WebRequest to Access Protocol Specific Properties</span></span>](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
   
--   [<span data-ttu-id="df24b-112">Instrukcje: dostęp do właściwości specyficznych dla protokołu HTTP</span><span class="sxs-lookup"><span data-stu-id="df24b-112">How to: Access HTTP-Specific Properties</span></span>](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)  
+-   [<span data-ttu-id="4187d-112">Instrukcje: dostęp do właściwości specyficznych dla protokołu HTTP</span><span class="sxs-lookup"><span data-stu-id="4187d-112">How to: Access HTTP-Specific Properties</span></span>](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)  
   
--   [<span data-ttu-id="df24b-113">Instrukcje: przypisywanie informacji użytkownika do połączeń grupowych</span><span class="sxs-lookup"><span data-stu-id="df24b-113">How to: Assign User Information to Group Connections</span></span>](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)  
+-   [<span data-ttu-id="4187d-113">Instrukcje: przypisywanie informacji użytkownika do połączeń grupowych</span><span class="sxs-lookup"><span data-stu-id="4187d-113">How to: Assign User Information to Group Connections</span></span>](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)  
   
--   [<span data-ttu-id="df24b-114">Instrukcje: tworzenie gniazda</span><span class="sxs-lookup"><span data-stu-id="df24b-114">How to: Create a Socket</span></span>](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
+-   [<span data-ttu-id="4187d-114">Instrukcje: tworzenie gniazda</span><span class="sxs-lookup"><span data-stu-id="4187d-114">How to: Create a Socket</span></span>](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
   
--   [<span data-ttu-id="df24b-115">Instrukcje: pobieranie plików przy użyciu protokołu FTP</span><span class="sxs-lookup"><span data-stu-id="df24b-115">How to: Download Files with FTP</span></span>](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md)  
+-   [<span data-ttu-id="4187d-115">Instrukcje: pobieranie plików przy użyciu protokołu FTP</span><span class="sxs-lookup"><span data-stu-id="4187d-115">How to: Download Files with FTP</span></span>](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md)  
   
--   [<span data-ttu-id="df24b-116">Instrukcje: przekazywanie plików przy użyciu protokołu FTP</span><span class="sxs-lookup"><span data-stu-id="df24b-116">How to: Upload Files with FTP</span></span>](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
+-   [<span data-ttu-id="4187d-116">Instrukcje: przekazywanie plików przy użyciu protokołu FTP</span><span class="sxs-lookup"><span data-stu-id="4187d-116">How to: Upload Files with FTP</span></span>](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
   
--   [<span data-ttu-id="df24b-117">Instrukcje: wyświetlanie zawartości katalogu przy użyciu protokołu FTP</span><span class="sxs-lookup"><span data-stu-id="df24b-117">How to: List Directory Contents with FTP</span></span>](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
+-   [<span data-ttu-id="4187d-117">Instrukcje: wyświetlanie zawartości katalogu przy użyciu protokołu FTP</span><span class="sxs-lookup"><span data-stu-id="4187d-117">How to: List Directory Contents with FTP</span></span>](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
   
- <span data-ttu-id="df24b-118">**Protokół internetowy w wersji 6:**</span><span class="sxs-lookup"><span data-stu-id="df24b-118">**Internet Protocol Version 6:**</span></span>  
+ <span data-ttu-id="4187d-118">**Protokół internetowy w wersji 6:**</span><span class="sxs-lookup"><span data-stu-id="4187d-118">**Internet Protocol Version 6:**</span></span>  
   
--   [<span data-ttu-id="df24b-119">Instrukcje: modyfikowanie pliku konfiguracji komputera w celu włączenia obsługi protokołu IPv6</span><span class="sxs-lookup"><span data-stu-id="df24b-119">How to: Modify the Computer Configuration File to Enable IPv6 Support</span></span>](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
+-   [<span data-ttu-id="4187d-119">Instrukcje: modyfikowanie pliku konfiguracji komputera w celu włączenia obsługi protokołu IPv6</span><span class="sxs-lookup"><span data-stu-id="4187d-119">How to: Modify the Computer Configuration File to Enable IPv6 Support</span></span>](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
- <span data-ttu-id="df24b-120">**Śledzenie sieci:**</span><span class="sxs-lookup"><span data-stu-id="df24b-120">**Network Tracing:**</span></span>  
+ <span data-ttu-id="4187d-120">**Śledzenie sieci:**</span><span class="sxs-lookup"><span data-stu-id="4187d-120">**Network Tracing:**</span></span>  
   
--   [<span data-ttu-id="df24b-121">Instrukcje: konfigurowanie śledzenia sieci</span><span class="sxs-lookup"><span data-stu-id="df24b-121">How to: Configure Network Tracing</span></span>](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
+-   [<span data-ttu-id="4187d-121">Instrukcje: konfigurowanie śledzenia sieci</span><span class="sxs-lookup"><span data-stu-id="4187d-121">How to: Configure Network Tracing</span></span>](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
   
- <span data-ttu-id="df24b-122">**Konfigurowanie pamięci podręcznej:**</span><span class="sxs-lookup"><span data-stu-id="df24b-122">**Configuring Caching:**</span></span>  
+ <span data-ttu-id="4187d-122">**Konfigurowanie pamięci podręcznej:**</span><span class="sxs-lookup"><span data-stu-id="4187d-122">**Configuring Caching:**</span></span>  
   
--   [<span data-ttu-id="df24b-123">Instrukcje: określanie zasad pamięci podręcznej na podstawie lokalizacji dla aplikacji</span><span class="sxs-lookup"><span data-stu-id="df24b-123">How to: Set a Location-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
+-   [<span data-ttu-id="4187d-123">Instrukcje: określanie zasad pamięci podręcznej na podstawie lokalizacji dla aplikacji</span><span class="sxs-lookup"><span data-stu-id="4187d-123">How to: Set a Location-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
--   [<span data-ttu-id="df24b-124">Instrukcje: określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji</span><span class="sxs-lookup"><span data-stu-id="df24b-124">How to: Set the Default Time-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+-   [<span data-ttu-id="4187d-124">Instrukcje: określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji</span><span class="sxs-lookup"><span data-stu-id="4187d-124">How to: Set the Default Time-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
--   [<span data-ttu-id="df24b-125">Instrukcje: dostosowywanie zasad pamięci podręcznej na podstawie czasu</span><span class="sxs-lookup"><span data-stu-id="df24b-125">How to: Customize a Time-Based Cache Policy</span></span>](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
+-   [<span data-ttu-id="4187d-125">Instrukcje: dostosowywanie zasad pamięci podręcznej na podstawie czasu</span><span class="sxs-lookup"><span data-stu-id="4187d-125">How to: Customize a Time-Based Cache Policy</span></span>](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
   
--   [<span data-ttu-id="df24b-126">Instrukcje: ustawianie zasad pamięci podręcznej dla żądania</span><span class="sxs-lookup"><span data-stu-id="df24b-126">How to: Set Cache Policy for a Request</span></span>](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
+-   [<span data-ttu-id="4187d-126">Instrukcje: ustawianie zasad pamięci podręcznej dla żądania</span><span class="sxs-lookup"><span data-stu-id="4187d-126">How to: Set Cache Policy for a Request</span></span>](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
- <span data-ttu-id="df24b-127">**Korzystanie z serwerów proxy:**</span><span class="sxs-lookup"><span data-stu-id="df24b-127">**Using Proxies:**</span></span>  
+ <span data-ttu-id="4187d-127">**Korzystanie z serwerów proxy:**</span><span class="sxs-lookup"><span data-stu-id="4187d-127">**Using Proxies:**</span></span>  
   
--   [<span data-ttu-id="df24b-128">Instrukcje: włączanie korzystania z serwera proxy do komunikacji z Internetem przez element WebRequest</span><span class="sxs-lookup"><span data-stu-id="df24b-128">How to: Enable a WebRequest to Use a Proxy to Communicate With the Internet</span></span>](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+-   [<span data-ttu-id="4187d-128">Instrukcje: włączanie korzystania z serwera proxy do komunikacji z Internetem przez element WebRequest</span><span class="sxs-lookup"><span data-stu-id="4187d-128">How to: Enable a WebRequest to Use a Proxy to Communicate With the Internet</span></span>](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [<span data-ttu-id="df24b-129">Instrukcje: zastępowanie wyboru globalnego serwera proxy</span><span class="sxs-lookup"><span data-stu-id="df24b-129">How to: Override a Global Proxy Selection</span></span>](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+-   [<span data-ttu-id="4187d-129">Instrukcje: zastępowanie wyboru globalnego serwera proxy</span><span class="sxs-lookup"><span data-stu-id="4187d-129">How to: Override a Global Proxy Selection</span></span>](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
- <span data-ttu-id="df24b-130">**Informacje o sieci:**</span><span class="sxs-lookup"><span data-stu-id="df24b-130">**Network Information:**</span></span>  
+ <span data-ttu-id="4187d-130">**Informacje o sieci:**</span><span class="sxs-lookup"><span data-stu-id="4187d-130">**Network Information:**</span></span>  
   
--   [<span data-ttu-id="df24b-131">Instrukcje: wykrywanie dostępności sieci i zmian adresów</span><span class="sxs-lookup"><span data-stu-id="df24b-131">How to: Detect Network Availability and Address Changes</span></span>](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md)  
+-   [<span data-ttu-id="4187d-131">Instrukcje: wykrywanie dostępności sieci i zmian adresów</span><span class="sxs-lookup"><span data-stu-id="4187d-131">How to: Detect Network Availability and Address Changes</span></span>](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md)  
   
--   [<span data-ttu-id="df24b-132">Instrukcje: uzyskiwanie informacji o interfejsie i protokole</span><span class="sxs-lookup"><span data-stu-id="df24b-132">How to: Get Interface and Protocol Information</span></span>](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
+-   [<span data-ttu-id="4187d-132">Instrukcje: uzyskiwanie informacji o interfejsie i protokole</span><span class="sxs-lookup"><span data-stu-id="4187d-132">How to: Get Interface and Protocol Information</span></span>](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
   
--   [<span data-ttu-id="df24b-133">Instrukcje: polecenie ping do hosta</span><span class="sxs-lookup"><span data-stu-id="df24b-133">How to: Ping a Host</span></span>](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
+-   [<span data-ttu-id="4187d-133">Instrukcje: polecenie ping do hosta</span><span class="sxs-lookup"><span data-stu-id="4187d-133">How to: Ping a Host</span></span>](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
-## <a name="see-also"></a><span data-ttu-id="df24b-134">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="df24b-134">See Also</span></span>  
- [<span data-ttu-id="df24b-135">Programowanie dla sieci w programie .NET Framework</span><span class="sxs-lookup"><span data-stu-id="df24b-135">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
- [<span data-ttu-id="df24b-136">Przykłady programowania sieciowego</span><span class="sxs-lookup"><span data-stu-id="df24b-136">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
- [<span data-ttu-id="df24b-137">Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN</span><span class="sxs-lookup"><span data-stu-id="df24b-137">Networking Samples for .NET on MSDN Code Gallery</span></span>](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a><span data-ttu-id="4187d-134">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4187d-134">See Also</span></span>  
+ [<span data-ttu-id="4187d-135">Programowanie dla sieci w programie .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4187d-135">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
+ [<span data-ttu-id="4187d-136">Przykłady programowania sieciowego</span><span class="sxs-lookup"><span data-stu-id="4187d-136">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="4187d-137">Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN</span><span class="sxs-lookup"><span data-stu-id="4187d-137">Networking Samples for .NET on MSDN Code Gallery</span></span>](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

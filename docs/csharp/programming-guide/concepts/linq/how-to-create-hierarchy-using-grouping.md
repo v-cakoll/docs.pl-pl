@@ -1,21 +1,21 @@
 ---
-title: 'Porady: tworzenie hierarchii za pomocą grupowania (C#)'
+title: 'Porady: tworzenie hierarchii przy użyciu grupowania (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 9ad9ea723a54b50c3d5b047408fce760a8f53273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fa384ced04a90002f8f721266f163c874d6e0ff
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327515"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741549"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="c8ca3-102">Porady: tworzenie hierarchii za pomocą grupowania (C#)</span><span class="sxs-lookup"><span data-stu-id="c8ca3-102">How to: Create Hierarchy Using Grouping (C#)</span></span>
-<span data-ttu-id="c8ca3-103">W tym przykładzie przedstawiono sposób grupowania danych, a następnie wygeneruj XML oparte na grupowanie.</span><span class="sxs-lookup"><span data-stu-id="c8ca3-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="1c10f-102">Porady: tworzenie hierarchii przy użyciu grupowania (C#)</span><span class="sxs-lookup"><span data-stu-id="1c10f-102">How to: Create Hierarchy Using Grouping (C#)</span></span>
+<span data-ttu-id="1c10f-103">W tym przykładzie przedstawiono sposób grupowania danych, a następnie wygeneruj XML, w oparciu o grupowania.</span><span class="sxs-lookup"><span data-stu-id="1c10f-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c8ca3-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="c8ca3-104">Example</span></span>  
- <span data-ttu-id="c8ca3-105">Pierwszy to przykład grupuje dane według kategorii, następnie generuje nowy plik XML, w którym hierarchii XML odzwierciedla grupowanie.</span><span class="sxs-lookup"><span data-stu-id="c8ca3-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="1c10f-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="1c10f-104">Example</span></span>  
+ <span data-ttu-id="1c10f-105">Pierwszy to przykład grupuje dane według kategorii, następnie generuje nowy plik XML, w którym hierarchię XML odzwierciedla grupowania.</span><span class="sxs-lookup"><span data-stu-id="1c10f-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="c8ca3-106">W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: dane liczbowe (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="c8ca3-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="1c10f-106">W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1c10f-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -35,7 +35,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- <span data-ttu-id="c8ca3-107">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="c8ca3-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="1c10f-107">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="1c10f-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -74,5 +74,6 @@ Console.WriteLine(newData);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c8ca3-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c8ca3-108">See Also</span></span>  
- [<span data-ttu-id="c8ca3-109">Zaawansowane techniki zapytania (LINQ do XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c8ca3-109">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="1c10f-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1c10f-108">See Also</span></span>
+
+- [<span data-ttu-id="1c10f-109">Zaawansowane techniki zapytań (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1c10f-109">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

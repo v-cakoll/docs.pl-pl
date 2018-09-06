@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 07fba116-045b-473c-a0b7-acdbeb49861f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25134e14154cceae3c11de531f38fe4530892492
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23fa927dcdb91fb3905f1cbe845450751de91157
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567201"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884552"
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>Wywołanie metod asynchronicznych za pomocą interfejsu IAsyncResult
-Typy w .NET Framework i bibliotek klas innych firm zapewnia metody, które pozwalają aplikacji do kontynuowania wykonywania podczas wykonywania operacji asynchronicznych wątków innych niż wątku głównego aplikacji. W poniższych sekcjach opisano i przedstawiono przykłady kodu, które przedstawiają różne sposoby, można wywoływać metod asynchronicznych, które używają <xref:System.IAsyncResult> wzorzec projektowy.  
+Typy w .NET Framework i biblioteki klas w innych firm może zapewnić metody, które umożliwiają aplikacji do kontynuowania wykonywania podczas wykonywania operacji asynchronicznych w wątkach, innym niż wątku głównego aplikacji. W poniższych sekcjach opisano i zawierają przykłady kodu, które pokazują różne sposoby, można wywoływać metod asynchronicznych, które używają <xref:System.IAsyncResult> wzorca projektowego.  
   
 -   [Blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
@@ -31,6 +31,7 @@ Typy w .NET Framework i bibliotek klas innych firm zapewnia metody, które pozwa
   
 -   [Używanie delegata AsyncCallback do kończenia operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

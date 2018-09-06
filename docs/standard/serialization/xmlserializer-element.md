@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: f80d41701f3e0d62e89a056701bde6fd69ef9ecb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2770b82f71f3c4b43df4c44f75248e5392c528c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583256"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031517"
 ---
 # <a name="ltxmlserializergt-element"></a>&lt;Element xmlSerializer&gt; — Element
 Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSerializer> jest wykonywane.  
@@ -45,12 +45,12 @@ Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSeriali
 |[\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)|Zawiera ustawienia konfiguracji dla <xref:System.Xml.Serialization.XmlSerializer> i <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie <xref:System.Xml.Serialization.XmlSerializer> zapewnia dodatkową warstwę zabezpieczeń przed potencjalnym atakom typu odmowa usługi podczas deserializacji niezaufanych danych. Robi to za pomocą próby wykrycia podczas deserializacji w pętli nieskończonej. W przypadku wykrycia takim stanie, jest zwracany wyjątek z następującym komunikatem: "Błąd wewnętrzny: Deserializacja nie powiodła się z przechodzeniem do odpowiedniego strumienia do."  
+ Domyślnie <xref:System.Xml.Serialization.XmlSerializer> zapewnia dodatkową warstwę zabezpieczeń przed potencjalnym atakom typu odmowa usługi podczas deserializacji niezaufanych danych. Robi to za pomocą próby wykrycia podczas deserializacji w pętli nieskończonej. Po wykryciu tych warunków, wyjątek zgłaszany następujący komunikat o błędzie: "Błąd wewnętrzny: Deserializacja nie powiodła się przejść na zasadniczy strumień."  
   
- Odbieranie ten komunikat nie musi oznaczać, że typu "odmowa usługi" jest w toku. W niektórych sytuacjach szczególnych mechanizm wykrywania pętli nieskończonej tworzy fałszywego ostrzeżenia i wyjątku wiarygodnego wiadomości przychodzącej. Jeśli okaże się, że w szczególności aplikacji istotnych wiadomości są odrzucane przez ten dodatkową warstwę ochrony, należy ustawić **checkDeserializeAdvances** atrybutu na "false".  
+ Odbieranie ten komunikat nie musi oznaczać, że typu "odmowa usługi" jest w toku. W niektórych sytuacjach szczególnych mechanizm wykrywania pętli nieskończonej tworzy fałszywego ostrzeżenia i wyjątku wiarygodnego wiadomości przychodzącej. Jeśli okaże się, że w określonej aplikacji istotnych wiadomości są odrzucane przez ten dodatkową warstwę ochrony, ustaw **checkDeserializeAdvances** atrybutu "false".  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przykładzie **checkDeserializeAdvances** atrybutu na "false".  
+ Poniższy kod ustawia przykład **checkDeserializeAdvances** atrybutu "false".  
   
 ```xml  
 <configuration>  
@@ -60,7 +60,8 @@ Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSeriali
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

@@ -11,23 +11,24 @@ helpviewer_keywords:
 ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ded5c057b1c257e8bcf3c8427f5810720eaf0947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc3af01167fe97b701bdb0c7bc37af02d8e8a77c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582164"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892775"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Thread.Suspend, odzyskiwanie pamięci i punkty bezpieczeństwa
-Podczas wywoływania <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> w wątku, system uwagi dotyczące czy zawieszenia wątku zażądano i umożliwia wątku do wykonania, dopóki osiągnie bezpiecznym faktycznie wstrzymania wątku. Bezpieczne punktu dla wątku jest punktem w pamięci, które mogą być wykonywane kolekcji podczas jej wykonywania.  
+Gdy wywołujesz <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> w wątku, system — informacje o że zawieszenia wątku zażądano i zezwala na wykonanie, dopóki osiągnie bezpieczny punkt rzeczywiście wstrzymania wątku wątku. Punkt bezpieczne dla wątków jest punktem w jej wykonanie w pamięci, które mogą być wykonywane kolekcji.  
   
- Po osiągnięciu punktu bezpieczne środowisko uruchomieniowe gwarantuje, że wątku zawieszonym nie dokona żadnych dalszych postępów w kodzie zarządzanym. Wątek wykonywania poza kod zarządzany jest zawsze bezpieczne dla wyrzucanie elementów bezużytecznych i jego wykonywanie będzie kontynuowane, dopóki próbuje wznowić wykonywanie kodu zarządzanego.  
+ Po osiągnięciu punktu bezpiecznego środowiska wykonawczego gwarantuje, że wstrzymania wątku nie spowoduje żadnych dalszych postępów w kodzie zarządzanym. Wątek wykonywania poza zarządzanego kodu zawsze jest bezpieczny dla wyrzucania elementów bezużytecznych, a jego wykonywanie jest kontynuowane do czasu jej podejmie próbę wznowienia wykonywanie kodu zarządzanego.  
   
 > [!NOTE]
->  Aby można było wykonać wyrzucania elementów bezużytecznych, środowiska uruchomieniowego musi zawiesić wszystkie wątki oprócz wątku wykonywania kolekcji. Każdy wątek musi być wprowadzane do bezpiecznego punktu przed może zostać zawieszone.  
+>  Aby można było przeprowadzić wyrzucanie elementów bezużytecznych, środowisko wykonawcze musi zawiesić wszystkie wątki z wyjątkiem wątku wykonującego kolekcji. Każdy wątek można przełączyć do bezpiecznego punktu, zanim może zostać zawieszone.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.Thread>  
- <xref:System.GC>  
- [Wątkowość](../../../docs/standard/threading/index.md)  
- [Automatyczne zarządzanie pamięcią](../../../docs/standard/automatic-memory-management.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Threading.Thread>  
+- <xref:System.GC>  
+- [Wątkowość](../../../docs/standard/threading/index.md)  
+- [Automatyczne zarządzanie pamięcią](../../../docs/standard/automatic-memory-management.md)

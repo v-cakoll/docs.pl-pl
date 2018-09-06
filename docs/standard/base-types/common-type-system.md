@@ -17,43 +17,43 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d21a3a315b7dc63a84f7b5d43d55c06eb2d5188
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579590"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036285"
 ---
 # <a name="common-type-system"></a>System typu wspólnego
-Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządzane przez środowisko uruchomieniowe języka wspólnego, a także jest ważnym elementem obsługi środowiska uruchomieniowego integracji między językami. Wspólny system typów wykonuje następujące funkcje:  
+Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządzane w środowisko uruchomieniowe języka wspólnego, a ponadto jest ważną częścią obsługi integracji wielu języków. Wspólny system typów wykonuje następujące funkcje:  
   
--   Ustanawia platforma, która pozwala enable integracji między językami, zabezpieczeń i wykonywanie kodu wysokiej wydajności.  
+-   Tworzy ramy, ułatwiająca włączenie integracji wielu języków, bezpieczeństwo typów i wykonywanie kodu o wysokiej wydajności.  
   
--   Udostępnia zorientowany obiektowo model obsługujący pełną wykonania wielu języków programowania.  
+-   Zapewnia model obiektowy, obsługujący pełne wdrożenie wielu języków programowania.  
   
--   Definiuje reguły, które należy wykonać języków, co pomaga zapewnić, że obiekty napisane w różnych językach mogą współdziałać ze sobą.  
+-   Definiuje reguły, których muszą przestrzegać języki, co pomaga zapewnić, że obiekty napisane w różnych językach mogą współdziałać ze sobą.  
   
--   Udostępnia bibliotekę, która zawiera typy pierwotne danych (takich jak <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32>, i <xref:System.UInt64>) używany w aplikacjach.  
+-   Zawiera bibliotekę zawierającą pierwotne typy danych (takich jak <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32>, i <xref:System.UInt64>) używane w rozwoju aplikacji.  
   
  Ten temat zawiera następujące sekcje:  
   
--   [Typy w .NET](#types_in_the_net_framework)  
+-   [Typy na platformie .NET](#types_in_the_net_framework)  
   
 -   [Definicje typu](#type_definitions)  
   
 -   [Elementy członkowskie typu](#type_members)  
   
--   [Właściwości elementów członkowskich typu](#characteristics_of_type_members)  
+-   [Cechy typów członków](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>   
-## <a name="types-in-net"></a>Typy w .NET  
- Wszystkie typy w .NET są typy wartości i typy referencyjne.  
+## <a name="types-in-net"></a>Typy na platformie .NET  
+ Wszystkie typy w .NET są typami wartości lub typami referencyjnymi.  
   
- Typy wartości są typy danych, w których obiekty są reprezentowane przez wartość rzeczywistego obiektu. Jeśli wystąpienie typu wartości jest przypisany do zmiennej, tej zmiennej znajduje się świeżą kopię wartość.  
+ Typy wartości są typy danych, w których obiekty są reprezentowane przez rzeczywistą wartość obiektu. Jeśli wystąpienie typu wartości jest przypisany do zmiennej, zmienna ta otrzymuje świeżą kopię wartości.  
   
- Typy odwołań są typy danych, w których obiekty są reprezentowane przez odwołanie (podobne do wskaźnika) do wartości rzeczywistej obiektu. Jeśli typ referencyjny jest przypisany do zmiennej, tej zmiennej odwołuje się do (wskazuje) oryginalnej wartości. Kopia nie jest wykonywana.  
+ Typy odwołań są typami danych, w których obiekty są reprezentowane przez odniesienie (podobne do wskaźnika) do rzeczywistej wartości obiektu. Jeśli typ odwołania jest przypisany do zmiennej, ta zmienna odwołuje się (wskazuje) pierwotną wartość. Kopia nie jest wykonywana.  
   
- Wspólny system typów w programie .NET obsługuje następujące pięć kategorii typów:  
+ Wspólny system typów programu .NET obsługuje następujących pięć kategorii typów:  
   
 -   [Klasy](#Classes)  
   
@@ -67,102 +67,102 @@ Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządz
   
 <a name="Classes"></a>   
 ### <a name="classes"></a>Klasy  
- Klasa jest typem referencyjnym, które mogą być uzyskane bezpośrednio z innej klasy ani niejawnie pochodzi z <xref:System.Object?displayProperty=nameWithType>. Klasa definiuje operacje, że obiekt (który jest wystąpieniem klasy) można wykonywać (metody, zdarzenia lub właściwości) oraz dane, że obiekt zawiera (pól). Mimo że klasy zwykle zawiera definicję i wykonania (w przeciwieństwie do interfejsów, na przykład zawierających tylko definicji bez wykonania), może mieć jeden lub więcej elementów członkowskich, które mają żadnej implementacji.  
+ Klasa jest typem odwołania, które może pochodzić bezpośrednio z innej klasy i niejawnie pochodzi od <xref:System.Object?displayProperty=nameWithType>. Klasa określa operacje, że obiekt (czyli wystąpienia klasy) może wykonać (metody, zdarzenia lub właściwości) i danych, które ten obiekt zawiera (pola). Chociaż klasa generalnie obejmuje definicję i implementację (w przeciwieństwie do interfejsów, na przykład, które zawierają tylko definicje, bez konieczności implementowania), może mieć jeden lub więcej elementów członkowskich, które nie mają implementacji.  
   
- W poniższej tabeli opisano niektóre właściwości, które mogą być klasą. Każdego języka, który obsługuje środowisko uruchomieniowe zapewnia możliwość wskazania, że klasa lub element członkowski klasy zawiera co najmniej jeden z tych właściwości. Jednak poszczególnych języków programowania .NET obiektu docelowego może nie udostępnia tych właściwości.  
+ W poniższej tabeli opisano niektóre właściwości, które może mieć klasy. Każdy język, który obsługuje środowisko wykonawcze zapewnia sposób, aby wskazać, że klasa lub członek klasy ma jedną lub więcej z tych cech. Jednak konkretnych językach programowania przeznaczonych .NET może nie udostępnić te cechy.  
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
-|sealed|Określa, że inna klasa nie może pochodzić z tego typu.|  
-|implements|Wskazuje, czy klasa używa jednego lub więcej interfejsów zapewniając implementacje elementów członkowskich interfejsu.|  
-|abstract|Wskazuje, że nie można utworzyć wystąpienia klasy. Aby go użyć, inna klasa musi pochodzić od niego.|  
-|dziedziczy|Wskazuje, że wystąpień klasy mogą być używane wszędzie tam, gdzie klasa podstawowa jest określona. Klasy pochodnej, która dziedziczy po klasie podstawowej, można użyć implementacji wszystkie publiczne elementy członkowskie udostępnione przez klasę podstawową lub klasy pochodnej można zastąpić implementacji publiczne elementy członkowskie z własną implementację.|  
-|wyeksportowane lub nie wyeksportowane|Wskazuje, czy klasa jest widoczny spoza zestawu, w którym jest zdefiniowany. Cecha ta ma zastosowanie tylko do klasy najwyższego poziomu, a nie w zagnieżdżonych klasach.|  
+|sealed|Określa, czy innej klasy nie może być pochodną tego typu.|  
+|implements|Wskazuje, że klasa używa jednego lub więcej interfejsów przez dostarczenie implementacji członków interfejsów.|  
+|abstract|Wskazuje, że nie można utworzyć wystąpienia klasy. Z niej korzystać, musi pochodzić z innej klasy, z niego.|  
+|Inherits|Wskazuje, że wystąpienia klasy mogą być używane wszędzie tam, gdzie określono klasę bazową. Klasa pochodna, która dziedziczy z klasy bazowej można używać implementacji członków publicznych udostępnianej przez klasę bazową lub klasy pochodne mogą zastępować implementację członków publicznych własną implementację.|  
+|wyeksportowane lub niewyeksportowane|Wskazuje, czy klasa jest widoczna spoza zestawu, w którym jest zdefiniowany. Cecha ta dotyczy tylko klas najwyższego poziomu i nie klas zagnieżdżonych.|  
   
 > [!NOTE]
->  Klasy mogą być zagnieżdżone w nadrzędnej klasy lub struktury. Klasy zagnieżdżone również mieć właściwości elementu członkowskiego. Aby uzyskać więcej informacji, zobacz [zagnieżdżone typy](#NestedTypes).  
+>  Klasa może być też zagnieżdżona w klasie nadrzędnej lub strukturze. Klasy zagnieżdżone mają również właściwości Członkowskie. Aby uzyskać więcej informacji, zobacz [Typy zagnieżdżone](#NestedTypes).  
   
- Elementy członkowskie klasy, których implementacja nie są abstrakcyjne elementy członkowskie. Klasa, która ma co najmniej jeden abstrakcyjne elementy członkowskie jest abstrakcyjny; Nie można utworzyć nowego wystąpienia. Niektóre języki, które odnoszą się do środowiska uruchomieniowego umożliwiają oznaczenie klasy jako abstrakcyjny, nawet jeśli żaden z jego elementów członkowskich nie jest abstrakcyjna. Można użyć klasy abstrakcyjnej, aby hermetyzować podstawowy zestaw funkcji, która pochodzi z klasy mogą dziedziczyć lub zastąpienie, gdy jest to konieczne. Klasy, które nie są abstrakcyjne są określane jako konkretnych klas.  
+ Elementy członkowskie klasy, które nie mają implementacji, są członkami abstrakcyjnymi. Klasa, która ma jeden lub więcej członków abstrakcyjnych sama jest abstrakcyjna; Nie można utworzyć nowych wystąpień. Niektóre języki przeznaczone dla środowiska uruchomieniowego pozwalają na oznacznie klasy jako abstrakcyjnej, nawet jeśli żaden z jej członków nie jest abstrakcyjna. Można użyć klasy abstrakcyjnej, jeśli chcesz hermetyzować podstawowy zestaw funkcji, które klasy pochodne mogą dziedziczony lub zastąpiony, gdy jest to konieczne. Klasy, które nie są abstrakcyjne, są nazywane konkretnych klas.  
   
- Klasę można zaimplementować dowolną liczbę interfejsów, ale może dziedziczyć tylko jedną klasę podstawową oprócz <xref:System.Object?displayProperty=nameWithType>, z którego wszystkie klasy dziedziczą niejawnie. Wszystkie klasy musi mieć co najmniej jednego konstruktora, który inicjuje nowe wystąpienia klasy. Jeśli nie zostanie jawnie zdefiniowana konstruktora, większość kompilatorów automatycznie zapewni domyślnego (bezparametrowego) konstruktora.  
+ Klasa może implementować dowolną liczbę interfejsów, ale może dziedziczyć tylko z klasy bazowej, oprócz <xref:System.Object?displayProperty=nameWithType>, z której wszystkie klasy dziedziczą niejawnie. Wszystkie klasy muszą mieć co najmniej jednego konstruktora, który inicjuje nowe wystąpienia klasy. Jeśli użytkownik nie definiuje jawnie konstruktora, większość kompilatorów automatycznie dostarczy domyślnego (bezparametrowego) konstruktora.  
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Struktury  
- Struktura jest typem wartości, która jest pochodną niejawnie <xref:System.ValueType?displayProperty=nameWithType>, który z kolei jest określana na podstawie <xref:System.Object?displayProperty=nameWithType>. Struktura jest bardzo przydatny, reprezentują wartości, którego wymagania dotyczące pamięci są małe i przekazywanie wartości jako parametrów i wartości do metod, które mają silnie typizowane parametrów. W środowisku .NET, wszystkie typy pierwotne (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, i <xref:System.UInt64>) są zdefiniowane jako struktury.  
+ Struktura jest typem wartości, która niejawnie pochodzi od <xref:System.ValueType?displayProperty=nameWithType>, który z kolei pochodzi od <xref:System.Object?displayProperty=nameWithType>. Struktura jest bardzo przydatna do reprezentowania wartości, których wymagania pamięci są małe, a także do przekazywania wartości jako parametrów wg wartości do metod, które mają silnie typizowane parametry. Na platformie .NET, wszystkich typów danych pierwotnych (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, i <xref:System.UInt64>) są definiowane jako struktury.  
   
- Takich jak klasy struktury zdefiniować zarówno dane (pola struktury), jak i operacje, które można wykonać na tych danych (metody struktury). Oznacza to, że można wywołać metody w typie struktury, w tym metody wirtualne zdefiniowane dla <xref:System.Object?displayProperty=nameWithType> i <xref:System.ValueType?displayProperty=nameWithType> klasy i wszystkie metody zdefiniowane w typie wartości, sama. Innymi słowy struktury, mogą mieć pola, właściwości i zdarzeń, a także metody statyczne i Niestatyczne. Można utworzyć wystąpienia struktury, przekazywane jako parametry, przechowywać je jako zmienne lokalne lub przechowywać je w polu innego typu wartości lub typ odwołania. Struktury mogą także implementować interfejsów.  
+ Jak klasy struktury definiują zarówno dane (pola struktury), jak i operacje, które mogą być wykonywane na tych danych (metody struktury). Oznacza to, że może wywoływać metody dla struktur, w tym wirtualne metody zdefiniowane w <xref:System.Object?displayProperty=nameWithType> i <xref:System.ValueType?displayProperty=nameWithType> klasy i wszelkie metody zdefiniowane dla samego typu wartości. Innymi słowy struktury mogą mieć pola, właściwości i zdarzenia, a także metody statyczne i Niestatyczne. Można utworzyć wystąpienia struktur, przekazać je jako parametry, przechowywać je jako zmienne lokalne lub przechowywać je w polu innego typu wartości lub odwołania do typu. Struktury mogą także implementować interfejsy.  
   
- Typy wartości różnią się również z klas w wielu aspektach. Pierwszy, mimo że dziedziczą niejawnie z <xref:System.ValueType?displayProperty=nameWithType>, bezpośrednio nie mogą dziedziczyć dowolnego typu. Podobnie wszystkie typy wartości jest zapieczętowany, co oznacza, że żaden typ innych mogą pochodzić z nich. Ponadto nie wymagają konstruktorów.  
+ Typy wartości różnią się także od klas w kilku aspektach. Po pierwsze, mimo że niejawnie dziedziczą z <xref:System.ValueType?displayProperty=nameWithType>, bezpośrednio nie mogą dziedziczyć z dowolnego typu. Podobnie wszystkie typy wartości są zamknięte, co oznacza, że żaden inny typ mogą być uzyskane z nich. Również nie wymagają konstruktorów.  
   
- Dla każdego typu wartości środowisko uruchomieniowe języka wspólnego dostarcza odpowiedniego typu opakowanego, co jest klasa, która ma taką samą stanu i zachowanie, ponieważ typ wartości. Wystąpienie typu wartości jest opakowany, gdy jest przekazywany do metody, która przyjmuje parametr typu <xref:System.Object?displayProperty=nameWithType>. Jest rozpakowany (to znaczy przekonwertować z wystąpienia klasy do wystąpienia typu wartości) podczas kontroli zwraca po wywołaniu metody akceptującego typ wartości jako parametr przez odwołanie. Niektóre języki wymagają użycia specjalnej składni, gdy typ opakowany jest wymagana; inne automatycznie używają typ opakowany, jeśli jest to potrzebne. Po zdefiniowaniu typu wartości definiowania ramce i rozpakowany typ.  
+ Dla każdego typu wartości środowisko uruchomieniowe języka wspólnego dostarcza odpowiedni typ spakowany, który jest klasa, która ma taki sam stan i zachowanie jak typ wartości. Wystąpienie typu wartości jest ramce, gdy jest przekazywany do metody, która akceptuje parametr typu <xref:System.Object?displayProperty=nameWithType>. Jest rozpakowywany (czyli przekonwertowany z wystąpienia klasy ponownie na wystąpienie typu wartości) gdy kontrola wraca z wywołania metody, które akceptuje typ wartości jako parametr według odwołania. Niektóre języki wymagają użycia specjalnej składni, gdy typ spakowany jest wymagana; inne automatycznie korzystają z typu spakowanego, kiedy jest potrzebny. Podczas definiowania typu wartości jest definiowany jest typ spakowany i typ rozpakowany.  
   
 <a name="Enumerations"></a>   
 ### <a name="enumerations"></a>Wyliczenia  
- Wyliczenie (enum) jest typem wartości, która dziedziczy po bezpośrednio <xref:System.Enum?displayProperty=nameWithType> i że dostaw alternatywne nazwy dla wartości pierwotnych typu podstawowego. Typ wyliczeniowy ma nazwę typu podstawowego, który musi być jednego z typów wbudowanych całkowitą podpisem lub bez znaku (takie jak <xref:System.Byte>, <xref:System.Int32>, lub <xref:System.UInt64>) oraz zestawu pól. Pola są statyczne pola literału, z których każdy reprezentuje stałą. Taką samą wartość mogą być przypisane do wielu pól. W takiej sytuacji należy oznaczyć jedna z wartości jako wartość wyliczenia podstawowego odbicia i Konwersja ciągu.  
+ Wyliczenie (enum) jest typem wartości, który dziedziczy bezpośrednio z <xref:System.Enum?displayProperty=nameWithType> i dostarcza alternatywnych nazw dla wartości pierwotnych typu podstawowego. Typ wyliczenia ma nazwę, bazowy typ, który musi być jednym z typów wbudowanych podpisanych lub niepodpisanych liczb całkowitych (takie jak <xref:System.Byte>, <xref:System.Int32>, lub <xref:System.UInt64>), a zestaw pól. Pola są statyczne pola literal, z których każde reprezentuje stałą. Tę samą wartość można przypisać do wielu pól. W takim przypadku musisz oznaczyć jedną z wartości jako wartość wyliczenia podstawowego odbicia i konwersji ciągów.  
   
- Można przypisać wartości typu źródłowego na wyliczenie i na odwrót (rzutowania nie jest wymagane przez środowisko uruchomieniowe). Można utworzyć wystąpienia wyliczenia i wywołania metody <xref:System.Enum?displayProperty=nameWithType>oraz ewentualne metody zdefiniowane w typie podstawowym wyliczenia. Jednak w przypadku niektórych języków może nie umożliwiają przekazywanie wyliczenie jako parametr gdy wymagane jest wystąpienie typu podstawowego (lub odwrotnie).  
+ Można przypisać wartość typu podstawowego do wyliczenia i odwrotnie (rzutowanie nie jest wymagane przez środowisko uruchomieniowe). Można utworzyć wystąpienie wyliczania i wywołać metodę <xref:System.Enum?displayProperty=nameWithType>, jak również wszelkie metody zdefiniowane w typie podstawowego wyliczenia. Jednak niektóre języki mogą nie pozwalają przekazać wyliczenia jako parametr, gdy wymagane jest wystąpienie bazowego typu (lub odwrotnie).  
   
- Następujące dodatkowe ograniczenia są stosowane do wyliczenia:  
+ Do wyliczeń są stosowane następujące dodatkowe ograniczenia:  
   
--   Nie można ich zdefiniować własne metody.  
+-   Nie można ich definiować własnych metod.  
   
--   Ich nie mogą implementować interfejsów.  
+-   Nie mogą wdrażać interfejsów.  
   
--   Nie można ich zdefiniować właściwości lub zdarzeń.  
+-   Nie mogą określać właściwości ani zdarzeń.  
   
--   Nie może być ogólny, chyba że są to ogólny tylko, ponieważ są one zagnieżdżone w obrębie typu ogólnego. Oznacza to wyliczenie nie może mieć parametrów typu własnych.  
+-   Nie może być ogólny, chyba że są rodzajowe tylko z powodu zagnieżdżenia wewnątrz typu rodzajowego. Oznacza to, że wyliczenie nie może mieć parametrów typu swój własny.  
   
     > [!NOTE]
-    >  Zagnieżdżone typy (w tym wyliczenia) utworzone za pomocą języka Visual Basic, C# i C++ uwzględnia parametry typu otaczającego wszystkich typów ogólnych i w związku z tym są ogólne, nawet jeśli nie ma parametrów typu w swoich własnych. Aby uzyskać więcej informacji, zobacz "Typy zagnieżdżone" w <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> temat referencyjny.  
+    >  Zagnieżdżone typy (włącznie z wyliczeniami) utworzone za pomocą języka Visual Basic, C# i C++ zawierają parametry wszystkich otaczających typów ogólnych i dlatego są standardowe, nawet jeśli nie mają parametrów typu w swoich własnych. Aby uzyskać więcej informacji, zobacz "Zagnieżdżone typy" w <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> temat referencyjny.  
   
- <xref:System.FlagsAttribute> Atrybut oznacza specjalny rodzaj wyliczenie o nazwie pola bitowego. Wykonawcze nie rozróżnia tradycyjnych wyliczenia i pola bitowe, ale język może zrobić. Gdy ta rozróżnienia operatory bitowe można od pól bitowych, ale nie wyliczenia, do generowania wartości bez nazwy. Wyliczenia są zazwyczaj używane do listy unikatowych elementów, takich jak dni tygodnia, kraj lub region nazwy i tak dalej. Pola bitowe są zazwyczaj używane do listy klas lub ilości, które mogą wystąpić w połączeniu, takich jak `Red And Big And Fast`.  
+ <xref:System.FlagsAttribute> Atrybut oznacza specjalny rodzaj wyliczenia zwanego polem bitowym. Środowisko wykonawcze nie rozróżnia tradycyjnych wyliczeń i pól bitowych, ale język może to zrobić. Podczas tego rozróżnienia operatory bitowe może służyć w polach bitowych, ale nie w wyliczeniach do generowania nienazwanych wartości. Wyliczenia są zwykle używane dla list unikatowych elementów, takich jak dni tygodnia, kraj lub region nazwy i tak dalej. Pola bitowe są zwykle używane dla list jakości lub ilości, które mogą wystąpić w połączeniu, takich jak `Red And Big And Fast`.  
   
- Poniższy przykład przedstawia użycie zarówno pól bitowych, jak i tradycyjnych wyliczenia.  
+ Poniższy przykład pokazuje, jak używać zarówno w przypadku pól bitowych, jak i wyliczeń tradycyjnych.  
   
  [!code-csharp[Conceptual.Types.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.enum/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.enum/vb/example.vb#1)]  
   
 <a name="Interfaces"></a>   
 ### <a name="interfaces"></a>Interfejsy  
- Interfejs definiuje kontrakt określa relację "można wykonać" lub "ma" relacji. Interfejsy są często używane do implementowania funkcje, takie jak porównywanie i sortowanie ( <xref:System.IComparable> i <xref:System.IComparable%601> interfejsów), testowanie równości ( <xref:System.IEquatable%601> interface), lub wyliczania elementów w kolekcji ( <xref:System.Collections.IEnumerable> i <xref:System.Collections.Generic.IEnumerable%601> interfejsów). Interfejsy może mieć właściwości, metod i zdarzeń, które są abstrakcyjne elementy członkowskie; oznacza to mimo że interfejs definiuje elementy członkowskie i ich podpisów, pozostawia go do typu, który implementuje interfejs do definiowania funkcji każdy element członkowski interfejsu. Oznacza to, że klasy lub struktury, który implementuje interfejs musi podać definicje abstrakcyjne elementy członkowskie, zadeklarowany w interfejsie. Interfejs może wymagać implementującej klasy lub struktury, można też wdrożyć jeden lub więcej interfejsów.  
+ Interfejs definiuje kontrakt, który określa relację "może zrobić" lub "ma" relacji. Interfejsy często są używane do implementowania funkcji, takich jak porównywanie i sortowanie ( <xref:System.IComparable> i <xref:System.IComparable%601> interfejsów), testowanie dla równości ( <xref:System.IEquatable%601> interface), lub wyliczanie elementów w kolekcji ( <xref:System.Collections.IEnumerable> i <xref:System.Collections.Generic.IEnumerable%601> interfejsów). Interfejsy mogą mieć właściwości, metody i zdarzenia, które są członkami abstrakcyjnymi; oznacza to, że chociaż interfejs definiuje członków i ich podpisy, pozostawia typowi implementującemu interfejs zdefiniowanie funkcji każdego członka interfejsu. Oznacza to, że klasy lub struktury, która implementuje interfejs musi dostarczyć definicje członków abstrakcyjnych zadeklarowanych w interfejsie. Interfejs może wymagać implementujące klasy lub struktury, aby także implementować jeden lub więcej interfejsów.  
   
- Interfejsy, obowiązują następujące ograniczenia:  
+ Do interfejsów są stosowane następujące ograniczenia:  
   
--   Interfejs mogą być deklarowane z dowolnym ułatwień dostępu, ale wszystkie elementy członkowskie interfejsu muszą mieć powszechnej dostępności.  
+-   Interfejs może być zadeklarowany z dowolnym opcjami dostępu, ale członkowie interfejsu muszą mieć powszechnej dostępności.  
   
 -   Interfejsy nie mogą definiować konstruktorów.  
   
--   Interfejsy nie można zdefiniować pól.  
+-   Interfejsy nie mogą definiować pól.  
   
--   Interfejsy można zdefiniować tylko elementy członkowskie wystąpień. Nie można ich zdefiniować statyczne elementy członkowskie.  
+-   Interfejsy mogą definiować tylko członków wystąpień. Nie mogą określać elementów statycznych.  
   
- Każdego języka musi podać reguł do mapowania implementację interfejsu, który wymaga elementu członkowskiego, ponieważ więcej niż jeden interfejs można zadeklarować elementu członkowskiego o tej samej sygnaturze, a te elementy Członkowskie mogą mieć osobne implementacji.  
+ Każdy język musi zawierać reguły mapowania implementacja na interfejs który wymaga członka, ponieważ więcej niż jeden interfejs może zadeklarować członka o tym samym podpisie, a członkowie ci mogą mieć osobne implementacje.  
   
 <a name="Delegates"></a>   
 ### <a name="delegates"></a>Delegaty  
- Obiekty delegowane są typy odwołań, które służą do celów podobny do wskaźników funkcji w języku C++. Są one używane do obsługi zdarzeń i funkcje wywołania zwrotnego w programie .NET. W przeciwieństwie do wskaźników funkcji delegatów są bezpieczne, zweryfikowania i wpisz bezpieczne. Typ delegowany może reprezentować wszystkie wystąpienia metody lub metody statycznej, który ma niezgodny podpis.  
+ Obiekty delegowane są typami odwołań, które służą celowi podobnemu do do wskaźników funkcji w języku C++. Są one używane w programach obsługi zdarzeń i funkcjach wywołania zwrotnego w programie .NET. W przeciwieństwie do wskaźników funkcji obiekty delegowane są bezpieczne i weryfikowalne i bezpieczeństwa typów. Typ obiektu delegowanego może reprezentować każdą metodę wystąpienia lub metodę statyczną, który ma zgodny podpis.  
   
- Parametr typu delegata jest zgodny z odpowiadającego mu parametru metody, jeśli typ parametru delegowanego jest bardziej restrykcyjny niż typ parametru metody, ponieważ gwarantuje to, że argument przekazany do delegata można bezpiecznie przekazany do Metoda.  
+ Parametru obiektu delegowanego jest zgodny z odpowiednim parametrem metody, jeśli typ parametru delegata jest bardziej restrykcyjny niż typ parametru metody, ponieważ gwarantuje to, że argument przekazany do obiektu delegowanego można bezpiecznie przekazać do Metoda.  
   
- Podobnie zwracany typ delegata jest zgodny z typem zwracanym metody, jeśli typ zwracany metody jest bardziej restrykcyjny niż typ zwracany delegata, ponieważ gwarantuje to, że zwracana wartość metody mogą być bezpiecznie rzutowane na zwracany typ e delegata.  
+ Podobnie zwracany typ delegata jest zgodny z typem zwracanym metody, jeśli typ zwracany metody jest bardziej restrykcyjny niż typ zwracany obiektu delegowanego, ponieważ gwarantuje to, że wartość zwracana metody może być bezpiecznie umieszczona na zwracany typ e delegata.  
   
- Na przykład delegata, który ma parametr typu <xref:System.Collections.IEnumerable> i typ zwracany <xref:System.Object> może reprezentować metodę, która ma parametr typu <xref:System.Object> i zwracanej wartości typu <xref:System.Collections.IEnumerable>. Aby uzyskać więcej informacji i przykładowy kod, zobacz <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType>.  
+ Na przykład delegat, który ma parametr typu <xref:System.Collections.IEnumerable> i zwracanym typem <xref:System.Object> może reprezentować metodę, która ma parametr typu <xref:System.Object> oraz wartość zwracaną typu <xref:System.Collections.IEnumerable>. Aby uzyskać więcej informacji i przykładowy kod, zobacz <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType>.  
   
- Delegat jest nazywany powiązać metodę, która reprezentuje. Oprócz związana jest metoda, Delegat może być powiązana z obiektem. Obiekt reprezentuje pierwszy parametr metody i jest przekazywany do metody, za każdym razem, gdy jest wywoływany delegat. Jeśli metoda jest metodą wystąpienia, powiązany obiekt jest przekazywany jako niejawne `this` parametr (`Me` w języku Visual Basic); Jeśli metoda jest statyczna, obiekt został przekazany jako pierwszy formalny parametr metody i podpisu delegata musi być zgodna. pozostałe parametry. Aby uzyskać więcej informacji i przykładowy kod, zobacz <xref:System.Delegate?displayProperty=nameWithType>.  
+ Obiekt delegowany jest zobowiązany do metody, którą reprezentuje. Oprócz związania z metodą, obiekt delegowany może być powiązana z obiektem. Obiekt reprezentuje pierwszy parametr metody i jest przekazywany do metody, za każdym razem, gdy obiekt delegowany jest wywoływany. Jeśli metoda jest metodą wystąpienia, związany obiekt jest przekazywany jako niejawny `this` parametru (`Me` w języku Visual Basic); Jeśli metoda jest statyczna, obiekt jest przekazywany jako pierwszy formalny parametr metody i podpis delegata muszą być zgodne. pozostałych parametrów. Aby uzyskać więcej informacji i przykładowy kod, zobacz <xref:System.Delegate?displayProperty=nameWithType>.  
   
- Wszystkie obiekty delegowane dziedziczyć <xref:System.MulticastDelegate?displayProperty=nameWithType>, który dziedziczy z <xref:System.Delegate?displayProperty=nameWithType>. Języki C#, Visual Basic i C++ nie zezwalają na dziedziczenia z tych typów. Zamiast tego zawierają słowa kluczowe deklarowania delegatów.  
+ Wszystkie obiekty delegowane dziedziczą z <xref:System.MulticastDelegate?displayProperty=nameWithType>, który dziedziczy z <xref:System.Delegate?displayProperty=nameWithType>. Języki C#, Visual Basic i C++ nie umożliwiają dziedziczenia z tych typów. Zamiast tego zapewniają słowa kluczowe do deklarowania obiektów delegowanych.  
   
- Ponieważ dziedziczy delegatów <xref:System.MulticastDelegate>, delegat ma listę wywołań, czyli listę metod, które reprezentuje delegata i które są wykonywane, gdy jest wywoływany delegat. Wszystkie metody na liście odbierać argumenty podane po wywołaniu obiektu delegowanego.  
-  
-> [!NOTE]
->  Wartość zwrotna nie jest zdefiniowany dla delegata, który ma więcej niż jedną metodę liście wywołania, nawet jeśli delegat ma typ zwracany.  
-  
- W wielu przypadkach takich jak w przypadku metod wywołania zwrotnego reprezentuje delegata tylko jedna metoda tylko akcje, które należy wykonać tworzenia delegata i wywoływanie go.  
-  
- W przypadku delegatów, które reprezentują wiele metod .NET zapewnia metody <xref:System.Delegate> i <xref:System.MulticastDelegate> delegować klasy do obsługi operacji, takich jak dodawanie metody do listy wywołania delegata ( <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> metody), usuwanie metody ( <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> metodę) i pobieranie listy wywołania ( <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> metody).  
+ Ponieważ obiekty delegowane dziedziczą z <xref:System.MulticastDelegate>, obiekt delegowany ma listę wywołań, czyli listę metod, które reprezentuje obiekt delegowany i są wykonywane, gdy obiekt delegowany jest wywoływany. Wszystkie metody na liście otrzymują argumenty dostarczane, gdy obiekt delegowany jest wywoływany.  
   
 > [!NOTE]
->  Nie jest konieczne do użycia tych metod dla delegatów obsługi zdarzeń w języku C#, C++ i Visual Basic, ponieważ tych języków udostępnia składnię Dodawanie i usuwanie programów obsługi zdarzeń.  
+>  Wartość zwracana nie jest zdefiniowany dla pełnomocnika, który ma więcej niż jedną metodę liście wywołania, nawet jeśli pełnomocnik ma typ zwracany.  
+  
+ W wielu przypadkach takie, jak przy użyciu metod wywołania zwrotnego, obiekt delegowany reprezentuje tylko jedną metodę i jedynymi czynnościami, które należy wykonać to utworzenie obiektu delegowanego i wywołanie go.  
+  
+ Dla obiektów delegowanych, które reprezentują wiele metod .NET zapewnia metody <xref:System.Delegate> i <xref:System.MulticastDelegate> delegować klasy do obsługi operacji, takich jak dodanie metody do listy wywołań obiektu delegowanego ( <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> metoda), usuwanie metody ( <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> metoda) i pobieranie listy wywołań ( <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> metody).  
+  
+> [!NOTE]
+>  Nie jest niezbędne do korzystania z tych metod do delegatów obsługi zdarzeń w języku C#, C++ i Visual Basic, ponieważ te języki zapewniają składnię umożliwiającą Dodawanie i usuwanie programów obsługi zdarzeń.  
   
  
   
@@ -170,9 +170,9 @@ Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządz
 ## <a name="type-definitions"></a>Definicje typów  
  Definicja typu obejmuje następujące funkcje:  
   
--   Atrybuty zdefiniowane w typie.  
+-   Wszelkie atrybuty zdefiniowane w typie.  
   
--   Typ ułatwień dostępu (widoczność).  
+-   Typu (widoczność).  
   
 -   Nazwa typu.  
   
@@ -180,56 +180,56 @@ Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządz
   
 -   Wszystkie interfejsy implementowane przez typ.  
   
--   Definicje dla wszystkich elementów członkowskich typu.  
+-   Definicje dla każdego członka typu.  
   
 ### <a name="attributes"></a>Atrybuty  
- Atrybuty udostępnienia dodatkowych metadanych zdefiniowanych przez użytkownika. Najczęściej są one używane do przechowywania dodatkowych informacji o typie w jego zestaw lub modyfikowanie elementu członkowskiego typu w jednym środowisku projektowania lub czasu wykonywania.  
+ Atrybuty zawierają dodatkowe metadane zdefiniowane przez użytkownika. Najczęściej są one używane do przechowywania dodatkowych informacji o typie w jego zestawie lub do zmodyfikowania zachowania członka typu w jednym środowisku czasu projektowania lub czasu wykonywania.  
   
- Atrybuty są klasy, które dziedziczą z <xref:System.Attribute?displayProperty=nameWithType>. Języki, które obsługują atrybuty każdego ma swoje własne składnię stosowania atrybuty w elemencie języka. Atrybuty można zastosować do niemal wszystkich elementów języka; wynika z określonych elementów, do których można zastosować atrybutu <xref:System.AttributeUsageAttribute> do tej klasy atrybutu zastosowano.  
+ Atrybuty są same klasami, które dziedziczą z <xref:System.Attribute?displayProperty=nameWithType>. Języki, które obsługują używanie atrybutów mają własne składnie stosowania atrybutów do elementów języka. Atrybuty mogą być stosowane do niemal wszystkich elementów języka; określone elementy, których można zastosować atrybutu są definiowane przez <xref:System.AttributeUsageAttribute> mający zastosowanie do tej klasy atrybutu.  
   
-### <a name="type-accessibility"></a>Typ ułatwień dostępu  
- Wszystkie typy mają modyfikator, który zarządza ich dostępność z innych typów. W poniższej tabeli opisano dostępności typu obsługiwane przez środowisko uruchomieniowe.  
+### <a name="type-accessibility"></a>Dostępność typu  
+ Wszystkie typy mają modyfikatory, które regulują ich dostępność z innych typów. W poniższej tabeli opisano możliwości dostępu do typów obsługiwane w czasie wykonywania.  
   
 |Ułatwienia dostępu|Opis|  
 |-------------------|-----------------|  
 |public|Typ jest dostępny dla wszystkich zestawów.|  
-|zestaw|Typ jest dostępny tylko w obrębie jej zestaw.|  
+|zestaw|Typ jest dostępny tylko w ramach własnego zestawu.|  
   
- Dostępność zagnieżdżony typ zależy od swojej domeny ułatwień dostępu, który jest określany przez zarówno zadeklarowane dostępność elementu członkowskiego i domena dostępności typu zawierającego natychmiast. Jednak domena dostępności typu zagnieżdżonego nie może przekraczać, który typu zawierającego.  
+ Dostępność typu zagnieżdżonego zależy od jego domeny dostępności, która jest określona przez oba deklarowana dostępność metody elementu członkowskiego i domena dostępności typu zawierającego. Jednakże domena dostępności typu zagnieżdżonego nie może przekraczać tego dla typu zawierającej.  
   
- Domena dostępności elementu członkowskiego zagnieżdżonych `M` zadeklarowana w typie `T` w programie `P` jest zdefiniowane w następujący sposób (biorąc pod uwagę, że `M` może być typem):  
+ Domena dostępności członka zagnieżdżonego `M` zadeklarowane w typie `T` w programie `P` jest zdefiniowany następująco (biorąc pod uwagę, że `M` może być typem):  
   
--   Jeśli zadeklarowane dostępności `M` jest `public`, domena dostępności `M` jest domeną ułatwień dostępu `T`.  
+-   Jeśli deklarowana dostępność metody `M` jest `public`, domena dostępności `M` jest domena dostępności `T`.  
   
--   Jeśli zadeklarowane dostępności `M` jest `protected internal`, domena dostępności `M` jest przecięcia domeny ułatwień dostępu `T` tekstu program `P` i pochodnych tekst programu dowolnego typu `T` zadeklarowana poza `P`.  
+-   Jeśli deklarowana dostępność metody `M` jest `protected internal`, domena dostępności `M` jest część wspólną domeny dostępności `T` tekstu programu `P` i tekstu programu o dowolnym typie pochodnych `T` zadeklarowaną poza tekstem `P`.  
   
--   Jeśli zadeklarowane dostępności `M` jest `protected`, domena dostępności `M` jest przecięcia domeny ułatwień dostępu `T` tekstu program `T` i dowolny typ pochodny `T`.  
+-   Jeśli deklarowana dostępność metody `M` jest `protected`, domena dostępności `M` jest część wspólną domeny dostępności `T` tekstu programu `T` i dowolnego typu opracowane z `T`.  
   
--   Jeśli zadeklarowane dostępności `M` jest `internal`, domena dostępności `M` jest przecięcia domeny ułatwień dostępu `T` tekstu program `P`.  
+-   Jeśli deklarowana dostępność metody `M` jest `internal`, domena dostępności `M` jest część wspólną domeny dostępności `T` tekstu programu `P`.  
   
--   Jeśli zadeklarowane dostępności `M` jest `private`, domena dostępności `M` jest tekst program `T`.  
+-   Jeśli deklarowana dostępność metody `M` jest `private`, domena dostępności `M` znajduje się tekst program `T`.  
   
 ### <a name="type-names"></a>Nazwy typów  
- Wspólny system typów nakłada tylko dwa ograniczenia dotyczące nazwy:  
+ Wspólny system typów nakłada tylko dwa ograniczenia dotyczące nazw:  
   
--   Wszystkie nazwy są kodowane jako ciągi znaków Unicode (16-bitowe).  
+-   Wszystkie nazwy są kodowane jako ciągi znaków Unicode, (16-bitowe).  
   
--   Nazwy są niedozwolone osadzone wartości 0x0000 (16-bitowe).  
+-   Nazwy nie są dozwolone w osadzonym wartości (16-bitowy) 0x0000.  
   
- Jednak większość języków nałożyć dodatkowe ograniczenia nazwy typu. Wszystkie porównania są wykonywane na podstawie po bicie, a w związku z tym jest rozróżniana wielkość liter i niezależne od ustawień regionalnych.  
+ Jednakże większość języków nakłada dodatkowe ograniczenia na nazwy typów. Wszystkie porównania są wykonywane na podstawie bajt po bajcie i dlatego jest rozróżniana wielkość liter i niezależne od ustawień regionalnych.  
   
- Chociaż typu może odwoływać się typy z inne moduły i zestawy, typu musi być całkowicie zdefiniowany w ramach jednego modułu .NET. (W zależności od obsługi kompilatora, jednak ją można podzielić na wiele plików kodu źródłowego.) Nazwy typu musi być unikatowa tylko w obrębie przestrzeni nazw. Aby zidentyfikować pełni typ, nazwa typu musi być kwalifikowana przez obszar nazw, który zawiera implementację tego typu.  
+ Chociaż typ może odwoływać do typów w innych modułach i zestawach, typem musi być całkowicie zdefiniowany w ramach jednego modułu .NET. (W zależności od obsługa kompilatora jednak go można podzielić na wiele plików kodu źródłowego.) Nazwy typów muszą być unikatowe tylko w obrębie przestrzeni nazw. Pełna identyfikacja typu, nazwa typu musi być kwalifikowana przez obszar nazw zawierający implementację typu.  
   
 ### <a name="base-types-and-interfaces"></a>Typy podstawowe i interfejsy  
- Typem może dziedziczyć wartości i zachowania innego typu. Wspólny system typów nie zezwala na typ, który dziedziczy z więcej niż jednego typu podstawowego.  
+ Typ może odziedziczyć wartości i zachowania innego typu. Wspólny system typów nie zezwala na typy odziedziczone z więcej niż jednego typu podstawowego.  
   
- Typ można zaimplementować dowolną liczbę interfejsów. Aby zaimplementować interfejs, typ musi implementować wirtualnego członków interfejsu. Metoda wirtualna może być zaimplementowany przez typ pochodny i może być wywoływany statycznie lub dynamicznie.  
+ Typ może implementować dowolną liczbę interfejsów. Aby zaimplementować interfejs, typ musi implementować wirtualnych członków interfejsu. Metoda wirtualna może być implementowana przez typ pochodny i może być wywołana statycznie lub dynamicznie.  
   
   
   
 <a name="type_members"></a>   
 ## <a name="type-members"></a>Elementy członkowskie typu  
- Środowisko uruchomieniowe umożliwia definiowanie elementów członkowskich tego typu, który określa zachowania i stan typu. Elementy członkowskie typu są następujące:  
+ Środowisko wykonawcze umożliwia zdefiniowanie członków typu, który określa zachowanie i stan typu. Elementy członkowskie typu są następujące:  
   
 -   [Pola](#Fields)  
   
@@ -245,82 +245,83 @@ Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządz
   
 <a name="Fields"></a>   
 ### <a name="fields"></a>Pola  
- Pole zawiera opis i zawiera części typu stanu. Pól mogą być dowolnego typu obsługiwane przez środowisko uruchomieniowe. Najczęściej pola są `private` lub `protected`, dzięki czemu są one dostępne tylko z wewnątrz klasy lub z klasy pochodnej. Jeśli wartość pola można modyfikować z poza jego typu, jest zwykle używana metodą dostępu set właściwości. Publicznie ujawnionych pola są zwykle tylko do odczytu i mogą być dwa typy:  
+ Pole opisuje i zawiera część stanu typu. Pola mogą być dowolnego typu obsługiwanego przez środowisko uruchomieniowe. Najczęściej pola są `private` lub `protected`, dzięki czemu są one dostępne tylko z w ramach klasy lub z klasy pochodnej. Jeśli wartość pola można modyfikować spoza jego typu, jest zazwyczaj używana metoda dostępu do zestawu właściwości. Pola udostępnione publicznie są zwykle tylko do odczytu i mogą być dwojakiego rodzaju:  
   
--   Stałe, którego wartość jest przypisana w czasie projektowania. Są to statyczne elementy członkowskie klasy, ale ich nie są zdefiniowane przy użyciu `static` (`Shared` w języku Visual Basic) — słowo kluczowe.  
+-   Stałe, których wartości są przypisywane w czasie projektowania. Są to statyczne elementy członkowskie klasy, chociaż nie zostały określone przy użyciu `static` (`Shared` w języku Visual Basic) słowa kluczowego.  
   
 -   Zmienne tylko do odczytu, w których wartości można przypisać w konstruktorze klasy.  
   
- Poniższy przykład przedstawia tych dwóch użycia pola tylko do odczytu.  
+ Poniższy przykład ilustruje te dwa sposoby użycia pól tylko do odczytu.  
   
  [!code-csharp[Conceptual.Types.Members.Fields#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.fields/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
   
 <a name="Properties"></a>   
 ### <a name="properties"></a>Właściwości  
- Właściwość nazwy wartości lub stan typu i definiuje metody do pobierania lub ustawiania wartości właściwości. Właściwości mogą być typy pierwotne, kolekcje, typy pierwotne, typy danych zdefiniowane przez użytkownika lub kolekcji typów zdefiniowanych przez użytkownika. Właściwości są często używane, aby zapobiec interfejsu publicznego typu niezależne odzwierciedla rzeczywistego typu. Dzięki temu właściwości do wartości, które nie są przechowywane bezpośrednio w klasie (na przykład, gdy właściwość zwraca obliczoną wartość) lub do wykonywania sprawdzania poprawności, zanim przypisywania wartości do pól prywatnych. Poniższy przykład przedstawia ostatnie wzorca.  
+ Właściwość nazywa wartość lub stan typu i definiuje metody uzyskiwania lub ustawiania wartości właściwości. Właściwości mogą być typami pierwotnymi, zbiorami typów pierwotnych, typami zdefiniowanymi przez użytkownika lub kolekcji typów zdefiniowanych przez użytkownika. Właściwości są często używane, aby zapobiec interfejsu publicznego typu niezależnie od rzeczywistej reprezentacji typu. Umożliwia to właściwościom odzwierciedlać wartości, które nie są przechowywane bezpośrednio w klasie (na przykład, gdy właściwość zwraca wartość wyliczoną) lub wykonanie sprawdzenia poprawności przed przypisaniem wartości do pól prywatnych. Poniższy przykład ilustruje ten drugi wzorzec.  
   
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
- Oprócz łącznie z samej właściwości Microsoft język pośredni (MSIL) dla typu, który zawiera właściwości do odczytu obejmuje `get_` *propertyname* — metoda i MSIL dla typu, który zawiera zapisu zawiera właściwości `set_` *propertyname* metody.  
+ Poza tym samą właściwość, obejmuje języka Microsoft intermediate language (MSIL) dla typu, który zawiera odczytywalną właściwość `get_` *propertyname* metody, a język MSIL dla typu, który zawiera zapisywalnego zawiera właściwości `set_` *propertyname* metody.  
   
 <a name="Methods"></a>   
 ### <a name="methods"></a>Metody  
- Metoda opisuje czynności, które są dostępne w typie. Podpis metody Określa dozwolone typy z jego parametrów i zwracanych wartości.  
+ Metoda opisuje operacje, które są dostępne wobec typu. Podpis metody określa dopuszczalne typy jej wszystkich parametrów i zwracanej wartości.  
   
- Mimo że większość metody zdefiniować dokładne liczbę parametrów wymaganych do wywołania metody, w przypadku niektórych metod obsługuje zmienną liczbą parametrów. Ostatni zadeklarowany jako parametr metody jest oznaczony atrybutem <xref:System.ParamArrayAttribute> atrybutu. Kompilatory języka zwykle Podaj słowem kluczowym, takich jak `params` w języku C# i `ParamArray` w języku Visual Basic, który sprawia, że jawnego korzystania z <xref:System.ParamArrayAttribute> niepotrzebne.  
+ Chociaż większość metod określa dokładną liczbę parametrów wymaganych do wywoływania metod, niektóre metody obsługują zmienną liczbę parametrów. Ostateczny zadeklarowany parametr tych metod jest oznaczona atrybutem <xref:System.ParamArrayAttribute> atrybutu. Kompilatory języka zwykle zapewniają słowo kluczowe, takie jak `params` w języku C# i `ParamArray` w języku Visual Basic, który sprawia, że jawne użycie <xref:System.ParamArrayAttribute> niepotrzebne.  
   
 <a name="Constructors"></a>   
 ### <a name="constructors"></a>Konstruktorów  
- Konstruktor jest specjalnym rodzajem metodę, która tworzy nowe wystąpienia klasy lub struktury. Podobnie jak inne metody konstruktora mogą zawierać parametrów; Konstruktory jednak brak wartości zwracanej (oznacza to, że oba operatory zwracają `void`).  
+ Konstruktor jest specjalnym rodzajem metody, która tworzy nowe wystąpienia klasy lub struktury. Podobnie jak każda inna metoda Konstruktor może zawierać parametry; jednak konstruktory nie mają wartości zwracanej (czyli zwracają `void`).  
   
- Jeśli kod źródłowy dla klasy nie jawnie definiować konstruktora, kompilator obejmuje domyślnego (bezparametrowego) konstruktora. Jednak jeśli kod źródłowy dla klasy definiuje tylko konstruktory sparametryzowane, Kompilatory języka Visual Basic i C# nie generują konstruktora bez parametrów.  
+ Jeśli kod źródłowy dla klasy nie definiuje jawnie konstruktora, kompilator zawiera domyślnego (bezparametrowego) konstruktora. Jednakże jeśli kod źródłowy dla klasy definiuje tylko konstruktory sparametryzowane, kompilatory języków Visual Basic i C# nie generują konstruktora bez parametrów.  
   
- Jeśli kodu źródłowego dla struktury definiuje konstruktorów, musi być sparametryzowana; struktury nie mogą definiować konstruktora domyślnego (bezparametrowego), a kompilatory nie generują konstruktorów bez parametrów dla struktury lub innych typów wartości. Wszystkie typy wartości ma niejawne domyślnego konstruktora. Ten konstruktor jest implementowany przez środowisko uruchomieniowe języka wspólnego i inicjuje wszystkie pola struktury do wartości domyślnych.  
+ Jeśli kod źródłowy dla struktury definiuje konstruktory, muszą być sparametryzowane; Struktura nie może definiować domyślnego (bezparametrowego) konstruktora, a kompilatory nie generują konstruktorów bez parametrów dla struktur ani innych typów wartości. Wszystkie typy wartości mają niejawnego domyślnego konstruktora. Ten konstruktor jest implementowany przez środowisko uruchomieniowe języka wspólnego i inicjalizuje wszystkie pola struktury do ich wartości domyślnych.  
   
 <a name="Events"></a>   
 ### <a name="events"></a>Zdarzenia  
- Zdarzenie definiuje incydent, który może być odpowiedzi i definiuje metody subskrypcja, anulowanie subskrypcji i wywołaniem zdarzenia. Zdarzenia są często używane do informowania innych typów zmian stanu. Aby uzyskać więcej informacji, zobacz [zdarzenia](../../../docs/standard/events/index.md).  
+ Zdarzenie określa zdarzenie, które można zareagować i definiuje metody subskrypcja, anulowanie subskrypcji i wywoływania zdarzenia. Zdarzenia są często używane do informowania innych typów zmiany stanu. Aby uzyskać więcej informacji, zobacz [zdarzenia](../../../docs/standard/events/index.md).  
   
 <a name="NestedTypes"></a>   
 ### <a name="nested-types"></a>Zagnieżdżone typy  
- Zagnieżdżony typ jest typem, który jest elementem członkowskim innego typu. Zagnieżdżone typy powinien ściśle powiązane do ich typu zawierającego i nie może być przydatne jako typu ogólnego przeznaczenia. Zagnieżdżone typy są przydatne, gdy typ deklarujący używa i tworzy wystąpienia typu zagnieżdżonego i użyj typu zagnieżdżonego nie jest widoczna w publicznych elementów członkowskich.  
+ Typ zagnieżdżony jest typ, który jest członkiem innego typu. Zagnieżdżone typy powinny być ściśle powiązane ich typem zawierającym i nie można ich używać jako typów ogólnego przeznaczenia. Zagnieżdżone typy są przydatne, gdy typ deklarujący używa i tworzy wystąpienia typu zagnieżdżonego, a użycie typu zagnieżdżonego nie jest widoczne w publicznych członkach.  
   
- Zagnieżdżone typy są trudne do niektórzy deweloperzy i nie powinny być widoczne publicznie, chyba że jest przekonujący powód widoczności. W bibliotece dobrze zaprojektowanego programiści rzadko ma używać zagnieżdżonych typów do utworzenia wystąpienia obiektów lub Zadeklaruj zmienne.  
+ Zagnieżdżone typy są mylące dla niektórych programistów i nie powinny być publicznie widoczne, chyba że istnieje istotny powód widoczności. W bibliotece dobrze zaprojektowanej deweloperzy rzadko powinni być zmuszeni do używania zagnieżdżonych typów do tworzenia wystąpień obiektów lub deklarowaniu zmiennych.  
   
   
   
 <a name="characteristics_of_type_members"></a>   
-## <a name="characteristics-of-type-members"></a>Właściwości elementów członkowskich typu  
- Wspólny system typów umożliwia członkom typu mają różne właściwości; języki nie są wymagane do obsługi tych właściwości. W poniższej tabeli opisano właściwości elementu członkowskiego.  
+## <a name="characteristics-of-type-members"></a>Cechy typów członków  
+ Wspólny system typów umożliwia członkom typów posiadanie różnych cech; jednak języków nie są wymagane do obsługi wszystkich tych cech. W poniższej tabeli opisano charakterystyki składowych.  
   
 |Cechy|Można zastosować do|Opis|  
 |--------------------|------------------|-----------------|  
-|abstract|Metody, właściwości i zdarzeń|Typ nie dostarcza implementacji metody. Typy, które dziedziczyć lub implementować metody abstrakcyjne musi dostarczyć implementację metody. Jedynym wyjątkiem jest po typie pochodnym jest typ abstrakcyjny. Wszystkie metody abstrakcyjne są wirtualnego.|  
-|prywatne, rodziny, zestawu, rodziny i zestawu, rodziny lub zestawu lub publicznego|Wszystkie|Definiuje dostępność elementu członkowskiego:<br /><br /> private<br /> Dostępne tylko z wewnątrz tego samego typu co element członkowski lub w ramach typu zagnieżdżonego.<br /><br /> Rodziny<br /> Dostępny w obrębie tego samego typu, jako element członkowski i z typów pochodnych, które dziedziczą po niej.<br /><br /> zestaw<br /> Dostępne tylko w zestawie, w którym jest zdefiniowany typ.<br /><br /> rodziny i zestawu<br /> Dostępne tylko z typów, które kwalifikują się do dostępu zarówno rodziny i zestawu.<br /><br /> rodziny lub zestawu<br /> Dostępne tylko z typów, które kwalifikują się do rodziny lub zestawu dostępu.<br /><br /> public<br /> Dostępna z dowolnego typu.|  
-|końcowe|Metody, właściwości i zdarzeń|Nie można zastąpić metodę wirtualną w typie pochodnym.|  
-|tylko do inicjowania|Pola|Wartość może być inicjowane tylko i nie może zostać zapisany po zainicjowaniu.|  
-|Wystąpienie|Pola, metody, właściwości i zdarzeń|Jeśli element członkowski nie jest oznaczona jako `static` (C# i C++), `Shared` (Visual Basic), `virtual` (C# i C++), lub `Overridable` (Visual Basic), jest elementu członkowskiego wystąpienia (Brak słowa kluczowego nie wystąpienie). Będzie tyle kopii takich elementów członkowskich w pamięci są obiekty, które go używają.|  
-|literal|Pola|Wartość przypisana do tego pola jest wartością stałą, znane w czasie kompilacji typu wartości wbudowanych. Pola literału są czasami określane jako stałe.|  
-|NewSlot lub zastąpienie|Wszystkie|Określa, jak element członkowski współdziała z dziedziczone elementy członkowskie, które mają taką samą sygnaturę:<br /><br /> NewSlot<br /> Ukrywa dziedziczony elementów członkowskich, które mają taką samą sygnaturę.<br /><br /> override<br /> Zastępuje definicji dziedziczonej metody wirtualnej.<br /><br /> Wartość domyślna to newslot.|  
-|static|Pola, metody, właściwości i zdarzeń|Element członkowski należy do typu, który jest zdefiniowany, nie do konkretnego wystąpienia typu; element członkowski istnieje, nawet jeśli nie jest tworzone wystąpienie typu i jest udostępniana między wszystkich wystąpień tego typu.|  
-|virtual|Metody, właściwości i zdarzeń|Metoda może być zaimplementowany przez typ pochodny i może być wywoływany statycznie lub dynamicznie. Użycie dynamiczne wywołanie typu wystąpienia, który wykonuje wywołanie w czasie wykonywania (a nie typu znane w czasie kompilacji) określa, które implementacji metody jest wywoływana. Aby wywołać metody wirtualnej statycznie, zmienna może być konieczne można rzutować na typ, który korzysta z wersji żądanej metody.|  
+|abstract|Metody, właściwości i zdarzenia|Typ nie dostarcza implementację metody. Typy, które dziedziczą lub implementują metody abstrakcyjne musi dostarczyć implementację metody. Jedynym wyjątkiem jest, gdy typ pochodny sam jest typem abstrakcyjnym. Wszystkie metody abstrakcyjne są wirtualne.|  
+|prywatne, rodzina, zestawu, rodziny i zestawu, rodziny lub zestawu lub publicznego|Wszystkie|Definiuje dostępność członka:<br /><br /> private<br /> Dostępne tylko z w obrębie tego samego typu co członek lub w ramach typu zagnieżdżonego.<br /><br /> Rodzina<br /> Dostępny w obrębie tego samego typu jako elementu członkowskiego oraz z pochodnych typów dziedziczących od niego.<br /><br /> zestaw<br /> Dostępne tylko w zestawie, w którym typ jest zdefiniowany.<br /><br /> Rodzina i zestaw<br /> Dostępne tylko z typów, które kwalifikują się do dostępu rodzinę i zestaw.<br /><br /> Rodzina lub zestaw<br /> Dostępne tylko z typów, które kwalifikują się do dostępu Rodzina lub zestaw.<br /><br /> public<br /> Dostępne z dowolnego typu.|  
+|końcowe|Metody, właściwości i zdarzenia|Nie można zastąpić metodę wirtualną w typie pochodnym.|  
+|tylko do inicjowania|Pola|Wartość może być inicjowane tylko i nie może być zapisywana po zainicjowaniu.|  
+|wystąpienia|Pola, metody, właściwości i zdarzenia|Jeżeli członek nie jest oznaczony jako `static` (C# i C++), `Shared` (Visual Basic), `virtual` (C# i C++) lub `Overridable` (Visual Basic), jest członkiem wystąpienia (istnieje żadne słowo kluczowe wystąpienia). Będzie tyle kopii takich elementów członkowskich w pamięci, ponieważ istnieją obiekty, które go używają.|  
+|literal|Pola|Wartość przypisana do pola jest wartością stałą, znany w czasie kompilacji, o określonym wbudowanym typie wartości. Pola literałów są czasami określane jako stałe.|  
+|nowe gniazdo lub zastąpienie|Wszystkie|Definiuje, jak członek współdziała z dziedziczonymi członkami, którzy mają taki sam podpis:<br /><br /> nowego gniazda<br /> Ukrywa dziedziczonych członków, które mają taki sam podpis.<br /><br /> override<br /> Zastępuje definicję odziedziczonej metody wirtualnej.<br /><br /> Wartość domyślna to newslot.|  
+|static|Pola, metody, właściwości i zdarzenia|Element członkowski należy do typu, który jest zdefiniowany, nie do konkretnego wystąpienia typu; składowa istnieje, nawet jeśli nie jest tworzone wystąpienie typu i jest ona udostępniona wszystkim wystąpieniom typu.|  
+|virtual|Metody, właściwości i zdarzenia|Metoda może być implementowana przez typ pochodny i może być wywołana statycznie lub dynamicznie. Jeśli jest używane wywołanie dynamiczne, Typ wystąpienia dokonujący wywołania w czasie wykonywania (a nie typ znany w czasie kompilacji) określa, która implementacja metody jest wywoływana. Aby wywołać metodę wirtualną statycznie, zmienna może być konieczne można rzutować na typ, który używa żądanej wersji metody.|  
   
 ### <a name="overloading"></a>Przeciążenie  
- Każdy element członkowski typu ma unikatowy podpisu. Podpisy metod zawierają nazwę metody oraz listę parametrów (kolejność i typy argumentów metody). Można zdefiniować wiele metod o tej samej nazwie w określonym typie tak długo, jak ich sygnaturach są różne. Po zdefiniowaniu dwóch lub więcej metod o tej samej nazwie, metoda jest określany przeciążony. Na przykład w <xref:System.Char?displayProperty=nameWithType>, <xref:System.Char.IsDigit%2A> metody jest przeciążona. Przyjmuje jedną metodę <xref:System.Char>. Trwa innej metody <xref:System.String> i <xref:System.Int32>.  
+ Każdy członek typu ma unikatowy podpis. Podpisy metoda składają się z nazwy metody i listą parametrów (kolejności i typów argumentów metody). Tak długo, jak różnią się ich podpisy, można zdefiniować wiele metod o tej samej nazwie w ramach danego typu. Po zdefiniowaniu dwóch lub więcej metod o tej samej nazwie metoda jest nazywany uznawana za przeciążoną. Na przykład w <xref:System.Char?displayProperty=nameWithType>, <xref:System.Char.IsDigit%2A> jest przeciążona metoda. Jedna metoda przyjmuje strukturę <xref:System.Char>. Inna metoda pobiera <xref:System.String> i <xref:System.Int32>.  
   
 > [!NOTE]
->  Zwracany typ nie jest uznawany za część podpisu metody. Oznacza to, że nie może zostać przeciążony metody, jeśli różnią się tylko typem zwracanym.  
+>  Zwracany typ nie jest uznawane za część podpisu metody. Oznacza to nie mogą być przeciążone metody, jeśli różnią się tylko typem zwracanym.  
   
-### <a name="inheriting-overriding-and-hiding-members"></a>Dziedziczenie, zastępowanie i ukrywanie elementów członkowskich  
- Typ pochodny dziedziczy wszystkie elementy członkowskie typu podstawowego; oznacza to, że te elementy członkowskie są zdefiniowane na i dostępne dla typu pochodnego. Można zmodyfikować zachowanie lub właściwości dziedziczone elementy członkowskie na dwa sposoby:  
+### <a name="inheriting-overriding-and-hiding-members"></a>Dziedziczenie, zastępowanie i ukrywanie członków  
+ Typ pochodny dziedziczy wszystkich członków typu podstawowego; oznacza to, że te elementy członkowskie są zdefiniowane w i dostępne dla typu pochodnego. Zachowanie lub jakość członków dziedziczonych można modyfikować na dwa sposoby:  
   
--   Typ pochodny można ukryć dziedziczonego elementu członkowskiego, definiując nowy element członkowski o tej samej sygnaturze. Może to Przekształć w prywatny uprzednio publiczny element członkowski lub zdefiniuj nowe zachowanie dziedziczonej metody, która jest oznaczona jako `final`.  
+-   Typ pochodny może ukrywać dziedziczonego członka przez definiowanie nowego członka o tym samym podpisie. Może to zostać zrobione, Oznacz jako prywatne wcześniejszego członka publicznego lub zdefiniowania nowego zachowania metody dziedziczonej, który jest oznaczony jako `final`.  
   
--   Typ pochodny można zastąpić dziedziczonej metody wirtualnej. Metodę zastępującą udostępnia nową definicję metody, która będzie wywoływana na podstawie typu wartości w czasie wykonywania, a nie typu zmienną znane w czasie kompilacji. Metodę można przesłonić metody wirtualnej tylko wtedy, gdy metoda wirtualna nie jest oznaczony jako `final` i nowa metoda jest co najmniej jako dostępne jako metoda wirtualna.  
+-   Typ pochodny może zastąpić dziedziczoną metodę wirtualną. Metoda przesłaniania zawiera nową definicję metody, która będzie wywołana na podstawie typu wartości w czasie wykonywania, a nie typu zmiennej znanego w czasie kompilacji. Metoda może zastąpić metodę wirtualną tylko wtedy, gdy metoda wirtualna nie jest oznaczony jako `final` i nowa metoda jest co najmniej tak samo dostępna jak metoda wirtualna.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przeglądarka interfejs API .NET](/dotnet/api)  
- [Środowisko uruchomieniowe języka wspólnego](../../../docs/standard/clr.md)  
- [Konwersja typów w programie .NET](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Przeglądarka interfejsu API .NET](/dotnet/api)  
+- [Środowisko uruchomieniowe języka wspólnego](../../../docs/standard/clr.md)  
+- [Konwersja typów w programie .NET](../../../docs/standard/base-types/type-conversion.md)

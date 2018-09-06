@@ -3,11 +3,11 @@ title: Przegląd korelacji
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
 ms.openlocfilehash: 8ac5d39866b23bc134f009fdb0df6ebf56c6d234
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553464"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035921"
 ---
 # <a name="correlation-overview"></a>Przegląd korelacji
 Korelacja jest mechanizm dotyczących komunikatów usługi przepływu pracy lub stan wystąpienia aplikacji, takich jak odpowiedzi na żądanie podania początkowej lub Identyfikatora określonej kolejności utrwalonego stanu przepływu pracy przetwarzania zamówień. Ten temat zawiera omówienie korelacji. W innych tematach w tej sekcji Podaj dodatkowe informacje dla każdego typu korelacji.  

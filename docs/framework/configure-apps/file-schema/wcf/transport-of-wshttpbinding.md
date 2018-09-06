@@ -3,11 +3,11 @@ title: '&lt;transport&gt; w &lt;wsHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
 ms.openlocfilehash: 771866a83d54ca9e4fc7f3ed6d351b4a6c755b4c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733225"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890957"
 ---
 # <a name="lttransportgt-of-ltwshttpbindinggt"></a>&lt;transport&gt; w &lt;wsHttpBinding&gt;
 Definiuje ustawienia uwierzytelniania dla protokołu HTTP.  

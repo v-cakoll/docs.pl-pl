@@ -2,12 +2,12 @@
 title: Wzorce aktywne (F#)
 description: 'Dowiedz się, jak zdefiniować nazwanych partycji, które należy podzielić dane wejściowe w języku programowania F # przy użyciu wzorców.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 964ae8eb6db0191fab1e5a816e29bd0819605f2c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786502"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881879"
 ---
 # <a name="active-patterns"></a>Wzorce aktywne
 
@@ -44,7 +44,7 @@ Dane wyjściowe tego programu jest następująca:
 
 Innym zastosowaniem wzorców jest do rozkładania typy danych na wiele sposobów, na przykład w przypadku tych samych danych bazowych różne reprezentacje to możliwe. Na przykład `Color` obiekt może być rozłożone na reprezentację w postaci RGB lub reprezentację w postaci HSB.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
 Dane wyjściowe programu powyżej jest następująca:
 
@@ -72,9 +72,9 @@ Wyrażenia dopasowania wzorca wynikowe Włącz dane są zapisywane w wygodny spo
 
 ## <a name="partial-active-patterns"></a>Wzorce aktywne częściowe
 
-Czasami musisz partycji tylko część obszaru danych wejściowych. W takim przypadku można zapisać zestawu częściowego wzorców, z nich odnosić się do niektórych danych wejściowych, ale nie można dopasować pozostałych danych wejściowych. Aktywne wzorce, które nie zawsze daje wartość są nazywane *częściowe wzorców*; mają zwracanej wartości, która jest typem opcji. Aby zdefiniować częściowe — aktywny wzorzec, należy użyć symbolu wieloznacznego (_) na końcu listy wzorców wewnątrz klipów banany. Poniższy kod ilustruje sposób korzystania z częściowego — aktywny wzorzec.
+Czasami musisz partycji tylko część obszaru danych wejściowych. W takim przypadku można zapisać zestawu częściowego wzorców, z nich odnosić się do niektórych danych wejściowych, ale nie można dopasować pozostałych danych wejściowych. Aktywne wzorce, które nie zawsze daje wartość są nazywane *częściowe wzorców*; mają zwracanej wartości, która jest typem opcji. Aby zdefiniować częściowe — aktywny wzorzec, należy użyć symbolu wieloznacznego (\_) na końcu listy wzorców wewnątrz klipów banany. Poniższy kod ilustruje sposób korzystania z częściowego — aktywny wzorzec.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
 Dane wyjściowe poprzedniego przykładu, jest następujący:
 
@@ -88,7 +88,7 @@ Something else : Not matched.
 
 Korzystając z częściowego wzorców, czasami poszczególne opcje mogą być rozłączne lub wzajemnie się wykluczają, ale nie muszą być. W poniższym przykładzie kwadrat wzorca i wzorzec modułu nie są rozłączne, ponieważ niektóre numery kwadratów i modułów, takich jak 64. Następujący program drukowania wszystkich liczb całkowitych do 1000000, które są zarówno kwadratów i moduły.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 Dane wyjściowe wyglądają następująco:
 
@@ -109,7 +109,7 @@ Dane wyjściowe wyglądają następująco:
 
 Wzorce aktywne zawsze uruchomić co najmniej jednego argumentu dla elementu są dopasowywane, ale potrwać dodatkowych argumentów, w tym przypadku nazwa *sparametryzowanego — aktywny wzorzec* ma zastosowanie. Dodatkowe argumenty zezwala na ogólny wzorzec można wyspecjalizować. Na przykład wzorców, które używają wyrażeń regularnych do analizowania ciągów często zawierają wyrażenia regularnego jako dodatkowego parametru, zgodnie z poniższym kodem, który także używa częściowe — aktywny wzorzec `Integer` zdefiniowane w poprzednim przykładzie kodu. W tym przykładzie podane są ciągów, które używają wyrażeń regularnych dla różnych formatów daty, aby dostosować ogólny ParseRegex — aktywny wzorzec. Liczba całkowita — aktywny wzorzec służy do konwertowania ciągów dopasowane do liczb całkowitych, które mogą być przekazywane do konstruktora daty/godziny.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
 Dane wyjściowe poprzedniego kodu jest następująca:
 
@@ -119,7 +119,7 @@ Dane wyjściowe poprzedniego kodu jest następująca:
 
 Wzorce aktywne nie są ograniczone tylko do wyrażenia dopasowania do wzorca, można również użyć na let — powiązania.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
 Dane wyjściowe poprzedniego kodu jest następująca:
 

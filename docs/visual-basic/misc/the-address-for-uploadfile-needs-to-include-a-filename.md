@@ -5,11 +5,11 @@ f1_keywords:
 - vbrNetwork_UploadAddressNeedsFilename
 ms.assetid: 0ee11749-0432-4ccb-8c08-1663a4a55ad0
 ms.openlocfilehash: a3f0b02246264cb50c6f719294cb990221702ea2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738400"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886269"
 ---
 # <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a>Adres UploadFile musi zawierać nazwę pliku
 Podczas przekazywania plików z `UploadFile` metody, należy podać nazwę pliku w ścieżce docelowej.  

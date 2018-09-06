@@ -3,11 +3,11 @@ title: Liczby zmiennoprzecinkowe
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
 ms.openlocfilehash: 2ab583a07c78cfa06ac597c369486f89e19ca66e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466094"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042373"
 ---
 # <a name="floating-point-numbers"></a>Liczby zmiennoprzecinkowe
 W tym temacie opisano niektóre problemy, które często deweloperzy napotykają podczas pracy z liczb zmiennoprzecinkowych w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Te problemy są spowodowane przez sposób komputerom przechowywania liczb zmiennoprzecinkowych i nie są specyficzne dla określonego dostawcy takich jak <xref:System.Data.SqlClient> lub <xref:System.Data.OracleClient>.  

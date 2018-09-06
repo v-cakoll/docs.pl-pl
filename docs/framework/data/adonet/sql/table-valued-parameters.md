@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742524"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042585"
 ---
 # <a name="table-valued-parameters"></a>Parametry z wartościami przechowywanymi w tabeli
 Parametry z wartościami przechowywanymi w tabeli zawierają łatwy sposób organizowania wielu wierszy danych z aplikacji klienckiej programu SQL Server, bez konieczności wielu wystąpień komunikacji dwustronnej lub specjalne logiki po stronie serwera związane z przetwarzaniem danych. Parametry z wartościami przechowywanymi w tabeli można użyć do hermetyzacji wierszy danych w aplikacji klienckiej i wysyłania danych do serwera za pomocą jednego polecenia sparametryzowanych. Przychodzące wiersze danych są przechowywane w zmiennej tabeli, która może być eksploatowana przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  

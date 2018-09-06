@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 1d193b0cac56f365a4f0a294145369502754a1b1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778896"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882013"
 ---
 # <a name="instancing"></a>Tworzenie wystąpienia
 Przykład Instancing pokazuje ustawienie zachowania wystąpień, które kontroluje sposób tworzenia wystąpienia klasy usługi w odpowiedzi na żądania klientów. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. Ta przykładowa aplikacja definiuje kontrakt nowe `ICalculatorInstance`, który dziedziczy z `ICalculator`. Kontrakt określony przez `ICalculatorInstance` zawiera trzy dodatkowych operacji sprawdzania stanu wystąpienia usługi. Zmieniając ustawienie wystąpień, można obserwować zmiany w zachowaniu przez uruchomienie klienta.  

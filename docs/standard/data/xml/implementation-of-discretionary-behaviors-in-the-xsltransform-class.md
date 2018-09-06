@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd84702ea761f58fca88a8a72f6706f6cd439b7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e8bd2eaa977c9e3546758e9fd0e9fa3b4527634
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43541242"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039838"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementowanie zachowań uznaniowych w klasie XslTransform
 
@@ -79,13 +79,13 @@ W poniższej tabeli przedstawiono funkcje, które są opcjonalne dla procesora X
 |-------------|------------------------|-----------|
 |`disable-output-escaping` atrybutu na `<xsl:text...>` i `<xsl:value-of...>` tagów.|W3C XSLT 1.0 zalecenia<br /><br /> Sekcja 16.4|`disable-output-escaping` Atrybut jest ignorowany w przypadku `xsl:text` lub `xsl:value-of` elementy są używane w `xsl:comment`, `xsl:processing-instruction`, lub `xsl:attribute` elementu.<br /><br /> Fragmenty drzewa wynik, które zawierają tekst i tekstu wyjściowego, który ma zostać zmieniona, nie są obsługiwane.<br /><br /> Anulowanie dane wyjściowe wyłącz atrybut jest ignorowany w przypadku przekształcania w <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter> obiektu.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-<xref:System.Xml.Xsl.XslTransform>
-[Klasy XslTransform implementuje procesora XSLT](xsltransform-class-implements-the-xslt-processor.md)  
-[Przekształcenia XSLT przy użyciu klasy XslTransform](xslt-transformations-with-the-xsltransform-class.md)  
-[Klasa XPathNavigator w przekształceniach](xpathnavigator-in-transformations.md)  
-[Klasa XPathNodeIterator w przekształceniach](xpathnodeiterator-in-transformations.md)  
-[Dane wejściowe obiektu XPathDocument klasy XslTransform](xpathdocument-input-to-xsltransform.md)  
-[Dane wejściowe obiektu XmlDataDocument klasy XslTransform](xmldatadocument-input-to-xsltransform.md)  
-[Dane wejściowe obiektu XmlDocument klasy XslTransform](xmldocument-input-to-xsltransform.md)  
+- <xref:System.Xml.Xsl.XslTransform>
+- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](xsltransform-class-implements-the-xslt-processor.md)  
+- [Przekształcenia XSLT przy użyciu klasy XslTransform](xslt-transformations-with-the-xsltransform-class.md)  
+- [Klasa XPathNavigator w przekształceniach](xpathnavigator-in-transformations.md)  
+- [Klasa XPathNodeIterator w przekształceniach](xpathnodeiterator-in-transformations.md)  
+- [Dane wejściowe obiektu XPathDocument klasy XslTransform](xpathdocument-input-to-xsltransform.md)  
+- [Dane wejściowe obiektu XmlDataDocument klasy XslTransform](xmldatadocument-input-to-xsltransform.md)  
+- [Dane wejściowe obiektu XmlDocument klasy XslTransform](xmldocument-input-to-xsltransform.md)  

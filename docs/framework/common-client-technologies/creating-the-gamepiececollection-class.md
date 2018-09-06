@@ -3,11 +3,11 @@ title: Tworzenie klasy GamePieceCollection
 ms.date: 03/30/2017
 ms.assetid: e4b037ee-1201-4a55-b198-0d6532ed6f35
 ms.openlocfilehash: 6323122735273f77bfe9d61bf2df84cabe3e5d6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740065"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041229"
 ---
 # <a name="creating-the-gamepiececollection-class"></a>Tworzenie klasy GamePieceCollection
 **GamePieceCollection** klasa pochodzi od klasy ogólnej listy i wprowadza metody, aby łatwiej zarządzać wieloma **GamePiece** obiektów.  

@@ -3,11 +3,11 @@ title: Rozszerzanie śledzenia
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
 ms.openlocfilehash: 02dfcc099883ed1d5e97b4f7b1a1f76d49b27a20
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740696"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881947"
 ---
 # <a name="extending-tracing"></a>Rozszerzanie śledzenia
 Niniejszy przykład pokazuje, jak rozszerzyć funkcję śledzenia usług Windows Communication Foundation (WCF), pisząc dane śledzenia działań użytkownika w kodzie klienta i usługi. Dzięki temu użytkownikowi na tworzenie śledzenia działań i grupować dane śledzenia w logiczne jednostki pracy. Istnieje również możliwość skorelowania działania za pośrednictwem transfery (w obrębie tego samego punktu końcowego) i propagację (za pośrednictwem punktów końcowych). W tym przykładzie jest włączone śledzenie zarówno klient, jak i usługi. Aby uzyskać więcej informacji o tym, jak włączyć śledzenie w plikach konfiguracji klienta i usługi, zobacz [śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  

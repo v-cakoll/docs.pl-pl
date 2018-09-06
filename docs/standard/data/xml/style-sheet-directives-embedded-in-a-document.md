@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08bd33aab6cbeeeb9060f3de3565a05896c6ba7f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777451"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882917"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Dyrektywy dotyczące arkusza stylów osadzone w dokumencie
 
@@ -37,6 +37,6 @@ Za pomocą `<?xml:stylesheet?>` zawierające dwukropek, możesz teraz naruszają
 
 Zgodnie z World Wide Web Consortium (W3C) [kojarzenie arkusze stylów, za pomocą XML dokumenty, wersja 1.0 zalecenie](https://www.w3.org/TR/xml-stylesheet/), jest instrukcja przetwarzania, aby skojarzyć arkusz stylów XSLT z dokumentu XML `<?xml-stylesheet?>`, za pomocą kreska, zastępując z dwukropkiem.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Model DOM (XML Document Object Model)](xml-document-object-model-dom.md)  
+- [Model DOM (XML Document Object Model)](xml-document-object-model-dom.md)

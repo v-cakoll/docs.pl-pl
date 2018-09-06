@@ -1,69 +1,69 @@
 ---
-title: Domyślna wartość wyrażenia (C# przewodnik programowania w języku)
-description: Wyrażenia wartości domyślnej tworzy wartości domyślne dla dowolnego typu odwołanie lub typ wartości
+title: Wyrażenia wartości domyślnych (C# Programming Guide)
+description: Domyślna wartość wyrażenia dają wartość domyślna dla dowolnego typu odwołania lub typu wartości
 ms.date: 04/25/2018
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.openlocfilehash: be51ad253a2939f538144caf4500f39e144c1664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94866f22fb3ad921a834cffb16fe17e44cef5965
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336804"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032322"
 ---
-# <a name="default-value-expressions-c-programming-guide"></a>Domyślna wartość wyrażenia (C# programowania przewodnik)
+# <a name="default-value-expressions-c-programming-guide"></a>wyrażenia wartości domyślnych (C# Podręcznik programowania)
 
-Wyrażenie wartości domyślnej `default(T)` daje wartość domyślna typu `T`. W poniższej tabeli przedstawiono wartości, które są tworzone dla różnych typów:
+Wyrażenie wartości domyślnej `default(T)` generuje wartość domyślna typu `T`. W poniższej tabeli przedstawiono wartości, które są tworzone dla różnych typów:
 
 |Typ|Wartość domyślna|
 |---------|---------|
 |dowolny typ odwołania|`null`|
-|Typ wartości liczbowe|Zero|
+|Typ wartości liczbowych|Zero|
 |[bool](../../language-reference/keywords/bool.md)|`false`|
 |[char](../../language-reference/keywords/char.md)|`'\0'`|
-|[enum](../../language-reference/keywords/enum.md)|Wartość utworzonego przez wyrażenie `(E)0`, gdzie `E` to identyfikator wyliczenia.|
-|[struct](../../language-reference/keywords/struct.md)|Wartość utworzonego przez ustawienie wartości wszystkich pól typu na ich wartości domyślne, a wszystkie odwołania pola typu do `null`.|
-|Typ dopuszczający wartość null|Wystąpienie, dla którego <xref:System.Nullable%601.HasValue%2A> właściwość jest `false` i <xref:System.Nullable%601.Value%2A> właściwość jest niezdefiniowana.|
+|[enum](../../language-reference/keywords/enum.md)|Wartość produkowane przez wyrażenie `(E)0`, gdzie `E` jest identyfikatorem wyliczenia.|
+|[struct](../../language-reference/keywords/struct.md)|Wartość produkowane przez ustawienie wartości wszystkich pól typu na ich wartości domyślne, a wszystkie odwoływać się do pola typu do `null`.|
+|Typ dopuszczający wartość null|Wystąpienie, dla którego <xref:System.Nullable%601.HasValue%2A> właściwość `false` i <xref:System.Nullable%601.Value%2A> właściwość jest niezdefiniowana.|
 
-Wyrażenia wartości domyślne są szczególnie przydatne w ogólne klasy i metody. Jak przypisać wartość domyślną typu sparametryzowane jest jeden problem, który pojawia się przy użyciu typów ogólnych `T` Jeśli nie znasz następujące wcześniej:
+Wyrażenia wartości domyślnych są szczególnie przydatne w ogólne klasy i metody. Jednym problemem, który pojawia się za pomocą typów ogólnych jest jak przypisać wartość domyślną typu sparametryzowane `T` podczas nie wiesz, że wcześniej:
 
 - Czy `T` jest typem referencyjnym lub typem wartości.
-- Jeśli `T` jest typem wartości, czy jest wartość liczbowa lub struktury.
+- Jeśli `T` jest typem wartości, czy jest wartością liczbową lub struktury.
 
- Podane zmiennej `t` sparametryzowane typu `T`, instrukcja `t = null` jest prawidłowy tylko jeśli `T` jest typem referencyjnym. Przypisanie `t = 0` działa tylko dla typów wartości liczbowe, ale nie dla struktury. Aby rozwiązać, który, należy użyć wyrażenie wartości domyślnej:
+ Biorąc pod uwagę zmienną `t` sparametryzowane typu `T`, instrukcji `t = null` jest prawidłowa tylko jeśli `T` jest typem referencyjnym. Przypisanie `t = 0` działa tylko wtedy, typach wartości liczbowe, ale nie struktury. Aby rozwiązać, który, należy użyć wyrażenie wartości domyślnej:
 
 ```csharp
 T t = default(T);
 ```
 
-`default(T)` Wyrażenie nie jest ograniczona do ogólne klasy i metody. Domyślna wartość wyrażenia może służyć z dowolnego typu zarządzanego. Dowolne z tych wyrażeń są prawidłowe:
+`default(T)` Wyrażenie nie jest ograniczona do ogólne klasy i metody. Wyrażenia wartości domyślnych może służyć za pomocą dowolnego typu zarządzanego. Dowolne z tych wyrażeń są prawidłowe:
 
  [!code-csharp[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
 
- Poniższy przykład z `GenericList<T>` klasa przedstawia sposób użycia `default(T)` operatora w klasie rodzajowej. Aby uzyskać więcej informacji, zobacz [wprowadzenie do typów ogólnych](../generics/introduction-to-generics.md).
+ Poniższy przykład z `GenericList<T>` klasy ilustruje sposób używania `default(T)` operatora w klasie ogólnej. Aby uzyskać więcej informacji, zobacz [wprowadzenie do typów ogólnych](../generics/introduction-to-generics.md).
 
  [!code-csharp[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
 
-## <a name="default-literal-and-type-inference"></a>Domyślnie literału i wnioskowanie o typie
+## <a name="default-literal-and-type-inference"></a>domyślny literał i wnioskowanie o typie
 
-Począwszy od C# 7.1, `default` literał może służyć do wyrażenia wartości domyślnej, gdy kompilator może wnioskować o typie wyrażenia. `default` Literał tworzy taką samą wartość jak odpowiednik `default(T)` gdzie `T` jest wywnioskowany typ. Może być kodu bardziej zwięzły zmniejszając nadmiarowość z typem deklarującym więcej niż raz. `default` Literał mogą być używane w dowolnej z następujących lokalizacji:
+Począwszy od C# 7.1 `default` literał może służyć do wyrażenia wartości domyślnych, gdy kompilator może wywnioskować typ wyrażenia. `default` Literał tworzy taką samą wartość jak odpowiednik `default(T)` gdzie `T` jest wnioskowany typ. To może uczynić kod bardziej zwięzły widok przez ograniczenie nadmiarowości więcej niż raz deklarowania typu. `default` Literał mogą być używane w dowolnej z następujących lokalizacji:
 
 - Inicjator zmiennej
 - przypisanie zmiennej
-- deklarowanie wartości domyślnej dla parametru opcjonalnego
-- udostępnia wartość argumentu wywołania — metoda
-- Zwraca instrukcji (lub wyrażenie w elemencie członkowskim zabudowanego wyrażenia)
+- deklarowanie wartość domyślna dla opcjonalnego parametru
+- podając wartości argumentu wywołania metody
+- Zwraca instrukcję (lub wyrażenia w elemencie członkowskim zabudowanego wyrażenia)
 
-W poniższym przykładzie pokazano wiele sposobów użycia `default` literał w wyrażeniu wartości domyślne:
+W poniższym przykładzie pokazano wiele użycia `default` literału w wyrażeniu wartości domyślne:
 
 [!code-csharp[csProgGuideGenerics#3](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-literal.cs)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
- <xref:System.Collections.Generic>  
- [Przewodnik programowania w języku C#](../index.md)  
- [Typy ogólne (C# przewodnik programowania w języku)](../generics/index.md)  
- [Metody ogólne](../generics/generic-methods.md)  
- [Typy ogólne w .NET](~/docs/standard/generics/index.md)  
- [Tabela wartości domyślnych](../../language-reference/keywords/default-values-table.md)
+- <xref:System.Collections.Generic>  
+- [Przewodnik programowania w języku C#](../index.md)  
+- [Typy ogólne (C# Programming Guide)](../generics/index.md)  
+- [Metody ogólne](../generics/generic-methods.md)  
+- [Typy ogólne w .NET](~/docs/standard/generics/index.md)  
+- [Tabela wartości domyślnych](../../language-reference/keywords/default-values-table.md)

@@ -1,17 +1,17 @@
 ---
 title: Komórki odwołań (F#)
-description: 'Dowiedz się, jak F # odwołanie do komórki są lokalizacje magazynu, które umożliwiają tworzenie wartości modyfikowalne z semantykę odwołania.'
+description: 'Dowiedz się, jak komórki odwołań F # są lokalizacje przechowywania, które umożliwiają tworzenie modyfikowalnych wartości z semantyką odwołań.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34149065"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892427"
 ---
 # <a name="reference-cells"></a>Komórki odwołań
 
-*Odwołanie do komórki* są lokalizacje magazynu, które umożliwiają tworzenie wartości modyfikowalne z semantykę odwołania.
+*Komórki odwołań* to lokalizacje przechowywania, które umożliwiają tworzenie modyfikowalnych wartości z semantyką odwołań.
 
 ## <a name="syntax"></a>Składnia
 
@@ -20,28 +20,29 @@ ref expression
 ```
 
 ## <a name="remarks"></a>Uwagi
-Możesz użyć `ref` operator przed wartością do utworzenia nowego hermetyzujący wartość komórki odwołania. Podstawową wartość można będzie wtedy zmieniać, ponieważ jest ona modyfikowalna.
 
-Komórka odwołania zawiera wartość rzeczywistą, a nie sam adres. Po utworzeniu komórka odwołania przy użyciu `ref` operatora, Utwórz kopię odpowiednia wartość jako hermetyzowany modyfikowalne wartości.
+Możesz użyć `ref` przed wartością operatora do utworzenia nowej komórki odwołania, która hermetyzuje wartość. Podstawową wartość można będzie wtedy zmieniać, ponieważ jest ona modyfikowalna.
 
-Odwołanie do komórki można wyłuskać przy użyciu `!` — operator (eliminacja).
+Komórka odwołania zawiera wartość rzeczywistą, a nie sam adres. Podczas tworzenia komórek odwołań za pomocą `ref` operatora, Utwórz kopię podstawowej wartości jako hermetyzowana wartość modyfikowalna.
+
+Komórkę odwołania można wyłuskać za pomocą `!` — operator (wykrzyknika).
 
 Poniższy przykład kodu ilustruje deklarowanie i używanie komórek odwołań.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
 
-Dane wyjściowe `50`.
+Dane wyjściowe są `50`.
 
-Komórki odwołań są wystąpieniami klasy `Ref` typu ogólnego rekordu, który został zadeklarowany w następujący sposób.
+Komórki odwołań są wystąpieniami `Ref` ogólnego typu rekordu, który jest zadeklarowany w następujący sposób.
 
 ```fsharp
 type Ref<'a> =
 { mutable contents: 'a }
 ```
 
-Typ `'a ref` jest synonimem `Ref<'a>`. Pierwszy zapis jest stosowany do wyświetlania tego typu w kompilatorze i technologii IntelliSense w środowisku IDE, jednak podstawowa definicja ma postać jak w drugim zapisie.
+Typ `'a ref` jest synonimem dla `Ref<'a>`. Pierwszy zapis jest stosowany do wyświetlania tego typu w kompilatorze i technologii IntelliSense w środowisku IDE, jednak podstawowa definicja ma postać jak w drugim zapisie.
 
-`ref` Operator tworzy nowe odwołanie do komórki. Następujący kod jest deklaracja `ref` operatora.
+`ref` Operatora powoduje utworzenie nowej komórki odwołania. Poniższy kod stanowi deklarację `ref` operatora.
 
 ```fsharp
 let ref x = { contents = x }
@@ -51,14 +52,14 @@ W poniższej tabeli przedstawiono funkcje, które są dostępne w komórce odwo�
 
 |Operator, element członkowski lub pole|Opis|Typ|Definicja|
 |--------------------------|-----------|----|----------|
-|`!` (operatora anulowania odwołania do)|Zwraca podstawową wartość.|`'a ref -> 'a`|`let (!) r = r.contents`|
+|`!` (operator dereferencji)|Zwraca podstawową wartość.|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=` (operator przypisania)|Zmienia podstawową wartość.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
 |`ref` (operator)|Hermetyzuje wartość do nowej komórki odwołania.|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value` (właściwości)|Pobiera lub ustawia podstawową wartość.|`unit -> 'a`|`member x.Value = x.contents`|
-|`contents` (pola rekordu)|Pobiera lub ustawia podstawową wartość.|`'a`|`let ref x = { contents = x }`|
-Istnieje kilka sposobów dostępu do podstawowej wartości. Wartość zwracana przez dereference operator (`!`) nie jest możliwa do przypisania wartości. W związku z tym jeśli modyfikujesz odpowiednia wartość, należy użyć operatora przypisania (`:=`) zamiast tego.
+|`Value` (właściwość)|Pobiera lub ustawia podstawową wartość.|`unit -> 'a`|`member x.Value = x.contents`|
+|`contents` (pole rekordu)|Pobiera lub ustawia podstawową wartość.|`'a`|`let ref x = { contents = x }`|
+Istnieje kilka sposobów dostępu do podstawowej wartości. Wartość zwracana przez operator wyłuskania (`!`) nie jest przypisywalna. W związku z tym, jeśli w przypadku modyfikowania podstawowej wartości należy użyć operatora przypisania (`:=`) zamiast tego.
 
-Zarówno `Value` właściwości i `contents` pola są można przypisać wartości. W związku z tym można za ich pomocą uzyskać dostęp do podstawowej wartości albo ją zmienić, jak pokazano w poniższym kodzie.
+Zarówno `Value` właściwości i `contents` są przypisywalne. W związku z tym można za ich pomocą uzyskać dostęp do podstawowej wartości albo ją zmienić, jak pokazano w poniższym kodzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
 
@@ -71,25 +72,25 @@ Dane wyjściowe są następujące:
 12
 ```
 
-Pole `contents` zapewnia zgodność z innymi wersjami programu ML i spowoduje wygenerowanie ostrzeżenia podczas kompilacji. Aby wyłączyć ostrzeżenia, należy użyć `--mlcompatibility` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).
+Pole `contents` zapewnia zgodność z innymi wersjami języka ML i spowoduje wygenerowanie ostrzeżenia podczas kompilacji. Aby wyłączyć to ostrzeżenie, użyj `--mlcompatibility` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).
 
-Poniższy fragment kodu ilustruje używanie komórek odwołań w przekazywaniu parametrów. Typ Incrementor ma metodę przyrostu, która przyjmuje parametr, który zawiera parametr typu byref. Byref w typ parametru wskazuje, że obiekty wywołujące musi upłynąć komórka odwołania lub adresu zmiennej typowe określonego typu w tej sprawy int. Pozostały kod przedstawia sposób wywołania przyrostu z obu typów argumentów i pokazano sposób użycia operatora ref w zmiennej, aby utworzyć komórka odwołania (ref myDelta1). Następnie przedstawiono użycie address-of — operator (&amp;) do generowania odpowiednich argumentu. Na koniec Increment — metoda jest wywoływana ponownie przy użyciu komórka odwołania, które są zadeklarowane za pomocą powiązania let. Końcowe wiersz kodu przedstawiono użycie! operatora, aby usunąć odwołania do komórka odwołania do drukowania.
+Poniższy fragment kodu ilustruje używanie komórek odwołań w przekazywaniu parametrów. Typ Incrementor ma metodę inkrementacji, który przyjmuje parametr, który zawiera typ parametru byref. Byref w typie parametru wskazuje, że obiekty wywołujące muszą przekazywać komórkę odwołania lub adres typowej zmiennej o określonym typie, w tym przypadków int. Pozostały kod ilustruje sposób wywołania metody przyrostu z oboma tymi typami argumentów i pokazuje użycie operatora ref w zmiennej, aby utworzyć komórki odwołania (ref myDelta1). Następnie prezentuje użycie operatora address-of (&amp;) do wygenerowania odpowiedniego argumentu. Na koniec przyrost jest ponownie wywoływana metoda przy użyciu komórki odwołania, która jest zadeklarowana za pomocą powiązania let. Ostatni wiersz kodu ilustruje użycie! operator, który ma być wyłuskania komórki odwołania na potrzeby drukowania.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
 
-Aby uzyskać więcej informacji na temat przekazywane przez odwołanie, zobacz [parametry i argumenty](parameters-and-arguments.md).
+Aby uzyskać więcej informacji na temat przekazywania odwołania, zobacz [parametrami i argumentami](parameters-and-arguments.md).
 
 >[!NOTE]
-C# programistów wiedzieć, że ten ref działa inaczej w języku F # niż w języku C#. Na przykład użycie ref, jeśli argument nie ma ten sam efekt w języku F # jak w języku C#.
+Programiści języka C# wiedzieć, że ten ref działa inaczej w języku F # niż w języku C#. Na przykład użycie ref podczas przekazywania argumentu ma ten sam efekt w języku F # jak w języku C#.
 
 >[!NOTE]
-`mutable` zmienne, które mogą być automatycznie podwyższony do `'a ref` przechwycona przez zamknięcie; zobacz [wartości](values/index.md).
+`mutable` Zmienne mogą zostać automatycznie podwyższony do `'a ref` przechwycone przez zamknięcie; zobacz [wartości](values/index.md).
 
 ## <a name="consuming-c-ref-returns"></a>C# — zużywanie `ref` zwraca
 
-Począwszy od 4.1 F #, będzie można korzystać z `ref` zwraca wygenerowany w języku C#.  Wynik wywołania takie jest `byref<_>` wskaźnika.
+Począwszy od F # 4.1, mogą wykorzystywać `ref` zwraca generowane w języku C#.  Wynik takich wywołań to `byref<_>` wskaźnika.
 
-Następujące C# metody:
+Następujące metodę języka C#:
 
 ```csharp
 namespace RefReturns
@@ -112,7 +113,7 @@ namespace RefReturns
 }
 ```
 
-Może być przezroczysty wywołany przez język F # z nie specjalnych składni:
+Może być przezroczysty wywołany przez język F # z nie specjalnej składni:
 
 ```fsharp
 open RefReturns
@@ -122,19 +123,17 @@ let consumeRefReturn() =
     ()
 ```
 
-Można również zadeklarować funkcji, które można podjąć `ref` zwracać jako danych wejściowych, na przykład:
+Można również zadeklarować funkcji, może to potrwać `ref` Zwróć jako danych wejściowych, na przykład:
 
 ```fsharp
 let f (x: byref<int>) = &x
 ```
 
-Obecnie nie istnieje sposób do generowania `ref` zwracany w języku F #, który może być używana w języku C#.
+Obecnie nie istnieje sposób do generowania `ref` zwracany w języku F #, która może być używane w języku C#.
 
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
+## <a name="see-also"></a>Zobacz także
 
-[Parametry i argumenty](parameters-and-arguments.md)
-
-[Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)
-
-[Wartości](values/index.md)
+- [Dokumentacja języka F#](index.md)
+- [Parametry i argumenty](parameters-and-arguments.md)
+- [Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)
+- [Wartości](values/index.md)

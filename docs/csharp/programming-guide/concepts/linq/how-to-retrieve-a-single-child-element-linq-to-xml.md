@@ -3,11 +3,11 @@ title: 'Porady: pobieranie jeden typ elementów podrzędnych (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
 ms.openlocfilehash: 77ccd56d1d131a740bb90ef4258ef35504f5e3cb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738811"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882311"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Porady: pobieranie jeden typ elementów podrzędnych (LINQ to XML) (C#)
 W tym temacie wyjaśniono, jak pobrać jeden typ elementów podrzędnych, biorąc pod uwagę nazwę elementu podrzędnego. Znając nazwę elementu podrzędnego elementu i że istnieje tylko jeden element o tej nazwie może być wygodna można pobrać tylko jeden element, zamiast kolekcji.  

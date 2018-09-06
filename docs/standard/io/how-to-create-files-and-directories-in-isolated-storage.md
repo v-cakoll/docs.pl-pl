@@ -16,29 +16,30 @@ helpviewer_keywords:
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7fa96e4f28e92e0890acf6ffc105ca11a97d575
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08beb44fdb58ab1c1d53f70ac0653348b96fcb18
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575190"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886464"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Porady: tworzenie plików i katalogów w izolowanym magazynie
-Po uzyskaniu izolowanego magazynu można utworzyć katalogów i plików do przechowywania danych. W sklepie nazwy plików i katalogów są określane względem katalogu głównego wirtualnego systemu plików.  
+Po uzyskaniu izolowanym magazynie, można utworzyć katalogów i plików do przechowywania danych. W magazynie i nazw plików i katalogów są określane względem katalogu głównego w wirtualnym systemie plików.  
   
- Aby utworzyć katalog, użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType> metody wystąpienia. Jeśli określisz podkatalogiem katalogu, który nie istnieje, obie katalogi są tworzone. Jeśli określisz katalogu, który już istnieje, metoda zwraca bez tworzenia katalogu, a nie wyjątek. Jednak jeśli określono nazwę katalogu zawiera nieprawidłowe znaki <xref:System.IO.IsolatedStorage.IsolatedStorageException> wyjątku.  
+ Aby utworzyć katalog, należy użyć <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType> metodę wystąpienia. Jeśli określisz podkatalogiem katalogu, który nie istnieje, oba katalogi są tworzone. Jeśli określisz katalogu, który już istnieje, metoda zwraca bez tworzenia katalogu, a jest zgłaszany żaden wyjątek. Jednakże, jeśli określisz nazwę katalogu, zawiera nieprawidłowe znaki <xref:System.IO.IsolatedStorage.IsolatedStorageException> wyjątku.  
   
  Aby utworzyć plik, użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType> metody.  
   
- W systemie operacyjnym Windows, izolowanego magazynu plików i katalogów nazwy jest rozróżniana wielkość liter. Oznacza to czy utworzony plik o nazwie `ThisFile.txt`, a następnie utwórz plik o nazwie `THISFILE.TXT`, tworzony jest tylko jeden plik. Nazwa pliku zachowuje jego oryginalnej wielkości liter podczas wyświetlania.  
+ W systemie operacyjnym Windows, wydzielona pamięć masowa plików i katalogów nazw jest rozróżniana wielkość liter. Oznacza to jeśli utworzysz plik o nazwie `ThisFile.txt`, a następnie utwórz inny plik o nazwie `THISFILE.TXT`, jest tworzony tylko jeden plik. Nazwa pliku przechowuje swoje oryginalne wielkość liter w wyrazie w celach wyświetlania.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod ilustruje sposób tworzenia plików i katalogów w izolowanym magazynie.  
+ Poniższy przykładowy kod przedstawia sposób tworzenia plików i katalogów w izolowanym magazynie.  
   
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]
  [!code-vb[Conceptual.IsolatedStorage#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
- [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
+- [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)

@@ -3,11 +3,11 @@ title: Charakterystyka funkcji programu Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723402"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884487"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Charakterystyka funkcji programu Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] dodaje wiele funkcji do systemu Windows Workflow Foundation. W tym dokumencie opisano kilka nowych funkcji i zwraca szczegółowe informacje na temat scenariuszy, w których mogą być przydatne.  

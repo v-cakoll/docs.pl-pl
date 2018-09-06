@@ -11,45 +11,46 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b40167be4f2760eb7c88155e1733266e34d11d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83efda175b7e5cef8c7042682827d2fe0562c207
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569824"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891570"
 ---
 # <a name="sorted-collection-types"></a>Sortowane typów kolekcji
-<xref:System.Collections.SortedList?displayProperty=nameWithType> Klasy <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> klasy ogólnej i <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> klasy ogólnej są podobne do <xref:System.Collections.Hashtable> klasy i <xref:System.Collections.Generic.Dictionary%602> ogólnej klasy w tym wdrażają <xref:System.Collections.IDictionary> interfejsu, ale obsługa ich kolejność elementów w sortowania według klucza, a nie mają O(1) wstawiania i pobierania charakterystycznych dla tablic skrótów. Trzy klasy mają kilka funkcji cechy wspólne:  
+<xref:System.Collections.SortedList?displayProperty=nameWithType> Klasy <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> klasy generycznej i <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> ogólnej klasy są podobne do <xref:System.Collections.Hashtable> klasy i <xref:System.Collections.Generic.Dictionary%602> ogólnej klasy, implementują <xref:System.Collections.IDictionary> interfejs, ale obsługa ich elementy w sortowaniu kolejność według klucza, a nie mają O(1) wstawiania i pobieranie charakterystycznych dla tabel skrótów. Trzy klasy wspólnym kilka funkcji:  
   
--   Wszystkie trzy klasy implementować <xref:System.Collections.IDictionary?displayProperty=nameWithType> interfejsu. Dwie klasy rodzajowe także implementować <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> interfejs generyczny.  
+-   Implementowanie wszystkich trzech klasach <xref:System.Collections.IDictionary?displayProperty=nameWithType> interfejsu. Dwie klasy ogólne także implementować <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> interfejs generyczny.  
   
--   Każdy element jest parę klucza i wartości dla celów wyliczenia.  
+-   Każdy element jest pary klucz/wartość do celów wyliczenia.  
   
     > [!NOTE]
-    >  Nongeneric <xref:System.Collections.SortedList> klasy zwraca <xref:System.Collections.DictionaryEntry> obiektów po wyliczone, mimo że zwracać dwa typy ogólne <xref:System.Collections.Generic.KeyValuePair%602> obiektów.  
+    >  Nongeneric <xref:System.Collections.SortedList> klasy zwraca <xref:System.Collections.DictionaryEntry> obiekty podczas wyliczone, mimo że zwraca dwa typy rodzajowe <xref:System.Collections.Generic.KeyValuePair%602> obiektów.  
   
--   Elementy są sortowane według <xref:System.Collections.IComparer?displayProperty=nameWithType> implementacji (dla nongeneric <xref:System.Collections.SortedList>) lub <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementacji (dwie klasy ogólnego).  
+-   Elementy są sortowane według <xref:System.Collections.IComparer?displayProperty=nameWithType> implementacji (dla nongeneric <xref:System.Collections.SortedList>) lub <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementacji (w przypadku dwóch klas ogólnych).  
   
--   Każda klasa udostępnia właściwości, które zwracają kolekcje zawierające tylko klucze lub tylko wartości.  
+-   Każda klasa zawiera właściwości, które zwracają kolekcje zawierające tylko kluczy lub tylko wartości.  
   
- W poniższej tabeli przedstawiono niektóre różnice między dwoma klasami posortowaną listę i <xref:System.Collections.Generic.SortedDictionary%602> klasy.  
+ W poniższej tabeli wymieniono niektóre różnice między dwoma klasami posortowanej listy i <xref:System.Collections.Generic.SortedDictionary%602> klasy.  
   
-|<xref:System.Collections.SortedList> Klasa nierodzajowe i <xref:System.Collections.Generic.SortedList%602> klasy ogólnej|<xref:System.Collections.Generic.SortedDictionary%602> Klasa ogólna|  
+|<xref:System.Collections.SortedList> Klasa nierodzajowymi i <xref:System.Collections.Generic.SortedList%602> klasy ogólnej|<xref:System.Collections.Generic.SortedDictionary%602> Klasa ogólna|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|Właściwości, które zwracają kluczy i wartości są indeksowane, umożliwiając wydajne indeksowana pobierania.|Nie indeksowanego pobierania.|  
-|Pobieranie jest O (dziennika `n`).|Pobieranie jest O (dziennika `n`).|  
-|Wstawianie i usuwanie są zwykle O (`n`), jednak wstawiania jest O (dziennika `n`) dla danych, które już znajdują się w kolejności sortowania, dzięki czemu każdy element zostanie dodany na końcu listy. (Przy założeniu, że zmiany rozmiaru nie jest wymagane.)|Wstawianie i usuwanie są O (dziennika `n`).|  
-|Wykorzystuje mniej pamięci niż <xref:System.Collections.Generic.SortedDictionary%602>.|Używa więcej pamięci niż <xref:System.Collections.SortedList> nierodzajowe klasy i <xref:System.Collections.Generic.SortedList%602> klasy ogólnej.|  
+|Właściwości, które zwracają kluczy i wartości są indeksowane, umożliwiając wydajne indeksowane pobierania.|Nie pobieranie indeksowanego.|  
+|Pobieranie jest O (log `n`).|Pobieranie jest O (log `n`).|  
+|Wstawiania i usuwania są zwykle O (`n`); jednak wstawiania znajduje się O (log `n`) dla danych, które już znajdują się w kolejności sortowania, tak aby każdy element jest dodawany na końcu listy. (Przy założeniu, że zmiany rozmiaru nie jest wymagane.)|Wstawiania i usuwania są O (log `n`).|  
+|Wykorzystuje mniej pamięci niż <xref:System.Collections.Generic.SortedDictionary%602>.|Używa więcej pamięci niż <xref:System.Collections.SortedList> nierodzajowymi klasy i <xref:System.Collections.Generic.SortedList%602> klasy ogólnej.|  
   
- Posortowane list lub słowników, które muszą być dostępne jednocześnie z wielu wątków, można dodać logikę sortowania do klasy, która jest pochodną <xref:System.Collections.Concurrent.ConcurrentDictionary%602>.  
+ Posortowanej listy lub słowników, które muszą być dostępne jednocześnie z wielu wątków, możesz dodać logikę sortowania do klasy, która pochodzi od klasy <xref:System.Collections.Concurrent.ConcurrentDictionary%602>.  
   
 > [!NOTE]
->  Wartości, które zawierają własne klucze (na przykład pracownik rekordy, które zawierają numer identyfikacyjny), można utworzyć kolekcji kluczem, w której niektóre właściwości listy i niektóre właściwości słownika przez wynikających z <xref:System.Collections.ObjectModel.KeyedCollection%602> ogólne Klasa.  
+>  Dla wartości, które zawierają własne klucze (na przykład, rekordy pracowników, które zawierają numer identyfikacyjny pracownika), można utworzyć kolekcję kluczem, która ma pewne właściwości listy i niektóre właściwości słownika, wynikające z <xref:System.Collections.ObjectModel.KeyedCollection%602> ogólny Klasa.  
   
- Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], <xref:System.Collections.Generic.SortedSet%601> klasa udostępnia własnym równoważenia drzewa, która przechowuje dane posortowane po operacji wstawienia, usuwanie i wyszukiwania. Ta klasa i <xref:System.Collections.Generic.HashSet%601> implementacji klasy <xref:System.Collections.Generic.ISet%601> interfejsu.  
+ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], <xref:System.Collections.Generic.SortedSet%601> klasa udostępnia własny równoważenia drzewa, która przechowuje dane w kolejności posortowanej po wstawienia, usuwania i wyszukiwania. Ta klasa i <xref:System.Collections.Generic.HashSet%601> implementacji klasy <xref:System.Collections.Generic.ISet%601> interfejsu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
- [Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
+- [Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)

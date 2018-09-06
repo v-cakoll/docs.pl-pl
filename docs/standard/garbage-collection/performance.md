@@ -8,281 +8,281 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b2102c4e33f551cf3dc71cf83539cdc494e5379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579798"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037662"
 ---
 # <a name="garbage-collection-and-performance"></a>Odzyskiwanie pamięci i wydajność
-<a name="top"></a> W tym temacie opisano problemy związane z użycia pamięci kolekcji i pamięci. Rozwiązuje problemy, które odnoszą się do sterty zarządzanej, a wyjaśniono sposób zminimalizować wpływ operacji wyrzucania elementów bezużytecznych w aplikacji. Każde wydanie zawiera łącza do procedur, które służy do badania problemów.  
+<a name="top"></a> W tym temacie opisano problemy związane z wyrzucania elementów kolekcji oraz użycia pamięci. Ona rozwiązuje problemy, które odnoszą się do zarządzanej sterty i wyjaśnia, jak można zminimalizować wpływ wyrzucania elementów bezużytecznych na swoich aplikacjach. Każde wydanie zawiera łącza do procedur służących do badania problemów.  
   
  Ten temat zawiera następujące sekcje:  
   
--   [Narzędzia analizy wydajności](#performance_analysis_tools)  
+-   [Narzędzia do analizy wydajności](#performance_analysis_tools)  
   
 -   [Rozwiązywanie problemów z wydajnością](#troubleshooting_performance_issues)  
   
 -   [Wskazówki dotyczące rozwiązywania problemów](#troubleshooting_guidelines)  
   
--   [Procedury sprawdzania wydajności](#performance_check_procedures)  
+-   [Procedury wyboru wydajności](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
-## <a name="performance-analysis-tools"></a>Narzędzia analizy wydajności  
- W poniższych sekcjach opisano narzędzia, które są dostępne do badania problemów kolekcji użycia i odzyskiwanie pamięci. [Procedury](#performance_check_procedures) podane w dalszej części tego tematu odwoływać się do tych narzędzi.  
+## <a name="performance-analysis-tools"></a>Narzędzia do analizy wydajności  
+ W poniższych sekcjach opisano narzędzia, które są dostępne do badania problemów kolekcji użycia i odzyskiwanie pamięci. [Procedury](#performance_check_procedures) podane w dalszej części tego tematu odnoszą się do tych narzędzi.  
   
 <a name="perf_counters"></a>   
 ### <a name="memory-performance-counters"></a>Liczniki wydajności pamięci  
- Liczniki wydajności służy do zbierania danych wydajności. Aby uzyskać instrukcje, zobacz [profilowanie środowiska uruchomieniowego](../../../docs/framework/debug-trace-profile/runtime-profiling.md). Kategoria .NET CLR pamięci liczników wydajności, zgodnie z opisem w [liczników wydajności w programie .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), informacje na temat modułu zbierającego elementy bezużyteczne.  
+ Można użyć liczników wydajności do zbierania danych wydajności. Aby uzyskać instrukcje, zobacz [profilowanie środowiska uruchomieniowego](../../../docs/framework/debug-trace-profile/runtime-profiling.md). Pamięć .NET CLR kategorii liczników wydajności, zgodnie z opisem w [liczników wydajności w .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), zawiera informacje dotyczące modułu odśmiecania pamięci.  
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>Debugowanie za pomocą SOS  
- Można użyć [debugera systemu Windows (WinDbg)](/windows-hardware/drivers/debugger/index) do zbadania obiektów na stercie zarządzanej.
+ Możesz użyć [debuger Windows (WinDbg)](/windows-hardware/drivers/debugger/index) do inspekcji obiektów w zarządzanym stosie.
  
- Aby zainstalować WinDbg, zainstalować narzędzi debugowania dla systemu Windows z [pobieranie narzędzi debugowania dla systemu Windows](/windows-hardware/drivers/debugger/debugger-download-tools) strony.
+ Aby zainstalować WinDbg, należy zainstalować debugowania Tools for Windows z [Pobierz debugowania narzędzi dla Windows](/windows-hardware/drivers/debugger/debugger-download-tools) strony.
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Zdarzenia ETW odzyskiwania pamięci  
- Śledzenie zdarzeń systemu Windows (ETW) to system śledzenia, który uzupełnia profilowania i obsługa w programie .NET Framework — profilowanie. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], [zdarzenia ETW wyrzucania elementów bezużytecznych](../../../docs/framework/performance/garbage-collection-etw-events.md) przechwytywania przydatne informacje dotyczące analizowania sterty zarządzanej z punktu widzenia statystycznych. Na przykład `GCStart_V1` zdarzenie, które jest wywoływane, gdy ma wystąpić wyrzucania elementów bezużytecznych, zawiera następujące informacje:  
+ Śledzenie zdarzeń dla Windows (ETW) to system śledzenia, który uzupełnia profilowania i pomoc techniczna jest świadczona przez program .NET Framework — profilowanie. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], [zdarzenia ETW odzyskiwania pamięci](../../../docs/framework/performance/garbage-collection-etw-events.md) przechwytywać informacje przydatne do analizowania sterty zarządzanej z punktu widzenia statystycznych. Na przykład `GCStart_V1` zdarzenie, które jest wywoływane, gdy ma wystąpić wyrzucanie elementów bezużytecznych, zawiera następujące informacje:  
   
--   Zbierane są które generowania obiektów.  
+-   Które generacji obiektów są zbierane.  
   
--   Co wyzwoliło wyrzucanie elementów bezużytecznych.  
+-   Przyczyny ich wyzwolenia wyrzucania elementów bezużytecznych.  
   
--   Typ operacji wyrzucania elementów bezużytecznych (równoczesnych lub nie równoczesnych).  
+-   Typ wyrzucania elementów bezużytecznych (współbieżnych lub nie współbieżnych).  
   
- Rejestrowanie zdarzeń ETW jest wydajne i nie będzie maskował wszelkie problemy z wydajnością skojarzone z wyrzucanie elementów bezużytecznych. Proces może udostępniać swoje własne zdarzenia w połączeniu z zdarzenia ETW. Podczas rejestrowania, zarówno zdarzeń aplikacji, jak i zdarzenia wyrzucania elementów bezużytecznych może zostać skorelowane ustalenie, jak i kiedy sterty problemów. Na przykład aplikacja serwera może dostarczyć zdarzenia na początku i na końcu żądania klienta.  
+ Rejestrowanie zdarzeń ETW jest wydajny i nie będzie maskował wszelkich problemów z wydajnością związanych z wyrzucania elementów bezużytecznych. Proces może zapewnić swoje własne zdarzenia w połączeniu z zdarzenia ETW. Po zalogowaniu, zarówno w przypadku zdarzeń aplikacji, jak i zdarzenia odzyskiwania pamięci możliwe było skorelowanie ich ustalenie, jak i kiedy sterty problemów. Na przykład aplikacja serwera może dostarczyć zdarzenia na początku i końcu żądanie klienta.  
   
 <a name="profiling_api"></a>   
-### <a name="the-profiling-api"></a>Interfejsu API profilowania  
- Wspólnych interfejsów profilowania środowiska uruchomieniowego (języka wspólnego CLR) języka zawierają szczegółowe informacje o obiektach, które miały wpływ podczas wyrzucania elementów bezużytecznych. Profiler może otrzymać powiadomienie, gdy wyrzucania elementów bezużytecznych uruchamia i kończy się. Może udostępnić raporty dotyczące obiektów na stercie zarządzanej, w tym identyfikację obiektów w każdej generacji. Aby uzyskać więcej informacji, zobacz [Przegląd profilowania](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).  
+### <a name="the-profiling-api"></a>API profilowania  
+ Wspólnych interfejsów profilowania środowiska uruchomieniowego (języka wspólnego CLR) języka zawierają szczegółowe informacje o obiektach, które miały wpływ podczas wyrzucania elementów bezużytecznych. Program profilujący może zostać poinformowany podczas wyrzucania elementów bezużytecznych rozpoczyna i kończy. Umożliwia ona raportów dotyczących obiektów w zarządzanym stosie, w tym identyfikator obiektów w każdej generacji. Aby uzyskać więcej informacji, zobacz [Przegląd profilowania](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).  
   
- Profilery zapewniają szczegółowe informacje. Jednak złożonych profilowania potencjalnie można zmodyfikować zachowanie aplikacji.  
+ Profilery może zapewnić kompleksowe informacje. Jednak złożone profilery potencjalnie można zmodyfikować zachowanie aplikacji.  
   
 ### <a name="application-domain-resource-monitoring"></a>Monitorowanie zasobów domen aplikacji  
- Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], zasobów domen aplikacji monitorowania (ARM) umożliwia hostom monitorowanie użycia procesora CPU i pamięci według domeny aplikacji. Aby uzyskać więcej informacji, zobacz [monitorowania zasobów domen aplikacji](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
+ Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], (ARM) do monitorowania zasobów domen aplikacji włącza hosty do monitorowania wykorzystania procesora CPU i pamięci przez domenę aplikacji. Aby uzyskać więcej informacji, zobacz [monitorowanie zasobów domeny aplikacji](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
   
  [Powrót do początku](#top)  
   
 <a name="troubleshooting_performance_issues"></a>   
 ## <a name="troubleshooting-performance-issues"></a>Rozwiązywanie problemów z wydajnością  
- Pierwszym krokiem jest [ustalić, czy problem jest rzeczywiście wyrzucanie elementów bezużytecznych](#IsGC). Jeśli okaże się, że jest, wybierz z poniższej listy, aby rozwiązać problem.  
+ Pierwszym krokiem jest [ustalić, czy problem jest faktycznie wyrzucania elementów bezużytecznych](#IsGC). Jeśli okaże się, że jest, wybierz z poniższej listy, aby rozwiązać problem.  
   
 -   [Wyjątek braku pamięci](#Issue_OOM)  
   
--   [Proces używa zbyt dużej ilości pamięci](#Issue_TooMuchMemory)  
+-   [Proces używa zbyt dużo pamięci](#Issue_TooMuchMemory)  
   
--   [Moduł zbierający elementy bezużyteczne nie odzyskać obiektów tyle szybko](#Issue_NotFastEnough)  
+-   [Moduł odśmiecania pamięci nie spowoduje odzyskania obiektów wystarczająco szybko](#Issue_NotFastEnough)  
   
--   [Sterta zarządzana za jest pofragmentowana.](#Issue_Fragmentation)  
+-   [Zarządzanego stosu za jest pofragmentowana.](#Issue_Fragmentation)  
   
--   [Wyrzucanie elementów kolekcji pauzy jest zbyt długa](#Issue_LongPauses)  
+-   [Wstrzymuje kolekcji wyrzucania elementów są za długie](#Issue_LongPauses)  
   
--   [Generacji 0 jest zbyt duży](#Issue_Gen0)  
+-   [Generacja 0 jest zbyt duży](#Issue_Gen0)  
   
--   [Użycie Procesora podczas wyrzucania elementów bezużytecznych jest zbyt wysoka](#Issue_HighCPU)  
+-   [Użycie procesora CPU podczas wyrzucania elementów bezużytecznych jest zbyt wysoka](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problem: Zgłoszono wyjątek braku pamięci  
- Istnieją dwa uzasadnione przypadki dla zarządzanego <xref:System.OutOfMemoryException> zostanie wygenerowany:  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problem: Zostanie zgłoszony wyjątek braku pamięci  
+ Istnieją dwa przypadki uzasadnione dla zarządzanej <xref:System.OutOfMemoryException> zgłoszenie:  
   
--   Zaczyna brakować pamięci wirtualnej.  
+-   Mało pamięci wirtualnej.  
   
-     Moduł zbierający elementy bezużyteczne przydziela pamięć z systemu w segmentach wstępnie ustalony rozmiar. Alokacja wymaga dodatkowych segmentu, ale nie nie ciągłego wolnego bloku pozostanie w obszarze pamięci wirtualnej procesu, alokacji sterty zarządzanej zakończy się niepowodzeniem.  
+     Moduł odśmiecania pamięci przydziela pamięć z systemu w segmentach ustalonej rozmiaru. Jeśli przydział wymaga dodatkowych segmentu, ale nie ciągłych wolny blok, w obszarze pamięci wirtualnej procesu, alokacji sterty zarządzanej nie powiedzie się.  
   
 -   Nie ma wystarczającej ilości pamięci fizycznej do przydzielenia.  
   
 |Testy wydajności|  
 |------------------------|  
-|[Ustal, czy jest zarządzany wyjątek braku pamięci.](#OOMIsManaged)<br /><br /> [Określ ilość pamięci wirtualnej może być zarezerwowana.](#GetVM)<br /><br /> [Ustal, czy jest wystarczająca ilość pamięci fizycznej.](#Physical)|  
+|[Określa, czy wyjątek braku pamięci jest zarządzana.](#OOMIsManaged)<br /><br /> [Określ ilość pamięci wirtualnej może być zarezerwowana.](#GetVM)<br /><br /> [Ustal, czy jest wystarczająca ilość fizycznej pamięci.](#Physical)|  
   
- Jeśli okaże się, że wyjątku nie jest uzasadnione, skontaktuj się z pomocą Microsoft dział obsługi klienta i pomocy technicznej następujące informacje:  
+ Jeśli okaże się, że wyjątek nie jest uzasadnione, skontaktuj się z działem obsługi klienta firmy Microsoft i pomocy technicznej z następującymi informacjami:  
   
 -   Stos o zarządzanym wyjątku braku pamięci.  
   
 -   Pełny zrzut pamięci.  
   
--   Dane, gdy okaże się, że nie jest uzasadnione wyjątku braku pamięci, włącznie z danymi, pokazujący pamięci, wirtualny lub fizyczny nie jest rozwiązaniem problemu.  
+-   Dane, gdy okaże się, że nie jest uzasadnione wyjątku braku pamięci, w tym dane, które pokazuje, że pamięć wirtualny lub fizyczny nie jest problemem.  
   
 <a name="Issue_TooMuchMemory"></a>   
-### <a name="issue-the-process-uses-too-much-memory"></a>Problem: Proces używa zbyt dużej ilości pamięci  
- Typowe zakłada się, że użycie pamięci wyświetlane na **wydajności** kartę Menedżera zadań systemu Windows można wskazać, kiedy używana jest zbyt dużej ilości pamięci. Jednakże które wyświetlają odnoszą się do zestawu roboczego; nie dostarcza informacje na temat użycia pamięci wirtualnej.  
+### <a name="issue-the-process-uses-too-much-memory"></a>Problem: Proces używa zbyt dużo pamięci  
+ Typowe zakłada się, że użycie pamięci jest wyświetlane na **wydajności** kartę w Menedżerze zadań Windows można wskazać, kiedy jest on używany zbyt dużej ilości pamięci. Jednakże obok którego wyświetlona odnoszą się do zestawu roboczego; zapewnia ona informacje na temat użycia pamięci wirtualnej.  
   
- Jeśli okaże się, że przyczyną problemu jest sterty zarządzanej, musi pomiarów sterty zarządzanej w celu określenia wszelkich wzorce.  
+ Jeśli okaże się, że problem jest spowodowany przez sterty zarządzanej, muszą mierzyć sterty zarządzanej, wraz z upływem czasu, aby określić wszystkie wzorce.  
   
- Jeśli okaże się, że problem nie jest spowodowany przez sterty zarządzanej, należy użyć debugowanie natywne.  
+ Jeśli okaże się, że problem nie leży po zarządzanym stosie, należy użyć debugowanie natywne.  
   
 |Testy wydajności|  
 |------------------------|  
-|[Określ ilość pamięci wirtualnej może być zarezerwowana.](#GetVM)<br /><br /> [Określ, ile pamięci sterty zarządzanej zatwierdza.](#ManagedHeapCommit)<br /><br /> [Określ, ile pamięci sterty zarządzanej rezerwuje.](#ManagedHeapReserve)<br /><br /> [Określ dużych obiektów podczas generowania 2.](#ExamineGen2)<br /><br /> [Określ odwołania do obiektów.](#ObjRef)|  
+|[Określ ilość pamięci wirtualnej może być zarezerwowana.](#GetVM)<br /><br /> [Określ, ile pamięci sterty zarządzanej jest zatwierdzanie.](#ManagedHeapCommit)<br /><br /> [Określ, ile pamięci sterty zarządzanej zastrzega sobie.](#ManagedHeapReserve)<br /><br /> [Określ dużych obiektów w generacji 2.](#ExamineGen2)<br /><br /> [Określ odwołania do obiektów.](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
-### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problem: Moduł zbierający elementy bezużyteczne nie odzyskać obiektów tyle szybko  
- Wygląda na to, jak obiekty nie są odzyskane zgodnie z oczekiwaniami dotyczącymi wyrzucanie elementów bezużytecznych, należy ustalić, czy istnieją silne odwołań do tych obiektów.  
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problem: Moduł odśmiecania pamięci nie spowoduje odzyskania obiektów wystarczająco szybko  
+ Gdy się pojawi, tak jakby obiekty nie są są odzyskane, zgodnie z oczekiwaniami do wyrzucania elementów bezużytecznych, należy określić, czy wszystkie silne odwołania do tych obiektów.  
   
- Może również wystąpi ten problem, jeśli nie było żadnych wyrzucanie elementów bezużytecznych generacji, która zawiera obiekt martwy, co oznacza, że finalizatora dla obiekt martwy nie został uruchomiony. Na przykład jest to możliwe po uruchomieniu aplikacji jednowątkowego apartamentu (STA) i wątku tej usługi, których nie można wywołać w kolejce finalizatora do niego.  
+ Ten problem może również wystąpić, jeśli nie było żadnych elementów bezużytecznych generacji, która zawiera obiekt martwy, co oznacza, że finalizator martwy obiektu nie został uruchomiony. Na przykład jest to możliwe po uruchomieniu aplikacji apartamentem jednowątkowym (przedziale STA) i wątku tej usługi, których nie można wywołać; kolejka finalizatorów tę sytuację.  
   
 |Testy wydajności|  
 |------------------------|  
-|[Sprawdź odwołania do obiektów.](#ObjRef)<br /><br /> [Ustal, czy finalizator został uruchomiony.](#Induce)<br /><br /> [Ustal, czy istnieją obiekty oczekujące na sfinalizowana.](#Finalize)|  
+|[Sprawdź odwołania do obiektów.](#ObjRef)<br /><br /> [Ustal, czy finalizator został uruchomiony.](#Induce)<br /><br /> [Ustal, czy istnieją obiekty oczekujące na można sfinalizować.](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problem: Zarządzane sterty jest zbyt pofragmentowana.  
- Poziom fragmentacji jest obliczana jako stosunek wolnego miejsca za pośrednictwem całkowitej ilości pamięci przydzielony do generowania. Generacji 2 akceptowalnego poziomu fragmentacji jest nie więcej niż 20%. Ponieważ generacji 2 można uzyskać bardzo duży stopień fragmentacji ma większe znaczenie niż wartość bezwzględna.  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problem: Zarządzanego stosu jest zbyt pofragmentowana.  
+ Poziom fragmentacji jest obliczana jako stosunek wolnego miejsca na dysku łączna ilość przydzielonej pamięci do generowania. Generacji 2 akceptowalny poziom fragmentacji jest nie więcej niż 20%. Ponieważ generacji 2 można uzyskać bardzo duże, stosunek fragmentacji jest ważniejsza niż wartość bezwzględna.  
   
- Mających duże ilości wolnego miejsca w generacji 0 nie jest problem, ponieważ jest generowanie gdzie nowe obiekty są przydzielone.  
+ O dużej ilości wolnego miejsca w generacji 0 nie jest problemem, ponieważ jest generowanie gdzie są przydzielane nowych obiektów.  
   
- Fragmentacja zawsze występuje w sterty dużego obiektu, ponieważ nie jest skompaktować. Bezpłatne obiektów, które znajdują się obok siebie naturalnie są zwijane do jednego miejsca do spełnienia żądań alokacji dużego obiektu.  
+ Fragmentacja zawsze występuje stertę dużego obiektu, ponieważ nie jest kompaktowana. Bezpłatne obiekty, które sąsiadują naturalnie są zwinięte do pojedynczego obszaru do spełnienia żądania alokacji dużego obiektu.  
   
- Fragmentacja może stać się problemem w generacji 1 i 2. Jeśli te generacje po wyrzucania elementów bezużytecznych znajduje się duża ilość wolnego miejsca, użycie obiektu aplikacji może wymagać modyfikacji i należy rozważyć ponownej oceny okresu istnienia obiektów długoterminowej.  
+ Fragmentacja może stać się problemem w generacji 1 i 2. Jeśli generacje te dużą ilością wolnego miejsca na dysku po wyrzucania elementów bezużytecznych, użycie obiektu aplikacji mogą wymagać modyfikacji i należy rozważyć ponownej oceny okresu istnienia obiektów długoterminowego.  
   
- Przypinanie nadmiernego obiektów można zwiększyć fragmentacji. Jeśli fragmentacji jest wysoka, można przypięty za dużo obiektów.  
+ Przypinanie nadmierne obiektów może zwiększyć fragmentacji. Jeśli fragmentacji jest wysoka, można przypiąć za dużo obiektów.  
   
- Jeśli fragmentacji pamięci wirtualnej uniemożliwia Dodawanie segmentów moduł garbage collector, przyczyn może być jedną z następujących czynności:  
+ Jeżeli fragmentacji pamięci wirtualnej uniemożliwia Dodawanie segmentów moduł zbierający elementy bezużyteczne, powoduje, że może to być jeden z następujących czynności:  
   
 -   Częste ładowanie i zwalnianie wiele małych zestawów.  
   
--   Zawierający zbyt wiele odwołań do obiektów COM, gdy współdziałanie z kodem niezarządzanym.  
+-   Przytrzymanie zbyt wiele odwołań do obiektów COM, gdy współdziałanie z kodem niezarządzanym.  
   
--   Tworzenie dużych obiektów przejściowy, co powoduje, że sterty dużego obiektu można przydzielić i często bez sterty segmentów.  
+-   Tworzenie dużych obiektów przejściowy, co powoduje, że stertę dużego obiektu przydzielać i zwalniać często segmenty sterty.  
   
-     Gdy hostingu środowiska CLR, aplikacja może zażądać zachowanie modułu zbierającego elementy bezużyteczne jego segmentów. Pozwala to zmniejszyć częstotliwość alokacji segmentu. Jest to zrobić za pomocą flagi STARTUP_HOARD_GC_VM w [STARTUP_FLAGS — wyliczenie](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
+     W przypadku hostowania środowiska CLR, aplikacja może zażądać zachowanie jego segmentów moduł odśmiecania pamięci. Pozwala to zmniejszyć częstotliwość alokacje segmentu. Jest to realizowane za pomocą flagi STARTUP_HOARD_GC_VM w [startup_flags — wyliczenie](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
   
 |Testy wydajności|  
 |------------------------|  
-|[Określ ilość wolnego miejsca na stercie zarządzanej.](#Fragmented)<br /><br /> [Określ liczbę unieruchomionych obiektów.](#Pinned)|  
+|[Określ ilość wolnego miejsca w zarządzanym stosie.](#Fragmented)<br /><br /> [Określ liczbę przypiętych obiektów.](#Pinned)|  
   
- Jeśli uważasz, że nie stanowi uzasadnionych fragmentacji, skontaktuj się z obsługi klienta firmy Microsoft.  
+ Jeśli uważasz, że nie stanowi uzasadnione fragmentacji, skontaktuj się z działem obsługi klienta firmy Microsoft i pomocy technicznej.  
   
 <a name="Issue_LongPauses"></a>   
-### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problem: Pauzy kolekcji pamięci jest zbyt długa  
- Wyrzucanie elementów bezużytecznych działa w czasie rzeczywistym miękkie, więc aplikacja musi mieć możliwość tolerować niektórych pauzy. Kryterium nietrwałego czasu rzeczywistego jest, że 95% operacji musi zostać zakończone na czas.  
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problem: Wstrzymuje kolekcji wyrzucania elementów są za długie  
+ Wyrzucanie elementów bezużytecznych działa w czasie rzeczywistym nietrwałego, więc aplikacja musi być w stanie tolerować kilka wstrzymuje. Kryterium czasu rzeczywistego nietrwałego jest, że 95% operacji musi zostać zakończone na czas.  
   
- W współbieżne odzyskiwanie pamięci zarządzanych wątków mogą być uruchamiane podczas zbierania, co oznacza, że pauzy są minimalne.  
+ W współbieżne wyrzucanie elementów bezużytecznych zarządzane wątki mogą być uruchamiane podczas zbierania, co oznacza, że wstrzymuje są minimalne.  
   
- Tylko kilka milisekund ostatni tymczasowych wyrzucania (generacji 0 i 1), więc zmniejszenie pauzy zwykle nie jest możliwe. Można jednak zmniejszyć pauzy w kolekcjach generacji 2, zmieniając wzorzec żądań alokacji przez aplikację.  
+ Tymczasowe wyrzucanie elementów bezużytecznych (generacje 0 i 1) trwać tylko kilka milisekund, więc zmniejsza wstrzymuje zwykle nie jest możliwe. Można jednak zmniejszyć przerw w kolekcji generacji 2, zmieniając wzorzec żądań alokacji przez aplikację.  
   
- Inny, bardziej precyzyjne metoda polega na użyciu [zdarzenia ETW wyrzucania elementów bezużytecznych](../../../docs/framework/performance/garbage-collection-etw-events.md). Chronometraż dla kolekcji można znaleźć, dodając różnice sygnatury czasowe sekwencji zdarzeń. Sekwencja całą kolekcję obejmuje zawieszenie aparat wykonywania, wyrzucanie elementów bezużytecznych sam i wznowienie aparat wykonywania.  
+ Inny, bardziej precyzyjne metoda polega na użyciu [zdarzenia ETW odzyskiwania pamięci](../../../docs/framework/performance/garbage-collection-etw-events.md). Możesz znaleźć chronometrażu dla kolekcji, dodając różnice sygnatury czasu sekwencji zdarzeń. Sekwencja całej kolekcji zawiera zawieszenie aparatu wykonywania, wyrzucanie elementów bezużytecznych, sama i wznowienie aparatu wykonywania.  
   
- Można użyć [powiadomienia dotyczące odzyskiwania pamięci](../../../docs/standard/garbage-collection/notifications.md) można określić, czy serwer ma mieć kolekcji generacji 2 i określa, czy Przekierowanie żądania do innego serwera można zmniejszyć problemów z pauzy.  
+ Możesz użyć [powiadomienia dotyczące odzyskiwania pamięci](../../../docs/standard/garbage-collection/notifications.md) można określić, czy serwer ma mieć kolekcji generacji 2 i czy Przekierowywanie żądań do innego serwera, można zmniejszyć, problemów z pauzy.  
   
 |Testy wydajności|  
 |------------------------|  
-|[Określ czas w wyrzucania elementów bezużytecznych.](#TimeInGC)<br /><br /> [Określ, co spowodowało wyrzucania elementów bezużytecznych.](#Triggered)|  
+|[Określ czas, wyrzucanie elementów bezużytecznych.](#TimeInGC)<br /><br /> [Określ, co spowodowało wyrzucania elementów bezużytecznych.](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
 ### <a name="issue-generation-0-is-too-big"></a>Problem: Generacji 0 jest zbyt duży  
- Generowanie 0 jest mogą mieć większą liczbę obiektów w systemie 64-bitowym, szczególnie w przypadku odzyskiwanie pamięci na serwerze można użyć zamiast stacji roboczej wyrzucanie elementów bezużytecznych. To dlatego próg do wyzwolenia generacji 0 wyrzucania elementów bezużytecznych jest wyższy w tych środowiskach, a kolekcje generacji 0 mogą pobrać znacznie większe. Zwiększona wydajność aplikacji przydziela pamięć więcej wywoła wyrzucania elementów bezużytecznych.  
+ Może mieć większą liczbę obiektów w systemie 64-bitowych, szczególnie w przypadku, gdy używasz wyrzucanie elementów bezużytecznych serwera zamiast wyrzucanie elementów bezużytecznych jest generacji 0. Jest to spowodowane próg wyzwolenia generację 0 wyrzucania elementów bezużytecznych jest wyższa w tych środowiskach i uzyskać znacznie większe generacji 0. Lepsza wydajność aplikacji przydziela większej ilości pamięci, zanim zostanie wywołany wyrzucania elementów bezużytecznych.  
   
 <a name="Issue_HighCPU"></a>   
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problem: Użycie Procesora podczas wyrzucania elementów bezużytecznych jest zbyt wysoka  
- Użycie procesora CPU będzie wysoka podczas wyrzucania elementów bezużytecznych. Jeśli znaczną ilość czasu procesu jest przeznaczony na wyrzucanie elementów bezużytecznych, liczby kolekcji jest zbyt częste lub kolekcji jest zbyt długo trwające. Wyrzucanie elementów bezużytecznych do częściej powoduje, że alokacji większa liczba obiektów na stercie zarządzanej. Zmniejsz częstotliwość przydzielania zmniejsza częstotliwość odzyskiwania pamięci.  
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problem: Użycie procesora CPU podczas wyrzucania elementów bezużytecznych jest zbyt wysoka  
+ Użycie procesora CPU będzie wysoka podczas wyrzucania elementów bezużytecznych. Znaczną ilość czasu proces odbywa się w wyrzucania elementów bezużytecznych, liczby kolekcji jest zbyt często czy kolekcja jest zbyt długo trwające. Współczynnik zwiększenia alokacji obiektów na stosie zarządzanym powoduje, że wyrzucanie elementów bezużytecznych częściej. Zmniejsza szybkość alokacji zmniejsza częstotliwość wyrzucania elementów bezużytecznych.  
   
- Stawki alokacji można monitorować za pomocą `Allocated Bytes/second` licznika wydajności. Aby uzyskać więcej informacji, zobacz [liczników wydajności w programie .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+ Stawki alokacji można monitorować za pomocą `Allocated Bytes/second` licznika wydajności. Aby uzyskać więcej informacji, zobacz [liczników wydajności w .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
- Czas trwania kolekcji się głównie liczba obiektów, które pozostają aktualne po po alokacji. Moduł zbierający elementy bezużyteczne musi przechodzić przez dużą ilość pamięci, jeśli wiele obiektów mają być zbierane. Praca kompaktowania przy życiu jest czasochłonne. Aby ustalić, ile obiekty zostały obsłużone podczas zbierania, należy ustawić punkt przerwania w debugerze po zakończeniu wyrzucania elementów bezużytecznych dla określonej generacji.  
+ Czas trwania kolekcji jest głównie współczynnik liczby obiektów, które przeżyły po alokacji pamięci. Moduł zbierający elementy bezużyteczne musi przejść przez dużą ilość pamięci, jeśli wiele obiektów nadal mają być zbierane. Praca kompaktowanie pozostałości jest czasochłonne. Aby ustalić, ile obiekty zostały obsłużone w kolekcji, należy ustawić punkt przerwania w debugerze na końcu wyrzucania elementów bezużytecznych dla określonej generacji.  
   
 |Testy wydajności|  
 |------------------------|  
-|[Ustal, jeśli przyczyną wysokiego użycia procesora CPU jest wyrzucanie elementów bezużytecznych.](#HighCPU)<br /><br /> [Ustaw punkt przerwania po zakończeniu wyrzucania elementów bezużytecznych.](#GenBreak)|  
+|[Określ, jeśli wysokie użycie procesora CPU jest spowodowany przez wyrzucanie elementów bezużytecznych.](#HighCPU)<br /><br /> [Ustaw punkt przerwania na końcu wyrzucania elementów bezużytecznych.](#GenBreak)|  
   
  [Powrót do początku](#top)  
   
 <a name="troubleshooting_guidelines"></a>   
 ## <a name="troubleshooting-guidelines"></a>Wskazówki dotyczące rozwiązywania problemów  
- W tej sekcji opisano wskazówki, które należy wziąć pod uwagę rozpoczęciem badań sieci.  
+ W tej sekcji opisano wskazówki, które należy wziąć pod uwagę po rozpoczęciu swoje badania.  
   
-### <a name="workstation-or-server-garbage-collection"></a>Stacji roboczej lub serwera wyrzucanie elementów bezużytecznych  
- Określają, czy używasz poprawnego typu wyrzucanie elementów bezużytecznych. Jeśli aplikacja używa wielu wątków i wystąpienia obiektów, użyj odzyskiwanie pamięci na serwerze zamiast stacji roboczej wyrzucanie elementów bezużytecznych. Odzyskiwanie pamięci na serwerze działa na wielu wątków stacji roboczej wyrzucanie elementów bezużytecznych wymaga wiele wystąpień aplikacji do ich własnych wątków kolekcji pamięci i konkurują o czas procesora CPU.  
+### <a name="workstation-or-server-garbage-collection"></a>Stacja robocza lub serwer wyrzucania elementów bezużytecznych  
+ Określ, jeśli używasz poprawnego typu wyrzucania elementów bezużytecznych. Jeśli aplikacja korzysta z wielu wątków i wystąpienia obiektów, wyrzucanie elementów bezużytecznych serwera należy użyć zamiast wyrzucanie elementów bezużytecznych. Wyrzucanie elementów bezużytecznych serwera działa w wielu wątkach, wyrzucanie elementów bezużytecznych wymaga wielu wystąpień aplikacji do uruchamiania ich własnych wątków wyrzucania elementów bezużytecznych i konkurować o czas procesora CPU.  
   
- Aplikacja z niskim obciążeniu, rzadko w tle, na przykład usługi, która wykonuje zadania może użyć stacji roboczej wyrzucanie elementów bezużytecznych z współbieżne odzyskiwanie pamięci wyłączone.  
+ Aplikacja ma niskie obciążenie i rzadko w tle, takie jak usługa, która wykonuje zadania można za pomocą wyrzucanie elementów bezużytecznych współbieżne wyrzucanie elementów bezużytecznych wyłączone.  
   
-### <a name="when-to-measure-the-managed-heap-size"></a>Kiedy do mierzenia rozmiaru sterty zarządzanej  
- Jeśli nie używasz profilera, będzie musiał utworzyć spójne wzorzec pomiaru skutecznie zdiagnozować problemy z wydajnością. Należy rozważyć następujące kwestie do ustanawiania harmonogramu:  
+### <a name="when-to-measure-the-managed-heap-size"></a>Gdy do mierzenia rozmiaru sterty zarządzanej  
+ O ile nie jest używany program profilujący, trzeba będzie utworzyć spójne wzorzec pomiaru skutecznie zdiagnozować problemy z wydajnością. Należy wziąć pod uwagę następujące kwestie, aby ustanowić harmonogram:  
   
--   Jeśli mierzonych po wyrzucania elementów bezużytecznych generacji 2 całego sterty zarządzanej będzie bezpłatna pamięci (martwy obiektów).  
+-   Jeśli mierzonych po wyrzucania elementów bezużytecznych generacji 2 całą zarządzaną stertę będą wolne od pamięci (obiekty martwe).  
   
--   Jeśli mierzonych natychmiast po wyrzucania elementów bezużytecznych generacji 0 obiektów pokolenia 1 i 2 nie będą zbierane jeszcze.  
+-   Jeśli mierzonych natychmiast po wyrzucania elementów bezużytecznych generacji 0 obiekty w generacji 1 i 2 nie będą zbierane jeszcze.  
   
--   Jeśli mierzonych bezpośrednio przed wyrzucania elementów bezużytecznych będzie zmierzyć tyle alokacji, jak to możliwe, przed rozpoczęciem wyrzucanie elementów bezużytecznych.  
+-   W przypadku mierzonych bezpośrednio przed wyrzucania elementów bezużytecznych będzie zmierzyć tak dużej ilości alokacji, jak to możliwe, zanim rozpocznie się wyrzucanie elementów bezużytecznych.  
   
--   Pomiaru podczas wyrzucania elementów bezużytecznych jest powodować problemów, ponieważ moduł zbierający elementy bezużyteczne struktur danych nie znajdują się w nieprawidłowym stanie dla operacji przechodzenia i nie można udzielić, wyświetlenie pełnych wyników. To jest celowe.  
+-   Pomiaru podczas wyrzucania elementów bezużytecznych jest problemem, ponieważ struktur danych modułu odśmiecania pamięci nie znajdują się w nieprawidłowym stanie dla przechodzenia i nie można dostarczać pełnych wyników. To jest celowe.  
   
--   Używając stacji roboczej wyrzucanie elementów bezużytecznych z współbieżne odzyskiwanie pamięci, regeneracji obiekty nie są kompaktowanie, dlatego rozmiar stosu może być taka sama lub większa (fragmentacja można wydawać będzie większy).  
+-   Używając wyrzucania elementów bezużytecznych dla stacji roboczych z współbieżne wyrzucanie elementów bezużytecznych, odzyskiwanego obiekty nie są skompaktowany, dzięki czemu rozmiar sterty może być taki sam lub większy (fragmentacji może wydawać się większe).  
   
--   Współbieżne odzyskiwanie pamięci na generacji 2 jest opóźnione, gdy zbyt duże obciążenie pamięci fizycznej.  
+-   Współbieżne wyrzucanie elementów bezużytecznych w generacji 2 jest opóźnione, gdy obciążenie pamięci fizycznej jest zbyt duży.  
   
- W poniższej procedurze opisano, jak ustawić punkt przerwania, dzięki czemu można zmierzyć sterty zarządzanej.  
+ Poniższa procedura opisuje sposób Ustaw punkt przerwania, dzięki czemu można mierzyć zarządzanego stosu.  
   
 <a name="GenBreak"></a>   
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Aby ustawić punkt przerwania po zakończeniu wyrzucania elementów bezużytecznych  
+##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Aby ustawić punkt przerwania na końcu wyrzucania elementów bezużytecznych  
   
--   W WinDbg z rozszerzeniem debugera SOS załadowany wpisz następujące polecenie:  
+-   W WinDbg za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie:  
   
-     **BP mscorwks! WKS::GCHeap::RestartEE "j (dwo (mscorwks! WKS::GCHeap::GcCondemnedGeneration) == 2) "kb"; " g ""**  
+     **najlepszych praktyk w zakresie mscorwks! WKS::GCHeap::RestartEE "j (dwo (mscorwks! WKS::GCHeap::GcCondemnedGeneration) == 2) "kb"; " g ""**  
   
-     gdzie **GcCondemnedGeneration** ma ustawioną wartość odpowiednią generacji. To polecenie wymaga symboli prywatnych.  
+     gdzie **GcCondemnedGeneration** jest ustawiona na żądaną generacji. To polecenie wymaga symboli prywatnych.  
   
-     To polecenie wymusza podziału, jeśli **RestartEE** jest wykonywana po odzyskano obiektów pokolenia 2 dla wyrzucanie elementów bezużytecznych.  
+     To polecenie wymusza podziału **RestartEE** jest uruchamiane po obiekty generacji 2 odzyskano do wyrzucania elementów bezużytecznych.  
   
-     W pamięci serwera, wymaga tylko jednego wątku **RestartEE**, więc punkt przerwania zostanie przeprowadzona tylko raz podczas generowania 2 wyrzucania elementów bezużytecznych.  
+     W serwerze wyrzucanie elementów bezużytecznych, tylko jeden wątek wywołuje **RestartEE**, więc punkt przerwania zostanie wystąpić tylko raz podczas wyrzucania elementów bezużytecznych generacji 2.  
   
  [Powrót do początku](#top)  
   
 <a name="performance_check_procedures"></a>   
-## <a name="performance-check-procedures"></a>Procedury sprawdzania wydajności  
+## <a name="performance-check-procedures"></a>Procedury wyboru wydajności  
  W tej sekcji opisano następujące procedury, aby ustalić przyczynę problemu z wydajnością:  
   
--   [Ustal, czy przyczyną problemu jest wyrzucanie elementów bezużytecznych.](#IsGC)  
+-   [Ustal, czy problem jest spowodowany przez wyrzucanie elementów bezużytecznych.](#IsGC)  
   
--   [Ustal, czy jest zarządzany wyjątek braku pamięci.](#OOMIsManaged)  
+-   [Określa, czy wyjątek braku pamięci jest zarządzana.](#OOMIsManaged)  
   
 -   [Określ ilość pamięci wirtualnej może być zarezerwowana.](#GetVM)  
   
--   [Ustal, czy jest wystarczająca ilość pamięci fizycznej.](#Physical)  
+-   [Ustal, czy jest wystarczająca ilość fizycznej pamięci.](#Physical)  
   
--   [Określ, ile pamięci sterty zarządzanej zatwierdza.](#ManagedHeapCommit)  
+-   [Określ, ile pamięci sterty zarządzanej jest zatwierdzanie.](#ManagedHeapCommit)  
   
--   [Określ, ile pamięci sterty zarządzanej rezerwuje.](#ManagedHeapReserve)  
+-   [Określ, ile pamięci sterty zarządzanej zastrzega sobie.](#ManagedHeapReserve)  
   
--   [Określ dużych obiektów podczas generowania 2.](#ExamineGen2)  
+-   [Określ dużych obiektów w generacji 2.](#ExamineGen2)  
   
 -   [Określ odwołania do obiektów.](#ObjRef)  
   
 -   [Ustal, czy finalizator został uruchomiony.](#Induce)  
   
--   [Ustal, czy istnieją obiekty oczekujące na sfinalizowana.](#Finalize)  
+-   [Ustal, czy istnieją obiekty oczekujące na można sfinalizować.](#Finalize)  
   
--   [Określ ilość wolnego miejsca na stercie zarządzanej.](#Fragmented)  
+-   [Określ ilość wolnego miejsca w zarządzanym stosie.](#Fragmented)  
   
--   [Określ liczbę unieruchomionych obiektów.](#Pinned)  
+-   [Określ liczbę przypiętych obiektów.](#Pinned)  
   
--   [Określ czas w wyrzucania elementów bezużytecznych.](#TimeInGC)  
+-   [Określ czas, wyrzucanie elementów bezużytecznych.](#TimeInGC)  
   
 -   [Określ, co wyzwoliło wyrzucania elementów bezużytecznych.](#Triggered)  
   
--   [Ustal, czy przyczyną wysokiego użycia procesora CPU jest wyrzucanie elementów bezużytecznych.](#HighCPU)  
+-   [Ustal, czy wysokie użycie procesora CPU jest spowodowany przez wyrzucanie elementów bezużytecznych.](#HighCPU)  
   
 <a name="IsGC"></a>   
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Aby określić, czy przyczyną problemu jest wyrzucanie elementów bezużytecznych  
+##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Aby określić, czy problem jest spowodowany przez wyrzucanie elementów bezużytecznych  
   
--   Sprawdź następujące liczniki wydajności pamięci dwóch:  
+-   Sprawdź następujące liczniki wydajności dwóch pamięci:  
   
-    -   **% Czasu potrzebnego na Odzyskiwanie**. Wyświetla procent minionego czasu, jaki był poświęcony na operację wyrzucania od ostatniego cyklu wyrzucania elementów w kolekcji. Ten licznik umożliwia określenie, czy moduł zbierający elementy bezużyteczne zużywa zbyt dużo czasu, aby udostępnić miejsce na stercie zarządzanej. Jeśli czas spędzony w pamięci jest stosunkowo niska, który może wskazywać na problem zasobów poza sterty zarządzanej. Ten licznik nie może być niedokładna, gdy są one jednoczesnych lub uczestniczy odzyskiwanie pamięci w tle.  
+    -   **% Czas działania modułu GC**. Wyświetla procent minionego czasu, jaki był poświęcony na wykonywanie wyrzucania elementów bezużytecznych od ostatniego cyklu wyrzucania elementów w kolekcji. Ten licznik umożliwia określenie, czy moduł zbierający elementy bezużyteczne zużywa zbyt dużo czasu, aby zwiększyć ilość miejsca na stosie zarządzanym. Jeśli czas potrzebny do wyrzucania elementów bezużytecznych jest stosunkowo niska, który może wskazywać na problem zasobów, poza zarządzanym stosie. Ten licznik mogą być niedokładne, gdy współbieżnych lub uczestniczy wyrzucania elementów bezużytecznych w tle.  
   
-    -   **# Całkowita liczba Zadeklarowane bajty**. Wyświetlana jest ilość pamięci wirtualnej zarezerwowanej aktualnie przez moduł garbage collector. Ten licznik umożliwia określenie, czy pamięci używane przez moduł garbage collector jest nadmierne część pamięci, która korzysta z aplikacji.  
+    -   **# Łączna liczba przydzielonych bajtów**. Przedstawia ilość pamięci wirtualnej, które aktualnie przydzielonej przez moduł odśmiecania pamięci. Ten licznik umożliwia określenie, czy pamięci używane przez moduł odśmiecania pamięci jest nadmierne część pamięci, która korzysta z aplikacji.  
   
-     Większość liczników wydajności pamięci jest aktualizowany po zakończeniu każdej operacji wyrzucania elementów bezużytecznych. W związku z tym nie mogą one uwzględniać bieżącego warunki, które chcesz uzyskać informacje.  
+     Większość liczników wydajności pamięci są aktualizowane na końcu każdej operacji wyrzucania elementów bezużytecznych. Może nie odzwierciedlają one bieżące warunki, które chcesz uzyskać informacje.  
   
 <a name="OOMIsManaged"></a>   
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Aby określić, czy wyjątek braku pamięci jest zarządzany  
+##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Aby ustalić, czy wyjątek braku pamięci jest zarządzany  
   
-1.  W debugerze WinDbg lub Visual Studio z rozszerzeniem debugera SOS załadować typu wyjątku wydruku (**pe**) polecenia:  
+1.  W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane typ wyjątku drukowania (**pe**) polecenia:  
   
      **! pe**  
   
-     Jeśli wyjątek jest zarządzany, <xref:System.OutOfMemoryException> jest wyświetlana jako typ wyjątku, jak pokazano w poniższym przykładzie.  
+     Jeśli wyjątek jest zarządzany, <xref:System.OutOfMemoryException> jest wyświetlany jako typ wyjątku, jak pokazano w poniższym przykładzie.  
   
     ```  
     Exception object: 39594518  
@@ -292,36 +292,36 @@ ms.locfileid: "33579798"
     StackTrace (generated):  
     ```  
   
-2.  Dane wyjściowe nie określony wyjątek, należy ustalić, który wątek wyjątku braku pamięci jest z. Wpisz następujące polecenie w debugerze, aby wyświetlić wszystkie wątki z ich stosy wywołań:  
+2.  Dane wyjściowe nie określony wyjątek, należy określić, który wątek wyjątku braku pamięci pochodzi z. Wpisz następujące polecenie w debugerze, aby wyświetlić wszystkie wątki z ich stosów wywołań:  
   
      **~\*KB**  
   
-     Wątek ze stosu, który ma wywołań wyjątków jest określane przez `RaiseTheException` argumentu. To jest obiektem zarządzanym wyjątku.  
+     Wątek przy użyciu stosu, który ma wywołań wyjątków jest wskazywany przez `RaiseTheException` argumentu. Jest to obiektu zarządzanego wyjątku.  
   
     ```  
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  Następujące polecenie służy do zrzutu wyjątków zagnieżdżonych.  
+3.  Następujące polecenie służy do porzucenia wyjątków zagnieżdżonych.  
   
      **! pe-zagnieżdżonych**  
   
-     Jeśli nie znajdziesz żadnych wyjątków, wyjątek braku pamięci pochodzi z kodem niezarządzanym.  
+     Jeśli nie możesz znaleźć wszystkie wyjątki, wyjątek braku pamięci pochodzi z niezarządzanego kodu.  
   
 <a name="GetVM"></a>   
 ##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Aby określić ilość pamięci wirtualnej może być zarezerwowana.  
   
--   W WinDbg z rozszerzeniem debugera SOS załadowany wpisz następujące polecenie, aby pobrać największego wolnego regionu:  
+-   W WinDbg za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie, aby pobrać największego wolnego regionu:  
   
      **! adresów — podsumowanie**  
   
-     Największego wolnego regionu jest wyświetlana, jak pokazano w następujących danych wyjściowych.  
+     Największego wolnego region jest wyświetlany, jak pokazano w następujących danych wyjściowych.  
   
     ```  
     Largest free region: Base 54000000 - Size 0003A980  
     ```  
   
-     W tym przykładzie rozmiar największego wolnego obszaru to około 24000 KB (3A980 w formacie szesnastkowym). Ten region jest znacznie mniejszy niż moduł zbierający elementy bezużyteczne wymagań segment.  
+     W tym przykładzie rozmiar największego wolnego region jest około 24000 KB (3A980 w formacie szesnastkowym). Ten region jest znacznie mniejszy niż moduł zbierający elementy bezużyteczne musi dla segmentu.  
   
      —lub—  
   
@@ -329,7 +329,7 @@ ms.locfileid: "33579798"
   
      **! vmstat**  
   
-     Największego wolnego regionu jest największą wartość w kolumnie maksymalna, jak pokazano w następujących danych wyjściowych.  
+     Największego wolnego region jest największą wartość w kolumnie maksymalna, jak pokazano w następujących danych wyjściowych.  
   
     ```  
     TYPE        MINIMUM   MAXIMUM     AVERAGE   BLK COUNT   TOTAL  
@@ -344,35 +344,35 @@ ms.locfileid: "33579798"
 <a name="Physical"></a>   
 ##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Aby ustalić, czy jest wystarczająca ilość fizycznej pamięci  
   
-1.  Uruchom Menedżera zadań systemu Windows.  
+1.  Uruchamianie Menedżera zadań Windows.  
   
-2.  Na **wydajności** pozycję przyjrzeć się wartość zatwierdzone. (W systemie Windows 7, obejrzyj **zatwierdzić (KB)** w **grupy systemu**.)  
+2.  Na **wydajności** kartę, sprawdź wartość zatwierdzone. (W Windows 7, Przyjrzyj się **zatwierdzenia (KB)** w **grupy systemowej**.)  
   
-     Jeśli **całkowita** jest blisko **Limit**, możesz zaczyna brakować pamięci fizycznej.  
+     Jeśli **całkowita** jest bliska **Limit**, kończy się w pamięci fizycznej.  
   
 <a name="ManagedHeapCommit"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Aby określić, ile pamięci zatwierdza sterty zarządzanej  
   
--   Użyj `# Total committed bytes` licznika wydajności pamięci, aby uzyskać liczbę bajtów, które zatwierdza sterty zarządzanej. Moduł zbierający elementy bezużyteczne przekazuje fragmentów w segmencie, zgodnie z potrzebami, nie wszystkie w tym samym czasie.  
+-   Użyj `# Total committed bytes` licznika wydajności pamięci, aby uzyskać liczbę bajtów, które zatwierdza sterty zarządzanej. Moduł zbierający elementy bezużyteczne zatwierdzeń fragmentów w segmencie, zgodnie z potrzebami, nie wszystkie w tym samym czasie.  
   
     > [!NOTE]
-    >  Nie używaj `# Bytes in all Heaps` licznika wydajności, ponieważ nie reprezentuje aktualnego stanu użycia pamięci przez sterty zarządzanej. Rozmiar generacji znajduje się w tej wartości i jest rzeczywiście jego rozmiar progu, oznacza to, rozmiar, który wywołuje wyrzucania elementów bezużytecznych, jeśli Generowanie jest wypełniony obiektów. W związku z tym ta wartość jest zazwyczaj zero.  
+    >  Nie używaj `# Bytes in all Heaps` liczników wydajności, ponieważ nie reprezentuje aktualnego stanu użycia pamięci w stosie zarządzanym. Rozmiar generacji znajduje się w tej wartości i jest faktycznie jego rozmiar progu, oznacza to, rozmiar, który wywołuje wyrzucanie elementów bezużytecznych, jeśli generacja jest wypełniony przy użyciu obiektów. W związku z tym ta wartość zazwyczaj wynosi zero.  
   
 <a name="ManagedHeapReserve"></a>   
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Aby określić, ile pamięci rezerwuje sterty zarządzanej  
+##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Aby określić ilość pamięci sterty zarządzanej rezerwy  
   
 -   Użyj `# Total reserved bytes` licznika wydajności pamięci.  
   
-     Moduł zbierający elementy bezużyteczne zastrzega pamięć w segmentach i można określić, gdzie segment uruchamia się za pomocą **eeheap** polecenia.  
+     Moduł zbierający elementy bezużyteczne zastrzega pamięć w segmentach i określić, gdzie segment uruchamia się za pomocą **eeheap** polecenia.  
   
     > [!IMPORTANT]
-    >  Mimo że możesz określić ilość pamięci przez moduł garbage collector przydziela dla każdego segmentu, rozmiar segmentu jest konkretnej implementacji i może ulec zmianie w dowolnym momencie, w tym w okresowych aktualizacji. Aplikacji nigdy nie może dokonać założeń dotyczących lub zależą od rozmiaru określonego segmentu nie powinny podejmować próby skonfiguruj ilość pamięci dostępnej dla segmentu alokacji.  
+    >  Mimo że można określić ilość pamięci, które moduł odśmiecania pamięci przydziela dla każdego segmentu, rozmiar segmentu jest specyficzne dla implementacji i może ulec zmianie w dowolnym momencie, w tym w okresowe aktualizacje. Twoja aplikacja nigdy nie należy wprowadzić założeń dotyczących lub zależeć od rozmiaru określonego segmentu nie ma podejmować skonfigurować ilość pamięci dostępnej dla alokacji segmentu.  
   
--   W debugerze WinDbg lub Visual Studio z rozszerzeniem debugera SOS załadowany wpisz następujące polecenie:  
+-   W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie:  
   
      **! eeheap -gc**  
   
-     Wynik ma następującą składnię.  
+     Wynik jest następujący.  
   
     ```  
     Number of GC Heaps: 2  
@@ -404,18 +404,18 @@ ms.locfileid: "33579798"
     GC Heap Size   0x24db8(150968)  
     ```  
   
-     Adresy wskazywanym przez "segmentu" adresów początkowy segmentów.  
+     Adresy, wskazywanym przez "segmentu" adresów początkowy segmentów.  
   
 <a name="ExamineGen2"></a>   
-##### <a name="to-determine-large-objects-in-generation-2"></a>W celu ustalenia, duże obiekty generacji 2  
+##### <a name="to-determine-large-objects-in-generation-2"></a>Aby określić dużych obiektów w generacji 2  
   
--   W debugerze WinDbg lub Visual Studio z rozszerzeniem debugera SOS załadowany wpisz następujące polecenie:  
+-   W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie:  
   
-     **! dumpheap — stan**  
+     **! dumpheap-stat**  
   
-     Jeśli sterty zarządzanej jest duży, **dumpheap** może zająć trochę czasu, aby zakończyć.  
+     Jeśli zarządzanego stosu jest duży, **dumpheap** może potrwać kilka minut na zakończenie.  
   
-     Analizowanie danych w ciągu ostatnich kilku wierszy danych wyjściowych, można uruchomić, ponieważ ich listy obiektów, które najwięcej miejsca. Na przykład:  
+     Możesz zacząć analizować w ciągu ostatnich kilku wierszy danych wyjściowych, ponieważ ich listę obiektów, które najwięcej miejsca. Na przykład:  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -431,11 +431,11 @@ ms.locfileid: "33579798"
     Total 8454945 objects  
     ```  
   
-     Ostatni obiekt na liście jest ciągiem i zajmuje najwięcej miejsca. Można sprawdzić w aplikacji, aby zobaczyć, jak mogą być optymalizowane obiektów w postaci ciągów. Aby wyświetlić ciągów, które należą do zakresu od 150 do 200 bajtów, wpisz następujące polecenie:  
+     Ostatni obiekt na liście jest ciągiem i zajmuje najwięcej miejsca na. Można sprawdzić w aplikacji, aby zobaczyć, jak można optymalizować obiektów w postaci ciągów. Aby wyświetlić ciągów, które należą do zakresu od 150 do 200 bajtów, wpisz następujące polecenie:  
   
-     **! dumpheap — wpisz 150 - max -min System.String 200**  
+     **! dumpheap-typ System.String -minutowy 150 - max 200**  
   
-     Przykład wyników ma następującą składnię.  
+     Przykładem wyniki jest następujący.  
   
     ```  
     Address  MT           Size  Gen  
@@ -443,22 +443,22 @@ ms.locfileid: "33579798"
     …  
     ```  
   
-     Może być skuteczniejsza za pomocą całkowitą zamiast ciągu dla Identyfikatora. Jeśli ten sam ciąg jest zajdą tysięcy razy, należy wziąć pod uwagę interning ciągu. Aby uzyskać więcej informacji na temat interning ciągu, zobacz temat informacje dla <xref:System.String.Intern%2A?displayProperty=nameWithType> metody.  
+     Za pomocą całkowitą zamiast ciągu dla Identyfikatora może być bardziej wydajne. Jeśli ten sam ciąg jest powtarza się tysiące razy, należy wziąć pod uwagę wewnętrzne przygotowanie ciągu. Aby uzyskać więcej informacji na temat wewnętrzne przygotowanie ciągu, zobacz temat referencyjny dotyczący <xref:System.String.Intern%2A?displayProperty=nameWithType> metody.  
   
 <a name="ObjRef"></a>   
 ##### <a name="to-determine-references-to-objects"></a>Aby określić odwołania do obiektów  
   
--   W WinDbg z rozszerzeniem debugera SOS załadowany wpisz następujące polecenie, aby listy odwołania do obiektów:  
+-   W WinDbg za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie, aby listy odwołania do obiektów:  
   
      **! gcroot**  
   
      `-or-`  
   
--   Aby określić odwołania dla konkretnego obiektu, należy uwzględnić adres:  
+-   Aby ustalić, odwołania do określonego obiektu, należy uwzględnić adres:  
   
      **! gcroot 1c37b2ac**  
   
-     Certyfikaty główne na stosy może być fałszywych alarmów. Aby uzyskać więcej informacji, użyj polecenia `!help gcroot`.  
+     Znalezione na stosach obiekty główne może być wyników fałszywie dodatnich. Aby uzyskać więcej informacji, użyj polecenia `!help gcroot`.  
   
     ```  
     ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->  
@@ -476,10 +476,10 @@ ms.locfileid: "33579798"
     Scan Thread 6 OSTHread 484  
     ```  
   
-     **Gcroot** polecenia może zająć dużo czasu, aby zakończyć. Każdy obiekt, który nie jest odzyskana przez odzyskiwanie pamięci jest obiektem na żywo. Oznacza to, że niektóre główny jest bezpośrednio lub pośrednio zawierający na obiekt, więc **gcroot** powinny zostać zwrócone informacje ścieżki do obiektu. Należy sprawdzić wykresy zwrócił i zobacz, dlaczego te obiekty są nadal odwołuje się do.  
+     **Gcroot** polecenia może zająć dużo czasu na zakończenie. Każdy obiekt, który nie jest odzyskiwane przez wyrzucanie elementów bezużytecznych jest obiektem na żywo. Oznacza to, że niektóre główny jest bezpośrednio lub pośrednio trzymając na obiekt, więc **gcroot** powinna zwrócić informacje o ścieżce do obiektu. Należy sprawdzić wykresy zwracane i zobacz, dlaczego te obiekty są nadal istnieją odwołania.  
   
 <a name="Induce"></a>   
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Aby określić, czy przeprowadzono finalizator  
+##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Aby określić, czy finalizator została uruchomiona  
   
 -   Uruchom program test, który zawiera następujący kod:  
   
@@ -489,22 +489,22 @@ ms.locfileid: "33579798"
     GC.Collect();  
     ```  
   
-     Jeśli test zostanie rozwiązany, oznacza to, że moduł zbierający elementy bezużyteczne nie został odzyskiwanie obiektów, ponieważ została wstrzymana finalizatory dla tych obiektów. <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> Metody umożliwia finalizatory do wykonywania swoich zadań i rozwiązuje problem.  
+     Jeśli test nie zostanie rozwiązany, oznacza to, że moduł odśmiecania pamięci nie został odzyskiwaniu obiektów, ponieważ została wstrzymana finalizatory dla tych obiektów. <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> Metoda umożliwia finalizatory do wykonywania swoich zadań i rozwiąże problem.  
   
 <a name="Finalize"></a>   
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Aby określić, czy istnieją obiekty oczekujące na sfinalizowana  
+##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Aby ustalić, czy istnieją obiekty oczekujące na sfinalizowana  
   
-1.  W debugerze WinDbg lub Visual Studio z rozszerzeniem debugera SOS załadowany wpisz następujące polecenie:  
+1.  W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie:  
   
      **! finalizequeue**  
   
-     Sprawdź liczbę obiektów, które są gotowe do finalizacji. Jeśli liczba jest wysokie, należy zbadać dlaczego te finalizatory nie postępu na wszystkich lub nie postępu szybkiego wystarczająco.  
+     Spójrz na liczbę obiektów, które są gotowe do finalizacji. Jeśli liczba jest wysokie, należy zbadać, dlaczego te finalizatory nie postępu na wszystkich lub nie postęp szybkiego wystarczająco.  
   
 2.  Aby uzyskać dane wyjściowe wątków, wpisz następujące polecenie:  
   
      **wątki — specjalne**  
   
-     To polecenie dostarcza dane wyjściowe podobne do poniższych.  
+     To polecenie dostarcza dane wyjściowe, takie jak poniżej.  
   
     ```  
        OSID     Special thread type  
@@ -513,16 +513,16 @@ ms.locfileid: "33579798"
     4    df0    GC SuspendEE   
     ```  
   
-     Wątek finalizatora wskazuje, które finalizator, jeśli istnieje, jest aktualnie uruchomione. Kiedy wątku finalizatora nie jest uruchomiona żadnych finalizatory, oczekuje na zdarzenia, aby wykonać swoją pracę. W większości przypadków zobaczysz wątku finalizatora w tym stanie ponieważ powinien na zakończenie działania finalizatory, jeśli taki występuje i jest uruchamiane w THREAD_HIGHEST_PRIORITY bardzo szybko.  
+     Wątek finalizatora wskazuje, które finalizatora, jeśli jest aktualnie uruchomione. Wątek finalizatora nie jest uruchomiona żadnych finalizatorów, trwa oczekiwanie na zdarzenie nakazać mu wykonać swoją pracę. W większości przypadków zostanie wyświetlony wątek finalizatora w tym stanie ponieważ działa na THREAD_HIGHEST_PRIORITY i powinna zakończyć działanie finalizatorów, jeśli istnieje bardzo szybko.  
   
 <a name="Fragmented"></a>   
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Aby określić ilość wolnego miejsca na stercie zarządzanej  
+##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Aby określić ilość wolnego miejsca w zarządzanym stosie  
   
--   W debugerze WinDbg lub Visual Studio z rozszerzeniem debugera SOS załadowany wpisz następujące polecenie:  
+-   W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie:  
   
-     **! dumpheap — wpisz bezpłatne — stan**  
+     **! dumpheap-wpisz bezpłatne - stat**  
   
-     To polecenie wyświetla całkowity rozmiar wszystkich obiektów wolnego na stercie zarządzanej, jak pokazano w poniższym przykładzie.  
+     To polecenie wyświetla całkowity rozmiar wszystkich obiektów bezpłatne na zarządzanym stosie, jak pokazano w poniższym przykładzie.  
   
     ```  
     total 230 objects  
@@ -532,11 +532,11 @@ ms.locfileid: "33579798"
     Total 230 objects  
     ```  
   
--   Aby określić ilość wolnego miejsca podczas generowania 0, wpisz następujące polecenie dla informacji o użyciu pamięci przez generowanie:  
+-   Aby określić ilość wolnego miejsca w generacji 0, wpisz następujące polecenie, aby uzyskać informacje dotyczące użycia pamięci przez generacji:  
   
      **! eeheap -gc**  
   
-     To polecenie wyświetla dane wyjściowe podobne do następującego. Ostatni wiersz zawiera tymczasowych segmentu.  
+     To polecenie wyświetla dane wyjściowe podobne do następujących. Ostatni wiersz zawiera segment efemeryczny.  
   
     ```  
     Heap 0 (0015ad08)  
@@ -552,21 +552,21 @@ ms.locfileid: "33579798"
     46120000 46120038  49e05d04   0x03ce5ccc(63855820)  
     ```  
   
--   Obliczyć miejsca na dysku używane przez generacji 0:  
+-   Oblicz przestrzeni używanej przez generacji 0:  
   
      **? 49e05d04 0x49521f8c**  
   
-     Wynik ma następującą składnię. Generacji 0 to około 9 MB.  
+     Wynik jest następujący. Generacji 0 to około 9 MB.  
   
     ```  
     Evaluate expression: 9321848 = 008e3d78  
     ```  
   
--   Polecenie zrzuty ilość wolnego miejsca w zakresie generacji 0:  
+-   Poniższe polecenie wykonuje ilość wolnego miejsca w zakresie generacji 0:  
   
-     **! dumpheap-bezpłatne — wpisz 49e05d04 stat 0x49521f8c**  
+     **! dumpheap-wpisz bezpłatne - stat 0x49521f8c 49e05d04**  
   
-     Wynik ma następującą składnię.  
+     Wynik jest następujący.  
   
     ```  
     ------------------------------  
@@ -589,16 +589,16 @@ ms.locfileid: "33579798"
     Total 409 objects  
     ```  
   
-     Te dane wyjściowe pokazuje, że część sterty pokolenia 0 za pomocą 9 MB miejsca dla obiektów i ma 7 MB wolnego. Analiza wskazuje zakres generacji 0 przyczynia się do fragmentacji. Ilość użycia sterty powinien rabatem niż suma jako przyczyna fragmentacji przez obiekty długoterminowej.  
+     Te dane wyjściowe pokazuje, że generacji 0 części stosu obiektów przy użyciu 9 MB miejsca i znajduje się 7 MB wolnego. Ta analiza przedstawia zakres generacji 0 przyczynia się do fragmentacji. Tę kwotę użycie sterty powinien obniżone z łącznej kwoty jako przyczynę fragmentacji przez obiekty długoterminowego.  
   
 <a name="Pinned"></a>   
-##### <a name="to-determine-the-number-of-pinned-objects"></a>Aby określić liczbę unieruchomionych obiektów  
+##### <a name="to-determine-the-number-of-pinned-objects"></a>Aby określić liczbę obiektów przypięte  
   
--   W debugerze WinDbg lub Visual Studio z rozszerzeniem debugera SOS załadowany wpisz następujące polecenie:  
+-   W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie:  
   
-     **! związane**  
+     **! gchandles**  
   
-     Statystyki, wyświetlane obejmuje liczby dojść przypiętych, jak w poniższym przykładzie pokazano.  
+     Statystyki, wyświetlane zawiera liczbę przypiętych uchwytów, co ilustruje poniższy przykład.  
   
     ```  
     GC Handle Statistics:  
@@ -611,11 +611,11 @@ ms.locfileid: "33579798"
   
 -   Sprawdź `% Time in GC` licznika wydajności pamięci.  
   
-     Wartość jest obliczana przy użyciu interwałów próbkowania. Ponieważ liczniki jest aktualizowany po zakończeniu każdej operacji wyrzucania elementów bezużytecznych, bieżący próbki ma taką samą wartość jak poprzedni przykład, jeśli żadne kolekcje wystąpił w interwale.  
+     Wartość jest obliczana przy użyciu interwałów próbkowania. Ponieważ liczniki zostały zaktualizowane na końcu każdej operacji wyrzucania elementów bezużytecznych, bieżąca przykładowa będzie mieć taką samą wartość jak w poprzednim przykładzie, jeśli żadne kolekcje, które wystąpiły interwału.  
   
-     Czas zbierania mnożąc interwałów próbkowania o wartości procentowej.  
+     Czas zbierania mnożąc interwałów próbkowania przy użyciu wartości procentowej.  
   
-     Następujące dane zawiera cztery interwałami próbkowania dwóch sekund, badanie 8 sekundy. `Gen0`, `Gen1`, I `Gen2` kolumny zawierają liczbę wyrzucania, które wystąpiły podczas tego interwału dla tej generacji.  
+     Następujące dane zawiera cztery próbkowania dwóch sekund do badania 8 sekund. `Gen0`, `Gen1`, I `Gen2` kolumny zawierają liczbę wyrzucania elementów bezużytecznych, które wystąpiły podczas tego interwału dla danej generacji.  
   
     ```  
     Interval    Gen0    Gen1    Gen2    % Time in GC  
@@ -625,9 +625,9 @@ ms.locfileid: "33579798"
            4      11       3       1               3  
     ```  
   
-     Te informacje nie są wyświetlane, gdy wystąpił wyrzucanie elementów bezużytecznych, ale można określić liczbę wyrzucania, które wystąpiły w odstępach czasu. Zakładając, że najgorszego, dziesiątego bezużytecznych generacji 0 zakończono na początku Drugi interwał i jedenastego bezużytecznych generacji 0 zakończono na końcu piątej interwału. Czas między koniec dziesiątego i na końcu jedenastego wyrzucanie elementów bezużytecznych jest około 2 sekundy, i licznik wydajności przedstawia 3%, więc trwało jedenastego wyrzucanie elementów bezużytecznych generacji 0 (% s 2 * 3 = 60ms).  
+     Te informacje nie są wyświetlane podczas wyrzucania elementów bezużytecznych wystąpił, ale można określić liczbę wyrzucania elementów bezużytecznych, które wystąpiły w odstępach czasu. Zakładając, że najgorszym przypadku, oraz generacji 0 wyrzucania elementów bezużytecznych zostało zakończone na początku drugiej interwał i jedenasty generację 0 wyrzucania elementów bezużytecznych zostało zakończone na końcu interwału piąty. Czas między końcem dziesiątego i na końcu jedenasty wyrzucania elementów bezużytecznych jest około 2 sekundy, a licznik wydajności przedstawia 3%, aby był czas trwania jedenasty wyrzucania elementów bezużytecznych generacji 0 (% w ciągu kilku sekund 2 * 3 = 60ms).  
   
-     W tym przykładzie są 5 okresów.  
+     W tym przykładzie istnieją 5 okresów.  
   
     ```  
     Interval    Gen0    Gen1    Gen2     % Time in GC  
@@ -638,11 +638,11 @@ ms.locfileid: "33579798"
            5      11       4       2               20  
     ```  
   
-     Drugiej generacji 2 wyrzucanie elementów bezużytecznych rozpoczęcia interwale trzeci i zakończenia w piątym odstępach czasu. Zakładając, że najgorszego, ostatni wyrzucanie elementów bezużytecznych był zakończenia na początku Drugi interwał kolekcji generacji 0, a generacji 2 wyrzucanie elementów bezużytecznych Zakończono na końcu piątej interwał. W związku z tym czas od zakończenia operacji wyrzucania elementów bezużytecznych generacji 0 i na końcu wyrzucanie elementów bezużytecznych generacji 2 jest 4 sekundy. Ponieważ `% Time in GC` licznika wynosi 20%, maksymalną ilość czasu generowania można miały 2 wyrzucanie elementów bezużytecznych (4 sekundy * 20% = 800ms).  
+     Drugiej generacji 2 wyrzucania elementów bezużytecznych pracę trzeci przedział czasu i zostało zakończone w piątym odstępach czasu. Zakładając, że najgorszym przypadku, ostatni wyrzucania elementów bezużytecznych był dla kolekcji generacji 0, które kończy się na początku drugiej interwał i 2 wyrzucania elementów bezużytecznych generacji zakończone na końcu piąty interwał. W związku z tym czas od zakończenia operacji wyrzucania elementów bezużytecznych generacji 0 i na końcu wyrzucania elementów bezużytecznych generacji 2 jest 4 sekundy. Ponieważ `% Time in GC` licznika wynosi 20%, maksymalną ilość czasu, w generacji 2 wyrzucania elementów bezużytecznych może miały jest (w sekundach 4 * 20% = 800ms).  
   
--   Alternatywnie można określić długości wyrzucania elementów bezużytecznych przy użyciu [zdarzenia ETW wyrzucania elementów bezużytecznych](../../../docs/framework/performance/garbage-collection-etw-events.md)i analizowania informacji, aby określić czas trwania operacji wyrzucania elementów bezużytecznych.  
+-   Alternatywnie, można określić długość wyrzucania elementów bezużytecznych za pomocą [zdarzenia ETW odzyskiwania pamięci](../../../docs/framework/performance/garbage-collection-etw-events.md)i Analizuj informacje, aby określić czas trwania operacji wyrzucania elementów bezużytecznych.  
   
-     Na przykład następujące dane przedstawiono sekwencję zdarzeń, który wystąpił podczas niewspółbieżnego wyrzucania elementów bezużytecznych.  
+     Na przykład następujące dane przedstawiono sekwencję zdarzeń, który wystąpił podczas niejednoczesne wyrzucanie elementów bezużytecznych.  
   
     ```  
     Timestamp    Event name  
@@ -657,11 +657,11 @@ ms.locfileid: "33579798"
   
      Zawieszanie wątków zarządzanych trwało 26us (`GCSuspendEEEnd` — `GCSuspendEEBegin_V1`).  
   
-     Rzeczywiste wyrzucanie elementów bezużytecznych trwało 4.8ms (`GCEnd_V1` — `GCStart_V1`).  
+     Rzeczywiste wyrzucania elementów bezużytecznych zajęło 4.8ms (`GCEnd_V1` — `GCStart_V1`).  
   
      Wznawianie wątków zarządzanych trwało 21us (`GCRestartEEEnd` — `GCRestartEEBegin`).  
   
-     Następujące dane wyjściowe zawiera przykład odzyskiwanie pamięci w tle, a obejmują procesu, wątku i pola zdarzeń. (Nie wszystkie dane są wyświetlane).  
+     Następujące dane wyjściowe zawiera przykład wyrzucanie elementów bezużytecznych w tle i obejmuje procesu, wątku i pola, zdarzenia. (Nie wszystkie dane są wyświetlane).  
   
     ```  
     timestamp(us)    event name            process    thread    event field  
@@ -681,26 +681,26 @@ ms.locfileid: "33579798"
     89931464        GCHeapStats            Test.exe    4372          
     ```  
   
-     `GCStart_V1` Zdarzenia przy 42504816 wskazuje, że jest Odzyskiwanie pamięci w tle, ponieważ ostatnie pole `1`. Staje się on wyrzucanie elementów bezużytecznych przycisk nie. 102019.  
+     `GCStart_V1` Zdarzenie w 42504816 oznacza, że jest tle wyrzucania elementów bezużytecznych, ponieważ jest ostatnim polu `1`. Staje się on wyrzucania elementów bezużytecznych nie. 102019.  
   
-     `GCStart` Wystąpi zdarzenie, ponieważ nie istnieje potrzeba tymczasowych wyrzucanie elementów bezużytecznych przed rozpoczęciem odzyskiwanie pamięci w tle. Staje się on wyrzucanie elementów bezużytecznych przycisk nie. 102020.  
+     `GCStart` Wystąpi zdarzenie, ponieważ nie istnieje potrzeba efemerycznego wyrzucania elementów bezużytecznych, przed rozpoczęciem bezużytecznych w tle. Staje się on wyrzucania elementów bezużytecznych nie. 102020.  
   
-     W 42514170, wyrzucanie elementów bezużytecznych nie. Zakończenie 102020. Zarządzane wątki są ponownie uruchamiane w tym momencie. To pole jest wypełniane w wątku 4372, która wywołała to odzyskiwanie pamięci w tle.  
+     W 42514170, wyrzucanie elementów bezużytecznych nie. 102020 zostanie zakończone. Zarządzane wątki są ponownie uruchamiane na tym etapie. To pole jest wypełniane w wątku 4372, która wywołała to bezużytecznych w tle.  
   
-     W wątku 4744 zawieszenia występuje. Jest to tylko czas, w którym odzyskiwanie pamięci w tle musi wstrzymać wątków zarządzanych. Ten czas trwania to około 99ms ((63784407-63685394)/1000).  
+     W wątku 4744 występuje zawieszenia. Jest to jedyny raz, w tle wyrzucanie elementów bezużytecznych ma wstrzymania zarządzanych wątków. Ten czas trwania wynosi około 99ms ((63784407-63685394)/1000).  
   
-     `GCEnd` Jest zdarzenie dla tła wyrzucanie elementów bezużytecznych w 89931423. Oznacza to, że tło wyrzucanie elementów bezużytecznych trwała o 47seconds ((89931423-42504816)/1000).  
+     `GCEnd` Zdarzeń do wyrzucania elementów bezużytecznych tła wynosi 89931423. Oznacza to, że odzyskiwanie pamięci w tle trwał o 47seconds ((89931423-42504816)/1000).  
   
-     Uruchomionej zarządzane wątki widać dowolną liczbę tymczasowych wyrzucania wystąpienia.  
+     Gdy zarządzane wątki są uruchomione, widać dowolną liczbę tymczasowe wyrzucanie elementów bezużytecznych występuje.  
   
 <a name="Triggered"></a>   
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a>Aby określić, co wyzwoliło wyrzucania elementów bezużytecznych  
+##### <a name="to-determine-what-triggered-a-garbage-collection"></a>Aby ustalić przyczyny ich wyzwolenia wyrzucania elementów bezużytecznych  
   
--   W debugerze WinDbg lub Visual Studio z rozszerzeniem debugera SOS załadowany wpisz następujące polecenie, aby wyświetlić wszystkie wątki z ich stosy wywołań:  
+-   W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie, aby wyświetlić wszystkie wątki z ich stosów wywołań:  
   
      **~\*KB**  
   
-     To polecenie wyświetla dane wyjściowe podobne do następującego.  
+     To polecenie wyświetla dane wyjściowe podobne do następujących.  
   
     ```  
     0012f3b0 79ff0bf8 mscorwks!WKS::GCHeap::GarbageCollect   
@@ -708,9 +708,9 @@ ms.locfileid: "33579798"
     0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48  
     ```  
   
-     Wyrzucanie elementów bezużytecznych spowodowane przez powiadomienie o małej ilości pamięci systemu operacyjnego, stos wywołań jest podobny, z wyjątkiem tego, że wątek znajduje się wątek finalizatora. Wątek finalizatora pobiera wiadomość z powiadomieniem asynchroniczne małej ilości pamięci i wywołuje wyrzucanie elementów bezużytecznych.  
+     Wyrzucanie elementów bezużytecznych zostało spowodowane przez powiadomienie małej ilości pamięci systemu operacyjnego, stos wywołań jest podobna, z tą różnicą, że wątek znajduje się wątek finalizatora. Wątek finalizatora pobiera wiadomość z powiadomieniem asynchronicznego małej ilości pamięci i wywołuje wyrzucanie elementów bezużytecznych.  
   
-     Jeśli wyrzucanie elementów bezużytecznych spowodowane przez alokacji pamięci stosu wygląda następująco:  
+     Jeśli wyrzucanie elementów bezużytecznych zostało spowodowane przez alokacji pamięci, stos wygląda następująco:  
   
     ```  
     0012f230 7a07c551 mscorwks!WKS::GCHeap::GarbageCollectGeneration  
@@ -724,13 +724,13 @@ ms.locfileid: "33579798"
     0000002a 79fa22bd fragment_ni!request.Main(System.String[])+0x153  
     ```  
   
-     Pomocnik just in time (`JIT_New*`) wywołuje na końcu `GCHeap::GarbageCollectGeneration`. Jeśli okaże się wyrzucania generacji 2 są spowodowane alokacji, należy określić obiekty, które mają być zbierane przez generacji 2 wyrzucania elementów bezużytecznych i sposobu ich uniknięcie. Oznacza to, że chcesz obliczenia różnicy między początkową i końcową generacji 2 wyrzucania elementów bezużytecznych i obiekty, które spowodowało kolekcji generacji 2.  
+     Pomocnik just-in-time (`JIT_New*`) po pewnym czasie wywołania `GCHeap::GarbageCollectGeneration`. Jeśli okaże się, że wyrzucania generacji 2 są spowodowane przez alokacje, musisz określić obiekty, które są zbierane przez 2 wyrzucania elementów bezużytecznych generacji, a także jak ich unikać. Oznacza to, że chcesz określić różnicę między początek i koniec 2 wyrzucania elementów bezużytecznych generacji i obiekty przez nie spowodował kolekcji generacji 2.  
   
-     Na przykład wpisz następujące polecenie w debugerze umożliwiające wyświetlanie na początku kolekcji generacji 2:  
+     Na przykład wpisz następujące polecenie w debugerze, aby pokazać początku kolekcji generacji 2:  
   
-     **! dumpheap — stan**  
+     **! dumpheap-stat**  
   
-     Przykład danych wyjściowych (skróconej informacji wyświetlenie obiektów, które używają najwięcej miejsca):  
+     Przykładowe dane wyjściowe (skróconej informacji wyświetlenie obiektów, które używają najwięcej miejsca na):  
   
     ```  
     79124228    31857      9862328 System.Object[]  
@@ -748,11 +748,11 @@ ms.locfileid: "33579798"
     Total 6471774 objects  
     ```  
   
-     Powtórz polecenie na końcu generacji 2:  
+     Na koniec generacji 2, powtórz polecenie:  
   
-     **! dumpheap — stan**  
+     **! dumpheap-stat**  
   
-     Przykład danych wyjściowych (skróconej informacji wyświetlenie obiektów, które używają najwięcej miejsca):  
+     Przykładowe dane wyjściowe (skróconej informacji wyświetlenie obiektów, które używają najwięcej miejsca na):  
   
     ```  
     79124228    26648      9314256 System.Object[]  
@@ -769,14 +769,15 @@ ms.locfileid: "33579798"
     Total 6417525 objects  
     ```  
   
-     `double[]` Obiektów zniknęła na końcu danych wyjściowych, co oznacza, że zostały zebrane. Obiekty te konta do około 70 MB. Pozostałe obiekty nie został zmieniony znacznie. W związku z tym te `double[]` obiekty zostały Przyczyna przyczynę wystąpienia tej generacji 2 wyrzucanie elementów bezużytecznych. Następnym krokiem jest ustalenie, dlaczego `double[]` obiekty są dostępne i dlaczego ich zostało przerwane. Można skontaktuj się z deweloperem kodu, w którym pochodzeniu tych obiektów, lub skorzystać z **gcroot** polecenia.  
+     `double[]` Obiektów zniknął od końca danych wyjściowych, co oznacza, że zostały zebrane. Obiekty te konta do około 70 MB. Pozostałe obiekty nie został zmieniony wiele. Dlatego te `double[]` obiekty zostały powód, dlaczego wystąpił ten wyrzucania elementów bezużytecznych generacji 2. Następnym krokiem jest, aby ustalić, dlaczego `double[]` obiekty są dostępne i dlaczego ich zostało przerwane. Możesz poprosić kodu dla deweloperów, gdzie pochodzi tych obiektów, lub użyć **gcroot** polecenia.  
   
 <a name="HighCPU"></a>   
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Aby określić, czy przyczyną wysokiego użycia procesora CPU jest wyrzucanie elementów bezużytecznych  
+##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Aby ustalić, czy wysokie użycie procesora CPU jest spowodowany przez wyrzucanie elementów bezużytecznych  
   
--   Korelowanie `% Time in GC` wartość licznika wydajności pamięci w czasie procesu.  
+-   Korelowanie `% Time in GC` wartość licznika wydajności pamięci z czasem przetwarzania.  
   
-     Jeśli `% Time in GC` wartość wzrósł w tym samym czasie jako czas przetwarzania, wyrzucanie elementów bezużytecznych jest przyczyną wysokiego użycia procesora CPU. W przeciwnym razie profilu aplikacji można znaleźć, gdzie występuje wysokiego użycia.  
+     Jeśli `% Time in GC` wartość gwałtowne wzrosty w tym samym czasie jako czas przetwarzania, wyrzucanie elementów bezużytecznych powoduje wysokie użycie procesora CPU. W przeciwnym razie wykonaj profilowanie aplikacji można znaleźć, gdzie występuje wysokie użycie.  
   
-## <a name="see-also"></a>Zobacz też  
- [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)

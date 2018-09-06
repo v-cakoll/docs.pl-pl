@@ -7,11 +7,11 @@ helpviewer_keywords:
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
 ms.openlocfilehash: 670dfad3b9fc22709a0ad7f8048a0468bce54a2e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561944"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884721"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Porady: różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody (Przewodnik programowania w języku C#)
 W poniższym przykładzie pokazano, jak przekazywanie [struktury](../../../csharp/language-reference/keywords/struct.md) do metody różni się od przekazywanie [klasy](../../../csharp/language-reference/keywords/class.md) wystąpienia do metody. W tym przykładzie oba argumenty (wystąpienia struktury i klasy) są przekazywane przez wartość, a obie metody Zmień wartość pola jednego argumentu. Jednak wyniki z dwóch metod nie są takie same ponieważ przekazywana jest, jeśli przekazujesz struktury różni się od co to jest przekazywana, jeśli przekazujesz wystąpienia klasy.  

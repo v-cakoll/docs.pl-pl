@@ -10,56 +10,57 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a17bc509c8c82bfb30811ec3511207ca2d823e5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bea5dfd7c53b5b5f53ddab5d4d07ec6a603b14e8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589857"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042234"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Pamięć lokalna wątku: powiązane z wątkiem pola statyczne i gniazda danych
-Można użyć zarządzanej lokalny magazyn wątków (TLS) do przechowywania danych, która jest unikatowa w domenie wątku i aplikacji. .NET Framework udostępnia dwa sposoby używania zarządzanych TLS: statyczne miejsc pola i dane powiązane z wątkiem.  
+Można użyć lokalnego magazynu zarządzanych wątków (TLS) do przechowywania danych, która jest unikatowa w domenie aplikacji i wątku. Program .NET Framework oferuje dwa sposoby użycia zarządzanego protokołu TLS: względne wątkom statycznego miejsca pól i danych.  
   
--   Użyj powiązane z wątkiem pola statyczne (powiązane z wątkiem `Shared` pola w języku Visual Basic), jeśli przewidujesz potrzeby użytkowników w czasie kompilacji. Względne wątkom pola statyczne zapewniają najlepszą wydajność. One również zapewniają korzyści sprawdzania typu kompilacji.  
+-   Użyj względne wątkom pola statyczne (względne wątkom `Shared` pól w języku Visual Basic) jeżeli można przewidzieć potrzeby użytkowników w czasie kompilacji. Względne wątkom pola statyczne zapewniają najlepszą wydajność. Również zapewniają korzyści wynikające z kontrola typów w czasie kompilacji.  
   
--   Użyj miejsc danych po rzeczywiste wymagania mogą być tylko w czasie wykonywania. Gniazda danych są wolniejszy i bardziej nieodpowiednich w użyciu niż powiązane z wątkiem pola statyczne i dane są przechowywane jako typ <xref:System.Object>, więc należy rzutować go do poprawnego typu przed jego użyciem.  
+-   Użyj miejsc danych, gdy Twoje rzeczywiste wymagania mogą zostać odnalezione tylko w czasie wykonywania. Gniazda danych są wolniejszy i bardziej niewygodna w użyciu niż względne wątkom pola statyczne, a dane są przechowywane jako typ <xref:System.Object>, więc należy rzutować go do poprawnego typu przed jego użyciem.  
   
- W języku C++ niezarządzane, użyj `TlsAlloc` może dynamicznie przydzielać miejsc i `__declspec(thread)` Aby zadeklarować, że zmienna powinna zostać przydzielona w magazynie powiązane z wątkiem. Względne wątkom statycznego pola i danych umożliwiają zarządzanej wersji tego zachowania.  
+ W języku C++ niezarządzane, użyj `TlsAlloc` można dynamicznie przydzielić miejsca i `__declspec(thread)` Aby zadeklarować, że zmienna powinna zostać przydzielona w magazynie względne wątkom. Względne wątkom statyczne pola i dane umożliwiają zarządzanej wersji to zachowanie.  
   
- W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> klasy w celu utworzenia obiektów wątków lokalnych, które są inicjowane opóźnieniem, gdy obiekt jest najpierw używane. Aby uzyskać więcej informacji, zobacz [Incjalizacji](../../../docs/framework/performance/lazy-initialization.md).  
+ W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], możesz użyć <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> klasy w celu utworzenia obiektów wątków lokalnych, które są inicjowane opóźnieniem, gdy obiekt jest najpierw zużywane. Aby uzyskać więcej informacji, zobacz [inicjowania z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md).  
   
-## <a name="uniqueness-of-data-in-managed-tls"></a>Unikatowość danych w protokole TLS zarządzanych  
- Czy można używać powiązane z wątkiem pola statyczne i gniazda danych, danych w protokole TLS zarządzanych jest unikatowy dla kombinacji domeny wątku i aplikacji.  
+## <a name="uniqueness-of-data-in-managed-tls"></a>Unikatowość danych w zarządzany protokół TLS  
+ Czy używasz względne wątkom pola statyczne i gniazda danych w zarządzany protokół TLS jest unikatowa kombinacja domeny aplikacji i wątku.  
   
--   W domenie aplikacji jeden wątek nie może modyfikować danych z innego wątku, nawet wtedy, gdy oba wątki używają tego samego pola lub gniazda.  
+-   W domenie aplikacji jeden wątek nie można zmodyfikować danych z innego wątku, nawet w przypadku obu wątków za pomocą tego samego pola lub gniazda.  
   
--   Gdy wątek uzyskuje dostęp do tego samego pola lub miejscem z wielu domen aplikacji, oddzielne wartość jest zachowywana w każdej domenie aplikacji.  
+-   Gdy wątek uzyskuje dostęp do tego samego pola lub gniazda z wielu domen aplikacji, oddzielne wartość jest zachowywana w każdej domenie aplikacji.  
   
- Na przykład jeśli wątek ustawia wartość powiązane z wątkiem pola statyczne, przechodzi do innej domeny aplikacji, a następnie pobiera wartość pola, pobraną w drugiej domenie aplikacji różni się od wartości w pierwszej domeny aplikacji. Ustawienie nową wartość dla pola w drugiej domenie aplikacji nie ma wpływu na wartości pola w pierwszej domeny aplikacji.  
+ Na przykład jeśli wątek ustawia wartości względne wątkom pola statyczne, przechodzi w innej domenie aplikacji, a następnie pobiera wartość pola, pobraną w drugiej domenie aplikacji różni się od wartości w pierwszej domeny aplikacji. Ustawianie nową wartość dla pola w drugiej domenie aplikacji nie wpływa na wartość pola w pierwszej domeny aplikacji.  
   
- Podobnie gdy wątek pobiera tego samego miejsca danych o podanej nazwie w dwóch różnych domenach aplikacji, dane w pierwszej domeny aplikacji pozostaje niezależnie od danych w drugiej domenie aplikacji.  
+ Podobnie gdy wątek otrzyma zajmować tego samego miejsca danych o podanej nazwie w dwóch różnych domenach aplikacji, dane w domenie aplikacji, pierwsze pozostaje niezależnie od danych w drugiej domenie aplikacji.  
   
 ## <a name="thread-relative-static-fields"></a>Względne wątkom pola statyczne  
- Jeśli znasz element danych jest zawsze unikatowa dla wątku i kombinacja domena aplikacji, zastosuj <xref:System.ThreadStaticAttribute> atrybutu pola statycznego. Użyj pola, jak w przypadku innych pola statycznego. Dane w polu jest unikatowy dla każdego wątku, który korzysta z niego.  
+ Jeśli znasz element danych jest zawsze unikatowa kombinacja domeny aplikacji i wątku, należy zastosować <xref:System.ThreadStaticAttribute> atrybutu do pola statycznego. Użyj pola, jak w przypadku każdego innego pola statyczne. Dane w polu są unikatowe dla każdego wątku, która go używa.  
   
- Względne wątkom pola statyczne zapewnić lepszą wydajność niż gniazda danych i korzystać z sprawdzanie typów w czasie kompilacji.  
+ Względne wątkom pola statyczne zapewnić lepszą wydajność niż gniazda danych i korzystać z kontrola typów w czasie kompilacji.  
   
- Należy pamiętać, że każdy kod konstruktora klasy będzie uruchamiany na pierwszym wątkiem w kontekście pierwszy, który uzyskuje dostęp do pola. We wszystkich innych wątków i konteksty w tej samej domenie aplikacji, zostanie zainicjowana pola w celu `null` (`Nothing` w języku Visual Basic) są typy odwołań, czy do ich domyślnych wartości, jeśli są one typów wartości. W związku z tym nie należy polegać na konstruktorów klas zainicjować powiązane z wątkiem pola statyczne. Zamiast tego uniknąć, inicjowanie powiązane z wątkiem pola statyczne i założono, że są one inicjowane `null` (`Nothing`) lub do wartości domyślnych.  
+ Należy pamiętać, że każdy kod konstruktora klasy będzie działać w pierwszym wątkiem w pierwszym kontekstu, który uzyskuje dostęp do pola. We wszystkich innych wątków i konteksty w tej samej domenie aplikacji, zostanie zainicjowana pola w celu `null` (`Nothing` w języku Visual Basic) są typami odwołań, czy do ich domyślnych wartości, jeśli są typami wartości. W związku z tym nie należy polegać na Konstruktory klasy, zainicjować względne wątkom pola statyczne. Zamiast tego należy unikać inicjowanie względne wątkom pola statyczne i przyjęto założenie, że są inicjowane na wartość `null` (`Nothing`) lub do wartości domyślnych.  
   
 ## <a name="data-slots"></a>Gniazda danych  
- .NET Framework zapewnia miejsc danych dynamicznych, które są unikatowe dla kombinacji wątku i domeny aplikacji. Istnieją dwa typy danych gniazd: o nazwie gniazda i gniazda bez nazwy. Zarówno są implementowane za pomocą <xref:System.LocalDataStoreSlot> struktury.  
+ .NET Framework zapewnia miejsc danych dynamicznych, które są unikatowe dla wątku i domeny aplikacji. Istnieją dwa typy danych miejsc: o nazwie gniazda i nienazwane gniazda. Oba są implementowane przy użyciu <xref:System.LocalDataStoreSlot> struktury.  
   
--   Aby utworzyć miejsca danych o podanej nazwie, użyj <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> lub <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> metody. Aby odwołać się do istniejącego o nazwie miejsca, podać jego nazwę, aby <xref:System.Threading.Thread.GetNamedDataSlot%2A> metody.  
+-   Aby utworzyć miejsce danych o podanej nazwie, użyj <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> lub <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> metody. Aby uzyskać odwołanie do istniejącego o nazwie miejsca, przekazać jego nazwę na <xref:System.Threading.Thread.GetNamedDataSlot%2A> metody.  
   
--   Aby utworzyć gniazda nienazwane danych, użyj <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> metody.  
+-   Aby utworzyć miejsce nienazwane danych, użyj <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> metody.  
   
- Zarówno nazwanych i nienazwanych gniazda, użyj <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> metody do ustawiania i pobierania informacji w miejscu. Są to metody statyczne, które zawsze działają w wątku, który jest aktualnie wykonywany ich danych.  
+ Zarówno nazwę i nienazwane miejsc, użyj <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> metody do ustawiania i pobierania informacji w miejscu. Są to metody statyczne, które zawsze działają w danych dla wątku, który aktualnie wykonuje je.  
   
- Nazwane miejsc może być wygodne, ponieważ można pobrać gniazda, gdy będziesz potrzebować przez przekazanie jej nazwę, aby <xref:System.Threading.Thread.GetNamedDataSlot%2A> metody, zamiast utrzymywanie odwołania do gniazda bez nazwy. Jednak jeśli inny składnik używa tej samej nazwy dla jego magazynu powiązane z wątkiem wątek wykonuje kod z składnika i innych składników, dwa składniki może spowodować uszkodzenie danych siebie nawzajem. (W tym scenariuszu założono, że oba te składniki są uruchomione w tej samej domenie aplikacji, a nie są zaprojektowane do udostępniania tych samych danych.)  
+ Gniazda o nazwie może być wygodne, ponieważ można pobrać gniazda, gdy będą potrzebne przez przekazanie jego nazwę na <xref:System.Threading.Thread.GetNamedDataSlot%2A> metody, zamiast zajmować się utrzymywaniem odwołanie do gniazda bez nazwy. Jednakże jeśli inny składnik używa tej samej nazwie do jej przechowywania względne wątkom wątek wykonuje kod zarówno składnik, jak i innych składników, dwa składniki może spowodować uszkodzenie danych siebie nawzajem. (W tym scenariuszu przyjęto założenie, że oba te składniki działają w tej samej domenie aplikacji, a nie są przeznaczone do udostępnienia tych samych danych.)  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ContextStaticAttribute>  
- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
- <xref:System.ThreadStaticAttribute>  
- <xref:System.Runtime.Remoting.Messaging.CallContext>  
- [Wątkowość](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.ContextStaticAttribute>  
+- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
+- <xref:System.ThreadStaticAttribute>  
+- <xref:System.Runtime.Remoting.Messaging.CallContext>  
+- [Wątkowość](../../../docs/standard/threading/index.md)

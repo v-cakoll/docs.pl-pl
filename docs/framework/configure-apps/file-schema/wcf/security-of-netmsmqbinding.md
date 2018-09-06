@@ -5,11 +5,11 @@ ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: c525344b18322cef05f64e46c75cdab7b271561a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540036"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884747"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;security&gt; w &lt;netMsmqBinding&gt;
 Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy włączono transportu lub zabezpieczeń protokołu SOAP, a jeśli tak, jakie poziomy tryb i ochrona uwierzytelniania są używane.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataRepeater, topic list
 ms.assetid: 68e0cf5e-e2cb-480a-80cc-d13eb6c9b3dd
 ms.openlocfilehash: 0d317310a7ae9369fab32acfe30a61d2c20c96c2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776265"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881537"
 ---
 # <a name="datarepeater-control-visual-studio"></a>DataRepeater Formant (Visual Studio)
 Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontroli jest kontenerem przewijany do formantów, które wyświetlają wielokrotnego danych, na przykład wiersze w tabeli bazy danych. Może służyć jako alternatywa <xref:System.Windows.Forms.DataGridView> kontroli, gdy będziesz potrzebować większa kontrola nad układ danych.  

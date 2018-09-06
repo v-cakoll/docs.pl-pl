@@ -19,56 +19,57 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82774ffaf03b7eaad6240a0361bede076053de0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886100"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardowe ciągi formatujące TimeSpan
-<a name="Top"></a> Standard <xref:System.TimeSpan> ciąg formatu używa specyfikator jeden format w celu zdefiniowania Reprezentacja tekstowa typu <xref:System.TimeSpan> wartość będącą wynikiem operacji formatowania. Interpretowany jako niestandardowego ciągu formatu, który zawiera więcej niż jeden znak odstępu, w tym <xref:System.TimeSpan> ciąg formatu. Aby uzyskać więcej informacji, zobacz [ciągi formatujące TimeSpan niestandardowe](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
+<a name="Top"></a> Standardowa <xref:System.TimeSpan> Ciąg formatujący używa pojedynczego specyfikatora formatu w celu zdefiniowania tekstowa reprezentacja <xref:System.TimeSpan> wartość będącą wynikiem operacji formatowania. Dowolny ciąg formatu, który zawiera więcej niż jeden znak, w tym znak odstępu, jest interpretowany jako niestandardowy <xref:System.TimeSpan> ciąg formatu. Aby uzyskać więcej informacji, zobacz [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
   
- Reprezentacji ciągu <xref:System.TimeSpan> wartości są produkowane przez wywołania przeciążenia metody <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> metody, a także jako metodami, które obsługuje złożone, takich jak <xref:System.String.Format%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [typy formatowania](../../../docs/standard/base-types/formatting-types.md) i [złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md). Poniższy przykład przedstawia użycie standardowe ciągi formatujące w operacji formatowania.  
+ Ciągów reprezentujących <xref:System.TimeSpan> wartości są tworzone przez wywołania przeciążenia <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> metody, jak również tak, jak za pomocą metod, które obsługują formatowanie złożone, takich jak <xref:System.String.Format%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [typy formatowania](../../../docs/standard/base-types/formatting-types.md) i [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md). Poniższy przykład ilustruje użycie ciągów formatu standardowego w operacjach formatowania.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
   
- Standardowe <xref:System.TimeSpan> ciągi formatujące są również używane przez <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> i <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> metody, aby zdefiniować wymagany format wejściowy ciągi do analizowania operacji. (Podczas analizowania konwertuje reprezentacja ciągu wartości do tej wartości.) Poniższy przykład przedstawia użycie standardowe ciągi formatujące podczas analizowania operacji.  
+ Standardowa <xref:System.TimeSpan> ciągi formatu są również używane przez <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> i <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> definiują wymagany format parametru metody wejściowe ciągi dla operacji analizowania. (Podczas analizowania konwertuje ciąg reprezentujący wartość tej wartości.) Poniższy przykład ilustruje użycie ciągów formatu standardowego w operacji analizowania.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a> W poniższej tabeli wymieniono specyfikatory formatu interwał czasu standardowego.  
+<a name="top"></a> Poniższa tabela zawiera listę specyfikatorów formatu interwału (czas standardowy).  
   
 |Specyfikator formatu|Nazwa|Opis|Przykłady|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|Stałe formatu (niezmiennego)|Specyfikator to nie jest zależne od kultury. Ma formę `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> ("T" i "T" ciągi formatujące utworzyć takie same wyniki).<br /><br /> Więcej informacji: [stałych ("c") specyfikator formatu](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|„g”|Ogólny format krótki|To specyfikator danych wyjściowych, co jest wymagane tylko. Jest zależne od kultury i ma postać `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Więcej informacji: [ogólne krótkich ("g") specyfikator formatu](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50, 599 (fr-FR)|  
-|„G”|Ogólny format długi|To specyfikator zawsze generuje dni i siedmiu cyfr ułamkowych. Jest zależne od kultury i ma postać `[-]d’:’hh’:’mm’:’ss.fffffff`.<br /><br /> Więcej informacji: [ogólne długi ("G") specyfikator formatu](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00, 0000000 (fr-FR)|  
+|"c"|Stałe formatu (niezmiennego)|Ten specyfikator nie jest uwzględniana kultura. Ma postać `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> ("T" i ciągi formatu "T" generuje te same wyniki).<br /><br /> Więcej informacji: [stałych ("c") specyfikator formatu](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|„g”|Ogólnym formacie krótkim|Dane wyjściowe tego specyfikatora, tylko potrzebne elementy. Jest uwzględniana kultura i ma postać `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Więcej informacji: [ogólne krótkiej ("g") specyfikator formatu](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50, 599 (fr-FR)|  
+|„G”|Ogólny format długi|Ten specyfikator zawsze generuje dni i siedmiu cyfr dziesiętnych. Jest uwzględniana kultura i ma postać `[-]d’:’hh’:’mm’:’ss.fffffff`.<br /><br /> Więcej informacji: [specyfikator formatu ogólnego długi ("G")](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00, 0000000 (fr-FR)|  
   
 <a name="Constant"></a>   
-## <a name="the-constant-c-format-specifier"></a>Specyfikator formatu ("c") w stałej  
- Specyfikator formatu "c" zwraca reprezentację ciągu <xref:System.TimeSpan> wartość w następującym formacie:  
+## <a name="the-constant-c-format-specifier"></a>Specyfikator stałej formatu ("c")  
+ Specyfikator formatu "c" zwraca reprezentację ciągu <xref:System.TimeSpan> wartości w następującej postaci:  
   
  [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
- Elementy w nawiasach kwadratowych ([ i ]) są opcjonalne. Kropka (.) i dwukropka (:) są symbolami literału. W poniższej tabeli opisano wszystkie pozostałe elementy.  
+ Elementy w nawiasach kwadratowych ([ i ]) są opcjonalne. Kropka (.) i dwukropek (:) to literał symbole. W poniższej tabeli opisano wszystkie pozostałe elementy.  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|*-*|Opcjonalne znaku minus, co oznacza ujemna interwału.|  
-|*d*|Opcjonalne liczbę dni, nie zera wiodące.|  
+|*-*|Opcjonalnym znakiem minus, co oznacza ujemny przedział czasu.|  
+|*d*|Opcjonalna liczba dni, bez zer wiodących.|  
 |*hh*|Liczba godzin, które zakresu od "00" do "23".|  
 |*mm*|Liczba minut, która zakresu od "00" do "59".|  
-|*ss*|Liczba sekund, które zakresu od "0" do "59".|  
-|*fffffff*|Opcjonalne ułamkowych części sekundy.  Wartość może należeć do zakresu od "0000001" (co znaczników lub co 10 milionowych sekundy) do "9999999" (mniej znaczników co drugi 9 999 999 milionowych-dziesięć sekund lub jeden).|  
+|*ss*|Liczba sekund, która zakresu od "0" do "59".|  
+|*fffffff*|Opcjonalną część ułamkową sekund.  Wartość do zakresu od "0000001" (jeden znaczników lub co 10 milionowych części sekundy) do "9999999" (mniej cykli co drugi 9 999 999 dziesięciomilionowych części sekundy lub jeden).|  
   
- W odróżnieniu od "g" i "G" specyfikatory formatu specyfikator formatu "c" nie jest zależne od kultury. Generuje reprezentację ciągu <xref:System.TimeSpan> wartość jest niezmienne i który jest wspólny dla wszystkich poprzednich wersji programu .NET Framework, przed [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Wartość domyślna to "c" <xref:System.TimeSpan> ciąg formatu; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> metody formatuje wartość interwału czasu za pomocą ciągu formatu "c".  
+ W odróżnieniu od "g" i specyfikatora formatu "G" specyfikator formatu "c" nie jest uwzględniana kultura. Generuje reprezentację ciągu <xref:System.TimeSpan> wartość jest niezmienny i które są wspólne dla wszystkich wcześniejszych wersji programu .NET Framework przed [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. "c" jest ustawieniem domyślnym <xref:System.TimeSpan> ciąg formatu; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> metoda formatuje wartość interwału czasu przy użyciu ciągu formatu "c".  
   
 > [!NOTE]
->  <xref:System.TimeSpan> obsługuje również "t" i "T" standardowe ciągi formatujące, które są takie same jak w zachowanie standardowego formatu ciągu "c".  
+>  <xref:System.TimeSpan> obsługuje również "t" i ciągi formatu standardowego "T", które są takie same jak w zachowaniu ciąg formatu standardowego "c".  
   
- Poniższy przykład tworzy dwa <xref:System.TimeSpan> obiektów, używa ich do wykonania operacji arytmetycznych i wyświetla wyniki. W każdym przypadku używa złożone formatowanie do wyświetlenia <xref:System.TimeSpan> wartość przy użyciu specyfikatora formatu "c".  
+ Poniższy przykład tworzy dwie <xref:System.TimeSpan> obiekty, są one używane do wykonywania operacji arytmetycznych i wyświetla wynik. W obu przypadkach używa formatowania złożonego do wyświetlenia <xref:System.TimeSpan> wartości za pomocą specyfikatora formatu "c".  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
@@ -76,26 +77,26 @@ ms.lasthandoff: 05/04/2018
  [Powrót do tabeli](#Top)  
   
 <a name="GeneralShort"></a>   
-## <a name="the-general-short-g-format-specifier"></a>Specyfikator formatu krótkiej ogólne ("g")  
- "g" <xref:System.TimeSpan> specyfikator formatu zwraca reprezentację ciągu <xref:System.TimeSpan> wartości w postaci compact, umieszczając w niej elementów, które są niezbędne. Ma następujący format:  
+## <a name="the-general-short-g-format-specifier"></a>Specyfikator formatu ogólnego krótkiej ("g")  
+ "g" <xref:System.TimeSpan> specyfikator formatu zwraca reprezentację ciągu <xref:System.TimeSpan> wartości w postaci compact, umieszczając elementy, które są niezbędne. Ma następującą postać:  
   
  [-] [*d*:]*h*:*mm*:*ss*[. *FFFFFFF*]  
   
- Elementy w nawiasach kwadratowych ([ i ]) są opcjonalne. Dwukropka (:) jest symbolem literału. W poniższej tabeli opisano wszystkie pozostałe elementy.  
+ Elementy w nawiasach kwadratowych ([ i ]) są opcjonalne. Dwukropek (:) jest symbolem literału. W poniższej tabeli opisano wszystkie pozostałe elementy.  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|*-*|Opcjonalne znaku minus, co oznacza ujemna interwału.|  
-|*d*|Opcjonalne liczbę dni, nie zera wiodące.|  
-|*h*|Liczba godzin, które w zakresie od "0" do "23" nie zera wiodące.|  
+|*-*|Opcjonalnym znakiem minus, co oznacza ujemny przedział czasu.|  
+|*d*|Opcjonalna liczba dni, bez zer wiodących.|  
+|*h*|Liczba godzin, które w zakresie od "0" do "23", bez zer wiodących.|  
 |*mm*|Liczba minut, która zakresu od "00" do "59"...|  
-|*ss*|Liczba sekund, które zakresu od "00" do "59"...|  
-|*.*|Separator ułamkowych części sekundy. Jest to równoważne określonej kultury <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> przesłania właściwość bez użytkowników.|  
-|*FFFFFFF*|Ułamkowych części sekundy. Jak wyświetlanych jest kilka cyfr, jak to możliwe.|  
+|*ss*|Liczba sekund, która zakresu od "00" do "59"...|  
+|*.*|Separator ułamków sekund. Jest to równoważne do określonej kultury <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> zastępuje właściwość bez użytkowników.|  
+|*FFFFFFF*|Ułamków sekund. Jak najmniejszej liczby cyfr, jak to możliwe, są wyświetlane.|  
   
- Podobnie jak specyfikatora formatu "G" jest zlokalizowana specyfikator formatu "g". Separator jego ułamkowych części sekundy opiera się na bieżącej kultury lub określonej kultury <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> właściwości.  
+ Specyfikator formatu "G", np. specyfikator formatu "g" jest zlokalizowana. Separator jego ułamków sekund jest oparty na bieżącej kultury lub określonej kultury <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> właściwości.  
   
- Poniższy przykład tworzy dwa <xref:System.TimeSpan> obiektów, używa ich do wykonania operacji arytmetycznych i wyświetla wyniki. W każdym przypadku używa złożone formatowanie do wyświetlenia <xref:System.TimeSpan> wartość przy użyciu specyfikatora formatu "g". Ponadto formatuje <xref:System.TimeSpan> wartość przy użyciu konwencji formatowania bieżącej kultury systemu (czyli, w tym przypadku Polski — Polska lub en US) i francuskim - kultury Francja (fr-FR).  
+ Poniższy przykład tworzy dwie <xref:System.TimeSpan> obiekty, są one używane do wykonywania operacji arytmetycznych i wyświetla wynik. W obu przypadkach używa formatowania złożonego do wyświetlenia <xref:System.TimeSpan> wartości za pomocą specyfikatora formatu "g". Ponadto, formatuje <xref:System.TimeSpan> wartość przy użyciu konwencji formatowania bieżącej kultury systemu (co w tym przypadku jest angielski - Stany Zjednoczone lub en US) i Francuski — Francja (fr-FR) kultury.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
@@ -103,33 +104,34 @@ ms.lasthandoff: 05/04/2018
  [Powrót do tabeli](#Top)  
   
 <a name="GeneralLong"></a>   
-## <a name="the-general-long-g-format-specifier"></a>Specyfikator formatu Ogólne Long ("G")  
- "G" <xref:System.TimeSpan> specyfikator formatu zwraca reprezentację ciągu <xref:System.TimeSpan> wartość długich fragmentów, który zawsze zawiera dni i ułamkowych części sekundy. Ciąg, który jest wynikiem specyfikator formatu standardowych "G" ma następującą postać:  
+## <a name="the-general-long-g-format-specifier"></a>Specyfikator formatu ogólnego długiej ("G")  
+ "G" <xref:System.TimeSpan> specyfikator formatu zwraca reprezentację ciągu <xref:System.TimeSpan> wartości w długich fragmentów, który zawsze zawiera dni i ułamków sekund. Ciąg, który jest wynikiem specyfikator formatu standardowego "G" ma następującą postać:  
   
  [-] *d*:*hh*:*mm*:*ss*. *fffffff*  
   
- Elementy w nawiasach kwadratowych ([ i ]) są opcjonalne. Dwukropka (:) jest symbolem literału. W poniższej tabeli opisano wszystkie pozostałe elementy.  
+ Elementy w nawiasach kwadratowych ([ i ]) są opcjonalne. Dwukropek (:) jest symbolem literału. W poniższej tabeli opisano wszystkie pozostałe elementy.  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|*-*|Opcjonalne znaku minus, co oznacza ujemna interwału.|  
-|*d*|Liczba dni nie zera wiodące.|  
+|*-*|Opcjonalnym znakiem minus, co oznacza ujemny przedział czasu.|  
+|*d*|Liczba dni, bez zer wiodących.|  
 |*hh*|Liczba godzin, które zakresu od "00" do "23".|  
 |*mm*|Liczba minut, która zakresu od "00" do "59".|  
-|*ss*|Liczba sekund, które zakresu od "00" do "59".|  
-|*.*|Separator ułamkowych części sekundy. Jest to równoważne określonej kultury <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> przesłania właściwość bez użytkowników.|  
-|*fffffff*|Ułamkowych części sekundy.|  
+|*ss*|Liczba sekund, która zakresu od "00" do "59".|  
+|*.*|Separator ułamków sekund. Jest to równoważne do określonej kultury <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> zastępuje właściwość bez użytkowników.|  
+|*fffffff*|Ułamków sekund.|  
   
- Podobnie jak specyfikatora formatu "G" jest zlokalizowana specyfikator formatu "g". Separator jego ułamkowych części sekundy opiera się na bieżącej kultury lub określonej kultury <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> właściwości.  
+ Specyfikator formatu "G", np. specyfikator formatu "g" jest zlokalizowana. Separator jego ułamków sekund jest oparty na bieżącej kultury lub określonej kultury <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> właściwości.  
   
- Poniższy przykład tworzy dwa <xref:System.TimeSpan> obiektów, używa ich do wykonania operacji arytmetycznych i wyświetla wyniki. W każdym przypadku używa złożone formatowanie do wyświetlenia <xref:System.TimeSpan> wartość przy użyciu specyfikatora formatu "G". Ponadto formatuje <xref:System.TimeSpan> wartość przy użyciu konwencji formatowania bieżącej kultury systemu (czyli, w tym przypadku Polski — Polska lub en US) i francuskim - kultury Francja (fr-FR).  
+ Poniższy przykład tworzy dwie <xref:System.TimeSpan> obiekty, są one używane do wykonywania operacji arytmetycznych i wyświetla wynik. W obu przypadkach używa formatowania złożonego do wyświetlenia <xref:System.TimeSpan> wartości za pomocą specyfikatora formatu "G". Ponadto, formatuje <xref:System.TimeSpan> wartość przy użyciu konwencji formatowania bieżącej kultury systemu (co w tym przypadku jest angielski - Stany Zjednoczone lub en US) i Francuski — Francja (fr-FR) kultury.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
  [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
   
  [Powrót do tabeli](#Top)  
   
-## <a name="see-also"></a>Zobacz też  
- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
- [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
+- [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)

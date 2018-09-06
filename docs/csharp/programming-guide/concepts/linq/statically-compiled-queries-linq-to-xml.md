@@ -3,11 +3,11 @@ title: Skompilowane statycznie zapytania (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
 ms.openlocfilehash: 0febb0c1ccae544e9767b472f2be8bd4eef7f4c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533539"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881960"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>Skompilowane statycznie zapytania (LINQ to XML) (C#)
 Jedną z najważniejszych wydajności korzyści programu LINQ to XML, w przeciwieństwie do <xref:System.Xml.XmlDocument>, jest statycznie są zapytania w LINQ to XML kompilowane, dlatego należy interpretować zapytania XPath w czasie wykonywania. Ta funkcja jest wbudowana w LINQ to XML, dzięki czemu nie trzeba wykonać dodatkowe kroki, aby z niej korzystać, ale warto zrozumieć różnicę, wybierając między te dwie technologie. W tym temacie opisano różnicę.  

@@ -1,51 +1,53 @@
 ---
 title: Literały (F#)
-description: 'Poznaj typy literału w języku programowania w języku F #.'
+description: 'Poznaj typy literałów w F # języka programowania.'
 ms.date: 05/16/2016
-ms.openlocfilehash: f28ca0ae7a0b092bbc039d23625b883faffd241c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564342"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035781"
 ---
 # <a name="literals"></a>Literały
 
 > [!NOTE]
-Interfejs API łącza odwołań w tym artykule spowoduje przejście do MSDN (na razie).
+Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN (na razie).
 
-Ten temat zawiera tabelę, która przedstawia sposób określić typ literału w języku F #.
+Ten temat zawiera tabelę, która pokazuje sposób określania rodzaju literału w F #.
 
-## <a name="literal-types"></a>Typy literału
-W poniższej tabeli przedstawiono typy literału w języku F #. Znaki, które reprezentują cyfr w formacie szesnastkowym nie jest rozróżniana; znaki, które identyfikują typ jest rozróżniana wielkość liter.
+## <a name="literal-types"></a>Typy literałów
 
-|Typ|Opis|Sufiks lub prefiksu|Przykłady|
+W poniższej tabeli przedstawiono typy literałów w F #. Znaki, które reprezentują cyfr w zapisie szesnastkowym nie jest rozróżniana wielkość liter; znaki, które identyfikują typ jest rozróżniana wielkość liter.
+
+|Typ|Opis|Prefiks lub sufiks|Przykłady|
 |----|-----------|----------------|--------|
 |sbyte|8-bitową liczbę całkowitą ze znakiem|t|`86y`<br /><br />`0b00000101y`|
-|byte|bez znaku 8-bitową liczbą naturalnych|UY|`86uy`<br /><br />`0b00000101uy`|
+|byte|niepodpisane 8-bitowa liczba naturalna|UY|`86uy`<br /><br />`0b00000101uy`|
 |Int16|16-bitową liczbę całkowitą ze znakiem|s|`86s`|
-|UInt16|niepodpisane 16-bitową liczbę naturalnych|US|`86us`|
-|int<br /><br />int32|32-bitowa liczba całkowita|l lub Brak|`86`<br /><br />`86l`|
-|uint<br /><br />uint32|niepodpisane 32-bitową liczbą naturalnych|u lub ul|`86u`<br /><br />`86ul`|
-|unativeint —|wskaźnik natywny jako wartość bez znaku naturalnych|Wyrejestruj|`0x00002D3Fun`|
-|int64|64-bitowa liczba całkowita|L|`86L`|
-|uint64|Liczba naturalnego 64-bitowa bez znaku|UL|`86UL`|
+|UInt16|Liczba naturalna bez znaku 16-bitowych|USA|`86us`|
+|int<br /><br />int32|32-bitowa liczba całkowita ze znakiem|l lub Brak|`86`<br /><br />`86l`|
+|uint<br /><br />uint32|niepodpisane 32-bitowa liczba naturalna|u lub ul|`86u`<br /><br />`86ul`|
+|unativeint —|wskaźnik natywny jako liczba naturalna bez znaku|NZ|`0x00002D3Fun`|
+|int64|64-bitowa liczba całkowita ze znakiem|L|`86L`|
+|uint64|niepodpisane 64-bitowa liczba naturalna|UL|`86UL`|
 |pojedynczy, float32|32-bitowych liczb zmiennoprzecinkowych|F lub f|`4.14F` lub `4.14f`|
 |||LF|`0x00000000lf`|
 |float; podwójne|64-bitowych liczb zmiennoprzecinkowych|brak|`4.14` lub `2.3E+32` lub `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
-|bigint|innymi reprezentacja 64-bitowa liczba całkowita|I|`9999999999999999999999999999I`|
-|decimal|liczbę ułamkową reprezentowane jako punkt stałym lub Liczba wymierna|M lub m|`0.7833M` lub `0.7833m`|
+|bigint|Liczba całkowita nie ogranicza się do reprezentacja 64-bitowa|I|`9999999999999999999999999999I`|
+|decimal|liczba ułamkowa reprezentowana jako stały punktu lub Liczba wymierna|M lub m|`0.7833M` lub `0.7833m`|
 |Char|znak Unicode|brak|`'a'`|
-|String|Ciąg w formacie Unicode|brak|`"text\n"`<br /><br />lub<br /><br />`@"c:\filename"`<br /><br />lub<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />lub<br /><br />`"string1" + "string2"`<br /><br />Zobacz też [ciągów](Strings.md).|
-|byte|Znaków ASCII|B|`'a'B`|
+|String|Ciąg Unicode|brak|`"text\n"`<br /><br />lub<br /><br />`@"c:\filename"`<br /><br />lub<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />lub<br /><br />`"string1" + "string2"`<br /><br />Zobacz też [ciągi](Strings.md).|
+|byte|Znak ASCII|B|`'a'B`|
 |byte[]|Ciąg ASCII|B|`"text"B`|
-|String lub byte]|ciągu dosłownego wyrażenia|@ prefiksu|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
+|Ciąg lub bajt]|Ciąg Verbatim|@ prefiksu|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Uwagi
-Ciągów Unicode może zawierać jawnych kodowania, którą można określić za pomocą `\u` następuje szesnastkowy kod 16-bitowy lub kodowania UTF-32, którą można określić za pomocą `\U` następuje 32-bitowy kod szesnastkowe, który reprezentuje Unicode Para zastępcza.
 
-Począwszy od F # 3.1, można użyć `+` logowanie się łączenie literałów ciągu. Można również użyć operatora testu koniunkcji lub (`|||`) operatora łączenia wyliczenia flag. Na przykład następujący kod jest dozwolony w F # 3.1:
+Ciągi Unicode mogą zawierać jawne kodowania, które można określić za pomocą `\u` następuje 16-bitowych kodów szesnastkowych lub kodowania UTF-32, które można określić za pomocą `\U` następuje kod szesnastkowy 32-bitowy, który reprezentuje Unicode Para zastępcza.
+
+Jak dla F # 3.1 można użyć `+` Zaloguj się połączyć literały ciągów znaków. Możesz również użyć operatora testu koniunkcji lub (`|||`) operator, aby łączyć flagi wyliczeń. Na przykład poniższy kod jest niedozwolony w F # 3.1:
 
 ```fsharp
 [<Literal>]
@@ -61,17 +63,17 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-Korzystanie z innych operatory bitowe nie jest dozwolona.
+Nie jest dozwolone używanie innych operatorów bitowych.
 
+## <a name="named-literals"></a>Nazwane literały
 
-## <a name="named-literals"></a>Literały nazwanego
-Wartości, które mają być stałymi może być oznaczony przez [literału](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) atrybutu. Ten atrybut ma wpływ powoduje wartość ma zostać skompilowana jako stała.
+Wartości, które mają być stałymi mogą być oznaczone [literału](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) atrybutu. Ten atrybut jest w stanie sprawić, że wartość zostanie skompilowana jako stała.
 
-W wyrażeniach dopasowywania do wzorca identyfikatory, które zaczynają się od małych liter zawsze są traktowane jako zmienne, które mają być powiązane, a nie jako literały, dlatego należy zwykle należy używać początkowe wersaliki podczas definiowania literały.
+W wyrażeniach dopasowania do wzorca identyfikatory, które zaczynają się od małych liter są zawsze traktowane jako zmienne do powiązania, a nie jako literały, więc należy generalnie używać początkowych wielkich liter podczas definiowania literałów.
 
 ## <a name="integers-in-other-bases"></a>Liczby całkowite w innych bazach
 
-Liczb całkowitych ze znakiem 32-bitowych można również określić za pomocą szesnastkowych, ósemkowe lub binarne `0x`, `0o` lub `0b` odpowiednio prefiksu.
+Liczby całkowite ze znakiem 32-bitowych można również określić szesnastkową, ósemkowej lub binarny przy użyciu `0x`, `0o` lub `0b` odpowiednio prefiksu.
 
 ```fsharp
 let Numbers = (0x9F, 0o77, 0b1010)
@@ -80,7 +82,7 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Podkreślenia w literałach numerycznych
 
-Począwszy od 4.1 F # można oddzielić cyfr znakiem podkreślenia (`_`).
+Począwszy od F # 4.1, można oddzielić cyfr od znaku podkreślenia (`_`).
 
 ```fsharp
 let DeadBeef = 0xDEAD_BEEF
@@ -90,6 +92,6 @@ let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 let ExampleSSN = 123_456_7890
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Core.literalattribute — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.literalattribute-class-%5bfsharp%5d)
+- [Core.literalattribute — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.literalattribute-class-%5bfsharp%5d)

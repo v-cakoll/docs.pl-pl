@@ -1,26 +1,26 @@
 ---
-title: Mapowanie typu danych XML na typy CLR
+title: Mapowanie typów danych XML na typy CLR
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06876b91c72b939768d480e40631a8e85170bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568550"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037925"
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a>Mapowanie typu danych XML na typy CLR
-W poniższej tabeli opisano domyślne mapowanie między typami danych XML i języka typowych środowiska uruchomieniowego (języka wspólnego CLR).  
+# <a name="mapping-xml-data-types-to-clr-types"></a>Mapowanie typów danych XML na typy CLR
+W poniższej tabeli opisano domyślne mapowanie między typami danych XML i popularnych typów środowiska uruchomieniowego (języka wspólnego CLR) języka.  
   
 ## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>W poniższej tabeli opisano domyślne mapowania typu danych XML do typu CLR.  
   
 > [!NOTE]
 >  `xs` i `xdt` prefiksy są mapowane na http://www.w3.org/2001/XMLSchema i http://www.w3.org/2003/05/xpath-datatypes URI przestrzeni nazw odpowiednio.  
   
-|Typ XML|Typ CLR|  
+|Typ XML o NAZWIE|Typ CLR|  
 |--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
@@ -71,13 +71,14 @@ W poniższej tabeli opisano domyślne mapowanie między typami danych XML i jęz
 |`xdt:untypedAtomic`|<xref:System.String>|  
 |`xdt:anyAtomicType`|<xref:System.Object>|  
 |`xs:anySimpleType`|<xref:System.String>|  
-|Węzeł dokumentu|<xref:System.Xml.XPath.XPathNavigator>|  
+|Węzłem dokumentu|<xref:System.Xml.XPath.XPathNavigator>|  
 |Węzeł elementu|<xref:System.Xml.XPath.XPathNavigator>|  
 |Węzeł atrybutu|<xref:System.Xml.XPath.XPathNavigator>|  
-|Namespace węzła|<xref:System.Xml.XPath.XPathNavigator>|  
+|Węzeł Namespace|<xref:System.Xml.XPath.XPathNavigator>|  
 |Węzeł tekstowy|<xref:System.Xml.XPath.XPathNavigator>|  
 |Węzeł komentarzy|<xref:System.Xml.XPath.XPathNavigator>|  
-|Węzeł instrukcja przetwarzania|<xref:System.Xml.XPath.XPathNavigator>|  
+|Węzeł przetwarzania instrukcji|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a>Zobacz też  
- [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

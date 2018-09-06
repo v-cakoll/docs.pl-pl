@@ -11,48 +11,48 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61f520b7f4d1827424466a5cc3537041ae37a3bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a61a1d01984eeefb2f1f09774374dc29a774d3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583243"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039228"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Porady: Pisanie i odbieranie wiadomości w bloku przepływu danych
-Ten dokument zawiera opis sposobu przepływu danych tpl umożliwia pisanie i odbieranie wiadomości w bloku przepływu danych. Biblioteka przepływu danych tpl udostępnia metody synchroniczne i asynchroniczne do zapisywania wiadomości i odczytywania wiadomości w bloku przepływu danych. Ten dokument używa <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> klasy. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Klasy buforuje wiadomości i działa jako źródła komunikatów i jako obiektu docelowego komunikatu.  
+W tym dokumencie opisano, jak przy użyciu biblioteki przepływu danych TPL pisanie i odbieranie wiadomości w bloku przepływu danych. Biblioteka przepływu danych TPL zapewnia synchroniczne i asynchroniczne metody zapisywania wiadomości i odczytywać wiadomości w bloku przepływu danych. Ten dokument używa <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> klasy. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Klasy buforuje wiadomości i działa jako źródła komunikatów i jako obiektu docelowego komunikatu.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
-## <a name="writing-to-and-reading-from-a-dataflow-block-synchronously"></a>Zapisywania i odczytywania synchronicznie z bloku przepływu danych  
- W poniższym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> metodę, aby zapisać <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> bloku przepływu danych i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> metody do odczytu z tego samego obiektu.  
+## <a name="writing-to-and-reading-from-a-dataflow-block-synchronously"></a>Zapisywanie i odczytywanie z bloku przepływu danych synchronicznie  
+ W poniższym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> metodę, aby zapisać <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> bloku przepływu danych i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> metodę w celu odczytania z tego samego obiektu.  
   
  [!code-csharp[TPLDataflow_ReadWrite#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#2)]
  [!code-vb[TPLDataflow_ReadWrite#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#2)]  
   
- Można również użyć <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> metody do odczytu z bloku przepływu danych, jak pokazano w poniższym przykładzie. <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> — Metoda nie blokuje bieżącego wątku co jest przydatne w przypadku czasami sondować danych.  
+ Można również użyć <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> metodę w celu odczytania z bloku przepływu danych, jak pokazano w poniższym przykładzie. <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> Metoda blokują bieżący wątek i jest przydatne w przypadku sporadycznie sondować danych.  
   
  [!code-csharp[TPLDataflow_ReadWrite#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#3)]
  [!code-vb[TPLDataflow_ReadWrite#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#3)]  
   
- Ponieważ <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> metody działa synchronicznie, <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> obiektu w poprzednich przykładach odbiera wszystkie dane, zanim drugiej pętli odczytuje dane. Poniższy przykład rozszerza pierwszym przykładzie przy użyciu <xref:System.Threading.Tasks.Parallel.Invoke%2A> do odczytu i zapisu bloku komunikatów jednocześnie. Ponieważ <xref:System.Threading.Tasks.Parallel.Invoke%2A> wykonuje akcje równocześnie, wartości nie są zapisywane w <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> obiektu w dowolnej kolejności.  
+ Ponieważ <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> metoda działa synchronicznie, <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> obiektu w poprzednich przykładach odbiera wszystkie dane, zanim drugi pętli odczytuje dane. Poniższy przykład rozszerza pierwszy przykład za pomocą <xref:System.Threading.Tasks.Parallel.Invoke%2A> do odczytu i zapisu do bloku wiadomości jednocześnie. Ponieważ <xref:System.Threading.Tasks.Parallel.Invoke%2A> wykonuje akcje równocześnie, wartości nie są zapisywane w <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> obiektu w dowolnej kolejności.  
   
  [!code-csharp[TPLDataflow_ReadWrite#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#4)]
  [!code-vb[TPLDataflow_ReadWrite#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#4)]  
   
-## <a name="writing-to-and-reading-from-a-dataflow-block-asynchronously"></a>Zapisywanie w i asynchronicznego odczytywania z bloku przepływu danych  
- W poniższym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> metody do asynchronicznego zapisu <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> obiektu i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> metodę, aby asynchronicznie odczytywane z tego samego obiektu. W tym przykładzie użyto [async](~/docs/csharp/language-reference/keywords/async.md) i [await](~/docs/csharp/language-reference/keywords/await.md) operatory ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) i [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) w języku Visual Basic) do asynchronicznego wysyłania danych do odczytu dane z blok docelowy. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> Metoda jest przydatna, gdy należy włączyć bloku przepływu danych odłożyć wiadomości. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> Metody jest przydatne, gdy mają działanie w danych po udostępnieniu tych danych. Aby uzyskać więcej informacji na temat jak Propagacja wiadomości między bloki komunikatów, zobacz sekcję przekazywanie komunikatów w [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
+## <a name="writing-to-and-reading-from-a-dataflow-block-asynchronously"></a>Zapisywanie i asynchronicznego odczytywania z bloku przepływu danych  
+ W poniższym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> metody do asynchronicznego zapisu <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> obiektu i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> metodę do asynchronicznego odczytania z tego samego obiektu. W tym przykładzie użyto [async](~/docs/csharp/language-reference/keywords/async.md) i [await](~/docs/csharp/language-reference/keywords/await.md) operatorów ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) i [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) w języku Visual Basic) do asynchronicznego wysyłania danych do odczytu pobiera dane z blok docelowy. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> Metoda jest przydatna, gdy należy włączyć bloku przepływu danych można odroczyć wiadomości. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> Metoda jest przydatna, gdy użytkownik chce działać na danych, po udostępnieniu tych danych. Aby uzyskać więcej informacji na temat sposobu wiadomości propagowane wśród bloki komunikatów, zobacz sekcję przekazywanie komunikatów w [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
   
  [!code-csharp[TPLDataflow_ReadWrite#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#5)]
  [!code-vb[TPLDataflow_ReadWrite#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#5)]  
   
-## <a name="a-complete-example"></a>Pełny przykład  
- Poniższy przykład przedstawia kompletny kod dla tego dokumentu.  
+## <a name="a-complete-example"></a>Kompletny przykład  
+ Poniższy przykład pokazuje kompletny kod dla tego dokumentu.  
   
  [!code-csharp[TPLDataflow_ReadWrite#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#1)]
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowReadWrite.cs` (`DataflowReadWrite.vb` w języku Visual Basic), a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
+ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowReadWrite.cs` (`DataflowReadWrite.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.  
   
  Visual C#  
   
@@ -63,7 +63,8 @@ Ten dokument zawiera opis sposobu przepływu danych tpl umożliwia pisanie i odb
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
   
 ## <a name="next-steps"></a>Następne kroki  
- W tym przykładzie pokazano, jak można odczytywać i zapisywać bezpośrednio do bloku komunikatów. Możesz również nawiązać bloków przepływu danych formularza *potoki*, liniowego sekwencji bloków przepływu danych, które są lub *sieci*, wykresy bloków przepływu danych, które są. W potoku lub w sieci źródeł asynchronicznie propagację danych do obiektów docelowych, wraz ze wzrostem dostępności danych. Na przykład, który tworzy potoku przepływu danych podstawowych, zobacz [wskazówki: tworzenie potoku przepływu danych](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Aby uzyskać przykład tworzenia bardziej złożonych sieci przepływu danych, zobacz [wskazówki: Korzystanie z przepływu danych w aplikacji formularzy systemu Windows](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Ten przykład pokazuje, jak odczytywanie i zapisywanie do bloku wiadomości bezpośrednio. Bloków przepływu danych można też połączyć do formularza *potoki*, służą do liniowej sekwencje bloków przepływu danych lub *sieci*, które są wykresy bloków przepływu danych. W potoku lub w sieci źródeł asynchronicznie propagowanie danych do celów danych staje się dostępna. Na przykład, który tworzy potok podstawowe przepływu danych, zobacz [wskazówki: tworzenie potoku przepływu danych](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Aby uzyskać przykład tworzenia bardziej złożonych sieci przepływu danych, zobacz [wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

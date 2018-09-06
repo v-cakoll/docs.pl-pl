@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 326fce55b13217bd08e58bf13a423fc9b6ffcbff
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1fe7edffd53023cba6dac1454e620d6e0d7e9513
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514505"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891736"
 ---
 # <a name="parallel-linq-plinq"></a>Równoległe LINQ (PLINQ)
 Równoległe LINQ (PLINQ) to implementacja przetwarzania równoległego LINQ do obiektów. Pełny zestaw LINQ standardowych operatorów zapytań w PLINQ są implementowane jako metody rozszerzenia dla <xref:System.Linq> przestrzeni nazw i ma dodatkowe operatory operacji równoległych. PLINQ łączy prostotę i czytelności składni LINQ, korzystając z możliwości programowania równoległego. Podobnie jak kod przeznaczonego Biblioteka zadań równoległych, zapytania PLINQ skalować w stopień współbieżności oparta na funkcjach komputera-hosta.  
@@ -50,7 +50,8 @@ Równoległe LINQ (PLINQ) to implementacja przetwarzania równoległego LINQ do 
   
  [Próbka danych PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md)  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Linq.ParallelEnumerable>  
- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
+- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

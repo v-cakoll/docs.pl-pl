@@ -1,5 +1,5 @@
 ---
-title: Dane wejściowe XmlDocument XslTransform
+title: Dane wejściowe obiektu XmlDocument klasy xsltransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,24 +8,25 @@ dev_langs:
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3179425597173e09a8c1ef1fbdfc582f8f4538e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e83cf82aee57b1f40f695700d8d0b38c12e0ac39
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038851"
 ---
-# <a name="xmldocument-input-to-xsltransform"></a>Dane wejściowe XmlDocument XslTransform
-<xref:System.Xml.XmlDocument> Klasa udostępnia funkcje edycji dokumentu XML. Jeśli XML musi być edytowane lub zmodyfikować przed wysłaniem do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody załadować pliku XML do <xref:System.Xml.XmlDocument>, edytowania i wysyłać je do <xref:System.Xml.Xsl.XslTransform>.  
+# <a name="xmldocument-input-to-xsltransform"></a>Dane wejściowe obiektu XmlDocument klasy xsltransform
+<xref:System.Xml.XmlDocument> Klasa oferuje funkcje edycji dokumentu XML. Jeśli plik XML musi edytowanie lub zmodyfikowany przed wysłaniem do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody ładowanie kodu XML do <xref:System.Xml.XmlDocument>, edytować i wyślij go do <xref:System.Xml.Xsl.XslTransform>.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Może wykonywać rozszerzalny język arkusza stylów dla transformacji przekształcenia XSLT () przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [za pomocą klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [migracji z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+>  <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
   
- <xref:System.Xml.XmlDocument> Implementuje <xref:System.Xml.XPath.IXPathNavigable> interfejsu, więc dokumentu mogą zostać przekazane do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody po edycji.  
+ <xref:System.Xml.XmlDocument> Implementuje <xref:System.Xml.XPath.IXPathNavigable> interfejsu, dokument może być przekazywany do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda po zakończeniu edycji.  
   
- Z powodu możliwości edycji <xref:System.Xml.XmlDocument>za pomocą <xref:System.Xml.XmlDocument> klasy jako dane wejściowe do przekształcenia jest mniejsza niż przy użyciu <xref:System.Xml.XPath.XPathDocument> rozszerzalnego języka arkusza stylów dla przekształceń przekształcenia XSLT () jako <xref:System.Xml.XPath.XPathDocument> jest zoptymalizowana pod kątem zapytań XML Path Language (XPath) z powodu wewnętrznego magazynu.  
+ Ze względu na możliwość edytowania <xref:System.Xml.XmlDocument>przy użyciu <xref:System.Xml.XmlDocument> klasy jako dane wejściowe do transformacji jest mniejsza niż przy użyciu <xref:System.Xml.XPath.XPathDocument> dla rozszerzalny język arkusza stylów w mapowaniach przekształcenia (XSLT) jako <xref:System.Xml.XPath.XPathDocument> jest zoptymalizowane pod kątem zapytań języka ścieżki XML (XPath) z powodu pamięci wewnętrznej.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia przykład sposobu <xref:System.Xml.XmlDocument> mogą być dostarczane do <xref:System.Xml.Xsl.XslTransform>, przy czym dane wyjściowe, wysyłane do <xref:System.Xml.XmlReader>.  
+ Poniższy kod przedstawia przykład sposobu <xref:System.Xml.XmlDocument> mogą być dostarczane do <xref:System.Xml.Xsl.XslTransform>, z danymi wyjściowymi wysyłane do <xref:System.Xml.XmlReader>.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -46,11 +47,12 @@ XmlReader rdr = trans.Transform(doc, null, null);
 while (rdr.Read()) {}  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.XmlDocument>  
- [Przekształcenia XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
- [Klasa XPathNavigator w przekształceniach](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
- [Klasa XPathNodeIterator w przekształceniach](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Dane wejściowe obiektu XPathDocument klasy XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Dane wejściowe obiektu XmlDataDocument klasy XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Xml.XmlDocument>  
+- [Przekształcenia XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
+- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+- [Klasa XPathNavigator w przekształceniach](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+- [Klasa XPathNodeIterator w przekształceniach](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+- [Dane wejściowe obiektu XPathDocument klasy XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+- [Dane wejściowe obiektu XmlDataDocument klasy XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)

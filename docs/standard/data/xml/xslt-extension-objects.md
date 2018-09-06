@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f958af5859804cdeb382adab2f3772c42ac5b16
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.openlocfilehash: 40a530190ee4b19d72399ab877cf26bad1090b9f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724373"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037951"
 ---
 # <a name="xslt-extension-objects"></a>Obiekty rozszerzeń XSLT
 Obiekty rozszerzeń są używane do rozszerzania funkcji arkuszy stylów. Obiekty rozszerzeń są obsługiwane przez <xref:System.Xml.Xsl.XsltArgumentList> klasy.  
@@ -38,6 +38,7 @@ Obiekty rozszerzeń są używane do rozszerzania funkcji arkuszy stylów. Obiekt
   
 3.  Przekaż <xref:System.Xml.Xsl.XsltArgumentList> obiekt <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Zagadnienia dotyczące bezpieczeństwa danych XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Zagadnienia dotyczące bezpieczeństwa danych XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)

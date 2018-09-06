@@ -3,13 +3,13 @@ title: Wdrożenie aplikacji programu .NET core
 description: Wdrażanie aplikacji .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562009"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891314"
 ---
 # <a name="net-core-application-deployment"></a>Wdrażanie aplikacji .NET core
 
@@ -41,7 +41,9 @@ Dostępne są również kilka wady:
 
 ## <a name="self-contained-deployments-scd"></a>Niezależne wdrożenia (— SCD)
 
-Niezależne wdrożenia możesz wdrożyć aplikację i wszystkie wymagane zależności innych firm, wraz z wersją programu .NET Core, używanym do tworzenia aplikacji. Tworzenie — SCD nie obejmuje [natywnych zależności platformy .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) na różnych platformach, więc te musi występować przed uruchomieniem aplikacji. Aby uzyskać więcej informacji, wiązanie wersji w czasie wykonywania, zobacz artykuł w [wiązanie wersji w programie .NET Core](../versions/selection.md)
+Niezależne wdrożenia możesz wdrożyć aplikację i wszystkie wymagane zależności innych firm, wraz z wersją programu .NET Core, używanym do tworzenia aplikacji. Tworzenie — SCD nie obejmuje [natywnych zależności platformy .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) na różnych platformach, więc te musi występować przed uruchomieniem aplikacji. Aby uzyskać więcej informacji, wiązanie wersji w czasie wykonywania, zobacz artykuł w [wiązanie wersji w programie .NET Core](../versions/selection.md).
+
+Począwszy od zestawu SDK NET Core 2.1 (wersja 2.1.300), .NET Core obsługuje *poprawki wersji przenoszenia do przodu*. Podczas tworzenia wdrożenia niezależna narzędzia .NET Core automatycznie uwzględnia najnowszych obsługiwanych środowiska uruchomieniowego wersji platformy .NET Core, Twoje cele aplikacji. (Najnowsza wersja obsługiwanych środowiska uruchomieniowego w tym poprawki zabezpieczeń i inne poprawki.) Obsługiwane środowiska uruchomieniowego musi być obecny w systemie kompilacji; jest ona pobierana automatycznie z repozytorium NuGet.org. Aby uzyskać więcej informacji, w tym instrukcje dotyczące sposobu zrezygnować z poprawki wersji przenoszenia do przodu, zobacz [niezależna wdrażania środowiska uruchomieniowego przenoszenia do przodu](runtime-patch-selection.md).
 
 Wdrożenia z stacje i — SCD za pomocą hosta oddzielnych plików wykonywalnych, dzięki czemu możesz zarejestrować wykonywalnego hosta — SCD do podpisu wydawcy.
 
@@ -58,6 +60,8 @@ Ponadto wprowadzono szereg wady:
 - Ponieważ platformy .NET Core jest uwzględniony w pakiecie wdrożenia, należy wybrać platformy docelowe, dla których można tworzyć pakiety wdrożeniowe z wyprzedzeniem.
 
 - Rozmiar pakietu wdrażania jest stosunkowo dużych, ponieważ należy dołączyć platformy .NET Core oraz aplikacji i jej zależności innych firm.
+
+  Począwszy od programu .NET Core 2.0, można zmniejszyć rozmiaru wdrożenia przez około 28 MB w systemach Linux przy użyciu platformy .NET Core [ *globalizacji niezmiennej tryb*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Zazwyczaj, .NET Core w systemie Linux opiera się na [bibliotek ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) obsługi globalizacji. W trybie niezmiennej bibliotek nie są dołączone do wdrożenia i wszystkich kultur zachowują się jak [kultury invariannt](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Wdrażanie wielu samodzielne aplikacje platformy .NET Core w systemie może zużywać znacznej ilości miejsca na dysku, od każdej aplikacji duplikatów plików .NET Core.
 

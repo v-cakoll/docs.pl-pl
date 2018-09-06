@@ -8,29 +8,30 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1635276465dd58028c8a5e4b7e69a307664a4c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580760"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031698"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Tworzenie schematu kryptograficznego
-Do tworzenia różnych programów do szyfrowania i odszyfrowywania danych można łączyć kryptograficznych składników platformy .NET.  
+Można łączyć kryptograficznych składników .NET Framework do tworzenia różnych systemów do szyfrowania i odszyfrowywania danych.  
   
- Proste schematu kryptograficznego do szyfrowania i odszyfrowywania danych może określać następujące czynności:  
+ Prosty schemat szyfrowania szyfrowanie i odszyfrowywanie danych może określić następujące czynności:  
   
-1.  Każda strona generuje pary kluczy publiczny/prywatny.  
+1.  Każda ze stron generowana jest para kluczy publiczny/prywatny.  
   
 2.  Strony wymiany kluczy publicznych.  
   
-3.  Każda strona generuje klucz tajny dla celów szyfrowania TripleDES, na przykład i szyfruje klucz nowo utworzony przy użyciu klucza publicznego drugiego.  
+3.  Każda ze stron generuje klucz tajny dla celów szyfrowania TripleDES, na przykład i szyfruje nowo utworzony klucz przy użyciu klucza publicznego drugiej strony.  
   
-4.  Strony wysyła dane do innych i łączy klucz tajny drugiego z własnej, w szczególności kolejność, aby utworzyć nowy klucz tajny.  
+4.  Każda strona wysyła dane do drugiego i łączy klucz tajny drugiej strony z własną, w szczególności kolejności, aby utworzyć nowy klucz tajny.  
   
-5.  Strony inicjuje konwersację za pomocą szyfrowania symetrycznego.  
+5.  Strony następnie zainicjuj konwersacji za pomocą szyfrowania symetrycznego.  
   
- Tworzenie schematu kryptograficznego manipulacji nie jest prosta. Aby uzyskać więcej informacji na temat używania kryptografii, zobacz temat kryptografii w dokumentacji zestawu SDK platformy w http://msdn.microsoft.com/library.  
+ Tworzenie schematu kryptograficznego nie jest prostym zadaniem. Aby uzyskać więcej informacji na temat korzystania z szyfrowania, zobacz temat kryptografii w dokumentacji platformy SDK pod adresem http://msdn.microsoft.com/library.  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)

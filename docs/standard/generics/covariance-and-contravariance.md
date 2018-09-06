@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732264"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038747"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kowariancja i kontrawariancja w typach ogólnych
 <a name="top"></a> Kowariancja i kontrawariancja to terminy odwołujące się do możliwość używania typu bardziej pochodnego (bardziej szczegółowe) lub mniej pochodnego typu (specyficzne dla języka less) niż oryginalnie określony. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. W przykładach założono, klasa bazowa o nazwie `Base` i Klasa pochodna o nazwie `Derived`.  
@@ -188,7 +188,8 @@ ms.locfileid: "43732264"
 |<xref:System.Linq.IOrderedQueryable%601>|Tak||  
 |<xref:System.Linq.IQueryable%601>|Tak||  
   
-## <a name="see-also"></a>Zobacz też  
- [Kowariancja i Kontrawariancja (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
- [Kowariancja i Kontrawariancja (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [Wariancje w delegatach](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+## <a name="see-also"></a>Zobacz także
+
+- [Kowariancja i Kontrawariancja (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
+- [Kowariancja i Kontrawariancja (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [Wariancje w delegatach](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

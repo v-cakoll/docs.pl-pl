@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a2dbde5df0f475b0bd7da4b022f11b82b257f40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572869"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039215"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Porady: obsługa wielu zdarzeń przy użyciu właściwości zdarzenia
 Aby użyć właściwości zdarzeń należy zdefiniować właściwości zdarzenia w klasie, która wywołuje zdarzenia, a następnie ustawić delegatów dla właściwości zdarzenia w klasach, które obsługują zdarzenia. Aby zaimplementować w klasie wiele właściwości zdarzeń, klasa musi wewnętrznie przechowywać i zachowywać zdefiniowanego delegata dla każdego zdarzenia. Typowym podejściem jest implementacja kolekcji delegata, która jest indeksowana przy użyciu klucza zdarzenia.  
@@ -50,8 +50,9 @@ Aby użyć właściwości zdarzeń należy zdefiniować właściwości zdarzenia
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
- [Zdarzenia](../../../docs/standard/events/index.md)  
- <xref:System.Web.UI.Control.Events%2A>  
- [Instrukcje: deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
+- [Zdarzenia](../../../docs/standard/events/index.md)  
+- <xref:System.Web.UI.Control.Events%2A>  
+- [Instrukcje: deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

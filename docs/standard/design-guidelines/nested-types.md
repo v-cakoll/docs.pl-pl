@@ -12,40 +12,41 @@ helpviewer_keywords:
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c0eca851746899654636d36dce679acffc07ef0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2593b85dd4747a3fbe365994c3e5d9beae3e3406
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573662"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891543"
 ---
 # <a name="nested-types"></a>Zagnieżdżone typy
-Zagnieżdżony typ jest typ zdefiniowany w zakresie innego typu, która jest wywoływana typu otaczającego. Zagnieżdżony typ ma dostęp do wszystkich elementów członkowskich jego typ otaczający. Na przykład ma dostęp do prywatnego pól zdefiniowane w typie otaczającym i chronione pola zdefiniowane w wszystkich nadrzędnych typu otaczającego.  
+Typ zagnieżdżony jest typ zdefiniowany w zakresie innego typu, która jest wywoływana typ otaczający. Zagnieżdżony typ ma dostęp do wszystkich elementów członkowskich w jego typie otaczającym. Na przykład ma dostęp do prywatnych pól zdefiniowanych w typie otaczającym i chronione pól zdefiniowanych w wszystkich nadrzędnych typu otaczającego.  
   
- Ogólnie rzecz biorąc zagnieżdżone typy powinny być używane rzadko. Istnieje kilka powodów. Niektórzy deweloperzy nie są w pełni zapoznać się z pojęciem. Te deweloperzy mogą na przykład wystąpić problemy z składni deklarowania zmiennych w zagnieżdżonych typów. Zagnieżdżone typy są również bardzo ściśle powiązane z ich typu otaczającego i jako takie nie są odpowiednie jako typów ogólnego przeznaczenia.  
+ Ogólnie rzecz biorąc zagnieżdżone typy powinny być używane rzadko. Istnieje kilka przyczyn. Niektórzy deweloperzy nie są w pełni zapoznać się z pojęciem. Tych deweloperów na przykład, Niewykluczone, problemy ze składnią zadeklarowania zmiennych typów zagnieżdżonych. Zagnieżdżone typy są również bardzo ściśle powiązane z ich typ otaczający i jako takie nie są odpowiednie, jako typów ogólnego przeznaczenia.  
   
- Zagnieżdżone typy są najbardziej odpowiednie dla modelowania szczegóły implementacji ich typu otaczającego. Użytkownik końcowy powinna rzadko muszą przeciążać Zadeklaruj zmienne typu zagnieżdżonego i prawie nigdy nie powinien mieć można jawnie utworzyć wystąpienia typów zagnieżdżonych. Na przykład moduł wyliczający kolekcji może być zagnieżdżony typ tej kolekcji. Moduły wyliczające wystąpienia są zazwyczaj tworzone przez ich typu otaczającego i ponieważ instrukcji foreach obsługuje wiele języków, zmienne modułu wyliczającego rzadko muszą być deklarowana przez użytkownika końcowego.  
+ Zagnieżdżone typy są dopasowane do modelowania szczegóły implementacji ich typ otaczający. Użytkownik końcowy rzadko powinni być zmuszeni do deklarowania zmiennych typu zagnieżdżonego oraz prawie nigdy nie powinny mieć jawnie utworzyć typy zagnieżdżone. Na przykład moduł wyliczający kolekcji może być zagnieżdżony typ tej kolekcji. Moduły wyliczające są zwykle tworzone przez ich typ otaczający. Ponadto ponieważ wiele języków obsługują instrukcji foreach, zmiennych modułu wyliczającego rzadko muszą być zgłaszane przez użytkownika końcowego.  
   
  **✓ DO** używać zagnieżdżonych typów w przypadku relacji między typu zagnieżdżonego i jej typu zewnętrznego taki sposób, że dostępność elementu członkowskiego semantyka pożądane.  
   
  **X DO NOT** Użyj publicznego typów zagnieżdżonych jako logiczne grupowanie skonstruować; Użyj przestrzeni nazw dla tego.  
   
- **X AVOID** publicznie udostępnione typy zagnieżdżone. Jedynym wyjątkiem jest zmienne typu zagnieżdżonego muszą być deklarowane tylko w rzadkich scenariuszy, takich jak tworzenie podklas lub innych scenariuszy zaawansowanego dostosowania.  
+ **X AVOID** publicznie udostępnione typy zagnieżdżone. Jedynym wyjątkiem jest, jeśli zmienne typu zagnieżdżonego musi być zadeklarowany tylko w rzadkich scenariuszach, takich jak tworzenie podklasy lub innych scenariuszy zaawansowanych dostosowań.  
   
  **X DO NOT** Użyj zagnieżdżone typy, jeśli typ może odwoływać się poza typu zawierającego.  
   
- Na przykład wyliczenia przekazany do metody zdefiniowanej dla klasy, nie powinien być zdefiniowany jako typu zagnieżdżonego w klasie.  
+ Na przykład wyliczenia przekazany do metody zdefiniowanej w klasie nie powinien być zdefiniowany jako typ zagnieżdżony w klasie.  
   
- **X DO NOT** używać zagnieżdżonych typów, jeśli muszą zostać utworzone przez kod klienta.  Jeśli typ ma konstruktora publicznego, prawdopodobnie nie powinien być zagnieżdżone.  
+ **X DO NOT** używać zagnieżdżonych typów, jeśli muszą zostać utworzone przez kod klienta.  Jeśli typ ma on publicznego konstruktora, prawdopodobnie nie powinny być zagnieżdżone.  
   
- Jeśli można utworzyć wystąpienia typu, który wydaje się, że wskazuje typ ma miejsce w ramach samodzielnie (można go utworzyć, z którą go, zniszczyć bez kiedykolwiek przy użyciu typu zewnętrznego) i dlatego nie powinny być zagnieżdżone. Typy wewnętrzne nie powinna być powszechnie używana poza typu zewnętrznego bez żadnej z relacji jakiejkolwiek do typu zewnętrznego.  
+ Jeśli można utworzyć wystąpienia typu, który wydaje się, że wskazuje typ ma miejsce w ramach samodzielnie (możesz można go utworzyć, pracować z nim i zniszczyć bez kiedykolwiek przy użyciu typu zewnętrznego), a zatem nie powinien być zagnieżdżone. Typy wewnętrzne nie powinna być powszechnie używana poza typu zewnętrznego bez żadnych relacji jakiejkolwiek do typu zewnętrznego.  
   
  **X DO NOT** zagnieżdżony typ jako element członkowski interfejsu. Wiele języków nie obsługują takich konstrukcji.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

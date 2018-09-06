@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdfc4d9e9ba3653bd1a762767e3c39a4f62e587a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e613ad4823254a6bed43cb95294e6b8d3674b6d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582138"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881752"
 ---
 # <a name="security-and-race-conditions"></a>Zabezpieczenia i sytuacja wyścigu
-Inny obszar dotyczą jest potencjalnych luk w zabezpieczeniach wykorzystana przez wyścigu. Istnieje kilka sposobów, w których taka sytuacja może wystąpić. Tematy podrzędne, które należy wykonać opisano niektóre z najważniejszych problemów, które należy unikać dewelopera.  
+Kolejnym obszarem kwestią jest potencjalnych luk w zabezpieczeniach wykorzystana przez wyścigu. Istnieje kilka sposobów, w których może się to zdarzyć. Tematy podrzędne, które należy wykonać opisano niektóre z najważniejszych pułapek, których należy unikać dewelopera.  
   
 ## <a name="race-conditions-in-the-dispose-method"></a>Warunki wyścigu w metodzie Dispose  
- Jeśli klasa **Dispose** — metoda (Aby uzyskać więcej informacji, zobacz [wyrzucanie elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md)) jest nie są zsynchronizowane, możliwe jest oczyszczanie kodu wewnątrz **Dispose** może działać więcej niż jedno, jak pokazano w poniższym przykładzie.  
+ Jeśli klasa **Dispose** — metoda (Aby uzyskać więcej informacji, zobacz [wyrzucania elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md)) jest nie jest zsynchronizowana, istnieje możliwość, ten kod porządkujący wewnątrz **Dispose** mogą być uruchamiane więcej niż jedno, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Sub Dispose()  
@@ -46,13 +46,13 @@ void Dispose()
 }  
 ```  
   
- Ponieważ to **Dispose** implementacja nie są zsynchronizowane, istnieje możliwość `Cleanup` ma zostać wywołana przez wątek pierwszy z nich, a następnie drugi wątek przed `_myObj` ustawiono **null**. Czy jest to problem dotyczący zabezpieczeń zależy od tego, co się stanie, gdy `Cleanup` kod działa. Główne problem z niezsynchronizowane **Dispose** implementacje polega na użyciu dojść zasobów, takich jak pliki. Niewłaściwy usuwania może spowodować nieprawidłowe dojście mają być używane, która często prowadzi do luk w zabezpieczeniach.  
+ Ponieważ to **Dispose** wdrożenia nie jest zsynchronizowana, możliwe jest `Cleanup` ma zostać wywołana przez najpierw jeden wątek, a następnie drugi wątek przed `_myObj` ustawiono **null**. Czy to jest kwestią zabezpieczeń zależy od tego, co się stanie, gdy `Cleanup` kod działa. Podstawowym problemem w niezsynchronizowane **Dispose** implementacje polega na użyciu tego dojścia zasobów, takich jak pliki. Niewłaściwy usuwania może spowodować nieprawidłowe dojście ma być używany, co często prowadzi do luk w zabezpieczeniach.  
   
 ## <a name="race-conditions-in-constructors"></a>Warunki wyścigu w konstruktorach  
- W niektórych aplikacjach może być możliwe na inne wątki na dostęp do elementów członkowskich klasy, przed ich konstruktorów klas całkowicie zostało uruchomione. Należy przejrzeć wszystkie konstruktorów klas, aby upewnić się, że nie ma żadnych zabezpieczeń problemów, jeśli to powinien być lub synchronizowanie wątków w razie potrzeby.  
+ W niektórych aplikacji może być możliwe dla innych wątków do dostępu do składowych klasy, przed ich Konstruktory klasy całkowicie zostały uruchomione. Należy przejrzeć wszystkie Konstruktory klasy, aby upewnić się, że nie występują żadne problemy zabezpieczeń, jeśli to powinno to być spowodowane lub synchronizacji wątków, jeśli to konieczne.  
   
-## <a name="race-conditions-with-cached-objects"></a>Warunki wyścigu buforowanych obiektów  
- Kod, który przechowuje informacje o zabezpieczeniach lub używa zabezpieczenia dostępu kodu [Assert](../../../docs/framework/misc/using-the-assert-method.md) operacji może również być narażony na ataki wyścigu Jeśli inne części klasy nie są odpowiednio zsynchronizowane, jak pokazano w poniższym przykładzie.  
+## <a name="race-conditions-with-cached-objects"></a>Warunki wyścigu przy użyciu buforowanych obiektów  
+ Kod, który buforuje informacje o zabezpieczeniach lub wykorzystuje zabezpieczenia dostępu kodu [Asercja](../../../docs/framework/misc/using-the-assert-method.md) operacji może również występować sytuacje wyścigu w przypadku innych części klasy nie są odpowiednio zsynchronizowane, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -97,12 +97,13 @@ void DoOtherWork()
 }  
 ```  
   
- Jeśli istnieją inne ścieżki do `DoOtherWork` który można wywołać z wątku innego za pomocą tego samego obiektu, niezaufanej wywołujący może dostawy popyt w przeszłości.  
+ W przypadku innych ścieżek do `DoOtherWork` którą można wywołać z innego wątku za pomocą tego samego obiektu, niezaufanych obiekt wywołujący poślizg wcześniejsze żądanie.  
   
- Jeśli kod buforuje informacje o zabezpieczeniach, upewnij się, przejrzyj luki w zabezpieczeniach.  
+ Jeśli Twój kod buforuje informacje o zabezpieczeniach, upewnij się, przejrzyj luki w zabezpieczeniach.  
   
 ## <a name="race-conditions-in-finalizers"></a>Warunki wyścigu w finalizatory  
- Warunki wyścigu może również wystąpić w obiekt, który odwołuje się do zasobu statyczne lub niezarządzane, który następnie powoduje zwolnienie w jego finalizator. Jeśli wiele obiektów korzystają z zasobem, który jest przetwarzane w finalizator klasy, obiekty musi zsynchronizować dostęp do tego zasobu.  
+ Warunki wyścigu może również wystąpić w obiekcie, który odwołuje się do statycznego lub niezarządzany zasób, który następnie zwalnia jego finalizator. Jeśli wiele obiektów dzielą jakiś zasób, który jest przetwarzany w finalizatory klasy, obiekty należy zsynchronizować wszelki dostęp do tego zasobu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

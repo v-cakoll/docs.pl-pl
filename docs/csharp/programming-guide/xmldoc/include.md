@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: d3c9adda4ca3a58edca48d6df3d2f5e4d5783187
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 854c8b61fa8164bccfc9451f2f163dab4a56388f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389154"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038282"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;obejmują&gt; (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
@@ -89,6 +89,7 @@ The summary for this other type.
 </doc>   
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

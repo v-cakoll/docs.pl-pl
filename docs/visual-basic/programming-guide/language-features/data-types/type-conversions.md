@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800667"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037006"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Konwersje plików w Visual Basic
 Proces zmiany wartości z jednego typu danych na inny typ jest nazywany *konwersji*. Konwersje są albo *rozszerzanie* lub *zawężanie*, w zależności od pojemności danych typów, które są zaangażowani. Są one również *niejawne* lub *jawne*, w zależności od składni w kodzie źródłowym.  

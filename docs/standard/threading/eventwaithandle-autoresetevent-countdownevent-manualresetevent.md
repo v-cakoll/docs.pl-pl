@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f818ecf52ae1179d6d32d0b76cea3cc2a8f36ea8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2f61e614696e731a85a030e34aa4356137d9000d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416415"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882350"
 ---
 # <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
 Uchwyty oczekiwania na zdarzenie umożliwiają wątków, aby zsynchronizować działań przez siebie Sygnalizowanie i Oczekiwanie na siebie nawzajem sygnałów. Te zdarzenia synchronizacji są oparte na Win32 uchwytami oczekiwania i można podzielić na dwa typy: te, które automatycznie resetować podczas sygnalizowane, które zostaną przywrócone ręcznie.  
@@ -38,10 +38,11 @@ Uchwyty oczekiwania na zdarzenie umożliwiają wątków, aby zsynchronizować dz
  [Uchwyty oczekiwania](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  <xref:System.Threading.WaitHandle> Klasa jest klasą bazową dla <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore>, i <xref:System.Threading.Mutex> klasy. Zawiera metody statyczne takie jak <xref:System.Threading.WaitHandle.SignalAndWait%2A> i <xref:System.Threading.WaitHandle.WaitAll%2A> są przydatne podczas pracy ze wszystkimi typami dojść oczekiwania.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)

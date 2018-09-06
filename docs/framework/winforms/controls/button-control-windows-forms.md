@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
 ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537445"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892749"
 ---
 # <a name="button-control-windows-forms"></a>Kontrolka przycisku (Formularze systemu Windows)
 Formularze Windows `Button` kontrolki pozwala użytkownikowi na kliknij go, aby wykonać akcję. `Button` Formant może wyświetlić tekst i obrazy. Po kliknięciu przycisku wygląda, jakby on wypychania i wydania.  

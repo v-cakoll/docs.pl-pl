@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
 ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803005"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037753"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Porady: implementowanie PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] działa, określając listę powiązania. Lista powiązania jest uporządkowana z najwyższym priorytetem do najniższego priorytetu. Jeśli powiązanie najwyższy priorytet, zwraca wartość pomyślnie, gdy jest on przetwarzany występuje nigdy nie trzeba przetworzyć pozostałych powiązaniach na liście. Może to być takim powiązanie najwyższy priorytet zajmuje dużo czasu ma zostać obliczone, dalej najwyższy priorytet, która zwraca wartość pomyślnie będzie służyć do momentu powiązanie o wyższym priorytecie zwraca wartość pomyślnie.  

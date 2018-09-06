@@ -3,11 +3,11 @@ title: 'Wprowadzenie do F # w programie Visual Studio dla komputerów Mac'
 description: 'Dowiedz się, jak używać języka F # za pomocą programu Visual Studio dla komputerów Mac.'
 ms.date: 07/03/2018
 ms.openlocfilehash: 6aceec299c29e04aecd7999cd1dda6a56dd2779a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785534"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042336"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Wprowadzenie do F # w programie Visual Studio dla komputerów Mac
 

@@ -7,23 +7,24 @@ helpviewer_keywords:
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7d1d95030d2bc9f9288ae134471c150a37291b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bd2468c7b68a9c79e7418a32294676fb468e1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582262"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042637"
 ---
 # <a name="spinlock"></a>SpinLock
-<xref:System.Threading.SpinLock> Struktura jest niskiego poziomu, wzajemne wykluczenie prymitywu synchronizacji, który obraca podczas oczekiwania na uzyskanie blokady. W przypadku komputerów wielordzeniowych podczas czasy oczekiwania są powinien być krótki i kiedy rywalizacji jest minimalny <xref:System.Threading.SpinLock> może działać lepiej niż inne rodzaje blokad. Jednak zaleca się używanie <xref:System.Threading.SpinLock> tylko przy określaniu przez profilowania, która <xref:System.Threading.Monitor?displayProperty=nameWithType> metody lub <xref:System.Threading.Interlocked> metody znacznie spowalniają działanie programu.  
+<xref:System.Threading.SpinLock> Struktury jest niskiego poziomu, wykluczania wzajemnego synchronizacji, który uruchamia podczas oczekiwania na uzyskanie blokady. Na komputerach wielordzeniowych, gdy czasy oczekiwania powinny być krótki, a gdy rywalizacja jest minimalny <xref:System.Threading.SpinLock> można mają lepszą wydajność niż inne rodzaje blokady. Jednak firma Microsoft zaleca użycie <xref:System.Threading.SpinLock> tylko przy określaniu przez profilowanie, który <xref:System.Threading.Monitor?displayProperty=nameWithType> metody lub <xref:System.Threading.Interlocked> znacznie metody są spowolnienia działania programu.  
   
- <xref:System.Threading.SpinLock> może spowodować przedział czasu w wątku, nawet jeśli nie ma jeszcze uzyskać blokady. Jest to, aby uniknąć odwracanie priorytetu wątku i Włącz moduł zbierający elementy bezużyteczne postęp. Jeśli używasz <xref:System.Threading.SpinLock>, upewnij się, wątku nie może zawierać blokady dla więcej niż bardzo krótki okres oraz że wątku nie można zablokować, gdy posiada blokady.  
+ <xref:System.Threading.SpinLock> może przynieść przedziału czasu wątku, nawet wtedy, gdy nie ma jeszcze uzyskać blokadę. Robi to, aby uniknąć odwrócenie priorytetu wątku i włączyć moduł garbage collector postępu. Kiedy używasz <xref:System.Threading.SpinLock>, upewnij się, żaden wątek nie może zawierać blokady dla więcej niż bardzo krótki okres i że żaden wątek nie można zablokować, gdy posiada blokadę.  
   
- Ponieważ struktury SpinLock jest typem wartości, należy jawnie przekazujesz ją przez odwołanie, jeśli planujesz obydwie kopie do odwoływania się do tego samego blokady.  
+ Ponieważ struktury SpinLock jest typem wartości, musi jawnie przekazujesz ją przez odwołanie, jeśli mają dwie kopie do odwoływania się do tego samego blokady.  
   
- Aby uzyskać więcej informacji na temat używania tego typu, zobacz <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Na przykład zobacz [porady: struktury Użyj SpinLock do synchronizacji niższego poziomu](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
+ Aby uzyskać więcej informacji na temat używania tego typu, zobacz <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Aby uzyskać przykład, zobacz [jak: struktury Użyj SpinLock do synchronizacji niższego poziomu](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
   
- <xref:System.Threading.SpinLock> obsługuje *wątku*-*śledzenia* tryb pomocne podczas fazy opracowywania służące do śledzenia w wątku, który jest z blokadą w określonym czasie. Tryb śledzenia wątków jest bardzo przydatne w przypadku debugowania, ale firma Microsoft zaleca wyłączenie go w wydanej wersji programu, ponieważ może zmniejszyć wydajność. Aby uzyskać więcej informacji, zobacz [porady: tryb włączyć wątku śledzenia w strukturze SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
+ <xref:System.Threading.SpinLock> obsługuje *wątku*-*śledzenia* tryb, który można użyć w fazie opracowywania, ułatwiają śledzenie wątku, który powoduje blokadę o określonej godzinie. Tryb śledzenia wątków jest bardzo przydatne podczas debugowania, ale firma Microsoft zaleca wyłączenie go w wersji programu, ponieważ jego może obniżyć wydajność. Aby uzyskać więcej informacji, zobacz [jak: tryb śledzenia Włącz wątków w strukturze SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)

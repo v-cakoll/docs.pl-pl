@@ -9,36 +9,37 @@ helpviewer_keywords:
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa4227fc4476b86f07216650b22fccc25af7dd98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b92b648e7886fb0214238e32eacae2870b470340
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573094"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892801"
 ---
 # <a name="virtual-members"></a>Wirtualne elementy członkowskie
-Wirtualne elementy Członkowskie mogą zostać zastąpione, w związku z tym zmiany zachowania podklasy. Są bardzo podobne do wywołania zwrotne pod względem rozszerzania, które zapewniają, ale są one lepsze pod względem wydajności wykonywania i zmniejszenie zużycia pamięci. Ponadto wirtualne elementy członkowskie możesz bardziej naturalne w scenariuszach wymagających tworzenie specjalny rodzaj istniejącego typu (Specjalizacja).  
+Wirtualne elementy członkowskie można zastąpić, zmieniając w ten sposób zachowanie podklasy. Są bardzo podobne do wywołania zwrotne pod kątem rozszerzalności, które zapewniają one, ale są one lepsze pod względem wydajności wykonywania i zużycie pamięci. Ponadto wirtualnych elementów członkowskich czuć się bardziej naturalne w scenariuszach wymagających tworzenia specjalnego rodzaju istniejącego typu (Specjalizacja).  
   
- Wirtualne elementy członkowskie lepiej niż wywołania zwrotne i zdarzeń, ale nie wykonuj lepiej niż metody-virtual.  
+ Wirtualne elementy członkowskie mają lepszą wydajność niż wywołania zwrotne i zdarzenia, ale nie mają lepszą wydajność niż metod niewirtualnych.  
   
- Główną wadą wirtualnych elementów członkowskich jest, że zachowanie elementu członkowskiego wirtualnego można modyfikować tylko w czasie kompilacji. Zachowanie wywołania zwrotnego może być modyfikowany w czasie wykonywania.  
+ Główną wadą wirtualnych elementów członkowskich jest, że zachowanie wirtualny element członkowski może być modyfikowane tylko w czasie kompilacji. Można zmodyfikować zachowanie wywołanie zwrotne w czasie wykonywania.  
   
- Wirtualne elementy członkowskie, takie jak wywołania zwrotne i może być większa niż wywołań zwrotnych, są kosztowne do projektowania, testowania i konserwacji, ponieważ jakiekolwiek odwołania do elementu członkowskiego wirtualnego może zostać zastąpiona w sposób nieprzewidziany i może zostać uruchomiony dowolny kod. Ponadto znacznie więcej wysiłku jest zazwyczaj wymagane jasno zdefiniować kontrakt wirtualne elementy członkowskie, więc koszt projektowanie i dokumentowanie ich jest wyższy.  
+ Wirtualne elementy członkowskie, takie jak wywołania zwrotne i może być większa niż wywołań zwrotnych, są kosztowne do projektowania, testowania i obsługi, ponieważ każde wywołanie wirtualny element członkowski może zostać przesłonięta w sposób nieprzewidziany i może wykonywać dowolny kod. Ponadto znacznie więcej nakładu pracy zwykle jest wymagany do jasno zdefiniować kontrakt wirtualnych elementów członkowskich, więc koszt projektowania i dokumentowanie ich jest wyższy.  
   
  **X DO NOT** tworzenie elementów członkowskich wirtualnego, chyba że masz powód, dla zrobić i poznać wszystkich kosztów związanych z projektowania i testowania oraz Obsługa wirtualnych elementów członkowskich.  
   
- Wirtualne elementy członkowskie są mniej forgiving pod względem zmiany wprowadzone do nich w bez przerywania zgodności. Ponadto są one wolniej niż członków-virtual, przede wszystkim, ponieważ wywołania wirtualne elementy członkowskie nie są wbudowane.  
+ Wirtualne elementy członkowskie są mniej forgiving pod względem zmiany wprowadzone do nich w bez przerywania zgodność. Ponadto są wolniejsze niż niewirtualną członków, przede wszystkim, ponieważ wywołania wirtualne elementy członkowskie nie są śródwierszowych.  
   
  **✓ CONSIDER** ograniczanie rozszerzalności tylko co to jest bezwzględnie konieczne.  
   
- **✓ DO** Preferuj dostępności chronione przed powszechnej dostępności dla wirtualnych elementów członkowskich. Publiczne elementy Członkowskie powinny rozszerzalność (jeśli jest to wymagane) przez wywołanie do chronionego członka wirtualnego.  
+ **✓ DO** Preferuj dostępności chronione przed powszechnej dostępności dla wirtualnych elementów członkowskich. Publiczne elementy Członkowskie powinny rozszerzalność (jeśli jest to wymagane) przez wywołanie chronionych wirtualna elementu członkowskiego.  
   
- Publiczne elementy członkowskie klasy powinien zapewnić prawidłowego zestawu funkcji do bezpośredniego konsumentów tej klasy. Wirtualne elementy członkowskie zaprojektowano do zastąpienia w podklasach i dostępność chronionych jest to dobry sposób na zakres wszystkie punkty rozszerzalności wirtualnego, gdzie mogą być używane.  
+ Publiczne elementy członkowskie klasy dostarczają właściwy zestaw funkcji dla bezpośrednich klientów tej klasy. Wirtualne elementy członkowskie są przeznaczone do zastąpienia w podklasy i chronionych ułatwień dostępu jest to doskonały sposób, aby ograniczyć zakres wszystkie punkty rozszerzalności wirtualny, gdzie mogą być używane do.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

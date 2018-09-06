@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
 ms.openlocfilehash: ed5ae1cbab40b57676219ffbe7d1d5696ac3bec4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733186"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037441"
 ---
 # <a name="executing-a-command"></a>Wykonywanie polecenia
 Każdego dostawcy danych .NET Framework, dołączone do programu .NET Framework ma swój własny obiekt polecenia, która dziedziczy <xref:System.Data.Common.DbCommand>. .NET Framework Data Provider for OLE DB zawiera <xref:System.Data.OleDb.OleDbCommand> obiektu .NET Framework Data Provider for SQL Server zawiera <xref:System.Data.SqlClient.SqlCommand> obiektu .NET Framework Data Provider for ODBC obejmuje <xref:System.Data.Odbc.OdbcCommand> obiektu i .NET Framework Data Provider Pro Oracle obejmuje <xref:System.Data.OracleClient.OracleCommand> obiektu. Każda z tych obiektów udostępnia metody wykonywania poleceń na podstawie typu polecenia, a żądane zwracanej wartości, zgodnie z opisem w poniższej tabeli.  

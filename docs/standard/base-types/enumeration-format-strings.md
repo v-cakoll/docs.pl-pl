@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4402bf58ea853d8a373592eec274a8bf75e7e90c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 956dc7daad91d9daa3ac950d7f5897404dd314c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925745"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041268"
 ---
 # <a name="enumeration-format-strings"></a>Wyliczanie ciągów formatujących
 Możesz użyć <xref:System.Enum.ToString%2A?displayProperty=nameWithType> metodę, aby utworzyć nowy obiekt ciągu reprezentujący liczbowy, szesnastkowo lub wartości ciągu elementu członkowskiego wyliczenia. Ta metoda przyjmuje jeden wyliczenie formatowanie ciągów, aby określić wartości, które mają być zwracane.
@@ -48,6 +48,6 @@ Po zdefiniowaniu wyliczenia wystąpienie może być zadeklarowana w następując
 [!code-csharp[Formatting.Enum#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
 [!code-vb[Formatting.Enum#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Formatowanie typów](formatting-types.md)
+- [Formatowanie typów](formatting-types.md)

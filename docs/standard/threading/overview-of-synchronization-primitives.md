@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485537"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884344"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Przegląd elementów podstawowych synchronizacji
 <a name="top"></a> .NET Framework oferuje szeroką gamę elementów podstawowych synchronizacji, związanych z kontrolowaniem interakcje wątków i unikanie wyścigu. Te można grubsza podzielić na trzy kategorie: operacji blokowania, Sygnalizowanie i blokowane.  
@@ -165,15 +165,16 @@ ms.locfileid: "43485537"
   
  Aby uzyskać omówienie pojęć, zobacz [operacji Blokowanej](../../../docs/standard/threading/interlocked-operations.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Synchronizowanie danych na potrzeby wielowątkowości](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Monitory](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- [Muteksy](../../../docs/standard/threading/mutexes.md)  
- [Semaphore i SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [Uchwyty oczekiwania](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- [Operacje blokowane](../../../docs/standard/threading/interlocked-operations.md)  
- [reader_writer_lock, klasa](../../../docs/standard/threading/reader-writer-locks.md)  
- [Barrier](../../../docs/standard/threading/barrier.md)  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- [SpinLock](../../../docs/standard/threading/spinlock.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Synchronizowanie danych na potrzeby wielowątkowości](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [Monitory](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+- [Muteksy](../../../docs/standard/threading/mutexes.md)  
+- [Semaphore i SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
+- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+- [Uchwyty oczekiwania](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+- [Operacje blokowane](../../../docs/standard/threading/interlocked-operations.md)  
+- [reader_writer_lock, klasa](../../../docs/standard/threading/reader-writer-locks.md)  
+- [Barrier](../../../docs/standard/threading/barrier.md)  
+- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [SpinLock](../../../docs/standard/threading/spinlock.md)

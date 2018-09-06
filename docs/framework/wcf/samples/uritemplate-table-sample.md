@@ -3,11 +3,11 @@ title: Przykład tabeli UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 6cd02e5cdf4137efd3254ff1071e5a4a79c2e88a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658016"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883752"
 ---
 # <a name="uritemplate-table-sample"></a>Przykład tabeli UriTemplate
 <xref:System.UriTemplateTable> Klasa udostępnia struktury tabeli asocjacyjnych słownika podobne do pracy z zestawem `UriTemplate` wystąpień. Określone Uniform Resource Identifier (URI) może zostać dopasowany efektywnie wszystkie szablony w tabeli i mogą być pobierane dane skojarzone z dopasowany szablon.  

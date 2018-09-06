@@ -2,17 +2,16 @@
 title: Wyliczenia (F#)
 description: 'Dowiedz się, jak sprawić, że kod bardziej czytelny i łatwy w obsłudze za pomocą wyliczenia F # zamiast literałów.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b51df53caf2e193496cb3694c913cbae08f7eaf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518840"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891645"
 ---
 # <a name="enumerations"></a>Wyliczenia
 
 *Wyliczenia*, znane również jako *wyliczenia*,, są typami całkowitymi, gdy etykiety są przypisane do podzbioru wartości. Można je zamiast literałów wprowadzić kod bardziej czytelny i łatwy w obsłudze.
-
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,6 +23,7 @@ type enum-name =
 ```
 
 ## <a name="remarks"></a>Uwagi
+
 Wyliczenie wygląda bardzo podobnie złożeniem dyskryminowanym, które ma prostych wartości, z tą różnicą, że można określić wartości. Wartości są zwykle liczb całkowitych, które rozpoczynają się od 0 lub 1 lub liczb całkowitych reprezentujących pozycji bitów. Jeśli wyliczenie jest przeznaczony do reprezentowania pozycje bitów, należy również użyć [flagi](xref:System.FlagsAttribute) atrybutu.
 
 Podstawowym typem wyliczenia jest określana na podstawie literał, która jest używana, tak aby na przykład można literały z sufiksu, takich jak `1u`, `2u`i tak dalej na liczbę całkowitą bez znaku (`uint32`) typu.
@@ -49,8 +49,8 @@ Wartość domyślna `enum` funkcja działa z typem `int32`. W związku z tym nie
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
 Ponadto przypadków dla typów wyliczeniowych zawsze są emitowane jako `public`. Jest to tak, aby były wyrównane w języku C# i pozostałą część platformy .NET.
-    
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
 
-[Rzutowanie i konwersje](casting-and-conversions.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka F#](index.md)
+- [Rzutowanie i konwersje](casting-and-conversions.md)

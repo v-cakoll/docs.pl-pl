@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przekształcenie XSLT przy użyciu zestawu'
+title: 'Porady: wykonywanie przekształcenia XSLT przy użyciu zestawu'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8f29b1274e6e8436aed0dfb698ede4864a15417
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef0d47ae18b8bdd3f1d49a20937b65e9872ab551
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569506"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892350"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Porady: przekształcenie XSLT przy użyciu zestawu
-Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestawu. Zestaw mogą być przekazywane bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody.  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Porady: wykonywanie przekształcenia XSLT przy użyciu zestawu
+Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestaw. Zestaw można przekazać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody.  
   
-### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Aby skopiować pliki XML i XSLT do komputera lokalnego  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Aby skopiować pliki XML i XSLT na komputerze lokalnym  
   
--   Skopiuj plik XSLT na komputerze lokalnym i nadaj mu nazwę Transform.xsl.  
+-   Skopiuj plik XSLT do komputera lokalnego i nadaj mu nazwę Transform.xsl.  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestawu. Z
     </xsl:stylesheet>  
     ```  
   
--   Skopiuj plik XML na komputerze lokalnym i nadaj mu nazwę `books.xml`.  
+-   Skopiuj plik XML do komputera lokalnego i nadaj mu nazwę `books.xml`.  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -130,31 +130,31 @@ Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestawu. Z
     </catalog>  
     ```  
   
-### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Aby skompilować arkusza stylów ze skryptem włączona.  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Aby skompilować arkusz stylów za pomocą skryptu włączone.  
   
-1.  Wykonując następujące polecenie w wierszu polecenia powoduje utworzenie dwóch zestawów o nazwie `Transform.dll` i `Transform_Script1.dll` (jest to zachowanie domyślne. Inaczej, nazwy klas i zestawu domyślnie nazwa arkusza stylów głównego):  
+1.  Wykonując następujące polecenie z wiersza polecenia tworzy dwa zestawy o nazwie `Transform.dll` i `Transform_Script1.dll` (jest to zachowanie domyślne. O ile nie określono inaczej, nazwa klasy i zestawu domyślnie używa nazwy arkusza stylów głównym):  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
     ```  
   
- Polecenie jawnie ustawia nazwę klasy transformacji:  
+ Następujące polecenie jawnie ustawia nazwę klasy transformacji:  
   
 ```  
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Aby uwzględnić w skompilowanym zestawie jako odwołanie podczas kompilowania kodu.  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Aby uwzględnić skompilowanego zestawu jako odwołania, podczas kompilowania kodu.  
   
-1.  Dodanie odwołania w Eksploratorze rozwiązań, lub z wiersza polecenia, można dołączyć zestawu w programie Visual Studio.  
+1.  W programie Visual Studio może zawierać zestaw, przez dodanie odwołania w Eksploratorze rozwiązań lub z wiersza polecenia.  
   
-2.  W wierszu polecenia w języku C# Użyj następującego polecenia:  
+2.  W wierszu polecenia przy użyciu języka C# należy użyć następującego polecenia:  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  W wierszu polecenia programu Visual Basic użyj następującego polecenia  
+3.  W wierszu polecenia za pomocą Visual Basic należy użyć następującego polecenia  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
@@ -162,12 +162,12 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>Aby użyć skompilowanego zestawu w kodzie.  
   
-1.  Poniższy przykład pokazuje, jak można wykonać przekształcenia XSLT przy użyciu arkusza stylów skompilowanego.  
+1.  Poniższy przykład pokazuje, jak wykonać transformację XSLT przy użyciu arkusza stylów skompilowanego.  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- Aby połączyć dynamicznie w skompilowanym zestawie, Zastąp  
+ Dynamiczne łącze do zestawu skompilowanego, Zastąp  
   
 ```  
 xslt.Load(typeof(Transform))  
@@ -179,10 +179,11 @@ xslt.Load(typeof(Transform))
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- w powyższym przykładzie. Aby uzyskać więcej informacji o metodzie metody Assembly.Load zobacz <xref:System.Reflection.Assembly.Load%2A>  
+ w powyższym przykładzie. Aby uzyskać więcej informacji na temat metody Assembly.Load zobacz <xref:System.Reflection.Assembly.Load%2A>  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [Kompilator XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- [Kompilator XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

@@ -3,11 +3,11 @@ title: Operatory dopuszczające wartość null (F#)
 description: 'Więcej informacji na temat operatory dopuszczające wartość null, które są dostępne w F # języka programowania.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801193"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036782"
 ---
 # <a name="nullable-operators"></a>Operatory dopuszczające wartość null
 

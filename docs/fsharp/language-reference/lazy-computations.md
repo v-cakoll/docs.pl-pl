@@ -3,11 +3,11 @@ title: Obliczenia powolne (F#)
 description: 'Dowiedz się, jak poprawić wydajność aplikacji i bibliotek obliczenia powolne F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744618"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037071"
 ---
 # <a name="lazy-computations"></a>Obliczenia powolne
 

@@ -1,43 +1,44 @@
 ---
-title: Usuwanie atrybutów z węzłem elementu w modelu DOM
+title: Usuwanie atrybutów z węzła elementu w modelu DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 758ce84390c9ba47e3eb56e1feb293a4cf0408a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570571"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892500"
 ---
-# <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Usuwanie atrybutów z węzłem elementu w modelu DOM
-Istnieje wiele sposobów, aby usunąć atrybuty. Jeden technika jest je usunąć z kolekcji atrybutów. Aby to zrobić, są wykonywane następujące czynności:  
+# <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Usuwanie atrybutów z węzła elementu w modelu DOM
+Istnieje wiele sposobów, aby usunąć atrybuty. Jedna z technik jest je usunąć z kolekcji atrybutów. Aby to zrobić, wykonywane są następujące czynności:  
   
-1.  Pobierz kolekcję atrybutów z przy użyciu elementu `XmlAttributeCollection attrs = elem.Attributes;`.  
+1.  Pobierz kolekcję atrybutów z elementu za pomocą `XmlAttributeCollection attrs = elem.Attributes;`.  
   
 2.  Usuń atrybut z kolekcji atrybutów przy użyciu jednej z trzech metod:  
   
     -   Użyj <xref:System.Xml.XmlAttributeCollection.Remove%2A> Aby usunąć określony atrybut.  
   
-    -   Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> Aby usunąć wszystkie atrybuty z kolekcji i pozostawić element bez atrybutów.  
+    -   Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> usunąć wszystkie atrybuty z kolekcji i pozostaw elementu żadnych atrybutów.  
   
-    -   Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> można usunąć atrybutu z kolekcji atrybutów przy użyciu numeru indeksu.  
+    -   Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> Aby usunąć atrybut z kolekcji atrybutów przy użyciu jego numer indeksu.  
   
- Następujące metody usuwanie atrybutów z węzeł elementu.  
+ Następujące metody usuwanie atrybutów z węzła elementu.  
   
--   Użyj <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> można usunąć kolekcji atrybutów.  
+-   Użyj <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> do usunięcia z kolekcji atrybutów.  
   
--   Użyj <xref:System.Xml.XmlElement.RemoveAttribute%2A> usunąć jeden atrybut o nazwie z kolekcji.  
+-   Użyj <xref:System.Xml.XmlElement.RemoveAttribute%2A> usunąć jeden atrybut według nazwy z kolekcji.  
   
--   Użyj <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> usunięcie jeden atrybut, a numer indeksu z kolekcji.  
+-   Użyj <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> usunąć jeden atrybut przez numer indeksu z kolekcji.  
   
- Co więcej alternatywą jest uzyskać elementu, pobrać atrybutu z kolekcji atrybutów i usunąć węzła atrybutu bezpośrednio. Aby uzyskać ten atrybut z kolekcji atrybutów, można użyć nazwy, `XmlAttribute attr = attrs["attr_name"];`, indeks `XmlAttribute attr = attrs[0];`, lub w pełni kwalifikowanie nazw z przestrzeni nazw `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
+ Co więcej alternatywą jest pobieranie elementu, Pobierz atrybut z kolekcji atrybutów i Usuń węzeł atrybutu bezpośrednio. Aby uzyskać ten atrybut z kolekcji atrybutów, można użyć nazwy `XmlAttribute attr = attrs["attr_name"];`, indeks `XmlAttribute attr = attrs[0];`, lub w pełni kwalifikując nazwę z przestrzenią nazw `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
   
- Niezależnie od metody umożliwia usuwanie atrybutów ma ograniczeń specjalnych na usuwanie atrybutów, które są zdefiniowane jako domyślne atrybuty w definicji typu dokumentu (DTD). Nie można usunąć atrybutów domyślnych, chyba że zostanie usunięty element, do którego należą. Domyślne atrybuty zawsze znajdują się dla elementów, które mają atrybuty domyślne zadeklarowany. Usuwanie domyślnego atrybutu z <xref:System.Xml.XmlAttributeCollection> lub <xref:System.Xml.XmlElement> wyniki w atrybucie zastępczy wstawione do <xref:System.Xml.XmlAttributeCollection> elementu zainicjowany do wartości domyślnej, który został zadeklarowany. Jeśli masz zdefiniowany jako element `<book att1="1" att2="2" att3="3"></book>`, a następnie masz `book` zadeklarowany element z trzech atrybutów domyślnych. Implementacja XML modelu DOM (Document Object) gwarantuje, że tak długo, jak to `book` element istnieje, ma następujące trzy domyślne atrybuty `att1`, `att2`, i `att3`.  
+ Niezależnie od metody, aby usunąć atrybuty istnieją specjalne ograniczenia na temat usuwania atrybutów, które są zdefiniowane jako domyślne atrybuty w definicji typu dokumentu (DTD). Nie można usunąć domyślnych atrybutów, chyba że zostanie usunięty element, do którego należą. Atrybuty domyślne są zawsze obecne elementy, które mają domyślne atrybutów zadeklarowany. Usunięcie domyślnego atrybutu z <xref:System.Xml.XmlAttributeCollection> lub <xref:System.Xml.XmlElement> wyniki w atrybucie zastąpienie wstawiony <xref:System.Xml.XmlAttributeCollection> elementu zainicjowany do wartości domyślnej, który został zadeklarowany. Jeśli masz element, który został zdefiniowany jako `<book att1="1" att2="2" att3="3"></book>`, można skorzystać z `book` zadeklarowany element z trzech atrybutów domyślnych. Implementacja XML Document Object Model (DOM) gwarantuje, że tak długo, jak to `book` element istnieje, jego atrybuty te trzy domyślne `att1`, `att2`, i `att3`.  
   
- Po wywołaniu z <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> metody ustawia wartość atrybutu String.Empty, ponieważ atrybut nie może istnieć bez wartości.  
+ Gdy zostanie wywołana z <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> metody ustawia wartość atrybutu String.Empty, ponieważ atrybut nie może istnieć bez wartości.  
   
-## <a name="see-also"></a>Zobacz też  
- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

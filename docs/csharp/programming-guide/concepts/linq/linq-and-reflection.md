@@ -3,11 +3,11 @@ title: LINQ i odbicie (C#)
 ms.date: 07/20/2015
 ms.assetid: e4c4af30-d89e-4aa7-89b1-cb8c24acf881
 ms.openlocfilehash: 3ecf9a931de1f5367852734c6e706d21b5c944af
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43737633"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882038"
 ---
 # <a name="linq-and-reflection-c"></a>LINQ i odbicie (C#)
 Odbicie biblioteki klas .NET Framework API może służyć do badania metadane w zestawie .NET i tworzenie kolekcji typów, elementów członkowskich typu, parametry i tak dalej, które znajdują się w tym zestawie. Ponieważ te kolekcje obsługują ogólnego `IEnumerable` interfejsu, może być odpytywany za pomocą LINQ.  

@@ -3,11 +3,11 @@ title: Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
 ms.openlocfilehash: baf6a26b1579c17adfc60b27b485ba3af66c67d7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787863"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883354"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)
 Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. W tym temacie opisano wymagania i zalety wykonanie odroczone i kilka kwestii dotyczących wdrażania.  

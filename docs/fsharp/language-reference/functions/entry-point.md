@@ -3,11 +3,11 @@ title: Punkt wejścia (F#)
 description: 'Dowiedz się, jak ustawić punkt wejścia do programu F #, który jest kompilowany jako plik wykonywalny, gdzie formalnie się rozpoczyna wykonywanie.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798716"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884773"
 ---
 # <a name="entry-point"></a>Punkt wejścia
 

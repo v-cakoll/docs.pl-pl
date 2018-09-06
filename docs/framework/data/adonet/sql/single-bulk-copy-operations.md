@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
 ms.openlocfilehash: 274a6e87b272002a567fd92605c4e690c03b6e26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565175"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884172"
 ---
 # <a name="single-bulk-copy-operations"></a>Pojedyncze operacje kopiowania zbiorczego
 Najprostszą metodą do wykonywania operacji kopiowania zbiorczego SQL Server jest na wykonanie jednej operacji w bazie danych. Domyślnie operacji kopiowania zbiorczego jest wykonywane jako operacja izolowane: operacja kopiowania odbywa się w sposób nietransakcyjnej ma możliwości, aby przerzucić go na tworzeniu kopii.  

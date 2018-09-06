@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
 ms.openlocfilehash: 95f375d8845c60441aa5eefdd37e32541ea2d5a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565684"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042312"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Porady: powiązywanie kontrolek formularzy systemu Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant
 Po dodać formanty do formularza i określić interfejsu użytkownika dla aplikacji, formanty można powiązać ze źródłem danych, tak, aby w czasie wykonywania, użytkownicy mogą zmienić i zapisać dane związane z aplikacją.  

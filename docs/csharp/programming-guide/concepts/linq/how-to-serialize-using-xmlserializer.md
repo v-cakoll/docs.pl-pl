@@ -3,11 +3,11 @@ title: 'Instrukcje: serializowanie przy użyciu elementu XmlSerializer (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
 ms.openlocfilehash: 32a23792947639c2c0eb1dc14b640c3786bdfd4c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535766"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883254"
 ---
 # <a name="how-to-serialize-using-xmlserializer-c"></a>Instrukcje: serializowanie przy użyciu elementu XmlSerializer (C#)
 W tym temacie przedstawiono przykład, który serializuje i deserializuje przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.  

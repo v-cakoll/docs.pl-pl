@@ -10,45 +10,46 @@ helpviewer_keywords:
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7202e10e41b9f114f42a4502ee2e6694bf3821
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8c445de44a69f6c0cb1eaefa0e59d682288318
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573746"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885538"
 ---
 # <a name="sealing"></a>Pieczętowanie
-Jedną z funkcji zorientowane obiektowo struktury jest deweloperzy może rozszerzyć i dostosować je w sposób nieprzewidziane przez projektantów framework. Jest to możliwości i zagrożenia extensible projektu. Podczas projektowania sieci framework, dlatego też jest bardzo ważne, dokładnie projektować pod kątem rozszerzalności, gdy wymagane jest i ograniczyć rozszerzalności, gdy jest niebezpieczne.  
+Jest jedną z funkcji struktury zorientowane obiektowo, deweloperzy mogą rozszerzać i dostosowywać je w sposób nieoczekiwany przez projektantów framework. Jest to, możliwości i zagrożenia extensible projektu. Podczas projektowania preferowanej struktury, dlatego też jest bardzo ważne, uważnie projektować pod kątem rozszerzalności, jeśli pożądane jest i ograniczyć rozszerzalności, gdy jest niebezpieczne.  
   
- Pieczętowanie jest zaawansowanym mechanizmem, który uniemożliwia rozszerzalności. Można Zapieczętuj klasę lub poszczególne elementy. Klasa pieczętowania uniemożliwia użytkownikom dziedziczenia z klasy. Element członkowski pieczętowania uniemożliwia użytkownikom zastępowania określonego elementu członkowskiego.  
+ Pieczętowanie jest zaawansowany mechanizm, który uniemożliwia rozszerzalności. Można Zapieczętuj klasę lub poszczególnych elementów członkowskich. Pieczętowanie klasę uniemożliwia użytkownikom dziedziczy z klasy. Pieczętowanie członka uniemożliwia użytkownikom zastępowanie określonego elementu członkowskiego.  
   
  **X DO NOT** zapieczętować klasy bez konieczności powody, aby to zrobić.  
   
- Pieczętowania klasy, ponieważ nie można traktować scenariusza rozszerzalności nie jest dobrym przyczyny. Dziedziczenie z klasy z różnych powodów nonobvious, takich jak dodawanie członków wygody, takich jak użytkownicy Framework. Zobacz [niezapieczętowanych klas](../../../docs/standard/design-guidelines/unsealed-classes.md) przykłady nonobvious powodów użytkownik chce dziedziczyć po typie.  
+ Pieczętowanie klasy, ponieważ nie można traktować scenariusza rozszerzalności nie jest dobrze przemyślane. Użytkownicy Framework, takich jak dziedziczyć z klas z różnych powodów nonobvious, takich jak dodawanie członków wygody. Zobacz [Niezapieczętowane klasy](../../../docs/standard/design-guidelines/unsealed-classes.md) przykładów dotyczących powodów nonobvious użytkownicy chcą dziedziczyć z typu.  
   
  Powody do zamykania klasy są następujące:  
   
--   Klasa jest klasie statycznej. Zobacz [projekt klasy statycznej](../../../docs/standard/design-guidelines/static-class.md).  
+-   Klasa jest klasą statyczną. Zobacz [projekt klasy statycznej](../../../docs/standard/design-guidelines/static-class.md).  
   
--   Klasa przechowuje klucze tajne istotnych dla zabezpieczeń w dziedziczonych chronionych elementów członkowskich.  
+-   Klasa przechowuje wpisy tajne z istotnymi dla zabezpieczeń w elementy chronione dziedziczone.  
   
--   Klasa dziedziczy wiele wirtualnych elementów członkowskich i koszt pieczętowania je pojedynczo czy przeważają korzyści opuszczania klasy niezapieczętowane.  
+-   Klasa dziedziczy wielu wirtualnych elementów członkowskich, a koszt pieczętowania je pojedynczo może przeważyć zalety opuszczania klasy niezapieczętowane.  
   
--   Klasa jest atrybut, który wymaga środowiska uruchomieniowego bardzo szybko wyszukiwania. Atrybuty zapieczętowanego mają nieco wyższego poziomu wydajności niż niezapieczętowany z nich. Zobacz [atrybutów](../../../docs/standard/design-guidelines/attributes.md).  
+-   Klasa jest atrybut, który wymaga bardzo szybkie środowiska uruchomieniowego wyszukiwania. Zapieczętowane atrybuty mają nieznacznie wyższe poziomy wydajności niż te niezapieczętowany. zobacz [atrybuty](../../../docs/standard/design-guidelines/attributes.md).  
   
  **X DO NOT** deklaruj chronionych i wirtualnych elementów członkowskich w typach zapieczętowanych.  
   
- Zgodnie z definicją typów zapieczętowanych nie może być dziedziczona z. To oznacza, że nie można wywołać chronionych elementów członkowskich w typach zapieczętowanych i wirtualnych metod w typach zapieczętowanych nie można zastąpić.  
+ Z definicji po typach zapieczętowanych nie można dziedziczyć z. Oznacza to, że chronionych elementów członkowskich w typach zapieczętowanych nie można wywołać metody, a wirtualne metody w typach zapieczętowanych nie można zastąpić.  
   
  **✓ CONSIDER** pieczętowania elementów członkowskich, które można zastąpić.  
   
- Problemy, które mogą być wynikiem wprowadzenie wirtualnych elementów członkowskich (omówiona w [wirtualne elementy członkowskie](../../../docs/standard/design-guidelines/virtual-members.md)) dotyczą również zastąpienia chociaż nieco mniejszym stopniu. Pieczętowanie zastąpienia osłony można z tych problemów, począwszy od tego momentu w hierarchii dziedziczenia.  
+ Problemy, które mogą wynikać z jej poziomu wprowadzać wirtualnych elementów członkowskich (omówionych w [wirtualnych elementów członkowskich](../../../docs/standard/design-guidelines/virtual-members.md)) dotyczą przesłonięć, mimo że trochę mniejszym stopniu. Pieczętowanie zastąpienia ochronnym możesz z tych problemów, począwszy od tego momentu w hierarchii dziedziczenia.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [Niezapieczętowane klasy](../../../docs/standard/design-guidelines/unsealed-classes.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Niezapieczętowane klasy](../../../docs/standard/design-guidelines/unsealed-classes.md)

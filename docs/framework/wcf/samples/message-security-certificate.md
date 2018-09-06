@@ -7,11 +7,11 @@ ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: b556cb7a0ac518957f449dd266cab6968b07e357
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800329"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041590"
 ---
 # <a name="message-security-certificate"></a>Certyfikat zabezpieczeń komunikatów
 Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania certyfikatów X.509 v3 klienta i wymaga uwierzytelnienia serwera za pomocą certyfikat serwera X.509 v3. Ta próbka używa domyślnych ustawień w taki sposób, że wszystkie komunikaty aplikacji między klientem i serwerem są podpisane i szyfrowane. Ten przykład jest oparty na [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) i składa się z programu konsoli klienta i Biblioteka usługi hostowanej przez Internetowe usługi informacyjne (IIS). Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".  

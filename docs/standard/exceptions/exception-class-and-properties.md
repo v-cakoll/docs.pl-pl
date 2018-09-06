@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdc464234871fc07feeeb8dd02635ebdd151d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 283b3b1aa0d56b50b6f9e67b66de3e0b68ae2331
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573200"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036349"
 ---
 # <a name="exception-class-and-properties"></a>Właściwości i klasy wyjątków
 
-<xref:System.Exception> Klasa jest klasy podstawowej, z której dziedziczy wyjątków. Na przykład <xref:System.InvalidCastException> hierarchii klas jest następujący:
+<xref:System.Exception> Klasa to klasa bazowa, z którego dziedziczą wyjątków. Na przykład <xref:System.InvalidCastException> hierarchii klas jest następująca:
 
 ```
 Object
@@ -26,20 +26,21 @@ Object
        InvalidCastException
 ```
 
-<xref:System.Exception> Klasa ma następujące właściwości ułatwiających opis wyjątku łatwiejsze.
+<xref:System.Exception> Klasa ma następujące właściwości, które tworzą wyjątek ułatwia zrozumienie.
 
 | Nazwa właściwości | Opis |
 | ------------- | ----------- |
-| <xref:System.Exception.Data> | <xref:System.Collections.IDictionary> Przechowuje dowolne dane w pary klucz wartość. |
-| <xref:System.Exception.HelpLink> | Może zawierać adres URL (lub URN) do pliku pomocy, który udostępnia szeroką gamę informacje dotyczące przyczyny wyjątku. |
-| <xref:System.Exception.InnerException> | Ta właściwość umożliwia tworzenie i przechowywanie szereg wyjątków podczas obsługi wyjątków. Aby utworzyć nowy wyjątek, który zawiera wcześniej zgłoszony wyjątków, można użyć go. Pierwotny wyjątek mogą być przechwytywane przez drugi wyjątek w <xref:System.Exception.InnerException> właściwości, dzięki czemu kod obsługujący drugi wyjątek, aby sprawdzić dodatkowe informacje. Na przykład załóżmy, że ma metodę, która odbiera argument, który jest nieprawidłowo sformatowana.  Kod próbuje odczytać argument, ale jest zgłaszany wyjątek. Metoda przechwytuje wyjątek i zgłasza <xref:System.FormatException>. Aby zwiększyć możliwości wywołującego ustalenie przyczyny, dla której jest zgłaszany wyjątek, czasami jest pożądane dla metody catch wyjątku zgłoszonego przez procedury pomocnika i następnie zgłosić wyjątek więcej świadczy o wystąpieniu tego błędu. Można utworzyć wyjątek nowych i bardziej zrozumiałe, gdzie pierwotny wyjątek można ustawić odwołania wyjątek wewnętrzny. Ten wyjątek bardziej zrozumiałej następnie może zostać zgłoszony do obiektu wywołującego. Należy pamiętać, że dzięki tej funkcji, można utworzyć serii połączonego wyjątków, która kończy się najpierw zgłoszony wyjątek. |
-| <xref:System.Exception.Message> | Zawiera szczegółowe informacje o przyczynie Wystąpił wyjątek.
+| <xref:System.Exception.Data> | <xref:System.Collections.IDictionary> Przechowuje dowolne dane w parach klucz wartość. |
+| <xref:System.Exception.HelpLink> | Może zawierać adres URL (lub URN) do pliku pomocy, który zawiera wyczerpujące informacje o przyczynie wyjątku. |
+| <xref:System.Exception.InnerException> | Ta właściwość może służyć do tworzenia i zachować szereg wyjątki podczas obsługi wyjątku. Można użyć go, aby utworzyć nowy wyjątek, który zawiera wcześniej przechwycone wyjątki. Oryginalny wyjątek mogą być przechwytywane przez drugi wyjątek w <xref:System.Exception.InnerException> właściwości, dzięki czemu kod, który obsługuje drugi wyjątek, aby sprawdzić dodatkowe informacje. Na przykład załóżmy, że ma metodę, która odbiera argument, który jest nieprawidłowo sformatowana.  Kod próbuje odczytać argument, ale jest zgłaszany wyjątek. Metoda przechwytuje wyjątek i zgłasza <xref:System.FormatException>. Aby poprawić wywołującego zdolność do określenia przyczyny, dla której zgłaszany jest wyjątek, czasami jest pożądane dla metody przechwycić wyjątek zgłoszony przez pomocnika procedury i następnie generują bardziej wskazujące na błąd, który wystąpił wyjątek. Można utworzyć wyjątek nowe i bardziej zrozumiały, gdzie można ustawić odwołanie do wewnętrznego wyjątku do oryginalnego wyjątku. Ten bardziej zrozumiały może następnie być wyjątek do obiektu wywołującego. Należy pamiętać, że dzięki tej funkcji, możesz utworzyć serii połączone wyjątki, kończące się wyjątek, który został zgłoszony jako pierwsze. |
+| <xref:System.Exception.Message> | Zawiera szczegółowe informacje o przyczynie wyjątku.
 | <xref:System.Exception.Source> | Pobiera lub ustawia nazwę aplikacji lub obiekt, który powoduje błąd. |
-| <xref:System.Exception.StackTrace>| Zawiera ślad stosu, który może służyć do określenia, w którym wystąpił błąd. Ślad stosu obejmuje plik nazwy i program numer wiersza źródła Jeśli informacje o debugowaniu jest dostępna. |
+| <xref:System.Exception.StackTrace>| Zawiera ślad stosu, który może służyć do określenia, gdzie wystąpił błąd. Ślad stosu obejmuje źródła pliku nazwa i program numer wiersza, jeśli informacje o debugowaniu są dostępne. |
 
-Większość klas, które dziedziczą z <xref:System.Exception> nie implementuje dodatkowych członków lub oferowanie dodatkowych funkcji; dziedziczą po prostu z <xref:System.Exception>. W związku z tym najważniejsze informacje dla wyjątku znajdują się w hierarchii klasy wyjątków, nazwa wyjątku i informacje zawarte w wyjątek.
+Większość klas, które dziedziczą z <xref:System.Exception> nie implementuje dodatkowe elementy Członkowskie lub udostępniają dodatkowe funkcje; po prostu dziedziczą z <xref:System.Exception>. W związku z tym najważniejsze informacje o wyjątku znajdują się w hierarchii klasy wyjątków, nazwa wyjątku i informacje zawarte w wyjątku.
 
-Zalecamy throw i catch tylko te obiekty, które pochodzą z <xref:System.Exception>, ale może zgłosić dowolnego obiektu, która jest pochodną <xref:System.Object> klasy jako wyjątek. Należy pamiętać, że nie obsługuje wszystkich języków zgłaszanie i przechwytywanie obiektów, które nie pochodzą z <xref:System.Exception>.
+Zalecamy throw i catch tylko te obiekty, które wynikają z <xref:System.Exception>, ale może zgłosić dowolnego obiektu, który pochodzi od klasy <xref:System.Object> klasy jako wyjątek. Należy pamiętać, że nie wszystkie języki obsługują zgłaszania i przechwytywania obiektów, które nie pochodzą z <xref:System.Exception>.
   
-## <a name="see-also"></a>Zobacz też  
-[Wyjątki](index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wyjątki](index.md)

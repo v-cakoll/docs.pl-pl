@@ -1,21 +1,21 @@
 ---
-title: 'Porady: kontrolowanie serializacji klas pochodnych'
+title: 'Porady: kontrolowanie serializacji w klasach pochodnych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: e54388737371cc450eba375e1ac09f0ddbe563a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00eb4ba1f5f84c60f1ca51871f604b6ee27798c3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582125"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892840"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Porady: kontrolowanie serializacji klas pochodnych
-Przy użyciu **elementu XmlElementAttribute** atrybutu, aby zmienić nazwę elementu XML nie jest jedynym sposobem na dostosowanie serializacji obiektu. Można również dostosować strumień XML wynikających z istniejącej klasy, a jeśli <xref:System.Xml.Serialization.XmlSerializer> wystąpienia jak do serializacji nowej klasy.  
+# <a name="how-to-control-serialization-of-derived-classes"></a>Porady: kontrolowanie serializacji w klasach pochodnych
+Za pomocą **elementu XmlElementAttribute** atrybutu, aby zmienić nazwę elementu XML nie jest jedynym sposobem dostosować serializacji obiektu. Można również dostosować strumień XML wynikających z istniejącej klasy, a jeśli <xref:System.Xml.Serialization.XmlSerializer> wystąpienia jak do serializacji nowej klasy.  
   
- Na przykład `Book` klasy, można dziedziczyć po nim i utworzyć `ExpandedBook` klasy, która ma kilka innych właściwości. Jednak należy poinstruować **XmlSerializer** do akceptowania typu pochodnego podczas serializowania i deserializowania. Można to zrobić, tworząc <xref:System.Xml.Serialization.XmlElementAttribute> wystąpienia oraz ustawienie jego **typu** dla właściwości typu klasy pochodnej. Dodaj **elementu XmlElementAttribute** do <xref:System.Xml.Serialization.XmlAttributes> wystąpienia. Następnie dodaj **atrybutów XmlAttributes** do <xref:System.Xml.Serialization.XmlAttributeOverrides> wystąpienia określający typ zastępowaniu oraz nazwę elementu członkowskiego, który akceptuje klasy pochodnej. Przedstawiono to w poniższym przykładzie.  
+ Na przykład, biorąc pod uwagę `Book` klasy, można dziedziczyć po nim i Utwórz `ExpandedBook` klasy, która ma kilka innych właściwości. Jednakże, należy wydać **XmlSerializer** do zaakceptowania typu pochodnego podczas serializacji lub deserializacji. Można to zrobić, tworząc <xref:System.Xml.Serialization.XmlElementAttribute> wystąpienia oraz ustawienie jego **typu** właściwości na typ klasy pochodnej. Dodaj **elementu XmlElementAttribute** do <xref:System.Xml.Serialization.XmlAttributes> wystąpienia. Następnie dodaj **atrybutów XmlAttributes** do <xref:System.Xml.Serialization.XmlAttributeOverrides> wystąpienie określający typ zastępowaniu oraz nazwę składowej, która akceptuje klasę pochodną. Jest to pokazane w poniższym przykładzie.  
   
 ## <a name="example"></a>Przykład  
   
@@ -232,11 +232,12 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Serialization.XmlSerializer>  
- <xref:System.Xml.Serialization.XmlElementAttribute>  
- <xref:System.Xml.Serialization.XmlAttributes>  
- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- <xref:System.Xml.Serialization.XmlElementAttribute>  
+- <xref:System.Xml.Serialization.XmlAttributes>  
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
+- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

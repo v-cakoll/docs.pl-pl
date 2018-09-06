@@ -1,33 +1,34 @@
 ---
-title: Dane wejściowe dokumentu XmlDataDocument XslTransform
+title: Dane wejściowe obiektu XmlDataDocument klasy xsltransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 283681946702d80d746d40682eec2539ebfa68f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7fb30104f36a565f4e6742c8f808c48e4ef39ec
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572164"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884976"
 ---
-# <a name="xmldatadocument-input-to-xsltransform"></a>Dane wejściowe dokumentu XmlDataDocument XslTransform
+# <a name="xmldatadocument-input-to-xsltransform"></a>Dane wejściowe obiektu XmlDataDocument klasy xsltransform
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Może wykonywać rozszerzalny język arkusza stylów dla transformacji przekształcenia XSLT () przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [za pomocą klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [migracji z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+>  <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
   
- Microsoft [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementuje XML modelu DOM (Document Object) umożliwia dostęp do danych w dokumentach XML i dodatkowych klas do odczytu, zapisu i przejdź w dokumentach XML. <xref:System.Xml.XmlDataDocument>, Liczba znalezionych w <xref:System.Xml> przestrzeni nazw, zapewnia możliwość synchronizacji z danych relacyjnych w relacyjnych dostęp do danych <xref:System.Data.DataSet>. Jednocześnie można wyświetlać i manipulowania strukturalnych XML za pomocą relacyjne reprezentację <xref:System.Data.DataSet> lub modyfikowania częściowo ustrukturyzowanych XML za pomocą modelu DOM reprezentację <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XmlDataDocument> w związku z tym przecina granice XML i względem relacyjne.  
+ Microsoft [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementuje Model obiektu dokumentu (DOM) XML, aby zapewnić dostęp do danych w dokumentach XML i dodatkowych klas do odczytu, zapisu i nawigacja w dokumentach XML. <xref:System.Xml.XmlDataDocument>Znajdujące się w <xref:System.Xml> przestrzeni nazw, zapewnia możliwość zsynchronizować z danymi relacyjnymi w relacyjnych dostęp do danych <xref:System.Data.DataSet>. Jednocześnie można wyświetlać i manipulowania XML ze strukturą za pośrednictwem relacyjnych reprezentacja <xref:System.Data.DataSet> i umożliwiają manipulowanie XML lub częściową strukturą, za pośrednictwem modelu DOM reprezentacja <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XmlDataDocument> w związku z tym przekracza granice XML i relacyjnych podejść.  
   
- Jeśli dane są przechowywane w strukturze relacyjnych i ma to być dane wejściowe transformację XSLT, można załadować danych relacyjnych do <xref:System.Data.DataSet> i skojarz ją z <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XPath.XPathNavigator>, Dane wejściowe <xref:System.Xml.Xsl.XslTransform>, jest wdrażana w <xref:System.Xml.XmlDataDocument> za pośrednictwem <xref:System.Xml.XPath.IXPathNavigable> interfejsu. Wykonując danych relacyjnych załadowanie go do <xref:System.Data.DataSet>i przy użyciu synchronizacji w <xref:System.Xml.XmlDataDocument>, danych relacyjnych można już wykonywać na nim przekształcenia XSLT.  
+ Jeśli dane są przechowywane w strukturze relacyjnej, ma być użyty jako wejście do transformacji XSLT można załadować danych relacyjnych w <xref:System.Data.DataSet> i powiąż ją z <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XPath.XPathNavigator>, Dane wejściowe <xref:System.Xml.Xsl.XslTransform>, jest wdrażana w <xref:System.Xml.XmlDataDocument> za pośrednictwem <xref:System.Xml.XPath.IXPathNavigable> interfejsu. Wykonując opartego na danych relacyjnych, załadowanie go do <xref:System.Data.DataSet>i za pomocą synchronizacji w ramach <xref:System.Xml.XmlDataDocument>, dane relacyjne mogą teraz zawierać przekształcenia XSLT na nich wykonane.  
   
- Aby uzyskać więcej informacji na temat stosowania przekształcenia do danych relacyjnych, zobacz [stosowania przekształcenie XSLT do zestawu danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md).  
+ Aby uzyskać więcej informacji na temat stosowania transformacji na dane relacyjne zobacz [stosowanie przekształcenia XSLT do zestawu danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.XmlDataDocument>  
- [Synchronizacja elementów DataSet i XmlDataDocument](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [Przekształcenia XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
- [Klasa XPathNavigator w przekształceniach](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
- [Klasa XPathNodeIterator w przekształceniach](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Dane wejściowe obiektu XPathDocument klasy XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Dane wejściowe obiektu XmlDocument klasy XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Xml.XmlDataDocument>  
+- [Synchronizacja elementów DataSet i XmlDataDocument](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+- [Przekształcenia XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
+- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+- [Klasa XPathNavigator w przekształceniach](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+- [Klasa XPathNodeIterator w przekształceniach](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+- [Dane wejściowe obiektu XPathDocument klasy XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+- [Dane wejściowe obiektu XmlDocument klasy XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

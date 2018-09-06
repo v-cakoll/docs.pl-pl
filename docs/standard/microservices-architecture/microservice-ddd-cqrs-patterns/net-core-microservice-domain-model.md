@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
 ms.openlocfilehash: bb11d87cacf5bb6cbc980c879b0c42fae76f6246
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776437"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032465"
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementowanie modelu domeny mikrousługi za pomocą programu .NET Core 
 

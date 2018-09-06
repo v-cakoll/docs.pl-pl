@@ -12,28 +12,29 @@ helpviewer_keywords:
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94391471fecd92aeadec4da39cdd5b6f80bb6949
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfcd912fc16aa8d4b89a4f455d65b0294593cead
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581167"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886529"
 ---
 # <a name="replacing-a-principal-object"></a>Zastępowanie obiektu głównego
-Aplikacje, które udostępniają usługi uwierzytelniania musi mieć możliwość zastąpienia **główna** obiektu (<xref:System.Security.Principal.IPrincipal>) dla danego wątku. Ponadto system zabezpieczeń należy zabezpieczyć możliwość zastąpienia **główna** obiektów, ponieważ złośliwy dołączone, niepoprawny **główna** obniża bezpieczeństwo aplikacji, przejmowania nieprawdą tożsamości lub roli. W związku z tym aplikacje wymagające możliwość zastąpienia **główna** obiekty muszą być przyznane <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> obiekt dla formantu podmiotu zabezpieczeń. (Należy pamiętać, że to uprawnienie nie jest wymagane do wykonywania kontroli zabezpieczeń opartych na rolach lub tworzenia **główna** obiektów.)  
+Aplikacje, które zapewniają usługi uwierzytelniania musi być w stanie zastąpić **jednostki** obiektu (<xref:System.Security.Principal.IPrincipal>) dla danego wątku. Ponadto system zabezpieczeń należy zabezpieczyć możliwość zastąpienia **jednostki** obiektów, ponieważ złośliwie dołączone, niepoprawny **jednostki** obniża bezpieczeństwo aplikacji, Zgłaszanie nieprawdą tożsamości lub roli. W związku z tym, aplikacje, muszą mieć możliwość zastąpienia **jednostki** obiekty muszą być przyznane <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> obiekt dla formantu podmiotu zabezpieczeń. (Należy pamiętać, że to uprawnienie nie jest wymagane do wykonywania kontrole zabezpieczeń opartych na rolach lub tworzenia **jednostki** obiektów.)  
   
- Bieżący **główna** obiektu mogą zostać zastąpione przez wykonanie następujących zadań:  
+ Bieżący **jednostki** obiektu może zostać zastąpione przez wykonanie następujących zadań:  
   
-1.  Utwórz zastąpienie **główna** obiektu i skojarzone **tożsamości** obiektu.  
+1.  Utwórz zamiennik **jednostki** obiektu i skojarzone **tożsamości** obiektu.  
   
-2.  Dołącz nowy **główna** obiektu do kontekstu wywołania.  
+2.  Dołącz nowy **jednostki** obiektu do kontekstu wywołania.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób tworzenia ogólnego obiekt główny i użyj go, aby ustawić podmiot zabezpieczeń wątku.  
+ Poniższy przykład pokazuje, jak utworzyć ogólny obiekt podmiotu zabezpieczeń i użyć go, aby ustawić podmiot wątku.  
   
  [!code-csharp[SetCurrentPrincipal#1](../../../samples/snippets/csharp/VS_Snippets_CLR/SetCurrentPrincipal/CS/program.cs#1)]
  [!code-vb[SetCurrentPrincipal#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/SetCurrentPrincipal/VB/program.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>  
- [Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>  
+- [Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)

@@ -3,11 +3,11 @@ title: Zestawy i Globalna pamięć podręczna zestawów (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778389"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042299"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Zestawy i Globalna pamięć podręczna zestawów (C#)
 Zespoły tworzą podstawową jednostką wdrażania, kontroli wersji, ponownego użycia, określania zakresu aktywacji i uprawnień zabezpieczeń. Aplikacja oparta na sieci. Zestawy formę dołączana dynamicznie biblioteka (dll) pliku lub plik wykonywalny (.exe) i są blokami konstrukcyjnymi programu .NET Framework. Zapewniają one środowiska uruchomieniowego języka wspólnego informacje, które musi być znane implementacje typu. Można potraktować zestawu jako kolekcję typów i zasobów, które tworzą jednostkę logiczną funkcji i zostały opracowane w celu współpracują ze sobą.  

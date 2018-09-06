@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e72f87bd4a33491df46576629971c60af4630ce3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571894"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890655"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Używanie obsługi wyjątków filtrowanych przez użytkownika
-Visual Basic obsługuje obecnie wyjątki filtrowane przez użytkownika. Programy obsługi wyjątków filtrowanych przez użytkownika wychwycić i obsłużyć wyjątków na podstawie wymagań zdefiniowanych dla wyjątku. Użyj tych programów obsługi **Catch** instrukcji z **podczas** — słowo kluczowe.  
+Obecnie usługa Visual Basic obsługuje wyjątki filtrowane przez użytkownika. Programy obsługi wyjątków filtrowanych przez użytkownika przechwytywać i obsługiwać wyjątki, na podstawie wymagań zdefiniowanych dla wyjątku. Użyj tych procedur obsługi **Catch** instrukcję, określając **podczas** — słowo kluczowe.  
   
- Ta technika jest przydatna, gdy obiekt określonego wyjątku odpowiada wiele błędów. W takim przypadku obiekt zwykle ma właściwość, która zawiera kod błędu skojarzony z powodu błędu. Aby wybrać tylko określony błąd mają być obsługiwane w tym służy właściwości kodu błędu w wyrażeniu **Catch** klauzuli.  
+ Ta technika jest przydatna, gdy obiekt określony wyjątek odpowiada wiele błędów. W tym przypadku obiekt ma zazwyczaj właściwość, która zawiera kod błędu skojarzony z błędem. Właściwości kodu błędu w wyrażeniu służy do wybierania tylko określony błąd mają być obsługiwane w tym **Catch** klauzuli.  
   
- Przedstawiono w poniższym przykładzie w języku Visual Basic **wystąpienia Catch** instrukcji.  
+ W poniższym przykładzie w języku Visual Basic pokazano **Catch/gdy** instrukcji.  
   
 ```  
 Try  
@@ -30,12 +30,12 @@ Try
 End Try  
 ```  
   
- Wyrażenie klauzuli filtrowane przez użytkownika nie jest ograniczona w dowolny sposób. Jeśli wystąpi wyjątek podczas wykonywania wyrażenia filtrowane przez użytkownika, ten wyjątek jest odrzucany i wyrażenie filtru jest uznawany za obliczenia ma wartość false. W takim przypadku środowisko uruchomieniowe języka wspólnego kontynuuje wyszukiwanie programu obsługi dla bieżącego wyjątku.  
+ Wyrażenie klauzuli filtrowanych przez użytkownika nie ma ograniczeń w dowolny sposób. Jeśli wystąpi wyjątek podczas wykonywania wyrażenia filtrowanych przez użytkownika, ten wyjątek jest odrzucana i wyrażenie filtru jest uznawany za zostały ocenione na wartość false. W takim wypadku środowisko uruchomieniowe języka wspólnego kontynuuje wyszukiwanie obsługi dla bieżącego wyjątku.  
   
-## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Łączenie określonego wyjątku i klauzule filtrowane przez użytkownika  
- Instrukcji catch może zawierać zarówno określony wyjątek, jak i klauzule filtrowane przez użytkownika. Środowisko uruchomieniowe testów najpierw określony wyjątek. Jeśli określony wyjątek zakończy się powodzeniem, środowisko uruchomieniowe wykonuje filtr użytkowników. Ogólne filtru może zawierać odwołanie do zmiennej zadeklarowanej w filtrze klasy. Należy pamiętać, kolejność klauzul dwóch filtru nie można cofnąć.  
+## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Łączenie określonego wyjątku i klauzule filtrowanych przez użytkownika  
+ Instrukcja catch może zawierać zarówno określony wyjątek, jak i klauzule filtrowanych przez użytkownika. Środowisko uruchomieniowe sprawdza określony wyjątek, najpierw. Jeśli określony wyjątek zakończy się powodzeniem, środowisko uruchomieniowe wykonuje filtr użytkownika. Filtr ogólny może zawierać odwołanie do zmiennej zadeklarowanej w filtrze klasy. Należy zauważyć kolejność klauzul dwóch filtru nie można cofnąć.  
   
- W poniższym przykładzie w języku Visual Basic zawiera określony wyjątek `ClassLoadException` w **Catch** instrukcji, a także za pomocą klauzuli filtrowane przez użytkownika **podczas** — słowo kluczowe.  
+ W poniższym przykładzie w języku Visual Basic przedstawia określony wyjątek `ClassLoadException` w **Catch** instrukcji, a także przy użyciu klauzuli filtrowanych przez użytkownika **podczas** — słowo kluczowe.  
   
 ```  
 Try  
@@ -45,5 +45,6 @@ Try
 End Try  
 ```  
 
-## <a name="see-also"></a>Zobacz też
-[Wyjątki](index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wyjątki](index.md)

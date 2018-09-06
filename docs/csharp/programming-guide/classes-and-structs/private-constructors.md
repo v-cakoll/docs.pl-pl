@@ -6,11 +6,11 @@ helpviewer_keywords:
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
 ms.openlocfilehash: 1338a6efbe03522093899009178b6f31e558d8dd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802706"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036898"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Konstruktory prywatne (Przewodnik programowania w języku C#)
 Konstruktor prywatny jest konstruktorem wystąpienia specjalnego. Zazwyczaj jest używany w klasach, które zawierają tylko statyczne elementy członkowskie. Jeśli klasa ma co najmniej jeden prywatny konstruktorów i konstruktorów publicznych, inne klasy (z wyjątkiem klas zagnieżdżonych) nie można utworzyć wystąpienia tej klasy. Na przykład:  

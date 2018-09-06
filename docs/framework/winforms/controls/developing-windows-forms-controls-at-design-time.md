@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 ms.openlocfilehash: b58318a3e0e9881725d3c260251288c720fa4132
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745114"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041345"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>Opracowywanie formantów formularzy systemu Windows w czasie projektowania
 Dla autorów kontroli programu .NET Framework zapewnia wiele technologii do tworzenia kontrolki. Autorzy nie są już ograniczony do projektowania formanty złożone, które działają jako kolekcję istniejących kontrolek. Poprzez dziedziczenie można utworzyć własne kontrolki z istniejących kontrolek złożonych lub istniejących kontrolek Windows Forms. Istnieje również możliwość projektowania własnych kontrolek, które implementują niestandardowe malowania. Te opcje umożliwiają dużą elastyczność w projekcie i funkcjonalność interfejsu wizualnego. Aby móc korzystać z tych funkcji, należy zapoznać się z koncepcjami opartej na obiektach.  

@@ -3,11 +3,11 @@ title: Biblioteka działań
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
 ms.openlocfilehash: 29b3efd648ac103526f572a2cac5b8b67c4b220a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746722"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036054"
 ---
 # <a name="activity-library"></a>Biblioteka działań
 Ta sekcja zawiera przykłady pokazujące, zaawansowanych niestandardowych działań w Windows Workflow Foundation (WF).  

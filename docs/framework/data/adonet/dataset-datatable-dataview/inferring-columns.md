@@ -3,11 +3,11 @@ title: Wnioskowanie kolumn
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
 ms.openlocfilehash: 56de4b4d6cf704473ec46957625ad1c376f595c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671413"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891356"
 ---
 # <a name="inferring-columns"></a>Wnioskowanie kolumn
 Po ADO.NET stwierdził z dokumentu XML które elementy, które działają jako tabele <xref:System.Data.DataSet>, następnie wnioskuje kolumn dla tych tabel. ADO.NET w wersji 2.0 wprowadzono nowy aparat wnioskowania schematu, który wnioskuje typ silnie typizowanych danych dla każdego **simpleType** elementu. W poprzednich wersjach, typ danych wnioskowanym **simpleType** element był to zawsze ciąg **element xsd: String**.  

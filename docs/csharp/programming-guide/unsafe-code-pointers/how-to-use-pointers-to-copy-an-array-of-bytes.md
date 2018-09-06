@@ -6,11 +6,11 @@ helpviewer_keywords:
 - arrays [C#], byte
 - pointers [C#], to copy bytes
 ms.openlocfilehash: 061bbbc4557cb25d39edfb1f6235bb065a5de7bd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748106"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881398"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Porady: użycie wskaźników do kopiowania tablicy bajtów (Przewodnik programowania w języku C#)
 

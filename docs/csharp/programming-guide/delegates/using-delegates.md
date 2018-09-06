@@ -5,11 +5,11 @@ helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
 ms.openlocfilehash: 07bc0e38455335e068719137c349daf65f8fab6b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "43860288"
+ms.locfileid: "44042208"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Używanie delegatów (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, który hermetyzuje bezpiecznie metody, podobne do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji języka C obiekty delegowane są zorientowane obiektowo, typu, bezpieczeństwa i bezpieczne. Typ obiektu delegowanego jest definiowany przez nazwę obiektu delegowanego. Poniższy przykład deklaruje delegat o nazwie `Del` który umożliwiająca Hermetyzowanie metody, która przyjmuje [ciąg](../../../csharp/language-reference/keywords/string.md) jako argument i zwraca [void](../../../csharp/language-reference/keywords/void.md):  

@@ -1,81 +1,82 @@
 ---
-title: Wnioskowanie typów prostych reguł
+title: Zasady wnioskowania typów prostych
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d265d9247d00a20770d401d62fd1e065e2ef1627
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576396"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891145"
 ---
-# <a name="rules-for-inferring-simple-types"></a>Wnioskowanie typów prostych reguł
-Opisuje sposób <xref:System.Xml.Schema.XmlSchemaInference> klasy wnioskuje typ danych dla atrybutów i elementów.  
+# <a name="rules-for-inferring-simple-types"></a>Zasady wnioskowania typów prostych
+W tym artykule opisano sposób, w jaki <xref:System.Xml.Schema.XmlSchemaInference> klasy wnioskuje typ danych dla atrybutów i elementów.  
   
- <xref:System.Xml.Schema.XmlSchemaInference> Klasy wnioskuje typ danych dla atrybuty i elementy jako typów prostych. W tej sekcji opisano potencjalne typów wykrywany, jak wiele różnych wartości są uzgodniony z pojedynczym typem oraz sposób definiowania schematu `xsi` atrybutów są obsługiwane.  
+ <xref:System.Xml.Schema.XmlSchemaInference> Klasy wnioskuje typ danych dla atrybuty i elementy jako typy proste. W tej sekcji opisano potencjalne typów wykrywany, w wielu różnych wartości są uzgodnione do jednego typu i sposobu definiowania schematu `xsi` atrybutów są obsługiwane.  
   
 ## <a name="inferred-types"></a>Wywnioskowane typów  
- <xref:System.Xml.Schema.XmlSchemaInference> Klasy wnioskuje element i atrybut wartości jako typy proste i zawiera atrybut typu w schemacie wynikowy. Wywnioskowane wszystkie typy są typów prostych. Brak typów podstawowych lub aspekty są dołączane jako część schematu wynikowy.  
+ <xref:System.Xml.Schema.XmlSchemaInference> Klasy wnioskuje element i atrybut wartości jako typy proste i obejmuje atrybutu typu Wynikowe schemat. Wszystkie wywnioskować, że typy są typy proste. Nie typów podstawowych lub zestawów reguł są dołączane jako część wynikowe schemat.  
   
- Wartości badane są indywidualnie, ponieważ są one napotkał w dokumencie XML. Typ jest wywnioskować wartości w czasie jej się zbadana. Jeśli typem zostało wywnioskowane dla elementu lub atrybutu i napotkano wartość dla elementu lub atrybutu jest niezgodny z aktualnie wnioskowany typ <xref:System.Xml.Schema.XmlSchemaInference> klasy wspiera typu dla każdego zestawu reguł. Reguły te omówiono w sekcji podwyższania poziomu typu w dalszej części tego tematu.  
+ Wartości są badane pojedynczo po ich napotkaniu w dokumencie XML. Typ jest wnioskowany dla wartości w czasie, który jest sprawdzany pod. Jeśli typem została wykryta dla atrybutu lub elementu, a wartość atrybutu lub elementu okaże się, że nie jest zgodny z typem obecnie wykrywany, <xref:System.Xml.Schema.XmlSchemaInference> klasy promuje typ dla każdego zestawu reguł. Te reguły są omówione w sekcji promocji typu w dalszej części tego tematu.  
   
- W poniższej tabeli wymieniono możliwych typów wnioskowany wynikowy schematu.  
+ Poniższa tabela zawiera listę możliwych typów wnioskowany dla wynikowe schemat.  
   
 |Typ prosty|Opis|  
 |-----------------|-----------------|  
 |wartość logiczna|True, false, 0, 1.|  
-|byte|Liczby całkowite z zakresu – 128 do 127.|  
+|byte|Liczby całkowite z zakresu od – 128 do 127.|  
 |unsignedByte|Liczby całkowite z zakresu od 0 do 255.|  
-|short|Liczby całkowite z zakresu od –32768 do 32767.|  
+|short|Liczby całkowite z zakresu –32768 do 32767.|  
 |unsignedShort|Liczby całkowite z zakresu od 0 do 65535.|  
-|int|Liczby całkowite z zakresu od –2147483648 do 2147483647.|  
-|unsignedInt|Liczby całkowite z zakresu od 0 do 4294967295.|  
-|long|Liczby całkowite z zakresu od –9223372036854775808 do 9223372036854775807.|  
+|int|Liczby całkowite z zakresu –2147483648 do 2147483647.|  
+|unsignedInt|Liczby całkowite z zakresu od 0, 4294967295.|  
+|long|Liczby całkowite z zakresu –9223372036854775808 do 9223372036854775807.|  
 |unsignedLong|Liczby całkowite z zakresu od 0 do 18446744073709551615 są.|  
-|integer|Skończoną liczbę cyfr prawdopodobnie jest poprzedzony prefiksem "-".|  
+|integer|Skończoną liczbę cyfr, prawdopodobnie z prefiksem "-".|  
 |decimal|Wartości liczbowe, które zawierają z zakresu od 0 do 28 cyfr precyzji.|  
-|float|Liczba cyfr dziesiętnych, opcjonalnie, "E" lub "e", po której następuje wartość całkowitą reprezentującą wykładnik. W zakresie-16777216 do 16777216 można wartości dziesiętnych. Wartości wykładnika mogą być w zakresie –149 do 104.<br /><br /> Float umożliwia specjalne wartości, aby reprezentować nieskończoności i wartości innych niż alfanumeryczne. Specjalne wartości typu float to: 0, 0, INF, -INF, NaN.|  
-|double|Taki sam jak float, z wyjątkiem wartości dziesiętnych może znajdować się w zakresie-9007199254740992 do 9007199254740992 i wartości wykładnika mogą być w zakresie –1075 do 970.<br /><br /> Umożliwia o podwójnej precyzji dla specjalnych wartości, aby reprezentować nieskończoności i wartości nieliczbowe. Specjalne wartości typu float to: 0, 0, INF, -INF, NaN.|  
+|float|Miejsca dziesiętne, opcjonalnie, "E" lub "e", po którym następuje wartość całkowitą reprezentującą wykładnik potęgi. Wartości dziesiętnych może być w zakresie-16777216 do 16777216. Wartości wykładnika mogą być w zakresie –149 do 104.<br /><br /> Float umożliwia specjalnych wartości do reprezentowania nieskończoności i wartości nieliczbowe. Specjalne wartości zmiennoprzecinkowe są: 0, - 0, INF, -INF, NaN.|  
+|double|Taka sama jak zmiennoprzecinkową, z wyjątkiem wartości dziesiętnych może być w zakresie-9007199254740992 do 9007199254740992 i wykładnika wartości mogą być w zakresie –1075 do 970.<br /><br /> Umożliwia podwójnej precyzji dla specjalnych wartości do reprezentowania nieskończoności i wartości nieliczbowe. Specjalne wartości zmiennoprzecinkowe są: 0, - 0, INF, -INF, NaN.|  
 |czas trwania|Format czasu trwania W3C.|  
 |Data i godzina|Format daty/godziny W3C.|  
 |czas|Format czasu W3C.|  
-|Data|Ograniczenia są wartości roku od 0001 do 9999.|  
-|gYearMonth|Format miesiąc i rok kalendarza gregoriańskiego W3C.|  
-|string|Co najmniej jeden znak Unicode.|  
+|Data|Wartości roku, są ograniczone od 0001 do 9999.|  
+|gYearMonth|Format miesiąca i roku gregoriański W3C.|  
+|string|Jeden lub więcej znaków Unicode.|  
   
 ## <a name="type-promotion"></a>Promocja typu  
- <xref:System.Xml.Schema.XmlSchemaInference> Klasa sprawdza wartości atrybutu i element co naraz. Jako wartości zostaną napotkane, jest wywnioskowany typ najbardziej restrykcyjne, bez znaku. Jeśli wywnioskowano typu dla elementu lub atrybutu i nową wartość okaże się, że nie jest zgodny z typem obecnie wykrywany, wnioskowany typ jest podwyższany do nowego typu, który dotyczy zarówno obecnie wnioskowany typ, jak i nowa wartość. <xref:System.Xml.Schema.XmlSchemaInference> Klasy należy wziąć pod uwagę poprzednie wartości podczas podwyższania poziomu wnioskowany typ.  
+ <xref:System.Xml.Schema.XmlSchemaInference> Klasy sprawdza, czy wartości atrybutu i elementu jednego naraz. Po napotkaniu wartości jest wnioskowany typ najbardziej restrykcyjne, bez znaku. Jeśli typem została wykryta dla atrybutu lub elementu, a nowa wartość okaże się, że jest niezgodny z aktualnie wnioskowany typ, wnioskowany typ zostanie podwyższony do nowego typu, który dotyczy zarówno obecnie wnioskowany typ, jak i nową wartość. <xref:System.Xml.Schema.XmlSchemaInference> Klasy należy wziąć pod uwagę poprzednie wartości podczas podwyższania poziomu wnioskowany typ.  
   
- Na przykład wziąć pod uwagę poniższe fragmenty XML z dwa dokumenty XML:  
+ Na przykład należy wziąć pod uwagę następujące fragmenty XML z dwóch dokumentów XML:  
   
  `<MyElement1 attr1="12" />`  
   
  `<MyElement1 attr1="52344" />`  
   
- Gdy pierwszy `attr1` napotkano wartość typu `attr1` jest wywnioskowany jako `unsignedByte` na podstawie wartości `12`. Gdy drugi `attr1` jest napotkano typ jest podwyższany do `unsignedShort` oparte na aktualnie wnioskowany typ `unsignedByte` i bieżącą wartość `52344`.  
+ Po pierwsze `attr1` napotkano wartość typu `attr1` jest wnioskowany jako `unsignedByte` na podstawie wartości `12`. Podczas drugiego `attr1` jest napotkano typ zostanie podwyższony do `unsignedShort` oparte na aktualnie wnioskowany typ `unsignedByte` i bieżącą wartość `52344`.  
   
- Teraz należy wziąć pod uwagę następujące XML z dwa dokumenty XML:  
+ Rozważmy następujący kod XML z dwóch dokumentów XML:  
   
  `<MyElement2 attr2="0" />`  
   
  `<MyElement2 attr2="true" />`  
   
- Gdy pierwszy `attr2` napotkano wartość typu `attr2` jest wywnioskowany jako `unsignedByte` na podstawie wartości `0`. Gdy drugi `attr2` jest napotkano typ jest podwyższany do `string` oparte na aktualnie wnioskowany typ `unsignedByte` i bieżącą wartość `true` ponieważ <xref:System.Xml.Schema.XmlSchemaInference> klasy należy wziąć pod uwagę poprzednie wartości podczas podwyższania poziomu wywnioskować typu. Jednak jeśli oba wystąpienia `attr2` napotkano w tym samym dokumencie XML, a nie w dwóch różnych dokumentów XML, jak pokazano powyżej, `attr2` czy wywnioskować jako `boolean`.  
+ Po pierwsze `attr2` napotkano wartość typu `attr2` jest wnioskowany jako `unsignedByte` na podstawie wartości `0`. Podczas drugiego `attr2` jest napotkano typ zostanie podwyższony do `string` oparte na aktualnie wnioskowany typ `unsignedByte` i bieżącą wartość `true` ponieważ <xref:System.Xml.Schema.XmlSchemaInference> klasy należy wziąć pod uwagę poprzednie wartości podczas podwyższania poziomu wnioskowany typ. Jednak jeśli oba wystąpienia elementu `attr2` napotkano w dokumencie XML, a nie w dwóch różnych dokumentów XML, jak pokazano powyżej, `attr2` może wywnioskować jako `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Ignorowane atrybutów z http://www.w3.org/2001/XMLSchema-instance Namespace  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Ignorowane atrybuty z http://www.w3.org/2001/XMLSchema-instance Namespace  
  Poniżej przedstawiono definiowania schematu atrybutów, które są ignorowane podczas wnioskowania schematu.  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`xsi:type`|Jeśli element z `xsi:type` określony, `xsi:type` jest ignorowana.|  
-|`xsi:nil`|Jeśli element z `xsi:nil` napotkano atrybut, jego deklarację elementu w schemacie wnioskowany ma wartość `nillable="true"`. Element z `xsi:nil` określić dla atrybutu `true` nie może mieć elementów podrzędnych.|  
-|`xsi:schemaLocation`|Jeśli `xsi:schemaLocation` jest napotkano jest ignorowana.|  
-|`xsi:noNamespaceSchemaLocation`|Jeśli `xsi:noNamespaceSchemaLocation` jest napotkano jest ignorowana.|  
+|`xsi:type`|Jeśli element zostanie osiągnięty przy użyciu `xsi:type` określony, `xsi:type` jest ignorowana.|  
+|`xsi:nil`|Jeśli element z `xsi:nil` atrybut zostanie osiągnięty, jego deklaracji elementu w schemacie wywnioskowane z wartością `nillable="true"`. Element z `xsi:nil` ustawioną wartość atrybutu `true` nie może mieć elementów podrzędnych.|  
+|`xsi:schemaLocation`|Jeśli `xsi:schemaLocation` jest wystąpił, jest ignorowany.|  
+|`xsi:noNamespaceSchemaLocation`|Jeśli `xsi:noNamespaceSchemaLocation` jest wystąpił, jest ignorowany.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Wnioskowanie schematów na podstawie dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Zasady wnioskowania typów węzłów schematu i struktury](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Wnioskowanie schematów na podstawie dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Zasady wnioskowania typów węzłów schematu i struktury](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

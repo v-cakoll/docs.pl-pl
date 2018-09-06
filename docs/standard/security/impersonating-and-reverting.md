@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40fef0ccbdf73580c5662fc76ed4335e587b9fbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bc5b4a9bef51ac1591bdeb21651cee624d552b2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582177"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891749"
 ---
 # <a name="impersonating-and-reverting"></a>Personifikacja i przywracanie
-Czasami może być konieczne uzyskanie tokenu konta systemu Windows do personifikacji konta systemu Windows. Na przykład aplikacja oparty na programie ASP.NET może być konieczne działają w imieniu kilku użytkowników w różnym czasie. Aplikacja może akceptuje token, który reprezentuje administrator z Internet Information Services (IIS), personifikacji tego użytkownika w trakcie operacji i powrócić do poprzedniej tożsamości. Następnie go może zaakceptować tokenu z usług IIS, które reprezentuje użytkownika z prawami mniej, niektórych operacji i przywrócić ponownie.  
+Czasami może być konieczne do uzyskania tokenu konta Windows dokonać personifikacji konta Windows. Na przykład aplikacji opartych na programie ASP.NET może być konieczne działanie w imieniu kilku użytkowników w różnym czasie. Aplikację może akceptuje token, który reprezentuje administrator z Internet Information Services (IIS), personifikacji tego użytkownika, w trakcie operacji i powrócić do poprzedniej tożsamości. Następnie go może zaakceptować token za pomocą programu IIS, który reprezentuje użytkownika z prawami mniej, wykonać kilka operacji i przywrócić ponownie.  
   
- W sytuacjach, w którym musi być Personifikowane przez aplikację konto systemu Windows, który nie został dołączony do bieżącego wątku przez usługi IIS należy pobrać token tego konta i użyj go, aby aktywować konto. Można to zrobić, wykonując następujące czynności:  
+ W sytuacjach, w której aplikacja musi dokonać personifikacji konta Windows, który nie został dołączony do bieżącego wątku przez usługi IIS należy pobrać tokenu dla konta i użyć go do aktywowania konta. Można to zrobić, wykonując następujące czynności:  
   
-1.  Pobrać tokenu konta dla danego użytkownika poprzez wywołanie niezarządzanej **funkcji LogonUser** metody. Ta metoda nie jest w bibliotece programu .NET Framework klasy podstawowej, ale znajduje się w niezarządzanej **advapi32.dll**. Uzyskiwanie dostępu do metody za pomocą kodu niezarządzanego jest zaawansowanym działaniem i wykracza poza zakres tej dyskusji. Aby uzyskać więcej informacji, zobacz [współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md). Aby uzyskać więcej informacji na temat **funkcji LogonUser** — metoda i **advapi32.dll**, można znaleźć w dokumentacji zestawu SDK platformy.  
+1.  Pobieranie tokenu konta dla danego użytkownika przez wywołania do niezarządzanej **funkcji LogonUser** metody. Ta metoda nie znajduje się w bibliotece klasy bazowej .NET Framework, ale znajduje się w niezarządzanej **advapi32.dll**. Uzyskiwanie dostępu do metody w kodzie niezarządzanym jest zaawansowanym działaniem i wykracza poza zakres tej dyskusji. Aby uzyskać więcej informacji, zobacz [współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md). Aby uzyskać więcej informacji na temat **funkcji LogonUser** metody i **advapi32.dll**, znajdują się w dokumentacji zestawu SDK platformy.  
   
-2.  Utwórz nowe wystąpienie klasy **WindowsIdentity** klasy, przekazując tokenu. Poniższy kod ilustruje to wywołanie, gdy `hToken` reprezentuje token systemu Windows.  
+2.  Utwórz nowe wystąpienie klasy **WindowsIdentity** klasy, przekazując tokenu. Poniższy kod przedstawia to wywołanie, gdy `hToken` reprezentuje Windows token.  
   
     ```csharp  
     WindowsIdentity ImpersonatedIdentity = new WindowsIdentity(hToken);  
@@ -36,7 +36,7 @@ Czasami może być konieczne uzyskanie tokenu konta systemu Windows do personifi
     Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
-3.  Rozpocznij personifikacji, tworząc nowe wystąpienie klasy <xref:System.Security.Principal.WindowsImpersonationContext> klasy i Inicjowanie za pomocą <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> metody klasy zainicjowane, jak pokazano w poniższym kodzie.  
+3.  Rozpocznij personifikacji, tworząc nowe wystąpienie klasy <xref:System.Security.Principal.WindowsImpersonationContext> klasy i inicjując go przy użyciu <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> metody klasy zainicjowane, jak pokazano w poniższym kodzie.  
   
     ```csharp  
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
@@ -46,7 +46,7 @@ Czasami może być konieczne uzyskanie tokenu konta systemu Windows do personifi
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate()  
     ```  
   
-4.  Jeśli nie jest już potrzebne personifikacji, wywołaj <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> metodę, aby przywrócić personifikacji, jak pokazano w poniższym kodzie.  
+4.  Jeśli nie potrzebujesz już być Personifikowane przez aplikację, należy wywołać <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> metodę, aby przywrócić personifikacji, jak pokazano w poniższym kodzie.  
   
     ```csharp  
     MyImpersonation.Undo();  
@@ -56,12 +56,13 @@ Czasami może być konieczne uzyskanie tokenu konta systemu Windows do personifi
     MyImpersonation.Undo()  
     ```  
   
- Jeśli zaufany kod został już dołączony <xref:System.Security.Principal.WindowsPrincipal> obiektów w wątku, należy wywołać metodę wystąpienia **Impersonate**, nie ma tokenu konta. Należy pamiętać, że jest to przydatne tylko kiedy **WindowsPrincipal** obiektu w wątku reprezentuje użytkownika innego niż ten, w którym proces jest aktualnie wykonywany. Na przykład może wystąpić sytuacja przy użyciu platformy ASP.NET z uwierzytelniania systemu Windows, włączona i personifikacji wyłączone. W takim przypadku proces działa w ramach konta skonfigurowane w Internet Information Services (IIS), podczas gdy bieżący podmiot zabezpieczeń reprezentuje użytkownika systemu Windows, który uzyskuje dostęp do strony.  
+ Jeśli zaufanego kodu jest już dołączony <xref:System.Security.Principal.WindowsPrincipal> obiekt wątku, można wywołać metodę wystąpienia **Personifikuj**, nie przyjmuje tokenu konta. Należy pamiętać, że ta opcja jest przydatna podczas **WindowsPrincipal** obiektu w wątku reprezentuje użytkownik inny niż ten, w którym proces jest w trakcie wykonywania. Na przykład można napotkać tę sytuację, za pomocą programu ASP.NET z uwierzytelnianiem Windows, włączone i wyłączone personifikacji. W tym przypadku proces działa przy użyciu konta skonfigurowane w Internet Information Services (IIS), gdy bieżący podmiot zabezpieczeń reprezentuje użytkownika Windows, który uzyskuje dostęp do strony.  
   
- Należy pamiętać, że ani **personifikacji** ani **Cofnij** zmiany **główna** obiektu (<xref:System.Security.Principal.IPrincipal>) skojarzone z bieżącego kontekstu wywołania. Zamiast personifikacja i przywracanie zmiany token skojarzone z bieżącego procesu systemu operacyjnego.  
+ Należy pamiętać, że żadna z nich nie **Personifikuj** ani **Cofnij** zmiany **jednostki** obiektu (<xref:System.Security.Principal.IPrincipal>) skojarzony z bieżącym kontekstem wywołania. Zamiast personifikacji i cofanie zmian tokenu skojarzone z bieżącym procesem systemu operacyjnego...  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Security.Principal.WindowsIdentity>  
- <xref:System.Security.Principal.WindowsImpersonationContext>  
- [Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)  
- [Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Security.Principal.WindowsIdentity>  
+- <xref:System.Security.Principal.WindowsImpersonationContext>  
+- [Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)  
+- [Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)

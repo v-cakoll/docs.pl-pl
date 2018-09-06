@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń'
+title: 'Porady: tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: cbd45580e84a0723d28bab538bc0ffe388899d61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8cbc22be68aae976e939520383995652e896d529
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724425"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892324"
 ---
-# <a name="how-to-create-a-custom-security-token-authenticator"></a>Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń
+# <a name="how-to-create-a-custom-security-token-authenticator"></a>Porady: tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych
 W tym temacie przedstawiono sposób tworzenia wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych oraz zintegrować ją z usługą Menedżer tokenów zabezpieczeń niestandardowych. Wystawcy uwierzytelniania tokenu zabezpieczeń sprawdza poprawność zawartości tokenu zabezpieczającego z dołączonym wiadomości przychodzącej. Jeśli weryfikacja zakończy się powodzeniem, wystawcy uwierzytelnienia zwraca kolekcję <xref:System.IdentityModel.Policy.IAuthorizationPolicy> wystąpień, gdy obliczane, zwracany jest zestaw oświadczeń.  
   
  Aby użyć wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych w Windows Communication Foundation (WCF), należy najpierw utworzyć niestandardowe poświadczenia i zabezpieczeń implementacje Menedżer tokenów. Aby uzyskać więcej informacji na temat tworzenia niestandardowych poświadczeń i zabezpieczeń Menedżer tokenów zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Aby uzyskać więcej informacji na temat klasy dostawcy i wystawcy uwierzytelnienia poświadczeń, Menedżer tokenów zabezpieczeń i zobacz [architekturę zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
@@ -46,9 +46,9 @@ W tym temacie przedstawiono sposób tworzenia wystawcy uwierzytelniania tokenu z
   
 4.  Implementowanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metody. Ta metoda wypełni wystąpienie <xref:System.IdentityModel.Policy.EvaluationContext> klasy (przekazanego jako argument) przy użyciu oświadczeń, które są oparte na przychodzące zawartości tokenu zabezpieczeń. Metoda ta zwraca `true` po zakończeniu z oceną. W przypadkach, gdy implementacja zależy od obecności innych zasad autoryzacji, które udostępniają dodatkowe informacje na kontekst oceny tej metody może zwrócić `false` Jeśli nie ma wymaganych informacji jeszcze w kontekście oceny. W takim przypadku WCF będzie wywoływać metody ponownie po przeprowadzeniu oceny innych zasad autoryzacji wygenerowany dla komunikatu przychodzącego, jeśli co najmniej jeden z tych zasad autoryzacji zmodyfikowany kontekst oceny.  
   
-     [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
-     [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
-  
+     [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
+     [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
+
  [Wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) zawiera opis sposobu tworzenia niestandardowych poświadczeń i niestandardowe zabezpieczeń Menedżer tokenów. Aby użyć niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń utworzone, w tym miejscu implementację Menedżer tokenów zabezpieczeń zostanie zmodyfikowany na potrzeby zwracają niestandardowych aplikacji authenticator z <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> metody. Metoda zwraca wystawcy uwierzytelnienia, gdy wymóg tokenu zabezpieczeń odpowiednich jest przekazywany w.  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Aby zintegrować wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych z Menedżer tokenów zabezpieczeń niestandardowe  
@@ -57,10 +57,10 @@ W tym temacie przedstawiono sposób tworzenia wystawcy uwierzytelniania tokenu z
   
 2.  Dodaj logikę do metody, aby umożliwić zwracają Twojego niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń na podstawie <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametru. Poniższy przykład zwraca wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych, jeśli typ tokenu wymagania tokenu jest nazwą użytkownika (reprezentowane przez <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A> właściwości) i danych wejściowych (kierunek wiadomości, dla którego wnioskuje się wystawcy uwierzytelniania tokenu zabezpieczeń reprezentowane przez <xref:System.ServiceModel.Description.MessageDirection.Input> pola).  
   
-     [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
-     [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
-  
-## <a name="see-also"></a>Zobacz też  
+     [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
+     [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
+ 
+## <a name="see-also"></a>Zobacz także  
  <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
  <xref:System.IdentityModel.Selectors.SecurityTokenManager>  

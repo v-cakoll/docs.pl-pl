@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
 ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740406"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038604"
 ---
 # <a name="manipulating-data"></a>Manipulowanie danymi
 Przed wprowadzeniem z wielu aktywnych zestawów wyników (MARS) deweloperów było użyć wielu połączeń lub kursory po stronie serwera do rozwiązywania niektórych scenariuszy. W przypadku wielu połączeń były używane w sytuacji, transakcyjnego, powiązane połączenia (przy użyciu **sp_getbindtoken** i **procedury sp_bindsession**) były wymagane. W poniższych scenariuszach pokazano sposób używania połączenia z obsługą usług MARS zamiast wielu połączeń.  

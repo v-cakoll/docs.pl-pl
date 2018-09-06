@@ -1,6 +1,6 @@
 ---
-title: 'Porady: Określa, czy obiekt .NET Standard jest możliwy do serializacji'
-description: Pokazuje sposób określania, czy w czasie wykonywania można zserializować typu .NET Standard.
+title: Jak ustalić, czy obiekt standardowy .NET jest możliwy do serializacji
+description: Pokazuje, jak ustalić, czy typ .NET Standard może być serializowany w czasie wykonywania.
 ms.date: 10/20/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - objects, serializing steps
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 247eed2e7091930c6bcfaa524296b45350dd6510
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 196e99ab1f1a0baae53c6a1dc295b135e36fbfe0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580991"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881411"
 ---
-# <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>Porady: Określa, czy obiekt .NET Standard jest możliwy do serializacji
+# <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>Jak ustalić, czy obiekt standardowy .NET jest możliwy do serializacji
 
-.NET Standard jest specyfikacją definiujący typy i elementy członkowskie, które musi znajdować się na określonych implementacje .NET, które są zgodne z danej wersji standard. Jednak .NET Standard nie definiuje czy typ jest możliwy do serializacji. Typów zdefiniowanych w standardowej bibliotece programu .NET nie jest oznaczony atrybutem <xref:System.SerializableAttribute> atrybutu. Zamiast tego określonego implementacji .NET, takich jak .NET Framework i .NET Core mogą ustalić, czy określony typ jest możliwy do serializacji. 
+.NET Standard to specyfikacja, która definiuje typy i elementy członkowskie, które musi znajdować się na określonej implementacji platformy .NET, które są zgodne z wersji standard. Jednak .NET Standard nie definiuje czy typ jest możliwy do serializacji. Typy zdefiniowane w standardowej bibliotece platformy .NET nie są oznaczone <xref:System.SerializableAttribute> atrybutu. Zamiast tego określonej implementacji platformy .NET, takich jak .NET Framework i .NET Core mogą swobodnie ustalać, czy określony typ jest możliwy do serializacji. 
 
-Jeśli został opracowany biblioteki którego element docelowy .NET Standard, biblioteki mogą być używane przez wszystkie implementacja .NET obsługuje .NET Standard. Oznacza to, że nie znasz z wyprzedzeniem czy konkretny typ jest możliwy do serializacji; można tylko określić, czy jest możliwy do serializacji w czasie wykonywania.
+Tworzyli biblioteki .NET Standard przeznaczonego, biblioteki mogą być używane przez wszystkie implementacji .NET, która obsługuje .NET Standard. Oznacza to, że możesz nie wiedzieć z wyprzedzeniem czy określonego typu jest możliwy do serializacji; należy tylko określić, czy jest możliwy do serializacji w czasie wykonywania.
 
-Można określić, czy obiekt jest możliwy do serializacji w czasie wykonywania, pobierając zaletą <xref:System.Type.IsSerializable> właściwość <xref:System.Type> obiekt, który reprezentuje typ tego obiektu. W poniższym przykładzie przedstawiono jeden implementacji. Definiuje `IsSerializable(Object)` — metoda rozszerzenia, która wskazuje, czy którekolwiek <xref:System.Object> wystąpienie może być Zserializowany.
+Można określić, czy obiekt jest możliwy do serializacji w czasie wykonywania, poprzez pobranie wartości <xref:System.Type.IsSerializable> właściwość <xref:System.Type> obiektu, który reprezentuje typ tego obiektu. W poniższym przykładzie przedstawiono jedna implementacja. Definiuje on `IsSerializable(Object)` metodę rozszerzenia, która wskazuje, czy którekolwiek <xref:System.Object> wystąpienia może być serializowany.
 
 [!code-csharp[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#2)]
 [!code-vb[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/library.vb#2)]
 
-Dowolny obiekt można następnie przekazać do metody w celu określenia, czy może być serializacji i deserializacji bieżąca implementacja .NET, jak przedstawiono na poniższym przykładzie:
+Dowolny obiekt można następnie przekazać do metody w celu określenia, czy może być serializacji i deserializacji bieżącej implementacji .NET, co ilustruje poniższy przykład:
 
 [!code-csharp[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#1)]
 [!code-vb[test-is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/program.vb#1)]
 
-# <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 
-[Serializacja binarna](binary-serialization.md)   
-<xref:System.SerializableAttribute?displayProperty=nameWithType>    
-<xref:System.Type.IsSerializable?displayProperty=nameWithType>   
+- [Serializacja binarna](binary-serialization.md)
+- <xref:System.SerializableAttribute?displayProperty=nameWithType>
+- <xref:System.Type.IsSerializable?displayProperty=nameWithType>

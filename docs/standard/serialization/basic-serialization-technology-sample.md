@@ -1,66 +1,66 @@
 ---
-title: Przykład technologii podstawowe serializacji
+title: Przykład technologii serializacji podstawowej
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 81accbd39990c1c0233a9c7bc6d67400f17c5865
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 474eb8ded01a72182533a6d49397d7567447d64e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590871"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039517"
 ---
-# <a name="basic-serialization-technology-sample"></a>Przykład technologii podstawowe serializacji
-[Pobieranie próbki](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
+# <a name="basic-serialization-technology-sample"></a>Przykład technologii serializacji podstawowej
+[Pobierz przykładowe](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
   
- W przykładzie pokazano możliwości środowisko uruchomieniowe języka wspólnego firmy do serializacji obiektu wykresu w pamięci w strumieniu. W tym przykładzie można użyć dowolnego <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> lub <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> do serializacji. Połączonej listy wypełniany danymi, jest serializacji lub deserializacji z strumienia PLiku lub. W obu przypadkach zostanie wyświetlona lista, dzięki czemu można wyświetlić wyniki. Jest typu listy połączonej `LinkedList`, typ zdefiniowany w tym przykładzie.  
+ Niniejszy przykład pokazuje możliwość języka wspólnego serializacji grafu obiektów w pamięci w strumieniu. W tym przykładzie można użyć dowolnego <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> lub <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> do serializacji. Połączonej listy wypełniany danymi, jest serializacji lub deserializacji z strumienia PLiku lub. W obu przypadkach zostanie wyświetlona lista, tak, aby zobaczyć wyniki. Połączonej listy jest typu `LinkedList`, typ zdefiniowany przez ten przykład.  
   
  Komentarzy w PLikach źródłowych kodu i build.proj uzyskać więcej informacji o serializacji.  
   
-### <a name="to-build-the-sample-using-the-command-prompt"></a>Aby samodzielnie tworzyć przykładowy przy użyciu wiersza polecenia  
+### <a name="to-build-the-sample-using-the-command-prompt"></a>Aby skompilować przykład za pomocą wiersza polecenia  
   
 1.  Przejdź do jednego z podkatalogi specyficzne dla języka w katalogu Technologies\Serialization\Runtime Serialization\Basic, za pomocą wiersza polecenia.  
   
-2.  Typ **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** lub **msbuild SerializationVB.sln**w oparciu o wybór język programowania, w Wiersz polecenia.  
+2.  Typ **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** lub **msbuild SerializationVB.sln**, w zależności od wybranych przez siebie język programowania, w Wiersz polecenia.  
   
-### <a name="to-build-the-sample-using-visual-studio"></a>Aby samodzielnie tworzyć przykładowy przy użyciu programu Visual Studio  
+### <a name="to-build-the-sample-using-visual-studio"></a>Aby skompilować przykład za pomocą programu Visual Studio  
   
-1.  Otwórz [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] i przejdź do jednej z przykładowej podkatalogi specyficzny dla języka.  
+1.  Otwórz [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] i przejdź do jednej z podkatalogi specyficzny dla języka dla próbki.  
   
 2.  Kliknij dwukrotnie ikonę PLiku SerializationCS.sln, SerializationJSL.sln lub SerializationVB.sln, w zależności od wybranych przez siebie język programowania, aby otworzyć go w programie Visual Studio.  
   
 3.  W **kompilacji** menu, wybierz opcję **Kompiluj rozwiązanie**.  
   
- Przykładowa aplikacja zostanie utworzona w podkatalogu \bin lub \bin\Debug domyślne.  
+ Przykładowa aplikacja zostanie utworzona w podkatalogu \bin lub \bin\Debug domyślny.  
   
-### <a name="to-run-the-sample"></a>Aby uruchomić przykładowy  
+### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
 1.  Przejdź do katalogu zawierającego wbudowanych PLiku wykonywalnego.  
   
-2.  Typ **Serialization.exe**, wraz z wartościami parametrów wymaganych, w wierszu polecenia.  
+2.  Typ **Serialization.exe**, wraz z wartościami parametru wymagasz, w wierszu polecenia.  
   
     > [!NOTE]
-    >  Ten przykład tworzy aplikacji konsoli. Należy uruchomić go za pomocą wiersza polecenia, aby można było wyświetlić dane wyjściowe.  
+    >  W tym przykładzie tworzy aplikację konsoli. Należy uruchomić go za pomocą wiersza polecenia, aby można było wyświetlić dane wyjściowe.  
   
 ## <a name="remarks"></a>Uwagi  
- Przykładowa aplikacja akceptuje wskazujący, który można przetestować parametry wiersza polecenia chcesz wykonać. Do serializacji listę 10 węzła w pliku o nazwie **Test.xml** przy użyciu elementu formatującego SOAP, użyj parametrów **sx Test.xml 10**.  
+ Przykładowa aplikacja akceptuje parametry wiersza polecenia wskazujące, której można przetestować chce wykonać. Do serializacji lista 10-węzłów, w pliku o nazwie **Test.xml** przy użyciu protokołu SOAP program formatujący, użyj parametrów **sx Test.xml 10**.  
   
  Na przykład:  
   
  **Serialize.exe - sx Test.xml 10**  
   
- Do deserializacji **Test.xml** pliku z poprzedniego przykładu, użyj parametrów **dx Test.xml**.  
+ Do deserializacji **Test.xml** plików z poprzedniego przykładu, użyj parametrów **dx Test.xml**.  
   
  Na przykład:  
   
  **Test.xml - dx Serialize.exe**  
   
- W dwóch przykładach "x" przełącznika wiersza polecenia oznacza, że chcesz serializacji XML protokołu SOAP. "B" można użyć w tym miejscu można użyć serializacji binarnej. Jeśli chcesz spróbować serializacji z bardzo dużej liczby węzłów, można przekierować dane wyjściowe z konsoli do PLiku.  
+ W dwóch przykładach w przełączniku wiersza polecenia "x" oznacza, że serializacji XML protokołu SOAP. "B" w tym miejscu służy do użycia serializacji binarnej. Jeśli chcesz spróbować serializacji z bardzo dużej liczby węzłów, można przekierować dane wyjściowe z konsoli do PLiku.  
   
  Na przykład:  
   
  **Serialize.exe - sb Test.bin 10000 > somefile.txt**  
   
- Następujące punktory krótko opisano klasy i technologie używane w tym przykładzie.  
+ Następujące punktory Zwięźle opisz klas i technologie używane w tym przykładzie.  
   
 -   Środowisko wykonawcze serializacji  
   
@@ -78,21 +78,22 @@ ms.locfileid: "33590871"
   
     -   <xref:System.IO.FileStream>Służy do serializacji i deserializacji połączonej listy.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IO>  
- <xref:System.IO.File>  
- <xref:System.IO.FileStream>  
- <xref:System.IO.Stream>  
- <xref:System.Random>  
- <xref:System.Runtime.Serialization>  
- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
- <xref:System.Runtime.Serialization.IFormatter>  
- <xref:System.SerializableAttribute>  
- <xref:System.Xml.Serialization>  
- [Serializacja podstawowa](../../../docs/standard/serialization/basic-serialization.md)  
- [Serializacja binarna](../../../docs/standard/serialization/binary-serialization.md)  
- [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [Serializacja](../../../docs/standard/serialization/index.md)  
- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.IO>  
+- <xref:System.IO.File>  
+- <xref:System.IO.FileStream>  
+- <xref:System.IO.Stream>  
+- <xref:System.Random>  
+- <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
+- <xref:System.Runtime.Serialization.IFormatter>  
+- <xref:System.SerializableAttribute>  
+- <xref:System.Xml.Serialization>  
+- [Serializacja podstawowa](../../../docs/standard/serialization/basic-serialization.md)  
+- [Serializacja binarna](../../../docs/standard/serialization/binary-serialization.md)  
+- [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+- [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [Serializacja](../../../docs/standard/serialization/index.md)  
+- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

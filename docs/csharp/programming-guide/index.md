@@ -9,82 +9,83 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 04561adb254d001b5e4c7867a4017ede74972011
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a145e3e1b73db6fdfbc5f1408231e78f55b559d1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486199"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892206"
 ---
-# <a name="c-programming-guide"></a><span data-ttu-id="a62cb-102">Przewodnik programowania C#</span><span class="sxs-lookup"><span data-stu-id="a62cb-102">C# programming guide</span></span>
-<span data-ttu-id="a62cb-103">Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# oraz o funkcjach tego języka dostępnych przez platformę .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a62cb-103">This section provides detailed information on key C# language features and features accessible to C# through the .NET Framework.</span></span>  
+# <a name="c-programming-guide"></a><span data-ttu-id="98361-102">Przewodnik programowania C#</span><span class="sxs-lookup"><span data-stu-id="98361-102">C# programming guide</span></span>
+<span data-ttu-id="98361-103">Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# oraz o funkcjach tego języka dostępnych przez platformę .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="98361-103">This section provides detailed information on key C# language features and features accessible to C# through the .NET Framework.</span></span>  
   
- <span data-ttu-id="a62cb-104">W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania.</span><span class="sxs-lookup"><span data-stu-id="a62cb-104">Most of this section assumes that you already know something about C# and general programming concepts.</span></span> <span data-ttu-id="a62cb-105">Jeśli jesteś kompletnym nowicjuszem programowania lub w języku C#, możesz chcieć znaleźć [Przewodniki Szybki Start języka C#](../quick-starts/index.md) lub [wprowadzenie do języka C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) interaktywny samouczek, w których jest wymagane nie uprzednia programowania.</span><span class="sxs-lookup"><span data-stu-id="a62cb-105">If you are a complete beginner with programming or with C#, you might want to visit the [C# Quickstarts](../quick-starts/index.md) or [Getting Started with C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) interactive tutorial, where no prior programming knowledge is required.</span></span>  
+ <span data-ttu-id="98361-104">W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania.</span><span class="sxs-lookup"><span data-stu-id="98361-104">Most of this section assumes that you already know something about C# and general programming concepts.</span></span> <span data-ttu-id="98361-105">Jeśli jesteś kompletnym nowicjuszem programowania lub w języku C#, możesz chcieć znaleźć [Przewodniki Szybki Start języka C#](../quick-starts/index.md) lub [wprowadzenie do języka C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) interaktywny samouczek, w których jest wymagane nie uprzednia programowania.</span><span class="sxs-lookup"><span data-stu-id="98361-105">If you are a complete beginner with programming or with C#, you might want to visit the [C# Quickstarts](../quick-starts/index.md) or [Getting Started with C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) interactive tutorial, where no prior programming knowledge is required.</span></span>  
   
- <span data-ttu-id="a62cb-106">Aby uzyskać informacje dotyczące określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz sekcję [Dokumentacja języka C#](../../csharp/language-reference/index.md).</span><span class="sxs-lookup"><span data-stu-id="a62cb-106">For information about specific keywords, operators and preprocessor directives, see [C# Reference](../../csharp/language-reference/index.md).</span></span> <span data-ttu-id="a62cb-107">Informacje o specyfikacji języka C# można znaleźć w temacie [Specyfikacja języka C#](../../csharp/language-reference/language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="a62cb-107">For information about the C# Language Specification, see [C# Language Specification](../../csharp/language-reference/language-specification/index.md).</span></span>  
+ <span data-ttu-id="98361-106">Aby uzyskać informacje dotyczące określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz sekcję [Dokumentacja języka C#](../../csharp/language-reference/index.md).</span><span class="sxs-lookup"><span data-stu-id="98361-106">For information about specific keywords, operators and preprocessor directives, see [C# Reference](../../csharp/language-reference/index.md).</span></span> <span data-ttu-id="98361-107">Informacje o specyfikacji języka C# można znaleźć w temacie [Specyfikacja języka C#](../../csharp/language-reference/language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="98361-107">For information about the C# Language Specification, see [C# Language Specification](../../csharp/language-reference/language-specification/index.md).</span></span>  
   
-## <a name="program-sections"></a><span data-ttu-id="a62cb-108">Sekcje programu</span><span class="sxs-lookup"><span data-stu-id="a62cb-108">Program sections</span></span>
+## <a name="program-sections"></a><span data-ttu-id="98361-108">Sekcje programu</span><span class="sxs-lookup"><span data-stu-id="98361-108">Program sections</span></span>
 
-[<span data-ttu-id="a62cb-109">Konstrukcja programu C#</span><span class="sxs-lookup"><span data-stu-id="a62cb-109">Inside a C# Program</span></span>](../../csharp/programming-guide/inside-a-program/index.md)  
+[<span data-ttu-id="98361-109">Konstrukcja programu C#</span><span class="sxs-lookup"><span data-stu-id="98361-109">Inside a C# Program</span></span>](../../csharp/programming-guide/inside-a-program/index.md)  
   
-[<span data-ttu-id="a62cb-110">Main() i argumenty wiersza polecenia</span><span class="sxs-lookup"><span data-stu-id="a62cb-110">Main() and Command-Line Arguments</span></span>](../../csharp/programming-guide/main-and-command-args/index.md)  
+[<span data-ttu-id="98361-110">Main() i argumenty wiersza polecenia</span><span class="sxs-lookup"><span data-stu-id="98361-110">Main() and Command-Line Arguments</span></span>](../../csharp/programming-guide/main-and-command-args/index.md)  
  
-## <a name="language-sections"></a><span data-ttu-id="a62cb-111">Sekcje języka</span><span class="sxs-lookup"><span data-stu-id="a62cb-111">Language Sections</span></span>  
-[<span data-ttu-id="a62cb-112">Instrukcje, wyrażenia i operatory</span><span class="sxs-lookup"><span data-stu-id="a62cb-112">Statements, Expressions, and Operators</span></span>](../../csharp/programming-guide/statements-expressions-operators/index.md)  
+## <a name="language-sections"></a><span data-ttu-id="98361-111">Sekcje języka</span><span class="sxs-lookup"><span data-stu-id="98361-111">Language Sections</span></span>  
+[<span data-ttu-id="98361-112">Instrukcje, wyrażenia i operatory</span><span class="sxs-lookup"><span data-stu-id="98361-112">Statements, Expressions, and Operators</span></span>](../../csharp/programming-guide/statements-expressions-operators/index.md)  
 
- [<span data-ttu-id="a62cb-113">Typy</span><span class="sxs-lookup"><span data-stu-id="a62cb-113">Types</span></span>](../../csharp/programming-guide/types/index.md)  
+ [<span data-ttu-id="98361-113">Typy</span><span class="sxs-lookup"><span data-stu-id="98361-113">Types</span></span>](../../csharp/programming-guide/types/index.md)  
 
- [<span data-ttu-id="a62cb-114">Klasy i struktury</span><span class="sxs-lookup"><span data-stu-id="a62cb-114">Classes and Structs</span></span>](../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="98361-114">Klasy i struktury</span><span class="sxs-lookup"><span data-stu-id="98361-114">Classes and Structs</span></span>](../../csharp/programming-guide/classes-and-structs/index.md)  
   
- [<span data-ttu-id="a62cb-115">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="a62cb-115">Interfaces</span></span>](../../csharp/programming-guide/interfaces/index.md)  
+ [<span data-ttu-id="98361-115">Interfejsy</span><span class="sxs-lookup"><span data-stu-id="98361-115">Interfaces</span></span>](../../csharp/programming-guide/interfaces/index.md)  
 
- [<span data-ttu-id="a62cb-116">Typy wyliczeniowe</span><span class="sxs-lookup"><span data-stu-id="a62cb-116">Enumeration Types</span></span>](../../csharp/programming-guide/enumeration-types.md)  
+ [<span data-ttu-id="98361-116">Typy wyliczeniowe</span><span class="sxs-lookup"><span data-stu-id="98361-116">Enumeration Types</span></span>](../../csharp/programming-guide/enumeration-types.md)  
   
- [<span data-ttu-id="a62cb-117">Delegaty</span><span class="sxs-lookup"><span data-stu-id="a62cb-117">Delegates</span></span>](../../csharp/programming-guide/delegates/index.md)  
+ [<span data-ttu-id="98361-117">Delegaty</span><span class="sxs-lookup"><span data-stu-id="98361-117">Delegates</span></span>](../../csharp/programming-guide/delegates/index.md)  
  
- [<span data-ttu-id="a62cb-118">Tablice</span><span class="sxs-lookup"><span data-stu-id="a62cb-118">Arrays</span></span>](../../csharp/programming-guide/arrays/index.md)  
+ [<span data-ttu-id="98361-118">Tablice</span><span class="sxs-lookup"><span data-stu-id="98361-118">Arrays</span></span>](../../csharp/programming-guide/arrays/index.md)  
   
- [<span data-ttu-id="a62cb-119">Ciągi</span><span class="sxs-lookup"><span data-stu-id="a62cb-119">Strings</span></span>](../../csharp/programming-guide/strings/index.md)  
+ [<span data-ttu-id="98361-119">Ciągi</span><span class="sxs-lookup"><span data-stu-id="98361-119">Strings</span></span>](../../csharp/programming-guide/strings/index.md)  
   
- [<span data-ttu-id="a62cb-120">Właściwości</span><span class="sxs-lookup"><span data-stu-id="a62cb-120">Properties</span></span>](../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="98361-120">Właściwości</span><span class="sxs-lookup"><span data-stu-id="98361-120">Properties</span></span>](../../csharp/programming-guide/classes-and-structs/properties.md)  
   
- [<span data-ttu-id="a62cb-121">Indeksatory</span><span class="sxs-lookup"><span data-stu-id="a62cb-121">Indexers</span></span>](../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="98361-121">Indeksatory</span><span class="sxs-lookup"><span data-stu-id="98361-121">Indexers</span></span>](../../csharp/programming-guide/indexers/index.md)  
   
- [<span data-ttu-id="a62cb-122">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="a62cb-122">Events</span></span>](../../csharp/programming-guide/events/index.md)  
+ [<span data-ttu-id="98361-122">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="98361-122">Events</span></span>](../../csharp/programming-guide/events/index.md)  
   
- [<span data-ttu-id="a62cb-123">Typy ogólne</span><span class="sxs-lookup"><span data-stu-id="a62cb-123">Generics</span></span>](../../csharp/programming-guide/generics/index.md)  
+ [<span data-ttu-id="98361-123">Typy ogólne</span><span class="sxs-lookup"><span data-stu-id="98361-123">Generics</span></span>](../../csharp/programming-guide/generics/index.md)  
   
- [<span data-ttu-id="a62cb-124">Iteratory</span><span class="sxs-lookup"><span data-stu-id="a62cb-124">Iterators</span></span>](../../csharp/programming-guide/concepts/iterators.md)
+ [<span data-ttu-id="98361-124">Iteratory</span><span class="sxs-lookup"><span data-stu-id="98361-124">Iterators</span></span>](../../csharp/programming-guide/concepts/iterators.md)
   
- [<span data-ttu-id="a62cb-125">Wyrażenia zapytań LINQ</span><span class="sxs-lookup"><span data-stu-id="a62cb-125">LINQ Query Expressions</span></span>](../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [<span data-ttu-id="98361-125">Wyrażenia zapytań LINQ</span><span class="sxs-lookup"><span data-stu-id="98361-125">LINQ Query Expressions</span></span>](../../csharp/programming-guide/linq-query-expressions/index.md)  
   
- [<span data-ttu-id="a62cb-126">Wyrażenia lambda</span><span class="sxs-lookup"><span data-stu-id="a62cb-126">Lambda Expressions</span></span>](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [<span data-ttu-id="98361-126">Wyrażenia lambda</span><span class="sxs-lookup"><span data-stu-id="98361-126">Lambda Expressions</span></span>](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   
- [<span data-ttu-id="a62cb-127">Przestrzenie nazw</span><span class="sxs-lookup"><span data-stu-id="a62cb-127">Namespaces</span></span>](../../csharp/programming-guide/namespaces/index.md)  
+ [<span data-ttu-id="98361-127">Przestrzenie nazw</span><span class="sxs-lookup"><span data-stu-id="98361-127">Namespaces</span></span>](../../csharp/programming-guide/namespaces/index.md)  
   
- [<span data-ttu-id="a62cb-128">Typy dopuszczające wartości null</span><span class="sxs-lookup"><span data-stu-id="a62cb-128">Nullable Types</span></span>](../../csharp/programming-guide/nullable-types/index.md)  
+ [<span data-ttu-id="98361-128">Typy dopuszczające wartości null</span><span class="sxs-lookup"><span data-stu-id="98361-128">Nullable Types</span></span>](../../csharp/programming-guide/nullable-types/index.md)  
   
- [<span data-ttu-id="a62cb-129">Niebezpieczny kod i wskaźniki</span><span class="sxs-lookup"><span data-stu-id="a62cb-129">Unsafe Code and Pointers</span></span>](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [<span data-ttu-id="98361-129">Niebezpieczny kod i wskaźniki</span><span class="sxs-lookup"><span data-stu-id="98361-129">Unsafe Code and Pointers</span></span>](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
   
- [<span data-ttu-id="a62cb-130">Komentarze dokumentacji XML</span><span class="sxs-lookup"><span data-stu-id="a62cb-130">XML Documentation Comments</span></span>](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+ [<span data-ttu-id="98361-130">Komentarze dokumentacji XML</span><span class="sxs-lookup"><span data-stu-id="98361-130">XML Documentation Comments</span></span>](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
-## <a name="platform-sections"></a><span data-ttu-id="a62cb-131">Sekcje platformy</span><span class="sxs-lookup"><span data-stu-id="a62cb-131">Platform Sections</span></span>  
- [<span data-ttu-id="a62cb-132">Domeny aplikacji (C# i Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a62cb-132">Application Domains (C# and Visual Basic)</span></span>](https://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+## <a name="platform-sections"></a><span data-ttu-id="98361-131">Sekcje platformy</span><span class="sxs-lookup"><span data-stu-id="98361-131">Platform Sections</span></span>  
+ [<span data-ttu-id="98361-132">Domeny aplikacji</span><span class="sxs-lookup"><span data-stu-id="98361-132">Application Domains</span></span>](../../framework/app-domains/application-domains.md)  
   
- [<span data-ttu-id="a62cb-133">Zestawy i globalna pamięć podręczna zestawów</span><span class="sxs-lookup"><span data-stu-id="a62cb-133">Assemblies and the Global Assembly Cache</span></span>](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="98361-133">Zestawy i globalna pamięć podręczna zestawów</span><span class="sxs-lookup"><span data-stu-id="98361-133">Assemblies and the Global Assembly Cache</span></span>](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   
- [<span data-ttu-id="a62cb-134">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="a62cb-134">Attributes</span></span>](../../csharp/programming-guide/concepts/attributes/index.md)  
+ [<span data-ttu-id="98361-134">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="98361-134">Attributes</span></span>](../../csharp/programming-guide/concepts/attributes/index.md)  
   
- [<span data-ttu-id="a62cb-135">Kolekcje</span><span class="sxs-lookup"><span data-stu-id="a62cb-135">Collections</span></span>](../../csharp/programming-guide/concepts/collections.md)  
+ [<span data-ttu-id="98361-135">Kolekcje</span><span class="sxs-lookup"><span data-stu-id="98361-135">Collections</span></span>](../../csharp/programming-guide/concepts/collections.md)  
   
- [<span data-ttu-id="a62cb-136">Wyjątki i obsługa wyjątków</span><span class="sxs-lookup"><span data-stu-id="a62cb-136">Exceptions and Exception Handling</span></span>](../../csharp/programming-guide/exceptions/index.md)  
+ [<span data-ttu-id="98361-136">Wyjątki i obsługa wyjątków</span><span class="sxs-lookup"><span data-stu-id="98361-136">Exceptions and Exception Handling</span></span>](../../csharp/programming-guide/exceptions/index.md)  
   
- [<span data-ttu-id="a62cb-137">System plików i rejestr (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="a62cb-137">File System and the Registry (C# Programming Guide)</span></span>](../../csharp/programming-guide/file-system/index.md)  
+ [<span data-ttu-id="98361-137">System plików i rejestr (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="98361-137">File System and the Registry (C# Programming Guide)</span></span>](../../csharp/programming-guide/file-system/index.md)  
   
- [<span data-ttu-id="a62cb-138">Współdziałanie</span><span class="sxs-lookup"><span data-stu-id="a62cb-138">Interoperability</span></span>](../../csharp/programming-guide/interop/index.md)  
+ [<span data-ttu-id="98361-138">Współdziałanie</span><span class="sxs-lookup"><span data-stu-id="98361-138">Interoperability</span></span>](../../csharp/programming-guide/interop/index.md)  
   
- [<span data-ttu-id="a62cb-139">Odbicie</span><span class="sxs-lookup"><span data-stu-id="a62cb-139">Reflection</span></span>](../../csharp/programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="98361-139">Odbicie</span><span class="sxs-lookup"><span data-stu-id="98361-139">Reflection</span></span>](../../csharp/programming-guide/concepts/reflection.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a62cb-140">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a62cb-140">See Also</span></span>  
- [<span data-ttu-id="a62cb-141">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="a62cb-141">C# Reference</span></span>](../../csharp/language-reference/index.md)  
- [<span data-ttu-id="a62cb-142">C#</span><span class="sxs-lookup"><span data-stu-id="a62cb-142">C#</span></span>](../../csharp/index.md)
+## <a name="see-also"></a><span data-ttu-id="98361-140">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="98361-140">See Also</span></span>
+
+- [<span data-ttu-id="98361-141">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="98361-141">C# Reference</span></span>](../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="98361-142">C#</span><span class="sxs-lookup"><span data-stu-id="98361-142">C#</span></span>](../../csharp/index.md)

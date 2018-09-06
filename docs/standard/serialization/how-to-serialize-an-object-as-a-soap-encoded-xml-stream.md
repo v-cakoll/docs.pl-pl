@@ -1,5 +1,5 @@
 ---
-title: 'Porady: szeregowania obiektu jako strumień SOAP zakodowane w formacie XML'
+title: 'Instrukcje: serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - XML serialization, SOAP
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
-ms.openlocfilehash: 20cd4488062095f7b10cc62943a67b434caa2b5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdfa2c8c7a27806873217495ac09f7f20e82b6bc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581306"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891398"
 ---
-# <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="858f3-102">Porady: szeregowania obiektu jako strumień SOAP zakodowane w formacie XML</span><span class="sxs-lookup"><span data-stu-id="858f3-102">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>
+# <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="0fc93-102">Instrukcje: serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP</span><span class="sxs-lookup"><span data-stu-id="0fc93-102">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>
   
- <span data-ttu-id="858f3-103">Ponieważ wiadomości SOAP jest utworzony przy użyciu pliku XML <xref:System.Xml.Serialization.XmlSerializer> klasa może być używana do serializacji klasy oraz do generowania zakodowanego protokołu SOAP wiadomości.</span><span class="sxs-lookup"><span data-stu-id="858f3-103">Because a SOAP message is built using XML, the <xref:System.Xml.Serialization.XmlSerializer> class can be used to serialize classes and generate encoded SOAP messages.</span></span> <span data-ttu-id="858f3-104">Wynikowy kod XML odpowiada [sekcji 5 dokumentu sieci World Wide Web konsorcjum "Simple Object Access Protocol (SOAP) 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512).</span><span class="sxs-lookup"><span data-stu-id="858f3-104">The resulting XML conforms to [section 5 of the World Wide Web Consortium document "Simple Object Access Protocol (SOAP) 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512).</span></span> <span data-ttu-id="858f3-105">Podczas tworzenia usługi XML sieci Web, który komunikuje się za pośrednictwem protokołu SOAP wiadomości, można dostosować w strumieniu XML stosując zestaw atrybutów SOAP specjalne do klas i członków klasy.</span><span class="sxs-lookup"><span data-stu-id="858f3-105">When you are creating an XML Web service that communicates through SOAP messages, you can customize the XML stream by applying a set of special SOAP attributes to classes and members of classes.</span></span> <span data-ttu-id="858f3-106">Aby uzyskać listę atrybutów, zobacz [atrybuty że formant zakodowane SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="858f3-106">For a list of attributes, see [Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span></span>  
+ <span data-ttu-id="0fc93-103">Ponieważ komunikatu protokołu SOAP jest skompilowane za pomocą języka XML, <xref:System.Xml.Serialization.XmlSerializer> klasy może służyć do serializacji klas i generowania zakodowany komunikaty protokołu SOAP.</span><span class="sxs-lookup"><span data-stu-id="0fc93-103">Because a SOAP message is built using XML, the <xref:System.Xml.Serialization.XmlSerializer> class can be used to serialize classes and generate encoded SOAP messages.</span></span> <span data-ttu-id="0fc93-104">Wynikowy kod XML jest zgodny z [sekcji 5 dokumentu World Wide Web Consortium "Simple Object Access Protocol (SOAP) 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512).</span><span class="sxs-lookup"><span data-stu-id="0fc93-104">The resulting XML conforms to [section 5 of the World Wide Web Consortium document "Simple Object Access Protocol (SOAP) 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512).</span></span> <span data-ttu-id="0fc93-105">Podczas tworzenia usługi XML sieci Web, która komunikuje się za pośrednictwem protokołu SOAP wiadomości stosując zestaw specjalnych protokołu SOAP atrybutów do klasy i składowych klas można dostosować strumień XML.</span><span class="sxs-lookup"><span data-stu-id="0fc93-105">When you are creating an XML Web service that communicates through SOAP messages, you can customize the XML stream by applying a set of special SOAP attributes to classes and members of classes.</span></span> <span data-ttu-id="0fc93-106">Aby uzyskać listę atrybutów, zobacz [atrybuty czy kontroli kodowany protokołu SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="0fc93-106">For a list of attributes, see [Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span></span>  
   
-### <a name="to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="858f3-107">Do serializacji obiektu jako strumień XML kodowany w formacie protokołu SOAP</span><span class="sxs-lookup"><span data-stu-id="858f3-107">To serialize an object as a SOAP-encoded XML stream</span></span>  
+### <a name="to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="0fc93-107">Do serializacji obiektu jako strumień XML kodowany w formacie protokołu SOAP</span><span class="sxs-lookup"><span data-stu-id="0fc93-107">To serialize an object as a SOAP-encoded XML stream</span></span>  
   
-1.  <span data-ttu-id="858f3-108">Tworzenie przy użyciu klasy [narzędzie definicji schematu XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).</span><span class="sxs-lookup"><span data-stu-id="858f3-108">Create the class using the [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).</span></span>  
+1.  <span data-ttu-id="0fc93-108">Tworzenie przy użyciu klasy [narzędzie definicji schematu XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).</span><span class="sxs-lookup"><span data-stu-id="0fc93-108">Create the class using the [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).</span></span>  
   
-2.  <span data-ttu-id="858f3-109">Stosowanie jednej lub więcej atrybutów specjalne w `System.Xml.Serialization`.</span><span class="sxs-lookup"><span data-stu-id="858f3-109">Apply one or more of the special attributes found in `System.Xml.Serialization`.</span></span> <span data-ttu-id="858f3-110">Zapoznaj się z listą w "Serializacji protokołu SOAP zakodowane tego formantu atrybuty".</span><span class="sxs-lookup"><span data-stu-id="858f3-110">See the list in "Attributes That Control Encoded SOAP Serialization."</span></span>  
+2.  <span data-ttu-id="0fc93-109">Zastosuj jeden lub więcej atrybutów specjalnych znaleziony w `System.Xml.Serialization`.</span><span class="sxs-lookup"><span data-stu-id="0fc93-109">Apply one or more of the special attributes found in `System.Xml.Serialization`.</span></span> <span data-ttu-id="0fc93-110">Zapoznaj się z listą w "Serializacji protokołu SOAP zakodowane tego formantu atrybuty".</span><span class="sxs-lookup"><span data-stu-id="0fc93-110">See the list in "Attributes That Control Encoded SOAP Serialization."</span></span>  
   
-3.  <span data-ttu-id="858f3-111">Utwórz `XmlTypeMapping` przez utworzenie nowego `SoapReflectionImporter`i wywoływanie `ImportTypeMapping` metody z typem klasy serializacji.</span><span class="sxs-lookup"><span data-stu-id="858f3-111">Create an `XmlTypeMapping` by creating a new `SoapReflectionImporter`, and invoking the `ImportTypeMapping` method with the type of the serialized class.</span></span>  
+3.  <span data-ttu-id="0fc93-111">Utwórz `XmlTypeMapping` przez utworzenie nowego `SoapReflectionImporter`i wywoływanie `ImportTypeMapping` metody z typem klasy serializacji.</span><span class="sxs-lookup"><span data-stu-id="0fc93-111">Create an `XmlTypeMapping` by creating a new `SoapReflectionImporter`, and invoking the `ImportTypeMapping` method with the type of the serialized class.</span></span>  
   
-     <span data-ttu-id="858f3-112">Poniższy kod przykładowy wywołania `ImportTypeMapping` metody `SoapReflectionImporter` klasy w celu utworzenia `XmlTypeMapping`.</span><span class="sxs-lookup"><span data-stu-id="858f3-112">The following code example calls the `ImportTypeMapping` method of the `SoapReflectionImporter` class to create an `XmlTypeMapping`.</span></span>  
+     <span data-ttu-id="0fc93-112">Poniższy kod wywoła przykład `ImportTypeMapping` metody `SoapReflectionImporter` klasy w celu utworzenia `XmlTypeMapping`.</span><span class="sxs-lookup"><span data-stu-id="0fc93-112">The following code example calls the `ImportTypeMapping` method of the `SoapReflectionImporter` class to create an `XmlTypeMapping`.</span></span>  
   
     ```vb  
     ' Serializes a class named Group as a SOAP message.  
@@ -42,7 +42,7 @@ ms.locfileid: "33581306"
         new SoapReflectionImporter().ImportTypeMapping(typeof(Group));
     ```  
   
-4.  <span data-ttu-id="858f3-113">Utworzenie wystąpienia `XmlSerializer` klasy przez przekazanie `XmlTypeMapping` do <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> konstruktora.</span><span class="sxs-lookup"><span data-stu-id="858f3-113">Create an instance of the `XmlSerializer` class by passing the `XmlTypeMapping` to the <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> constructor.</span></span>  
+4.  <span data-ttu-id="0fc93-113">Utworzenie wystąpienia `XmlSerializer` klasy przez przekazanie `XmlTypeMapping` do <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> konstruktora.</span><span class="sxs-lookup"><span data-stu-id="0fc93-113">Create an instance of the `XmlSerializer` class by passing the `XmlTypeMapping` to the <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> constructor.</span></span>  
   
     ```vb  
     Dim mySerializer As XmlSerializer = New XmlSerializer(myTypeMapping)  
@@ -52,9 +52,9 @@ ms.locfileid: "33581306"
     XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);  
     ```  
   
-5.  <span data-ttu-id="858f3-114">Wywołanie `Serialize` lub `Deserialize` metody.</span><span class="sxs-lookup"><span data-stu-id="858f3-114">Call the `Serialize` or `Deserialize` method.</span></span>  
+5.  <span data-ttu-id="0fc93-114">Wywołanie `Serialize` lub `Deserialize` metody.</span><span class="sxs-lookup"><span data-stu-id="0fc93-114">Call the `Serialize` or `Deserialize` method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="858f3-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="858f3-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0fc93-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="0fc93-115">Example</span></span>  
   
 ```vb  
 ' Serializes a class named Group as a SOAP message.  
@@ -70,10 +70,11 @@ XmlTypeMapping myTypeMapping =
 XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="858f3-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="858f3-116">See Also</span></span>  
- [<span data-ttu-id="858f3-117">Serializacja XML i SOAP</span><span class="sxs-lookup"><span data-stu-id="858f3-117">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [<span data-ttu-id="858f3-118">Atrybuty kontrolujące zakodowaną serializację SOAP</span><span class="sxs-lookup"><span data-stu-id="858f3-118">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
- [<span data-ttu-id="858f3-119">Serializacja XML z usługami internetowymi XML</span><span class="sxs-lookup"><span data-stu-id="858f3-119">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
- [<span data-ttu-id="858f3-120">Instrukcje: Serializacja obiektu</span><span class="sxs-lookup"><span data-stu-id="858f3-120">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [<span data-ttu-id="858f3-121">Instrukcje: Deserializacja obiektu</span><span class="sxs-lookup"><span data-stu-id="858f3-121">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [<span data-ttu-id="858f3-122">Instrukcje: Przesłanianie zakodowanej serializacji XML protokołu SOAP</span><span class="sxs-lookup"><span data-stu-id="858f3-122">How to: Override Encoded SOAP XML Serialization</span></span>](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
+## <a name="see-also"></a><span data-ttu-id="0fc93-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0fc93-116">See also</span></span>
+
+- [<span data-ttu-id="0fc93-117">Serializacja XML i SOAP</span><span class="sxs-lookup"><span data-stu-id="0fc93-117">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+- [<span data-ttu-id="0fc93-118">Atrybuty kontrolujące zakodowaną serializację SOAP</span><span class="sxs-lookup"><span data-stu-id="0fc93-118">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+- [<span data-ttu-id="0fc93-119">Serializacja XML z usługami internetowymi XML</span><span class="sxs-lookup"><span data-stu-id="0fc93-119">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
+- [<span data-ttu-id="0fc93-120">Instrukcje: Serializacja obiektu</span><span class="sxs-lookup"><span data-stu-id="0fc93-120">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [<span data-ttu-id="0fc93-121">Instrukcje: Deserializacja obiektu</span><span class="sxs-lookup"><span data-stu-id="0fc93-121">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [<span data-ttu-id="0fc93-122">Instrukcje: Przesłanianie zakodowanej serializacji XML protokołu SOAP</span><span class="sxs-lookup"><span data-stu-id="0fc93-122">How to: Override Encoded SOAP XML Serialization</span></span>](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)

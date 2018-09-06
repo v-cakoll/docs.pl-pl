@@ -5,11 +5,11 @@ author: guardrex
 ms.author: mairaw
 ms.date: 05/18/2017
 ms.openlocfilehash: 0835ffafc6c091c311b03c90f665cbd669cccfe9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563018"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749937"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Przy użyciu zestawu .NET Core SDK i narzędzi w ciągłej integracji (CI)
 

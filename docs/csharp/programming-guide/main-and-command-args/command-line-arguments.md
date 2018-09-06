@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 2720ea223005227c2d6156ed77f517b698ca9004
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515668"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777928"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumenty wiersza poleceń (Przewodnik programowania w języku C#)
 Możesz wysyłać argumenty do `Main` metoda definiując metodę na jeden z następujących sposobów:  
@@ -71,7 +71,7 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  Podczas uruchamiania aplikacji w programie Visual Studio, można określić argumenty wiersza poleceń w [strona debugowania, Projektant projektu](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Aby uzyskać więcej przykładów użycia argumentów wiersza polecenia, zobacz [jak: utworzyć i używać zestawów przy użyciu wiersza polecenia](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Aby uzyskać więcej przykładów użycia argumentów wiersza polecenia, zobacz [jak: utworzyć i używać zestawów przy użyciu wiersza polecenia](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="see-also"></a>Zobacz też
 

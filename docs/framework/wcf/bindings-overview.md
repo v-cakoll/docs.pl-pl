@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405560"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777762"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Omówienie powiązań WCF (Windows Communication Foundation)
 Powiązania to obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do połączenia z punktem końcowym usługi Windows Communication Foundation (WCF). Każdy punkt końcowy usługi WCF wymaga powiązania do być poprawnie określona. W tym temacie opisano rodzaje komunikacji szczegółowe informacje, które definiują powiązania, elementy powiązania, jakie powiązania znajdują się w programie WCF i jak można określić powiązanie dla punktu końcowego.  

@@ -3,11 +3,11 @@ title: Kształt dokumentów WordprocessingML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
 ms.openlocfilehash: 30ec7a0c6b03d0c6f00561ce08cb836aab3c167b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404841"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777645"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Kształt dokumentów WordprocessingML (Visual Basic)
 W tym temacie przedstawiono kształt XML w dokumencie WordprocessingML.  

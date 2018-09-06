@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
 ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466272"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732978"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Definiowanie zdarzeń w formantach formularzy systemu Windows
 Aby uzyskać szczegółowe informacje na temat definiowania zdarzenia niestandardowe, zobacz [zdarzenia](../../../../docs/standard/events/index.md). Jeśli zdefiniujesz zdarzenie, które nie ma żadnych skojarzonych danych, należy użyć typu podstawowego danych zdarzenia <xref:System.EventArgs>i użyj <xref:System.EventHandler> jako delegat wydarzenia. Celu pozostaje tylko zdefiniować element członkowski zdarzenia i chronioną `On` *EventName* metody, która wywołuje zdarzenia.  

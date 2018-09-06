@@ -3,11 +3,11 @@ title: '&lt;udpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
 ms.openlocfilehash: e17919ead6d6f7656c39d18b0ce1817c18da524a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553095"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740273"
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 Element konfiguracji umożliwiają skonfigurowanie <xref:System.ServiceModel.UdpBinding> powiązania.  

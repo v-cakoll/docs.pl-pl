@@ -3,11 +3,11 @@ title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
 ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563942"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738184"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 Definiuje warstwę transportu TCP, który może służyć przez kanał do transferu wiadomości dla niestandardowego powiązania.  

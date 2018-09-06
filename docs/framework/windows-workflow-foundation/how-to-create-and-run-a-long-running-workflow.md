@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 2c3368bc73d54f2848cad3c1086b1d9733205d2b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556642"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747788"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Porady: tworzenie i uruchamianie długotrwałego uruchamiania przepływu pracy
 Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w środowisku uruchomieniowym zostaną zachowane, a następnie zwolnij bezczynności przepływy pracy z bazą danych. Kroki opisane w [porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) przedstawiono podstawowe informacje dotyczące przepływu pracy hostingu, za pomocą aplikacji konsoli. Przykłady zostały przedstawione począwszy od przepływów pracy, przepływ pracy cyklu życia obsługi i wznawianie zakładek. W celu przedstawienia skutecznie trwałość przepływu pracy, wymagane jest bardziej złożone hosta przepływu pracy, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy. Ten krok, w tym samouczku przedstawiono sposób tworzenia hosta formularzy Windows, aplikacji, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy, trwałość przepływu pracy i stanowi podstawę dla zaawansowanych funkcji, takich jak śledzenie i przechowywania wersji, które są przedstawione w kolejnych krokach samouczka.  

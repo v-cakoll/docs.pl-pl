@@ -15,11 +15,11 @@ helpviewer_keywords:
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
 ms.openlocfilehash: 10b6bb3f55c8acd62101a48ea53b42e331e4210f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405385"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749655"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Porady: implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta
 Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istniejący dynamiczny kod aplikacji sieci Web HTML (DHTML) do aplikacji klienta Windows Forms. Jest to przydatne, gdy zainwestowali czas opracowywania znaczące w tworzeniu kontrolek na podstawie DHTML i chcesz korzystać z zalet użytkownikowi możliwości interfejsu Windows Forms bez konieczności ponownego zapisania istniejącego kodu.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
 ms.openlocfilehash: 7a09fa34b88c024bdaa0197bf82471a6bd6c2ae8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672548"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739236"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Porady: implementowanie i wywołanie niestandardowej metody rozszerzenia (Przewodnik programowania w języku C#)
 W tym temacie pokazano, jak można implementować własne metody rozszerzenia dla dowolnego typu platformy .NET. Kod klienta można użyć metody rozszerzenia przez dodanie odwołania do biblioteki DLL, która je zawiera i dodawanie [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywę, który określa obszar nazw, w którym zdefiniowano metody rozszerzenia.  

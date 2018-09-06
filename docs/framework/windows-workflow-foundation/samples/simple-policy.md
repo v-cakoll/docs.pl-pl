@@ -3,11 +3,11 @@ title: Proste zasady
 ms.date: 03/30/2017
 ms.assetid: 6a94c834-2e32-4bed-9f47-ae5845eef6ff
 ms.openlocfilehash: 7f189e4d1811cb0b7dd9138b944bfd0552481690
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561267"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743749"
 ---
 # <a name="simple-policy"></a>Proste zasady
 Ten przykład ilustruje sposób używania <xref:System.Workflow.Activities.PolicyActivity> działania w przepływie pracy.  

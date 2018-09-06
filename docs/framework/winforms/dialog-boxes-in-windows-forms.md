@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
 ms.openlocfilehash: ef07c087ca43efaf99231453fcb56af0db24234a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387744"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776953"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Okna dialogowe w formularzach systemu Windows
 Okna dialogowe są używane do interakcji z użytkownikiem i pobierania informacji. Mówiąc najprościej, okno dialogowe jest formularz z jego <xref:System.Windows.Forms.FormBorderStyle> wyliczenie ustawioną na `FixedDialog`. Możesz utworzyć własne niestandardowe okna dialogowe, za pomocą programu Windows Forms Designer w programie Visual Studio. Dodaj formanty, takie jak `Label`, `Textbox`, i `Button` dostosowywania okna dialogowe do konkretnych potrzeb. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera również wstępnie zdefiniowanych okien dialogowych, takich jak **Otwórz plik** i okna komunikatów, które można dostosować do własnych aplikacji. Aby uzyskać więcej informacji, zobacz [okno dialogowe formanty i składniki](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  

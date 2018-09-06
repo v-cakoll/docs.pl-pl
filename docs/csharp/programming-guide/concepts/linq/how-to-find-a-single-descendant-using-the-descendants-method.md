@@ -1,19 +1,19 @@
 ---
-title: 'Porady: znajdowanie pojedynczego podrzędnym, przy użyciu metody elementy podrzędne (C#)'
+title: 'Porady: znajdowanie pojedynczego elementu potomnego przy użyciu metody elementów potomnych (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: e08e07e0d32146a14b90b9d6463e6e58a233a923
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: fafb7dc4e2e65c913de46b64028f7dcd69fdd2c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316962"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723691"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Porady: znajdowanie pojedynczego podrzędnym, przy użyciu metody elementy podrzędne (C#)
-Można użyć <xref:System.Xml.Linq.XContainer.Descendants%2A> osi metodę, aby szybko napisać kod, aby znaleźć pojedynczy jednoznacznie o nazwie elementu. Ta technika jest szczególnie przydatne, gdy chcesz znaleźć określonego obiektu podrzędnego o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale często jest szybsze i łatwiejsze do pisania kodu za pomocą <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Porady: znajdowanie pojedynczego elementu potomnego przy użyciu metody elementów potomnych (C#)
+Możesz użyć <xref:System.Xml.Linq.XContainer.Descendants%2A> metodę osi, aby szybko napisać kod, aby znaleźć pojedynczy jednoznacznie o nazwie elementu. Ta technika jest szczególnie przydatne, gdy chcesz znaleźć określonego obiektu podrzędnego o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale często jest szybsze i prostsze do pisania kodu za pomocą <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto <xref:System.Linq.Enumerable.First%2A> — operator zapytań standardowa.  
+ W tym przykładzie użyto <xref:System.Linq.Enumerable.First%2A> standardowego operatora zapytania.  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -43,7 +43,7 @@ GC3 Value
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeni nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ```csharp  
 XElement root = XElement.Parse(@"<aw:Root xmlns:aw='http://www.adventure-works.com'>  
@@ -73,5 +73,6 @@ Console.WriteLine(grandChild3);
 GC3 Value  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe zapytania (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Podstawowe zapytania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

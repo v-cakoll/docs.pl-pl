@@ -1,18 +1,17 @@
 ---
 title: Statycznie rozwiązywane parametry typu (F#)
-description: 'Dowiedz się, jak używać F # statycznie rozwiązywane typ parametru, który zostanie zastąpiony rzeczywisty typ w czasie kompilacji zamiast w czasie wykonywania.'
+description: 'Dowiedz się, jak używać języka F # statystycznie rozpoznany typ parametru, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 12c2af4d9df7ae1e5e77efc9413eb8777459a83c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34233785"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777876"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statycznie rozwiązywane parametry typu
 
-A *parametr typu statycznie rozwiązywane* jest parametrem typu, który jest zastępowany rzeczywisty typ w czasie kompilacji zamiast w czasie wykonywania. Są one poprzedzone symbolem daszek (^).
-
+A *statystycznie rozpoznany typ parametru* jest parametrem typu, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania. Są poprzedzone symbolem, daszek (^).
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,28 +20,29 @@ A *parametr typu statycznie rozwiązywane* jest parametrem typu, który jest zas
 ```
 
 ## <a name="remarks"></a>Uwagi
-W języku F # istnieją dwa różne typy parametrów typu. Rodzaj pierwszy jest parametr standardowa typu ogólnego. Te są oznaczeni apostrof ('), podobnie jak w `'T` i `'U`. Są one równoważne parametry typu ogólnego w innych językach .NET Framework. Innego typu jest statycznie rozwiązane i jest określane przez symbol karetki, podobnie jak w `^T` i `^U`.
 
-Statycznie rozwiązywane parametry typu są szczególnie przydatne w połączeniu z ograniczenia elementu członkowskiego, które są ograniczenia, które pozwalają określić, że typem argumentu musi być określonego elementu członkowskiego lub elementy członkowskie, aby mogły być używane. Nie istnieje sposób tworzenia tego rodzaju ograniczenia za pomocą parametru typu ogólnego regularne.
+W języku F # istnieją dwa odrębne rodzaje parametrów typu. Pierwszy rodzaj jest parametrem standardowym typu rodzajowego. Te są oznaczane apostrofem ('), podobnie jak w `'T` i `'U`. Są one równoważnymi parametrami typu rodzajowego w innych językach .NET Framework. Inny rodzaj jest statycznie rozwiązany i jest oznaczany symbolem daszka, podobnie jak w `^T` i `^U`.
 
-W poniższej tabeli przedstawiono podobieństwa i różnice między dwa rodzaje parametrów typu.
+Statycznie rozwiązywane parametry typu są szczególnie przydatne w połączeniu z ograniczeniami elementu członkowskiego, które są ograniczeniami, które pozwalają na określenie, że argument typu musi mieć danego członka lub członków, aby możliwe było użycie. Nie ma możliwości do utworzenia tego rodzaju ograniczenia przy użyciu parametru regularnego typu rodzajowego.
 
-|Funkcja|Ogólny|Statycznie rozwiązywane|
+W poniższej tabeli podsumowano podobieństwa i różnice między dwoma rodzajami parametrów typu.
+
+|Funkcja|Ogólny|Statycznie rozwiązane|
 |-------|-------|-------------------|
 |Składnia|`'T`, `'U`|`^T`, `^U`|
 |Czas rozpoznawania nazw|Czas wykonywania|Czas kompilacji|
-|Ograniczenia elementu członkowskiego|Nie można używać z ograniczenia elementu członkowskiego.|Można z ograniczenia elementu członkowskiego.|
-|Generowanie kodu|Typu (lub metody) z parametry typu ogólnego standardowe powoduje generowanie jednego typu ogólnego lub metody.|Wiele wystąpień typów i metod są generowane, jeden dla każdego typu, który jest potrzebny.|
-|Za pomocą typów|Można na typach.|Nie można używać typów.|
-|Za pomocą funkcji śródwierszowych|Nie. Nie mogą być parametryczne wbudowanej funkcji z parametrem standardowa typu ogólnego.|Tak. Statycznie rozwiązywane parametry typu nie można używać na funkcje i metody, które nie są wbudowane.|
+|Ograniczenia elementu członkowskiego|Nie można używać z ograniczeniami elementu członkowskiego.|Może być używany z ograniczeniami elementu członkowskiego.|
+|Generowanie kodu|Typ (lub metoda) ze standardowymi parametrami ogólnego typu powoduje generowanie jednego ogólnego typu lub metody.|Wiele wystąpień typów i metod jest generowanych, po jednym dla każdego typu, który jest potrzebny.|
+|Za pomocą typów|Może być stosowany na typach.|Nie może być stosowany na typach.|
+|Za pomocą wbudowanej funkcji|Nie. Funkcja śródwierszowa nie mogą być parametryzowane ze standardowym parametrem typu ogólnego.|Tak. Statycznie rozwiązywane parametry typu nie można używać na funkcje lub metody, które nie są wbudowane.|
 
-Wiele F # biblioteka funkcji podstawowych, szczególnie operatory ma statycznie rozwiązywane parametry typu. Te funkcje i operatory są wbudowane i spowodować generowanie kodu wydajne w obliczeniach liczbowych.
+Wiele F # funkcji biblioteki podstawowej, zwłaszcza operatory, ma statycznie rozwiązywane parametry typu. Te funkcje i operatory są wbudowane i powodują skuteczne generowanie kodu do obliczeń numerycznych.
 
-Wbudowane metody i funkcje, które operatory lub innych funkcji, które mają statycznie rozwiązywane parametry typu można również użyć statycznie rozwiązywane parametry typu samodzielnie. Wnioskowanie o typie wnioskuje często takich funkcji śródwierszowych, aby mieć statycznie rozwiązywane parametry typu. Poniższy przykład przedstawia definicję operatora, która jest wartością parametru typu statycznie rozwiązywane.
+Wbudowane metody i funkcje, które używają operatorów lub innych funkcji, które mają statycznie rozwiązywane parametry typu, można również użyć parametrów typu statycznie rozpoznanych, samodzielnie. Często wnioskowanie o typie wnioskuje takie wbudowane funkcje, aby mieć statycznie rozwiązywane parametry typu. Poniższy przykład przedstawia definicję operatora która została wywnioskowana, ma parametr typu statycznie rozpoznanych.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-Rozpoznać typu `(+@)` opiera się na korzystanie z obu `(+)` i `(*)`, z którego spowodować wnioskowanie o typie w celu uwzględnienia ograniczenia elementu członkowskiego na statycznie rozwiązywane parametry typu. Rozpoznać typu, jak pokazano w F # interpretera ma następującą składnię.
+Rozpoznać typ `(+@)` opiera się na wykorzystaniu obu `(+)` i `(*)`, z którym spowodować, że wniosek typu wywnioskowuje ograniczenia Członkowskie na statycznie rozwiązywane parametry typu. Rozwiązany typ, jak pokazano w interpretera F # jest w następujący sposób.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -57,7 +57,7 @@ Dane wyjściowe są następujące:
 1.500000
 ```
 
-Począwszy od 4.1 F #, można również określić nazwy typu konkretnego w podpisach parametru typu statycznie rozwiązane.  W poprzednich wersjach językowych Nazwa typu faktycznie można wywnioskować przez kompilator, ale faktycznie nie można określić w podpisie.  Począwszy od F # 4.1 należy także określić nazwy typów konkretnych w podpisach parametru typu statycznie rozwiązywane. Oto przykład:
+Począwszy od F # 4.1, można również określić konkretny typ nazwy w podpisach parametrów typu statycznie rozpoznanych.  W poprzednich wersjach języka nazwę typu można wywnioskować faktycznie przez kompilator, ale faktycznie nie można określić w podpisie.  Począwszy od F # 4.1 możesz również określić konkretny typ nazwy w podpisach parametrów typu statycznie rozpoznanych. Oto przykład:
 
 ```fsharp
 let inline konst x _ = x
@@ -85,13 +85,10 @@ let inline replace (a: ^a) (f: ^b): ^a0 when (CFunctor or  ^b): (static member r
     replace_instance<CFunctor, _, _, _> (a, f)
 ```
 
-## <a name="see-also"></a>Zobacz też
-[Typy ogólne](index.md)
+## <a name="see-also"></a>Zobacz także
 
-[Wnioskowanie o typie](../type-inference.md)
-
-[Automatyczna generalizacja](automatic-generalization.md)
-
-[Ograniczenia](constraints.md)
-
-[Funkcje śródwierszowe](../functions/inline-functions.md)
+- [Typy ogólne](index.md)
+- [Wnioskowanie o typie](../type-inference.md)
+- [Automatyczna generalizacja](automatic-generalization.md)
+- [Ograniczenia](constraints.md)
+- [Funkcje śródwierszowe](../functions/inline-functions.md)

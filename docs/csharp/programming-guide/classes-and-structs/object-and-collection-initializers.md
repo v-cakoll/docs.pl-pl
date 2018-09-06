@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 9986a91b18c536773f4ca20b71c54588c3e95f32
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: def33041c4202c80aad9f08d1ff8d9dbbc477061
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43476134"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43780052"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inicjatory obiektów i kolekcji (Przewodnik programowania w języku C#)
 Inicjatory obiektów umożliwiają przypisywanie wartości do dowolnych dostępnych pól lub właściwości obiektu w czasie jego tworzenia, bez konieczności wywoływania konstruktora, po którym występują wiersze instrukcji przypisania. Składnia inicjatora obiektów umożliwia określenie argumentów dla konstruktora lub pominięcie argumentów (i składni z nawiasami).  Poniższy przykład pokazuje, jak używać inicjatora obiektów z typem nazwanym `Cat` i jak wywołać konstruktora domyślnego. Zwróć uwagę na użycie właściwości zaimplementowane automatycznie w `Cat` klasy. Aby uzyskać więcej informacji, zobacz [implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
@@ -86,7 +86,8 @@ var numbers = new Dictionary<int, string> {
  
  [!code-csharp[csProgGuideLINQ#85](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_8.cs)]
  
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

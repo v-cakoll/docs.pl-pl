@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
 ms.openlocfilehash: b719f2112aac1292b668fe199d48de4b0b60ed21
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659141"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773094"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Porady: tworzenie tabeli wyszukiwania dla formantów ComboBox, ListBox i CheckedListBox formularzy systemu Windows
 Czasami warto wyświetlić dane w formacie przyjazny dla użytkownika w formularzu Windows, ale przechowywać dane w formacie, który jest bardziej zrozumiały dla programu. Na przykład formularz zamówienia ds może wyświetlić elementy menu według nazwy w polu listy. Jednak w tabeli danych rejestrowania kolejność zawierałoby unikatowe numery identyfikacyjne reprezentujący żywności. W poniższej tabeli przedstawiono przykład sposobu przechowywania i wyświetlania danych w formularzu zamówienia ds.  

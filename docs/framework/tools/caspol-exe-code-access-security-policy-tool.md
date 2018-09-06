@@ -18,11 +18,11 @@ ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659645"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748434"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Narzędzie zasad zabezpieczeń dostępu kodu)
 Narzędzie (Caspol.exe) sprawdzania zabezpieczeń dostępu kodu (CAS) pozwala użytkownikom i administratorom na modyfikowanie zasad bezpieczeństwa na poziomie zasad komputera, na poziomie zasad użytkownika i na poziomie zasad przedsiębiorstwa.  
@@ -53,7 +53,7 @@ caspol [options]
 |**-a**[**ll**]|Wskazuje, że wszystkie opcje następujące po niej mają zastosowanie do zasad komputera, użytkownika i przedsiębiorstwa. **— Wszystkie** opcja zawsze odwołuje się do zasad aktualnie zalogowanego użytkownika. Zobacz **- customall** opcję, aby odwoływać się do zasad użytkownika innego niż bieżący użytkownik.|  
 |**-chggroup** {*etykiety &#124;nazwa*} {*mship* &#124; *pset_name*&#124;<br /><br /> *flagi* `}`<br /><br /> lub<br /><br /> **-cg** {*etykiety &#124;nazwa*} {*mship* &#124; *pset_name*&#124;<br /><br /> *flagi* `}`|Zmienia warunek członkostwa grupy kodu, zestaw uprawnień lub ustawień **wyłączne**, **levelfinal**, **nazwa**, lub **opis**flagi. Można określić *etykiety* lub *nazwa*. *Etykiety* argument Określa etykietę (taką jak 1. lub 1.1.) grupy kodu. *Nazwa* argument określa nazwę grupy kodu do zmiany. Ponieważ *etykiety* i *nazwa* mogą być używane zamiennie, Caspol.exe musi mieć możliwość rozróżnienia między nimi. W związku z tym *nazwa* nie może zaczynać się liczbą. Ponadto *nazwa* może zawierać tylko A-Z, 0-9 i znak podkreślenia.<br /><br /> *Pset_name* argument określa nazwę zestaw uprawnień, aby skojarzyć z grupą kodu. Zobacz tabele w dalszej części tej sekcji, aby uzyskać informacje na *mship* i *flagi* argumentów.|  
 |**-chgpset***psfile pset_name* <br /><br /> lub<br /><br /> **-cp** *psfile pset_name*|Zmienia nazwany zestaw uprawnień. *Psfile* argument dostarcza nową definicję zestawu uprawnień; jest to Zserializowany plik zestawu uprawnień w formacie XML. *Pset_name* argument określa nazwę zestawu uprawnień, które chcesz zmienić.|  
-|**-customall***ścieżki* <br /><br /> lub<br /><br /> **-ca***ścieżki* |Wskazuje, że wszystkie opcje następujące po niej, mają zastosowanie do zasad komputera, przedsiębiorstwa i określonych niestandardowych zasad użytkownika. Należy określić lokalizację pliku konfiguracji zabezpieczeń użytkownika niestandardowego z *ścieżki* argumentu.|  
+|**-customall***ścieżki*<br /><br /> lub<br /><br /> **-ca***ścieżki*|Wskazuje, że wszystkie opcje następujące po niej, mają zastosowanie do zasad komputera, przedsiębiorstwa i określonych niestandardowych zasad użytkownika. Należy określić lokalizację pliku konfiguracji zabezpieczeń użytkownika niestandardowego z *ścieżki* argumentu.|  
 |**-cu**[**stomuser**] *ścieżki*|Umożliwia administrację niestandardowymi zasadami użytkownika, które nie należą do użytkownika, w którego imieniu program Caspol.exe jest aktualnie uruchomiony. Należy określić lokalizację pliku konfiguracji zabezpieczeń użytkownika niestandardowego z *ścieżki* argumentu.|  
 |**-enterprise**<br /><br /> lub<br /><br /> **-pl**|Wskazuje, że wszystkie opcje następujące po niej, mają zastosowanie do poziomu zasad przedsiębiorstwa. Użytkownicy, którzy nie są administratorami przedsiębiorstwa, nie posiadają wystarczających praw, aby modyfikować zasady przedsiębiorstwa, jednak mogą je wyświetlać. W scenariuszach bez przedsiębiorstwa zasady te domyślnie nie kolidują z zasadami komputera i użytkownika.|  
 |**-e**[**xecution**] {**na** &#124; **poza**}|Włącza lub wyłącza mechanizm sprawdzający uprawnienia uruchamiania przed rozpoczęciem wykonywania kodu. **Uwaga:** ten przełącznik został usunięty w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i nowszych wersjach. Aby uzyskać więcej informacji, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).|  
@@ -85,7 +85,7 @@ caspol [options]
 |--------------|-----------------|  
 |**-allcode**|Określa cały kod. Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
 |**-appdir**|Określa katalog aplikacji. Jeśli określisz **– appdir** jako warunku członkostwa, dowód URL kodu jest porównywany z dowodem katalogu aplikacji danego kodu. Jeśli obie wartości są takie same, warunek członkostwa jest spełniony. Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
-|**-niestandardowe***xmlfile* |Dodaje niestandardowy warunek członkostwa. Obowiązkowy *xmlfile* argument określa plik XML, który zawiera serializacji XML niestandardowy warunek członkostwa.|  
+|**-niestandardowe***xmlfile*|Dodaje niestandardowy warunek członkostwa. Obowiązkowy *xmlfile* argument określa plik XML, który zawiera serializacji XML niestandardowy warunek członkostwa.|  
 |**-skrótu** *hashAlg* {**-hex** *hashValue* &#124; **— plik** *assembly_file* }|Określa kod, który posiada podany skrót zestawu. Aby użyć skrótu jako warunku członkostwa grupy kodu, należy określić wartość skrótu lub plik zestawu. Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
 |**-pub** { **-cert** *cert_file_name*&#124;<br /><br /> **-pliku** *signed_file_name* &#124; **-hex***hex_string* }  |Określa kod, który posiada podanego wydawcę oprogramowania wskazanego przez plik certyfikatu, sygnaturę pliku lub reprezentację szesnastkową certyfikatu X509. Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-witryny** *witryny sieci Web*|Określa kod, który posiada określoną witrynę pochodzenia. Na przykład:<br /><br /> `-site** www.proseware.com`<br /><br /> Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  

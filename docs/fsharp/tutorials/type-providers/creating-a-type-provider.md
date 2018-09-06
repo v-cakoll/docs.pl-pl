@@ -2,12 +2,12 @@
 title: 'Samouczek: Tworzenie dostawcy typów (F #)'
 description: 'Dowiedz się, jak utworzyć własne dostawcy typów F # w F # 3.0, sprawdzając kilku dostawców typu prostego, w celu zilustrowania podstawowych koncepcji.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 25b11a0c6328fc74832e13b6380c983fb14a74a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499331"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745729"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Samouczek: Tworzenie dostawcy typów
 
@@ -24,7 +24,6 @@ Ekosystem F # zawiera szeroką gamę dostawców typów dla często używanych in
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) to starszy zestaw dostawców typów do użycia tylko w programowaniu .NET Framework do uzyskiwania dostępu do usługi danych SQL, platformy Entity Framework, OData i WSDL.
 
 W przypadku, gdy to konieczne, można tworzyć niestandardowych dostawców typów, lub możesz odwoływać się do dostawców typów, utworzone przez innych użytkowników. Na przykład organizacja może mieć usługi danych, która zapewnia duży i rosnący liczbę nazwanych zestawów danych, każdy z swój własny stabilny schemat danych. Możesz utworzyć dostawcę typów, który odczytuje te schematy i przedstawia informacje o bieżącym zestawów danych do programisty należy w silnie typizowany sposób.
-
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
@@ -51,7 +50,6 @@ Przed rozpoczęciem może odpowiedzieć na następujące pytania:
 - Zostanie ona zmieniona podczas wykonywania programu?
 
 Dostawcy typów są najlepiej sprawdza się w sytuacjach, gdy schemat jest stabilna, w czasie wykonywania, jak i w okresie istnienia skompilowanego kodu.
-
 
 ## <a name="a-simple-type-provider"></a>Dostawca typu prostego
 
@@ -93,8 +91,7 @@ type Type100 =
 
 Należy pamiętać, że zestaw typów i członków, pod warunkiem jest znany statycznie. W tym przykładzie nie korzystać z możliwości dostawców typów, które są zależne od schematu. Implementacja dostawcy typów jest opisany w następującym kodzie i szczegółowe informacje znajdują się w kolejnych sekcjach tego tematu.
 
-
->[!WARNING] 
+>[!WARNING]
 Może to być różnice między tym kodem i przykładów online.
 
 ```fsharp
@@ -168,7 +165,6 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 Jako alternatywę, Otwórz program Visual Studio, otwórz menu debugowanie, wybierz polecenie `Debug/Attach to process…`i Dołącz do innego `devenv` proces, w którym edycji skrypt. Za pomocą tej metody, można łatwiej wskazać konkretnego węzła logicznego w dostawcy typów interaktywnie wpisując wyrażenia do drugiego wystąpienia (z pełną obsługą technologii IntelliSense i inne funkcje).
 
 Można wyłączyć opcję tylko mój kod, debugowanie, aby lepiej identyfikację błędów występujących w wygenerowanym kodzie. Aby dowiedzieć się, jak włączyć lub wyłączyć tę funkcję, zobacz [nawigowanie po kodzie za pomocą debugera za](/visualstudio/debugger/navigating-through-code-with-the-debugger). Ponadto można również ustawić wyjątku pierwszej szansy przechwytywanie, otwierając `Debug` menu, a następnie wybierając `Exceptions` lub wybierając klawisze Ctrl + Alt + E, aby otworzyć `Exceptions` okno dialogowe. W tym oknie dialogowym w obszarze `Common Language Runtime Exceptions`, wybierz opcję `Thrown` pole wyboru.
-
 
 ### <a name="implementation-of-the-type-provider"></a>Implementacja dostawcy typów
 
@@ -376,7 +372,6 @@ W przykładzie, w tej sekcji przedstawiono jedynie *wymazane podane typy*, któr
 
 W tym przykładzie każdy z podanych typu są usuwane na typ `obj`, a wszystkie przypadki użycia typu pojawi się jako typ `obj` w skompilowany kod. W rzeczywistości obiektów w tych przykładach są ciągami, ale typ będą wyświetlane jako `System.Object` na platformie .NET skompilowany kod. Ponieważ wszystkie przypadki użycia wymazywania typie, będzie można użyć jawne pakowanie, Rozpakowywanie i rzutowania można złamać usuwane typów. W tym przypadku wyjątek rzutowania, który nie jest prawidłową może spowodować, jeśli obiekt jest używany. Dostawca środowiska uruchomieniowego, można zdefiniować swój własny typ reprezentujący prywatnych w celu zabezpieczenia przed reprezentacje false. Nie można zdefiniować typy wymazane w języku F # sam. Tylko podane typy mogą zostać wymazane. Musisz rozumieć konsekwencje, zarówno praktyczne, i semantyczne, albo korzystania z wymazanej typy dla dostawcy typu lub dostawcę, który zawiera usunięte typów. Typem wymazane nie ma rzeczywistych .NET typu. W związku z tym nie można wykonać dokładne odbicie nad typem i może złamać wymazane typy rzutowania środowiska uruchomieniowego i innych technik, które opierają się na semantyce typu dokładnego czasu wykonywania za pomocą. Subversion typów wymazane często skutkuje wyjątki rzutowanie typu w czasie wykonywania.
 
-
 ### <a name="choosing-representations-for-erased-provided-types"></a>Wybieranie oświadczenia dla wymazane dostarczone typy
 
 Do niektórych zastosowań wymazane podane typy nie jest wymagana. Na przykład wymazane dostarczane typ może zawierać tylko właściwości statycznych i elementów członkowskich i konstruktorów, a żadnych metod ani właściwości zwróci wystąpienia tego typu. Możesz uzyskiwać dostęp wystąpień wymazane podany typ, należy wziąć pod uwagę następujące kwestie:
@@ -435,11 +430,9 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 W poprzedniej sekcji objaśniono sposób tworzenia prostego wymazywanie dostawcę typów, który udostępnia szereg typów, właściwości i metody. W tej sekcji również wyjaśniono pojęcie wymazywania typu, w tym niektóre zalety i wady związanych z udostępnianiem typy wymazane z dostawcy typów i omówiono reprezentujących typy wymazane.
 
-
 ## <a name="a-type-provider-that-uses-static-parameters"></a>Dostawcy typów, który używa statycznych parametrów
 
 Możliwość parametryzacja dostawców typów statycznych danych umożliwia wiele ciekawych scenariuszy, nawet w przypadkach, gdy dostawca nie potrzebuje dostępu do żadnych danych lokalnych lub zdalnych. W tej sekcji dowiesz się kilka podstawowych technik dla zestawiania takiego dostawcy.
-
 
 ### <a name="type-checked-regex-provider"></a>Typ zaznaczone dostawcy wyrażeń regularnych
 
@@ -737,16 +730,13 @@ do ()
 
 W tej sekcji wyjaśniono, jak utworzyć dostawcę typów, który działa na jego parametry statyczne. Dostawca sprawdza, czy parametr static i udostępnia operacje na podstawie jej wartości.
 
-
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>Dostawcy typów, która jest wspierana przez dane lokalne
 
 Często można dostawców typów, aby przedstawić interfejsów API opartych na nie tylko parametry statyczne, ale także informacje z systemów lokalnych lub zdalnych. W tej sekcji omówiono dostawców typów, które są oparte na danych lokalnych, takich jak pliki danych lokalnych.
 
-
 ### <a name="simple-csv-file-provider"></a>Dostawcy plików CSV prosty
 
 Prostym przykładem należy wziąć pod uwagę dostawcy typów do uzyskiwania dostępu do danych naukowych, w formacie wartości rozdzielanych przecinkami (CSV). W tej sekcji założono, że pliki CSV zawiera wiersz nagłówka, następuje ruchomy punkt danych, tak jak pokazano w poniższej tabeli:
-
 
 |Distance (licznik)|Czas (s)|
 |----------------|-------------|
@@ -893,11 +883,9 @@ Należy pamiętać o następujących kwestiach dotyczących implementacji:
 
 W tej sekcji wyjaśniono, jak utworzyć dostawcę typów dla źródła danych lokalnych przy użyciu prosty schemat, który jest zawarty w źródło danych.
 
-
 ## <a name="going-further"></a>Kontynuowanie
 
 Poniższe sekcje zawierają sugestie dotyczące dalszych badań.
-
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>Przyjrzeć się skompilowany kod dla typów wymazane
 
@@ -939,8 +927,8 @@ IL_0017:  ret
 
 Jak pokazano w przykładzie, wszystkie wystąpienia typu `Type1` i `InstanceProperty` właściwości zostały wymazane, pozostawiając tylko operacje na typów środowiska wykonawczego związane.
 
-
 ### <a name="design-and-naming-conventions-for-type-providers"></a>Projektowanie i konwencje nazewnictwa dla dostawców typów
+
 Podczas tworzenia dostawców typów, należy przestrzegać następujących konwencji.
 
 **Dostawców łączności protokołów** ogólnie rzecz biorąc, nazwy dostawcy większość bibliotek DLL dla protokołów łączności danych i usługi, takie jak w przypadku połączeń protokołu OData lub SQL powinno zakończyć `TypeProvider` lub `TypeProviders`. Na przykład użyj nazwy biblioteki DLL, który przypomina następujący ciąg:
@@ -980,13 +968,12 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 Aby uzyskać więcej informacji, zobacz `GetConnection` projektowania Konwencji, który jest opisany w dalszej części tego tematu.
 
-
 ### <a name="design-patterns-for-type-providers"></a>Wzorce projektowe dla dostawców typów
 
 Wzorce projektowe, których można użyć podczas tworzenia dostawców typów można znaleźć w poniższych sekcjach.
 
-
 #### <a name="the-getconnection-design-pattern"></a>Wzorzec projektowy GetConnection
+
 Większość dostawców typów, powinny być zapisywane do użycia `GetConnection` wzorzec, który jest używany przez dostawców typu w FSharp.Data.TypeProviders.dll, co ilustruje poniższy przykład:
 
 ```fsharp
@@ -1147,10 +1134,7 @@ Dostawcy typów można debugować często najłatwiej przy użyciu fsc.exe w pli
 
   Możesz użyć rejestrowania drukowania do strumienia wyjściowego stdout.
 
+## <a name="see-also"></a>Zobacz także
 
-## <a name="see-also"></a>Zobacz też
-
-* [Dostawcy typów](index.md)
-
-* [Dostawcy typów zestawu SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
-
+- [Dostawcy typów](index.md)
+- [Dostawcy typów zestawu SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

@@ -3,11 +3,11 @@ title: Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
 ms.openlocfilehash: 66a1eac33d5f715f52bd83c43bac4452df41aabd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535941"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746413"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (C#)
 Kowariantne interfejs umożliwia jego metod zwrócić więcej typów pochodnych niż określone w interfejsie. Interfejs kontrawariantnego umożliwia jego metod akceptował parametry typu mniej pochodnego niż warunki określone w interfejsie.  

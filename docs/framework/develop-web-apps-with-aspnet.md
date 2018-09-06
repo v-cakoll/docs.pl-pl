@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
 ms.openlocfilehash: 9033927f714a6788a10d6966973ad2ac51d17945
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43670629"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740565"
 ---
 # <a name="developing-web-applications-with-aspnet"></a>Tworzenie aplikacji internetowej z wykorzystaniem technologii ASP.NET
 ASP.NET jest technologią .NET Framework do tworzenia aplikacji sieci web. Dla wygody użytkownika dostępne są następujące łącza:  

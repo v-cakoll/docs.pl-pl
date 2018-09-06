@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cb23c25c-1075-4cc3-a8ff-4db72e536c0d
 ms.openlocfilehash: 2fd64cb16224290d76efe327978083b1e834d6cb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401061"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738550"
 ---
 # <a name="method-based-query-syntax-examples-grouping"></a>Przykłady składni zapytania oparte na metodzie: grupowanie
 Przykłady w tym temacie pokazano, jak używać `GroupBy` metody zapytania [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) za pomocą składni zapytania oparte na metodzie. Model sprzedaży AdventureWorks, który jest używany w tych przykładach składa się z kontaktu, adres, produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży tabele w przykładowej bazy danych AdventureWorks.  

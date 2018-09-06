@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: acf3ba12a9a7e6ba9a8e378892098f5f265a23d9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461803"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779763"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Klasy XAML i niestandardowe dla WPF
 XAML zaimplementowanego w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] struktury obsługuje możliwość definiowania niestandardowej klasy lub struktury w dowolnym [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] języka, a następnie dostęp przy użyciu znaczników XAML. Możesz użyć kombinacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]— określone typy i swoje niestandardowe w ramach tego samego pliku znaczników, zwykle przez mapowanie typów niestandardowych do prefiksu przestrzeni nazw XAML. W tym temacie omówiono wymagania które muszą spełniać klasę niestandardową, może być używany jako XAML element.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 769a8a5b60c6b963619b79526a7d1ee59af3ba33
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564252"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773976"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Wskazówki: rozmieszczanie formantów w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel
 Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas zmiany rozmiaru formularza lub zawartość zmienia rozmiar formularza. Kiedy należy układ dynamiczny i nie chcesz obsługiwać <xref:System.Windows.Forms.Control.Layout> zdarzenia jawnie w kodzie, należy wziąć pod uwagę przy użyciu panelu układu.  

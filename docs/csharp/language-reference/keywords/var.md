@@ -8,11 +8,11 @@ helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
 ms.openlocfilehash: ab49a4f4fcbc990a1fd21139397d70fa9fbf5dd8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393851"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735640"
 ---
 # <a name="var-c-reference"></a>var (odwołanie w C#)
 Począwszy od Visual C# 3.0, zmienne, które są zadeklarowane w zakresie metoda może mieć niejawne "type" `var`. Niejawnie wpisane zmiennej lokalnej jest jednoznacznie określone typy, tak jak w przypadku możesz typu była zadeklarowana, ale kompilator Określa typ. Poniższe dwie deklaracje `i` są funkcjonalnie równoważne:  

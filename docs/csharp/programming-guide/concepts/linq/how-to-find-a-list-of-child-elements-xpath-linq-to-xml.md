@@ -2,12 +2,12 @@
 title: 'Porady: lista elementów podrzędnych (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
-ms.openlocfilehash: 742b0843e3287bd8de6c7b1f5d3706d66e5d344f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 445d206577e45b7db9900e187f5bea3a7e18c715
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418269"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735740"
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Porady: lista elementów podrzędnych (XPath-LINQ to XML) (C#)
 W tym temacie porównano osi elementów podrzędnych XPath do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> osi.  
@@ -50,5 +50,6 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Zobacz też
+
+- [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

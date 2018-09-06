@@ -3,11 +3,11 @@ title: Sesja niezawodna powiązania niestandardowego
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
 ms.openlocfilehash: 55ffdd741bf26c1a906c7b09dfa05839b25f1645
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557494"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773579"
 ---
 # <a name="custom-binding-reliable-session"></a>Sesja niezawodna powiązania niestandardowego
 Powiązanie niestandardowe jest definiowany przez uporządkowaną listą elementy powiązania dyskretnych. Niniejszy przykład pokazuje, jak skonfigurować powiązania niestandardowego z różnymi transportu i komunikatu kodowanie elementów, szczególnie Włączanie niezawodnej sesji.  

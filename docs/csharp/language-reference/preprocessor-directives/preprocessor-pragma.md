@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
 ms.openlocfilehash: 5ae397cc61e0c6b58ed2079369131ebb7e352eae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43662102"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747486"
 ---
 # <a name="pragma-c-reference"></a>#pragma (odwołanie w C#)
 Dyrektywa `#pragma` zapewnia specjalne instrukcje dla kompilatora dotyczące kompilowania pliku, w którym występuje. Instrukcje muszą być obsługiwane przez kompilator.  Innymi słowy, nie można użyć dyrektywy `#pragma` do tworzenia niestandardowych instrukcji przetwarzania wstępnego. Kompilator Microsoft C# obsługuje dwie instrukcje `#pragma`:  

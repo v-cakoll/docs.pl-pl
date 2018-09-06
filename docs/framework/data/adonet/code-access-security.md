@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
 ms.openlocfilehash: 45c838fbac5e6f576a242c8839f849dc9529ef7d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533526"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779276"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczeń dostępu kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury, dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji są wykonywane z uprawnienia użytkownika lub jednostki. W rezultacie systemów komputerowych, może być uszkodzone i prywatnych danych naruszenia zabezpieczeń w przypadku złośliwego lub wypełnione błąd oprogramowania jest uruchamiane przez użytkownika z podwyższonym poziomem uprawnień.  

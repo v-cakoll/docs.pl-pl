@@ -4,18 +4,18 @@ description: Więcej informacji na temat języka C# poziomu języka asynchronicz
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 971295b85e5f2763eef87bfe9109524db2630120
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518251"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741373"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
 W przypadku dowolnego potrzeb I/O-powiązane z (takich jak żąda danych od sieci lub uzyskiwania dostępu do bazy danych) można wykorzystywać programowania asynchronicznego.  Może również mieć kod zależne od Procesora CPU, takie jak kosztowne obliczeń, który jest również dobrym scenariusza dotyczące pisania kodu asynchronicznego.
 
-C# ma poziom języka asynchronicznego modelu programowania, który pozwala na łatwe pisania kodu asynchronicznego bez konieczności łatwiejszą obsługę wywołań zwrotnych i być zgodna z biblioteki, która obsługuje asynchroniczności. Następuje to, co jest nazywane [opartego na zadaniach asynchronicznej wzorca (TAP)](https://msdn.microsoft.com/library/hh873175.aspx).
+C# ma poziom języka asynchronicznego modelu programowania, który pozwala na łatwe pisania kodu asynchronicznego bez konieczności łatwiejszą obsługę wywołań zwrotnych i być zgodna z biblioteki, która obsługuje asynchroniczności. Następuje to, co jest nazywane [opartego na zadaniach asynchronicznej wzorca (TAP)](../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>Ogólne omówienie modelu asynchronicznego
 

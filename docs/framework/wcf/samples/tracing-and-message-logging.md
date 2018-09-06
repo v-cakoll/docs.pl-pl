@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 7f729e845fe552d523a46a1783404baf4e0bbfca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487213"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779474"
 ---
 # <a name="tracing-and-message-logging"></a>Śledzenie i rejestrowanie komunikatów
 Niniejszy przykład pokazuje, jak włączyć śledzenie i rejestrowanie komunikatów. Wynikowy ślady i dzienniki komunikatów są wyświetlane przy użyciu [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

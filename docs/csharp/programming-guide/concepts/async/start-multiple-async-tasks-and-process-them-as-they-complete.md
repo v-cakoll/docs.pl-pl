@@ -2,12 +2,12 @@
 title: Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich, po ich zakończeniu (C#)
 ms.date: 07/20/2015
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: d59b65e456c528c63c79c97f6c75c328066be631
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a23bdedbd9786fb930f92f5aa4b1025b83a4bcbe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416401"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748173"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich, po ich zakończeniu (C#)
 Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, można uruchomić wiele zadań w tym samym czasie i przetwarzać je jedno po ich zakończeniu, zamiast przetwarzać je w kolejności, w którym są uruchamiane.  
@@ -225,8 +225,9 @@ namespace ProcessTasksAsTheyFinish
 // Downloads complete.  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
- [Dostrajanie aplikacji Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Próbka asynchroniczna: Dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+- [Dostrajanie aplikacji Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+- [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Próbka asynchroniczna: Dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

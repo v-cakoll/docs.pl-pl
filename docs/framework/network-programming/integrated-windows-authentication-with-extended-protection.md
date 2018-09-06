@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: a78507226b87f005798d0c4824a827a72f1d657a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542768"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742802"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Windows zintegrowane uwierzytelnianie przy użyciu mechanizmu rozszerzonej ochrony
 Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, i pokrewne klasy w <xref:System.Net> i pokrewnych przestrzeniach nazw. Dodano obsługę ochrony rozszerzonej zwiększyć poziom bezpieczeństwa.  

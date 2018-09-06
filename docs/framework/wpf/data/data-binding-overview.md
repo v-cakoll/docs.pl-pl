@@ -11,11 +11,11 @@ helpviewer_keywords:
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
 ms.openlocfilehash: 1b34b3369e5a045f45251d3285f10bf74b6f0d33
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661759"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778084"
 ---
 # <a name="data-binding-overview"></a>Przegląd Wiązanie danych
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób w przypadku aplikacji, umożliwiające zaprezentowanie i interakcję z danymi. Elementy może być powiązana z danymi z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.ItemsControl>s, takie jak <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListView> posiada wbudowanej funkcji, aby umożliwić elastyczne stylu pojedynczymi elementami danych lub kolekcje elementów danych. Sortowanie, filtrowanie i widoki grup mogą być generowane na podstawie danych.  

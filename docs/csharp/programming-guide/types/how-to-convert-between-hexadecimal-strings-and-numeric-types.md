@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 0f7502bc0f14c85d207c313646f26c7787bd46b3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5acbfd121698cf0d2b6d78ccea810baf624c7981
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484090"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738726"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Porady: konwertowanie ciągów szestnastkowych na typy liczbowe (Przewodnik programowania w języku C#)
 Te przykłady pokazują, jak wykonywać następujące zadania:  
@@ -52,7 +52,8 @@ Te przykłady pokazują, jak wykonywać następujące zadania:
   
  [!code-csharp[csProgGuideTypes#38](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-between-hexadecimal-strings-and-numeric-types_5.cs)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md)  
- [Typy](../../../csharp/programming-guide/types/index.md)  
- [Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md)  
+- [Typy](../../../csharp/programming-guide/types/index.md)  
+- [Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
 ms.openlocfilehash: 96e4034c6a2476e1dfcf8e8ef22bae6e5b8d4934
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469807"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738249"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Porady: wykonywanie zapytania, które zwraca wyniki RefType
 W tym temacie pokazano, jak uruchamiać polecenia względem modelu koncepcyjnego przy użyciu <xref:System.Data.EntityClient.EntityCommand> obiektu oraz jak pobierać <xref:System.Data.Metadata.Edm.RefType> wyniki za pomocą <xref:System.Data.EntityClient.EntityDataReader>.  

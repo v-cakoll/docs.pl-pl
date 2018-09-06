@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481791"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776304"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Wyliczanie wystąpień programu SQL Server (ADO.NET)
 Program SQL Server zezwala na aplikacji, aby znaleźć wystąpień programu SQL Server w ramach bieżącej sieci. <xref:System.Data.Sql.SqlDataSourceEnumerator> Klasa udostępnia te informacje do deweloperów aplikacji, zapewniając <xref:System.Data.DataTable> zawierające informacje dotyczące wszystkich serwerów widoczne. Ta wartość zwrócona tabela zawiera listę wystąpień serwera dostępne w sieci, z którą jest zgodne z listą udostępniany, gdy użytkownik próbuje utworzyć nowe połączenie, a następnie rozwija listy rozwijanej zawierające wszystkie dostępne serwery na **połączenia Właściwości** okno dialogowe. Wyniki wyświetlane nie zawsze są pełne.  

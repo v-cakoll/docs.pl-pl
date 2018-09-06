@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: 5b0fbf50455545a12adbc03bf2cd05d52de69936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553793"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746249"
 ---
 # <a name="panel-how-to-topics"></a>Panel Tematy porad
-W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Panel> element i pokrewnych [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
+Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.Panel> elementu i pokrewnych [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: dotyczył właściwości LayoutTransform elementu](http://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
+ [Porady: stosowanie LayoutTransform do elementu](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [Tworzenie niestandardowego elementu panelu](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [Zastępowanie metody OnRender panelu](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [Ustawianie właściwości wysokości elementu](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  

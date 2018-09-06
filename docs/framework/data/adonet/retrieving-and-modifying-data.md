@@ -3,11 +3,11 @@ title: Pobieranie i modyfikowanie danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562566"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779354"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Pobieranie i modyfikowanie danych w ADO.NET
 Podstawową funkcją dowolnej aplikacji bazy danych jest łączenie ze źródłem danych i pobierania danych, które zawiera. Dostawcy danych .NET Framework ADO.NET, które służą jako Most między aplikacją a źródłem danych, co umożliwia wykonywanie poleceń również, aby pobierać dane przy użyciu **DataReader** lub **DataAdapter** . Funkcja klucza aplikacji bazy danych jest możliwość aktualizowania danych, która jest przechowywana w bazie danych. W ADO.NET, aktualizowanie danych polega na użyciu **DataAdapter** i <xref:System.Data.DataSet>, i **polecenia** obiektów; i może również obejmować za pomocą transakcji.  

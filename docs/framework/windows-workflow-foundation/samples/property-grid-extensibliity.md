@@ -3,11 +3,11 @@ title: Rozszerzalność siatki właściwości
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
 ms.openlocfilehash: b7c3e3dbc3ccd95fc12dffd40927b3e2bbbc8226
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660259"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779302"
 ---
 # <a name="property-grid-extensibliity"></a>Rozszerzalność siatki właściwości
 Deweloper może dostosować siatki właściwości, wyświetlanego po wybraniu danego działania w projektancie. Można to zrobić, aby utworzyć zaawansowane środowisko edycji. Niniejszy przykład pokazuje, jak można to zrobić.  

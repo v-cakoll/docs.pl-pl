@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 26a6046ac926a13c4f2a2f2cc4dfd250d998bc93
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1085de3447bd6101fcccf6cae7b37afac24d37f1
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386171"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776530"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instrukcje, wyrażenia i operatory (Przewodnik programowania w języku C#)
 Kod C#, który składa się z aplikacji składa się z instrukcji, które składają się z słów kluczowych, wyrażenia i operatory. Ta sekcja zawiera informacje dotyczące tych podstawowych elementów programu w języku C#.  
@@ -44,6 +44,7 @@ Kod C#, który składa się z aplikacji składa się z instrukcji, które skład
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

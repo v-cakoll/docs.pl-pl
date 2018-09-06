@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Line control [Visual Basic], topic list
 ms.assetid: 29ee3a5f-920f-4677-85bc-bd7425ab57e8
 ms.openlocfilehash: 6d052af15257f00f43ad21b08765ab3c882b31bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404202"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733277"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Formanty linii i kształtu (Visual Studio)
 Formanty Visual Basic Power Packs linii i kształtu to graficzny formantów, które pozwalają na rysowanie linii poziomej, pionowej i ukośne, prostokąty, kwadratów, elipsy, okręgów i prostokąty i kwadratów z zaokrąglonymi rogami na formularzu lub kontenera.  
   
- Formantów PowerPack znajdują się już w programie Visual Studio, ale można je pobrać [Centrum pobierania](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Kontrolki pakietu PowerPack nie są już dostępne w programie Visual Studio, ale można je pobrać w [Centrum pobierania](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Linie i kształty — Wprowadzenie do kontrolek](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  

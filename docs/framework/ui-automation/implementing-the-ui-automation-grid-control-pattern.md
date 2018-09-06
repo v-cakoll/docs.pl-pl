@@ -9,45 +9,45 @@ ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0038202fb7c7f1a6e0b4f21592d7a1056c4dfa2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 036680ea908f2cbe58db398dc315fccd997c4148
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409997"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738491"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementacja wzorca kontrolki siatki automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.IGridProvider>, wraz z informacjami dotyczącymi właściwości, metod i zdarzeń. Łącza do dodatkowe informacje są wyświetlane na końcu przeglądu.  
+ W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.IGridProvider>, wraz z informacjami dotyczącymi właściwości, metody i zdarzenia. Łącza do dodatkowe informacje są wyświetlane na końcu przeglądu.  
   
- <xref:System.Windows.Automation.GridPattern> — Wzorzec formantu jest używana do obsługi formantów, które działają jak kontenery kolekcję elementów podrzędnych. Elementy podrzędne tego elementu musi implementować <xref:System.Windows.Automation.Provider.IGridItemProvider> i zorganizowane dwuwymiarowa logicznego układu współrzędnych, który można przekształcić według wierszy i kolumn. Przykłady formantów, które implementują wzorzec tego formantu można znaleźć [formantu wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.GridPattern> — Wzorzec kontrolki jest używana do obsługi formantów, które działają jak kontenery dla kolekcji elementów podrzędnych. Elementy podrzędne tego elementu musi implementować <xref:System.Windows.Automation.Provider.IGridItemProvider> i zorganizowane w dwuwymiarowej logiczne współrzędnych być przechodni według wierszy i kolumn. Przykłady formantów, które implementują wzorzec tej kontrolki, zobacz [kontroli wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementacja — wskazówki i konwencje  
- Gdy implementacja wzorca formantu siatki, należy zwrócić uwagę następujące wskazówki i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
+ Jeśli implementacja wzorca kontrolki siatki, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Współrzędne siatki są liczony od zera o konieczności współrzędne (0, 0) u góry z lewej (lub górna prawa komórka w zależności od ustawień regionalnych).  
+-   Współrzędne siatki są oparte na zerze z lewym górnym rogu (lub górną prawa komórka w zależności od ustawień regionalnych), o współrzędnych (0, 0).  
   
--   Jeśli komórka jest pusta, nadal musi zostać zwrócona elementu automatyzacji interfejsu użytkownika w celu zapewnienia obsługi <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> właściwości dla komórki. Jest to możliwe, gdy układ elementów podrzędnych siatki jest podobna do tablicy niewyrównane (zobacz poniższy przykład).  
+-   Jeśli komórka jest pusta, element automatyzacji interfejsu użytkownika nadal musi zostać zwrócony w celu obsługi <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> właściwości dla tej komórki. Jest to możliwe, gdy układu elementów podrzędnych siatki jest podobna do niewyrównanych tablicy (zobacz poniższy przykład).  
   
- ![Widok Eksploratora Windows z niewyrównanym układem. ] (../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
-Przykład formantu siatki o pustym współrzędnych  
+ ![Eksplorator Windows umożliwia wyświetlanie niewyrównanym układem. ](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+Przykład formantu siatki z pustym służy do koordynowania  
   
--   Siatkę z pojedynczego elementu jest nadal wymagane do zaimplementowania <xref:System.Windows.Automation.Provider.IGridProvider> Jeśli logicznie jest uważany za siatki. Liczba elementów podrzędnych siatki jest bez znaczenia.  
+-   Siatka zawierająca pojedynczy element jest nadal wymagane, aby zaimplementować <xref:System.Windows.Automation.Provider.IGridProvider> Jeśli logicznie jest uważana za siatki. Liczba elementów podrzędnych siatki jest bez znaczenia.  
   
--   Ukryte wiersze i kolumny, w zależności od implementacji dostawcy mogą być ładowane w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, a w związku z tym zostaną odzwierciedlone w <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> i <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> właściwości. Jeśli ukryte wiersze i kolumny nie zostały jeszcze zostały załadowane, ich nie powinno być liczone.  
+-   Ukryte wierszy i kolumn, w zależności od implementacji dostawcy może zostać załadowany w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa i w związku z tym zostaną odzwierciedlone w <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> i <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> właściwości. Jeśli ukryte wiersze i kolumny nie zostały jeszcze zostały załadowane, nie należy ich liczony.  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider> nie obsługuje aktywnego manipulowania siatki; <xref:System.Windows.Automation.Provider.ITransformProvider> musi zostać wdrożona, aby włączyć tę funkcję.  
+-   <xref:System.Windows.Automation.Provider.IGridProvider> nie obsługuje aktywnego manipulowania siatki; <xref:System.Windows.Automation.Provider.ITransformProvider> musi zaimplementować tak, aby włączyć tę funkcję.  
   
--   Użyj <xref:System.Windows.Automation.StructureChangedEventHandler> do nasłuchiwania zmian strukturalnych lub układ do siatki, takich jak komórki, które zostały dodane, usunięte lub scalone.  
+-   Użyj <xref:System.Windows.Automation.StructureChangedEventHandler> do nasłuchiwania zmian strukturalnych, ani układu siatki, takich jak komórki, które zostały dodane, usunięte lub scalony.  
   
 -   Użyj <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> do śledzenia przechodzenie przez elementy lub komórki siatki.  
   
 <a name="Required_Members_for_IGridProvider"></a>   
 ## <a name="required-members-for-igridprovider"></a>Wymagane elementy IGridProvider  
- Poniższe właściwości i metody są wymagane do implementowania interfejsu IGridProvider.  
+ Poniższe właściwości i metod są wymagane do implementowania interfejsu IGridProvider.  
   
 |Wymagane elementy członkowskie|Typ|Uwagi|  
 |----------------------|----------|-----------|  
@@ -55,16 +55,16 @@ Przykład formantu siatki o pustym współrzędnych
 |<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Właściwość|Brak|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Metoda|Brak|  
   
- Wzorzec ten formant nie ma żadnych zdarzeń skojarzone.  
+ Ten wzorzec formantu nie ma żadnych skojarzonych zdarzeń.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Dostawców należy zgłosić następujące wyjątki.  
+ Dostawcy należy zgłaszać następujące wyjątki.  
   
 |Typ wyjątku|Warunek|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> — Jeśli Współrzędna żądanego wiersza jest większy niż <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> lub Współrzędna kolumny jest większa niż <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> — Jeśli żądany wiersz lub kolumnę współrzędnych jest mniejsza od zera.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> — Jeśli współrzędne żądany wiersz jest większy niż <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> lub współrzędne kolumny jest większa niż <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> — Jeśli żądany wiersz lub kolumnę współrzędnych jest mniejsza niż zero.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  

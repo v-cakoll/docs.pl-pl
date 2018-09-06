@@ -8,11 +8,11 @@ helpviewer_keywords:
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
 ms.openlocfilehash: 2dd9dfa7f15ce00261c87f316079c25a7aa52532
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425894"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734671"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>Jak utworzyć krzywą Beziera trzeciego stopnia
 W tym przykładzie pokazano, jak utworzyć krzywą Beziera trzeciego stopnia. Aby utworzyć krzywą Beziera trzeciego stopnia, użyj <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, i <xref:System.Windows.Media.BezierSegment> klasy.  Aby wyświetlić wynikowe geometry, użyj <xref:System.Windows.Shapes.Path> elementu, lub korzystać z niej za pomocą <xref:System.Windows.Media.GeometryDrawing> lub <xref:System.Windows.Media.DrawingContext>. W poniższych przykładach krzywą Beziera trzeciego stopnia jest rysowana od (10, 100) na (300, 100). Krzywa ma punkty kontrolne (100, 0) i (200, 200).  

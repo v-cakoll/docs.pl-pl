@@ -12,11 +12,11 @@ helpviewer_keywords:
 - constructors [C#], default constructor
 - types [C#], default constructor return values
 ms.openlocfilehash: 184a9f42ddd3654a81aef0b7ce35e404de2d4bb9
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255437"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43737986"
 ---
 # <a name="default-values-table-c-reference"></a>Tabela wartości domyślnych (odwołanie w C#)
 

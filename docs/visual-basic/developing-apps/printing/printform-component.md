@@ -5,16 +5,16 @@ helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
 ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534248"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777850"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm — Składnik (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Składnika dla języka Visual Basic umożliwia drukowanie obraz formularza Windows w czasie wykonywania. Jego zachowanie zastąpi ten `PrintForm` metoda we wcześniejszych wersjach programu Visual Basic.  
   
- Formantów PowerPack znajdują się już w programie Visual Studio, ale można je pobrać [Centrum pobierania](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Kontrolki pakietu PowerPack nie są już dostępne w programie Visual Studio, ale można je pobrać w [Centrum pobierania](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="printform-component-overview"></a>Printform — składnik — omówienie  
  Typowy scenariusz dla formularzy Windows Forms jest utworzenie formularz, który jest sformatowany w sposób przypominający formularza dokument lub raportu, a następnie do drukowania w formie obrazu. Chociaż można używać <xref:System.Drawing.Printing.PrintDocument> składnika, aby to zrobić, będzie to wymagać dużej ilości kodu. <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Składnika umożliwia drukowanie obraz formularza do drukarki, do okna podglądu wydruku lub do pliku bez użycia <xref:System.Drawing.Printing.PrintDocument> składnika.  

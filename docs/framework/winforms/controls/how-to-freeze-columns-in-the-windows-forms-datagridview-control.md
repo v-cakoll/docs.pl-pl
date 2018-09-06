@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
 ms.openlocfilehash: df8ac7e7db74d4e8df8872b5ec7f8f2ec774b3c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659295"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779961"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Porady: blokowanie kolumn w formancie DataGridView formularzy systemu Windows
 Gdy użytkownicy wyświetlają dane wyświetlane w formularzach Windows <xref:System.Windows.Forms.DataGridView> kontrolki, czasami muszą odwoływać się do pojedynczej kolumny lub zestaw kolumn, często. Na przykład wyświetlając tabelę informacje o kliencie, który zawiera wiele kolumn, jest przydatne do wyświetlania nazwy klientów przez cały czas podczas włączania innych kolumn w celu przewiń poza regionem widoczne.  

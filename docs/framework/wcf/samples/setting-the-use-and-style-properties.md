@@ -3,11 +3,11 @@ title: Ustawianie właściwości Use i Style
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
 ms.openlocfilehash: d5e6409e3921d40b14b940786f6344aea657b84b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421353"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734697"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Ustawianie właściwości Use i Style
 W tym przykładzie pokazano, jak korzystać z właściwości Use i Style na <xref:System.ServiceModel.XmlSerializerFormatAttribute> i <xref:System.ServiceModel.DataContractFormatAttribute>. Te właściwości mają wpływ na sposób sformatowanych wiadomości. Domyślnie, treść komunikatu jest sformatowany przy użyciu stylu równa <xref:System.ServiceModel.OperationFormatStyle.Document>. Te ustawienia można określić na poziomie kontraktu usługi lub poziomu kontrakt operacji.  

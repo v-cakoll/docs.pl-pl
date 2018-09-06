@@ -3,11 +3,11 @@ title: 'Porady: debugowanie zestawów wyników zapytania (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
 ms.openlocfilehash: 4760b1e5274634954bd5fe4b3880fd4415af2510
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554441"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779844"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Porady: debugowanie zestawów wyników zapytania (C#)
 Jedną z najbardziej typowych problemów podczas wykonywania zapytań dotyczących drzew XML jest, że jeśli drzewa XML ma domyślny obszar nazw, deweloper czasami zapisuje zapytanie tak, jakby plik XML nie znajdowały się w przestrzeni nazw.  

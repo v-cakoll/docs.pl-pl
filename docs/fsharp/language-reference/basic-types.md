@@ -2,12 +2,12 @@
 title: 'Typy podstawowe (F #)'
 description: 'Poznaj podstawowe typy podstawowe, które są używane w języku F #.'
 ms.date: 07/09/2018
-ms.openlocfilehash: fdb5e95e102fcf721569156c7fb3a32604fff1dd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937188"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777210"
 ---
 # <a name="basic-types"></a>Typy podstawowe
 
@@ -38,4 +38,5 @@ Ten temat zawiera podstawowe typy, które są zdefiniowane w języku F #. Te typ
 Można wykonać obliczeń na liczbach całkowitych zbyt duży dla typu 64-bitową liczbę całkowitą, przy użyciu [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) typu. `bigint` nie jest uważany za typu podstawowego; jest skrótem `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Zobacz także
-[Dokumentacja języka F#](index.md)
+
+- [Dokumentacja języka F#](index.md)

@@ -7,11 +7,11 @@ ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 11cf225ca30117484cdc3bbcb6910e615e91f5ef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537058"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777941"
 ---
 # <a name="message-security-user-name"></a>Nazwa użytkownika zabezpieczeń komunikatów
 Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania nazwy użytkownika dla klienta i wymaga uwierzytelnienia serwera za pomocą certyfikatu X.509v3 serwera. Wszystkie komunikaty aplikacji między klientem i serwerem są podpisane i szyfrowane. Domyślnie, nazwa użytkownika i hasło podane przez klienta są używane do logowania się do prawidłowego konta Windows. Ten przykład jest oparty na [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). W tym przykładzie składa się z konsoli programu klienckiego (Client.exe) i Biblioteka usługi (Service.dll) hostowanej przez Internetowe usługi informacyjne (IIS). Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".  

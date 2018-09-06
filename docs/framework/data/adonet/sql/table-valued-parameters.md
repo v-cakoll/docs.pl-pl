@@ -1,64 +1,64 @@
 ---
-title: Parametry przechowywanymi w tabeli
+title: Parametry z wartościami przechowywanymi w tabeli
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2cf517e3bd10dbed51c8a98d150bafcb023e438b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365946"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742524"
 ---
-# <a name="table-valued-parameters"></a>Parametry przechowywanymi w tabeli
-Parametry przechowywanymi w tabeli umożliwiają łatwe do organizowania wielu wierszy danych z aplikacji klienta do programu SQL Server bez konieczności wiele rund lub specjalną logikę po stronie serwera do przetwarzania danych. Hermetyzuj wierszy danych w aplikacji klienckiej i wysyłania danych do serwera za pomocą jednego polecenia sparametryzowane, mogą używać parametrów przechowywanymi w tabeli. Przychodzące wiersze danych są przechowywane w zmiennej tabeli, która następnie może być obsługiwany przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+# <a name="table-valued-parameters"></a>Parametry z wartościami przechowywanymi w tabeli
+Parametry z wartościami przechowywanymi w tabeli zawierają łatwy sposób organizowania wielu wierszy danych z aplikacji klienckiej programu SQL Server, bez konieczności wielu wystąpień komunikacji dwustronnej lub specjalne logiki po stronie serwera związane z przetwarzaniem danych. Parametry z wartościami przechowywanymi w tabeli można użyć do hermetyzacji wierszy danych w aplikacji klienckiej i wysyłania danych do serwera za pomocą jednego polecenia sparametryzowanych. Przychodzące wiersze danych są przechowywane w zmiennej tabeli, która może być eksploatowana przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
   
- Wartości w kolumnie w parametrach przechowywanymi w tabeli jest możliwy przy użyciu standardu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji "SELECT". Parametry przechowywanymi w tabeli są silnie typizowane i ich struktury automatycznie zostanie zweryfikowany. Rozmiar parametrów przechowywanymi w tabeli jest ograniczona tylko przez ilość pamięci serwera.  
+ Wartości parametrów z wartościami przechowywanymi w tabeli kolumn można uzyskać dostęp przy użyciu standardu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji "SELECT". Parametry z wartościami przechowywanymi w tabeli są silnie typizowane i ich struktury jest automatycznie weryfikowana. Rozmiar parametrów z wartościami przechowywanymi w tabeli jest ograniczony tylko ilością pamięci serwera.  
   
 > [!NOTE]
->  Nie można zwrócić dane w parametrze przechowywanymi w tabeli. Parametry przechowywanymi w tabeli są tylko wejściowym; dane wyjściowe — słowo kluczowe nie jest obsługiwane.  
+>  Parametr z wartościami przechowywanymi w tabeli nie może zwrócić danych. Parametry z wartościami przechowywanymi w tabeli są tylko wejściowym; dane wyjściowe — słowo kluczowe nie jest obsługiwane.  
   
- Aby uzyskać więcej informacji na temat parametrów przechowywanymi w tabeli zobacz następujące zasoby.  
+ Aby uzyskać więcej informacji na temat parametrów z wartościami przechowywanymi w tabeli zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Parametry z wartościami przechowywanymi w tabeli (aparat bazy danych)](http://go.microsoft.com/fwlink/?LinkId=98363) w dokumentacji SQL Server Books Online|Opisuje sposób tworzenia i używania parametrów przechowywanymi w tabeli.|  
-|[Zdefiniowane przez użytkownika typy tabel](http://go.microsoft.com/fwlink/?LinkId=98364) w dokumentacji SQL Server Books Online|W tym artykule opisano typy tabel zdefiniowanych przez użytkownika, które są używane do deklarowania parametry przechowywanymi w tabeli.|  
+|[Parametry z wartościami przechowywanymi w tabeli (aparat bazy danych)](https://go.microsoft.com/fwlink/?LinkId=98363) w SQL Server — książki Online|W tym artykule opisano sposób tworzenia i używania parametrów z wartościami przechowywanymi w tabeli.|  
+|[Typy tabel zdefiniowane przez użytkownika](https://go.microsoft.com/fwlink/?LinkId=98364) w SQL Server — książki Online|W tym artykule opisano typy tabel zdefiniowane przez użytkownika, które są używane do deklarowania parametry z wartościami przechowywanymi w tabeli.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Przekazywanie wielu wierszy w poprzednich wersjach programu SQL Server  
- Przed przechowywanymi w tabeli parametry zostały wprowadzone do programu SQL Server 2008, opcje przekazywania wielu wierszy danych do procedury składowanej lub sparametryzowanego polecenia SQL były ograniczone. Deweloper może wybrać spośród następujących opcji wiele wierszy może być przekazywany do serwera:  
+ Zanim parametry z wartościami przechowywanymi w tabeli zostały wprowadzone do programu SQL Server 2008, opcji przekazywania wielu wierszy danych do procedury składowanej lub sparametryzowanego polecenia SQL były ograniczone. Deweloper może wybrać spośród następujących opcji przekazywania wiele wierszy do serwera:  
   
--   Używanie serii poszczególnych parametrów do reprezentowania wartości w wielu kolumn i wierszy danych. Ilość danych, które mogą zostać przekazane za pomocą tej metody jest ograniczona liczba parametry są niedozwolone. Procedury programu SQL Server może mieć co najwyżej 2100 parametrów. Logika po stronie serwera jest wymagany do włączenia tych poszczególne wartości do zmiennej tabeli lub tabeli tymczasowej do przetwarzania.  
+-   Użyj szereg poszczególne parametry do reprezentowania wartości w wielu kolumn i wierszy danych. Ilość danych, który może być przekazywany przy użyciu tej metody jest ograniczona przez liczbę parametry są niedozwolone. Procedury programu SQL Server może mieć co najwyżej 2100 parametrów. Logiki po stronie serwera jest wymagany do budowania tych poszczególne wartości do zmiennej tabeli lub tabeli tymczasowej do przetworzenia.  
   
--   Powiązać wiele wartości danych do ciągów rozdzielanych lub dokumentów XML, a następnie przekazać te wartości tekstowe do instrukcji lub procedury. Wymaga to procedury lub instrukcji Dołącz logikę niezbędne do sprawdzania poprawności struktur danych oraz wydzielenia wartości.  
+-   Pakietu wiele wartości danych do ciągów rozdzielanych lub dokumentów XML, a następnie przekazać te wartości tekstowych do procedury lub instrukcji. Wymaga to procedury lub instrukcję, aby uwzględnić logikę niezbędną do zweryfikowania struktur danych oraz wydzielenie wartości.  
   
--   Utwórz serię poszczególnych instrukcji SQL dla modyfikacji danych, które mają wpływ na wiele wierszy, takich jak te utworzone przez wywołanie metody `Update` metody <xref:System.Data.SqlClient.SqlDataAdapter>. Zmiany można przesłać na serwer indywidualnie lub przetwarzane wsadowo w grupach. Jednak nawet wtedy, gdy przesłać w partiach zawierających wiele instrukcji, każda instrukcja jest wykonywana osobno na serwerze.  
+-   Utwórz serie pojedyncze instrukcje SQL dla modyfikacji danych, które wpływają na wiele wierszy, takich jak te utworzone przez wywołanie metody `Update` metody <xref:System.Data.SqlClient.SqlDataAdapter>. Zmiany można przesłać na serwer indywidualnie lub partii w grupy. Jednak nawet wtedy, gdy przesyłany w partiach, które zawierają wiele instrukcji, każda instrukcja jest wykonywana oddzielnie na serwerze.  
   
--   Użyj `bcp` program narzędziowy lub <xref:System.Data.SqlClient.SqlBulkCopy> obiekt, aby załadować wiele wierszy danych do tabeli. Ta technika jest bardzo wydajny, nie obsługuje przetwarzania po stronie serwera, chyba że dane zostaną załadowane do tabeli tymczasowej lub zmiennej tabeli.  
+-   Użyj `bcp` programu narzędziowego lub <xref:System.Data.SqlClient.SqlBulkCopy> obiekt, aby załadować wiele wierszy danych do tabeli. Chociaż ta technika jest bardzo wydajny, nie obsługuje przetwarzania po stronie serwera, chyba, że dane są ładowane do tabeli tymczasowej lub zmiennej tabeli.  
   
-## <a name="creating-table-valued-parameter-types"></a>Tworzenie typów parametru przechowywanymi w tabeli  
- Parametry przechowywanymi w tabeli są oparte na struktury jednoznacznie tabeli, które zdefiniowano przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji CREATE TYPE. Należy utworzyć typ tabeli i definiowania struktury w programie SQL Server, zanim użyjesz przechowywanymi w tabeli parametrów w aplikacjach klienckich. Aby uzyskać więcej informacji o tworzeniu typach tabel, zobacz [typach tabel zdefiniowanych przez użytkownika](http://go.microsoft.com/fwlink/?LinkID=98364) w dokumentacji SQL Server — książki Online.  
+## <a name="creating-table-valued-parameter-types"></a>Tworzenie typów parametru z wartościami przechowywanymi w tabeli  
+ Parametry z wartościami przechowywanymi w tabeli zależą od struktury silnie typizowane tabel, które są zdefiniowane przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji CREATE TYPE. Masz typ tabeli na utworzenie i zdefiniowanie struktury w programie SQL Server, zanim użyjesz parametry z wartościami przechowywanymi w tabeli w aplikacjach klienckich. Aby uzyskać więcej informacji na temat tworzenia użytkownika, typach tabel zobacz [typy tabel zdefiniowane przez użytkownika](https://go.microsoft.com/fwlink/?LinkID=98364) w dokumentacji SQL Server — książki Online.  
   
- Poniższa instrukcja tworzy typ tabeli o nazwie CategoryTableType składający się z identyfikatorem kategorii i CategoryName kolumn:  
+ Poniższa instrukcja umożliwia utworzenie tabeli o nazwie CategoryTableType, który składa się z identyfikatorem kategorii i CategoryName kolumn:  
   
 ```  
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
- Po utworzeniu tabeli można zadeklarować parametry przechowywanymi w tabeli na podstawie tego typu. Następujące [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] fragmentu pokazuje, jak do zadeklarowania parametru przechowywanymi w tabeli w definicji procedury składowanej. Należy pamiętać, że READONLY — słowo kluczowe jest wymagana dla deklarowaniu parametru przechowywanymi w tabeli.  
+ Po utworzeniu tabeli, możesz deklarować parametry z wartościami przechowywanymi w tabeli na podstawie tego typu. Następujące [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] fragment przedstawia sposób deklarowania parametrem z wartościami przechowywanymi w tabeli, w definicji procedury składowanej. Należy pamiętać, że READONLY — słowo kluczowe jest wymagany do deklarowania parametr z wartościami przechowywanymi w tabeli.  
   
 ```  
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
   
-## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>Modyfikowanie danych z parametrami przechowywanymi w tabeli (Transact-SQL)  
- Parametry przechowywanymi w tabeli mogą być używane w modyfikacji na podstawie zestawu danych, które mają wpływ na wiele wierszy, wykonując jednej instrukcji. Na przykład można wybrać wszystkie wiersze w parametrze przechowywanymi w tabeli i wstawić je do tabeli bazy danych lub instrukcji update można utworzyć przez dołączenie do tabeli, które chcesz zaktualizować parametru przechowywanymi w tabeli.  
+## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>Modyfikowanie danych za pomocą parametrów z wartościami przechowywanymi w tabeli (Transact-SQL)  
+ Parametry z wartościami przechowywanymi w tabeli może służyć w zmiany na podstawie zestawu danych, które mają wpływ na wiele wierszy, wykonując pojedynczej instrukcji. Na przykład można wybrać wszystkie wiersze w parametr z wartościami przechowywanymi w tabeli i wstawianie tabeli bazy danych lub można utworzyć instrukcji update, dołączając do parametru z wartościami przechowywanymi w tabeli do tabeli, które chcesz zaktualizować.  
   
- Następujące [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji UPDATE pokazano, jak użyć parametru przechowywanymi w tabeli przez dołączenie go do tabeli Kategorie. Gdy używasz parametru przechowywanymi w tabeli z sprzężenia w klauzuli FROM, należy również aliasu, jak pokazano w tym miejscu, gdzie parametr przechowywanymi w tabeli jest używane z aliasem jako "WE":  
+ Następujące [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji UPDATE pokazuje sposób użycia parametru z wartościami przechowywanymi w tabeli przez dołączenie go do tabeli Kategorie. Korzystając z parametru z wartościami przechowywanymi w tabeli ze sprzężeniem w klauzuli FROM, musisz mieć również aliasu, jak pokazano w tym miejscu, gdzie parametr z wartościami przechowywanymi w tabeli ma alias "WE":  
   
 ```  
 UPDATE dbo.Categories  
@@ -67,26 +67,26 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```  
   
- To [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] przykładzie pokazano sposób wybierania z parametrem przechowywanymi w tabeli w celu wykonania instrukcji INSERT w jednej operacji na podstawie zestawu wierszy.  
+ To [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] przykład pokazuje, jak w celu wybrania wierszy z wartościami przechowywanymi w tabeli parametru przeprowadzić WSTAWIANIA w ramach jednej operacji na podstawie zestawu.  
   
 ```  
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
   
-## <a name="limitations-of-table-valued-parameters"></a>Ograniczenia parametrów przechowywanymi w tabeli  
- Istnieje kilka ograniczeń dotyczących przechowywanymi w tabeli Parametry:  
+## <a name="limitations-of-table-valued-parameters"></a>Ograniczenia dotyczące parametrów z wartościami przechowywanymi w tabeli  
+ Istnieje również kilka ograniczeń do parametrów z wartościami przechowywanymi w tabeli:  
   
--   Nie można przekazać parametry przechowywanymi w tabeli [funkcje zdefiniowane przez użytkownika CLR](http://msdn.microsoft.com/library/ms131077.aspx).  
+-   Nie można przekazać parametry wartościami przechowywanymi w tabeli [funkcje zdefiniowane przez użytkownika CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
   
--   Parametry przechowywanymi w tabeli mogą być indeksowane tylko do obsługi ograniczenia UNIQUE i PRIMARY KEY. SQL Server nie przechowuje dane statystyczne dotyczące parametrów przechowywanymi w tabeli.  
+-   Parametry z wartościami przechowywanymi w tabeli mogą być indeksowane tylko do obsługi ograniczenia UNIQUE i PRIMARY KEY. Program SQL Server nie są zachowywane dane statystyczne dotyczące parametrów z wartościami przechowywanymi w tabeli.  
   
--   Parametry przechowywanymi w tabeli są tylko do odczytu w [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] kodu. Nie można zaktualizować wartości w kolumnach w wierszach parametru przechowywanymi w tabeli i nie można wstawić lub usuwania wierszy. Aby zmodyfikować dane, które są przekazywane do procedury składowanej lub sparametryzowanych instrukcji w parametrze przechowywanymi w tabeli, należy wstawić dane do tabeli tymczasowej lub zmiennej tabeli.  
+-   Parametry z wartościami przechowywanymi w tabeli są tylko do odczytu w [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] kodu. Nie można zaktualizować wartości w kolumnach w wierszach parametr z wartościami przechowywanymi w tabeli i nie można wstawić lub usuwania wierszy. Aby zmodyfikować danych, który jest przekazywany do procedury składowanej lub sparametryzowanych instrukcji w parametr z wartościami przechowywanymi w tabeli, należy wstawić dane do tabeli tymczasowej lub zmiennej tabeli.  
   
--   Za pomocą instrukcji ALTER TABLE nie można modyfikować projektu parametry przechowywanymi w tabeli.  
+-   Nie można użyć instrukcji ALTER TABLE, aby zmodyfikować projekt parametrów z wartościami przechowywanymi w tabeli.  
   
-## <a name="configuring-a-sqlparameter-example"></a>Konfigurowanie przykład SqlParameter  
- <xref:System.Data.SqlClient> obsługuje wypełnianie przechowywanymi w tabeli parametrów z <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> lub <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> obiektów. Należy określić nazwę typu dla parametru przechowywanymi w tabeli, używając <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> właściwość <xref:System.Data.SqlClient.SqlParameter>. `TypeName` Musi być zgodna z nazwą zgodne z typem wcześniej utworzony na serwerze. Poniższy fragment kodu przedstawia sposób konfigurowania <xref:System.Data.SqlClient.SqlParameter> do wstawiania danych.  
+## <a name="configuring-a-sqlparameter-example"></a>Konfigurowanie przykładzie parametr SqlParameter  
+ <xref:System.Data.SqlClient> obsługuje wypełniania wartościami przechowywanymi w tabeli Parametry z <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> lub <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> obiektów. Należy określić nazwę typu dla parametru z wartościami przechowywanymi w tabeli, używając <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> właściwość <xref:System.Data.SqlClient.SqlParameter>. `TypeName` Musi pasować do nazwy zgodne z typem wcześniej utworzony na serwerze. Poniższy fragment kodu pokazuje, jak skonfigurować <xref:System.Data.SqlClient.SqlParameter> wstawiania danych.  
   
 ```csharp  
 // Configure the command and parameter.  
@@ -106,7 +106,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 tvpParam.TypeName = "dbo.CategoryTableType"  
 ```  
   
- Umożliwia także dowolnego obiektu pochodną <xref:System.Data.Common.DbDataReader> do wierszy strumienia danych do parametru przechowywanymi w tabeli, jak pokazano w tym fragmencie:  
+ Można również użyć dowolnego obiektu pochodzącego z <xref:System.Data.Common.DbDataReader> do wierszy strumień danych do parametru wartościami przechowywanymi w tabeli, jak pokazano w tym fragmencie:  
   
 ```csharp  
 // Configure the SqlCommand and table-valued parameter.  
@@ -126,8 +126,8 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a>Przekazywanie parametru przechowywanymi w tabeli do procedury składowanej  
- W tym przykładzie pokazano, jak przekazywać dane parametru przechowywanymi w tabeli do procedury składowanej. Kod wyodrębnia dodanych wierszy w nowym <xref:System.Data.DataTable> przy użyciu <xref:System.Data.DataTable.GetChanges%2A> metody. Kod definiuje <xref:System.Data.SqlClient.SqlCommand>, ustawienie <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> właściwości <xref:System.Data.CommandType.StoredProcedure>. <xref:System.Data.SqlClient.SqlParameter> Jest wypełniany przy użyciu <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> — metoda i <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> ma ustawioną wartość `Structured`. <xref:System.Data.SqlClient.SqlCommand> Następnie jest wykonywane przy użyciu <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> metody.  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a>Przekazywanie parametru z wartościami przechowywanymi w tabeli do procedury składowanej  
+ W tym przykładzie pokazano, jak przekazać parametr z wartościami przechowywanymi w tabeli dane do procedury składowanej. Kod wyodrębnia dodanymi wierszami w nowym <xref:System.Data.DataTable> przy użyciu <xref:System.Data.DataTable.GetChanges%2A> metody. W kodzie następnie zdefiniowano <xref:System.Data.SqlClient.SqlCommand>, ustawiając <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> właściwość <xref:System.Data.CommandType.StoredProcedure>. <xref:System.Data.SqlClient.SqlParameter> Jest wypełniana przy użyciu <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> metody i <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> ustawiono `Structured`. <xref:System.Data.SqlClient.SqlCommand> Są następnie wykonywane za pomocą <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> metody.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  
@@ -168,11 +168,11 @@ Using connection
 End Using  
 ```  
   
-### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a>Przekazywanie parametru przechowywanymi w tabeli w instrukcji SQL sparametryzowane  
- W poniższym przykładzie pokazano, jak wstawianie danych do dbo. Kategorie tabeli za pomocą instrukcji INSERT podzapytania SELECT, który ma parametr przechowywanymi w tabeli jako źródła danych. Podczas przekazywania parametru przechowywanymi w tabeli do sparametryzowanych instrukcji SQL, należy określić nazwę typu dla parametru przechowywanymi w tabeli, używając nowego <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> właściwość <xref:System.Data.SqlClient.SqlParameter>. To `TypeName` musi być zgodna z nazwą zgodne z typem wcześniej utworzony na serwerze. W kodzie w tym przykładzie użyto `TypeName` właściwości, aby odwołać struktury typ zdefiniowany w dbo. CategoryTableType.  
+### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a>Przekazywanie parametru z wartościami przechowywanymi w tabeli do instrukcji SQL — sparametryzowane  
+ Poniższy przykład pokazuje, jak wstawić dane do dbo. Tabela kategorie za pomocą instrukcji INSERT podzapytania SELECT, która ma parametr z wartościami przechowywanymi w tabeli jako źródła danych. Podczas przekazywania parametru z wartościami przechowywanymi w tabeli do sparametryzowanych instrukcji SQL, należy określić nazwę typu dla parametru z wartościami przechowywanymi w tabeli za pomocą nowego <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> właściwość <xref:System.Data.SqlClient.SqlParameter>. To `TypeName` musi pasować do nazwy zgodne z typem wcześniej utworzony na serwerze. W kodzie, w tym przykładzie użyto `TypeName` właściwości w celu odwołania struktury typ zdefiniowany w dbo. CategoryTableType.  
   
 > [!NOTE]
->  Jeśli zostanie podana wartość dla kolumny tożsamości w parametrze przechowywanymi w tabeli, należy wygenerować instrukcji USTAWIONY atrybut IDENTITY_INSERT dla sesji.  
+>  Jeśli podana wartość dla kolumny tożsamości w parametr z wartościami przechowywanymi w tabeli, należy wygenerować instrukcji USTAWIONY atrybut IDENTITY_INSERT dla sesji.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  
@@ -224,8 +224,8 @@ Using connection
 End Using  
 ```  
   
-## <a name="streaming-rows-with-a-datareader"></a>Przesyłania strumieniowego wiersze z elementu DataReader  
- Umożliwia także dowolnego obiektu pochodną <xref:System.Data.Common.DbDataReader> do wierszy strumienia danych do parametru przechowywanymi w tabeli. Poniższy fragment kodu przedstawia pobieranie danych z bazy danych Oracle przy użyciu <xref:System.Data.OracleClient.OracleCommand> i <xref:System.Data.OracleClient.OracleDataReader>. Następnie konfiguruje kod <xref:System.Data.SqlClient.SqlCommand> można wywołać procedury składowanej z jednego parametru wejściowego. <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> Właściwość <xref:System.Data.SqlClient.SqlParameter> ma ustawioną wartość `Structured`. <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> Przekazuje `OracleDataReader` zestawu wyników procedury składowanej jako parametru przechowywanymi w tabeli.  
+## <a name="streaming-rows-with-a-datareader"></a>Wiersze przesyłania strumieniowego przy użyciu elementu DataReader  
+ Można również użyć dowolnego obiektu pochodzącego z <xref:System.Data.Common.DbDataReader> do wierszy strumień danych do parametru z wartościami przechowywanymi w tabeli. Poniższy fragment kodu przedstawia pobieranie danych z bazy danych Oracle przy użyciu <xref:System.Data.OracleClient.OracleCommand> i <xref:System.Data.OracleClient.OracleDataReader>. Kod następnie konfiguruje <xref:System.Data.SqlClient.SqlCommand> do wywołania procedury składowanej z jednego parametru wejściowego. <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> Właściwość <xref:System.Data.SqlClient.SqlParameter> ustawiono `Structured`. <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> Przekazuje `OracleDataReader` zestawu wyników procedury składowanej jako parametr z wartościami przechowywanymi w tabeli.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  
@@ -275,4 +275,4 @@ insertCommand.ExecuteNonQuery()
  [Polecenia i parametry](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Parametry elementu DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Operacje danych serwera SQL w ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

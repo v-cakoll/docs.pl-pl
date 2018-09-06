@@ -3,11 +3,11 @@ title: Modyfikowanie generowania kodu SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560759"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742530"
 ---
 # <a name="modification-sql-generation"></a>Modyfikowanie generowania kodu SQL
 W tej sekcji opisano kroki umożliwiające tworzenie modyfikacji modułu generowania SQL dla usługi (SQL:1999-danych zgodnej ze standardem) dostawcy. Ten moduł jest odpowiedzialny za tłumaczenie drzewo poleceń modyfikacji w odpowiedniej instrukcji SQL INSERT, UPDATE lub DELETE.  

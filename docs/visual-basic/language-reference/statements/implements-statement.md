@@ -10,11 +10,11 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
 ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539114"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739210"
 ---
 # <a name="implements-statement"></a>Implements — Instrukcja
 Określa jedną lub więcej interfejsów lub składowych interfejsu, które muszą zostać zaimplementowane w klasie lub definicji struktury, w której występuje.  

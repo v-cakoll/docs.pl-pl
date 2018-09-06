@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
 ms.openlocfilehash: f00d5e489931d9c1172a21ee5f0d3e3d0a6f4a4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409001"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741269"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. Operatory warunkowe null ?. oraz ? [] (C# i Visual Basic)
 Testuje, czy wartość lewego argumentu operacji to „null”, zanim przeprowadzi operację dostępu do elementu (`?.`) lub indeksowania (`?[]`). Zwraca `null`, jeśli wartość lewego argumentu operacji to `null`. 

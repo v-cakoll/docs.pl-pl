@@ -3,11 +3,11 @@ title: Śledzenie SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
 ms.openlocfilehash: 5f8d7bbd57965b4d7399373416caea87d4d84187
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402676"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779146"
 ---
 # <a name="sql-tracking"></a>Śledzenie SQL
 W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia SQL, który zapisuje rekordy śledzenia bazą danych SQL. Windows Workflow Foundation (WF) zapewnia wgląd w wykonywania wystąpienia przepływu pracy śledzenia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [przepływu pracy i śledzenie](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  

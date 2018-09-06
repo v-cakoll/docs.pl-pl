@@ -1,21 +1,21 @@
 ---
-title: 'Porady: Napisz zapytanie, które wyszukuje elementy na podstawie kontekstu (C#)'
+title: 'Porady: pisanie zapytania odnajdującego elementy na podstawie kontekstu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 3b09be121c3e1da12614d1c09a806b09386732df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322016"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723665"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Porady: Napisz zapytanie, które wyszukuje elementy na podstawie kontekstu (C#)
-Czasami może być konieczne Napisz zapytanie, które wybiera elementy na podstawie ich kontekstu. Można filtrować na podstawie poprzedzające lub następujące elementów równorzędnych. Można filtrować na podstawie podrzędnej lub elementy nadrzędne.  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Porady: pisanie zapytania odnajdującego elementy na podstawie kontekstu (C#)
+Czasami może być napisać zapytanie wybierające elementy na podstawie ich kontekstu. Można filtrować na podstawie poprzedzające lub następujące elementów równorzędnych. Można filtrować na podstawie podrzędnej lub elementów nadrzędnych.  
   
- Aby to zrobić, zapisywanie zapytania i przy użyciu wyników kwerendy w `where` klauzuli. Jeśli trzeba najpierw przetestować wartości null, a następnie sprawdź wartość jest wygodniejsze w zapytaniu w `let` klauzuli, a następnie użyj wyniki w `where` klauzuli.  
+ Można to zrobić przez napisanie zapytania i używanie wyniki zapytania w `where` klauzuli. Jeśli musisz najpierw testujemy współpracę z wartością null, a następnie sprawdź wartość, jest bardziej wygodne wykonać zapytanie w `let` klauzuli, a następnie użyć wyników w `where` klauzuli.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład wybranie wszystkich `p` elementów, które są od razu następuje `ul` elementu.  
+ Poniższy przykład powoduje zaznaczenie wszystkich `p` elementy, które są od razu następuje `ul` elementu.  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root>  
@@ -56,7 +56,7 @@ id = 6
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeni nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -98,9 +98,10 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Linq.XElement.Parse%2A>  
- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
- [Podstawowe zapytania (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Xml.Linq.XElement.Parse%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
+- [Podstawowe zapytania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

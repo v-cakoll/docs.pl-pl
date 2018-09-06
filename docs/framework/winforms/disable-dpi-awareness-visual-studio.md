@@ -8,11 +8,11 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.openlocfilehash: 65c997e12aa033b3b08d32c8ab76372e3c52a803
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467110"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748119"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Wyłącz rozpoznawanie DPI w programie Visual Studio
 

@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfik
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 57ade448f5773bee3474cb46bec8ad33e3afbee3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dec44bf114472e19fdac131e0af6c13854957fe3
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533841"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745531"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Używanie strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -91,7 +91,7 @@ Klasyfikacja zadań są często jednym z następujących typów:
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsoli
 
-1. Otwórz program Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W *nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** pole tekstowe, wpisz "SentimentAnalysis", a następnie wybierz **OK** przycisku.
+1. Otwórz program Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W **nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** pole tekstowe, wpisz "SentimentAnalysis", a następnie wybierz **OK** przycisku.
 
 2. Utwórz katalog o nazwie *danych* w projekcie, aby zapisać pliki zestawu danych:
 

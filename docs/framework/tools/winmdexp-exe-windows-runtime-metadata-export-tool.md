@@ -8,11 +8,11 @@ ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540409"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43780026"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (narzędzie eksportowania metadanych środowiska wykonawczego systemu Windows)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] Narzędzie do eksportu metadanych (Winmdexp.exe) przekształca modułu .NET Framework w pliku, który zawiera [!INCLUDE[wrt](../../../includes/wrt-md.md)] metadanych. Mimo że zestawów .NET Framework i [!INCLUDE[wrt](../../../includes/wrt-md.md)] pliki metadanych używają ten sam fizyczny format, istnieją różnice w zawartości tabel metadanych, co oznacza, że zestawów .NET Framework nie są automatycznie używać jako [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników . Proces przekształcania modułu .NET Framework do [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnik nazywa się *eksportowanie*. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], wynikowy plik metadanych (.winmd) Windows zawiera zarówno metadane, jak i implementację.  

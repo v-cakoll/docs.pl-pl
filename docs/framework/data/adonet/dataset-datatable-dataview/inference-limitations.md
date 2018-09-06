@@ -3,11 +3,11 @@ title: Ograniczenia wnioskowania
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
 ms.openlocfilehash: d113df98cdd339300b3e75ceda49a56d4f346d3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417433"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724156"
 ---
 # <a name="inference-limitations"></a>Ograniczenia wnioskowania
 Proces wnioskowanie <xref:System.Data.DataSet> schemat z pliku XML może spowodować różne schematy, w zależności od elementów XML w każdym dokumencie. Na przykład należy wziąć pod uwagę następujące dokumenty XML.  

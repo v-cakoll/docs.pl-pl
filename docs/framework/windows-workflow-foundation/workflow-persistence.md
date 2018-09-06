@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
 ms.openlocfilehash: 0a938f2f4d4cc790fe03db1e2b57862e54af48a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661012"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748570"
 ---
 # <a name="workflow-persistence"></a>Trwałość przepływu pracy
 Trwałość przepływu pracy jest trwały przechwytywania stanu wystąpienia przepływu pracy, niezależnie od informacji proces lub komputer. Ma to na zapewnienie znanego punktu odzyskiwania dla wystąpienia przepływu pracy w przypadku awarii systemu lub zachować pamięci przez zwalnianie wystąpienia przepływu pracy, które nie wykonują aktywnie pracy lub przenieść stanu wystąpienia przepływu pracy z jednego węzła do innego węzeł w farmie serwerów.  

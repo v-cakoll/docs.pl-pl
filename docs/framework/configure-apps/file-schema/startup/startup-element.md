@@ -12,15 +12,15 @@ ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 60699f0335bb35589341558800cfd64503d0aa0a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4d39dc28082fbed932a60228ac216f2f700c2e9f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748431"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734710"
 ---
 # <a name="ltstartupgt-element"></a>&lt;uruchamianie&gt; — Element
-Określa uruchamiania informacje CLR.  
+Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka.  
   
  \<Konfiguracja >  
 \<startup>  
@@ -45,14 +45,14 @@ Określa uruchamiania informacje CLR.
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`true`|Włącz [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] zasad wykonywania aktywacji dla wybranego środowiska uruchomieniowego, czyli powiązać techniki aktywacji starszej wersji środowiska uruchomieniowego (takich jak [CorBindToRuntimeEx — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) do środowiska wykonawczego wybrane z pliku konfiguracji zamiast ograniczanie ich w CLR w wersji 2.0. W związku z tym jeśli CLR w wersji 4 lub nowszej jest wybierany z pliku konfiguracji, trybu mieszanego zestawów utworzonych w starszych wersjach programu .NET Framework są ładowane z wybranej wersji środowiska CLR. Ta wartość uniemożliwia CLR w wersji 1.1 lub CLR w wersji 2.0 ładowania do tego samego procesu, efektywne wyłączenie funkcji side-by-side w procesie.|  
-|`false`|Użyj domyślnych zasad aktywacji dla [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] i później, która umożliwia starszej wersji środowiska uruchomieniowego techniki aktywacji można załadować w procesie CLR w wersji 1.1 lub 2.0. Ustawienie tej wartości zapobiega zestawy trybu mieszanego ładowania do programu .NET Framework 4 lub nowszy, chyba że zostały one skompilowane z programu .NET Framework 4 lub nowszym. Ta wartość jest ustawieniem domyślnym.|  
+|`true`|Włącz [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] środowiska uruchomieniowego zasad aktywacji dla wybranego środowiska uruchomieniowego, czyli można powiązać technik aktywacji starszej wersji środowiska uruchomieniowego (takie jak [corbindtoruntimeex — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) do środowiska uruchomieniowego, wybrana z pliku konfiguracji zamiast Ograniczanie je na wersji CLR 2.0. W związku z tym Jeśli wersja środowiska CLR 4 lub nowszego jest wybierany z pliku konfiguracji, zestawy mieszane utworzonych w starszych wersjach programu .NET Framework są ładowane z wybranej wersji środowiska CLR. Ustawienie tej wartości zapobiega środowisko CLR w wersji 1.1 lub środowisko CLR w wersji 2.0 ładowanie do tego samego procesu i efektywne wyłączenie funkcji side-by-side w procesie.|  
+|`false`|Użyj domyślnych zasad aktywacji dla [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] i nowszy, która umożliwia starszej wersji środowiska uruchomieniowego technik aktywacji można załadować środowiska CLR w wersji 1.1 lub 2.0 do procesu. Ta wartość zapobiega zestawy mieszane ładowanie do programu .NET Framework 4 lub nowszy, chyba że zostały skompilowane przy użyciu programu .NET Framework 4 lub nowszej. Ta wartość jest domyślna.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|Określa, czy aplikacja obsługuje tylko wersję 1.0 środowisko uruchomieniowe języka wspólnego. Należy użyć aplikacji skompilowanej za pomocą środowiska wykonawczego w wersji 1.1 lub nowszej  **\<supportedRuntime >** elementu.|  
+|[\<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|Określa, że aplikacja obsługuje tylko wersję 1.0 środowiska uruchomieniowego języka wspólnego. Skorzystaj z aplikacji utworzonych za pomocą środowiska uruchomieniowego wersji 1.1 lub nowszej  **\<supportedRuntime >** elementu.|  
 |[\<supportedRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługuje aplikacja.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -62,18 +62,18 @@ Określa uruchamiania informacje CLR.
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
- **\<SupportedRuntime >** element powinna być używana przez wszystkie aplikacje utworzone przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje przeznaczone do obsługi tylko wersję 1.0 środowiska uruchomieniowego musi używać  **\<requiredRuntime >** elementu.  
+ **\<SupportedRuntime >** element powinien być używany przez wszystkie aplikacje kompilowane przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje stworzone z myślą o obsługiwały tylko wersję 1.0 środowiska uruchomieniowego muszą używać  **\<requiredRuntime >** elementu.  
   
- Kod uruchomienia dla aplikacji hostowanej w programie Internet Explorer ignoruje  **\<uruchamiania >** elementu i jego elementów podrzędnych.  
+ Ignoruje kodu startowego dla aplikacji hostowanej w programie Internet Explorer  **\<uruchamiania >** elementu i jego elementy podrzędne.  
   
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>Atrybut useLegacyV2RuntimeActivationPolicy  
- Ten atrybut jest przydatne, jeśli aplikacja używa ścieżek aktywacji starszych wersji [CorBindToRuntimeEx — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), i chcesz tych ścieżek do aktywowania zamiast starszej wersji środowiska CLR w wersji 4 lub w przypadku aplikacji zbudowany z [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ale ma zależność w zestawie trybu mieszanego skompilowanej za pomocą starszej wersji programu .NET Framework. W tych scenariuszach, ustaw dla atrybutu `true`.  
+ Ten atrybut jest przydatna, jeśli aplikacja używa ścieżki aktywacji starszych [corbindtoruntimeex — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), i potrzebujesz tych ścieżek do aktywacji w wersji 4 środowiska CLR zamiast wcześniejszej wersji, czy aplikacja jest utworzonych za pomocą [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ale ma zależność od zestawu trybu mieszanego, skompilowanych przy użyciu wcześniejszej wersji programu .NET Framework. W tych scenariuszach atrybut na `true`.  
   
 > [!NOTE]
->  Ustawienie atrybutu `true` uniemożliwia ładowanie do tego samego procesu, efektywne wyłączenie funkcji side-by-side w trakcie CLR w wersji 1.1 lub CLR w wersji 2.0 (zobacz [Side-by-Side wykonywanie COM Interop](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
+>  Ustawienie atrybutu `true` uniemożliwia ładowanie do tego samego procesu i efektywne wyłączenie funkcji side-by-side w trakcie środowisko CLR w wersji 1.1 lub środowisko CLR w wersji 2.0 (zobacz [Side-by-Side wykonywania COM Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak do określania wersji środowiska uruchomieniowego w pliku konfiguracji.  
+ Poniższy przykład pokazuje, jak określić wersji środowiska uruchomieniowego w pliku konfiguracji.  
   
 ```xml  
 <!-- When used with version 1.0 of the .NET Framework runtime -->  
@@ -94,6 +94,6 @@ Określa uruchamiania informacje CLR.
 ## <a name="see-also"></a>Zobacz też  
  [Schemat ustawień uruchamiania](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver > Określanie wersji środowiska uruchomieniowego do użycia](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [Wykonanie Side-by-Side dla międzyoperacyjności z modelem COM](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
+ [\<PaveOver > Określanie wersji środowiska uruchomieniowego, które ma być używana](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
+ [Wykonanie Side-by-Side dla współdziałania z modelem COM](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [Wykonywanie równoczesne i wewnątrzprocesowe](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

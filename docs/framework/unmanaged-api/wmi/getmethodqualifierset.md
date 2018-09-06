@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389045"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724724"
 ---
-# <a name="getmethodqualifierset-function"></a><span data-ttu-id="a8206-103">Funkcja GetMethodQualifierSet</span><span class="sxs-lookup"><span data-stu-id="a8206-103">GetMethodQualifierSet function</span></span>
-<span data-ttu-id="a8206-104">Pobiera kwalifikator ustawione dla konkretnych metod.</span><span class="sxs-lookup"><span data-stu-id="a8206-104">Retrieves the qualifier set for a particular method.</span></span>
+# <a name="getmethodqualifierset-function"></a><span data-ttu-id="690ad-103">Funkcja GetMethodQualifierSet</span><span class="sxs-lookup"><span data-stu-id="690ad-103">GetMethodQualifierSet function</span></span>
+<span data-ttu-id="690ad-104">Pobiera kwalifikator ustawione dla konkretnych metod.</span><span class="sxs-lookup"><span data-stu-id="690ad-104">Retrieves the qualifier set for a particular method.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="a8206-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="a8206-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="690ad-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="690ad-105">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodQualifierSet (
@@ -39,44 +39,44 @@ HRESULT GetMethodQualifierSet (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="a8206-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="a8206-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="690ad-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="690ad-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="a8206-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="a8206-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="690ad-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="690ad-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="a8206-108">[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="a8206-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="690ad-108">[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="690ad-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszMethod`  
-<span data-ttu-id="a8206-109">[in] Nazwa metody.</span><span class="sxs-lookup"><span data-stu-id="a8206-109">[in] The method  name.</span></span> <span data-ttu-id="a8206-110">`wszMethod` musi wskazywać prawidłowy `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="a8206-110">`wszMethod` must point to a valid `LPCWSTR`.</span></span> 
+<span data-ttu-id="690ad-109">[in] Nazwa metody.</span><span class="sxs-lookup"><span data-stu-id="690ad-109">[in] The method  name.</span></span> <span data-ttu-id="690ad-110">`wszMethod` musi wskazywać prawidłowy `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="690ad-110">`wszMethod` must point to a valid `LPCWSTR`.</span></span> 
 
 `ppQualSet`  
-<span data-ttu-id="a8206-111">[out] Otrzymuje wskaźnik interfejsu, który umożliwia dostęp do kwalifikatory metody.</span><span class="sxs-lookup"><span data-stu-id="a8206-111">[out] Receives the interface pointer that allows access to the qualifiers of the method.</span></span> <span data-ttu-id="a8206-112">`ppQualSet` nie może być `null`.</span><span class="sxs-lookup"><span data-stu-id="a8206-112">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="a8206-113">Jeśli wystąpi błąd, nowy obiekt nie jest zwracana i wskaźnik jest ustawiony na wskaż `null`.</span><span class="sxs-lookup"><span data-stu-id="a8206-113">If an error occurs, a new object is not returned, and the pointer is set to point to `null`.</span></span> 
+<span data-ttu-id="690ad-111">[out] Otrzymuje wskaźnik interfejsu, który umożliwia dostęp do kwalifikatory metody.</span><span class="sxs-lookup"><span data-stu-id="690ad-111">[out] Receives the interface pointer that allows access to the qualifiers of the method.</span></span> <span data-ttu-id="690ad-112">`ppQualSet` nie może być `null`.</span><span class="sxs-lookup"><span data-stu-id="690ad-112">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="690ad-113">Jeśli wystąpi błąd, nowy obiekt nie jest zwracana i wskaźnik jest ustawiony na wskaż `null`.</span><span class="sxs-lookup"><span data-stu-id="690ad-113">If an error occurs, a new object is not returned, and the pointer is set to point to `null`.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="a8206-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="a8206-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="690ad-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="690ad-114">Return value</span></span>
 
-<span data-ttu-id="a8206-115">Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="a8206-115">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="690ad-115">Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="690ad-115">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="a8206-116">Stała</span><span class="sxs-lookup"><span data-stu-id="a8206-116">Constant</span></span>  |<span data-ttu-id="a8206-117">Wartość</span><span class="sxs-lookup"><span data-stu-id="a8206-117">Value</span></span>  |<span data-ttu-id="a8206-118">Opis</span><span class="sxs-lookup"><span data-stu-id="a8206-118">Description</span></span>  |
+|<span data-ttu-id="690ad-116">Stała</span><span class="sxs-lookup"><span data-stu-id="690ad-116">Constant</span></span>  |<span data-ttu-id="690ad-117">Wartość</span><span class="sxs-lookup"><span data-stu-id="690ad-117">Value</span></span>  |<span data-ttu-id="690ad-118">Opis</span><span class="sxs-lookup"><span data-stu-id="690ad-118">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="a8206-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="a8206-119">0x80041002</span></span> | <span data-ttu-id="a8206-120">Określona metoda nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="a8206-120">The specified method does not exist.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="a8206-121">0x80041008</span><span class="sxs-lookup"><span data-stu-id="a8206-121">0x80041008</span></span> | <span data-ttu-id="a8206-122">Parametr jest `null`.</span><span class="sxs-lookup"><span data-stu-id="a8206-122">A parameter is `null`.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="a8206-123">0</span><span class="sxs-lookup"><span data-stu-id="a8206-123">0</span></span> | <span data-ttu-id="a8206-124">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="a8206-124">The function call was successful.</span></span>  |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="690ad-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="690ad-119">0x80041002</span></span> | <span data-ttu-id="690ad-120">Określona metoda nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="690ad-120">The specified method does not exist.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="690ad-121">0x80041008</span><span class="sxs-lookup"><span data-stu-id="690ad-121">0x80041008</span></span> | <span data-ttu-id="690ad-122">Parametr jest `null`.</span><span class="sxs-lookup"><span data-stu-id="690ad-122">A parameter is `null`.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="690ad-123">0</span><span class="sxs-lookup"><span data-stu-id="690ad-123">0</span></span> | <span data-ttu-id="690ad-124">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="690ad-124">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="a8206-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a8206-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="690ad-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="690ad-125">Remarks</span></span>
 
-<span data-ttu-id="a8206-126">Ta funkcja zawija wywołanie do [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) metody.</span><span class="sxs-lookup"><span data-stu-id="a8206-126">This function wraps a call to the [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) method.</span></span> 
+<span data-ttu-id="690ad-126">Ta funkcja zawija wywołanie do [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) metody.</span><span class="sxs-lookup"><span data-stu-id="690ad-126">This function wraps a call to the [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) method.</span></span> 
 
-<span data-ttu-id="a8206-127">Wywołanie tej funkcji jest obsługiwana tylko wtedy, gdy bieżący obiekt jest definicją klasy modelu wspólnych informacji.</span><span class="sxs-lookup"><span data-stu-id="a8206-127">A call to this function is supported only if the current object is a CIM class definition.</span></span> <span data-ttu-id="a8206-128">Metoda manipulowania nie jest dostępna dla [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters wskazujące wystąpienia modelu CIM.</span><span class="sxs-lookup"><span data-stu-id="a8206-128">Method manipulation is not available for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters that point to CIM instances.</span></span>
+<span data-ttu-id="690ad-127">Wywołanie tej funkcji jest obsługiwana tylko wtedy, gdy bieżący obiekt jest definicją klasy modelu wspólnych informacji.</span><span class="sxs-lookup"><span data-stu-id="690ad-127">A call to this function is supported only if the current object is a CIM class definition.</span></span> <span data-ttu-id="690ad-128">Metoda manipulowania nie jest dostępna dla [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters wskazujące wystąpienia modelu CIM.</span><span class="sxs-lookup"><span data-stu-id="690ad-128">Method manipulation is not available for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters that point to CIM instances.</span></span>
 
-<span data-ttu-id="a8206-129">Ponieważ każda metoda może mieć własną kwalifikatory [wskaźnik IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) umożliwia obiekt wywołujący, dodawać, edytować lub usuwać kwalifikatory.</span><span class="sxs-lookup"><span data-stu-id="a8206-129">Because each method may have its own qualifiers, the [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span>
+<span data-ttu-id="690ad-129">Ponieważ każda metoda może mieć własną kwalifikatory [wskaźnik IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) umożliwia obiekt wywołujący, dodawać, edytować lub usuwać kwalifikatory.</span><span class="sxs-lookup"><span data-stu-id="690ad-129">Because each method may have its own qualifiers, the [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a8206-130">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a8206-130">Requirements</span></span>  
-<span data-ttu-id="a8206-131">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a8206-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="690ad-130">Wymagania</span><span class="sxs-lookup"><span data-stu-id="690ad-130">Requirements</span></span>  
+<span data-ttu-id="690ad-131">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="690ad-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a8206-132">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="a8206-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="690ad-132">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="690ad-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="a8206-133">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a8206-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="690ad-133">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="690ad-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8206-134">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a8206-134">See also</span></span>  
-[<span data-ttu-id="a8206-135">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="a8206-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="690ad-134">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="690ad-134">See also</span></span>  
+[<span data-ttu-id="690ad-135">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="690ad-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

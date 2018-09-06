@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93377f82992b8d7d55b21b53abfd7d7c2e9e620b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394898"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871949"
 ---
-# <a name="iclrstrongnamestrongnamekeygenex-method"></a><span data-ttu-id="75366-102">ICLRStrongName::StrongNameKeyGenEx — Metoda</span><span class="sxs-lookup"><span data-stu-id="75366-102">ICLRStrongName::StrongNameKeyGenEx Method</span></span>
-<span data-ttu-id="75366-103">Generuje nową parę kluczy publiczny/prywatny z określonego rozmiaru klucza do użycia silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="75366-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  
+# <a name="iclrstrongnamestrongnamekeygenex-method"></a><span data-ttu-id="750f1-102">ICLRStrongName::StrongNameKeyGenEx — Metoda</span><span class="sxs-lookup"><span data-stu-id="750f1-102">ICLRStrongName::StrongNameKeyGenEx Method</span></span>
+<span data-ttu-id="750f1-103">Generuje nową parę kluczy publiczny/prywatny z określonego rozmiaru klucza do użycia silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="750f1-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="75366-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="75366-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="750f1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="750f1-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameKeyGenEx (  
@@ -39,43 +39,43 @@ HRESULT StrongNameKeyGenEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="75366-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="75366-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="750f1-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="750f1-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="75366-106">[in] Nazwa żądany kontener kluczy.</span><span class="sxs-lookup"><span data-stu-id="75366-106">[in] The requested key container name.</span></span> <span data-ttu-id="75366-107">`wszKeyContainer` musi być niepustym ciągiem lub wartością null można wygenerować tymczasowej nazwy.</span><span class="sxs-lookup"><span data-stu-id="75366-107">`wszKeyContainer` must either be a non-empty string or null to generate a temporary name.</span></span>  
+ <span data-ttu-id="750f1-106">[in] Nazwa żądany kontener kluczy.</span><span class="sxs-lookup"><span data-stu-id="750f1-106">[in] The requested key container name.</span></span> <span data-ttu-id="750f1-107">`wszKeyContainer` musi być niepustym ciągiem lub wartością null można wygenerować tymczasowej nazwy.</span><span class="sxs-lookup"><span data-stu-id="750f1-107">`wszKeyContainer` must either be a non-empty string or null to generate a temporary name.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="75366-108">[in] Wartość, która określa, czy należy pozostawić klawisz zarejestrowany.</span><span class="sxs-lookup"><span data-stu-id="75366-108">[in] A value that specifies whether to leave the key registered.</span></span> <span data-ttu-id="75366-109">Obsługiwane są następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="75366-109">The following values are supported:</span></span>  
+ <span data-ttu-id="750f1-108">[in] Wartość, która określa, czy należy pozostawić klawisz zarejestrowany.</span><span class="sxs-lookup"><span data-stu-id="750f1-108">[in] A value that specifies whether to leave the key registered.</span></span> <span data-ttu-id="750f1-109">Obsługiwane są następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="750f1-109">The following values are supported:</span></span>  
   
--   <span data-ttu-id="75366-110">0x00000000 — używany podczas `wszKeyContainer` ma wartość null, aby wygenerować nazwę kontenera kluczy tymczasowych.</span><span class="sxs-lookup"><span data-stu-id="75366-110">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
+-   <span data-ttu-id="750f1-110">0x00000000 — używany podczas `wszKeyContainer` ma wartość null, aby wygenerować nazwę kontenera kluczy tymczasowych.</span><span class="sxs-lookup"><span data-stu-id="750f1-110">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
   
--   <span data-ttu-id="75366-111">0x00000001 (`SN_LEAVE_KEY`) — określa, że klucz powinien być zarejestrowany po lewej.</span><span class="sxs-lookup"><span data-stu-id="75366-111">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
+-   <span data-ttu-id="750f1-111">0x00000001 (`SN_LEAVE_KEY`) — określa, że klucz powinien być zarejestrowany po lewej.</span><span class="sxs-lookup"><span data-stu-id="750f1-111">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
   
  `dwKeySize`  
- <span data-ttu-id="75366-112">[in] Żądany rozmiar klucza w bitach.</span><span class="sxs-lookup"><span data-stu-id="75366-112">[in] The requested size of the key, in bits.</span></span>  
+ <span data-ttu-id="750f1-112">[in] Żądany rozmiar klucza w bitach.</span><span class="sxs-lookup"><span data-stu-id="750f1-112">[in] The requested size of the key, in bits.</span></span>  
   
  `ppbKeyBlob`  
- <span data-ttu-id="75366-113">[out] Zwrócone pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="75366-113">[out] The returned public/private key pair.</span></span>  
+ <span data-ttu-id="750f1-113">[out] Zwrócone pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="750f1-113">[out] The returned public/private key pair.</span></span>  
   
  `pcbKeyBlob`  
- <span data-ttu-id="75366-114">[out] Rozmiar w bajtach z `ppbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="75366-114">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
+ <span data-ttu-id="750f1-114">[out] Rozmiar w bajtach z `ppbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="750f1-114">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="75366-115">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="75366-115">Return Value</span></span>  
- <span data-ttu-id="75366-116">`S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).</span><span class="sxs-lookup"><span data-stu-id="75366-116">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="750f1-115">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="750f1-115">Return Value</span></span>  
+ <span data-ttu-id="750f1-116">`S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).</span><span class="sxs-lookup"><span data-stu-id="750f1-116">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="75366-117">Uwagi</span><span class="sxs-lookup"><span data-stu-id="75366-117">Remarks</span></span>  
- <span data-ttu-id="75366-118">Wymaga platformy .NET Framework w wersji 1.0 i 1.1 `dwKeySize` o długości 1024 bitów, aby podpisać zestaw silną nazwą; w wersji 2.0 dodaje obsługiwanych w przypadku 2048-bitowe klucze.</span><span class="sxs-lookup"><span data-stu-id="75366-118">The .NET Framework versions 1.0 and 1.1 require a `dwKeySize` of 1024 bits to sign an assembly with a strong name; version 2.0 adds supports for 2048-bit keys.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="750f1-117">Uwagi</span><span class="sxs-lookup"><span data-stu-id="750f1-117">Remarks</span></span>  
+ <span data-ttu-id="750f1-118">Wymaga platformy .NET Framework w wersji 1.0 i 1.1 `dwKeySize` o długości 1024 bitów, aby podpisać zestaw silną nazwą; w wersji 2.0 dodaje obsługiwanych w przypadku 2048-bitowe klucze.</span><span class="sxs-lookup"><span data-stu-id="750f1-118">The .NET Framework versions 1.0 and 1.1 require a `dwKeySize` of 1024 bits to sign an assembly with a strong name; version 2.0 adds supports for 2048-bit keys.</span></span>  
   
- <span data-ttu-id="75366-119">Po pobraniu klucza, należy wywołać [iclrstrongname::strongnamefreebuffer —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metodę, aby zwolnić alokacji pamięci.</span><span class="sxs-lookup"><span data-stu-id="75366-119">After the key is retrieved, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
+ <span data-ttu-id="750f1-119">Po pobraniu klucza, należy wywołać [iclrstrongname::strongnamefreebuffer —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metodę, aby zwolnić alokacji pamięci.</span><span class="sxs-lookup"><span data-stu-id="750f1-119">After the key is retrieved, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="75366-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="75366-120">Requirements</span></span>  
- <span data-ttu-id="75366-121">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="75366-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="750f1-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="750f1-120">Requirements</span></span>  
+ <span data-ttu-id="750f1-121">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="750f1-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="75366-122">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="75366-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="750f1-122">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="750f1-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="75366-123">**Biblioteka:** dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="75366-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="750f1-123">**Biblioteka:** dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="750f1-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="75366-124">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="75366-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="750f1-124">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="750f1-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="75366-125">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="75366-125">See Also</span></span>  
- [<span data-ttu-id="75366-126">StrongNameKeyGen, metoda</span><span class="sxs-lookup"><span data-stu-id="75366-126">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  
- [<span data-ttu-id="75366-127">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="75366-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="750f1-125">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="750f1-125">See Also</span></span>  
+ [<span data-ttu-id="750f1-126">StrongNameKeyGen, metoda</span><span class="sxs-lookup"><span data-stu-id="750f1-126">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  
+ [<span data-ttu-id="750f1-127">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="750f1-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

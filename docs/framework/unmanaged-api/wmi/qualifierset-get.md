@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43415397"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804243"
 ---
-# <a name="qualifiersetget-function"></a><span data-ttu-id="04951-103">QualifierSet_Get — funkcja</span><span class="sxs-lookup"><span data-stu-id="04951-103">QualifierSet_Get function</span></span>
-<span data-ttu-id="04951-104">Pobiera określonego nazwanego kwalifikator.</span><span class="sxs-lookup"><span data-stu-id="04951-104">Gets the specified named qualifier.</span></span>  
+# <a name="qualifiersetget-function"></a><span data-ttu-id="c268b-103">QualifierSet_Get — funkcja</span><span class="sxs-lookup"><span data-stu-id="c268b-103">QualifierSet_Get function</span></span>
+<span data-ttu-id="c268b-104">Pobiera określonego nazwanego kwalifikator.</span><span class="sxs-lookup"><span data-stu-id="c268b-104">Gets the specified named qualifier.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="04951-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="04951-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c268b-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="c268b-105">Syntax</span></span>  
   
 ```  
 HRESULT QualifierSet_Get (
@@ -41,46 +41,46 @@ HRESULT QualifierSet_Get (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="04951-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="04951-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="c268b-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="c268b-106">Parameters</span></span>
 
 `vFunc`   
-<span data-ttu-id="04951-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="04951-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="c268b-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="c268b-107">[in] This parameter is unused.</span></span>
 
 `ptr`   
-<span data-ttu-id="04951-108">[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="04951-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
+<span data-ttu-id="c268b-108">[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="c268b-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
 
 `wszName`   
-<span data-ttu-id="04951-109">[in] Nazwa kwalifikatora, którego wartość jest wymagane.</span><span class="sxs-lookup"><span data-stu-id="04951-109">[in] The name of the qualifier whose value is requested.</span></span>
+<span data-ttu-id="c268b-109">[in] Nazwa kwalifikatora, którego wartość jest wymagane.</span><span class="sxs-lookup"><span data-stu-id="c268b-109">[in] The name of the qualifier whose value is requested.</span></span>
 
 `lFlags`   
-<span data-ttu-id="04951-110">[in] Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="04951-110">[in] Reserved.</span></span> <span data-ttu-id="04951-111">Ten parametr musi być 0.</span><span class="sxs-lookup"><span data-stu-id="04951-111">This parameter must be 0.</span></span>
+<span data-ttu-id="c268b-110">[in] Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="c268b-110">[in] Reserved.</span></span> <span data-ttu-id="c268b-111">Ten parametr musi być 0.</span><span class="sxs-lookup"><span data-stu-id="c268b-111">This parameter must be 0.</span></span>
 
 `pVal`   
-<span data-ttu-id="04951-112">[out] Jeśli operacja się powiedzie, poprawny typ i wartość kwalifikatora.</span><span class="sxs-lookup"><span data-stu-id="04951-112">[out] When successful, the correct type and value for the qualifier.</span></span> <span data-ttu-id="04951-113">Jeśli funkcja zawiedzie, `VARIANT` wskazywany przez `pVal` nie jest modyfikowany.</span><span class="sxs-lookup"><span data-stu-id="04951-113">If the function fails, the `VARIANT` pointed to by `pVal` is not modified.</span></span> <span data-ttu-id="04951-114">Jeśli ten parametr jest `null`, parametr jest ignorowany.</span><span class="sxs-lookup"><span data-stu-id="04951-114">If this parameter is `null`, the parameter is ignored.</span></span>
+<span data-ttu-id="c268b-112">[out] Jeśli operacja się powiedzie, poprawny typ i wartość kwalifikatora.</span><span class="sxs-lookup"><span data-stu-id="c268b-112">[out] When successful, the correct type and value for the qualifier.</span></span> <span data-ttu-id="c268b-113">Jeśli funkcja zawiedzie, `VARIANT` wskazywany przez `pVal` nie jest modyfikowany.</span><span class="sxs-lookup"><span data-stu-id="c268b-113">If the function fails, the `VARIANT` pointed to by `pVal` is not modified.</span></span> <span data-ttu-id="c268b-114">Jeśli ten parametr jest `null`, parametr jest ignorowany.</span><span class="sxs-lookup"><span data-stu-id="c268b-114">If this parameter is `null`, the parameter is ignored.</span></span>
 
 `plFlavor`   
-<span data-ttu-id="04951-115">[out] Wskaźnik na wartość typu LONG, odbierająca bitów wersja kwalifikatora dla żądanego kwalifikatora.</span><span class="sxs-lookup"><span data-stu-id="04951-115">[out] A pointer to a LONG that receives the qualifier flavor bits for the requested qualifier.</span></span> <span data-ttu-id="04951-116">Jeśli informacje o wersji nie jest wymagana, ten parametr może być `null`.</span><span class="sxs-lookup"><span data-stu-id="04951-116">If flavor information is not desired, this parameter can be `null`.</span></span> 
+<span data-ttu-id="c268b-115">[out] Wskaźnik na wartość typu LONG, odbierająca bitów wersja kwalifikatora dla żądanego kwalifikatora.</span><span class="sxs-lookup"><span data-stu-id="c268b-115">[out] A pointer to a LONG that receives the qualifier flavor bits for the requested qualifier.</span></span> <span data-ttu-id="c268b-116">Jeśli informacje o wersji nie jest wymagana, ten parametr może być `null`.</span><span class="sxs-lookup"><span data-stu-id="c268b-116">If flavor information is not desired, this parameter can be `null`.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="04951-117">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="04951-117">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="c268b-117">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="c268b-117">Return value</span></span>
 
-<span data-ttu-id="04951-118">Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="04951-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="c268b-118">Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="c268b-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="04951-119">Stała</span><span class="sxs-lookup"><span data-stu-id="04951-119">Constant</span></span>  |<span data-ttu-id="04951-120">Wartość</span><span class="sxs-lookup"><span data-stu-id="04951-120">Value</span></span>  |<span data-ttu-id="04951-121">Opis</span><span class="sxs-lookup"><span data-stu-id="04951-121">Description</span></span>  |
+|<span data-ttu-id="c268b-119">Stała</span><span class="sxs-lookup"><span data-stu-id="c268b-119">Constant</span></span>  |<span data-ttu-id="c268b-120">Wartość</span><span class="sxs-lookup"><span data-stu-id="c268b-120">Value</span></span>  |<span data-ttu-id="c268b-121">Opis</span><span class="sxs-lookup"><span data-stu-id="c268b-121">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="04951-122">0x80041008</span><span class="sxs-lookup"><span data-stu-id="04951-122">0x80041008</span></span> | <span data-ttu-id="04951-123">Parametr jest nieprawidłowy.</span><span class="sxs-lookup"><span data-stu-id="04951-123">A parameter is not valid.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="04951-124">0x80041002</span><span class="sxs-lookup"><span data-stu-id="04951-124">0x80041002</span></span> | <span data-ttu-id="04951-125">Określony kwalifikatora nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="04951-125">The specified qualifier does not exist.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="04951-126">0</span><span class="sxs-lookup"><span data-stu-id="04951-126">0</span></span> | <span data-ttu-id="04951-127">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="04951-127">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="c268b-122">0x80041008</span><span class="sxs-lookup"><span data-stu-id="c268b-122">0x80041008</span></span> | <span data-ttu-id="c268b-123">Parametr jest nieprawidłowy.</span><span class="sxs-lookup"><span data-stu-id="c268b-123">A parameter is not valid.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="c268b-124">0x80041002</span><span class="sxs-lookup"><span data-stu-id="c268b-124">0x80041002</span></span> | <span data-ttu-id="c268b-125">Określony kwalifikatora nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="c268b-125">The specified qualifier does not exist.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="c268b-126">0</span><span class="sxs-lookup"><span data-stu-id="c268b-126">0</span></span> | <span data-ttu-id="c268b-127">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="c268b-127">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="04951-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="04951-128">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="c268b-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c268b-128">Remarks</span></span>
 
-<span data-ttu-id="04951-129">Ta funkcja zawija wywołanie do [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) metody.</span><span class="sxs-lookup"><span data-stu-id="04951-129">This function wraps a call to the [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) method.</span></span>
+<span data-ttu-id="c268b-129">Ta funkcja zawija wywołanie do [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) metody.</span><span class="sxs-lookup"><span data-stu-id="c268b-129">This function wraps a call to the [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="04951-130">Wymagania</span><span class="sxs-lookup"><span data-stu-id="04951-130">Requirements</span></span>  
- <span data-ttu-id="04951-131">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="04951-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c268b-130">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c268b-130">Requirements</span></span>  
+ <span data-ttu-id="c268b-131">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c268b-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04951-132">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="04951-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="c268b-132">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="c268b-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="04951-133">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="04951-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="c268b-133">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="c268b-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04951-134">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="04951-134">See also</span></span>  
-[<span data-ttu-id="04951-135">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="04951-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="c268b-134">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c268b-134">See also</span></span>  
+[<span data-ttu-id="c268b-135">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="c268b-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

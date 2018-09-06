@@ -10,11 +10,11 @@ helpviewer_keywords:
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
 ms.openlocfilehash: cf9491c7eee7dee197e9a3b91d35bc7f71f4e956
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392632"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735906"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Porady: ustawianie obrazu wyświetlanego przez formant formularzy systemu Windows przy użyciu narzędzia Projektant
 Kilka kontrolek Windows Forms można wyświetlać obrazy. Obraz, który może być ikonę która wyjaśnia przeznaczenia kontrolki, takie jak ikonę dysku, na przycisku określające elementy **Zapisz** polecenia. Alternatywnie ikona może być obrazu tła, aby nadać wygląd, który ma kontrolki.  

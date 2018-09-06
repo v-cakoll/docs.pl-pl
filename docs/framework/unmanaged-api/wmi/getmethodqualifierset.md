@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389045"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724724"
 ---
 # <a name="getmethodqualifierset-function"></a>Funkcja GetMethodQualifierSet
 Pobiera kwalifikator ustawione dla konkretnych metod.

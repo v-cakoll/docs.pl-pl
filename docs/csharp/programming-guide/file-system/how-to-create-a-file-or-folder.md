@@ -7,24 +7,24 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d69885b420d28878072a70dfd2288905cf13de1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34919efe32730fe0db11cb881b8e07629a3094fd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334837"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776327"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Porady: utworzenie pliku lub folderu (Przewodnik programowania w języku C#)
-Można programowo Utwórz folder na komputerze, utwórz podfolder, Utwórz plik w podfolderze i zapisywania danych do pliku.  
+Można programowo utworzyć folder na komputerze, utwórz podfolder, Utwórz plik w podfolderze i zapisać dane do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
- Jeśli folder już istnieje, <xref:System.IO.Directory.CreateDirectory%2A> ma nothing i żaden wyjątek zostanie zgłoszony. Jednak <xref:System.IO.File.Create%2A?displayProperty=nameWithType> zastępuje istniejący plik przy użyciu nowego pliku. W przykładzie użyto `if` - `else` instrukcji, aby zapobiec zastąpienia istniejącego pliku.  
+ Jeśli folder już istnieje, <xref:System.IO.Directory.CreateDirectory%2A> robi nic, a żaden wyjątek jest zgłaszany. Jednak <xref:System.IO.File.Create%2A?displayProperty=nameWithType> zastępuje istniejący plik nowym plikiem. W przykładzie użyto `if` - `else` instrukcję, aby uniemożliwić zastąpienia istniejącego pliku.  
   
- Wprowadzając następujące zmiany w tym przykładzie, można określić różne wyniki według tego, czy plik niektórych nazwą już istnieje. Jeśli taki plik nie istnieje, kod tworzy go. Jeśli plik jest dostępny, kod dołącza dane do tego pliku.  
+ Wprowadzając następujące zmiany w przykładzie, można określić różne wyniki oparte na tego, czy plik o określonej nazwie już istnieje. Jeśli taki plik nie istnieje, kod tworzy go. Jeśli taki plik istnieje, kod dołącza dane do tego pliku.  
   
--   Określ nazwę pliku losowych.  
+-   Określ nielosową nazwę.  
   
     ```csharp  
     // Comment out the following line.  
@@ -34,7 +34,7 @@ Można programowo Utwórz folder na komputerze, utwórz podfolder, Utwórz plik 
     string fileName = "MyNewFile.txt";  
     ```  
   
--   Zastąp `if` - `else` instrukcji z `using` instrukcji w poniższym kodzie.  
+-   Zastąp `if` - `else` instrukcję, określając `using` instrukcji w poniższym kodzie.  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -46,28 +46,29 @@ Można programowo Utwórz folder na komputerze, utwórz podfolder, Utwórz plik 
     }  
     ```  
   
- Uruchom kilka razy w przykładzie do Sprawdź, czy dane są dodawane do pliku zawsze.  
+ Uruchom przykład kilka razy, aby sprawdzić, czy dane są dodawane do pliku każdorazowo.  
   
- Aby uzyskać więcej `FileMode` wartości, których można spróbować, zobacz <xref:System.IO.FileMode>.  
+ Aby uzyskać więcej informacji `FileMode` wartości, które można wypróbować, zobacz <xref:System.IO.FileMode>.  
   
  Następujące warunki mogą spowodować wyjątek:  
   
--   Nazwa folderu jest nieprawidłowo sformułowany. Na przykład zawiera niedozwolone znaki lub jest tylko znak odstępu (<xref:System.ArgumentException> klasy). Użyj <xref:System.IO.Path> klasy w celu utworzenia nazwy prawidłową ścieżkę.  
+-   Nazwa folderu jest nieprawidłowo sformułowany. Na przykład zawiera niedozwolone znaki lub jest tylko spacją (<xref:System.ArgumentException> klasy). Użyj <xref:System.IO.Path> klasy, aby utworzyć prawidłowe ścieżki nazw.  
   
--   Folder, który ma zostać utworzony folder nadrzędny jest tylko do odczytu (<xref:System.IO.IOException> klasy).  
+-   Folderem nadrzędnym folderu, który ma zostać utworzony jest tylko do odczytu (<xref:System.IO.IOException> klasy).  
   
 -   Nazwa folderu jest `null` (<xref:System.ArgumentNullException> klasy).  
   
--   Nazwa folderu jest za długa (<xref:System.IO.PathTooLongException> klasy).  
+-   Nazwa folderu jest zbyt długa (<xref:System.IO.PathTooLongException> klasy).  
   
--   Nazwa folderu jest tylko dwukropka ":" (<xref:System.IO.PathTooLongException> klasy).  
+-   Nazwa folderu jest tylko dwukropek, ":" (<xref:System.IO.PathTooLongException> klasy).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Wystąpienie <xref:System.Security.SecurityException> klasa może zostać zgłoszony w sytuacjach częściowego zaufania.  
+ Wystąpienie <xref:System.Security.SecurityException> klasy mogą być generowane w sytuacjach częściowego zaufania.  
   
- Jeśli nie masz uprawnień do tworzenia folderu przykładzie zgłasza wystąpienia <xref:System.UnauthorizedAccessException> klasy.  
+ Jeśli nie masz uprawnień do utworzenia folderu, przykład generuje wystąpienie <xref:System.UnauthorizedAccessException> klasy.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IO?displayProperty=nameWithType>  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [System plików i rejestr (C# przewodnik programowania w języku)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)

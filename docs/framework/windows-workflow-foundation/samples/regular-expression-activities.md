@@ -1,38 +1,38 @@
 ---
-title: Działania wyrażeń regularnych
+title: Regularne wyrażenia działań
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
-ms.openlocfilehash: 34b1f18f26f0b79c4b8711d65da5707a85cf3bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519837"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743167"
 ---
-# <a name="regular-expression-activities"></a>Działania wyrażeń regularnych
-W tym przykładzie pokazano, jak utworzyć zestaw działań, które udostępniają funkcje wyrażenia regularnego <xref:System.Text.RegularExpressions> przestrzeni nazw. Można używać tych działań niestandardowych aplikacji przepływu pracy. Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz [N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
+# <a name="regular-expression-activities"></a>Regularne wyrażenia działań
+W tym przykładzie pokazano, jak utworzyć zestaw działań, które udostępniają funkcje wyrażenia regularnego <xref:System.Text.RegularExpressions> przestrzeni nazw. Te niestandardowe działania może służyć w aplikacji przepływu pracy. Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz [N:System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
   
- Poniższa tabela zawiera szczegóły dotyczące działania niestandardowe, w tym przykładzie.  
+ W poniższej tabeli przedstawiono niestandardowych działań w tym przykładzie.  
   
 |Działanie|Opis|  
 |--------------|-----------------|  
 |IsMatch|Określa, czy wyrażenie regularne Znaleziono dopasowanie w ciągu wejściowym.|  
-|Dopasowania|Wyszukuje ciąg wejściowy dla wszystkich wystąpień elementu wyrażenia regularnego i zwraca wszystkie dopasowania powiodło się.|  
-|Zamień|W ramach określonego ciągu wejściowego zastępuje ciągi zgodne ze wzorcem wyrażenia regularnego z określony ciąg zastępczy.|  
+|Dopasowania|Wyszukuje ciąg wejściowy dla wszystkich wystąpień elementu wyrażenia regularnego i zwraca wszystkie pomyślnego dopasowania.|  
+|Zastąp|W ramach określonego ciągu wejściowego zastępuje ciągów, które pasują do wzorca wyrażenia regularnego przy użyciu określony ciąg zastępczy.|  
   
 ## <a name="ismatch"></a>IsMatch  
- `IsMatch` Zwraca działania niestandardowego `true` Jeśli `Input` właściwości ciągu znalezieniu dopasowania z wyrażeniem regularnym określonym w `Pattern` właściwości. Działanie jest pochodną <xref:System.Activities.CodeActivity%601> i poziomu <xref:System.Activities.CodeActivity%601.Execute%2A> wywołania metody <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> metody.  
+ `IsMatch` Zwraca niestandardowe działanie `true` Jeśli `Input` właściwość ciągu umożliwia znalezienie zgodny z wyrażeniem regularnym określonym w `Pattern` właściwości. Działanie jest pochodną <xref:System.Activities.CodeActivity%601> i poziomu <xref:System.Activities.CodeActivity%601.Execute%2A> wywołania metody <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> metody.  
   
- W poniższej tabeli opisano wartość właściwości i przywracać `IsMatch` działania niestandardowego.  
+ W poniższej tabeli opisano właściwości i wartość zwracana dla `IsMatch` działań niestandardowych.  
   
 |Właściwości lub wartości zwracanej|Opis|  
 |------------------------------|-----------------|  
-|Wzorzec (wymagane)|Wyrażenie regularne do wyszukania z.|  
+|Wzorzec (wymagane)|Wyrażenie regularne do wyszukiwania.|  
 |Dane wejściowe (wymagane)|Wejściowy ciąg do wyszukania.|  
-|RegexOptions|Bitowe połączenie lub [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) wartości wyliczenia.|  
-|Wartość zwracana|`true` Jeśli dane wejściowe znalezienia dopasowania we wzorcu podana; w przeciwnym razie `false`.|  
+|RegexOptions|Bitową kombinacją OR [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) wartości wyliczenia.|  
+|Wartość zwracana|`true` Jeśli dane wejściowe znajdzie dopasowanie we wzorcu podana; w przeciwnym razie `false`.|  
   
- Poniższy przykład kodu pokazuje sposób użycia `IsMatch` działania niestandardowego.  
+ Poniższy przykład kodu demonstruje sposób używania `IsMatch` działań niestandardowych.  
   
 ```  
 new IsMatch  
@@ -43,18 +43,18 @@ new IsMatch
 ```  
   
 ## <a name="matches"></a>Dopasowania  
- `Matches` Działania niestandardowego wyszukuje ciąg wejściowy dla wszystkich wystąpień elementu wyrażenia regularnego i zwraca wszystkie dopasowania powiodło się. Działanie jest pochodną <xref:System.Activities.CodeActivity%601> i poziomu <xref:System.Activities.CodeActivity%601.Execute%2A> wywołania metody <xref:System.Text.RegularExpressions.Regex.Matches%2A> metody.  
+ `Matches` Niestandardowe działanie wyszukuje ciąg wejściowy dla wszystkich wystąpień elementu wyrażenia regularnego i zwraca wszystkie pomyślnego dopasowania. Działanie jest pochodną <xref:System.Activities.CodeActivity%601> i poziomu <xref:System.Activities.CodeActivity%601.Execute%2A> wywołania metody <xref:System.Text.RegularExpressions.Regex.Matches%2A> metody.  
   
- W poniższej tabeli opisano wartość właściwości i przywracać `IsMatch` działania niestandardowego.  
+ W poniższej tabeli opisano właściwości i wartość zwracana dla `IsMatch` działań niestandardowych.  
   
 |Właściwości lub wartości zwracanej|Opis|  
 |------------------------------|-----------------|  
-|Wzorzec (wymagane)|Wyrażenie regularne do wyszukania z.|  
+|Wzorzec (wymagane)|Wyrażenie regularne do wyszukiwania.|  
 |Dane wejściowe (wymagane)|Wejściowy ciąg do wyszukania.|  
-|RegexOptions|Bitowe połączenie lub [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) wartości wyliczenia.|  
-|Wartość zwracana|A <xref:System.Text.RegularExpressions.MatchCollection> zawierający kolekcja dopasowań powiodło się.|  
+|RegexOptions|Bitową kombinacją OR [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) wartości wyliczenia.|  
+|Wartość zwracana|A <xref:System.Text.RegularExpressions.MatchCollection> , która zawiera kolekcję dopasowań.|  
   
- Poniższy przykład kodu pokazuje sposób użycia `Matches` działania niestandardowego.  
+ Poniższy przykład kodu demonstruje sposób używania `Matches` działań niestandardowych.  
   
 ```  
 new Matches  
@@ -64,21 +64,21 @@ new Matches
 };  
 ```  
   
-## <a name="replace"></a>Zamień  
- `Replace` Działania niestandardowego wyszukuje ciąg wejściowy i zastępuje wszystkie ciągi, które pasują do podanego wyrażenia regularnego z ciągiem. Działanie jest pochodną <xref:System.Activities.CodeActivity%601> i poziomu <xref:System.Activities.CodeActivity%601.Execute%2A> wywołania metody <xref:System.Text.RegularExpressions.Regex.Replace%2A> metody.  
+## <a name="replace"></a>Zastąp  
+ `Replace` Niestandardowe działanie wyszukuje ciąg wejściowy i zastępuje wszystkie ciągi, które pasują do określonego wyrażenia regularnego z ciągiem. Działanie jest pochodną <xref:System.Activities.CodeActivity%601> i poziomu <xref:System.Activities.CodeActivity%601.Execute%2A> wywołania metody <xref:System.Text.RegularExpressions.Regex.Replace%2A> metody.  
   
- W poniższej tabeli opisano wartość właściwości i przywracać `Replace` działania niestandardowego.  
+ W poniższej tabeli opisano właściwości i wartość zwracana dla `Replace` działań niestandardowych.  
   
 |Właściwości lub wartości zwracanej|Opis|  
 |------------------------------|-----------------|  
-|Wzorzec (wymagane)|Wyrażenie regularne do wyszukania z.|  
+|Wzorzec (wymagane)|Wyrażenie regularne do wyszukiwania.|  
 |Dane wejściowe (wymagane)|Wejściowy ciąg do wyszukania.|  
-|Zastąpienie|Ciąg zastępujący.<br /><br /> Jeśli `Replacement` jest określony, a następnie `MatchEvaluator` właściwość jest ignorowana. Albo `Replacement` lub `MatchEvaluator` musi być ustawiona właściwość.|  
-|MatchEvaluator|Niestandardowe metody, która sprawdza każdym dopasowaniu i zwraca oryginalnego ciągu dopasowane lub ciąg zastępczy.<br /><br /> Jeśli `Replacement` jest określony, a następnie `MatchEvaluator` właściwość jest ignorowana. Albo `Replacement` lub `MatchEvaluator` musi być ustawiona właściwość.|  
-|RegexOptions|Bitowe połączenie lub [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) wartości wyliczenia.|  
-|Wartość zwracana|A <xref:System.Text.RegularExpressions.MatchCollection> zawierający kolekcja dopasowań powiodło się.|  
+|Zastępczy|Ciąg zastępujący.<br /><br /> Jeśli `Replacement` jest określony, a następnie `MatchEvaluator` właściwość jest ignorowana. Albo `Replacement` lub `MatchEvaluator` musi być ustawiona właściwość.|  
+|MatchEvaluator|Niestandardowe metody, która sprawdza każdego dopasowania i zwraca oryginalny ciąg dopasowane lub ciąg zastępujący.<br /><br /> Jeśli `Replacement` jest określony, a następnie `MatchEvaluator` właściwość jest ignorowana. Albo `Replacement` lub `MatchEvaluator` musi być ustawiona właściwość.|  
+|RegexOptions|Bitową kombinacją OR [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) wartości wyliczenia.|  
+|Wartość zwracana|A <xref:System.Text.RegularExpressions.MatchCollection> , która zawiera kolekcję dopasowań.|  
   
- Poniższy przykład kodu pokazuje sposób użycia `Replace` działania niestandardowego.  
+ Poniższy przykład kodu demonstruje sposób używania `Replace` działań niestandardowych.  
   
 ```  
 // Using the replacement string.  
@@ -100,17 +100,17 @@ new Replace
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Przy użyciu [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania RegexActivities.sln.  
+1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania RegexActivities.sln.  
   
-2.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-3.  Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.  
+3.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Regex`

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb45ea6ed5c5795c910b2f6c3575b12f8189cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f9aca20a3ff65d061c04a21e31db3fb5eab62ba
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213915"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732452"
 ---
-# <a name="-deterministic"></a>-deterministyczna
+# <a name="-deterministic"></a>-deterministyczne
 
-Powoduje, że kompilator, aby utworzyć zestaw, której wyjście bajtów dla bajtów jest identyczne w kompilacji dla identycznych danych wejściowych. 
+Powoduje, że kompilator generuje zestawu, którego dane wyjściowe dla bajt jest identyczna w kompilacjach identycznych danych wejściowych. 
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,32 +28,33 @@ Powoduje, że kompilator, aby utworzyć zestaw, której wyjście bajtów dla baj
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie dane wyjściowe kompilatora z danego zestawu danych wejściowych jest unikatowa, ponieważ kompilator dodaje znacznikiem czasu i identyfikatorem GUID, który jest generowany na podstawie liczby losowe. Możesz użyć `-deterministic` opcję, aby utworzyć *deterministyczne zestawu*, jedną z którego zawartość binarna jest identyczne w kompilacji, tak długo, jak dane wejściowe jest taka sama.
+Domyślnie dane wyjściowe kompilatora z danego zestawu danych wejściowych jest unikatowa, ponieważ kompilator sam doda sygnaturę czasową i identyfikator GUID, który jest generowany na podstawie liczby losowe. Możesz użyć `-deterministic` opcję, aby wygenerować *deterministyczne zestawu*, jedną z którego zawartość binarna jest identyczne w kompilacji, tak długo, jak dane wejściowe pozostają bez zmian.
 
-Kompilator uwzględnia następujące dane wejściowe na potrzeby determinizm:
+Kompilator traktuje następujące dane wejściowe na potrzeby determinizm:
 
 - Sekwencja parametry wiersza polecenia.
-- Zawartość pliku odpowiedzi .rsp — kompilatora.
-- Dokładne wersja kompilatora używane i jego zestawów występujących w odwołaniach.
+- Zawartość pliku odpowiedzi rsp kompilatora.
+- Dokładne wersję kompilatora, używane, a jego przywoływanych zestawów.
 - Ścieżka bieżącego katalogu.
-- Wszystkie pliki binarne treści jawnie przekazany do kompilatora bezpośrednio lub pośrednio, w tym:
+- Binarny zawartość wszystkich plików jawnie przekazywane do kompilator bezpośrednio lub pośrednio, w tym:
     - Pliki źródłowe
     - przywoływanych zestawach
-    - Przywoływany modułów
-    - Zasoby
+    - Moduły odwołania
+    - Resources
     - Plik klucza silnej nazwy
     - @ pliki odpowiedzi
     - Analizatory
     - Zestawy reguł
-    - Dodatkowe pliki, które mogą być używane przez analizatory
-- Bieżąca kultura (język, w którym diagnostyki i wyjątków są produkowane wiadomości).
+    - Dodatkowe pliki, które mogą być używane przez analizatorów
+- Bieżącą kulturą (język, w których dane diagnostyczne i wyjątków są produkowane wiadomości).
 - Domyślnym kodowaniem (lub bieżącej stronie kodowej) Jeśli nie określono kodowanie.
-- Istnienie, brak i zawartość plików w ścieżkach wyszukiwania przez kompilator (określonej, na przykład przez `/lib` lub `/recurse`).
-- Platforma CLR, na którym jest wykonywane przez kompilator.
+- Istnienie, nie istnieje i zawartość plików na ścieżki wyszukiwania kompilatora (określone, na przykład przez `/lib` lub `/recurse`).
+- Platforma CLR, na którym jest uruchamiany kompilator.
 - Wartość `%LIBPATH%`, co może wpłynąć na ładowanie zależności analizatora.
 
-Gdy publicznie dostępnych źródeł, kompilacji deterministycznej może służyć do ustalenia, czy dane binarne ma być kompilowana z zaufanego źródła. Może być również przydatne w systemie kompilacji ciągłej do określenia, czy konieczne można wykonać kroki procesu kompilacji, które są zależne od zmian w pliku binarnym. 
+W przypadku publicznie dostępnego źródła kompilacji deterministycznej może służyć do ustalenia, czy plik binarny jest kompilowany z zaufanego źródła. Również może być przydatne w systemie kompilacji ciągłej do określenia, czy należy wykonać kroki kompilacji, które są zależne od zmian w pliku binarnym. 
 
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

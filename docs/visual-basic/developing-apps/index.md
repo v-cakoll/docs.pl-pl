@@ -5,41 +5,41 @@ helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: b4434d6f66ea8329903c92fe664d9704bce19625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584205"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748492"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Tworzenie aplikacji za pomocą Visual Basic
-W tej sekcji omówiono dokumentacja koncepcyjna dla języka Visual Basic.  
+W tej sekcji opisano w dokumentacji koncepcyjnego dla języka Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Programowanie w Visual Basic](../../visual-basic/developing-apps/programming/index.md)  
  Obejmuje wielu tematów programowania.  
   
  [Rozwój za pomocą My](../../visual-basic/developing-apps/development-with-my/index.md)  
- W tym artykule omówiono nową funkcję o nazwie `My`, zapewniające dostęp do informacji i domyślnego wystąpienia obiektów, które odnoszą się do aplikacji i jej środowisko wykonawcze.  
+ W tym artykule omówiono nową funkcję o nazwie `My`, który zapewnia dostęp do informacji i domyślne wystąpień obiektów, które odnoszą się do aplikacji i jej środowiska wykonawczego.  
   
- [Uzyskiwanie dostępu do danych w aplikacjach Visual Basic](../../visual-basic/developing-apps/accessing-data.md)  
+ [Uzyskiwanie dostępu do danych w aplikacjach Visual Studio](../../visual-basic/developing-apps/accessing-data.md)  
  Zawiera pomoc na uzyskiwanie dostępu do danych w języku Visual Basic.  
   
  [Tworzenie i używanie składników w języku Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
- Definiuje termin *składnika* i opisano, jak i kiedy do tworzenia składników.  
+ Definiuje wyrażenie *składnika* i w tym artykule omówiono sposób i czas tworzenia składników.  
   
- [Drukowanie i raportowanie](../../visual-basic/developing-apps/printing/printing-and-reporting.md)  
- Zawiera omówienie i linki do dokumentacji związanych z drukowanie i raportowanie.  
+ [Drukowanie i raportowanie](../../visual-basic/developing-apps/printing/index.md)  
+ Zawiera omówienia i linki do dodatkowej dokumentacji związanych z drukowanie i raportowanie.  
   
- [Podstawowe informacje o aplikacji Windows Forms](../../visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)  
- Zawiera informacje dotyczące tworzenia aplikacji formularzy systemu Windows za pomocą programu Visual Studio.  
+ [Podstawowe informacje o aplikacji Windows Forms](../../visual-basic/developing-apps/windows-forms/index.md)  
+ Zawiera informacje dotyczące tworzenia aplikacji Windows Forms przy użyciu programu Visual Studio.  
   
- [Dostosowywanie projektów i rozszerzanie Moje](../../visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)  
- W tym artykule opisano, jak można dostosować szablony projektów w celu zapewnienia dodatkowych `My` obiektów.  
+ [Dostosowywanie projektów i rozszerzanie mojej](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
+ W tym artykule opisano, w jaki sposób dostosować szablony projektów, aby zapewnić dodatkowe `My` obiektów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Przewodnik programowania w języku Visual Basic](../../visual-basic/programming-guide/index.md)  
- Przedstawiono ważne elementy programowania w języku Visual Basic.  
+ Przedstawiono istotne elementy programowania w języku Visual Basic.  
   
  [Dokumentacja języka Visual Basic](../../visual-basic/language-reference/index.md)  
- Zawiera dokumentacja referencyjna dla języka Visual Basic.
+ Zawiera dokumentacja dla języka Visual Basic.

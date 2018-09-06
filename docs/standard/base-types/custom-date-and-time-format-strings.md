@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf91aa52b03f5b843a11147d8f5c28ce6f7a2e83
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
-ms.translationtype: MT
+ms.openlocfilehash: ab14be82f3dedeab0a1e1e574ce5622d067f72ae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255587"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724438"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 
@@ -47,7 +47,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  W poniższej tabeli opisano specyfikatory niestandardowego formatu daty i godziny oraz pokazano ciąg wynikowy utworzony przez każdy specyfikator formatu. Domyślnie ciągi wynikowe odzwierciedlają konwencje formatowania kultury en-US. Jeśli określony specyfikator formatu generuje zlokalizowany ciąg wynikowy, w przykładzie wymieniono też kulturę, której dotyczy ciąg wynikowy. Zobacz sekcję Uwagi, aby uzyskać dodatkowe informacje dotyczące używania ciągów niestandardowego formatu daty i godziny.
 
 | Specyfikator formatu | Opis | Przykłady |
-|----------------------|-----------------|--------------|
+| ---------------------- | ----------------- | -------------- |
 |„d”|Dzień miesiąca z zakresu od 1 do 31.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "d"](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -&GT; 15|
 |„dd”|Dzień miesiąca z zakresu od 01 do 31.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "dd"](#ddSpecifier).|2009-06-01T13:45:30 -&GT; 01<br /><br /> 2009-06-15T13:45:30 -&GT; 15|
 |„ddd”|Skrócona nazwa dnia tygodnia.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "ddd"](#dddSpecifier).|2009-06-15T13:45:30 -> Mon (en US)<br /><br /> 2009-06-15T13:45:30 -> Пн (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> jednostki lun. (fr-FR)|
@@ -100,6 +100,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  W poniższych sekcjach przedstawiono dodatkowe informacje dotyczące poszczególnych specyfikatorów niestandardowego formatu daty i godziny. Jeśli nie określono inaczej, każdy specyfikator wytwarza identyczną reprezentację ciągu niezależnie od tego, czy jest użyty z <xref:System.DateTime> wartość lub <xref:System.DateTimeOffset> wartość.
 
 <a name="dSpecifier"></a> 
+
 ## <a name="the-d-custom-format-specifier"></a>Specyfikator formatu niestandardowego "d"
  Specyfikator formatu niestandardowego „d” oznacza dzień miesiąca w postaci liczby z zakresu od 1 do 31. Dzień oznaczony jedną cyfrą jest formatowany bez zera wiodącego.
 
@@ -113,6 +114,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="ddSpecifier"></a> 
+
 ## <a name="the-dd-custom-format-specifier"></a>Specyfikator formatu niestandardowego "dd"
  Ciąg formatu niestandardowego „dd” przedstawia dzień miesiąca w postaci liczby z zakresu od 01 do 31. Dzień oznaczony jedną cyfrą jest formatowany z zerem wiodącym.
 
@@ -124,6 +126,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="dddSpecifier"></a> 
+
 ## <a name="the-ddd-custom-format-specifier"></a>Specyfikator formatu niestandardowego "ddd"
  Specyfikator formatu niestandardowego „ddd” przedstawia skróconą nazwę dnia tygodnia. Zlokalizowana skrócona nazwa dnia tygodnia jest pobierana z <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> właściwości bieżącej lub określonej kultury.
 
@@ -135,6 +138,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="ddddSpecifier"></a> 
+
 ## <a name="the-dddd-custom-format-specifier"></a>Specyfikator formatu niestandardowego "dddd"
  Specyfikator formatu niestandardowego „dddd” (plus dowolna liczba dodatkowych specyfikatorów „d”) oznacza pełną nazwę dnia tygodnia. Zlokalizowana nazwa dnia tygodnia jest pobierana z <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> właściwości bieżącej lub określonej kultury.
 
@@ -146,6 +150,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="fSpecifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>Specyfikator formatu niestandardowego "f"
  Specyfikator formatu niestandardowego „f” przedstawia najbardziej znaczącą cyfrę części sekund, czyli przedstawia liczbę dziesiątych części sekundy w wartości daty i godziny.
 
@@ -161,6 +166,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="ffSpecifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "ff"
  Specyfikator formatu niestandardowego „ff” przedstawia dwie najbardziej znaczące cyfry części sekund, czyli przedstawia liczbę setnych części sekundy w wartości daty i godziny.
 
@@ -172,6 +178,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="fffSpecifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "fff"
  Specyfikator formatu niestandardowego „fff” przedstawia trzy najbardziej znaczące cyfry części sekund, czyli przedstawia liczbę milisekund w wartości daty i godziny.
 
@@ -183,6 +190,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="ffffSpecifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "ffff"
  Specyfikator formatu niestandardowego „ffff” przedstawia cztery najbardziej znaczące cyfry części sekund, czyli przedstawia liczbę dziesięciotysięcznych części sekundy w wartości daty i godziny.
 
@@ -191,6 +199,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="fffffSpecifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "fffff"
  Specyfikator formatu niestandardowego „fffff” przedstawia pięć najbardziej znaczących cyfr części sekund, czyli przedstawia liczbę stutysięcznych części sekundy w wartości daty i godziny.
 
@@ -199,6 +208,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="ffffffSpecifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "ffffff"
  Specyfikator formatu niestandardowego „ffffff” przedstawia sześć najbardziej znaczących cyfr części sekund, czyli przedstawia liczbę milionowych części sekundy w wartości daty i godziny.
 
@@ -207,6 +217,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="fffffffSpecifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "fffffff"
  Specyfikator formatu niestandardowego „fffffff” przedstawia siedem najbardziej znaczących cyfr części sekund, czyli przedstawia liczbę dziesięciomilionowych części sekundy w wartości daty i godziny.
 
@@ -215,6 +226,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="F_Specifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>Specyfikator formatu niestandardowego "F"
  Specyfikator formatu niestandardowego „F” przedstawia najbardziej znaczącą cyfrę części sekund, czyli przedstawia liczbę dziesiątych części sekundy w wartości daty i godziny. Nic nie jest wyświetlane, jeśli cyfra jest równa zero.
 
@@ -230,6 +242,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="FF_Specifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "FF"
  Specyfikator formatu niestandardowego „FF” przedstawia dwie najbardziej znaczące cyfry części sekund, czyli przedstawia liczbę setnych części sekundy w wartości daty i godziny. Jednak końcowe zera lub dwuzerowe liczby nie są wyświetlane.
 
@@ -241,6 +254,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="FFF_Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "FFF"
  Specyfikator formatu niestandardowego „FFF” przedstawia trzy najbardziej znaczące cyfry części sekund, czyli przedstawia liczbę milisekund w wartości daty i godziny. Jednak końcowe zera lub trzyzerowe liczby nie są wyświetlane.
 
@@ -252,6 +266,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="FFFF_Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "FFFF"
  Specyfikator formatu niestandardowego „FFFF” przedstawia cztery najbardziej znaczące cyfry części sekund, czyli przedstawia liczbę dziesięciotysięcznych części sekundy w wartości daty i godziny. Jednak końcowe zera lub czterozerowe liczby nie są wyświetlane.
 
@@ -260,6 +275,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="FFFFF_Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "FFFFF"
  Specyfikator formatu niestandardowego „FFFFF” przedstawia pięć najbardziej znaczących cyfr części sekund, czyli przedstawia liczbę stutysięcznych części sekundy w wartości daty i godziny. Jednak końcowe zera lub pięciozerowe liczby nie są wyświetlane.
 
@@ -268,6 +284,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="FFFFFF_Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "FFFFFF"
  Specyfikator formatu niestandardowego „FFFFFF” przedstawia sześć najbardziej znaczących cyfr części sekund, czyli przedstawia liczbę milionowych części sekundy w wartości daty i godziny. Jednak końcowe zera lub sześciozerowe liczby nie są wyświetlane.
 
@@ -276,6 +293,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="FFFFFFF_Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego "FFFFFFF"
  Specyfikator formatu niestandardowego „FFFFFFF” przedstawia siedem najbardziej znaczących cyfr części sekund, czyli przedstawia liczbę dziesięciomilionowych części sekundy w wartości daty i godziny. Jednak końcowe zera lub siedmiozerowe liczby nie są wyświetlane.
 
@@ -284,6 +302,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="gSpecifier"></a> 
+
 ## <a name="the-g-or-gg-custom-format-specifier"></a>Specyfikator formatu niestandardowego "g" lub "gg"
  Specyfikator formatu niestandardowego „g” lub „gg” (plus dowolna liczba dodatkowych specyfikatorów „g”) przedstawia okres lub erę, taką jak n.e. Operacja formatowania ignoruje ten specyfikator, jeśli z datą, która ma być formatowana, nie jest skojarzony ciąg okresu lub ery.
 
@@ -296,7 +315,8 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
 
  [Powrót do tabeli](#table)
 
-<a name="hSpecifier"></a>
+<a name="hSpecifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>Specyfikator formatu niestandardowego "h"
  Specyfikator formatu niestandardowego „h” przedstawia godzinę jako liczbę z zakresu od 1 do 12, czyli godzina jest przedstawiana za pomocą zegara 12-godzinnego, który zlicza pełne godziny od północy lub południa. Określonej godziny po północy nie można odróżnić od tej samej godziny po południu. Godzina nie jest zaokrąglona, a godzina oznaczona jedną cyfrą jest formatowana bez zera wiodącego. Na przykład w przypadku godziny 5:43 rano lub po południu użycie tego specyfikatora formatu niestandardowego spowoduje wyświetlenie wartości „5”.
 
@@ -310,6 +330,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="hhSpecifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>Specyfikator formatu niestandardowego "hh"
  Specyfikator formatu niestandardowego „hh” (plus dowolna liczba dodatkowych specyfikatorów „h”) przedstawia godzinę jako liczbę z zakresu od 01 do 12, czyli godzina jest przedstawiana za pomocą zegara 12-godzinnego, który zlicza pełne godziny od północy lub południa. Określonej godziny po północy nie można odróżnić od tej samej godziny po południu. Godzina nie jest zaokrąglona, a godzina oznaczona jedną cyfrą jest formatowana z zerem wiodącym. Na przykład w przypadku godziny 5:43 rano lub po południu użycie tego specyfikatora formatu niestandardowego spowoduje wyświetlenie wartości „05”.
 
@@ -321,6 +342,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="H_Specifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>Specyfikator formatu niestandardowego "H"
  Specyfikator formatu niestandardowego „H” przedstawia godzinę jako liczbę z zakresu od 0 do 23, czyli godzina jest przedstawiana za pomocą zawierającego zero zegara 24-godzinnego, który zlicza pełne godziny od północy. Godzina oznaczona jedną cyfrą jest formatowana bez zera wiodącego.
 
@@ -334,6 +356,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="HH_Specifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>Specyfikator formatu niestandardowego "HH"
  Specyfikator formatu niestandardowego „HH” (plus dowolna liczba dodatkowych specyfikatorów „H”) przedstawia godzinę jako liczbę z zakresu od 00 do 23, czyli godzina jest przedstawiana za pomocą zawierającego zero zegara 24-godzinnego, który zlicza pełne godziny od północy. Godzina oznaczona jedną cyfrą jest formatowana z zerem wiodącym.
 
@@ -345,6 +368,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="KSpecifier"></a> 
+
 ## <a name="the-k-custom-format-specifier"></a>Specyfikator formatu niestandardowego "K"
  Specyfikator formatu niestandardowego „K” przedstawia informacje o strefie czasowej z wartości daty i godziny. Gdy ten specyfikator formatu jest używany z <xref:System.DateTime> wartości, ciąg wynikowy jest definiowany przez wartość <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> właściwości:
 
@@ -366,6 +390,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="mSpecifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>Specyfikator formatu niestandardowego "m"
  Specyfikator formatu niestandardowego „m” przedstawia minutę jako liczbę z zakresu od 0 do 59. Wynik to liczba pełnych minut, które upłynęły od ostatniej godziny. Minuta oznaczona jedną cyfrą jest formatowana bez zera wiodącego.
 
@@ -379,6 +404,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="mmSpecifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>"Mm" niestandardowego specyfikatora formatu.
  Specyfikator formatu niestandardowego „mm” (plus dowolna liczba dodatkowych specyfikatorów „m”) przedstawia minutę jako liczbę z zakresu od 00 do 59. Wynik to liczba pełnych minut, które upłynęły od ostatniej godziny. Minuta oznaczona jedną cyfrą jest formatowana z zerem wiodącym.
 
@@ -390,6 +416,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="M_Specifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>Specyfikator formatu niestandardowego "M"
  Specyfikator formatu niestandardowego „M” przedstawia miesiąc jako liczbę z zakresu od 1 do 12 (lub od 1 do 13 w przypadku kalendarzy 13-miesięcznych). Miesiąc oznaczony jedną cyfrą jest formatowany bez zera wiodącego.
 
@@ -403,6 +430,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="MM_Specifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>Specyfikator formatu niestandardowego "MM"
  Specyfikator formatu niestandardowego „MM” przedstawia miesiąc jako liczbę z zakresu od 01 do 12 (lub od 01 do 13 w przypadku kalendarzy 13-miesięcznych). Miesiąc oznaczony jedną cyfrą jest formatowany z zerem wiodącym.
 
@@ -414,6 +442,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="MMM_Specifier"></a> 
+
 ## <a name="the-mmm-custom-format-specifier"></a>Specyfikator formatu niestandardowego "MMM"
  Specyfikator formatu niestandardowego „MMM” przedstawia skróconą nazwę miesiąca. Zlokalizowana skrócona nazwa miesiąca jest pobierana z <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> właściwości bieżącej lub określonej kultury.
 
@@ -425,6 +454,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="MMMM_Specifier"></a> 
+
 ## <a name="the-mmmm-custom-format-specifier"></a>Specyfikator formatu niestandardowego "MMMM"
  Specyfikator formatu niestandardowego „MMMM” przedstawia pełną nazwę miesiąca. Zlokalizowana nazwa miesiąca jest pobierana z <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> właściwości bieżącej lub określonej kultury.
 
@@ -436,6 +466,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="sSpecifier"></a> 
+
 ## <a name="the-s-custom-format-specifier"></a>Specyfikator formatu niestandardowego "s"
  Specyfikator formatu niestandardowego „s” przedstawia sekundy jako liczbę z zakresu od 0 do 59. Wynik przedstawia pełne sekundy, które upłynęły od ostatniej minuty. Sekunda oznaczona jedną cyfrą jest formatowana bez zera wiodącego.
 
@@ -449,6 +480,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="ssSpecifier"></a> 
+
 ## <a name="the-ss-custom-format-specifier"></a>Specyfikator formatu niestandardowego "ss"
  Specyfikator formatu niestandardowego „s” (plus dowolna liczba dodatkowych specyfikatorów „s”) przedstawia sekundy jako liczbę z zakresu od 00 do 59. Wynik przedstawia pełne sekundy, które upłynęły od ostatniej minuty. Sekunda oznaczona jedną cyfrą jest formatowana z zerem wiodącym.
 
@@ -460,6 +492,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="tSpecifier"></a> 
+
 ## <a name="the-t-custom-format-specifier"></a>Specyfikator formatu niestandardowego "t"
  Specyfikator formatu niestandardowego „t” przedstawia pierwszy znak oznaczenia AM/PM. Odpowiednie zlokalizowane określenie daty jest pobierany z <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> lub <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> właściwości bieżącej lub określonej kultury. Oznaczenie AM jest stosowanie do wszystkich godzin z zakresu od 0:00:00 (północ) do 11:59:59.999. Oznaczenie PM jest stosowane do wszystkich godzin z zakresu od 12:00:00 (południe) do 23:59:59.999.
 
@@ -473,6 +506,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="ttSpecifier"></a> 
+
 ## <a name="the-tt-custom-format-specifier"></a>Specyfikator formatu niestandardowego "tt"
  Specyfikator formatu niestandardowego „tt” (plus dowolna liczba dodatkowych specyfikatorów „t”) przedstawia całe oznaczenie AM/PM. Odpowiednie zlokalizowane określenie daty jest pobierany z <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> lub <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> właściwości bieżącej lub określonej kultury. Oznaczenie AM jest stosowanie do wszystkich godzin z zakresu od 0:00:00 (północ) do 11:59:59.999. Oznaczenie PM jest stosowane do wszystkich godzin z zakresu od 12:00:00 (południe) do 23:59:59.999.
 
@@ -486,6 +520,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="ySpecifier"></a> 
+
 ## <a name="the-y-custom-format-specifier"></a>Specyfikator formatu niestandardowego "y"
  Specyfikator formatu niestandardowego „y” przedstawia rok jako jedno- lub dwucyfrową liczbę. Jeśli rok ma więcej niż dwie cyfry, w wyniku pojawią się tylko dwie ostatnie cyfry. Jeżeli pierwsza cyfra roku dwucyfrowego rozpoczyna się od zera (na przykład, 2008), liczba jest formatowana bez zera wiodącego.
 
@@ -499,6 +534,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="yySpecifier"></a> 
+
 ## <a name="the-yy-custom-format-specifier"></a>Specyfikator formatu niestandardowego "yy"
  Specyfikator formatu niestandardowego „yy” przedstawia rok jako liczbę dwucyfrową. Jeśli rok ma więcej niż dwie cyfry, w wyniku pojawią się tylko dwie ostatnie cyfry. Jeśli rok dwucyfrowy ma mniej niż dwie cyfry znaczące, liczba jest dopełniana wiodącymi zerami w celu utworzenia dwóch cyfr.
 
@@ -515,6 +551,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="yyySpecifier"></a> 
+
 ## <a name="the-yyy-custom-format-specifier"></a>Specyfikator formatu niestandardowego "yyy"
  Specyfikator formatu niestandardowego „yyy” przedstawia rok za pomocą co najmniej trzech cyfr. Jeśli rok ma więcej niż trzy cyfry znaczące, są one uwzględnione w ciągu wynikowym. Jeśli rok ma mniej niż trzy cyfry, liczba jest dopełniana wiodącymi zerami w celu utworzenia trzech cyfr.
 
@@ -529,6 +566,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="yyyySpecifier"></a> 
+
 ## <a name="the-yyyy-custom-format-specifier"></a>Specyfikator formatu niestandardowego "yyyy"
  Specyfikator formatu niestandardowego „yyyy” przedstawia rok za pomocą co najmniej czterech cyfr. Jeśli rok ma więcej niż cztery cyfry znaczące, są one uwzględnione w ciągu wynikowym. Jeśli rok ma mniej niż cztery cyfry, liczba jest dopełniana wiodącymi zerami w celu utworzenia czterech cyfr.
 
@@ -543,6 +581,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="yyyyySpecifier"></a> 
+
 ## <a name="the-yyyyy-custom-format-specifier"></a>Specyfikator formatu niestandardowego "yyyyy"
  Specyfikator formatu niestandardowego „yyyyy” (plus dowolna liczba dodatkowych specyfikatorów „y”) przedstawia rok za pomocą co najmniej pięciu cyfr. Jeśli rok ma więcej niż pięć cyfr znaczących, są one uwzględnione w ciągu wynikowym. Jeśli rok ma mniej niż pięć cyfr, liczba jest dopełniana zerami wiodącymi w celu utworzenia pięciu cyfr.
 
@@ -556,6 +595,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="zSpecifier"></a> 
+
 ## <a name="the-z-custom-format-specifier"></a>Specyfikator formatu niestandardowego "z"
  Za pomocą <xref:System.DateTime> wartości, specyfikator formatu niestandardowego "z" reprezentuje oznaczone przesunięcie strefy czasu lokalnego systemu operacyjnego z uniwersalnego czasu koordynowanego (UTC), mierzonego w godzinach. Nie odzwierciedla wartości wystąpienia <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> właściwości. Z tego powodu specyfikator formatu "z" nie jest zalecane do użytku z programem <xref:System.DateTime> wartości.
 
@@ -573,6 +613,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="zzSpecifier"></a> 
+
 ## <a name="the-zz-custom-format-specifier"></a>Specyfikator formatu niestandardowego "zz"
  Za pomocą <xref:System.DateTime> wartości, specyfikator formatu niestandardowego "zz" reprezentuje oznaczone przesunięcie strefy czasu lokalnego systemu operacyjnego względem czasu UTC, mierzone w godzinach. Nie odzwierciedla wartości wystąpienia <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> właściwości. Z tego powodu specyfikator formatu "zz" nie jest zalecane do użytku z programem <xref:System.DateTime> wartości.
 
@@ -588,6 +629,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="zzzSpecifier"></a> 
+
 ## <a name="the-zzz-custom-format-specifier"></a>Specyfikator formatu niestandardowego "zzz"
  Za pomocą <xref:System.DateTime> wartości, specyfikator formatu niestandardowego "zzz" reprezentuje oznaczone przesunięcie strefy czasu lokalnego systemu operacyjnego względem czasu UTC, mierzone w godzinach i minutach. Nie odzwierciedla wartości wystąpienia <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> właściwości. Z tego powodu specyfikator formatu "zzz" nie jest zalecane do użytku z programem <xref:System.DateTime> wartości.
 
@@ -603,6 +645,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="timeSeparator"></a> 
+
 ## <a name="the--custom-format-specifier"></a>":" Specyfikator formatu niestandardowego
  Specyfikator formatu niestandardowego „:” przedstawia separator godzin, który jest używany do odróżnienia godzin, minut i sekund. Odpowiedni zlokalizowany separator godziny jest pobierany z <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> właściwości bieżącej lub określonej kultury.
 
@@ -614,6 +657,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="dateSeparator"></a> 
+
 ## <a name="the--custom-format-specifier"></a>Specyfikator formatu niestandardowego "/"
  Specyfikator formatu niestandardowego „/” oznacza separator daty, który jest używany do odróżnienia lat, miesięcy i dni. Odpowiedni zlokalizowany separator daty jest pobierany z <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> właściwości bieżącej lub określonej kultury.
 
@@ -625,6 +669,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [Powrót do tabeli](#table)
 
 <a name="Literals"></a> 
+
 ## <a name="character-literals"></a>Literały znakowe
  Następujące znaki w niestandardowych daty i godziny w ciągu formatu są zarezerwowane i są zawsze interpretowane jako formatowanie znaków lub w przypadku właściwości ",", /, a \\, jako znaki specjalne.
 
@@ -644,22 +689,24 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
 
  Istnieją dwa sposoby, aby wskazać, że znaki mają być interpretowane jako znaki literału, a nie jako zarezerwowane znaki tak, aby mogą być zawarte w ciągu wynikowym lub pomyślnie przeanalizować ciągu wejściowego:
 
--   Znak zastrzeżony przez każdy anulowania zapewnianego element. Aby uzyskać więcej informacji, zobacz [korzystając ze znaku ucieczki](#escape).
+- Znak zastrzeżony przez każdy anulowania zapewnianego element. Aby uzyskać więcej informacji, zobacz [korzystając ze znaku ucieczki](#escape).
+  
+  Poniższy przykład zawiera znaki literału "pst" (dla pacyficznego czasu standardowego) do reprezentowania lokalnej strefy czasowej w ciągu formatu. Ponieważ "s" i "t" Tworzenie niestandardowych formatów ciągów, zarówno znaki należy użyć znaków ucieczki, aby być interpretowane jako literały znakowe.
+  
+  [!code-csharp-interactive[Formatting.DateAndTime.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+  [!code-vb[Formatting.DateAndTime.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
-     Poniższy przykład zawiera znaki literału "pst" (dla pacyficznego czasu standardowego) do reprezentowania lokalnej strefy czasowej w ciągu formatu. Ponieważ "s" i "t" Tworzenie niestandardowych formatów ciągów, zarówno znaki należy użyć znaków ucieczki, aby być interpretowane jako literały znakowe.
-
-     [!code-csharp-interactive[Formatting.DateAndTime.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
-     [!code-vb[Formatting.DateAndTime.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
-
--   Umieszczając cały ciąg literału w cudzysłowie lub w apostrofy. Poniższy przykład przypomina poprzedni, z tą różnicą, że "pst" jest ujęta w znaki cudzysłowu do wskazania, że cały ciąg rozdzielany powinno być interpretowane jako literały znaków.
-
-     [!code-csharp-interactive[Formatting.DateAndTime.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
-     [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
+- Umieszczając cały ciąg literału w cudzysłowie lub w apostrofy. Poniższy przykład przypomina poprzedni, z tą różnicą, że "pst" jest ujęta w znaki cudzysłowu do wskazania, że cały ciąg rozdzielany powinno być interpretowane jako literały znaków.
+  
+  [!code-csharp-interactive[Formatting.DateAndTime.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+  [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 <a name="Notes"></a> 
+
 ## <a name="notes"></a>Uwagi
 
 <a name="UsingSingleSpecifiers"></a> 
+
 ### <a name="using-single-custom-format-specifiers"></a>Za pomocą pojedynczego specyfikatora formatu niestandardowego
  Ciąg niestandardowego formatu daty i godziny składa się z co najmniej dwóch znaków. Metody formatowania daty i godziny interpretują każdy jednoznakowy ciąg jako ciąg standardowego formatu daty i godziny. Jeśli nie rozpoznają znaku jako specyfikatora prawidłowego formatu, rzuć <xref:System.FormatException>. Na przykład ciąg formatu, który składa się tylko ze specyfikatora „h”, jest interpretowany jako ciąg standardowego formatu daty i godziny. Jednak w tym konkretnym przypadku jest zwracany wyjątek ponieważ nie istnieje żadne "h" standardowy specyfikator daty i timeformat.
 
@@ -671,6 +718,7 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
  [!code-vb[Formatting.DateAndTime.Custom#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
 
 <a name="escape"></a> 
+
 ### <a name="using-the-escape-character"></a>Korzystając ze znaku unikowego
  Znaki „D”, „f”, „F”, „G”, „g”, „H”, „K”, „m”, „M”, „s”, „t”, „y”, „z”, „:”, lub „/” w ciągu formatu są interpretowane jako specyfikatory formatu niestandardowego, a nie jako znaki literału. Aby zapobiec sytuacji, w której znak jest interpretowany jako specyfikator formatu, można poprzedzić go ukośnikiem odwrotnym (\\), który jest znakiem ucieczki. Znak ucieczki oznacza, że następnym znakiem jest znak literału, który należy bez zmian umieścić w ciągu wynikowym.
 

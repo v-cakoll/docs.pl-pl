@@ -3,11 +3,11 @@ title: Właściwości wykonania
 ms.date: 03/30/2017
 ms.assetid: 31c009db-397c-4653-87e2-32dc77fa4b13
 ms.openlocfilehash: 4906c2ad11c8b5822764435d2b39a5b51f2673ba
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409092"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748197"
 ---
 # <a name="execution-properties"></a>Właściwości wykonania
 Ten przykład pokazuje jak zdefiniować i wykonywania właściwości należy użyć działań niestandardowych. W tym przykładzie właściwość wykonywania Określa kolor pierwszego planu przez konsolę. Przykładowy przepływ pracy pokazuje, jak różne ścieżek logicznych wykonywania (gałęzie z <xref:System.Activities.Statements.Parallel> działania) może zachować konsoli różne kolory pomimo przeplatane wykonywanie funkcji działań (w rozgałęzieniach z <xref:System.Activities.Statements.Parallel> działanie).  

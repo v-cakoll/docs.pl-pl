@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 5e87881c-9c13-4b52-8ad1-e34bb46e8aaa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84e80b99ee6d872714180e73354d20770c21e144
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c62a469b3e31283e5790c747092a8fe504ef8c2a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400084"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733342"
 ---
 # <a name="security-changes-in-the-net-framework"></a>Zmiany zabezpieczeń w programie .NET Framework
-Najważniejsze zmiany zabezpieczeń w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] w silne nazwy. Zobacz [rozszerzone silne nazewnictwo](../../../docs/framework/app-domains/enhanced-strong-naming.md) opis tych zmian.  
+Najważniejsze zmiany w zabezpieczeniach [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] trwa — silne nazwy. Zobacz [rozszerzone silne nazewnictwo](../../../docs/framework/app-domains/enhanced-strong-naming.md) opis tych zmian.  
   
- .NET Framework oferuje model zabezpieczeń dwuwarstwowa zarządzanych aplikacji. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacje uruchomione w kontenerze zabezpieczeń systemu Windows, który ogranicza dostęp do zasobów. W tym kontenerze pełni zaufany Uruchom zarządzanych aplikacji. Z punktu widzenia zabezpieczeń (CAS) kod dostępu nie ma nic zrobić dewelopera podniesienia uprawnień. Aby uzyskać informacje o uprawnienia przyznane przez system Windows, zobacz [deklaracje możliwości aplikacji (aplikacje ze Sklepu Windows)](http://go.microsoft.com/fwlink/?LinkId=230436) w Centrum deweloperów systemu Windows. Aby uzyskać informacje o tworzeniu [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie pierwszej aplikacji Sklepu Windows przy użyciu języka C# lub Visual Basic](http://go.microsoft.com/fwlink/?LinkId=230461).
+ .NET Framework oferuje model zabezpieczeń dwuwarstwowej dla zarządzanych aplikacji. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacje działają w kontenerze zabezpieczeń Windows, który ogranicza dostęp do zasobów. W tym kontenerze zarządzane aplikacje są uruchamiane w pełni zaufany. Z punktu widzenia zabezpieczeń (CAS) kod dostępu nie ma nic zrobić przez dewelopera do podniesienia uprawnień. Aby uzyskać informacji na temat uprawnień przyznanych przez Windows, zobacz [deklaracje możliwości aplikacji (aplikacje Windows Store)](https://go.microsoft.com/fwlink/?LinkId=230436) w Centrum deweloperów Windows. Aby uzyskać informacje o tworzeniu [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie pierwszej aplikacji Windows Store przy użyciu języka C# lub Visual Basic](https://go.microsoft.com/fwlink/?LinkId=230461).

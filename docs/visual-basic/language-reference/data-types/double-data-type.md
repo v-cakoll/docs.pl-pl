@@ -19,45 +19,45 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: c2d3d7d360ccb240bafbe0e19e9f396adfba7f7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590267"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734815"
 ---
 # <a name="double-data-type-visual-basic"></a>Double — Typ danych (Visual Basic)
-Blokad podpisany IEEE 64-bitowych (8-bajtowych) podwójnej precyzji liczb zmiennoprzecinkowych, które mają wartość z zakresu od - 1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych i z 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 do wartości dodatnie. Liczby o podwójnej precyzji przechowywać zbliżenia liczba rzeczywista.  
+Przechowuje podpisany IEEE 64-bitowych (8-bajtową) podwójnej precyzji liczb zmiennoprzecinkowych, z zakresu wartości od - 1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych i 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 do wartości dodatnich. Liczby o podwójnej precyzji przechowywać przybliżeniem liczbą rzeczywistą.  
   
 ## <a name="remarks"></a>Uwagi  
- `Double` — Typ danych przewiduje liczbą wielkości największych i najmniejsze możliwe.  
+ `Double` Typu danych stanowi wielkości największą i najmniejszą możliwe podanie liczby.  
   
- Wartość domyślna `Double` ma wartość 0.  
+ Wartość domyślna `Double` wynosi 0.  
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Precyzja.** Podczas pracy z liczb zmiennoprzecinkowych, należy pamiętać, że nie zawsze mają dokładne reprezentacji w pamięci. Może to prowadzić do nieoczekiwanych wyników z niektórych operacji, takich jak porównania wartości i `Mod` operatora. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+-   **Dokładność.** Podczas pracy z liczb zmiennoprzecinkowych, należy pamiętać, że nie zawsze mają dokładne reprezentacji w pamięci. Może to spowodować nieoczekiwane wyniki z niektórych operacji, takich jak porównania wartości i `Mod` operatora. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Końcowe zero.** Typy danych zmiennoprzecinkowych nie mają żadnych reprezentacji wewnętrznej końcowe zero znaków. Na przykład one rozróżnia 4.2000 i 4.2. W rezultacie końcowe zero znaki nie są wyświetlane po wyświetleniu lub drukowania wartości zmiennoprzecinkowych.  
+-   **Końcowe zera.** Typy danych zmiennopozycyjnych nie ma żadnych wewnętrznej reprezentacji końcowe zero znaków. Na przykład ich nie dokonuje rozróżnienia między 4.2000 i 4.2. W związku z tym zerowego znakami nie są wyświetlane po wyświetleniu lub drukowania wartości zmiennoprzecinkowych.  
   
--   **Znaki typu.** Znak literalny typu dołączanie `R` do literału wymusza `Double` — typ danych. Na przykład, jeśli wartość całkowitą następuje `R`, wartość jest zmieniana na `Double`.  
+-   **Znaki typu.** Dołączanie znaku typu literał `R` do literału wymusza `Double` typu danych. Na przykład, jeśli jest poprzedzony wartością całkowitą z zakresu `R`, wartość zostanie zmieniona na `Double`.  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
     Dim dub As Double = 4.0R  
     ```  
   
-     Dołączanie znak typu identyfikator `#` dla wszystkich identyfikatorów wymusza `Double`. W poniższym przykładzie zmienna `num` jest typu `Double`:  
+     Dołączanie znaku typu identyfikator `#` do jakiegokolwiek identyfikatora wymusza `Double`. W poniższym przykładzie zmienna `num` jest `Double`:  
   
     ```  
     Dim num# = 3  
     ```  
   
--   **Typ struktury.** Danego typu w programie .NET Framework jest <xref:System.Double?displayProperty=nameWithType> struktury.  
+-   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Double?displayProperty=nameWithType> struktury.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Double?displayProperty=nameWithType>  
- [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
  [Decimal, typ danych](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
  [Single, typ danych](../../../visual-basic/language-reference/data-types/single-data-type.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

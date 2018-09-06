@@ -6,16 +6,16 @@ helpviewer_keywords:
 - components, Power Packs
 - Power Packs
 ms.assetid: 5e53a2d2-f200-4357-8b20-430f8f4860a4
-ms.openlocfilehash: c7c257d34c691a23ae44ef08feb1f032d27c80cd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 71b02233f842ef3fd01f030fe7df7bda97eacc78
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43252801"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778071"
 ---
 # <a name="visual-basic-power-packs-controls"></a>Formantów Powerpack języka Visual Basic
 
-Formanty Visual Basic Power Packs to dodatkowe formanty Windows Forms. Nie są one uwzględnione w programie Visual Studio.  Możesz [pobranie](http://go.microsoft.com/fwlink/?LinkId=321343), ale są one udostępniane jako — jest bez pomocy technicznej.  
+Formanty Visual Basic Power Packs to dodatkowe formanty Windows Forms. Nie są one uwzględnione w programie Visual Studio.  Możesz [pobranie](https://go.microsoft.com/fwlink/?LinkId=321343), ale są one udostępniane jako — jest bez pomocy technicznej.  
   
 ## <a name="in-this-section"></a>W tej sekcji
   

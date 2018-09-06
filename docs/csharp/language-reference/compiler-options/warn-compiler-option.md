@@ -13,11 +13,11 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: 14656fa25ea1d01339bd63efb999e938e1243db8
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331944"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746423"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (opcje kompilatora C#)
 **-Warn** opcja określa poziom ostrzeżeń dla kompilatora do wyświetlenia.  

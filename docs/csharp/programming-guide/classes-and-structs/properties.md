@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 47f8e978d81b4aec94482f0a295691b830c3698c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 74020696a9d2370de2976671a9f1ed944aba8fb9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199163"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734971"
 ---
 # <a name="properties-c-programming-guide"></a>Właściwości (Przewodnik programowania w języku C#)
 
@@ -72,9 +72,10 @@ Jeśli właściwość ma jednocześnie `get` i `set` dostępu, obie wartości mu
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz także
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Używanie właściwości](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)  
- [Get — słowo kluczowe](../../../csharp/language-reference/keywords/get.md)    
- [set — słowo kluczowe](../../../csharp/language-reference/keywords/set.md)    
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Używanie właściwości](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)  
+- [Get — słowo kluczowe](../../../csharp/language-reference/keywords/get.md)    
+- [set — słowo kluczowe](../../../csharp/language-reference/keywords/set.md)    

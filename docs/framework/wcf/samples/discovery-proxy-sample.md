@@ -3,11 +3,11 @@ title: Przykład serwera proxy odnajdywania
 ms.date: 03/30/2017
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
 ms.openlocfilehash: 6fc0680bc6b61a6fe1b4b141c8b1e5081df5a124
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393024"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747916"
 ---
 # <a name="discovery-proxy-sample"></a>Przykład serwera proxy odnajdywania
 Niniejszy przykład pokazuje, jak utworzyć wdrożenia serwera proxy odnajdywania do przechowywania informacji o istniejących usług i jak klienci mogą wysyłać zapytania tego serwera proxy, aby uzyskać informacje. Ten przykład obejmuje trzy projekty:  

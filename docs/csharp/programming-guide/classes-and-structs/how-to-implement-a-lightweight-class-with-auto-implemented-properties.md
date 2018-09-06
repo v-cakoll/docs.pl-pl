@@ -5,22 +5,22 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 9612ec916481776691e85a84503ce5063c20b099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb5d11ed43246f2c4dd67ef35b71e899ab978fc4
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321525"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748615"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Porady: implementowanie klasy lekkiej przy użyciu automatycznie implementowanych właściwości (Przewodnik programowania w języku C#)
-W tym przykładzie przedstawiono sposób tworzenia niezmienne klasy lightweight, obejmującej tylko w celu hermetyzacji zbiór właściwości zaimplementowane automatycznie. Zamiast tego rodzaju konstrukcja struktury podczas należy użyć semantykę typu odwołania.  
+Ten przykład przedstawia sposób tworzenia niezmienne klasy lightweight, która służy tylko do hermetyzacji zbiór właściwości zaimplementowane automatycznie. Użyj ten rodzaj konstrukcji zamiast struktury, gdy należy użyć semantyki typu odwołania.  
   
- Możesz wprowadzić modyfikować właściwości na dwa sposoby.  Można zadeklarować [ustawić](../../../csharp/language-reference/keywords/set.md) można accessor.to [prywatnej](../../../csharp/language-reference/keywords/private.md).  Właściwość jest tylko do ustawienia w ramach typu, ale go nie można modyfikować dla konsumentów.  Zamiast tego można zadeklarować tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) dostępu, co sprawia, że właściwość jest niezmienialny wszędzie, z wyjątkiem w Konstruktorze typu.  
+ Istnieje możliwość niezmienialnych właściwości na dwa sposoby.  Można zadeklarować [ustaw](../../../csharp/language-reference/keywords/set.md) można accessor.to [prywatnej](../../../csharp/language-reference/keywords/private.md).  Właściwość jest tylko do ustawienia w ramach typu, ale jest niezmienny do klientów.  Zamiast tego można zadeklarować tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) dostępu, co sprawia, że właściwość niezmienne wszędzie, z wyjątkiem w Konstruktorze typu.  
   
- Gdy zadeklarować prywatnej `set` dostępu, nie można użyć inicjatora obiektów do zainicjowania właściwości. Należy użyć konstruktora lub metody fabryki.  
+ Kiedy Deklarujesz prywatnej `set` dostępu, nie można używać inicjatora obiektu można zainicjować właściwości. Należy użyć konstruktora lub metody fabryki.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia dwa sposoby zaimplementować niezmienne klasy, która ma automatycznie implementowane właściwości. Każdy sposób deklaruje jedna z właściwości z prywatnej `set` i jedna z właściwości z `get` tylko.  Używa pierwszej klasie Konstruktor tylko zainicjować właściwości i drugiej klasy używa metody statycznej fabryka, która wywołuje konstruktor.  
+ Poniższy przykład przedstawia dwa sposoby zaimplementowania niezmienialne klasy, która ma właściwości zaimplementowane automatycznie. Każdy sposób deklaruje jedna z właściwości za pomocą prywatnej `set` i jedna z właściwości z `get` tylko.  Najwyższej klasy używa konstruktora tylko do zainicjowania właściwości i klasy sekundę używa metody statyczne fabryka, która wywołuje konstruktora.  
   
 ```csharp  
 // This class is immutable. After an object is created,   
@@ -111,9 +111,10 @@ W tym przykładzie przedstawiono sposób tworzenia niezmienne klasy lightweight,
 */  
 ```  
   
- Kompilator tworzy pola zapasowego dla każdej właściwości zaimplementowane automatycznie. Pola nie jest dostępny bezpośrednio z kodu źródłowego.  
+ Kompilator tworzy pola zapasowego dla każdej właściwości zaimplementowane automatycznie. Pola nie są dostępne bezpośrednio z kodu źródłowego.  
   
-## <a name="see-also"></a>Zobacz też  
- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)  
- [Inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [Inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

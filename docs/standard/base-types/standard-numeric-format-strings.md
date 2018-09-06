@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7906426d76cb50f2539593094e87fb325227c411
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565745"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863472"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 
@@ -359,10 +359,11 @@ Aby uzyskać <xref:System.Double> wartości, specyfikator formatu "R" w niektór
  [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Globalization.NumberFormatInfo>  
- [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
- [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Przykład: .NET Framework 4 formatowanie narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
- [Złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Globalization.NumberFormatInfo>  
+- [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
+- [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [Przykład: .NET Framework 4 formatowanie narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+- [Złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md)

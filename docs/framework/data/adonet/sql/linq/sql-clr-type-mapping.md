@@ -3,11 +3,11 @@ title: Mapowanie typu SQL CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735439"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862108"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowanie typu SQL CLR
 Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obiektów, które są jest wyrażone w wybranym języku programowania. Gdy aplikacja zostanie uruchomiona, LINQ to SQL tłumaczy języku zintegrowanym zapytania w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników programu LINQ to SQL tłumaczy wyniki z powrotem do obiektów, które może pracować w języku użytkownika, programowania.  

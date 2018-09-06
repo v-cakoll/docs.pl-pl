@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ee61d01acbf9c409eaedc04ff3e949908e1d595e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33578088"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867858"
 ---
 # <a name="best-practices-for-exceptions"></a>Najlepsze praktyki dotyczące wyjątków
 
@@ -173,5 +173,6 @@ catch (Exception ex)
 }
 ```
 
-## <a name="see-also"></a>Zobacz też  
-[Wyjątki](index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wyjątki](index.md)

@@ -3,11 +3,11 @@ title: Rozszerzenia typu (F#)
 description: 'Dowiedz się, jak rozszerzeń typu F # zezwala na dodawanie nowych członków do typu obiektu zdefiniowanego wcześniej.'
 ms.date: 07/20/2018
 ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855064"
+ms.locfileid: "43874982"
 ---
 # <a name="type-extensions"></a>Rozszerzenia typu
 

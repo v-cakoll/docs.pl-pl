@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 114d24c1fc523d5501deb4aa17f9541c5a918276
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "33574650"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44072171"
 ---
 # <a name="writing-custom-attributes"></a>Wpisywanie atrybutów niestandardowych
 Aby zaprojektować atrybutów niestandardowych, nie trzeba opanować wiele nowych pojęć. Jeśli znasz programowanie zorientowane obiektowo i wiedzieć, jak klasy należy projektować, masz już większość wiedzę potrzebną. Atrybuty niestandardowe są zasadniczo tradycyjnych klas, które pochodzą bezpośrednio lub pośrednio z <xref:System.Attribute?displayProperty=nameWithType>. Podobnie jak tradycyjnych klasy atrybutów niestandardowych, które zawierają metody, które przechowywać i pobierać dane.  
@@ -148,7 +148,8 @@ Aby zaprojektować atrybutów niestandardowych, nie trzeba opanować wiele nowyc
   
  Pierwszy przykład pokazuje zastosowany tylko wymagane nazwanych parametrów, podczas gdy drugi przykład przedstawia zastosowany przy użyciu wymaganych i opcjonalnych parametrów.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Attribute?displayProperty=nameWithType>  
- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
- [Atrybuty](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Attribute?displayProperty=nameWithType>  
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- [Atrybuty](../../../docs/standard/attributes/index.md)

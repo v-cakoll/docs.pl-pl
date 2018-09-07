@@ -3,16 +3,16 @@ title: 'Porady: odczytywanie danych o obiektach z pliku XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
 ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872121"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083939"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a><span data-ttu-id="3e8c5-102">Porady: odczytywanie danych o obiektach z pliku XML (C#)</span><span class="sxs-lookup"><span data-stu-id="3e8c5-102">How to: Read Object Data from an XML File (C#)</span></span>
-<span data-ttu-id="3e8c5-103">W tym przykładzie odczytuje dane obiektów, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.</span><span class="sxs-lookup"><span data-stu-id="3e8c5-103">This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a><span data-ttu-id="a2cad-102">Porady: odczytywanie danych o obiektach z pliku XML (C#)</span><span class="sxs-lookup"><span data-stu-id="a2cad-102">How to: Read Object Data from an XML File (C#)</span></span>
+<span data-ttu-id="a2cad-103">W tym przykładzie odczytuje dane obiektów, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.</span><span class="sxs-lookup"><span data-stu-id="a2cad-103">This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3e8c5-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="3e8c5-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a2cad-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="a2cad-104">Example</span></span>  
   
 ```csharp  
 public class Book  
@@ -42,28 +42,28 @@ public void ReadXML()
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="3e8c5-105">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="3e8c5-105">Compiling the Code</span></span>  
- <span data-ttu-id="3e8c5-106">Nazwa pliku "c:\temp\SerializationOverview.xml" należy zastąpić nazwę pliku zawierającego dane serializowane.</span><span class="sxs-lookup"><span data-stu-id="3e8c5-106">Replace the file name "c:\temp\SerializationOverview.xml" with the name of the file containing the serialized data.</span></span> <span data-ttu-id="3e8c5-107">Aby uzyskać więcej informacji na temat serializowania danych zobacz [porady: zapis danych obiektu, do pliku XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="3e8c5-107">For more information about serializing data, see [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a2cad-105">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="a2cad-105">Compiling the Code</span></span>  
+ <span data-ttu-id="a2cad-106">Nazwa pliku "c:\temp\SerializationOverview.xml" należy zastąpić nazwę pliku zawierającego dane serializowane.</span><span class="sxs-lookup"><span data-stu-id="a2cad-106">Replace the file name "c:\temp\SerializationOverview.xml" with the name of the file containing the serialized data.</span></span> <span data-ttu-id="a2cad-107">Aby uzyskać więcej informacji na temat serializowania danych zobacz [porady: zapis danych obiektu, do pliku XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="a2cad-107">For more information about serializing data, see [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).</span></span>  
   
- <span data-ttu-id="3e8c5-108">Klasa musi mieć publicznego konstruktora bez parametrów.</span><span class="sxs-lookup"><span data-stu-id="3e8c5-108">The class must have a public constructor without parameters.</span></span>  
+ <span data-ttu-id="a2cad-108">Klasa musi mieć publicznego konstruktora bez parametrów.</span><span class="sxs-lookup"><span data-stu-id="a2cad-108">The class must have a public constructor without parameters.</span></span>  
   
- <span data-ttu-id="3e8c5-109">Tylko właściwości publiczne i pola są deserializacji.</span><span class="sxs-lookup"><span data-stu-id="3e8c5-109">Only public properties and fields are deserialized.</span></span>  
+ <span data-ttu-id="a2cad-109">Tylko właściwości publiczne i pola są deserializacji.</span><span class="sxs-lookup"><span data-stu-id="a2cad-109">Only public properties and fields are deserialized.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="3e8c5-110">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="3e8c5-110">Robust Programming</span></span>  
- <span data-ttu-id="3e8c5-111">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="3e8c5-111">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="a2cad-110">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="a2cad-110">Robust Programming</span></span>  
+ <span data-ttu-id="a2cad-111">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="a2cad-111">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="3e8c5-112">Klasa jest serializowana, nie ma publiczny konstruktor bez parametrów.</span><span class="sxs-lookup"><span data-stu-id="3e8c5-112">The class being serialized does not have a public, parameterless constructor.</span></span>  
+-   <span data-ttu-id="a2cad-112">Klasa jest serializowana, nie ma publiczny konstruktor bez parametrów.</span><span class="sxs-lookup"><span data-stu-id="a2cad-112">The class being serialized does not have a public, parameterless constructor.</span></span>  
   
--   <span data-ttu-id="3e8c5-113">Dane w pliku nie reprezentuje dane z klasy, która ma zostać przeprowadzona.</span><span class="sxs-lookup"><span data-stu-id="3e8c5-113">The data in the file does not represent data from the class to be deserialized.</span></span>  
+-   <span data-ttu-id="a2cad-113">Dane w pliku nie reprezentuje dane z klasy, która ma zostać przeprowadzona.</span><span class="sxs-lookup"><span data-stu-id="a2cad-113">The data in the file does not represent data from the class to be deserialized.</span></span>  
   
--   <span data-ttu-id="3e8c5-114">Plik nie istnieje (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="3e8c5-114">The file does not exist (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="a2cad-114">Plik nie istnieje (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="a2cad-114">The file does not exist (<xref:System.IO.IOException>).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="3e8c5-115">Zabezpieczenia.NET Framework</span><span class="sxs-lookup"><span data-stu-id="3e8c5-115">.NET Framework Security</span></span>  
- <span data-ttu-id="3e8c5-116">Zawsze sprawdzić dane wejściowe i nigdy nie deserializowanie danych z niezaufanego źródła.</span><span class="sxs-lookup"><span data-stu-id="3e8c5-116">Always verify inputs, and never deserialize data from an untrusted source.</span></span> <span data-ttu-id="3e8c5-117">Ponownie utworzyć obiekt działa na komputerze lokalnym z uprawnieniami kod, który deserializacji go.</span><span class="sxs-lookup"><span data-stu-id="3e8c5-117">The re-created object runs on a local computer with the permissions of the code that deserialized it.</span></span> <span data-ttu-id="3e8c5-118">Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="3e8c5-118">Verify all inputs before using the data in your application.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="a2cad-115">Zabezpieczenia.NET Framework</span><span class="sxs-lookup"><span data-stu-id="a2cad-115">.NET Framework Security</span></span>  
+ <span data-ttu-id="a2cad-116">Zawsze sprawdzić dane wejściowe i nigdy nie deserializowanie danych z niezaufanego źródła.</span><span class="sxs-lookup"><span data-stu-id="a2cad-116">Always verify inputs, and never deserialize data from an untrusted source.</span></span> <span data-ttu-id="a2cad-117">Ponownie utworzyć obiekt działa na komputerze lokalnym z uprawnieniami kod, który deserializacji go.</span><span class="sxs-lookup"><span data-stu-id="a2cad-117">The re-created object runs on a local computer with the permissions of the code that deserialized it.</span></span> <span data-ttu-id="a2cad-118">Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a2cad-118">Verify all inputs before using the data in your application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3e8c5-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3e8c5-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2cad-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a2cad-119">See Also</span></span>
 
 - <xref:System.IO.StreamWriter>  
-- [<span data-ttu-id="3e8c5-120">Porady: zapis danych obiektu do pliku XML (C#)</span><span class="sxs-lookup"><span data-stu-id="3e8c5-120">How to: Write Object Data to an XML File (C#)</span></span>](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
-- [<span data-ttu-id="3e8c5-121">Serializacja (C#)</span><span class="sxs-lookup"><span data-stu-id="3e8c5-121">Serialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/serialization/index.md)  
-- [<span data-ttu-id="3e8c5-122">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="3e8c5-122">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="a2cad-120">Porady: zapis danych obiektu do pliku XML (C#)</span><span class="sxs-lookup"><span data-stu-id="a2cad-120">How to: Write Object Data to an XML File (C#)</span></span>](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+- [<span data-ttu-id="a2cad-121">Serializacja (C#)</span><span class="sxs-lookup"><span data-stu-id="a2cad-121">Serialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- [<span data-ttu-id="a2cad-122">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="a2cad-122">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)

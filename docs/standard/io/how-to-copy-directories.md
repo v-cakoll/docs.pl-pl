@@ -15,26 +15,26 @@ ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f2c2fbd58b10af80a2a233cbd4211befe2dbd33
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874813"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075325"
 ---
-# <a name="how-to-copy-directories"></a><span data-ttu-id="c8ed2-102">Porady: kopiowanie katalogów</span><span class="sxs-lookup"><span data-stu-id="c8ed2-102">How to: Copy Directories</span></span>
-<span data-ttu-id="c8ed2-103">W tym przykładzie pokazano, jak używać klas we/wy synchronicznie skopiować zawartość katalogu do innej lokalizacji.</span><span class="sxs-lookup"><span data-stu-id="c8ed2-103">This example demonstrates how to use I/O classes to synchronously copy the contents of a directory to another location.</span></span> <span data-ttu-id="c8ed2-104">W tym przykładzie użytkownik może określić, czy ma być również kopiowany podkatalogów.</span><span class="sxs-lookup"><span data-stu-id="c8ed2-104">In this example, the user can specify whether to also copy the subdirectories.</span></span> <span data-ttu-id="c8ed2-105">Podkatalogi są kopiowane, w tym rekursywnie przykład metody kopiuje je poprzez wywołanie sam w poszczególnych podkatalogach kolejne, aż nie wystąpią już do skopiowania.</span><span class="sxs-lookup"><span data-stu-id="c8ed2-105">If the subdirectories are copied, the method in this example recursively copies them by calling itself on each subsequent subdirectory until there are no more to copy.</span></span>  
+# <a name="how-to-copy-directories"></a><span data-ttu-id="7c788-102">Porady: kopiowanie katalogów</span><span class="sxs-lookup"><span data-stu-id="7c788-102">How to: Copy Directories</span></span>
+<span data-ttu-id="7c788-103">W tym przykładzie pokazano, jak używać klas we/wy synchronicznie skopiować zawartość katalogu do innej lokalizacji.</span><span class="sxs-lookup"><span data-stu-id="7c788-103">This example demonstrates how to use I/O classes to synchronously copy the contents of a directory to another location.</span></span> <span data-ttu-id="7c788-104">W tym przykładzie użytkownik może określić, czy ma być również kopiowany podkatalogów.</span><span class="sxs-lookup"><span data-stu-id="7c788-104">In this example, the user can specify whether to also copy the subdirectories.</span></span> <span data-ttu-id="7c788-105">Podkatalogi są kopiowane, w tym rekursywnie przykład metody kopiuje je poprzez wywołanie sam w poszczególnych podkatalogach kolejne, aż nie wystąpią już do skopiowania.</span><span class="sxs-lookup"><span data-stu-id="7c788-105">If the subdirectories are copied, the method in this example recursively copies them by calling itself on each subsequent subdirectory until there are no more to copy.</span></span>  
   
- <span data-ttu-id="c8ed2-106">Na przykład skopiować pliki asynchronicznie zobacz [asynchroniczne We/Wy](../../../docs/standard/io/asynchronous-file-i-o.md).</span><span class="sxs-lookup"><span data-stu-id="c8ed2-106">For an example of copying files asynchronously, see [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md).</span></span>  
+ <span data-ttu-id="7c788-106">Na przykład skopiować pliki asynchronicznie zobacz [asynchroniczne We/Wy](../../../docs/standard/io/asynchronous-file-i-o.md).</span><span class="sxs-lookup"><span data-stu-id="7c788-106">For an example of copying files asynchronously, see [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c8ed2-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="c8ed2-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7c788-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="7c788-107">Example</span></span>  
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="c8ed2-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c8ed2-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c788-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7c788-108">See also</span></span>
 
 - <xref:System.IO.FileInfo>  
 - <xref:System.IO.DirectoryInfo>  
 - <xref:System.IO.FileStream>  
-- [<span data-ttu-id="c8ed2-109">We/Wy plików i strumieni</span><span class="sxs-lookup"><span data-stu-id="c8ed2-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
-- [<span data-ttu-id="c8ed2-110">Typowe zadania We/Wy</span><span class="sxs-lookup"><span data-stu-id="c8ed2-110">Common I/O Tasks</span></span>](../../../docs/standard/io/common-i-o-tasks.md)  
-- [<span data-ttu-id="c8ed2-111">Asynchroniczne operacje We/Wy pliku</span><span class="sxs-lookup"><span data-stu-id="c8ed2-111">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [<span data-ttu-id="7c788-109">We/Wy plików i strumieni</span><span class="sxs-lookup"><span data-stu-id="7c788-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
+- [<span data-ttu-id="7c788-110">Typowe zadania We/Wy</span><span class="sxs-lookup"><span data-stu-id="7c788-110">Common I/O Tasks</span></span>](../../../docs/standard/io/common-i-o-tasks.md)  
+- [<span data-ttu-id="7c788-111">Asynchroniczne operacje We/Wy pliku</span><span class="sxs-lookup"><span data-stu-id="7c788-111">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)

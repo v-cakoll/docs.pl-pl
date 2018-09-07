@@ -18,11 +18,11 @@ ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e458f45fea8e2207ced930daebf10e653901fa7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867796"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079453"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Wykonywanie niezależnych od kultury operacji na ciągach w kolekcjach
 Brak klas i składowych w <xref:System.Collections> przestrzeni nazw, która zapewnia zachowanie wrażliwość na ustawienia kulturowe domyślnie. Konstruktory domyślne <xref:System.Collections.CaseInsensitiveComparer> i <xref:System.Collections.CaseInsensitiveHashCodeProvider> klasy zainicjować nowe wystąpienie, używając <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Wszystkie przeciążenia <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> metoda Utwórz nowe wystąpienie klasy <xref:System.Collections.Hashtable> przy użyciu `Thread.CurrentCulture` właściwości domyślnie. Przeciążenia <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> metoda wykonanie kultury sortowania przy użyciu domyślnego `Thread.CurrentCulture`. Sortowanie i wyszukiwanie w <xref:System.Collections.SortedList> mogą mieć wpływ `Thread.CurrentCulture` Jeśli ciągi są używane jako klucze. Postępuj zgodnie z zaleceniami użycia podane w tej sekcji w celu uzyskania wyników niezależnych od kultury z tych klas i metod w `Collections` przestrzeni nazw.  

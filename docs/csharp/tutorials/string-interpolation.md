@@ -4,11 +4,11 @@ description: Dowiedz się, jak obejmują wyrażenie sformatowane wyniki w ciągu
 author: pkulikov
 ms.date: 05/09/2018
 ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43859743"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086706"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolacja ciągów w języku C# #
 

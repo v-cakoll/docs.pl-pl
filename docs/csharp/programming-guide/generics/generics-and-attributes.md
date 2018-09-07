@@ -6,11 +6,11 @@ helpviewer_keywords:
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
 ms.openlocfilehash: 0fe2d61001584aa7c175500bfa754b2ae2244660
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43799492"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097424"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Typy ogólne i atrybuty (Przewodnik programowania w języku C#)
 Można można zastosować atrybutów do typów ogólnych w taki sam sposób jak typów innych niż ogólne. Aby uzyskać więcej informacji na temat stosowania atrybutów, zobacz [atrybuty](../../../csharp/programming-guide/concepts/attributes/index.md).  

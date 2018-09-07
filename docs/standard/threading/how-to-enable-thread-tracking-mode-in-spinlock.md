@@ -11,11 +11,11 @@ ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3b9671c10889287bc22d64df1fb5c3a2984bd55
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870916"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081657"
 ---
 # <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>Porady: włączanie śledzenia wątków w strukturze SpinLock
 <xref:System.Threading.SpinLock?displayProperty=nameWithType> jest blokadę niskiego poziomu wzajemne wykluczenie, która służy do scenariuszy, które mają bardzo krótkim czasie oczekiwania, czas. <xref:System.Threading.SpinLock> nie jest wielobieżnej. Po wątku przechodzi blokady, jego musi się zakończyć blokady poprawnie przed można wprowadzić ponownie. Zwykle wszelkie próby ponownego wprowadzania blokady spowodowałoby zakleszczenia i zakleszczenia mogą być bardzo trudne do debugowania. Jako pomoc do tworzenia <xref:System.Threading.SpinLock?displayProperty=nameWithType> obsługuje tryb śledzenia wątków, który powoduje wyjątek zgłaszany, gdy wątek próbuje ponownie wprowadź blokadę, który już posiada. Dzięki temu można więcej łatwy dostęp do punktu, jaką blokady nie został zakończony poprawnie. Tryb śledzenia wątków można włączyć za pomocą <xref:System.Threading.SpinLock> konstruktora, który przyjmuje wartość logiczną wprowadź parametr i przekazywanie w argumencie `true`. Po zakończeniu tworzenia i testowania fazy wyłączyć tryb śledzenia wątków w celu zapewnienia lepszej wydajności.  

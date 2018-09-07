@@ -16,11 +16,11 @@ ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 85bb6dcdaa198b6b038cc80e1e38fa7d11123678
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878726"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086384"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analizowanie innych ciągów w programie .NET
 Oprócz liczbowych i <xref:System.DateTime> ciągów, można również przeanalizować ciągi, które reprezentują typy <xref:System.Char>, <xref:System.Boolean>, i <xref:System.Enum> do typów danych.  

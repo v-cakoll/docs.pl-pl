@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Określ nazwę elementu alternatywnego strumienia XML'
+title: 'Porady: Określanie alternatywnej nazwy elementu dla Stream XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: d0e48c9c28c8d9447b22fa5ea7a8024442e09295
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587713"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067659"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Porady: Określ nazwę elementu alternatywnego strumienia XML
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Porady: Określanie alternatywnej nazwy elementu dla Stream XML
 [Przykładowy kod](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
   
- Przy użyciu [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), można wygenerować więcej niż jeden strumień XML przy użyciu tych samych klas. Można to zrobić, ponieważ na tym samym podstawowe informacje o różnice tylko nieznaczne wymaga dwóch różnych usług sieci Web XML. Załóżmy na przykład dwie usługi XML sieci Web, które przetwarzają zamówienia książki i w związku z tym wymaga ISBN cyfry. Jedna usługa używa tagu \<ISBN > a drugi używa tagu \<BookID >. Masz klasę o nazwie `Book` zawiera pole o nazwie `ISBN`. Jeśli wystąpienie `Book` klasy jest serializowane, będzie domyślnie używać nazwy składowej (ISBN) jako nazwy elementu tag. W przypadku pierwszego usługi sieci Web XML jest zgodnie z oczekiwaniami. Ale wysyłania strumień XML do drugiego usługi sieci Web XML, konieczne jest przesłonięcie serializacji tak, aby nazwy elementu znacznika `BookID`.  
+ Za pomocą [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), można wygenerować więcej niż jeden strumień XML z tego samego zestawu klas. Można to zrobić, ponieważ na tym samym podstawowe informacje o różnice tylko nieznaczne wymaga dwóch różnych usług sieci Web XML. Załóżmy, dwie usługi XML sieci Web, które przetwarzają zamówienia dla książki, a w związku z tym obu wymagają ISBN liczb. Jedna usługa taga \<ISBN > gdy druga taga \<BookID >. Masz klasę o nazwie `Book` zawiera pole o nazwie `ISBN`. Jeśli wystąpienie `Book` klasy jest serializowane, będzie domyślnie używać nazwy składowej (ISBN) jako nazwy elementu tag. W przypadku pierwszego usługi sieci Web XML jest zgodnie z oczekiwaniami. Ale wysyłania strumień XML do drugiego usługi sieci Web XML, konieczne jest przesłonięcie serializacji tak, aby nazwy elementu znacznika `BookID`.  
   
 ### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Aby utworzyć strumień XML zawierających nazwę elementu alternatywny  
   
@@ -92,12 +92,13 @@ public class SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Serialization.XmlElementAttribute>  
- <xref:System.Xml.Serialization.XmlAttributes>  
- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [Element XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Xml.Serialization.XmlElementAttribute>  
+- <xref:System.Xml.Serialization.XmlAttributes>  
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
+- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+- [Element XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

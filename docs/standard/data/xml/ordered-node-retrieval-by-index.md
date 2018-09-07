@@ -9,11 +9,11 @@ ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871923"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078824"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Pobieranie uporządkowanych węzłów za pomocą indeksu
 World Wide Web Consortium (W3C) XML Document Object Model (DOM) opisano również wstawienia, która ma zdolność do obsługi uporządkowaną listę węzłów, w przeciwieństwie do zestawu nieuporządkowanego obsługiwane przez **XmlNamedNodeMap**. Wstawienia programu Microsoft .NET Framework jest nazywany **XmlNodeList**. Metody i właściwości, które zwracają **XmlNodeList** są:  

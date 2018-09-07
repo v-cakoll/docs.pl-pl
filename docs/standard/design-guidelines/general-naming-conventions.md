@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
-ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
+ms.openlocfilehash: cd3defd969b5f26fb95e7feca9c3d533e67272b1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36338107"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071099"
 ---
 # <a name="general-naming-conventions"></a>Ogólne konwencje nazewnictwa
-W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word wskazówki na temat używania skrótów i akronimów i zalecenia dotyczące należy unikać nazw specyficzny dla języka.  
+W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wybranego słowa wskazówki na temat używania skrótów i akronimów i zalecenia dotyczące sposobu uniknięcia używania nazw specyficzny dla języka.  
   
 ## <a name="word-choice"></a>Wybór programu Word  
  **✓ DO** wybrać łatwo odczytać identyfikatora nazwy.  
@@ -33,7 +33,7 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
   
  **✓ DO** Preferuj czytelności za pośrednictwem skrócenia.  
   
- Nazwa właściwości `CanScrollHorizontally` jest lepszym rozwiązaniem niż `ScrollableX` (zasłoniętej odwołania do osi x).  
+ Nazwa właściwości `CanScrollHorizontally` jest lepsze niż `ScrollableX` (zasłoniętej odniesienie do osi x).  
   
  **X DO NOT** użyj podkreślenia, łączniki lub innych znaków innych niż alfanumeryczne.  
   
@@ -41,7 +41,7 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
   
  **X AVOID** przy użyciu identyfikatorów, które powodują konflikt z słów kluczowych z powszechnie używane języki programowania.  
   
- Zgodnie z zasady 4 wspólnej specyfikacji języka (CLS) wszystkie języki zgodne podać mechanizm umożliwiający dostęp do nazwanego elementy, które korzystają ze słowem kluczowym tego języka jako identyfikator. C#, na przykład używa znaku jako mechanizmu ucieczki w tym przypadku @. Jednak nadal jest dobrym rozwiązaniem, aby uniknąć typowe słowa kluczowe, ponieważ jest znacznie trudniejsze do metody za pomocą sekwencji unikowej niż jeden bez niego.  
+ Zgodnie z 4 reguły z Common Language Specification (CLS) wszystkie języki zgodne należy podać mechanizm, który umożliwia dostęp do nazwanych elementy, które korzystają odpowiadającej danemu językowi słowa kluczowego jako identyfikatora. C#, na przykład używa znaku jako mechanizm ucieczki w tym przypadku @. Jednak nadal jest dobry pomysł, aby uniknąć typowe słowa kluczowe, ponieważ jest dużo trudniejsze do korzystania z metody przy użyciu sekwencji unikowej niż jeden bez niego.  
   
 ## <a name="using-abbreviations-and-acronyms"></a>Za pomocą skrótów i akronimów  
  **X DO NOT** Użyj skrótów lub skrótów jako część nazwy identyfikatorów.  
@@ -53,16 +53,16 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
 ## <a name="avoiding-language-specific-names"></a>Unikanie specyficzny dla języka nazw  
  **✓ DO** użycie nazwy semantycznie interesujące zamiast słowa kluczowe specyficzne dla języka dla nazwy typu.  
   
- Na przykład `GetLength` jest nazwą lepszą niż `GetInt`.  
+ Na przykład `GetLength` jest nazwą lepsze niż `GetInt`.  
   
  **✓ DO** Użyj nazwy ogólnej typu CLR, a nie nazwę specyficzne dla języka w rzadkich przypadkach, gdy identyfikator nie ma znaczenia semantycznego poza jego typu.  
   
- Na przykład metoda konwertowania na <xref:System.Int64> powinno być nazwanym `ToInt64`, a nie `ToLong` (ponieważ <xref:System.Int64> jest nazwą CLR dla języka C# — określonego aliasu `long`). W poniższej tabeli przedstawiono kilka typów danych podstawowych za pomocą nazwy typu CLR (a także odpowiedniej nazwy typu dla C#, Visual Basic i C++).  
+ Na przykład metoda konwersji <xref:System.Int64> powinno się nazywać `ToInt64`, a nie `ToLong` (ponieważ <xref:System.Int64> jest nazwą CLR dla języka C# — określonego aliasu `long`). W poniższej tabeli przedstawiono kilka podstawowych typów danych przy użyciu nazwy typów CLR (a także odpowiednie nazwy typów dla języka C#, Visual Basic i C++).  
   
 |C#|Visual Basic|C++|CLR|  
 |---------|------------------|-----------|---------|  
 |**sbyte**|**SByte**|**char**|**SByte**|  
-|**byte**|**Byte**|**char bez znaku**|**Byte**|  
+|**byte**|**Byte**|**unsigned char**|**Byte**|  
 |**short**|**Short**|**short**|**Int16**|  
 |**ushort**|**UInt16**|**short bez znaku**|**UInt16**|  
 |**int**|**Integer**|**int**|**Int32**|  
@@ -72,7 +72,7 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
 |**float**|**Single**|**float**|**Single**|  
 |**double**|**Double**|**double**|**Double**|  
 |**bool**|**Boolean**|**bool**|**Boolean**|  
-|**char**|**char**|**wchar_t**|**char**|  
+|**char**|**Char**|**wchar_t**|**Char**|  
 |**string**|**Ciąg**|**Ciąg**|**Ciąg**|  
 |**object**|**obiekt**|**obiekt**|**obiekt**|  
   
@@ -81,11 +81,11 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
 ## <a name="naming-new-versions-of-existing-apis"></a>Nazwy nowych wersji istniejących interfejsów API  
  **✓ DO** Użyj nazwy podobne do starego interfejsu API, podczas tworzenia nowych wersji istniejących interfejsu API.  
   
- Pozwala to Wyróżnij relacji między interfejsów API.  
+ Pozwala to wyróżnić relacja między interfejsami API.  
   
  **✓ DO** preferowane jest dodanie sufiksu zamiast prefiksu wskazać nową wersję istniejącego interfejsu API.  
   
- Ułatwi to Pomoc odnajdywania, przeglądając dokumentację, lub za pomocą funkcji IntelliSense. Stara wersja interfejsu API zostaną zorganizowane bliski nowych interfejsów API, ponieważ większość przeglądarek i IntelliSense Pokaż identyfikatorów w kolejności alfabetycznej.  
+ To pomoże odnajdywania, przeglądając dokumentację, lub za pomocą funkcji IntelliSense. Stara wersja interfejsu API zostaną zorganizowane blisko nowe interfejsy API, ponieważ większość przeglądarek i technologii IntelliSense Pokaż identyfikatorów w kolejności alfabetycznej.  
   
  **✓ CONSIDER** przy użyciu całkowicie nowe, ale łatwy do rozpoznania identyfikator, zamiast dodawania sufiks lub prefiks.  
   
@@ -93,12 +93,13 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
   
  **X DO NOT** "Ex" (lub podobny) sufiks identyfikatora odróżniający go od wcześniejszej wersji tego samego interfejsu API.  
   
- **✓ DO** Użyj sufiksu "64", wprowadzając wersje interfejsów API, które działają na 64-bitowa liczba całkowita (długich liczb całkowitych) zamiast 32-bitową liczbę całkowitą. Należy o zastosowaniu takiego podejścia, gdy istnieje istniejących API 32-bitowy; nie robi to całkowicie nowe interfejsy API w wersji 64-bitowych.  
+ **✓ DO** Użyj sufiksu "64", wprowadzając wersje interfejsów API, które działają na 64-bitowa liczba całkowita (długich liczb całkowitych) zamiast 32-bitową liczbę całkowitą. Potrzebujesz takiego podejścia, gdy istnieje istniejących interfejsów API 32-bitowy; nie rób tego na zupełnie nowe interfejsy API w wersji 64-bitowych.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)

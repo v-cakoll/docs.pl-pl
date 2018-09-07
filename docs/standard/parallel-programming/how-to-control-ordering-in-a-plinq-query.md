@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89e0abf711730326b6391184a2e3a1b55b303957
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaa08106126212345bb594cdeabe6e7281cd7b5e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580214"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44059498"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>Porady: sterowanie szeregowaniem w zapytaniu PLINQ
-Poniższe przykłady pokazują, jak sterowanie szeregowaniem w zapytaniu PLINQ przy użyciu <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> — metoda rozszerzenia.  
+Te przykłady przedstawiają sposób sterowanie szeregowaniem w zapytaniu PLINQ przy użyciu <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> — metoda rozszerzenia.  
   
 > [!WARNING]
->  Te przykłady głównie służą jedynie do zademonstrowania użycia i może lub może nie działać szybciej niż równoważne sekwencyjnych zapytań LINQ do obiektów zapytań.  
+>  Te przykłady przede wszystkim służą do zademonstrowania użycia i może być lub może nie działać szybciej niż równoważna sekwencyjnego LINQ do zapytań obiekt.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zachowuje kolejność sekwencji źródłowej. Czasami jest to konieczne. na przykład niektóre operatorów zapytań wymagają sekwencji źródłowej uporządkowanych aby wygenerować poprawnych wyników.  
+ Poniższy przykład zachowuje kolejność sekwencji źródłowej. Czasami jest to konieczne. na przykład niektóre operatory zapytań wymagają sekwencji źródłowej uporządkowany w celu wygenerowania prawidłowych wyników.  
   
  [!code-csharp[PLINQ#12](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#12)]
  [!code-vb[PLINQ#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#12)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono niektóre zapytania operatory, których sekwencji źródłowej prawdopodobnie oczekiwano może zostać określona. Operatory te będą działać na nieuporządkowaną sekwencji, ale może powodować generowanie nieoczekiwane wyniki.  
+ W poniższym przykładzie pokazano niektóre zapytania, operatory, których sekwencji źródłowej prawdopodobnie powinien zostać określona. Te operatory będą działać w sekwencji nieuporządkowaną, ale mogą one dawać nieoczekiwane wyniki.  
   
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
@@ -38,13 +38,14 @@ Poniższe przykłady pokazują, jak sterowanie szeregowaniem w zapytaniu PLINQ p
  Aby uruchomić tę metodę, wklej go do klasy PLINQDataSample w [próbka danych PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) projektu, a następnie naciśnij klawisz F5.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak zachowania kolejności pierwszej części zapytania, a następnie usuń, kolejność w celu zwiększenia wydajności w klauzuli join, a następnie ponowne zastosowanie porządkowanie sekwencji wynik końcowy.  
+ Poniższy przykład pokazuje, jak zachować kolejności pierwszej części zapytania, a następnie usuń kolejności, co pozwoli zwiększyć wydajność klauzuli join a następnie ponownie Zastosuj kolejność sekwencji wynik końcowy.  
   
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
  Aby uruchomić tę metodę, wklej go do klasy PLINQDataSample w [próbka danych PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) projektu, a następnie naciśnij klawisz F5.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Linq.ParallelEnumerable>  
- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

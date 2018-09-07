@@ -5,11 +5,11 @@ ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777398"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061146"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF dla platformy .NET dla aplikacji Windows Store
 <xref:System.Composition?displayProperty=nameWithType> i jej podrzędne przestrzenie nazw zawierają typy służące do tworzenia extensible [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji za pomocą Managed Extensibility Framework (MEF). Te przestrzenie nazw są częścią [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] podzbioru dla [!INCLUDE[win8](../../../includes/win8-md.md)] systemu operacyjnego.  

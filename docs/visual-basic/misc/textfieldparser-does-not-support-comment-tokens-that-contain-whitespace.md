@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_WhitespaceInToken
 ms.assetid: 55107656-270e-4bbb-841a-478904df8e07
 ms.openlocfilehash: 2beda651dba952969593ffc7d64f01fd51ab7919
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556279"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070891"
 ---
 # <a name="textfieldparser-does-not-support-comment-tokens-that-contain-white-space"></a>TextFieldParser nie obsługuje tokenami komentarzy, które zawierają odstęp
 Podano tokenu komentarz, który zawiera biały znak. `TextFieldParser` Nie obsługuje tokenami komentarzy, zawierające biały znak, chyba że biały występuje na początku tokenu. Biały znak pojawiają się na początku token jest ignorowany.  

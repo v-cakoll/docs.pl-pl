@@ -3,11 +3,11 @@ title: Przykład integracji elementu SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
 ms.openlocfilehash: 95372d6052690af30042061d623b6004699c21d9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037610"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083731"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Przykład integracji elementu SystemWebRouting
 W tym przykładzie przedstawiono warstwy obsługi integracji z klas w <xref:System.Web.Routing> przestrzeni nazw. Klasy w <xref:System.Web.Routing> przestrzeni nazw Zezwalaj aplikacji na używanie adresów URL, które nie odpowiadają bezpośrednio zasób fizyczny. Przy użyciu routingu w sieci Web umożliwia deweloperom tworzenie wirtualnych adresów dla protokołu HTTP, które następnie są mapowane z powrotem na rzeczywiste usługi WCF. Jest to przydatne, gdy usługa WCF muszą być obsługiwane bez konieczności fizyczny plik lub zasób lub usług muszą być dostępne z adresami URL, które nie zawierają plików, takich jak HTML lub .aspx. W tym przykładzie pokazano, jak wykorzystywać <xref:System.Web.Routing.RouteTable> klasy w celu utworzenia identyfikatorów URI wirtualnych mapowane na uruchamianie usługi zdefiniowane w pliku global.asax. 

@@ -13,11 +13,11 @@ ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871715"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085228"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Porady: wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników sieci Web
 Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świecie, operacje analizy i formatowanie wartości daty i godziny, nie należy polegać na format domyślny (czyli w większości przypadków format kultury lokalnego serwera sieci Web) podczas interakcji z użytkownikiem. Zamiast tego formularzy sieci Web, Obsługa daty i godziny ciągi wprowadzane przez użytkownika, które należy przeanalizować ciągi przy użyciu preferowanej kultury użytkownika. Podobnie dane daty i godziny, powinna być wyświetlana dla użytkownika w formacie, który jest zgodny z kultury użytkownika. W tym temacie pokazano, jak to zrobić.  

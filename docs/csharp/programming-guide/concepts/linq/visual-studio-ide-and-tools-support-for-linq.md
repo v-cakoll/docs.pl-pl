@@ -3,11 +3,11 @@ title: Obsługa narzędzi dla programu LINQ (C#) i Visual Studio IDE
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
 ms.openlocfilehash: e7c5a1efb8ab6e9e9aab98a2dd07e9a85c5625b7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870549"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087254"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Obsługa narzędzi dla programu LINQ (C#) i Visual Studio IDE
 Visual Studio zintegrowane środowisko programistyczne (IDE) zapewnia następujące funkcje, które obsługują programowanie aplikacji LINQ:  

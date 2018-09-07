@@ -3,11 +3,11 @@ title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
 ms.openlocfilehash: d025497956715913923e839cb6c482f44f96babb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868131"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078672"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 Rozszerzenia zachowania umożliwiają użytkownikowi utworzenie elementów zachowania zdefiniowanych przez użytkownika. Te elementy mogą być używane razem standardowych elementów zachowanie usługi Windows Communication Foundation (WCF). `behaviorExtensions` Sekcji definiuje element w taki sposób, że mogą być używane w konfiguracji. Oto przykład rozszerzenia typowe zachowanie.  

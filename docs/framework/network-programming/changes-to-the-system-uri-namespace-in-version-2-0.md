@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565580"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067412"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Zmiany w przestrzeni nazw System.Uri w wersji 2.0
 Wprowadzono kilka zmian <xref:System.Uri?displayProperty=nameWithType> klasy. Te zmiany stałej nieprawidłowe zachowanie, rozszerzone użyteczność i lepsze zabezpieczenia.  

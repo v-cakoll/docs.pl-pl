@@ -7,11 +7,11 @@ helpviewer_keywords:
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 ms.openlocfilehash: 80ecca30b534591ffb2633ade961425f694403f7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885577"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076693"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla kodu klienta napisanego w języku C#, F # i Visual Basic nie istnieje żadna widoczna różnica między wywołaniem metody rozszerzenia i metod, które faktycznie są zdefiniowane w typie.  

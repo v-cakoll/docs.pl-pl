@@ -9,11 +9,11 @@ ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037110"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075439"
 ---
 # <a name="xslt-parameters"></a>Parametry XSLT
 Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektem parametrów w tym czasie.  

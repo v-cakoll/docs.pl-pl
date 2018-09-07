@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
 ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736409"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085358"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While — Klauzula (Visual Basic)
 Zawiera elementy w kolekcji, tak długo, jak długo określony warunek przyjmuje `true` i pomija pozostałe elementy.  

@@ -10,32 +10,32 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cd7b7542e5cf9352e965717368399dcf4a9ecd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3de83395df9e8c89a92e85b96ddd15e9f0be6ad5
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575853"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067162"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Porady: wyliczanie katalogów i ciągów
-Można wyliczyć katalogów i plików przy użyciu metody, które zwracają wyliczalny kolekcji ciągów ich nazw. Można również użyć metody, które zwracają wyliczalny zbiór <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, lub <xref:System.IO.FileSystemInfo> obiektów. Kolekcje wyliczalny zapewnić lepszą wydajność niż tablic, podczas pracy z dużych kolekcjach katalogów i plików.  
+Za pomocą metody, które zwracają wyliczalny zbiór ciągów ich nazw, można wyliczyć katalogów i plików. Można również użyć metod, które zwracają wyliczalny zbiór <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, lub <xref:System.IO.FileSystemInfo> obiektów. Przeliczalne kolekcje zapewniają lepszą wydajność niż tablic, podczas pracy z dużych kolekcjach katalogów i plików.  
   
- Umożliwia także kolekcje wyliczalny uzyskane z tych metod do dostarczania <xref:System.Collections.Generic.IEnumerable%601> parametr dla konstruktorów kolekcji klas takich jak <xref:System.Collections.Generic.List%601> klasy.  
+ Umożliwia także przeliczalne kolekcje uzyskany z tych metod do dostarczania <xref:System.Collections.Generic.IEnumerable%601> parametr dla konstruktorów kolekcji klasy, takie jak <xref:System.Collections.Generic.List%601> klasy.  
   
- Jeśli chcesz pobrać tylko nazwy katalogów i plików, użyj metody wyliczania <xref:System.IO.Directory> klasy. Aby uzyskać inne właściwości katalogów i plików, należy użyć <xref:System.IO.DirectoryInfo> i <xref:System.IO.FileSystemInfo> klasy.  
+ Jeśli chcesz pobrać tylko nazwy katalogów i plików, należy użyć metod wyliczenie <xref:System.IO.Directory> klasy. Aby uzyskać inne właściwości katalogów i plików, należy użyć <xref:System.IO.DirectoryInfo> i <xref:System.IO.FileSystemInfo> klasy.  
   
- Poniższa tabela zawiera przewodnik dotyczący metody, które zwracają kolekcje wyliczenia.  
+ W poniższej tabeli przedstawiono wskazówki do metod, które zwracają przeliczalne kolekcje.  
   
-|Aby wyliczyć|Wyliczalny kolekcji do zwrócenia|Metoda do użycia|  
+|Aby wyliczyć|Wyliczalne kolekcji do zwrócenia|Metoda do użycia|  
 |------------------|-------------------------------------|-------------------|  
 |Katalogi|Nazwy katalogów|<xref:System.IO.Directory.EnumerateDirectories%2A?displayProperty=nameWithType>|  
-||Informacje katalogu (<xref:System.IO.DirectoryInfo>)|<xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>|  
+||Informacje o katalogu (<xref:System.IO.DirectoryInfo>)|<xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>|  
 |Pliki|Nazwy plików|<xref:System.IO.Directory.EnumerateFiles%2A?displayProperty=nameWithType>|  
-||Informacje o plikach (<xref:System.IO.FileInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType>|  
-|Informacje o systemie plików|Wpisy systemu plików|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
+||Informacje o pliku (<xref:System.IO.FileInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType>|  
+|Informacje o systemie plików|We wpisach w plikach systemu|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
 ||Informacje o systemie plików (<xref:System.IO.FileSystemInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A?displayProperty=nameWithType>|  
   
- Mimo że można natychmiast wyliczyć wszystkie pliki w podkatalogach katalogu nadrzędnego przy użyciu <xref:System.IO.SearchOption.AllDirectories> dostarczonych przez opcję wyszukiwania <xref:System.IO.SearchOption> wyliczenia, wyjątki nieautoryzowanego dostępu (<xref:System.UnauthorizedAccessException>) może spowodować wyliczeniu, aby być niekompletne. Jeśli możliwe są następujące wyjątki, możesz je catch i kontynuować najpierw wyliczanie katalogów, a następnie wyliczania plików.  
+ Mimo że można od razu wyliczyć wszystkie pliki w podkatalogach katalogu nadrzędnego za pomocą <xref:System.IO.SearchOption.AllDirectories> dostarczone przez opcję wyszukiwania <xref:System.IO.SearchOption> wyliczenie, wyjątki przed nieautoryzowanym dostępem (<xref:System.UnauthorizedAccessException>) może spowodować, że wyliczenie do być niekompletne. Jeśli te wyjątki, można przechwytywać i Kontynuuj, najpierw wyliczanie katalogów i następnie Wyliczanie plików.  
   
 ### <a name="to-enumerate-directory-names"></a>Aby wyliczyć nazwy katalogów  
   
@@ -44,9 +44,9 @@ Można wyliczyć katalogów i plików przy użyciu metody, które zwracają wyli
      [!code-csharp[System.IO.EnumDirs1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.enumdirs1/cs/program.cs#1)]
      [!code-vb[System.IO.EnumDirs1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.enumdirs1/vb/program.vb#1)]  
   
-### <a name="to-enumerate-file-names-in-a-directory-and-subdirectories"></a>Aby wyliczyć nazwy plików w katalogu i jego podkatalogach  
+### <a name="to-enumerate-file-names-in-a-directory-and-subdirectories"></a>Aby wyliczyć nazwy plików w katalogu i podkatalogach  
   
--   Użyj <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> metody do wyszukiwania i (opcjonalnie) jego podkatalogi katalogu, aby uzyskać listę nazw plików, które pasują do wzorca wyszukiwania określonego.  
+-   Użyj <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> metody do wyszukiwania i (opcjonalnie) jego podkatalogi katalogu, aby uzyskać listę nazw plików, które pasują do wzorca wyszukiwania.  
   
      [!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
      [!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
@@ -58,12 +58,13 @@ Można wyliczyć katalogów i plików przy użyciu metody, które zwracają wyli
      [!code-csharp[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/cs/program.cs#1)]
      [!code-vb[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/vb/module1.vb#1)]  
   
-### <a name="to-enumerate-a-collection-of-fileinfo-objects-in-all-directories"></a>Aby wyliczyć kolekcję obiektów FileInfo we wszystkich katalogach  
+### <a name="to-enumerate-a-collection-of-fileinfo-objects-in-all-directories"></a>Aby wyliczyć kolekcji obiektów FileInfo we wszystkich katalogach  
   
--   Użyj <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> metodę, aby uzyskać kolekcję plików, które pasują do wzorca wyszukiwania określonego we wszystkich katalogach. W tym przykładzie najpierw wylicza najwyższego poziomu katalogów przechwytują wyjątki nieautoryzowanego dostępu, a następnie wylicza pliki.  
+-   Użyj <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> metodę, aby uzyskać kolekcję plików, które pasują do wzorca wyszukiwania we wszystkich katalogach. W tym przykładzie najpierw wylicza najwyższego poziomu katalogów przechwytują wyjątki możliwe nieautoryzowanemu dostępowi, a następnie wylicza pliki.  
   
      [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
      [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- [We/Wy plików i strumieni](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [We/Wy plików i strumieni](../../../docs/standard/io/index.md)

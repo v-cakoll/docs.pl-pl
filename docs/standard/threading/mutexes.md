@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 488bccea7d0a8870891859482bece018bf4bda0e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 80379e46c6482a3e052c1283fb4aaba2c7df282e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744704"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079178"
 ---
 # <a name="mutexes"></a>Muteksy
 Możesz użyć <xref:System.Threading.Mutex> obiekt, aby zapewnić wyłącznego dostępu do zasobu. <xref:System.Threading.Mutex> Klasy wykorzystuje więcej zasobów systemowych niż <xref:System.Threading.Monitor> klasy, ale mogą być organizowane poza granice domeny aplikacji, można za pomocą wielu czeka i może służyć do synchronizacji wątków w różnych procesach. Dla porównania mechanizmów synchronizacji zarządzanych, zobacz [Przegląd podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -49,12 +49,13 @@ Możesz użyć <xref:System.Threading.Mutex> obiekt, aby zapewnić wyłącznego 
   
  Aby uzyskać informacji na temat kontrolę dostępu dla muteksy, zobacz <xref:System.Security.AccessControl.MutexSecurity> i <xref:System.Security.AccessControl.MutexAccessRule> klas, <xref:System.Security.AccessControl.MutexRights> wyliczenia, <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A>, i <xref:System.Threading.Mutex.OpenExisting%2A> metody <xref:System.Threading.Mutex> klasy i <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> konstruktora.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.Mutex.%23ctor%2A>  
- <xref:System.Security.AccessControl.MutexSecurity>  
- <xref:System.Security.AccessControl.MutexAccessRule>  
- [Wątkowość](../../../docs/standard/threading/index.md)  
- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Monitory](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.Mutex.%23ctor%2A>  
+- <xref:System.Security.AccessControl.MutexSecurity>  
+- <xref:System.Security.AccessControl.MutexAccessRule>  
+- [Wątkowość](../../../docs/standard/threading/index.md)  
+- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [Monitory](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+- [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)

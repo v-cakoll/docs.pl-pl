@@ -3,11 +3,11 @@ title: Kształt dokumentów WordprocessingML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
 ms.openlocfilehash: aeb047f23f60ba6951950a85a6e2ef57fcbd9dda
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741731"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080475"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Kształt dokumentów WordprocessingML (C#)
 W tym temacie przedstawiono kształt XML w dokumencie WordprocessingML.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
 ms.openlocfilehash: 0fb5267e6324d3dffd1ad5a72ef3718c8cdd08b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552908"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44048613"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Metody ogólne (Przewodnik programowania w języku C#)
 Metody ogólnej to metoda, która jest zadeklarowana za pomocą parametrów typu w następujący sposób:  

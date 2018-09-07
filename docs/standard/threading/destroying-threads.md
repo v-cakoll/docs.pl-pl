@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cd6e85dca7c4c32361b964573f318b165e8d683
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9a243c95aff77a5de2b3af15542c0bcc44870333
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861172"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098191"
 ---
 # <a name="destroying-threads"></a>Niszczenie wątków
 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> Metoda jest używana do zatrzymywania wątków zarządzanych trwałe. Gdy wywołujesz <xref:System.Threading.Thread.Abort%2A>, środowisko uruchomieniowe języka wspólnego generuje <xref:System.Threading.ThreadAbortException> w wątek docelowy może przechwycić wątek docelowy. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
@@ -66,7 +66,8 @@ catch (ThreadAbortException ex)
   
  Można zapobiec systemu przez wywołanie metody ponowne generowanie wyjątku <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> metody. Jednak zrobić, to tylko wtedy, gdy Twój własny kod spowodowało <xref:System.Threading.ThreadAbortException>.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.ThreadAbortException>  
- <xref:System.Threading.Thread>  
- [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Threading.ThreadAbortException>  
+- <xref:System.Threading.Thread>  
+- [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)

@@ -11,11 +11,11 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d55b571ad313fae75e1f9a96d7a6b681416d8dbd
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038549"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076966"
 ---
 # <a name="whats-new-in-the-net-framework"></a>What's new in .NET Framework
 <a name="introduction"></a>Ten artykuł zawiera podsumowanie kluczowych nowych funkcji i ulepszeń w następujących wersjach systemu .NET Framework:  

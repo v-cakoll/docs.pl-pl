@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: 41a7b5061a4a90f0b67658440e737c40295d5d5f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739294"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086446"
 ---
 # <a name="dataadapter-parameters"></a>Parametry elementu DataAdapter
 <xref:System.Data.Common.DbDataAdapter> Ma cztery właściwości, które są używane do pobierania danych z i aktualizować dane do źródła danych: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> właściwość zwraca dane ze źródła danych; i <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, i <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> właściwości są używane do zarządzania zmiany w źródle danych. `SelectCommand` Właściwość musi być ustawiona przed wywołaniem `Fill` metody `DataAdapter`. `InsertCommand`, `UpdateCommand`, Lub `DeleteCommand` właściwości musi być ustawiona przed `Update` metody `DataAdapter` jest wywoływana w zależności od tego, jakie zmiany zostały wprowadzone do danych w <xref:System.Data.DataTable>. Załóżmy, że wiersze zostały dodane `InsertCommand` musi być ustawiona przed wywołaniem `Update`. Gdy `Update` przetwarza wierszy wstawionych, zaktualizowanych lub usuniętych `DataAdapter` używa odpowiednich `Command` właściwości przetwarzania akcji. Aktualne informacje na temat zmodyfikowanych wierszy jest przekazywany do `Command` obiektu za pomocą `Parameters` kolekcji.  

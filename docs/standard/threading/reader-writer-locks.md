@@ -8,27 +8,28 @@ helpviewer_keywords:
 ms.assetid: 8c71acf2-2c18-4f4d-8cdb-0728639265fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f829fc0b399f5cfd10d98f6b7439de757674f11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be9b4eef30333fbbdc26915635d17157176d6fc
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586376"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079191"
 ---
 # <a name="reader-writer-locks"></a>Klasa reader_writer_lock
-<xref:System.Threading.ReaderWriterLockSlim> Klasa umożliwia wiele wątków jednocześnie odczytać zasobu, ale wymaga wątku oczekiwania na wyłączność w celu zapisu do tego zasobu.  
+<xref:System.Threading.ReaderWriterLockSlim> Klasy umożliwia wielu wątków, które można jednocześnie odczytać zasobu, ale wymaga wątku oczekiwania blokady na wyłączność w celu pisania do zasobu.  
   
- Można na przykład <xref:System.Threading.ReaderWriterLockSlim> w Twojej aplikacji w celu umożliwienia współpracy synchronizacji między wątków, które uzyskują dostęp do zasobu udostępnionego. Blokady są pobierane <xref:System.Threading.ReaderWriterLockSlim> samej siebie.  
+ Można na przykład <xref:System.Threading.ReaderWriterLockSlim> w aplikacji, aby zapewnić kooperatywnej synchronizacji między wątków, uzyskujących dostęp do zasobu udostępnionego. Blokady są wykonywane <xref:System.Threading.ReaderWriterLockSlim> sam.  
   
- Zgodnie z wątku mechanizm synchronizacji, należy się upewnić, że nie ma wątków obejścia blokowania zapewnianej przez <xref:System.Threading.ReaderWriterLockSlim>. Jest jednym ze sposobów zapewnienia zaprojektować klasy, która hermetyzuje zasób udostępniony. Ta klasa zapewni elementów członkowskich, który dostępu prywatnego udostępnionych zasobów, które korzystają z prywatnej <xref:System.Threading.ReaderWriterLockSlim> do synchronizacji. Na przykład, zobacz przykład kodu <xref:System.Threading.ReaderWriterLockSlim> klasy. <xref:System.Threading.ReaderWriterLockSlim> jest za mało wydajne, ma być używany do synchronizowania poszczególnych obiektów.  
+ Jak za pomocą dowolnego mechanizmu synchronizacji wątku, należy upewnić się, że żadne wątki obejścia, blokowanie, które są dostarczane przez <xref:System.Threading.ReaderWriterLockSlim>. Jednym ze sposobów, aby upewnić się, to jest projektowanie klasę, która hermetyzuje zasobu udostępnionego. Ta klasa zapewni elementów członkowskich, które mają dostęp do prywatnego zasobu udostępnionego, które używają prywatnego <xref:System.Threading.ReaderWriterLockSlim> synchronizacji. Aby uzyskać przykład, zobacz przykład kodu dla <xref:System.Threading.ReaderWriterLockSlim> klasy. <xref:System.Threading.ReaderWriterLockSlim> jest dostatecznie efektywne, aby używane do synchronizowania poszczególnych obiektów.  
   
- Struktury aplikacji w taki sposób, aby zminimalizować czas trwania odczytu i zapisu. Operacje zapisu długi wpływa na przepływność bezpośrednio ponieważ blokady zapisu jest na wyłączność. Czas odczytu autorów oczekiwania bloku operacji, i jeśli co najmniej jeden wątek oczekuje na dostęp do zapisu, wątków, które żądają dostępu do odczytu będzie również zablokowany.  
+ Struktury aplikacji w taki sposób, aby zminimalizować czas trwania odczytu i zapisu. Operacje zapisu długie wpływa na przepływność bezpośrednio ponieważ blokada zapisywania jest na wyłączność. Długi przeczytaj autorzy oczekiwania bloku operacji, a jeśli co najmniej jeden wątek czeka na dostęp do zapisu, wątki, które żądają dostępu do odczytu będą mieć również.  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ma dwa reader_writer_lock, <xref:System.Threading.ReaderWriterLockSlim> i <xref:System.Threading.ReaderWriterLock>. <xref:System.Threading.ReaderWriterLockSlim> jest zalecana dla wszystkich nowych wdrożeń. <xref:System.Threading.ReaderWriterLockSlim> przypomina <xref:System.Threading.ReaderWriterLock>, ale jest prostszy zasady rekursji oraz uaktualniania i zmiany na starszą wersję stan blokady. <xref:System.Threading.ReaderWriterLockSlim> pozwala uniknąć wielu przypadkach potencjalnych zakleszczenia. Ponadto wydajność <xref:System.Threading.ReaderWriterLockSlim> jest znacznie lepszą niż <xref:System.Threading.ReaderWriterLock>.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ma dwa reader_writer_lock, <xref:System.Threading.ReaderWriterLockSlim> i <xref:System.Threading.ReaderWriterLock>. <xref:System.Threading.ReaderWriterLockSlim> jest zalecana dla wszystkich nowych wdrożeń. <xref:System.Threading.ReaderWriterLockSlim> jest podobny do <xref:System.Threading.ReaderWriterLock>, ale oferuje uproszczone, zasady rekursji oraz uaktualnianie i zmiany na starszą wersję stan blokady. <xref:System.Threading.ReaderWriterLockSlim> pozwala uniknąć wielu przypadkach potencjalnych zakleszczenia. Ponadto wydajność <xref:System.Threading.ReaderWriterLockSlim> jest znacznie lepsze niż <xref:System.Threading.ReaderWriterLock>.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.ReaderWriterLockSlim>  
- <xref:System.Threading.ReaderWriterLock>  
- [Wątkowość](../../../docs/standard/threading/index.md)  
- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Threading.ReaderWriterLockSlim>  
+- <xref:System.Threading.ReaderWriterLock>  
+- [Wątkowość](../../../docs/standard/threading/index.md)  
+- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)

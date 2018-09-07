@@ -7,11 +7,11 @@ ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 95836865bcf8908583e3a5c347bfcef805997fdc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802031"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077083"
 ---
 # <a name="security-guidance-and-best-practices"></a>Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania
 Tematy w tej sekcji przedstawiają wskazówek dotyczących oraz elementów do uwzględnienia podczas tworzenia bezpiecznych aplikacji Windows Communication Foundation (WCF). Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric i zabezpieczeń, zobacz [zabezpieczeń modelu dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

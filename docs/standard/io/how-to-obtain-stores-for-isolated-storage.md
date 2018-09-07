@@ -16,11 +16,11 @@ ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e2f87bfe1e3e7f3a1c8135c047b25a998793453
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886516"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084073"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Porady: uzyskiwanie magazynów dla izolowanego magazynu
 Izolowanym magazynie udostępnia wirtualny system plików w ramach przedziału danych. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Klasa zapewnia szereg metod do interakcji z izolowanym magazynie. Tworzenie i pobieranie magazynów, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> udostępnia trzy metody statyczne:  

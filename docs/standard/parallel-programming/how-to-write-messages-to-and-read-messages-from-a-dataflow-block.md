@@ -12,11 +12,11 @@ ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 47a61a1d01984eeefb2f1f09774374dc29a774d3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039228"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087812"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Porady: Pisanie i odbieranie wiadomości w bloku przepływu danych
 W tym dokumencie opisano, jak przy użyciu biblioteki przepływu danych TPL pisanie i odbieranie wiadomości w bloku przepływu danych. Biblioteka przepływu danych TPL zapewnia synchroniczne i asynchroniczne metody zapisywania wiadomości i odczytywać wiadomości w bloku przepływu danych. Ten dokument używa <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> klasy. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Klasy buforuje wiadomości i działa jako źródła komunikatów i jako obiektu docelowego komunikatu.  

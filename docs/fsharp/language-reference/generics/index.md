@@ -3,11 +3,11 @@ title: Typy ogólne (F#)
 description: 'Dowiedz się, jak używać funkcji ogólne F # i typy, które umożliwiają pisanie kodu działającego z różnymi typami bez konieczności użycia kodu.'
 ms.date: 05/16/2016
 ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876135"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084965"
 ---
 # <a name="generics"></a>Typy ogólne
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
 ms.openlocfilehash: cb7f5c0239273c04f9f89b4e63335e67fdf5419a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866938"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084120"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Porady: odczyt z pliku tekstowego (Przewodnik programowania w języku C#)
 Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod statycznych <xref:System.IO.File.ReadAllText%2A> i <xref:System.IO.File.ReadAllLines%2A> z <xref:System.IO.File?displayProperty=nameWithType> klasy.  

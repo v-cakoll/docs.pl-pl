@@ -1,5 +1,5 @@
 ---
-title: Msxsl:script bloki za pomocą skryptu
+title: 'Skrypt bloki msxsl: Script'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,36 +8,37 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23961caa7b307df46b20b3811d0883d4c702a357
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4d7dee9ebaed20970f715026661c29aae701289
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062939"
 ---
-# <a name="script-blocks-using-msxslscript"></a>Msxsl:script bloki za pomocą skryptu
-<xref:System.Xml.Xsl.XslCompiledTransform> Klasa obsługuje osadzonych skryptów przy użyciu `msxsl:script` elementu. Po załadowaniu arkusza stylów żadnych określonych funkcji są kompilowane na język pośredni firmy Microsoft (MSIL) przez kod Document Object Model (CodeDOM) i są wykonywane w czasie wykonywania. Zestaw wygenerowane z bloku osadzony skrypt jest oddzielony niż zestaw wygenerowany dla arkusza stylów.  
+# <a name="script-blocks-using-msxslscript"></a>Skrypt bloki msxsl: Script
+<xref:System.Xml.Xsl.XslCompiledTransform> Klasa obsługuje osadzonych skryptów przy użyciu `msxsl:script` elementu. Gdy arkusz stylów jest ładowany, wszystkie funkcje zdefiniowane są kompilowane do języka Microsoft intermediate language (MSIL) przez kod Document Object Model (CodeDOM) i są wykonywane w czasie wykonywania. Zestaw wygenerowany na podstawie bloku osadzonych skryptów jest oddzielony niż zestaw wygenerowany dla arkusza stylów.  
   
-## <a name="enable-xslt-script"></a>Włącz skryptów XSLT  
- Obsługa osadzonych skryptów jest ustawienie opcjonalne XSLT na <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Obsługa skryptów jest domyślnie wyłączona. Aby włączyć obsługę skryptów, należy utworzyć <xref:System.Xml.Xsl.XsltSettings> obiekt z <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> ustawioną właściwość `true` i przekaż obiekt do <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody.  
+## <a name="enable-xslt-script"></a>Włącz skryptu XSLT  
+ Obsługa osadzonego skryptów jest ustawienie opcjonalne XSLT na <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Obsługa skryptów jest domyślnie wyłączona. Aby włączyć obsługę skryptów, należy utworzyć <xref:System.Xml.Xsl.XsltSettings> obiekt z <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> właściwością `true` i przekazać obiekt do <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody.  
   
 > [!NOTE]
->  Powinna być włączona obsługa skryptów XSLT, tylko wtedy, gdy wymagana jest obsługa skryptów, podczas pracy w pełni zaufanym środowisku.  
+>  Powinna być włączona obsługa skryptów XSLT, tylko wtedy, gdy wymagana jest obsługa skryptów i pracy w pełni zaufanym środowisku.  
   
-## <a name="msxslscript-element-definition"></a>msxsl:Script definicji elementu  
- `msxsl:script` Element to rozszerzenie Microsoft zalecenie XSLT 1.0 i ma następujące definicje:  
+## <a name="msxslscript-element-definition"></a>msxsl: Script definicji elementu  
+ `msxsl:script` Element jest rozszerzeniem firmy Microsoft do specyfikacji XSLT 1.0 zalecenia i ma następującą definicję:  
   
 ```xml  
 <msxsl:script language = "language-name" implements-prefix = "prefix of user namespace"> </msxsl:script>  
 ```  
   
- `msxsl` Prefiks jest powiązany `urn:schemas-microsoft-com:xslt` identyfikator URI przestrzeni nazw. Arkusz stylów musi zawierać `xmlns:msxsl=urn:schemas-microsoft-com:xslt` deklaracji przestrzeni nazw.  
+ `msxsl` Prefiks jest powiązany z `urn:schemas-microsoft-com:xslt` identyfikator URI przestrzeni nazw. Arkusz stylów musi zawierać `xmlns:msxsl=urn:schemas-microsoft-com:xslt` deklarację przestrzeni nazw.  
   
- `language` Atrybutu jest opcjonalny. Jego wartość wynosi języka kodu bloku osadzonego kodu. Język jest mapowany na odpowiednią CodeDOM kompilatora za pomocą <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A?displayProperty=nameWithType> metody. <xref:System.Xml.Xsl.XslCompiledTransform> Klasa może obsługiwać żadnego języka Microsoft .NET, przy założeniu odpowiedniego dostawcę jest zainstalowany na maszynie i jest zarejestrowany w sekcji system.codedom w pliku machine.config. Jeśli `language` atrybut nie jest określony, domyślnie języka JScript. Nazwa języka nie jest rozróżniana wielkość liter, więc "JavaScript" i "javascript" są równoważne.  
+ `language` Atrybut jest opcjonalny. Jego wartość jest język kodu w bloku osadzony kod. Język jest mapowany do odpowiedniego CodeDOM kompilatora przy użyciu <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A?displayProperty=nameWithType> metody. <xref:System.Xml.Xsl.XslCompiledTransform> Klasy może obsługiwać dowolny język programu Microsoft .NET, zakładając, że odpowiednie dostawca jest zainstalowany na komputerze i jest zarejestrowany w sekcji system.codedom pliku machine.config. Jeśli `language` atrybut nie zostanie określony, domyślnie języka JScript. Nazwa języka nie jest rozróżniana wielkość liter, więc "JavaScript" i "javascript" są równoważne.  
   
- `implements-prefix` Atrybut jest obowiązkowy. Ten atrybut służy do zadeklarować przestrzeni nazw i powiązać ją z bloku skryptu. Wartość tego atrybutu jest prefiks, który reprezentuje obszar nazw. Ten prefiks można zdefiniować gdzieś w arkuszu stylów.  
+ `implements-prefix` Atrybut jest wymagany. Ten atrybut służy do deklarację przestrzeni nazw i skojarzyć go z bloku skryptu. Wartość tego atrybutu jest prefiks, który reprezentuje obszar nazw. Ten prefiks można zdefiniować gdzieś w arkuszu stylów.  
   
 > [!NOTE]
->  Korzystając z `msxsl:script` elementu, zdecydowanie zaleca się umieszczanie skryptu, niezależnie od języka, wewnątrz sekcji CDATA. Skrypt może zawierać operatorów, identyfikatory lub ograniczniki dla danego języka, jeśli nie znajduje się w sekcji CDATA, ma możliwość potencjalnego jest nieprawidłowo interpretowane jako XML. Następujący kod XML zawiera szablon sekcji CDATA rozmieszczenia kodu.  
+>  Korzystając z `msxsl:script` elementu, zdecydowanie zaleca się że skryptu, niezależnie od języka, można umieścić w sekcji CDATA. Skrypt może zawierać operatorów, identyfikatory lub ograniczniki dla danego języka, jeśli nie znajduje się w sekcji CDATA, ma potencjał jest błędnie zinterpretowana jako XML. Następujący kody XML pokazuje szablon sekcja CDATA, gdzie można umieścić kod.  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  
@@ -48,9 +49,9 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 ## <a name="script-functions"></a>Funkcje skryptu  
- Funkcje mogą być deklarowane w `msxsl:script` elementu. Funkcja została zadeklarowana, jest zawarty w bloku skryptu. Arkusze stylów może zawierać wiele bloków skryptu, każdy działające niezależnie od innych. Oznacza to, że jeśli wykonujesz kompilację w bloku skryptu nie można wywołać funkcję zdefiniowaną w innego bloku skryptu, chyba że jest on zadeklarowany jako do tego samego obszaru nazw i tego samego języka skryptów. Ponieważ każdy blok skryptu może znajdować się w jego własnej języka i analizowania bloku zgodnie z regułami gramatyki tego analizatora składni języka zalecane jest użycie prawidłowa składnia języka w użyciu. Na przykład jeśli w bloku skryptu języka Microsoft C#, należy użyć składni komentarz C#.  
+ Funkcje mogą być zadeklarowane w obrębie `msxsl:script` elementu. Gdy funkcja jest zadeklarowana, znajduje się w bloku skryptu. Arkusze stylów może zawierać wiele Bloki skryptu, każdy niezależnego innych. Oznacza to, że jeśli wykonujesz wewnątrz bloku skryptu, nie można wywołać funkcję zdefiniowaną w innego bloku skryptu, o ile nie jest zadeklarowany ma ten sam język skryptów i tej samej przestrzeni nazw. Ponieważ każdy blok skryptu może znajdować się w jego własnej języka i bloku jest analizowany zgodnie z regułami gramatyki tego analizatora języka zaleca się, że używasz poprawnej składni język używany w. Na przykład jeśli jesteś w bloku skryptu Microsoft C#, należy użyć składni komentarza języka C#.  
   
- Podanych argumentów i wartości zwracane funkcji mogą być dowolnego typu. Ponieważ typy W3C XPath są podzbiorem popularnych typów języka wspólnego (CLR), konwersja typu odbywa się na typy, które nie są uznawane za typ XPath. W poniższej tabeli przedstawiono odpowiednie typy W3C i odpowiednik typu CLR.  
+ Podanych argumentów i wartości zwracane funkcji mogą być dowolnego typu. Ponieważ typy W3C XPath są podzbiorem popularnych typów języka wspólnego (CLR), konwersja typu odbywa się na typy, które nie są traktowane jako typu wyrażenie XPath. W poniższej tabeli przedstawiono odpowiednie typy W3C i równoważne typu CLR.  
   
 |Typ W3C|Typ CLR|  
 |--------------|--------------|  
@@ -60,23 +61,23 @@ ms.lasthandoff: 05/04/2018
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- Numeryczne typy CLR są konwertowane na <xref:System.Double>. <xref:System.DateTime> Typu jest konwertowana na <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> typy są konwertowane na <xref:System.Xml.XPath.XPathNavigator>. **Element XPathNavigator []** jest konwertowana na <xref:System.Xml.XPath.XPathNodeIterator>.  
+ CLR, typy liczbowe są konwertowane na <xref:System.Double>. <xref:System.DateTime> Typu jest konwertowany na <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> typy są konwertowane na <xref:System.Xml.XPath.XPathNavigator>. **[] Klasy XPathNavigator** jest konwertowana na <xref:System.Xml.XPath.XPathNodeIterator>.  
   
- Wszystkie inne typy Zgłoś błąd.  
+ Wszystkie pozostałe typy zgłosić błąd.  
   
-### <a name="importing-namespaces-and-assemblies"></a>Importowanie obszary nazw i zestawów  
- <xref:System.Xml.Xsl.XslCompiledTransform> Klasy powoduje wstępne definiowanie zestaw zestawy i przestrzenie nazw, które są obsługiwane przez domyślnie `msxsl:script` elementu. Można jednak użyć klas i członków należące do przestrzeni nazw, która nie znajduje się na liście wstępnie zdefiniowanych przez zaimportowanie zestawu i przestrzeni nazw w `msxsl:script` bloku.  
+### <a name="importing-namespaces-and-assemblies"></a>Importowanie przestrzeni nazw i zestawów  
+ <xref:System.Xml.Xsl.XslCompiledTransform> Klasy powoduje wstępne definiowanie zestawu zestawy i przestrzenie nazw, które są obsługiwane domyślnie `msxsl:script` elementu. Jednak można użyć klas i składowych należące do przestrzeni nazw, która nie znajduje się na liście wstępnie zdefiniowane przez zaimportowanie zestawu i przestrzeni nazw w `msxsl:script` bloku.  
   
 #### <a name="assemblies"></a>Zestawy  
- Domyślnie odwołują się następujące dwa zestawy:  
+ Następujące dwa zestawy są określone przez domyślny:  
   
 -   PLik System.dll  
   
 -   System.Xml.dll  
   
--   Pliku Microsoft.VisualBasic.dll (po język skryptu VB)  
+-   Pliku Microsoft.VisualBasic.dll (jeśli jest to język skryptów jest VB)  
   
- Można zaimportować następującej liczby dodatkowych zestawów przy użyciu `msxsl:assembly` elementu. Gdy arkusz stylów jest kompilowany w tym zestawie. `msxsl:assembly` Element ma następującą definicję:  
+ Możesz zaimportować dodatkowe zestawy za pomocą `msxsl:assembly` elementu. W tym zestawie podczas kompilowania arkusza stylów. `msxsl:assembly` Element ma następującą definicję:  
   
 ```xml  
 <msxsl:script>  
@@ -88,10 +89,10 @@ ms.lasthandoff: 05/04/2018
 </msxsl:script>  
 ```  
   
- `name` Atrybut zawiera nazwę zestawu i `href` atrybutu zawiera ścieżkę do zestawu. Nazwa zestawu może być pełną nazwą, taką jak "dane systemowe, wersja = 2.0.3600.0, Culture = neutral, PublicKeyToken = b77a5c561934e089", lub krótkiej nazwy, takie jak "System.Web".  
+ `name` Atrybut zawiera nazwę zestawu i `href` atrybutu zawiera ścieżkę do zestawu. Nazwa zestawu może być pełną nazwą, taką jak "System.Data, Version = 2.0.3600.0, Culture = neutral, PublicKeyToken = b77a5c561934e089", lub krótkiej nazwy, takie jak "System.Web".  
   
 #### <a name="namespaces"></a>Namespaces  
- Domyślnie są dołączone następujących przestrzeni nazw:  
+ Następujące przestrzenie nazw są domyślnie dołączone:  
   
 -   System  
   
@@ -107,9 +108,9 @@ ms.lasthandoff: 05/04/2018
   
 -   System.Xml.XPath  
   
--   Microsoft.VisualBasic (po język skryptu VB)  
+-   Microsoft.VisualBasic (jeśli jest to język skryptów jest VB)  
   
- Można dodać obsługę dodatkowe przestrzenie nazw przy użyciu `namespace` atrybutu. Wartość atrybutu jest nazwą przestrzeni nazw.  
+ Można dodać obsługę dodatkowe przestrzenie nazw `namespace` atrybutu. Wartość atrybutu jest nazwa przestrzeni nazw.  
   
 ```xml  
 <msxsl:script>  
@@ -121,7 +122,7 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto osadzony skrypt, aby obliczyć obwód koła podane jego radius.  
+ W poniższym przykładzie użyto osadzonych skryptów do obliczania obwód koła, biorąc pod uwagę jego usługi radius.  
   
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]
  [!code-vb[XSLT_Script#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Script/VB/xslt_script.vb#1)]  
@@ -147,6 +148,7 @@ ms.lasthandoff: 05/04/2018
 </circles>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Dynamiczne generowanie i kompilacja kodu źródłowego](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Dynamiczne generowanie i kompilacja kodu źródłowego](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

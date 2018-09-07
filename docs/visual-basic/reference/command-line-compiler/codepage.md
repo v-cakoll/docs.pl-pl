@@ -6,12 +6,12 @@ helpviewer_keywords:
 - codepage compiler option [Visual Basic]
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
-ms.openlocfilehash: 8aee51df3ba9f92ca662fbbfbd73998e4a3b4538
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43882607"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44082203"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 Określa stronę kodową dla wszystkich plików kodu źródłowego w kompilacji.  
@@ -29,12 +29,13 @@ Określa stronę kodową dla wszystkich plików kodu źródłowego w kompilacji.
 |`id`|Wymagane. Kompilator używa strony kodowej, określony przez `id` interpretowanie kodowanie plików źródłowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby skompilować kod źródłowy został zapisany ze specyficznym kodowaniem, można użyć `-codepage` można określić stronę kodową, która będzie używana. `-codepage` Opcja ma zastosowanie do wszystkich plików kodu źródłowego w kompilacji. Aby uzyskać więcej informacji, zobacz [kodowanie znaków na platformie .NET Framework](https://msdn.microsoft.com/library/bf6d9823-4c2d-48af-b280-919c5af66ae9).  
+ Aby skompilować kod źródłowy został zapisany ze specyficznym kodowaniem, można użyć `-codepage` można określić stronę kodową, która będzie używana. `-codepage` Opcja ma zastosowanie do wszystkich plików kodu źródłowego w kompilacji. Aby uzyskać więcej informacji, zobacz [kodowanie znaków na platformie .NET Framework](../../../standard/base-types/character-encoding.md).  
   
  `-codepage` Opcja nie jest potrzebna, jeśli zostały zapisane pliki kodu źródłowego, przy użyciu bieżącej strony kodowej ANSI, Unicode lub UTF-8 z podpisem. Program Visual Studio zapisuje wszystkie pliki kodu źródłowego za pomocą bieżącej strony kodowej ANSI domyślnie, chyba że użytkownik określi, inne kodowanie w **kodowanie** okno dialogowe. Program Visual Studio używa **kodowanie** okno dialogowe Otwieranie plików kodu źródłowego, zapisany z inną stronę kodową.  
   
 > [!NOTE]
 >  `-codepage` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
   
-## <a name="see-also"></a>Zobacz też  
- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

@@ -13,11 +13,11 @@ ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 manager: douge
 ms.openlocfilehash: 2c7fb148b96d5ff9804bcb0bb7c842c475c0f117
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886412"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079152"
 ---
 # <a name="developing-windows-service-applications"></a>Tworzenie aplikacji usług systemu Windows
 Za pomocą programu Microsoft Visual Studio lub Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawu SDK, możesz łatwo tworzyć usługi, tworząc aplikację, która jest instalowana jako usługa. Ten typ aplikacji nosi nazwę usługi Windows. Dzięki funkcjom framework można tworzenie usług, ich zainstalowanie i uruchom, Zatrzymaj i kontrolować jego zachowanie.  

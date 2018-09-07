@@ -3,11 +3,11 @@ title: Statycznie rozwiązywane parametry typu (F#)
 description: 'Dowiedz się, jak używać języka F # statystycznie rozpoznany typ parametru, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777876"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080244"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statycznie rozwiązywane parametry typu
 

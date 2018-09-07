@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [WPF], drawing ellipses
 ms.assetid: 99763b8c-bfc8-44be-8231-8a70daf5481a
 ms.openlocfilehash: ddeada8619d1b6c8970f1efb7cca1bc98773d0c5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879867"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079116"
 ---
 # <a name="how-to-draw-an-ellipse-or-a-circle"></a>Jak narysować elipsę na okręgu
 W tym przykładzie pokazano, jak Rysowanie elips i okręgów przy użyciu <xref:System.Windows.Shapes.Ellipse> elementu. Aby narysować elipsę, należy utworzyć <xref:System.Windows.Shapes.Ellipse> elementu i określ jej <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A>. Użyj jego <xref:System.Windows.Shapes.Shape.Fill%2A> właściwości w celu określenia <xref:System.Windows.Media.Brush> umożliwiający namalować wnętrze elipsy. Użyj jego <xref:System.Windows.Shapes.Shape.Stroke%2A> właściwości w celu określenia <xref:System.Windows.Media.Brush> używany namalować kontur elipsy. <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Właściwość określa grubość konturu elipsy.  

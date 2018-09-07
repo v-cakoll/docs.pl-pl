@@ -1,27 +1,25 @@
 ---
 title: Pełna składnia (F#)
-description: 'Różnice między pełnego i uproszczonego składnię języka programowania w języku F #.'
+description: 'Różnice między pełnego i uproszczonego składni języka F # języka programowania.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b0bed66b4a76c5ab11e6c9e7aaf695f864e74ca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563787"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063121"
 ---
 # <a name="verbose-syntax"></a>Pełna składnia
 
-Istnieją dwie formy składni dla wielu konstrukcje w języku F #: *Pełna składnia* i *lightweight — składnia*. Pełna składnia nie jest używany jako często, ale ma tę zaletę, jest mniej wrażliwe na wcięcia. Lightweight — składnia jest krótsza i używa wcięcia sygnalizują początek i koniec konstrukcje, zamiast dodatkowe słowa kluczowe, takich jak `begin`, `end`, `in`i tak dalej. Domyślnie przyjmowana jest składnia lekkie składni. W tym temacie opisano składnię konstrukcje F #, gdy lightweight — składnia nie jest włączone. Pełna składnia jest zawsze włączony, dlatego nawet jeśli lightweight — składnia jest włączone, można nadal używać Pełna składnia dla niektórych konstrukcje. Lightweight — składnia można wyłączyć za pomocą `#light "off"` dyrektywy.
-
+Istnieją dwa rodzaje składni dla wielu konstrukcji w języku F #: *Pełna składnia* i *lightweight — składnia*. Pełna składnia nie jest tak często używane, ale ma tę zaletę są mniej podatne na wcięcia. Lightweight — składnia jest krótsza i używa wcięcia w celu sygnalizowania, że na początku i na końcu konstrukcji, zamiast dodatkowych słów kluczowych, takich jak `begin`, `end`, `in`i tak dalej. Domyślnie przyjmowana jest składnia składni lekkiej. W tym temacie opisano składnię konstrukcje F #, gdy lightweight — składnia nie jest włączone. Pełna składnia jest zawsze włączone, dlatego nawet jeśli włączysz lightweight — składnia, nadal mogą używać Pełna składnia dla niektórych konstrukcji. Lightweight — składnia można wyłączyć za pomocą `#light "off"` dyrektywy.
 
 ## <a name="table-of-constructs"></a>Tabela konstrukcji
-W poniższej tabeli przedstawiono składnię nieskomplikowane i pełne konstrukcji języka F # w kontekstach, gdzie występuje różnica między dwoma formularzami. W tej tabeli, kąt nawiasy (&lt;&gt;) należy ująć elementy składni dostarczone przez użytkownika. Zajrzyj do dokumentacji dla każdego konstrukcji języka Aby uzyskać szczegółowe informacje o składni używanej w ramach tych konstrukcji.
 
-
+W poniższej tabeli przedstawiono składnię lekkie i szczegółowe informacje dotyczące konstrukcji języka F # w kontekstach w przypadku, gdy istnieje różnica między dwoma formularzami. W tej tabeli, kąt nawiasy kwadratowe (&lt;&gt;) należy ująć elementy składni dostarczone przez użytkownika. Zapoznaj się z dokumentacją dla każdego konstrukcją języka pierwszej klasy, aby uzyskać szczegółowe informacje o składni używane w ramach te konstrukcje.
 
 <table>
 <tr>
-<th>Konstrukcji języka</th>
+<th>Konstrukcją języka pierwszej klasy</th>
 <th>Lightweight — Składnia</th>
 <th>Pełna składnia</th>
 </tr>
@@ -164,7 +162,7 @@ in
 
 </td>
 </tr>
-<tr><td>rekord
+<tr><td>Rekord
 </td><td>
 
 ```
@@ -222,7 +220,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>Unii rozłącznej</td><td>
+<tr><td>złożenia dyskryminowanego</td><td>
 
 ```
 type <union-name> =
@@ -304,7 +302,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td>type — rozszerzenie</td><td>
+<tr><td>rozszerzenia typu</td><td>
 
 ```
 type <type-name>
@@ -343,11 +341,8 @@ module <module-name> =
 </tr>
 </table>
 
+## <a name="see-also"></a>Zobacz także
 
-
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
-
-[Dyrektywy kompilatora](compiler-directives.md)
-
-[Wskazówki dotyczące formatowania kodu](code-formatting-guidelines.md)
+- [Dokumentacja języka F#](index.md)
+- [Dyrektywy kompilatora](compiler-directives.md)
+- [Wskazówki dotyczące formatowania kodu](code-formatting-guidelines.md)

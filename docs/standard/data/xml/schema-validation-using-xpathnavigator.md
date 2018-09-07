@@ -9,11 +9,11 @@ ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d2b04006c46edb29fd4fe05e63224220ed1876af
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874935"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085280"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Weryfikacja schematu przy użyciu klasy XPathNavigator
 Za pomocą <xref:System.Xml.XmlDocument> klasy, można sprawdzić poprawność zawartości XML zawartych w <xref:System.Xml.XmlDocument> obiektu na dwa sposoby. Pierwszym sposobem jest do weryfikowania zawartości XML przy użyciu sprawdzania poprawności <xref:System.Xml.XmlReader> obiektu i drugim sposobem jest użycie <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy. Można również wykonać walidacji tylko do odczytu zawartości przy użyciu XML <xref:System.Xml.XPath.XPathDocument> klasy.  

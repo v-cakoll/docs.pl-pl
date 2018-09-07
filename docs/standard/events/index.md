@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805640"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070546"
 ---
 # <a name="handling-and-raising-events"></a>Obsługa i wywoływanie zdarzeń
 Zdarzenia w .NET Framework są oparte na modelu delegata. Model delegata następuje po wzorcu projektowania obserwatora, który umożliwia subskrybentom zarejestrowanie i otrzymywanie powiadomienia od dostawcy. Nadawca wydarzenie wypycha powiadomienie, która miała miejsce zdarzenie, Odbiorca zdarzenia odbiera to powiadomienie i definiuje odpowiedź na to. W tym artykule opisano główne składniki modelu delegowanego, jak używać zdarzenia w aplikacjach i sposobie implementacji zdarzenia w kodzie.  
@@ -87,11 +87,12 @@ Zdarzenia w .NET Framework są oparte na modelu delegata. Model delegata następ
 |[Wzorzec projektowy obserwatora](../../../docs/standard/events/observer-design-pattern.md)|Opisuje szablon projektu, który umożliwia subskrybentom zarejestrowanie i otrzymywanie powiadomienia od dostawcy.|  
 |[Instrukcje: Korzystanie ze zdarzeń w aplikacjach formularzy internetowych](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Pokazuje, jak obsługiwać zdarzenia wywoływane przez formant formularzy sieci Web.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.EventHandler>  
- <xref:System.EventHandler%601>  
- <xref:System.EventArgs>  
- <xref:System.Delegate>  
- [Zdarzenia i przegląd zdarzeń trasowanych (aplikacje platformy uniwersalnej systemu Windows)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
- [Zdarzenia (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
- [Zdarzenia (C# Programming Guide)](../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.EventHandler>  
+- <xref:System.EventHandler%601>  
+- <xref:System.EventArgs>  
+- <xref:System.Delegate>  
+- [Zdarzenia i przegląd zdarzeń trasowanych (aplikacje platformy uniwersalnej systemu Windows)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
+- [Zdarzenia (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- [Zdarzenia (C# Programming Guide)](../../csharp/programming-guide/events/index.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
 ms.openlocfilehash: 9948fc65030a4636c5d23db4ef8c3a584018d2f5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738605"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087014"
 ---
 # <a name="new-constraint-c-reference"></a>New — ograniczenie (odwołanie w C#)
 

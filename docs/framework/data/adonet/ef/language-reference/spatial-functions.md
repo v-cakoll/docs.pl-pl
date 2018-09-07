@@ -3,11 +3,11 @@ title: Funkcje przestrzenne
 ms.date: 03/30/2017
 ms.assetid: 90cb177d-88a0-45be-97e8-3b306283c6e0
 ms.openlocfilehash: ad6b722e84aae40354e30434b107752d02352645
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776950"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061692"
 ---
 # <a name="spatial-functions"></a>Funkcje przestrzenne
 Istnieje nie literału format dla typów przestrzennych. Można jednak użyć wywołać za pomocą ciągów w formacie tekstowym dobrze znane funkcje canonical Entity Framework. Na przykład poniższe wywołanie funkcji tworzy punkt geometrii:  

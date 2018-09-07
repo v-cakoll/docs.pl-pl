@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b18f33c0cbc83f955c32477a21f77b09c7546c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43541110"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079522"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Struktury danych dla Programowania równoległego
 .NET Framework w wersji 4 wprowadza kilka nowych typów, które są przydatne do programowania równoległego, w tym zestaw klas kolekcji współbieżnych, podstawowych uproszczone synchronizacji i typów d inicjowania z opóźnieniem. Można użyć tych typów, zawierające kod aplikacji wielowątkowych, w tym w bibliotece równoległych zadań i PLINQ.  
@@ -68,7 +68,8 @@ ms.locfileid: "43541110"
 ## <a name="aggregate-exceptions"></a>Wyjątki agregacji  
  <xref:System.AggregateException?displayProperty=nameWithType> Typ może być używany do przechwytywania wielu wyjątków, które są zgłaszane jednocześnie w oddzielnych wątkach i przywrócić je do sąsiadującego wątku pojedynczego wyjątek. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> typów i PLINQ używać <xref:System.AggregateException> często w tym celu. Aby uzyskać więcej informacji, zobacz [wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) i [porady: obsługa wyjątków w zapytaniu PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- <xref:System.Threading?displayProperty=nameWithType>  
- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Threading?displayProperty=nameWithType>  
+- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)

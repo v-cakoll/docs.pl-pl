@@ -14,11 +14,11 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
 ms.openlocfilehash: 7d5ffc0b19e53cdc35f2d2e2cd224f692a0a80ed
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43882811"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085165"
 ---
 # <a name="examples-of-xml-serialization"></a>Przykłady serializacji XML
 Serializacji XML może zająć więcej niż jeden formularz z proste i złożone. Na przykład serializacji klasę, która po prostu składa się z pola publiczne i właściwości, jak pokazano na [wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md). Poniższe przykłady kodu adresów różnych scenariuszy zaawansowanych, w tym sposób użycia serializacji XML do generowania strumień XML, który jest zgodny z określonego dokumentu schematu XML (XSD).  

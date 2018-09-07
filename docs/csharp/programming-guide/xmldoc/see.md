@@ -11,11 +11,11 @@ helpviewer_keywords:
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
 ms.openlocfilehash: c37ad869b3eb904377cd4470a85cd557f6560290
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43737790"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061935"
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;zobacz&gt; (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  

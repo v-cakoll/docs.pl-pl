@@ -9,11 +9,11 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
 ms.openlocfilehash: adaf9224fd340c6ea4342e2591806a7c877e83ff
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871228"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084412"
 ---
 # <a name="effects-of-modifying-a-base-form39s-appearance"></a>Efekty modyfikowania formularza podstawowego&#39;wygląd
 Podczas opracowywania aplikacji często konieczne może być zmiana wyglądu formularza podstawowego, z której dziedziczą inne formy w projekcie (lub w innych projektach).  

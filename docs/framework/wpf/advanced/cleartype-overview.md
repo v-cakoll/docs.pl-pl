@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
 ms.openlocfilehash: 236d6dec444c8169c164e9f096c7f81a336fdca4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741253"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079378"
 ---
 # <a name="cleartype-overview"></a>ClearType — Przegląd
 Ten temat zawiera omówienie [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] technologii znaleziony w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  

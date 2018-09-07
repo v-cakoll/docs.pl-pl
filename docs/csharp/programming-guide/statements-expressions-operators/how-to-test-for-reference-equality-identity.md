@@ -6,11 +6,11 @@ helpviewer_keywords:
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
 ms.openlocfilehash: d48c2cab7100d8227b33ee0eeefb825dd81a5f88
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876651"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084572"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Porady: testowanie równości odwołań (tożsamości) (Przewodnik programowania w języku C#)
 Nie masz implementuje żadnej logiki niestandardowej obsługuje porównania równości odwołań w typy. Ta funkcjonalność jest dostarczana dla wszystkich typów przez statyczną <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> metody.  

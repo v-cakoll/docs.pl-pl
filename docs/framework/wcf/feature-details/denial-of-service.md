@@ -5,11 +5,11 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745505"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064780"
 ---
 # <a name="denial-of-service"></a>Odmowa usługi
 Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie można przetworzyć wiadomości lub są przetwarzane bardzo wolno.  

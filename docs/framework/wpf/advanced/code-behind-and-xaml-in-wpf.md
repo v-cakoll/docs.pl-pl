@@ -6,11 +6,11 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: ee08dc22588264b25d40b3fd818ef9ee1da90319
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032909"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085676"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Związane z kodem i XAML w WPF
 <a name="introduction"></a> Związane z kodem to termin używany do opisania kod, który jest sprzężony z obiektów zdefiniowanych przez kod znaczników, gdy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strona jest kompilowana do znaczników. W tym temacie opisano wymagania związane z kodem, a także mechanizm alternatywny wbudowanego kodu dla kodu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  

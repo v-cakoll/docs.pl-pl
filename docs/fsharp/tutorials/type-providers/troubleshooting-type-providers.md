@@ -1,30 +1,29 @@
 ---
 title: Rozwiązywanie problemów z dostawcami typów
-description: 'Wykrywa potencjalne rozwiązania problemów, które prawdopodobnie mogą wystąpić podczas używania dostawcy typów w F #.'
+description: 'Odkryj rozwiązania potencjalnych problemów, które najprawdopodobniej będzie występować w przypadku użycia dostawcy typów F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 6dcae0e510d27fb0b07799b4edfe2d5bb9aeb2d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563522"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061094"
 ---
 # <a name="troubleshooting-type-providers"></a>Rozwiązywanie problemów z dostawcami typów
 
-W tym temacie opisano oraz zapewnia potencjalne rozwiązania problemów, które najprawdopodobniej będą występować podczas korzystania z dostawcy typów.
+W tym temacie opisano i przewiduje potencjalne rozwiązania problemów, które najprawdopodobniej będzie występować w przypadku użycia dostawcy typów.
 
+## <a name="possible-problems-with-type-providers"></a>Możliwych problemów z dostawcami typów
 
-## <a name="possible-problems-with-type-providers"></a>Możliwe problemy przy pomocy dostawcy typów
-Jeśli wystąpi problem podczas pracy z dostawców typów, można przejrzeć w tabeli poniżej najbardziej typowych rozwiązań.
+Jeśli wystąpi problem podczas pracy z dostawcami typów, możesz przejrzeć w poniższej tabeli najbardziej popularne rozwiązania.
 
-
-
-|Problem|Sugerowanych akcji|
+|Problem|Sugerowane akcje|
 |-------|-----------------|
-|**Zmiany schematu**. Typ pracy dostawców najlepiej, gdy schematu źródła danych jest stabilna. Jeśli dodasz danych tabeli lub kolumny lub innego zmiany tego schematu, dostawca typów nie rozpoznaje automatycznie tych zmian.|Czyszczenie lub ponownie skompilować projekt. Aby wyczyścić projektu, wybierz **kompilacji**, **wyczyść** *ProjectName* na pasku menu. Aby ponownie skompilować projekt, wybierz **kompilacji**, **odbudować** *ProjectName* na pasku menu. Te akcje zresetowanie wszystkich stanów dostawcy typu i wymuszanie dostawcy, aby ponownie połączyć się ze źródłem danych i uzyskiwanie informacji o schemacie zaktualizowane.|
-|**Błąd połączenia**. Adres URL lub ciąg połączenia jest nieprawidłowy, sieć nie działa lub źródła danych lub usługi jest niedostępny.|Usługi sieci web lub usługi OData możesz spróbować adresu URL w przeglądarce Internet Explorer, aby sprawdzić, czy adres URL jest poprawny i czy usługa jest dostępna. Dla ciągu połączenia bazy danych, można użyć narzędzia połączenia danych w **Eksploratora serwera** Aby sprawdzić, czy parametry połączenia są prawidłowe i baza danych jest dostępne. Po przywróceniu połączenia, należy wyczyścić lub ponownie skompilować projekt, tak aby dostawca typów zostanie ponownie połączyć się z siecią.|
-|**Nieprawidłowe poświadczenia**. Musi mieć prawidłowe uprawnienia do danych źródła lub usługą sieci web.|Połączenia SQL nazwę użytkownika i hasło, które są określone w pliku ciągu lub konfiguracji połączenia musi być prawidłowy dla bazy danych. Jeśli używasz uwierzytelniania systemu Windows musi mieć dostęp do bazy danych. Administrator bazy danych można zidentyfikować uprawnień potrzebnych do dostępu do wszystkich baz danych i każdego elementu w bazie danych.<br /><br />Usługi sieci web lub usługi danych musi mieć odpowiednie poświadczenia. Większość dostawców typów Podaj obiektu DataContext, który zawiera właściwość poświadczeń można ustawić z odpowiednią nazwą użytkownika i klucza dostępu.|
-|**Nieprawidłowa ścieżka**. Ścieżka do pliku jest nieprawidłowa.|Sprawdź, czy ścieżka jest poprawna i czy plik istnieje. Ponadto należy odpowiednio Oferta żadnych backlashes w ścieżce lub użyj ciągu dosłownego wyrażenia lub potrójne cudzysłowy ciągu.|
+|**Zmiany schematu**. Typ dostawcy pracy jest najwyższa w przypadku schematu źródła danych jest stabilna. W przypadku dodania danych tabeli lub kolumny lub wprowadzenie innej zmiany do tego schematu, dostawca typów nie rozpoznaje automatycznie tych zmian.|Wyczyść lub ponownie skompilować projekt. Aby wyczyścić projektu, wybierz **kompilacji**, **czysty** *ProjectName* na pasku menu. Aby ponownie skompilować projekt, wybierz opcję **kompilacji**, **odbudować** *ProjectName* na pasku menu. Te akcje zresetowanie wszystkich stanów dostawcy typu i wymuszenie dostawcę Aby ponownie połączyć się ze źródłem danych i uzyskiwanie informacji o schemacie zaktualizowane.|
+|**Błąd połączenia**. Adres URL lub ciąg połączenia jest nieprawidłowy, sieć nie działa lub źródła danych lub usługa jest niedostępna.|Usługa sieci web lub usługi OData możesz spróbować adresu URL w przeglądarce Internet Explorer, aby sprawdzić, czy adres URL jest poprawny, a ta usługa jest dostępna. Dla parametrów połączenia bazy danych, można użyć narzędzia połączenia danych w **Eksploratora serwera** Aby sprawdzić, czy parametry połączenia są prawidłowe, a baza danych jest dostępna. Po przywróceniu połączenia należy wyczyścić lub ponownie skompilować projekt, tak aby dostawca typów połączy się ponownie do sieci.|
+|**Nieprawidłowe poświadczenia**. Musi mieć prawidłowe uprawnienia do danych źródłowych lub usługi internetowej.|W przypadku połączenia SQL nazwę użytkownika i hasło, które są określone w pliku parametrów lub Konfiguracja połączenia musi być prawidłowy dla bazy danych. Jeśli używasz uwierzytelniania Windows musi mieć dostęp do bazy danych. Administrator bazy danych można określić uprawnienia, czego potrzebujesz, aby uzyskać dostęp do każdej bazy danych i każdego elementu w bazie danych.<br /><br />Usługa sieci web lub usługi danych musi mieć odpowiednie poświadczenia. Większość dostawców typów zapewniają obiektu DataContext, który zawiera właściwość poświadczenia, które można ustawić za pomocą odpowiedniej nazwy użytkownika i klucza dostępu.|
+|**Nieprawidłowa ścieżka**. Ścieżka do pliku jest nieprawidłowa.|Sprawdź, czy ścieżka jest poprawna i istnieje plik. Ponadto należy odpowiednio Oferta wszelkie backlashes w ścieżce lub użyj ciąg verbatim lub ciąg potrójnych cudzysłowach.|
 
-## <a name="see-also"></a>Zobacz też
-[Dostawcy typów](index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Dostawcy typów](index.md)

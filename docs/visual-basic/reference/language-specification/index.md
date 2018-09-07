@@ -7,11 +7,11 @@ helpviewer_keywords:
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
 ms.openlocfilehash: 6708ad107a2ee5b4ba2896d811c103ed49b476b8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738862"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44069227"
 ---
 # <a name="visual-basic-language-specification"></a>Specyfikacja języka Visual Basic
 Specyfikacja języka Visual Basic jest autorytatywne źródło dla odpowiedzi na wszystkie pytania o gramatyki języka Visual Basic i składni. Zawiera szczegółowe informacje na temat języka, łącznie z wieloma punktami nieuwzględnione w dokumentacji języka Visual Basic.  

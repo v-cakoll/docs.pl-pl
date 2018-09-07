@@ -8,11 +8,11 @@ helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
 ms.openlocfilehash: 223db893dd42181c234d9a07c1a1c00af26f0c30
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43566066"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44047614"
 ---
 # <a name="void-c-reference"></a>void (odwołanie w C#)
 Gdy jest używana jako zwracany typ metody `void` Określa, że metoda nie zwraca wartości.

@@ -10,23 +10,24 @@ helpviewer_keywords:
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a2dc5e650a479e782a6739a82e247c25e196fda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16dc60fa9cd8782efbe1b6028413138b5991839e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583156"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078811"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Porady: synchronizacja jednoczesnych operacji za pomocą bariery
-Poniższy przykład przedstawia sposób synchronizowanie równoczesnych zadań z <xref:System.Threading.Barrier>.  
+Poniższy przykład pokazuje, jak synchronizować równoczesnych zadań za pomocą <xref:System.Threading.Barrier>.  
   
 ## <a name="example"></a>Przykład  
- Następujący program ma zliczania liczby iteracji (lub faz) są wymagane dwa wątków do każdego Znajdź ich połowie rozwiązania do tej samej fazy za pomocą algorytmu randomizing zamieniać wyrazy. Po każdy wątek jest przemieszane jego wyrazy, operacji po fazie bariery porównuje dwa wyników, aby zobaczyć, czy pełnym zdaniem zostało wyrenderowane w odpowiedniej kolejności programu word.  
+ Następujący program ma policzyć ile iteracji (lub fazy) są wymagane dla dwóch wątków do każdego znalezienia ich połowie rozwiązania do tej samej fazy za pomocą algorytmu randomizing zamieniać wyrazy. Po każdy wątek ma przekazanych jego słów, operację po fazie bariery porównuje dwa wyniki, aby zobaczyć, jeśli pełnym zdaniem zostało wyrenderowane w odpowiedniej kolejności programu word.  
   
  [!code-csharp[CDS_Barrier#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#01)]
  [!code-vb[CDS_Barrier#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_barrier/vb/barrier_vb.vb#01)]  
   
- A <xref:System.Threading.Barrier> jest obiekt, który uniemożliwia pojedynczych zadań w operacji równoległej przed kontynuowaniem, aż zostanie bariera wszystkie zadania. Jest przydatne w przypadku operacji równoległej odbywa się w fazach i każdej fazy wymaga synchronizacji między zadaniami. W tym przykładzie są dwie fazy, aby wykonać operację. W pierwszej fazie każdego zadania wypełnia sekcji buforu z danymi. Po zakończeniu każdego zadania wypełnianie sekcji zadanie sygnalizuje bariery, który jest gotowy kontynuować, a następnie czeka. Gdy wszystkie zadania mają sygnalizowane bariery, są one odblokowane i uruchamia na drugim etapie. Bariera jest konieczne, ponieważ na drugim etapie musi mieć wszystkie zadania dostępu do wszystkich danych, który został wygenerowany w tym punkcie. Bez bariery pierwszego zadania do wykonania może podjąć próbę odczytu z buforów, które nie zostały wypełnione jeszcze przez inne zadania. Możesz zsynchronizować dowolną liczbę etapów w ten sposób.  
+ Element <xref:System.Threading.Barrier> jest obiektem, który uniemożliwia poszczególne zadania w operacji równoległej z dalszego barierę aż wszystkie zadania. Jest to przydatne, gdy operacji równoległej odbywa się w fazach, a każda faza wymaga synchronizacji między zadaniami. W tym przykładzie istnieją dwie fazy, aby wykonać operację. W pierwszej fazie każdego zadania wypełnia sekcji buforu z danymi. Po zakończeniu każdego zadania wypełnianie swojego zadania sygnalizuje bariery, które ma być kontynuowana, a następnie czeka. Gdy wszystkie zadania zostały zasygnalizowane barierę, są one odblokowane i rozpoczyna się w drugim etapie. Bariera to konieczne, ponieważ drugi etap wymaga, że każde zadanie podrzędne mają dostęp do wszystkich danych, który został wygenerowany z tym punktem. Bez barierze pierwszego zadania do wykonania może próbować odczytywać buforów, które nie zostały wypełnione jeszcze przez inne zadania. Możliwe jest zsynchronizowanie dowolną liczbę etapów w ten sposób.  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury danych dla programowania równoległego](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktury danych dla programowania równoległego](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)

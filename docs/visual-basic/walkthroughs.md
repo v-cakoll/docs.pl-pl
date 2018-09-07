@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861221"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086767"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Język Visual Basic — Wskazówki
 Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariuszy, które sprawia, że ich dobrym miejscem do uruchomienia, informacje o strefie dana funkcja lub produktu.  
@@ -62,7 +62,7 @@ Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariu
  [Tworzenie odbiorników logu niestandardowego](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  Pokazuje, jak tworzenie odbiorników logu niestandardowego i jest skonfigurowana do nasłuchiwania z danymi wyjściowymi `My.Application.Log` obiektu.  
   
- [Osadzanie typów z zarządzanych zestawów](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Osadzanie typów z zarządzanych zestawów](../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  W tym artykule opisano sposób tworzenia zestawów i program kliencki, który uwzględnia typów od niego.  
   
  [Sprawdzanie poprawności hasła złożoności (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,7 +77,7 @@ Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariu
  [Manipulowanie plikami za pomocą metod .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Pokazuje sposób użycia [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metod umożliwiających ustalenie, informacje o pliku, wyszukiwanie ciągu w pliku i zapisać do pliku.  
   
- [Przechowywanie obiektu w języku Visual Basic](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [Przechowywanie obiektu w języku Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Pokazuje sposób tworzenia prostego obiektu i zachować jego dane do pliku.  
   
  [Wcześniejsze testowanie obsługi przy użyciu użycia funkcji generowania na podstawie](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  

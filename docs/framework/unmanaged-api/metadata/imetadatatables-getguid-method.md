@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f589225dde1ba2aabc4ca32542339a771c3287d4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43859520"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081446"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid — Metoda
 Pobiera identyfikator GUID z wiersz pod określonym indeksem.  

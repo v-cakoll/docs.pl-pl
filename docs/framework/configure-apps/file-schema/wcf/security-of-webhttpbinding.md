@@ -5,11 +5,11 @@ ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 52146fa08ec63ef63fa996cdc09f9185b9f42e02
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747187"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44068680"
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;security&gt; w &lt;webHttpBinding&gt;
 Określa wymagania dotyczące zabezpieczeń dla punktu końcowego skonfigurowano [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  

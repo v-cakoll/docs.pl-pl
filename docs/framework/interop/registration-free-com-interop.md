@@ -13,11 +13,11 @@ ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43860015"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070033"
 ---
 # <a name="registration-free-com-interop"></a>Współdziałanie z modelem COM bez rejestrowania
 Współdziałanie COM interop aktywuje składnika bez za pomocą rejestru Windows do przechowywania informacji o zestawie. Zamiast rejestrowanie składników na komputerze podczas wdrażania, utworzysz plik manifestu Win32 stylu w czasie projektowania, które zawierają informacje dotyczące powiązania i aktywacji. Te pliki manifestu, zamiast kluczy rejestru, bezpośrednie aktywacji obiektu.  

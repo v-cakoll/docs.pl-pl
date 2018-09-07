@@ -13,11 +13,11 @@ helpviewer_keywords:
 author: pkulikov
 ms.author: ronpet
 ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773686"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065412"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — Interpolacja ciągów (odwołanie w C#)
 

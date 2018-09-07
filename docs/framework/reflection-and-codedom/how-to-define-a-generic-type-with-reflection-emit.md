@@ -13,11 +13,11 @@ ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483830"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085256"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Porady: definiowanie typu ogólnego przy użyciu emisji odbicia
 W tym temacie pokazano, jak utworzyć prosty typ ogólny z dwoma parametrami typu, jak zastosować ograniczenia klasy, interfejsu, ograniczenia i ograniczenia specjalne do parametrów typu oraz sposobu tworzenia elementów członkowskich, które używają parametrów typu klasy jako typy parametrów i zwracanych typów.  

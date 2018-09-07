@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
 ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392701"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44047442"
 ---
 # <a name="operator-keywords-c-reference"></a>Słowa kluczowe operatora (odwołanie w C#)
 Używane do wykonywania różnych akcji, takich jak tworzenie obiektów, sprawdzanie typu run-time obiektu uzyskiwania rozmiaru typu, a także innych działaniach. W tej sekcji przedstawiono następujące słowa kluczowe:  

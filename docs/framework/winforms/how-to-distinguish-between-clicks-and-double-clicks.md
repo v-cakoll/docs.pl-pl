@@ -11,11 +11,11 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
 ms.openlocfilehash: 84d085700091c4e7b8658e8eac4cf86fbd7730d5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802489"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070995"
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Porady: rozróżnianie między kliknięciami a dwukrotnymi kliknięciami
 Zazwyczaj pojedynczej *kliknij* inicjuje reakcji interfejsu użytkownika i *kliknij dwukrotnie* rozszerza akcji. Na przykład jednym kliknięciem zwykle wybiera element, a następnie dwukrotne kliknięcie Edytuje wybrany element. Jednak zdarzenia kliknięcia formularze Windows nie łatwe dodawanie scenariusza, w którym przez kliknięcie i kliknij dwukrotnie plik akcje niezgodne, ponieważ akcja powiązany <xref:System.Windows.Forms.Control.Click> lub <xref:System.Windows.Forms.Control.MouseClick> zdarzeń odbywa się przed akcją powiązane <xref:System.Windows.Forms.Control.DoubleClick>lub <xref:System.Windows.Forms.Control.MouseDoubleClick> zdarzeń. W tym temacie przedstawiono dwa rozwiązania tego problemu. Jest jedno rozwiązanie do obsługi zdarzeń kliknij dwukrotnie plik i wycofać akcje w zakresie obsługi zdarzenia click. W rzadkich sytuacjach może być konieczne symulowania kliknij pozycję i kliknij dwukrotnie działanie, obsługując <xref:System.Windows.Forms.Control.MouseDown> zdarzeń i za pomocą <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> i <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> właściwości <xref:System.Windows.Forms.SystemInformation> klasy. Pomiar czasu między kliknięciami a jeśli drugie kliknięcie występuje przed wartością <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> zostanie osiągnięty, a następnie kliknij przycisk jest w obrębie prostokąta zdefiniowanego przez <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, wykonania akcji kliknij dwukrotnie plik; w przeciwnym razie wykonania akcji kliknij pozycję.  

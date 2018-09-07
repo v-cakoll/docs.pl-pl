@@ -3,11 +3,11 @@ title: 'Porady: tworzenie nieoznaczonych przyjaznych zestawów (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671121"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075751"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Porady: tworzenie nieoznaczonych przyjaznych zestawów (C#)
 W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, które są bez znaku.  

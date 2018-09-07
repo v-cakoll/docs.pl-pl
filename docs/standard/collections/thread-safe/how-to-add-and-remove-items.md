@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8bb84f2e26471e004678afde99a1dd725db6832
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755109"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075764"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Porady: dodawanie i usuwanie elementów ConcurrentDictionary
 W tym przykładzie pokazano, jak dodawanie, pobieranie, Aktualizuj i usuń elementy z <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Ta klasa kolekcji jest implementacja metodą o bezpiecznych wątkach. Zalecamy użycie go zawsze wtedy, gdy wiele wątków może próbować uzyskać dostęp do elementów jednocześnie.  
@@ -48,6 +48,7 @@ W tym przykładzie pokazano, jak dodawanie, pobieranie, Aktualizuj i usuń eleme
   
  W związku z tym, nie jest masz gwarancję, że dane, który jest zwracany przez <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> to te same dane, które zostało utworzone przez valueFactory wątku. Podobne sekwencję zdarzeń mogą wystąpić podczas <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> jest wywoływana.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Kolekcje bezpieczne wątkowo](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Kolekcje bezpieczne wątkowo](../../../../docs/standard/collections/thread-safe/index.md)

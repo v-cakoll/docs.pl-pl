@@ -13,11 +13,11 @@ helpviewer_keywords:
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
 ms.openlocfilehash: 574021f09948f2358eb0023588ee0fab9c142687
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738758"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084056"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relacje typu w operacjach zapytań LINQ (C#)
 Aby efektywnie pisać zapytania, należy zrozumieć jak powiązane są ze sobą typy zmiennych w kompletnej operacji zapytania. Jeśli zrozumiesz te relacje będzie łatwiej pojmować [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] i przykłady kodu w dokumentacji. Ponadto zrozumiesz, co dzieje się, gdy zmienne są wpisywane niejawnie przy użyciu `var`.  

@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39dd7bfe4e5dd3405e24bf044723dbd92ccc65a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589831"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070384"
 ---
 # <a name="encrypting-data"></a>Szyfrowanie danych
-Szyfrowanie symetryczne i szyfrowanie asymetryczne są wykonywane przy użyciu różnych procesów. Szyfrowanie symetryczne odbywa się na strumienie i dlatego jest przydatne do szyfrowania dużych ilości danych. Szyfrowanie asymetryczne odbywa się na niewielką liczbę bajtów i dlatego jest użyteczna tylko w przypadku niewielkich ilości danych.  
+Szyfrowanie symetryczne i szyfrowanie asymetryczne są wykonywane przy użyciu różnych procesów. Szyfrowania symetrycznego odbywa się na strumieni i dlatego jest przydatne do szyfrowania dużych ilości danych. Szyfrowanie asymetryczne odbywa się na niewielką liczbę bajtów i dlatego jest użyteczna tylko w przypadku niewielkich ilości danych.  
   
 ## <a name="symmetric-encryption"></a>Szyfrowanie symetryczne  
- Klasy zarządzane Kryptografia symetryczna są używane z klasy specjalne strumienia o nazwie <xref:System.Security.Cryptography.CryptoStream> który szyfruje dane odczytane w strumieniu. **CryptoStream** klasy jest inicjowany z klasy zarządzanego strumienia, klasa implementuje <xref:System.Security.Cryptography.ICryptoTransform> interfejsu (utworzone z klasy, która implementuje algorytm kryptograficzny), a <xref:System.Security.Cryptography.CryptoStreamMode> wyliczenie który Opisuje typ dostępu mogą **CryptoStream**. **CryptoStream** klasy mogą być inicjowane przy użyciu dowolnej klasy, która jest pochodną <xref:System.IO.Stream> klasy, w tym <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, i <xref:System.Net.Sockets.NetworkStream>. Korzystanie z tych klas, można wykonać szyfrowania symetrycznego na różnych obiektów strumienia.  
+ Klasy zarządzane Kryptografia symetryczna są używane za pomocą specjalnych strumienia klasę o nazwie <xref:System.Security.Cryptography.CryptoStream> który szyfruje dane odczytywane w strumieniu. **CryptoStream** klasa jest inicjowana za pomocą klasy zarządzanego strumienia, klasa implementuje <xref:System.Security.Cryptography.ICryptoTransform> interfejsu (utworzonego z klasy, która implementuje algorytm kryptograficzny), a <xref:System.Security.Cryptography.CryptoStreamMode> wyliczenie, Opisuje typ dostępu dozwolone **CryptoStream**. **CryptoStream** klasy mogą być inicjowane przy użyciu dowolnej klasy, która pochodzi od klasy <xref:System.IO.Stream> klasy, łącznie z <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, i <xref:System.Net.Sockets.NetworkStream>. Za pomocą tych klas, można wykonywać szyfrowania symetrycznego na wielu różnych obiektów strumienia.  
   
- Poniższy przykład przedstawia sposób utworzyć nowe wystąpienie klasy <xref:System.Security.Cryptography.RijndaelManaged> klasy, która implementuje algorytmu szyfrowania Rijndael i umożliwia szyfrowanie na **CryptoStream** klasy. W tym przykładzie **CryptoStream** jest inicjowany z obiektu strumienia, nazywany `MyStream` które może być dowolnego typu zarządzanego strumienia. **CreateEncryptor** metody z **RijndaelManaged** klasy jest przekazywany klucza i IV, które są używane do szyfrowania. W takim przypadku wygenerowany domyślny klucz i IV z `RMCrypto` są używane. Na koniec **CryptoStreamMode.Write** jest przekazywana, określając dostęp do zapisu do strumienia.  
+ Poniższy przykład ilustruje sposób tworzenia nowego wystąpienia <xref:System.Security.Cryptography.RijndaelManaged> klasy, która implementuje algorytmu szyfrowania Rijndael i używać go do szyfrowania na **CryptoStream** klasy. W tym przykładzie **CryptoStream** jest inicjowana przy użyciu obiektu strumienia, o nazwie `MyStream` , może być dowolnego typu zarządzanego strumienia. **CreateEncryptor** metody z **RijndaelManaged** klasy jest przekazywany, klucza i IV, które są używane do szyfrowania. W tym przypadku domyślnego klucza i IV wygenerowany na podstawie `RMCrypto` są używane. Na koniec **CryptoStreamMode.Write** zostanie przekazana, określając uprawnienia do zapisu w strumieniu.  
   
 ```vb  
 Dim RMCrypto As New RijndaelManaged()  
@@ -40,10 +40,10 @@ CryptoStream CryptStream = new CryptoStream(MyStream, RMCrypto.CreateEncryptor()
   
  Po wykonaniu tego kodu, wszystkie dane zapisane **CryptoStream** obiektu jest szyfrowana przy użyciu algorytmu Rijndael.  
   
- Poniższy przykład przedstawia cały proces tworzenia strumienia, szyfrowania strumień zapisu do strumienia i zamknięcie strumienia. W tym przykładzie tworzy strumień sieci, który jest szyfrowana przy użyciu **CryptoStream** klasy i **RijndaelManaged** klasy. Komunikat jest zapisywane do strumienia zaszyfrowanych z <xref:System.IO.StreamWriter> klasy.  
+ Poniższy przykład pokazuje cały proces tworzenia strumienia, szyfrowanie strumienia, zapisywania do strumienia i zamyka strumienia. W tym przykładzie tworzy strumień sieci, który jest szyfrowana przy użyciu **CryptoStream** klasy i **RijndaelManaged** klasy. Wiadomości są zapisywane do strumienia zaszyfrowanych za pomocą <xref:System.IO.StreamWriter> klasy.  
   
 > [!NOTE]
->  W tym przykładzie służy również do zapisu do pliku. Aby to zrobić, należy usunąć <xref:System.Net.Sockets.TcpClient> odwołania oraz Zastąp <xref:System.Net.Sockets.NetworkStream> z <xref:System.IO.FileStream>.  
+>  W tym przykładzie służy również do zapisu do pliku. Aby to zrobić, należy usunąć <xref:System.Net.Sockets.TcpClient> odwołać się i Zastąp <xref:System.Net.Sockets.NetworkStream> z <xref:System.IO.FileStream>.  
   
 ```vb  
 Imports System  
@@ -158,22 +158,22 @@ public class main
 }  
 ```  
   
- W poprzednim przykładzie się pomyślnie, musi być procesem nasłuchiwanie na adresie IP i numer portu określone w <xref:System.Net.Sockets.TcpClient> klasy. Jeśli istnieje proces nasłuchiwania, kod będzie połączyć się z procesem nasłuchiwania, szyfrowania przy użyciu algorytmu symetrycznego Rijndael strumienia i zapisać "Witaj świecie!" w strumieniu. Jeśli kod zakończy się pomyślnie, wyświetla następujący tekst do konsoli:  
+ W poprzednim przykładzie wykonanie niepowodzeniem, musi być procesem nasłuchiwanie na adresie IP i numer portu określone w <xref:System.Net.Sockets.TcpClient> klasy. Istnienia procesu nasłuchiwania kod będzie połączenia z procesem nasłuchiwania, szyfrowanie w strumieniu w formacie algorytmu symetrycznego Rijndael i zapis "Hello World!" w strumieniu. Jeśli kod zakończy się pomyślnie, wyświetla następujący tekst do konsoli:  
   
 ```  
 The message was sent.  
 ```  
   
- Jednak jeśli nie znaleziono żadnych nasłuchiwania procesu lub zgłoszony wyjątek, kod wyświetla następujący tekst do konsoli:  
+ Jednak jeśli zostanie znaleziony żaden proces nie nasłuchuje lub wyjątek jest zgłaszany, ten kod wyświetla następujący tekst do konsoli:  
   
 ```  
 The connection failed.  
 ```  
   
 ## <a name="asymmetric-encryption"></a>Szyfrowanie asymetryczne  
- Asymetryczne algorytmy są zazwyczaj używany do szyfrowania niewielkich ilości danych, takimi jak szyfrowanie klucza symetrycznego i IV. Zazwyczaj poszczególnych wykonuje szyfrowanie asymetryczne używa klucza publicznego, generowane przez inną firmę. <xref:System.Security.Cryptography.RSACryptoServiceProvider> Klasy podano w tym celu w programie .NET Framework.  
+ Asymetryczne algorytmy zwykle są używane do szyfrowania małe ilości danych, takie jak szyfrowanie klucza symetrycznego i IV. Zazwyczaj poszczególnych wykonywania szyfrowanie asymetryczne używa klucza publicznego, generowane przez stronę trzecią. <xref:System.Security.Cryptography.RSACryptoServiceProvider> Klasa znajduje się w programie .NET Framework do tego celu.  
   
- W poniższym przykładzie użyto informacje o kluczu publicznym do szyfrowania klucza symetrycznego i IV. Tablice typu byte dwóch są inicjowane reprezentujących klucza publicznego innej firmy. <xref:System.Security.Cryptography.RSAParameters> Obiekt został zainicjowany tych wartości. Następnie **RSAParameters** obiektu (wraz z klucza publicznego, który reprezentuje) jest importowany do **RSACryptoServiceProvider** przy użyciu <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> metody. Na koniec klucza prywatnego i IV utworzonych przez <xref:System.Security.Cryptography.RijndaelManaged> klasy są szyfrowane. W tym przykładzie wymaga 128-bitowe szyfrowanie zainstalowane.  
+ W poniższym przykładzie użyto informacje o kluczu publicznym do szyfrowania klucza symetrycznego i IV. Tablice typu byte dwa są inicjowane, które reprezentują klucza publicznego osoby trzeciej. <xref:System.Security.Cryptography.RSAParameters> Obiekt jest inicjowany do tych wartości. Następnie **RSAParameters** obiektu (wraz z klucza publicznego, który reprezentuje) są importowane do **RSACryptoServiceProvider** przy użyciu <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> metody. Na koniec klucza prywatnego i IV utworzone przez <xref:System.Security.Cryptography.RijndaelManaged> klasy są szyfrowane. W tym przykładzie wymaga systemy, aby mieć szyfrowania 128-bitowego zainstalowane.  
   
 ```vb  
 Imports System  
@@ -262,7 +262,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Generowanie kluczy szyfrowania i odszyfrowywania](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)  
- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Generowanie kluczy szyfrowania i odszyfrowywania](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)  
+- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)

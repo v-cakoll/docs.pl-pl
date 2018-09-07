@@ -1,17 +1,17 @@
 ---
 title: 'Wyrażenia dopasowania (F #)'
-description: 'Dowiedz się, jak wyrażenie dopasowania F # udostępnia rozgałęziania formant, który jest oparte na porównaniu wyrażenia z zestawem wzorców.'
+description: 'Dowiedz się, jak wyrażenie dopasowania F # zapewnia rozgałęziania formant, który jest oparty na porównaniu wyrażenia zestaw wzorców.'
 ms.date: 04/19/2018
-ms.openlocfilehash: 22cc4b7a87a60d8a5dcbe05ac5abec5560a37516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565181"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44047678"
 ---
 # <a name="match-expressions"></a>Wyrażenia dopasowania
 
-`match` Wyrażenie zawiera rozgałęziania formant, który jest oparte na porównaniu wyrażenia z zestawem wzorców.
+`match` Wyrażenie zawiera rozgałęziania formant, który jest oparty na porównaniu wyrażenia zestaw wzorców.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,9 +31,9 @@ function
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenia dopasowania wzorca pozwalają na podstawie porównania wyrażenia testu z zestawem wzorców rozgałęzianie złożonych. W `match` wyrażenie *testu wyrażenie* jest porównywany z każdego wzorca z kolei, a po znalezieniu dopasowania odpowiadającego *wynik wyrażenia* jest obliczane i wartości wynikowej zwracana wartość wyrażenia dopasowania.
+Wyrażenia dopasowania wzorca umożliwiają złożonych gałęzi na podstawie porównania wyrażeniu testowym zestaw wzorców. W `match` wyrażenie *wyrażeniu testowym* jest porównywany z każdego wzorca pozycji, a po znalezieniu dopasowania odpowiedniego *wynik wyrażenia* jest obliczane i jest wartością wynikową zwracane jako wartość wyrażenia dopasowania.
 
-Funkcja składnią poprzedniego dopasowania wzorca jest wyrażenie lambda, w którym odpowiedników natychmiast w argumencie. Funkcja składnią poprzedniego dopasowania wzorca jest odpowiednikiem poniżej.
+Funkcja pokazano w poprzedniej składni dopasowania wzorca jest wyrażenie lambda, w których wzorzec dopasowywania odbywa się natychmiast na argumentu. Wzorzec dopasowywania funkcja pokazano w poprzedniej składni jest odpowiednikiem następujących czynności.
 
 ```fsharp
 fun arg ->
@@ -45,25 +45,25 @@ fun arg ->
 
 Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażenia Lambda: `fun` — słowo kluczowe](functions/lambda-expressions-the-fun-keyword.md).
 
-Cały zestaw wzorców powinna obejmować wszystkie możliwe dopasowania zmiennej wejściowego. Często, użyj wzorca symbolu wieloznacznego (`_`) jako ostatni wzorzec do dopasowania żadnych wcześniej niedopasowane wartości wejściowe.
+Cały zestaw wzorców powinno obejmować wszystkich możliwych dopasowań zmienna wejściowa. Często używasz wzór symboli wieloznacznych (`_`) jako ostatni wzorzec do dopasowania wszelkie wcześniej niedopasowane wartości wejściowych.
 
-Poniższy kod przedstawia kilka sposobów, w którym `match` wyrażenie jest używane. Odwołanie i przykłady wszystkie możliwe wzorców, które mogą być używane, zobacz [dopasowanie wzorca](pattern-matching.md).
+Poniższy kod ilustruje kilka sposobów, w którym `match` wyrażenie jest używane. Dokumentacja i przykłady wszystkie możliwe wzorców, które mogą być używane, zobacz [dopasowywania do wzorca](pattern-matching.md).
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
 
-## <a name="guards-on-patterns"></a>Osłony wzorce
+## <a name="guards-on-patterns"></a>Osłony na temat wzorców
 
-Można użyć `when` klauzuli, aby określić dodatkowy warunek zmiennej muszą spełniać do dopasowania wzorca. Takie klauzuli jest określany jako *zabezpieczenia*. Poniższe wyrażenie `when` — słowo kluczowe nie jest oceniany, chyba że dokonania dopasowania do wzorca skojarzone z tym guard.
+Możesz użyć `when` klauzulę, aby określić dodatkowy warunek zmiennej musi spełniać zgodnego ze wzorcem. Takie klauzuli nazywa się *je przed nieprzewidzianymi*. Następujące wyrażenie `when` — słowo kluczowe nie jest oceniany, chyba że dokonania dopasowania do wzorca, skojarzone z tym guard.
 
-Poniższy przykład przedstawia użycie osłony do określenia zakresu numerycznego dla zmiennej wzorca. Należy pamiętać, że wiele warunków są łączone za pomocą operatorów logicznych.
+Poniższy przykład ilustruje użycie guard do określania zakresu liczbowego dla zmiennej wzorca. Należy pamiętać, że wiele warunków są połączone za pomocą operatorów logicznych.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Należy pamiętać, że ponieważ nie można używać wartości innych niż literały we wzorcu, muszą używać `when` klauzuli, jeśli zajdzie potrzeba porównania część danych wejściowych z określoną wartością. Przedstawiono to w poniższym kodzie:
+Należy pamiętać, że ponieważ nie można użyć wartości innej niż literałami we wzorcu, należy użyć `when` klauzuli, jeśli zajdzie potrzeba porównania część dane wejściowe względem wartości. Jest to pokazane w poniższym kodzie:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-Należy pamiętać, że wzorzec jest objęta strażnik, osłony zastosowanie do **wszystkie** wzorców, nie tylko ostatnią. Na przykład, dla danego następujący kod, osłony `when a > 12` dotyczy zarówno `A a` i `B a`:
+Należy pamiętać, że jeśli — wzorzec jest objęte strażnik, osłony dotyczy **wszystkich** wzorców, a nie tylko ostatni z nich. Na przykład, biorąc pod uwagę następujący kod, osłony `when a > 12` ma zastosowanie do obu `A a` i `B a`:
 
 ```fsharp
 type Union =
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka F#](index.md)  
-[Wzorce aktywne](active-patterns.md)  
-[Dopasowanie do wzorca](pattern-matching.md)  
+- [Dokumentacja języka F#](index.md)  
+- [Wzorce aktywne](active-patterns.md)  
+- [Dopasowanie do wzorca](pattern-matching.md)  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab14be82f3dedeab0a1e1e574ce5622d067f72ae
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 730c6abfe9d49c319d1438a0821ad47e19fc0638
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43789020"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098965"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 
@@ -742,6 +742,10 @@ Ciąg formatu daty i godziny definiuje reprezentację tekstową <xref:System.Dat
 
  Ciąg wynikowy tworzony przez wiele niestandardowych daty i godziny specyfikatorów formatu zależy również od właściwości bieżącego <xref:System.Globalization.DateTimeFormatInfo> obiektu. Twoja aplikacja może zmieniać wyniki tworzone przez niektóre niestandardowa data i czas specyfikatorów formatu, zmieniając odpowiadającą im <xref:System.Globalization.DateTimeFormatInfo> właściwości. Na przykład, specyfikator formatu "ddd" dodaje skrót nazwy dnia tygodnia w <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> tablicy ciągów do ciągu wynikowego. Podobnie, specyfikator formatu "MMMM" dodaje pełną nazwę miesiąca w <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> tablicy ciągów do ciągu wynikowego.
 
-## <a name="see-also"></a>Zobacz też
- <xref:System.DateTime?displayProperty=nameWithType><xref:System.IFormatProvider?displayProperty=nameWithType>
- [Typy formatowania](../../../docs/standard/base-types/formatting-types.md) [ciągi formatu standardowego daty i godziny](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) [próbki: narzędzie formatowania programu .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.IFormatProvider?displayProperty=nameWithType>
+- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)
+- [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Przykład: .NET Framework 4 formatowanie narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

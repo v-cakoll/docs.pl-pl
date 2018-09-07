@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb1a337c2795627b82125c8c29335c52b5fb332c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570387"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071445"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Tworzenie nowych atrybutów dla elementów w modelu DOM
-Tworzenie nowych atrybutów różni się od tworzenia innych typów węzła, ponieważ atrybuty nie są węzłami, ale są właściwości węzeł elementu i są zawarte w **XmlAttributeCollection** skojarzone z elementem. Istnieje wiele sposobów tworzenia atrybutu i dołączenie go do elementu:  
+Tworzenie nowych atrybutów różni się od tworzenia innych typów węzła, ponieważ atrybutów nie są węzłami, ale są właściwości węzeł elementu i są zawarte w **XmlAttributeCollection** skojarzone z elementem. Istnieje wiele sposobów, aby utworzyć atrybut i dołączyć go do elementu:  
   
--   Pobierz węzeł elementu i użyj **SetAttribute** można dodać atrybutu do kolekcji atrybutów tego elementu.  
+-   Pobierz węzeł elementu i użyć **SetAttribute** Dodawanie atrybutu do kolekcji atrybutu tego elementu.  
   
--   Utwórz **XmlAttribute** za pomocą węzła **CreateAttribute** metody, Pobierz węzeł elementu, a następnie użyj **SetAttributeNode** można dodać węzła do tej kolekcji atrybutów element.  
+-   Tworzenie **XmlAttribute** za pomocą węzła **CreateAttribute** metody, Pobierz węzła elementu, a następnie użyj **SetAttributeNode** można dodać węzła do kolekcji atrybutów tego element.  
   
- Poniższy przykład pokazuje, jak dodać atrybutu do elementu przy użyciu **SetAttribute** metody.  
+ Poniższy przykład przedstawia sposób dodawania atrybutu do elementu za pomocą **SetAttribute** metody.  
   
 ```vb  
 Imports System  
@@ -72,9 +72,9 @@ public class Sample
   }  
 ```  
   
- W poniższym przykładzie przedstawiono nowy atrybut tworzone przy użyciu **CreateAttribute** metody. Następnie pokaże atrybut, który został dodany do kolekcji atrybut **książki** przy użyciu elementu **SetAttributeNode** metody.  
+ W poniższym przykładzie pokazano nową atrybutu tworzone przy użyciu **CreateAttribute** metody. Następnie wyświetla atrybut dodawane do kolekcji atrybut **książki** elementu za pomocą **SetAttributeNode** metody.  
   
- Podane następujący kod XML:  
+ Biorąc pod uwagę następujący kod XML:  
   
 ```xml  
 <book genre='novel' ISBN='1-861001-57-5'>  
@@ -82,7 +82,7 @@ public class Sample
 </book>  
 ```  
   
- Utwórz nowy atrybut i nadaj mu wartość:  
+ Utwórz nowy atrybut i wartości:  
   
 ```vb  
 Dim attr As XmlAttribute = doc.CreateAttribute("publisher")  
@@ -94,7 +94,7 @@ XmlAttribute attr = doc.CreateAttribute("publisher");
 attr.Value = "WorldWide Publishing";  
 ```  
   
- i dołącz je do elementu:  
+ i dołączyć go do elementu:  
   
 ```vb  
 doc.DocumentElement.SetAttributeNode(attr)  
@@ -112,17 +112,18 @@ doc.DocumentElement.SetAttributeNode(attr);
 </book>  
 ```  
   
- Kodu pełny przykład można znaleźć w folderze <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
+ Przykładowe pełny kod znajduje się w temacie <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
   
- Można również utworzyć **XmlAttribute** węzeł i użyj **InsertBefore** lub **InsertAfter** metody umieszczony w odpowiedniej pozycji w kolekcji. Jeśli atrybut o takiej samej nazwie jest już obecny w kolekcji atrybutów, istniejące **XmlAttribute** węzeł zostanie usunięty z kolekcji i nowych **XmlAttribute** wstawić węzła. Wykonuje ten sam sposób jak **SetAttribute** metody. Te metody przyjmują jako parametr istniejący węzeł jako punkt odniesienia w celu **InsertBefore** i **InsertAfter**. Jeśli nie podasz węzeł odniesienia, wskazując miejsca do wstawienia nowego węzła, wartością domyślną **InsertAfter** metodą jest Wstaw nowy węzeł na początku kolekcji. To domyślne położenie dla **InsertBefore**, jeśli żaden węzeł odniesienia jest dostępne, znajduje się na końcu kolekcji.  
+ Można również utworzyć **XmlAttribute** węzła i użyj **InsertBefore** lub **InsertAfter** metody, aby umieścić go w odpowiedniej pozycji w kolekcji. Jeśli atrybut o tej samej nazwie istnieje już w kolekcji atrybutów istniejących **XmlAttribute** węzeł zostanie usunięty z kolekcji, a nowe **XmlAttribute** wstawić węzła. Spowoduje to wykonanie taki sam sposób jak **SetAttribute** metody. Te metody przyjmują jako parametru, istniejący węzeł jako punkt odniesienia w celu **InsertBefore** i **InsertAfter**. Jeśli nie podasz węzeł odniesienia, wskazując, skąd można wstawić nowy węzeł, wartość domyślna dla **InsertAfter** metoda polega na Wstaw nowy węzeł na początku kolekcji. Domyślne położenie **InsertBefore**, jeśli nie podano żadnego węzła odwołanie, znajduje się na końcu kolekcji.  
   
- Jeśli utworzono **XmlNamedNodeMap** atrybutów, można dodać atrybutu przy użyciu nazwy <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Aby uzyskać więcej informacji, zobacz [węzła kolekcje NamedNodeMaps i NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
+ Jeśli utworzono **XmlNamedNodeMap** atrybutów, można dodać atrybutu przy użyciu nazwy <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Aby uzyskać więcej informacji, zobacz [kolekcje węzłów: namednodemaps i NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
   
-## <a name="default-attributes"></a>Domyślne atrybuty  
- Jeśli utworzysz element, który jest zadeklarowana, aby mieć domyślnego atrybutu nowy atrybut domyślny z wartością domyślną jest tworzone przez XML modelu DOM (Document Object) i dołączony do elementu. Węzły podrzędne domyślny atrybut również są tworzone w tym momencie.  
+## <a name="default-attributes"></a>Atrybuty domyślne  
+ Jeśli utworzysz element, który jest zadeklarowany ma atrybut domyślny, nowy domyślny atrybut o jego wartość domyślna jest tworzone przez XML Document Object Model (DOM) i dołączony do elementu. Węzły podrzędne domyślnego atrybutu są również tworzone w tej chwili.  
   
 ## <a name="attribute-child-nodes"></a>Węzły podrzędne atrybutu  
- Wartość węzła atrybutu staje się węzły podrzędne. Istnieją tylko dwa typy węzłów prawidłowy element podrzędny: **XmlText** węzłów i **XmlEntityReference** węzłów. Są to węzłów podrzędnych w tym sensie, że metod, takich jak **FirstChild** i **LastChild** ich przetworzyć jako węzły podrzędne. Podczas próby usunięcia atrybuty lub atrybut węzły podrzędne, ważne jest tej różnicy atrybutu o węzłów podrzędnych. Aby uzyskać więcej informacji, zobacz [usuwanie atrybutów z węzłem elementu w modelu DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
+ Wartość węzła atrybutu staje się jego węzłów podrzędnych. Istnieją tylko dwa typy węzłów prawidłowy element podrzędny: **XmlText** węzłów i **XmlEntityReference** węzłów. Są węzły podrzędne, w tym sensie, że metody, takie jak **FirstChild** i **LastChild** przetwarzać je jako węzły podrzędne. Wykonywania tego rozróżnienia atrybutu o węzłów podrzędnych jest ważne, podczas próby usunięcia atrybutów i węzłów podrzędnych atrybutu. Aby uzyskać więcej informacji, zobacz [usuwanie atrybutów z węzła elementu w modelu DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

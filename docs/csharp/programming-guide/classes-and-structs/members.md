@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
 ms.openlocfilehash: dbfd0c48dc59b094af49e65d2ed4fcd4e2a70ff0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884814"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087562"
 ---
 # <a name="members-c-programming-guide"></a>Członkowie (Przewodnik programowania w języku C#)
 Klasy i struktury mają elementów członkowskich, które reprezentują ich danych i działania. Elementy członkowskie klasy obejmują wszystkie elementy członkowskie zadeklarowana w klasie, oraz wszystkie elementy członkowskie (z wyjątkiem konstruktorów i finalizatory) zadeklarowane dla wszystkich klas w hierarchii dziedziczenia. Prywatne składowe w klasach bazowych są dziedziczone, ale nie są dostępne z klas pochodnych.  

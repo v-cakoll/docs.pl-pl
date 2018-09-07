@@ -3,11 +3,11 @@ title: Własność i oddzielenie schematu użytkownika w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741920"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097690"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Własność i oddzielenie schematu użytkownika w programie SQL Server
 Podstawowa koncepcja zabezpieczeń programu SQL Server jest właściciele obiektów uprawnień do administrowania nimi. Nie można usunąć uprawnień od właściciela obiektu, a nie można usunąć użytkowników z bazy danych, jeśli ich właścicielem obiektów w nim.  

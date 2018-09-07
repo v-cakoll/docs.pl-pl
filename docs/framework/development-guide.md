@@ -7,11 +7,11 @@ ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c42311368bf94a2629f656b61b09cb7c2c5f68b6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885522"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076615"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework — podręcznik programowania
 W tej sekcji wyjaśniono, jak do tworzenia, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji .NET Framework. Sekcja zawiera również informacje odnośnie do zagadnień technologicznych takich jak dynamiczne programowania, interoperacyjności, rozszerzalności, zarządzanie pamięcią i wątków.  

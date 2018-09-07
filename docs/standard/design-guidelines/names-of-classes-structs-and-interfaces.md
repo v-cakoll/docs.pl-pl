@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f60a2283c01d0dc2665dafaa99ea52000aa3bc47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784692"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064793"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nazwy klas, struktur i interfejsów
 Wskazówkami nazewnictwa, które należy wykonać dotyczą nazewnictwa typ ogólny.  
@@ -101,6 +101,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)

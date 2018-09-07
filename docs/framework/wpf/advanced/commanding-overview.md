@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: d41613ce2488fa572fa11def06350ab1e564df6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749078"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086222"
 ---
 # <a name="commanding-overview"></a>Przegląd Polecenia
 <a name="introduction"></a> Polecenia jest mechanizm danych wejściowych w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępniającej dane wejściowe Obsługa na poziomie semantycznego więcej niż dane wejściowe z urządzenia. Przykłady poleceń **kopiowania**, **Wytnij**, i **Wklej** odnaleźć operacji na wielu aplikacji.  

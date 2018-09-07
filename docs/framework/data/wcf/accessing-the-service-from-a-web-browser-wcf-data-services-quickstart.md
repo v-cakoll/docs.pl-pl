@@ -3,11 +3,11 @@ title: Uzyskiwanie dostępu do usługi z przeglądarki sieci Web (WCF Data Servi
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
 ms.openlocfilehash: 01184969b7bfcc0f68351db7c8daeebe79be583c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43799333"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086116"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Uzyskiwanie dostępu do usługi z przeglądarki sieci Web (WCF Data Services — Szybki Start)
 

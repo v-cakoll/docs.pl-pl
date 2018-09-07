@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: ca3b31c1d60770a6b9db5e92275d9840036ee0b0
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42753911"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075286"
 ---
 # <a name="xml-and-soap-serialization"></a>Serializacja XML i SOAP
 
@@ -90,6 +90,6 @@ Dodaje typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaI
 [Usługi sieci Web XML utworzone za pomocą platformy ASP.NET i klientów usługi sieci Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
 Zawiera tematy, które opisują, a wyjaśniają, jak program usług XML sieci Web za pomocą programu ASP.NET.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Serializacja binarna](binary-serialization.md)  
+- [Serializacja binarna](binary-serialization.md)

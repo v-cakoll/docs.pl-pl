@@ -3,11 +3,11 @@ title: Wyrażenia zapytań (F#)
 description: 'Dowiedz się więcej o obsłudze wyrażenia zapytań LINQ języka F # języka programowania.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867949"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080127"
 ---
 # <a name="query-expressions"></a>Wyrażenia zapytań
 

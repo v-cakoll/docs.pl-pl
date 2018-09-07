@@ -3,11 +3,11 @@ title: Federacja — przykład
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: 49a13b292a627c054510a10445e1e64ab869162c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744644"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087832"
 ---
 # <a name="federation-sample"></a>Federacja — przykład
 Niniejszy przykład pokazuje zabezpieczeń.  

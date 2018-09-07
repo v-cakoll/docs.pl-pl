@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fe820b9d2157c09428903a36427d3ff5e4c0045b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745583"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44069619"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane do czasu ukończenia wywołania
 Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane bez oczekiwania na ukończenie wywołania. Należy rozważyć zastosowanie operatora "Await" do wyniku wywołania.  
@@ -117,7 +117,7 @@ Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będz
   
      Proste okno, która zawiera przycisk i pole tekstowe, pojawia się w **projektowania** widoku MainWindow.xaml.  
   
-     Aby uzyskać więcej informacji dotyczących projektanta XAML, zobacz [Tworzenie interfejsu użytkownika przy użyciu projektanta XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Aby uzyskać informacje dotyczące sposobu tworzenia własnych prostego interfejsu użytkownika, zobacz "Aby utworzyć aplikację programu WPF" i "projektowania proste MainWindow WPF" sekcje [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](https://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     Aby uzyskać więcej informacji dotyczących projektanta XAML, zobacz [Tworzenie interfejsu użytkownika przy użyciu projektanta XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Aby uzyskać informacje dotyczące sposobu tworzenia własnych prostego interfejsu użytkownika, zobacz "Aby utworzyć aplikację programu WPF" i "projektowania proste MainWindow WPF" sekcje [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 4.  Zastąp kod w MainWindow.xaml.vb następującym kodem.  
   
@@ -203,6 +203,7 @@ Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będz
   
      Oczekiwane dane wyjściowe pojawia się na końcu kod.  
   
-## <a name="see-also"></a>Zobacz też  
- [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)  
- [Programowanie asynchroniczne z Async i Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)  
+- [Programowanie asynchroniczne z Async i Await](../../../visual-basic/programming-guide/concepts/async/index.md)

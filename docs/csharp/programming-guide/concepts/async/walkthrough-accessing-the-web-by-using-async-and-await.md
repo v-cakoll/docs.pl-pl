@@ -3,11 +3,11 @@ title: 'Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: cb628941d53957356cfa49d81fb78f16369af86b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558551"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085215"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)
 Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą funkcji async/await. Można napisać kod asynchroniczny, który wygląda jak synchroniczny kod i pozwolić kompilatorowi obsługi funkcji wywołania zwrotnego trudne i kontynuacje, które kodu asynchronicznego zazwyczaj pociąga za sobą.  

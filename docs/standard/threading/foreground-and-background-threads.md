@@ -11,11 +11,11 @@ ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fcedd478ee1eb89c11dc9535b1d2ffe843d0f658
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868540"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081332"
 ---
 # <a name="foreground-and-background-threads"></a>Wątki pierwszego planu i tła
 Wątek jest wątku w tle lub wątku na pierwszym planie. Wątków w tle są takie same, wątki pierwszoplanowe z jednym wyjątkiem: wątku w tle nie przechowuje zarządzanym środowisku wykonywania uruchomiona. Gdy wszystkie wątki pierwszoplanowe zostały zatrzymane w ramach procesu zarządzanego (gdzie plik .exe jest zarządzanym zestawem), system zatrzymuje wszystkich wątków w tle i zamyka.  

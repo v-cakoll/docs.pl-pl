@@ -6,11 +6,11 @@ ms.author: mairaw
 ms.date: 03/08/2017
 ms.technology: dotnet-cli
 ms.openlocfilehash: 5ec7168ebc2ee4fc428d1ab520e986842f111ca7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747606"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076479"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczęcie pracy z platformą .NET Core w Windows/Linux/macOS przy użyciu wiersza polecenia
 

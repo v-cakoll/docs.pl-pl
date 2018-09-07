@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Przekształcanie fragmentu węzła'
+title: 'Instrukcje: Przekształcanie fragmentu węzła'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,30 +8,30 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cd35e469a16dc2fdb3a7f4afd89d04f67185cd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568566"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061354"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>Porady: Przekształcanie fragmentu węzła
-Gdy przekształcenie danych zawartych w <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument> obiektów przekształceń XSLT stosowane do całego dokumentu. Innymi słowy w przypadku przekazania w węźle innym niż węzeł główny dokumentu, to nie zapobiega proces przekształcania podczas uzyskiwania dostępu do wszystkich węzłów w załadowanego dokumentu. Aby przekształcić fragmentu węzła, należy utworzyć oddzielny obiekt zawierający tylko fragmentu węzeł i przekazać do obiektu <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
+# <a name="how-to-transform-a-node-fragment"></a>Instrukcje: Przekształcanie fragmentu węzła
+Kiedy przekształcasz dane zawarte w <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument> obiektu przekształcenia XSLT dotyczą dokumentu jako całości. Innymi słowy Jeśli przekażesz w węźle innym niż węzeł główny dokument, to nie uniemożliwia proces przekształcania uzyskiwania dostępu do wszystkich węzłów w dokumencie załadowane. Aby Przekształcanie fragmentu węzła, należy utworzyć oddzielny obiekt zawierający tylko fragmentu węzła i przekazać ten obiekt do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-transform-a-node-fragment"></a>Aby przekształcić fragmentu węzła  
+#### <a name="to-transform-a-node-fragment"></a>Aby Przekształcanie fragmentu węzła  
   
 1.  Utwórz obiekt zawierający dokumentu źródłowego.  
   
-2.  Zlokalizuj fragmentu węzła, który ma zostać transformacji.  
+2.  Znajdź fragment węzeł, który chcesz przekształcić.  
   
-3.  Należy utworzyć oddzielny obiekt z właśnie fragmentu węzła.  
+3.  Utwórz oddzielne obiekty z tylko fragmentu węzła.  
   
-4.  Fragment węzła do przekazania <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
+4.  Przekazywanie fragmentu węzła do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przekształca fragmentu węzła i umieszcza wyniki w konsoli.  
+ W poniższym przykładzie przekształca fragmentu węzła i generuje wyjściowe wyniki do konsoli.  
   
  [!code-csharp[XSLT_NodeFrag#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_NodeFrag/CS/xslt_frag.cs#1)]
  [!code-vb[XSLT_NodeFrag#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_NodeFrag/VB/xslt_frag.vb#1)]  
@@ -45,7 +45,8 @@ Gdy przekształcenie danych zawartych w <xref:System.Xml.XmlDocument> lub <xref:
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
 ### <a name="output"></a>Dane wyjściowe  
- Tytuł książki jest Man. zaufania  
+ Tytuł książki jest Man. ufności  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

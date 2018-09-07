@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 778fcd8932dfa37bc5d4487f3ec6597425cf9fb8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6b691939d2592cc72a232a09ab2a7e950b810281
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529358"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086780"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Rzutowanie i konwersje typów (Przewodnik programowania w języku C#)
 
@@ -79,7 +79,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
- C# zawiera [jest](../../../csharp/language-reference/keywords/is.md) i [jako](../../../csharp/language-reference/keywords/as.md) operatorów umożliwiających testowanie zgodności przed wykonaniem faktycznie rzutowania. Aby uzyskać więcej informacji, zobacz [porady: bezpieczne rzutowanie za pomocą jako operatorów i is](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).  
+ C# zawiera [jest](../../../csharp/language-reference/keywords/is.md) i [jako](../../../csharp/language-reference/keywords/as.md) operatorów umożliwiających testowanie zgodności przed wykonaniem faktycznie rzutowania. Aby uzyskać więcej informacji, zobacz [porady: bezpieczne rzutowanie za pomocą dopasowywania do wzorca, jak i operatory](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

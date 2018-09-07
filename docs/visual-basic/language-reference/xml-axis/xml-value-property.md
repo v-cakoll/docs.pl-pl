@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
 ms.openlocfilehash: 2b0719320db5843d5d010bfbd70e551646e3ded9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43533394"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086342"
 ---
 # <a name="xml-value-property-visual-basic"></a>Właściwość wartości XML (Visual Basic)
 Zapewnia dostęp do wartości pierwszego elementu w kolekcji <xref:System.Xml.Linq.XElement> obiektów.  

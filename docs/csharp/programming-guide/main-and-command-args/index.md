@@ -13,11 +13,11 @@ helpviewer_keywords:
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
 ms.openlocfilehash: 144d03edf28464717430bd0ae83db637578d8296
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892259"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098992"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() i argumenty wiersza poleceń (C# Programming Guide)
 

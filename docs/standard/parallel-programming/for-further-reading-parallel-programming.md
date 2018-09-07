@@ -8,11 +8,11 @@ ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 78be13bcc02d2df16c4dc6b0b7fb8479d62afbe5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883215"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087453"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Dalsze informacje (Programowanie równoległe)
 

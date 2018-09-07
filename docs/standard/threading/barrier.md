@@ -10,34 +10,34 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 864571262d1c9c060235840424542856187341df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584301"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062504"
 ---
 # <a name="barrier-net-framework"></a>Bariera (.NET Framework)
-A *bariery* jest zdefiniowane przez użytkownika prymitywu synchronizacji, który umożliwia wiele wątków (nazywane *uczestników*) nad jednocześnie algorytm w fazach. Uczestnik wykonuje, dopóki nie osiągnie punkt bariery w kodzie. Bariera reprezentuje koniec jedną fazą pracy. Gdy uczestnika osiągnie bariery, blokuje aż do osiągnięcia wszystkich uczestników ma tego samego bariery. Po wszystkich uczestników osiągnęły bariery, opcjonalnie można wywołać akcję po fazie. Ta faza po akcja może zostać użyta do wykonania akcji przez pojedynczy wątek, podczas gdy inne wątki nadal są zablokowane. Po wykonaniu akcji, uczestników są wszystkie odblokowane.  
+A *barierę* jest zdefiniowane przez użytkownika synchronizacji, który umożliwia wielu wątków (nazywane *uczestników*) pracować jednocześnie na algorytm w fazach. Każdy uczestnik wykonuje aż do napotkania punktu barierę w kodzie. Bariera oznacza koniec jedną fazą pracy. Gdy uczestnika, który osiągnie barierę, blokuje to, aż wszyscy uczestnicy osiągnęły barierę tego samego. Po wszystkich uczestników osiągnęły barierę, możesz opcjonalnie wywołać akcję po fazie. Tę fazę po okresie akcji może służyć do wykonywania akcji przez pojedynczy wątek, podczas gdy inne wątki nadal są zablokowane. Po wykonaniu akcji uczestnicy są wszystkie odblokowane.  
   
- Poniższy fragment kodu przedstawia wzorzec bariery podstawowe.  
+ Poniższy fragment kodu przedstawia wzorzec barierę podstawowe.  
   
  [!code-csharp[CDS_Barrier#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#02)]
  [!code-vb[CDS_Barrier#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_barrier/vb/barrier_vb.vb#02)]  
   
- Pełny przykład, zobacz [porady: synchronizowanie jednoczesnych operacji za pomocą bariery](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+ Aby uzyskać kompletny przykład, zobacz [porady: synchronizowanie jednoczesnych operacji za pomocą bariery](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="adding-and-removing-participants"></a>Dodawanie i usuwanie uczestników  
- Po utworzeniu <xref:System.Threading.Barrier>, określ liczbę uczestników. Można dodać lub usunąć uczestników dynamicznie w dowolnym momencie. Na przykład, jeśli jednego uczestnika rozwiązuje jego część problemu, można przechowywać wynik, Zatrzymaj wykonywanie na wątku i Wywołaj <xref:System.Threading.Barrier.RemoveParticipant%2A> Aby zmniejszyć liczbę uczestników bariera. Po dodaniu uczestnika przez wywołanie metody <xref:System.Threading.Barrier.AddParticipant%2A>, zwracana wartość Określa numer Bieżąca faza, które mogą być przydatne w celu zainicjowania pracy nowego uczestnika.  
+ Po utworzeniu <xref:System.Threading.Barrier>, określ liczbę uczestników. Można dodawać lub usuwać uczestników dynamicznie w dowolnym momencie. Na przykład, jeśli jeden uczestnik rozwiązuje jego część problemu, możesz zapisać wynik, Zatrzymaj wykonywanie na wątku, a następnie wywołaj <xref:System.Threading.Barrier.RemoveParticipant%2A> zmniejszyć liczbę uczestników barierę. Po dodaniu uczestnikiem, wywołując <xref:System.Threading.Barrier.AddParticipant%2A>, wartość zwracana określa numer Bieżąca faza, który może być przydatne w celu zainicjowania pracy nowych uczestników.  
   
 ## <a name="broken-barriers"></a>Przerwane bariery  
- Zakleszczenie może wystąpić, jeśli jednego uczestnika nie może uzyskać dostęp do zapory. Aby uniknąć tych zakleszczenia, użyj przeciążeń <xref:System.Threading.Barrier.SignalAndWait%2A> metodę, aby określić limit czasu i token anulowania. Te zwracane przeciążenia wartość logiczna, która co uczestnika można sprawdzić przed nią nadal do następnej fazy.  
+ Zakleszczenie może wystąpić, jeśli jednego uczestnika nie uda się połączyć do zapory. Aby uniknąć tych zakleszczenia, użyj przeciążeń <xref:System.Threading.Barrier.SignalAndWait%2A> metodę, aby określić limit czasu i token anulowania. Te przeciążenia, które są zwracane wartość logiczną, każdy uczestnik można sprawdzić przed dalszym przeprowadzenia kolejnej fazy.  
   
 ## <a name="post-phase-exceptions"></a>Wyjątki po fazie  
- Jeśli delegat po fazie zgłasza wyjątek, jest ujęte w <xref:System.Threading.BarrierPostPhaseException> obiektu, który jest następnie propagowany do wszystkich uczestników.  
+ Jeśli delegat po fazie zgłasza wyjątek, jest opakowana w <xref:System.Threading.BarrierPostPhaseException> obiektu, który jest następnie propagowany do wszystkich uczestników.  
   
-## <a name="barrier-versus-continuewhenall"></a>Bariera i ContinueWhenAll  
- Bariery są szczególnie przydatne wątków wykonywania faz w pętli. Jeśli kod wymaga tylko jednego lub dwóch faz, należy rozważyć, czy ma być używany <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> obiekty z dowolnego rodzaju niejawne sprzężenia, w tym:  
+## <a name="barrier-versus-continuewhenall"></a>Zapory i ContinueWhenAll  
+ Bariery są szczególnie przydatne podczas wykonywania wielu faz wątki w pętli. Jeśli kod wymaga tylko jednego lub dwóch faz, rozważ użycie <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> obiekty z dowolnego rodzaju niejawne łączenia, w tym:  
   
 -   <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A>  
   
@@ -49,6 +49,7 @@ A *bariery* jest zdefiniowane przez użytkownika prymitywu synchronizacji, któr
   
  Aby uzyskać więcej informacji, zobacz [tworzenie łańcuchów zadań przy użyciu zadań kontynuacji](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Instrukcje: synchronizacja jednoczesnych operacji za pomocą elementu Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [Instrukcje: synchronizacja jednoczesnych operacji za pomocą elementu Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)

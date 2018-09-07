@@ -5,11 +5,11 @@ helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
 ms.openlocfilehash: 36dbf725dfcd6fefe6482f7de69daea9356d3d07
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542352"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087702"
 ---
 # <a name="configuring-http-and-https"></a>Konfigurowanie protokołów HTTP i HTTPS
 Usługi WCF i klienci mogą komunikować się za pośrednictwem protokołów HTTP i HTTPS. Ustawienia HTTP/HTTPS są skonfigurowane przy użyciu usług Internet Information Services (IIS) lub za pomocą narzędzia wiersza polecenia. Gdy usługa WCF jest hostowana w ustawieniach usług IIS HTTP lub HTTPS można skonfigurować w ramach usług IIS (za pomocą narzędzia inetmgr.exe). Jeśli usługa WCF jest samodzielnie hostowana, ustawienia protokołu HTTP lub HTTPS są konfigurowane za pomocą narzędzia wiersza polecenia.  

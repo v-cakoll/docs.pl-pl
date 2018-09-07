@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
 ms.openlocfilehash: 4bbc6086dc5fd3838ef9361762c3068ca44efd0e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417599"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44047984"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabela niejawnych konwersji liczbowych (odwołanie w C#)
 W poniższej tabeli przedstawiono wstępnie zdefiniowanych niejawnych konwersji liczbowych. Niejawne konwersje mogą wystąpić w wielu sytuacjach, w tym metody wywoływania i przypisania poufności informacji.  

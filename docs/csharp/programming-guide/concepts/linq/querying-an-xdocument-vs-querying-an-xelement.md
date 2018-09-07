@@ -3,19 +3,19 @@ title: Podczas badania elementu XDocument a. Podczas badania XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
 ms.openlocfilehash: 991cbf14fde1c2e3e1e76ef10066db3408ca51c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736454"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070241"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a><span data-ttu-id="31317-102">Podczas badania elementu XDocument a. Podczas badania XElement (C#)</span><span class="sxs-lookup"><span data-stu-id="31317-102">Querying an XDocument vs. Querying an XElement (C#)</span></span>
-<span data-ttu-id="31317-103">Podczas ładowania dokumentu za pośrednictwem <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, zauważysz, trzeba nieco inaczej niż podczas ładowania za pośrednictwem pisać zapytania <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="31317-103">When you load a document via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, you will notice that you have to write queries slightly differently than when you load via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span></span>  
+# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a><span data-ttu-id="c8ede-102">Podczas badania elementu XDocument a. Podczas badania XElement (C#)</span><span class="sxs-lookup"><span data-stu-id="c8ede-102">Querying an XDocument vs. Querying an XElement (C#)</span></span>
+<span data-ttu-id="c8ede-103">Podczas ładowania dokumentu za pośrednictwem <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, zauważysz, trzeba nieco inaczej niż podczas ładowania za pośrednictwem pisać zapytania <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c8ede-103">When you load a document via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, you will notice that you have to write queries slightly differently than when you load via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span></span>  
   
-## <a name="comparison-of-xdocumentload-and-xelementload"></a><span data-ttu-id="31317-104">Porównanie XDocument.Load i XElement.Load</span><span class="sxs-lookup"><span data-stu-id="31317-104">Comparison of XDocument.Load and XElement.Load</span></span>  
- <span data-ttu-id="31317-105">Podczas ładowania dokumentu XML do <xref:System.Xml.Linq.XElement> za pośrednictwem <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement> w katalogu głównym pliku XML drzewo zawiera element główny dokumentu załadowane.</span><span class="sxs-lookup"><span data-stu-id="31317-105">When you load an XML document into an <xref:System.Xml.Linq.XElement> via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, the <xref:System.Xml.Linq.XElement> at the root of the XML tree contains the root element of the loaded document.</span></span> <span data-ttu-id="31317-106">Jednak podczas ładowania tego samego dokumentu XML do <xref:System.Xml.Linq.XDocument> za pośrednictwem <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, katalog główny drzewa jest <xref:System.Xml.Linq.XDocument> węzłem, a element główny dokumentu załadować jest jeden element podrzędny z dozwolonych <xref:System.Xml.Linq.XElement> węzła <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="31317-106">However, when you load the same XML document into an <xref:System.Xml.Linq.XDocument> via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, the root of the tree is an <xref:System.Xml.Linq.XDocument> node, and the root element of the loaded document is the one allowed child <xref:System.Xml.Linq.XElement> node of the <xref:System.Xml.Linq.XDocument>.</span></span> <span data-ttu-id="31317-107">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Osi działać względem węzła głównego.</span><span class="sxs-lookup"><span data-stu-id="31317-107">The [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes operate relative to the root node.</span></span>  
+## <a name="comparison-of-xdocumentload-and-xelementload"></a><span data-ttu-id="c8ede-104">Porównanie XDocument.Load i XElement.Load</span><span class="sxs-lookup"><span data-stu-id="c8ede-104">Comparison of XDocument.Load and XElement.Load</span></span>  
+ <span data-ttu-id="c8ede-105">Podczas ładowania dokumentu XML do <xref:System.Xml.Linq.XElement> za pośrednictwem <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement> w katalogu głównym pliku XML drzewo zawiera element główny dokumentu załadowane.</span><span class="sxs-lookup"><span data-stu-id="c8ede-105">When you load an XML document into an <xref:System.Xml.Linq.XElement> via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, the <xref:System.Xml.Linq.XElement> at the root of the XML tree contains the root element of the loaded document.</span></span> <span data-ttu-id="c8ede-106">Jednak podczas ładowania tego samego dokumentu XML do <xref:System.Xml.Linq.XDocument> za pośrednictwem <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, katalog główny drzewa jest <xref:System.Xml.Linq.XDocument> węzłem, a element główny dokumentu załadować jest jeden element podrzędny z dozwolonych <xref:System.Xml.Linq.XElement> węzła <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="c8ede-106">However, when you load the same XML document into an <xref:System.Xml.Linq.XDocument> via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, the root of the tree is an <xref:System.Xml.Linq.XDocument> node, and the root element of the loaded document is the one allowed child <xref:System.Xml.Linq.XElement> node of the <xref:System.Xml.Linq.XDocument>.</span></span> <span data-ttu-id="c8ede-107">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Osi działać względem węzła głównego.</span><span class="sxs-lookup"><span data-stu-id="c8ede-107">The [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes operate relative to the root node.</span></span>  
   
- <span data-ttu-id="31317-108">W pierwszym przykładzie ładuje drzewa XML przy użyciu <xref:System.Xml.Linq.XElement.Load%2A>.</span><span class="sxs-lookup"><span data-stu-id="31317-108">This first example loads an XML tree using <xref:System.Xml.Linq.XElement.Load%2A>.</span></span> <span data-ttu-id="31317-109">Następnie zapytania dotyczące elementów podrzędnych katalogu głównego drzewa.</span><span class="sxs-lookup"><span data-stu-id="31317-109">It then queries for the child elements of the root of the tree.</span></span>  
+ <span data-ttu-id="c8ede-108">W pierwszym przykładzie ładuje drzewa XML przy użyciu <xref:System.Xml.Linq.XElement.Load%2A>.</span><span class="sxs-lookup"><span data-stu-id="c8ede-108">This first example loads an XML tree using <xref:System.Xml.Linq.XElement.Load%2A>.</span></span> <span data-ttu-id="c8ede-109">Następnie zapytania dotyczące elementów podrzędnych katalogu głównego drzewa.</span><span class="sxs-lookup"><span data-stu-id="c8ede-109">It then queries for the child elements of the root of the tree.</span></span>  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -35,7 +35,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- <span data-ttu-id="31317-110">Zgodnie z oczekiwaniami, ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="31317-110">As expected, this example produces the following output:</span></span>  
+ <span data-ttu-id="c8ede-110">Zgodnie z oczekiwaniami, ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="c8ede-110">As expected, this example produces the following output:</span></span>  
   
 ```  
 Querying tree loaded with XElement.Load  
@@ -45,7 +45,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- <span data-ttu-id="31317-111">Poniższy przykład jest taki sam jak ten powyżej, z wyjątkiem, że drzewa XML jest ładowany do <xref:System.Xml.Linq.XDocument> zamiast <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="31317-111">The following example is the same as the one above, with the exception that the XML tree is loaded into an <xref:System.Xml.Linq.XDocument> instead of an <xref:System.Xml.Linq.XElement>.</span></span>  
+ <span data-ttu-id="c8ede-111">Poniższy przykład jest taki sam jak ten powyżej, z wyjątkiem, że drzewa XML jest ładowany do <xref:System.Xml.Linq.XDocument> zamiast <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="c8ede-111">The following example is the same as the one above, with the exception that the XML tree is loaded into an <xref:System.Xml.Linq.XDocument> instead of an <xref:System.Xml.Linq.XElement>.</span></span>  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -65,7 +65,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- <span data-ttu-id="31317-112">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="31317-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="c8ede-112">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="c8ede-112">This example produces the following output:</span></span>  
   
 ```  
 Querying tree loaded with XDocument.Load  
@@ -77,9 +77,9 @@ Querying tree loaded with XDocument.Load
 </Root>  
 ```  
   
- <span data-ttu-id="31317-113">Zwróć uwagę, tego samego zapytania zwrócony jeden `Root` węzła zamiast trzech węzłów podrzędnych.</span><span class="sxs-lookup"><span data-stu-id="31317-113">Notice that the same query returned the one `Root` node instead of the three child nodes.</span></span>  
+ <span data-ttu-id="c8ede-113">Zwróć uwagę, tego samego zapytania zwrócony jeden `Root` węzła zamiast trzech węzłów podrzędnych.</span><span class="sxs-lookup"><span data-stu-id="c8ede-113">Notice that the same query returned the one `Root` node instead of the three child nodes.</span></span>  
   
- <span data-ttu-id="31317-114">Jedno z podejść do radzenia sobie z tym jest użycie <xref:System.Xml.Linq.XDocument.Root%2A> właściwości przed uzyskaniem dostępu do metody osi:</span><span class="sxs-lookup"><span data-stu-id="31317-114">One approach to dealing with this is to use the <xref:System.Xml.Linq.XDocument.Root%2A> property before accessing the axes methods, as follows:</span></span>  
+ <span data-ttu-id="c8ede-114">Jedno z podejść do radzenia sobie z tym jest użycie <xref:System.Xml.Linq.XDocument.Root%2A> właściwości przed uzyskaniem dostępu do metody osi:</span><span class="sxs-lookup"><span data-stu-id="c8ede-114">One approach to dealing with this is to use the <xref:System.Xml.Linq.XDocument.Root%2A> property before accessing the axes methods, as follows:</span></span>  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -99,7 +99,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- <span data-ttu-id="31317-115">To zapytanie wykonuje teraz w taki sam sposób jak zapytania drzewa osadzonego w <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="31317-115">This query now performs in the same way as the query on the tree rooted in <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="31317-116">Przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="31317-116">The example produces the following output:</span></span>  
+ <span data-ttu-id="c8ede-115">To zapytanie wykonuje teraz w taki sam sposób jak zapytania drzewa osadzonego w <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="c8ede-115">This query now performs in the same way as the query on the tree rooted in <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="c8ede-116">Przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="c8ede-116">The example produces the following output:</span></span>  
   
 ```  
 Querying tree loaded with XDocument.Load  
@@ -109,6 +109,6 @@ Querying tree loaded with XDocument.Load
 <Child3>3</Child3>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="31317-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="31317-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8ede-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c8ede-117">See Also</span></span>
 
-- [<span data-ttu-id="31317-118">Podstawowe zapytania (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="31317-118">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="c8ede-118">Podstawowe zapytania (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c8ede-118">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

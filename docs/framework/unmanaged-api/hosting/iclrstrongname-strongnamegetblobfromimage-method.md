@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd6cb0116e1080a68c91df365cc7dd1485b21791
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881258"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083684"
 ---
-# <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a><span data-ttu-id="dc0f5-102">ICLRStrongName::StrongNameGetBlobFromImage — Metoda</span><span class="sxs-lookup"><span data-stu-id="dc0f5-102">ICLRStrongName::StrongNameGetBlobFromImage Method</span></span>
-<span data-ttu-id="dc0f5-103">Pobiera reprezentacja binarna obrazu zestawu pod adresem określonym pamięci.</span><span class="sxs-lookup"><span data-stu-id="dc0f5-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  
+# <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a><span data-ttu-id="eeb3e-102">ICLRStrongName::StrongNameGetBlobFromImage — Metoda</span><span class="sxs-lookup"><span data-stu-id="eeb3e-102">ICLRStrongName::StrongNameGetBlobFromImage Method</span></span>
+<span data-ttu-id="eeb3e-103">Pobiera reprezentacja binarna obrazu zestawu pod adresem określonym pamięci.</span><span class="sxs-lookup"><span data-stu-id="eeb3e-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dc0f5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="dc0f5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eeb3e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="eeb3e-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameGetBlobFromImage (  
@@ -38,31 +38,31 @@ HRESULT StrongNameGetBlobFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="dc0f5-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="dc0f5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="eeb3e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="eeb3e-105">Parameters</span></span>  
  `pbBase`  
- <span data-ttu-id="dc0f5-106">[in] Adres pamięci manifestu zestawu zamapowany.</span><span class="sxs-lookup"><span data-stu-id="dc0f5-106">[in] The memory address of the mapped assembly manifest.</span></span>  
+ <span data-ttu-id="eeb3e-106">[in] Adres pamięci manifestu zestawu zamapowany.</span><span class="sxs-lookup"><span data-stu-id="eeb3e-106">[in] The memory address of the mapped assembly manifest.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="dc0f5-107">[in] Rozmiar w bajtach, obraz u `pbBase`.</span><span class="sxs-lookup"><span data-stu-id="dc0f5-107">[in] The size, in bytes, of the image at `pbBase`.</span></span>  
+ <span data-ttu-id="eeb3e-107">[in] Rozmiar w bajtach, obraz u `pbBase`.</span><span class="sxs-lookup"><span data-stu-id="eeb3e-107">[in] The size, in bytes, of the image at `pbBase`.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="dc0f5-108">[in] Bufor do przechowywania reprezentacja binarna obrazu.</span><span class="sxs-lookup"><span data-stu-id="dc0f5-108">[in] A buffer to contain the binary representation of the image.</span></span>  
+ <span data-ttu-id="eeb3e-108">[in] Bufor do przechowywania reprezentacja binarna obrazu.</span><span class="sxs-lookup"><span data-stu-id="eeb3e-108">[in] A buffer to contain the binary representation of the image.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="dc0f5-109">[out w] Maksymalny rozmiar w bajtach, żądane `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="dc0f5-109">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="dc0f5-110">Po powrocie, rzeczywisty rozmiar w bajtach, z `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="dc0f5-110">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="eeb3e-109">[out w] Maksymalny rozmiar w bajtach, żądane `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="eeb3e-109">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="eeb3e-110">Po powrocie, rzeczywisty rozmiar w bajtach, z `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="eeb3e-110">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dc0f5-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="dc0f5-111">Return Value</span></span>  
- <span data-ttu-id="dc0f5-112">`S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).</span><span class="sxs-lookup"><span data-stu-id="dc0f5-112">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="eeb3e-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="eeb3e-111">Return Value</span></span>  
+ <span data-ttu-id="eeb3e-112">`S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).</span><span class="sxs-lookup"><span data-stu-id="eeb3e-112">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dc0f5-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="dc0f5-113">Requirements</span></span>  
- <span data-ttu-id="dc0f5-114">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dc0f5-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eeb3e-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="eeb3e-113">Requirements</span></span>  
+ <span data-ttu-id="eeb3e-114">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eeb3e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dc0f5-115">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="dc0f5-115">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="eeb3e-115">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="eeb3e-115">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="dc0f5-116">**Biblioteka:** dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dc0f5-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="eeb3e-116">**Biblioteka:** dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="eeb3e-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="dc0f5-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dc0f5-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="eeb3e-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eeb3e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dc0f5-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="dc0f5-118">See Also</span></span>  
- [<span data-ttu-id="dc0f5-119">StrongNameGetBlob, metoda</span><span class="sxs-lookup"><span data-stu-id="dc0f5-119">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  
- [<span data-ttu-id="dc0f5-120">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="dc0f5-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="eeb3e-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="eeb3e-118">See Also</span></span>  
+ [<span data-ttu-id="eeb3e-119">StrongNameGetBlob, metoda</span><span class="sxs-lookup"><span data-stu-id="eeb3e-119">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  
+ [<span data-ttu-id="eeb3e-120">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="eeb3e-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

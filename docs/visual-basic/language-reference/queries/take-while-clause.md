@@ -9,42 +9,42 @@ helpviewer_keywords:
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
 ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736409"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085358"
 ---
-# <a name="take-while-clause-visual-basic"></a><span data-ttu-id="1897f-102">Take While — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1897f-102">Take While Clause (Visual Basic)</span></span>
-<span data-ttu-id="1897f-103">Zawiera elementy w kolekcji, tak długo, jak długo określony warunek przyjmuje `true` i pomija pozostałe elementy.</span><span class="sxs-lookup"><span data-stu-id="1897f-103">Includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span></span>  
+# <a name="take-while-clause-visual-basic"></a><span data-ttu-id="60947-102">Take While — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60947-102">Take While Clause (Visual Basic)</span></span>
+<span data-ttu-id="60947-103">Zawiera elementy w kolekcji, tak długo, jak długo określony warunek przyjmuje `true` i pomija pozostałe elementy.</span><span class="sxs-lookup"><span data-stu-id="60947-103">Includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1897f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1897f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="60947-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="60947-104">Syntax</span></span>  
   
 ```  
 Take While expression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="1897f-105">Części</span><span class="sxs-lookup"><span data-stu-id="1897f-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="60947-105">Części</span><span class="sxs-lookup"><span data-stu-id="60947-105">Parts</span></span>  
   
-|<span data-ttu-id="1897f-106">Termin</span><span class="sxs-lookup"><span data-stu-id="1897f-106">Term</span></span>|<span data-ttu-id="1897f-107">Definicja</span><span class="sxs-lookup"><span data-stu-id="1897f-107">Definition</span></span>|  
+|<span data-ttu-id="60947-106">Termin</span><span class="sxs-lookup"><span data-stu-id="60947-106">Term</span></span>|<span data-ttu-id="60947-107">Definicja</span><span class="sxs-lookup"><span data-stu-id="60947-107">Definition</span></span>|  
 |---|---|  
-|`expression`|<span data-ttu-id="1897f-108">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="1897f-108">Required.</span></span> <span data-ttu-id="1897f-109">Wyrażenie, które reprezentuje stan, aby przetestować elementy.</span><span class="sxs-lookup"><span data-stu-id="1897f-109">An expression that represents a condition to test elements for.</span></span> <span data-ttu-id="1897f-110">Wyrażenie musi zwracać `Boolean` wartość lub równoważnej funkcjonalności, takie jak `Integer` mogło zostać ocenione jako `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="1897f-110">The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.</span></span>|  
+|`expression`|<span data-ttu-id="60947-108">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="60947-108">Required.</span></span> <span data-ttu-id="60947-109">Wyrażenie, które reprezentuje stan, aby przetestować elementy.</span><span class="sxs-lookup"><span data-stu-id="60947-109">An expression that represents a condition to test elements for.</span></span> <span data-ttu-id="60947-110">Wyrażenie musi zwracać `Boolean` wartość lub równoważnej funkcjonalności, takie jak `Integer` mogło zostać ocenione jako `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="60947-110">The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1897f-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1897f-111">Remarks</span></span>  
- <span data-ttu-id="1897f-112">`Take While` Klauzula zawiera elementy od początku wyników zapytania do momentu podane `expression` zwraca `false`.</span><span class="sxs-lookup"><span data-stu-id="1897f-112">The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`.</span></span> <span data-ttu-id="1897f-113">Po `expression` zwraca `false`, zapytanie będzie pominąć wszystkie pozostałe elementy.</span><span class="sxs-lookup"><span data-stu-id="1897f-113">After the `expression` returns `false`, the query will bypass all remaining elements.</span></span> <span data-ttu-id="1897f-114">`expression` Jest ignorowany dla pozostałych wyników.</span><span class="sxs-lookup"><span data-stu-id="1897f-114">The `expression` is ignored for the remaining results.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="60947-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="60947-111">Remarks</span></span>  
+ <span data-ttu-id="60947-112">`Take While` Klauzula zawiera elementy od początku wyników zapytania do momentu podane `expression` zwraca `false`.</span><span class="sxs-lookup"><span data-stu-id="60947-112">The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`.</span></span> <span data-ttu-id="60947-113">Po `expression` zwraca `false`, zapytanie będzie pominąć wszystkie pozostałe elementy.</span><span class="sxs-lookup"><span data-stu-id="60947-113">After the `expression` returns `false`, the query will bypass all remaining elements.</span></span> <span data-ttu-id="60947-114">`expression` Jest ignorowany dla pozostałych wyników.</span><span class="sxs-lookup"><span data-stu-id="60947-114">The `expression` is ignored for the remaining results.</span></span>  
   
- <span data-ttu-id="1897f-115">`Take While` Klauzuli różni się od `Where` klauzuli w tym `Where` można użyć klauzuli, aby uwzględnić wszystkie elementy z zapytania, które spełniają określony warunek.</span><span class="sxs-lookup"><span data-stu-id="1897f-115">The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition.</span></span> <span data-ttu-id="1897f-116">`Take While` Klauzuli zawiera elementy tylko do pierwszego, który nie jest spełniony warunek.</span><span class="sxs-lookup"><span data-stu-id="1897f-116">The `Take While` clause includes elements only until the first time that the condition is not satisfied.</span></span> <span data-ttu-id="1897f-117">`Take While` Klauzula jest najbardziej przydatne podczas pracy z wynikiem zapytania uporządkowane.</span><span class="sxs-lookup"><span data-stu-id="1897f-117">The `Take While` clause is most useful when you are working with an ordered query result.</span></span>  
+ <span data-ttu-id="60947-115">`Take While` Klauzuli różni się od `Where` klauzuli w tym `Where` można użyć klauzuli, aby uwzględnić wszystkie elementy z zapytania, które spełniają określony warunek.</span><span class="sxs-lookup"><span data-stu-id="60947-115">The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition.</span></span> <span data-ttu-id="60947-116">`Take While` Klauzuli zawiera elementy tylko do pierwszego, który nie jest spełniony warunek.</span><span class="sxs-lookup"><span data-stu-id="60947-116">The `Take While` clause includes elements only until the first time that the condition is not satisfied.</span></span> <span data-ttu-id="60947-117">`Take While` Klauzula jest najbardziej przydatne podczas pracy z wynikiem zapytania uporządkowane.</span><span class="sxs-lookup"><span data-stu-id="60947-117">The `Take While` clause is most useful when you are working with an ordered query result.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1897f-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="1897f-118">Example</span></span>  
- <span data-ttu-id="1897f-119">Poniższy przykład kodu wykorzystuje `Take While` klauzuli, aby pobrać wyniki, aż do znalezienia pierwszego klienta bez żadnych zamówienia.</span><span class="sxs-lookup"><span data-stu-id="1897f-119">The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.</span></span>  
+## <a name="example"></a><span data-ttu-id="60947-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="60947-118">Example</span></span>  
+ <span data-ttu-id="60947-119">Poniższy przykład kodu wykorzystuje `Take While` klauzuli, aby pobrać wyniki, aż do znalezienia pierwszego klienta bez żadnych zamówienia.</span><span class="sxs-lookup"><span data-stu-id="60947-119">The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="1897f-120">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1897f-120">See Also</span></span>  
- [<span data-ttu-id="1897f-121">Wprowadzenie do LINQ w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1897f-121">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [<span data-ttu-id="1897f-122">Zapytania</span><span class="sxs-lookup"><span data-stu-id="1897f-122">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)  
- [<span data-ttu-id="1897f-123">Select, klauzula</span><span class="sxs-lookup"><span data-stu-id="1897f-123">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
- [<span data-ttu-id="1897f-124">From, klauzula</span><span class="sxs-lookup"><span data-stu-id="1897f-124">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
- [<span data-ttu-id="1897f-125">Take, klauzula</span><span class="sxs-lookup"><span data-stu-id="1897f-125">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)  
- [<span data-ttu-id="1897f-126">Skip While, klauzula</span><span class="sxs-lookup"><span data-stu-id="1897f-126">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [<span data-ttu-id="1897f-127">Where, klauzula</span><span class="sxs-lookup"><span data-stu-id="1897f-127">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a><span data-ttu-id="60947-120">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="60947-120">See Also</span></span>  
+ [<span data-ttu-id="60947-121">Wprowadzenie do LINQ w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="60947-121">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="60947-122">Zapytania</span><span class="sxs-lookup"><span data-stu-id="60947-122">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)  
+ [<span data-ttu-id="60947-123">Select, klauzula</span><span class="sxs-lookup"><span data-stu-id="60947-123">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="60947-124">From, klauzula</span><span class="sxs-lookup"><span data-stu-id="60947-124">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="60947-125">Take, klauzula</span><span class="sxs-lookup"><span data-stu-id="60947-125">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)  
+ [<span data-ttu-id="60947-126">Skip While, klauzula</span><span class="sxs-lookup"><span data-stu-id="60947-126">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [<span data-ttu-id="60947-127">Where, klauzula</span><span class="sxs-lookup"><span data-stu-id="60947-127">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)

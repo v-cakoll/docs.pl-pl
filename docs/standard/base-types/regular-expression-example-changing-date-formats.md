@@ -16,47 +16,47 @@ ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039637"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080816"
 ---
-# <a name="regular-expression-example-changing-date-formats"></a><span data-ttu-id="75d2a-102">Przykładowe wyrażenie regularne: zmienianie formatów daty</span><span class="sxs-lookup"><span data-stu-id="75d2a-102">Regular Expression Example: Changing Date Formats</span></span>
-<span data-ttu-id="75d2a-103">Poniższy przykład kodu wykorzystuje <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metodę, aby zastąpić dat, które mają następującą formę *mm*/*dd*/*rr* z daty mają następującą formę *dd*-*mm*-*rr*.</span><span class="sxs-lookup"><span data-stu-id="75d2a-103">The following code example uses the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method to replace dates that have the form *mm*/*dd*/*yy* with dates that have the form *dd*-*mm*-*yy*.</span></span>  
+# <a name="regular-expression-example-changing-date-formats"></a><span data-ttu-id="6b263-102">Przykładowe wyrażenie regularne: zmienianie formatów daty</span><span class="sxs-lookup"><span data-stu-id="6b263-102">Regular Expression Example: Changing Date Formats</span></span>
+<span data-ttu-id="6b263-103">Poniższy przykład kodu wykorzystuje <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metodę, aby zastąpić dat, które mają następującą formę *mm*/*dd*/*rr* z daty mają następującą formę *dd*-*mm*-*rr*.</span><span class="sxs-lookup"><span data-stu-id="6b263-103">The following code example uses the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method to replace dates that have the form *mm*/*dd*/*yy* with dates that have the form *dd*-*mm*-*yy*.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="75d2a-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="75d2a-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6b263-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="6b263-104">Example</span></span>  
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#1)]
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#1)]  
   
- <span data-ttu-id="75d2a-105">Poniższy kod przedstawia sposób, w jaki `MDYToDMY` metodę można wywołać w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="75d2a-105">The following code shows how the `MDYToDMY` method can be called in an application.</span></span>  
+ <span data-ttu-id="6b263-105">Poniższy kod przedstawia sposób, w jaki `MDYToDMY` metodę można wywołać w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="6b263-105">The following code shows how the `MDYToDMY` method can be called in an application.</span></span>  
   
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#2)]
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#2)]  
   
-## <a name="comments"></a><span data-ttu-id="75d2a-106">Komentarze</span><span class="sxs-lookup"><span data-stu-id="75d2a-106">Comments</span></span>  
- <span data-ttu-id="75d2a-107">Definicję wzorca wyrażenia regularnego `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` jest interpretowane tak jak pokazano w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="75d2a-107">The regular expression pattern  `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` is interpreted as shown in the following table.</span></span>  
+## <a name="comments"></a><span data-ttu-id="6b263-106">Komentarze</span><span class="sxs-lookup"><span data-stu-id="6b263-106">Comments</span></span>  
+ <span data-ttu-id="6b263-107">Definicję wzorca wyrażenia regularnego `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` jest interpretowane tak jak pokazano w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="6b263-107">The regular expression pattern  `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` is interpreted as shown in the following table.</span></span>  
   
-|<span data-ttu-id="75d2a-108">Wzorzec</span><span class="sxs-lookup"><span data-stu-id="75d2a-108">Pattern</span></span>|<span data-ttu-id="75d2a-109">Opis</span><span class="sxs-lookup"><span data-stu-id="75d2a-109">Description</span></span>|  
+|<span data-ttu-id="6b263-108">Wzorzec</span><span class="sxs-lookup"><span data-stu-id="6b263-108">Pattern</span></span>|<span data-ttu-id="6b263-109">Opis</span><span class="sxs-lookup"><span data-stu-id="6b263-109">Description</span></span>|  
 |-------------|-----------------|  
-|`\b`|<span data-ttu-id="75d2a-110">Rozpoczyna dopasowanie na granicy wyrazu.</span><span class="sxs-lookup"><span data-stu-id="75d2a-110">Begin the match at a word boundary.</span></span>|  
-|`(?<month>\d{1,2})`|<span data-ttu-id="75d2a-111">Dopasowuje co najmniej dwie cyfry dziesiętne.</span><span class="sxs-lookup"><span data-stu-id="75d2a-111">Match one or two decimal digits.</span></span> <span data-ttu-id="75d2a-112">Jest to `month` przechwyconą grupę.</span><span class="sxs-lookup"><span data-stu-id="75d2a-112">This is the `month` captured group.</span></span>|  
-|`/`|<span data-ttu-id="75d2a-113">Dopasowuje znak ukośnika.</span><span class="sxs-lookup"><span data-stu-id="75d2a-113">Match the slash mark.</span></span>|  
-|`(?<day>\d{1,2})`|<span data-ttu-id="75d2a-114">Dopasowuje co najmniej dwie cyfry dziesiętne.</span><span class="sxs-lookup"><span data-stu-id="75d2a-114">Match one or two decimal digits.</span></span> <span data-ttu-id="75d2a-115">Jest to `day` przechwyconą grupę.</span><span class="sxs-lookup"><span data-stu-id="75d2a-115">This is the `day` captured group.</span></span>|  
-|`/`|<span data-ttu-id="75d2a-116">Dopasowuje znak ukośnika.</span><span class="sxs-lookup"><span data-stu-id="75d2a-116">Match the slash mark.</span></span>|  
-|`(?<year>\d{2,4})`|<span data-ttu-id="75d2a-117">Dopasowuje od dwóch do czterech cyfr dziesiętnych.</span><span class="sxs-lookup"><span data-stu-id="75d2a-117">Match from two to four decimal digits.</span></span> <span data-ttu-id="75d2a-118">Jest to `year` przechwyconą grupę.</span><span class="sxs-lookup"><span data-stu-id="75d2a-118">This is the `year` captured group.</span></span>|  
-|`\b`|<span data-ttu-id="75d2a-119">Kończy dopasowanie na granicy wyrazu.</span><span class="sxs-lookup"><span data-stu-id="75d2a-119">End the match at a word boundary.</span></span>|  
+|`\b`|<span data-ttu-id="6b263-110">Rozpoczyna dopasowanie na granicy wyrazu.</span><span class="sxs-lookup"><span data-stu-id="6b263-110">Begin the match at a word boundary.</span></span>|  
+|`(?<month>\d{1,2})`|<span data-ttu-id="6b263-111">Dopasowuje co najmniej dwie cyfry dziesiętne.</span><span class="sxs-lookup"><span data-stu-id="6b263-111">Match one or two decimal digits.</span></span> <span data-ttu-id="6b263-112">Jest to `month` przechwyconą grupę.</span><span class="sxs-lookup"><span data-stu-id="6b263-112">This is the `month` captured group.</span></span>|  
+|`/`|<span data-ttu-id="6b263-113">Dopasowuje znak ukośnika.</span><span class="sxs-lookup"><span data-stu-id="6b263-113">Match the slash mark.</span></span>|  
+|`(?<day>\d{1,2})`|<span data-ttu-id="6b263-114">Dopasowuje co najmniej dwie cyfry dziesiętne.</span><span class="sxs-lookup"><span data-stu-id="6b263-114">Match one or two decimal digits.</span></span> <span data-ttu-id="6b263-115">Jest to `day` przechwyconą grupę.</span><span class="sxs-lookup"><span data-stu-id="6b263-115">This is the `day` captured group.</span></span>|  
+|`/`|<span data-ttu-id="6b263-116">Dopasowuje znak ukośnika.</span><span class="sxs-lookup"><span data-stu-id="6b263-116">Match the slash mark.</span></span>|  
+|`(?<year>\d{2,4})`|<span data-ttu-id="6b263-117">Dopasowuje od dwóch do czterech cyfr dziesiętnych.</span><span class="sxs-lookup"><span data-stu-id="6b263-117">Match from two to four decimal digits.</span></span> <span data-ttu-id="6b263-118">Jest to `year` przechwyconą grupę.</span><span class="sxs-lookup"><span data-stu-id="6b263-118">This is the `year` captured group.</span></span>|  
+|`\b`|<span data-ttu-id="6b263-119">Kończy dopasowanie na granicy wyrazu.</span><span class="sxs-lookup"><span data-stu-id="6b263-119">End the match at a word boundary.</span></span>|  
   
- <span data-ttu-id="75d2a-120">Wzorzec `${day}-${month}-${year}` definiuje ciąg zastępujący, jak pokazano w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="75d2a-120">The pattern `${day}-${month}-${year}` defines the replacement string as shown in the following table.</span></span>  
+ <span data-ttu-id="6b263-120">Wzorzec `${day}-${month}-${year}` definiuje ciąg zastępujący, jak pokazano w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="6b263-120">The pattern `${day}-${month}-${year}` defines the replacement string as shown in the following table.</span></span>  
   
-|<span data-ttu-id="75d2a-121">Wzorzec</span><span class="sxs-lookup"><span data-stu-id="75d2a-121">Pattern</span></span>|<span data-ttu-id="75d2a-122">Opis</span><span class="sxs-lookup"><span data-stu-id="75d2a-122">Description</span></span>|  
+|<span data-ttu-id="6b263-121">Wzorzec</span><span class="sxs-lookup"><span data-stu-id="6b263-121">Pattern</span></span>|<span data-ttu-id="6b263-122">Opis</span><span class="sxs-lookup"><span data-stu-id="6b263-122">Description</span></span>|  
 |-------------|-----------------|  
-|`$(day)`|<span data-ttu-id="75d2a-123">Dodaj parametry przechwycone przez `day` grupa przechwytywania.</span><span class="sxs-lookup"><span data-stu-id="75d2a-123">Add the string captured by the `day` capturing group.</span></span>|  
-|`-`|<span data-ttu-id="75d2a-124">Dodaj łącznik.</span><span class="sxs-lookup"><span data-stu-id="75d2a-124">Add a hyphen.</span></span>|  
-|`$(month)`|<span data-ttu-id="75d2a-125">Dodaj parametry przechwycone przez `month` grupa przechwytywania.</span><span class="sxs-lookup"><span data-stu-id="75d2a-125">Add the string captured by the `month` capturing group.</span></span>|  
-|`-`|<span data-ttu-id="75d2a-126">Dodaj łącznik.</span><span class="sxs-lookup"><span data-stu-id="75d2a-126">Add a hyphen.</span></span>|  
-|`$(year)`|<span data-ttu-id="75d2a-127">Dodaj parametry przechwycone przez `year` grupa przechwytywania.</span><span class="sxs-lookup"><span data-stu-id="75d2a-127">Add the string captured by the `year` capturing group.</span></span>|  
+|`$(day)`|<span data-ttu-id="6b263-123">Dodaj parametry przechwycone przez `day` grupa przechwytywania.</span><span class="sxs-lookup"><span data-stu-id="6b263-123">Add the string captured by the `day` capturing group.</span></span>|  
+|`-`|<span data-ttu-id="6b263-124">Dodaj łącznik.</span><span class="sxs-lookup"><span data-stu-id="6b263-124">Add a hyphen.</span></span>|  
+|`$(month)`|<span data-ttu-id="6b263-125">Dodaj parametry przechwycone przez `month` grupa przechwytywania.</span><span class="sxs-lookup"><span data-stu-id="6b263-125">Add the string captured by the `month` capturing group.</span></span>|  
+|`-`|<span data-ttu-id="6b263-126">Dodaj łącznik.</span><span class="sxs-lookup"><span data-stu-id="6b263-126">Add a hyphen.</span></span>|  
+|`$(year)`|<span data-ttu-id="6b263-127">Dodaj parametry przechwycone przez `year` grupa przechwytywania.</span><span class="sxs-lookup"><span data-stu-id="6b263-127">Add the string captured by the `year` capturing group.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="75d2a-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="75d2a-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b263-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6b263-128">See also</span></span>
 
-- [<span data-ttu-id="75d2a-129">Wyrażeń regularnych programu .NET</span><span class="sxs-lookup"><span data-stu-id="75d2a-129">.NET Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)
+- [<span data-ttu-id="6b263-129">Wyrażeń regularnych programu .NET</span><span class="sxs-lookup"><span data-stu-id="6b263-129">.NET Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)

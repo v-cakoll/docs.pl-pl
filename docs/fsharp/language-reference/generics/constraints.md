@@ -2,17 +2,16 @@
 title: Ograniczenia (F#)
 description: 'Więcej informacji na temat ograniczeń F #, które są stosowane do parametrów typu ogólnego, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525608"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798215"
 ---
 # <a name="constraints"></a>Ograniczenia
 
 W tym temacie opisano ograniczenia stosowane do ogólnych parametrów, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji typu.
-
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,13 +20,14 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>Uwagi
+
 Istnieje kilka różnych ograniczeń, które można zastosować, aby ograniczyć typy, które mogą być używane w typie podstawowym. Poniższej tabeli wymieniono i opisano te ograniczenia.
 
 |Ograniczenia|Składnia|Opis|
 |----------|------|-----------|
 |Ograniczenia typu|*Parametr typu* :&gt; *typu*|Podany typ musi być większa lub równa pochodnej z typu określonego lub, jeśli typ jest interfejsem, podany typ musi implementować interfejs.|
 |Ograniczenie o wartości null|*Parametr typu* : wartość null|Podany typ musi obsługiwać literałem o wartości null. Obejmuje to wszystkie typy obiektów platformy .NET, ale nie F # listy, spójnej kolekcji, funkcji, klasy, rekord lub typy Unii.|
-|Ograniczenie jawnego członka|[()]*parametr typu* [lub... lub *parametr typu*)]: (*sygnatura elementu członkowskiego*)|Co najmniej jeden z podanych argumentów typu musi mieć element członkowski, który ma określony podpis; nie są przeznaczone w typowych zastosowaniach. Elementy członkowskie muszą być albo jawnie zdefiniowane na typ lub część rozszerzenia niejawnego typu jako prawidłowe obiekty docelowe dla jawnego ograniczenia elementu członkowskiego.|
+|Ograniczenie jawnego członka|[(]*parametr typu* [lub... lub *parametr typu*)]: (*sygnatura elementu członkowskiego*)|Co najmniej jeden z podanych argumentów typu musi mieć element członkowski, który ma określony podpis; nie są przeznaczone w typowych zastosowaniach. Elementy członkowskie muszą być albo jawnie zdefiniowane na typ lub część rozszerzenia niejawnego typu jako prawidłowe obiekty docelowe dla jawnego ograniczenia elementu członkowskiego.|
 |Ograniczenie konstruktora|*Parametr typu* : (nowe: jednostka -&gt; ")|Podany typ musi mieć domyślnego konstruktora.|
 |Ograniczenie typu wartości|: — struktura|Podany typ musi być typem wartości platformy .NET.|
 |Ograniczenie typu odwołania|: nie — struktura|Podany typ musi być typem referencyjnym .NET.|
@@ -114,7 +114,7 @@ type Class14<'T,'U when 'T : equality and 'U : equality> =
 class end
 ```
 
-## <a name="see-also"></a>Zobacz też
-[Typy ogólne](index.md)
+## <a name="see-also"></a>Zobacz także
 
-[Ograniczenia](constraints.md)
+- [Typy ogólne](index.md)
+- [Ograniczenia](constraints.md)

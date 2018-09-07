@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: ade08deca909b32090b7d2d7cf8c6ba9ce9e7679
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538686"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083133"
 ---
 # <a name="sorting-and-filtering-data"></a>Sortowanie i filtrowanie danych
 <xref:System.Data.DataView> Oferuje kilka sposobów, sortowania i filtrowania danych w <xref:System.Data.DataTable>:  

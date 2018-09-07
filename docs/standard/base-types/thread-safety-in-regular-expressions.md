@@ -11,21 +11,22 @@ helpviewer_keywords:
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79ca0b92cf79ca9be023925f064c1c7c16b3c9ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0bcab0757bc48f6a8216dd5878f0289e49a275
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567721"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44046882"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Bezpieczeństwo wątków w wyrażeniach regularnych
-<xref:System.Text.RegularExpressions.Regex> Samej klasy jest wątku bezpieczne i modyfikować (tylko do odczytu). Oznacza to **Regex** obiektów można tworzyć w którymkolwiek wątku i udostępniane między wątkami; metod może być wywołana z dowolnego wątku i nigdy nie zmienia żadnych stan globalny.  
+<xref:System.Text.RegularExpressions.Regex> Samej klasy jest wątek, bezpieczne i niezmienne (tylko do odczytu). Oznacza to, że **wyrażenia regularnego** obiekty można tworzyć na żadnym z wątków i udostępniane między wątkami; metod dopasowania mogą być wywoływane z żadnym z wątków i nigdy nie zmienia żadnych stan globalny.  
   
- Jednak obiekty wynikowe (**dopasowania** i **matchcollection —**) zwrócone przez **Regex** powinien być używany w jednym wątku. Mimo że wiele z tych obiektów są logicznie niezmienne, ich implementacji można opóźnić obliczeń pewnych wyników, aby zwiększyć wydajność, a w związku z tym wywołującym musi serializować uzyskiwania do nich dostępu.  
+ Jednak obiekty wynikowe (**dopasowanie** i **matchcollection —**) zwróciło **wyrażenia regularnego** powinny być używane w jednym wątku. Chociaż wiele z tych obiektów są logicznie niezmienne, ich implementacji może opóźnić obliczenie niektórych wyników, aby zwiększyć wydajność, a w rezultacie obiekty wywołujące muszą serializację do nich dostęp.  
   
- Jeśli trzeba udostępnić **Regex** wynik obiektów na wiele wątków, przez wywołanie jego metody zsynchronizowane można przekonwertować na wątkowo wystąpień tych obiektów. Z wyjątkiem moduły wyliczające wszystkie wyrażenia regularnego klasy są bezpieczne dla wątków lub można przekonwertować na obiekty wątkowo Metoda zsynchronizowana.  
+ Jeśli zachodzi potrzeba udostępniania **wyrażenia regularnego** wynik obiektów w wielu wątkach, te obiekty mogą być konwertowane do wystąpień wątków przez wywołanie metody ich zsynchronizowane. Z wyjątkiem moduły wyliczające wszystkie klasy wyrażeń regularnych są bezpieczne dla wątków lub mogą być konwertowane na obiekty wątków przez metodę zsynchronizowane.  
   
- Jedynym wyjątkiem są wyliczenia. Aplikacja musi serializować wywołania wyliczenia kolekcji. Reguła jest, że jeśli kolekcja mogą być wyliczane w więcej niż jeden wątek jednocześnie, należy synchronizować modułu wyliczającego metody do obiektu głównego kolekcji przechodzić przez moduł wyliczający.  
+ Jedynym wyjątkiem są wyliczenia. Aplikację należy serializować wywołania do kolekcji wyliczenia. Reguła jest, że jeśli kolekcji mogą być wyliczane w więcej niż jeden wątek jednocześnie, należy zsynchronizować modułu wyliczającego metod w głównym obiekcie kolekcji-przenoszone przez moduł wyliczający.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)

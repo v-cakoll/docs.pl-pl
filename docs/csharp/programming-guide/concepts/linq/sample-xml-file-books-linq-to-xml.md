@@ -3,11 +3,11 @@ title: 'Przykładowy plik XML: Książki (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: b75ab1a2-fb76-4df9-bd01-c45ec22a29ef
 ms.openlocfilehash: 8eeff6fad78fe45ca38a3d3fa07f745b80590e28
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741815"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44046307"
 ---
 # <a name="sample-xml-file-books-linq-to-xml"></a>Przykładowy plik XML: Książki (LINQ to XML)
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Plik zawiera informacje dotyczące książek.  

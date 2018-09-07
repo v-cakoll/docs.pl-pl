@@ -10,26 +10,27 @@ helpviewer_keywords:
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af6e4e8d0d754b97478788422b4dd84eeddc6491
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcb2fbf5e0a310156fdc6fac5fe736692e8ec133
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583282"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067516"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Porady: korzystanie z metody SpinWait do implementacji dwufazowej operacji oczekiwania
-Poniższy przykład przedstawia użycie <xref:System.Threading.SpinWait?displayProperty=nameWithType> obiektu do implementacji dwufazowej operacji oczekiwania. W pierwszej fazie obiektu synchronizacji `Latch`, obraca przez kilka cykli podczas sprawdza, czy blokada stał się dostępny. W drugim etapie, jeśli blokada staje się dostępny a następnie `Wait` metoda zwraca bez użycia <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> przeprowadzić jego oczekiwania; w przeciwnym razie `Wait` wykonuje czas oczekiwania.  
+Poniższy przykład pokazuje, jak używać <xref:System.Threading.SpinWait?displayProperty=nameWithType> obiekt do implementacji dwufazowej operacji oczekiwania. W pierwszej fazie obiekt synchronizacji `Latch`, uruchamia dla kilku cykli, podczas gdy sprawdza, czy blokada stał się dostępny. W drugim etapie, jeśli blokada staje się dostępny a następnie `Wait` metoda zwraca bez użycia <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> przeprowadzić jego oczekiwania; w przeciwnym razie `Wait` wykonuje czas oczekiwania.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład przedstawia bardzo proste implementacja synchronizacji zatrzaśnięcia pierwotnych. Można użyć tej struktury danych, gdy powinny być bardzo krótki czas oczekiwania. W tym przykładzie jest tylko w celach demonstracyjnych. Jeśli potrzebujesz zatrzaśnięcia typu funkcji w programie, należy rozważyć użycie <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.  
+ Ten przykład przedstawia bardzo podstawową implementację synchronizacji zatrzaśnięcia pierwotnych. Jeśli spodziewane czasy oczekiwania będą bardzo krótkie, możesz użyć tej struktury danych. Ten przykład dotyczy tylko w celach demonstracyjnych. Jeśli potrzebujesz funkcji zatrzaśnięcia typu w swoim programie, należy wziąć pod uwagę przy użyciu <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.  
   
  [!code-csharp[CDS_SpinWait#03](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait03.cs#03)]
  [!code-vb[CDS_SpinWait#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/spinwait2.vb#03)]  
   
- Używa zatrzaśnięcia <xref:System.Threading.SpinWait> obiektu się w miejscu tylko do następnego wywołania `SpinOnce` powoduje, że <xref:System.Threading.SpinWait> umożliwiające uzyskanie przedział czasu wątku. W tym momencie zatrzaśnięcia powoduje jego własnej przełączenie kontekstu wywołując <xref:System.Threading.WaitHandle.WaitOne%2A> na <xref:System.Threading.ManualResetEvent> i przekazywanie w pozostałej części wartość limitu czasu.  
+ Używa zatrzaśnięcia <xref:System.Threading.SpinWait> obiektu Cię w miejscu tylko do następnego wywołania metody `SpinOnce` powoduje, że <xref:System.Threading.SpinWait> umożliwiające uzyskanie przedziału czasu wątku. W tym momencie zatrzaśnięcia powoduje, że jego własnej przełączenie kontekstu, wywołując <xref:System.Threading.WaitHandle.WaitOne%2A> na <xref:System.Threading.ManualResetEvent> i przekazywania w pozostałej części wartość limitu czasu.  
   
- Dane wyjściowe rejestrowania pokazuje, jak często zatrzaśnięcia mógł zwiększenia wydajności, uzyskiwanie blokady bez użycia <xref:System.Threading.ManualResetEvent>.  
+ Dane wyjściowe rejestrowania pokazują, jak często zatrzaśnięcia był w stanie, co pozwoli zwiększyć wydajność przez uzyskanie blokady bez korzystania z <xref:System.Threading.ManualResetEvent>.  
   
-## <a name="see-also"></a>Zobacz też  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Zobacz także
+
+- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)

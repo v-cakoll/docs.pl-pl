@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43737558"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067795"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Deklaracja zmiennej w Visual Basic
 Można zadeklarować zmiennej do określenia nazwy i właściwości. Instrukcji deklaracji zmiennych jest [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Jej lokalizacja i zawartości należy określić charakterystyki zmiennej.  

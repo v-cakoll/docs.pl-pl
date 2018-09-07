@@ -3,11 +3,11 @@ title: Rehostowanie projektanta
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: 1901df62ccdeec3f75ce0d8cd85484f46fac4541
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404103"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067107"
 ---
 # <a name="designer-rehosting"></a>Rehostowanie projektanta
 Rehostowanie projektanta jest to typowy scenariusz, która odwołuje się do hostowania kanwę projektu przepływu pracy w aplikacji niestandardowej. Aplikacji macierzystej, których większość osób, którzy znają to program Visual Studio, jednak istnieje kilka scenariuszy, których wyświetlanie w Projektancie przepływu pracy w aplikacji mogą być przydatne:  

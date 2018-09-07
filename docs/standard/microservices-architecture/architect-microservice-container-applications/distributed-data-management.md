@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Pr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480668"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067175"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi
 
@@ -79,7 +79,7 @@ W rzeczywistości Jeśli wewnętrznego mikrousługi komunikują się przez utwor
 
 W związku z tym aby wymusić Autonomia mikrousług i mieć większą odporność, należy zminimalizować użycie łańcuchów komunikacji żądania/odpowiedzi na mikrousługach. Zaleca się używać interakcji tylko asynchronicznych do komunikacji między mikrousług przy użyciu asynchronicznych komunikatów i zdarzenie oparte na komunikacji lub sondowania HTTP niezależnie od oryginalnego cyklu żądania/odpowiedzi HTTP.
 
-Korzystanie z komunikacji asynchronicznej zostało wyjaśnione z dodatkowymi szczegółami w dalszej części tego przewodnika, w sekcjach [integracji asynchroniczne mikrousług wymusza autonomię w mikrousługach](#asynchronous-microservice-integration-enforce-microservices-autonomy) i [asynchroniczne Komunikacja oparta na komunikatach](#asynchronous-message-based-communication).
+Korzystanie z komunikacji asynchronicznej zostało wyjaśnione z dodatkowymi szczegółami w dalszej części tego przewodnika, w sekcjach [integracji asynchroniczne mikrousług wymusza autonomię w mikrousługach](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) i [asynchroniczne Komunikacja oparta na komunikatach](asynchronous-message-based-communication.md).
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
 ms.openlocfilehash: 384cc442e51ec96cafe9b44ef945bb913b0e65f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659609"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071242"
 ---
 # <a name="virtual-c-reference"></a>virtual (odwołanie w C#)
 `virtual` Słowo kluczowe jest używane do modyfikowania deklaracji metody, właściwości, indeksatora lub zdarzenia i umożliwia jej zastąpienie w klasie pochodnej. Na przykład tej metody może zostać przesłonięta przez wszystkie klasy, która dziedziczy on:  

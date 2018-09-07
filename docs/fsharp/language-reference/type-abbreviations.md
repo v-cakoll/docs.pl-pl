@@ -1,17 +1,17 @@
 ---
 title: Skróty typów (F#)
-description: 'Więcej informacji na temat skróty typów F # umożliwiają typu bardziej zrozumiałej nazwy w celu ułatwienia kodu.'
+description: 'Więcej informacji na temat typu skróty F #, aby zapewnić bardziej opisową nazwę typu w celu zwiększenia czytelności kodu.'
 ms.date: 05/16/2016
-ms.openlocfilehash: e222caa41a20a64071c94cffea6ea7b2bec8eb22
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
-ms.translationtype: MT
+ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058961"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065438"
 ---
 # <a name="type-abbreviations"></a>Skróty typów
 
-A *— skrót typu* jest alias lub alternatywną nazwę typu.
+A *— typ skrótu* to alias lub alternatywną nazwę typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -20,23 +20,23 @@ type [accessibility-modifier] type-abbreviation = type-name
 ```
 
 ## <a name="remarks"></a>Uwagi
-Skróty typów umożliwia zapewniają bardziej zrozumiałej nazwy, aby poprawić czytelność kodu typu. Ponadto można użyć do utworzenia łatwy w użyciu nazwy typu, który jest skomplikowane, aby zapisać. Ponadto można użyć skróty typów ułatwiające zmienić typu podstawowego bez zmieniania kodu, który używa typu. Poniżej znajduje się skrót typu prostego.
 
-Domyślnie dostępności skróty typów `public`.
+Skróty typów można użyć, aby zapewnić bardziej opisową nazwę typu w celu zwiększenia czytelności kodu. Umożliwia także je utworzyć łatwy w użyciu nazwy typu, który jest w przeciwnym razie kłopotliwe zapisać. Ponadto można użyć skróty typów ułatwiają zmianę typu podstawowego bez zmiany całego kodu, który używa typu. To jest skrótem typu prostego.
+
+Wartością domyślną jest dostępność skróty typów `public`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2301.fs)]
 
-Skróty typów mogą zawierać parametrów ogólnych, zgodnie z poniższym kodem.
+Skróty typów mogą zawierać parametrów ogólnych, tak jak w poniższym kodzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2302.fs)]
 
-W poprzednim kodzie `Transform` jest skrót typu, który reprezentuje funkcję, która pobiera jeden argument typu i która zwraca pojedynczą wartość tego samego typu.
+W poprzednim kodzie `Transform` jest skrótem typu reprezentujący funkcja, która przyjmuje jeden argument dowolnego typu i który zwraca pojedynczą wartość tego samego typu.
 
-Skróty typów nie są zachowywane w kodzie programu .NET Framework MSIL. W związku z tym gdy używasz zestawu F # z innego języka .NET Framework, należy użyć podstawowej nazwy typu dla skrót typu.
+Skróty typów nie są zachowywane w kodzie .NET Framework MSIL. W związku z tym gdy używasz zestawu F # w innym języku .NET Framework, należy użyć podstawowej nazwę typu skrótem typu.
 
-Skróty typów można również na jednostki miary. Aby uzyskać więcej informacji, zobacz [jednostki miary](units-of-measure.md).
+Skróty typów można również w jednostkach miary. Aby uzyskać więcej informacji, zobacz [jednostki miary](units-of-measure.md).
 
+## <a name="see-also"></a>Zobacz także
 
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
-
+- [Dokumentacja języka F#](index.md)

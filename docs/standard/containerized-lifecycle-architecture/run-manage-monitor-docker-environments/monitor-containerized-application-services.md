@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: 4bdc4470624ce6e905ab858a2bd8b607c8d3d646
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731316"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064332"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorowanie usług konteneryzowanych aplikacji
 

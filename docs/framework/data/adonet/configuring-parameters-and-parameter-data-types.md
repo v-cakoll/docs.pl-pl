@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659392"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081278"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurowanie parametrów i typów danych parametrów
 Obiekty poleceń parametry do przekazania wartości do instrukcji SQL lub procedur składowanych, zapewniając sprawdzania typu i weryfikacji. W przeciwieństwie do tekstu polecenia wprowadzanie parametrów jest traktowany jako literał, nie jako kod wykonywalny. Dzięki temu można zabezpieczyć się przed "SQL" wstrzyknięciu kodu, w których osoba atakująca Wstawia polecenie Zabezpieczenia naruszeń na serwerze do instrukcji SQL.  

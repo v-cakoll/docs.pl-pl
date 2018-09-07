@@ -3,11 +3,11 @@ title: 'Porady: filtrowanie elementem opcjonalnym (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
 ms.openlocfilehash: c781db261dbf673af7a11150971956b4c07da774
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784936"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44046632"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Porady: filtrowanie elementem opcjonalnym (C#)
 Czasami trzeba filtrować dla elementu, nawet jeśli nie ma pewności, że znajduje się w dokumencie XML. Powinien być wykonywany wyszukiwanie, tak aby, jeśli określony element nie ma elementu podrzędnego, nie wyzwalają wyjątek pustej referencji, filtrując ją według. W poniższym przykładzie `Child5` element nie może zostać `Type` element podrzędny, ale zapytanie nadal wykonywany prawidłowo.  

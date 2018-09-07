@@ -3,11 +3,11 @@ title: Tworzenie przepływów pracy, działań i wyrażeń przy użyciu kodu Imp
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 ms.openlocfilehash: a0566e01d5786c955562ef97d6d083d886278293
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407865"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061458"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Tworzenie przepływów pracy, działań i wyrażeń przy użyciu kodu Imperatywnego
 Definicja przepływu pracy jest drzewa obiektów skonfigurowane działania. Tego drzewa działań można zdefiniować wiele sposobów, w tym przez ręczną edycję XAML lub za pomocą projektanta przepływów pracy do produkcji XAML. Korzystanie z XAML, jednak nie jest to wymagane. Można także programowo tworzyć definicji przepływu pracy. Ten temat zawiera omówienie tworzenia definicji przepływu pracy, działań i wyrażeń przy użyciu kodu. Aby uzyskać przykłady pracy z przepływami pracy XAML przy użyciu kodu, zobacz [serializowanie przepływów pracy i działań do i z XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  

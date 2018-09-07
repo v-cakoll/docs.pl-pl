@@ -3,11 +3,11 @@ title: 'Porady: wykonywanie drzew wyrażeń (C#)'
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
 ms.openlocfilehash: 2aad970946e417d623907c9f832e2c6e29eef912
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560773"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44046116"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Porady: wykonywanie drzew wyrażeń (C#)
 W tym temacie przedstawiono sposób wykonywania drzewo wyrażenia. Wykonywanie drzewa wyrażenie może zwrócić wartość lub go, że po prostu wykonać akcja, taka jak wywołanie metody.  

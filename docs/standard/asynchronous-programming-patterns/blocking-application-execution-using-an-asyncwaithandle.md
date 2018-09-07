@@ -15,28 +15,29 @@ helpviewer_keywords:
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a1f9c7a5c1e083500ccf88d7a165e109238e875
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 054af36987d60c8aeb752c9c711f1cce19733efc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567328"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44046934"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Blokowanie wykonania aplikacji za pomocą właściwości AsyncWaitHandle
-Aplikacje, których nie można nadal wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej zablokować przed zakończeniem operacji. Mają być blokowane podczas oczekiwania na zakończenie operacji asynchronicznych wątku głównego aplikacji, użyj jednej z następujących opcji:  
+Aplikacje, które nie mogą w dalszym ciągu wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej należy zablokować, aż do zakończenia operacji. Blokowanie wątku głównego aplikacji podczas oczekiwania na zakończenie operacji asynchronicznej, użyj jednej z następujących opcji:  
   
--   Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć *** OperationName* metody. Takie podejście jest przedstawiona w tym temacie.  
+-   Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć *** OperationName* metody. To podejście jest przedstawiona w tym temacie.  
   
--   Wywołaj operację asynchroniczną **zakończenia *** OperationName* metody. Na przykład, który pokazuje tej metody, zobacz [blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+-   Wywołaj operację asynchroniczną **zakończenia *** OperationName* metody. Aby uzyskać przykład demonstrujący takie podejście, zobacz [blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
- Aplikacje korzystające z co najmniej jeden <xref:System.Threading.WaitHandle> zwykle wywoła obiekty mają być blokowane, aż do zakończenia operacji asynchronicznej **rozpocząć *** OperationName* metody, wykonać pracę, które mogą być przeprowadzane bez wyników Operacja, a następnie bloku dopiero po zakończeniu operacji asynchronicznej. Aplikacja może zablokować w ramach jednej operacji, wywołując jedną z <xref:System.Threading.WaitHandle.WaitOne%2A> przy użyciu metody <xref:System.IAsyncResult.AsyncWaitHandle%2A>. Mają być blokowane podczas oczekiwania na zakończenie operacji asynchronicznych zbiór, przechowywania skojarzonych <xref:System.IAsyncResult.AsyncWaitHandle%2A> obiekty w tablicy i wywołanie jedną <xref:System.Threading.WaitHandle.WaitAll%2A> metody. Mają być blokowane podczas oczekiwania na dowolny zbiór na zakończenie operacji asynchronicznych, przechowywania skojarzonych <xref:System.IAsyncResult.AsyncWaitHandle%2A> obiekty w tablicy i wywołanie jedną <xref:System.Threading.WaitHandle.WaitAny%2A> metody.  
+ Aplikacje używające co najmniej jeden <xref:System.Threading.WaitHandle> obiektów, aby zablokować do czasu ukończenia operacji asynchronicznej zazwyczaj będzie wywoływać **rozpocząć *** OperationName* metody, wykonać wszelkie prace, które może odbywać się bez wyników Operacja, a następnie blok do momentu ukończenia operacji asynchronicznej. Aplikacja może zablokować w ramach jednej operacji, wywołując jedną z <xref:System.Threading.WaitHandle.WaitOne%2A> metod za pomocą <xref:System.IAsyncResult.AsyncWaitHandle%2A>. Aby zablokować podczas oczekiwania na zbiór na zakończenie operacji asynchronicznej, przechowywania skojarzonego <xref:System.IAsyncResult.AsyncWaitHandle%2A> obiektów w tablicy i wywołanie jednej <xref:System.Threading.WaitHandle.WaitAll%2A> metody. Aby zablokować podczas oczekiwania na dowolny zbiór na zakończenie operacji asynchronicznej, przechowywania skojarzonego <xref:System.IAsyncResult.AsyncWaitHandle%2A> obiektów w tablicy i wywołanie jednej <xref:System.Threading.WaitHandle.WaitAny%2A> metody.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje używanie metod asynchronicznych klasy DNS można pobrać informacji o systemie nazw domen dla komputera określone przez użytkownika. W przykładzie pokazano, blokowanie, przy użyciu <xref:System.Threading.WaitHandle> skojarzone z operacji asynchronicznej. Należy pamiętać, że `null` (`Nothing` w języku Visual Basic) jest przekazywana <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` i `stateObject` parametrów, ponieważ nie są one wymagane przy użyciu tej metody.  
+ Poniższy przykład kodu demonstruje używanie metod asynchronicznych w klasie DNS, aby pobrać informacje systemu nazw domen dla komputera określonego przez użytkownika. W przykładzie pokazano, blokowanie, za pomocą <xref:System.Threading.WaitHandle> skojarzony z operacją asynchroniczną. Należy pamiętać, że `null` (`Nothing` w języku Visual Basic) jest przekazywana <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` i `stateObject` parametrów, ponieważ nie są wymagane podczas używania tej metody.  
   
  [!code-csharp[AsyncDesignPattern#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlockWait.cs#2)]
  [!code-vb[AsyncDesignPattern#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlockWait.vb#2)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

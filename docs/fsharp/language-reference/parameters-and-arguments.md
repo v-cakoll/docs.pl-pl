@@ -2,25 +2,25 @@
 title: Parametry i argumenty (F#)
 description: 'Więcej informacji na temat Obsługa języka F # do definiowania parametrów i przekazanie argumentów do funkcji, metody i właściwości.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9744339110314e4e6b3c3cf8d49b1c988bc25e3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471984"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062640"
 ---
 # <a name="parameters-and-arguments"></a>Parametry i argumenty
 
 W tym temacie opisano obsługę języka, aby Definiowanie parametrów i przekazanie argumentów do funkcji, metody i właściwości. Zawiera informacje dotyczące sposobu przekazywania według odwołania i jak definiowanie i korzystanie z metod, które może potrwać zmienną liczbę argumentów.
 
-
 ## <a name="parameters-and-arguments"></a>Parametry i argumenty
+
 Termin *parametru* służy do opisywania nazw dla wartości, które powinny być dostarczane. Termin *argument* jest używany dla wartości podanych dla każdego parametru.
 
 Parametry można określić w spójnej kolekcji lub rozwinięte formularza lub kombinację dwóch. Argument jest przekazywany przy użyciu nazwy parametru jawnego. Parametry metod można określone jako opcjonalne i podanej wartości domyślnej.
 
-
 ## <a name="parameter-patterns"></a>Parametr wzorców
+
 Ogólnie rzecz biorąc, parametrów przekazana do funkcji i metod są wzorce rozdzielone spacjami. Oznacza to, że w zasadzie dowolnego wzorce szczegółowo [wyrażenia dopasowań](match-expressions.md) może służyć w liście parametrów dla funkcji lub elementu członkowskiego.
 
 Metody zazwyczaj formularz krotki przekazywanie argumentów. Uzyskuje lepszy wynik z perspektywy innych językach .NET, ponieważ w formularzu krotki pasuje do sposobu argumenty są przekazywane do metody .NET.
@@ -90,6 +90,7 @@ Od czasu do czasu wzorców, które obejmują niekompletne dopasowania są przyda
 Użycie wzorce mające niekompletne dopasowania najlepiej jest zarezerwowana do szybkiego tworzenia prototypów i inne zastosowania tymczasowego. Kompilator zgłosi ostrzeżenie dla tego kodu. Takie wzorce nie obejmują generalnie w przypadku wszystkich możliwych danych wejściowych i dlatego nie są odpowiednie dla składnika API.
 
 ## <a name="named-arguments"></a>Argumenty nazwane
+
 Argumenty dla metod, można określić za pomocą pozycji na liście argumentów rozdzielonych przecinkami lub one mogą być przekazywane do metody jawnie, podając nazwę, w którym następuje znak równości i wartości, które mają być przekazane w. Jeśli zostanie określony, podając nazwę, może znajdować się w innej kolejności z używanym w deklaracji.
 
 Argumenty nazwane może uczynić kod bardziej czytelne i bardziej potężnej niektórych typów zmian w interfejsie API, takie jak zmiany kolejności parametrów metody.
@@ -107,6 +108,7 @@ W wywołaniu konstruktora klasy można ustawić wartości właściwości klasy p
 Aby uzyskać więcej informacji, zobacz [Konstruktorzy (F #)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Parametry opcjonalne
+
 Można określić opcjonalny parametr dla metody, przy użyciu znaku zapytania przed nazwą parametru. Następujące parametry opcjonalne są interpretowane jako typów opcji języka F #, dzięki czemu można tworzyć zapytania je w zwykły sposób, że zapytania są typy opcji za pomocą `match` wyrażenie `Some` i `None`. Następujące parametry opcjonalne są dozwolone tylko w elementach członkowskich, nie na funkcje nie powstały przy użyciu `let` powiązania.
 
 Można również użyć funkcji `defaultArg`, który ustawia domyślną wartość opcjonalny argument. `defaultArg` Funkcja przyjmuje opcjonalny parametr jako pierwszy argument i wartość domyślną, jako drugiego.
@@ -124,6 +126,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 ```
 
 ## <a name="passing-by-reference"></a>Przekazywanie poprzez odwołanie
+
 Przekazywanie F # wartości według odwołania polega na `byref` — słowo kluczowe, który określa, że parametr jest właściwie wskaźnikiem wartość przekazywana przez odwołanie. Dowolna wartość przekazana do metody przy użyciu `byref` jako argument musi być `mutable`.
 
 Ponieważ tego parametru jest wskaźnik, a wartość jest modyfikowalna, wszelkie zmiany wartości są zachowywane po wykonaniu funkcji.
@@ -139,6 +142,7 @@ Spójna kolekcja można użyć jako wartości zwracanej, do przechowywania wszel
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Parameter — Tablice
+
 Czasami jest konieczne jest określenie funkcji, która przyjmuje dowolną liczbę parametrów typu heterogenicznych. Nie jest praktyczne utworzyć wszystkie możliwe metody przeciążone do konta dla wszystkich typów, które mogłyby zostać użyte. Implementacje platformy .NET zapewnia obsługę takich metod za pomocą funkcji tablicy parametrów. Z dowolnej liczby parametrów można podać metodę, która przyjmuje jeho signatura tablicy parametrów. Parametry są umieszczane w tablicy. Określa typ elementów tablicy, typy parametrów, które mogą być przekazywane do funkcji. Jeśli zdefiniujesz tablicy parametrów za pomocą `System.Object` jako typ elementu następnie kod klienta można przekazać wartości dowolnego typu.
 
 W języku F # tablice parametrów mogą można zdefiniować tylko w metodach. Nie można ich używać w autonomicznej lub funkcji, które są definiowane w modułach.
@@ -161,5 +165,6 @@ a 1 10 Hello world 1 True
 true
 ```
 
-## <a name="see-also"></a>Zobacz też
-[Elementy członkowskie](members/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Elementy członkowskie](members/index.md)

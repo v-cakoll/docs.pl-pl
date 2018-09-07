@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65d42597c572a85a95f9e2b4407df42c6fb7bb3d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bc0f266169a2d82bb76355febd58b2268907fe97
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856014"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075686"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Porady: Rozłączanie bloków przepływu danych
 Ten dokument zawiera opis sposobu odłączania docelowej bloku przepływu danych ze źródła.
@@ -45,5 +45,6 @@ Ten dokument zawiera opis sposobu odłączania docelowej bloku przepływu danych
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
 
-## <a name="see-also"></a>Zobacz też  
- [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - => operator [C#]
 - lambda expressions [C#], => operator
 ms.openlocfilehash: b9216cf61b6b9368112f769d952457df4aab4297
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778019"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080540"
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; Operator (odwołanie w C#)
 

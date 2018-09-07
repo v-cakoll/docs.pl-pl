@@ -1,21 +1,21 @@
 ---
-title: 'Porady: Zastąp serializacji XML użyciu zakodowanego protokołu SOAP'
+title: 'Porady: Przesłoń zakodowanego protokołu SOAP serializacji XML'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 1ce2259c482c0e8441b35b41e2303fba5d547416
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 721a27b4bba239f0d22a24e0e159ef36b742d1b7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585843"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064876"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a>Porady: Zastąp serializacji XML użyciu zakodowanego protokołu SOAP
+# <a name="how-to-override-encoded-soap-xml-serialization"></a>Porady: Przesłoń zakodowanego protokołu SOAP serializacji XML
 [Przykładowy kod](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
   
- Zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP proces jest podobny do procesu dla zastępowanie standardowych serializacji XML. Aby dowiedzieć się, jak zastępowanie standardowych serializacji XML, zobacz [porady: Określ alternatywną nazwę elementu strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
+ Zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP proces jest podobny do procesu dla zastępowanie standardowych serializacji XML. Aby uzyskać informacje o zastępowanie standardowych serializacji XML, zobacz [jak: Określ alternatywną nazwę elementu XML Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
   
 ### <a name="to-override-serialization-of-objects-as-soap-messages"></a>Aby zastąpić serializacji obiektów jako protokołu SOAP wiadomości  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33585843"
   
 3.  Utworzenie wystąpienia co najmniej jeden z atrybutów, które wpływa na serializacji XML, odpowiednio do elementu członkowskiego serializowanego. Aby uzyskać więcej informacji zobacz "Atrybuty czy kontroli kodowany protokołu SOAP serializacji".  
   
-4.  Ustaw odpowiednią właściwość `SoapAttributes` z atrybutem utworzonego w kroku 3.  
+4.  Ustaw właściwość odpowiednie `SoapAttributes` z atrybutem utworzony w kroku 3.  
   
 5.  Add `SoapAttributes` to `SoapAttributeOverrides`.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33585843"
 8.  Serializacji lub deserializacji obiektu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu serializuje pliku na dwa sposoby: pierwszy bez zastępowania żadnych `XmlSerializer` zachowanie klasy i drugie przez zastąpienie zachowania. Przykład zawiera klasę o nazwie `Group` z kilku członków. Różnych atrybutów, takich jak `SoapElementAttribute`, zostały zastosowane do elementów członkowskich klasy. Gdy klasa jest serializowana z `SerializeOriginal` metody atrybuty kontrolować zawartość komunikatu protokołu SOAP. Gdy `SerializeOverride` jest wywoływana metoda, zachowanie `XmlSerializer` zostanie zastąpiona przez tworzenie różnych atrybutów i ustawienie właściwości `SoapAttributes` do tych atrybutów (zgodnie z potrzebami).  
+ Poniższy przykładowy kod serializuje pliku na dwa sposoby: pierwszy, bez pomijania `XmlSerializer` zachowanie i klasy sekundę przez zastąpienie zachowania. Przykład zawiera klasę o nazwie `Group` z kilkoma składowymi. Różne atrybuty, takie jak `SoapElementAttribute`, zostały zastosowane do składowych klasy. Gdy klasa jest serializowana z `SerializeOriginal` metody atrybuty kontrolować zawartość komunikatu protokołu SOAP. Gdy `SerializeOverride` jest wywoływana metoda, zachowanie `XmlSerializer` zostanie zastąpiona przez tworzenie różnych atrybutów i ustawienie właściwości `SoapAttributes` do tych atrybutów (zgodnie z potrzebami).  
   
 ```csharp  
 using System;  
@@ -278,10 +278,11 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [Atrybuty kontrolujące zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
- [Serializacja XML z usługami internetowymi XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [Instrukcje: Serializacja obiektu jako kodowanego strumienia XML protokołu SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+- [Atrybuty kontrolujące zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+- [Serializacja XML z usługami internetowymi XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
+- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [Instrukcje: Serializacja obiektu jako kodowanego strumienia XML protokołu SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

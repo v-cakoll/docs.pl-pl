@@ -1,5 +1,5 @@
 ---
-title: Klasy podstawowe stosowania obiektów abstrakcyjnych
+title: Klasy bazowe na potrzeby implementowania abstrakcji
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,32 +8,33 @@ helpviewer_keywords:
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c247ed7273687dbd61a6f19923b71e07e9ed960
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571511"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078642"
 ---
-# <a name="base-classes-for-implementing-abstractions"></a>Klasy podstawowe stosowania obiektów abstrakcyjnych
-Mówiąc ściślej klasa staje się klasę podstawową, gdy inna klasa pochodzi od niego. Na potrzeby tej sekcji jednak klasa podstawowa jest przeznaczone głównie do zapewnienia wspólnej abstrakcji lub innych klas do ponownego użycia niektórych Domyślna implementacja jednak dziedziczenia klasy. Klasy podstawowe zwykle sit trakcie hierarchii dziedziczenia między abstrakcję elementu głównego hierarchii i kilka implementacji niestandardowych u dołu.  
+# <a name="base-classes-for-implementing-abstractions"></a>Klasy bazowe na potrzeby implementowania abstrakcji
+Ściśle rzecz ujmując klasę staje się klasę bazową, gdy inna klasa pochodzi od niego. Na potrzeby tej sekcji jednak klasa bazowa jest przeznaczona głównie w celu przesłania wspólnej abstrakcji, lub dla innych klas ponownie użyć niektórych Domyślna implementacja jednak dziedziczenia klasy. Klasy bazowe znajdują się zwykle w środku hierarchii dziedziczenia między klasą abstrakcyjną w katalogu głównym hierarchii i kilka niestandardowych implementacji u dołu.  
   
- Służą one jako obiekty pomocnicze implementacji wykonywania obiektów abstrakcyjnych. Na przykład, jeden z obiektów abstrakcyjnych struktury uporządkowanej kolekcji elementów jest <xref:System.Collections.Generic.IList%601> interfejsu. Implementowanie <xref:System.Collections.Generic.IList%601> nie jest prosta, i w związku z tym Framework zapewnia kilka klas podstawowych, takich jak <xref:System.Collections.ObjectModel.Collection%601> i <xref:System.Collections.ObjectModel.KeyedCollection%602>, służące jako pomocników wykonywania kolekcje niestandardowe.  
+ Służą one jako obiekty pomocnicze implementacji potrzeby implementowania abstrakcji. Na przykład jeden abstrakcje struktury uporządkowanej kolekcji elementów jest <xref:System.Collections.Generic.IList%601> interfejsu. Implementowanie <xref:System.Collections.Generic.IList%601> nie jest proste, i dlatego struktura zapewnia kilka klas podstawowych, takich jak <xref:System.Collections.ObjectModel.Collection%601> i <xref:System.Collections.ObjectModel.KeyedCollection%602>, które służą jako obiekty pomocnicze dotyczące implementowania kolekcje niestandardowe.  
   
- Klasy podstawowe zwykle nie są dostosowane do służyć jako obiekty abstrakcyjne samodzielnie, ponieważ mogą one zawierać zbyt wiele implementacji. Na przykład `Collection<T>` klasa podstawowa zawiera wiele implementacji związane z faktu, że implementuje nongeneric `IList` interfejsu (w celu lepszej integracji z kolekcjami nierodzajowe) i na fakt, że jest ona kolekcję elementów są przechowywane w pamięć w jednym z jego pól.  
+ Klasy bazowe zwykle nie są odpowiednie, która będzie służyć jako elementy abstrakcji samodzielnie, ponieważ jest on zwykle zawiera zbyt wiele implementacji. Na przykład `Collection<T>` klasa bazowa zawiera wiele implementacji związane z faktu, że implementuje nongeneric `IList` interfejs (w celu lepszej integracji z kolekcjami nierodzajowymi) i na fakt, że jest to zbiór elementów przechowywanych w pamięć w jednym z jej pól.  
   
- Jak już wspomniano klasy podstawowe zapewniają cenne pomocy dla użytkowników, którzy muszą implementować obiektów abstrakcyjnych, ale w tym samym czasie może być istotne odpowiedzialności. One Dodaj powierzchni i zwiększyć głębokość hierarchii dziedziczenia i dlatego koncepcyjnie skomplikować platformę. W związku z tym klas podstawowej należy używać tylko wtedy, gdy zawierają wartość użytkownikom platformy. Jeśli zawierają wartość tylko do obiektów implementujących RAM, w którym wielkość delegowania do wewnętrznej implementacji zamiast dziedziczenia z klasy podstawowej należy uznać należy unikać ich.  
+ Jak już wspomniano klasy bazowe może zapewnić bezcenne pomocy dla użytkowników, którzy muszą implementować abstrakcje, ale w tym samym czasie może być istotne odpowiedzialności. Oni dodawać obszaru powierzchni i zwiększyć głębokość hierarchii dziedziczenia i dlatego koncepcyjnie skomplikować platformę. W związku z tym klasy bazowe powinna służyć tylko wtedy, gdy zapewniają dużą wartość dla użytkowników w ramach. Jeśli zapewniają wartość tylko do implementacji RAM, w którym wielkość delegowania do wdrożenia wewnętrznego, zamiast dziedziczenia z klasy bazowej należy uznać należy unikać ich.  
   
- **✓ CONSIDER** wprowadzania base klasy abstrakcyjny, nawet jeśli nie zawierają żadnych abstrakcyjne elementy członkowskie. To wyraźnie komunikuje się dla użytkowników, że klasa jest przeznaczona wyłącznie do być dziedziczone z.  
+ **✓ CONSIDER** wprowadzania base klasy abstrakcyjny, nawet jeśli nie zawierają żadnych abstrakcyjne elementy członkowskie. To wyraźnie komunikuje się użytkownikom przeznaczoną wyłącznie do być dziedziczone z klasy.  
   
- **✓ CONSIDER** umieszczenie w oddzielnych nazw typów połączeniach scenariusz klas podstawowych. Zgodnie z definicją klasy podstawowe są przeznaczone do rozszerzalności zaawansowanych scenariuszy i w związku z tym nie są interesujące większości użytkowników.  
+ **✓ CONSIDER** umieszczenie w oddzielnych nazw typów połączeniach scenariusz klas podstawowych. Zgodnie z definicją klasy bazowe są przeznaczone dla scenariuszy zaawansowanych rozszerzeń i w związku z tym nie są interesujące dla większości użytkowników.  
   
  **X AVOID** nazw klas podstawowych z sufiksem "Podstawowy", jeśli klasa jest przeznaczona do użycia w publicznych interfejsach API.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

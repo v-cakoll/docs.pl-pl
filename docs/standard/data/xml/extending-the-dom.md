@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58f32dcb76246bed1030f3d0a45db2541f381877
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 70e13893cf350a193411f1833e2e3b21c9b64182
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556503"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061068"
 ---
 # <a name="extending-the-dom"></a>Rozszerzanie modelu DOM
 
@@ -253,6 +253,6 @@ Aby uzyskać więcej informacji na temat obsługi zdarzeń węzła, zobacz [zdar
 
 Jeśli są zastępują <xref:System.Xml.XmlDocument.CreateElement%2A> metody w klasie pochodnej, domyślne atrybuty nie są dodawane podczas tworzenia nowych elementów podczas edytowania dokumentu. Ten problem występuje tylko podczas edytowania. Ponieważ <xref:System.Xml.XmlDocument.CreateElement%2A> metodą jest odpowiedzialny za dodawanie atrybutów, które domyślne mają <xref:System.Xml.XmlDocument>, musi kodu tę funkcję w <xref:System.Xml.XmlDocument.CreateElement%2A> metody. Jeśli są ładowane <xref:System.Xml.XmlDocument> zawierającej atrybutów domyślnych, będą one poprawnie obsługiwane. Aby uzyskać więcej informacji na temat atrybutów domyślnych, zobacz [tworzenie nowych atrybutów dla elementów w modelu DOM](creating-new-attributes-for-elements-in-the-dom.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Model DOM (XML Document Object Model)](xml-document-object-model-dom.md)  
+- [Model DOM (XML Document Object Model)](xml-document-object-model-dom.md)  

@@ -10,46 +10,48 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03da36090c255f635036a9bd518bdacd99404ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075647"
 ---
 # <a name="weak-references"></a>Słabe odwołania
-Moduł zbierający elementy bezużyteczne nie można zebrać obiektu używany przez aplikację, gdy kod aplikacji może osiągnąć tego obiektu. Aplikacja jest nazywany ma silne odwołanie do obiektu.  
+Moduł odśmiecania pamięci nie można zebrać obiekt używany przez aplikację, gdy kod aplikacji może osiągnąć tego obiektu. Aplikacja jest nazywany ma silne odwołanie do obiektu.  
   
- Słabe odwołanie zezwala na moduł garbage collector zbierać obiektu, umożliwiając aplikacji dostępu do tego obiektu. Słabe odwołanie jest prawidłowy tylko w nieokreślonej ilość czasu, aż obiekt są gromadzone, gdy nie występują żadne relacje silne. Gdy używasz słabe odwołanie silne odwołanie do obiektu, który uniemożliwia zbieranych nadal można korzystać z aplikacji. Jednak zawsze istnieje ryzyko, że moduł zbierający elementy bezużyteczne rozpocznie się obiekt najpierw przed ustanowieniu silne odwołanie.  
+ Słabe odwołanie zezwala na moduł odśmiecania pamięci, aby zbierać obiektu, wciąż zezwalając aplikacjom dostępu do obiektu. Słabe odwołanie jest prawidłowy tylko podczas nieokreślony ilość czasu, dopóki obiekt jest tworzona, gdy nie istnieją żadne odniesienia silne. Gdy używasz słabe odwołanie, aplikacja nadal można uzyskać silne odwołanie do obiektu, który uniemożliwia są zbierane. Jednak zawsze istnieje ryzyko, że moduł zbierający elementy bezużyteczne otrzyma obiektowi najpierw przed ustanowieniu silne odwołanie.  
   
- Słabe odwołania są przydatne w przypadku obiektów, które używają dużej ilości pamięci, ale można utworzyć ponownie łatwo Jeśli odzyskane przez wyrzucanie elementów bezużytecznych.  
+ Słabe odwołania są przydatne dla obiektów, które używa dużej ilości pamięci, ale może być odtworzona łatwo, jeśli są odzyskiwane przez wyrzucanie elementów bezużytecznych.  
   
- Załóżmy, że widok drzewa w aplikacji formularzy systemu Windows wyświetla złożonych hierarchiczna wybór opcji dla użytkownika. W przypadku dużych danych utrzymywanie drzewa w pamięci jest nieefektywne, gdy użytkownik jest związany z innych obiektów w aplikacji.  
+ Załóżmy, że widok drzewa w aplikacji Windows Forms Wyświetla złożonych hierarchiczne opcje do wyboru dla użytkownika. W przypadku dużych danych bazowych, utrzymywanie drzewa w pamięci jest nieefektywne po użytkownik jest związany z innych obiektów w aplikacji.  
   
- Gdy użytkownik zmienia optymalizacji na inną część aplikacji, można użyć <xref:System.WeakReference> klasa do tworzenia słabe odwołanie do drzewa i zniszczyć wszystkie odwołania silne. Gdy użytkownik przełącza do drzewa, aplikacja próbuje uzyskać silne odwołanie do drzewa i w razie powodzenia pozwala uniknąć Rekonstruowanie drzewa.  
+ Jeśli użytkownik przejdzie natychmiast do innej części aplikacji, możesz użyć <xref:System.WeakReference> klasy, aby tworzyć słabe odwołanie do drzewa i niszczyć wszystkie odwołania silne. Gdy użytkownik zmienia powrót do drzewa, aplikacja próbuje uzyskać silne odwołanie do drzewa i jeśli to się powiedzie, pozwala uniknąć Rekonstruowanie drzewa.  
   
- Aby ustanowić słabe odwołanie z obiektem, należy utworzyć <xref:System.WeakReference> mają być śledzone za pomocą wystąpienia obiektu. Następnie ustaw <xref:System.WeakReference.Target%2A> właściwości tego obiektu i zestawu oryginalnej odwołanie do obiektu `null`. Na przykład kod, zobacz <xref:System.WeakReference> w bibliotece klas.  
+ Aby ustanowić słabe odwołanie z obiektu, należy utworzyć <xref:System.WeakReference> mają być śledzone za pomocą wystąpienia obiektu. Następnie ustawiamy <xref:System.WeakReference.Target%2A> właściwości tego obiektu i zestawu, oryginalnym odwoływać się do obiektu, aby `null`. Dla przykładu kodu zobacz <xref:System.WeakReference> w bibliotece klas.  
   
-## <a name="short-and-long-weak-references"></a>Krótko- i długi słabe odwołania  
- Można utworzyć krótkiej słabe odwołanie lub długo słabego odwołania:  
+## <a name="short-and-long-weak-references"></a>Krótko- i długo słabe odwołania  
+ Można utworzyć krótkiej słabe odwołanie lub długo słabe odwołanie:  
   
--   krótki  
+-   Krótka  
   
-     Element docelowy krótkich słabe odwołanie staje się `null` gdy obiekt jest odzyskana przez wyrzucanie elementów bezużytecznych. Słabe odwołanie jest obiekt zarządzany i mogą ulec wyrzucanie elementów bezużytecznych, podobnie jak inne obiektu zarządzanego.  Krótki słabe odwołanie jest domyślnego konstruktora dla <xref:System.WeakReference>.  
+     Staje się celem krótki słabe odwołanie `null` gdy obiekt jest odzyskiwane przez wyrzucanie elementów bezużytecznych. Słabe odwołanie jest sam obiekt zarządzany i podlega wyrzucania elementów bezużytecznych, podobnie jak inne zarządzanego obiektu.  Krótkie słabe odwołanie jest domyślny konstruktor dla <xref:System.WeakReference>.  
   
--   długa  
+-   długi  
   
-     Long słabe odwołanie jest zachowywane po obiektu <xref:System.Object.Finalize%2A> została wywołana metoda. Dzięki temu obiekt do odtworzenia, ale stan obiektu pozostaje nieprzewidywalne. Aby korzystać z odwołaniem długie, określ `true` w <xref:System.WeakReference> konstruktora.  
+     Długi słabe odwołanie jest zachowywane po obiektu <xref:System.Object.Finalize%2A> została wywołana metoda. Dzięki temu obiekt do odtworzenia, ale stan obiektu jest nieprzewidywalne. Aby użyć długie odwołania, określ `true` w <xref:System.WeakReference> konstruktora.  
   
-     Jeśli typ obiektu nie ma <xref:System.Object.Finalize%2A> stosuje funkcji krótkich słabe odwołanie metody, a słabe odwołanie jest prawidłowe tylko do momentu docelowej są zbierane, co może nastąpić w dowolnym momencie po finalizatora jest uruchomienie.  
+     Jeśli nie ma typu obiektu <xref:System.Object.Finalize%2A> metody, funkcja krótki słabe odwołanie ma zastosowanie i słabe odwołanie jest prawidłowy tylko do momentu docelowej są zbierane, co może nastąpić w dowolnej chwili po finalizator uruchomieniu.  
   
- Aby ustanowić silne odwołanie i ponownie użyć obiektu, rzutowania <xref:System.WeakReference.Target%2A> właściwość <xref:System.WeakReference> do typu obiektu. Jeśli <xref:System.WeakReference.Target%2A> zwraca `null`, obiekt był zebranych; w przeciwnym razie, można nadal używać obiektu, ponieważ aplikacja została ponownie nawiązana silne odwołanie do niej.  
+ Aby ustanowić silne odwołanie i ponownie użyć obiektu, należy rzutować <xref:System.WeakReference.Target%2A> właściwość <xref:System.WeakReference> pod kątem typu obiektu. Jeśli <xref:System.WeakReference.Target%2A> właściwość zwraca `null`, obiekt był zebrane; w przeciwnym razie, możesz użyć obiektu, ponieważ aplikacja została ponownie nawiązana silne odwołanie do niego.  
   
 ## <a name="guidelines-for-using-weak-references"></a>Wskazówki dotyczące używania słabe odwołania  
- Użyj długo słabe odwołania tylko wtedy, gdy jest to konieczne, ponieważ stan obiektu jest nieprzewidziany po zakończeniu.  
+ Użyj długo słabe odwołania, tylko wtedy, gdy jest to konieczne, ponieważ stan obiektu po zakończeniu, będzie nieprzewidywalny.  
   
- Unikaj używania słabego odwołania do obiektów małych wskaźnik sam może być tak dużych lub większy.  
+ Należy unikać używania słabe odwołania do małych obiektów, ponieważ sam wskaźnik może być tak duży lub większe.  
   
- Unikaj używania słabe odwołania jako automatyczne rozwiązanie problemów z zarządzaniem pamięci. Zamiast tego Tworzenie skutecznych zasad buforowania obsługi obiektów aplikacji.  
+ Należy unikać używania słabe odwołania jako rozwiązanie z automatycznego na problemy z zarządzaniem pamięcią. Zamiast tego należy opracować efektywnych zasad buforowania, obsługi obiektów Twojej aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)

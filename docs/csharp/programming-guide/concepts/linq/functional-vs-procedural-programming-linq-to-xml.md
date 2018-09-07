@@ -3,11 +3,11 @@ title: Programowanie funkcjonalne a Proceduralne (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
 ms.openlocfilehash: 888c360e1b868c79d378f2fc46a26c152121300f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749986"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071768"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>Programowanie funkcjonalne a Proceduralne (LINQ to XML) (C#)
 Istnieją różne rodzaje aplikacji XML:  

@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b8af7b3894c010d5a7a4c712efe2458a6bb2a50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c03ab0e1d493d9669f1e3821393d41d1c1b89867
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571077"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063631"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Porady: korzystanie ze zdarzeń w aplikacjach formularzy sieci Web
-Typowy scenariusz w aplikacji formularzy sieci Web programu ASP.NET jest wypełnienie strony sieci Web z formantami, a następnie wykonywać konkretną akcję, w oparciu o który kontroli, użytkownik klika polecenie. Na przykład <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> kontroli wywołuje zdarzenie po kliknięciu przez użytkownika na stronie sieci Web. Dzięki obsłudze zdarzenia, aplikacja może wykonywać logiki aplikacji dla tego kliknij przycisk.  
+Jest to częsty przypadek w aplikacji formularzy sieci Web programu ASP.NET do wypełniania strony sieci Web za pomocą kontrolek, a następnie wykonać określonej akcji, które kontrolują użytkownik klika polecenie w oparciu. Na przykład <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> kontrolki wywołuje zdarzenie po kliknięciu przez użytkownika na stronie sieci Web. Dzięki obsłudze zdarzenia, aplikację można wykonać logiki aplikacji odpowiednie dla tego kliknięcia przycisku.  
   
 ### <a name="to-handle-a-button-click-event-on-a-webpage"></a>Aby obsługiwać przycisk Kliknij zdarzenie na stronie sieci Web  
   
-1.  Tworzenie strony formularzy sieci Web ASP.NET (strona sieci Web), który ma <xref:System.Web.UI.WebControls.Button> sterować za pomocą `OnClick` wartość ustawiona na nazwę metody, który będzie definiował w następnym kroku.  
+1.  Tworzenie strony formularzy sieci Web platformy ASP.NET (strona sieci Web), który ma <xref:System.Web.UI.WebControls.Button> kontrolką `OnClick` wartość ustawiona na nazwę metody definiującej w następnym kroku.  
   
     ```xml  
     <asp:Button ID="Button1" runat="server" Text="Click Me" OnClick="Button1_Click" />  
     ```  
   
-2.  Definiowanie procedury obsługi zdarzeń, odpowiadający <xref:System.Web.UI.WebControls.Button.Click> podpisu delegata zdarzenia i że ma nazwę zdefiniowane dla `OnClick` wartość.  
+2.  Definiowanie obsługi zdarzeń, który odpowiada <xref:System.Web.UI.WebControls.Button.Click> podpis delegata zdarzenia i który ma nazwę zdefiniowaną dla `OnClick` wartość.  
   
     ```csharp  
     protected void Button1_Click(object sender, EventArgs e)  
@@ -47,9 +47,10 @@ Typowy scenariusz w aplikacji formularzy sieci Web programu ASP.NET jest wypełn
     End Sub  
     ```  
   
-     <xref:System.Web.UI.WebControls.Button.Click> Używa zdarzeń <xref:System.EventHandler> klasy dla typu delegata i <xref:System.EventArgs> klasy danych zdarzenia. Architekturę stron ASP.NET jest automatycznie generuje kod, który tworzy wystąpienie <xref:System.EventHandler> i dodanie tego wystąpienia obiektu delegowanego <xref:System.Web.UI.WebControls.Button.Click> zdarzenie <xref:System.Web.UI.WebControls.Button> wystąpienia.  
+     <xref:System.Web.UI.WebControls.Button.Click> Zdarzeń używa <xref:System.EventHandler> klasy dla typu delegata i <xref:System.EventArgs> klasy danych zdarzenia. Architektura strony ASP.NET automatycznie generuje kod, który tworzy wystąpienie <xref:System.EventHandler> i dodaje tego wystąpienia delegata <xref:System.Web.UI.WebControls.Button.Click> zdarzenia <xref:System.Web.UI.WebControls.Button> wystąpienia.  
   
-3.  W przypadku metoda obsługi, który został zdefiniowany w kroku 2, Dodaj kod, aby wykonać wszystkie akcje, które są wymagane w przypadku wystąpienia zdarzenia.  
+3.  W przypadku metody obsługi, który został zdefiniowany w kroku 2, Dodaj kod, aby wykonywać żadnych akcji, które są wymagane, gdy wystąpi zdarzenie.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zdarzenia](../../../docs/standard/events/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Zdarzenia](../../../docs/standard/events/index.md)

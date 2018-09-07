@@ -8,52 +8,53 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ea40542b235dd51bfec38aae9718b2278d7073b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572648"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060375"
 ---
 # <a name="when-to-use-generic-collections"></a>Kiedy należy używać kolekcji ogólnych
-Kolekcje ogólne ogólnie zaleca się użycie, ponieważ uzyskanie natychmiastowe korzyści wynikające z zabezpieczeń bez konieczności pochodzić od typu podstawowego kolekcji i implementować członków określonego typu. Typy kolekcji ogólnych ogólnie lepiej niż odpowiednie typy kolekcji nierodzajowe (i lepszą wydajność niż typy który pochodne typy nierodzajowe kolekcji podstawowej) gdy elementy kolekcji są typy wartości, ponieważ z ogólnymi nie trzeba elementy w polu.  
+Za pomocą kolekcji ogólnych ogólnie zaleca się, ponieważ uzyskanie bezpośrednią korzyść bezpieczeństwa typu bez konieczności pochodzić od typu podstawowego kolekcji i implementowanie elementów specyficznych dla typu. Typy generyczne kolekcji również zazwyczaj mają lepszą wydajność niż odpowiadające typy kolekcji nierodzajowymi (i lepiej niż typy, pochodne typy nierodzajowymi bazowej kolekcji) po elementy kolekcji są typami wartości, ponieważ za pomocą typów ogólnych nie ma potrzeby polu elementów.  
   
- Dla programów przeznaczonych [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] lub później, należy użyć klasy rodzajowej kolekcji w <xref:System.Collections.Concurrent> przestrzenią nazw, gdy wiele wątków może Dodawanie lub usuwanie elementów z kolekcji jednocześnie.  
+ Dla programów przeznaczonych [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] lub nowszej, należy użyć klasy kolekcji rodzajowej w <xref:System.Collections.Concurrent> przestrzenią nazw, gdy wiele wątków może być dodanie lub usunięcie elementów z kolekcji jednocześnie.  
   
- Następujące typy ogólne odpowiadają istniejących typów kolekcji:  
+ Następujące typy rodzajowe odnoszą się do istniejących typów kolekcji:  
   
--   <xref:System.Collections.Generic.List%601> jest ogólny klasy, która odpowiada <xref:System.Collections.ArrayList>.  
+-   <xref:System.Collections.Generic.List%601> jest klasą rodzajową, który odpowiada <xref:System.Collections.ArrayList>.  
   
--   <xref:System.Collections.Generic.Dictionary%602> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602> są ogólne klasy, które odpowiadają <xref:System.Collections.Hashtable>.  
+-   <xref:System.Collections.Generic.Dictionary%602> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602> są klasy ogólne, które odpowiadają <xref:System.Collections.Hashtable>.  
   
--   <xref:System.Collections.ObjectModel.Collection%601> jest ogólny klasy, która odpowiada <xref:System.Collections.CollectionBase>. <xref:System.Collections.ObjectModel.Collection%601> mogą być używane jako klasy podstawowej, lecz w przeciwieństwie do <xref:System.Collections.CollectionBase>, nie jest abstrakcyjna. Dzięki temu można łatwiej używać.  
+-   <xref:System.Collections.ObjectModel.Collection%601> jest klasą rodzajową, który odpowiada <xref:System.Collections.CollectionBase>. <xref:System.Collections.ObjectModel.Collection%601> może służyć jako klasa bazowa, lecz w przeciwieństwie do <xref:System.Collections.CollectionBase>, nie jest abstrakcyjna. Dzięki temu można łatwiej używać.  
   
--   <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> jest ogólny klasy, która odpowiada <xref:System.Collections.ReadOnlyCollectionBase>. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> nie jest abstrakcyjna i ma Konstruktor, który ułatwia udostępnianie istniejące <xref:System.Collections.Generic.List%601> jako kolekcji tylko do odczytu.  
+-   <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> jest klasą rodzajową, który odpowiada <xref:System.Collections.ReadOnlyCollectionBase>. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> nie jest abstrakcyjna i ma konstruktora, który można łatwo udostępnić istniejący <xref:System.Collections.Generic.List%601> jako kolekcja tylko do odczytu.  
   
--   <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601>, I <xref:System.Collections.Generic.SortedList%602> klas rodzajowych odpowiadają odpowiednich klas nierodzajowe pod tą samą nazwą.  
+-   <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601>, I <xref:System.Collections.Generic.SortedList%602> klas ogólnych odnoszą się do odpowiednich klas nierodzajowymi o takich samych nazwach.  
   
 ## <a name="additional-types"></a>Dodatkowe typy  
- Typy kolekcji ogólnych kilka nie mają nierodzajowe odpowiedniki. Obejmują one następujące czynności:  
+ Kilka typów ogólnych kolekcji nie ma odpowiedników nierodzajowych. Ulepszenia obejmują następujące czynności:  
   
--   <xref:System.Collections.Generic.LinkedList%601> jest ogólnego przeznaczenia listy połączonej, który zapewnia O(1) operacji wstawiania i usuwania.  
+-   <xref:System.Collections.Generic.LinkedList%601> jest listę połączonych ogólnego przeznaczenia, która udostępnia operacje wstawiania i usuwania O(1).  
   
--   <xref:System.Collections.Generic.SortedDictionary%602> jest posortowany słownik z O (dziennika `n`) operacji wstawiania i odzyskiwania, dzięki czemu będzie on przydatne zamiast <xref:System.Collections.Generic.SortedList%602>.  
+-   <xref:System.Collections.Generic.SortedDictionary%602> jest posortowany słownik z O (log `n`) ostatniego wstawienia i wydobycia operacji, co sprawia, że użyteczną alternatywą dla <xref:System.Collections.Generic.SortedList%602>.  
   
--   <xref:System.Collections.ObjectModel.KeyedCollection%602> jest hybrydowego między listą słownik, który umożliwia przechowywanie obiektów, które zawierają własne klucze.  
+-   <xref:System.Collections.ObjectModel.KeyedCollection%602> jest hybrydowej między listą a słownika, która zapewnia sposób przechowywania obiektów, które zawierają własne klucze.  
   
--   <xref:System.Collections.Concurrent.BlockingCollection%601> implementuje klasy kolekcji za pomocą funkcji blokujących i ograniczających.  
+-   <xref:System.Collections.Concurrent.BlockingCollection%601> implementuje klasy kolekcji za pomocą funkcji blokujących i.  
   
 -   <xref:System.Collections.Concurrent.ConcurrentBag%601> zapewnia szybkie wstawiania i usuwania elementów nieuporządkowaną.  
   
 ## <a name="linq-to-objects"></a>LINQ do obiektów  
- LINQ do obiektów funkcji pozwala na użycie zapytań LINQ do obiektów w pamięci, tak długo, jak typ obiektu implementuje <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interfejsu. Zapytania LINQ Podaj wspólnego wzorca do uzyskiwania dostępu do danych; zazwyczaj są to zwięzły i bardziej czytelny niż standardowe `foreach` pętli; oraz udostępnia filtrowania, kolejność i grupowanie możliwości. Zapytania LINQ także może zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ do obiektów](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) i [równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ Funkcja LINQ to Objects umożliwia używanie zapytań LINQ do dostępu do obiektów w pamięci, tak długo, jak długo typ obiektu implementuje <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interfejsu. Zapytania LINQ zapewniają wspólny wzorzec do uzyskiwania dostępu do danych. zazwyczaj są bardziej zwięzłe i czytelne niż standardowe `foreach` pętle i zapewniają filtrowanie, porządkowanie i możliwości grupowania. Zapytania LINQ można również zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) i [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="additional-functionality"></a>Dodatkowe funkcje  
- Niektórych typów ogólnych są funkcje, które nie znajduje się w typach nierodzajowe kolekcji. Na przykład <xref:System.Collections.Generic.List%601> klasy, która odpowiada nongeneric <xref:System.Collections.ArrayList> klasa, ma wiele metod, które akceptują delegatów, takich jak <xref:System.Predicate%601> delegata, który pozwala na określenie metody wyszukiwania na liście <xref:System.Action%601>delegata, który reprezentuje metody, które mają wpływ na każdy element listy, a <xref:System.Converter%602> delegata, który pozwala zdefiniować konwersji między typami.  
+ Niektórych typów ogólnych są funkcje, które nie znajduje się w typach nierodzajowymi kolekcji. Na przykład <xref:System.Collections.Generic.List%601> klasy, która odnosi się do nongeneric <xref:System.Collections.ArrayList> klasy, ma wiele metod, które akceptują delegatów ogólnych, takich jak <xref:System.Predicate%601> delegat, który pozwala na określenie metody wyszukiwania na liście <xref:System.Action%601>delegat, który reprezentuje metody, które działają na każdym elemencie listy, a <xref:System.Converter%602> delegat, który pozwala zdefiniować konwersje między typami.  
   
- <xref:System.Collections.Generic.List%601> Klasa pozwala na określenie własnych <xref:System.Collections.Generic.IComparer%601> implementacje ogólny interfejs do listy wyszukiwania i sortowania. <xref:System.Collections.Generic.SortedDictionary%602> i <xref:System.Collections.Generic.SortedList%602> klasy również mają tę możliwość. Ponadto te klasy umożliwiają określenie comparers po utworzeniu kolekcji. W podobny sposób <xref:System.Collections.Generic.Dictionary%602> i <xref:System.Collections.ObjectModel.KeyedCollection%602> klasy umożliwiają określenie własnych comparers równości.  
+ <xref:System.Collections.Generic.List%601> Klasy można określić własne <xref:System.Collections.Generic.IComparer%601> implementacje interfejsu ogólnego do sortowania i wyszukiwania listy. <xref:System.Collections.Generic.SortedDictionary%602> i <xref:System.Collections.Generic.SortedList%602> klasy także mają tę możliwość. Ponadto klasy te umożliwiają określenie porównywanie, po utworzeniu kolekcji. W podobny sposób <xref:System.Collections.Generic.Dictionary%602> i <xref:System.Collections.ObjectModel.KeyedCollection%602> klasy umożliwiają określenie własnych porównywanie równości.  
   
-## <a name="see-also"></a>Zobacz też  
- [Kolekcje i struktury danych](../../../docs/standard/collections/index.md)  
- [Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)  
- [Typy ogólne](../../../docs/standard/generics/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Kolekcje i struktury danych](../../../docs/standard/collections/index.md)  
+- [Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)  
+- [Typy ogólne](../../../docs/standard/generics/index.md)

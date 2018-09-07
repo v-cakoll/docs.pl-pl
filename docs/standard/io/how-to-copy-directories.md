@@ -15,11 +15,11 @@ ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f2c2fbd58b10af80a2a233cbd4211befe2dbd33
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874813"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075325"
 ---
 # <a name="how-to-copy-directories"></a>Porady: kopiowanie katalogów
 W tym przykładzie pokazano, jak używać klas we/wy synchronicznie skopiować zawartość katalogu do innej lokalizacji. W tym przykładzie użytkownik może określić, czy ma być również kopiowany podkatalogów. Podkatalogi są kopiowane, w tym rekursywnie przykład metody kopiuje je poprzez wywołanie sam w poszczególnych podkatalogach kolejne, aż nie wystąpią już do skopiowania.  

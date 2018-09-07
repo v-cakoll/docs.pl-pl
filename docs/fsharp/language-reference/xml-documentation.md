@@ -3,11 +3,11 @@ title: Dokumentacja XML (F#)
 description: 'Dowiedz się więcej o pomocy technicznej w języku F # do generowania dokumentacji z komentarzy.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a4cb132e65b630821e5eb2b39276c1de99aff80
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746028"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065478"
 ---
 # <a name="xml-documentation"></a>Dokumentacja XML
 

@@ -1,68 +1,68 @@
 ---
-title: C# Versioning — przewodnik C#
-description: Zrozumieć sposób działania kontroli wersji w języku C# i .NET
+title: C# Versioning — Przewodnik po języku C#
+description: Zrozumienie sposobu działania przechowywanie wersji w języku C# i .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4dc8e7e521bf209d6ca69a84534d277fb8a93ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351787"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071508"
 ---
 # <a name="versioning-in-c"></a>Przechowywanie wersji w języku C# #
 
-W tym samouczku nauczysz się, jakie versioning oznacza, że w środowisku .NET. Dowiesz się czynniki do rozważenia podczas przechowywania wersji biblioteki, a także uaktualnienie do nowej wersji biblioteki.
+W tym samouczku dowiesz się, jakie versioning oznacza, że na platformie .NET. Poznasz również czynniki do rozważenia podczas przechowywania wersji biblioteki, a także uaktualnienie do nowej wersji biblioteki.
 
 ## <a name="authoring-libraries"></a>Tworzenie bibliotek
 
-Deweloperzy tworzący bibliotek .NET do użytku publicznego udało Ci się najbardziej prawdopodobnie zostały w sytuacjach, w których konieczne wdrażanie nowych aktualizacji. Jak przejść na ten tego procesu ma znaczenie dużo, jak należy się upewnić, że jest płynne przejście z istniejącego kodu do nowej wersji biblioteki. Oto kilka kwestii, które należy wziąć pod uwagę podczas tworzenia nowej wersji:
+Jako deweloper, który został utworzony z bibliotekami .NET do użytku publicznego, udało Ci się najbardziej prawdopodobnie zostały w sytuacjach, w którym trzeba wdrożyć nowe aktualizacje. Jak obniżyć o tym procesie ma znaczenie dużo, jak należy się upewnić, że jest bezproblemowe przejście z istniejącego kodu do nowej wersji biblioteki. Poniżej przedstawiono kilka kwestii, które należy wziąć pod uwagę podczas tworzenia nowej wersji:
 
-### <a name="semantic-versioning"></a>Wersjonowania semantycznego
+### <a name="semantic-versioning"></a>Semantic Versioning
 
-[Wersjonowania semantycznego](http://semver.org/) (programu SemVer skrócie) jest Konwencja nazewnictwa stosowana do wersji biblioteki oznaczającego zdarzenia określonego punktu kontrolnego.
-Najlepiej, jeśli informacje o wersji, nadaj biblioteki powinny pomóc deweloperom określania zgodności z projektami korzystające z starsze wersje tego same biblioteki.
+[Przechowywanie wersji semantycznej](http://semver.org/) (SemVer w skrócie) jest konwencję nazewnictwa, stosowany do wersji biblioteki oznaczającego punktów kontrolnych określonych zdarzeń.
+Najlepiej, jeśli informacje o wersji, które zapewniają biblioteki powinny pomóc deweloperom Określanie zgodności z projektami, które korzystają z starsze wersje tego takie same biblioteki.
 
-Najprostsze podejście do programu SemVer jest w formacie 3 składnika `MAJOR.MINOR.PATCH`, gdzie:
- 
-* `MAJOR` jest zwiększany po wprowadzeniu zmian interfejsu API niezgodne
+Format składnika 3 jest najbardziej podstawowym sposobem SemVer `MAJOR.MINOR.PATCH`, gdzie:
+
+* `MAJOR` jest zwiększany po wprowadzeniu zmian niezgodnych interfejsów API
 * `MINOR` jest zwiększany po dodaniu funkcji w sposób zgodny wstecz
-* `PATCH` jest zwiększany po wprowadzeniu wstecznie zgodna poprawki błędów
+* `PATCH` jest zwiększany po wprowadzeniu poprawki wstecznie zgodny
 
-Istnieją również sposobów, aby określić inne scenariusze, takie jak wersje wstępne itp., stosując informacje o wersji do biblioteki programu .NET.
+Istnieją również sposoby, aby określić inne scenariusze, takie jak wersje wstępne itp., stosując informacje o wersji do biblioteki programu .NET.
 
-### <a name="backwards-compatibility"></a>Zapewnienia zgodności
+### <a name="backwards-compatibility"></a>Wstecznej zgodności
 
-Jak zwolnić nowych wersji biblioteki, Wstecz zgodność z poprzednimi wersjami najprawdopodobniej będzie jedną z głównych problemów.
-Nowa wersja biblioteki jest zgodny z poprzedniej wersji kodu, który jest zależny od poprzedniej wersji gdy ponownie skompilowana, pracy z nową wersję źródła. Nowa wersja biblioteki jest zgodny z binarnego, jeśli aplikację, która była uzależniona od starej wersji bez ponownej kompilacji, pracować z nowej wersji.
+Jak zwolnieniu nowe wersje biblioteki wstecznej zgodności z poprzednimi wersjami najprawdopodobniej będzie jedną z głównych problemów.
+Nową wersję biblioteki jest zgodna z poprzednią wersją kod, który jest zależny od poprzedniej wersji można gdy kompilowany ponownie, pracować z nową wersją źródłowego. Nową wersję biblioteki jest zgodny z binarnego, aplikacja, która była uzależniona od starej wersji bez ponownej kompilacji, pracy z nową wersją.
 
-Poniżej przedstawiono niektóre czynności, które należy uwzględnić podczas próby Obsługa zapewnienia zgodności z poprzednimi wersjami biblioteki:
+Oto kilka rzeczy, które należy uwzględnić podczas próby utrzymania wstecznej zgodności z poprzednimi wersjami biblioteki:
 
-* Metody wirtualne: podczas wprowadzania metody wirtualnej Niewirtualny w nowej wersji oznacza to, że projekty, które zastępują tej metody do zaktualizowania. To jest duży istotnej zmiany i jest zalecane.
-* Metoda podpisów: Jeśli aktualizowanie zachowania — metoda wymaga zmiany jego sygnatura również, należy zamiast tego utworzyć przeciążenia tak, aby kod wywoływanie metody będą nadal działać.
-Zawsze można manipulować starego podpis metody do wywołania do nowego podpisu metody, aby implementacji pozostaje spójna.
-* [Atrybut przestarzałe](programming-guide/concepts/attributes/common-attributes.md#Obsolete): w kodzie można użyć tego atrybutu, aby określić klasy lub elementów członkowskich klasy, które zostały uznane za przestarzałe i może być usunięte w przyszłych wersjach.
-Dzięki temu deweloperzy przy użyciu biblioteki są lepiej przygotowane pod kątem fundamentalne zmiany.
-* Argumenty opcjonalne metody: Podczas wprowadzania metody wcześniej opcjonalne argumenty obowiązkowe lub zmienić ich wartości domyślne, a następnie całego kodu, który nie dostarcza tych argumentów będzie muszą zostać zaktualizowane.
+* Metody wirtualne: po ustawieniu metodę wirtualną niewirtualną w nowej wersji oznacza, że projekty, które zastępują tej metody do zaktualizowania. To jest ogromna istotnej zmiany i jest zdecydowanie odradzane.
+* Podpisy metod: podczas aktualizowania zachowanie metody wymaga zmień jej sygnaturę tak dobrze, należy zamiast tego utworzyć przeciążenia tak, aby kod wywoływanie tej metody będą nadal działać.
+Zawsze możesz manipulować stary podpis metody do wywołania w podpisie metody nowy, aby implementacji pozostanie spójna.
+* [Atrybut przestarzałe](programming-guide/concepts/attributes/common-attributes.md#Obsolete): w kodzie można użyć tego atrybutu, aby określić klas lub składowych klasy, które są przestarzałe i może być usunięte w przyszłych wersjach.
+Dzięki temu deweloperzy przy użyciu biblioteki lepiej są przygotowywane na temat przełomowych zmian.
+* Argumenty opcjonalne. metoda: Po wprowadzić obowiązkowe argumenty metody wcześniej opcjonalne lub zmienić ich wartości domyślne, a następnie cały kod, który nie dostarcza tych argumentów należy do zaktualizowania.
 > [!NOTE]
-> Tworzenie obowiązkowego Argumenty opcjonalne powinien mieć bardzo mały wpływ, zwłaszcza, jeśli nie zmienia zachowanie metody.
+> Tworzenie obowiązkowe Argumenty opcjonalne powinny mieć bardzo niewielkim stopniu wpływa, zwłaszcza, jeśli go nie zmienia zachowanie metody.
 
-Łatwiej można ustawić dla użytkowników, aby uaktualnić do nowej wersji biblioteki, tym bardziej prawdopodobne one uaktualni wcześniej.
+Łatwiejsze wprowadzeniu go dla użytkowników uaktualnić do nowej wersji biblioteki, tym bardziej prawdopodobne, ich uaktualni wcześniej.
 
 ### <a name="application-configuration-file"></a>Plik konfiguracji aplikacji
 
-Projektant .NET istnieje bardzo duże ryzyko został napotkany [ `app.config` pliku](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx) w większości typów projektów.
-Ten plik prostą konfigurację można zdecydowanie do poprawy wdrażanie nowych aktualizacji. Ogólnie należy projektować w bibliotekach w taki sposób, że mogą się zmieniać regularnie informacje są przechowywane w `app.config` pliku w ten sposób po zaktualizowaniu tych informacji w pliku config starszych wersji musi być zastąpiony nowym bez konieczności ponownej kompilacji biblioteki.
+Jako deweloper platformy .NET, istnieje wysokie prawdopodobieństwo, napotkanych wcześniej [ `app.config` pliku](../framework/configure-apps/file-schema/index.md) obecne w większości typów projektów.
+Ten plik prostej konfiguracji można długą drogę do poprawy wprowadzania nowych aktualizacji. Ogólnie należy projektować bibliotek w taki sposób, że informacje, która prawdopodobnie się regularnie zmieniane są przechowywane w `app.config` plików dzięki temu po zaktualizowaniu tych informacji w pliku config starszych wersji po prostu musi zostać zastąpiony nowym plikiem bez konieczności ponownej kompilacji biblioteki.
 
 ## <a name="consuming-libraries"></a>Korzystanie z biblioteki
 
-Deweloper, który wykorzystuje utworzony przez innych bibliotek .NET jest najprawdopodobniej pamiętać, że nowa wersja biblioteki nie może być całkowicie zgodne z projektem i często może okaże się, że konieczności zaktualizuj kod do pracy z tymi zmianami.
+Jako deweloper, który wykorzystuje bibliotek .NET, utworzone przez innych programistów jest najprawdopodobniej pamiętać, że nowa wersja biblioteki może nie być w pełni zgodne z projektem i często może znaleźć się konieczności aktualizowania kodu do pracy z tymi zmianami.
 
-Szczęście dla Ciebie C# i ekosystemem .NET zawiera funkcje i techniki, które umożliwiają łatwe aktualizacji aplikacji do pracy z nowe wersje bibliotek, które może powodować istotne zmiany.
+Szczęście dla Ciebie języka C# i ekosystemu .NET jest powiązana z funkcji i technik, które pozwalają łatwo aktualizować naszej aplikacji do pracy z nowe wersje bibliotek, które może powodować przełomowe zmiany.
 
 ### <a name="assembly-binding-redirection"></a>Przekierowanie powiązań zestawów
 
-Można użyć `app.config` plik, aby zaktualizować wersję biblioteki używany przez aplikację. Dodając tak zwany [ *przekierowania powiązania* ](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx) Twojego można korzystać z nowych wersji biblioteki bez konieczności ponownego kompilowania aplikacji. W poniższym przykładzie pokazano, jak będzie aktualizował aplikacji `app.config` plik `1.0.1` wersja poprawki `ReferencedLibrary` zamiast `1.0.0` pierwotnie został skompilowany z wersji.
+Możesz użyć `app.config` plik, aby zaktualizować wersję biblioteki używany przez aplikację. Dodając tak zwany [ *przekierowanie powiązania* ](../framework/configure-apps/redirect-assembly-versions.md) usługi można użyć nowej wersji biblioteki, bez konieczności ponownego kompilowania aplikacji. W poniższym przykładzie pokazano, jak należy zaktualizować aplikacji `app.config` plik do użycia `1.0.1` wersję poprawki `ReferencedLibrary` zamiast `1.0.0` pierwotnie został skompilowany przy użyciu wersji.
 
 ```xml
 <dependentAssembly>
@@ -77,7 +77,7 @@ Można użyć `app.config` plik, aby zaktualizować wersję biblioteki używany 
 
 ### <a name="new"></a>new
 
-Możesz użyć `new` modyfikator, aby ukryć dziedziczone elementy członkowskie klasy podstawowej. Jest to jeden sposób pochodne mogą odpowiadać na aktualizacje w klasach podstawowych.
+Możesz użyć `new` modyfikator, aby ukryć dziedziczone elementy członkowskie klasy bazowej. Jest to jeden sposób pochodne mogą odpowiadać na aktualizacje w klasach bazowych.
 
 Wykonaj poniższy przykład:
 
@@ -90,14 +90,14 @@ A base method
 A derived method
 ```
 
-W powyższym przykładzie widać, jak `DerivedClass` ukrywa `MyMethod` metody w `BaseClass`.
-Oznacza to, że gdy klasy podstawowej w nowej wersji biblioteki dodaje elementu członkowskiego, który już istnieje w klasie pochodnej, możesz użyć `new` modyfikator użytkownika elementu członkowskiego klasy pochodnej, aby ukryć element członkowski klasy podstawowej.
+W powyższym przykładzie widać, jak `DerivedClass` ukrywa `MyMethod` metoda obecne w `BaseClass`.
+Oznacza to, że gdy klasę bazową w nowej wersji biblioteki dodaje element członkowski, który już istnieje w klasie pochodnej, można użyć `new` modyfikator w swojej składowej klasy pochodnej spowoduje ukrycie składowej klasy bazowej.
 
-Gdy nie `new` modyfikator jest określony, klasa pochodna domyślnie ukrywa powodujące konflikt elementów członkowskich w klasie podstawowej, chociaż zostaną wygenerowane ostrzeżenie kompilatora nadal kompilacji kodu. Oznacza to, że po prostu dodanie nowych elementów członkowskich do istniejącej klasy sprawia, że nowej wersji biblioteki źródłowym i danych binarnych jest zgodny z kodem, która zależy od niego.
+Gdy nie `new` modyfikator jest określony, klasę pochodną będzie domyślnie Ukryj członków powodujące konflikt w klasie bazowej, mimo że ostrzeżenia kompilatora, który zostanie wygenerowany kod zostanie skompilowany nadal. Oznacza to, że dodanie nowych elementów członkowskich do istniejącej klasy sprawia, że nowej wersji biblioteki pliku źródłowym, jak i plik binarny jest zgodny z kodem, który zależy od niego.
 
 ### <a name="override"></a>override
 
-`override` Modyfikator oznacza pochodnej implementacji rozszerza implementacja elementu członkowskiego klasy podstawowej, a nie ukrywa go. Element członkowski klasy podstawowej musi mieć `virtual` modyfikator zastosować dla niego.
+`override` Modyfikator oznacza, że implementacja pochodnej rozszerza implementację składowej klasy bazowej, a nie ukrywa go. Składowej klasy bazowej, musi mieć `virtual` modyfikator stosowane do niego.
 
 [!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
@@ -108,6 +108,6 @@ Base Method One: Method One
 Derived Method One: Derived Method One
 ```
 
-`override` Modyfikator jest obliczane w czasie kompilacji i kompilator zgłosi błąd, jeśli nie znajdzie członka wirtualnego do zastąpienia.
+`override` Modyfikator jest obliczane w czasie kompilacji i kompilator będzie sygnalizować błąd, jeśli nie znajdzie wirtualna elementu członkowskiego do zastąpienia.
 
-Swoją wiedzę techniki opisano, jak również zrozumienie z jakich sytuacjach do korzystania z nich będzie zdecydowanie do zwiększania łatwość przejścia między wersjami biblioteki.
+Swojej wiedzy na temat technik opisano, jak również zrozumieć, jakie sytuacjach, aby umożliwić ich używanie będzie długą drogę do poprawienia łatwości przejścia między wersjami biblioteki.

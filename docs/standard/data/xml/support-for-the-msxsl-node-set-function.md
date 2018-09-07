@@ -1,27 +1,27 @@
 ---
-title: Obsługa msxsl:node-set() — funkcja
+title: 'Obsługa msxsl: node-set() — funkcja'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3eb24d76ffb07b36b837056ffa5cde0cbd37f5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4b1fb4abe8ca0ba7afcefe996de59ceaf67a249
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570552"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063729"
 ---
-# <a name="support-for-the-msxslnode-set-function"></a>Obsługa msxsl:node-set() — funkcja
-`msxsl:node-set` Funkcja umożliwia konwertowanie wynikowego fragmentu drzewa na zestaw węzłów. Wynikowy węzeł ustawić zawsze zawiera jeden węzeł i węzła głównego drzewa.  
+# <a name="support-for-the-msxslnode-set-function"></a>Obsługa msxsl: node-set() — funkcja
+`msxsl:node-set` Funkcja umożliwia konwertowanie wynikowego fragmentu drzewa w zestawie węzłów. Węzeł wynikowy ustawić opcji zawsze zawiera jeden węzeł i węzeł główny drzewa.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Może wykonywać rozszerzalny język arkusza stylów dla transformacji przekształcenia XSLT () przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [za pomocą klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [migracji z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
+>  <xref:System.Xml.Xsl.XslTransform> Klasy jest przestarzała w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.  
   
- `msxsl:node-set` Funkcja umożliwia konwertowanie wynikowego fragmentu drzewa na zestaw węzłów. Wynikowy węzeł ustawić zawsze zawiera jeden węzeł i węzła głównego drzewa.  
+ `msxsl:node-set` Funkcja umożliwia konwertowanie wynikowego fragmentu drzewa w zestawie węzłów. Węzeł wynikowy ustawić opcji zawsze zawiera jeden węzeł i węzeł główny drzewa.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `$var` jest zmienna, która jest węzeł drzewa w arkuszu stylów. Dla każdej instrukcji połączone z `node-set` funkcja umożliwia użytkownikowi iteracja tego węzła drzewa jako zestawu węzłów.  
+ W poniższym przykładzie `$var` to zmienna, która jest węzeł drzewa w arkuszu stylów. Dla każdej instrukcji w połączeniu z `node-set` funkcja zezwala użytkownikowi na iterację w tym węźle drzewa jako zestaw węzłów.  
   
 ## <a name="nodesetxsl"></a>NodeSet.xsl  
   
@@ -53,5 +53,6 @@ ms.locfileid: "33570552"
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

@@ -12,35 +12,36 @@ helpviewer_keywords:
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f682ba370e364629d6b79c5cedd28b4af834e58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4dde57e03e26085d19099e749afd50ba14874a5
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568888"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063962"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Typy kolekcji tablic wartości funkcji mieszającej i słowników
-<xref:System.Collections.Hashtable?displayProperty=nameWithType> Klasy, a <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementuje klasy ogólne <xref:System.Collections.IDictionary?displayProperty=nameWithType> interfejsu. <xref:System.Collections.Generic.Dictionary%602> Implementuje również klasy ogólnej <xref:System.Collections.Generic.IDictionary%602> interfejs generyczny. W związku z tym każdy element w tych kolekcjach jest parę klucza i wartości.  
+<xref:System.Collections.Hashtable?displayProperty=nameWithType> Klasy, a <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> Implementowanie klas ogólnych <xref:System.Collections.IDictionary?displayProperty=nameWithType> interfejsu. <xref:System.Collections.Generic.Dictionary%602> Implementuje również klasy ogólnej <xref:System.Collections.Generic.IDictionary%602> interfejs generyczny. W związku z tym każdy element w tych kolekcjach jest pary klucz wartość.  
   
- A <xref:System.Collections.Hashtable> obiekt składa się z pakiety, które zawierają elementy kolekcji. Zasobnik jest wirtualnego podgrupy elementów w <xref:System.Collections.Hashtable>, co czyni wyszukiwanie i pobieranie łatwiejsze i szybsze niż w większość kolekcji. Każdy zasobnika jest skojarzony z skrótu, który jest generowany przy użyciu funkcji skrótu i jest oparta na klucz elementu.  
+ A <xref:System.Collections.Hashtable> obiekt składa się z zasobników, które zawierają elementy kolekcji. Zasobnik jest wirtualny podgrupę elementów w obrębie <xref:System.Collections.Hashtable>, co sprawia, że wyszukiwanie i pobieranie łatwiejsze i szybsze niż w większość kolekcji. Każdego przedziału jest skojarzony z skrótu, który jest generowany przy użyciu funkcji skrótu i opiera się na klucz elementu.  
   
- Ogólnego <xref:System.Collections.Generic.HashSet%601> klasy jest nieuporządkowaną kolekcji dla zawierających elementy unikatowe.  
+ Ogólny <xref:System.Collections.Generic.HashSet%601> klasa jest nieuporządkowanej kolekcji do przechowywania unikatowych elementów.  
   
- Funkcja wyznaczania wartości skrótu jest algorytmem, który zwraca wartość liczbową skrótu oparte na kluczu. Klucz jest wartość niektórych właściwości obiektu są przechowywane. Funkcja wyznaczania wartości skrótu zawsze musi zwracać taki sam skrót tego samego klucza. Istnieje możliwość dla funkcji skrótu, aby wygenerować ten sam kod skrótu dla dwóch różnych kluczy, ale funkcji skrótu, który generuje unikatową wartość skrótu dla każdego unikatowy kluczy wyniki lepszą wydajność podczas pobierania elementów z tablicy skrótów.  
+ Funkcja wyznaczania wartości skrótu jest algorytm, który zwraca wartość liczbową skrótu na podstawie klucza. Klucz jest wartość niektórych właściwości obiektu są przechowywane. Funkcja wyznaczania wartości skrótu musi zwracać zawsze tę samą wartość skrótu dla tego samego klucza. Istnieje możliwość dla funkcji skrótu, aby wygenerować tę samą wartość skrótu dla dwóch różnych kluczy, ale funkcja wyznaczania wartości skrótu, która generuje unikatową wartość skrótu dla poszczególnych unikatowych kluczy wyniki lepszą wydajność, podczas pobierania elementów z tablicy skrótów.  
   
- Każdy obiekt, który jest używany jako element <xref:System.Collections.Hashtable> musi być w stanie wygenerować skrótu dla siebie przy użyciu implementacja <xref:System.Object.GetHashCode%2A> metody. Jednak można również określić funkcji skrótu dla wszystkich elementów w <xref:System.Collections.Hashtable> za pomocą <xref:System.Collections.Hashtable> konstruktora akceptującego <xref:System.Collections.IHashCodeProvider> implementacji jako jeden z jego parametrów.  
+ Każdy obiekt, który jest używany jako element w <xref:System.Collections.Hashtable> musi być w stanie wygenerować wartość skrótu dla siebie przy użyciu implementacji z <xref:System.Object.GetHashCode%2A> metody. Jednak można również określić funkcji skrótu dla wszystkich elementów w <xref:System.Collections.Hashtable> przy użyciu <xref:System.Collections.Hashtable> Konstruktor, który akceptuje <xref:System.Collections.IHashCodeProvider> implementacji jako jeden z jego parametrów.  
   
- Po dodaniu do obiektu <xref:System.Collections.Hashtable>, znajduje się w przedziale, skojarzony z skrótu odpowiadającego obiektu skrótu. Jeśli wartości są wyszukiwane w <xref:System.Collections.Hashtable>skrótu jest generowany dla tej wartości i zasobnik skojarzony z tym skrótu jest przeszukiwany.  
+ Po dodaniu obiektu do <xref:System.Collections.Hashtable>, są przechowywane w zasobniku, który jest skojarzony z kodem skrótu, który dopasowuje wartość skrótu obiektu. Jeśli wartość jest wyszukiwana w <xref:System.Collections.Hashtable>skrótu jest generowany dla tej wartości i zostanie przeszukany zasobnika skojarzony z tym kodem skrótu.  
   
- Na przykład funkcji skrótu ciągu może potrwać kodów ASCII każdego znaku w ciągu i dodaj je ze sobą w celu generowania skrótu. Ciąg "piknik" miałyby skrótu jest inna niż wartość skrótu dla ciągu "koszyk"; w związku z tym ciągów "piknik" oraz "koszyk" będą się w różnych zasobników. Z kolei "zawsze" i "desery" będzie mieć taki sam skrót i będzie w tym samym przedziale.  
+ Na przykład funkcję mieszania dla ciągu może potrwać kodów ASCII każdego znaku w ciągu i dodać je ze sobą, aby wygenerować wartość skrótu. Ciąg "piknik" miałyby kod skrótu, który jest inny niż wartość skrótu dla ciągów "koszyka"; w związku z tym ciągi "piknik" i "koszyka" będzie należeć do różnych przedziałów. Z kolei "podkreślić" i "desery" miałyby tę samą wartość skrótu i będzie mieć tego samego zasobnika.  
   
- <xref:System.Collections.Generic.Dictionary%602> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602> klasy mają te same funkcje co <xref:System.Collections.Hashtable> klasy. A <xref:System.Collections.Generic.Dictionary%602> określonego typu (inne niż <xref:System.Object>) zapewnia lepszą wydajność niż <xref:System.Collections.Hashtable> dla typów wartości. Jest to spowodowane elementy <xref:System.Collections.Hashtable> typu <xref:System.Object>; w związku z tym opakowywanie i rozpakowywanie zazwyczaj występuje podczas przechowywania lub pobrać typu wartości. <xref:System.Collections.Concurrent.ConcurrentDictionary%602> Klasa powinna być używana, jeśli wiele wątków może być jednocześnie dostęp do kolekcji.  
+ <xref:System.Collections.Generic.Dictionary%602> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602> klasy mają taką samą funkcjonalność jak <xref:System.Collections.Hashtable> klasy. A <xref:System.Collections.Generic.Dictionary%602> określonego typu (inne niż <xref:System.Object>) zapewnia lepszą wydajność niż <xref:System.Collections.Hashtable> dla typów wartości. Jest to spowodowane elementy <xref:System.Collections.Hashtable> typu <xref:System.Object>; w związku z tym, opakowywanie i rozpakowywanie zazwyczaj występują, gdy przechowywania lub pobrać typu wartości. <xref:System.Collections.Concurrent.ConcurrentDictionary%602> Klasy powinny być używane, gdy wiele wątków może uzyskiwać dostęp do kolekcji jednocześnie.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Collections.Hashtable>  
- <xref:System.Collections.IDictionary>  
- <xref:System.Collections.IHashCodeProvider>  
- <xref:System.Collections.Generic.Dictionary%602>  
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
- [Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Collections.Hashtable>  
+- <xref:System.Collections.IDictionary>  
+- <xref:System.Collections.IHashCodeProvider>  
+- <xref:System.Collections.Generic.Dictionary%602>  
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
+- [Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)

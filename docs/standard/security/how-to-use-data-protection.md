@@ -18,44 +18,44 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d04af38123efdbb70b8b917a3c4a59cb3a154262
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582190"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061029"
 ---
 # <a name="how-to-use-data-protection"></a>Porady: stosowanie ochrony danych
-.NET Framework zapewnia dostęp do ochrony danych interfejsu API (DPAPI), który służy do szyfrowania danych przy użyciu informacji z bieżącego konta użytkownika lub komputera.  Gdy używasz DPAPI można rozwiązać problem trudne jawnie generowania i przechowywania kluczy kryptograficznych.  
+.NET Framework zapewnia dostęp do ochrony danych interfejsu API (DPAPI), co pozwala na szyfrowanie danych, korzystając z informacji z bieżącego konta użytkownika lub komputera.  Korzystając z interfejsu DPAPI złagodzić się trudne problem jawnie generowania i przechowywania klucza kryptograficznego.  
   
- Użyj <xref:System.Security.Cryptography.ProtectedMemory> klasy do szyfrowania tablicy bajtów w pamięci.  Ta funkcja jest dostępna w systemie Microsoft Windows XP i nowszych systemów operacyjnych.  Można określić pamięci, szyfrowane przez bieżący proces odszyfrować je mogą tylko przez wszystkie procesy lub z tego samego kontekstu użytkownika bieżącego procesu.  Zobacz <xref:System.Security.Cryptography.MemoryProtectionScope> wyliczenie szczegółowy opis <xref:System.Security.Cryptography.ProtectedMemory> opcje.  
+ Użyj <xref:System.Security.Cryptography.ProtectedMemory> klasy w celu zaszyfrowania tablicę bajtów w pamięci.  Ta funkcja jest dostępna w systemie Microsoft Windows XP i nowszych systemach operacyjnych.  Można określić pamięci zaszyfrowane przez bieżący proces odszyfrować je mogą tylko przez wszystkie procesy lub z tym samym kontekście użytkownika bieżącego procesu.  Zobacz <xref:System.Security.Cryptography.MemoryProtectionScope> wyliczenie, aby uzyskać szczegółowy opis <xref:System.Security.Cryptography.ProtectedMemory> opcje.  
   
- Użyj <xref:System.Security.Cryptography.ProtectedData> klasy do szyfrowania kopii tablicy bajtów. Ta funkcja jest dostępna w systemie Microsoft Windows 2000 i nowszych systemów operacyjnych.  Można określić, czy dane zaszyfrowane przy bieżącego konta użytkownika mogły być odszyfrowane tylko przez tego samego konta użytkownika, lub można określić, że wszystkie konta na komputerze można odszyfrować dane zaszyfrowane przy bieżącego konta użytkownika.  Zobacz <xref:System.Security.Cryptography.DataProtectionScope> wyliczenie szczegółowy opis <xref:System.Security.Cryptography.ProtectedData> opcje.  
+ Użyj <xref:System.Security.Cryptography.ProtectedData> klasy w celu zaszyfrowania kopiowania tablicy bajtów. Ta funkcja jest dostępna w systemie Microsoft Windows 2000 i nowszych systemach operacyjnych.  Można określić, czy dane są szyfrowane przy użyciu bieżącego konta użytkownika odszyfrować je mogą tylko tego samego konta użytkownika, lub można określić, że dane są szyfrowane przy użyciu bieżącego konta użytkownika można odszyfrować przez dowolne konto na komputerze.  Zobacz <xref:System.Security.Cryptography.DataProtectionScope> wyliczenie, aby uzyskać szczegółowy opis <xref:System.Security.Cryptography.ProtectedData> opcje.  
   
-### <a name="to-encrypt-in-memory-data-using-data-protection"></a>Do szyfrowania danych w pamięci przy użyciu ochrony danych  
+### <a name="to-encrypt-in-memory-data-using-data-protection"></a>Aby szyfrować dane w pamięci przy użyciu ochrony danych  
   
-1.  Wywołaj statycznych <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> metoda podczas przekazanie tablicy bajtów do szyfrowania, entropii i zakres ochrony pamięci.  
+1.  Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> metody podczas przekazując tablicę bajtów do szyfrowania, entropii i zakresu ochrony pamięci.  
   
-### <a name="to-decrypt-in-memory-data-using-data-protection"></a>Do odszyfrowywania danych w pamięci przy użyciu ochrony danych  
+### <a name="to-decrypt-in-memory-data-using-data-protection"></a>Aby odszyfrować dane w pamięci przy użyciu ochrony danych  
   
-1.  Wywołaj statycznych <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> metoda podczas przekazywania tablicę bajtów do odszyfrowania i zakresu ochrony pamięci.  
+1.  Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> metody podczas przekazywania tablica bajtów do odszyfrowania i zakresu ochrony pamięci.  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Do szyfrowania danych do pliku lub strumienia za pomocą ochrony danych  
   
 1.  Utwórz losowe entropii.  
   
-2.  Wywołaj statycznych <xref:System.Security.Cryptography.ProtectedData.Protect%2A> metoda podczas przekazanie tablicy bajtów do szyfrowania, entropii i zakresu ochrony danych.  
+2.  Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedData.Protect%2A> metody podczas przekazując tablicę bajtów do szyfrowania, entropii i zakresu ochrony danych.  
   
-3.  Zaszyfrowane dane zapisać do pliku lub strumienia.  
+3.  Zaszyfrowane dane należy zapisać do pliku lub strumienia.  
   
 ### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>Aby odszyfrować dane z pliku lub strumienia za pomocą ochrony danych  
   
-1.  Zaszyfrowane dane do odczytu z pliku lub strumienia.  
+1.  Przeczytaj zaszyfrowane dane z pliku lub strumienia.  
   
-2.  Wywołaj statycznych <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> metoda podczas przekazywania tablicę bajtów do odszyfrowania i zakresu ochrony danych.  
+2.  Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> metody podczas przekazywania tablica bajtów do odszyfrowania i zakresu ochrony danych.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje dwie formy szyfrowania i odszyfrowywania.  Najpierw przykładowy kod szyfruje i odszyfrowuje tablicę bajtów w pamięci.  Następnie przykładowy kod szyfruje kopiowania tablicy bajtów, zapisuje go w pliku ładuje dane z kopii pliku i odszyfrowuje dane.  W przykładzie przedstawiono oryginalne dane zaszyfrowane dane i odszyfrowane dane.  
+ Poniższy przykład kodu pokazuje dwa rodzaje szyfrowania i odszyfrowywania.  Po pierwsze w przykładzie kodu szyfruje i odszyfrowuje w pamięci tablica bajtów.  Następnie w przykładzie kodu szyfruje kopiowania tablicy bajtów, zapisuje w pliku, służy do ładowania danych z kopii pliku, a następnie odszyfrowuje dane.  W przykładzie wyświetlono oryginalne dane, zaszyfrowane dane i odszyfrowane dane.  
   
  [!code-csharp[DPAPI-HowTO#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DPAPI-HowTO/cs/sample.cs#1)]
  [!code-vb[DPAPI-HowTO#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DPAPI-HowTO/vb/sample.vb#1)]  
@@ -66,6 +66,7 @@ ms.locfileid: "33582190"
   
 -   Obejmują <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography>, i <xref:System.Text> przestrzeni nazw.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Security.Cryptography.ProtectedMemory>  
- <xref:System.Security.Cryptography.ProtectedData>
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Security.Cryptography.ProtectedMemory>  
+- <xref:System.Security.Cryptography.ProtectedData>

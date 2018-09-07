@@ -1,30 +1,31 @@
 ---
-title: Czysty funkcjonalności transformacji XML (C#)
+title: Czyste Przekształcanie funkcjonalne kodu XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
-ms.openlocfilehash: 7bbe5735541432108794959a7889976d4951fffd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05c6167973b2342aafd51aad7d9102db9e94ae0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336713"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071989"
 ---
-# <a name="pure-functional-transformations-of-xml-c"></a>Czysty funkcjonalności transformacji XML (C#)
-Ta sekcja zawiera samouczek funkcjonalności transformacji XML. Dotyczy to również wyjaśnienia o pojęciach i konstrukcji językowych, że rozumiesz musi używać funkcjonalności przekształcenia i przykłady użycia funkcjonalności przekształceń do manipulowania dokumentu XML. W tym samouczku zapewnia LINQ do XML przykłady kodu, jednak wszystkie podstawowe pojęcia mają zastosowanie również do innych technologii LINQ.  
+# <a name="pure-functional-transformations-of-xml-c"></a>Czyste Przekształcanie funkcjonalne kodu XML (C#)
+Ta sekcja zawiera samouczek Przekształcanie funkcjonalne dla formatu XML. W tym wyjaśnienia główne pojęcia i konstrukcji językowych należy poznać przekształceń funkcjonalnych i przykłady użycia przekształceń funkcjonalnych do manipulowania dokumentu XML. Chociaż ten samouczek zawiera LINQ do XML przykłady kodu, wszystkie podstawowe pojęcia mają zastosowanie również do innych technologii LINQ.  
   
- [Samouczek: manipulowanie zawartości w dokumencie schemat WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) samouczek zawiera szereg przykładów, każdy opierając się na poprzedni. Następujące przykłady przedstawiają czysty funkcjonalności transformational podejścia manipulowanie XML.  
+ [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) samouczek zawiera szereg przykładów, każdy rozwijając poprzedni. Przykłady te pokazują czystego funkcjonalności innowacyjne podejście do manipulowania XML.  
   
- Ten samouczek zakłada praktyczną znajomość języka C#. Nie podano szczegółowe semantykę konstrukcji językowych w tym samouczku, ale podano linki dokumentację języka, zależnie od potrzeb.  
+ Ten samouczek zakłada praktyczną wiedzę na temat języka C#. Nie podano szczegółowe semantykę konstrukcji językowych w tym samouczku, ale podano linki do dokumentacji języka zgodnie z potrzebami.  
   
- W praktyce koncepcji nauki podstawowego komputera i XML, łącznie z przestrzeni nazw XML, również zakłada, że.  
+ Również założono praktyczną wiedzę na temat pojęć związanych z komputerów podstawowych nauki oraz XML, w tym w przypadku przestrzeni nazw XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Wprowadzenie do przekształcenia funkcjonalności Pure (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Zawiera opis przekształcenia funkcjonalności i definiuje istotne terminologii.|  
-|[Samouczek: Tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)|Opisuje obliczanie leniwe i wykonanie odroczone szczegółowo.|  
-|[Samouczek: Manipulowanie zawartości w dokumencie schemat WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Samouczek przedstawiający transformację funkcjonalności.|  
+|[Wprowadzenie do czystych przekształceń funkcjonalnych (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|W tym artykule opisano przekształceń funkcjonalnych i definiuje istotne terminologii.|  
+|[Samouczek: Tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)|W tym artykule opisano opóźnieniem i wykonanie odroczone szczegółowo.|  
+|[Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Samouczek, który pokazuje Przekształcanie funkcjonalne.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Zapytanie drzewa XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Tworzenie zapytań drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

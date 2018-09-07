@@ -16,121 +16,122 @@ helpviewer_keywords:
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956d16b47fb31549de8f25c513d73c43ab41c267
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574738"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063579"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Konstrukcje alternacyjne w wyrażeniach regularnych
-<a name="top"></a> Konstrukcje alternacyjne zmodyfikować wyrażenie regularne, aby włączyć opcję / lub lub pasujące warunkowego. .NET obsługuje trzy konstrukcje alternacyjne:  
+<a name="top"></a> Konstrukcje zmiany modyfikują wyrażenie regularne, aby włączyć opcję / lub lub dopasowanie warunkowe. .NET obsługuje trzy konstrukcje zmiany:  
   
--   [Dopasowywanie do wzorca z&#124;](#Either_Or)  
+-   [Dopasowywanie wzorca z&#124;](#Either_Or)  
   
--   [Warunkowe dopasowywanie (? () wyrażenie) tak&#124;nie)](#Conditional_Expr)  
+-   [Dopasowanie warunkowe z (? () wyrażenie) tak&#124;nie)](#Conditional_Expr)  
   
--   [Dopasowywanie warunkowego oparte na prawidłową grupę przechwycony](#Conditional_Group)  
+-   [Dopasowanie warunkowe oparte na prawidłowo przechwyconych grupach](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
-## <a name="pattern-matching-with-124"></a>Dopasowywanie do wzorca z&#124;  
- Można użyć pionowy pasek (`|`) znaków do dopasowania któregokolwiek z serii wzorców, gdzie `|` rozdziela każdego wzorca.  
+## <a name="pattern-matching-with-124"></a>Dopasowywanie wzorca z&#124;  
+ Można użyć pionowy pasek (`|`) znaku, aby dopasować dowolny z szeregu wzorców, gdzie `|` rozdziela każdy wzorzec.  
   
- Klasa dodatnią znaków, takich jak `|` znak może być użyty do dopasowania dowolną liczbę pojedynczy znaki. W poniższym przykładzie użyto zarówno klasy znaku dodatnią i albo / lub dopasowywanie do wzorca za `|` znak, aby zlokalizować wystąpienia wyrazy "szarym" lub "szare" w ciągu. W takim przypadku `|` znak tworzy wyrażenie regularne jest na pełniejsze.  
+ Klasy znaków pozytywnych, takich jak `|` znak może być użyty do dopasowania dowolną liczbę pojedynczych znaków. W poniższym przykładzie użyto klasy znaków pozytywnych i albo / lub za pomocą dopasowywania do wzorca `|` znaku, aby zlokalizować wystąpienia słowa "szarym" lub "szare" w ciągu. W tym przypadku `|` znaków generuje wyrażeń regularnych, które jest pełniejszy.  
   
  [!code-csharp[RegularExpressions.Language.Alternation#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation1.cs#1)]
  [!code-vb[RegularExpressions.Language.Alternation#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation1.vb#1)]  
   
- Wyrażenie regularne, która używa `|` znak, `\bgr(a|e)y\b`, jest interpretowany, jak pokazano w poniższej tabeli.  
+ Wyrażenie regularne, które używa `|` znak `\bgr(a|e)y\b`, jest interpretowane tak jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
-|`gr`|Pasować do znaków "gr".|  
+|`gr`|Dopasowuje znaki "gr".|  
 |<code>(a&#124;e)</code>|Dopasowuje znak „a” lub „e”.|  
-|`y\b`|Odpowiada na granicy słowa "y".|  
+|`y\b`|Dopasowuje "y" na granicy wyrazu.|  
   
- `|` Znak można również wykonać jedno / lub pasuje do wielu znaków lub zakresie, które może zawierać dowolną kombinację znaków literały i elementy języka wyrażenia regularnego. (Klasy znaku nie zapewnia tę funkcję). W poniższym przykładzie użyto `|` znak wyodrębnić albo stany USA Numer ubezpieczenia społecznego (SSN), który jest 9 cyfr w formacie *ddd*-*dd*-*dddd*, lub stany USA Pracodawcy Identyfikacja numeru (NIP), czyli 9 cyfr w formacie *dd*-*ddddddd*.  
+ `|` Znaku można również przeprowadzić albo / lub zgodne z wielu znaków lub podwyrażenia, które mogą obejmować dowolną kombinację literały znakowe i elementy języka wyrażeń regularnych. (Klasy znaku nie zapewnia tej funkcji). W poniższym przykładzie użyto `|` znaków do wyodrębnienia albo USA Numer ubezpieczenia społecznego (SSN), czyli 9 cyfr w formacie *ddd*-*dd*-*dddd*, lub Pracodawca Identyfikacja numeru (NIP), czyli 9 cyfr w formacie *dd*-*ddddddd*.  
   
  [!code-csharp[RegularExpressions.Language.Alternation#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
  [!code-vb[RegularExpressions.Language.Alternation#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
   
- Wyrażenie regularne `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` jest interpretowany, jak pokazano w poniższej tabeli.  
+ Wyrażenie regularne `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` jest interpretowane tak jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
-|<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Pasuje do żadnej z następujących czynności: dwie cyfry dziesiętne następuje myślnik następuje siedmiu cyfr dziesiętnych; lub trzech cyfr dziesiętnych, łącznik dwóch cyfr dziesiętnych, inny łącznik i czterech cyfr dziesiętnych.|  
+|<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Odpowiada jednej z następujących pozycji: dwie cyfry dziesiętne, następuje łącznik następuje siedmiu cyfr dziesiętnych; lub trzy cyfry dziesiętne, łącznik, dwie cyfry dziesiętne, inny łącznik i cztery cyfry dziesiętne.|  
 |`\d`|Kończy dopasowanie na granicy wyrazu.|  
   
  [Powrót do początku](#top)  
   
 <a name="Conditional_Expr"></a>   
 ## <a name="conditional-matching-with-an-expression"></a>Dopasowanie warunkowe z wyrażeniem  
- Ten element języka próbuje pasuje do jednej z dwóch wzorców w zależności od tego, czy dopasowania wzorca początkowej. Składnia to:  
+ Ten element języka podejmuje próbę dopasowania, jednym z dwóch wzorców w zależności od tego, czy może dopasować wzorca początkowej. Jego składnia jest następująca:  
   
  `(?(` *wyrażenie* `)` *tak* `|` *nie* `)`  
   
- gdzie *wyrażenie* jest początkowej wzorzec do dopasowania, *tak* jest wzorzec do dopasowania, jeśli *wyrażenie* dopasowaniu, i *nie* jest opcjonalny wzorzec do dopasowania, jeśli *wyrażenie* nie jest zgodny. Aparat wyrażeń regularnych traktuje *wyrażenie* jako potwierdzenie zerowej szerokości; oznacza to, że aparat wyrażeń regularnych nie wcześniejszego w strumieniu wejściowym po oblicza *wyrażenia*. W związku z tym ta konstrukcja jest odpowiednikiem następujące czynności:  
+ gdzie *wyrażenie* jest początkowa wzorzec do dopasowania, *tak* jest wzorzec do dopasowania, jeśli *wyrażenie* jest dopasowywany i *nie* jest opcjonalna wzorzec do dopasowania, jeśli *wyrażenie* nie został dopasowany. Aparat wyrażeń regularnych traktuje *wyrażenie* jako potwierdzenie zerowej szerokości; oznacza to, że aparat wyrażeń regularnych nie awansować w strumień wejściowy po ocenia *wyrażenie*. Dlatego ta konstrukcja jest odpowiednikiem następujących czynności:  
   
  `(?(?=` *wyrażenie* `)` *tak* `|` *nie* `)`  
   
- gdzie `(?=` *wyrażenie* `)` jest konstrukcję potwierdzenia zerowej szerokości. (Aby uzyskać więcej informacji, zobacz [konstrukcji grupowania](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).) Ponieważ aparat wyrażeń regularnych interpretuje *wyrażenie* jako swojej kotwicy (Potwierdzenie zerowej szerokości), *wyrażenie* musi być potwierdzenia zerowej szerokości (Aby uzyskać więcej informacji, zobacz [ Kotwice](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) lub Podwyrażenie, które również znajdują się w *tak*. W przeciwnym razie *tak* nie można dopasować wzorzec.  
+ gdzie `(?=` *wyrażenie* `)` to konstrukcja asercja o zerowej szerokości. (Aby uzyskać więcej informacji, zobacz [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).) Ponieważ aparat wyrażeń regularnych interpretuje *wyrażenie* jako elementu zakotwiczenia (asercja o zerowej szerokości), *wyrażenie* musi być asercja o zerowej szerokości (Aby uzyskać więcej informacji, zobacz [ Kotwice](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) lub Podwyrażenie, które również znajdują się w *tak*. W przeciwnym razie *tak* nie można dopasować wzorzec.  
   
 > [!NOTE]
->  Jeśli *wyrażenie*jest nazwane lub numerem grupy przechwytywania, konstrukcja alternacyjne jest interpretowany jako test przechwytywania; Aby uzyskać więcej informacji, zobacz następną sekcję [warunkowego dopasowania na podstawie prawidłową grupę przechwytywania](#Conditional_Group). Innymi słowy aparat wyrażeń regularnych nie próbował dopasować podciąg przechwycony, ale zamiast tego testów dla obecności lub braku grupy.  
+>  Jeśli *wyrażenie*jest nazwana lub numerowana grupa przechwytywania, konstrukcje jest interpretowana jako test przechwytywania; Aby uzyskać więcej informacji, zobacz następną sekcję [warunkowego dopasowania na podstawie prawidłowej grupy przechwytywania](#Conditional_Group). Innymi słowy aparat wyrażeń regularnych nie jest podejmowana próba Dopasuj podciąg przechwycony, ale zamiast tego sprawdza obecność lub Brak grupy.  
   
- Poniższy przykład jest odmianą przykładu, która jest wyświetlana w [albo / lub dopasowanie wzorca z &#124; ](#Either_Or) sekcji. Aby ustalić, czy pierwsze trzy znaki po granic word dwie cyfry następuje łącznik używa warunkowego dopasowania. Jeśli są one go próbuje dopasować stany USA Numer identyfikacyjny pracodawcy (NIP). Jeśli nie, jego próbuje dopasować stany USA Numer ubezpieczenia społecznego (SSN).  
+ Poniższy przykład jest odmianą przykładu, który pojawia się w [albo / lub za pomocą dopasowywania do wzorca &#124; ](#Either_Or) sekcji. Aby ustalić, czy pierwsze trzy znaki po granicy słowa dwie cyfry, następuje łącznik używa dopasowanie warunkowe. Jeśli są one podejmuje próbę dopasowania Federalny Numer identyfikacji podatkowej (NIP). W przeciwnym razie podejmuje próbę dopasowania Federalny Numer ubezpieczenia społecznego (SSN).  
   
  [!code-csharp[RegularExpressions.Language.Alternation#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation3.cs#3)]
  [!code-vb[RegularExpressions.Language.Alternation#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation3.vb#3)]  
   
- Wzorzec wyrażenia regularnego `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` jest interpretowany, jak pokazano w poniższej tabeli.  
+ Definicję wzorca wyrażenia regularnego `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` jest interpretowane tak jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
-|`(?(\d{2}-)`|Ustal, czy trzech kolejnych znaków składają się z dwóch cyfr zostały wykonane przez łącznik.|  
-|`\d{2}-\d{7}`|Jeśli poprzednie wzorzec jest zgodny, odpowiadać dwie cyfry następuje myślnik następuje siedem cyfr.|  
-|`\d{3}-\d{2}-\d{4}`|Niezgodna wcześniejszego wzorca odpowiada trzech cyfr dziesiętnych, łącznik dwóch cyfr dziesiętnych, inny łącznik i czterech cyfr dziesiętnych.|  
+|`(?(\d{2}-)`|Ustal, czy kolejne trzy znaki składają się z dwóch cyfr następuje łącznik.|  
+|`\d{2}-\d{7}`|Jeśli poprzedni wzorzec jest zgodny, dopasowuje dwie cyfry, następuje łącznik następuje siedmiu cyfr.|  
+|`\d{3}-\d{2}-\d{4}`|Jeśli poprzedni wzorzec nie jest zgodny, zgodne trzy cyfry dziesiętne, łącznik, dwie cyfry dziesiętne, inny łącznik i cztery cyfry dziesiętne.|  
 |`\b`|Dopasowuje granicę wyrazu.|  
   
  [Powrót do początku](#top)  
   
 <a name="Conditional_Group"></a>   
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Dopasowanie warunkowe oparte na prawidłowo przechwyconych grupach  
- Ten element języka próbuje pasuje do jednej z dwóch wzorców w zależności od tego, czy dopasowywane określonej grupy przechwytywania. Składnia to:  
+ Ten element języka podejmuje próbę dopasowania, jednym z dwóch wzorców w zależności od tego, czy dopasowywane określonej grupy przechwytywania. Jego składnia jest następująca:  
   
  `(?(` *Nazwa* `)` *tak* `|` *nie* `)`  
   
  lub  
   
- `(?(` *numer* `)` *tak* `|` *nie* `)`  
+ `(?(` *Liczba* `)` *tak* `|` *nie* `)`  
   
- gdzie *nazwa* jest nazwą i *numer* jest numer grupy przechwytywania, *tak* jest wyrażeniem do dopasowania, jeśli *nazwa* lub *numer* jest zgodny i *nie* wyrażenie opcjonalne do dopasowania, jeśli nie jest.  
+ gdzie *nazwa* nazywa się i *numer* jest numerem grupy przechwytywania, *tak* jest wyrażeniem które pasują, jeśli *nazwa* lub *numer* jest zgodny, oraz *nie* jest opcjonalne wyrażenie dopasowania, jeśli nie ma.  
   
- Jeśli *nazwa* nie odpowiada na nazwę grupy przechwytywania, który jest używany w wzorzec wyrażenia regularnego, konstrukcja alternacyjne jest interpretowana jako testu wyrażenie zgodnie z objaśnieniem w poprzedniej sekcji. Zazwyczaj oznacza to, że *wyrażenie* daje w wyniku `false`. Jeśli *numer* jest niezgodne z numerem grupy przechwytywania, używanym w wzorzec wyrażenia regularnego zgłasza aparat wyrażeń regularnych <xref:System.ArgumentException>.  
+ Jeśli *nazwa* nie odpowiada na nazwę grupy przechwytywania, który jest używany we wzorcu wyrażenia regularnego, konstrukcje jest interpretowana jako test wyrażenia, zgodnie z opisem w poprzedniej sekcji. Zazwyczaj oznacza to, że *wyrażenie* daje w wyniku `false`. Jeśli *numer* nie odpowiada numerowaną grupę przechwytywania, który jest używany we wzorcu wyrażenia regularnego zgłasza aparat wyrażeń regularnych <xref:System.ArgumentException>.  
   
- Poniższy przykład jest odmianą przykładu, która jest wyświetlana w [albo / lub dopasowanie wzorca z &#124; ](#Either_Or) sekcji. Używa przechwytywania grupę o nazwie `n2` składający się z dwóch cyfr zostały wykonane przez łącznik. Wyrażenia warunkowe utworzenia testów, czy ta grupa przechwytywania ma dopasowane w ciągu wejściowym. Jeśli ma ona alternacyjne skonstruować próbuje dopasować ostatnich siedmiu cyfr US dziewięciu cyfr Numer identyfikacyjny pracodawcy (NIP). Jeśli go nie ma, próbuje odpowiada USA dziewięciu cyfr Numer ubezpieczenia społecznego (SSN).  
+ Poniższy przykład jest odmianą przykładu, który pojawia się w [albo / lub za pomocą dopasowywania do wzorca &#124; ](#Either_Or) sekcji. Używa ona grupa przechwytywania o nazwie `n2` składający się z dwóch cyfr następuje łącznik. Konstrukcja testów czy ta grupa przechwytywania został dopasowany do ciągu wejściowego. Jeśli tak, konstrukcja warunkowa próbuje dopasować ostatnich siedmiu cyfr US dziewięciu cyfr Numer identyfikacji podatkowej (NIP). Jeśli nie ma on podejmuje próbę dopasowania USA dziewięciu cyfr Numer ubezpieczenia społecznego (SSN).  
   
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- Wzorzec wyrażenia regularnego `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` jest interpretowany, jak pokazano w poniższej tabeli.  
+ Definicję wzorca wyrażenia regularnego `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` jest interpretowane tak jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
-|`(?<n2>\d{2}-)?`|Wystąpienie dopasowania zero lub jeden dwie cyfry oraz łącznik. Określ nazwę tej grupy przechwytywania `n2`.|  
-|`(?(n2)`|Test czy `n2` został uzyskany w ciągu wejściowym.|  
-|`)\d{7}`|Jeśli `n2` został zgodne, zgodne siedmiu cyfr dziesiętnych.|  
-|<code>&#124;\d{3}-\d{2}-\d{4}</code>|Jeśli `n2` nie było zgodne, zgodne trzech cyfr dziesiętnych, łącznik dwóch cyfr dziesiętnych, inny łącznik i czterech cyfr dziesiętnych.|  
+|`(?<n2>\d{2}-)?`|Dopasowanie zera lub jednego wystąpienia dwie cyfry, następuje łącznik. Określ nazwę tej grupy przechwytywania `n2`.|  
+|`(?(n2)`|Test czy `n2` zostały dopasowane do ciągu wejściowego.|  
+|`)\d{7}`|Jeśli `n2` został dopasowany, pasuje do siedmiu cyfr dziesiętnych.|  
+|<code>&#124;\d{3}-\d{2}-\d{4}</code>|Jeśli `n2` nie zostały dopasowane do elementu, dopasowania trzy cyfry dziesiętne, łącznik, dwie cyfry dziesiętne, inny łącznik i cztery cyfry dziesiętne.|  
 |`\b`|Dopasowuje granicę wyrazu.|  
   
- W poniższym przykładzie przedstawiono zmiany w tym przykładzie, który korzysta z numerem grupy zamiast nazwaną grupę. Jest jego wzorzec wyrażenia regularnego `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
+ Zmiany w tym przykładzie, która używa numerowanej grupy zamiast nazwaną grupę przedstawiono w poniższym przykładzie. Jej wzorca wyrażenia regularnego jest `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

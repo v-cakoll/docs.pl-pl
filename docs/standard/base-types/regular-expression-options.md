@@ -15,11 +15,11 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080884"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179363"
 ---
 # <a name="regular-expression-options"></a>Opcje wyrażeń regularnych
 <a name="Top"></a> Domyślnie porównanie ciągu wejściowego z dowolnymi literałami we wzorcu wyrażenia regularnego jest uwzględniana wielkość liter, biały znak we wzorcu wyrażenia regularnego jest interpretowany jako znaki spacji literału, a grupy przechwytywania w wyrażeniu regularnym są nazywane niejawnie jak również jawnie. Można zmodyfikować te i wiele innych aspektów regularnej ekspresji przez specyfikowanie opcji regularnej ekspresji. Te opcje, które są wymienione w poniższej tabeli, mogą być wbudowane jako część wzorca wyrażenia regularnego lub mogą być dostarczane do <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy lub statycznym wzorca dopasowania metodę jako <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> wartość wyliczenia.  

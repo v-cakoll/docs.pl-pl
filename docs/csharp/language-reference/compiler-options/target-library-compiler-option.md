@@ -9,48 +9,48 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 ms.openlocfilehash: e15210d189c4a553da72b418f583e44666bac2fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537464"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44130961"
 ---
-# <a name="-targetlibrary-c-compiler-options"></a><span data-ttu-id="ca1d9-102">-target: library (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="ca1d9-102">-target:library (C# Compiler Options)</span></span>
-<span data-ttu-id="ca1d9-103">**-Target: library** opcji powoduje, że kompilator do tworzenia biblioteki dołączanej (dynamicznie DLL), a nie plik wykonywalny (EXE).</span><span class="sxs-lookup"><span data-stu-id="ca1d9-103">The **-target:library** option causes the compiler to create a dynamic-link library (DLL) rather than an executable file (EXE).</span></span>  
+# <a name="-targetlibrary-c-compiler-options"></a><span data-ttu-id="462ab-102">-target: library (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="462ab-102">-target:library (C# Compiler Options)</span></span>
+<span data-ttu-id="462ab-103">**-Target: library** opcji powoduje, że kompilator do tworzenia biblioteki dołączanej (dynamicznie DLL), a nie plik wykonywalny (EXE).</span><span class="sxs-lookup"><span data-stu-id="462ab-103">The **-target:library** option causes the compiler to create a dynamic-link library (DLL) rather than an executable file (EXE).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca1d9-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ca1d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="462ab-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="462ab-104">Syntax</span></span>  
   
 ```console  
 -target:library  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="ca1d9-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ca1d9-105">Remarks</span></span>  
- <span data-ttu-id="ca1d9-106">Biblioteki DLL, zostanie utworzona z rozszerzeniem dll.</span><span class="sxs-lookup"><span data-stu-id="ca1d9-106">The DLL will be created with the .dll extension.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="462ab-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="462ab-105">Remarks</span></span>  
+ <span data-ttu-id="462ab-106">Biblioteki DLL, zostanie utworzona z rozszerzeniem dll.</span><span class="sxs-lookup"><span data-stu-id="462ab-106">The DLL will be created with the .dll extension.</span></span>  
   
- <span data-ttu-id="ca1d9-107">Chyba że określono inaczej, za pomocą [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) opcji Nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego.</span><span class="sxs-lookup"><span data-stu-id="ca1d9-107">Unless otherwise specified with the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the first input file.</span></span>  
+ <span data-ttu-id="462ab-107">Chyba że określono inaczej, za pomocą [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) opcji Nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego.</span><span class="sxs-lookup"><span data-stu-id="462ab-107">Unless otherwise specified with the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the first input file.</span></span>  
   
- <span data-ttu-id="ca1d9-108">Po określeniu w wierszu polecenia, wszystkie pliki, aż do następnego **-out** lub **-target: module** opcji są używane do tworzenia pliku dll.</span><span class="sxs-lookup"><span data-stu-id="ca1d9-108">When specified at the command line, all files up to the next **-out** or **-target:module** option are used to create the .dll file.</span></span>  
+ <span data-ttu-id="462ab-108">Po określeniu w wierszu polecenia, wszystkie pliki, aż do następnego **-out** lub **-target: module** opcji są używane do tworzenia pliku dll.</span><span class="sxs-lookup"><span data-stu-id="462ab-108">When specified at the command line, all files up to the next **-out** or **-target:module** option are used to create the .dll file.</span></span>  
   
- <span data-ttu-id="ca1d9-109">Podczas tworzenia pliku .dll [Main](../../../csharp/programming-guide/main-and-command-args/index.md) metoda nie jest wymagana.</span><span class="sxs-lookup"><span data-stu-id="ca1d9-109">When building a .dll file, a [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method is not required.</span></span>  
+ <span data-ttu-id="462ab-109">Podczas tworzenia pliku .dll [Main](../../../csharp/programming-guide/main-and-command-args/index.md) metoda nie jest wymagana.</span><span class="sxs-lookup"><span data-stu-id="462ab-109">When building a .dll file, a [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method is not required.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="ca1d9-110">Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio</span><span class="sxs-lookup"><span data-stu-id="ca1d9-110">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="462ab-110">Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio</span><span class="sxs-lookup"><span data-stu-id="462ab-110">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="ca1d9-111">Otwórz projekt **właściwości** strony.</span><span class="sxs-lookup"><span data-stu-id="ca1d9-111">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="462ab-111">Otwórz projekt **właściwości** strony.</span><span class="sxs-lookup"><span data-stu-id="462ab-111">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="ca1d9-112">Kliknij przycisk **aplikacji** stronę właściwości.</span><span class="sxs-lookup"><span data-stu-id="ca1d9-112">Click the **Application** property page.</span></span>  
+2.  <span data-ttu-id="462ab-112">Kliknij przycisk **aplikacji** stronę właściwości.</span><span class="sxs-lookup"><span data-stu-id="462ab-112">Click the **Application** property page.</span></span>  
   
-3.  <span data-ttu-id="ca1d9-113">Modyfikowanie **typ danych wyjściowych** właściwości.</span><span class="sxs-lookup"><span data-stu-id="ca1d9-113">Modify the **Output type** property.</span></span>  
+3.  <span data-ttu-id="462ab-113">Modyfikowanie **typ danych wyjściowych** właściwości.</span><span class="sxs-lookup"><span data-stu-id="462ab-113">Modify the **Output type** property.</span></span>  
   
- <span data-ttu-id="ca1d9-114">Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span><span class="sxs-lookup"><span data-stu-id="ca1d9-114">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
+ <span data-ttu-id="462ab-114">Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span><span class="sxs-lookup"><span data-stu-id="462ab-114">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ca1d9-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="ca1d9-115">Example</span></span>  
- <span data-ttu-id="ca1d9-116">Skompilować `in.cs`, tworzenie `in.dll`:</span><span class="sxs-lookup"><span data-stu-id="ca1d9-116">Compile `in.cs`, creating `in.dll`:</span></span>  
+## <a name="example"></a><span data-ttu-id="462ab-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="462ab-115">Example</span></span>  
+ <span data-ttu-id="462ab-116">Skompilować `in.cs`, tworzenie `in.dll`:</span><span class="sxs-lookup"><span data-stu-id="462ab-116">Compile `in.cs`, creating `in.dll`:</span></span>  
   
 ```console  
 csc -target:library in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ca1d9-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ca1d9-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="462ab-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="462ab-117">See Also</span></span>  
 
-- [<span data-ttu-id="ca1d9-118">-target (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="ca1d9-118">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
-- [<span data-ttu-id="ca1d9-119">Opcje kompilatora C#</span><span class="sxs-lookup"><span data-stu-id="ca1d9-119">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="462ab-118">-target (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="462ab-118">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [<span data-ttu-id="462ab-119">Opcje kompilatora C#</span><span class="sxs-lookup"><span data-stu-id="462ab-119">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

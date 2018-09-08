@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579811"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207645"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardowe ciągi formatujące datę i godzinę
 W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu jest używany do definiowania tekstowej reprezentacji wartości daty i godziny. Ciągu formatu daty i godziny, który zawiera więcej niż jeden znak, w tym znak odstępu, jest interpretowany jako niestandardowy ciąg daty i godziny formatu; Aby uzyskać więcej informacji, zobacz [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Ciągu formatu standardowego lub niestandardowego można używać na dwa sposoby:  
@@ -413,9 +413,10 @@ Standardowy format daty i ciągi formatu czasu mogą być używane z obu <xref:S
 ### <a name="datetimeformatinfo-properties"></a>Właściwości obiektu DateTimeFormatInfo  
  Formatowanie mają wpływ właściwości bieżącego <xref:System.Globalization.DateTimeFormatInfo> obiektu, dostarczane niejawnie przez bieżącą kulturę wątku lub jawnie przez <xref:System.IFormatProvider> parametru metody, która wywołuje formatowanie. Dla <xref:System.IFormatProvider> parametru, aplikacja musi podawać <xref:System.Globalization.CultureInfo> obiektu, który reprezentuje kulturę, lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, który reprezentuje datę i godzinę, o których konwencje formatowania określonej kultury. Wiele standardowych daty i godziny specyfikatorów formatu są aliasami wzorców formatowania definiowanych przez właściwości bieżącego <xref:System.Globalization.DateTimeFormatInfo> obiektu. Twoja aplikacja może zmieniać wyniki tworzone przez niektóre standardowy format daty i godziny specyfikatorów formatu, zmieniając wzorców odpowiadającego formatu odpowiednią datę i godzinę <xref:System.Globalization.DateTimeFormatInfo> właściwości.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.DateTime?displayProperty=nameWithType>  
- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
- [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Przykład: .NET Framework 4 formatowanie narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.DateTime?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
+- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
+- [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Przykład: .NET Framework 4 formatowanie narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

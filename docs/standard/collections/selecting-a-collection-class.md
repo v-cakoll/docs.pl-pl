@@ -12,75 +12,76 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d51f6c8e7dc03edb2823f61ab638fc669847dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574936"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211817"
 ---
 # <a name="selecting-a-collection-class"></a>Wybieranie klasy kolekcji
-Należy wybrać uważnie klasie kolekcji. Przy użyciu nieprawidłowego typu można ograniczyć korzystanie z kolekcji. Ogólnie rzecz biorąc, należy unikać typów w <xref:System.Collections> przestrzeni nazw o ile nie są specjalnie przeznaczonych dla platformy .NET Framework w wersji 1.1. Rodzajowa i współbieżnych wersje kolekcje są się ze względu na ich większe bezpieczeństwo typu i inne usprawnienia.  
+Należy wybrać uważnie klasy kolekcji. Przy użyciu nieprawidłowego typu można ograniczyć korzystanie z kolekcji. Ogólnie rzecz biorąc, unikaj używania typów w <xref:System.Collections> przestrzeni nazw, chyba że są specjalnie przeznaczone dla .NET Framework w wersji 1.1. Ogólny i równoczesne wersje kolekcje są preferowane ze względu na ich większe bezpieczeństwo typu i inne ulepszenia.  
   
  Należy rozważyć następujące kwestie:  
   
--   Potrzebujesz uporządkowanej listy, gdy element zwykle są usuwane po jego wartość jest pobierana?  
+-   Czy potrzebujesz uporządkowanej listy, gdzie element zwykle są usuwane po jego wartość jest pobierana?  
   
-    -   Jeśli tak, rozważ użycie <xref:System.Collections.Queue> klasy lub <xref:System.Collections.Generic.Queue%601> klasy ogólnej, jeśli należy w pierwszej, zachowanie FIFO (FIFO). Należy rozważyć użycie <xref:System.Collections.Stack> klasy lub <xref:System.Collections.Generic.Stack%601> klasy ogólnej, jeśli potrzebujesz ostatni na, wytworzenia zachowanie. Bezpieczny dostęp wiele wątków, można użyć w wersji równoczesnych <xref:System.Collections.Concurrent.ConcurrentQueue%601> i <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
+    -   Jeśli tak, należy wziąć pod uwagę przy użyciu <xref:System.Collections.Queue> klasy lub <xref:System.Collections.Generic.Queue%601> klasy generycznej, jeśli potrzebujesz w pierwszym, zachowanie FIFO (FIFO). Należy rozważyć użycie <xref:System.Collections.Stack> klasy lub <xref:System.Collections.Generic.Stack%601> klasy generycznej, jeśli potrzebujesz ostatni na wejściu, zachowanie FIFO (LIFO). Bezpieczny dostęp z wielu wątków, można użyć w wersji współbieżnych <xref:System.Collections.Concurrent.ConcurrentQueue%601> i <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
-    -   Jeśli nie, należy rozważyć użycie innych kolekcji.  
+    -   W przeciwnym razie należy wziąć pod uwagę przy użyciu innych kolekcji.  
   
--   Czy konieczne jest dostęp do elementów w określonej kolejności, takich jak FIFO, LIFO lub losowych?  
+-   Należy uzyskać dostęp do elementów w określonej kolejności, takie jak FIFO, LIFO, lub wartość losowa?  
   
     -   <xref:System.Collections.Queue> Klasy i <xref:System.Collections.Generic.Queue%601> lub <xref:System.Collections.Concurrent.ConcurrentQueue%601> klasy ogólnej oferują FIFO dostępu. Aby uzyskać więcej informacji, zobacz [kiedy należy używać kolekcji bezpiecznych wątkowo](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
   
     -   <xref:System.Collections.Stack> Klasy i <xref:System.Collections.Generic.Stack%601> lub <xref:System.Collections.Concurrent.ConcurrentStack%601> klasy ogólnej oferują LIFO dostępu. Aby uzyskać więcej informacji, zobacz [kiedy należy używać kolekcji bezpiecznych wątkowo](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
   
-    -   <xref:System.Collections.Generic.LinkedList%601> Klasy ogólnej umożliwia dostęp sekwencyjny z węzła głównego do końcowego fragmentu lub tail nagłówek.  
+    -   <xref:System.Collections.Generic.LinkedList%601> Klasy ogólnej umożliwia dostęp sekwencyjny, przejdź do ogona lub tail do głowy.  
   
--   Czy trzeba uzyskać dostęp każdy element przez indeks?  
+-   Potrzebujesz uzyskać dostęp do każdego elementu przez indeks?  
   
-    -   <xref:System.Collections.ArrayList> i <xref:System.Collections.Specialized.StringCollection> klas i <xref:System.Collections.Generic.List%601> klasy ogólnej oferta dostęp do swoich elementów przez liczony od zera indeks elementu.  
+    -   <xref:System.Collections.ArrayList> i <xref:System.Collections.Specialized.StringCollection> klasy i <xref:System.Collections.Generic.List%601> klasy ogólnej oferty dostępu do swoich elementów przez liczony od zera indeks elementu.  
   
-    -   <xref:System.Collections.Hashtable>, <xref:System.Collections.SortedList>, <xref:System.Collections.Specialized.ListDictionary>, I <xref:System.Collections.Specialized.StringDictionary> klasy, a <xref:System.Collections.Generic.Dictionary%602> i <xref:System.Collections.Generic.SortedDictionary%602> klasy ogólne zapewniają dostęp do swoich elementów dzięki klucz elementu.  
+    -   <xref:System.Collections.Hashtable>, <xref:System.Collections.SortedList>, <xref:System.Collections.Specialized.ListDictionary>, I <xref:System.Collections.Specialized.StringDictionary> klas, a <xref:System.Collections.Generic.Dictionary%602> i <xref:System.Collections.Generic.SortedDictionary%602> klas ogólnych oferują dostęp do swoich elementów za pomocą klucza elementu.  
   
-    -   <xref:System.Collections.Specialized.NameObjectCollectionBase> i <xref:System.Collections.Specialized.NameValueCollection> klasy, a <xref:System.Collections.ObjectModel.KeyedCollection%602> i <xref:System.Collections.Generic.SortedList%602> klasy ogólne zapewniają dostęp do swoich elementów dzięki albo liczony od zera indeks lub klucz elementu.  
+    -   <xref:System.Collections.Specialized.NameObjectCollectionBase> i <xref:System.Collections.Specialized.NameValueCollection> klas, a <xref:System.Collections.ObjectModel.KeyedCollection%602> i <xref:System.Collections.Generic.SortedList%602> klas ogólnych oferują dostęp do swoich elementów przez liczony od zera indeks lub klucz elementu.  
   
--   Każdy element będzie zawierać, jedną wartość, kombinacji klawiszy i jedną wartość, lub kombinację klawiszy i wiele wartości?  
+-   Każdy element zawiera jedną wartość, kombinacji klawiszy i jedną wartość, lub kombinacji klawiszy i wiele wartości?  
   
-    -   Jedna wartość: użyć dowolnego z kolekcji opartych na <xref:System.Collections.IList> interfejsu lub <xref:System.Collections.Generic.IList%601> interfejs generyczny.  
+    -   Jedna wartość: Użyj dowolnej kolekcji, w oparciu o <xref:System.Collections.IList> interfejsu lub <xref:System.Collections.Generic.IList%601> ogólny interfejs.  
   
-    -   Jeden klucz i wartość jednego: użyć dowolnego z kolekcji opartych na <xref:System.Collections.IDictionary> interfejsu lub <xref:System.Collections.Generic.IDictionary%602> interfejs generyczny.  
+    -   Jeden klucz i jedną wartość: Użyj dowolnej kolekcji, w oparciu o <xref:System.Collections.IDictionary> interfejsu lub <xref:System.Collections.Generic.IDictionary%602> interfejs generyczny.  
   
-    -   Jedna wartość z kluczem osadzonych: Użyj <xref:System.Collections.ObjectModel.KeyedCollection%602> klasy ogólnej.  
+    -   Jedną wartość z kluczem osadzonego: Użyj <xref:System.Collections.ObjectModel.KeyedCollection%602> klasy ogólnej.  
   
     -   Jeden z kluczy i wartości wielu: Użyj <xref:System.Collections.Specialized.NameValueCollection> klasy.  
   
--   Czy trzeba posortować elementy inaczej niż jak zostały wprowadzone?  
+-   Potrzebujesz sortować elementy różni się od sposobu ich wprowadzenia?  
   
-    -   <xref:System.Collections.Hashtable> Klasy sortuje swoich elementów według ich skrótu.  
+    -   <xref:System.Collections.Hashtable> Klasy sortuje jego elementy według ich kody skrótów.  
   
-    -   <xref:System.Collections.SortedList> Klasy i <xref:System.Collections.Generic.SortedDictionary%602> i <xref:System.Collections.Generic.SortedList%602> klas rodzajowych sortowania ich elementów za pomocą klucza oparte na implementacje <xref:System.Collections.IComparer> interfejsu i <xref:System.Collections.Generic.IComparer%601> interfejs generyczny.  
+    -   <xref:System.Collections.SortedList> Klasy i <xref:System.Collections.Generic.SortedDictionary%602> i <xref:System.Collections.Generic.SortedList%602> klas ogólnych sortowanie ich elementów za pomocą klucza oparte na implementacje <xref:System.Collections.IComparer> interfejsu i <xref:System.Collections.Generic.IComparer%601> interfejs generyczny.  
   
-    -   <xref:System.Collections.ArrayList> udostępnia <xref:System.Collections.ArrayList.Sort%2A> metody pobierającej <xref:System.Collections.IComparer> implementacji jako parametr. Jego ogólny odpowiednik <xref:System.Collections.Generic.List%601> udostępnia ogólne klasy <xref:System.Collections.Generic.List%601.Sort%2A> metody pobierającej implementacja <xref:System.Collections.Generic.IComparer%601> interfejs ogólny jako parametr.  
+    -   <xref:System.Collections.ArrayList> udostępnia <xref:System.Collections.ArrayList.Sort%2A> metody, która przyjmuje <xref:System.Collections.IComparer> implementacji jako parametr. Jego odpowiednika rodzajowego <xref:System.Collections.Generic.List%601> udostępnia klasy generycznej <xref:System.Collections.Generic.List%601.Sort%2A> metody, która przyjmuje implementację <xref:System.Collections.Generic.IComparer%601> ogólny interfejs jako parametr.  
   
--   Czy potrzebna jest szybkie wyszukiwanie i pobieranie informacji?  
+-   Potrzebujesz szybkie wyszukiwanie i pobieranie informacji?  
   
-    -   <xref:System.Collections.Specialized.ListDictionary> jest szybsze niż <xref:System.Collections.Hashtable> dla małych kolekcji (10 elementów lub mniej). <xref:System.Collections.Generic.Dictionary%602> Klasy ogólnej zapewnia szybsze wyszukiwanie niż <xref:System.Collections.Generic.SortedDictionary%602> klasy ogólnej. Implementacja wielowątkowych jest <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601> zapewnia szybkie wstawiania wielowątkowych nieuporządkowaną danych. Aby uzyskać więcej informacji na temat obu typów wielowątkowych, zobacz [kiedy należy używać kolekcji bezpiecznych wątkowo](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
+    -   <xref:System.Collections.Specialized.ListDictionary> jest szybsza niż <xref:System.Collections.Hashtable> kolekcji mały (10 elementów lub mniej). <xref:System.Collections.Generic.Dictionary%602> Klasy ogólnej zapewnia szybsze wyszukiwanie niż <xref:System.Collections.Generic.SortedDictionary%602> klasy ogólnej. Wielowątkowe implementacja jest <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601> zapewnia szybkie wstawienia wielowątkowych nieuporządkowaną danych. Aby uzyskać więcej informacji na temat obu typów wielowątkowych zobacz [kiedy należy używać kolekcji bezpiecznych wątkowo](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
   
--   Potrzebujesz kolekcje, które są akceptowane tylko ciągi?  
+-   Czy potrzebujesz kolekcje, które akceptują tylko ciągi?  
   
     -   <xref:System.Collections.Specialized.StringCollection> (na podstawie <xref:System.Collections.IList>) i <xref:System.Collections.Specialized.StringDictionary> (na podstawie <xref:System.Collections.IDictionary>) znajdują się w <xref:System.Collections.Specialized> przestrzeni nazw.  
   
-    -   Ponadto można użyć dowolnej klasy rodzajowej kolekcji w <xref:System.Collections.Generic> przestrzeń nazw jako silnie typizowane kolekcji ciągów, określając <xref:System.String> klasy dla ich argumentów typu ogólnego.  
+    -   Ponadto można użyć dowolnej klasy kolekcji rodzajowej w <xref:System.Collections.Generic> przestrzeni nazw jako silnie typizowane kolekcji ciągów, określając <xref:System.String> klasy dla ich argumentów typu rodzajowego.  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ do obiektów i PLINQ  
- LINQ do obiektów umożliwia deweloperom umożliwia uzyskiwanie dostępu do obiektów w pamięci, tak długo, jak typ obiektu implementuje zapytań LINQ <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>. Zapytania LINQ Podaj wspólnego wzorca do uzyskiwania dostępu do danych, zazwyczaj są bardziej zwięzłe i czytelna niż standardowe `foreach` pętli i zapewnić filtrowania, kolejność i grupowanie możliwości. Aby uzyskać więcej informacji, zobacz [LINQ do obiektów](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+ LINQ do obiektów umożliwia deweloperom Używanie zapytań LINQ do dostępu do obiektów w pamięci, tak długo, jak długo typ obiektu implementuje <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>. Zapytania LINQ zapewniają wspólny wzorzec do uzyskiwania dostępu do danych, zazwyczaj są bardziej zwięzłe i czytelne niż standardowe `foreach` pętli i zapewniają filtrowanie, porządkowanie i możliwości grupowania. Aby uzyskać więcej informacji, zobacz [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
   
- PLINQ udostępnia implementację równoległe LINQ do obiektów, które może zaoferować szybsze wykonywanie zapytania w wielu scenariuszach za pośrednictwem efektywniejsze wykorzystanie komputerach z procesorami wielordzeniowymi. Aby uzyskać więcej informacji, zobacz [równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ Program PLINQ zawiera implementacja przetwarzania równoległego LINQ do obiektów, które może zaoferować szybsze wykonywanie zapytań w wielu scenariuszach, za pomocą bardziej efektywne wykorzystywanie komputerach wielordzeniowych. Aby uzyskać więcej informacji, zobacz [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Collections>  
- <xref:System.Collections.Specialized>  
- <xref:System.Collections.Generic>  
- [Kolekcje bezpieczne wątkowo](../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Collections>  
+- <xref:System.Collections.Specialized>  
+- <xref:System.Collections.Generic>  
+- [Kolekcje bezpieczne wątkowo](../../../docs/standard/collections/thread-safe/index.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
 ms.openlocfilehash: 3e4c1f346b83cf97c57a359984bd08e075b6451b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738909"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44173395"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Używanie indeksatorów (Przewodnik programowania w języku C#)
 Indeksatory są wygody składni, które umożliwiają tworzenie [klasy](../../../csharp/language-reference/keywords/class.md), [struktury](../../../csharp/language-reference/keywords/struct.md), lub [interfejsu](../../../csharp/language-reference/keywords/interface.md) że aplikacje klienckie mogą uzyskać dostęp, podobnie jak tablica. Indeksatory najczęściej są implementowane w typach, której głównym celem jest hermetyzacji wewnętrznej kolekcji lub tablicy. Na przykład załóżmy, że masz klasę o nazwie TempRecord reprezentujący temperaturę w Farenheit zarejestrowanej w 10 różnych razy w okresie 24-godzinnym. Klasa zawiera tablicę o nazwie "warunki" typ float do reprezentowania temperatur, a <xref:System.DateTime> reprezentujący datę temperatury zostały zapisane. Wdrażając indeksatora w tej klasie, klienci mogą uzyskiwać dostęp temperatur w wystąpieniu TempRecord jako `float temp = tr[4]` zamiast jako `float temp = tr.temps[4]`. Notacja indeksator nie tylko upraszcza składnię dla aplikacji klienckich; zapewnia także klasa i jej przeznaczenie bardziej intuicyjne innym deweloperom zrozumieć.  

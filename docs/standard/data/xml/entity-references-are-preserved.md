@@ -1,38 +1,39 @@
 ---
-title: Odwołania do jednostek zostaną zachowane.
+title: Odwołania do jednostek są zachowywane.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 652a044bf1b5293bc9c36477a46a78d9851f1810
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1c48e42e55025aff0ce1a24a3ef45ddf8005eab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568488"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204324"
 ---
-# <a name="entity-references-are-preserved"></a>Odwołania do jednostek zostaną zachowane.
-Gdy odwołanie do jednostki nie jest rozwinięty, ale zachowane, XML modelu DOM (Document Object) tworzy **XmlEntityReference** węzła po napotkaniu odwołania do jednostki.  
+# <a name="entity-references-are-preserved"></a>Odwołania do jednostek są zachowywane.
+Gdy odwołanie do jednostki nie jest rozwinięty, ale zachowane, XML Document Object Model (DOM) tworzy **XmlEntityReference** węzła po napotkaniu odwołania do jednostki.  
   
- Przy użyciu następującego pliku XML  
+ Za pomocą następujący kod XML  
   
 ```xml  
 <author>Fred</author>  
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- kompilacje w modelu DOM **XmlEntityReference** węzła po napotkaniu `&publisher;` odwołania. **XmlEntityReference** zawiera węzły podrzędne skopiowane z zawartości w deklaracji entity. W poprzednim przykładzie kodu zawiera tekst w deklaracji jednostki, więc **XmlText** jest tworzony węzeł jako węzeł podrzędny węzła odniesienia jednostki.  
+ kompilacje w modelu DOM **XmlEntityReference** węzła po napotkaniu `&publisher;` odwołania. **XmlEntityReference** zawiera węzły podrzędne, skopiowane z zawartości w deklaracji entity. W poprzednim przykładzie kodu zawiera tekst w deklaracji jednostki, więc **XmlText** węzeł jest tworzony jako węzeł podrzędny węzła odwołanie do jednostki.  
   
  ![Struktura zachowanych odwołań jednostki drzewa](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
-Struktura drzewa dla odwołań do jednostek, które zostaną zachowane  
+Strukturę drzewa dla odwołań do jednostek, które są zachowywane  
   
- Węzły podrzędne **XmlEntityReference** to kopie wszystkich podrzędnych węzłów utworzone na podstawie **XmlEntity** węzeł po napotkano deklaracji entity.  
+ Węzły podrzędne **XmlEntityReference** to kopie wszystkich podrzędnych węzłów przygotowane na podstawie **XmlEntity** węzła, gdy napotkano deklaracji entity.  
   
 > [!NOTE]
->  Węzły skopiowanych z **XmlEntity** nie zawsze są kopie dokładnie raz umieszczone w węźle odwołania jednostki. Może być przestrzenie nazw, które znajdują się w zakresie, w węźle odwołania jednostki i które dotyczy konfiguracji końcowej węzłów podrzędnych.  
+>  Węzły skopiowane z **XmlEntity** nie zawsze są dokładne kopie raz umieszczone w węźle odwołania jednostki. Może to być przestrzenie nazw, które znajdują się w zakresie w węźle odwołania jednostki, a to ma wpływ na Konfiguracja końcowa węzłów podrzędnych.  
   
- Domyślnie ogólne jednostek, takich jak `&abc;` zostaną zachowane i **XmlEntityReference** zawsze tworzona węzłów.  
+ Domyślnie, takich jak ogólne jednostek `&abc;` są zachowywane i **XmlEntityReference** węzłów przygotowane na zawsze.  
   
-## <a name="see-also"></a>Zobacz też  
- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

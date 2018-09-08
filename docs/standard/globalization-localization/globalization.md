@@ -16,11 +16,11 @@ ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871895"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44221912"
 ---
 # <a name="globalization"></a>Globalizacja
 Globalizacja obejmuje projektowania i opracowywania aplikacji gotowej dla całego świata, która obsługuje dane regionalne i zlokalizowane interfejsy dla użytkowników w wielu kulturach. Przed rozpoczęciem fazy projektowania, należy określić, które kultury Twoja aplikacja będzie obsługiwać. Mimo że aplikacja jest przeznaczona na jednej kulturze lub regionie jako domyślnej, można projektować i zapisać go tak, aby łatwo mogła zostać rozszerzona do użytkowników innych kultur lub regionów.  

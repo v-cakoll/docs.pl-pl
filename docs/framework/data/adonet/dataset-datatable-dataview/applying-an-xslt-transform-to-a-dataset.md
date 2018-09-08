@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
 ms.openlocfilehash: abcb3231aa92bd62edefc7f7341da5fcb3321e4b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734749"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200119"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Stosowanie transformacji XSLT do zestawu danych
 **WriteXml** metody <xref:System.Data.DataSet> umożliwia zapisanie zawartości **DataSet** jako danych XML. Często wykonywanym zadaniem jest następnie Przekształć element XML, że na inny format za pomocą przekształcenia XSL (XSLT). Jednak synchronizowanie **zestawu danych** z <xref:System.Xml.XmlDataDocument> umożliwia zastosowanie arkusz stylów XSLT do zawartości **DataSet** bez konieczności pisania najpierw zawartość  **Zestaw danych** jako danych XML przy użyciu **WriteXml**.  

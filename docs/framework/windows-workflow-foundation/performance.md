@@ -3,11 +3,11 @@ title: Windows Workflow Foundation 4 wydajności
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: 85556a6e7a55e0afb206d1e04bfdd9fc66fa99b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557212"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201481"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 wydajności
 Dustin Metzgar  

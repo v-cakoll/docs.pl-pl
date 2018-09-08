@@ -6,40 +6,40 @@ helpviewer_keywords:
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
 ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038728"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200711"
 ---
-# <a name="developing-applications-with-visual-basic"></a><span data-ttu-id="bdf34-102">Tworzenie aplikacji za pomocą Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bdf34-102">Developing Applications with Visual Basic</span></span>
-<span data-ttu-id="bdf34-103">W tej sekcji opisano w dokumentacji koncepcyjnego dla języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bdf34-103">This section covers conceptual documentation for the Visual Basic language.</span></span>  
+# <a name="developing-applications-with-visual-basic"></a><span data-ttu-id="8f01b-102">Tworzenie aplikacji za pomocą Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8f01b-102">Developing Applications with Visual Basic</span></span>
+<span data-ttu-id="8f01b-103">W tej sekcji opisano w dokumentacji koncepcyjnego dla języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8f01b-103">This section covers conceptual documentation for the Visual Basic language.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bdf34-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="bdf34-104">In This Section</span></span>  
- [<span data-ttu-id="bdf34-105">Programowanie w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bdf34-105">Programming in Visual Basic</span></span>](../../visual-basic/developing-apps/programming/index.md)  
- <span data-ttu-id="bdf34-106">Obejmuje wielu tematów programowania.</span><span class="sxs-lookup"><span data-stu-id="bdf34-106">Covers a variety of programming subjects.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8f01b-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="8f01b-104">In This Section</span></span>  
+ [<span data-ttu-id="8f01b-105">Programowanie w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8f01b-105">Programming in Visual Basic</span></span>](../../visual-basic/developing-apps/programming/index.md)  
+ <span data-ttu-id="8f01b-106">Obejmuje wielu tematów programowania.</span><span class="sxs-lookup"><span data-stu-id="8f01b-106">Covers a variety of programming subjects.</span></span>  
   
- [<span data-ttu-id="bdf34-107">Rozwój za pomocą My</span><span class="sxs-lookup"><span data-stu-id="bdf34-107">Development with My</span></span>](../../visual-basic/developing-apps/development-with-my/index.md)  
- <span data-ttu-id="bdf34-108">W tym artykule omówiono nową funkcję o nazwie `My`, który zapewnia dostęp do informacji i domyślne wystąpień obiektów, które odnoszą się do aplikacji i jej środowiska wykonawczego.</span><span class="sxs-lookup"><span data-stu-id="bdf34-108">Discusses a new feature called `My`, which provides access to information and default object instances that are related to an application and its run-time environment.</span></span>  
+ [<span data-ttu-id="8f01b-107">Rozwój za pomocą My</span><span class="sxs-lookup"><span data-stu-id="8f01b-107">Development with My</span></span>](../../visual-basic/developing-apps/development-with-my/index.md)  
+ <span data-ttu-id="8f01b-108">W tym artykule omówiono nową funkcję o nazwie `My`, który zapewnia dostęp do informacji i domyślne wystąpień obiektów, które odnoszą się do aplikacji i jej środowiska wykonawczego.</span><span class="sxs-lookup"><span data-stu-id="8f01b-108">Discusses a new feature called `My`, which provides access to information and default object instances that are related to an application and its run-time environment.</span></span>  
   
- [<span data-ttu-id="bdf34-109">Uzyskiwanie dostępu do danych w aplikacjach Visual Studio</span><span class="sxs-lookup"><span data-stu-id="bdf34-109">Accessing Data in Visual Basic Applications</span></span>](../../visual-basic/developing-apps/accessing-data.md)  
- <span data-ttu-id="bdf34-110">Zawiera pomoc na uzyskiwanie dostępu do danych w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bdf34-110">Contains Help on accessing data in Visual Basic.</span></span>  
+ [<span data-ttu-id="8f01b-109">Uzyskiwanie dostępu do danych w aplikacjach Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8f01b-109">Accessing Data in Visual Basic Applications</span></span>](../../visual-basic/developing-apps/accessing-data.md)  
+ <span data-ttu-id="8f01b-110">Zawiera pomoc na uzyskiwanie dostępu do danych w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8f01b-110">Contains Help on accessing data in Visual Basic.</span></span>  
   
- [<span data-ttu-id="bdf34-111">Tworzenie i używanie składników w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bdf34-111">Creating and Using Components in Visual Basic</span></span>](../../visual-basic/developing-apps/creating-and-using-components.md)  
- <span data-ttu-id="bdf34-112">Definiuje wyrażenie *składnika* i w tym artykule omówiono sposób i czas tworzenia składników.</span><span class="sxs-lookup"><span data-stu-id="bdf34-112">Defines the term *component* and discusses how and when to create components.</span></span>  
+ [<span data-ttu-id="8f01b-111">Tworzenie i używanie składników w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8f01b-111">Creating and Using Components in Visual Basic</span></span>](../../visual-basic/developing-apps/creating-and-using-components.md)  
+ <span data-ttu-id="8f01b-112">Definiuje wyrażenie *składnika* i w tym artykule omówiono sposób i czas tworzenia składników.</span><span class="sxs-lookup"><span data-stu-id="8f01b-112">Defines the term *component* and discusses how and when to create components.</span></span>  
   
- [<span data-ttu-id="bdf34-113">Drukowanie i raportowanie</span><span class="sxs-lookup"><span data-stu-id="bdf34-113">Printing and Reporting</span></span>](../../visual-basic/developing-apps/printing/index.md)  
- <span data-ttu-id="bdf34-114">Zawiera omówienia i linki do dodatkowej dokumentacji związanych z drukowanie i raportowanie.</span><span class="sxs-lookup"><span data-stu-id="bdf34-114">Provides overviews and links to the relevant documentation related to printing and reporting.</span></span>  
+ [<span data-ttu-id="8f01b-113">Drukowanie i raportowanie</span><span class="sxs-lookup"><span data-stu-id="8f01b-113">Printing and Reporting</span></span>](../../visual-basic/developing-apps/printing/index.md)  
+ <span data-ttu-id="8f01b-114">Zawiera omówienia i linki do dodatkowej dokumentacji związanych z drukowanie i raportowanie.</span><span class="sxs-lookup"><span data-stu-id="8f01b-114">Provides overviews and links to the relevant documentation related to printing and reporting.</span></span>  
   
- [<span data-ttu-id="bdf34-115">Podstawowe informacje o aplikacji Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bdf34-115">Windows Forms Application Basics</span></span>](../../visual-basic/developing-apps/windows-forms/index.md)  
- <span data-ttu-id="bdf34-116">Zawiera informacje dotyczące tworzenia aplikacji Windows Forms przy użyciu programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="bdf34-116">Provides information about creating Windows Forms applications by using Visual Studio.</span></span>  
+ [<span data-ttu-id="8f01b-115">Podstawowe informacje o aplikacji Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8f01b-115">Windows Forms Application Basics</span></span>](../../visual-basic/developing-apps/windows-forms/index.md)  
+ <span data-ttu-id="8f01b-116">Zawiera informacje dotyczące tworzenia aplikacji Windows Forms przy użyciu programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="8f01b-116">Provides information about creating Windows Forms applications by using Visual Studio.</span></span>  
   
- [<span data-ttu-id="bdf34-117">Dostosowywanie projektów i rozszerzanie mojej</span><span class="sxs-lookup"><span data-stu-id="bdf34-117">Customizing Projects and Extending My</span></span>](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
- <span data-ttu-id="bdf34-118">W tym artykule opisano, w jaki sposób dostosować szablony projektów, aby zapewnić dodatkowe `My` obiektów.</span><span class="sxs-lookup"><span data-stu-id="bdf34-118">Describes how you can customize project templates to provide additional `My` objects.</span></span>  
+ [<span data-ttu-id="8f01b-117">Dostosowywanie projektów i rozszerzanie mojej</span><span class="sxs-lookup"><span data-stu-id="8f01b-117">Customizing Projects and Extending My</span></span>](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
+ <span data-ttu-id="8f01b-118">W tym artykule opisano, w jaki sposób dostosować szablony projektów, aby zapewnić dodatkowe `My` obiektów.</span><span class="sxs-lookup"><span data-stu-id="8f01b-118">Describes how you can customize project templates to provide additional `My` objects.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="bdf34-119">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="bdf34-119">Related Sections</span></span>  
- [<span data-ttu-id="bdf34-120">Przewodnik programowania w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bdf34-120">Visual Basic Programming Guide</span></span>](../../visual-basic/programming-guide/index.md)  
- <span data-ttu-id="bdf34-121">Przedstawiono istotne elementy programowania w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bdf34-121">Walks through the essential elements of programming with Visual Basic.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="8f01b-119">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="8f01b-119">Related Sections</span></span>  
+ [<span data-ttu-id="8f01b-120">Przewodnik programowania w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8f01b-120">Visual Basic Programming Guide</span></span>](../../visual-basic/programming-guide/index.md)  
+ <span data-ttu-id="8f01b-121">Przedstawiono istotne elementy programowania w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8f01b-121">Walks through the essential elements of programming with Visual Basic.</span></span>  
   
- [<span data-ttu-id="bdf34-122">Dokumentacja języka Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bdf34-122">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
- <span data-ttu-id="bdf34-123">Zawiera dokumentacja dla języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bdf34-123">Contains reference documentation for the Visual Basic language.</span></span>
+ [<span data-ttu-id="8f01b-122">Dokumentacja języka Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8f01b-122">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
+ <span data-ttu-id="8f01b-123">Zawiera dokumentacja dla języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8f01b-123">Contains reference documentation for the Visual Basic language.</span></span>

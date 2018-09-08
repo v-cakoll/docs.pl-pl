@@ -12,14 +12,14 @@ helpviewer_keywords:
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
 ms.openlocfilehash: ab4f8fae748455f96ca5ea0255658cc76dd14f97
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138191"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216662"
 ---
-# <a name="xml-documentation-comments-c-programming-guide"></a><span data-ttu-id="e5e10-102">Komentarze dokumentacji XML (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="e5e10-102">XML Documentation Comments (C# Programming Guide)</span></span>
-<span data-ttu-id="e5e10-103">W języku Visual C# można tworzyć dokumentację kodu, umieszczając elementy XML w specjalnych polach komentarzy (wskazywanych przez potrójne ukośniki) w kodzie źródłowym bezpośrednio przed blokiem kodu, do którego odwołują się komentarze, na przykład:</span><span class="sxs-lookup"><span data-stu-id="e5e10-103">In Visual C# you can create documentation for your code by including XML elements in special comment fields (indicated by triple slashes) in the source code directly before the code block to which the comments refer, for example:</span></span>  
+# <a name="xml-documentation-comments-c-programming-guide"></a><span data-ttu-id="ef8c4-102">Komentarze dokumentacji XML (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="ef8c4-102">XML Documentation Comments (C# Programming Guide)</span></span>
+<span data-ttu-id="ef8c4-103">W języku Visual C# można tworzyć dokumentację kodu, umieszczając elementy XML w specjalnych polach komentarzy (wskazywanych przez potrójne ukośniki) w kodzie źródłowym bezpośrednio przed blokiem kodu, do którego odwołują się komentarze, na przykład:</span><span class="sxs-lookup"><span data-stu-id="ef8c4-103">In Visual C# you can create documentation for your code by including XML elements in special comment fields (indicated by triple slashes) in the source code directly before the code block to which the comments refer, for example:</span></span>  
   
 ```  
 /// <summary>  
@@ -28,31 +28,31 @@ ms.locfileid: "44138191"
 public class MyClass {}  
 ```  
   
- <span data-ttu-id="e5e10-104">Podczas kompilacji z [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) opcja, kompilator będzie wyszukiwał wszystkie tagi XML w źródle programowanie i tworzenie pliku dokumentacji XML.</span><span class="sxs-lookup"><span data-stu-id="e5e10-104">When you compile with the [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) option, the compiler will search for all XML tags in the source code and create an XML documentation file.</span></span> <span data-ttu-id="e5e10-105">Aby utworzyć dokumentację na podstawie pliku generowanych przez kompilator, możesz utworzyć niestandardowego narzędzia lub użyj narzędzia takiego jak [Sandcastle](https://github.com/EWSoftware/SHFB).</span><span class="sxs-lookup"><span data-stu-id="e5e10-105">To create the final documentation based on the compiler-generated file, you can create a custom tool or use a tool such as [Sandcastle](https://github.com/EWSoftware/SHFB).</span></span>  
+ <span data-ttu-id="ef8c4-104">Podczas kompilacji z [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) opcja, kompilator będzie wyszukiwał wszystkie tagi XML w źródle programowanie i tworzenie pliku dokumentacji XML.</span><span class="sxs-lookup"><span data-stu-id="ef8c4-104">When you compile with the [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) option, the compiler will search for all XML tags in the source code and create an XML documentation file.</span></span> <span data-ttu-id="ef8c4-105">Aby utworzyć dokumentację na podstawie pliku generowanych przez kompilator, możesz utworzyć niestandardowego narzędzia lub użyj narzędzia takiego jak [Sandcastle](https://github.com/EWSoftware/SHFB).</span><span class="sxs-lookup"><span data-stu-id="ef8c4-105">To create the final documentation based on the compiler-generated file, you can create a custom tool or use a tool such as [Sandcastle](https://github.com/EWSoftware/SHFB).</span></span>  
   
- <span data-ttu-id="e5e10-106">Aby odwołać się do elementów XML (na przykład Twoja funkcja przetwarza określone elementy XML, które użytkownik chce opisać w komentarzu dokumentacji XML), można użyć standardowego mechanizmu cytowania (`<` i `>`).</span><span class="sxs-lookup"><span data-stu-id="e5e10-106">To refer to XML elements (for example, your function processes specific XML elements that you want to describe in an XML documentation comment), you can use the standard quoting mechanism (`<` and `>`).</span></span>  <span data-ttu-id="e5e10-107">Aby odwołać się do identyfikatorów ogólnych w odwołaniu do kodu (`cref`) elementy, można użyć znaków ucieczki (na przykład `cref="List&lt;T&gt;"`) lub nawiasów klamrowych (`cref="List{T}"`).</span><span class="sxs-lookup"><span data-stu-id="e5e10-107">To refer to generic identifiers in code reference (`cref`) elements, you can use either the escape characters (for example, `cref="List&lt;T&gt;"`) or braces (`cref="List{T}"`).</span></span>  <span data-ttu-id="e5e10-108">Jest to szczególny przypadek, w którym kompilator analizuje nawiasy klamrowe jako nawiasy kątowe, dzięki czemu komentarz dokumentacji jest wygodniejszy dla autora, gdy ten odwołuje się do identyfikatorów ogólnych.</span><span class="sxs-lookup"><span data-stu-id="e5e10-108">As a special case, the compiler parses the braces as angle brackets to make the documentation comment less cumbersome to author when referring to generic identifiers.</span></span>  
+ <span data-ttu-id="ef8c4-106">Aby odwołać się do elementów XML (na przykład Twoja funkcja przetwarza określone elementy XML, które użytkownik chce opisać w komentarzu dokumentacji XML), można użyć standardowego mechanizmu cytowania (`<` i `>`).</span><span class="sxs-lookup"><span data-stu-id="ef8c4-106">To refer to XML elements (for example, your function processes specific XML elements that you want to describe in an XML documentation comment), you can use the standard quoting mechanism (`<` and `>`).</span></span>  <span data-ttu-id="ef8c4-107">Aby odwołać się do identyfikatorów ogólnych w odwołaniu do kodu (`cref`) elementy, można użyć znaków ucieczki (na przykład `cref="List&lt;T&gt;"`) lub nawiasów klamrowych (`cref="List{T}"`).</span><span class="sxs-lookup"><span data-stu-id="ef8c4-107">To refer to generic identifiers in code reference (`cref`) elements, you can use either the escape characters (for example, `cref="List&lt;T&gt;"`) or braces (`cref="List{T}"`).</span></span>  <span data-ttu-id="ef8c4-108">Jest to szczególny przypadek, w którym kompilator analizuje nawiasy klamrowe jako nawiasy kątowe, dzięki czemu komentarz dokumentacji jest wygodniejszy dla autora, gdy ten odwołuje się do identyfikatorów ogólnych.</span><span class="sxs-lookup"><span data-stu-id="ef8c4-108">As a special case, the compiler parses the braces as angle brackets to make the documentation comment less cumbersome to author when referring to generic identifiers.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e5e10-109">Komentarze dokumentacji XML nie są metadanymi; nie są one uwzględniane w kompilowanym zestawie i dlatego są niedostępne za pośrednictwem mechanizmu odbicia.</span><span class="sxs-lookup"><span data-stu-id="e5e10-109">The XML documentation comments are not metadata; they are not included in the compiled assembly and therefore they are not accessible through reflection.</span></span>  
+>  <span data-ttu-id="ef8c4-109">Komentarze dokumentacji XML nie są metadanymi; nie są one uwzględniane w kompilowanym zestawie i dlatego są niedostępne za pośrednictwem mechanizmu odbicia.</span><span class="sxs-lookup"><span data-stu-id="ef8c4-109">The XML documentation comments are not metadata; they are not included in the compiled assembly and therefore they are not accessible through reflection.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e5e10-110">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="e5e10-110">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ef8c4-110">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="ef8c4-110">In This Section</span></span>  
   
--   [<span data-ttu-id="e5e10-111">Zalecane tagi przeznaczone do komentarzy dokumentacji</span><span class="sxs-lookup"><span data-stu-id="e5e10-111">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
+-   [<span data-ttu-id="ef8c4-111">Zalecane tagi przeznaczone do komentarzy dokumentacji</span><span class="sxs-lookup"><span data-stu-id="ef8c4-111">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
   
--   [<span data-ttu-id="e5e10-112">Przetwarzanie pliku XML</span><span class="sxs-lookup"><span data-stu-id="e5e10-112">Processing the XML File</span></span>](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
+-   [<span data-ttu-id="ef8c4-112">Przetwarzanie pliku XML</span><span class="sxs-lookup"><span data-stu-id="ef8c4-112">Processing the XML File</span></span>](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
   
--   [<span data-ttu-id="e5e10-113">Ograniczniki tagów dokumentacji</span><span class="sxs-lookup"><span data-stu-id="e5e10-113">Delimiters for Documentation Tags</span></span>](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
+-   [<span data-ttu-id="ef8c4-113">Ograniczniki tagów dokumentacji</span><span class="sxs-lookup"><span data-stu-id="ef8c4-113">Delimiters for Documentation Tags</span></span>](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
   
--   [<span data-ttu-id="e5e10-114">Instrukcje: użycie funkcji dokumentacji XML</span><span class="sxs-lookup"><span data-stu-id="e5e10-114">How to: Use the XML Documentation Features</span></span>](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
+-   [<span data-ttu-id="ef8c4-114">Instrukcje: użycie funkcji dokumentacji XML</span><span class="sxs-lookup"><span data-stu-id="ef8c4-114">How to: Use the XML Documentation Features</span></span>](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="e5e10-115">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="e5e10-115">Related Sections</span></span>  
- <span data-ttu-id="e5e10-116">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="e5e10-116">For more information, see:</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="ef8c4-115">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="ef8c4-115">Related Sections</span></span>  
+ <span data-ttu-id="ef8c4-116">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ef8c4-116">For more information, see:</span></span>  
   
--   [<span data-ttu-id="e5e10-117">/ doc (Przetwarzaj komentarze dokumentacji)</span><span class="sxs-lookup"><span data-stu-id="e5e10-117">/doc (Process Documentation Comments)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+-   [<span data-ttu-id="ef8c4-117">/ doc (Przetwarzaj komentarze dokumentacji)</span><span class="sxs-lookup"><span data-stu-id="ef8c4-117">/doc (Process Documentation Comments)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
   
-## <a name="c-language-specification"></a><span data-ttu-id="e5e10-118">Specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="e5e10-118">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="ef8c4-118">Specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="ef8c4-118">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e5e10-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e5e10-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef8c4-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ef8c4-119">See Also</span></span>
 
-- [<span data-ttu-id="e5e10-120">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="e5e10-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="ef8c4-120">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="ef8c4-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)

@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
 ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43806127"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180231"
 ---
 # <a name="double-data-type-visual-basic"></a>Double — Typ danych (Visual Basic)
 Przechowuje podpisany IEEE 64-bitowych (8-bajtową) podwójnej precyzji liczb zmiennoprzecinkowych, z zakresu wartości od - 1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych i 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 do wartości dodatnich. Liczby o podwójnej precyzji przechowywać przybliżeniem liczbą rzeczywistą.  

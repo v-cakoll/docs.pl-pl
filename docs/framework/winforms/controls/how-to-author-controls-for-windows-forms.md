@@ -7,11 +7,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 ms.openlocfilehash: 844e38fc62fc9fb04a723c1a4a8ad834e957c8ce
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44132697"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178315"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Porady: formanty autoryzacji dla formularzy systemu Windows
 Formant reprezentuje graficzny link między użytkownikiem i program. Kontrolki można podać i przetwarzania danych, akceptują dane wejściowe użytkownika, odpowiadanie na zdarzenia lub wykonywać dowolna liczba innych funkcji, które łączą się z użytkownikiem a aplikacją. Ponieważ formant jest zasadniczo składnika za pomocą interfejsu graficznego, może być każda funkcja, która jest składnikiem, również zapewnić interakcji z użytkownikiem. Formanty są tworzone do obsługi określonych celów i tworzenie formantów jest po prostu kolejne zadania programowania. Mając to na uwadze następujące kroki przedstawiają Przegląd kontroli procesu tworzenia. Linki udostępniają dodatkowe informacje na temat poszczególnych kroków.  

@@ -10,11 +10,11 @@ ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b26ebfa327d849f75b1ac5295b66600aeb377e1e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883228"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179406"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Uwzględnianie lub Importowanie schematów XML
 Schemat XML może zawierać `<xs:import />`, `<xs:include />`, i `<xs:redefine />` elementów. Te elementy schematu odnoszą się do innych schematów XML, które mogą służyć jako uzupełnienie strukturę schematu, który zawiera lub importuje je. <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> i <xref:System.Xml.Schema.XmlSchemaRedefine> klas, mapy do tych elementów w schemacie obiektu Model (model SOM) interfejsu API.  

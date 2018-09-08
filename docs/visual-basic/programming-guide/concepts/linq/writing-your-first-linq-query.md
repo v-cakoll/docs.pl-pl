@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798901"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184314"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Pisanie pierwszego zapytania LINQ (Visual Basic)
 A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są wyrażone w język kwerendy dedykowanych. Wraz z upływem czasu różnych języków zostały opracowane dla różnych typów źródeł danych, na przykład SQL dla relacyjnych baz danych i XQuery dla XML. Dzięki temu niezbędne dla deweloperów aplikacji dowiedzieć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, która jest obsługiwana.  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Aby uzyskać więcej informacji na temat sposobu tworzenia określonych typów źródeł danych, zobacz dokumentację dla różnych [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawców. (Aby uzyskać listę tych dostawców, zobacz [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) Podstawowa zasada jest proste: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródło danych jest dowolny obiekt obsługujący ogólny <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub interfejs, który dziedziczy z niego.  
+ Aby uzyskać więcej informacji na temat sposobu tworzenia określonych typów źródeł danych, zobacz dokumentację dla różnych [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawców. (Aby uzyskać listę tych dostawców, zobacz [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) Podstawowa zasada jest proste: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródło danych jest dowolny obiekt obsługujący ogólny <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub interfejs, który dziedziczy z niego.  
   
 > [!NOTE]
 >  Typy takie jak <xref:System.Collections.ArrayList> który obsługuje niepodstawowy <xref:System.Collections.IEnumerable> interfejs może również służyć jako [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródeł danych. Aby uzyskać przykład, który używa <xref:System.Collections.ArrayList>, zobacz [porady: zapytanie w ArrayList za pomocą LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
@@ -118,10 +118,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Kwerenda do wykonania przy użyciu także może powodować `IEnumerable` metody takie jak <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> metody.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do LINQ w Visual Basic](getting-started-with-linq.md)  
- [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Omówienie operatorów standardowej kwerendy (Visual Basic)](standard-query-operators-overview.md)  
- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wprowadzenie do LINQ w Visual Basic](getting-started-with-linq.md)  
+- [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+- [Omówienie operatorów standardowej kwerendy (Visual Basic)](standard-query-operators-overview.md)  
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)

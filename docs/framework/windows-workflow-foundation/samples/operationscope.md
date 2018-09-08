@@ -3,11 +3,11 @@ title: OperationScope
 ms.date: 03/30/2017
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
 ms.openlocfilehash: 562fd9c8ff964cb997012d49600bce73d4441465
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075634"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177117"
 ---
 # <a name="operationscope"></a>OperationScope
 W tym przykładzie przedstawiono sposób, w jaki wiadomości działania, <xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.SendReply> może służyć do udostępnienia istniejących niestandardowe działanie jako operacji w usłudze przepływu pracy. W tym przykładzie zawiera nowe niestandardowe działanie o nazwie `OperationScope`. Jest ona przeznaczona do jej obsługi ułatwiają realizację Tworzenie usługi przepływu pracy, pozwalając użytkownikom na tworzenie treści swojej działalności oddzielnie jako działania niestandardowe, a następnie łatwe udostępnianie ich jako operacje usługi przy użyciu `OperationScope` działania. Na przykład niestandardowy `Add` działań, która przyjmuje dwa `in` argumenty i zwraca jedną `out` argument może być udostępniany jako `Add` działanie usługi przepływu pracy przeciągając go do `OperationScope`.  

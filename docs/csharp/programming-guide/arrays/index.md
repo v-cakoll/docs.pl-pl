@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: a34d13c0d5d0939bbb024ae958568e80dd74b26f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e0ed2d678363a29bb870a496846fc6f054769a4b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128446"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181605"
 ---
 # <a name="arrays-c-programming-guide"></a>Tablice (Przewodnik programowania w języku C#)
 
@@ -47,8 +47,6 @@ W strukturze danych tablicy można przechowywać wiele zmiennych tego samego typ
 -   [Używanie instrukcji foreach z tablicami](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
   
 -   [Przekazywanie tablic jako argumentów](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
-  
--   [Przekazywanie tablic za pomocą ref i out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#
 

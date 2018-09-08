@@ -1,71 +1,71 @@
 ---
 title: Opcje (F#)
-description: 'Dowiedz się, jak użyć opcji F #, typów, gdy bieżąca wartość nie może istnieć nazwanej wartości lub zmiennej.'
+description: 'Dowiedz się, jak użyć opcji F #, typów, gdy rzeczywista wartość nie może istnieć dla nazwanej wartości lub zmiennej.'
 ms.date: 05/16/2016
-ms.openlocfilehash: c813c377af1db758a40efa2bd73de22cbb4c66f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566262"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187825"
 ---
 # <a name="options"></a>Opcje
 
-Typ opcji w języku F # jest używany, gdy bieżąca wartość może nie istnieć do nazwanej wartości lub zmiennej. Opcja ma typu podstawowego i może zawierać wartości tego typu lub nie może mieć wartości.
+Typ opcji w F # jest używany, gdy rzeczywista wartość może nie istnieć dla nazwanej wartości lub zmiennej. Opcja ma podstawowy typ i może zawierać wartość tego typu lub nie może mieć wartość.
 
 ## <a name="remarks"></a>Uwagi
-Poniższy kod przedstawia funkcję, która generuje typ opcji.
+
+Poniższy kod ilustruje funkcja, która generuje typ opcji.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1404.fs)]
 
 Jak widać, jeśli dane wejściowe `a` jest większa niż 0, `Some(a)` jest generowany.  W przeciwnym razie `None` jest generowany.
 
-Wartość `None` jest używany, gdy opcja nie jest wartością rzeczywistą. W przeciwnym razie wyrażenie `Some( ... )` daje wartość opcji. Wartości `Some` i `None` przydatne w przypadku dopasowania wzorca, tak jak następująca funkcja `exists`, która zwraca `true` Jeśli opcja ma wartość i `false` jeśli jej nie ma.
+Wartość `None` jest używany, gdy opcja ma wartość rzeczywistą. W przeciwnym wypadku wyrażenie `Some( ... )` udostępnia opcję wartości. Wartości `Some` i `None` jest przydatny w dopasowywania do wzorca, tak jak następującą funkcję `exists`, co powoduje zwrócenie `true` Jeśli opcja ma wartość i `false` Jeśli tak nie jest.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1401.fs)]
 
-## <a name="using-options"></a>Przy użyciu opcji
+## <a name="using-options"></a>Za pomocą opcji
+
 Opcje są często używane podczas wyszukiwania nie zwraca wynik dopasowania, jak pokazano w poniższym kodzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1403.fs)]
 
-W poprzednim kodzie listy jest rekursywnie przeszukiwane. Funkcja `tryFindMatch` przyjmuje funkcja predykatu `pred` która zwraca wartość logiczną, a listy do wyszukiwania. Jeśli zostanie znaleziony element, który spełnia predykatu, kończy się rekursji i funkcja zwraca wartość jako opcja w wyrażeniu `Some(head)`. Rekursja kończy się po dopasowaniu pustej listy. W tym momencie wartość `head` nie został znaleziony, a `None` jest zwracany.
+W poprzednim kodzie listy jest rekursywnie przeszukiwane. Funkcja `tryFindMatch` przyjmuje funkcji predykatu `pred` zwracającego wartość typu Boolean i listę wyszukiwania. Jeśli zostanie znaleziony element, który spełnia predykat, kończy się rekursji i funkcja zwraca wartość jako opcja w wyrażeniu `Some(head)`. Rekursji kończy się po dopasowaniu pustej listy. W tym momencie wartość `head` nie została znaleziona, i `None` jest zwracana.
 
-Wiele F # biblioteki funkcje, które wyszukiwania kolekcji dla wartości, który może lub nie istnieje powrotu `option` typu. Według konwencji takich funkcji rozpoczynają `try` prefiksu, na przykład [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
+Wiele F # funkcji biblioteki, które wyszukiwania kolekcji dla wartość, która może lub nie istnieje zwrócenia `option` typu. Zgodnie z Konwencją, te funkcje zaczynają się od `try` prefiksu, na przykład [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
 
-Opcje może też być przydatne, gdy wartość może nie istnieć, na przykład, jeśli jest to możliwe, że zostanie wygenerowany wyjątek podczas próby utworzenia wartość. Pokazano to w poniższym przykładzie kodu.
+Opcje również może być przydatne, gdy wartość może nie istnieć, na przykład, jeśli jest to możliwe, że wyjątek zostanie zgłoszony podczas próby utworzenia wartości. Pokazano to w poniższym przykładzie kodu.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1402.fs)]
 
-`openFile` Funkcja w poprzednim przykładzie ma typ `string -> File option` ponieważ zwraca ono `File` obiektu, jeśli plik zostanie pomyślnie otwarty i `None` przypadku wystąpienia wyjątku. W zależności od sytuacji nie można wybrać odpowiednie zaprojektowanie catch wyjątku, a nie zezwalając na propagację.
-
+`openFile` Funkcja w poprzednim przykładzie ma typ `string -> File option` ponieważ zwraca `File` obiektu, jeśli plik zostanie pomyślnie otwarty i `None` Jeśli wystąpi wyjątek. W zależności od sytuacji może nie być odpowiednie uzasadnienie wyboru tych elementów się zostać przechwycony wyjątek, a nie zezwolenie na jego propagację.
 
 ## <a name="option-properties-and-methods"></a>Opcja właściwości i metody
-Typ opcji obsługuje poniższe właściwości i metod.
 
-
+Typ opcji obsługuje poniższe właściwości i metody.
 
 |Właściwości lub metody|Typ|Opis|
 |------------------|----|-----------|
-|[Brak](https://msdn.microsoft.com/library/83ef260a-aa33-4e6f-aee6-b9bf0a461476)|`'T option`|Statycznej właściwości, która umożliwia tworzenie ma wartość opcji `None` wartość.|
-|[Isnone —](https://msdn.microsoft.com/library/f08532ca-1716-4f60-ae59-8ef6256df234)|`bool`|Zwraca `true` Jeśli opcja ma `None` wartość.|
-|[IsSome](https://msdn.microsoft.com/library/c5088d51-c5d7-425f-a77f-12c379bb356f)|`bool`|Zwraca `true` Jeśli opcja ma wartość, która nie jest `None`.|
-|[Niektóre](https://msdn.microsoft.com/library/12f048d2-e293-4596-accb-de036ecd63fc)|`'T option`|Statyczny element członkowski tworzącą opcja ma wartość, która nie jest `None`.|
-|[Wartość](https://msdn.microsoft.com/library/c79f68e8-11fd-45b1-a053-e8fc38b56df7)|`'T`|Zwraca wartości podstawowej lub zgłasza `System.NullReferenceException` , jeśli wartość jest `None`.|
+|[Brak](https://msdn.microsoft.com/library/83ef260a-aa33-4e6f-aee6-b9bf0a461476)|`'T option`|Właściwość statyczna, która pozwala na tworzenie wartość opcji, która ma `None` wartość.|
+|[Isnone —](https://msdn.microsoft.com/library/f08532ca-1716-4f60-ae59-8ef6256df234)|`bool`|Zwraca `true` Jeśli opcja `None` wartość.|
+|[Issome —](https://msdn.microsoft.com/library/c5088d51-c5d7-425f-a77f-12c379bb356f)|`bool`|Zwraca `true` Jeśli opcja ma wartość, która nie jest `None`.|
+|[Niektóre](https://msdn.microsoft.com/library/12f048d2-e293-4596-accb-de036ecd63fc)|`'T option`|Statyczny element członkowski, tworzącą opcja ma wartość, która nie jest `None`.|
+|[Wartość](https://msdn.microsoft.com/library/c79f68e8-11fd-45b1-a053-e8fc38b56df7)|`'T`|Zwraca podstawową wartość lub zgłasza `System.NullReferenceException` Jeśli wartość jest `None`.|
 
-## <a name="option-module"></a>Option — moduł
-Moduł jest [opcji](https://msdn.microsoft.com/library/e615e4d3-bbbb-49ba-addc-6061ea2e2f4c), który zawiera przydatne funkcje, które wykonują operacje na opcje. Niektóre funkcje Powtórz funkcji właściwości, ale są przydatne w kontekstach, gdy potrzebne jest funkcją. [Option.issome —](https://msdn.microsoft.com/library/41ad0857-5672-4326-84b5-c33dc43dcf79) i [Option.isnone —](https://msdn.microsoft.com/library/73db6a53-15e7-40a6-94f9-a0049e5f4819) są obie funkcje modułu, które sprawdzić, czy opcja zawiera wartość. [Option.Get —](https://msdn.microsoft.com/library/803e9fcb-6edd-4910-808c-25f08cbc55ea) uzyskuje wartość, jeśli istnieje. Jeśli nie ma żadnej wartości, zgłasza `System.ArgumentException`.
+## <a name="option-module"></a>Opcja modułu
 
-[Option.BIND —](https://msdn.microsoft.com/library/c3406192-24ac-49b5-bc3b-8f805187f1c0) funkcja wykonuje funkcję na wartość, jeśli istnieje wartość. Funkcja musi mieć dokładnie jeden argument, a jego typ parametru musi być typ opcji. Wartość zwracana funkcji jest innego typu opcji.
+Moduł jest [opcji](https://msdn.microsoft.com/library/e615e4d3-bbbb-49ba-addc-6061ea2e2f4c), który zawiera przydatnych funkcji, które wykonują operacje na temat opcji. Niektóre funkcje Powtórz funkcji właściwości, ale są przydatne w kontekstach, gdy potrzebne są funkcją. [Option.isSome](https://msdn.microsoft.com/library/41ad0857-5672-4326-84b5-c33dc43dcf79) i [Option.isNone](https://msdn.microsoft.com/library/73db6a53-15e7-40a6-94f9-a0049e5f4819) są obie funkcje modułu, które sprawdzić, czy opcja przechowuje wartość. [Option.Get](https://msdn.microsoft.com/library/803e9fcb-6edd-4910-808c-25f08cbc55ea) uzyskuje wartość, jeśli taka istnieje. Jeśli nie ma wartości, zgłasza `System.ArgumentException`.
 
-Moduł opcja obejmuje również funkcje, które odpowiadają funkcje, które są dostępne dla list, tablic, sekwencji i innych typów kolekcji. Te funkcje obejmują [ `Option.map` ](https://msdn.microsoft.com/library/91a20385-7e73-40c2-9adc-635e86d6a622), [ `Option.iter` ](https://msdn.microsoft.com/library/83389eef-3dff-4074-b4cc-f69581c25191), [ `Option.forall` ](https://msdn.microsoft.com/library/ba884586-5eae-49c5-9e36-05481c1c3428), [ `Option.exists` ](https://msdn.microsoft.com/library/a606d2d4-fddc-4eab-ab37-c6138fb7ad99), [ `Option.foldBack` ](https://msdn.microsoft.com/library/a882fbaf-c019-46f0-b4f5-b8c2b8b90ffb), [ `Option.fold` ](https://msdn.microsoft.com/library/af896794-3d53-406c-9411-316cd5c33ad8), i [ `Option.count` ](https://msdn.microsoft.com/library/2dac83a9-684e-4d0f-b50e-ff722a8bb876). Te funkcje włączenie opcji, aby można używać jak kolekcję elementów zero lub jeden. Aby uzyskać dodatkowe informacje i przykłady, należy zapoznać się z omówieniem funkcji kolekcji [wymieniono](lists.md).
+[Option.bind](https://msdn.microsoft.com/library/c3406192-24ac-49b5-bc3b-8f805187f1c0) funkcja wykonuje funkcję na wartości, jeśli ma wartość. Funkcja przyjmuje dokładnie jednego argumentu i jego typowi parametru musi być typ opcji. Wartość zwracana przez funkcję jest innego typu opcji.
 
+Moduł opcja obejmuje również funkcje, które odnoszą się do funkcji, które są dostępne dla list, tablic, sekwencji i inne typy kolekcji. Funkcje te obejmują [ `Option.map` ](https://msdn.microsoft.com/library/91a20385-7e73-40c2-9adc-635e86d6a622), [ `Option.iter` ](https://msdn.microsoft.com/library/83389eef-3dff-4074-b4cc-f69581c25191), [ `Option.forall` ](https://msdn.microsoft.com/library/ba884586-5eae-49c5-9e36-05481c1c3428), [ `Option.exists` ](https://msdn.microsoft.com/library/a606d2d4-fddc-4eab-ab37-c6138fb7ad99), [ `Option.foldBack` ](https://msdn.microsoft.com/library/a882fbaf-c019-46f0-b4f5-b8c2b8b90ffb), [ `Option.fold` ](https://msdn.microsoft.com/library/af896794-3d53-406c-9411-316cd5c33ad8), i [ `Option.count` ](https://msdn.microsoft.com/library/2dac83a9-684e-4d0f-b50e-ff722a8bb876). Te funkcje umożliwiają opcje do użycia takich jak kolekcja elementów zero lub jeden. Aby uzyskać więcej informacji i przykładów, zobacz Omówienie funkcji kolekcji w [Wyświetla](lists.md).
 
-## <a name="converting-to-other-types"></a>Konwertowanie na inne typy
-Opcje mogą być konwertowane do list i tablic. Gdy opcja jest konwertowany na jedną z tych struktur danych, struktura danych ma wartość zero lub jeden element. Aby przekonwertować opcji do tablicy, użyj [ `Option.toArray` ](https://msdn.microsoft.com/library/c8044873-ba17-4b52-8231-eb1a28318c64). Aby przekonwertować opcji do listy, użyj [ `Option.toList` ](https://msdn.microsoft.com/library/5f1af295-9fa9-40ad-b4a1-3578d94d44e1).
+## <a name="converting-to-other-types"></a>Konwersja na inne typy
 
+Opcje mogą być konwertowane do listy lub tablicami. Gdy opcja jest konwertowany do jednej z tych struktur danych, struktura danych ma wartość zero lub jeden element. Aby przekonwertować opcję do tablicy, użyj [ `Option.toArray` ](https://msdn.microsoft.com/library/c8044873-ba17-4b52-8231-eb1a28318c64). Aby przekonwertować listę opcji, należy użyć [ `Option.toList` ](https://msdn.microsoft.com/library/5f1af295-9fa9-40ad-b4a1-3578d94d44e1).
 
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
+## <a name="see-also"></a>Zobacz także
 
-[Typy F#](fsharp-types.md)
+- [Dokumentacja języka F#](index.md)
+- [Typy F#](fsharp-types.md)

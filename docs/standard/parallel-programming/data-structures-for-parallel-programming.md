@@ -8,11 +8,11 @@ ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079522"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180309"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Struktury danych dla Programowania równoległego
 .NET Framework w wersji 4 wprowadza kilka nowych typów, które są przydatne do programowania równoległego, w tym zestaw klas kolekcji współbieżnych, podstawowych uproszczone synchronizacji i typów d inicjowania z opóźnieniem. Można użyć tych typów, zawierające kod aplikacji wielowątkowych, w tym w bibliotece równoległych zadań i PLINQ.  

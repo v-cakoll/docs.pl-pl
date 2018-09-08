@@ -3,11 +3,11 @@ title: Łączenie ze źródłem danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: f5788b9b0b19f32d03c917575db7b3f40324c0a2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44031729"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189267"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Łączenie ze źródłem danych w ADO.NET
 W ADO.NET **połączenia** obiekt, aby połączyć się z określonym źródłem danych, podając niezbędne informacje dotyczące uwierzytelniania w parametrach połączenia. **Połączenia** obiektu użyjesz zależy od typu źródła danych.  

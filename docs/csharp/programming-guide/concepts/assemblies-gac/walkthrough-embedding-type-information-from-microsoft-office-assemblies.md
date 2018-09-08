@@ -3,11 +3,11 @@ title: 'Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w 
 ms.date: 07/20/2015
 ms.assetid: 3320e866-01f1-4b7f-8932-049a7b2d2a9b
 ms.openlocfilehash: 381173eedc209930e011dfa7f1711167f16d5ef6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890717"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187971"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (C#)
 Jeśli informacje o typie jest osadzony w aplikacji, która odwołuje się do obiektów COM, można wyeliminować potrzebę zestawu podstawowej usługi międzyoperacyjnej (PIA). Ponadto informacje o typie osadzony umożliwia osiągnąć niezależność Twojej aplikacji. Oznacza to by używał typów z wielu wersji biblioteki COM bez konieczności określonego PIA dla każdej wersji można napisać program. Jest to typowy scenariusz w przypadku aplikacji korzystających z bibliotek Microsoft Office obiektów. Osadzanie informacji o typie umożliwia tym samym kompilację programu do pracy z różnymi wersjami pakietu Microsoft Office na różnych komputerach bez konieczności ponownego wdrażania programu lub PIA dla każdej wersji pakietu Microsoft Office.  

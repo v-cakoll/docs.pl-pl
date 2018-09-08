@@ -3,11 +3,11 @@ title: Przykład elementu powiązania odnajdywania
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
 ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877602"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177539"
 ---
 # <a name="discovery-binding-element-sample"></a>Przykład elementu powiązania odnajdywania
 W tym przykładzie pokazano, jak użyć elementu powiązania odnajdywania klienta do odnajdywania usługi. Ta funkcja umożliwia deweloperom Dodawanie kanału klienta odnajdywania do swojego istniejącego stosu kanału klienta, co bardzo intuicyjnego modelu programowania. Po otwarciu kanału skojarzony adres usługi zostanie rozwiązany, przy użyciu odnajdywania. W tym przykładzie składa się z następujących projektów:  

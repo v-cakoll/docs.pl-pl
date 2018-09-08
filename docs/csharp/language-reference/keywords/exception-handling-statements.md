@@ -5,11 +5,11 @@ helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
 ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44071599"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185103"
 ---
 # <a name="exception-handling-statements-c-reference"></a>Instrukcje obsługi wyjątków (odwołanie w C#)
 C# udostępnia wbudowaną obsługę obsługi nietypowych sytuacjach, znane jako wyjątki, które mogą wystąpić podczas wykonywania programu. Te wyjątki są obsługiwane przez kod, który znajduje się poza normalny przepływ sterowania.  

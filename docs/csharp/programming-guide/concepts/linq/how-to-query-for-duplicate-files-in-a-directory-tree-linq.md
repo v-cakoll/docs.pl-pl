@@ -3,11 +3,11 @@ title: 'Porady: zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
 ms.openlocfilehash: 09ce574c68cbf11c0ee50df663692fd207038758
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135630"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189238"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Porady: zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (C#)
 Czasami pliki, które mają taką samą nazwę mogą znajdować się w więcej niż jeden folder. Na przykład kilka folderów w folderze instalacyjnym programu Visual Studio mają pliku readme.htm. W tym przykładzie pokazano, jak utworzyć zapytanie dotyczące takich zduplikowane nazwy plików w folderze określonym katalogu głównym. Drugi przykład przedstawia sposób wysyłania kwerend do plików, których rozmiar i czas tworzenia również zgodna.  

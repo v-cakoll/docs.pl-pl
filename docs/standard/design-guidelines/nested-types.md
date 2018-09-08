@@ -13,11 +13,11 @@ ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2593b85dd4747a3fbe365994c3e5d9beae3e3406
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891543"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188152"
 ---
 # <a name="nested-types"></a>Zagnieżdżone typy
 Typ zagnieżdżony jest typ zdefiniowany w zakresie innego typu, która jest wywoływana typ otaczający. Zagnieżdżony typ ma dostęp do wszystkich elementów członkowskich w jego typie otaczającym. Na przykład ma dostęp do prywatnych pól zdefiniowanych w typie otaczającym i chronione pól zdefiniowanych w wszystkich nadrzędnych typu otaczającego.  

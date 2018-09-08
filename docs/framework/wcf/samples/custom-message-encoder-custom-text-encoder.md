@@ -3,11 +3,11 @@ title: 'Niestandardowy koder komunikatów: Niestandardowy koder tekstu'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
 ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131597"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192687"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Niestandardowy koder komunikatów: Niestandardowy koder tekstu
 Ten przykład demonstruje sposób implementacji tekst niestandardowy koder komunikatów, za pomocą usługi Windows Communication Foundation (WCF).  

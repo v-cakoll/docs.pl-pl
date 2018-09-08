@@ -3,11 +3,11 @@ title: Przykład technologii serializacji podstawowej
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: 474eb8ded01a72182533a6d49397d7567447d64e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039517"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195234"
 ---
 # <a name="basic-serialization-technology-sample"></a>Przykład technologii serializacji podstawowej
 [Pobierz przykładowe](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  

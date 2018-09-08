@@ -3,11 +3,11 @@ title: Pełna składnia (F#)
 description: 'Różnice między pełnego i uproszczonego składni języka F # języka programowania.'
 ms.date: 05/16/2016
 ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063121"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193163"
 ---
 # <a name="verbose-syntax"></a>Pełna składnia
 

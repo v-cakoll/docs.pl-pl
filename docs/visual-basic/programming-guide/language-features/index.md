@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879607"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185366"
 ---
 # <a name="visual-basic-language-features"></a>Funkcje języka Visual Basic
 Poniższe tematy prezentują i omówiono podstawowe składniki Visual Basic, obiektowy język programowania. Po utworzeniu interfejsu użytkownika dla aplikacji za pomocą formularzy i kontrolek, należy napisać kod, który definiuje zachowanie aplikacji. Podobnie jak w przypadku nowoczesnego języka programowania, Visual Basic obsługuje szereg typowych narzędzi programistycznych i elementy języka.  
@@ -77,8 +77,9 @@ Poniższe tematy prezentują i omówiono podstawowe składniki Visual Basic, obi
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Zawiera łącza do tematów opisujących, jak korzystać z języka XML w Visual Basic.  
   
-## <a name="related-sections"></a>Sekcje pokrewne  
- [Kolekcje](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+## <a name="related-sections"></a>Sekcje pokrewne
+
+ [Kolekcje](../../../visual-basic/programming-guide/concepts/collections.md)  
  Opisano niektóre typy kolekcji, które są dostarczane przez program .NET Framework. Pokazuje sposób użycia prostych kolekcji i kolekcje par klucz/wartość.  
   
  [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)  

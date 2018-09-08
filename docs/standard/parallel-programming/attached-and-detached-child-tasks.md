@@ -11,11 +11,11 @@ ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879184"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188270"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Dołączone i odłączone zadania podrzędne
 A *zadanie podrzędne* (lub *zadanie zagnieżdżone*) jest <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> wystąpienia, który jest tworzony w delegowanym użytkowniku innego zadania, który jest znany jako *zadanie nadrzędne*. Zadanie podrzędne może odłączone lub dołączone. A *odłączone zadanie podrzędne* jest zadaniem wykonywanym niezależnie od jego obiektu nadrzędnego. *Dołączone zadanie podrzędne* to zagnieżdżone zadanie, które są tworzone za pomocą <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcji, których elementem nadrzędnym nie jawnie lub domyślnie zabronić jako załączniki. Zadanie może utworzyć dowolną liczbę podrzędnych dołączonych i odłączonych zadań podrzędnych, ograniczony tylko ilością zasobów systemowych.  

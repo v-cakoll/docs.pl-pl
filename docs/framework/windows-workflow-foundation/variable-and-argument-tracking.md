@@ -3,11 +3,11 @@ title: Zmienna śledzenie argumentów i
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064306"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187666"
 ---
 # <a name="variable-and-argument-tracking"></a>Zmienna śledzenie argumentów i
 Podczas śledzenia wykonywania przepływu pracy, jest często przydatne w celu wyodrębnienia danych. Umożliwia to dodatkowy kontekst podczas uzyskiwania dostępu do śledzenia rekordów post wykonywania. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], można wyodrębnić wszystkie widoczne zmiennej lub argumentu w zakresie wszelkie działania w przepływie pracy przy użyciu śledzenia. Profile śledzenia ułatwiają do wyodrębniania danych.  

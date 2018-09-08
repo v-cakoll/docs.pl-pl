@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
 ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130935"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189446"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atrybuty w formantach formularzy systemu Windows
 .NET Framework oferuje różne atrybuty, które można zastosować do elementów członkowskich niestandardowych kontrolek i składników. Niektóre z tych atrybutów wpływać na zachowania w czasie wykonywania klasy i inne osoby mają wpływ na zachowanie czasu projektowania.  

@@ -3,11 +3,11 @@ title: 'Punkt końcowy: Przekazane transakcje na sekundę'
 ms.date: 03/30/2017
 ms.assetid: 0f370ff1-a913-450b-bccb-c279ad165b3d
 ms.openlocfilehash: 79f50b6706facd040ec2d325c676f210d5327bf8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064962"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44175020"
 ---
 # <a name="endpoint-transactions-flowed-per-second"></a>Punkt końcowy: Przekazane transakcje na sekundę
 Nazwa licznika: Przekazane transakcje na sekundę.  

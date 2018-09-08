@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036197"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180465"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal — Typ danych (Visual Basic)
 Przechowuje podpisany 128-bitowego (16-bajtową) wartości reprezentujących numery 96-bitową liczbę całkowitą z (12-bajtową) skalowania przez zmienną potęgą liczby 10. Czynnik skalowania określa liczbę cyfr z prawej strony punktu dziesiętnego; waha się od 0 do 28. O skali 0 (bez miejsc dziesiętnych) największa możliwa wartość to +/-79,228,162,514,264,337,593,543,950,335 (+/-7 .9228162514264337593543950335E + 28). 28 miejsc dziesiętnych największa wartość jest +/-7.9228162514264337593543950335 i najmniejszą wartość różną od zera jest +/-0,0000000000000000000000000001 (+/-1E-28).  

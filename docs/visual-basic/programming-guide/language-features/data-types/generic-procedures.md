@@ -12,59 +12,57 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 686087e4520ea5e6e69e5906c628af3ad54749da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649399"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195023"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedury ogólne w Visual Basic
-A *ogólnego procedury*, nazywany również *Metoda ogólna*, jest to procedura zdefiniowane z co najmniej jeden typ parametru. Dzięki temu kod wywołujący dostosować typy danych do jej wymagania dotyczące zawsze wywołuje procedurę.  
+A *ogólna procedura*, nazywane również *metody ogólnej*, jest to procedura zdefiniowany co najmniej jednego parametru typu. Dzięki temu kod wywołujący, aby dostosować typy danych do ich wymagania dotyczące zawsze wywołuje procedurę.  
   
- Procedura nie jest rodzajowa po prostu z definiowany wewnątrz klasy ogólnej lub to struktura generyczna. Aby wartość była ogólna, procedurę należy wykonać co najmniej jeden parametr typu, oprócz parametry normalnej, może to potrwać. Ogólny klasy lub struktury może zawierać procedury nierodzajowe i nierodzajowe klasy, struktury, lub moduł może zawierać procedury ogólne.  
+ Procedura nie jest ogólna po prostu wynoszącą definiowanego wewnątrz Ogólna klasa lub Struktura ogólna. Aby być ogólna, procedurę należy wykonać co najmniej jeden parametr typu, oprócz normalnych parametrów, może to potrwać. Ogólna klasa lub struktura może zawierać procedury nierodzajowymi i nierodzajowymi klasy, struktury lub modułu może zawierać procedury ogólne.  
   
- Procedury ogólne można użyć swoich parametrów typu liście jego normalnej parametru, jego typ zwracany, jeśli ma ona jedną i w jego procedury kodu.  
+ Procedury ogólne użyć jego parametrów typu w jego listę parametrów normalne, jego typem zwracanym, jeśli ma on jeden, a w jego procedury kodu.  
   
 ## <a name="type-inference"></a>Wnioskowanie o typie  
- Procedury ogólne można wywołać bez podawania żadnych argumentów typu na wszystkich. Jeśli należy wywołać go w ten sposób, kompilator spróbuje określić typy odpowiednie dane do przekazania do procedury argumentów typu. Ta metoda jest wywoływana *wnioskowanie typu*. Poniższy kod przedstawia wywołanie w którym kompilator ustala, że należy przekazać typ `String` do parametru typu `t`.  
+ Ogólna procedura można wywołać bez podawania żadnych argumentów typu w ogóle. Jeśli wywołasz ją w ten sposób, kompilator spróbuje określić typy odpowiednie dane do przekazania do procedury argumentów typu. Jest to nazywane *wnioskowanie o typie*. Poniższy kod ilustruje sposób wywoływania, w którym kompilator ustala, powinna przekazać typ `String` na parametr typu `t`.  
   
  [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
   
- Jeśli kompilator nie można wywnioskować argumentów typu z kontekstu wywołania, zgłasza błąd. Jedną z możliwych przyczyn takiego błędu jest niezgodność rangi tablicy. Załóżmy na przykład zdefiniować normalne parametr jako tablica parametru typu. Wywołanie procedury ogólne na tablicę rangi różnych (liczba wymiarów), udostępnia niezgodność powoduje, że wnioskowanie o typie się niepowodzeniem. Poniższy kod przedstawia wywołanie, w którym jest tablicą dwuwymiarową jest przekazany do procedury, która oczekuje tablicą jednowymiarową.  
+ Jeśli kompilator nie można wywnioskować argumentów typu z kontekstu wywołania, zgłasza błąd. Jedną z możliwych przyczyn takiego komunikatu o błędzie jest niezgodność rangi tablicy. Na przykład załóżmy, że zdefiniujesz normalne parametr jako tablicę z parametrem typu. Jeśli wywołanie procedury ogólne dostarczanie tablicy o innej randze (liczba wymiarów), niezgodność powoduje, że wnioskowanie o typie nie powiedzie się. Poniższy kod ilustruje sposób wywoływania, w którym tablicy dwuwymiarowej jest przekazywany do procedury, która oczekuje Jednowymiarowa tablica.  
   
- `Public Sub demoSub(Of t)(ByVal arg() As t)`  
+```vb  
+Public Sub demoSub(Of t)(ByVal arg() As t)
+End Sub
+
+Public Sub callDemoSub()
+    Dim twoDimensions(,) As Integer
+    demoSub(twoDimensions)
+End Sub
+```
   
- `End Sub`  
+ Wnioskowanie o typie można wywoływać, pomijając wszystkich argumentów typu. Jeśli podasz jeden argument typu, należy podać je wszystkie.  
   
- `Public Sub callDemoSub()`  
-  
- `Dim twoDimensions(,) As Integer`  
-  
- `demoSub(twoDimensions)`  
-  
- `End Sub`  
-  
- Wnioskowanie o typie można wywołać tylko przez pominięcie wszystkich argumentów typu. Jeśli podasz jeden argument typu, należy podać je wszystkie.  
-  
- Wnioskowanie o typie jest obsługiwana tylko dla ogólnych procedurach. Nie można wywołać wnioskowanie o typie na ogólne klasy, struktury, interfejsy lub delegatów.  
+ Wnioskowanie o typie jest obsługiwana tylko w przypadku ogólnych procedurach. Nie można wywołać wnioskowanie o typie na klasy ogólne, struktur, interfejsów i delegatów.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie zdefiniowano ogólnego `Function` procedurę, aby znaleźć określony element w tablicy. Definiuje jeden parametr typu, a używa go do utworzenia dwóch parametrów na liście parametrów.  
+ W poniższym przykładzie zdefiniowano ogólnego `Function` procedurze, aby znaleźć określony element w tablicy. On definiuje jeden parametr typu i używa ich do utworzenia dwóch parametrów na liście parametrów.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
   
 ### <a name="comments"></a>Komentarze  
- Powyższy przykład wymaga możliwości porównania `searchValue` względem każdego elementu `searchArray`. Aby zagwarantować tę możliwość, jego ogranicza parametr typu `T` do zaimplementowania <xref:System.IComparable%601> interfejsu. W kodzie użyto <xref:System.IComparable%601.CompareTo%2A> zamiast metody `=` operatora, ponieważ nie ma gwarancji, że podany argument typu dla `T` obsługuje `=` operatora.  
+ Poprzedni przykład wymaga możliwości porównywania `searchValue` względem każdego elementu `searchArray`. Aby zagwarantować tę możliwość, jego ogranicza parametr typu `T` do zaimplementowania <xref:System.IComparable%601> interfejsu. Kod używa <xref:System.IComparable%601.CompareTo%2A> zamiast metody `=` operatora, ponieważ nie ma żadnej gwarancji, że argument typu dostarczane na potrzeby `T` obsługuje `=` operatora.  
   
  Możesz przetestować `findElement` procedury z następującym kodem.  
   
  [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
   
- Poprzedni wywołań `MsgBox` wyświetlić odpowiednio "0", "1" i "-1".  
+ Poprzedniego wywołania `MsgBox` odpowiednio wyświetlane "0", "1" i "-1".  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  

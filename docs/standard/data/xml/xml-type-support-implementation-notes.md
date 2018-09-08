@@ -6,11 +6,11 @@ ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 51066ab6fb0fa4749befdd0f94790fa45a7ab5cf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44047031"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191069"
 ---
 # <a name="xml-type-support-implementation-notes"></a>Uwagi dotyczące implementacji pomocy technicznej od typu w XML
 W tym temacie opisano niektóre szczegóły implementacji, które ma pod uwagę.  

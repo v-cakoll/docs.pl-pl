@@ -3,11 +3,11 @@ title: x:Member — dyrektywa
 ms.date: 03/30/2017
 ms.assetid: 4d8394ef-644c-4331-b6c5-be855d392980
 ms.openlocfilehash: dfc08d79bd8206269807d88d2c659f13be487276
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064702"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177714"
 ---
 # <a name="xmember-directive"></a>x:Member — dyrektywa
 Deklaruje element członkowski XAML, w znacznikach.  

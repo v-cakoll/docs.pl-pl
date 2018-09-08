@@ -15,11 +15,11 @@ ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064793"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197371"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nazwy klas, struktur i interfejsów
 Wskazówkami nazewnictwa, które należy wykonać dotyczą nazewnictwa typ ogólny.  

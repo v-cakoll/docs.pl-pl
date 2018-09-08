@@ -3,11 +3,11 @@ title: Dostawcy danych programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
 ms.openlocfilehash: cd18e8b971af9103fdaecaebfe6f0c8e0ae9a0d3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038078"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192889"
 ---
 # <a name="entity-framework-data-providers"></a>Dostawcy danych programu Entity Framework
 Ta sekcja zawiera informacje dotyczące dostawców danych, które obsługują [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  

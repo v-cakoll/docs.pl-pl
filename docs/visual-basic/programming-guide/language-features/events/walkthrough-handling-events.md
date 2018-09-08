@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 3ade8eae67d29e2f3cb42911e42ed8696623db62
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507901"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192002"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Wskazówki: obsługa zdarzeń (Visual Basic)
 Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwszy temat [Instruktaż: deklaracyjny i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), pokazuje, jak deklarować i wywoływać zdarzenia. Ta sekcja używa formularza i klasy z tego przewodnika, aby pokazują, jak obsługiwać zdarzenia w przypadku mogą mieć miejsce.  
@@ -95,7 +95,7 @@ Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwsz
 3.  Kliknij przycisk **anulować** przycisk, aby zatrzymać zadanie. Należy zauważyć, że wygląd **anulować** natychmiast po kliknięciu przycisku nie powoduje zmiany. `Click` Zdarzeń nie może się zdarzyć, dopóki `My.Application.DoEvents` instrukcji umożliwia przetwarzanie zdarzeń.  
   
     > [!NOTE]
-    >  `My.Application.DoEvents` Metody nie przetwarza zdarzeń w taki sam sposób jak formularz. Na przykład, w tym przewodniku należy kliknij **anulować** podwójnie. Aby zezwolić na formularzu do obsługi zdarzeń bezpośrednio, możesz użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz [wątki](https://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+    >  `My.Application.DoEvents` Metody nie przetwarza zdarzeń w taki sam sposób jak formularz. Na przykład, w tym przewodniku należy kliknij **anulować** podwójnie. Aby zezwolić na formularzu do obsługi zdarzeń bezpośrednio, możesz użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz [wątki](../../../../visual-basic/programming-guide/concepts/threading/index.md).
   
  Może okazać się istotne, aby uruchomić program za pomocą F11 i przejść przez kod linię w danym momencie. Wyraźnie widać, jak wykonanie wprowadza `LongTask`i następnie krótko ponownie wprowadza `Form1` każdorazowo `PercentDone` zdarzenie jest wywoływane.  
   

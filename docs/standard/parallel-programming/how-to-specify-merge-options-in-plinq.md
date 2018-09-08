@@ -11,11 +11,11 @@ ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8914d3c443971f73e6f3fa366c26567bae60dbe1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135058"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189469"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a>Porady: określanie opcji scalania w PLINQ
 W tym przykładzie przedstawiono sposób Określanie opcji scalania, które będą stosowane do wszystkie kolejne operatory w zapytaniu PLINQ. Nie trzeba jawnie ustawić opcje scalania, ale może to poprawić wydajność. Aby uzyskać więcej informacji na temat opcji scalania, zobacz [opcji scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  

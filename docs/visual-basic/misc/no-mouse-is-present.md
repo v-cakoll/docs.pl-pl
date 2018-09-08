@@ -5,11 +5,11 @@ f1_keywords:
 - vbrMouse_NoMouseIsPresent
 ms.assetid: 4472fd57-4217-4463-9d3c-dc4a8fe88f1b
 ms.openlocfilehash: ee04ed880f8aa24bbd155c5658ad6de856e2c388
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870253"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189809"
 ---
 # <a name="no-mouse-is-present"></a>Nie ma myszy
 Jedna z właściwości obiektu `My.Computer.Mouse` obiektu zostało wywołane, ale komputer nie ma myszy lub port myszy zainstalowany.  

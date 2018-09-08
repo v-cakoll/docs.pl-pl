@@ -6,11 +6,11 @@ ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44136722"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188147"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Usuwanie atrybutów z węzła elementu w modelu DOM
 Istnieje wiele sposobów, aby usunąć atrybuty. Jedna z technik jest je usunąć z kolekcji atrybutów. Aby to zrobić, wykonywane są następujące czynności:  

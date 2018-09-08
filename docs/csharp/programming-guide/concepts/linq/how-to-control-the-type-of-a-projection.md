@@ -3,11 +3,11 @@ title: 'Porady: kontrolowanie typu projekcji (C#)'
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
 ms.openlocfilehash: 8296420a89753771b97c9ca7a489cb686d2df8b5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44035997"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177328"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Porady: kontrolowanie typu projekcji (C#)
 Projekcja polega na wykonanie jeden zestaw danych, jego filtrowania, zmiana jego kształtu i nawet zmianę jego typu. Wyrażenia zapytań większości przeprowadzić projekcji. Większość wyrażeń zapytania, przedstawione w tej sekcji zwrócić <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, można jednak sterować typ projekcji tworzyć kolekcje innych typów. W tym temacie pokazano, jak to zrobić.  

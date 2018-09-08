@@ -3,11 +3,11 @@ title: Walidacja relacji działań
 ms.date: 03/30/2017
 ms.assetid: 6f11a34e-ed67-4bce-88ce-7e96bbb4d052
 ms.openlocfilehash: 50f08118fb5ad4d9b8fe809e7ab3cc5d57f28149
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44098947"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193669"
 ---
 # <a name="activity-relationships-validation"></a>Walidacja relacji działań
 W tym przykładzie składa się z trzech działań `CreateCity`, `CreateState`, i `CreateCountry`. `CreateCity` musi znajdować się wewnątrz `CreateState` działania i `CreateState` musi znajdować się wewnątrz `CreateCountry` działania. Na potrzeby tego przykładu logikę weryfikacji jest w kodzie `CreateState` działania w XAML dla `CreateCity` działania. Oba ograniczenia mają takie samo zachowanie.  

@@ -3,11 +3,11 @@ title: Refaktoryzacja do czystych funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 ms.openlocfilehash: fcb396984d58b5601d278a860b272211e785dcfb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032796"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185561"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refaktoryzacja do czystych funkcji (C#)
 

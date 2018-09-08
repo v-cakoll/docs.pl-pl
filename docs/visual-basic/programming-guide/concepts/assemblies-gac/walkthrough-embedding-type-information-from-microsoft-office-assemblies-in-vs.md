@@ -2,12 +2,12 @@
 title: 'Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244056"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188660"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (Visual Basic)
 Jeśli informacje o typie jest osadzony w aplikacji, która odwołuje się do obiektów COM, można wyeliminować potrzebę zestawu podstawowej usługi międzyoperacyjnej (PIA). Ponadto informacje o typie osadzony umożliwia osiągnąć niezależność Twojej aplikacji. Oznacza to by używał typów z wielu wersji biblioteki COM bez konieczności określonego PIA dla każdej wersji można napisać program. Jest to typowy scenariusz w przypadku aplikacji korzystających z bibliotek Microsoft Office obiektów. Osadzanie informacji o typie umożliwia tym samym kompilację programu do pracy z różnymi wersjami pakietu Microsoft Office na różnych komputerach bez konieczności ponownego wdrażania programu lub PIA dla każdej wersji pakietu Microsoft Office.  
@@ -101,7 +101,7 @@ Jeśli informacje o typie jest osadzony w aplikacji, która odwołuje się do ob
   
 1.  Otwórz projekt utworzony w tym instruktażu w programie Visual Studio.  
   
-2.  Na **kompilacji** menu, wybierz **Publikuj CreateExcelWorkbook**. Wykonaj kroki Kreatora publikacji, aby utworzyć instalowalną wersję aplikacji. Aby uzyskać więcej informacji, zobacz [Kreatora publikacji (Office Development w programie Visual Studio)](https://msdn.microsoft.com/library/bb625071).  
+2.  Na **kompilacji** menu, wybierz **Publikuj CreateExcelWorkbook**. Wykonaj kroki Kreatora publikacji, aby utworzyć instalowalną wersję aplikacji. Aby uzyskać więcej informacji, zobacz [Kreatora publikacji (Office Development w programie Visual Studio)](/visualstudio/vsto/publish-wizard-office-development-in-visual-studio).  
   
 3.  Zainstaluj aplikację na komputerze, na którym są zainstalowane .NET Framework 4 lub nowszy oraz różne wersje programu Excel.  
   
@@ -109,6 +109,7 @@ Jeśli informacje o typie jest osadzony w aplikacji, która odwołuje się do ob
   
 5.  Sprawdź, czy skoroszyt programu Excel została utworzona w lokalizacji określonej w przykładowym kodzie: C:\SampleFolder\SampleWorkbook.xls.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+- [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

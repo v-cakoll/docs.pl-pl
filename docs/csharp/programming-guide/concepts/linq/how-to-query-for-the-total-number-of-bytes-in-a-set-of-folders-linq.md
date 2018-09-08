@@ -3,11 +3,11 @@ title: 'Porady: zapytanie o całkowitą liczbę bajtów w zestawie folderów (LI
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
 ms.openlocfilehash: 7a11e30a41ce171d516d3ea00a0e8664efe33520
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135188"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185931"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Porady: zapytanie o całkowitą liczbę bajtów w zestawie folderów (LINQ) (C#)
 Ten przykład przedstawia sposób pobierania całkowita liczba bajtów używanych przez wszystkie pliki w określonym folderze i jego podfolderach.  

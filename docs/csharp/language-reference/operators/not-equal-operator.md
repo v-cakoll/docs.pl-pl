@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
 ms.openlocfilehash: e974ffb1b25944e24fca23864dc7e932ec1876d5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890989"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192018"
 ---
 # <a name="-operator-c-reference"></a>!= — Operator (odwołanie w C#)
 Operator nierówności (`!=`) zwraca wartość false, jeśli jego operandy są takie same wartości true w przeciwnym razie. Operatory nierówności są wstępnie zdefiniowane dla wszystkich typów, w tym ciągi i obiekty. Typy definiowane przez użytkownika mogą przeciążać operator `!=`.  

@@ -11,11 +11,11 @@ ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49b01fdd14d1adfe0480f93150ab6e996aa84dee
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128501"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194713"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> jest elementem synchronizacji, który odblokowuje wątków oczekujących, po przeprowadzeniu sygnalizowane, ile razy. <xref:System.Threading.CountdownEvent> jest przeznaczona dla scenariuszy, w których w przeciwnym razie trzeba byłoby użyć <xref:System.Threading.ManualResetEvent> lub <xref:System.Threading.ManualResetEventSlim> i ręcznie dekrementacyjne zmienną przed sygnalizacja zdarzenie. Na przykład w scenariuszu rozwidlenia/scalania, po prostu utworzeniem <xref:System.Threading.CountdownEvent> zawierający sygnału liczbę 5, a następnie rozpoczęcia pięć elementów roboczych w wątku puli i mieć każdego wywołania elementu roboczego <xref:System.Threading.CountdownEvent.Signal%2A> po zakończeniu. Każde wywołanie <xref:System.Threading.CountdownEvent.Signal%2A> zmniejsza sygnał liczba o 1. W głównym wątku, wywołanie <xref:System.Threading.CountdownEvent.Wait%2A> blokuje, dopóki liczba sygnałów wynosi zero.  

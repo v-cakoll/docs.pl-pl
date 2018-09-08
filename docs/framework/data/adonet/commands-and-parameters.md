@@ -3,11 +3,11 @@ title: Polecenia i parametry
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
 ms.openlocfilehash: 8e476d68b60272d944eecfe585fd77d8a7a8f08c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046726"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192158"
 ---
 # <a name="commands-and-parameters"></a>Polecenia i parametry
 Po ustanowieniu połączenia ze źródłem danych, można wykonać polecenia i zwracania wyników z źródła danych przy użyciu <xref:System.Data.Common.DbCommand> obiektu. Można utworzyć polecenia przy użyciu jednego z konstruktorów polecenia dla dostawcy danych .NET Framework, którą pracujesz. Konstruktory może potrwać Argumenty opcjonalne, takie jak instrukcję SQL do wykonania w źródle danych <xref:System.Data.Common.DbConnection> obiektu lub <xref:System.Data.Common.DbTransaction> obiektu. Tych obiektów można również skonfigurować jako właściwości polecenia. Możesz również utworzyć polecenia dla danego połączenia za pomocą <xref:System.Data.Common.DbConnection.CreateCommand%2A> metody `DbConnection` obiektu. Można skonfigurować instrukcji SQL, wykonywane przez polecenie, używając <xref:System.Data.Common.DbCommand.CommandText%2A> właściwości.  

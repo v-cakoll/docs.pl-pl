@@ -3,11 +3,11 @@ title: 'Zarządzanie zasobami: use — Słowo kluczowe (F#)'
 description: 'Informacje na temat F # — słowo kluczowe "use" i "using" funkcji, która może kontrolować, inicjowanie i zwolnienia zasobów.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131688"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188452"
 ---
 # <a name="resource-management-the-use-keyword"></a>Zarządzanie zasobami: use — Słowo kluczowe
 

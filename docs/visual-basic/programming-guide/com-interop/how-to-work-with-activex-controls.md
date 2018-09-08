@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: 740f2c899e7548829e4822bbfb56c7d61d64777a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8faa8fc86312df2f03ec7a70a488d0e7c12b394b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772783"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195166"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Porady: praca z kontrolkami ActiveX (Visual Basic)
 Formanty ActiveX to składniki COM lub obiekty, które można wstawić do strony sieci Web lub innej aplikacji w celu ponownego użycia spakowane funkcje, które ma innemu programiście. Kontrolki ActiveX opracowanych dla języka Visual Basic 6.0 i starsze wersje umożliwia dodawanie funkcji do **przybornika** programu Visual Studio.  
@@ -28,11 +28,12 @@ Formanty ActiveX to składniki COM lub obiekty, które można wstawić do strony
      Nowy formant, który pojawia się z innymi narzędziami w **przybornika**.  
   
     > [!NOTE]
-    >  Narzędzie Aximp ręcznie utworzyć zestaw międzyoperacyjny dla formantów ActiveX. Aby uzyskać więcej informacji, zobacz [Aximp.exe (Importer kontrolki ActiveX formularzy Windows)](https://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0).  
+    >  Narzędzie Aximp ręcznie utworzyć zestaw międzyoperacyjny dla formantów ActiveX. Aby uzyskać więcej informacji, zobacz [Aximp.exe (Importer kontrolki ActiveX formularzy Windows)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Instrukcje: dodawanie kontrolek ActiveX do formularzy Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- [Aximp.exe (importer kontrolki ActiveX formularzy Windows Forms)](https://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)  
- [Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
- [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [Instrukcje: dodawanie kontrolek ActiveX do formularzy Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+- [Aximp.exe (importer kontrolki ActiveX formularzy Windows Forms)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
+- [Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
+- [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

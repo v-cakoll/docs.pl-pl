@@ -2,12 +2,12 @@
 title: Jak artykułów (Przewodnik C#)
 description: Szybkie wskazówki i przykłady kodu krótki, ukierunkowane kolekcję
 ms.date: 12/20/2017
-ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507678"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191694"
 ---
 # <a name="how-to-c"></a>Instrukcje (C#)
 
@@ -65,7 +65,7 @@ Może być konieczne konwersji obiektu do innego typu.
 - [Konwertuj ciąg na `DateTime` ](../../standard/base-types/parsing-datetime.md).
 - [Konwertowanie tablicy typu byte na liczbę całkowitą](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Konwertowanie ciągu na liczbę](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
-- [Użyj `as` i `is` bezpiecznego rzutowania na inny typ](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
+- [Użyj dopasowywania wzorców, `as` i `is` operatory, aby bezpiecznie rzutowany na inny typ](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Zdefiniuj operatory konwersji dla `struct` typy](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
 - [Określa, czy typ jest typem wartościowym](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
 - [Konwertowanie między typami dopuszcza wartości null i dopuszcza wartość](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).

@@ -9,11 +9,11 @@ ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 71e5ae19b1e0123dc28713befef070a9cc23bdc5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44048587"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188231"
 ---
 # <a name="how-to-migrate-your-xsltransform-code"></a>Instrukcje: Migrowanie kodu XslTransform
 Nowe klasy XSLT zostały zaprojektowane, aby być bardzo podobne do istniejących klas. <xref:System.Xml.Xsl.XslCompiledTransform> Klasy zastępuje <xref:System.Xml.Xsl.XslTransform> klasy. Arkusze stylów są kompilowane przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody. Transformacje są wykonywane przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody. Poniższe procedury Pokaż popularne zadania XSLT i porównaj przy użyciu kodu <xref:System.Xml.Xsl.XslTransform> klasy a <xref:System.Xml.Xsl.XslCompiledTransform> klasy.  

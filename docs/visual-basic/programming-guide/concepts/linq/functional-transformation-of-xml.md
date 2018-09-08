@@ -2,12 +2,12 @@
 title: Przekształcanie funkcjonalne kodu XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
-ms.openlocfilehash: 25e5d743b983badaefa3012b8839e4b039419ee9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 06803feb0fe23ae4afe2237b64bf920f6e229060
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070566"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183291"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>Przekształcanie funkcjonalne kodu XML (Visual Basic)
 W tym temacie omówiono czyste Przekształcanie funkcjonalne podejście modyfikowanie dokumentów XML i zestawiono ze sobą przy użyciu podejścia proceduralnego.  
@@ -32,7 +32,7 @@ W tym temacie omówiono czyste Przekształcanie funkcjonalne podejście modyfiko
   
  XSLT jest zalecanym narzędziem do przekształcenia skoncentrowane na dokument, gdy dokument źródłowy ma strukturę nieregularne. Jednak LINQ to XML można również wykonywać przekształcenia skoncentrowane na dokumencie. Aby uzyskać więcej informacji, zobacz [porady: użycie adnotacji do Przekształcanie drzew LINQ to XML w stylu XSLT (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [LINQ to XML a inne technologie XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)  
- [LINQ to XML a inne technologie XML](https://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)
+## <a name="see-also"></a>Zobacz także
+
+- [Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [LINQ to XML a inne technologie XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

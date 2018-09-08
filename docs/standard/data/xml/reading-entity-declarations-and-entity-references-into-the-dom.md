@@ -6,11 +6,11 @@ ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e30b52b8cdfb4d185687d58c80f4475730031c86
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137311"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185798"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>Wczytywanie deklaracji jednostek i odwołań do jednostek do modelu DOM
 Jednostka jest deklaracja, która stanowi nazwę do użycia w formacie XML, zamiast zawartości lub znaczników. Istnieją dwie części do jednostek. Najpierw należy powiązać nazwę, aby nowa zawartość przy użyciu deklaracji entity. Deklaracja jednostki jest tworzona przy użyciu `<!ENTITY name "value">` składni w definicji typu dokumentu (DTD) lub schematu XML. Po drugie z nazwą zdefiniowaną w deklaracji jednostki są następnie używane w pliku XML. W przypadku użycia w pliku XML, jest on nazywany odwołania do jednostki. Na przykład następująca deklaracja jednostki deklaruje jednostki o nazwie `publisher` skojarzona z zawartością "Microsoft Press".  

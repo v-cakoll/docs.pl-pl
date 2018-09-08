@@ -4,11 +4,11 @@ description: Informacje o typach framework obsługuje drzew wyrażeń, tworzenia
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
 ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788896"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188400"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Typy platform obsługujące drzewa wyrażeń
 

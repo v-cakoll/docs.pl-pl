@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871062"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183174"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 Component Object Model (COM) umożliwia obiektu do udostępnienia jej funkcjonalność do innych składników oraz obsługi aplikacji. Większość oprogramowaniu współczesnych zawiera obiekty COM. Mimo że zestawów .NET są najlepszym wyborem dla nowych aplikacji, czasami konieczne może być zastosowana obiektów COM. W tej sekcji opisano niektóre zagadnienia związane z tworzeniem i przy użyciu obiektów COM z Visual Basic.  
@@ -50,10 +50,10 @@ Component Object Model (COM) umożliwia obiektu do udostępnienia jej funkcjonal
  [Współdziałanie z kodem niezarządzanym](../../../framework/interop/index.md)  
  Opisuje współdziałanie usługi udostępniane przez środowisko uruchomieniowe języka wspólnego.  
   
- [Udostępnianie składników COM programowi .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [Udostępnianie składników COM programowi .NET Framework](../../../framework/interop/exposing-com-components.md)  
  W tym artykule opisano proces typy modelu COM za pomocą współdziałania z modelem COM podczas wywoływania.  
   
- [Udostępnianie składników .NET Framework modelowi COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [Udostępnianie składników .NET Framework modelowi COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  W tym artykule opisano przygotowania i korzystanie z typami zarządzanymi z modelu COM.  
   
  [Stosowanie atrybutów międzyoperacyjności](../../../framework/interop/applying-interop-attributes.md)  

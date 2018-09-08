@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
 ms.openlocfilehash: a337ecbc614ff40eda42fc5263dbb52aa92b905f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874130"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185743"
 ---
 # <a name="-target-c-compiler-options"></a>-target (opcje kompilatora C#)
 **-Target** — opcja kompilatora można określić w jednej z czterech form:  

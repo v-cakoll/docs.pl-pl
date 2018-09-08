@@ -3,11 +3,11 @@ title: Niestandardowe wiązanie niezawodnej sesji przez protokół HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
 ms.openlocfilehash: fb23dc6e6e2e13d759d29584ed6a990ae769ac8b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870227"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44175494"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Niestandardowe powiązanie niezawodnej sesji przez protokół HTTPS
 Niniejszy przykład pokazuje użycie protokołu SSL zabezpieczeń transportu niezawodnej sesji. Niezawodne sesje implementuje elementy usługi WS-Reliable Messaging protocol. Masz bezpiecznej, niezawodnej sesji za pośrednictwem usługi WS-Security za pośrednictwem niezawodnej sesji. Jednak czasami możesz zamiast tego użyć zabezpieczenia transportu HTTP przy użyciu protokołu SSL.  

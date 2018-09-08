@@ -7,30 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 5c01e918e1f607febc10be89c3d27c50870c401a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e682c2c23dd6fe80aee87d2a86b3df2dae66b802
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589254"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213082"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Nieprawidłowa wartość sumy kontrolnej, cyfry nieszesnastkowe lub nieparzysta liczba cyfr szesnastkowych
-Wartość sumy kontrolnej zawiera nieprawidłowe cyfry szesnastkowe lub ma nieparzystą liczbę cyfr.  
+Wartość sumy kontrolnej zawiera nieprawidłowy liczb szesnastkowych lub ma nieparzysta liczba cyfr.  
   
- Gdy program ASP.NET wygeneruje plik źródłowy języka Visual Basic (.vb rozszerzenia), oblicza sumę kontrolną i umieszcza je w pliku źródłowym ukryte identyfikowane przez `#externalchecksum`. Istnieje możliwość, że użytkownik Generowanie pliku .vb, w tym również, ale ten proces jest najlepszym od lewej do użytku wewnętrznego.  
+ Gdy program ASP.NET wygeneruje plik źródłowy języka Visual Basic (.vb rozszerzenie), oblicza sumy kontrolnej i umieszcza je w pliku źródłowym ukryte identyfikowane przez `#externalchecksum`. Istnieje możliwość, że użytkownik generowania pliku .vb, w tym również ten proces jest jednak najlepszym od lewej do użytku wewnętrznego.  
   
- Domyślnie ten komunikat jest ostrzeżenie. Aby uzyskać informacje na ukrywanie ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ta wiadomość jest ostrzeżenie. Uzyskać informacje o ukrywaniu ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42033  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Jeśli program ASP.NET jest generowany plik źródłowy języka Visual Basic, uruchom ponownie kompilacji projektu.  
+1.  Jeśli program ASP.NET generuje plik źródłowy języka Visual Basic, należy ponownie uruchomić kompilacji projektu.  
   
-2.  Jeśli to ostrzeżenie będzie nadal występował po ponownym uruchomieniu, ponownej instalacji programu ASP.NET i spróbuj ponownie kompilacji.  
+2.  Jeśli to ostrzeżenie będzie nadal występował po ponownym uruchomieniu komputera, ponownej instalacji programu ASP.NET, a następnie ponów próbę kompilacji.  
   
-3.  Jeśli to ostrzeżenie będzie nadal występować lub jeśli nie używasz programu ASP.NET, zebrać informacje dotyczące okoliczności i powiadomić pomocy technicznej firmy Microsoft.  
+3.  Jeśli to ostrzeżenie będzie nadal występować lub jeśli nie używasz platformy ASP.NET, zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie programu ASP.NET](https://msdn.microsoft.com/library/4w3ex9c2.aspx)  
- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Zobacz także
+
+- [Omówienie programu ASP.NET](/aspnet/overview)  
+- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c871dabd9d027e5716c863985bed7ef3b955a358
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 67062ab87182bcb42793cb166323020178ac1688
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672660"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197304"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Przekształcenia XSLT przy użyciu klasy XslTransform
 
@@ -96,13 +96,13 @@ public class Sample
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-<xref:System.Xml.Xsl.XslTransform>  
-[Implementowanie procesora XSLT przy użyciu klasy XslTransform](xsltransform-class-implements-the-xslt-processor.md)  
-[Implementowanie zachowań uznaniowych w klasie XslTransform](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
-[Klasa XPathNavigator w przekształceniach](xpathnavigator-in-transformations.md)  
-[Klasa XPathNodeIterator w przekształceniach](xpathnodeiterator-in-transformations.md)  
-[Dane wejściowe obiektu XPathDocument klasy XslTransform](xpathdocument-input-to-xsltransform.md)  
-[Dane wejściowe obiektu XmlDataDocument klasy XslTransform](xmldatadocument-input-to-xsltransform.md)  
-[Dane wejściowe obiektu XmlDocument klasy XslTransform](xmldocument-input-to-xsltransform.md)  
+- <xref:System.Xml.Xsl.XslTransform>  
+- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](xsltransform-class-implements-the-xslt-processor.md)  
+- [Implementowanie zachowań uznaniowych w klasie XslTransform](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
+- [Klasa XPathNavigator w przekształceniach](xpathnavigator-in-transformations.md)  
+- [Klasa XPathNodeIterator w przekształceniach](xpathnodeiterator-in-transformations.md)  
+- [Dane wejściowe obiektu XPathDocument klasy XslTransform](xpathdocument-input-to-xsltransform.md)  
+- [Dane wejściowe obiektu XmlDataDocument klasy XslTransform](xmldatadocument-input-to-xsltransform.md)  
+- [Dane wejściowe obiektu XmlDocument klasy XslTransform](xmldocument-input-to-xsltransform.md)  

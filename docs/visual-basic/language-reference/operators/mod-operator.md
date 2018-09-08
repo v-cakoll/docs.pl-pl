@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5120823f4e001fc3aff71f267176311e2465597a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604853"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201234"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod — operator (Visual Basic)
-Dzieli dwie liczby i zwraca tylko resztę.  
+Dzieli dwie liczby i zwraca tylko resztę z dzielenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,22 +32,22 @@ number1 Mod number2
   
 ## <a name="parts"></a>Części  
  `number1`  
- Wymagana. Dowolne wyrażenie liczbowe.  
+ Wymagane. Dowolne wyrażenie numeryczne.  
   
  `number2`  
- Wymagana. Dowolne wyrażenie liczbowe.  
+ Wymagane. Dowolne wyrażenie numeryczne.  
   
 ## <a name="supported-types"></a>Obsługiwane typy  
- Wszystkie typy liczbowe. Obejmuje to typy bez znaku i zmiennoprzecinkowych i `Decimal`.  
+ Wszystkich typów liczbowych. Obejmuje to typy bez znaku i błędy liczb zmiennopozycyjnych i `Decimal`.  
   
 ## <a name="result"></a>Wynik
 
-Wynik jest resztę po `number1` przez `number2`. Na przykład, wyrażenie `14 Mod 4` ocenia się na 2.  
+Wynik jest resztę po `number1` jest dzielona przez `number2`. Na przykład, wyrażenie `14 Mod 4` daje w wyniku 2.  
 
 > [!NOTE]
-> Ma różnicy między *pozostałej* i *modulo* w systemu dziesiętnego, różne wyniki dla wartości ujemne. `Mod` Operatora w języku Visual Basic .NET Framework `op_Modulus` operatora i podstawowej [rem]<xref:System.Reflection.Emit.OpCodes.Rem> wszystkie operacja pozostałej instrukcji IL.
+> Istnieje różnica pomiędzy *resztę* i *modulo* w matematyce, przy użyciu różne wyniki dla liczb ujemnych. `Mod` Operatora w języku Visual Basic .NET Framework `op_Modulus` operatora i podstawowych [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) instrukcja IL wykonywać wszystkie operacje resztę.
 
-Wynik `Mod` operacja zachowuje znak dzielna `number1`, a więc może być liczbą dodatnią lub ujemną. Wynik jest zawsze w zakresie (-`number2`, `number2`), wyłącznego. Na przykład:
+Wynik `Mod` operacja zachowuje znak dzielna `number1`, a więc może być dodatnia lub ujemna. Wynik jest zawsze w zakresie (-`number2`, `number2`), wyłączności. Na przykład:
 
 ```vb
 Public Module Example
@@ -66,39 +66,39 @@ End Module
 ```
 
 ## <a name="remarks"></a>Uwagi  
- Jeśli dowolny `number1` lub `number2` jest wartość zmiennoprzecinkową zmiennoprzecinkowe pozostałej części podziału jest zwracany. Typ danych wyniku to najmniejsza typu danych, który może posiadać wszystkie możliwe wartości wynikających z dzielenia z typami danych `number1` i `number2`.  
+ Jeśli `number1` lub `number2` jest wartość zmiennoprzecinkowa jest zwracana zmiennoprzecinkową resztę z dzielenia. Typ danych wyniku jest najmniejszego typu danych, który może pomieścić wszystkich możliwych wartości, które wynikają z dzielenia z typami danych `number1` i `number2`.  
   
- Jeśli `number1` lub `number2` daje w wyniku [nic](../../../visual-basic/language-reference/nothing.md), jest traktowany jako zero.  
+ Jeśli `number1` lub `number2` daje w wyniku [nic](../../../visual-basic/language-reference/nothing.md), jest ona traktowana jak zero.  
   
  Operatory powiązane są następujące:  
   
--   [\ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) Zwraca iloraz liczbą całkowitą z dzielenia. Na przykład, wyrażenie `14 \ 4` daje w wyniku 3.  
+-   [\ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) Zwraca iloraz liczb całkowitych z dzielenia. Na przykład, wyrażenie `14 \ 4` daje w wyniku 3.  
   
--   [/ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) Zwraca iloraz pełne, łącznie z pozostałą, jako liczba zmiennoprzecinkowa. Na przykład, wyrażenie `14 / 4` daje w wyniku 3.5.  
+-   [/ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) zwraca pełny iloraz, w tym resztę, jako liczba zmiennoprzecinkowa. Na przykład, wyrażenie `14 / 4` daje w wyniku 3.5.  
   
 ## <a name="attempted-division-by-zero"></a>Próba dzielenia przez zero  
- Jeśli `number2` daje w wyniku wartość zero, zachowanie `Mod` operator zależy od typu danych operandów. Zgłasza całkowitą dzielenia <xref:System.DivideByZeroException> wyjątku. Zwraca dzielenia liczb zmiennoprzecinkowych <xref:System.Double.NaN>.  
+ Jeśli `number2` daje w wyniku wartość zero, zachowanie `Mod` operator zależy od typu danych operandu. Zgłasza dzielenia liczby całkowitej <xref:System.DivideByZeroException> wyjątku. Zwraca dzielenia liczb zmiennopozycyjnych <xref:System.Double.NaN>.  
   
-## <a name="equivalent-formula"></a>Formuła równoważne  
- Wyrażenie `a Mod b` odpowiada jednej z następujących formuły:  
+## <a name="equivalent-formula"></a>Równoważne formuły  
+ Wyrażenie `a Mod b` odpowiada jednej z następujących formuł:  
   
  `a - (b * (a \ b))`  
   
  `a - (b * Fix(a / b))`  
   
-## <a name="floating-point-imprecision"></a>Zmiennoprzecinkowe błędu  
- Podczas pracy z liczb zmiennoprzecinkowych, należy pamiętać, że nie zawsze mają dokładne dziesiętna reprezentacja w pamięci. Może to prowadzić do nieoczekiwanych wyników z niektórych operacji, takich jak porównania wartości i `Mod` operatora. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+## <a name="floating-point-imprecision"></a>Zmiennoprzecinkowe niedokładności  
+ Podczas pracy z liczb zmiennoprzecinkowych, należy pamiętać, że nie zawsze mają precyzyjną formie dziesiętnej w pamięci. Może to prowadzić do nieoczekiwanych wyników z niektórych operacji, takich jak porównania wartości i `Mod` operatora. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Przeciążenie  
- `Mod` Operator może być *przeciążony*, co oznacza, że klasy lub struktury ponownie zdefiniować jego zachowania. Jeśli kod ma zastosowanie `Mod` do wystąpienia klasy lub struktury, która obejmuje takie przeciążenia, trzeba koniecznie zapoznać się ponownie zdefiniowany zachowania. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `Mod` Operator może być *przeciążone*, co oznacza, że klasy lub struktury zdefiniować ponownie jego zachowanie. Jeśli kod ma zastosowanie `Mod` do wystąpienia klasy lub struktury, która obejmuje takie przeciążenia, upewnij się, zrozumieć zachowania zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Mod` operator do dzielenia dwie liczby i zwraca tylko resztę. Jeśli liczba zmiennoprzecinkowa, albo liczbą wynik jest reprezentujący Pozostała liczba zmiennoprzecinkowa.  
+ W poniższym przykładzie użyto `Mod` operator dzielenia dwóch liczb i zwraca tylko resztę. Jeśli albo liczba jest liczba zmiennoprzecinkowa, wynik jest liczba zmiennoprzecinkowa, który reprezentuje resztę.  
   
  [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano ryzyko błędu argumentów operacji zmiennoprzecinkowej. W pierwszej instrukcji argumenty operacji są `Double`, i 0,2 jest nieskończenie identycznych ułamek binarnego z wartością przechowywaną 0.20000000000000001. W drugim instrukcji literału znaku typu `D` wymusza oba argumenty do `Decimal`, i 0,2 ma reprezentację dokładne.  
+ W poniższym przykładzie pokazano potencjał niedokładności argumentów operacji zmiennoprzecinkowej. W pierwszej instrukcji argumenty operacji są `Double`, a 0.2 jest nieskończenie powtarzające się ułamek binarne, przy użyciu przechowywaną wartość 0.20000000000000001. W drugiej instrukcji literału wpisz znak `D` wymusza oba operandy `Decimal`, i 0.2 jej reprezentacji dokładne.  
   
  [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
@@ -106,7 +106,7 @@ End Module
  <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
  <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
  [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Rozwiązywanie problemów związanych z typami danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Operatory arytmetyczne w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  

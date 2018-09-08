@@ -16,11 +16,11 @@ ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a08e97b02e2f60422132e97e2f3f7d4d2d5b8ec4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44061666"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209909"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Porady: wyodrębnianie protokółu i numeru portu z adresu URL
 Poniższy przykład wyodrębnia protokół i numer portu z adresu URL.  

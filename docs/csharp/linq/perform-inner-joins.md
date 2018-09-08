@@ -4,11 +4,11 @@ description: Dowiedz się, jak wykonanie sprzężeń wewnętrznych za pomocą LI
 ms.date: 12/1/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: 2f6aad30dc8278ce1bb88bacc19b27deaa0288c7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884924"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210133"
 ---
 # <a name="perform-inner-joins"></a>Wykonanie sprzężeń wewnętrznych
 

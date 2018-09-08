@@ -4,11 +4,11 @@ description: Jak grupowanie wyników według ciągłych kluczy za pomocą LINQ w
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804967"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209345"
 ---
 # <a name="group-results-by-contiguous-keys"></a>Grupowanie wyników według ciągłych kluczy
 

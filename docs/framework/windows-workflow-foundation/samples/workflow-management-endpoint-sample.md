@@ -3,11 +3,11 @@ title: Przykład punktu końcowego zarządzania przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
 ms.openlocfilehash: 3d99cbef20895381f5e40ee939e1d94a409f1391
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130516"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206500"
 ---
 # <a name="workflow-management-endpoint-sample"></a>Przykład punktu końcowego zarządzania przepływu pracy
 Niniejszy przykład pokazuje, jak punkt końcowy kontroli przepływu pracy może służyć do tworzenia i uruchamiania przepływów pracy, lokalnie i zdalnie. W przykładzie pokazano sposób hostowania punkt końcowy kontroli i zapisać klientów, które wywołują punkt końcowy kontroli, aby utworzyć i uruchomić wystąpienia przepływu pracy. Przepływ pracy nie jest usługą.  

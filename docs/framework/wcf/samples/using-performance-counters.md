@@ -3,11 +3,11 @@ title: Używanie liczników wydajności
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
 ms.openlocfilehash: 787a3d08b463980721fb207d029057e14618db5e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131888"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214202"
 ---
 # <a name="using-performance-counters"></a>Używanie liczników wydajności
 Niniejszy przykład pokazuje sposób dostępu do liczników wydajności usługi Windows Communication Foundation (WCF) oraz tworzenie liczników wydajności zdefiniowanych przez użytkownika. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

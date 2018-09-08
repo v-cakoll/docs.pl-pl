@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: 5e31bfafdc321bb514ecdadd49b7e2c6adf53948
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097729"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206237"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Wprowadzenie do COM Interop (Visual Basic)
 Component Object Model (COM) umożliwia obiektu udostępnić swoje funkcje z innymi składnikami i umożliwia obsługę aplikacji. Gdy obiekty COM zostały podstawowe znaczenie dla Windows programowania przez wiele lat, aplikacje przeznaczone do środowisko uruchomieniowe języka wspólnego (CLR) oferują wiele zalet.  

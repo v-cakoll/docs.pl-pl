@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 70c49198c0198610eaa5001971b7de7efd2951aa
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44074673"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207112"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protokół PNRP
 W środowiskach peer-to-peer elementów równorzędnych użyć systemy rozpoznawania nazw określonych w ustalaniu siebie nawzajem lokalizacje sieciowe (adresy, protokoły i porty) na podstawie nazw lub innych typów identyfikatorów. W przeszłości rozpoznawania nazw równorzędnych ma zostały skomplikowane natury przejściowy łączność, a także innych braków w ramach systemu nazw domen (DNS).  

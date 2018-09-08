@@ -3,11 +3,11 @@ title: Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
 ms.openlocfilehash: aa8bf447fe0df81821a34b5a6d898980749921e1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063343"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216022"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)
 Korzyści bez jakiś sposób pobierania tych informacji i działających na nim mogą być fakt, że można zdefiniować atrybutów niestandardowych i umieść je w kodzie źródłowym. Przy użyciu odbicia, możesz pobrać informacje, które zostało zdefiniowane przy użyciu atrybutów niestandardowych. Metoda klucza jest `GetCustomAttributes`, która zwraca tablicę obiektów, które są odpowiedników środowiska wykonawczego atrybuty kodu źródłowego. Ta metoda ma kilka przeciążone wersje. Aby uzyskać więcej informacji, zobacz <xref:System.Attribute>.  

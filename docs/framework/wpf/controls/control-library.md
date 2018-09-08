@@ -8,11 +8,11 @@ helpviewer_keywords:
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
 ms.openlocfilehash: 26f81a2bfeb5ef4e448ddcbc9b8bac521624a629
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068914"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212467"
 ---
 # <a name="control-library"></a>Biblioteka formantów
 Biblioteka formantów Windows Presentation Foundation (WPF) zawiera informacje dotyczące formantów, dostarczone przez Windows Presentation Foundation (WPF), alfabetycznym.  

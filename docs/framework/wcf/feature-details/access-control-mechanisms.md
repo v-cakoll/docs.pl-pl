@@ -6,11 +6,11 @@ helpviewer_keywords:
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
 ms.openlocfilehash: 1de6731591e524080ac4ae7d5b2ec2a25a27f301
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777223"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213241"
 ---
 # <a name="access-control-mechanisms"></a>Mechanizmy kontroli dostępu
 Możesz kontrolować dostęp w kilku sposób za pomocą programu Windows Communication Foundation (WCF). W tym temacie krótko omówiono różne mechanizmy i sugestie, kiedy należy używać każdego; jest ona przeznaczona do ułatwienia wybrania poprawne mechanizm do użycia. Technologie dostępu są wymienione w kolejności złożoności. To najprostszy <xref:System.Security.Permissions.PrincipalPermissionAttribute>; najbardziej złożone jest modelu tożsamości.  

@@ -3,11 +3,11 @@ title: Usuwanie elementów, atrybutów i węzłów z drzewa XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
 ms.openlocfilehash: 9ce63ce6a4ef75dedc788efca11e8dd2bdb471eb
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44132502"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217493"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Usuwanie elementów, atrybutów i węzłów z drzewa XML (C#)
 Możesz zmodyfikować drzewa XML, usunięcie elementów, atrybutów i innych typów węzłów.  

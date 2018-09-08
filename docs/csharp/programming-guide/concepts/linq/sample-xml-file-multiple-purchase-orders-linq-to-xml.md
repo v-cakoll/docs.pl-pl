@@ -3,11 +3,11 @@ title: 'Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
 ms.openlocfilehash: f510de028198dc6ad1f86490704d1c8df6e39cf4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070605"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201026"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera wiele zamówień zakupu.  

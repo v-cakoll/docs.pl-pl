@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: fa70af311d6b4fa4e17bb3ba6110e4cea420c34c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079493"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200291"
 ---
 # <a name="datatable-constraints"></a>Ograniczenia elementu DataTable
 Ograniczenia służy do wymuszania ograniczeń dotyczących danych w <xref:System.Data.DataTable>, w celu zachowania integralności danych. Ograniczenie jest reguła automatycznego stosowane kolumny lub powiązanych kolumn, który określa sposobu działania przypadku jakiś sposób zmiany wartości wiersza. Ograniczenia są wymuszane podczas `System.Data.DataSet.EnforceConstraints` właściwość <xref:System.Data.DataSet> jest **true**. Dla przykładu kodu, który pokazuje, jak ustawić `EnforceConstraints` właściwości, zobacz <xref:System.Data.DataSet.EnforceConstraints%2A> temat referencyjny.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
 ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039650"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205695"
 ---
 # <a name="data-types-in-visual-basic"></a>Typy danych w Visual Basic
 *— Typ danych* elementu programistycznego odwołuje się do jakiego rodzaju dane można przechowywać i jak są przechowywane dane. Typy danych są stosowane do wszystkich wartości, które mogą być przechowywane w pamięci komputera i uczestniczyć w wyniku obliczenia wyrażenia. Każdej zmiennej, literał, — stała, wyliczenia, właściwości, parametr procedury, argumentu procedury i procedury zwracana wartość ma typ danych.  

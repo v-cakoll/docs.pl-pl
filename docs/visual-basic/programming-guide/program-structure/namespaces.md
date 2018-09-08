@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 11fe6956ae2e61d6d715f1d5814e20c4a4d00292
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6b320d21c33fa798ca2fd3ef5a04363d141f99f2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509317"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44202196"
 ---
 # <a name="namespaces-in-visual-basic"></a>Przestrzenie nazw w Visual Basic
 Przestrzenie nazw organizują obiekty zdefiniowane w zestawie. Zespoły mogą zawierać wiele przestrzeni nazw, który z kolei może zawierać innych przestrzeniach nazw. Przestrzenie nazw uniknąć niejednoznaczności i uprościć odwołania, korzystając z dużych grup obiektów, takich jak biblioteki klas.  
@@ -119,11 +119,12 @@ End Namespace
   
  [!code-vb[VbVbalrApplication#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_8.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms?displayProperty=nameWithType>  
- [Zestawy i globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Instrukcje: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
- [Referencje i instrukcja Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Pisanie kodu dla rozwiązań pakietu Office](https://msdn.microsoft.com/library/bb608596)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Windows.Forms.ListBox>  
+- <xref:System.Windows.Forms?displayProperty=nameWithType>  
+- [Zestawy i globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Instrukcje: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)  
+- [Referencje i instrukcja Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
+- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+- [Pisanie kodu dla rozwiązań pakietu Office](/visualstudio/vsto/writing-code-in-office-solutions)

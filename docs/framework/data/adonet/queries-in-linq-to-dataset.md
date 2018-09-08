@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
 ms.openlocfilehash: da9e5bd39cebce27dbaf89ac020c2bf8f154adcc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44071703"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211843"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Zapytania w LINQ to DataSet
 Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w specjalistycznym języku zapytań, takich jak SQL dla relacyjnych baz danych i XQuery dla XML. W związku z tym deweloperzy musieli nauczyć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, które są zapytania. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] oferuje prostszy i spójny model do pracy z danymi w różnych rodzajach formatów i źródeł danych. W [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania, zawsze pracujesz z programowania obiektów.  

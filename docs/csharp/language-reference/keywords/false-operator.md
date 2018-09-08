@@ -5,11 +5,11 @@ helpviewer_keywords:
 - false operator keyword [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
 ms.openlocfilehash: e73113bd37dbb68590267141ad037f78919520bc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140220"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200685"
 ---
 # <a name="false-operator-c-reference"></a>FALSE — operator (odwołanie w C#)
 

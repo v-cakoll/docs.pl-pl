@@ -14,11 +14,11 @@ ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138945"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210497"
 ---
 # <a name="security-and-race-conditions"></a>Zabezpieczenia i sytuacja wyścigu
 Kolejnym obszarem kwestią jest potencjalnych luk w zabezpieczeniach wykorzystana przez wyścigu. Istnieje kilka sposobów, w których może się to zdarzyć. Tematy podrzędne, które należy wykonać opisano niektóre z najważniejszych pułapek, których należy unikać dewelopera.  

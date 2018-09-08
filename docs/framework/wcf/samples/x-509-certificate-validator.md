@@ -3,11 +3,11 @@ title: Moduł weryfikacji certyfikatów X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: e54f79046113e5f1a1a1cc065606fd5b706b49ac
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131133"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197079"
 ---
 # <a name="x509-certificate-validator"></a>Moduł weryfikacji certyfikatów X.509
 Niniejszy przykład pokazuje, jak zaimplementować niestandardowy moduł weryfikacji certyfikatów X.509. Jest to przydatne w przypadkach, gdy żadna z wbudowanych metod walidacji certyfikatu X.509 jest odpowiednia dla wymagań aplikacji. Niniejszy przykład pokazuje usługi, która ma niestandardowy moduł sprawdzania poprawności, który akceptuje własnym wystawionych certyfikatów. Klient używa takiego certyfikatu do uwierzytelnienia w usłudze.  

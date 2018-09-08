@@ -3,11 +3,11 @@ title: Architektura WCF i międzynarodowe nazwy domen
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
 ms.openlocfilehash: 8431f5d47aa32d1c928190abdd3079831ca48618
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44033244"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208429"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>Architektura WCF i międzynarodowe nazwy domen
 Dodano obsługę do obsługi usług WCF za pomocą nazw międzynarodowych domen (IDN). Międzynarodowa nazwa domeny jest nazwa domeny, który zawiera znaki spoza zestawu ASCII. Ta obsługa obejmuje możliwość hostowanie usługi WCF przy użyciu nazwy IDN i klienta programu WCF na komunikowanie się z usługą sieci web o nazwie IDN.  

@@ -11,11 +11,11 @@ ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2af0f82e66da1c8db5e17863dfad861c8a7d195e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44065631"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217220"
 ---
 # <a name="how-to-return-a-value-from-a-task"></a>Porady: zwracanie wartości z zadania
 W tym przykładzie pokazano, jak używać <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> typu w celu zwrócenia wartości z <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości. Wymaga czy C:\Users\Public\Pictures\Sample Pictures\ katalog istnieje i czy zawiera on pliki.  

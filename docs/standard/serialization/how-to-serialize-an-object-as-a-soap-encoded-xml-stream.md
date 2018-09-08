@@ -10,11 +10,11 @@ helpviewer_keywords:
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
 ms.openlocfilehash: cdfa2c8c7a27806873217495ac09f7f20e82b6bc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891398"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209306"
 ---
 # <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>Instrukcje: serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP
   

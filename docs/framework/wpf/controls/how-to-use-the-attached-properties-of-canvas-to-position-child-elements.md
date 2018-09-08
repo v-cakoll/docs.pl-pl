@@ -9,18 +9,19 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
-ms.openlocfilehash: 886440304dc1bebdcfae66676254bef7ac35457d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89327b834dfd71c0a7420eb42a598b98cdb5e9d8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552377"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208495"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Jak użyć załączonych właściwości kanwy, aby ustawić położenie elementów podrzędnych
-Ten przykład przedstawia sposób użycia właściwości dołączonych <xref:System.Windows.Controls.Canvas> położenie elementów podrzędnych.  
+W tym przykładzie pokazano, jak użyć załączonych właściwości <xref:System.Windows.Controls.Canvas> położenie elementów podrzędnych.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie dodano cztery <xref:System.Windows.Controls.Button> jako elementy podrzędne elementu nadrzędnego <xref:System.Windows.Controls.Canvas>. Każdy element podrzędny reprezentuje różne właściwości dołączonych <xref:System.Windows.Controls.Canvas>: <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, i <xref:System.Windows.Controls.Canvas.Top%2A>. Każdy <xref:System.Windows.Controls.Button> znajduje się względem nadrzędnego <xref:System.Windows.Controls.Canvas> i zgodnie z jego wartość właściwości przypisane.  
+ W poniższym przykładzie dodano cztery <xref:System.Windows.Controls.Button> jako elementy podrzędne elementu nadrzędnego <xref:System.Windows.Controls.Canvas>. Każdy element jest reprezentowany przez <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, i <xref:System.Windows.Controls.Canvas.Top%2A>.
+Każdy <xref:System.Windows.Controls.Button> jest umieszczony względem nadrzędnego <xref:System.Windows.Controls.Canvas> i zgodnie z jej wartością właściwości przypisane.  
   
  [!code-cpp[CanvasAttachedProperties#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/CanvasAttachedProperties/CPP/CanvasAttachedProps.cpp#1)]
  [!code-csharp[CanvasAttachedProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasAttachedProperties/CSharp/CanvasAttachedProps.cs#1)]

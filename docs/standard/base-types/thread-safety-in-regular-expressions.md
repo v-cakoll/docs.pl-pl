@@ -12,11 +12,11 @@ ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c0bcab0757bc48f6a8216dd5878f0289e49a275
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046882"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208169"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Bezpieczeństwo wątków w wyrażeniach regularnych
 <xref:System.Text.RegularExpressions.Regex> Samej klasy jest wątek, bezpieczne i niezmienne (tylko do odczytu). Oznacza to, że **wyrażenia regularnego** obiekty można tworzyć na żadnym z wątków i udostępniane między wątkami; metod dopasowania mogą być wywoływane z żadnym z wątków i nigdy nie zmienia żadnych stan globalny.  

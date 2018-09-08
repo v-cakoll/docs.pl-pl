@@ -3,11 +3,11 @@ title: LINQ to XML — Przegląd osi (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 ms.openlocfilehash: 1eabd6a171637b85a5d22afa209e6c80dbbb9f4c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097982"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211713"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML — Przegląd osi (C#)
 Po drzewa XML utworzone lub ładowany dokument XML do drzewa XML można tworzyć zapytania, do znajdowania elementów i atrybutów i pobierania ich wartości. Pobieranie kolekcji za pomocą *metody osi*, nazywane również *osi*. Niektóre z osi są metody <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> klasy, które zwraca <xref:System.Collections.Generic.IEnumerable%601> kolekcji. Niektóre z osi są metody rozszerzające w <xref:System.Xml.Linq.Extensions> klasy. Osi, które są implementowane jako metody rozszerzenia działają w kolekcjach, a następnie zwracają kolekcje.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079711"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198611"
 ---
 # <a name="schema-restrictions"></a>Ograniczenia schematu
 Drugi parametr opcjonalny **GetSchema** metodą jest zwracane ograniczenia, które są używane do ograniczenia ilości informacji o schemacie, a zostanie on przekazany do **GetSchema** metodę jako tablica ciągów . Pozycja w tablicy określa wartości, które można przekazać, a jest równa liczbie ograniczania.  

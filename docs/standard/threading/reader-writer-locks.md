@@ -9,11 +9,11 @@ ms.assetid: 8c71acf2-2c18-4f4d-8cdb-0728639265fd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8be9b4eef30333fbbdc26915635d17157176d6fc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079191"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208182"
 ---
 # <a name="reader-writer-locks"></a>Klasa reader_writer_lock
 <xref:System.Threading.ReaderWriterLockSlim> Klasy umożliwia wielu wątków, które można jednocześnie odczytać zasobu, ale wymaga wątku oczekiwania blokady na wyłączność w celu pisania do zasobu.  

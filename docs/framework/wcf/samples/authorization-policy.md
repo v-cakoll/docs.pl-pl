@@ -3,11 +3,11 @@ title: Zasady autoryzacji
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
 ms.openlocfilehash: eaf4dfc6e1f02a1cd98d9ab48af70426e8ba6151
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746879"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217298"
 ---
 # <a name="authorization-policy"></a>Zasady autoryzacji
 

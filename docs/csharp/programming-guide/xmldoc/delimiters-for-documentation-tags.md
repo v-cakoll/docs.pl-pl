@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
 ms.openlocfilehash: 06bd997e6862bc1f86ad2e3b2afbbb5afac78d9c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064293"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217259"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Ograniczniki tagów dokumentacji (Przewodnik programowania w języku C#)
 Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują kompilatora, gdzie rozpoczyna się i kończy w komentarzu dokumentacji. Za pomocą następujących rodzajów ograniczniki tagów dokumentacji XML:  

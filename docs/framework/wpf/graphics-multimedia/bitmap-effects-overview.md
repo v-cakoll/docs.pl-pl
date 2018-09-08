@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 97b878621d5aa1860cd955755d9bbc344b95b993
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080598"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222347"
 ---
 # <a name="bitmap-effects-overview"></a>Przegląd Efekty mapy bitowej
 Efekty mapy bitowej umożliwia projektantom i deweloperom stosowanie efektów wizualnych do renderowania zawartości Windows Presentation Foundation (WPF). Na przykład efektów mapy bitowej pozwalają łatwo zastosować <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> efekt lub efekt rozmycie obrazu lub przycisku.  

@@ -3,11 +3,11 @@ title: 'Porady: generowanie kodu XML z plików CSV (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 9200cfc443ae87fcbeaf87c7674f15d8a241f5dc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43882857"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210883"
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>Porady: generowanie kodu XML z plików CSV (C#)
 W tym przykładzie pokazano, jak używać [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do generowania pliku XML z pliku wartości rozdzielanych przecinkami (CSV).  

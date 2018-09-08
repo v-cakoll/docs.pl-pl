@@ -8,11 +8,11 @@ ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879399"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210224"
 ---
 # <a name="common-io-tasks"></a>Typowe zadania We/Wy
 <xref:System.IO> Przestrzeni nazw dostarcza kilka klas, które umożliwiają wykonywanie różnych akcji, takich jak odczytywanie i zapisywanie w plikach, katalogach i strumieniach. Aby uzyskać więcej informacji, zobacz [plików i we/wy Stream](../../../docs/standard/io/index.md).  

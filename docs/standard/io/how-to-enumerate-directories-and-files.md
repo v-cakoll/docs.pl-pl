@@ -11,11 +11,11 @@ ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3de83395df9e8c89a92e85b96ddd15e9f0be6ad5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067162"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207697"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Porady: wyliczanie katalogów i ciągów
 Za pomocą metody, które zwracają wyliczalny zbiór ciągów ich nazw, można wyliczyć katalogów i plików. Można również użyć metod, które zwracają wyliczalny zbiór <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, lub <xref:System.IO.FileSystemInfo> obiektów. Przeliczalne kolekcje zapewniają lepszą wydajność niż tablic, podczas pracy z dużych kolekcjach katalogów i plików.  

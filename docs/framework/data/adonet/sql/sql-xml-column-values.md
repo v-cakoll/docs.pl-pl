@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
 ms.openlocfilehash: b46c763e7cddfc7617c9a6a23428f83a54955ba0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138958"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216688"
 ---
 # <a name="sql-xml-column-values"></a>Wartości kolumny SQL XML
 SQL Server obsługuje `xml` typu danych i deweloperzy mogą pobrać zestawów wyników, w tym tego typu przy użyciu standardowego zachowania <xref:System.Data.SqlClient.SqlCommand> klasy. `xml` Kolumn mogą być pobierane, tak samo, jak wszystkie kolumny są pobierane (w <xref:System.Data.SqlClient.SqlDataReader>, na przykład), ale jeśli chcesz pracować nad otrzymaną zawartością kolumny w formacie XML, należy użyć <xref:System.Xml.XmlReader>.  

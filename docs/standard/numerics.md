@@ -14,11 +14,11 @@ ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d253e7a32d5f302b095a86ddb5c296d5fa8fa11
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037084"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209499"
 ---
 # <a name="numerics-in-the-net-framework"></a>Wartości numeryczne w programie .NET Framework
 Program .NET Framework obsługuje standardowe liczbowych podstawowych całkowite i zmiennoprzecinkowe także <xref:System.Numerics.BigInteger>, typ całkowitoliczbowy bez teoretycznych górną lub dolną granicę <xref:System.Numerics.Complex>, typ, który reprezentuje liczby zespolone oraz zbiór włączone SIMD Vector — typy w <xref:System.Numerics> przestrzeni nazw.  

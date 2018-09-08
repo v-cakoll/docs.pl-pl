@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
 ms.openlocfilehash: 189cb92d581ccc9209ebdb4de18487951d17818a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44077788"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199287"
 ---
 # <a name="how-to-crop-an-image"></a>Jak przyciąć obraz
 W tym przykładzie pokazano, jak przyciąć obraz przy użyciu <xref:System.Windows.Media.Imaging.CroppedBitmap>.  

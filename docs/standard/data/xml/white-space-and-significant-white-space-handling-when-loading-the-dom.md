@@ -6,11 +6,11 @@ ms.assetid: 1b141a0a-50d8-4ebd-83cd-a84449bb22b2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d9bbb14320b84a6d417c5c28026b169092de219
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878577"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201377"
 ---
 # <a name="white-space-and-significant-white-space-handling-when-loading-the-dom"></a>Biały znak i istotnych białych obsługi podczas ładowania modelu DOM
 Podczas ładowania dokumentu, można ustawić opcję zachowania biały znak i utworzyć **XmlWhitespace** węzłów w drzewie dokumentu. Aby utworzyć węzły odstępu, ustaw **PreserveWhitespace** właściwości na wartość true. Jeśli ustawiono właściwość **false**biały znak węzły nie są tworzone, co jest ustawieniem domyślnym. Węzły znaczące spacje są zawsze zachowywane, a **XmlSignificantWhitespace** węzły są zawsze tworzone w pamięci w celu przedstawienia tych danych, niezależnie od ustawienia **PreserveWhitespace** Flaga.  

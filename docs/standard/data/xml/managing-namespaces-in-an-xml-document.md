@@ -6,11 +6,11 @@ ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44066727"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214826"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Zarządzanie przestrzeniami nazw w dokumencie XML
 Obszary nazw XML skojarzyć nazw elementów i atrybutów w dokumencie XML przy użyciu wstępnie zdefiniowanych i niestandardowych identyfikatorów URI. Aby utworzyć te skojarzenia, zdefiniuj prefiksów identyfikatorów URI przestrzeni nazw, a używać tych prefiksów do kwalifikowania nazwy elementów i atrybutów w danych XML. Przestrzenie nazw zapobiec kolizjom nazw elementów i atrybutów i umożliwić elementów i atrybutów o tej samej nazwie i obsługi sprawdzania poprawności w różny sposób.  

@@ -2,12 +2,12 @@
 title: Programowanie asynchroniczne z Async i Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 9798136bfa88e19764a064732637783620f77a73
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0c4ee6d7bd6d0b160d5f2ed0ab0021601b3aced2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884679"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213306"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programowanie asynchroniczne z Async i Await (Visual Basic)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
@@ -99,7 +99,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  W metodzie asynchronicznej używasz podanych słów kluczowych i typów w celu wskazania, co chcesz zrobić, a kompilator zajmie się resztą, w tym śledzeniem tego, co musi się zdarzyć, gdy sterowanie powraca do punktu oczekiwania w metodzie zawieszonej. Niektóre procesy, takie jak pętle i obsługa wyjątków, mogą być trudne do obsłużenia w tradycyjnym kodzie asynchronicznym. W metodzie asynchronicznej wpisujesz te elementy podobnie jak w rozwiązaniu synchronicznym i problem rozwiązany.  
   
- Aby uzyskać więcej informacji dotyczących asynchroniczności w poprzednich wersjach programu .NET Framework, zobacz [TPL i tradycyjnym .NET Framework Asynchronous Programming](https://msdn.microsoft.com/library/e7b31170-a156-433f-9f26-b1fc7cd1776f).  
+ Aby uzyskać więcej informacji dotyczących asynchroniczności w poprzednich wersjach programu .NET Framework, zobacz [TPL i tradycyjnym .NET Framework Asynchronous Programming](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md).  
   
 ##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Co się dzieje w metodzie Async  
  Ważne jest, aby rozumieć programowanie asynchroniczne jako przepływ sterowania od metody do metody. Poniższy diagram ilustruje ten proces.  
@@ -246,7 +246,7 @@ Await Task_MethodAsync()
 |[WhenAny: Łączenie platformy .NET Framework i środowiska uruchomieniowego Windows](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|Pokazuje, jak typy zadań w .NET Framework i IAsyncOperations w [!INCLUDE[wrt](~/includes/wrt-md.md)] tak, aby można było używać <xref:System.Threading.Tasks.Task.WhenAny%2A> z [!INCLUDE[wrt](~/includes/wrt-md.md)] metody.|[Próbka Asynchroniczae: Pomostu między .NET i programem obsługi Windows (AsTask i WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
 |Anulowanie asynchroniczne: łączenie platformy .NET Framework ze środowiskiem wykonawczym systemu Windows|Pokazuje, jak typy zadań w .NET Framework i IAsyncOperations w [!INCLUDE[wrt](~/includes/wrt-md.md)] tak, aby można było używać <xref:System.Threading.CancellationTokenSource> z [!INCLUDE[wrt](~/includes/wrt-md.md)] metody.|[Próbka Asynchroniczae: Pomostu między .NET i programem obsługi Windows (AsTask i anulowania)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
 |[Użycie Async do uzyskiwania dostępu do plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|Wyświetla listę korzyści wynikających ze stosowania słów kluczowych async i await przy uzyskiwaniu dostępu do plików.||  
-|[Wzorzec asynchroniczny oparty na zadaniach (TAP)](https://msdn.microsoft.com/library/8cef1fcf-6f9f-417c-b21f-3fd8bac75007)|Opisano nowy wzorzec asynchronii w .NET Framework. Wzorzec jest oparty na <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> typów.||  
+|[Wzorzec asynchroniczny oparty na zadaniach (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|Opisano nowy wzorzec asynchronii w .NET Framework. Wzorzec jest oparty na <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> typów.||  
 |[Asynchroniczne wideo w witrynie Channel 9](https://channel9.msdn.com/search?term=async+&type=All)|Oferuje łącza do różnych plików wideo dotyczących programowania asynchronicznego.||  
   
 ##  <a name="BKMK_CompleteExample"></a> Kompletny przykład  
@@ -313,6 +313,7 @@ End Class
 ' Length of the downloaded string: 41763.  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Await, operator](../../../../visual-basic/language-reference/operators/await-operator.md)  
- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Await, operator](../../../../visual-basic/language-reference/operators/await-operator.md)  
+- [Async](../../../../visual-basic/language-reference/modifiers/async.md)

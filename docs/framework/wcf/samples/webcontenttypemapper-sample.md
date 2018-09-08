@@ -3,11 +3,11 @@ title: WebContentTypeMapper — przykład
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
 ms.openlocfilehash: 91e5cca478521a343f7528f878f114b85eff2d08
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43674196"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214670"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper — przykład
 Niniejszy przykład pokazuje jak mapować nowych typów zawartości do formatów treści komunikat usług Windows Communication Foundation (WCF).  

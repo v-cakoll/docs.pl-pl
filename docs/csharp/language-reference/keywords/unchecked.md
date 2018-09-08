@@ -8,11 +8,11 @@ helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
 ms.openlocfilehash: daccd7916a9f81f26f468ab0f64833d9537cff8e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130909"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206013"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (odwołanie w C#)
 `unchecked` Słowo kluczowe jest używane, aby pominąć sprawdzanie przepełnienia dla typu całkowitego operacje arytmetyczne i konwersje.  

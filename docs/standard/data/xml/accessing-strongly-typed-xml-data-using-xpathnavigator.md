@@ -9,11 +9,11 @@ ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0c283d3c87effcf9e898bb769cc8991da6cea453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129478"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199625"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Uzyskiwanie dostępu do silnie Typizowanych danych XML, przy użyciu klasy XPathNavigator
 Jako wystąpienia w modelu danych XPath 2.0 <xref:System.Xml.XPath.XPathNavigator> klasy może zawierać silnie typizowane dane, który jest mapowany do typowych języka wspólnego (CLR). Zgodnie z modelu danych XPath 2.0 tylko elementów i atrybutów może zawierać silnie typizowane dane. <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia mechanizmy do uzyskiwania dostępu do danych w ramach <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu jako silnie typizowane dane, a także mechanizmów do konwertowania z jednego typu danych.  

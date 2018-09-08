@@ -8,11 +8,11 @@ ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: b2c71af169018f272a6ca538bba9191f9ddbc0dd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538291"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222003"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Niezabezpieczony klient internetowy i usługa
 Na poniższej ilustracji przedstawiono przykład publiczne, niezabezpieczony klient usługi Windows Communication Foundation (WCF) i usługi.  

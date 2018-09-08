@@ -2,12 +2,12 @@
 title: LINQ to XML a. Modelu DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: a0a23a773e927155ca22456ea403549b255718ad
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4feb0df2e4d3ffe5c79ce61d7b94142833a312c7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885633"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213874"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML a. Modelu DOM (Visual Basic)
 W tej sekcji opisano niektóre podstawowe różnice między [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i bieżącej dominujący XML programowania interfejsu API, W3C Document Object Model (DOM).  
@@ -125,10 +125,10 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] przechowuje biały znak jako <xref:System.Xml.Linq.XText> węzła zamiast wyspecjalizowanego <xref:System.Xml.XmlNodeType.Whitespace> typ węzła jako modelu DOM wykonuje.  
   
 ## <a name="support-for-annotations"></a>Obsługa adnotacji  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] elementy obsługuje extensible zbiór adnotacji. Jest to przydatne do śledzenia dodatkowych informacji na temat elementu, np. informacji o schemacie, informacji na temat tego, czy element jest powiązany z interfejsu użytkownika lub inne informacje dotyczące rodzaju specyficzne dla aplikacji. Aby uzyskać więcej informacji, zobacz [adnotacje LINQ to XML](https://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] elementy obsługuje extensible zbiór adnotacji. Jest to przydatne do śledzenia dodatkowych informacji na temat elementu, np. informacji o schemacie, informacji na temat tego, czy element jest powiązany z interfejsu użytkownika lub inne informacje dotyczące rodzaju specyficzne dla aplikacji. Aby uzyskać więcej informacji, zobacz [adnotacje LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Obsługa informacji o schemacie  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia obsługę walidację XSD za pośrednictwem metody rozszerzające w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw. Aby zweryfikować, że drzewa XML jest zgodny z XSD. Możesz wypełnić drzewa XML z zestaw informacji po weryfikacji (PSVI). Aby uzyskać więcej informacji, zobacz [porady: weryfikowanie przy użyciu XSD](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b) i <xref:System.Xml.Schema.Extensions>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia obsługę walidację XSD za pośrednictwem metody rozszerzające w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw. Aby zweryfikować, że drzewa XML jest zgodny z XSD. Możesz wypełnić drzewa XML z zestaw informacji po weryfikacji (PSVI). Aby uzyskać więcej informacji, zobacz [porady: weryfikowanie przy użyciu XSD](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) i <xref:System.Xml.Schema.Extensions>.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

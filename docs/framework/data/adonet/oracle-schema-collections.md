@@ -3,11 +3,11 @@ title: Kolekcje schematów Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
 ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129183"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217350"
 ---
 # <a name="oracle-schema-collections"></a>Kolekcje schematów Oracle
 Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  

@@ -14,11 +14,11 @@ ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cdead5a54c6e8dbe6fd61f82fc3985913bd7d381
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44035716"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222412"
 ---
 # <a name="generic-collections-in-net"></a>Kolekcje ogólne w .NET
 

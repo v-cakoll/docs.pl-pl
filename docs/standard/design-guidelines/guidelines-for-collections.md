@@ -6,11 +6,11 @@ ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128959"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204945"
 ---
 # <a name="guidelines-for-collections"></a>Wytyczne dotyczące kolekcji
 Dowolny typ, zaprojektowany specjalnie w celu manipulowania grupy obiektów mających pewne cechy wspólne jest uznawana za kolekcji. Prawie zawsze jest odpowiednia dla tych typów do zaimplementowania <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>, więc w tej sekcji możemy tylko należy wziąć pod uwagę typy Implementowanie jedno lub oba te interfejsy jako kolekcji.  

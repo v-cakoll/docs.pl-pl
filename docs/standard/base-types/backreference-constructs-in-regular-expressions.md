@@ -14,11 +14,11 @@ ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128626"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206052"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Konstrukcje dopasowań w wyrażeniach regularnych
 Dopasowywania wstecznego zapewniają wygodny sposób identyfikowania powtarzających się znaków lub podciągu wewnątrz ciągu. Na przykład jeśli ciąg wejściowy zawiera wiele wystąpień dowolnego podciąg, można dopasować pierwsze wystąpienie z grupy przechwytywania, a następnie należy użyć dopasowywania wstecznego do dopasowania pozostałe wystąpienia podciągu.  

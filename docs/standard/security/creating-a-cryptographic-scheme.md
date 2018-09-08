@@ -9,11 +9,11 @@ ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080270"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197896"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Tworzenie schematu kryptograficznego
 Można łączyć kryptograficznych składników .NET Framework do tworzenia różnych systemów do szyfrowania i odszyfrowywania danych.  

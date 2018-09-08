@@ -11,30 +11,30 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a348a83ef0b05ce44b3b3adf8e0031ce350cd37b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583022"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217194"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Porady: Wykonaj operację, kiedy blok przepływu danych odbiera dane
-*Wykonanie bloku przepływu danych* typy wywołać delegata dostarczane przez użytkownika, po odebraniu danych. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, I <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> klasy są typy bloku przepływu danych wykonywania. Można użyć `delegate` — słowo kluczowe (`Sub` w języku Visual Basic), <xref:System.Action%601>, <xref:System.Func%602>, lub wyrażenia lambda, podając funkcję Praca do wykonywania bloku przepływu danych. W tym dokumencie opisano sposób użycia <xref:System.Func%602> i wyrażenia lambda do wykonania akcji w blokach wykonywania.  
+*Wykonanie bloku przepływu danych* typy wywołanie delegata dostarczone przez użytkownika, po otrzymaniu danych. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, I <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> klasy są typami bloku przepływu danych wykonywania. Możesz użyć `delegate` — słowo kluczowe (`Sub` w języku Visual Basic), <xref:System.Action%601>, <xref:System.Func%602>, lub wyrażenie lambda, gdy zawierają funkcję pracy do wykonania bloku przepływu danych. W tym dokumencie opisano, jak używać <xref:System.Func%602> i wyrażenia lambda do wykonania akcji w blokach wykonywania.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="example"></a>Przykład  
- Poniższy przykład korzysta z przepływu danych w celu odczytania pliku z dysku i oblicza liczbę bajtów w pliku, które są równe zero. Używa <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> do odczytania danego pliku i obliczanie liczby zero bajtów i <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> do drukowania liczby zero bajtów do konsoli. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> Określa obiekt <xref:System.Func%602> obiektu do wykonywania pracy, gdy bloki odbierać dane. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Obiekt używa wyrażenia lambda drukowanie do konsoli liczba zero bajtów, które są do odczytu.  
+ Poniższy przykład używa przepływu danych do odczytu pliku z dysku i oblicza liczbę bajtów w pliku, które są równe zero. Używa ona <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> odczytać pliku do obliczenia liczby zero bajtów i <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> do drukowania liczby zero bajtów do konsoli. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> Obiekt Określa <xref:System.Func%602> obiekt do wykonywania pracy po bloki odbierać dane. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Obiektu używa wyrażenia lambda do drukowania w konsoli liczba zero bajtów, które są do odczytu.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#1)]
  [!code-vb[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#1)]  
   
- Chociaż można podać wyrażenia lambda do <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> obiektu, w tym przykładzie użyto <xref:System.Func%602> umożliwiające inny kod, aby użyć `CountBytes` metody. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Obiekt używa wyrażenia lambda, ponieważ pracy do wykonania jest specyficzne dla tego zadania, a nie mogą być użyteczne z innych kodu. Aby uzyskać więcej informacji na temat działania wyrażeń lambda w bibliotece równoległych zadań, zobacz [wyrażenia Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Chociaż można podać w wyrażeniu lambda <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> obiekt, w tym przykładzie użyto <xref:System.Func%602> umożliwiające inny kod, aby użyć `CountBytes` metody. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Obiektu używa wyrażenia lambda, ponieważ wykonanie pracy jest specyficzne dla tego zadania, a nie mogą być użyteczne z innego kodu. Aby uzyskać więcej informacji o działaniu wyrażeń lambda w bibliotece zadań równoległych, zobacz [wyrażeń Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
- Sekcja Podsumowanie delegować typów w [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) dokumencie przedstawiono podsumowanie typów delegata, które można udostępniać użytkownikom <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, i <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> obiektów. Tabela określa również, czy typ delegata działa synchronicznie lub asynchronicznie.  
+ Sekcja Podsumowanie delegować typów w [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) dokumencie przedstawiono podsumowanie typy delegatów, które można udostępnić <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, i <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> obiektów. Tabela określa również, czy typ delegata działa synchronicznie lub asynchronicznie.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` w języku Visual Basic), a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
+ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.  
   
  Visual C#  
   
@@ -45,15 +45,16 @@ ms.locfileid: "33583022"
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- W poniższym przykładzie przedstawiono delegowanego typu <xref:System.Func%602> do <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> obiektu w celu wykonania zadań w bloku przepływu danych synchronicznie. Aby włączyć bloku przepływu danych zachowanie asynchronicznie, podaj delegowanego typu <xref:System.Func%601> do bloku przepływu danych. Gdy bloku przepływu danych działa w sposób asynchroniczny, zadanie bloku przepływu danych jest pełny tylko wtedy, gdy zwracana <xref:System.Threading.Tasks.Task%601> obiekt zakończenie. Poniższy przykład modyfikuje `CountBytes` — metoda i używa [async](~/docs/csharp/language-reference/keywords/async.md) i [await](~/docs/csharp/language-reference/keywords/await.md) operatory ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) i [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) w Visual Basic), aby asynchronicznie obliczać całkowita liczba bajtów, które są zero w wybrany plik. <xref:System.IO.FileStream.ReadAsync%2A> Metoda wykonuje operacje odczytu pliku asynchronicznie.  
+ W poniższym przykładzie przedstawiono delegat typu <xref:System.Func%602> do <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> obiektu w celu wykonania zadań w bloku przepływu danych synchronicznie. Aby włączyć bloku przepływu danych zachowywać się asynchronicznie, podaj delegat typu <xref:System.Func%601> blok przepływu danych. Gdy bloku przepływu danych działa w sposób asynchroniczny, zadanie bloku przepływu danych jest pełny tylko wtedy, gdy zwrócony <xref:System.Threading.Tasks.Task%601> obiektu zostanie zakończone. Poniższy przykład modyfikuje `CountBytes` metody i używa [async](~/docs/csharp/language-reference/keywords/async.md) i [await](~/docs/csharp/language-reference/keywords/await.md) operatorów ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) i [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) w Visual Basic), aby asynchronicznie obliczać całkowita liczba bajtów, które mają wartość zero w podanego pliku. <xref:System.IO.FileStream.ReadAsync%2A> Metoda asynchronicznie wykonuje operacje odczytu pliku.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  
   
- Umożliwia także wyrażenia asynchroniczne lambda do wykonania akcji w bloku przepływu danych wykonywania. Poniższy przykład modyfikuje <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> obiekt, który jest używany w poprzednim przykładzie, tak aby były używane do wykonywania pracy asynchronicznego wyrażenia lambda.  
+ Można również użyć wyrażenia asynchroniczne lambda do wykonania akcji w bloku przepływu danych wykonywania. Poniższy przykład modyfikuje <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> obiekt, który jest używany w poprzednim przykładzie, tak aby używał wyrażenia lambda do wykonywania pracy asynchronicznie.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

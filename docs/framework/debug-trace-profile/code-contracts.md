@@ -1,6 +1,6 @@
 ---
 title: Kontrakty kodu
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080611"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222126"
 ---
 # <a name="code-contracts"></a>Kontrakty kodu
 Kontrakty kodu zapewniają możliwość określenia warunków wstępnych, warunków końcowych i invariants obiektu w kodzie. Są one wymagania, które muszą zostać spełnione, podczas wprowadzania metodę lub właściwość. Warunków końcowych opisują oczekiwania w czasie, który zamyka kodu metody lub właściwości. Obiekt invariants opisują oczekiwany stan dla klasy, która jest w dobrym stanie.  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- Invariants warunkowo są definiowane przez symbol preprocesora CONTRACTS_FULL. Podczas sprawdzania czasu wykonywania, invariants są sprawdzane na końcu każdej metody publiczne. Jeśli niezmiennej nazwa publicznej metody z tej samej klasy, niezmienna Sprawdź, czy zwykle sytuacja może mieć miejsce na końcu metody publicznej jest wyłączona. Zamiast tego sprawdzanie jest wykonywane tylko na końcu wywołania metody prowadzące do tej klasy. Dzieje się również, jeśli klasa jest ponowne wprowadzenie ze względu na wywołanie metody w innej klasy. Invariants nie są sprawdzane dla obiektu finalizatory lub dowolnej metody, które implementują <xref:System.IDisposable.Dispose%2A> metody.  
+ Invariants warunkowo są definiowane przez symbol preprocesora CONTRACTS_FULL. Podczas sprawdzania czasu wykonywania, invariants są sprawdzane na końcu każdej metody publiczne. Jeśli niezmiennej nazwa publicznej metody z tej samej klasy, niezmienna Sprawdź, czy zwykle sytuacja może mieć miejsce na końcu metody publicznej jest wyłączona. Zamiast tego sprawdzanie jest wykonywane tylko na końcu wywołania metody prowadzące do tej klasy. Dzieje się również, jeśli klasa jest ponowne wprowadzenie ze względu na wywołanie metody w innej klasy. Invariants nie są sprawdzane pod kątem finalizatora obiektu i <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementacji.  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>Wytyczne dotyczące użycia  

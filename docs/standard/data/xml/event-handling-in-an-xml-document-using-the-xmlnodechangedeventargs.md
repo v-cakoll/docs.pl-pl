@@ -9,11 +9,11 @@ ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868799"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204893"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Obsługa zdarzeń w dokumencie XML przy użyciu klasy XmlNodeChangedEventArgs
 **Klasy XmlNodeChangedEventArgs** hermetyzuje Argumenty przekazane do obsługi zdarzeń zarejestrowane na **XmlDocument** obiektu do obsługi zdarzeń. Zdarzenia i opis tego kiedy są one uruchamiane jest podana w poniższej tabeli.  

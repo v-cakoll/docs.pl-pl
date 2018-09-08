@@ -14,11 +14,11 @@ helpviewer_keywords:
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 ms.openlocfilehash: 89bcd6e0e7c1cc867bf853dc9bbe96628942ace2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078944"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211752"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Tworzenie z wiersza polecenia (Visual Basic)
 Projekt Visual Basic składa się z co najmniej jeden plik oddzielne źródło. W trakcie znane jako kompilacji te pliki są połączone razem w jednym pakiecie — pojedynczy plik wykonywalny, który może działać jako aplikacja.  

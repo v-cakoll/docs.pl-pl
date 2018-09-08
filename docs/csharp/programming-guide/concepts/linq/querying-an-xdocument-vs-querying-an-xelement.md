@@ -3,11 +3,11 @@ title: Podczas badania elementu XDocument a. Podczas badania XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
 ms.openlocfilehash: 991cbf14fde1c2e3e1e76ef10066db3408ca51c5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44127975"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200831"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Podczas badania elementu XDocument a. Podczas badania XElement (C#)
 Podczas ładowania dokumentu za pośrednictwem <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, zauważysz, trzeba nieco inaczej niż podczas ładowania za pośrednictwem pisać zapytania <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  

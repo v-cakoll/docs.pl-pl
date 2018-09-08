@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865488"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213718"
 ---
 # <a name="-reference-c-compiler-options"></a>— Odwołanie (opcje kompilatora C#)
 **— Dokumentacja** opcja powoduje, że kompilator, aby zaimportować [publicznych](../../../csharp/language-reference/keywords/public.md) wpisz informacje w określonym pliku do bieżącego projektu, dzięki czemu można odwoływać się do metadanych z określonych plików zestawów.  
@@ -67,10 +67,12 @@ ms.locfileid: "43865488"
  W tym przykładzie pokazano, jak używać [alias zewnętrzny](../../../csharp/language-reference/keywords/extern-alias.md) funkcji.  
   
  Kompilowanie pliku źródłowego i zaimportować metadane z `grid.dll` i `grid20.dll`, które zostały skompilowane wcześniej. Dwa pliki dll zawiera różne wersje tego samego składnika, a następnie użyj dwóch **— dokumentacja** przy użyciu opcji alias do kompilowania pliku źródłowego. Opcje wyglądać następująco:  
+
+```console
+-reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
+```
   
- -reference:GridV1=grid.dll i - reference:GridV2=grid20.dll  
-  
- Powoduje to skonfigurowanie aliasów zewnętrznych "GridV1" i "GridV2" używane w programach za pomocą instrukcji zewnętrzny:  
+ Powoduje to skonfigurowanie aliasów zewnętrznych `GridV1` i `GridV2`, używane w programie przez `extern` instrukcji:  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- Po zakończeniu tej operacji może dotyczyć formant siatki z grid.dll przez dodanie przedrostka nazwę formantu GridV1, następująco:  
+ Po zakończeniu tej operacji możesz zapoznać się z formant siatki z `grid.dll` przez dodanie przedrostka nazwę formantu `GridV1`, podobnie do następującego:  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- Ponadto można skorzystać na formancie siatki z grid20.dll przez dodanie przedrostka nazwę formantu GridV2 następująco:  
+ Ponadto, możesz zapoznać się z formant siatki z `grid20.dll` przez dodanie przedrostka nazwę formantu `GridV2` następująco:  
   
 ```csharp  
 GridV2::Grid   

@@ -3,11 +3,11 @@ title: 'Porady: wypełnianie drzewa XML z systemu plików (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
 ms.openlocfilehash: 7bddab1942c5a673969e271338f17705914f81a4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039152"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204997"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Porady: wypełnianie drzewa XML z systemu plików (C#)
 Typowe i przydatne stosowania drzew XML jest do przechowywania danych hierarchicznych nazwa/wartość. Możesz można wypełnianie drzewa XML z danymi hierarchicznymi i następnie wykonuje zapytania, przekształcania go i jeśli to konieczne, serializować go. W tym scenariuszu użycia nie są wiele semantyki określonych XML, takie jak przestrzenie nazw i zachowania biały znak, ważne. Zamiast tego której używasz drzewa XML jako mały w pamięci, bazie danych hierarchicznych jednego użytkownika.  

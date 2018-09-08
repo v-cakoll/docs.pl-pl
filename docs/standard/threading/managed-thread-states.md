@@ -8,11 +8,11 @@ ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135357"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207333"
 ---
 # <a name="managed-thread-states"></a>Zarządzane stany wątków
 Właściwość <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> zapewnia maska bitowa, która wskazuje bieżący stan wątku. Wątek jest zawsze w co najmniej jednym z możliwych stanów w <xref:System.Threading.ThreadState> wyliczenia i może być różne stany, w tym samym czasie.  

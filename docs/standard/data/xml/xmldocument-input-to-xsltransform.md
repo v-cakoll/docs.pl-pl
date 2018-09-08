@@ -9,11 +9,11 @@ ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e83cf82aee57b1f40f695700d8d0b38c12e0ac39
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038851"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217051"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>Dane wejściowe obiektu XmlDocument klasy xsltransform
 <xref:System.Xml.XmlDocument> Klasa oferuje funkcje edycji dokumentu XML. Jeśli plik XML musi edytowanie lub zmodyfikowany przed wysłaniem do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody ładowanie kodu XML do <xref:System.Xml.XmlDocument>, edytować i wyślij go do <xref:System.Xml.Xsl.XslTransform>.  

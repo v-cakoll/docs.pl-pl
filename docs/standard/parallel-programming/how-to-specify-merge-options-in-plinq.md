@@ -10,27 +10,28 @@ helpviewer_keywords:
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1f30245b398ae894e7226d1e94046fc9111dcf9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8914d3c443971f73e6f3fa366c26567bae60dbe1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580448"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135058"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a>Porady: określanie opcji scalania w PLINQ
-W tym przykładzie przedstawiono sposób Określanie opcji scalania, które będą stosowane do wszystkich kolejnych operatorów w zapytaniu PLINQ. Nie trzeba jawnie ustaw opcje scalania, ale może to zwiększyć wydajność. Aby uzyskać więcej informacji na temat opcji scalania, zobacz [opcje scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+W tym przykładzie przedstawiono sposób Określanie opcji scalania, które będą stosowane do wszystkie kolejne operatory w zapytaniu PLINQ. Nie trzeba jawnie ustawić opcje scalania, ale może to poprawić wydajność. Aby uzyskać więcej informacji na temat opcji scalania, zobacz [opcji scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 > [!WARNING]
->  W tym przykładzie jest jedynie do zademonstrowania użycia i mogą nie działać szybciej niż równoważne sekwencyjnych zapytań LINQ do obiektów zapytania. Aby uzyskać więcej informacji na temat przyspieszenie, zobacz [przyspieszeniach w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  W tym przykładzie jest jedynie do zademonstrowania określonych użycia i może nie działać szybciej niż równoważna sekwencyjnego LINQ do kwerendy obiekty. Aby uzyskać więcej informacji na temat przyspieszenie zobacz [ogólne informacje o przyspieszeniach w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano zachowanie opcji scalania w scenariuszu podstawowe nieuporządkowaną źródła i stosuje funkcję kosztowne do każdego elementu.  
+ W poniższym przykładzie pokazano zachowanie opcji scalania w podstawowy scenariusz, nieuporządkowane źródła i stosuje kosztowna funkcja do każdego elementu.  
   
  [!code-csharp[PLINQ#23](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#23)]
  [!code-vb[PLINQ#23](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#23)]  
   
- W przypadkach, gdy <xref:System.Linq.ParallelMergeOptions.AutoBuffered> opcja generuje niepożądanych czas oczekiwania przed pierwszym elementem jest zwróciło, spróbuj <xref:System.Linq.ParallelMergeOptions.NotBuffered> opcji umożliwiające uzyskanie wyniku elementy szybciej i bardziej gładko.  
+ W przypadkach, gdzie <xref:System.Linq.ParallelMergeOptions.AutoBuffered> opcji powoduje niepożądanych opóźnienie przed pierwszym elementem jest uzyskane, spróbuj <xref:System.Linq.ParallelMergeOptions.NotBuffered> opcji umożliwiające uzyskanie wyniku elementów, szybciej i sprawniej.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Linq.ParallelMergeOptions>  
- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Linq.ParallelMergeOptions>  
+- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

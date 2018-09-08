@@ -8,11 +8,11 @@ ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59f8ceaf7981aebf3ae64e10d253004780f47e50
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063004"
+ms.locfileid: "44133850"
 ---
 # <a name="net-framework-performance"></a>Wydajność środowiska .NET Framework
 Jeśli chcesz tworzyć aplikacje o bardzo dużej wydajności, należy zaprojektować i zaplanować wydajność tak samo jak projektowanie innych funkcji aplikacji. Można użyć narzędzi dostarczanych przez firmę Microsoft do pomiaru wydajności Twojej aplikacji i, jeśli to konieczne, poprawić wykorzystanie pamięci, przepływność kodu i szybkość reakcji. Ten temat zawiera listę narzędzi do analizy wydajności zapewnia firmy Microsoft i zawiera łącza do innych tematów, które obejmują wydajność dla konkretnych obszarów projektowania aplikacji.  

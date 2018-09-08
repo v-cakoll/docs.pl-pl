@@ -2,12 +2,12 @@
 title: 'Wprowadzenie do F # za pomocą narzędzia wiersza polecenia'
 description: 'Dowiedz się, jak tworzenie prostego rozwiązania wielu projektów F # za pomocą interfejsu wiersza polecenia platformy .NET Core w dowolnym systemie operacyjnym (Windows, macOs lub Linux).'
 ms.date: 03/26/2018
-ms.openlocfilehash: 6cdb2b42781dba6ba00c03b20e6a76d033e03063
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875017"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134808"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Wprowadzenie do F # za pomocą interfejsu wiersza polecenia platformy .NET Core
 
@@ -41,7 +41,7 @@ Zmień katalog na *FSNetCore*.
 Użyj `dotnet new` polecenia, Utwórz projekt biblioteki klas w **src** folder o nazwie biblioteki.
 
 ```console
-dotnet new lib -lang F# -o src/Library
+dotnet new classlib -lang F# -o src/Library
 ```
 
 Następującą strukturę katalogów jest generowany po uruchomieniu w poprzednim poleceniu:

@@ -13,11 +13,11 @@ ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4574dffc3f9dd1b60d655bfde33a4ddc1a81d350
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068979"
+ms.locfileid: "44140947"
 ---
 # <a name="protected-members"></a>Chronione elementy członkowskie
 Chronione elementy członkowskie samodzielnie nie oferuje żadnych rozszerzeń, ale mogą robić więjsze rozszerzona funkcjonalność dzięki podklasy bardziej wydajne. One może służyć do udostępnienia Dostosowywanie zaawansowane opcje bez niepotrzebnego komplikowania kodu języka głównego interfejsu publicznego.  

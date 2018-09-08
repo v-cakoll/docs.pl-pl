@@ -12,11 +12,11 @@ ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea5311de8cef266af23b259d943568bfa95eaf72
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44071417"
+ms.locfileid: "44128829"
 ---
 # <a name="parameter-design"></a>Projekt parametrów
 Ta sekcja zawiera parametr projektu, w tym sekcje z wytycznymi dotyczącymi sprawdzania argumentów ogólnych wytycznych. Ponadto należy zapoznać się z wytycznymi opisany w [parametry nazwy](../../../docs/standard/design-guidelines/naming-parameters.md).  

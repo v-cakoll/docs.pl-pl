@@ -6,11 +6,11 @@ ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2544070bb7ea891a804edd559a5d58e08b071771
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878739"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137580"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Wybieranie, Obliczanie i dopasowywanie danych XML przy użyciu klasy XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Klasa dostarcza metody do wybierania węzłów w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> przy użyciu zapytania XPath, oceny i sprawdź wyniki wyrażenia XPath i określić, czy węzeł w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu pasuje podane wyrażenie XPath. Te i inne pojęcia, które odnoszą się do zaznaczania, oceniania i zgodne węzły w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu są opisane w poniższych tematach.  

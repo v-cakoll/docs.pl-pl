@@ -9,11 +9,11 @@ ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9031f5df0d0f48dc2844cdfd0654ee4ab876cc22
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44046005"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128082"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Wczytywanie dokumentu XML do modelu DOM
 Informacje o XML jest do odczytu do pamięci z różnych formatów. Może być odczytany z ciągu, strumienia, adres URL, czytnika tekstu lub klasę pochodną <xref:System.Xml.XmlReader>.  

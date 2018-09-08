@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
 ms.openlocfilehash: 9c8cab952fd9d0c58380a308dd360dcedb2ea8f1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387076"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131740"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Porady: tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant
 W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do komentarzowi użytemu w programie Microsoft Outlook przy użyciu **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. Taki układ odbywa się głównie za pośrednictwem dokowanie kontrolek za pomocą formularza.  
@@ -29,7 +29,7 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
   
 1.  Utwórz nowy projekt aplikacji Windows (**pliku** > **New** > **projektu** > **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).  
   
-2.  Przeciągnij <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika** do formularza. W **właściwości** oknie <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.  
+2.  Przeciągnij <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika** do formularza. W oknie **Właściwości** ustaw właściwość <xref:System.Windows.Forms.SplitContainer.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Fill>.   
   
 3.  Przeciągnij <xref:System.Windows.Forms.TreeView> z kontrolować **przybornika** do panelu po lewej stronie <xref:System.Windows.Forms.SplitContainer> kontroli. W **właściwości** oknie <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Left> , klikając w panelu po lewej stronie ekranu, w edytorze wartości wyświetlane po kliknięciu strzałki w dół.  
   

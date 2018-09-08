@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: deb1b6ca5c6fc996a015e32dd5e0c7b9bd6530fa
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867884"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137606"
 ---
 # <a name="how-to-create-an-activity"></a>Porady: tworzenie działania
 Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Logika wykonania działania, które można zaimplementować w kodzie zarządzanym lub można ją wdrożyć za pomocą innych działań. W tym temacie pokazano, jak utworzyć dwóch działań. Pierwsze działanie jest proste działania, które używa kodu, aby zaimplementować logikę jego wykonywania. Implementacja drugiego działania jest zdefiniowana za pomocą innych działań. Te działania są używane w kolejnych krokach samouczka.  

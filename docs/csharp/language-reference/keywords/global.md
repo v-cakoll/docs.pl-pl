@@ -8,11 +8,11 @@ helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 8932c16a-6959-42c2-86e7-2c4221ab788b
 ms.openlocfilehash: 837245e31a9a795aa2f13cfc6c33fefb6402801d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038643"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128316"
 ---
 # <a name="global-c-reference"></a>global (odwołanie w C#)
 

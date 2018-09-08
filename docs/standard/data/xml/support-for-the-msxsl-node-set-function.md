@@ -6,11 +6,11 @@ ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4b1fb4abe8ca0ba7afcefe996de59ceaf67a249
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063729"
+ms.locfileid: "44132386"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Obsługa msxsl: node-set() — funkcja
 `msxsl:node-set` Funkcja umożliwia konwertowanie wynikowego fragmentu drzewa w zestawie węzłów. Węzeł wynikowy ustawić opcji zawsze zawiera jeden węzeł i węzeł główny drzewa.  

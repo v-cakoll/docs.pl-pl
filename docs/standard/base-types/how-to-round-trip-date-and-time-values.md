@@ -15,11 +15,11 @@ ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032374"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129063"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Porady: obustronna konwersja wartości daty i godziny
 W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznacznej identyfikacji pojedynczego punktu w czasie. W tym temacie pokazano, jak zapisywanie i przywracanie <xref:System.DateTime> wartość <xref:System.DateTimeOffset> wartości i wartości daty i godziny, z czasem strefy, aby wartość przywróconej identyfikuje tym samym czasie jako zapisaną wartość.  

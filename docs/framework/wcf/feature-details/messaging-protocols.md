@@ -3,11 +3,11 @@ title: Protokoły obsługi komunikatów
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: 3e56636e8364eec333f9585a0f62f6510561d1cc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868737"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138607"
 ---
 # <a name="messaging-protocols"></a>Protokoły obsługi komunikatów
 Stos kanał Windows Communication Foundation (WCF) wykorzystuje kanały transportu i kodowania do przekształcania reprezentacji wewnętrznej komunikatu do jego formatu i wysyłania go przy użyciu danego transportu. Najbardziej typowe transportu współdziałania w ramach usług sieci Web, jest protokół HTTP i najbardziej typowe kodowania, używane przez usługi sieci Web są oparte na języku XML protokołu SOAP 1.1, protokołu SOAP 1.2 i komunikat transmisji optymalizacji mechanizm (MTOM).  

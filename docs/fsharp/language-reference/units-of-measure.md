@@ -2,17 +2,16 @@
 title: Jednostki miary (F#)
 description: 'Dowiedz się, jak zmiennoprzecinkowych i wartości liczby całkowitej ze znakiem w języku F # można skojarzyć jednostki miary, które są zazwyczaj używane do wskazać, długości, woluminów i urządzeń pamięci masowej.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 6075742ec80d9510be51d4565e3397931c9f68c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517429"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131263"
 ---
 # <a name="units-of-measure"></a>Jednostki miary
 
 Zmiennoprzecinkowe wartości liczby całkowitej ze znakiem i punkt w języku F # może być skojarzony jednostki miary, które są zwykle używane do wskazania długość woluminu, masa, i tak dalej. Za pomocą ilości z jednostkami, Włącz kompilator, aby sprawdzić, czy relacje arytmetyczne mają prawidłowe jednostki, co pomaga zapobiec błędy programowania.
-
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,6 +20,7 @@ Zmiennoprzecinkowe wartości liczby całkowitej ze znakiem i punkt w języku F #
 ```
 
 ## <a name="remarks"></a>Uwagi
+
 Definiuje składni powyżej elementem *nazwa jednostki* jako jednostka miary. Opcjonalny składnik jest używane do definiowania nową miarę, posługując się jednostkami uprzednio zdefiniowany. Na przykład następujący wiersz definiuje środek `cm` (centymetr).
 
 ```fsharp
@@ -72,7 +72,7 @@ Jednostki miary można zastosować do dowolnego typu, nie tylko zmiennoprzecinko
 Poniższy przykład ilustruje użycie jednostek miary.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
-    
+
 Poniższy kod ilustruje sposób konwertowania z bezwymiarowa liczbę zmiennoprzecinkową do zwymiarowany wartość zmiennoprzecinkową. Możesz po prostu mnożenia 1.0, stosując wymiarów ze 1.0. Możesz to abstrakcyjna do funkcji, takich jak `degreesFahrenheit`.
 
 Ponadto jeśli przekazujesz zwymiarowany wartości do funkcji, które oczekują bezwymiarowa liczb zmiennoprzecinkowych, należy anulować jednostki lub rzutowane na `float` przy użyciu `float` operatora. W tym przykładzie, dzielenie przez `1.0<degC>` dla argumentów `printf` ponieważ `printf` oczekuje bezwymiarowa ilości.
@@ -88,20 +88,23 @@ That temperature in degrees Celsius is    32.22.
 ```
 
 ## <a name="using-generic-units"></a>Przy użyciu ogólnych jednostek
+
 Można napisać ogólnych funkcji, które działają na danych, która ma skojarzone jednostki miary. Można to zrobić, określając typ wraz z ogólnych jednostki jako parametr typu, jak pokazano w poniższym przykładzie kodu.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
-    
+
 ## <a name="creating-aggregate-types-with-generic-units"></a>Tworzenie typów agregacji za pomocą ogólnego jednostki
+
 Poniższy kod przedstawia sposób tworzenia typ agregacji, który składa się z pojedynczych wartości zmiennoprzecinkowych, które mają jednostek, które są rodzajowe. Dzięki temu jeden typ ma zostać utworzony, która współdziała z różnych jednostek. Ponadto ogólne jednostki zachować bezpieczeństwo typów, zapewniając, że typ ogólny, który ma jeden zbiór jednostek jest innego typu niż tego samego typu ogólnego z innym zestawem jednostek. Podstawy korzystania z tej techniki jest to, że `Measure` atrybut można stosować do typu parametru.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
-    
+
 ## <a name="units-at-runtime"></a>Jednostki w czasie wykonywania
+
 Jednostki miary są używane do sprawdzania typu statycznego. Po skompilowaniu wartości zmiennoprzecinkowe są eliminowane jednostki miary, dlatego jednostki są tracone w czasie wykonywania. W związku z tym wszelkie próby do implementacji funkcji, która zależy od sprawdzania jednostki w czasie wykonywania nie jest możliwe. Na przykład implementacja `ToString` funkcję umożliwiającą wydrukowanie limit jednostek nie jest możliwe.
 
-
 ## <a name="conversions"></a>Konwersje
+
 Można przekonwertować na typ, który ma jednostki (na przykład `float<'u>`) do typu, który nie ma jednostek, można użyć funkcji konwersja standardowa. Na przykład, można użyć `float` do przekonwertowania na `float` wartość, która nie ma jednostek, jak pokazano w poniższym kodzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
@@ -109,10 +112,11 @@ Można przekonwertować na typ, który ma jednostki (na przykład `float<'u>`) d
 Aby przekonwertować wartość unitless wartość, która zawiera jednostki, należy pomnożyć przez wartość 1 lub 1.0, która jest oznaczona przy użyciu odpowiednich jednostek. Do pisania warstwy współdziałanie, istnieją jednak również niektóre funkcje jawne, używanych do konwersji wartości unitless wartości przy użyciu jednostek. Zostały one [Microsoft.FSharp.Core.LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) modułu. Na przykład, aby przekonwertować unitless `float` do `float<cm>`, użyj [floatwithmeasure —](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9), jak pokazano w poniższym kodzie.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
-    
+
 ## <a name="units-of-measure-in-the-f-core-library"></a>Jednostki miary w podstawowej biblioteki F #
+
 Biblioteka jednostka jest dostępna w `FSharp.Data.UnitSystems.SI` przestrzeni nazw. Zawiera jednostki SI w ich formie symboli (takich jak `m` dla licznika) w `UnitSymbols` podrzędnej przestrzeni nazw, a ich pełną nazwę (np. `meter` dla licznika) w `UnitNames` podrzędnej przestrzeni nazw.
 
+## <a name="see-also"></a>Zobacz także
 
-## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F#](index.md)
+- [Dokumentacja języka F#](index.md)

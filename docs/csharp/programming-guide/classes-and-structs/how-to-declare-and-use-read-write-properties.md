@@ -9,11 +9,11 @@ helpviewer_keywords:
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
 ms.openlocfilehash: 77db2841d6ef9af21d38736f39e6041699ca13d5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733992"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129397"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Porady: deklarowanie właściwości odczyt/zapis (C# Programming Guide) oraz
 Właściwości zapewniają wygodne publiczne elementy członkowskie danych bez ryzyka związane z niechronionych, niekontrolowane i niezweryfikowanych dostęp do danych obiektu. Jest to realizowane za pośrednictwem *Akcesory*: specjalne metody, które przypisać i pobierania wartości z bazowego elementu danych. [Ustaw](../../../csharp/language-reference/keywords/set.md) dostępu umożliwia członkom danych można przypisać i [uzyskać](../../../csharp/language-reference/keywords/get.md) akcesor pobiera wartości elementów członkowskich danych.  

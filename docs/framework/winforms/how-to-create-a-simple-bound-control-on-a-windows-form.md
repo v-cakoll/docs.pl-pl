@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
 ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44066457"
+ms.locfileid: "44138373"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Porady: tworzenie prostego formantu powiązanego na formularzu systemu Windows
 Za pomocą *proste powiązanie*, można wyświetlić elementu danych jednego, takiego jak wartość kolumny z tabeli zestawu danych w formancie. Użytkownik może prosty wiązania dowolnej właściwości kontrolki z wartością danych.  

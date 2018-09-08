@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872406"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131965"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Dwukierunkowa obsługa aplikacji Windows Forms
 Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługują dwukierunkowej języków (od prawej do lewej), takich jak arabski i hebrajski. W tym standardowych formularzy, okna dialogowe, formularze MDI i wszystkich kontrolek, można pracować w nich — oznacza to, że wszystkie obiekty w <xref:System.Windows.Forms.Control> przestrzeni nazw.  

@@ -9,11 +9,11 @@ ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1827e40256bc4307006ce081cbb6cbc44a89a0bc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871088"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137645"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>Usuwanie danych XML przy użyciu klasy XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia zestaw metod, które służy do usuwania węzłów i wartości z dokumentu XML. Aby można było używać tych metod <xref:System.Xml.XPath.XPathNavigator> obiekt musi być niemożliwa, czyli jego <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> właściwość musi być `true`.  

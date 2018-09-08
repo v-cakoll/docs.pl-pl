@@ -13,11 +13,11 @@ ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6478ea94b6c54272a01497ac7b1cb1b197892309
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866965"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131068"
 ---
 # <a name="interlocked-operations"></a>Operacje blokowane
 <xref:System.Threading.Interlocked> Klasa dostarcza metody, które synchronizują dostęp do zmiennej, która jest współużytkowana przez wiele wątków. Wątki różnych procesów można użyć tego mechanizmu, jeśli zmienna znajduje się w pamięci współużytkowanej. Operacje blokowane są niepodzielne, cała operacja jest jednostki, która nie może zostać przerwane przez inną operację blokowane na tej samej zmiennej. Jest to ważne w systemach operacyjnych z preemptive wielowątkowości, gdzie wątek może zostać zawieszone po załadowaniu wartość z adresu pamięci, ale przed masz szansę, aby go zmienić i zapisz go.  

@@ -1,5 +1,5 @@
 ---
-title: Konwencje wielkość liter
+title: Konwencje dotyczące wielkości liter
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,33 +11,33 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ef7913a2601c3a791cb028b4074ce37b9e9421b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575287"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131938"
 ---
-# <a name="capitalization-conventions"></a>Konwencje wielkość liter
-Wskazówki zawarte w ten rozdział układ prostą metodę przy użyciu przypadek, który po zastosowaniu spójnie upewnij identyfikatory typów, członków i parametry łatwy do odczytania.  
+# <a name="capitalization-conventions"></a>Konwencje dotyczące wielkości liter
+Wskazówki zawarte w tym rozdziale układ w prosty sposób za pomocą sprawa, po zastosowaniu spójnie upewnij identyfikatory dla typów, elementów członkowskich i parametrów, łatwe do odczytania.  
   
 ## <a name="capitalization-rules-for-identifiers"></a>Reguły wielkości liter dla identyfikatorów  
- Rozróżnianie słów w identyfikatorze, wielką pierwszą literę każdego wyrazu w identyfikatorze. Nie używaj znaków podkreślenia rozróżnianie słów, lub dla tej sprawy w dowolnym miejscu identyfikatorów. Istnieją dwa sposoby odpowiednie na wielką identyfikatorów, w zależności od użycia identyfikatora:  
+ Do odróżnienia słów w identyfikatorze, wielką pierwszą literę każdego wyrazu w identyfikatorze. Nie należy używać znaków podkreślenia do odróżnienia wyrazów, lub dla tej sprawy w dowolnym miejscu w identyfikatorach. Istnieją dwa sposoby odpowiednie na wielką identyfikatorów, w zależności od tego, użyj identyfikatora:  
   
 -   PascalCasing  
   
 -   camelCasing  
   
- Konwencji PascalCasing używany dla wszystkich identyfikatorów z wyjątkiem nazwy parametrów powoduje rozpoczynanie pierwszy znak każdego wyrazu (w tym akronimów za pośrednictwem dwóch liter o długości), jak pokazano w poniższych przykładach:  
+ Konwencja PascalCasing, umożliwiający wszystkie identyfikatory z wyjątkiem nazw parametrów powoduje rozpoczynanie pierwszego znaku wystąpień poszczególnych wyrazów (w tym akronimów za pośrednictwem dwóch liter o długości), jak pokazano w poniższych przykładach:  
   
  `PropertyDescriptor`  
  `HtmlTag`  
   
- Szczególnych przypadkach wykonywane akronimów dwuliterowych, w których kapitalizacji zarówno litery, jak pokazano w następującym identyfikatorem:  
+ Przypadek specjalny wysłaniu akronimów dwuliterowych, w których oba litery pod tym, jak pokazano w następującym identyfikatorem:  
   
  `IOStream`  
   
- Konwencja camelCasing, używana tylko w przypadku nazw parametrów powoduje rozpoczynanie pierwszy znak każdego wyrazu, z wyjątkiem pierwszej word, jak pokazano w poniższych przykładach. Jako przykład przedstawiono również, akronimów dwuliterowych, rozpoczynające się identyfikatorem liter formatu są małymi literami.  
+ Konwencja camelCasing, używana tylko w przypadku nazwy parametrów powoduje rozpoczynanie pierwszym znakiem każdego wyrazu, z wyjątkiem pierwszy wyraz, jak pokazano w poniższych przykładach. W przykładzie pokazano również, skrótów dwuliterowych, które zaczynają się identyfikatorem formacie camelcase są zarówno małe litery.  
   
  `propertyDescriptor`  
  `ioStream`  
@@ -59,16 +59,16 @@ Wskazówki zawarte w ten rozdział układ prostą metodę przy użyciu przypadek
 |Zdarzenie|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Pole|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Wartość wyliczenia|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
-|Parametr|Formatu|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
+|Parametr|Mechanizm stosowania formatu|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## <a name="capitalizing-compound-words-and-common-terms"></a>Zamiany wyrazy złożone i typowe terminy  
- Większość warunki złożone są traktowane jako pojedyncze wyrazy na potrzeby użycia wielkich liter.  
+## <a name="capitalizing-compound-words-and-common-terms"></a>Wykorzystując wyrazy złożone i typowe terminy  
+ Większość warunki złożone są traktowane jako pojedynczego słowa do celów wielkość liter.  
   
  **X DO NOT** własne w tzw wyrazy złożone zamknąć formularz.  
   
- Są zapisywane jako pojedynczego wyrazu, takie jak punkt końcowy wyrazy złożone. Na potrzeby wielkości liter dla skrótowców Traktuj wyraz złożony zamknięciu formularza jako pojedynczego wyrazu. Użyj bieżącego słownika, aby określić, czy wyraz złożony są zapisywane w postaci zamknięte.  
+ Te są zapisywane jako jednego wyrazu, takie jak punkt końcowy wyrazy złożone. Na potrzeby liter dla skrótowców należy traktować wyraz złożony zamknięte formularza jako pojedynczego wyrazu. Użyj bieżącym słowniku, aby określić, wyraz złożony zostanie zapisane w postaci zamknięte.  
   
-|Pascal|Formatu|nie|  
+|Pascal|Mechanizm stosowania formatu|nie|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -96,15 +96,16 @@ Wskazówki zawarte w ten rozdział układ prostą metodę przy użyciu przypadek
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|  
 |`Writable`|`writable`|`Writeable`|  
   
-## <a name="case-sensitivity"></a>Uwzględniana wielkość liter  
- Języki, które można uruchamiać na CLR są nie muszą obsługiwać uwzględnianie wielkości liter, mimo że niektóre czy. Nawet jeśli język obsługuje tę funkcję, innych języków, które mogą uzyskiwać dostęp do Twojego framework nie. Wszystkie interfejsy API, które są dostępne z zewnątrz, w związku z tym nie zależą od wielkości liter, samodzielnie, aby rozróżnić dwóch nazw w tym samym kontekście.  
+## <a name="case-sensitivity"></a>Rozróżnianie wielkości liter  
+ Języki, które można uruchamiać na środowisko CLR nie są wymagane do obsługi uwzględnianie wielkości liter, mimo że niektóre zrobić. Nawet wtedy, gdy język obsługuje tę funkcję, nie są inne języki, które mogą uzyskiwać dostęp do swojej platformy. Wszystkie interfejsy API, które są dostępne z zewnątrz, dlatego nie można polegać na przypadek samodzielnie, aby rozróżnić dwóch nazw, w tym samym kontekście.  
   
- **X DO NOT** założono, że wszystkie języki programowania jest uwzględniana wielkość liter. Nie są one. Nazwy nie mogą się różnić w przypadku samodzielnie.  
+ **X DO NOT** założono, że wszystkie języki programowania jest uwzględniana wielkość liter. Nie są one. Nazwy nie mogą się różnić w przypadku autonomicznej.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)

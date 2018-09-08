@@ -8,11 +8,11 @@ helpviewer_keywords:
 - timers [Windows Forms], about timers
 ms.assetid: e672c05b-a8b6-4b26-9e4d-9223aa9e3873
 ms.openlocfilehash: 6e453f6b7718c6c5be3109f51153a3f5e4b5b6f4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032231"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44136462"
 ---
 # <a name="timer-component-overview-windows-forms"></a>Timer — Informacje o składniku (Formularze systemu Windows)
 Formularze Windows <xref:System.Windows.Forms.Timer> jest składnikiem, który wywołuje zdarzenie w regularnych odstępach czasu. Ten składnik jest przeznaczony dla środowiska Windows Forms. Jeśli potrzebujesz czasomierza, która jest odpowiednia w środowisku serwera, zobacz [wprowadzenie do serwerowych czasomierzy](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  

@@ -4,12 +4,12 @@ description: Dowiedz się, jakie zależności dotyczące usługi Windows kompute
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: bbf54c8d215783656830f0fa035708be82a7c39c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512739"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137086"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dla platformy .NET Core w Windows
 
@@ -30,6 +30,8 @@ W tym artykule przedstawiono zależności niezbędne do tworzenia aplikacji plat
 * Windows Server 2012 z dodatkiem SP1 (pełny serwer lub Server Core)
 * Windows Server 2012 R2 (pełny serwer lub Server Core)
 * Windows Server 2016 lub nowszy (pełny serwer, Server Core lub Nano Server)
+
+## <a name="net-core-supported-operating-systems"></a>.NET core, obsługiwane systemy operacyjne
 
 Następujące artykuły mają pełną listę systemów operacyjnych .NET Core, obsługiwane poszczególnych wersji:
 

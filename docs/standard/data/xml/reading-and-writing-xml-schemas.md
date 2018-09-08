@@ -10,11 +10,11 @@ ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 241ff40448c3dca2846f9e420dc7df41427dc79d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062225"
+ms.locfileid: "44133784"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Odczytywanie i zapisywanie schematów XML
 Schematu Object Model (model SOM) interfejsu API może służyć do odczytu i zapisu schematów języka (XSD) definicji schematu XML z plików lub innych źródeł i tworzenie XML schematów w pamięci przy użyciu klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw, które są mapowane do struktur, zdefiniowanych na całym świecie Wide Web Consortium (W3C) XML schematu zalecenia.  

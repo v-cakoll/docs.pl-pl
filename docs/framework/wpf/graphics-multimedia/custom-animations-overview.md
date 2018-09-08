@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: a18898f340c68b7890c56b586c87870c50fd4686
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879682"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131419"
 ---
 # <a name="custom-animations-overview"></a>Przegląd Niestandardowe animacje
 W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji systemu, tworząc niestandardowe klatki kluczowe animacji klas, lub za pomocą wywołania zwrotnego w poszczególnych klatkach pomijają je.  

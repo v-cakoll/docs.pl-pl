@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
 ms.openlocfilehash: b732de508c8738de5e5e55168a6e17a1d88a3b02
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885882"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133168"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Typy anonimowe (Przewodnik programowania w języku C#)
 Typy anonimowe umożliwiają wygodne do hermetyzacji zbiór właściwości tylko do odczytu w jeden obiekt bez konieczności jawne zdefiniowanie typu najpierw. Nazwa typu jest generowanych przez kompilator i nie jest dostępna na poziomie kodu źródłowego. Typ każdej właściwości jest wnioskowany przez kompilator.  

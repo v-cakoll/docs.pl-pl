@@ -6,11 +6,11 @@ helpviewer_keywords:
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
 ms.openlocfilehash: d6ecfc3659dcf533db0f4e7b67fdffd620a584fd
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046741"
+ms.locfileid: "44134548"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Porady: zapisywanie konstruktora kopiującego (Przewodnik programowania w języku C#)
 C# nie zapewnia konstruktorowi kopii dla obiektów, ale możesz napisać ją sam.  

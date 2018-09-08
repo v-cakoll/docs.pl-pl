@@ -3,11 +3,11 @@ title: Zaawansowane techniki zapytań (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
 ms.openlocfilehash: d33677be318275eb9c9cc427129caec6edddb2d9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036080"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141194"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>Zaawansowane techniki zapytań (LINQ to XML) (C#)
 Ta sekcja zawiera przykłady bardziej zaawansowanych [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania technik.  

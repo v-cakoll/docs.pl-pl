@@ -15,11 +15,11 @@ ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067967"
+ms.locfileid: "44135552"
 ---
 # <a name="application-domains"></a>Domeny aplikacji
 Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną formę izolacji między aplikacjami. Na przykład Windows używa procesów do izolowania aplikacji. Ta Izolacja jest niezbędna do zapewnienia, że kod uruchomiony w jednej aplikacji nie może niekorzystnie wpłynąć na inne, niezależne aplikacje.  

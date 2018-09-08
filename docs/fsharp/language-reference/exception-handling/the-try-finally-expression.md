@@ -3,11 +3,11 @@ title: 'Wyjątki: try...finally — Wyrażenie (F#)'
 description: 'Dowiedz się, jak F # "try... finally" wyrażenie umożliwia wykonanie kodu oczyszczania, nawet wtedy, gdy blok kodu zgłasza wyjątek.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803346"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137060"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Wyjątki: try...finally — Wyrażenie
 

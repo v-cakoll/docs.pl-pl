@@ -12,11 +12,11 @@ ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871739"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140345"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Porady: anulowanie zapytania PLINQ
 W poniższych przykładach pokazano dwa sposoby Anulowanie zapytania PLINQ. Pierwszy przykład pokazuje, jak anulować kwerendę, która składa się przede wszystkim z przechodzenia danych. Drugi przykład pokazuje, jak anulować kwerendę, która zawiera funkcję użytkownika, która jest obliczeniowo kosztowne.  

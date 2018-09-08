@@ -11,11 +11,11 @@ ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44066519"
+ms.locfileid: "44127748"
 ---
 # <a name="security-and-user-input"></a>Zabezpieczenia i dane użytkownika
 Dane użytkownika, który jest dowolny rodzaj danych wejściowych z żądania sieci Web lub adresu URL, dane wejściowe do formantów w aplikacji Microsoft Windows Forms i tak dalej, mogą negatywnie wpłynąć na kod, ponieważ często używane dane bezpośrednio jako parametry, aby wywołać inny kod. Ta sytuacja jest odpowiednikiem złośliwego kodu, wywoływanie kodu z parametrami dziwne, a ten sam ostrożności. Dane wejściowe użytkownika jest faktycznie trudniejsze bezpieczne ponieważ nie ramek stosu śledzenia obecność potencjalnie niezaufanych danych.  

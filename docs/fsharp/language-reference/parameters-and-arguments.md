@@ -2,12 +2,12 @@
 title: Parametry i argumenty (F#)
 description: 'Więcej informacji na temat Obsługa języka F # do definiowania parametrów i przekazanie argumentów do funkcji, metody i właściwości.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062640"
+ms.locfileid: "44131983"
 ---
 # <a name="parameters-and-arguments"></a>Parametry i argumenty
 
@@ -127,15 +127,32 @@ Baud Rate: 300 Duplex: Half Parity: true
 
 ## <a name="passing-by-reference"></a>Przekazywanie poprzez odwołanie
 
-Przekazywanie F # wartości według odwołania polega na `byref` — słowo kluczowe, który określa, że parametr jest właściwie wskaźnikiem wartość przekazywana przez odwołanie. Dowolna wartość przekazana do metody przy użyciu `byref` jako argument musi być `mutable`.
+Przekazywanie F # wartości według odwołania polega na [zkratka](byrefs.md), które są typami wskaźnika zarządzanych. Wskazówki dla jakiego typu użycia jest następująca:
+
+* Użyj `inref<'T>` Jeśli wymagane jest tylko do odczytu wskaźnika.
+* Użyj `outref<'T>` Jeśli wymagane jest tylko do zapisu do wskaźnika.
+* Użyj `byref<'T>` Chcąc odczytywać i zapisywać wskaźnika.
+
+```fsharp
+let example1 (x: inref<int>) = printfn "It's %d" x
+
+let example2 (x: outref<int>) = x <- x + 1
+
+let example3 (x: byref<int>) =
+    printfn "It'd %d" x
+    x <- x + 1
+
+// No need to make it mutable, since it's read-only
+let x = 1
+example1 &x
+
+// Needs to be mutable, since we write to it
+let mutable y = 2
+example2 &y
+example3 &y // Now 'y' is 3
+```
 
 Ponieważ tego parametru jest wskaźnik, a wartość jest modyfikowalna, wszelkie zmiany wartości są zachowywane po wykonaniu funkcji.
-
-Można osiągnąć ten sam efekt przy użyciu [komórki odwołań](reference-cells.md), ale należy pamiętać, że **komórki odwołań i `byref`s nie są tak samo**. Komórkę odwołania jest kontenerem dla wartości, które można sprawdzić i zmienić zawartość, ale ta wartość znajduje się na stosie i jest odpowiednikiem rekord z wartością mutable w nim zawarte. Element `byref` jest rzeczywista wskaźnika, więc różną semantykę podstawowych i reguł użycia, (które mogą być bardzo ograniczające) jest.
-
-Poniższe przykłady ilustrują użycie `byref` — słowo kluczowe. Należy pamiętać, że gdy komórkę odwołania można użyć jako parametru, użytkownik musi utworzenia komórki odwołania nazwaną wartość i używać go jako parametr nie wystarczy dodać atrybut `ref` operatora, jak pokazano w pierwszym wywołaniu `Increment` w poniższym kodzie. Ponieważ tworzenie komórki odwołania jest tworzona kopia podstawowej wartości, pierwsze wywołanie po prostu zwiększa wartości tymczasowej.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3809.fs)]
 
 Spójna kolekcja można użyć jako wartości zwracanej, do przechowywania wszelkich `out` parametry metody biblioteki .NET. Alternatywnie możesz traktować `out` jako parametr `byref` parametru. Poniższy przykład kodu ilustruje obu kierunkach.
 
@@ -155,7 +172,7 @@ Poniższy kod ilustruje obie wywołanie metody .NET, która przyjmuje tablicy pa
 
 Po uruchomieniu w projekcie, dane wyjściowe poprzedniego kodu jest następująca:
 
-```
+```console
 a 1 10 Hello world 1 True
 "a"
 1

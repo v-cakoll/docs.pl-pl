@@ -8,11 +8,11 @@ helpviewer_keywords:
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
 ms.openlocfilehash: 66f341e193a0f018adb76a40617f85266519e602
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43541195"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138269"
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>Porady: uzyskiwanie wartości zmiennej wskaźnikowej (Przewodnik programowania w języku C#)
 Użyj operatora pośredniego wskaźnika można uzyskać zmiennej w lokalizacji wskazywanej przez kursor. Wyrażenie ma następującą postać, gdzie `p` jest typem wskaźnika:  

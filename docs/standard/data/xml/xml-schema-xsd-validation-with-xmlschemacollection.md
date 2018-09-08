@@ -9,11 +9,11 @@ ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0c570f812ec06c6ead0d12dc14c33fcdfd1f075c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871640"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128368"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Walidacja schematu (XSD) XML przy użyciu klasy XmlSchemaCollection
 Możesz użyć <xref:System.Xml.Schema.XmlSchemaCollection> do weryfikowania dokumentu XML względem schematów języka (XSD) definicji schematu XML. <xref:System.Xml.Schema.XmlSchemaCollection> Zwiększa wydajność dzięki przechowywaniu schematów w kolekcji, aby nie były ładowane do pamięci występuje każdego sprawdzania poprawności czasu. Jeśli schemat istnieje w kolekcji schematów `schemaLocation` atrybut jest używany w celu wyszukania schematu w kolekcji.  

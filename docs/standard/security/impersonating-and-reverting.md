@@ -13,11 +13,11 @@ ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3bc5b4a9bef51ac1591bdeb21651cee624d552b2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891749"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137450"
 ---
 # <a name="impersonating-and-reverting"></a>Personifikacja i przywracanie
 Czasami może być konieczne do uzyskania tokenu konta Windows dokonać personifikacji konta Windows. Na przykład aplikacji opartych na programie ASP.NET może być konieczne działanie w imieniu kilku użytkowników w różnym czasie. Aplikację może akceptuje token, który reprezentuje administrator z Internet Information Services (IIS), personifikacji tego użytkownika, w trakcie operacji i powrócić do poprzedniej tożsamości. Następnie go może zaakceptować token za pomocą programu IIS, który reprezentuje użytkownika z prawami mniej, wykonać kilka operacji i przywrócić ponownie.  

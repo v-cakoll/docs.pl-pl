@@ -3,11 +3,11 @@ title: Wskazówki dotyczące migracji
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: 93d523c51c45f9b6f6235a7645fa126fcb09b6e5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037334"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129304"
 ---
 # <a name="migration-guidance"></a>Wskazówki dotyczące migracji
 W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Microsoft udostępnia drugą wersją główną systemu Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] został wydany w [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (to uwzględnione typy w przestrzeniach nazw System.Workflow.*; teraz nazywana WF3) i ulepszone w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 jest również częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ale istnieje się wraz z technologią przepływu pracy (typy System.Activities.\* obszarów nazw; nazywane WF4). Podczas wybierania, kiedy należy przyjąć WF4, należy najpierw rozpoznaje, że możesz kontrolować termin.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
 ms.openlocfilehash: 2a52bf4a2a4999257377c7303cb6d362136d73a5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867098"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135103"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Przykłady składni zapytania oparte na metodzie: Operatory elementu (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.First%2A> i <xref:System.Linq.Enumerable.ElementAt%2A> metody w celu uzyskania <xref:System.Data.DataRow> elementy z <xref:System.Data.DataSet> przy użyciu składni wyrażeń zapytania.  

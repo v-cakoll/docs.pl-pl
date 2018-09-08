@@ -3,11 +3,11 @@ title: 'Porady: projektowanie wykresu obiektu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
 ms.openlocfilehash: f8e15e80a6914a8dcb848d91a13958f7e4175342
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067188"
+ms.locfileid: "44127292"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Porady: projektowanie wykresu obiektu (C#)
 W tym temacie pokazano, jak projekt lub wypełnić grafu obiektów z pliku XML.  

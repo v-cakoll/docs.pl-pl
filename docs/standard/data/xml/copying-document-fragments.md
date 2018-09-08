@@ -6,11 +6,11 @@ ms.assetid: cf424bbe-81b7-40d2-9978-9b727da94d80
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a5dae283234819bc23c34e0bbe960967dff612d0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037129"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131860"
 ---
 # <a name="copying-document-fragments"></a>Kopiowanie fragmentów dokumentu
 Możesz utworzyć **XmlDocumentFragment** węzeł, a następnie dodać węzłów w ramach. Gdy **XmlDocumentFragment** jest wstawiany za pomocą **InsertNode** metody **XmlDocumentFragment** węzła nie są kopiowane, ale jego węzłów podrzędnych są wstawiane w pliku XML Document Object Model (DOM).  

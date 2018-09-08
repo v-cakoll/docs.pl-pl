@@ -3,11 +3,11 @@ title: Śledzenie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43799255"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129556"
 ---
 # <a name="workflow-tracing"></a>Śledzenie przepływu pracy
 Śledzenie przepływu pracy pozwala do przechwytywania informacji diagnostycznych za pomocą obiektów nasłuchujących śledzenia .NET Framework. Śledzenie można włączone, jeśli zostanie wykryty problem z aplikacją i następnie ponownie wyłączona po problem został rozwiązany. Istnieją dwa sposoby, można włączyć śledzenie debugowania dla przepływów pracy. Możesz skonfigurować używanie przeglądarki danych śledzenia zdarzeń lub użyć <xref:System.Diagnostics> do wysyłania zdarzeń śledzenia w pliku.  

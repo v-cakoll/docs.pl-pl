@@ -3,11 +3,11 @@ title: 'Porady: tworzenie oznaczonych przyjaznych zestawów (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874861"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140583"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Porady: tworzenie oznaczonych przyjaznych zestawów (C#)
 W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o silnych nazwach. Oba zestawy muszą silnej nazwy. Mimo że oba zestawy w tym przykładzie użyć tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.  

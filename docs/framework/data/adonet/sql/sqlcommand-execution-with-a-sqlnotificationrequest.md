@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
 ms.openlocfilehash: 83450e6ace33e89ddd263a1514f74f4d4e231cf7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798576"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44139075"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Wykonywanie polecenia SqlCommand za pomocą SqlNotificationRequest
 Element <xref:System.Data.SqlClient.SqlCommand> można skonfigurować, aby wygenerować powiadomienie po zmianie danych, gdy zostaną pobrane z serwera i zestawu wyników będzie inna w przypadku zapytania były wykonywane ponownie. Jest to przydatne w scenariuszach, w której chcesz używać kolejek niestandardowe powiadomienie, na serwerze lub nie chcesz zachować obiektów na żywo.  

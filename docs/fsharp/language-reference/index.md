@@ -3,11 +3,11 @@ title: Materiały referencyjne dotyczące języka F#
 description: 'Informacje o F # języka funkcji z tego odwołania tokeny języka, pojęć, typów, wyrażenia i obsługiwane przez kompilator konstrukcji tematów.'
 ms.date: 05/16/2016
 ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873253"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141129"
 ---
 # <a name="f-language-reference"></a>Materiały referencyjne dotyczące języka F#
 

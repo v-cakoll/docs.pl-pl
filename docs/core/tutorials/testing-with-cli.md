@@ -5,11 +5,11 @@ author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
 ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046109"
+ms.locfileid: "44135318"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 

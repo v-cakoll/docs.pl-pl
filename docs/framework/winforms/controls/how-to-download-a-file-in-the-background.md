@@ -15,11 +15,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
 ms.openlocfilehash: 2396516a0e6c9aeb9b2d64a0bf6e3974d64a5cc5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892201"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137073"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Porady: pobieranie pliku w tle
 Pobieranie pliku jest typowym zadaniem i jest często przydatne do wykonania tej operacji potencjalnie czasochłonne w oddzielnym wątku. Użyj <xref:System.ComponentModel.BackgroundWorker> składnika, aby wykonać to zadanie za pomocą bardzo niewielkiej ilości kodu.  

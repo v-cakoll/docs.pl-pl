@@ -2,29 +2,29 @@
 title: Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: b633e3cf9a499cd5f364692cd0461aed640fe54d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: fa1bfcc5cfaf4a3ba1f5116be7b3f1851ce293af
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868105"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129724"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (Visual Basic)
 Po dołączeniu asynchronicznego kodu w aplikacji należy wziąć pod uwagę i ewentualnie zapobiec współużytkowaniu wątkowości, która odwołuje się do ponownego wprowadzania operacji asynchronicznej, zanim została ukończona. Jeśli nie zidentyfikujesz i obsłużysz możliwości współużytkowania wątkowości, może to spowodować nieoczekiwane wyniki.  
   
  **W tym temacie**  
   
--   [Uznawanie współużytkowania wątkowości](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Uznawanie współużytkowania wątkowości](#BKMK_RecognizingReentrancy)  
   
--   [Obsługa współużytkowania wątkowości](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Obsługa współużytkowania wątkowości](#BKMK_HandlingReentrancy)  
   
-    -   [Wyłącz przycisk Start](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Wyłącz przycisk Start](#BKMK_DisableTheStartButton)  
   
-    -   [Anuluj i ponownie uruchom operację](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Anuluj i ponownie uruchom operację](#BKMK_CancelAndRestart)  
   
-    -   [Uruchom wiele operacji i Zakolejkuj dane wyjściowe](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Uruchom wiele operacji i Zakolejkuj dane wyjściowe](#BKMK_RunMultipleOperations)  
   
--   [Przeglądanie i uruchamianie aplikacji przykładowych](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Przeglądanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Aby uruchomić przykład, konieczne jest posiadanie programu Visual Studio 2012 lub nowszego oraz programu .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
@@ -84,20 +84,20 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Możesz przejrzeć kod, który generuje te dane wyjściowe przewijając do końca tego tematu. Możesz eksperymentować z kodem pobierając rozwiązanie na komputer lokalny, a następnie uruchamiając projekt WebsiteDownload, lub za pomocą kodu na końcu tego tematu, aby utworzyć własny projekt, aby uzyskać więcej informacji oraz instrukcje, zobacz [ Przeglądanie i uruchamianie aplikacji przykładowych](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+ Możesz przejrzeć kod, który generuje te dane wyjściowe przewijając do końca tego tematu. Możesz eksperymentować z kodem pobierając rozwiązanie na komputer lokalny, a następnie uruchamiając projekt WebsiteDownload, lub za pomocą kodu na końcu tego tematu, aby utworzyć własny projekt, aby uzyskać więcej informacji oraz instrukcje, zobacz [ Przeglądanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample).  
   
 ##  <a name="BKMK_HandlingReentrancy"></a> Obsługa współużytkowania wątkowości  
  Może obsługiwać współużytkowanie wątkowości na wiele sposobów, w zależności od tego, co ma robić Twoja aplikacja. Ten temat przedstawia następujące przykłady:  
   
--   [Wyłącz przycisk Start](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Wyłącz przycisk Start](#BKMK_DisableTheStartButton)  
   
      Wyłącz **Start** przycisku, gdy operacja jest uruchomiony, dzięki czemu użytkownik nie mógł jej przerwać.  
   
--   [Anuluj i ponownie uruchom operację](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Anuluj i ponownie uruchom operację](#BKMK_CancelAndRestart)  
   
      Anulować wszelkie operacje, które wciąż działają, gdy użytkownik wybierze **Start** ponownie przycisk, a następnie kontynuuj umożliwiają niedawno żądanej operacji.  
   
--   [Uruchom wiele operacji i Zakolejkuj dane wyjściowe](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Uruchom wiele operacji i Zakolejkuj dane wyjściowe](#BKMK_RunMultipleOperations)  
   
      Zezwalaj wszystkim wymaganym operacjom na uruchamianie asynchronicznie, ale Koordynuj dane wyjściowe, tak aby wyniki z każdej operacji były wyświetlane razem i w kolejności.  
   
@@ -134,7 +134,7 @@ End Sub
   
  Aby uzyskać więcej informacji dotyczących anulowania, zobacz [aplikacji asynchronicznej Fine-Tuning (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Aby skonfigurować ten scenariusz, należy wprowadzić następujące zmiany do kodu podstawowego, który znajduje się w [recenzowanie i uruchamianie aplikacji przykładowych](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Możesz również pobrać gotową aplikację z [próbki asynchroniczne: współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa tego projektu to CancelAndRestart.  
+ Aby skonfigurować ten scenariusz, należy wprowadzić następujące zmiany do kodu podstawowego, który znajduje się w [recenzowanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample). Możesz również pobrać gotową aplikację z [próbki asynchroniczne: współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa tego projektu to CancelAndRestart.  
   
 1.  Zadeklaruj <xref:System.Threading.CancellationTokenSource> zmiennej `cts`, który znajduje się w zakresie dla wszystkich metod.  
   
@@ -285,11 +285,11 @@ TOTAL bytes returned:  890591
  Aby wyeliminować częściowe listy, Usuń komentarz z pierwszego wiersza kodu w `StartButton_Click` aby czyścić pole tekstowe za każdym razem, kiedy użytkownik uruchamia operację.  
   
 ###  <a name="BKMK_RunMultipleOperations"></a> Uruchom wiele operacji i Zakolejkuj dane wyjściowe  
- Trzeci przykład jest najbardziej skomplikowany, w tym, że aplikacja rozpoczyna kolejną operację asynchroniczną za każdym razem, gdy użytkownik wybierze **Start** przycisk, a wszystkie operacje do zakończenia. Wszystkie żądane operacje pobierają witryny sieci Web z listy asynchronicznie, ale dane wyjściowe operacji są przedstawiane sekwencyjnie. Oznacza to, że rzeczywiste działanie pobierania odbywa się z przeplotem, jako dane wyjściowe w [rozpoznawaniu współużytkowania wątkowości](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) pokazuje, ale lista wyników dla każdej grupy jest prezentowana oddzielnie.  
+ Trzeci przykład jest najbardziej skomplikowany, w tym, że aplikacja rozpoczyna kolejną operację asynchroniczną za każdym razem, gdy użytkownik wybierze **Start** przycisk, a wszystkie operacje do zakończenia. Wszystkie żądane operacje pobierają witryny sieci Web z listy asynchronicznie, ale dane wyjściowe operacji są przedstawiane sekwencyjnie. Oznacza to, że rzeczywiste działanie pobierania odbywa się z przeplotem, jako dane wyjściowe w [rozpoznawaniu współużytkowania wątkowości](#BKMK_RecognizingReentrancy) pokazuje, ale lista wyników dla każdej grupy jest prezentowana oddzielnie.  
   
  Operacje współkorzystają z globalnego <xref:System.Threading.Tasks.Task>, `pendingWork`, który służy jako strażnik dla procesu wyświetlania.  
   
- Możesz uruchomić ten przykład, wklejając zmiany do kodu w [Kompilowanie aplikacji](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), lub możesz postępować zgodnie z instrukcjami w [pobierając aplikację](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) do pobrania próbki, a następnie uruchomić projekt QueueResults.  
+ Możesz uruchomić ten przykład, wklejając zmiany do kodu w [Kompilowanie aplikacji](#BKMK_BuildingTheApp), lub możesz postępować zgodnie z instrukcjami w [pobierając aplikację](#BKMK_DownloadingTheApp) do pobrania próbki, a następnie uruchomić projekt QueueResults.  
   
  Następujące dane wyjściowe pokazują wynik, jeśli użytkownik wybierze **Start** przycisk tylko raz. Etykieta litery A, wskazuje, że wynik dotyczy po raz pierwszy **Start** wciśnięcia przycisku. Liczby pokazują kolejność adresów URL na liście elementów docelowych pobierania.  
   
@@ -473,7 +473,7 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- Możesz uruchomić ten przykład, wklejając zmiany do kodu w [Kompilowanie aplikacji](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), lub możesz postępować zgodnie z instrukcjami w [pobierając aplikację](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) do pobrania próbki, a następnie uruchomić projekt QueueResults.  
+ Możesz uruchomić ten przykład, wklejając zmiany do kodu w [Kompilowanie aplikacji](#BKMK_BuildingTheApp), lub możesz postępować zgodnie z instrukcjami w [pobierając aplikację](#BKMK_DownloadingTheApp) do pobrania próbki, a następnie uruchomić projekt QueueResults.  
   
 #### <a name="points-of-interest"></a>Punktów orientacyjnych  
  Linie informacyjne, rozpoczynające się od znaku funta (#) w danych wyjściowych objaśnić, jak działa ten przykład.  
@@ -674,8 +674,9 @@ End Function
   
 11. Wybierz klawisze CTRL + F5, aby uruchomić program, a następnie wybierz **Start** przycisk kilka razy.  
   
-12. Wprowadź zmiany w [Wyłącz przycisk Start](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [anulowania i ponownego uruchamiania operacji](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), lub [uruchomić wiele operacji i kolejki danych wyjściowych](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) do obsługi współużytkowania wątkowości.  
+12. Wprowadź zmiany w [Wyłącz przycisk Start](#BKMK_DisableTheStartButton), [anulowania i ponownego uruchamiania operacji](#BKMK_CancelAndRestart), lub [uruchomić wiele operacji i kolejki danych wyjściowych](#BKMK_RunMultipleOperations) do obsługi współużytkowania wątkowości.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

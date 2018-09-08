@@ -1,53 +1,61 @@
 ---
 title: Tabela niejawnych konwersji liczbowych (odwołanie w C#)
-ms.date: 07/20/2015
+ms.date: 09/05/2018
 helpviewer_keywords:
 - conversions [C#], implicit numeric
 - implicit numeric conversions [C#]
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 4bbc6086dc5fd3838ef9361762c3068ca44efd0e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e46816fc8f3a6ff71dcba3561098d3cfce1e1054
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44047984"
+ms.locfileid: "44137125"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabela niejawnych konwersji liczbowych (odwołanie w C#)
-W poniższej tabeli przedstawiono wstępnie zdefiniowanych niejawnych konwersji liczbowych. Niejawne konwersje mogą wystąpić w wielu sytuacjach, w tym metody wywoływania i przypisania poufności informacji.  
+
+W poniższej tabeli przedstawiono wstępnie zdefiniowanych niejawne konwersje między typów liczbowych .NET.
   
 |Z|Zadanie|  
 |----------|--------|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`short`, `int`, `long`, `float`, `double`, lub `decimal`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`int`, `long`, `float`, `double`, lub `decimal`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`long`, `float`, `double`, lub `decimal`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`long`, `ulong`, `float`, `double`, lub `decimal`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`float`, `double`, lub `decimal`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`double`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`float`, `double`, lub `decimal`|  
+|[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double`, lub `decimal`|  
+|[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[short](short.md)|`int`, `long`, `float`, `double`, lub `decimal`|  
+|[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[int](int.md)|`long`, `float`, `double`, lub `decimal`|  
+|[uint](uint.md)|`long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[long](long.md)|`float`, `double`, lub `decimal`|  
+|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[float](float.md)|`double`|  
+|[ulong](ulong.md)|`float`, `double`, lub `decimal`|  
   
 ## <a name="remarks"></a>Uwagi  
-  
--   Dokładności, ale wartość nie może być utracone w konwersje z `int`, `uint`, `long`, lub `ulong` do `float` i `long` lub `ulong` do `double`.  
-  
--   Brak konwersji niejawnych do `char` typu.  
-  
--   Brak niejawnej konwersji między typami zmiennoprzecinkowymi a `decimal` typu.  
-  
--   Wyrażenie stałe typu `int` mogą być konwertowane na `sbyte`, `byte`, `short`, `ushort`, `uint`, lub `ulong`, o ile wartości stałe wyrażenia znajduje się w zakresie miejsca docelowego Typ.  
-  
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Zobacz też  
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- Wszelkie [typu całkowitego](integral-types-table.md) jest niejawnie konwertowany na dowolny [typu zmiennoprzecinkowego](floating-point-types-table.md).
+
+- Dokładności, ale wartość nie może być utracone w konwersje z `int`, `uint`, `long`, lub `ulong` do `float` i `long` lub `ulong` do `double`.  
+  
+- Brak konwersji niejawnych do `char` typu.  
+  
+- Brak niejawnej konwersji między `float` i `double` typów i `decimal` typu.  
+  
+- Wartości stałe wyrażenia typu `int` (na przykład, wartość reprezentowany przez całkowite literał) mogą być konwertowane na `sbyte`, `byte`, `short`, `ushort`, `uint`, lub `ulong`, o ile ma on w zakresie typu miejsca docelowego:
+
+  ```csharp
+  byte a = 13;    // Compiles
+  byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
+  ```
+
+Aby uzyskać więcej informacji dotyczących niejawnych konwersji, zobacz [niejawne konwersje](/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions) części [specyfikacji języka C#](../language-specification/index.md).
+  
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Tabela typów całkowitych](integral-types-table.md)
+- [Tabela typów zmiennoprzecinkowych](floating-point-types-table.md)
+- [Tabela typów wbudowanych](built-in-types-table.md)
+- [Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)
+- [Konwersje rzutowania i typ](../../programming-guide/types/casting-and-type-conversions.md)

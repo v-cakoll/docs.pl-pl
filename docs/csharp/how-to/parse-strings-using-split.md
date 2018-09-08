@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
 ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44059891"
+ms.locfileid: "44133324"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Porady: analizowanie ciągów za pomocą funkcji String.Split (Przewodnik C#)
 

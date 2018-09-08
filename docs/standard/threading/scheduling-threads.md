@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a382dbea239b66e60d666a0e2e7add01d6d7bd54
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 811a75c9f0350eefc98c32181e859b7583ff74ef
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42752195"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129685"
 ---
 # <a name="scheduling-threads"></a>Harmonogram wątków
 
@@ -21,6 +21,7 @@ Każdy wątek ma przypisany priorytet wątku. Utworzone w ramach środowiska uru
   
  Wątki są zaplanowane do wykonania na podstawie ich priorytetu. Mimo że wątki są wykonywane w ramach środowiska uruchomieniowego, wszystkie wątki są przypisywane przedziały czasu procesora przez system operacyjny. Szczegółowe informacje o harmonogramie algorytm używany do określenia kolejność wykonywania wątków zależy od każdego systemu operacyjnego. W niektórych systemach operacyjnych wątku z najwyższym priorytetem (z wątków, które mogą być wykonywane) zawsze jest zaplanowana do uruchomienia jako pierwsza. Jeśli wiele wątków, z tym samym priorytecie są wszystkie dostępne cykli harmonogramu za pomocą wątków tego priorytetem, dzięki czemu każdy wątek wycinek stały czas, w której chcesz wykonać. Tak długo, jak wątek o wyższym priorytecie jest dostępna do uruchamiania, nie otrzymują niższy priorytet wątków do wykonania. Gdy istnieją wątki nie ma już możliwy do uruchomienia w danym priorytecie, harmonogram przechodzi do następnego niższy priorytet i planuje wątków, w tym priorytet dla wykonywania. Jeśli wątek wyższy priorytet staje się możliwy do uruchomienia, niższy priorytet wątku jest przerywane i wyższy priorytet wątku można wykonać ponownie. Na podstawie wszystkich, systemu operacyjnego można również dostosować priorytety wątku dynamicznie zgodnie z interfejsu użytkownika aplikacji jest przenoszone między pierwszego planu i tła. Inne systemy operacyjne, warto używać innego algorytmu planowania.  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)  
- [Zarządzana i niezarządzana wątkowość w systemie Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [Zarządzana i niezarządzana wątkowość w systemie Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

@@ -12,11 +12,11 @@ ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875112"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133563"
 ---
 # <a name="naming-resources"></a>Nazewnictwo zasobów
 Ponieważ lokalizowalne zasoby mogą być przywoływane za pośrednictwem niektórych obiektów, tak jakby były one właściwości, wskazówkami nazewnictwa dla zasobów są podobne do wytycznych właściwości.  

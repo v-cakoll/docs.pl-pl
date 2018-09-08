@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: a5bc202c0297eb3f0d4f6fa06b3beca0f9112272
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875329"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44139426"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu grupa
 > [!NOTE]

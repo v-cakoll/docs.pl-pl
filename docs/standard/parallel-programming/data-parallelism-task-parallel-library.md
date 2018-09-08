@@ -11,11 +11,11 @@ ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2933d574b387ec0f444883bbafb41f602bc5dcc0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036304"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140609"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Równoległość danych (Biblioteka zadań równoległych)
 *Równoległość danych* odwołuje się do scenariuszy, w których ten sam jest przeprowadzane jednocześnie (równolegle w) w przypadku elementów w kolekcji źródłowej lub tablicy. W danych operacji równoległych kolekcja źródłowa jest podzielona na partycje, tak aby wiele wątków może jednocześnie działać w różnych segmentach.  

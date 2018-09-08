@@ -2,12 +2,12 @@
 title: Kolekcje (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 510abe7d818b3a45869824bc52dc4fde38238f7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504447"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129105"
 ---
 # <a name="collections-visual-basic"></a>Kolekcje (Visual Basic)
 W przypadku wielu aplikacji, dla których chcesz utworzyć grupy i zarządzać nimi powiązanych obiektów. Istnieją dwa sposoby grupowania obiektów: poprzez tworzenie tablic obiektów oraz poprzez tworzenie kolekcji obiektów.  
@@ -464,7 +464,7 @@ End Class
 ## <a name="defining-a-custom-collection"></a>Definiowanie kolekcji niestandardowej  
  Można zdefiniować kolekcję implementując <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Collections.IEnumerable> interfejsu. Aby uzyskać więcej informacji, zobacz [wyliczania kolekcji](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
   
- Chociaż można zdefiniować kolekcję niestandardową, to zazwyczaj lepiej jest użyć zamiast tego kolekcje, które znajdują się w .NET Framework, które są opisane w [rodzaje kolekcji](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) we wcześniejszej części tego tematu.  
+ Chociaż można zdefiniować kolekcję niestandardową, to zazwyczaj lepiej jest użyć zamiast tego kolekcje, które znajdują się w .NET Framework, które są opisane w [rodzaje kolekcji](#kinds-of-collections) we wcześniejszej części tego tematu.  
   
  W poniższym przykładzie zdefiniowano klasę kolekcji niestandardowej o nazwie `AllColors`. Ta klasa implementuje <xref:System.Collections.IEnumerable> interfejs, który wymaga, aby <xref:System.Collections.IEnumerable.GetEnumerator%2A> metoda zaimplementowana.  
   
@@ -570,14 +570,15 @@ As IEnumerable(Of Integer)
 End Function  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [Koncepcje programowania (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
- [Kolekcje i struktury danych](../../../standard/collections/index.md)  
- [Tworzenie kolekcji i manipulowanie nimi](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
- [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)  
- [Porównywanie i sortowanie w ramach kolekcji](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
- [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+- [Koncepcje programowania (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
+- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+- [Kolekcje i struktury danych](../../../standard/collections/index.md)  
+- [Tworzenie kolekcji i manipulowanie nimi](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+- [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)  
+- [Porównywanie i sortowanie w ramach kolekcji](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)

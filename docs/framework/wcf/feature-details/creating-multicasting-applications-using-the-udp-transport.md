@@ -3,11 +3,11 @@ title: Tworzenie aplikacji multiemisji za pomocą transportu UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867923"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137010"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Tworzenie aplikacji multiemisji za pomocą transportu UDP
 Aplikacje korzystające z multiemisji wysyłać małych dużej liczby odbiorców w tym samym czasie, bez konieczności ustanawiania połączeń punkt-punkt. Szczególnym takich aplikacji to szybkość niezawodności. Innymi słowy jest niezwykle ważne wysłać aktualnych danych niż aby upewnić się, że faktycznie odebraniu szczegółowy komunikat o błędzie. Usługi WCF teraz obsługuje pisanie aplikacji multiemisji za pomocą <xref:System.ServiceModel.UdpBinding>. Tego transportu jest przydatne w scenariuszach, gdzie usługa musi wysyłać małych komunikatów do wielu klientów jednocześnie. Aplikacja giełdowej jest przykładem takiej usługi.  

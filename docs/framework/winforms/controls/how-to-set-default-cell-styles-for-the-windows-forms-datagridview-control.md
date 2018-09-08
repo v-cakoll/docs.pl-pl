@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], cell styles
 ms.assetid: 1aaaca43-5340-447e-99c0-9177d9776aa1
 ms.openlocfilehash: 072a9ce7e28983683ac1104b70c160cf5eea12b7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877339"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44130987"
 ---
 # <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Porady: ustawianie domyślnych stylów komórki dla formantu DataGridView formularzy systemu Windows
 Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolę, można określić domyślnych stylów komórki dla całego kontroli i określonych kolumn i wierszy. Te ustawienia domyślne odfiltrować z poziomu kontroli na poziomie kolumny, a następnie na poziomie wiersza, a następnie na poziomie komórki. Jeśli konkretny <xref:System.Windows.Forms.DataGridViewCellStyle> właściwość nie jest ustawiona na poziomie komórki, używane jest domyślne ustawienie właściwości na poziomie wiersza. Jeśli właściwość nie jest również ustawiona na poziomie wiersza, używane jest domyślne ustawienie kolumny. Na koniec Jeśli właściwość również nie jest ustawiony na poziomie kolumny, a wartość domyślna <xref:System.Windows.Forms.DataGridView> ustawienie jest używane. To ustawienie można uniknąć konieczności duplikowania ustawienia właściwości na różnych poziomach. Na każdym poziomie wystarczy określić style, które różnią się od poziomami wyższymi. Aby uzyskać więcej informacji, zobacz [style komórki w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  

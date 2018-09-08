@@ -14,11 +14,11 @@ ms.assetid: e3e5475d-c5e9-43f0-928e-d18df8ca1f1d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 46b7839a6bd0086a8ec82e416cdf7aed05707390
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44061191"
+ms.locfileid: "44139608"
 ---
 # <a name="using-an-asynccallback-delegate-and-state-object"></a>Używanie delegata AsyncCallback i obiektu stanu
 Kiedy używasz <xref:System.AsyncCallback> delegować do przetwarzania wyników operacji asynchronicznych w oddzielnym wątku, można użyć obiektu stanu do przekazywania informacji między wywołania zwrotne i pobrać wynik końcowy. W tym temacie przedstawiono tej praktyką, rozszerzając przykład przedstawiony w [używanie delegata AsyncCallback do kończenia operacji asynchronicznej](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  

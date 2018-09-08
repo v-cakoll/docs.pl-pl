@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
 ms.openlocfilehash: a34d13c0d5d0939bbb024ae958568e80dd74b26f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070709"
+ms.locfileid: "44128446"
 ---
 # <a name="arrays-c-programming-guide"></a>Tablice (Przewodnik programowania w języku C#)
 

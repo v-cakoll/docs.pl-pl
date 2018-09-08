@@ -10,11 +10,11 @@ ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 955faddfe184ae5cd66281ccff2343d1e3241bf3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869250"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44127319"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>Walidacja schematu (XSD) XML przy użyciu klasy XmlSchemaSet
 Można zweryfikować względem schematu języka (XSD) definicji schematu XML w dokumentach XML <xref:System.Xml.Schema.XmlSchemaSet>.  

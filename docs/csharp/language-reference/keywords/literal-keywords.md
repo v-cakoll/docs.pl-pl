@@ -5,11 +5,11 @@ helpviewer_keywords:
 - literal keywords [C#]
 ms.assetid: 95b3f075-47d7-4990-8ea8-9e637678bf3c
 ms.openlocfilehash: e031e55642e31ca450517dd03d10e33a2e6e8455
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800116"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44139855"
 ---
 # <a name="literal-keywords-c-reference"></a>Słowa kluczowe literału (odwołanie w C#)
 C# ma następujące słowa kluczowe literału:  

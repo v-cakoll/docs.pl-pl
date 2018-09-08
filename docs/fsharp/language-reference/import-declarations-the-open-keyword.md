@@ -3,11 +3,11 @@ title: 'Deklaracje importowania: open — Słowo kluczowe (F#)'
 description: 'Dowiedz się więcej o deklaracje importowania F # i jak określić modułu lub przestrzeni nazw elementów, których możesz odwoływać się bez korzystania z w pełni kwalifikowanej nazwy.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883155"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44130188"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Deklaracje importowania: `open` — słowo kluczowe
 

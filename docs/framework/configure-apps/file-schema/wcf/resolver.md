@@ -3,11 +3,11 @@ title: '&lt;Program rozpoznawania nazw&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
 ms.openlocfilehash: 48b6b6ca315f7ab63a8f7a64b97167fa04fe1e4e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43804097"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133769"
 ---
 # <a name="ltresolvergt"></a>&lt;Program rozpoznawania nazw&gt;
 Określa program rozpoznawania elementów równorzędnych, który jest używany do rozpoznawania elementu równorzędnego siatki identyfikator do zbioru adresów węzłów równorzędnych reprezentujących kilka węzłów, które uczestniczą w siatce.  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43804032"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135786"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue — Metoda
 Aktualizuje bieżącego zakresu zestawu zmian wprowadzonych w określonych metadanych.  

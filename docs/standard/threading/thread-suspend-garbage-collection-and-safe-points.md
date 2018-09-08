@@ -12,11 +12,11 @@ ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fc3af01167fe97b701bdb0c7bc37af02d8e8a77c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892775"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44130857"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Thread.Suspend, odzyskiwanie pamięci i punkty bezpieczeństwa
 Gdy wywołujesz <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> w wątku, system — informacje o że zawieszenia wątku zażądano i zezwala na wykonanie, dopóki osiągnie bezpieczny punkt rzeczywiście wstrzymania wątku wątku. Punkt bezpieczne dla wątków jest punktem w jej wykonanie w pamięci, które mogą być wykonywane kolekcji.  

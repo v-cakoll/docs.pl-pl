@@ -3,11 +3,11 @@ title: Omówienie LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 43c3aa081bd934202bd3a7831741054115d7a6d5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883978"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138815"
 ---
 # <a name="linq-to-dataset-overview"></a>Omówienie LINQ to DataSet
 <xref:System.Data.DataSet> Jest jednym z powszechnie używanych składników [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. To kluczowy element odłączonego modelu programowania, który [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] opiera się na, i umożliwia jawne buforowania danych z różnych źródeł danych. W przypadku warstwy prezentacji <xref:System.Data.DataSet> jest ściśle zintegrowany z formantów graficznego interfejsu użytkownika dla powiązania danych. Dla warstwy środkowej zapewnia pamięci podręcznej, który zachowuje relacyjnych kształt danych i zawiera szybkie prostego zapytania i hierarchii nawigacji usługi. To typowa technika pozwala zmniejszyć liczbę żądań w bazie danych jest użycie <xref:System.Data.DataSet> dla pamięci podręcznej w warstwie środkowej. Rozważmy na przykład opartego na danych [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web. Często znaczna część danych aplikacji nie zmieniają się często i jest wspólna dla sesji lub użytkowników. Te dane mogą być przechowywane w pamięci na serwerze sieci Web, co zmniejsza liczbę żądań w bazie danych i przyspiesza interakcji użytkownika. Inna zaleta <xref:System.Data.DataSet> jest możliwość aplikacjom Przenieś podzbiór danych z co najmniej jednego źródła danych do obszaru aplikacji. Aplikacja następnie manipulować danych w pamięci, zachowując jego kształt relacyjnych.  

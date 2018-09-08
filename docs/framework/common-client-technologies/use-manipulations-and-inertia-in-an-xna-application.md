@@ -3,11 +3,11 @@ title: Korzystanie z manipulacji i bezwładności w aplikacjach XNA
 ms.date: 03/30/2017
 ms.assetid: b7c18905-850c-4da4-8977-a074406a4263
 ms.openlocfilehash: 70b8d0c5c098089b6f16ef817ff86698f68cf7c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871047"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134626"
 ---
 # <a name="using-manipulations-and-inertia-in-an-xna-application"></a>Korzystanie z manipulacji i bezwładności w aplikacjach XNA
 W tym artykule opisano, jak można użyć manipulacji i bezwładności przetwarzania w aplikacji Microsoft XNA sterowanie ruchem figur. Przed przeczytaniem tego artykułu, należy się zapoznać z [omówienie manipulacji i bezwładności](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md) tematu i należy zapoznać się z XNA podstawowe pojęcia związane z programowaniem.  

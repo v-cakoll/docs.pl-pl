@@ -5,11 +5,11 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: ff313df9683dbc76bab684ff484b746ad05e065a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800719"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137035"
 ---
 # <a name="access-modifiers-c-reference"></a>Modyfikatory dostępu (odwołanie w C#)
 Modyfikatory dostępu są słowami kluczowymi, używany do określenia deklarowaną dostępność składowej lub typu. Ta sekcja wprowadza modyfikatory dostępu cztery:  

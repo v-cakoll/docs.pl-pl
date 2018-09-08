@@ -2,12 +2,12 @@
 title: Funkcje (F#)
 description: 'Więcej informacji na temat funkcji w F # oraz jak F # obsługuje typowych konstrukcji programowania funkcjonalnego.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803915"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140921"
 ---
 # <a name="functions"></a>Funkcje
 
@@ -112,7 +112,7 @@ Następnie będzie podać dodatkowy argument, zgodnie z potrzebami dla różnych
 
 ## <a name="recursive-functions"></a>Funkcje rekursywne
 
-*Funkcje rekursywne* funkcji, które wywołują się. Wymagają one, że podajesz **"rec"** następujące słowa kluczowego **umożliwiają** — słowo kluczowe. Wywołania funkcji cykliczne w treści funkcji, tak samo, jak powodowałoby wywołanie każde wywołanie funkcji. Oblicza następujących funkcji recursive *n*th Fibonacci numer. Sekwencja numer Fibonacci wiadomo, że od momentu antyków i sekwencja, w którym każdy kolejny numer to suma poprzednich dwóch liczb w sekwencji.
+*Funkcje rekursywne* funkcji, które wywołują się. Wymagają one, że podajesz **"rec"** następujące słowa kluczowego **umożliwiają** — słowo kluczowe. Wywołania funkcji cykliczne w treści funkcji, tak samo, jak powodowałoby wywołanie każde wywołanie funkcji. Oblicza następujących funkcji recursive *n*<sup>th</sup> Fibonacci numer. Sekwencja numer Fibonacci wiadomo, że od momentu antyków i sekwencja, w którym każdy kolejny numer to suma poprzednich dwóch liczb w sekwencji.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

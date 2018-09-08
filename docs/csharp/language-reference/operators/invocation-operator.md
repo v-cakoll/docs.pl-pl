@@ -9,11 +9,11 @@ helpviewer_keywords:
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
 ms.openlocfilehash: 29097dc4aa0bf712b9b2beda4450820a66472ba7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891522"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44139179"
 ---
 # <a name="-operator-c-reference"></a>() — Operator (odwołanie w C#)
 Oprócz określania kolejności operacji w wyrażeniach nawiasy są też używane do następujących zadań:  

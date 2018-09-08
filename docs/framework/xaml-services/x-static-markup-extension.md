@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877992"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140427"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static — Rozszerzenie znaczników
 Odwołuje się do dowolnej jednostki kodu przez wartość statyczną, która jest zdefiniowana w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— sposób zgodne. Właściwość statyczna, do którego istnieje odwołanie może służyć do zapewnienia wartości właściwości w XAML.  

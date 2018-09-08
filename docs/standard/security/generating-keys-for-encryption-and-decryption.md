@@ -17,11 +17,11 @@ ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036093"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135409"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generowanie kluczy szyfrowania i odszyfrowywania
 Tworzenie i zarządzanie kluczami jest ważną częścią procesu szyfrowania. Symetryczne algorytmy wymaga utworzenia klucza i wektor inicjowania (IV). Klucz musi trzymane w tajemnicy każdy, kto powinien nie odszyfrowania danych. IV nie muszą być wpisu tajnego, ale powinna zostać zmieniona dla każdej sesji. Asymetryczne algorytmy wymagają utworzenia klucza publicznego i prywatnego klucza. Klucz publiczny mogą być ujawniane dla każdego, kto, gdy klucz prywatny musi znane tylko przez strony, która spowoduje odszyfrowanie dane zaszyfrowane przy użyciu klucza publicznego. W tej sekcji opisano sposób generowania i zarządzania kluczami symetrycznego i asymetrycznych algorytmów.  

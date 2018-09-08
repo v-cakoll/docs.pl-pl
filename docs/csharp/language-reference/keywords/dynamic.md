@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-ms.openlocfilehash: bddcb8890ef7312047d05794ccef0b638de4ed78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 840ecd6ab929b00e1be96c23eb06ccf362380f8e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858294"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140362"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (odwołanie w C#)
 
@@ -72,5 +72,5 @@ Aby uzyskać więcej informacji i przykładów, zobacz [przy użyciu typu dynami
 - [is](../../../csharp/language-reference/keywords/is.md)  
 - [as](../../../csharp/language-reference/keywords/as.md)  
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)  
-- [Instrukcje: bezpieczne rzutowanie za pomocą operatorów as i is](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
+- [Porady: bezpieczne rzutowanie za pomocą dopasowywania do wzorca, jak i operatory](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)  
 - [Wskazówki: Tworzenie obiektów dynamicznych i posługiwanie](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

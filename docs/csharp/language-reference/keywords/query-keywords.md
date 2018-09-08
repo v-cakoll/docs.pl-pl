@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
 ms.openlocfilehash: 9ec163e1de018bd87348a5b39a1f34654d7d6d84
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44065709"
+ms.locfileid: "44140505"
 ---
 # <a name="query-keywords-c-reference"></a>Słowa kluczowe zapytania (odwołanie w C#)
 

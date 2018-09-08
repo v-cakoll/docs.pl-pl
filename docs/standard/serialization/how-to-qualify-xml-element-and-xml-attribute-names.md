@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785495"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133285"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Instrukcje: kwalifikowanie elementu XML i nazw atrybutów XML
 
@@ -169,13 +169,13 @@ public class Book
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-<xref:System.Xml.Serialization.XmlSerializer>
-[Narzędzie definicji schematu XML i serializacja XML](the-xml-schema-definition-tool-and-xml-serialization.md)
-[wprowadzenie do serializacji XML](introducing-xml-serialization.md)
-[klasy XmlSerializer](xref:System.Xml.Serialization.XmlSerializer) 
- [Atrybutów, które kontrolują serializacji XML](attributes-that-control-xml-serialization.md)
-[jak: Określ nazwę elementu alternatywny Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-[instrukcje: serializacja obiektu](how-to-serialize-an-object.md) 
- [Jak: wykonywać deserializację obiektu](how-to-deserialize-an-object.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Narzędzie definicji schematu XML i serializacja XML](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
+- [Klasy XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
+- [Atrybuty kontrolujące serializację XML](attributes-that-control-xml-serialization.md)
+- [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)
+- [Instrukcje: Deserializacja obiektu](how-to-deserialize-an-object.md)

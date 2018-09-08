@@ -3,11 +3,11 @@ title: Rozwiązywanie problemów
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879464"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133999"
 ---
 # <a name="troubleshooting"></a>Rozwiązywanie problemów
 Poniższe informacje przedstawia niektóre problemy, które mogą wystąpić w swojej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji i oferuje sugestie, aby uniknąć lub w przeciwnym razie ograniczenia wpływu tych problemów.  

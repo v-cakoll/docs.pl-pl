@@ -11,11 +11,11 @@ ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8fd937d6ce2edf0c47fce78d48a90ec1aa409eef
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036221"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135110"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Porady: przenoszenie drzewa binarnego z zadaniami równoległymi
 Poniższy przykład przedstawia dwa sposoby, w których zadań równoległych może służyć do przechodzenia struktury drzewa danych. Tworzenie drzewa, sama zostanie pozostawiony w charakterze ćwiczenia.  

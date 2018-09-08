@@ -5,11 +5,11 @@ helpviewer_keywords:
 - breaking changes [Visual Basic]
 ms.assetid: 708fb176-35eb-4cbc-a6e7-a04c6e3bdaff
 ms.openlocfilehash: 008b887e96f077e64b012d224c7c031a9b65027e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067386"
+ms.locfileid: "44132652"
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Visual Basic — przełomowe zmiany w programie Visual Studio
 Aby uzyskać najnowszą dokumentację programu Visual Studio 2017, zobacz [stronę z dokumentacją tego programu](https://docs.microsoft.com/visualstudio/).

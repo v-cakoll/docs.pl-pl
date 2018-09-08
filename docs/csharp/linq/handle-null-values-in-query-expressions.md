@@ -4,11 +4,11 @@ description: Dowiedz się, jak Obsługa wartości zerowych w wyrażeniach zapyta
 ms.date: 12/1/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
 ms.openlocfilehash: 2c477ef371dbb424c72fb9d34948760b7e3f5609
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43880590"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133863"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>Obsługa wartości zerowych w wyrażeniach zapytań
 

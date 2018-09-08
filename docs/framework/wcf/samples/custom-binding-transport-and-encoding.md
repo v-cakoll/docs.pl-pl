@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
 ms.openlocfilehash: ee15fd37390f8bf4ca3bc287f9a3dbd5f8ebd935
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44065839"
+ms.locfileid: "44139751"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Transport i kodowanie powiązań niestandardowych
 Powiązanie niestandardowe jest definiowany przez uporządkowaną listą elementy powiązania dyskretnych. Niniejszy przykład pokazuje, jak skonfigurować powiązania niestandardowego z różnymi transport i kodowanie elementów wiadomości.  

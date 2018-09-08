@@ -3,11 +3,11 @@ title: Dodawanie odwołania usługi w projekcie obsługującym podzestaw przeno�
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
 ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038708"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135487"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Dodawanie odwołania usługi w projekcie obsługującym podzestaw przenośny
 Projekty obsługującym podzestaw przenośny umożliwiają deweloperom zestawu .NET do utrzymywania drzewa pojedyncze źródło i systemu kompilacji, nadal obsługując wiele implementacji .NET (pulpitu, Silverlight, Windows Phone i XBOX). Projekty obsługującym podzestaw przenośny tylko odwołania do bibliotek przenośnych platformy .NET, będące zestaw .NET framework, używanym w implementacji .NET.  

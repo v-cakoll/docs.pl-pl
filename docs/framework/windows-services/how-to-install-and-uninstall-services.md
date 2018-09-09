@@ -14,11 +14,11 @@ ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
 manager: douge
 ms.openlocfilehash: 9d8e84280b5821f8d8df36694198bd85fb8470d4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/08/2018
-ms.locfileid: "44175838"
+ms.locfileid: "44225071"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>Porady: instalowanie i odinstalowywanie usług
 Jeśli opracowujesz usługi Windows za pomocą programu .NET Framework, można szybko zainstalować aplikacji usługi za pomocą narzędzia wiersza polecenia o nazwie InstallUtil.exe. Jeśli jesteś deweloperem kto chce wersji usług Windows, czy użytkownicy mogą zainstalować i możesz odinstalować należy używać programu InstallShield. Zobacz [wdrożenia Instalatora Windows](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  

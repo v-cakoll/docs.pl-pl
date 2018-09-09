@@ -17,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8da9ff6df910e1932c593c1f1b882dca12146a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cc481c7370a21c56daf9ce2949247e65fa33bda
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225532"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Porady: stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej
 Nazwane potoki zapewniają komunikację międzyprocesorową pomiędzy serwerem potoku i jednym lub kilkoma klientami potoku. Oferują one więcej funkcji niż potoki anonimowe, które zapewniają komunikację międzyprocesorową na komputerze lokalnym. Nazwane potoki obsługują komunikację pełnodupleksową przez sieć i wiele instancji serwera, komunikację opartą na komunikatach i personifikację klienta, co pozwala łączyć procesy z ich własnymi zestawami uprawnień na serwerach zdalnych.  
@@ -44,8 +45,9 @@ Nazwane potoki zapewniają komunikację międzyprocesorową pomiędzy serwerem p
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Procesy klienta i serwera w tym przykładzie są przeznaczone do uruchomienia na tym samym komputerze, więc nazwa serwera dostarczona do obiektu <xref:System.IO.Pipes.NamedPipeClientStream> to `"."`. Jeśli procesy klienta i serwera znajdują się na oddzielnych komputerach, `"."` zostanie zamienione na nazwę sieciową komputera, który uruchamia proces serwera.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Security.Principal.TokenImpersonationLevel>  
- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
- [Potoki](../../../docs/standard/io/pipe-operations.md)  
- [Instrukcje: stosowanie potoków anonimowych do lokalnej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Security.Principal.TokenImpersonationLevel>  
+- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
+- [Potoki](../../../docs/standard/io/pipe-operations.md)  
+- [Instrukcje: stosowanie potoków anonimowych do lokalnej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

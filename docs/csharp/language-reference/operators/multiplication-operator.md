@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
 ms.openlocfilehash: 873cc1dc0d81425117f1784353acf08b35158133
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062756"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225363"
 ---
 # <a name="-operator-c-reference"></a>* — Operator (odwołanie w C#)
 Operator mnożenia (`*`) oblicza iloczyn argumentów. Wszystkie typy liczbowe zostały wstępnie zdefiniowane operatorów mnożenia.  

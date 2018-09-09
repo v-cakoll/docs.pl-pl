@@ -15,11 +15,11 @@ ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c03ab0e1d493d9669f1e3821393d41d1c1b89867
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063631"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227548"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Porady: korzystanie ze zdarzeń w aplikacjach formularzy sieci Web
 Jest to częsty przypadek w aplikacji formularzy sieci Web programu ASP.NET do wypełniania strony sieci Web za pomocą kontrolek, a następnie wykonać określonej akcji, które kontrolują użytkownik klika polecenie w oparciu. Na przykład <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> kontrolki wywołuje zdarzenie po kliknięciu przez użytkownika na stronie sieci Web. Dzięki obsłudze zdarzenia, aplikację można wykonać logiki aplikacji odpowiednie dla tego kliknięcia przycisku.  

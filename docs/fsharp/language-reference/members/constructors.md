@@ -3,11 +3,11 @@ title: Konstruktorzy (F#)
 description: 'Dowiedz się, jak zdefiniować i używać konstruktorów języka F # do tworzenia i inicjowania obiektów klasy i struktury.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803946"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227132"
 ---
 # <a name="constructors"></a>Konstruktorów
 

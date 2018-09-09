@@ -13,11 +13,11 @@ ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c49f7ad5162c9e2759ec8afed217451b4bcf04ff
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892655"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227626"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Porady: Korzystanie z klasy JoinBlock do odczytywania danych z wielu źródeł
 W tym dokumencie wyjaśniono, jak używać <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> klasy w celu wykonania operacji, gdy dane są dostępne z wielu źródeł. Ilustruje też sposób do używania trybu niezachłanne, aby włączyć wiele bloków sprzężenia wydajniej udostępnianie źródła danych.

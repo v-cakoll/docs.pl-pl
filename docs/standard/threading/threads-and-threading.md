@@ -9,88 +9,89 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592187"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188543"
 ---
 # <a name="threads-and-threading"></a>Wątki i wątkowość
-Systemy operacyjne umożliwia rozdzielenie różnych aplikacji, które działają procesów. Wątki są jednostkę podstawową, system operacyjny przydziela czas procesora i więcej niż jeden wątek może wykonywania kodu wewnątrz tego procesu. Każdy wątek obsługuje programy obsługi wyjątków, priorytet i zestaw struktur, które system używa zapisać kontekstu wątku, dopóki nie zostanie określony. Kontekst wątku zawiera wszystkie informacje wymagane przez wątek do bezbłędnie wznowić wykonywanie wątku zestaw rejestrów Procesora i stosu, w tym do przestrzeni adresowej procesu hosta wątku.  
+Systemy operacyjne używają procesów do oddzielania innej aplikacji, które są one wykonywane. Wątki są podstawową jednostką, do której system operacyjny przydziela czas procesora, a więcej niż jeden wątek może wykonywać kod wewnątrz tego procesu. Każdy wątek obsługuje programy obsługi wyjątków, priorytet planowania i zestaw struktur, które system używa do zapisania kontekst wątku, dopóki nie zostało zaplanowane. Kontekst wątku zawiera wszystkie informacje wymagane przez wątek do bezbłędnie wznowić wykonania, w tym wątku zestaw rejestrów Procesora i stosu, w przestrzeni adresowej procesu hosta dla wątku.  
   
- .NET Framework dalsze dzieli procesu systemu operacyjnego do lekkie zarządzanych, podprocesów określanych jako domeny aplikacji, reprezentowany przez <xref:System.AppDomain?displayProperty=nameWithType>. Jeden lub więcej wątków zarządzanych (reprezentowane przez <xref:System.Threading.Thread?displayProperty=nameWithType>) można uruchomić w jednej lub kilku domen aplikacji w ramach tego samego procesu zarządzanego. Każda domena aplikacji została uruchomiona z jednym wątkiem, kodu w tej domenie aplikacji można utworzyć dodatkowe wątki i domen aplikacji dodatkowych. Wynik jest, że zarządzanego wątku mogą swobodnie przemieszczać się między domenami aplikacji wewnątrz tego samego procesu zarządzanego; może istnieć tylko jeden wątek przenoszenia między kilka domen aplikacji.  
+ .NET Framework na dalsze dzielący uproszczone zarządzanych podprocesów, domeny aplikacji, reprezentowane przez proces systemu operacyjnego <xref:System.AppDomain?displayProperty=nameWithType>. Jeden lub więcej wątków zarządzanych (reprezentowane przez <xref:System.Threading.Thread?displayProperty=nameWithType>) mogą być uruchamiane w jednym lub kilku domen aplikacji w ramach tego samego procesu zarządzanego. Mimo że każda domena aplikacji została uruchomiona z jednym wątkiem, kod w tej domenie aplikacji można utworzyć domeny dodatkowych aplikacji i dodatkowe wątki. Wynik jest, że wątków zarządzanych mogą swobodnie przemieszczać się między domeny aplikacji wewnątrz tego samego procesu zarządzanego; może mieć tylko jeden wątek poruszać się między kilka domen aplikacji.  
   
- System operacyjny, który obsługuje cenią sobie wcześniejsze wielozadaniowości tworzy efekt jednoczesne wykonywanie wielu wątków na podstawie wielu procesów. Jest to możliwe dzięki podział czasu procesora dostępne między wątków, które go potrzebują, przydzielanie przedział czasu procesora, aby każdy wątek jeden po drugim. Aktualnie wykonywane wątek jest zawieszony, gdy jej czas upływający wycinka i innego wątku wznawia uruchomiona. Przełączać się z jednego wątku do innego, go zapisuje kontekst wątku preempted wątku i ponowne załadowanie kontekście wątku zapisane następnego wątku w kolejce wątku.  
+ System operacyjny obsługuje preemptive wielozadaniowość tworzy efekt jednoczesne wykonywanie wielu wątków na podstawie wielu procesów. Odbywa się to poprzez podział czasu procesora dostępne wśród wątków, które go potrzebują, przydzielania przedziału czasu procesora, do każdego wątku, jeden po drugim. Aktualnie wykonywany wątek jest zawieszony gdy upływa wycinka czasu, a inny wątek wznawia uruchomiona. Można przełączać się z jednego wątku do innego, go zapisuje kontekst wątku preempted wątku i ponowne załadowanie kontekście wątku zapisane następny wątek w kolejce wątku.  
   
- Długość przedziału czasu zależy od systemu operacyjnego i procesora. Ponieważ każdy przedział czasu jest mały, wiele wątków ma być wykonywane jednocześnie, nawet jeśli dostępny jest tylko jeden procesor. Jest rzeczywiście w systemach wieloprocesorowych, które wykonywalnego wątki są dystrybuowane między dostępnych procesorów.  
+ Długość przedziału czasu, zależy od systemu operacyjnego i procesora. Ponieważ każdego przedziału czasu jest mała, można wykonywać w tym samym czasie, pojawiają się wiele wątków, nawet jeśli dostępny jest tylko jeden procesor. Jest to rzeczywiście przypadek w systemach wieloprocesorowych, pliku wykonywalnego wątki są dystrybuowane między procesorów dostępnych.  
   
-## <a name="when-to-use-multiple-threads"></a>Kiedy należy używać wiele wątków  
- Oprogramowanie, które wymaga interakcji użytkownika musi reagować na działania użytkownika tak szybko jak to możliwe, aby zapewnić użyciu zaawansowanego środowiska użytkownika. W tym samym czasie jednak należy ją wykonać obliczeń niezbędnych do przedstawienia danych użytkownika tak szybko, jak to możliwe. Jeśli aplikacja używa tylko jeden wątek, można połączyć [programowanie asynchroniczne](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) z[.NET Framework remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) lub [usług XML sieci Web](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) utworzone za pomocą ASP .NET na potrzeby czas przetwarzania innych komputerów dodatkowo z własnych zwiększenie czasu odpowiedzi użytkownika i zmniejsza czas przetwarzania danych aplikacji. Jeśli przeprowadzasz znacznym pracy wejścia/wyjścia, można zwiększyć czas odpowiedzi aplikacji w portów We/Wy.  
+## <a name="when-to-use-multiple-threads"></a>Kiedy należy używać wielu wątków  
+ Oprogramowanie, które wymaga interakcji użytkownika, musi reagują tak szybko jak to możliwe, aby zapewnić rozbudowane środowisko do działań użytkownika. W tym samym czasie jednak należy ją wykonać obliczeń niezbędnych do prezentowania danych użytkowników tak szybko, jak to możliwe. Jeśli aplikacja używa tylko jeden wątek wykonywania, można połączyć [programowania asynchronicznego](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) z[wywołaniem funkcji zdalnych .NET Framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) lub [usług XML sieci Web](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) utworzone za pomocą ASP .NET do użycia czasu przetwarzania innych komputerów dodatkowo niż swoje własne, aby zwiększyć szybkość reakcji, użytkownika i zmniejszyć czas przetwarzania danych w aplikacji. Jeśli przeprowadzasz intensywnie korzystających z operacji wejścia/wyjścia pracy umożliwia także porty zakończenia operacji We/Wy na zwiększenie szybkości reakcji aplikacji.  
   
-### <a name="advantages-of-multiple-threads"></a>Zalety wiele wątków  
- Jednak przy użyciu więcej niż jeden wątek, jest najbardziej zaawansowanych technik, można zwiększyć czas odpowiedzi dla użytkownika i przetwarzania danych, które są niezbędne, aby uzyskać zadanie wykonywane w niemal tym samym czasie. Na komputerze z jednym procesorem wiele wątków można utworzyć ten efekt, wykorzystaniu małych okresów Between zdarzeń użytkownika do przetwarzania danych w tle. Na przykład użytkownik może edytować arkusza kalkulacyjnego, podczas gdy inny wątek jest ponowne obliczanie inne części arkusza kalkulacyjnego w tej samej aplikacji.  
+### <a name="advantages-of-multiple-threads"></a>Korzyści wynikające z wielu wątków  
+ Jednak przy użyciu więcej niż jeden wątek, jest najbardziej zaawansowane techniki umożliwiające zwiększenie szybkości reakcji użytkownika i przetwarzać dane niezbędne do swoją pracę w niemal tym samym czasie. Na komputerze z jednym procesorem wiele wątków można utworzyć ten efekt, korzystając z zalet małych okresy Between zdarzenia użytkownika do przetwarzania danych w tle. Na przykład użytkownik może edytować arkusz kalkulacyjny, podczas gdy inny wątek jest obliczanie innych części arkusza kalkulacyjnego w tej samej aplikacji.  
   
- Bez żadnych modyfikacji ta sama aplikacja będzie znacznie zwiększyć komfort użytkowników uruchamianych na komputerze z więcej niż jeden procesor. Domeny pojedynczej aplikacji można użyć wielu wątków można wykonywać następujące zadania:  
+ Bez żadnych modyfikacji ta sama aplikacja może znacznie zwiększyć zadowolenia użytkowników po uruchomieniu na komputerze z więcej niż jednego procesora. Przy użyciu wielu wątków domeny pojedynczej aplikacji można wykonywać następujące zadania:  
   
--   Komunikacji za pośrednictwem sieci do serwera sieci Web i bazę danych.  
+-   Komunikują się za pośrednictwem sieci, na serwerze sieci Web i bazę danych.  
   
 -   Wykonywanie operacji, które zająć dużo czasu.  
   
--   Odróżnić zadania różnych priorytetów. Na przykład wątku o wysokim priorytecie zarządza wrażliwego na czas zadania i niskiego priorytetu wątku wykonuje inne zadania.  
+-   Rozróżnia zadania związane z różnym priorytetem. Na przykład wątku o wysokim priorytecie zarządza zadaniami wrażliwego na czas i wątek o niskim priorytecie wykonuje inne zadania.  
   
--   Zezwalaj na interfejsie użytkownika będzie odpowiadać, podczas przydzielania czasu na zadania w tle.  
+-   Zezwalaj na interfejsu użytkownika nadal odpowiadać, podczas przydzielania czasu zadania w tle.  
   
-### <a name="disadvantages-of-multiple-threads"></a>Wady wiele wątków  
- Zaleca się używać jak najmniejszej liczby wątków jak to możliwe, a tym samym minimalizując użycie zasobów systemu operacyjnego i poprawia wydajność. Wątkowość ma również wymagania dotyczące zasobów i potencjalnych konfliktów wziąć pod uwagę podczas projektowania aplikacji. Wymagania dotyczące zasobów są następujące:  
+### <a name="disadvantages-of-multiple-threads"></a>Wady wielu wątków  
+ Zalecane jest użycie możliwie najmniejszej liczby wątków jak to możliwe, a tym samym minimalizując wykorzystanie zasobów systemu operacyjnego i poprawa wydajności. Wątkowość ma również wymagania dotyczące zasobów i potencjalnych konfliktów wziąć pod uwagę podczas projektowania aplikacji. Wymagania dotyczące zasobów są następujące:  
   
--   System zajmują pamięć dla wymaganych przez procesy, informacje o kontekście **elementu AppDomain** obiektów i wątków. W związku z tym liczba procesów, **elementu AppDomain** obiektów i wątków, które mogą być tworzone jest ograniczone przez ilość dostępnej pamięci.  
+-   System używa pamięci, aby uzyskać informacje o kontekście wymagane przez procesy, **AppDomain** obiektów i wątków. W związku z tym, liczbę procesów, **AppDomain** obiektów i wątki, które mogą być tworzone jest ograniczony przez ilość dostępnej pamięci.  
   
--   Rejestrowanie informacji o dużej liczby wątków zużywa czas procesora znaczące. Jeśli ma zbyt wiele wątków, większość z nich nie dokona znaczącego postępu. W przypadku większości aktualna liczba wątków w jeden proces, rzadziej zaplanowane wątków w innych procesów.  
+-   Rejestrowanie informacji o dużej liczbie wątków zużywa mocno procesora. W przypadku zbyt wiele wątków, większość z nich nie spowoduje znaczne postępu. W przypadku większości bieżących wątków w jednym procesie, wątki w innych procesów są planowane rzadziej.  
   
--   Kontrolowanie wykonanie kodu z wielu wątków jest złożony i może być źródłem wiele błędów.  
+-   Kontrolowanie wykonywania kodu za pomocą wielu wątków jest złożona i może być źródłem wiele błędów.  
   
--   Niszczenie wątków wymaga uprzedniego uzyskania informacji o to, co może się zdarzyć i obsługi tych problemów.  
+-   Niszczenie wątków wymaga, wiedząc, co może się zdarzyć oraz umiejętności obsługi tych problemów.  
   
- Zapewnianie współdzielonym dostępem do zasobów mogą powodować konflikty. Aby uniknąć konfliktów, możesz zsynchronizować lub kontrolować dostęp do zasobów udostępnionych. Synchronizujący dostęp prawidłowo (w domenach aplikacji tego samego lub innego) może doprowadzić do problemów, takich jak zakleszczenie (w których dwoma wątkami przestaje odpowiadać podczas każdego oczekiwania przez drugą do ukończenia) i zastępować warunkami (jeśli jest to wynik nietypowych występuje z powodu Nieoczekiwany krytyczne zależności od chronometrażu dwóch zdarzeń). System udostępnia obiekty synchronizacji, które mogą służyć do zapewnienia koordynacji zasobów, udostępnianie między wiele wątków. Zmniejszenie liczby wątków ułatwia synchronizacji zasobów.  
+ Zapewnianie dostępu do zasobów mogą powodować konflikty. Aby uniknąć konfliktów, możesz zsynchronizować lub kontrolować dostęp do zasobów udostępnionych. Nie można zsynchronizować dostęp prawidłowo (w domenach aplikacji tej samej lub innej) może prowadzić do problemów, takich jak zakleszczenia (w której dwa wątki przestać odpowiadać podczas każdego czeka na drugi ukończyć) i sytuacją wyścigów (sytuacji wynik nietypowe ze względu na Nieoczekiwany znaczenie chronometraż dwa zdarzenia). System zawiera obiekty synchronizacji, które mogą służyć do zapewnienia koordynacji zasobów współużytkowanie danych przez wiele wątków. Zmniejszenie liczby wątków ułatwia do synchronizowania zasobów.  
   
  Zasoby, które wymagają synchronizacji obejmują:  
   
--   Zasoby systemowe (na przykład portów komunikacji).  
+-   Zasoby systemowe (takie jak porty komunikacyjne).  
   
--   Zasoby współużytkowane przez wiele procesów (np. dojścia do plików).  
+-   Zasoby współużytkowane przez wiele procesów (takie jak dojścia do plików).  
   
--   Zasoby aplikacji jednej domeny (np. static globalnych, wystąpienie pola) dostęp wiele wątków.  
+-   Zasoby domeny pojedynczej aplikacji (takich jak globalnego, statycznej i wystąpienia pól) uzyskiwał dostęp do wielu wątków.  
   
-### <a name="threading-and-application-design"></a>Projekt wątków i aplikacji  
- Ogólnie rzecz biorąc, przy użyciu <xref:System.Threading.ThreadPool> klasy jest najprostszym sposobem obsługi wielu wątków stosunkowo krótkich zadań nieblokowanych innych wątków i gdy nie oczekuje żadnych określonego harmonogramu zadań. Jednak istnieje wiele powodów do tworzenia własnych wątków:  
+### <a name="threading-and-application-design"></a>Projekt wątkowości i aplikacji  
+ Ogólnie rzecz biorąc, przy użyciu <xref:System.Threading.ThreadPool> klasa jest najprostszym sposobem obsługi wielu wątków dla zadań względnie krótkich, nie będzie blokować innych wątków i gdy nie będzie żadnych określonego planowania zadań. Jednak istnieje kilka powodów do tworzenia własnych wątków:  
   
--   Jeśli potrzebujesz zadania określonego priorytetem.  
+-   Jeśli potrzebujesz mają priorytet określonego zadania.  
   
--   Jeśli zadanie, które może być długi czas wykonywania (i w związku z tym zablokować inne zadania).  
+-   Jeśli zadanie, które może być długi czas wykonywania (i w związku z tym block innych zadań).  
   
--   Jeśli musisz umieścić wątków w jednowątkowym trybie apartment (wszystkie **puli wątków** wątki są wielowątkowe apartamentu).  
+-   Jeśli musisz umieścić wątków w jednowątkowym apartamentem (wszystkie **ThreadPool** wątki są wielowątkowe apartamentu).  
   
--   Jeśli potrzebujesz stabilna tożsamości, skojarzony z wątkiem. Na przykład należy użyć dedykowanego wątku przerwać wątek, wstrzymanie go lub go odnaleźć według nazwy.  
+-   Jeśli potrzebujesz stabilne tożsamości skojarzonych z wątkiem. Na przykład należy użyć dedykowanego wątku przerwania wątek, je zawiesić lub je odnajdą według nazwy.  
   
--   Jeśli musisz uruchomić wątki w tle, które współdziałają z interfejsem użytkownika, .NET Framework w wersji 2.0 zapewnia <xref:System.ComponentModel.BackgroundWorker> składnika, który komunikuje się za pomocą zdarzeń, z między wątkami przekazywanie do wątku interfejsu użytkownika.  
+-   Jeśli musisz uruchomić wątków w tle, które współdziałają z interfejsem użytkownika, .NET Framework w wersji 2.0 zapewnia <xref:System.ComponentModel.BackgroundWorker> składnik, który komunikuje się za pomocą zdarzeń, za pomocą międzywątkowe skierowanie do wątku interfejsu użytkownika.  
   
-### <a name="threading-and-exceptions"></a>Wątki i wyjątków  
- Obsługa wyjątków w wątkach. Nieobsługiwane wyjątki w wątkach, wątki w tle nawet, zazwyczaj zakończenie procesu. Istnieją trzy wyjątki od tej reguły:  
+### <a name="threading-and-exceptions"></a>Wątki i wyjątki  
+ Obsługa wyjątków w wątkach. Nieobsługiwanych wyjątków w wątkach, nawet tła wątków, zazwyczaj zakończyć proces. Istnieją trzy wyjątki od tej reguły:  
   
--   A <xref:System.Threading.ThreadAbortException> wyjątek w wątku, ponieważ <xref:System.Threading.Thread.Abort%2A> została wywołana.  
+-   A <xref:System.Threading.ThreadAbortException> jest zgłaszany w wątku, ponieważ <xref:System.Threading.Thread.Abort%2A> została wywołana.  
   
--   <xref:System.AppDomainUnloadedException> Jest zgłaszany w wątku, ponieważ Trwa zwalnianie domen aplikacji.  
+-   <xref:System.AppDomainUnloadedException> Jest zgłaszany w wątku, ponieważ Trwa zwalnianie domeny aplikacji.  
   
--   Środowisko uruchomieniowe języka wspólnego lub procesu hosta kończy wątku.  
+-   Środowisko uruchomieniowe języka wspólnego lub procesu hosta kończy działanie wątku.  
   
  Aby uzyskać więcej informacji, zobacz [wyjątki w zarządzanych wątkach](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
   
 > [!NOTE]
->  W wersji systemu .NET Framework 1.0 i 1.1 środowisko uruchomieniowe języka wspólnego dyskretnie traps niektóre wyjątki, na przykład w wątku puli wątków. Może to doprowadzić do uszkodzenia aplikacji i może spowodować zawieszenie, aplikacje, które mogą być bardzo trudne do debugowania.  
+>  W wersjach programu .NET Framework 1.0 i 1.1 środowisko uruchomieniowe języka wspólnego dyskretnie traps niektóre wyjątki, na przykład w przypadku wątków z puli wątków. Może to doprowadzić do uszkodzenia aplikacji i po pewnym czasie powodują, że zawiesza się aplikacje, które mogą być bardzo trudne do debugowania.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.ThreadPool>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Synchronizowanie danych na potrzeby wielowątkowości](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Zarządzana pula wątków](../../../docs/standard/threading/the-managed-thread-pool.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Threading.ThreadPool>  
+- <xref:System.ComponentModel.BackgroundWorker>  
+- [Synchronizowanie danych na potrzeby wielowątkowości](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [Zarządzana pula wątków](../../../docs/standard/threading/the-managed-thread-pool.md)

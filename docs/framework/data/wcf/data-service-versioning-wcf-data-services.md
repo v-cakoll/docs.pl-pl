@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 ms.openlocfilehash: 9a92346267012d3651d04648b357bbf530097e34
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44061627"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44221574"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Przechowywanie wersji usługi danych (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Pozwala na tworzenie usług danych, dzięki czemu klienci mają dostęp do danych jako zasoby przy użyciu identyfikatorów URI, które są oparte na modelu danych. OData obsługuje również definicji operacji usługi. Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia te usługi danych może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniających się potrzeb biznesowych, wymagań dotyczących technologii informacji, lub aby rozwiązać inne problemy. Po wprowadzeniu zmian do istniejącej usługi danych należy rozważyć czy należy zdefiniować nową wersję usługi danych usługi i najlepszy sposób zminimalizować wpływ na istniejące aplikacje klienckie. W tym temacie znajdują się wskazówki dotyczące kiedy i jak utworzyć nową wersję usługi danych. Opisano również, jak usługi danych WCF obsługuje wymiany między klientami i usług danych, które obsługują różne wersje protokołu OData.

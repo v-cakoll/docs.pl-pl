@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
 ms.openlocfilehash: bc8bfaabb9e90e66e4ec81e551fd66319a78ca7e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871871"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44221522"
 ---
 # <a name="query-expression-syntax-examples-ordering"></a>Przykłady składni wyrażeń zapytania: porządkowanie
 Przykłady w tym temacie prezentują sposób użycia `OrderBy` i `OrderByDescending` metod do wykonywania zapytań [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) przy użyciu składni wyrażeń zapytania. Model sprzedaży AdventureWorks, używany w tych przykładach składa się z kontaktu, adres, produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży tabele w przykładowej bazy danych AdventureWorks.  

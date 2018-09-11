@@ -3,11 +3,11 @@ title: Ograniczenia (F#)
 description: 'Więcej informacji na temat ograniczeń F #, które są stosowane do parametrów typu ogólnego, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798215"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867832"
 ---
 # <a name="constraints"></a>Ograniczenia
 

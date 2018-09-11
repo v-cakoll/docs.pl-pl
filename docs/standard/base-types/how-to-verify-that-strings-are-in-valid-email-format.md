@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18426e655f6702844daa822921888194ed7ecb64
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 1fe0ead93d1ff2b7867a52d80cf812e2850ea7b3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525869"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131107"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Porady: sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy
 W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ciąg jest w prawidłowym formacie adresu e-mail.  
@@ -103,5 +103,6 @@ vbc /t:library RegexUtilities.vb
     vbc Example.vb /r:RegexUtilities.dll  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyrażeń regularnych programu .NET framework](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wyrażeń regularnych programu .NET framework](../../../docs/standard/base-types/regular-expressions.md)

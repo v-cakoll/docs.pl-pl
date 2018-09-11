@@ -3,25 +3,25 @@ title: 'Wyrażenia lambda: fun — Słowo kluczowe (F#)'
 description: 'Dowiedz się, jak zdefiniować wyrażenia lambda jest funkcją anonimową przy użyciu słowa kluczowego "fun" F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44337021"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353710"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a><span data-ttu-id="88a6a-103">Wyrażenia lambda: fun — Słowo kluczowe (F#)</span><span class="sxs-lookup"><span data-stu-id="88a6a-103">Lambda Expressions: The fun Keyword (F#)</span></span>
+# <a name="lambda-expressions-the-fun-keyword-f"></a><span data-ttu-id="423fe-103">Wyrażenia lambda: fun — Słowo kluczowe (F#)</span><span class="sxs-lookup"><span data-stu-id="423fe-103">Lambda Expressions: The fun Keyword (F#)</span></span>
 
-<span data-ttu-id="88a6a-104">`fun` — Słowo kluczowe jest używane do definiowania Wyrażenie lambda, oznacza to, że funkcja anonimowa.</span><span class="sxs-lookup"><span data-stu-id="88a6a-104">The `fun` keyword is used to define a lambda expression, that is, an anonymous function.</span></span>
+<span data-ttu-id="423fe-104">`fun` — Słowo kluczowe jest używane do definiowania Wyrażenie lambda, oznacza to, że funkcja anonimowa.</span><span class="sxs-lookup"><span data-stu-id="423fe-104">The `fun` keyword is used to define a lambda expression, that is, an anonymous function.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="88a6a-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="88a6a-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="423fe-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="423fe-105">Syntax</span></span>
 
 ```fsharp
 fun parameter-list -> expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="88a6a-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="88a6a-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="423fe-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="423fe-106">Remarks</span></span>
 
-<span data-ttu-id="88a6a-107">*Listy parametrów* zwykle składa się z nazwy i, opcjonalnie, typy parametrów.</span><span class="sxs-lookup"><span data-stu-id="88a6a-107">The *parameter-list* typically consists of names and, optionally, types of parameters.</span></span> <span data-ttu-id="88a6a-108">Ogólnie rzecz biorąc *listy parametrów* może składać się z dowolnym wzorców F #.</span><span class="sxs-lookup"><span data-stu-id="88a6a-108">More generally, the *parameter-list* can be composed of any F# patterns.</span></span> <span data-ttu-id="88a6a-109">Aby uzyskać pełną listę możliwości wzorców, zobacz [dopasowywania do wzorca](../pattern-matching.md).</span><span class="sxs-lookup"><span data-stu-id="88a6a-109">For a full list of possible patterns, see [Pattern Matching](../pattern-matching.md).</span></span> <span data-ttu-id="88a6a-110">Listy prawidłowych parametrów zawierają następujące przykłady.</span><span class="sxs-lookup"><span data-stu-id="88a6a-110">Lists of valid parameters include the following examples.</span></span>
+<span data-ttu-id="423fe-107">*Listy parametrów* zwykle składa się z nazwy i, opcjonalnie, typy parametrów.</span><span class="sxs-lookup"><span data-stu-id="423fe-107">The *parameter-list* typically consists of names and, optionally, types of parameters.</span></span> <span data-ttu-id="423fe-108">Ogólnie rzecz biorąc *listy parametrów* może składać się z dowolnym wzorców F #.</span><span class="sxs-lookup"><span data-stu-id="423fe-108">More generally, the *parameter-list* can be composed of any F# patterns.</span></span> <span data-ttu-id="423fe-109">Aby uzyskać pełną listę możliwości wzorców, zobacz [dopasowywania do wzorca](../pattern-matching.md).</span><span class="sxs-lookup"><span data-stu-id="423fe-109">For a full list of possible patterns, see [Pattern Matching](../pattern-matching.md).</span></span> <span data-ttu-id="423fe-110">Listy prawidłowych parametrów zawierają następujące przykłady.</span><span class="sxs-lookup"><span data-stu-id="423fe-110">Lists of valid parameters include the following examples.</span></span>
 
 ```fsharp
 // Lambda expressions with parameter lists.
@@ -36,16 +36,16 @@ fun (a, b) -> …
 fun head :: tail -> …
 ```
 
-<span data-ttu-id="88a6a-111">*Wyrażenie* treści funkcji ostatniego wyrażenia, które generuje wartość zwracaną.</span><span class="sxs-lookup"><span data-stu-id="88a6a-111">The *expression* is the body of the function, the last expression of which generates a return value.</span></span> <span data-ttu-id="88a6a-112">Przykłady wyrażeń lambda prawidłowe są następujące:</span><span class="sxs-lookup"><span data-stu-id="88a6a-112">Examples of valid lambda expressions include the following:</span></span>
+<span data-ttu-id="423fe-111">*Wyrażenie* treści funkcji ostatniego wyrażenia, które generuje wartość zwracaną.</span><span class="sxs-lookup"><span data-stu-id="423fe-111">The *expression* is the body of the function, the last expression of which generates a return value.</span></span> <span data-ttu-id="423fe-112">Przykłady wyrażeń lambda prawidłowe są następujące:</span><span class="sxs-lookup"><span data-stu-id="423fe-112">Examples of valid lambda expressions include the following:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet301.fs)]
 
-## <a name="using-lambda-expressions"></a><span data-ttu-id="88a6a-113">Korzystając z wyrażenia Lambda</span><span class="sxs-lookup"><span data-stu-id="88a6a-113">Using Lambda Expressions</span></span>
+## <a name="using-lambda-expressions"></a><span data-ttu-id="423fe-113">Korzystając z wyrażenia Lambda</span><span class="sxs-lookup"><span data-stu-id="423fe-113">Using Lambda Expressions</span></span>
 
-<span data-ttu-id="88a6a-114">Wyrażenia lambda są szczególnie przydatne, jeśli chcesz wykonywać operacje na liście lub inna kolekcja i chcesz uniknąć dodatkowej pracy definiowania funkcji.</span><span class="sxs-lookup"><span data-stu-id="88a6a-114">Lambda expressions are especially useful when you want to perform operations on a list or other collection and want to avoid the extra work of defining a function.</span></span> <span data-ttu-id="88a6a-115">Wiele funkcji biblioteki F # pobierają wartości funkcji jako argumentów i może być szczególnie wygodne, można użyć wyrażenia lambda w tych przypadkach.</span><span class="sxs-lookup"><span data-stu-id="88a6a-115">Many F# library functions take function values as arguments, and it can be especially convenient to use a lambda expression in those cases.</span></span> <span data-ttu-id="88a6a-116">Następujący kod dotyczy elementów listy, wyrażenia lambda.</span><span class="sxs-lookup"><span data-stu-id="88a6a-116">The following code applies a lambda expression to elements of a list.</span></span> <span data-ttu-id="88a6a-117">W takim przypadku funkcja anonimowa dodaje 1 dla każdego elementu listy.</span><span class="sxs-lookup"><span data-stu-id="88a6a-117">In this case, the anonymous function adds 1 to every element of a list.</span></span>
+<span data-ttu-id="423fe-114">Wyrażenia lambda są szczególnie przydatne, jeśli chcesz wykonywać operacje na liście lub inna kolekcja i chcesz uniknąć dodatkowej pracy definiowania funkcji.</span><span class="sxs-lookup"><span data-stu-id="423fe-114">Lambda expressions are especially useful when you want to perform operations on a list or other collection and want to avoid the extra work of defining a function.</span></span> <span data-ttu-id="423fe-115">Wiele funkcji biblioteki F # pobierają wartości funkcji jako argumentów i może być szczególnie wygodne, można użyć wyrażenia lambda w tych przypadkach.</span><span class="sxs-lookup"><span data-stu-id="423fe-115">Many F# library functions take function values as arguments, and it can be especially convenient to use a lambda expression in those cases.</span></span> <span data-ttu-id="423fe-116">Następujący kod dotyczy elementów listy, wyrażenia lambda.</span><span class="sxs-lookup"><span data-stu-id="423fe-116">The following code applies a lambda expression to elements of a list.</span></span> <span data-ttu-id="423fe-117">W takim przypadku funkcja anonimowa dodaje 1 dla każdego elementu listy.</span><span class="sxs-lookup"><span data-stu-id="423fe-117">In this case, the anonymous function adds 1 to every element of a list.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 
-## <a name="see-also"></a><span data-ttu-id="88a6a-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="88a6a-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="423fe-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="423fe-118">See also</span></span>
 
-- [<span data-ttu-id="88a6a-119">Funkcje</span><span class="sxs-lookup"><span data-stu-id="88a6a-119">Functions</span></span>](index.md)
+- [<span data-ttu-id="423fe-119">Funkcje</span><span class="sxs-lookup"><span data-stu-id="423fe-119">Functions</span></span>](index.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
 ms.openlocfilehash: b53547e8e61e69834f262407de490422e6b6bb00
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206513"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264827"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Porady: zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel
 <xref:System.Windows.Forms.FlowLayoutPanel> Kontrolować obsługuje <xref:System.Windows.Forms.Control.Anchor%2A> i <xref:System.Windows.Forms.Control.Dock%2A> właściwości w jego formantów podrzędnych.  

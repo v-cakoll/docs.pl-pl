@@ -11,11 +11,11 @@ ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199651"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264964"
 ---
 # <a name="weak-references"></a>Słabe odwołania
 Moduł odśmiecania pamięci nie można zebrać obiekt używany przez aplikację, gdy kod aplikacji może osiągnąć tego obiektu. Aplikacja jest nazywany ma silne odwołanie do obiektu.  

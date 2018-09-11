@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
 ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201962"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44263469"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Animacja i chronometraż Tematy porad
 W poniższych tematach pokazano sposób użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Animacja i system chronometrażu w swoich aplikacjach.  

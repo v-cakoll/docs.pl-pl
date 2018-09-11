@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
 ms.openlocfilehash: 108411269067dc4b19b585b991dffbd78f2bb23f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190809"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264496"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog — Składnik (Formularze systemu Windows)
 Formularze Windows <xref:System.Windows.Forms.OpenFileDialog> składnik to wstępnie skonfigurowane okno dialogowe. Jest to ta sama **Otwórz plik** okno dialogowe ujawnione przez system operacyjny Windows. Dziedziczy <xref:System.Windows.Forms.CommonDialog> klasy.  

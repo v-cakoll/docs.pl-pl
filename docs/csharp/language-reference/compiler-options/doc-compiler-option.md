@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
 ms.openlocfilehash: 24eb3b1a70c420fd0008ea9c202c774592e1d346
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137476"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259798"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (opcje kompilatora C#)
 **-Doc** opcja służy do umieszczania komentarzy do dokumentacji w pliku XML.  

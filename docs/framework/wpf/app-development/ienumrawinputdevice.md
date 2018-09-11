@@ -5,11 +5,11 @@ helpviewer_keywords:
 - IEnumRAWINPUTDEVICE interface [WPF]
 ms.assetid: 88c8b389-a48b-46b9-b895-8ed7b1e26fea
 ms.openlocfilehash: e0e5a112b7444872dd74cb70bb044ae233334d2a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227795"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262688"
 ---
 # <a name="ienumrawinputdevice"></a>IEnumRAWINPUTDEVICE
 Ten interfejs wylicza pierwotne urządzenia wejściowe i jest używana tylko przez PresentationHost.exe.  

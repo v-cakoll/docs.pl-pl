@@ -3,11 +3,11 @@ title: Zabezpieczenia komunikatów w architekturze WCF
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
 ms.openlocfilehash: 81d9acde3c8fab1860904074199066cca55c7186
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886188"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275083"
 ---
 # <a name="message-security-in-wcf"></a>Zabezpieczenia komunikatów w architekturze WCF
 Windows Communication Foundation (WCF) ma dwa główne tryby zapewnianie bezpieczeństwa (`Transport` i `Message`) i trzeci trybu (`TransportWithMessageCredential`) który łączy dwie. W tym temacie omówiono zabezpieczenia komunikatów i przyczyny, które z niej korzystać.  

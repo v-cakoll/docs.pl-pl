@@ -9,11 +9,11 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037662"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265172"
 ---
 # <a name="garbage-collection-and-performance"></a>Odzyskiwanie pamięci i wydajność
 <a name="top"></a> W tym temacie opisano problemy związane z wyrzucania elementów kolekcji oraz użycia pamięci. Ona rozwiązuje problemy, które odnoszą się do zarządzanej sterty i wyjaśnia, jak można zminimalizować wpływ wyrzucania elementów bezużytecznych na swoich aplikacjach. Każde wydanie zawiera łącza do procedur służących do badania problemów.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: 898e5688ae08a59415c8b3116665eec6cb4cf904
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877378"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260207"
 ---
 # <a name="using-sessions"></a>Korzystanie z sesji
 W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wiadomości do konwersacji. Sesje WCF są inne niż dostępne w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji obsługują różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje umożliwiające w sesji programu WCF aplikacji i sposobu ich używania.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
 ms.openlocfilehash: 34d600454a7fa63c7ba59bebded6365cd5401cb4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193149"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266738"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Porady: definiowanie porządku osi Z zadokowanych formantów ToolStrip
 Położenie <xref:System.Windows.Forms.ToolStrip> kontroli poprawnie za pomocą dokowania, należy umieścić formant poprawnie w kolejności z formularza.  

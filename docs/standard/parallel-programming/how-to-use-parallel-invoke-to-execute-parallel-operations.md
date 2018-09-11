@@ -12,11 +12,11 @@ ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d0870d23c5606fbdd8b4a2f78c4d8b9f4ddc93e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178133"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259639"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Porady: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych
 W tym przykładzie pokazano, jak zrównoleglić operacje przy użyciu <xref:System.Threading.Tasks.Parallel.Invoke%2A> w bibliotece zadań równoległych. Trzy operacje są wykonywane na udostępnione źródło danych. Ponieważ żadne operacje modyfikuje źródła, mogą być wykonywane równolegle w prosty sposób.  

@@ -3,11 +3,11 @@ title: Rozszerzanie kontroli obsługi i raportowania błędów
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 6492807b55b50662790cf25807a35ddd65fbe01d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032841"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264249"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Rozszerzanie kontroli obsługi i raportowania błędów
 W tym przykładzie pokazano, jak rozszerzyć kontrolę obsługi błędów i raportowania błędów w usługi Windows Communication Foundation (WCF) przy użyciu <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejsu. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) z dodatkowy kod dodany do usługi w celu obsługi błędów. Klient wymusza kilka warunków błędów. Usługa przechwytuje błędy i rejestruje je w pliku.  

@@ -11,11 +11,11 @@ ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194932"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265081"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Porady: dodawanie i usuwanie elementów ConcurrentDictionary
 W tym przykładzie pokazano, jak dodawanie, pobieranie, Aktualizuj i usuń elementy z <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Ta klasa kolekcji jest implementacja metodą o bezpiecznych wątkach. Zalecamy użycie go zawsze wtedy, gdy wiele wątków może próbować uzyskać dostęp do elementów jednocześnie.  

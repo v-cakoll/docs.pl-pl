@@ -8,11 +8,11 @@ helpviewer_keywords:
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
 ms.openlocfilehash: 2e792a230ccead5d9a73f9b78a83d57738c31085
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190270"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260074"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Tworzenie i zgłaszanie wyjątków (Przewodnik programowania w języku C#)
 Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania programu. Obiekty wyjątków, które opisują błąd są tworzone a następnie *zgłoszony* z [throw](../../../csharp/language-reference/keywords/throw.md) — słowo kluczowe. Środowisko uruchomieniowe wyszukuje następnie najbardziej zgodne obsługi wyjątków.  

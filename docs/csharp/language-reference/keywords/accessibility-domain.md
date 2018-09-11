@@ -5,11 +5,11 @@ helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
 ms.openlocfilehash: 01854b60fb58d4dcd0a217552f19d6c0cd32ec78
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063423"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261762"
 ---
 # <a name="accessibility-domain-c-reference"></a>Domena dostępności (odwołanie w C#)
 Domena dostępności członka Określa, w sekcjach programów, które mogą być przywoływane członka. Jeśli element członkowski jest zagnieżdżony w ramach innego typu, jego domeny dostępności jest określana przez oba [poziom dostępności](../../../csharp/language-reference/keywords/accessibility-levels.md) członka i domena dostępności typu zawierającego.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
 ms.openlocfilehash: 204b53751fce4f9a3e038ae7c44634522d54657c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190720"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264184"
 ---
 # <a name="region-directive"></a>#Region — dyrektywa
 Zwija i ukrywa sekcje kodu w plikach języka Visual Basic.  

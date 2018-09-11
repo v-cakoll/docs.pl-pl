@@ -5,11 +5,11 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189306"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262261"
 ---
 # <a name="getting-started-with-net-native"></a>Wprowadzenie do architektury .NET Native
 Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przeprowadzana migracja istniejącej aplikacji Windows Store, możesz wykonać ten sam zestaw procedur. Aby utworzyć [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji, wykonaj następujące kroki:  

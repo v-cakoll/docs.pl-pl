@@ -7,11 +7,11 @@ ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f24759d68f007caf5f79096c6d4cebb7c050851
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252437"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262324"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opcje kompilatora Visual Basic w porządku alfabetycznym
 Kompilator wiersza polecenia programu Visual Basic jest dostarczany jako alternatywę do kompilowania programów z programu Visual Studio zintegrowane środowisko programistyczne (IDE). Oto lista opcje wiersza polecenia kompilatora języka Visual Basic, sortowana alfabetycznie.  

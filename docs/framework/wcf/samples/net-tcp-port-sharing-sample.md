@@ -3,11 +3,11 @@ title: Przykład współużytkowania portów Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
 ms.openlocfilehash: db4cd5be73e3c170f2feaa1e76f275eb7d9cd226
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212532"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44263878"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Przykład współużytkowania portów Net.TCP
 Protokół TCP/IP używa 16-bitową liczbę o nazwie portu do rozróżniania połączeń z wieloma aplikacjami sieciowymi uruchomione na tym samym komputerze. Jeśli aplikacja nasłuchuje na porcie, cały ruch TCP dla tego portu przechodzi do tej aplikacji. Inne aplikacje nie może nasłuchiwać na tym porcie w tym samym czasie.  

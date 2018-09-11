@@ -12,11 +12,11 @@ ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83efda175b7e5cef8c7042682827d2fe0562c207
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211895"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260087"
 ---
 # <a name="sorted-collection-types"></a>Sortowane typów kolekcji
 <xref:System.Collections.SortedList?displayProperty=nameWithType> Klasy <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> klasy generycznej i <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> ogólnej klasy są podobne do <xref:System.Collections.Hashtable> klasy i <xref:System.Collections.Generic.Dictionary%602> ogólnej klasy, implementują <xref:System.Collections.IDictionary> interfejs, ale obsługa ich elementy w sortowaniu kolejność według klucza, a nie mają O(1) wstawiania i pobieranie charakterystycznych dla tabel skrótów. Trzy klasy wspólnym kilka funkcji:  

@@ -3,11 +3,11 @@ title: Używanie śledzenia do rozwiązywania problemów z aplikacjami
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
 ms.openlocfilehash: f991533b61705c8d0a1a8e71b632dd53f24dd979
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179237"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44263781"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Używanie śledzenia do rozwiązywania problemów z aplikacjami
 Windows Workflow Foundation (WF) umożliwia śledzenie informacji związanych z przepływu pracy, o podanie szczegółów do wykonywania aplikacji Windows Workflow Foundation lub usługi. Hosty programu Windows Workflow Foundation mają możliwość przechwytywania zdarzeń przepływu pracy podczas wykonywania wystąpienia przepływu pracy. Jeśli przepływ pracy generuje błędy lub wyjątki, można użyć programu Windows Workflow Foundation, Szczegóły śledzenia do rozwiązywania problemów z jego przetwarzania.  

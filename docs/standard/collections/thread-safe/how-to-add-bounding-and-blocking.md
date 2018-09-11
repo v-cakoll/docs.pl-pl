@@ -8,11 +8,11 @@ ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3f52d1067a8aa907c8f1cf8b550eec82d1133b3f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212428"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261749"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Porady: dodawanie do kolekcji funkcji blokujących i ograniczających
 W tym przykładzie przedstawiono sposób dodawania funkcji blokujących i do klasy kolekcji niestandardowej implementując <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> interfejsu w klasie, a następnie przy użyciu wystąpienia klasy jako mechanizm wewnętrzny magazyn dla <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>. Aby uzyskać więcej informacji na temat blokujących i ograniczających zobacz [BlockingCollection — Przegląd](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  

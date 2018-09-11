@@ -17,11 +17,11 @@ ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ec813e50bb4dca33c8dda8b41914cfa5d5596c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067620"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267157"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Porady: sprawdzanie podpisów cyfrowych w dokumentach XML
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeń nazw w celu weryfikacji danych XML podpisany przy użyciu podpisu cyfrowego.  Podpisy cyfrowe XML (XMLDSIG) pozwalają zweryfikować, że dane nie została zmodyfikowana po podpisaniu.  Aby uzyskać więcej informacji na temat standardowych XMLDSIG, zobacz specyfikację World Wide Web Consortium (W3C) na http://www.w3.org/TR/xmldsig-core/.  

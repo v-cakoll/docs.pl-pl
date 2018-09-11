@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 ms.assetid: eb584e71-59da-4012-aaca-dbe1c7c7a156
 ms.openlocfilehash: f7128c8ba6e2a221e359cd761cdc4c3521bb2b99
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191657"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260259"
 ---
 # <a name="how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls"></a>Porady: włączanie marginesów zaznaczania i marginesów obrazów w formantach ContextMenuStrip
 Można dostosować <xref:System.Windows.Forms.ToolStripMenuItem> obiekty w swojej <xref:System.Windows.Forms.MenuStrip> kontrolę dzięki znaczniki wyboru i obrazów niestandardowych.  

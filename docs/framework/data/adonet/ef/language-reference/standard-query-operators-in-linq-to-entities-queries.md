@@ -3,11 +3,11 @@ title: Standardowe operatory zapytań w technologii LINQ do zapytań jednostki
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 302fa281767fc95e9a9a2192382034b3a519cd92
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217324"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262288"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardowe operatory zapytań w technologii LINQ do zapytań jednostki
 W zapytaniu należy określić informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje powinny można sortowane, grupowane i kształtowane przed zwróceniem. LINQ zapewnia zestaw metod standardowego zapytania, które można użyć w zapytaniu. Większość z tych metod działają na sekwencje; w tym kontekście sekwencji jest obiektem, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. Funkcjonalność zapytań operatorów standardowej kwerendy obejmuje filtrowania, projekcji, agregacji, sortowanie, grupowanie, stronicowanie i więcej. Niektórych często używane standardowego zapytania, operatory są wyposażone w dedykowane składni słowa kluczowego, dzięki czemu można wywołać przy użyciu składni wyrażeń zapytania. Wyrażenie kwerendy jest inny, bardziej czytelny sposób wyrażania kwerendę, niż odpowiednik oparte na metodzie. Klauzule wyrażenia zapytania są tłumaczone na wywołania do metody zapytania w czasie kompilacji. Aby uzyskać listę standardowych operatorów zapytań, które mają klauzule wyrażenia zapytania równoważne, zobacz [standardowe operatory zapytań — Przegląd](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

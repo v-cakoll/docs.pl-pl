@@ -9,11 +9,11 @@ helpviewer_keywords:
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
 ms.openlocfilehash: d6dc79cd7a15aef2a4168fffb293c5e1f33cde08
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197118"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259785"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Jak animować obiekt na ścieżce (animacja punktu)
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.PointAnimationUsingPath> obiektu animować <xref:System.Windows.Point> wzdłuż ścieżki.  

@@ -3,11 +3,11 @@ title: '&lt;message&gt; w &lt;wsFederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
 ms.openlocfilehash: 820ee7015a51ecc5510889516faef20292cfbc07
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184718"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260035"
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>&lt;message&gt; w &lt;wsFederationHttpBinding&gt;
 Określa ustawienia zabezpieczenia na poziomie komunikatu [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
 ms.openlocfilehash: 90e00e4264ff808151c9e1c58fdaf290765620c8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222649"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266566"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Instrukcje: Asynchroniczne wywoływanie operacji usługi WCF
 W tym temacie opisano, jak klient może uzyskać dostęp do operacji usługi asynchronicznie. Implementuje usługę, w tym temacie `ICalculator` interfejsu. Klient może asynchroniczne wywoływanie operacji w tym interfejsie przy użyciu oparte na zdarzeniach asynchronicznych wywoływania modelu. (Aby uzyskać więcej informacji na temat oparte na zdarzeniach asynchronicznych wywoływania modelu, zobacz [programowania wielowątkowe, za pomocą wzorca asynchronicznego opartego na zdarzeniach](https://go.microsoft.com/fwlink/?LinkId=248184)). Aby uzyskać przykład przedstawia sposób implementowania operacji asynchronicznie w ramach usługi, zobacz [porady: Wdrażanie asynchronicznej operacji usługi](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Aby uzyskać więcej informacji na temat operacje synchroniczne i asynchroniczne, zobacz [synchroniczne i asynchroniczne operacje](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - lambda expressions [C#], outside LINQ
 ms.assetid: 2b519274-6ee4-4455-ab2e-aed67dbfd07c
 ms.openlocfilehash: eb9fea64b8aeb96a880b7e177673c1316b7aa4c1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261539"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44368773"
 ---
-# <a name="how-to-use-lambda-expressions-outside-linq-c-programming-guide"></a><span data-ttu-id="57150-102">Porady: użycie wyrażeń lambda poza LINQ (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="57150-102">How to: Use Lambda Expressions Outside LINQ (C# Programming Guide)</span></span>
-<span data-ttu-id="57150-103">Wyrażenia lambda nie są ograniczone do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania.</span><span class="sxs-lookup"><span data-stu-id="57150-103">Lambda expressions are not limited to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries.</span></span> <span data-ttu-id="57150-104">Możesz użyć ich wszędzie tam, gdzie delegata jest oczekiwana wartość, czyli wszędzie tam, gdzie można metodę anonimową.</span><span class="sxs-lookup"><span data-stu-id="57150-104">You can use them anywhere a delegate value is expected, that is, wherever an anonymous method can be used.</span></span> <span data-ttu-id="57150-105">Poniższy przykład przedstawia sposób użycia wyrażenia lambda w obsłudze zdarzeń Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="57150-105">The following example shows how to use a lambda expression in a Windows Forms event handler.</span></span> <span data-ttu-id="57150-106">Należy zauważyć, że typy danych wejściowych (<xref:System.Object> i <xref:System.Windows.Forms.MouseEventArgs>) są wnioskowane przez kompilator i nie mają jawnie podana w danych wejściowych parametrów wyrażenia lambda.</span><span class="sxs-lookup"><span data-stu-id="57150-106">Notice that the types of the inputs (<xref:System.Object> and <xref:System.Windows.Forms.MouseEventArgs>) are inferred by the compiler and do not have to be explicitly given in the lambda input parameters.</span></span>  
+# <a name="how-to-use-lambda-expressions-outside-linq-c-programming-guide"></a><span data-ttu-id="da592-102">Porady: użycie wyrażeń lambda poza LINQ (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="da592-102">How to: Use Lambda Expressions Outside LINQ (C# Programming Guide)</span></span>
+<span data-ttu-id="da592-103">Wyrażenia lambda nie są ograniczone do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania.</span><span class="sxs-lookup"><span data-stu-id="da592-103">Lambda expressions are not limited to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries.</span></span> <span data-ttu-id="da592-104">Możesz użyć ich wszędzie tam, gdzie delegata jest oczekiwana wartość, czyli wszędzie tam, gdzie można metodę anonimową.</span><span class="sxs-lookup"><span data-stu-id="da592-104">You can use them anywhere a delegate value is expected, that is, wherever an anonymous method can be used.</span></span> <span data-ttu-id="da592-105">Poniższy przykład przedstawia sposób użycia wyrażenia lambda w obsłudze zdarzeń Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="da592-105">The following example shows how to use a lambda expression in a Windows Forms event handler.</span></span> <span data-ttu-id="da592-106">Należy zauważyć, że typy danych wejściowych (<xref:System.Object> i <xref:System.Windows.Forms.MouseEventArgs>) są wnioskowane przez kompilator i nie mają jawnie podana w danych wejściowych parametrów wyrażenia lambda.</span><span class="sxs-lookup"><span data-stu-id="da592-106">Notice that the types of the inputs (<xref:System.Object> and <xref:System.Windows.Forms.MouseEventArgs>) are inferred by the compiler and do not have to be explicitly given in the lambda input parameters.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="57150-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="57150-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="da592-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="da592-107">Example</span></span>  
   
 ```csharp  
 public partial class Form1 : Form  
@@ -28,8 +28,8 @@ public partial class Form1 : Form
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="57150-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="57150-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da592-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="da592-108">See Also</span></span>
 
-- [<span data-ttu-id="57150-109">Wyrażenia lambda</span><span class="sxs-lookup"><span data-stu-id="57150-109">Lambda Expressions</span></span>](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [<span data-ttu-id="57150-110">Metody anonimowe</span><span class="sxs-lookup"><span data-stu-id="57150-110">Anonymous Methods</span></span>](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [<span data-ttu-id="57150-111">Zapytanie o języku zintegrowanym (LINQ))</span><span class="sxs-lookup"><span data-stu-id="57150-111">Language Integrated Query (LINQ))</span></span>](../../../csharp/programming-guide/concepts/linq/index.md)
+- [<span data-ttu-id="da592-109">Wyrażenia lambda</span><span class="sxs-lookup"><span data-stu-id="da592-109">Lambda Expressions</span></span>](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [<span data-ttu-id="da592-110">Metody anonimowe</span><span class="sxs-lookup"><span data-stu-id="da592-110">Anonymous Methods</span></span>](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [<span data-ttu-id="da592-111">Zapytanie o języku zintegrowanym (LINQ))</span><span class="sxs-lookup"><span data-stu-id="da592-111">Language Integrated Query (LINQ))</span></span>](../../../csharp/programming-guide/concepts/linq/index.md)

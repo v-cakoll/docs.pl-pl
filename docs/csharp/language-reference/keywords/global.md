@@ -8,22 +8,22 @@ helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 8932c16a-6959-42c2-86e7-2c4221ab788b
 ms.openlocfilehash: 837245e31a9a795aa2f13cfc6c33fefb6402801d
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339425"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367358"
 ---
-# <a name="global-c-reference"></a><span data-ttu-id="52f62-102">global (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="52f62-102">global (C# Reference)</span></span>
+# <a name="global-c-reference"></a><span data-ttu-id="e1d67-102">global (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="e1d67-102">global (C# Reference)</span></span>
 
-<span data-ttu-id="52f62-103">`global` Kontekstowego słowa kluczowego, gdy znajduje się przed [:: operator](../operators/namespace-alias-qualifer.md), odwołuje się do globalnej przestrzeni nazw, która jest domyślny obszar nazw dla dowolnego programu C#, a w przeciwnym razie jest bez nazwy.</span><span class="sxs-lookup"><span data-stu-id="52f62-103">The `global` contextual keyword, when it comes before the [:: operator](../operators/namespace-alias-qualifer.md), refers to the global namespace, which is the default namespace for any C# program and is otherwise unnamed.</span></span> <span data-ttu-id="52f62-104">Aby uzyskać więcej informacji, zobacz [porady: użycie globalnych aliasów Namespace](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span><span class="sxs-lookup"><span data-stu-id="52f62-104">For more information, see [How to: Use the Global Namespace Alias](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span></span>
+<span data-ttu-id="e1d67-103">`global` Kontekstowego słowa kluczowego, gdy znajduje się przed [:: operator](../operators/namespace-alias-qualifer.md), odwołuje się do globalnej przestrzeni nazw, która jest domyślny obszar nazw dla dowolnego programu C#, a w przeciwnym razie jest bez nazwy.</span><span class="sxs-lookup"><span data-stu-id="e1d67-103">The `global` contextual keyword, when it comes before the [:: operator](../operators/namespace-alias-qualifer.md), refers to the global namespace, which is the default namespace for any C# program and is otherwise unnamed.</span></span> <span data-ttu-id="e1d67-104">Aby uzyskać więcej informacji, zobacz [porady: użycie globalnych aliasów Namespace](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span><span class="sxs-lookup"><span data-stu-id="e1d67-104">For more information, see [How to: Use the Global Namespace Alias](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="52f62-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="52f62-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e1d67-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="e1d67-105">Example</span></span>
 
-<span data-ttu-id="52f62-106">Poniższy przykład pokazuje, jak używać `global` kontekstowe słowo kluczowe, aby określić, że klasa `TestApp` jest zdefiniowany w globalnej przestrzeni nazw:</span><span class="sxs-lookup"><span data-stu-id="52f62-106">The following example shows how to use the `global` contextual keyword to specify that the class `TestApp` is defined in the global namespace:</span></span>
+<span data-ttu-id="e1d67-106">Poniższy przykład pokazuje, jak używać `global` kontekstowe słowo kluczowe, aby określić, że klasa `TestApp` jest zdefiniowany w globalnej przestrzeni nazw:</span><span class="sxs-lookup"><span data-stu-id="e1d67-106">The following example shows how to use the `global` contextual keyword to specify that the class `TestApp` is defined in the global namespace:</span></span>
 
 [!code-csharp[csrefKeywordsContextual#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#13)]
 
-## <a name="see-also"></a><span data-ttu-id="52f62-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="52f62-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1d67-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e1d67-107">See also</span></span>
 
-- [<span data-ttu-id="52f62-108">Przestrzenie nazw</span><span class="sxs-lookup"><span data-stu-id="52f62-108">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
+- [<span data-ttu-id="e1d67-108">Przestrzenie nazw</span><span class="sxs-lookup"><span data-stu-id="e1d67-108">Namespaces</span></span>](../../programming-guide/namespaces/index.md)

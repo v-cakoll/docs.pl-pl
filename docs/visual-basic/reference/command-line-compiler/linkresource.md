@@ -9,17 +9,17 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 4f4b3db768b5466f8912b66a0a4709d0f773c1f3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 97e0ccd46f413cc05b659731436bb141ee178419
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44047194"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44369033"
 ---
-# <a name="-linkresource-visual-basic"></a><span data-ttu-id="20193-102">-linkresource — (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="20193-102">-linkresource (Visual Basic)</span></span>
-<span data-ttu-id="20193-103">Tworzy łącze do zarządzanego zasobem.</span><span class="sxs-lookup"><span data-stu-id="20193-103">Creates a link to a managed resource.</span></span>  
+# <a name="-linkresource-visual-basic"></a><span data-ttu-id="e60cf-102">-linkresource — (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e60cf-102">-linkresource (Visual Basic)</span></span>
+<span data-ttu-id="e60cf-103">Tworzy łącze do zarządzanego zasobem.</span><span class="sxs-lookup"><span data-stu-id="e60cf-103">Creates a link to a managed resource.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20193-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="20193-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e60cf-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e60cf-104">Syntax</span></span>  
   
 ```  
 -linkresource:filename[,identifier[,public|private]]  
@@ -27,36 +27,37 @@ ms.locfileid: "44047194"
 -linkres:filename[,identifier[,public|private]]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="20193-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="20193-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="e60cf-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="e60cf-105">Arguments</span></span>  
  `filename`  
- <span data-ttu-id="20193-106">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="20193-106">Required.</span></span> <span data-ttu-id="20193-107">Plik zasobów, aby utworzyć łącze do zestawu.</span><span class="sxs-lookup"><span data-stu-id="20193-107">The resource file to link to the assembly.</span></span> <span data-ttu-id="20193-108">Jeśli nazwa pliku zawiera spację, nazwę należy ująć w znaki cudzysłowu ("").</span><span class="sxs-lookup"><span data-stu-id="20193-108">If the file name contains a space, enclose the name in quotation marks (" ").</span></span>  
+ <span data-ttu-id="e60cf-106">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="e60cf-106">Required.</span></span> <span data-ttu-id="e60cf-107">Plik zasobów, aby utworzyć łącze do zestawu.</span><span class="sxs-lookup"><span data-stu-id="e60cf-107">The resource file to link to the assembly.</span></span> <span data-ttu-id="e60cf-108">Jeśli nazwa pliku zawiera spację, nazwę należy ująć w znaki cudzysłowu ("").</span><span class="sxs-lookup"><span data-stu-id="e60cf-108">If the file name contains a space, enclose the name in quotation marks (" ").</span></span>  
   
  `identifier`  
- <span data-ttu-id="20193-109">Opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="20193-109">Optional.</span></span> <span data-ttu-id="20193-110">Nazwa logiczna zasobu.</span><span class="sxs-lookup"><span data-stu-id="20193-110">The logical name for the resource.</span></span> <span data-ttu-id="20193-111">Nazwa która jest używana do ładowania zasobów.</span><span class="sxs-lookup"><span data-stu-id="20193-111">The name that is used to load the resource.</span></span> <span data-ttu-id="20193-112">Wartość domyślna to nazwa pliku.</span><span class="sxs-lookup"><span data-stu-id="20193-112">The default is the name of the file.</span></span> <span data-ttu-id="20193-113">Opcjonalnie można określić, czy plik jest publicznych lub prywatnych w manifeście zestawu, na przykład: `-linkres:filename.res,myname.res,public`.</span><span class="sxs-lookup"><span data-stu-id="20193-113">Optionally, you can specify whether the file is public or private in the assembly manifest, for example: `-linkres:filename.res,myname.res,public`.</span></span> <span data-ttu-id="20193-114">Domyślnie `filename` jest publiczna w zestawie.</span><span class="sxs-lookup"><span data-stu-id="20193-114">By default, `filename` is public in the assembly.</span></span>  
+ <span data-ttu-id="e60cf-109">Opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="e60cf-109">Optional.</span></span> <span data-ttu-id="e60cf-110">Nazwa logiczna zasobu.</span><span class="sxs-lookup"><span data-stu-id="e60cf-110">The logical name for the resource.</span></span> <span data-ttu-id="e60cf-111">Nazwa która jest używana do ładowania zasobów.</span><span class="sxs-lookup"><span data-stu-id="e60cf-111">The name that is used to load the resource.</span></span> <span data-ttu-id="e60cf-112">Wartość domyślna to nazwa pliku.</span><span class="sxs-lookup"><span data-stu-id="e60cf-112">The default is the name of the file.</span></span> <span data-ttu-id="e60cf-113">Opcjonalnie można określić, czy plik jest publicznych lub prywatnych w manifeście zestawu, na przykład: `-linkres:filename.res,myname.res,public`.</span><span class="sxs-lookup"><span data-stu-id="e60cf-113">Optionally, you can specify whether the file is public or private in the assembly manifest, for example: `-linkres:filename.res,myname.res,public`.</span></span> <span data-ttu-id="e60cf-114">Domyślnie `filename` jest publiczna w zestawie.</span><span class="sxs-lookup"><span data-stu-id="e60cf-114">By default, `filename` is public in the assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="20193-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="20193-115">Remarks</span></span>  
- <span data-ttu-id="20193-116">`-linkresource` Opcja nie jest możliwe osadzanie pliku zasobów w pliku wyjściowym; użyj `-resource` opcję, aby to zrobić.</span><span class="sxs-lookup"><span data-stu-id="20193-116">The `-linkresource` option does not embed the resource file in the output file; use the `-resource` option to do this.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e60cf-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e60cf-115">Remarks</span></span>  
+ <span data-ttu-id="e60cf-116">`-linkresource` Opcja nie jest możliwe osadzanie pliku zasobów w pliku wyjściowym; użyj `-resource` opcję, aby to zrobić.</span><span class="sxs-lookup"><span data-stu-id="e60cf-116">The `-linkresource` option does not embed the resource file in the output file; use the `-resource` option to do this.</span></span>  
   
- <span data-ttu-id="20193-117">`-linkresource` Opcja wymaga jednej z `-target` opcji innych niż `-target:module`.</span><span class="sxs-lookup"><span data-stu-id="20193-117">The `-linkresource` option requires one of the `-target` options other than `-target:module`.</span></span>  
+ <span data-ttu-id="e60cf-117">`-linkresource` Opcja wymaga jednej z `-target` opcji innych niż `-target:module`.</span><span class="sxs-lookup"><span data-stu-id="e60cf-117">The `-linkresource` option requires one of the `-target` options other than `-target:module`.</span></span>  
   
- <span data-ttu-id="20193-118">Jeśli `filename` jest [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zasobów utworzonym pliku, na przykład przez [Resgen.exe (Generator pliku zasobów)](https://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) lub w środowisku deweloperskim, jest dostępny za pomocą elementów członkowskich w <xref:System.Resources> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="20193-118">If `filename` is a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] resource file created, for example, by the [Resgen.exe (Resource File Generator)](https://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace.</span></span> <span data-ttu-id="20193-119">(Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager>.) Dostęp do wszystkich innych zasobów w czasie wykonywania, użyj metody, które zaczynają się od `GetManifestResource` w <xref:System.Reflection.Assembly> klasy.</span><span class="sxs-lookup"><span data-stu-id="20193-119">(For more information, see <xref:System.Resources.ResourceManager>.) To access all other resources at run time, use the methods that begin with `GetManifestResource` in the <xref:System.Reflection.Assembly> class.</span></span>  
+ <span data-ttu-id="e60cf-118">Jeśli `filename` jest [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zasobów utworzonym pliku, na przykład przez [Resgen.exe (Generator pliku zasobów)](../../../framework/tools/resgen-exe-resource-file-generator.md) lub w środowisku deweloperskim, jest dostępny za pomocą elementów członkowskich w <xref:System.Resources> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="e60cf-118">If `filename` is a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] resource file created, for example, by the [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace.</span></span> <span data-ttu-id="e60cf-119">(Aby uzyskać więcej informacji, zobacz <xref:System.Resources.ResourceManager>.) Dostęp do wszystkich innych zasobów w czasie wykonywania, użyj metody, które zaczynają się od `GetManifestResource` w <xref:System.Reflection.Assembly> klasy.</span><span class="sxs-lookup"><span data-stu-id="e60cf-119">(For more information, see <xref:System.Resources.ResourceManager>.) To access all other resources at run time, use the methods that begin with `GetManifestResource` in the <xref:System.Reflection.Assembly> class.</span></span>  
   
- <span data-ttu-id="20193-120">Nazwa pliku może być dowolnym formacie pliku.</span><span class="sxs-lookup"><span data-stu-id="20193-120">The file name can be any file format.</span></span> <span data-ttu-id="20193-121">Na przykład można wprowadzić natywną DLL częścią zestawu, dzięki czemu mogą być zainstalowane w globalnej pamięci podręcznej i dostępne z kodu zarządzanego w zestawie.</span><span class="sxs-lookup"><span data-stu-id="20193-121">For example, you may want to make a native DLL part of the assembly, so that it can be installed into the global assembly cache and accessed from managed code in the assembly.</span></span>  
+ <span data-ttu-id="e60cf-120">Nazwa pliku może być dowolnym formacie pliku.</span><span class="sxs-lookup"><span data-stu-id="e60cf-120">The file name can be any file format.</span></span> <span data-ttu-id="e60cf-121">Na przykład można wprowadzić natywną DLL częścią zestawu, dzięki czemu mogą być zainstalowane w globalnej pamięci podręcznej i dostępne z kodu zarządzanego w zestawie.</span><span class="sxs-lookup"><span data-stu-id="e60cf-121">For example, you may want to make a native DLL part of the assembly, so that it can be installed into the global assembly cache and accessed from managed code in the assembly.</span></span>  
   
- <span data-ttu-id="20193-122">Krótkiej formy `-linkresource` jest `-linkres`.</span><span class="sxs-lookup"><span data-stu-id="20193-122">The short form of `-linkresource` is `-linkres`.</span></span>  
+ <span data-ttu-id="e60cf-122">Krótkiej formy `-linkresource` jest `-linkres`.</span><span class="sxs-lookup"><span data-stu-id="e60cf-122">The short form of `-linkresource` is `-linkres`.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="20193-123">`-linkresource` Opcja nie jest dostępna z poziomu środowiska projektowego programu Visual Studio; jest dostępna tylko podczas kompilacji z wiersza polecenia.</span><span class="sxs-lookup"><span data-stu-id="20193-123">The `-linkresource` option is not available from the Visual Studio development environment; it is available only when you compile from the command line.</span></span>  
+>  <span data-ttu-id="e60cf-123">`-linkresource` Opcja nie jest dostępna z poziomu środowiska projektowego programu Visual Studio; jest dostępna tylko podczas kompilacji z wiersza polecenia.</span><span class="sxs-lookup"><span data-stu-id="e60cf-123">The `-linkresource` option is not available from the Visual Studio development environment; it is available only when you compile from the command line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="20193-124">Przykład</span><span class="sxs-lookup"><span data-stu-id="20193-124">Example</span></span>  
- <span data-ttu-id="20193-125">Poniższy kod kompiluje `in.vb` i łącza do pliku zasobów `rf.resource`.</span><span class="sxs-lookup"><span data-stu-id="20193-125">The following code compiles `in.vb` and links to resource file `rf.resource`.</span></span>  
+## <a name="example"></a><span data-ttu-id="e60cf-124">Przykład</span><span class="sxs-lookup"><span data-stu-id="e60cf-124">Example</span></span>  
+ <span data-ttu-id="e60cf-125">Poniższy kod kompiluje `in.vb` i łącza do pliku zasobów `rf.resource`.</span><span class="sxs-lookup"><span data-stu-id="e60cf-125">The following code compiles `in.vb` and links to resource file `rf.resource`.</span></span>  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="20193-126">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="20193-126">See Also</span></span>  
- [<span data-ttu-id="20193-127">Kompilator wiersza polecenia programu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="20193-127">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="20193-128">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="20193-128">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)  
- [<span data-ttu-id="20193-129">-zasobów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="20193-129">-resource (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/resource.md)  
- [<span data-ttu-id="20193-130">Przykłady kompilacji — wiersze poleceń</span><span class="sxs-lookup"><span data-stu-id="20193-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="e60cf-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e60cf-126">See also</span></span>
+
+- [<span data-ttu-id="e60cf-127">Kompilator wiersza polecenia programu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e60cf-127">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [<span data-ttu-id="e60cf-128">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e60cf-128">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)  
+- [<span data-ttu-id="e60cf-129">-zasobów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e60cf-129">-resource (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/resource.md)  
+- [<span data-ttu-id="e60cf-130">Przykłady kompilacji — wiersze poleceń</span><span class="sxs-lookup"><span data-stu-id="e60cf-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

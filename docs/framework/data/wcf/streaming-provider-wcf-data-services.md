@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
 ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184273"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339503"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (WCF Data Services)
 Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne może reprezentować strumieni wideo i audio, obrazy, pliki dokumentów lub inne typy nośników binarnego. Gdy jednostki w modelu danych zawiera jedną lub więcej właściwości binarnych, Usługa danych zwraca te dane binarne zakodowanymi w formacie base-64, wewnątrz wpisu w źródle danych odpowiedzi. Ponieważ ładowania i serializacja dużych danych binarnych w ten sposób może wpłynąć na wydajność, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiuje mechanizm służący do pobierania danych binarnych, które są niezależne od jednostki, do której należy. Jest to realizowane przez oddzielenie danych binarnych z jednostki w co najmniej jeden strumień danych.  

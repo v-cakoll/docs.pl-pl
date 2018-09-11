@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
 ms.openlocfilehash: afbb932c1be010790236bec73a36acf0f01b97f4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180699"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270211"
 ---
 # <a name="lt-operator-c-reference"></a>&lt;= — Operator (odwołanie w C#)
 Wszystkie typy numeryczne i wyliczenie zdefiniować "mniejsze niż lub równe" operator relacyjny (`<=`) zwracającego `true` Jeśli pierwszy operand jest mniejsza niż druga Strona, `false` inaczej.  

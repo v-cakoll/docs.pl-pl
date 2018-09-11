@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 ms.openlocfilehash: 373f5815e1ca466545da4e2368bdf55e944d28f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227379"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270786"
 ---
 # <a name="get-started-with-visual-basic"></a>Wprowadzenie do języka Visual Basic
 Ten rozdział dokumentacji pomaga rozpocząć pracę z opracowywaniem aplikacji w języku Visual Basic.  

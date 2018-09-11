@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: 0824a43cba1a21cc9ae92b1f807c6a1369fd63ed
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192031"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338938"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Konfigurowanie usługi danych (WCF Data Services)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można utworzyć usługi danych, które uwidaczniają [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Dane w tych źródłach mogą pochodzić z różnych źródeł danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] korzysta z dostawców danych w celu ujawnienia tych danych jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Dostawcy te obejmują [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy, dostawcy odbicia i zestaw danych niestandardowych usług dostawcy interfejsów. Implementacja dostawcy definiuje model danych dla usługi. Aby uzyskać więcej informacji, zobacz [dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  

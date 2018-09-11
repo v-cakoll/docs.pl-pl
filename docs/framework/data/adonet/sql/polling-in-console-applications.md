@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
 ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204737"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269361"
 ---
 # <a name="polling-in-console-applications"></a>Sondowanie aplikacji konsoli
 Operacje asynchroniczne w ADO.NET umożliwiają Inicjowanie operacji czasochłonne bazy danych w jednym wątku podczas wykonywania innych zadań w innym wątku. W większości przypadków jednak możesz ostatecznie osiągnie punkt, w których aplikacja nie powinna nadal aż do zakończenia operacji bazy danych. W takich przypadkach warto wykonać sondowanie operacji asynchronicznej, aby ustalić, czy operacja została ukończona, czy nie.  

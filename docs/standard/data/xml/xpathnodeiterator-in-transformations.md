@@ -9,11 +9,11 @@ ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f71d409729707f4af93fd7f8d5b82a99404579b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186256"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270896"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>Klasa XPathNodeIterator w przekształceniach
 <xref:System.Xml.XPath.XPathNodeIterator> Zawiera metody do wykonywania iteracji zestaw węzłów utworzone w wyniku kwerendy XML Path Language (XPath) lub wynikowego fragmentu drzewa, konwertowana do węzła przy użyciu metody zestawu węzłów. <xref:System.Xml.XPath.XPathNodeIterator> Umożliwia iteracyjne przeglądanie węzłów w ramach tego zestawu węzłów. Po pobraniu zestawu węzłów <xref:System.Xml.XPath.XPathNodeIterator> klasa udostępnia tylko do odczytu, tylko do przodu kursor do wybranego zestawu węzłów. Zestaw węzłów jest tworzone w kolejności dokumentu, wywołanie tej metody przechodzi do następnego węzła w kolejności dokumentu. <xref:System.Xml.XPath.XPathNodeIterator> nie są kompilowane w węźle drzewa wszystkich węzłów w zestawie. Zamiast tego zapewnia okno z jednego węzła do danych, udostępnianie węzła podstawowego, który wskazuje on, ponieważ poruszanie się w drzewie. Metody i właściwości dostępne z <xref:System.Xml.XPath.XPathNodeIterator> klasy pozwalają użytkownikom czerpać informacje z bieżącego węzła. Aby uzyskać listę dostępnych metod i właściwości, zobacz <xref:System.Windows.Forms.ToolBar>.  

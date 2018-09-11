@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 8faa8fc86312df2f03ec7a70a488d0e7c12b394b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195166"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337502"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Porady: praca z kontrolkami ActiveX (Visual Basic)
 Formanty ActiveX to składniki COM lub obiekty, które można wstawić do strony sieci Web lub innej aplikacji w celu ponownego użycia spakowane funkcje, które ma innemu programiście. Kontrolki ActiveX opracowanych dla języka Visual Basic 6.0 i starsze wersje umożliwia dodawanie funkcji do **przybornika** programu Visual Studio.  

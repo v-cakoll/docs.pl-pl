@@ -3,11 +3,11 @@ title: Typy elastyczne (F#)
 description: 'Dowiedz się, jak używać języka F # elastycznym typem adnotacji, co oznacza, że parametr, zmienna lub wartość ma typ, który jest zgodny z określonym typem.'
 ms.date: 05/16/2016
 ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179650"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270948"
 ---
 # <a name="flexible-types"></a>Typy elastyczne
 

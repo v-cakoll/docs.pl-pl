@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
 ms.openlocfilehash: a35a0bf54d7850e4b10e59c259e4ee512bc93aad
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197611"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268383"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Porady: Tworzenie ciągu połączenia EntityConnection
 W tym temacie zawiera przykład sposobu tworzenia <xref:System.Data.EntityClient.EntityConnection>.  

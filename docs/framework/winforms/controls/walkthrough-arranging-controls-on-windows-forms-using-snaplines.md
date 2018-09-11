@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 170b79f03515ab371f7013c267b28ba85dafd0f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180621"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271419"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Wskazówki: rozmieszczanie formantów w formularzach systemu Windows za pomocą linii przyciągania
 Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. Windows Forms Designer udostępnia wiele narzędzi układu, w tym celu. Jednym z najważniejszych jest <xref:System.Windows.Forms.Design.Behavior.SnapLine> funkcji.  

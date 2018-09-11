@@ -3,11 +3,11 @@ title: Najlepsze rozwiązania dotyczące hostowania Internetowych usług informa
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
 ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221951"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338613"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych
 W tym temacie opisano najlepsze rozwiązania dotyczące hostowania usług Windows Communication Foundation (WCF).  

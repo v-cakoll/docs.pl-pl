@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - in keyword [C#]
 ms.openlocfilehash: 04449d99fd3e1b573333bc11a9766e9809b44785
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198091"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259717"
 ---
-# <a name="in-c-reference"></a><span data-ttu-id="cb8ac-102">in (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="cb8ac-102">in (C# Reference)</span></span>
+# <a name="in-c-reference"></a><span data-ttu-id="1a542-102">in (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="1a542-102">in (C# Reference)</span></span>
 
-<span data-ttu-id="cb8ac-103">`in` — Słowo kluczowe jest używana w kontekstach cztery:</span><span class="sxs-lookup"><span data-stu-id="cb8ac-103">The `in` keyword is used in four contexts:</span></span>  
+<span data-ttu-id="1a542-103">`in` — Słowo kluczowe jest używana w kontekstach cztery:</span><span class="sxs-lookup"><span data-stu-id="1a542-103">The `in` keyword is used in four contexts:</span></span>  
   
-- <span data-ttu-id="cb8ac-104">[Parametry typu ogólnego](in-generic-modifier.md) w interfejsach ogólnych i delegatach.</span><span class="sxs-lookup"><span data-stu-id="cb8ac-104">[generic type parameters](in-generic-modifier.md) in generic interfaces and delegates.</span></span>
-- <span data-ttu-id="cb8ac-105">Jako [modyfikator parametru](in-parameter-modifier.md), pozwalającej można przekazać argument do metody przez odwołanie, a nie przez wartość.</span><span class="sxs-lookup"><span data-stu-id="cb8ac-105">As a [parameter modifier](in-parameter-modifier.md), which lets you pass an argument to a method by reference rather than by value.</span></span>
-- <span data-ttu-id="cb8ac-106">[Instrukcja foreach](foreach-in.md) instrukcji.</span><span class="sxs-lookup"><span data-stu-id="cb8ac-106">[foreach](foreach-in.md) statements.</span></span>
-- <span data-ttu-id="cb8ac-107">[z klauzul](from-clause.md) wyrażeniach zapytań LINQ.</span><span class="sxs-lookup"><span data-stu-id="cb8ac-107">[from clauses](from-clause.md) in LINQ query expressions.</span></span>
-- <span data-ttu-id="cb8ac-108">[Dołącz do klauzul](join-clause.md) wyrażeniach zapytań LINQ.</span><span class="sxs-lookup"><span data-stu-id="cb8ac-108">[join clauses](join-clause.md) in LINQ query expressions.</span></span>
+- <span data-ttu-id="1a542-104">[Parametry typu ogólnego](in-generic-modifier.md) w interfejsach ogólnych i delegatach.</span><span class="sxs-lookup"><span data-stu-id="1a542-104">[generic type parameters](in-generic-modifier.md) in generic interfaces and delegates.</span></span>
+- <span data-ttu-id="1a542-105">Jako [modyfikator parametru](in-parameter-modifier.md), pozwalającej można przekazać argument do metody przez odwołanie, a nie przez wartość.</span><span class="sxs-lookup"><span data-stu-id="1a542-105">As a [parameter modifier](in-parameter-modifier.md), which lets you pass an argument to a method by reference rather than by value.</span></span>
+- <span data-ttu-id="1a542-106">[Instrukcja foreach](foreach-in.md) instrukcji.</span><span class="sxs-lookup"><span data-stu-id="1a542-106">[foreach](foreach-in.md) statements.</span></span>
+- <span data-ttu-id="1a542-107">[z klauzul](from-clause.md) wyrażeniach zapytań LINQ.</span><span class="sxs-lookup"><span data-stu-id="1a542-107">[from clauses](from-clause.md) in LINQ query expressions.</span></span>
+- <span data-ttu-id="1a542-108">[Dołącz do klauzul](join-clause.md) wyrażeniach zapytań LINQ.</span><span class="sxs-lookup"><span data-stu-id="1a542-108">[join clauses](join-clause.md) in LINQ query expressions.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="cb8ac-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="cb8ac-109">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a542-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1a542-109">See Also</span></span>
 
-- [<span data-ttu-id="cb8ac-110">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="cb8ac-110">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="cb8ac-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="cb8ac-111">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="1a542-110">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="1a542-110">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="1a542-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="1a542-111">C# Reference</span></span>](../index.md)

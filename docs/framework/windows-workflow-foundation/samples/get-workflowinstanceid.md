@@ -3,11 +3,11 @@ title: Działanie getworkflowinstanceid
 ms.date: 03/30/2017
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
 ms.openlocfilehash: 6725ed92bf785e5b7f7d61332944fcce8427388a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264104"
+ms.locfileid: "44341936"
 ---
 # <a name="get-workflowinstanceid"></a>Działanie getworkflowinstanceid
 W tym przykładzie pokazano, jak użyć niestandardowego działania, `GetWorkflowInstanceId` do zwrócenia identyfikatora wystąpienia przepływu pracy  

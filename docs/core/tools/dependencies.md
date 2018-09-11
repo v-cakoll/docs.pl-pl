@@ -4,12 +4,12 @@ description: Wyjaśnia, jak zarządzanie zależnościami za pomocą narzędzi .N
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
-ms.openlocfilehash: c8f40b8571523b98da55b047fea8d2bf03b390a2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244231"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353281"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Zarządzanie zależnościami za pomocą platformy .NET Core SDK 1.0
 
@@ -32,7 +32,7 @@ Jeśli znasz program MSBuild będzie wyglądać dobrze znanych na inne typy odwo
 Dodawanie zależności, która jest dostępna tylko w określonej lokalizacji docelowej jest wykonywane przy użyciu warunki, takie jak w poniższym przykładzie:
 
 ```xml
-<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
 Oznacza, że powyższe zależności będą tylko ważne, jeśli kompilacja się dzieje w tym element docelowy. `$(TargetFramework)` w warunku jest właściwość MSBuild, która jest ustawiona w projekcie. W przypadku najbardziej typowych aplikacji .NET Core nie należy w tym celu. 
@@ -57,7 +57,7 @@ Pełny projekt wygląda następująco:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - out keyword [C#]
 ms.assetid: 7e911a0c-3f98-4536-87be-d539b7536ca8
 ms.openlocfilehash: ecdaf8e94b3b799f41d6750d6ba5fca6895f0e93
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252554"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44341991"
 ---
 # <a name="out-c-reference"></a>out (odwołanie w C#)
 

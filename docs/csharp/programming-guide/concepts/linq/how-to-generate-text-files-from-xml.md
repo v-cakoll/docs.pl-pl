@@ -3,11 +3,11 @@ title: 'Porady: generowanie plików tekstowych z pliku XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
 ms.openlocfilehash: 1e0c57b1fa16bb1b92cabaf4afa7ff7bf40824bd
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339058"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44352404"
 ---
 # <a name="how-to-generate-text-files-from-xml-c"></a>Porady: generowanie plików tekstowych z pliku XML (C#)
 W tym przykładzie pokazano, jak można wygenerować pliku wartości rozdzielanych przecinkami (CSV) z pliku XML.  

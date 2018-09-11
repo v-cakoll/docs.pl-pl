@@ -6,11 +6,11 @@ ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266868"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353031"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Odwołania do jednostek są rozwinięte i nie są zachowywane
 Gdy odwołanie do jednostki jest rozwinięte i zastąpione tekstem reprezentuje on **XmlEntityReference** węzeł nie został utworzony. Zamiast tego jest analizowany deklaracji jednostek i węzłów przygotowane na podstawie zawartości w deklaracji zostaną skopiowane zamiast z **XmlEntityReference**. Dlatego w `&publisher;` przykład `&publisher;` nie zostanie zapisana, ale zamiast tego **XmlText** jest tworzony węzeł.  

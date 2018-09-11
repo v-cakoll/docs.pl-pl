@@ -3,11 +3,11 @@ title: Potwierdzenie
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
 ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276957"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44368115"
 ---
 # <a name="confirmation"></a>Potwierdzenie
 W tym przykładzie przedstawiono cztery typowe scenariusze użytkowania otaczającego <xref:System.Activities.Statements.CompensableActivity> i potwierdzenie hasła. Przykład jest uruchamiany cztery przepływy pracy, aby pokazać potwierdzenia. Ten przykład jest dostępny w wersjach deklaratywnego i imperatywnego.  

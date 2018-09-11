@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338119"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365984"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Test trafienia w warstwie Visual
 Ten temat zawiera omówienie funkcji testowania trafień, dostarczone przez warstwy visual. Obsługa testowania trafień pozwala określić, czy wartość geometrii lub punkt mieści się w renderowanym zawartość <xref:System.Windows.Media.Visual>, dzięki czemu można zaimplementować zachowania interfejsu użytkownika, takie jak prostokąta zaznaczenia na wybranie wielu obiektów.  

@@ -1,15 +1,15 @@
 ---
-title: polecenie - .NET Core interfejsu wiersza polecenia czyszczenia DotNet
-description: Polecenie Wyczyść dotnet czyści bieżącego katalogu.
+title: czyszczenie polecenia — .NET Core wiersz polecenia DotNet
+description: Polecenia dotnet clean czyści bieżącego katalogu.
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 9e68781fe00590f3c8d429631a3f72d525d29fa9
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 5553e4b4423a2d824c05caf7114c47b5f1c20477
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697034"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367668"
 ---
 # <a name="dotnet-clean"></a>Wyczyść DotNet
 
@@ -35,13 +35,13 @@ dotnet clean [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet clean` Polecenie czyści dane wyjściowe ostatniej kompilacji. Jest zaimplementowany jako [docelowy programu MSBuild](/visualstudio/msbuild/msbuild-targets), więc projekt jest oceniane w czasie uruchomienia polecenia. Tylko dane wyjściowe tworzone podczas kompilacji zostały wyczyszczone. Zarówno pośredni (*obj*) i pliku wyjściowego (*bin*) foldery zostały wyczyszczone.
+`dotnet clean` Polecenia czyści dane wyjściowe poprzednią kompilację. Jest implementowany jako [programu MSBuild](/visualstudio/msbuild/msbuild-targets), więc projekt jest oceniany, jeśli polecenie jest wykonywane. Tylko dane wyjściowe, utworzony podczas kompilacji są czyszczone. Zarówno pośredni (*obj*) i końcowych danych wyjściowych (*bin*) foldery zostały wyczyszczone.
 
 ## <a name="arguments"></a>Argumenty
 
 `PROJECT`
 
-Aby wyczyścić projektu MSBuild. Jeśli nie określono pliku projektu, MSBuild wyszukuje bieżącego katalogu roboczego dla pliku, który ma rozszerzenie pliku, który kończy się *proj* i używa tego pliku.
+Projekt programu MSBuild do czyszczenia. Jeśli nie określono pliku projektu, MSBuild przeszukuje bieżącego katalogu roboczego dla pliku, który ma rozszerzenie pliku, który kończy się *proj* i używa tego pliku.
 
 ## <a name="options"></a>Opcje
 
@@ -49,49 +49,49 @@ Aby wyczyścić projektu MSBuild. Jeśli nie określono pliku projektu, MSBuild 
 
 `-c|--configuration {Debug|Release}`
 
-Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`. Ta opcja jest tylko wymagane podczas oczyszczania, jeśli określono w czasie kompilacji.
+Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`. Ta opcja jest tylko wymagane podczas czyszczenia, jeśli została określona w czasie kompilacji.
 
 `-f|--framework <FRAMEWORK>`
 
-[Framework](../../standard/frameworks.md) , która została określona podczas kompilacji. Platformę musi być zdefiniowana w [pliku projektu](csproj.md). Jeśli określono platformę w czasie kompilacji, należy określić platformę podczas czyszczenia.
+[Framework](../../standard/frameworks.md) , która została określona w czasie kompilacji. Struktura musi być zdefiniowany w [pliku projektu](csproj.md). Jeśli struktura jest określona w czasie kompilacji, należy określić platformę, podczas czyszczenia.
 
 `-h|--help`
 
-Drukuje krótkich pomocy dla polecenia.
+Drukuje krótki pomoc dotyczącą polecenia.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Katalog, w którym są umieszczane dane wyjściowe kompilacji. Określ `-f|--framework <FRAMEWORK>` przełącznika z przełącznikiem katalogu wyjściowego, jeśli określony platformę, gdy projekt został skompilowany.
+Katalog, w której są umieszczane dane wyjściowe kompilacji. Określ `-f|--framework <FRAMEWORK>` przełącznika z przełącznikiem katalogu danych wyjściowych, jeśli określona struktura podczas kompilowania projektu.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Czyści folderze wyjściowym określonym środowiska uruchomieniowego. Ten element jest używany podczas [niezależne wdrożenia](../deploying/index.md#self-contained-deployments-scd) został utworzony.
+Czyści folderze wyjściowym określonym środowiska uruchomieniowego. Jest on używany podczas [niezależna wdrożenia](../deploying/index.md#self-contained-deployments-scd) został utworzony.
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone poziomy są q [uiet], [najmniej] m, n [ormal], d [egółowy] i diag [nostic].
+Ustawia poziom szczegółowości polecenia. Dozwolone poziomy są q [uiet], m [najmniej], [ormal] n, d [egółowy] i diag [Diagnostyka].
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
-Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`. Ta opcja jest tylko wymagane podczas oczyszczania, jeśli określono w czasie kompilacji.
+Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`. Ta opcja jest tylko wymagane podczas czyszczenia, jeśli została określona w czasie kompilacji.
 
 `-f|--framework <FRAMEWORK>`
 
-[Framework](../../standard/frameworks.md) , która została określona podczas kompilacji. Platformę musi być zdefiniowana w [pliku projektu](csproj.md). Jeśli określono platformę w czasie kompilacji, należy określić platformę podczas czyszczenia.
+[Framework](../../standard/frameworks.md) , która została określona w czasie kompilacji. Struktura musi być zdefiniowany w [pliku projektu](csproj.md). Jeśli struktura jest określona w czasie kompilacji, należy określić platformę, podczas czyszczenia.
 
 `-h|--help`
 
-Drukuje krótkich pomocy dla polecenia.
+Drukuje krótki pomoc dotyczącą polecenia.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Katalog, w którym są umieszczane dane wyjściowe kompilacji. Określ `-f|--framework <FRAMEWORK>` przełącznika z przełącznikiem katalogu wyjściowego, jeśli określony platformę, gdy projekt został skompilowany.
+Katalog, w której są umieszczane dane wyjściowe kompilacji. Określ `-f|--framework <FRAMEWORK>` przełącznika z przełącznikiem katalogu danych wyjściowych, jeśli określona struktura podczas kompilowania projektu.
 
 `-v|--verbosity <LEVEL>`
 
-Ustawia poziom szczegółowości polecenia. Dozwolone poziomy są q [uiet], [najmniej] m, n [ormal], d [egółowy] i diag [nostic].
+Ustawia poziom szczegółowości polecenia. Dozwolone poziomy są q [uiet], m [najmniej], [ormal] n, d [egółowy] i diag [Diagnostyka].
 
 ---
 
@@ -101,6 +101,6 @@ Czyszczenie kompilacji domyślnego projektu:
 
 `dotnet clean`
 
-Wyczyść projekt utworzony przy użyciu konfiguracji wydania:
+Wyczyść projekt, który został skompilowany przy użyciu konfiguracji wydania:
 
 `dotnet clean --configuration Release`

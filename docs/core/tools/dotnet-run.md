@@ -4,12 +4,12 @@ description: Polecenia dotnet, uruchom polecenie zapewnia wygodny sposób, aby u
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 609ac27f21e6801992b9e10c7d465a805492859e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f560e6f795f00488818647a4b5c711dcf9d59dcd
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245255"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367746"
 ---
 # <a name="dotnet-run"></a>Uruchom polecenia DotNet
 
@@ -44,7 +44,7 @@ dotnet run [-h|--help]
 
 `dotnet run` Polecenie zapewnia wygodny sposób, aby uruchomić aplikację z kodu źródłowego za pomocą jednego polecenia. Jest to przydatne w przypadku szybkiego iteracyjne projektowanie z wiersza polecenia. Polecenie zależy od [ `dotnet build` ](dotnet-build.md) polecenie, aby skompilować kod. Wszelkie wymagania dotyczące kompilacji, takie jak, projekt musi zostać przywrócona najpierw dotyczą `dotnet run` także.
 
-Pliki wyjściowe są zapisywane w domyślnej lokalizacji, czyli `bin/<configuration>/<target>`. Na przykład jeśli masz `netcoreapp1.0` aplikacji i uruchom `dotnet run`, dane wyjściowe są umieszczane w `bin/Debug/netcoreapp1.0`. Pliki zostaną zastąpione, zgodnie z potrzebami. Pliki tymczasowe są umieszczane w `obj` katalogu.
+Pliki wyjściowe są zapisywane w domyślnej lokalizacji, czyli `bin/<configuration>/<target>`. Na przykład jeśli masz `netcoreapp2.1` aplikacji i uruchom `dotnet run`, dane wyjściowe są umieszczane w `bin/Debug/netcoreapp2.1`. Pliki zostaną zastąpione, zgodnie z potrzebami. Pliki tymczasowe są umieszczane w `obj` katalogu.
 
 Jeśli projekt określa wiele struktur, wykonywanie `dotnet run` powoduje błąd, chyba że `-f|--framework <FRAMEWORK>` opcja służy do określania platformę.
 

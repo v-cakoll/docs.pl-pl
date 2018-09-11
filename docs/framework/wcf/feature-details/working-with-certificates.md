@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198936"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361605"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrowe X.509 często są używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje cyfrowego certyfikatu X.509 oraz sposobu ich używania w programie WCF i zawiera łącza do tematów, opisano te pojęcia dalsze lub które pokazują sposób wykonywania typowych zadań przy użyciu programu WCF i certyfikatów.  
@@ -55,7 +55,7 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
  Magazyny są chronione przez listy kontroli dostępu (ACL), podobnie jak foldery na komputerze. Podczas tworzenia usługi hostowanej przez Internetowe usługi informacyjne (IIS) [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proces jest uruchamiany w ramach [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] konta. Konto musi mieć dostęp do magazynu który zawiera certyfikaty używane przez usługę. Każdy z magazynów głównych jest chroniony za pomocą domyślnej listy dostępu, ale listy mogą być modyfikowane. Jeśli utworzysz rolę oddzielne dostępu do magazynu, należy przyznać uprawnienia dostępu do tej roli. Aby dowiedzieć się, jak zmodyfikować listę dostępu za pomocą narzędzia WinHttpCertConfig.exe, zobacz [porady: Tworzenie certyfikatów tymczasowych do użycia podczas tworzenia](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Aby uzyskać więcej informacji o korzystaniu z certyfikatów klienta z programem IIS, zobacz [sposób wywoływania usługi sieci Web przy użyciu certyfikatu klienta do uwierzytelniania w aplikacji internetowej ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Łańcuch zaufania i urzędy certyfikacji  
- Certyfikaty są tworzone w hierarchii, w którym każdego indywidualnego certyfikatu jest połączony z urzędem certyfikacji, który wystawił ten certyfikat. Jest to łącze do certyfikatu urzędu certyfikacji. Urząd certyfikacji certyfikatu, a następnie łączy się z urzędem certyfikacji, który wystawił certyfikat oryginalnego urzędu certyfikacji. Ten proces jest powtarzany, aż do osiągnięcia certyfikat głównego urzędu certyfikacji. Certyfikat głównego urzędu certyfikacji jest dodatkowo z natury zaufanych.  
+ Certyfikaty są tworzone w hierarchii, w którym każdego indywidualnego certyfikatu jest połączony z urzędem certyfikacji, który wystawił ten certyfikat. Jest to łącze do certyfikatu urzędu certyfikacji. Urząd certyfikacji certyfikatu następnie łączy się z urzędem certyfikacji, który wystawił certyfikat oryginalnego urzędu certyfikacji. Ten proces jest powtarzany, aż do osiągnięcia certyfikat głównego urzędu certyfikacji. Certyfikat głównego urzędu certyfikacji jest dodatkowo z natury zaufanych.  
   
  Certyfikaty cyfrowe są używane do uwierzytelniania jednostki, opierając się na tej hierarchii, nazywany również *łańcuch zaufania*. Możesz wyświetlić łańcuch dowolny certyfikat za pomocą przystawki programu MMC przez dwukrotne kliknięcie każdego certyfikatu, a następnie klikając **ścieżka certyfikatu** kartę. Aby uzyskać więcej informacji o importowaniu łańcuchów certyfikatów dla urzędu certyfikacji, zobacz [jak: określić certyfikat urzędu certyfikat łańcucha używani do sygnatur Sprawdź](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   

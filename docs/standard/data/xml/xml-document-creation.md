@@ -8,15 +8,15 @@ dev_langs:
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ab7632966cd2a0087a8bdc1d452d02543edbec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b76140fb7d79b1e191c0451cd7556963130d224a
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572791"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44369020"
 ---
 # <a name="xml-document-creation"></a>Tworzenie dokumentu XML
-Istnieją dwa sposoby tworzenia dokumentu XML. Jednym ze sposobów jest utworzenie **XmlDocument** bez parametrów. Innym sposobem jest utworzenie **XmlDocument** i przekaż go XmlNameTable jako parametr. Poniższy przykład pokazuje, jak utworzyć nowy, pusty **XmlDocument** przy użyciu bez parametrów.  
+Istnieją dwa sposoby tworzenia dokumentu XML. Jednym ze sposobów jest utworzenie **XmlDocument** bez parametrów. Innym sposobem jest utworzenie **XmlDocument** i przekazać go tabeli XmlNameTable jako parametr. Poniższy przykład pokazuje, jak utworzyć nowy, pusty **XmlDocument** przy użyciu bez parametrów.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -26,9 +26,10 @@ Dim doc As New XmlDocument()
 XmlDocument doc = new XmlDocument();  
 ```  
   
- Po utworzeniu dokumentu, będzie można go załadować z danymi z ciągu, strumienia, adres URL, czytnika tekstu lub **XmlReader** pochodzi z klasy przy użyciu **załadować** — metoda. Istnieje również innej metody load, **działanie metody LoadXML** metodę, która odczytuje z ciągu XML. Aby uzyskać więcej informacji na temat różnych **obciążenia** metod, zobacz [odczytywanie dokumentu XML do modelu DOM](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md).  
+ Po utworzeniu dokumentu, będzie można go załadować z danymi z ciągu, przesyłać strumieniowo, adres URL, czytnika tekstu lub **XmlReader** pochodne klasy przy użyciu **obciążenia** metody. Istnieje również innej metody load, **działanie metody LoadXML** metody, która odczytuje XML z ciągu. Aby uzyskać więcej informacji na temat różnych **obciążenia** metod, zobacz [wczytywanie dokumentu XML do modelu DOM](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md).  
   
- Brak klasy o nazwie **XmlNameTable**. Ta klasa jest tabeli obiektów atomized ciągu. Ta tabela zawiera skuteczne dla analizatora składni XML do użycia z tym samym obiektem ciąg wszystkie powtórzone elementu i nazwach atrybutów w dokumencie XML. **XmlNameTable** jest tworzony automatycznie podczas dokumentu jest tworzony, jak pokazano powyżej i został załadowany z nazwami atrybutów i elementów, podczas ładowania dokumentu. Jeśli masz już dokument z tabeli nazw i nazwy, które będą przydatne w innym dokumencie, można utworzyć nowego dokumentu przy użyciu **obciążenia** metody pobierającej **XmlNameTable** jako parametr. Po utworzeniu dokumentu przy użyciu tej metody wykorzystuje istniejące **XmlNameTable** ze wszystkimi atrybuty i elementy już załadowany do niego z innego dokumentu. Może służyć do porównywania wydajnie nazw elementów i atrybutów. Aby uzyskać więcej informacji na temat **XmlNameTable**, zobacz [XmlNameTable przy użyciu porównania obiektu](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md). Aby informacje, zobacz <xref:System.Xml.XmlNameTable>.  
+ Brak klasy o nazwie **tabeli XmlNameTable**. Ta klasa znajduje się tabela obiektów string rozproszone obiekty. Ta tabela zawiera skuteczne dla analizatora XML do użycia tego samego obiektu ciągu dla elementu wszystkie powtórzone i nazw atrybutów w dokumencie XML. **Tabeli XmlNameTable** zostało automatycznie utworzone po dokumentu jest tworzony, jak pokazano powyżej i jest ładowany z nazwy atrybutu i elementu podczas ładowania dokumentu. Jeśli masz już dokumentu za pomocą nazwy tabeli, a te nazwy może przydać się w innym dokumencie, można utworzyć nowego dokumentu przy użyciu **obciążenia** metody, która przyjmuje **tabeli XmlNameTable** jako parametr. Gdy dokument zostanie utworzony przy użyciu tej metody, wykorzystuje istniejące **tabeli XmlNameTable** ze wszystkimi atrybuty i elementy już załadowane do niego z innych dokumentów. Umożliwia ono wydajnie porównywania nazw elementów i atrybutów. Aby uzyskać więcej informacji na temat **tabeli XmlNameTable**, zobacz [obiektu porównanie przy użyciu tabeli XmlNameTable](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md). Aby informacje, zobacz <xref:System.Xml.XmlNameTable>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

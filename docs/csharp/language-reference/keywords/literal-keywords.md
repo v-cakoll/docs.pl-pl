@@ -5,25 +5,25 @@ helpviewer_keywords:
 - literal keywords [C#]
 ms.assetid: 95b3f075-47d7-4990-8ea8-9e637678bf3c
 ms.openlocfilehash: e031e55642e31ca450517dd03d10e33a2e6e8455
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205325"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275345"
 ---
-# <a name="literal-keywords-c-reference"></a><span data-ttu-id="4841c-102">Słowa kluczowe literału (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="4841c-102">Literal Keywords (C# Reference)</span></span>
-<span data-ttu-id="4841c-103">C# ma następujące słowa kluczowe literału:</span><span class="sxs-lookup"><span data-stu-id="4841c-103">C# has the following literal keywords:</span></span>  
+# <a name="literal-keywords-c-reference"></a><span data-ttu-id="337bc-102">Słowa kluczowe literału (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="337bc-102">Literal Keywords (C# Reference)</span></span>
+<span data-ttu-id="337bc-103">C# ma następujące słowa kluczowe literału:</span><span class="sxs-lookup"><span data-stu-id="337bc-103">C# has the following literal keywords:</span></span>  
   
--   [<span data-ttu-id="4841c-104">null</span><span class="sxs-lookup"><span data-stu-id="4841c-104">null</span></span>](../../../csharp/language-reference/keywords/null.md)  
+-   [<span data-ttu-id="337bc-104">null</span><span class="sxs-lookup"><span data-stu-id="337bc-104">null</span></span>](../../../csharp/language-reference/keywords/null.md)  
   
--   [<span data-ttu-id="4841c-105">true</span><span class="sxs-lookup"><span data-stu-id="4841c-105">true</span></span>](../../../csharp/language-reference/keywords/true.md)  
+-   [<span data-ttu-id="337bc-105">true</span><span class="sxs-lookup"><span data-stu-id="337bc-105">true</span></span>](../../../csharp/language-reference/keywords/true.md)  
   
--   [<span data-ttu-id="4841c-106">false</span><span class="sxs-lookup"><span data-stu-id="4841c-106">false</span></span>](../../../csharp/language-reference/keywords/false.md)  
+-   [<span data-ttu-id="337bc-106">false</span><span class="sxs-lookup"><span data-stu-id="337bc-106">false</span></span>](../../../csharp/language-reference/keywords/false.md)  
   
--   [<span data-ttu-id="4841c-107">default</span><span class="sxs-lookup"><span data-stu-id="4841c-107">default</span></span>](../../../csharp/language-reference/keywords/default.md)  
+-   [<span data-ttu-id="337bc-107">default</span><span class="sxs-lookup"><span data-stu-id="337bc-107">default</span></span>](../../../csharp/language-reference/keywords/default.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4841c-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4841c-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="337bc-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="337bc-108">See Also</span></span>
 
-- [<span data-ttu-id="4841c-109">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="4841c-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="4841c-110">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="4841c-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="4841c-111">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="4841c-111">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="337bc-109">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="337bc-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="337bc-110">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="337bc-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="337bc-111">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="337bc-111">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)

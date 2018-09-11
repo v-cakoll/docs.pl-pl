@@ -8,27 +8,27 @@ helpviewer_keywords:
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
 ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180936"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274599"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="ef882-102">++ — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="ef882-102">++ Operator (C# Reference)</span></span>
-<span data-ttu-id="ef882-103">Operator inkrementacji (`++`) zwiększa wartość argumentu operacji o 1.</span><span class="sxs-lookup"><span data-stu-id="ef882-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="ef882-104">Operator inkrementacji może występować przed argumentem operacji lub po nim: `++variable` i `variable++`.</span><span class="sxs-lookup"><span data-stu-id="ef882-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="ba64c-102">++ — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="ba64c-102">++ Operator (C# Reference)</span></span>
+<span data-ttu-id="ba64c-103">Operator inkrementacji (`++`) zwiększa wartość argumentu operacji o 1.</span><span class="sxs-lookup"><span data-stu-id="ba64c-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="ba64c-104">Operator inkrementacji może występować przed argumentem operacji lub po nim: `++variable` i `variable++`.</span><span class="sxs-lookup"><span data-stu-id="ba64c-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ef882-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ef882-105">Remarks</span></span>  
- <span data-ttu-id="ef882-106">Pierwsza forma to inkrementacja prefiksowa.</span><span class="sxs-lookup"><span data-stu-id="ef882-106">The first form is a prefix increment operation.</span></span> <span data-ttu-id="ef882-107">Wynikiem tej operacji jest wartość argumentu po zwiększeniu.</span><span class="sxs-lookup"><span data-stu-id="ef882-107">The result of the operation is the value of the operand after it has been incremented.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ba64c-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ba64c-105">Remarks</span></span>  
+ <span data-ttu-id="ba64c-106">Pierwsza forma to inkrementacja prefiksowa.</span><span class="sxs-lookup"><span data-stu-id="ba64c-106">The first form is a prefix increment operation.</span></span> <span data-ttu-id="ba64c-107">Wynikiem tej operacji jest wartość argumentu po zwiększeniu.</span><span class="sxs-lookup"><span data-stu-id="ba64c-107">The result of the operation is the value of the operand after it has been incremented.</span></span>  
   
- <span data-ttu-id="ef882-108">Druga forma to inkrementacja odwrotna.</span><span class="sxs-lookup"><span data-stu-id="ef882-108">The second form is a postfix increment operation.</span></span> <span data-ttu-id="ef882-109">Wynikiem tej operacji jest wartość argumentu przed zwiększeniem.</span><span class="sxs-lookup"><span data-stu-id="ef882-109">The result of the operation is the value of the operand before it has been incremented.</span></span>  
+ <span data-ttu-id="ba64c-108">Druga forma to inkrementacja odwrotna.</span><span class="sxs-lookup"><span data-stu-id="ba64c-108">The second form is a postfix increment operation.</span></span> <span data-ttu-id="ba64c-109">Wynikiem tej operacji jest wartość argumentu przed zwiększeniem.</span><span class="sxs-lookup"><span data-stu-id="ba64c-109">The result of the operation is the value of the operand before it has been incremented.</span></span>  
   
- <span data-ttu-id="ef882-110">Typy numeryczne i wyliczenia mają wstępnie zdefiniowane operatory inkrementacji.</span><span class="sxs-lookup"><span data-stu-id="ef882-110">Numeric and enumeration types have predefined increment operators.</span></span> <span data-ttu-id="ef882-111">W typach definiowanych przez użytkownika można przeciążać operator `++`.</span><span class="sxs-lookup"><span data-stu-id="ef882-111">User-defined types can overload the `++` operator.</span></span> <span data-ttu-id="ef882-112">Operacje na typach całkowitych w wyliczeniach są zazwyczaj dozwolone.</span><span class="sxs-lookup"><span data-stu-id="ef882-112">Operations on integral types are generally allowed on enumeration.</span></span>  
+ <span data-ttu-id="ba64c-110">Typy numeryczne i wyliczenia mają wstępnie zdefiniowane operatory inkrementacji.</span><span class="sxs-lookup"><span data-stu-id="ba64c-110">Numeric and enumeration types have predefined increment operators.</span></span> <span data-ttu-id="ba64c-111">W typach definiowanych przez użytkownika można przeciążać operator `++`.</span><span class="sxs-lookup"><span data-stu-id="ba64c-111">User-defined types can overload the `++` operator.</span></span> <span data-ttu-id="ba64c-112">Operacje na typach całkowitych w wyliczeniach są zazwyczaj dozwolone.</span><span class="sxs-lookup"><span data-stu-id="ba64c-112">Operations on integral types are generally allowed on enumeration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ef882-113">Przykład</span><span class="sxs-lookup"><span data-stu-id="ef882-113">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ba64c-113">Przykład</span><span class="sxs-lookup"><span data-stu-id="ba64c-113">Example</span></span>  
  [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="ef882-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ef882-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba64c-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ba64c-114">See Also</span></span>
 
-- [<span data-ttu-id="ef882-115">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="ef882-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="ef882-116">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="ef882-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="ef882-117">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="ef882-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="ba64c-115">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="ba64c-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="ba64c-116">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="ba64c-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="ba64c-117">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="ba64c-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

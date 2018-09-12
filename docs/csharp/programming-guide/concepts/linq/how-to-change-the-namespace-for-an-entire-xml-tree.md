@@ -3,11 +3,11 @@ title: 'Porady: Zmienianie Namespace dla całego drzewa XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
 ms.openlocfilehash: cbb7c3d332eea83d6df71812cc18633df6fbb6d0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261856"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700745"
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Porady: Zmienianie Namespace dla całego drzewa XML (C#)
 Czasami trzeba programowe Zmienianie przestrzeni nazw dla elementu lub atrybutu. LINQ to XML ułatwia to zadanie. <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Można ustawić właściwości. <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> Nie można ustawić właściwości, ale można łatwo skopiować atrybuty do <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, Usuń istniejące atrybuty, a następnie dodaj nowe atrybuty, które znajdują się w nowej przestrzeni nazw żądaną.  

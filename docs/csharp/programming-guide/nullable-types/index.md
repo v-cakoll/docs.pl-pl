@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
 ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205591"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700810"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Typy dopuszczające wartości zerowe (C# Programming Guide)
 

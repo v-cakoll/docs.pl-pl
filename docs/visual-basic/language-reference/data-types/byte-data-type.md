@@ -10,11 +10,11 @@ ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3b106005ff07f55e05ae66dba94041cd8b5c24bb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266816"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700706"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte — typ danych (Visual Basic)
 Przechowuje 8-bitowa (1-bajtowe) liczb całkowitych bez znaku z zakresu wartości z zakresu od 0 do 255.

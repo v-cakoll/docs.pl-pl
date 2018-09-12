@@ -3,11 +3,11 @@ title: 'Informacje o wywołującym (F #)'
 description: Opisuje sposób używania Caller — atrybuty Argument informacji, aby uzyskać informacje o wywołującym z metody.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353450"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700901"
 ---
 # <a name="caller-information"></a>Informacje o wywołującym
 

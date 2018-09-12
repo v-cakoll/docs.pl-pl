@@ -11,11 +11,11 @@ ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1c8bfea5fc55bafbaa30d3b74edf60b674ef75c
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268815"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699218"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Porady: nasłuchiwanie żądań anulowania z dojściami oczekiwania
 Jeśli metoda jest zablokowane, ponieważ trwa oczekiwanie na zdarzenie ma być zasygnalizowany, nie mogą sprawdzić wartość tokenu anulowania i reagować w odpowiednim czasie. Pierwszy przykład pokazuje, jak rozwiązać ten problem, podczas pracy ze zdarzeniami takich jak <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> , nie obsługują natywnie w ramach ujednoliconego anulowania. Drugi przykład przedstawia podejście usprawnić, który używa <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, który obsługuje unified anulowania.  

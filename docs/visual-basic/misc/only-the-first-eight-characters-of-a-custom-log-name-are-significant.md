@@ -3,11 +3,11 @@ title: Pierwsze osiem znaków nazwa dziennika niestandardowego są znaczące
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368526"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699192"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>Pierwsze osiem znaków nazwa dziennika niestandardowego są znaczące
 Podczas sprawdzania dostępności nazwy dzienników zdarzeń, aby zapewnić unikatowość, są traktowane jako pierwsze osiem znaków. Konflikt mogą wynikać z dzienników zdarzeń, które udostępniać swoje pierwsze osiem znaków.  

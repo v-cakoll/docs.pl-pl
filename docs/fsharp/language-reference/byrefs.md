@@ -2,12 +2,12 @@
 title: 'Zkratka (F #)'
 description: 'Więcej informacji na temat byref i byref typy w języku F #, które są używane na potrzeby programowania niskiego poziomu.'
 ms.date: 09/02/2018
-ms.openlocfilehash: 7d4138649ee39a0d342db2828ad4d32fbded978c
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338665"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699649"
 ---
 # <a name="byrefs"></a>Zkratka
 
@@ -105,7 +105,7 @@ Wszystkie te reguły, które są razem oznaczają, że właściciel `inref` wska
 
 Celem `outref<'T>` jest, aby wskazać, że wskaźnik powinni czytać tylko z. Nieoczekiwanie `outref<'T>` zezwolenia na odczytywanie podstawowych wartości niezależnie od jego nazwę. Jest to na potrzeby zgodności. Semantycznie `outref<'T>` nie różni się od `byref<'T>`.
 
-### <a name="interop-with-c"></a>Współdziałanie z języka C #
+### <a name="interop-with-c"></a>Współdziałanie z języka C# #
 
 C# obsługuje `in ref` i `out ref` słów kluczowych, oprócz `ref` zwraca. W poniższej tabeli przedstawiono, jak F # interpretuje co C# emituje:
 
@@ -196,7 +196,7 @@ Aby uniknąć niejawne wyłuskania, takich jak przekazywaniem odwołań do wielu
 Możesz także bezpośrednio przypisać do zwrotu `byref`. Należy wziąć pod uwagę następujący program (wysoce imperatywne):
 
 ```fsharp
-ype C() =
+type C() =
     let mutable nums = [| 1; 3; 7; 15; 31; 63; 127; 255; 511; 1023 |]
 
     override __.ToString() = String.Join(' ', nums)

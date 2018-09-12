@@ -3,11 +3,11 @@ title: Dopasowanie wzorca (F#)
 description: 'Dowiedz się, jak wzorce są używane w języku F # do porównywania danych ze struktury logicznej, rozkładania danych do części składowych lub wyodrębnienia informacji z danych.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361907"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710079"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 

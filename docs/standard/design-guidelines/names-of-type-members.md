@@ -15,11 +15,11 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367694"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44757347"
 ---
 # <a name="names-of-type-members"></a>Nazwy elementów członkowskich typu
 Typy składają się z elementów członkowskich: metody, właściwości, zdarzenia, konstruktory i pola. W poniższych sekcjach opisano zasady nazewnictwa elementów członkowskich typu.  

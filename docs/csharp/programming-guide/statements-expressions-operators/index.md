@@ -10,41 +10,41 @@ helpviewer_keywords:
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 ms.openlocfilehash: 1085de3447bd6101fcccf6cae7b37afac24d37f1
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44364861"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44706772"
 ---
-# <a name="statements-expressions-and-operators-c-programming-guide"></a><span data-ttu-id="113c3-102">Instrukcje, wyrażenia i operatory (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="113c3-102">Statements, Expressions, and Operators (C# Programming Guide)</span></span>
-<span data-ttu-id="113c3-103">Kod C#, który składa się z aplikacji składa się z instrukcji, które składają się z słów kluczowych, wyrażenia i operatory.</span><span class="sxs-lookup"><span data-stu-id="113c3-103">The C# code that comprises an application consists of statements made up of keywords, expressions and operators.</span></span> <span data-ttu-id="113c3-104">Ta sekcja zawiera informacje dotyczące tych podstawowych elementów programu w języku C#.</span><span class="sxs-lookup"><span data-stu-id="113c3-104">This section contains information regarding these fundamental elements of a C# program.</span></span>  
+# <a name="statements-expressions-and-operators-c-programming-guide"></a><span data-ttu-id="ade9e-102">Instrukcje, wyrażenia i operatory (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="ade9e-102">Statements, Expressions, and Operators (C# Programming Guide)</span></span>
+<span data-ttu-id="ade9e-103">Kod C#, który składa się z aplikacji składa się z instrukcji, które składają się z słów kluczowych, wyrażenia i operatory.</span><span class="sxs-lookup"><span data-stu-id="ade9e-103">The C# code that comprises an application consists of statements made up of keywords, expressions and operators.</span></span> <span data-ttu-id="ade9e-104">Ta sekcja zawiera informacje dotyczące tych podstawowych elementów programu w języku C#.</span><span class="sxs-lookup"><span data-stu-id="ade9e-104">This section contains information regarding these fundamental elements of a C# program.</span></span>  
   
- <span data-ttu-id="113c3-105">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="113c3-105">For more information, see:</span></span>  
+ <span data-ttu-id="ade9e-105">Aby uzyskać więcej informacji, zobacz:</span><span class="sxs-lookup"><span data-stu-id="ade9e-105">For more information, see:</span></span>  
   
--   [<span data-ttu-id="113c3-106">Instrukcje</span><span class="sxs-lookup"><span data-stu-id="113c3-106">Statements</span></span>](statements.md)  
+-   [<span data-ttu-id="ade9e-106">Instrukcje</span><span class="sxs-lookup"><span data-stu-id="ade9e-106">Statements</span></span>](statements.md)  
   
--   [<span data-ttu-id="113c3-107">Wyrażenia</span><span class="sxs-lookup"><span data-stu-id="113c3-107">Expressions</span></span>](expressions.md)  
+-   [<span data-ttu-id="ade9e-107">Wyrażenia</span><span class="sxs-lookup"><span data-stu-id="ade9e-107">Expressions</span></span>](expressions.md)  
   
-    -   [<span data-ttu-id="113c3-108">Elementy członkowskie z wyrażeniem w treści</span><span class="sxs-lookup"><span data-stu-id="113c3-108">Expression-bodied members</span></span>](expression-bodied-members.md)
+    -   [<span data-ttu-id="ade9e-108">Elementy członkowskie z wyrażeniem w treści</span><span class="sxs-lookup"><span data-stu-id="ade9e-108">Expression-bodied members</span></span>](expression-bodied-members.md)
  
--   [<span data-ttu-id="113c3-109">Operatory</span><span class="sxs-lookup"><span data-stu-id="113c3-109">Operators</span></span>](operators.md)  
+-   [<span data-ttu-id="ade9e-109">Operatory</span><span class="sxs-lookup"><span data-stu-id="ade9e-109">Operators</span></span>](operators.md)  
   
--   [<span data-ttu-id="113c3-110">Funkcje anonimowe</span><span class="sxs-lookup"><span data-stu-id="113c3-110">Anonymous Functions</span></span>](anonymous-functions.md)  
+-   [<span data-ttu-id="ade9e-110">Funkcje anonimowe</span><span class="sxs-lookup"><span data-stu-id="ade9e-110">Anonymous Functions</span></span>](anonymous-functions.md)  
   
--   [<span data-ttu-id="113c3-111">Operatory z możliwością przeciążenia</span><span class="sxs-lookup"><span data-stu-id="113c3-111">Overloadable Operators</span></span>](overloadable-operators.md)  
+-   [<span data-ttu-id="ade9e-111">Operatory z możliwością przeciążenia</span><span class="sxs-lookup"><span data-stu-id="ade9e-111">Overloadable Operators</span></span>](overloadable-operators.md)  
   
--   [<span data-ttu-id="113c3-112">Operatory konwersji</span><span class="sxs-lookup"><span data-stu-id="113c3-112">Conversion Operators</span></span>](conversion-operators.md)  
+-   [<span data-ttu-id="ade9e-112">Operatory konwersji</span><span class="sxs-lookup"><span data-stu-id="ade9e-112">Conversion Operators</span></span>](conversion-operators.md)  
   
-    -   [<span data-ttu-id="113c3-113">Używanie operatorów konwersji</span><span class="sxs-lookup"><span data-stu-id="113c3-113">Using Conversion Operators</span></span>](using-conversion-operators.md)  
+    -   [<span data-ttu-id="ade9e-113">Używanie operatorów konwersji</span><span class="sxs-lookup"><span data-stu-id="ade9e-113">Using Conversion Operators</span></span>](using-conversion-operators.md)  
   
-    -   [<span data-ttu-id="113c3-114">Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur</span><span class="sxs-lookup"><span data-stu-id="113c3-114">How to: Implement User-Defined Conversions Between Structs</span></span>](how-to-implement-user-defined-conversions-between-structs.md)  
+    -   [<span data-ttu-id="ade9e-114">Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur</span><span class="sxs-lookup"><span data-stu-id="ade9e-114">How to: Implement User-Defined Conversions Between Structs</span></span>](how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [<span data-ttu-id="113c3-115">Porównywanie równości</span><span class="sxs-lookup"><span data-stu-id="113c3-115">Equality Comparisons</span></span>](equality-comparisons.md)  
+-   [<span data-ttu-id="ade9e-115">Porównywanie równości</span><span class="sxs-lookup"><span data-stu-id="ade9e-115">Equality Comparisons</span></span>](equality-comparisons.md)  
   
-## <a name="c-language-specification"></a><span data-ttu-id="113c3-116">Specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="113c3-116">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="ade9e-116">Specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="ade9e-116">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="113c3-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="113c3-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ade9e-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ade9e-117">See Also</span></span>
 
-- [<span data-ttu-id="113c3-118">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="113c3-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="113c3-119">Rzutowanie i konwersje typów</span><span class="sxs-lookup"><span data-stu-id="113c3-119">Casting and Type Conversions</span></span>](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- [<span data-ttu-id="ade9e-118">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="ade9e-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="ade9e-119">Rzutowanie i konwersje typów</span><span class="sxs-lookup"><span data-stu-id="ade9e-119">Casting and Type Conversions</span></span>](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

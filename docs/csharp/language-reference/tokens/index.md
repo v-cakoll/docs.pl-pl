@@ -19,15 +19,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/08/2018
 ms.locfileid: "44177847"
 ---
-# <a name="c-special-characters"></a><span data-ttu-id="fde15-102">Znaki specjalne języka C#</span><span class="sxs-lookup"><span data-stu-id="fde15-102">C# Special Characters</span></span>
+# <a name="c-special-characters"></a><span data-ttu-id="86ae4-102">Znaki specjalne języka C#</span><span class="sxs-lookup"><span data-stu-id="86ae4-102">C# Special Characters</span></span>
 
-<span data-ttu-id="fde15-103">Znaki specjalne są wstępnie zdefiniowane kontekstowych znaków, które modyfikują elementu programu (literałem, identyfikator lub nazwa atrybutu), do której jest dołączony.</span><span class="sxs-lookup"><span data-stu-id="fde15-103">Special characters are predefined, contextual characters that modify the program element (a literal string, an identifier, or an attribute name) to which they are prepended.</span></span> <span data-ttu-id="fde15-104">C# obsługuje następujące znaki specjalne:</span><span class="sxs-lookup"><span data-stu-id="fde15-104">C# supports the following special characters:</span></span> 
+<span data-ttu-id="86ae4-103">Znaki specjalne są wstępnie zdefiniowanymi znakami kontekstowymi, które modyfikują elementy programu (literały, identyfikatory lub nazwy atrybutu), do których są dołączone.</span><span class="sxs-lookup"><span data-stu-id="86ae4-103">Special characters are predefined, contextual characters that modify the program element (a literal string, an identifier, or an attribute name) to which they are prepended.</span></span> <span data-ttu-id="86ae4-104">C# obsługuje następujące znaki specjalne:</span><span class="sxs-lookup"><span data-stu-id="86ae4-104">C# supports the following special characters:</span></span> 
 
-- <span data-ttu-id="fde15-105">[@](../../../csharp/language-reference/tokens/verbatim.md), znak identyfikator dosłownego wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="fde15-105">[@](../../../csharp/language-reference/tokens/verbatim.md), the verbatim identifier character.</span></span> 
+- <span data-ttu-id="86ae4-105">[@](../../../csharp/language-reference/tokens/verbatim.md) — znak identyfikatora dosłownego,</span><span class="sxs-lookup"><span data-stu-id="86ae4-105">[@](../../../csharp/language-reference/tokens/verbatim.md), the verbatim identifier character.</span></span> 
 
-- <span data-ttu-id="fde15-106">[$](../../../csharp/language-reference/tokens/interpolated.md), znak w ciągu interpolowanym.</span><span class="sxs-lookup"><span data-stu-id="fde15-106">[$](../../../csharp/language-reference/tokens/interpolated.md), the interpolated string character.</span></span>
+- <span data-ttu-id="86ae4-106">[$](../../../csharp/language-reference/tokens/interpolated.md) — znak ciągu interpolowanego.</span><span class="sxs-lookup"><span data-stu-id="86ae4-106">[$](../../../csharp/language-reference/tokens/interpolated.md), the interpolated string character.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fde15-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="fde15-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86ae4-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="86ae4-107">See Also</span></span>
 
-- [<span data-ttu-id="fde15-108">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="fde15-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="fde15-109">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="fde15-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="86ae4-108">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="86ae4-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="86ae4-109">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="86ae4-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)

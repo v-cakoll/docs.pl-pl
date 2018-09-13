@@ -1,71 +1,71 @@
 ---
-title: Ze względu na modernizacji istniejących aplikacji .NET dla aplikacji zoptymalizowanych pod kątem chmury
-description: Modernizacji istniejących aplikacji .NET z kontenerami chmury Azure i systemu Windows | Ze względu na modernizacji istniejących aplikacji .NET dla aplikacji zoptymalizowanych pod kątem chmury
+title: Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
+description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a874a742f6a5b32e15040ad0a237f0e0fa7908dc
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
-ms.translationtype: MT
+ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958234"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44509963"
 ---
-# <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Ze względu na modernizacji istniejących aplikacji .NET dla aplikacji zoptymalizowanych pod kątem chmury
+# <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 
-Z aplikacją zoptymalizowanych pod kątem chmury można szybko i wielokrotnie dostarczać niezawodnych aplikacji dla klientów. Możesz uzyskać istotne elastyczność i niezawodność odkładanie znacznie złożoność działania aplikacji dla platformy.
+Za pomocą aplikacji zoptymalizowane pod kątem chmury możesz szybko i wielokrotnie dostarczyć niezawodne aplikacje swoim klientom. Można osiągnąć essential elastyczność i niezawodność odkładania znacznie złożoność operacyjną aplikacji na platformie.
 
-Jeśli nie można pobrać aplikacji na rynek szybkie, czas wydać aplikację, będą usprawnionych rynku, które były celem. Może być za późno, niezależnie od tego, jak również zaprojektowana lub odtwarzane aplikacji. Możesz może się niepowodzeniem lub nie osiągnie Twojego potencjał, ponieważ nie można zsynchronizować dostarczania aplikacji z potrzeb rynku.
+Jeśli nie można pobrać aplikacji, aby szybko wprowadzać na rynek, do czasu dostarczania aplikacji, będzie usprawniły rynku, w której zostały adresowany. Może być za późno, niezależnie od tego, jak dobrze zaprojektowana lub odtwarzane aplikacji. Użytkownik może kończy się niepowodzeniem lub nie osiągnie swój pełny potencjał, ponieważ nie można zsynchronizować dostarczania aplikacji potrzebom rynku.
 
-Potrzebę innowacyjnych firm ciągłego wypycha zespoły rozwoju i operacje do limitu. Jedynym sposobem uzyskania elastyczności, potrzebnych innowacyjnych firm ciągłej jest modernizacji aplikacji przy użyciu technologii, takich jak kontenery i zasadami określonej aplikacji zoptymalizowanych pod kątem chmury.
+Potrzeby biznesowe ciągłe wprowadzanie innowacji wypycha zespoły deweloperów i operacyjne do limitu. Jedynym sposobem uzyskania elastyczności potrzebnych w biznesowych ciągłe wprowadzanie innowacji jest modernizujesz swoje aplikacje za pomocą technologii, takich jak kontenery i zasady określonej aplikacji zoptymalizowane pod kątem chmury.
 
-Mierzenie jest że gdy organizacja kompilacje i zarządza aplikacjami, które są zoptymalizowane pod kątem chmury, go wcześniej umieść rozwiązań w ręce klientów i przełączyć nowe pomysły na rynek, gdy mają one zastosowanie.
+Mierzenie to, że jeśli organizacja tworzy i zarządza aplikacjami, które są zoptymalizowane pod kątem chmury, jest wcześniej umieszczanie rozwiązania w ręce klientów i wprowadzaj nowe pomysły na rynek, gdy są one odpowiednie.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>Zasady aplikacji zoptymalizowanych pod kątem chmury i zasady 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>Zasady aplikacji zoptymalizowane pod kątem chmury i założenia 
 
-Ulepszenia w chmurze są przeważnie koncentruje się na spotkania dwóch celów: pozwalają ograniczyć koszty i zwiększyć rozwoju firmy skracając elastyczność. Tych celów są osiągane dzięki uproszczeniu procesy i zmniejszeniu tarcia zwolnienie i wysłać do aplikacji.
+Ulepszenia w chmurze przede wszystkim koncentrują się na spotkanie dwa cele: obniżenie kosztów oraz zwiększenie rozwoju ich firm dzięki poprawie elastyczność. Te cele są wykonywane przez uprościć procesy, redukując opór zwolnienie i dostarczaj aplikacje.
 
-Aplikacja jest w chmurze zoptymalizowanych pod kątem użytkownik może w agile sposób opracowywania aplikacji autonomicznie z innych aplikacji lokalnie, a następnie zwolnij wdrażania automatycznego skalowania monitorowania i rozwiązywania problemów z aplikacją w chmurze.
+Aplikacja jest zoptymalizowane pod kątem chmury w przypadku może w agile sposób opracowywanie aplikacji niezależnie od innych aplikacji w środowisku lokalnym, a następnie zwolnij wdrożenia, automatyczne skalowanie, monitorowanie i rozwiązywanie problemów z aplikacją w chmurze.
 
-Klucz jest *elastyczność*. Nie można wydać z elastyczności, chyba, że można zmniejszyć do minimum wszystkie wdrożenia do produkcji zagadnienia i problemy dotyczące środowiska i testowania. Kontenery (w szczególności Docker, jako standard faktyczne) i usług zarządzanych zostały zaprojektowane specjalnie do tego celu.
+Klucz jest *elastyczność*. Nie można wydać z elastycznością, chyba że można zmniejszyć do minimum wszelkie wdrażania do produkcji problemy i rozwiązywania problemów w środowisku tworzenia i testowania. Kontenery (w szczególności platformy Docker, jak de facto standardem) i usługi zarządzane zostały zaprojektowane specjalnie do tego celu.
 
-Aby osiągnąć elastyczności, potrzebne są również zautomatyzowanych procesów opracowywania oprogramowania, które są oparte na kanał CI/CD wersji skalowalne platformy w chmurze. Platformy CI/CD (na przykład Visual Studio Team Services lub Wpięć), które wdrożyć do chmury skalowalne i elastyczne platformy (np. usługi Azure App Service, sieć szkieletowa usług Azure lub usługi Kubernetes Azure) to kluczowych technologii do osiągnięcia elastyczność w chmurze.
+Aby osiągnąć elastyczności, potrzebny jest zautomatyzowane procesy metodyki DevOps, które są oparte na potoków ciągłej integracji/ciągłego wdrażania, które wydane skalowalnej platformy w chmurze. Platformy ciągłej integracji/ciągłego wdrażania (na przykład usługom DevOps platformy Azure lub usługi Jenkins), które Wdróż na platformie chmury skalowalne i odporne na błędy (np. usługi Azure App Service, Azure Service Fabric lub usłudze Azure Kubernetes Service) to kluczowych technologii do osiągnięcia elastyczności w chmurze.
 
-Poniżej przedstawiono listę rozwiązań głównego lub wskazówki dotyczące aplikacji zoptymalizowanych pod kątem chmury. Należy pamiętać, że można przyjąć wszystkie lub tylko niektóre z tych zasad w podejściu progresywnego lub przyrostowej:
+Na poniższej liście opisano założenia głównego lub rozwiązania dla aplikacji zoptymalizowane pod kątem chmury. Należy zwrócić uwagę na to, że można przyjąć wszystkie lub tylko niektóre z tych zasad, w ramach podejścia progresywnego lub przyrostowej:
 
--   **Kontenery**. Kontenery zapewniają możliwość uwzględnienia zależności aplikacji z samej aplikacji. Przechowywanie w kontenerach znacznie ograniczyć liczbę problemów, które mogą wystąpić podczas wdrażania w środowisku produkcyjnym lub testowania w środowiskach przejściowym. Ostatecznie kontenery zwiększyć elastyczność dostawy aplikacji.
+-   **Kontenery**. Kontenery zapewniają możliwość uwzględnienia zależności aplikacji przy użyciu samej aplikacji. Konteneryzacji znacznie zmniejsza liczbę problemów, które mogą wystąpić podczas wdrażania na środowisko produkcyjne lub testów w środowisku przejściowym. Ostatecznie kontenery zwiększyć elastyczność dostarczanie aplikacji.
 
--   **Chmura elastycznego i skalowalnego**. Chmura zawiera platformy, które jest zarządzane, elastyczne, skalowalne i odporność. Te właściwości są niezbędne, aby uzyskać ulepszenia kosztów i wysłać wysokiej dostępności i niezawodnych aplikacji w ciągłego dostarczania. Zarządzane baz danych zarządzanych usług zarządzanych, takich jak pamięci podręcznej jako usługi (CaaS) i magazynów zarządzana podstawowe elementy w złagodzenia kosztów obsługi aplikacji.
+-   **Odporne na błędy i skalowalnej chmurze**. Chmura udostępnia to platforma, która jest zarządzane, elastyczne, skalowalne i odporne na błędy. Te właściwości mają zasadnicze znaczenie uzyskać ulepszenia kosztów i dostarczanie wysoce dostępnych i niezawodnych aplikacji w ciągłego dostarczania. Usługi zarządzane, takie jak zarządzanych baz danych zarządzanych jako usługi (CaaS) i magazynu zarządzanego jest podstawowych elementów złagodzenia kosztów konserwacji aplikacji w pamięci podręcznej.
 
--   **Monitorowanie**. Nie może mieć niezawodnych aplikacji bez konieczności dobry sposób na wykrywanie i diagnozowanie wyjątków i problemy z wydajnością aplikacji. Koniecznych do uzyskania przydatnych wyników analiz za pośrednictwem aplikacji Zarządzanie wydajnością i analiza błyskawicznych.
+-   **Monitorowanie**. Nie może mieć niezawodnych aplikacji bez konieczności dobrym sposobem na wykrywanie i diagnozowanie wyjątków i problemów z wydajnością aplikacji. Musisz możliwość uzyskania praktycznych informacji dzięki zarządzaniu wydajnością aplikacji oraz błyskawicznej analizie.
 
--   **DevOps kultury i ciągłego dostarczania**. Przyjęcie rozwiązania DevOps wymaga zmiany kultury, w którym, zespoły przestanie działać w silosach niezależne. Potoki CI/CD są możliwe tylko w przypadku zwiększonej współpracy między programowanie i zespoły operacji IT, obsługiwane przez kontenery i narzędzia CI/CD.
+-   **DevOps kultury i ciągłe dostarczanie**. Wdrażanie metodyki DevOps wymaga zmiany kultury, w którym, zespoły nie będą działać w odosobnieniu niezależne. Potoki ciągłej integracji/ciągłego wdrażania są możliwe tylko wtedy, gdy większa współpraca między środowiskami deweloperskim i zespołów operacyjnych IT obsługiwane kontenerów i narzędzi ciągłej integracji/ciągłego wdrażania.
 
-Rysunek 4-2 przedstawiono główne słupków opcjonalne aplikacji zoptymalizowanych pod kątem chmury. Wdrożenie więcej kolumn, lepszą aplikacja będzie do pomyślnego spełnia oczekiwań klientów.
+Rysunek 4-2 pokazuje głównych filarach opcjonalne aplikacji zoptymalizowane pod kątem chmury. Więcej filary, które należy zaimplementować, lepszą Twoja aplikacja będzie zakończyło się sukcesem spełnia oczekiwania Twoich klientów.
 
-> ![Główne słupków aplikacji zoptymalizowanych pod kątem chmury](./media/image2.png)
+> ![Głównych filarach zoptymalizowane pod kątem chmury aplikacji](./media/image2.png)
 >
-> **Rysunek 4-2.** Główne słupków aplikacji zoptymalizowanych pod kątem chmury
+> **Rysunek 4-2.** Głównych filarach zoptymalizowane pod kątem chmury aplikacji
 
-Podsumowując, aplikację zoptymalizowanych pod kątem chmury jest podejście do tworzenia aplikacji i zarządzanie nimi, które korzysta z przetwarzania modelu podczas przy użyciu kombinacji kontenerów, infrastruktury zarządzanej chmury, techniki odporność aplikacji w chmurze Monitorowanie, ciągłego dostarczania i opracowywania oprogramowania, bez konieczności rearchitect i recode istniejących aplikacji.
+Aby podsumować, zoptymalizowane pod kątem chmury aplikacji jest podejście do tworzenia aplikacji i zarządzanie nimi, który korzysta z zalet chmury obliczeniowej modelu, podczas korzystania z kombinacji kontenery, infrastruktura zarządzana usługa w chmurze, techniki aplikacji odpornych na błędy Monitorowanie, ciągłego dostarczania i metodyki DevOps, bez konieczności Przekształcanie i firmy recode istniejących aplikacji.
 
-Twoja organizacja może przyjąć stopniowo te technologie i metod. Nie masz uwzględnienie wszystkich z nich, jednocześnie. Można adaptować ich przyrostowo, w zależności od potrzeb użytkownika i priorytetów organizacji.
+Twoja organizacja można przyjąć stopniowo tych technologii i metod. Nie masz wykorzystać wszystkie z nich, wszystkie na raz. Można przyjąć ich przyrostowo, w zależności od potrzeb użytkowników i priorytetów organizacji.
 
-## <a name="benefits-of-a-cloud-optimized-application"></a>Zalety aplikacji zoptymalizowanych pod kątem chmury
+## <a name="benefits-of-a-cloud-optimized-application"></a>Zalety aplikacji w języku zoptymalizowane pod kątem chmury
 
-Konwertowanie istniejącej aplikacji do aplikacji zoptymalizowanych pod kątem chmury (bez oszczędzasz lub kodowania) można uzyskać następujące korzyści:
+Za pomocą konwersji istniejącej aplikacji do aplikacji zoptymalizowane pod kątem chmury (bez transformować i kodowanie), możesz uzyskać następujące korzyści:
 
--   **Niższe koszty, ponieważ infrastruktury zarządzanych jest obsługiwane przez dostawcę chmury**. Aplikacje zoptymalizowanych pod kątem chmury uzyskać korzyści z chmury przy użyciu elastyczność poza pole z chmury, skalowania automatycznego i wysokiej dostępności. Korzyści dotyczą nie tylko funkcje obliczeniowe (maszyny wirtualne i kontenerów), ale również są zależne od zasobów w chmurze, takich jak DBaaS, CaaS i dowolnej infrastruktury aplikacji mogą wymagane.
+-   **Obniżenia kosztów, ponieważ zarządzana infrastruktura jest obsługiwany przez dostawcę chmury**. Zoptymalizowane pod kątem chmury aplikacji uzyskać korzyści z chmury, za pomocą elastyczność out-of--box chmury, automatyczne skalowanie i wysoką dostępność. Korzyści dotyczą nie tylko funkcje obliczeniowe (maszyny wirtualne i kontenery), ale również są zależne od zasobów w chmurze, takich jak DBaaS, CaaS i infrastruktury aplikacji może pożądane.
 
--   **Odporność aplikacji i infrastruktury**. W przypadku migracji do chmury, musisz dążenie przejściowych awarii; wystąpią błędy w chmurze. Ponadto sprzętu i infrastruktury chmury są "zastąpienia," co zwiększa możliwości przejściowej przestoju. W tym samym czasie funkcje dotyczące chmury wewnętrzny i niektórych techniki tworzenia aplikacji, które implementuje odporności i zautomatyzować odzyskiwania ułatwiają znacznie odzyskanie nieoczekiwanych awarii w chmurze.
+-   **Odporne na błędy aplikacji i infrastruktury**. W przypadku migracji do chmury, musisz Obsługa przejściowych błędów; wystąpią błędy w chmurze. Ponadto sprzętu i infrastruktury chmury są "zastąpienia," co zwiększa możliwości przejściowy przestojów. W tym samym czasie możliwości chmury wewnętrzny i techniki tworzenia aplikacji, niektóre wdrożenia odporności i automatyzacja odzyskiwania, które ułatwiają znacznie sprawności po awarii w chmurze.
 
--   **Lepszy wgląd w wydajność aplikacji**. Chmury narzędzi monitorowania, takich jak Azure Application Insights Podaj wizualizacji zarządzania kondycji, rejestrowania i powiadomień. Dzienniki inspekcji umożliwiają łatwe debugowania i inspekcji, podstawowe znaczenie dla aplikacji w chmurze niezawodnych aplikacji.
+-   **Lepszy wgląd w wydajność aplikacji**. Chmury, narzędzia do monitorowania takich jak Azure Application Insights zapewnia wizualizację dla zarządzania stanem, rejestrowanie i powiadomienia. Dzienniki inspekcji ułatwić aplikacji do debugowania i inspekcji podstawowe znaczenie dla aplikacji w chmurze w wiarygodne.
 
--   **Mobilność aplikacji, z wdrożeniami agile**. Kontenery (Linux lub Windows kontenery oparty na aparacie Docker) oferuje najlepsze rozwiązanie unikanie aplikacją zablokowane w chmurze. Za pomocą kontenerów, hostach Docker i orchestrators usługi chmury, można łatwo w różnych środowiskach lub chmury do innej. Kontenery wyeliminować tarcie, który zazwyczaj występuje w przypadku wdrożeń z dowolnym środowiskiem (etapu testowego/produkcja).
+-   **Przenośność aplikacji, w przypadku wdrożeń agile**. Kontenery (Linux lub Windows kontenery opartą na aparacie Docker) oferują najlepsze rozwiązanie do uniknięcia aplikacją zablokowane w chmurze. Za pomocą kontenerów, hostów platformy Docker i koordynatorów wielu chmur, można łatwo przenosić z jednego środowiska lub do innego w chmurze. Kontenery wyeliminować zajmowania się zwykle występujący w przypadku wdrożeń z dowolnym środowiskiem (etap/testowania/produkcji).
 
-Podaj wszystkie z tych zalet ostatecznie redukcję kosztów klucza dla cyklu użytkowania Twojej aplikacji na trasie.
+Wszystkie te korzyści zapewni redukcję kosztów klucza dla cyklu użytkowania Twojej aplikacji end-to-end.
 
-W poniższych sekcjach te korzyści omówiono bardziej szczegółowo i są połączone z określonymi technologiami.
+W poniższych sekcjach te korzyści omówiona bardziej szczegółowo i są powiązane z określonymi technologiami.
 
 >[!div class="step-by-step"]
 [Poprzednie](index.md)

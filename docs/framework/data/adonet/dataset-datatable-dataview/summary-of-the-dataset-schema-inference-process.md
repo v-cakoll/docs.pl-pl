@@ -3,11 +3,11 @@ title: Podsumowanie procesu wnioskowania schematu zestawu danych
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
 ms.openlocfilehash: 1583d5232a3dd483bbe2a6fa0b1bc8a3ae6a659f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277630"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700495"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Podsumowanie procesu wnioskowania schematu zestawu danych
 Procesu wnioskowania najpierw określi, z dokumentu XML, które elementy zostanie wywnioskowany, jako tabele. Z pozostałych pliku XML procesu wnioskowania Określa kolumny dla tych tabel. W przypadku zagnieżdżonych tabel generuje procesu wnioskowania zagnieżdżonych <xref:System.Data.DataRelation> i <xref:System.Data.ForeignKeyConstraint> obiektów.  

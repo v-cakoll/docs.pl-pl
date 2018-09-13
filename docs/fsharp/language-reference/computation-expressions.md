@@ -3,11 +3,11 @@ title: Wyrażenia obliczeń (F#)
 description: 'Dowiedz się, jak utworzyć wygodnej składni do pisania obliczeń w F #, który może być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania.'
 ms.date: 07/27/2018
 ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365397"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508541"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 

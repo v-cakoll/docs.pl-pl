@@ -3,11 +3,11 @@ title: Moduły (F#)
 description: 'Dowiedz się, jak moduł F # to grupa kodzie języka F #, takie jak wartości, typy i wartości funkcji, w programie F #.'
 ms.date: 04/24/2017
 ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514358"
+ms.locfileid: "44705128"
 ---
 # <a name="modules"></a>Moduły
 

@@ -23,9 +23,9 @@ ms.locfileid: "44177847"
 
 Znaki specjalne są wstępnie zdefiniowanymi znakami kontekstowymi, które modyfikują elementy programu (literały, identyfikatory lub nazwy atrybutu), do których są dołączone. C# obsługuje następujące znaki specjalne: 
 
-- znak [@](../../../csharp/language-reference/tokens/verbatim.md), identyfikator wyrażenia dosłownego. 
+- [@](../../../csharp/language-reference/tokens/verbatim.md) — znak identyfikatora dosłownego,
 
-- znak [$](../../../csharp/language-reference/tokens/interpolated.md), oznaczający ciąg interpolowany.
+- [$](../../../csharp/language-reference/tokens/interpolated.md) — znak ciągu interpolowanego.
 
 ## <a name="see-also"></a>Zobacz też
 

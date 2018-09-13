@@ -3,11 +3,11 @@ title: Wzorce aktywne (F#)
 description: 'Dowiedz się, jak zdefiniować nazwanych partycji, które należy podzielić dane wejściowe w języku programowania F # przy użyciu wzorców.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204815"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705115"
 ---
 # <a name="active-patterns"></a>Wzorce aktywne
 

@@ -3,11 +3,11 @@ title: Serializowanie do elementu XmlReader (wywoływanie XSLT) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
 ms.openlocfilehash: b1f5bc8bd71036636df9da152c4e364ea5ec6b6e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140180"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705050"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>Serializowanie do elementu XmlReader (wywoływanie XSLT) (C#)
 Kiedy używasz <xref:System.Xml?displayProperty=nameWithType> możliwości współdziałania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], możesz użyć <xref:System.Xml.Linq.XNode.CreateReader%2A> utworzyć <xref:System.Xml.XmlReader>. Moduł odczytujący z tego <xref:System.Xml.XmlReader> odczytuje węzłów z drzewa XML i przetwarza je, odpowiednio.  

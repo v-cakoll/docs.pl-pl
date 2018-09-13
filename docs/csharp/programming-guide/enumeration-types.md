@@ -8,11 +8,11 @@ helpviewer_keywords:
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
 ms.openlocfilehash: 3efedd48303c79bafde3704b0fdd6fcdd465a0a7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206146"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705547"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Typy wyliczeniowe (C# Programming Guide)
 

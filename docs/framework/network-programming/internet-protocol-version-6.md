@@ -12,11 +12,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 2c9b3b1c647d74444fed01e38b65c1b2fe8364c6
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368154"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44708104"
 ---
 # <a name="internet-protocol-version-6"></a>Protokół internetowy w wersji 6
 Protokołu internetowego w wersji 6 (IPv6) to nowy zestaw standardowych protokołów służący do warstwy sieci Internet. Protokół IPv6 pozwala rozwiązać wiele problemów w bieżącej wersji pakietu Internet Protocol (nazywane IPv4) w odniesieniu do adresów wyczerpanie, zabezpieczeń, konfiguracji automatycznego, rozszerzalność i tak dalej. Protokół IPv6 rozszerza możliwości Internetu, aby włączyć nowych rodzajów aplikacji, w tym aplikacji peer-to-peer i na urządzeniach przenośnych. Oto główne kwestie bieżącego protokołu IPv4:  

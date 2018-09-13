@@ -3,11 +3,11 @@ title: Nazwa źródła w parametru EventLogSource została zarejestrowana do dzi
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
 ms.openlocfilehash: 03fcc41b0fbb84233aa037d7af17d168050a98b6
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44509697"
+ms.locfileid: "44708936"
 ---
 # <a name="source-name-specified-in-eventlogsource-is-registered-to-a-log-other-than-that-specified-in-eventlogname"></a>Nazwa źródła w parametru EventLogSource została zarejestrowana do dziennika, inne niż określone w EventLogName
 `EventLog` Próbuje do odwoływania się do źródła, który jest zarejestrowany w innym dzienniku. Jeśli piszesz wpisów do dziennika zdarzeń, należy określić <xref:System.Diagnostics.EventLog.Source%2A> właściwości. <xref:System.Diagnostics.EventLog.Source%2A> Właściwość rejestruje składnika z dziennika zdarzeń jako poprawne źródło wpisów. Pojedyncze źródło może być skojarzony z (i w związku z tym zapis wpisów, aby) tylko jeden dziennik zdarzeń w danym momencie.  

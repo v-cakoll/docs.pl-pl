@@ -3,11 +3,11 @@ title: Dołącz do operacji (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
 ms.openlocfilehash: f03d5cf14525a6d23240747c2f377348bf608782
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338106"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705461"
 ---
 # <a name="join-operations-c"></a>Dołącz do operacji (C#)
 A *sprzężenia* dwóch źródeł danych jest skojarzenie obiektów w jednym źródle danych z obiektów mających wspólny atrybut w innym źródle danych.  

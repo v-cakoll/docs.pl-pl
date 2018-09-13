@@ -16,11 +16,11 @@ ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 054af36987d60c8aeb752c9c711f1cce19733efc
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353836"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44706109"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Blokowanie wykonania aplikacji za pomocą właściwości AsyncWaitHandle
 Aplikacje, które nie mogą w dalszym ciągu wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej należy zablokować, aż do zakończenia operacji. Blokowanie wątku głównego aplikacji podczas oczekiwania na zakończenie operacji asynchronicznej, użyj jednej z następujących opcji:  

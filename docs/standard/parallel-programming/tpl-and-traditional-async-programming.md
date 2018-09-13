@@ -11,11 +11,11 @@ ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277150"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705888"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Programowanie asynchroniczne w TPL i standardowym .NET Framework
 Program .NET Framework zawiera następujące dwa standardowe wzorce do wykonywania operacji asynchronicznych I/O-granicę i powiązany obliczeniowych:  

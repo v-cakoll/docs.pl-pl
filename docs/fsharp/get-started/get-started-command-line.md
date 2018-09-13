@@ -3,11 +3,11 @@ title: 'Wprowadzenie do F # za pomocą narzędzia wiersza polecenia'
 description: 'Dowiedz się, jak tworzenie prostego rozwiązania wielu projektów F # za pomocą interfejsu wiersza polecenia platformy .NET Core w dowolnym systemie operacyjnym (Windows, macOs lub Linux).'
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198520"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44706872"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Wprowadzenie do F # za pomocą interfejsu wiersza polecenia platformy .NET Core
 

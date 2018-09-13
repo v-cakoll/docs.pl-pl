@@ -11,11 +11,11 @@ ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 224f9273b0c8c9445a6a9e25f064e9726acc84f0
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44364654"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44707753"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>Porady: dekodowanie zadania zagnieżdżonego
 Może zwracać zadanie z metody, a następnie poczekaj lub kontynuować z tego zadania, jak pokazano w poniższym przykładzie:  

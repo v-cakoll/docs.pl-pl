@@ -11,11 +11,11 @@ ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360362"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44707688"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Porady: nasłuchiwanie żądań anulowania za pomocą sondowania
 Poniższy przykład pokazuje jeden ze sposobów, kod użytkownika można sondować token anulowania w regularnych odstępach czasu, aby zobaczyć, czy zażądano anulowania z wątku wywoływania. W tym przykładzie użyto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> typu, ale w tym samym wzorcem dotyczy operacji asynchronicznych utworzone bezpośrednio przez <xref:System.Threading.ThreadPool?displayProperty=nameWithType> typu lub <xref:System.Threading.Thread?displayProperty=nameWithType> typu.  

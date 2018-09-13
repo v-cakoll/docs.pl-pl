@@ -8,11 +8,11 @@ ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339620"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44708494"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Narzędzie podpisu)
 Narzędzie podpisywania to narzędzie wiersza polecenia, które cyfrowo podpisuje pliki, weryfikuje podpisy w plikach i oznacza pliki znacznikami czasu.  

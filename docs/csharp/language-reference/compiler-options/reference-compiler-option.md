@@ -14,11 +14,11 @@ helpviewer_keywords:
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
 ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361881"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705024"
 ---
 # <a name="-reference-c-compiler-options"></a>— Odwołanie (opcje kompilatora C#)
 **— Dokumentacja** opcja powoduje, że kompilator, aby zaimportować [publicznych](../../../csharp/language-reference/keywords/public.md) wpisz informacje w określonym pliku do bieżącego projektu, dzięki czemu można odwoływać się do metadanych z określonych plików zestawów.  

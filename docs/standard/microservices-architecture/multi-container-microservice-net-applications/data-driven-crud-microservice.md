@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Tw
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512119"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44708627"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostego mikrousługi CRUD na podstawie danych
 
@@ -252,7 +252,7 @@ catalog.api:
     - "5101:80"
 ```
 
-Pliki docker-compose.yml na poziomie rozwiązania nie są tylko bardziej elastyczny niż pliki konfiguracji na poziomie projektu lub mikrousług, ale również bardziej bezpieczne, jeśli zastąpisz zmienne środowiskowe zadeklarowane na pliki docker-compose przy użyciu wartości ustawione na Twoje narzędzia wdrażania, np. z zadania związane z wdrażaniem platformy Docker z usługi VSTS. 
+Pliki docker-compose.yml na poziomie rozwiązania nie są tylko bardziej elastyczny niż pliki konfiguracji na poziomie projektu lub mikrousług, ale również bardziej bezpieczne, jeśli zastąpisz zmienne środowiskowe zadeklarowane na pliki docker-compose przy użyciu wartości ustawione na Twoje narzędzia wdrażania, np. z zadania związane z wdrażaniem usługi Azure DevOps usługi Docker. 
 
 Na koniec można uzyskać tę wartość w kodzie za pomocą konfiguracji\["ConnectionString"\], jak pokazano w metodzie ConfigureServices w wcześniejszym przykładzie kodu.
 

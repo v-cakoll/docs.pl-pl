@@ -19,11 +19,11 @@ ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a3bbd25e40607bd316f1bbab974174fe5433770f
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44510759"
+ms.locfileid: "44706709"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>Porady: usuwanie nieprawidłowych znaków z ciągów
 W poniższym przykładzie użyto statycznego <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metody usuwanie nieprawidłowych znaków z ciągu.  

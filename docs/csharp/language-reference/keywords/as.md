@@ -9,11 +9,11 @@ helpviewer_keywords:
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
 ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44098874"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44704816"
 ---
 # <a name="as-c-reference"></a>as (odwołanie w C#)
 Możesz użyć `as` operator pod kątem niektórych typów konwersje między typami zgodne odwołanie lub [typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md). Poniższy kod przedstawia przykład.  

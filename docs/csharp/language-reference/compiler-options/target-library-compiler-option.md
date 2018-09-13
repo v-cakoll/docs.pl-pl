@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 ms.openlocfilehash: e15210d189c4a553da72b418f583e44666bac2fc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201182"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44707844"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target: library (opcje kompilatora C#)
 **-Target: library** opcji powoduje, że kompilator do tworzenia biblioteki dołączanej (dynamicznie DLL), a nie plik wykonywalny (EXE).  

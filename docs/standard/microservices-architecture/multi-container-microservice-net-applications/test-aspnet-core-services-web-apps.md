@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Te
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195624"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705365"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług platformy ASP.NET Core
 
@@ -121,7 +121,7 @@ Jak wspomniano wcześniej, podczas testowania aplikacji obsługującej wiele kon
 
 Istnieje kilka metod, których można użyć. W pliku docker-compose.yml, który zostanie użyty do wdrożenia aplikacji (lub podobnych, takich jak docker-compose.ci.build.yml), na poziomie rozwiązania można rozwinąć punktu wejścia, aby użyć [polecenia dotnet test](../../../core/tools/dotnet-test.md). Można również użyć innego pliku compose, która może uruchomić testy na ilustracji, które są przeznaczone dla. Przy użyciu innego pliku compose dla testów integracyjnych, które obejmuje z mikrousług i bazami danych w kontenerach, należy upewnić się, że powiązanych danych zawsze jest resetowany do stanu pierwotnego przed uruchomieniem testów.
 
-Po skonfigurowaniu i uruchomieniu aplikacji compose możesz korzystać z zalet punktów przerwania i wyjątków w przypadku korzystania z programu Visual Studio. Lub uruchomić testy integracji automatycznie w potoku ciągłej integracji w Visual Studio Team Services lub w innym systemie ciągłej integracji/ciągłego wdrażania, który obsługuje kontenery platformy Docker.
+Po skonfigurowaniu i uruchomieniu aplikacji compose możesz korzystać z zalet punktów przerwania i wyjątków w przypadku korzystania z programu Visual Studio. Lub uruchomić testy integracji automatycznie w potoku ciągłej integracji w usługach infrastruktury DevOps platformy Azure lub inny system ciągłej integracji/ciągłego wdrażania, który obsługuje kontenery platformy Docker.
 
 >[!div class="step-by-step"]
 [Poprzednie](subscribe-events.md)

@@ -3,11 +3,11 @@ title: Śledzenie za pomocą pliku tekstowego
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
 ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262702"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44707302"
 ---
 # <a name="tracking-using-a-text-file"></a>Śledzenie za pomocą pliku tekstowego
 Niniejszy przykład pokazuje, jak rozszerzyć śledzenia w Windows Workflow Foundation (WF) przez tworzenie niestandardowego uczestnika śledzenia. Śledzenie uczestników są odbierać rekordów śledzenia ze środowiska wykonawczego, ponieważ są one emitowane klas .NET Framework. Można utworzyć uczestnikiem śledzenia do transportu zdarzenia śledzenia, niezależnie od docelowego jest wymagane dla danego scenariusza. Na przykład uczestnika śledzenia zdarzeń systemu Windows (Event Tracing for Windows) jest dostarczana jako część [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Uczestnik śledzenia w tym przykładzie zapisuje rekordy w formacie XML do pliku tekstowego.  

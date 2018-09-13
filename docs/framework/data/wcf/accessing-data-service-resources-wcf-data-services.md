@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
 ms.openlocfilehash: d4f4de1fa12418bd56f9680e5414bfe7dd0aa128
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189770"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705914"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Uzyskiwanie dostępu do zasobów usługi danych (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aby uwidocznić dane jako źródło danych z zasobami, które są adresowane przez identyfikatory URI. Te zasoby są reprezentowane zgodnie z konwencjami Relacja jednostki z [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). W tym modelu jednostki reprezentują operacyjnej jednostek danych, które są typy danych w domenie aplikacji, takich jak klienci, zamówienia, elementy i produktów. Dane jednostki jest dostępne i zmienić przy użyciu semantyki REST representational state transfer (), w szczególności standardowych poleceń HTTP GET, PUT, POST i DELETE.  

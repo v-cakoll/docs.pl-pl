@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
 ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185444"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710200"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Porady: Tworzenie usługi danych WCF działającej na serwerze IIS
 

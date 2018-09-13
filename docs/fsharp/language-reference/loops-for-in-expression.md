@@ -3,11 +3,11 @@ title: 'Pętle: for...in — Wyrażenie (F#)'
 description: 'Zobacz jak F # for... w wyrażeniu konstrukcji pętli jest używany do wykonywania iteracji dopasowania wzorca w kolekcji wyliczenia.'
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44513956"
+ms.locfileid: "44708812"
 ---
 # <a name="loops-forin-expression"></a>Pętle: for...in — Wyrażenie
 

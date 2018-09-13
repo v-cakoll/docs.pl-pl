@@ -8,11 +8,11 @@ helpviewer_keywords:
 - on keyword [C#]
 ms.assetid: 06abc536-e07c-4e34-88c1-425208bdcb21
 ms.openlocfilehash: 3d1f09bffa197090df7dfce09ab40b164fceb774
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44173707"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44707961"
 ---
 # <a name="on-c-reference"></a>on (odwołanie w C#)
 

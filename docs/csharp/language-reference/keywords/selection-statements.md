@@ -5,30 +5,30 @@ helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
 ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192759"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44709052"
 ---
-# <a name="selection-statements-c-reference"></a><span data-ttu-id="e786d-102">Instrukcje wyboru (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="e786d-102">Selection Statements (C# Reference)</span></span>
-<span data-ttu-id="e786d-103">Instrukcja zaznaczenie powoduje, że formant programu do przeniesienia do określonego przepływu, w zależności od tego, czy określony warunek jest `true` czy nie.</span><span class="sxs-lookup"><span data-stu-id="e786d-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>  
+# <a name="selection-statements-c-reference"></a><span data-ttu-id="35370-102">Instrukcje wyboru (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="35370-102">Selection Statements (C# Reference)</span></span>
+<span data-ttu-id="35370-103">Instrukcja zaznaczenie powoduje, że formant programu do przeniesienia do określonego przepływu, w zależności od tego, czy określony warunek jest `true` czy nie.</span><span class="sxs-lookup"><span data-stu-id="35370-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>  
   
- <span data-ttu-id="e786d-104">Następujące słowa kluczowe są używane w instrukcji wyboru:</span><span class="sxs-lookup"><span data-stu-id="e786d-104">The following keywords are used in selection statements:</span></span>  
+ <span data-ttu-id="35370-104">Następujące słowa kluczowe są używane w instrukcji wyboru:</span><span class="sxs-lookup"><span data-stu-id="35370-104">The following keywords are used in selection statements:</span></span>  
   
--   [<span data-ttu-id="e786d-105">if</span><span class="sxs-lookup"><span data-stu-id="e786d-105">if</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
+-   [<span data-ttu-id="35370-105">if</span><span class="sxs-lookup"><span data-stu-id="35370-105">if</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
   
--   [<span data-ttu-id="e786d-106">else</span><span class="sxs-lookup"><span data-stu-id="e786d-106">else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
+-   [<span data-ttu-id="35370-106">else</span><span class="sxs-lookup"><span data-stu-id="35370-106">else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
   
--   [<span data-ttu-id="e786d-107">switch</span><span class="sxs-lookup"><span data-stu-id="e786d-107">switch</span></span>](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="35370-107">switch</span><span class="sxs-lookup"><span data-stu-id="35370-107">switch</span></span>](../../../csharp/language-reference/keywords/switch.md)  
   
--   [<span data-ttu-id="e786d-108">przypadek</span><span class="sxs-lookup"><span data-stu-id="e786d-108">case</span></span>](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="35370-108">przypadek</span><span class="sxs-lookup"><span data-stu-id="35370-108">case</span></span>](../../../csharp/language-reference/keywords/switch.md)  
   
--   [<span data-ttu-id="e786d-109">default</span><span class="sxs-lookup"><span data-stu-id="e786d-109">default</span></span>](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="35370-109">default</span><span class="sxs-lookup"><span data-stu-id="35370-109">default</span></span>](../../../csharp/language-reference/keywords/switch.md)  
 
-## <a name="see-also"></a><span data-ttu-id="e786d-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e786d-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35370-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="35370-110">See Also</span></span>
 
-- [<span data-ttu-id="e786d-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="e786d-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="e786d-112">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="e786d-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="e786d-113">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="e786d-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="e786d-114">Słowa kluczowe instrukcji</span><span class="sxs-lookup"><span data-stu-id="e786d-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)
+- [<span data-ttu-id="35370-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="35370-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="35370-112">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="35370-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="35370-113">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="35370-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="35370-114">Słowa kluczowe instrukcji</span><span class="sxs-lookup"><span data-stu-id="35370-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)

@@ -3,21 +3,21 @@ title: Klucz rejestru &#39; &lt;keyname&gt; &#39; nie został odnaleziony
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
 ms.openlocfilehash: 874371dd2d4dc9f7d4b1374ae08359e4ea6afc87
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342082"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45507222"
 ---
-# <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a><span data-ttu-id="21a1e-102">Klucz rejestru &#39; &lt;keyname&gt; &#39; nie został odnaleziony</span><span class="sxs-lookup"><span data-stu-id="21a1e-102">Registry key &#39;&lt;keyname&gt;&#39; could not be found</span></span>
-<span data-ttu-id="21a1e-103">Nie można odnaleźć klucza rejestru.</span><span class="sxs-lookup"><span data-stu-id="21a1e-103">A registry key cannot be found.</span></span>  
+# <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a><span data-ttu-id="30e16-102">Klucz rejestru &#39; &lt;keyname&gt; &#39; nie został odnaleziony</span><span class="sxs-lookup"><span data-stu-id="30e16-102">Registry key &#39;&lt;keyname&gt;&#39; could not be found</span></span>
+<span data-ttu-id="30e16-103">Nie można odnaleźć klucza rejestru.</span><span class="sxs-lookup"><span data-stu-id="30e16-103">A registry key cannot be found.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="21a1e-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="21a1e-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="30e16-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="30e16-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="21a1e-105">Sprawdź pisownię nazwy klucza.</span><span class="sxs-lookup"><span data-stu-id="21a1e-105">Check the spelling of the key name.</span></span>  
+1.  <span data-ttu-id="30e16-105">Sprawdź pisownię nazwy klucza.</span><span class="sxs-lookup"><span data-stu-id="30e16-105">Check the spelling of the key name.</span></span>  
   
-2.  <span data-ttu-id="21a1e-106">Upewnij się, że masz wystarczające uprawnienia zabezpieczeń dostępu do klucza.</span><span class="sxs-lookup"><span data-stu-id="21a1e-106">Make sure that you have sufficient security permissions to access the key.</span></span>  
+2.  <span data-ttu-id="30e16-106">Upewnij się, że masz wystarczające uprawnienia zabezpieczeń dostępu do klucza.</span><span class="sxs-lookup"><span data-stu-id="30e16-106">Make sure that you have sufficient security permissions to access the key.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21a1e-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="21a1e-107">See Also</span></span>  
- [<span data-ttu-id="21a1e-108">Rejestr — podsumowanie</span><span class="sxs-lookup"><span data-stu-id="21a1e-108">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
- [<span data-ttu-id="21a1e-109">Zmiany w rejestrze dostępu w języku Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="21a1e-109">Registry Access Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)
+## <a name="see-also"></a><span data-ttu-id="30e16-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="30e16-107">See Also</span></span>  
+ [<span data-ttu-id="30e16-108">Rejestr — podsumowanie</span><span class="sxs-lookup"><span data-stu-id="30e16-108">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
+ [<span data-ttu-id="30e16-109">Zmiany w rejestrze dostępu w języku Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="30e16-109">Registry Access Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)

@@ -1,6 +1,6 @@
 ---
 title: 'Porady: włączanie i wyłączanie automatycznego przekierowania powiązań'
-ms.date: 03/30/2017
+ms.date: 09/12/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
@@ -8,80 +8,89 @@ ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2d71da1b48938f9f98221d86f0f9badee3a17919
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cf38bd753127e40c61512411c7aa2ebbbd7687db
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757570"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45618669"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a><span data-ttu-id="8128a-102">Porady: włączanie i wyłączanie automatycznego przekierowania powiązań</span><span class="sxs-lookup"><span data-stu-id="8128a-102">How to: Enable and Disable Automatic Binding Redirection</span></span>
-<span data-ttu-id="8128a-103">Począwszy od [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], podczas kompilowania aplikacji przeznaczonych [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], przekierowania powiązań mogą być automatycznie dodawane do pliku konfiguracji aplikacji, aby zastąpić ujednolicenie zestawu.</span><span class="sxs-lookup"><span data-stu-id="8128a-103">Starting with [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], when you compile apps that target the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], binding redirects may be automatically added to the app configuration file to override assembly unification.</span></span> <span data-ttu-id="8128a-104">Przekierowania powiązań są dodawane, jeśli aplikacja lub jej składniki odwołują się do więcej niż jednej wersji tego samego zestawu, nawet jeśli przekierowania powiązań zostaną określone ręcznie w pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="8128a-104">Binding redirects are added if your app or its components reference more than one version of the same assembly, even if you manually specify binding redirects in the configuration file for your app.</span></span> <span data-ttu-id="8128a-105">Funkcja przekierowania powiązania automatyczne wpływa na tradycyjnych aplikacji klasycznych i aplikacji sieci web przeznaczonych [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], chociaż to zachowanie różni się nieznacznie dla aplikacji sieci web.</span><span class="sxs-lookup"><span data-stu-id="8128a-105">The automatic binding redirection feature affects traditional desktop apps and web apps that target the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], although the behavior is slightly different for a web app.</span></span> <span data-ttu-id="8128a-106">Można włączyć automatyczne przekierowywanie połączeń, jeśli są używane aplikacje, których platformami docelowymi są poprzednie wersje programu .NET Framework, ale można też wyłączyć tę funkcję, aby używać tworzonych ręcznie przekierowań powiązań.</span><span class="sxs-lookup"><span data-stu-id="8128a-106">You can enable automatic binding redirection if you have existing apps that target previous versions of the .NET Framework, or you can disable this feature if you want to keep manually authored binding redirects.</span></span>  
-  
-## <a name="disabling-automatic-binding-redirects-in-desktop-apps"></a><span data-ttu-id="8128a-107">Wyłączanie automatycznego powiązanie przekierowuje w aplikacjach klasycznych</span><span class="sxs-lookup"><span data-stu-id="8128a-107">Disabling automatic binding redirects in desktop apps</span></span>  
- <span data-ttu-id="8128a-108">Przekierowania powiązania automatyczne są domyślnie włączone dla tradycyjnej aplikacji klasycznych, które odnoszą się do [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] i nowszych wersjach.</span><span class="sxs-lookup"><span data-stu-id="8128a-108">Automatic binding redirects are enabled by default for traditional desktop apps that target the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] and later versions.</span></span> <span data-ttu-id="8128a-109">Przekierowania powiązań są dodawane do wyjściowego pliku konfiguracji (app.config), gdy aplikacja jest kompilowana, co powoduje zastąpienie ujednolicenia zestawów, które mogłoby mieć miejsce.</span><span class="sxs-lookup"><span data-stu-id="8128a-109">The binding redirects are added to the output configuration (app.config) file when the app is compiled and overrides the assembly unification that might otherwise take place.</span></span> <span data-ttu-id="8128a-110">Źródłowy plik app.config nie jest modyfikowany.</span><span class="sxs-lookup"><span data-stu-id="8128a-110">The source app.config file is not modified.</span></span> <span data-ttu-id="8128a-111">Tę funkcję można wyłączyć, modyfikując plik projektu dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="8128a-111">You can disable this feature by modifying the project file for the app.</span></span>  
-  
-#### <a name="to-disable-automatic-binding-redirects"></a><span data-ttu-id="8128a-112">Aby wyłączyć automatyczne przekierowywanie powiązań</span><span class="sxs-lookup"><span data-stu-id="8128a-112">To disable automatic binding redirects</span></span>  
-  
-1.  <span data-ttu-id="8128a-113">W programie Visual Studio, wybierz projekt **Eksploratora rozwiązań**, a następnie wybierz pozycję **Otwórz Folder w Eksploratorze plików** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="8128a-113">In Visual Studio, select the project in **Solution Explorer**, and then choose **Open Folder in File Explorer** from the shortcut menu.</span></span>  
-  
-2.  <span data-ttu-id="8128a-114">W Eksploratorze plików znajdź plik projektu (csproj lub vbproj) i otwórz go w Notatniku.</span><span class="sxs-lookup"><span data-stu-id="8128a-114">In File Explorer, find the project (.csproj or .vbproj) file, and open it in Notepad.</span></span>  
-  
-3.  <span data-ttu-id="8128a-115">W pliku projektu znajdź następujący wpis właściwości:</span><span class="sxs-lookup"><span data-stu-id="8128a-115">In the project file, find the following property entry:</span></span>  
-  
-     `<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>`  
-  
-4.  <span data-ttu-id="8128a-116">Zmień `true` do `false`:</span><span class="sxs-lookup"><span data-stu-id="8128a-116">Change `true` to `false`:</span></span>  
-  
-     `<AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>`  
-  
-## <a name="enabling-automatic-binding-redirects-manually"></a><span data-ttu-id="8128a-117">Włączanie automatycznego powiązanie przekierowuje ręcznie</span><span class="sxs-lookup"><span data-stu-id="8128a-117">Enabling automatic binding redirects manually</span></span>  
- <span data-ttu-id="8128a-118">Można włączyć tego docelowego starsze wersje programu .NET Framework lub w przypadkach, gdy monit nie jest automatycznie dodać przekierowanie przekierowania powiązania automatyczne w istniejących aplikacji.</span><span class="sxs-lookup"><span data-stu-id="8128a-118">You can enable automatic binding redirects in existing apps that target older versions of the .NET Framework, or in cases where you are not automatically prompted to add a redirect.</span></span> <span data-ttu-id="8128a-119">Jeśli przeznaczona dla nowszej wersji platformy, ale nie będzie automatycznie monitowany dodać przekierowanie, prawdopodobnie otrzymasz dane wyjściowe kompilacji, które sugeruje się, że można ponownie zamapować zestawów.</span><span class="sxs-lookup"><span data-stu-id="8128a-119">If you are targeting a newer version of the framework but do not get automatically prompted to add a redirect, you will likely get   build output that suggests you remap assemblies.</span></span>  
-  
-#### <a name="to-manually-add-an-automatic-binding-redirect-property"></a><span data-ttu-id="8128a-120">Aby ręcznie dodać właściwość przekierowania powiązania automatyczne</span><span class="sxs-lookup"><span data-stu-id="8128a-120">To manually add an automatic binding redirect property</span></span>  
-  
-1.  <span data-ttu-id="8128a-121">W programie Visual Studio, wybierz projekt **Eksploratora rozwiązań**, a następnie wybierz pozycję **Otwórz Folder w Eksploratorze plików** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="8128a-121">In Visual Studio, select the project in **Solution Explorer**, and then choose **Open Folder in File Explorer** from the shortcut menu.</span></span>  
-  
-2.  <span data-ttu-id="8128a-122">W Eksploratorze plików znajdź plik projektu (csproj lub vbproj) i otwórz go w Notatniku.</span><span class="sxs-lookup"><span data-stu-id="8128a-122">In File Explorer, find the project (.csproj or .vbproj) file, and open it in Notepad.</span></span>  
-  
-3.  <span data-ttu-id="8128a-123">Dodaj następujący element do pierwszej grupy właściwości konfiguracji (w obszarze \<PropertyGroup > tagu):</span><span class="sxs-lookup"><span data-stu-id="8128a-123">Add the following element to the first configuration property group (under the \<PropertyGroup> tag):</span></span>  
-  
-     `<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>`  
-  
-     <span data-ttu-id="8128a-124">Poniżej przedstawiono przykładowy plik projektu z wstawiony element.</span><span class="sxs-lookup"><span data-stu-id="8128a-124">The following shows an example project file with the element inserted.</span></span>  
-  
-    ```xml  
-    <?xml version="1.0" encoding="utf-8"?>  
-    <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
-      <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />  
-      <PropertyGroup>  
-        <Configuration Condition=" '$(Configuration)' == ''     ">Debug</Configuration>  
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>  
-        <ProjectGuid>{123334}</ProjectGuid>  
-        ...  
-        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>  
-      </PropertyGroup>  
-    ...  
-    </Project>  
-    ```  
-  
-4.  <span data-ttu-id="8128a-125">Skompiluj aplikację.</span><span class="sxs-lookup"><span data-stu-id="8128a-125">Compile your app.</span></span>  
-  
-## <a name="enabling-automatic-binding-redirects-in-web-apps"></a><span data-ttu-id="8128a-126">Włączanie automatycznego przekierowywania powiązań w aplikacjach sieci web</span><span class="sxs-lookup"><span data-stu-id="8128a-126">Enabling automatic binding redirects in web apps</span></span>  
- <span data-ttu-id="8128a-127">Automatyczne przekierowania powiązań są w przypadku aplikacji sieci web implementowane w inny sposób.</span><span class="sxs-lookup"><span data-stu-id="8128a-127">Automatic binding redirects are implemented differently for web apps.</span></span> <span data-ttu-id="8128a-128">Ponieważ źródłowy plik konfiguracji (web.config) musi zostać zmodyfikowany dla aplikacji sieci web, przekierowania powiązań nie są automatycznie dodawane do pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="8128a-128">Because the source configuration (web.config) file must be modified for web apps, binding redirects are not automatically added to the configuration file.</span></span> <span data-ttu-id="8128a-129">Jednak program Visual Studio powiadamia o konfliktach powiązań, więc można dodać przekierowania powiązań, aby rozwiązać konflikty.</span><span class="sxs-lookup"><span data-stu-id="8128a-129">However, Visual Studio notifies you of binding conflicts, and you can add binding redirects to resolve the conflicts.</span></span> <span data-ttu-id="8128a-130">Zawsze jest wyświetlany monit o dodanie przekierowań powiązań, więc nie trzeba jawnie wyłączać tej funkcji dla aplikacji sieci web.</span><span class="sxs-lookup"><span data-stu-id="8128a-130">Because you are always prompted to add binding redirects, you do not need to explicitly disable this feature for a web app.</span></span>  
-  
-#### <a name="to-add-binding-redirects-to-a-webconfig-file"></a><span data-ttu-id="8128a-131">Aby dodać przekierowania powiązań do pliku web.config</span><span class="sxs-lookup"><span data-stu-id="8128a-131">To add binding redirects to a web.config file</span></span>  
-  
-1.  <span data-ttu-id="8128a-132">W programie Visual Studio skompiluj aplikację i sprawdź, czy występują ostrzeżenia kompilacji.</span><span class="sxs-lookup"><span data-stu-id="8128a-132">In Visual Studio, compile the app, and check for build warnings.</span></span>  
-  
-     <span data-ttu-id="8128a-133">![Ostrzeżenie dotyczące konflikty odwołań zestawu kompilacji](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")</span><span class="sxs-lookup"><span data-stu-id="8128a-133">![Build warning for assembly reference conflicts](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")</span></span>  
-  
-2.  <span data-ttu-id="8128a-134">Jeśli występują konflikty powiązań zestawów, zostanie wyświetlone ostrzeżenie.</span><span class="sxs-lookup"><span data-stu-id="8128a-134">If there are assembly binding conflicts, a warning appears.</span></span> <span data-ttu-id="8128a-135">Kliknij dwukrotnie ostrzeżenie.</span><span class="sxs-lookup"><span data-stu-id="8128a-135">Double-click the warning.</span></span> <span data-ttu-id="8128a-136">(Klawiatury: Wybierz to ostrzeżenie i naciśnij klawisz **Enter**.)</span><span class="sxs-lookup"><span data-stu-id="8128a-136">(Keyboard: Select the warning and press **Enter**.)</span></span>  
-  
-     <span data-ttu-id="8128a-137">Zostanie wyświetlone okno dialogowe umożliwiające automatyczne dodanie niezbędnych przekierowań powiązań do źródłowego pliku web.config.</span><span class="sxs-lookup"><span data-stu-id="8128a-137">A dialog box that enables you to automatically add the necessary binding redirects to the source web.config file appears.</span></span>  
-  
-     <span data-ttu-id="8128a-138">![Okno dialogowe uprawnienia przekierowania powiązania](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")</span><span class="sxs-lookup"><span data-stu-id="8128a-138">![Binding redirect permission dialog](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="8128a-139">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8128a-139">See Also</span></span>  
- [<span data-ttu-id="8128a-140">\<w parametrze bindingRedirect > — Element</span><span class="sxs-lookup"><span data-stu-id="8128a-140">\<bindingRedirect> Element</span></span>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
- [<span data-ttu-id="8128a-141">Przekierowywanie wersji zestawu</span><span class="sxs-lookup"><span data-stu-id="8128a-141">Redirecting Assembly Versions</span></span>](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a><span data-ttu-id="513bc-102">Porady: włączanie i wyłączanie automatycznego przekierowania powiązań</span><span class="sxs-lookup"><span data-stu-id="513bc-102">How to: Enable and Disable Automatic Binding Redirection</span></span>
+
+<span data-ttu-id="513bc-103">Podczas kompilowania aplikacji w programie Visual Studio, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] i nowsze wersje, przekierowania powiązań mogą być automatycznie dodawane do pliku konfiguracyjnego aplikacji w celu zastąpienia ujednolicenia zestawów.</span><span class="sxs-lookup"><span data-stu-id="513bc-103">When you compile apps in Visual Studio that target the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] and later versions, binding redirects may be automatically added to the app configuration file to override assembly unification.</span></span> <span data-ttu-id="513bc-104">Przekierowania powiązań są dodawane, jeśli aplikacja lub jej składniki odwołują się do więcej niż jednej wersji tego samego zestawu, nawet jeśli przekierowania powiązań zostaną określone ręcznie w pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="513bc-104">Binding redirects are added if your app or its components reference more than one version of the same assembly, even if you manually specify binding redirects in the configuration file for your app.</span></span> <span data-ttu-id="513bc-105">Funkcja automatycznego przekierowywania powiązań dotyczy tradycyjnych aplikacji komputerowych i aplikacji sieci web, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] lub nowszej, chociaż zachowanie jest nieco inne w przypadku aplikacji sieci web.</span><span class="sxs-lookup"><span data-stu-id="513bc-105">The automatic binding redirection feature affects traditional desktop apps and web apps that target the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] or a later version, although the behavior is slightly different for a web app.</span></span> <span data-ttu-id="513bc-106">Można włączyć automatyczne przekierowywanie połączeń, jeśli są używane aplikacje, których platformami docelowymi są poprzednie wersje programu .NET Framework, ale można też wyłączyć tę funkcję, aby używać tworzonych ręcznie przekierowań powiązań.</span><span class="sxs-lookup"><span data-stu-id="513bc-106">You can enable automatic binding redirection if you have existing apps that target previous versions of the .NET Framework, or you can disable this feature if you want to keep manually authored binding redirects.</span></span>
+
+## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a><span data-ttu-id="513bc-107">Wyłączyć automatyczne przekierowywanie powiązań w aplikacjach klasycznych</span><span class="sxs-lookup"><span data-stu-id="513bc-107">Disable automatic binding redirects in desktop apps</span></span>
+
+<span data-ttu-id="513bc-108">Automatyczne przekierowania powiązań są domyślnie włączone dla tradycyjnych aplikacji komputerowych, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] i nowszych wersjach.</span><span class="sxs-lookup"><span data-stu-id="513bc-108">Automatic binding redirects are enabled by default for traditional desktop apps that target the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] and later versions.</span></span> <span data-ttu-id="513bc-109">Przekierowania powiązań są dodawane do wyjściowego pliku konfiguracji (app.config), gdy aplikacja jest kompilowana, co powoduje zastąpienie ujednolicenia zestawów, które mogłoby mieć miejsce.</span><span class="sxs-lookup"><span data-stu-id="513bc-109">The binding redirects are added to the output configuration (app.config) file when the app is compiled and overrides the assembly unification that might otherwise take place.</span></span> <span data-ttu-id="513bc-110">Źródłowy plik app.config nie jest modyfikowany.</span><span class="sxs-lookup"><span data-stu-id="513bc-110">The source app.config file is not modified.</span></span> <span data-ttu-id="513bc-111">Tę funkcję można wyłączyć, modyfikując plik projektu dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="513bc-111">You can disable this feature by modifying the project file for the app.</span></span>
+
+1. <span data-ttu-id="513bc-112">Otwórz plik projektu do edycji przy użyciu jednej z następujących metod:</span><span class="sxs-lookup"><span data-stu-id="513bc-112">Open the project file for editing using one of the following methods:</span></span>
+
+   - <span data-ttu-id="513bc-113">W programie Visual Studio wybierz projekt w **Eksploratora rozwiązań**, a następnie wybierz **Otwórz Folder w Eksploratorze plików** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="513bc-113">In Visual Studio, select the project in **Solution Explorer**, and then choose **Open Folder in File Explorer** from the shortcut menu.</span></span> <span data-ttu-id="513bc-114">W Eksploratorze plików Znajdź plik projektu (.csproj lub .vbproj), a następnie otwórz go w Notatniku.</span><span class="sxs-lookup"><span data-stu-id="513bc-114">In File Explorer, find the project (.csproj or .vbproj) file and open it in Notepad.</span></span>
+   - <span data-ttu-id="513bc-115">W programie Visual Studio w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zwolnij projekt**.</span><span class="sxs-lookup"><span data-stu-id="513bc-115">In Visual Studio, in **Solution Explorer**, right-click the project and choose **Unload Project**.</span></span> <span data-ttu-id="513bc-116">Ponownie kliknij prawym przyciskiem myszy zwolnionego projektu, a następnie wybierz **Edytuj [projectname.csproj]**.</span><span class="sxs-lookup"><span data-stu-id="513bc-116">Right-click the unloaded project again, and then choose **Edit [projectname.csproj]**.</span></span>
+
+2. <span data-ttu-id="513bc-117">W pliku projektu znajdź następujący wpis właściwości:</span><span class="sxs-lookup"><span data-stu-id="513bc-117">In the project file, find the following property entry:</span></span>
+
+   ```xml
+   <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+   ```
+
+3. <span data-ttu-id="513bc-118">Zmiana `true` do `false`:</span><span class="sxs-lookup"><span data-stu-id="513bc-118">Change `true` to `false`:</span></span>
+
+   ```xml
+   <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+   ```
+
+## <a name="enable-automatic-binding-redirects-manually"></a><span data-ttu-id="513bc-119">Ręcznie Włącz automatyczne przekierowania powiązań</span><span class="sxs-lookup"><span data-stu-id="513bc-119">Enable automatic binding redirects manually</span></span>
+
+<span data-ttu-id="513bc-120">Automatyczne przekierowania powiązań w istniejących aplikacjach można włączyć w tym docelowymi są starsze wersje programu .NET Framework lub w przypadkach, gdy zostanie wyświetlony automatycznie monit dodane przekierowanie.</span><span class="sxs-lookup"><span data-stu-id="513bc-120">You can enable automatic binding redirects in existing apps that target older versions of the .NET Framework, or in cases where you're not automatically prompted to add a redirect.</span></span> <span data-ttu-id="513bc-121">Jeśli elementem docelowym nowszą wersję platformy, ale nie są wyświetlane automatycznie monity można dodać przekierowania, prawdopodobnie otrzymasz dane wyjściowe kompilacji, który sugeruje, że należy ponownie zamapować zestawów.</span><span class="sxs-lookup"><span data-stu-id="513bc-121">If you're targeting a newer version of the framework but do not get automatically prompted to add a redirect, you'll likely get build output that suggests you remap assemblies.</span></span>
+
+1. <span data-ttu-id="513bc-122">Otwórz plik projektu do edycji przy użyciu jednej z następujących metod:</span><span class="sxs-lookup"><span data-stu-id="513bc-122">Open the project file for editing using one of the following methods:</span></span>
+
+   - <span data-ttu-id="513bc-123">W programie Visual Studio wybierz projekt w **Eksploratora rozwiązań**, a następnie wybierz **Otwórz Folder w Eksploratorze plików** z menu skrótów.</span><span class="sxs-lookup"><span data-stu-id="513bc-123">In Visual Studio, select the project in **Solution Explorer**, and then choose **Open Folder in File Explorer** from the shortcut menu.</span></span> <span data-ttu-id="513bc-124">W Eksploratorze plików Znajdź plik projektu (.csproj lub .vbproj), a następnie otwórz go w Notatniku.</span><span class="sxs-lookup"><span data-stu-id="513bc-124">In File Explorer, find the project (.csproj or .vbproj) file and open it in Notepad.</span></span>
+   - <span data-ttu-id="513bc-125">W programie Visual Studio w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zwolnij projekt**.</span><span class="sxs-lookup"><span data-stu-id="513bc-125">In Visual Studio, in **Solution Explorer**, right-click the project and choose **Unload Project**.</span></span> <span data-ttu-id="513bc-126">Ponownie kliknij prawym przyciskiem myszy zwolnionego projektu, a następnie wybierz **Edytuj [projectname.csproj]**.</span><span class="sxs-lookup"><span data-stu-id="513bc-126">Right-click the unloaded project again, and then choose **Edit [projectname.csproj]**.</span></span>
+
+2. <span data-ttu-id="513bc-127">Dodaj następujący element do pierwszej grupy właściwości konfiguracji (w obszarze \<PropertyGroup > tag):</span><span class="sxs-lookup"><span data-stu-id="513bc-127">Add the following element to the first configuration property group (under the \<PropertyGroup> tag):</span></span>
+
+   ```xml
+   <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+   ```
+
+   <span data-ttu-id="513bc-128">Poniżej przedstawiono przykładowy plik projektu z elementem wstawione:</span><span class="sxs-lookup"><span data-stu-id="513bc-128">The following shows an example project file with the element inserted:</span></span>
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+     <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+       <PropertyGroup>
+         <Configuration Condition=" '$(Configuration)' == ''     ">Debug</Configuration>
+         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+         <ProjectGuid>{123334}</ProjectGuid>
+         ...
+         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+       </PropertyGroup>
+     ...
+   </Project>
+   ```
+
+3. <span data-ttu-id="513bc-129">Skompiluj aplikację.</span><span class="sxs-lookup"><span data-stu-id="513bc-129">Compile your app.</span></span>
+
+## <a name="enable-automatic-binding-redirects-in-web-apps"></a><span data-ttu-id="513bc-130">Włącz automatyczne przekierowania powiązań w aplikacjach sieci web</span><span class="sxs-lookup"><span data-stu-id="513bc-130">Enable automatic binding redirects in web apps</span></span>
+
+<span data-ttu-id="513bc-131">Automatyczne przekierowania powiązań są w przypadku aplikacji internetowych implementowane w inny sposób.</span><span class="sxs-lookup"><span data-stu-id="513bc-131">Automatic binding redirects are implemented differently for web apps.</span></span> <span data-ttu-id="513bc-132">Ponieważ źródłowy plik konfiguracji (web.config) musi zostać zmodyfikowany dla aplikacji internetowych, przekierowania powiązań nie są automatycznie dodawane do pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="513bc-132">Because the source configuration (web.config) file must be modified for web apps, binding redirects are not automatically added to the configuration file.</span></span> <span data-ttu-id="513bc-133">Jednak program Visual Studio powiadamia o konfliktach powiązań, więc można dodać przekierowania powiązań, aby rozwiązać konflikty.</span><span class="sxs-lookup"><span data-stu-id="513bc-133">However, Visual Studio notifies you of binding conflicts, and you can add binding redirects to resolve the conflicts.</span></span> <span data-ttu-id="513bc-134">Ponieważ zawsze monit o dodanie przekierowań powiązań, nie trzeba jawnie wyłączać tej funkcji dla aplikacji sieci web.</span><span class="sxs-lookup"><span data-stu-id="513bc-134">Because you're always prompted to add binding redirects, you don't need to explicitly disable this feature for a web app.</span></span>
+
+<span data-ttu-id="513bc-135">Aby dodać przekierowania powiązań do pliku web.config:</span><span class="sxs-lookup"><span data-stu-id="513bc-135">To add binding redirects to a web.config file:</span></span>
+
+1. <span data-ttu-id="513bc-136">W programie Visual Studio skompiluj aplikację i sprawdź, czy występują ostrzeżenia kompilacji.</span><span class="sxs-lookup"><span data-stu-id="513bc-136">In Visual Studio, compile the app, and check for build warnings.</span></span>
+
+   <span data-ttu-id="513bc-137">![Ostrzeżenie w przypadku konfliktów odwołanie do zestawu kompilacji](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")</span><span class="sxs-lookup"><span data-stu-id="513bc-137">![Build warning for assembly reference conflicts](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")</span></span>
+
+2. <span data-ttu-id="513bc-138">Jeśli występują konflikty powiązań zestawów, zostanie wyświetlone ostrzeżenie.</span><span class="sxs-lookup"><span data-stu-id="513bc-138">If there are assembly binding conflicts, a warning appears.</span></span> <span data-ttu-id="513bc-139">Kliknij dwukrotnie ostrzeżenie, lub Wybierz ostrzeżenie i naciśnij klawisz **Enter**.</span><span class="sxs-lookup"><span data-stu-id="513bc-139">Double-click the warning, or select the warning and press **Enter**.</span></span>
+
+   <span data-ttu-id="513bc-140">Zostanie wyświetlone okno dialogowe umożliwiające automatyczne dodanie niezbędnych przekierowań powiązań do źródłowego pliku web.config.</span><span class="sxs-lookup"><span data-stu-id="513bc-140">A dialog box that enables you to automatically add the necessary binding redirects to the source web.config file appears.</span></span>
+
+   <span data-ttu-id="513bc-141">![Okno dialogowe uprawnienia przekierowania powiązania](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")</span><span class="sxs-lookup"><span data-stu-id="513bc-141">![Binding redirect permission dialog](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="513bc-142">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="513bc-142">See also</span></span>
+
+- [<span data-ttu-id="513bc-143">\<bindingRedirect > Element</span><span class="sxs-lookup"><span data-stu-id="513bc-143">\<bindingRedirect> Element</span></span>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
+- [<span data-ttu-id="513bc-144">Przekierowywanie wersji zestawu</span><span class="sxs-lookup"><span data-stu-id="513bc-144">Redirecting Assembly Versions</span></span>](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

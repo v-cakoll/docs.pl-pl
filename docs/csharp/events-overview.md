@@ -4,11 +4,11 @@ description: Dowiedz się więcej o zdarzeniach w .NET Core i cele projektu jęz
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
 ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45509578"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45618067"
 ---
 # <a name="introduction-to-events"></a>Wprowadzenie do zdarzeń
 

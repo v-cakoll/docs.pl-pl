@@ -3,18 +3,18 @@ title: 'Punkt końcowy: Błędne sesje komunikacji niezawodnej na sekundę'
 ms.date: 03/30/2017
 ms.assetid: e9ae808a-7e1f-46b0-9560-d5a866be6d6e
 ms.openlocfilehash: f6b48ec4c37c28588dd874a5bfa94a01a2f43b0c
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44507935"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45560808"
 ---
-# <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a><span data-ttu-id="9dcff-102">Punkt końcowy: Błędne sesje komunikacji niezawodnej na sekundę</span><span class="sxs-lookup"><span data-stu-id="9dcff-102">Endpoint: Reliable Messaging Sessions Faulted Per Second</span></span>
-<span data-ttu-id="9dcff-103">Nazwa licznika: Błędne sesje komunikacji niezawodnej na sekundę.</span><span class="sxs-lookup"><span data-stu-id="9dcff-103">Counter Name: Reliable Messaging Sessions Faulted Per Second.</span></span>  
+# <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a><span data-ttu-id="d5844-102">Punkt końcowy: Błędne sesje komunikacji niezawodnej na sekundę</span><span class="sxs-lookup"><span data-stu-id="d5844-102">Endpoint: Reliable Messaging Sessions Faulted Per Second</span></span>
+<span data-ttu-id="d5844-103">Nazwa licznika: Błędne sesje komunikacji niezawodnej na sekundę.</span><span class="sxs-lookup"><span data-stu-id="d5844-103">Counter Name: Reliable Messaging Sessions Faulted Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9dcff-104">Opis</span><span class="sxs-lookup"><span data-stu-id="9dcff-104">Description</span></span>  
- <span data-ttu-id="9dcff-105">Liczba sesje niezawodnej obsługi komunikatów, które są umieszczone w tym punkcie końcowym na sekundę.</span><span class="sxs-lookup"><span data-stu-id="9dcff-105">Number of reliable messaging sessions that are faulted at this endpoint in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="d5844-104">Opis</span><span class="sxs-lookup"><span data-stu-id="d5844-104">Description</span></span>  
+ <span data-ttu-id="d5844-105">Liczba sesje niezawodnej obsługi komunikatów, które są umieszczone w tym punkcie końcowym na sekundę.</span><span class="sxs-lookup"><span data-stu-id="d5844-105">Number of reliable messaging sessions that are faulted at this endpoint in a second.</span></span>  
   
- <span data-ttu-id="9dcff-106">Ten licznik jest typ licznika wydajności [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), którego wartość jest obliczana przy użyciu następującej formuły.</span><span class="sxs-lookup"><span data-stu-id="9dcff-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="d5844-106">Ten licznik jest typ licznika wydajności [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), którego wartość jest obliczana przy użyciu następującej formuły.</span><span class="sxs-lookup"><span data-stu-id="d5844-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="9dcff-107">(N: 1 - N 0) / ((D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="9dcff-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="d5844-107">(N: 1 - N 0) / ((D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="d5844-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

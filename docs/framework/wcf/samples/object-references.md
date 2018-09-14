@@ -3,11 +3,11 @@ title: Odwołania do obiektów
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
 ms.openlocfilehash: 1aa8b1c9d135186dba9e4da75f0c7cb9297d8e5c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529136"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594795"
 ---
 # <a name="object-references"></a>Odwołania do obiektów
 W tym przykładzie przedstawiono sposób przekazywania obiektów według odwołania między serwerem a klientem. Zastosowań przykładowe symulowane *sieci społecznościowych*. Sieci społecznościowej składa się z `Person` klasę, która zawiera listy znajomych, w których każdy friend jest wystąpieniem `Person` klasy z listy znajomych. Spowoduje to utworzenie grafu obiektów. Usługa udostępnia operacje w tych sieciach społecznościowych.  

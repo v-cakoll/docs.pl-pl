@@ -5,11 +5,11 @@ author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
 ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272857"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527899"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dokumentacja skryptów instalacji DotNet
 

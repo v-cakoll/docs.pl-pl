@@ -2,12 +2,12 @@
 title: Tworzenie usługi WCF z włączoną obsługą technologii AJAX i klienta ASP.NET w programie Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384289"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558044"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Instrukcje: Tworzenie usługi WCF z włączoną obsługą technologii AJAX i klienta ASP.NET korzystającego z tej usługi
 
@@ -25,7 +25,7 @@ W tym temacie pokazano, jak używać programu Visual Studio do tworzenia usługi
 
 1. W **Nowa aplikacja internetowa ASP.NET** okno dialogowe, wybierz opcję **pusty** , a następnie wybierz **OK**.
 
-   ![Okno dialogowe typu aplikacji sieci web platformy ASP.NET w programie Visual Studio](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+   ![Okno dialogowe typu aplikacji sieci web platformy ASP.NET w programie Visual Studio](media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
 ## <a name="add-a-web-form"></a>Dodaj formularz sieci web
 
@@ -51,7 +51,7 @@ W tym temacie pokazano, jak używać programu Visual Studio do tworzenia usługi
 
 1. W **Dodaj nowy element** okna dialogowego, rozwiń węzeł **zainstalowane** > **Visual C#** > **Web** kategorii, a następnie Wybierz **usługi WCF (włączoną obsługą technologii AJAX)** szablonu.
 
-   ![Szablon elementu (włączoną obsługą technologii AJAX) usługi WCF w programie Visual Studio](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+   ![Szablon elementu (włączoną obsługą technologii AJAX) usługi WCF w programie Visual Studio](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
 1. Nazwij usługę **CostService** , a następnie wybierz **Dodaj**.
 

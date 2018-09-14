@@ -15,11 +15,11 @@ ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e343d48b5e50fdaef3a3667f066894dea03eeb80
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710917"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45519646"
 ---
 # <a name="automatic-memory-management"></a>Automatyczne zarządzanie pamięcią
 Automatyczne zarządzanie pamięcią to jedna z usług udostępnianych przez środowisko uruchomieniowe języka wspólnego podczas [wykonywania zarządzanego](../../docs/standard/managed-execution-process.md). Moduł wyrzucania elementów bezużytecznych wykonywalnych języka wspólnego zarządza przydzielaniem i zwalnianiem pamięci na potrzeby aplikacji. Z perspektywy deweloperów oznacza to, że podczas tworzenia zarządzanych aplikacji nie trzeba pisać kodu wykonującego zadania zarządzania pamięcią. Funkcjonalność automatycznego zarządzania pamięcią może wyeliminować typowe problemy, takie jak zapominanie o zwalnianiu obiektów z pamięci, powodowanie przecieków pamięci czy próba uzyskania dostępu do pamięci dla obiektu, który został już zwolniony z pamięci. W tej części opisano, jak moduł odśmiecania pamięci przydziela i zwalnia pamięć.  

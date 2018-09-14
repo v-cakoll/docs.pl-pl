@@ -9,11 +9,11 @@ ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cb33ffbbd735a015b58fe4fd6b9f7f70282cba1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184444"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527424"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Rozwiązywanie problemów z zablokowanych .NET Framework i odinstalowywaniem programu
 

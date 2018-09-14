@@ -11,11 +11,11 @@ ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262142"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45519919"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection — Przegląd
 <xref:System.Collections.Concurrent.BlockingCollection%601> jest klasą wątkowo kolekcji, która oferuje następujące funkcje:  

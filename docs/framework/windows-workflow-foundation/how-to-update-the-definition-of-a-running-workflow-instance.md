@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
 ms.openlocfilehash: c3d870e9e5ad8129a5cf24c63c2a7884e91f9630
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080998"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558213"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Porady: aktualizowanie definicji działającego wystąpienia przepływu pracy
 Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów aplikacji, aby zaktualizować definicję przepływu pracy z istniejącym wystąpieniem przepływu pracy. Wymagana zmiana można zaimplementować poprawki, nowe wymagania lub uwzględnić nieoczekiwanych zmian. Ten krok, w tym samouczku przedstawiono sposób użycia aktualizacji dynamicznej do modyfikowania utrwalonego wystąpienia `v1` numer zgadywania przepływu pracy w celu dopasowania nowych funkcji wprowadzonych w [jak: wielu wersji przepływu pracy Side-by-Side hosta ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  

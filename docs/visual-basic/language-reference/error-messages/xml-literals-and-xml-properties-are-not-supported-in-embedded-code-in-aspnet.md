@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
 ms.openlocfilehash: 893fdb1b9b3b5ace6b869c7b64ce7483ff523023
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699387"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45521083"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>Literały XML i właściwości XML nie są obsługiwane w kodzie osadzonym w programie ASP.NET.
 Literały XML i właściwości XML nie są obsługiwane w kodzie osadzonym w programie ASP.NET. Aby użyć funkcje języka XML, należy przenieść kod związany z kodem.  

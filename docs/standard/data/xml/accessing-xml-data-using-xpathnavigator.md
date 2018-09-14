@@ -6,11 +6,11 @@ ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dca266066a4e53a57789210fd61e90edfcc13b79
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368180"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45529483"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Klasa dostarcza metody do przejście węzłów, wyodrębnianie danych XML i dostęp do silnie typizowanych danych XML w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu.  

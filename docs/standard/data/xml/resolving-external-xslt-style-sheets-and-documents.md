@@ -6,11 +6,11 @@ ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 39e8afd8c22ca757141d2a7b556b115f8380e731
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262456"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45519559"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Rozpoznawanie XSLT zewnętrznych arkuszy stylów i dokumentów
 Istnieje kilka razy podczas przekształcania, gdy trzeba rozwiązać zasobów zewnętrznych.  

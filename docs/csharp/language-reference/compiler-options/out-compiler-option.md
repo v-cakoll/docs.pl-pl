@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: ea371dc968c8d8bf1569d17531cf7f6faff1d315
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277131"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558002"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opcje kompilatora C#)
 **-Out** opcja określa nazwę pliku wyjściowego.  

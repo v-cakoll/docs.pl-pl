@@ -1,37 +1,37 @@
 ---
-title: Kontenery docker, obrazy i rejestrów
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Kontenery docker, obrazy i rejestrów
+title: Kontenery platformy docker, obrazy i rejestry
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Kontenery platformy docker, obrazy i rejestry
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 4716159d052fd8e229ac42e5d17c72717ac86d9f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 08/31/2018
+ms.openlocfilehash: 651da766bc5931f5afa06699d1ec11fa40147e82
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106463"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45521326"
 ---
-# <a name="docker-containers-images-and-registries"></a>Kontenery docker, obrazy i rejestrów
+# <a name="docker-containers-images-and-registries"></a>Kontenery platformy docker, obrazy i rejestry
 
-Przy użyciu rozwiązania Docker, deweloper tworzy aplikację lub usługę i pakiety go i jego zależności w obrazie kontenera. Obraz jest statyczny reprezentację aplikacji lub usługi i konfiguracji oraz zależności.
+Korzystając z platformy Docker, deweloper tworzy i pakiety aplikacji lub usługi, on i jego zależności do obrazu kontenera. Obraz jest statyczny reprezentacja tych aplikacji lub usług i konfiguracji i zależności.
 
-Aby uruchomić aplikację lub usługę, obraz aplikacji zostanie uruchomiony, aby utworzyć kontener, który zostanie uruchomiona na hoście Docker. Kontenery początkowo są testowane w środowisko projektowe lub komputera.
+Aby uruchomić aplikację lub usługę, obraz aplikacji zostanie uruchomiony do utworzenia kontenera, która zostanie uruchomiona na hoście platformy Docker. Kontenery są początkowo przetestowane w środowisku projektowym lub komputera.
 
-Deweloperzy należy przechowywać obrazów w rejestrze, który działa jako biblioteka obrazów, jest potrzebne podczas wdrażania orchestrators produkcji. Docker przechowuje rejestr publiczny za pomocą [Centrum Docker](https://hub.docker.com/); innych dostawców Podaj rejestrów dla różnych kolekcji obrazów. Alternatywnie przedsiębiorstwa mogą mieć prywatnych rejestru lokalnymi własnych obrazów Docker.
+Deweloperzy należy przechowywać obrazy w rejestrze, który działa jako biblioteka obrazów i nie jest wymagana podczas wdrażania do produkcji koordynatorów. Docker przechowuje rejestru publicznego za pośrednictwem [usługi Docker Hub](https://hub.docker.com/); innych dostawców zapewnienia różne kolekcje obrazów, włącznie z rejestrami [usługi Azure Container Registry](https://azure.microsoft.com/services/container-registry/). Alternatywnie przedsiębiorstwa mogą mieć prywatnego rejestru lokalnego do ich własnych obrazów platformy Docker.
 
-Rysunek 2-4 przedstawiono, jak obrazy i rejestrów w Docker odnoszą się do innych składników. Zawiera także wiele ofert rejestru od dostawców.
+Rysunek 2 – 4 pokazano, jak obrazy i rejestry na platformie Docker odnoszą się do innych składników. Zawiera również wiele ofert rejestru od dostawców.
 
-![](./media/image5.PNG)
+![Podstawowe Taksonomia na platformie Docker: rejestr jest jak bookshelf, gdy obrazy są przechowywane i dostępny do ściągnięcia do tworzenia kontenerów do uruchamiania usługi lub aplikacji sieci web. Istnieją prywatnego platformy Docker rejestrów lokalnych i w chmurze publicznej. Usługi docker Hub jest rejestru publicznego obsługiwane przez platformę Docker, wzdłuż rozwiązania Docker Trusted Registry przeznaczonych dla przedsiębiorstw, platforma Azure oferuje usługi Azure Container Registry. Usługi AWS, Google i innych również mieć rejestry kontenerów.](./media/image5.PNG)
 
-**Rysunek 2-4**. Taksonomii Docker terminy i pojęcia
+**Rysunek 2 – 4**. Taksonomia usługi Docker terminy i pojęcia
 
-Umieszczanie obrazów w rejestrze pozwala przechowywać bitów statycznych i modyfikować aplikacji, łącznie z ich zależności na poziomie framework. Tych obrazów można następnie numerów wersji i wdrożone w wielu środowiskach i stanowić jednostki spójne wdrożenia.
+Umieszczenie obrazów w rejestrze pozwala przechowywać bitów statyczne i niezmienne aplikacji, wraz ze wszystkimi jego zależnościami na poziomie framework. Tych obrazów może następnie być wersjonowane i wdrażane w wielu środowiskach i stanowić jednostki spójne wdrażanie.
 
-Rejestrów prywatnej obrazu hostowanych lokalnie lub w chmurze, jest zalecana, gdy:
+Rejestry obrazu prywatnego albo hostowanych lokalnie lub w chmurze, są zalecane, gdy:
 
--   Obrazów nie może być udostępniany publicznie z powodu poufności.
+-   Obrazów nie może być publicznie udostępniany z powodu poufności.
 
--   Chcesz, aby minimalna sieci opóźnienia między obrazów i środowiska wdrażania wybrany. Na przykład jeśli chmury Azure znajduje się w środowisku produkcyjnym, prawdopodobnie chcesz przechowywać obrazów w rejestrze kontenera platformy Azure, dzięki czemu jest minimalnego opóźnienia sieci. W podobny sposób w przypadku środowiska produkcyjnego w infrastrukturze lokalnej, możesz mieć lokalnymi Docker zaufane rejestru dostępne w ramach tej samej sieci lokalnej.
+-   Chcesz mieć minimalne opóźnienie między obrazów i środowiska wdrażania wybranej. Na przykład, jeśli środowisko produkcyjne platformy Azure w chmurze, prawdopodobnie chcesz przechowywać obrazy w [usługi Azure Container Registry](https://azure.microsoft.com/services/container-registry/) tak, aby opóźnienia sieci minimalnej. W podobny sposób w przypadku środowiska produkcyjnego w środowisku lokalnym, możesz chcieć mieć lokalną Docker Trusted Registry dostępne w ramach tej samej sieci lokalnej.
 
 >[!div class="step-by-step"]
 [Poprzednie](docker-terminology.md)

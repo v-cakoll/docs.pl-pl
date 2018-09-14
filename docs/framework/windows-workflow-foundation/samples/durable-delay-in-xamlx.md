@@ -3,11 +3,11 @@ title: Trwałe opóźnienie w XAMLX
 ms.date: 03/30/2017
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
 ms.openlocfilehash: 1eef9211c67d190ecb5f329c481fa2e3d1763353
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708688"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45521456"
 ---
 # <a name="durable-delay-in-xamlx"></a>Trwałe opóźnienie w XAMLX
 Ten przykład pokazuje sposób użycia trwałe opóźnienie z opóźnieniem, która utrzymuje przepływu pracy na trwałe urządzenie podczas opóźnienie.  

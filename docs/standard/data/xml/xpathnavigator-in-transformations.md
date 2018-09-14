@@ -9,11 +9,11 @@ ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44364227"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45519435"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Klasa XPathNavigator w przekształceniach
 <xref:System.Xml.XPath.XPathNavigator> Klasy zapewnia dostęp losowy tylko do odczytu do danych i jest przeznaczony do użytku jako dane wejściowe rozszerzalny język arkusza stylów przekształcenia (XSLT). Jest wdrażana w <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, i <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> Opartą na modelu danych w sieci World Wide Web Consortium (W3C) zgodnie z opisem w sekcji 5 z zaleceniem XML Path Language (XPath).  

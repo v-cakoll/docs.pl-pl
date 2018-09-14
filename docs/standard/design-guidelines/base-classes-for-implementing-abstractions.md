@@ -9,11 +9,11 @@ ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194880"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45519474"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Klasy bazowe na potrzeby implementowania abstrakcji
 Ściśle rzecz ujmując klasę staje się klasę bazową, gdy inna klasa pochodzi od niego. Na potrzeby tej sekcji jednak klasa bazowa jest przeznaczona głównie w celu przesłania wspólnej abstrakcji, lub dla innych klas ponownie użyć niektórych Domyślna implementacja jednak dziedziczenia klasy. Klasy bazowe znajdują się zwykle w środku hierarchii dziedziczenia między klasą abstrakcyjną w katalogu głównym hierarchii i kilka niestandardowych implementacji u dołu.  

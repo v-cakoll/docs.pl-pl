@@ -9,11 +9,11 @@ helpviewer_keywords:
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 ms.openlocfilehash: f77137e3cc2f734435d3b1d391a303fcd3e16332
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273323"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45520279"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target: winexe (opcje kompilatora C#)
 **-Target: winexe** opcja powoduje, że kompilator, aby utworzyć plik wykonywalny (EXE), Windows program.  

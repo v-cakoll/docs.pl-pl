@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], decelerating
 ms.assetid: 4f383b2c-f94d-4a4e-9a06-f56f5dae95f9
 ms.openlocfilehash: b1649f27fc8ff850516eef2086dbce732915406b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272958"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45521430"
 ---
 # <a name="how-to-accelerate-or-decelerate-an-animation"></a>Jak przyspieszyć lub zwolnić animację
 W tym przykładzie pokazano, jak utworzyć animację, Przyspiesz i zwalnianie wraz z upływem czasu. W poniższym przykładzie animowanych przez animacje przy użyciu różnych prostokątów kilka <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> i <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> ustawienia.  

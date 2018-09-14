@@ -11,11 +11,11 @@ ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ffb1081c80c31353ad38080ae16ef9f8a74b5481
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710307"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45512845"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Zabezpieczenia i generowanie kodu na bieżąco
 Niektóre biblioteki działają przez generowanie kodu i uruchomiania go do wykonania niektórych operacji do obiektu wywołującego. Podstawowy problem jest generowanie kodu w imieniu mniejszym zaufanemu kodowi i uruchamiając go na wyższe zaufania. Problem worsens, gdy obiekt wywołujący może mieć wpływ na generowanie kodu, więc należy upewnić się, którym generowany jest tylko kodu, które uważasz za bezpieczne.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aee713bc6e8fd7f5721a684f38cea03b2a2b3aa4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873189"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45520023"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programowanie asynchroniczne oparte na zadanie
 Biblioteka zadań równoległych (TPL) opiera się na koncepcji *zadań*, które reprezentuje operację asynchroniczną. Pod pewnymi względami zadanie jest podobne do wątku lub <xref:System.Threading.ThreadPool> pracy elementu, ale na wyższym poziomie abstrakcji. Termin *równoległość zadań* odwołuje się do co najmniej jeden niezależnych zadań działających równocześnie. Zadania zapewniają dwie podstawowe korzyści:  
@@ -59,10 +59,10 @@ Biblioteka zadań równoległych (TPL) opiera się na koncepcji *zadań*, które
  [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
  [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]  
   
- Można również użyć <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> metodę, aby utworzyć i uruchomić zadanie w ramach jednej operacji. Użyj tej metody, gdy tworzenie i planowanie nie muszą być rozdzielone i wymagasz dodatkowych opcje tworzenia zadań lub użycia określonego harmonogramu, lub gdy potrzebujesz przekazać dodatkowy stan do zadania za pomocą jego <xref:System.Threading.Tasks.Task.AsyncState%2A> właściwości, jak pokazano w Poniższy przykład.  
+ Można również użyć <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> metodę, aby utworzyć i uruchomić zadanie w ramach jednej operacji. Użyj tej metody, gdy tworzenie i planowanie nie muszą być rozdzielone i wymagasz dodatkowych opcje tworzenia zadań lub użycia określonego harmonogramu, lub gdy potrzebujesz przekazać dodatkowy stan do zadania, które można pobrać przy użyciu jego <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> Właściwość, jak pokazano w poniższym przykładzie.  
   
- [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
- [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
+ [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
+ [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
   
  <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> ujawniają statyczną <xref:System.Threading.Tasks.Task.Factory%2A> właściwość, która zwraca wystąpienie domyślne <xref:System.Threading.Tasks.TaskFactory>, dzięki czemu można wywołać metodę jako `Task.Factory.StartNew()`. Ponadto w poniższym przykładzie ponieważ zadania są typu <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, każdy z nich ma publiczną <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> właściwość, która zawiera wynik obliczenia. Zadania są wykonywane asynchroniczne i mogą być kończone w dowolnej kolejności. Jeśli <xref:System.Threading.Tasks.Task%601.Result%2A> właściwość odbywa się przed zakończeniem obliczania, właściwość blokuje wątek wywołujący, aż wartość jest dostępna.  
   

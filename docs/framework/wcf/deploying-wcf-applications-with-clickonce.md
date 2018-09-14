@@ -3,11 +3,11 @@ title: Wdrażanie aplikacji WCF za pomocą technologii ClickOnce
 ms.date: 03/30/2017
 ms.assetid: 1a11feee-2a47-4d3e-a28a-ad69d5ff93e0
 ms.openlocfilehash: d733c6f523393737418c6394707c1d4e6e9c1710
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365020"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45529084"
 ---
 # <a name="deploying-wcf-applications-with-clickonce"></a>Wdrażanie aplikacji WCF za pomocą technologii ClickOnce
 Można wdrażać aplikacji klienckich za pomocą usługi Windows Communication Foundation (WCF) przy użyciu technologii ClickOnce. Ta technologia umożliwia korzystanie z zalet środowiska uruchomieniowego zabezpieczenia udostępniane przez zabezpieczeń dostępu kodu, pod warunkiem, że są podpisane cyfrowo za pomocą zaufanego certyfikatu. Certyfikat użyty do podpisania aplikacji ClickOnce musi znajdować się w magazynie zaufanego wydawcy, a zasady zabezpieczeń lokalnych na komputerze klienckim musi być skonfigurowany tak, aby udzielić uprawnień pełnego zaufania aplikacjom podpisanym za pomocą certyfikatu wydawcy.  

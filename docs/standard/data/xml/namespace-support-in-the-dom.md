@@ -6,11 +6,11 @@ ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208773"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45512832"
 ---
 # <a name="namespace-support-in-the-dom"></a>Obsługa Namespace w modelu DOM
 XML Document Object Model (DOM) jest całkowicie przestrzeni nazw aware. Obsługiwane są tylko pamiętać nazw dokumentów XML. World Wide Web Consortium (W3C) określa, że aplikacje w modelu DOM, które implementują poziomu 1 może być przestrzeni nazw nieobsługującą i funkcje na poziomie 2 modelu DOM są obsługujących przestrzeń nazw. Jednak wszystkie funkcje w modelu DOM języka XML są obsługujących przestrzeń nazw, niezależnie od tego, jeśli metoda jest z poziomu 1 lub na poziomie 2 modelu DOM zalecenia.  

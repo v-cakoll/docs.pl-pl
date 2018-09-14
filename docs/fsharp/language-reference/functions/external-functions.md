@@ -3,11 +3,11 @@ title: Funkcje zewnętrzne (F#)
 description: 'Więcej informacji na temat Obsługa języka F # do wywoływania funkcji w kodzie natywnym.'
 ms.date: 05/16/2016
 ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181421"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45517050"
 ---
 # <a name="external-functions"></a>Funkcje zewnętrzne
 

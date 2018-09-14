@@ -6,11 +6,11 @@ ms.assetid: b153baaa-130c-4169-860b-e580591de91e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cf3a3b984936cb4eb947d650cc8c63db5a9a8ea5
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699049"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45513916"
 ---
 # <a name="developing-for-multiple-platforms-with-the-net-framework"></a>Tworzenie aplikacji dla wielu platform przy użyciu programu .NET Framework
 Możesz opracowywać aplikacje zarówno firmy Microsoft, jak i platform innych niż firmy Microsoft, za pomocą środowiska .NET Framework i programu Visual Studio.  

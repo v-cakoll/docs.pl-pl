@@ -1,29 +1,29 @@
 ---
-title: Takeaways klucza
-description: Cykl życia aplikacji konteneryzowanych Docker z platformy Microsoft a _v1.1 narzędzia (Książka elektroniczna)
+title: Najważniejsze wnioski
+description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i _v1.1 narzędzia (książka)
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104641"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778425"
 ---
-# <a name="key-takeaways"></a>Takeaways klucza
+# <a name="key-takeaways"></a>Najważniejsze wnioski
 
--   Rozwiązania oparte na kontener zawiera istotne zalety oszczędności, ponieważ kontenery są rozwiązanie problemów wdrożenia spowodowane brakiem zależności w środowiskach produkcyjnych, w związku z tym znacznie poprawy operacje DevOps i produkcji .
+-   Rozwiązania oparte na kontenerach zawiera istotne zalety oszczędności, ponieważ kontenery są rozwiązania problemów z wdrażaniem spowodowane brakiem zależności w środowisku produkcyjnym, dlatego znacząco poprawy operacje operacji deweloperskich i produkcyjnych .
 
--   Docker staje się coraz faktyczne standardowego w branży kontenera, obsługiwanych przez dostawców najbardziej znaczących w ekosystemu systemu Linux i Windows, łącznie z firmy Microsoft. W przyszłości Docker będzie wszechobecne w dowolnego centrum danych w chmurze lub lokalnie.
+-   Docker staje się de facto standardem w branży kontenera, obsługiwane przez najważniejszych dostawców w ekosystemu Linux i Windows, łącznie z firmy Microsoft. W przyszłości Docker będzie wszechobecne w dowolnych centrach danych w chmurze lub lokalnie.
 
--   Kontener Docker staje się coraz standardowe jednostki wdrożenia żadnych usług ani aplikacji serwerowych.
+-   Kontener platformy Docker, staje się standardową jednostką wdrożenia dla dowolnej usługi lub aplikacji opartej na serwerze.
 
--   Orchestrators docker, takich jak te dostępne w usłudze kontenera platformy Azure (System operacyjny centrum danych Mesosphere (DC/OS), Docker Swarm, Kubernetes) i sieci szkieletowej usług Azure są podstawowe i niezbędne dla dowolnej na podstawie mikrousług lub multicontainer Aplikacja o znaczących wymagania dotyczące złożoności i skalowalność.
+-   Docker koordynatorów, takich jak te dostępne w usłudze Azure Container Service (System operacyjny centrum danych Mesosphere (DC/OS), Docker Swarm, Kubernetes) i usługi Azure Service Fabric to podstawowe i niezbędne do żadnych opartych na mikrousługach lub wieloma kontenerami w celu znaczące złożoności i skalowalność aplikację.
 
--   Obsługa ciągłe wdrażanie integracji/ciągłe nawiązywania środowisk produkcyjnych Docker środowisku DevOps end-to-end zapewnia elastyczność i ostatecznie poprawia czas wprowadzenia na rynek aplikacji.
+-   Środowisko DevOps end-to-end, obsłudze ciągłej integracji i ciągłego wdrażania nawiązywania połączenia z środowiskami produkcyjnymi platformy Docker zapewnia elastyczność i ostatecznie poprawia czas wprowadzenia na rynek aplikacji.
 
-Visual Studio Team Services jest znacznie ułatwione wyznaczone do środowisk Docker z Twojej potoki ciągłego wdrażania, w tym proste środowisk Docker lub bardziej zaawansowanych orchestrators mikrousługi i kontener na podstawie środowiska opracowywania oprogramowania Azure.
+Usługi Azure DevOps znacznie upraszcza środowiska DevOps umieszczoną w środowiskach platformy Docker z potoków ciągłego wdrażania, w tym proste środowiskach platformy Docker lub bardziej zaawansowanych koordynatorów mikrousług i kontenerów, oparty na platformie Azure.
 
 >[!div class="step-by-step"]
 [Poprzednie](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

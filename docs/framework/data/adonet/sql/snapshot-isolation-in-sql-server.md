@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
 ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221678"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45510211"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Izolacja migawki w programie SQL Server
 Izolacja migawki zwiększa współbieżności dla aplikacji OLTP.  

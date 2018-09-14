@@ -3,11 +3,11 @@ title: Tworzenie i uruchamianie wystąpienia przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
 ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705495"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45516584"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Tworzenie i uruchamianie wystąpienia przepływu pracy
 W tym przykładzie pokazano, jak w celu uruchomienia wystąpienia przepływu pracy. Widoczny jest sposób ją wykonać synchronicznie i asynchronicznie.  

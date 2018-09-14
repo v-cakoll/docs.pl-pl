@@ -3,11 +3,11 @@ title: '&lt;peerAuthentication&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
 ms.openlocfilehash: 4fb8cc4989313afa3ef16c90b54e0feae1ccb71d
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699075"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45517557"
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt;, element
 Określa opcje uwierzytelniania dla klientów peer-to-peer.  

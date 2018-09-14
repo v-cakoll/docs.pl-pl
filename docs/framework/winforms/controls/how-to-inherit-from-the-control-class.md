@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 1a0eea1930699ed85fcf0eaf184ba0aabe398d73
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252580"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45507958"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Porady: dziedziczenie z klasy formantów
 Jeśli chcesz utworzyć formant całkowicie niestandardowy do użycia w formularzu Windows, możesz powinien dziedziczyć <xref:System.Windows.Forms.Control> klasy. Podczas dziedziczenie z <xref:System.Windows.Forms.Control> klasy wymaga wykonania więcej planowania i wdrażania go oferuje także funkcje największej gamy opcji. Gdy dziedziczenie z <xref:System.Windows.Forms.Control>, dziedziczą bardzo podstawowe funkcje, który sprawia, że formanty, które działają. Funkcje związane z <xref:System.Windows.Forms.Control> klasy obsługuje danych wejściowych użytkownika za pomocą klawiatury i myszy, definiuje granice i rozmiar formantu, zapewnia uchwytów okien i zapewnia Obsługa komunikatów i bezpieczeństwo. Zawierają wszelkie rysowania, czyli w tym przypadku rzeczywistego renderowania interfejsu graficznego kontrolki, nie jest włączyć wszystkie funkcje interakcji użytkownika. Należy podać wszystkie te aspekty poprzez kod niestandardowy.  

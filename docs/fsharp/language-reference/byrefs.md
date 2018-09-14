@@ -3,11 +3,11 @@ title: 'Zkratka (F #)'
 description: 'Więcej informacji na temat byref i byref typy w języku F #, które są używane na potrzeby programowania niskiego poziomu.'
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699649"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508307"
 ---
 # <a name="byrefs"></a>Zkratka
 

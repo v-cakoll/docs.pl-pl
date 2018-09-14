@@ -3,11 +3,11 @@ title: Atrybuty (F#)
 description: 'Dowiedz się, jak włączyć metadanych, które mają być stosowane do konstrukcji programowania w F # atrybutów.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494307"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45513686"
 ---
 # <a name="attributes"></a>Atrybuty
 

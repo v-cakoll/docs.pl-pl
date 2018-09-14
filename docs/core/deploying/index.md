@@ -4,12 +4,12 @@ description: Wdrażanie aplikacji .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
-ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277161"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45510319"
 ---
 # <a name="net-core-application-deployment"></a>Wdrażanie aplikacji .NET core
 
@@ -61,7 +61,7 @@ Ponadto wprowadzono szereg wady:
 
 - Rozmiar pakietu wdrażania jest stosunkowo dużych, ponieważ należy dołączyć platformy .NET Core oraz aplikacji i jej zależności innych firm.
 
-  Począwszy od programu .NET Core 2.0, można zmniejszyć rozmiaru wdrożenia przez około 28 MB w systemach Linux przy użyciu platformy .NET Core [ *globalizacji niezmiennej tryb*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Zazwyczaj, .NET Core w systemie Linux opiera się na [bibliotek ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) obsługi globalizacji. W trybie niezmiennej bibliotek nie są dołączone do wdrożenia i wszystkich kultur zachowują się jak [kultury invariannt](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  Począwszy od programu .NET Core 2.0, można zmniejszyć rozmiaru wdrożenia przez około 28 MB w systemach Linux przy użyciu platformy .NET Core [ *globalizacji niezmiennej tryb*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Zazwyczaj, .NET Core w systemie Linux opiera się na [bibliotek ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) obsługi globalizacji. W trybie niezmiennej bibliotek nie są dołączone do wdrożenia i wszystkich kultur zachowują się jak [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Wdrażanie wielu samodzielne aplikacje platformy .NET Core w systemie może zużywać znacznej ilości miejsca na dysku, od każdej aplikacji duplikatów plików .NET Core.
 

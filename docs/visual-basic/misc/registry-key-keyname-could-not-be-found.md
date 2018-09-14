@@ -3,11 +3,11 @@ title: Klucz rejestru &#39; &lt;keyname&gt; &#39; nie został odnaleziony
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
 ms.openlocfilehash: 874371dd2d4dc9f7d4b1374ae08359e4ea6afc87
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342082"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45507222"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a>Klucz rejestru &#39; &lt;keyname&gt; &#39; nie został odnaleziony
 Nie można odnaleźć klucza rejestru.  

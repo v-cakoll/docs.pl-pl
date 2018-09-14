@@ -11,11 +11,11 @@ ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267233"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45570238"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Niestandardowe partycjonery dla PLINQ i TPL
 Równoległe przetwarzanie operacji na źródle danych, jest jedną z czynności niezbędne do *partycji* źródło w wiele sekcji, które mogą być udostępniane jednocześnie z wielu wątków. Program PLINQ i Biblioteka zadań równoległych (TPL) zapewnia domyślne moduły partycjonowania, które działają w sposób niewidoczny dla użytkownika podczas wpisywania zapytanie równoległe lub <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli. Dla bardziej zaawansowanych scenariuszy można dodać własne partycjonera.  

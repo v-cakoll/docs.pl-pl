@@ -3,11 +3,11 @@ title: Porównanie usług sieci Web platformy ASP.NET i architektury WCF na pods
 ms.date: 03/30/2017
 ms.assetid: d3890278-fa9b-4902-91ea-8da73b7143cc
 ms.openlocfilehash: 9ceb28fece3cc17aa4ac2329dc101eac8e89bd77
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45509383"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593821"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used"></a>Porównanie usług sieci Web platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów
 Usługi sieci Web programu ASP.NET został opracowany do tworzenia aplikacji, których wysyłanie i odbieranie komunikatów za pomocą proste obiektu dostępu protokołu (SOAP) przy użyciu protokołu HTTP. Struktura komunikatów można zdefiniować przy użyciu schematu XML, a narzędzie jest dostarczany w celu ułatwienia serializacji wiadomości do i z obiektów .NET Framework. Ta technologia może automatycznie generować metadane do opisu usługi sieci Web w sieci Web Services Description Language (WSDL), a drugie narzędzie towarzyszy Generowanie klientów dla usług sieci Web na podstawie pliku WSDL.  

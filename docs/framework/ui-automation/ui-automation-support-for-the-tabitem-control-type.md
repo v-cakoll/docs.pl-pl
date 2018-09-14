@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 46ccb140847c63bd1fbdb3b67b86c9d2a7eefd4b
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700888"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597390"
 ---
 # <a name="ui-automation-support-for-the-tabitem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu TabItem
 > [!NOTE]

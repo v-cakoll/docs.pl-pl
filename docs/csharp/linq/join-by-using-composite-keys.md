@@ -4,11 +4,11 @@ description: Dowiedz się, jak sprzęgać za pomocą kluczy złożonych w skład
 ms.date: 12/1/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
 ms.openlocfilehash: ae37d03f996f0b0cc184a86663f16d62e6c29c69
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273219"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609537"
 ---
 # <a name="join-by-using-composite-keys"></a>Sprzęganie za pomocą kluczy złożonych
 

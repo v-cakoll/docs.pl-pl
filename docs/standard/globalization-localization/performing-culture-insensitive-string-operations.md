@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 748b4170e9e4c0df048c542d06bcb64a56ccf677
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 77269cd9cdb922c1f9576afa93d6599ec7a834e4
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529014"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45617066"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Wykonywanie operacji na ciągach niezależnych od kultury
 Większość metod .NET Framework, które wykonują operacje na ciągach wrażliwych na kulturę domyślnie zapewniają przeciążenia metody, które pozwalają na określenie jawnie kultura używana przez przekazanie <xref:System.Globalization.CultureInfo> parametru. Te przeciążone funkcje umożliwiają wyeliminować różnice kulturowe w przypadku mapowania i sortowanie reguł i zagwarantować wyników niezależnych od kultury.  
@@ -44,4 +44,5 @@ Większość metod .NET Framework, które wykonują operacje na ciągach wrażli
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Tabele wagi sortowania](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Sortowanie wagi tabel (w przypadku platformy .NET w systemach Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Tabela elementów sortowanie domyślne Unicode (dla platformy .NET Core w systemie Linux i macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

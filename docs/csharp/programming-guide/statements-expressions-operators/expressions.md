@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 ms.openlocfilehash: 3cf084102186d9e13727c36ed14e2ea72ca324f9
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528330"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615264"
 ---
 # <a name="expressions-c-programming-guide"></a>Wyrażenia (Przewodnik programowania w języku C#)
 *Wyrażenie* jest sekwencją jednego lub większej liczbie operandów i zero lub więcej operatorów, które mogą być obliczane do pojedynczej wartości, obiektu, metody lub przestrzeni nazw. Wyrażenia może składać się z wartością literału, wywołanie metody, operatora i jego operandy lub *prostej nazwie*. Proste nazwy mogą być nazwa zmiennej, składowej typu, parametru metody, przestrzeń nazw lub typu.  

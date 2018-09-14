@@ -8,11 +8,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527153"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595313"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Wdrażanie platformy .NET Core z aplikacji za pomocą programu Visual Studio
 

@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
 ms.openlocfilehash: 5553e4b4423a2d824c05caf7114c47b5f1c20477
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710145"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45568908"
 ---
 # <a name="dotnet-clean"></a>Wyczyść DotNet
 

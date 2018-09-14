@@ -16,11 +16,11 @@ ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 65c56a11531f705b7e047e435ec575969d39a616
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507394"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592909"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Porady: odczyt i zapis we właśnie utworzonym pliku danych
 <xref:System.IO.BinaryWriter> i <xref:System.IO.BinaryReader?displayProperty=nameWithType> klasy są używane do zapisywania i odczytywania danych, a nie ciągi znaków. Poniższy przykład pokazuje, jak zapisywać danych i odczytywanie danych ze strumienia nowy, pusty plik o nazwie `Test.data`. Po utworzeniu pliku danych w bieżącym katalogu skojarzonego <xref:System.IO.BinaryWriter> i <xref:System.IO.BinaryReader> są tworzone obiekty i <xref:System.IO.BinaryWriter> obiekt jest używany do zapisywania liczby całkowite 0 do 10, aby `Test.data`, która pozostawia na końcu wskaźnika pliku plik. Po ustawieniu wskaźnika pliku z powrotem do źródła, <xref:System.IO.BinaryReader> obiektu odczytuje się określonej zawartości.  

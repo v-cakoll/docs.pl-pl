@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
 ms.openlocfilehash: 34a92af246e1145e8d0d1d6874b2d64d7dee7846
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513719"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45590981"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Porady: dostosowywanie sortowania w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Control oferuje automatyczne sortowanie, ale w zależności od potrzeb, może być konieczne dostosowanie operacjach sortowania. Na przykład umożliwia sortowanie programowe tworzenie alternatywny interfejs użytkownika (UI). Alternatywnie, można obsługiwać <xref:System.Windows.Forms.DataGridView.SortCompare> zdarzenia lub wywołanie `Sort(IComparer)` przeciążenia <xref:System.Windows.Forms.DataGridView.Sort%2A> metody sortowania funkcje i elastyczność, takich jak sortowanie wielu kolumn.  

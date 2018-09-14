@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
 ms.openlocfilehash: 3d07fe5f6164885a994838376887edccc260e291
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366208"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593962"
 ---
 # <a name="constructors-c-programming-guide"></a>Konstruktorzy (Przewodnik programowania w języku C#)
 Zawsze, gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) jest utworzone, jego konstruktor jest wywoływany. Klasa lub struktura może mieć wiele konstruktorów, które przyjmują różne argumentów. Konstruktory Włącz programisty należy ustawić wartości domyślne, ograniczyć podczas tworzenia wystąpienia i napisać kod, który jest elastyczny i łatwy do odczytania. Aby uzyskać więcej informacji i przykładów, zobacz [korzystanie z konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) i [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  

@@ -3,11 +3,11 @@ title: 'Porady: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych 
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
 ms.openlocfilehash: e3afbea647bb429d25f41f37fde268565bc5bf8a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179224"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591415"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Porady: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
 W programie LINQ, drzew wyrażeń są używane do reprezentowania strukturyzowanych zapytań, których platformą docelową źródeł danych, który implementuje <xref:System.Linq.IQueryable%601>. Na przykład implementuje dostawcę LINQ <xref:System.Linq.IQueryable%601> interfejs do wykonywania zapytań magazynów danych relacyjnych. Kompilator języka C# kompiluje zapytań przeznaczonych dla tych źródeł danych do kodu, który kompiluje do drzewa wyrażenie w czasie wykonywania. Dostawca kwerend można przechodzić przez strukturę danych drzewa wyrażeń i tłumaczenie język zapytań, odpowiednie dla źródła danych.  

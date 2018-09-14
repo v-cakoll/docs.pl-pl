@@ -13,11 +13,11 @@ ms.assetid: b541af31-dacb-4e20-8847-1b1ff7c35363
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d380e369d9620fc0fc87a2c443be318083174882
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206917"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591389"
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>Sondowanie stanu operacji asynchronicznych
 Aplikacji, które mogą wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej nie powinny blokować oczekiwanie, aż do zakończenia operacji. Do kontynuowania wykonywania instrukcji podczas oczekiwania na zakończenie operacji asynchronicznej, użyj jednej z następujących opcji:  

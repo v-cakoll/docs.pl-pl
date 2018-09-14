@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
 ms.openlocfilehash: 31edbc8f4cbb09f8720b373780f1b0646a985b20
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179052"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597904"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integracja System.Transactions z programem SQL Server
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Wersji 2.0 wprowadzono framework transakcji, który jest możliwy za pośrednictwem <xref:System.Transactions> przestrzeni nazw. Ta platforma udostępnia transakcji w taki sposób, że jest w pełni zintegrowana w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], w tym [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  

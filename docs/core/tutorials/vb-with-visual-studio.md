@@ -8,11 +8,11 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: d6b58e491b2857f83fe9b2e55ed35630c42b79ed
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45510189"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45596533"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>Tworzenie aplikacji Visual Basic Hello World z platformą .NET Core w programie Visual Studio 2017
 

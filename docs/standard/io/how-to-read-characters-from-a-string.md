@@ -16,11 +16,11 @@ ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 13a57f8ea7db91e5357ecfb20c4e907f2706f78d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353606"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592922"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Porady: odczytywanie znaków z ciągów
 Następujące przykłady kodu przedstawiają sposób synchronicznie i asynchronicznie odczytywanie znaków z ciągu.  

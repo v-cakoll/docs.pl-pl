@@ -9,11 +9,11 @@ ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507563"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591558"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń
 <xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera rozszerzalny język arkusza stylów dla parametrów przekształcenia (XSLT) i obiekty rozszerzeń XSLT. Przy przekazywaniu do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i rozszerzenie obiekty mogą być wywoływane z arkuszy stylów.  

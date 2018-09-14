@@ -9,11 +9,11 @@ ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0c038b66e4ed62d614a25e717c52fdcc9c5f9a23
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208838"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615537"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (rozszerzenie do debugowania SOS)
 Rozszerzenie debugowania SOS (SOS.dll) ułatwia debugowanie programów zarządzanych w programie Visual Studio i w debugerze Windows (WinDbg.exe) poprzez dostarczanie informacji na temat wewnętrznego środowiska środowiska uruchomieniowego języka wspólnego (CLR). To narzędzie wymaga włączenia debugowania niezarządzanego w projekcie. SOS.dll jest automatycznie instalowany z .NET Framework. Aby użyć SOS.dll w programie Visual Studio, zainstaluj [Windows Driver Kit (WDK)](https://msdn.microsoft.com/windows/hardware/hh852362).  

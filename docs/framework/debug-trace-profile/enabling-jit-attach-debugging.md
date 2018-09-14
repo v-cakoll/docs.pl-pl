@@ -8,11 +8,11 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b92592500f0babf29891710cedf1228b0ddcb0e4
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44493670"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45587496"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Włączanie debugowania dołączania JIT
 Debugowania dołączania JIT jest wyrażenie używane do opisywania dołączanie debugera do procesu, gdy wystąpią błędy lub mogą być wyzwalane przez określone metody lub funkcji.  

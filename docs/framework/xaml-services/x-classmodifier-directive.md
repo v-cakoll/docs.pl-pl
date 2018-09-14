@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
 ms.openlocfilehash: 5a3bbd1d4d75c84dda741d382c8dd7568dbb474b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514083"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592818"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier — dyrektywa
 Modyfikuje zachowanie kompilacji XAML podczas `x:Class` jest również udostępniany. W szczególności, zamiast tworzyć częściowym `class` zawierający `Public` (ustawienie domyślne), poziom dostępu podany `x:Class` jest tworzona przy użyciu `NotPublic` poziom dostępu. To zachowanie ma wpływ na poziom dostępu dla klasy w generowanych zestawów.  

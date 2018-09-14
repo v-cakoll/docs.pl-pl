@@ -19,11 +19,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
 ms.openlocfilehash: e11bf8af6f56cbdcdcc920cafe145edcf744efed
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560925"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592013"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Porady: używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
 Wiele składników zapewniają możliwość wykonywania pracy asynchronicznie. <xref:System.Media.SoundPlayer> i <xref:System.Windows.Forms.PictureBox> składników, na przykład włączyć ładowanie dźwięków i obrazy "w tle" nadal działa bez przerwy z wątku głównego.  

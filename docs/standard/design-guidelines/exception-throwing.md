@@ -10,11 +10,11 @@ ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44225152"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583414"
 ---
 # <a name="exception-throwing"></a>Zgłaszanie wyjątku
 Zgłaszanie wyjątku wytyczne opisane w tej sekcji wymaga dobrych definicji znaczenie błąd wykonania. Niepowodzenie wykonywania występuje zawsze, gdy członek nie, co zostało zaprojektowane w celu (co nazwa elementu członkowskiego oznacza). Na przykład jeśli `OpenFile` nie może zwracać dojście otwartego pliku do obiektu wywołującego, jego mogłoby być uważane za wystąpił błąd wykonania.  

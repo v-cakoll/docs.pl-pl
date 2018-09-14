@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: cfdd17f6f4ee6c4ddb3fa73ab3ec9c5ce46a162f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529639"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609956"
 ---
 # <a name="function-expression-visual-basic"></a>Function — Wyrażenie (Visual Basic)
 Deklaruje parametry i kod, który definiuje wyrażenie lambda funkcji.  

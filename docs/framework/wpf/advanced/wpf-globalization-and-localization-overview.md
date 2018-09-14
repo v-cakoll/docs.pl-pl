@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: 54c5caaf3ade07f342e94ad0359f00c1418eace4
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44706349"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45568582"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Przegląd Lokalizacja i globalizacja WPF
 Dostępność produktów do tylko jednego języka, możesz ograniczenie z potencjalnym klientem podstawowy ułamek populacji MLD 6.5 naszym świecie. Jeśli chcesz, aby aplikacje, aby dotrzeć do odbiorców globalnych, ekonomiczne lokalizacji produktu jest najlepszym i najbardziej ekonomiczny sposób dotrzeć do większej liczby klientów.  

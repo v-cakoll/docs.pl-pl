@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 805a495790266b34ede030b76fbd83e6f172ceaf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206120"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615524"
 ---
 # <a name="introducing-xml-serialization"></a>Wprowadzenie do serializacji XML
 
@@ -111,7 +111,7 @@ Następujące elementy mogą być Zserializowany za pomocą **XmLSerializer** kl
 
 ## <a name="advantages-of-using-xml-serialization"></a>Korzyści wynikające z używania serializacji XML
 
-**XmlSerializer**klasy daje pełny i elastyczną kontrolę podczas serializacji obiektu jako XML. W przypadku tworzenia usługi XML sieci Web, można zastosować atrybuty sterujące serializacji do klas i składowych, aby upewnić się, że dane wyjściowe XML jest zgodny z określonego schematu.
+**XmlSerializer** klasy daje pełny i elastyczną kontrolę podczas serializacji obiektu jako XML. W przypadku tworzenia usługi XML sieci Web, można zastosować atrybuty sterujące serializacji do klas i składowych, aby upewnić się, że dane wyjściowe XML jest zgodny z określonego schematu.
 
 Na przykład **XmlSerializer** umożliwia:
 

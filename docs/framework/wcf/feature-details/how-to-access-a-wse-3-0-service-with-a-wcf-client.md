@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
 ms.openlocfilehash: 2e01d3de6ee7b415c7b3f18a20e840b8ec4ab9b6
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508125"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597683"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Instrukcje: Dostęp do usługi WSE 3.0 za pomocą klienta programu WCF
 Klienci Windows Communication Foundation (WCF) są protokół sieciowy niskiego poziomu zgodnego z sieci Web usługi rozszerzeń (programu WSE) 3.0 dla usług programu Microsoft .NET, gdy klienci WCF są skonfigurowane do korzystania z sierpnia 2004 wersję specyfikacji WS-Addressing. Jednak usługi WSE 3.0 nie obsługują metadanych protokołu exchange (MEX), dlatego podczas korzystania [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do utworzenia klasy klienta WCF, ustawienia zabezpieczeń nie są stosowane do wygenerowany Klient usługi WCF. W związku z tym, należy określić ustawienia zabezpieczeń, usługa programu WSE 3.0 wymaga po wygenerowaniu klienta platformy WCF.  

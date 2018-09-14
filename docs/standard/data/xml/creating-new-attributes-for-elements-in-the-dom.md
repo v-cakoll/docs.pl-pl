@@ -9,11 +9,11 @@ ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705673"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583440"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Tworzenie nowych atrybutów dla elementów w modelu DOM
 Tworzenie nowych atrybutów różni się od tworzenia innych typów węzła, ponieważ atrybutów nie są węzłami, ale są właściwości węzeł elementu i są zawarte w **XmlAttributeCollection** skojarzone z elementem. Istnieje wiele sposobów, aby utworzyć atrybut i dołączyć go do elementu:  

@@ -11,11 +11,11 @@ ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227574"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591000"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Porady: zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi partycji
 Poniższy przykład przedstawia sposób zapisania <xref:System.Threading.Tasks.Parallel.ForEach%2A> metodę, która używa zmiennych lokalnych partycji. Gdy wykonywana jest pętla <xref:System.Threading.Tasks.Parallel.ForEach%2A>, kolekcja źródłowa jest dzielona na wiele partycji. Każda partycja zawiera własną kopię zmiennej lokalnej partycji. Zmienna partycji lokalnej jest podobny do [zmienną lokalną wątku](xref:System.Threading.ThreadLocal%601), z tą różnicą, że wiele partycji można uruchomić w jednym wątku.

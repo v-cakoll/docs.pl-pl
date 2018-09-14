@@ -3,11 +3,11 @@ title: Działanie niestandardowe do przełączania na zakres wartości
 ms.date: 03/30/2017
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
 ms.openlocfilehash: cfaf4318b1557a9fc217de8254e164243ea54569
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517414"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616354"
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>Działanie niestandardowe do przełączania na zakres wartości
 W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, która rozszerza użytkowania <xref:System.Activities.Statements.Switch%601>. Konwencjonalne <xref:System.Activities.Statements.Switch%601> instrukcji umożliwia przełączanie oparte na pojedynczej wartości. Istnieją jednak biznesowych, które scenariusze, w którym działanie, musisz przełączyć na podstawie zakresu wartości. Na przykład działanie może być wykonywany jedną akcję, gdy przełączany na wartość od 1 do 5, innej akcji, gdy wartość jest równa od 6 do 10 i domyślna akcja dla wszystkich pozostałych wartości. To niestandardowe działanie umożliwia dokładnie tego scenariusza.  

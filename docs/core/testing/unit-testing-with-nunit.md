@@ -4,11 +4,11 @@ description: Pojęcia dotyczące jednostek testów w języku C# i .NET Core za p
 author: rprouse
 ms.date: 08/31/2018
 ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699689"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45617003"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Jednostki testowania C# za pomocą NUnit i .NET Core
 

@@ -3,11 +3,11 @@ title: Kontrakty routingu
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
 ms.openlocfilehash: 73d303c95a636f5e90f256272726c08c581d6fdf
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710466"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45567893"
 ---
 # <a name="routing-contracts"></a>Kontrakty routingu
 Kontrakty routingu zdefiniować wzorców wiadomości, które może przetworzyć usługa routingu.  Każdej umowy jest formatów i umożliwia usłudze komunikat bez znajomości schematu wiadomości lub akcji. Dzięki temu usługa routingu do ogólnej kierowanie komunikatów w postaci bez dodatkowej konfiguracji, aby uzyskać szczegółowe informacje na temat podstawowych komunikaty przesyłane.  

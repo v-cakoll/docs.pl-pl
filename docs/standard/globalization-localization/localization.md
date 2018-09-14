@@ -17,11 +17,11 @@ ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521193"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591268"
 ---
 # <a name="localization"></a>Lokalizacja
 Lokalizacja jest tłumaczeniem zasobów aplikacji zlokalizowane wersje w każdym kulturę, w której aplikacja będzie obsługiwać proces. Należy przejść do kroku lokalizacji, dopiero po ukończeniu [sprawdzenie](../../../docs/standard/globalization-localization/localizability-review.md) krok, aby sprawdzić, czy zglobalizowanej aplikacja jest gotowa do lokalizacji.  

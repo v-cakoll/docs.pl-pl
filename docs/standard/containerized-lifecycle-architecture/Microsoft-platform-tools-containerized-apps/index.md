@@ -1,62 +1,62 @@
 ---
-title: Wprowadzenie do platformy firmy Microsoft i narzędzia dla aplikacji konteneryzowanych
-description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
+title: Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych
+description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106194"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594357"
 ---
-# <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Wprowadzenie do platformy firmy Microsoft i narzędzia dla aplikacji konteneryzowanych
+# <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych
 
 
-Główne słupków przedstawiono na rysunku 3-1 w cyklu życia aplikacji Docker według rodzaju pracy realizowane przez kilka zespołów (Tworzenie aplikacji, procesów opracowywania oprogramowania infrastruktury i zarządzania IT oraz działań). Zazwyczaj w przedsiębiorstwie, profile "osoba" odpowiedzialny za każdego obszaru są różne. Dlatego są umiejętności ich.
+Rysunek 3-1 przedstawiono głównych filarach w cyklu życia aplikacji platformy Docker według rodzaju pracy dostarczane przez wiele zespołów (Tworzenie aplikacji, procesy infrastruktury DevOps i zarządzanie infrastrukturą IT i operacje). Zazwyczaj w przedsiębiorstwie, profile "osoby" odpowiada za dla każdego obszaru są różne. Dlatego są umiejętności.
 
 ![](./media/image1.png)
 
-Rysunek 3-1: główne słupków w cyklu życia dla konteneryzowanych Docker aplikacji za pomocą platformy firmy Microsoft i narzędzia
+Rysunek 3-1: główny filarów w cykl życia konteneryzowanych aplikacji platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 
-A konteneryzowanych Docker cyklu przepływu pracy można początkowo przetestowanego na podstawie "domyślnie produktu możliwości wyboru," ułatwia deweloperom szybsza, ale jest podstawą, że pod maską musi istnieć otwartej struktury, dzięki czemu będzie ona elastyczne przepływu pracy możliwość dostosowania do różnych kontekstach z każdej organizacji lub przedsiębiorstwa. Infrastruktura przepływu pracy (składnikami i produktami) musi być wystarczająco elastyczny, aby obejmować każda firma będzie miała w przyszłości, nawet zdolność wymiany rozwoju lub DevOps produktów do innych użytkowników w środowisku. To elastyczność, przejrzystości i szeroki wybór technologii platformy i infrastruktury są dokładnie priorytetów firmy Microsoft dla konteneryzowanych Docker aplikacji, zgodnie z objaśnieniem w kolejnych rozdziałach.
+A kontenerowych nimi Docker cyklu życia przepływu pracy może być początkowo profesjonalnie opracowany na podstawie "domyślnie produktu możliwości wyboru," ułatwia deweloperom szybsza, ale jest podstawą, że kulisy musi być otwartej struktury tak, aby go elastyczne przepływ pracy, możliwość dostosowania do różnych kontekstach z każdej organizacji lub przedsiębiorstwie. Infrastruktura przepływu pracy (składnikami i produktami) musi być wystarczająco elastyczny, aby obejmować środowisko, w którym każda firma będzie miała w przyszłości, nawet zdolność zamianę rozwoju lub produktów DevOps do innych osób. Ta elastyczność, otwartości i szeroki wybór technologii platforma i infrastruktura są dokładnie priorytetów firmy Microsoft dla konteneryzowanych aplikacji platformy Docker, jak wyjaśniono w rozdziałach, które należy wykonać.
 
-Tabela 3-1 pokazuje, że zamiar DevOps Microsoft konteneryzowanych aplikacji Docker ma na celu dostarczenie Otwieranie przepływu pracy DevOps, w którym można wybrać jakie produktów dla każdej fazy (Microsoft lub innych firm) zapewniają uproszczoną przepływu pracy która zawiera już połączony "przez domyślny produktów"; w związku z tym należy można szybko rozpocząć przedsiębiorstw DevOps przepływu pracy dla aplikacji Docker.
+Tabela 3-1 pokazuje, czy zamiar metodyki DevOps firmy Microsoft dla konteneryzowanych aplikacji platformy Docker ma na celu dostarczenie Otwórz przepływ pracy DevOps tak, aby można było wybrać jakie produkty do użycia dla każdej fazy (Microsoft lub innych firm) przy jednoczesnym zapewnieniu uproszczonego przepływu pracy zapewniający, że podłączony "przez — domyślna produkty"; w związku z tym możesz szybko rozpocząć pracę z przepływem pracy DevOps klasy korporacyjnej dla aplikacji platformy Docker.
 
-Tabela 3-1: Otwórz DevOps przepływu pracy innych technologii
+Do każdej technologii, przepływ pracy DevOps Otwórz tabela 3-1:
 
-| Host | Technologii firmy Microsoft | Innych firm — podłączany Azure |
+| Host | Technologie firmy Microsoft | Innych firm — podłączanych platformy Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Platformy Docker aplikacji   | • Programu Microsoft Visual Studio i kodu programu Visual Studio<br /> • .NET<br /> Usługa kontenera platformy Microsoft Azure •<br /> • Usługi azure Service Fabric<br /> • Rejestru kontenera platformy azure<br /> | • Dowolnego edytora kodu (na przykład Sublime)<br /> • Dowolnego języka (Node.js, Java, przejdź itp.)<br /> • Wszelkie orchestrator i harmonogramu<br /> • Dowolnego rejestru Docker<br /> |
-| Opracowywania oprogramowania dla aplikacji Docker     | • Visual Studio Team Services<br /> • Microsoft Team Foundation Server<br /> • Usługi kontenera platformy azure<br /> • Usługi azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Lokalnego centrum danych Docker, Docker Swarm, Mesos DC/OS, Kubernetes, itp.<br /> |
-| Zarządzanie i monitorowanie  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon, Chronos itp.<br />
+| Platforma dla aplikacji platformy Docker   | • Microsoft Visual Studio i Visual Studio Code<br /> • .NET<br /> • Platformy Microsoft Azure Container Service<br /> • Usługi azure Service Fabric<br /> • Usługi azure Container Registry<br /> | • Dowolnego edytora kodu (na przykład Sublime)<br /> • Dowolnego języka (Node.js, Java, Go, itp.)<br /> • Dowolnego programu orchestrator i harmonogramu<br /> • Dowolnego rejestru platformy Docker<br /> |
+| Metodyka DevOps na potrzeby aplikacji platformy Docker     | Usługi azure DevOps •<br /> • Microsoft Team Foundation Server<br /> • Usługi azure Container Service<br /> • Usługi azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • W środowisku lokalnym Mesos Docker Datacenter, Docker Swarm, DC/OS, Kubernetes, itp.<br /> |
+| Zarządzanie i monitorowanie  | • Operations Management Suite<br /> • Applications Insights<br /> | • Platformy Marathon, Chronos itp.<br />
 
-Platforma firmy Microsoft i narzędzia dla aplikacji Docker konteneryzowanych, zgodnie z definicją w tabeli 3-1, obejmuje następujące składniki:
+Platformy firmy Microsoft oraz narzędzi dla konteneryzowanych aplikacji platformy Docker, zgodnie z definicją w tabeli 3-1, obejmują następujące składniki:
 
--   **Platforma do tworzenia aplikacji Docker** rozwoju usług lub kolekcję usług, które tworzą "aplikacji". Platformy programistycznej udostępnia deweloperom pracy wymaga przed wypychanie ich kod do repozytorium kodu udostępnionego. Tworzenie usług, wdrożony jako kontenery, są bardzo podobne do rozwoju o tej samej aplikacji lub usług bez Docker. Nadal preferowany język (.NET, Node.js, przejdź itp.) i preferowany edytor lub środowiska IDE programu Visual Studio lub Visual Studio Code. Zamiast wziąć pod uwagę Docker lokalizację docelową wdrożenia, jednak opracowanie usług w środowisku Docker. Tworzenia, uruchamiania, testowania i debugowania kodu w kontenerach lokalnie, zapewniając środowisko docelowe w czasie opracowywania. Zapewniając środowisko docelowe lokalnie, kontenery Docker zdefiniować co znacząco pomoże Ci zwiększyć cykl życia DevOps. Visual Studio i Visual Studio Code są rozszerzenia do integracji kontenery Docker w procesie tworzenia aplikacji.
+-   **Platformy opracowywania aplikacji platformy Docker** rozwoju usługi lub kolekcja usług, które tworzą "aplikacja". Platforma programistyczna zawiera wszystkich programistów pracy wymaga przed wypchnięciem swój kod do repozytorium udostępnionego kodu. Tworzenie usług, wdrażane jako kontenery, są bardzo podobne do tworzenia tej samej aplikacji lub usług bez platformy Docker. Możesz nadal korzystać z Twojego preferowanego języka (.NET, Node.js, Go, itp.) i preferowanego edytora lub IDE, takie jak Visual Studio lub Visual Studio Code. Jednak zamiast wziąć pod uwagę Docker lokalizację docelową wdrożenia, możesz tworzyć usługi w środowisku platformy Docker. Tworzenie, uruchamianie, Testuj i Debuguj kodu w kontenerach lokalnie, zapewniając środowisko docelowe w czasie tworzenia. Dostarczając lokalnie środowisko docelowe, kontenerów platformy Docker zdefiniować co drastycznie pomoże poprawić swoje cyklu życia operacji deweloperskich. Program Visual Studio i Visual Studio Code ma rozszerzeń do integracji kontenerów platformy Docker w procesie tworzenia aplikacji.
 
--   **Opracowywania oprogramowania dla aplikacji Docker** deweloperom tworzenie aplikacji platformy Docker można używać programu Visual Studio Team Services (VSTS) lub inny produkt innej firmy, takich jak Wpięć, budować zaawansowane automatycznego zarządzania cyklem życia aplikacji (ALM).
+-   **Metodyka DevOps na potrzeby aplikacji platformy Docker** deweloperom tworzenie aplikacji platformy Docker można użyć usługom DevOps platformy Azure lub dowolny inny produkt innej firmy, takich jak Jenkins, budować zaawansowane zautomatyzowane Zarządzanie cyklem życia aplikacji (ALM).
 
-Z programu VSTS, deweloperzy mogą tworzyć ukierunkowane kontenera DevOps dla procesu szybkie, iteracyjną, która obejmuje kodu źródłowego kontroli z dowolnego miejsca (VSTS Git, GitHub, wszelkie zdalnego repozytorium Git lub Podwersją), ciągłej integracji (CI), testy jednostkowe wewnętrznego, między kontener/usługi integracji testy, ciągłego dostarczania (CD) i zarządzania zleceniami (RM). Deweloperzy mogą również zautomatyzować ich Docker aplikacji wersji w usłudze kontenera platformy Azure, od projektowania do środowisk przemieszczania i produkcji.
+Dzięki usługom DevOps platformy Azure, deweloperzy mogą tworzyć ukierunkowane kontenera metodyka DevOps na potrzeby szybkie, iteracyjne procesu, który obejmuje kod źródłowy sterowania z dowolnego miejsca (Git usług platformy Azure DevOps, GitHub, dowolnym zdalnym repozytorium Git lub Subversion), ciągłej integracji (CI) , testy jednostkowe wewnętrznego, między testy integracji usługi/kontenera, ciągłe dostarczanie (CD) i rozwiązania release management (RM). Deweloperzy mogą też zautomatyzować ich Docker aplikacji wersji do usługi Azure Container Service, od projektowania do środowiskach przejściowych i produkcyjnych.
+ 
+-   Zarządzanie infrastrukturą IT z produkcji i monitorowania.
 
--   IT produkcji zarządzania i monitorowania.
+**Zarządzanie** IT mogą zarządzać aplikacji produkcyjnych i usług na kilka sposobów:
 
-**Zarządzanie** IT mogą zarządzać aplikacji produkcyjnych i usługi na kilka sposobów:
+-   **Witryna Azure portal** Jeśli używasz orkiestratorów typu open source, Azure Container Service (ACS) oraz narzędzia do zarządzania nim, takie jak Docker Datacenter i Mesosphere Marathon ułatwiają konfiguracji i utrzymania środowiska Docker. Jeśli używasz usługi Azure Service Fabric narzędzie Service Fabric Explorer umożliwia wizualizowanie i skonfiguruj klaster.
 
--   **Azure portal** Jeśli używasz orchestrators open source, usługi kontenera platformy Azure (ACS) oraz klastra narzędzia do zarządzania, takich jak Docker Datacenter i Mesosphere Marathon ułatwiają konfigurowanie i obsługa środowiska Docker. Jeśli używasz usługi Azure Service Fabric narzędzia Service Fabric Explorer umożliwia wizualizowanie i skonfigurować klaster.
+-   **Narzędzia aparatu docker** zarządzalnych aplikacji kontenerów przy użyciu znanych narzędzi. Istnieje nie trzeba zmieniać istniejących praktyk dotyczących zarządzania platformy Docker, aby przenieść obciążenia kontenerów do chmury. Użyj narzędzi zarządzania aplikacji, które już znasz i Połącz za pośrednictwem standardowych punktów końcowych interfejsu API dla wybranego koordynatora. Możesz również użyć innych narzędzi innych firm można zarządzać aplikacjami platformy Docker, takich jak Docker Datacenter lub nawet narzędzi interfejsu wiersza polecenia platformy Docker.
 
--   **Narzędzia docker** można zarządzać aplikacjami kontenera za pomocą znanych narzędzi. Nie istnieje potrzeba zmiany istniejących rozwiązań dotyczących zarządzania Docker, aby przenieść kontenera obciążeń do chmury. Użyj narzędzi zarządzania aplikacji jest już znanych i połączenia za pomocą standardowych punktów końcowych interfejsu API programu orchestrator wybranych przez użytkownika. Za pomocą innych narzędzi innych firm można również Zarządzaj aplikacjami Docker, takich jak Docker centrum danych lub nawet narzędzi interfejsu wiersza polecenia Docker.
+-   **Narzędzia typu open-source** ACS ponieważ ujawnia standardowe punkty końcowe interfejsu API dla aparatu aranżacji, najpopularniejsze narzędzia są zgodne z usługą ACS oraz, w większości przypadków, będą fabrycznie działać — wizualizatorów, monitorowania, w tym narzędzia wiersza polecenia i nawet przyszłych narzędzi w miarę ich udostępniania.
 
--   **Narzędzia open source** ACS ponieważ ujawnia standardowe punkty końcowe interfejsu API aparat aranżacji, najbardziej popularnych narzędzi są zgodne z ACS oraz, w większości przypadków będzie działać bez — wizualizatorów, monitorowania, w tym narzędzia wiersza polecenia, a nawet przyszłych narzędzia, gdy będą one dostępne.
+**Monitorowanie** sprzedażą podczas uruchamiania środowisk produkcyjnych, można monitorować za pomocą następujących:
 
-**Monitorowanie** podczas uruchamiania środowisk produkcyjnych, można monitorować każdy kąt za pomocą następujących:
+-   **Operations Management Suite (OMS)** "Rozwiązanie kontenera pakietu OMS" mogą zarządzać i monitorować hostów platformy Docker i kontenerów, pokazując informacji na temat której kontenerów i hostach kontenerów, kontenery, które są uruchomione lub nie powiodło się, i dzienniki demona i kontener platformy Docker. Pokazuje także metryki wydajności, takie jak procesor CPU, pamięci, sieci i magazynu dla kontenera i hosty, które ułatwiają rozwiązywanie problemów i Znajdź zasobożernymi kontenerów.
 
--   **Operations Management Suite (OMS)** "OMS kontenera rozwiązanie" można zarządzać i monitorować hostów Docker i kontenery poprzez wyświetlenie informacji o Twojej kontenery i hosty kontenera skutkującej, kontenery, które są uruchomione lub nie powiodło się, i dzienniki demona i kontener Docker. Przedstawia on także metryki wydajności, np. Procesora, pamięci, sieci i magazynu dla kontenera i hostów ułatwiające rozwiązywanie problemów i znaleźć zakłócenia sąsiada kontenerów.
+-   **Usługa Application Insights** aplikacji platformy Docker w środowisku produkcyjnym można monitorować, po prostu konfigurując tego zestawu SDK do usługi, dzięki czemu można uzyskać dane telemetryczne z aplikacji.
 
--   **Usługa Application Insights** umożliwia monitorowanie aplikacji Docker produkcji, konfigurując po prostu jej zestawu SDK do usługi tak, aby uzyskać dane telemetryczne z aplikacji.
-
-W związku z tym firma Microsoft oferuje pełną podstawę dla end-to-end konteneryzowanych Docker cyklu życia aplikacji. Jest jednak *kolekcji produktów i technologii, które umożliwiają opcjonalnie wybierz i zintegrować z istniejącym narzędzi i przetwarza*. Elastyczność w szerokie podejście wraz z siły szczegółowo funkcji umieszczania firmy Microsoft w położeniu silne konteneryzowanych tworzenie aplikacji platformy Docker.
+W związku z tym firma Microsoft oferuje pełny podstawę dla end-to-end konteneryzowanych Docker cyklu życia aplikacji. Jest jednak *zbiór produkty i technologie umożliwiające opcjonalnie wybierz i zintegrować z istniejącym narzędzi i procesów*. Elastyczność w szerokim podejście wraz z siły szczegółowo możliwości firmy Microsoft należy umieścić w silną pozycję opracowywania konteneryzowanych aplikacji platformy Docker.
 
 >[!div class="step-by-step"]
 [Poprzednie](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)

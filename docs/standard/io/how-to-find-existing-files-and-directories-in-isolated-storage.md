@@ -20,11 +20,11 @@ ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705868"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592989"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Porady: wyszukiwanie istniejących plików i katalogów w izolowanym magazynie
 Aby wyszukać katalogu w wydzielonej pamięci masowej, należy użyć <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> metody. Ta metoda przyjmuje ciąg, który reprezentuje wzorzec wyszukiwania. Można użyć zarówno pojedynczych znaków (?), jak i wielu znaków (*) znaki symboli wieloznacznych w wzorzec wyszukiwania, ale znaki symboli wieloznacznych, musi znajdować się w końcowej części nazwy. Na przykład `directory1/*ect*` jest prawidłowy ciąg wyszukiwania, ale `*ect*/directory2` nie jest.  

@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404392"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45587613"
 ---
 # <a name="development-process-for-azure"></a>Proces programistyczny dla platformy Azure
 
@@ -44,15 +44,15 @@ Czy wolisz, pełne i zaawansowanego środowiska IDE lub edytora lekkie i elastyc
 
 Cykl życia projektowania aplikacji rozpoczyna się od maszyny każdy Deweloper aplikacji przy użyciu preferowanego języka i testowanie jej lokalnie. Deweloperzy i zrezygnować z ich preferowanego systemu kontroli źródła można skonfigurować ciągłej integracji (CI) i/lub ciągłe dostarczanie/wdrażanie (CD) przy użyciu serwera kompilacji lub oparte na wbudowanych funkcjach platformy Azure.
 
-Aby rozpocząć tworzenie aplikacji platformy ASP.NET Core przy użyciu ciągłej integracji/ciągłego wdrażania, można użyć Visual Studio Team Services lub organizacji właścicielem Team Foundation Server (TFS).
+Aby rozpocząć tworzenie aplikacji platformy ASP.NET Core przy użyciu ciągłej integracji/ciągłego wdrażania, można użyć usługom DevOps platformy Azure lub w organizacji właścicielem Team Foundation Server (TFS).
 
 ### <a name="initial-setup"></a>Początkowej konfiguracji
 
 Aby utworzyć potok tworzenia wersji aplikacji, musisz mieć kod aplikacji w kontroli źródła. Konfigurowanie lokalnego repozytorium i podłącz go do zdalnego repozytorium w projekcie zespołowym. Wykonaj te instrukcje:
 
-- [Udostępnianie kodu z Git i Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) lub
+- [Udostępnianie kodu z Git i Visual Studio](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs) lub
 
-- [Udostępnianie kodu z TFVC i Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [Udostępnianie kodu z TFVC i Visual Studio](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs)
 
 Tworzenie usługi Azure App Service, w przypadku wdrażania aplikacji. Tworzenie aplikacji sieci Web, przechodząc do bloku usługi App Services w witrynie Azure portal. Kliknij pozycję + Dodaj, wybierz szablon aplikacji sieci Web, kliknij przycisk Utwórz, a następnie podaj nazwę i inne szczegóły. Aplikacja sieci web będzie niedostępny z {name}. azurewebsites.net.
 
@@ -62,13 +62,13 @@ Tworzenie usługi Azure App Service, w przypadku wdrażania aplikacji. Tworzenie
 
 Proces kompilacji ciągłej integracji przeprowadzi automatyczne kompilowanie, zawsze wtedy, gdy nowy kod jest zaangażowana w repozytorium kontroli źródła projektu. Dzięki temu można natychmiast uzyskuje opinie na to, że kod zostanie skompilowany (a najlepiej przekazuje zautomatyzowane testy) i potencjalnie mogą zostać wdrożone. Kompilację o ciągłej integracji powoduje wygenerowanie sieci web wdrażanie pakietów artefaktów i opublikować ją do użycia przez proces ciągłego Dostarczania.
 
-[Zdefiniuj proces kompilacji ciągłej integracji](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
+[Zdefiniuj proces kompilacji ciągłej integracji](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
 
 Pamiętaj umożliwić ciągłą integrację, więc system kolejkować kompilację, zawsze wtedy, gdy ktoś z zespołu zatwierdzeń nowego kodu. Testowanie kompilacji i sprawdź, czy jest to tworzenie internetowego wdrożyć pakiet jako jeden z jego artefaktów.
 
 Po pomyślnym zakończeniu kompilacji, proces ciągłego Dostarczania wdroży wyniki kompilacji ciągłej integracji do aplikacji internetowej platformy Azure. Aby to skonfigurować, należy utworzyć i skonfigurować *wersji*, które zostaną wdrożone do usługi Azure App Service.
 
-[Definiowanie procesu tworzenia wersji ciągłego Dostarczania](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
+[Definiowanie procesu tworzenia wersji ciągłego Dostarczania](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
 
 Po skonfigurowaniu potok ciągłej integracji/ciągłego wdrażania, możesz po prostu aktualizowanie aplikacji sieci web i zatwierdzić je do kontroli źródła, aby były wdrożone.
 
@@ -86,7 +86,7 @@ Tworzenie aplikacji platformy ASP.NET Core do wdrożenia na platformie Azure nie
 
 #### <a name="step-2-application-code-repository"></a>Krok 2. Repozytorium kodu aplikacji
 
-Zawsze, gdy wszystko będzie gotowe udostępniać kod swojemu zespołowi, będzie wypchnąć zmiany z repozytorium lokalnego źródła do repozytorium źródłowy udostępniony Twojego zespołu. Jeśli masz doświadczenie w pracy w gałęzi niestandardowych, ten krok obejmuje zazwyczaj scalanie kodu w gałęzi udostępnionej (prawdopodobnie przez klasy [żądania ściągnięcia](https://docs.microsoft.com/vsts/git/pull-requests)).
+Zawsze, gdy wszystko będzie gotowe udostępniać kod swojemu zespołowi, będzie wypchnąć zmiany z repozytorium lokalnego źródła do repozytorium źródłowy udostępniony Twojego zespołu. Jeśli masz doświadczenie w pracy w gałęzi niestandardowych, ten krok obejmuje zazwyczaj scalanie kodu w gałęzi udostępnionej (prawdopodobnie przez klasy [żądania ściągnięcia](https://docs.microsoft.com/azure/devops/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Krok 3. Serwer kompilacji: Ciągłej integracji. kompilowanie, testowanie, pakietu
 
@@ -107,7 +107,7 @@ Po uruchomieniu aplikacji sieci Web można monitorować kondycję aplikacji i zb
 ## <a name="references"></a>Odwołania
 
 **Tworzenie i wdrażanie aplikacji platformy ASP.NET Core na platformie Azure**  
-<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
+<https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
 [Poprzednie](test-asp-net-core-mvc-apps.md)

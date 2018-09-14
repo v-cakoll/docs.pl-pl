@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366049"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615407"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet — funkcja
 Pobiera kwalifikator ustawione dla wystąpienia klasy lub definicji klasy.

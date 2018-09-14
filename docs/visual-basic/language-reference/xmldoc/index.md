@@ -9,11 +9,11 @@ helpviewer_keywords:
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
 ms.openlocfilehash: 3b2dec4224006d35fb9add11e170b9dcbeeafcf3
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368565"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583560"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Zalecane tagi XML dla komentarzy dokumentacji (Visual Basic)
 Kompilator Visual Basic przetwarzanie komentarzy dokumentacji w kodzie do pliku XML. Można użyć dodatkowych narzędzi do przetwarzania pliku XML do dokumentacji.  

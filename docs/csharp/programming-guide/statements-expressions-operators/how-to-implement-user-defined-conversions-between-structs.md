@@ -5,11 +5,11 @@ helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
 ms.openlocfilehash: cff85d60c1b59f4d1ca028f8fc02fee5728fa3d6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251976"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583070"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>Porady: implementowanie zdefiniowanych przez użytkownika konwersji struktur (Przewodnik programowania w języku C#)
 Ten przykład definiuje dwie struktury `RomanNumeral` i `BinaryNumeral`i przedstawiono konwersje między nimi.  

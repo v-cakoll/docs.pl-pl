@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
 ms.openlocfilehash: bed7484f7ff487d1ff34ef1ff1e86bc8689a2cfc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198663"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45613972"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>Kompiluj i wdróż Tematy porad
 Poniższe tematy przedstawiają sposób tworzenia plików projektu dla różnych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] typów aplikacji.  

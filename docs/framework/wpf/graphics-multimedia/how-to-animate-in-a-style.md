@@ -1,25 +1,27 @@
 ---
-title: Jak animować w stylu
+title: Jak animować w stylu (WPF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: e0741a869ab81875aaa25340de851ef939e11a6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a455bbfb9defbcf83f7e490f60031917a3b41779
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558816"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592851"
 ---
 # <a name="how-to-animate-in-a-style"></a>Jak animować w stylu
-W tym przykładzie pokazano, jak można animować właściwości w stylu. W przypadku działania animacji jest używana w stylu bezpośrednio można zastosować tylko element framework, dla którego styl jest zdefiniowany. Docelowy obiekt obiektu freezable, możesz musi "dot w dół" z właściwością styl elementu.  
-  
- W poniższym przykładzie kilka animacje są zdefiniowane w stylu i stosowane do <xref:System.Windows.Controls.Button>. Gdy użytkownik przesuwa wskaźnik myszy nad przyciskiem, zniknie nieprzezroczyste częściowo przezroczyste i Wstecz ponownie, wielokrotnie. Gdy użytkownik przesuwa wskaźnik myszy poza przycisk, staje się całkowicie przezroczystości. Po kliknięciu przycisku kolor tła zmienia pomarańczowy do białe i z powrotem. Ponieważ <xref:System.Windows.Media.SolidColorBrush> używana do malowania przycisku nie może być celem bezpośrednio, jest dostępny przez dotting w dół od przycisku <xref:System.Windows.Controls.Control.Background%2A> właściwości.  
-  
-## <a name="example"></a>Przykład  
- [!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]  
-  
- Należy pamiętać, że gdy animacji w stylu, możliwe do obiektów docelowych, które nie istnieją. Załóżmy na przykład, używa własnego stylu <xref:System.Windows.Media.SolidColorBrush> ustaw właściwość tło przycisku, ale w niektórych punktu styl jest zastępowany i ustawiono tło przycisku <xref:System.Windows.Media.LinearGradientBrush>.  Próby animować <xref:System.Windows.Media.SolidColorBrush> nie będzie zgłaszać wyjątek; animacji po prostu nie powiedzie się trybie dyskretnym.  
-  
- Aby uzyskać więcej informacji na temat scenorysu przeznaczonych dla składni, zobacz [omówienie Scenorys](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Aby uzyskać więcej informacji na temat animacji, zobacz [omówienie animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Aby uzyskać więcej informacji na temat stylów, zobacz [stylami i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md).
+
+W tym przykładzie pokazano, jak animować właściwości stylu. Gdy animowanie w stylu, tylko element framework, dla którego zdefiniowano styl może być kierowany bezpośrednio. Pod kątem obiektu freezable, użytkownik musi "kropki w dół" z właściwości elementu ze stylem.
+
+W poniższym przykładzie kilku animacji są zdefiniowane w stylu i zastosować do <xref:System.Windows.Controls.Button>. Gdy użytkownik przesuwa wskaźnik myszy nad przyciskiem, zniknie nieprzezroczyste częściowo półprzezroczyste i Wstecz ponownie, wielokrotnie. Gdy użytkownik przesuwa mysz wyłączanie przycisku, staje się całkowicie nieprzezroczysty. Po kliknięciu przycisku koloru jego tła zmieni się z pomarańczowy na biały i z powrotem. Ponieważ <xref:System.Windows.Media.SolidColorBrush> używany do rysowania przycisku nie będzie można wykonywać bezpośrednio, jest on dostępny po dotting szczegółów przy użyciu przycisku <xref:System.Windows.Controls.Control.Background%2A> właściwości.
+
+## <a name="example"></a>Przykład
+
+[!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
+
+Należy pamiętać, że gdy animowanie w stylu, możliwe do obiektów docelowych, które nie istnieją. Załóżmy, że korzysta z własnego stylu <xref:System.Windows.Media.SolidColorBrush> ustaw właściwość tła przycisku, ale w pewnym momencie styl zostanie zastąpione i tło przycisku została ustawiona za pomocą <xref:System.Windows.Media.LinearGradientBrush>.  Podjęcie próby animować <xref:System.Windows.Media.SolidColorBrush> nie zgłasza wyjątku; animacji po prostu nie powiedzie się dyskretnie.
+
+Aby uzyskać więcej informacji na temat określania wartości docelowej składnia scenorysu, zobacz [Przegląd Scenorysy](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Aby uzyskać więcej informacji na temat animacji, zobacz [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Aby uzyskać więcej informacji na temat style zobacz [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md).

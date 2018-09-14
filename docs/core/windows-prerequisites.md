@@ -4,12 +4,12 @@ description: Dowiedz się, jakie zależności dotyczące usługi Windows kompute
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 63c0de2b413f38458dba89506f4070760b3f53f8
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514203"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594766"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dla platformy .NET Core w Windows
 
@@ -61,7 +61,7 @@ Następujące artykuły mają pełną listę systemów operacyjnych .NET Core, o
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Wymagania wstępne dotyczące programu Visual Studio 2017
 
-Tworzenie aplikacji .NET Core przy użyciu zestawu .NET Core SDK, można użyć dowolnego edytora. [Program Visual Studio 2017](#visual-studio-2017) zapewnia zintegrowane środowisko programistyczne dla aplikacji .NET Core w Windows.
+Tworzenie aplikacji .NET Core przy użyciu zestawu .NET Core SDK, można użyć dowolnego edytora. Program Visual Studio 2017 udostępnia zintegrowane środowisko programistyczne dla aplikacji .NET Core w Windows.
 
 Możesz dowiedzieć się więcej o zmianach wprowadzonych w programie Visual Studio 2017 w [informacje o wersji](/visualstudio/releasenotes/vs2017-relnotes).
 

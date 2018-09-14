@@ -8,11 +8,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
 ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527633"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593794"
 ---
 # <a name="user-input-in-windows-forms"></a>Dane użytkownika w formularzach systemu Windows
 Windows Forms zawiera model danych wejściowych użytkownika na podstawie zdarzeń, które są wywoływane podczas przetwarzania pokrewne wiadomości Windows. Tematy w tej sekcji udostępniają informacje dotyczące klawiatury i myszy dane wejściowe użytkownika, wraz z przykładami kodu, które pokazują, jak do wykonywania określonych zadań.  

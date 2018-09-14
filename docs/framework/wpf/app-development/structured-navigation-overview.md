@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 2264686f34123e74bf7d24ce80877742d952f35d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268176"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45617412"
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, lub <xref:System.Windows.Navigation.NavigationWindow> składa się z stron, zidentyfikowane przez pakiet [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] i przejście przez hiperłącza. Struktura stron i sposoby, w którym ich można nawigować, zgodnie z definicją hiperłącza, jest określany jako topologia nawigacji. Takie topologii pasujące do różnych typów aplikacji, zwłaszcza tych, które nawigowania w dokumentach. Na potrzeby takich aplikacji użytkownik może przejść z jednej strony do innej strony bez dowolnej stronie znajomości o innych.  

@@ -27,11 +27,11 @@ ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d039e591e1f61a7be18dc224845f82b107d918f
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699949"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45585840"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Konwersja typów w programie .NET Framework
 <a name="top"></a> Każda wartość ma skojarzony typ definiujący atrybuty, takie jak ilość miejsca przydzielonego dla wartości, zakres możliwych wartości, które może mieć i elementy członkowskie udostępniane. Wiele wartości można wyrazić za pomocą co najmniej dwóch typów. Na przykład wartość 4 może być wyrażona jako liczba całkowita lub wartość zmiennoprzecinkowa. Konwersja typu tworzy wartość nowego typu, która jest równoważna wartości starego typu, ale nie zawsze powoduje zachowanie tożsamości (dokładnej wartości) oryginalnego obiektu.  

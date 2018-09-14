@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 176ae3589443937331259ee4716570c66053de3c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186191"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597774"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementacja metody Dispose
 
@@ -107,7 +107,7 @@ Poniżej przedstawiono ogólny schemat implementowania wzorca usuwania dla klasy
 
 Klasa pochodząca z klasy, która implementuje <xref:System.IDisposable> nie powinna implementować interfejsu <xref:System.IDisposable>, ponieważ Implementacja klasy bazowej <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> jest dziedziczona przez jej klas pochodnych. Tak więc, aby zaimplementować wzorzec usuwania dla klasy pochodnej, należy dostarczyć następujące elementy:  
   
-* A `protected Dispose(Boolean)` metodę, która zastępuje metodę klasy bazowej i wykonuje rzeczywistą pracę przy zwalnianiu zasobów klasy pochodnej. Ta metoda powinna także wywoływać `Dispose(Boolean)` metody podstawowej klasy, a następnie przekazać go wartość `true` dla *disposing* argumentu.  
+* A `protected Dispose(Boolean)` metodę, która zastępuje metodę klasy bazowej i wykonuje rzeczywistą pracę przy zwalnianiu zasobów klasy pochodnej. Ta metoda powinna także wywoływać `Dispose(Boolean)` metody podstawowej klasy, a następnie przekaż jego stan operacji Dispose dla argumentu.  
   
 * Klasa pochodząca z <xref:System.Runtime.InteropServices.SafeHandle> która umieszcza niezarządzany zasób w otoce (zalecane) lub zastąpienie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> metody. <xref:System.Runtime.InteropServices.SafeHandle> Klasy dostarcza finalizator, dzięki czemu kodu finalizatora. Jeśli podasz finalizator, powinien wywoływać `Dispose(Boolean)` przeciążenia z *disposing* argument `false`.  
   

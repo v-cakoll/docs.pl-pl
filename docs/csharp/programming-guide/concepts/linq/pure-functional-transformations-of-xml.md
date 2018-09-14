@@ -3,11 +3,11 @@ title: Czyste Przekształcanie funkcjonalne kodu XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
 ms.openlocfilehash: e05c6167973b2342aafd51aad7d9102db9e94ae0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528120"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591359"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Czyste Przekształcanie funkcjonalne kodu XML (C#)
 Ta sekcja zawiera samouczek Przekształcanie funkcjonalne dla formatu XML. W tym wyjaśnienia główne pojęcia i konstrukcji językowych należy poznać przekształceń funkcjonalnych i przykłady użycia przekształceń funkcjonalnych do manipulowania dokumentu XML. Chociaż ten samouczek zawiera LINQ do XML przykłady kodu, wszystkie podstawowe pojęcia mają zastosowanie również do innych technologii LINQ.  

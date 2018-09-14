@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.openlocfilehash: af6151d04622c72acdb7f27ebb220bf611418b4c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45509747"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616990"
 ---
 # <a name="conclusions"></a>Wnioski
 

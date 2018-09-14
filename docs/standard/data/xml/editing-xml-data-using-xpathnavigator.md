@@ -6,11 +6,11 @@ ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5361ef036d91435b674a1637ac8c2a9a757bf8ab
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516937"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609349"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>Edytowanie danych XML przy użyciu klasy XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Klasa dostarcza metody do wstawiania, modyfikowania i usuwania węzłów oraz wartości z dokumentu XML zawartych w <xref:System.Xml.XmlDocument> obiektu. Aby można było używać dowolnej z tych metod do wstawiania, modyfikowanie i usuwanie węzłów oraz wartości <xref:System.Xml.XPath.XPathNavigator> obiekt musi być niemożliwa, czyli jego <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> właściwość musi mieć wartość true.  

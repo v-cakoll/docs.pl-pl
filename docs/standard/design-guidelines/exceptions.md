@@ -11,11 +11,11 @@ ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360729"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588582"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Wytyczne dotyczące projektowania dla wyjątków
 Obsługa wyjątków ma wiele zalet za pośrednictwem raportowania błędów na podstawie wartości powrotu. Dobre framework projektu pomaga Deweloper aplikacji korzystać z zalet wyjątków. W tej sekcji omówiono korzyści wynikające z wyjątków i przedstawiono wskazówki dotyczące skutecznego korzystania z nich.  

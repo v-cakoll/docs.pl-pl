@@ -6,11 +6,11 @@ helpviewer_keywords:
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
 ms.openlocfilehash: 6be0ae4f6497dfb2db9607f61c4ede5083d57dc7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360599"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588478"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, który kontroluje, czy mogą być używane z innym kodem w swoim zestawie lub innych zestawów. Następujące modyfikatory dostępu służy do określania dostępność typu lub elementu członkowskiego, gdy trzeba je zadeklarować:  

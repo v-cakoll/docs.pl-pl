@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 3924d070ea012faf33f1d808b92b1328626ef567
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96de5601c60dd309fe5467414affd20b8bc93d87
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805458"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592143"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaty (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, który reprezentuje odwołania do metod z określoną listą parametrów i typ zwracany. Podczas tworzenia wystąpienia delegata można skojarzyć jego wystąpienie z dowolną metodą mającą zgodny podpis i zwracany typ. Za pośrednictwem wystąpienia delegata można wywołać metodę.  
@@ -29,7 +29,7 @@ A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, 
 ## <a name="delegates-overview"></a>Omówienie delegatów  
  Delegaty mają następujące właściwości:  
   
--   Delegaty są podobne do wskaźników funkcji w języku C++, ale są bezpieczne dla typów.  
+-   Delegaty są podobne do wskaźników funkcji języka C++, ale obiekty delegowane są w pełni zorientowane obiektowo, a w przeciwieństwie do języka C++ wskaźników do składowych, delegatów hermetyzacji zarówno w przypadku wystąpienia obiektu, jak i metody.
   
 -   Delegaty zezwalają na przekazywanie metod jako parametrów.  
   

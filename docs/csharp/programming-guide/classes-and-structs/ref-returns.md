@@ -4,12 +4,12 @@ description: Dowiedz się, jak zdefiniować i zastosować zwracane ref i wartoś
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510568"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616143"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Wartości zwracane ref i zmienne lokalne ref
 
@@ -58,7 +58,7 @@ Odwołania zwracana wartość jest alias do innej zmiennej w zakresie wywoływan
 - Podczas odczytywania wartości odczytujesz wartość zmiennej go aliasów.
 - Jeśli przywrócić go *przez odwołanie*, alias jest zwracany do tej samej zmiennej.
 - W przypadku przekazania do innej metody *przez odwołanie*, kończy się sukcesem odwołania do zmiennej go aliasów.
-- Po ustawieniu [odwołanie lokalne](#ref-local) alias, należy wprowadzić nowy alias tę samą zmienną.
+- Po ustawieniu [odwołanie lokalne](#ref-locals) alias, należy wprowadzić nowy alias tę samą zmienną.
 
 
 ## <a name="ref-locals"></a>Zmienne lokalne REF
@@ -122,7 +122,7 @@ W poniższym przykładzie pokazano sposób, w jaki `FindNumber` metody, które m
 
 Ta druga wersja jest bardziej wydajne, za pomocą sekwencji dłużej w scenariuszach, gdzie numer poszukiwane jest bliżej końca tablicy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ref keyword](../../language-reference/keywords/ref.md)  
 - [Semantyka odwołań z typami wartości](../../../csharp/reference-semantics-with-value-types.md)

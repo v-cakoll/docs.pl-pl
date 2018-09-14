@@ -3,11 +3,11 @@ title: '&lt;message&gt; w &lt;ws2007FederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
 ms.openlocfilehash: 3f0dbc3128af812c7fd09eed5acd90ab43ec8351
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516360"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45617287"
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>&lt;message&gt; w &lt;ws2007FederationHttpBinding&gt;
 Definiuje ustawienia zabezpieczeń na poziomie komunikatu dla [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elementu.  

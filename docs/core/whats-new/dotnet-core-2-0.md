@@ -4,12 +4,12 @@ description: Więcej informacji na temat nowych funkcji, które znajdują się w
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44778470"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591766"
 ---
 # <a name="whats-new-in-net-core-20"></a>What's new in .NET Core 2.0
 
@@ -158,8 +158,8 @@ Można teraz zainstalować zestaw .NET Core SDK, niezależnie od programu Visual
 
 - [Mikrousług i kontenerów rozwiązania Docker](../../standard/microservices-architecture/index.md)
 - [Aplikacje sieci Web wykorzystujące technologie ASP.NET](../../standard/modern-web-apps-azure-architecture/index.md)
-- [Aplikacje mobilne za pomocą platformy Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index.md)
-- [Aplikacje, które są wdrażane w chmurze dzięki platformie Azure](/azure/architecture/reference-architectures/index.md)
+- [Aplikacje mobilne za pomocą platformy Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [Aplikacje, które są wdrażane w chmurze dzięki platformie Azure](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>Zobacz także
 

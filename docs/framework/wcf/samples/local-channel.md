@@ -3,11 +3,11 @@ title: Lokalny kanał
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
 ms.openlocfilehash: 731fcfde52a6b1277551f7d70f795c721fc99dd8
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518964"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597826"
 ---
 # <a name="local-channel"></a>Lokalny kanał
 Lokalny kanał jest Windows Communication Foundation (WCF) kanał transportu, który jest używany do komunikacji w ramach tej samej domenie aplikacji. Jest to przydatne w scenariuszach, w którym klient i usługa są uruchomione w tej samej domenie aplikacji i należy unikać obciążenie typowe stosu kanału WCF (serializacji i deserializacji komunikatów).  

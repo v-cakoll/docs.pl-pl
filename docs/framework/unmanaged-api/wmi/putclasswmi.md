@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: de08662a825a84f19a40863cf73481d89364ebd0
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514254"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45568322"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi — funkcja
 Tworzy nową klasę lub aktualizuje istniejący zestaw.  

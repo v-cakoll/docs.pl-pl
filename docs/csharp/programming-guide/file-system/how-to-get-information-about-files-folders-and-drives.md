@@ -5,11 +5,11 @@ helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
 ms.openlocfilehash: 8ebacff0f3a1704ec001e3570d0df136f54baf9d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514228"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45589433"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Porady: pobieranie informacji o plikach, folderach i dyskach (Przewodnik programowania w języku C#)
 W .NET Framework uzyskujesz dostęp do informacji o systemie plików, przy użyciu następujących klas:  

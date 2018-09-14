@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
 ms.openlocfilehash: 4adf7e759d4475d0bb9b3aa0abe8dbdc5e57edd3
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44778646"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45617399"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji opartej na mikrousługach
 

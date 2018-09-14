@@ -3,11 +3,11 @@ title: 'Usługa: Wywołania zwracające błędy na sekundę'
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
 ms.openlocfilehash: b4a8a1eeec13195e4f8fe088da14dff7c06ecdb3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514862"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609544"
 ---
 # <a name="service-calls-faulted-per-second"></a>Usługa: Wywołania zwracające błędy na sekundę
 Nazwa licznika: Wywołania zwracające błędy na sekundę.  

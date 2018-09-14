@@ -3,11 +3,11 @@ title: Modyfikowanie drzewa XML w pamięci programu vs. Konstrukcja funkcjonalna
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
 ms.openlocfilehash: 836141185629683106698cc9b505c063de6c445e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44352706"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597579"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Modyfikowanie drzewa XML w pamięci programu vs. Konstrukcja funkcjonalna (LINQ to XML) (C#)
 Modyfikowanie drzewa XML w miejscu jest tradycyjne podejście na zmieniające się kształt dokumentu XML. Typowa aplikacja ładuje dokumentu do magazynu danych, takich jak modelu DOM lub [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; używa interfejsu programowania wstawić węzłów, usuń węzły lub zmienić zawartość węzłów; a następnie zapisuje w pliku XML lub przesyła je za pośrednictwem sieci.  

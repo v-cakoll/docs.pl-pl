@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
 ms.openlocfilehash: d1ead0493d75f708557f0598d603440221182ebc
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700669"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593839"
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a>Jak animować wartość BorderThickness
 W tym przykładzie pokazano, jak animować zmiany grubości obramowania z wykorzystaniem <xref:System.Windows.Media.Animation.ThicknessAnimation> klasy.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
 ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44509632"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591007"
 ---
 # <a name="do-c-reference"></a>do (odwołanie w C#)
 

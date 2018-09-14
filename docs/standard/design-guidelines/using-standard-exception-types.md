@@ -11,11 +11,11 @@ ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ea4a61be3a76c30c564cbf98ba3318fc6c3e7d4
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511620"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591202"
 ---
 # <a name="using-standard-exception-types"></a>Używanie standardowych typów wyjątków
 W tej sekcji opisano standardowych wyjątków, które są dostarczane przez platformę i szczegółowe informacje o ich użycia. Lista w żadnym wypadku nie jest wyczerpująca. Można znaleźć dokumentację referencyjną .NET Framework użycie innych typów wyjątków Framework.  

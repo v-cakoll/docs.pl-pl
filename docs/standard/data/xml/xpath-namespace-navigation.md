@@ -6,11 +6,11 @@ ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e6d4f63dacc09208176b47dbca38783f1e9bc0a1
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365345"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45613894"
 ---
 # <a name="xpath-namespace-navigation"></a>Wyrażenie XPath Namespace nawigacji
 Zapytania XPath za pomocą dokumentów XML, masz prawidłowego adresowania przestrzeni nazw XML i elementy zawarte w przestrzeni nazw. Przestrzenie nazw zapobiec niejasności, które mogą wystąpić podczas nazwy są używane w więcej niż jednym kontekście; na przykład nazwa `ID` mogą odwoływać się do więcej niż jeden identyfikator skojarzony z różnych elementów dokumentu XML. Składnia Namespace określa identyfikatorów, nazw i prefiksy, które odróżniania elementów dokumentu XML.  

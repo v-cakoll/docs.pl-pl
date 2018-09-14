@@ -10,11 +10,11 @@ ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527795"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616130"
 ---
 # <a name="traversing-xml-schemas"></a>Przechodzenie schematów XML
 Przechodzenie przez schemat XML przy użyciu schematu Object Model (model SOM) interfejsu API zapewnia dostęp do elementów, atrybutów i typy przechowywanych w SOM. Przechodzenie przez XML schematu ładowany SOM jest także pierwszym krokiem podczas edytowania schematu XML przy użyciu interfejsu API SOM.  

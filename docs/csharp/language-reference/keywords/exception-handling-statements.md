@@ -5,29 +5,29 @@ helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
 ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275187"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593689"
 ---
-# <a name="exception-handling-statements-c-reference"></a><span data-ttu-id="3807f-102">Instrukcje obsługi wyjątków (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="3807f-102">Exception Handling Statements (C# Reference)</span></span>
-<span data-ttu-id="3807f-103">C# udostępnia wbudowaną obsługę obsługi nietypowych sytuacjach, znane jako wyjątki, które mogą wystąpić podczas wykonywania programu.</span><span class="sxs-lookup"><span data-stu-id="3807f-103">C# provides built-in support for handling anomalous situations, known as exceptions, which may occur during the execution of your program.</span></span> <span data-ttu-id="3807f-104">Te wyjątki są obsługiwane przez kod, który znajduje się poza normalny przepływ sterowania.</span><span class="sxs-lookup"><span data-stu-id="3807f-104">These exceptions are handled by code that is outside the normal flow of control.</span></span>  
+# <a name="exception-handling-statements-c-reference"></a><span data-ttu-id="8a3c6-102">Instrukcje obsługi wyjątków (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="8a3c6-102">Exception Handling Statements (C# Reference)</span></span>
+<span data-ttu-id="8a3c6-103">C# udostępnia wbudowaną obsługę obsługi nietypowych sytuacjach, znane jako wyjątki, które mogą wystąpić podczas wykonywania programu.</span><span class="sxs-lookup"><span data-stu-id="8a3c6-103">C# provides built-in support for handling anomalous situations, known as exceptions, which may occur during the execution of your program.</span></span> <span data-ttu-id="8a3c6-104">Te wyjątki są obsługiwane przez kod, który znajduje się poza normalny przepływ sterowania.</span><span class="sxs-lookup"><span data-stu-id="8a3c6-104">These exceptions are handled by code that is outside the normal flow of control.</span></span>  
   
- <span data-ttu-id="3807f-105">W poniższych tematach obsługi wyjątków są szczegółowo opisane w tej sekcji:</span><span class="sxs-lookup"><span data-stu-id="3807f-105">The following exception handling topics are explained in this section:</span></span>  
+ <span data-ttu-id="8a3c6-105">W poniższych tematach obsługi wyjątków są szczegółowo opisane w tej sekcji:</span><span class="sxs-lookup"><span data-stu-id="8a3c6-105">The following exception handling topics are explained in this section:</span></span>  
   
--   [<span data-ttu-id="3807f-106">throw</span><span class="sxs-lookup"><span data-stu-id="3807f-106">throw</span></span>](../../../csharp/language-reference/keywords/throw.md)  
+-   [<span data-ttu-id="8a3c6-106">throw</span><span class="sxs-lookup"><span data-stu-id="8a3c6-106">throw</span></span>](../../../csharp/language-reference/keywords/throw.md)  
   
--   [<span data-ttu-id="3807f-107">try-catch</span><span class="sxs-lookup"><span data-stu-id="3807f-107">try-catch</span></span>](../../../csharp/language-reference/keywords/try-catch.md)  
+-   [<span data-ttu-id="8a3c6-107">try-catch</span><span class="sxs-lookup"><span data-stu-id="8a3c6-107">try-catch</span></span>](../../../csharp/language-reference/keywords/try-catch.md)  
   
--   [<span data-ttu-id="3807f-108">try-finally</span><span class="sxs-lookup"><span data-stu-id="3807f-108">try-finally</span></span>](../../../csharp/language-reference/keywords/try-finally.md)  
+-   [<span data-ttu-id="8a3c6-108">try-finally</span><span class="sxs-lookup"><span data-stu-id="8a3c6-108">try-finally</span></span>](../../../csharp/language-reference/keywords/try-finally.md)  
   
--   [<span data-ttu-id="3807f-109">try-catch-finally</span><span class="sxs-lookup"><span data-stu-id="3807f-109">try-catch-finally</span></span>](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+-   [<span data-ttu-id="8a3c6-109">try-catch-finally</span><span class="sxs-lookup"><span data-stu-id="8a3c6-109">try-catch-finally</span></span>](../../../csharp/language-reference/keywords/try-catch-finally.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3807f-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3807f-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8a3c6-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8a3c6-110">See Also</span></span>  
 
-- [<span data-ttu-id="3807f-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="3807f-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="3807f-112">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="3807f-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="3807f-113">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="3807f-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="3807f-114">Słowa kluczowe instrukcji</span><span class="sxs-lookup"><span data-stu-id="3807f-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)  
-- [<span data-ttu-id="3807f-115">Wyjątki i obsługa wyjątków</span><span class="sxs-lookup"><span data-stu-id="3807f-115">Exceptions and Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/index.md)
+- [<span data-ttu-id="8a3c6-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="8a3c6-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="8a3c6-112">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="8a3c6-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="8a3c6-113">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="8a3c6-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="8a3c6-114">Słowa kluczowe instrukcji</span><span class="sxs-lookup"><span data-stu-id="8a3c6-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [<span data-ttu-id="8a3c6-115">Wyjątki i obsługa wyjątków</span><span class="sxs-lookup"><span data-stu-id="8a3c6-115">Exceptions and Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/index.md)

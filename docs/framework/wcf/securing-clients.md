@@ -7,11 +7,11 @@ ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e0bed1e47302cc80a04498f39144177acdbc9ae6
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529652"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45653350"
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
 W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotyczące zabezpieczeń dla klientów. Oznacza to, że usługa określa jakie tryb zabezpieczeń do użycia i określa, czy klient musi podać poświadczenia. Zabezpieczanie klienta, w związku z tym, proces jest prosty: metadane uzyskane z usługi (jeśli jest publikowany) oraz tworzyć klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie omówiono proces bardziej szczegółowo. Aby uzyskać więcej informacji na temat tworzenia usługi bezpiecznego zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  

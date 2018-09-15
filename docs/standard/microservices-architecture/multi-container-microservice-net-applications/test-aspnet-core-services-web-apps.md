@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
 ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705365"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45652654"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług platformy ASP.NET Core
 

@@ -14,11 +14,11 @@ ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 07ad8b278f6a44fce78bccc980acdc0dc93b1a7a
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361335"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45653060"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analizowanie ciągów liczbowych w sieci
 Wszystkie typy numeryczne mają dwie metody analizy statycznej, `Parse` i `TryParse`, której można przekonwertować ciąg reprezentujący liczbę na typ liczbowy. Te metody umożliwiają analizowanie ciągów, które zostały utworzone za pomocą ciągów formatu w [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md) i [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md). Domyślnie `Parse` i `TryParse` może pomyślnie konwertują ciągi, które zawierają całkowite cyfry dziesiętne tylko dla wartości całkowitych. Można pomyślnie konwertują ciągi zawierające zaokrągleń cyfry dziesiętne, separatory grup i separator dziesiętny na wartości zmiennoprzecinkowe. `Parse` Metoda zgłasza wyjątek, jeśli operacja zakończy się niepowodzeniem, natomiast `TryParse` metoda zwraca `false`.  

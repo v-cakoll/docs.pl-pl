@@ -11,11 +11,11 @@ ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508546"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45653276"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>Funkcja CertTimestampAuthenticodeLicense
 Sygnatury czasowe wiadomość Authenticode XrML licencji.  

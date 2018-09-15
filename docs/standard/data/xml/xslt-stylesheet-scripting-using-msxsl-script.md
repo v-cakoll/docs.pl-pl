@@ -9,11 +9,11 @@ ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508073"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45652969"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT skryptów przy użyciu arkusza stylów &lt;msxsl: Script&gt;
 <xref:System.Xml.Xsl.XslTransform> Klasa obsługuje osadzonych skryptów przy użyciu `script` elementu.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560873"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45658798"
 ---
 # <a name="merging-dataset-contents"></a>Scalanie zawartości elementu DataSet
 Możesz użyć <xref:System.Data.DataSet.Merge%2A> metodę, aby scalić zawartość <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, lub <xref:System.Data.DataRow> tablicę do istniejącego `DataSet`. Kilka czynników, jak i opcje mają wpływ na sposób nowe dane są scalane w istniejącej `DataSet`.  

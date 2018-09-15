@@ -4,12 +4,12 @@ description: Zobacz Mapowanie między formatami project.json i csproj elementów
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: 369075f91c0d5ea6c7eb5d09ac2535c4e60f28f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518560"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45647372"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Mapowanie między formatami project.json i csproj właściwości
 
@@ -487,7 +487,7 @@ Zobacz też [pliki](#files).
 ```
 
 Nie ma odpowiednika dla `owners` elementu w programie MSBuild.
-Dla `summary`, można użyć programu MSBuild `<Description>` właściwości, mimo że wartość `summary` jest migracji automatycznie do tej właściwości, ponieważ ta właściwość jest mapowany na [ `description` ](#-other-common-root-level-options) elementu.
+Dla `summary`, można użyć programu MSBuild `<Description>` właściwości, mimo że wartość `summary` jest migracji automatycznie do tej właściwości, ponieważ ta właściwość jest mapowany na [ `description` ](#other-common-root-level-options) elementu.
 
 ## <a name="scripts"></a>skrypty
 

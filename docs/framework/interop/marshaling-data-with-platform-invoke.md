@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ae8fbb47986e5baaecb919ce79ae384a8427737a
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911734"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646301"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshaling danych w wywołaniu platformy
 Aby wywołać funkcje wyeksportowane z biblioteką niezarządzaną, aplikacji programu .NET Framework wymaga prototypu funkcji w kodzie zarządzanym, reprezentujący funkcji niezarządzanej. Aby utworzyć prototypu, który umożliwia platformie wywołania do organizowania danych poprawnie, należy wykonać następujące czynności:  
@@ -46,10 +46,10 @@ Aby wywołać funkcje wyeksportowane z biblioteką niezarządzaną, aplikacji pr
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32-bitowy|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|Dekoracji z ANSI.|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|Dekoracji z użyciem standardu Unicode.|  
-|**LPSTR**|**Char \***|<xref:System.String?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Dekoracji z ANSI.|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Dekoracji z ANSI.|  
-|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Dekoracji z użyciem standardu Unicode.|  
-|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Dekoracji z użyciem standardu Unicode.|  
+|**LPSTR**|**Char &ast;**|<xref:System.String?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Dekoracji z ANSI.|  
+|**LPCSTR**|**Const char &ast;**|<xref:System.String?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Dekoracji z ANSI.|  
+|**LPWSTR**|**wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Dekoracji z użyciem standardu Unicode.|  
+|**LPCWSTR**|**Const wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Dekoracji z użyciem standardu Unicode.|  
 |**FLOAT**|**float**|<xref:System.Single?displayProperty=nameWithType>|32-bitowy|  
 |**PODWÓJNE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64-bitowy|  
   

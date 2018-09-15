@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operator (--) [C#]
 ms.assetid: 6b9cfe86-63c7-421f-9379-c9690fea8720
 ms.openlocfilehash: 615b100447233856ab3740d075d69e3ae19285fd
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588088"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45648785"
 ---
 # <a name="---operator-c-reference"></a>Operator -- (odwołanie w C#)
 Operator dekrementacji (`--`) zmniejsza wartość jego argumentu operacji o 1. Operator dekrementacji może występować przed argumentem operacji lub po nim: `--variable` i `variable--`. Pierwszą formą jest dekrementacja prefiksowa. Wynikiem tej operacji jest wartość argumentu operacji po zmniejszeniu. Drugą formą jest dekrementacja odwrotna.  Wynikiem tej operacji jest wartość argumentu przed zmniejszeniem.  

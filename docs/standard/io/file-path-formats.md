@@ -9,19 +9,16 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861305"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646405"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżki plików w systemach Windows
 
-Wiele typów elementów członkowskich <xref:System.IO> obejmują przestrzeni nazw `path` parametr, który pozwala określić ścieżkę bezwzględną lub względną do zasobu systemu plików. Ta ścieżka jest następnie przekazywany do [Windows plik systemowy interfejsów API](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx). W tym temacie opisano formaty ścieżki plików, których można użyć w systemach Windows.
+Wiele typów elementów członkowskich <xref:System.IO> obejmują przestrzeni nazw `path` parametr, który pozwala określić ścieżkę bezwzględną lub względną do zasobu systemu plików. Ta ścieżka jest następnie przekazywany do [Windows plik interfejsów API systemu](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx). W tym temacie opisano formaty ścieżki plików, których można użyć w systemach Windows.
 
 ## <a name="traditional-dos-paths"></a>Tradycyjne ścieżki DOS
 

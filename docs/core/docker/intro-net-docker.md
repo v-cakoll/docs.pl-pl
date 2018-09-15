@@ -5,12 +5,12 @@ author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.custom: mvc
-ms.openlocfilehash: 0fe3fcdee1c508f5c8165b7709ca08e42d0b1d55
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d578ec5a25dbb5de3c88386e212e68cf3b267749
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251774"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638967"
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do platform .NET i Docker
 
@@ -147,11 +147,11 @@ To repozytorium zawiera przykłady, które pokazują różne konfiguracje Docker
 
 * [Program Microsoft SQL Server Developer Edition obrazy kontenerów Windows w witrynie DockerHub](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)
 
-#### <a name="visual-studio-team-services-vsts-agent"></a>Agent programu Visual Studio Team Services (VSTS)
+#### <a name="azure-devops-services-agent"></a>Agent usługom DevOps platformy Azure
 
-* [Visual Studio Team Services (VSTS) agent obrazy w witrynie DockerHub](https://hub.docker.com/r/microsoft/vsts-agent/)
+* [Obrazy agenta usługom DevOps platformy Azure w witrynie DockerHub](https://hub.docker.com/r/microsoft/vsts-agent/)
 
-* [Visual Studio Team Services (VSTS) agent obrazy w witrynie GitHub](https://github.com/Microsoft/vsts-agent-docker)
+* [Obrazy agenta usługom DevOps platformy Azure w witrynie GitHub](https://github.com/Microsoft/vsts-agent-docker)
 
 #### <a name="operations-management-suite-oms-linux-agent"></a>Agent programu Operations Management Suite (OMS) w systemie Linux
 

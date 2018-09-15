@@ -9,11 +9,11 @@ ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b76140fb7d79b1e191c0451cd7556963130d224a
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44369020"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646184"
 ---
 # <a name="xml-document-creation"></a>Tworzenie dokumentu XML
 Istnieją dwa sposoby tworzenia dokumentu XML. Jednym ze sposobów jest utworzenie **XmlDocument** bez parametrów. Innym sposobem jest utworzenie **XmlDocument** i przekazać go tabeli XmlNameTable jako parametr. Poniższy przykład pokazuje, jak utworzyć nowy, pusty **XmlDocument** przy użyciu bez parametrów.  

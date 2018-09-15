@@ -25,11 +25,11 @@ ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207723"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649388"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Porady: przewidywanie warunków braku miejsca w izolowanym magazynie
 Kod, który używa wydzielona pamięć masowa jest ograniczony przez [przydziału](../../../docs/standard/io/isolated-storage.md#quotas) , który określa maksymalny rozmiar przedział danych, w którym izolowany magazyn plików i katalogów istnieje. Limit przydziału jest definiowany przez zasady zabezpieczeń i jest konfigurowane przez administratorów. Gdy maksymalny dozwolony rozmiar zostanie przekroczony podczas próby zapisu danych, <xref:System.IO.IsolatedStorage.IsolatedStorageException> wyjątku i kończy się niepowodzeniem. Pozwala to zapobiec złośliwymi atakami typu "odmowa usługi", które może spowodować, że aplikacja odmowy żądania, ponieważ Magazyn danych jest wypełnione.  

@@ -3,11 +3,11 @@ title: Odnajdywanie przepływu pracy — przykład
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
 ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516214"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649565"
 ---
 # <a name="workflow-discovery-sample"></a>Odnajdywanie przepływu pracy — przykład
 Niniejszy przykład pokazuje, jak stał się wykrywalny usługi przepływu pracy i jak tworzyć działania kodu niestandardowego, wyszukująca określonej usługi.  

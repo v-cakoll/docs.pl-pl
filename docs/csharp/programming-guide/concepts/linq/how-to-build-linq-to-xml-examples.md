@@ -3,11 +3,11 @@ title: 'Porady: tworzenie przykładów LINQ to XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
 ms.openlocfilehash: da0d85db22de6bcb2038cbe0608983d39bd66383
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44176679"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649682"
 ---
 # <a name="how-to-build-linq-to-xml-examples-c"></a>Porady: tworzenie przykładów LINQ to XML (C#)
 Różne fragmenty kodu i przykłady w niniejszej dokumentacji używać klas i typów z różnych przestrzeni nazw. Podczas kompilowania kodu C#, należy podać odpowiednie `using` dyrektywy.  

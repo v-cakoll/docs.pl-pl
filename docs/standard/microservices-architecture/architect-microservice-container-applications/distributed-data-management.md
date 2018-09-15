@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Pr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514394"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646223"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi
 
@@ -19,7 +19,7 @@ Definiowanie granic mikrousługi prawdopodobnie jest pierwsze wyzwanie, z który
 
 Najpierw należy skoncentrować się na modeli domeny logiczne i powiązane dane aplikacji. Należy próbować zidentyfikować Wyspy rozdzieleniu danych i kontekstów w tej samej aplikacji. W każdym kontekście może mieć różnych firm język (warunki różnych firm). Konteksty powinien być zdefiniowane i zarządzane niezależnie. Warunki i jednostek używanych w tych różnych kontekstach może brzmią podobnie, ale może być odnajdywanie, że w szczególnym kontekście koncepcji biznesowych z jedną służy do różnych celów w innym kontekście, a nawet może mieć inną nazwę. Na przykład przez użytkownika mogą być określane jako użytkownika w tożsamości lub członkostwo w kontekście jako klient w kontekście CRM kupującym w kontekście sortowania i tak dalej.
 
-Sposób identyfikacji granic między wiele kontekstów aplikacji z innej domeny, dla każdego kontekstu jest dokładnie, jak można zidentyfikować granice poszczególne mikrousługi firmy i jej powiązane danych i modelu domeny. Zawsze próbować zminimalizować sprzężenie między tymi mikrousług. Ten przewodnik zawiera bardziej szczegółowe o ten projekt modelu identyfikacji i domeny w sekcji [identyfikowanie ograniczeń modelu domeny dla poszczególnych mikrousług](#identifying-domain-model-boundaries-for-each-microservice) później.
+Sposób identyfikacji granic między wiele kontekstów aplikacji z innej domeny, dla każdego kontekstu jest dokładnie, jak można zidentyfikować granice poszczególne mikrousługi firmy i jej powiązane danych i modelu domeny. Zawsze próbować zminimalizować sprzężenie między tymi mikrousług. Ten przewodnik zawiera bardziej szczegółowe o ten projekt modelu identyfikacji i domeny w sekcji [identyfikowanie ograniczeń modelu domeny dla poszczególnych mikrousług](identify-microservice-domain-model-boundaries.md) później.
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Wyzwanie \#2: jak tworzyć zapytania, które pobierają dane z wielu mikrousług
 
@@ -57,7 +57,7 @@ Podane przez [kolejnego elementu teorii CAP](https://en.wikipedia.org/wiki/CAP_t
 
 Ponadto ACID stylu lub dwufazowe zatwierdzanie transakcji nie są tylko względem zasad mikrousług. Większość baz danych NoSQL (np. usługi Azure Cosmos DB, bazy danych MongoDB itp.) nie obsługują dwufazowego zatwierdzania transakcji. Obsługa danych spójności w różnych usługach i baz danych jest jednak niezbędne. Temu wyzwaniu dotyczy również zapytania dotyczące propagujące zmiany w wielu mikrousług, gdy konieczne jest nadmiarowy niektórych danych — na przykład, gdy musisz mieć nazwę produktu lub opis w mikrousługach wykazu i koszyka mikrousługi.
 
-Dobrym rozwiązaniem tego problemu jest używać spójności ostatecznej między mikrousługami przegubowe za pośrednictwem komunikacji oparte na zdarzeniach i systemem publikowania i subskrybowania. Te tematy zostały omówione w sekcji [komunikacji asynchronicznej oparte na zdarzeniach](#async_event_driven_communication) później w tym przewodniku.
+Dobrym rozwiązaniem tego problemu jest używać spójności ostatecznej między mikrousługami przegubowe za pośrednictwem komunikacji oparte na zdarzeniach i systemem publikowania i subskrybowania. Te tematy zostały omówione w sekcji [komunikacji asynchronicznej oparte na zdarzeniach](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) później w tym przewodniku.
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Wyzwanie \#4: jak projektować komunikacji między granicami mikrousług
 

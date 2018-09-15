@@ -3,11 +3,11 @@ title: Zabezpieczanie aplikacje klienckich
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507589"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649175"
 ---
 # <a name="secure-client-applications"></a>Zabezpieczanie aplikacje klienckich
 Aplikacje składają się zazwyczaj z wielu części, które muszą być wszystkie chronione przed lukami w zabezpieczeniach, które mogą spowodować utratę danych lub w przeciwnym razie naruszyć bezpieczeństwo systemu. Tworzenie interfejsów użytkownika bezpiecznego może uniemożliwić wielu problemów przez blokowanie osoby atakujące przed uzyskaniem dostępu do danych lub zasobów systemowych.  

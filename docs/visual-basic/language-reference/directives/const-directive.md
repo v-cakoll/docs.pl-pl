@@ -16,41 +16,41 @@ helpviewer_keywords:
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
 ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181368"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646707"
 ---
-# <a name="const-directive"></a><span data-ttu-id="ab029-102">#Const — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="ab029-102">#Const Directive</span></span>
-<span data-ttu-id="ab029-103">Definiuje stałe warunkowe kompilatora dla języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ab029-103">Defines conditional compiler constants for Visual Basic.</span></span>  
+# <a name="const-directive"></a><span data-ttu-id="16c0a-102">#Const — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="16c0a-102">#Const Directive</span></span>
+<span data-ttu-id="16c0a-103">Definiuje stałe warunkowe kompilatora dla języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="16c0a-103">Defines conditional compiler constants for Visual Basic.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab029-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ab029-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16c0a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="16c0a-104">Syntax</span></span>  
   
 ```  
 #Const constname = expression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="ab029-105">Części</span><span class="sxs-lookup"><span data-stu-id="ab029-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="16c0a-105">Części</span><span class="sxs-lookup"><span data-stu-id="16c0a-105">Parts</span></span>  
  `constname`  
- <span data-ttu-id="ab029-106">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="ab029-106">Required.</span></span> <span data-ttu-id="ab029-107">Nazwa — stała definiowanego.</span><span class="sxs-lookup"><span data-stu-id="ab029-107">Name of the constant being defined.</span></span>  
+ <span data-ttu-id="16c0a-106">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="16c0a-106">Required.</span></span> <span data-ttu-id="16c0a-107">Nazwa — stała definiowanego.</span><span class="sxs-lookup"><span data-stu-id="16c0a-107">Name of the constant being defined.</span></span>  
   
  `expression`  
- <span data-ttu-id="ab029-108">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="ab029-108">Required.</span></span> <span data-ttu-id="ab029-109">Literał, inne stałe warunkowe kompilatora lub dowolną kombinację, który zawiera dowolnych lub wszystkich operatorów arytmetycznych lub logiczne, z wyjątkiem `Is`.</span><span class="sxs-lookup"><span data-stu-id="ab029-109">Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.</span></span>  
+ <span data-ttu-id="16c0a-108">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="16c0a-108">Required.</span></span> <span data-ttu-id="16c0a-109">Literał, inne stałe warunkowe kompilatora lub dowolną kombinację, który zawiera dowolnych lub wszystkich operatorów arytmetycznych lub logiczne, z wyjątkiem `Is`.</span><span class="sxs-lookup"><span data-stu-id="16c0a-109">Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ab029-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ab029-110">Remarks</span></span>  
- <span data-ttu-id="ab029-111">Warunkowe stałe kompilatora są zawsze prywatne dla pliku, w jakiej są wyświetlane.</span><span class="sxs-lookup"><span data-stu-id="ab029-111">Conditional compiler constants are always private to the file in which they appear.</span></span> <span data-ttu-id="ab029-112">Nie można utworzyć stałe kompilatora publicznych, przy użyciu `#Const` dyrektywę; można je utworzyć, tylko w interfejsie użytkownika lub za pomocą `/define` — opcja kompilatora.</span><span class="sxs-lookup"><span data-stu-id="ab029-112">You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="16c0a-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="16c0a-110">Remarks</span></span>  
+ <span data-ttu-id="16c0a-111">Warunkowe stałe kompilatora są zawsze prywatne dla pliku, w jakiej są wyświetlane.</span><span class="sxs-lookup"><span data-stu-id="16c0a-111">Conditional compiler constants are always private to the file in which they appear.</span></span> <span data-ttu-id="16c0a-112">Nie można utworzyć stałe kompilatora publicznych, przy użyciu `#Const` dyrektywę; można je utworzyć, tylko w interfejsie użytkownika lub za pomocą `/define` — opcja kompilatora.</span><span class="sxs-lookup"><span data-stu-id="16c0a-112">You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.</span></span>  
   
- <span data-ttu-id="ab029-113">Można użyć tylko warunkowe stałe kompilatora i literały w `expression`.</span><span class="sxs-lookup"><span data-stu-id="ab029-113">You can use only conditional compiler constants and literals in `expression`.</span></span> <span data-ttu-id="ab029-114">Przy użyciu standardowych stałą zdefiniowane za pomocą `Const` powoduje błąd.</span><span class="sxs-lookup"><span data-stu-id="ab029-114">Using a standard constant defined with `Const` causes an error.</span></span> <span data-ttu-id="ab029-115">Z drugiej strony, można użyć stałe zdefiniowane za pomocą `#Const` — słowo kluczowe tylko w przypadku kompilacji warunkowej.</span><span class="sxs-lookup"><span data-stu-id="ab029-115">Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation.</span></span> <span data-ttu-id="ab029-116">Stałe również może być niezdefiniowana, w którym to przypadku mają wartość `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="ab029-116">Constants can also be undefined, in which case they have a value of `Nothing`.</span></span>  
+ <span data-ttu-id="16c0a-113">Można użyć tylko warunkowe stałe kompilatora i literały w `expression`.</span><span class="sxs-lookup"><span data-stu-id="16c0a-113">You can use only conditional compiler constants and literals in `expression`.</span></span> <span data-ttu-id="16c0a-114">Przy użyciu standardowych stałą zdefiniowane za pomocą `Const` powoduje błąd.</span><span class="sxs-lookup"><span data-stu-id="16c0a-114">Using a standard constant defined with `Const` causes an error.</span></span> <span data-ttu-id="16c0a-115">Z drugiej strony, można użyć stałe zdefiniowane za pomocą `#Const` — słowo kluczowe tylko w przypadku kompilacji warunkowej.</span><span class="sxs-lookup"><span data-stu-id="16c0a-115">Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation.</span></span> <span data-ttu-id="16c0a-116">Stałe również może być niezdefiniowana, w którym to przypadku mają wartość `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="16c0a-116">Constants can also be undefined, in which case they have a value of `Nothing`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ab029-117">Przykład</span><span class="sxs-lookup"><span data-stu-id="ab029-117">Example</span></span>  
- <span data-ttu-id="ab029-118">Dyrektywa `#Const` została użyta w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="ab029-118">This example uses the `#Const` directive.</span></span>  
+## <a name="example"></a><span data-ttu-id="16c0a-117">Przykład</span><span class="sxs-lookup"><span data-stu-id="16c0a-117">Example</span></span>  
+ <span data-ttu-id="16c0a-118">Dyrektywa `#Const` została użyta w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="16c0a-118">This example uses the `#Const` directive.</span></span>  
   
  [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="ab029-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ab029-119">See Also</span></span>  
- [<span data-ttu-id="ab029-120">/ define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab029-120">/define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)  
- [<span data-ttu-id="ab029-121">#If...Then...#Else, dyrektywy</span><span class="sxs-lookup"><span data-stu-id="ab029-121">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [<span data-ttu-id="ab029-122">Const, instrukcja</span><span class="sxs-lookup"><span data-stu-id="ab029-122">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
- [<span data-ttu-id="ab029-123">Kompilacja warunkowa</span><span class="sxs-lookup"><span data-stu-id="ab029-123">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- [<span data-ttu-id="ab029-124">Dyrektywa #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="ab029-124">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+## <a name="see-also"></a><span data-ttu-id="16c0a-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="16c0a-119">See Also</span></span>  
+ [<span data-ttu-id="16c0a-120">/ define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="16c0a-120">/define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)  
+ [<span data-ttu-id="16c0a-121">#If...Then...#Else, dyrektywy</span><span class="sxs-lookup"><span data-stu-id="16c0a-121">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="16c0a-122">Const, instrukcja</span><span class="sxs-lookup"><span data-stu-id="16c0a-122">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="16c0a-123">Kompilacja warunkowa</span><span class="sxs-lookup"><span data-stu-id="16c0a-123">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [<span data-ttu-id="16c0a-124">Dyrektywa #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="16c0a-124">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

@@ -11,11 +11,11 @@ ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb520169f8e7925862d415a4dfb65af09263b0d2
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583164"
+ms.locfileid: "45613920"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Porady: anulowanie zadania i jego elementów podrzędnych
 Te przykłady przedstawiają sposób wykonywania następujących zadań:  

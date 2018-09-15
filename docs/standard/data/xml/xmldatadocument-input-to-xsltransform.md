@@ -6,11 +6,11 @@ ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e7fb30104f36a565f4e6742c8f808c48e4ef39ec
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569427"
+ms.locfileid: "45625350"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>Dane wejściowe obiektu XmlDataDocument klasy xsltransform
 > [!NOTE]

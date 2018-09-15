@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
 ms.openlocfilehash: c88deeb679a3e8f2027d6bb2e817edc1ade5926d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519856"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625051"
 ---
 # <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Jak określić FillBehavior dla przedziału czasowego, który osiągnął koniec swojego okresu aktywności
 W tym przykładzie pokazano, jak określić <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> dla nieaktywnych <xref:System.Windows.Media.Animation.Timeline> właściwości animowany.  

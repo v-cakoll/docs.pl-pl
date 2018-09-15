@@ -13,11 +13,11 @@ helpviewer_keywords:
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
 ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569466"
+ms.locfileid: "45618821"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedury ogólne w Visual Basic
 A *ogólna procedura*, nazywane również *metody ogólnej*, jest to procedura zdefiniowany co najmniej jednego parametru typu. Dzięki temu kod wywołujący, aby dostosować typy danych do ich wymagania dotyczące zawsze wywołuje procedurę.  

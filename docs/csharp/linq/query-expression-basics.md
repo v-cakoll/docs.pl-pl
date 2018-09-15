@@ -4,11 +4,11 @@ description: Wprowadza pojęcia związane z wyrażenia zapytania
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
 ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705771"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625525"
 ---
 # <a name="query-expression-basics"></a>Podstawowe informacje o w wyrażeniach zapytań
 

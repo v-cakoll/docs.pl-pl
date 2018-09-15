@@ -12,11 +12,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 75cc2003a88cc7be467b9062c37b6b5d9eb82f53
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45568027"
+ms.locfileid: "45618902"
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;provideroption —&gt; — Element
 Określa atrybuty wersji kompilatora dla dostawcy języka.  

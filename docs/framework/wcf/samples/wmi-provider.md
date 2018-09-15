@@ -3,11 +3,11 @@ title: Dostawca WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
 ms.openlocfilehash: c3eb97537706282491de1863224e1502d6b56fda
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45585541"
+ms.locfileid: "45617944"
 ---
 # <a name="wmi-provider"></a>Dostawca WMI
 W tym przykładzie pokazano, jak zbieranie danych z usługi Windows Communication Foundation (WCF) w czasie wykonywania przy użyciu dostawcy Instrumentacji zarządzania Windows (WMI), która jest wbudowana w usługi WCF. Ponadto w tym przykładzie przedstawiono sposób dodawania obiektu WMI zdefiniowanych przez użytkownika do usługi. Przykładowe aktywuje dostawcy WMI o [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i pokazuje, jak zbierać dane z `ICalculator` usługi w czasie wykonywania.  

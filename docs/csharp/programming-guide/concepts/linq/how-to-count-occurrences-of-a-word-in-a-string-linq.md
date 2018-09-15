@@ -3,11 +3,11 @@ title: 'Porady: liczenie wystąpień wyrazu w ciągu (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
 ms.openlocfilehash: 48eda99970744a659a803f52bb3a3c499390f5c8
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44352966"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625168"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Porady: liczenie wystąpień wyrazu w ciągu (LINQ) (C#)
 W tym przykładzie pokazano, jak korzystać z zapytania LINQ można zliczać wystąpienia określonego wyrazu w ciągu. Należy pamiętać, że przeprowadzenie liczba <xref:System.String.Split%2A> metoda jest wywoływana, aby utworzyć tablicę słów. Występuje spadek wydajności, aby <xref:System.String.Split%2A> metody. W przypadku operacji tylko na ciąg do zliczania wyrazów, należy rozważyć użycie <xref:System.Text.RegularExpressions.Regex.Matches%2A> lub <xref:System.String.IndexOf%2A> metody zamiast tego. Jednak jeśli wydajność nie jest to problem krytyczny lub ma już Podziel zdania w celu wykonywania innych typów kwerend nad nim, następnie dobrym pomysłem liczba słów lub fraz, a także przy użyciu LINQ.  

@@ -3,11 +3,11 @@ title: 'Fixed — słowo kluczowe (F #)'
 description: 'Dowiedz się, jak "przypięcie" lokalnie na stosie zapobiegające kolekcji przy użyciu języka F # "fixed" — słowo kluczowe.'
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560376"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624512"
 ---
 # <a name="the-fixed-keyword"></a>Fixed — słowo kluczowe
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
 ms.openlocfilehash: c109615b9a0eb61d18f7f44e3248d2b24934ee5f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507748"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625883"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Porady: modyfikowanie sygnału z klawiatury do kontrolki standardowej
 Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzonych z klawiatury. Korzystanie z klucza odwołuje się do obsługi klucza w ramach metody lub procedury obsługi zdarzeń, tak, aby inne metody i zdarzenia dalszych szczegółów kolejka komunikatów nie mają wartości klucza. Zmodyfikowanie klucza odwołuje się do modyfikowania wartości klucza, tak aby metody i procedury obsługi zdarzeń dalszych szczegółów kolejki komunikatów odbierać różne wartości klucza. W tym temacie przedstawiono sposób wykonywania tych zadań.  

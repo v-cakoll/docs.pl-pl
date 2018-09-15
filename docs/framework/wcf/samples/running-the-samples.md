@@ -3,11 +3,11 @@ title: Uruchamianie przykładów programu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
 ms.openlocfilehash: d6fc93af217bfc282ce7030973be32baf7d864cd
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569232"
+ms.locfileid: "45618695"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Uruchamianie przykładów programu Windows Communication Foundation
 Przykłady Windows Communication Foundation (WCF) mogą być uruchamiane w konfiguracji pojedynczego komputera lub między komputerami. Dostarczony, próbki są gotowe do uruchamiania na jednym komputerze. W konfiguracji między komputerami jest niezbędnej do modyfikacji ustawień pliku konfiguracji w próbce. Poniższe procedury dotyczą sposobu uruchamiania przykładu w tym samym komputerze, jak i między komputerami konfiguracji. Należy pamiętać, że istnieją różnice w krokach dla usług hostowanych w Internet Information Services (IIS) i samodzielnie hostowanej próbek. Większość przykładów są hostowane w usługach IIS; Zapoznaj się z informacjami readme próbki, aby określić, jak jest hostowana.  

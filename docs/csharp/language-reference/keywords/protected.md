@@ -8,11 +8,11 @@ helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
 ms.openlocfilehash: f25e692430f876ec384971079d6d0aa2c97e967b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569492"
+ms.locfileid: "45615277"
 ---
 # <a name="protected-c-reference"></a>protected (odwołanie w C#)
 

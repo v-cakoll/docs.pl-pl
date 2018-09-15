@@ -11,11 +11,11 @@ ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 16dc60fa9cd8782efbe1b6028413138b5991839e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45568127"
+ms.locfileid: "45624843"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Porady: synchronizacja jednoczesnych operacji za pomocą bariery
 Poniższy przykład pokazuje, jak synchronizować równoczesnych zadań za pomocą <xref:System.Threading.Barrier>.  

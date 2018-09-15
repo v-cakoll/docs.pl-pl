@@ -3,11 +3,11 @@ title: Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (Visual Ba
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: fa1bfcc5cfaf4a3ba1f5116be7b3f1851ce293af
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560990"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625389"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (Visual Basic)
 Po dołączeniu asynchronicznego kodu w aplikacji należy wziąć pod uwagę i ewentualnie zapobiec współużytkowaniu wątkowości, która odwołuje się do ponownego wprowadzania operacji asynchronicznej, zanim została ukończona. Jeśli nie zidentyfikujesz i obsłużysz możliwości współużytkowania wątkowości, może to spowodować nieoczekiwane wyniki.  

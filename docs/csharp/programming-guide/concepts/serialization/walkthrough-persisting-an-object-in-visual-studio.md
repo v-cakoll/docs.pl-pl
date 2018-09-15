@@ -2,11 +2,11 @@
 title: 'Przewodnik: Przechowywanie obiektu przy użyciu języka C#'
 ms.date: 04/26/2018
 ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353658"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625116"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Przewodnik: przechowywanie obiektu przy użyciu języka C# #
 

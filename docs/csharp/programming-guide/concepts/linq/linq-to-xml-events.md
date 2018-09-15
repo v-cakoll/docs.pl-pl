@@ -3,11 +3,11 @@ title: Zdarzenia LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
 ms.openlocfilehash: 6308d81eac830e11b6d58f8e460dfa377663cd21
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527740"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625681"
 ---
 # <a name="linq-to-xml-events-c"></a>Zdarzenia LINQ to XML (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zdarzenia umożliwiają otrzymasz powiadomienie, gdy zostanie zmieniona drzewa XML.  

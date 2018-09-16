@@ -16,11 +16,11 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: 824c1e47cf50dc13a3a986e48a49158b15dbb935
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699858"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677334"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Wskazówki: debugowanie niestandardowych formantów formularzy systemu Windows w czasie projektowania
 Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugowania zachowania w czasie projektowania. Jest to szczególnie istotne w przypadku tworzenia niestandardowego projektanta dla formantu niestandardowego. Aby uzyskać więcej informacji, zobacz [wskazówki: tworzenie Windows Forms kontroli, przyjmuje korzystać z czasu projektowania funkcje programu Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  

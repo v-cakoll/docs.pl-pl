@@ -3,11 +3,11 @@ title: Użycie Async do uzyskiwania dostępu do plików (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
 ms.openlocfilehash: bbaeb14d5c17665308932c26a0630f1e9e5dabdf
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45570330"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677230"
 ---
 # <a name="using-async-for-file-access-c"></a>Użycie Async do uzyskiwania dostępu do plików (C#)
 Funkcja async dostępu do plików. Za pomocą funkcji asynchronicznych, można wywoływać do metod asynchronicznych bez za pomocą wywołania zwrotne lub podział swój kod w wielu metod lub wyrażenia lambda. Aby synchroniczny kod asynchroniczny, możesz po prostu Wywołaj metodę asynchroniczną zamiast metody synchronicznej i dodać kilka słów kluczowych w kodzie.  

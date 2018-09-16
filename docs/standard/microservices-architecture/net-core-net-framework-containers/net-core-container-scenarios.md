@@ -1,55 +1,57 @@
 ---
 title: Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 761a9579cc301b7ca4b949a2a83af20ab8bb0f20
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104656"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666606"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
 
-Modułowości i lightweight rodzaj .NET Core sprawia, że idealne dla kontenerów. Wdrażania i uruchomić kontener, jego obrazu jest znacznie mniejszy z platformą .NET Core niż platformy .NET Framework. Z kolei używanie środowiska .NET Framework dla kontenera, należy utworzyć obraz w obrazie systemu Windows Server Core, czyli znacznie większych niż Windows Nano Server lub Linux obrazów, używane dla platformy .NET Core.
+Charakter modułowości i uproszczonego programu .NET Core sprawia, że doskonałe dla kontenerów. Podczas wdrażanie i uruchamianie kontenera, obraz jest znacznie mniejszy z platformą .NET Core niż za pomocą .NET Framework. Z kolei używać .NET Framework dla kontenera, należy utworzyć obraz na obrazu systemu Windows Server Core, który jest znacznie większych niż Windows Nano Server lub obrazów systemu Linux, których używasz dla platformy .NET Core.
 
-Ponadto oprogramowanie .NET Core jest między platformami, więc można wdrażać aplikacje serwera z systemem Linux lub Windows obrazami kontenera. Jednak jeśli korzystasz z tradycyjnego .NET Framework, można wdrażać tylko obrazy oparte na systemie Windows Server Core.
+Ponadto platforma .NET Core to dla wielu platform, dzięki czemu można wdrażać aplikacji serwera przy użyciu obrazów kontenerów systemu Linux lub Windows. Jednak jeśli używasz tradycyjnych .NET Framework, można wdrażać tylko obrazy oparte na systemie Windows Server Core.
 
-Poniżej znajduje się bardziej szczegółowy opis dlaczego wybierz .NET Core.
+Oto bardziej szczegółowe wyjaśnienie, dlaczego wybrać oprogramowanie .NET Core.
 
-## <a name="developing-and-deploying-cross-platform"></a>Tworzenie i wdrażanie cross platform
+## <a name="developing-and-deploying-cross-platform"></a>Tworzenie i wdrażanie wiele platform
 
-Wyraźnie widać jeśli mają być aplikacji (aplikacji sieci web lub usługi), która może działać na wielu platformach obsługiwanych przez Docker (Linux i Windows), warto wybrać jest .NET Core, ponieważ .NET Framework obsługuje tylko systemu Windows.
+Wyraźnie widać Jeśli celem jest zapewnienie aplikacji (aplikacji sieci web lub usługi), która może działać na wielu platformach obsługiwanych przez platformę Docker w systemie Linux i Windows, właściwym wyborem jest platformy .NET Core, ponieważ program .NET Framework obsługuje tylko Windows.
 
-Oprogramowanie .NET core obsługuje również system macOS jako platformy programistycznej. Jednak gdy wdrożeniem kontenerów do hostów Docker hostujących musi (obecnie) oparta na Linux lub Windows. Na przykład w środowisku programowania można użyć maszyny Wirtualnej systemu Linux uruchomionych na komputerach Mac.
+.NET core obsługuje również system macOS jako platformy projektowej. Jednak podczas wdrażania kontenerów hosta platformy Docker tego hosta musi (obecnie) oparta na systemie Linux lub Windows. Na przykład w środowisku deweloperskim, możesz użyć maszyny Wirtualnej systemu Linux uruchomiony na komputerze Mac.
 
-[Visual Studio](https://visualstudio.microsoft.com/) zapewnia zintegrowane środowisko programistyczne (IDE) dla systemu Windows i obsługuje programowanie Docker. 
+[Program Visual Studio](https://www.visualstudio.com/vs/) udostępnia zintegrowanym środowisku programistycznym (IDE) dla Windows i wspiera rozwój platformy Docker.
 
-[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) IDE ewolucja platformy Xamarin Studio, uruchomionych w macOS i obsługuje od połowy 2017 Docker.
+[Program Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) to środowisko IDE, rozwoju programu Xamarin Studio, która działa w systemie macOS i obsługuje opracowywanie aplikacji opartych na platformie Docker. Powinna to być preferowanych przez dla deweloperów pracujących w komputerów Mac, również chcą korzystać z zaawansowanego środowiska IDE.
 
-Można również użyć [Visual Studio Code](https://code.visualstudio.com/) (kodzie VS) na macOS, Linux i Windows. Kod programu VS w pełni obsługuje .NET Core, w tym IntelliSense i debugowania. Ponieważ kodzie VS jest lekki edytora, można użyć go do opracowywania aplikacji konteneryzowanych na Mac w połączeniu z poziomu interfejsu wiersza polecenia Docker i [narzędzi interfejsu wiersza polecenia (CLI) platformy .NET Core](../../../core/tools/index.md). Można również docelowych .NET Core edytory najbardziej innych firm, takich jak Sublime tekstu, Emacs vi i OmniSharp projekt open source, co zapewnia obsługę funkcji IntelliSense dla języków .NET. Oprócz IDEs i edytory można użyć interfejsu wiersza polecenia platformy .NET Core dla wszystkich obsługiwanych platformach.
+Można również użyć [programu Visual Studio Code](https://code.visualstudio.com/) (VS Code) w systemach macOS, Linux i Windows. Program VS Code w pełni obsługuje platformę .NET Core, w tym funkcji IntelliSense i debugowania. Ponieważ program VS Code to lekki edytor, służy do tworzenia konteneryzowanych aplikacji na komputerze Mac w połączeniu z interfejsem wiersza polecenia platformy Docker i [platformy .NET Core interfejsu wiersza polecenia (CLI)](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x). Możesz również kierować platformy .NET Core za pomocą edytorów większości firm, takich jak Sublime, Emacs vi i projekt technologię OmniSharp typu open source, który obsługuje technologię IntelliSense.
+
+Oprócz środowiska IDE i edytorów, można użyć [interfejsu wiersza polecenia platformy .NET Core](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x) narzędzia dla wszystkich obsługiwanych platform.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Używanie kontenerów dla nowych projektów ("pole zielony")
 
-Kontenery są często używane w połączeniu z architekturą mikrousług, chociaż są one może również służyć do containerize aplikacji sieci web lub usługi, które należy wykonać wszelkie wzorzec architektury. Kontenery systemu Windows, ale Modułowość służy .NET Framework i lekkie rodzaj .NET Core sprawia, że idealne w przypadku architektury kontenery i mikrousług. Podczas tworzenia i wdrażania kontener jego obrazu jest znacznie mniejszy z platformą .NET Core niż platformy .NET Framework.
+Kontenery są często używane w połączeniu z architektury mikrousług, mimo że one może również służyć do konteneryzowanie aplikacji sieci web lub usługi, które należy wykonać wszelkie wzorzec architektury. .NET Framework można używać na kontenery Windows, ale Modułowość i charakter uproszczonego programu .NET Core sprawia, że doskonale dla architektur mikrousług i kontenerów. Podczas tworzenia i wdrażania kontenera jego obraz jest znacznie mniejszy z platformą .NET Core niż za pomocą .NET Framework.
 
-## <a name="creating-and-deploying-microservices-on-containers"></a>Tworzenie i wdrażanie mikrousług kontenerów
+## <a name="creating-and-deploying-microservices-on-containers"></a>Tworzenie i wdrażanie mikrousług w kontenerach
 
-Tradycyjny .NET Framework można użyć do tworzenia aplikacji opartych na mikrousług (bez kontenery) przy użyciu zwykłego procesów. W ten sposób, ponieważ programu .NET Framework jest już zainstalowany i współużytkowane przez procesy, procesy są jasny i szybko uruchomić. Jednak jeśli używasz kontenery obrazu dla tradycyjnych .NET Framework opiera się również w systemie Windows Server Core i dzięki temu zbyt duże podejścia mikrousług na kontenerów.
+Można użyć do tworzenia aplikacji opartych na mikrousługach (bez kontenery) przy użyciu zwykłego procesy tradycyjnych .NET Framework. W ten sposób, ponieważ programu .NET Framework jest już zainstalowany i współużytkowane przez procesy, procesy są stosunkowo i szybkie, aby rozpocząć. Jednak korzystania z kontenerów obrazu dla tradycyjnych .NET Framework również opiera się na systemie Windows Server Core, i dzięki temu zbyt duże, podejście mikrousług w kontenerach.
 
-Z kolei .NET Core jest najlepszej sugestii, jeśli są obejmującego zorientowane na mikrousług systemu, w którym jest oparty na kontenery, ponieważ jest lekki .NET Core. Ponadto jego kontenera powiązane obrazów, obraz systemu Linux lub obrazu systemu Windows Nano są gotowa i małych wprowadzania jasny kontenery i szybkie, aby rozpocząć.
+Z kolei platformy .NET Core jest najlepszej sugestii, jeśli są stosujących zorientowanych na mikrousługi systemu, który jest oparty na kontenerach, ponieważ platforma .NET Core to uproszczone. Ponadto obrazy powiązane kontenera, obraz systemu Linux lub obrazu systemu Windows Nano to odchudzona i małe, wprowadzania światła kontenerów i szybko zacząć.
 
-Mikrousługi ma być możliwie jak najmniejszy: jest lekki, gdy kręci się, aby mieć niewielkie rozmiary, mieć małych ograniczone kontekst — do reprezentowania mały obszar problemy oraz aby można było uruchomić i zatrzymać szybkie. Te wymagania należy używać obrazów kontenera małych i fast wystąpienia takich jak obraz kontenera .NET Core.
+Mikrousługi można w dużym możliwie najmniejsze: o niewielkich rozmiarach, ma mały kontekstu ograniczonego, aby być światła, gdy wdrażanie (Sprawdź DDD, [projektowania driven](https://en.wikipedia.org/wiki/Domain-driven_design)) do reprezentowania mały obszar problemów i aby można było uruchomić i szybkie zatrzymanie. Te wymagania należy używać obrazów małe i szybko wystąpienia kontenera, takich jak obraz kontenera platformy .NET Core.
 
-Architektura mikrousług umożliwia także mieszać technologii granicy usługi. Dzięki temu stopniowej migracji do .NET Core dla nowych mikrousług, które działają w połączeniu z innymi mikrousług lub z usługami opracowany ze środowiska Node.js, Python, Java, GoLang ani innych technologii.
+Architektura mikrousług umożliwia także mieszać technologii granicę usługi. Dzięki temu Stopniowa migracja do programu .NET Core dla nowych mikrousług, które działają w połączeniu z innymi mikrousług lub usług opracowanych za pomocą środowiska Node.js, Python, Java, języku GoLang lub inne technologie.
 
-## <a name="deploying-high-density-in-scalable-systems"></a>Wdrażanie w skalowalne systemy o wysokiej gęstości
+## <a name="deploying-high-density-in-scalable-systems"></a>Skalowalne systemy wdrożenia o wysokiej gęstości
 
-Gdy systemu kontenera musi najlepsze możliwe gęstość, poziom szczegółowości i wydajności, oprogramowanie .NET Core i ASP.NET Core są najlepsze opcje. Platformy ASP.NET Core jest maksymalnie 10 razy szybsze niż ASP.NET w tradycyjnych .NET Framework i prowadzi innych popularnych branżowymi technologiami dla mikrousług, takie jak servlets Java, podróży i Node.js.
+Gdy opartych na kontenerach systemu musi najlepsze możliwe gęstości, poziom szczegółowości i wydajności, .NET Core i ASP.NET Core są najlepsze opcje. Platforma ASP.NET Core to do dziesięciu razy szybciej niż platformy ASP.NET w tradycyjnych .NET Framework i prowadzi inne technologie popularnych branży mikrousług, takich jak serwletów języka Java, Go i Node.js.
 
-Jest to szczególnie istotne dla architektury mikrousług, gdzie mogą być setki mikrousług (kontenery) uruchomione. Za pomocą platformy ASP.NET Core obrazów (w oparciu środowiska uruchomieniowego .NET Core) w systemie Linux lub Nano systemu Windows można uruchomić system ze znacznie mniejszą liczbę serwerów lub maszyn wirtualnych, a ostatecznie zapisaniem kosztów infrastruktury i hostingu.
+Jest to szczególnie istotne dla architektury mikrousług, gdzie mogą istnieć setki mikrousługi (kontenery) uruchomiona. Przy użyciu platformy ASP.NET Core obrazów (oparte na środowisko uruchomieniowe platformy .NET Core) w systemie Linux lub Windows Nano możesz uruchomić systemu za pomocą znacznie mniejszej liczby serwerów lub maszyn wirtualnych, ostatecznie minimalizując koszty w infrastrukturze i hostingu.
 
 
 >[!div class="step-by-step"]

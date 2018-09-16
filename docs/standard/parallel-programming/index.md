@@ -1,24 +1,28 @@
 ---
 title: Programowanie równoległe w .NET
-ms.date: 03/30/2017
+ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 372ffd7e17f60b8045cd5f89d52456c5f9655de1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3d1cd0b797373da4cab59484e3e6302927d821ed
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802306"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676736"
 ---
 # <a name="parallel-programming-in-net"></a>Programowanie równoległe w .NET
 
-Wiele komputerów osobistych i stacji roboczych ma wiele rdzeni procesora CPU, które umożliwiają jednoczesne wykonywane wielu wątków. Komputery w najbliższej przyszłości powinny mieć znacznie więcej rdzeni. Aby skorzystać z możliwości dzisiejszego i jutrzejszego sprzętu, można zrównoleglić kod w celu rozłożenia pracy na wiele procesorów. W przeszłości przetwarzanie równoległe wymagało operowania wątkami i blokadami na niskim poziomie. Visual Studio 2010 oraz programu .NET Framework 4 należy poprawić obsługę programowania równoległego, zapewniając nowego środowiska uruchomieniowego, nowych typów bibliotek klas i nowych narzędzi diagnostycznych. Te funkcje upraszczają równoległe programowanie, dzięki czemu można tworzyć wydajny, precyzyjny i skalowalny kod przetwarzania równoległego w języku naturalnym bez konieczności bezpośredniej pracy z wątkami lub pulą wątków. Poniższa ilustracja zawiera ogólne omówienie architektury programowania równoległego w .NET Framework 4.
+Wiele komputerów osobistych i stacji roboczych ma wiele rdzeni procesora CPU, które umożliwiają jednoczesne wykonywane wielu wątków. Aby móc korzystać z urządzeń, można zrównoleglić kod w celu rozłożenia pracy na wiele procesorów.
 
- ![Architektura programowania równoległego w .NET](./media/tpl-architecture.png "TPL_Architecture")
+W przeszłości przetwarzanie równoległe wymagało operowania wątkami i blokadami na niskim poziomie. Visual Studio i .NET Framework pozwala zwiększyć obsługę programowania równoległego, dostarczając środowisko uruchomieniowe, typy biblioteki klas i narzędzia diagnostyczne. Te funkcje, które zostały wprowadzone w programie .NET Framework 4, upraszczają równoległe programowanie. Można napisać wydajny, precyzyjny i skalowalny kod przetwarzania równoległego w języku naturalnym, bez konieczności bezpośredniej pracy z wątkami lub pulą wątków.
+
+Poniższa ilustracja zawiera przegląd wysokiego poziomu architektury programowania równoległego w .NET Framework:
+
+![Architektura programowania równoległego w .NET](./media/tpl-architecture.png)
 
 ## <a name="related-topics"></a>Tematy pokrewne
 

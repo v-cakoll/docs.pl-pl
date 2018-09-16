@@ -13,11 +13,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4d39dc28082fbed932a60228ac216f2f700c2e9f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526892"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664556"
 ---
 # <a name="ltstartupgt-element"></a>&lt;uruchamianie&gt; — Element
 Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka.  

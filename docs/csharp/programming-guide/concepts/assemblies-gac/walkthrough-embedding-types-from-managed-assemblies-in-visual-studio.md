@@ -3,11 +3,11 @@ title: 'Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visua
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44510171"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668395"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)
 W przypadku osadzenia informacji o typie z zarządzanego zestawu z silną nazwą, luźno połączyć typy w aplikacji, aby osiągnąć niezależność. Oznacza to by używał typów z wielu wersji zarządzanej biblioteki bez konieczności ponownie skompilowana dla każdej wersji można napisać program.  

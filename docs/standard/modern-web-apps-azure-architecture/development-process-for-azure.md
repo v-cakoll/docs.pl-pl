@@ -5,11 +5,11 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
 ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45587613"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668980"
 ---
 # <a name="development-process-for-azure"></a>Proces programistyczny dla platformy Azure
 

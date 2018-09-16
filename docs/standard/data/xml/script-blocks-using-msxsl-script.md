@@ -9,11 +9,11 @@ ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c4d7dee9ebaed20970f715026661c29aae701289
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45570135"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45686092"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Skrypt bloki msxsl: Script
 <xref:System.Xml.Xsl.XslCompiledTransform> Klasa obsługuje osadzonych skryptów przy użyciu `msxsl:script` elementu. Gdy arkusz stylów jest ładowany, wszystkie funkcje zdefiniowane są kompilowane do języka Microsoft intermediate language (MSIL) przez kod Document Object Model (CodeDOM) i są wykonywane w czasie wykonywania. Zestaw wygenerowany na podstawie bloku osadzonych skryptów jest oddzielony niż zestaw wygenerowany dla arkusza stylów.  

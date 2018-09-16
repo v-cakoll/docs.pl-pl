@@ -8,11 +8,11 @@ ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514673"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676710"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Kiedy należy używać kolekcji bezpiecznych wątkowo
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Wprowadza pięć nowe typy kolekcji, które są specjalnie przeznaczone do wsparcia wielowątkowych dodawania i usuwania działań. Do zapewnienia bezpieczeństwa wątkowego, te nowe typy użyć różnych rodzajów blokowanie wydajne i mechanizmy bezblokadowe synchronizacji. Synchronizacja obciążenie dodaje się do operacji. Obciążenie zależy od rodzaju synchronizacji, która jest używana, rodzaj operacji, które są wykonywane i innych czynników, takich jak liczba wątków, które próbują jednocześnie uzyskać dostęp do kolekcji.  

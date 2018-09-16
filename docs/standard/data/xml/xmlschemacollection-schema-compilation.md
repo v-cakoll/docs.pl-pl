@@ -9,11 +9,11 @@ ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7b6ea782020dde83aa7d59be8ec3058a27075ad
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365046"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677705"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Kompilacja schematu a klasa XmlSchemaCollection
 **Użyciu klasy XmlSchemaCollection** pamięci podręcznej lub biblioteki, gdzie danych XML (XDR) i schematu XML schematów języka (XSD) definicji mogą być przechowywane i zweryfikowane. **Użyciu klasy XmlSchemaCollection** zwiększa wydajność, buforowanie schematów w pamięci, a nie dostępu do nich z pliku lub adres URL.  

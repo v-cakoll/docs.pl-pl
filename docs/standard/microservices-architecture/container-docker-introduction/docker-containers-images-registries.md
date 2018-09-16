@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
 ms.openlocfilehash: 651da766bc5931f5afa06699d1ec11fa40147e82
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521326"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678272"
 ---
 # <a name="docker-containers-images-and-registries"></a>Kontenery platformy docker, obrazy i rejestry
 

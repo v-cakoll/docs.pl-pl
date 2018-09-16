@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507735"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674627"
 ---
 # <a name="comparing-strings-in-net"></a>Porównywanie ciągów w programie .NET
 .NET zapewnia kilka metod, aby porównać wartości ciągów. Poniższej tabeli wymieniono i opisano metody porównania wartości.  
@@ -154,4 +154,5 @@ ms.locfileid: "45507735"
 
 - [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)  
 - [Wykonywanie niezależnych od kultury operacji na ciągach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Tabele wagi sortowania](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Sortowanie wagi tabel (w przypadku platformy .NET, Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Tabela elementów sortowanie domyślne Unicode (dla platformy .NET Core w systemie Linux i macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

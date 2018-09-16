@@ -6,11 +6,11 @@ helpviewer_keywords:
 - FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
 ms.openlocfilehash: 1a22071696ca012968e042e15cd8a9f4b876fd9f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204620"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668343"
 ---
 # <a name="filterinputmessage"></a>FilterInputMessage
 Metoda wywoływana przez PresentationHost.exe zawsze wtedy, gdy wiadomość zostaje odebrana, chyba że E_NOTIMPL jest zwracana.  

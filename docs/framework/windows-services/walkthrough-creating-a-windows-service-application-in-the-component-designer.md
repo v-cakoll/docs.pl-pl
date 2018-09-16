@@ -11,11 +11,11 @@ ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
 ms.openlocfilehash: 27acdac5d34b96dd04fec1bb763edec9077ff928
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708721"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677373"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>Przewodnik: Tworzenie aplikacji usługi Windows
 

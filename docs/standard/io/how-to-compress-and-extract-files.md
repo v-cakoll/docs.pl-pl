@@ -13,11 +13,11 @@ ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 669936d15cfe1ea125ed36ffdfcfd093b6aacbe1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44225084"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45687637"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Porady: kompresowanie i wyodrębnianie plików
 

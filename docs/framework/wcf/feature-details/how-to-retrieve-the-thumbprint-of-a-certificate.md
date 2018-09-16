@@ -5,11 +5,11 @@ helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
 ms.openlocfilehash: f520e897ad467686e0dc151548a61ea8370eb07a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513352"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685559"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Porady: Pobieranie odcisku palca certyfikatu
 Podczas pisania aplikacji Windows Communication Foundation (WCF), który używa certyfikatu X.509 do uwierzytelniania, często jest niezbędne do określenia oświadczenia znalezione w certyfikacie. Na przykład, należy podać oświadczenia odcisk palca, korzystając z <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> wyliczenia w <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody. Znajdowanie wartość oświadczenia wymaga wykonania dwóch kroków. Najpierw otwórz przystawkę Microsoft Management Console (MMC) dla certyfikatów. (Zobacz [porady: wyświetlanie certyfikatów za pomocą przystawki programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Po drugie zgodnie z opisem w tym miejscu, Znajdź odpowiedni certyfikat i skopiować jego odcisk palca (lub inne wartości oświadczenia).  

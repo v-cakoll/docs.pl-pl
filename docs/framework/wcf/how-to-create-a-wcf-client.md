@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 9e6d75bf8911a3c36e63b3bc108faae823434d1d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: e5655a6fdc06e69d801cb38b7ee7412450f0d34c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44510002"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674146"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Instrukcje: Tworzenie klienta WCF (Windows Communication Foundation)
 
@@ -36,18 +36,18 @@ W tym temacie opisano, jak można pobrać metadanych z usługi WCF i użyć go d
 
 3.  Dodaj odwołanie do System.ServiceModel do projektu GettingStartedClient, klikając prawym przyciskiem myszy **odwołania** folderu w projekcie GettingStartedClient w Eksploratorze rozwiązań i wybierz pozycję **Dodaj** Odwołanie. W **Dodaj odwołanie** okna dialogowego wybierz **Framework** po lewej stronie okna dialogowego. W polu tekstowym wyszukiwania zestawów, wpisz `System.ServiceModel`. W górnej części okna dialogowego wybierz **System.ServiceModel**, kliknij przycisk **Dodaj** przycisk, a następnie kliknij przycisk **Zamknij** przycisku. Zapisz rozwiązania, klikając **Zapisz wszystko** znajdujący się poniżej menu głównego.
 
-4.  Następnie dodasz odwołanie do usługi z usługą kalkulatora. Aby to zrobić, należy uruchomić aplikację konsoli GettingStartedHost. Gdy host jest uruchomiona, kliknij prawym przyciskiem myszy **odwołania** folderu w projekcie GettingStartedClient w **Eksploratora rozwiązań** i wybierz **Dodaj**  >   **Dokumentacja usługi**. Wpisz następujący adres URL w polu adresu **Dodaj odwołanie do usługi** okna dialogowego: [ http://localhost:8000/ServiceModelSamples/Service ](http://localhost:8000/ServiceModelSamples/Service) i kliknij przycisk **Przejdź** przycisku. CalculatorService następnie powinna być wyświetlana w polu listy usług. Kliknij dwukrotnie CalculatorService i będzie on Rozwiń i Pokaż kontraktów usług implementowane przez usługę. Pozostaw domyślny obszar nazw i kliknij przycisk **OK** przycisku.
+4.  Następnie dodasz odwołanie do usługi z usługą kalkulatora. Aby to zrobić, należy uruchomić aplikację konsoli GettingStartedHost. Gdy host jest uruchomiona, kliknij prawym przyciskiem myszy **odwołania** folderu w projekcie GettingStartedClient w **Eksploratora rozwiązań** i wybierz **Dodaj**  >   **Dokumentacja usługi**. Wpisz następujący adres URL w polu adresu **Dodaj odwołanie do usługi** okna dialogowego: [ http://localhost:8000/GettingStartedClient/Service ](http://localhost:8000/GettingStartedClient/Service) i kliknij przycisk **Przejdź** przycisku. CalculatorService następnie powinna być wyświetlana w polu listy usług. Kliknij dwukrotnie CalculatorService i będzie on Rozwiń i Pokaż kontraktów usług implementowane przez usługę. Pozostaw domyślny obszar nazw i kliknij przycisk **OK** przycisku.
 
      Po dodaniu odwołania do usługi przy użyciu programu Visual Studio nowy element zostanie są wyświetlane w Eksploratorze rozwiązań, w obszarze folderu odwołania do usług w ramach projektu GettingStartedClient.  Jeśli używasz [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pliku kodu źródłowego i pliku app.config zostanie wygenerowany przez narzędzie.
 
      Można również użyć narzędzia wiersza polecenia [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) za pomocą odpowiednich przełączników, aby utworzyć kod klienta. Poniższy przykład generuje plik kodu i pliku konfiguracji usługi. Pierwszy przykład pokazuje, jak wygenerować serwera proxy w języku Visual Basic, a drugi pokazuje, jak wygenerowany serwer proxy w języku C#:
 
     ```
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/ServiceModelSamples/service
+    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStartedClient/service
     ```
 
     ```csharp
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/ServiceModelSamples/service
+    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStartedClient/service
     ```
 
  Utworzono serwer proxy, który aplikacja kliencka będzie używany do wywołania kalkulatora. Przejdź do następnego tematu w serii: [porady: Konfigurowanie klienta](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)

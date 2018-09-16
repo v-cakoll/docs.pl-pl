@@ -9,11 +9,11 @@ ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519672"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664686"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Wzorzec projektowy obserwatora — Najlepsze praktyki
 W .NET Framework po wzorcu projektowania obserwatora są zaimplementowane jako zestaw interfejsów. <xref:System.IObservable%601?displayProperty=nameWithType> Interfejs reprezentuje dostawcy danych, który jest również odpowiedzialny za zapewnienie <xref:System.IDisposable> implementację, która umożliwia obserwatorów zrezygnować z powiadomień. <xref:System.IObserver%601?displayProperty=nameWithType> Interfejs reprezentuje obserwatora. W tym temacie opisano najlepsze rozwiązania, które deweloperzy powinni stosować podczas implementowania po wzorcu projektowania obserwatora, za pomocą tych interfejsów.  

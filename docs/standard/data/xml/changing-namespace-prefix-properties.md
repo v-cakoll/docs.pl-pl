@@ -9,11 +9,11 @@ ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526723"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674302"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Zmienianie właściwości prefiksu Namespace
 **XmlNode** klasy pozwala na zmianę skojarzonych z danym węźle prefiks przestrzeni nazw. Na przykład poniższy kod przedstawia prefiks elementu zmieniany.  

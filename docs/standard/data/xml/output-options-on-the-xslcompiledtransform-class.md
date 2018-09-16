@@ -6,11 +6,11 @@ ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494047"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678376"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opcje danych wyjściowych klasy XslCompiledTransform
 W tym temacie opisano dostępne opcje wyjściowe XSLT. Możesz określić opcje danych wyjściowych w arkuszu stylów lub na <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  

@@ -3,11 +3,11 @@ title: Interfejsy (F#)
 description: 'Dowiedz się, jak interfejsy F # określić zestawy powiązane elementy członkowskie, które implementują innych klas.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267274"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45683193"
 ---
 # <a name="interfaces"></a>Interfejsy
 

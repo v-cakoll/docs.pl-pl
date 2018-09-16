@@ -11,11 +11,11 @@ helpviewer_keywords:
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
 ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507305"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678983"
 ---
 # <a name="error-statement"></a>Error — Instrukcja
 Symuluje wystąpieniu błędu.  

@@ -3,11 +3,11 @@ title: Funkcje (F#)
 description: 'Więcej informacji na temat funkcji w F # oraz jak F # obsługuje typowych konstrukcji programowania funkcjonalnego.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560717"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675902"
 ---
 # <a name="functions"></a>Funkcje
 

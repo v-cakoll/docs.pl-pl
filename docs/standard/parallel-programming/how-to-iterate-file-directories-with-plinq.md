@@ -8,11 +8,11 @@ ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d48f6df1e0e7680d2706c73c33dc817e1feaf1d5
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517752"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45689330"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Porady: Iteracja po katalogach plików z wykorzystaniem technologii PLINQ
 Ten przykład przedstawia dwa upraszczają równoległe przetwarzanie operacji na katalogach plików. Pierwsze zapytanie używa <xref:System.IO.Directory.GetFiles%2A> metodę, aby wypełnić tablicę nazw plików w katalogu i wszystkich podkatalogach. Ta metoda nie zwraca dopiero po zapełnieniu macierz w całości i w związku z tym może wprowadzić opóźnienie na początku operacji. Jednak po wypełnieniu tablicy PLINQ może przetwarzać je w sposób równoległy bardzo szybko.  

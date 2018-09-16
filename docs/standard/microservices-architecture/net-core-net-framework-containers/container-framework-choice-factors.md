@@ -1,61 +1,91 @@
 ---
-title: Tabeli decyzji. Platformy .NET Framework na potrzeby Docker
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Tabela decyzji, platformy .NET Framework na potrzeby Docker
+title: Tabela decyzji. .NET Framework na potrzeby platformy Docker
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Tabela decyzji, .NET Framework na potrzeby platformy Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: c45fbb9f26e6cd315e1b623ba2c79d5d038a6919
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 74b3749077fdb375f84ddacd98221aa4afcf2f67
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105303"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674016"
 ---
-# <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabela decyzji: platformy .NET Framework na potrzeby Docker
+# <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabela decyzji: .NET Framework na potrzeby platformy Docker
 
-Poniżej przedstawiono podsumowanie czy użyć kontenery .NET Framework lub .NET Core i systemu Windows lub Linux. Należy pamiętać, że dla systemu Linux kontenerów, potrzebujesz hostów Docker opartych na systemie Linux (maszyn wirtualnych i serwery) i kontenerów systemu Windows należy systemu Windows Server oparte hostów Docker (maszyn wirtualnych lub serwerach).
-
-Istnieje kilka funkcji aplikacji, które mają wpływ na podstawie decyzji. Należy porównać znaczenie te funkcje podczas podejmowania decyzji.
+W poniższej tabeli decyzji podsumowano, czy ma być używany program .NET Framework lub .NET Core. Należy pamiętać, że dla kontenerów systemu Linux, należy opartych na systemie Linux hostów platformy Docker (maszyn wirtualnych lub serwerach) i dla kontenerów Windows należy systemu Windows Server na podstawie hostów platformy Docker (maszyn wirtualnych lub serwerach).
 
 > [!IMPORTANT]
-> Programowanie maszyny zostaną uruchomione jeden host Docker, Linux lub Windows. Powiązane mikrousług, który ma zostać uruchamianie i testowanie razem w jednym z rozwiązań, wszystkie należy uruchomić na tę samą platformę kontenera.
+> Rozwoju maszyny zostaną uruchomione jeden host platformy Docker, Linux lub Windows. Wszystkie powiązane mikrousług, który chcesz uruchomić i przetestować ze sobą w jednym rozwiązaniu będzie musiał ją uruchomić na tę samą platformę kontenerów.
 
-* Wybór architektury aplikacji jest **Mikrousług kontenerów**.
-    - Wybór implementacji .NET powinien być *.NET Core*.
-    - Wybór platformy kontener może być albo *kontenery Linux* lub *kontenery Windows*.
-* Wybór architektury aplikacji jest **wbudowanymi aplikacji**.
-    - Wybór implementacji .NET mogą być *.NET Core* lub *.NET Framework*.
-    - Jeśli wybrano *.NET Core*, wybór platformy kontenera mogą być *kontenery Linux* lub *kontenery Windows*.
-    - Jeśli wybrano *.NET Framework*, wybór platformy kontenera musi być *kontenery Windows*.
-* Aplikacja jest **nowych aplikacji na podstawie kontenera ("pole zielony")**.
-    - Wybór implementacji .NET powinien być *.NET Core*.
-    - Wybór platformy kontener może być albo *kontenery Linux* lub *kontenery Windows*.
-* Aplikacja jest **Migrowanie starszych aplikacji ("pole brązowy") systemu Windows Server do kontenerów**
-    - Wybór implementacji .NET jest *.NET Framework* oparte na framework zależności.
-    - Wybór platformy kontenera musi być *kontenery Windows* z powodu zależności .NET Framework.
-* Celem projektu aplikacji jest **najlepsze w klasie wydajności i skalowalności**.
-    - Wybór implementacji .NET powinien być *.NET Core*.
-    - Wybór platformy kontener może być albo *kontenery Linux* lub *kontenery Windows*.
-* Zostały utworzone przy użyciu aplikacji **platformy ASP.NET Core**.
-    - Wybór implementacji .NET powinien być *.NET Core*.
-    - Można użyć *.NET Framework* wykonania, jeśli masz inne zależności struktury.
-    - Jeśli wybrano *.NET Core*, wybór platformy kontenera mogą być *kontenery Linux* lub *kontenery Windows*.
-    - Jeśli wybrano *.NET Framework*, wybór platformy kontenera musi być *kontenery Windows*.
-* Zostały utworzone przy użyciu aplikacji **programu ASP.NET 4 (MVC 5, 2 interfejsu API sieci Web i formularzy sieci Web)**.
-    - Wybór implementacji .NET jest *.NET Framework* oparte na framework zależności.
-    - Wybór platformy kontenera musi być *kontenery Windows* z powodu zależności .NET Framework.
-* Aplikacja używa **usług SignalR**.
-    - Wybór implementacji .NET mogą być *.NET Framework*, lub *.NET Core 2.1 (po jej opublikowaniu) lub nowszym*.
-    - Wybór platformy kontenera musi być *kontenery Windows* w przypadku wybrania implementacji SignalR dla programu .NET Framework.
-    - Wybór platformy kontener może być kontenery systemu Linux lub kontenery systemu Windows w przypadku wybrania implementacji SignalR .NET Core 2.1 lub nowszy (po jej opublikowaniu).  
-    - Gdy **usług SignalR** Uruchom na *.NET Core*, można użyć *Linux kontenerów lub kontenery systemu Windows*.
-* Aplikacja używa **WCF, WF i innych starszych platform**.
-    - Wybór implementacji .NET jest *.NET Framework*, lub *.NET Core (w plan w przyszłości)*.
-    - Wybór platformy kontenera musi być *kontenery Windows* z powodu zależności .NET Framework.
-* Aplikacja obejmuje **usług zużycie Azure**.
-    - Wybór implementacji .NET jest *.NET Framework*, lub *.NET Core (usługi po pewnym czasie wszystkie Azure określi zestawy SDK klientów dla platformy .NET Core)*.
-    - Wybór platformy kontenera musi być *kontenery Windows* Jeśli używasz interfejsów API klienta .NET Framework.
-    - Jeśli używasz interfejsów API dostępnych dla klienta *.NET Core*, można również wybrać *Linux kontenery i kontenery Windows*.
+<table>
+<thead>
+<tr class="header">
+<th><strong>Architektura / typ aplikacji</strong></th>
+<th><strong>Kontenery systemu Linux</strong></th>
+<th><strong>Kontenery Windows</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mikrousług w kontenerach</td>
+<td>.NET Core</td>
+<td>.NET Core</td>
+</tr>
+<tr class="even">
+<td>Monolityczną aplikację</td>
+<td>.NET Core</td>
+<td><p>.NET Framework</p>
+<p>.NET Core</p></td>
+</tr>
+<tr class="odd">
+<td>Najlepsze w swojej klasie, wydajności i skalowalności</td>
+<td>.NET Core</td>
+<td>.NET Core</td>
+</tr>
+<tr class="even">
+<td>Migrowanie starszych aplikacji ("pole brown") systemu Windows Server do kontenerów</td>
+<td>--</td>
+<td>.NET Framework</td>
+</tr>
+<tr class="odd">
+<td>Nowych wdrożeń opartych na kontenerach ("pole zielony")</td>
+<td>.NET Core</td>
+<td>.NET Core</td>
+</tr>
+<tr class="even">
+<td>ASP.NET Core</td>
+<td>.NET Core</td>
+<td><p>.NET core (zalecane)</p>
+<p>.NET Framework</p></td>
+</tr>
+<tr class="odd">
+<td>ASP.NET 4 (MVC 5, Web API 2 i formularzy sieci Web)</td>
+<td>--</td>
+<td>.NET Framework</td>
+</tr>
+<tr class="even">
+<td>Usługi SignalR</td>
+<td>.NET core 2.1 lub nowszej wersji</td>
+<td><p>.NET Framework</p>
+<p>.NET core 2.1 lub nowszej wersji</p></td>
+</tr>
+<tr class="odd">
+<td>Usługi WCF, WF i innych platform starszej wersji</td>
+<td>Usługi WCF w programie .NET Core (tylko Biblioteka klienta WCF)</td>
+<td><p>.NET Framework</p>
+<p>Usługi WCF w programie .NET Core (tylko Biblioteka klienta WCF)</p></td>
+</tr>
+<tr class="even">
+<td>Użycie usług platformy Azure</td>
+<td><p>.NET Core</p>
+<p>(po pewnym czasie wszystkich usług platformy Azure zapewni client SDK dla platformy .NET Core)</p></td>
+<td><p>.NET Framework</p>
+<p>.NET Core</p>
+<p>(po pewnym czasie wszystkich usług platformy Azure zapewni client SDK dla platformy .NET Core)</p></td>
+</tr>
+</tbody>
+</table>
 
 >[!div class="step-by-step"]
 [Poprzednie](net-framework-container-scenarios.md)

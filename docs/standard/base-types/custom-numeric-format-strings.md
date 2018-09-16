@@ -19,11 +19,11 @@ ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf1fd3ff78065430800583eb97db986bad419710
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45520010"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674770"
 ---
 # <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatujące liczby
 

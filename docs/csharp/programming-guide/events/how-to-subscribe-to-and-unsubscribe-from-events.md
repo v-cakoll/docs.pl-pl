@@ -7,11 +7,11 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: e27473ca34f634f4a3125a2e87e6d0ef918a6f9d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45560647"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675863"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Porady: subskrybowanie i anulowanie subskrypcji zdarzeń (Przewodnik programowania w języku C#)
 Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać kod niestandardowy, który jest wywoływana, gdy zdarzenie jest zgłaszane. Na przykład może subskrybować przycisku `click` zdarzeń, aby zapewnić aplikacji zrobić coś, co jest przydatne, gdy użytkownik kliknie przycisk.  

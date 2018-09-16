@@ -7,11 +7,11 @@ helpviewer_keywords:
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
 ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700719"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676340"
 ---
 # <a name="trees-in-wpf"></a>Drzewa w WPF
 W wielu technologii elementów i składników są zorganizowane w strukturze drzewa, w którym deweloperzy bezpośrednio manipulowania węzły obiektów w drzewie wpływać na renderowanie lub zachowanie aplikacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] używa także kilku metafory strukturę drzewa do zdefiniowania relacji między elementami program. W większości deweloperów WPF można utworzyć aplikację w kodzie lub zdefiniować części aplikacji w XAML podczas zastanawiać się pod względem koncepcyjnym obiektu drzewa metaphor, ale będzie można wywołanie interfejsu API lub za pomocą oznaczenia zrobić tak, a nie niektóre ogólne manipulowanie drzewa obiektem API takich jak możesz wykorzystać w XML modelu DOM. WPF udostępnia dwie klasy pomocnika, które zapewniają widoku drzewa metaphor <xref:System.Windows.LogicalTreeHelper> i <xref:System.Windows.Media.VisualTreeHelper>. Drzewo wizualne warunki i drzewo logiczne są również używane w dokumentacji programu WPF, ponieważ te sam drzewa są przydatne dla zrozumienia, działanie niektórych kluczowych funkcji WPF. W tym temacie Określa, co reprezentuje drzewo wizualne i drzewo logiczne, w tym artykule omówiono, jak takie drzew odnoszą się do ogólnej koncepcji drzewa obiektów i wprowadza <xref:System.Windows.LogicalTreeHelper> i <xref:System.Windows.Media.VisualTreeHelper>s.  

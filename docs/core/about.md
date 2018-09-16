@@ -4,19 +4,19 @@ description: Dowiedz się więcej na temat platformy .NET Core.
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: 5a8d0a45e0113afd1dbb5f243f3ed45f4bfc0760
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d9943246b683c8fd892e7bc5fd09a10b72e31a5f
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087775"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678938"
 ---
 # <a name="about-net-core"></a>Temat platformy .NET Core
 
 .NET core ma następującą charakterystykę:
 
 - **Dla wielu platform:** działa na Windows, macOS i Linux [systemów operacyjnych](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
-- **Spójność w ramach architecures:** uruchamia kod z takie samo zachowanie na wielu architekturach, w tym x64, x86 i ARM.
+- **Spójność w ramach architektury:** uruchamia kod z takie samo zachowanie na wielu architekturach, w tym x64, x86 i ARM.
 - **Narzędzia wiersza polecenia:** zawiera łatwy w użyciu narzędzia wiersza polecenia, które być używane dla rozwoju lokalnych i w scenariuszach ciągłej integracji.
 - **Elastyczne wdrażanie:** zainstalowany side-by-side użytkownika — lub dla komputera lub mogą być zawarte w Twojej aplikacji. Mogą być używane z [kontenerów platformy Docker](docker/index.md).
 - **Zgodne:** platformy .NET Core jest zgodny z .NET Framework, Xamarin i platformy Mono, za pośrednictwem [.NET Standard](../standard/net-standard.md).

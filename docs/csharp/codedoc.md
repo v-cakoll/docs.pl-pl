@@ -3,12 +3,12 @@ title: Dokumentowanie kodu przy użyciu komentarzy XML
 description: Dowiedz się, jak dokumentowanie kodu za pomocą komentarzy dokumentacji XML do generowania pliku dokumentacji XML w czasie kompilacji.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517484"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45683060"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu przy użyciu komentarzy XML
 
@@ -29,7 +29,7 @@ Aby wygenerować plik XML w czasie kompilacji, wykonując jedną z następujący
    Można również określić dokładną bezwzględną lub względną ścieżkę i nazwę pliku XML. Poniższy przykład generuje plik XML, w tym samym katalogu co wersja do debugowania aplikacji:
 
    ```xml
-   <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
+   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - Jeśli tworzysz aplikację przy użyciu programu Visual Studio kliknij prawym przyciskiem myszy projekt i wybierz pozycję **właściwości**. W oknie dialogowym właściwości wybierz **kompilacji** kartę i sprawdź **pliku dokumentacji XML**. Można również zmienić lokalizację, do której kompilator zapisuje plik.

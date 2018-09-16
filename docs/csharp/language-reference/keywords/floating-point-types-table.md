@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
 ms.openlocfilehash: 804e6529e67785ed5bcdb0db9efaeccb6b3a1a61
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368402"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45679547"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Tabela typów zmiennoprzecinkowych (odwołanie w C#)
 

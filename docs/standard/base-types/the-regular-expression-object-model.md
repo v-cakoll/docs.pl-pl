@@ -38,11 +38,11 @@ ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361712"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664738"
 ---
 # <a name="the-regular-expression-object-model"></a>Model obiektów wyrażeń regularnych
 <a name="introduction"></a> W tym temacie opisano model obiektów używanych w pracy z wyrażeń regularnych programu .NET. Ten temat zawiera następujące sekcje:  

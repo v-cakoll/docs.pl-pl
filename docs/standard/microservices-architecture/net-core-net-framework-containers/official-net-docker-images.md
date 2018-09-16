@@ -1,58 +1,54 @@
 ---
-title: Oficjalna obrazy usługi .NET Docker
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Oficjalna obrazy usługi .NET Docker
+title: Oficjalne obrazy Docker w programie .NET
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Oficjalne obrazy Docker w programie .NET
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/06/2018
-ms.openlocfilehash: 8664493f3d5d5e03cccbe1c33f2c2abe048e3f57
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105579"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666645"
 ---
-# <a name="official-net-docker-images"></a>Oficjalna obrazy usługi .NET Docker
+# <a name="official-net-docker-images"></a>Oficjalne obrazy Docker w programie .NET
 
-Obrazy oficjalnego Docker .NET są obrazy usługi Docker utworzone i zoptymalizowane przez firmę Microsoft. Są one dostępne publicznie w repozytoriach Microsoft [Centrum Docker](https://hub.docker.com/u/microsoft/). Każdego repozytorium może zawierać wiele obrazów, w zależności od wersji platformy .NET, a także w zależności od systemu operacyjnego i wersji (Linux Debian, Alpine systemu Linux, Windows Nano Server, Windows Server Core, itp.).
+Obrazy Docker w programie .NET oficjalne są obrazy Docker, utworzone i zoptymalizowane przez firmę Microsoft. Są one dostępne publicznie w przypadku repozytoriów firmy Microsoft na [usługi Docker Hub](https://hub.docker.com/u/microsoft/). Każde repozytorium może zawierać wiele obrazów, w zależności od wersji platformy .NET i w zależności od systemu operacyjnego i wersji (Linux, Debian, Linux Alpine, Windows Nano Server, Windows Server Core, itp.).
 
-Ponieważ .NET Core 2.1, wszystkie obrazy .NET Core, w tym dla platformy ASP.NET Core są dostępne pod adresem Centrum Docker na [repozytorium obrazu platformy .NET Core](https://hub.docker.com/r/microsoft/dotnet/).
+Od platformy .NET Core 2.1 wszystkie obrazy platformy .NET Core, w tym dla platformy ASP.NET Core są dostępne w usłudze Docker Hub w repozytorium obrazów platformy .NET Core: https://hub.docker.com/r/microsoft/dotnet/
 
-Większość repozytoriów obrazu zapewniają szeroką gamę znakowanie ułatwiające wybranie nie tylko wersji określonej platformy, ale wybierz system operacyjny (Linux distro lub wersji systemu Windows).
+Większość repozytoriów obraz zapewniają szeroką tagowania ułatwiające wybranie nie tylko określonych framework w wersji, ale również wybranie systemu operacyjnego (dystrybucja systemu Linux lub Windows w wersji).
 
+## <a name="net-core-and-docker-image-optimizations-for-development-versus-production"></a>.NET core i Docker optymalizacji obrazu dla rozwoju i produkcji
 
-## <a name="net-core-and-docker-image-optimizations-for-development-versus-production"></a>Oprogramowanie .NET core i Docker optymalizacji obrazu dla rozwoju i produkcji
+Podczas tworzenia obrazów platformy Docker dla deweloperów, Microsoft skupia się na następujących głównych scenariuszy:
 
-Tworząc obrazy usługi Docker dla deweloperów, Microsoft skupia się na następujących głównych scenariuszy:
+-   Obrazy używane do *opracowywanie* i tworzenie aplikacji .NET Core.
 
--   Obrazy używane do *opracowanie* i tworzenie aplikacji platformy .NET Core.
+-   Obrazy używane do *Uruchom* aplikacje platformy .NET Core.
 
--   Obrazy używane do *Uruchom* aplikacje .NET Core.
+Dlaczego wiele obrazów? Podczas tworzenia, kompilowania i uruchamiania konteneryzowanych aplikacji, zwykle mają różne priorytety. Dostarczając różne obrazy do oddzielnych wykonywania tych zadań, Microsoft pomaga w optymalizacji oddzielne procesy tworzenia, kompilowania i wdrażania aplikacji.
 
-Dlaczego wiele obrazów? Podczas tworzenia, tworzenie i uruchamianie aplikacji konteneryzowanych, zwykle mają różnych priorytetów. Podając inną obrazy te poszczególnych zadań, Microsoft pomaga zoptymalizować oddzielne procesy tworzenia, kompilowania i wdrażania aplikacji.
+### <a name="during-development-and-build"></a>Podczas projektowania i kompilowania
 
-### <a name="during-development-and-build"></a>Podczas projektowania i kompilacji
+Podczas tworzenia aplikacji ważne jest jak szybko można wykonać iterację zmiany i możliwość debugowania zmiany. Rozmiar obrazu nie jest tak ważna jak możliwość zmiany w kodzie i szybko zobaczyć zmiany. Niektóre narzędzia i "kontenery agenta kompilacji", należy użyć obrazu platformy .NET Core development (*microsoft / dotnet:2.1 — zestaw sdk*) podczas projektowania i kompilowania proces. Podczas kompilowania w kontenerze platformy Docker, ważne kwestie są elementy, które są wymagane w celu kompilowania aplikacji. Obejmuje to kompilator i inne zależności platformy .NET.
 
-Podczas tworzenia ważne jest tempa można wykonać iterację zmiany i możliwość zmiany debugowania. Rozmiar obrazu nie jest ważniejsza niż możliwość wprowadzić zmiany w kodzie i szybko zobaczyć zmiany. Niektóre narzędzia i "kontenery agenta kompilacji", użyj programowanie obrazu platformy ASP.NET Core (**microsoft / dotnet:2.1-sdk**) podczas procesu projektowania i kompilacji. Podczas kompilowania w kontenerze Docker, ważne kwestie związane są elementy, które są wymagane, aby skompilować aplikację. W tym kompilator żadnych innych zależności .NET, a także zależności Projektowanie sieci web.
-
-Ten typ obrazu kompilacji jest ważna Ten obraz nie są wdrażane w środowisku produkcyjnym. Zamiast tego jest obraz, który umożliwia tworzenie zawartości, który można umieścić w środowisku produkcyjnym obraz. Czy można użyć tego obrazu w danym środowisku ciągłej integracji (CI) lub kompilacje środowiska kompilacji, używając wieloetapowym Docker.
+Ten typ obrazu kompilacji jest ważna Ten obraz nie są wdrażane do środowiska produkcyjnego. Zamiast tego jest obrazu używanego do tworzenia zawartości, które można umieścić w środowisku produkcyjnym obraz. Ten obraz będzie używany w danym środowisku ciągłej integracji (CI) lub środowiska kompilacji, w przypadku korzystania z platformy Docker wieloetapowych kompilacji.
 
 ### <a name="in-production"></a>W środowisku produkcyjnym
 
-Co to jest ważne w środowisku produkcyjnym jest tempa można wdrożyć i uruchomić kontenerów na podstawie obrazu platformy .NET Core produkcji. W związku z tym, na podstawie obrazu tylko do środowiska wykonawczego **microsoft / dotnet:2.1 — aspnetcore — środowisko uruchomieniowe** jest mały, dzięki czemu rozprzestrzenia się szybko w sieci z rejestru Docker na hostach Docker. Zawartość jest gotowy do uruchomienia, włączanie o najszybszym czasie uruchamianiu kontenera do przetwarzania wyników. W modelu Docker nie jest wymagane do kompilacji z C\# kodu, ponieważ wystąpiły po uruchomieniu dotnet kompilacji lub dotnet publikowania, gdy używa kontenera kompilacji.
+Co to jest ważne w środowisku produkcyjnym jest, jak szybko możesz wdrożyć i uruchomić kontenerów opartych na obrazach platformy .NET Core produkcji. W związku z tym, na podstawie obrazu tylko do środowiska uruchomieniowego *microsoft / dotnet:2.1-aspnetcore-środowiska uruchomieniowego* jest mały, tak aby rozprzestrzenia się szybko przez sieć z rejestru platformy Docker do hostów platformy Docker. Zawartość jest gotowa do uruchomienia, umożliwiając krótsze czasy uruchamianie kontenera do przetwarzania wyników. W modelu platformy Docker, nie ma potrzeby dla kompilacji z C\# kodu, jako miejsca po uruchomieniu kompilacji dotnet lub opublikować dotnet, kiedy używa kontenerów kompilacji.
 
-W tym zoptymalizowanego obrazu możesz umieścić tylko pliki binarne i innej zawartości, wymaganego do uruchomienia aplikacji. Na przykład zawartość utworzona przez dotnet opublikować zawiera tylko skompilowanych .NET pliki binarne, obrazy, js i pliki CSS. W czasie zostanie wyświetlony obrazów zawierających pakiety poprzedzającego utworzenie kopii zapasowej przy użyciu kompilatora JIT.
+W tym zoptymalizowanego obrazu, możesz umieścić tylko pliki binarne i innej zawartości, wymagane do uruchomienia aplikacji. Na przykład publikować zawartość utworzona przez dotnet zawiera tylko skompilowane pliki binarne .NET, obrazy, js i plików CSS. Wraz z upływem czasu, zostanie wyświetlony obrazów, które zawierają wstępnie trybie JIT (kompilacja z IL Native, która występuje w czasie wykonywania) pakietów.
 
-Mimo że istnieje wiele wersji .NET Core i ASP.NET Core obrazów, wszystkie mają jednej lub kilku warstw, łącznie z warstwy podstawowej. W związku z tym ilość miejsca na dysku wymagane do przechowywania obrazu jest mała; składa się tylko z różnica między niestandardowego obrazu i jego obrazu podstawowego. Wynik jest szybkie do pobierania obrazu z rejestru.
+Chociaż istnieje wiele wersji platformy .NET Core i ASP.NET Core obrazów, wszystkie mają jedną lub więcej warstw, łącznie z warstwy podstawowa. W związku z tym ilość miejsca na dysku potrzebnego do przechowywania obrazu jest mała; składa się tylko z różnica między niestandardowego obrazu i jego podstawowego obrazu. Wynik jest szybkie ściągnąć obraz z rejestru.
 
-Podczas eksplorowania repozytoria obrazu platformy .NET w Centrum Docker można znaleźć wiele wersji obrazu sklasyfikowane lub oznaczone tagami. Tagi te pomogą zdecydować, który z nich do używania w zależności od wersji, które są potrzebne, podobnie jak w poniższej tabeli:
+Podczas eksplorowania repozytoriów obrazu platformy .NET w usłudze Docker Hub znajdziesz wiele wersji obrazu sklasyfikowane lub oznaczona za pomocą tagów. Te znaczniki ułatwić podjęcie decyzji, który z nich do użycia, w zależności od wersji, których potrzebujesz, podobnie jak w poniższej tabeli:
 
--   Microsoft/dotnet:**2.1-aspnetcore — środowisko uruchomieniowe**
-
-        ASP.NET Core, with runtime only and ASP.NET Core optimizations, on Linux and Windows (multi-arch)
-
--   Microsoft /**dotnet:2.1-sdk**
-
-        .NET Core, with SDKs included, on Linux and Windows (multi-arch)
+| Obraz                                       | Komentarze                                                                                          |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Microsoft/dotnet:**2.1 — aspnetcore-środowiska uruchomieniowego** | ASP.NET Core przy użyciu tylko środowiska uruchomieniowego i optymalizacje platformy ASP.NET Core, w systemie Linux i Windows (wielu arch) |
+| Microsoft/dotnet:**zestawu sdk 2.1**                | .NET core przy użyciu zestawów SDK uwzględnione, w systemie Linux i Windows (wielu arch)                                  |
 
 
 >[!div class="step-by-step"]

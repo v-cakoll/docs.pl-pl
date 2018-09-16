@@ -13,11 +13,11 @@ ms.assetid: e4088541-ee05-40db-95f5-147cfe62fde7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0b597cf93cdf249936a34b2c07b38d000c96333f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45520629"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45667875"
 ---
 # <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>Porady: Określanie stopnia równoległości w bloku przepływu danych
 W tym dokumencie opisano sposób ustawiania <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType> właściwości, aby umożliwić wykonanie bloku przepływu danych do przetwarzania więcej niż jeden komunikat w danym momencie. Jest to przydatne w po bloku przepływu danych, która wykonuje obliczenia długotrwałych i może być korzystne przetwarzanie komunikatów w sposób równoległy. W tym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType> klasy do wykonywania wielu operacji przepływu danych, jednocześnie; Jednakże, można określić maksymalny stopień równoległości w żadnym z typów bloków wykonywanie wstępnie zdefiniowanych, udostępniane Biblioteka przepływu danych TPL <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, i <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType>.

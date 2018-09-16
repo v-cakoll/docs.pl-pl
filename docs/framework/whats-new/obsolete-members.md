@@ -10,11 +10,11 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a36e08c9b54dd6b47b11b36fd20993bff8c805e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563634"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678590"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Przestarzali członkowie w .NET Framework
 W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są przestarzałe w programie .NET Framework 4.5 i nowsze wersje, uporządkowane według zestawu. Użyj poniższych linków, aby zobaczyć listę przestarzali członkowie i zalecanych rozwiązań alternatywnych, w każdym zestawie. W tym temacie nie ma elementów członkowskich przestarzałe typy. Aby uzyskać listę przestarzałych typów, zobacz [przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md).  

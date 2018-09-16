@@ -1,6 +1,6 @@
 ---
 title: Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
-ms.date: 08/22/2018
+ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8352a007cb1b9a92247db5d7a7351524ec3d4c2e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508281"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45683254"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 <a name="top"></a> .NET zapewnia rozbudowaną obsługę dla rozwoju zlokalizowane i uniwersalnych aplikacji i ułatwia zastosowanie Konwencji kultury bieżącej lub określonej kultury, podczas wykonywania typowych operacji, takich jak sortowanie i wyświetlanie ciągów. Ale sortowania i porównywania ciągów nie zawsze jest to operacja wrażliwość na ustawienia kulturowe. Na przykład ciągów, które są używane wewnętrznie przez aplikację zwykle powinny być traktowane identycznie we wszystkich kulturach. Kiedy dane ciągu kulturalnie niezależne, takie jak XML tagów, HTML tagów, nazwy użytkowników, ścieżki do plików i nazwy obiektów systemowych są interpretowane tak, jakby były one zależne od kultury, kod aplikacji może być zastrzeżeniem subtelnych błędów, niską wydajnością i w niektórych przypadkach problemy z zabezpieczeniami.  
@@ -123,10 +123,12 @@ ms.locfileid: "45508281"
  Porównanie ciągów jest sercem wiele powiązanych z ciągami operacji, szczególnie sortowania i testowanie pod kątem równości. Posortować ciągi w określonej kolejności: Jeśli "Mój" pojawia się przed "string", w posortowanej listy ciągów, "Mój" należy porównać mniejsze niż lub równe "string". Ponadto porównanie niejawnie definiuje równości. Operacja porównania zwraca zero dla ciągów, które uzna za równe. Interpretacja dobre jest ani ciągu jest mniejszy od drugiego. Największe znaczenie obejmującego ciągi dołączyć jedno lub oba z następujących procedur: porównanie z innego ciągu i wykonywania operacji sortowania dobrze zdefiniowane.  
 
 > [!NOTE]
-> Możesz pobrać [tabele wagi sortowania](https://www.microsoft.com/en-us/download/details.aspx?id=10921), zbiór plików tekstowych, które zawierają informacje o wagi znaku w operacjach sortowania i porównywania systemów operacyjnych Windows.
+> Możesz pobrać [tabele wagi sortowania](https://www.microsoft.com/en-us/download/details.aspx?id=10921), zbiór plików tekstowych, które zawierają informacje o wagi znaku w operacjach sortowania i porównywania dla systemów operacyjnych Windows, a [domyślne Unicode Tabela elementów sortowania](https://www.unicode.org/Public/UCA/latest/allkeys.txt), najnowszą wersję tabeli wagi sortowania dla systemów Linux i macOS. Określoną wersję tabeli wagi sortowania w systemie Linux i macOS jest zależna od wersji [składniki międzynarodowego standardu Unicode](http://site.icu-project.org/) biblioteki zainstalowane w systemie. Informacje na temat ICU wersji i wersje Unicode, które implementują, zobacz [pobieranie ICU](http://site.icu-project.org/download).
 
  Jednak obliczenia dwa ciągi dla równości lub kolejności sortowania nie uzyskanie wyniku pojedynczą, poprawne; wynik zależy od kryteria używane do porównywania ciągów. W szczególności porównań ciągów, które są porządkowe, lub które są oparte na wielkość liter w wyrazie i sortowanie Konwencji kultury bieżącej lub niezmiennej kultury (w języku angielskim — na podstawie kultury niezależne od ustawień regionalnych) mogą wygenerować różne wyniki.  
-  
+
+Ponadto porównań ciągów przy użyciu różnych wersji programu .NET lub przy użyciu platformy .NET na różne systemy operacyjne i wersje systemu operacyjnego może zwracać różne wyniki. Aby uzyskać więcej informacji, zobacz [ciągów i Unicode Standard](xref:System.String#Unicode). 
+
 <a name="current_culture"></a>   
 ### <a name="string-comparisons-that-use-the-current-culture"></a>Porównywanie ciągów, które używają bieżącej kultury  
  Jedno kryterium polega na użyciu konwencji bieżącej kultury, podczas porównywania ciągów. Porównania, które są oparte na bieżącej kultury, użyj bieżącą kulturę wątku lub ustawień regionalnych. Jeśli kultura nie jest ustawiony przez użytkownika, wartość domyślna to ustawienie w **Opcje regionalne** okna w Panelu sterowania. Zawsze należy używać porównania, które są oparte na bieżącej kultury, gdy dane znajdują się lingwistycznie i odzwierciedla interakcji z użytkownikiem wrażliwość na ustawienia kulturowe.  

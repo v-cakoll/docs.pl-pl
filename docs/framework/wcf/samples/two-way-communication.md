@@ -3,11 +3,11 @@ title: Komunikacja dwukierunkowa
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
 ms.openlocfilehash: 319b63ff1eefdab4c23932294c3f1970f204601e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519863"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674159"
 ---
 # <a name="two-way-communication"></a>Komunikacja dwukierunkowa
 Niniejszy przykład pokazuje sposób wykonywania transakcyjne dwukierunkowej komunikacji w kolejce za pośrednictwem usługi MSMQ. W tym przykładzie użyto `netMsmqBinding` powiązania. W tym przypadku usługa jest aplikacja konsolowa samodzielnie hostowanej która pozwala obserwować usługę otrzymywania wiadomości w kolejce.  

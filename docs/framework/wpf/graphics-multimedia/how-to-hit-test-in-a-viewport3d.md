@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
 ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507336"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677490"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Jak przeprowadzić test trafienia w Viewport3D
 W tym przykładzie pokazano, jak trafień badania 3D elementów wizualnych w <xref:System.Windows.Controls.Viewport3D>.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
 ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184986"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678962"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (opcje kompilatora C#)
 

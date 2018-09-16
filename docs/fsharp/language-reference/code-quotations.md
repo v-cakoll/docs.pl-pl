@@ -3,11 +3,11 @@ title: Cytaty kodu (F#)
 description: 'Dowiedz się więcej o kodzie cytatów F #, funkcji języka, który umożliwia generowanie i pracować programowo z wyrażeń kodu języka F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516347"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666725"
 ---
 # <a name="code-quotations"></a>Cytaty kodu
 

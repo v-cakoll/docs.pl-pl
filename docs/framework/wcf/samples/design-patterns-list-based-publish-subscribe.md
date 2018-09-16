@@ -3,11 +3,11 @@ title: 'Wzorce projektowe: Lista publikowanie/subskrybowanie oparte na'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526736"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664699"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Wzorce projektowe: Lista publikowanie/subskrybowanie oparte na
 W tym przykładzie pokazano wzorzec listy publikowanie/subskrybowanie oparte na zaimplementowane jako program Windows Communication Foundation (WCF).  

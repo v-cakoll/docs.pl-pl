@@ -15,11 +15,11 @@ ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86642da8647d185d863607819bbb18de9e976e6b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507995"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664543"
 ---
 # <a name="type-conversion-tables-in-net"></a>Tabele konwersji typów w .NET
 Rozszerzanie konwersji występuje, gdy wartość jednego typu jest konwertowana na inny typ, który jest równy lub większy rozmiar. Konwersja zawężająca występuje, gdy wartości z jednego typu jest konwertowany na wartość innego typu, który ma mniejszy rozmiar. Tabele w tym temacie ilustrują Trojan oba rodzaje konwersji.  

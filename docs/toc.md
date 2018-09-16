@@ -82,7 +82,7 @@
 ### [Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](core/tutorials/using-on-mac-vs.md)
 ### [Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [Rozpoczynanie pracy z platformą .NET Core przy użyciu narzędzi interfejsu wiersza polecenia](core/tutorials/using-with-xplat-cli.md)
-#### [Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core](core/tutorials/testing-with-cli.md)
+### [Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core](core/tutorials/testing-with-cli.md)
 ### [Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](core/tutorials/libraries.md)
 ### [Tworzenie aplikacji ASP.NET Core](core/tutorials/aspnet-core.md)
 ### [Jak zarządzać wersjami zależności pakietu dla platformy .NET Core 1.0](core/tutorials/managing-package-dependency-versions.md)

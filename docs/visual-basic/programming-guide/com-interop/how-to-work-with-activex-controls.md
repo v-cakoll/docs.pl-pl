@@ -6,34 +6,34 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 8faa8fc86312df2f03ec7a70a488d0e7c12b394b
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514571"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668317"
 ---
-# <a name="how-to-work-with-activex-controls-visual-basic"></a><span data-ttu-id="e8905-102">Porady: praca z kontrolkami ActiveX (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8905-102">How to: Work with ActiveX Controls (Visual Basic)</span></span>
-<span data-ttu-id="e8905-103">Formanty ActiveX to składniki COM lub obiekty, które można wstawić do strony sieci Web lub innej aplikacji w celu ponownego użycia spakowane funkcje, które ma innemu programiście.</span><span class="sxs-lookup"><span data-stu-id="e8905-103">ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed.</span></span> <span data-ttu-id="e8905-104">Kontrolki ActiveX opracowanych dla języka Visual Basic 6.0 i starsze wersje umożliwia dodawanie funkcji do **przybornika** programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e8905-104">You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.</span></span>  
+# <a name="how-to-work-with-activex-controls-visual-basic"></a><span data-ttu-id="1b08b-102">Porady: praca z kontrolkami ActiveX (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b08b-102">How to: Work with ActiveX Controls (Visual Basic)</span></span>
+<span data-ttu-id="1b08b-103">Formanty ActiveX to składniki COM lub obiekty, które można wstawić do strony sieci Web lub innej aplikacji w celu ponownego użycia spakowane funkcje, które ma innemu programiście.</span><span class="sxs-lookup"><span data-stu-id="1b08b-103">ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed.</span></span> <span data-ttu-id="1b08b-104">Kontrolki ActiveX opracowanych dla języka Visual Basic 6.0 i starsze wersje umożliwia dodawanie funkcji do **przybornika** programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1b08b-104">You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.</span></span>  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a><span data-ttu-id="e8905-105">Aby dodać formanty ActiveX do przybornika</span><span class="sxs-lookup"><span data-stu-id="e8905-105">To add ActiveX controls to the toolbox</span></span>  
+### <a name="to-add-activex-controls-to-the-toolbox"></a><span data-ttu-id="1b08b-105">Aby dodać formanty ActiveX do przybornika</span><span class="sxs-lookup"><span data-stu-id="1b08b-105">To add ActiveX controls to the toolbox</span></span>  
   
-1.  <span data-ttu-id="e8905-106">Na **narzędzia** menu, kliknij przycisk **wybierz elementy przybornika**.</span><span class="sxs-lookup"><span data-stu-id="e8905-106">On the **Tools** menu, click **Choose Toolbox Items**.</span></span>  
+1.  <span data-ttu-id="1b08b-106">Na **narzędzia** menu, kliknij przycisk **wybierz elementy przybornika**.</span><span class="sxs-lookup"><span data-stu-id="1b08b-106">On the **Tools** menu, click **Choose Toolbox Items**.</span></span>  
   
-     <span data-ttu-id="e8905-107">**Wybierz przybornika** pojawi się okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="e8905-107">The **Choose Toolbox** dialog box appears.</span></span>  
+     <span data-ttu-id="1b08b-107">**Wybierz przybornika** pojawi się okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="1b08b-107">The **Choose Toolbox** dialog box appears.</span></span>  
   
-2.  <span data-ttu-id="e8905-108">Kliknij przycisk **składników COM** kartę.</span><span class="sxs-lookup"><span data-stu-id="e8905-108">Click the **COM Components** tab.</span></span>  
+2.  <span data-ttu-id="1b08b-108">Kliknij przycisk **składników COM** kartę.</span><span class="sxs-lookup"><span data-stu-id="1b08b-108">Click the **COM Components** tab.</span></span>  
   
-3.  <span data-ttu-id="e8905-109">Zaznacz pole wyboru obok kontrolki ActiveX, które chcesz użyć, a następnie kliknij przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="e8905-109">Select the check box next to the ActiveX control you want to use, and then click **OK**.</span></span>  
+3.  <span data-ttu-id="1b08b-109">Zaznacz pole wyboru obok kontrolki ActiveX, które chcesz użyć, a następnie kliknij przycisk **OK**.</span><span class="sxs-lookup"><span data-stu-id="1b08b-109">Select the check box next to the ActiveX control you want to use, and then click **OK**.</span></span>  
   
-     <span data-ttu-id="e8905-110">Nowy formant, który pojawia się z innymi narzędziami w **przybornika**.</span><span class="sxs-lookup"><span data-stu-id="e8905-110">The new control appears with the other tools in the **Toolbox**.</span></span>  
+     <span data-ttu-id="1b08b-110">Nowy formant, który pojawia się z innymi narzędziami w **przybornika**.</span><span class="sxs-lookup"><span data-stu-id="1b08b-110">The new control appears with the other tools in the **Toolbox**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="e8905-111">Narzędzie Aximp ręcznie utworzyć zestaw międzyoperacyjny dla formantów ActiveX.</span><span class="sxs-lookup"><span data-stu-id="e8905-111">You can use the Aximp utility to manually create an interop assembly for ActiveX controls.</span></span> <span data-ttu-id="e8905-112">Aby uzyskać więcej informacji, zobacz [Aximp.exe (Importer kontrolki ActiveX formularzy Windows)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span><span class="sxs-lookup"><span data-stu-id="e8905-112">For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span></span>  
+    >  <span data-ttu-id="1b08b-111">Narzędzie Aximp ręcznie utworzyć zestaw międzyoperacyjny dla formantów ActiveX.</span><span class="sxs-lookup"><span data-stu-id="1b08b-111">You can use the Aximp utility to manually create an interop assembly for ActiveX controls.</span></span> <span data-ttu-id="1b08b-112">Aby uzyskać więcej informacji, zobacz [Aximp.exe (Importer kontrolki ActiveX formularzy Windows)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span><span class="sxs-lookup"><span data-stu-id="1b08b-112">For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8905-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e8905-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b08b-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1b08b-113">See also</span></span>
 
-- [<span data-ttu-id="e8905-114">Usługa międzyoperacyjna modelu COM</span><span class="sxs-lookup"><span data-stu-id="e8905-114">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)  
-- [<span data-ttu-id="e8905-115">Instrukcje: dodawanie kontrolek ActiveX do formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e8905-115">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
-- [<span data-ttu-id="e8905-116">Aximp.exe (importer kontrolki ActiveX formularzy Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="e8905-116">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
-- [<span data-ttu-id="e8905-117">Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="e8905-117">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
-- [<span data-ttu-id="e8905-118">Rozwiązywanie problemów związanych z współdziałaniem</span><span class="sxs-lookup"><span data-stu-id="e8905-118">Troubleshooting Interoperability</span></span>](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [<span data-ttu-id="1b08b-114">Usługa międzyoperacyjna modelu COM</span><span class="sxs-lookup"><span data-stu-id="1b08b-114">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [<span data-ttu-id="1b08b-115">Instrukcje: dodawanie kontrolek ActiveX do formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1b08b-115">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+- [<span data-ttu-id="1b08b-116">Aximp.exe (importer kontrolki ActiveX formularzy Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="1b08b-116">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
+- [<span data-ttu-id="1b08b-117">Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="1b08b-117">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
+- [<span data-ttu-id="1b08b-118">Rozwiązywanie problemów związanych z współdziałaniem</span><span class="sxs-lookup"><span data-stu-id="1b08b-118">Troubleshooting Interoperability</span></span>](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

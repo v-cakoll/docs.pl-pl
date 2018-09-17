@@ -3,11 +3,11 @@ title: Expressions2
 ms.date: 03/30/2017
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
 ms.openlocfilehash: e852b62e6d0b6b4b3ddc19b197902de5325310a1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45645844"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964660"
 ---
 # <a name="expressions"></a>Wyrażenia
 W tym przykładzie pokazano, jak użyć podstawowa wyrażeń w przepływie pracy. Składa się z przepływu pracy, który oblicza statystyki wynagrodzenia podstawowego dla dwóch pracowników fikcyjnej firmy. Dwie klasy `Employee` i `SalaryStats`, są definiowane w Employee.cs i SalaryStats.cs. Te klasy są używane w przepływie pracy, który pokazuje, jak wykonywać proste operacje arytmetyczne i ciągu dla właściwości zmiennych typów złożonych.  

@@ -3,11 +3,11 @@ title: 'Porady: dzielenie się zestawem z innymi aplikacjami (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
 ms.openlocfilehash: 3d29a3558a64c02fc8c59035f2fee5c64c4a776f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45590968"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746250"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Porady: dzielenie się zestawem z innymi aplikacjami (Visual Basic)
 Zestawy mogą być prywatne lub udostępnione: domyślnie większości programów proste składają się z zestawu prywatnego, ponieważ nie są przeznaczone do użycia przez inne aplikacje.  

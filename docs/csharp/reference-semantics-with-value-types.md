@@ -4,11 +4,11 @@ description: Omówienie funkcji języka, które bezpiecznie zminimalizować kopi
 ms.date: 11/10/2017
 ms.custom: mvc
 ms.openlocfilehash: f241219994d7a03192a4aea69b912bf1ac5ed29c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592156"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964705"
 ---
 # <a name="reference-semantics-with-value-types"></a>Semantyka odwołań z typami wartości
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 72439596ec6dc6c42024ed38116ba0026922154c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679612"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743777"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Porady: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (WCF Data Services)
 
@@ -34,7 +34,7 @@ Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dane te 
 
 6. W **właściwości połączenia** okno dialogowe, wpisz nazwę serwera, wybierz metodę uwierzytelniania, wpisz nazwę bazy danych, a następnie kliknij przycisk **OK**.
 
-     **Wybierz połączenie danych**s, okno dialogowe zostanie zaktualizowana przy użyciu ustawienia połączenia bazy danych.
+     **Wybierz połączenie danych** okno dialogowe zostanie zaktualizowana przy użyciu ustawienia połączenia bazy danych.
 
 7. Upewnij się, że **zapisywanie ustawień połączenia w pliku App.Config jako jednostki:** zaznaczono pole wyboru. Następnie kliknij przycisk **Dalej**.
 

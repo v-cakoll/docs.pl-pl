@@ -3,11 +3,11 @@ title: 'Porady: Wyszukiwanie elementu głównego (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
 ms.openlocfilehash: df1b151948b7b11757f2f8f312fa1f0bba00673a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45675657"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45748605"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Porady: Wyszukiwanie elementu głównego (XPath-LINQ to XML) (C#)
 W tym temacie pokazano, jak można pobrać elementów podrzędnych o określonej nazwie.  

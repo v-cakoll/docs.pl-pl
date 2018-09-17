@@ -5,11 +5,11 @@ author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
 ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591124"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749360"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Zarządzanie zależnościami za pomocą platformy .NET Core SDK 1.0
 

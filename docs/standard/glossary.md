@@ -6,11 +6,11 @@ ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
 ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647448"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698487"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 

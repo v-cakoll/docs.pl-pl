@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 1dac93145b6e11a0d149f03b43e1e0b28b770925
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45509847"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698461"
 ---
 # <a name="user-defined-data-type"></a>User-Defined Data Type
 Przechowuje dane w postaci, jaką zdefiniujesz. `Structure` Instrukcja definiuje format.  

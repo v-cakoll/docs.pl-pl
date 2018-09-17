@@ -9,11 +9,11 @@ helpviewer_keywords:
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
 ms.openlocfilehash: c2086d451af72157785796052af123cd210ee036
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: MT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44757199"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45694912"
 ---
 # <a name="interceptors-wcf-data-services"></a>Interceptory (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umożliwia aplikacji przechwycenia komunikatów żądań, tak aby dodać logikę niestandardową operacji. Można użyć tej niestandardowej logiki do sprawdzania poprawności danych w wiadomości przychodzących. Można również użyć bardziej ograniczyć zakres żądania zapytania, takie jak wstawić niestandardowych zasad autoryzacji na podstawie danego żądania.  

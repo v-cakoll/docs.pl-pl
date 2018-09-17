@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: bc91e3bde54eedb4d9dbcfcb9f7faa0ccc98e397
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505627"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746208"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Wskazówki: demonstrowanie dziedziczenia Visual
 Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki. W tym instruktażu utworzysz formularza podstawowego i skompiluj go do biblioteki klas. Będzie zaimportować tej biblioteki klas do innego projektu i utworzyć nowy formularz, który dziedziczy z formularza podstawowego. Z tego instruktażu dowiesz się jak:  
@@ -80,7 +80,7 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
   
     -   Ustaw **(nazwa)** właściwości **btnProtected**.  
   
-    -   Ustaw**Modyfikatory** właściwości **chronione**. Dzięki temu możliwe formularzy, które dziedziczą z **Form1** można zmodyfikować właściwości **btnProtected**.  
+    -   Ustaw **Modyfikatory** właściwości **chronione**. Dzięki temu możliwe formularzy, które dziedziczą z **Form1** można zmodyfikować właściwości **btnProtected**.  
   
 4.  Kliknij dwukrotnie **Say Hello** przycisk, aby dodać moduł obsługi zdarzenia **kliknij** zdarzeń.  
   
@@ -128,7 +128,7 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
   
 #### <a name="to-add-an-inherited-form"></a>Aby dodać odziedziczony formularz  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **InheritanceTest** projektu, wybierz opcję **Dodaj**, a następnie wybierz pozycję**nowy element**.  
+1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **InheritanceTest** projektu, wybierz opcję **Dodaj**, a następnie wybierz pozycję **nowy element**.  
   
 2.  W **Dodaj nowy element** okno dialogowe, wybierz opcję **Windows Forms** kategorii (Jeśli masz listę kategorii), a następnie wybierz **dziedziczone formularza** szablonu.  
   

@@ -3,11 +3,11 @@ title: Praca z przestrzeniami nazw XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
 ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45686040"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749460"
 ---
 # <a name="working-with-xml-namespaces-c"></a>Praca z przestrzeniami nazw XML (C#)
 W tematach w tej sekcji opisano, jak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obsługuje przestrzenie nazw.  

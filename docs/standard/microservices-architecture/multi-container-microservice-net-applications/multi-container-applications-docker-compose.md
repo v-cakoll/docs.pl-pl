@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | De
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 0c4eda54fbb1f48095d52fa798ea839eb509a636
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754732"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750261"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą platformy docker-compose.yml 
 
@@ -126,7 +126,7 @@ Ta usługa konteneryzowanych ma podstawowe następującą konfigurację:
 
 -   Nazwa programu SQL Server jest sql.data, który ma taką samą nazwę, używany do kontenera, w którym jest uruchomione wystąpienie programu SQL Server dla systemu Linux. Jest to wygodne; możliwości używania to rozpoznawanie nazw (wewnętrzne hosta platformy Docker) zostanie rozwiązany adresu sieciowego, dzięki czemu nie trzeba znać wewnętrznego adresu IP dla kontenerów, do których uzyskujesz dostęp do innych kontenerów.
 
-Ponieważ ciąg połączenia jest zdefiniowana przez zmienną środowiskową, można ustawić tę zmienną za pomocą innego mechanizmu, a w innym czasie. Na przykład można ustawić parametrów połączenia różnych podczas wdrażania do produkcji w ostatnim hostów lub wykonując z potoków ciągłej integracji/ciągłego wdrażania w usłudze VSTS lub preferowanego systemu metodyki DevOps.
+Ponieważ ciąg połączenia jest zdefiniowana przez zmienną środowiskową, można ustawić tę zmienną za pomocą innego mechanizmu, a w innym czasie. Na przykład można ustawić parametrów połączenia różnych podczas wdrażania do produkcji w ostatnim hostów lub wykonując z potoków ciągłej integracji/ciągłego wdrażania w usługom DevOps platformy Azure lub preferowanego systemu metodyki DevOps.
 
 -   Udostępnia ona port 80 dla wewnętrznego dostęp do usługi catalog.api w ramach hosta platformy Docker. Host jest obecnie Maszynę wirtualną systemu Linux, ponieważ jest ona oparta na obrazie platformy Docker dla systemu Linux, ale można skonfigurować kontenera dla obrazu Windows należy zamiast tego uruchomić.
 
@@ -180,7 +180,7 @@ Gdy przeznaczonych dla różnych środowisk, należy użyć wielu tworzą pliki.
 
 Można użyć pliku docker-compose.yml w jednym, jak uproszczone przykłady zamieszczone w poprzednich sekcjach. Nie jest, jednak zalecane w przypadku większości aplikacji.
 
-Domyślnie Compose odczytuje dwa pliki docker-compose.yml i plik docker-compose.override.yml opcjonalne. Jak pokazano w rysunek 8-11, gdy są przy użyciu programu Visual Studio i włączenie również obsługę platformy Docker, Visual Studio tworzy plik dodatkowe compose.ci.build,yml platformy docker do użycia z potoków ciągłej integracji/ciągłego Dostarczania, takich jak w usłudze VSTS.
+Domyślnie Compose odczytuje dwa pliki docker-compose.yml i plik docker-compose.override.yml opcjonalne. Jak pokazano w rysunek 8-11, gdy są przy użyciu programu Visual Studio i włączenie również obsługę platformy Docker, Visual Studio tworzy plik dodatkowe compose.ci.build,yml platformy docker do użycia z potoków ciągłej integracji/ciągłego wdrażania jak usługom DevOps platformy Azure.
 
 ![](./media/image12.png)
 

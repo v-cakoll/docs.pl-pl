@@ -3,11 +3,11 @@ title: 'Funkcje rekursywne: rec — Słowo kluczowe (F#)'
 description: 'Dowiedz się, jak użyć słowa kluczowego "rec" F # za pomocą słowa kluczowego "let", do definiowania funkcji recursive.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45675876"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45745974"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funkcje rekursywne: rec — Słowo kluczowe
 

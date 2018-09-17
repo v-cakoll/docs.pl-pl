@@ -3,11 +3,11 @@ title: SQL Server Data typów i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
 ms.openlocfilehash: 878bbe41f259f1e50cd0a41669c7a352e78bc0f1
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44493579"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696318"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server Data typów i ADO.NET
 Program SQL Server i .NET Framework są oparte na różnych typów systemów, które może spowodować utratę danych. Aby zachować spójność danych, dla programu .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) udostępnia metody typizowane metody dostępu do pracy z danymi programu SQL Server. Można używać wyliczenia w <xref:System.Data.SqlDbType> klasy, aby określić <xref:System.Data.SqlClient.SqlParameter> typów danych.  

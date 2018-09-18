@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
 ms.openlocfilehash: 74b3749077fdb375f84ddacd98221aa4afcf2f67
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45674016"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45970867"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabela decyzji: .NET Framework na potrzeby platformy Docker
 

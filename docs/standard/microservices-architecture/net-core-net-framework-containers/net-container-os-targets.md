@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
 ms.openlocfilehash: b2ae1d2e732f152133dd8a8757b955e05cdd88eb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677815"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45970828"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Jakiego systemu operacyjnego docelowo z kontenerami .NET
 

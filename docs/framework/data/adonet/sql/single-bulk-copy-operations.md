@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 274a6e87b272002a567fd92605c4e690c03b6e26
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4b2b35d3ca3f7bea5f64188420c17d386a1afa42
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45652797"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45971984"
 ---
 # <a name="single-bulk-copy-operations"></a>Pojedyncze operacje kopiowania zbiorczego
 Najprostszą metodą do wykonywania operacji kopiowania zbiorczego SQL Server jest na wykonanie jednej operacji w bazie danych. Domyślnie operacji kopiowania zbiorczego jest wykonywane jako operacja izolowane: operacja kopiowania odbywa się w sposób nietransakcyjnej ma możliwości, aby przerzucić go na tworzeniu kopii.  
@@ -40,7 +40,7 @@ Najprostszą metodą do wykonywania operacji kopiowania zbiorczego SQL Server je
 >  Zaleca się, że są zgodne typy danych kolumn źródłowych i docelowych. Jeśli nie są zgodne z typami danych, **SqlBulkCopy** stara się przekonwertować wartość każdego źródłowego na docelowy typ danych, za pomocą reguł stosowanych przez <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Konwersje może wpłynąć na wydajność, a także może spowodować nieoczekiwane błędy. Na przykład `Double` można przekonwertować na typ danych `Decimal` — typ danych większość czasu, ale nie zawsze.  
   
 ## <a name="example"></a>Przykład  
- Następująca aplikacja konsoli Pokazuje, jak załadować dane przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> klasy. W tym przykładzie <xref:System.Data.SqlClient.SqlDataReader> służy do kopiowania danych z **Production.Product** tabeli w programie SQL Server**AdventureWorks** bazy danych do tabeli podobne w tej samej bazy danych.  
+ Następująca aplikacja konsoli Pokazuje, jak załadować dane przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> klasy. W tym przykładzie <xref:System.Data.SqlClient.SqlDataReader> służy do kopiowania danych z **Production.Product** tabeli w programie SQL Server **AdventureWorks** bazy danych do tabeli podobne w tej samej bazy danych.  
   
 > [!IMPORTANT]
 >  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze użyj instrukcji Transact-SQL `INSERT … SELECT` instrukcję, aby skopiować dane.  

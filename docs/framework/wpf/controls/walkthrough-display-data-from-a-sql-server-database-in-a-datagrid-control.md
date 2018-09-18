@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 1421d076ff202ec87a9d861ab2c7d1c1cdcdc1b7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dba2ec98b25c9c65a795c462b18504a799df04bc
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798729"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45972270"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Wskazówki: Wyświetlanie danych z serwera bazy danych SQL w formancie DataGrid
 W tym przewodniku możesz pobierać dane z bazy danych programu SQL Server i wyświetlić te dane w <xref:System.Windows.Controls.DataGrid> kontroli. ADO.NET Entity Framework umożliwia tworzenie klas jednostek, które reprezentują dane, a następnie napisz zapytanie, które pobiera określone dane z klasą jednostki za pomocą LINQ.  
@@ -33,7 +33,7 @@ W tym przewodniku możesz pobierać dane z bazy danych programu SQL Server i wy�
   
      Zostanie wyświetlone okno dialogowe Dodaj nowy element.  
   
-3.  W okienku zainstalowane szablony zaznacz **danych** i na liście szablonów wybierz **Tryb danych jednostki ADO.NET**l.  
+3.  W okienku zainstalowane szablony zaznacz **danych** i na liście szablonów wybierz **ADO.NET Entity Data Model**.  
   
      ![Wybierz Model danych jednostki ADO.NET](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid_SQL_EF_Step1")  
   

@@ -8,11 +8,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
 ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597845"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45972533"
 ---
 # <a name="get-started-with-c"></a>Rozpoczynanie pracy przy użyciu języka C\#
 

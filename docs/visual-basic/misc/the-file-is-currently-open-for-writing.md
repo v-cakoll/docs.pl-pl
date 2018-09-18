@@ -3,11 +3,11 @@ title: Plik jest obecnie otwarty do zapisu
 ms.date: 07/20/2015
 ms.assetid: 80b3c5e8-3a5c-4d60-b1ac-b7460f0b30b0
 ms.openlocfilehash: 83867d30243d34e3043f786a5377f767b7a30963
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595480"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45970724"
 ---
 # <a name="the-file-is-currently-open-for-writing"></a>Plik jest obecnie otwarty do zapisu
 Podjęta próba uzyskania dostępu do pliku, który jest aktualnie otwarty do zapisu.  

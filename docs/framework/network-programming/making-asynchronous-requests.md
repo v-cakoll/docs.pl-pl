@@ -1,5 +1,5 @@
 ---
-title: Tworzenie żądania asynchroniczne
+title: Tworzenie żądań asynchronicznych
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,39 +14,39 @@ ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 27860feed5fbb33fb007120d082599c8f80b240d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f5729f0a3d36a631b227c77de51f68b95e8df22
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395911"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45972614"
 ---
-# <a name="making-asynchronous-requests"></a>Tworzenie żądania asynchroniczne
-<xref:System.Net> Klasy na użytek programu .NET Framework standardowy model programowania asynchronicznego asynchronicznego dostępu do zasobów Internetu. <xref:System.Net.WebRequest.BeginGetResponse%2A> i <xref:System.Net.WebRequest.EndGetResponse%2A> metody <xref:System.Net.WebRequest> klasy start i ukończone żądania asynchroniczne zasobu internetowego.  
+# <a name="making-asynchronous-requests"></a>Tworzenie żądań asynchronicznych
+<xref:System.Net> Klasy na użytek programu .NET Framework standardowa asynchronicznego modelu programowania asynchronicznego dostępu do zasobów w Internecie. <xref:System.Net.WebRequest.BeginGetResponse%2A> i <xref:System.Net.WebRequest.EndGetResponse%2A> metody <xref:System.Net.WebRequest> klasy rozpoczęcie i zakończenie żądań asynchronicznych do zasobu internetowego.  
   
 > [!NOTE]
->  Przy użyciu synchroniczne odwołuje się asynchroniczne wywołanie zwrotne, które metody może spowodować zmniejszenie wydajności. Żądania internetowe z **WebRequest** i jego elementy podrzędne muszą używać <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> do odczytu Strumień zwrócony przez <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> metody.  
+>  Przy użyciu synchronicznej wywołuje w asynchroniczne wywołanie zwrotne, które metody może spowodować zmniejszenie wydajności. Żądania internetowe za pomocą **WebRequest** i jego elementy podrzędne muszą używać <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> do odczytu Strumień zwrócony przez <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> metody.  
   
- Następujący przykładowy kod pokazuje, jak używać wywołania asynchroniczne z **WebRequest** klasy. Próbka jest program konsoli, przyjmuje identyfikatora URI z wiersza polecenia, zasobu w identyfikatorze URI żądania, a następnie drukuje danych do konsoli odbierane z Internetu.  
+ Poniższy przykład kodu pokazuje, jak używać wywołań asynchronicznych za pomocą **WebRequest** klasy. Próbka jest program konsoli, który przyjmuje identyfikator URI z wiersza polecenia, zasobu o identyfikatorze URI żądania i następnie drukuje dane do konsoli, gdy są odbierane z Internetu.  
   
- Program definiuje dwie klasy do własnego użytku **RequestState** klasy, która przekazuje dane między wywołania asynchroniczne, i **ClientGetAsync** klasy, która implementuje żądania asynchroniczne Zasobu internetowego.  
+ Program definiuje dwie klasy na własny użytek **RequestState** klasy, która przekazuje dane na wywołania asynchroniczne, a **ClientGetAsync** klasy, która implementuje asynchroniczne żądanie Zasobu internetowego.  
   
- **RequestState** klasy zachowuje stan żądania dla wywołań metod asynchronicznych, które obsługi żądania. Zawiera on **WebRequest** i <xref:System.IO.Stream> wystąpień, które zawierają bieżące żądanie do zasobu i strumienia została odebrana w odpowiedzi buforu, który zawiera dane obecnie otrzymane od zasobu internetowego i <xref:System.Text.StringBuilder> zawiera pełną odpowiedzi. A **RequestState**jest przekazywany jako *stanu* parametru po <xref:System.AsyncCallback> metody został zarejestrowany za pomocą **WebRequest.BeginGetResponse**.  
+ **RequestState** klasa zachowuje stan żądania dla wywołania do metod asynchronicznych, które obsługi żądania. Zawiera on **WebRequest** i <xref:System.IO.Stream> wystąpień, które zawierają bieżące żądanie do zasobu i dane ze strumienia odebrany w odpowiedzi buforu, który zawiera dane aktualnie otrzymane z zasobem internetowym i <xref:System.Text.StringBuilder> zawiera pełną odpowiedź. A **RequestState** jest przekazywany jako *stanu* parametru podczas <xref:System.AsyncCallback> metody jest zarejestrowane w usłudze **WebRequest.BeginGetResponse**.  
   
- **ClientGetAsync** klasa implementuje asynchroniczne żądanie do zasobu internetowego i zapisuje odpowiedź wynikowy do konsoli. Zawiera metody i właściwości opisane w poniższej liście.  
+ **ClientGetAsync** klasa implementuje asynchroniczne żądanie do zasobu internetowego i zapisuje wynikowy odpowiedzi do konsoli. Zawiera metody i właściwości opisane w poniższej liście.  
   
--   `allDone` Wystąpienie zawiera właściwość <xref:System.Threading.ManualResetEvent> klasy, która sygnalizuje zakończenia żądania.  
+-   `allDone` Właściwość zawiera wystąpienie <xref:System.Threading.ManualResetEvent> klasę, która sygnalizuje zakończenie żądania.  
   
--   `Main()` Metoda odczytuje wiersz polecenia i rozpocznie się żądanie dla określonego zasobu internetowego. Tworzy **WebRequest** `wreq` i **RequestState** `rs`, wywołania **BeginGetResponse w czasie** rozpoczęcie przetwarzania żądania, a następnie wywołania `allDone.WaitOne()`metody, aby aplikacja nie zostanie zakończona, do czasu ukończenia wywołania zwrotnego. Po odpowiedzi są odczytywane z zasobu internetowego `Main()` zapisuje go do konsoli i punkty końcowe aplikacji.  
+-   `Main()` Metoda odczytuje wiersz polecenia i rozpoczyna się żądanie dla określonego zasobu internetowego. Tworzy **WebRequest** `wreq` i **RequestState** `rs`, wywołania **BeginGetResponse w czasie** rozpoczęcie przetwarzania żądania, a następnie wywołania `allDone.WaitOne()`metody, aby aplikacja nie zostanie zakończona, do czasu ukończenia wywołania zwrotnego. Po odpowiedzi są odczytywane z zasobu internetowego `Main()` zapisuje je do konsoli i zakończenia aplikacji.  
   
--   `showusage()` Metody zapisuje przykład wiersza polecenia do konsoli. Jest ona wywoływana przez `Main()` po podaniu nie identyfikatora URI w wierszu polecenia.  
+-   `showusage()` Metoda zapisuje się przykładowy wiersz polecenia w konsoli. Jest ona wywoływana przez `Main()` gdy nie identyfikatora URI znajduje się w wierszu polecenia.  
   
--   `RespCallBack()` Metoda implementuje metody asynchroniczne wywołanie zwrotne dla żądania Internet. Tworzy **WebResponse** zawierające odpowiedzi z zasobu internetowego pobiera strumień odpowiedzi, a następnie uruchamia asynchronicznego odczytywania danych ze strumienia.  
+-   `RespCallBack()` Metoda implementuje metody asynchroniczne wywołanie zwrotne dla żądania internetowe. Tworzy **elementu WebResponse** zawierające odpowiedzi z zasobu internetowego pobiera w strumieniu odpowiedzi, a następnie rozpoczyna, asynchronicznego odczytywania danych ze strumienia.  
   
--   `ReadCallBack()` Metoda implementuje metody asynchroniczne wywołanie zwrotne do odczytywania strumienia odpowiedzi. Przesyłania danych otrzymywanych z zasobem internetowym do **ResponseData** właściwość **RequestState** wystąpienia, a następnie uruchamia innego asynchroniczne odczytu strumienia odpowiedzi, dopóki nie zostanie nie ma więcej danych zwracane. Po przeczytaniu wszystkich danych `ReadCallBack()` powoduje zamknięcie strumienia odpowiedzi i wywołania `allDone.Set()` metody, aby wskazać, że całej odpowiedzi znajduje się w **ResponseData**.  
+-   `ReadCallBack()` Metoda implementuje metody asynchroniczne wywołanie zwrotne do odczytywania strumienia odpowiedzi. Transferuje dane otrzymane z zasobem internetowym do **ResponseData** właściwość **RequestState** wystąpienia, a następnie rozpoczyna się innym asynchronicznego odczytu strumienia odpowiedzi do czasu nie ma więcej danych zwracane. Po przeczytaniu wszystkie dane `ReadCallBack()` zamyka strumienia odpowiedzi i wywołania `allDone.Set()` metodę w celu wskazania, że całej odpowiedzi znajduje się w **ResponseData**.  
   
     > [!NOTE]
-    >  Jest krytyczny, że wszystkie strumienie sieci są zamknięte. Jeśli nie zamkniesz każdego strumienia żądania i odpowiedzi, aplikacja zabraknie połączenia z serwerem i mógł przetwarzać dodatkowych żądań.  
+    >  Jest niezwykle, że wszystkie strumienie sieci, są zamknięte. Jeśli nie zamkniesz każdego strumienia żądania i odpowiedzi, aplikacja zabraknie połączenia z serwerem i mógł przetwarzać dodatkowych żądań.  
   
 ```csharp  
 using System;  

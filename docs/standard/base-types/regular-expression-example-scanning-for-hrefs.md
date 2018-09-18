@@ -15,46 +15,47 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34728683"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070829"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Przykład wyrażenia regularnego: wyszukiwanie wartości HREF
-Poniższy przykład wyszukuje ciąg wejściowy i wyświetla wszystkie href = "..." wartości i ich lokalizacji w ciągu.  
+W poniższym przykładzie wyszukuje ciąg wejściowy i wyświetla wszystkie href = "...", wartości i ich lokalizacji w ciągu.  
   
 ## <a name="the-regex-object"></a>Obiekt Regex  
- Ponieważ `DumpHRefs` metoda może być wywołana wiele razy z kodu użytkownika, używa `static` (`Shared` w języku Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody. To umożliwia aparat wyrażeń regularnych do pamięci podręcznej z wyrażeniem regularnym i pozwala uniknąć ponoszenia dodatkowych nakładów na uruchamianiu nową <xref:System.Text.RegularExpressions.Regex> obiektu zawsze ma zostać wywołana metoda. A <xref:System.Text.RegularExpressions.Match> obiekt jest następnie używany do iterowania po wszystkich dopasowań w ciągu.  
+ Ponieważ `DumpHRefs` metodę można wywoływać wielokrotnie z kodu użytkownika, używa ona `static` (`Shared` w języku Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody. To umożliwia aparatowi wyrażeń regularnych i wyrażeń regularnych w pamięci podręcznej i pozwala uniknąć konieczności tworzenia wystąpienia nowego <xref:System.Text.RegularExpressions.Regex> obiektu każdym wywołaniu metody. A <xref:System.Text.RegularExpressions.Match> obiekt jest następnie używany do iterowania po wszystkie dopasowania w ciągu.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
  [!code-vb[RegularExpressions.Examples.HREF#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.HREF/vb/example.vb#1)]  
   
- Poniższy przykład przedstawia następnie wywołania `DumpHRefs` metody.  
+ W poniższym przykładzie pokazano następnie wywołania `DumpHRefs` metody.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#2)]
  [!code-vb[RegularExpressions.Examples.HREF#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.HREF/vb/example.vb#2)]  
   
- Wzorzec wyrażenia regularnego `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` jest interpretowany, jak pokazano w poniższej tabeli.  
+ Definicję wzorca wyrażenia regularnego `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` jest interpretowane tak jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
-|`href`|Zgodny z ciągiem literału "href". Dopasowanie jest rozróżniana wielkość liter.|  
+|`href`|Jest zgodny z ciągiem literału "href". Dopasowanie jest rozróżniana wielkość liter.|  
 |`\s*`|Dopasowanie do zera lub większej liczby znaków odstępu.|  
-|`=`|Zgodne znaku równości.|  
+|`=`|Dopasowuje znak równości.|  
 |`\s*`|Dopasowanie do zera lub większej liczby znaków odstępu.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Pasuje do jednej z następujących bez przypisywanie wynik do przechwyconej grupy:<br /> <ul><li><p>Znak cudzysłowu lub apostrof, a następnie zero lub więcej wystąpień dowolnych znaków innych niż cudzysłów lub apostrof następuje znak cudzysłowu lub apostrof. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li><li><p>Co najmniej jeden z systemem innym niż biały znak. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li></ul>|  
-|`(?<1>[^"']*)`|Przypisz zero lub więcej wystąpień dowolnych znaków innych niż cudzysłów lub apostrof do przechwytywania grupy o nazwie `1`.|  
-|`(?<1>\S+)`|Przypisz co najmniej jeden z systemem innym niż biały znak do przechwytywania grupy o nazwie `1`.|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Pasuje do jednej z następujących czynności bez przypisywania wynik do przechwyconej grupy:<br /> <ul><li><p>Cudzysłów lub apostrof, w którym następuje zero lub więcej wystąpień dowolnego znaku innego niż cudzysłów lub apostrof, w którym następuje cudzysłów lub apostrof. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li><li><p>Co najmniej jeden znak inny niż biały. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li></ul>|  
+|`(?<1>[^"']*)`|Przypisać zero lub więcej wystąpień dowolnego znaku innego niż cudzysłów lub apostrof grupa przechwytywania o nazwie `1`.|  
+|`(?<1>\S+)`|Przypisz co najmniej jeden znak inny niż biały do grupa przechwytywania o nazwie `1`.|  
   
 ## <a name="match-result-class"></a>Dopasuj wynik klasy  
- Wyniki wyszukiwania są przechowywane w <xref:System.Text.RegularExpressions.Match> klasy, która zapewnia dostęp do wszystkich podciągów wyodrębnione podczas wyszukiwania. On również pamięta przeszukiwany ciąg i wyrażenie regularne używane, dlatego może wywołać <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> metodę w celu których ostatnio zakończone innego początkowy wyszukiwania.  
+ Wyniki wyszukiwania są przechowywane w <xref:System.Text.RegularExpressions.Match> klasy, która zapewnia dostęp do wszystkich podciągów wyodrębnionych przez wyszukiwanie. Również pamięta ciąg wyszukiwany i wyrażenie regularne jest używane, dzięki czemu można wywoływać <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> metody do wykonania, której ostatni z nich zakończyło się innym uruchamianie wyszukiwania.  
   
 ## <a name="explicitly-named-captures"></a>Przechwytuje wyraźnie nazwane  
- W tradycyjnym wyrażeń regularnych nawiasów przechwytywania automatycznie numerowane kolejno. Prowadzi to do dwóch problemów. Najpierw Jeśli wyrażenie regularne jest modyfikowany przez wstawiania lub usuwania zestawu nawiasów, żadnego kodu, który odwołuje się do przechwytywania numerowane należy ponownie zapisać celu odzwierciedlenia nowych numerów. Po drugie ponieważ często różne zestawy nawiasów służą do zapewniania dwóch wyrażeń alternatywne dopasowania dopuszczalne, może być trudne do ustalenia, które z dwóch wyrażeń faktycznie zwrócił wynik.  
+ W tradycyjnych wyrażeń regularnych nawiasów przechwytywania są automatycznie numerowane. Prowadzi to do dwa problemy. Najpierw wyrażenia regularnego jest modyfikowany przez wstawiania lub usuwania zestaw nawiasów, muszą zostać przepisane aby odzwierciedlały nową numerację cały kod, który odwołuje się do przechwytywania numerowanej. Po drugie ponieważ często różnych zestawów nawiasów jest używana do udostępniania dwóch wyrażeń alternatywnych dopasowanie dopuszczalna, może być trudno określić, które z dwóch wyrażeń faktycznie zwróciło wynik.  
   
- Aby rozwiązać te problemy, <xref:System.Text.RegularExpressions.Regex> klasa obsługuje składnię `(?<name>…)` przechwytywania dopasowania do określonego miejsca (gniazdo może nosić przy użyciu ciąg lub liczba całkowita; liczby całkowite można odwołać szybciej). W związku z tym alternatywne dopasowania dla tych samych parametrach, którego wszystkie może zostać skierowany do tej samej lokalizacji. W przypadku konfliktu ostatni dopasowania upuścić na gnieździe jest pomyślne dopasowanie. (Jednak pełną listę wiele elementów zgodnych z jednego miejsca jest dostępne. Zobacz <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> kolekcji, aby uzyskać więcej informacji.)  
+ Aby rozwiązać te problemy <xref:System.Text.RegularExpressions.Regex> klasa obsługuje składnię `(?<name>…)` przechwytywania dopasowanie do określonego miejsca (gniazdo może mieć nazwę, za pomocą ciąg lub liczba całkowita; liczb całkowitych można odwołać szybciej). W efekcie alternatywne dopasowania dla tego samego ciągu, który wszystkie może zostać skierowany do tej samej lokalizacji. W przypadku konfliktu ostatnim dopasowaniem upuścić na gniazdo jest udanych dopasowań. (Jednak uzyskać pełną listę wiele dopasowań dla jednego miejsca jest dostępna. Zobacz <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> kolekcji, aby uzyskać szczegółowe informacje.)  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)

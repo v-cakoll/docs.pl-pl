@@ -5,45 +5,47 @@ ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f62a113865a481276c371f2fce55a5d9486eb00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063602"
 ---
 # <a name="types-of-xml-nodes"></a>Typy węzłów XML
-Podczas odczytywania dokumentu XML do pamięci jako drzewo węzłów typy węzłów, węzłom ustalonymi podczas tworzenia węzłów. XML modelu DOM (Document Object) ma kilka rodzajów typy węzłów, określany przez sieci World Wide Web konsorcjum W3C i wymienione w sekcji 1.1.1 strukturę modelu DOM. W poniższej tabeli wymieniono typy węzłów przypisane do tego typu węzła oraz krótki opis każdego obiektu.  
+Podczas odczytywania dokumentu XML do pamięci jako drzewo węzłów typy węzłów dla węzłów są decyzję, gdy węzły zostaną utworzone. XML Document Object Model (DOM) ma kilka rodzajów typy węzłów, określane przez World Wide Web Consortium (W3C) i na liście w sekcji 1.1.1 strukturę modelu DOM. W poniższej tabeli wymieniono typy węzłów obiektu przypisane do tego typu węzła i krótki opis każdego z nich.  
   
-|Typ węzła modelu DOM|Obiekt|Opis|  
+|Typ węzła w modelu DOM|Obiekt|Opis|  
 |-------------------|------------|-----------------|  
-|dokument|<xref:System.Xml.XmlDocument>|Kontener wszystkich węzłów w drzewie. Jest nazywana głównego dokumentu, który nie jest zawsze taki sam jak element główny.|  
-|DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Zbiór tymczasowy, zawierający co najmniej jeden węzeł bez żadnych struktury drzewa.|  
-|Typ dokumentu|<xref:System.Xml.XmlDocumentType>|Reprezentuje `<!DOCTYPE…>` węzła.|  
-|Obiekt EntityReference|<xref:System.Xml.XmlEntityReference>|Reprezentuje tekst odwołanie-rozwinięty jednostki.|  
+|dokument|<xref:System.Xml.XmlDocument>|Kontener wszystkich węzłów w drzewie. Jest również znane jako katalog główny dokumentów, które nie zawsze jest taki sam jak element główny.|  
+|DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Pakiet tymczasowe, zawierający co najmniej jeden węzeł bez żadnych strukturę drzewa.|  
+|Typ|<xref:System.Xml.XmlDocumentType>|Reprezentuje `<!DOCTYPE…>` węzła.|  
+|Obiekt EntityReference|<xref:System.Xml.XmlEntityReference>|Reprezentuje tekst odwołanie do jednostki — rozwinięte.|  
 |Element|<xref:System.Xml.XmlElement>|Reprezentuje węzeł elementu.|  
-|Attr|<xref:System.Xml.XmlAttribute>|Jest atrybutem elementu.|  
-|ProcessingInstruction|<xref:System.Xml.XmlProcessingInstruction>|Jest węzłem instrukcji przetwarzania.|  
-|Komentarz|<xref:System.Xml.XmlComment>|Węzeł komentarza.|  
+|attr|<xref:System.Xml.XmlAttribute>|Jest atrybutem elementu.|  
+|ProcessingInstruction|<xref:System.Xml.XmlProcessingInstruction>|Jest węzeł przetwarzania instrukcji.|  
+|Komentarz|<xref:System.Xml.XmlComment>|Węzeł komentarzy.|  
 |Tekst|<xref:System.Xml.XmlText>|Tekst należących do elementu lub atrybutu.|  
 |CDATASection|<xref:System.Xml.XmlCDataSection>|Reprezentuje CDATA.|  
-|Jednostka|<xref:System.Xml.XmlEntity>|Reprezentuje `<!ENTITY…>` deklaracji w kodzie XML dokumentu z podzestawu wewnętrznego dokumentu typu definicji (DTD) lub zewnętrznej definicji DTD i jednostki parametru.|  
-|Notacja|<xref:System.Xml.XmlNotation>|Reprezentuje notacji zadeklarowanej w definicji DTD.|  
+|Jednostka|<xref:System.Xml.XmlEntity>|Reprezentuje `<!ENTITY…>` deklaracji w pliku XML dokumentu z podzbioru definition (DTD) typu wewnętrznego dokumentu lub w zewnętrznej definicji DTD i jednostki parametru.|  
+|Notacja|<xref:System.Xml.XmlNotation>|Reprezentuje notacji zadeklarowanej w DTD.|  
   
- Nawet jeśli atrybut (*attr*) znajduje się w interfejsach podstawowych sekcji 1.2 W3C DOM poziomu 1 jako węzeł, nie wydaje się elementem podrzędnym węzła dowolnego elementu.  
+ Nawet jeśli atrybut (*attr*) znajduje się w interfejsach podstawowych sekcji 1.2 W3C DOM poziomu 1 jako węzeł, nie uważa się elementem podrzędnym węzła dowolnego elementu.  
   
- W poniższej tabeli przedstawiono typy dodatkowego węzła nie jest zdefiniowany przez W3C, jednak będą dostępne do użycia w modelu obiektów programu Microsoft .NET Framework jako **typ XmlNodeType** wyliczenia. Dlatego nie jest brak pasującego modelu DOM węzła kolumny typu dla tych typów węzłów.  
+ W poniższej tabeli przedstawiono typy dodatkowy węzeł nie jest zdefiniowany przez organizację W3C, ale są one dostępne do użycia w modelu obiektów programu Microsoft .NET Framework jako **typ XmlNodeType** wyliczenia. Dlatego jest nie pasującego DOM typu kolumny węzła dla tych typów węzłów.  
   
 |Typ węzła|Opis|  
 |---------------|-----------------|  
 |<xref:System.Xml.XmlDeclaration>|Reprezentuje węzeł deklaracji `<?xml version="1.0"…>`.|  
-|<xref:System.Xml.XmlSignificantWhitespace>|Reprezentuje znaczący biały znak, który jest biały znak w zawartości mieszanej.|  
+|<xref:System.Xml.XmlSignificantWhitespace>|Reprezentuje znaczące biały znak, który jest biały znak w zawartości mieszanej.|  
 |<xref:System.Xml.XmlWhitespace>|Reprezentuje biały znak w zawartości elementu.|  
-|EndElement|Zwracane, jeśli **XmlReader** pobiera do końca elementu.<br /><br /> Przykład XML:  **\< /elementu >**<br /><br /> Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNodeType>.|  
+|EndElement|Zwracane, jeśli **XmlReader** pobiera-to-end elementu.<br /><br /> Przykładowy kod XML:  **\< /item >**<br /><br /> Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNodeType>.|  
 |EndEntity|Zwracane, jeśli **XmlReader** pobiera w celu zastąpienia jednostki w wyniku wywołania <xref:System.Xml.XmlReader.ResolveEntity%2A>. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNodeType>.|  
   
- Aby wyświetlić przykładów kodu odczytuje w kodzie XML i używa wielkość konstrukcja na typy węzłów do wydruku informacji na temat węzła i jego zawartości, zobacz <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>.  
+ Aby wyświetlić przykładowy kod odczytuje w formacie XML, który używa konstrukcji przypadków w ramach typów węzłów do drukowania informacji na temat węzła i jego zawartości, zobacz <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>.  
   
- Więcej informacji o hierarchii obiektów typy węzłów i ich nazwy odpowiadającego mu obiektu, dla [hierarchii XML modelu DOM (Document Object)](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Aby uzyskać więcej informacji dotyczących obiektów utworzonych w węźle drzewa, zobacz [mapowania hierarchii obiektów do danych XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
+ Aby uzyskać więcej informacji na temat hierarchii obiektów na typy węzłów i ich nazwy obiektów równoważnych, zobacz [hierarchii XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Aby uzyskać więcej informacji na temat obiektów utworzonych w węźle drzewa, zobacz [mapowanie hierarchii obiektów na dane XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

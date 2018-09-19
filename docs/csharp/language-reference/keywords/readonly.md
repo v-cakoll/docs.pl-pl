@@ -8,11 +8,11 @@ helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
 ms.openlocfilehash: d09ce4ea972a3064298eebdf0b8b80999ee8441e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/18/2018
-ms.locfileid: "45993994"
+ms.locfileid: "46287495"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 

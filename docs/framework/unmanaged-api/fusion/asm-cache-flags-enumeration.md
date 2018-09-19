@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b712c6ae5978e83dab085f48dd1fd572757384a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990495"
+ms.locfileid: "46287770"
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS — Wyliczenie
 Wskazuje źródło zestawu, który jest reprezentowany przez [iassemblycacheitem —](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) w globalnej pamięci podręcznej.  

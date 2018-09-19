@@ -5,11 +5,11 @@ ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45998971"
 ---
 # <a name="reliable-secure-profile"></a>Niezawodny bezpieczny profil
 W tym przykładzie przedstawiono sposób tworzenia usług WCF i [niezawodny bezpieczny profil](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Niniejszy przykład pokazuje implementację [Utwórz połączenie](https://go.microsoft.com/fwlink/?LinkId=178141) kanału, który może być składana, wraz z niezawodną obsługę komunikatów i opcjonalnie bezpiecznego kanału do tworzenia niezawodnych bezpiecznych powiązań, na podstawie RSP specyfikacji.  

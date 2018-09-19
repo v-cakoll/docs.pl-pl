@@ -3,11 +3,11 @@ title: 'Pliki podpisów (F #)'
 description: 'Dowiedz się, jak używać plików sygnatur F # do przechowywania informacji na temat podpisów publicznych zestaw elementów języka F # programów, takich jak typy, przestrzenie nazw i moduły.'
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45991236"
 ---
 # <a name="signatures"></a>Podpisy
 

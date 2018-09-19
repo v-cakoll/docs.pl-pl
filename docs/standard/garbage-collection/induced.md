@@ -8,11 +8,11 @@ ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45645973"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003069"
 ---
 # <a name="induced-collections"></a>Wywołane kolekcje
 W większości przypadków moduł odśmiecania pamięci może określić najlepszy czas na wykonywanie odśmiecania i należy pozwolić mu działać niezależnie. Istnieją rzadkich sytuacjach, gdy wymuszona Kolekcja może zwiększyć wydajność aplikacji. W takich przypadkach można wywołać wyrzucanie elementów bezużytecznych, za pomocą <xref:System.GC.Collect%2A?displayProperty=nameWithType> metody w celu wymuszenia wyrzucania elementów bezużytecznych.  

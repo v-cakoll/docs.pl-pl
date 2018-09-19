@@ -24,63 +24,63 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 37843d27211bd07c2749b3e6fc14ec03d7bf570d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb55796480bea896383da479fe23a5d8967a52e3
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006812"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Porady: dodawanie rozszerzeń do formantu ToolStripMenuItems
-Może poprawić użyteczność <xref:System.Windows.Forms.MenuStrip> i <xref:System.Windows.Forms.ContextMenuStrip> formanty w następujący sposób:  
+Możesz zwiększyć użyteczność <xref:System.Windows.Forms.MenuStrip> i <xref:System.Windows.Forms.ContextMenuStrip> kontrolek w następujący sposób:  
   
--   Dodawanie znaczników zaznaczenia Określa, czy funkcja jest włączony czy wyłączony, takie jak czy linijki jest wyświetlane wzdłuż marginesu edytora lub aby wskazać, który plik na liście plików jest w trakcie wyświetlania, na przykład na dzień **okna** menu.  
+-   Dodawanie znaczników zaznaczenia Określa, czy funkcja jest włączony lub wyłączony, takie jak czy linijki są wyświetlane wzdłuż marginesu edytora lub aby wskazać plik, który w postaci listy plików jest w trakcie wyświetlania, takich jak na **okna** menu.  
   
--   Dodawanie obrazów, które wizualnie reprezentują poleceń menu.  
+-   Dodawanie obrazów, które wizualnie przedstawiają poleceń menu.  
   
--   Wyświetlanie klawiszy skrótów do zapewnienia klawiatury sposobem myszy wykonywania poleceń. Na przykład, naciskając klawisze CTRL + C wykonuje **kopiowania** polecenia.  
+-   Wyświetlanie klawiszy skrótów, aby zapewnić klawiatury zamiast myszy do wykonywania poleceń. Na przykład, naciskając klawisze CTRL + C, wykonuje **kopiowania** polecenia.  
   
--   Wyświetl klucze dostępu zapewnienie klawiatury sposobem myszy menu nawigacji. Na przykład, naciskając klawisze ALT + F wybierze **pliku** menu.  
+-   Wyświetlanie kluczy dostępu do zapewnienia klawiatury zamiast myszy menu nawigacji. Na przykład, naciskając klawisze ALT + F wybiera **pliku** menu.  
   
--   Wyświetlanie pasków separatorów do grupowania powiązanych poleceń i odczytywać menu.  
+-   Wyświetlanie pasków separatorów grupować powiązane polecenia i zwiększyć czytelność menu.  
   
-### <a name="to-display-a-check-mark-on-a-menu-command"></a>Aby wyświetlić znacznik wyboru polecenia menu  
+### <a name="to-display-a-check-mark-on-a-menu-command"></a>Aby wyświetlić znacznik wyboru na poleceniu menu  
   
--   Ustaw jego <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> właściwości `true`.  
+-   Ustaw jego <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> właściwość `true`.  
   
-     Powoduje ono również ustawienie <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> właściwości `true`. Użyj tej procedury, tylko wtedy, gdy ma się pojawiają się jako zaznaczone domyślnie, niezależnie od tego, czy jest wybrane polecenie menu.  
+     Powoduje ono również ustawienie <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> właściwość `true`. Użyj tej procedury, tylko wtedy, gdy ma się wyświetlone jako zaznaczone domyślnie, niezależnie od tego, czy wybrano polecenie menu.  
   
 ### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a>Aby wyświetlić znacznik wyboru, który zmienia stan każdego kliknięciem  
   
--   Polecenie menu <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> właściwości `true`.  
+-   Ustaw polecenie menu <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> właściwość `true`.  
   
 ### <a name="to-add-an-image-to-a-menu-command"></a>Aby dodać obraz do polecenia menu  
   
--   Polecenie menu <xref:System.Windows.Forms.ToolStripItem.Image%2A> właściwości do nazwy obrazu. Jeśli <xref:System.Windows.Forms.ToolStripItemDisplayStyle> ma ustawioną właściwość tego polecenia menu <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> lub <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, nie można wyświetlić obrazu.  
+-   Ustaw polecenie menu <xref:System.Windows.Forms.ToolStripItem.Image%2A> właściwość na nazwę obrazu. Jeśli <xref:System.Windows.Forms.ToolStripItemDisplayStyle> tego polecenia menu jest właściwością <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> lub <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, nie można wyświetlić obrazu.  
   
 > [!NOTE]
->  Margines obrazu może także wyświetlać znacznik wyboru po należy więc wybrać. Ponadto można ustawić <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> właściwości obrazu do `true`, a obraz pojawi się wraz z kreskowanym obramowaniem w czasie wykonywania.  
+>  Margines obrazka można również pokazać znacznik wyboru Jeśli więc wybrano. Ponadto można ustawić <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> właściwości obrazu do `true`, a obraz pojawi się wraz z kreskowanym obramowaniem w czasie wykonywania.  
   
-### <a name="to-display-a-shortcut-key-for-a-menu-command"></a>Aby wyświetlić klawisz skrótu polecenia menu  
+### <a name="to-display-a-shortcut-key-for-a-menu-command"></a>Aby wyświetlić klawisza skrótu dla polecenia menu  
   
--   Polecenie menu <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> właściwości kombinację żądaną klawiatury, np. CTRL + O, dla **Otwórz** polecenia menu i ustaw <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> właściwości `true`.  
+-   Ustaw polecenie menu <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> właściwości z kombinacją żądaną klawiatury, takie jak CTRL + O, aby uzyskać **Otwórz** polecenia menu, a następnie ustaw <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> właściwość `true`.  
   
 ### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a>Aby wyświetlić niestandardowe klawisze skrótu dla polecenia menu  
   
--   Polecenie menu <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> właściwości kombinację żądaną klawiatury, np. CTRL + SHIFT + O, a nie SHIFT + CTRL + O, a zestaw <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> właściwości `true`.  
+-   Ustaw polecenie menu <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> właściwości z kombinacją żądaną klawiatury, takie jak CTRL + SHIFT + O, a nie SHIFT + klawisze CTRL + O, a zestaw <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> właściwość `true`.  
   
 ### <a name="to-display-an-access-key-for-a-menu-command"></a>Aby wyświetlić klucz dostępu dla polecenia menu  
   
--   Podczas ustawiania <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwość polecenia menu, wprowadź handlowego "i" (&) przed literą, aby podkreślić, jak klucz dostępu. Na przykład wpisanie `&Open` jako <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości elementu menu spowoduje polecenia menu, który jest wyświetlany jako **O**pióra.  
+-   Po ustawieniu <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości polecenia menu, wprowadź handlowe "i" (&) przed literę, aby podkreślić, jak klucz dostępu. Na przykład wpisanie `&Open` jako <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości elementu menu spowoduje za pomocą polecenia menu, który jest wyświetlany jako <u>O</u>pióra.
   
-     Aby przejść do tego polecenia menu, naciśnij klawisz ALT, aby uaktywnić do <xref:System.Windows.Forms.MenuStrip>, a następnie naciśnij klawisz dostępu nazwy menu. Jeśli menu zostanie otwarty i zawiera elementy z klawiszy dostępu, wystarczy nacisnąć klawisz dostępu, aby wybrać polecenie menu.  
+     Aby przejść do tego polecenia menu, naciśnij klawisz ALT, aby uaktywnić do <xref:System.Windows.Forms.MenuStrip>, a następnie naciśnij klawisz dostępu, nazwy menu. Jeśli menu zostanie otwarty i zawiera elementy z kluczami dostępu, wystarczy nacisnąć klawisz dostępu, aby wybrać polecenie menu.  
   
 > [!NOTE]
->  Unikaj definiowania klucze dostępu duplikatów, takie jak definiowanie ALT + F dwa razy w tym samym systemie menu. Nie można zagwarantować kolejność wyboru dostępu zduplikowane klucze.  
+>  Unikaj definiowania zduplikowany klucz dostępu, takich jak definiowanie ALT + F dwa razy w tym samym systemie menu. Nie można zagwarantować kolejność wybór zduplikowany klucz dostępu.  
   
 ### <a name="to-display-a-separator-bar-between-menu-commands"></a>Aby wyświetlić pasek separatora między poleceń menu  
   
--   Po zdefiniowaniu Twojej <xref:System.Windows.Forms.MenuStrip> i będzie zawierać elementy użyj <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> lub <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> metodę, aby dodać polecenia menu i <xref:System.Windows.Forms.ToolStripSeparator> formanty <xref:System.Windows.Forms.MenuStrip> w dowolnej kolejności.  
+-   Po zdefiniowaniu swoje <xref:System.Windows.Forms.MenuStrip> i będzie zawierać elementy użyj <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> lub <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> metodę, aby dodać polecenia menu i <xref:System.Windows.Forms.ToolStripSeparator> mające na celu <xref:System.Windows.Forms.MenuStrip> w kolejności ma.  
   
     ```vb  
     ' This code adds a top-level File menu to the MenuStrip.  

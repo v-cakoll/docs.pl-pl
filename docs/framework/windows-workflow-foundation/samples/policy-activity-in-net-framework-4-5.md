@@ -3,11 +3,11 @@ title: Działanie zasad w programie .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
 ms.openlocfilehash: 9d8983f2f1d3f75beffeacfff4b673f6c23c4204
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45994380"
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Działanie zasad w programie .NET Framework 4.5
 Działanie Policy4 zezwala na Windows Workflow Foundation w [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiektów, które ma być używany w programie Windows Workflow Foundation w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) bezpośrednio przy użyciu aparatu reguł, który jest dostarczany w WF 3.5. Za pomocą tego działania, można tworzyć i wykonywać WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>. Aby uzyskać więcej informacji na temat aparatu reguł 3.5 WF wchodzącego w skład Windows Workflow Foundation przeczytaj wprowadzenie do aparatu reguł programu Windows Workflow Foundation. Aby uzyskać więcej informacji o migrowaniu reguły WF w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], przeczytaj [wskazówek dotyczących migracji](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

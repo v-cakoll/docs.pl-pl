@@ -3,11 +3,11 @@ title: chronionych wewnętrznych (odwołanie w C#)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 1a305cb84989f12350e2e7cc28dd18f9d0c7ae5e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46288293"
 ---
 # <a name="protected-internal-c-reference"></a>chronionych wewnętrznych (odwołanie w C#)
 

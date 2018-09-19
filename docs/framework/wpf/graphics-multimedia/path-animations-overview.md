@@ -9,11 +9,11 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 0f795ad00823e7b1c37221f7417b09d3982c4c18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006759"
 ---
 # <a name="path-animations-overview"></a>Przegląd Animacja ścieżki
 <a name="introduction"></a> W tym temacie przedstawiono animacje ścieżki, które pozwalają na potrzeby generowania danych wyjściowych wartości ścieżki geometrycznej. Animacje ścieżki są przydatne w przypadku przenoszenia i obracanie obiekty wzdłuż ścieżek złożonych.  

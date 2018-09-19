@@ -3,11 +3,11 @@ title: Właściwości indeksowane (F#)
 description: 'Więcej informacji na temat F # indeksowane właściwości, które są właściwościami, które zapewnia dostęp tablicy do danych uporządkowanych.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45686170"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45994263"
 ---
 # <a name="indexed-properties"></a>Właściwości indeksowane
 

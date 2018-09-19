@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: acb9af688025fc6cbcd9e41fbc5a0c85f6ebb29e
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009782"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Narzędzie generowania manifestu i edytowania)
 
@@ -40,8 +40,7 @@ W poniższej tabeli przedstawiono polecenia obsługiwane przez *Mage.exe*. Aby u
 |**-s, — logowanie** `[signOptions]`|Używa pary kluczy lub certyfikatu X509 w celu podpisania pliku. Podpisy są wstawiane jako elementy XML wewnątrz plików.<br /><br /> Użytkownik musi być połączony z Internetem podczas podpisywania manifestu określającego **- TimestampUri** wartość.|
 |**-h,-? — Pomoc** *[pełne]*|Opisuje wszystkie z dostępnych poleceń i ich opcji. Określ `verbose` umożliwia uzyskanie szczegółowej Pomocy.|
 
-<a name="NewUpdate"></a>
-## <a name="new-and-update-command-options"></a>Opcje poleceń New i Update
+## <a name="new-and-update-command-options"></a>Nowe i zaktualizuj opcje polecenia
 
 W poniższej tabeli przedstawiono opcje obsługiwane przez `-New` i `-Update` poleceń:
 
@@ -70,9 +69,9 @@ W poniższej tabeli przedstawiono opcje obsługiwane przez `-New` i `-Update` po
 |**-v,-wersja** `versionNumber`|1.0.0.0|Manifesty aplikacji.<br /><br /> Manifesty wdrożenia.|Wersja wdrożenia. Argument musi być prawidłowym ciągiem wersji w formacie "*N.N.N.N*", gdzie"*N*" jest liczbą całkowitą bez znaku 32-bitowych.|
 |**-wpf, - WPFBrowserApp**  `isWPFApp`|false|Manifesty aplikacji.<br /><br /> Manifesty wdrożenia.|Tej flagi należy używać tyko wtedy, gdy aplikacja jest aplikacją programu Windows Presentation Foundation (WPF), która będzie obsługiwana wewnątrz programu Internet Explorer i nie jest autonomicznym plikiem wykonywalnym. Prawidłowymi wartościami są „true” lub „t” oraz „false” lub „f”.<br /><br /> Dla manifestów aplikacji wstawia `hostInBrowser` atrybutu w ramach `entryPoint` elementu w manifeście aplikacji.<br /><br /> Przypadku manifestów wdrożenia ustawia `install` atrybutu na `deployment` elementu wartość false i zapisuje manifest wdrożenia z rozszerzeniem XBAP. Określenie tego argumentu wraz z **-Zainstaluj** spowoduje błąd, ponieważ aplikacja obsługiwana w przeglądarce nie jest zainstalowaną aplikacją offline.|
 
-<a name="Sign"></a>
-## <a name="sign-command-options"></a>Opcje polecenia Sign
- W poniższej tabeli przedstawiono opcje obsługiwane przez `-Sign` polecenia, które mają zastosowanie do wszystkich typów plików.
+## <a name="sign-command-options"></a>Opcje polecenia sign
+
+W poniższej tabeli przedstawiono opcje obsługiwane przez `-Sign` polecenia, które mają zastosowanie do wszystkich typów plików.
 
 |Opcje|Opis|
 |-------------|-----------------|
@@ -105,7 +104,11 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  Manifesty aplikacji obsługują także niestandardowe sekcje zaufania. Pomaga to aplikacji przestrzegać reguły zabezpieczeń, zgodnie z którą należy żądać jak najniższych uprawnień, ponieważ można skonfigurować manifest do żądania tylko tych określonych uprawnień, których aplikacja wymaga do działania. *Mage.exe* nie obsługuje bezpośrednio dodawania niestandardowej sekcji zaufania. Można to zrobić za pomocą edytora tekstów, analizatora XML lub graficznego narzędzia *MageUI.exe*. Aby uzyskać więcej informacji o sposobie używania *MageUI.exe* do dodawania niestandardowych sekcji zaufania, zobacz [MageUI.exe (Manifest Generation i graficzny klient Editing Tool)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
- Nowe manifesty utworzone za pomocą wersji 4 *Mage.exe*, który znajduje się za pomocą programu Visual Studio 2010, docelowa [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Aby skierować je do wcześniejszych wersji programu .NET Framework, należy użyć wcześniejszej wersji *Mage.exe*. Podczas dodawania lub usuwania zestawów z istniejącego manifestu lub ponownego podpisywania istniejącego manifestu, *Mage.exe* nie aktualizuje manifestu do obiektu docelowego [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. W poniższej tabeli przedstawiono te funkcje i ograniczenia.
+Visual Studio 2017 zawiera wersji 4.6.1 *Mage.exe*. Manifesty utworzone za pomocą tej wersji *Mage.exe* platformą docelową jest program .NET Framework 4. Pod kątem starsze wersje programu .NET Framework, należy użyć wcześniejszej wersji *Mage.exe*.
+
+Gdy dodawanie lub usuwanie zestawów z istniejącego manifestu lub ponownego podpisywania istniejącego manifestu *Mage.exe* nie aktualizuje manifestu do obiektu docelowego .NET Framework 4.
+
+W poniższej tabeli przedstawiono te funkcje i ograniczenia:
 
 |Wersja manifestu|Operacja|Mage w wersji 2.0|Mage w wersji 4.0|
 |----------------------|---------------|---------------|---------------|
@@ -131,7 +134,9 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ||Dodanie zestawu|Nieobsługiwane|OK|
 ||Usunięcie zestawu|Nieobsługiwane|OK|
 
- Mage.exe tworzy nowe manifesty, których platformą docelową [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Aplikacje ClickOnce, których platformą docelową [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] mogą być uruchamiane zarówno [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] i pełną wersję [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Jeśli aplikacja jest przeznaczona na pełną wersję [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i nie można uruchomić na [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], usunąć klienta `<framework>` elementu za pomocą edytora tekstów i ponownie podpisać manifest. Poniżej przedstawiono przykładowe `<framework>` element, który jest przeznaczony dla [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)].
+ Mage.exe tworzy nowe manifesty, których platformą docelową [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Aplikacje ClickOnce, których platformą docelową [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] mogą być uruchamiane zarówno [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] i w pełnej wersji programu .NET Framework 4. Jeśli aplikacja jest przeznaczony dla pełnej wersji programu .NET Framework 4 i nie można uruchomić na [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], usunąć klienta `<framework>` elementu za pomocą edytora tekstów i ponownie podpisać manifest.
+
+Poniżej przedstawiono przykładowe `<framework>` element, który jest przeznaczony dla [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]:
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />
@@ -195,7 +200,7 @@ W poniższym przykładzie istniejący manifest wdrożenia jest podpisywany przy 
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Przewodnik: ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)

@@ -3,11 +3,11 @@ title: OFTYPE (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
 ms.openlocfilehash: c90950e11cbfca7a49b505c1654d08be504990e1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45596991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002037"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (jednostka SQL)
 Zwraca kolekcję obiektów z wyrażenie zapytania, które jest określonego typu.  

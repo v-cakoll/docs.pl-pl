@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [Windows Forms], WebBrowser control
 ms.assetid: 0968846e-48ee-485a-9797-65b5b9a622f8
 ms.openlocfilehash: 683c6ad4cbc55a889f4a0c1d20ebe8e8a2669a13
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593846"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45988364"
 ---
 # <a name="webbrowser-security"></a>Zabezpieczenia WebBrowser
 <xref:System.Windows.Forms.WebBrowser> Kontroli jest przeznaczona do pracy w trybie tylko pełnego zaufania. Zawartość HTML, wyświetlany w formancie mogą pochodzić z zewnętrznych serwerów sieci Web i może zawierać kodu niezarządzanego w formie skryptów lub formantów sieci Web. Jeśli używasz <xref:System.Windows.Forms.WebBrowser> kontroli w tej sytuacji formant jest nie mniej bezpieczne niż program Internet Explorer, ale zarządzanych <xref:System.Windows.Forms.WebBrowser> formantu nie uniemożliwia taki niezarządzany kod działa.  

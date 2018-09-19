@@ -4,11 +4,11 @@ description: Dowiedz się, jak napisać "Kopiuj i Aktualizuj rekordu wyrażenia"
 author: ChrSteinert
 ms.date: 06/04/2016
 ms.openlocfilehash: d2b089e8a7fc5c7ee26139003e23d2eaa8a3174e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638350"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45990846"
 ---
 # <a name="copy-and-update-record-expressions"></a>Kopiowanie i aktualizacja wyrażeń rekordów
 

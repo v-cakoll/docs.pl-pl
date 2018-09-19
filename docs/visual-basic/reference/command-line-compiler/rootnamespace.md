@@ -12,11 +12,11 @@ ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13bce09ca9fd1ae9ebb919a9245d8ccf87fbde1d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002609"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace —
 Określa obszar nazw dla wszystkich deklaracji typów.  

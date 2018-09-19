@@ -3,11 +3,11 @@ title: Kodowanie MTOM
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
 ms.openlocfilehash: f54a22b0004623c8aef8f2788ed7d59f7d777ce7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45674666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003012"
 ---
 # <a name="mtom-encoding"></a>Kodowanie MTOM
 Niniejszy przykład pokazuje użycie kodowania za pomocą WSHttpBinding komunikatu komunikat transmisji optymalizacji mechanizm (MTOM). MTOM jest mechanizm przekazywania dużych załączników binarnych za pomocą protokołu SOAP wiadomości jako bajtów raw, pozwalając na mniejsze wiadomości.  

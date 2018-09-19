@@ -3,11 +3,11 @@ title: 'Porady: wyszukiwanie węzłów w Namespace (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45613959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006513"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Porady: wyszukiwanie węzłów w Namespace (C#)
 Można filtrować według przestrzeni nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w tej określonej przestrzeni nazw.  

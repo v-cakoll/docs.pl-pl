@@ -3,11 +3,11 @@ title: Funkcje systemowe
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
 ms.openlocfilehash: 277f2f9c69610b134f3f95787f065f65b01712d2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692835"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006603"
 ---
 # <a name="system-functions"></a>Funkcje systemowe
 .NET Framework Data Provider for SQL Server (SqlClient) udostępnia następujące funkcje systemu:  

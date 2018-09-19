@@ -3,11 +3,11 @@ title: Formatowanie wiadomości w usługach przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
 ms.openlocfilehash: eb9a6b3a83a28154dc968bd4c1c41d34028bdd41
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45590198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003038"
 ---
 # <a name="formatting-messages-in-workflow-services"></a>Formatowanie wiadomości w usługach przepływu pracy
 Niniejszy przykład pokazuje jak innego użytkownika, typy mogą być używane w działań dotyczących komunikatów (WF usługi). Usługa próbki jest usługą zatwierdzenia proste wydatków i udostępnia trzy operacje. `ApproveExpense` pobiera typ kontraktu danych i pokazuje, jak używać znanych typów. Operacja zwraca `true` lub `false` oparte na ilości wydatków. `ApprovePO` Typ elementu XmlSerializer przyjmuje i zwraca `true` lub `false` oparte na ilości wydatków.`ApprovedVendor` pobiera typ kontraktu komunikatu i zwraca `true` lub `false` czy dostawca jest na liście zatwierdzonych dostawców, czy żądanie pochodzi z działu finansowego (dział finansowy może używać dowolnego dostawcy).  

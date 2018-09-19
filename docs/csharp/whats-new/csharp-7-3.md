@@ -2,12 +2,12 @@
 title: Co nowego w języku C# 7.3
 description: Omówienie nowych funkcji w języku C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 383346569be2c0daf333b0cb3b28e2a8fbb24f66
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007272"
 ---
 # <a name="whats-new-in-c-73"></a>Co nowego w języku C# 7.3
 

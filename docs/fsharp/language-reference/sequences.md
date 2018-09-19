@@ -3,11 +3,11 @@ title: Sekwencje (F#)
 description: 'Dowiedz się, jak sekwencje F #, gdy masz duży, uporządkowany zbiór danych, ale nie zawsze będziesz korzystać ze wszystkich elementów.'
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009813"
 ---
 # <a name="sequences"></a>Sekwencje
 

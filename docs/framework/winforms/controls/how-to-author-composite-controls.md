@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 2c7d2c94c376b671d6e9e4e4b71bc8a9b0fbc343
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798761"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007445"
 ---
 # <a name="how-to-author-composite-controls"></a>Porady: autoryzowanie formantów złożonych
 Formanty złożone można zastosować na wiele sposobów. Można tworzyć w ramach projektu aplikacji pulpitu Windows i ich używać tylko na formularze w projekcie. Lub można je tworzyć w projekcie Biblioteka formantów Windows, skompilowanie projektu do zestawu i użyj formantów w innych projektach. Można również dziedziczyć z nich i umożliwia szybkie dostosować je do specjalnych celów dziedziczenie visual.  
@@ -26,11 +26,11 @@ Formanty złożone można zastosować na wiele sposobów. Można tworzyć w rama
   
 1.  Otwórz nowy **aplikacji Windows** projekt o nazwie `DemoControlHost`.  
   
-2.  Na **projektu**menu, kliknij przycisk **Dodaj kontrolkę użytkownika**.  
+2.  Na **projektu** menu, kliknij przycisk **Dodaj kontrolkę użytkownika**.  
   
 3.  W **Dodaj nowy element** okno dialogowe, Dodaj plik klasy (plik .vb lub .cs) nazwę, która ma formant złożony, aby.  
   
-4.  Kliknij przycisk **Dodaj** przycisk, aby utworzyć plik klasy dla kontrolek złożonych.  
+4.  Wybierz **Dodaj** przycisk, aby utworzyć plik klasy dla kontrolek złożonych.  
   
 5.  Dodawanie formantów z **przybornika** do powierzchni złożonego formantu.  
   

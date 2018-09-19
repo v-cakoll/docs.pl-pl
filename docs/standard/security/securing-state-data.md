@@ -11,23 +11,23 @@ ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3c821177ca897e617885425217ac0b6659b5ea6e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003454"
 ---
-# <a name="securing-state-data"></a><span data-ttu-id="3130d-102">Zabezpieczanie danych o stanie</span><span class="sxs-lookup"><span data-stu-id="3130d-102">Securing State Data</span></span>
-<span data-ttu-id="3130d-103">Aplikacje, które obsługują dane poufne lub wprowadzić dowolnego rodzaju decyzje dotyczące bezpieczeństwa należy zachować te dane w ich własnych kontrolą i nie może dopuścić do innego potencjalnie złośliwego kodu bezpośrednio dostępu do danych.</span><span class="sxs-lookup"><span data-stu-id="3130d-103">Applications that handle sensitive data or make any kind of security decisions need to keep that data under their own control and cannot allow other potentially malicious code to access the data directly.</span></span> <span data-ttu-id="3130d-104">Najlepszym sposobem, aby chronić dane w pamięci jest do deklarowania dane jako prywatny lub wewnętrzny (z zakresu ograniczone do tego samego zestawu) zmienne.</span><span class="sxs-lookup"><span data-stu-id="3130d-104">The best way to protect data in memory is to declare the data as private or internal (with scope limited to the same assembly) variables.</span></span> <span data-ttu-id="3130d-105">Jednak nawet w tych danych podlega dostępu, których należy wiedzieć:</span><span class="sxs-lookup"><span data-stu-id="3130d-105">However, even this data is subject to access you should be aware of:</span></span>  
+# <a name="securing-state-data"></a><span data-ttu-id="09572-102">Zabezpieczanie danych o stanie</span><span class="sxs-lookup"><span data-stu-id="09572-102">Securing State Data</span></span>
+<span data-ttu-id="09572-103">Aplikacje, które obsługują dane poufne lub wprowadzić dowolnego rodzaju decyzje dotyczące bezpieczeństwa należy zachować te dane w ich własnych kontrolą i nie może dopuścić do innego potencjalnie złośliwego kodu bezpośrednio dostępu do danych.</span><span class="sxs-lookup"><span data-stu-id="09572-103">Applications that handle sensitive data or make any kind of security decisions need to keep that data under their own control and cannot allow other potentially malicious code to access the data directly.</span></span> <span data-ttu-id="09572-104">Najlepszym sposobem, aby chronić dane w pamięci jest do deklarowania dane jako prywatny lub wewnętrzny (z zakresu ograniczone do tego samego zestawu) zmienne.</span><span class="sxs-lookup"><span data-stu-id="09572-104">The best way to protect data in memory is to declare the data as private or internal (with scope limited to the same assembly) variables.</span></span> <span data-ttu-id="09572-105">Jednak nawet w tych danych podlega dostępu, których należy wiedzieć:</span><span class="sxs-lookup"><span data-stu-id="09572-105">However, even this data is subject to access you should be aware of:</span></span>  
   
--   <span data-ttu-id="3130d-106">Za pomocą mechanizmów odbicia, wysoce zaufanym kodem, który może odwoływać się do obiektu może pobierać i ustawiać prywatnych elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="3130d-106">Using reflection mechanisms, highly trusted code that can reference your object can get and set private members.</span></span>  
+-   <span data-ttu-id="09572-106">Za pomocą mechanizmów odbicia, wysoce zaufanym kodem, który może odwoływać się do obiektu może pobierać i ustawiać prywatnych elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="09572-106">Using reflection mechanisms, highly trusted code that can reference your object can get and set private members.</span></span>  
   
--   <span data-ttu-id="3130d-107">Za pomocą serializacji, wysoce zaufanym kodem może efektywnie pobierać i ustawiać prywatne składowe jeśli mogą uzyskać dostępu do odpowiednich danych w postaci serializowanej obiektu.</span><span class="sxs-lookup"><span data-stu-id="3130d-107">Using serialization, highly trusted code can effectively get and set private members if it can access the corresponding data in the serialized form of the object.</span></span>  
+-   <span data-ttu-id="09572-107">Za pomocą serializacji, wysoce zaufanym kodem może efektywnie pobierać i ustawiać prywatne składowe jeśli mogą uzyskać dostępu do odpowiednich danych w postaci serializowanej obiektu.</span><span class="sxs-lookup"><span data-stu-id="09572-107">Using serialization, highly trusted code can effectively get and set private members if it can access the corresponding data in the serialized form of the object.</span></span>  
   
--   <span data-ttu-id="3130d-108">W obszarze debugowania, te dane mogą być odczytywane.</span><span class="sxs-lookup"><span data-stu-id="3130d-108">Under debugging, this data can be read.</span></span>  
+-   <span data-ttu-id="09572-108">W obszarze debugowania, te dane mogą być odczytywane.</span><span class="sxs-lookup"><span data-stu-id="09572-108">Under debugging, this data can be read.</span></span>  
   
- <span data-ttu-id="3130d-109">Upewnij się, brak swoje własne metody lub właściwości przypadkowo udostępnia te wartości.</span><span class="sxs-lookup"><span data-stu-id="3130d-109">Make sure none of your own methods or properties exposes these values unintentionally.</span></span>  
+ <span data-ttu-id="09572-109">Upewnij się, brak swoje własne metody lub właściwości przypadkowo udostępnia te wartości.</span><span class="sxs-lookup"><span data-stu-id="09572-109">Make sure none of your own methods or properties exposes these values unintentionally.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3130d-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3130d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09572-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="09572-110">See also</span></span>
 
-- [<span data-ttu-id="3130d-111">Wytyczne dotyczące bezpiecznego programowania</span><span class="sxs-lookup"><span data-stu-id="3130d-111">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+- [<span data-ttu-id="09572-111">Wytyczne dotyczące bezpiecznego programowania</span><span class="sxs-lookup"><span data-stu-id="09572-111">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

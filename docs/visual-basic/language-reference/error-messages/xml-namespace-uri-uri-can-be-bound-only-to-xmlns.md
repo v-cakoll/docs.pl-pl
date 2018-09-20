@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: 6d526758871d881a97db94ba50491a1988ea782c
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 46a6c4896dae3951b5aedae79361f2e06d02bc04
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33594191"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46488928"
 ---
-# <a name="xml-namespace-uri-39httpwwww3orgxml1998namespace39-can-be-bound-only-to-39xmlns39"></a>Identyfikator URI przestrzeni nazw XML &#39; http://www.w3.org/XML/1998/namespace&#39; może być powiązana tylko z &#39;xmlns&#39;
-Identyfikator URI http://www.w3.org/XML/1998/namespace jest używany w deklaracji przestrzeni nazw XML. Ten identyfikator URI jest zarezerwowaną przestrzenią nazw i nie można uwzględnić w deklaracji przestrzeni nazw XML.  
+# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a>Identyfikator URI przestrzeni nazw XML `http://www.w3.org/XML/1998/namespace`; może być powiązana tylko z &#39;xmlns&#39;
+Identyfikator URI `http://www.w3.org/XML/1998/namespace` jest używany w deklaracji przestrzeni nazw XML. Ten identyfikator URI jest zarezerwowaną przestrzenią nazw i nie można uwzględnić w deklaracji przestrzeni nazw XML.  
   
  **Identyfikator błędu:** BC31183  
   

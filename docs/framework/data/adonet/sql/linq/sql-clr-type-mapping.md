@@ -2,12 +2,12 @@
 title: Mapowanie typu SQL CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862108"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478698"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowanie typu SQL CLR
 Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obiektów, które są jest wyrażone w wybranym języku programowania. Gdy aplikacja zostanie uruchomiona, LINQ to SQL tłumaczy języku zintegrowanym zapytania w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników programu LINQ to SQL tłumaczy wyniki z powrotem do obiektów, które może pracować w języku użytkownika, programowania.  
@@ -122,7 +122,7 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
  Istnieje wiele innych mapowaniach numeryczne, możesz wybrać, ale niektóre może spowodować przepełnienie lub dane utraty wyjątki podczas tłumaczenia do lub z bazy danych. Aby uzyskać więcej informacji, zobacz [Typ mapowania Uruchom czas zachowania macierzy](#BehaviorMatrix).  
   
 ### <a name="decimal-and-money-types"></a>Dziesiętnego i typy pieniędzy  
- Domyślna dokładność programu SQL Server `DECIMAL` typu (18 cyfr dziesiętnych po lewej i prawej stronie przecinka dziesiętnego) jest znacznie mniejsza niż precyzja CLR <!--zz <xref:System.Decima?displayProperty=nameWithType>l --> `Decimal` typ, który jest powiązany z, domyślnie. Może to spowodować utratę dokładności podczas zapisywania danych w bazie danych. Jednak po prostu przeciwieństwem może nastąpić, jeśli program SQL Server `DECIMAL` typ jest skonfigurowany z więcej niż 29 cyfr precyzji. Gdy serwer SQL `DECIMAL` typ został skonfigurowany z większą precyzję niż CLR <xref:System.Decimal?displayProperty=nameWithType>, może dojść do utraty precyzji podczas pobierania danych z bazy danych.  
+ Domyślna dokładność programu SQL Server `DECIMAL` typu (18 cyfr dziesiętnych po lewej i prawej stronie przecinka dziesiętnego) jest znacznie mniejsza niż precyzja CLR <xref:System.Decimal?displayProperty=nameWithType> typ, który jest powiązany z, domyślnie. Może to spowodować utratę dokładności podczas zapisywania danych w bazie danych. Jednak po prostu przeciwieństwem może nastąpić, jeśli program SQL Server `DECIMAL` typ jest skonfigurowany z więcej niż 29 cyfr precyzji. Gdy serwer SQL `DECIMAL` typ został skonfigurowany z większą precyzję niż CLR <xref:System.Decimal?displayProperty=nameWithType>, może dojść do utraty precyzji podczas pobierania danych z bazy danych.  
   
  SQL Server `MONEY` i `SMALLMONEY` typy, które również są skojarzone z CLR <xref:System.Decimal?displayProperty=nameWithType> wpisz domyślnie, ma dużo mniejsze dokładności, co może skutkować wyjątki utraty danych lub przepełnienie podczas zapisywania danych w bazie danych.  
   

@@ -4,12 +4,12 @@ description: Dowiedz się, jak można je rozszerzyć narzędzi interfejsu wiersz
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46288173"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326585"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Model rozszerzalności narzędzi interfejsu wiersza polecenia platformy .NET core
 
@@ -133,7 +133,7 @@ W poniższym przykładzie można zobaczyć projekt docelowy plik za pomocą `csp
 
 Korzystanie z niestandardowych elementów docelowych to zrobić, podając `<PackageReference>` wskazującego na pakiet i jego wersji wewnątrz projektu, który jest rozszerzany. W przeciwieństwie do narzędzia ujęte pakietu niestandardowe obiekty docelowe do zamknięcia zależności projektu odbierająca komunikaty.
 
-Przy użyciu niestandardowe obiekty docelowe zależy wyłącznie od konfiguracji. Ponieważ jest obiekt docelowy programu MSBuild, może zależeć na danym obiektem docelowym Uruchom po innym elementem docelowym i może również być ręcznego wywołania odbywa się przy użyciu `dotnet msbuild /t:<target-name>` polecenia.
+Przy użyciu niestandardowe obiekty docelowe zależy wyłącznie od konfiguracji. Ponieważ jest obiekt docelowy programu MSBuild, może zależeć na danym obiektem docelowym Uruchom po innym elementem docelowym i może również być ręcznego wywołania odbywa się przy użyciu `dotnet msbuild -t:<target-name>` polecenia.
 
 Jednak jeśli chcesz zapewnić lepsze środowisko użytkownika do użytkowników, można połączyć narzędzi dla projektów i niestandardowych elementów docelowych. W tym scenariuszu narzędzie-projekt będzie zasadniczo wystarczy zaakceptować dowolnie wymagane parametry i czy tłumaczenie, wymagane [ `dotnet msbuild` ](dotnet-msbuild.md) wywołania, które element docelowy jest wykonywany. Przykład tego rodzaju synergii może zobaczyć na [przykłady MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) repozytorium w [ `dotnet-packer` ](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) projektu.
 

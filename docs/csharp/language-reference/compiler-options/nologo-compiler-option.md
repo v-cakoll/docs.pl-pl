@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678894"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46320896"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (opcje kompilatora C#)
 **- Nologo** opcja Pomija wyświetlanie transparentu logowania podczas uruchamiania kompilatora i wyświetlanie wiadomości informacyjnych podczas kompilacji.  

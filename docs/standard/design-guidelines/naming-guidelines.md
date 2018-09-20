@@ -14,11 +14,11 @@ ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994021"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46325997"
 ---
 # <a name="naming-guidelines"></a>Wskazówki dotyczące nazewnictwa
 Następujące spójny zestaw konwencji nazewnictwa do tworzenia struktury może być duży wkład do kwestii użyteczności struktury. Umożliwia ona framework, który będzie używany przez wielu deweloperów na powszechnie oddzielnych projektów. Poza spójność formularza nazwy elementów w ramach łatwo zrozumiałe i musi przekazać funkcji każdego elementu.  

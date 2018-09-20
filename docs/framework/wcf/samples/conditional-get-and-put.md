@@ -3,11 +3,11 @@ title: Warunkowe operacje Get i Put
 ms.date: 03/30/2017
 ms.assetid: 3d22067f-57b8-4e0f-a571-a694512187ae
 ms.openlocfilehash: 29819f89327128cdd71cc89eb8d14126522dc2df
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45971914"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46324428"
 ---
 # <a name="conditional-get-and-put"></a>Warunkowe operacje Get i Put
 W tym przykładzie pokazano, jak nowe pobrać warunkowe i zaktualizuj interfejsów API modelu programowania REST programu WCF. Ponieważ pobranie warunkowe i aktualizacji są najbardziej odpowiednie dla korzystający z zasobów i rozszerza w tym przykładzie usług REST [podstawowej usługi do zasobu](../../../../docs/framework/wcf/samples/basic-resource-service.md) próbki. Ten przykład koncentruje się na dodanie obsługi pobierania warunkowe i przeprowadź aktualizację do [podstawowej usługi do zasobu](../../../../docs/framework/wcf/samples/basic-resource-service.md) przykładowy przy użyciu nowych interfejsów API, wprowadzona w [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  

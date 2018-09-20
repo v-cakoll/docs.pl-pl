@@ -2,17 +2,17 @@
 title: Uzyskiwanie dostępu do elementu OperationContext w usłudze przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-ms.openlocfilehash: 11c10e83c02ec0e2e74462e84c68fd2fcd3ff761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495570"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326374"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Uzyskiwanie dostępu do elementu OperationContext w usłudze przepływu pracy
-Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz usługi przepływu pracy, musisz zaimplementować <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interfejsu we właściwości niestandardowej wykonywania. Zastąpienie <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> metodę, która została przekazana odwołanie do <xref:System.ServiceModel.OperationContext>. Ten temat przeprowadzi Cię przez wdrożenie tej właściwości wykonywania można pobrać niestandardowy nagłówek, a także działania niestandardowego, który będzie powierzchni tę właściwość, aby <xref:System.ServiceModel.Activities.Receive> w czasie wykonywania.  Działania niestandardowego zostaną zaimplementowane zachowania <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` działania, z wyjątkiem że w przypadku <xref:System.ServiceModel.Activities.Receive> znajduje się wewnątrz niej, <xref:System.ServiceModel.Activities.IReceiveMessageCallback> zostanie wywołana i <xref:System.ServiceModel.OperationContext> można pobrać informacji.  W tym temacie przedstawiono również sposób uzyskać dostęp po stronie klienta <xref:System.ServiceModel.OperationContext> można dodać nagłówków wychodzących za pośrednictwem <xref:System.ServiceModel.Activities.ISendMessageCallback> interfejsu.  
+Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz usługi przepływu pracy, należy zaimplementować <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interfejsu we właściwości niestandardowej wykonywania. Zastąp <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> metody, który jest przekazywany z odwołaniem do <xref:System.ServiceModel.OperationContext>. W tym temacie opisano wdrażanie tej właściwości wykonywania można pobrać nagłówka niestandardowego, a także działania niestandardowego, który ujawni tę właściwość, aby <xref:System.ServiceModel.Activities.Receive> w czasie wykonywania.  Niestandardowe działanie wdroży takie samo zachowanie jako <xref:System.Activities.Statements.Sequence> działań, z wyjątkiem że w przypadku <xref:System.ServiceModel.Activities.Receive> znajduje się wewnątrz niej, <xref:System.ServiceModel.Activities.IReceiveMessageCallback> zostaną wywołane i <xref:System.ServiceModel.OperationContext> można pobrać informacji o.  W tym temacie przedstawiono również sposób uzyskać dostęp po stronie klienta <xref:System.ServiceModel.OperationContext> można dodać nagłówków wychodzących za pośrednictwem <xref:System.ServiceModel.Activities.ISendMessageCallback> interfejsu.  
   
-### <a name="implement-the-service-side-ireceivemessagecallback"></a>Implementowanie IReceiveMessageCallback po stronie serwera  
+### <a name="implement-the-service-side-ireceivemessagecallback"></a>Implementowanie IReceiveMessageCallback po stronie usługi  
   
 1.  Utwórz pustą [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] rozwiązania.  
   
@@ -26,7 +26,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
   
     3.  System.ServiceModel.Activities  
   
-4.  Dodaj nową klasę o nazwie `ReceiveInstanceIdCallback` i wdrożenie <xref:System.ServiceModel.Activities.IReceiveMessageCallback> jak pokazano w poniższym przykładzie.  
+4.  Dodaj nową klasę o nazwie `ReceiveInstanceIdCallback` i zaimplementować <xref:System.ServiceModel.Activities.IReceiveMessageCallback> jak pokazano w poniższym przykładzie.  
   
     ```csharp  
     class ReceiveInstanceIdCallback : IReceiveMessageCallback  
@@ -49,13 +49,13 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
     }  
     ```  
   
-     Ten kod zawiera <xref:System.ServiceModel.OperationContext> przekazany do metody dostępu nagłówki komunikatów przychodzących do.  
+     Ten kod używa <xref:System.ServiceModel.OperationContext> przekazana do metody na dostęp do nagłówków wiadomości przychodzące.  
   
-### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementowanie działania natywnego po stronie serwera, aby dodać implementację IReceiveMessageCallback NativeActivityContext  
+### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementowanie działania natywnego po stronie usługi, aby dodać implementację IReceiveMessageCallback NativeActivityContext  
   
 1.  Dodaj nową klasę pochodną <xref:System.Activities.NativeActivity> o nazwie `ReceiveInstanceIdScope`.  
   
-2.  Dodaj zmiennych lokalnych do śledzenia działań podrzędnych, zmienne, bieżącego indeksu działania, a <xref:System.Activities.CompletionCallback> wywołania zwrotnego.  
+2.  Dodaj zmienne lokalne, aby śledzić działania podrzędne, zmienne, bieżący indeks działania, a <xref:System.Activities.CompletionCallback> wywołania zwrotnego.  
   
     ```  
     public sealed class ReceiveInstanceIdScope : NativeActivity  
@@ -67,7 +67,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
     }  
     ```  
   
-3.  Implementuje konstruktora  
+3.  Implementowanie konstruktora  
   
     ```  
     public ReceiveInstanceIdScope()  
@@ -142,11 +142,11 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
             }  
     ```  
   
-### <a name="implement-the-workflow-service"></a>Wdrożenie usługi przepływu pracy  
+### <a name="implement-the-workflow-service"></a>Implementowanie usługi przepływu pracy  
   
-1.  Otwórz istniejącą `Program` klasy.  
+1.  Otwórz istniejący `Program` klasy.  
   
-2.  Zdefiniuj następujące ograniczenia:  
+2.  Definiuj stałe:  
   
     ```  
     class Program  
@@ -156,7 +156,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
     }  
     ```  
   
-3.  Dodaj metody statycznej o nazwie `GetWorkflowService` tworzącą usługi przepływu pracy.  
+3.  Dodaj metodę statyczną o nazwie `GetWorkflowService` tworząca usługi przepływu pracy.  
   
     ```  
     static Activity GetServiceWorkflow()  
@@ -194,7 +194,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
             }  
     ```  
   
-4.  W istniejących `Main` metody hosta usługi przepływu pracy.  
+4.  W istniejącym `Main` metody hosta usługi przepływu pracy.  
   
     ```  
     static void Main(string[] args)  
@@ -226,7 +226,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
   
     3.  System.ServiceModel.Activities  
   
-3.  Dodaj nową klasę o nazwie `SendInstanceIdCallback` i wdrożenie <xref:System.ServiceModel.Activities.ISendMessageCallback> jak pokazano w poniższym przykładzie.  
+3.  Dodaj nową klasę o nazwie `SendInstanceIdCallback` i zaimplementować <xref:System.ServiceModel.Activities.ISendMessageCallback> jak pokazano w poniższym przykładzie.  
   
     ```csharp  
     class SendInstanceIdCallback : ISendMessageCallback  
@@ -243,13 +243,13 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
         }  
     ```  
   
-     Ten kod zawiera <xref:System.ServiceModel.OperationContext> przekazany do metody w celu dodania niestandardowego nagłówka do przychodzącego komunikatu.  
+     Ten kod używa <xref:System.ServiceModel.OperationContext> przekazanego do metody w celu dodania niestandardowego nagłówka do komunikatu przychodzącego.  
   
 ### <a name="implement-a-client-side-native-activity-to-add-the-client-side-isendmessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementowanie działania natywnego po stronie klienta, aby dodać implementację ISendMessageCallback po stronie klienta do NativeActivityContext  
   
 1.  Dodaj nową klasę pochodną <xref:System.Activities.NativeActivity> o nazwie `SendInstanceIdScope`.  
   
-2.  Dodaj zmiennych lokalnych do śledzenia działań podrzędnych, zmienne, bieżącego indeksu działania, a <xref:System.Activities.CompletionCallback> wywołania zwrotnego.  
+2.  Dodaj zmienne lokalne, aby śledzić działania podrzędne, zmienne, bieżący indeks działania, a <xref:System.Activities.CompletionCallback> wywołania zwrotnego.  
   
     ```  
     public sealed class SendInstanceIdScope : NativeActivity  
@@ -261,7 +261,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
     }  
     ```  
   
-3.  Implementuje konstruktora  
+3.  Implementowanie konstruktora  
   
     ```  
     public SendInstanceIdScope()  
@@ -378,7 +378,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
   
     3.  System.ServiceModel.Activities  
   
-3.  Otwórz wygenerowany plik Program.cs i Dodaj metody statycznej o nazwie `GetClientWorkflow` Aby utworzyć przepływ pracy klienta.  
+3.  Otwórz wygenerowany plik Program.cs i Dodaj statyczną metodę o nazwie `GetClientWorkflow` Tworzenie przepływu pracy klienta.  
   
     ```  
     static Activity GetClientWorkflow()  
@@ -438,7 +438,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
             }  
     ```  
   
-4.  Dodaj następujący kod hostingu do `Main()` metody.  
+4.  Dodaj następujący kod hostingu, aby `Main()` metody.  
   
     ```  
     static void Main(string[] args)  
@@ -452,7 +452,7 @@ Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz us
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej przedstawiono pełną listę źródło kod używany w tym temacie.  
+ Oto Pełna lista źródła kod używany w tym temacie.  
   
 ```  
 // ReceiveInstanceIdScope.cs  

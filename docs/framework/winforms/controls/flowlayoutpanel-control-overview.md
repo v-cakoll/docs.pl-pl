@@ -10,11 +10,11 @@ helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
 ms.openlocfilehash: 73767114da1c04222fb8ceaf812153421c4597aa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658460"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46324490"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel — Informacje o formancie
 <xref:System.Windows.Forms.FlowLayoutPanel> Kontroli rozmieszcza jego zawartość w kierunku przepływu poziomej lub pionowej. Może zawijać się zawartość formantu z jeden wiersz do następnego lub z jednej kolumny do następnego. Alternatywnie można przyciąć zamiast zawijania jego zawartość.  

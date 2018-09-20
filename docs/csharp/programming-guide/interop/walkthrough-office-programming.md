@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 718be7e201788906fa0fad829922eb5b77b48aed
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 997affa2f4cc5332339a49450d68ab3aaadffc4b
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857313"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46321078"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Wskazówki: Programowanie Office (C# i Visual Basic)
 Visual Studio oferuje funkcje w języku C# i Visual Basic, które zwiększają programowania Microsoft Office. Przydatne funkcje języka C# zawierają argumenty nazwane i opcjonalne i zwracanie wartości typu `dynamic`. W programowaniu modelu COM, można pominąć `ref` — słowo kluczowe i uzyskanie dostępu do właściwości indeksowanych. Funkcje w języku Visual Basic obejmują automatycznie implementowane właściwości instrukcji w wyrażeniach lambda i inicjatory kolekcji.
@@ -176,7 +176,7 @@ Konieczne jest posiadanie Microsoft Office Excel i Microsoft Office Word zainsta
   
 1.  W **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki** przycisku. Rozwiń **odwołania** i wybierz polecenie **Microsoft.Office.Interop.Excel**. Naciśnij klawisz F4, aby wyświetlić **właściwości** okna.  
   
-2.  W **aściwości**s oknie zmiany **Osadź typy współdziałania** właściwość **True** do **False**.  
+2.  W **właściwości** oknie zmiany **Osadź typy współdziałania** właściwość **True** do **False**.  
   
 3.  Powtórz kroki 1 i 2 w ramach tej procedury, aby uzyskać `Microsoft.Office.Interop.Word`.  
   

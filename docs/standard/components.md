@@ -6,11 +6,11 @@ ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
 ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287679"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323720"
 ---
 # <a name="net-architectural-components"></a>Składniki architektury .NET
 

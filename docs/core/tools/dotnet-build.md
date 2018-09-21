@@ -4,12 +4,12 @@ description: Dotnet kompilacji polecenia kompilacji w projekt i wszystkie jego z
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: dc5970fa1c8f3172916676819fa7789d84a5386e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: da33647e583af8441218f64fb8ac76d5de3cee38
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692979"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478308"
 ---
 # <a name="dotnet-build"></a>Kompilacja DotNet
 
@@ -47,7 +47,7 @@ Kompilowanie wymaga *project.assets.json* pliku, który znajduje się wykaz zale
 
 `dotnet build` używa programu MSBuild do kompilowania projektu, więc obsługują równoległych oraz przyrostowe kompilacji. Aby uzyskać więcej informacji, zobacz [kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds).
 
-Oprócz jej opcji `dotnet build` polecenie akceptuje opcje programu MSBuild `/p` do ustawiania właściwości lub `/l` do definiowania rejestrator. Aby uzyskać więcej informacji o tych opcjach, zobacz [odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+Oprócz jej opcji `dotnet build` polecenie akceptuje opcje programu MSBuild `-p` do ustawiania właściwości lub `-l` do definiowania rejestrator. Aby uzyskać więcej informacji o tych opcjach, zobacz [odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
 Projekt jest wykonywalny lub nie jest określana przez `<OutputType>` właściwość w pliku projektu. Poniższy przykład przedstawia projekt, który generuje kod wykonywalny:
 

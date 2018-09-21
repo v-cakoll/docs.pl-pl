@@ -3,12 +3,12 @@ title: Aplikacja konsoli
 description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: bae03c9ae02f2888b1b70617ca712ef7927e9dce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961420"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478620"
 ---
 # <a name="console-application"></a>Aplikacja konsoli
 
@@ -20,7 +20,7 @@ W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#
 - Podstawowe informacje dotyczące interfejsów API we/wy pliku w programie .NET
 - Podstawy opartego na zadaniach asynchronicznej programowanie na platformie .NET
 
-Skompiluj aplikację, która odczytuje plik tekstowy i zwraca zawartość tego pliku tekstowego do konsoli. Dane wyjściowe do konsoli jest realizowany do dopasowania wczytaniem go na głos. Można przyspieszyć lub zwolnić tempie, naciskając klawisz "<" lub ">" kluczy.
+Skompiluj aplikację, która odczytuje plik tekstowy i zwraca zawartość tego pliku tekstowego do konsoli. Dane wyjściowe do konsoli jest realizowany do dopasowania wczytaniem go na głos. Można przyspieszyć lub zwolnić tempie, naciskając klawisz "<" (mniejsze niż) lub ">" (większe niż) kluczy.
 
 Istnieje wiele funkcji, w tym samouczku. Utworzymy je jedno po drugim.
 
@@ -190,7 +190,7 @@ W tym miejscu, w `Main`, kod synchronicznie oczekiwania. Należy używać `await
 > [!NOTE]
 > Jeśli używasz języka C# 7.1 lub nowszy, możesz tworzyć aplikacje konsoli przy użyciu [ `async` `Main` metoda](../whats-new/csharp-7-1.md#async-main).
 
-Następnie należy napisać drugiej metodzie asynchronicznej odczytywany z konsoli, zwracając uwagę na "<" i ">" kluczy. Poniżej przedstawiono metodę, którą możesz dodać do tego zadania:
+Następnie należy napisać drugiej metodzie asynchronicznej odczytywany z konsoli, zwracając uwagę na "<" (mniejsze niż) i ">" (większe niż) kluczy. Poniżej przedstawiono metodę, którą możesz dodać do tego zadania:
 
 ```csharp
 private static async Task GetInput()
@@ -214,7 +214,7 @@ private static async Task GetInput()
 }
 ```
 
-Spowoduje to utworzenie wyrażenia lambda do reprezentowania <xref:System.Action> delegat, który odczytuje klucz z konsoli i modyfikuje zmienną lokalną, reprezentujący opóźnienie w przypadku, gdy użytkownik naciśnie "<" lub ">" kluczy. Ta metoda używa <xref:System.Console.ReadKey> do blokowania i poczekać na użytkownika poprzez naciśnięcie klawisza.
+Spowoduje to utworzenie wyrażenia lambda do reprezentowania <xref:System.Action> delegat, który odczytuje klucz z konsoli i modyfikuje zmienną lokalną, reprezentujący opóźnienie w przypadku, gdy użytkownik naciśnie "<" (mniejsze niż) lub ">" (większe niż) kluczy. Ta metoda używa <xref:System.Console.ReadKey> do blokowania i poczekać na użytkownika poprzez naciśnięcie klawisza.
 
 Aby zakończyć tę funkcję, musisz utworzyć nowy `async Task` metodę, która rozpoczyna się w obu tych zadań zwracającą (`GetInput` i `ShowTeleprompter`), a także zarządza udostępnionych danych między te dwa zadania.
 
@@ -277,10 +277,10 @@ Następnie należy zaktualizować obydwa `ShowTeleprompter` i `GetInput` metod d
 private static async Task ShowTeleprompter(TelePrompterConfig config)
 {
     var words = ReadFrom("sampleQuotes.txt");
-    foreach (var line in words)
+    foreach (var word in words)
     {
-        Console.Write(line);
-        if (!string.IsNullOrWhiteSpace(line))
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
         {
             await Task.Delay(config.DelayInMilliseconds);
         }

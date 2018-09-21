@@ -21,11 +21,11 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1fe0ead93d1ff2b7867a52d80cf812e2850ea7b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647025"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481705"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Porady: sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy
 W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ciąg jest w prawidłowym formacie adresu e-mail.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 80ecca30b534591ffb2633ade961425f694403f7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7ebd04665d91f599edcb4a5c07680216dfb8925a
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192202"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471278"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla kodu klienta napisanego w języku C#, F # i Visual Basic nie istnieje żadna widoczna różnica między wywołaniem metody rozszerzenia i metod, które faktycznie są zdefiniowane w typie.  
@@ -52,9 +52,6 @@ using System.Linq;
 ```  
   
  (Może być też koniecznie dodanie odwołania do biblioteki System.Core.dll). Zauważysz, że standardowe operatory zapytań pojawiają się w IntelliSense jako dodatkowe metody dostępne dla większości <xref:System.Collections.Generic.IEnumerable%601> typów.  
-  
-> [!NOTE]
->  Chociaż standardowe operatory zapytań nie są wyświetlane w technologii IntelliSense dla <xref:System.String>, będą nadal dostępne.  
   
 ## <a name="binding-extension-methods-at-compile-time"></a>Metody rozszerzające w czasie kompilacji  
  Można stosować metody rozszerzenia, aby rozszerzyć klasę lub interfejs, ale nie w celu pominięcia go. Metoda rozszerzenia mająca taką samą nazwę i podpis jak interfejs lub metoda klasy nigdy nie zostanie wywołana. W czasie kompilacji metody rozszerzenia zawsze mają niższy priorytet niż zdefiniowane w typie metody wystąpienia. Innymi słowy, jeśli typ ma metodę o nazwie `Process(int i)`i masz metodę rozszerzającą o tym samym podpisie, kompilator zawsze utworzy wiązanie z metodą wystąpienia. Gdy kompilator napotyka wywołanie metody, najpierw szuka dopasowania w metodach wystąpienia danego typu. Jeżeli nie znajdzie dopasowania, wyszuka metody rozszerzenia, które są zdefiniowane dla danego typu, i utworzy powiązanie z pierwszą metodą rozszerzenia, którą znajdzie. W poniższym przykładzie pokazano, w jaki sposób kompilator określa metodę rozszerzenia lub metodę wystąpienia, z którą ma utworzyć powiązanie.  

@@ -1,21 +1,21 @@
 ---
-title: 'Porady: Konfigurowanie ustawień usług COM +'
+title: 'Porady: Konfigurowanie ustawień usługi COM +'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490107"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471693"
 ---
-# <a name="how-to-configure-com-service-settings"></a>Porady: Konfigurowanie ustawień usług COM +
-Interfejs aplikacji jest dodania lub usunięcia za pomocą narzędzia konfiguracji usług COM +, konfiguracji usługi sieci Web jest aktualizowana w pliku konfiguracji aplikacji. W trybie COM + hostowanej pliku Application.config znajduje się w katalogu głównym aplikacji (aplikacje %PROGRAMFILES%\ComPlus\\{appid} jest ustawieniem domyślnym). W obu trybach hostowanych w sieci Web w katalogu określonego vroot znajduje się plik Web.config.  
+# <a name="how-to-configure-com-service-settings"></a>Porady: Konfigurowanie ustawień usługi COM +
+Interfejs aplikacji są dodawane lub usuwane za pomocą narzędzia konfiguracji usług COM +, konfiguracji usługi sieci Web jest aktualizowana w pliku konfiguracji aplikacji. W trybie hostowanej modelu COM + plik Application.config jest umieszczany w katalogu głównym aplikacji (aplikacje %PROGRAMFILES%\ComPlus\\{appid} jest wartością domyślną). W obu trybach hostowanych w sieci Web w katalogu określonym vroot znajduje się plik Web.config.  
   
 > [!NOTE]
->  Podpisywanie komunikatów należy chronić je przed naruszeniem wiadomości między klientem a serwerem. Można również używać szyfrowania warstwy transportu lub wiadomości do ochrony przed ujawnieniem informacji z wiadomości między klientem serwerem. Podobnie jak w przypadku usług Windows Communication Foundation (WCF), należy używać ograniczania ograniczyć liczbę współbieżnych wywołań, połączeń, wystąpienia i oczekujących operacji. Pomaga to zapobiec nadmierne zużycie zasobów. Ograniczanie zachowanie jest określany za pośrednictwem ustawień pliku konfiguracji usługi.  
+>  Podpisywanie komunikatów należy chronić je przed naruszeniem wiadomości między klientem a serwerem. Wiadomości lub transportu szyfrowanie warstwy należy również chronić przed ujawnieniem informacji z komunikatów między klientem a serwerem. Podobnie jak w przypadku usług Windows Communication Foundation (WCF), należy używać ograniczania można ograniczyć liczbę współbieżnych wywołań, połączeń, wystąpienia i oczekujących operacji. Pozwala to zapobiec nadmiernego zużycia zasobów. Zachowanie funkcji ograniczania przepływności jest określony za pomocą ustawień pliku konfiguracji usługi.  
   
 ## <a name="example"></a>Przykład  
  Należy wziąć pod uwagę składnika, który implementuje interfejs następujące:  
@@ -29,7 +29,7 @@ public interface IFinances
 }  
 ```  
   
- Jeśli składnik jest udostępniany jako usługa sieci Web, odpowiednich kontraktu usługi, które będzie widoczne, a klienci musi być zgodne, jest następujący:  
+ Jeśli składnik jest udostępniany jako usługa sieci Web, odpowiedni kontrakt usługi, które będzie widoczne, a klienci będą powinny być zgodne, jest następujący:  
   
 ```  
 [ServiceContract(Session = true,  
@@ -45,21 +45,21 @@ public interface IFinancesContract : IDisposable
 ```  
   
 > [!NOTE]
->  Identyfikator IID stanowi część początkowej przestrzeń nazw kontraktu.  
+>  IID częścią początkowej przestrzeni nazw kontraktu.  
   
- Aplikacje klienckie, które używają tej usługi musi być zgodna z tym kontraktem, oraz za pomocą powiązania, który jest zgodny z określoną w konfiguracji aplikacji.  
+ Aplikacje klienckie, które używają tej usługi musi być zgodna z niniejszej Umowy oraz za pomocą powiązania, która jest zgodna z długością zawartą w konfiguracji aplikacji.  
   
- Poniższy przykład kodu pokazuje domyślny plik konfiguracji. Usługi sieci Web Windows Communication Foundation (WCF), to odpowiada schemat konfiguracji modelu usług standardowa i można je edytować w taki sam sposób jak inne pliki konfiguracji usługi WCF.  
+ Poniższy przykładowy kod przedstawia domyślny plik konfiguracji. Usługi sieci Web Windows Communication Foundation (WCF), to jest zgodny ze schematem konfiguracji modelu usług w warstwie standardowa i można je edytować w taki sam sposób jak inne pliki konfiguracji usługi WCF.  
   
- Typowy modyfikacje obejmują:  
+ Modyfikacje Typowa zamieści:  
   
--   Zmiana adresu punktu końcowego z domyślnego formularza ApplicationName/NazwaSkładnika/InterfaceName na bardziej użytecznej postaci.  
+- Zmienianie adresu punktu końcowego z domyślnego formularza ApplicationName/ComponentName/InterfaceName do bardziej użytecznej postaci.  
   
--   Modyfikowanie przestrzeni nazw usługi z domyślnego "http://tempuri.org/InterfaceID" formularza, aby lepiej dopasowane formularza.  
+- Modyfikowanie przestrzeni nazw usługi z domyślnego `http://tempuri.org/InterfaceID` formularz, aby lepiej dopasowane formularza.  
   
--   Zmiana punktu końcowego do użycia powiązania innego transportu.  
+- Zmiana punktu końcowego, aby użyć powiązania innego transportu.  
   
-     W modelu COM +-hostowanej przypadku transportu nazwanych potoków jest używany domyślnie, ale można zamiast tego użyć transportu poza maszyny, podobnie jak protokół TCP.  
+     W modelu COM +-hostowanej przypadkach transportu do potoków nazwanych jest używany domyślnie, ale zamiast tego można transportu wyłączyć maszyny, podobnie jak protokół TCP.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

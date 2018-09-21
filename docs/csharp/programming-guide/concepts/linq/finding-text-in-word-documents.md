@@ -3,11 +3,11 @@ title: Wyszukiwanie tekstu w dokumentach programu Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
 ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321104"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471791"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Wyszukiwanie tekstu w dokumentach programu Word (C#)
 Ten temat rozszerza poprzednich zapytań, aby zrobić coś, co jest użyteczne: Znajdź wszystkie wystąpienia ciągu w dokumencie.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 869780f2b6a625923ce869bcaafbbd2319f6cb23
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964910"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493293"
 ---
 # <a name="layout"></a>Układ
 W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system układu. Zrozumienie, jak i kiedy układ obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

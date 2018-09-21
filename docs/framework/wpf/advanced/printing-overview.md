@@ -16,11 +16,11 @@ helpviewer_keywords:
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
 ms.openlocfilehash: 04ea64f0e6563012a3b272306df6be4575ed7659
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000969"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478711"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
 Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu Windows Presentation Foundation (WPF) mają bogaty zestaw nowych Zarządzanie systemem drukowania i wydruku [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Za pomocą [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych rozszerzeń systemu drukowania są również dostępne dla programistów tworzących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperzy korzystający z niezarządzanego kodu. W ramach tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku.  

@@ -2,15 +2,16 @@
 title: Używanie akcji do implementacji zachowania po stronie serwera
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 415797114d1e6d2ff307f0d872361f7d415cad3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516264"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471739"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Używanie akcji do implementacji zachowania po stronie serwera
-Akcje protokołu OData umożliwiają implementowanie zachowania, które podejmuje działania dotyczące zasobów, pobierane z usługi OData.  Na przykład rozważmy film cyfrowy jako zasób, istnieje wiele rzeczy, które można wykonać za pomocą cyfrowych film: wyewidencjonowanie, szybkość/comment lub ewidencjonowania. Są to wszystkie przykłady działań, które mogą być zaimplementowane przez usługi danych WCF, która zarządza filmów cyfrowych. Akcje są opisane w odpowiedzi OData, która zawiera zasób, na którym może być wywołana Akcja. Gdy użytkownik zażąda z zasobem, który reprezentuje film cyfrowy odpowiedź zwrócona z usługi danych WCF zawiera informacje o akcjach, które są dostępne dla tego zasobu. Dostępność akcji może zależeć od stanu zasobu lub usługi danych. Na przykład, gdy film cyfrowy jest wyewidencjonowany go nie może być wyewidencjonowany przez innego użytkownika. Klienci mogą wywołać akcję poprzez określenie adresu URL. Na przykład http://MyServer/MovieService.svc/Movies(6) będzie identyfikować określonych film cyfrowy i http://MyServer/MovieService.svc/Movies(6)/Checkout powodowałoby wywołanie pliku wykonywalnego działania w określonym filmu. Akcje umożliwiają możesz udostępnić modelu usługi bez narażania modelu danych. Kontynuując przykład usługi filmu, możesz umożliwić użytkownikowi szybkości filmu, ale nie są bezpośrednio uwidaczniać dane ocenę jako zasób. Można zaimplementować akcją kurs pozwala użytkownikom sklasyfikować filmu, ale nie są bezpośrednio uzyskać dostęp do danych klasyfikację jako zasób.  
+
+Akcje protokołu OData umożliwiają implementowanie zachowania, które podejmuje działania dotyczące zasobów, pobierane z usługi OData. Na przykład rozważmy film cyfrowy jako zasób, istnieje wiele rzeczy, które można wykonać za pomocą cyfrowych film: wyewidencjonowanie, szybkość/comment lub ewidencjonowania. Są to wszystkie przykłady działań, które mogą być zaimplementowane przez usługi danych WCF, która zarządza filmów cyfrowych. Akcje są opisane w odpowiedzi OData, która zawiera zasób, na którym może być wywołana Akcja. Gdy użytkownik zażąda z zasobem, który reprezentuje film cyfrowy odpowiedź zwrócona z usługi danych WCF zawiera informacje o akcjach, które są dostępne dla tego zasobu. Dostępność akcji może zależeć od stanu zasobu lub usługi danych. Na przykład, gdy film cyfrowy jest wyewidencjonowany go nie może być wyewidencjonowany przez innego użytkownika. Klienci mogą wywołać akcję poprzez określenie adresu URL. Na przykład `http://MyServer/MovieService.svc/Movies(6)` będzie identyfikować określonych film cyfrowy i `http://MyServer/MovieService.svc/Movies(6)/Checkout` powodowałoby wywołanie pliku wykonywalnego działania w określonym filmu. Akcje umożliwiają możesz udostępnić modelu usługi bez narażania modelu danych. Kontynuując przykład usługi filmu, możesz umożliwić użytkownikowi szybkości filmu, ale nie są bezpośrednio uwidaczniać dane ocenę jako zasób. Można zaimplementować akcją kurs pozwala użytkownikom sklasyfikować filmu, ale nie są bezpośrednio uzyskać dostęp do danych klasyfikację jako zasób.
   
 ## <a name="implementing-an-action"></a>Implementowanie akcji  
  Do wykonania działania usługi, musisz zaimplementować <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), i [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) interfejsów. <xref:System.IServiceProvider> Umożliwia WCF Data Services uzyskać implementacji [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) umożliwia usługi danych WCF w celu tworzenia, znajdowanie, opis i wywołania akcji usługi. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) pozwala wywołuje kod, który implementuje zachowanie akcji usługi i uzyskiwać wyniki, jeśli istnieje. Należy pamiętać o tym, czy na wywołanie usług WCF, nowe wystąpienie klasy usługi WCF Data Services zostanie utworzony w każdym razem, gdy usługa jest wywoływana.  Upewnij się, że bez niepotrzebnych wykonywania pracy po utworzeniu usługi.  
@@ -52,7 +53,7 @@ Akcje protokołu OData umożliwiają implementowanie zachowania, które podejmuj
 ## <a name="invoking-a-wcf-data-service-action"></a>Wywołanie akcji usług danych WCF  
  Akcje są wywoływane za pomocą żądania HTTP POST. Adres URL Określa zasób następuje nazwa akcji. Parametry są przekazywane w treści żądania. Na przykład, jeśli było usługi o nazwie MovieService, na której widoczne akcję o nazwie szybkości. Można użyć następującego adresu URL wywołanie akcji stawki na określonych film:  
   
- http://MovieServer/MovieService.svc/Movies(1)/Rate  
+ `http://MovieServer/MovieService.svc/Movies(1)/Rate`
   
  Movies(1) określa filmu, którą chcesz nawiązać za oraz stawkę za określa szybkość akcji. Rzeczywistej wartości ocena będzie w treści żądania HTTP, jak pokazano w poniższym przykładzie:  
   
@@ -67,15 +68,15 @@ Host: localhost:15238
 ```  
   
 > [!WARNING]
->  Powyższy kod przykładowy będzie działać tylko w przypadku 5.2 usług danych WCF i później, który ma pomocy technicznej dla lekkiej serializacji JSON. Jeśli przy użyciu starszej wersji usługi danych WCF, należy określić właściwość json pełne content-type w następujący sposób: `application/json;odata=verbose`.  
+> Powyższy kod przykładowy będzie działać tylko w przypadku 5.2 usług danych WCF i później, który ma pomocy technicznej dla lekkiej serializacji JSON. Jeśli przy użyciu starszej wersji usługi danych WCF, należy określić właściwość json pełne content-type w następujący sposób: `application/json;odata=verbose`.  
   
  Alternatywnie możesz wywołać akcję za pomocą klienta usługi danych WCF, jak pokazano w poniższym fragmencie kodu.  
   
-```  
+```csharp
 MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.svc/"));  
-            //...  
-            context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );           
-```  
+//...  
+context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );
+```
   
  W powyższym fragmencie kodu `MoviesModel` klasy został wygenerowany przy użyciu programu Visual Studio Dodaj odwołanie do usługi z usługą danych programu WCF.  
   

@@ -3,11 +3,11 @@ title: Instrukcje dotyczące hostowania internetowej usługi informacyjnej
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: 303fe47df987901b09cee8cc4292f12bcda2b74d
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46320925"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480698"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Instrukcje dotyczące hostowania internetowej usługi informacyjnej
 Aby uruchomić przykłady, które są hostowane przez Internetowe usługi informacyjne (IIS), upewnij się, że usługi IIS został poprawnie zainstalowany i działa.  

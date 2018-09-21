@@ -2,12 +2,12 @@
 title: Funkcje upraszczania programu WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 010f941850dedd73e9cc203ea2b180dae7d4742c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ded4fc93e5e8f33d98e58ffcb3cb98c2bff2b410
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526356"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493239"
 ---
 # <a name="wcf-simplification-features"></a>Funkcje upraszczania programu WCF
 W tym temacie omówiono nowe funkcje, które upewnij się, zapisywanie WCF aplikacje prostsze.  
@@ -106,7 +106,7 @@ W tym temacie omówiono nowe funkcje, które upewnij się, zapisywanie WCF aplik
 |----------------|-------------------|-----------------|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|Pobiera lub ustawia maksymalną dozwoloną długość tablicy. Ten limit przydziału ogranicza maksymalny rozmiar tablicy elementów podstawowych, które zwraca odczytującego XML, w tym tablice typu byte. Ten limit przydziału nie ogranicza użycie pamięci przez czytnik XML, sam, ale w składniku niezależnie od korzystający z czytnika. Na przykład, gdy <xref:System.Runtime.Serialization.DataContractSerializer> używa czytnik zabezpieczony za pomocą <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>, nie wykonać deserializacji tablice bajtów przekracza ten limit przydziału.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|Pobiera i ustawia maksymalna liczba bajtów dozwoloną dla każdego odczytu. Ten limit przydziału ogranicza liczbę bajtów, które są odczytywane w ramach jednej operacji odczytu podczas odczytywania elementu start tag i jego atrybuty. (W przypadkach,-strumieniowo, sama nazwa elementu jest nie przeliczane względem limitu przydziału). Masz zbyt wiele atrybutów XML może używać nieproporcjonalne czas przetwarzania, ponieważ nazwy atrybutu muszą być sprawdzane pod kątem unikatowości. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> zmniejsza zagrożenie tego typu.|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|głębokie 128 węzłów|Ten limit przydziału ogranicza maksymalną głębokość zagnieżdżenia elementów XML.  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> wchodzi w interakcję z <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>: czytnik zawsze zachowuje dane w pamięci dla bieżącego elementu i wszystkie jego elementy nadrzędne, zmniejszenie zużycia pamięci maksymalnej czytnika jest proporcjonalna do produktu te dwa ustawienia. Podczas deserializacji grafu obiektów głęboko zagnieżdżone, dostęp do całego stosu i zgłosić nieodwracalny wymuszono Deserializator <xref:System.StackOverflowException>. Między zagnieżdżanie XML i zagnieżdżanie obiektu dla obu istnieje bezpośrednia korelacja <xref:System.Runtime.Serialization.DataContractSerializer> i <!--zz <xref:System.Runtime.Serialization.XmlSerializer>--> `System.Runtime.Serialization.XmlSerializer`. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> Umożliwia uniknięcie tego zagrożenia.|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|głębokie 128 węzłów|Ten limit przydziału ogranicza maksymalną głębokość zagnieżdżenia elementów XML.  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> wchodzi w interakcję z <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>: czytnik zawsze zachowuje dane w pamięci dla bieżącego elementu i wszystkie jego elementy nadrzędne, zmniejszenie zużycia pamięci maksymalnej czytnika jest proporcjonalna do produktu te dwa ustawienia. Podczas deserializacji grafu obiektów głęboko zagnieżdżone, dostęp do całego stosu i zgłosić nieodwracalny wymuszono Deserializator <xref:System.StackOverflowException>. Między zagnieżdżanie XML i zagnieżdżanie obiektu dla obu istnieje bezpośrednia korelacja <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Xml.Serialization.XmlSerializer>. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> Umożliwia uniknięcie tego zagrożenia.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|Ten limit przydziału ogranicza maksymalną liczbę znaków dozwolonych w tabeli nazw. Tabela nazw zawiera niektóre ciągi (na przykład obszary nazw i prefiksy), napotkanych podczas przetwarzania dokumentu XML. Jak te ciągi są buforowane w pamięci, ten limit przydziału jest używana Aby uniknąć nadmiernego buforowanie podczas przesyłania strumieniowego jest oczekiwany.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|Ten limit przydziału ogranicza rozmiar maksymalny ciągu, która zwraca odczytującego XML. Ten limit przydziału nie ogranicza użycie pamięci przez czytnik XML, sam, ale w składniku korzystający z czytnika. Na przykład, gdy <xref:System.Runtime.Serialization.DataContractSerializer> używa czytnik zabezpieczony za pomocą <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>, nie wykonać deserializacji ciągi przekracza ten limit przydziału.|  
   

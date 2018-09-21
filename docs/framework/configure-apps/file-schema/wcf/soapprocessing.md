@@ -2,16 +2,16 @@
 title: '&lt;soapProcessing&gt;'
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: cc720c9e3a8ab934ffa8d3cb0c6eceb47a708fb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 296993f1a91a6da93f01610357f35dac4cfab9e6
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359552"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46485288"
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
-Określa zachowanie punktu końcowego klienta używany do organizowania wiadomości między inne powiązanie typy i wersje komunikatów.
+Definiuje zachowanie punktu końcowego klienta, które są używane do organizowania wiadomości między typami inne powiązanie i wersje komunikatów.
 
 **\<System. ServiceModel >**   
 &nbsp;&nbsp;**\<zachowania >**   
@@ -33,7 +33,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |                   | Opis |
 | ----------------- | ----------- |
-| `processMessages` | Wartość logiczna określająca, czy wiadomości powinny być przekazywane między wersjami wiadomości SOAP. |
+| `processMessages` | Wartość logiczna określająca, czy komunikaty powinny być wprowadzane między wersjami komunikatu protokołu SOAP. |
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -47,10 +47,10 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
-Przetwarzania protokołu SOAP to proces, w których wiadomości są konwertowane między wersjami wiadomości.
+Przetwarzanie protokołu SOAP jest proces, w której wiadomości są konwertowane między wersjami wiadomości.
 
-Usługa routingu Windows Communication Foundation (WCF) można przekonwertować wiadomości z jednego protokołu na inny. Jeśli wersje komunikatów przychodzących i wychodzących są różne, tworzona jest nowa wiadomość o poprawnej wersji. Przetwarzanie komunikatów z jednym <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` do innego odbywa się przez utworzenie nowej wiadomości WCF, która zawiera część treści i odpowiednie nagłówków z komunikatu przychodzącego WCF. Nagłówki specyficznych dla adresowania lub które są zrozumiałe na poziomie routera, nie są używane podczas tworzenia nowej wiadomości WCF, ponieważ te nagłówki są albo inną wersję (w przypadku adresowania nagłówki) lub są przetwarzane w ramach Komunikacja między klientem a router.
+Usługa routingu Windows Communication Foundation (WCF) można przekonwertować komunikaty z jednego protokołu do innego. Jeśli wersje komunikatów przychodzących i wychodzących są różne, zostanie utworzony nowy komunikat poprawnej wersji. Przetwarzanie komunikatów z jednego <xref:System.ServiceModel.Channels.MessageVersion> do innego odbywa się przez utworzenie nowych wiadomości WCF, która zawiera część treści i odpowiednie nagłówki z przychodzących wiadomości WCF. Nagłówki specyficznych dla adresowania lub które są zrozumiałe na poziomie routera, nie są używane podczas tworzenia nowej wiadomości WCF, ponieważ te nagłówki są w innej wersji (w przypadku adresowania nagłówków) lub są przetwarzane jako część Komunikacja między klientem i router.
 
-Określa, czy nagłówek jest umieszczany w wiadomości wychodzącej jest określana przez czy została oznaczona jako rozumieć przeszła przychodzące warstwie kanału. Nagłówki, które nie są zrozumiałe (np. nagłówki niestandardowe) nie są usuwane i dlatego Przekaż za pośrednictwem usługi routingu przez kopiowane do wiadomości wychodzącej. Treść wiadomości jest kopiowany do wiadomości wychodzącej. Komunikat jest następnie wysyłane kanału wychodzącego, w tym momencie wszystkie nagłówki oraz innych danych koperty określonych na komunikat zostanie utworzona i dodać protokół/transport.
+Czy nagłówek jest umieszczany w wiadomości wychodzących jest określany przez Określa, czy została ona oznaczona jako rozumieć przeszła przychodzący warstwy kanału. Nagłówki, które nie są zrozumiałe (takie jak niestandardowe nagłówki) nie są usuwane, a więc przekazać za pośrednictwem usługi routingu, są kopiowane do wiadomości wychodzących. Treść komunikatu jest kopiowane do wiadomości wychodzących. Komunikat zostanie przesłany limit ruchu wychodzącego kanału, w tym momencie wszystkie nagłówki i innych danych koperty określone na komunikat zostanie utworzona i dodać protokół/transportu.
 
-Takie kroki przetwarzania ma miejsce, gdy określono zachowania przetwarzania protokołu SOAP. To [ \<soapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) zachowanie jest zachowanie punktu końcowego, który jest stosowany do wszystkich punktów końcowych klienta (wychodzące), podczas uruchamiania usługi routingu. Domyślnie [ \<routingu >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) zachowanie tworzy i dołącza nowy [ \<soapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) zachowanie w przypadku `processMessages` ustawioną `true` dla każdego punkt końcowy klienta. Jeśli protokół usługi routingu nie zrozumieć lub chcesz zastąpić domyślne zachowanie przetwarzania, można wyłączyć przetwarzania dla całej usługi routingu lub tylko dla konkretnego punktów końcowych protokołu SOAP.  Aby wyłączyć przetwarzania dla całej usługi routingu dla wszystkich punktów końcowych SOAP, ustaw `soapProcessing` atrybutu [ \<routingu >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) zachowania `false`. Aby wyłączyć SOAP przetwarzania dla danego punktu końcowego, należy użyć tego zachowania i ustawić jej `processMessages` atrybutu `false`, następnie dołączyć tego zachowania do punktu końcowego nie ma domyślnego przetwarzania kodu w.  Gdy [ \<routingu >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) zachowanie konfiguruje usługi routingu, pominie ponowne zastosowanie zachowania punktu końcowego, ponieważ już istnieje.
+Tych kroków przetwarzania ma miejsce, gdy określona jest zachowanie przetwarzania protokołu SOAP. To [ \<soapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) zachowanie jest zachowanie punktu końcowego, która jest stosowana do wszystkich punktów końcowych klienta (wychodzące), podczas uruchamiania usługi routingu. Domyślnie [ \<routingu >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) zachowanie tworzy i dołącza nowe [ \<soapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) zachowania przy użyciu `processMessages` równa `true` dla każdego punkt końcowy klienta. Jeśli protokół, który usługa routingu nie zrozumieć, lub chcesz zastąpić domyślne zachowanie przetwarzania, możesz wyłączyć przetwarzania dla całej usługi routingu lub tylko dla konkretnego punktów końcowych protokołu SOAP.  Aby wyłączyć przetwarzania dla całej usługi routingu dla wszystkich punktów końcowych protokołu SOAP, ustaw `soapProcessing` atrybutu [ \<routingu >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) zachowanie `false`. Aby wyłączyć funkcję przetwarzania dla danego punktu końcowego protokołu SOAP, użyj tego zachowania i ustaw jego `processMessages` atrybutu `false`, następnie dołączyć to zachowanie punktu końcowego nie ma domyślnego przetwarzania kodu w.  Gdy [ \<routingu >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) zachowanie konfiguruje usługę routingu, zostanie pominięta, ponowne zastosowanie zachowanie punktu końcowego, ponieważ już istnieje.

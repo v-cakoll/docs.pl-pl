@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: 7946196b27489870da1c16b15cbf5f078ae89c61
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988467"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479185"
 ---
 # <a name="dotnet-test"></a>polecenia DotNet test
 

@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć oprogramowanie .NET Core i .NET Core int
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002089"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46492879"
 ---
 # <a name="build-net-core-from-source"></a>Kompilacja platformy .NET Core ze źródła
 
@@ -93,7 +93,7 @@ Aby można było utworzyć interfejsu wiersza polecenia platformy .NET Core, pot
   * Środowisko Xcode
   * Openssl
 
-Aby skompilować, uruchom `build.cmd` na Windows, lub `build.sh` w systemie Linux i macOS z katalogu głównego. Jeśli nie chcesz wykonać testy, należy uruchomić `build.cmd /t:Compile` lub `./build.sh /t:Compile`. Aby utworzyć interfejs wiersza polecenia w systemie macOS Sierra, musisz ustawić zmienną środowiskową DOTNET_RUNTIME_ID, uruchamiając `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
+Aby skompilować, uruchom `build.cmd` na Windows, lub `build.sh` w systemie Linux i macOS z katalogu głównego. Jeśli nie chcesz wykonać testy, należy uruchomić `build.cmd -t:Compile` lub `./build.sh -t:Compile`. Aby utworzyć interfejs wiersza polecenia w systemie macOS Sierra, musisz ustawić zmienną środowiskową DOTNET_RUNTIME_ID, uruchamiając `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
 
 ### <a name="using-your-build"></a>Za pomocą kompilacji
 

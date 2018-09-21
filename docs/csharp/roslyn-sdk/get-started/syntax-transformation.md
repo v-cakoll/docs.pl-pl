@@ -3,12 +3,12 @@ title: Wprowadzenie do składni przekształcania (interfejsy API Roslyn)
 description: Wprowadzenie do przechodzenie przez wykonywanie zapytań i zalet drzewa składni.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c372b1ba1e08a7d3b57ceea0d4449d03e55a39cf
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009826"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493597"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Wprowadzenie do składni przekształcania
 
@@ -30,7 +30,7 @@ Możesz wybrać jedną z dwóch strategii dla przekształceń składni. **Metoda
 
 Pierwsza transformacja składnia pokazuje, metodach fabryki. Zamierzasz zamienić `using System.Collections;` instrukcję, określając `using System.Collections.Generic;` instrukcji. W tym przykładzie przedstawiono, jak utworzyć <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> obiektów przy użyciu <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> metodach fabryki. Dla każdego rodzaju elementu **węzła**, **tokenu**, lub **elementy towarzyszące składni** nie istnieje metoda fabryki, który tworzy wystąpienie tego typu. Można utworzyć drzewa składni za tworzenie węzłów hierarchicznie w czasie od dołu do góry. Następnie można przekształcać istniejące program można zastępując istniejące węzły nowego drzewa, które zostały utworzone.
 
-Uruchom program Visual Studio i Utwórz nowy język C# **narzędzie do analizy kodu autonomicznego** projektu. W programie Visual Studio, wybierz **pliku** > **New* > **projektu** Aby wyświetlić okno dialogowe Nowy projekt. W obszarze **Visual C#** > **rozszerzalności** wybierz **narzędzie do analizy kodu autonomicznego**. Ten przewodnik Szybki Start zawiera dwa projekty przykładu, więc nazwa rozwiązania **SyntaxTransformationQuickStart**i nazwij projekt **ConstructionCS**. Kliknij przycisk **OK**.
+Uruchom program Visual Studio i Utwórz nowy język C# **narzędzie do analizy kodu autonomicznego** projektu. W programie Visual Studio, wybierz **pliku** > **New** > **projektu** Aby wyświetlić okno dialogowe Nowy projekt. W obszarze **Visual C#** > **rozszerzalności** wybierz **narzędzie do analizy kodu autonomicznego**. Ten przewodnik Szybki Start zawiera dwa projekty przykładu, więc nazwa rozwiązania **SyntaxTransformationQuickStart**i nazwij projekt **ConstructionCS**. Kliknij przycisk **OK**.
 
 Ten projekt używa <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> metody do konstruowania klasy <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> reprezentujący `System.Collections.Generic` przestrzeni nazw.
 

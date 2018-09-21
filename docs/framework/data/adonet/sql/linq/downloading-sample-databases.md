@@ -3,11 +3,11 @@ title: Pobieranie przykładowych baz danych
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006551"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46470716"
 ---
 # <a name="downloading-sample-databases"></a>Pobieranie przykładowych baz danych
 Liczba przykłady i wskazówki dotyczące w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji Korzystanie z przykładowej bazy danych Northwind i SQL Server Express Edition. Te produkty bezpłatnie można pobrać z witryny pobierania firmy Microsoft.  

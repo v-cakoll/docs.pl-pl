@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007376"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471239"
 ---
 # <a name="xtype-markup-extension"></a>x:Type — Rozszerzenie znaczników
 Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla określonego typu XAML.  

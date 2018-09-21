@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 3736d1e8b23b8e05882a3fe016be0ac1a18ef51d
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321013"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490182"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implementacja wzorca kontrolki RangeValue dla automatyzacji interfejsu użytkownika
 > [!NOTE]

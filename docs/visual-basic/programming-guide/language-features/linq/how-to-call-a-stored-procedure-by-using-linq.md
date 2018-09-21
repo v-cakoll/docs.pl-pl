@@ -8,11 +8,11 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
 ms.openlocfilehash: 50a4dff90dc1ce02869978f1da147e530cefc3e1
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006876"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479302"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Porady: wywoływanie procedury przechowywanej za pomocą LINQ (Visual Basic)
 Language-Integrated Query (LINQ) ułatwia dostęp do informacji z bazy danych, łącznie z procedurami obiektów, takich jak przechowywane w bazie danych.  

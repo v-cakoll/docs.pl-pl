@@ -2,12 +2,12 @@
 title: Przewodnik dotyczący współpracy protokołów usług sieci Web
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: da5014292a8ebfcea48a7b6e1a0cdfd014b09961
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739048"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490379"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Przewodnik dotyczący współpracy protokołów usług sieci Web
 Windows Communication Foundation (WCF) implementuje wiele protokołów usług sieci Web. Wiele z tych protokołów zawierają wiele opcji i punkty rozszerzalności w gestii implementujący. Ten temat zawiera listę protokołów usług sieci Web, który implementuje usługi WCF. Inne tematy w tej sekcji Podaj szczegóły implementacji dla każdego protokołu, obsługiwane.  
@@ -74,7 +74,7 @@ Windows Communication Foundation (WCF) implementuje wiele protokołów usług si
 |WS-Coordination|[Koordynację usług sieci Web](https://go.microsoft.com/fwlink/?LinkId=95324)|  
 |WS-AtomicTransaction|[Atomic Transaction usługi sieci Web](https://go.microsoft.com/fwlink/?LinkId=95323)|  
   
- <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, I <xref:System.ServiceModel.Description.MetadataResolver> klasy zapewniają obsługę dla następujących specyfikacji metadanych:  
+ <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter>, I <xref:System.ServiceModel.Description.MetadataResolver> klasy zapewniają obsługę dla następujących specyfikacji metadanych:  
   
 -   [XML schematu część 1: Wydanie drugie struktury](https://go.microsoft.com/fwlink/?LinkId=3536)  
   

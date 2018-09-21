@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 6d39c48d-6b37-4a9b-8631-f2924cfd9c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7602a61a4403b7ab85015876823aa41e250b23de
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 38efbe0ecd88c02752d610de4b1eec8b62eca1f8
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863312"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493246"
 ---
 # <a name="autoresetevent"></a>AutoResetEvent
 <xref:System.Threading.AutoResetEvent> Klasa reprezentuje zdarzenie dojścia oczekiwania lokalne, które automatycznie po resetuje sygnalizowane po przy zwalnianiu pojedynczego wątku oczekiwania. Ta klasa reprezentuje przypadkiem szczególnym klasy bazowej, <xref:System.Threading.EventWaitHandle>. Zobacz [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) dokumentacji koncepcyjnego dla użycia i funkcji automatycznego resetowania zdarzeń.  
   
- <xref:System.Threading.AutoResetEvent> Obiekt jest automatycznie ustawiany na zasygnalizowane przez system po udostępnieniu pojedynczego wątku oczekiwania. Jeśli żadne wątki oczekujące, stan z obiektem zdarzenia pozostaje sygnałowego. <xref:System.Threading.AutoResetEvent> odnosi się do systemu Win32 `CreateEvent` wywołać, określając `false` dla `bManualReset` argumentu.  
+ <xref:System.Threading.AutoResetEvent> Obiekt jest automatycznie ustawiany na zasygnalizowane przez system po udostępnieniu pojedynczego wątku oczekiwania. Jeśli żadne wątki oczekujące, stan z obiektem zdarzenia pozostaje sygnałowego.
   
  Aby uzyskać przykład, który używa <xref:System.Threading.AutoResetEvent>, zobacz <xref:System.Threading.Monitor>.  
   

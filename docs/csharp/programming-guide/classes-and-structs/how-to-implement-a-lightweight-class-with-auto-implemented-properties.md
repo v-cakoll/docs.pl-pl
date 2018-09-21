@@ -6,11 +6,11 @@ helpviewer_keywords:
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
 ms.openlocfilehash: fb5d11ed43246f2c4dd67ef35b71e899ab978fc4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45971039"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481244"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Porady: implementowanie klasy lekkiej przy użyciu automatycznie implementowanych właściwości (Przewodnik programowania w języku C#)
 Ten przykład przedstawia sposób tworzenia niezmienne klasy lightweight, która służy tylko do hermetyzacji zbiór właściwości zaimplementowane automatycznie. Użyj ten rodzaj konstrukcji zamiast struktury, gdy należy użyć semantyki typu odwołania.  

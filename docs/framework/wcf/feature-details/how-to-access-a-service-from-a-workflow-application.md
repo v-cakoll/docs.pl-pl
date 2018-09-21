@@ -2,12 +2,12 @@
 title: 'Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5bc18b446d4bf818c874839a421793a997ddc543
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595467"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493317"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy
 W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji konsoli przepływu pracy. To zależy od ukończenia [jak: Tworzenie usługi przepływu pracy przy użyciu działań Messaging](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu. Mimo że w tym temacie opisano sposób wywoływania usługi przepływu pracy z poziomu aplikacji przepływu pracy, te same metody można wywołać dowolną usługę Windows Communication Foundation (WCF) z poziomu aplikacji przepływu pracy.
@@ -42,13 +42,13 @@ W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji 
 
      ![Echo działania w przyborniku](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
 
-7.  Przeciąganie i upuszczanie <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` działania na powierzchnię projektanta. Jest on w **przepływ sterowania** sekcji przybornika.
+7.  Przeciąganie i upuszczanie <xref:System.Activities.Statements.Sequence> działania na powierzchnię projektanta. Jest on w **przepływ sterowania** sekcji przybornika.
 
-8.  Za pomocą <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` działania w trybie koncentracji uwagi, kliknij przycisk **zmienne** łącze i Dodaj zmienną ciągu o nazwie `inString`. Jej nadać wartość domyślną `"Hello, world"` oraz na zmienną ciągu o nazwie `outString` jak pokazano na poniższym diagramie.
+8.  Za pomocą <xref:System.Activities.Statements.Sequence> działania w trybie koncentracji uwagi, kliknij przycisk **zmienne** łącze i Dodaj zmienną ciągu o nazwie `inString`. Jej nadać wartość domyślną `"Hello, world"` oraz na zmienną ciągu o nazwie `outString` jak pokazano na poniższym diagramie.
 
      ![Dodawanie zmiennej](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")
 
-9. Przeciąganie i upuszczanie **Echo** działanie do <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`. W oknie dialogowym Właściwości powiązania `inMsg` argument `inString` zmiennej i `outMsg` argument `outString` zmiennej, jak pokazano na poniższej ilustracji. To powoduje przekazanie wartości `inString` zmiennej do operacji i przyjmuje wartość zwracaną i umieszcza je w `outString` zmiennej.
+9. Przeciąganie i upuszczanie **Echo** działanie do <xref:System.Activities.Statements.Sequence>. W oknie dialogowym Właściwości powiązania `inMsg` argument `inString` zmiennej i `outMsg` argument `outString` zmiennej, jak pokazano na poniższej ilustracji. To powoduje przekazanie wartości `inString` zmiennej do operacji i przyjmuje wartość zwracaną i umieszcza je w `outString` zmiennej.
 
      ![Powiązywanie argumenty zmienne](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
 

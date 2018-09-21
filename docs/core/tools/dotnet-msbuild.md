@@ -1,23 +1,23 @@
 ---
-title: polecenie msbuild DotNet - .NET Core interfejsu wiersza polecenia
+title: polecenie msbuild DotNet — interfejs wiersza polecenia platformy .NET Core
 description: Polecenie msbuild dotnet zapewnia dostęp do wiersza polecenia programu MSBuild.
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 58aac2a5314758b8711c0b014154022168fb671c
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: MT
+ms.openlocfilehash: 76165590478b0e76d19d546c87e012da4716b6db
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696848"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471455"
 ---
-# <a name="dotnet-msbuild"></a>DotNet msbuild
+# <a name="dotnet-msbuild"></a>Program msbuild DotNet
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nazwa
 
-`dotnet msbuild` -Tworzy projekt i wszystkie jego zależności.
+`dotnet msbuild` -Kompiluje projekt i wszystkie jego zależności.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -27,7 +27,7 @@ ms.locfileid: "34696848"
 
 `dotnet msbuild` Polecenia umożliwia dostęp do pełnej funkcjonalności programu MSBuild.
 
-Polecenie ma dokładnie takie same możliwości jak istniejący klient wiersza polecenia programu MSBuild. Opcje są takie same. Aby uzyskać więcej informacji o dostępnych opcjach, zobacz [dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+Polecenie ma dokładnie te same możliwości co istniejący klient wiersza polecenia programu MSBuild. Opcje są takie same. Aby uzyskać więcej informacji o dostępnych opcjach, zobacz [odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
 ## <a name="examples"></a>Przykłady
 
@@ -37,12 +37,12 @@ Tworzenie projektu i jego zależności:
 
 Tworzenie projektu i jego zależności za pomocą wersji konfiguracji:
 
-`dotnet msbuild /p:Configuration=Release`
+`dotnet msbuild -p:Configuration=Release`
 
-Uruchom lokalizacja docelowa publikowania i publikowania dla `osx.10.11-x64` identyfikatorów RID:
+Uruchom docelową lokalizację publikacji i publikowania dla `osx.10.11-x64` identyfikatorów RID:
 
-`dotnet msbuild /t:Publish /p:RuntimeIdentifiers=osx.10.11-x64`
+`dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64`
 
-Zobacz całego projektu z wszystkie elementy docelowe uwzględniony przez zestaw SDK:
+Zobacz całego projektu za pomocą wszystkie elementy docelowe uwzględniony przez zestaw SDK:
 
-`dotnet msbuild /pp`
+`dotnet msbuild -pp`

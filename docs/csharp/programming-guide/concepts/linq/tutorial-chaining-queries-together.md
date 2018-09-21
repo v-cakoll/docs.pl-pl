@@ -3,11 +3,11 @@ title: 'Samouczek: Tworzenie łańcuchów zapytań razem (C#)'
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
 ms.openlocfilehash: cab012a6ae618bd731c26bc1a002c144b84d2169
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743472"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489933"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Samouczek: Tworzenie łańcuchów zapytań razem (C#)
 W tym samouczku przedstawiono przetwarzania modelu podczas tworzenia łańcucha zapytania ze sobą. Łączenie łańcuchowe zapytań jest kluczowym elementem pisania przekształceń funkcjonalnych. Należy zrozumieć, dokładnie tak jak łańcuchowe zapytań pracy.  

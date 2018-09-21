@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fc4c0560c2aa0d66c1b40d78458a2d44284e232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 58bad617eb91b7e529ff3d95edd06a5c73feee64
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417918"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46472038"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 — Interfejs
 Tworzy czytnik symbolu dla modułu dynamicznego.  
@@ -43,13 +43,13 @@ interface ICorDebugModule3 : IUnknown
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Tworzy czytnika symboli (zazwyczaj [ISymUnmanagedReader — interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) dla modułu dynamicznego.|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Tworzy czytnik symbolu (zazwyczaj [isymunmanagedreader — interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) dla modułu dynamicznego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten interfejs rozszerza logicznie interfejsów "ICorDebugModule" i "ICorDebugModule2".  
+ Ten interfejs rozszerza logicznie interfejsów "ICorDebugModule" i "Icordebugmodule2 —".  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -58,7 +58,7 @@ interface ICorDebugModule3 : IUnknown
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:** 4.5, 4, 3.5 z dodatkiem SP1  
+ **Wersje programu .NET framework:** 4.5, 4, 3.5 z dodatkiem SP1
   
 ## <a name="see-also"></a>Zobacz też  
  [ICorDebugRemoteTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  

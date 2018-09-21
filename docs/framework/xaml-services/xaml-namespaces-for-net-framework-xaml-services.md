@@ -3,11 +3,11 @@ title: Przestrzeń nazw dla usług .NET Framework XAML
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
 ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749917"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473619"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Przestrzeń nazw dla usług .NET Framework XAML
 Przestrzeń nazw XAML jest koncepcji, który rozwija w definicji przestrzeni nazw XML. Podobnie jak w przestrzeni nazw XML, można zdefiniować za pomocą nazw XAML `xmlns` atrybutów w znaczniku. Przestrzenie nazw XAML również jest reprezentowanych w strumień węzłów XAML i innych interfejsów API usług XAML. W tym temacie wprowadzono pojęcie przestrzeń nazw XAML i opisuje, jak przestrzenie nazw XAML mogą być definiowane i są używane przez kontekst schematu XAML i innymi aspektami usług programu .NET Framework XAML.  

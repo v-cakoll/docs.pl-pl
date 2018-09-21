@@ -2,12 +2,12 @@
 title: Korelacja komunikatów
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: e4cd5dfd6f03370a408dc6f8fb39c983db3d43df
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fd97f12f536da85619f300d36d02a10306f32aa5
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999432"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493197"
 ---
 # <a name="message-correlation"></a>Korelacja komunikatów
 Niniejszy przykład pokazuje, jak aplikacja usługi kolejkowania komunikatów (MSMQ) można wysłać wiadomości usługi MSMQ do usługi Windows Communication Foundation (WCF) i jak można skorelować wiadomości między nadawcą i odbiorcą aplikacji w przypadku żądań/odpowiedzi. W tym przykładzie użyto powiązania msmqIntegrationBinding. Usługa jest w tym przypadku aplikacji konsoli Self-Hosted aby możliwe było zaobserwować, że usługa, która odbiera wiadomości w kolejce. K  
@@ -16,7 +16,7 @@ Niniejszy przykład pokazuje, jak aplikacja usługi kolejkowania komunikatów (M
   
  `IOrderProcessor` Kontrakt usługi określa operację usługi jednokierunkowej, który jest odpowiedni do użycia z usługą kolejkowania. Wiadomości usługi MSMQ nie ma nagłówek akcji, więc nie jest możliwe do mapowania różnych wiadomości usługi MSMQ kontrakty operacji automatycznie. W związku z tym może istnieć tylko jeden kontrakt operacji w tym przypadku. Jeśli chcesz zdefiniować więcej operacji kontraktów w usłudze, aplikacja musi udostępniać co który nagłówek w usłudze MSMQ komunikatu (na przykład, etykietę lub correlationID) może służyć do określania, który kontrakt operacji na wysłanie informacji. Jest to zaprezentowane w [niestandardowe demultipleksowanie](../../../../docs/framework/wcf/samples/custom-demux.md).  
   
- Wiadomości usługi MSMQ nie zawiera również informacje, które nagłówki są zamapowane na różne parametry kontrakt operacji. W związku z tym może istnieć tylko jeden parametr w kontrakt operacji. Parametr jest typu <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` zawierający komunikat o podstawowym usługi MSMQ. Typ "T" w elemencie `MsmqMessage<T>` klasa reprezentuje dane, które jest serializowana w treści wiadomości usługi MSMQ. W tym przykładzie `PurchaseOrder` typ jest serializowana w treści wiadomości usługi MSMQ.  
+ Wiadomości usługi MSMQ nie zawiera również informacje, które nagłówki są zamapowane na różne parametry kontrakt operacji. W związku z tym może istnieć tylko jeden parametr w kontrakt operacji. Parametr jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, który zawiera podstawowe wiadomości usługi MSMQ. Typ "T" w elemencie `MsmqMessage<T>` klasa reprezentuje dane, które jest serializowana w treści wiadomości usługi MSMQ. W tym przykładzie `PurchaseOrder` typ jest serializowana w treści wiadomości usługi MSMQ.  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  

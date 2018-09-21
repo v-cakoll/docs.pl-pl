@@ -2,19 +2,19 @@
 title: Uwidacznianie i wywoływanie działań ActivityActions
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
-ms.openlocfilehash: f36d88fc54e5150927113ed8825fbccad84129d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520126"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479757"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>Uwidacznianie i wywoływanie działań ActivityActions
 W tym przykładzie pokazano, jak tworzyć niestandardowe działanie, które ma <xref:System.Activities.ActivityAction>. Ilustruje też sposób użycia tego działania, zapewniając implementację <xref:System.Activities.ActivityAction>.  
   
- <xref:System.Activities.ActivityAction> Umożliwia autorowi działania do udostępnienia "otworów" przy użyciu określonej sygnatury niestandardowe zachowanie, na którym użytkownik działania można podłączyć. Na przykład <!--zz <xref:System.Activities.Statements.ForEach>--> `System.Activities.Statements.ForEach` działania (który działa przez kolekcję elementów), ma <xref:System.Activities.ActivityAction> umożliwiająca użytkownikowi działanie wtyczki zachowanie, które działa w bieżącym elemencie iteracji.  
+ <xref:System.Activities.ActivityAction> Umożliwia autorowi działania do udostępnienia "otworów" przy użyciu określonej sygnatury niestandardowe zachowanie, na którym użytkownik działania można podłączyć. Na przykład <xref:System.Activities.Statements.ForEach%601> działania (który działa przez kolekcję elementów), ma <xref:System.Activities.ActivityAction> umożliwiająca użytkownikowi działanie wtyczki zachowanie, które działa w bieżącym elemencie iteracji.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
 1.  Otwórz **ActivityAction.sln** przykładowe rozwiązanie w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   

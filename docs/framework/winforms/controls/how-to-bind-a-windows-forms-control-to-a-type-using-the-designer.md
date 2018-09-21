@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
 ms.openlocfilehash: 33df9e050dd8c2b3ace8ff89cbd5939b538fcd95
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45969447"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471359"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Porady: powiązywanie formantu formularzy systemu Windows z typem przy użyciu narzędzia Projektant
 Podczas tworzenia formantów, które współdziałają z danymi, czasami konieczne Powiąż formant typu, a nie obiekt. Zazwyczaj konieczne powiązanie z typem formantu w czasie projektowania, gdy dane nie mogą być dostępne, ale nadal chcesz formantów powiązanych z danymi do wyświetlania danych z interfejsu publicznego typu. Poniższe procedury pokazują, jak utworzyć nową <xref:System.Windows.Forms.BindingSource> oznacza to powiązane z typem, a następnie jak powiązać z jednej z właściwości typu do <xref:System.Windows.Forms.TextBox.Text%2A> właściwość <xref:System.Windows.Forms.TextBox>.  

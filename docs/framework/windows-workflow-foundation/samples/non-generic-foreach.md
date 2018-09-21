@@ -2,17 +2,17 @@
 title: Nieogólne działanie ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: b94ad54d248af7f6ad45c11b9860dd415db840f9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419320"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478321"
 ---
 # <a name="non-generic-foreach"></a>Nieogólne działanie ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] jest dostarczany w przyborniku jej zestaw działań przepływu sterowania, w tym <xref:System.Activities.Statements.ForEach%601>, co pozwala iteracja <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` kolekcji.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] jest dostarczany w przyborniku jej zestaw działań przepływu sterowania, w tym <xref:System.Activities.Statements.ForEach%601>, co pozwala iteracja <xref:System.Collections.Generic.IEnumerable%601> kolekcji.  
   
- <xref:System.Activities.Statements.ForEach%601> wymaga jego <xref:System.Activities.Statements.ForEach%601.Values%2A> właściwość typu <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`. Użytkownicy to wyklucza z Iterowanie struktur danych, które implementują <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` interfejsu (na przykład <xref:System.Collections.ArrayList>). Wersja nieogólnego <xref:System.Activities.Statements.ForEach%601> pozwala pokonać ten wymóg, kosztem więcej złożoności środowiska wykonawczego dla zapewnienia zgodności z typów wartości w kolekcji.  
+ <xref:System.Activities.Statements.ForEach%601> wymaga jego <xref:System.Activities.Statements.ForEach%601.Values%2A> właściwość typu <xref:System.Collections.Generic.IEnumerable%601>. Użytkownicy to wyklucza z Iterowanie struktur danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> interfejsu (na przykład <xref:System.Collections.ArrayList>). Wersja nieogólnego <xref:System.Activities.Statements.ForEach%601> pozwala pokonać ten wymóg, kosztem więcej złożoności środowiska wykonawczego dla zapewnienia zgodności z typów wartości w kolekcji.  
   
  Ten przykład przedstawia sposób implementowania nieogólnego <xref:System.Activities.Statements.ForEach%601> działanie i jego projektanta. To działanie może służyć do iterowania po <xref:System.Collections.ArrayList>.  
   

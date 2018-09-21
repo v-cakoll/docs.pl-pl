@@ -3,12 +3,12 @@ title: Architektura narzędzi wiersza polecenia programu .NET core
 description: Więcej informacji na temat platformy .NET Core, narzędzia warstwy i co zmieniło się w nowszych wersjach.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245132"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490656"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Ogólne omówienie zmian w narzędziach platformy .NET Core
 
@@ -63,7 +63,7 @@ Z perspektywy wykonywania poleceń interfejsu wiersza polecenia przyjmuje swoich
     
 To polecenie jest publikowanie aplikacji w `pub` folder przy użyciu konfiguracji "Wersja". Wewnętrznie to polecenie pobiera przetłumaczyć następujące wywołania MSBuild: 
 
-   `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
+   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
 
 Godne uwagi wyjątkiem od tej reguły są `new` i `run` polecenia, ponieważ nie zostały one wdrożone jako elementy docelowe programu MSBuild.
 

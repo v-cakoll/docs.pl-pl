@@ -13,11 +13,11 @@ ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45686053"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478386"
 ---
 # <a name="applying-attributes"></a>Stosowanie atrybutów
 W celu zastosowania atrybutu do elementu kodu należy wykonać procedurę opisaną poniżej.  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
 ms.openlocfilehash: 9377d889f56049720ab10439582300913f5cbb37
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743362"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490299"
 ---
 # <a name="structure-statement"></a>Structure — Instrukcja
 Deklaruje nazwę struktury i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, które obejmuje struktura.  

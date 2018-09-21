@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
 ms.openlocfilehash: c059bd771667c23bb9aeb78b548e7036e4b8a73a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000820"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46477824"
 ---
 # <a name="method-based-query-syntax-examples-ordering"></a>Przykłady składni zapytania oparte na metodzie: porządkowanie
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.ThenBy%2A> metody zapytania [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) za pomocą składni zapytania oparte na metodzie. Model sprzedaży AdventureWorks, używany w tych przykładach składa się z kontaktu, adres, produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży tabele w przykładowej bazy danych AdventureWorks.  

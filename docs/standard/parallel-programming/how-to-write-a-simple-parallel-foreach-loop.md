@@ -12,11 +12,11 @@ ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a9a2ca668ee2cccc2211250bc1c7c49c87f38c2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641342"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46492827"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Porady: zapisywanie prostej pętli Parallel.ForEach
 

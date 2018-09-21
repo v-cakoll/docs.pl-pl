@@ -3,11 +3,11 @@ title: Funkcje matematyczne
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
 ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970139"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490364"
 ---
 # <a name="mathematical-functions"></a>Funkcje matematyczne
 

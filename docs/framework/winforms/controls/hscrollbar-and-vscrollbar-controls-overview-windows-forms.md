@@ -12,11 +12,11 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
 ms.openlocfilehash: 2c6436e77753322733580acba5a20d6bb220f29c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964322"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471213"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar i VScrollBar — Informacje o formantach (Formularze systemu Windows)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> kontrolki jest używana do udostępniania prostą nawigację w za pośrednictwem długą listę elementów lub dużych ilości informacji, przewijając albo w poziomie lub w pionie w obrębie aplikacja lub formant. Paski przewijania są typowe element interfejsu Windows więc <xref:System.Windows.Forms.ScrollBar> kontroli jest często używana z kontrolkami, które nie pochodzą z <xref:System.Windows.Forms.ScrollableControl> klasy. Podobnie wielu programistów chce zastosować <xref:System.Windows.Forms.ScrollBar> sterowania podczas tworzenia własnej kontrolki użytkownika.  

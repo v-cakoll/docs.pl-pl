@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 342fd8a4da5f05112e2e0ea85f5b78196ca62fdd
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 1b0cae037371666f2f1cd2ccb8c509a5618e7397
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45589420"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493389"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 
@@ -62,7 +62,7 @@ Obraz kontenera jest sposobem pakietu aplikacji lub usługi oraz wdrożyć ją w
 
 Korzystając z platformy Docker, nie otrzymasz od deweloperów powiedzieć, "działa na komputerze, dlaczego w środowisku produkcyjnym?" Można po prostu mówią, "Korzystają one z platformy Docker", ponieważ spakowanej aplikacji platformy Docker można wykonywać w dowolnej obsługiwanej środowisku platformy Docker i będzie działać sposób zamierzano dla wszystkich elementów docelowych wdrożenia (deweloperskie, QA, przemieszczania, produkcyjne itp.).
 
-# <a name="a-simple-analogy"></a>Prosty sposób analogiczny
+## <a name="a-simple-analogy"></a>Prosty sposób analogiczny
 
 Może być prosty sposób analogiczny może pomóc wprowadzenie opanujesz ideą usługi Docker.
 

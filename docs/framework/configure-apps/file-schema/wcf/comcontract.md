@@ -2,12 +2,12 @@
 title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b15d40c5933776676c605e71c77453442ad3e339
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749065"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490455"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 Określa kontrakt usługi integracji COM +.  
@@ -52,16 +52,16 @@ Określa kontrakt usługi integracji COM +.
 |---------------|-----------------|  
 |kontrakt|Ciąg, który zawiera typ kontraktu.|  
 |nazwa|Ciąg, który zawiera nazwę kontraktu.|  
-|— przestrzeń nazw|Ciąg zawierający przestrzeń nazw kontraktu.|  
-|Element requiresSession|Wartość logiczna określająca, czy kontrakt można używać tylko na powiązaniach sesyjnych. Podczas inicjowania usługi środowiska uruchomieniowego integracji zapewnia, że to ustawienie jest zgodne z typ powiązania do użycia. Wyjątek jest generowany, jeśli jeden lub więcej powiązania dla kontraktu będących w konflikcie. Jeśli ta właściwość jest `false`, jednokierunkowe kanał jest w użyciu i istnieją parametry [out], wyjątek zostanie również wygenerowany.|  
+|— przestrzeń nazw|Ciąg, który zawiera przestrzeń nazw kontraktu.|  
+|Element requiresSession|Wartość logiczna określająca, czy kontrakt mogą być używane tylko na powiązaniach sesyjnych. Podczas inicjowania usługi produktu integration runtime zapewnia to ustawienie jest zgodne z typ powiązania do użycia. Wyjątek jest generowany, jeśli jeden lub więcej powiązań dla kontraktu usługi są w konflikcie. Jeśli ta właściwość jest `false`i jednokierunkowe kanał jest w użyciu i istnieją [parametry out], wyjątek zostanie również wygenerowany.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|persistableTypes|Wszystkie typy możliwy do utrwalenia.|  
+|persistableTypes|Wszystkie typy stałe.|  
 |userDefinedTypes|Kolekcja z użytkownika zdefiniowanych typów (UDT), które ma być zawarty w kontrakcie usługi.|  
-|exposedMethods|Kolekcja metod modelu COM +, które są dostępne, gdy interfejs składnika COM + jest udostępniany jako usługa sieci Web.|  
+|exposedMethods|Kolekcja metod modelu COM +, które są dostępne, gdy interfejs składnika COM + jest widoczny jako usługi sieci Web.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -70,7 +70,7 @@ Określa kontrakt usługi integracji COM +.
 |comContracts|Zawiera kolekcję `comContract` elementów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Kontrakty usług integracji COM + są obecnie ograniczone do "http://tempuri.org" przestrzeni nazw i nazwy kontraktu jest pochodną obsługi interfejsu COM. Można jednak określić alternatywne przy użyciu `comContracts` sekcji, jak również `comContract` w pliku konfiguracji. Na przykład można użyć następującej konfiguracji do określania przestrzeni nazw, Nazwa kontraktu i typy zdefiniowane przez użytkownika do uwzględnienia, a także innych ustawień dla kontraktu usługi.  
+ Kontrakty usług integracji modelu COM + są obecnie ograniczone do `http://tempuri.org` przestrzeni nazw i Nazwa kontraktu jest tworzony na podstawie obsługi interfejsu COM. Można jednak określić alternatywne przy użyciu `comContracts` sekcji, jak również `comContract` elementu w pliku konfiguracji. Na przykład można użyć następującej konfiguracji do określania przestrzeni nazw, Nazwa kontraktu i typów zdefiniowanych przez użytkownika do uwzględnienia, a także inne ustawienia dla kontraktu usługi.  
   
 ```xml  
 <comContracts>  

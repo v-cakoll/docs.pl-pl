@@ -6,11 +6,11 @@ ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0537685a91db2c0e323b3f1bda24c6cadc264e34
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46320909"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46485181"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>Używanie klasy XslCompiledTransform
 <xref:System.Xml.Xsl.XslCompiledTransform> Klasa jest procesora XSLT programu Microsoft .NET Framework. Ta klasa jest używana do kompilowania arkusze stylów i wykonania przekształcenia XSLT.  

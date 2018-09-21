@@ -2,12 +2,12 @@
 title: Wybieranie filtra
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743150"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478506"
 ---
 # <a name="choosing-a-filter"></a>Wybieranie filtra
 Podczas konfigurowania usługi routingu, należy wybrać filtry komunikatów i ich konfigurowania pod kątem umożliwiają dokładne dopasowania przed komunikatami, które otrzymujesz. Jeśli filtry, które możesz wybrać są zbyt szerokie w swoich dopasowań lub są niepoprawnie skonfigurowane, komunikaty są kierowane niepoprawnie. Jeśli filtry są zbyt restrykcyjne, możesz nie mieć dostępnych tras prawidłowy dla niektórych komunikatów.  
@@ -16,7 +16,7 @@ Podczas konfigurowania usługi routingu, należy wybrać filtry komunikatów i i
  Wybierając filtry, które są używane przez usługę routingu, to zrozumieć, jak działa każdy filtr oraz jakie informacje są dostępne jako część komunikatów przychodzących. Na przykład jeśli wszystkie komunikaty są odbierane za pośrednictwem tego samego punktu końcowego, filtry adresów i Nazwapunktukoncowego nie są przydatne ponieważ wszystkie wiadomości pasuje do tych filtrów.  
   
 ### <a name="action"></a>Akcja  
- Filtr akcji sprawdza <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> właściwości. Jeśli zawartość nagłówka akcji w wiadomości pasuje do filtru wartości danych, który jest określony w konfiguracji filtru, a następnie zwraca ten filtr `true`. W poniższym przykładzie zdefiniowano `FilterElement` , używa filtru akcji w celu dopasowania komunikatów za pomocą nagłówek akcji, która zawiera wartość "http://namespace/contract/operation/".  
+ Filtr akcji sprawdza <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> właściwości. Jeśli zawartość nagłówka akcji w wiadomości pasuje do filtru wartości danych, który jest określony w konfiguracji filtru, a następnie zwraca ten filtr `true`. W poniższym przykładzie zdefiniowano `FilterElement` , używa filtru akcji w celu dopasowania komunikatów za pomocą nagłówek akcji, która zawiera wartość `http://namespace/contract/operation/`.
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -47,7 +47,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
  Ten filtr powinien służyć komunikaty przychodzące są adresowane do unikatowy adres.  
   
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix  
- Filtr EndpointAddressPrefix jest podobny do filtrowania EndpointAddress. Filtr EndpointAddressPrefix bada EndpointAddress, odebranym komunikacie. Jednak filtrów EndpointAddressPrefix działa jako symbolu wieloznacznego, dopasowując adresy, które zaczynają się od wartości określonej w konfiguracji filtru. W poniższym przykładzie zdefiniowano `FilterElement` EndpointAddressPrefix filtr który używa w celu dopasowania wszelkie komunikaty adresowane do "http://\<nazwa hosta > / vdir *".  
+ Filtr EndpointAddressPrefix jest podobny do filtrowania EndpointAddress. Filtr EndpointAddressPrefix bada EndpointAddress, odebranym komunikacie. Jednak filtrów EndpointAddressPrefix działa jako symbolu wieloznacznego, dopasowując adresy, które zaczynają się od wartości określonej w konfiguracji filtru. W poniższym przykładzie zdefiniowano `FilterElement` EndpointAddressPrefix filtr który używa w celu dopasowania wszelkie komunikaty adresowane do `http://<hostname>/vdir*`.  
   
 ```xml  
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />  

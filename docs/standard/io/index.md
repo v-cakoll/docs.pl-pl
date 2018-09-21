@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685715"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46482108"
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
 Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W .NET Framework `System.IO` przestrzenie nazw zawierają typy umożliwiające odczyt lub zapis, synchronicznie i asynchronicznie, w strumieniach i plikach danych. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.  
@@ -41,6 +41,8 @@ Dla ścieżki konwencji nazewnictwa i sposoby express ścieżkę pliku dla syste
   
 -   <xref:System.IO.Path> — zawiera metody i właściwości przetwarzania ciągów katalogów w sposób dla wielu platform.  
   
+ Należy zawsze podawać niezawodne wyjątków, obsługa podczas wywoływania metody systemu plików. Aby uzyskać więcej informacji, zobacz [błędów obsługi We/Wy](handling-io-errors.md).
+ 
  Oprócz tych klas, użytkowników programu Visual Basic można użyć metod i właściwości dostarczonych przez <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> klasy dla we/wy pliku.  
   
  Zobacz [porady: kopiowanie katalogów](../../../docs/standard/io/how-to-copy-directories.md), [jak: Create a Directory Listing](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69), i [porady: Wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  

@@ -3,11 +3,11 @@ title: '&lt;add&gt; w &lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
 ms.openlocfilehash: 93e82aa3bd44a747d1e85986c51c21522d709bd0
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287267"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489854"
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a>&lt;add&gt; w &lt;commonParameters&gt;
 Określa pary nazwa wartość parametrów, które są globalnie używane w wielu usługach. Zazwyczaj ten parametr zawiera parametry połączenia bazy danych, które mogą być współużytkowane przez trwałych usług.  

@@ -6,11 +6,11 @@ ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: da8b623d3a73ca8791a0619c67b0ed3bd42447d3
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46005664"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46492694"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Przetwarzanie danych XML przy użyciu modelu danych XPath
 <xref:System.Xml?displayProperty=nameWithType> Przestrzeń nazw zawiera reprezentację programistyczne dokumenty XML, fragmenty, węzłów lub zestaw węzłów w pamięci, za pomocą <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument> klasy.  

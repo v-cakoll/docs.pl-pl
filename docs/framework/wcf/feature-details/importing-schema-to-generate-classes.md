@@ -8,176 +8,176 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497042"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46517704"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importowanie schematu w celu generowania klas
-Aby wygenerować klas z schematów, której można używać z usługi Windows Communication Foundation (WCF), należy użyć <xref:System.Runtime.Serialization.XsdDataContractImporter> klasy. W tym temacie opisano proces i zmian.  
+Aby wygenerować klasy schematów, które można używać za pomocą programu Windows Communication Foundation (WCF), należy użyć <xref:System.Runtime.Serialization.XsdDataContractImporter> klasy. W tym temacie opisano proces i zmian.  
   
-## <a name="the-import-process"></a>Proces importowania  
- Proces importowania schematu rozpoczyna się od <xref:System.Xml.Schema.XmlSchemaSet> i tworzy <xref:System.CodeDom.CodeCompileUnit>.  
+## <a name="the-import-process"></a>Proces importowania
+ Proces importowania schematu, który rozpoczyna się od <xref:System.Xml.Schema.XmlSchemaSet> i tworzy <xref:System.CodeDom.CodeCompileUnit>.  
   
- `XmlSchemaSet` Jest częścią [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tego schematu obiektu Model (model SOM) reprezentujący zestaw schematu XML definition language (XSD) schematu dokumentów. Aby utworzyć `XmlSchemaSet` obiekt z zestawu dokumentów XSD, każdy dokument do deserializacji <xref:System.Xml.Schema.XmlSchema> obiektu (przy użyciu <xref:System.Xml.Serialization.XmlSerializer>) i dodać tych obiektów na nowy `XmlSchemaSet`.  
+ `XmlSchemaSet` Jest częścią [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]firmy schematu Object Model (model SOM) reprezentujący zestaw dokumentów schematu języka (XSD) definicji schematu XML. Aby utworzyć `XmlSchemaSet` obiektów z zestawu dokumentów XSD, każdy dokument do deserializacji <xref:System.Xml.Schema.XmlSchema> obiekt (przy użyciu <xref:System.Xml.Serialization.XmlSerializer>) i Dodaj te obiekty do nowego `XmlSchemaSet`.  
   
- `CodeCompileUnit` Jest częścią [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]przez kod Document Object Model (CodeDOM) reprezentujący [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] kodu w sposób abstrakcyjny. Aby wygenerować kod z `CodeCompileUnit`, użyj podklasą <xref:System.CodeDom.Compiler.CodeDomProvider> klas, takich jak <xref:Microsoft.CSharp.CSharpCodeProvider> lub <xref:Microsoft.VisualBasic.VBCodeProvider> klasy.  
+ `CodeCompileUnit` Jest częścią [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]firmy kodu Document Object Model (CodeDOM) reprezentujący [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] kodu w sposób abstrakcyjne. Aby wygenerować kod z `CodeCompileUnit`, użyj podklasą <xref:System.CodeDom.Compiler.CodeDomProvider> klasy, takie jak <xref:Microsoft.CSharp.CSharpCodeProvider> lub <xref:Microsoft.VisualBasic.VBCodeProvider> klasy.  
   
-#### <a name="to-import-a-schema"></a>Aby zaimportować schematu  
+### <a name="to-import-a-schema"></a>Aby zaimportować schematu  
   
-1.  Utwórz wystąpienie <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
+1. Utwórz wystąpienie obiektu <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-2.  Opcjonalna. Przekaż `CodeCompileUnit` w konstruktorze. Typy generowane podczas importowania schematu są dodawane do tego `CodeCompileUnit` wystąpienia zamiast począwszy od pustego `CodeCompileUnit`.  
+2. Opcjonalna. Przekaż `CodeCompileUnit` w konstruktorze. Typy generowane podczas importowania schematu są dodawane do tego `CodeCompileUnit` wystąpienie zamiast począwszy od pustego `CodeCompileUnit`.  
   
-3.  Opcjonalna. Wywoływanie jednego z <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> metody. Metoda określa, czy dany schemat jest schematu kontraktu prawidłowe dane i mogą być importowane. `CanImport` Metoda ma tego samego przeciążeń jako `Import` (następny krok).  
+3. Opcjonalna. Wywołanie jednej z <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> metody. Metoda określa, czy dany schemat jest schematu kontraktu prawidłowych danych i mogą być importowane. `CanImport` Metoda ma tego samego przeciążenia jako `Import` (następny krok).  
   
-4.  Wywoływanie jednego z przeciążone `Import` metod, na przykład <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29> metody.  
+4. Wywołanie jednej z przeciążonych `Import` metody, na przykład <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29> metody.  
   
-     Najprostsza przeciążenia przyjmuje `XmlSchemaSet` i importuje wszystkie typy, w tym typy anonimowe, w tym zestawie schematów. Inne przeciążenia umożliwiają określenie typu XSD lub listę typów do zaimportowania (w postaci <xref:System.Xml.XmlQualifiedName> lub kolekcji `XmlQualifiedName` obiektów). W takim przypadku tylko do określonych typów są importowane. Trwa przeciążenia <xref:System.Xml.Schema.XmlSchemaElement> który importuje dany element poza `XmlSchemaSet`, oraz jego skojarzony typ (czy nie jest on anonimowego). To przeciążenie zwraca `XmlQualifiedName`, który odpowiada nazwie kontraktu danych typu wygenerowany dla tego elementu.  
+     Najprostsza przeciążenia przyjmuje `XmlSchemaSet` , a następnie importuje wszystkie typy, w tym typy anonimowe, w tym zestawie schematów. Inne przeciążenia pozwalają na określenie typu XSD lub Podaj listę typów, aby zaimportować (w postaci <xref:System.Xml.XmlQualifiedName> lub kolekcję `XmlQualifiedName` obiektów). W tym przypadku są importowane tylko do określonych typów. Trwa przeciążenia <xref:System.Xml.Schema.XmlSchemaElement> który importuje konkretnego elementu z `XmlSchemaSet`, a także jego skojarzony typ (czy jest anonimowa lub nie). Tego przeciążenia zwraca `XmlQualifiedName`, która reprezentuje nazwę kontraktu danych typu wygenerowanego dla tego elementu.  
   
-     Wiele wywołań z `Import` wielu elementów dodawane do tej samej metody powodują `CodeCompileUnit`. Typ nie jest generowany w `CodeCompileUnit` Jeśli istnieje już istnieje. Wywołanie `Import` wiele razy w tym samym `XsdDataContractImporter` zamiast używania wielu `XsdDataContractImporter` obiektów. Jest to zalecany sposób, aby uniknąć zduplikowanych typy generowane.  
+     Wiele wywołań z `Import` metody powodują wielu elementów, które są dodawane do tej samej `CodeCompileUnit`. Typ nie jest generowany w `CodeCompileUnit` Jeśli istnieje już istnieje. Wywołaj `Import` wiele razy w tym samym `XsdDataContractImporter` zamiast używania wielu `XsdDataContractImporter` obiektów. To jest zalecanym sposobem uniknięcia typy zduplikowanych generowany.  
   
     > [!NOTE]
-    >  W przypadku awarii podczas importowania, `CodeCompileUnit` będzie w nieprzewidywalnym stanie. Przy użyciu `CodeCompileUnit` wynikające z nieudanych importu może doprowadzić do luk w zabezpieczeniach.  
+    > Jeśli wystąpi awaria podczas importowania, `CodeCompileUnit` będą znajdować się w nieprzewidywalnym stanie. Za pomocą `CodeCompileUnit` wynikające z nieudanych import może doprowadzić do luk w zabezpieczeniach.  
   
-5.  Dostęp `CodeCompileUnit` za pośrednictwem <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> właściwości.  
+5. Dostęp do `CodeCompileUnit` za pośrednictwem <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> właściwości.  
   
 ### <a name="import-options-customizing-the-generated-types"></a>Opcje importowania: Dostosowywanie wygenerowane typy  
- Można ustawić <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> właściwość <xref:System.Runtime.Serialization.XsdDataContractImporter> na wystąpienie <xref:System.Runtime.Serialization.ImportOptions> klasę, aby kontrolować różne aspekty procesu importowania. Liczba opcji bezpośredniego wpływania typy, które są generowane.  
+ Możesz ustawić <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> właściwość <xref:System.Runtime.Serialization.XsdDataContractImporter> do wystąpienia <xref:System.Runtime.Serialization.ImportOptions> klasy, aby kontrolować różne aspekty procesu importowania. Liczba opcji bezpośrednio wpływają na typy, które są generowane.  
   
-#### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>Kontrolowanie poziomu dostępu (GenerateInternal lub / wewnętrznego przełącznika)  
- Odpowiada to **/ wewnętrzny** Włącz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+#### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>Kontrolowanie poziomu dostępu (GenerateInternal lub / wewnętrzny Przełącz)  
+ Odpowiada to **/ wewnętrzny** Włącz [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
- Zwykle typy publiczne zostaną wygenerowane na podstawie schematu z pól prywatnych i zgodnych właściwości elementu członkowskiego danych publicznych. Aby zamiast niego generowania typów wewnętrznych, ustaw <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> właściwości `true`.  
+ Zwykle typy publiczne są generowane na podstawie schematu, za pomocą pola prywatne i zgodne właściwości elementów członkowskich danych publicznych. Aby wygenerować typy wewnętrzne zamiast niego, ustaw <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> właściwość `true`.  
   
- W poniższym przykładzie przedstawiono schematu przekształceniu wewnętrznego klasę gdy <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> ma ustawioną wartość właściwości `true.`  
+ Poniższy przykład przedstawia schematu, przekształcane na wewnętrzną klasę gdy <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> właściwość jest ustawiona na `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
   
-#### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>Kontrolowanie przestrzenie nazw (przestrzeni nazw lub w parametrze/Namespace przełącznika)  
+#### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>Kontrolowanie przestrzenie nazw (przestrzeni nazw lub/namespace, przełącz)  
  Odpowiada to **/Namespace** Włącz `Svcutil.exe` narzędzia.  
   
- Zwykle typy generowane na podstawie schematu są generowane w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] przestrzeni nazw z każdego obszaru nazw XSD, odpowiadającego danego [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] przestrzeni nazw zgodnie z mapowania opisanego w [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Można dostosować to mapowanie przez <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> właściwości <xref:System.Collections.Generic.Dictionary%602>. Jeśli danego obszaru nazw XSD zostanie znaleziony w słowniku dopasowywania [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] przestrzeń nazw również jest pobierana z słownika.  
+ Zwykle typy generowane na podstawie schematu są generowane w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] przestrzeni nazw, z każdego obszaru nazw XSD, odpowiadający określonego [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] przestrzeni nazw zgodnie z mapowania z opisem w temacie [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Można dostosować to mapowanie przez <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> właściwość <xref:System.Collections.Generic.Dictionary%602>. Jeśli danego obszaru nazw XSD zostanie znaleziony w słowniku dopasowywania [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] przestrzeń nazw również jest pobierana z słownika.  
   
- Na przykład należy wziąć pod uwagę następujące schematu.  
+ Na przykład należy wziąć pod uwagę poniższe schemat.  
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- W poniższym przykładzie użyto `Namespaces` mapowania dla właściwości "http://schemas.contoso.com/carSchema" przestrzeni nazw "Contoso.Cars".  
+ W poniższym przykładzie użyto `Namespaces` właściwości, aby zamapować `http://schemas.contoso.com/carSchema` przestrzeń nazw "Contoso.Cars".  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
   
-#### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>Dodawanie atrybutu SerializableAttribute (GenerateSerializable lub / serializacji przełącznika)  
+#### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>Dodawanie atrybutu SerializableAttribute (GenerateSerializable lub / serializacji Przełącz)  
  Odpowiada to **/ serializacji** Włącz `Svcutil.exe` narzędzia.  
   
- Czasami jest ważna w przypadku typy generowane na podstawie schematu może być używany z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aparaty serializacji środowiska uruchomieniowego (na przykład <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> klasy). Jest to przydatne, gdy przy użyciu typów [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] komunikacji zdalnej. Aby włączyć tę opcję, należy zastosować <xref:System.SerializableAttribute> atrybutu wygenerowane typy oprócz zwykłej <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu. Ten atrybut jest generowane automatycznie, jeśli `GenerateSerializable` ustawiono opcję importu `true`.  
+ Czasem ważne jest, aby typy generowane na podstawie schematu może być używany z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aparatów serializacji w czasie wykonywania (na przykład <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> klasy). Jest to przydatne, gdy przy użyciu typów dla [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] komunikacji zdalnej. Aby je włączyć, należy najpierw zastosować <xref:System.SerializableAttribute> atrybutu wygenerowane typy oprócz zwykłych <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu. Ten atrybut jest generowana automatycznie, jeśli `GenerateSerializable` ustawiono opcję importowania `true`.  
   
- W poniższym przykładzie przedstawiono `Vehicle` wygenerować za pomocą klasy `GenerateSerializable` zaimportować ustawienie `true`.  
+ W poniższym przykładzie przedstawiono `Vehicle` klasy wygenerowanej z `GenerateSerializable` opcja równa importu `true`.  
   
  [!code-csharp[c_SchemaImportExport#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#4)]
  [!code-vb[c_SchemaImportExport#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#4)]  
   
-#### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Dodawanie obsługi powiązania danych (EnableDataBinding lub przełącznika /enableDataBinding)  
- Odpowiada to **/enableDataBinding** przełączania z narzędzia Svcutil.exe.  
+#### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Dodanie obsługi powiązanie danych (EnableDataBinding lub przełącznika /enableDataBinding)  
+ Odpowiada to **/enableDataBinding** Włącz narzędzia Svcutil.exe.  
   
- Czasami można powiązać typy generowane na podstawie schematu do składników interfejsu graficznego użytkownika, aby zaktualizowanie wystąpień tych typów są automatycznie aktualizowane interfejsu użytkownika. `XsdDataContractImporter` Można wygenerować typów, które implementują <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu w taki sposób, że zmiany właściwości wyzwala zdarzenie. Generowania typów do użycia z środowisku programowania interfejsu użytkownika klienta, który obsługuje ten interfejs (takie jak Windows Presentation Foundation (WPF)), należy ustawić <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> właściwości `true` Aby włączyć tę funkcję.  
+ Czasami można powiązać typy generowane na podstawie schematu do składników interfejsu graficznego użytkownika, aby wszelkich aktualizacji wystąpienia tych typów zostanie automatycznie zaktualizowany interfejs użytkownika. `XsdDataContractImporter` Może wygenerować typy, które implementują <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu w taki sposób, że każda zmiana właściwości wyzwala zdarzenie. Generowania typów do użycia z usługą środowisku programowania interfejsu użytkownika klienta, który obsługuje ten interfejs (takich jak Windows Presentation Foundation (WPF)), ustaw <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> właściwość `true` Aby włączyć tę funkcję.  
   
- W poniższym przykładzie przedstawiono `Vehicle` wygenerować za pomocą klasy <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> ustawioną `true`.  
+ W poniższym przykładzie przedstawiono `Vehicle` klasy wygenerowanej z <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> równa `true`.  
   
  [!code-csharp[C_SchemaImportExport#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#5)]
  [!code-vb[C_SchemaImportExport#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#5)]  
   
-### <a name="import-options-choosing-collection-types"></a>Opcje import: Wybieranie typów kolekcji  
- Dwa wzorce specjalne w kodzie XML reprezentują kolekcje elementów: listę elementów i skojarzenia między jeden element. Oto przykład lista ciągów.  
+### <a name="import-options-choosing-collection-types"></a>Opcje import: Wybieranie typy kolekcji  
+ Dwa wzorce specjalne w kodzie XML reprezentują kolekcje elementów: listy elementów i skojarzenia elementu jednego i drugiego. Oto przykład listy ciągów.  
   
  [!code-xml[C_SchemaImportExport#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  
   
- Poniżej przedstawiono przykład skojarzenia między string i integer (`city name` i `population`).  
+ Oto przykład skojarzenie między ciągu i liczby całkowitej (`city name` i `population`).  
   
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Skojarzeń można również uwzględnić listy. Na przykład można wyświetlić poprzedniego skojarzenie jako listę złożone `city` obiektów, które mają dwa pola (polem ciągu i pole Liczba całkowita). Oba wzorce ma reprezentacji w postaci w schematu XSD. Nie istnieje sposób w celu rozróżnienia listy i skojarzenia, więc tych wzorców zawsze są traktowane jako list, chyba że adnotację specjalne specyficzne dla usługi WCF znajduje się w schemacie. Adnotacja wskazuje, że danego wzorca reprezentuje skojarzenia. Aby uzyskać więcej informacji, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Skojarzenia można też je traktować jako listę. Na przykład, można wyświetlić poprzedni skojarzenie jako lista złożone `city` obiektów, które mają dwa pola (pole ciągu i pola Liczba całkowita). Oba wzorce ma reprezentacji w schematu XSD. Nie ma możliwości do rozróżnienia między listy i skojarzenia, dzięki czemu takie wzorce są zawsze traktowane jako list, chyba że specjalne adnotacji specyficzne dla usługi WCF jest obecny w schemacie. Adnotacja wskazuje, że danego wzorca reprezentuje skojarzenia. Aby uzyskać więcej informacji, zobacz [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- Zwykle listy jest importowany jako kontraktu danych kolekcji, która pochodzi z listy ogólnej lub jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tablicy, w zależności od tego, czy schemat następuje standardowy wzorzec nazewnictwa dla kolekcji. To jest opisany bardziej szczegółowo w [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Skojarzenia są zwykle zaimportowany jako <xref:System.Collections.Generic.Dictionary%602> lub kontraktu danych kolekcji, która pochodzi z obiektu słownika. Na przykład należy wziąć pod uwagę następujące schematu.  
+ Zwykle listy jest importowany jako kontraktu danych kolekcji, która wynika z listy ogólnej lub jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tablicy, w zależności od tego, czy schemat następuje standardowego wzorca nazewnictwa dla kolekcji. Jest to opisane bardziej szczegółowo w [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Skojarzenia są normalnie zaimportowane jako <xref:System.Collections.Generic.Dictionary%602> lub kontraktu danych kolekcji, która wynika z obiekt słownika. Na przykład należy wziąć pod uwagę poniższe schemat.  
   
  [!code-xml[c_SchemaImportExport#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
   
- Może to zostać zaimportowane w następujący sposób (pola są wyświetlane zamiast właściwości dla czytelności).  
+ To zostaną zaimportowane, w następujący sposób (pola są wyświetlane zamiast właściwości, aby zwiększyć czytelność).  
   
  [!code-csharp[c_SchemaImportExport#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#6)]
  [!code-vb[c_SchemaImportExport#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#6)]  
   
- Istnieje możliwość dostosowania typy kolekcji, które są generowane dla tych wzorców schematu. Na przykład może być Generuj kolekcje pochodzące z <xref:System.ComponentModel.BindingList%601> zamiast <xref:System.Collections.Generic.List%601> klasy, aby powiązać pole listy Typ i została ona automatycznie aktualizowane podczas zmiany zawartości w kolekcji. Aby to zrobić, ustaw <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A> właściwość <xref:System.Runtime.Serialization.ImportOptions> klasy do listy typów kolekcji do użycia (poniżej znane jako wskazanych typów). Podczas importowania kolekcji, ta lista wskazanych typów kolekcji jest skanowany i najlepiej pasujące kolekcja jest używana, jeśli został znaleziony. Skojarzenia są dopasowywane tylko typów, które implementują ogólnych lub nongeneric <xref:System.Collections.IDictionary> interfejsu, podczas gdy listy są dopasowywane do dowolnego typu kolekcja obsługiwanych.  
+ Istnieje możliwość dostosować typy kolekcji, które są generowane dla wzorców takich schematu. Na przykład warto wygenerować kolekcji pochodząca od <xref:System.ComponentModel.BindingList%601> zamiast <xref:System.Collections.Generic.List%601> klasy w celu powiązania typu z pola listy i jest automatycznie aktualizowane po zmianie wartości w kolekcji. Aby to zrobić, należy ustawić <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A> właściwość <xref:System.Runtime.Serialization.ImportOptions> klasy do listy typów kolekcji do użycia (dalej nazywanej przywoływane typy). Podczas importowania dowolnej kolekcji, ta lista wskazanych typów kolekcji jest skanowany i najlepiej pasujące kolekcja jest używana, jeśli został znaleziony. Skojarzenia będą dopasowywane tylko typy, które implementują ogólnego lub nongeneric <xref:System.Collections.IDictionary> interfejsu, podczas gdy list są dopasowywane do dowolnego typu kolekcji obsługiwanych.  
   
- Na przykład jeśli <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A> właściwość jest ustawiona na <xref:System.ComponentModel.BindingList%601>, `people` typ w poprzednim przykładzie zostanie wygenerowany w następujący sposób.  
+ Na przykład jeśli <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A> właściwość jest ustawiona na <xref:System.ComponentModel.BindingList%601>, `people` typu w powyższym przykładzie jest generowany w następujący sposób.  
   
  [!code-csharp[C_SchemaImportExport#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#7)]
  [!code-vb[C_SchemaImportExport#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#7)]  
   
- Zamknięte rodzajowa jest traktowany jako najlepsze dopasowanie. Na przykład jeśli typy `BindingList(Of Integer)` i <xref:System.Collections.ArrayList> są przekazywane do kolekcji wskazanych typów żadnych list liczb całkowitych znaleziono w schemacie są importowane jako `BindingList(Of Integer)`. Inne listy, na przykład `List(Of String)`, są importowane jako `ArrayList`.  
+ Zamknięte ogólnego jest traktowany jako najlepsze dopasowanie. Na przykład jeśli typy `BindingList(Of Integer)` i <xref:System.Collections.ArrayList> są przekazywane do kolekcji typów, wszystkie listy liczb całkowitych, znaleziono w schemacie są importowane jako `BindingList(Of Integer)`. Inne listy, na przykład `List(Of String)`, są importowane jako `ArrayList`.  
   
- Jeśli typ, który implementuje ogólnego `IDictionary` interfejsu zostanie dodany do kolekcji wskazanych typów, jego parametrów typu musi być całkowicie otwarte lub całkowicie zamknięty.  
+ Jeśli typ, który implementuje ogólnego `IDictionary` interfejs jest dodawany do kolekcji typów, jego parametrów typu musi być całkowicie otwarte lub zamknięte w pełni.  
   
- Duplikaty są niedozwolone. Na przykład nie można dodać zarówno `List(Of Integer)` i `Collection(Of Integer)` do typów, do którego istnieje odwołanie. Który spowodowałoby, że nie pozwala na określenie, które mają być używane w podczas listy liczb całkowitych znajduje się w schemacie. Duplikaty zostanie wykryty tylko wtedy, gdy jest typem w schemacie, który ujawnia problem duplikaty. Na przykład, jeśli zaimportowanego schematu nie zawiera listy liczb całkowitych, jego może mieć zarówno `List(Of Integer)` i `Collection(Of Integer)` w wskazanych typów kolekcji, ale nie ma żadnego efektu.  
+ Duplikaty są niedozwolone. Na przykład nie można dodać oba `List(Of Integer)` i `Collection(Of Integer)` dla typów odwołania. Które spowodowałoby, że niemożliwe do należy określić, które powinny być używane, gdy znajduje się na liście liczb całkowitych w schemacie. Duplikaty zostanie wykryty, tylko wtedy, gdy typem w schemacie, który udostępnia problem duplikaty. Na przykład, jeśli zaimportowanego schematu nie zawiera listy liczb całkowitych, może on być mieć zarówno `List(Of Integer)` i `Collection(Of Integer)` w wskazanych typów kolekcji, ale nie będzie mieć żadnego efektu.  
   
- Typy kolekcji przywoływanego mechanizmu działa równie oraz kolekcji typów złożonych (łącznie z kolekcjami innych kolekcji), a nie tylko dla kolekcji elementów podstawowych.  
+ Typy kolekcji do którego istnieje odwołanie, mechanizm działa równie dobrze dla kolekcji typów złożonych (w tym kolekcji innych kolekcji), a nie tylko dla kolekcji elementów podstawowych.  
   
- `ReferencedCollectionTypes` Właściwość odpowiada **/collectionType** przełączania z narzędzia SvcUtil.exe. Należy pamiętać, że można odwoływać się wiele typów kolekcji, **/collectionType** przełącznika musi być określone wiele razy. Jeśli typ nie jest w bibliotece MsCorLib.dll, jego zestaw musi także można odwoływać się przy użyciu **/reference** przełącznika.  
+ `ReferencedCollectionTypes` Właściwość odpowiada **/collectionType** Włącz narzędzia SvcUtil.exe. Należy pamiętać, że można odwoływać się do wielu typów kolekcji, **/collectionType** przełącznik musi zostać określony wiele razy. Jeśli typ nie ma MsCorLib.dll, jej zestawu musi także odwoływać się za pomocą **/reference** przełącznika.  
   
-#### <a name="import-options-referencing-existing-types"></a>Opcje importowania: Odwołuje się do istniejących typów  
- Czasami odpowiadają istniejących typów w schemacie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów, a nie istnieje potrzeba do wygenerowania tych typów od początku. (Ta sekcja dotyczy tylko do typów noncollection. Typy kolekcji dla poprzedniej sekcji.)  
+#### <a name="import-options-referencing-existing-types"></a>Opcje importowania: Odwoływanie się do istniejących typów  
+ Od czasu do czasu typów w schemacie odnoszą się do istniejącej [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów, i nie ma potrzeby do wygenerowania tych typów od podstaw. (Ta sekcja dotyczy tylko typów noncollection. Aby typy kolekcji zobacz poprzednią sekcję).  
   
- Na przykład masz standardowe firmie "Osoba" typ danych kontraktu używanej zawsze gdy reprezentujący osoby. W przypadku, gdy niektóre usługi powoduje, że w metadanych usługi pojawi się użycie tego typu, a jego schematu, może zajść potrzeba ponownego użycia istniejącej `Person` wpisz podczas importowania tego schematu, zamiast generowania nowego filtru dla każdej usługi.  
+ Na przykład masz standardowa całej firmy "Person" Typ kontraktu danych, który ma być zawsze używane podczas reprezentująca osobę. W przypadku, gdy niektóre service umożliwia korzystanie z tego typu i jego schematu, który pojawia się w metadanych usługi, może zajść potrzeba ponownego użycia istniejącej `Person` wpisz podczas importowania tego schematu, zamiast generować nową dla każdej usługi.  
   
- Aby to zrobić, należy przekazać listę [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy, które chcesz ponownie użyć do kolekcji <xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A> właściwość zwraca na <xref:System.Runtime.Serialization.ImportOptions> klasy. Jeśli którykolwiek z tych typów nazwie kontraktu danych i przestrzeni nazw, która jest zgodna z nazwą i przestrzeni nazw typu schematu, wykonywane jest strukturalnych porównanie. Jeśli okaże się, że typy zarówno pasujących nazw i pasujące struktury, istniejące [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu zostanie ponownie użyty zamiast generowania nowego. Jeśli tylko nazwa taka sama, ale nie struktury, jest zgłaszany wyjątek. Należy pamiętać, że nie dodatek nie dla wersji podczas odwoływania się do typów (na przykład dodawania nowych opcjonalne elementy członkowskie danych). Struktur muszą być zgodne.  
+ Aby to zrobić, należy przekazać listę [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy, które chcesz użyć ponownie do kolekcji <xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A> właściwość zwraca na <xref:System.Runtime.Serialization.ImportOptions> klasy. Jeśli którykolwiek z tych typów nazwie kontraktu danych i przestrzeni nazw, która jest zgodna z nazwą i przestrzeni nazw typu schematu, jest wykonywane porównywania strukturalnego. Jeśli okaże się, że typy mają pasujące nazwy i struktury zgodne, istniejące [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu zostanie ponownie użyty zamiast generować nową. Jeśli tylko nazwa taka sama, ale nie struktury, jest zgłaszany wyjątek. Należy pamiętać, że dodatek nie pod kątem przechowywania wersji podczas odwoływania się do typów (na przykład dodawania nowych opcjonalnymi danymi członków). Struktury musi dokładnie pasować.  
   
- Jest prawnych, aby dodać wiele typów o tej samej nazwie kontraktu danych i przestrzeni nazw do kolekcji wskazanych typów, tak długo, jak żadnych typów schematu są importowane z tą nazwą i przestrzeni nazw. Dzięki temu można łatwo dodać wszystkich typów w zestawie do kolekcji bez obaw o duplikaty dla typów, które faktycznie nie występują w schemacie.  
+ Jest legalne, aby dodać wiele typów o tej samej nazwie kontraktu danych i przestrzeni nazw do kolekcji typów, tak długo, jak żadnych typów schematu są importowane z tą nazwą i przestrzeni nazw. Dzięki temu można łatwo dodać wszystkich typów w zestawie do kolekcji bez martwienia się o duplikaty dla typów, które faktycznie nie występują w schemacie.  
   
- `ReferencedTypes` Właściwość odpowiada **/reference** przełącznika w niektórych tryby pracy narzędzia Svcutil.exe.  
+ `ReferencedTypes` Właściwość odpowiada **/reference** przełącznika w niektórych tryby działania narzędzia Svcutil.exe.  
   
 > [!NOTE]
->  Korzystając z Svcutil.exe lub (w programie Visual Studio) **Dodaj odwołanie do usługi** narzędzia, wszystkie typy w bibliotece MsCorLib.dll odwołują się automatycznie.  
+>  Korzystając z Svcutil.exe lub (w programie Visual Studio) **Dodaj odwołanie do usługi** narzędzia, wszystkie typy w MsCorLib.dll są automatycznie dołączane.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Opcje importowania: Importowanie schematu DataContract inne niż jako typów IXmlSerializable  
- <xref:System.Runtime.Serialization.XsdDataContractImporter> Obsługuje ograniczonym podzbiorem schematu. W przypadku konstrukcji nieobsługiwany schemat (na przykład atrybutów XML) Próba zaimportowania kończy się niepowodzeniem z powodu wyjątku. Jednak ustawienie <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> właściwości `true` rozszerza zakres schematu obsługiwane. Jeśli wartość `true`, <xref:System.Runtime.Serialization.XsdDataContractImporter> generuje typów, które implementują <xref:System.Xml.Serialization.IXmlSerializable> interfejsu. Dzięki temu bezpośredni dostęp do reprezentacji XML tych typów.  
+ <xref:System.Runtime.Serialization.XsdDataContractImporter> Obsługuje podzbiór ograniczony schemat. W przypadku konstrukcji schematu nieobsługiwaną (na przykład atrybutów XML) próba import zakończy się niepowodzeniem z powodu wyjątku. Jednak ustawienie <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> właściwość `true` rozszerza zakres schematu obsługiwane. Po ustawieniu `true`, <xref:System.Runtime.Serialization.XsdDataContractImporter> generuje typy, które implementują <xref:System.Xml.Serialization.IXmlSerializable> interfejsu. Dzięki temu bezpośredni dostęp do tych typów reprezentację XML.  
   
 ##### <a name="design-considerations"></a>Zagadnienia dotyczące projektowania  
   
--   Może być trudne do pracy bezpośrednio z lekko maszynowy reprezentacji XML. Należy wziąć pod uwagę przy użyciu aparatu serializacji alternatywnych, takich jak <xref:System.Xml.Serialization.XmlSerializer>, aby pracować ze schematem nie jest zgodne z danymi kontraktów w jednoznaczny sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+-   Może być trudne do pracy z słabo typizowaną reprezentację XML bezpośrednio. Należy wziąć pod uwagę przy użyciu mechanizm serializacji alternatywnych, takich jak <xref:System.Xml.Serialization.XmlSerializer>, aby pracować ze schematem nie jest zgodna z danymi kontraktów w silnie typizowany sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
--   Niektóre konstrukcje schematu nie mogą być importowane przez <xref:System.Runtime.Serialization.XsdDataContractImporter> nawet wtedy, gdy <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> właściwość jest ustawiona na `true`. Ponownie, należy rozważyć użycie <xref:System.Xml.Serialization.XmlSerializer> w takich przypadkach.  
+-   Nie można zaimportować niektórych konstrukcji schematu przez <xref:System.Runtime.Serialization.XsdDataContractImporter> nawet wtedy, gdy <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> właściwość jest ustawiona na `true`. Ponownie, należy rozważyć użycie <xref:System.Xml.Serialization.XmlSerializer> w takich przypadkach.  
   
--   Konstrukcje dokładne schematu, które są obsługiwane zarówno po <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> jest `true` lub `false` opisanym w [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+-   Konstrukcji dokładnie schematu, które są obsługiwane zarówno po <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> jest `true` lub `false` są opisane w [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
--   Schemat dla wygenerowany <xref:System.Xml.Serialization.IXmlSerializable> typy zachowuje wierności podczas zaimportowane i wyeksportowane. Oznacza to Eksportowanie schematu z wygenerowane typy i importowanie jako klasy nie zwraca oryginalnego schematu.  
+-   Wygenerowany schemat <xref:System.Xml.Serialization.IXmlSerializable> typy zachowuje wierności po zaimportowaniu i wyeksportowane. Oznacza to, że Eksportowanie schematu z wygenerowane typy i importowanie jako klasy nie zwraca oryginalnym schematem.  
   
- Istnieje możliwość łączenia <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> opcję z <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> opcji opisany wcześniej. Dla typów, które mają być generowane jako <xref:System.Xml.Serialization.IXmlSerializable> implementacji, strukturalnych wyboru zostanie pominięty, przy użyciu <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> funkcji.  
+ Można połączyć <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> z opcją <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> opisanej wcześniej. Dla typów, które mają zostać wygenerowane jako <xref:System.Xml.Serialization.IXmlSerializable> implementacji, strukturalnych wyboru zostanie pominięta, gdy za pomocą <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> funkcji.  
   
- <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> Opcja odnosi się do **/importXmlTypes** przełączania z narzędzia Svcutil.exe.  
+ <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> Opcja odnosi się do **/importXmlTypes** Włącz narzędzia Svcutil.exe.  
   
-##### <a name="working-with-generated-ixmlserializable-types"></a>Praca z typami wygenerowanego interfejsu IXmlSerializable.  
- Wygenerowany `IXmlSerializable` typów zawiera pole prywatne o nazwie "nodesField", która zwraca tablicę <xref:System.Xml.XmlNode> obiektów. Podczas deserializacji wystąpienia takiego typu, ma dostęp do danych XML bezpośrednio za pomocą tego pola przy użyciu modelu obiektu dokumentu XML. Podczas serializowania wystąpienia tego typu, w tym polu można ustawić do żądanych danych XML i będzie można serializować.  
+##### <a name="working-with-generated-ixmlserializable-types"></a>Praca z typami IXmlSerializable wygenerowany  
+ Wygenerowany `IXmlSerializable` typy zawierać pola prywatnego, o nazwie "nodesField", która zwraca tablicę <xref:System.Xml.XmlNode> obiektów. Podczas deserializacji wystąpienia taki typ, mają dostęp do danych XML bezpośrednio w ramach tego pola, za pomocą XML Document Object Model. Podczas serializacji wystąpienia tego typu, można ustawić tego pola do żądanej dane XML i będzie serializowana.  
   
- Jest to realizowane przez `IXmlSerializable` implementacji. W wygenerowanym `IXmlSerializable` typu <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> implementacja wywołuje <xref:System.Runtime.Serialization.XmlSerializableServices.ReadNodes%2A> metody <xref:System.Runtime.Serialization.XmlSerializableServices> klasy. Metoda to metoda pomocnika konwertuje XML realizowane za pośrednictwem <xref:System.Xml.XmlReader> do tablicy <xref:System.Xml.XmlNode> obiektów. <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> Implementacji nie odwrotnie i konwertuje tablicę `XmlNode` obiektów do sekwencji <xref:System.Xml.XmlWriter> wywołania. Jest to realizowane przy użyciu <xref:System.Runtime.Serialization.XmlSerializableServices.WriteNodes%2A> metody.  
+ Jest to realizowane za pośrednictwem `IXmlSerializable` implementacji. W wygenerowanym `IXmlSerializable` typu <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> implementacja wywołuje <xref:System.Runtime.Serialization.XmlSerializableServices.ReadNodes%2A> metody <xref:System.Runtime.Serialization.XmlSerializableServices> klasy. Metoda jest metodą pomocnika, która konwertuje XML realizowane za pośrednictwem <xref:System.Xml.XmlReader> tablicę <xref:System.Xml.XmlNode> obiektów. <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> Implementacja ma odwrotne i konwertuje tablicę `XmlNode` obiektów z sekwencji <xref:System.Xml.XmlWriter> wywołania. Jest to realizowane przy użyciu <xref:System.Runtime.Serialization.XmlSerializableServices.WriteNodes%2A> metody.  
   
- Istnieje możliwość uruchomienia procesu eksportowania schematu na wygenerowany `IXmlSerializable` klasy. Jak podano wcześniej nie otrzymasz oryginalnego schematu ponownie. Zamiast tego zostanie wyświetlona "anyType" standardowy typ XSD, który jest symbolem wieloznacznym dla dowolnego typu XSD.  
+ Istnieje możliwość uruchomienia procesu eksportowania schematu w wygenerowanym `IXmlSerializable` klasy. Podaną wcześniej nie otrzymasz oryginalnym schematem ponownie. Zamiast tego zostanie wyświetlony "anyType" Standardowa typ XSD, czyli symbol wieloznaczny dla dowolnego typu XSD.  
   
- Jest to osiągane przez zastosowanie <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> atrybutu Generated `IXmlSerializable` klasy i metody określania, który odwołuje się <xref:System.Runtime.Serialization.XmlSerializableServices.AddDefaultSchema%2A> metody można wygenerować typu "anyType".  
+ Jest to osiągane przez zastosowanie <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> atrybutu Generated `IXmlSerializable` klasy i określanie metody wywołująca <xref:System.Runtime.Serialization.XmlSerializableServices.AddDefaultSchema%2A> metodę w celu wygenerowania typu "anyType".  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.XmlSerializableServices> Typ istnieje wyłącznie do obsługi tej określonej funkcji. Nie zaleca się do użytku dla innych celów.  
+>  <xref:System.Runtime.Serialization.XmlSerializableServices> Typ istnieje wyłącznie do obsługi tej określonej funkcji. Nie jest zalecane do użytku w żadnym innym celu.  
   
 #### <a name="import-options-advanced-options"></a>Opcje importowania: Opcje zaawansowane  
  Poniżej są zaawansowane opcje importowania:  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> Właściwość. Określ <xref:System.CodeDom.Compiler.CodeDomProvider> używany do generowania kodu dla wygenerowanego klas. Funkcje prób mechanizmu importu, aby uniknąć <xref:System.CodeDom.Compiler.CodeDomProvider> nie obsługuje. Jeśli <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nie jest ustawiona, pełny zestaw [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] funkcji jest używana bez ograniczeń.  
+-   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> Właściwość. Określ <xref:System.CodeDom.Compiler.CodeDomProvider> służące do generowania kodu dla wygenerowanej klasy. Funkcje prób mechanizm importu, aby uniknąć <xref:System.CodeDom.Compiler.CodeDomProvider> nie obsługuje. Jeśli <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nie jest ustawiona, pełny zestaw [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] funkcji jest używany bez żadnych ograniczeń.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> Właściwość. <xref:System.Runtime.Serialization.IDataContractSurrogate> Za pomocą tej właściwości można określić implementacji. <xref:System.Runtime.Serialization.IDataContractSurrogate> Dostosowuje proces importowania. Aby uzyskać więcej informacji, zobacz [surogaty kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Domyślnie surogat nie jest używany.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> Właściwość. <xref:System.Runtime.Serialization.IDataContractSurrogate> Za pomocą tej właściwości można określić implementacji. <xref:System.Runtime.Serialization.IDataContractSurrogate> Dostosowuje proces importowania. Aby uzyskać więcej informacji, zobacz [surogaty kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Domyślnie jest używany nie zastępczy.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

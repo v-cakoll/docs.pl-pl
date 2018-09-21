@@ -3,11 +3,11 @@ title: Właściwości (F#)
 description: 'Więcej informacji na temat F # właściwości, które są elementami członkowskimi, które reprezentują wartości skojarzonych z obiektem.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481783"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537424"
 ---
 # <a name="properties"></a>Właściwości
 

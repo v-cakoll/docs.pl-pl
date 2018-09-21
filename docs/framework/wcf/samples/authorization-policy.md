@@ -2,16 +2,16 @@
 title: Zasady autoryzacji
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: eaf4dfc6e1f02a1cd98d9ab48af70426e8ba6151
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217298"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508794"
 ---
 # <a name="authorization-policy"></a>Zasady autoryzacji
 
-Ten przykład demonstruje sposób implementacji zasad autoryzacji oświadczenia niestandardowego i skojarzona usługa niestandardowego Menedżera autoryzacji. Jest to przydatne, kiedy usług ułatwia kontrole dostępu oparta na oświadczeniach, do operacji usługi i kontroli dostępu, udziela obiekt wywołujący pewne prawa. W tym przykładzie przedstawiono proces dodawania oświadczeń, a także proces ten kontrolę dostępu dla ukończonego zestaw oświadczeń. Wszystkie komunikaty aplikacji między klientem i serwerem są podpisane i szyfrowane. Domyślnie `wsHttpBinding` powiązania nazwy użytkownika i hasło podane przez klienta są używane do logowania się do prawidłowego konta Windows NT. W tym przykładzie pokazano, jak korzystanie z niestandardowego <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` do uwierzytelniania klienta. Ponadto ten przykład pokazuje klienta uwierzytelniania usługi przy użyciu certyfikatu X.509. Ten przykład pokazuje implementację <xref:System.IdentityModel.Policy.IAuthorizationPolicy> i <xref:System.ServiceModel.ServiceAuthorizationManager>, który między nimi udzielić dostępu do określonych metod usługi dla określonych użytkowników. Ten przykład jest oparty na [nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md), ale pokazuje, jak przeprowadzić przekształcania oświadczeń w programach starszych niż program <xref:System.ServiceModel.ServiceAuthorizationManager> wywoływana.
+Ten przykład demonstruje sposób implementacji zasad autoryzacji oświadczenia niestandardowego i skojarzona usługa niestandardowego Menedżera autoryzacji. Jest to przydatne, kiedy usług ułatwia kontrole dostępu oparta na oświadczeniach, do operacji usługi i kontroli dostępu, udziela obiekt wywołujący pewne prawa. W tym przykładzie przedstawiono proces dodawania oświadczeń, a także proces ten kontrolę dostępu dla ukończonego zestaw oświadczeń. Wszystkie komunikaty aplikacji między klientem i serwerem są podpisane i szyfrowane. Domyślnie `wsHttpBinding` powiązania nazwy użytkownika i hasło podane przez klienta są używane do logowania się do prawidłowego konta Windows NT. W tym przykładzie pokazano, jak korzystanie z niestandardowego <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> do uwierzytelniania klienta. Ponadto ten przykład pokazuje klienta uwierzytelniania usługi przy użyciu certyfikatu X.509. Ten przykład pokazuje implementację <xref:System.IdentityModel.Policy.IAuthorizationPolicy> i <xref:System.ServiceModel.ServiceAuthorizationManager>, który między nimi udzielić dostępu do określonych metod usługi dla określonych użytkowników. Ten przykład jest oparty na [nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md), ale pokazuje, jak przeprowadzić przekształcania oświadczeń w programach starszych niż program <xref:System.ServiceModel.ServiceAuthorizationManager> wywoływana.
 
 > [!NOTE]
 > Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.

@@ -883,11 +883,11 @@ helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 ms.openlocfilehash: 81b33378519747060e604610ac1f3b9090332c11
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009697"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531608"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Niestety, firma Microsoft nie&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
 Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Lub możesz poprosić, aby inni deweloperzy przy użyciu jednej z tych forów:  

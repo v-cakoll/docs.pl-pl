@@ -13,11 +13,11 @@ ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493044"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540297"
 ---
 # <a name="event-design"></a>Projekt zdarzenia
 Zdarzenia są najczęściej używane formularza wywołania zwrotne (konstrukcji, zezwalających na platformę, by mogą wywoływać kodu użytkownika). Inne mechanizmy wywołania zwrotnego dołączone elementy członkowskie, biorąc delegatów, wirtualne elementy członkowskie i oparte na interfejsie wtyczki. Dane z badań użyteczność wskazać, że większość deweloperów bardziej komfortowo, jednocześnie za pomocą zdarzeń, niż użytkownicy korzystają z innych mechanizmów wywołania zwrotnego. Zdarzenia są dobrze zintegrowane z Visual Studio i wielu języków.  

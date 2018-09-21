@@ -13,11 +13,11 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cac7e0fca4a009b7f5b6f677abed70cf2519052d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46509044"
+ms.locfileid: "46538037"
 ---
 # <a name="character-encoding-in-net"></a>Kodowanie znaków w .NET
 Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele różnych sposobów. Kodowanie znaków to system, który pary, każdy znak w obsługiwanych znaków, zestaw z jakąś wartość, która reprezentuje ten znak. Na przykład Morse'a jest znakiem kodowania tej pary każdego znaku w alfabetu łacińskiego z wzorcem kropki i łączniki, które są odpowiednie na potrzeby transmisji przez telegraficznego wierszy. Kodowanie znaków dla pary komputerów dla każdego znaku obsługiwany zestaw z wartością liczbową, który reprezentuje ten znak znaków. Kodowanie znaków ma dwa różne składniki:  

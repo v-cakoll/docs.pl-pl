@@ -3,11 +3,11 @@ title: Przepływ sterowania w programach Async (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 49123dde51acaa82a2d8fa7d27fdf27087675034
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478425"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532220"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Przepływ sterowania w programach async (C#)
 

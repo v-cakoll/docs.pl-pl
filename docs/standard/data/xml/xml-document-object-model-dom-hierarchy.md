@@ -6,11 +6,11 @@ ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef2b5b200f95cdfac9b08a33c328c1dfb797e59e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471464"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537777"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>Hierarchia Model (DOM) obiektu dokumentu XML
 Na poniższej ilustracji przedstawiono hierarchii klas dla XML Document Object Model (DOM), za pomocą sieci World Wide Web Consortium (W3C) nadaj nazwę w nawiasach wraz z nazwą klasy, gdzie jest to stosowne.  

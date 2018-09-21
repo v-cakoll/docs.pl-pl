@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508596"
+ms.locfileid: "46562138"
 ---
 # <a name="queues-overview"></a>Omówienie kolejek
 W tej sekcji przedstawiono ogólne i podstawowe pojęcia związane oczekujących komunikacji. Kolejne sekcje przejść do szczegółów dotyczących sposobu kolejkowania pojęcia opisane w tym miejscu są dyskowe widoczne w Windows Communication Foundation (WCF).  

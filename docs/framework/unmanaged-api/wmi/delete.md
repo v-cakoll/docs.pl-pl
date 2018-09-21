@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46516629"
+ms.locfileid: "46561555"
 ---
 # <a name="delete-function"></a>Usuwanie funkcji
 Usuwa określoną właściwość i wszystkich jego kwalifikatory z definicji klasy modelu wspólnych informacji.

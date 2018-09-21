@@ -3,11 +3,11 @@ title: Obsługa pary nazwa wartość (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
 ms.openlocfilehash: 28c01ce17881ffe7e8fcc35e2c23dec85d50955d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525152"
+ms.locfileid: "46540125"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Obsługa pary nazwa/wartość (C#)
 Masz wiele aplikacji do zarządzania danymi, który jest najlepiej pozostawić w postaci par nazwa/wartość. Te informacje mogą być informacje o konfiguracji lub ustawień globalnych. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera niektóre metody, które ułatwiają zapewnienie zestaw par nazwa/wartość. Możesz zachować informacje jako atrybuty lub zbiór podrzędnych elementów.  

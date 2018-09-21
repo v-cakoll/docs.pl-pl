@@ -3,11 +3,11 @@ title: Nauka przez przewodniki
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46470891"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46518236"
 ---
 # <a name="learning-by-walkthroughs"></a>Nauka przez przewodniki
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentacja zawiera wskazówki dotyczące kilku. W tym temacie rozwiązuje problemy ogólne wskazówki (w tym Rozwiązywanie problemów) i zawiera łącza do kilku klasy podstawowej wskazówki umożliwiające uzyskiwanie informacji o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

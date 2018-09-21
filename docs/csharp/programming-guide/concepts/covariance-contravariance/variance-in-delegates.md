@@ -3,11 +3,11 @@ title: Wariancje w Delegatach (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
 ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007116"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540888"
 ---
 # <a name="variance-in-delegates-c"></a>Wariancje w Delegatach (C#)
 .NET framework 3.5 wprowadzono obsługę wariancji podpisów metod dopasowania z typów obiektów delegowanych w wszystkie obiekty delegowane w języku C#. Oznacza to, że można przypisać do deleguje nie tylko metody, które pasują do sygnatur, ale także metody, które zwracają więcej pochodne typy (korelacja) lub które przyjmują parametry, które mają mniej pochodne typy (kontrawariancja) niż określona przez typ delegata . Dotyczy to również delegatów ogólnych i nieogólnych.  

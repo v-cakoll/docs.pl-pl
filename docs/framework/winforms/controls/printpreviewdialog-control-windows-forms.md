@@ -8,11 +8,11 @@ helpviewer_keywords:
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
 ms.openlocfilehash: 0f35343ca06666580d744b4d6e0fa954afedbd9c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46477852"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540492"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog — Formant (Formularze systemu Windows)
 Formularze Windows `PrintPreviewDialog` formant jest okno dialogowe wstępnie skonfigurowane, używany do wyświetlania, jak dokument pojawi się po wydrukowaniu. Użyj go w ramach aplikacji opartych na Windows jako proste rozwiązanie audytów Konfigurowanie własnego okno dialogowe. Kontrolka zawiera przyciski do drukowania, powiększania, wyświetlanie jednego lub wielu stronach i zamyka okno dialogowe.  

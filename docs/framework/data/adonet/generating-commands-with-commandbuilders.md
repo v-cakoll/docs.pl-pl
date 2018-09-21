@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
 ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007142"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525740"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generowanie poleceń za pomocą CommandBuilders
 Gdy `SelectCommand` w czasie wykonywania, dynamicznie określono właściwości, takie jak przy użyciu narzędzia kwerendy, wykorzystującej tekstową polecenia od użytkownika, nie można określić odpowiednią `InsertCommand`, `UpdateCommand`, lub `DeleteCommand` w czasie projektowania. Jeśli Twoje <xref:System.Data.DataTable> mapuje lub jest generowana z tabeli pojedynczej bazy danych, możesz korzystać z zalet <xref:System.Data.Common.DbCommandBuilder> obiektu w celu automatycznego generowania `DeleteCommand`, `InsertCommand`, i `UpdateCommand` z <xref:System.Data.Common.DbDataAdapter>.  

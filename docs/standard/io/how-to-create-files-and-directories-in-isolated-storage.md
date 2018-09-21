@@ -17,11 +17,11 @@ ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08beb44fdb58ab1c1d53f70ac0653348b96fcb18
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972913"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531778"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Porady: tworzenie plików i katalogów w izolowanym magazynie
 Po uzyskaniu izolowanym magazynie, można utworzyć katalogów i plików do przechowywania danych. W magazynie i nazw plików i katalogów są określane względem katalogu głównego w wirtualnym systemie plików.  

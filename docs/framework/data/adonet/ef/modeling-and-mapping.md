@@ -3,11 +3,11 @@ title: Modelowanie i mapowanie
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
 ms.openlocfilehash: 81080c416fd18c51be6626cb70a23073e049051d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593514"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530008"
 ---
 # <a name="modeling-and-mapping"></a>Modelowanie i mapowanie
 W [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], można zdefiniować modelu koncepcyjnego, model magazynu i mapowanie między tymi dwoma w taki sposób, która najlepiej odpowiada aplikacji. Narzędzia modelu danych jednostki w programie Visual Studio umożliwiają tworzenie. [pliku edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) z bazy danych lub graficzny model, a następnie zaktualizuj plik podczas zmiany bazy danych lub modelu.  

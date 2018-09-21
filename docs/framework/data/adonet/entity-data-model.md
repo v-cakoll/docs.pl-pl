@@ -3,11 +3,11 @@ title: Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: e76527b497434ada06762fcab931522fffa2a16b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597150"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529077"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 Entity Data Model (EDM) to zbiór pojęcia, które opisują struktury danych, niezależnie od tego, w postaci przechowywane. EDM obiektowy Model Relacja jednostki, opisanego przez Peter Chen w 1976, ale również jest oparta na modelu jednostki relacji i rozszerza jego tradycyjnych zastosowań.  

@@ -5,11 +5,11 @@ author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
 ms.openlocfilehash: d9943246b683c8fd892e7bc5fd09a10b72e31a5f
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46326393"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532761"
 ---
 # <a name="about-net-core"></a>Temat platformy .NET Core
 

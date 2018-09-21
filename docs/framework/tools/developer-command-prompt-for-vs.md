@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c95074190419dd3e984c7659ede917b83b97f08
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 20dc7caa9e4c3e023bf2848b1dd8c63a9b94a01b
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524719"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46526747"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Wiersz polecenia programisty dla programu Visual Studio
 
-Wiersz polecenia dla deweloperów programu Visual Studio automatycznie ustawia zmienne środowiskowe, które pozwalają na łatwe używanie narzędzi programu .NET Framework.
+Wiersz polecenia dla deweloperów programu Visual Studio pozwala łatwiej używać narzędzi programu .NET Framework. Jest automatycznie ustawia zmienne środowiskowe określonego wiersza polecenia.
 
 > [!div class="button"]
 [Pobierz program Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
-## <a name="searching-for-the-command-prompt-on-your-machine"></a>Wyszukiwanie w wierszu polecenia na komputerze
+## <a name="search-for-the-command-prompt-on-your-machine"></a>Wyszukaj wiersz polecenia na komputerze
 
-Może mieć kilka wierszy polecenia, w zależności od wersji programu Visual Studio oraz wszelkie dodatkowe zainstalowanych zestawów SDK. Na przykład 64-bitowe wersje programu Visual Studio oferują 32-bitowy i 64-bitowy wiersz polecenia. (32-bitowych i 64-bitowe wersje większości narzędzi są takie same; jednak niektóre narzędzia wprowadzają zmiany specyficzne dla środowisk 32-bitowych i 64-bitowych). Jeśli poniższe kroki nie zadziałają, spróbuj [ręcznie lokalizowania plików na maszynie](#manually-locating-the-files-on-your-machine) lub [uruchamiając wiersz polecenia z poziomu programu Visual Studio](#running-command-prompt-from-inside-visual-studio).
+Może mieć kilka wierszy polecenia, w zależności od wersji programu Visual Studio oraz wszelkie dodatkowe zainstalowanych zestawów SDK. Na przykład 64-bitowe wersje programu Visual Studio oferują 32-bitowy i 64-bitowy wiersz polecenia. (32-bitowych i 64-bitowe wersje większości narzędzi są takie same; jednak niektóre narzędzia wprowadzają zmiany specyficzne dla środowisk 32-bitowych i 64-bitowych). Jeśli poniższe kroki nie zadziałają, spróbuj [ręcznie zlokalizować plikami na komputerze](#manually-locate-the-files-on-your-machine) lub [Uruchom wiersz polecenia z poziomu programu Visual Studio](#run-the-command-prompt-from-inside-visual-studio).
 
 ### <a name="in-windows-10"></a>W systemie Windows 10
 
@@ -40,7 +40,7 @@ Może mieć kilka wierszy polecenia, w zależności od wersji programu Visual St
 
 1. Przejdź do **Start** ekran przez naciśnięcie klawiszy logo Windows ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") na klawiaturze, na przykład.
 
-2. Na **Start** ekranu, naciśnij klawisz `CTRL + TAB` otworzyć **aplikacje** listy, a następnie wprowadź `V`. Wybranie tej opcji powoduje listy, która zawiera wszystkie zainstalowane wiersz polecenia programu Visual Studio.
+2. Na **Start** ekranu, naciśnij klawisz **Ctrl**+**kartę** otworzyć **aplikacje** listy, a następnie wprowadź `V`. Wybranie tej opcji powoduje listy, która zawiera wszystkie zainstalowane wiersz polecenia programu Visual Studio.
 
 3. Wybierz **wiersz polecenia dla deweloperów** (lub wiersza polecenia, którego chcesz użyć).
 
@@ -66,7 +66,7 @@ W przypadku innych zestawów SDK zainstalowany, takich jak [zestawu Windows 10 S
 
 Zwykle, skróty klawiaturowe wiersz polecenia, zainstalowane są umieszczane na **Start Menu** folderu dla programu Visual Studio, takich jak narzędzia Studio 2017\Visual C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio. Ale jeśli z jakiegoś powodu, wyszukiwanie w wierszu polecenia nie zachowa oczekiwanych rezultatów, możesz spróbować ręcznie zlokalizować skrót na swojej maszynie. Spróbuj wyszukać nazwę pliku polecenia, takie jak *VsDevCmd.bat*, lub przejdź do folderu Tools, np. C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\Tools (ścieżka zmiany na podstawie wizualizacji Studio wersji i edycji oraz z instalacji lokalizacji).
 
-## <a name="run-command-prompt-from-inside-visual-studio"></a>Uruchom polecenie prompt z poziomu programu Visual Studio
+## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Uruchom wiersz polecenia z poziomu programu Visual Studio
 
 W celu ułatwienia dostępu, można dodać wiersz polecenia dla deweloperów Visual Studio lub inne polecenia do **narzędzia** menu w programie Visual Studio. Aby udostępnić narzędzia, należy go dodać do listy zewnętrznych narzędzi. Poniżej przedstawiono kroki:
 
@@ -87,6 +87,8 @@ W celu ułatwienia dostępu, można dodać wiersz polecenia dla deweloperów Vis
 8. Wybierz **OK** przycisku.
 
    Zostanie dodany nowy element menu, a są dostępne z wiersza polecenia z **narzędzia** menu.
+
+   ![Wiersz polecenia z menu w programie Visual Studio](media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Zobacz także
 

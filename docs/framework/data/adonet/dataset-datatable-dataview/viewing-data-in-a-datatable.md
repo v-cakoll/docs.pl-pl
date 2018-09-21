@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 ms.openlocfilehash: de745633060dd4f7b1610492d0ff57ec7a4f545b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615786"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530222"
 ---
 # <a name="viewing-data-in-a-datatable"></a>Wyświetlanie danych w elemencie DataTable
 Można uzyskać dostęp do zawartości <xref:System.Data.DataTable> przy użyciu **wierszy** i **kolumn** kolekcji **DataTable**. Można również użyć <xref:System.Data.DataTable.Select%2A> metody zwracanie podzbiorów danych w **DataTable** zgodnie z kryteriami, w tym kryteria wyszukiwania, porządek sortowania i wiersz stanu. Ponadto można użyć <xref:System.Data.DataRowCollection.Find%2A> metody **kolekcji DataRowCollection** podczas wyszukiwania określonego wiersza przy użyciu wartości klucza podstawowego.  

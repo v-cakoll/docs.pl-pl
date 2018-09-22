@@ -11,11 +11,11 @@ ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539765"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583918"
 ---
 # <a name="-c-reference"></a>@ (Odwołanie w C#)
 

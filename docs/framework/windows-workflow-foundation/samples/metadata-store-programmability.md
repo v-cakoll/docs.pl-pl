@@ -2,17 +2,17 @@
 title: Programowalność Store metadanych
 ms.date: 03/30/2017
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
-ms.openlocfilehash: 4ea6117686b985a9ea18ce4e5cc4ea2b5c25524c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9f30fcdac131b8749a4d165875b9bbb584542843
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45998919"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562707"
 ---
 # <a name="metadata-store-programmability"></a>Programowalność Store metadanych
 Magazyn metadanych jest [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] funkcja, która umożliwia skojarzenie dowolnego metadanych w formie atrybuty CLR typów w czasie wykonywania. Pozwala to na tym luźne powiązanie składniki czasu wykonywania i ich odpowiedniki w czasie projektowania, a także możliwość zmiany składniki czasu projektowania, bez wywierania wpływu na środowiska uruchomieniowego. Przykład pokazuje, jak programować przy użyciu magazynu metadanych przez zastosowanie atrybutów do typu run-time, źródło, dla którego mamy żadnej kontroli nad. Zazwyczaj terminologią to, że aplikacji macierzystej rejestruje metadanych dla zestawu typów.  
   
- W danych wyjściowych, możesz zauważyć atrybut dodatkowa, Nieoczekiwana <!--zz <xref:System.Runtime.InteropServices.GUIDAttribute> --> `System.Runtime.InteropServices.GUIDAttribute`. To jest dodawany, gdy za pomocą interfejsu API metadanych i nie ma wpływu na uruchomione próbki.  
+ W danych wyjściowych, możesz zauważyć atrybut dodatkowa, Nieoczekiwana <xref:System.Runtime.InteropServices.GuidAttribute>. To jest dodawany, gdy za pomocą interfejsu API metadanych i nie ma wpływu na uruchomione próbki.  
   
  W tym przykładzie przedstawiono:  
   
@@ -22,7 +22,7 @@ Magazyn metadanych jest [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] funkcj
   
 -   Przy użyciu mechanizmu wywołania zwrotnego, które mają być odroczone rejestracji metadane.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
+## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
   
 1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania ProgrammingMetadataStore.sln.  
   

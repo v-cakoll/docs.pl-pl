@@ -3,11 +3,11 @@ title: Tematy pomocy
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
 ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46485788"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562759"
 ---
 # <a name="reference"></a>Tematy pomocy
 Ta sekcja zawiera informacje dotyczące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deweloperów.  

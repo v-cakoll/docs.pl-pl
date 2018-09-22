@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.openlocfilehash: a421b73edc1dd90be53d301d12160d39abe78f90
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798915"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540414"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Transport Layer Security (TLS) najlepszych rozwiązań za pomocą programu .NET Framework
 
@@ -179,6 +179,9 @@ Aby uzyskać więcej informacji na temat protokoły TLS Zobacz [ograniczenie: pr
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Konfigurowanie zabezpieczeń za pomocą rejestru Windows
 
+> [!WARNING]
+> Ustawienie kluczy rejestru ma wpływ na wszystkie aplikacje w systemie. Użyj tej opcji tylko wtedy, gdy są dostępne w pełną kontrolę nad maszyną i kontrolować zmiany w rejestrze.
+
 Jeśli ustawienie jedno lub oba `AppContext` przełączniki nie jest to możliwe, można kontrolować protokołów zabezpieczeń, które Twoja aplikacja korzysta z kluczami rejestru Windows, opisane w tej sekcji. Nie można użyć jednego lub obu `AppContext` przełączniki, jeśli aplikacja jest przeznaczona na .NET Framework w wersji starszej niż 4.6 lub nie można edytować plik konfiguracji. Jeśli chcesz skonfigurować zabezpieczenia z rejestrem, następnie określać zabezpieczenia protokołu wartości w kodzie; Spowoduje to więc przesłonić metodę rejestru.
 
 Nazwy kluczy rejestru, które są podobne do nazwy odpowiadającego `AppContext` zmienia, ale bez `DontEnable` dołączona do nazwy. Na przykład `AppContext` Przełącz `DontEnableSchUseStrongCrypto` nosi nazwę klucza rejestru [SchUseStrongCrypto](#schusestrongcrypto).
@@ -203,7 +206,7 @@ Ten klucz powinien mieć tylko wartość 0, jeśli potrzebujesz nawiązać stars
 
 Jeśli aplikacja jest przeznaczona na .NET Framework 4.7 lub nowszej wersji, ten klucz domyślnie wartość 1. To domyślnymi zabezpieczeń, które firma Microsoft zaleca. Jeśli aplikacja działa na .NET Framework 4.7 lub nowszej wersji, ale jest przeznaczony dla starszej wersji, klucz wartość domyślna 0. W takim przypadku należy jawnie ustawić jej wartość 1.
 
-Aby uzyskać więcej informacji, zobacz [zbiorczej aktualizacji dla systemu Windows 10 w wersji 1511 i systemu Windows Server 2016 Technical Preview 4: 10 maja 2016 r](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
+Aby uzyskać więcej informacji, zobacz [zbiorczej aktualizacji dla systemu Windows 10 w wersji 1511 i systemu Windows Server 2016 Technical Preview 4: 10 maja 2016 r.](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
 
 Aby uzyskać więcej informacji na platformie .NET framework 3.5.1, zobacz [obsługę wersji domyślne systemu TLS zawarte w .NET Framework 3.5.1 na Windows 7 z dodatkiem SP1 i Server 2008 R2 z dodatkiem SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework).
 

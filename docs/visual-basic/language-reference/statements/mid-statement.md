@@ -11,16 +11,16 @@ helpviewer_keywords:
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
 ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493536"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576656"
 ---
-# <a name="mid-statement"></a><span data-ttu-id="cd1a3-102">Mid — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="cd1a3-102">Mid Statement</span></span>
-<span data-ttu-id="cd1a3-103">Zamienia określoną liczbę znaków w `String` zmiennej znakami z innego ciągu.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span></span>  
+# <a name="mid-statement"></a><span data-ttu-id="901cc-102">Mid — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="901cc-102">Mid Statement</span></span>
+<span data-ttu-id="901cc-103">Zamienia określoną liczbę znaków w `String` zmiennej znakami z innego ciągu.</span><span class="sxs-lookup"><span data-stu-id="901cc-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd1a3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cd1a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="901cc-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="901cc-104">Syntax</span></span>  
   
 ```  
 Mid( _  
@@ -30,46 +30,46 @@ Mid( _
 ) = StringExpression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="cd1a3-105">Części</span><span class="sxs-lookup"><span data-stu-id="cd1a3-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="901cc-105">Części</span><span class="sxs-lookup"><span data-stu-id="901cc-105">Parts</span></span>  
  `Target`  
- <span data-ttu-id="cd1a3-106">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-106">Required.</span></span> <span data-ttu-id="cd1a3-107">Nazwa `String` zmiennej, do zmodyfikowania.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-107">Name of the `String` variable to modify.</span></span>  
+ <span data-ttu-id="901cc-106">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="901cc-106">Required.</span></span> <span data-ttu-id="901cc-107">Nazwa `String` zmiennej, do zmodyfikowania.</span><span class="sxs-lookup"><span data-stu-id="901cc-107">Name of the `String` variable to modify.</span></span>  
   
  `Start`  
- <span data-ttu-id="cd1a3-108">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-108">Required.</span></span> <span data-ttu-id="cd1a3-109">`Integer` wyrażenie.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-109">`Integer` expression.</span></span> <span data-ttu-id="cd1a3-110">Znak na pozycji w `Target` gdzie rozpoczyna się zastępowanie tekstu.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-110">Character position in `Target` where the replacement of text begins.</span></span> <span data-ttu-id="cd1a3-111">`Start` używa indeksu liczonego od jednego.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-111">`Start` uses a one-based index.</span></span>  
+ <span data-ttu-id="901cc-108">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="901cc-108">Required.</span></span> <span data-ttu-id="901cc-109">`Integer` wyrażenie.</span><span class="sxs-lookup"><span data-stu-id="901cc-109">`Integer` expression.</span></span> <span data-ttu-id="901cc-110">Znak na pozycji w `Target` gdzie rozpoczyna się zastępowanie tekstu.</span><span class="sxs-lookup"><span data-stu-id="901cc-110">Character position in `Target` where the replacement of text begins.</span></span> <span data-ttu-id="901cc-111">`Start` używa indeksu liczonego od jednego.</span><span class="sxs-lookup"><span data-stu-id="901cc-111">`Start` uses a one-based index.</span></span>  
   
  `Length`  
- <span data-ttu-id="cd1a3-112">Opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-112">Optional.</span></span> <span data-ttu-id="cd1a3-113">`Integer` wyrażenie.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-113">`Integer` expression.</span></span> <span data-ttu-id="cd1a3-114">Liczba znaków do zastąpienia.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-114">Number of characters to replace.</span></span> <span data-ttu-id="cd1a3-115">Jeśli argument jest pominięty, wszystkie `String` jest używany.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-115">If omitted, all of `String` is used.</span></span>  
+ <span data-ttu-id="901cc-112">Opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="901cc-112">Optional.</span></span> <span data-ttu-id="901cc-113">`Integer` wyrażenie.</span><span class="sxs-lookup"><span data-stu-id="901cc-113">`Integer` expression.</span></span> <span data-ttu-id="901cc-114">Liczba znaków do zastąpienia.</span><span class="sxs-lookup"><span data-stu-id="901cc-114">Number of characters to replace.</span></span> <span data-ttu-id="901cc-115">Jeśli argument jest pominięty, wszystkie `String` jest używany.</span><span class="sxs-lookup"><span data-stu-id="901cc-115">If omitted, all of `String` is used.</span></span>  
   
  `StringExpression`  
- <span data-ttu-id="cd1a3-116">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-116">Required.</span></span> <span data-ttu-id="cd1a3-117">`String` wyrażenie, które zastępuje część `Target`.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-117">`String` expression that replaces part of `Target`.</span></span>  
+ <span data-ttu-id="901cc-116">Wymagane.</span><span class="sxs-lookup"><span data-stu-id="901cc-116">Required.</span></span> <span data-ttu-id="901cc-117">`String` wyrażenie, które zastępuje część `Target`.</span><span class="sxs-lookup"><span data-stu-id="901cc-117">`String` expression that replaces part of `Target`.</span></span>  
   
-## <a name="exceptions"></a><span data-ttu-id="cd1a3-118">Wyjątki</span><span class="sxs-lookup"><span data-stu-id="cd1a3-118">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="901cc-118">Wyjątki</span><span class="sxs-lookup"><span data-stu-id="901cc-118">Exceptions</span></span>  
   
-|<span data-ttu-id="cd1a3-119">Typ wyjątku</span><span class="sxs-lookup"><span data-stu-id="cd1a3-119">Exception type</span></span>|<span data-ttu-id="cd1a3-120">Warunek</span><span class="sxs-lookup"><span data-stu-id="cd1a3-120">Condition</span></span>|  
+|<span data-ttu-id="901cc-119">Typ wyjątku</span><span class="sxs-lookup"><span data-stu-id="901cc-119">Exception type</span></span>|<span data-ttu-id="901cc-120">Warunek</span><span class="sxs-lookup"><span data-stu-id="901cc-120">Condition</span></span>|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|<span data-ttu-id="cd1a3-121">`Start` < = 0 lub `Length` < 0.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-121">`Start` <= 0 or `Length` < 0.</span></span>|  
+|<xref:System.ArgumentException>|<span data-ttu-id="901cc-121">`Start` < = 0 lub `Length` < 0.</span><span class="sxs-lookup"><span data-stu-id="901cc-121">`Start` <= 0 or `Length` < 0.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cd1a3-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="cd1a3-122">Remarks</span></span>  
- <span data-ttu-id="cd1a3-123">Liczba znaków jest zawsze mniejsza niż liczba znaków w `Target`.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-123">The number of characters replaced is always less than or equal to the number of characters in `Target`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="901cc-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="901cc-122">Remarks</span></span>  
+ <span data-ttu-id="901cc-123">Liczba znaków jest zawsze mniejsza niż liczba znaków w `Target`.</span><span class="sxs-lookup"><span data-stu-id="901cc-123">The number of characters replaced is always less than or equal to the number of characters in `Target`.</span></span>  
   
- <span data-ttu-id="cd1a3-124">Visual Basic ma <xref:Microsoft.VisualBasic.Strings.Mid%2A> funkcji i `Mid` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-124">Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement.</span></span> <span data-ttu-id="cd1a3-125">Te elementy jednocześnie działać na określoną liczbę znaków w ciągu, ale `Mid` funkcja zwraca znaki podczas `Mid` instrukcji zastępuje znaki.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-125">These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters.</span></span> <span data-ttu-id="cd1a3-126">Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-126">For more information, see <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span></span>  
+ <span data-ttu-id="901cc-124">Visual Basic ma <xref:Microsoft.VisualBasic.Strings.Mid%2A> funkcji i `Mid` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="901cc-124">Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement.</span></span> <span data-ttu-id="901cc-125">Te elementy jednocześnie działać na określoną liczbę znaków w ciągu, ale `Mid` funkcja zwraca znaki podczas `Mid` instrukcji zastępuje znaki.</span><span class="sxs-lookup"><span data-stu-id="901cc-125">These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters.</span></span> <span data-ttu-id="901cc-126">Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span><span class="sxs-lookup"><span data-stu-id="901cc-126">For more information, see <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cd1a3-127">`MidB` Instrukcji wcześniejszych wersji programu Visual Basic zastępuje podciąg w bajtach, a nie znaków.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-127">The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters.</span></span> <span data-ttu-id="cd1a3-128">Służy przede wszystkim do konwersji ciągów w aplikacjach z zestawami dwubajtowych znaków (znaków DBCS).</span><span class="sxs-lookup"><span data-stu-id="cd1a3-128">It is used primarily for converting strings in double-byte character set (DBCS) applications.</span></span> <span data-ttu-id="cd1a3-129">Wszystkie ciągi języka Visual Basic są w formacie Unicode, i `MidB` nie jest już obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-129">All Visual Basic strings are in Unicode, and `MidB` is no longer supported.</span></span>  
+>  <span data-ttu-id="901cc-127">`MidB` Instrukcji wcześniejszych wersji programu Visual Basic zastępuje podciąg w bajtach, a nie znaków.</span><span class="sxs-lookup"><span data-stu-id="901cc-127">The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters.</span></span> <span data-ttu-id="901cc-128">Służy przede wszystkim do konwersji ciągów w aplikacjach z zestawami dwubajtowych znaków (znaków DBCS).</span><span class="sxs-lookup"><span data-stu-id="901cc-128">It is used primarily for converting strings in double-byte character set (DBCS) applications.</span></span> <span data-ttu-id="901cc-129">Wszystkie ciągi języka Visual Basic są w formacie Unicode, i `MidB` nie jest już obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="901cc-129">All Visual Basic strings are in Unicode, and `MidB` is no longer supported.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cd1a3-130">Przykład</span><span class="sxs-lookup"><span data-stu-id="cd1a3-130">Example</span></span>  
- <span data-ttu-id="cd1a3-131">W tym przykładzie użyto `Mid` instrukcję, aby zastąpić określoną liczbę znaków w zmiennej ciągu znakami z innego ciągu.</span><span class="sxs-lookup"><span data-stu-id="cd1a3-131">This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.</span></span>  
+## <a name="example"></a><span data-ttu-id="901cc-130">Przykład</span><span class="sxs-lookup"><span data-stu-id="901cc-130">Example</span></span>  
+ <span data-ttu-id="901cc-131">W tym przykładzie użyto `Mid` instrukcję, aby zastąpić określoną liczbę znaków w zmiennej ciągu znakami z innego ciągu.</span><span class="sxs-lookup"><span data-stu-id="901cc-131">This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.</span></span>  
   
  [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
-## <a name="requirements"></a><span data-ttu-id="cd1a3-132">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cd1a3-132">Requirements</span></span>  
- <span data-ttu-id="cd1a3-133">**Przestrzeń nazw:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="cd1a3-133">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
+## <a name="requirements"></a><span data-ttu-id="901cc-132">Wymagania</span><span class="sxs-lookup"><span data-stu-id="901cc-132">Requirements</span></span>  
+ <span data-ttu-id="901cc-133">**Przestrzeń nazw:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="901cc-133">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- <span data-ttu-id="cd1a3-134">**Moduł:** `Strings`</span><span class="sxs-lookup"><span data-stu-id="cd1a3-134">**Module:** `Strings`</span></span>  
+ <span data-ttu-id="901cc-134">**Moduł:** `Strings`</span><span class="sxs-lookup"><span data-stu-id="901cc-134">**Module:** `Strings`</span></span>  
   
- <span data-ttu-id="cd1a3-135">**Zestaw:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd1a3-135">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
+ <span data-ttu-id="901cc-135">**Zestaw:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="901cc-135">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd1a3-136">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="cd1a3-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="901cc-136">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="901cc-136">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- [<span data-ttu-id="cd1a3-137">Ciągi</span><span class="sxs-lookup"><span data-stu-id="cd1a3-137">Strings</span></span>](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- [<span data-ttu-id="cd1a3-138">Wprowadzenie do ciągów w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cd1a3-138">Introduction to Strings in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+ [<span data-ttu-id="901cc-137">Ciągi</span><span class="sxs-lookup"><span data-stu-id="901cc-137">Strings</span></span>](../../../visual-basic/programming-guide/language-features/strings/index.md)  
+ [<span data-ttu-id="901cc-138">Wprowadzenie do ciągów w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="901cc-138">Introduction to Strings in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

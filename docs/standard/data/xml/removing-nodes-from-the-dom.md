@@ -6,11 +6,11 @@ ms.assetid: 0a98e0ca-0555-45c1-ab69-0d8d20ca1abd
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: be592466627e6ee7b23c608e0defe786548907ad
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539875"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576564"
 ---
 # <a name="removing-nodes-from-the-dom"></a>Usuwanie węzłów za pomocą modelu DOM
 Aby usunąć węzeł z XML Document Object Model (DOM), należy użyć <xref:System.Xml.XmlNode.RemoveChild%2A> metodę, aby usunąć określonego węzła. Po usunięciu węzła metoda usuwa poddrzewo należących do węzła usunięte; oznacza to jeśli nie jest węzłem liścia.  

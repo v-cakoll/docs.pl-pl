@@ -3,11 +3,11 @@ title: Funkcje ciągów Canonical
 ms.date: 03/30/2017
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
 ms.openlocfilehash: d4758f8325b99bc4bd91575dd774d2dabde1f925
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532600"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696498"
 ---
 # <a name="string-canonical-functions"></a>Funkcje ciągów Canonical
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obejmuje funkcje ciągów canonical.  

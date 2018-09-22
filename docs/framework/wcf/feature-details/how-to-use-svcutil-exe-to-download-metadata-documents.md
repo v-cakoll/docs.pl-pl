@@ -3,11 +3,11 @@ title: 'Instrukcje: Używanie programu Svcutil.exe do pobierania dokumentów met
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
 ms.openlocfilehash: 6643f0a5dba98afcef38870cf24d91e7d69a1440
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481861"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586414"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Instrukcje: Używanie programu Svcutil.exe do pobierania dokumentów metadanych
 Umożliwia Svcutil.exe do pobierania metadanych z uruchomionymi usługami i zapisać metadane do plików lokalnych. HTTP i HTTPS URL schematów, Svcutil.exe podejmie próbę pobrania metadanych przy użyciu usługi WS-MetadataExchange i [odnajdywania usług sieci Web XML](https://go.microsoft.com/fwlink/?LinkId=94950). Dla innych schematów adresów URL Svcutil.exe używa tylko protokołu WS-MetadataExchange.  

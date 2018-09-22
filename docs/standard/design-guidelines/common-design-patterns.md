@@ -9,11 +9,11 @@ ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493220"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580567"
 ---
 # <a name="common-design-patterns"></a>Często używane wzorce projektowe
 Istnieje wiele książek na wzorce oprogramowania, wzorzec, języków i antywzorców, które rozwiązują bardzo szerokie zagadnienie, wzorców. W związku z tym ten rozdział zawiera wytyczne i dyskusji związanych z bardzo ograniczony zestaw wzorców, które są często stosowane w projektowaniu interfejsów API programu .NET Framework.  

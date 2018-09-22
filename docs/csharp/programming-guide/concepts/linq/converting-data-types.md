@@ -3,11 +3,11 @@ title: Konwertowanie typów danych (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
 ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46528973"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580580"
 ---
 # <a name="converting-data-types-c"></a>Konwertowanie typów danych (C#)
 Metody konwersji zmienić typ danych wejściowych obiektów.  

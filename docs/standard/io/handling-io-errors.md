@@ -12,11 +12,11 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 50dee427913e1ec94a06f1202966bb0f7f5f2099
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525165"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696420"
 ---
 # <a name="handling-io-errors-in-net"></a>Obsługa błędów operacji We/Wy na platformie .NET
 

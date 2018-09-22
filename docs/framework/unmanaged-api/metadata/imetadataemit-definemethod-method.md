@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53fd830cdefda58d40f96f8662a80d1888d963dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2dbc6b5ffaa3a381bdd657059a682a3d12dc4cf1
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449202"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584269"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod — Metoda
-Tworzy definicję metody lub funkcji globalnej z określoną sygnaturą i zwraca token do tej definicji metody.  
+Tworzy definicję metody lub funkcja globalna o określonej sygnaturze i zwraca token do tej definicji metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,16 +44,16 @@ HRESULT DefineMethod (
   
 #### <a name="parameters"></a>Parametry  
  `td`  
- [in] `mdTypedef` Token nadrzędnej klasy lub interfejsu nadrzędnego metody. Ustaw `td` do `mdTokenNil`, jeśli definiujesz funkcją globalną.  
+ [in] `mdTypedef` Tokenu w klasie nadrzędnej lub interfejs nadrzędny metody. Ustaw `td` do `mdTokenNil`, jeśli zamierzasz zdefiniować funkcją globalną.  
   
  `szName`  
- [in] Nazwa elementu członkowskiego w standardzie Unicode.  
+ [in] Nazwa elementu członkowskiego w formacie Unicode.  
   
  `dwMethodFlags`  
- [in] Wartość [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) wyliczenia, który określa atrybuty metody lub funkcji globalnej.  
+ [in] Wartość [cormethodattr —](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) wyliczenie, które określa atrybuty, metody lub funkcji globalnych.  
   
  `pvSigBlob`  
- [in] Podpis metody. Podpis jest trwały dostarczony. Aby określić dodatkowe informacje dla wszystkich parametrów, należy użyć [IMetaDataEmit::SetParamProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md) metody.  
+ [in] Podpis metody. Podpis jest trwały dostarczony. Jeśli musisz określić dodatkowe informacje dotyczące parametrów, należy użyć [IMetaDataEmit::SetParamProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md) metody.  
   
  `cbSigBlob`  
  [in] Liczba bajtów w `pvSigBlob`.  
@@ -62,44 +62,44 @@ HRESULT DefineMethod (
  [in] Adres kodu.  
   
  `dwImplFlags`  
- [in] Wartość [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) wyliczenie określający funkcji w implementacji metody.  
+ [in] Wartość [cormethodimpl —](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) wyliczenie, które określa funkcje implementacji metody.  
   
  `pmd`  
- [out] Token elementu członkowskiego.  
+ [out] Token składowej.  
   
 ## <a name="remarks"></a>Uwagi  
- Gwarantuje metadanych interfejsu API utrwalić metod w tej samej kolejności jak wywołującego emituje je dla danego otaczającej klasy lub interfejsu, która została określona w `td` parametru.  
+ Metadane interfejsu API gwarantuje można utrwalić metod opisanych w tej samej kolejności, jak obiekt wywołujący emituje je dla danego otaczającej klasy lub interfejsu, która została określona w `td` parametru.  
   
- Dodatkowe informacje na temat stosowania `DefineMethod` i poniżej podano ustawienia określonego parametru.  
+ Dodatkowe informacje na temat użytkowania `DefineMethod` i ustawienia określonego parametru są podane poniżej.  
   
 ## <a name="slots-in-the-v-table"></a>Gniazda w tabeli V  
- Środowisko uruchomieniowe używa definicjami metod, aby skonfigurować miejsc v-table. W przypadku, gdy co najmniej jednego gniazda muszą być zostało pominięte, na przykład aby zachować parzystości z układem interfejsu COM fikcyjny — metoda zdefiniowano do podjęcia miejsca lub miejsc, w tabeli v; Ustaw `dwMethodFlags` do `mdRTSpecialName` wartość [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) wyliczenie i określ nazwę jako:  
+ Środowisko wykonawcze używa definicji metody, aby skonfigurować miejsc v tabeli. W przypadku, gdy jeden lub więcej miejsc muszą być pominięte, na przykład aby zachować parzystości z układem interfejsu COM, fikcyjnego metoda jest zdefiniowana na podjęcie miejsca lub miejsc, w tabeli v; Ustaw `dwMethodFlags` do `mdRTSpecialName` wartość [cormethodattr —](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) wyliczenie i określ nazwę jako:  
   
- _VtblGap\<*SequenceNumber*>\<\_*CountOfSlots*>  
+ _VtblGap\<*SequenceNumber*>\<\_*CountOfSlots*>
   
- gdzie *SequenceNumber* to numer sekwencji metody i *CountOfSlots* jest numer gniazda, aby pominąć tabeli v. Jeśli *CountOfSlots* jest pominięty, przyjmowana jest wartość 1. Te metody fikcyjny nie są z kodu zarządzanego lub niezarządzanego i wszelkie próby połączeń telefonicznych z nimi, z kodu zarządzane lub niezarządzane, generuje wyjątek. Ich jedynym celem jest miejsce w tabeli v generujący środowiska uruchomieniowego integracji COM.  
+ gdzie *SequenceNumber* to numer sekwencji, metody i *CountOfSlots* jest liczba miejsc, aby pominąć w tabeli v. Jeśli *CountOfSlots* jest pominięty, przyjmowana jest wartość 1. Te metody fikcyjnego z rolą nie są wywoływane z poziomu kodu zarządzanego lub niezarządzanego i każda próba ich wywołania w kodzie zarządzanym lub niezarządzanym, generuje wyjątek. Ich służy wyłącznie do zajmują miejsce, w tabeli v generowany przez środowisko uruchomieniowe integracji modelu COM.  
   
-## <a name="duplicate-methods"></a>Zduplikowana metody  
- Nie powinna definiować metody zduplikowane. Oznacza to, że nie należy wywołania `DefineMethod` z zestawem zduplikowanych wartości w `td`, `wzName`, i `pvSig` parametrów. (Te trzy parametry razem jednoznacznie określić metodę.). Jednak można użyć zduplikowanych triple pod warunkiem, że w przypadku jednego z definicjami metod, można ustawić `mdPrivateScope` bitu w `dwMethodFlags` parametru. ( `mdPrivateScope` Bit oznacza, że kompilator będzie Emituj odwołania do tej definicji — metoda.)  
+## <a name="duplicate-methods"></a>Zduplikowane metody  
+ Nie powinna definiować metody zduplikowane. Oznacza to, nie należy wywołać `DefineMethod` z zestawem zduplikowane wartości w `td`, `wzName`, i `pvSig` parametrów. (Te trzy parametry, razem jednoznacznie określić metody.). Jednak można użyć zduplikowanych triple pod warunkiem, że w przypadku jednej z definicji metody, można ustawić `mdPrivateScope` bit w `dwMethodFlags` parametru. ( `mdPrivateScope` Bit oznacza, że kompilator nie zostanie wyemitowany przez odwołanie do tę definicję metody.)  
   
-## <a name="method-implementation-information"></a>Informacje dotyczące implementacji metody  
- Informacje o implementacji metody często nie jest znany w czasie zadeklarowano metody. W związku z tym nie trzeba przekazać wartości w `ulCodeRVA` i `dwImplFlags` parametrów podczas wywoływania metody `DefineMethod`. Wartości, które mogą być dostarczane później za pomocą [IMetaDataEmit::SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) lub [IMetaDataEmit::SetRVA](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md), gdzie to właściwe.  
+## <a name="method-implementation-information"></a>Informacje o implementacji — metoda  
+ Informacje o implementacji metody często nie jest znany w czasie, który jest zadeklarowany metody. W związku z tym, nie trzeba przekazać wartości w `ulCodeRVA` i `dwImplFlags` parametrów podczas wywoływania `DefineMethod`. Wartości, które mogą być dostarczane później za pomocą [IMetaDataEmit::SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) lub [IMetaDataEmit::SetRVA](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md), odpowiednio.  
   
- W niektórych sytuacjach, takich jak wywołania platformy (PInvoke) lub COM interop scenariuszy, treści metody nie zostanie podany, i `ulCodeRVA` powinna być równa zero. W takich przypadkach metoda powinna nie oznaczone jako abstract, ponieważ środowisko uruchomieniowe zlokalizuje implementacji.  
+ W niektórych sytuacjach, takich jak wywołania platformy (funkcja PInvoke) lub scenariuszach międzyoperacyjnego modelu COM, treści metody nie zostanie podany, i `ulCodeRVA` powinna być równa zero. W takich sytuacjach metody powinna nie być oznaczane jako abstrakcyjny, ponieważ środowisko uruchomieniowe lokalizuje wdrożenia.  
   
 ## <a name="defining-a-method-for-pinvoke"></a>Definiowanie metody dla funkcji PInvoke  
- Dla każdej funkcji niezarządzanej ma być wywoływana za pomocą funkcji PInvoke musi definiować zarządzanego metodę, która reprezentuje funkcję docelowy niezarządzanych. Aby określić metodę zarządzanych, użyj `DefineMethod` niektóre z parametrów niektórych wartości w zależności od sposobu, w którym jest używana PInvoke:  
+ Dla każdego z niezarządzanej funkcji można wywołać za pomocą usług PInvoke należy zdefiniować zarządzanych metodę, która reprezentuje funkcję docelowej niezarządzanych. Aby zdefiniować zarządzaną metodą, należy użyć `DefineMethod` niektórych parametrów niektórych wartości w zależności od sposobu, w którym jest używana funkcja PInvoke:  
   
--   Wartość true, PInvoke — wymaga wywołania metody niezarządzane zewnętrznych znajduje się w bibliotece DLL niezarządzane.  
+-   Wartość true, PInvoke — obejmuje wywołania metody niezarządzanego zewnętrznej znajdującej się w niezarządzaną biblioteką DLL.  
   
--   Lokalne PInvoke - obejmuje wywołanie metody niezarządzane natywnego osadzonym w bieżącym modułu zarządzanego.  
+-   Lokalne PInvoke — obejmuje wywołania metody natywnej niezarządzanych, osadzonego w bieżącym modułu zarządzanego.  
   
- Ustawienia parametru podano w poniższej tabeli.  
+ Ustawienia parametru są podane w poniższej tabeli.  
   
 |Parametr|Wartości true funkcji PInvoke|Wartości dla lokalnych funkcji PInvoke|  
 |---------------|-----------------------------|------------------------------|  
-|`dwMethodFlags`||Ustaw `mdStatic`; wyczyść `mdSynchronized` i `mdAbstract`.|  
-|`pvSigBlob`|Typy zarządzane wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) metoda podpisu z parametrami, które są prawidłowe.|Typy zarządzane prawidłowy podpis metody CLR z parametrami, które są prawidłowe.|  
+|`dwMethodFlags`||Ustaw `mdStatic`; clear `mdSynchronized` i `mdAbstract`.|  
+|`pvSigBlob`|Typy zarządzane prawidłowe wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) podpis metody z parametrami, które są prawidłowe.|Typy zarządzane prawidłowego podpisu metody CLR z parametrami, które są prawidłowe.|  
 |`ulCodeRVA`||0|  
 |`dwImplFlags`|Ustaw `miCil` i `miManaged`.|Ustaw `miNative` i `miUnmanaged`.|  
   

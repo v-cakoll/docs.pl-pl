@@ -3,11 +3,11 @@ title: Przykładowe działanie kompensacyjne
 ms.date: 03/30/2017
 ms.assetid: 58f4898c-b2b8-44a4-9a73-3bef4da6d5ba
 ms.openlocfilehash: 3bf1d120cd700830a98f53495f7e9989ffec73db
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46528960"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583330"
 ---
 # <a name="compensable-activity-sample"></a>Przykładowe działanie kompensacyjne
 W tym przykładzie przedstawiono sposób użycia `CompensableActivity` działania do definiowania zadań do wykonania dla danej akcji podczas wykonywania normalnych i pracy, które są niezbędne do wykonania celu kompensacji tę akcję, jeśli to konieczne w późniejszym czasie.  Pierwsza część przykład pokazuje, jak jednostki pracy kompensacyjne mogą być definiowane w Windows Workflow Foundation (WF) przy użyciu `CompensableActivity` działanie i jak są one wykonywane w pomyślnym uruchomieniu.  Druga część przykład pokazuje, jak te same jednostki pracy kompensacyjne automatycznie zajmie się rekompensaty po osiągnięciu nieoczekiwane zdarzenie, a wystąpienie przepływu pracy zostało anulowane.  

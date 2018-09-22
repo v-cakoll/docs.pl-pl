@@ -14,11 +14,11 @@ ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35a7d481cf82818054a852f7c2e142f615022fcb
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46492455"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46695809"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Porady: otwieranie pliku dziennika i dołączanie do niego
 <xref:System.IO.StreamWriter> i <xref:System.IO.StreamReader> zapisu znaków do i odczytywanie znaków ze strumieni. Poniższy kod przykładowy otwiera `log.txt` plików dla danych wejściowych i tworzy plik jeśli jeszcze nie istnieje i dołącza informacje do końca pliku. Zawartość pliku są następnie zapisywane do wyjścia standardowego do wyświetlenia. Jako alternatywę do tego przykładu, informacje mogą być przechowywane jako pojedynczy ciąg lub tablicę ciągów i <xref:System.IO.File.WriteAllText%2A> lub <xref:System.IO.File.WriteAllLines%2A> metoda może służyć do osiągnięcia taką samą funkcjonalność.  

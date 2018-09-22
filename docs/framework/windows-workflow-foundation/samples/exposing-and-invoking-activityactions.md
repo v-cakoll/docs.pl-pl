@@ -3,11 +3,11 @@ title: Uwidacznianie i wywoływanie działań ActivityActions
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
 ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46479757"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583063"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>Uwidacznianie i wywoływanie działań ActivityActions
 W tym przykładzie pokazano, jak tworzyć niestandardowe działanie, które ma <xref:System.Activities.ActivityAction>. Ilustruje też sposób użycia tego działania, zapewniając implementację <xref:System.Activities.ActivityAction>.  

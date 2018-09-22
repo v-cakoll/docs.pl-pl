@@ -25,12 +25,12 @@ ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: aad12f48409216e8833b9cb6bffbd35b84f40091
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e850468e035e746fec9d10522cfc00cb04d5cd9a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513775"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577168"
 ---
 # <a name="introducing-pluggable-protocols"></a>Wprowadzenie protokołów podłączanych
 Microsoft .NET Framework oferuje warstwowe, rozszerzalne i zarządzane wdrożenia usług internetowych, które można zintegrować szybkie i łatwe w swoich aplikacjach. Dostęp do Internetu klas w <xref:System.Net> i <xref:System.Net.Sockets> przestrzeni nazw może służyć do wdrożenia aplikacji opartych na sieci Web i oparty na Internecie.  
@@ -43,7 +43,7 @@ Microsoft .NET Framework oferuje warstwowe, rozszerzalne i zarządzane wdrożeni
  Aplikacja kliencka wysyła żądanie, identyfikując żądanego zasobu internetowego i protokół komunikacyjny na potrzeby żądań i odpowiedzi. Jeśli to konieczne, klient także wszelkie dodatkowe dane wymagane do ukończenia żądania, takie jak lokalizacja lub uwierzytelniania informacje o serwerze proxy (nazwa użytkownika, hasło i tak dalej). Gdy żądanie jest sformułowany, żądanie może wysłane do serwera.  
   
 ## <a name="identifying-resources"></a>Identyfikowanie zasobów  
- .NET Framework używa jednolity identyfikator zasobów (URI), aby zidentyfikować żądanego zasobu i komunikacji protokołu internetowego. Identyfikator URI, który składa się z co najmniej trzech oraz, ewentualnie czterech i fragmenty: identyfikator schemat, który identyfikuje protokołu komunikacji do żądania i odpowiedzi; Identyfikator serwera, który składa się z nazwy hosta systemu nazw domen (DNS, Domain Name System) lub adres protokołu TCP, który unikatowo identyfikuje serwer, na Internecie. Identyfikator ścieżki, która lokalizuje wymagane informacje, na serwerze; i parametry opcjonalne zapytanie, które przekazuje informacje z klienta do serwera. Na przykład identyfikator URI "http://www.contoso.com/whatsnew.aspx?date=today" składa się z identyfikatora schematu "http", identyfikator serwera "www.contoso.com", ścieżka "/ whatsnew.aspx" i ciągu zapytania "? Data = dzisiaj".  
+ .NET Framework używa jednolity identyfikator zasobów (URI), aby zidentyfikować żądanego zasobu i komunikacji protokołu internetowego. Identyfikator URI, który składa się z co najmniej trzech oraz, ewentualnie czterech i fragmenty: identyfikator schemat, który identyfikuje protokołu komunikacji do żądania i odpowiedzi; Identyfikator serwera, który składa się z nazwy hosta systemu nazw domen (DNS, Domain Name System) lub adres protokołu TCP, który unikatowo identyfikuje serwer, na Internecie. Identyfikator ścieżki, która lokalizuje wymagane informacje, na serwerze; i parametry opcjonalne zapytanie, które przekazuje informacje z klienta do serwera. Na przykład identyfikator URI `http://www.contoso.com/whatsnew.aspx?date=today` składa się z identyfikatora schematu "http", identyfikator serwera "www.contoso.com", ścieżka "/ whatsnew.aspx" i ciągu zapytania "? Data = dzisiaj".  
   
  Po otrzymaniu żądania serwer i przetworzyć odpowiedzi, zwraca odpowiedź do aplikacji klienckiej. Odpowiedź zawiera dodatkowe informacje, takie jak typ zawartości (nieprzetworzony tekst lub dane XML, na przykład).  
   

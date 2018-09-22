@@ -19,11 +19,11 @@ ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9aecf7aef9023439e145d408e40fb4adf5c0e986
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46492297"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586390"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Porady: odczyt i zapis w plikach w izolowanym magazynie
 Odczyt i zapis do pliku w izolowanym magazynie, użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> obiektu z czytnik strumienia (<xref:System.IO.StreamReader> obiekt) lub zapisywania do strumienia (<xref:System.IO.StreamWriter> obiektu).  

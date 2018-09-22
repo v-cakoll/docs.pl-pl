@@ -8,11 +8,11 @@ ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46008855"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586520"
 ---
 # <a name="parallel-diagnostic-tools"></a>Równoległe narzędzia diagnostyczne
 Program Visual Studio zapewnia rozbudowaną obsługę debugowania i profilowania aplikacji wielowątkowych.  

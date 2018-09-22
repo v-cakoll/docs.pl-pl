@@ -9,11 +9,11 @@ ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471045"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699290"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Używanie obsługi wyjątków filtrowanych przez użytkownika
 Obecnie usługa Visual Basic obsługuje wyjątki filtrowane przez użytkownika. Programy obsługi wyjątków filtrowanych przez użytkownika przechwytywać i obsługiwać wyjątki, na podstawie wymagań zdefiniowanych dla wyjątku. Użyj tych procedur obsługi **Catch** instrukcję, określając **podczas** — słowo kluczowe.  

@@ -3,11 +3,11 @@ title: Dostęp do informacji o tożsamości wewnątrz usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
 ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480750"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585510"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Dostęp do informacji o tożsamości wewnątrz usługi przepływu pracy
 Aby uzyskać dostęp do informacji o tożsamości wewnątrz usługi przepływu pracy, należy zaimplementować <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interfejsu we właściwości niestandardowej wykonywania. W <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> metoda dostęp można uzyskać <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> uzyskiwania dostępu do tożsamości informacji. W tym temacie opisano wdrażanie tej właściwości wykonywania, a także niestandardowe działanie, które ujawni tę właściwość, aby <xref:System.ServiceModel.Activities.Receive> działania w czasie wykonywania. Niestandardowe działanie wdroży takie samo zachowanie jako <xref:System.Activities.Statements.Sequence> działań, z wyjątkiem że w przypadku <xref:System.ServiceModel.Activities.Receive> znajduje się wewnątrz niej, <xref:System.ServiceModel.Activities.IReceiveMessageCallback> zostaną wywołane i będzie można pobrać informacji o tożsamości.  

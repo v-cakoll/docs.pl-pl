@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508690"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580333"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Pisanie pierwszego zapytania LINQ (Visual Basic)
 A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są wyrażone w język kwerendy dedykowanych. Wraz z upływem czasu różnych języków zostały opracowane dla różnych typów źródeł danych, na przykład SQL dla relacyjnych baz danych i XQuery dla XML. Dzięki temu niezbędne dla deweloperów aplikacji dowiedzieć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, która jest obsługiwana.  

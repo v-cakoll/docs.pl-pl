@@ -3,11 +3,11 @@ title: Uzyskiwanie dostępu do elementu OperationContext w usłudze przepływu p
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
 ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540755"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697831"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Uzyskiwanie dostępu do elementu OperationContext w usłudze przepływu pracy
 Aby uzyskać dostęp do <xref:System.ServiceModel.OperationContext> wewnątrz usługi przepływu pracy, należy zaimplementować <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interfejsu we właściwości niestandardowej wykonywania. Zastąp <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> metody, który jest przekazywany z odwołaniem do <xref:System.ServiceModel.OperationContext>. W tym temacie opisano wdrażanie tej właściwości wykonywania można pobrać nagłówka niestandardowego, a także działania niestandardowego, który ujawni tę właściwość, aby <xref:System.ServiceModel.Activities.Receive> w czasie wykonywania.  Niestandardowe działanie wdroży takie samo zachowanie jako <xref:System.Activities.Statements.Sequence> działań, z wyjątkiem że w przypadku <xref:System.ServiceModel.Activities.Receive> znajduje się wewnątrz niej, <xref:System.ServiceModel.Activities.IReceiveMessageCallback> zostaną wywołane i <xref:System.ServiceModel.OperationContext> można pobrać informacji o.  W tym temacie przedstawiono również sposób uzyskać dostęp po stronie klienta <xref:System.ServiceModel.OperationContext> można dodać nagłówków wychodzących za pośrednictwem <xref:System.ServiceModel.Activities.ISendMessageCallback> interfejsu.  

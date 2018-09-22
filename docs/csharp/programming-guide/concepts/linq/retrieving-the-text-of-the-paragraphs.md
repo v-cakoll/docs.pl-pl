@@ -3,11 +3,11 @@ title: Trwa pobieranie tekstu akapitów (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
 ms.openlocfilehash: 1d23addb4c4c1ea17343585392fbe08fef08568a
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537124"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579215"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Trwa pobieranie tekstu akapitów (C#)
 W tym przykładzie opiera się na poprzednim przykładzie [pobieranie akapitów i ich stylów (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). W tym przykładzie nowe pobiera tekst każdego akapitu jako ciąg.  

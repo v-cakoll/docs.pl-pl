@@ -9,11 +9,11 @@ helpviewer_keywords:
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
 ms.openlocfilehash: c8c124f44df292b8323560cce541cca2765e2790
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46507269"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583590"
 ---
 # <a name="from-clause-c-reference"></a>Klauzula From (odwołanie w C#)
 

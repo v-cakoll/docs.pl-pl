@@ -6,11 +6,11 @@ helpviewer_keywords:
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
 ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46528471"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698587"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania
 
@@ -110,7 +110,7 @@ Aby uzyskać więcej informacji na temat korzystania z certyfikatów w programie
 
 ## <a name="net-framework-security"></a>zabezpieczenia .NET Framework
 
-Pamiętaj usunąć wszystkie certyfikaty urzędu głównego tymczasowe z **zaufane główne urzędy certyfikacji** i **osobistych** foldery, klikając prawym przyciskiem myszy certyfikat, a następnie klikając  **Usuń**.
+Pamiętaj usunąć wszystkie certyfikaty urzędu głównego tymczasowe z **zaufane główne urzędy certyfikacji** i **osobistych** foldery, klikając prawym przyciskiem myszy certyfikat, a następnie klikając ** Usuń**.
 
 ## <a name="see-also"></a>Zobacz także
 

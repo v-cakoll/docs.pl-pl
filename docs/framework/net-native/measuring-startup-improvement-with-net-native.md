@@ -5,11 +5,11 @@ ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2603c29fe9108a32f3c3ba86a5aba9fae5042b17
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508284"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586063"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Dokonywanie pomiaru poprawy szybkości uruchomienia za pomocą architektury .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] znacznie poprawia czas uruchamiania aplikacji. To ulepszenie jest szczególnie widoczny na urządzeniach przenośnych, niskim poziomie zasilania i złożonych aplikacji. Ten temat ułatwia rozpoczęcie pracy z Instrumentacją podstawowe, potrzebne do mierzenia to ulepszenie uruchamiania.  

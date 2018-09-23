@@ -14,11 +14,11 @@ helpviewer_keywords:
 - permissions [.NET Framework], Internet
 author: blowdart
 ms.openlocfilehash: a421b73edc1dd90be53d301d12160d39abe78f90
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
-ms.translationtype: HT
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540414"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577733"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Transport Layer Security (TLS) najlepszych rozwiązań za pomocą programu .NET Framework
 
@@ -206,7 +206,7 @@ Ten klucz powinien mieć tylko wartość 0, jeśli potrzebujesz nawiązać stars
 
 Jeśli aplikacja jest przeznaczona na .NET Framework 4.7 lub nowszej wersji, ten klucz domyślnie wartość 1. To domyślnymi zabezpieczeń, które firma Microsoft zaleca. Jeśli aplikacja działa na .NET Framework 4.7 lub nowszej wersji, ale jest przeznaczony dla starszej wersji, klucz wartość domyślna 0. W takim przypadku należy jawnie ustawić jej wartość 1.
 
-Aby uzyskać więcej informacji, zobacz [zbiorczej aktualizacji dla systemu Windows 10 w wersji 1511 i systemu Windows Server 2016 Technical Preview 4: 10 maja 2016 r.](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
+Aby uzyskać więcej informacji, zobacz [zbiorczej aktualizacji dla systemu Windows 10 w wersji 1511 i systemu Windows Server 2016 Technical Preview 4: 10 maja 2016 r.](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016)
 
 Aby uzyskać więcej informacji na platformie .NET framework 3.5.1, zobacz [obsługę wersji domyślne systemu TLS zawarte w .NET Framework 3.5.1 na Windows 7 z dodatkiem SP1 i Server 2008 R2 z dodatkiem SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework).
 

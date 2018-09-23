@@ -6,11 +6,11 @@ helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
 ms.openlocfilehash: 94866f22fb3ad921a834cffb16fe17e44cef5965
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
-ms.translationtype: HT
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/22/2018
-ms.locfileid: "46567806"
+ms.locfileid: "46698403"
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>wyrażenia wartości domyślnych (C# Podręcznik programowania)
 

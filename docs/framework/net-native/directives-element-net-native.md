@@ -5,11 +5,11 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676262"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525649"
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>Element &lt;Directives&gt; (architektura .NET Native)
 Element główny w każdym pliku dyrektyw środowiska uruchomieniowego dla platformy .NET Native.  

@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; — Element'
 ms.custom: updateeachrelease
-ms.date: 04/19/2018
+ms.date: 09/19/2018
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16ce7f2744869c812b9988e91edd153d9cb4fd2
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32747528"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027376"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; — Element
 Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppContext> Aby klasa zapewniała mechanizm rezygnacji z nowych funkcji.  
@@ -125,7 +125,21 @@ Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppCont
   
  Biblioteka deweloperzy mogą również definiować niestandardowe przełączników, aby umożliwić wywołującym zrezygnować z zmienione funkcje wprowadzone w nowszych bibliotek. Aby uzyskać więcej informacji, zobacz <xref:System.AppContext> klasy.  
   
-## <a name="example"></a>Przykład  
+## <a name="switches-in-aspnet-applications"></a>Przełączniki w aplikacjach ASP.NET
+
+Można skonfigurować aplikację ASP.NET, aby użyć ustawień zgodności, dodając [ \<Dodaj >](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) elementu [ \<appSettings >](~/docs/framework/configure-apps/file-schema/appsettings/index.md) sekcja pliku web.config. 
+
+W poniższym przykładzie użyto `<add>` elementu do dodania dwóch ustawień `<appSettings>` sekcja pliku web.config:
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
+## <a name="example"></a>Przykład
+
  W poniższym przykładzie użyto `AppContextSwitchOverrides` elementu, aby zdefiniować przełącznikiem zgodność z pojedynczą aplikacją `Switch.System.Globalization.NoAsyncCurrentCulture`, który uniemożliwia przechodzącym przez wątki w wywołaniach metody asynchronicznej przez kulturę.  
   
 ```xml  

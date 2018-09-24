@@ -5,11 +5,11 @@ helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
 ms.openlocfilehash: 496339a7c3b95f16fd13479b096d90058b0799d4
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46530235"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702676"
 ---
 # <a name="new-modifier-c-reference"></a>New — modyfikator (odwołanie w C#)
 

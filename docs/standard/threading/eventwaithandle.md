@@ -11,11 +11,11 @@ ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46489110"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702780"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> Klasa umożliwia wątków do komunikowania się ze sobą przez Sygnalizowanie i Oczekiwanie na sygnałów. Uchwyty oczekiwania na zdarzenie (zwaną także po prostu zdarzenia) są dojścia oczekiwania, które mogą być sygnalizowane, aby zwolnić jeden lub więcej wątków oczekujących. Po zasygnalizowania, dojścia oczekiwania jest resetowany, ręcznie lub automatycznie. <xref:System.Threading.EventWaitHandle> Klasa może reprezentować albo lokalnym zdarzeniem dojście oczekiwania (zdarzenie lokalne) lub zdarzeń o nazwie system poczekaj uchwytu (o nazwie zdarzenie lub systemu, widoczne dla wszystkich procesów).  

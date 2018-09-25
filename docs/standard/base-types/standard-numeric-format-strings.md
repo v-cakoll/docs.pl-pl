@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7906426d76cb50f2539593094e87fb325227c411
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0618e9853eea2f4aa6e6a5dfd11b571cb3d7b123
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863472"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112955"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 
@@ -117,7 +117,7 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
  Poniższy przykład formatuje <xref:System.Double> przy użyciu specyfikatora formatu waluty.  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+ [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
  [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]  
   
  [Powrót do tabeli](#table)  
@@ -161,7 +161,7 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
  Poniższy przykład formatuje <xref:System.Double> przy użyciu specyfikatora formatu wykładniczego.  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+ [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
  [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]  
   
  [Powrót do tabeli](#table)  
@@ -183,7 +183,7 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
  Poniższy przykład formatuje <xref:System.Double> i <xref:System.Int32> przy użyciu specyfikatora formatu stałoprzecinkowego.  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+ [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
  [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]  
   
  [Powrót do tabeli](#table)  
@@ -228,7 +228,7 @@ Gdy jest używane z <xref:System.Single> wartości, specyfikator formatu "G9" za
  W poniższym przykładzie różne wartości zmiennoprzecinkowe są formatowane przy użyciu specyfikatora formatu ogólnego.  
   
  [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+ [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
  [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]  
   
  [Powrót do tabeli](#table)  
@@ -251,7 +251,7 @@ Gdy jest używane z <xref:System.Single> wartości, specyfikator formatu "G9" za
  W poniższym przykładzie różne wartości zmiennoprzecinkowe są formatowane przy użyciu specyfikatora formatu liczby.  
   
  [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+ [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
  [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]  
   
  [Powrót do tabeli](#table)  
@@ -276,7 +276,7 @@ Gdy jest używane z <xref:System.Single> wartości, specyfikator formatu "G9" za
  W poniższym przykładzie wartości zmiennoprzecinkowe są formatowane przy użyciu specyfikatora formatu wartości procentowej.  
   
  [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
- [!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+ [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
  [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]  
   
  [Powrót do tabeli](#table)  
@@ -309,7 +309,7 @@ Aby uzyskać <xref:System.Double> wartości, specyfikator formatu "R" w niektór
   
  Aby obejść ten problem z <xref:System.Double> wartości sformatowane przy użyciu standardowego formatu liczb "R" ciągu nie zostało pomyślnie Pełna zgodnooć wersji, gdy skompilowano przy użyciu `/platform:x64` lub `/platform:anycpu` przełączników i wykonywania w systemach 64-bitowych. możesz sformatować <xref:System.Double> wartości przy użyciu ciągu standardowego formatu liczb "G17". W poniższym przykładzie użyto ciągu formatu "R", przy użyciu <xref:System.Double> wartość, która nie obustronne nie pomyślnie i również używa "G17" format ciąg, który ma pomyślnie obustronne oryginalną wartość.  
   
- [!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
+ [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
   
  [Powrót do tabeli](#table)  
@@ -352,7 +352,7 @@ Aby uzyskać <xref:System.Double> wartości, specyfikator formatu "R" w niektór
   
 ## <a name="example"></a>Przykład  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-partial-note.md)]
  
  W poniższym przykładzie całkowita i zmiennoprzecinkowa wartość liczbowa jest formatowana przy użyciu kultury en-US i wszystkich specyfikatorów standardowego formatu liczb. W tym przykładzie użyto określone typy liczbowe (<xref:System.Double> i <xref:System.Int32>), ale wyniki byłyby podobne jakichkolwiek innych typów podstawowych (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal>, i <xref:System.Single>).  
   

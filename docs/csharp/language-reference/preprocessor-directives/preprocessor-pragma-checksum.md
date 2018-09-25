@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46568569"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027178"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (odwołanie w C#)
 Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stron [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  

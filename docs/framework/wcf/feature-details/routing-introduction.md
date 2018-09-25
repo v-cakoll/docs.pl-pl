@@ -2,12 +2,12 @@
 title: Wprowadzenie do routingu
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: e540e084305aee51d6820cc9ae43f7791d5c07d6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33496867"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058464"
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 Usługa routingu zawiera ogólny podłączanych SOAP pośrednie umożliwiającym routing wiadomości na podstawie zawartości komunikatu. Usługa routingu umożliwia tworzenie złożoną logikę routingu, która pozwala na implementowanie scenariuszy, takich jak usługi agregacji, przechowywanie wersji usługi, routing priorytet i routing multiemisji. Usługa routingu znajdują się również dodanymi komentarzami, która pozwala na konfigurowanie wykaz kopii zapasowych punktów końcowych, do którego są wysyłane wiadomości, jeśli wystąpi błąd podczas wysyłania do docelowego podstawowego punktu końcowego.  
@@ -29,9 +29,9 @@ Usługa routingu zawiera ogólny podłączanych SOAP pośrednie umożliwiającym
  Oznacza to, że jeśli docelowych punktów końcowych za pomocą kontraktów wielu wzorców komunikacyjnych (na przykład mieszanie operacje jednokierunkową i dwukierunkową), nie można utworzyć punktu końcowego jednej usługi, który może odbierać i kierowanie komunikatów w postaci do wszystkich z nich. Należy określić, które punkty końcowe mają niezgodne kształty i punkty końcowe usługi, które będą używane do odbierania komunikatów w celu przekierowania go do docelowych punktów końcowych.  
   
 > [!NOTE]
->  Podczas pracy z umowy, które określają wielu wzorców komunikacyjnych (na przykład różne operacje jednokierunkową i dwukierunkową), obejście tego problemu jest użycie kontraktu dwukierunkowego na usługę routingu, takich jak <xref:System.ServiceModel.Routing.IDuplexSessionRouter>. Jednak oznacza to, że powiązanie musi umożliwiać komunikację dupleksową, może nie być możliwe w przypadku wszystkich scenariuszy. W scenariuszach, w którym nie jest to możliwe uwzględniając komunikatu do wielu punktów końcowych lub modyfikowania aplikacji może być konieczne.  
+> Podczas pracy z umowy, które określają wielu wzorców komunikacyjnych (na przykład różne operacje jednokierunkową i dwukierunkową), obejście tego problemu jest użycie kontraktu dwukierunkowego na usługę routingu, takich jak <xref:System.ServiceModel.Routing.IDuplexSessionRouter>. Jednak oznacza to, że powiązanie musi umożliwiać komunikację dupleksową, może nie być możliwe w przypadku wszystkich scenariuszy. W scenariuszach, w którym nie jest to możliwe uwzględniając komunikatu do wielu punktów końcowych lub modyfikowania aplikacji może być konieczne.  
   
- Aby uzyskać więcej informacji na temat kontrakty routingu, zobacz [kontrakty routingu](../../../../docs/framework/wcf/feature-details/routing-contracts.md).  
+ Aby uzyskać więcej informacji na temat kontrakty routingu, zobacz [kontrakty routingu](routing-contracts.md).  
   
  Po zdefiniowaniu punkt końcowy usługi można użyć **RoutingBehavior** do skojarzenia z określonej **RoutingConfiguration** z punktem końcowym. Podczas konfigurowania usługi routingu przy użyciu pliku konfiguracji **RoutingBehavior** służy do określania tabelę filtru, który zawiera logikę routingu, używane do przetwarzania komunikatów odebranych w tym punkcie końcowym. Jeśli konfigurujesz usługę Routing programowo należy określić tabelę filtru, za pomocą **RoutingConfiguration**.  
   
@@ -51,7 +51,7 @@ Usługa routingu zawiera ogólny podłączanych SOAP pośrednie umożliwiającym
         <endpoint address=""  
                   binding="wsHttpBinding"  
                   name="reqReplyEndpoint"  
-                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      
+                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />
       </service>  
     </services>  
     <behaviors>  
@@ -98,16 +98,16 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- W tym przykładzie służy do konfigurowania usługi routingu do udostępnienia w jednym punkcie końcowym adresem "http://localhost:8000/routingservice/router", który jest używany do odbierania komunikatów przesłana. Ponieważ komunikaty są kierowane do punktów końcowych typu żądanie odpowiedź, punkt końcowy usługi używa <xref:System.ServiceModel.Routing.IRequestReplyRouter> kontraktu. Ta konfiguracja definiuje również punkt końcowy pojedynczego klienta "http://localhost:8000/servicemodelsample/service" czy komunikaty są kierowane do. Tabela filtru (niewyświetlany) o nazwie "routingTable1" zawiera logikę routingu umożliwia routing komunikatów i jest skojarzony z punktu końcowego usługi za pomocą **RoutingBehavior** (w przypadku pliku konfiguracji) lub  **RoutingConfiguration** (w przypadku konfigurację programistyczną).  
+ W tym przykładzie służy do konfigurowania usługi routingu do udostępnienia w jednym punkcie końcowym adresem `http://localhost:8000/routingservice/router`, który jest używany do odbierania komunikatów przesłana. Ponieważ komunikaty są kierowane do punktów końcowych typu żądanie odpowiedź, punkt końcowy usługi używa <xref:System.ServiceModel.Routing.IRequestReplyRouter> kontraktu. Ta konfiguracja definiuje również punkt końcowy pojedynczego klienta `http://localhost:8000/servicemodelsample/service` że wiadomości są kierowane do. Tabela filtru (niewyświetlany) o nazwie "routingTable1" zawiera logikę routingu umożliwia routing komunikatów i jest skojarzony z punktu końcowego usługi za pomocą **RoutingBehavior** (w przypadku pliku konfiguracji) lub  **RoutingConfiguration** (w przypadku konfigurację programistyczną).  
   
 ### <a name="routing-logic"></a>Logikę routingu  
  Aby zdefiniować logikę routingu umożliwia routing komunikatów, należy określić danych zawartych w wiadomości przychodzących, które można unikatowo odpowiednio obsługiwane po. Na przykład jeśli wszystkie miejsce docelowe punktów końcowych, które są routingu, aby udostępnić te same akcje protokołu SOAP, wartość akcji zawartych w komunikacie nie jest dobry wskaźnik które określonego punktu końcowego komunikat powinien kierowane do. Jeśli do jednego określonego punktu końcowego musi jednoznacznie kierowanie komunikatów w postaci, powinien filtrować na danych, który unikatowo identyfikuje docelowy punkt końcowy, który komunikat jest kierowany do.  
   
- Usługa routingu udostępnia wiele **MessageFilter** implementacji, które Zbadaj określone wartości wiadomości, takich jak adres, akcji, nazwy punktu końcowego lub nawet zapytania XPath. Jeśli żadna z tych implementacji odpowiada Twoim potrzebom, można utworzyć niestandardowy **MessageFilter** implementacji. Aby uzyskać więcej informacji na temat filtry komunikatów oraz porównanie ich z implementacji używane przez usługę Routing zobacz [filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md) i [Wybieranie filtru](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md).  
+ Usługa routingu udostępnia wiele **MessageFilter** implementacji, które Zbadaj określone wartości wiadomości, takich jak adres, akcji, nazwy punktu końcowego lub nawet zapytania XPath. Jeśli żadna z tych implementacji odpowiada Twoim potrzebom, można utworzyć niestandardowy **MessageFilter** implementacji. Aby uzyskać więcej informacji na temat filtry komunikatów oraz porównanie ich z implementacji używane przez usługę Routing zobacz [filtry komunikatów](message-filters.md) i [Wybieranie filtru](choosing-a-filter.md).  
   
  Wiele filtrów wiadomości są zorganizowane razem do filtrowania tabel, które skojarzyć każdy **MessageFilter** z punktem końcowym docelowego. Opcjonalnie tabelę filtru można również określić listę punktów końcowych kopii zapasowych, które usługa routingu będzie próbował wysłać wiadomości do awarii transmisji.  
   
- Domyślnie wszystkie filtry komunikatu w tabeli filtru są oceniane jednocześnie; Jednak możesz określić <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> , dzięki któremu filtry komunikatów, który ma zostać obliczone w określonej kolejności. Wszystkie wpisy o najwyższym priorytecie są obliczane jako pierwsze, a filtry wiadomości o niższych priorytetach nie są oceniane, jeśli zostanie znalezione dopasowanie na wyższym poziomie priorytetu. Aby uzyskać więcej informacji na temat filtrowania tabel zobacz [filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Domyślnie wszystkie filtry komunikatu w tabeli filtru są oceniane jednocześnie; Jednak możesz określić <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> , dzięki któremu filtry komunikatów, który ma zostać obliczone w określonej kolejności. Wszystkie wpisy o najwyższym priorytecie są obliczane jako pierwsze, a filtry wiadomości o niższych priorytetach nie są oceniane, jeśli zostanie znalezione dopasowanie na wyższym poziomie priorytetu. Aby uzyskać więcej informacji na temat filtrowania tabel zobacz [filtry komunikatów](message-filters.md).  
   
  W poniższych przykładach używane <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>, która daje w wyniku `true` dla wszystkich wiadomości. To **MessageFilter** zostanie dodana do tabeli filtru "routingTable1", co umożliwi skojarzenie **MessageFilter** z punktem końcowym klienta o nazwie "CalculatorService". **RoutingBehavior** Określa, że ta tabela powinien być używany do przesyłania wiadomości przetworzonych przez punkt końcowy usługi.  
   
@@ -160,7 +160,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   Wiele filtrów musi zwracać `true` podczas oceniania wiadomości.  
   
- Jeśli te warunki są spełnione, komunikat jest kierowany do wszystkich punktów końcowych wszystkie filtry, które dają `true`. W poniższym przykładzie zdefiniowano konfiguracji routingu, powstałego w komunikatach jest kierowany do obu punktów końcowych, jeśli adres punktu końcowego w komunikacie http://localhost:8000/routingservice/router/rounding.  
+ Jeśli te warunki są spełnione, komunikat jest kierowany do wszystkich punktów końcowych wszystkie filtry, które dają `true`. W poniższym przykładzie zdefiniowano konfiguracji routingu, powstałego w komunikatach jest kierowany do obu punktów końcowych, jeśli adres punktu końcowego w komunikacie `http://localhost:8000/routingservice/router/rounding`.  
   
 ```xml  
 <!--ROUTING SECTION -->  
@@ -357,19 +357,19 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |Wzorzec|Sesja|Transakcja|Kontekstu odbierania|Lista kopii zapasowych jest obsługiwana|Uwagi|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |Komunikacja jednokierunkowa||||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Jeśli ten komunikat jest multiemisji, tylko wiadomość na kanale zakończonych niepowodzeniem jest przenoszony do miejsca docelowego kopii zapasowej.|  
-|Komunikacja jednokierunkowa||![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
-|Komunikacja jednokierunkowa|||![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po pomyślnie odebrany komunikat pełny otrzymywać wszystkich kontekstów. Jeśli komunikat nie zostanie pomyślnie odebrany przez dowolnego punktu końcowego, kontekstu odbierania nie jest ukończona.<br /><br /> Jeśli ten komunikat jest multiemisji kontekstu odbierania jest wypełniane, jeśli wiadomość została odebrana pomyślnie co najmniej jeden punkt końcowy (podstawowych lub zapasowych). Jeśli żaden z punktów końcowych, które w żadnym z multiemisji ścieżki pomyślnie wiadomości, kontekstu odbierania nie jest ukończona.|  
-|Komunikacja jednokierunkowa||![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|Tak|Przerwij poprzednia transakcja, Utwórz nową transakcję i ponownie wysłać wszystkie wiadomości. Komunikaty, które napotkały błąd są przesyłane do miejsca docelowego kopii zapasowej.<br /><br /> Po utworzeniu transakcji w którym wszystkie transmisje powiedzie się, wykonaj kontekstów odbierania i zatwierdzania transakcji.|  
-|Komunikacja jednokierunkowa|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. W przypadku multiemisji tylko wiadomości w sesji, która napotkała błąd lub którego sesja zamknąć sesji nie powiodło się są wysyłane ponownie do tworzenia kopii zapasowej miejsc docelowych.|  
-|Komunikacja jednokierunkowa|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
-|Komunikacja jednokierunkowa|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")||![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po wszystkich komunikatów wysyła ukończone bez błędów, sesja wskazuje dalszych komunikatów i usługa routingu pomyślnie zamyka wszystkie kanały wychodzących sesji, wszystkie otrzymywać konteksty są wykonywane i kanałów przychodzących sesji jest zamknięty.|  
-|Komunikacja jednokierunkowa|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|Tak|Przerwanie bieżącej transakcji i Utwórz nową. Wyślij ponownie wszystkie poprzednie komunikaty o w sesji. Po utworzeniu transakcji, w którym wszystkie komunikaty zostały pomyślnie wysłane i sesji wskazuje, że odbieranie dalszych komunikatów, wszystkie kanały wychodzących sesji są zamknięte, konteksty są wykonywane przy użyciu transakcji, kanał przychodzących sesji jest zamknięte, a transakcja została zatwierdzona.<br /><br /> Gdy sesje są multiemisji w wiadomości, które miały błąd nie są wysyłane ponownie do tego samego miejsca docelowego jako przed i komunikaty, które napotkał błąd są wysyłane do miejsca docelowe kopii zapasowej.|  
+|Komunikacja jednokierunkowa||![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
+|Komunikacja jednokierunkowa|||![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po pomyślnie odebrany komunikat pełny otrzymywać wszystkich kontekstów. Jeśli komunikat nie zostanie pomyślnie odebrany przez dowolnego punktu końcowego, kontekstu odbierania nie jest ukończona.<br /><br /> Jeśli ten komunikat jest multiemisji kontekstu odbierania jest wypełniane, jeśli wiadomość została odebrana pomyślnie co najmniej jeden punkt końcowy (podstawowych lub zapasowych). Jeśli żaden z punktów końcowych, które w żadnym z multiemisji ścieżki pomyślnie wiadomości, kontekstu odbierania nie jest ukończona.|  
+|Komunikacja jednokierunkowa||![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|Tak|Przerwij poprzednia transakcja, Utwórz nową transakcję i ponownie wysłać wszystkie wiadomości. Komunikaty, które napotkały błąd są przesyłane do miejsca docelowego kopii zapasowej.<br /><br /> Po utworzeniu transakcji w którym wszystkie transmisje powiedzie się, wykonaj kontekstów odbierania i zatwierdzania transakcji.|  
+|Komunikacja jednokierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. W przypadku multiemisji tylko wiadomości w sesji, która napotkała błąd lub którego sesja zamknąć sesji nie powiodło się są wysyłane ponownie do tworzenia kopii zapasowej miejsc docelowych.|  
+|Komunikacja jednokierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
+|Komunikacja jednokierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")||![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po wszystkich komunikatów wysyła ukończone bez błędów, sesja wskazuje dalszych komunikatów i usługa routingu pomyślnie zamyka wszystkie kanały wychodzących sesji, wszystkie otrzymywać konteksty są wykonywane i kanałów przychodzących sesji jest zamknięty.|  
+|Komunikacja jednokierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|Tak|Przerwanie bieżącej transakcji i Utwórz nową. Wyślij ponownie wszystkie poprzednie komunikaty o w sesji. Po utworzeniu transakcji, w którym wszystkie komunikaty zostały pomyślnie wysłane i sesji wskazuje, że odbieranie dalszych komunikatów, wszystkie kanały wychodzących sesji są zamknięte, konteksty są wykonywane przy użyciu transakcji, kanał przychodzących sesji jest zamknięte, a transakcja została zatwierdzona.<br /><br /> Gdy sesje są multiemisji w wiadomości, które miały błąd nie są wysyłane ponownie do tego samego miejsca docelowego jako przed i komunikaty, które napotkał błąd są wysyłane do miejsca docelowe kopii zapasowej.|  
 |Dwukierunkowa||||Tak|Wyślij do miejsca docelowego kopii zapasowej.  Po kanał zwraca komunikat odpowiedzi, zwraca odpowiedź do oryginalnego klienta.|  
-|Dwukierunkowa|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|||Tak|Wszystkie wiadomości na kanale można wysłać do miejsca docelowego kopii zapasowej.  Po kanał zwraca komunikat odpowiedzi, zwraca odpowiedź do oryginalnego klienta.|  
-|Dwukierunkowa||![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
-|Dwukierunkowa|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
+|Dwukierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|||Tak|Wszystkie wiadomości na kanale można wysłać do miejsca docelowego kopii zapasowej.  Po kanał zwraca komunikat odpowiedzi, zwraca odpowiedź do oryginalnego klienta.|  
+|Dwukierunkowa||![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
+|Dwukierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
 |Dupleks||||Nie|Komunikację dupleksową non sesji nie jest obecnie obsługiwane.|  
-|Dupleks|![Znacznik wyboru](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "znacznik wyboru")|||Tak|Wyślij do miejsca docelowego kopii zapasowej.|  
+|Dupleks|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|||Tak|Wyślij do miejsca docelowego kopii zapasowej.|  
   
 ## <a name="hosting"></a>Hosting  
  Ponieważ usługa routingu jest zaimplementowana jako usługa WCF, musi być albo może być samodzielnie hostowane w aplikacji lub hostowanych przez usługi IIS i WAS. Zaleca się, że usługa routingu znajdować IIS, WAS, lub aplikacji usługi Windows można skorzystać z automatycznego uruchamiania i cyklu życia funkcje zarządzania dostępne w tych środowiskach hostingu.  
@@ -390,9 +390,9 @@ using (ServiceHost serviceHost =
 ```  
   
 ## <a name="routing-service-and-impersonation"></a>Usługa routingu i personifikacja  
- Usługa routingu WCF umożliwia personifikacji zarówno wysyłania i odbierania komunikatów. Zastosuj wszystkie zwykle ograniczenia Windows personifikacji. Jeśli wymagałby skonfigurować uprawnienia usługi lub konto do użycia personifikacji, podczas pisania własnych usług, będzie konieczne przeprowadzenie tych te same kroki, aby używać personifikacji z usługą routingu. Aby uzyskać więcej informacji, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Usługa routingu WCF umożliwia personifikacji zarówno wysyłania i odbierania komunikatów. Zastosuj wszystkie zwykle ograniczenia Windows personifikacji. Jeśli wymagałby skonfigurować uprawnienia usługi lub konto do użycia personifikacji, podczas pisania własnych usług, będzie konieczne przeprowadzenie tych te same kroki, aby używać personifikacji z usługą routingu. Aby uzyskać więcej informacji, zobacz [delegowanie i personifikacja](delegation-and-impersonation-with-wcf.md).  
   
- Personifikacja z usługą routingu wymaga użycia personifikacji aplikacji ASP.NET w trybie zgodności platformy ASP.NET lub Użyj poświadczeń Windows, które zostały skonfigurowane, aby umożliwić personifikacji. Aby uzyskać więcej informacji na temat trybu zgodności programu ASP.NET, zobacz [usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ Personifikacja z usługą routingu wymaga użycia personifikacji aplikacji ASP.NET w trybie zgodności platformy ASP.NET lub Użyj poświadczeń Windows, które zostały skonfigurowane, aby umożliwić personifikacji. Aby uzyskać więcej informacji na temat trybu zgodności programu ASP.NET, zobacz [usługi WCF i platforma ASP.NET](wcf-services-and-aspnet.md).  
   
 > [!WARNING]
 >  Usługa routingu WCF nie obsługuje personifikacji z uwierzytelnianiem podstawowym.  
@@ -402,6 +402,6 @@ using (ServiceHost serviceHost =
  Za pomocą Windows poświadczeń personifikacji należy skonfigurować zarówno poświadczenia usługą routingu i usługi. Obiekt poświadczeń klienta (<xref:System.ServiceModel.Security.WindowsClientCredential>, jest dostępna z <xref:System.ServiceModel.ChannelFactory>) definiuje <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość, która musi być ustawione na Zezwalaj personifikacji. Na koniec w usłudze, musisz skonfigurować <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> zachowanie, aby ustawić `ImpersonateCallerForAllOperations` do `true`. Usługa routingu używa tej flagi do określania, czy chcesz utworzyć klientów do przekazywania wiadomości z włączona personifikacja.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Kontrakty routingu](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [Wybieranie filtru](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)
+ [Filtry komunikatów](message-filters.md)  
+ [Kontrakty routingu](routing-contracts.md)  
+ [Wybieranie filtru](choosing-a-filter.md)

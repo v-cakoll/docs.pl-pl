@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: f560e6f795f00488818647a4b5c711dcf9d59dcd
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324533"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711275"
 ---
 # <a name="dotnet-run"></a>Uruchom polecenia DotNet
 

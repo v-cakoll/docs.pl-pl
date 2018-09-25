@@ -3,11 +3,11 @@ title: Funkcje upraszczania programu WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
 ms.openlocfilehash: ded4fc93e5e8f33d98e58ffcb3cb98c2bff2b410
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493239"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027272"
 ---
 # <a name="wcf-simplification-features"></a>Funkcje upraszczania programu WCF
 W tym temacie omówiono nowe funkcje, które upewnij się, zapisywanie WCF aplikacje prostsze.  

@@ -3,11 +3,11 @@ title: 'Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepły
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
 ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46567869"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027337"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy
 W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji konsoli przepływu pracy. To zależy od ukończenia [jak: Tworzenie usługi przepływu pracy przy użyciu działań Messaging](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu. Mimo że w tym temacie opisano sposób wywoływania usługi przepływu pracy z poziomu aplikacji przepływu pracy, te same metody można wywołać dowolną usługę Windows Communication Foundation (WCF) z poziomu aplikacji przepływu pracy.

@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009529"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058451"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżki plików w systemach Windows
 

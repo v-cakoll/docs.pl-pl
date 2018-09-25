@@ -4,11 +4,11 @@ description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
 ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540901"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937595"
 ---
 # <a name="console-application"></a>Aplikacja konsoli
 

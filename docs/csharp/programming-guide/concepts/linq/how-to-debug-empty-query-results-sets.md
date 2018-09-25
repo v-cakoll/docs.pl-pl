@@ -3,23 +3,23 @@ title: 'Porady: debugowanie zestawów wyników zapytania (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
 ms.openlocfilehash: 4760b1e5274634954bd5fe4b3880fd4415af2510
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46541005"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47026990"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a><span data-ttu-id="03f2a-102">Porady: debugowanie zestawów wyników zapytania (C#)</span><span class="sxs-lookup"><span data-stu-id="03f2a-102">How to: Debug Empty Query Results Sets (C#)</span></span>
-<span data-ttu-id="03f2a-103">Jedną z najbardziej typowych problemów podczas wykonywania zapytań dotyczących drzew XML jest, że jeśli drzewa XML ma domyślny obszar nazw, deweloper czasami zapisuje zapytanie tak, jakby plik XML nie znajdowały się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="03f2a-103">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
+# <a name="how-to-debug-empty-query-results-sets-c"></a><span data-ttu-id="94f37-102">Porady: debugowanie zestawów wyników zapytania (C#)</span><span class="sxs-lookup"><span data-stu-id="94f37-102">How to: Debug Empty Query Results Sets (C#)</span></span>
+<span data-ttu-id="94f37-103">Jedną z najbardziej typowych problemów podczas wykonywania zapytań dotyczących drzew XML jest, że jeśli drzewa XML ma domyślny obszar nazw, deweloper czasami zapisuje zapytanie tak, jakby plik XML nie znajdowały się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="94f37-103">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
   
- <span data-ttu-id="03f2a-104">Pierwszy zestaw przykładów w tym temacie przedstawiono typowy sposób XML w domyślnej przestrzeni nazw jest ładowany i jest wykonywane zapytanie nieprawidłowo.</span><span class="sxs-lookup"><span data-stu-id="03f2a-104">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, and is queried improperly.</span></span>  
+ <span data-ttu-id="94f37-104">Pierwszy zestaw przykładów w tym temacie przedstawiono typowy sposób XML w domyślnej przestrzeni nazw jest ładowany i jest wykonywane zapytanie nieprawidłowo.</span><span class="sxs-lookup"><span data-stu-id="94f37-104">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, and is queried improperly.</span></span>  
   
- <span data-ttu-id="03f2a-105">Drugi zestaw przykładach pokazano niezbędnych poprawek, dzięki czemu można tworzyć zapytania XML w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="03f2a-105">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
+ <span data-ttu-id="94f37-105">Drugi zestaw przykładach pokazano niezbędnych poprawek, dzięki czemu można tworzyć zapytania XML w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="94f37-105">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
   
- <span data-ttu-id="03f2a-106">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="03f2a-106">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+ <span data-ttu-id="94f37-106">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="94f37-106">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="03f2a-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="03f2a-107">Example</span></span>  
- <span data-ttu-id="03f2a-108">Ten przykład przedstawia tworzenie XML w przestrzeni nazw i ustaw zapytania, które zwraca żadnego wyniku.</span><span class="sxs-lookup"><span data-stu-id="03f2a-108">This example shows creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
+## <a name="example"></a><span data-ttu-id="94f37-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="94f37-107">Example</span></span>  
+ <span data-ttu-id="94f37-108">Ten przykład przedstawia tworzenie XML w przestrzeni nazw i ustaw zapytania, które zwraca żadnego wyniku.</span><span class="sxs-lookup"><span data-stu-id="94f37-108">This example shows creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -40,17 +40,17 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
- <span data-ttu-id="03f2a-109">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="03f2a-109">This example produces the following result:</span></span>  
+ <span data-ttu-id="94f37-109">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="94f37-109">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
 End of result set  
 ```  
   
-## <a name="example"></a><span data-ttu-id="03f2a-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="03f2a-110">Example</span></span>  
- <span data-ttu-id="03f2a-111">Ten przykład przedstawia tworzenie XML w przestrzeni nazw i zapytanie, które są poprawnie kodowane.</span><span class="sxs-lookup"><span data-stu-id="03f2a-111">This example shows creation of XML in a namespace, and a query that is coded properly.</span></span>  
+## <a name="example"></a><span data-ttu-id="94f37-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="94f37-110">Example</span></span>  
+ <span data-ttu-id="94f37-111">Ten przykład przedstawia tworzenie XML w przestrzeni nazw i zapytanie, które są poprawnie kodowane.</span><span class="sxs-lookup"><span data-stu-id="94f37-111">This example shows creation of XML in a namespace, and a query that is coded properly.</span></span>  
   
- <span data-ttu-id="03f2a-112">Rozwiązanie jest do zadeklarowania i zainicjowania <xref:System.Xml.Linq.XNamespace> obiektu i z niej korzystać, podczas określania <xref:System.Xml.Linq.XName> obiektów.</span><span class="sxs-lookup"><span data-stu-id="03f2a-112">The solution is to declare and initialize an <xref:System.Xml.Linq.XNamespace> object, and to use it when specifying <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="03f2a-113">W tym przypadku argument <xref:System.Xml.Linq.XElement.Elements%2A> metodą jest <xref:System.Xml.Linq.XName> obiektu.</span><span class="sxs-lookup"><span data-stu-id="03f2a-113">In this case, the argument to the <xref:System.Xml.Linq.XElement.Elements%2A> method is an <xref:System.Xml.Linq.XName> object.</span></span>  
+ <span data-ttu-id="94f37-112">Rozwiązanie jest do zadeklarowania i zainicjowania <xref:System.Xml.Linq.XNamespace> obiektu i z niej korzystać, podczas określania <xref:System.Xml.Linq.XName> obiektów.</span><span class="sxs-lookup"><span data-stu-id="94f37-112">The solution is to declare and initialize an <xref:System.Xml.Linq.XNamespace> object, and to use it when specifying <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="94f37-113">W tym przypadku argument <xref:System.Xml.Linq.XElement.Elements%2A> metodą jest <xref:System.Xml.Linq.XName> obiektu.</span><span class="sxs-lookup"><span data-stu-id="94f37-113">In this case, the argument to the <xref:System.Xml.Linq.XElement.Elements%2A> method is an <xref:System.Xml.Linq.XName> object.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -72,7 +72,7 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
- <span data-ttu-id="03f2a-114">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="03f2a-114">This example produces the following result:</span></span>  
+ <span data-ttu-id="94f37-114">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="94f37-114">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
@@ -82,6 +82,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="03f2a-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="03f2a-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94f37-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="94f37-115">See Also</span></span>
 
-- [<span data-ttu-id="03f2a-116">Podstawowe zapytania (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="03f2a-116">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="94f37-116">Podstawowe zapytania (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="94f37-116">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

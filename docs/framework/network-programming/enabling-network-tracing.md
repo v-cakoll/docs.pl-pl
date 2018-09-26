@@ -14,11 +14,11 @@ ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f7720016a94d78e8a49e8566ad7b5096e9b31722
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080539"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193489"
 ---
 # <a name="enabling-network-tracing"></a>Włączanie śledzenia sieci
 Śledzenie sieci zapewnia dostęp do informacji o wywołaniach metod i ruchu sieciowym generowanym przez zarządzaną aplikację. Należy wykonać następujące zadania w celu włączenia funkcji śledzenia sieci w Twojej aplikacji:  

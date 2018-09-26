@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
 author: BrucePerlerMS
 ms.openlocfilehash: b859387196de42406903b690d375e4ecb7370e2c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090126"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193346"
 ---
 # <a name="message-security-with-issued-tokens"></a>Zabezpieczenia komunikatów z wystawionymi tokenami
 Wystawiony token klienta umożliwia scenariusza federacyjnego zabezpieczenia w Windows Communication Foundation (WCF).  

@@ -5,11 +5,11 @@ ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9cca5e35bfc0aef448d2d515f5ac55ed9e2e2258
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157616"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206206"
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;Dodaj&gt; Element dla schemeSettings (ustawienia identyfikatora Uri)
 Dodaje ustawienia schematu dla nazwy schematu.  

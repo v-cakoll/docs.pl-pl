@@ -20,11 +20,11 @@ ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 2ec87d45a4e7140aa2c1d901492952cd25634025
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075023"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192226"
 ---
 # <a name="how-to-create-a-socket"></a>Porady: Tworzenie gniazda
 Zanim użyjesz gniazda do komunikowania się z urządzeniami zdalnymi gniazda musi zostać zainicjowany z informacjami o adresie protokołu i sieci. Konstruktor <xref:System.Net.Sockets.Socket> klasa ma parametry, które określają rodziny adresów, typ gniazda i typ protokołu, który gniazda używa do nawiązywania połączeń.  

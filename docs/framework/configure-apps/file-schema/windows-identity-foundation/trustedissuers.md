@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
 ms.openlocfilehash: c390cecc265b27dfa8d9d0a892f5930c982f7054
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075375"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206479"
 ---
 # <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
 Umożliwia skonfigurowanie listy zaufanych wystawców certyfikatów używane przez rejestru nazwy wystawcy oparta na konfiguracji (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  

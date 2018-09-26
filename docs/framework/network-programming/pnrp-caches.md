@@ -4,39 +4,38 @@ ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: dfa7da476bd56b34d3fcb7b7e0f3bcc33fee032b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0cda9fe5ea6d8c79249603f4a51c18a615fe839
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397484"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205294"
 ---
 # <a name="pnrp-caches"></a>Pamięci podręczne PNRP
-Pamięci podręcznych protokołu PNRP (Name Resolution) elementu równorzędnego są kolekcjami lokalnymi algorithmically wybranego elementu równorzędnego punktów końcowych w elementu równorzędnego.  
+Elementu równorzędnego protokołu PNRP (Name Resolution Protocol) w pamięci podręcznej są kolekcji lokalnych punktów końcowych algorithmically wybranego elementu równorzędnego w elementu równorzędnego.  
   
 ## <a name="pnrp-cache-initialization"></a>Inicjowanie pamięci podręcznej PNRP  
- Aby zainicjować pamięci podręcznej PNRP lub kolekcja rekordu nazw elementów równorzędnych, po uruchomieniu węzła równorzędnego, węzłem można użyć następujących metod:  
+ Aby zainicjować pamięci podręcznej PNRP, czyli kolekcji rekordów nazwy elementów równorzędnych, podczas uruchamiania węzła równorzędnego, węzeł można użyć następujących metod:  
   
--   Wpisy trwałej pamięci podręcznej, które były dostępne, gdy węzeł została zamknięta są ładowane z magazynu danych na dysku twardym.  
+-   Wpisy trwała pamięć podręczna, jakie były dostępne, gdy węzeł został zamknięty, są ładowane z magazynu danych na dysku twardym.  
   
--   Jeśli aplikacja używa infrastruktury współpracy P2P, informacje o współpracy jest dostępna w Menedżerze kontaktu dla tego węzła.  
+-   Jeśli aplikacja używa infrastruktury współpracy P2P, informacje o współpracy jest dostępna w Contact Manager dla tego węzła.  
   
-## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>Skalowanie rozpoznawania nazw równorzędnych z wielopoziomowe pamięci podręcznej  
- Aby zachować małych rozmiarów buforów PNRP, węzły równorzędne Użyj wielopoziomowe pamięci podręcznej, w którym każdy poziom zawiera maksymalną liczbę wpisów. Każdy poziom w pamięci podręcznej reprezentuje mniejszy dziesiątego jedną część miejsca numer Identyfikator PNRP (2<sup>256</sup>). Na najniższym poziomie w pamięci podręcznej zawiera lokalnie zarejestrowany identyfikator PNRP i innych PNRP identyfikatory numeryczne bliski go. Zgodnie z poziomu pamięci podręcznej jest wypełniony maksymalnie 20 wpisów, jest tworzony nowy niższego poziomu. Maksymalna liczba poziomów w pamięci podręcznej jest rzędu log10 (całkowita liczba identyfikatorów PNRP w chmurze). Na przykład dla globalnych chmury chronionej za pomocą 100 milionów identyfikatorów PNRP, nie ma nie więcej niż 8 (=log10(100,000,000)) poziomy w pamięci podręcznej i podobne liczbę przeskoków w celu rozpoznania identyfikator PNRP podczas rozpoznawania nazw. Mechanizm ten umożliwia dla tabeli rozproszonej wyznaczania wartości skrótu, dla którego można rozwiązać przekazywania komunikatów żądania PNRP najbliższy równorzędnej, aż do znalezienia równorzędnego z odpowiedniego CPA dowolnego Identyfikator PNRP.  
+## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>Skalowanie rozpoznawania nazw równorzędnych z pamięcią podręczną wielopoziomowe  
+ Aby zachować rozmiary pamięci podręczne PNRP małe, węzły równorzędne Użyj wielopoziomowe pamięci podręcznej, w której każdy poziom zawiera maksymalną liczbę wpisów. Każdy poziom w pamięci podręcznej reprezentuje mniejszy jedna dziesiąta część miejsca numer Identyfikator PNRP (2<sup>256</sup>). Najniższy poziom w pamięci podręcznej zawiera lokalnie zarejestrowany identyfikator PNRP i inne identyfikatory PNRP, który numerycznie znajdują się blisko go. Zgodnie z poziomu pamięci podręcznej jest wypełniany maksymalnie 20 wpisów, jest tworzony nowy niższego poziomu. Maksymalna liczba poziomów w pamięci podręcznej jest rzędu kilku log10 (całkowita liczba identyfikatory PNRP w chmurze). Na przykład w przypadku chmury globalnej z identyfikatorami PNRP 100 milionów istnieją nie więcej niż 8 (=log10(100,000,000)) poziomów w pamięci podręcznej i podobną liczbę przeskoków, aby rozwiązać Identyfikator PNRP podczas rozpoznawania nazw. Ten mechanizm pozwala uzyskać tabelę mieszania rozproszonej, dla którego dowolny identyfikator PNRP może zostać rozpoznana przez przekazywanie komunikatów żądania PNRP najbliższy elementów równorzędnych, aż do znalezienia elementu równorzędnego przy użyciu odpowiedniego CPA.  
   
- Aby upewnić się, czy rozdzielczość może zostać ukończony, zawsze węzła dodaje wpis do najniższego poziomu swojej pamięci podręcznej, jego floods kopię zapisu do wszystkich węzłów w pamięci podręcznej ostatniego poziomu.  
+ Aby upewnić się, rozpoznawanie wykonać, każdym węzłem dodaje wpis do najniższego poziomu pamięci podręcznej go floods kopię wejścia do wszystkich węzłów w ramach ostatniego poziomu pamięci podręcznej.  
   
- Wpisy w pamięci podręcznej są odświeżane w czasie. Wpisy w pamięci podręcznej, które są przestarzałe, są usuwane z pamięci podręcznej. Wynik jest, że tablicy skrótów rozproszonej identyfikatorów PNRP opiera się na aktywnych punktów końcowych, w odróżnieniu od DNS, w którym rekordy adresu i protokołu DNS zapewniają ma gwarancji, że węzeł skojarzony z adresem aktywnie znajduje się w sieci.  
+ Wpisy w pamięci podręcznej są odświeżane wraz z upływem czasu. Wpisy w pamięci podręcznej, które są przestarzałe, są usuwane z pamięci podręcznej. Powoduje to, że tabelę skrótów rozproszonych identyfikatory PNRP opiera się na aktywnych punktów końcowych, w odróżnieniu od DNS, w której rekordy adresów i protokołu DNS zapewniają żadnej gwarancji, że węzeł skojarzonych z tym adresem aktywnie znajduje się w sieci.  
   
-## <a name="other-pnrp-caches"></a>Inne pamięci podręcznych PNRP  
- Inny magazyn danych jest lokalnej pamięci podręcznej.  Oprócz innych obiektów niezbędnych do działania usługi PNRP mogą one obejmować rekordy skojarzone z PNRP chmury lub współpracy sesji bezpiecznie publikowana i synchronizowane między wszystkich członków z chmury. Ten magazyn replikowanych reprezentuje widok danych grupy, która powinna być taka sama dla wszystkich członków grupy. Z technicznego punktu widzenia te obiekty nie są rekordy per se, ale raczej aplikacji, obecności i przeznaczonych dla lokalnej pamięci podręcznej danych obiektu. Korzystanie z chmury PNRP gwarantuje, że obiekty są przenoszone do wszystkich węzłów w sesji współpracy lub w chmurze usługi PNRP.  Rekord replikacji między elementami członkowskimi chmury używa protokołu SSL w celu zapewnienia szyfrowania i integralność danych.  
+## <a name="other-pnrp-caches"></a>Inne pamięci podręczne PNRP  
+ Innym trwałym magazynie danych jest lokalnej pamięci podręcznej.  Oprócz innych obiektów niezbędnych do działania PNRP może on zawierać rekordów skojarzonych z PNRP w chmurze lub współpracy sesji, która bezpiecznie publikowania i synchronizowane między wszystkie elementy członkowskie w chmurze. Tego replikowanego magazynu reprezentuje widok danych grupy, która powinna być taka sama dla wszystkich członków grupy. Technicznie rzecz biorąc, te obiekty nie są rekordy per se, ale raczej aplikacji obecności i dane obiektów przeznaczonych do lokalnej pamięci podręcznej. Korzystanie z chmury PNRP gwarantuje, że obiekty są przenoszone do wszystkich węzłów w sesji współpracy lub w chmurze PNRP.  Rekord replikacji między elementami członkowskimi chmury używa protokołu SSL w celu zapewnienia integralności danych i szyfrowania.  
   
- Gdy element równorzędny dołącza chmurę, nie automatycznie otrzymują lokalnej pamięci podręcznej danych z elementu równorzędnego hostów, do których one dołączyć; mają one subskrybować równorzędnej hosta otrzymywać aktualizacje w aplikacji, obecności i dane obiektu. Po początkowej synchronizacji elementów równorzędnych okresowo zsynchronizować ich replikowanych magazynów, aby upewnić się, czy wszyscy członkowie grupy spójnie mieć tego samego widoku.  Współpraca z sesji lub aplikacji w ramach sesji współpracy może także przeprowadzić tej samej funkcji.  
+ Gdy element równorzędny dołącza chmurę, nie automatycznie otrzymują lokalnej pamięci podręcznej danych z elementu równorzędnego hosta, do których one dołączyć; muszą oni subskrypcji na węźle równorzędnym hosta, aby otrzymywać aktualizacje w aplikacji, obecności i dane obiektu. Po początkowej synchronizacji elementów równorzędnych okresowo zsynchronizować ich replikowanych sklepami, aby upewnij się, że wszyscy członkowie grupy spójnie tego samego widoku.  Współpracy sesji lub aplikacje w ramach sesji współpracy mogą również wykonać tę samą funkcję.  
   
- Po sesji współpracy dla chmury, aplikacje można zarejestrować elementów równorzędnych i rozpocząć publikowanie informacji o ich przy użyciu zabezpieczeń określają zakres chmury. Gdy elementu równorzędnego dołącza chmurę, mechanizmy zabezpieczeń dla chmury są stosowane do elementów równorzędnych, nadanie mu zakresu, w którym do udziału.  Rekordy można opublikować bezpiecznie w zakresie chmury. Należy pamiętać, że zakres chmury nie może być taka sama jak zakres aplikacji współpracy.  
+ Po sesji współpracy dla chmury, aplikacje mogą zarejestrować elementów równorzędnych i rozpocząć publikowanie ich informacji przy użyciu zabezpieczeń definiowane przez zakres chmury. Gdy element równorzędny dołącza chmurę, mechanizmy zabezpieczeń w chmurze są stosowane na węźle równorzędnym, nadając mu zakresu, w której chcesz wziąć udział.  Rekordy można opublikować bezpiecznie w zakresie chmury. Należy zauważyć, że zakres chmury nie może być taka sama jak zakres aplikacji współpracy.  
   
- Elementy równorzędne można zarejestrować zainteresowanie odbierania obiektów z innych elementów równorzędnych. Gdy zaktualizowano obiekt aplikacji współpracy jest powiadamiany, a nowy obiekt jest przekazywana do wszystkich subskrybentów aplikacji. Na przykład elementu równorzędnego w grupie aplikacji rozmów można zarejestrować zainteresowanie odbieranie informacji o aplikacji, która będzie wysyłać go wszystkie rekordy rozmów jako dane aplikacji.  Dzięki temu monitorowania aktywności rozmów w chmurze.  
+ Elementy równorzędne można zarejestrować zainteresowanie odbieranie obiektów z innymi elementami równorzędnymi. Gdy obiekt jest aktualizowany, aplikacji współpracy zostanie wysłane powiadomienie, a nowy obiekt jest przekazywany do wszystkich subskrybentów aplikacji. Na przykład elementu równorzędnego w grupie aplikacji rozmów można zarejestrować zainteresowanie odbieranie informacji o aplikacji, która będzie wysyłać je wszystkie rekordy rozmowy jako dane aplikacji.  Dzięki temu na monitorowanie działania rozmowy w chmurze.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Net.PeerToPeer>

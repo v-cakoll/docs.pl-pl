@@ -3,11 +3,11 @@ title: Klienci
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
 ms.openlocfilehash: 844412b211fe6187e3475fc71b9c3ccca8dd178f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108159"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206812"
 ---
 # <a name="clients"></a>Klienci
 Tematy w tej sekcji obejmują architektury klienta, jak uzyskać dostęp do usługi Windows Communication Foundation (WCF), jak skonfigurować klienta programu WCF i niektóre zagadnienia zabezpieczeń dla klientów usługi WCF.  

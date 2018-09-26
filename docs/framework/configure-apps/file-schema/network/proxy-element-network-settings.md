@@ -11,11 +11,11 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f4ab3d4e7ce6686a43e4c5258a56e72203c38ebd
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085804"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209478"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;Serwer proxy&gt; — Element (ustawienia sieci)
 Określa serwer proxy.  

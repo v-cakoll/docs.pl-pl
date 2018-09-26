@@ -5,11 +5,11 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 01ce2ef8cb9c261e9292b0d26dd38a0a0b0958ff
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111896"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196138"
 ---
 # <a name="certificate-selection-and-validation"></a>Wybór certyfikatu i sprawdzanie poprawności
 <xref:System.Net> Klasy obsługują kilka sposobów, aby wybrać i zweryfikować <xref:System.Security.Cryptography.X509Certificates> dla połączeń Secure Socket Layer (SSL). Klient może wybrać jeden lub kilka certyfikatów, aby uwierzytelniać się z serwerem. Serwer może wymagać, że jeden lub więcej określonych atrybutów do uwierzytelniania certyfikatu klienta.  

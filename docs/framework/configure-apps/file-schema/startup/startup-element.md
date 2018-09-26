@@ -12,11 +12,11 @@ ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 7dfa196ad6aa71dd22bcb9bbd5a0857cccb819c5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084270"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47201078"
 ---
 # <a name="ltstartupgt-element"></a>&lt;uruchamianie&gt; — Element
 Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka.  

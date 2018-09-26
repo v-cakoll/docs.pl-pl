@@ -19,11 +19,11 @@ ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079587"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47202458"
 ---
 # <a name="localizability-review"></a>Sprawdzenie możliwości lokalizacji
 Przegląd możliwości zlokalizowania jest etap pośredni, w trakcie opracowywania aplikacji gotowej dla całego świata. Sprawdza, czy uniwersalnych aplikacji jest gotowy do lokalizacji i identyfikuje każdy kod lub jakiekolwiek aspekty interfejsu użytkownika, które wymagają specjalnej obsługi. Ten krok umożliwia również upewnić się, że proces lokalizacji nie wprowadza żadnych defektów funkcjonalnych w aplikacji. Gdy rozwiązano wszystkie problemy zgłoszone przez sprawdzenie, aplikacja jest gotowa do lokalizacji. W przypadku dokładne sprawdzenie, nie trzeba zmodyfikować każdy kod źródłowy w procesie lokalizacji.  

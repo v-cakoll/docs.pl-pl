@@ -22,11 +22,11 @@ ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: e7638b9558363b77b03208d86d98330b922b414c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171231"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195482"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>Uwierzytelnianie NTLM i uwierzytelniania Kerberos
 Domyślne uwierzytelnianie NTLM i uwierzytelnianie Kerberos należy użyć poświadczeń użytkownika systemu Microsoft Windows NT, które są skojarzone z aplikacji wywołującej prób uwierzytelniania z serwerem. Korzystając z uwierzytelniania NTLM innych niż domyślne, aplikacja ustawia typ uwierzytelniania NTLM i używa <xref:System.Net.NetworkCredential> obiekt, aby przekazać nazwę użytkownika, hasło i domenę na hoście, jak pokazano w poniższym przykładzie.  

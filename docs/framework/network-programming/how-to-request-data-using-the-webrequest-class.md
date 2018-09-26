@@ -14,11 +14,11 @@ ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 8928ce8790f58b6920c16cbfd9fc8d9aa6644a44
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075414"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197828"
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Instrukcje: żądanie danych przy użyciu klasy WebRequest
 Poniższa procedura opisuje kroki używane do żądania zasobu z serwera, na przykład, strony sieci Web lub pliku. Zasób musi być identyfikowany przez identyfikator URI.  

@@ -1,5 +1,5 @@
 ---
-title: Pamięci podręcznej zasad interakcji — maksymalny wiek i świeżości minimalna
+title: Interakcja z zasadami pamięci podręcznej — maksymalny wiek i minimalna świeżość
 ms.date: 03/30/2017
 helpviewer_keywords:
 - time-based cache policies
@@ -12,24 +12,23 @@ helpviewer_keywords:
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d88ef1e736a16dddf156a1bc0e42f06d128d2c57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a35bdeaf0fc6cf513363f3d990167f342a496c76
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394169"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193463"
 ---
-# <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Pamięci podręcznej zasad interakcji — maksymalny wiek i świeżości minimalna
-Aby upewnić się, że najnowsza zawartość jest zwracana do aplikacji klienckiej, interakcji klienta pamięci podręcznej zasad serwera ponownego sprawdzania poprawności wymagań i zawsze powoduje najbardziej zachowawcze zasady pamięci podręcznej. Wszystkie przykłady w tym temacie przedstawiono zasady z zasobem, który jest buforowana w dniu 1 stycznia i wygaśnie w dniu 4 stycznia w pamięci podręcznej.  
+# <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Interakcja z zasadami pamięci podręcznej — maksymalny wiek i minimalna świeżość
+Aby upewnić się, że najnowsza zawartość jest zwracana do aplikacji klienckiej, interakcji klienta pamięci podręcznej zasad serwera ponownego sprawdzania poprawności wymagań i zawsze skutkuje najbardziej umiarkowaną zasad pamięci podręcznej. Wszystkie przykłady w tym temacie ilustrują zasad pamięci podręcznej na zasób, który jest buforowany w dniu 1 stycznia i wygasa w dniu 4 stycznia.  
   
- Poniższe przykłady przedstawiają zasady pamięci podręcznej, będącą wynikiem interakcji maksymalny wiek (`maxAge`) i minimalna świeżości (`minFresh`) wartości.  
+ Poniższe przykłady ilustrują zasad pamięci podręcznej, która wynika z interakcji maksymalny wiek (`maxAge`) i minimalna świeżość (`minFresh`) wartości.  
   
--   Jeśli zasady pamięci podręcznej ustawia `maxAge` = 2 dni i `minFresh` nie zostanie określony, zawartość jest ponownie sprawdzić poprawności na 3 stycznia.  
+-   Jeśli zasady pamięci podręcznej ustawia `maxAge` = 2 dni i `minFresh` nie zostanie określony, zawartość jest ponownie zatwierdzone na 3 stycznia.  
   
--   Jeśli zasady pamięci podręcznej ustawia `maxAge` = 2 dni i `minFresh` = 1 dzień, zgodnie z `maxAge`, zawartość jest pierwszą do 3 stycznia. Zgodnie z `minFresh`, aż do 3 stycznia jest nowa zawartość. W związku z tym zawartości musi być sprawdzony ponownie na 3 stycznia.  
+-   Jeśli ustawia zasady pamięci podręcznej `maxAge` = 2 dni i `minFresh` = 1 dzień, zgodnie z opisem w `maxAge`, aż do 3 stycznia od nowa jest zawartość. Zgodnie z opisem w `minFresh`, aż do 3 stycznia od nowa jest zawartość. W związku z tym należy ponownie zatwierdzone zawartości, na 3 stycznia.  
   
--   Jeśli zasady pamięci podręcznej ustawia `maxAge` = 2 dni i `minFresh` = 2 dni zgodnie z `maxAge`, zawartość jest pierwszą do 3 stycznia. Zgodnie z `minFresh` do 2 stycznia jest nowa zawartość. W związku z tym zawartości musi być sprawdzony ponownie 2 stycznia.  
+-   Jeśli zasady pamięci podręcznej ustawia `maxAge` = 2 dni i `minFresh` = 2 dni zgodnie z opisem w `maxAge`, aż do 3 stycznia od nowa jest zawartość. Zgodnie z opisem w `minFresh` zawartość jest świeże aż do 2 stycznia. W związku z tym zawartość musi być sprawdzony ponownie 2 stycznia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  

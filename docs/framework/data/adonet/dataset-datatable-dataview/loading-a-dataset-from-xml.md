@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 ms.openlocfilehash: 3a781f17ac3cabebce17955b9a7e2edda4d4fd4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086765"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208610"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Ładowanie elementu DataSet z pliku XML
 Zawartość ADO.NET <xref:System.Data.DataSet> można tworzyć na podstawie strumień XML lub dokumentu. Ponadto, za pomocą programu .NET Framework masz dużą elastyczność w informacjach jest ładowany z pliku XML i w jaki sposób schematu lub relacyjnej struktury elementu <xref:System.Data.DataSet> zostanie utworzony.  

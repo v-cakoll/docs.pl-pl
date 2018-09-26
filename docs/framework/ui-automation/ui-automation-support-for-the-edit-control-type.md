@@ -9,11 +9,11 @@ ms.assetid: 6db9d231-c0a0-4e17-910e-ac80357f774f
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 3b62afceace69ddccf26ace1bd899941c6facf42
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070979"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209967"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu edycja
 > [!NOTE]

@@ -13,11 +13,11 @@ ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 71d2edac1dd9a84c9d3c92049d2494c7c5bd54b0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083707"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216347"
 ---
 # <a name="cryptography-settings-schema"></a>Schemat ustawień kryptografii
 Schemat ustawień kryptografii zawiera elementy, które określają sposób mapowania przyjazne nazwy algorytmu na klasy, które implementują algorytmy kryptograficzne.  

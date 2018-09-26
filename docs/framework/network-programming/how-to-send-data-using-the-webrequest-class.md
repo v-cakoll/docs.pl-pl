@@ -11,11 +11,11 @@ ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f62775a41f70e4dd96c749acd99bf8b850d96407
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084959"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193034"
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>Instrukcje: przesyłanie danych przy użyciu klasy WebRequest
 Poniższa procedura opisuje kroki używane do przesyłania danych do serwera. Ta procedura jest często używane dane do strony sieci Web.  

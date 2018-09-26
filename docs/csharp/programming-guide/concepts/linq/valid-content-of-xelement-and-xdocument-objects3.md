@@ -3,11 +3,11 @@ title: Nieprawidłowa zawartość XElement i XDocument Objects3
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
 ms.openlocfilehash: afaeed7ba49891380982ec9c3cade43574ab8c16
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170564"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196255"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Weryfikowanie zawartości obiektów XElement i XDocument
 W tym temacie opisano prawidłowe argumenty, które mogą być przekazywane do konstruktorów i metod, których używasz do dodawania zawartości do elementów i dokumentów.  

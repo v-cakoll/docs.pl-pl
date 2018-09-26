@@ -12,11 +12,11 @@ ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 562129b7deea4af9b91dfc92f83a538f6f89f06a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110319"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208305"
 ---
 # <a name="asynchronous-client-socket-example"></a>Przykład asynchronicznego gniazda klienta
 Poniższy przykład program tworzy klienta, który nawiązuje połączenie z serwerem. Klient jest tworzone za pomocą asynchronicznego gniazda, dzięki czemu wykonanie aplikacji klienta nie jest wstrzymany, podczas gdy serwer zwraca odpowiedź. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwracany przez serwer w konsoli.  

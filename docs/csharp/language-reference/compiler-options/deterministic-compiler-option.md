@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f9aca20a3ff65d061c04a21e31db3fb5eab62ba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078347"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193450"
 ---
 # <a name="-deterministic"></a>-deterministyczne
 

@@ -9,11 +9,11 @@ ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 307cbfa9b41440ebfe2b0d9fd15715a32b8a7cca
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082685"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198127"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementacja wzorca kontrolki ExpandCollapse dla automatyzacji interfejsu użytkownika
 > [!NOTE]

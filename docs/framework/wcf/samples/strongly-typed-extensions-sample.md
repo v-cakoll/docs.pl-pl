@@ -3,11 +3,11 @@ title: Przykład rozszerzeń z silną kontrolą typów
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
 ms.openlocfilehash: eccb0ce240d01ab8592a44daddcfa7aa3d2023fb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577918"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196073"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Przykład rozszerzeń z silną kontrolą typów
 W przykładzie użyto <xref:System.ServiceModel.Syndication.SyndicationFeed> klasy na potrzeby przykładu. Jednak wzorce przedstawiono w tym przykładzie może być używany ze wszystkimi klasy syndykacji, które obsługuje rozszerzenie danych.  

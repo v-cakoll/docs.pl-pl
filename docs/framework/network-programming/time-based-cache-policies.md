@@ -20,11 +20,11 @@ ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: d24fa2ece34d20a3d9e8d6f971eebae5da0f496e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079613"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198088"
 ---
 # <a name="time-based-cache-policies"></a>Zasady pamięci podręcznej oparte na czasie
 Zasady pamięci podręcznej na podstawie czasu definiuje aktualność pozycji z pamięci podręcznej przy użyciu czas pobrania zasobu nagłówki zwrócony z zasobem, a bieżąca godzina. Podczas ustawiania zasad pamięci podręcznej na podstawie czasu, można użyć <xref:System.Net.Cache.HttpRequestCacheLevel.Default> oparte na czasie zasady lub tworzenie niestandardowych zasad opartych na czasie. W przypadku używania zasad na podstawie czasu domyślnego dla zasobów pobranych przy użyciu protokołu HTTP (Hypertext Transfer), zachowanie dokładnie pamięci podręcznej jest określana przez nagłówki dołączone w odpowiedzi z pamięci podręcznej i zachowań określonych w sekcjach 13 i 14 dokumencie RFC 2616 dostępne pod adresem [ http://www.ietf.org ](http://www.ietf.org/). Aby uzyskać przykładowy kod, który demonstruje, ustawiania zasad na podstawie czasu domyślnego dla zasobów HTTP, zobacz [porady: Określanie zasad pamięci podręcznej Default Time-Based aplikacji](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Aby uzyskać przykłady kodu, które pokazują tworzenie i używanie zasad buforowania, zobacz [Konfigurowanie buforowanie w aplikacjach sieci](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  

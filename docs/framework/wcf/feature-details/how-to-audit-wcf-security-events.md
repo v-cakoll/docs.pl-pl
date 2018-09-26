@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
 author: BrucePerlerMS
 ms.openlocfilehash: 1efd651751e0f81b5125b64f81f7d2087d002d8d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170629"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196283"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Instrukcje: inspekcja zdarzeń zabezpieczeń systemu Windows Communication Foundation
 Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń zabezpieczeń w dzienniku zdarzeń Windows, które można przeglądać za pomocą Podglądu zdarzeń Windows. W tym temacie wyjaśniono, jak skonfigurować aplikację tak, aby go dzienników zdarzeń zabezpieczeń. Aby uzyskać więcej informacji na temat inspekcji WCF, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  

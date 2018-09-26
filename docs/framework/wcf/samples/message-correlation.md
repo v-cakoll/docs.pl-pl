@@ -2,19 +2,19 @@
 title: Korelacja komunikatów
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: fd97f12f536da85619f300d36d02a10306f32aa5
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d51e3169bbb32d6e33c5658d02a1ec840bfc9c13
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577467"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200506"
 ---
 # <a name="message-correlation"></a>Korelacja komunikatów
 Niniejszy przykład pokazuje, jak aplikacja usługi kolejkowania komunikatów (MSMQ) można wysłać wiadomości usługi MSMQ do usługi Windows Communication Foundation (WCF) i jak można skorelować wiadomości między nadawcą i odbiorcą aplikacji w przypadku żądań/odpowiedzi. W tym przykładzie użyto powiązania msmqIntegrationBinding. Usługa jest w tym przypadku aplikacji konsoli Self-Hosted aby możliwe było zaobserwować, że usługa, która odbiera wiadomości w kolejce. K  
   
  Usługa przetwarza wiadomości odebrane od nadawcy i wysyła odpowiedź do nadawcy. Nadawca jest odpowiedzi, Odebrano żądanie, pierwotnie wysłany. `MessageID` i `CorrelationID` właściwości wiadomości są używane do korelacji komunikatów żądań i odpowiedzi.  
   
- `IOrderProcessor` Kontrakt usługi określa operację usługi jednokierunkowej, który jest odpowiedni do użycia z usługą kolejkowania. Wiadomości usługi MSMQ nie ma nagłówek akcji, więc nie jest możliwe do mapowania różnych wiadomości usługi MSMQ kontrakty operacji automatycznie. W związku z tym może istnieć tylko jeden kontrakt operacji w tym przypadku. Jeśli chcesz zdefiniować więcej operacji kontraktów w usłudze, aplikacja musi udostępniać co który nagłówek w usłudze MSMQ komunikatu (na przykład, etykietę lub correlationID) może służyć do określania, który kontrakt operacji na wysłanie informacji. Jest to zaprezentowane w [niestandardowe demultipleksowanie](../../../../docs/framework/wcf/samples/custom-demux.md).  
+ `IOrderProcessor` Kontrakt usługi określa operację usługi jednokierunkowej, który jest odpowiedni do użycia z usługą kolejkowania. Wiadomości usługi MSMQ nie ma nagłówek akcji, więc nie jest możliwe do mapowania różnych wiadomości usługi MSMQ kontrakty operacji automatycznie. W związku z tym może istnieć tylko jeden kontrakt operacji w tym przypadku. Jeśli chcesz zdefiniować więcej operacji kontraktów w usłudze, aplikacja musi udostępniać co który nagłówek w usłudze MSMQ komunikatu (na przykład, etykietę lub correlationID) może służyć do określania, który kontrakt operacji na wysłanie informacji. 
   
  Wiadomości usługi MSMQ nie zawiera również informacje, które nagłówki są zamapowane na różne parametry kontrakt operacji. W związku z tym może istnieć tylko jeden parametr w kontrakt operacji. Parametr jest typu <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, który zawiera podstawowe wiadomości usługi MSMQ. Typ "T" w elemencie `MsmqMessage<T>` klasa reprezentuje dane, które jest serializowana w treści wiadomości usługi MSMQ. W tym przykładzie `PurchaseOrder` typ jest serializowana w treści wiadomości usługi MSMQ.  
 

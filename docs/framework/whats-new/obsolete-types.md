@@ -9,11 +9,11 @@ ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab4d3bf7db928f926b802c08ee5e61edf86055b6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085219"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196757"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Przestarzałe typy w programie .NET Framework
 <a name="introduction"></a> W tabelach, w tym artykule przedstawiono typy, które są przestarzałe w programie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]zorganizowanym przez zestaw. Poniższe łącza umożliwiają wyświetlenie listy przestarzałych typów i zalecanych rozwiązań alternatywnych, w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementów członkowskich również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](../../../docs/framework/whats-new/obsolete-members.md).

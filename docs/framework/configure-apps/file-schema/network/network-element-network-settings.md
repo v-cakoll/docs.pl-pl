@@ -11,11 +11,11 @@ ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 96a6c8a3c2d7114004278d3c40daf4d01b6c1d90
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170025"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208624"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;sieć&gt; — Element (ustawienia sieci)
 Konfiguruje opcje sieciowe dla zewnętrznego serwera transportu protokołu SMTP (Simple Mail).  

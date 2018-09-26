@@ -9,11 +9,11 @@ ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 4c0a868866100a77e027c03f5fb94ad9987d0c65
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077619"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197789"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementacja wzorca kontrolki tabeli automatyzacji interfejsu użytkownika
 > [!NOTE]

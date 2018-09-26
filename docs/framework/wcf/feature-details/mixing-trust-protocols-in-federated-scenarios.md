@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
 author: BrucePerlerMS
 ms.openlocfilehash: d4290880d8d708811a95b38356aa61f0d23c89a8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090373"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205150"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Mieszanie protokołów zaufania w scenariuszach obejmujących federację
 Mogą istnieć scenariusze, w których federacyjnego klienci komunikują się z usługą i Usługa tokenu zabezpieczającego (STS), które nie mają tę samą wersję zaufania. Usługa może zawierać WSDL `RequestSecurityTokenTemplate` potwierdzenia z elementami WS-Trust, które są w różnych wersjach niż usługi STS. W takich przypadkach klienta usługi Windows Communication Foundation (WCF) konwertuje elementy WS-Trust otrzymane od `RequestSecurityTokenTemplate` do dopasowania usługi STS zaufania wersji. Usługi WCF obsługuje wersje niedopasowanych zaufania tylko standardowe powiązania. Wszystkie parametry algorytmu standard, które są rozpoznawane przez architekturę WCF są częścią standardowych powiązania. W tym temacie opisano zachowanie WCF za pomocą różnych ustawień zaufania między usługą i Usługa tokenu Zabezpieczającego.  

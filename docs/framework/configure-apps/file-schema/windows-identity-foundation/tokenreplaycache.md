@@ -3,20 +3,19 @@ title: '&lt;tokenReplayCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 79022319944c4042c6f62a7521784b826b90d4ce
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d21a819f789b5be4bdf7ebf57b37a072e1d213ff
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755126"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206224"
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 Rejestruje pamięci podręcznej powtórzeń tokenów z usługi lub kolekcji programu obsługi tokenów zabezpieczeń.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<buforuje >  
+\<pamięci podręczne >  
 \<tokenReplayCache >  
   
 ## <a name="syntax"></a>Składnia  
@@ -39,7 +38,7 @@ Rejestruje pamięci podręcznej powtórzeń tokenów z usługi lub kolekcji prog
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Typ, który pochodzi z <xref:System.IdentityModel.Tokens.TokenReplayCache> klasy. Aby uzyskać więcej informacji o sposobie określania niestandardowej `type`, zobacz [odwołania do niestandardowego typu].
+|— typ|Typ, który pochodzi od klasy <xref:System.IdentityModel.Tokens.TokenReplayCache> klasy. Aby uzyskać więcej informacji o sposobie określania niestandardowej `type`, zobacz [odwołań do niestandardowego typu].
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -48,13 +47,13 @@ Rejestruje pamięci podręcznej powtórzeń tokenów z usługi lub kolekcji prog
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<buforuje >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Rejestruje pamięci podręcznych, używany przez usługę lub kolekcji programu obsługi tokenów zabezpieczeń.|  
+|[\<pamięci podręczne >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Rejestruje pamięci podręcznych, używane przez usługę lub kolekcji programu obsługi tokenów zabezpieczeń.|  
   
 ## <a name="remarks"></a>Uwagi  
- Pamięci podręcznej powtórzeń tokenów jest używana do wykrywania tokeny powtórzony. Wykrywanie powtórzeń tokenów jest włączana przez [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) element, który również określa czas maksymalny wygaśnięcia tokenów.  
+ Pamięci podręcznej powtórzeń tokenów jest używana do wykrywania powtórzonym tokenów. Wykrywanie powtórzeń tokenów jest włączane przez [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) element, który określa również czas wygaśnięcia maksymalna tokenów.  
   
 ## <a name="example"></a>Przykład  
- Następujący kod XML zawiera konfiguracji niestandardowej pamięci podręcznej wykrywania tokeny powtórzony.  
+ Następujący kody XML pokazuje konfiguracji niestandardowej pamięci podręcznej wykrywania powtórzonym tokenów.  
   
 ```xml  
 <caches>  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
 ms.openlocfilehash: 0cd373ae3fd5acb1650f0d8614b34c5d19cf9016
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171650"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195487"
 ---
 # <a name="wif-api-reference"></a>Dokumentacja interfejsu API programu WIF
 Klasy Windows Identity Foundation (WIF) są dzielone między następujących zestawów: `mscorlib` (mscorlib.dll) `System.IdentityModel` (System.IdentityModel.dll) `System.IdentityModel.Services` (System.IdentityModel.Services.dll) i `System.ServiceModel` () System.ServiceModel.dll). Ten temat zawiera łącza do przestrzeniach nazw środowiska WIF i krótkie objaśnienia klas, które zawiera każdej przestrzeni nazw.  

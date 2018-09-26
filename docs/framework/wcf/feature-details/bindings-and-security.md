@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 author: BrucePerlerMS
 ms.openlocfilehash: 904ea64bd6e76e7bf99aa4a31ef752bfb2760c23
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080133"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198465"
 ---
 # <a name="bindings-and-security"></a>Powiązania i zabezpieczenia
 Powiązania dostarczane przez system, dołączone za pomocą programu Windows Communication Foundation (WCF) oferują szybki sposób program aplikacji WCF. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. W tym temacie pomaga wybrać odpowiednie powiązanie dla wymagania w zakresie zabezpieczeń.  

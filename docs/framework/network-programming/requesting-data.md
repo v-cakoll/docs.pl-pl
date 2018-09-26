@@ -20,11 +20,11 @@ ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: a163374810cbc06ca048c1bdd304de9519db140c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157067"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195709"
 ---
 # <a name="requesting-data"></a>Żądanie danych
 Tworzenie aplikacji działających w rozproszonym środowisku operacyjnym Internet współczesnych wymaga wydajne i łatwy w użyciu metody pobierania danych z wszystkich typów zasobów. Podłączanych protokołów umożliwiają tworzenie aplikacji korzystających z jednego interfejsu do pobierania danych z wielu protokołów internetowych.  

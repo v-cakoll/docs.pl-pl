@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
 ms.openlocfilehash: b4c73bac9ddda83d78a4d9c95e3864d8d4e8ec4e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070321"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200090"
 ---
 # <a name="wif-code-sample-index"></a>Indeks przykładów kodu programu WIF
 Poniżej przedstawiono przykłady kodu dla systemu Windows Identity Foundation 4.5:  

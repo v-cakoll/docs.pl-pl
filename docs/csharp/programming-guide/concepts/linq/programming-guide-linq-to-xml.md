@@ -3,11 +3,11 @@ title: Przewodnik programowania (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
 ms.openlocfilehash: acb8271ad9ea338d31516c35bae46593a5fd2f78
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070490"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199051"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Przewodnik programowania (LINQ to XML) (C#)
 Ta sekcja zawiera informacje o pojęciach i porad dotyczących programowania w języku [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

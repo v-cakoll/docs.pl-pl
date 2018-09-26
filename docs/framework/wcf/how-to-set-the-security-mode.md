@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 author: BrucePerlerMS
 ms.openlocfilehash: 32fd1ebede841488d1bfabd2f92bd3fb1ffb55e8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087346"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193190"
 ---
 # <a name="how-to-set-the-security-mode"></a>Instrukcje: Ustawianie trybu zabezpieczeń
 Zabezpieczenia usług Windows Communication Foundation (WCF) ma trzy często używanych trybów zabezpieczeń, które znajdują się na najbardziej wstępnie zdefiniowanych powiązań: transportu, wiadomości i "transport z poświadczeniami komunikatu". Dwa tryby dodatkowe są specyficzne dla dwa powiązania: tryb "tylko transportu credential" znalezione na <xref:System.ServiceModel.BasicHttpBinding>i "Oba" Tryb znalezione na <xref:System.ServiceModel.NetMsmqBinding>. Jednak ten temat koncentruje się na trzech często używanych trybów zabezpieczeń: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, i <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  

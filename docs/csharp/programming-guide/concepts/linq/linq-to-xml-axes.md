@@ -3,11 +3,11 @@ title: LINQ do XML osi (C#)
 ms.date: 07/20/2015
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
 ms.openlocfilehash: 6a27adb1c7e1dcfefda13a355700202ccda3ffab
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071916"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196789"
 ---
 # <a name="linq-to-xml-axes-c"></a>LINQ do XML osi (C#)
 Po drzewa XML utworzone lub ładowany dokument XML do drzewa XML można tworzyć zapytania, do znajdowania elementów i atrybutów i pobierania ich wartości.  

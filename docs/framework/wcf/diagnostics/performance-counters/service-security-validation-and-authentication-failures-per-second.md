@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
 author: BrucePerlerMS
 ms.openlocfilehash: 2e67a2222f3d605fdd7bb408380743203a551dd6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110466"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198959"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>Usługa: Niepowodzenia uwierzytelniania i walidacji zabezpieczeń na sekundę
 Nazwa licznika: walidacji zabezpieczeń i uwierzytelniania błędy na sekundę.  

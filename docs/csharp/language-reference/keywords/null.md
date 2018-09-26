@@ -8,11 +8,11 @@ helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
 ms.openlocfilehash: 67961027c7eab40344251db3d57e4d80ca5e8cdc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087362"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208202"
 ---
 # <a name="null-c-reference"></a>null (C# Reference)
 

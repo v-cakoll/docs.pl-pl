@@ -3,11 +3,11 @@ title: 'Instrukcje: Przechowywanie wersji usługi'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
 ms.openlocfilehash: 5f79382eb121472ffa32d969cfaeee0e83d3375d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706570"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198400"
 ---
 # <a name="how-to-service-versioning"></a>Instrukcje: Przechowywanie wersji usługi
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu, które kieruje komunikaty do różnych wersji tej samej usługi. W tym przykładzie komunikaty są kierowane do dwóch różnych wersji usługi Kalkulator `roundingCalc` (wersja 1) i `regularCalc` (v2). Zarówno implementacje obsługują te same operacje; Jednak ze starszej usługi `roundingCalc`, zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie wskazać, czy skorzystanie z nowszych `regularCalc` usługi.  

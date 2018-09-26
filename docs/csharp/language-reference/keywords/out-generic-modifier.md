@@ -6,11 +6,11 @@ helpviewer_keywords:
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
 ms.openlocfilehash: fedbdb12c1da108d17636770fb5c628195dce0d4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47107847"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47207395"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (modyfikator ogólny) (odwołanie w C#)
 

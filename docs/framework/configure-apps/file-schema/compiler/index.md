@@ -14,11 +14,11 @@ ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: c64dd85103e818ae603435c1a3f80f76e672ac84
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47069569"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196775"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Schemat ustawień kompilatora i dostawcy języka
 Kompilator i ustawienia dostawcy języka Określ elementy kompilatora konfiguracji dla dostępnych dostawców języka. Każdy element konfiguracji kompilator określa kod nazwę typu dostawcy, parametry kompilatora obsługiwane nazwy języka i obsługiwane rozszerzenia plików.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
 ms.openlocfilehash: e3db65c91e53ee0ed7b5e520bbc4989cd7404816
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075505"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197139"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Przewodnik: Wyświetlanie danych z bazy danych programu SQL Server w formancie DataGrid
 

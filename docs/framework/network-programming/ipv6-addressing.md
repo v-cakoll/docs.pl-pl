@@ -29,11 +29,11 @@ ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 8c992a96f2fa8d55d1fe16c03922cc8dbb39451c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090003"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47194012"
 ---
 # <a name="ipv6-addressing"></a>Adresowanie IPv6
 W przypadku protokołu internetowego w wersji 6 (IPv6) adresy są długości 128 bitów. Jednym z powodów takich duża przestrzeń adresowa jest pozwalające na dalszy podział dostępnych adresów w hierarchii domen routingu, które odzwierciedlają topologii sieci Internet. Kolejny powód jest mapowania adresów karty sieciowe (lub interfejsy) łączące urządzenia w sieci. Protokół IPv6 funkcji nieprzerwaną pracę możliwość rozpoznania adresów na najniższym poziomie, znajduje się na poziomie interfejsu sieciowego, która ma również funkcji automatycznej konfiguracji.  

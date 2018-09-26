@@ -10,11 +10,11 @@ ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 91b4b4f132138fa6752c1da9b28e7a3ab7fad006
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082893"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209727"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Wyczyść&gt; elementu &lt;odbiorników&gt; dla &lt;śledzenia&gt;
 Czyści `Listeners` kolekcji na potrzeby śledzenia.  

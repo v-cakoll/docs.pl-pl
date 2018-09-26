@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
 ms.openlocfilehash: 7d3d23dc1f2e081c0a7c53fbdfaef749c9729fd4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108335"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47207088"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Instrukcje: Wyświetlanie stanu zalogowania przy użyciu programu WIF
 ## <a name="applies-to"></a>Dotyczy:  

@@ -8,11 +8,11 @@ ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f008cf82b80e29f8fe741034a0e820b5eae5b0ba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084816"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193767"
 ---
 # <a name="how-to-access-http-specific-properties"></a>Porady: uzyskiwanie dostępu do właściwości specyficzne dla protokołu HTTP
 W tym przykładzie pokazano, jak wyłączyć HTTP **Keep-alive** zachowanie i Pobierz wersję protokołu numer z serwera sieci Web.  

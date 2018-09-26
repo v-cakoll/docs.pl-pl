@@ -2,12 +2,12 @@
 title: Dodawanie odwołania do usługi w rozwiązaniu usprawniającym przepływ pracy
 ms.date: 03/30/2017
 ms.assetid: 83574cf3-9803-49bc-837f-432936dc9c76
-ms.openlocfilehash: 9dcbf779d948f6d295c2a23f5a09efc5ac989cdd
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: f9bbe017b44563ae92c20c1f7b8c9a374456abad
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082867"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197321"
 ---
 # <a name="adding-a-service-reference-in-a-workflow-solution"></a>Dodawanie odwołania do usługi w rozwiązaniu usprawniającym przepływ pracy
 
@@ -18,5 +18,4 @@ Dodawanie dwóch lub więcej odwołań do usług do usług, które zawierać tak
 ## <a name="see-also"></a>Zobacz też
 
 - [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Instrukcje: tworzenie usługi przepływu pracy wywołującej inną usługę przepływu pracy](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)
 - [Wywołanie usługi WCF z przepływu pracy w projekcie sieci Web](https://go.microsoft.com/fwlink/?LinkId=207725)

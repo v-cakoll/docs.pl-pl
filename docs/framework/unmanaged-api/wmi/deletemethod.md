@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082149"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192303"
 ---
 # <a name="deletemethod-function"></a>Funkcja DeleteMethod
 Usuwa określoną metodę z definicji klasy modelu wspólnych informacji.

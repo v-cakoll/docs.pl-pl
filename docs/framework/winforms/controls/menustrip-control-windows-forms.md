@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071127"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205328"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip — Formant (Formularze systemu Windows)
 Ta aplikacja grup kontroli poleceń i sprawia, że są je łatwo dostępne.  

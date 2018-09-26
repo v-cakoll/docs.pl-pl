@@ -15,11 +15,11 @@ ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ee49009915273cc1e16917805f1801268ca0d26
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173437"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198894"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Tworzenie i używanie zestawów o silnych nazwach
 

@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112899"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205135"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Inne konstrukcje w wyrażeniach regularnych
 Wyrażenia regularne w .NET obejmują trzy konstrukcji językowych różne. Jeden pozwala włączyć lub wyłączyć określonego opcje dopasowania w środku wzorca wyrażenia regularnego. Dwóch pozostałych pozwala na uwzględnianie komentarzy w wyrażeniu regularnym.  

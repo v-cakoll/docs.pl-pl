@@ -13,11 +13,11 @@ helpviewer_keywords:
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
 ms.openlocfilehash: c6a8b3b7355d315b83f859e7016018b56ade5484
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112471"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196346"
 ---
 # <a name="attached-events-overview"></a>Przegląd Załączone zdarzenia
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Definiuje składnika języka i typu zdarzenia o nazwie *dołączone zdarzenie*. Pojęcie dołączone zdarzenie umożliwia dodanie obsługi dla określonego zdarzenia do dowolnego elementu, a nie do elementu, który faktycznie definiuje lub dziedziczy zdarzenia. W tym przypadku obiekt potencjalnie podnoszonego zdarzenia ani docelowym wystąpienia obsługi definiuje lub w przeciwnym razie jego "właścicielem" zdarzenie.  

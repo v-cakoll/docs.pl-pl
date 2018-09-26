@@ -8,11 +8,11 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 52bbae330afe4a9ea376c6388a06941f74f6606a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086038"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204706"
 ---
 # <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>Tworzenie biblioteki klas w języku Visual Basic i .NET Core w programie Visual Studio 2017
 

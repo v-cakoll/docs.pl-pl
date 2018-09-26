@@ -3,11 +3,11 @@ title: Przy użyciu drzewa XML (C#) transformacji XSLT
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
 ms.openlocfilehash: 3fa850c0f09404da49b2963e980d15e1ed54316f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173099"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47207549"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>Przy użyciu drzewa XML (C#) transformacji XSLT
 Można utworzyć drzewa XML, tworzenie <xref:System.Xml.XmlReader> z drzewa XML Utwórz nowy dokument, a następnie utwórz <xref:System.Xml.XmlWriter> która będzie zapisywała do nowego dokumentu. Następnie możesz wywołać transformację XSLT, przekazując <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> do przekształcania. Po pomyślnym ukończeniu przekształcenie nowego drzewa XML jest wypełniana wyniki przekształcenia.  

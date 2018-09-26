@@ -16,11 +16,11 @@ ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9f979b6d065e23b6d448a14d9545327de254dc70
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086226"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216477"
 ---
 # <a name="using-application-protocols"></a>Korzystanie z protokołów aplikacji
 .NET Framework obsługuje najczęściej używanych protokołów aplikacji internetowych. Ta sekcja zawiera informacje na temat korzystania z [HTTP](../../../docs/framework/network-programming/http.md), protokoły "TCP" i "UDP", a także informacje na temat korzystania z [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interfejs do implementacji niestandardowych protokołów.  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Assert&gt; — Element'
+title: '&lt;asercja&gt; — Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert
@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ab1644d23e4d6d78b62e701902e5ec39e134b38b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745123"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193515"
 ---
-# <a name="ltassertgt-element"></a>&lt;Assert&gt; — Element
-Określa, czy wyświetlać okno komunikatu po wywołaniu <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> metody; określa także nazwę pliku do zapisania komunikatów.  
+# <a name="ltassertgt-element"></a>&lt;asercja&gt; — Element
+Określa, czy należy wyświetlić okno komunikatu, gdy wywołujesz <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> metody; określa także nazwę pliku do zapisywania komunikatów.  
   
  \<Konfiguracja >  
 \<System.Diagnostics >  
-\<Assert >  
+\<asercja >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,15 +37,15 @@ Określa, czy wyświetlać okno komunikatu po wywołaniu <xref:System.Diagnostic
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`assertuienabled`|Atrybut opcjonalny.<br /><br /> Określa, czy do wyświetlenia komunikatu dialogowe **Debug.Assert** daje w wyniku metody **false**.|  
-|`logfilename`|Atrybut opcjonalny.<br /><br /> Określa nazwę pliku do zapisu, jeśli komunikat **Debug.Assert** daje w wyniku **false**.|  
+|`assertuienabled`|Atrybut opcjonalny.<br /><br /> Określa, czy do wyświetlania komunikatu polu kiedy **Debug.Assert** daje w wyniku metody **false**.|  
+|`logfilename`|Atrybut opcjonalny.<br /><br /> Określa nazwę pliku do zapisu komunikatu if **Debug.Assert** daje w wyniku **false**.|  
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |`true`|Wyświetla okno komunikatu. Domyślnie włączone.|  
-|`false`|Nie są wyświetlane w oknie komunikatu.|  
+|`false`|Wyświetla okno komunikatu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -56,13 +55,13 @@ Określa, czy wyświetlać okno komunikatu po wywołaniu <xref:System.Diagnostic
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.|  
+|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Oba atrybuty w  **\<assert >** elementu są opcjonalne. Pola komunikatów można wyłączyć bez określania pliku do zapisywania wiadomości, lub w przypadku określenia pliku do zapisu komunikaty podczas opuszczania komunikatu zaznaczone pola.  
+ Oba atrybuty w  **\<asercja >** elementu są opcjonalne. Okna komunikatów można wyłączyć bez określania pliku, aby pisać wiadomości do lub można określić plik do zapisu komunikaty, które otrzymało, pozostawiając komunikatu pola włączone.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób Wyłącz wyświetlanie pola komunikatu podczas wywoływania **Debug.Assert** i zapisu wiadomości `c:\log.txt`.  
+ Poniższy przykład pokazuje, jak wyłączyć wyświetlanie okien komunikatów podczas wywoływania **Debug.Assert** i pisania komunikatów do `c:\log.txt`.  
   
 ```xml  
 <configuration>  

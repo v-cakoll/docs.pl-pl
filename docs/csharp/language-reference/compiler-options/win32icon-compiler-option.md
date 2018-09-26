@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 ms.openlocfilehash: 5014b1da714f8e29f869d4641da93796a607aa4d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157548"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47215941"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (opcje kompilatora C#)
 **-Win32icon** opcja Wstawia plik .ico, w pliku danych wyjściowych, który nadaje plikowi wyjściowemu pożądany wygląd w Eksploratorze plików.  

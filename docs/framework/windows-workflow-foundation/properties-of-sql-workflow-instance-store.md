@@ -3,11 +3,11 @@ title: Właściwości Store wystąpienia przepływu pracy SQL
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46578858"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195501"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>Właściwości Store wystąpienia przepływu pracy SQL
 Tematy w tej sekcji zawierają szczegółowe informacje dotyczące właściwości Store wystąpienia przepływu pracy SQL.  

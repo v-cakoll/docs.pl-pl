@@ -9,11 +9,11 @@ ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1e0b3ed66977dd6587789e3d88f532b699653c6f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110882"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195579"
 ---
 # <a name="cache-management-for-network-applications"></a>Zarządzanie pamięcią podręczną dla aplikacji sieciowych
 Ten temat i jego powiązane tematy podrzędne opisują, buforowania dla zasobów pobranych przy użyciu <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, i <xref:System.Net.FtpWebRequest> klasy.  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
 author: BrucePerlerMS
 ms.openlocfilehash: 6eb7497990abb29693921d601b222a3b7e87bf6c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108926"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196593"
 ---
 # <a name="ltsecuritygt-of-ltws2007httpbindinggt"></a>&lt;security&gt; w &lt;ws2007HttpBinding&gt;
 Reprezentuje ustawienia zabezpieczeń używane dla [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elementu.  

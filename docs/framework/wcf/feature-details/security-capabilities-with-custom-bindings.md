@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
 author: BrucePerlerMS
 ms.openlocfilehash: 35d2477af3dc7ce6fdd075055fff9e687bdc2a60
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110284"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196736"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Możliwości zabezpieczeń powiązań niestandardowych
 Najbardziej typowe zadania zabezpieczeń można wykonać przy użyciu jednej z powiązań dostarczanych przez system. Jeśli potrzebujesz większej kontroli, jednak można utworzyć niestandardowego powiązania za pomocą <xref:System.ServiceModel.Channels.SecurityBindingElement>, zgodnie z opisem w następujących tematach. Aby uzyskać więcej informacji na temat powiązania niestandardowej zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  

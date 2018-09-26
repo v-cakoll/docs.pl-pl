@@ -5,11 +5,11 @@ ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 7ee219f8ecb3103e5f9676498b09f290d6e7be8d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085401"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231235"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>Przechodzenie translatora adresów Sieciowych przy użyciu protokołu IPv6 i Teredo
 Wprowadzono ulepszenia, które umożliwiają przechodzenie translacji adresów sieciowych (NAT). Te zmiany są skonstruowane do użycia przy użyciu protokołu IPv6 i Teredo, ale są one również zastosowanie do innych adresów IP, tunelowanie technologii. Te ulepszenia wpływają na klas w <xref:System.Net> i pokrewnych przestrzeniach nazw.  

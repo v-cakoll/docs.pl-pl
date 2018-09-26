@@ -4,12 +4,12 @@ description: Opisuje sposób tworzenia narzędzie globalne. Narzędzie globalnej
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 1ad3e5c585cbfcaecb7a4d04de068273ef240763
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3860aad5e2c13714298d50bb9ac10daec3aadf01
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991158"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231222"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Utworzyć narzędzie globalnej platformy .NET Core przy użyciu interfejsu wiersza polecenia platformy .NET Core
 
@@ -167,7 +167,7 @@ dotnet pack
 Teraz, gdy pakiet, należy zainstalować narzędzia z tego pakietu: 
 
 ```console
-dotnet tool install --global --add-source ./nupkg botsay`
+dotnet tool install --global --add-source ./nupkg botsay
 ```
 
 `--add-source` Parametru informuje .NET Core interfejs wiersza polecenia i użyj tymczasowo `./nupkg` folder (nasze `<PackageOutputPath>` folder) jako źródło dodatkowych źródło danych dla pakietów NuGet. Aby uzyskać więcej informacji na temat instalowania narzędzi globalnych, zobacz [Omówienie narzędzia globalnej platformy .NET Core][global-tool-info].

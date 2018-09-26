@@ -2,31 +2,31 @@
 title: Rozszerzalność
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: af6bbb5ea703c83ec38b97fae5a6f4bd266479b3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805385"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196876"
 ---
 # <a name="extensibility"></a>Rozszerzalność
 Ta sekcja zawiera przykłady, które zajmują się rozszerzalności niestandardowe i inne funkcje programu Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Rozszerzalność kanałów](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
- Pokazuje kanałów niestandardowych.  
+ Pokazuje niestandardowe kanały.  
   
  [Discovery Extensibility](../../../../docs/framework/wcf/samples/discovery-extensibility.md)  
- Pokazuje niestandardowych odnajdywania.  
+ Pokazuje odnajdywanie niestandardowe.  
   
  [Tworzenie wystąpienia rozszerzalności](../../../../docs/framework/wcf/samples/instancing-extensibility.md)  
- Pokazuje niestandardowych rozszerzeń.  
+ Pokazuje niestandardowy rozszerzalności.  
   
  [Rozszerzalność współdziałania](../../../../docs/framework/wcf/samples/interop-extensibility.md)  
- Pokazuje współdziałanie niestandardowych.  
+ Pokazuje współdziałania niestandardowych.  
   
  [Rozszerzalność kodera komunikatów](../../../../docs/framework/wcf/samples/message-encoder-extensibility.md)  
- Pokazuje, kodowania wiadomości niestandardowych.  
+ Pokazuje niestandardowy komunikat kodowania.  
   
  [Rozszerzalność metadanych](../../../../docs/framework/wcf/samples/metadata-extensibility.md)  
  Pokazuje niestandardowych metadanych.  
@@ -35,31 +35,28 @@ Ta sekcja zawiera przykłady, które zajmują się rozszerzalności niestandardo
  Pokazuje niestandardowy zabezpieczeń.  
   
  [Przykłady rozszerzania syndykacji](../../../../docs/framework/wcf/samples/syndication-extensibility-samples.md)  
- Pokazuje niestandardowych zespolonego.  
+ Pokazuje niestandardowy syndykacji.  
   
  [Rozszerzalność transportu](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
- Pokazuje niestandardowych transportów.  
-  
- [Rozszerzalność Internetu](../../../../docs/framework/wcf/samples/web-extensibility.md)  
- Pokazuje niestandardowe funkcje sieci Web.  
+ Pokazuje niestandardowy transportów.
   
  [Element formatujący operacji i selektor operacji](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
- Pokazuje, jak punkty rozszerzeń, jaką może wykorzystać formaty danych niestandardowych wiadomości.  
+ Pokazuje, jak punkty rozszerzeń mogą wykorzystywać komunikatów niestandardowych formatów danych.  
   
  [Niestandardowy filtr komunikatów](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- Pokazuje, jak zastąpić filtry wiadomości Windows Communication Foundation (WCF) używanych do wysyłania wiadomości do punktów końcowych.  
+ demonstruje sposób zamiany filtry komunikatów, używane przez program Windows Communication Foundation (WCF) do wysyłania wiadomości do punktów końcowych.  
   
  [Niestandardowy host usługi](../../../../docs/framework/wcf/samples/custom-service-host.md)  
- Pokazuje, jak używać niestandardowych pochodną <xref:System.ServiceModel.ServiceHost> klasy do zmiany zachowania usługi w czasie wykonywania.  
+ Pokazuje, jak używać niestandardowego utworów zależnych od <xref:System.ServiceModel.ServiceHost> klasy do zmiany zachowania usługi w czasie wykonywania.  
   
  [DataContract — surogat](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
- Pokazuje, jak procesy, takie jak serializacji, deserializacji schematu eksportowania i importowania schematu można dostosować za pomocą kontraktu danych dwuskładnikowy klasy.  
+ Pokazuje, jak procesy takie jak serializacji, deserializacji, schemat eksportu i importu schematu można dostosować za pomocą kontraktu danych zastępczych klas.  
   
  [Rozszerzanie kontroli obsługi i raportowania błędów](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  Pokazuje, jak rozszerzyć kontrolę obsługi błędów i raportowania błędów w usługi WCF za pomocą <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejsu.  
   
  [Inspektorzy komunikatów](../../../../docs/framework/wcf/samples/message-inspectors.md)  
- Pokazuje, jak wdrożyć i skonfigurować klienta i usługi inspektorzy komunikatów.  
+ Pokazuje, jak zaimplementować i skonfigurować klienta i usługi inspektorzy komunikatów.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- Pokazuje, jak mapować nowe typy zawartości do formatów treści wiadomości WCF.
+ Pokazuje, jak w celu zamapowania nowych typów zawartości na formaty treści wiadomości WCF.

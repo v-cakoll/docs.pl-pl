@@ -12,11 +12,11 @@ ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: d948ff2f71ff7d4335cacc0fa3815dd75af4ad45
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47115051"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231385"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>Pobierz obsługiwane wzorce kontrolek automatyzacji interfejsu użytkownika
 > [!NOTE]

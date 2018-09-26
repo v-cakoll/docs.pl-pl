@@ -14,11 +14,11 @@ ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 4b8fa55375de5057eca92591cbf4d9da628a3f85
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082503"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193808"
 ---
 # <a name="how-to-configure-network-tracing"></a>Porady: Konfigurowanie śledzenia sieci
 Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określają format i zawartość danych ze śledzenia sieci. Przed rozpoczęciem procedury należy się upewnić, że śledzenie jest włączone. Aby uzyskać informacje na temat włączania śledzenia, zobacz [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).  

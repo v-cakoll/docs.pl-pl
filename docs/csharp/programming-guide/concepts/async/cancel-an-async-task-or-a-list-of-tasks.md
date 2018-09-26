@@ -3,11 +3,11 @@ title: Anulowanie zadania asynchronicznego lub listy zadań (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
 ms.openlocfilehash: 4dc41bc6005a75c06d2c6cc1f3e8d487449b563d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586743"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203868"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Anulowanie zadania asynchronicznego lub listy zadań (C#)
 

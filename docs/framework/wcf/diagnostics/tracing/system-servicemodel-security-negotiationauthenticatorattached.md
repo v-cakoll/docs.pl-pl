@@ -3,13 +3,12 @@ title: System.ServiceModel.Security.NegotiationAuthenticatorAttached
 ms.date: 03/30/2017
 ms.assetid: 20a289a5-6450-46dd-bb83-c394379b857b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a0dcd90386ab67bacbd0e87cb2abade423a16ad7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0af4f3a2373d951f4bd65e985eeb0b9d400d081d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33482082"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47188716"
 ---
 # <a name="systemservicemodelsecuritynegotiationauthenticatorattached"></a>System.ServiceModel.Security.NegotiationAuthenticatorAttached
 System.ServiceModel.Security.NegotiationAuthenticatorAttached  

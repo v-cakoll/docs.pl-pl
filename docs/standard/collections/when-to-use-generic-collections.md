@@ -9,11 +9,11 @@ ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084764"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47210100"
 ---
 # <a name="when-to-use-generic-collections"></a>Kiedy należy używać kolekcji ogólnych
 Za pomocą kolekcji ogólnych ogólnie zaleca się, ponieważ uzyskanie bezpośrednią korzyść bezpieczeństwa typu bez konieczności pochodzić od typu podstawowego kolekcji i implementowanie elementów specyficznych dla typu. Typy generyczne kolekcji również zazwyczaj mają lepszą wydajność niż odpowiadające typy kolekcji nierodzajowymi (i lepiej niż typy, pochodne typy nierodzajowymi bazowej kolekcji) po elementy kolekcji są typami wartości, ponieważ za pomocą typów ogólnych nie ma potrzeby polu elementów.  

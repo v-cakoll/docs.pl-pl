@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
 ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109566"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47202239"
 ---
 # <a name="c-walkthroughs"></a>C# — wskazówki
 Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariuszy, które sprawia, że ich dobrym miejscem do uruchomienia, informacje o strefie dana funkcja lub produktu.  

@@ -7,11 +7,11 @@ ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 0d5b7fccdac9dba3fd44d12241dd60cbaefa1b7a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085180"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192943"
 ---
 # <a name="httplistener"></a>HttpListener
 <xref:System.Net.HttpListener> Klasa udostępnia programowo kontrolowanego odbiornika protokołu HTTP. Odbiornik jest aktywna przez okres istnienia <xref:System.Net.HttpListener> obiektu i jest uruchamiana w ramach aplikacji.  

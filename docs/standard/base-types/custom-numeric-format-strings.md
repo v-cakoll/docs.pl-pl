@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf1fd3ff78065430800583eb97db986bad419710
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 83f3abb2c77461b74e388dcb421fac6c19a43655
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584386"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205071"
 ---
 # <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatujące liczby
 
@@ -53,7 +53,7 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
   
  W poniższych sekcjach znajdują się szczegółowe informacje o poszczególnych niestandardowych specyfikatorach formatu liczb.  
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-partial-note.md)] 
   
 <a name="Specifier0"></a>   
 ## <a name="the-0-custom-specifier"></a>Specyfikator niestandardowy "0"  
@@ -64,7 +64,7 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
  W poniższym przykładzie pokazano kilka wartości formatowanych za pomocą ciągów formatu niestandardowego, które zawierają symbole zastępcze zera.  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [Powrót do tabeli](#table)  
@@ -80,7 +80,7 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
  W poniższym przykładzie pokazano kilka wartości formatowanych za pomocą ciągów formatu niestandardowego, które zawierają symbole zastępcze cyfr.  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  Aby zwrócić, ciąg wynikowy, w którym nieobecny, cyfr lub zer wiodących, które są zastępowane przez miejsca do magazynowania, użyj [funkcję formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) i określić szerokość pola, tak jak pokazano w poniższym przykładzie.  
@@ -100,7 +100,7 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
  W poniższym przykładzie użyto specyfikatora formatu „.” aby zdefiniować lokalizację punktu dziesiętnego w kilku ciągach wynikowych.  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [Powrót do tabeli](#table)  
@@ -120,13 +120,13 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
  W poniższym przykładzie pokazano użycie przecinka jako separatora grup.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  W poniższym przykładzie pokazano użycie przecinka jako specyfikatora skalowania liczb.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [Powrót do tabeli](#table)  
@@ -138,7 +138,7 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
  W poniższym przykładzie zdefiniowano kilka ciągów formatu niestandardowego, które zawierają niestandardowy specyfikator „%”.  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [Powrót do tabeli](#table)  
@@ -150,7 +150,7 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
  W poniższym przykładzie zdefiniowano ciąg formatu niestandardowego, który zawiera niestandardowy specyfikator „‰”.  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [Powrót do tabeli](#table)  
@@ -162,7 +162,7 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
  W poniższym przykładzie sformatowano kilka wartości liczbowych przy użyciu specyfikatorów notacji wykładniczej.  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [Powrót do tabeli](#table)  

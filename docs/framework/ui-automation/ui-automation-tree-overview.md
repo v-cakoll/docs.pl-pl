@@ -8,11 +8,11 @@ ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: a7fca5d86cf8679e0845a7051b4ace5b91766030
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086343"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200311"
 ---
 # <a name="ui-automation-tree-overview"></a>Przegląd drzewa automatyzacji interfejsu użytkownika
 > [!NOTE]

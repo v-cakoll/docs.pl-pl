@@ -6,11 +6,11 @@ helpviewer_keywords:
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
 ms.openlocfilehash: e402f9835f3ca03ac0632d7202000fa3208ed6e3
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579738"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193934"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog — Składnik (Formularze systemu Windows)
 Formularze Windows <xref:System.Windows.Forms.SaveFileDialog> składnik to wstępnie skonfigurowane okno dialogowe. Jest taka sama jak standardowe okno dialogowe Zapisz plik używany przez Windows. Dziedziczy <xref:System.Windows.Forms.CommonDialog> klasy.  

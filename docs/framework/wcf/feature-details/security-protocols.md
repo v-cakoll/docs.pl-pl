@@ -6,11 +6,11 @@ helpviewer_keywords:
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 author: BrucePerlerMS
 ms.openlocfilehash: bfb8f3b8d824c1a3324b1d01edc9a087c0cf4abd
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078217"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204667"
 ---
 # <a name="security-protocols"></a>Protokoły zabezpieczeń
 Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usług sieci Web, które obejmują wszystkie istniejące enterprise komunikatów wymagań dotyczących zabezpieczeń. W tej sekcji opisano szczegóły Windows Communication Foundation (WCF) (zaimplementowany w <xref:System.ServiceModel.Channels.SecurityBindingElement>) dla następujących sieci Web usług protokołów zabezpieczeń.  

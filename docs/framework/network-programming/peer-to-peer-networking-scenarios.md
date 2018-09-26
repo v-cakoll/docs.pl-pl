@@ -5,11 +5,11 @@ ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 3f15e555f64479d18c5fb5d18522a3dbe33e3521
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080963"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193567"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>Scenariusze sieci peer-to-Peer
 Sieci peer-to-peer umożliwia lub rozszerza następujących scenariuszy:  

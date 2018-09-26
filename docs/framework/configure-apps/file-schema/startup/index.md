@@ -9,11 +9,11 @@ ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 4cdf6a051552ab1effd9c4d9c783297a62602f7a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078165"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204927"
 ---
 # <a name="startup-settings-schema"></a>Schemat ustawień uruchamiania
 Ustawienia uruchamiania określić wersję środowiska uruchomieniowego języka wspólnego, należy uruchomić aplikację.  

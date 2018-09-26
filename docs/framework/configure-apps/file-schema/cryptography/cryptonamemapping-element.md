@@ -11,11 +11,11 @@ ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: ad1611701dca48244f3b2a93ecc3ea86363081ed
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170512"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47230797"
 ---
 # <a name="ltcryptonamemappinggt-element"></a>&lt;cryptonamemapping —&gt; — Element
 Zawiera mapowania klasy przyjazne nazwy.  

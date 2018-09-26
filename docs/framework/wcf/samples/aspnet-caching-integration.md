@@ -2,15 +2,15 @@
 title: Integracja buforowania platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002791"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197451"
 ---
 # <a name="aspnet-caching-integration"></a>Integracja buforowania platformy ASP.NET
-Niniejszy przykład pokazuje sposób wykorzystywania wyjściowej pamięci podręcznej platformy ASP.NET przy użyciu modelu programowania protokołu HTTP sieci WEB WCF. Zobacz [podstawowej usługi do zasobu](../../../../docs/framework/wcf/samples/basic-resource-service.md) próbki Self-Hosted wersję tego scenariusza, który w tym artykule omówiono szczegółowo implementacji usługi. Ten temat koncentruje się na funkcji Integracja z pamięci podręcznej danych wyjściowych platformy ASP.NET.  
+Niniejszy przykład pokazuje sposób wykorzystywania wyjściowej pamięci podręcznej platformy ASP.NET przy użyciu modelu programowania protokołu HTTP sieci WEB WCF. Ten temat koncentruje się na funkcji Integracja z pamięci podręcznej danych wyjściowych platformy ASP.NET.  
   
 ## <a name="demonstrates"></a>Demonstracje  
  Integracja z pamięci podręcznej danych wyjściowych platformy ASP.NET  
@@ -29,7 +29,7 @@ Niniejszy przykład pokazuje sposób wykorzystywania wyjściowej pamięci podrę
   
  W pliku Service.cs przykładowego projektu usługi zarówno `GetCustomer` i `GetCustomers` operacje są oznaczone <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, który zapewnia nazwa profilu pamięci podręcznej "CacheFor60Seconds". W pliku Web.config projektu usługi profilu pamięci podręcznej "CacheFor60Seconds" znajduje się w obszarze <`caching`> elementu <`system.web`>. Dla tego profilu pamięci podręcznej wartości `duration` atrybut jest "60", więc odpowiedzi skojarzony z tym profilem są buforowane w pamięci podręcznej danych wyjściowych platformy ASP.NET w 60 sekund. Ponadto w przypadku tego profilu pamięci podręcznej `varmByParam` ma ustawioną wartość atrybutu "format" tego zażąda z różnymi wartościami dla `format` zapytania parametr ciągu ma ich odpowiedzi na buforowane osobno. Na koniec pamięci podręcznej profilu `varyByHeader` ma ustawioną wartość atrybutu "Akceptuj", więc ich odpowiedzi na buforowane osobno żądania z różnych wartości nagłówka Accept.  
   
- Plik program.CS w projekcie klienta pokazuje, jak takiego klienta mogą być tworzone za pomocą <xref:System.Net.HttpWebRequest>. Należy pamiętać, że jest to tylko jeden sposób uzyskiwania dostępu do usługi WCF. Istnieje również możliwość uzyskania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak WCF fabryki kanałów i <xref:System.Net.WebClient>. Inne przykłady w zestawie SDK (takie jak [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) próbki i [automatyczne wybieranie formatu](../../../../docs/framework/wcf/samples/automatic-format-selection.md) przykładowy) ilustrują sposób korzystania z tych klas do komunikowania się z usługą WCF.  
+ Plik program.CS w projekcie klienta pokazuje, jak takiego klienta mogą być tworzone za pomocą <xref:System.Net.HttpWebRequest>. Należy pamiętać, że jest to tylko jeden sposób uzyskiwania dostępu do usługi WCF. Istnieje również możliwość uzyskania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak WCF fabryki kanałów i <xref:System.Net.WebClient>. Inne przykłady w zestawie SDK (takie jak [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) przykładowy) ilustrują sposób korzystania z tych klas do komunikowania się z usługą WCF.  
   
 ## <a name="to-run-the-sample"></a>Aby uruchomić przykład  
  Przykład obejmuje trzy projekty:  

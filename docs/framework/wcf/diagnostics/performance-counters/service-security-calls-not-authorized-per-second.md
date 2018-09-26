@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 1eeade5a-ea62-4757-b1f9-1b1b1746abd1
 author: BrucePerlerMS
 ms.openlocfilehash: 17da19e88dfa837cc1e45d0b6af2ebdbfd00182c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157133"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198257"
 ---
-# <a name="service-security-calls-not-authorized-per-second"></a><span data-ttu-id="820be-102">Usługa: Nieautoryzowane wywołania zabezpieczeń na sekundę</span><span class="sxs-lookup"><span data-stu-id="820be-102">Service: Security Calls Not Authorized Per Second</span></span>
-<span data-ttu-id="820be-103">Nazwa licznika: zabezpieczeń wywołania nie autoryzacji na sekundę</span><span class="sxs-lookup"><span data-stu-id="820be-103">Counter name: Security Calls Not Authorized Per Second</span></span>  
+# <a name="service-security-calls-not-authorized-per-second"></a><span data-ttu-id="7084a-102">Usługa: Nieautoryzowane wywołania zabezpieczeń na sekundę</span><span class="sxs-lookup"><span data-stu-id="7084a-102">Service: Security Calls Not Authorized Per Second</span></span>
+<span data-ttu-id="7084a-103">Nazwa licznika: zabezpieczeń wywołania nie autoryzacji na sekundę</span><span class="sxs-lookup"><span data-stu-id="7084a-103">Counter name: Security Calls Not Authorized Per Second</span></span>  
   
-## <a name="description"></a><span data-ttu-id="820be-104">Opis</span><span class="sxs-lookup"><span data-stu-id="820be-104">Description</span></span>  
- <span data-ttu-id="820be-105">Liczba komunikatów przychodzących w jednej sekundy, które pochodzą z prawidłowego użytkownika i odpowiednio chroniona, ale użytkownik nie ma uprawnień do wykonywania określonych zadań.</span><span class="sxs-lookup"><span data-stu-id="820be-105">Number of incoming messages in one second, which are from a valid user and protected properly, but the user is not authorized to do specific tasks.</span></span>  
+## <a name="description"></a><span data-ttu-id="7084a-104">Opis</span><span class="sxs-lookup"><span data-stu-id="7084a-104">Description</span></span>  
+ <span data-ttu-id="7084a-105">Liczba komunikatów przychodzących w jednej sekundy, które pochodzą z prawidłowego użytkownika i odpowiednio chroniona, ale użytkownik nie ma uprawnień do wykonywania określonych zadań.</span><span class="sxs-lookup"><span data-stu-id="7084a-105">Number of incoming messages in one second, which are from a valid user and protected properly, but the user is not authorized to do specific tasks.</span></span>  
   
- <span data-ttu-id="820be-106">Ten licznik jest zwiększany po <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> metoda zwraca `false`.</span><span class="sxs-lookup"><span data-stu-id="820be-106">This counter is incremented when the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> method returns `false`.</span></span>  
+ <span data-ttu-id="7084a-106">Ten licznik jest zwiększany po <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> metoda zwraca `false`.</span><span class="sxs-lookup"><span data-stu-id="7084a-106">This counter is incremented when the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> method returns `false`.</span></span>  
   
- <span data-ttu-id="820be-107">Ten licznik jest typ licznika wydajności [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkId=94649), którego wartość jest obliczana przy użyciu następującej formuły.</span><span class="sxs-lookup"><span data-stu-id="820be-107">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkId=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="7084a-107">Ten licznik jest typ licznika wydajności [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkId=94649), którego wartość jest obliczana przy użyciu następującej formuły.</span><span class="sxs-lookup"><span data-stu-id="7084a-107">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkId=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="820be-108">(N: 1 - N 0) / ((D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="820be-108">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="7084a-108">(N: 1 - N 0) / ((D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="7084a-108">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

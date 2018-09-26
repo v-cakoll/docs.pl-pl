@@ -1,5 +1,5 @@
 ---
-title: '&lt;źródeł&gt; — Element'
+title: '&lt;źródła&gt; — Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 73fe0fb13c191843516a2218c708851abc1851b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752705"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084452"
 ---
-# <a name="ltsourcesgt-element"></a>&lt;źródeł&gt; — Element
-Określa źródła śledzenia, które inicjują śledzenia wiadomości.  
+# <a name="ltsourcesgt-element"></a>&lt;źródła&gt; — Element
+Określa źródła śledzenia, które inicjują komunikatów śledzenia.  
   
  \<Konfiguracja >  
 \<System.Diagnostics >  
-\<źródeł >  
+\<źródła >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,20 +43,20 @@ Określa źródła śledzenia, które inicjują śledzenia wiadomości.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Element wymagany.<br /><br /> Określa źródło śledzenia, który inicjuje śledzenia wiadomości.|  
+|[\<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Element wymagany.<br /><br /> Określa źródło śledzenia, który inicjuje komunikatów śledzenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.|  
+|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie `<sources>` elementu do dodania źródła śledzenia `mySource` i ustaw poziom przełącznik źródła o nazwie `sourceSwitch`. Odbiornik śledzenia konsoli są dodawane który zapisuje informacje śledzenia do konsoli.  
+ Poniższy przykład pokazuje, jak używać `<sources>` elementu do dodania źródła śledzenia `mySource` i ustaw poziom przełącznik źródła o nazwie `sourceSwitch`. Detektor śledzenia konsoli jest dodawany, który zapisuje informacje śledzenia do konsoli.  
   
 ```xml  
 <configuration>  

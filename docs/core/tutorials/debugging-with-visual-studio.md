@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 12/15/2017
 ms.custom: vs-dotnet
 ms.openlocfilehash: 4623f4efa8637bd30f378006a92bfc4965429182
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473413"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082919"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Debugowanie aplikacji Hello World w programie Visual Studio 2017
 

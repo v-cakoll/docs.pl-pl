@@ -1,5 +1,5 @@
 ---
-title: '&lt;element assemblyIdentity&gt; elementu &lt;środowiska wykonawczego&gt;'
+title: '&lt;assemblyIdentity&gt; elementu &lt;środowiska uruchomieniowego&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744970"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077346"
 ---
-# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;element assemblyIdentity&gt; elementu &lt;środowiska wykonawczego&gt;
+# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; elementu &lt;środowiska uruchomieniowego&gt;
 Zawiera informacje identyfikujące zestaw.  
   
  \<Konfiguracja >  
 \<runtime>  
 \<assemblybinding — >  
 \<dependentAssembly >  
-\<element assemblyIdentity >  
+\<assemblyIdentity >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,18 +44,18 @@ culture="assembly culture"/>
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |`name`|Atrybut wymagany.<br /><br /> Nazwa zestawu|  
-|`culture`|Atrybut opcjonalny.<br /><br /> Ciąg, który określa język i kraj/region zestawu.|  
-|`publicKeyToken`|Atrybut opcjonalny.<br /><br /> Wartość szesnastkowa, która określa silnej nazwy zestawu.|  
-|`processorArchitecture`|Atrybut opcjonalny.<br /><br /> Jedna z wartości "x86", "amd64", "msil" lub "ia64", określający architektury procesora dla zestawu, który zawiera kod specyficznych dla procesora. Wartości nie jest rozróżniana. Jeśli ten atrybut jest przypisany wszelkie inne wartości, całą `<assemblyIdentity>` element jest ignorowana. Zobacz <xref:System.Reflection.ProcessorArchitecture>.|  
+|`culture`|Atrybut opcjonalny.<br /><br /> Ciąg, który określa język i kraj/region, zestawu.|  
+|`publicKeyToken`|Atrybut opcjonalny.<br /><br /> Wartość szesnastkowa, która określa silną nazwę zestawu.|  
+|`processorArchitecture`|Atrybut opcjonalny.<br /><br /> Jedna z wartości "x86", "amd64", "msil" lub "ia64", określając architekturę procesora dla zestawu, który zawiera kod specyficzny dla procesora. Wartości nie jest rozróżniana wielkość liter. Jeśli ten atrybut zostanie przypisany jakąkolwiek inną wartość, całą `<assemblyIdentity>` element jest ignorowany. Zobacz <xref:System.Reflection.ProcessorArchitecture>.|  
   
-## <a name="processorarchitecture-attribute"></a>Element processorArchitecture atrybutu  
+## <a name="processorarchitecture-attribute"></a>Atrybutu processorArchitecture  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`amd64`|64-bitowy procesor AMD tylko.|  
+|`amd64`|64-bitowy procesor firmy AMD tylko.|  
 |`ia64`|64-bitowy procesor Intel tylko.|  
-|`msil`|Neutralna względem procesora i usługi bits dla programu word|  
-|`x86`|32-bitowy procesor Intel, albo natywne lub w systemie Windows w środowisku Windows (WOW) w 64-bitowej platformy.|  
+|`msil`|Neutralne pod kątem procesor i bity na słowo|  
+|`x86`|32-bitowy procesor firmy Intel, albo natywne lub Windows w środowisku Windows (WOW) na platformie 64-bitowej.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -71,11 +70,11 @@ culture="assembly culture"/>
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Każdy  **\<dependentAssembly >** element musi mieć jeden  **\<assemblyIdentity >** element podrzędny.  
+ Każdy  **\<dependentAssembly >** elementu musi mieć jeden  **\<assemblyIdentity >** elementu podrzędnego.  
   
- Jeśli `processorArchitecture` jest obecny, atrybut `<assemblyIdentity>` element ma zastosowanie tylko do zestawu z odpowiedniej architektury procesora. Jeśli `processorArchitecture` atrybut nie jest obecny, `<assemblyIdentity>` elementu można zastosować do zestawu z dowolnej architektury procesora.  
+ Jeśli `processorArchitecture` jest obecny, atrybut `<assemblyIdentity>` element ma zastosowanie tylko do zestawu z odpowiedniej architektury procesora. Jeśli `processorArchitecture` nie jest obecny, atrybut `<assemblyIdentity>` elementu można zastosować do zestawu za pomocą dowolnej architektury procesora.  
   
- W poniższym przykładzie przedstawiono plik konfiguracji dla dwóch zestawów o takiej samej nazwie, która docelowa dwie różne architektury procesora dwóch i których wersje ma nie została zachowana zsynchronizowany. Gdy aplikacja wykonuje na x86 platformy pierwszy `<assemblyIdentity>` element ma zastosowanie i innych jest ignorowana. Jeśli aplikacja jest wykonywana na platformie niż x86 lub ia64, obie są ignorowane.  
+ Poniższy przykład pokazuje plik konfiguracji dla dwóch zestawów o takiej samej nazwie, przeznaczone na platformę dwóch różnych dwóch architektury procesora, a której wersji ma nie została zachowana synchronizację. Gdy aplikacja wykonuje na x86 platformy pierwszy `<assemblyIdentity>` element ma zastosowanie i innych jest ignorowana. Jeśli aplikacja jest wykonywana na platformie innej niż x86 lub ia64, obie są ignorowane.  
   
 ```xml  
 <configuration>  
@@ -102,10 +101,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- Jeśli plik konfiguracji zawiera `<assemblyIdentity>` elementu bez `processorArchitecture` atrybutu, a nie zawiera element, który odpowiada platformie elementu bez `processorArchitecture` atrybut jest używany.  
+ Jeśli plik konfiguracji zawiera `<assemblyIdentity>` element bez `processorArchitecture` atrybutu i nie zawiera element, który odpowiada platformie elementu bez `processorArchitecture` atrybut jest używany.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak o podanie informacji o zestawie.  
+ Poniższy przykład pokazuje, jak zapewnić informacje o zestawie.  
   
 ```xml  
 <configuration>  

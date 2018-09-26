@@ -3,16 +3,15 @@ title: '&lt;sessionTokenRequirement&gt;'
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6c40948633eaf892db06e9bba756158dfc3c4a2e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4d5d2348f04ace7596a3a513c5106ea612dc17b7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754993"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070095"
 ---
 # <a name="ltsessiontokenrequirementgt"></a>&lt;sessionTokenRequirement&gt;
-Zapewnia konfigurację <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> klasy lub klas pochodnych.  
+Udostępnia konfigurację dla <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> klasy lub klas pochodnych.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -42,7 +41,7 @@ Zapewnia konfigurację <xref:System.IdentityModel.Tokens.SessionSecurityTokenHan
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|cykl życia|Określa okres istnienia tokenów sesji.|  
+|cykl życia|Określa okres istnienia tokenów, sesji.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -51,7 +50,7 @@ Zapewnia konfigurację <xref:System.IdentityModel.Tokens.SessionSecurityTokenHan
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Dodaje określony zabezpieczenia programu obsługi tokenów do kolekcji programu obsługi tokenów.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Programu obsługi tokenów zabezpieczeń określone są dodawane do kolekcji programu obsługi tokenów.|  
   
 ## <a name="example"></a>Przykład  
   

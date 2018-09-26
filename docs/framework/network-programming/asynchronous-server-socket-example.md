@@ -1,5 +1,5 @@
 ---
-title: Przykład gniazda serwera asynchroniczne
+title: Przykład asynchronicznego gniazda serwera
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9b770101e4295ea0c254905dd31f0e57527346fa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 6816b22014f9e6669abe0b1aab62d0863e1f895b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728404"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090139"
 ---
-# <a name="asynchronous-server-socket-example"></a>Przykład gniazda serwera asynchroniczne
-Następujący przykład program tworzy serwera służącą do odbierania żądań połączeń od klientów. Serwer został skompilowany za asynchroniczne gniazda wykonywania aplikacji serwera nie jest zawieszony podczas oczekiwania na połączenie z klientem. Aplikacji odbiera ciąg od klienta, wyświetla ciąg w konsoli, a następnie zwraca ciąg do klienta. Ciąg z klienta musi zawierać ciąg "\<EOF >" która sygnalizuje koniec komunikatu.  
+# <a name="asynchronous-server-socket-example"></a>Przykład asynchronicznego gniazda serwera
+Poniższy przykład program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest tworzone za pomocą asynchronicznego gniazda, więc wykonywanie aplikacji serwera nie jest wstrzymany, podczas oczekiwania na połączenie z klientem. Aplikacja odbiera ciąg od klienta, wyświetla ciąg w konsoli i następnie zwraca ciąg do klienta. Ciąg z klienta może zawierać ciąg "\<EOF >" celu sygnalizowania, że koniec komunikatu.  
   
 ```vb  
 Imports System  

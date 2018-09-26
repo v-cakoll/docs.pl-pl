@@ -11,39 +11,38 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-manager: douge
-ms.openlocfilehash: e3e5ad7dd44dcaf1593ac80bbe6d0a367964e4e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5a437af90f29bc601215176ad5c4fec702ddbc0
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512479"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073726"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Porady: określanie kontekstu zabezpieczeń dla usług
-Domyślnie usługi uruchamiane w kontekście zabezpieczeń inną niż zalogowanego użytkownika. Usługi uruchamiane w kontekście domyślnego konta systemu o nazwie `LocalSystem`, która umożliwi im różne przywileje dostępu do zasobów systemowych od użytkownika. Można zmienić to zachowanie, aby określić inne konto użytkownika usługi powinny uruchamiania.  
+Domyślnie usługi uruchamiane w kontekście zabezpieczeń inny niż zalogowany użytkownik. Usługi uruchamiane w kontekście domyślnego konta systemu o nazwie `LocalSystem`, która umożliwi im różne przywileje dostępu do zasobów systemowych, nie użytkownik. Możesz zmienić to zachowanie, aby określić inne konto użytkownika na którym jest uruchamiany z usługą.  
   
- Ustaw kontekst zabezpieczeń przez manipulowanie <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> właściwości dla procesu, w którym jest uruchamiana usługa. Ta właściwość pozwala ustawić jedną z czterech typy kont usługi:  
+ Ustaw kontekst zabezpieczeń, manipulowanie <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> właściwości dla procesu, w którym usługa jest uruchamiana. Ta właściwość umożliwia ustawianie usługi do zestawu obejmującego cztery typy konta:  
   
--   `User`, co powoduje, że system z monitem o prawidłowej nazwy użytkownika i hasła, gdy usługa jest zainstalowana i działa w kontekście konta określonego przez pojedynczego użytkownika w sieci, a  
+-   `User`, która sprawia, że system wyświetla monit o podanie prawidłowej nazwy użytkownika i hasła, gdy usługa jest zainstalowana i działa w kontekście konta określonego przez pojedynczego użytkownika w sieci.  
   
--   `LocalService`, które są uruchamiane w kontekście konta działa jako użytkownik bez uprawnień na komputerze lokalnym, przedstawiając poświadczeń anonimowego do dowolnego serwera zdalnego;  
+-   `LocalService`, które są uruchamiane w kontekście konta, który działa jako użytkownik bez uprawnień na komputerze lokalnym i przedstawia poświadczenia anonimowe każdemu zdalnemu serwerowi;  
   
--   `LocalSystem`, które są uruchamiane w kontekście konta, które udostępnia szerokie uprawnienia lokalnego, przedstawiając poświadczeń komputera do dowolnego serwera zdalnego;  
+-   `LocalSystem`, które są uruchamiane w kontekście konta, które zapewnia szerokie uprawnienia lokalnego i przedstawia poświadczenia komputera każdemu zdalnemu serwerowi;  
   
--   `NetworkService`, które są uruchamiane w kontekście konta działa jako użytkownik bez uprawnień na komputerze lokalnym, przedstawiając poświadczeń komputera do dowolnego serwera zdalnego.  
+-   `NetworkService`, które są uruchamiane w kontekście konta, który działa jako użytkownik bez uprawnień na komputerze lokalnym, a poświadczenia komputera każdemu zdalnemu serwerowi przedstawia.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.ServiceProcess.ServiceAccount> wyliczenia.  
   
-### <a name="to-specify-the-security-context-for-a-service"></a>Aby określić kontekstu zabezpieczeń dla usługi  
+### <a name="to-specify-the-security-context-for-a-service"></a>Do określenia kontekstu zabezpieczeń dla usługi  
   
-1.  Po utworzeniu usługi, należy dodać wymagane pliki instalacyjne dla niego. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie instalatorów do Twojej aplikacji usługi](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Po utworzeniu usługi, dodanie niezbędnych instalatorów dla niego. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie instalatorów do aplikacji usługi](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  W Projektancie dostępu `ProjectInstaller` klasy, a następnie kliknij przycisk Instalatora procesu usługi dla usługi pracujesz.  
+2.  W Projektancie dostępu `ProjectInstaller` klasy, a następnie kliknij przycisk Instalatora procesu usługi dla usługi, którymi pracujesz.  
   
     > [!NOTE]
-    >  Dla każdej aplikacji usługi istnieją co najmniej dwa składniki instalacji w `ProjectInstaller` klasy —, który instaluje procesy dla wszystkich usług w projekcie oraz jednego Instalatora dla każdej usługi, ta aplikacja zawiera. W tym wystąpieniu chcesz wybrać <xref:System.ServiceProcess.ServiceProcessInstaller>.  
+    >  Dla każdej aplikacji usługi są co najmniej dwa składniki instalacyjne w `ProjectInstaller` klasy — taki, który instaluje procesów dla wszystkich usług w projekcie i jednego Instalatora dla każdej usługi, które zawiera aplikację. W tym przypadku chcesz wybrać <xref:System.ServiceProcess.ServiceProcessInstaller>.  
   
-3.  W **właściwości** ustaw <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> na odpowiednią wartość.  
+3.  W **właściwości** oknie <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> odpowiednią wartość.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

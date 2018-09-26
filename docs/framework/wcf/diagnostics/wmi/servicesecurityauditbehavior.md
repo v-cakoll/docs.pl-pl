@@ -3,13 +3,12 @@ title: ServiceSecurityAuditBehavior
 ms.date: 03/30/2017
 ms.assetid: 2c5809e7-5364-44ce-bc71-848be4672e2a
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 3adc721dd8ad0fb706e172373e5da70fe6032db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f43ee752830d95db6bbbdbe311b6d77735e31b5
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485898"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070152"
 ---
 # <a name="servicesecurityauditbehavior"></a>ServiceSecurityAuditBehavior
 ServiceSecurityAuditBehavior  
@@ -32,39 +31,39 @@ class ServiceSecurityAuditBehavior : Behavior
 ## <a name="properties"></a>Właściwości  
  Klasa ServiceSecurityAuditBehavior ma następujące właściwości:  
   
-### <a name="auditloglocation"></a>AuditLogLocation  
+### <a name="auditloglocation"></a>auditLogLocation  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Lokalizacja dziennika inspekcji.  
   
-### <a name="messageauthenticationauditlevel"></a>MessageAuthenticationAuditLevel  
+### <a name="messageauthenticationauditlevel"></a>messageAuthenticationAuditLevel  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Typ poziomu uwierzytelniania komunikatu używany do rejestrowania zdarzeń inspekcji.  
+ Typ poziom uwierzytelniania wiadomości, która jest używana do rejestrowania zdarzeń inspekcji.  
   
-### <a name="serviceauthorizationauditlevel"></a>ServiceAuthorizationAuditLevel  
+### <a name="serviceauthorizationauditlevel"></a>serviceAuthorizationAuditLevel  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Typy zdarzeń autoryzacji, które są rejestrowane w dzienniku inspekcji.  
   
-### <a name="suppressauditfailure"></a>SuppressAuditFailure  
+### <a name="suppressauditfailure"></a>suppressAuditFailure  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Wartość logiczna określająca zachowanie w sytuacji wystąpienia błędów zapisu do dziennika inspekcji.  
+ Wartość logiczna określająca zachowanie w sytuacji pominięcia błędów zapisu do dziennika inspekcji.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>

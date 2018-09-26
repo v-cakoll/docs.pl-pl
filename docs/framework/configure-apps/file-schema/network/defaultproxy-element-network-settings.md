@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultProxy —&gt; — Element (ustawienia sieciowe)'
+title: '&lt;defaultProxy —&gt; — Element (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1e9548c6d43824ea5017b73a132eb49444ed6c77
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: c1783776b62532a2bd28067ca9bdb6ae4c80c717
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140193"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070778"
 ---
-# <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy —&gt; — Element (ustawienia sieciowe)
+# <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy —&gt; — Element (ustawienia sieci)
 Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).  
   
  \<Konfiguracja >  
@@ -45,29 +44,29 @@ Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
 |`enabled`|Określa, czy jest używany serwer proxy sieci web. Wartość domyślna to `true`.|  
-|`useDefaultCredentials`|Określa, czy dostępu do serwera proxy sieci web są używane domyślne poświadczenia dla tego hosta. Wartość domyślna to `false`.|  
+|`useDefaultCredentials`|Określa, czy domyślne poświadczenia dla tego hosta są używane do dostępu do serwera proxy sieci web. Wartość domyślna to `false`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[bypasslist —](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, opisujących adresów, które nie korzystają z serwera proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|  
 |[Moduł](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Dodaje nowy moduł serwera proxy aplikacji.|  
-|[Serwer proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Definiuje serwera proxy.|  
+|[Serwer proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Określa serwer proxy.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Zawiera ustawienia, które określają sposób programu .NET Framework łączy się z siecią.|  
+|[przestrzeni nazw System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Zawiera ustawienia, które określają, jak .NET Framework łączy się z siecią.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli defaultProxy — element jest pusta, ustawienia serwera proxy w programie Internet Explorer będzie używany. To zachowanie różni się od programu .NET Framework w wersji 1.1.  
+ Jeśli defaultProxy element jest pusta, ustawienia serwera proxy z programu Internet Explorer będzie używany. To zachowanie różni się od wersji 1.1 programu .NET Framework.  
   
- Jest zwracany wyjątek, jeśli [modułu](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) element określa niepublicznego typu, nie jest pochodny typ <xref:System.Net.IWebProxy> klasy wystąpił wyjątek z domyślny konstruktor obiektu lub wystąpił wyjątek podczas Pobieranie określony system domyślny serwer proxy. <xref:System.Exception.InnerException%2A> Na wyjątku powinna mieć więcej informacji na temat przyczynę błędu.  
+ Wyjątek jest generowany, jeśli [modułu](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) element określa typu niepublicznego, typ nie uzyskuje z <xref:System.Net.IWebProxy> klasy wystąpił wyjątek z domyślny konstruktor obiektu lub wystąpił wyjątek podczas Pobieranie system określony domyślny serwer proxy. <xref:System.Exception.InnerException%2A> Właściwość w drodze wyjątku powinien mieć więcej informacji na temat przyczyny błędu.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład używa ustawień domyślnych z serwera proxy programu Internet Explorer, określa adres serwera proxy i pomija serwera proxy na potrzeby dostępu lokalnego i contoso.com.  

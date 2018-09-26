@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: 09ce1310-ee31-493c-a71e-010bafc42fcf
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: ed650d5011790c7049529b1cbfda5584b294d849
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: cfbf554bb3b8cdd05338879af5be1abcc0a17de1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484644"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172683"
 ---
 # <a name="ui-automation-support-for-the-headeritem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu HeaderItem
 > [!NOTE]

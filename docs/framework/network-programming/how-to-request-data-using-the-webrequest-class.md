@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dane przy użyciu klasy WebRequest żądania'
+title: 'Instrukcje: żądanie danych przy użyciu klasy WebRequest'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e02ad4772d3ba84a2735a2e146a9979862d75989
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8928ce8790f58b6920c16cbfd9fc8d9aa6644a44
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397718"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075414"
 ---
-# <a name="how-to-request-data-using-the-webrequest-class"></a>Porady: dane przy użyciu klasy WebRequest żądania
-W poniższej procedurze opisano kroki używane do żądania zasobów z serwera, na przykład, strony sieci Web lub pliku. Zasób musi być identyfikowany przez identyfikator URI.  
+# <a name="how-to-request-data-using-the-webrequest-class"></a>Instrukcje: żądanie danych przy użyciu klasy WebRequest
+Poniższa procedura opisuje kroki używane do żądania zasobu z serwera, na przykład, strony sieci Web lub pliku. Zasób musi być identyfikowany przez identyfikator URI.  
   
 ### <a name="to-request-data-from-a-host-server"></a>Żądanie danych z serwera hosta  
   
-1.  Utwórz <xref:System.Net.WebRequest> wystąpienia przez wywołanie metody <xref:System.Net.WebRequest.Create%2A> o identyfikatorze URI zasobu.  
+1.  Tworzenie <xref:System.Net.WebRequest> wystąpienia, wywołując <xref:System.Net.WebRequest.Create%2A> za pomocą identyfikatora URI zasobu.  
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/");  
@@ -37,9 +36,9 @@ W poniższej procedurze opisano kroki używane do żądania zasobów z serwera, 
     ```  
   
     > [!NOTE]
-    >  Platforma .NET Framework zapewnia oparte na protokole klasy pochodzące od **WebRequest** i **WebResponse** identyfikatory URI, które rozpoczynają się od "http:", "https:", "ftp:", i "pliku:". Aby uzyskać dostęp do zasobów przy użyciu innych protokołów, musi implementować klasy specyficzne dla protokołu, pochodzących z **WebRequest** i **WebResponse**. Aby uzyskać więcej informacji, zobacz [programowania podłączany protokołów](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .  
+    >  Program .NET Framework zawiera klasy pochodne klasy specyficzne dla protokołu **WebRequest** i **elementu WebResponse** identyfikatory URI, które zaczynają się od "http:", "https:", "ftp:", i "plik:". Aby uzyskać dostęp do zasobów przy użyciu innych protokołów, musi implementować klasy specyficzne dla protokołu, które wynikają z **WebRequest** i **elementu WebResponse**. Aby uzyskać więcej informacji, zobacz [programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .  
   
-2.  Ustawianie wartości właściwości wymaganych w **WebRequest**. Na przykład, aby włączyć uwierzytelnianie, należy ustawić **poświadczenia** dla właściwości wystąpienia <xref:System.Net.NetworkCredential> klasy.  
+2.  Ustaw wszystkie wartości właściwości, które są potrzebne w **WebRequest**. Na przykład, aby włączyć uwierzytelnianie, należy ustawić **poświadczenia** właściwości wystąpienia <xref:System.Net.NetworkCredential> klasy.  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -49,7 +48,7 @@ W poniższej procedurze opisano kroki używane do żądania zasobów z serwera, 
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     W większości przypadków **WebRequest** klasy są wystarczające, aby odbierać dane. Jednak jeśli należy ustawić właściwości specyficzne dla protokołu, należy rzutować **WebRequest** typowi specyficzne dla protokołu. Na przykład do właściwości dostępu specyficzne dla protokołu HTTP <xref:System.Net.HttpWebRequest>, rzutowanie **WebRequest** do **HttpWebRequest** odwołania. W poniższym przykładzie przedstawiono sposób ustawiania specyficzne dla protokołu HTTP <xref:System.Net.HttpWebRequest.UserAgent%2A> właściwości.  
+     W większości przypadków **WebRequest** klasy jest wystarczająca do odbierania danych. Jednak jeśli potrzebujesz ustawić właściwości specyficzne dla protokołu, należy rzutować **WebRequest** typowi specyficzne dla protokołu. Na przykład, aby właściwości dostępu właściwe dla protokołu HTTP <xref:System.Net.HttpWebRequest>, rzutowania **WebRequest** do **HttpWebRequest** odwołania. Poniższy przykład kodu pokazuje, jak ustawić specyficzne dla protokołu HTTP <xref:System.Net.HttpWebRequest.UserAgent%2A> właściwości.  
   
     ```csharp  
     ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
@@ -59,7 +58,7 @@ W poniższej procedurze opisano kroki używane do żądania zasobów z serwera, 
     Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
     ```  
   
-3.  Aby wysłać żądania do serwera, należy wywołać <xref:System.Net.HttpWebRequest.GetResponse%2A>. Rzeczywisty typ zwróconego **WebResponse** obiektu jest określane przez schemat żądanego identyfikatora URI.  
+3.  Aby wysłać żądanie do serwera, należy wywołać <xref:System.Net.HttpWebRequest.GetResponse%2A>. Rzeczywisty typ zwracanego **elementu WebResponse** obiekt jest określany przez system żądanego identyfikatora URI.  
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -70,9 +69,9 @@ W poniższej procedurze opisano kroki używane do żądania zasobów z serwera, 
     ```  
   
     > [!NOTE]
-    >  Po zakończeniu <xref:System.Net.WebResponse> obiektu, należy go zamknąć, wywołując <xref:System.Net.WebResponse.Close%2A> metody. Alternatywnie, jeśli z obiektu odpowiedzi stają się coraz w strumieniu odpowiedzi, można zamknąć strumienia przez wywołanie metody <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> metody. Jeśli nie zamkniesz odpowiedzi lub strumienia, aplikacja może zabraknie połączenia z serwerem i stają się nie może przetworzyć żądania dodatkowe.  
+    >  Po zakończeniu <xref:System.Net.WebResponse> obiektu, należy go zamknąć, wywołując <xref:System.Net.WebResponse.Close%2A> metody. Alternatywnie w strumieniu odpowiedzi zostały uzyskane z obiekt odpowiedzi, aby zamknąć strumień przez wywołanie metody <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> metody. Jeśli nie zamkniesz odpowiedzi lub strumienia, aplikację można zabraknie połączenia z serwerem i stają się nie może przetworzyć żądań dodatkowych.  
   
-4.  Można uzyskać dostęp do właściwości **WebResponse** lub Zastosuj rzutowanie **WebResponse** do wystąpienia Protokołem do odczytu właściwości specyficzne dla protokołu. Na przykład do właściwości dostępu specyficzne dla protokołu HTTP <xref:System.Net.HttpWebResponse>, rzutowanie **WebResponse** do **HttpWebResponse** odwołania. Poniższy przykład kodu pokazuje, jak można wyświetlić informacje o stanie wysyłane z odpowiedzią.  
+4.  Można uzyskać dostęp do właściwości **elementu WebResponse** lub Zastosuj rzutowanie **elementu WebResponse** do wystąpienia oparte na protokole można odczytać właściwości specyficzne dla protokołu. Na przykład, aby właściwości dostępu właściwe dla protokołu HTTP <xref:System.Net.HttpWebResponse>, rzutowania **elementu WebResponse** do **HttpWebResponse** odwołania. Poniższy przykład kodu pokazuje, jak wyświetlić informacje o stanie wysyłanych z odpowiedzią.  
   
     ```csharp  
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
@@ -82,7 +81,7 @@ W poniższej procedurze opisano kroki używane do żądania zasobów z serwera, 
     Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)  
     ```  
   
-5.  Aby uzyskać strumienia zawierające dane odpowiedzi wysyłane przez serwer, należy użyć <xref:System.Net.HttpWebResponse.GetResponseStream%2A> metody **WebResponse**.  
+5.  Aby uzyskać strumienia zawierające dane odpowiedzi wysyłane przez serwer, użyj <xref:System.Net.HttpWebResponse.GetResponseStream%2A> metody **elementu WebResponse**.  
   
     ```csharp  
     Stream dataStream = response.GetResponseStream();  
@@ -92,7 +91,7 @@ W poniższej procedurze opisano kroki używane do żądania zasobów z serwera, 
     Dim dataStream As Stream = response.GetResponseStream()  
     ```  
   
-6.  Po odczytaniu danych z odpowiedzi, należy albo zamknąć przy użyciu strumienia odpowiedzi **Stream.Close** metody lub zamknij odpowiedzi, za pomocą **WebResponse.Close** metody. Nie jest konieczne do wywołania **Zamknij** metody w strumieniu odpowiedzi i **WebResponse**, ale spowoduje to nie jest szkodliwe. **WebResponse.Close** wywołania **Stream.Close** podczas zamykania odpowiedzi.  
+6.  Po odczytaniu danych z odpowiedzi, należy to zamknąć przy użyciu strumienia odpowiedzi **Stream.Close** metody lub Zamknij przy użyciu odpowiedzi **WebResponse.Close** metody. Nie jest konieczne do wywołania **Zamknij** metody w strumieniu odpowiedzi i **elementu WebResponse**, ale spowoduje tak nie jest szkodliwe. **WebResponse.Close** wywołania **Stream.Close** przy zamykaniu odpowiedzi.  
   
     ```csharp  
     response.Close();  

@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db39d7de3566647b5171b71940c78a9a0ab6f5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350225"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073544"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidmap —&gt; — Element
-Zawiera ASN.1 obiektu (OID), identyfikator mapowania do klasy.  
+Zawiera mapowania identyfikatora (OID) obiektów ASN.1 do klas.  
   
  \<Konfiguracja >  
 \<mscorlib >  
@@ -54,7 +53,7 @@ Zawiera ASN.1 obiektu (OID), identyfikator mapowania do klasy.
 |`mscorlib`|Zawiera `cryptographySettings` elementu.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie  **\<oidmap — >** element zawiera mapowania OID algorytmu wyznaczania wartości skrótu RIPEMD 160 implementacji tego algorytmu wyznaczania wartości skrótu.  
+ Poniższy przykład pokazuje, jak używać  **\<oidmap — >** element zawiera mapowanie identyfikatora OID dla algorytmu wyznaczania wartości skrótu RIPEMD 160 implementacji tego algorytmu wyznaczania wartości skrótu.  
   
 ```xml  
 <configuration>  

@@ -3,19 +3,18 @@ title: System.ServiceModel.Security.SecurityImpersonationSuccess
 ms.date: 03/30/2017
 ms.assetid: e344c7a9-baae-4ffc-a851-85d2e8571d83
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1ae087a9809e4f8098c71890d68e696afd9d20e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 354a5f904808d8dd2d7a2849f028aace1dc4c041
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484715"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172920"
 ---
 # <a name="systemservicemodelsecuritysecurityimpersonationsuccess"></a>System.ServiceModel.Security.SecurityImpersonationSuccess
 System.ServiceModel.Security.SecurityImpersonationSuccess  
   
 ## <a name="description"></a>Opis  
- Personifikacja zabezpieczeń zakończyło się pomyślnie na serwerze.  
+ Personifikacja zabezpieczeń powiodło się na serwerze.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  

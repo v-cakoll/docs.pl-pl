@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaulthttpcachepolicy —&gt; — Element (ustawienia sieciowe)'
+title: '&lt;defaulthttpcachepolicy —&gt; — Element (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741844"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172927"
 ---
-# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaulthttpcachepolicy —&gt; — Element (ustawienia sieciowe)
-Opisuje, czy buforowanie HTTP jest aktywna i opisano domyślne zasad buforowania.  
+# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaulthttpcachepolicy —&gt; — Element (ustawienia sieci)
+Opisuje, czy buforowanie HTTP jest aktywny i w tym artykule opisano domyślne zasady buforowania.  
   
  \<Konfiguracja >  
 \<system.net>  
@@ -44,10 +43,10 @@ Opisuje, czy buforowanie HTTP jest aktywna i opisano domyślne zasad buforowania
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`maximumAge`|Określa maksymalny czas, przed obiektu w pamięci podręcznej jest oznaczona jako wygasła.|  
-|`maximumStale`|Określa maksymalny czas późniejsza niż godzina świeżości obliczaną przed obiektu w pamięci podręcznej jest oznaczona jako wygasła.|  
-|`minimumFresh`|Określa minimalny czas wziąć pod uwagę nowego obiektu w pamięci podręcznej.|  
-|`policyLevel`|Określa, czy zasad buforowania odbywa się automatycznie, czy pomijana jest pamięć podręczna. Wartość domyślna to `BypassCache`.|  
+|`maximumAge`|Określa maksymalny czas, zanim obiektu w pamięci podręcznej, jest ona oznaczona jako wygasła.|  
+|`maximumStale`|Określa maksymalny czas późniejsza niż godzina świeżości obliczaną przed obiektu w pamięci podręcznej, jest ona oznaczona jako wygasła.|  
+|`minimumFresh`|Określa minimalny czas dla obiektu w pamięci podręcznej do być traktowany jako świeży.|  
+|`policyLevel`|Określa, czy zasady buforowania jest automatycznie, czy pomijana jest pamięć podręczna. Wartość domyślna to `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -56,18 +55,18 @@ Opisuje, czy buforowanie HTTP jest aktywna i opisano domyślne zasad buforowania
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[requestCaching —](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Określa mechanizm buforowania żądań sieciowych.|  
+|[requestCaching —](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Określa mechanizm buforowania żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `policyLevel` jest atrybut `BypassCache` lub `Default`.  
+ Wartość `policyLevel` atrybut ma wartość `BypassCache` lub `Default`.  
   
- Wartości `maximumAge`, `maximumStale`, i `minimumFresh` elementy są albo jawne interwał w formacie *d*. *hh*:*mm*:*ss* (dni, godziny, minuty i sekundy), lub stałe `minValue` lub `maxValue`, gdzie to właściwe.  
+ Wartości `maximumAge`, `maximumStale`, i `minimumFresh` elementy są albo jawne przedział czasu mający godziny formatu *d*. *hh*:*mm*:*ss* (dni, godziny, minuty i sekundy), lub stałe `minValue` lub `maxValue`, odpowiednio.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić minimalny czas świeże sześć godzin przez czas maksymalny wiek dwa dni, a maksymalny czas starych czterech godzin.  
+ Poniższy przykład pokazuje, jak określić minimalny czas od nowa, sześć godzin przez czas maksymalny wiek dwóch dni i maksymalny czas stałe wynoszące cztery godziny.  
   
 ```xml  
 <configuration>  

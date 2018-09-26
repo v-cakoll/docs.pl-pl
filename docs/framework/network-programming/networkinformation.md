@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 88b39b5ae01ec5b22044dde82ba0f802c1a50ca9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b5293afbda1bdf13db318b072696c597a12b8187
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526755"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075739"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> Przestrzeń nazw umożliwia zbieranie informacji na temat zdarzeń w sieci, zmiany, statystyk i właściwości. Możesz również określić, czy zdalny host jest osiągalny, za pomocą <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> klasy.  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Dodaj&gt; elementu connectionmanagement — (ustawienia sieciowe)'
+title: '&lt;Dodaj&gt; Element dla connectionManagement (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c6cfd036a98c345da23fc7b3699987c9678e149d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753745"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080328"
 ---
-# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;Dodaj&gt; elementu connectionmanagement — (ustawienia sieciowe)
-Dodaje adres IP lub nazwa DNS do listy zarządzania połączenia.  
+# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;Dodaj&gt; Element dla connectionManagement (ustawienia sieci)
+Dodaje adres IP lub nazwę DNS na liście zarządzania połączenia.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<connectionmanagement — >  
+\<connectionManagement >  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -45,7 +44,7 @@ Dodaje adres IP lub nazwa DNS do listy zarządzania połączenia.
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
 |`address`|Ciąg opisujący adresu IP lub nazwy DNS.|  
-|`maxconnection`|Maksymalna liczba połączeń z serwerem. Jeśli nie zostaną podane, wartość domyślna to 2.|  
+|`maxconnection`|Maksymalna liczba dozwolonych połączeń z serwerem. Jeśli nie zostanie podany, wartość domyślna to 2.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -54,18 +53,18 @@ Dodaje adres IP lub nazwa DNS do listy zarządzania połączenia.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[connectionmanagement —](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieci.|  
+|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `address` atrybut powinien być gwiazdkę, aby wskazać wszystkie połączenia lub ciąg w formie `<schema>://<idn_hostname>[:<port>]`.  
+ Wartość `address` atrybut powinien być gwiazdki, aby pokazać wszystkie połączenia lub ciąg w postaci `<schema>://<idn_hostname>[:<port>]`.  
   
- Jeśli identyfikator URI przekazane do żadnych interfejsów API HTTP zawiera Unicode, nazwa zostanie przekonwertowany wewnętrznie przy użyciu <xref:System.Uri.DnsSafeHost%2A> które może zwracać ciąg punicode (zachowanie zależy od bieżącej konfiguracji IDN).  
+ Jeśli identyfikator URI przekazywany do żadnych interfejsów API protokołu HTTP zawiera Unicode, zostaną przekonwertowane nazwę wewnętrznie za pomocą <xref:System.Uri.DnsSafeHost%2A> której może zwrócić ciąg punicode (zachowanie zależy od bieżącej konfiguracji IDN).  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład konfiguruje aplikację do korzystania z połączeń cztery www.contoso.com serwera i dwa połączenia do innych serwerów.  
+ Poniższy przykład umożliwia skonfigurowanie aplikacji na używanie połączenia cztery www.contoso.com serwera i dwóch połączeń na inne serwery.  
   
 ```xml  
 <configuration>  

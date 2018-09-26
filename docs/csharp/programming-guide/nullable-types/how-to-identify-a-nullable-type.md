@@ -1,20 +1,20 @@
 ---
 title: 'Porady: Identyfikowanie typu dopuszczającego wartość null (C# Programming Guide)'
 description: Dowiedz się, jak ustalić, czy typ jest typ dopuszczający wartość null lub jest wystąpieniem typu dopuszczającego wartość null
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45624950"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089990"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Porady: Identyfikowanie typu dopuszczającego wartość null (C# Programming Guide)
 
-Poniższy przykład pokazuje, jak ustalić, czy <xref:System.Type?displayProperty=nameWithType> wystąpienie reprezentuje typ dopuszczający wartość null:
+Poniższy przykład pokazuje, jak ustalić, czy <xref:System.Type?displayProperty=nameWithType> wystąpienie reprezentuje zamknięte ogólnego typu dopuszczającego wartość null, to znaczy, <xref:System.Nullable%601?displayProperty=nameWithType> typu z określonego typu parametru `T`:
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 
@@ -32,7 +32,7 @@ Kod przedstawiony w poniższym przykładzie służy do ustalania, czy wystąpien
 
 [!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Typy dopuszczające wartości zerowe](index.md)  
 - [Przy użyciu typów dopuszczających wartości zerowe](using-nullable-types.md)  

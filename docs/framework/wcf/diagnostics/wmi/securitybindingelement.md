@@ -3,13 +3,12 @@ title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ceb674ea7c20386acb821d3a41c1ad0c743a7607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19c65b3028ad63b8a78205d00f44cc32322648d5
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487558"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47069977"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
@@ -29,58 +28,58 @@ class SecurityBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Metody  
- Klasa obiektu SecurityBindingElement nie definiuje żadnych metod.  
+ Klasa elementu SecurityBindingElement nie definiuje żadnych metod.  
   
 ## <a name="properties"></a>Właściwości  
- Klasa obiektu SecurityBindingElement ma następujące właściwości:  
+ Klasa elementu SecurityBindingElement ma następujące właściwości:  
   
-### <a name="defaultalgorithmsuite"></a>DefaultAlgorithmSuite  
+### <a name="defaultalgorithmsuite"></a>defaultAlgorithmSuite  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Określa algorytmy używane z powiązaniem.  
+ Określa algorytmów do użycia dla tego wiązania.  
   
-### <a name="includetimestamp"></a>IncludeTimestamp  
+### <a name="includetimestamp"></a>includeTimestamp  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Wartość logiczna określająca, czy każdy komunikat zawiera sygnaturę czasową.  
   
-### <a name="keyentropymode"></a>KeyEntropyMode  
+### <a name="keyentropymode"></a>keyEntropyMode  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Źródło entropii używane do tworzenia kluczy.  
+ Źródło entropia używana do tworzenia kluczy.  
   
 ### <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings  
  Typ danych: LocalServiceSecuritySettings  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Powiązania właściwości zabezpieczeń lokalnej usługi.  
+ Właściwości zabezpieczeń powiązania dla lokalnej usługi.  
   
-### <a name="messagesecurityversion"></a>Właściwości MessageSecurityVersion  
+### <a name="messagesecurityversion"></a>właściwości messageSecurityVersion  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Wersja używana do zabezpieczenia komunikatów.  
   
-### <a name="securityheaderlayout"></a>SecurityHeaderLayout  
+### <a name="securityheaderlayout"></a>securityHeaderLayout  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Kolejność elementów nagłówka zabezpieczeń dla tego powiązania.  
+ Kolejność elementów w nagłówku zabezpieczeń dla tego powiązania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>

@@ -6,65 +6,64 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-manager: douge
-ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a529a94edf3a4cf71150c04994d82b8f21eb996
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517865"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170954"
 ---
 # <a name="how-to-create-windows-services"></a>Porady: tworzenie usług systemu Windows
-Podczas tworzenia usługi za pomocą szablonu projektu programu Visual Studio o nazwie **usługi systemu Windows**. Ten szablon automatycznie nie większość zadań można za pomocą odwołań do odpowiednich klas i przestrzenie nazw, konfigurowanie dziedziczenia z klasy podstawowej dla usług, i zastępowanie kilka metod prawdopodobnie do zastąpienia.  
+Podczas tworzenia usługi można użyć szablonu projektu programu Visual Studio o nazwie **usługi Windows**. Ten szablon automatycznie wykonuje znaczną część pracy za Ciebie, odwołując się do odpowiednich klas i przestrzenie nazw, konfigurując ustawienia dziedziczenia z klasy bazowej dla usług oraz zastępując kilka metod prawdopodobnie chcesz zastąpić.  
   
 > [!WARNING]
->  Szablon projektu usług systemu Windows nie jest dostępna w wersji Express programu Visual Studio.  
+>  Szablon projektu usług Windows nie jest dostępna w wersji Express programu Visual Studio.  
   
- Co najmniej Aby utworzyć usługę funkcjonalną należy:  
+ Jako minimum Aby utworzyć usługę funkcjonalną należy:  
   
 -   Ustaw <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwości.  
   
--   Utwórz niezbędne pliki instalacyjne aplikacji usługi.  
+-   Utwórz niezbędne pliki instalacyjne dla aplikacji usługi.  
   
--   Zastąpienia i określ kod <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metody dostosowania sposoby, w którym działa usługa.  
+-   Zastąpienia i określ kod <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metody dostosowania sposobów, w którym działa usługa.  
   
-### <a name="to-create-a-windows-service-application"></a>Aby utworzyć aplikację usługi systemu Windows  
+### <a name="to-create-a-windows-service-application"></a>Aby utworzyć aplikację Windows Service  
   
-1.  Utwórz **usługi systemu Windows** projektu.  
-  
-    > [!NOTE]
-    >  Aby uzyskać instrukcje dotyczące zapisywania usługi bez użycia szablonu, zobacz [porady: programowane pisanie usług](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
-  
-2.  W **właściwości** ustaw <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwości usługi.  
-  
-     ![Ustaw właściwość ServiceName. ] (../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
+1.  Tworzenie **usługi Windows** projektu.  
   
     > [!NOTE]
-    >  Wartość <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość zawsze musi odpowiadać nazwie rejestrowane w klasach Instalatora. Jeśli zmienisz tę właściwość, należy zaktualizować <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość również klas Instalatora.  
+    >  Aby uzyskać instrukcje dotyczące pisania usługi bez użycia szablonu, zobacz [porady: pisanie usług programowo](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
-3.  Ustaw dowolne z poniższych właściwości, aby określić, jak działają usługi.  
+2.  W **właściwości** oknie <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwości dla Twojej usługi.  
+  
+     ![Ustaw właściwość ServiceName. ](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
+  
+    > [!NOTE]
+    >  Wartość <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość musi zawsze odpowiadać nazwie zarejestrowanej w klasach Instalatora. Jeśli zmienisz tę właściwość, należy zaktualizować <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwości również w klasach Instalatora.  
+  
+3.  Ustaw dowolne z następujących właściwości, aby określić, jak będzie działać usługa.  
   
     |Właściwość|Ustawienie|  
     |--------------|-------------|  
-    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` Aby wskazać, że usługa będzie akceptować żądania przestanie działać; `false` aby zapobiec zatrzymania usługi.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` Aby wskazać, że chce otrzymywać powiadomienia, gdy komputer, na którym mieszka wyłączany, co go do wywołania usługi <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> procedury.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` Aby wskazać, że usługa będzie akceptować żądania, aby wstrzymać lub wznowić uruchomiony; `false` zapobiegające usługi wstrzymać i wznowić.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` Aby wskazać, że usługa może obsługiwać powiadomień o zmianach stanu zasilania komputera; `false` aby zapobiec powiadomienia o tych zmianach usługi.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` na zapisywanie wpisów informacyjny w dzienniku zdarzeń aplikacji, gdy usługa wykonuje akcję; `false` wyłączenie tej funkcji. Aby uzyskać więcej informacji, zobacz [porady: dziennika informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Uwaga:** domyślnie <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> ma ustawioną wartość `true`.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` Aby wskazać, że usługa akceptuje żądania zatrzymania działania; `false` zapobiega zatrzymanie usługi.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` Aby wskazać, że usługa chce otrzymywać powiadomienia o wyłączaniu komputera, na którym ją umieszczono, dzięki czemu może wywołać <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> procedury.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` Aby wskazać, że usługa akceptuje żądania wstrzymania lub wznowienia działania; `false` aby uniemożliwić wstrzymywanie i wznawianie przez usługę.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` Aby wskazać, że usługa może obsługiwać powiadomienia o zmianach stanu zasilania komputera `false` zapobiega bycia powiadamianym o tych zmianach usługi.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` Aby zapisywać wpisy informacyjne w dzienniku zdarzeń aplikacji, gdy usługa wykonuje akcję; `false` Aby wyłączyć tę funkcję. Aby uzyskać więcej informacji, zobacz [jak: informacje dziennika dotyczące usług](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Uwaga:** domyślnie <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> ustawiono `true`.|  
   
     > [!NOTE]
-    >  Gdy <xref:System.ServiceProcess.ServiceBase.CanStop%2A> lub <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> ustawiono `false`, **Menedżera sterowania usługami** spowoduje wyłączenie odpowiednich opcji menu, aby zatrzymać, wstrzymać lub kontynuować korzystanie z usługi.  
+    >  Gdy <xref:System.ServiceProcess.ServiceBase.CanStop%2A> lub <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> są ustawione na `false`, **Menedżera sterowania usługami** spowoduje wyłączenie odpowiednich opcji menu, aby zatrzymać, wstrzymać lub kontynuować usługę.  
   
-4.  Edytor kodu dostępu, a następnie wypełnij przetwarzania dla <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> procedur.  
+4.  Wejdź do edytora kodu, a następnie wypełnij przetwarzania dla <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> procedur.  
   
-5.  Zastąpienie innych metod, dla których chcesz zdefiniować funkcji.  
+5.  Zastąpienie wszelkich innych metod, które mają zostać zdefiniowane funkcje.  
   
-6.  Dodanie niezbędnych instalatorów dla aplikacji usługi. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie instalatorów do Twojej aplikacji usługi](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+6.  Dodanie niezbędnych instalatorów dla aplikacji usługi. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie instalatorów do aplikacji usługi](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-7.  Tworzenie projektu, wybierając **Kompiluj rozwiązanie** z **kompilacji** menu.  
+7.  Kompilowanie projektu przez wybranie **Kompiluj rozwiązanie** z **kompilacji** menu.  
   
     > [!NOTE]
-    >  Nie naciśnij klawisz F5, aby uruchomić projekt — nie można uruchomić projekt usługi w ten sposób.  
+    >  Nie wciskaj F5, aby uruchomić projekt — nie można uruchomić projektu usługi w ten sposób.  
   
 8.  Zainstaluj usługę. Aby uzyskać więcej informacji, zobacz [porady: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   

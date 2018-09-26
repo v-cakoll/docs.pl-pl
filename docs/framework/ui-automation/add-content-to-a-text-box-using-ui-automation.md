@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd1a73-1ecb-4a05-a891-a7827ebb767f
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: aff0e8c6831e44185f1cb77507febf8ccbc86e99
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7c4772d36a88dfede04f7592c1cab776ddcd7d7d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524668"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084361"
 ---
 # <a name="add-content-to-a-text-box-using-ui-automation"></a>Dodawanie zawartości do pola tekstowego przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]

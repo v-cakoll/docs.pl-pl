@@ -1,18 +1,17 @@
 ---
-title: '&lt;Usuń&gt; elementu schemeSettings (ustawienia identyfikatorów Uri)'
+title: '&lt;Usuń&gt; Element dla schemeSettings (ustawienia identyfikatora Uri)'
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8e01f82a476286e27129e4b1a47fefc1ac77c2b5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3f4e3dbdc3dae425e44cd1c0890e8fef9d42a780
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744164"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072725"
 ---
-# <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;Usuń&gt; elementu schemeSettings (ustawienia identyfikatorów Uri)
+# <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;Usuń&gt; Element dla schemeSettings (ustawienia identyfikatora Uri)
 Usuwa ustawienie schematu dla nazwy schematu.  
   
  \<Konfiguracja >  
@@ -35,7 +34,7 @@ Usuwa ustawienie schematu dla nazwy schematu.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Nazwa schematu, którego dotyczy to ustawienie. Obsługiwane są tylko wartości name = "http" i nazwie = "https".|  
+|nazwa|Nazwa schematu, dla której to ustawienie ma zastosowanie. Tylko obsługiwane wartości to nazwa = "http" i nazwie = "https".|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -44,28 +43,28 @@ Usuwa ustawienie schematu dla nazwy schematu.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<schemeSettings > elementu (ustawienia identyfikatorów Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Określa sposób <xref:System.Uri> będzie być analizowana pod kątem określonych systemów.|  
+|[\<schemeSettings >, Element (ustawienia identyfikatora Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Określa, jak <xref:System.Uri> będzie być analizowana pod kątem określonych systemów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie <xref:System.Uri?displayProperty=nameWithType> procent un specjalne klasy zakodowane ogranicznik ścieżki przed wykonaniem kompresji ścieżki. To zostało zaimplementowane jako mechanizm zabezpieczenia przed atakami podobne do poniższych:  
+ Domyślnie <xref:System.Uri?displayProperty=nameWithType> procent un wyprowadza klasy zakodowane ograniczniki ścieżka przed wykonaniem kompresji ścieżki. Było to wdrożone jako mechanizm zabezpieczeń przed atakami, jak pokazano poniżej:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Jeśli ten identyfikator URI jest przekazywane do modułów nie obsługuje procent zakodowane znaków prawidłowo, może spowodować następujące polecenie, które było wykonywane przez serwer:  
+ Jeśli ten identyfikator URI zostanie przekazany do modułów braku obsługi procent zakodowane znaków prawidłowo, może to spowodować następujące polecenie, które są wykonywane przez serwer:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Z tego powodu <xref:System.Uri?displayProperty=nameWithType> klasy pierwszy ogranicznik ścieżki un specjalne, a następnie stosuje kompresji ścieżki. Wynik przekazywanie złośliwego adres URL powyżej, aby <xref:System.Uri?displayProperty=nameWithType> klasy konstruktora powoduje następujący identyfikator URI:  
+ Z tego powodu <xref:System.Uri?displayProperty=nameWithType> pierwszy ograniczniki ścieżki un wyprowadza klasy, a następnie stosuje kompresji ścieżki. Wynik przekazania złośliwy adres URL powyżej <xref:System.Uri?displayProperty=nameWithType> klasy Konstruktor skutkuje następujący identyfikator URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- To zachowanie domyślne można zmodyfikować w taki sposób, aby nie procent ścieżki zakodowanego un ucieczki ograniczniki przy użyciu opcji konfiguracji schemeSettings dla określonego schematu.  
+ To zachowanie domyślne można zmodyfikować w taki sposób, aby nie procent ścieżki zakodowany un ucieczki ograniczniki za pomocą opcji konfiguracji schemeSettings dla określonego schematu.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono konfiguracji używane przez <xref:System.Uri> klasy, która powoduje usunięcie wszystkich ustawień schematu dla schematu http.  
+ W poniższym przykładzie pokazano konfigurację posługują się <xref:System.Uri> klasę, która usuwa wszystkie ustawienia schematu dla schematu http.  
   
 ```xml  
 <configuration>  

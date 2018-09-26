@@ -11,11 +11,11 @@ ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46509057"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171377"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programowanie asynchroniczne oparte na zadanie
 Biblioteka zadań równoległych (TPL) opiera się na koncepcji *zadań*, które reprezentuje operację asynchroniczną. Pod pewnymi względami zadanie jest podobne do wątku lub <xref:System.Threading.ThreadPool> pracy elementu, ale na wyższym poziomie abstrakcji. Termin *równoległość zadań* odwołuje się do co najmniej jeden niezależnych zadań działających równocześnie. Zadania zapewniają dwie podstawowe korzyści:  

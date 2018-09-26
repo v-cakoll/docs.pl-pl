@@ -3,19 +3,18 @@ title: System.ServiceModel.Security.SecurityImpersonationFailure
 ms.date: 03/30/2017
 ms.assetid: e0e61834-72ac-4a58-af32-94e3206a9369
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a2d664963cb7351d288b2866df98d676fe1d00b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f783272ec06454aeafc81b2946d515a645d075ba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33483601"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070693"
 ---
 # <a name="systemservicemodelsecuritysecurityimpersonationfailure"></a>System.ServiceModel.Security.SecurityImpersonationFailure
 System.ServiceModel.Security.SecurityImpersonationFailure  
   
 ## <a name="description"></a>Opis  
- Personifikacja zabezpieczeń nie powiodła się na serwerze.  
+ Personifikacja zabezpieczeń nie powiodło się na serwerze.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  

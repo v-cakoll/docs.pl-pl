@@ -3,56 +3,55 @@ title: Korzystanie z personifikacji z zabezpieczeniami transportu
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 5a4b05031061183cf0dddd82c900065155b1e561
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 537bb1d9cfbda98b0e92833d94b40097fae205fd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501697"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088597"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Korzystanie z personifikacji z zabezpieczeniami transportu
-*Personifikacja* to funkcja aplikacji serwera do podjęcia tożsamości klienta. Jest typowe dla usługi, aby podczas sprawdzania dostępu do zasobów należy używać personifikacji. Aplikacja zostanie uruchomiona przy użyciu konta usługi, ale gdy serwer akceptuje połączenia klienta, personifikuje klienta, dzięki czemu kontroli dostępu są wykonywane przy użyciu poświadczeń klienta. Zabezpieczenia transportu jest to mechanizm przekazywania poświadczeń i zabezpieczania komunikacji przy użyciu tych poświadczeń. W tym temacie opisano, za pomocą zabezpieczeń transportu w systemie Windows Communication Foundation (WCF) z funkcją personifikacji. Aby uzyskać więcej informacji o personifikacji korzystanie z zabezpieczeń komunikatów, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*Personifikacja* to zdolność aplikacji serwera, na potrzeby tożsamości klienta. Jest to typowe dla usługi, aby podczas weryfikacji dostępu do zasobów należy używać personifikacji. Aplikacja zostanie uruchomiona przy użyciu konta usługi, ale gdy serwer akceptuje połączenia klienta, personifikuje klienta, tak, aby sprawdzanie uprawnień dostępu są wykonywane przy użyciu poświadczeń klienta. Zabezpieczenia transportu jest mechanizm przekazywania poświadczeń i zabezpieczenia komunikacji przy użyciu tych poświadczeń. W tym temacie opisano, za pomocą zabezpieczeń transportu w Windows Communication Foundation (WCF) z funkcją personifikacji. Aby uzyskać więcej informacji na temat personifikacji korzystanie z zabezpieczeń komunikatów, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Pięć poziomów personifikacji  
- Zabezpieczenia transportu korzysta z pięciu poziomów personifikacji, zgodnie z opisem w poniższej tabeli.  
+ Transport security korzysta z pięciu poziomów personifikacji, zgodnie z opisem w poniższej tabeli.  
   
 |Poziom personifikacji|Opis|  
 |-------------------------|-----------------|  
-|Brak|Aplikacja serwera nie próbuje dokonać personifikacji klienta.|  
-|Anonimowe|Aplikacja serwera może wykonywać kontroli dostępu przed poświadczenia klienta, ale nie otrzymuje żadnych informacji o tożsamości klienta. Ten poziom personifikacji ma znaczenie tylko do komunikacji na komputerze, takich jak nazwanych potoków. Przy użyciu `Anonymous` z połączenia zdalnego wspiera poziom personifikacji identyfikowanie.|  
-|Zidentyfikuj|Aplikacja serwera zna tożsamości klienta i przeprowadzić weryfikację dostępu pod kątem poświadczenia klienta, ale nie można spersonifikować klienta. Zidentyfikuj jest to domyślny poziom personifikacji używane z poświadczeniami SSPI w programie WCF, chyba że dostawcę tokenów zapewnia poziom personifikacji inny.|  
-|Impersonate|Aplikacja serwera może uzyskiwać dostęp do zasobów na komputerze z serwerem jako klienta oprócz przeprowadzania kontroli dostępu. Aplikacja serwera nie może uzyskać dostęp do zasobów na komputerach zdalnych przy użyciu tożsamości klienta, ponieważ token personifikowanej nie ma poświadczeń sieciowych|  
-|Delegate|Oprócz mających takie same możliwości jak `Impersonate`, poziomu personifikacji delegowanie umożliwia również aplikacji serwera na dostęp do zasobów na komputerach zdalnych przy użyciu tożsamości klienta i do przekazania tożsamości do innych aplikacji.<br /><br /> **Ważne** konto domeny serwera muszą być oznaczone jako zaufane dla delegowania na kontrolerze domeny, aby korzystać z dodatkowych funkcji. Ten poziom personifikacji nie można używać z konta domeny klienta oznaczony jako poufne.|  
+|Brak|Aplikacja serwera nie podjęto próby personifikacji klienta.|  
+|Anonimowe|Aplikacja serwera można wykonywać sprawdzanie uprawnień dostępu przed poświadczenia klienta, ale nie otrzymano informacji o tożsamości klienta. Ten poziom personifikacji ma znaczenie tylko w przypadku komunikacji na komputerze, na przykład do potoków nazwanych. Za pomocą `Anonymous` z połączenia zdalnego podwyższa poziom personifikacji tożsamością.|  
+|Identyfikowanie|Aplikacja serwera wie, tożsamość klienta i można wykonywać sprawdzanie poprawności dostępu do względem poświadczenia klienta, ale nie można spersonifikować klienta. Identyfikowanie jest to domyślny poziom personifikacji, który jest używany przy użyciu poświadczeń SSPI w programie WCF, chyba że dostawcy tokenu, który zapewnia poziom personifikacji różnych.|  
+|Impersonate|Aplikacja serwera może uzyskiwać dostęp do zasobów na komputerze z serwerem, jako klienta oprócz przeprowadzania kontroli dostępu. Aplikacja serwera nie może uzyskiwać dostęp do zasobów na maszyny zdalne przy użyciu tożsamości klienta, ponieważ spersonifikowanego tokenu nie ma poświadczeń sieciowych|  
+|Delegate|Oprócz mających takie same możliwości jak `Impersonate`, poziom personifikacji delegata umożliwia również aplikacji serwera, które uzyskują dostęp do zasobów na maszyny zdalne przy użyciu tożsamości klienta i do przekazywania tożsamość do innych aplikacji.<br /><br /> **Ważne** konto domeny serwera musi być oznaczona jako zaufane dla delegowania na kontrolerze domeny, aby korzystać z dodatkowych funkcji. Ten poziom personifikacji nie można używać z konta domeny klienta oznaczone jako poufne.|  
   
- Poziomy najczęściej używane z zabezpieczeń transportu są `Identify` i `Impersonate`. Poziomy `None` i `Anonymous` nie są zalecane w przypadku typowych, i z uwierzytelnianiem przy użyciu tych poziomów nie obsługują wiele transportów. `Delegate` Poziom jest zaawansowaną funkcją, które mają być używane z rozwagą. Tylko zaufanych serwerów aplikacji należy nadać uprawnienia do delegowania poświadczeń.  
+ Dostępne są następujące poziomy najczęściej używane z zabezpieczeniami transportu `Identify` i `Impersonate`. Poziomy `None` i `Anonymous` nie są zalecane w przypadku typowego użycia i przy użyciu uwierzytelniania za pomocą tych poziomów nie obsługują wielu transportów. `Delegate` Poziom jest zaawansowaną funkcją, która powinna być stosowana z rozwagą. Tylko zaufanych serwerów aplikacji, należy nadać uprawnienia do delegowania poświadczeń.  
   
- Korzystanie z personifikacji na `Impersonate` lub `Delegate` poziomy wymaga aplikacji serwera, aby `SeImpersonatePrivilege` uprawnień. Aplikacja ma to uprawnienie domyślnie, jeśli została uruchomiona przy użyciu konta w grupie Administratorzy lub przy użyciu konta o identyfikatorze SID Service (Usługa sieciowa, Usługa lokalna lub systemu lokalnego). Personifikacja nie wymaga wzajemnego uwierzytelniania klienta i serwera. Nie można używać niektórych schematy uwierzytelniania, które obsługuje personifikacji, takich jak uwierzytelnianie NTLM i przez uwierzytelnianie wzajemne.  
+ Korzystanie z personifikacji w `Impersonate` lub `Delegate` poziomy wymaga aplikacji serwera, aby `SeImpersonatePrivilege` uprawnień. Aplikacja ma to uprawnienie domyślnie, jeśli jest uruchomiony przy użyciu konta w grupie Administratorzy lub przy użyciu konta z identyfikatorem SID usługi (Usługa sieciowa, Usługa lokalna lub systemu lokalnego). Personifikacja nie wymaga wzajemnego uwierzytelniania klienta i serwera. Niektóre schematy uwierzytelniania, które obsługuje personifikacji, takich jak NTLM, nie można używać z wzajemnego uwierzytelniania.  
   
-## <a name="transport-specific-issues-with-impersonation"></a>Problemy specyficzne dla transportu z personifikacji  
- Wybór transportu programu WCF wpływa na możliwe opcje personifikacji. Ta sekcja zawiera opis zagadnień wpływających na standardowego protokołu HTTP i nazwanych potoków transporty w programie WCF. Niestandardowe transportów mają własne ograniczeń na obsługę personifikacji.  
+## <a name="transport-specific-issues-with-impersonation"></a>Problemy specyficzne dla transportu dla personifikacji  
+ Wybór transportu programu WCF wpływa na możliwościami personifikacji. W tej sekcji opisano problemy wpływające na standardowego protokołu HTTP i nazwanych potoków transporty w programie WCF. Niestandardowe transportów ma swoje własne żadnych ograniczeń dotyczących pomocy technicznej dla personifikacji.  
   
 ### <a name="named-pipe-transport"></a>O nazwie transportu potoku  
- Następujące elementy są używane z transportu nazwanego potoku:  
+ Następujące elementy są używane za pomocą transportu nazwanego potoku:  
   
--   Transportu nazwanego potoku jest przeznaczony do użytku tylko na komputerze lokalnym. Transportu nazwanego potoku w programie WCF nie jawnie zezwala na połączenia między komputerami.  
+-   Transportu nazwanego potoku jest przeznaczony do użytku tylko na komputerze lokalnym. Transportu nazwanego potoku w programie WCF nie wyraźnie zezwala na połączenia między komputerami.  
   
--   Nazwane potoki nie można używać z `Impersonate` lub `Delegate` poziom personifikacji. Nazwany potok nie można wymusić na komputerze gwarancji te poziomy personifikacji.  
+-   Nie można używać do potoków nazwanych `Impersonate` lub `Delegate` poziom personifikacji. Nazwany potok nie może wymusić gwarancji na komputerze, na tych poziomach personifikacji.  
   
- Aby uzyskać więcej informacji o nazwanych potoków, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Aby uzyskać więcej informacji na temat potoków nazwanych, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
-### <a name="http-transport"></a>HTTP Transport  
- Powiązania, które używają protokołu HTTP (<xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.BasicHttpBinding>) obsługuje wielu schematów uwierzytelniania, zgodnie z objaśnieniem w [opis uwierzytelniania HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Personifikacja obsługiwany poziom zależy od schematu uwierzytelniania. Następujące elementy są używane z transportu HTTP:  
+### <a name="http-transport"></a>Transportu HTTP  
+ Powiązania, które używają protokołu HTTP (<xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.BasicHttpBinding>) obsługują kilka schematy uwierzytelniania, jak wyjaśniono w [opis uwierzytelniania HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Personifikacja obsługiwany poziom zależy od schematu uwierzytelniania. Następujące elementy są używane przy użyciu protokołu http:  
   
--   `Anonymous` Schemat uwierzytelniania ignoruje personifikacji.  
+-   `Anonymous` Schematu uwierzytelniania ignoruje personifikacji.  
   
--   `Basic` Schemat uwierzytelniania obsługuje tylko `Delegate` poziom. Wszystkie niższe poziomy personifikacji są uaktualniane.  
+-   `Basic` Schematu uwierzytelniania obsługuje tylko `Delegate` poziom. Uaktualniane są wszystkie niższe poziomy personifikacji.  
   
--   `Digest` Schemat uwierzytelniania obsługuje tylko `Impersonate` i `Delegate` poziomów.  
+-   `Digest` Schematu uwierzytelniania obsługuje tylko `Impersonate` i `Delegate` poziomów.  
   
--   `NTLM` Schemat uwierzytelniania wybieranych bezpośrednio lub za pośrednictwem negocjacji, obsługuje tylko `Delegate` poziomu na komputerze lokalnym.  
+-   `NTLM` Schematu uwierzytelniania, można wybierać bezpośrednio lub za pomocą negocjowania, obsługuje tylko `Delegate` poziomu na komputerze lokalnym.  
   
--   Schemat uwierzytelniania Kerberos, który można wybrać tylko za pośrednictwem negocjacji, może służyć o dowolnym poziomie personifikacji obsługiwane.  
+-   Schemat uwierzytelniania Kerberos, który można wybierać wyłącznie przy użyciu negocjacji, może służyć o dowolnym poziomie personifikacji obsługiwane.  
   
  Aby uzyskać więcej informacji na temat protokołu HTTP, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   

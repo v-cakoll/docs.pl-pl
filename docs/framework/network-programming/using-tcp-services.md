@@ -1,5 +1,5 @@
 ---
-title: Za pomocą usług TCP
+title: Stosowanie usług TCP
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d11566182cc9d0b4f2634350868ec94a0685d996
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6ab51da72a7cecac02a2bbd5664dee164239401
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397172"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108653"
 ---
-# <a name="using-tcp-services"></a>Za pomocą usług TCP
-<xref:System.Net.Sockets.TcpClient> Klasy żąda danych od zasobu internetowego za pomocą protokołu TCP. Metody i właściwości **TcpClient** abstrakcyjnej szczegółowe informacje dotyczące tworzenia <xref:System.Net.Sockets.Socket> żądania i odbierania danych za pomocą protokołu TCP. Ponieważ połączenie z urządzeniem zdalnym jest reprezentowana jako strumienia, dane można Odczyt i zapis techniki obsługi strumienia .NET Framework.  
+# <a name="using-tcp-services"></a>Stosowanie usług TCP
+<xref:System.Net.Sockets.TcpClient> Klasy żąda danych od zasobu w Internecie przy użyciu protokołu TCP. Metody i właściwości **TcpClient** abstrakcji szczegółowe informacje dotyczące tworzenia <xref:System.Net.Sockets.Socket> dla żądania i odbierania danych przy użyciu protokołu TCP. Ponieważ połączenie z urządzeniem zdalnym jest reprezentowany jako strumień, dane można czytać i napisane przy użyciu techniki obsługi strumienia środowiska .NET Framework.  
   
- Protokół TCP ustanawia połączenie ze zdalnego punktu końcowego, a następnie używa tego połączenia w celu wysyłania i odbierania pakietów danych. Protokół TCP jest odpowiedzialny za zapewnienie, że pakiety danych są wysyłane do punktu końcowego i zebranych w odpowiedniej kolejności, po ich nadejściu.  
+ Protokół TCP nawiązuje połączenie ze zdalnego punktu końcowego, a następnie używa tego połączenia do wysyłania i odbierania pakietów danych. TCP jest odpowiedzialny za zagwarantowanie, że pakiety danych są wysyłane do punktu końcowego i zebranych w odpowiedniej kolejności, po ich nadejściu.  
   
- Nawiązywania połączeń TCP, musisz znać adres urządzenia sieciowego obsługującego usługę, które są potrzebne, i musi znać port TCP używany przez usługę do komunikowania się. Internet Assigned Numbers Authority (Iana) definiuje numery portów dla usług wspólnej (zobacz www.iana.org/assignments/port-numbers). Usługi nie ma na liście przez organizację Iana może mieć numeru portu z zakresu od 1024 do 65 535.  
+ Do nawiązywania połączeń TCP, musisz znać adres urządzenia sieciowego, obsługujący usługę, czego potrzebujesz, i musi znać port TCP używany przez usługę do komunikowania się. Internet Assigned Numbers Authority (Iana) definiuje numery portów dla usług common (patrz www.iana.org/assignments/port-numbers). Usługi nie ma na liście Iana może mieć numery portów z zakresu od 1024 do 65 535.  
   
- W poniższym przykładzie pokazano ustawienie się **TcpClient** nawiązać połączenia z serwerem czasu na porcie TCP 13.  
+ W poniższym przykładzie pokazano ustawienie zapasowej **TcpClient** nawiązać połączenia z serwerem czasu na porcie TCP 13.  
   
 ```vb  
 Imports System  
@@ -103,9 +102,9 @@ public class TcpTimeClient {
 }  
 ```  
   
- <xref:System.Net.Sockets.TcpListener> Służy do monitorowania port TCP dla żądań przychodzących, a następnie utworzyć albo **gniazda** lub **TcpClient** który zarządza połączenie z klientem. <xref:System.Net.Sockets.TcpListener.Start%2A> Metoda umożliwia nasłuchiwania i <xref:System.Net.Sockets.TcpListener.Stop%2A> metody wyłącza nasłuchiwanie na porcie. <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> Metoda akceptuje przychodzące żądania połączeń i tworzy **TcpClient** można obsłużyć żądania i <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> metoda akceptuje przychodzące żądania połączeń i tworzy **gniazda**obsłużyć żądanie.  
+ <xref:System.Net.Sockets.TcpListener> Służy do monitorowania port TCP dla żądań przychodzących, a następnie utwórz jedną **gniazda** lub **TcpClient** który zarządza połączenie z klientem. <xref:System.Net.Sockets.TcpListener.Start%2A> Metoda umożliwia nasłuchiwania i <xref:System.Net.Sockets.TcpListener.Stop%2A> metoda wyłącza nasłuchuje na porcie. <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> Metoda akceptuje przychodzące żądania połączeń i tworzy **TcpClient** obsłużyć żądania oraz <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> metoda akceptuje przychodzące żądania połączeń i tworzy **gniazda**obsłużyć żądania.  
   
- W poniższym przykładzie pokazano tworzenie sieci czas serwera za pomocą **TcpListener** monitorować TCP port 13. Po zaakceptowaniu przychodzącego żądania połączenia czas server odpowie bieżącą datę i godzinę z serwera hosta.  
+ W poniższym przykładzie pokazano tworzenie sieci serwera przy użyciu **TcpListener** monitorowanie portu TCP 13. Po zaakceptowaniu żądań połączenia przychodzących, serwer czasu odpowiada aktualnej daty i godziny od serwera hosta.  
   
 ```vb  
 Imports System  

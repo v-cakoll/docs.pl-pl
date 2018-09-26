@@ -9,53 +9,52 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7af6342e9c05fc4e6c1bf4daac59db14ccdf22c7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741740"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073438"
 ---
 # <a name="application-settings-schema"></a>Schemat ustawień aplikacji
 
-Ustawienia aplikacji pozwalają na przechowywanie i pobieranie ustawień zakresu aplikacji i zakresu użytkownika aplikacji formularzy systemu Windows lub programu ASP.NET. W tym kontekście *ustawienie* jest dowolne informacje, które mogą być specyficzne dla aplikacji lub specyficzne dla bieżącego użytkownika — wszystko z ciągu połączenia bazy danych dla użytkownika preferowana przez domyślny rozmiar okna.
+Ustawienia aplikacji umożliwiają aplikacji Windows Forms i ASP.NET do przechowywania i pobierania ustawień o zakresie aplikacji i zakresie użytkownika. W tym kontekście *ustawienie* jest dowolne informacje, które mogą być specyficzne dla aplikacji lub specyficzne dla bieżącego użytkownika — od ciąg połączenia bazy danych dla użytkownika preferowanego domyślny rozmiar okna.
 
-Domyślnie ustawienia aplikacji w aplikacji formularzy systemu Windows używa <xref:System.Configuration.LocalFileSettingsProvider> klasy, która przechowuje ustawienia w pliku konfiguracji XML przy użyciu systemu konfiguracji platformy .NET. Aby uzyskać więcej informacji na temat plików używanych przez ustawienia aplikacji, zobacz [Architektura ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-architecture.md).
+Domyślnie używa ustawienia aplikacji w aplikacji Windows Forms <xref:System.Configuration.LocalFileSettingsProvider> klasy, która używa systemu konfiguracji platformy .NET do przechowywania ustawień w pliku konfiguracji XML. Aby uzyskać więcej informacji na temat plików używanych przez ustawienia aplikacji, zobacz [Architektura ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-architecture.md).
 
-Ustawienia aplikacji definiuje następujące elementy jako część plików konfiguracyjnych, które są używane.
+Ustawienia aplikacji definiuje następujące elementy w ramach plików konfiguracyjnych, które są używane.
 
 | Element                    | Opis                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | Zawiera wszystkie  **\<Ustawienia >** tagi specyficzne dla aplikacji.                         |
+| **\<applicationSettings >** | Zawiera wszystkie  **\<Ustawienia >** tagi dotyczące tej aplikacji.                         |
 | **\<Ustawienia użytkownika >**        | Zawiera wszystkie  **\<Ustawienia >** tagi specyficzne dla bieżącego użytkownika.                        |
-| **\<Ustawienia >**             | Definiuje ustawienie. Jeden element podrzędny  **\<applicationSettings >** lub  **\<ustawienia użytkownika >**. |
-| **\<wartość >**               | Definiuje wartości ustawień. Element podrzędny  **\<Ustawienia >**.                                   |
+| **\<Ustawienia >**             | Definiuje ustawienie. Element podrzędny elementu albo  **\<applicationSettings >** lub  **\<ustawienia użytkownika >**. |
+| **\<wartość >**               | Określa wartość tego ustawienia. Element podrzędny elementu  **\<Ustawienia >**.                                   |
 
-## <a name="applicationsettings-element"></a>\<applicationSettings > — element
+## <a name="applicationsettings-element"></a>\<applicationSettings > element
 
-Ten element zawiera wszystkie  **\<Ustawienia >** tagi, które są specyficzne dla wystąpienia aplikacji na komputerze klienckim. Definiuje żadnych atrybutów.
+Ten element zawiera wszystkie  **\<Ustawienia >** znaczniki, które są właściwe dla danego wystąpienia aplikacji na komputerze klienckim. Definiuje żadnych atrybutów.
 
-## <a name="usersettings-element"></a>\<Ustawienia użytkownika > — element
+## <a name="usersettings-element"></a>\<Ustawienia użytkownika > element
 
 Ten element zawiera wszystkie  **\<Ustawienia >** tagi, które są specyficzne dla użytkownika, który jest obecnie przy użyciu aplikacji. Definiuje żadnych atrybutów.
 
-## <a name="setting-element"></a>\<Ustawienia > — element
+## <a name="setting-element"></a>\<Ustawienia > element
 
-Ten element definiuje ustawienia. Ma ona następujące atrybuty.
+Ten element definiuje ustawienia. Ma następujące atrybuty.
 
 | Atrybut        | Opis |
 | ---------------- | ----------- |
-| **Nazwa**         | Wymagana. Unikatowy identyfikator ustawienia. Ustawienia utworzone za pomocą programu Visual Studio są zapisywane o nazwie `ProjectName.Properties.Settings`. |
-| **serializedAs** | Wymagana. Format używany do serializacji wartości Text. Prawidłowe wartości to:<br><br>- `string`. Wartość jest szeregowana jako parametry za pomocą <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Wartość jest serializowany za pomocą serializacji XML.<br>- `binary`. Wartość jest serializowany jako wartość binarną kodowany w formacie tekstowym za pomocą serializacji binarnej.<br />- `custom`. Dostawca ustawień ma nieodłącznej wiedzy o to ustawienie i serializuje i zwalnia wykonuje serializację. |
+| **Nazwa**         | Wymagane. Unikatowy identyfikator ustawienia. Ustawień utworzonych za pomocą programu Visual Studio są zapisywane razem z nazwą `ProjectName.Properties.Settings`. |
+| **serializedAs** | Wymagane. Format używany do serializacji wartości do tekstu. Prawidłowe wartości to:<br><br>- `string`. Wartość jest serializowany jako ciąg za pośrednictwem <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Wartość jest serializowana, za pomocą serializacji XML.<br>- `binary`. Wartość jest serializowany jako dane binarne zakodowane w formacie tekstowym, za pomocą serializacji binarnej.<br />- `custom`. Dostawca ustawień ma nieodłącznej wiedzy o ustawienie serializuje i deserializuje go. |
 
-## <a name="value-element"></a>\<wartość > — element
+## <a name="value-element"></a>\<wartość > element
 
 Ten element zawiera wartości ustawienia.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono plik ustawień aplikacji, który definiuje dwa ustawienia zakresu aplikacji i dwa ustawienia zakresu użytkownika:
+Poniższy przykład pokazuje plik ustawień aplikacji, który definiuje dwa ustawienia w zakresie aplikacji i dwóch ustawień zakresu użytkownika:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

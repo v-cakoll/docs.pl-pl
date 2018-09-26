@@ -1,17 +1,16 @@
 ---
-title: 'Porady: Tworzenie aplikacji obsługującej oświadczenia ASP.NET przy użyciu uwierzytelniania opartego na formularzach'
+title: 'Instrukcje: Tworzenie aplikacji ASP.NET obsługującej oświadczenia przy użyciu uwierzytelniania opartego na formularzach'
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 851a856d291da78265e9eac73e9e06028e24ef2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8dab5cfbcf14707699e6672017f5f80db232f01d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408622"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110440"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Porady: Tworzenie aplikacji obsługującej oświadczenia ASP.NET przy użyciu uwierzytelniania opartego na formularzach
+# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Instrukcje: Tworzenie aplikacji ASP.NET obsługującej oświadczenia przy użyciu uwierzytelniania opartego na formularzach
 ## <a name="applies-to"></a>Dotyczy:  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -19,7 +18,7 @@ ms.locfileid: "33408622"
 -   ASP.NET® formularzy sieci Web  
   
 ## <a name="summary"></a>Podsumowanie  
- Ta porada zawiera szczegółowe procedury krok po kroku dotyczące tworzenia proste obsługujący oświadczenia aplikacji formularzy sieci Web ASP.NET, która korzysta z uwierzytelniania formularzy. Umożliwia także instrukcje dotyczące testowania aplikacji, aby zweryfikować, że oświadczenia są dostarczane, gdy użytkownik zaloguje się za pomocą uwierzytelniania formularzy.  
+ Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia korzystającej z uwierzytelniania formularzy. On również instrukcje testowania aplikacji pozwalające sprawdzić, czy są prezentowane oświadczenia, gdy użytkownik zaloguje się za pomocą uwierzytelniania formularzy.  
   
 ## <a name="contents"></a>Spis treści  
   
@@ -29,48 +28,48 @@ ms.locfileid: "33408622"
   
 -   Zestawienie czynności  
   
--   Krok 1: tworzenie aplikacji formularzy sieci Web ASP.NET proste  
+-   Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
   
--   Krok 2: Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla oświadczeń przy użyciu uwierzytelniania formularzy  
+-   Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia, za pomocą uwierzytelniania formularzy  
   
 -   Krok 3 — Przetestowanie rozwiązania  
   
 ## <a name="objectives"></a>Cele  
   
--   Skonfigurować aplikację ASP.NET Web Forms dla oświadczeń przy użyciu uwierzytelniania formularzy  
+-   Skonfigurować aplikację ASP.NET Web Forms pod kątem oświadczeń za pomocą uwierzytelniania formularzy  
   
--   Testowanie aplikacji formularzy sieci Web ASP.NET, aby zobaczyć, czy działa poprawnie  
+-   Testowanie aplikacji formularzy sieci Web ASP.NET, aby zobaczyć, czy działa prawidłowo  
   
 ## <a name="overview"></a>Omówienie  
- W programie .NET 4.5 WIF i jego autoryzacji opartej na oświadczeniach zostały uwzględnione w ramach struktury. Wcześniej, jeśli chce oświadczenia przez użytkownika ASP.NET, możesz były wymagane do zainstalowania programu WIF, a następnie rzutowania interfejsy do podmiotu zabezpieczeń obiekty takie jak `Thread.CurrentPrincipal` lub `HttpContext.Current.User`. Teraz oświadczenia są obsługiwane automatycznie przez głównych tych obiektów.  
+ W .NET 4.5 WIF i jego autoryzacji opartej na oświadczeniach zostały uwzględnione w ramach Framework. Wcześniej, jeśli chce oświadczeń użytkownika ASP.NET należało do zainstalowania programu WIF, i następnie rzutowania interfejsy z podmiotem zabezpieczeń obiektów takich jak `Thread.CurrentPrincipal` lub `HttpContext.Current.User`. Obecnie oświadczeń są obsługiwane automatycznie przez te jednostki obiektów.  
   
- Uwierzytelnianie formularzy uzyskał WIF jego włączenia w programie .NET 4.5, ponieważ wszyscy użytkownicy uwierzytelnieni przez formularze automatycznie oświadczeń skojarzonych z nimi. Aby rozpocząć, przy użyciu tych oświadczeń bezpośrednio w aplikacji ASP.NET, która korzysta z uwierzytelniania formularzy, jak pokazano to instrukcje.  
+ Uwierzytelnianie formularzy skorzystał z włączenia programu WIF w .NET 4.5, ponieważ wszyscy użytkownicy uwierzytelnieni przez formularze automatycznie oświadczenia skojarzone z nimi. Możesz rozpocząć korzystanie z tych oświadczeń bezpośrednio w aplikacji ASP.NET, która korzysta z uwierzytelniania formularzy, tak jak pokazano w tym instruktażu.  
   
 ## <a name="summary-of-steps"></a>Zestawienie czynności  
   
--   Krok 1: tworzenie aplikacji formularzy sieci Web ASP.NET proste  
+-   Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
   
--   Krok 2: Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla oświadczeń przy użyciu uwierzytelniania formularzy  
+-   Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia, za pomocą uwierzytelniania formularzy  
   
 -   Krok 3 — Przetestowanie rozwiązania  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Krok 1: tworzenie aplikacji formularzy sieci Web ASP.NET proste  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
  W tym kroku utworzysz nową aplikację ASP.NET Web Forms.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację ASP.NET  
+#### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET  
   
-1.  Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **nowy**, a następnie **projektu**.  
+1.  Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
   
 2.  W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
   
 3.  W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
   
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Krok 2: Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla oświadczeń przy użyciu uwierzytelniania formularzy  
- W tym kroku spowoduje dodanie pozycji konfiguracji, aby *Web.config* pliku konfiguracji i edytowanie *Default.aspx* plik, aby wyświetlić oświadczeń informacji o koncie.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia, za pomocą uwierzytelniania formularzy  
+ W tym kroku dodasz wpis konfiguracyjny do *Web.config* pliku konfiguracji i Edytuj *Default.aspx* plik, aby wyświetlić oświadczenia informacji o koncie.  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Aby skonfigurować aplikację ASP.NET dla oświadczeń przy użyciu uwierzytelniania formularzy  
+#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Aby skonfigurować aplikację ASP.NET dla oświadczeń za pomocą uwierzytelniania formularzy  
   
-1.  W *Default.aspx* pliku, Zastąp istniejące znaczników następującym kodem:  
+1.  W *Default.aspx* pliku, Zastąp istniejący kod znaczników następującym kodem:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TestApp._Default" %>  
@@ -89,9 +88,9 @@ ms.locfileid: "33408622"
     </asp:Content>  
     ```  
   
-     Ten krok powoduje dodanie kontrolce GridView do Twojej *Default.aspx* strona, która zostanie wypełniona oświadczenia jest pobierana z uwierzytelniania formularzy.  
+     Ten krok powoduje dodanie kontrolki widoku siatki do Twojej *Default.aspx* strony, który zostanie wypełniony oświadczenia jest pobierana z uwierzytelniania formularzy.  
   
-2.  Zapisz *Default.aspx* pliku, a następnie otwórz jego plik CodeBehind o nazwie *Default.aspx.cs*. Zastąp istniejący kod poniżej:  
+2.  Zapisz *Default.aspx* pliku, a następnie otwórz jego pliku związanego z kodem o nazwie *Default.aspx.cs*. Zastąp istniejący kod następujących czynności:  
   
     ```csharp  
     using System;  
@@ -116,15 +115,15 @@ ms.locfileid: "33408622"
     }  
     ```  
   
-     Powyższy kod zostaną wyświetlone oświadczenia dotyczące uwierzytelnionego użytkownika, w tym użytkowników identyfikowanych na podstawie uwierzytelniania formularzy.  
+     Powyższy kod wyświetli oświadczenia dotyczące uwierzytelnionego użytkownika, w tym użytkowników identyfikowanych na podstawie uwierzytelniania formularzy.  
   
 ## <a name="step-3--test-your-solution"></a>Krok 3 — Przetestowanie rozwiązania  
- W tym kroku zostanie testowania aplikacji formularzy sieci Web ASP.NET i sprawdź, że oświadczenia są dostarczane, gdy użytkownik zaloguje się za pomocą uwierzytelniania formularzy.  
+ W tym kroku zostanie testowanie aplikacji ASP.NET Web Forms i sprawdź, czy są prezentowane oświadczenia, gdy użytkownik zaloguje się za pomocą uwierzytelniania formularzy.  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Aby przetestować aplikację ASP.NET Web Forms dla oświadczeń przy użyciu uwierzytelniania formularzy  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Aby przetestować aplikację ASP.NET Web Forms oświadczenia, za pomocą uwierzytelniania formularzy  
   
-1.  Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Powinna pojawić się *Default.aspx*, który ma **zarejestrować** i **Zaloguj się za** łącza w górnym rogu strony. Kliknij przycisk **zarejestrować**.  
+1.  Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Powinna pojawić się *Default.aspx*, który ma **zarejestrować** i **Zaloguj się** łącza w prawym górnym rogu strony. Kliknij przycisk **zarejestrować**.  
   
-2.  Na **zarejestrować** , Utwórz konto użytkownika, a następnie kliknij przycisk **zarejestrować**. Twoje konto zostanie utworzone przy użyciu uwierzytelniania formularzy, a użytkownik zostanie automatycznie zarejestrowany.  
+2.  Na **zarejestrować** strony, Utwórz konto użytkownika, a następnie kliknij przycisk **zarejestrować**. Twoje konto zostanie utworzone za pomocą uwierzytelniania formularzy, a użytkownik zostanie automatycznie zalogowany.  
   
-3.  Po nastąpiło przekierowanie do strony głównej, powinna zostać wyświetlona tabela poniżej **Your oświadczeń** nagłówek, który zawiera **wystawcy**, **Wystawca_oryginalny**, **Typu**, **wartość**, i **ValueType** oświadczeń informacje o Twoim koncie.
+3.  Po nastąpiło przekierowanie do strony głównej, powinien zostać wyświetlony tabelę poniżej **Your oświadczeń** nagłówek, który zawiera **wystawcy**, **Wystawca_oryginalny**, **Typu**, **wartość**, i **ValueType** oświadczeń informacji o Twoim koncie.

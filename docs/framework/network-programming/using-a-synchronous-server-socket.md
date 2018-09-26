@@ -1,5 +1,5 @@
 ---
-title: Przy użyciu gniazda synchroniczne serwera
+title: Za pomocą synchronicznego gniazda serwera
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4f04255edf9533612dd6b0733331fb18587ff3f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e79c9a75e4513be91af1104195af3614b49092d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398147"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176493"
 ---
-# <a name="using-a-synchronous-server-socket"></a>Przy użyciu gniazda synchroniczne serwera
-Gniazda serwera synchroniczne zawiesić wykonanie aplikacji do momentu otrzymania żądania połączenia w gnieździe. Gniazda serwera synchroniczne nie są odpowiednie dla aplikacji, które są w ich operacji w znacznym stopniu wykorzystywane sieci, ale może być odpowiednie dla aplikacji sieciowych proste.  
+# <a name="using-a-synchronous-server-socket"></a>Za pomocą synchronicznego gniazda serwera
+Server synchronicznego gniazda zawiesić wykonanie aplikacji, dopóki nie zostanie odebrane żądanie połączenia gniazda. Server synchronicznego gniazda nie są odpowiednie dla aplikacji, które intensywnie korzystają z sieci w ich działania, ale może być odpowiednie dla aplikacji sieciowych proste.  
   
- Po <xref:System.Net.Sockets.Socket> ustawiono nasłuchiwania punktu końcowego za pomocą <xref:System.Net.Sockets.Socket.Bind%2A> i <xref:System.Net.Sockets.Socket.Listen%2A> metod, jest gotowy do akceptowania żądań połączenia przychodzących za pomocą <xref:System.Net.Sockets.Socket.Accept%2A> metody. Aplikacja jest wstrzymana, dopóki nie zostanie odebrane żądanie połączenia podczas **Akceptuj** metoda jest wywoływana.  
+ Po <xref:System.Net.Sockets.Socket> jest ustawiony do nasłuchiwania punktu końcowego za pomocą <xref:System.Net.Sockets.Socket.Bind%2A> i <xref:System.Net.Sockets.Socket.Listen%2A> metod, jest gotowy do akceptowania połączeń przychodzących żądań przy użyciu <xref:System.Net.Sockets.Socket.Accept%2A> metody. Aplikacja jest wstrzymana, dopóki nie zostanie odebrane żądanie połączenia podczas **Akceptuj** metoda jest wywoływana.  
   
- Po odebraniu żądania połączenia **Akceptuj** zwraca nową **gniazda** wystąpienia, który jest skojarzony z klienta nawiązującego połączenie. Poniższy przykład odczytuje dane z klienta, wyświetla go w konsoli i zwraca dane do klienta. **Gniazda** nie określa protokołów obsługi wiadomości, więc ciąg "\<EOF >" oznacza koniec danymi wiadomości. Przy założeniu, że **gniazda** o nazwie `listener` zainicjowany i powiązane z punktem końcowym.  
+ Po odebraniu żądania połączenia **Akceptuj** zwraca nowy **gniazda** wystąpienia, który jest skojarzony z klienta nawiązującego połączenie. Poniższy przykład odczytuje dane z klienta, wyświetla go w konsoli i zwraca dane do klienta. **Gniazda** nie określa protokołów obsługi komunikatów, więc ciąg "\<EOF >" oznacza koniec danych komunikatu. Założono, że **gniazda** o nazwie `listener` zainicjowany i powiązane z punktem końcowym.  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  

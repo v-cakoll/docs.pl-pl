@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dostęp do właściwości specyficzne dla protokołu HTTP'
+title: 'Porady: uzyskiwanie dostępu do właściwości specyficzne dla protokołu HTTP'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,14 @@ dev_langs:
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 20773d2224f9c04f3b0f9d0906c9e6fc215c5619
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f008cf82b80e29f8fe741034a0e820b5eae5b0ba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389616"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084816"
 ---
-# <a name="how-to-access-http-specific-properties"></a>Porady: dostęp do właściwości specyficzne dla protokołu HTTP
+# <a name="how-to-access-http-specific-properties"></a>Porady: uzyskiwanie dostępu do właściwości specyficzne dla protokołu HTTP
 W tym przykładzie pokazano, jak wyłączyć HTTP **Keep-alive** zachowanie i Pobierz wersję protokołu numer z serwera sieci Web.  
   
 ## <a name="example"></a>Przykład  
@@ -50,7 +49,7 @@ HttpWResp.Close();
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołuje się do **System.Net** przestrzeni nazw.  
+-   Odwołuje się do **przestrzeni nazw System.Net** przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  

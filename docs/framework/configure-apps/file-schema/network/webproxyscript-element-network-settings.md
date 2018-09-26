@@ -1,5 +1,5 @@
 ---
-title: '&lt;webproxyscript —&gt; — Element (ustawienia sieciowe)'
+title: '&lt;webproxyscript —&gt; — Element (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webProxyScript
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6843662b73f6b7d45dd12616f5118569a2d19975
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e1450d2df424b32aacc5c113b5936001f65915a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754509"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085653"
 ---
-# <a name="ltwebproxyscriptgt-element-network-settings"></a>&lt;webproxyscript —&gt; — Element (ustawienia sieciowe)
-Konfiguruje właściwości skryptu używana do wykrywania, serwer proxy sieci Web.  
+# <a name="ltwebproxyscriptgt-element-network-settings"></a>&lt;webproxyscript —&gt; — Element (ustawienia sieci)
+Konfiguruje właściwości skryptu używanej do odnajdywania serwerów proxy sieci Web.  
   
  \<Konfiguracja >  
 \<system.net>  
@@ -41,7 +40,7 @@ Konfiguruje właściwości skryptu używana do wykrywania, serwer proxy sieci We
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`downloadTimeout`|Określa maksymalny czas, który można pobrać skryptu w godziny, minuty i sekundy. Wartość domyślna to jedna minuta.|  
+|`downloadTimeout`|Określa maksymalny czas, aby pobrać skrypt w godzinach, minutach i sekundach. Wartość domyślna to jedna minuta.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -50,12 +49,12 @@ Konfiguruje właściwości skryptu używana do wykrywania, serwer proxy sieci We
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[Ustawienia](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Służy do konfigurowania opcji sieci podstawowej dla <xref:System.Net> przestrzeni nazw.|  
+|[Ustawienia](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net> przestrzeni nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

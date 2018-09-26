@@ -3,18 +3,18 @@ title: System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure
 ms.date: 03/30/2017
 ms.assetid: 214e88fe-0476-4604-bca6-1b2f25fe1194
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b7d6c43126439afd5e38c14c4df245e0e50bc02a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49663218e2896b2528f27e7db6f200984f4f7b2e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070711"
 ---
 # <a name="systemservicemodelsecuritysecuritysessionclosedresponsesendfailure"></a>System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure
 System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure  
   
 ## <a name="description"></a>Opis  
- Wystąpił błąd podczas wysyłania odpowiedzi zamknięcia sesji zabezpieczeń do klienta.  
+ Wystąpił błąd podczas wysyłania zabezpieczeń sesji Zamknij odpowiedź do klienta.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  

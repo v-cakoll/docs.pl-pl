@@ -3,11 +3,11 @@ title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
 ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576973"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090165"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 Niniejszy przykład pokazuje, używania i konfigurowania o podwyższonym poziomie właściwości magazynu wystąpień przepływu pracy SQL. Magazyn wystąpień przepływu pracy SQL stanowi implementację oparte na SQL magazynu wystąpienia. Umożliwia to wystąpienie zapisać swój stan i załadować stanu z bazy danych programu SQL Server lub SQL Server Express i. Funkcja rozszerzalność magazynu zezwala użytkownikowi na definiowanie właściwości, które są przechowywane w magazynie wystąpienia. Te właściwości są wyświetlane w widoku właściwości o podwyższonym poziomie, który umożliwia użytkownikowi zapytania dla nich.  

@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743800"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170824"
 ---
-# <a name="linkedconfiguration-element"></a>\<linkedconfiguration — > — element
+# <a name="linkedconfiguration-element"></a>\<linkedconfiguration — > element
 
-Określa plik konfiguracji do uwzględnienia.
+Określa wymagający uwzględnienia plik konfiguracji.
 
 [**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<assemblybinding — >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
@@ -39,13 +38,13 @@ Określa plik konfiguracji do uwzględnienia.
 
 |           | Opis |
 | --------- | ----------- |
-| **href**  | Atrybut wymagany.<br><br>Adres URL pliku konfiguracji, aby uwzględnić. Jedynym obsługiwanym formatem do **href** atrybutu `file://`. Lokalnych plików i plików UNC są obsługiwane. |
+| **href**  | Atrybut wymagany.<br><br>Adres URL pliku konfiguracji, aby uwzględnić. Jedynym obsługiwanym formatem do **href** atrybut jest `file://`. Obsługiwane są pliki lokalne i plików UNC. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [**\<assemblybinding — >** — Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Określa zestaw powiązania zasad na poziomie konfiguracji. |
+| [**\<assemblybinding — >** — Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Określa politykę powiązania zestawu na poziomie konfiguracji. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -53,28 +52,28 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
-**\<Linkedconfiguration — >** element upraszcza obsługi dla zestawów składników. Użycie zestawu, który zawiera plik konfiguracji znajdujących się w dobrze znanej lokalizacji, co najmniej jednej aplikacji można użyć pliki konfiguracji aplikacji, które używają zestawu  **\<linkedconfiguration — >** element do uwzględnienia w pliku konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji. Gdy zestaw składników jest obsługiwana, aktualizowania typowych plik konfiguracji zawiera informacje zaktualizowanej konfiguracji we wszystkich aplikacjach korzystających z zestawu.
+**\<Linkedconfiguration — >** element upraszcza obsługę techniczną dla zestawów składników. Co najmniej jednej aplikacji, użycie zestawu, który zawiera plik konfiguracji znajdujących się w lokalizacji, dobrze znanego, pliki konfiguracji aplikacji, które używają zestawu można użyć  **\<linkedconfiguration — >** element, aby uwzględnić plik konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji. Gdy zestaw składników jest obsługiwany, aktualizowanie wspólnego pliku konfiguracji informacje zaktualizowanej konfiguracji do wszystkich aplikacji korzystających z zestawu.
 
 > [!NOTE]
-> **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o manifestów side-by-side systemu Windows.
+> **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.
 
-Następujące reguły kontrolować używanie powiązane pliki konfiguracji:
+Użycie powiązane pliki konfiguracji decydują następujące reguły:
 
-- Ustawień w plikach konfiguracji dołączone tylko wpływa na zasady powiązanie modułu ładującego i są używane tylko przez moduł ładujący. Pliki konfiguracji dołączone może mieć ustawienia inne niż powiązanie zasady, ale te ustawienia nie ma żadnego efektu.
+- Ustawienia w plikach konfiguracyjnych uwzględnione tylko wpływa na zasady tworzenia powiązań modułu ładującego i są używane tylko przez moduł ładujący. Pliki dołączone konfiguracji może mieć ustawienia inne niż powiązanie zasad, ale te ustawienia nie mają żadnego efektu.
 
-- Jedynym obsługiwanym formatem do `href` atrybutu `file://`. Lokalnych plików i plików UNC są obsługiwane.
+- Jedynym obsługiwanym formatem do `href` atrybut jest `file://`. Obsługiwane są pliki lokalne i plików UNC.
 
-- Brak ograniczeń dotyczących liczba połączonych konfiguracji dla każdego pliku konfiguracji nie istnieje.
+- Brak bez ograniczenia na liczbę połączonych konfiguracji każdego pliku konfiguracji.
 
-- Wszystkie powiązane pliki konfiguracji zostaną scalone tworzą jeden plik podobne do zachowania `#include` dyrektywy języka C/C++.
+- Wszystkie powiązane pliki konfiguracji są scalane w celu utworzenia jeden plik, podobne do zachowania `#include` dyrektywy języka C/C++.
 
 - **\<Linkedconfiguration — >** element jest dozwolony tylko w plikach konfiguracji aplikacji; jest ignorowana w *Machine.config*.
 
-- Odwołania cykliczne są wykrywane i zakończone. Oznacza to, że jeśli  **\<linkedconfiguration — >** elementy z szeregu plików konfiguracyjnych tworzą pętlę, pętli są wykrywane i zatrzymać.
+- Odwołania cykliczne są wykrywane i zakończone. Oznacza to jeśli  **\<linkedconfiguration — >** elementy szeregu plików konfiguracyjnych tworzą pętli, pętla jest wykrywany i zatrzymane.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób pliku konfiguracji z lokalnego dysku twardego obejmują:
+Poniższy przykład pokazuje, jak dołączyć plik konfiguracji z lokalnego dysku twardego:
 
 ```xml
 <configuration>

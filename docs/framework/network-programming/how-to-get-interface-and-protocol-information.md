@@ -1,21 +1,20 @@
 ---
-title: 'Porady: Uzyskiwanie interfejsu i informacje protokołu'
+title: 'Porady: Uzyskiwanie interfejsu i informacji o protokole.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6c793f98e25c22ecb34b8aa8deb185048a08a1f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae4eb38c72a7f7629cea0f8137a4337553457808
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395089"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078471"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a>Porady: Uzyskiwanie interfejsu i informacje protokołu
-W tym przykładzie pokazano, jak można odczytać Statystyki TCP interfejsu sieciowego.  
+# <a name="how-to-get-interface-and-protocol-information"></a>Porady: Uzyskiwanie interfejsu i informacji o protokole.
+W tym przykładzie pokazano, jak odczytać Statystyki TCP interfejsu sieciowego.  
   
 ## <a name="example"></a>Przykład  
   
@@ -75,4 +74,4 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołuje się do **System.Net** przestrzeni nazw.
+-   Odwołuje się do **przestrzeni nazw System.Net** przestrzeni nazw.

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ustawienie domyślnych zasad na podstawie czasu pamięci podręcznej dla aplikacji'
+title: 'Porady: Określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,27 +11,26 @@ helpviewer_keywords:
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 021a13b9124cf54712643e33cbf0ca77ec828b27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e08026f8d1ec8b39f7ef3c2c34efad9e51b8fe9
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396675"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074891"
 ---
-# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Porady: ustawienie domyślnych zasad na podstawie czasu pamięci podręcznej dla aplikacji
-Domyślne zasady na podstawie czasu pamięci podręcznej umożliwia aplikacji zachowują się jego pamięci podręcznej zdefiniowany przez nagłówki wysyłane z pamięci podręcznej zasobów i zachowanie pamięci podręcznej określonych w sekcji 13 i 14 RFC 2616 dostępne pod adresem [ http://www.ietf.org ](http://www.ietf.org/). Jest to zachowanie pamięci podręcznej właściwe dla większości aplikacji.  
+# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Porady: Określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji
+Domyślne zasady pamięci podręcznej na podstawie czasu umożliwia aplikacji jej zachowanie pamięci podręcznej, zdefiniowany przez nagłówki wysyłane z pamięci podręcznej zasobów i zachowanie pamięci podręcznej, zdefiniowane w sekcji 13 i 14 dokumencie RFC 2616, dostępne pod adresem [ http://www.ietf.org ](http://www.ietf.org/). Jest to zachowanie pamięci podręcznej odpowiedniej dla większości aplikacji.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Aby ustawić domyślną zasadę automatycznego dla aplikacji  
   
-1.  Utwórz obiekt domyślne zasady oparte na czasie.  
+1.  Utwórz obiekt zasad na podstawie czasu domyślnego.  
   
-2.  Ustaw ten obiekt zasad jako domyślnej domeny aplikacji.  
+2.  Obiekt zasad należy ustawić jako domyślne dla domeny aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Dwa przykłady w tej sekcji utworzyć identycznymi zasadami.  
+ Dwa przykłady w tej sekcji produktu identycznymi zasadami.  
   
- Poniższy przykład tworzy domyślne zasady na podstawie czasu i ustawia go jako domyślny dla tej domeny aplikacji.  
+ Poniższy przykład tworzy domyślne zasady oparte na czasie i ustawia go jako domyślnej domeny aplikacji.  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy ()  
@@ -48,7 +47,7 @@ Public Shared Sub SetDefaultTimeBasedPolicy ()
 End Sub  
 ```  
   
- Można również utworzyć w domyślnej na podstawie czasu pamięci podręcznej zasad przy użyciu <xref:System.Net.Cache.RequestCachePolicy> klasy, jak pokazano w poniższym przykładzie:  
+ Możesz również tworzyć, używając zasad pamięci podręcznej na podstawie czasu domyślnego <xref:System.Net.Cache.RequestCachePolicy> klasy, jak pokazano w poniższym przykładzie:  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy2()  
@@ -70,4 +69,4 @@ End Sub
  [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)  
  [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)  
  [Zasady pamięci podręcznej oparte na czasie](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching — > elementu (ustawienia sieciowe)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [\<requestCaching — >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

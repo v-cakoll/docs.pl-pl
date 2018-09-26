@@ -9,83 +9,82 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 364d4e6b1009993c11a7f23edcd262de4ad435c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493881"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172196"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Instrukcje: Tworzenie usługi tokenów zabezpieczeń
-Usługa tokenu zabezpieczającego implementuje ten protokół zdefiniowane w specyfikacji WS-Trust. Ten protokół definiuje formaty wiadomości i wzorce wymiany wiadomości dla wystawiającego certyfikaty, odnowienie, anulowanie i sprawdzania poprawności tokenów zabezpieczających. Usługi tokenu zabezpieczeń zawiera co najmniej jednego z tych funkcji. W tym temacie wygląda najbardziej typowy scenariusz: Implementowanie wydawania tokenów.  
+Usługa tokenu zabezpieczającego implementuje protokół zdefiniowane w specyfikacji WS-Trust. Protokół ten definiuje formaty wiadomości i wzorców wymiany wiadomości dla wystawiającego certyfikaty, odnawiania, anulowanie i sprawdzanie poprawności tokenów zabezpieczających. Usługa tokenu zabezpieczającego danego zawiera co najmniej jedną z tych funkcji. W tym temacie wygląda najbardziej typowy scenariusz: Implementowanie wystawiania tokenu.  
   
 ## <a name="issuing-tokens"></a>Wystawianie tokenów  
- WS-Trust definiuje formaty wiadomości, na podstawie `RequestSecurityToken` schematu XML definition language (XSD) schematu elementu i `RequestSecurityTokenResponse` elementu schematu XSD do wykonywania wydawania tokenów. Ponadto definiuje skojarzonych akcji Uniform Resource Identifier (URI). Identyfikator URI skojarzony z akcji `RequestSecurityToken` komunikat http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. Identyfikator URI skojarzony z akcji `RequestSecurityTokenResponse` komunikat http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ WS-Trust definiuje formaty wiadomości, w oparciu o `RequestSecurityToken` elementu schematu języka (XSD) definicji schematu XML, i `RequestSecurityTokenResponse` elementu schematu XSD do operacji wystawiania tokenów. Ponadto definiuje skojarzonych akcji Uniform Resource Identifier (URI). Akcja identyfikator URI skojarzony z `RequestSecurityToken` komunikat http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. Akcja identyfikator URI skojarzony z `RequestSecurityTokenResponse` komunikat http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
   
 ### <a name="request-message-structure"></a>Struktura komunikatu żądania  
  Struktura komunikatu żądania problem zwykle składa się z następujących elementów:  
   
--   Żądanie wpisz identyfikator URI przy użyciu wartości http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   Żądanie wpisz identyfikator URI o wartości http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
   
--   Typ tokenu identyfikatora URI. Wartość tego identyfikatora URI dla tokenów zabezpieczeń potwierdzenia Markup Language (SAML) 1.1 jest http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Typ tokenu identyfikatora URI. Tokeny zabezpieczeń potwierdzenia Markup Language (SAML) 1.1, wartość tego identyfikatora URI jest http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
   
--   Wartość rozmiaru klucza, która wskazuje liczba bitów klucza, który ma być skojarzona z wystawionego tokenu.  
+-   Wartość rozmiaru klucza, która wskazuje liczbę bitów w kluczu, który ma zostać skojarzony z wystawiony token.  
   
--   Typ klucza identyfikatora URI. Wartość tego identyfikatora URI dla kluczy symetrycznych jest http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
+-   Typ klucza identyfikatora URI. Klucze symetryczne, wartość tego identyfikatora URI jest http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
   
  Ponadto kilka innych elementów mogą być obecne:  
   
 -   Materiał klucza dostarczonych przez klienta.  
   
--   Zakres informacji, która wskazuje usługę obiektu docelowego, który będzie używany wystawionego tokenu z.  
+-   Informacje o zakresie, który wskazuje Usługa docelowa, która wystawiony token będą używane z.  
   
- Usługa tokenu zabezpieczającego informacje są używane w komunikacie żądania problem podczas jego tworzy komunikat odpowiedzi problem.  
+ Usługa tokenu zabezpieczającego używa tych informacji w komunikacie żądania problem podczas jego tworzy komunikat odpowiedzi na problem.  
   
-## <a name="response-message-structure"></a>Struktura komunikatu odpowiedzi  
+## <a name="response-message-structure"></a>Struktura komunikat odpowiedzi  
  Struktura komunikat odpowiedzi problem zwykle składa się z następujących elementów;  
   
 -   Token zabezpieczeń, na przykład potwierdzenia języka SAML 1.1.  
   
--   Token potwierdzenia skojarzone z tokenu zabezpieczającego. Dla kluczy symetrycznych jest to często zaszyfrowane materiału klucza.  
+-   Token potwierdzenia skojarzone z tokenem zabezpieczeń. Dla kluczy symetrycznych to często zaszyfrowanej formie materiału klucza.  
   
--   Odwołania do tokenu zabezpieczeń. Zazwyczaj usługa tokenu zabezpieczającego zwraca odwołanie, którego można użyć w przypadku wystawiony token pojawia się w kolejnych komunikat wysyłany przez klienta i inny można użyć w przypadku token nie znajduje się w kolejnych komunikatów.  
+-   Odwołania do tokenu zabezpieczeń. Zazwyczaj usługa tokenu zabezpieczającego zwraca odwołania, które mogą być używane podczas wystawiony token, który pojawia się w kolejnych wiadomością wysłaną przez klienta, a drugi, można użyć, gdy token nie znajduje się w kolejnych komunikatów.  
   
  Ponadto kilka innych elementów mogą być obecne:  
   
--   Materiał klucza dostarczonych przez usługę tokenu zabezpieczającego.  
+-   Materiał klucza, dostarczone przez usługę tokenu zabezpieczającego.  
   
--   Algorytm niezbędne do obliczenia klucza wspólnego.  
+-   Algorytm potrzebnych do obliczenia klucza współużytkowanego.  
   
--   Informacje okres istnienia wystawionego tokenu.  
+-   Okres istnienia informacje dla wystawiony token.  
   
 ## <a name="processing-request-messages"></a>Przetwarzanie komunikatów żądań  
- Usługa tokenu zabezpieczającego przetwarza żądanie problem, sprawdzając różnych części komunikatu żądania i zapewnienie, że mogą wystawiać token, który spełnia żądania. Usługa tokenu zabezpieczającego muszą określić następujące przed jego tworzy token został wystawiony:  
+ Usługa tokenu zabezpieczającego przetwarza żądanie problem, sprawdzając różnych rodzajów komunikatu żądania i zapewnienie, że może to wystawić tokenu, który spełnia żądanie. Przed jego tworzy token został wystawiony, usługę tokenu zabezpieczającego muszą określić następujące czynności:  
   
--   Żądanie jest naprawdę token zostanie wysłane żądanie.  
+-   Żądanie jest naprawdę żądania token został wystawiony.  
   
 -   Usługa tokenu zabezpieczającego obsługuje żądanego typu tokenu.  
   
--   Żądający ma autoryzacji do zgłoszenia żądania.  
+-   Żądający jest uprawniony do utworzenia żądania.  
   
 -   Usługa tokenu zabezpieczającego można spełniają oczekiwań żądającego względem materiału klucza.  
   
- Dwie najważniejsze części tworzenia tokenu są określanie, jakie klucza do podpisywania tokenu z i jakie klucza do szyfrowania klucza wspólnego z. Token musi być podpisany, dzięki czemu podczas Klient przedstawia token do usługi docelowej, że usługa może określić, że token został wystawiony przez usługę tokenu zabezpieczającego zaufaną. Materiał klucza musi być szyfrowane w taki sposób, że Usługa docelowa może odszyfrować materiału klucza.  
+ Dwie kluczowe części konstruowanie token są określania, jakie klucza do podpisywania tokenu z i jakie klucz w celu zaszyfrowania klucza wstępnego za pomocą. Token musi być podpisany, dzięki czemu gdy klient przedstawia token do docelowej usługi, że usługa może określić, że token został wystawiony przez usługę tokenu zabezpieczającego, które uzna. Materiał klucza musi być szyfrowane w taki sposób, że Usługa docelowa może odszyfrować tego materiału klucza.  
   
- Podpisywanie potwierdzenia języka SAML obejmuje utworzenie <xref:System.IdentityModel.Tokens.SigningCredentials> wystąpienia. Konstruktor dla tej klasy wykonuje następujące czynności:  
+ Podpisywanie potwierdzenie SAML obejmuje utworzenie <xref:System.IdentityModel.Tokens.SigningCredentials> wystąpienia. Konstruktor dla tej klasy wykonuje następujące czynności:  
   
--   A <xref:System.IdentityModel.Tokens.SecurityKey> klucza użycia potwierdzenia języka SAML logowania.  
+-   A <xref:System.IdentityModel.Tokens.SecurityKey> klucz używany do podpisywania dla asercji SAML.  
   
 -   Ciąg identyfikujący algorytm podpisu, który ma być używany.  
   
--   Ciąg identyfikujący algorytm skrótu używany.  
+-   Ciąg identyfikujący algorytm tworzenia skrótu.  
   
--   Opcjonalnie <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> identyfikującym klucz do podpisania potwierdzenia.  
+-   Opcjonalnie <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> określający klucz używany do podpisywania potwierdzenia.  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  
   
- Szyfrowanie klucza wspólnego obejmuje biorąc materiału klucza i ich szyfrowanie za pomocą klucza usługi docelowej można użyć do odszyfrowania klucza wspólnego. Zazwyczaj jest używany klucz publiczny usługi docelowej.  
+ Szyfrowanie klucza wstępnego obejmuje pobranie materiału klucza i szyfruje za pomocą klucza usługi docelowej, można użyć do odszyfrowania klucza wstępnego. Zazwyczaj jest używany klucz publiczny usługi docelowej.  
   
  [!code-csharp[c_CreateSTS#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#2)]
  [!code-vb[c_CreateSTS#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#2)]  
@@ -103,27 +102,27 @@ Usługa tokenu zabezpieczającego implementuje ten protokół zdefiniowane w spe
  Aby uzyskać więcej informacji, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="creating-response-messages"></a>Tworzenie wiadomości odpowiedzi  
- Po usługi tokenu zabezpieczającego przetwarza żądanie problemu i tworzy token zostanie wysłane oraz klucza potwierdzającego, komunikat odpowiedzi musi zostać utworzone, zawierające co najmniej żądanego tokenu, token potwierdzenia i wystawionego tokenu odwołania. Wystawiony token jest zwykle <xref:System.IdentityModel.Tokens.SamlSecurityToken> utworzone na podstawie <xref:System.IdentityModel.Tokens.SamlAssertion>, jak pokazano w poniższym przykładzie.  
+ Gdy usługę tokenu zabezpieczającego przetwarza żądanie problemu i tworzy token wydaje się wraz z kluczem dowód, komunikat odpowiedzi powinno być zbudowane, w tym co najmniej żądanego tokenu, token potwierdzenia i wystawiony token odwołania. Wystawiony token jest zwykle <xref:System.IdentityModel.Tokens.SamlSecurityToken> utworzone na podstawie <xref:System.IdentityModel.Tokens.SamlAssertion>, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[c_CreateSTS#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#5)]
  [!code-vb[c_CreateSTS#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#5)]  
   
- W przypadku których usługi tokenu zabezpieczającego zawiera udostępnionego materiału klucza token potwierdzenia jest tworzony przez utworzenie <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>.  
+ W przypadku których usługa tokenu zabezpieczającego obsługuje udostępnionego materiału klucza token potwierdzenia jest tworzony przez utworzenie <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>.  
   
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- Aby uzyskać więcej informacji dotyczących sposobu tworzenia token potwierdzenia, gdy klient i Usługa tokenu zabezpieczającego zawierają materiału klucza dla klucza udostępnionego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Aby uzyskać więcej informacji o tym, jak utworzyć token potwierdzenia, gdy klient i Usługa tokenu zabezpieczającego zawierają materiału klucza dla klucza współużytkowanego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
- Wystawiony token odwołania są wykonane przez utworzenie wystąpienia <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> klasy.  
+ Wystawiony token odwołania są tworzone przez utworzenie wystąpienia <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> klasy.  
   
  [!code-csharp[c_CreateSTS#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#7)]
  [!code-vb[c_CreateSTS#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#7)]  
   
- Te wartości różnych są następnie zserializowane do komunikat odpowiedzi zwracany do klienta.  
+ Te różne wartości są następnie serializowany w komunikat odpowiedzi zwracany do klienta.  
   
 ## <a name="example"></a>Przykład  
- Aby uzyskać pełny kod dla usługi tokenu zabezpieczającego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Pełny kod dla usługi tokenu zabezpieczającego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IdentityModel.Tokens.SigningCredentials>  

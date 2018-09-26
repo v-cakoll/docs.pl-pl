@@ -13,21 +13,21 @@ ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7cc105b335069635791e9e558fe6f9a28eba8b60
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090360"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192122"
 ---
-# <a name="c-special-characters"></a><span data-ttu-id="40837-102">Znaki specjalne języka C#</span><span class="sxs-lookup"><span data-stu-id="40837-102">C# Special Characters</span></span>
+# <a name="c-special-characters"></a><span data-ttu-id="52f02-102">Znaki specjalne języka C#</span><span class="sxs-lookup"><span data-stu-id="52f02-102">C# Special Characters</span></span>
 
-<span data-ttu-id="40837-103">Znaki specjalne są wstępnie zdefiniowanymi znakami kontekstowymi, które modyfikują elementy programu (literały, identyfikatory lub nazwy atrybutu), do których są dołączone.</span><span class="sxs-lookup"><span data-stu-id="40837-103">Special characters are predefined, contextual characters that modify the program element (a literal string, an identifier, or an attribute name) to which they are prepended.</span></span> <span data-ttu-id="40837-104">C# obsługuje następujące znaki specjalne:</span><span class="sxs-lookup"><span data-stu-id="40837-104">C# supports the following special characters:</span></span> 
+<span data-ttu-id="52f02-103">Znaki specjalne są wstępnie zdefiniowanymi znakami kontekstowymi, które modyfikują elementy programu (literały, identyfikatory lub nazwy atrybutu), do których są dołączone.</span><span class="sxs-lookup"><span data-stu-id="52f02-103">Special characters are predefined, contextual characters that modify the program element (a literal string, an identifier, or an attribute name) to which they are prepended.</span></span> <span data-ttu-id="52f02-104">C# obsługuje następujące znaki specjalne:</span><span class="sxs-lookup"><span data-stu-id="52f02-104">C# supports the following special characters:</span></span> 
 
-- <span data-ttu-id="40837-105">[@](../../../csharp/language-reference/tokens/verbatim.md) — znak identyfikatora dosłownego,</span><span class="sxs-lookup"><span data-stu-id="40837-105">[@](../../../csharp/language-reference/tokens/verbatim.md), the verbatim identifier character.</span></span> 
+- <span data-ttu-id="52f02-105">[@](../../../csharp/language-reference/tokens/verbatim.md) — znak identyfikatora dosłownego,</span><span class="sxs-lookup"><span data-stu-id="52f02-105">[@](../../../csharp/language-reference/tokens/verbatim.md), the verbatim identifier character.</span></span> 
 
-- <span data-ttu-id="40837-106">[$](../../../csharp/language-reference/tokens/interpolated.md) — znak ciągu interpolowanego.</span><span class="sxs-lookup"><span data-stu-id="40837-106">[$](../../../csharp/language-reference/tokens/interpolated.md), the interpolated string character.</span></span>
+- <span data-ttu-id="52f02-106">[$](../../../csharp/language-reference/tokens/interpolated.md) — znak ciągu interpolowanego.</span><span class="sxs-lookup"><span data-stu-id="52f02-106">[$](../../../csharp/language-reference/tokens/interpolated.md), the interpolated string character.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="40837-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="40837-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52f02-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="52f02-107">See Also</span></span>
 
-- [<span data-ttu-id="40837-108">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="40837-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="40837-109">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="40837-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="52f02-108">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="52f02-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="52f02-109">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="52f02-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)

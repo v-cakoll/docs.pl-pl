@@ -10,21 +10,21 @@ ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: bfcf96c553f85aeb0a40dfd6ea36667d504e8eee
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47172839"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47202792"
 ---
-# <a name="ltlistenersgt-element-for-lttracegt"></a><span data-ttu-id="0ff54-102">&lt;odbiorniki&gt; elementu &lt;śledzenia&gt;</span><span class="sxs-lookup"><span data-stu-id="0ff54-102">&lt;listeners&gt; Element for &lt;trace&gt;</span></span>
-<span data-ttu-id="0ff54-103">Określa odbiornik, który zbiera, magazynów i przekazuje komunikaty.</span><span class="sxs-lookup"><span data-stu-id="0ff54-103">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="0ff54-104">Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.</span><span class="sxs-lookup"><span data-stu-id="0ff54-104">Listeners direct the tracing output to an appropriate target.</span></span>  
+# <a name="ltlistenersgt-element-for-lttracegt"></a><span data-ttu-id="4347d-102">&lt;odbiorniki&gt; elementu &lt;śledzenia&gt;</span><span class="sxs-lookup"><span data-stu-id="4347d-102">&lt;listeners&gt; Element for &lt;trace&gt;</span></span>
+<span data-ttu-id="4347d-103">Określa odbiornik, który zbiera, magazynów i przekazuje komunikaty.</span><span class="sxs-lookup"><span data-stu-id="4347d-103">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="4347d-104">Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.</span><span class="sxs-lookup"><span data-stu-id="4347d-104">Listeners direct the tracing output to an appropriate target.</span></span>  
   
- <span data-ttu-id="0ff54-105">\<Konfiguracja > Element</span><span class="sxs-lookup"><span data-stu-id="0ff54-105">\<configuration> Element</span></span>  
-<span data-ttu-id="0ff54-106">\<System.Diagnostics > Element</span><span class="sxs-lookup"><span data-stu-id="0ff54-106">\<system.diagnostics> Element</span></span>  
-<span data-ttu-id="0ff54-107">\<Śledzenie > Element</span><span class="sxs-lookup"><span data-stu-id="0ff54-107">\<trace> Element</span></span>  
-<span data-ttu-id="0ff54-108">\<odbiorniki >, Element dla \<śledzenia ></span><span class="sxs-lookup"><span data-stu-id="0ff54-108">\<listeners> Element for \<trace></span></span>  
+ <span data-ttu-id="4347d-105">\<Konfiguracja > Element</span><span class="sxs-lookup"><span data-stu-id="4347d-105">\<configuration> Element</span></span>  
+<span data-ttu-id="4347d-106">\<System.Diagnostics > Element</span><span class="sxs-lookup"><span data-stu-id="4347d-106">\<system.diagnostics> Element</span></span>  
+<span data-ttu-id="4347d-107">\<Śledzenie > Element</span><span class="sxs-lookup"><span data-stu-id="4347d-107">\<trace> Element</span></span>  
+<span data-ttu-id="4347d-108">\<odbiorniki >, Element dla \<śledzenia ></span><span class="sxs-lookup"><span data-stu-id="4347d-108">\<listeners> Element for \<trace></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ff54-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="0ff54-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4347d-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="4347d-109">Syntax</span></span>  
   
 ```xml  
 <listeners>   
@@ -34,36 +34,36 @@ ms.locfileid: "47172839"
 </listeners>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0ff54-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="0ff54-110">Attributes and Elements</span></span>  
- <span data-ttu-id="0ff54-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="0ff54-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4347d-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="4347d-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="4347d-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="4347d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0ff54-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="0ff54-112">Attributes</span></span>  
- <span data-ttu-id="0ff54-113">Brak.</span><span class="sxs-lookup"><span data-stu-id="0ff54-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4347d-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="4347d-112">Attributes</span></span>  
+ <span data-ttu-id="4347d-113">Brak.</span><span class="sxs-lookup"><span data-stu-id="4347d-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="0ff54-114">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="0ff54-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4347d-114">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="4347d-114">Child Elements</span></span>  
   
-|<span data-ttu-id="0ff54-115">Element</span><span class="sxs-lookup"><span data-stu-id="0ff54-115">Element</span></span>|<span data-ttu-id="0ff54-116">Opis</span><span class="sxs-lookup"><span data-stu-id="0ff54-116">Description</span></span>|  
+|<span data-ttu-id="4347d-115">Element</span><span class="sxs-lookup"><span data-stu-id="4347d-115">Element</span></span>|<span data-ttu-id="4347d-116">Opis</span><span class="sxs-lookup"><span data-stu-id="4347d-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0ff54-117">\<add></span><span class="sxs-lookup"><span data-stu-id="0ff54-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="0ff54-118">Dodaje odbiornik do `Listeners` kolekcji.</span><span class="sxs-lookup"><span data-stu-id="0ff54-118">Adds a listener to the `Listeners` collection.</span></span>|  
-|[<span data-ttu-id="0ff54-119">\<Wyczyść ></span><span class="sxs-lookup"><span data-stu-id="0ff54-119">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|<span data-ttu-id="0ff54-120">Czyści `Listeners` kolekcji na potrzeby śledzenia.</span><span class="sxs-lookup"><span data-stu-id="0ff54-120">Clears the `Listeners` collection for trace.</span></span>|  
-|[<span data-ttu-id="0ff54-121">\<remove></span><span class="sxs-lookup"><span data-stu-id="0ff54-121">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|<span data-ttu-id="0ff54-122">Usuwa odbiornik z `Listeners` kolekcji.</span><span class="sxs-lookup"><span data-stu-id="0ff54-122">Removes a listener from the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="4347d-117">\<add></span><span class="sxs-lookup"><span data-stu-id="4347d-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="4347d-118">Dodaje odbiornik do `Listeners` kolekcji.</span><span class="sxs-lookup"><span data-stu-id="4347d-118">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="4347d-119">\<Wyczyść ></span><span class="sxs-lookup"><span data-stu-id="4347d-119">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|<span data-ttu-id="4347d-120">Czyści `Listeners` kolekcji na potrzeby śledzenia.</span><span class="sxs-lookup"><span data-stu-id="4347d-120">Clears the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="4347d-121">\<remove></span><span class="sxs-lookup"><span data-stu-id="4347d-121">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|<span data-ttu-id="4347d-122">Usuwa odbiornik z `Listeners` kolekcji.</span><span class="sxs-lookup"><span data-stu-id="4347d-122">Removes a listener from the `Listeners` collection.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="0ff54-123">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="0ff54-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4347d-123">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="4347d-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="0ff54-124">Element</span><span class="sxs-lookup"><span data-stu-id="0ff54-124">Element</span></span>|<span data-ttu-id="0ff54-125">Opis</span><span class="sxs-lookup"><span data-stu-id="0ff54-125">Description</span></span>|  
+|<span data-ttu-id="4347d-124">Element</span><span class="sxs-lookup"><span data-stu-id="4347d-124">Element</span></span>|<span data-ttu-id="4347d-125">Opis</span><span class="sxs-lookup"><span data-stu-id="4347d-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="0ff54-126">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0ff54-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="0ff54-127">Określa element root dla sekcji konfiguracyjnej platformy ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="0ff54-127">Specifies the root element for the ASP.NET configuration section.</span></span>|  
-|`trace`|<span data-ttu-id="0ff54-128">Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów śledzenia.</span><span class="sxs-lookup"><span data-stu-id="0ff54-128">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+|`configuration`|<span data-ttu-id="4347d-126">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4347d-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="4347d-127">Określa element root dla sekcji konfiguracyjnej platformy ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="4347d-127">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`trace`|<span data-ttu-id="4347d-128">Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów śledzenia.</span><span class="sxs-lookup"><span data-stu-id="4347d-128">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0ff54-129">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0ff54-129">Remarks</span></span>  
- <span data-ttu-id="0ff54-130"><xref:System.Diagnostics.Debug> i <xref:System.Diagnostics.Trace> klasy współużytkować ten sam **odbiorników** kolekcji.</span><span class="sxs-lookup"><span data-stu-id="0ff54-130">The <xref:System.Diagnostics.Debug> and <xref:System.Diagnostics.Trace> classes share the same **Listeners** collection.</span></span> <span data-ttu-id="0ff54-131">Jeśli dodasz obiektu odbiornika do kolekcji w jednym z tych klas, inne klasy używa tego samego odbiornika.</span><span class="sxs-lookup"><span data-stu-id="0ff54-131">If you add a listener object to the collection in one of these classes, the other class uses the same listener.</span></span> <span data-ttu-id="0ff54-132">Klasy odbiornika dostarczane z programem .NET Framework pochodzić od <xref:System.Diagnostics.TraceListener> klasy.</span><span class="sxs-lookup"><span data-stu-id="0ff54-132">The listener classes shipped with the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4347d-129">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4347d-129">Remarks</span></span>  
+ <span data-ttu-id="4347d-130"><xref:System.Diagnostics.Debug> i <xref:System.Diagnostics.Trace> klasy współużytkować ten sam **odbiorników** kolekcji.</span><span class="sxs-lookup"><span data-stu-id="4347d-130">The <xref:System.Diagnostics.Debug> and <xref:System.Diagnostics.Trace> classes share the same **Listeners** collection.</span></span> <span data-ttu-id="4347d-131">Jeśli dodasz obiektu odbiornika do kolekcji w jednym z tych klas, inne klasy używa tego samego odbiornika.</span><span class="sxs-lookup"><span data-stu-id="4347d-131">If you add a listener object to the collection in one of these classes, the other class uses the same listener.</span></span> <span data-ttu-id="4347d-132">Klasy odbiornika dostarczane z programem .NET Framework pochodzić od <xref:System.Diagnostics.TraceListener> klasy.</span><span class="sxs-lookup"><span data-stu-id="4347d-132">The listener classes shipped with the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="0ff54-133">Plik konfiguracji</span><span class="sxs-lookup"><span data-stu-id="0ff54-133">Configuration File</span></span>  
- <span data-ttu-id="0ff54-134">Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0ff54-134">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="4347d-133">Plik konfiguracji</span><span class="sxs-lookup"><span data-stu-id="4347d-133">Configuration File</span></span>  
+ <span data-ttu-id="4347d-134">Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="4347d-134">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0ff54-135">Przykład</span><span class="sxs-lookup"><span data-stu-id="0ff54-135">Example</span></span>  
- <span data-ttu-id="0ff54-136">Poniższy przykład pokazuje, jak używać  **\<odbiorników >** elementu do dodania odbiorniki `MyListener` i `MyEventListener` do **odbiorników** kolekcji.</span><span class="sxs-lookup"><span data-stu-id="0ff54-136">The following example shows how to use the **\<listeners>** element to add the listeners `MyListener` and `MyEventListener` to the **Listeners** collection.</span></span> <span data-ttu-id="0ff54-137">`MyListener` Tworzy plik o nazwie `MyListener.log` i zapisuje dane wyjściowe do pliku.</span><span class="sxs-lookup"><span data-stu-id="0ff54-137">`MyListener` creates a file called `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="0ff54-138">`MyEventListener` tworzy wpis w dzienniku zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="0ff54-138">`MyEventListener` creates an entry in the event log.</span></span>  
+## <a name="example"></a><span data-ttu-id="4347d-135">Przykład</span><span class="sxs-lookup"><span data-stu-id="4347d-135">Example</span></span>  
+ <span data-ttu-id="4347d-136">Poniższy przykład pokazuje, jak używać  **\<odbiorników >** elementu do dodania odbiorniki `MyListener` i `MyEventListener` do **odbiorników** kolekcji.</span><span class="sxs-lookup"><span data-stu-id="4347d-136">The following example shows how to use the **\<listeners>** element to add the listeners `MyListener` and `MyEventListener` to the **Listeners** collection.</span></span> <span data-ttu-id="4347d-137">`MyListener` Tworzy plik o nazwie `MyListener.log` i zapisuje dane wyjściowe do pliku.</span><span class="sxs-lookup"><span data-stu-id="4347d-137">`MyListener` creates a file called `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="4347d-138">`MyEventListener` tworzy wpis w dzienniku zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="4347d-138">`MyEventListener` creates an entry in the event log.</span></span>  
   
 ```xml  
 <configuration>  
@@ -86,6 +86,6 @@ ms.locfileid: "47172839"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0ff54-139">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0ff54-139">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4347d-139">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4347d-139">See Also</span></span>  
  <xref:System.Diagnostics.TraceListener>  
- [<span data-ttu-id="0ff54-140">Schemat ustawień śledzenia i debugowania</span><span class="sxs-lookup"><span data-stu-id="0ff54-140">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [<span data-ttu-id="4347d-140">Schemat ustawień śledzenia i debugowania</span><span class="sxs-lookup"><span data-stu-id="4347d-140">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

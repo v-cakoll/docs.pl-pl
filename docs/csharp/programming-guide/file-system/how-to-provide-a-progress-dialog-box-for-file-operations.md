@@ -5,32 +5,32 @@ helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
 ms.openlocfilehash: e93ce06a01046dfaf4465470ba7fdc687effa58d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710806"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47207406"
 ---
-# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a><span data-ttu-id="8c4e1-102">Porady: dostarczanie okna dialogowego postępu dla operacji na plikach (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="8c4e1-102">How to: Provide a Progress Dialog Box for File Operations (C# Programming Guide)</span></span>
-<span data-ttu-id="8c4e1-103">Można zapewnić standardowe okno dialogowe, które wyświetla postęp w operacjach plików w Windows, jeśli używasz <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> method in Class metoda <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="8c4e1-103">You can provide a standard dialog box that shows progress on file operations in Windows if you use the <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> method in the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace.</span></span>  
+# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a><span data-ttu-id="19ffb-102">Porady: dostarczanie okna dialogowego postępu dla operacji na plikach (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="19ffb-102">How to: Provide a Progress Dialog Box for File Operations (C# Programming Guide)</span></span>
+<span data-ttu-id="19ffb-103">Można zapewnić standardowe okno dialogowe, które wyświetla postęp w operacjach plików w Windows, jeśli używasz <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> method in Class metoda <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="19ffb-103">You can provide a standard dialog box that shows progress on file operations in Windows if you use the <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> method in the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-add-a-reference-in-visual-studio"></a><span data-ttu-id="8c4e1-104">Aby dodać odwołanie w Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8c4e1-104">To add a reference in Visual Studio</span></span>  
+### <a name="to-add-a-reference-in-visual-studio"></a><span data-ttu-id="19ffb-104">Aby dodać odwołanie w Visual Studio</span><span class="sxs-lookup"><span data-stu-id="19ffb-104">To add a reference in Visual Studio</span></span>  
   
-1.  <span data-ttu-id="8c4e1-105">Na pasku menu wybierz **projektu**, **Dodaj odwołanie**.</span><span class="sxs-lookup"><span data-stu-id="8c4e1-105">On the menu bar, choose **Project**, **Add Reference**.</span></span>  
+1.  <span data-ttu-id="19ffb-105">Na pasku menu wybierz **projektu**, **Dodaj odwołanie**.</span><span class="sxs-lookup"><span data-stu-id="19ffb-105">On the menu bar, choose **Project**, **Add Reference**.</span></span>  
   
-     <span data-ttu-id="8c4e1-106">**Menadżer odwołań** pojawi się okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="8c4e1-106">The **Reference Manager** dialog box appears.</span></span>  
+     <span data-ttu-id="19ffb-106">**Menadżer odwołań** pojawi się okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="19ffb-106">The **Reference Manager** dialog box appears.</span></span>  
   
-2.  <span data-ttu-id="8c4e1-107">W **zestawy** obszaru, wybierz **Framework** Jeśli nie została jeszcze wybrana.</span><span class="sxs-lookup"><span data-stu-id="8c4e1-107">In the **Assemblies** area, choose **Framework** if it isn’t already chosen.</span></span>  
+2.  <span data-ttu-id="19ffb-107">W **zestawy** obszaru, wybierz **Framework** Jeśli nie została jeszcze wybrana.</span><span class="sxs-lookup"><span data-stu-id="19ffb-107">In the **Assemblies** area, choose **Framework** if it isn’t already chosen.</span></span>  
   
-3.  <span data-ttu-id="8c4e1-108">Na liście nazw, wybierz **Microsoft.VisualBasic** pole wyboru, a następnie wybierz **OK** przycisk, aby zamknąć okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="8c4e1-108">In the list of names, select the **Microsoft.VisualBasic** check box, and then choose the **OK** button to close the dialog box.</span></span>  
+3.  <span data-ttu-id="19ffb-108">Na liście nazw, wybierz **Microsoft.VisualBasic** pole wyboru, a następnie wybierz **OK** przycisk, aby zamknąć okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="19ffb-108">In the list of names, select the **Microsoft.VisualBasic** check box, and then choose the **OK** button to close the dialog box.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8c4e1-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="8c4e1-109">Example</span></span>  
- <span data-ttu-id="8c4e1-110">Poniższy kod kopiuje katalog który `sourcePath` określa do katalogu, `destinationPath` określa.</span><span class="sxs-lookup"><span data-stu-id="8c4e1-110">The following code copies the directory that `sourcePath` specifies into the directory that `destinationPath` specifies.</span></span> <span data-ttu-id="8c4e1-111">Ten kod zapewnia standardowe okno dialogowe, pokazuje szacowany pozostały czas przed zakończeniem operacji.</span><span class="sxs-lookup"><span data-stu-id="8c4e1-111">This code also provides a standard dialog box that shows the estimated amount of time remaining before the operation finishes.</span></span>  
+## <a name="example"></a><span data-ttu-id="19ffb-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="19ffb-109">Example</span></span>  
+ <span data-ttu-id="19ffb-110">Poniższy kod kopiuje katalog który `sourcePath` określa do katalogu, `destinationPath` określa.</span><span class="sxs-lookup"><span data-stu-id="19ffb-110">The following code copies the directory that `sourcePath` specifies into the directory that `destinationPath` specifies.</span></span> <span data-ttu-id="19ffb-111">Ten kod zapewnia standardowe okno dialogowe, pokazuje szacowany pozostały czas przed zakończeniem operacji.</span><span class="sxs-lookup"><span data-stu-id="19ffb-111">This code also provides a standard dialog box that shows the estimated amount of time remaining before the operation finishes.</span></span>  
   
  [!code-csharp[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-provide-a-progress-dialog-box-for-file-operations_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="8c4e1-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8c4e1-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19ffb-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="19ffb-112">See Also</span></span>
 
-- [<span data-ttu-id="8c4e1-113">System plików i rejestr (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="8c4e1-113">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)
+- [<span data-ttu-id="19ffb-113">System plików i rejestr (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="19ffb-113">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)

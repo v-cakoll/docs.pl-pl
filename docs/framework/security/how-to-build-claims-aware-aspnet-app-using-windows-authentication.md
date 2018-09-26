@@ -4,77 +4,77 @@ ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
 ms.openlocfilehash: 2c7877c452c729b30029cad1a8e17600f3dc9661
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112429"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198531"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a><span data-ttu-id="25938-102">Instrukcje: Tworzenie aplikacji programu ASP.NET obsługującej oświadczenia, za pomocą uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="25938-102">How To: Build Claims-Aware ASP.NET Application Using Windows Authentication</span></span>
-## <a name="applies-to"></a><span data-ttu-id="25938-103">Dotyczy:</span><span class="sxs-lookup"><span data-stu-id="25938-103">Applies To</span></span>  
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a><span data-ttu-id="b29bd-102">Instrukcje: Tworzenie aplikacji programu ASP.NET obsługującej oświadczenia, za pomocą uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="b29bd-102">How To: Build Claims-Aware ASP.NET Application Using Windows Authentication</span></span>
+## <a name="applies-to"></a><span data-ttu-id="b29bd-103">Dotyczy:</span><span class="sxs-lookup"><span data-stu-id="b29bd-103">Applies To</span></span>  
   
--   <span data-ttu-id="25938-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="25938-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="b29bd-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="b29bd-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="25938-105">ASP.NET® formularzy sieci Web</span><span class="sxs-lookup"><span data-stu-id="25938-105">ASP.NET® Web Forms</span></span>  
+-   <span data-ttu-id="b29bd-105">ASP.NET® formularzy sieci Web</span><span class="sxs-lookup"><span data-stu-id="b29bd-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="25938-106">Podsumowanie</span><span class="sxs-lookup"><span data-stu-id="25938-106">Summary</span></span>  
- <span data-ttu-id="25938-107">Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia korzystającej z uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="25938-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application that uses Windows authentication.</span></span> <span data-ttu-id="25938-108">On również instrukcje testowania aplikacji pozwalające sprawdzić, czy są prezentowane oświadczenia, gdy użytkownik loguje się przy użyciu uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="25938-108">It also provides instructions for how to test the application to verify that claims are presented when a user signs in using Windows authentication.</span></span>  
+## <a name="summary"></a><span data-ttu-id="b29bd-106">Podsumowanie</span><span class="sxs-lookup"><span data-stu-id="b29bd-106">Summary</span></span>  
+ <span data-ttu-id="b29bd-107">Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia korzystającej z uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="b29bd-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application that uses Windows authentication.</span></span> <span data-ttu-id="b29bd-108">On również instrukcje testowania aplikacji pozwalające sprawdzić, czy są prezentowane oświadczenia, gdy użytkownik loguje się przy użyciu uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="b29bd-108">It also provides instructions for how to test the application to verify that claims are presented when a user signs in using Windows authentication.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="25938-109">Spis treści</span><span class="sxs-lookup"><span data-stu-id="25938-109">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="b29bd-109">Spis treści</span><span class="sxs-lookup"><span data-stu-id="b29bd-109">Contents</span></span>  
   
--   <span data-ttu-id="25938-110">Cele</span><span class="sxs-lookup"><span data-stu-id="25938-110">Objectives</span></span>  
+-   <span data-ttu-id="b29bd-110">Cele</span><span class="sxs-lookup"><span data-stu-id="b29bd-110">Objectives</span></span>  
   
--   <span data-ttu-id="25938-111">Omówienie</span><span class="sxs-lookup"><span data-stu-id="25938-111">Overview</span></span>  
+-   <span data-ttu-id="b29bd-111">Omówienie</span><span class="sxs-lookup"><span data-stu-id="b29bd-111">Overview</span></span>  
   
--   <span data-ttu-id="25938-112">Zestawienie czynności</span><span class="sxs-lookup"><span data-stu-id="25938-112">Summary of Steps</span></span>  
+-   <span data-ttu-id="b29bd-112">Zestawienie czynności</span><span class="sxs-lookup"><span data-stu-id="b29bd-112">Summary of Steps</span></span>  
   
--   <span data-ttu-id="25938-113">Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms</span><span class="sxs-lookup"><span data-stu-id="25938-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="b29bd-113">Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms</span><span class="sxs-lookup"><span data-stu-id="b29bd-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="25938-114">Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="25938-114">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Windows Authentication</span></span>  
+-   <span data-ttu-id="b29bd-114">Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="b29bd-114">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Windows Authentication</span></span>  
   
--   <span data-ttu-id="25938-115">Krok 3 — Przetestowanie rozwiązania</span><span class="sxs-lookup"><span data-stu-id="25938-115">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="b29bd-115">Krok 3 — Przetestowanie rozwiązania</span><span class="sxs-lookup"><span data-stu-id="b29bd-115">Step 3 – Test Your Solution</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="25938-116">Cele</span><span class="sxs-lookup"><span data-stu-id="25938-116">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="b29bd-116">Cele</span><span class="sxs-lookup"><span data-stu-id="b29bd-116">Objectives</span></span>  
   
--   <span data-ttu-id="25938-117">Skonfigurować aplikację ASP.NET Web Forms pod kątem oświadczeń przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="25938-117">Configure an ASP.NET Web Forms application for claims using Windows authentication</span></span>  
+-   <span data-ttu-id="b29bd-117">Skonfigurować aplikację ASP.NET Web Forms pod kątem oświadczeń przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="b29bd-117">Configure an ASP.NET Web Forms application for claims using Windows authentication</span></span>  
   
--   <span data-ttu-id="25938-118">Testowanie aplikacji formularzy sieci Web ASP.NET, aby zobaczyć, czy działa prawidłowo</span><span class="sxs-lookup"><span data-stu-id="25938-118">Test the ASP.NET Web Forms application to see if it is working properly</span></span>  
+-   <span data-ttu-id="b29bd-118">Testowanie aplikacji formularzy sieci Web ASP.NET, aby zobaczyć, czy działa prawidłowo</span><span class="sxs-lookup"><span data-stu-id="b29bd-118">Test the ASP.NET Web Forms application to see if it is working properly</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="25938-119">Omówienie</span><span class="sxs-lookup"><span data-stu-id="25938-119">Overview</span></span>  
- <span data-ttu-id="25938-120">W .NET 4.5 WIF i jego autoryzacji opartej na oświadczeniach zostały uwzględnione w ramach Framework.</span><span class="sxs-lookup"><span data-stu-id="25938-120">In .NET 4.5, WIF and its claims-based authorization have been included as an integral part of the Framework.</span></span> <span data-ttu-id="25938-121">Wcześniej, jeśli chce oświadczeń użytkownika ASP.NET należało do zainstalowania programu WIF, i następnie rzutowania interfejsy z podmiotem zabezpieczeń obiektów takich jak `Thread.CurrentPrincipal` lub `HttpContext.Current.User`.</span><span class="sxs-lookup"><span data-stu-id="25938-121">Previously, if you wanted claims from an ASP.NET user, you were required to install WIF, and then cast interfaces to Principal objects such as `Thread.CurrentPrincipal` or `HttpContext.Current.User`.</span></span> <span data-ttu-id="25938-122">Obecnie oświadczeń są obsługiwane automatycznie przez te jednostki obiektów.</span><span class="sxs-lookup"><span data-stu-id="25938-122">Now, claims are served automatically by these Principal objects.</span></span>  
+## <a name="overview"></a><span data-ttu-id="b29bd-119">Omówienie</span><span class="sxs-lookup"><span data-stu-id="b29bd-119">Overview</span></span>  
+ <span data-ttu-id="b29bd-120">W .NET 4.5 WIF i jego autoryzacji opartej na oświadczeniach zostały uwzględnione w ramach Framework.</span><span class="sxs-lookup"><span data-stu-id="b29bd-120">In .NET 4.5, WIF and its claims-based authorization have been included as an integral part of the Framework.</span></span> <span data-ttu-id="b29bd-121">Wcześniej, jeśli chce oświadczeń użytkownika ASP.NET należało do zainstalowania programu WIF, i następnie rzutowania interfejsy z podmiotem zabezpieczeń obiektów takich jak `Thread.CurrentPrincipal` lub `HttpContext.Current.User`.</span><span class="sxs-lookup"><span data-stu-id="b29bd-121">Previously, if you wanted claims from an ASP.NET user, you were required to install WIF, and then cast interfaces to Principal objects such as `Thread.CurrentPrincipal` or `HttpContext.Current.User`.</span></span> <span data-ttu-id="b29bd-122">Obecnie oświadczeń są obsługiwane automatycznie przez te jednostki obiektów.</span><span class="sxs-lookup"><span data-stu-id="b29bd-122">Now, claims are served automatically by these Principal objects.</span></span>  
   
- <span data-ttu-id="25938-123">Uwierzytelnianie Windows skorzystał z włączenia programu WIF w .NET 4.5, ponieważ wszyscy użytkownicy uwierzytelnieni poświadczenia Windows automatycznie oświadczenia skojarzone z nimi.</span><span class="sxs-lookup"><span data-stu-id="25938-123">Windows authentication has benefited from WIF’s inclusion in .NET 4.5 because all users authenticated by Windows credentials automatically have claims associated with them.</span></span> <span data-ttu-id="25938-124">Możesz rozpocząć korzystanie z tych oświadczeń bezpośrednio w aplikacji ASP.NET, która korzysta z uwierzytelniania Windows, tak jak pokazano w tym instruktażu.</span><span class="sxs-lookup"><span data-stu-id="25938-124">You can begin using these claims immediately in an ASP.NET application that uses Windows authentication, as this How-To demonstrates.</span></span>  
+ <span data-ttu-id="b29bd-123">Uwierzytelnianie Windows skorzystał z włączenia programu WIF w .NET 4.5, ponieważ wszyscy użytkownicy uwierzytelnieni poświadczenia Windows automatycznie oświadczenia skojarzone z nimi.</span><span class="sxs-lookup"><span data-stu-id="b29bd-123">Windows authentication has benefited from WIF’s inclusion in .NET 4.5 because all users authenticated by Windows credentials automatically have claims associated with them.</span></span> <span data-ttu-id="b29bd-124">Możesz rozpocząć korzystanie z tych oświadczeń bezpośrednio w aplikacji ASP.NET, która korzysta z uwierzytelniania Windows, tak jak pokazano w tym instruktażu.</span><span class="sxs-lookup"><span data-stu-id="b29bd-124">You can begin using these claims immediately in an ASP.NET application that uses Windows authentication, as this How-To demonstrates.</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="25938-125">Zestawienie czynności</span><span class="sxs-lookup"><span data-stu-id="25938-125">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="b29bd-125">Zestawienie czynności</span><span class="sxs-lookup"><span data-stu-id="b29bd-125">Summary of Steps</span></span>  
   
--   <span data-ttu-id="25938-126">Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms</span><span class="sxs-lookup"><span data-stu-id="25938-126">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="b29bd-126">Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms</span><span class="sxs-lookup"><span data-stu-id="b29bd-126">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="25938-127">Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="25938-127">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Windows Authentication</span></span>  
+-   <span data-ttu-id="b29bd-127">Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="b29bd-127">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Windows Authentication</span></span>  
   
--   <span data-ttu-id="25938-128">Krok 3 — Przetestowanie rozwiązania</span><span class="sxs-lookup"><span data-stu-id="25938-128">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="b29bd-128">Krok 3 — Przetestowanie rozwiązania</span><span class="sxs-lookup"><span data-stu-id="b29bd-128">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="25938-129">Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms</span><span class="sxs-lookup"><span data-stu-id="25938-129">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
- <span data-ttu-id="25938-130">W tym kroku utworzysz nową aplikację ASP.NET Web Forms.</span><span class="sxs-lookup"><span data-stu-id="25938-130">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="b29bd-129">Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms</span><span class="sxs-lookup"><span data-stu-id="b29bd-129">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+ <span data-ttu-id="b29bd-130">W tym kroku utworzysz nową aplikację ASP.NET Web Forms.</span><span class="sxs-lookup"><span data-stu-id="b29bd-130">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="25938-131">Aby utworzyć prostą aplikację platformy ASP.NET</span><span class="sxs-lookup"><span data-stu-id="25938-131">To create a simple ASP.NET application</span></span>  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="b29bd-131">Aby utworzyć prostą aplikację platformy ASP.NET</span><span class="sxs-lookup"><span data-stu-id="b29bd-131">To create a simple ASP.NET application</span></span>  
   
-1.  <span data-ttu-id="25938-132">Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.</span><span class="sxs-lookup"><span data-stu-id="25938-132">Start Visual Studio, then click **File**, **New**, and then **Project**.</span></span>  
+1.  <span data-ttu-id="b29bd-132">Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.</span><span class="sxs-lookup"><span data-stu-id="b29bd-132">Start Visual Studio, then click **File**, **New**, and then **Project**.</span></span>  
   
-2.  <span data-ttu-id="25938-133">W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="25938-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
+2.  <span data-ttu-id="b29bd-133">W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="b29bd-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3.  <span data-ttu-id="25938-134">W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.</span><span class="sxs-lookup"><span data-stu-id="25938-134">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3.  <span data-ttu-id="b29bd-134">W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.</span><span class="sxs-lookup"><span data-stu-id="b29bd-134">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-4.  <span data-ttu-id="25938-135">Po **TestApp** został utworzony projekt, kliknij go w **Eksploratora rozwiązań**.</span><span class="sxs-lookup"><span data-stu-id="25938-135">After the **TestApp** project has been created, click on it in **Solution Explorer**.</span></span> <span data-ttu-id="25938-136">Właściwości projektu, pojawi się w **właściwości** okienku poniżej **Eksploratora rozwiązań**.</span><span class="sxs-lookup"><span data-stu-id="25938-136">The project’s properties will appear in the **Properties** pane below **Solution Explorer**.</span></span> <span data-ttu-id="25938-137">Ustaw **uwierzytelniania Windows** właściwości **włączone**.</span><span class="sxs-lookup"><span data-stu-id="25938-137">Set the **Windows Authentication** property to **Enabled**.</span></span>  
+4.  <span data-ttu-id="b29bd-135">Po **TestApp** został utworzony projekt, kliknij go w **Eksploratora rozwiązań**.</span><span class="sxs-lookup"><span data-stu-id="b29bd-135">After the **TestApp** project has been created, click on it in **Solution Explorer**.</span></span> <span data-ttu-id="b29bd-136">Właściwości projektu, pojawi się w **właściwości** okienku poniżej **Eksploratora rozwiązań**.</span><span class="sxs-lookup"><span data-stu-id="b29bd-136">The project’s properties will appear in the **Properties** pane below **Solution Explorer**.</span></span> <span data-ttu-id="b29bd-137">Ustaw **uwierzytelniania Windows** właściwości **włączone**.</span><span class="sxs-lookup"><span data-stu-id="b29bd-137">Set the **Windows Authentication** property to **Enabled**.</span></span>  
   
     > [!WARNING]
-    >  <span data-ttu-id="25938-138">Uwierzytelnianie Windows jest domyślnie wyłączona, w nowej aplikacji ASP.NET, więc musisz ręcznie włączyć ją.</span><span class="sxs-lookup"><span data-stu-id="25938-138">Windows authentication is disabled by default in new ASP.NET applications, so you must manually enable it.</span></span>  
+    >  <span data-ttu-id="b29bd-138">Uwierzytelnianie Windows jest domyślnie wyłączona, w nowej aplikacji ASP.NET, więc musisz ręcznie włączyć ją.</span><span class="sxs-lookup"><span data-stu-id="b29bd-138">Windows authentication is disabled by default in new ASP.NET applications, so you must manually enable it.</span></span>  
   
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a><span data-ttu-id="25938-139">Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="25938-139">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Windows Authentication</span></span>  
- <span data-ttu-id="25938-140">W tym kroku dodasz wpis konfiguracyjny do *Web.config* konfiguracji plik i Modyfikuj *Default.aspx* plik, aby wyświetlić oświadczenia informacji o koncie.</span><span class="sxs-lookup"><span data-stu-id="25938-140">In this step you will add a configuration entry to the *Web.config* configuration file and modify the *Default.aspx* file to display claims information for an account.</span></span>  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a><span data-ttu-id="b29bd-139">Krok 2 — Konfigurowanie aplikacji ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="b29bd-139">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Windows Authentication</span></span>  
+ <span data-ttu-id="b29bd-140">W tym kroku dodasz wpis konfiguracyjny do *Web.config* konfiguracji plik i Modyfikuj *Default.aspx* plik, aby wyświetlić oświadczenia informacji o koncie.</span><span class="sxs-lookup"><span data-stu-id="b29bd-140">In this step you will add a configuration entry to the *Web.config* configuration file and modify the *Default.aspx* file to display claims information for an account.</span></span>  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a><span data-ttu-id="25938-141">Aby skonfigurować aplikację ASP.NET dla oświadczeń przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="25938-141">To configure ASP.NET application for claims using Windows authentication</span></span>  
+#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a><span data-ttu-id="b29bd-141">Aby skonfigurować aplikację ASP.NET dla oświadczeń przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="b29bd-141">To configure ASP.NET application for claims using Windows authentication</span></span>  
   
-1.  <span data-ttu-id="25938-142">W **TestApp** projektu *Default.aspx* pliku, Zastąp istniejący kod znaczników następującym kodem:</span><span class="sxs-lookup"><span data-stu-id="25938-142">In the **TestApp** project’s *Default.aspx* file, replace the existing markup with the following:</span></span>  
+1.  <span data-ttu-id="b29bd-142">W **TestApp** projektu *Default.aspx* pliku, Zastąp istniejący kod znaczników następującym kodem:</span><span class="sxs-lookup"><span data-stu-id="b29bd-142">In the **TestApp** project’s *Default.aspx* file, replace the existing markup with the following:</span></span>  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -94,9 +94,9 @@ ms.locfileid: "47112429"
     </asp:Content>  
     ```  
   
-     <span data-ttu-id="25938-143">Ten krok powoduje dodanie kontrolki widoku siatki do Twojej *Default.aspx* strony, który zostanie wypełniony oświadczenia jest pobierana z uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="25938-143">This step adds a GridView control to your *Default.aspx* page that will be populated with the claims retrieved from Windows authentication.</span></span>  
+     <span data-ttu-id="b29bd-143">Ten krok powoduje dodanie kontrolki widoku siatki do Twojej *Default.aspx* strony, który zostanie wypełniony oświadczenia jest pobierana z uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="b29bd-143">This step adds a GridView control to your *Default.aspx* page that will be populated with the claims retrieved from Windows authentication.</span></span>  
   
-2.  <span data-ttu-id="25938-144">Zapisz *Default.aspx* pliku, a następnie otwórz jego pliku związanego z kodem o nazwie *Default.aspx.cs*.</span><span class="sxs-lookup"><span data-stu-id="25938-144">Save the *Default.aspx* file, then open its code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="25938-145">Zastąp istniejący kod następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="25938-145">Replace the existing code with the following:</span></span>  
+2.  <span data-ttu-id="b29bd-144">Zapisz *Default.aspx* pliku, a następnie otwórz jego pliku związanego z kodem o nazwie *Default.aspx.cs*.</span><span class="sxs-lookup"><span data-stu-id="b29bd-144">Save the *Default.aspx* file, then open its code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="b29bd-145">Zastąp istniejący kod następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="b29bd-145">Replace the existing code with the following:</span></span>  
   
     ```csharp  
     using System;  
@@ -117,15 +117,15 @@ ms.locfileid: "47112429"
     }  
     ```  
   
-     <span data-ttu-id="25938-146">Powyższy kod wyświetli oświadczenia dotyczące uwierzytelnionego użytkownika.</span><span class="sxs-lookup"><span data-stu-id="25938-146">The above code will display claims about an authenticated user.</span></span>  
+     <span data-ttu-id="b29bd-146">Powyższy kod wyświetli oświadczenia dotyczące uwierzytelnionego użytkownika.</span><span class="sxs-lookup"><span data-stu-id="b29bd-146">The above code will display claims about an authenticated user.</span></span>  
   
-3.  <span data-ttu-id="25938-147">Aby zmienić typ uwierzytelniania aplikacji, należy zmodyfikować  **\<uwierzytelniania >** bloku  **\<system.web >** sekcji katalog główny projektu  *Plik Web.config* plik zawiera tylko następujący wpis konfiguracji:</span><span class="sxs-lookup"><span data-stu-id="25938-147">To change the application’s authentication type, modify the **\<authentication>** block in the **\<system.web>** section of the project’s root *Web.config* file so that it only includes the following configuration entry:</span></span>  
+3.  <span data-ttu-id="b29bd-147">Aby zmienić typ uwierzytelniania aplikacji, należy zmodyfikować  **\<uwierzytelniania >** bloku  **\<system.web >** sekcji katalog główny projektu  *Plik Web.config* plik zawiera tylko następujący wpis konfiguracji:</span><span class="sxs-lookup"><span data-stu-id="b29bd-147">To change the application’s authentication type, modify the **\<authentication>** block in the **\<system.web>** section of the project’s root *Web.config* file so that it only includes the following configuration entry:</span></span>  
   
     ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  <span data-ttu-id="25938-148">Na koniec zmodyfikuj  **\<autoryzacji >** bloku  **\<system.web >** sekcji tego samego *Web.config* plik, aby wymusić uwierzytelnianie:</span><span class="sxs-lookup"><span data-stu-id="25938-148">Finally, modify the **\<authorization>** block in the **\<system.web>** section of the same *Web.config* file to force authentication:</span></span>  
+4.  <span data-ttu-id="b29bd-148">Na koniec zmodyfikuj  **\<autoryzacji >** bloku  **\<system.web >** sekcji tego samego *Web.config* plik, aby wymusić uwierzytelnianie:</span><span class="sxs-lookup"><span data-stu-id="b29bd-148">Finally, modify the **\<authorization>** block in the **\<system.web>** section of the same *Web.config* file to force authentication:</span></span>  
   
     ```xml  
     <authorization>  
@@ -133,9 +133,9 @@ ms.locfileid: "47112429"
     </authorization>  
     ```  
   
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="25938-149">Krok 3 — Przetestowanie rozwiązania</span><span class="sxs-lookup"><span data-stu-id="25938-149">Step 3 – Test Your Solution</span></span>  
- <span data-ttu-id="25938-150">W tym kroku zostanie testowanie aplikacji ASP.NET Web Forms i sprawdź, czy są prezentowane oświadczenia, gdy użytkownik loguje się przy użyciu uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="25938-150">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Windows authentication.</span></span>  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="b29bd-149">Krok 3 — Przetestowanie rozwiązania</span><span class="sxs-lookup"><span data-stu-id="b29bd-149">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="b29bd-150">W tym kroku zostanie testowanie aplikacji ASP.NET Web Forms i sprawdź, czy są prezentowane oświadczenia, gdy użytkownik loguje się przy użyciu uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="b29bd-150">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Windows authentication.</span></span>  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a><span data-ttu-id="25938-151">Aby przetestować aplikację ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="25938-151">To test your ASP.NET Web Forms application for claims using Windows authentication</span></span>  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a><span data-ttu-id="b29bd-151">Aby przetestować aplikację ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows</span><span class="sxs-lookup"><span data-stu-id="b29bd-151">To test your ASP.NET Web Forms application for claims using Windows authentication</span></span>  
   
-1.  <span data-ttu-id="25938-152">Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację.</span><span class="sxs-lookup"><span data-stu-id="25938-152">Press **F5** to build and run the application.</span></span> <span data-ttu-id="25938-153">Powinna pojawić się *Default.aspx*, i nazwę konta Windows (łącznie z nazwą domeny) już powinna zostać wyświetlona jako użytkownik uwierzytelniony w prawym górnym rogu strony.</span><span class="sxs-lookup"><span data-stu-id="25938-153">You should be presented with *Default.aspx*, and your Windows account name (including domain name) should already appear as the authenticated user in the top right of the page.</span></span> <span data-ttu-id="25938-154">Zawartość strony powinna zawierać tabelę wypełnione oświadczeń pobierane z konta usługi Windows.</span><span class="sxs-lookup"><span data-stu-id="25938-154">The page’s content should include a table filled with claims retrieved from your Windows account.</span></span>
+1.  <span data-ttu-id="b29bd-152">Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację.</span><span class="sxs-lookup"><span data-stu-id="b29bd-152">Press **F5** to build and run the application.</span></span> <span data-ttu-id="b29bd-153">Powinna pojawić się *Default.aspx*, i nazwę konta Windows (łącznie z nazwą domeny) już powinna zostać wyświetlona jako użytkownik uwierzytelniony w prawym górnym rogu strony.</span><span class="sxs-lookup"><span data-stu-id="b29bd-153">You should be presented with *Default.aspx*, and your Windows account name (including domain name) should already appear as the authenticated user in the top right of the page.</span></span> <span data-ttu-id="b29bd-154">Zawartość strony powinna zawierać tabelę wypełnione oświadczeń pobierane z konta usługi Windows.</span><span class="sxs-lookup"><span data-stu-id="b29bd-154">The page’s content should include a table filled with claims retrieved from your Windows account.</span></span>

@@ -5,89 +5,89 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
 ms.openlocfilehash: 74b3749077fdb375f84ddacd98221aa4afcf2f67
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577851"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075271"
 ---
-# <a name="decision-table-net-frameworks-to-use-for-docker"></a><span data-ttu-id="7ef41-104">Tabela decyzji: .NET Framework na potrzeby platformy Docker</span><span class="sxs-lookup"><span data-stu-id="7ef41-104">Decision table: .NET frameworks to use for Docker</span></span>
+# <a name="decision-table-net-frameworks-to-use-for-docker"></a><span data-ttu-id="b7f5d-104">Tabela decyzji: .NET Framework na potrzeby platformy Docker</span><span class="sxs-lookup"><span data-stu-id="b7f5d-104">Decision table: .NET frameworks to use for Docker</span></span>
 
-<span data-ttu-id="7ef41-105">W poniższej tabeli decyzji podsumowano, czy ma być używany program .NET Framework lub .NET Core.</span><span class="sxs-lookup"><span data-stu-id="7ef41-105">The following decision table summarizes whether to use .NET Framework or .NET Core.</span></span> <span data-ttu-id="7ef41-106">Należy pamiętać, że dla kontenerów systemu Linux, należy opartych na systemie Linux hostów platformy Docker (maszyn wirtualnych lub serwerach) i dla kontenerów Windows należy systemu Windows Server na podstawie hostów platformy Docker (maszyn wirtualnych lub serwerach).</span><span class="sxs-lookup"><span data-stu-id="7ef41-106">Remember that for Linux containers, you need Linux-based Docker hosts (VMs or servers) and that for Windows Containers you need Windows Server based Docker hosts (VMs or servers).</span></span>
+<span data-ttu-id="b7f5d-105">W poniższej tabeli decyzji podsumowano, czy ma być używany program .NET Framework lub .NET Core.</span><span class="sxs-lookup"><span data-stu-id="b7f5d-105">The following decision table summarizes whether to use .NET Framework or .NET Core.</span></span> <span data-ttu-id="b7f5d-106">Należy pamiętać, że dla kontenerów systemu Linux, należy opartych na systemie Linux hostów platformy Docker (maszyn wirtualnych lub serwerach) i dla kontenerów Windows należy systemu Windows Server na podstawie hostów platformy Docker (maszyn wirtualnych lub serwerach).</span><span class="sxs-lookup"><span data-stu-id="b7f5d-106">Remember that for Linux containers, you need Linux-based Docker hosts (VMs or servers) and that for Windows Containers you need Windows Server based Docker hosts (VMs or servers).</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="7ef41-107">Rozwoju maszyny zostaną uruchomione jeden host platformy Docker, Linux lub Windows.</span><span class="sxs-lookup"><span data-stu-id="7ef41-107">Your development machines will run one Docker host, either Linux or Windows.</span></span> <span data-ttu-id="7ef41-108">Wszystkie powiązane mikrousług, który chcesz uruchomić i przetestować ze sobą w jednym rozwiązaniu będzie musiał ją uruchomić na tę samą platformę kontenerów.</span><span class="sxs-lookup"><span data-stu-id="7ef41-108">Related microservices that you want to run and test together in one solution will all need to run on the same container platform.</span></span>
+> <span data-ttu-id="b7f5d-107">Rozwoju maszyny zostaną uruchomione jeden host platformy Docker, Linux lub Windows.</span><span class="sxs-lookup"><span data-stu-id="b7f5d-107">Your development machines will run one Docker host, either Linux or Windows.</span></span> <span data-ttu-id="b7f5d-108">Wszystkie powiązane mikrousług, który chcesz uruchomić i przetestować ze sobą w jednym rozwiązaniu będzie musiał ją uruchomić na tę samą platformę kontenerów.</span><span class="sxs-lookup"><span data-stu-id="b7f5d-108">Related microservices that you want to run and test together in one solution will all need to run on the same container platform.</span></span>
 
 <table>
 <thead>
 <tr class="header">
-<th><span data-ttu-id="7ef41-109"><strong>Architektura / typ aplikacji</strong></span><span class="sxs-lookup"><span data-stu-id="7ef41-109"><strong>Architecture / App Type</strong></span></span></th>
-<th><span data-ttu-id="7ef41-110"><strong>Kontenery systemu Linux</strong></span><span class="sxs-lookup"><span data-stu-id="7ef41-110"><strong>Linux containers</strong></span></span></th>
-<th><span data-ttu-id="7ef41-111"><strong>Kontenery Windows</strong></span><span class="sxs-lookup"><span data-stu-id="7ef41-111"><strong>Windows Containers</strong></span></span></th>
+<th><span data-ttu-id="b7f5d-109"><strong>Architektura / typ aplikacji</strong></span><span class="sxs-lookup"><span data-stu-id="b7f5d-109"><strong>Architecture / App Type</strong></span></span></th>
+<th><span data-ttu-id="b7f5d-110"><strong>Kontenery systemu Linux</strong></span><span class="sxs-lookup"><span data-stu-id="b7f5d-110"><strong>Linux containers</strong></span></span></th>
+<th><span data-ttu-id="b7f5d-111"><strong>Kontenery Windows</strong></span><span class="sxs-lookup"><span data-stu-id="b7f5d-111"><strong>Windows Containers</strong></span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span data-ttu-id="7ef41-112">Mikrousług w kontenerach</span><span class="sxs-lookup"><span data-stu-id="7ef41-112">Microservices on containers</span></span></td>
-<td><span data-ttu-id="7ef41-113">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-113">.NET Core</span></span></td>
-<td><span data-ttu-id="7ef41-114">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-114">.NET Core</span></span></td>
+<td><span data-ttu-id="b7f5d-112">Mikrousług w kontenerach</span><span class="sxs-lookup"><span data-stu-id="b7f5d-112">Microservices on containers</span></span></td>
+<td><span data-ttu-id="b7f5d-113">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-113">.NET Core</span></span></td>
+<td><span data-ttu-id="b7f5d-114">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-114">.NET Core</span></span></td>
 </tr>
 <tr class="even">
-<td><span data-ttu-id="7ef41-115">Monolityczną aplikację</span><span class="sxs-lookup"><span data-stu-id="7ef41-115">Monolithic app</span></span></td>
-<td><span data-ttu-id="7ef41-116">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-116">.NET Core</span></span></td>
-<td><p><span data-ttu-id="7ef41-117">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="7ef41-117">.NET Framework</span></span></p>
-<p><span data-ttu-id="7ef41-118">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-118">.NET Core</span></span></p></td>
+<td><span data-ttu-id="b7f5d-115">Monolityczną aplikację</span><span class="sxs-lookup"><span data-stu-id="b7f5d-115">Monolithic app</span></span></td>
+<td><span data-ttu-id="b7f5d-116">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-116">.NET Core</span></span></td>
+<td><p><span data-ttu-id="b7f5d-117">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="b7f5d-117">.NET Framework</span></span></p>
+<p><span data-ttu-id="b7f5d-118">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-118">.NET Core</span></span></p></td>
 </tr>
 <tr class="odd">
-<td><span data-ttu-id="7ef41-119">Najlepsze w swojej klasie, wydajności i skalowalności</span><span class="sxs-lookup"><span data-stu-id="7ef41-119">Best-in-class performance and scalability</span></span></td>
-<td><span data-ttu-id="7ef41-120">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-120">.NET Core</span></span></td>
-<td><span data-ttu-id="7ef41-121">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-121">.NET Core</span></span></td>
+<td><span data-ttu-id="b7f5d-119">Najlepsze w swojej klasie, wydajności i skalowalności</span><span class="sxs-lookup"><span data-stu-id="b7f5d-119">Best-in-class performance and scalability</span></span></td>
+<td><span data-ttu-id="b7f5d-120">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-120">.NET Core</span></span></td>
+<td><span data-ttu-id="b7f5d-121">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-121">.NET Core</span></span></td>
 </tr>
 <tr class="even">
-<td><span data-ttu-id="7ef41-122">Migrowanie starszych aplikacji ("pole brown") systemu Windows Server do kontenerów</span><span class="sxs-lookup"><span data-stu-id="7ef41-122">Windows Server legacy app ("brown-field") migration to containers</span></span></td>
+<td><span data-ttu-id="b7f5d-122">Migrowanie starszych aplikacji ("pole brown") systemu Windows Server do kontenerów</span><span class="sxs-lookup"><span data-stu-id="b7f5d-122">Windows Server legacy app ("brown-field") migration to containers</span></span></td>
 <td>--</td>
-<td><span data-ttu-id="7ef41-123">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="7ef41-123">.NET Framework</span></span></td>
+<td><span data-ttu-id="b7f5d-123">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="b7f5d-123">.NET Framework</span></span></td>
 </tr>
 <tr class="odd">
-<td><span data-ttu-id="7ef41-124">Nowych wdrożeń opartych na kontenerach ("pole zielony")</span><span class="sxs-lookup"><span data-stu-id="7ef41-124">New container-based development ("green-field")</span></span></td>
-<td><span data-ttu-id="7ef41-125">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-125">.NET Core</span></span></td>
-<td><span data-ttu-id="7ef41-126">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-126">.NET Core</span></span></td>
+<td><span data-ttu-id="b7f5d-124">Nowych wdrożeń opartych na kontenerach ("pole zielony")</span><span class="sxs-lookup"><span data-stu-id="b7f5d-124">New container-based development ("green-field")</span></span></td>
+<td><span data-ttu-id="b7f5d-125">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-125">.NET Core</span></span></td>
+<td><span data-ttu-id="b7f5d-126">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-126">.NET Core</span></span></td>
 </tr>
 <tr class="even">
-<td><span data-ttu-id="7ef41-127">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-127">ASP.NET Core</span></span></td>
-<td><span data-ttu-id="7ef41-128">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-128">.NET Core</span></span></td>
-<td><p><span data-ttu-id="7ef41-129">.NET core (zalecane)</span><span class="sxs-lookup"><span data-stu-id="7ef41-129">.NET Core (recommended)</span></span></p>
-<p><span data-ttu-id="7ef41-130">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="7ef41-130">.NET Framework</span></span></p></td>
+<td><span data-ttu-id="b7f5d-127">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-127">ASP.NET Core</span></span></td>
+<td><span data-ttu-id="b7f5d-128">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-128">.NET Core</span></span></td>
+<td><p><span data-ttu-id="b7f5d-129">.NET core (zalecane)</span><span class="sxs-lookup"><span data-stu-id="b7f5d-129">.NET Core (recommended)</span></span></p>
+<p><span data-ttu-id="b7f5d-130">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="b7f5d-130">.NET Framework</span></span></p></td>
 </tr>
 <tr class="odd">
-<td><span data-ttu-id="7ef41-131">ASP.NET 4 (MVC 5, Web API 2 i formularzy sieci Web)</span><span class="sxs-lookup"><span data-stu-id="7ef41-131">ASP.NET 4 (MVC 5, Web API 2, and Web Forms)</span></span></td>
+<td><span data-ttu-id="b7f5d-131">ASP.NET 4 (MVC 5, Web API 2 i formularzy sieci Web)</span><span class="sxs-lookup"><span data-stu-id="b7f5d-131">ASP.NET 4 (MVC 5, Web API 2, and Web Forms)</span></span></td>
 <td>--</td>
-<td><span data-ttu-id="7ef41-132">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="7ef41-132">.NET Framework</span></span></td>
+<td><span data-ttu-id="b7f5d-132">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="b7f5d-132">.NET Framework</span></span></td>
 </tr>
 <tr class="even">
-<td><span data-ttu-id="7ef41-133">Usługi SignalR</span><span class="sxs-lookup"><span data-stu-id="7ef41-133">SignalR services</span></span></td>
-<td><span data-ttu-id="7ef41-134">.NET core 2.1 lub nowszej wersji</span><span class="sxs-lookup"><span data-stu-id="7ef41-134">.NET Core 2.1 or higher version</span></span></td>
-<td><p><span data-ttu-id="7ef41-135">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="7ef41-135">.NET Framework</span></span></p>
-<p><span data-ttu-id="7ef41-136">.NET core 2.1 lub nowszej wersji</span><span class="sxs-lookup"><span data-stu-id="7ef41-136">.NET Core 2.1 or higher version</span></span></p></td>
+<td><span data-ttu-id="b7f5d-133">Usługi SignalR</span><span class="sxs-lookup"><span data-stu-id="b7f5d-133">SignalR services</span></span></td>
+<td><span data-ttu-id="b7f5d-134">.NET core 2.1 lub nowszej wersji</span><span class="sxs-lookup"><span data-stu-id="b7f5d-134">.NET Core 2.1 or higher version</span></span></td>
+<td><p><span data-ttu-id="b7f5d-135">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="b7f5d-135">.NET Framework</span></span></p>
+<p><span data-ttu-id="b7f5d-136">.NET core 2.1 lub nowszej wersji</span><span class="sxs-lookup"><span data-stu-id="b7f5d-136">.NET Core 2.1 or higher version</span></span></p></td>
 </tr>
 <tr class="odd">
-<td><span data-ttu-id="7ef41-137">Usługi WCF, WF i innych platform starszej wersji</span><span class="sxs-lookup"><span data-stu-id="7ef41-137">WCF, WF, and other legacy frameworks</span></span></td>
-<td><span data-ttu-id="7ef41-138">Usługi WCF w programie .NET Core (tylko Biblioteka klienta WCF)</span><span class="sxs-lookup"><span data-stu-id="7ef41-138">WCF in .NET Core (only the WCF client library)</span></span></td>
-<td><p><span data-ttu-id="7ef41-139">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="7ef41-139">.NET Framework</span></span></p>
-<p><span data-ttu-id="7ef41-140">Usługi WCF w programie .NET Core (tylko Biblioteka klienta WCF)</span><span class="sxs-lookup"><span data-stu-id="7ef41-140">WCF in .NET Core (only the WCF client library)</span></span></p></td>
+<td><span data-ttu-id="b7f5d-137">Usługi WCF, WF i innych platform starszej wersji</span><span class="sxs-lookup"><span data-stu-id="b7f5d-137">WCF, WF, and other legacy frameworks</span></span></td>
+<td><span data-ttu-id="b7f5d-138">Usługi WCF w programie .NET Core (tylko Biblioteka klienta WCF)</span><span class="sxs-lookup"><span data-stu-id="b7f5d-138">WCF in .NET Core (only the WCF client library)</span></span></td>
+<td><p><span data-ttu-id="b7f5d-139">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="b7f5d-139">.NET Framework</span></span></p>
+<p><span data-ttu-id="b7f5d-140">Usługi WCF w programie .NET Core (tylko Biblioteka klienta WCF)</span><span class="sxs-lookup"><span data-stu-id="b7f5d-140">WCF in .NET Core (only the WCF client library)</span></span></p></td>
 </tr>
 <tr class="even">
-<td><span data-ttu-id="7ef41-141">Użycie usług platformy Azure</span><span class="sxs-lookup"><span data-stu-id="7ef41-141">Consumption of Azure services</span></span></td>
-<td><p><span data-ttu-id="7ef41-142">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-142">.NET Core</span></span></p>
-<p><span data-ttu-id="7ef41-143">(po pewnym czasie wszystkich usług platformy Azure zapewni client SDK dla platformy .NET Core)</span><span class="sxs-lookup"><span data-stu-id="7ef41-143">(eventually all Azure services will provide client SDKs for .NET Core)</span></span></p></td>
-<td><p><span data-ttu-id="7ef41-144">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="7ef41-144">.NET Framework</span></span></p>
-<p><span data-ttu-id="7ef41-145">.NET Core</span><span class="sxs-lookup"><span data-stu-id="7ef41-145">.NET Core</span></span></p>
-<p><span data-ttu-id="7ef41-146">(po pewnym czasie wszystkich usług platformy Azure zapewni client SDK dla platformy .NET Core)</span><span class="sxs-lookup"><span data-stu-id="7ef41-146">(eventually all Azure services will provide client SDKs for .NET Core)</span></span></p></td>
+<td><span data-ttu-id="b7f5d-141">Użycie usług platformy Azure</span><span class="sxs-lookup"><span data-stu-id="b7f5d-141">Consumption of Azure services</span></span></td>
+<td><p><span data-ttu-id="b7f5d-142">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-142">.NET Core</span></span></p>
+<p><span data-ttu-id="b7f5d-143">(po pewnym czasie wszystkich usług platformy Azure zapewni client SDK dla platformy .NET Core)</span><span class="sxs-lookup"><span data-stu-id="b7f5d-143">(eventually all Azure services will provide client SDKs for .NET Core)</span></span></p></td>
+<td><p><span data-ttu-id="b7f5d-144">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="b7f5d-144">.NET Framework</span></span></p>
+<p><span data-ttu-id="b7f5d-145">.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7f5d-145">.NET Core</span></span></p>
+<p><span data-ttu-id="b7f5d-146">(po pewnym czasie wszystkich usług platformy Azure zapewni client SDK dla platformy .NET Core)</span><span class="sxs-lookup"><span data-stu-id="b7f5d-146">(eventually all Azure services will provide client SDKs for .NET Core)</span></span></p></td>
 </tr>
 </tbody>
 </table>
 
 >[!div class="step-by-step"]
-<span data-ttu-id="7ef41-147">[Poprzednie](net-framework-container-scenarios.md)
-[dalej](net-container-os-targets.md)</span><span class="sxs-lookup"><span data-stu-id="7ef41-147">[Previous](net-framework-container-scenarios.md)
+<span data-ttu-id="b7f5d-147">[Poprzednie](net-framework-container-scenarios.md)
+[dalej](net-container-os-targets.md)</span><span class="sxs-lookup"><span data-stu-id="b7f5d-147">[Previous](net-framework-container-scenarios.md)
 [Next](net-container-os-targets.md)</span></span>

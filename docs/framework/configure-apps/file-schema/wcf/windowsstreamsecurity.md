@@ -1,24 +1,23 @@
 ---
-title: '&lt;Obiekt windowsStreamSecurity&gt;'
+title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a089a6fb61e8f7fac4116b2280a5c2fe0b703f94
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6c1253e6f402da6b818a4438142e122f8b31809c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755113"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084263"
 ---
-# <a name="ltwindowsstreamsecuritygt"></a>&lt;Obiekt windowsStreamSecurity&gt;
-Określ ustawienia zabezpieczenia strumienia systemu Windows niestandardowego powiązania.  
+# <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
+Określ ustawienia zabezpieczenia strumienia Windows niestandardowego powiązania.  
   
  \<system.serviceModel>  
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<Obiekt windowsStreamSecurity >  
+\<windowsStreamSecurity >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,7 +32,7 @@ Określ ustawienia zabezpieczenia strumienia systemu Windows niestandardowego po
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|protectionLevel|Definiuje zabezpieczenia na poziomie wiadomości. Podpisywanie wiadomości zmniejsza ryzyko innych firm, manipulowanie wiadomości, gdy są przesyłane. Szyfrowanie zapewnia ochronę poufności poziom danych podczas transportu. Prawidłowe wartości są następujące:<br /><br /> -Brak: Brak ochrony.<br />-Znak: Komunikaty są podpisane.<br />-EncryptAndSign: Komunikaty są podpisane i zaszyfrowane.<br /><br /> Wartość domyślna to EncryptAndSign.<br /><br /> Ten atrybut jest typu <xref:System.Net.Security.ProtectionLevel>.|  
+|protectionLevel|Definiuje zabezpieczenia na poziomie komunikatu. Podpisywania wiadomości zmniejsza ryzyko związane z innej naruszeniu komunikat, gdy są przesyłane. Szyfrowanie zapewnia ochronę poufności poziom danych, podczas transportu. Prawidłowe wartości są następujące:<br /><br /> -Brak: Brak ochrony.<br />— Logowanie: Komunikaty są podpisane.<br />-EncryptAndSign: Komunikaty są podpisane i szyfrowane.<br /><br /> Wartość domyślna to EncryptAndSign.<br /><br /> Ten atrybut jest typu <xref:System.Net.Security.ProtectionLevel>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -42,10 +41,10 @@ Określ ustawienia zabezpieczenia strumienia systemu Windows niestandardowego po
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie możliwości powiązania niestandardowego powiązania.|  
+|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Transporty Użyj protokołu zorientowanych strumieniowo np. TCP i nazwane potoki obsługują uaktualnienia transportu na podstawie strumienia. W szczególności WCF udostępnia aktualizacje zabezpieczeń. Konfiguracja zabezpieczeń transportu jest hermetyzowany przez ten element konfiguracji za pomocą [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), które można konfigurować i dodane do powiązania niestandardowego  
+ Transport, które używają protokołem zorientowane na strumień, takich jak TCP i nazwane potoki obsługują uaktualnienia na podstawie strumienia transportu. W szczególności WCF zapewnia bezpieczeństwo uaktualnień. Konfiguracja zabezpieczeń transportu jest hermetyzowany przez ten element konfiguracji, za pomocą [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), które można konfigurować i dodane do powiązania niestandardowego  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.CustomBinding>  

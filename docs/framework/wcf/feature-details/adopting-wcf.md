@@ -3,11 +3,11 @@ title: Adoptowanie programu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
 ms.openlocfilehash: 5773d2687eb06cfc562dbe25fa9b94864b1b3a49
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
-ms.translationtype: HT
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538875"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074696"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Adoptowanie programu Windows Communication Foundation
 

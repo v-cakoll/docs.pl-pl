@@ -1,21 +1,20 @@
 ---
-title: 'Porady: polecenie Ping przyjmujące'
+title: 'Porady: polecenie Ping do hosta'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 62ab62520e42fcf3ecfb8bd7fd6b57485451e6e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e066af175982b71fb42bf2eec75fe9d92f532e61
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394030"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080698"
 ---
-# <a name="how-to-ping-a-host"></a>Porady: polecenie Ping przyjmujące
-W tym przykładzie pokazano, jak polecenie ping hosta zdalnego.  
+# <a name="how-to-ping-a-host"></a>Porady: polecenie Ping do hosta
+W tym przykładzie przedstawiono polecenie ping do hosta zdalnego.  
   
 ## <a name="example"></a>Przykład  
   
@@ -126,4 +125,4 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołuje się do **System.Net** przestrzeni nazw.
+-   Odwołuje się do **przestrzeni nazw System.Net** przestrzeni nazw.

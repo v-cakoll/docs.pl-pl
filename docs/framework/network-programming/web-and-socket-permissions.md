@@ -1,5 +1,5 @@
 ---
-title: Sieć Web i uprawnienia gniazda
+title: Sieć Web i uprawnienia gniazd
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4353f029d2e82460ab413bc8ccc248577a505504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2aa7d54ae88a6dacf61488515a8ba3f13c54405e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394936"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157041"
 ---
-# <a name="web-and-socket-permissions"></a>Sieć Web i uprawnienia gniazda
-Zabezpieczenia internetowe dla aplikacji za pomocą <xref:System.Net> przestrzeni nazw jest zapewniana przez <xref:System.Net.WebPermission> i <xref:System.Net.SocketPermission> klasy. **WebPermission** klasa steruje aplikacji prawo do dane żądania z identyfikatora URI lub do obsługi identyfikatora URI z Internetem. **SocketPermission** klasy formantów aplikacji przez prawo, aby użyć <xref:System.Net.Sockets.Socket> akceptować dane na port lokalny lub skontaktuj się z urządzeń zdalnych przy użyciu protokołu transportu na inny adres, oparta na hoście, a numer portu i protokół Transport gniazda.  
+# <a name="web-and-socket-permissions"></a>Sieć Web i uprawnienia gniazd
+Zabezpieczenia internetowe dla aplikacji za pomocą <xref:System.Net> przestrzeni nazw są dostarczane przez <xref:System.Net.WebPermission> i <xref:System.Net.SocketPermission> klasy. **WebPermission** klasy kontrolki aplikacji bezpośrednio do dane żądania z identyfikatora URI lub do obsługi identyfikatora URI z Internetem. **SocketPermission** klasy aplikacji w prawo, aby użyć kontrolki <xref:System.Net.Sockets.Socket> akceptować dane na port lokalny lub skontaktuj się z urządzeniami zdalnymi przy użyciu protokołu transportowego poziomu innego adresu, oparte na hoście, a numer portu i protokół Transport gniazda.  
   
- Klasy uprawnień, których można użyć zależy od typu aplikacji. Aplikacje używające <xref:System.Net.WebRequest> i jego elementy podrzędne powinny używać **WebPermission** klasy do zarządzania uprawnieniami. Aplikacje używające dostęp na poziomie gniazda powinny używać **SocketPermission** klasy do zarządzania uprawnieniami.  
+ Klasa uprawnień, których używasz, zależy od danego typu aplikacji. Aplikacje, które używają <xref:System.Net.WebRequest> i jego elementy podrzędne należy używać **WebPermission** klasy, aby zarządzać uprawnieniami. Skorzystaj z aplikacji, które używają dostęp na poziomie gniazd **SocketPermission** klasy, aby zarządzać uprawnieniami.  
   
- **WebPermission** i **SocketPermission** zdefiniować dwa uprawnienia: Zaakceptuj i nawiąż połączenie. Zaakceptuj przyznaje prawa do odpowiedzi połączenia przychodzącego z innej strony aplikacji. Połącz przyznaje uprawnienia do nawiązania połączenia do innej strony aplikacji.  
+ **WebPermission** i **SocketPermission** zdefiniować dwa uprawnienia: Zaakceptuj i Połącz z. Zaakceptuj nadaje aplikacji prawa do odpowiedzi na połączenia przychodzące z innej strony. Połącz przyznaje uprawnienia do nawiązania połączenia do innej strony aplikacji.  
   
- Dla **SocketPermission** wystąpienia, akceptować oznacza, że aplikacja może akceptować połączeń przychodzących na komputerze lokalnym transportu adres; połączyć oznacza, że aplikacja może nawiązać połączenie niektórych adres transportu (lokalnej lub zdalnej).  
+ Dla **SocketPermission** wystąpień, Zaakceptuj oznacza, że aplikacja może akceptować połączeń przychodzących w lokalnym transportu adres; Łączenie oznacza, że aplikacja może nawiązać niektóre adres transportu (lokalnej lub zdalnej).  
   
- Dla **WebPermission** wystąpienia, akceptować oznacza, że aplikację można wyeksportować kontrolowane przez identyfikator URI **WebPermission** World; połączyć oznacza, że aplikacja może uzyskiwać dostęp do tego identyfikatora URI (czy jest lokalnych lub zdalnych).  
+ Dla **WebPermission** wystąpień, Zaakceptuj oznacza, że aplikację można wyeksportować identyfikatora URI w wartości clientauthtrustmode **WebPermission** na świecie; Łączenie oznacza, że aplikacja może uzyskiwać dostęp do tego identyfikatora URI (czy jest zdalny czy lokalny).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia](../../../docs/standard/security/index.md)  

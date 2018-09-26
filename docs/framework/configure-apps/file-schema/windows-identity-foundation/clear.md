@@ -1,18 +1,17 @@
 ---
-title: '&lt;Wyczyść&gt;'
+title: '&lt;Usuń zaznaczenie&gt;'
 ms.date: 03/30/2017
 ms.assetid: 54dcd1d1-038f-4fc8-a3a4-56ba7a1ca0fd
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d4d81a1b876c724ad60be399756fbe37c67b7153
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8f5d2e2b580d6a2824fd885f9b08cb2b2f0b244e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754918"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111571"
 ---
-# <a name="ltcleargt"></a>&lt;Wyczyść&gt;
-Czyści wszystkie obsługi token zabezpieczeń z bieżącej kolekcji programu obsługi tokenów.  
+# <a name="ltcleargt"></a>&lt;Usuń zaznaczenie&gt;
+Czyści wszystkie programy obsługi tokenów zabezpieczających z bieżącej kolekcji programu obsługi tokenów.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -45,4 +44,4 @@ Czyści wszystkie obsługi token zabezpieczeń z bieżącej kolekcji programu ob
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Określa kolekcję programów obsługi tokenu zabezpieczeń, które są zarejestrowane z punktem końcowym.|
+|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Określa kolekcję programy obsługi tokenów zabezpieczających, które są zarejestrowane z punktem końcowym.|

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
 ms.openlocfilehash: a75c4f116b32499f9ba33dd863f2a5b6952a3e24
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580736"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082097"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Porady: obsługa wprowadzania z klawiatury na poziomie formularza
 Windows Forms zapewnia możliwość obsłużyć komunikaty klawiatury na poziomie formularza, zanim komunikaty do formantu. W tym temacie przedstawiono sposób wykonania tego zadania.  

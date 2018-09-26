@@ -3,16 +3,15 @@ title: '&lt;issuerNameRegistry&gt;'
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b695cc6d66e5b9e45bb6a5fd22d594bc22ea3cba
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: de3ceb5d84d17307c69e9155834a0a584e6920a1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757531"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075778"
 ---
 # <a name="ltissuernameregistrygt"></a>&lt;issuerNameRegistry&gt;
-Konfiguruje rejestru nazwy dostawcy, który jest używany przez programy obsługi zdarzeń w kolekcji programu obsługi tokenów.  
+Konfiguruje rejestru nazwy wystawcy, który jest używany przez programy obsługi w kolekcji programu obsługi tokenów.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -43,32 +42,32 @@ Konfiguruje rejestru nazwy dostawcy, który jest używany przez programy obsług
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Typ, który pochodzi z <xref:System.IdentityModel.Tokens.IssuerNameRegistry> klasy. Aby uzyskać więcej informacji o sposobie określania niestandardowej `type`, zobacz [odwołania do niestandardowego typu].|  
+|— typ|Typ, który pochodzi od klasy <xref:System.IdentityModel.Tokens.IssuerNameRegistry> klasy. Aby uzyskać więcej informacji o sposobie określania niestandardowej `type`, zobacz [odwołań do niestandardowego typu].|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|Gdy `type` atrybut określa rejestru nazwy dostawcy oparta na konfiguracji ( <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> klasy), [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) musi być określony element. [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) elementu można podjąć `<add>`, `<clear>`, lub `<remove>` jako elementy podrzędne.|  
+|[\<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|Gdy `type` atrybut określa rejestru nazwy wystawcy oparta na konfiguracji ( <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> klasy), [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) element musi być określona. [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) elementu może potrwać `<add>`, `<clear>`, lub `<remove>` jako elementy podrzędne.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Zapewnia token obsługi konfiguracji dla kolekcji zabezpieczeń.|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Udostępnia konfigurację dla kolekcji zabezpieczeń programy obsługi tokenów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wszystkie tokeny wystawcy są weryfikowane przy użyciu rejestru nazwy dostawcy. To jest obiekt pochodzący z <xref:System.IdentityModel.Tokens.IssuerNameRegistry> klasy. Rejestru nazwy dostawcy jest używany do kojarzenia nazwy skrótu do materiałów kryptograficznych, potrzebnego do weryfikowania podpisów tokenów utworzonego przez odpowiednie wystawcy. Rejestru nazwy dostawcy przechowuje listę wystawców, które są zaufane przez aplikację jednostki uzależnionej strony (RP). Typ rejestru nazwy dostawcy jest określona za pomocą `type` atrybutu. `<issuerNameRegistry>` Element może mieć elementów podrzędnych, które zapewniają konfiguracji dla określonego typu. Podaj logikę, która przetwarza te elementy podrzędne przez zastąpienie <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> metody.  
+ Wszystkie tokeny wystawcy są weryfikowane za pomocą rejestru nazwy wystawcy. Jest to obiekt, który pochodzi od klasy <xref:System.IdentityModel.Tokens.IssuerNameRegistry> klasy. Rejestru nazwy wystawcy jest używany do kojarzenia mnemoników nazwy do materiałami kryptograficznymi, potrzebnego do weryfikowania podpisów tokenów produkowane przez odpowiednie wystawcy. Rejestru nazwy wystawcy utrzymuje listę wystawców, które są zaufane przez aplikację jednostki uzależnionej (RP). Typ rejestru nazwy wystawcy jest określony, przy użyciu `type` atrybutu. `<issuerNameRegistry>` Element może mieć elementów podrzędnych, które zapewniają konfiguracji dla określonego typu. Zapewnić logikę, która przetwarza te elementy podrzędne, zastępowanie <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> metody.  
   
- WIF zawiera wystawcy pojedynczy typ rejestru nazwy fabrycznej, <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> klasy. Ta klasa korzysta z zestawu zaufanych wystawców certyfikatów, które są określone w konfiguracji. Wymaga elementu podrzędnego konfiguracji `<trustedIssuers>`, w obszarze, która jest skonfigurowana w kolekcji certyfikatów zaufanych wystawców. Zaufane certyfikaty są określone za pomocą ASN.1 zakodowane formularza odcisk palca certyfikatu i zostały dodane lub usunięte z kolekcji przy użyciu `<add>`, `<clear>`, lub `<remove>` elementów.  
+ Program WIF oferuje wystawcy pojedynczy typ rejestru nazwy gotowych, <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> klasy. Ta klasa używa zestawu zaufanych wystawców certyfikatów, które są określone w konfiguracji. Wymaga elementu podrzędnego konfiguracji `<trustedIssuers>`, pod którym kolekcji certyfikatów zaufanych wystawców jest skonfigurowany. Zaufane certyfikaty są określone za pomocą ASN.1 zakodowane w postaci odcisku palca certyfikatu i są dodawane lub usuwane z kolekcji przy użyciu `<add>`, `<clear>`, lub `<remove>` elementów.  
   
- `<issuerNameRegistry>` Reprezentowany przez element <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> klasy.  
+ `<issuerNameRegistry>` Element jest reprezentowany przez <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> klasy.  
   
 > [!NOTE]
->  Określanie `<issuerNameRegistry>` element jako element podrzędny elementu [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element jest przestarzała, ale nadal jest obsługiwany dla zgodności z poprzednimi wersjami. Ustawienia na `<securityTokenHandlerConfiguration>` element przesłaniają akcje na `<identityConfiguration>` elementu.  
+>  Określanie `<issuerNameRegistry>` element jako element podrzędny [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elementu jest przestarzałe, ale nadal jest obsługiwany dla zgodności z poprzednimi wersjami. Ustawienia na `<securityTokenHandlerConfiguration>` elemencie przesłaniają akcje na `<identityConfiguration>` elementu.  
   
 ## <a name="example"></a>Przykład  
- Następujący kod XML pokazano, jak określić wystawcę na podstawie konfiguracji rejestru nazwy.  
+ Następujący kod XML pokazuje sposób określania wystawcy konfiguracji na podstawie nazwy rejestru.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

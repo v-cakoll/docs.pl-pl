@@ -1,5 +1,5 @@
 ---
-title: Wykrywanie serwera Proxy
+title: Automatyczne wykrywanie serwera Proxy
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,40 +16,39 @@ helpviewer_keywords:
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: acb14d8785a01d98d56233b8eb942f9bc4675f63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f43f8b4f7bdaba3902168ee7a1c6b7f7a2f3d39c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394884"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156628"
 ---
-# <a name="automatic-proxy-detection"></a>Wykrywanie serwera Proxy
-Wykrywanie serwera proxy jest procesem, za pomocą którego serwer proxy sieci Web jest identyfikowane przez system i używane do wysyłania żądania w imieniu klienta. Ta funkcja jest nazywana autowykrywania serwera Proxy sieci Web (WPAD). Gdy wykrywanie serwera proxy jest włączone, system próbuje zlokalizować skrypt konfiguracji serwera proxy, który jest odpowiedzialny za zwrócenie zestaw serwerów proxy, które mogą być używane dla żądania. Jeśli skrypt konfiguracji serwera proxy zostanie znaleziony, skrypt pobrany, skompilowany i uruchom na komputerze lokalnym, jeśli informacje o serwerze proxy, strumień żądań lub odpowiedzi jest uzyskiwany dla żądania, która używa <xref:System.Net.WebProxy> wystąpienia.  
+# <a name="automatic-proxy-detection"></a>Automatyczne wykrywanie serwera Proxy
+Automatyczne wykrywanie serwera proxy jest procesem, za pomocą którego serwer proxy sieci Web jest identyfikowane przez system i używane do wysyłania żądania w imieniu klienta. Ta funkcja jest również znana jako funkcja autowykrywania serwera Proxy sieci Web (WPAD). Gdy automatyczne wykrywanie serwera proxy jest włączone, system próbuje zlokalizować skryptu konfiguracji serwera proxy, która jest odpowiedzialna za zwrócenie zestaw serwerów proxy, które mogą być używane dla żądania. Jeśli zostanie znaleziony skryptu konfiguracji serwera proxy, skrypt pobrany, skompilowany i uruchom na komputerze lokalnym, jeśli informacje o serwerze proxy, strumienia żądania lub odpowiedzi jest uzyskiwany na żądanie, który używa <xref:System.Net.WebProxy> wystąpienia.  
   
- Wykrywanie serwera proxy jest wykonywane przez <xref:System.Net.WebProxy> klasy i można stosować ustawienia na poziomie żądania, ustawień w plikach konfiguracji i ustawienia określone przy użyciu programu Internet Explorer **sieci lokalnej (LAN)** okno dialogowe.  
-  
-> [!NOTE]
->  Można wyświetlić programu Internet Explorer **ustawienia sieci lokalnej (LAN)** okno dialogowe, wybierając **narzędzia** z menu głównego w programie Internet Explorer, a następnie wybierając **Opcje internetowe**. Następnie wybierz pozycję **połączeń** , a następnie kliknij pozycję **ustawienia sieci LAN**.  
-  
- Po włączeniu serwera proxy automatycznego wykrywania <xref:System.Net.WebProxy> klasa próbuje zlokalizować skrypt konfiguracji serwera proxy w następujący sposób:  
-  
-1.  WinINet `InternetQueryOption` funkcja jest używana do lokalizowania ostatnio wykrytych przez program Internet Explorer skryptu konfiguracji serwera proxy.  
-  
-2.  Jeśli skrypt nie jest umieszczony <xref:System.Net.WebProxy> klasa korzysta z konfiguracji protokołu DHCP (Dynamic Host) można znaleźć skryptu. Serwer DHCP może odpowiadać lokalizacji (nazwa hosta) za pomocą skryptu lub do pełnego adresu URL skryptu.  
-  
-3.  Jeśli DHCP nie będzie rozpoznawał hosta WPAD, DNS zostanie zapytany o hoście WPAD, jako jego nazwę lub alias.  
-  
-4.  Jeśli nie określono hosta i lokalizacja skryptu konfiguracji serwera proxy jest określony przez ustawienia sieci LAN programu Internet Explorer lub plik konfiguracji, ta lokalizacja jest używana.  
+ Automatyczne wykrywanie serwera proxy odbywa się przez <xref:System.Net.WebProxy> klasy i mogą stosować ustawienia na poziomie żądania, ustawienia w plikach konfiguracji i ustawień określonych w programie Internet Explorer **sieci lokalnej (LAN)** okno dialogowe.  
   
 > [!NOTE]
->  Aplikacje uruchomione jako usługi NT lub w ramach programu ASP.NET Użyj ustawień serwera proxy programu Internet Explorer (jeśli jest dostępny) wywoływanie użytkownika. Te ustawienia mogą nie być dostępne dla wszystkich aplikacji usługi.  
+>  Możesz wyświetlić programu Internet Explorer **ustawienia sieci lokalnej (LAN)** okno dialogowe, wybierając **narzędzia** z menu głównego w programie Internet Explorer, a następnie wybierając pozycję **Opcje internetowe**. Następnie wybierz pozycję **połączeń** kartę, a następnie kliknij przycisk **ustawienia sieci LAN**.  
   
- Serwery proxy są skonfigurowane na podstawie wstępnie zdefiniowane na połączenie. Identyfikator elementu w oknie dialogowym połączenia sieciowe i może być urządzenie sieci fizycznej (modemu lub karty sieciowej Ethernet) lub interfejsu wirtualnego (na przykład uruchomiony za pośrednictwem urządzenia sieciowego połączenia sieci VPN). Podczas zmiany identyfikator (na przykład połączenia bezprzewodowego zmiany włączono punkt dostępu lub sieci VPN), ponownie uruchom algorytmu wykrywania serwera proxy.  
+ Gdy jest włączone automatyczne wykrywanie serwera proxy, <xref:System.Net.WebProxy> klasy próbuje zlokalizować skryptu konfiguracji serwera proxy w następujący sposób:  
   
- Domyślnie ustawienia serwera proxy programu Internet Explorer są używane do wykrywania serwera proxy. Jeśli aplikacja jest uruchomiona na koncie podejścia nieinterakcyjnego (bez wygodny sposób, aby skonfigurować ustawienia serwera proxy programu Internet Explorer) lub jeśli chcesz użyć ustawień serwera proxy jest inne niż ustawienia programu Internet Explorer, tworząc plik konfiguracji z możnaskonfigurowaćserwerproxy[ \<defaultProxy — > elementu (ustawienia sieciowe)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) i [ \<proxy > elementu (ustawienia sieciowe)](../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md) elementy zdefiniowane.  
+1.  WinINet `InternetQueryOption` funkcja jest używana do lokalizowania skryptu konfiguracji serwera proxy ostatnio wykrytych przez program Internet Explorer.  
   
- Żądań, które możesz utworzyć, można wyłączyć wykrywanie serwera proxy na poziomie żądania za pomocą wartości null <xref:System.Net.WebRequest.Proxy%2A> z żądaniem, jak pokazano w poniższym przykładzie kodu.  
+2.  Jeśli skrypt nie jest umieszczony <xref:System.Net.WebProxy> klasa używa DHCP Dynamic Host Configuration Protocol (), aby zlokalizować scenariusza. Serwer DHCP może odpowiadać za pomocą lokalizacji (nazwa hosta), skryptu lub pełny adres URL skryptu.  
+  
+3.  Jeśli DHCP nie wskazuje hosta WPAD, DNS zostaje przesłane zapytanie do hosta za pomocą WPAD jako jego nazwę lub alias.  
+  
+4.  Ta lokalizacja jest używana, jeśli host nie zostanie zidentyfikowany, lokalizacja skryptu konfiguracji serwera proxy jest określony przez ustawienia Internet Explorer w sieci LAN lub pliku konfiguracji.  
+  
+> [!NOTE]
+>  Aplikacje działające jako usługi NT lub w ramach programu ASP.NET Użyj ustawień serwera proxy programu Internet Explorer (jeśli jest dostępny) użytkownika, które powinny być przekazywane wywołującemu. Te ustawienia mogą być dostępne dla wszystkich aplikacji usługi.  
+  
+ Serwery proxy są skonfigurowane na podstawie wstępnie zdefiniowane na połączenie. Identyfikator jest element w oknie dialogowym połączenia sieciowe i może być urządzeniem sieci fizycznej (modem lub karta Ethernet) lub interfejsu wirtualnego (np. połączenia sieci VPN, uruchamiania przez urządzenie sieciowe). Gdy identyfikator ulegnie zmianie (na przykład połączenia bezprzewodowego zmiany punktu dostępu lub sieci VPN jest włączona), algorytm wykrywania serwera proxy jest uruchamiany ponownie.  
+  
+ Domyślnie ustawienia serwera proxy programu Internet Explorer są używane do wykrywania serwera proxy. Jeśli aplikacja jest uruchomiona w ramach konta nieinterakcyjnych (bez wygodny sposób, aby skonfigurować ustawienia serwera proxy programu Internet Explorer) lub jeśli chcesz używać ustawień serwera proxy są inne niż ustawienia programu Internet Explorer, można skonfigurować serwer proxy, tworząc plik konfiguracji o [ \<defaultProxy >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) i [ \<proxy >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md) elementy zdefiniowane.  
+  
+ Dla żądań, które tworzysz, możesz wyłączyć automatyczne wykrywanie serwera proxy na poziomie żądania przy użyciu wartości null <xref:System.Net.WebRequest.Proxy%2A> z żądaniem, jak pokazano w poniższym przykładzie kodu.  
   
 ```csharp  
 public static void DisableForMyRequest (Uri resource)  
@@ -68,9 +67,9 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
     End Sub   
 ```  
   
- Żądania bez serwera proxy przy użyciu domenę aplikacji domyślny serwer proxy, który jest dostępny w <xref:System.Net.WebRequest.DefaultWebProxy%2A> właściwości.  
+ Żądania, które nie mają serwer proxy przy użyciu domenę aplikacji domyślny serwer proxy, który jest dostępny w <xref:System.Net.WebRequest.DefaultWebProxy%2A> właściwości.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Net.WebProxy>  
  <xref:System.Net.WebRequest>  
- [\<system.Net > (ustawienia sieciowe) — Element](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+ [\<przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

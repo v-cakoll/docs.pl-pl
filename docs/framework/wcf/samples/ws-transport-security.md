@@ -3,13 +3,12 @@ title: Zabezpieczenia transportu WS
 ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 59e6c3792571b8b712da1f36e66ff89a98b6bebb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 99f8e038657a620de56d1d759a95bbbdf93b1ed4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779235"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082854"
 ---
 # <a name="ws-transport-security"></a>Zabezpieczenia transportu WS
 Niniejszy przykład pokazuje użycie protokołu SSL zabezpieczenia transportu z <xref:System.ServiceModel.WSHttpBinding> powiązania. Domyślnie `wsHttpBinding` powiązania zapewnia komunikację HTTP. Po skonfigurowaniu zabezpieczeń transportu powiązanie obsługuje komunikację HTTPS. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora. `wsHttpBinding` Jest określona i skonfigurowane w plikach konfiguracji aplikacji dla klienta i usługi.  

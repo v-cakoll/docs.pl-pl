@@ -1,5 +1,5 @@
 ---
-title: '&lt;webRequestModules —&gt; — Element (ustawienia sieciowe)'
+title: '&lt;webRequestModules&gt; — Element (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7454099d8af0f2d656296be55677c648cc0c36c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742695"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110895"
 ---
-# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules —&gt; — Element (ustawienia sieciowe)
-Określa moduły służące do żądania informacji z hostów w sieci.  
+# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; — Element (ustawienia sieci)
+Określa moduły do użycia na żądanie informacji z hostów w sieci.  
   
  \<Konfiguracja >  
 \<system.net>  
@@ -42,26 +41,26 @@ Określa moduły służące do żądania informacji z hostów w sieci.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Dodaje niestandardowego modułu żądania sieci Web do aplikacji.|  
-|[Wyczyść](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Usuwa wszystkie zarejestrowane moduły żądania sieci Web z aplikacji.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Dodaje niestandardowy moduł żądania sieci Web do aplikacji.|  
+|[Usuń zaznaczenie](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Usuwa wszystkie zarejestrowane moduły żądania sieci Web z aplikacji.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|Usuwa niestandardowego modułu żądania sieci Web z aplikacji.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Zawiera ustawienia, które określają sposób programu .NET Framework łączy się z siecią.|  
+|[przestrzeni nazw System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Zawiera ustawienia, które określają, jak .NET Framework łączy się z siecią.|  
   
 ## <a name="remarks"></a>Uwagi  
- `webRequestModules` Element rejestruje elementów podrzędnych <xref:System.Net.WebRequest> klasy do obsługi żądań informacji do hostów w sieci. Moduły żądania sieci Web musi implementować <xref:System.Net.IWebRequestCreate> interfejsu.  
+ `webRequestModules` Element rejestruje podrzędne <xref:System.Net.WebRequest> klasy do obsługi żądań informacji do hostów w sieci. Moduły żądania sieci Web musi implementować <xref:System.Net.IWebRequestCreate> interfejsu.  
   
- .NET Framework zawiera identyfikatory URI, które rozpoczynają się od http://, https:// i file:// modułów żądania sieci Web. Można zastąpić domyślne moduły tylko poprzez zarejestrowanie niestandardowego modułu w pliku konfiguracji.  
+ Program .NET Framework zawiera moduły żądania sieci Web dla identyfikatorów URI, które zaczynają się od http://, https:// i file://. Można zastąpić domyślne moduły tylko poprzez zarejestrowanie niestandardowego modułu w pliku konfiguracji.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład rejestruje domyślny moduł HTTP. Wartości należy zastąpić wersję i PublicKeyToken przy użyciu prawidłowych wartości dla określonego modułu.  
+ Poniższy przykład rejestruje domyślny moduł HTTP. Należy zastąpić wartości wersji i PublicKeyToken poprawne wartości dla określonego modułu.  
   
 ```xml  
 <configuration>  

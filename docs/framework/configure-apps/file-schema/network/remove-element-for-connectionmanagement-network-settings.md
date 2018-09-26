@@ -1,5 +1,5 @@
 ---
-title: '&lt;Usuń&gt; elementu connectionmanagement — (ustawienia sieciowe)'
+title: '&lt;Usuń&gt; Element dla connectionManagement (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/remove
@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8d503e06139fc6ce14f4d2c50c46e4bcfeb1b860
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754483"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085545"
 ---
-# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;Usuń&gt; elementu connectionmanagement — (ustawienia sieciowe)
-Usuwa adres IP lub nazwa DNS z listy zarządzania połączenia.  
+# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;Usuń&gt; Element dla connectionManagement (ustawienia sieci)
+Usuwa adres IP lub nazwę DNS na liście zarządzania połączenia.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<connectionmanagement — >  
+\<connectionManagement >  
 \<Usuń >  
   
 ## <a name="syntax"></a>Składnia  
@@ -52,18 +51,18 @@ Usuwa adres IP lub nazwa DNS z listy zarządzania połączenia.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[connectionmanagement —](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieci.|  
+|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `remove` Element usuwa wpis listy zarządzania połączenia dla określonego serwera.  
+ `remove` Elementu usuwa wpis listy zarządzania połączenia dla określonego serwera.  
   
- Wartość `address` atrybutu powinna być prawidłową nazwą adres lub hosta IP.  
+ Wartość `address` atrybut powinien być prawidłową nazwą hosta lub adres IP.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa wszystkie pozycje listy zarządzania połączenia dla www.adventure-works.com serwera, a następnie konfiguruje aplikację do korzystania z połączeń cztery www.contoso.com serwera i dwa połączenia do innych serwerów.  
+ Poniższy przykład usuwa żadnych połączeń zarządzania wpisów na liście www.adventure-works.com serwera, a następnie konfiguruje aplikację do korzystania z czterech połączeń www.contoso.com serwera i dwóch połączeń na inne serwery.  
   
 ```xml  
 <configuration>  

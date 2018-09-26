@@ -3,11 +3,11 @@ title: Programowalność Store metadanych
 ms.date: 03/30/2017
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
 ms.openlocfilehash: 9f30fcdac131b8749a4d165875b9bbb584542843
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583577"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088207"
 ---
 # <a name="metadata-store-programmability"></a>Programowalność Store metadanych
 Magazyn metadanych jest [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] funkcja, która umożliwia skojarzenie dowolnego metadanych w formie atrybuty CLR typów w czasie wykonywania. Pozwala to na tym luźne powiązanie składniki czasu wykonywania i ich odpowiedniki w czasie projektowania, a także możliwość zmiany składniki czasu projektowania, bez wywierania wpływu na środowiska uruchomieniowego. Przykład pokazuje, jak programować przy użyciu magazynu metadanych przez zastosowanie atrybutów do typu run-time, źródło, dla którego mamy żadnej kontroli nad. Zazwyczaj terminologią to, że aplikacji macierzystej rejestruje metadanych dla zestawu typów.  

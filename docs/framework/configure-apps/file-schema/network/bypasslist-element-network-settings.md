@@ -1,5 +1,5 @@
 ---
-title: '&lt;bypasslist —&gt; — Element (ustawienia sieciowe)'
+title: '&lt;bypasslist&gt; — Element (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
@@ -10,21 +10,20 @@ helpviewer_keywords:
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2d2076ee5e95ab722fe828ee625392671a6281c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ca7ba9b0e534b5806570580b207da5314243d8f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743904"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109043"
 ---
-# <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist —&gt; — Element (ustawienia sieciowe)
-Zawiera zestaw wyrażeń regularnych, opisujących adresów, które nie korzystają z serwera proxy.  
+# <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt; — Element (ustawienia sieci)
+Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.  
   
  \<Konfiguracja >  
 \<system.net>  
 \<defaultProxy — >  
-\<bypasslist — >  
+\<bypasslist >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,9 +42,9 @@ Zawiera zestaw wyrażeń regularnych, opisujących adresów, które nie korzysta
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Dodaje adres IP lub nazwa DNS do Lista obejść serwerów proxy.|  
-|[Wyczyść](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Czyści listę obejścia.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Usuwa adres IP lub nazwa DNS lista obejść serwerów proxy.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Dodaje adres IP lub nazwę DNS do listy pomijania proxy.|  
+|[Usuń zaznaczenie](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Czyści listę obejścia.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Usuwa adres IP lub nazwa DNS z listy obejścia serwera proxy.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -54,17 +53,17 @@ Zawiera zestaw wyrażeń regularnych, opisujących adresów, które nie korzysta
 |[defaultProxy —](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).|  
   
 ## <a name="remarks"></a>Uwagi  
- Lista obejść zawiera wyrażenia regularne, które opisują identyfikatorów URI który <xref:System.Net.WebRequest> wystąpień dostęp bezpośrednio zamiast z za pośrednictwem serwera proxy.  
+ Lista pomijania zawiera wyrażeń regularnych, które opisują identyfikatory URI, <xref:System.Net.WebRequest> wystąpień dostęp do bezpośrednio zamiast za pośrednictwem serwera proxy.  
   
- Należy zachować ostrożność podczas określania wyrażenia regularnego dla tego elementu. Wyrażenie regularne "[a-z] +\\.contoso\\.com" dopasowań żadnego hosta w domenie contoso.com, ale również zgodna każdego hosta w domenie contoso.com.cpandl.com. Aby dopasować tylko na hoście w domenie contoso.com, użyj elementu zakotwiczenia ("$"): "[a-z] +\\.contoso\\.com$".  
+ Należy zachować ostrożność podczas określania wyrażenia regularnego dla tego elementu. Wyrażenie regularne "[a-z] +\\.contoso\\.com" dopasowań dowolnego hosta w domenie contoso.com, ale również pasuje do dowolnego hosta w domenie contoso.com.cpandl.com. Aby dopasować tylko na hoście w domenie contoso.com, użyj elementu zakotwiczenia ("$"): "[a-z] +\\.contoso\\.com$".  
   
  Aby uzyskać więcej informacji na temat wyrażeń regularnych Zobacz. [Wyrażeń regularnych programu .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- W następującym przykładzie dodano dwa adresy do obejścia listy. Pierwszy pomija serwera proxy dla wszystkich serwerów w domenie contoso.com. drugi pomija serwera proxy dla wszystkich serwerom rozpocząć których adresy IP 192.168.  
+ Poniższy przykład dodaje dwa adresy do listy pomijania. Pierwszy pomija serwera proxy dla wszystkich serwerów w domenie contoso.com. drugi pomija serwera proxy dla wszystkich serwerom rozpocząć których adresy IP 192.168.  
   
 ```xml  
 <configuration>  

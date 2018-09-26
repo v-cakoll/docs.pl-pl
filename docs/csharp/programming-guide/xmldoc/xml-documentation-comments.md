@@ -12,11 +12,11 @@ helpviewer_keywords:
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
 ms.openlocfilehash: ab4f8fae748455f96ca5ea0255658cc76dd14f97
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46519633"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078503"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>Komentarze dokumentacji XML (Przewodnik programowania w języku C#)
 W języku Visual C# można tworzyć dokumentację kodu, umieszczając elementy XML w specjalnych polach komentarzy (wskazywanych przez potrójne ukośniki) w kodzie źródłowym bezpośrednio przed blokiem kodu, do którego odwołują się komentarze, na przykład:  

@@ -3,13 +3,12 @@ title: Pojęcia dotyczące zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7e3a73f2f8c9a438451191c83e69c1722828d7df
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188582"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108029"
 ---
 # <a name="security-concepts"></a>Pojęcia dotyczące zabezpieczeń
 Ta sekcja zawiera krótkie opisy pojęć związanych z zabezpieczeniami usługi Windows Communication Foundation (WCF).  

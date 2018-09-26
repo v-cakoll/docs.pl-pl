@@ -3,11 +3,11 @@ title: LINQ i katalogi plików (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
 ms.openlocfilehash: 4bdd21cf4d8558f140b265f195368082964c34c4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46695889"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085381"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ i katalogi plików (C#)
 Wiele operacji systemu plików są zasadniczo zapytań i dlatego są dobrze nadaje się do metody LINQ.  

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przypisywanie informacje użytkownika do grupy połączeń'
+title: 'Porady: Przypisywanie informacji użytkownika do połączeń grupowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,20 +7,19 @@ dev_langs:
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 51e000019999056fd707c1fbf4fa1a9b0a8e7bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009c23d0015f366ab5f1ee92609f0131465d827b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395148"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080681"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>Porady: przypisywanie informacje użytkownika do grupy połączeń
+# <a name="how-to-assign-user-information-to-group-connections"></a>Porady: Przypisywanie informacji użytkownika do połączeń grupowych
 
   
- W poniższym przykładzie pokazano, jak przypisać informacje użytkownika do grupy połączeń, przy założeniu, że aplikacja ustawia zmienne *UserName*, *SecurelyStoredPassword*, i  *Domeny* przed wywołaniem tej części kodu, a *UserName* jest unikatowa.  
+ Poniższy przykład pokazuje, jak przypisywanie informacji użytkownika do połączeń grupowych, przy założeniu, że aplikacja ustawia zmienne *UserName*, *SecurelyStoredPassword*, i  *Domeny* przed wywołaniem tej sekcji kodu i że *UserName* jest unikatowa.  
   
-### <a name="to-assign-user-information-to-a-group-connection"></a>Aby przypisać informacje o użytkowniku do połączenia grupy  
+### <a name="to-assign-user-information-to-a-group-connection"></a>Aby przypisać informacje o użytkowniku połączenie grupy  
   
 1.  Utwórz nazwę grupy.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "33395148"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  Ustaw poświadczenia i połączenia, Nazwa_grupy żądania sieci Web i wywołanie **GetResponse** można pobrać **WebResponse** obiektu.  
+3.  Ustawianie poświadczeń i GroupName połączenia dla żądania sieci Web i Wywołaj **metody GetResponse** można pobrać **elementu WebResponse** obiektu.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -62,7 +61,7 @@ ms.locfileid: "33395148"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4.  Po użyciu obiektu WebRespose zamknąć strumienia odpowiedzi.  
+4.  Po za pomocą obiektu WebRespose, należy zamknąć w strumieniu odpowiedzi.  
   
     ```csharp  
     MyWebResponse.Close();  

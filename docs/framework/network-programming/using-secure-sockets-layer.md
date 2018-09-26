@@ -1,5 +1,5 @@
 ---
-title: Przy użyciu bezpiecznych gniazd warstwy
+title: Używanie protokołu Secure Sockets Layer
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2baedaa445f81e3e204f7414c5142232755581ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25261185f263a775b6104f94d10874ff39035de9
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396249"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082191"
 ---
-# <a name="using-secure-sockets-layer"></a>Przy użyciu bezpiecznych gniazd warstwy
-<xref:System.Net> Klasy użyj protokół Secure Sockets Layer (SSL) do szyfrowania połączenia dla kilku protokołów sieciowych.  
+# <a name="using-secure-sockets-layer"></a>Używanie protokołu Secure Sockets Layer
+<xref:System.Net> Klasy korzystać protokół Secure Sockets Layer (SSL), aby szyfrować połączenia dla kilku protokołów sieciowych.  
   
- W przypadku połączeń http <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy używają protokołu SSL do komunikowania się z hostami sieci web, które obsługują protokół SSL. Decyzja do używania protokołu SSL jest tworzone przez <xref:System.Net.WebRequest> klasy oparte na identyfikator URI jest on podawany. Jeśli identyfikator URI, który rozpoczyna się od "https:", używany jest protokół SSL; Jeśli identyfikator URI rozpoczyna się od ciągu "http:", nieszyfrowanego połączenia jest używany.  
+ W przypadku połączeń http <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy komunikować się z hostami w sieci web, które obsługują protokół SSL za pomocą protokołu SSL. W przypadku podjęcia decyzji, które używają protokołu SSL przez <xref:System.Net.WebRequest> klasy, w oparciu o identyfikator URI będzie mieć. Jeśli identyfikator URI rozpoczyna się od "https:", jest używany protokół SSL; Jeśli identyfikator URI rozpoczyna się od "http:", jest używany połączenia nieszyfrowanego.  
   
- Aby używać protokołu SSL z protokołem FTP (File Transfer), ustaw <xref:System.Net.FtpWebRequest.EnableSsl> właściwości na wartość true, przed wywołaniem <xref:System.Net.FtpWebRequest.GetResponse>. Podobnie do używania protokołu SSL z transportu protokołu SMTP (Simple Mail), należy ustawić <xref:System.Net.Mail.SmtpClient.EnableSsl> właściwości na wartość true przed wysłaniem wiadomości e-mail.  
+ Aby używać protokołu SSL przy użyciu protokołu FTP (File Transfer), należy ustawić <xref:System.Net.FtpWebRequest.EnableSsl> właściwości na wartość true, przed wywołaniem <xref:System.Net.FtpWebRequest.GetResponse>. Podobnie, aby używać protokołu SSL za pomocą transportu protokołu SMTP (Simple Mail), należy ustawić <xref:System.Net.Mail.SmtpClient.EnableSsl> właściwości na wartość true, przed wysłaniem wiadomości e-mail.  
   
- <xref:System.Net.Security.SslStream> Klasy zapewnia abstrakcji strumienia SSL i oferuje wiele sposobów konfigurowania procedury uzgadniania protokołu SSL.  
+ <xref:System.Net.Security.SslStream> Klasa udostępnia strumień abstrakcji dla protokołu SSL i oferuje wiele sposobów konfigurowania uzgadniania protokołu SSL.  
   
 ## <a name="example"></a>Przykład  
   
@@ -63,7 +62,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołuje się do **System.Net** przestrzeni nazw.  
+-   Odwołuje się do **przestrzeni nazw System.Net** przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)  

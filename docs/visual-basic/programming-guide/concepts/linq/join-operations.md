@@ -3,11 +3,11 @@ title: Dołącz do operacji (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: 660b6d04e0a807a3072cff51d885999545052018
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991510"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088675"
 ---
 # <a name="join-operations-visual-basic"></a>Dołącz do operacji (Visual Basic)
 A *sprzężenia* dwóch źródeł danych jest skojarzenie obiektów w jednym źródle danych z obiektów mających wspólny atrybut w innym źródle danych.  

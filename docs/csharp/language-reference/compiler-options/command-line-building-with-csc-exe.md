@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710692"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111376"
 ---
 # <a name="command-line-build-with-cscexe"></a>Kompilacji wiersza polecenia przy użyciu csc.exe
 Można wywołać kompilatora języka C#, wpisując nazwę jego pliku wykonywalnego (*csc.exe*) w wierszu polecenia.

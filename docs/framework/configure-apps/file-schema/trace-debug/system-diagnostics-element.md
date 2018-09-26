@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 090c296ba84043445364b350c8b74587c35b5940
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 35fe167beb53c27aa511e08507415a26b1749ca2
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750339"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156981"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;System.Diagnostics&gt; — Element
-Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.  
+Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.  
   
  \<Konfiguracja >  
 \<System.Diagnostics >  
@@ -41,12 +40,12 @@ Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kiero
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Assert >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Określa, czy wyświetlać okno komunikatu po wywołaniu <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> metody; określa także nazwę pliku do zapisania komunikatów.|  
+|[\<asercja >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Określa, czy należy wyświetlić okno komunikatu, gdy wywołujesz <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> metody; określa także nazwę pliku do zapisywania komunikatów.|  
 |[\<liczniki wydajności >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Określa rozmiar pamięci globalnej współużytkowane przez liczniki wydajności.|  
-|[\<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Zawiera nasłuchujących może odwoływać się wszystkie źródła lub element śledzenia. Obiekty nasłuchujące zidentyfikowane jako udostępnione obiekty nasłuchujące można dodać do źródła lub śledzenie według nazwy.|  
-|[\<źródeł >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Określa źródła śledzenia, które inicjują śledzenia wiadomości.|  
-|[\<przełączniki >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Zawiera przełączniki śledzenia i poziomy, gdzie są ustawione przełączniki śledzenia.|  
-|[\<śledzenia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Zawiera nasłuchujących zbierania, przechowywania i trasy śledzenia wiadomości.|  
+|[\<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Zawiera dowolnego źródła i elementu śledzenia można odwoływać się do obiektów nasłuchujących. Odbiorniki zidentyfikowane jako współdzielonych detektorów można dodać do źródła lub śledzenie według nazwy.|  
+|[\<źródła >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Określa źródła śledzenia, które inicjują komunikatów śledzenia.|  
+|[\<przełączniki >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Zawiera poziomy, gdzie są ustawione przełączniki śledzenia i przełączniki śledzenia.|  
+|[\<śledzenia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów śledzenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -55,10 +54,10 @@ Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kiero
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób osadzenia przełącznika śledzenia i odbiornik śledzenia wewnątrz  **\<system.diagnostics >** elementu. `General` Przełącznik śledzenia jest ustawiony na <xref:System.Diagnostics.TraceLevel> poziom. Odbiornik śledzenia `myListener` tworzy plik o nazwie `MyListener.log` i zapisuje dane wyjściowe do pliku.  
+ Poniższy przykład pokazuje, jak osadzać przełącznikiem śledzenia i detektor śledzenia wewnątrz  **\<system.diagnostics >** elementu. `General` Przełącznikiem śledzenia jest równa <xref:System.Diagnostics.TraceLevel> poziom. Odbiornik śledzenia `myListener` tworzy plik o nazwie `MyListener.log` i zapisuje dane wyjściowe do pliku.  
   
 > [!NOTE]
->  W programie .NET Framework w wersji 2.0 tekst można użyć do określenia wartości dla przełącznika. Na przykład można określić `true` dla <xref:System.Diagnostics.BooleanSwitch> lub użyj tekst reprezentujący wartości wyliczenia, takich jak `Error` dla <xref:System.Diagnostics.TraceSwitch>. Wiersz `<add name="myTraceSwitch" value="Error" />` jest odpowiednikiem `<add name="myTraceSwitch" value="1" />`.  
+>  W .NET Framework w wersji 2.0 można użyć tekstu, aby określić wartość dla przełącznika. Na przykład można określić `true` dla <xref:System.Diagnostics.BooleanSwitch> lub Użyj tekstu, takie jak reprezentujących wartości wyliczenia `Error` dla <xref:System.Diagnostics.TraceSwitch>. Wiersz `<add name="myTraceSwitch" value="Error" />` jest odpowiednikiem `<add name="myTraceSwitch" value="1" />`.  
   
 ```xml  
 <configuration>  

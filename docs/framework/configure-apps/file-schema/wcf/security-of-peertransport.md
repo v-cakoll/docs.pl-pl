@@ -3,16 +3,15 @@ title: '&lt;security&gt; w &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 9d77c250b4843c9a0f83247cae5c2859429cf5bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 152087550d3fa881a7a88271d9c91dfcc5c894c8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749845"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176763"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;security&gt; w &lt;peerTransport&gt;
-Zawiera ustawienia zabezpieczenia skojarzone z równorzędnym kanałem, takich jak typ uwierzytelniania i zabezpieczenia używany do transportu wiadomości.  
+Zawiera ustawienia zabezpieczenia skojarzone z równorzędnym kanałem, takie jak typ uwierzytelniania i zabezpieczenia używany do transportu wiadomości.  
   
  \<system.serviceModel>  
 \<powiązania >  
@@ -36,7 +35,7 @@ Zawiera ustawienia zabezpieczenia skojarzone z równorzędnym kanałem, takich j
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`mode`|Określa typ zabezpieczenia do zastosowania. Wartość domyślna to wiadomości. Ten atrybut jest typu <xref:System.ServiceModel.SecurityMode>.|  
+|`mode`|Określa typ zabezpieczenia do zastosowania. Wartość domyślna to wiadomość. Ten atrybut jest typu <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Tryb atrybutu  
   
@@ -44,14 +43,14 @@ Zawiera ustawienia zabezpieczenia skojarzone z równorzędnym kanałem, takich j
 |-----------|-----------------|  
 |`None`|Zabezpieczenia są wyłączone.|  
 |`Transport`|Zabezpieczenia przy użyciu protokołu HTTPS.|  
-|`Message`|Zabezpieczenia protokołu SOAP oferuje uwierzytelniania, integralności i poufności.|  
-|`TransportWithMessageCredential`|Protokół HTTPS oferuje uwierzytelnianie i poufności. Wiadomości SOAP Podaj sformatowanego poświadczeń.|  
+|`Message`|Zabezpieczenia protokołu SOAP zapewnia uwierzytelnianie, integralności i poufności.|  
+|`TransportWithMessageCredential`|Protokół HTTPS zapewnia uwierzytelnianie i poufności. Komunikaty protokołu SOAP zawierają typy zaawansowane poświadczeń.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Definiuje transport elementu równorzędnego dla niestandardowego powiązania. Ten element ma `clientCredentialType` atrybut, który określa poświadczenia do użycia podczas interakcji z usługą. Ten atrybut jest typu <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Ten element jest typu <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[\<transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Definiuje transport elementu równorzędnego dla niestandardowego powiązania. Ten element ma `clientCredentialType` atrybut, który określa poświadczenia, które mają być używane podczas interakcji z usługą. Ten atrybut jest typu <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Ten element jest typu <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

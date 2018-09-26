@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
 ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972335"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090295"
 ---
 # <a name="xname-directive"></a>x:Name — dyrektywa
 Jednoznacznie identyfikuje elementy zdefiniowane XAML XAML namescope. Zakresy nazw XAML i ich modeli unikatowości mogą być stosowane do wystąpień obiektów platform zapewniają interfejsy API lub zaimplementować zachowania uzyskujących dostęp do wykresu obiektu utworzone XAML w czasie wykonywania.  

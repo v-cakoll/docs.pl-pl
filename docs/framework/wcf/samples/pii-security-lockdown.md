@@ -3,13 +3,12 @@ title: Blokada zabezpieczeń PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ca85a620638509e183703f7e80c01ea20fadbc81
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: df8dd9617ad7b12b298b82d2fa8909c2680f599a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778032"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47115155"
 ---
 # <a name="pii-security-lockdown"></a>Blokada zabezpieczeń PII
 W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezpieczeniami usługi Windows Communication Foundation (WCF) przez:  

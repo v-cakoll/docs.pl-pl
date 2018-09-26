@@ -1,5 +1,5 @@
 ---
-title: Tworzenie żądania internetowe
+title: Tworzenie żądań internetowych
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WebRequest class, sending and receiving data
@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8ebe861fc2de8b21ee766e52dada1eec10169f16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 201bc5e92aeedcbfe2f710681cf3bbc773a11424
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395768"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085831"
 ---
-# <a name="creating-internet-requests"></a>Tworzenie żądania internetowe
-Tworzenie aplikacji <xref:System.Net.WebRequest> wystąpienia za pośrednictwem <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metody. To jest metodą statyczną, która tworzy klasę pochodzącą od **WebRequest** oparte na schemat identyfikatora URI przekazywania.  
+# <a name="creating-internet-requests"></a>Tworzenie żądań internetowych
+Tworzenie aplikacji <xref:System.Net.WebRequest> wystąpień za pośrednictwem <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metody. Jest to metoda statyczna, który tworzy klasę pochodną **WebRequest** oparte na schemat identyfikatora URI przekazywany do niego.  
   
-## <a name="web-file-and-ftp-requests"></a>Sieci Web, plików i żądań FTP  
- Platforma .NET Framework zapewnia <xref:System.Net.HttpWebRequest> klasy, która jest pochodną **WebRequest**, do obsługi żądań HTTP i HTTPS. W większości przypadków **WebRequest** klasy zawiera wszystkie właściwości, musisz wysłać żądanie; jednak, w razie potrzeby można rzutować **WebRequest** obiekty utworzone przez **WebRequest.Create**  metodę **HttpWebRequest** typ, aby uzyskać dostęp do właściwości specyficzne dla protokołu HTTP żądania. Podobnie **HttpWebResponse** obiektu obsługuje odpowiedzi z żądań HTTP i HTTPS. Aby uzyskać dostęp do właściwości specyficzne dla protokołu HTTP **HttpWebResponse** obiektu, należy rzutować **WebResponse** obiekty do **HttpWebResponse** typu.  
+## <a name="web-file-and-ftp-requests"></a>W sieci Web, plików i żądań FTP  
+ Program .NET Framework oferuje <xref:System.Net.HttpWebRequest> klasy, która jest pochodną **WebRequest**, do obsługi żądań HTTP i HTTPS. W większości przypadków **WebRequest** klasa udostępnia wszystkie właściwości, musisz wysłać żądanie; Jednakże, jeśli to konieczne, można rzutować **WebRequest** obiekty utworzone przez **WebRequest.Create**  metody **HttpWebRequest** typ, aby uzyskać dostęp do właściwości specyficzne dla protokołu HTTP żądania. Podobnie **HttpWebResponse** obiektu obsługuje odpowiedzi z żądań HTTP i HTTPS. Aby uzyskać dostęp do właściwości specyficzne dla protokołu HTTP z **HttpWebResponse** obiektu, należy rzutować **elementu WebResponse** obiekty do **HttpWebResponse** typu.  
   
- .NET Framework są także <xref:System.Net.FileWebRequest> i <xref:System.Net.FileWebResponse> klasy do obsługi żądań zasobów, które używają "plików:" schemat identyfikatora URI. Podobnie <xref:System.Net.FtpWebRequest> i <xref:System.Net.FtpWebResponse> klasy są dostarczane do obsługi żądań zasobów, które używają "ftp:" schematu. Jeśli żądanie dotyczy z zasobem, który wykorzystuje dowolne z tych systemów, możesz użyć **WebRequest.Create** metodę, aby uzyskać obiekt, z którym z żądania.  
+ .NET Framework udostępnia również <xref:System.Net.FileWebRequest> i <xref:System.Net.FileWebResponse> klasy do obsługi żądań zasobów, które używają "plików:" schemat identyfikatora URI. Podobnie <xref:System.Net.FtpWebRequest> i <xref:System.Net.FtpWebResponse> klasy są dostarczane do obsługi żądań zasobów, które używają "ftp:" schematu. Jeśli żądanie jest dla zasobu, który wykorzystuje dowolne z tych systemów, możesz użyć **WebRequest.Create** metody do uzyskiwania obiektu, z którą ma zostać Prześlij żądanie.  
   
- Do obsługi żądań, które używają inne protokoły poziomu aplikacji, musisz wdrożyć pochodzi od klasy oparte na protokole **WebRequest** i **WebResponse**. Aby uzyskać więcej informacji, zobacz [programowania podłączany protokołów](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
+ Do obsługi żądań, które używają inne protokoły poziomu aplikacji, którą należy wdrożyć klasy pochodne klasy specyficzne dla protokołu **WebRequest** i **elementu WebResponse**. Aby uzyskać więcej informacji, zobacz [programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: żądanie danych przy użyciu klasy WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  

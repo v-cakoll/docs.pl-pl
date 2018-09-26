@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 6f193380619d5e75eaacebe00f602a3716d91ddf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2c3a542d5db2557d351227f12276f61593787ba3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862004"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108081"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementacja wzorca kontrolki przekształcania automatyzacji interfejsu użytkownika
 > [!NOTE]

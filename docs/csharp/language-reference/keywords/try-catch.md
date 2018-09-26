@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 70830b08f9be95422761e0c096071d726a3950c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d1fd290444bc7841e32d955a4e7f2134afdbd484
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517396"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113809"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (odwołanie w C#)
 Instrukcja try-catch, który składa się z `try` bloku, po której następuje co najmniej jeden `catch` zdań, która określa programy obsługi dla różnych wyjątków.  
@@ -43,7 +43,7 @@ catch (InvalidCastException e)
   
  Istnieje możliwość użycia więcej niż jednej określonej `catch` klauzuli w tej samej instrukcji try-catch. W tym przypadku kolejność `catch` klauzule ważne jest, ponieważ `catch` klauzule są badane w kolejności. Rejestrować bardziej szczegółowe wyjątki przed mniej określone z nich. Kompilator generuje błąd, jeśli kolejność, że Twoje catch blokuje tak, aby nigdy nie jest osiągalna nowsze bloku.  
   
- Za pomocą `catch` argumentów jest jednym ze sposobów, aby filtrować pod kątem wyjątków, które ma obsługiwać.  Można również użyć filtr wyjątku, który dodatkowo sprawdza, czy wyjątek zdecydować, czy do jego obsługi.  Jeśli filtr wyjątku zwróci wartość false, wyszukiwanie w przypadku obsługi kontynuowane.  
+ Za pomocą `catch` argumentów jest jednym ze sposobów, aby filtrować pod kątem wyjątków, które ma obsługiwać.  Umożliwia także filtr wyjątku, który dodatkowo sprawdza, czy wyjątek zdecydować, czy do jego obsługi.  Jeśli filtr wyjątku zwróci wartość false, wyszukiwanie w przypadku obsługi kontynuowane.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  

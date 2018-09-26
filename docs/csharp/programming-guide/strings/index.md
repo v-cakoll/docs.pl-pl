@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961472"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170655"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartością tekstową. Wewnętrznie, tekst jest przechowywany jako sekwencyjną kolekcją tylko do odczytu z <xref:System.Char> obiektów. Brak nie znaku zakończenia o wartości null na końcu ciągu języka C#; w związku z tym ciąg języka C# może zawierać dowolną liczbę osadzone znaki null ('\0'). <xref:System.String.Length%2A> Właściwość ciągu reprezentuje liczbę `Char` obiektów zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punkty kodowe Unicode w ciągu, należy użyć <xref:System.Globalization.StringInfo> obiektu.  
@@ -64,7 +64,7 @@ Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartości�
 |\U|Sekwencja unikowa Unicode znaki dwuskładnikowe.|\Unnnnnnnn|  
 |\u|Sekwencja unikowa Unicode|\u0041 = "A"|  
 |\v|tabulator pionowy|0x000B|  
-|\x|Sekwencja unikowa Unicode jest podobny do "\u" z wyjątkiem o zmiennej długości.|\x0041 = "A"|  
+|\x|Sekwencja unikowa Unicode jest podobny do "\u" z wyjątkiem o zmiennej długości.|\x0041 lub \x41 = "A"|  
   
 > [!NOTE]
 >  W czasie kompilacji ciągi verbatim są konwertowane na zwykłe ciągi przy użyciu tych samych sekwencje ucieczki. W związku z tym jeśli ciąg verbatim można wyświetlić w oknie czujki debugera, zobaczysz znaki ucieczki, które zostały dodane przez kompilator nie verbatim wersji z kodu źródłowego. Na przykład ciąg verbatim @"C:\files.txt" będą wyświetlane w oknie czujki jako "C:\\\files.txt".  

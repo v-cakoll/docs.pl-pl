@@ -7,16 +7,15 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6ffaea24910a6b8f4a120d6b72219bff592fab17
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745217"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071730"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;Usuń&gt; elementu &lt;namedCaches&gt;
-Usuwa wpis w pamięci podręcznej o nazwie z `namedCaches` kolekcji dla pamięci podręcznej.  
+Usuwa wpis nazwaną pamięć podręczną z `namedCaches` kolekcji w pamięci podręcznej.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
@@ -48,10 +47,10 @@ Usuwa wpis w pamięci podręcznej o nazwie z `namedCaches` kolekcji dla pamięci
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Zawiera kolekcję ustawień konfiguracyjnych dla nazwanego <xref:System.Runtime.Caching.MemoryCache> wystąpień.|  
+|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Zawiera kolekcję ustawień konfiguracji dla nazwanego <xref:System.Runtime.Caching.MemoryCache> wystąpień.|  
   
 ## <a name="remarks"></a>Uwagi  
- `remove` Usuwa element `namedCache` wpisu z kolekcji nazwanych pamięci podręcznej dla pamięci podręcznej.  
+ `remove` Usuwa element `namedCache` wpis z kolekcji nazwaną pamięć podręczną dla pamięci podręcznej.  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<namedCaches > elementu (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+ [\<namedCaches >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

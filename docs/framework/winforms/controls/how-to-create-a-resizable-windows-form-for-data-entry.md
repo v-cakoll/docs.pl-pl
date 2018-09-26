@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
 ms.openlocfilehash: a319fba43c6735cd5552dd71d1fb614a6192da97
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583868"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079600"
 ---
 # <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>Porady: tworzenie formularza systemu Windows o zmiennych rozmiarach do wpisywania danych
 Dobre układ odpowiada również zmiany w wymiarach jego formularza nadrzędnego. Możesz użyć <xref:System.Windows.Forms.TableLayoutPanel> kontroli do układu formularza w taki sposób, aby zmienić rozmiar i położenie formantów w spójny sposób zmianami Wymiary formularza. <xref:System.Windows.Forms.TableLayoutPanel> Kontroli jest również przydatne w przypadku gdy zmienia się w zawartości kontrolki Przyczyna zmiany w układzie. Proces omówione w tej procedurze, możesz to zrobić w środowisku Visual Studio.  Zobacz też [wskazówki: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych](https://msdn.microsoft.com/library/991eahec\(v=vs.110\)).  

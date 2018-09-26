@@ -13,11 +13,11 @@ ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46697649"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111506"
 ---
 # <a name="static-class-design"></a>Projekt klasy statycznej
 Klasa statyczna jest zdefiniowany jako klasę, która zawiera tylko statyczne elementy członkowskie (oczywiście oprócz składowych wystąpienia dziedziczonych po elemencie <xref:System.Object?displayProperty=nameWithType> i prawdopodobnie Konstruktor prywatny). Niektóre języki zapewniają obsługę wbudowanych klas statycznych. W języku C# w wersji 2.0 i nowszych wersjach gdy klasa jest zadeklarowany jako statyczny, jest zapieczętowany, abstract, a nie składowych wystąpienia mogą zostać zastąpione lub zadeklarowana.  

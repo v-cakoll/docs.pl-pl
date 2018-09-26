@@ -14,11 +14,11 @@ ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: abc53381bf6cc8458b83edf5586b76fe7ed5f303
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696940"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088649"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Porady: odwołanie do zestawu o silnej nazwie
 Proces odwołania do typów lub zasoby znajdujące się zestawu z silną nazwą jest zazwyczaj niewidoczny. Istnieje możliwość odwołania w czasie kompilacji (wczesne powiązania) lub w czasie wykonywania.  

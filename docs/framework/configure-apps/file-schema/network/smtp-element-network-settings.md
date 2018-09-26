@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 61110413f43e95060aa2cfecb4acdb3ebaae14df
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874926"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082256"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; — Element (ustawienia sieci)
 Konfiguruje format dostarczania, metodę dostarczania i z adresu do wysyłania wiadomości e-mail.  

@@ -3,13 +3,12 @@ title: Zabezpieczenia powiązania niestandardowego
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 61e8be6f7f621340a684bff69ec5c9d64ab36c61
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d70d5691d7f07225602fa492c6f82f3503362cd0
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999156"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090269"
 ---
 # <a name="custom-binding-security"></a>Zabezpieczenia powiązania niestandardowego
 Niniejszy przykład pokazuje sposób konfigurowania zabezpieczeń przy użyciu niestandardowego powiązania. Widoczny jest sposób użyć niestandardowego powiązania, aby włączyć zabezpieczenia na poziomie komunikatu wraz z bezpiecznym transportem. Jest to przydatne, gdy bezpiecznym transportem jest wymagana do przesyłania komunikatów między klientem a usługą i jednocześnie komunikaty muszą być bezpieczne na poziomie komunikatu. Ta konfiguracja nie jest obsługiwana przez powiązania dostarczane przez system.  

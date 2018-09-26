@@ -1,5 +1,5 @@
 ---
-title: Przy użyciu gniazda synchroniczne klienta
+title: Za pomocą synchronicznego gniazda klienta
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c9101957c6c4b9961ca5985bda8b8f82d69b45d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: edc65f46b69ef3b72092c0182529b9127cc25911
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397705"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086200"
 ---
-# <a name="using-a-synchronous-client-socket"></a>Przy użyciu gniazda synchroniczne klienta
-Gniazda synchroniczne klienta zawiesza program aplikacji podczas operacji sieciowej. Gniazda synchroniczne nie są odpowiednie dla aplikacji, które w znacznym stopniu wykorzystywane sieci dla ich działania, ale umożliwiają one proste dostęp do usług sieciowych dla innych aplikacji.  
+# <a name="using-a-synchronous-client-socket"></a>Za pomocą synchronicznego gniazda klienta
+Synchronicznego gniazda klienta zawiesza program aplikacji podczas wykonywania operacji sieciowej. Synchronicznego gniazda nie są odpowiednie dla aplikacji, które intensywnie korzystają z sieci do ich działania, ale mogą one umożliwiać prosty dostęp do usług sieciowych dla innych aplikacji.  
   
- Aby wysłać dane, Przekaż tablica bajtów do jednego z <xref:System.Net.Sockets.Socket> metod wysyłania danych klasy (<xref:System.Net.Sockets.Socket.Send%2A> i <xref:System.Net.Sockets.Socket.SendTo%2A>). Poniższy przykład koduje ciąg w użyciu buforu tablicy bajtów <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> właściwości, a następnie przesyła bufor do urządzenia sieciowego przy użyciu **wysyłania** metody. **Wysyłania** metoda zwraca liczbę bajtów wysłanych z urządzeniem sieciowym.  
+ Aby wysyłać dane, należy przekazać tablicy typu byte do jednej z <xref:System.Net.Sockets.Socket> metod wysyłania danych klasy (<xref:System.Net.Sockets.Socket.Send%2A> i <xref:System.Net.Sockets.Socket.SendTo%2A>). Poniższy przykład koduje ciąg w użyciu bufor tablicy bajtów <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> właściwości i następnie przesyła bufor do urządzenia sieciowego za pomocą **wysyłania** metody. **Wysyłania** metoda zwraca liczbę bajtów wysłanych z urządzeniem sieciowym.  
   
 ```vb  
 Dim msg As Byte() = _  
@@ -43,9 +42,9 @@ byte[] msg = System.Text.Encoding.ASCII.GetBytes("This is a test");
 int bytesSent = s.Send(msg);  
 ```  
   
- **Wysyłania** — metoda usuwa bajtów z buforu, a kolejki je z interfejsem sieciowym do wysłania do urządzenia sieciowego. Interfejs sieciowy nie może wysłać dane od razu, ale wysyła on po pewnym czasie tak długo, jak połączenie jest zamknięte zwykle z <xref:System.Net.Sockets.Socket.Shutdown%2A> metody.  
+ **Wysyłania** metoda usuwa bajtów z bufora i kolejki je z interfejsem sieciowym do wysłania do urządzenia sieciowego. Interfejs sieciowy nie może wysłać dane od razu, ale wysyła on po pewnym czasie tak długo, jak połączenie jest zamknięte zwykle z <xref:System.Net.Sockets.Socket.Shutdown%2A> metody.  
   
- Na odbieranie danych z urządzenia sieciowego, Przekaż bufor do jednego z **gniazda** metody odbierania danych klasy (<xref:System.Net.Sockets.Socket.Receive%2A> i <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>). Synchroniczne sockets zawiesi stosowanie, dopóki nie są odbierane z sieci, lub do czasu zamknięcia gniazda. Poniższy przykład odbiera dane z sieci i wyświetla je w konsoli. W przykładzie założono, że danych przesyłanych przez sieć jest kodowany w formacie ASCII tekstu. **Receive** metoda zwraca liczbę bajtów odebranych z sieci.  
+ Odbieranie danych z urządzenia sieciowego, należy przekazać do jednego z buforu **gniazda** metod odbierania danych klasy (<xref:System.Net.Sockets.Socket.Receive%2A> i <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>). Synchronicznego gniazda zostanie zawieszone aplikacji, dopóki nie są odbierane z sieci, lub do czasu zamknięcia gniazda. Poniższy przykład odbiera dane z sieci i wyświetla go w konsoli. W przykładzie założono, że dane pochodzące z sieci należy tekstowymi w formacie ASCII. **Receive** metoda zwraca liczbę bajtów odebranych z sieci.  
   
 ```vb  
 Dim bytes(1024) As Byte  
@@ -61,7 +60,7 @@ Console.WriteLine("Echoed text = {0}",
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec));  
 ```  
   
- Gniazda jest już potrzebne, musisz zwolnić go przez wywołanie metody <xref:System.Net.Sockets.Socket.Shutdown%2A> — metoda i wywołując **Zamknij** metody. Poniższy przykład zwalnia **gniazda**. <xref:System.Net.Sockets.SocketShutdown> Wyliczenie definiuje stałe, które wskazują, czy gniazda powinno zostać zamknięte do wysyłania do odbierania lub oba.  
+ Gdy gniazda nie jest już potrzebny, musisz zwolnić go przez wywołanie metody <xref:System.Net.Sockets.Socket.Shutdown%2A> metody, a następnie wywołując **Zamknij** metody. Poniższy przykład zwalnia **gniazda**. <xref:System.Net.Sockets.SocketShutdown> Wyliczenie definiuje stałe, które wskazują, czy gniazda powinien zostać zamknięty, wysyłanie, odbieranie lub dla obu.  
   
 ```vb  
 s.Shutdown(SocketShutdown.Both)  

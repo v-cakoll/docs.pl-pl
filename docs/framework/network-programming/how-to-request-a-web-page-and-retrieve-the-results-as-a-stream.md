@@ -1,5 +1,5 @@
 ---
-title: 'Porady: żądania strony sieci Web i pobieraniem ich wyników jako strumienia'
+title: 'Instrukcje: żądanie strony internetowej i pobieranie wyników jako Stream'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +7,15 @@ dev_langs:
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 31856e7fc7136b3bdb8fab9fdf8185de32a3007a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ceaa7cbaf2035276a0ba0105f3969f0249c6132
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395216"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084933"
 ---
-# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Porady: żądania strony sieci Web i pobieraniem ich wyników jako strumienia
-W tym przykładzie przedstawiono sposób żądania strony sieci Web i pobieraniem ich wyników w strumieniu.  
+# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Instrukcje: żądanie strony internetowej i pobieranie wyników jako Stream
+W tym przykładzie pokazano, jak żądania strony sieci Web do pobierania wyników w strumieniu.  
   
 ## <a name="example"></a>Przykład  
   

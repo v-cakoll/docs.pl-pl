@@ -1,5 +1,5 @@
 ---
-title: '&lt;Usuń&gt; elementu bypasslist — (ustawienia sieciowe)'
+title: '&lt;Usuń&gt; , Element dla bypasslist (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5c7918048743d53d8523ec399d1a11c67152a2bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6c72d9780088fddcaa59e644ff8069afbb4e43d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742952"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074982"
 ---
-# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;Usuń&gt; elementu bypasslist — (ustawienia sieciowe)
-Usuwa adres IP lub nazwa DNS lista obejść serwerów proxy.  
+# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;Usuń&gt; , Element dla bypasslist (ustawienia sieci)
+Usuwa adres IP lub nazwa DNS z listy obejścia serwera proxy.  
   
  \<Konfiguracja >  
 \<system.net>  
 \<defaultProxy — >  
-\<bypasslist — >  
+\<bypasslist >  
 \<Usuń >  
   
 ## <a name="syntax"></a>Składnia  
@@ -44,7 +43,7 @@ Usuwa adres IP lub nazwa DNS lista obejść serwerów proxy.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`address`|Wyrażenie regularne opisujące adresu IP lub nazwy DNS.|  
+|`address`|Wyrażenie regularne, zawierająca opis, adres IP lub nazwę DNS.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -53,20 +52,20 @@ Usuwa adres IP lub nazwa DNS lista obejść serwerów proxy.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[bypasslist —](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, opisujących adresów, które nie korzystają z serwera proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|  
   
 ## <a name="remarks"></a>Uwagi  
- `remove` Wyrażeń regularnych opisujące adresy IP lub nazwy serwera DNS z listy adresów, które Obejdź serwer proxy usuwa element. Adresy zostały zdefiniowane wcześniej w pliku konfiguracji lub wyższego poziomu w hierarchii konfiguracji.  
+ `remove` Elementu usuwa wyrażeń regularnych, opisujący adresy IP lub nazwy serwera DNS z listy adresów, które pomijają serwer proxy. Adresy zostały zdefiniowane wcześniej w pliku konfiguracji lub wyższego poziomu w hierarchii konfiguracji.  
   
- Wartość `address` atrybutu powinna być wyrażenie regularne opisuje zestaw adresów IP lub nazwy hosta.  
+ Wartość `address` atrybut powinien być wyrażenie regularne, które opisuje zestaw adresów IP lub nazw hostów.  
   
  Aby uzyskać więcej informacji na temat wyrażeń regularnych Zobacz. [Wyrażeń regularnych programu .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa wszelkie poprzednie definicji dla domeny firmy adventure works.com, a następnie dodanie domeny contoso.com, do listy obejścia.  
+ Poniższy przykład usuwa wszelkie poprzednią definicję dla domeny adventure works.com, a następnie dodaje domeny contoso.com do listy pomijania.  
   
 ```xml  
 <configuration>  

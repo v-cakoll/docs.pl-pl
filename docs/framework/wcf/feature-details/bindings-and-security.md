@@ -8,13 +8,12 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a7d2e55f84ed99ccb25e9966dc72112c0113eabc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 904ea64bd6e76e7bf99aa4a31ef752bfb2760c23
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519809"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080133"
 ---
 # <a name="bindings-and-security"></a>Powiązania i zabezpieczenia
 Powiązania dostarczane przez system, dołączone za pomocą programu Windows Communication Foundation (WCF) oferują szybki sposób program aplikacji WCF. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. W tym temacie pomaga wybrać odpowiednie powiązanie dla wymagania w zakresie zabezpieczeń.  

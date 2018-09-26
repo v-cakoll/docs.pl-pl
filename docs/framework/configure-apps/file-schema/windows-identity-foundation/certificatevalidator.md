@@ -3,16 +3,15 @@ title: '&lt;certificateValidator&gt;'
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a4663b0c3a2a6965a977a1d551c47de7e13d144b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 65b8aa6fa4422579ce0d1c5e33d3418ea051612a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766897"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077658"
 ---
 # <a name="ltcertificatevalidatorgt"></a>&lt;certificateValidator&gt;
-Określa typ niestandardowy o sprawdzenie poprawności certyfikatu. Ten typ jest używany tylko wtedy, gdy `certificateValidationMode` atrybutu [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element jest ustawiony na "Custom".  
+Określa typ niestandardowy do weryfikacji certyfikatu. Ten typ jest używany tylko wtedy, gdy `certificateValidationMode` atrybutu [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element jest ustawiony na "Niestandardowe".  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -39,7 +38,7 @@ Określa typ niestandardowy o sprawdzenie poprawności certyfikatu. Ten typ jest
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Określa typ niestandardowy, która jest pochodną <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy. Ustaw `certificateValidationMode` atrybutu [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) elementu na "Custom", aby użyć tego typu. Aby uzyskać więcej informacji o sposobie określania `type` atrybutów, zobacz [odwołuje się do niestandardowego typu](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Opcjonalna.|  
+|— typ|Określa typ niestandardowy, który pochodzi od klasy <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy. Ustaw `certificateValidationMode` atrybutu [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element na "Niestandardowe", aby użyć tego typu. Aby uzyskać więcej informacji o sposobie określania `type` atrybutów, zobacz [odwołań do typu niestandardowego](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Opcjonalna.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -48,7 +47,7 @@ Określa typ niestandardowy o sprawdzenie poprawności certyfikatu. Ten typ jest
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Określa ustawienia, które programy obsługi token służący do weryfikowania certyfikatów.|  
+|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Określa ustawienia, które programy obsługi tokenów służący do weryfikowania certyfikatów.|  
   
 ## <a name="example"></a>Przykład  
   

@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 82c123e50e58c162a8cc6758bcb446e3484d9bb8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 481e2eeaa24c4e8bc2b6199d2bb4ab2c3c51e221
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500617"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108666"
 ---
 # <a name="ui-automation-fundamentals"></a>Podstawowe założenia automatyzacji interfejsu użytkownika
 > [!NOTE]

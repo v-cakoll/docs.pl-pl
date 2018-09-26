@@ -1,5 +1,5 @@
 ---
-title: '&lt;Usuń&gt; elementu webRequestModules — (ustawienia sieciowe)'
+title: '&lt;Usuń&gt; Element dla webRequestModules (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073024"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112208"
 ---
-# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Usuń&gt; elementu webRequestModules — (ustawienia sieciowe)
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Usuń&gt; Element dla webRequestModules (ustawienia sieci)
 Usuwa niestandardowego modułu żądania sieci Web z aplikacji.  
   
  \<Konfiguracja >  
@@ -52,18 +51,18 @@ Usuwa niestandardowego modułu żądania sieci Web z aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[webRequestModules —](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Określa moduły służące do żądania informacji z hostów w sieci.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Określa moduły do użycia na żądanie informacji z hostów w sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `remove` Element usuwa zarejestrowanego modułu żądania sieci Web dla określonego prefiksu identyfikatora URI.  
+ `remove` Elementu usuwa zarejestrowanego modułu żądania sieci Web dla określonego prefiksu identyfikatora URI.  
   
- Wartość `prefix` atrybutu powinna być pierwszych znaków z prawidłowym identyfikatorem URI — na przykład "http" lub "`http://www.contoso.com` ".  
+ Wartość `prefix` atrybut powinien być wiodące znaki prawidłowy identyfikator URI — na przykład "http" lub "`http://www.contoso.com` ".  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa istniejący moduł żądania sieci Web do obsługi protokołu HTTP, a następnie rejestruje nowego niestandardowego sieci Web żądania modułu HTTP żądań www.contoso.com.  
+ Poniższy przykład usuwa istniejący moduł żądania sieci Web do obsługi protokołu HTTP, a następnie rejestruje nowe niestandardowe sieci Web żądania modułu dla żądania HTTP do www.contoso.com.  
   
 ```xml  
 <configuration>  

@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f4ed8fa218e97f4a6b06bd1c8a06d9b300b16119
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b949c9fd50ee4d09d7237bc14898a1b55689f2f4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584347"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088623"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programowanie dla sieci w .NET Framework
 Środowisko Microsoft .NET Framework oferuje warstwowe, rozszerzalne i zarządzane wdrożenia usług internetowych, które można szybko i łatwo zintegrować ze swoimi aplikacjami. Aplikacje sieciowe mogą za pomocą podłączanych protokołów automatycznie wykorzystywać nowe protokoły internetowe albo za pośrednictwem zarządzanej implementacji interfejsu gniazd systemu Windows współpracować z siecią na poziomie gniazd.  

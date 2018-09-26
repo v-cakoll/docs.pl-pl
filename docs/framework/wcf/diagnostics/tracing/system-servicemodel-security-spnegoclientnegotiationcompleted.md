@@ -3,19 +3,18 @@ title: System.ServiceModel.Security.SpnegoClientNegotiationCompleted
 ms.date: 03/30/2017
 ms.assetid: e80b1390-bb37-46aa-ab91-4ed187b2e09d
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f0c8a1b5d5f34e886f78e7f1250557810ca8e6a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e870e43fe4571b8bb6de499ecab5fa1c71ce0f3b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33482121"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110219"
 ---
 # <a name="systemservicemodelsecurityspnegoclientnegotiationcompleted"></a>System.ServiceModel.Security.SpnegoClientNegotiationCompleted
 System.ServiceModel.Security.SpnegoClientNegotiationCompleted  
   
 ## <a name="description"></a>Opis  
- Dostawca tokenów SpnegoTokenProvider zakończył negocjowanie SSPI.  
+ Dostawca tokenów SpnegoTokenProvider ukończyć negocjacji interfejsu SSPI.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  

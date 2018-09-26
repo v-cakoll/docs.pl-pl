@@ -6,11 +6,11 @@ ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8a1de8ab10eff88757720a35aa9668125cfbfa
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46568744"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070165"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Przestrzenie nazw i definicje DTD w modelu DOM
 Obsługa complicate przestrzeni nazw definicje (pliki DTD) typu dokumentu. Na przykład następujący kod XML zawiera atrybuty domyślne zawierające dwukropki w nazwach.  

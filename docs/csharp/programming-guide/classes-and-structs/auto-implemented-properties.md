@@ -6,11 +6,11 @@ helpviewer_keywords:
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
 ms.openlocfilehash: 0d32dfd626cb8484e935dd0e8608c2e29d3ecbde
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711210"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108471"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Właściwości zaimplementowane automatycznie (Przewodnik programowania w języku C#)
 W języku C# 3.0 i nowszych wersjach automatycznie implementowane właściwości należy deklaracja właściwości bardziej zwięzły widok żądanie nie dodatkowej logiki w metodach dostępu właściwości. Umożliwiają one również kod klienta do tworzenia obiektów. Kiedy Deklarujesz właściwości, jak pokazano w poniższym przykładzie, kompilator utworzy polem zapasowym prywatne i anonimowy, który jest możliwy tylko za pośrednictwem właściwości `get` i `set` metod dostępu.  

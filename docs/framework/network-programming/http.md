@@ -15,24 +15,23 @@ helpviewer_keywords:
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ed61a8addd204320560c773e917613c52e56bff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c99e63f09d756bfff8cced846c2fe0f61722b8c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394462"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078451"
 ---
 # <a name="http"></a>HTTP
-.NET Framework zapewnia kompleksowe obsługę protokołu HTTP, dzięki czemu większość cały ruch internetowy, z <xref:System.Net.HttpWebRequest> i <xref:System.Net.HttpWebResponse> klasy. Te klasy wyprowadzone z <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, zwracane są domyślnie zawsze, gdy metody statycznej <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> napotka przez identyfikator URI rozpoczynający się od "http" lub "https". W większości przypadków **WebRequest** i **WebResponse** klasy podać wszystko jest to niezbędne do zapewnienia żądania, ale jeśli potrzebny jest dostęp do funkcji specyficzne dla protokołu HTTP udostępniony jako właściwości, można rzutowanie typu te klasy do **HttpWebRequest** lub **HttpWebResponse**.  
+Program .NET Framework oferuje kompleksowe wsparcie dla protokołu HTTP, co sprawia, że większość cały ruch z Internetu za pomocą <xref:System.Net.HttpWebRequest> i <xref:System.Net.HttpWebResponse> klasy. Te klasy pochodne <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, zwracane są domyślnie zawsze wtedy, gdy metoda statyczna <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> napotka przez identyfikator URI rozpoczynający się od "http" lub "https". W większości przypadków **WebRequest** i **elementu WebResponse** klasy zapewnia wszystko co jest niezbędne do utworzenia żądania, ale jeśli potrzebujesz dostępu do funkcji specyficznych dla protokołu HTTP, widoczne jako właściwości, możesz rzutowanie typu te klasy **HttpWebRequest** lub **HttpWebResponse**.  
   
- **HttpWebRequest** i **HttpWebResponse** hermetyzują standardowy transakcji żądanie i odpowiedź HTTP i zapewnienia dostępu do typowych nagłówków HTTP. Te klasy również obsługiwać większość funkcje protokołu HTTP 1.1, w tym przetwarzanie potokowe, wysyłania i odbierania danych w fragmentów, uwierzytelniania wstępnego uwierzytelniania, szyfrowania, obsługi serwera proxy, weryfikacji certyfikatu serwera i zarządzanie połączeniami. Przechowywane w i dostępne za pośrednictwem niestandardowe nagłówki i nagłówki nie są realizowane za pośrednictwem właściwości **nagłówki** właściwości.  
+ **HttpWebRequest** i **HttpWebResponse** hermetyzują standardowy transakcji żądań i odpowiedzi HTTP i zapewniają dostęp do wspólnych nagłówków HTTP. W ramach tych zajęć również obsługiwać większość funkcje protokołu HTTP 1.1, w tym przetwarzanie potokowe, wysyłania i odbierania danych w fragmentów, uwierzytelnianie, wstępnego uwierzytelniania, szyfrowanie, obsługa serwera proxy, weryfikacji certyfikatu serwera i zarządzania połączeniami. Przechowywane w i dostępne za pośrednictwem niestandardowych nagłówków i nagłówki nie są dostarczane za pośrednictwem właściwości **nagłówki** właściwości.  
   
- **HttpWebRequest** jest używany przez domyślną klasę **WebRequest** i nie musi być zarejestrowane przed można przekazać identyfikatora URI do **WebRequest.Create** metody.  
+ **HttpWebRequest** jest używany przez domyślną klasę **WebRequest** i nie musi zostać zarejestrowany, aby przekazać identyfikator URI, który ma **WebRequest.Create** metody.  
   
- Umożliwia aplikacji wykonaj przekierowania HTTP automatycznie przez ustawienie <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> właściwości **true** (ustawienie domyślne). Aplikacja będzie przekierowywać żądania i <xref:System.Net.HttpWebResponse.ResponseUri%2A> właściwość **HttpWebResponse** będzie zawierać rzeczywiste zasobu sieci Web, który odpowiedział na żądanie. Jeśli ustawisz **AllowAutoRedirect** do **false**, aplikacja musi mieć możliwość obsługi przekierowania jako błędy protokołu HTTP.  
+ Można uczynić aplikację automatycznie podążał za przekierowaniami HTTP, ustawiając <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> właściwości **true** (ustawienie domyślne). Aplikacja będzie przekierowywać żądania oraz <xref:System.Net.HttpWebResponse.ResponseUri%2A> właściwość **HttpWebResponse** będzie zawierać rzeczywistego zasobu sieci Web, która odpowiedział na żądanie. Jeśli ustawisz **AllowAutoRedirect** do **false**, aplikacja musi być w stanie obsłużyć przekierowań jako błędy protokołu HTTP.  
   
- Aplikacje odbierać błędy protokołu HTTP przez <xref:System.Net.WebException> z <xref:System.Net.WebException.Status%2A> ustawioną <xref:System.Net.WebExceptionStatus>. <xref:System.Net.WebException.Response%2A> Właściwość zawiera **WebResponse** wysyłane przez serwer i wskazuje rzeczywiste wystąpił błąd protokołu HTTP.  
+ Aplikacje otrzymywać komunikaty o błędach protokołu HTTP przez Przechwytywanie <xref:System.Net.WebException> z <xref:System.Net.WebException.Status%2A> równa <xref:System.Net.WebExceptionStatus>. <xref:System.Net.WebException.Response%2A> Właściwość zawiera **elementu WebResponse** wysłanych przez serwer i wskazuje rzeczywiste Napotkano błąd HTTP.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  

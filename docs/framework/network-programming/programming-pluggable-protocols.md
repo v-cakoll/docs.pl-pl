@@ -1,5 +1,5 @@
 ---
-title: Protokoły podłączany programowania
+title: Programowanie protokołów podłączanych
 ms.date: 03/30/2017
 helpviewer_keywords:
 - downloading Internet resources, pluggable protocols
@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fe9f9216c00448391967b82c84207f95eaccdb53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d517ef2683b8468410880d2bb50f79b382367bf
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396145"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170155"
 ---
-# <a name="programming-pluggable-protocols"></a>Protokoły podłączany programowania
-Abstract <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy podanie podłączany protokołów podstawowym. Przez wyprowadzanie klasy specyficzne dla protokołu z <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, aplikacji można dane żądania z zasobu internetowego i bez określania protokołu używanego do odczytu odpowiedzi.  
+# <a name="programming-pluggable-protocols"></a>Programowanie protokołów podłączanych
+Abstrakcyjna <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy zapewniają base podłączanych protokołów. Przez wyprowadzanie klasy związane z Protokołem z <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, aplikacja może dane żądania z zasobem internetowym i uzyskać odpowiedzi bez protokołu używanego do określania.  
   
- Przed utworzeniem oparte na protokole <xref:System.Net.WebRequest>, należy zarejestrować jego metody Create. Użyj statycznych <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> metody <xref:System.Net.WebRequest> zarejestrować <xref:System.Net.WebRequest> elementów podrzędnych do obsługi żądań do określonego schematu Internet, schemat i serwer lub do schematu, serwera i ścieżki zestawu.  
+ Aby można było utworzyć związane z protokołem <xref:System.Net.WebRequest>, należy zarejestrować jego metody Create. Używa się statycznej <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> metody <xref:System.Net.WebRequest> zarejestrować <xref:System.Net.WebRequest> zależne do obsługi zestawu żądań do określonego schematu Internet, schemat i serwer lub do schematu, serwera i ścieżki.  
   
- W większości przypadków będzie mógł wysyłać i odbierać dane przy użyciu metody i właściwości <xref:System.Net.WebRequest> klasy. Jednak jeśli potrzebujesz dostępu do właściwości specyficzne dla protokołu, użytkownik może rzutowanie typu <xref:System.Net.WebRequest> określonego wystąpienia klas pochodnych.  
+ W większości przypadków będzie wysyłać i odbierać dane przy użyciu metod i właściwości <xref:System.Net.WebRequest> klasy. Jednak jeśli potrzebujesz dostępu do właściwości specyficznych dla protokołu, użytkownik może rzutowanie typu <xref:System.Net.WebRequest> do określonego wystąpienia klasy pochodnej.  
   
- Aby móc korzystać z protokołów podłączane z <xref:System.Net.WebRequest> descendants musi podać transakcji żądanie i odpowiedź domyślna, która nie wymaga właściwości specyficzne dla protokołu. Na przykład <xref:System.Net.HttpWebRequest> klasy, która implementuje <xref:System.Net.WebRequest> klasy do obsługi protokołu HTTP, zapewnia `GET` żądanie domyślnie i zwraca <xref:System.Net.HttpWebResponse> zawierający strumienia zwrócone z serwera sieci Web.  
+ Aby móc korzystać z protokołów podłączanych swoje <xref:System.Net.WebRequest> elementy podrzędne należy podać transakcji żądań i odpowiedzi domyślnej, która nie wymaga ustawiania właściwości specyficzne dla protokołu. Na przykład <xref:System.Net.HttpWebRequest> klasy, która implementuje <xref:System.Net.WebRequest> klasy do obsługi protokołu HTTP, zapewnia `GET` żądanie domyślnie i zwraca <xref:System.Net.HttpWebResponse> zawierający Strumień zwrócony z serwera sieci Web.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyprowadzanie z elementu WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)  

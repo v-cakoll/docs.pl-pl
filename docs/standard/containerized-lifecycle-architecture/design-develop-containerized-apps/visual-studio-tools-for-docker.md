@@ -1,64 +1,66 @@
 ---
-title: Za pomocą narzędzi Visual Studio Tools for Docker (Visual Studio Windows)
+title: Visual Studio Tools for Docker na Windows
 description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: af14c92ab27885deec878dc33e7b94035f43e65b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: cd140c12ef4a0187cce096e013937d5c98cd4b39
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581223"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170798"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Za pomocą narzędzi Visual Studio Tools for Docker (Visual Studio Windows)
 
-Przepływ pracy tworzenia oprogramowania przy użyciu Visual Studio Tools for Docker jest podobny do przepływu pracy, podczas korzystania z programu Visual Studio Code i interfejsu wiersza polecenia platformy Docker. W rzeczywistości opiera się na tym samym interfejsu wiersza polecenia platformy Docker, ale jest łatwiej rozpocząć pracę, upraszcza ten proces i zapewnia większą produktywność dla kompilacji, uruchom i redagowania zadań. Istnieje również możliwość wykonywania i Debuguj swoje kontenery za pomocą prostego akcji, takich jak klawisza F5 i Ctrl + F5 w programie Visual Studio. Dzięki obsłudze aranżacji opcjonalny kontener, oprócz możliwości uruchamiać i debugować jeden kontener można uruchomić i debugować grupę kontenerów (całe rozwiązanie), w tym samym czasie. Tylko definiuje kontenery, w tym samym *docker-compose.yml* pliku na poziomie rozwiązania.
+Visual Studio Tools dla przepływu pracy dla deweloperów platformy Docker jest podobny do przy użyciu programu Visual Studio Code i interfejsu wiersza polecenia Docker (opiera się na tym samym interfejsu wiersza polecenia platformy Docker). Program Visual Studio Tools dla platformy Docker sprawia, że jeszcze łatwiej rozpocząć pracę, upraszcza i zapewnia większą produktywność dla kompilacji, uruchamianie i redagowania zadań. Wykonywanie i Debuguj swoje kontenery za pomocą prostego akcji, takich jak **F5** i **Ctrl**+**F5**.
 
-## <a name="configuring-your-local-environment"></a>Konfigurowanie środowiska lokalnego
+> [!NOTE]
+> Ten artykuł dotyczy programu Visual Studio w Windows, a nie programu Visual Studio dla komputerów Mac.
 
-Obsługę platformy docker znajduje się w programie Visual Studio 2017 z żadnego z zainstalowanych obciążeń .NET i .NET Core. Oddzielna instalacja platformy Docker for Windows.
+## <a name="configure-your-local-environment"></a>Konfigurowanie środowiska lokalnego
 
-Za pomocą najnowszych wersji platformy Docker for Windows jest łatwiejsze niż kiedykolwiek do tworzenia aplikacji platformy Docker ponieważ Instalator jest proste, jak wyjaśniono w następujących odwołań.
+Najnowsze wersje platformy Docker for Windows ([https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)), proste Instalatora ułatwia tworzenie aplikacji platformy Docker.
 
-**Więcej informacji:** Aby dowiedzieć się więcej o instalowaniu platformy Docker for Windows, przejdź do <https://docs.docker.com/docker-for-windows/>.
+Obsługę platformy docker znajduje się w programie Visual Studio 2017. Pobierz program Visual Studio 2017 w tym miejscu: [https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Więcej informacji:** instrukcje dotyczące instalowania programu Visual Studio, przejdź do [ https://visualstudio.microsoft.com/downloads/ ](https://visualstudio.microsoft.com/downloads/).
+## <a name="use-docker-tools-in-visual-studio-2017"></a>Korzystanie z narzędzi platformy Docker w programie Visual Studio 2017
 
-Aby wyświetlić więcej informacji o instalowaniu programu Visual Studio Tools for Docker, przejdź do <http://aka.ms/vstoolsfordocker> i <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
+Istnieją dwa poziomy obsługę platformy Docker, które można dodać do projektu. W projektach aplikacji sieci web platformy .NET Core, można po prostu dodać *pliku Dockerfile* pliku do projektu, należy włączyć obsługę platformy Docker. Następny poziom to obsługi orkiestratora kontenerów, który dodaje *pliku Dockerfile* do projektu (jeśli jeszcze nie istnieje) i *docker-compose.yml* pliku na poziomie rozwiązania.
 
-## <a name="using-docker-tools-in-visual-studio-2017"></a>Za pomocą narzędzi Docker w programie Visual Studio 2017
+**Dodaj** > **obsługę platformy Docker** i **Dodaj** > **obsługi Orkiestratora kontenerów** polecenia są znajduje się w menu kliknij prawym przyciskiem myszy (lub menu kontekstowego) węzeł projektu dla projektu aplikacji sieci web w **Eksploratora rozwiązań**, jak pokazano w rysunek 4-26:
 
-Podczas dodawania obsługi programu Docker do projektu (zobacz rysunek 4-26), program Visual Studio dodaje *pliku Dockerfile* w katalogu głównym projektu.
+![Dodaj opcję menu obsługę platformy Docker w programie Visual Studio](media/add-docker-support-menu.png)
 
-![Włączanie obsługi rozwiązania Docker w projekcie programu Visual Studio 2017](./media/image32.png)
+Rysunek 4-26: Dodawanie obsługi programu Docker do projektu programu Visual Studio 2017
 
-Rysunek 4-26: Włączanie obsługi rozwiązania Docker w projekcie programu Visual Studio 2017
+### <a name="add-docker-support"></a>Dodaj obsługę platformy Docker
 
- W Visual Studio 2017 w wersji 15.7 lub wcześniejszej domyślnie zostanie dodana jego obsługa aranżacji kontenerów, za pomocą narzędzia Docker Compose. Obsługa aranżacji kontenerów to funkcja opcjonalna w wersjach programu Visual Studio 2017 15.8 lub później, w którym to przypadku narzędzia Docker Compose i Service Fabric są obsługiwane.
+Obsługę platformy Docker można dodać do istniejącego projektu aplikacji sieci web platformy .NET Core, wybierając **Dodaj** > **obsługę platformy Docker** w **Eksploratora rozwiązań**. Można również włączyć obsługę platformy Docker podczas tworzenia projektu, wybierając **włączyć obsługę platformy Docker** w **Nowa aplikacja internetowa ASP.NET Core** okno dialogowe, które jest otwierane po kliknięciu **OK** w **nowy projekt** okno dialogowe, jak pokazano w rysunek 4-27.
 
-Dzięki programowi Visual Studio w wersji należy zachować 15,8 i nowszych można dodać obsługę wielu projektów w rozwiązaniu, w których każdy może mieć skojarzony kontener. Kliknij prawym przyciskiem myszy węzeł rozwiązania lub projektu w **Eksploratora rozwiązań**i wybierz polecenie **Dodaj** > **Obsługa aranżacji kontenerów**.  Następnie wybierz **narzędzia Docker Compose** lub **usługi Service Fabric** Zarządzanie kontenerów.
+![Włącz obsługę platformy Docker dla nowej aplikacji sieci web platformy ASP.NET Core w programie Visual Studio](./media/enable-docker-support-visual-studio.png)
 
-Po wybraniu **narzędzia Docker Compose**, program Visual Studio dodaje sekcji usługi w swoim rozwiązaniu *docker-compose.yml* plików (lub tworzy pliki, jeśli nie istnieją). Jest to prosty sposób rozpocząć tworzenie rozwiązania wielokontenerowych; następnie można otworzyć *docker-compose.yml* pliki i aktualizować je, oraz dodatkowe funkcje.
+Rysunek 4-27: Włącz obsługę platformy Docker podczas tworzenia projektu w programie Visual Studio 2017
 
-Ta akcja spowoduje dodanie wymaganej konfiguracji linii kodu w celu *docker-compose.yml* ustawienie poziomie rozwiązania.
+Podczas dodawania lub Włącz obsługę platformy Docker, program Visual Studio dodaje *pliku Dockerfile* pliku do projektu.
 
-Możesz również włączyć obsługę platformy Docker podczas tworzenia projektu ASP.NET Core w programie Visual Studio 2017, jak pokazano w rysunek 4-27.
+> [!NOTE]
+> Po włączeniu obsługi narzędzia Docker Compose podczas tworzenia projektu dla projektu aplikacji sieci web .NET Framework (nie platformy .NET Core projektu aplikacji sieci web), jak pokazano w rysunek 4-28, dodawany jest również obsługa orkiestratora kontenerów.
+>
+> ![Włącz Docker compose obsługę projektu aplikacji sieci web w języku .NET Framework](media/enable-docker-compose-support.png)
 
-![Włączanie obsługi platformy Docker, podczas tworzenia projektu](./media/image33.png)
+> Rysunek 4-28: Włączanie narzędzia Docker Compose pomocy technicznej w projekcie aplikacji sieci web .NET Framework w programie Visual Studio 2017
 
-Rysunek 4-27: Włączanie obsługi platformy Docker, podczas tworzenia projektu
+### <a name="add-container-orchestrator-support"></a>Dodawanie obsługi orkiestratora kontenerów
 
-Po dodaniu obsługi programu Docker do rozwiązania w programie Visual Studio również zobaczysz nowego węzła drzewa w **Eksploratora rozwiązań** z dodany *docker-compose.yml* plików, jak pokazano w rysunek 4-28.
+W przypadku tworzenia z wieloma kontenerami w celu rozwiązania Dodawanie obsługi orkiestratora kontenerów do swoich projektów. Podczas dodawania obsługi orkiestratora kontenerów programu Visual Studio dodaje *pliku Dockerfile* do projektu (jeśli jeszcze nie istnieje) i globalną *docker-compose.yml* pliku na poziomie rozwiązania. Dzięki temu można uruchamiać i debugować grupę kontenerów (całe rozwiązanie) w tym samym czasie, jeśli są one definiowane w tym samym *docker-compose.yml* pliku. Jeśli *docker-compose.yml* już istnieje, program Visual Studio po prostu dodaje wymagane wierszy kodu konfiguracji do niego.
 
-![pliki docker-compose.yml są teraz wyświetlane w Eksploratorze rozwiązań](./media/image34.PNG)
+Po dodaniu obsługi aranżacji kontenerów do projektu, zobacz plik Dockerfile dodane do projektu i **narzędzia docker compose** dodawany do rozwiązania w folderze **Eksploratora rozwiązań**, jak pokazano w rysunek 4-29:
 
-Rysunek 4-28: pliki docker-compose.yml są teraz wyświetlane w **Eksploratora rozwiązań**
+![Pliki docker w Eksploratorze rozwiązań w programie Visual Studio](media/docker-support-solution-explorer.png)
 
-Można wdrożyć aplikację obsługującą wiele kontenerów przy użyciu pojedynczej *docker-compose.yml* plików po uruchomieniu `docker-compose up`; jednak program Visual Studio dodaje grupę z tych funkcji, dzięki czemu można zastąpić wartości w zależności od środowiska (Programowanie w porównaniu z środowisko produkcyjne) i wykonywanie, wpisz (wersja w stosunku do debugowania). Ta funkcja lepiej zostało wyjaśnione w rozdziałach nowsze.
-
-Umożliwia także usługi Service Fabric zamiast narzędzia Docker Compose Zarządzanie wiele kontenerów. Zobacz [samouczek: Wdrażanie aplikacji .NET w kontenerze Windows w usłudze Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-host-app-in-a-container).
+Ilustracja 4-29 plików Docker w Eksploratorze rozwiązań w programie Visual Studio 2017
 
 **Więcej informacji:** więcej szczegółowych informacji dotyczących wdrażania usług i korzystanie z programu Visual Studio Tools for Docker, przeczytaj następujące artykuły:
 

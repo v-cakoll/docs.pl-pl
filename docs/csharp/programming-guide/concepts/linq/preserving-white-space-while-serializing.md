@@ -3,11 +3,11 @@ title: Zachowywanie białych znaków podczas Serializing3
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
 ms.openlocfilehash: 7fd0a38d2a9ed8c4712b8e9a03a24a23b408f38a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584636"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089389"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Zachowywanie białych znaków podczas serializowania
 W tym temacie opisano sposób kontrolowania biały znak podczas serializowania drzewa XML.  

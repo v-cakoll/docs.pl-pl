@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 27d83ba706b4d93b4ac5426bf5bae59b4bfc0d9a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752614"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072098"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;Dodaj&gt; elementu &lt;sharedListeners&gt;
-Dodaje odbiornika do `sharedListeners` kolekcji. `sharedListeners` Aby każda to kolekcja obiektów nasłuchujących [ \<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) lub [ \<śledzenia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) może się odwoływać.  Domyślnie odbiorników w `sharedListeners` kolekcji nie są umieszczane w `Listeners` kolekcji. Muszą zostać dodane przez nazwę [ \<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) lub [ \<śledzenia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Nie jest możliwe uzyskanie odbiorniki `sharedListeners` zbierania kodu w czasie wykonywania.  
+Dodaje odbiornik do `sharedListeners` kolekcji. `sharedListeners` wszystkie to kolekcja obiektów nasłuchujących [ \<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) lub [ \<śledzenia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) może odwoływać się.  Domyślnie słuchaczy w `sharedListeners` kolekcji nie są umieszczane w `Listeners` kolekcji. Musi zostać dodany przez nazwę, aby [ \<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) lub [ \<śledzenia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Nie jest możliwe do pobrania odbiorniki w `sharedListeners` kolekcji w kodzie w czasie wykonywania.  
   
  \<Konfiguracja >  
 \<System.Diagnostics >  
-\<sharedListeners > — Element  
+\<sharedListeners > Element  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -41,8 +40,8 @@ Dodaje odbiornika do `sharedListeners` kolekcji. `sharedListeners` Aby każda to
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`name`|Atrybut wymagany.<br /><br /> Określa nazwę odbiornik, który służy do dodawania udostępnionego odbiornika do `Listeners` kolekcji.|  
-|`type`|Atrybut wymagany.<br /><br /> Określa typ odbiornika. Należy użyć ciągu, który spełnia wymagania określone w [określenie pełni kwalifikowane nazwy typów](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`name`|Atrybut wymagany.<br /><br /> Określa nazwę odbiornik, który służy do dodawania udostępnionych odbiornika do `Listeners` kolekcji.|  
+|`type`|Atrybut wymagany.<br /><br /> Określa typ odbiornika. Należy użyć ciągu, który spełnia wymagania określone w [określanie w pełni kwalifikowanej nazwy typu](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Atrybut opcjonalny.<br /><br /> Ciąg przekazany do konstruktora dla określonej klasy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -56,31 +55,31 @@ Dodaje odbiornika do `sharedListeners` kolekcji. `sharedListeners` Aby każda to
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.|  
-|`sharedListeners`|Kolekcja obiektów nasłuchujących może odwoływać się wszystkie źródła lub element śledzenia.|  
+|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
+|`sharedListeners`|Kolekcja obiektów nasłuchujących dowolnego źródła i elementu śledzenia można odwoływać się do.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klasy odbiornika dostarczone z programu .NET Framework pochodzić od <xref:System.Diagnostics.TraceListener> klasy. Wartość `name` atrybut służy do dodania udostępnionego odbiornika do `Listeners` kolekcji śledzenia lub źródła śledzenia. Wartość `initializeData` atrybutu zależy od typu tworzenia odbiornika. Nie wszystkie obiekty nasłuchujące śledzenia wymagają określenia `initializeData`.  
+ Klasy odbiornika dostarczane z programem .NET Framework pochodzić od <xref:System.Diagnostics.TraceListener> klasy. Wartość `name` atrybut służy do dodawania udostępnionych odbiornika do `Listeners` zbierania śladu lub źródła śledzenia. Wartość `initializeData` atrybutu zależy od typu tworzenia odbiornika. Nie wszystkie obiekty nasłuchujące śledzenia wymagają określenia `initializeData`.  
   
 > [!NOTE]
->  Jeśli używasz `initializeData` atrybutu, mogą wystąpić kompilatora ostrzeżenie "atrybutu"initializeData —"nie został zadeklarowany." To ostrzeżenie występuje, ponieważ ustawienia konfiguracji są sprawdzane w abstrakcyjnej klasy podstawowej <xref:System.Diagnostics.TraceListener>, którego nie rozpoznaje `initializeData` atrybutu. Zazwyczaj można zignorować to ostrzeżenie implementacji odbiornika śledzenia, które mają Konstruktor, który przyjmuje parametr.  
+>  Kiedy używasz `initializeData` atrybutu, może wystąpić kompilatora ostrzeżenie "atrybut"initializeData"nie został zadeklarowany." To ostrzeżenie występuje, ponieważ ustawienia konfiguracji są weryfikowane względem abstrakcyjna klasa bazowa <xref:System.Diagnostics.TraceListener>, który nie rozpoznaje `initializeData` atrybutu. Zazwyczaj można zignorować to ostrzeżenie dla implementacji odbiornik śledzenia, które ma konstruktora, który przyjmuje parametr.  
   
- Poniższa tabela przedstawia obiekty nasłuchujące śledzenia, które są dołączone do programu .NET Framework oraz opis wartość ich `initializeData` atrybutów.  
+ W poniższej tabeli przedstawiono detektorów śledzenia, które są dołączone do programu .NET Framework i przedstawiono zalety ich `initializeData` atrybutów.  
   
-|Klasa odbiornika śledzenia|initializeData — wartość atrybutu|  
+|Klasa odbiornik śledzenia|wartość atrybutu initializeData|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener>|`useErrorStream` Wartość <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> konstruktora.  Ustaw `initializeData` atrybutu "`true`"zapisu śledzenia i debugowania dane wyjściowe do Standardowy strumień błędów; ustaw go "`false`" można zapisać do standardowego strumienia wyjściowego.|  
+|<xref:System.Diagnostics.ConsoleTraceListener>|`useErrorStream` Wartość <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> konstruktora.  Ustaw `initializeData` atrybutu "`true`"do zapisu śledzenia i debugowania danych wyjściowych w strumieniu standard error; ustaw ją "`false`" do zapisu do strumienia wyjścia standardowego.|  
 |<xref:System.Diagnostics.DelimitedListTraceListener>|Nazwa pliku <xref:System.Diagnostics.DelimitedListTraceListener> zapisuje.|  
 |<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Nazwa istniejącej źródło dziennika zdarzeń.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Nazwa pliku, który <xref:System.Diagnostics.EventSchemaTraceListener> zapisuje.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Nazwa pliku, który <xref:System.Diagnostics.TextWriterTraceListener> zapisuje.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener>|Nazwa pliku, który <xref:System.Diagnostics.XmlWriterTraceListener> zapisuje.|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Nazwę pliku, który <xref:System.Diagnostics.EventSchemaTraceListener> zapisuje.|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Nazwę pliku, który <xref:System.Diagnostics.TextWriterTraceListener> zapisuje.|  
+|<xref:System.Diagnostics.XmlWriterTraceListener>|Nazwę pliku, który <xref:System.Diagnostics.XmlWriterTraceListener> zapisuje.|  
   
 ## <a name="configuration-file"></a>Plik konfiguracji  
  Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie `<add>` elementy do dodania <xref:System.Diagnostics.TextWriterTraceListener> `textListener` do `sharedListeners` kolekcji.   `textListener` jest dodawany przez nazwę `Listeners` kolekcji źródła śledzenia `TraceSourceApp`. `textListener` Odbiornika zapisuje dane wyjściowe śledzenia myListener.log pliku.  
+ Poniższy przykład pokazuje, jak używać `<add>` elementy do dodania <xref:System.Diagnostics.TextWriterTraceListener> `textListener` do `sharedListeners` kolekcji.   `textListener` jest dodawany przez nazwę, aby `Listeners` kolekcji dla źródła śledzenia `TraceSourceApp`. `textListener` Odbiornika zapisuje dane wyjściowe śledzenia myListener.log pliku.  
   
 ```xml  
 <configuration>  

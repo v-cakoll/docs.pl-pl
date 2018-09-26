@@ -13,57 +13,56 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-manager: douge
-ms.openlocfilehash: a046c62de8789cbe438dcc849ffc23991a803ea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5556b83346aba5bc48eddb930dedc56f4786bdb5
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513965"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113627"
 ---
 # <a name="how-to-log-information-about-services"></a>Porady: rejestrowanie informacji o usługach
-Domyślnie wszystkie projekty usługi systemu Windows mają możliwość interakcji z dziennika zdarzeń aplikacji i zapisywać do niego informacje i wyjątki. Możesz użyć <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> Właściwość wskazująca, czy ma tę funkcję w aplikacji. Domyślnie rejestrowanie jest włączone dla żadnej usługi utworzone przy użyciu szablonu projektu usług systemu Windows. Można użyć statycznej formę <xref:System.Diagnostics.EventLog> klasa umożliwiająca zapisanie informacji o usłudze dziennika bez tworzenia wystąpienia <xref:System.Diagnostics.EventLog> składnika lub ręcznie zarejestrować źródło.  
+Domyślnie wszystkie projekty usługi Windows mają możliwość interakcji z dziennika zdarzeń aplikacji i w nim zapisywać informacje i wyjątki. Możesz użyć <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwość wskazuje, czy ta funkcja w aplikacji. Domyślnie rejestrowanie jest włączone dla dowolnej usługi utworzonej przy użyciu szablonu projektu usługi Windows. Można użyć statycznej formy <xref:System.Diagnostics.EventLog> klasę umożliwiającą zapisanie informacji o usłudze do dziennika bez tworzenia wystąpienia <xref:System.Diagnostics.EventLog> składnika lub ręcznie zarejestrować źródła.  
   
- Instalator usługi automatycznie rejestruje każdej usługi w projekcie jako prawidłowe źródło zdarzenia z dziennika aplikacji na komputerze, którym jest zainstalowana usługa, gdy jest włączone rejestrowanie. Rejestruje informacje za każdym razem, usługa jest uruchomiona, zatrzymana, wstrzymana, wznowione, zainstalowany lub odinstalowany. Rejestruje wszystkie błędy występujące. Nie ma potrzeby pisania kodu na zapisywanie wpisów w dzienniku, używając domyślnego zachowania; Usługa obsługuje to dla Ciebie automatycznie.  
+ Instalator usługi powoduje automatyczne zarejestrowanie każdej usługi w projekcie jako poprawne źródło zdarzenia w dzienniku aplikacji na komputerze, gdzie usługa jest zainstalowana, gdy jest włączone rejestrowanie. Rejestruje informacje o każdym usługi jest uruchomiona, zatrzymana, wstrzymana, wznowione, zainstalowane lub odinstalowane. Rejestruje wszystkie błędy, które występują. Nie trzeba pisać kodu na zapisywanie wpisów do dziennika, korzystając z domyślnym zachowaniem; Usługa obsługuje to dla Ciebie automatycznie.  
   
- Jeśli chcesz zapisać do dziennika zdarzeń niż dziennik aplikacji, musisz ustawić <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwości `false`, tworzyć własne niestandardowe dziennika zdarzeń w kodzie usługi i zarejestrować usługi jako prawidłowe źródło pozycji dla tego dziennika. Następnie należy napisać kodu do rejestrowania wpisów w dzienniku zawsze, gdy interesujący Cię w akcji.  
+ Jeśli chcesz zapisać do dziennika zdarzeń niż dziennik aplikacji, musisz ustawić <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwości `false`, Utwórz własny niestandardowy dziennik zdarzeń w kodzie usługi i zarejestrować usługę jako poprawne źródło pozycji dla tego dziennika. Następnie należy napisać kodu do rejestrowania wpisów do dziennika zawsze wtedy, gdy akcję, którą chcesz.  
   
 > [!NOTE]
->  Jeśli używasz niestandardowego dziennika zdarzeń i konfigurowania aplikacji usługi do zapisu, nie musi podejmować dostępu do dziennika zdarzeń przed skonfigurowaniem usługi <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwości w kodzie. Dziennik zdarzeń musi wartość tej właściwości można zarejestrować usługi jako prawidłowe źródło zdarzeń.  
+>  Jeśli używasz niestandardowy dziennik zdarzeń i konfigurowanie aplikacji usługi do zapisu do nich, nie należy spróbować uzyskać dostęp w dzienniku zdarzeń przed ustawieniem usługi <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwości w kodzie. W dzienniku zdarzeń musi wartość tej właściwości można zarejestrować usługi jako poprawne źródło zdarzeń.  
   
-### <a name="to-enable-default-event-logging-for-your-service"></a>Aby włączyć rejestrowanie zdarzeń domyślne usługi  
+### <a name="to-enable-default-event-logging-for-your-service"></a>Aby włączyć rejestrowanie zdarzeń domyślnego dla usługi  
   
--   Ustaw <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwość składnikowi `true`.  
+-   Ustaw <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwości składnika do `true`.  
   
     > [!NOTE]
-    >  Domyślnie wartość tej właściwości to `true`. Nie trzeba ustawić to jawnie, chyba że tworzysz złożonych przetwarzania, takich jak oceniania warunku, a następnie ustawić <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwości na podstawie wyniku tego warunku.  
+    >  Domyślnie wartość tej właściwości to `true`. Nie musisz ustawić to jawnie, chyba że tworzysz bardziej złożonych przetwarzania, takich jak ocena warunku, a następnie ustawiając <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwości na podstawie wyniku tego warunku.  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>Aby wyłączyć rejestrowanie zdarzeń dla usługi  
   
--   Ustaw <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwość składnikowi `false`.  
+-   Ustaw <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwości składnika do `false`.  
   
      [!code-csharp[VbRadconService#17](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#17)]
      [!code-vb[VbRadconService#17](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#17)]  
   
 ### <a name="to-set-up-logging-to-a-custom-log"></a>Aby skonfigurować rejestrowanie do dziennika niestandardowego  
   
-1.  Ustaw <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwości `false`.  
+1.  Ustaw <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwość `false`.  
   
     > [!NOTE]
-    >  Należy ustawić <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> na wartość false, aby można było używać dziennik niestandardowy.  
+    >  Należy ustawić <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> na wartość false, aby można było używać dzienników niestandardowych.  
   
-2.  Konfigurowanie wystąpienia <xref:System.Diagnostics.EventLog> składnika aplikacji usługi systemu Windows.  
+2.  Konfigurowanie wystąpienia <xref:System.Diagnostics.EventLog> składnika w aplikacji usługi Windows.  
   
-3.  Utworzyć dziennika niestandardowego przez wywołanie metody <xref:System.Diagnostics.EventLog.CreateEventSource%2A> — metoda i określania ciągu źródła i nazwa dziennika plik chcesz utworzyć.  
+3.  Utworzyć dziennika niestandardowego przez wywołanie metody <xref:System.Diagnostics.EventLog.CreateEventSource%2A> metody i określając ciąg źródłowy i nazwę dziennika pliku, dla którego ma zostać utworzony.  
   
 4.  Ustaw <xref:System.Diagnostics.EventLog.Source%2A> właściwość <xref:System.Diagnostics.EventLog> wystąpienie składnika ciąg źródłowy został utworzony w kroku 3.  
   
-5.  Zapis wpisy uzyskując dostęp do <xref:System.Diagnostics.EventLog.WriteEntry%2A> metoda <xref:System.Diagnostics.EventLog> wystąpienia składnika.  
+5.  Zapis wpisy, uzyskując dostęp do <xref:System.Diagnostics.EventLog.WriteEntry%2A> metody <xref:System.Diagnostics.EventLog> wystąpienia składnika.  
   
-     Poniższy kod przedstawia sposób rejestrowania w dzienniku niestandardowe.  
+     Poniższy kod przedstawia sposób konfigurowania rejestrowania dzienników niestandardowych.  
   
     > [!NOTE]
-    >  W tym przykładzie kodu wystąpienia <xref:System.Diagnostics.EventLog> nosi nazwę składnika `eventLog1` (`EventLog1` w języku Visual Basic). Jeśli wystąpienie zostało utworzone z inną nazwą w kroku 2, należy odpowiednio zmienić kod.  
+    >  W tym przykładzie kodu wystąpienie <xref:System.Diagnostics.EventLog> nosi nazwę składnika `eventLog1` (`EventLog1` w języku Visual Basic). Jeśli utworzono wystąpienie z inną nazwą w kroku 2, należy odpowiednio zmienić kod.  
   
      [!code-csharp[VbRadconService#14](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#14)]
      [!code-vb[VbRadconService#14](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#14)]  

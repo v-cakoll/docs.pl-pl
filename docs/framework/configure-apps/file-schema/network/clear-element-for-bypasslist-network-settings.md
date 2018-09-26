@@ -1,5 +1,5 @@
 ---
-title: '&lt;Wyczyść&gt; elementu bypasslist — (ustawienia sieciowe)'
+title: '&lt;Wyczyść&gt; , Element dla bypasslist (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9297b68a31117aabfa45328954ccb9c7cdac66c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca6c8e9334bdfcdf4d79c5a91612ee117445d9cb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742195"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170642"
 ---
-# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Wyczyść&gt; elementu bypasslist — (ustawienia sieciowe)
-Czyści Lista obejść serwerów proxy.  
+# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Wyczyść&gt; , Element dla bypasslist (ustawienia sieci)
+Czyści listę obejścia serwera proxy.  
   
  \<Konfiguracja >  
 \<system.net>  
 \<defaultProxy — >  
-\<bypasslist — >  
+\<bypasslist >  
 \<Wyczyść >  
   
 ## <a name="syntax"></a>Składnia  
@@ -48,16 +47,16 @@ Czyści Lista obejść serwerów proxy.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[bypasslist —](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, opisujących adresów, które nie korzystają z serwera proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|  
   
 ## <a name="remarks"></a>Uwagi  
  `clear` Element czyści wszystkie wpisy z listy obejścia.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład czyści Lista obejść, a następnie dodaje dwa adresy do obejścia listy. Pierwszy pomija serwera proxy dla wszystkich serwerów w domenie contoso.com. drugi pomija serwera proxy dla wszystkich serwerów rozpoczyna którego adres IP z 192.168.  
+ Poniższy przykład czyści listę obejścia, a następnie dodaje dwa adresy do listy pomijania. Pierwszy pomija serwera proxy dla wszystkich serwerów w domenie contoso.com. drugi pomija serwera proxy dla wszystkich serwerom rozpoczyna się których adresy IP 192.168.  
   
 ```xml  
 <configuration>  

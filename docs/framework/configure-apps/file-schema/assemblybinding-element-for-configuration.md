@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblybinding —&gt; elementu &lt;konfiguracji&gt;'
+title: '&lt;assemblyBinding&gt; elementu &lt;konfiguracji&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
@@ -9,17 +9,16 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6a3358b2d64ade65e641caa203e2e760dcc4be2c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743124"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073466"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<assemblybinding — > elementu \<configuration >
+# <a name="assemblybinding-element-for-configuration"></a>\<assemblybinding — >, element dla \<konfiguracji >
 
-Określa zestaw powiązania zasad na poziomie konfiguracji.
+Określa politykę powiązania zestawu na poziomie konfiguracji.
 
 [**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;**\<assemblybinding — >**
@@ -36,7 +35,7 @@ Określa zestaw powiązania zasad na poziomie konfiguracji.
 
 |           | Opis |
 | --------- | ----------- |
-| **Xmlns** | Atrybut wymagany.<br><br>Określa przestrzeń nazw XML, wymagane do powiązań zestawów. Należy użyć ciągu "urn: schemas-microsoft-com:asm.v1" jako wartości. |
+| **xmlns** | Atrybut wymagany.<br><br>Określa przestrzeń nazw XML wymagane w celu tworzenia powiązań zestawów. Użyj ciągu "urn: schemas-microsoft-com:asm.v1" jako wartości. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
@@ -48,18 +47,18 @@ Określa zestaw powiązania zasad na poziomie konfiguracji.
 
 |     | Opis |
 | --- | ----------- |
-| [**\<linkedconfiguration — >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Określa plik konfiguracji do uwzględnienia. |
+| [**\<linkedconfiguration — >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Określa wymagający uwzględnienia plik konfiguracji. |
 
 ## <a name="remarks"></a>Uwagi
 
-[  **\<Linkedconfiguration — >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element upraszcza zarządzanie zestawów składników, zezwalając pliki konfiguracji aplikacji, aby uwzględnić zestawu plików konfiguracyjnych w dobrze znanej lokalizacji, a nie ustawienia konfiguracji usługi zduplikować zestawu.
+[  **\<Linkedconfiguration — >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element ułatwia zarządzanie zestawów składników, umożliwiając pliki konfiguracji aplikacji do dołączenia zestawu plików konfiguracji w lokalizacje znane zamiast duplikowania ustawienia konfiguracji zestawu.
 
 > [!NOTE]
-> **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o manifestów side-by-side systemu Windows.
+> **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia dołączenie pliku konfiguracji na lokalnym dysku twardym:
+Poniższy przykład pokazuje, jak dołączyć plik konfiguracji na lokalnym dysku twardym:
 
 ```xml
 <configuration>

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 05f9359aa055019b517abb1b7c86ca386d630e41
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 1e66106fc4592695d2901f11c507fb09df97be7b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579995"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084569"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>Uzyskiwanie dostępu do obiektów osadzonych przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]

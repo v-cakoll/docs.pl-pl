@@ -3,11 +3,11 @@ title: Klasy (F#)
 description: 'Dowiedz się, jak klas F # są typy, które reprezentują obiektów, które mogą mieć właściwości, metod i zdarzeń.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577376"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112942"
 ---
 # <a name="classes"></a>Klasy
 

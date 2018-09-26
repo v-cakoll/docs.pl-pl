@@ -6,11 +6,11 @@ helpviewer_keywords:
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 ms.openlocfilehash: 96de5601c60dd309fe5467414affd20b8bc93d87
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585075"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087479"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaty (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, który reprezentuje odwołania do metod z określoną listą parametrów i typ zwracany. Podczas tworzenia wystąpienia delegata można skojarzyć jego wystąpienie z dowolną metodą mającą zgodny podpis i zwracany typ. Za pośrednictwem wystąpienia delegata można wywołać metodę.  

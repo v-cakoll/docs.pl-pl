@@ -7,13 +7,12 @@ dev_langs:
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 8b7d3519a9f106a6679a9b2a404ed400bb6ae4a1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b425aa4194e688a3814570cc47b8aa3b7ea97ee8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856728"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087414"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Uzyskiwanie szczegółów atrybutów tekstu mieszanego przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]

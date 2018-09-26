@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4bd30b26a3e05f97904200cab40234d00924820c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b27a5dec4483afb0f6c66c3a015c89967483cb61
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585124"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087505"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurowanie aplikacji za pomocą plików konfiguracji
 .NET Framework, za pomocą plików konfiguracji zapewnia deweloperom i administratorom kontrolę i elastyczność nad aplikacjami sposób uruchamiania. Pliki konfiguracji to pliki XML, które można zmieniać w razie potrzeby. Administrator może kontrolować, mogą uzyskiwać dostęp do których chronionych zasobów aplikacji, których wersji zestawów aplikacja będzie używać i gdzie znajdują się zdalne aplikacje i obiekty. Deweloperzy mogą umieścić ustawienia w plikach konfiguracyjnych, eliminując konieczność rekompilacji aplikacji za każdym razem, gdy zmieni się ustawienie. W tej sekcji opisano, co może być skonfigurowane i dlaczego Konfigurowanie aplikacji mogą być przydatne.  

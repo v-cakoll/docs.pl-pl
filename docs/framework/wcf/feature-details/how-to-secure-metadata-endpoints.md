@@ -6,56 +6,55 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 659291975902ec78c1484ac77f898b4486000e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1dae4b9d2976ddbc941e49843324a29ec8885a4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497181"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090230"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Instrukcje: Bezpieczne punkty końcowe metadanych
-Metadane usługi mogą zawierać poufne informacje o aplikacji, która złośliwy użytkownik może wykorzystać. Konsumentów usługi może wymagać mechanizm bezpiecznego uzyskiwania metadanych dotyczących usługi. W związku z tym czasami jest niezbędne do opublikowania metadanych przy użyciu bezpiecznego punktu końcowego.  
+Metadane usługi mogą zawierać poufne informacje, o swojej aplikacji, w której złośliwy użytkownik może używać. Osoby korzystające z usługi może wymagać mechanizm bezpiecznego uzyskiwania metadanych dotyczących usługi. W związku z tym czasami jest niezbędne do opublikowania przy użyciu bezpiecznego punktu końcowego metadanych.  
   
- Punkty końcowe metadanych zazwyczaj są zabezpieczone za pomocą mechanizmów zabezpieczeń standardowe zdefiniowane w systemie Windows Communication Foundation (WCF) do zabezpieczania punkty końcowe aplikacji. (Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Punkty końcowe metadanych zwykle są chronione za pomocą mechanizmów standardowych zabezpieczeń określonych w Windows Communication Foundation (WCF) do zabezpieczania punktów końcowych aplikacji. (Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
- W tym temacie przedstawiono kroki, aby utworzyć punkt końcowy zabezpieczone przez certyfikat Secure Sockets Layer (SSL) lub innymi słowy, punkt końcowy HTTPS.  
+ W tym temacie przedstawiono kroki, aby utworzyć zabezpieczony przez certyfikat Secure Sockets Layer (SSL) lub innymi słowy, punkt końcowy HTTPS punktu końcowego.  
   
-### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Aby utworzyć bezpieczny HTTPS GET końcowym metadanych w kodzie  
+### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Aby utworzyć bezpieczne HTTPS GET punkt końcowy metadanych w kodzie  
   
-1.  Konfigurowanie portu z odpowiedniego certyfikatu X.509. Certyfikat musi pochodzić z zaufanego urzędu i musi mieć przeznaczenia "Autoryzacja usługi". Należy użyć narzędzia HttpCfg.exe do dołączenia certyfikatu do portu. Zobacz [porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Konfigurowanie portu z odpowiedniego certyfikatu X.509. Certyfikat musi pochodzić z zaufanego urzędu i musi mieć zamierzone użycie "Autoryzacja usługi". Do dołączenia certyfikatu do portu, należy użyć narzędzia HttpCfg.exe. Zobacz [porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
     > [!IMPORTANT]
-    >  Podmiot certyfikatu lub jego systemu nazw domen (DNS) musi odpowiadać nazwie komputera. Jest to konieczne, ponieważ jeden z pierwszego czynności, które wykonuje mechanizmu HTTPS jest do sprawdzenia, czy certyfikat został wystawiony do tego samego identyfikatora URI (Uniform Resource) jako adres, na którym jest wywoływana.  
+    >  Podmiot certyfikatu lub jej systemu nazw domen (DNS) musi odpowiadać nazwie komputera. Jest to ważne, ponieważ jeden z pierwszych kroków, które wykonuje mechanizm HTTPS jest aby sprawdzić, czy certyfikat został wystawiony na ten sam identyfikator URI (Uniform Resource) jako adres, na którym jest wywoływana.  
   
 2.  Utwórz nowe wystąpienie klasy <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy.  
   
-3.  Ustaw <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> właściwość <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy do `true`.  
+3.  Ustaw <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> właściwość <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy `true`.  
   
-4.  Ustaw <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> odpowiedni adres URL dla właściwości. Należy pamiętać, że jeśli określono adres bezwzględny adres URL musi rozpoczynać się od schemat "https://". Jeśli określisz adresem względnym, musi dostarczyć podstawowy adres HTTPS dla hosta usługi. Jeśli ta właściwość nie jest ustawiona, domyślnym adresem jest "", lub bezpośrednio w podstawowy adres HTTPS dla usługi.  
+4.  Ustaw <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> właściwość do odpowiedniego adresu URL. Należy pamiętać, że jeśli określisz adresem bezwzględnym, adres URL musi rozpoczynać się ze schematem "https://". Jeśli określisz adres względny, musisz podać adres bazowy HTTPS dla hosta usługi. Jeśli ta właściwość nie jest ustawiona, adresem domyślnym jest "", lub bezpośrednio na adres podstawowy protokół HTTPS dla usługi.  
   
-5.  Dodaj je do kolekcji zachowań który <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> właściwość <xref:System.ServiceModel.Description.ServiceDescription> klasy zwraca, jak pokazano w poniższym kodzie.  
+5.  Dodaj wystąpienie do kolekcji zachowań, <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> właściwość <xref:System.ServiceModel.Description.ServiceDescription> klasy wraca, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[c_HowToSecureEndpoint#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosecureendpoint/cs/source.cs#1)]
      [!code-vb[c_HowToSecureEndpoint#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosecureendpoint/vb/source.vb#1)]  
   
-### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>Aby utworzyć bezpieczny HTTPS GET końcowym metadanych w konfiguracji  
+### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>Aby utworzyć bezpieczne HTTPS GET punkt końcowy metadanych w konfiguracji  
   
-1.  Dodaj [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementem pliku konfiguracji dla usługi.  
+1.  Dodaj [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element pliku konfiguracji usługi.  
   
 2.  Dodaj [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) elementu [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu.  
   
 3.  Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elementu `<serviceBehaviors>` elementu.  
   
-4.  Ustaw `name` atrybutu `<behavior>` element odpowiednią wartość. `name` Atrybut jest wymagany. W poniższym przykładzie użyto wartości `mySvcBehavior`.  
+4.  Ustaw `name` atrybutu `<behavior>` element do odpowiedniej wartości. `name` Atrybut jest wymagany. W poniższym przykładzie użyto wartości `mySvcBehavior`.  
   
-5.  Dodaj [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) do `<behavior>` elementu.  
+5.  Dodaj [ \<serviceMetadata w pliku >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) do `<behavior>` elementu.  
   
 6.  Ustaw atrybut `httpsGetEnabled` elementu `<serviceMetadata>` na `true`.  
   
-7.  Ustaw `httpsGetUrl` atrybutu `<serviceMetadata>` element odpowiednią wartość. Należy pamiętać, że jeśli określono adres bezwzględny adres URL musi rozpoczynać się od schemat "https://". Jeśli określisz adresem względnym, musi dostarczyć podstawowy adres HTTPS dla hosta usługi. Jeśli ta właściwość nie jest ustawiona, domyślnym adresem jest "", lub bezpośrednio w podstawowy adres HTTPS dla usługi.  
+7.  Ustaw `httpsGetUrl` atrybutu `<serviceMetadata>` element do odpowiedniej wartości. Należy pamiętać, że jeśli określisz adresem bezwzględnym, adres URL musi rozpoczynać się ze schematem "https://". Jeśli określisz adres względny, musisz podać adres bazowy HTTPS dla hosta usługi. Jeśli ta właściwość nie jest ustawiona, adresem domyślnym jest "", lub bezpośrednio na adres podstawowy protokół HTTPS dla usługi.  
   
-8.  Aby zachowanie używane z usługą, należy ustawić `behaviorConfiguration` atrybutu [ \<usługi >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elementu na wartość atrybutu nazwy elementu zachowanie. Poniższy kod konfiguracji przedstawia pełny przykład.  
+8.  Zachowanie za pomocą usługi, należy ustawić `behaviorConfiguration` atrybutu [ \<usługi >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) element z wartością atrybutu nazwy elementu zachowanie. Poniższy kod konfiguracji przedstawia kompletny przykład.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -82,13 +81,13 @@ Metadane usługi mogą zawierać poufne informacje o aplikacji, która złośliw
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy wystąpienie <xref:System.ServiceModel.ServiceHost> i dodaje punkt końcowy. Następnie tworzony wystąpienia <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy i ustawia właściwości w celu utworzenia punktu wymiany metadanych bezpieczne.  
+ Poniższy przykład tworzy wystąpienie <xref:System.ServiceModel.ServiceHost> klasy i dodaje punkt końcowy. Następnie kod tworzy wystąpienie <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy i ustawia właściwości w celu utworzenia punktu wymiany metadanych bezpieczne.  
   
  [!code-csharp[c_HowToSecureEndpoint#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosecureendpoint/cs/source.cs#0)]
  [!code-vb[c_HowToSecureEndpoint#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosecureendpoint/vb/source.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Przykładowy kod używa następujących nazw:  
+ Przykład kodu używa następujących przestrzeni nazw:  
   
 -   <xref:System.ServiceModel?displayProperty=nameWithType>  
   

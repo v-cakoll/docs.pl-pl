@@ -1,5 +1,5 @@
 ---
-title: '&lt;Wyczyść&gt; elementu connectionmanagement — (ustawienia sieciowe)'
+title: '&lt;Wyczyść&gt; Element dla connectionManagement (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear
@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5bcd17cfe1f3bd7531453b62552a4907df5b96bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741987"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070503"
 ---
-# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Wyczyść&gt; elementu connectionmanagement — (ustawienia sieciowe)
-Usuwa listy zarządzania połączenia.  
+# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Wyczyść&gt; Element dla connectionManagement (ustawienia sieci)
+Czyści listę zarządzania połączenia.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<connectionmanagement — >  
+\<connectionManagement >  
 \<Wyczyść >  
   
 ## <a name="syntax"></a>Składnia  
@@ -47,16 +46,16 @@ Usuwa listy zarządzania połączenia.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[connectionmanagement —](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieci.|  
+|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń z hostem sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `clear` Element czyści wszystkie wpisy z listy zarządzania połączenia.  
+ `clear` Element czyści wszystkie wpisy na liście zarządzania połączenia.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje wyczyszczenie listy zarządzania połączenia, a następnie dodaje nowe wpisy zarządzania połączenia www.contoso.com serwera i innych hostów w sieci.  
+ Poniższy przykład czyści listę zarządzania połączenia, a następnie dodaje nowe wpisy zarządzania połączenia www.contoso.com serwera i wszystkie inne hosty w sieci.  
   
 ```xml  
 <configuration>  

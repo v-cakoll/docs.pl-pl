@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3fdc3786be3307e8c882a33b5139ee34344733b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504821"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156510"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Porady: tworzenie zasad wydawcy
 Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestawu, dołączając plik zasad wydawcy w z uaktualnionych zestawu. Plik zasad wydawcy określa przekierowanie zestawu i podstawowe ustawienia kodu i ma taki sam format jak plik konfiguracji aplikacji. Plik zasad wydawcy jest skompilowany w zestawie i umieszczone w globalnej pamięci podręcznej.  

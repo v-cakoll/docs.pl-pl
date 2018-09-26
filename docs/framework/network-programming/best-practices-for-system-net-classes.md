@@ -12,28 +12,27 @@ helpviewer_keywords:
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c74f9d0534675d07c87d3edbcf8434cd98f6c621
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 987e2294f1e34eb3a4da1e31285868877338ccf4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393948"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111675"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Najlepsze rozwiązania dotyczące klas System.Net
-Poniższe zalecenia pomogą używać klas zawartych w <xref:System.Net> do ich najważniejsze korzyści:  
+Poniższe zalecenia pomogą należy używać klas znajdujących się w <xref:System.Net> do ich Najważniejsze zalety:  
   
--   Najlepsze rozwiązania zabezpieczeń TLS (Transport Layer), zobacz [zabezpieczeń TLS (Transport Layer) najlepsze rozwiązania z .NET Framework](tls.md).
+-   Najlepsze rozwiązania dotyczące zabezpieczeń TLS (Transport Layer), zobacz [zabezpieczeń TLS (Transport Layer) najlepszych rozwiązań za pomocą .NET Framework](tls.md).
 
--   Użyj <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> Jeśli to możliwe, zamiast rzutowanie typów do klas podrzędnych. Aplikacje używające **WebRequest** i **WebResponse** można korzystać z nowych protokołów internetowych bez konieczności zmiany szeroką gamę kodu.  
+-   Użyj <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> zawsze, gdy jest to możliwe, zamiast rzutowania typu do klas podrzędnych. Aplikacje, które używają **WebRequest** i **elementu WebResponse** korzystać z zalet nowe protokoły internetowe bez konieczności wprowadzania zmian w kodzie rozbudowane.  
   
--   Podczas pisania aplikacji programu ASP.NET, działające na serwerze przy użyciu **System.Net** klas, często jest lepsze z punktu widzenia wydajności, aby użyć metod asynchronicznych dla <xref:System.Net.WebRequest.GetResponse%2A> i <xref:System.Net.WebResponse.GetResponseStream%2A>.  
+-   Podczas pisania aplikacji platformy ASP.NET, korzystających z serwerem za pomocą **przestrzeni nazw System.Net** klas, często lepiej jest, z punktu widzenia wydajności można używać metod asynchronicznych dla <xref:System.Net.WebRequest.GetResponse%2A> i <xref:System.Net.WebResponse.GetResponseStream%2A>.  
   
--   Liczba połączeń otwarty do zasobu internetowego może mieć znaczący wpływ na wydajność sieci i przepływności. **System.Net** domyślnie używa dwóch połączeń każdej aplikacji na hoście. Ustawienie <xref:System.Net.ServicePoint.ConnectionLimit%2A> właściwości w <xref:System.Net.ServicePoint> dla aplikacji można zwiększyć tę liczbę na określonym hoście. Ustawienie <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=nameWithType> właściwości można zwiększyć to ustawienie domyślne dla wszystkich hostów.  
+-   Liczba połączeń otwarty do zasobu internetowego może mieć znaczący wpływ na wydajność sieci i przepustowość. **Przestrzeni nazw System.Net** domyślnie używa dwóch połączeń dla jednej aplikacji na każdym hoście. Ustawienie <xref:System.Net.ServicePoint.ConnectionLimit%2A> właściwość <xref:System.Net.ServicePoint> dla aplikacji można zwiększyć tę liczbę dla konkretnego hosta. Ustawienie <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=nameWithType> właściwości można zwiększyć to ustawienie domyślne dla wszystkich hostów.  
   
--   Podczas zapisywania protokoły poziomu gniazda, spróbuj użyć <xref:System.Net.Sockets.TcpClient> lub <xref:System.Net.Sockets.UdpClient> Jeśli to możliwe, zamiast bezpośrednio do zapisywania <xref:System.Net.Sockets.Socket>. Te klasy klienta dwóch hermetyzować Tworzenie gniazda TCP i UDP bez konieczności obsługi szczegóły połączenia.  
+-   Podczas pisania protokoły poziomu gniazda, spróbuj użyć <xref:System.Net.Sockets.TcpClient> lub <xref:System.Net.Sockets.UdpClient> zawsze, gdy jest to możliwe, zamiast zapisywania bezpośrednio do <xref:System.Net.Sockets.Socket>. W ramach tych zajęć dwóch klientów hermetyzować Tworzenie gniazda TCP i UDP, bez konieczności obsługi szczegółów połączenia.  
   
--   Podczas uzyskiwania dostępu do witryn, które wymagają poświadczeń, użyj <xref:System.Net.CredentialCache> klasy w celu utworzenia pamięci podręcznej poświadczeń, a nie zapewniania kontaktu z każdym żądaniem. **CredentialCache** klasy wyszukiwania w pamięci podręcznej, aby znaleźć odpowiednie poświadczenia, aby zaprezentować żądanie, co uwalnia możesz odpowiedzialności tworzenia i prezentowania poświadczeń na podstawie adresu URL.  
+-   Podczas uzyskiwania dostępu do witryn, które wymagają poświadczeń, użyj <xref:System.Net.CredentialCache> klasy w celu utworzenia pamięci podręcznej poświadczeń, a nie dostarczanie każde żądanie. **CredentialCache** klasy wyszukuje w pamięci podręcznej, aby znaleźć odpowiednie poświadczenia, aby przedstawić z żądaniem zwalniania należy z odpowiedzialność za tworzenie i prezentowanie poświadczeń opartych na adres URL.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)

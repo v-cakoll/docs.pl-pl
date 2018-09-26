@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 14b510df192dcff1f005eec4f029aa0f26b967a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dc55acd7a698ef37d45e8a412db684c13a3b8b16
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751938"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156640"
 ---
 # <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographysettings —&gt; — Element
 Zawiera ustawienia szyfrowania.  
@@ -43,7 +42,7 @@ Zawiera ustawienia szyfrowania.
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<cryptonamemapping — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Zawiera mapowania klasy przyjazne nazwy.|  
-|[\<oidmap — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Zawiera ASN.1 obiektu (OID), identyfikator mapowania do klasy.|  
+|[\<oidmap — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Zawiera mapowania identyfikatora (OID) obiektów ASN.1 do klas.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -53,7 +52,7 @@ Zawiera ustawienia szyfrowania.
 |`mscorlib`|Zawiera `cryptographySettings` elementu.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób użycia  **\<cryptographysettings — >** element zawiera mapowania nazw kryptografii i mapowania identyfikatora OID. Ten przykład konfiguruje środowisko uruchomieniowe, aby <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> zwraca `MyHashClass` obiektu i `MyCryptoClass` klasy map do identyfikatora obiektu 1.3.36.2.1.  
+ Poniższy przykład pokazuje jak używać  **\<cryptographysettings — >** element zawiera mapowania identyfikatora OID i mapowań nazw kryptografii. Ten przykład umożliwia skonfigurowanie środowiska uruchomieniowego, aby <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> zwraca `MyHashClass` obiektu i `MyCryptoClass` klasy mapuje do identyfikatora obiektu 1.3.36.2.1.  
   
 ```xml  
 <configuration>  

@@ -3,13 +3,12 @@ title: LocalServiceSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8f80af782c474ccf3a232ab353125fa223d4f5d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c79eb11fcc1973a3ef25a78afb8b141443d865c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486900"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156951"
 ---
 # <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  
@@ -42,109 +41,109 @@ class LocalServiceSecuritySettings
 ## <a name="properties"></a>Właściwości  
  Klasa LocalServiceSecuritySettings ma następujące właściwości:  
   
-### <a name="detectreplays"></a>DetectReplays  
+### <a name="detectreplays"></a>Opcji DetectReplays  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Wartość logiczna określająca, czy ataki metodą kanału wykrytych i zajmuje się automatycznie.  
+ Wartość logiczna, która określa, czy ataki metodą kanał są wykrywane i automatycznie uwzględnione.  
   
 ### <a name="inactivitytimeout"></a>Limit czasu nieaktywności  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalna liczba oczekujących sesji bezpieczeństwa obsługiwanych przez usługę.  
+ Maksymalna liczba oczekujących sesji bezpieczeństwa, obsługiwanych przez usługę.  
   
 ### <a name="issuedcookielifetime"></a>IssuedCookieLifetime  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Obiekt TimeSpan określający okres istnienia wystawionego dla wszystkich nowych plików cookie zabezpieczeń.  
+ Element TimeSpan określający czas istnienia nadawany wszystkie nowe pliki cookie zabezpieczeń.  
   
 ### <a name="maxcachedcookies"></a>MaxCachedCookies  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Maksymalna liczba plików cookie, które mogą być buforowane.  
   
 ### <a name="maxclockskew"></a>MaxClockSkew  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Obiekt TimeSpan określający maksymalną różnicę czasu między zegarami systemowymi dwóch uczestników komunikacji.  
+ Element TimeSpan określający maksymalną różnicę czasu między zegarami systemowymi dwóch uczestników komunikacji.  
   
 ### <a name="maxpendingsessions"></a>MaxPendingSessions  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalna liczba oczekujących połączeń przypadających na usługę.  
+ Maksymalna liczba oczekujących połączeń z usługą.  
   
 ### <a name="maxstatefulnegotiations"></a>MaxStatefulNegotiations  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Liczba negocjacji zabezpieczeń, które mogą być jednocześnie aktywne.  
+ Liczba negocjacji zabezpieczeń, które mogą być wykonywane jednocześnie.  
   
 ### <a name="negotiationtimeout"></a>NegotiationTimeout  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Obiekt TimeSpan określający maksymalny czas trwania fazy negocjacji zabezpieczeń między serwerem a klientem.  
+ Element TimeSpan określa maksymalny czas do przeprowadzenia w fazie negocjowanie zabezpieczeń między serwerem a klientem.  
   
 ### <a name="reconnecttransportonfailure"></a>ReconnectTransportOnFailure  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Wartość logiczna określająca, czy połączenia używające obsługi wiadomości WS-Reliable podjąć próbę ponownego połączenia po błędach transportu.  
+ Wartość logiczna określająca, czy połączenia za pomocą usługi WS-Reliable messaging próbę ponownego połączenia po błędach transportu.  
   
 ### <a name="replaycachesize"></a>ReplayCacheSize  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Liczba buforowanych identyfikatorów jednorazowych używanych do wykrywania powtórzeń.  
   
 ### <a name="replaywindow"></a>Elementy ReplayWindow  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Obiekt TimeSpan określający okres czasu, w którym identyfikatorów jednorazowych poszczególnych komunikatów są prawidłowe.  
+ Przedział czasu, który określa czas, w której poszczególne komunikatów są poprawni.  
   
 ### <a name="sessionkeyrenewalinterval"></a>SessionKeyRenewalInterval  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Obiekt TimeSpan określający okres czasu, po upływie którego inicjator odnawia klucz sesji zabezpieczeń.  
+ Przedział czasu, który określa czas, po upływie którego inicjator odnawia klucz sesji zabezpieczeń.  
   
 ### <a name="sessionkeyrolloverinterval"></a>SessionKeyRolloverInterval  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Obiekt TimeSpan określający okres poprzedniego klucza sesji jest prawidłowa w komunikatach przychodzących podczas odnawiania klucza.  
+ Przedział czasu, który określa przedział czasu poprzedniego klucza sesji jest prawidłowa w wiadomościach przychodzących podczas odnawiania klucza.  
   
 ### <a name="timestampvalidityduration"></a>TimestampValidityDuration  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Obiekt TimeSpan określający okres ważności sygnatury czasowej.  
+ Przedział czasu, który określa czas, w którym sygnatura czasowa jest poprawna.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

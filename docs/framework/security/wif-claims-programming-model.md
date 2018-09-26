@@ -3,13 +3,12 @@ title: Model programowania oświadczeń programu WIF
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1a85b359450cb3ba07930466f550f964c6fdd98b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 95df026684f536a64ffe15f65264c470dff164da
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696317"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171715"
 ---
 # <a name="wif-claims-programming-model"></a>Model programowania oświadczeń programu WIF
 Deweloperzy platformy ASP.NET i Windows Communication Foundation (WCF) zwykle używać interfejsów IIdentity i IPrincipal do pracy z informacji o tożsamości użytkownika. W .NET 4.5 Windows Identity Foundation (WIF) jest zintegrowana w taki sposób, że oświadczenia są teraz zawsze stosowany w przypadku dowolnego podmiotu zabezpieczeń, jak pokazano na poniższym diagramie:

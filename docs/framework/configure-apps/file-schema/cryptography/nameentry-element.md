@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1bffb72e7c68d10e2c0edd5ec3cb9bcff10cbc0a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743056"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082373"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameentry —&gt; — Element
-Mapuje nazwę klasy na nazwę algorytmu przyjazną, która umożliwia jedną klasę do mają wiele przyjaznej nazwy.  
+Mapuje nazwę klasy na nazwę algorytmu przyjazna, która umożliwia jednej klasy mają wiele przyjazne nazwy.  
   
  \<Konfiguracja >  
 \<mscorlib >  
@@ -40,8 +39,8 @@ Mapuje nazwę klasy na nazwę algorytmu przyjazną, która umożliwia jedną kla
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Nazwa**|Atrybut wymagany.<br /><br /> Określa przyjazną nazwę algorytmu, który implementuje klasy kryptografii.|  
-|**class**|Atrybut wymagany.<br /><br /> Określa wartość **nazwa** atrybutu w [ \<cryptoclass — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elementu.|  
+|**Nazwa**|Atrybut wymagany.<br /><br /> Określa przyjazną nazwę algorytmu, który implementuje klasa kryptografii.|  
+|**class**|Atrybut wymagany.<br /><br /> Określa wartość dla **nazwa** atrybutu w [ \<cryptoclass — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elementu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -51,13 +50,13 @@ Mapuje nazwę klasy na nazwę algorytmu przyjazną, która umożliwia jedną kla
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`system.web`|Określa element root dla sekcji konfiguracji ASP.NET.|  
+|`system.web`|Określa element root dla sekcji konfiguracyjnej platformy ASP.NET.|  
   
 ## <a name="remarks"></a>Uwagi  
- **Nazwa** atrybut może być nazwę jednej z klas abstrakcyjnych w <xref:System.Security.Cryptography> przestrzeni nazw. Podczas wywoływania **Utwórz** metody dla klasy abstrakcyjnej kryptografii, nazwa klasy abstrakcyjnej jest przekazywany do <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> metody. **CreateFromName** zwraca wystąpienia typu oznaczonego **klasy** atrybutu. Jeśli **nazwa** atrybut jest krótką nazwę, takich jak RSA, można użyć tej nazwy podczas wywoływania **CreateFromName** metody.  
+ **Nazwa** atrybut może być nazwą jednego z klasy abstrakcyjnej, znalezione w <xref:System.Security.Cryptography> przestrzeni nazw. Gdy wywołujesz **Utwórz** metody na klasy kryptografii abstrakcyjne, nazwa klasy abstrakcyjnej jest przekazywany do <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> metody. **CreateFromName** Zwraca wystąpienie typu wskazywanym przez **klasy** atrybutu. Jeśli **nazwa** atrybut jest krótką nazwę, takich jak RSA, można użyć tej nazwy, podczas wywoływania **CreateFromName** metody.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie  **\<nameentry — >** element odwołuje się do klasy kryptografii i skonfigurować środowisko uruchomieniowe. Ciąg "RSA" można następnie przekazać do <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> — metoda i użyj <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodę, aby zwrócić `MyCryptoRSAClass` obiektu.  
+ Poniższy przykład pokazuje, jak używać  **\<nameentry — >** element odwołuje się do klasy kryptografii i konfigurowanie środowiska uruchomieniowego. Ciąg "RSA" można następnie przekazać do <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metody i użyj <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodę, aby zwrócić `MyCryptoRSAClass` obiektu.  
   
 ```xml  
 <configuration>  

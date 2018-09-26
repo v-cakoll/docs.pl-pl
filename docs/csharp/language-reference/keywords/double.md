@@ -8,11 +8,11 @@ helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
 ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577012"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085271"
 ---
 # <a name="double-c-reference"></a>double (odwołanie w C#)
 

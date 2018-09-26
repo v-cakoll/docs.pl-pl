@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3cb6092a-58c9-4ca0-84a5-0e54d5d00a0d
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: dd36157b70176fc32dff6a43163dda6c47c069af
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8f9b43a2c2d58df77d739baf897ddd4562523d13
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425493"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113520"
 ---
 # <a name="enable-navigation-in-a-ui-automation-fragment-provider"></a>Włączanie nawigacji w dostawcy fragmentu automatyzacji interfejsu użytkownika
 > [!NOTE]

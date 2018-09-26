@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: f77f0a952224f79ee95a755cb848a4f8b68c9602
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584054"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112773"
 ---
 # <a name="xkey-directive"></a>x:Key — dyrektywa
 Jednoznacznie identyfikuje elementy, które są tworzone i wspominane w słowniku zdefiniowanym w języku XAML. Dodawanie `x:Key` wartość do elementu obiektu XAML jest najczęstszym sposobem identyfikacji zasobu w słowniku zasobów, na przykład w programie WPF <xref:System.Windows.ResourceDictionary>.  

@@ -1,5 +1,5 @@
 ---
-title: Zabezpieczenia w sieci — programowania w języku .NET Framework
+title: Zabezpieczenia w programowaniu sieciowym — .NET Framework
 ms.date: 03/14/2018
 helpviewer_keywords:
 - sending data, Internet security
@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a684fd1a7ce8cce52e00511b114cb4905ed0a42b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e47828f14ffbaac57a43ddbf53094e220acb082
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393169"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080263"
 ---
-# <a name="security-in-network-programming"></a>Zabezpieczenia w programowaniu usługi sieciowej
+# <a name="security-in-network-programming"></a>Zabezpieczenia w programowaniu sieciowym
 
-.NET Framework <xref:System.Net> przestrzeni nazw klas zapewniają obsługę wbudowanych dla popularnych mechanizmów uwierzytelniania aplikacji internetowych i uprawnień dostępu do kodu .NET Framework.  
+.NET Framework <xref:System.Net> przestrzeń nazw klasy zapewniają obsługę wbudowanych, popularne mechanizmy uwierzytelniania aplikacji internetowych oraz uprawnienia dostępu kodu .NET Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Transport Layer Security (TLS) najlepszych rozwiązań platformy .NET Framework](tls.md)  
-Opis protokołu TLS najlepszych rozwiązań z .NET Framwork.
+[Transport Layer Security (TLS) najlepsze rozwiązania z programem .NET Framework](tls.md)  
+Opis najlepszych rozwiązań TLS z .NET Framwork.
  
 [Używanie protokołu Secure Sockets Layer](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
-Opisuje sposób korzystania z połączeń Secure Sockets Layer (SSL).  
+Opisuje sposób korzystania z połączeń protokołu Secure Sockets Layer (SSL).  
   
 [Uwierzytelnianie internetowe](../../../docs/framework/network-programming/internet-authentication.md)  
-Opisuje sposób użycia metod uwierzytelniania HTTP do ustanawiania połączeń uwierzytelnionych serwerom HTTP.  
+Opisuje sposób używania metody uwierzytelniania HTTP do ustanawiania uwierzytelnionych połączeń z serwerami HTTP.  
   
 [Internet i uprawnienia gniazd](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
-Opisuje sposób ustawiania zabezpieczenia dostępu kodu dla aplikacji korzystających z połączenia z Internetem.  
+W tym artykule opisano, jak skonfigurować zabezpieczenia dostępu kodu dla aplikacji, które używają połączenia przez Internet.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Element servicePointManager&gt; elementu (ustawienia sieciowe)'
+title: '&lt;ServicePointManager —&gt; — Element (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -10,21 +10,20 @@ helpviewer_keywords:
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5903174f125938923a63fc031421a8d5a020e56d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753589"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113072"
 ---
-# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;Element servicePointManager&gt; elementu (ustawienia sieciowe)
+# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;ServicePointManager —&gt; — Element (ustawienia sieci)
 Służy do konfigurowania połączeń z zasobami sieciowymi.  
   
  \<Konfiguracja >  
 \<system.net>  
 \<Ustawienia >  
-\<Element servicePointManager >  
+\<ServicePointManager — >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,13 +46,13 @@ Służy do konfigurowania połączeń z zasobami sieciowymi.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Określa, czy system powinien Sprawdź, czy nazwa certyfikatu zgodna nazwa hosta serwera przed rozpoczęciem korzystania z certyfikatu. Wartość domyślna to `true`.|  
+|`checkCertificateName`|Określa, czy system należy sprawdzić, czy nazwa w certyfikacie jest zgodna nazwa hosta serwera przed rozpoczęciem korzystania z certyfikatu. Wartość domyślna to `true`.|  
 |`checkCertificateRevocationList`|Określa, czy system należy sprawdzić, czy certyfikat został odwołany przed rozpoczęciem korzystania z certyfikatu. Wartość domyślna to `false`.|  
-|`dnsRefreshTimeout`|Określa, jak długo domeny Name Service (DNS) rozwiązania są buforowane w połączeniu z opcją działanie okrężne DNS w milisekundach. Wartość domyślna to 120 000 milisekund (dwie minuty).|  
-|`enableDnsRoundRobin`|Określa, czy rozwiązania DNS hosta nazwy z wielu adresów Internet Protocol (IP) zwracany wszystkie adresy lub tylko pierwsza z nich. Wartość domyślna to `false`.|  
-|`encryptionPolicy`|Określa zasady szyfrowania zastosować sesji SSL/TLS w <xref:System.Net.ServicePointManager> wystąpienia. Możliwe wartości to odpowiednikiem wartości <xref:System.Net.Security.EncryptionPolicy> wyliczenia. Korzystanie z <xref:System.Security.Authentication.CipherAlgorithmType.Null> jest wymagany w przypadku zasady szyfrowania jest ustawione na `NoEncryption`. Wartość domyślna to `RequireEncryption`.|  
-|`expect100Continue`|Określa, czy metody POST powinien oczekiwać `100-continue` odpowiedzi z serwera. Wartość domyślna to `true`.|  
-|`useNagleAlgorithm`|Określa, czy połączenia kontrolowany przez Menedżera punktu Usługi używać algorytm Nagle'a. Wartość domyślna to `true`.|  
+|`dnsRefreshTimeout`|Określa, ile domeny nazwa usługi (DNS) rozwiązania są buforowane w połączeniu z opcją DNS okrężnego w milisekundach. Wartość domyślna to 120 000 milisekund (dwie minuty).|  
+|`enableDnsRoundRobin`|Określa, czy nazwy rozwiązania DNS hosta z wieloma adresami Internet Protocol (IP), zwracany, wszystkie adresy lub tylko pierwszy z nich. Wartość domyślna to `false`.|  
+|`encryptionPolicy`|Określa zasady szyfrowania, zastosowane do sesji SSL/TLS w <xref:System.Net.ServicePointManager> wystąpienia. Możliwe wartości to odpowiednikiem wartości <xref:System.Net.Security.EncryptionPolicy> wyliczenia. Korzystanie z <xref:System.Security.Authentication.CipherAlgorithmType.Null> jest wymagany, jeśli ustawiono zasady szyfrowania `NoEncryption`. Wartość domyślna to `RequireEncryption`.|  
+|`expect100Continue`|Określa, czy metody POST należy się spodziewać otrzymać `100-continue` odpowiedzi z serwera. Wartość domyślna to `true`.|  
+|`useNagleAlgorithm`|Określa, czy kontrolowane przez usługę Menedżer punktu połączenia używają algorytmu Nagle'a. Wartość domyślna to `true`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -62,12 +61,12 @@ Służy do konfigurowania połączeń z zasobami sieciowymi.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[Ustawienia](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Służy do konfigurowania opcji sieci podstawowej dla <xref:System.Net> przestrzeni nazw.|  
+|[Ustawienia](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net> przestrzeni nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Net.ServicePointManager>  

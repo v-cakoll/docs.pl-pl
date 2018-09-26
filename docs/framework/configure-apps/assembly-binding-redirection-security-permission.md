@@ -7,13 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b9b9ac5c4e8ce08b9f926b0cdf7149dbdd9ac2da
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e6690a4f11bb1a88e2d77c67ccb29056c8e03f96
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501436"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088665"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Uprawnienie zabezpieczeń przekierowania powiązania zestawu
 Jawne przekierowanie powiązań zestawu w pliku konfiguracji aplikacji wymaga uprawnienia zabezpieczeń. Dotyczy to przekierowań zestawów programu .NET Framework i zestawów firm trzecich. To uprawnienie jest przydzielane przez ustawienie <xref:System.Security.Permissions.SecurityPermissionFlag> flagą <xref:System.Security.Permissions.SecurityPermission>. Zestawy zarządzane nie mają uprawnień domyślnie.  

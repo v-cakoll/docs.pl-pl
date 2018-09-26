@@ -5,21 +5,20 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 7bf731c1accd6eefc97c27af58ba139992ae1866
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aed9c89395f7715b0d0d4478cd292b741e754629
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502364"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077177"
 ---
 # <a name="message-security-windows"></a>Zabezpieczenia komunikatów — Windows
-W tym przykładzie pokazano, jak skonfigurować <xref:System.ServiceModel.WSHttpBinding> powiązania w celu użycia zabezpieczenia na poziomie komunikatu z uwierzytelnianiem systemu Windows. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). W tym przykładzie usługa jest obsługiwana w Internet Information Services (IIS) i klient jest aplikacji konsoli (.exe).  
+W tym przykładzie przedstawiono sposób konfigurowania <xref:System.ServiceModel.WSHttpBinding> powiązania do użycia zabezpieczenia na poziomie komunikatu z uwierzytelnianiem Windows. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). W tym przykładzie usługa jest hostowana w Internet Information Services (IIS), a klient to aplikacja konsoli (.exe).  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Domyślne zabezpieczenia dla [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) zabezpieczeń wiadomości przy użyciu uwierzytelniania systemu Windows. Pliki konfiguracji, w tym przykładzie jawnie ustawiona `mode` atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) do `Message` i `clientCredentialType` atrybutu `Windows`. Te wartości są wartościami domyślnymi dla tego powiązania, ale zostały jawnie skonfigurowane, jak pokazano w poniższych Przykładowa konfiguracja do zaprezentowania ich używania.  
+ Domyślne zabezpieczenia dla [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) jest zabezpieczenie wiadomości przy użyciu uwierzytelniania Windows. Pliki konfiguracji, w tym przykładzie jawnie ustawić `mode` atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) do `Message` i `clientCredentialType` atrybutu `Windows`. Te wartości są wartości domyślne dla tego powiązania, ale zostały jawnie skonfigurowane, jak pokazano w poniższym Przykładowa konfiguracja do zademonstrowania ich użycie.  
   
 ```xml  
 <bindings>  
@@ -33,7 +32,7 @@ W tym przykładzie pokazano, jak skonfigurować <xref:System.ServiceModel.WSHttp
 </bindings>  
 ```  
   
- Konfiguracja punktu końcowego klienta składa się z adres bezwzględny dla punktu końcowego usługi, powiązanie i kontraktu. Klient powiązanie jest skonfigurowany z użyciem odpowiednich `securityMode` i `authenticationMode`.  
+ Konfiguracja punktu końcowego klienta składa się z adresem bezwzględnym dla punktu końcowego usługi, powiązanie i zamówienia. Klient powiązanie skonfigurowano odpowiednie `securityMode` i `authenticationMode`.  
   
 ```xml  
 <system.serviceModel>  
@@ -63,7 +62,7 @@ W tym przykładzie pokazano, jak skonfigurować <xref:System.ServiceModel.WSHttp
 </system.serviceModel>  
 ```  
   
- Kod źródłowy usługi został zmodyfikowany w celu pokazują, jak <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> mogą być używane do dostępu tożsamości obiektu wywołującego.  
+ Kod źródłowy usługi została zmodyfikowana, aby zademonstrować sposób, w jaki <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> mogą być używane do dostępu tożsamość obiektu wywołującego.  
 
 ```csharp
 public string GetCallerIdentity()  
@@ -73,14 +72,14 @@ public string GetCallerIdentity()
 }  
 ```
 
- Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknie konsoli klienta. Pierwsza metoda wywoływana - `GetCallerIdentity` — zwraca nazwę tożsamości wywołującego do klienta. Naciśnij klawisz ENTER w oknie konsoli, aby zamknąć klienta.  
+ Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Pierwsza metoda wywoływana - `GetCallerIdentity` — zwraca nazwę tożsamość obiektu wywołującego do klienta. Naciśnij klawisz ENTER w oknie konsoli, aby zamknąć klienta.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Zobacz też

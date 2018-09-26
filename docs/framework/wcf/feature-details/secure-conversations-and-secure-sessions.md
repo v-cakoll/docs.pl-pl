@@ -3,13 +3,12 @@ title: Bezpieczne konwersacje i bezpieczne sesje
 ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d44a132f4bc4982ba0df437a56859de1a6fe441a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 077f21f11fae9e91abe281778351954c80d9603b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194754"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156250"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Bezpieczne konwersacje i bezpieczne sesje
 Funkcja Windows Communication Foundation (WCF) jest możliwość ustanowienia bezpiecznej sesji między dwa punkty końcowe, które wzajemne uwierzytelnianie i uzgodnić proces podpisów cyfrowych i szyfrowania. Na przykład punktu końcowego usługi może wymagać punkt końcowy klienta, aby wysłać token zabezpieczający, na podstawie certyfikatu X.509 do uwierzytelniania. Po uwierzytelnieniu klienta punktu końcowego usługi zwraca token kontekstu zabezpieczeń (SCT) do klienta, który jest następnie używany do zabezpieczenia wszystkich kolejnych komunikatów w ramach sesji. Ustanowienie tego bezpiecznej sesji umożliwia zestaw komunikatów, które są wymieniane między dwoma punktami końcowymi być bardziej efektywne, ponieważ SCT ma klucz symetryczny. Klucze asymetryczne, o certyfikatach X.509, które są oparte na, wymaga znacznie więcej moc obliczeniową niż klucze symetryczne, podczas generowania podpisu cyfrowego lub szyfrowania zestawu danych.  

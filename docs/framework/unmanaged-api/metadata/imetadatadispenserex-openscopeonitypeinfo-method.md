@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d5fd96f390b0bba60d1b95d20273bbf670208d41
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583395"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108543"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo — Metoda
 Ta metoda nie jest zaimplementowana. Jeżeli jest wywoływana, zwraca E_NOTIMPL.  

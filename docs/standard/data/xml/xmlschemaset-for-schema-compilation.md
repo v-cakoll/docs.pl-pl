@@ -9,11 +9,11 @@ ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c24fe637514ba773cecc7824de276b1707a4e90c
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46517730"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080081"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>Klasa XmlSchemaSet na potrzeby kompilacji schematu
 W tym artykule opisano <xref:System.Xml.Schema.XmlSchemaSet>, pamięci podręcznej, gdzie schematów języka (XSD) definicji schematu XML mogą być przechowywane i zweryfikowane.  

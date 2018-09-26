@@ -7,13 +7,12 @@ helpviewer_keywords:
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 624ee2b8554c6d83d62db87ab3161421527829c4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 6e10b0e38e80bad1f322e32324db862691432b8e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581080"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157431"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]

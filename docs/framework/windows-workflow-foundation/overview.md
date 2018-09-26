@@ -3,11 +3,11 @@ title: Omówienie programu Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577890"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082542"
 ---
 # <a name="windows-workflow-overview"></a>Omówienie programu Windows Workflow
 Przepływ pracy jest zbiorem elemental jednostek nazywanych *działania* , są przechowywane jako obiekty modelu, który zawiera opis procesu rzeczywistych. Przepływy pracy, zapewniają sposób opisania kolejności wykonania i zależności między elementami krótkotrwałej pracy krótkim lub długim. Ta Praca przechodzi przez model od początku do końca, a działania może być wykonywane przez osoby lub funkcji systemu.  

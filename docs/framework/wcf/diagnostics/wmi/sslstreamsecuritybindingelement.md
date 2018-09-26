@@ -3,13 +3,12 @@ title: SslStreamSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 18130d50-8996-4257-9c60-bc457f8654d8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 75e85cad482e19dcdc8c472df250c5595461085f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35cbd44cd1cf488b9309eef677516733c6379b96
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486463"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074930"
 ---
 # <a name="sslstreamsecuritybindingelement"></a>SslStreamSecurityBindingElement
 SslStreamSecurityBindingElement  
@@ -32,15 +31,15 @@ class SslStreamSecurityBindingElement : BindingElement
 ### <a name="requireclientcertificate"></a>RequireClientCertificate  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Określa, czy dla tego powiązania wymagany jest certyfikat klienta.  
+ Określa, czy certyfikat klienta jest wymagany dla tego powiązania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>

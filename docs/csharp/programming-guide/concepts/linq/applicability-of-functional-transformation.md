@@ -3,11 +3,11 @@ title: Zastosowanie przekształcania funkcjonalnego (C#)
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
 ms.openlocfilehash: baa3866c8c2c148a3080522d7c02e28e9d0fd945
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584225"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110531"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>Zastosowanie przekształcania funkcjonalnego (C#)
 Czyste Przekształcanie funkcjonalne mają zastosowanie w wielu różnych sytuacjach.  

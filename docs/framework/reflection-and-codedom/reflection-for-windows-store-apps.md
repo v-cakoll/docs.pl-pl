@@ -11,11 +11,11 @@ ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539268"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084322"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Odbicia w .NET Framework dla aplikacji sklepu Windows Store
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], program .NET Framework zawiera zestaw odbicia typów i elementów członkowskich do użycia w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Te typy i składowe dostępnych w pełny program .NET Framework oraz jak w [.NET for Windows Store apps](https://go.microsoft.com/fwlink/?LinkID=225700). W tym dokumencie opisano najważniejsze różnice między te i ich odpowiedniki w .NET Framework 4 i starszych wersji.  

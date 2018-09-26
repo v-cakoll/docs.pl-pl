@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3b614546e8ed23cc1a5e169a33fb5878695037ae
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d7563d3a0ba545bfd8d1b80981fcce607d230873
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745997"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073193"
 ---
 # <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; — Element
-Określa, gdzie znaleźć środowisko uruchomieniowe języka wspólnego zestawu.  
+Określa, gdzie znaleźć zestawu środowisko uruchomieniowe języka wspólnego.  
   
  \<Konfiguracja >  
 \<runtime>  
@@ -43,10 +42,10 @@ href="URL of assembly"/>
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`href`|Atrybut wymagany.<br /><br /> Określa adres URL, gdzie środowiska uruchomieniowego można znaleźć określonej wersji zestawu.|  
-|`version`|Atrybut wymagany.<br /><br /> Określa wersję zestawu, w którym baza kodu dotyczy. Format numeru wersji zestawu jest *główna.pomocnicza.kompilacja.poprawka*.|  
+|`href`|Atrybut wymagany.<br /><br /> Określa adres URL, których środowisko uruchomieniowe można znaleźć określonej wersji zestawu.|  
+|`version`|Atrybut wymagany.<br /><br /> Określa wersję zestawu, który dotyczy bazy kodu. Format numeru wersji zestawu to *główna.pomocnicza.kompilacja.poprawka*.|  
   
-## <a name="version-attribute"></a>Wersja atrybut  
+## <a name="version-attribute"></a>Wersja atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -59,20 +58,20 @@ href="URL of assembly"/>
   
 |Element|Opis|  
 |-------------|-----------------|  
-|`buildproviders`|Definiuje kolekcję dostawców kompilacji używana do kompilowania plików zasobów niestandardowych. Może mieć dowolną liczbę dostawcy kompilacji.|  
+|`buildproviders`|Definiuje kolekcję dostawców kompilacji używana do kompilowania plików zasobów niestandardowych. Może mieć dowolną liczbę dostawców kompilacji.|  
 |`compilation`|Konfiguruje wszystkie ustawienia kompilacji używane przez program ASP.NET.|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`System.web`|Określa element root dla sekcji konfiguracji ASP.NET.|  
+|`System.web`|Określa element root dla sekcji konfiguracyjnej platformy ASP.NET.|  
   
 ## <a name="remarks"></a>Uwagi  
- Dla środowiska uruchomieniowego do użycia  **\<codeBase >** ustawienia w pliku konfiguracyjnym maszyny lub pliku zasad wydawcy, plik musi również przekierować wersja zestawu. Pliki konfiguracji aplikacji może mieć ustawienie codebase bez przekierowywanie wersji zestawu. Po ustaleniu wersji zestawu do użycia, środowisko uruchomieniowe stosuje ustawienia codebase z pliku, który określa wersję. Jeśli codebase nie jest zaznaczone, środowisko uruchomieniowe sondy dla zestawu w zwykły sposób.  
+ Użyj środowiska uruchomieniowego  **\<codeBase >** ustawienia w pliku konfiguracji komputera lub plik zasad wydawcy, plik również przekierować wersji zestawu. Pliki konfiguracyjne aplikacji może mieć ustawienie kodu bez przekierowywanie wersji zestawu. Po ustaleniu, jakiego zestawu należy użyć, środowisko uruchomieniowe ma zastosowanie z ustawieniem kodu z pliku, który określa wersja. Jeśli codebase nie jest zaznaczone, środowisko uruchomieniowe sondy dla zestawu w zwykły sposób.  
   
- Jeśli zestaw ma silną nazwę, ustawienie codebase może być dowolnym w lokalnym intranecie lub Internecie. Jeśli zestaw jest zestaw prywatny, ustawienie codebase musi być ścieżką względną wobec katalogu aplikacji.  
+ Jeśli zestaw ma silną nazwą, ustawienie kodu może być dowolnym miejscu na lokalny intranet lub Internetem. Jeśli zestaw jest zestaw prywatny, ustawienie codebase musi być ścieżką względną wobec katalogu aplikacji.  
   
- Dla zestawów bez silnych nazw, wersja jest ignorowane, a pierwsze wystąpienie korzysta z modułu ładującego \<codebase > wewnątrz \<dependentAssembly >. Jeśli istnieje wpis w pliku konfiguracyjnym aplikacji, który przekierowuje powiązania do innego zestawu, przekierowywanie wyższy priorytet, nawet jeśli wersja zestawu nie odpowiada na żądania powiązania.  
+ Na zestawy bez silnej nazwy, wersji jest ignorowany, a moduł ładujący używa pierwszego pojawienia się \<codebase > wewnątrz \<dependentAssembly >. Jeśli istnieje wpis w pliku konfiguracyjnym aplikacji, który przekierowuje powiązanie do innego zestawu, przekierowywanie będą miały pierwszeństwo, nawet wtedy, gdy wersja zestawu nie odpowiada na żądania powiązania.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób określić, gdzie środowiska uruchomieniowego można znaleźć zestawu.  
+ Poniższy przykład pokazuje, jak określić, gdzie środowisko uruchomieniowe można znaleźć zestawu.  
   
 ```xml  
 <configuration>  

@@ -4,12 +4,12 @@ description: Nowe polecenie dotnet tworzy nowe projekty .NET Core, na podstawie 
 author: mairaw
 ms.author: mairaw
 ms.date: 07/31/2018
-ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512558"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083055"
 ---
 # <a name="dotnet-new"></a>nowe polecenia DotNet
 
@@ -228,8 +228,9 @@ Filtrowanie na podstawie typów dostępnych szablonów. Wstępnie zdefiniowane w
 Odinstalowuje pakiet źródła lub szablonu w `PATH` lub `NUGET_ID` podane.
 
 > [!NOTE]
-> Aby odinstalować przy użyciu szablonu `PATH`, należy do pełnej kwalifikacji ścieżki. Na przykład *C:/Users/\<użytkownika > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* będzie działać, ale *./GarciaSoftware.ConsoleTemplate.CSharp* z zawierającego folder nie będzie.
-> Ponadto zawiera końcowego ukośnika katalogu kończącego w zmiennej path szablonu.
+> Aby odinstalować szablonu korzystanie ze źródła `PATH`, należy do pełnej kwalifikacji ścieżki. Na przykład *C:/Users/\<użytkownika > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* będzie działać, ale *./GarciaSoftware.ConsoleTemplate.CSharp* z zawierającego folder nie będzie. Ponadto zawiera końcowego ukośnika katalogu kończącego w zmiennej path szablonu.
+> 
+> Jeśli nie można określić `PATH` lub `NUGET_ID` argument niezbędnych do odinstalowania szablon systemem `dotnet new --uninstall` bez argumentu, spowoduje wyświetlenie listy wszystkich zainstalowanych szablonów i argument, trzeba je odinstalować.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

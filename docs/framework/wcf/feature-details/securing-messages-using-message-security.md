@@ -3,13 +3,12 @@ title: Korzystanie z zabezpieczeń komunikatów
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d895524d36895ad087f7394fcc3380573355eaad
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3bd9618130159f5cef28f698a125ffce3d4a4cad
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994250"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077476"
 ---
 # <a name="securing-messages-using-message-security"></a>Korzystanie z zabezpieczeń komunikatów
 W tej sekcji omówiono zabezpieczenie wiadomości WCF w przypadku korzystania z <xref:System.ServiceModel.NetMsmqBinding>.  

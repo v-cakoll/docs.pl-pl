@@ -3,16 +3,15 @@ title: '&lt;customCookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b974767aa86801bff234e200e1fce021bfc422c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 51ca91de5c77727f5f5506118461d19354f12c14
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755607"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081594"
 ---
 # <a name="ltcustomcookiehandlergt"></a>&lt;customCookieHandler&gt;
-Ustawia typ obsługi niestandardowego pliku cookie. Ten element tylko mogą występować Jeśli `mode` atrybutu `<cookieHandler>` element jest "Custom". Niestandardowy typ musi pochodzić z <xref:System.IdentityModel.Services.CookieHandler> klasy.  
+Ustawia typ procedury obsługi niestandardowego pliku cookie. Ten element może być tylko obecne Jeśli `mode` atrybutu `<cookieHandler>` element jest "Niestandardowy". Niestandardowy typ musi pochodzić od <xref:System.IdentityModel.Services.CookieHandler> klasy.  
   
  \<system.identityModel.services >  
 \<federationConfiguration >  
@@ -39,7 +38,7 @@ Ustawia typ obsługi niestandardowego pliku cookie. Ten element tylko mogą wyst
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Określa typ niestandardowy, która jest pochodną <xref:System.IdentityModel.Services.CookieHandler> klasy. Aby uzyskać więcej informacji o sposobie określania `type` atrybutów, zobacz [odwołuje się do niestandardowego typu](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|— typ|Określa typ niestandardowy, który pochodzi od klasy <xref:System.IdentityModel.Services.CookieHandler> klasy. Aby uzyskać więcej informacji o sposobie określania `type` atrybutów, zobacz [odwołań do typu niestandardowego](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -48,15 +47,15 @@ Ustawia typ obsługi niestandardowego pliku cookie. Ten element tylko mogą wyst
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Konfiguruje <xref:System.IdentityModel.Services.CookieHandler> który <xref:System.IdentityModel.Services.SessionAuthenticationModule> używa do odczytu i zapisu plików cookie.|  
+|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Konfiguruje <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> używa na odczytywanie i zapisywanie plików cookie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po określeniu obsługi niestandardowych plików cookie przez ustawienie `mode` atrybutu `<cookieHandler>` elementu na "Custom", należy określić typ obsługi niestandardowych plików cookie przez dołączenie `<customCookieHandler>` elementu podrzędnego, który odwołuje się do typu obsługi plików cookie. Ten element nie może być określona gdy `mode` ustawiono atrybut "Fragmentaryczne" lub "Default". Programy obsługi niestandardowego pliku cookie musi pochodzić od <xref:System.IdentityModel.Services.CookieHandler> klasy.  
+ Po określeniu obsługi niestandardowych plików cookie przez ustawienie `mode` atrybutu `<cookieHandler>` element na "Niestandardowe", należy określić typ obsługi niestandardowych plików cookie, umieszczając `<customCookieHandler>` elementu podrzędnego, który odwołuje się typ procedury obsługi plików cookie. Ten element nie może być określony, gdy `mode` atrybut jest ustawiony na "Fragmentaryczne" lub "Default". Programy obsługi niestandardowych plików cookie musi pochodzić od klasy <xref:System.IdentityModel.Services.CookieHandler> klasy.  
   
- `<customCookieHandler>` Reprezentowany przez element <xref:System.IdentityModel.Configuration.CustomTypeElement> klasy.  
+ `<customCookieHandler>` Element jest reprezentowany przez <xref:System.IdentityModel.Configuration.CustomTypeElement> klasy.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład konfiguruje się SAM do użycia niestandardowego pliku cookie obsługi typu `MyNamespace.MyCustomCookieHandler`.  
+ Poniższy przykład umożliwia skonfigurowanie tego Zabronić używania obsługi niestandardowych plików cookie, typu `MyNamespace.MyCustomCookieHandler`.  
   
 ```xml  
 <cookieHandler mode="Custom">  

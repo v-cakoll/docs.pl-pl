@@ -3,11 +3,11 @@ title: Asynchroniczne typy zwracane (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
 ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532732"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157629"
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 Metody asynchroniczne mogą być zwracane typy:

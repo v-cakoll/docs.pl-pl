@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027703"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156406"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Błędy czasu projektowania w narzędziu Projektant dla formularzy systemu Windows
 W tym temacie wyjaśniono znaczenie i użycie listy błędów podczas projektowania, który pojawia się w programie Microsoft Visual Studio, gdy Windows Forms Designer nie można załadować. Jeśli zostanie wyświetlona lista ten błąd, należy nie ich interpretacji jako błąd w projektancie, ale także jako pomoc do poprawiania błędów w kodzie.  

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ustawienie zasad pamięci podręcznej na żądanie'
+title: 'Porady: Określanie zasad pamięci podręcznej dla żądania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,18 @@ helpviewer_keywords:
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 98cd64aaab66d69c29c022d770b34bb0efdb4bef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03ddcbacf7de3753ca74c398e585447b2d769cd6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395430"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078321"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>Porady: ustawienie zasad pamięci podręcznej na żądanie
-W poniższym przykładzie pokazano, ustawienie zasady pamięci podręcznej dla żądania. Przykład danych wejściowych jest identyfikatorem URI, takich jak http://www.contoso.com/.  
+# <a name="how-to-set-cache-policy-for-a-request"></a>Porady: Określanie zasad pamięci podręcznej dla żądania
+W poniższym przykładzie pokazano, ustawianie zasad pamięci podręcznej dla żądania. Przykładowe dane wejściowe to identyfikator URI, taki jak http://www.contoso.com/.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu tworzy zasady pamięci podręcznej, który umożliwia żądany zasób ma być używany z pamięci podręcznej, jeśli nie był w pamięci podręcznej przez czas dłuższy niż jeden dzień. Przykład wyświetla komunikat informujący o tym, czy zasób został użyty z pamięci podręcznej — na przykład `"The response was retrieved from the cache : False."`— a następnie wyświetla zasobu. Żądania mogą być spełnione przez dowolnego pamięci podręcznej między klientem i serwerem.  
+ Poniższy przykład kodu tworzy zasady pamięci podręcznej, która umożliwia żądany zasób do użycia z pamięci podręcznej, jeśli nie było w pamięci podręcznej przez czas dłuższy niż jeden dzień. Przykład wyświetla komunikat informujący o tym, czy zasób został użyty z pamięci podręcznej — na przykład `"The response was retrieved from the cache : False."`— a następnie wyświetla zasobu. Żądanie może być spełnione przez wszelkie pamięci między klientem i serwerem.  
   
 ```csharp  
 using System;  
@@ -113,4 +112,4 @@ End Namespace
  [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)  
  [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)  
  [Zasady pamięci podręcznej oparte na czasie](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching — > elementu (ustawienia sieciowe)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [\<requestCaching — >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

@@ -3,16 +3,15 @@ title: '&lt;x509SecurityTokenHandlerRequirement&gt;'
 ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8af4a718fc9f4ba7f674d98e13424bb443693c6c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 994677904cada71dbc7cce4b6ca0de1d4dc65014
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755945"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085666"
 ---
 # <a name="ltx509securitytokenhandlerrequirementgt"></a>&lt;x509SecurityTokenHandlerRequirement&gt;
-Zapewnia opcjonalne konfigurację <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> klasy lub klas pochodnych.  
+Udostępnia konfigurację opcjonalne dla <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> klasy lub klas pochodnych.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -47,11 +46,11 @@ Zapewnia opcjonalne konfigurację <xref:System.IdentityModel.Tokens.X509Security
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode> Wartość, która określa tryb walidacji do użycia na potrzeby certyfikatów X.509. Wartość domyślna to "PeerOrChainTrust".|  
-|mapToWindows|Określa, czy programu obsługi tokenów należy mapować sprawdzania poprawności tokenu konto systemu Windows przy użyciu nazwy UPN oświadczenia przychodzącego. Wartość domyślna to "false".|  
+|tryb certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode> Wartość, która określa tryb weryfikacji do użycia certyfikatu X.509. Wartość domyślna to "PeerOrChainTrust".|  
+|mapToWindows|Określa, czy programu obsługi tokenów powinny być mapowane sprawdzania poprawności tokenu z kontem Windows za pomocą przychodzące oświadczenia nazwy UPN. Wartość domyślna to "false".|  
 |revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Wartość, która określa tryb odwołania dla certyfikatu X.509. Wartość domyślna to "Online".|  
-|trustedStoreLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> wartość, która określa magazynu certyfikatu X.509. Wartością domyślną jest "Komputer lokalny".|  
-|certificateValidator|Typ niestandardowy, która jest pochodną <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Jeśli `certificateValidationMode` atrybutu jest "Custom", wystąpienie tego typu jest używany do sprawdzania poprawności wystawcy certyfikatu.|  
+|trustedStoreLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> wartość, która określa magazynu certyfikatu X.509. Wartość domyślna to "LocalMachine".|  
+|certificateValidator|Typ niestandardowy, który pochodzi od klasy <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Jeśli `certificateValidationMode` atrybut jest "Niestandardowy", wystąpienia tego typu jest używany do walidacji certyfikatu wystawcy.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -60,7 +59,7 @@ Zapewnia opcjonalne konfigurację <xref:System.IdentityModel.Tokens.X509Security
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Dodaje określony zabezpieczenia programu obsługi tokenów do kolekcji programu obsługi tokenów.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Programu obsługi tokenów zabezpieczeń określone są dodawane do kolekcji programu obsługi tokenów.|  
   
 ## <a name="example"></a>Przykład  
   

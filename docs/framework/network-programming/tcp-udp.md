@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 30630f397d491a6a5f251ddac14a4db90e53b999
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3e39b952b37f70513b3a84ce6b6059b85e01c28
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394608"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080867"
 ---
 # <a name="tcp-udp"></a>TCP I UDP
-Aplikacje mogą używać usług Transmission Control Protocol (TCP) i protokół UDP (User Datagram) z <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, i <xref:System.Net.Sockets.UdpClient> klasy. Te klasy protokołu są wbudowane nad <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> klasy a zajmie się szczegóły transferu danych.  
+Aplikacje mogą używać usług Transmission Control Protocol (TCP) i protokołu UDP (User Datagram) za pomocą <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, i <xref:System.Net.Sockets.UdpClient> klasy. W ramach tych zajęć protokołu są wbudowane w górnej części <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> klasy i zadbać o szczegółach transferu danych.  
   
- Klasy protokołu Użyj metod synchronicznych **gniazda** klasa umożliwia proste i bezpośrednie dostęp do usług sieciowych bez zwiększania utrzymywanie informacji o stanie i wiedzy o szczegóły konfiguracji oparte na protokole gniazda. Aby używać asynchronicznych **gniazda** metod, można użyć metod asynchronicznych dostarczonych przez <xref:System.Net.Sockets.NetworkStream> klasy. Dostępu do funkcji z **gniazda** klasy nie jest udostępniany przez protokół klasy, należy użyć **gniazda** klasy.  
+ Klasy protokołu Użyj metod synchronicznych **gniazda** klasy w celu zapewnienia niezwykle proste dostępu do usług sieciowych bez konieczności utrzymywania informacji o stanie lub wiedząc, szczegółowe informacje o konfigurowaniu gniazda specyficzne dla protokołu. Aby używać asynchronicznych **gniazda** metody, można użyć metod asynchronicznych, dostarczone przez <xref:System.Net.Sockets.NetworkStream> klasy. Dostępu do funkcji z **gniazda** klasy nie jest udostępniany przez protokół klasy, należy użyć **gniazda** klasy.  
   
- **TcpClient** i **TcpListener** reprezentują sieci za pomocą funkcji **Strumień NetworkStream** klasy. Możesz użyć <xref:System.Net.Sockets.TcpClient.GetStream%2A> metodę, aby zwrócić strumień sieci, a następnie wywołać strumienia <xref:System.Net.Sockets.NetworkStream.Read%2A> i <xref:System.Net.Sockets.NetworkStream.Write%2A> metody. **Strumień NetworkStream** nie jest właścicielem podstawowej gniazda z klas protokołu, więc jego zamknięciem nie wpływa na gniazdo.  
+ **TcpClient** i **TcpListener** reprezentują sieci za pomocą funkcji **Strumień NetworkStream** klasy. Możesz użyć <xref:System.Net.Sockets.TcpClient.GetStream%2A> metodę, aby zwrócić strumień sieci, a następnie wywołaj strumienia <xref:System.Net.Sockets.NetworkStream.Read%2A> i <xref:System.Net.Sockets.NetworkStream.Write%2A> metody. **Strumień NetworkStream** nie jest właścicielem gniazdo podstawowej z klas protokołu, zamykając go nie ma wpływu na gniazda.  
   
- **UdpClient** klasa korzysta z tablicy bajtów do przechowywania datagramów protokołu UDP. Możesz użyć <xref:System.Net.Sockets.UdpClient.Send%2A> do wysyłania danych do sieci i <xref:System.Net.Sockets.UdpClient.Receive%2A> metodę, aby odbierać przychodzące datagramów.  
+ **UdpClient** klasy wykorzystuje tablicę bajtów zawierającą UDP datagram. Możesz użyć <xref:System.Net.Sockets.UdpClient.Send%2A> metodę, aby wysyłać dane do sieci i <xref:System.Net.Sockets.UdpClient.Receive%2A> metodę, aby otrzymywać datagram przychodzących.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Stosowanie usług TCP](../../../docs/framework/network-programming/using-tcp-services.md)  

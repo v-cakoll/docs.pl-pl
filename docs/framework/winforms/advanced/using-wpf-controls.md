@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: 30b84f05898f823227415c410dc7ba5f89d58664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504708"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170473"
 ---
 # <a name="using-wpf-controls"></a>Korzystanie z formantów WPF
 W aplikacjach opartych na formularzach Windows, można użyć kontrolek Windows Presentation Foundation (WPF). Mimo że są to dwie technologie inny widok, mogą współdziałać sprawnie.  
@@ -24,16 +24,10 @@ W aplikacjach opartych na formularzach Windows, można użyć kontrolek Windows 
  Pokazuje, jak kopiowanie kontrolki Windows Presentation Foundation w formularzu Windows.  
   
  [Przewodnik: rozmieszczanie zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
- Pokazuje, jak korzystać z funkcji układu formularzy Windows, takich jak Zakotwiczanie i linii przyciągania, aby rozmieścić formanty Windows Presentation Foundation.  
-  
- [Przewodnik: zmienianie właściwości hostowanego elementu WPF w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
- Przedstawia przepływ pracy między Windows Forms Designer i [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] zmiany właściwości kontrolek WPF.  
+ Pokazuje, jak korzystać z funkcji układu formularzy Windows, takich jak Zakotwiczanie i linii przyciągania, aby rozmieścić formanty Windows Presentation Foundation.
   
  [Przewodnik: tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
- Pokazuje, jak utworzyć formant programu Windows Presentation Foundation, do użytku w aplikacjach opartych na formularzach Windows.  
-  
- [Przewodnik: kopiowanie i wklejanie kontrolki ElementHost w oddzielnych formularzach Windows Forms](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- Pokazuje, jak kopiowanie kontrolki Windows Presentation Foundation z jednego formularza Windows na inny.  
+ Pokazuje, jak utworzyć formant programu Windows Presentation Foundation, do użytku w aplikacjach opartych na formularzach Windows.
   
  [Przewodnik: przypisywanie zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  Pokazuje sposób wybierania typów formantów Windows Presentation Foundation, które mają być wyświetlane w formularzu.  

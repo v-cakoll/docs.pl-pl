@@ -1,5 +1,5 @@
 ---
-title: Przykład gniazda synchroniczne klienta
+title: Przykład synchronicznego gniazda klienta
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2931e1ee9644952f2f643941e2076a7e2d5762db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55fd8c33f80ecf3b31fdbacec1abd73ebab92396
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393120"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110245"
 ---
-# <a name="synchronous-client-socket-example"></a>Przykład gniazda synchroniczne klienta
-Następujący przykład program tworzy klienta, który łączy się z serwerem. Klient jest oparty z gniazdem synchroniczne, dlatego wykonywanie aplikacji klienckiej został wstrzymany, dopóki serwer zwraca odpowiedź. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwrócony przez serwer w konsoli.  
+# <a name="synchronous-client-socket-example"></a>Przykład synchronicznego gniazda klienta
+Poniższy przykład program tworzy klienta, który nawiązuje połączenie z serwerem. Klient jest tworzone za pomocą synchronicznego gniazda, więc zawiesza wykonywanie aplikacji klienckiej, dopóki serwer nie zwróci odpowiedź. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwracany przez serwer w konsoli.  
   
 ```vb  
 Imports System  

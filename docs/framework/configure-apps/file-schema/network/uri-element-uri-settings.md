@@ -1,22 +1,21 @@
 ---
-title: '&lt;Identyfikator URI&gt; elementu (ustawienia identyfikatorów Uri)'
+title: '&lt;Identyfikator URI&gt; — Element (ustawienia identyfikatora Uri)'
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 05b2fb4255643f657f37012ec51a1b29ed68095d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a58c27500c0258415c12a5fd8e552b3ee43f50e8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742812"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108913"
 ---
-# <a name="lturigt-element-uri-settings"></a>&lt;Identyfikator URI&gt; elementu (ustawienia identyfikatorów Uri)
-Zawiera ustawienia, które określają, jak programu .NET Framework obsługuje adresy URL wyrazić przy użyciu uniform resource identifier (URI).  
+# <a name="lturigt-element-uri-settings"></a>&lt;Identyfikator URI&gt; — Element (ustawienia identyfikatora Uri)
+Zawiera ustawienia, które określają, jak .NET Framework obsługuje adresy URL wyrażone za pomocą uniform resource identifier (URI).  
   
-## <a name="schema-hierarchy"></a>Schemat hierarchii  
- [\<Konfiguracja > — Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a>Hierarchia schematu  
+ [\<Konfiguracja > Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<Identyfikator URI >](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -37,23 +36,23 @@ Zawiera ustawienia, które określają, jak programu .NET Framework obsługuje a
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[IDN](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Określa, czy międzynarodowych nazw domen (IDN) podczas analizowania została zastosowana do nazw domen.|  
-|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Określa identyfikator zasobu międzynarodowych (IRI) podczas analizowania odnosi się do <xref:System.Uri> i określa, czy powinny być stosowane IRI podczas analizowania reguły.|  
-|[schemeSettings](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Określa sposób <xref:System.Uri> będzie być analizowana pod kątem określonych systemów.|  
+|[IDN](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane do nazw domen.|  
+|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Określa, jeśli analizy międzynarodowego identyfikatora zasobów (IRI) są stosowane do <xref:System.Uri> , czy powinna być stosowana IRI podczas analizowania reguły.|  
+|[schemeSettings](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Określa, jak <xref:System.Uri> będzie być analizowana pod kątem określonych systemów.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[Konfiguracja](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Zawiera ustawienia dla wszystkich obszarów nazw.|  
+|[Konfiguracja](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Zawiera ustawienia dla wszystkich przestrzeni nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
- `uri` Element zawiera ustawienia dla członków <xref:System.Uri> klasy używane przez klasy w <xref:System.Net> przestrzeni nazw. Ustawienia skonfigurować obsługę IRI i IDN.  
+ `uri` Element zawiera ustawienia dla elementów członkowskich <xref:System.Uri> klasy używane przez klasy w <xref:System.Net> przestrzeni nazw. Ustawienia skonfigurować obsługę IRI i IDN.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie przedstawiono konfiguracji używane przez <xref:System.Uri> klasy do obsługi analizowania IRI i nazwy IDN. Przykład także czyści wszystkie ustawienia systemu, a następnie dodaje obsługę nie anulowanie procent, kodowane ścieżki ograniczniki schemat http.  
+ W poniższym przykładzie pokazano konfigurację posługują się <xref:System.Uri> klasy w celu obsługi analizowania IRI i nazwy IDN. Przykład czyści także wszystkie ustawienia systemu, a następnie dodaje obsługę nie anulowania zapewnianego element ścieżki zakodowane w formacie procent ograniczniki schemat http.  
   
 ### <a name="code"></a>Kod  
   

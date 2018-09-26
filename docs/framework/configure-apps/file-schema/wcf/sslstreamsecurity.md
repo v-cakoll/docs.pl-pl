@@ -3,13 +3,12 @@ title: '&lt;sslStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a86e1aae7ddd5389f098e532ae2c2cc67f4085e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6eacf1833ecf980696d75c5dbcaaba3ba6403d92
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752406"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087453"
 ---
 # <a name="ltsslstreamsecuritygt"></a>&lt;sslStreamSecurity&gt;
 Reprezentuje element niestandardowego powiązania, który obsługuje kanał zabezpieczenia za pomocą strumienia SSL.  
@@ -33,8 +32,8 @@ Reprezentuje element niestandardowego powiązania, który obsługuje kanał zabe
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|requireClientCertificate|Wartość logiczna określająca, czy dla tego powiązania wymagany jest certyfikat klienta. Wartość domyślna to `false`.|  
-|sslProtocols|Wartość flagi wyliczenia SslProtocols określająca, które SslProtocols są obsługiwane. Wartość domyślna to Ssl3&#124;Tls&#124;Tls11&#124;Tls12.|  
+|requireClientCertificate|Wartość logiczna, która określa, czy certyfikat klienta jest wymagany przez to powiązanie. Wartość domyślna to `false`.|  
+|sslProtocols|Wartość flagi wyliczenia SslProtocols określająca SslProtocols, które są obsługiwane. Wartość domyślna to Ssl3&#124;Tls&#124;Tls11&#124;Tls12.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -43,7 +42,7 @@ Reprezentuje element niestandardowego powiązania, który obsługuje kanał zabe
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie możliwości powiązania niestandardowego powiązania.|  
+|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>  

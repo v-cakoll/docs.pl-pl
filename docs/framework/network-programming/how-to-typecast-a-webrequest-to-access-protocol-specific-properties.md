@@ -1,5 +1,5 @@
 ---
-title: 'Porady: rzutowanie typu WebRequest do właściwości specyficzne dla protokołu dostępu'
+title: 'Porady: rzutowanie elementu WebRequest do właściwości specyficznych dla protokołu dostępu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +7,15 @@ dev_langs:
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3e01c68bdaa0cf9d3ab38b2267b35c57ad590ca1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4cde78ead9bdb8becf0f12497f4b37ad5a73bb3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394075"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085233"
 ---
-# <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>Porady: rzutowanie typu WebRequest do właściwości specyficzne dla protokołu dostępu
-W tym przykładzie przedstawiono sposób rzutowanie typu WebRequest, umożliwiając dostęp do właściwości specyficzne dla protokołu.  
+# <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>Porady: rzutowanie elementu WebRequest do właściwości specyficznych dla protokołu dostępu
+W tym przykładzie przedstawiono sposób rzutowanie elementu WebRequest, dzięki czemu można dostęp do właściwości specyficznych dla protokołu.  
   
 ## <a name="example"></a>Przykład  
   

@@ -3,11 +3,11 @@ title: Obsługa błędów programu WCF
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580489"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080997"
 ---
 # <a name="wcf-error-handling"></a>Obsługa błędów programu WCF
 Błędy napotykane przez aplikację WCF należeć do jednej z trzech grup:  

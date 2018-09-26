@@ -7,16 +7,15 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cdd6e4a4849a031dc6bcad909509498406fcb129
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 17043cdd4bcabf2e5e14c7b9c31b8c1747d2c866
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745516"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171949"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Wyczyść&gt; elementu &lt;namedCaches&gt;
-Czyści wszystkie `namedCache` wpisów w `namedCaches` kolekcji dla pamięci podręcznej.  
+Czyści wszystkie `namedCache` wpisów w `namedCaches` kolekcji w pamięci podręcznej.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
@@ -48,10 +47,10 @@ Czyści wszystkie `namedCache` wpisów w `namedCaches` kolekcji dla pamięci pod
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Zawiera kolekcję ustawień konfiguracyjnych dla nazwanego <xref:System.Runtime.Caching.MemoryCache> wystąpień.|  
+|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Zawiera kolekcję ustawień konfiguracji dla nazwanego <xref:System.Runtime.Caching.MemoryCache> wystąpień.|  
   
 ## <a name="remarks"></a>Uwagi  
- `clear` Element czyści wszystkie `namedCache` wpisów w kolekcji nazwanych pamięci podręcznej w pamięci podręcznej. Można użyć `clear` element przed użyciem `add` element, aby dodać nowy wpis pamięci podręcznej o nazwie, aby mieć pewność, nie ma żadnych innych o nazwie pamięci podręcznych w kolekcji.  
+ `clear` Element czyści wszystkie `namedCache` wpisów w kolekcji nazwaną pamięć podręczną dla pamięci podręcznej. Możesz użyć `clear` element przed użyciem `add` elementu, aby dodać nowy wpis nazwaną pamięć podręczną, aby mieć pewność, istnieją żadne inne nazwane pamięci podręczne w kolekcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<namedCaches > elementu (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+ [\<namedCaches >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

@@ -12,11 +12,11 @@ ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 27550a8fd8292029cad9c2e699374a190b1a532e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696082"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088077"
 ---
 # <a name="equality-operators"></a>Operatory równości
 W tej sekcji omówiono przeciążania operacji równości operatorów i odwołuje się do `operator==` i `operator!=` jako operatory równości.  

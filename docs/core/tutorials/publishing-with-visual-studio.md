@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet
 ms.openlocfilehash: e44ae69c9cd8f0767e369791737cef9b4c33f963
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706346"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156432"
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Publikowanie aplikacji Hello World w programie Visual Studio 2017
 

@@ -3,11 +3,11 @@ title: Uczestnicy śledzenia
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
 ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711184"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086369"
 ---
 # <a name="tracking-participants"></a>Uczestnicy śledzenia
 Śledzenie uczestników są punkty rozszerzeń, zezwalających na dewelopera przepływu pracy, aby uzyskać dostęp do <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> obiektów i ich przetwarzania. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zawiera standardowe śledzenia uczestnika, który zapisuje rekordy śledzenia jako zdarzenia śledzenie zdarzeń dla Windows (ETW). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia.  

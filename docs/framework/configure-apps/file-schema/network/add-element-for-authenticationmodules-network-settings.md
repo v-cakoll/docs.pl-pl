@@ -1,5 +1,5 @@
 ---
-title: '&lt;Dodaj&gt; elementu authenticationModules — (ustawienia sieciowe)'
+title: '&lt;Dodaj&gt; Element dla authenticationModules (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 471e36bb584164b851e7a06c0e682ba9872f7910
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a9bcc6cd5d2bbf30f463da0a51e1bccbcd5a3f1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742903"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083890"
 ---
-# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;Dodaj&gt; elementu authenticationModules — (ustawienia sieciowe)
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;Dodaj&gt; Element dla authenticationModules (ustawienia sieci)
 Dodaje moduł uwierzytelniania do aplikacji.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<authenticationModules — >  
+\<authenticationModules >  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -43,7 +42,7 @@ Dodaje moduł uwierzytelniania do aplikacji.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|`type`|Nazwa typu w pełni kwalifikowana (wskazywanym przez <xref:System.Type.FullName%2A> właściwości) i nazwy zestawu (wskazywanym przez <xref:System.Reflection.Assembly.FullName%2A> właściwości), rozdzielone przecinkami.|  
+|`type`|W pełni kwalifikowana nazwa typu (wskazywanym przez <xref:System.Type.FullName%2A> właściwości) i nazwy zestawu (wskazywanym przez <xref:System.Reflection.Assembly.FullName%2A> właściwości), oddzielone przecinkami.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -52,18 +51,18 @@ Dodaje moduł uwierzytelniania do aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[authenticationModules —](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań sieci.|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań w sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `add` Element dodaje moduł uwierzytelniania na końcu listy modułów zarejestrowanych uwierzytelniania. Moduły uwierzytelniania są wywoływane w kolejności, w jakiej zostały dodane do listy.  
+ `add` Elementu dodaje moduł uwierzytelniania na końcu listy modułów uwierzytelniania zarejestrowane. Moduły uwierzytelniania są wywoływane w kolejności, w jakiej zostały dodane do listy.  
   
- Wartość `type` atrybutu powinna być prawidłową nazwą typu i odpowiadającą jej nazwą zestawu, rozdzielonych przecinkami.  
+ Wartość `type` atrybut powinien być prawidłową nazwą typu i odpowiedniej nazwy zestawu, oddzielając wartości przecinkami.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia domyślne moduły uwierzytelniania. Wartości należy zastąpić wersję i PublicKeyToken przy użyciu prawidłowych wartości dla określonego modułu.  
+ Poniższy przykład umożliwia domyślne moduły uwierzytelniania. Należy zastąpić wartości wersji i PublicKeyToken poprawne wartości dla określonego modułu.  
   
 ```xml  
 <configuration>  

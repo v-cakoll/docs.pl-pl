@@ -1,5 +1,5 @@
 ---
-title: '&lt;Wyczyść&gt; elementu authenticationModules — (ustawienia sieciowe)'
+title: '&lt;Wyczyść&gt; Element dla authenticationModules (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 94e0242ca685e8b0118a55ba44fb0569c13f10f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ef12a475dde103023d3411fb68efb3bdb4f6d116
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751990"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47076696"
 ---
-# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Wyczyść&gt; elementu authenticationModules — (ustawienia sieciowe)
+# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Wyczyść&gt; Element dla authenticationModules (ustawienia sieci)
 Czyści wszystkie moduły uwierzytelniania z aplikacji.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<authenticationModules — >  
+\<authenticationModules >  
 \<Wyczyść >  
   
 ## <a name="syntax"></a>Składnia  
@@ -47,16 +46,16 @@ Czyści wszystkie moduły uwierzytelniania z aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[authenticationModules —](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań sieci.|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań w sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `clear` Element usuwa wszystkie moduły uwierzytelniania, które zostały wcześniej zdefiniowane w pliku konfiguracji lub wyższego poziomu w hierarchii konfiguracji.  
+ `clear` Elementu usuwa wszystkie moduły uwierzytelniania, które zostały wcześniej zdefiniowane w pliku konfiguracji lub wyższego poziomu w hierarchii konfiguracji.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
- Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  
+ Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia usunięcie wszystkich modułów skonfigurowanego uwierzytelniania.  
+ Poniższy przykład usuwa wszystkie moduły uwierzytelniania skonfigurowanego.  
   
 ```xml  
 <configuration>  

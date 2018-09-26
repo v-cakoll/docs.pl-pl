@@ -1,146 +1,143 @@
 ---
-title: Słownik uczenia maszynowego
+title: Glosariusz uczenia maszynowego
 description: Słownik terminy dotyczące uczenia maszynowego.
 author: jralexander
 ms.author: johalex
 ms.date: 05/31/2018
 ms.topic: conceptual
-ms.prod: dotnet-ml
-ms.devlang: dotnet
-manager: wpickett
-ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 6b175a8e89479dae81a7e5769e8d10c09a193898
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208318"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081101"
 ---
 # <a name="machine-learning-glossary"></a>Machine learning słownik
 
-Poniżej znajduje się zbiór terminy dotyczące uczenia maszynowego ważne, które są przydatne podczas tworzenia niestandardowych modeli.
+Poniższa lista jest kompilacja terminy dotyczące uczenia maszynowego ważne, które są przydatne podczas tworzenia niestandardowych modeli.
 
-## <a name="accuracy"></a>Dokładność
+## <a name="accuracy"></a>dokładność
 
-W [klasyfikacji](#classification), dokładność jest liczba elementów niejawnych prawidłowo podzielona przez całkowitą liczbę elementów w zestawie testów. W zakresie od 0 (najmniej dokładne) do 1 (najdokładniejszych). Dokładność jest jednym z metryki oceny wydajności modelu. Należy wziąć pod uwagę w połączeniu z [dokładności](#precision), [odwołania](#recall), i [wynik F](#f-score).
+W [klasyfikacji](#classification), dokładności jest liczba elementów poprawnie sklasyfikowane podzielona przez całkowitą liczbę elementów w zestawie testów. Z zakresu od 0 (co najmniej z dokładnością) do 1 (najdokładniejszych). Dokładność jest jedną z metryk oceny wydajności modelu. Należy wziąć pod uwagę w połączeniu z [dokładności](#precision), [odwołania](#recall), i [wynik F](#f-score).
 
-Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
-## <a name="area-under-the-curve-auc"></a>Obszar krzywej (AUC)
+## <a name="area-under-the-curve-auc"></a>Powierzchni pod krzywą (AUC)
 
-W [klasyfikacji binarnej](#binary-classification), obliczanie metryki wartość obszarze krzywej geograficzne szybkość alarmów true (na osi y) względem szybkość fałszywych alarmów (na osi x). Dla zakresu od 0,5 (najgorszych) do 1 (najlepsze). Znany również jako obszarze krzywą ROC, tj. odbiornik charakterystyczny krzywej działania. Aby uzyskać więcej informacji, zobacz [odbiornika operacyjnego cech](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) artykuł w witrynie Wikipedia.
+W [klasyfikacji binarnej](#binary-classification), metryki oceny, która jest wartością powierzchni pod krzywą geograficzne współczynnik prawdziwie dodatnie (na osi y) względem współczynnik wyników fałszywie dodatnich (na osi x). Dla zakresu od 0,5 (najgorzej) do 1 (najlepszą). Nazywane również obszarze krzywej ROC, czyli odbiorcy cech krzywej działania. Aby uzyskać więcej informacji, zobacz [Receiver operating cechy](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) artykuł w witrynie Wikipedia.
 
-Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
 
-## <a name="binary-classification"></a>klasyfikacji binarnej
+## <a name="binary-classification"></a>Klasyfikacja binarna
 
-A [klasyfikacji](#classification) przypadek where [etykiety](#label) jest tylko jeden z dwóch klas. Aby uzyskać więcej informacji, zobacz [klasyfikacji binarnej](tasks.md#binary-classification) sekcji [Machine learning zadania](tasks.md) tematu.
+A [klasyfikacji](#classification) zamierzone, gdzie [etykiety](#label) jest tylko jeden z dwóch klas. Aby uzyskać więcej informacji, zobacz [klasyfikacji binarnej](tasks.md#binary-classification) części [zadania uczenia maszynowego](tasks.md) tematu.
 
 ## <a name="classification"></a>Klasyfikacja
 
-Gdy dane są używane do prognozowania kategorii, [nadzorowanego uczenia maszynowego](#supervised-machine-learning) klasyfikacji wywoływane jest zadanie. [Klasyfikacji binarnej](#binary-classification) odwołuje się do przewidywania tylko dwie kategorie (na przykład klasyfikacji obrazu jako obraz "kot" lub "dog"). [Wieloklasowej klasyfikacji](#multiclass-classification) odwołuje się do przewidywania wiele kategorii (na przykład przy klasyfikacji obrazu jako obraz określonych rodzaj dog).
+Gdy dane są używane do prognozowania kategorię, [uczenia maszynowego w trybie nadzorowanym](#supervised-machine-learning) zadania nosi nazwę klasyfikacji. [Klasyfikacja binarna](#binary-classification) odwołuje się do przewidywania tylko dwóm kategoriom (na przykład klasyfikowania obrazów jako obraz dog lub cat). [Klasyfikacji wieloklasowej](#multiclass-classification) odwołuje się do przewidywania wielu kategorii (na przykład podczas klasyfikowania obrazów jako obraz określonych rasy pies).
 
-## <a name="coefficient-of-determination"></a>Współczynnik determinacji
+## <a name="coefficient-of-determination"></a>Determinacji
 
-W [regresji](#regression), metryki oceny, która wskazuje, jak dane pasuje do modelu. W zakresie od 0 do 1. Wartość 0 oznacza, że dane są losowych lub w inny sposób nie można dopasować do modelu. Wartość 1 oznacza, że model dokładnie odpowiada danych. Jest to często określane jako r<sup>2</sup>, R<sup>2</sup>, lub r kwadrat.
+W [regresji](#regression), metryki oceny, która wskazuje, jak dobrze pasuje do modelu danych. Z zakresu od 0 do 1. Wartość 0 oznacza, że dane są losowych lub w inny sposób nie można dopasować do modelu. Wartość 1 oznacza, że model dokładnie pasują do danych. To jest często nazywany r<sup>2</sup>, R<sup>2</sup>, lub r kwadrat.
 
-Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
 ## <a name="feature"></a>Funkcja
 
-Właściwość mierzalnych zjawisko mierzony, zwykle (dwa razy) wartość liczbową. Wiele funkcji są określane jako **wektor funkcji** i zwykle przechowywany jako `double[]`. Funkcje zdefiniuj najważniejsze czynniki zjawisko mierzony. Aby uzyskać więcej informacji, zobacz [funkcji](https://en.wikipedia.org/wiki/Feature_(machine_learning)) artykuł w witrynie Wikipedia.
+Właściwość mierzalne zjawisko mierzony, zazwyczaj (podwójny) wartość liczbową. Wiele funkcji są określane jako **wektor funkcji** i zazwyczaj przechowywane jako `double[]`. Funkcje definiują istotne cechy zjawisko mierzony. Aby uzyskać więcej informacji, zobacz [funkcji](https://en.wikipedia.org/wiki/Feature_(machine_learning)) artykuł w witrynie Wikipedia.
 
-## <a name="feature-engineering"></a>Inżynieria
+## <a name="feature-engineering"></a>Inżynieria funkcji
 
-Funkcja engineering jest proces, który obejmuje definiowania zestawu [funkcje](#feature) i rozwoju oprogramowania, które tworzy wektory funkcji zjawisko dostępnych danych, np. wyodrębniania funkcji. Aby uzyskać więcej informacji, zobacz [Inżynieria](https://en.wikipedia.org/wiki/Feature_engineering) artykuł w witrynie Wikipedia.
+Inżynieria funkcji to proces, który obejmuje zdefiniowanie zestawu [funkcji](#feature) i opracowywania oprogramowania, które tworzy wektorów funkcji z danych dostępnych zjawiskiem, czyli wyodrębniania funkcji. Aby uzyskać więcej informacji, zobacz [Inżynieria funkcji](https://en.wikipedia.org/wiki/Feature_engineering) artykuł w witrynie Wikipedia.
 
 ## <a name="f-score"></a>Wynik F
 
-W [klasyfikacji](#classification), metryki oceny, który równoważy [dokładności](#precision) i [odwołania](#recall).
+W [klasyfikacji](#classification), metryki oceny, która równoważy [dokładności](#precision) i [odwołania](#recall).
 
-Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
 
-## <a name="hyperparameter"></a>Hyperparameter
+## <a name="hyperparameter"></a>Hiperparametrycznego
 
-Parametr algorytmu uczenia maszynowego. Przykłady obejmują liczbę drzewa, aby dowiedzieć się w lesie decyzji lub rozmiar kroku w algorytmie spadku gradientu. Wartości typu *Hyperparameters* są ustawione przed uczenia modelu i kontrolować proces parametrów funkcji prognozowania, na przykład, porównanie punktów w drzewa decyzyjnego lub obciążenia w modelu regresji liniowej . Aby uzyskać więcej informacji, zobacz [Hyperparameter](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) artykuł w witrynie Wikipedia.
+Parametr algorytmu uczenia maszynowego. Przykłady obejmują liczbę drzewa, aby dowiedzieć się więcej w las decyzyjny lub rozmiar kroku w algorytmie spadku gradientu. Wartości typu *Hiperparametrów* są ustawiane przed uczenia modelu i określają sposób proces wyszukiwania tych parametrów w funkcji prognozowania, na przykład porównanie wskazuje drzewa decyzyjnego lub obciążenia w modelu regresji liniowej . Aby uzyskać więcej informacji, zobacz [Hiperparametrycznego](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) artykuł w witrynie Wikipedia.
 
 ## <a name="label"></a>Etykieta
 
-Element ma być przewidzieć z modelu uczenia maszynowego. Na przykład jest rodzaj dog lub przyszłe giełdowy.
+Element można przewidzieć przy użyciu modelu uczenia maszynowego. Na przykład rasy dog lub przyszłe cena akcji.
 
 ## <a name="log-loss"></a>Utrata dziennika
 
-W [klasyfikacji](#classification), metryki oceny charakteryzuje dokładność klasyfikatora. Jest mniejsze utrata dziennika, jest dokładniejsze klasyfikatora.
+W [klasyfikacji](#classification), metryki oceny, który charakteryzuje dokładność klasyfikatora. Jest mniejsze utrata dziennika, jest bardziej precyzyjne klasyfikatora.
 
-Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
 
-## <a name="mean-absolute-error-mae"></a>Średni bezwzględny błąd (MAE)
+## <a name="mean-absolute-error-mae"></a>Średni bezwzględny błąd (dostosowania)
 
-W [regresji](#regression), metryki oceny jest średnią wszystkich błędów modelu, który błąd modelu odległość między przewidywane [etykiety](#label) wartość i wartość prawidłowa etykieta.
+W [regresji](#regression), metryki oceny średnią wszystkich błędów modelu, w których jest błąd modelu odległość między przewidywane [etykiety](#label) i wartością prawidłowa etykieta.
 
-Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
 
 ## <a name="model"></a>Model
 
-Tradycyjnie parametrów funkcji prognozowania. Na przykład obciążenia w modelu regresji liniowej lub punkty podziału drzewa decyzyjnego. W ML.NET, model zawiera wszystkie informacje niezbędne do prognozowania [etykiety](#label) obiektu domeny (na przykład obraz lub tekst). Oznacza to, że modele ML.NET obejmuje kroki featurization niezbędne oraz parametrów dla funkcji prognozowania.
+Tradycyjnie parametry funkcji prognozowania. Na przykład obciążenia w modelu regresji liniowej lub punkty podziału drzewa decyzyjnego. W strukturze ML.NET, model zawiera wszystkie informacje niezbędne do prognozowania [etykiety](#label) obiektu domeny (na przykład obraz lub tekst). Oznacza to, że modele strukturze ML.NET zawierają niezbędne oraz parametry funkcji prognozowania czynności cechowania.
 
-## <a name="multiclass-classification"></a>wieloklasowej klasyfikacji
+## <a name="multiclass-classification"></a>Wieloklasowej klasyfikacji
 
-A [klasyfikacji](#classification) przypadek where [etykiety](#label) jest jednym z co najmniej trzech klas. Aby uzyskać więcej informacji, zobacz [Wieloklasowej klasyfikacji](tasks.md#multiclass-classification) sekcji [Machine learning zadania](tasks.md) tematu.
+A [klasyfikacji](#classification) zamierzone, gdzie [etykiety](#label) jest jednym z trzech lub więcej klas. Aby uzyskać więcej informacji, zobacz [klasyfikacji Wieloklasowej](tasks.md#multiclass-classification) części [zadania uczenia maszynowego](tasks.md) tematu.
 
-## <a name="n-gram"></a>N-gramów
+## <a name="n-gram"></a>N-gram
 
-Funkcja schemat wyodrębniania danych tekstowych: zmieni się w dowolnej kolejności N słowa [funkcji](#feature) wartość.
+Funkcja wyodrębniania schemat danych tekstowych: dowolnej sekwencji wyrazów N jest przekształcany [funkcji](#feature) wartość.
 
-## <a name="numerical-feature-vector"></a>Wektor funkcji numerycznych
+## <a name="numerical-feature-vector"></a>Wektor liczbowych
 
-A [funkcji](#feature) wektor zawiera tylko wartości numeryczne. Jest to podobne do `double[]`.
+A [funkcji](#feature) wektor składający się tylko z wartości liczbowe. Jest to podobne do `double[]`.
 
-## <a name="pipeline"></a>Potoku
+## <a name="pipeline"></a>Potok
 
-Wszystkie operacje potrzeba aby dopasować modelu do zestawu danych. Potok składa się z import danych, przekształcania, featurization i uczenia kroki. Po przygotowaniu potoku zmieni się w modelu.
+Wszystkie operacje wymagane do dopasowania modelu do zestawu danych. Potok składa się z importowania danych, przekształcania, cechowania i nauki kroki. Po przygotowaniu potoku zmieni się w modelu.
 
 ## <a name="precision"></a>Dokładność
 
-W [klasyfikacji](#classification), dokładność dla klasy jest liczba elementów poprawnie przewidzieć jako należące do tej klasy podzielona przez całkowitą liczbę elementów przewidzieć jako należące do klasy.
+W [klasyfikacji](#classification), dokładność dla klasy jest liczba elementów, poprawnie przewidzieć jako należące do tej klasy podzielona przez całkowitą liczbę elementów, które przewiduje jako należące do tej klasy.
 
-Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Odwołania
 
-W [klasyfikacji](#classification), liczba elementów poprawnie przewidzieć jako należące do tej klasy podzielona przez całkowitą liczbę elementów, które faktycznie należą do klasy jest odwołanie do klasy.
+W [klasyfikacji](#classification), odwołania do klasy jest liczba elementów, poprawnie przewidzieć jako należące do tej klasy podzielona przez całkowitą liczbę elementów, które faktycznie należą do klasy.
 
-Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
 
-## <a name="regression"></a>Regresja
+## <a name="regression"></a>Regresji
 
-A [nadzorowanego uczenia maszynowego](#supervised-machine-learning) zadań dane wyjściowe w przypadku rzeczywistych wartości, na przykład, double. Przykładami Prognozowanie cen akcji. Aby uzyskać więcej informacji, zobacz [regresji](tasks.md#regression) sekcji [Machine learning zadania](tasks.md) tematu.
+A [uczenia maszynowego w trybie nadzorowanym](#supervised-machine-learning) zadań, której dane wyjściowe jest wartością rzeczywistą, na przykład, double. Przykłady obejmują Prognozowanie cen akcji. Aby uzyskać więcej informacji, zobacz [regresji](tasks.md#regression) części [zadania uczenia maszynowego](tasks.md) tematu.
 
 ## <a name="relative-absolute-error"></a>Względny błąd absolutny
 
-W [regresji](#regression), metryki oceny sumę wszystkich błędów absolutnych podzielona przez sumę odległości między poprawne [etykiety](#label) wartości i średnią wszystkich wartości etykiet Popraw.
+W [regresji](#regression), metryki oceny, która jest sumą wszystkich błędów absolutnych podzielona przez sumę odległości między poprawne [etykiety](#label) wartości i średnią wszystkich Popraw wartości etykiety.
 
-## <a name="relative-squared-error"></a>Błąd względny średniokwadratowy
+## <a name="relative-squared-error"></a>Względny błąd kwadrat
 
-W [regresji](#regression), metryki oceny, który jest sumą wszystkich kwadrat bezwzględnych błędów podzielona przez sumę kwadratów odległości między poprawne [etykiety](#label) wartości i średnią wszystkich wartości etykiet Popraw.
+W [regresji](#regression), metryki oceny, która jest sumą wszystkich kwadrat błędów absolutnych i podzielona przez suma kwadratów odległości między poprawne [etykiety](#label) wartości i średnią wszystkich Popraw wartości etykiety.
 
 ## <a name="root-of-mean-squared-error-rmse"></a>Główny średniej kwadrat błąd (RMSE)
 
 W [regresji](#regression), metryki oceny pierwiastek kwadratowy ze średniej kwadratów błędów.
 
-Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
 
-## <a name="supervised-machine-learning"></a>Uczenie maszynowe nadzorowanym
+## <a name="supervised-machine-learning"></a>Uczenie maszynowe nadzorowanych
 
-Podklasa machine learning, w którym żądany model przewiduje etykietę danych jeszcze niewidoczne. Przykłady klasyfikacji i regresji oraz strukturalnych prognozowania. Aby uzyskać więcej informacji, zobacz [uczenia nadzorowanego](https://en.wikipedia.org/wiki/Supervised_learning) artykuł w witrynie Wikipedia.
+Podklasa klasy usługi machine learning, w którym żądany model przewiduje etykiety danych, ale niewidzianych. Przykłady obejmują klasyfikacji, regresji i ze strukturą prognozy. Aby uzyskać więcej informacji, zobacz [uczenia nadzorowanego](https://en.wikipedia.org/wiki/Supervised_learning) artykuł w witrynie Wikipedia.
 
-## <a name="training"></a>Szkolenia
+## <a name="training"></a>Szkolenie
 
-Proces identyfikowania [modelu](#model) dla danego szkoleniowy zestaw danych. Model liniowy oznacza to, znajdowanie wag. Drzewa obejmuje identyfikowanie punktów podziału.
+Proces identyfikowania [modelu](#model) dla danego szkoleniowy zestaw danych. Dla modelu liniowego oznacza to, znajdowanie wag. Dla drzewa obejmuje to identyfikowanie punktów podziału.
 
 ## <a name="transform"></a>Transformacja
 
-A [potoku](#pipeline) składnika przekształcenia danych. Na przykład z pliku tekstowego wektorowe liczb.
+A [potoku](#pipeline) składnika, który przekształca dane. Na przykład z pliku tekstowego do wektor numerów.
 
 ## <a name="unsupervised-machine-learning"></a>Uczenie maszynowe nienadzorowanych
 
-Podklasa machine learning, w którym żądanego modelu znajduje ukryte (lub ukryty) struktury w danych. Przykładami klaster, modelowania tematu i zmniejszenie wymiary. Aby uzyskać więcej informacji, zobacz [uczenie nienadzorowane](https://en.wikipedia.org/wiki/Unsupervised_learning) artykuł w witrynie Wikipedia.
+Podklasa klasy usługi machine learning, w którym żądany model znajduje struktury ukryty (lub ukrytego) w danych. Przykłady obejmują klastrowania, modelowanie tematu i wymiarowości. Aby uzyskać więcej informacji, zobacz [uczenie nienadzorowane](https://en.wikipedia.org/wiki/Unsupervised_learning) artykuł w witrynie Wikipedia.

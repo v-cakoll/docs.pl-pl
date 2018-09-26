@@ -3,11 +3,11 @@ title: + (Dodaj)
 ms.date: 03/30/2017
 ms.assetid: 51769b02-a8f7-4177-9e99-bbd10e77092c
 ms.openlocfilehash: a3c41ef8cf393a4d1b1deb362d6a3614558a34ba
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703794"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086265"
 ---
 # <a name="-add"></a>+ (Dodaj)
 Dodaje dwie liczby.  

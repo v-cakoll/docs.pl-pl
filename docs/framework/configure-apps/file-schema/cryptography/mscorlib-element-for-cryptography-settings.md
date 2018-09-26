@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 292937000eb1baca191c0960e8e496a128ee4696
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b5da49ff22cfa6bd1c3e4d574865eb5e61dc73fb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743566"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085699"
 ---
 # <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt; Element ustawień kryptografii
-Zawiera [ \<cryptographysettings — > elementu](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
+Zawiera [ \<cryptographysettings — > element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
   
  \<Konfiguracja >  
 \<mscorlib >  
@@ -50,7 +49,7 @@ Zawiera [ \<cryptographysettings — > elementu](../../../../../docs/framework/c
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie  **\<mscorlib >** element odwołuje się do klasy kryptografii i skonfigurować środowisko uruchomieniowe. Ciąg "RSA" można następnie przekazać do <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> — metoda i użyj <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodę, aby zwrócić `MyCryptoRSAClass` obiektu.  
+ Poniższy przykład pokazuje, jak używać  **\<mscorlib >** element odwołuje się do klasy kryptografii i konfigurowanie środowiska uruchomieniowego. Ciąg "RSA" można następnie przekazać do <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metody i użyj <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodę, aby zwrócić `MyCryptoRSAClass` obiektu.  
   
 ```xml  
 <configuration>  

@@ -8,24 +8,23 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ce351a87e70b09a2f68654af817e28fa3145d79d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01ad849090bd66ba7e0b4e062f78ad7a04ad059d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493223"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084686"
 ---
 # <a name="how-to-create-a-secure-session"></a>Instrukcje: Tworzenie bezpiecznej sesji
-Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) powiązanie, powiązania dostarczane przez system w systemie Windows Communication Foundation (WCF) automatycznie użyj bezpiecznych sesji po włączeniu zabezpieczeń wiadomości.  
+Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) powiązania powiązania dostarczane przez system w Windows Communication Foundation (WCF) automatycznie używać bezpiecznych sesji po włączeniu zabezpieczenia wiadomości.  
   
- Domyślnie bezpiecznej sesji po serwera sieci Web, który zostanie odtworzony. Podczas ustanawiania sesji bezpiecznych, klient i usługa pamięci podręcznej klucza, który jest skojarzony z bezpieczną sesję. Jak komunikaty są wymieniane, są przekazywane tylko identyfikator, aby klucz pamięci podręcznej. Jeśli serwer sieci Web zostanie odtworzony, pamięci podręcznej odtworzeniem również, tak, aby serwer sieci Web nie może pobrać klucz pamięci podręcznej dla identyfikatora. W takim przypadku jest zwracany wyjątek powrotem do klienta. Serwer sieci Web odtwarzane przełączniki bezpiecznych sesji, które używają token kontekstu zabezpieczeń stanową (SCT). Aby uzyskać więcej informacji o używaniu stanowe SCT w ramach bezpiecznej sesji, zobacz [porady: Tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+ Domyślnie bezpiecznych sesji nie przeżywa serwera sieci Web, która zostanie odtworzona. Podczas ustanawiania sesji bezpiecznego, klient i usługa pamięci podręcznej klucza, który jest skojarzony z bezpiecznej sesji. Ponieważ komunikaty są wymieniane, wymieniane są tylko identyfikator, aby klucz pamięci podręcznej. Jeśli serwer sieci Web zostanie odtworzona, pamięć podręczna jest recyklingowi, taki sposób, że serwer sieci Web nie może pobrać klucza pamięci podręcznej dla identyfikatora. Jeśli tak się stanie, wyjątek jest generowany ponownie do klienta. Bezpieczne sesje, które używają tokenu kontekstu zabezpieczeń stanową (SCT) może nie są unieważniane serwer sieci Web z odtwarzania. Aby uzyskać więcej informacji na temat w ramach bezpiecznej sesji przy użyciu stanowych SCT zobacz [porady: Tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
-### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Aby określić, że usługa używa bezpiecznych sesji przy użyciu jednego powiązania dostarczane przez system  
+### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Aby określić, że usługa używa bezpiecznej sesji przy użyciu jednej z powiązań dostarczanych przez system  
   
--   Skonfiguruj usługę do używania wiązania dostarczane przez system, które obsługuje zabezpieczenia wiadomości.  
+-   Skonfiguruj usługę do używania powiązania dostarczane przez system, które obsługuje zabezpieczenia wiadomości.  
   
-     Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) powiązanie, gdy powiązania dostarczane przez system są skonfigurowane do używania zabezpieczeń wiadomości, WCF automatycznie używa bezpiecznych sesji. W poniższej tabeli wymieniono powiązania dostarczane przez system obsługi zabezpieczeń komunikatów i określa, czy zabezpieczenia wiadomości są domyślnego mechanizmu zabezpieczeń.  
+     Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) powiązania, kiedy powiązania dostarczane przez system są skonfigurowane do używania zabezpieczeń wiadomości, WCF, automatycznie używa bezpiecznych sesji. W poniższej tabeli wymieniono powiązania dostarczane przez system, które obsługują zabezpieczenia komunikatów i tego, czy zabezpieczenia wiadomości są domyślnego mechanizmu zabezpieczeń.  
   
     |Powiązania dostarczane przez system|Element konfiguracji|Zabezpieczenia komunikatów na domyślnie|  
     |------------------------------|---------------------------|------------------------------------|  
@@ -36,7 +35,7 @@ Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/confi
     |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Nie|  
     |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Nie|  
   
-     Poniższy przykład kodu wykorzystuje konfiguracji, aby określić powiązanie o nazwie `wsHttpBinding_Calculator` używającą [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), zabezpieczenia wiadomości i bezpieczne sesje.  
+     Poniższy przykład kodu używa konfiguracji, aby określić powiązanie o nazwie `wsHttpBinding_Calculator` , który używa [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), zabezpieczenia wiadomości i bezpieczne sesje.  
   
     ```xml  
     <bindings>  
@@ -50,21 +49,21 @@ Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/confi
     </bindings>  
     ```  
   
-     Poniższy przykład kodu Określa, że [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), zabezpieczenia wiadomości i bezpieczne sesje są używane do zabezpieczania `secureCalculator` usługi.  
+     Poniższy przykład kodu Określa, że [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), zabezpieczenia wiadomości i bezpieczne sesje służą do zabezpieczania `secureCalculator` usługi.  
   
      [!code-csharp[c_CreateSecureSession#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#1)]
      [!code-vb[c_CreateSecureSession#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#1)]  
   
     > [!NOTE]
-    >  Bezpieczne sesje, można wyłączyć dla [ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) przez ustawienie `establishSecurityContext` atrybutu `false`. Dla innych dostarczane przez system powiązań można tylko wyłączyć bezpiecznej sesji przez utworzenie niestandardowego powiązania.  
+    >  Bezpieczne sesje mogą zostać wyłączone [ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) , ustawiając `establishSecurityContext` atrybutu `false`. Dla innych powiązań dostarczanych przez system można tylko wyłączyć bezpiecznych sesji przez utworzenie niestandardowego powiązania.  
   
-### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Aby określić, że usługa używa bezpiecznych sesji przy użyciu wiązania niestandardowego  
+### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Aby określić, że usługa używa bezpiecznej sesji przy użyciu niestandardowego powiązania  
   
--   Tworzenie niestandardowego powiązania, który określa, że wiadomości SOAP są chronione przez bezpiecznej sesji.  
+-   Tworzenie niestandardowego powiązania, który określa, że komunikaty protokołu SOAP są chronione przez bezpiecznej sesji.  
   
      Aby uzyskać więcej informacji na temat tworzenia niestandardowego powiązania, zobacz [porady: dostosowywanie powiązania System-Provided](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
-     Poniższy przykład kodu wykorzystuje konfiguracji do określenia niestandardowego powiązania tej wiadomości za pomocą bezpiecznej sesji.  
+     Poniższy przykład kodu używa konfiguracji do określenia niestandardowego powiązania tej wiadomości, przy użyciu bezpiecznej sesji.  
   
     ```xml  
     <bindings>  
@@ -80,7 +79,7 @@ Z wyjątkiem produktów [ \<basicHttpBinding >](../../../../docs/framework/confi
     </bindings>  
     ```  
   
-     Poniższy przykład kodu tworzy niestandardowego powiązania, który używa <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> tryb uwierzytelniania do ładowania początkowego bezpiecznej sesji.  
+     Poniższy przykład kodu tworzy niestandardowego powiązania, który używa <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> tryb uwierzytelniania uruchomienie bezpiecznej sesji.  
   
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  

@@ -3,19 +3,18 @@ title: System.ServiceModel.Security.SecurityTokenAuthenticatorOpened
 ms.date: 03/30/2017
 ms.assetid: c6cb0065-b4f6-40eb-89ac-5e8f0e05e0de
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: fea4379081b70688caf08330f8aa5fa61fce4497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ac8a5f439a52e922e86ece31fd75bfadfec07d6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33483879"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170668"
 ---
 # <a name="systemservicemodelsecuritysecuritytokenauthenticatoropened"></a>System.ServiceModel.Security.SecurityTokenAuthenticatorOpened
 System.ServiceModel.Security.SecurityTokenAuthenticatorOpened  
   
 ## <a name="description"></a>Opis  
- Otwarto wystawcę uwierzytelnienia tokenów zabezpieczających.  
+ Wystawcy uwierzytelniania tokenu zabezpieczeń został otwarty.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  

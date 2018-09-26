@@ -1,20 +1,15 @@
 ---
 title: Plik Project.JSON i programu Visual Studio 2015 za pomocą programu .NET Core
 description: Gdzie można znaleźć dokumentację w wersji wstępnej narzędzia dla platformy .NET Core i ASP.NET Core (plik project.json i programu Visual Studio 2015).
-keywords: Plik Project.JSON, programu Visual Studio 2015, .NET Core, ASP.NET Core
 author: mairaw
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: e282c43b-593e-40a6-af91-de0babcd7b72
-ms.openlocfilehash: 2bfacd28a1560cd60f252b8f8368a8abdddab5bd
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: f5f4dd8f335d940d5c63baef73e83dd3d0eccf6e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "34566061"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072803"
 ---
 # <a name="projectjson-and-visual-studio-2015-with-net-core"></a>Plik Project.JSON i programu Visual Studio 2015 za pomocą programu .NET Core
 

@@ -1,24 +1,23 @@
 ---
-title: Niestandardowe programy obsługi tokenu
+title: Niestandardowe programy obsługi tokenów
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 18be4babf7e9cfbfe9ebfb43da6f98a8544b2fe6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399980"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082386"
 ---
-# <a name="custom-token-handlers"></a>Niestandardowe programy obsługi tokenu
-W tym temacie omówiono tokenu programy obsługi zdarzeń w wersji WIF i jak są one używane do przetwarzania tokenów. Temat obejmuje również problemy, co jest niezbędne do utworzenia niestandardowych tokenu obsługi typów tokenu, które nie są obsługiwane w wersji WIF domyślnie.  
+# <a name="custom-token-handlers"></a>Niestandardowe programy obsługi tokenów
+W tym temacie omówiono programy obsługi tokenów programu WIF i jak są one używane do przetwarzania tokenów. Temat obejmuje także, co jest potrzebne utworzyć niestandardowe programy obsługi tokenów dla tokenu typów, które nie są obsługiwane w WIF domyślnie.  
   
-## <a name="introduction-to-token-handlers-in-wif"></a>Wprowadzenie do obsługi tokenu w WIF  
- WIF zależy od obsługi tokenu zabezpieczeń do tworzenia, odczytu, zapisu i sprawdzania poprawności tokenów dla jednostki uzależnionej aplikacji firmy (RP) lub usługę tokenu zabezpieczającego (STS). Programy obsługi tokenu są punkty rozszerzeń dla możesz dodać niestandardowe programu obsługi tokenów w potoku WIF lub dostosować sposób zarządzania w programie istniejącego programu obsługi tokenów tokenów. WIF udostępnia dziewięć obsługi tokenu zabezpieczeń, które mogą zostać zmodyfikowane lub całkowicie zastąpiona w celu zmiany funkcji w razie potrzeby.  
+## <a name="introduction-to-token-handlers-in-wif"></a>Wprowadzenie do programy obsługi tokenów w programu WIF  
+ Program WIF opiera się na programy obsługi tokenów zabezpieczających do tworzenia, odczytu, zapisu i sprawdzania poprawności tokenów dla aplikacji jednostki uzależnionej (RP) lub usługę tokenu zabezpieczającego (STS). Programy obsługi tokenów są punkty rozszerzeń dla użytkownika do dodawania programu obsługi tokenów niestandardowych w potoku programu WIF lub dostosować sposób, że istniejącego programu obsługi tokenów zarządza tokenów. Program WIF udostępnia dziewięć wbudowanych programy obsługi tokenów zabezpieczających, które mogą zostać zmodyfikowane lub całkowicie zastąpiona w celu zmiany funkcji zgodnie z potrzebami.  
   
-## <a name="built-in-security-token-handlers-in-wif"></a>Token obsługi zabezpieczeń w WIF  
- Dziewięć klasy programu obsługi tokenów zabezpieczeń pochodzących od abstrakcyjna klasa podstawowa zawiera WIF 4.5 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
+## <a name="built-in-security-token-handlers-in-wif"></a>Programy obsługi tokenów zabezpieczeń wbudowanych w program WIF  
+ Program WIF 4.5 zawiera dziewięć klasy programu obsługi tokenów zabezpieczeń, które wynikają z abstrakcyjna klasa bazowa <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
   
 -   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -38,14 +37,14 @@ W tym temacie omówiono tokenu programy obsługi zdarzeń w wersji WIF i jak są
   
 -   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## <a name="adding-a-custom-token-handler"></a>Dodawanie niestandardowego programu obsługi tokenów  
- Niektóre typy tokenów, takie jak proste tokenów sieci Web (SWT) i tokenów sieci Web JSON (JWT) nie mają wbudowanej obsługi tokenu podał WIF. Te typy tokenów i inne osoby, które nie mają wbudowanej obsługi należy wykonać następujące kroki, aby utworzyć niestandardowy program obsługi tokena.  
+## <a name="adding-a-custom-token-handler"></a>Dodawanie programu obsługi tokenów niestandardowych  
+ Niektóre typy tokenów, takich jak proste tokenów sieci Web (SWT) i tokenów Web JSON (JWT) nie mają wbudowane programy obsługi tokenów, dostarczone przez programu WIF. Te typy tokenów i inne osoby, które nie mają wbudowanej obsługi należy wykonać następujące kroki, aby utworzyć niestandardowy program obsługi tokena.  
   
-#### <a name="adding-a-custom-token-handler"></a>Dodawanie niestandardowego programu obsługi tokenów  
+#### <a name="adding-a-custom-token-handler"></a>Dodawanie programu obsługi tokenów niestandardowych  
   
-1.  Utwórz nową klasę, która jest pochodną <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
+1.  Utwórz nową klasę, która pochodzi od klasy <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
   
-2.  Zastąp następujące metody i własne implementacji:  
+2.  Zastąpić następujące metody i podaj Twojej własnej implementacji:  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -59,7 +58,7 @@ W tym temacie omówiono tokenu programy obsługi zdarzeń w wersji WIF i jak są
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Dodaj odwołanie do nowego niestandardowego programu obsługi tokenów w *Web.config* lub *App.config* pliku poziomu  **\<system.identityModel >** sekcja, która dotyczy WIF. Na przykład następujący kod konfiguracji Określa nowy token program obsługi o nazwie **MyCustomTokenHandler** który znajduje się w **CustomToken** przestrzeni nazw.  
+3.  Dodaj odwołanie do nowego niestandardowego programu obsługi tokenów w *Web.config* lub *App.config* plików w ramach  **\<system.identityModel >** sekcji, która ma zastosowanie do programu WIF. Na przykład, następujące znaczniki konfiguracji Określa nowy token programu obsługi o nazwie **MyCustomTokenHandler** które znajdują się na **CustomToken** przestrzeni nazw.  
   
     ```xml  
     <system.identityModel>  
@@ -71,7 +70,7 @@ W tym temacie omówiono tokenu programy obsługi zdarzeń w wersji WIF i jak są
     </system.identityModel>  
     ```  
   
-     Należy pamiętać, że jeśli udostępniasz własnego programu obsługi tokenów do obsługi typ tokenu, który ma już wbudowanego programu obsługi tokenów, należy dodać  **\<Usuń >** elementu, aby usunąć domyślny program obsługi i zamiast tego użyj programu obsługi niestandardowej. Na przykład następująca konfiguracja zastępuje domyślny <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> z niestandardowego programu obsługi tokenów:  
+     Należy pamiętać, że jeśli udostępniasz własnego programu obsługi tokenów, aby obsłużyć typ tokenu, który ma już wbudowanego programu obsługi tokenów, należy dodać  **\<Usuń >** element, aby usunąć domyślny program obsługi i zamiast tego użyj programu obsługi niestandardowych. Na przykład następująca konfiguracja zastępuje domyślny <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> za pomocą programu obsługi tokenów niestandardowych:  
   
     ```xml  
     <system.identityModel>  

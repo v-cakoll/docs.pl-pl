@@ -12,11 +12,11 @@ ms.assetid: 5e87881c-9c13-4b52-8ad1-e34bb46e8aaa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c62a469b3e31283e5790c747092a8fe504ef8c2a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579202"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47107912"
 ---
 # <a name="security-changes-in-the-net-framework"></a>Zmiany zabezpieczeń w programie .NET Framework
 Najważniejsze zmiany w zabezpieczeniach [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] trwa — silne nazwy. Zobacz [rozszerzone silne nazewnictwo](../../../docs/framework/app-domains/enhanced-strong-naming.md) opis tych zmian.  

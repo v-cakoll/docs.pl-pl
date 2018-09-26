@@ -1,19 +1,18 @@
 ---
-title: '&lt;httpListener&gt; elementu (ustawienia sieciowe)'
+title: '&lt;httpListener&gt; — Element (ustawienia sieci)'
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a327f757f26c815d5b2cffe179af68bbe3d152eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7a8fbf172548ea68874f3e6c6c6c7a04bf17be19
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744879"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078607"
 ---
-# <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt; elementu (ustawienia sieciowe)
-Dostosowuje parametry używane przez <xref:System.Net.HttpListener> klasy.  
+# <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt; — Element (ustawienia sieci)
+Dostosowuje parametrów używanych przez <xref:System.Net.HttpListener> klasy.  
   
  \<Konfiguracja >  
 \<system.net>  
@@ -37,7 +36,7 @@ Dostosowuje parametry używane przez <xref:System.Net.HttpListener> klasy.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|unescapeRequestUrl|Wartość logiczna, która wskazuje, czy <xref:System.Net.HttpListener> wystąpienie korzysta raw URI niezmienionym znaczeniu zamiast przekonwertowanego identyfikatora URI.|  
+|unescapeRequestUrl|Wartość logiczna, która wskazuje, czy <xref:System.Net.HttpListener> wystąpienie używa pierwotne URI o niezmienionym znaczeniu zamiast przekonwertowanego identyfikatora URI.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -46,78 +45,78 @@ Dostosowuje parametry używane przez <xref:System.Net.HttpListener> klasy.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[Ustawienia](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Służy do konfigurowania opcji sieci podstawowej dla <xref:System.Net> przestrzeni nazw.|  
+|[Ustawienia](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net> przestrzeni nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
- **UnescapeRequestUrl** atrybut wskazuje, czy <xref:System.Net.HttpListener> używa raw URI niezmienionym znaczeniu zamiast przekonwertowanego identyfikatora URI, gdzie wartości procent, kodowane są konwertowane, i są pobierane z procedurą normalizacji.  
+ **UnescapeRequestUrl** atrybut wskazuje, jeśli <xref:System.Net.HttpListener> używa pierwotne URI o niezmienionym znaczeniu zamiast przekonwertowanego identyfikator URI, gdzie wszystkie zakodowane w formacie procent wartości są konwertowane i są podjąć inne kroki normalizacji.  
   
- Gdy <xref:System.Net.HttpListener> wystąpienia odbiera żądanie za pośrednictwem `http.sys` usługi, tworzy wystąpienie ciągu identyfikatora URI dostarczonych przez `http.sys`i uwidacznia go jako <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> właściwości.  
+ Gdy <xref:System.Net.HttpListener> wystąpienia odbiera żądanie za pośrednictwem `http.sys` usługi, tworzy wystąpienie ciągu identyfikatora URI, dostarczone przez `http.sys`i uwidacznia go jako <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> właściwości.  
   
- `http.sys` Usługi udostępnia dwa ciągi identyfikatora URI żądania:  
+ `http.sys` Service udostępnia dwa ciągi identyfikatora URI żądania:  
   
--   Nieprzetworzona identyfikatora URI.  
+-   Identyfikator URI nieprzetworzone  
   
--   Przekonwertowana identyfikatora URI.  
+-   Przekonwertowana identyfikatora URI  
   
- Nieprzetworzona identyfikator URI jest <xref:System.Uri?displayProperty=nameWithType> dostępne w wierszu żądania HTTP żądania:  
+ Nieprzetworzone identyfikator URI jest <xref:System.Uri?displayProperty=nameWithType> podane w wierszu żądania żądania HTTP:  
   
  `GET /path/`  
   
  `Host: www.contoso.com`  
   
- Nieprzetworzone udostępniane przez identyfikator URI `http.sys` dla żądania wymienionych powyżej, jest "/ path /". Reprezentuje ciąg następujący zlecenie HTTP, jak została wysłana przez sieć.  
+ Nieprzetworzone dostarczone przez identyfikator URI `http.sys` dla żądania, o których wspomniano powyżej, jest "/ path /". Reprezentuje ciąg po zlecenie HTTP, ponieważ została wysłana przez sieć.  
   
- `http.sys` Usługi tworzy przekonwertowanego identyfikatora URI na podstawie informacji dostępnych w żądaniu za pomocą identyfikatora URI, dostępne w wierszu żądania HTTP i powinny zostać przekazane nagłówek hosta, aby określić serwer pochodzenia żądania. Jest to realizowane przez porównanie informacji z żądania z zestawem zarejestrowanych prefiksów identyfikatorów URI. W dokumentacji zestawu SDK serwera HTTP odwołuje się do tego przekonwertowanego identyfikatora URI jako struktura HTTP_COOKED_URL.  
+ `http.sys` Usługa tworzy przekonwertowanego identyfikatora URI z informacjami w żądaniu przy użyciu podanego w wierszu żądania HTTP identyfikatora URI i nagłówek hosta, aby określić serwer pochodzenia żądania powinien być przekazywany do. Odbywa się przez porównywanie informacji dotyczących z żądania z zestawem zarejestrowanych prefiksów identyfikatorów URI. W dokumentacji zestawu SDK serwera HTTP odwołuje się do tego przekonwertowanego identyfikatora URI jako struktury HTTP_COOKED_URL.  
   
- Aby można było porównać żądanie z zarejestrowanych prefiksów identyfikatorów URI, należy jednak wykonać niektóre normalizacji na żądanie. Dla przykładu powyżej przekonwertowanego identyfikator URI będzie w następujący sposób:  
+ Aby można było porównać żądania przy użyciu zarejestrowanego prefiksów identyfikatorów URI, musi wykonać niektóre normalizacji na żądanie. W przykładzie powyżej przekonwertowanego identyfikator URI będzie następujący:  
   
  `http://www.contoso.com/path/`  
   
- `http.sys` Usługi łączy <xref:System.Uri.Host%2A?displayProperty=nameWithType> wartość właściwości i ciąg w wierszu żądania do utworzenia przekonwertowanego identyfikatora URI. Ponadto `http.sys` i <xref:System.Uri?displayProperty=nameWithType> klasy również wykonuje następujące czynności:  
+ `http.sys` Usługi łączy w sobie <xref:System.Uri.Host%2A?displayProperty=nameWithType> wartości właściwości, a ciąg w wierszu żądania do utworzenia przekonwertowanego identyfikatora URI. Ponadto `http.sys` i <xref:System.Uri?displayProperty=nameWithType> klasy również wykonuje następujące czynności:  
   
--   Wyrejestruj specjalne procent wszystkich wartości zakodowany.  
+-   ONZ anuluje wszystkie zakodowany wartość procentowa.  
   
--   Konwertuje procent, kodowane znaki spoza zestawu ASCII w reprezentacji znaków UTF-16. Należy pamiętać, że oraz znaków Unicode (kodowanie Unicode w formacie % uXXXX) są obsługiwane znaki UTF-8 i ANSI/zestawów znaków Dwubajtowych.  
+-   Konwertuje kodowany w formacie procent znaki spoza zestawu ASCII w reprezentacji znaków UTF-16. Należy pamiętać, że UTF-8 i ANSI/DBCS są obsługiwane znaki oraz znaki Unicode (kodowanie Unicode przy użyciu formatu uXXXX %).  
   
--   Wykonuje inne czynności normalizacji, takie jak ścieżka kompresji.  
+-   Wykonuje inne czynności normalizacji, takie jak kompresja ścieżki.  
   
- Ponieważ żądanie nie zawiera żadnych informacji o kodowanie używane z algorytmem procent wartości, nie może być określić poprawne kodowanie właśnie, analizując kodowany w formacie procent wartości.  
+ Ponieważ żądanie nie zawiera żadnych informacji o kodowanie używane do zakodowane w formacie procent wartości, nie może być określić poprawne kodowanie przez analizowanie zakodowane w formacie procent wartości.  
   
- W związku z tym `http.sys` zawiera dwa klucze rejestru do modyfikowania proces:  
+ W związku z tym `http.sys` zawiera dwa klucze rejestru do modyfikowania procesu:  
   
 |Klucz rejestru|Wartość domyślna|Opis|  
 |------------------|-------------------|-----------------|  
-|EnableNonUTF8|1|Jeśli zero, `http.sys` akceptuje tylko adresy URL algorytmem UTF-8.<br /><br /> Jeśli niezerową, `http.sys` również akceptuje kodowaniu ANSI lub kodowany w formacie DBCS adresów URL w żądaniach.|  
-|FavorUTF8|1|Jeśli niezerową, `http.sys` zawsze próbuje dekodowanie adresu URL jako UTF-8 najpierw; Jeśli tej konwersji nie powiedzie się i EnableNonUTF8 jest różna od zera, sterownik Http.sys, a następnie próbuje zdekodować kodowaniu ANSI lub zestawów znaków Dwubajtowych.<br /><br /> Jeśli zero (i EnableNonUTF8 jest różna od zera) `http.sys` podejmuje próbę zdekodowania kodowaniu ANSI lub DBCS; Jeśli się nie powiedzie, próby konwersji UTF-8.|  
+|EnableNonUTF8|1|Jeśli zero, `http.sys` akceptuje tylko adresy URL algorytmem UTF-8.<br /><br /> Jeśli różna od zera, `http.sys` akceptuje także kodowaniu ANSI lub zakodowane w formacie DBCS adresy URL w żądaniach.|  
+|FavorUTF8|1|Jeśli różna od zera, `http.sys` zawsze próbuje dekodowanie adresu URL jako UTF-8 najpierw; Jeśli tej konwersji nie powiedzie się i EnableNonUTF8 jest różna od zera, sterownik Http.sys, a następnie próbuje go dekodować w kodowaniu ANSI lub znaków Dwubajtowych.<br /><br /> Jeśli zero i EnableNonUTF8 jest różna od zera, `http.sys` podejmuje próbę zdekodowania kodowaniu ANSI lub znaków Dwubajtowych; Jeśli to się nie powiedzie, podejmuje próby konwersji UTF-8.|  
   
- Gdy <xref:System.Net.HttpListener> odbiera żądanie, używa przekonwertowanego identyfikatora URI z `http.sys` jako wejściowych do <xref:System.Net.HttpListenerRequest.Url%2A> właściwości.  
+ Gdy <xref:System.Net.HttpListener> odbiera żądanie, używa ona przekonwertowana identyfikatora URI z `http.sys` jako danych wejściowych do <xref:System.Net.HttpListenerRequest.Url%2A> właściwości.  
   
- Istnieje potrzeba do obsługi znaki oprócz znaków i liczb w identyfikatorów URI. Przykładem jest następujący identyfikator URI, który służy do pobierania informacji klienta dla klienta numer "1/3812":  
+ Istnieje potrzeba do obsługi znaki oprócz znaków i numery identyfikatorów URI. Przykładem jest następujący identyfikator URI, który służy do pobierania informacji klienta dla klientów number "1/3812":  
   
  `http://www.contoso.com/Customer('1%2F3812')/`  
   
- Należy zwrócić uwagę ukośnika procent, kodowane w identyfikatorze Uri (% 2F). Jest to konieczne, ponieważ w takim przypadku znaku ukośnika reprezentuje danych i nie ogranicznik ścieżki.  
+ Należy pamiętać, ukośnika procent, kodowane w identyfikatorze Uri (% 2F). Jest to konieczne, ponieważ w tym przypadku reprezentuje znak ukośnika, danych i nie ogranicznika ścieżka.  
   
- Przekazywanie ciągu identyfikatora Uri konstruktora doprowadzi do następującego identyfikatora URI:  
+ Przekazywanie ciągu identyfikatora Uri konstruktora doprowadzi do następujący identyfikator URI:  
   
  `http://www.contoso.com/Customer('1/3812')/`  
   
- Dzielenie na jego segmenty ścieżki spowoduje następujące elementy:  
+ Dzielenie ścieżkę na jej segmenty mogłoby spowodować następujące elementy:  
   
  `Customer('1`  
   
  `3812')`  
   
- To nie jest celem nadawca żądania.  
+ Nie jest celem nadawca żądania.  
   
- Jeśli **unescapeRequestUrl** atrybut ma ustawioną **false**, a następnie po <xref:System.Net.HttpListener> odbiera żądanie, używa raw URI zamiast przekonwertowanego identyfikatora URI z `http.sys` jako dane wejściowe <xref:System.Net.HttpListenerRequest.Url%2A> właściwości.  
+ Jeśli **unescapeRequestUrl** ma ustawioną wartość atrybutu **false**, a następnie po <xref:System.Net.HttpListener> odbiera żądanie, używa raw URI zamiast przekonwertowanego identyfikatora URI z `http.sys` jako dane wejściowe <xref:System.Net.HttpListenerRequest.Url%2A> właściwości.  
   
- Wartość domyślna dla **unescapeRequestUrl** atrybutu **true**.  
+ Wartością domyślną dla **unescapeRequestUrl** atrybut jest **true**.  
   
- <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> Właściwości można pobrać wartości bieżącego **unescapeRequestUrl** atrybutu z plików zastosowania konfiguracji.  
+ <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> Właściwość może służyć do uzyskania bieżącej wartości **unescapeRequestUrl** atrybut z właściwych plików konfiguracji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób konfigurowania <xref:System.Net.HttpListener> klasy, gdy odbiera żądanie użycia raw URI zamiast przekonwertowanego identyfikatora URI z `http.sys` jako wejściowych do <xref:System.Net.HttpListenerRequest.Url%2A> właściwości.  
+ Poniższy przykład przedstawia sposób konfigurowania <xref:System.Net.HttpListener> klasy po odebraniu żądania do używania raw URI zamiast przekonwertowanego identyfikatora URI z `http.sys` jako danych wejściowych do <xref:System.Net.HttpListenerRequest.Url%2A> właściwości.  
   
 ```xml  
 <configuration>  
@@ -137,7 +136,7 @@ Dostosowuje parametry używane przez <xref:System.Net.HttpListener> klasy.
 |-|-|  
 |Przestrzeń nazw|System.Net|  
 |Nazwa schematu||  
-|Sprawdzanie poprawności pliku||  
+|Plik walidacji||  
 |Może być pusta||  
   
 ## <a name="see-also"></a>Zobacz też  

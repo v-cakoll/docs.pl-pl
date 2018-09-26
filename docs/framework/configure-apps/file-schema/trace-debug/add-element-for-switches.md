@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e0dc425327f6577606e1205a23fdaffcc39f6e01
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747457"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109527"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;Dodaj&gt; elementu &lt;przełączników&gt;
-Określa poziom, gdy jest ustawiona przełącznik śledzenia.  
+Określa poziom, którego ustawiono przełącznikiem śledzenia.  
   
  \<Konfiguracja >  
 \<System.Diagnostics >  
@@ -39,7 +38,7 @@ Określa poziom, gdy jest ustawiona przełącznik śledzenia.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Nazwa**|Atrybut wymagany.<br /><br /> Określa nazwę tego przełącznika. Wartość tego atrybutu odpowiada *displayName* parametr przekazany do konstruktora przełącznika.|  
+|**Nazwa**|Atrybut wymagany.<br /><br /> Określa nazwę przełącznika. Wartość tego atrybutu odnosi się do *displayName* parametr, który jest przekazywany do konstruktora przełącznika.|  
 |**value**|Atrybut wymagany.<br /><br /> Określa poziom przełącznika.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -50,14 +49,14 @@ Określa poziom, gdy jest ustawiona przełącznik śledzenia.
 |Element|Opis|  
 |-------------|-----------------|  
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|`switches`|Zawiera przełączniki śledzenia i poziom, gdzie są ustawione przełączniki śledzenia.|  
-|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.|  
+|`switches`|Zawiera przełączniki śledzenia i poziomu, gdzie są ustawione przełączniki śledzenia.|  
+|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby zmienić poziom przełącznika śledzenia, należy umieścić go w pliku konfiguracji. Jeśli przełącznik jest <xref:System.Diagnostics.BooleanSwitch>, możesz ją włączyć lub wyłączyć. Jeśli przełącznik jest <xref:System.Diagnostics.TraceSwitch>można przypisać różne poziomy, aby określić typy śledzenia i debugowania komunikatów dane wyjściowe aplikacji.  
+ Aby zmienić poziom o przełącznikiem śledzenia, należy umieścić go w pliku konfiguracji. Jeśli przełącznik <xref:System.Diagnostics.BooleanSwitch>, możesz je włączyć lub wyłączyć. Jeśli przełącznik <xref:System.Diagnostics.TraceSwitch>można przypisać różne poziomy, aby określić typy śledzenia i debugowania komunikaty wyjściowe aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie  **\<Dodaj >** element, aby ustawić `General` przełącznika śledzenia do <xref:System.Diagnostics.TraceLevel> poziomu, a następnie Włącz `Data` przełącznika logiczna śledzenia.  
+ Poniższy przykład pokazuje, jak używać  **\<Dodaj >** element, aby ustawić `General` przełącznikiem śledzenia do <xref:System.Diagnostics.TraceLevel> poziomu i włączyć `Data` przełącznikiem logiczna śledzenia.  
   
 ```xml  
 <configuration>  

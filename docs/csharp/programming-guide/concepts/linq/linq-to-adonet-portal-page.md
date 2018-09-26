@@ -3,11 +3,11 @@ title: LINQ to ADO.NET (Portal Page)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
 ms.openlocfilehash: d65f041751a9418d0eebd3f92fd33a414cbed699
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706544"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085388"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Portal Page)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] oferuje możliwość zapytań przez dowolny obiekt wyliczalny w [!INCLUDE[vstecado](~/includes/vstecado-md.md)] przy użyciu [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] model programowania.  

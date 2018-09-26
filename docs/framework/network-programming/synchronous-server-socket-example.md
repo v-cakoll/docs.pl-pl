@@ -1,5 +1,5 @@
 ---
-title: Przykład gniazda synchroniczne serwera
+title: Przykład synchronicznego gniazda serwera
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8b5dc8ed718402a128add375cc1adfb6d17713e8
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 2edfeb85ee21b5d398938bc9500f463cd78a6c07
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33955956"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080526"
 ---
-# <a name="synchronous-server-socket-example"></a>Przykład gniazda synchroniczne serwera
-Następujący przykład program tworzy serwera służącą do odbierania żądań połączeń od klientów. Serwer jest oparty z gniazdem synchroniczna, dlatego zawiesza wykonywanie aplikacji serwera podczas oczekiwania na połączenie z klientem. Aplikacji odbiera ciąg od klienta, wyświetla ciąg w konsoli, a następnie zwraca ciąg do klienta. Ciąg z klienta musi zawierać ciąg "\<EOF >" która sygnalizuje koniec komunikatu.  
+# <a name="synchronous-server-socket-example"></a>Przykład synchronicznego gniazda serwera
+Poniższy przykład program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest tworzone za pomocą synchronicznego gniazda, więc zawiesza wykonywanie aplikacji serwera podczas oczekiwania na połączenie z klientem. Aplikacja odbiera ciąg od klienta, wyświetla ciąg w konsoli i następnie zwraca ciąg do klienta. Ciąg z klienta może zawierać ciąg "\<EOF >" celu sygnalizowania, że koniec komunikatu.  
   
 ```vb  
 Imports System  

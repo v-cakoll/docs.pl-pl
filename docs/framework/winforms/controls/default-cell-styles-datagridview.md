@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
 ms.openlocfilehash: adee6ab283fb7e2fe9bbfcda78c9692621407e9e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698457"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089899"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Porady: ustawianie domyślnych stylów komórek i formatów danych dla formantu DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 <xref:System.Windows.Forms.DataGridView> Dzięki kontroli Określ domyślnych stylów komórek i formatów danych dla całego kontrolki, w określonych kolumnach, dla nagłówków wierszy i kolumn i przemienne wiersze, aby utworzyć efekt księgi komórki. Domyślne style całego formantu są zastępowane przez domyślne style ustawiony dla kolumn i przemienne wiersze. Ponadto style, które można ustawić w kodzie, dla poszczególnych wierszy i komórek zastępują domyślne style.  

@@ -6,11 +6,11 @@ ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583710"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077710"
 ---
 # <a name="types-of-xml-nodes"></a>Typy węzłów XML
 Podczas odczytywania dokumentu XML do pamięci jako drzewo węzłów typy węzłów dla węzłów są decyzję, gdy węzły zostaną utworzone. XML Document Object Model (DOM) ma kilka rodzajów typy węzłów, określane przez World Wide Web Consortium (W3C) i na liście w sekcji 1.1.1 strukturę modelu DOM. W poniższej tabeli wymieniono typy węzłów obiektu przypisane do tego typu węzła i krótki opis każdego z nich.  

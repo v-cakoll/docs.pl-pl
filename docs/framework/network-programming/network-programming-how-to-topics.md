@@ -10,11 +10,11 @@ ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 6ca48627df37a98265b9078e2bc93dd823823e45
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075401"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193528"
 ---
 # <a name="network-programming-how-to-topics"></a>Tematy porad programowanie dla sieci
 Poniższa lista zawiera łącza do tematów instrukcje w dokumentacji koncepcyjnej programowanie dla sieci.  

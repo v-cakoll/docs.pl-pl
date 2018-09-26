@@ -7,11 +7,11 @@ ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: a7fe54911755863adc6a9b2bd91eff5cad9f9d4e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170486"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193047"
 ---
 # <a name="configuring-caching-in-network-applications"></a>Konfigurowanie pamięci podręcznej w aplikacjach sieciowych
 Aby skonfigurować buforowanie, należy określić zasady pamięci podręcznej na poziomie aplikacji lub <xref:System.Net.WebRequest> poziom. Poniższe tematy zawierają przykłady kodu, które pokazują konfigurowania aplikacji i żądania do używania buforowania.  

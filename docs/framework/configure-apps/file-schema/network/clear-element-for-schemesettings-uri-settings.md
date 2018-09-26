@@ -5,11 +5,11 @@ ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f0daa689ba09fa39ffe0f38d769112f0f095592a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070646"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47230842"
 ---
 # <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>&lt;Wyczyść&gt; Element dla schemeSettings (ustawienia identyfikatora Uri)
 Usuwa wszystkie istniejące ustawienia schematu.  

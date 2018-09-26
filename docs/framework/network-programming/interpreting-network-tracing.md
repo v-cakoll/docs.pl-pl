@@ -12,11 +12,11 @@ ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: d05e0f374f4454c95dd02be8bd2eff573040f97e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087856"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209145"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretowanie śledzenia sieci
 Po włączeniu funkcji śledzenia sieci umożliwia śledzenie przechwytywania wywołania aplikacji sprawia, że do różnych <xref:System.Net> składowych klasy. Dane wyjściowe z tych wywołań może być podobne do poniższych przykładach.  

@@ -12,11 +12,11 @@ ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084452"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203332"
 ---
 # <a name="ltsourcesgt-element"></a>&lt;źródła&gt; — Element
 Określa źródła śledzenia, które inicjują komunikatów śledzenia.  

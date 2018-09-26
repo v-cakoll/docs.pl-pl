@@ -3,11 +3,11 @@ title: Działanie NoPersistScope
 ms.date: 03/30/2017
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
 ms.openlocfilehash: 6543756594b6734aec39bf22c5ab6215605341b1
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088155"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216205"
 ---
 # <a name="nopersistscope-activity"></a>Działanie NoPersistScope
 W tym przykładzie pokazano, jak do manipulowania nieprzeznaczone i możliwe do rozporządzania stan w przepływie pracy. Jest ważne, że przepływy pracy nie należy próbować utrwalanie stanu nie można serializować, i jest również ważne dla obiekty możliwe do rozporządzania na oczyszczenie po wyczerpaniu w przepływie pracy.  

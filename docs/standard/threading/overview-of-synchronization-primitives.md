@@ -10,11 +10,11 @@ ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111467"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204602"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Przegląd elementów podstawowych synchronizacji
 <a name="top"></a> .NET Framework oferuje szeroką gamę elementów podstawowych synchronizacji, związanych z kontrolowaniem interakcje wątków i unikanie wyścigu. Te można grubsza podzielić na trzy kategorie: operacji blokowania, Sygnalizowanie i blokowane.  

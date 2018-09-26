@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
 author: BrucePerlerMS
 ms.openlocfilehash: 40fe7b1fa6a61b56d5dfdde75a92834f096a8be4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082763"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200415"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Instrukcje: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów
 Zabezpieczanie usługi za pomocą transportu i komunikat poświadczeń używa najlepsze tryby zabezpieczeń transportu i komunikatów w Windows Communication Foundation (WCF). W sum zabezpieczeń warstwy transportu zapewnia integralności i poufności, podczas komunikat warstwy zabezpieczeń zawiera szereg poświadczenia, które nie są możliwe za pomocą mechanizmów zabezpieczeń transportu strict. W tym temacie przedstawiono podstawowe kroki implementacji transportu przy użyciu poświadczeń komunikatów za pomocą <xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.NetTcpBinding> powiązania. Aby uzyskać więcej informacji na temat ustawiania trybu zabezpieczeń, zobacz [porady: Ustawianie trybu zabezpieczeń](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  

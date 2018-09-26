@@ -3,11 +3,11 @@ title: Działania związane ze zbieraniem w WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084020"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199986"
 ---
 # <a name="collection-activities-in-wf"></a>Działania związane ze zbieraniem w WF
 Działania związane ze zbieraniem służą do pracy z obiektami kolekcji w przepływie pracy. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ma działania dostarczane przez system, dodawanie i usuwanie elementów z kolekcji, testowanie pod kątem istnienia elementu w kolekcji i wyczyścić kolekcję. `ExistsInCollection` i `RemoveFromCollection` mają <xref:System.Activities.OutArgument%601> typu <xref:System.Boolean>, która wskazuje wynik.  

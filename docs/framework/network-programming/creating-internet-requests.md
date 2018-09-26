@@ -13,11 +13,11 @@ ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 201bc5e92aeedcbfe2f710681cf3bbc773a11424
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085831"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193385"
 ---
 # <a name="creating-internet-requests"></a>Tworzenie żądań internetowych
 Tworzenie aplikacji <xref:System.Net.WebRequest> wystąpień za pośrednictwem <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metody. Jest to metoda statyczna, który tworzy klasę pochodną **WebRequest** oparte na schemat identyfikatora URI przekazywany do niego.  

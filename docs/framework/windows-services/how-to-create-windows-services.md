@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
 ms.openlocfilehash: 7a529a94edf3a4cf71150c04994d82b8f21eb996
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170954"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204641"
 ---
 # <a name="how-to-create-windows-services"></a>Porady: tworzenie usług systemu Windows
 Podczas tworzenia usługi można użyć szablonu projektu programu Visual Studio o nazwie **usługi Windows**. Ten szablon automatycznie wykonuje znaczną część pracy za Ciebie, odwołując się do odpowiednich klas i przestrzenie nazw, konfigurując ustawienia dziedziczenia z klasy bazowej dla usług oraz zastępując kilka metod prawdopodobnie chcesz zastąpić.  

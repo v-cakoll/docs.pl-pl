@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
 author: BrucePerlerMS
 ms.openlocfilehash: 470ffc007ed73b28beba24bd0eb9c670dea9337d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109384"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199973"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Zagadnienia dotyczące zabezpieczeń bezpiecznych sesji
 Należy rozważyć następujące elementy, które dotyczą zabezpieczeń podczas implementowania bezpiecznej sesji. Aby uzyskać więcej informacji na temat zagadnień dotyczących zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) i [najlepsze rozwiązania dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 8490299e995a469860f660a50a69915d5ddc4940
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5358a3abe84c7fe7d753560611f0c7338b060826
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038091"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200298"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Przepływ pracy i śledzenie
 Śledzenie przepływu pracy Windows jest [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] funkcja przeznaczona do zapewniają widoczność wykonywania przepływu pracy. Zapewnia to Infrastruktura śledzenia do śledzenia wykonywania wystąpienia przepływu pracy. Infrastruktura śledzenia WF w sposób niewidoczny dla użytkownika instruments przepływu pracy, aby emitować rekordów odzwierciedlający kluczy zdarzeń podczas wykonywania. Ta funkcja jest domyślnie dostępny dla dowolnego [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Żadne zmiany nie są wymagane do [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] przepływu pracy dla śledzenia wystąpienia. Jest to kwestia podejmowania decyzji o tym jak dużo danych śledzenia, które chcesz otrzymywać. Gdy wystąpienie przepływu pracy rozpoczyna się lub kończy, jego przetwarzania śledzenia są emitowane rekordów. Śledzenie również można wyodrębnić business odpowiednie dane skojarzone z zmienne przepływu pracy. Na przykład, jeśli przepływ pracy reprezentuje kolejność przetwarzania systemu, identyfikator zamówienia wyodrębniania wraz z <xref:System.Activities.Tracking.TrackingRecord> obiektu. Ogólnie rzecz biorąc włączania WF śledzenia umożliwia diagnostyki lub danymi analiz biznesowych były dostępne z wykonywania przepływu pracy.  
@@ -50,9 +50,6 @@ ms.locfileid: "44038091"
   
  [Śledzenie przepływu pracy](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
  W tym artykule opisano dwa sposoby, aby włączyć śledzenie debugowania dla przepływu pracy.  
-  
- [Określanie czasu trwania wykonania przepływu pracy za pomocą śledzenia](../../../docs/framework/windows-workflow-foundation/determining-workflow-execution-duration-using-tracing.md)  
- Opisuje sposób używania komunikaty dotyczące śledzenia, aby określić czas trwania wykonywania przepływu pracy.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)

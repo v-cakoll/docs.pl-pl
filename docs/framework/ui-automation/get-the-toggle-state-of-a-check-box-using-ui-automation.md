@@ -12,11 +12,11 @@ ms.assetid: 84fc31a3-175f-4e93-90a0-dd29d89b77ce
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: ebe51247a93384ab2d269220b08a1b3f3cb22e03
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084202"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200623"
 ---
 # <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a>Pobierz stan przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]

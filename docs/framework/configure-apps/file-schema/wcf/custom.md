@@ -3,11 +3,11 @@ title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
 ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586730"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47207815"
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 Określa ustawienia dla równorzędnej niestandardowej usługi rozpoznawania.  

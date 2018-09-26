@@ -3,18 +3,17 @@ title: LocalServiceSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8f80af782c474ccf3a232ab353125fa223d4f5d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c79eb11fcc1973a3ef25a78afb8b141443d865c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486900"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156951"
 ---
-# <a name="localservicesecuritysettings"></a><span data-ttu-id="84a2c-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="84a2c-102">LocalServiceSecuritySettings</span></span>
-<span data-ttu-id="84a2c-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="84a2c-103">LocalServiceSecuritySettings</span></span>  
+# <a name="localservicesecuritysettings"></a><span data-ttu-id="6111c-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="6111c-102">LocalServiceSecuritySettings</span></span>
+<span data-ttu-id="6111c-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="6111c-103">LocalServiceSecuritySettings</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84a2c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="84a2c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6111c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6111c-104">Syntax</span></span>  
   
 ```  
 class LocalServiceSecuritySettings  
@@ -36,115 +35,115 @@ class LocalServiceSecuritySettings
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="84a2c-105">Metody</span><span class="sxs-lookup"><span data-stu-id="84a2c-105">Methods</span></span>  
- <span data-ttu-id="84a2c-106">Klasa LocalServiceSecuritySettings nie definiuje żadnych metod.</span><span class="sxs-lookup"><span data-stu-id="84a2c-106">The LocalServiceSecuritySettings class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="6111c-105">Metody</span><span class="sxs-lookup"><span data-stu-id="6111c-105">Methods</span></span>  
+ <span data-ttu-id="6111c-106">Klasa LocalServiceSecuritySettings nie definiuje żadnych metod.</span><span class="sxs-lookup"><span data-stu-id="6111c-106">The LocalServiceSecuritySettings class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="84a2c-107">Właściwości</span><span class="sxs-lookup"><span data-stu-id="84a2c-107">Properties</span></span>  
- <span data-ttu-id="84a2c-108">Klasa LocalServiceSecuritySettings ma następujące właściwości:</span><span class="sxs-lookup"><span data-stu-id="84a2c-108">The LocalServiceSecuritySettings class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="6111c-107">Właściwości</span><span class="sxs-lookup"><span data-stu-id="6111c-107">Properties</span></span>  
+ <span data-ttu-id="6111c-108">Klasa LocalServiceSecuritySettings ma następujące właściwości:</span><span class="sxs-lookup"><span data-stu-id="6111c-108">The LocalServiceSecuritySettings class has the following properties:</span></span>  
   
-### <a name="detectreplays"></a><span data-ttu-id="84a2c-109">DetectReplays</span><span class="sxs-lookup"><span data-stu-id="84a2c-109">DetectReplays</span></span>  
- <span data-ttu-id="84a2c-110">Typ danych: wartość logiczna</span><span class="sxs-lookup"><span data-stu-id="84a2c-110">Data type: boolean</span></span>  
+### <a name="detectreplays"></a><span data-ttu-id="6111c-109">Opcji DetectReplays</span><span class="sxs-lookup"><span data-stu-id="6111c-109">DetectReplays</span></span>  
+ <span data-ttu-id="6111c-110">Typ danych: wartość logiczna</span><span class="sxs-lookup"><span data-stu-id="6111c-110">Data type: boolean</span></span>  
   
- <span data-ttu-id="84a2c-111">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-111">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-112">Wartość logiczna określająca, czy ataki metodą kanału wykrytych i zajmuje się automatycznie.</span><span class="sxs-lookup"><span data-stu-id="84a2c-112">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span>  
+ <span data-ttu-id="6111c-112">Wartość logiczna, która określa, czy ataki metodą kanał są wykrywane i automatycznie uwzględnione.</span><span class="sxs-lookup"><span data-stu-id="6111c-112">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span>  
   
-### <a name="inactivitytimeout"></a><span data-ttu-id="84a2c-113">Limit czasu nieaktywności</span><span class="sxs-lookup"><span data-stu-id="84a2c-113">InactivityTimeout</span></span>  
- <span data-ttu-id="84a2c-114">Typ danych: daty i godziny</span><span class="sxs-lookup"><span data-stu-id="84a2c-114">Data type: datetime</span></span>  
+### <a name="inactivitytimeout"></a><span data-ttu-id="6111c-113">Limit czasu nieaktywności</span><span class="sxs-lookup"><span data-stu-id="6111c-113">InactivityTimeout</span></span>  
+ <span data-ttu-id="6111c-114">Typ danych: Data i godzina</span><span class="sxs-lookup"><span data-stu-id="6111c-114">Data type: datetime</span></span>  
   
- <span data-ttu-id="84a2c-115">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-115">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-116">Maksymalna liczba oczekujących sesji bezpieczeństwa obsługiwanych przez usługę.</span><span class="sxs-lookup"><span data-stu-id="84a2c-116">The maximum number of pending security sessions that the service supports.</span></span>  
+ <span data-ttu-id="6111c-116">Maksymalna liczba oczekujących sesji bezpieczeństwa, obsługiwanych przez usługę.</span><span class="sxs-lookup"><span data-stu-id="6111c-116">The maximum number of pending security sessions that the service supports.</span></span>  
   
-### <a name="issuedcookielifetime"></a><span data-ttu-id="84a2c-117">IssuedCookieLifetime</span><span class="sxs-lookup"><span data-stu-id="84a2c-117">IssuedCookieLifetime</span></span>  
- <span data-ttu-id="84a2c-118">Typ danych: daty i godziny</span><span class="sxs-lookup"><span data-stu-id="84a2c-118">Data type: datetime</span></span>  
+### <a name="issuedcookielifetime"></a><span data-ttu-id="6111c-117">IssuedCookieLifetime</span><span class="sxs-lookup"><span data-stu-id="6111c-117">IssuedCookieLifetime</span></span>  
+ <span data-ttu-id="6111c-118">Typ danych: Data i godzina</span><span class="sxs-lookup"><span data-stu-id="6111c-118">Data type: datetime</span></span>  
   
- <span data-ttu-id="84a2c-119">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-119">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-120">Obiekt TimeSpan określający okres istnienia wystawionego dla wszystkich nowych plików cookie zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="84a2c-120">A TimeSpan that specifies the lifetime issued to all new security cookies.</span></span>  
+ <span data-ttu-id="6111c-120">Element TimeSpan określający czas istnienia nadawany wszystkie nowe pliki cookie zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="6111c-120">A TimeSpan that specifies the lifetime issued to all new security cookies.</span></span>  
   
-### <a name="maxcachedcookies"></a><span data-ttu-id="84a2c-121">MaxCachedCookies</span><span class="sxs-lookup"><span data-stu-id="84a2c-121">MaxCachedCookies</span></span>  
- <span data-ttu-id="84a2c-122">Typ danych: sint32</span><span class="sxs-lookup"><span data-stu-id="84a2c-122">Data type: sint32</span></span>  
+### <a name="maxcachedcookies"></a><span data-ttu-id="6111c-121">MaxCachedCookies</span><span class="sxs-lookup"><span data-stu-id="6111c-121">MaxCachedCookies</span></span>  
+ <span data-ttu-id="6111c-122">Typ danych: sint32</span><span class="sxs-lookup"><span data-stu-id="6111c-122">Data type: sint32</span></span>  
   
- <span data-ttu-id="84a2c-123">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-123">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-124">Maksymalna liczba plików cookie, które mogą być buforowane.</span><span class="sxs-lookup"><span data-stu-id="84a2c-124">The maximum number of cookies that can be cached.</span></span>  
+ <span data-ttu-id="6111c-124">Maksymalna liczba plików cookie, które mogą być buforowane.</span><span class="sxs-lookup"><span data-stu-id="6111c-124">The maximum number of cookies that can be cached.</span></span>  
   
-### <a name="maxclockskew"></a><span data-ttu-id="84a2c-125">MaxClockSkew</span><span class="sxs-lookup"><span data-stu-id="84a2c-125">MaxClockSkew</span></span>  
- <span data-ttu-id="84a2c-126">Typ danych: daty i godziny</span><span class="sxs-lookup"><span data-stu-id="84a2c-126">Data type: datetime</span></span>  
+### <a name="maxclockskew"></a><span data-ttu-id="6111c-125">MaxClockSkew</span><span class="sxs-lookup"><span data-stu-id="6111c-125">MaxClockSkew</span></span>  
+ <span data-ttu-id="6111c-126">Typ danych: Data i godzina</span><span class="sxs-lookup"><span data-stu-id="6111c-126">Data type: datetime</span></span>  
   
- <span data-ttu-id="84a2c-127">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-127">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-128">Obiekt TimeSpan określający maksymalną różnicę czasu między zegarami systemowymi dwóch uczestników komunikacji.</span><span class="sxs-lookup"><span data-stu-id="84a2c-128">A TimeSpan that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span>  
+ <span data-ttu-id="6111c-128">Element TimeSpan określający maksymalną różnicę czasu między zegarami systemowymi dwóch uczestników komunikacji.</span><span class="sxs-lookup"><span data-stu-id="6111c-128">A TimeSpan that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span>  
   
-### <a name="maxpendingsessions"></a><span data-ttu-id="84a2c-129">MaxPendingSessions</span><span class="sxs-lookup"><span data-stu-id="84a2c-129">MaxPendingSessions</span></span>  
- <span data-ttu-id="84a2c-130">Typ danych: sint32</span><span class="sxs-lookup"><span data-stu-id="84a2c-130">Data type: sint32</span></span>  
+### <a name="maxpendingsessions"></a><span data-ttu-id="6111c-129">MaxPendingSessions</span><span class="sxs-lookup"><span data-stu-id="6111c-129">MaxPendingSessions</span></span>  
+ <span data-ttu-id="6111c-130">Typ danych: sint32</span><span class="sxs-lookup"><span data-stu-id="6111c-130">Data type: sint32</span></span>  
   
- <span data-ttu-id="84a2c-131">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-131">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-132">Maksymalna liczba oczekujących połączeń przypadających na usługę.</span><span class="sxs-lookup"><span data-stu-id="84a2c-132">The maximum number of pending connections on the service.</span></span>  
+ <span data-ttu-id="6111c-132">Maksymalna liczba oczekujących połączeń z usługą.</span><span class="sxs-lookup"><span data-stu-id="6111c-132">The maximum number of pending connections on the service.</span></span>  
   
-### <a name="maxstatefulnegotiations"></a><span data-ttu-id="84a2c-133">MaxStatefulNegotiations</span><span class="sxs-lookup"><span data-stu-id="84a2c-133">MaxStatefulNegotiations</span></span>  
- <span data-ttu-id="84a2c-134">Typ danych: sint32</span><span class="sxs-lookup"><span data-stu-id="84a2c-134">Data type: sint32</span></span>  
+### <a name="maxstatefulnegotiations"></a><span data-ttu-id="6111c-133">MaxStatefulNegotiations</span><span class="sxs-lookup"><span data-stu-id="6111c-133">MaxStatefulNegotiations</span></span>  
+ <span data-ttu-id="6111c-134">Typ danych: sint32</span><span class="sxs-lookup"><span data-stu-id="6111c-134">Data type: sint32</span></span>  
   
- <span data-ttu-id="84a2c-135">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-135">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-136">Liczba negocjacji zabezpieczeń, które mogą być jednocześnie aktywne.</span><span class="sxs-lookup"><span data-stu-id="84a2c-136">The number of security negotiations that can be active concurrently.</span></span>  
+ <span data-ttu-id="6111c-136">Liczba negocjacji zabezpieczeń, które mogą być wykonywane jednocześnie.</span><span class="sxs-lookup"><span data-stu-id="6111c-136">The number of security negotiations that can be active concurrently.</span></span>  
   
-### <a name="negotiationtimeout"></a><span data-ttu-id="84a2c-137">NegotiationTimeout</span><span class="sxs-lookup"><span data-stu-id="84a2c-137">NegotiationTimeout</span></span>  
- <span data-ttu-id="84a2c-138">Typ danych: daty i godziny</span><span class="sxs-lookup"><span data-stu-id="84a2c-138">Data type: datetime</span></span>  
+### <a name="negotiationtimeout"></a><span data-ttu-id="6111c-137">NegotiationTimeout</span><span class="sxs-lookup"><span data-stu-id="6111c-137">NegotiationTimeout</span></span>  
+ <span data-ttu-id="6111c-138">Typ danych: Data i godzina</span><span class="sxs-lookup"><span data-stu-id="6111c-138">Data type: datetime</span></span>  
   
- <span data-ttu-id="84a2c-139">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-139">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-140">Obiekt TimeSpan określający maksymalny czas trwania fazy negocjacji zabezpieczeń między serwerem a klientem.</span><span class="sxs-lookup"><span data-stu-id="84a2c-140">A TimeSpan that specifies the maximum duration for the security negotiation phase between server and client.</span></span>  
+ <span data-ttu-id="6111c-140">Element TimeSpan określa maksymalny czas do przeprowadzenia w fazie negocjowanie zabezpieczeń między serwerem a klientem.</span><span class="sxs-lookup"><span data-stu-id="6111c-140">A TimeSpan that specifies the maximum duration for the security negotiation phase between server and client.</span></span>  
   
-### <a name="reconnecttransportonfailure"></a><span data-ttu-id="84a2c-141">ReconnectTransportOnFailure</span><span class="sxs-lookup"><span data-stu-id="84a2c-141">ReconnectTransportOnFailure</span></span>  
- <span data-ttu-id="84a2c-142">Typ danych: wartość logiczna</span><span class="sxs-lookup"><span data-stu-id="84a2c-142">Data type: boolean</span></span>  
+### <a name="reconnecttransportonfailure"></a><span data-ttu-id="6111c-141">ReconnectTransportOnFailure</span><span class="sxs-lookup"><span data-stu-id="6111c-141">ReconnectTransportOnFailure</span></span>  
+ <span data-ttu-id="6111c-142">Typ danych: wartość logiczna</span><span class="sxs-lookup"><span data-stu-id="6111c-142">Data type: boolean</span></span>  
   
- <span data-ttu-id="84a2c-143">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-143">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-143">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-143">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-144">Wartość logiczna określająca, czy połączenia używające obsługi wiadomości WS-Reliable podjąć próbę ponownego połączenia po błędach transportu.</span><span class="sxs-lookup"><span data-stu-id="84a2c-144">A Boolean value that specifies whether connections using WS-Reliable messaging attempt to reconnect after transport failures.</span></span>  
+ <span data-ttu-id="6111c-144">Wartość logiczna określająca, czy połączenia za pomocą usługi WS-Reliable messaging próbę ponownego połączenia po błędach transportu.</span><span class="sxs-lookup"><span data-stu-id="6111c-144">A Boolean value that specifies whether connections using WS-Reliable messaging attempt to reconnect after transport failures.</span></span>  
   
-### <a name="replaycachesize"></a><span data-ttu-id="84a2c-145">ReplayCacheSize</span><span class="sxs-lookup"><span data-stu-id="84a2c-145">ReplayCacheSize</span></span>  
- <span data-ttu-id="84a2c-146">Typ danych: sint32</span><span class="sxs-lookup"><span data-stu-id="84a2c-146">Data type: sint32</span></span>  
+### <a name="replaycachesize"></a><span data-ttu-id="6111c-145">ReplayCacheSize</span><span class="sxs-lookup"><span data-stu-id="6111c-145">ReplayCacheSize</span></span>  
+ <span data-ttu-id="6111c-146">Typ danych: sint32</span><span class="sxs-lookup"><span data-stu-id="6111c-146">Data type: sint32</span></span>  
   
- <span data-ttu-id="84a2c-147">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-147">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-147">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-147">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-148">Liczba buforowanych identyfikatorów jednorazowych używanych do wykrywania powtórzeń.</span><span class="sxs-lookup"><span data-stu-id="84a2c-148">The number of cached nonces used for replay detection.</span></span>  
+ <span data-ttu-id="6111c-148">Liczba buforowanych identyfikatorów jednorazowych używanych do wykrywania powtórzeń.</span><span class="sxs-lookup"><span data-stu-id="6111c-148">The number of cached nonces used for replay detection.</span></span>  
   
-### <a name="replaywindow"></a><span data-ttu-id="84a2c-149">Elementy ReplayWindow</span><span class="sxs-lookup"><span data-stu-id="84a2c-149">ReplayWindow</span></span>  
- <span data-ttu-id="84a2c-150">Typ danych: daty i godziny</span><span class="sxs-lookup"><span data-stu-id="84a2c-150">Data type: datetime</span></span>  
+### <a name="replaywindow"></a><span data-ttu-id="6111c-149">Elementy ReplayWindow</span><span class="sxs-lookup"><span data-stu-id="6111c-149">ReplayWindow</span></span>  
+ <span data-ttu-id="6111c-150">Typ danych: Data i godzina</span><span class="sxs-lookup"><span data-stu-id="6111c-150">Data type: datetime</span></span>  
   
- <span data-ttu-id="84a2c-151">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-151">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-151">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-151">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-152">Obiekt TimeSpan określający okres czasu, w którym identyfikatorów jednorazowych poszczególnych komunikatów są prawidłowe.</span><span class="sxs-lookup"><span data-stu-id="84a2c-152">A TimeSpan that specifies the duration in which individual message nonces are valid.</span></span>  
+ <span data-ttu-id="6111c-152">Przedział czasu, który określa czas, w której poszczególne komunikatów są poprawni.</span><span class="sxs-lookup"><span data-stu-id="6111c-152">A TimeSpan that specifies the duration in which individual message nonces are valid.</span></span>  
   
-### <a name="sessionkeyrenewalinterval"></a><span data-ttu-id="84a2c-153">SessionKeyRenewalInterval</span><span class="sxs-lookup"><span data-stu-id="84a2c-153">SessionKeyRenewalInterval</span></span>  
- <span data-ttu-id="84a2c-154">Typ danych: daty i godziny</span><span class="sxs-lookup"><span data-stu-id="84a2c-154">Data type: datetime</span></span>  
+### <a name="sessionkeyrenewalinterval"></a><span data-ttu-id="6111c-153">SessionKeyRenewalInterval</span><span class="sxs-lookup"><span data-stu-id="6111c-153">SessionKeyRenewalInterval</span></span>  
+ <span data-ttu-id="6111c-154">Typ danych: Data i godzina</span><span class="sxs-lookup"><span data-stu-id="6111c-154">Data type: datetime</span></span>  
   
- <span data-ttu-id="84a2c-155">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-155">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-155">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-155">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-156">Obiekt TimeSpan określający okres czasu, po upływie którego inicjator odnawia klucz sesji zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="84a2c-156">A TimeSpan that specifies the duration after which the initiator renews the key for the security session.</span></span>  
+ <span data-ttu-id="6111c-156">Przedział czasu, który określa czas, po upływie którego inicjator odnawia klucz sesji zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="6111c-156">A TimeSpan that specifies the duration after which the initiator renews the key for the security session.</span></span>  
   
-### <a name="sessionkeyrolloverinterval"></a><span data-ttu-id="84a2c-157">SessionKeyRolloverInterval</span><span class="sxs-lookup"><span data-stu-id="84a2c-157">SessionKeyRolloverInterval</span></span>  
- <span data-ttu-id="84a2c-158">Typ danych: daty i godziny</span><span class="sxs-lookup"><span data-stu-id="84a2c-158">Data type: datetime</span></span>  
+### <a name="sessionkeyrolloverinterval"></a><span data-ttu-id="6111c-157">SessionKeyRolloverInterval</span><span class="sxs-lookup"><span data-stu-id="6111c-157">SessionKeyRolloverInterval</span></span>  
+ <span data-ttu-id="6111c-158">Typ danych: Data i godzina</span><span class="sxs-lookup"><span data-stu-id="6111c-158">Data type: datetime</span></span>  
   
- <span data-ttu-id="84a2c-159">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-159">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-159">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-159">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-160">Obiekt TimeSpan określający okres poprzedniego klucza sesji jest prawidłowa w komunikatach przychodzących podczas odnawiania klucza.</span><span class="sxs-lookup"><span data-stu-id="84a2c-160">A TimeSpan that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span>  
+ <span data-ttu-id="6111c-160">Przedział czasu, który określa przedział czasu poprzedniego klucza sesji jest prawidłowa w wiadomościach przychodzących podczas odnawiania klucza.</span><span class="sxs-lookup"><span data-stu-id="6111c-160">A TimeSpan that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span>  
   
-### <a name="timestampvalidityduration"></a><span data-ttu-id="84a2c-161">TimestampValidityDuration</span><span class="sxs-lookup"><span data-stu-id="84a2c-161">TimestampValidityDuration</span></span>  
- <span data-ttu-id="84a2c-162">Typ danych: daty i godziny</span><span class="sxs-lookup"><span data-stu-id="84a2c-162">Data type: datetime</span></span>  
+### <a name="timestampvalidityduration"></a><span data-ttu-id="6111c-161">TimestampValidityDuration</span><span class="sxs-lookup"><span data-stu-id="6111c-161">TimestampValidityDuration</span></span>  
+ <span data-ttu-id="6111c-162">Typ danych: Data i godzina</span><span class="sxs-lookup"><span data-stu-id="6111c-162">Data type: datetime</span></span>  
   
- <span data-ttu-id="84a2c-163">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="84a2c-163">Access type: Read-only</span></span>  
+ <span data-ttu-id="6111c-163">Dostęp do typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="6111c-163">Access type: Read-only</span></span>  
   
- <span data-ttu-id="84a2c-164">Obiekt TimeSpan określający okres ważności sygnatury czasowej.</span><span class="sxs-lookup"><span data-stu-id="84a2c-164">A TimeSpan that specifies the duration in which a time stamp is valid.</span></span>  
+ <span data-ttu-id="6111c-164">Przedział czasu, który określa czas, w którym sygnatura czasowa jest poprawna.</span><span class="sxs-lookup"><span data-stu-id="6111c-164">A TimeSpan that specifies the duration in which a time stamp is valid.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84a2c-165">Wymagania</span><span class="sxs-lookup"><span data-stu-id="84a2c-165">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6111c-165">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6111c-165">Requirements</span></span>  
   
-|<span data-ttu-id="84a2c-166">MOF</span><span class="sxs-lookup"><span data-stu-id="84a2c-166">MOF</span></span>|<span data-ttu-id="84a2c-167">Zadeklarowany w Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="84a2c-167">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="6111c-166">PLIK MOF</span><span class="sxs-lookup"><span data-stu-id="6111c-166">MOF</span></span>|<span data-ttu-id="6111c-167">Zadeklarowana w Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="6111c-167">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="84a2c-168">Przestrzeń nazw</span><span class="sxs-lookup"><span data-stu-id="84a2c-168">Namespace</span></span>|<span data-ttu-id="84a2c-169">Zdefiniowany w root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="84a2c-169">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="6111c-168">Przestrzeń nazw</span><span class="sxs-lookup"><span data-stu-id="6111c-168">Namespace</span></span>|<span data-ttu-id="6111c-169">Zdefiniowane w root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="6111c-169">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="84a2c-170">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="84a2c-170">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6111c-170">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="6111c-170">See Also</span></span>  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

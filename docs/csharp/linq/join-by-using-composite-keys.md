@@ -4,19 +4,19 @@ description: Dowiedz się, jak sprzęgać za pomocą kluczy złożonych w skład
 ms.date: 12/1/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
 ms.openlocfilehash: ae37d03f996f0b0cc184a86663f16d62e6c29c69
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711067"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080107"
 ---
-# <a name="join-by-using-composite-keys"></a><span data-ttu-id="8f586-103">Sprzęganie za pomocą kluczy złożonych</span><span class="sxs-lookup"><span data-stu-id="8f586-103">Join by using composite keys</span></span>
+# <a name="join-by-using-composite-keys"></a><span data-ttu-id="609a7-103">Sprzęganie za pomocą kluczy złożonych</span><span class="sxs-lookup"><span data-stu-id="609a7-103">Join by using composite keys</span></span>
 
-<span data-ttu-id="8f586-104">Ten przykład przedstawia sposób wykonywania operacji łączenia, w których chcesz użyć więcej niż jednego klucza do zdefiniowania dopasowania.</span><span class="sxs-lookup"><span data-stu-id="8f586-104">This example shows how to perform join operations in which you want to use more than one key to define a match.</span></span> <span data-ttu-id="8f586-105">Jest to realizowane przy użyciu klucza złożonego.</span><span class="sxs-lookup"><span data-stu-id="8f586-105">This is accomplished by using a composite key.</span></span> <span data-ttu-id="8f586-106">Można tworzyć złożonego klucza jako typu anonimowego lub nazwane wpisane wartościami, które chcesz porównać.</span><span class="sxs-lookup"><span data-stu-id="8f586-106">You create a composite key as an anonymous type or named typed with the values that you want to compare.</span></span> <span data-ttu-id="8f586-107">Jeśli zmienna zapytania zostaną przekazane w granicach metody, należy użyć typu nazwanego, który zastępuje <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A> dla klucza.</span><span class="sxs-lookup"><span data-stu-id="8f586-107">If the query variable will be passed across method boundaries, use a named type that overrides <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> for the key.</span></span> <span data-ttu-id="8f586-108">Nazwy właściwości i kolejność, w jakiej występują one muszą być identyczne w każdy klucz.</span><span class="sxs-lookup"><span data-stu-id="8f586-108">The names of the properties, and the order in which they occur, must be identical in each key.</span></span>
+<span data-ttu-id="609a7-104">Ten przykład przedstawia sposób wykonywania operacji łączenia, w których chcesz użyć więcej niż jednego klucza do zdefiniowania dopasowania.</span><span class="sxs-lookup"><span data-stu-id="609a7-104">This example shows how to perform join operations in which you want to use more than one key to define a match.</span></span> <span data-ttu-id="609a7-105">Jest to realizowane przy użyciu klucza złożonego.</span><span class="sxs-lookup"><span data-stu-id="609a7-105">This is accomplished by using a composite key.</span></span> <span data-ttu-id="609a7-106">Można tworzyć złożonego klucza jako typu anonimowego lub nazwane wpisane wartościami, które chcesz porównać.</span><span class="sxs-lookup"><span data-stu-id="609a7-106">You create a composite key as an anonymous type or named typed with the values that you want to compare.</span></span> <span data-ttu-id="609a7-107">Jeśli zmienna zapytania zostaną przekazane w granicach metody, należy użyć typu nazwanego, który zastępuje <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A> dla klucza.</span><span class="sxs-lookup"><span data-stu-id="609a7-107">If the query variable will be passed across method boundaries, use a named type that overrides <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> for the key.</span></span> <span data-ttu-id="609a7-108">Nazwy właściwości i kolejność, w jakiej występują one muszą być identyczne w każdy klucz.</span><span class="sxs-lookup"><span data-stu-id="609a7-108">The names of the properties, and the order in which they occur, must be identical in each key.</span></span>
 
-## <a name="example"></a><span data-ttu-id="8f586-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="8f586-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="609a7-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="609a7-109">Example</span></span>
 
-<span data-ttu-id="8f586-110">Poniższy przykład pokazuje sposób użycia klucza złożonego do łączenia danych z trzech tabel:</span><span class="sxs-lookup"><span data-stu-id="8f586-110">The following example demonstrates how to use a composite key to join data from three tables:</span></span>
+<span data-ttu-id="609a7-110">Poniższy przykład pokazuje sposób użycia klucza złożonego do łączenia danych z trzech tabel:</span><span class="sxs-lookup"><span data-stu-id="609a7-110">The following example demonstrates how to use a composite key to join data from three tables:</span></span>
 
 ```csharp
 var query = from o in db.Orders
@@ -27,17 +27,17 @@ var query = from o in db.Orders
         select new {o.OrderID, p.ProductID, d.UnitPrice};
 ```
 
-<span data-ttu-id="8f586-111">Wnioskowanie o typie na klucze złożone zależy od nazwy właściwości kluczy i kolejności ich występowania.</span><span class="sxs-lookup"><span data-stu-id="8f586-111">Type inference on composite keys depends on the names of the properties in the keys, and the order in which they occur.</span></span> <span data-ttu-id="8f586-112">Jeśli właściwości w sekwencji źródłowej nie ma takie same nazwy, należy przypisać nowe nazwy w kluczach.</span><span class="sxs-lookup"><span data-stu-id="8f586-112">If the properties in the source sequences don't have the same names, you must assign new names in the keys.</span></span> <span data-ttu-id="8f586-113">Na przykład jeśli `Orders` tabeli i `OrderDetails` tabeli każdego używać różnych nazw kolumn, można utworzyć kluczy złożonych, przypisując identyczne nazwy typów anonimowych:</span><span class="sxs-lookup"><span data-stu-id="8f586-113">For example, if the `Orders` table and `OrderDetails` table each used different names for their columns, you could create composite keys by assigning identical names in the anonymous types:</span></span>
+<span data-ttu-id="609a7-111">Wnioskowanie o typie na klucze złożone zależy od nazwy właściwości kluczy i kolejności ich występowania.</span><span class="sxs-lookup"><span data-stu-id="609a7-111">Type inference on composite keys depends on the names of the properties in the keys, and the order in which they occur.</span></span> <span data-ttu-id="609a7-112">Jeśli właściwości w sekwencji źródłowej nie ma takie same nazwy, należy przypisać nowe nazwy w kluczach.</span><span class="sxs-lookup"><span data-stu-id="609a7-112">If the properties in the source sequences don't have the same names, you must assign new names in the keys.</span></span> <span data-ttu-id="609a7-113">Na przykład jeśli `Orders` tabeli i `OrderDetails` tabeli każdego używać różnych nazw kolumn, można utworzyć kluczy złożonych, przypisując identyczne nazwy typów anonimowych:</span><span class="sxs-lookup"><span data-stu-id="609a7-113">For example, if the `Orders` table and `OrderDetails` table each used different names for their columns, you could create composite keys by assigning identical names in the anonymous types:</span></span>
 
 ```csharp
 join...on new {Name = o.CustomerName, ID = o.CustID} equals
     new {Name = d.CustName, ID = d.CustID }
 ```
 
-<span data-ttu-id="8f586-114">Klucze złożone, które mogą być również używane w `group` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="8f586-114">Composite keys can be also used in a `group` clause.</span></span>
+<span data-ttu-id="609a7-114">Klucze złożone, które mogą być również używane w `group` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="609a7-114">Composite keys can be also used in a `group` clause.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8f586-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8f586-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="609a7-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="609a7-115">See also</span></span>
 
-- [<span data-ttu-id="8f586-116">Language Integrated Query (LINQ)</span><span class="sxs-lookup"><span data-stu-id="8f586-116">Language Integrated Query (LINQ)</span></span>](index.md)  
-- [<span data-ttu-id="8f586-117">join, klauzula</span><span class="sxs-lookup"><span data-stu-id="8f586-117">join clause</span></span>](../language-reference/keywords/join-clause.md)  
-- [<span data-ttu-id="8f586-118">group, klauzula</span><span class="sxs-lookup"><span data-stu-id="8f586-118">group clause</span></span>](../language-reference/keywords/group-clause.md)  
+- [<span data-ttu-id="609a7-116">Language Integrated Query (LINQ)</span><span class="sxs-lookup"><span data-stu-id="609a7-116">Language Integrated Query (LINQ)</span></span>](index.md)  
+- [<span data-ttu-id="609a7-117">join, klauzula</span><span class="sxs-lookup"><span data-stu-id="609a7-117">join clause</span></span>](../language-reference/keywords/join-clause.md)  
+- [<span data-ttu-id="609a7-118">group, klauzula</span><span class="sxs-lookup"><span data-stu-id="609a7-118">group clause</span></span>](../language-reference/keywords/group-clause.md)  

@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fc85610f5c3db7929f824fda2dd211300d9b05c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8ce303d33a83d972247609e5d02d16a4a57669ff
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742994"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083797"
 ---
-# <a name="ltcompilersgt-element"></a><span data-ttu-id="28597-102">&lt;kompilatory&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="28597-102">&lt;compilers&gt; Element</span></span>
-<span data-ttu-id="28597-103">Kontener dla elementy kompilatora konfiguracji; zawiera zero lub więcej [ \<kompilatora >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elementów.</span><span class="sxs-lookup"><span data-stu-id="28597-103">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>  
+# <a name="ltcompilersgt-element"></a><span data-ttu-id="e8ecc-102">&lt;kompilatory&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="e8ecc-102">&lt;compilers&gt; Element</span></span>
+<span data-ttu-id="e8ecc-103">Kontener dla elementów konfiguracji, kompilator; zawiera zero lub więcej [ \<kompilatora >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elementów.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-103">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>  
   
- <span data-ttu-id="28597-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="28597-104">\<configuration></span></span>  
-<span data-ttu-id="28597-105">\<System.CodeDom — ></span><span class="sxs-lookup"><span data-stu-id="28597-105">\<system.codedom></span></span>  
-<span data-ttu-id="28597-106">\<kompilatory > — Element</span><span class="sxs-lookup"><span data-stu-id="28597-106">\<compilers> Element</span></span>  
+ <span data-ttu-id="e8ecc-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="e8ecc-104">\<configuration></span></span>  
+<span data-ttu-id="e8ecc-105">\<System.CodeDom ></span><span class="sxs-lookup"><span data-stu-id="e8ecc-105">\<system.codedom></span></span>  
+<span data-ttu-id="e8ecc-106">\<kompilatory > Element</span><span class="sxs-lookup"><span data-stu-id="e8ecc-106">\<compilers> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28597-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="28597-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8ecc-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="e8ecc-107">Syntax</span></span>  
   
 ```xml  
 <compilers>  
@@ -34,35 +33,35 @@ ms.locfileid: "32742994"
 </compilers>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="28597-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="28597-108">Attributes and Elements</span></span>  
- <span data-ttu-id="28597-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="28597-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e8ecc-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="e8ecc-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e8ecc-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="28597-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="28597-110">Attributes</span></span>  
- <span data-ttu-id="28597-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="28597-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e8ecc-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="e8ecc-110">Attributes</span></span>  
+ <span data-ttu-id="e8ecc-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="28597-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="28597-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e8ecc-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="e8ecc-112">Child Elements</span></span>  
   
-|<span data-ttu-id="28597-113">Element</span><span class="sxs-lookup"><span data-stu-id="28597-113">Element</span></span>|<span data-ttu-id="28597-114">Opis</span><span class="sxs-lookup"><span data-stu-id="28597-114">Description</span></span>|  
+|<span data-ttu-id="e8ecc-113">Element</span><span class="sxs-lookup"><span data-stu-id="e8ecc-113">Element</span></span>|<span data-ttu-id="e8ecc-114">Opis</span><span class="sxs-lookup"><span data-stu-id="e8ecc-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="28597-115">\<Kompilator > — Element</span><span class="sxs-lookup"><span data-stu-id="28597-115">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="28597-116">Określa atrybuty kompilatora konfiguracji dostawcy języka.</span><span class="sxs-lookup"><span data-stu-id="28597-116">Specifies the compiler configuration attributes for a language provider.</span></span>|  
+|[<span data-ttu-id="e8ecc-115">\<Kompilator > Element</span><span class="sxs-lookup"><span data-stu-id="e8ecc-115">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="e8ecc-116">Określa atrybuty kompilatora konfiguracji dostawcy języka.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-116">Specifies the compiler configuration attributes for a language provider.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="28597-117">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="28597-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e8ecc-117">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="e8ecc-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="28597-118">Element</span><span class="sxs-lookup"><span data-stu-id="28597-118">Element</span></span>|<span data-ttu-id="28597-119">Opis</span><span class="sxs-lookup"><span data-stu-id="28597-119">Description</span></span>|  
+|<span data-ttu-id="e8ecc-118">Element</span><span class="sxs-lookup"><span data-stu-id="e8ecc-118">Element</span></span>|<span data-ttu-id="e8ecc-119">Opis</span><span class="sxs-lookup"><span data-stu-id="e8ecc-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="28597-120">\<Konfiguracja > — Element</span><span class="sxs-lookup"><span data-stu-id="28597-120">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="28597-121">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="28597-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|[<span data-ttu-id="28597-122">\<System.CodeDom — > — Element</span><span class="sxs-lookup"><span data-stu-id="28597-122">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="28597-123">Określa ustawienia kompilatora konfiguracji dla dostawcy dostępnych języków.</span><span class="sxs-lookup"><span data-stu-id="28597-123">Specifies compiler configuration settings for available language providers.</span></span>|  
+|[<span data-ttu-id="e8ecc-120">\<Konfiguracja > Element</span><span class="sxs-lookup"><span data-stu-id="e8ecc-120">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="e8ecc-121">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="e8ecc-122">\<System.CodeDom > Element</span><span class="sxs-lookup"><span data-stu-id="e8ecc-122">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="e8ecc-123">Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców języka.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-123">Specifies compiler configuration settings for available language providers.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="28597-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="28597-124">Remarks</span></span>  
- <span data-ttu-id="28597-125">[ \<Compilers >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element zawiera ustawienia kompilatora konfiguracji dostawcy języka na komputerze.</span><span class="sxs-lookup"><span data-stu-id="28597-125">The [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element contains the compiler configuration settings for language providers on a computer.</span></span> <span data-ttu-id="28597-126">Każdy [ \<kompilatora >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) element określa atrybuty kompilatora konfiguracji dostawcy języka.</span><span class="sxs-lookup"><span data-stu-id="28597-126">Each [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e8ecc-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e8ecc-124">Remarks</span></span>  
+ <span data-ttu-id="e8ecc-125">[ \<Kompilatory >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element zawiera ustawienia kompilatora konfiguracji dostawcy języka na komputerze.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-125">The [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element contains the compiler configuration settings for language providers on a computer.</span></span> <span data-ttu-id="e8ecc-126">Każdy [ \<kompilatora >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) element określa atrybuty kompilatora konfiguracji dla dostawcy określonego języka.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-126">Each [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
   
- <span data-ttu-id="28597-127">.NET Framework definiuje ustawienia dostawcy języka i kompilatora początkowej w pliku konfiguracji komputera (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="28597-127">The .NET Framework defines the initial compiler and language provider settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="28597-128">Deweloperom i dostawcom kompilatora, można dodać ustawienia konfiguracji nowej <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementacji.</span><span class="sxs-lookup"><span data-stu-id="28597-128">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementation.</span></span> <span data-ttu-id="28597-129">Użyj <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> metody wyliczyć programowo języka ustawienia konfiguracji dostawcy i kompilator na komputerze.</span><span class="sxs-lookup"><span data-stu-id="28597-129">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
+ <span data-ttu-id="e8ecc-127">.NET Framework definiuje kompilatora początkowej i ustawienia dostawcy języka w pliku konfiguracji komputera (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="e8ecc-127">The .NET Framework defines the initial compiler and language provider settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="e8ecc-128">Deweloperom i dostawcom kompilatora umożliwia dodanie ustawienia konfiguracji dla nowego <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementacji.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-128">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementation.</span></span> <span data-ttu-id="e8ecc-129">Użyj <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> metody, można programowo wyliczyć języka ustawienia konfiguracji dostawcy i kompilator na komputerze.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-129">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="28597-130">Plik konfiguracji</span><span class="sxs-lookup"><span data-stu-id="28597-130">Configuration File</span></span>  
- <span data-ttu-id="28597-131">Ten element może być użyty w pliku konfiguracji komputera i pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="28597-131">This element can be used in the machine configuration file and the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="e8ecc-130">Plik konfiguracji</span><span class="sxs-lookup"><span data-stu-id="e8ecc-130">Configuration File</span></span>  
+ <span data-ttu-id="e8ecc-131">Ten element może być użyty w pliku konfiguracji komputera i pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-131">This element can be used in the machine configuration file and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="28597-132">Przykład</span><span class="sxs-lookup"><span data-stu-id="28597-132">Example</span></span>  
- <span data-ttu-id="28597-133">Poniższy przykład przedstawia element kompilatora typowych konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="28597-133">The following example illustrates a typical compiler configuration element.</span></span>  
+## <a name="example"></a><span data-ttu-id="e8ecc-132">Przykład</span><span class="sxs-lookup"><span data-stu-id="e8ecc-132">Example</span></span>  
+ <span data-ttu-id="e8ecc-133">W poniższym przykładzie pokazano element kompilatora typowej konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="e8ecc-133">The following example illustrates a typical compiler configuration element.</span></span>  
   
 ```xml  
 <configuration>  
@@ -80,9 +79,9 @@ ms.locfileid: "32742994"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="28597-134">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="28597-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e8ecc-134">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e8ecc-134">See Also</span></span>  
  <xref:System.CodeDom.Compiler.CompilerInfo>  
  <xref:System.CodeDom.Compiler.CodeDomProvider>  
- [<span data-ttu-id="28597-135">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="28597-135">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="28597-136">Schemat ustawień kompilatora i dostawcy języka</span><span class="sxs-lookup"><span data-stu-id="28597-136">Compiler and Language Provider Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
- [<span data-ttu-id="28597-137">\<Kompilator > — Element</span><span class="sxs-lookup"><span data-stu-id="28597-137">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+ [<span data-ttu-id="e8ecc-135">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="e8ecc-135">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="e8ecc-136">Schemat ustawień kompilatora i dostawcy języka</span><span class="sxs-lookup"><span data-stu-id="e8ecc-136">Compiler and Language Provider Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+ [<span data-ttu-id="e8ecc-137">\<Kompilator > Element</span><span class="sxs-lookup"><span data-stu-id="e8ecc-137">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

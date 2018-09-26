@@ -10,16 +10,16 @@ helpviewer_keywords:
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
 ms.openlocfilehash: fe200add4e29fe4bbe0fdf335dcd94107b8ff1eb
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46567624"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113572"
 ---
-# <a name="return-statement-visual-basic"></a><span data-ttu-id="15d68-102">Return — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15d68-102">Return Statement (Visual Basic)</span></span>
-<span data-ttu-id="15d68-103">Zwraca kontrolę do kodu, który wywołał `Function`, `Sub`, `Get`, `Set`, lub `Operator` procedury.</span><span class="sxs-lookup"><span data-stu-id="15d68-103">Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.</span></span>  
+# <a name="return-statement-visual-basic"></a><span data-ttu-id="896fb-102">Return — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="896fb-102">Return Statement (Visual Basic)</span></span>
+<span data-ttu-id="896fb-103">Zwraca kontrolę do kodu, który wywołał `Function`, `Sub`, `Get`, `Set`, lub `Operator` procedury.</span><span class="sxs-lookup"><span data-stu-id="896fb-103">Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15d68-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="15d68-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="896fb-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="896fb-104">Syntax</span></span>  
   
 ```  
 Return  
@@ -27,31 +27,31 @@ Return
 Return expression  
 ```  
   
-## <a name="part"></a><span data-ttu-id="15d68-105">Część</span><span class="sxs-lookup"><span data-stu-id="15d68-105">Part</span></span>  
+## <a name="part"></a><span data-ttu-id="896fb-105">Część</span><span class="sxs-lookup"><span data-stu-id="896fb-105">Part</span></span>  
  `expression`  
- <span data-ttu-id="15d68-106">Wymagane w `Function`, `Get`, lub `Operator` procedury.</span><span class="sxs-lookup"><span data-stu-id="15d68-106">Required in a `Function`, `Get`, or `Operator` procedure.</span></span> <span data-ttu-id="15d68-107">Wyrażenie, która reprezentuje wartość zwracaną do wywołującego kodu.</span><span class="sxs-lookup"><span data-stu-id="15d68-107">Expression that represents the value to be returned to the calling code.</span></span>  
+ <span data-ttu-id="896fb-106">Wymagane w `Function`, `Get`, lub `Operator` procedury.</span><span class="sxs-lookup"><span data-stu-id="896fb-106">Required in a `Function`, `Get`, or `Operator` procedure.</span></span> <span data-ttu-id="896fb-107">Wyrażenie, która reprezentuje wartość zwracaną do wywołującego kodu.</span><span class="sxs-lookup"><span data-stu-id="896fb-107">Expression that represents the value to be returned to the calling code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="15d68-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="15d68-108">Remarks</span></span>  
- <span data-ttu-id="15d68-109">W `Sub` lub `Set` procedury `Return` instrukcja jest odpowiednikiem `Exit Sub` lub `Exit Property` instrukcji i `expression` nie musi zostać dostarczony.</span><span class="sxs-lookup"><span data-stu-id="15d68-109">In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="896fb-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="896fb-108">Remarks</span></span>  
+ <span data-ttu-id="896fb-109">W `Sub` lub `Set` procedury `Return` instrukcja jest odpowiednikiem `Exit Sub` lub `Exit Property` instrukcji i `expression` nie musi zostać dostarczony.</span><span class="sxs-lookup"><span data-stu-id="896fb-109">In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.</span></span>  
   
- <span data-ttu-id="15d68-110">W `Function`, `Get`, lub `Operator` procedury `Return` instrukcja musi zawierać `expression`, i `expression` musi być typu danych, który jest konwertowany na typ zwracany procedury.</span><span class="sxs-lookup"><span data-stu-id="15d68-110">In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure.</span></span> <span data-ttu-id="15d68-111">W `Function` lub `Get` procedury, masz także alternatywne przypisanie wyrażenia do nazwy procedury, która będzie służyć jako wartość zwracaną, a następnie wykonywanie `Exit Function` lub `Exit Property` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="15d68-111">In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement.</span></span> <span data-ttu-id="15d68-112">W `Operator` procedury, należy użyć `Return expression`.</span><span class="sxs-lookup"><span data-stu-id="15d68-112">In an `Operator` procedure, you must use `Return expression`.</span></span>  
+ <span data-ttu-id="896fb-110">W `Function`, `Get`, lub `Operator` procedury `Return` instrukcja musi zawierać `expression`, i `expression` musi być typu danych, który jest konwertowany na typ zwracany procedury.</span><span class="sxs-lookup"><span data-stu-id="896fb-110">In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure.</span></span> <span data-ttu-id="896fb-111">W `Function` lub `Get` procedury, masz także alternatywne przypisanie wyrażenia do nazwy procedury, która będzie służyć jako wartość zwracaną, a następnie wykonywanie `Exit Function` lub `Exit Property` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="896fb-111">In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement.</span></span> <span data-ttu-id="896fb-112">W `Operator` procedury, należy użyć `Return expression`.</span><span class="sxs-lookup"><span data-stu-id="896fb-112">In an `Operator` procedure, you must use `Return expression`.</span></span>  
   
- <span data-ttu-id="15d68-113">Może zawierać tyle `Return` instrukcji zgodnie z potrzebami w tej samej procedury.</span><span class="sxs-lookup"><span data-stu-id="15d68-113">You can include as many `Return` statements as appropriate in the same procedure.</span></span>  
+ <span data-ttu-id="896fb-113">Może zawierać tyle `Return` instrukcji zgodnie z potrzebami w tej samej procedury.</span><span class="sxs-lookup"><span data-stu-id="896fb-113">You can include as many `Return` statements as appropriate in the same procedure.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="15d68-114">Kod w `Finally` bloku, który jest uruchamiany po `Return` instrukcji w `Try` lub `Catch` blok jest napotkano, ale wcześniej `Return` wykonywania instrukcji.</span><span class="sxs-lookup"><span data-stu-id="15d68-114">The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes.</span></span> <span data-ttu-id="15d68-115">A `Return` instrukcji nie można uwzględnić w `Finally` bloku.</span><span class="sxs-lookup"><span data-stu-id="15d68-115">A `Return` statement cannot be included in a `Finally` block.</span></span>  
+>  <span data-ttu-id="896fb-114">Kod w `Finally` bloku, który jest uruchamiany po `Return` instrukcji w `Try` lub `Catch` blok jest napotkano, ale wcześniej `Return` wykonywania instrukcji.</span><span class="sxs-lookup"><span data-stu-id="896fb-114">The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes.</span></span> <span data-ttu-id="896fb-115">A `Return` instrukcji nie można uwzględnić w `Finally` bloku.</span><span class="sxs-lookup"><span data-stu-id="896fb-115">A `Return` statement cannot be included in a `Finally` block.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="15d68-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="15d68-116">Example</span></span>  
- <span data-ttu-id="15d68-117">W poniższym przykładzie użyto `Return` instrukcji kilka razy, aby powrócić do kodu wywołującego, gdy procedura nie trzeba nic robić.</span><span class="sxs-lookup"><span data-stu-id="15d68-117">The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.</span></span>  
+## <a name="example"></a><span data-ttu-id="896fb-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="896fb-116">Example</span></span>  
+ <span data-ttu-id="896fb-117">W poniższym przykładzie użyto `Return` instrukcji kilka razy, aby powrócić do kodu wywołującego, gdy procedura nie trzeba nic robić.</span><span class="sxs-lookup"><span data-stu-id="896fb-117">The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.</span></span>  
   
  [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="15d68-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="15d68-118">See Also</span></span>  
- [<span data-ttu-id="15d68-119">Function, instrukcja</span><span class="sxs-lookup"><span data-stu-id="15d68-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
- [<span data-ttu-id="15d68-120">Sub, instrukcja</span><span class="sxs-lookup"><span data-stu-id="15d68-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [<span data-ttu-id="15d68-121">Get, instrukcja</span><span class="sxs-lookup"><span data-stu-id="15d68-121">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)  
- [<span data-ttu-id="15d68-122">Set, instrukcja</span><span class="sxs-lookup"><span data-stu-id="15d68-122">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)  
- [<span data-ttu-id="15d68-123">Operator, instrukcja</span><span class="sxs-lookup"><span data-stu-id="15d68-123">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [<span data-ttu-id="15d68-124">Instrukcja Property</span><span class="sxs-lookup"><span data-stu-id="15d68-124">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
- [<span data-ttu-id="15d68-125">Exit, instrukcja</span><span class="sxs-lookup"><span data-stu-id="15d68-125">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [<span data-ttu-id="15d68-126">Try...Catch...Finally, instrukcja</span><span class="sxs-lookup"><span data-stu-id="15d68-126">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="896fb-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="896fb-118">See Also</span></span>  
+ [<span data-ttu-id="896fb-119">Function, instrukcja</span><span class="sxs-lookup"><span data-stu-id="896fb-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="896fb-120">Sub, instrukcja</span><span class="sxs-lookup"><span data-stu-id="896fb-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="896fb-121">Get, instrukcja</span><span class="sxs-lookup"><span data-stu-id="896fb-121">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [<span data-ttu-id="896fb-122">Set, instrukcja</span><span class="sxs-lookup"><span data-stu-id="896fb-122">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [<span data-ttu-id="896fb-123">Operator, instrukcja</span><span class="sxs-lookup"><span data-stu-id="896fb-123">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="896fb-124">Instrukcja Property</span><span class="sxs-lookup"><span data-stu-id="896fb-124">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="896fb-125">Exit, instrukcja</span><span class="sxs-lookup"><span data-stu-id="896fb-125">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="896fb-126">Try...Catch...Finally, instrukcja</span><span class="sxs-lookup"><span data-stu-id="896fb-126">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

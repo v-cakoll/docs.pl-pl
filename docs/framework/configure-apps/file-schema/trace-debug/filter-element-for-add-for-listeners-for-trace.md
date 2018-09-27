@@ -11,11 +11,11 @@ ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: be4f3dcce1a746b287e75e0e6d3ba6eaa1d9b57b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47156872"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233031"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;Filtr&gt; elementu &lt;Dodaj&gt; dla &lt;odbiorników&gt; dla &lt;śledzenia&gt;
 Dodaje filtr do odbiornika w `Listeners` kolekcji dla śledzenia.  

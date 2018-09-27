@@ -13,11 +13,11 @@ ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: ef12a475dde103023d3411fb68efb3bdb4f6d116
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47076696"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235916"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Wyczyść&gt; Element dla authenticationModules (ustawienia sieci)
 Czyści wszystkie moduły uwierzytelniania z aplikacji.  

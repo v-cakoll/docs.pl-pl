@@ -37,11 +37,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082750"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237348"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Typy ogólne w Visual Basic (Visual Basic)
 A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosowuje się do wykonywania funkcji dla różnych typów danych. Po zdefiniowaniu klasy ogólnej lub procedura ma definiuje oddzielnych wersji dla każdego typu danych, dla którego możesz chcieć wykonać tę funkcję.  

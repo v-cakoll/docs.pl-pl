@@ -40,11 +40,11 @@ ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113757"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232914"
 ---
 # <a name="net-class-library-overview"></a>Przegląd biblioteki klas programu .NET
 

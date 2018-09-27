@@ -12,11 +12,11 @@ ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: ea9fd06887c9a4bc9f121945f27753dfc666cfec
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078394"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237374"
 ---
 # <a name="ltsystemcodedomgt-element"></a>&lt;System.CodeDom&gt; — Element
 Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców języka.  

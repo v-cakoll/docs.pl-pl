@@ -16,11 +16,11 @@ ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082308"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232282"
 ---
 # <a name="composing-streams"></a>Tworzenie strumieni
 Magazyn zapasowy jest na nośniku, na przykład dysk lub pamięć. Każdy magazyn zapasowy różnych implementuje własne strumienia jako implementacja <xref:System.IO.Stream> klasy. Każdy typ strumienia odczytuje i zapisuje bajty od i do jego podanej zapasowego magazynu. Strumienie, łączących się z magazynami kopii są nazywane podstawowe strumienie. Podstawowe strumienie ma konstruktorów, które mają parametry, które są wymagane do nawiązania strumienia magazyn zapasowy. Na przykład <xref:System.IO.FileStream> ma konstruktorów, które określają parametr ścieżki, która określa, jak plik zostanie udostępniony przez procesy i tak dalej.  

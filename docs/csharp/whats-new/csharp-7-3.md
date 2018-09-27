@@ -2,12 +2,12 @@
 title: Co nowego w języku C# 7.3
 description: Omówienie nowych funkcji w języku C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 383346569be2c0daf333b0cb3b28e2a8fbb24f66
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027909"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235234"
 ---
 # <a name="whats-new-in-c-73"></a>Co nowego w języku C# 7.3
 
@@ -36,7 +36,7 @@ Nowe opcje kompilatora są:
 
 W dalszej części tego artykułu zawiera szczegółowe informacje i łącza, aby dowiedzieć się więcej na temat ulepszenia.
 
-## <a name="enabling-more-performant-safe-code"></a>Włączanie więcej wydajne, bezpieczne kodu
+## <a name="enabling-more-efficient-safe-code"></a>Włączanie bardziej wydajne, bezpieczne kodu
 
 Można napisać kod C#, bezpiecznie wykonujący oraz niebezpieczny kod. Bezpieczny kod pozwala uniknąć klasy błędów, takich jak przepełnienia buforu, wskaźniki stray i inne błędy dostępu do pamięci. Te nowe funkcje rozszerzyć możliwości weryfikowalny kod bezpieczny. Dokładamy wszelkich starań, można zapisać więcej kodu przy użyciu bezpiecznych konstrukcji. Te funkcje ułatwią.
 
@@ -127,6 +127,8 @@ Teraz można określić typ <xref:System.Enum?displayProperty=nameWithType> lub 
 Można również użyć nowej `unmanaged` ograniczenie, aby określić, że parametr typu musi być **niezarządzany typ**. **Niezarządzany typ** to typ, który nie jest typem odwołania i nie zawiera żadnych typu odwołania na każdym poziomie zagnieżdżania.
 
 Aby uzyskać więcej informacji, zobacz artykuły na [ `where` ograniczenia ogólne](../language-reference/keywords/where-generic-type-constraint.md) i [ograniczenia dotyczące parametrów typu](../programming-guide/generics/constraints-on-type-parameters.md).
+
+Dodanie tych warunków ograniczających do istniejących typów jest [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Zamknięte typy rodzajowe mogą już nie spełnia te nowe ograniczenia.
 
 ## <a name="make-existing-features-better"></a>Ulepszyć istniejące funkcje
 

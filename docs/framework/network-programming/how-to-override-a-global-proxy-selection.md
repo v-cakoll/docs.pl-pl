@@ -8,11 +8,11 @@ ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 2be271123e34f155a79269d3b810c50fe24a40c6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112299"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47235942"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>Porady: Przesłoń wyboru globalnego serwera Proxy
 W tym przykładzie wysyła **WebRequest** do `www.contoso.com` , zastępuje wyboru globalnego serwera proxy przy użyciu serwera proxy, o nazwie `alternateproxy` na porcie 80.  

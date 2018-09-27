@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 author: BrucePerlerMS
 ms.openlocfilehash: c21769eed2f3040bf336860b5a9cd6cd450d5525
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090243"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232693"
 ---
 # <a name="http-transport-security"></a>Zabezpieczenia transportu HTTP
 Podczas korzystania z protokołu HTTP jako transportu zabezpieczeń jest dostarczana przez implementację protokołu Secure Sockets Layer (SSL). Protokół SSL jest powszechnie używanych w Internecie uwierzytelniania usługi do klienta, a następnie, aby zapewnić poufność (szyfrowanie) do kanału. W tym temacie wyjaśniono, jak działa protokół SSL oraz jego implementacji w Windows Communication Foundation (WCF).  

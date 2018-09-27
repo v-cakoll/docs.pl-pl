@@ -11,11 +11,11 @@ ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079665"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47234682"
 ---
 # <a name="generic-interfaces"></a>Interfejsy ogólne
 Ten temat zawiera omówienie ogólnych interfejsów, które udostępniają funkcje wspólne dla rodziny typów ogólnych.  

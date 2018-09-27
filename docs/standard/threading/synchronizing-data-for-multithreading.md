@@ -10,11 +10,11 @@ ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073479"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232823"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
 Gdy wiele wątków może wykonywać wywołania do właściwości i metody pojedynczy obiekt, ważne jest, można zsynchronizować te wywołania. W przeciwnym razie jeden wątek może spowodować zakłócenie działania innego wątku, a obiekt może pozostać w nieprawidłowym stanie. Klasy, której członkami są chronione przed przerw w zasilaniu nazywa się metodą o bezpiecznych wątkach.  

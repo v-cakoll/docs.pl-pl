@@ -12,11 +12,11 @@ ms.assetid: 8bdd1a73-1ecb-4a05-a891-a7827ebb767f
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 7c4772d36a88dfede04f7592c1cab776ddcd7d7d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084361"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237007"
 ---
 # <a name="add-content-to-a-text-box-using-ui-automation"></a>Dodawanie zawartości do pola tekstowego przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]

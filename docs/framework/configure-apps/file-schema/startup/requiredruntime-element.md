@@ -12,11 +12,11 @@ ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 7cb5e29f3d7fc1faffdba01a5322f1883fca8af0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47069709"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237088"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; — Element
 Określa, że aplikacja obsługuje tylko wersję 1.0 środowiska uruchomieniowego języka wspólnego. Ten element jest przestarzała i nie powinna być używana. [ `supportedRuntime` ](supportedruntime-element.md) Zamiast tego należy użyć elementu.

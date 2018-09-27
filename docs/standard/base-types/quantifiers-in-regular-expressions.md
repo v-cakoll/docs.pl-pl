@@ -17,11 +17,11 @@ ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087611"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237361"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Kwantyfikatory w wyrażeniach regularnych
 Kwantyfikatory Określ, ile wystąpień znak, grupa lub Klasa znaków musi znajdować się w danych wejściowych, aby dopasowanie zakończyło się można znaleźć.  W poniższej tabeli wymieniono kwantyfikatorów poparte .NET.  

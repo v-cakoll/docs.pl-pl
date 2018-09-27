@@ -12,11 +12,11 @@ ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: d7563d3a0ba545bfd8d1b80981fcce607d230873
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073193"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399245"
 ---
 # <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; — Element
 Określa, gdzie znaleźć zestawu środowisko uruchomieniowe języka wspólnego.  

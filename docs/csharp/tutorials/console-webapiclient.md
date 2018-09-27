@@ -4,11 +4,11 @@ description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087225"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397924"
 ---
 # <a name="rest-client"></a>Klient REST
 

@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087294"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400585"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych
 

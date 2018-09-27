@@ -11,11 +11,11 @@ ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 5b1707d7490de07520603f6fdf6d1ee1a44ffba7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171416"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400507"
 ---
 # <a name="ltipv6gt-element-network-settings"></a>&lt;Protokół IPv6&gt; — Element (ustawienia sieci)
 Włącza protokołu internetowego w wersji 6 (IPv6) odpowiedzi od przestarzałe elementy członkowskie <xref:System.Net.Dns> klasy.  

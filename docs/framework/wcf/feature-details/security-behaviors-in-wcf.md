@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 author: BrucePerlerMS
 ms.openlocfilehash: a4727b98d98caadef5cd7ae61cddd92d6d8408b9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071042"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397977"
 ---
 # <a name="security-behaviors-in-wcf"></a>Zachowania zabezpieczeń w programie WCF
 W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachowanie w czasie wykonywania na poziomie usługi, lub na poziomie punktu końcowego. (Aby uzyskać więcej informacji na temat zachowań ogólnie rzecz biorąc, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Zachowania zabezpieczeń* umożliwić kontrolę nad poświadczeniami, uwierzytelniania, autoryzacji i dzienniki inspekcji. Można użyć zachowań, programowania lub za pośrednictwem konfiguracji. Ten temat koncentruje się na temat konfigurowania następujące zachowania związane z funkcjami zabezpieczeń:  

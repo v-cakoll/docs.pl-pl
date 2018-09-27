@@ -20,11 +20,11 @@ ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 2e79c9a75e4513be91af1104195af3614b49092d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176493"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398553"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Za pomocą synchronicznego gniazda serwera
 Server synchronicznego gniazda zawiesić wykonanie aplikacji, dopóki nie zostanie odebrane żądanie połączenia gniazda. Server synchronicznego gniazda nie są odpowiednie dla aplikacji, które intensywnie korzystają z sieci w ich działania, ale może być odpowiednie dla aplikacji sieciowych proste.  

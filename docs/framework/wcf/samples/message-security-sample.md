@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
 author: BrucePerlerMS
 ms.openlocfilehash: 46e17cb2d4fecc8a71988ff61287e6cc682654c9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079756"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400871"
 ---
 # <a name="message-security-sample"></a>Zabezpieczenia komunikatów — przykład
 Ten przykład demonstruje sposób implementacji aplikacji, która używa `basicHttpBinding` i zabezpieczenia wiadomości. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora.  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
 ms.openlocfilehash: b812673ac1c015adde357d3c0707d85643aad3e9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084335"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47401379"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
 Rejestruje pamięci podręcznej dla sesji tokenów z usługi lub kolekcji programu obsługi tokenów zabezpieczeń.  

@@ -3,11 +3,11 @@ title: '&lt;comContracts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
 ms.openlocfilehash: 297a28181de8ce6ed658afad950f25cced9f9cb7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078555"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47402792"
 ---
 # <a name="ltcomcontractsgt"></a>&lt;comContracts&gt;
 `comContracts` Sekcja konfiguracji zawiera elementy, które pozwalają określić różne właściwości kontraktu usługi integracji COM +.  

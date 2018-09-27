@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 ms.openlocfilehash: f488d2e840ec2524f0cde8dc4b3e6c1cd10c554e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090029"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400364"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Zabezpieczenia komunikatów z anonimowym klientem
 Następujący scenariusz pokazuje, klient i usługa zabezpieczane na komunikat usług Windows Communication Foundation (WCF). Celem projektu jest użycie zabezpieczeń wiadomości, a nie z zabezpieczeń transportu, aby w przyszłości może obsługiwać rozbudowane modelu opartego na oświadczeniach. Aby uzyskać więcej informacji o korzystaniu z zaawansowanych oświadczenia dotyczące autoryzacji, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  

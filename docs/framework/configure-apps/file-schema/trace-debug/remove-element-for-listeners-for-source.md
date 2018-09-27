@@ -10,11 +10,11 @@ ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188940"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400845"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Usuń&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;
 Usuwa odbiornik z `Listeners` kolekcję dla źródła śledzenia.  

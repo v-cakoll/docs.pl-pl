@@ -10,11 +10,11 @@ ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0f5ae64eb1017570a56efab59a4bf1a66d5e02b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113666"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398920"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Weryfikowanie dokumentu XML w modelu DOM
 <xref:System.Xml.XmlDocument> Klasy XML w modelu DOM (Document Object) względem schematu XML definicji język (XSD) schematu lub dokumentu definicja typu (DTD) domyślnie weryfikują dane XML tylko sprawdza się, jest poprawnie sformułowany.  

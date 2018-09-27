@@ -4,11 +4,11 @@ description: Wprowadzenie do przechodzenie przez wykonywanie zapytań i zalet dr
 ms.date: 06/01/2018
 ms.custom: mvc
 ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083231"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400793"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Wprowadzenie do składni przekształcania
 

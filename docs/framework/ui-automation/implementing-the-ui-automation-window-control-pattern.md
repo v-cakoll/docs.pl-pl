@@ -9,11 +9,11 @@ ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: f2f7f6c1c03a96af0c114033aee2063e0c991401
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171910"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400559"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementacja wzorca kontrolki okna automatyzacji interfejsu użytkownika
 > [!NOTE]

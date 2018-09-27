@@ -3,11 +3,11 @@ title: Co nowego w języku C# 7.2
 description: Omówienie nowych funkcji w języku C# 7.2.
 ms.date: 08/16/2017
 ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109579"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400806"
 ---
 # <a name="whats-new-in-c-72"></a>Co nowego w języku C# 7.2
 

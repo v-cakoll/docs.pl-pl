@@ -18,11 +18,11 @@ ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 25261185f263a775b6104f94d10874ff39035de9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082191"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47396984"
 ---
 # <a name="using-secure-sockets-layer"></a>Używanie protokołu Secure Sockets Layer
 <xref:System.Net> Klasy korzystać protokół Secure Sockets Layer (SSL), aby szyfrować połączenia dla kilku protokołów sieciowych.  

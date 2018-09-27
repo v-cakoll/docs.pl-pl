@@ -8,11 +8,11 @@ ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 86bf21580db9bc6d9890f0935e283b653ba2e0b5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077125"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397793"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Porady: Włączanie korzystania z serwera Proxy do komunikacji z Internetem przez element WebRequest
 Ten przykład tworzy wystąpienie globalnych serwera proxy, które spowoduje włączenie dowolnego <xref:System.Net.WebRequest> korzystania z serwera proxy do komunikacji z Internetem. W przykładzie założono, że serwer proxy ma nazwę `webproxy` i że komunikuje się ona na port 80, standardowego portu HTTP.  

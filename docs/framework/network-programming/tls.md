@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a421b73edc1dd90be53d301d12160d39abe78f90
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111363"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424483"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Transport Layer Security (TLS) najlepszych rozwiązań za pomocą programu .NET Framework
 
@@ -182,7 +182,7 @@ Aby uzyskać więcej informacji na temat protokoły TLS Zobacz [ograniczenie: pr
 > [!WARNING]
 > Ustawienie kluczy rejestru ma wpływ na wszystkie aplikacje w systemie. Użyj tej opcji tylko wtedy, gdy są dostępne w pełną kontrolę nad maszyną i kontrolować zmiany w rejestrze.
 
-Jeśli ustawienie jedno lub oba `AppContext` przełączniki nie jest to możliwe, można kontrolować protokołów zabezpieczeń, które Twoja aplikacja korzysta z kluczami rejestru Windows, opisane w tej sekcji. Nie można użyć jednego lub obu `AppContext` przełączniki, jeśli aplikacja jest przeznaczona na .NET Framework w wersji starszej niż 4.6 lub nie można edytować plik konfiguracji. Jeśli chcesz skonfigurować zabezpieczenia z rejestrem, następnie określać zabezpieczenia protokołu wartości w kodzie; Spowoduje to więc przesłonić metodę rejestru.
+Jeśli ustawienie jedno lub oba `AppContext` przełączniki nie jest dostępną opcją, można kontrolować protokołów zabezpieczeń, które Twoja aplikacja korzysta z kluczami rejestru Windows, opisane w tej sekcji. Nie można użyć jednego lub obu `AppContext` przełączniki, jeśli dana aplikacja działa w .NET Framework 4.5.2 lub starszych wersji lub nie można edytować plik konfiguracji. Jeśli chcesz skonfigurować zabezpieczenia z rejestrem, określać wartości protokołu zabezpieczeń w kodzie; Spowoduje to więc zastępuje ustawienie rejestru.
 
 Nazwy kluczy rejestru, które są podobne do nazwy odpowiadającego `AppContext` zmienia, ale bez `DontEnable` dołączona do nazwy. Na przykład `AppContext` Przełącz `DontEnableSchUseStrongCrypto` nosi nazwę klucza rejestru [SchUseStrongCrypto](#schusestrongcrypto).
 

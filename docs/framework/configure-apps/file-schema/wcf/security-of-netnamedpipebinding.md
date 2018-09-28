@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
 author: BrucePerlerMS
 ms.openlocfilehash: eee4cc13b5181caa4449c3ad6ebc5247cc7e0f1a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077060"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424262"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;security&gt; w &lt;netNamedPipeBinding&gt;
 Definiuje ustawienia zabezpieczeń dla powiązania.  

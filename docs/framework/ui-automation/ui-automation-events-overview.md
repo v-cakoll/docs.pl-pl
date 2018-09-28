@@ -12,11 +12,11 @@ ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: ab7e2546ce7267e77e5ea7000e94059e8c162b5d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47172563"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421771"
 ---
 # <a name="ui-automation-events-overview"></a>Przegląd zdarzeń automatyzacji interfejsu użytkownika
 > [!NOTE]

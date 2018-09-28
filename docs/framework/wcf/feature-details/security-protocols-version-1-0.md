@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
 author: BrucePerlerMS
 ms.openlocfilehash: 043a092855b7f5827c03b1d247b03328ba561edf
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083062"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421336"
 ---
 # <a name="security-protocols-version-10"></a>Protokoły zabezpieczeń wersja 1.0
 Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usług sieci Web, które obejmują wszystkie istniejące enterprise komunikatów wymagań dotyczących zabezpieczeń. W tej sekcji opisano szczegóły Windows Communication Foundation (WCF) w wersji 1.0 (zaimplementowany w <xref:System.ServiceModel.Channels.SecurityBindingElement>) dla następujących sieci Web usług protokołów zabezpieczeń.  

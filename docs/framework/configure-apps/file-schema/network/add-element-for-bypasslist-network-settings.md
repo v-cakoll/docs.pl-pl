@@ -13,11 +13,11 @@ ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b6cf22fcaff928e53c33a8eb4987acd5a7f6250e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081036"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421797"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Dodaj&gt; , Element dla bypasslist (ustawienia sieci)
 Dodaje adres IP lub nazwę DNS do listy pomijania proxy.  

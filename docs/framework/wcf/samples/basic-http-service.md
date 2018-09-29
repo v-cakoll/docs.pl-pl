@@ -2,12 +2,12 @@
 title: Podstawowa usługa HTTP
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516632"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47455726"
 ---
 # <a name="basic-http-service"></a>Podstawowa usługa HTTP
 Ten przykład demonstruje sposób implementacji usługi oparte na protokole HTTP, opartego na protokole RPC — co jest często określany jako usługa "POX" (zwykłe stare XML) — przy użyciu modelu programowania REST Windows Communication Foundation (WCF). Ten przykład zawiera dwa składniki: samodzielnie hostowana usługa HTTP programu WCF (Service.cs) i aplikacji konsoli (Program.cs), która tworzy usługę i wykonywania wywołań do niego.  
@@ -21,7 +21,7 @@ Ten przykład demonstruje sposób implementacji usługi oparte na protokole HTTP
   
  Plik App.config Konfiguruje usługi WCF z domyślną <xref:System.ServiceModel.Description.WebHttpEndpoint> zawierający <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> właściwością `true`. W rezultacie, infrastruktura WCF tworzy automatycznego na podstawie kodu HTML na stronie pomocy `http://localhost:8000/Customers/help` zawierające informacje dotyczące sposobu konstruowania żądania HTTP do usługi i sposobu korzystania z usługi odpowiedzi HTTP.  
   
- Plik program.cs pokazuje, jak fabryka kanałów WCF może służyć do wykonywania wywołań do usługi i przetwarzanie odpowiedzi. Należy pamiętać, że jest to tylko jeden sposób uzyskiwania dostępu do usługi WCF. Istnieje również możliwość uzyskania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak <xref:System.Net.HttpWebRequest> i <xref:System.Net.WebClient>. Inne przykłady w zestawie SDK (takie jak [automatyczne wybieranie formatu](../../../../docs/framework/wcf/samples/automatic-format-selection.md) próbki i [podstawowej usługi do zasobu](../../../../docs/framework/wcf/samples/basic-resource-service.md) przykładowy) pokazują, jak używać tych klas do komunikowania się z usługą WCF.  
+ Plik program.cs pokazuje, jak fabryka kanałów WCF może służyć do wykonywania wywołań do usługi i przetwarzanie odpowiedzi. Należy pamiętać, że jest to tylko jeden sposób uzyskiwania dostępu do usługi WCF. Istnieje również możliwość uzyskania dostępu do usługi przy użyciu innych klas .NET Framework, takich jak <xref:System.Net.HttpWebRequest> i <xref:System.Net.WebClient>.
   
  Przykład składa się samodzielnie hostowana usługa i klient że uruchamiane zarówno w aplikacji konsoli. Po uruchomieniu aplikacji konsolowej klienta zgłasza żądania do usługi i zapisuje odpowiednie informacje z odpowiedzi w oknie konsoli.  
   
@@ -41,7 +41,3 @@ Ten przykład demonstruje sposób implementacji usługi oparte na protokole HTTP
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
-  
-## <a name="see-also"></a>Zobacz też  
- [Automatyczne wybieranie formatu](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- [Podstawowa usługa obsługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md)

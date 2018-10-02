@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 author: BrucePerlerMS
 ms.openlocfilehash: e09f7c8483e1a3ca330bbee995c2d59f9005f207
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47861696"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Niezabezpieczony klient i usługa w intranecie
 Poniższa ilustracja przedstawia prostą usługę Windows Communication Foundation (WCF) opracowany, aby udostępniać informacje o bezpiecznej sieci prywatnej dla aplikacji WCF. Zabezpieczeń nie jest wymagany, dane o niskiej ważności, powinien być założenia bezpieczne sieci, ponieważ zabezpieczenia przez warstwę poniżej infrastruktury usług WCF.  

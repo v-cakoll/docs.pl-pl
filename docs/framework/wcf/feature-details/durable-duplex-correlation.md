@@ -2,12 +2,12 @@
 title: Niezawodna korelacja dwukierunkowa
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205489"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862899"
 ---
 # <a name="durable-duplex-correlation"></a>Niezawodna korelacja dwukierunkowa
 Niezawodna korelacja dwukierunkowa, znany także jako wywołanie zwrotne korelacji jest przydatne, gdy usługi przepływu pracy istnieje wymaganie, aby wysłać wywołanie zwrotne do początkowego obiektu wywołującego. W odróżnieniu od dupleks WCF wywołania zwrotnego może się zdarzyć w dowolnym momencie w przyszłości i nie jest związany z tego samego kanału lub trwania kanału. Jedynym wymaganiem jest, że obiekt wywołujący ma aktywny punkt końcowy nasłuchiwać komunikatów wywołania zwrotnego. Dzięki temu dwie usługi przepływu pracy do komunikowania się z konwersacji długotrwałych. Ten temat zawiera omówienie niezawodna korelacja dwukierunkowa.  
@@ -198,7 +198,4 @@ WF2 - Items sent
 WF1 - Items Received  
 ```  
   
- W tym przykładzie przepływami pracy jawnie zarządzać za pomocą korelacji <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Powodu pojedynczego korelacji w tych przepływów pracy przykładowej domyślnie <xref:System.ServiceModel.Activities.CorrelationHandle> zarządzania mogą być wystarczające.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Niezawodna komunikacja dwukierunkowa &#91;WF — przykłady&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+ W tym przykładzie przepływami pracy jawnie zarządzać za pomocą korelacji <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Powodu pojedynczego korelacji w tych przepływów pracy przykładowej domyślnie <xref:System.ServiceModel.Activities.CorrelationHandle> zarządzania mogą być wystarczające.

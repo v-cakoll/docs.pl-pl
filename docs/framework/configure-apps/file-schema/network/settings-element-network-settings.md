@@ -11,11 +11,11 @@ ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9d6189c736e1f2843a986c3a96f8547e9a231db0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862688"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;ustawienia&gt; — Element (ustawienia sieci)
 Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net?displayProperty=nameWithType> przestrzeni nazw.  

@@ -11,11 +11,11 @@ ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b62dc1a9118f7d4f1f693ade36626deaecd23999
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: HT
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47459740"
+ms.locfileid: "47863653"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt; — Element (ustawienia sieci)
 Konfiguruje katalog lokalny dla serwera transportu protokołu SMTP (Simple Mail).  

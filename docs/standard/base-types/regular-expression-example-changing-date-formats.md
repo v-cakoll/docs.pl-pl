@@ -16,11 +16,11 @@ ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862136"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Przykładowe wyrażenie regularne: zmienianie formatów daty
 Poniższy przykład kodu wykorzystuje <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metodę, aby zastąpić dat, które mają następującą formę *mm*/*dd*/*rr* z daty mają następującą formę *dd*-*mm*-*rr*.  

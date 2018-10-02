@@ -12,11 +12,11 @@ ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862649"
 ---
 # <a name="how-to-implement-an-observer"></a>Porady: implementowanie obserwatora
 Wzorzec projektowy obserwatora wymaga dzielenia między obserwatora, co spowoduje rejestrację dla powiadomień, a dostawca, który monitoruje danych i wysyłanie powiadomień do co najmniej jeden obserwatorów. W tym temacie omówiono sposób tworzenia obserwatora. Temat pokrewny [porady: Implementowanie dostawcy](../../../docs/standard/events/how-to-implement-a-provider.md), w tym artykule omówiono sposób tworzenia dostawcy usługi.  

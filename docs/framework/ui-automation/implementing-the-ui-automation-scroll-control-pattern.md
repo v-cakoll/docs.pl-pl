@@ -9,11 +9,11 @@ ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 60b2b8b8e07cfec9000ddd974891070b625fde01
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47194116"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863213"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implementacja wzorca kontrolki przewijania automatyzacji interfejsu użytkownika
 > [!NOTE]

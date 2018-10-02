@@ -12,11 +12,11 @@ ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208649"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863629"
 ---
 # <a name="ltruntimegt-element"></a>&lt;środowisko uruchomieniowe&gt; — Element
 Zawiera informacje używane przez środowisko uruchomieniowe języka wspólnego, aby skonfigurować aplikacje.  

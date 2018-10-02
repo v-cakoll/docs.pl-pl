@@ -9,11 +9,11 @@ ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81d0ce4f697935908b8ad7084560bd1adacbdf2d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47456080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863499"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Klasy XslTransform implementuje procesora XSLT
 > [!NOTE]

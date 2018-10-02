@@ -14,11 +14,11 @@ ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3879dc3f0270a56132b44882a74c50d05914ff89
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398631"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862487"
 ---
 # <a name="struct-design"></a>Projekt struktury
 Typ wartości ogólnego przeznaczenia najczęściej nazywa się struktury, jego słowo kluczowe języka C#. Ta sekcja zawiera wskazówki dotyczące projektowania struktury ogólne.  

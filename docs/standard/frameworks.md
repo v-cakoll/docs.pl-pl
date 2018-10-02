@@ -7,11 +7,11 @@ ms.date: 05/31/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
 ms.openlocfilehash: 76bf496e957022f4d97d3cf3f3975f334b1d5c45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046659"
 ---
 # <a name="target-frameworks"></a>Platformy docelowe
 

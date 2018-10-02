@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
 ms.openlocfilehash: 0912ff0909ffa5b22bed07543a2e514de4fb1ff5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035834"
 ---
 # <a name="troubleshooting-service-application-won39t-install"></a>Rozwiązywanie problemów: Usługi aplikacji kupione&#39;instalować
 Jeśli Twoja aplikacja usługi nie zainstaluje się poprawnie, sprawdź, upewnij się, że <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość klasy usługi jest ustawiona na tę samą wartość, pokazane w Instalatorze za daną usługę. Wartość musi być taka sama w obu przypadkach, w kolejności dla usługi w taki sposób poprawnie zainstalować.  

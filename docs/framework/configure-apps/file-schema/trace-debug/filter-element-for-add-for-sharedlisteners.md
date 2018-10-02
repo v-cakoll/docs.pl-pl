@@ -13,11 +13,11 @@ ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027091"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;Filtr&gt; elementu &lt;Dodaj&gt; dla &lt;sharedListeners&gt;
 Dodaje filtr do odbiornika w `sharedListeners` kolekcji.  

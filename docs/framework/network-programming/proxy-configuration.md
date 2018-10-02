@@ -14,11 +14,11 @@ ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f4ae905b7500a8555691557b264985acf538d075
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036992"
 ---
 # <a name="proxy-configuration"></a>Konfiguracja serwera proxy
 Serwer proxy obsługuje żądania klienta dla zasobów. Serwer proxy można zwrócić żądany zasób z pamięci podręcznej lub przekazywać żądania do serwera, na którym znajduje się zasób. Serwery proxy może poprawić wydajność sieci dzięki zmniejszeniu liczby żądań wysyłanych do serwerów zdalnych. Serwery proxy można również ograniczyć dostęp do zasobów.  

@@ -3,11 +3,11 @@ title: Wprowadzenie do czystych przekształceń funkcjonalnych (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
 ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030486"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Wprowadzenie do czystych przekształceń funkcjonalnych (C#)
 Ta sekcja wprowadza przekształceń funkcjonalnych, w tym podstawowe pojęcia i konstrukcje językowe pomocniczych. Różni się znacząco przekształcania zorientowane obiektowo i funkcjonalności sposoby programowania, w tym porady na temat przechodzenia do nich. Mimo że przekształceń funkcjonalnych mogą być używane w wielu scenariuszach programowania, transformacje XML jest używany tutaj jako konkretny przykład.  

@@ -23,11 +23,11 @@ helpviewer_keywords:
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
 ms.openlocfilehash: d0a16ee6f627ecc062fcad5f5216dda9855e430e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47436287"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036068"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Wprowadzenie do aplikacji usług systemu Windows
 Usługi Microsoft Windows, znana wcześniej jako usługi NT, umożliwiają tworzenie długotrwałych wykonywalny aplikacji, które działają w ich własnych sesjach Windows. Te usługi mogą być uruchamiane automatycznie podczas rozruchu komputera, mogą być wstrzymywane i ponownie uruchomiony i nie wyświetlają żadnego interfejsu użytkownika. Te funkcje idealnym rozwiązaniem usługi do użycia na serwerze lub w przypadku, gdy potrzebujesz długo działających funkcji, które nie kolidują z innymi użytkownikami pracującymi na tym samym komputerze. Można również uruchomić usługi w kontekście zabezpieczeń konta określonego użytkownika, który jest inny niż zalogowany użytkownik lub domyślne konto komputera. Aby uzyskać więcej informacji o usługach i sesjach Windows zobacz dokumentację zestawu Windows SDK.  

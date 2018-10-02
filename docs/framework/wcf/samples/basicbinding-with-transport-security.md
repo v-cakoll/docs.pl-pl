@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
 author: BrucePerlerMS
 ms.openlocfilehash: 6f68512089d6ab975557f58e883215ad70c3cc04
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192982"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035964"
 ---
 # <a name="basicbinding-with-transport-security"></a>Element BasicBinding z elementem Transport Security
 Niniejszy przykład pokazuje użycie protokołu SSL z zabezpieczeń transportu z powiązaniem podstawowe. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora.  

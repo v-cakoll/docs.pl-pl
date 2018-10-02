@@ -3,11 +3,11 @@ title: 'Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczon�
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 ms.openlocfilehash: b53596d7ac4e7e7c3748f6a98130492a96c0b48c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037232"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją
 Rezerwację adresu URL pozwala ograniczyć, kto może odbierać komunikaty z adresem URL lub zbiór adresów URL. Rezerwacja składa się z szablonem adresu URL, listy kontroli dostępu (ACL) i zestaw flag. Szablon adresu URL definiuje które adresy URL dotyczy rezerwacji. Aby uzyskać więcej informacji na temat sposobu przetwarzania szablonów URL zobacz [routingu żądań przychodzących](https://go.microsoft.com/fwlink/?LinkId=136764). Listy kontroli dostępu kontroluje, jakie użytkownik lub grupa użytkowników może odbierać komunikaty z określonych adresów URL. Flagi wskazują, czy rezerwacja ma przyznać uprawnienia użytkownika lub grupy do nasłuchiwania na adres URL, bezpośrednio lub Aby delegować uprawnienia do nasłuchiwania jakiś inny proces.  

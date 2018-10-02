@@ -3,11 +3,11 @@ title: Wariancje w interfejsach (C#)
 ms.date: 07/20/2015
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
 ms.openlocfilehash: 11d0c8665412bb513cb68d58203a454b7c97e052
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399784"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030171"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Wariancje w interfejsach (C#)
 .NET framework 4 wprowadzono wariancji obsługę kilka istniejących interfejsów ogólnych. Obsługa wariancja umożliwia niejawną konwersję klas, które implementują te interfejsy. Następujące interfejsy są teraz wariant:  

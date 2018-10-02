@@ -2,12 +2,12 @@
 title: Używanie działań WF programu .NET Framework 3.0 w .NET Framework 4 przy użyciu działań Interop
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029266"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Używanie działań WF programu .NET Framework 3.0 w .NET Framework 4 przy użyciu działań Interop
 <xref:System.Activities.Statements.Interop> Działanie jest [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] działania (WF 4.5), który otacza [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) działania w ramach [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Działanie WF 3 może być czynnością pojedynczego typu liść lub całe drzewo działań. Wykonanie (w tym unieważnienie i obsługa wyjątków) oraz trwałości [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] działanie występuje w kontekście [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] wystąpienia przepływu pracy, który jest wykonywany.  
@@ -52,7 +52,4 @@ ms.locfileid: "43467508"
   
 3.  Rekordy śledzenia 3 WF działań w ramach <xref:System.Activities.Statements.Interop> działania zostały udostępnione firmie WF 4.5 śledzenia uczestników jako <xref:System.Activities.Tracking.InteropTrackingRecord> obiektów. <xref:System.Activities.Tracking.InteropTrackingRecord> jest pochodną z <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
-4.  Niestandardowe działanie WF 3 mogą uzyskać dostęp do danych przy użyciu funkcji kolejek przepływu pracy w środowisku współdziałanie w taki sam sposób jak w ramach środowiska uruchomieniowego przepływu pracy WF 3. Wymagane są bez zmian w kodzie działań niestandardowych. Na tym hoście danych polega na umieszczonych w kolejce do kolejki przepływu pracy WF 3 wznawianie <xref:System.Activities.Bookmark>. Nazwa zakładki jest to forma ciągu <xref:System.IComparable> Nazwa kolejki przepływu pracy.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie działania programu .NET Framework 3.0 lub .NET Framework 3.5 w przepływie pracy programu .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+4.  Niestandardowe działanie WF 3 mogą uzyskać dostęp do danych przy użyciu funkcji kolejek przepływu pracy w środowisku współdziałanie w taki sam sposób jak w ramach środowiska uruchomieniowego przepływu pracy WF 3. Wymagane są bez zmian w kodzie działań niestandardowych. Na tym hoście danych polega na umieszczonych w kolejce do kolejki przepływu pracy WF 3 wznawianie <xref:System.Activities.Bookmark>. Nazwa zakładki jest to forma ciągu <xref:System.IComparable> Nazwa kolejki przepływu pracy.

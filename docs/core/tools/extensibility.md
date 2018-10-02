@@ -5,11 +5,11 @@ author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
 ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204615"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032247"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Model rozszerzalności narzędzi interfejsu wiersza polecenia platformy .NET core
 

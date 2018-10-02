@@ -2,17 +2,18 @@
 title: Transakcje przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 6081fb02-c0f2-483d-97b8-f3b7dc03011d
-ms.openlocfilehash: 2bb5f6498b365f3b773eea9a5adce1ec1158a289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2a0c301abac562904e976fe09e5a68697b191e5
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517257"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030158"
 ---
 # <a name="workflow-transactions"></a>Transakcje przepływu pracy
-[!INCLUDE[wf1](../../../includes/wf1-md.md)] zapewnia obsługę uczestniczących w <xref:System.Transactions> transakcji przy użyciu <xref:System.Activities.Statements.TransactionScope> działania do określania zakresu transakcyjne jednostkę pracy. Gdy <xref:System.Transactions.TransactionScope?displayProperty=nameWithType> muszą być wypełnione jawnie <xref:System.Activities.Statements.TransactionScope?displayProperty=nameWithType> niejawnie wywołania ukończyć działania transakcji po pomyślnym zakończeniu. Żadnych działań, które są zawarte w <xref:System.Activities.Statements.TransactionScope.Body%2A> z <xref:System.Activities.Statements.TransactionScope> działania uczestniczyć w transakcji. WF można przepływ transakcji w przepływie pracy za pośrednictwem <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania. Podobnie jak <xref:System.Activities.Statements.TransactionScope> działania, wszystkie działania zawarte w <xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> uczestniczy w transakcji. WF zapewnia zależnych od tego działania na <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> działa z obiema <xref:System.Activities.Statements.TransactionScope> i <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Jeśli działania dostarczane przez system nie dotyczą wszystkich wymagań, działań niestandardowych można skonstruować za pomocą <xref:System.Activities.RuntimeTransactionHandle> umożliwiające przepływ zaawansowane i scenariuszy kontroli transakcji.  
+
+[!INCLUDE[wf1](../../../includes/wf1-md.md)] zapewnia obsługę uczestnictwa w programie <xref:System.Transactions> transakcji przy użyciu <xref:System.Activities.Statements.TransactionScope> działanie, aby ograniczyć zakres transakcyjne jednostkę pracy. Gdy <xref:System.Transactions.TransactionScope?displayProperty=nameWithType> muszą zostać wykonane w sposób jawny <xref:System.Activities.Statements.TransactionScope?displayProperty=nameWithType> działania niejawnie wywołuje ukończenia transakcji po pomyślnym zakończeniu. Każde działanie, które są zawarte w <xref:System.Activities.Statements.TransactionScope.Body%2A> z <xref:System.Activities.Statements.TransactionScope> działania uczestniczyć w transakcji. WF można przepływ transakcji do przepływu pracy za pośrednictwem <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania. Podobnie jak <xref:System.Activities.Statements.TransactionScope> aktywności, wszelkich działań zawartych w <xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> bierze udział w transakcji. WF gwarantuje, że działań zależnych od ustawień lokalnych na <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> działa zarówno <xref:System.Activities.Statements.TransactionScope> i <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Jeśli działania dostarczane przez system nie dotyczą wszystkich wymagań, można skompilować niestandardowych działań przy użyciu <xref:System.Activities.RuntimeTransactionHandle> włączyć zaawansowane przepływu i scenariuszy kontroli transakcji.  
   
- W poniższym przykładzie pobierana z [podstawowego elementu TransactionScope](../../../docs/framework/windows-workflow-foundation/samples/basic-transactionscope.md) przykładowy przepływ pracy jest tworzony, składające się z <xref:System.Activities.Statements.Sequence> działanie, które występują działania podrzędne, w tym <xref:System.Activities.Statements.TransactionScope> działania. <xref:System.Activities.Statements.TransactionScope.Body%2A> Działania <xref:System.Activities.Statements.TransactionScope> wykonać w obrębie transakcji zainicjowane przez <xref:System.Activities.Statements.TransactionScope> działania.  
+W poniższym przykładzie przepływ pracy jest konstruowany składający się z <xref:System.Activities.Statements.Sequence> działania, który zawiera działania podrzędne, w tym <xref:System.Activities.Statements.TransactionScope> działania. <xref:System.Activities.Statements.TransactionScope.Body%2A> Działania <xref:System.Activities.Statements.TransactionScope> wykonywanie w ramach transakcji inicjowane przez <xref:System.Activities.Statements.TransactionScope> działania.  
   
 ```csharp  
 static Activity ScenarioOne()  
@@ -46,7 +47,7 @@ static Activity ScenarioOne()
 }  
 ```  
   
- Aby uzyskać więcej informacji, zobacz podstawowe [transakcji](../../../docs/framework/windows-workflow-foundation/samples/transactions.md) przykłady oraz scenariusz na podstawie [transakcji](../../../docs/framework/windows-workflow-foundation/samples/transactions.md) próbek. Aby uzyskać więcej informacji, zobacz temat przy użyciu <xref:System.ServiceModel.Activities.TransactedReceiveScope>, zobacz [przepływu transakcji do i z usług przepływu pracy](../../../docs/framework/wcf/feature-details/flowing-transactions-into-and-out-of-workflow-services.md).  
+Aby uzyskać więcej informacji, zobacz temat przy użyciu <xref:System.ServiceModel.Activities.TransactedReceiveScope>, zobacz [przepływu transakcji do i z usług przepływu pracy](../../../docs/framework/wcf/feature-details/flowing-transactions-into-and-out-of-workflow-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Activities.Statements.TransactionScope>  

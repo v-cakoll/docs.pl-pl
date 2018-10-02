@@ -10,11 +10,11 @@ ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 10b2471d13d410826cec3404725117649442297b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402659"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027497"
 ---
 # <a name="building-xml-schemas"></a>Tworzenie schematów XML
 Klasy w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw mapowania do struktur, zdefiniowane w zaleceniem schematu XML World Wide Web Consortium (W3C) i może służyć do tworzenia XML schematów w pamięci.  

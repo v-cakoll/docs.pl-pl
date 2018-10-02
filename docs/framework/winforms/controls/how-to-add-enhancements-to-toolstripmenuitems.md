@@ -25,11 +25,11 @@ helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
 ms.openlocfilehash: eb55796480bea896383da479fe23a5d8967a52e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454976"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034778"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Porady: dodawanie rozszerzeń do formantu ToolStripMenuItems
 Możesz zwiększyć użyteczność <xref:System.Windows.Forms.MenuStrip> i <xref:System.Windows.Forms.ContextMenuStrip> kontrolek w następujący sposób:  

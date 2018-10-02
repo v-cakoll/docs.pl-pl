@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
 ms.openlocfilehash: 5556b83346aba5bc48eddb930dedc56f4786bdb5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401397"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036175"
 ---
 # <a name="how-to-log-information-about-services"></a>Porady: rejestrowanie informacji o usługach
 Domyślnie wszystkie projekty usługi Windows mają możliwość interakcji z dziennika zdarzeń aplikacji i w nim zapisywać informacje i wyjątki. Możesz użyć <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> właściwość wskazuje, czy ta funkcja w aplikacji. Domyślnie rejestrowanie jest włączone dla dowolnej usługi utworzonej przy użyciu szablonu projektu usługi Windows. Można użyć statycznej formy <xref:System.Diagnostics.EventLog> klasę umożliwiającą zapisanie informacji o usłudze do dziennika bez tworzenia wystąpienia <xref:System.Diagnostics.EventLog> składnika lub ręcznie zarejestrować źródła.  

@@ -4,12 +4,12 @@ description: Dowiedz się, jak .NET Core umożliwia znalezienie i wybiera wersje
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 34e31cbb224b58b1aad2935ea7310f2e4f5f9ee0
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233208"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036269"
 ---
 # <a name="net-core-version-selection"></a>Wybór wersji platformy .NET core
 
@@ -31,12 +31,12 @@ Te cztery scenariusze sprawdza, czy pozostałej części tego dokumentu.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>Zestaw SDK używa najnowszej zainstalowanej wersji
 
-Następujące polecenia zestawu SDK `dotnet new` i `dotnet run`. `dotnet` Interfejsu wiersza polecenia, musisz wybrać wersję zestawu SDK dla każdego polecenia dotnet. Najnowszy zestaw SDK zainstalowany na komputerze, domyślnie korzysta z interfejsu wiersza polecenia platformy .NET Core nawet wtedy, gdy:
+Następujące polecenia zestawu SDK `dotnet new` i `dotnet run`. Interfejs wiersza polecenia platformy .NET Core, musisz wybrać wersję zestawu SDK dla każdego `dotnet` polecenia. Używa ona najnowszy zestaw SDK zainstalowany na komputerze, domyślnie nawet wtedy, gdy:
 
-* Projekt jest przeznaczony dla starszej wersji.
-* Najnowsza wersja jest wersja zapoznawcza.
+* Projekt jest przeznaczony dla starszej wersji środowiska uruchomieniowego .NET Core.
+* Najnowszą wersję programu .NET Core SDK jest w wersji zapoznawczej.
 
-Aplikacje mogą korzystać z najnowszych funkcji zestawu SDK i ulepszeń podczas określania wartości docelowej starszych wersji środowiska uruchomieniowego .NET Core. Można wskazać wiele wersji środowiska uruchomieniowego programu .NET Core w różnych projektach, przy użyciu tych samych narzędzi zestawu SDK dla wszystkich projektów.
+Korzystać z zalet najnowszych funkcji zestawu SDK i ulepszeń, podczas określania wartości docelowej starszych wersji środowiska uruchomieniowego .NET Core. Można wskazać wiele wersji środowiska uruchomieniowego programu .NET Core w różnych projektach, przy użyciu tych samych narzędzi zestawu SDK dla wszystkich projektów.
 
 W rzadkich przypadkach może być konieczne użycie wcześniejszej wersji zestawu SDK. Należy określić w tej wersji w [ *global.json* pliku](../tools/global-json.md). Zasady "przy użyciu najnowszej" oznacza, że możesz tylko używać *global.json* do wcześniejszych niż jego Najnowsza zainstalowana wersja określanie wersji programu .NET Core SDK.
 

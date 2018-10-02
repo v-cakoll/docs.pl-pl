@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: ebce4daf433647179a0bce5751f66cdfab7a4d80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 726e41e8cde028fb86004ff06e2ad0663a042287
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195722"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030275"
 ---
 # <a name="workflow-security"></a>Zabezpieczenia przepływu pracy
 Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii, takich jak Microsoft SQL Server i Windows Communication Foundation (WCF). Interakcja z tych technologii może powodować problemy z zabezpieczeniami w Twój przepływ pracy, jeśli będą wykonywane niepoprawnie.
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii,
 
 -   Powinny być zabezpieczone punkty końcowe usług Windows Communication Foundation (WCF) używane w przepływach pracy. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń programu WCF](https://go.microsoft.com/fwlink/?LinkID=164975).
 
--   Uwierzytelnianie na poziomie hosta można zaimplementować przy użyciu <xref:System.ServiceModel.ServiceAuthorizationManager>. Zobacz [instrukcje: tworzenie Menedżera autoryzacji niestandardowej dla usługi](https://go.microsoft.com/fwlink/?LinkId=192228) Aby uzyskać szczegółowe informacje. Zostało to również przedstawione w następującym przykładzie: [zabezpieczanie usług przepływu pracy](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).
+-   Uwierzytelnianie na poziomie hosta można zaimplementować przy użyciu <xref:System.ServiceModel.ServiceAuthorizationManager>. Zobacz [instrukcje: tworzenie Menedżera autoryzacji niestandardowej dla usługi](https://go.microsoft.com/fwlink/?LinkId=192228) Aby uzyskać szczegółowe informacje.
 
 -   ServiceSecurityContext komunikatu przychodzącego jest również dostępne z poziomu przepływów pracy, uzyskując dostęp do elementu OperationContext.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029859"
 ---
 # <a name="using-directive-c-reference"></a>using — Dyrektywa (odwołanie w C#)
 `using` Dyrektywy ma trzy zastosowań:  

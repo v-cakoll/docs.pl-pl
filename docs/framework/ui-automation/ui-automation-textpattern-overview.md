@@ -9,11 +9,11 @@ ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 7455ce7f0c1dbc71bed6e7656663d3cd67325447
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193661"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033561"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Przegląd automatyzacji interfejsu użytkownika — TextPattern
 > [!NOTE]

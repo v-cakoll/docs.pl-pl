@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 226ec3f683913102e8f5202ffaa100945e629e0a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082516"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037044"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Wyłącz rozpoznawanie DPI w programie Visual Studio
 
@@ -51,7 +51,10 @@ Ważne jest, aby ponownie program Visual Studio jako obsługującą ustawienia D
 
 Visual Studio można oznaczyć jako świadomości DPI przez modyfikację rejestru. Otwórz **Edytora rejestru** i Dodaj wpis do **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** podklucz:
 
-**Wpis**: % ProgramFiles (x86) %\Microsoft Visual Studio\2017\your-edition\Common7\IDE\devenv.exe
+**Wpis**: % ProgramFiles (x86) %\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+
+   > [!NOTE]
+   > Jeśli używasz programu Visual Studio 2017 w wersji Professional lub Enterprise, należy zastąpić **społeczności** z **Professional** lub **Enterprise** we wpisie.
 
 **Typ**: REG_SZ
 

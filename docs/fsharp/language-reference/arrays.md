@@ -3,11 +3,11 @@ title: Tablice (F#)
 description: 'Dowiedz się, jak utworzyć i korzystanie z tablic w języku programowania F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402740"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032734"
 ---
 # <a name="arrays"></a>Tablice
 

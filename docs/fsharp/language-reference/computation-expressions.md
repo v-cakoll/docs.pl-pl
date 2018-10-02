@@ -2,12 +2,12 @@
 title: Wyrażenia obliczeń (F#)
 description: 'Dowiedz się, jak utworzyć wygodnej składni do pisania obliczeń w F #, który może być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania.'
 ms.date: 07/27/2018
-ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47459805"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
@@ -88,7 +88,7 @@ Jeśli powiązać wywołanie wyrażenia obliczeń, za pomocą `let`, nie będzie
 ```fsharp
 let doThingsAsync data url =
     async {
-        do! sumbitData data url
+        do! submitData data url
         ...
     }
 ```

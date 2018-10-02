@@ -6,11 +6,11 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
 ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: MT
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47459662"
 ---
 # <a name="using-wpf-controls"></a>Korzystanie z formantów WPF
 W aplikacjach opartych na formularzach Windows, można użyć kontrolek Windows Presentation Foundation (WPF). Mimo że są to dwie technologie inny widok, mogą współdziałać sprawnie.  

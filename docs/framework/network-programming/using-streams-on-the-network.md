@@ -20,11 +20,11 @@ ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1157fd8772546a1e34343bcf05ac40ca8ad592a5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47194027"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025433"
 ---
 # <a name="using-streams-on-the-network"></a>Stosowanie strumieni w sieci
 Zasoby sieciowe są reprezentowane w .NET Framework jako strumieni. Traktując strumieni ogólną, .NET Framework oferuje następujące możliwości:  

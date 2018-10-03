@@ -4,12 +4,12 @@ description: HttpClientFactory to ceniona fabryki, dostępne od platformy .NET C
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d40e587966b2e62a197ad10770bf3e28bcbcb511
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037219"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Użyj HttpClientFactory do zaimplementowania odporne na błędy żądań HTTP
 
@@ -71,7 +71,7 @@ Po prostu dodając Twoich zajęciach klient z typowaniem z AddHttpClient(), zaws
 
 ### <a name="httpclient-lifetimes"></a>Okresy istnienia HttpClient
 
-Zawsze możesz uzyskać `HttpClient` obiekt z IHttpClientFactory, nowe wystąpienie klasy `HttpClient` jest zwracana. Nastąpi klasa HttpMessageHandler ** na o nazwie wpisane klienta. Czy mogę`HttpClientFactory` będzie puli wystąpień klasa HttpMessageHandler utworzone przez fabryki, aby zmniejszyć wykorzystanie zasobów. Klasa HttpMessageHandler wystąpienia może być ponownie używane z puli podczas tworzenia nowego `HttpClient` wystąpienia, jeśli nie upłynął jego okres istnienia.
+Zawsze możesz uzyskać `HttpClient` obiekt z IHttpClientFactory, nowe wystąpienie klasy `HttpClient` jest zwracana. Nastąpi klasa HttpMessageHandler ** na o nazwie wpisane klienta. `IHttpClientFactory` będzie puli wystąpień klasa HttpMessageHandler utworzone przez fabryki, aby zmniejszyć wykorzystanie zasobów. Klasa HttpMessageHandler wystąpienia może być ponownie używane z puli podczas tworzenia nowego `HttpClient` wystąpienia, jeśli nie upłynął jego okres istnienia.
 
 Buforowanie obsługi jest pożądane, ponieważ każdy program obsługi zwykle zarządza własną podstawowego połączenia HTTP; Tworzenie więcej obsługi niż jest to konieczne może spowodować opóźnienia w połączeniu. Niektóre procedury obsługi również nie zamykaj połączeń przez czas nieokreślony, co może uniemożliwić obsługi reagowanie na zmiany DNS.
 

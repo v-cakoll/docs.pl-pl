@@ -3,11 +3,11 @@ title: Model obiektów odnajdywania WCF
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
 ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231390"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046672"
 ---
 # <a name="wcf-discovery-object-model"></a>Model obiektów odnajdywania WCF
 Odnajdywanie w programie WCF składa się zestaw typów, które udostępniają jednolity model programowania, który pozwala na zapis usług, które są wykrywalni środowiska uruchomieniowego i klienci, w których odnaleźć i korzystać z tych usług.  

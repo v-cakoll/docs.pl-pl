@@ -5,11 +5,11 @@ ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 76ca5acc22eca07d372a2964cf3a6df4ea3b58d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208446"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025311"
 ---
 # <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; — Element (ustawienia identyfikatora Uri)
 Określa, jak <xref:System.Uri> będzie być analizowana pod kątem określonych systemów.  

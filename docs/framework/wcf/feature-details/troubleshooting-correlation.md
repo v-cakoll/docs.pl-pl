@@ -2,12 +2,12 @@
 title: Korelacja rozwiązywania problemów
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397162"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027926"
 ---
 # <a name="troubleshooting-correlation"></a>Korelacja rozwiązywania problemów
 Korelacja służy do wiązania komunikatów usługi przepływu pracy i wystąpienia poprawne przepływu pracy, ale jeśli nie jest poprawnie skonfigurowany, nie otrzyma wiadomości i aplikacje nie będą działać poprawnie. Ten temat zawiera omówienie kilku metod w celu rozwiązywania problemów korelacji i wyświetla także niektóre typowe problemy, które mogą wystąpić, gdy używasz korelacji.
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- Uczestnika śledzenia, takie jak ConsoleTrackingParticipant przydaje się do usługi samodzielnie hostowanej przepływu pracy, z okna konsoli. W przypadku usługi hostowanej w sieci Web śledzenia uczestnika, który rejestruje informacje śledzenia do trwałego magazynu powinny być używane takie jak wbudowane <xref:System.Activities.Tracking.EtwTrackingParticipant>, lub uczestnikiem niestandardowe śledzenia, który rejestruje informacje w pliku, taką jak `TextWriterTrackingParticpant` z [ Śledzenie za pomocą pliku tekstowego](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) próbki.
+ Uczestnika śledzenia, takie jak ConsoleTrackingParticipant przydaje się do usługi samodzielnie hostowanej przepływu pracy, z okna konsoli. W przypadku usługi hostowanej w sieci Web śledzenia uczestnika, który rejestruje informacje śledzenia do trwałego magazynu powinny być używane takie jak wbudowane <xref:System.Activities.Tracking.EtwTrackingParticipant>, lub uczestnikiem niestandardowe śledzenia, który rejestruje informacje w pliku.
 
  Aby uzyskać więcej informacji na temat śledzenia i Konfigurowanie śledzenia dla usługi hostowanej w sieci Web przepływu pracy, zobacz [przepływu pracy i śledzenie](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [Konfigurowanie śledzenia przepływu pracy](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)i [ Śledzenie &#91;WF — przykłady&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) przykłady.
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- Można to potwierdzić, sprawdzając treści wiadomości.
+Można to potwierdzić, sprawdzając treści wiadomości.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- W poniższym przykładzie przedstawiono <xref:System.ServiceModel.Activities.Receive> działania skonfigurowane dla `AddItem` operacji, która używa poprzedniego kontraktu komunikatu, aby odbierać dane. Zapytanie XPath jest poprawnie skonfigurowany.
+W poniższym przykładzie przedstawiono <xref:System.ServiceModel.Activities.Receive> działania skonfigurowane dla `AddItem` operacji, która używa poprzedniego kontraktu komunikatu, aby odbierać dane. Zapytanie XPath jest poprawnie skonfigurowany.
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-Aby uzyskać więcej informacji na temat korelacja oparta na zawartości, zobacz [skorelowany Kalkulator](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) próbki.

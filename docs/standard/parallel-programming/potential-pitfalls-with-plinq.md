@@ -11,11 +11,11 @@ ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027978"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Potencjalne pułapki związane z PLINQ
 W wielu przypadkach PLINQ może zapewnić znaczne ulepszenia wydajności za pośrednictwem sekwencyjnego LINQ do kwerendy obiekty. Jednak pracy przekształcają wykonywania zapytania wprowadza złożoności, który może prowadzić do problemów, które sekwencyjnego kodu nie są jako wspólne lub nie zostaną napotkane w ogóle. W tym temacie wymieniono niektóre rozwiązania, aby uniknąć podczas pisania zapytań PLINQ.  

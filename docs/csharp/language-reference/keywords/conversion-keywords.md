@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [C#], conversion keywords
 ms.assetid: 8683ff14-5289-4efe-b4f5-1e6a075918ab
 ms.openlocfilehash: 34175f1bda169a9def9e3146214a6d5cd4d258e7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47230933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027044"
 ---
 # <a name="conversion-keywords-c-reference"></a>Słowa kluczowe konwersji (odwołanie w C#)
 W tej sekcji opisano słowa kluczowe używane w konwersji typu:  

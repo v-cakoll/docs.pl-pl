@@ -4,12 +4,12 @@ description: Przewodnik, na które implementacji .NET należy rozważyć podczas
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ab44cca7c9a832dc7e5f03cfc2972de9d0785fd4
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864965"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046542"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework dla aplikacji serwerowych
 
@@ -87,7 +87,7 @@ Niektóre technologie .NET Framework nie są dostępne w programie .NET Core. Ni
 
 * Aplikacje formularzy sieci Web ASP.NET: ASP.NET Web Forms są dostępne tylko w programie .NET Framework. Nie można używać platformy ASP.NET Core dla formularzy sieci Web ASP.NET. Nie ma żadnych planów, aby wyświetlić formularzy sieci Web ASP.NET i .NET Core.
 
-* Aplikacje programu ASP.NET Web Pages: strony sieci Web ASP.NET nie zostaną uwzględnione w programie ASP.NET Core. Platforma ASP.NET Core [stron Razor](/aspnet/core/mvc/razor-pages/) mają wiele wspólnego ze stronami sieci Web.
+* Aplikacje programu ASP.NET Web Pages: strony sieci Web ASP.NET nie zostaną uwzględnione w programie ASP.NET Core. 
 
 * Implementacja usługi WCF. Nawet w przypadku [biblioteki klienta platformy WCF](https://github.com/dotnet/wcf) korzystanie z usługi WCF z platformy .NET Core, implementacja serwera WCF jest obecnie dostępny tylko w programie .NET Framework. W tym scenariuszu nie jest częścią bieżącego planu dla platformy .NET Core, ale jest rozważane w przyszłości.
 
@@ -104,6 +104,7 @@ Niektóre firmy Microsoft lub innych platform nie obsługują platformy .NET Cor
 ## <a name="see-also"></a>Zobacz także
 
 * [Wybieranie między ASP.NET i ASP.NET Core](/aspnet/core/choose-aspnet-framework)
+* [Platforma ASP.NET Core przeznaczone dla .NET Framework](/aspnet/core#target-framework)
 * [Platformy docelowe](frameworks.md)
 * [Przewodnik platformy .NET Core](../core/index.md)  
 * [Przenoszenie z .NET Framework i .NET Core](../core/porting/index.md)  

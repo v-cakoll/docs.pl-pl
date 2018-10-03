@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
 ms.openlocfilehash: 8dab5cfbcf14707699e6672017f5f80db232f01d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454937"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025539"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Instrukcje: Tworzenie aplikacji ASP.NET obsługującej oświadczenia przy użyciu uwierzytelniania opartego na formularzach
 ## <a name="applies-to"></a>Dotyczy:  

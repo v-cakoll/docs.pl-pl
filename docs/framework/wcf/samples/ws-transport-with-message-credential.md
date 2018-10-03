@@ -2,26 +2,26 @@
 title: Transport WS z poświadczeniami komunikatu
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 708869f2350f01e75b949f4817fcf8aac35ea018
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 44f37e3576b508e679d45a3cbafacfb5a68a7838
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030184"
 ---
 # <a name="ws-transport-with-message-credential"></a>Transport WS z poświadczeniami komunikatu
-W przykładzie pokazano użycie zabezpieczenia transportowe protokołu SSL w połączeniu z poświadczeniami klienta odbywa się w komunikacie. W przykładzie użyto `wsHttpBinding` powiązania.  
+Niniejszy przykład pokazuje korzystanie z zabezpieczeń transportu protokołu SSL w połączeniu z poświadczeniami klienta, które są przenoszone w komunikacie. W tym przykładzie użyto `wsHttpBinding` powiązania.  
   
- Domyślnie `wsHttpBinding` powiązania zapewnia komunikację HTTP. Gdy skonfigurowany pod kątem zabezpieczeń transportu, wiązanie obsługuje komunikację HTTPS. Protokół HTTPS oferuje poufności i ochrony integralność komunikatów, które są przesyłane przez sieć. Jednakże zestaw mechanizmów uwierzytelniania, które mogą służyć do uwierzytelniania klienta do usługi jest ograniczone do obsługuje transportu HTTPS. Windows Communication Foundation (WCF) oferuje `TransportWithMessageCredential` tryb zabezpieczeń, której celem jest obejść to ograniczenie. Po skonfigurowaniu tego trybu zabezpieczeń transportu używane zabezpieczenia zapewnienie poufności i integralności wiadomości przesyłane i do uwierzytelniania usługi. Jednak uwierzytelnianie klienta jest wykonywane przez wprowadzenie poświadczeń klienta bezpośrednio w komunikacie. Dzięki temu można użyć dowolnego typu poświadczeń, która jest obsługiwana przez tryb zabezpieczeń wiadomości do uwierzytelniania klientów przy zachowaniu wydajności zaletą tryb zabezpieczeń transport.  
+ Domyślnie `wsHttpBinding` powiązania zapewnia komunikację HTTP. Po skonfigurowaniu zabezpieczeń transportu powiązanie obsługuje komunikację HTTPS. Protokół HTTPS oferuje poufność i ochrona integralności wiadomości, które są przesyłane przez sieć. Jednak zestaw mechanizmów uwierzytelniania, które mogą służyć do uwierzytelniania klienta do usługi jest ograniczona do obsługuje transportu HTTPS. Windows Communication Foundation (WCF) oferuje `TransportWithMessageCredential` tryb zabezpieczeń, której celem jest to ograniczenie. Po skonfigurowaniu tego trybu zabezpieczeń zabezpieczeń transportu jest używany, zapewnienie poufności i integralności przesyłanych wiadomości i do wykonywania uwierzytelniania usługi. Jednak uwierzytelnianie klienta odbywa się przez umieszczanie poświadczeń klienta bezpośrednio w wiadomości. Dzięki temu można używać dowolnego typu poświadczeń, który jest obsługiwany przez trybu zabezpieczenia wiadomości do uwierzytelniania klientów przy zachowaniu zalet wydajności tryb zabezpieczeń transport.  
   
  W tym przykładzie `UserName` typ poświadczeń jest używany do uwierzytelniania klienta do usługi.  
   
- Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator. `wsHttpBinding` Powiązania jest określona i skonfigurowany w plikach konfiguracji aplikacji dla klienta i usługi.  
+ Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora. `wsHttpBinding` Powiązania jest określona i skonfigurowany w plikach konfiguracji aplikacji dla klienta i usługi.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Kod programu w próbce jest niemal identyczna ze [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) usługi. Brak jednej operacji dodatkowe podał kontraktu usługi - `GetCallerIdentity`. Ta operacja zwraca nazwę tożsamości obiektu wywołującego do obiektu wywołującego.  
+ Kod programu, w przykładzie jest niemal identyczny z [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) usługi. Istnieje jedna operacja dodatkowe dostarczone przez kontrakt usługi - `GetCallerIdentity`. Ta operacja zwraca Nazwa tożsamości elementu wywołującego do obiektu wywołującego.  
 
 ```csharp
 public string GetCallerIdentity()  
@@ -31,7 +31,7 @@ public string GetCallerIdentity()
 }  
 ```
 
- Należy utworzyć certyfikat i przypisz go za pomocą kreatora certyfikatu serwera sieci Web przed tworzenia i uruchamiania przykładowych. Definicja punktu końcowego i definicji powiązania w konfiguracji pliku ustawienia umożliwiające `TransportWithMessageCredential` tryb zabezpieczeń, jak pokazano w poniższych Przykładowa konfiguracja klienta.  
+ Należy utworzyć certyfikat i przypisz go za pomocą kreatora certyfikatu serwera sieci Web przed kompilowanie i uruchamianie przykładu. Definicja punktu końcowego i definicji powiązania w konfiguracji pliku ustawienia umożliwiające `TransportWithMessageCredential` tryb zabezpieczeń, jak pokazano w poniższym Przykładowa konfiguracja klienta.  
   
 ```xml  
 <system.serviceModel>  
@@ -59,9 +59,9 @@ public string GetCallerIdentity()
 </system.serviceModel>  
 ```  
   
- Określony adres wykorzystuje schemat https://. Konfiguracja powiązania Ustawia tryb zabezpieczeń `TransportWithMessageCredential`. Należy określić ten sam tryb zabezpieczeń w pliku Web.config tej usługi.  
+ Określony adres wykorzystuje schemat https://. Konfiguracja powiązania Ustawia tryb zabezpieczeń `TransportWithMessageCredential`. Taki sam tryb zabezpieczeń należy określić w pliku Web.config tej usługi.  
   
- Ponieważ certyfikat użyty w tym przykładzie jest certyfikatu testowego utworzone za pomocą Makecert.exe, alert zabezpieczeń zostanie wyświetlony podczas próby uzyskania dostępu https: adres, takie jak https://localhost/servicemodelsamples/service.svc, w przeglądarce. Aby umożliwić klienta platformy WCF do pracy z certyfikatu testowego w miejscu, dodatkowy kod dodano klienta dla pomijania alertu zabezpieczeń. Ten kod i towarzyszące klasy nie jest wymagana, podczas korzystania z certyfikatów w środowisku produkcyjnym.  
+ Ponieważ certyfikat używany w tym przykładzie jest utworzone za pomocą Makecert.exe certyfikat testowy, alert zabezpieczeń jest wyświetlany, gdy próbują uzyskać dostęp przy użyciu protokołu https: adres, takie jak `https://localhost/servicemodelsamples/service.svc `, z poziomu przeglądarki. Aby zezwolić na klienta platformy WCF do pracy z certyfikatem testowym w miejscu, dodano dodatkowy kod klienta dla pomijania alertu zabezpieczeń. Ten kod i towarzyszące klasy, nie jest wymagane, podczas korzystania z certyfikatów w środowisku produkcyjnym.  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
@@ -69,7 +69,7 @@ public string GetCallerIdentity()
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```
   
- Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
 ```  
 Username authentication required.  
@@ -87,14 +87,14 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Upewnij się, że wykonano procedurę [instrukcje instalacji certyfikatu serwera Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+2.  Upewnij się, że wykonano [instrukcje instalacji certyfikatu serwera Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
   
-3.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Zobacz też

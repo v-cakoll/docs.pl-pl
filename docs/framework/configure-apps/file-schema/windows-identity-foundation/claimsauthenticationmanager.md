@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
 ms.openlocfilehash: 0ec7e44363f87e54eae97b70352f520fe87540be
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032295"
 ---
 # <a name="ltclaimsauthenticationmanagergt"></a>&lt;claimsAuthenticationManager&gt;
 Rejestruje Menedżera uwierzytelniania oświadczeń dla oświadczeń przychodzących.  

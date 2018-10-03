@@ -3,11 +3,11 @@ title: Nie można usunąć klucza, ponieważ ma ona podkluczy
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
 ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025389"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>Nie można usunąć klucza, ponieważ ma ona podkluczy
 Nie można usunąć klucza, ponieważ ma ona podkluczy.  

@@ -13,11 +13,11 @@ ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b66881a8a42c0c34b5c2119f7404fe7787c8f3f2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193021"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031961"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Wstrzymywanie i przerywanie wątków
 

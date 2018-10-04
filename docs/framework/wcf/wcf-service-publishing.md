@@ -3,11 +3,11 @@ title: Publikowanie usług WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 ms.openlocfilehash: b62b2616233eb81e64945e997a2efe17973dedd2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030366"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781508"
 ---
 # <a name="wcf-service-publishing"></a>Publikowanie usług WCF
 

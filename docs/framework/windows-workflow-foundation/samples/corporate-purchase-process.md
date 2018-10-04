@@ -2,42 +2,42 @@
 title: Proces zakupów firmowych
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802914"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781664"
 ---
 # <a name="corporate-purchase-process"></a>Proces zakupów firmowych
-W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania dla procesu zakupu propozycji (RFP) na podstawie z automatycznego najlepszym wyborem propozycji. Łączy ona <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, i <xref:System.Activities.Statements.ForEach%601> i niestandardowe działanie, aby utworzyć przepływ pracy, który reprezentuje proces.  
-  
- Ten przykład zawiera [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikację kliencką, która umożliwia wchodzenie w interakcje z procesem jako uczestnicy różnych (jako oryginalnego zleceniodawcy lub określonego dostawcy).  
-  
-## <a name="requirements"></a>Wymagania  
-  
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
-  
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
-  
-## <a name="demonstrates"></a>Demonstracje  
-  
--   Działania niestandardowe.  
-  
--   Kompozycja działań.  
-  
--   Zakładki.  
-  
--   Trwałość.  
-  
--   Trwałość informatycznych.  
-  
--   Śledzenie.  
-  
--   Do śledzenia.  
-  
--   Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w różnych klientów ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web i aplikacji formularzy WinForms).  
-  
+W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania dla procesu zakupu propozycji (RFP) na podstawie z automatycznego najlepszym wyborem propozycji. Łączy ona <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, i <xref:System.Activities.Statements.ForEach%601> i niestandardowe działanie, aby utworzyć przepływ pracy, który reprezentuje proces.
+
+ Ten przykład zawiera [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikację kliencką, która umożliwia wchodzenie w interakcje z procesem jako uczestnicy różnych (jako oryginalnego zleceniodawcy lub określonego dostawcy).
+
+## <a name="requirements"></a>Wymagania
+
+-   Visual Studio 2012.
+
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+
+## <a name="demonstrates"></a>Demonstracje
+
+-   Działania niestandardowe.
+
+-   Kompozycja działań.
+
+-   Zakładki.
+
+-   Trwałość.
+
+-   Trwałość informatycznych.
+
+-   Śledzenie.
+
+-   Do śledzenia.
+
+-   Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w różnych klientów ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web i aplikacji formularzy WinForms).
+
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
@@ -143,7 +143,7 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania PurchaseProcess.sln.  
+1.  Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania PurchaseProcess.sln.  
   
 2.  Aby wykonać projektu sieci Web klienta, otwórz **Eksploratora rozwiązań** i kliknij prawym przyciskiem myszy **klienta sieci Web** projektu. Wybierz **Ustaw jako projekt startowy**.  
   

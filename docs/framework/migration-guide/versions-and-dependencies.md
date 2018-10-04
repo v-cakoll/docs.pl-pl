@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c18659fa3db1f2e7e047f1bbdc4f75ba6e96f0c6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 33fdaf883e465b1c39b2f4d00d31c5d6b000a5cc
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252450"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781086"
 ---
-# <a name="net-framework-versions-and-dependencies"></a>Wersje i zależności programu .NET Framework
+# <a name="net-framework-versions-and-dependencies"></a>Wersje programu .NET framework i zależności
 Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka wspólnego (CLR), biblioteki klas bazowych i inne zarządzane biblioteki. W tym temacie opisano kluczowe funkcje programu .NET Framework według wersji, podano informacje o bazowych wersjach środowiska CLR i skojarzonych środowiskach deweloperskich oraz zidentyfikowano wersje, które są instalowane przez system operacyjny Windows.  
   
 > [!NOTE]
@@ -40,7 +40,7 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
 |4.5.1<br/><br/>[Nowe funkcje](../whats-new/index.md#whats-new-in-the-net-framework-451)|4|2013|✓ 8.1<br />+ 8<br />+ 7<br />+ Vista|✓ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Użyj `Release` DWORD:<br /><br /> -378675 (Windows 8.1)<br />-378758 (wszystkie inne)<br /><br /> (zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4.5<br/><br/>[Nowe funkcje](../whats-new/index.md#whats-new-in-the-net-framework-45)|4|2012|✓ 8<br />+ 7<br />+ Vista|✓ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Użyj `Release` DWORD:<br /><br /> 378389<br /><br />(zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4<br/><br/>[Nowe funkcje](../whats-new/index.md)|4|2010|+ 7<br />+ Vista|+ 2008 R2 SP1<br />+ 2008 SP2<br />+ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
-|3.5<br/><br/>[Nowe funkcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\))|2.0|2008|✓ 10\*<br/>✓ 8.1\*<br />✓ 8\*<br />✓ 7<br />+ Vista|✓2008 R2 Z DODATKIEM SP1\*<br />+ 2012 R2\*<br />+ 2012\*<br />+ 2008 SP2<br />+ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
+|3.5<br/><br/>[Nowe funkcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\))|2.0|2008|✓ 10\*<br/>✓ 8.1\*<br />✓ 8\*<br />✓ 7<br />+ Vista|  + W systemie Windows Server w wersji 1803\* <br/> + W systemie Windows Server w wersji 1709\* <br/> + 2016\* <br/>+ 2012 R2\*<br />+ 2012\*<br />✓2008 R2 Z DODATKIEM SP1\*<br />+ 2008 SP2<br />+ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |3.0<br/><br/>New:<br/>WPF, WCF, WF, CardSpace|2.0|-|✓ Vista|✓ 2008 R2 SP1*<br />✓ 2008 SP2\*<br />+ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |2.0<br/><br/>[Nowe funkcje](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/ms229284\(v%3dvs.80\))|2.0|2005|-|✓ 2008 R2 SP1<br />✓ 2008 SP2<br />✓ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.1<br/><br/>[Nowe funkcje](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/9wtde3k4\(v%3dvs.71\))|1.1|2003|-|✓ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
@@ -52,7 +52,7 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
 
  Ogólnie rzecz biorąc, nie należy odinstalowywać żadnych wersji programu .NET Framework, które są zainstalowane na komputerze, ponieważ używana aplikacja może zależeć od określonej wersji i usunięcie tej wersji mogłoby spowodować nieprawidłowe działanie. Jednocześnie można załadować wiele wersji programu .NET Framework na pojedynczym komputerze. Oznacza to, że bez konieczności odinstalowywania poprzednich wersji można zainstalować programu .NET Framework. Aby uzyskać więcej informacji, zobacz [wprowadzenie](../../../docs/framework/get-started/index.md).
 
-## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Aplikacje określania wartości docelowej i uruchamianie środowiska .NET Framework w wersji 4.5 lub nowszy  
+## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Określanie wartości docelowej i uruchamianie aplikacji .NET Framework w wersji 4.5 lub nowszy  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Stanowi aktualizację w miejscu, która zastępuje [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] na komputerze i podobnie, .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 i 4.7.2 są aktualizacje w miejscu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], co oznacza, że mogą używać tego samego wersja środowiska uruchomieniowego, ale wersje zestawów są aktualizowane i obejmują nowe typy i elementy członkowskie. Po zainstalowaniu jednej z tych aktualizacji usługi [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4.6 lub aplikacje programu .NET Framework 4.7 powinny nadal działać bez konieczności ponownej kompilacji. Jednak odwrotna zależność nie istnieje. Firma Microsoft nie zaleca się uruchamiania aplikacji przeznaczonych nowszej wersji programu .NET Framework w starszej wersji programu .NET Framework. Na przykład firma Microsoft nie zaleca się uruchamianie aplikacji docelowych [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] na [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Należy przestrzegać następujących wytycznych:  
   
 -   W programie Visual Studio, można wybrać [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] jako platformę docelową dla projektu (spowoduje to ustawienie <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> właściwości) w celu skompilowania projektu jako [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] zestawu lub pliku wykonywalnego. Ten zestaw lub plik wykonywalny można następnie używane na dowolnym komputerze, który ma [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 lub 4.7.2 zainstalowane.  
@@ -80,6 +80,6 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
   
 ## <a name="see-also"></a>Zobacz także
 
-[Zgodność wersji](../../../docs/framework/migration-guide/version-compatibility.md)   
-[Cykl wsparcia technicznego dla programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)   
-[Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Zgodność wersji](../../../docs/framework/migration-guide/version-compatibility.md)   - 
+- [Cykl wsparcia technicznego dla programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)   
+- [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

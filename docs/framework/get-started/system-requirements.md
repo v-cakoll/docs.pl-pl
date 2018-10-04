@@ -2,7 +2,7 @@
 title: Wymagania systemowe programu .NET framework
 description: Dowiedz się, jakie są wymagania sprzętowe, systemu operacyjnego i oprogramowania do zainstalowania programu .NET Framework 4.5 lub nowszy.
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 10/01/2018
 helpviewer_keywords:
 - software requirements
 - .NET Framework, system requirements
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b8f9205863ce65b480aa048f99df62d9b522aac9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509181"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793412"
 ---
 # <a name="net-framework-system-requirements"></a>Wymagania systemowe programu .NET framework
 
@@ -26,6 +26,8 @@ Tabele w tym temacie dostarczają wymagań sprzętowych, systemu operacyjnego i 
 * .NET framework 4.5 i jego wydania punktowe (4.5.1 i 4.5.2).
 * .NET framework 4.6 i jego wydania punktowe (4.6.1 i 4.6.2).
 * .NET framework 4.7 i jego wydania punktowe (4.7.1 i 4.7.2).
+
+Aby uzyskać informacji na temat wersji programu .NET Framework wcześniejszych niż .NET Framework 4.5, zobacz [wersje programu .NET Framework i zależności](../migration-guide/versions-and-dependencies.md).
 
 Środowisk deweloperskich, umożliwiające tworzenie aplikacji dla programu .NET Framework mają oddzielny zestaw wymogów.
 
@@ -105,6 +107,6 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej wersji programu .NET F
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przewodnik instalacji](../../../docs/framework/install/index.md)   
-[Wprowadzenie](../../../docs/framework/get-started/index.md)   
-[Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Przewodnik instalacji](../../../docs/framework/install/index.md)   
+- [Wprowadzenie](../../../docs/framework/get-started/index.md)   
+- [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

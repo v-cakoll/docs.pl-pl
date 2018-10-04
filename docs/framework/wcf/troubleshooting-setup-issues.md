@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów dotyczących konfiguracji
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 0270bd8c1006b39805e3486c4fef0cb379089ea8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805133"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780131"
 ---
 # <a name="troubleshooting-setup-issues"></a>Rozwiązywanie problemów dotyczących konfiguracji
 W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Foundation (WCF), skonfigurować problemów.  
@@ -67,7 +67,7 @@ W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Founda
  Aby obejść ten problem, użyj [narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) z `/c` przełącznik, aby poprawnie skonfigurować mapy skryptów usług IIS na komputerze. [Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) znajduje się w temacie %windir%\Microsoft.NET\framework\v3.5\ lub %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Nie można załadować typu "System.ServiceModel.Activation.HttpModule" z zestawu "System.ServiceModel, wersja 3.0.0.0, kulturze = neutral, PublicKeyToken = b77a5c561934e089"  
- Ten błąd występuje, jeśli [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] jest zainstalowany i Aktywacja HTTP programu WCF jest włączone. Aby rozwiązać ten problem, uruchom następujące polecenie wiersza polecenia z wewnątrz [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] wiersza polecenia:  
+ Ten błąd występuje, jeśli [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] jest zainstalowany i Aktywacja HTTP programu WCF jest włączone. Aby rozwiązać ten problem, uruchom następujące polecenie wiersza polecenia z wewnątrz wiersz polecenia programisty dla programu Visual Studio:  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

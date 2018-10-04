@@ -159,15 +159,15 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075463"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780891"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe — komunikaty o błędach
-Wywołania procesu kompilacji [Winmdexp.exe (Windows Runtime narzędzie do eksportu metadanych)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) zastosowania  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika** szablonu w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], dzięki czemu komunikaty o błędach Winmdexp.exe są wyświetlane w **Lista błędów**. Winmdexp.exe działa w module, który jest kompilowany za pomocą `/target:winmdobj` opcji. Ponieważ wymaga, aby moduł skompilowany jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
+Wywołania procesu kompilacji [Winmdexp.exe (Windows Runtime narzędzie do eksportu metadanych)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) zastosowania  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika** szablonu w programie Visual Studio 2012, dzięki czemu komunikaty o błędach Winmdexp.exe są wyświetlane w **Lista błędów**. Winmdexp.exe działa w module, który jest kompilowany za pomocą `/target:winmdobj` opcji. Ponieważ wymaga, aby moduł skompilowany jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
   
  Komunikaty o błędach są przeznaczone do zawierają wszystkie informacje, które należy spełnić warunki błędów, które zgłaszają. Jednak niektóre problemy, wymaga więcej informacji, niż mieści się w komunikacie. Można znaleźć dodatkowe informacje w [warunki błędu składnika diagnozowanie środowiska uruchomieniowego Windows](https://go.microsoft.com/fwlink/p/?LinkId=251127) w Centrum deweloperów Windows.  
   

@@ -13,11 +13,11 @@ ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 2b313aa2481b1257715ac4dbc6d452e2120f4726
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032091"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780995"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Wyczyść&gt; Element dla webRequestModules (ustawienia sieci)
 Usuwa wszystkie zarejestrowane moduły żądania sieci Web z aplikacji.  

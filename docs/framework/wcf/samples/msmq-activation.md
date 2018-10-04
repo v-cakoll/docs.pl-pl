@@ -2,12 +2,12 @@
 title: Aktywacja usługi MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a179fca70a97b4fd9c7b21bdf548afdda59dda91
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779315"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780157"
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
 Niniejszy przykład pokazuje, jak hostować aplikacje w Windows Process Activation Service (WAS), które są odczytywane z kolejki komunikatów. W tym przykładzie użyto `netMsmqBinding` i opiera się na [komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md) próbki. Usługa jest w tym przypadku aplikacji hostowanej w sieci Web w języku klienta i jest samodzielnie hostowana w konsoli, aby obserwować stan zamówienia zakupu przesłane dane wyjściowe.  
@@ -20,7 +20,7 @@ Niniejszy przykład pokazuje, jak hostować aplikacje w Windows Process Activati
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do Windows Communication Foundation (WCF) HYPERLINK "https://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" i przykłady Windows Workflow Foundation (WF) dotyczące [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] do pobierania wszystkich usług WCF i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do Windows Communication Foundation (WCF) HYPERLINK "https://go.microsoft.com/fwlink/?LinkId=150780"\t"\_puste" i przykłady Windows Workflow Foundation (WF) dotyczące [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] do pobierania wszystkich usług WCF i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -76,7 +76,8 @@ public class OrderProcessorService : IOrderProcessor
             client.OrderStatus(po.PONumber, po.Status);  
             scope.Complete();  
         }  
-    }  
+    }
+}
 ```  
   
  Klient powiązania do użycia jest określony, przy użyciu pliku konfiguracji.  
@@ -173,7 +174,7 @@ public class OrderStatusService : IOrderStatus
   
  Kolejkę stanu zamówienia jest tworzony w `Main` metody. Konfiguracja klienta obejmuje konfigurację usługi stanu zamówienia do hostowania usługi stanu zamówienia, jak pokazano w poniższym Przykładowa konfiguracja.  
   
-```csharp  
+```xml  
 <appSettings>  
     <!-- use appSetting to configure MSMQ queue name -->  
     <add key="targetQueueName" value=".\private$\ServiceModelSamples/service.svc" />  
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  To polecenie jest pojedynczy wiersz tekstu.  
   
-         To polecenie włącza aplikację /servicemodelsamples można uzyskać za pomocą http://localhost/servicemodelsamples i net.msmq://localhost/servicemodelsamples.  
+         To polecenie włącza aplikację /servicemodelsamples można uzyskać za pomocą `http://localhost/servicemodelsamples` i `net.msmq://localhost/servicemodelsamples`.
   
 7.  Jeśli użytkownik nie zostało zrobione wcześniej, upewnij się, że włączono usługę Aktywacja usługi MSMQ. Z **Start** menu, kliknij przycisk **Uruchom**i wpisz `Services.msc`. Wyszukaj listę usług dla **Net.Msmq nasłuchujący**. Kliknij prawym przyciskiem myszy i wybierz **właściwości**. Ustaw **uruchamiana** do **automatyczne**, kliknij przycisk **Zastosuj** i kliknij przycisk **Start** przycisku. Ten krok tylko musi odbywać się jeden raz przed pierwsze użycie usługi Net.Msmq nasłuchujący.  
   

@@ -2,12 +2,12 @@
 title: Omówienie manipulacji i bezwładności
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93d995d7afec24dedf168274fe29f6a250c0a532
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521242"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793269"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Omówienie manipulacji i bezwładności
 *Manipulacje* umożliwić użytkownikom przenoszenie, obracać i zmień rozmiar elementów interfejsu użytkownika przy użyciu *manipulatory*. Manipulator reprezentuje myszy lub (w przypadku komputerów z obsługą dotyku) pióro lub linii papilarnych.  
@@ -25,7 +25,7 @@ ms.locfileid: "43521242"
   
  Obraz jest przetwarzany przez dwa manipulatory  
   
- Manipulowanie przetwarzania udostępnia strukturę, która monitoruje podzbiór manipulatory i interpretuje je tak, jakby działają razem, zamiast niezależnie. Można utworzyć kilka manipulowania obiektów procesora równocześnie, jeden dla każdego elementu interfejsu użytkownika być przetwarzane w aplikacji. Procesor manipulowania jest informowany o którym urządzenia do obserwowania wejściowe i wysyła raporty manipulacje za pośrednictwem [zdarzenia .NET](https://msdn.microsoft.com/library/17sde2xt.aspx).  
+ Manipulowanie przetwarzania udostępnia strukturę, która monitoruje podzbiór manipulatory i interpretuje je tak, jakby działają razem, zamiast niezależnie. Można utworzyć kilka manipulowania obiektów procesora równocześnie, jeden dla każdego elementu interfejsu użytkownika być przetwarzane w aplikacji. Procesor manipulowania jest informowany o którym urządzenia do obserwowania wejściowe i wysyła raporty manipulacje za pośrednictwem [zdarzenia .NET](../../../docs/standard/events/index.md).  
   
  Procesor manipulacji nie zawiera informacji na temat konkretnego elementu, który jest on przetwarzany. Aplikacja oddzielnie stosuje te zmiany do elementu specyficzne dla aplikacji. Na przykład aplikacja stosuje przekształcenia do obrazu lub odrysowuje go, aby wyświetlić je w nowej lokalizacji lub za pomocą nowego rozmiaru i orientacji.  
   

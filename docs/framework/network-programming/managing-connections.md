@@ -20,11 +20,11 @@ ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1e4eb6c88bfad132f9e974445adf9ae0d6531f57
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036661"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782210"
 ---
 # <a name="managing-connections"></a>Zarządzanie połączeniami
 Aplikacje, które używają protokołu HTTP do łączenia z zasobami danych można używać programu .NET Framework <xref:System.Net.ServicePoint> i <xref:System.Net.ServicePointManager> klasy do zarządzania połączenia z Internetem i aby pomóc im osiągnięcia optymalnej skali i wydajności.  

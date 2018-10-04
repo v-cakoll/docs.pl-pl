@@ -3,11 +3,11 @@ title: Rozwiązywanie problemów z dostawcami typów
 description: 'Odkryj rozwiązania potencjalnych problemów, które najprawdopodobniej będzie występować w przypadku użycia dostawcy typów F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204940"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244922"
 ---
 # <a name="troubleshooting-type-providers"></a>Rozwiązywanie problemów z dostawcami typów
 

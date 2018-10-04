@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c99f59478b61bd382d6bf9529d2921407cc70bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 19353bd068e3b04bc3d852c1e22db9c97ebef628
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253159"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245052"
 ---
 # <a name="whats-new-in-the-net-standard"></a>What's new in .NET Standard
 
@@ -55,7 +55,7 @@ Niektóre dodatki do <xref:System> przestrzeni nazw w programie .NET Standard 2.
 
 ### <a name="support-for-net-framework-libraries"></a>Obsługa bibliotek .NET Framework
 
-Przeważająca większość bibliotek docelowe z .NET Framework, a nie .NET Standard. Jednak większość wywołań w tych bibliotek są do interfejsów API, które stanowią część pakietu .NET Standard 2.0. Począwszy od .NET Standard 2.0, dostępne biblioteki .NET Framework z biblioteki .NET Standard za pomocą [podkładki zgodności](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-20/README.md#assembly-unification). Ta warstwa zgodności jest niewidoczne dla deweloperów; nie trzeba wykonywać żadnych czynności, aby móc korzystać z biblioteki .NET Framework.
+Przeważająca większość bibliotek docelowe z .NET Framework, a nie .NET Standard. Jednak większość wywołań w tych bibliotek są do interfejsów API, które stanowią część pakietu .NET Standard 2.0. Począwszy od .NET Standard 2.0, dostępne biblioteki .NET Framework z biblioteki .NET Standard za pomocą [podkładki zgodności](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification). Ta warstwa zgodności jest niewidoczne dla deweloperów; nie trzeba wykonywać żadnych czynności, aby móc korzystać z biblioteki .NET Framework.
 
 Jednym wymaganiem jest o tym, czy interfejsy API o nazwie w bibliotece klas programu .NET Framework, muszą być zawarte w .NET Standard 2.0.
 

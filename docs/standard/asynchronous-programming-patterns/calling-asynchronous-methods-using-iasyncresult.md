@@ -14,11 +14,11 @@ ms.assetid: 07fba116-045b-473c-a0b7-acdbeb49861f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 23fa927dcdb91fb3905f1cbe845450751de91157
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: MT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862032"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245095"
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>Wywołanie metod asynchronicznych za pomocą interfejsu IAsyncResult
 Typy w .NET Framework i biblioteki klas w innych firm może zapewnić metody, które umożliwiają aplikacji do kontynuowania wykonywania podczas wykonywania operacji asynchronicznych w wątkach, innym niż wątku głównego aplikacji. W poniższych sekcjach opisano i zawierają przykłady kodu, które pokazują różne sposoby, można wywoływać metod asynchronicznych, które używają <xref:System.IAsyncResult> wzorca projektowego.  

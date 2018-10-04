@@ -4,16 +4,16 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36bd4ab7cd5ed4ab01a7fda7991df94c26ed5d1a
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512018"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244974"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>w modyfikator parametrów (odwołanie w C#)
 
-`in` — Słowo kluczowe powoduje, że argumenty przekazywane przez odwołanie. Jest on podobny do [ref](ref.md) lub [się](out-parameter-modifier.md) słów kluczowych, poza tym, że `in` argumentów nie można zmodyfikować przez metodę o nazwie. Natomiast `ref` argumentów może być modyfikowany, `out` argumenty muszą zostać zmodyfikowane przez obiekt wywołujący, a te zmiany są obserwowalnymi w kontekst wywołania.
+`in` — Słowo kluczowe powoduje, że argumenty przekazywane przez odwołanie. Jest on podobny do [ref](ref.md) lub [się](out-parameter-modifier.md) słów kluczowych, poza tym, że `in` argumentów nie można zmodyfikować przez metodę o nazwie. Natomiast `ref` argumentów może być modyfikowany, `out` argumenty muszą zostać zmodyfikowane przez metodę o nazwie, a te zmiany są obserwowalnymi w kontekst wywołania.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 

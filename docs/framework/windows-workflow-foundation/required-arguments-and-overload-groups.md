@@ -1,19 +1,19 @@
 ---
-title: Wymagane argumenty i grupy metod przeciążonych
+title: Wymagane Argumenty i Grupy metod Przeciążonych
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 794a0a531fbd26d9e4242d40be5147ab41547192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517563"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244870"
 ---
-# <a name="required-arguments-and-overload-groups"></a>Wymagane argumenty i grupy metod przeciążonych
-Można skonfigurować tak, aby niektóre argumenty są wymagane może być powiązane działania jest nieprawidłowy do wykonania działań. `RequiredArgument` Atrybut służy do wskazania, że niektóre argumenty w działaniu wymagane i `OverloadGroup` atrybutów jest używane do grupowania kategorii wymaganych argumentów. Przy użyciu atrybutów, autorzy działania zapewniają prostymi lub złożonymi działanie sprawdzania poprawności konfiguracji.  
+# <a name="required-arguments-and-overload-groups"></a>Wymagane Argumenty i Grupy metod Przeciążonych
+Działania można skonfigurować tak, aby niektóre argumenty są wymagane powiązać na ważne potrzeby wykonywania działania. `RequiredArgument` Atrybut jest używany do wskazania, że niektórych argumentów w ramach działania są wymagane i `OverloadGroup` atrybut służy do grupowania kategorii wymaganych argumentów. Za pomocą atrybutów, autorzy działanie może zapewnić proste lub złożone działanie sprawdzania poprawności konfiguracji.  
   
 ## <a name="using-required-arguments"></a>Przy użyciu wymaganych argumentów  
- Aby użyć `RequiredArgument` atrybutu w działaniu, określ żądany argumentów, za pomocą <xref:System.Activities.RequiredArgumentAttribute>. W tym przykładzie `Add` działania jest zdefiniowany, że dwa wymaga argumentów.  
+ Aby użyć `RequiredArgument` atrybutu w działaniu, określ żądany argumentów, za pomocą <xref:System.Activities.RequiredArgumentAttribute>. W tym przykładzie `Add` działania jest zdefiniowana, że ma dwa wymagane argumenty.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -31,7 +31,7 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- W języku XAML, wymagane argumenty są również oznaczone za pomocą <xref:System.Activities.RequiredArgumentAttribute>. W tym przykładzie `Add` działania jest definiowana za pomocą trzech argumentów i używa <xref:System.Activities.Statements.Assign%601> działanie do wykonania operacji dodawania.  
+ W XAML, wymagane argumenty są również oznaczane przy użyciu <xref:System.Activities.RequiredArgumentAttribute>. W tym przykładzie `Add` działania jest definiowana za pomocą trzech argumentów i zastosowania <xref:System.Activities.Statements.Assign%601> działania do wykonania operacji dodawania.  
   
 ```xaml  
 <Activity x:Class="ValidationDemo.Add" ...>  
@@ -59,14 +59,15 @@ public sealed class Add : CodeActivity<int>
 </Activity>  
 ```  
   
- Jeśli jest używane działanie i jeden z wymaganych argumentów nie jest powiązany jest zwracany następujący błąd sprawdzania poprawności.  
+ Jeśli działanie jest używane, a jeden z wymaganych argumentów nie jest powiązany jest zwracany następujący błąd sprawdzania poprawności.  
   
- **Nie podano wartości dla wymaganego argumentu działania "Operand1".**  
+ **Nieprawidłowa wartość argumentu wymagane działania "Operand1".**  
 > [!NOTE]
->  Aby uzyskać informacje dotyczące sprawdzania i obsługi sprawdzania poprawności błędy i ostrzeżenia, zobacz [wywoływania sprawdzania poprawności działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+> Aby uzyskać informacje dotyczące sprawdzania i obsługa błędy i ostrzeżenia walidacji, zobacz [wywoływanie walidacji działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
-## <a name="using-overload-groups"></a>Za pomocą grupy metod przeciążonych  
- Grupy metod przeciążonych udostępnia metody wskazujący, które kombinacje argumenty są prawidłowe w działaniu. Argumenty są zgrupowane za pomocą <xref:System.Activities.OverloadGroupAttribute>. Każda grupa ma nadane nazwy, która jest określona przez <xref:System.Activities.OverloadGroupAttribute>, działanie jest prawidłowa, gdy tylko jeden zestaw argumentów w grupie metod przeciążonych są powiązane. W poniższym przykładzie pobierana z [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) próbki, `CreateLocation` klasa jest zdefiniowana.  
+## <a name="using-overload-groups"></a>Za pomocą Grupy metod Przeciążonych
+
+Grupy metod przeciążonych udostępnia metody wskazujące, które kombinacje argumenty są prawidłowe w działaniu. Argumenty są zgrupowane za pomocą <xref:System.Activities.OverloadGroupAttribute>. Każda grupa otrzymuje nazwę, która jest określona przez <xref:System.Activities.OverloadGroupAttribute>. Działanie jest prawidłowa, gdy tylko jeden zestaw argumentów w grupie przeciążenia są powiązane. W poniższym przykładzie `CreateLocation` klasa jest zdefiniowana.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -103,9 +104,9 @@ class CreateLocation: Activity
 }  
 ```  
   
- Celem tego działania jest do określenia lokalizacji w Stanach Zjednoczonych. Aby to zrobić, użytkownik działania można określić lokalizacji przy użyciu jednej z trzech grup argumentów. Aby określić prawidłową kombinację argumenty, trzy grupy metod przeciążonych są zdefiniowane. `G1` zawiera `Latitude` i `Longitude` argumentów. `G2` zawiera `Street`, `City`, i `State`. `G3` zawiera `Street` i `Zip`. `Name` jest również wymagany argument, ale nie jest częścią grupy przeciążenia. Dla tego działania identyfikator był prawidłowy `Name` musi być powiązane razem wszystkie argumenty z grupy metod przeciążonych jeden i tylko jeden.  
+ Celem tego działania jest aby określić lokalizację, w stanach Zjednoczonych. Aby to zrobić, użytkownik działania można określić lokalizacji przy użyciu jednej z trzech grup argumentów. Aby określić prawidłową kombinacji argumentów, trzy grupy metod przeciążonych są zdefiniowane. `G1` zawiera `Latitude` i `Longitude` argumentów. `G2` zawiera `Street`, `City`, i `State`. `G3` zawiera `Street` i `Zip`. `Name` Ponadto argument jest wymagany, ale nie jest częścią grupy przeciążenia. Dla tego działania był prawidłowy `Name` musi powiązać razem z wszystkie argumenty z grupy przeciążenia jeden i tylko jeden.  
   
- W poniższym przykładzie pobierana z [działania dostępu do bazy danych](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) przykładowa występują dwa przeciążenia grup: `ConnectionString` i `ConfigFileSectionName`. Dla tego działania identyfikator był prawidłowy, albo `ProviderName` i `ConnectionString` argumentów musi być powiązana, lub `ConfigName` argumentu, ale nie oba.  
+ W poniższym przykładzie pobierana z [działań w bazie danych programu Access](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) próbki, istnieją dwa przeciążenia grup: `ConnectionString` i `ConfigFileSectionName`. Dla tego działania był prawidłowy, albo `ProviderName` i `ConnectionString` argumentów musi być powiązana, lub `ConfigName` argumentów, ale nie oba.  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  
@@ -141,21 +142,21 @@ Public class DbUpdate: AsyncCodeActivity
 }  
 ```  
   
- Podczas definiowania grupa metod przeciążonych:  
+ Podczas definiowania grupę przeciążenia:  
   
--   Grupa metod przeciążonych nie może być podzbiór lub równoważne zbiór innej grupy przeciążenia.  
+-   Grupę przeciążenia nie może być podzbiór lub zbiór równoważny, innej grupy przeciążenia.  
   
     > [!NOTE]
-    >  Istnieje jeden wyjątek od tej reguły. Jeśli grupa metod przeciążonych są podzestawem innej grupy metod przeciążonych i podzbiór zawiera tylko argumenty, gdzie `RequiredArgument` jest `false`, to grupa metod przeciążonych jest nieprawidłowy.  
+    >  Istnieje jeden wyjątek od tej reguły. Jeśli grupa przeciążenie jest podzbiorem innej grupy przeciążenia i podzbiór zawiera tylko argumenty gdzie `RequiredArgument` jest `false`, grupy przeciążenie jest nieprawidłowy.  
   
--   Grupy metod przeciążonych mogą nakładać się na, ale jeśli przecięciu grupy zawiera wszystkie wymagane argumenty jedną lub obie grupy metod przeciążonych, występuje błąd. W poprzednim przykładzie `G2` i `G3` przeciążenia grup pokrywający się, ale ponieważ przecięcie nie zawierał wszystkie argumenty jednego lub dwóch grup jest to prawidłowa.  
+-   Grupy metod przeciążonych może pokrywać się, ale jest to błąd, jeśli na przecięciu grupy zawiera wszystkie wymagane argumenty z jedną lub obie grupy metod przeciążonych. W poprzednim przykładzie `G2` i `G3` przeciążać nakładających się grup, ale ponieważ wspólną nie zawierała wszystkie argumenty jednego lub dwóch grup była nieprawidłowa.  
   
- Podczas tworzenia wiązania argumenty w grupie metod przeciążonych:  
+ Podczas tworzenia powiązania argumentów w grupie przeciążenia:  
   
--   Grupa metod przeciążonych jest uznawany za granica, jeśli wszystkie `RequiredArgument` argumentów w grupie są powiązane.  
+-   Grupę przeciążenie jest uznawany za powiązane z, jeśli wszystkie `RequiredArgument` argumentów w grupie są powiązane.  
   
--   Jeśli grupa ma wartość zero `RequiredArgument` argumentów i co najmniej jednego argumentu powiązany, a następnie grupy jest uznawany za powiązane z.  
+-   Jeśli grupa zawiera zero `RequiredArgument` argumentów i co najmniej jednego argumentu powiązania, a następnie grupy jest uznawany za granicę.  
   
--   Jeśli nie grupy metod przeciążonych są powiązane chyba, że jedna grupa metod przeciążonych nie jest błąd sprawdzania poprawności `RequiredArgument` argumenty w nim.  
+-   Jeśli nie grupy metod przeciążonych są powiązane, chyba że nie ma jednej grupy przeciążenia, występuje błąd sprawdzania poprawności `RequiredArgument` argumentów w nim.  
   
--   Występuje błąd ma więcej niż jedną grupę metod przeciążonych powiązana, który jest, wszystkie wymagane argumenty w jedna grupa metod przeciążonych są powiązane i wszystkich argumentów w innej grupie przeciążenia jest także powiązany.
+-   Jest błędem do więcej niż jedna grupa przeciążenia, powiązana, będącego, wszystkie wymagane argumenty z kilkoma przeciążeniami grupy są powiązane i wszystkich argumentów w innej grupie przeciążenie jest również powiązane.

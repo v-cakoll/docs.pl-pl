@@ -6,11 +6,11 @@ ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59e288a756a022763bae2235964a8b25a9d72bd1
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: MT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47861713"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244623"
 ---
 # <a name="converting-net-framework-types-to-strings"></a>Konwertowanie typów programu .NET Framework na ciągi znaków
 Jeśli chcesz przekonwertować typ .NET Framework na ciąg, użyj **ToString** metody. **ToString** metoda zwraca reprezentację ciągu przekazany typ to. Poniższa tabela zawiera listę typów programu .NET Framework, które zwracają ciąg w formacie, który jest mapowany do specyfikacji schematu XML (XSD).  

@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
 ms.openlocfilehash: 65b8aa6fa4422579ce0d1c5e33d3418ea051612a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027770"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48776886"
 ---
-# <a name="ltcertificatevalidatorgt"></a><span data-ttu-id="8432b-102">&lt;certificateValidator&gt;</span><span class="sxs-lookup"><span data-stu-id="8432b-102">&lt;certificateValidator&gt;</span></span>
-<span data-ttu-id="8432b-103">Określa typ niestandardowy do weryfikacji certyfikatu.</span><span class="sxs-lookup"><span data-stu-id="8432b-103">Specifies a custom type for certificate validation.</span></span> <span data-ttu-id="8432b-104">Ten typ jest używany tylko wtedy, gdy `certificateValidationMode` atrybutu [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element jest ustawiony na "Niestandardowe".</span><span class="sxs-lookup"><span data-stu-id="8432b-104">This type is used only if the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element is set to "Custom".</span></span>  
+# <a name="ltcertificatevalidatorgt"></a><span data-ttu-id="5ff00-102">&lt;certificateValidator&gt;</span><span class="sxs-lookup"><span data-stu-id="5ff00-102">&lt;certificateValidator&gt;</span></span>
+<span data-ttu-id="5ff00-103">Określa typ niestandardowy do weryfikacji certyfikatu.</span><span class="sxs-lookup"><span data-stu-id="5ff00-103">Specifies a custom type for certificate validation.</span></span> <span data-ttu-id="5ff00-104">Ten typ jest używany tylko wtedy, gdy `certificateValidationMode` atrybutu [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element jest ustawiony na "Niestandardowe".</span><span class="sxs-lookup"><span data-stu-id="5ff00-104">This type is used only if the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element is set to "Custom".</span></span>  
   
- <span data-ttu-id="8432b-105">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="8432b-105">\<system.identityModel></span></span>  
-<span data-ttu-id="8432b-106">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="8432b-106">\<identityConfiguration></span></span>  
-<span data-ttu-id="8432b-107">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="8432b-107">\<certificateValidation></span></span>  
-<span data-ttu-id="8432b-108">\<certificateValidator ></span><span class="sxs-lookup"><span data-stu-id="8432b-108">\<certificateValidator></span></span>  
+ <span data-ttu-id="5ff00-105">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="5ff00-105">\<system.identityModel></span></span>  
+<span data-ttu-id="5ff00-106">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="5ff00-106">\<identityConfiguration></span></span>  
+<span data-ttu-id="5ff00-107">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="5ff00-107">\<certificateValidation></span></span>  
+<span data-ttu-id="5ff00-108">\<certificateValidator ></span><span class="sxs-lookup"><span data-stu-id="5ff00-108">\<certificateValidator></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8432b-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="8432b-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5ff00-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="5ff00-109">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -31,25 +31,25 @@ ms.locfileid: "48027770"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8432b-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="8432b-110">Attributes and Elements</span></span>  
- <span data-ttu-id="8432b-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="8432b-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5ff00-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="5ff00-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="5ff00-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="5ff00-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8432b-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="8432b-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5ff00-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="5ff00-112">Attributes</span></span>  
   
-|<span data-ttu-id="8432b-113">Atrybut</span><span class="sxs-lookup"><span data-stu-id="8432b-113">Attribute</span></span>|<span data-ttu-id="8432b-114">Opis</span><span class="sxs-lookup"><span data-stu-id="8432b-114">Description</span></span>|  
+|<span data-ttu-id="5ff00-113">Atrybut</span><span class="sxs-lookup"><span data-stu-id="5ff00-113">Attribute</span></span>|<span data-ttu-id="5ff00-114">Opis</span><span class="sxs-lookup"><span data-stu-id="5ff00-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="8432b-115">— typ</span><span class="sxs-lookup"><span data-stu-id="8432b-115">type</span></span>|<span data-ttu-id="8432b-116">Określa typ niestandardowy, który pochodzi od klasy <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy.</span><span class="sxs-lookup"><span data-stu-id="8432b-116">Specifies a custom type that derives from the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class.</span></span> <span data-ttu-id="8432b-117">Ustaw `certificateValidationMode` atrybutu [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element na "Niestandardowe", aby użyć tego typu.</span><span class="sxs-lookup"><span data-stu-id="8432b-117">Set the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element to "Custom" to use this type.</span></span> <span data-ttu-id="8432b-118">Aby uzyskać więcej informacji o sposobie określania `type` atrybutów, zobacz [odwołań do typu niestandardowego](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span><span class="sxs-lookup"><span data-stu-id="8432b-118">For more information about how to specify the `type` attribute, see [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span> <span data-ttu-id="8432b-119">Opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="8432b-119">Optional.</span></span>|  
+|<span data-ttu-id="5ff00-115">— typ</span><span class="sxs-lookup"><span data-stu-id="5ff00-115">type</span></span>|<span data-ttu-id="5ff00-116">Określa typ niestandardowy, który pochodzi od klasy <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy.</span><span class="sxs-lookup"><span data-stu-id="5ff00-116">Specifies a custom type that derives from the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class.</span></span> <span data-ttu-id="5ff00-117">Ustaw `certificateValidationMode` atrybutu [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element na "Niestandardowe", aby użyć tego typu.</span><span class="sxs-lookup"><span data-stu-id="5ff00-117">Set the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element to "Custom" to use this type.</span></span> <span data-ttu-id="5ff00-118">Aby uzyskać więcej informacji o sposobie określania `type` atrybutów, zobacz [odwołań do typu niestandardowego](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span><span class="sxs-lookup"><span data-stu-id="5ff00-118">For more information about how to specify the `type` attribute, see [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span> <span data-ttu-id="5ff00-119">Opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="5ff00-119">Optional.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="8432b-120">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="8432b-120">Child Elements</span></span>  
- <span data-ttu-id="8432b-121">Brak</span><span class="sxs-lookup"><span data-stu-id="8432b-121">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5ff00-120">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="5ff00-120">Child Elements</span></span>  
+ <span data-ttu-id="5ff00-121">Brak</span><span class="sxs-lookup"><span data-stu-id="5ff00-121">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="8432b-122">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="8432b-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5ff00-122">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="5ff00-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="8432b-123">Element</span><span class="sxs-lookup"><span data-stu-id="8432b-123">Element</span></span>|<span data-ttu-id="8432b-124">Opis</span><span class="sxs-lookup"><span data-stu-id="8432b-124">Description</span></span>|  
+|<span data-ttu-id="5ff00-123">Element</span><span class="sxs-lookup"><span data-stu-id="5ff00-123">Element</span></span>|<span data-ttu-id="5ff00-124">Opis</span><span class="sxs-lookup"><span data-stu-id="5ff00-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8432b-125">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="8432b-125">\<certificateValidation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|<span data-ttu-id="8432b-126">Określa ustawienia, które programy obsługi tokenów służący do weryfikowania certyfikatów.</span><span class="sxs-lookup"><span data-stu-id="8432b-126">Controls the settings that token handlers use to validate certificates.</span></span>|  
+|[<span data-ttu-id="5ff00-125">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="5ff00-125">\<certificateValidation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|<span data-ttu-id="5ff00-126">Określa ustawienia, które programy obsługi tokenów służący do weryfikowania certyfikatów.</span><span class="sxs-lookup"><span data-stu-id="5ff00-126">Controls the settings that token handlers use to validate certificates.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="8432b-127">Przykład</span><span class="sxs-lookup"><span data-stu-id="8432b-127">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5ff00-127">Przykład</span><span class="sxs-lookup"><span data-stu-id="5ff00-127">Example</span></span>  
   
 ```xml  
 <certificateValidation certificateValidationMode="Custom"  

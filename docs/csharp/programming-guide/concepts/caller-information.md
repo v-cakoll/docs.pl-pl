@@ -2,12 +2,12 @@
 title: Informacje o wywołującym (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 27f2e7624369061ff3089357c455ae51237e6dfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586463"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777068"
 ---
 # <a name="caller-information-c"></a>Informacje o wywołującym (C#)
 
@@ -76,7 +76,7 @@ W poniższej tabeli przedstawiono składowej, nazwy, które są zwracane, gdy u�
 |Statyczny konstruktor|Ciąg „.cctor”|
 |Destruktor|Ciąg „Finalize”.|
 |Zdefiniowane przez użytkownika operatory lub konwersje|Nazwa wygenerowana dla elementu członkowskiego, na przykład „op_Addition”.|
-|Konstruktor atrybutu|Nazwa elementu członkowskiego, do którego został zastosowany atrybut. Jeśli atrybut jest dowolnym elementem elementu członkowskiego (takim jak parametr, wartość zwracana lub parametr typu ogólnego), to wynikiem jest nazwa elementu członkowskiego, który jest skojarzony z tym elementem.|
+|Konstruktor atrybutu|Nazwa metody lub właściwości, do którego zastosowano atrybut. Jeśli atrybut jest dowolnym elementem elementu członkowskiego (takim jak parametr, wartość zwracana lub parametr typu ogólnego), to wynikiem jest nazwa elementu członkowskiego, który jest skojarzony z tym elementem.|
 |Brak nadrzędnego elementu członkowskiego (na przykład poziom zestawu lub atrybuty, które są stosowane do typów)|Wartość domyślna opcjonalnego parametru.|
 
 ## <a name="see-also"></a>Zobacz także

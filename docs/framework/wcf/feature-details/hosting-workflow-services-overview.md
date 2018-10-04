@@ -3,11 +3,11 @@ title: Przegląd hostowania usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
 ms.openlocfilehash: dbe271e30e9c4e98a52c01ffaa21de25c127c7ff
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48245108"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778973"
 ---
 # <a name="hosting-workflow-services-overview"></a>Przegląd hostowania usług przepływu pracy
 Musi być hostowany usług przepływu pracy do wykonania. <xref:System.ServiceModel.WorkflowServiceHost> Jest hostem out-of--box przepływu pracy, który obsługuje wiele wystąpień, konfiguracji i komunikatów WCF (mimo że przepływy pracy nie są wymagane do obsługi komunikatów można hostować).  Integruje się również z trwałości, śledzenia i kontrolowania wystąpienia za pomocą zestawu zachowania usługi.  Podobnie jak w przypadku firmy WCF <xref:System.ServiceModel.ServiceHost>, <xref:System.ServiceModel.WorkflowServiceHost> mogą być samodzielnie hostowane w dowolnej aplikacji zarządzanej .NET lub sieci web hostowanych (w formacie .xamlx) w usługach IIS / WAS.  Tematy w tej sekcji opisano sposób hostowanie usługi przepływu pracy.  

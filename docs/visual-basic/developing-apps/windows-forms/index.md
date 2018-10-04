@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004500"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582583"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
 Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji Windows Forms, które działają lokalnie na komputerach użytkowników. Visual Studio umożliwia tworzenie aplikacji i interfejsu użytkownika przy użyciu Windows Forms. Aplikacja Windows Forms jest oparta na klasy z <xref:System.Windows.Forms> przestrzeni nazw.  
@@ -54,7 +54,7 @@ Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji W
 ## <a name="displaying-and-manipulating-data"></a>Wyświetlanie i manipulowanie danymi  
  Wiele aplikacji, musisz wyświetlić dane z bazy danych, plik XML, usługi XML sieci Web lub innego źródła danych. Formularze Windows udostępnia elastyczną kontrolę, wywoływana <xref:System.Windows.Forms.DataGridView> kontroli renderowania takich danych tabelarycznych w tradycyjnych formacie wierszy i kolumn, tak aby każdy element danych zajmował komórki. Za pomocą <xref:System.Windows.Forms.DataGridView> można dostosować wygląd pojedyncze komórki, dowolnego wierszy i kolumn w miejscu i wyświetlić złożonych kontrolek w komórkach, m.in.  
   
- Łączenie ze źródłami danych za pośrednictwem sieci jest prostym zadaniem przy użyciu klienci inteligentni Windows Forms. <xref:System.Windows.Forms.BindingSource> Składnika, nowe za pomocą usługi Windows Forms w [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] i [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]reprezentuje połączenie ze źródłem danych i udostępnia metody powiązanie danych z kontrolkami, przejdź do poprzedniego i dalej rekordów, edytowanie rekordów i zapisywanie zmiany z powrotem do oryginalnego źródła. <xref:System.Windows.Forms.BindingNavigator> Kontroli udostępnia prosty interfejs, za pośrednictwem <xref:System.Windows.Forms.BindingSource> składnika umożliwiające użytkownikom przechodzenie między rekordami.  
+ Łączenie ze źródłami danych za pośrednictwem sieci jest prostym zadaniem przy użyciu klienci inteligentni Windows Forms. <xref:System.Windows.Forms.BindingSource> Składnika, nowe za pomocą usługi Windows Forms w programie Visual Studio 2005 i [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]reprezentuje połączenie ze źródłem danych i udostępnia metody powiązanie danych z kontrolkami, przejdź do poprzedniego i dalej rekordów, edytowanie rekordów i zapisywanie zmiany z powrotem do oryginalnego źródła. <xref:System.Windows.Forms.BindingNavigator> Kontroli udostępnia prosty interfejs, za pośrednictwem <xref:System.Windows.Forms.BindingSource> składnika umożliwiające użytkownikom przechodzenie między rekordami.  
   
 ### <a name="data-bound-controls"></a>Formanty powiązane z danymi  
  Możesz utworzyć formanty powiązane z danymi za pomocą okna źródeł danych, który wyświetla źródła danych, takich jak bazy danych, usług sieci Web i obiekty w projekcie. Można utworzyć formanty powiązane z danymi przez przeciąganie elementów z tego okna na formularze w projekcie. Użytkownik może również wiązania danych istniejących kontrolek z danymi przez przeciąganie obiektów z okna źródeł danych na istniejące kontrolki.  

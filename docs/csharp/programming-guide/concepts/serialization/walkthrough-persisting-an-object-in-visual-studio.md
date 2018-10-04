@@ -1,12 +1,12 @@
 ---
 title: 'Przewodnik: Przechowywanie obiektu przy użyciu języka C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231495"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580179"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Przewodnik: przechowywanie obiektu przy użyciu języka C# #
 
@@ -28,6 +28,8 @@ W tym instruktażu utworzysz podstawową `Loan` obiekt i utrwala jego dane do pl
 
 > [!TIP]
 > Należy zainstalować Edytor kodu? Spróbuj [programu Visual Studio](https://visualstudio.com/downloads)!
+
+* Przykład wymaga języka C# 7.3. Zobacz [wybierz wersję języka C#](../../../language-reference/configure-language-version.md) 
 
 Kod przykładowy w trybie online, można sprawdzić [w repozytorium GitHub samples .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization).
 

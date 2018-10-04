@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421823"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779781"
 ---
 # <a name="delegate-statement"></a>Delegate — Instrukcja
 Używane do deklarowania delegata. Delegat jest typem referencyjnym, który odwołuje się do `Shared` metody typu lub metod wystąpień obiektu. Każda procedura ze zgodnymi typy parametrów i zwrotu może służyć do utworzenia wystąpienia tej klasy delegatu. Procedurę można następnie później wywołać za pośrednictwem wystąpienia delegata.  

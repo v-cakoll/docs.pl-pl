@@ -17,11 +17,11 @@ ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f51e3f36594a6f66c5fad32214d84a11b78726a4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399349"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582882"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 

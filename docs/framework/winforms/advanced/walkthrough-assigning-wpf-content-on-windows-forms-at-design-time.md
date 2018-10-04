@@ -8,31 +8,31 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 6db75e9d8ec5aeb1a0c7310d39391f8f264649d3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 554153335c08c9c8911a5d4fda3696db1e0abf2a
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45689278"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48264229"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Wskazówki: przypisywanie zawartości WPF na formularzach systemu Windows w czasie projektowania
-W tym instruktażu dowiesz się, jak wybrać typy kontrolek Windows Presentation Foundation (WPF), które mają być wyświetlane w formularzu. Możesz wybrać wszystkie typy kontrolek WPF, które są zawarte w projekcie.  
-  
- W tym przewodniku należy wykonać następujące zadania:  
-  
--   Utwórz projekt.  
-  
--   Tworzenie typów formantów WPF.  
-  
--   Wybierz kontrolek WPF.  
-  
+W tym instruktażu dowiesz się, jak wybrać typy kontrolek Windows Presentation Foundation (WPF), które mają być wyświetlane w formularzu. Możesz wybrać wszystkie typy kontrolek WPF, które są zawarte w projekcie.
+
+ W tym przewodniku należy wykonać następujące zadania:
+
+-   Utwórz projekt.
+
+-   Tworzenie typów formantów WPF.
+
+-   Wybierz kontrolek WPF.
+
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest utworzenie projektu Windows Forms.  

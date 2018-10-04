@@ -34,11 +34,11 @@ ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 776e0a728b56aa2acfb7a033c2a7244b2cc824f9
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863042"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778526"
 ---
 # <a name="handling-errors"></a>Obsługa błędów
 <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy zgłaszają wyjątki zarówno system (takie jak <xref:System.ArgumentException>) i wyjątków specyficzne dla sieci Web (służą do <xref:System.Net.WebException> zgłoszony przez <xref:System.Net.WebRequest.GetResponse%2A> metody).  

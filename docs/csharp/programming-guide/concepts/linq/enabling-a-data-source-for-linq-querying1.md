@@ -2,12 +2,12 @@
 title: Włączanie źródła danych dla LINQ Querying1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253185"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580053"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Włączanie źródła danych do zapytań LINQ
 Istnieją różne sposoby rozszerzania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] umożliwiające dowolnego źródła danych można wykonać zapytania w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wzorca. Źródłem danych może być między innymi struktura danych, usługi sieci Web, system plików lub baza danych. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Wzorzec ułatwia klientom badanie źródła danych, dla którego [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytań jest włączony, ponieważ składnia i wzorzec kwerendy nie zmienia się. W ten sposób [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] można rozszerzyć do tych danych źródeł obejmują następujące elementy:  
@@ -28,7 +28,7 @@ Istnieją różne sposoby rozszerzania [!INCLUDE[vbteclinq](~/includes/vbteclinq
  Istnieją dwa sposoby, aby umożliwić [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przesyłanie zapytań dotyczących danych w pamięci. Jeśli dane są typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601>, możesz tworzyć zapytania dotyczące danych za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] do obiektów. Jeśli go nie ma sensu Włączanie wyliczania tego typu przez zaimplementowanie <xref:System.Collections.Generic.IEnumerable%601> interfejsu, można zdefiniować [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] standardowe metody operatora w tego typu zapytania lub Utwórz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] metod standardowych operatorów zapytań, które rozszerzają typu. Niestandardowe implementacje standardowych operatorów kwerendy powinny stosować odroczone wykonania w celu zwracania wyników.  
   
 ### <a name="remote-data"></a>Dane zdalne  
- Najlepsza opcja włączania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przesyłanie zapytań dotyczących zdalnego źródła danych jest zaimplementowanie <xref:System.Linq.IQueryable%601> interfejsu. Jednak to różni się od rozszerzania dostawcy, takich jak [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] dla źródła danych. Żadne modele dostawcy rozszerzania istniejących [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] technologii, takich jak [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]do innych typów źródła danych są dostępne w [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)].  
+ Najlepsza opcja włączania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przesyłanie zapytań dotyczących zdalnego źródła danych jest zaimplementowanie <xref:System.Linq.IQueryable%601> interfejsu. Jednak to różni się od rozszerzania dostawcy, takich jak [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] dla źródła danych. Żadne modele dostawcy rozszerzania istniejących [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] technologii, takich jak [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]do innych typów źródła danych są dostępne w programie Visual Studio 2008.
   
 ## <a name="iqueryable-linq-providers"></a>Dostawy IQueryable LINQ  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawcy, które implementują <xref:System.Linq.IQueryable%601> mogą się znacznie zmieniać w swojej złożoności. W tej sekcji omówiono różne poziomy złożoności.  

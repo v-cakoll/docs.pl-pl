@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028779"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582726"
 ---
 # <a name="single-data-type-visual-basic"></a>Single — Typ danych (Visual Basic)
 Przechowuje podpisany IEEE 32-bitowe (4-bajtową) pojedynczej precyzji liczb zmiennoprzecinkowych z zakresu od - 3.4028235E + 38 do - 1, 401298E-45 dla wartości ujemnych i 1, 401298E-45 za pośrednictwem 3.4028235E + 38 dla wartości dodatnich. Liczby o pojedynczej precyzji przechowywać przybliżeniem liczbą rzeczywistą.  

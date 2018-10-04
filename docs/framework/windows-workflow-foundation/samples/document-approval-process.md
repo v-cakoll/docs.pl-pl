@@ -2,16 +2,16 @@
 title: Proces zatwierdzania dokumentu
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508933"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582713"
 ---
 # <a name="document-approval-process"></a>Proces zatwierdzania dokumentu
-Niniejszy przykład pokazuje użycie wielu funkcji Windows Workflow Foundation (WF) i Windows Communication Foundation (WCF) ze sobą. Razem mogą implementować scenariusza proces zatwierdzania dokumentu. Aplikacja kliencka można przesłać dokumenty do zatwierdzenia i zatwierdzić dokumenty. Aplikacja menedżera zatwierdzenia istnieje ułatwienie komunikacji między klientami i wymuszać reguły proces zatwierdzania. Proces zatwierdzania jest przepływ pracy, który może wykonać kilka typów zatwierdzenia. Działania ma korzystać z jednego zatwierdzenia, zatwierdzenia kworum (procent zestaw osób zatwierdzających) i proces zatwierdzania złożony, który składa się z kworum i jednego zatwierdzenia w sekwencji.  
-  
+Niniejszy przykład pokazuje użycie wielu funkcji Windows Workflow Foundation (WF) i Windows Communication Foundation (WCF) ze sobą. Razem mogą implementować scenariusza proces zatwierdzania dokumentu. Aplikacja kliencka można przesłać dokumenty do zatwierdzenia i zatwierdzić dokumenty. Aplikacja menedżera zatwierdzenia istnieje ułatwienie komunikacji między klientami i wymuszać reguły proces zatwierdzania. Proces zatwierdzania jest przepływ pracy, który może wykonać kilka typów zatwierdzenia. Działania ma korzystać z jednego zatwierdzenia, zatwierdzenia kworum (procent zestaw osób zatwierdzających) i proces zatwierdzania złożony, który składa się z kworum i jednego zatwierdzenia w sekwencji.
+
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
@@ -80,11 +80,11 @@ Niniejszy przykład pokazuje użycie wielu funkcji Windows Workflow Foundation (
   
 ##### <a name="to-set-up-the-database"></a>Aby skonfigurować bazę danych  
   
-1.  Z [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] polecenia otwartych z uprawnieniami administratora, przejdź do tego folderu DocumentApprovalProcess i uruchom plik Setup.cmd.  
+1.  Z wiersza polecenia programu Visual Studio 2010 otwartych z uprawnieniami administratora przejdź do tego folderu DocumentApprovalProcess i uruchom plik Setup.cmd.  
   
 ##### <a name="to-set-up-the-application"></a>Aby skonfigurować aplikację  
   
-1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania DocumentApprovalProcess.sln.  
+1.  Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania DocumentApprovalProcess.sln.  
   
 2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
@@ -146,4 +146,4 @@ Niniejszy przykład pokazuje użycie wielu funkcji Windows Workflow Foundation (
   
 ##### <a name="to-clean-up"></a>Aby wyczyścić  
   
-1.  Z [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] wiersz polecenia, przejdź do folderu DocumentApprovalProcess i uruchomić Cleanup.cmd.
+1.  Z wiersza polecenia programu Visual Studio 2010 przejdź do folderu DocumentApprovalProcess i uruchom Cleanup.cmd.

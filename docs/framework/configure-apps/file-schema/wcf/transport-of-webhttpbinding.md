@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; w &lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: bbbd459e5717722359fe010a27e548d21ff074db
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3401eada9ae2580cc665d9b4a5a6475f86b68072
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482680"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777802"
 ---
 # <a name="lttransportgt-of-ltwebhttpbindinggt"></a>&lt;transport&gt; w &lt;webHttpBinding&gt;
 Określa ustawienia zabezpieczenia na poziomie transportu dla punktu końcowego skonfigurowanego do odbierania żądań HTTP.  
@@ -92,6 +92,6 @@ Określa ustawienia zabezpieczenia na poziomie transportu dla punktu końcowego 
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)  
  [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

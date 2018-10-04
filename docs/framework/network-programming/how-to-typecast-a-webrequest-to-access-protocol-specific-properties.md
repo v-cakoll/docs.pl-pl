@@ -8,11 +8,11 @@ ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b4cde78ead9bdb8becf0f12497f4b37ad5a73bb3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421534"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582242"
 ---
 # <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>Porady: rzutowanie elementu WebRequest do właściwości specyficznych dla protokołu dostępu
 W tym przykładzie przedstawiono sposób rzutowanie elementu WebRequest, dzięki czemu można dostęp do właściwości specyficznych dla protokołu.  

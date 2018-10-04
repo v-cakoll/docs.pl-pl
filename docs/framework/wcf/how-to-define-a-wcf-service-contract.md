@@ -7,15 +7,14 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 4f85a51c47eb045d1d2f0111cb217199c9acf0d7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 9f7f696b1f5be2e96c50938f4627271d891deb32
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537881"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582203"
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Instrukcje: Definiowanie kontraktu usługi Windows Communication Foundation
-
 Jest to pierwszy z sześciu zadań podrzędnych, wymagane do utworzenia podstawowej aplikacji Windows Communication Foundation (WCF). Omówienie wszystkich sześciu zadań, zobacz [Samouczek wprowadzający](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.
 
  Podczas tworzenia usługi WCF, pierwsze zadanie jest definiowanie kontraktu usługi. Kontrakt usługi określa, jakie operacje obsługuje usługi. Operacja można traktować jako metoda usługi sieci Web. Kontrakty są tworzone przez definiowanie interfejsu C++, C# lub Visual Basic (VB). Każda metoda w interfejsie odpowiada określonej operacji usługi. Każdego interfejsu należy zastosować <xref:System.ServiceModel.ServiceContractAttribute> zastosowano i każdej operacji musi być <xref:System.ServiceModel.OperationContractAttribute> zastosowany do niego. Jeśli metoda w interfejsie z atrybutem <xref:System.ServiceModel.ServiceContractAttribute> atrybut nie ma <xref:System.ServiceModel.OperationContractAttribute> atrybutu, że metoda nie są udostępniane przez usługę.

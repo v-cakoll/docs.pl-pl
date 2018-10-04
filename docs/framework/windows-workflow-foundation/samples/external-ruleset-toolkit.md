@@ -2,22 +2,22 @@
 title: Zewnętrzne Przybornik zestawu reguł
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f545d083bb6caf9daca3ce553d0a1ee6711b0062
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803359"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584263"
 ---
 # <a name="external-ruleset-toolkit"></a>Zewnętrzne Przybornik zestawu reguł
-Zwykle, gdy zasady są używane w aplikacji przepływu pracy, reguły są częścią zestawu. W niektórych przypadkach warto zachować zestawów reguł, niezależnie od zestawu, dzięki czemu mogą być aktualizowane bez ponownego tworzenia i wdrażania zestawu przepływu pracy. Ten przykład umożliwia zarządzanie i Edytuj zestawów reguł w bazie danych i uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania. Umożliwia to uruchamianie wystąpienia przepływu pracy automatycznie zastosować zmian zestaw reguł.  
-  
- Przykład zewnętrzne Przybornik zestawu reguł zawiera narzędzie oparte na formularzach Windows, używanej do zarządzania i Edytuj wersje zestawu reguł w bazie danych. Zawiera także działania, a usługa hosta do wykonywania tych zasad.  
-  
+Zwykle, gdy zasady są używane w aplikacji przepływu pracy, reguły są częścią zestawu. W niektórych przypadkach warto zachować zestawów reguł, niezależnie od zestawu, dzięki czemu mogą być aktualizowane bez ponownego tworzenia i wdrażania zestawu przepływu pracy. Ten przykład umożliwia zarządzanie i Edytuj zestawów reguł w bazie danych i uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania. Umożliwia to uruchamianie wystąpienia przepływu pracy automatycznie zastosować zmian zestaw reguł.
+
+ Przykład zewnętrzne Przybornik zestawu reguł zawiera narzędzie oparte na formularzach Windows, używanej do zarządzania i Edytuj wersje zestawu reguł w bazie danych. Zawiera także działania, a usługa hosta do wykonywania tych zasad.
+
 > [!NOTE]
 >  Ten przykładowy skrypt wymaga [programu Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).  
   
- [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] zawiera Edytor zestaw reguł w ramach programu Windows Workflow Foundation (WF). Ten edytor można uruchomić przez dwukrotne kliknięcie `Policy` działania w przepływie pracy; to szereguje zdefiniowany obiekt RuleSet w pliku Rules skojarzone z przepływem pracy ( `Policy` działanie jest uruchamiane wystąpienie zestaw reguł dla przepływu pracy). Plik Rules jest skompilowany w zestawie jako zasób, podczas kompilowania projektu przepływu pracy.  
+ Program Visual Studio udostępnia edytorze zestawu reguł w ramach programu Windows Workflow Foundation (WF). Ten edytor można uruchomić przez dwukrotne kliknięcie `Policy` działania w przepływie pracy; to szereguje zdefiniowany obiekt RuleSet w pliku Rules skojarzone z przepływem pracy ( `Policy` działanie jest uruchamiane wystąpienie zestaw reguł dla przepływu pracy). Plik Rules jest skompilowany w zestawie jako zasób, podczas kompilowania projektu przepływu pracy.  
   
  Składnik to między innymi próbki:  
   

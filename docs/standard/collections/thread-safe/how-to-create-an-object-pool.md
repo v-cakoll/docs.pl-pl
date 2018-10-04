@@ -11,11 +11,11 @@ ms.assetid: 0480e7ff-b6f9-480e-a889-2ed4264d8372
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0bc0c6bebbab6e84c165f41300a4cb16c8746a07
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046464"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579988"
 ---
 # <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a>Porady: tworzenie puli obiektów przy użyciu ConcurrentBag
 Ten przykład pokazuje, jak wdrożyć puli obiektów za pomocą współbieżnego zbioru. Pule obiektu może poprawić wydajność aplikacji w sytuacjach, w którym wymagają wielu wystąpień klasy i klasa jest kosztowne do utworzenia lub zniszczenia. Gdy program kliencki zażąda nowego obiektu, puli obiektów najpierw próbuje Podaj jeden, który został już utworzony i zwrócony do puli. Jeśli żaden nie jest dostępny, następnie jest tworzony nowy obiekt.  

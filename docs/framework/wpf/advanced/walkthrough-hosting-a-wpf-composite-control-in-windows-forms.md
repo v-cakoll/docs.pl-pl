@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 09f634c870eb78c16192ed30ffbbfdc71fdd5142
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b49d09ce81c0605ecd82b67ec4c0b24973ac293c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856169"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582817"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Wskazówki: Hosting złożonego formantu WPF w Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu, może być bardziej efektywne rozszerzyć istniejącą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , a nie do jego przepisania od podstaw. Jest to typowy scenariusz, gdy chcesz osadzić jedną lub większą liczbę opcji implementowane za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji Windows Forms. Aby uzyskać więcej informacji na temat dostosowywania kontrolek WPF, zobacz [niestandardowe Dostosowywanie formantu](../../../../docs/framework/wpf/controls/control-customization.md).  
@@ -27,9 +27,8 @@ ms.locfileid: "43856169"
  Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [Hosting złożonego formantu WPF w Windows Forms przykładzie](https://go.microsoft.com/fwlink/?LinkID=159996).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
-  
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+
+Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.  
   
 ## <a name="implementing-the-wpf-composite-control"></a>Implementowanie złożonej kontrolki WPF  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Złożonej kontrolki używane w tym przykładzie jest formularz proste wprowadzanie danych, który przyjmuje nazwę użytkownika i adres. Gdy użytkownik kliknie jeden z dwóch przycisków, aby wskazać, że zadanie jest zakończone, formant zgłasza zdarzenie niestandardowe do zwracania tych informacji do hosta. Poniższa ilustracja przedstawia renderowanych kontroli.  

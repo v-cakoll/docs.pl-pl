@@ -2,47 +2,47 @@
 title: Fabryka kanałów konfiguracji
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: 1f95356b0b473b297b36c7661c849589e9c0d6ef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b5dbabf8cdc28cc2beaf343b0377528c6ced1c66
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520817"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778591"
 ---
 # <a name="configuration-channel-factory"></a>Fabryka kanałów konfiguracji
-Ten przykład obejmuje użycie <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> Umożliwia centralne zarządzanie Konfiguracja klienta programu WCF. Może to być również przydatne w scenariuszach, w których konfiguracja jest wybrane lub ulegnie zmianie po czas ładowania domeny aplikacji.  
-  
-## <a name="demonstrates"></a>Demonstracje  
- <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>  
-  
-## <a name="discussion"></a>Dyskusja  
- Ten przykład ilustruje sposób używania <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> można dodać plik konfiguracji określonej aplikacji klienta, bez konieczności używania domyślny plik konfiguracji aplikacji.  
-  
- Przykład obejmuje dwa projekty. Pierwszy projekt jest prostą usługę uruchomioną na udzielenie odpowiedzi na komunikaty pochodzące od klientów. Drugi projekt to aplikacja kliencka, która tworzy dwa <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> obiektów przy użyciu <xref:System.Configuration.ExeConfigurationFileMap> Test.config pliku konfiguracji i są one używane do komunikacji z usługą. Obaj klienci komunikują się z usługą za pomocą konfiguracji określone w Test.config.  
-  
- Poniższy kod dodaje plik konfiguracji niestandardowej do aplikacji klienta.  
-  
-```  
-ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();  
-fileMap.ExeConfigFilename = "Test.config";  
-Configuration newConfiguration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);  
-  
-ConfigurationChannelFactory<ICalculatorChannel> factory1 = new ConfigurationChannelFactory<ICalculatorChannel>("endpoint1", newConfiguration, new EndpointAddress("http://localhost:8000/servicemodelsamples/service"));  
-ICalculatorChannel client1 = factory1.CreateChannel();  
-```  
-  
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
-  
-1.  Otwórz [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] z uprawnieniami administratora.  
-  
-2.  Kliknij prawym przyciskiem myszy rozwiązanie ConfigurationChannelFactory (projekty, 2), a następnie wybierz pozycję **właściwości**.  
-  
-3.  W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.  
-  
-4.  Przenieś **usługi** projektu na początku listy, o **akcji "Start"**, a następnie przenieść **klienta** projektu po **usługi**projektu, również mający **akcji "Start"**, więc **klienta** projektu jest wykonywany po **usługi** projektu.  
-  
-5.  Kliknij przycisk **OK**, a następnie naciśnij klawisz F5 (lub CTRL + F5) do uruchomienia przykładu.  
-  
+Ten przykład obejmuje użycie <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> Umożliwia centralne zarządzanie Konfiguracja klienta programu WCF. Może to być również przydatne w scenariuszach, w których konfiguracja jest wybrane lub ulegnie zmianie po czas ładowania domeny aplikacji.
+
+## <a name="demonstrates"></a>Demonstracje
+ <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>
+
+## <a name="discussion"></a>Dyskusja
+ Ten przykład ilustruje sposób używania <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> można dodać plik konfiguracji określonej aplikacji klienta, bez konieczności używania domyślny plik konfiguracji aplikacji.
+
+ Przykład obejmuje dwa projekty. Pierwszy projekt jest prostą usługę uruchomioną na udzielenie odpowiedzi na komunikaty pochodzące od klientów. Drugi projekt to aplikacja kliencka, która tworzy dwa <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> obiektów przy użyciu <xref:System.Configuration.ExeConfigurationFileMap> Test.config pliku konfiguracji i są one używane do komunikacji z usługą. Obaj klienci komunikują się z usługą za pomocą konfiguracji określone w Test.config.
+
+ Poniższy kod dodaje plik konfiguracji niestandardowej do aplikacji klienta.
+
+```
+ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
+fileMap.ExeConfigFilename = "Test.config";
+Configuration newConfiguration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
+
+ConfigurationChannelFactory<ICalculatorChannel> factory1 = new ConfigurationChannelFactory<ICalculatorChannel>("endpoint1", newConfiguration, new EndpointAddress("http://localhost:8000/servicemodelsamples/service"));
+ICalculatorChannel client1 = factory1.CreateChannel();
+```
+
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
+
+1.  Otwórz program Visual Studio 2012 z uprawnieniami administratora.
+
+2.  Kliknij prawym przyciskiem myszy rozwiązanie ConfigurationChannelFactory (projekty, 2), a następnie wybierz pozycję **właściwości**.
+
+3.  W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.
+
+4.  Przenieś **usługi** projektu na początku listy, o **akcji "Start"**, a następnie przenieść **klienta** projektu po **usługi**projektu, również mający **akcji "Start"**, więc **klienta** projektu jest wykonywany po **usługi** projektu.
+
+5.  Kliknij przycisk **OK**, a następnie naciśnij klawisz F5 (lub CTRL + F5) do uruchomienia przykładu.
+
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   

@@ -2,19 +2,19 @@
 title: 'Porada: Tworzenie przepływu pracy usługi przy użyciu działań dotyczących komunikatów'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 6ccc4ddc6ba273f6f41efb023f077dd6b87c7ffb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196560"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580501"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Porada: Tworzenie przepływu pracy usługi przy użyciu działań dotyczących komunikatów
 W tym temacie opisano sposób tworzenia prostego przepływu pracy usługi przy użyciu działań dotyczących komunikatów. Ten temat koncentruje się na mechanika Tworzenie usługi przepływu pracy, gdy usługa składa się wyłącznie z działań dotyczących komunikatów. W usłudze rzeczywistych przepływ pracy zawiera wiele innych działań. Usługa implementuje jedną operację o nazwie Echo, która przyjmuje ciąg i zwraca ciąg do obiektu wywołującego. W tym temacie jest pierwszy w serii dwa tematy. Następny temat [How to: dostęp do usługi z przepływu pracy aplikacji](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) w tym artykule omówiono sposób tworzenia aplikacji przepływu pracy, który można wywołać usługi utworzonej w tym temacie.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Aby utworzyć projekt usługi przepływu pracy  
   
-1.  Rozpocznij [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  Uruchom program Visual Studio 2012.  
   
 2.  Kliknij przycisk **pliku** menu, wybierz opcję **New**, a następnie **projektu** do wyświetlenia **okna dialogowego Nowy projekt**. Wybierz **przepływu pracy** na liście zainstalowanych szablonów i **aplikacja usługi przepływu pracy WCF** z listy typów projektów. Nadaj projektowi nazwę `MyWFService` i użyj domyślnej lokalizacji, jak pokazano na poniższej ilustracji.  
   

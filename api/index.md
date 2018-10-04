@@ -7,13 +7,14 @@ quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0
 quickFilterColumn3: azure-dotnet,aspnetcore-2.1
 ms.topic: landing-page
 ms.custom: updateeachrelease
-ms.openlocfilehash: c5253472b987496b39f48af2e89e902c8b2a2aea
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 06/01/2018
+ms.openlocfilehash: 8f6cda89a618939c23e6672f67e59f8f86a2dc99
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728709"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582255"
 ---
 # <a name="net-api-browser"></a>Przeglądarka interfejsów API na platformie .NET
 
-Witamy w przeglądarce interfejsów API platformy .NET — znajdziesz tu w jednym miejscu wszystkie interfejsy API firmy Microsoft oparte na platformie .NET. Rozpocznij wyszukiwanie dowolnych zarządzanych interfejsów API, wpisując zapytanie w polu poniżej. Aby dowiedzieć się więcej o przeglądarce interfejsów API, odwiedź [nasz blog](https://aka.ms/apibrowser). Jeśli masz jakieś uwagi, utwórz nowy problem w [repozytorium MicrosoftDocs/feedback w serwisie GitHub](https://github.com/MicrosoftDocs/feedback/issues).  
+Witamy w przeglądarce interfejsów API platformy .NET — z kompleksowym dla wszystkich. Na podstawie NET interfejsy API firmy Microsoft. Rozpocznij wyszukiwanie dowolnych zarządzanych interfejsów API, wpisując w polu poniżej. Dowiedz się więcej o w przeglądarce interfejsów API [z naszego wpisu w blogu](https://aka.ms/apibrowser). Jeśli chcesz przekazać dowolną opinię, Utwórz nowy problem w [repozytorium MicrosoftDocs/feedback w usłudze GitHub](https://github.com/MicrosoftDocs/feedback/issues).

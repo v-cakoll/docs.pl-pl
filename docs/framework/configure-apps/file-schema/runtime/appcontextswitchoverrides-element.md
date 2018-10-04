@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ed2a81c4ec4f679b99f5f5a4d2a2c21270691e93
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028191"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778409"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; — Element
 Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppContext> Aby klasa zapewniała mechanizm rezygnacji z nowych funkcji.  
@@ -93,7 +93,7 @@ Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppCont
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Formanty czy wartość [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) właściwość [IntPtr](xref:System.IntPtr) czy reprezentuje lokalizację w pamięci okna obsługi, lub czy jest to uchwyt okna (HWND). Aby uzyskać więcej informacji, zobacz [środki zaradcze: CspParameters.ParentWindowHandle oczekuje HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md). |.NET framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Określa, czy wartość domyślna dla niektórych operacji SignedCMS jest algorytm SHA1 lub SHA256. |.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Określa, czy wartość domyślna dla niektórych operacji SignedXML jest algorytm SHA1 lub SHA256. |.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Określa, czy `TransportWithMessageCredential` tryb zabezpieczeń umożliwia komunikatów za pomocą niepodpisany "nagłówek do". Jest to przełącznik zgłoszenie zgody na uczestnictwo. Aby uzyskać więcej informacji, zobacz [zmiany środowiska uruchomieniowego w programie .NET Framework 4.6.1](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
+|`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Określa, czy `TransportWithMessageCredential` tryb zabezpieczeń umożliwia komunikatów za pomocą niepodpisany "nagłówek do". Jest to przełącznik zgłoszenie zgody na uczestnictwo. Aby uzyskać więcej informacji, zobacz [zmiany środowiska uruchomieniowego w programie .NET Framework 4.6.1](~/docs/framework/migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Formanty czy <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> Konstruktor wyrzuca <xref:System.ArgumentException> po spełnieniu jednego z elementów `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Określa, czy próbę użycia X509 certyfikatów przy użyciu dostawcy magazynu kluczy CSG zgłasza wyjątek. Aby uzyskać więcej informacji, zobacz [WCF transport security obsługuje certyfikaty przechowywane przy użyciu CNG](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
 |`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|Korzystając z protokołu HTTP przy użyciu samodzielnie hostowanej usługi, ustawienie tej wartości na `true` powoduje, że usługi WCF do ignorowania dodawania aplikacji `Connection: close` nagłówka do nagłówków odpowiedzi na żądanie. Ustawienie tej wartości na `false` umożliwia dodawanie `Connection: close` nagłówka do nagłówków odpowiedzi, co powoduje zamknięcie gniazda żądania po wysłaniu odpowiedzi.|.NET Framework 4.6|

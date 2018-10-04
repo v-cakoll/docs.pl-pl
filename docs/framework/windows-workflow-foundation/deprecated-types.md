@@ -2,12 +2,12 @@
 title: Przestarzałe typy w programie Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-ms.openlocfilehash: b25be26d4c0ad6c423b011cd7cad24a8728333f5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d41bf147cd079a3d6d3714da5595732de3dcb7de
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857646"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778315"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Przestarzałe typy w programie Windows Workflow Foundation
 W .NET 4 zespołu przepływu pracy zwolnione wszystkich nowych aparatu przepływu pracy w <xref:System.Activities> przestrzeni nazw. Wersja programu .NET 4.5 w wersji Beta firma Microsoft oznaczanie większość typów w "WF 3" <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, i <xref:System.Workflow.Runtime> przestrzeni nazw jako przestarzałe.  
@@ -31,7 +31,7 @@ W .NET 4 zespołu przepływu pracy zwolnione wszystkich nowych aparatu przepływ
   
  W rezultacie klienci, którzy używają przestarzałych API 3 WF będą napotykać ostrzeżenia kompilacji za pomocą komunikatu podobnego do następującego:  
   
- **Ostrzeżenie BC40000: X jest przestarzała: WF 3 typy są przestarzałe. Zamiast tego użyj WF 4.** Typy zostanie usunięty z programu .NET Framework w przyszłej wersji, ale nie Ustaliliśmy jeszcze tego przedziału czasu (nie w 4.5). Ten krok bieżącego pozwala nam komunikować się z naszym kierunek dla naszych klientów i zezwolić im na może zająć dużo czasu, aby przejść do nowego modelu WF4. Firma Microsoft oczywiście, będzie obsługiwać te typy WF 3 w obszarze [zasady świadczenia pomocy technicznej firmy Microsoft](https://aka.ms/MicrosoftSupportLifecycle). Istniejące aplikacje WF3 uruchomią się bez problemu w .NET 4.5 i [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] będzie obsługiwać nowych i istniejących rozwiązań opartych na WF3.  
+ **Ostrzeżenie BC40000: X jest przestarzała: WF 3 typy są przestarzałe. Zamiast tego użyj WF 4.** Typy zostanie usunięty z programu .NET Framework w przyszłej wersji, ale nie Ustaliliśmy jeszcze tego przedziału czasu (nie w 4.5). Ten krok bieżącego pozwala nam komunikować się z naszym kierunek dla naszych klientów i zezwolić im na może zająć dużo czasu, aby przejść do nowego modelu WF4. Firma Microsoft oczywiście, będzie obsługiwać te typy WF 3 w obszarze [zasady świadczenia pomocy technicznej firmy Microsoft](https://aka.ms/MicrosoftSupportLifecycle). Istniejące aplikacje WF3 uruchomią się bez problemu w .NET 4.5 i programu Visual Studio 2012 będzie obsługiwać nowych i istniejących rozwiązań opartych na WF3.  
   
  Zasady dotyczące typów w <xref:System.Workflow.Activities.Rules> przestrzeni nazw, które nie mają zastępuje w programie WF 4.5, nie są przestarzałe.  
   

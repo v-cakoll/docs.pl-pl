@@ -2,12 +2,12 @@
 title: Niestandardowe działanie SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: e9d27711754c3aa8ff7f68c23f528c9f5c4356f7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747208"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266672"
 ---
 # <a name="sendmail-custom-activity"></a>Niestandardowe działanie SendMail
 W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, która pochodzi od klasy <xref:System.Activities.AsyncCodeActivity> do wysyłania wiadomości e-mail przy użyciu protokołu SMTP do użycia w aplikacji przepływu pracy. Niestandardowe działanie korzysta z możliwości <xref:System.Net.Mail.SmtpClient> asynchroniczne wysyłanie wiadomości e-mail i Wyślij wiadomość e-mail z uwierzytelnianiem. Umożliwia także niektóre funkcje użytkowników końcowych, takich jak przetestować tryb zastępowania tokenu, Szablony plików i przetestować ścieżki docelowej.  
@@ -119,7 +119,7 @@ new SendMail
   
 ##### <a name="to-run-this-sample"></a>Aby uruchomić ten przykład  
   
-1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania SendMail.sln.  
+1.  Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania SendMail.sln.  
   
 2.  Upewnij się, że masz dostęp do prawidłowego serwera SMTP. Zobacz instrukcje dotyczące konfiguracji.  
   

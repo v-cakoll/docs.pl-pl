@@ -9,11 +9,11 @@ ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 270267fa961e2d9420364bc11992be9eff03866b
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863536"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779702"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera
 > [!NOTE]

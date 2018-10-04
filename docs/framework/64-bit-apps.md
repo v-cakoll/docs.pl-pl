@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cfe1f76cfe489095dfa996bce8005d2777966b7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 125aab04b5b323855e44c02e0c576b99618d70df
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748093"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779832"
 ---
 # <a name="64-bit-applications"></a>Aplikacje 64-bitowe
 Podczas kompilowania aplikacji można określić, że powinna działać w systemie operacyjnym Windows 64-bitowych jako natywną aplikację lub w emulatorze WOW64 (Windows 32-bit na Windows 64-bitowych). WOW64 jest środowiskiem zgodności, które umożliwia aplikacji 32-bitowy, do uruchomienia w systemie 64-bitowych. Emulator WOW64 znajduje się we wszystkich 64-bitowych wersjach systemu operacyjnego Windows.  
@@ -49,7 +49,7 @@ Podczas kompilowania aplikacji można określić, że powinna działać w system
   
 -   Aby uzyskać informacji dotyczących sposobu pobierania 64-bitowej wersji środowiska CLR, zobacz [.NET Framework Developer Center pobiera](https://go.microsoft.com/fwlink/?LinkId=50953) w witrynie MSDN.  
   
--   Aby uzyskać informacji na temat obsługi programu Visual Studio do tworzenia aplikacji 64-bitowych, zobacz [obsługi programu Visual Studio IDE 64-bitowych](https://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833).  
+-   Aby uzyskać informacji na temat obsługi programu Visual Studio do tworzenia aplikacji 64-bitowych, zobacz [obsługi programu Visual Studio IDE 64-bitowych](/visualstudio/ide/visual-studio-ide-64-bit-support).  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>Obsługa kompilatora do tworzenia aplikacji 64-bitowych  
  Domyślnie, gdy używasz programu .NET Framework do tworzenia aplikacji na 32-bitowy lub 64-bitowy komputer, aplikacja zostanie uruchomiona na komputerze 64-bitowych, co aplikacja natywna (czyli nie w emulatorze WOW64). Poniższa tabela zawiera listę dokumentów, które wyjaśniają jak używać kompilatory programu Visual Studio do tworzenia aplikacji 64-bitowych, które będą uruchamiane jako natywny przez środowisko WOW64 lub obie.  

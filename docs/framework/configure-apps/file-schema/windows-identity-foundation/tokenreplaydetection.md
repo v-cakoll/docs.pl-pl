@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
 ms.openlocfilehash: bd2272cb83dc0183d5008cfa178e11783f51ca2d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031987"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261058"
 ---
 # <a name="lttokenreplaydetectiongt"></a>&lt;tokenReplayDetection&gt;
 Włącza wykrywanie powtórzeń tokenów i określa czas wygaśnięcia tokenów.  

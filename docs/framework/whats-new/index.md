@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e04ccaf2ac97a3bd784c9aa110b53b16a31e920c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 6ab205ad12b60651443e0fc409e890ea93168ebd
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003064"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48264190"
 ---
 # What's new in .NET Framework <a name="introduction"></a>
 
@@ -1655,7 +1655,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
  Najważniejsze nowe funkcje i ulepszenia w programie .NET Framework 4.5.1 obejmują:
 
-- Automatyczne przekierowywanie powiązań zestawów. Począwszy od [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], podczas kompilowania aplikacji skierowanych [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], przekierowania powiązań mogą być dodawane do pliku konfiguracji aplikacji Jeśli Twoja aplikacja lub jej składniki odwołują się do wielu wersji tego samego zestawu. Można również włączyć tę funkcję dla projektów przeznaczonych dla starszych wersji programu .NET Framework. Aby uzyskać więcej informacji, zobacz [porady: Włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Automatyczne przekierowywanie powiązań zestawów. Począwszy od programu Visual Studio 2013, gdy kompilujesz aplikację, który jest przeznaczony dla [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], przekierowania powiązań mogą być dodawane do pliku konfiguracji aplikacji Jeśli Twoja aplikacja lub jej składniki odwołują się do wielu wersji tego samego zestawu. Można również włączyć tę funkcję dla projektów przeznaczonych dla starszych wersji programu .NET Framework. Aby uzyskać więcej informacji, zobacz [porady: Włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Możliwość zbierania informacji diagnostycznych, aby pomóc deweloperom ulepszyć wydajność aplikacji serwera i chmury. Aby uzyskać więcej informacji, zobacz <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> i <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> metody <xref:System.Diagnostics.Tracing.EventSource> klasy.
 
@@ -1679,17 +1679,17 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
     </appSettings>
     ```
 
- Poprawki w debugowaniu aplikacji .NET Framework w [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] obejmują:
+ Ulepszenia podczas debugowania aplikacji .NET Framework w programie Visual Studio 2013 obejmują:
 
-- Wartości zwracane w debugerze programu Visual Studio. Kiedy debugujesz zarządzaną aplikację w [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], okno Autos Wyświetla typy zwracane i wartości dla metod. Te informacje są dostępne dla pulpitu, Windows Store i aplikacji Windows Phone. Aby uzyskać więcej informacji, zobacz [Sprawdź wartości zwracanych z wywołań metod](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) w bibliotece MSDN.
+- Wartości zwracane w debugerze programu Visual Studio. Podczas debugowania zarządzanej aplikacji w programie Visual Studio 2013, okno Autos Wyświetla typy zwracane i wartości dla metod. Te informacje są dostępne dla pulpitu, Windows Store i aplikacji Windows Phone. Aby uzyskać więcej informacji, zobacz [Sprawdź wartości zwracanych z wywołań metod](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) w bibliotece MSDN.
 
-- Edytuj i Kontynuuj dla 64-bitowych aplikacji. [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] obsługuje funkcję Edytuj i Kontynuuj dla 64-bitowej zarządzanej aplikacji pulpitu, Windows Store i Windows Phone. Istniejące ograniczenia pozostają w mocy zarówno 32-bitowych i 64-bitowych aplikacji (zobacz ostatnią sekcję [obsługiwane zmiany kodu (C#)](/visualstudio/debugger/supported-code-changes-csharp) artykułu).
+- Edytuj i Kontynuuj dla 64-bitowych aplikacji. Visual Studio 2013 obsługuje funkcje Edytuj i Kontynuuj dla 64-bitowej zarządzanej aplikacji pulpitu, Windows Store i Windows Phone. Istniejące ograniczenia pozostają w mocy zarówno 32-bitowych i 64-bitowych aplikacji (zobacz ostatnią sekcję [obsługiwane zmiany kodu (C#)](/visualstudio/debugger/supported-code-changes-csharp) artykułu).
 
-- Debugowanie Async-aware. Aby ułatwić debugowanie aplikacji asynchronicznych w [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], stos wywołań ukrywa kod infrastruktury dostarczany przez kompilatory do obsługi asynchronicznego programowania, a także łańcuchy logiczne ramek nadrzędnych, dzięki czemu możesz wykonać logiczne wykonywanie programu więcej wyraźnie. Okno zadań zastępuje okno zadań równoległych i wyświetla zadania, które odnoszą się do określonego punktu przerwania i wyświetla również inne zadania, które są aktualnie aktywne lub zaplanowane w aplikacji. Informacje o tej funkcji w sekcji "debugowanie Async-aware" [ogłoszenie .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
+- Debugowanie Async-aware. Aby ułatwić debugowanie aplikacji asynchronicznych w programie Visual Studio 2013, stos wywołań ukrywa kod infrastruktury dostarczany przez kompilatory do obsługi asynchronicznego programowania, a także tworzy powiązanie logiczne ramek nadrzędnych, dzięki czemu możesz wykonać więcej wykonywania logicznych program wyraźnie. Okno zadań zastępuje okno zadań równoległych i wyświetla zadania, które odnoszą się do określonego punktu przerwania i wyświetla również inne zadania, które są aktualnie aktywne lub zaplanowane w aplikacji. Informacje o tej funkcji w sekcji "debugowanie Async-aware" [ogłoszenie .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
 
 - Lepsza obsługa wyjątków dla składników środowiska wykonawczego Windows. W [!INCLUDE[win81](../../../includes/win81-md.md)], wyjątki z aplikacji Windows Store zapisują informacje o błędzie, który spowodował wyjątek, nawet w granicach języka. Informacje o tej funkcji w sekcji "Tworzenie aplikacji Windows Store" [ogłoszenie .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
 
- Począwszy od [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], możesz użyć [z przewodnikiem narzędzia optymalizacji zarządzanym profilem (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) zoptymalizować [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak również aplikacje klasycznych.
+ Począwszy od programu Visual Studio 2013, można użyć [z przewodnikiem narzędzia optymalizacji zarządzanym profilem (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) zoptymalizować [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak również aplikacje klasycznych.
 
  Aby uzyskać nowe funkcje w programie ASP.NET 4.5.1, zobacz [ASP.NET and Web Tools dla programu Visual Studio 2013 Release Notes](/aspnet/visual-studio/overview/2013/release-notes).
 
@@ -1752,7 +1752,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 ### <a name="tools"></a>Narzędzia
  W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Generator plików zasobów (Resgen.exe) umożliwia utworzenie pliku .resw do użytku w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji z pliku Resources osadzonego w zestawie programu .NET Framework. Aby uzyskać więcej informacji, zobacz [Resgen.exe (Generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
 
- Zarządzane profilowana Optymalizacja (Mpgo.exe) pozwala na poprawę czas uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepustowości poprzez optymalizację zestawów obrazu natywnego. Narzędzie wiersza polecenia generuje dane profilów dla zestawów natywnych obrazów aplikacji. Zobacz [Mpgo.exe (narzędzie optymalizacji sterowanej zarządzanym profilem)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], możesz użyć Mpgo.exe, aby zoptymalizować [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak również aplikacje klasycznych.
+ Zarządzane profilowana Optymalizacja (Mpgo.exe) pozwala na poprawę czas uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepustowości poprzez optymalizację zestawów obrazu natywnego. Narzędzie wiersza polecenia generuje dane profilów dla zestawów natywnych obrazów aplikacji. Zobacz [Mpgo.exe (narzędzie optymalizacji sterowanej zarządzanym profilem)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od programu Visual Studio 2013, możesz użyć Mpgo.exe do optymalizacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak również aplikacje klasycznych.
 
 <a name="parallel" />
 

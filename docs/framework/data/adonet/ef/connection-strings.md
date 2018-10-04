@@ -3,11 +3,11 @@ title: Parametry połączenia
 ms.date: 03/30/2017
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863614"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580435"
 ---
 # <a name="connection-strings"></a>Parametry połączenia
 Parametry połączenia zawierają informacje inicjowania, który jest przekazywany jako parametr od dostawcy danych do źródła danych. Składnia jest zależna od dostawcy danych, a ciąg połączenia jest analizowany podczas próby otwarcia połączenia. Parametry połączenia używane przez program Entity Framework zawiera informacje używane do łączenia z podstawowego dostawcy danych ADO.NET, który obsługuje platformy Entity Framework. Zawierają one informacje o wymaganych modelu i mapowania plików.  

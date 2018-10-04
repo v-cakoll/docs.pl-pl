@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199768"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580001"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semafor i klasa SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Klasa reprezentuje nazwane (ogólnosystemowe) lub semafor lokalnego. To cienka otokę wokół obiektu semafora Win32. Semaforów Win32 są liczenie semaforów, które mogą być używane do kontrolowania dostępu do puli zasobów.  
@@ -25,7 +25,7 @@ ms.locfileid: "44199768"
  <xref:System.Threading.SemaphoreSlim> Klasa reprezentuje lekkie, szybkie semafor, który może służyć do oczekiwania w ramach jednego procesu, gdy spodziewane czasy oczekiwania będą bardzo krótkie. <xref:System.Threading.SemaphoreSlim> opiera się jak najszerzej w podstawowych synchronizacji dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR). Jednak zapewnia również dojść oczekiwania opóźnieniem zainicjowany, na podstawie jądra co jest niezbędne do obsługi oczekiwanie na wielu semaforów. <xref:System.Threading.SemaphoreSlim> również obsługuje korzystanie z tokenów anulowania, ale nie obsługuje o nazwie semaforów lub użytkowania dojście oczekiwania synchronizacji.  
   
 ## <a name="managing-a-limited-resource"></a>Zarządzanie zasobem ograniczone  
- Wątki wprowadź semafora przez wywołanie metody <xref:System.Threading.WaitHandle.WaitOne%2A> metody, która jest dziedziczona z <xref:System.Threading.WaitHandle> klasy, w przypadku <xref:System.Threading.Semaphore?displayProperty=nameWithType> obiektu lub <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> lub <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType> metody, w przypadku <xref:System.Threading.SemaphoreSlim> obiektu... Po powrocie z wywołania liczba klientów na semafora zostanie zmniejszony. Kiedy wątek żądań zapisu oraz liczbę wynosi zero, blokuje wątek. Co wątków wersji semafora przez wywołanie metody <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> lub <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> metody zablokowane wątki mogą wprowadzać. Nie dotyczy zagwarantowana kolejność, takich jak pierwszy in, first-out (FIFO) lub ostatni na wejściu, (LIFO), zablokowane wątki wprowadzić semafora.  
+ Wątki wprowadź semafora przez wywołanie metody <xref:System.Threading.WaitHandle.WaitOne%2A> metody, która jest dziedziczona z <xref:System.Threading.WaitHandle> klasy, w przypadku <xref:System.Threading.Semaphore?displayProperty=nameWithType> obiektu lub <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> lub <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType> metody, w przypadku <xref:System.Threading.SemaphoreSlim> obiektu. Po powrocie z wywołania liczba klientów na semafora zostanie zmniejszony. Kiedy wątek żądań zapisu oraz liczbę wynosi zero, blokuje wątek. Co wątków wersji semafora przez wywołanie metody <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> lub <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> metody zablokowane wątki mogą wprowadzać. Nie dotyczy zagwarantowana kolejność, takich jak pierwszy in, first-out (FIFO) lub ostatni na wejściu, (LIFO), zablokowane wątki wprowadzić semafora.  
   
  Wątek można wprowadzić semafora wiele razy, wywołując <xref:System.Threading.Semaphore?displayProperty=nameWithType> obiektu <xref:System.Threading.WaitHandle.WaitOne%2A> metody lub <xref:System.Threading.SemaphoreSlim> obiektu <xref:System.Threading.SemaphoreSlim.Wait%2A> metoda wielokrotnie. Aby zwolnić semafora, wątek może wywołać <xref:System.Threading.Semaphore.Release?displayProperty=nameWithType> lub <xref:System.Threading.SemaphoreSlim.Release?displayProperty=nameWithType> metoda przeciążenia taką samą liczbę razy, lub zadzwoń <xref:System.Threading.Semaphore.Release%28System.Int32%29?displayProperty=nameWithType> lub <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29?displayProperty=nameWithType> metoda przeciążenia i określ liczbę wpisów, które mogą być wprowadzane.  
   

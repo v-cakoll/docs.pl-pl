@@ -2,16 +2,16 @@
 title: Podstawowy przykład
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 8c99b4955dcc00015d54391dcb509b312190ddab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29edc8acb0293210e66e31660e3215220440fbae
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508712"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580319"
 ---
 # <a name="basic-sample"></a>Podstawowy przykład
-Niniejszy przykład pokazuje, jak usługa stał się wykrywalny i jak wyszukiwanie i wywoływać odnajdywanej usługi. W tym przykładzie składa się z dwóch projektów: usługi i klienta.  
-  
+Niniejszy przykład pokazuje, jak usługa stał się wykrywalny i jak wyszukiwanie i wywoływać odnajdywanej usługi. W tym przykładzie składa się z dwóch projektów: usługi i klienta.
+
 > [!NOTE]
 >  W tym przykładzie implementuje odnajdywania w kodzie.  Dla przykładu, który implementuje odnajdywania w konfiguracji, zobacz [konfiguracji](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
@@ -84,7 +84,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 1.  W tym przykładzie użyto punktów końcowych HTTP i aby uruchomić ten przykład, muszą zostać dodane odpowiednie listy ACL adresu URL. Aby uzyskać więcej informacji, zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Wykonując następujące polecenie w podwyższonym poziomem uprawnień, należy dodać odpowiednie listy ACL. Można zastąpić Twoja domena i nazwa użytkownika o wprowadzenie następujących argumentów, jeśli polecenie nie działa, ponieważ jest. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Za pomocą [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz Basic.sln i stworzyć próbkę.  
+2.  Za pomocą programu Visual Studio 2012, otwórz Basic.sln i stworzyć próbkę.  
   
 3.  Uruchom aplikację service.exe.  
   

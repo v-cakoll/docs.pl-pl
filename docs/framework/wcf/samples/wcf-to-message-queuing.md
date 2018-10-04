@@ -2,133 +2,133 @@
 title: Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f6a686e658f4cc0097f86dfb19def2d0ba91b8ab
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597810"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582466"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów
-Niniejszy przykład pokazuje, jak aplikacja Windows Communication Foundation (WCF) może także wysłać komunikat do aplikacji usługi kolejkowania komunikatów (MSMQ). Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce. Usługa i klient nie musi być uruchomiona w tym samym czasie.  
-  
- Ta usługa odbiera komunikaty z kolejki i przetwarza zamówienia. Usługa tworzy kolejkę transakcyjną i konfiguruje program obsługi komunikatów odebranego komunikatu, jak pokazano w poniższym przykładowym kodzie.  
+Niniejszy przykład pokazuje, jak aplikacja Windows Communication Foundation (WCF) może także wysłać komunikat do aplikacji usługi kolejkowania komunikatów (MSMQ). Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce. Usługa i klient nie musi być uruchomiona w tym samym czasie.
+
+ Ta usługa odbiera komunikaty z kolejki i przetwarza zamówienia. Usługa tworzy kolejkę transakcyjną i konfiguruje program obsługi komunikatów odebranego komunikatu, jak pokazano w poniższym przykładowym kodzie.
 
 ```csharp
-static void Main(string[] args)  
-{  
-    if (!MessageQueue.Exists(  
-              ConfigurationManager.AppSettings["queueName"]))  
-       MessageQueue.Create(  
-           ConfigurationManager.AppSettings["queueName"], true);  
-        //Connect to the queue  
-        MessageQueue Queue = new   
-    MessageQueue(ConfigurationManager.AppSettings["queueName"]);  
-    Queue.ReceiveCompleted +=   
-                 new ReceiveCompletedEventHandler(ProcessOrder);  
-    Queue.BeginReceive();  
-    Console.WriteLine("Order Service is running");  
-    Console.ReadLine();  
-}  
+static void Main(string[] args)
+{
+    if (!MessageQueue.Exists(
+              ConfigurationManager.AppSettings["queueName"]))
+       MessageQueue.Create(
+           ConfigurationManager.AppSettings["queueName"], true);
+        //Connect to the queue
+        MessageQueue Queue = new
+    MessageQueue(ConfigurationManager.AppSettings["queueName"]);
+    Queue.ReceiveCompleted +=
+                 new ReceiveCompletedEventHandler(ProcessOrder);
+    Queue.BeginReceive();
+    Console.WriteLine("Order Service is running");
+    Console.ReadLine();
+}
 ```
 
- Gdy wiadomość zostaje odebrana w kolejce, program obsługi komunikatów `ProcessOrder` zostanie wywołana.  
+ Gdy wiadomość zostaje odebrana w kolejce, program obsługi komunikatów `ProcessOrder` zostanie wywołana.
 
 ```csharp
-public static void ProcessOrder(Object source,  
-    ReceiveCompletedEventArgs asyncResult)  
-{  
-    try  
-    {  
-        // Connect to the queue.  
-        MessageQueue Queue = (MessageQueue)source;  
-        // End the asynchronous receive operation.  
-        System.Messaging.Message msg =   
-                     Queue.EndReceive(asyncResult.AsyncResult);  
-        msg.Formatter = new System.Messaging.XmlMessageFormatter(  
-                                new Type[] { typeof(PurchaseOrder) });  
-        PurchaseOrder po = (PurchaseOrder) msg.Body;  
-        Random statusIndexer = new Random();  
-        po.Status = PurchaseOrder.OrderStates[statusIndexer.Next(3)];  
-        Console.WriteLine("Processing {0} ", po);  
-        Queue.BeginReceive();  
-    }  
-    catch (System.Exception ex)  
-    {  
-        Console.WriteLine(ex.Message);  
-    }  
-  
-}  
+public static void ProcessOrder(Object source,
+    ReceiveCompletedEventArgs asyncResult)
+{
+    try
+    {
+        // Connect to the queue.
+        MessageQueue Queue = (MessageQueue)source;
+        // End the asynchronous receive operation.
+        System.Messaging.Message msg =
+                     Queue.EndReceive(asyncResult.AsyncResult);
+        msg.Formatter = new System.Messaging.XmlMessageFormatter(
+                                new Type[] { typeof(PurchaseOrder) });
+        PurchaseOrder po = (PurchaseOrder) msg.Body;
+        Random statusIndexer = new Random();
+        po.Status = PurchaseOrder.OrderStates[statusIndexer.Next(3)];
+        Console.WriteLine("Processing {0} ", po);
+        Queue.BeginReceive();
+    }
+    catch (System.Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+
+}
 ```
 
- Wyodrębnia usługi `ProcessOrder` treść komunikatu z usługi MSMQ i przetworzy to zamówienie.  
-  
- Nazwa kolejki usługi MSMQ jest określony w sekcji appSettings pliku konfiguracji, jak pokazano w poniższym Przykładowa konfiguracja.  
-  
-```xml  
-<appSettings>  
-    <add key="orderQueueName" value=".\private$\Orders" />  
-</appSettings>  
-```  
-  
+ Wyodrębnia usługi `ProcessOrder` treść komunikatu z usługi MSMQ i przetworzy to zamówienie.
+
+ Nazwa kolejki usługi MSMQ jest określony w sekcji appSettings pliku konfiguracji, jak pokazano w poniższym Przykładowa konfiguracja.
+
+```xml
+<appSettings>
+    <add key="orderQueueName" value=".\private$\Orders" />
+</appSettings>
+```
+
 > [!NOTE]
->  Nazwa kolejki używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatory ukośnik odwrotny w ścieżce.  
-  
- Klient tworzy zamówienie zakupu i przesyła zamówienia zakupu w zakresie transakcji, jak pokazano w poniższym przykładowym kodzie.  
+>  Nazwa kolejki używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatory ukośnik odwrotny w ścieżce.
+
+ Klient tworzy zamówienie zakupu i przesyła zamówienia zakupu w zakresie transakcji, jak pokazano w poniższym przykładowym kodzie.
 
 ```csharp
-// Create the purchase order  
-PurchaseOrder po = new PurchaseOrder();  
-// Fill in the details  
-...  
-  
-OrderProcessorClient client = new OrderProcessorClient("OrderResponseEndpoint");  
-  
-MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);  
-using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
-{  
-    client.SubmitPurchaseOrder(ordermsg);  
-    scope.Complete();  
-}  
-Console.WriteLine("Order has been submitted:{0}", po);  
-  
-//Closing the client gracefully closes the connection and cleans up resources  
-client.Close();  
+// Create the purchase order
+PurchaseOrder po = new PurchaseOrder();
+// Fill in the details
+...
+
+OrderProcessorClient client = new OrderProcessorClient("OrderResponseEndpoint");
+
+MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);
+using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
+{
+    client.SubmitPurchaseOrder(ordermsg);
+    scope.Complete();
+}
+Console.WriteLine("Order has been submitted:{0}", po);
+
+//Closing the client gracefully closes the connection and cleans up resources
+client.Close();
 ```
 
- Klient używa niestandardowego klienta w prawidłowej kolejności do wysyłania wiadomości usługi MSMQ do kolejki. Ponieważ aplikacja, która odbiera i przetwarza komunikat jest aplikacją usługi MSMQ, a nie aplikacji WCF, istnieje nie niejawne Umowa serwisowa między dwiema aplikacjami. Dlatego nie można utworzyć serwera proxy, korzystając z narzędzia Svcutil.exe w tym scenariuszu.  
-  
- Klient niestandardowy jest zasadniczo taki sam dla wszystkich aplikacji WCF, które używają `MsmqIntegration` powiązania do wysyłania wiadomości. W odróżnieniu od innych klientów nie obejmuje szereg operacji usługi. Jest tylko operacja komunikatu przesyłania.  
+ Klient używa niestandardowego klienta w prawidłowej kolejności do wysyłania wiadomości usługi MSMQ do kolejki. Ponieważ aplikacja, która odbiera i przetwarza komunikat jest aplikacją usługi MSMQ, a nie aplikacji WCF, istnieje nie niejawne Umowa serwisowa między dwiema aplikacjami. Dlatego nie można utworzyć serwera proxy, korzystając z narzędzia Svcutil.exe w tym scenariuszu.
+
+ Klient niestandardowy jest zasadniczo taki sam dla wszystkich aplikacji WCF, które używają `MsmqIntegration` powiązania do wysyłania wiadomości. W odróżnieniu od innych klientów nie obejmuje szereg operacji usługi. Jest tylko operacja komunikatu przesyłania.
 
 ```csharp
-[System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
-public interface IOrderProcessor  
-{  
-    [OperationContract(IsOneWay = true, Action = "*")]  
-    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
-}  
-  
-public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrderProcessor>, IOrderProcessor  
-{  
-    public OrderProcessorClient(){}  
-  
-    public OrderProcessorClient(string configurationName)  
-        : base(configurationName)  
-    { }  
-  
-    public OrderProcessorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address)  
-        : base(binding, address)  
-    { }  
-  
-    public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
-    {  
-        base.Channel.SubmitPurchaseOrder(msg);  
-    }  
-}  
+[System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
+public interface IOrderProcessor
+{
+    [OperationContract(IsOneWay = true, Action = "*")]
+    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);
+}
+
+public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrderProcessor>, IOrderProcessor
+{
+    public OrderProcessorClient(){}
+
+    public OrderProcessorClient(string configurationName)
+        : base(configurationName)
+    { }
+
+    public OrderProcessorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address)
+        : base(binding, address)
+    { }
+
+    public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
+    {
+        base.Channel.SubmitPurchaseOrder(msg);
+    }
+}
 ```
 
- Po uruchomieniu przykładu, działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Możesz zobaczyć komunikaty odbierania usługi z klienta. Naciśnij klawisz ENTER każdego okna konsoli, aby zamknąć usługę i klienta. Należy zauważyć, że ponieważ kolejkowania wiadomości jest używany, klient i usługa musi być uruchomiona w tym samym czasie. Na przykład można uruchomić klienta, zamknij go, a następnie uruchom usługi i nadal będzie ona otrzymywać jego wiadomości.  
-  
+ Po uruchomieniu przykładu, działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Możesz zobaczyć komunikaty odbierania usługi z klienta. Naciśnij klawisz ENTER każdego okna konsoli, aby zamknąć usługę i klienta. Należy zauważyć, że ponieważ kolejkowania wiadomości jest używany, klient i usługa musi być uruchomiona w tym samym czasie. Na przykład można uruchomić klienta, zamknij go, a następnie uruchom usługi i nadal będzie ona otrzymywać jego wiadomości.
+
 > [!NOTE]
 >  Ten przykładowy skrypt wymaga instalacji usługi kolejkowania komunikatów. Zapoznaj się z instrukcjami instalacji w [usługi kolejkowania komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968).  
   
@@ -138,7 +138,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 2.  Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.  
   
-    1.  Otwórz Menedżera serwera w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  Otwórz Menedżera serwera w programie Visual Studio 2012.  
   
     2.  Rozwiń **funkcji** kartę.  
   

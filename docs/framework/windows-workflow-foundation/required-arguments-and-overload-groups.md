@@ -3,11 +3,11 @@ title: Wymagane Argumenty i Grupy metod Przeciążonych
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48244870"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580238"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Wymagane Argumenty i Grupy metod Przeciążonych
 Działania można skonfigurować tak, aby niektóre argumenty są wymagane powiązać na ważne potrzeby wykonywania działania. `RequiredArgument` Atrybut jest używany do wskazania, że niektórych argumentów w ramach działania są wymagane i `OverloadGroup` atrybut służy do grupowania kategorii wymaganych argumentów. Za pomocą atrybutów, autorzy działanie może zapewnić proste lub złożone działanie sprawdzania poprawności konfiguracji.  

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 24fbf17f02072b2d9922ca0998805b916afc41b6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3bd8a91942cf41be62ff1e66bd97064e2db26692
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510163"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580813"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Opracowywanie złożonego formantu formularzy systemu Windows
 Możesz tworzyć złożonego formantu Windows Forms, łącząc innych kontrolek Windows Forms. Formanty złożone, które wynikają z <xref:System.Web.UI.UserControl> noszą nazwę kontrolek użytkownika. Klasa bazowa <xref:System.Windows.Forms.UserControl>, zapewnia klawiatury routingu dla formantów podrzędnych, dlatego zapewnienie, że formanty podrzędne może odebrać fokus. Na przykład kontrolki użytkownika zobacz <xref:System.Windows.Forms.UserControl> próbki w [instrukcje: stosowanie atrybutów w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
- Projektanta Windows Forms w [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] zapewnia rozbudowane obsługi w czasie projektowania na potrzeby tworzenia kontrolki użytkownika.  
+ Projektanta Windows Forms w programie Visual Studio zapewnia zaawansowane obsługi w czasie projektowania na potrzeby tworzenia kontrolki użytkownika.  
   
 -   [Instrukcje: wyświetlanie kontrolki w oknie dialogowym Wybierz elementy przybornika](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   

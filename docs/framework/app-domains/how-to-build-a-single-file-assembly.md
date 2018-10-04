@@ -15,80 +15,82 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aa39671da519ebf54dad52638ab940897209517
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fff84266dd99b84cc99c1996a3063dc962fa2e94
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744320"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263573"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Porady: kompilacja zestawu jednoplikowego
-Zestawu pojedynczego pliku, który jest najprostsza rodzaju zestawu, zawiera informacje o typie i wdrażania, jak również [manifest zestawu](../../../docs/framework/app-domains/assembly-manifest.md). Kompilatory w wierszu polecenia można użyć lub [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] można utworzyć zestawu pojedynczego pliku. Domyślnie kompilator tworzy plik zestawu z rozszerzeniem .exe.  
-  
+
+Zestawu pojedynczego pliku to najprostszy rodzaj zestawów, zawiera informacje o typie i wdrażania, jak również [manifestu zestawu](../../../docs/framework/app-domains/assembly-manifest.md). Można użyć kompilatorów wiersza polecenia lub programu Visual Studio, można utworzyć zestawu pojedynczego pliku. Domyślnie kompilator tworzy plik zestawu z rozszerzeniem .exe.
+
 > [!NOTE]
->  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] C# i Visual Basic można użyć tylko w celu utworzenia zestawy jednoplikowe. Jeśli chcesz utworzyć zestawy wieloplikowe, należy użyć kompilatory w wierszu polecenia lub [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] w języku Visual C++.  
-  
- Poniższe procedury pokazują, jak utworzyć zestawy jednoplikowe przy użyciu kompilatory w wierszu polecenia.  
-  
-### <a name="to-create-an-assembly-with-an-exe-extension"></a>Można utworzyć zestawu z rozszerzeniem .exe  
-  
-1.  W wierszu polecenia wpisz następujące polecenie:  
-  
-     \<*polecenie kompilatora*> \<*nazwy modułu*>  
-  
-     W tym poleceniu *polecenia kompilatora* polecenia kompilatora języka użytego w module kodu i *nazwy modułu* to nazwa modułu kodu do kompilacji w zestawie.  
-  
- Poniższy przykład tworzy zestaw o nazwie `myCode.exe` z modułu kodu o nazwie `myCode`.  
-  
-```console
-csc myCode.cs  
-```  
+> Program Visual Studio dla języka C# i Visual Basic mogą służyć tylko do tworzenia zespołów pojedynczego pliku. Jeśli chcesz utworzyć zestawy wieloplikowe, należy użyć kompilatorów wiersza polecenia lub programu Visual C++.
+
+Poniższe procedury przedstawiają sposób tworzenia zespołów pojedynczego pliku za pomocą kompilatorów wiersza polecenia.
+
+## <a name="to-create-an-assembly-with-an-exe-extension"></a>Aby utworzyć zestaw z rozszerzeniem .exe
+
+1.  W wierszu polecenia wpisz następujące polecenie:
+
+     \<*polecenie kompilatora*> \<*Nazwa modułu*>
+
+     W tym poleceniu *polecenia kompilatora* polecenia kompilatora języka użytego w module kodu, i *Nazwa modułu* to nazwa modułu kodu, aby skompilować do zestawu.
+
+ Poniższy przykład tworzy zestaw o nazwie `myCode.exe` moduł kodu o nazwie `myCode`.
 
 ```console
-vbc myCode.vb  
-```  
-  
-#### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>Aby utworzyć zestaw z rozszerzeniem .exe i określ nazwę pliku wyjściowego  
-  
-1.  W wierszu polecenia wpisz następujące polecenie:  
-  
-     \<*polecenie kompilatora*> **/out:**\<*nazwę pliku*> \<*nazwy modułu*>  
-  
-     W tym poleceniu *polecenia kompilatora* polecenia kompilatora języka użytego w module kodu *nazwę pliku* to nazwa pliku wyjściowego i *nazwy modułu* jest nazwą Moduł kodu do kompilacji w zestawie.  
-  
- Poniższy przykład tworzy zestaw o nazwie `myAssembly.exe` z modułu kodu o nazwie `myCode`.  
-  
-```console  
-csc -out:myAssembly.exe myCode.cs  
-```  
-  
+csc myCode.cs
+```
+
 ```console
-vbc -out:myAssembly.exe myCode.vb  
-```  
-  
-## <a name="creating-library-assemblies"></a>Tworzenie zestawów biblioteki  
- Zestaw biblioteki jest podobny do biblioteki klas. Zawiera typy, które będzie odwoływać się do innych zestawów, ale nie żaden punkt wejścia, aby rozpocząć wykonywania.  
-  
-#### <a name="to-create-a-library-assembly"></a>Aby utworzyć zestaw biblioteki  
-  
-1.  W wierszu polecenia wpisz następujące polecenie:  
-  
-     \<*polecenie kompilatora*> **- t: Biblioteka** \< *nazwy modułu*>  
-  
-     W tym poleceniu *polecenia kompilatora* polecenia kompilatora języka użytego w module kodu i *nazwy modułu* to nazwa modułu kodu do kompilacji w zestawie. Umożliwia także inne opcje kompilatora, takich jak **-out:** opcji.  
-  
- Poniższy przykład tworzy zestaw biblioteczny o nazwie `myCodeAssembly.dll` z modułu kodu o nazwie `myCode`.  
-  
-```console  
-csc -out:myCodeLibrary.dll -t:library myCode.cs  
-```  
-  
+vbc myCode.vb
+```
+
+### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>Aby utworzyć zestaw z rozszerzeniem .exe i określ nazwę pliku wyjściowego
+
+1.  W wierszu polecenia wpisz następujące polecenie:
+
+     \<*polecenie kompilatora*> **/out:**\<*nazwy pliku*> \<*Nazwa modułu*>
+
+     W tym poleceniu *polecenia kompilatora* polecenia kompilatora języka użytego w module kodu, *nazwy pliku* jest nazwa pliku wyjściowego i *Nazwa modułu* nazywa się Moduł kodu, aby skompilować do zestawu.
+
+ Poniższy przykład tworzy zestaw o nazwie `myAssembly.exe` moduł kodu o nazwie `myCode`.
+
 ```console
-vbc -out:myCodeLibrary.dll -t:library myCode.vb  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
- [Zestawy wieloplikowe](../../../docs/framework/app-domains/multifile-assemblies.md)  
- [Instrukcje: kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)
+csc -out:myAssembly.exe myCode.cs
+```
+
+```console
+vbc -out:myAssembly.exe myCode.vb
+```
+
+## <a name="creating-library-assemblies"></a>Tworzenie zestawów biblioteki
+ W zestawie biblioteki jest podobny do biblioteki klas. Zawiera typy, które będzie używane przez inne zestawy, ale go nie ma punktu wejścia do rozpoczęcia wykonywania.
+
+### <a name="to-create-a-library-assembly"></a>Można utworzyć zestawu biblioteki
+
+1.  W wierszu polecenia wpisz następujące polecenie:
+
+     \<*polecenie kompilatora*> **- t: Biblioteka** \< *Nazwa modułu*>
+
+     W tym poleceniu *polecenia kompilatora* polecenia kompilatora języka użytego w module kodu, i *Nazwa modułu* to nazwa modułu kodu, aby skompilować do zestawu. Umożliwia także inne opcje kompilatora, takich jak **-out:** opcji.
+
+ Poniższy przykład tworzy zestaw biblioteki o nazwie `myCodeAssembly.dll` moduł kodu o nazwie `myCode`.
+
+```console
+csc -out:myCodeLibrary.dll -t:library myCode.cs
+```
+
+```console
+vbc -out:myCodeLibrary.dll -t:library myCode.vb
+```
+
+## <a name="see-also"></a>Zobacz też
+
+- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
+- [Zestawy wieloplikowe](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Instrukcje: kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

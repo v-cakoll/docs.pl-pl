@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
 ms.openlocfilehash: 5f8384140b813400e106ad959684264304541c93
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032741"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580826"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Wskazówki: tworzenie formantu złożonego za pomocą Visual C# #
 Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy graficzne można tworzyć i ponownie używane. Formant złożony jest zasadniczo składnika za pomocą wizualnej reprezentacji. W efekcie może składać się z co najmniej Windows Forms formantów, składników lub bloki kodu, które mogą rozszerzyć funkcjonalność, sprawdzanie poprawności danych wejściowych użytkownika, modyfikując właściwości wyświetlania lub wykonywania innych zadań wymaganych przez autora. Formanty złożone można umieścić na formularzach Windows Forms w taki sam sposób jak inne kontrolki. W pierwszej części tego przewodnika, tworzenie prostego formantu złożonego o nazwie `ctlClock`. W drugiej części tego przewodnika, możesz rozszerzyć funkcjonalność `ctlClock` poprzez dziedziczenie.  

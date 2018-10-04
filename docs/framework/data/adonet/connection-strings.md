@@ -3,11 +3,11 @@ title: Parametry połączenia w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.openlocfilehash: 1e6e2b6870195c99279639e1f4576a30b7126d4d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029401"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583698"
 ---
 # <a name="connection-strings-in-adonet"></a>Parametry połączenia w ADO.NET
 .NET Framework 2.0 wprowadzono nowe możliwości do pracy z parametrów połączenia, łącznie z wprowadzeniem nowych słów kluczowych do klasy konstruktora parametrów połączenia, które ułatwiają tworzenie ciągów prawidłowego połączenia w czasie wykonywania.  

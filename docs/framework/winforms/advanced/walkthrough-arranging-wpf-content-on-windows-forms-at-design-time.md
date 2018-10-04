@@ -9,35 +9,35 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 1466591a06e9e7ca61f94683e037566f8d0cb31a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509778"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266679"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Wskazówki: rozmieszczanie zawartości WPF na formularzach systemu Windows w czasie projektowania
-W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularzy Windows, takich jak Zakotwiczanie i linii przyciągania, aby rozmieścić formanty Windows Presentation Foundation (WPF).  
-  
- W tym przewodniku należy wykonać następujące zadania:  
-  
--   Utwórz projekt.  
-  
--   Tworzenie formantu WPF.  
-  
--   Host formantów WPF w panelu układu.  
-  
--   Linii przyciągania użycia do wyrównania kontrolek WPF.  
-  
--   Zakotwiczenie i dokowanie kontrolek WPF.  
-  
+W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularzy Windows, takich jak Zakotwiczanie i linii przyciągania, aby rozmieścić formanty Windows Presentation Foundation (WPF).
+
+ W tym przewodniku należy wykonać następujące zadania:
+
+-   Utwórz projekt.
+
+-   Tworzenie formantu WPF.
+
+-   Host formantów WPF w panelu układu.
+
+-   Linii przyciągania użycia do wyrównania kontrolek WPF.
+
+-   Zakotwiczenie i dokowanie kontrolek WPF.
+
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest utworzenie projektu Windows Forms.  

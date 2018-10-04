@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: 435789e0d1bc601a9eb51488254407fefd334e05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193973"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778052"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
 <a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> określa struktury wizualnej i zachowanie visual kontrolki. Można dostosować wygląd kontrolki, zapewniając it nowej <xref:System.Windows.Controls.ControlTemplate>. Po utworzeniu <xref:System.Windows.Controls.ControlTemplate>, Zastąp wyglądu istniejącej kontrolki bez zmiany jego działanie. Na przykład, można zwiększyć przycisków w aplikacji round zamiast domyślnego prostokątnego kształtu, ale nadal zgłosi przycisku <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  

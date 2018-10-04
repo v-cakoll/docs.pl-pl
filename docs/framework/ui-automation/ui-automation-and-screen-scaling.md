@@ -13,11 +13,11 @@ ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 4fe6a0c39388e72807043e9e1ccd2deb59afb656
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034970"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263209"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automatyzacja interfejsu użytkownika a skalowanie ekranu
 > [!NOTE]

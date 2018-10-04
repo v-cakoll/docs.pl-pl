@@ -17,11 +17,11 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046763"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580384"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Konstrukcje alternacyjne w wyrażeniach regularnych
 <a name="top"></a> Konstrukcje zmiany modyfikują wyrażenie regularne, aby włączyć opcję / lub lub dopasowanie warunkowe. .NET obsługuje trzy konstrukcje zmiany:  

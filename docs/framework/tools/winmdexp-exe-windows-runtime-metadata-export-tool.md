@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037446"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263170"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (narzędzie eksportowania metadanych środowiska wykonawczego systemu Windows)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] Narzędzie do eksportu metadanych (Winmdexp.exe) przekształca modułu .NET Framework w pliku, który zawiera [!INCLUDE[wrt](../../../includes/wrt-md.md)] metadanych. Mimo że zestawów .NET Framework i [!INCLUDE[wrt](../../../includes/wrt-md.md)] pliki metadanych używają ten sam fizyczny format, istnieją różnice w zawartości tabel metadanych, co oznacza, że zestawów .NET Framework nie są automatycznie używać jako [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników . Proces przekształcania modułu .NET Framework do [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnik nazywa się *eksportowanie*. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], wynikowy plik metadanych (.winmd) Windows zawiera zarówno metadane, jak i implementację.  
   
- Kiedy używać  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika** szablonu, który znajduje się w folderze **Windows Store** języka C# i Visual Basic w [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] lub [!INCLUDE[vs_dev11_ext](../../../includes/vs-dev11-ext-md.md)], kompilator jest plik .winmdobj i kroku kompilacji kolejne wywołanie Winmdexp.exe w celu wyeksportowania pliku winmdobj do pliku winmd. Jest to zalecany sposób tworzenia [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika. Programu Winmdexp.exe należy używać bezpośrednio, gdy potrzebna jest większa kontrola nad procesem kompilacji niż dostępna w Visual Studio.  
+ Kiedy używasz  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika** szablonu, który znajduje się w folderze **Windows Store** języka C# i Visual Basic w programie Visual Studio 2013 lub Visual Studio 2012, kompilator jest plik .winmdobj i krok kompilacji kolejne wywołanie Winmdexp.exe w celu wyeksportowania pliku winmdobj do pliku winmd. Jest to zalecany sposób tworzenia [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika. Programu Winmdexp.exe należy używać bezpośrednio, gdy potrzebna jest większa kontrola nad procesem kompilacji niż dostępna w Visual Studio.  
   
  To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   

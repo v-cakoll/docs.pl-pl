@@ -1,52 +1,52 @@
 ---
-title: Wymagania wstępne dotyczące platformy .NET Core dla komputerów Mac
-description: Obsługiwane wersje macOS i zależności platformy .NET Core na tworzenie, wdrażanie i uruchamianie aplikacji .NET Core na maszynach macOS.
+title: Wymagania wstępne dla platformy .NET Core w systemie Mac
+description: Obsługiwane wersje systemu macOS i zależności platformy .NET Core, opracowywanie, wdrażanie i uruchamianie aplikacji platformy .NET Core na maszynach z systemem macOS.
 author: guardrex
 ms.author: mairaw
-ms.date: 09/27/2017
-ms.openlocfilehash: 31fee3bbc85daa66019b63e50b48509b79606fce
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.date: 10/03/2018
+ms.openlocfilehash: b5b3c6ea90a2cc4487e849af468d324b645834af
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315069"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584081"
 ---
-# <a name="prerequisites-for-net-core-on-macos"></a>Wymagania wstępne dotyczące .NET Core na macOS
+# <a name="prerequisites-for-net-core-on-macos"></a>Wymagania wstępne dla platformy .NET Core w systemie macOS
 
-W tym artykule przedstawiono macOS obsługiwane wersje i zależności platformy .NET Core, umożliwiające tworzenie, wdrażanie i uruchamianie aplikacji .NET Core na maszynach macOS. Obsługiwane wersje systemu operacyjnego i zależności, które należy wykonać dotyczą trzy sposoby tworzenia aplikacji platformy .NET Core na komputerze Mac: za pośrednictwem [wiersza polecenia z ulubionego edytora](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/)i [Programu visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).
+W tym artykule przedstawiono macOS obsługiwane wersje i zależności platformy .NET Core, umożliwiające tworzenie, wdrażanie i uruchamianie aplikacji platformy .NET Core na maszynach z systemem macOS. Obsługiwane wersje systemu operacyjnego i zależności, które należy wykonać dotyczą trzy sposoby związanych z tworzeniem aplikacji .NET Core na komputerze Mac: za pośrednictwem [wiersza polecenia za pomocą ulubionego edytora](tutorials/using-with-xplat-cli.md), [programu Visual Studio Code](https://code.visualstudio.com/)i [Programu visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).
 
-## <a name="supported-macos-versions"></a>System macOS obsługiwane wersje
+## <a name="supported-macos-versions"></a>Obsługiwane w systemie macOS w wersji
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-Oprogramowanie .NET core 2.x jest obsługiwana w następujących wersjach macOS:
+.NET core 2.x jest obsługiwane w następujących wersji systemu MacOS:
 
-* System macOS 10.12 "Sierra" i nowszymi wersjami
+* System macOS 10.12 "Sierra" i nowsze wersje
 
-Zobacz [2.x .NET Core obsługiwanych wersjach systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) Pełna lista .NET Core 2.x obsługiwanych systemów operacyjnych, poza wersje obsługi systemu operacyjnego i łącza do zasad cyklu życia.
+Zobacz [obsługiwanych wersjach systemu operacyjnego programu .NET Core 2.x](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) kompletną listę platformy .NET Core 2.x obsługiwane systemy operacyjne, poza pomocy technicznej systemu operacyjnego, wersji i łączy zasady cyklu życia.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-Oprogramowanie .NET core 1.x jest obsługiwana w następujących wersjach macOS:
+.NET core 1.x jest obsługiwane w następujących wersji systemu MacOS:
 
 * System macOS 10.12 "Sierra"
 * System macOS 10.11 "El Capitan"
 
-Zobacz [1.x .NET Core obsługiwanych wersjach systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) Pełna lista .NET Core 1.x obsługiwanych systemów operacyjnych, poza wersje obsługi systemu operacyjnego i łącza do zasad cyklu życia.
+Zobacz [obsługiwanych wersjach systemu operacyjnego programu .NET Core 1.x](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) kompletną listę platformy .NET Core 1.x obsługiwane systemy operacyjne, poza pomocy technicznej systemu operacyjnego, wersji i łączy zasady cyklu życia.
 
 ---
 
-## <a name="net-core-dependencies"></a>Zależności .NET core
+## <a name="net-core-dependencies"></a>Zależności platformy .NET core
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-Pobierz i zainstaluj .NET Core SDK z [pobiera .NET](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją na macOS, należy skontaktować się [znane problemy](https://github.com/dotnet/core/tree/master/release-notes/2.0) tematu zainstalowaną wersję.
+Pobierz i zainstaluj zestaw .NET Core SDK z [pobiera .NET](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją w systemie macOS, zapoznaj się z [znane problemy dotyczące](https://github.com/dotnet/core/tree/master/release-notes/2.1) temacie zainstalowaną wersję.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **.NET Core 1.x**
 
-Oprogramowanie .NET core 1.x wymaga biblioteki OpenSSL, podczas uruchamiania na macOS. Jest łatwy sposób uzyskać biblioteki OpenSSL przy użyciu [Homebrew ("brew")](https://brew.sh/) Menedżer pakietów dla macOS. Po zainstalowaniu *brew*, zainstaluj biblioteki OpenSSL, wykonując następujące polecenia w wierszu terminali (polecenie):
+.NET core 1.x wymaga biblioteki OpenSSL, podczas uruchamiania w systemie macOS. Łatwym sposobem uzyskiwania OpenSSL polega na użyciu [Homebrew ("brew")](https://brew.sh/) Menedżer pakietów dla systemu macOS. Po zainstalowaniu *brew*, zainstalować protokół OpenSSL, wykonując następujące polecenia w wierszu terminalu (polecenie):
 
 ```console
 brew update
@@ -56,17 +56,17 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-Pobierz i zainstaluj .NET Core SDK z [pobiera .NET](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją na macOS, należy skontaktować się [1.0.0 znane problemy](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) i [1.0.1 znane problemy](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) tematów.
+Pobierz i zainstaluj zestaw .NET Core SDK z [pobiera .NET](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją w systemie macOS, zapoznaj się z [1.0.0 znane problemy](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) i [1.0.1 — znane problemy](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) tematów.
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a>Zwiększ limit maksymalnego Otwórz plik (wersje .NET Core przed .NET Core SDK pkt 2.0.2) 
+## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a>Zwiększ limit maksymalny otwartego pliku (wersje platformy .NET Core przed zestawu .NET Core SDK pkt 2.0.2) 
 
-W starszych wersjach platformy .NET Core (przed .NET Core SDK pkt 2.0.2) domyślny limit Otwórz plik na macOS nie może być wystarczające dla niektórych obciążeń .NET Core, takich jak przywracanie projektów lub przeprowadzanie testów jednostkowych.
+W starszych wersjach platformy .NET Core (przed zestawu .NET Core SDK pkt 2.0.2) domyślny limit Otwórz plik w systemie macOS może nie być wystarczające dla niektórych obciążeń platformy .NET Core, takich jak przywracanie projektów lub Uruchamianie testów jednostkowych.
 
 Aby zwiększyć ten limit, należy wykonać następujące czynności:
 
-1. Za pomocą edytora tekstu, Utwórz nowy plik _/Library/LaunchDaemons/limit.maxfiles.plist_i Zapisz plik z tą zawartością:
+1. Za pomocą edytora tekstu Utwórz nowy plik _/Library/LaunchDaemons/limit.maxfiles.plist_, a następnie zapisz plik z tą zawartością:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -92,7 +92,7 @@ Aby zwiększyć ten limit, należy wykonać następujące czynności:
 </plist>
 ```
 
-2. W oknie terminalu uruchom następujące polecenie:
+2. W oknie terminala uruchom następujące polecenie:
 
 ```console
 echo 'ulimit -n 2048' | sudo tee -a /etc/profile
@@ -102,11 +102,11 @@ echo 'ulimit -n 2048' | sudo tee -a /etc/profile
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
-Do tworzenia aplikacji platformy .NET Core przy użyciu zestawu SDK .NET Core, można użyć dowolnego edytora. Jednak jeśli chcesz wdrażać aplikacje .NET Core na komputerze Mac w zintegrowane środowisko programistyczne, można użyć [programu Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/). 
+Tworzenie aplikacji .NET Core przy użyciu zestawu .NET Core SDK, można użyć dowolnego edytora. Jednakże, jeśli chcesz tworzyć aplikacje .NET Core na komputerze Mac w zintegrowanym środowisku programistycznym, można użyć [programu Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/). 
 
-Tworzenie aplikacji platformy .NET core na macOS z programem Visual Studio for Mac wymaga:
+Programowanie aplikacji platformy .NET core w systemie macOS przy użyciu programu Visual Studio for Mac wymaga:
 
-* Obsługiwana wersja systemu operacyjnego macOS
-* Biblioteki OpenSSL (.NET Core 1.x tylko; dostępna natywnie w macOS usług zabezpieczeń używa 2.x .NET Core)
-* Oprogramowanie .NET core SDK dla komputerów Mac
+* Obsługiwana wersja systemu operacyjnego z systemem macOS
+* Biblioteki OpenSSL (.NET Core 1.x tylko; .NET Core 2.x używa zabezpieczeń usług dostępnych natywnie w systemie macOS)
+* .NET core SDK dla komputerów Mac
 * [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)

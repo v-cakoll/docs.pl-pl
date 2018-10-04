@@ -11,11 +11,11 @@ ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216537"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777831"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;Dodaj&gt; elementu &lt;sharedListeners&gt;
 Dodaje odbiornik do `sharedListeners` kolekcji. `sharedListeners` wszystkie to kolekcja obiektów nasłuchujących [ \<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) lub [ \<śledzenia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) może odwoływać się.  Domyślnie słuchaczy w `sharedListeners` kolekcji nie są umieszczane w `Listeners` kolekcji. Musi zostać dodany przez nazwę, aby [ \<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) lub [ \<śledzenia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Nie jest możliwe do pobrania odbiorniki w `sharedListeners` kolekcji w kodzie w czasie wykonywania.  

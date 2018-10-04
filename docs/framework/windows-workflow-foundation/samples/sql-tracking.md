@@ -2,26 +2,26 @@
 title: Śledzenie SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 5f8d7bbd57965b4d7399373416caea87d4d84187
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 84d3fb994c790301ceb55b945bf972c21ed2a971
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779146"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584330"
 ---
 # <a name="sql-tracking"></a>Śledzenie SQL
-W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia SQL, który zapisuje rekordy śledzenia bazą danych SQL. Windows Workflow Foundation (WF) zapewnia wgląd w wykonywania wystąpienia przepływu pracy śledzenia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [przepływu pracy i śledzenie](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
-  
-#### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
-  
-1.  Sprawdź, zainstalowany jest program SQL Server 2008, SQL Server 2008 Express lub nowszej. Skrypty w pakiecie z przykładem założono korzystanie z wystąpienia programu SQL Express na komputerze lokalnym. Jeśli masz inne wystąpienie, zmodyfikuj skrypty związane z bazy danych przed uruchomieniem przykładu.  
-  
-2.  Utwórz bazę danych śledzenia programu SQL Server, uruchamiając Trackingsetup.cmd w katalogu skryptów (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Spowoduje to utworzenie bazy danych o nazwie TrackingSample.  
-  
+W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia SQL, który zapisuje rekordy śledzenia bazą danych SQL. Windows Workflow Foundation (WF) zapewnia wgląd w wykonywania wystąpienia przepływu pracy śledzenia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [przepływu pracy i śledzenie](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).
+
+#### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
+
+1.  Sprawdź, zainstalowany jest program SQL Server 2008, SQL Server 2008 Express lub nowszej. Skrypty w pakiecie z przykładem założono korzystanie z wystąpienia programu SQL Express na komputerze lokalnym. Jeśli masz inne wystąpienie, zmodyfikuj skrypty związane z bazy danych przed uruchomieniem przykładu.
+
+2.  Utwórz bazę danych śledzenia programu SQL Server, uruchamiając Trackingsetup.cmd w katalogu skryptów (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Spowoduje to utworzenie bazy danych o nazwie TrackingSample.
+
     > [!NOTE]
     >  Skrypt tworzy bazę danych w domyślnym wystąpieniu programu SQL Express. Jeśli chcesz zainstalować je na inne wystąpienie bazy danych, zmodyfikuj skrypt Trackingsetup.cmd.  
   
-3.  Otwórz SqlTrackingSample.sln w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+3.  Otwórz SqlTrackingSample.sln w programie Visual Studio 2010.  
   
 4.  Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
@@ -48,8 +48,8 @@ W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia
 1.  Uruchom skrypt theTrackingcleanup.cmd w katalogu próbki (\WF\Basic\Tracking\SqlTracking).  
   
     > [!NOTE]
-    >  Trackingcleanup.cmd próbuje usunąć bazę danych programu SQL Express komputera lokalnego. Jeśli używasz innego wystąpienia programu SQL server, należy edytować Trackingcleanup.cmd.  
-  
+    >  Trackingcleanup.cmd próbuje usunąć bazę danych programu SQL Express komputera lokalnego. Jeśli używasz innego wystąpienia programu SQL server, należy edytować Trackingcleanup.cmd.
+
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   

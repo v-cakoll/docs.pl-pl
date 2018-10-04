@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698487"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580852"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
@@ -46,13 +46,13 @@ Zespół może obejmować typów, takich jak interfejsy, klasy, struktury, wylic
 
 Środowisko uruchomieniowe języka wspólnego.
 
-Dokładne znaczenie zależy od kontekstu, ale zazwyczaj odnosi się do środowiska uruchomieniowego programu .NET Framework. Środowisko CLR obsługuje alokacji pamięci i zarządzania. Środowisko CLR jest również maszynę wirtualną, który nie tylko wykonuje aplikacji, ale także generuje i kompiluje kod na bieżąco przy użyciu kompilatora JIT. Bieżąca implementacja firmy Microsoft CLR jest Windows tylko.
+Dokładne znaczenie zależy od kontekstu, ale zazwyczaj odnosi się do środowiska uruchomieniowego programu .NET Framework. Środowisko CLR obsługuje alokacji pamięci i zarządzania. Środowisko CLR jest również maszynę wirtualną, który nie tylko wykonuje aplikacji, ale także generuje i kompiluje kodu na bieżąco za pomocą [JIT](#jit) kompilatora. Bieżąca implementacja firmy Microsoft CLR jest Windows tylko.
 
 ## <a name="coreclr"></a>CoreCLR
 
 .NET core środowiska uruchomieniowego języka wspólnego.
 
-Ta CLR składa się z tego samego kodu podstawowego jako środowiska CLR. Początkowo CoreCLR został środowiska uruchomieniowego Silverlight i był przeznaczony do działania na wielu platformach, specjalnie Windows i OS X. CoreCLR jest teraz częścią programu .NET Core i przedstawia uproszczoną wersję środowiska CLR. Nadal jest dla wielu platform środowiska uruchomieniowego, teraz łącznie z obsługą wielu dystrybucji systemu Linux. CoreCLR jest również maszynę wirtualną oraz możliwości JIT i kod realizacji.
+Ta CLR składa się z tego samego kodu podstawowego jako środowiska CLR. Początkowo CoreCLR został środowiska uruchomieniowego Silverlight i był przeznaczony do działania na wielu platformach, specjalnie Windows i OS X. CoreCLR jest teraz częścią programu .NET Core i przedstawia uproszczoną wersję środowiska CLR. Nadal jest [dla wielu platform](#cross-platform) środowiska uruchomieniowego, teraz łącznie z obsługą wielu dystrybucji systemu Linux. CoreCLR jest również maszynę wirtualną oraz możliwości JIT i kod realizacji.
 
 ## <a name="corefx"></a>CoreFX
 
@@ -67,6 +67,10 @@ Przestrzenie nazw zestawu, biblioteki, które tworzą Microsoft.* i System.* (a 
 W przeciwieństwie do CLR/CoreCLR, CoreRT nie jest maszyna wirtualna, co oznacza, nie zawiera urządzeń do generowania i uruchamianie kodu na bieżąco, ponieważ nie zawiera [JIT](#jit). Jednakże obejmują [GC](#gc) z możliwością Identyfikacja typu czasu wykonywania (RTTI) i odbicie. Jednak jego typu system został zaprojektowany tak, aby metadanych dla odbicie nie jest wymagane. Dzięki temu masz [AOT](#aot) narzędzia łańcucha, który umożliwia łączenie away zbędny metadanych (co ważniejsze) Zidentyfikuj kod, który nie korzysta z aplikacji. CoreRT jest w trakcie opracowywania.
 
 Zobacz [wprowadzenie do architektury .NET Native i CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
+
+## <a name="cross-platform"></a>na wiele platform
+
+Możliwość tworzenia i wykonywanie aplikacji, która może być używany w wielu różnych systemach operacyjnych, takich jak Linux, Windows i iOS, bez konieczności ponownego pisania specjalnie dla każdej z nich. Umożliwia to ponowne użycie kodu i spójności między aplikacjami na różnych platformach.
 
 ## <a name="ecosystem"></a>ekosystem
 
@@ -136,7 +140,7 @@ Zobacz [pakiety, Metapakiety i struktury](../core/packages.md)
 
 ## <a name="mono"></a>Mono
 
-Narzędzie mono jest implementacji .NET, która jest głównie używane, gdy wymagana jest mały środowiska uruchomieniowego. To środowisko uruchomieniowe, które obsługuje aplikacje platformy Xamarin na systemów Android, Mac, iOS, tvOS i watchOS i koncentruje się głównie na aplikacje, które wymagają o niewielkich rozmiarach.
+Narzędzie mono jest typu open source, [dla wielu platform](#cross-platform) implementacji .NET, która jest głównie używane, gdy wymagana jest mały środowiska uruchomieniowego. To środowisko uruchomieniowe, które obsługuje aplikacje platformy Xamarin na systemów Android, Mac, iOS, tvOS i watchOS i koncentruje się głównie na aplikacje, które wymagają o niewielkich rozmiarach.
 
 Obsługuje on wszystkie obecnie opublikowane wersje .NET Standard.
 

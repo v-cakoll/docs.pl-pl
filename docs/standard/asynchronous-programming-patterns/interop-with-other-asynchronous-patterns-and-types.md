@@ -15,11 +15,11 @@ ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05b53016712f75e45636979d77bfd27116ce8e14
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235325"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263141"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Współdziałanie z innymi wzorcami asynchronicznymi i typami
 .NET Framework 1.0, wprowadzono <xref:System.IAsyncResult> wzorzec, znanych także jako [modelu programowania asynchronicznego (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md), lub `Begin/End` wzorca.  .NET Framework 2.0, dodano [oparte na zdarzeniach asynchroniczny wzorzec (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  Począwszy od programu .NET Framework 4, [opartego na zadaniach asynchronicznej wzorca (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) zastępuje zarówno APM, jak i EAP, ale pozwala na łatwe tworzenie procedury migracji z wcześniejszych wzorców.  

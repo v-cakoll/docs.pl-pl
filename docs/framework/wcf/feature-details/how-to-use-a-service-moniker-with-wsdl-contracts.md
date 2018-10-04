@@ -2,33 +2,33 @@
 title: 'Instrukcje: Używanie krótkiej nazwy z kontraktami WSDL'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 838e7affcf47742c8f372879fcb33946d53ba43f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491046"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266537"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Instrukcje: Używanie krótkiej nazwy z kontraktami WSDL
-Istnieją sytuacje, gdy chcesz całkowicie niezależna klient COM Interop. Usługi, którą chcesz wywołać nie może narazić punktu końcowego MEX i klienta WCF, które biblioteki DLL nie jest zarejestrowany dla modelu COM interop. W takich przypadkach możesz utworzyć plik WSDL, który zawiera opis usługi i przekaż go do krótkiej nazwy usługi WCF. W tym temacie opisano sposób wywołania próbki pobierania programu WCF za pomocą moniker WCF WSDL.  
+Istnieją sytuacje, gdy chcesz całkowicie niezależna klient COM Interop. Usługi, którą chcesz wywołać nie może ujawniać punktu końcowego MEX i klienta WCF, które biblioteki DLL nie jest zarejestrowany dla współdziałania z modelem COM. W takich przypadkach można utworzyć pliku WSDL, który zawiera opis usługi i przekaż go do monikera programu WCF. W tym temacie opisano sposób wywoływania przykładu wprowadzenie usługi WCF, używanie monikera programu WCF WSDL.  
   
-### <a name="using-the-wsdl-service-moniker"></a>Przy użyciu moniker usługi WSDL  
+### <a name="using-the-wsdl-service-moniker"></a>Używanie monikera usługi WSDL  
   
-1.  Otwórz i kompilacji GettingStarted przykładowe rozwiązanie.  
+1.  Otworzyć i skompilować GettingStarted przykładowe rozwiązanie.  
   
-2.  Otwórz program Internet Explorer i przejdź do http://localhost/ServiceModelSamples/Service.svc aby upewnić się, że usługa jest uruchomiona.  
+2.  Otwórz program Internet Explorer i przejdź do `http://localhost/ServiceModelSamples/Service.svc` aby upewnić się, że usługa działa.  
   
 3.  W pliku Service.cs Dodaj następujący atrybut w klasie CalculatorService:  
   
      [!code-csharp[S_WSDL_Client#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wsdl_client/cs/service.cs#0)]  
   
-4.  Dodawanie przestrzeni nazw powiązania z usługą App.config:  
+4.  Dodawanie przestrzeni nazw powiązania z usługą pliku App.config:  
   
   
   
-5.  Utwórz plik WSDL dla aplikacji do odczytu. Ponieważ przestrzenie nazw zostały dodane w kroku 3 i 4, można użyć programu Internet Explorer dla całego opis WSDL usługi kwerendy, przechodząc do http://localhost/ServiceModelSamples/Service.svc?wsdl. Można następnie zapisz plik z programu Internet Explorer jako serviceWSDL.xml. Jeśli nie określisz przestrzenie nazw w kroku 3 i 4, dokument WSDL zwracane z zapytań powyższy adres URL nie będzie pełną WSDL. Zwrócony dokument WSDL zawiera kilka instrukcje importu, które importują innych dokumentów WSDL. Musisz przejść przez każdego instrukcję import i kompilacji cały dokument WSDL, łączenie WSDL zakończyła WSDL zaimportowane z usługi.  
+5.  Utwórz plik WSDL dla aplikacji na odczytywanie. Ponieważ przestrzenie nazw zostały dodane w kroku 3 i 4, można użyć programu Internet Explorer dla całego opis WSDL usługi kwerendy, przechodząc do `http://localhost/ServiceModelSamples/Service.svc?wsdl`. Można następnie zapisz plik w programie Internet Explorer jako serviceWSDL.xml. Jeśli nie określisz przestrzeni nazw w kroku 3 i 4, zwrócone w wyniku wykonywania zapytań na powyższy adres URL dokumentu WSDL nie będą pełne WSDL. Dokument WSDL, zwracana będzie zawierać kilka deklaracji importu, które importują inne dokumenty WSDL. Trzeba będzie przejść każda instrukcja importu i tworzyć pełny dokument WSDL, łącząc WSDL zwrócony przez usługę za pomocą języka WSDL, zaimportowane.  
   
-6.  Otwórz program Visual Basic 6.0 i Utwórz nowy plik .exe standardowa. Dodawanie przycisku do formularza, a następnie kliknij dwukrotnie przycisk, aby dodać poniższego kodu do obsługi kliknięcia:  
+6.  Otwórz Visual Basic 6.0 i Utwórz nowy plik .exe standardowych. Dodawanie przycisku do formularza, a następnie kliknij dwukrotnie przycisk aby dodać następujący kod programem obsługi kliknięcia:  
   
     ```  
     ' Open the WSDL contract file and read it all into the wsdlContract string.  
@@ -52,9 +52,9 @@ Istnieją sytuacje, gdy chcesz całkowicie niezależna klient COM Interop. Usłu
     ```  
   
     > [!NOTE]
-    >  Jeśli krótka nazwa jest nieprawidłowo sformułowany lub usługa jest niedostępna wywołanie `GetObject` zwróci błąd informujący o tym "Nieprawidłowa składnia".  Jeśli zostanie wyświetlony ten błąd, upewnij się, krótkiej nazwy, którego używasz, jest poprawny i usługa jest dostępna.  
+    >  Jeśli moniker jest źle sformułowany lub jeśli usługa jest niedostępna wywołanie `GetObject` zwróci błąd informujący o "Nieprawidłowa składnia".  Jeśli zostanie wyświetlony ten błąd, upewnij się, moniker elementu, którego używasz jest poprawna i ta usługa jest dostępna.  
   
-7.  Uruchom aplikację języka Visual Basic. Wyniki wywołania Subtract (145, 76.54) pojawi się okno komunikatu.  
+7.  Uruchom aplikację języka Visual Basic. Okno komunikatu pojawi się wraz z wynikami Subtract wywołującym (145, 76.54).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md)  

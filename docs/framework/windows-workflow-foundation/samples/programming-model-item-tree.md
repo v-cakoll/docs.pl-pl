@@ -2,43 +2,43 @@
 title: Drzewo elementów modelu programowania
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: a24e52ec2b7cab10471d756a721611c6dd10516e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f6f625ae7cd5251f7d7935d018142b32ea71b13f
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521973"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48776509"
 ---
 # <a name="programming-model-item-tree"></a>Drzewo elementów modelu programowania
-W tym przykładzie pokazano, jak nawigować po <xref:System.Activities.Presentation.Model.ModelItem> drzewa za pomocą powiązania dane deklaratywne w widoku drzewa Windows Presentation Foundation (WPF).  
-  
-## <a name="sample-details"></a>Przykład szczegółów  
- <xref:System.Activities.Presentation.Model.ModelItem> Drzewo jest abstrakcji, która jest używana przez [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] infrastruktury w celu ujawnienia danych o wystąpieniu bazowego, edytowany. Na poniższej ilustracji jest sceny z różnych warstw infrastruktury w [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].  
-  
- ![Architektura projektanta przepływu pracy](../../../../docs/framework/windows-workflow-foundation/samples/media/workflowdesignerarch.JPG "WorkflowDesignerArch")  
-  
- A <xref:System.Activities.Presentation.Model.ModelItem> składa się z wskaźnik do podstawowej wartości, a także kolekcję <xref:System.Activities.Presentation.Model.ModelProperty> obiektów. A <xref:System.Activities.Presentation.Model.ModelProperty> obiekt z kolei składa się z danych, takie jak nazwa i typ właściwości, a następnie wskaźnik do wartości, która z kolei jest kolejnym <xref:System.Activities.Presentation.Model.ModelItem>. Konwerter wartości służy do modyfikowania niektórych <xref:System.Activities.Presentation.Model.ModelItem>s zwróciło <xref:System.Activities.Presentation.Model.ModelProperty> aby były one są prawidłowo wyświetlane w widoku drzewa. Przykład następnie pokazano, jak programować obowiązkowo przy użyciu <xref:System.Activities.Presentation.Model.ModelItem> drzewa za pomocą składnia imperatywna, jak pokazano w poniższym przykładzie.  
-  
-```csharp  
-ModelItem mi = wd.Context.Services.GetService<ModelService>().Root;  
-ModelProperty mp = mi.Properties["Activities"];  
-mp.Collection.Add(new Persist());  
-ModelItem justAdded = mp.Collection.Last();  
-justAdded.Properties["DisplayName"].SetValue("new name");  
-```  
-  
-#### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
-  
-1.  Otwórz rozwiązanie ProgrammingModelItemTree.sln w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
-  
-2.  Skompiluj rozwiązanie, wybierając **Kompiluj rozwiązanie** z **kompilacji** menu.  
-  
-3.  Naciśnij klawisz F5, aby uruchomić aplikację. [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] Następnie zostanie wyświetlony formularz.  
-  
-4.  Kliknij przycisk **obciążenia WF** przycisk, aby załadować <xref:System.Activities.Presentation.Model.ModelItem> i powiąż go w widoku drzewa.  
-  
-5.  Klikając **drzewo elementów modelu zmiany** przycisk wykonuje poprzedni kod, aby dodać element do drzewa i ustawić właściwość.  
-  
+W tym przykładzie pokazano, jak nawigować po <xref:System.Activities.Presentation.Model.ModelItem> drzewa za pomocą powiązania dane deklaratywne w widoku drzewa Windows Presentation Foundation (WPF).
+
+## <a name="sample-details"></a>Przykład szczegółów
+ <xref:System.Activities.Presentation.Model.ModelItem> Drzewo jest abstrakcji, która jest używana przez [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] infrastruktury w celu ujawnienia danych o wystąpieniu bazowego, edytowany. Na poniższej ilustracji jest sceny z różnych warstw infrastruktury w [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].
+
+ ![Architektura projektanta przepływu pracy](../../../../docs/framework/windows-workflow-foundation/samples/media/workflowdesignerarch.JPG "WorkflowDesignerArch")
+
+ A <xref:System.Activities.Presentation.Model.ModelItem> składa się z wskaźnik do podstawowej wartości, a także kolekcję <xref:System.Activities.Presentation.Model.ModelProperty> obiektów. A <xref:System.Activities.Presentation.Model.ModelProperty> obiekt z kolei składa się z danych, takie jak nazwa i typ właściwości, a następnie wskaźnik do wartości, która z kolei jest kolejnym <xref:System.Activities.Presentation.Model.ModelItem>. Konwerter wartości służy do modyfikowania niektórych <xref:System.Activities.Presentation.Model.ModelItem>s zwróciło <xref:System.Activities.Presentation.Model.ModelProperty> aby były one są prawidłowo wyświetlane w widoku drzewa. Przykład następnie pokazano, jak programować obowiązkowo przy użyciu <xref:System.Activities.Presentation.Model.ModelItem> drzewa za pomocą składnia imperatywna, jak pokazano w poniższym przykładzie.
+
+```csharp
+ModelItem mi = wd.Context.Services.GetService<ModelService>().Root;
+ModelProperty mp = mi.Properties["Activities"];
+mp.Collection.Add(new Persist());
+ModelItem justAdded = mp.Collection.Last();
+justAdded.Properties["DisplayName"].SetValue("new name");
+```
+
+#### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
+
+1.  Otwórz rozwiązanie ProgrammingModelItemTree.sln w programie Visual Studio 2010.
+
+2.  Skompiluj rozwiązanie, wybierając **Kompiluj rozwiązanie** z **kompilacji** menu.
+
+3.  Naciśnij klawisz F5, aby uruchomić aplikację. [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] Następnie zostanie wyświetlony formularz.
+
+4.  Kliknij przycisk **obciążenia WF** przycisk, aby załadować <xref:System.Activities.Presentation.Model.ModelItem> i powiąż go w widoku drzewa.
+
+5.  Klikając **drzewo elementów modelu zmiany** przycisk wykonuje poprzedni kod, aby dodać element do drzewa i ustawić właściwość.
+
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   

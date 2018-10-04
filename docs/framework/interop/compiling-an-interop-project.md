@@ -11,37 +11,39 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a6099764fb98604726da99ef71b9c82e9a931bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7088c7f7765f0c5cfc4d6151dcda6f57b8de10d2
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388505"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580014"
 ---
 # <a name="compiling-an-interop-project"></a>Kompilowanie projektu międzyoperacyjnego
-COM interop projektów, odwołujące się do jednego lub więcej zestawów zawierających importowanych typów COM są kompilowane jak zarządzanego projektu. Możesz odwoływać się do zestawów międzyoperacyjnych w środowisku programowania, takiego jak Visual Studio, lub możesz odwoływać się do ich używania kompilatora wiersza polecenia. W obu przypadkach skompilować poprawnie, zestawu międzyoperacyjnego musi być w tym samym katalogu co plik projektu.  
-  
- Istnieją dwa sposoby odwołania zestawów międzyoperacyjnych:  
-  
--   Osadzone typy współdziałania: począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] i [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)], można nakazać kompilatorowi osadzanie informacji o typie z zestawu międzyoperacyjnego do pliku wykonywalnego. Jest to zalecana technika.  
-  
--   Zestawy międzyoperacyjne wdrażania: można utworzyć standardowe odwołanie do zestawu międzyoperacyjnego. W takim przypadku należy wdrożyć zestawu międzyoperacyjnego z aplikacją.  
-  
- Różnice między te dwie metody omówiono bardziej szczegółowo w [przy użyciu typów COM w kod zarządzany](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100)).  
-  
- Osadzanie typów międzyoperacyjnych z programem Visual Studio jest przedstawiona w [wskazówki: osadzanie informacji o typie z zestawów Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100)) i [wskazówki: osadzanie typów z zarządzanych zestawów](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
-  
- Odwołanie do zestawu międzyoperacyjnego z wiersza polecenia kompilatora i osadzanie informacji o typie w Twoje pliki wykonywalne, użyj [/Link (opcje kompilatora C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub [/Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) przełącznika kompilatora i Określ nazwę zestawu międzyoperacyjnego.  
-  
+
+COM projektów międzyoperacyjnych, które odwołują się jeden lub więcej zestawów, zawierające zaimportowane typy modelu COM są kompilowane takich jak zarządzanego projektu. Możesz odwoływać się do zestawów międzyoperacyjnych w środowisku programowania, takiego jak Visual Studio lub można się odwołać je korzystając z wiersza polecenia kompilatora. W obu przypadkach aby skompilować poprawnie, zestaw międzyoperacyjny musi być w tym samym katalogu co innych plików projektów.
+
+ Istnieją dwa sposoby, aby odwoływać się do zestawów międzyoperacyjnych:
+
+-   Osadzone typy współdziałania: począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] i Visual Studio 2010, można nakazać kompilatorowi osadzanie informacji o typie z zestawu międzyoperacyjnego, w programie wykonywalnym. Jest to zalecana technika.
+
+-   Wdrażanie zestawów międzyoperacyjnych: można utworzyć standardowe odwołanie do zestawu międzyoperacyjnego. W tym przypadku zestaw międzyoperacyjny musi zostać wdrożony z aplikacją.
+
+ Różnice między te dwie metody zostały omówione bardziej szczegółowo w [przy użyciu typów modelu COM w kodzie zarządzany](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100)).
+
+ Osadzanie typów międzyoperacyjnych z programem Visual Studio została przedstawiona w [wskazówki: osadzanie informacji o typie z zestawów Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100)) i [wskazówki: osadzanie typów z zarządzanych zestawów](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).
+
+ Aby odwoływać się do zestawu międzyoperacyjnego, za pomocą kompilatora wiersza polecenia i osadzić informacje o typie w swoje pliki wykonywalne, użyj [/Link (opcje kompilatora C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub [/Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) przełącznika kompilatora i Określ nazwę zestawu międzyoperacyjnego.
+
 > [!NOTE]
->  Aplikacje programu Visual C++ nie można osadzić typu informacji, ale mogą współdziałać aplikacji lub dodatki, które wykonują.  
-  
- Aby skompilować aplikację, która zawiera podstawowy zestaw międzyoperacyjny po jej wdrożeniu, należy użyć **/reference** kompilatora przełącznika i określ nazwę zestawu międzyoperacyjnego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)  
- [Niezależność od języka i składniki niezależne od języka](../../standard/language-independence-and-language-independent-components.md)  
- [Używanie typów COM w kodzie zarządzanym](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
- [Przewodnik: osadzanie informacji o typie z zestawów Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
- [Przewodnik: osadzanie typów z zarządzanych zestawów](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)
+> Aplikacje programu Visual C++ nie można osadzić informacje o typie, ale mogą współdziałać aplikacji lub dodatki, które wykonują.
+
+ Aby skompilować aplikację, która zawiera podstawowy zestaw międzyoperacyjny, gdy aplikacja jest wdrożona, użyj **/reference** kompilatora przełącznika i określ nazwę zestawu międzyoperacyjnego.
+
+## <a name="see-also"></a>Zobacz też
+
+- [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
+- [Niezależność od języka i składniki niezależne od języka](../../standard/language-independence-and-language-independent-components.md)
+- [Używanie typów modelu COM w kodzie zarządzanym](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))
+- [Przewodnik: osadzanie informacji o typie z zestawów Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))
+- [Przewodnik: osadzanie typów z zarządzanych zestawów](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)
+- [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)

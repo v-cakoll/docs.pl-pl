@@ -2,12 +2,12 @@
 title: Wskazówki dotyczące migracji
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 93d523c51c45f9b6f6235a7645fa126fcb09b6e5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 73488354a807d8bf7d90c97b95f1021d884efd27
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027393"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777961"
 ---
 # <a name="migration-guidance"></a>Wskazówki dotyczące migracji
 W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Microsoft udostępnia drugą wersją główną systemu Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] został wydany w [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (to uwzględnione typy w przestrzeniach nazw System.Workflow.*; teraz nazywana WF3) i ulepszone w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 jest również częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ale istnieje się wraz z technologią przepływu pracy (typy System.Activities.\* obszarów nazw; nazywane WF4). Podczas wybierania, kiedy należy przyjąć WF4, należy najpierw rozpoznaje, że możesz kontrolować termin.  
@@ -16,7 +16,7 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Micros
   
 -   WF3 aplikacje są uruchamiane w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bez żadnych modyfikacji i w dalszym ciągu można w pełni obsługiwane.  
   
--   Można tworzyć nowe aplikacje WF3 i istniejących aplikacji, które można edytować w [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] i są w pełni obsługiwane.  
+-   Można tworzyć nowe aplikacje WF3 i istniejących aplikacji można edytować w programie Visual Studio 2012 i są w pełni obsługiwane.  
   
  W efekcie decyzji o przyjęciu programu .NET Framework 4 jest całkowicie niezależna od Twoją decyzję, aby przejść do WF4 (System.Activities.*) z WF3 (System.Workflow.\*). Ten temat zawiera łącza do wskazówek dotyczących migracji WF, który zawiera informacje o pracy z WF3 i WF4.  
   

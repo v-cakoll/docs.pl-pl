@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
 author: BrucePerlerMS
 ms.openlocfilehash: 25e48125cff5a9761d0b880bf755a94463d42f19
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193895"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580579"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Tryby uwierzytelniania elementu SecurityBindingElement
 Windows Communication Foundation (WCF) udostępnia kilka tryby, według których klientów i usług uwierzytelniania ze sobą. Możesz utworzyć zabezpieczeń elementy powiązania dla tych trybów uwierzytelniania przy użyciu metody statycznej na <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy lub przy użyciu konfiguracji. W tym temacie krótko opisano tryby uwierzytelniania 18.  

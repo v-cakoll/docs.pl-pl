@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 author: BrucePerlerMS
 ms.openlocfilehash: 85954dd89bdb576b68d234a364a406a6e0d2145b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030353"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261332"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Instrukcje: Tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji
 Za pomocą tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej sesji, sesja może wytrzymać usługi odtwarzania. Na przykład gdy bezstanowe SCT jest używany w ramach bezpiecznej sesji i Internet Information Services (IIS) jest resetowany, następnie dane sesji, który jest skojarzony z usługą jest utracone. Te dane sesji obejmuje pamięci podręcznej SCT tokenu. Tak przy następnym klient wysyła usługi bezstanowej SCT, zwracany jest błąd, ponieważ nie można pobrać klucza, który jest skojarzony z SCT. Jeśli jednak stanowych SCT jest używany, klucz, który jest skojarzony z SCT jest zawarty w SCT. Ponieważ klucz jest zawarty w SCT i dlatego zawarte w wiadomości, bezpiecznej sesji nie występuje w usłudze odtwarzania. Domyślnie program Windows Communication Foundation (WCF) używa SCTs o bezstanowa w ramach bezpiecznej sesji. W tym temacie przedstawiono sposób użycia SCTs stanowych w ramach bezpiecznej sesji.  

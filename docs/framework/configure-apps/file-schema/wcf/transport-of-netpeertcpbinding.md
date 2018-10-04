@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; w &lt;netPeerTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 2b89ae090d24ff6aad1aae1b39a0a18961bd2537
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 62ba3b27b10afe182623f3be0f6738940e194579
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678049"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579793"
 ---
 # <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a>&lt;transport&gt; w &lt;netPeerTcpBinding&gt;
 Określa ustawienia zabezpieczenia na poziomie transportu, korzystając z [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  
@@ -64,5 +64,5 @@ Określa ustawienia zabezpieczenia na poziomie transportu, korzystając z [ \<ne
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

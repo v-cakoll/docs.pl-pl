@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
 ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "48244947"
+ms.locfileid: "48261170"
 ---
 # <a name="childviews-and-relations"></a>Elementy Childview i relacje
 Jeśli istnieje relacja między tabelami w <xref:System.Data.DataSet>, możesz utworzyć <xref:System.Data.DataView> zawierające wiersze z pokrewną tabelę podrzędną przy użyciu <xref:System.Data.DataRowView.CreateChildView%2A> metody <xref:System.Data.DataRowView> wierszy w tabeli nadrzędnej. Na przykład, poniższy kod wyświetla **kategorie** i ich pokrewnych **produktów** w kolejności alfabetycznej, posortowane według **CategoryName** i **ProductName** .  

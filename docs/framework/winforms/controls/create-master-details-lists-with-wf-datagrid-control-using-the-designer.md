@@ -6,14 +6,15 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 44cb9cc77e109acd7dd4b2e02f4c93a4f9a35407
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aec02e38fbe80302108397543144b1cc9c3ea346
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501337"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266791"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Porady: tworzenie list wzorzec-szczegół za pomocą formantu DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
+
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -26,10 +27,10 @@ ms.locfileid: "43501337"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Aby utworzyć listę wzorzec szczegół za pomocą projektanta  
   
-1.  Dodaj dwie <xref:System.Windows.Forms.DataGrid> formantów do formularza. Aby uzyskać więcej informacji, zobacz [porady: dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). W [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> formantu nie znajduje się w **przybornika** domyślnie. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie elementów do przybornika](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+1.  Dodaj dwie <xref:System.Windows.Forms.DataGrid> formantów do formularza. Aby uzyskać więcej informacji, zobacz [porady: dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). W programie Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> formantu nie znajduje się w **przybornika** domyślnie. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie elementów do przybornika](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
     > [!NOTE]
-    >  Poniższe kroki nie mają zastosowania do [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], który używa **źródeł danych** okna dla powiązania danych w czasie projektowania. Aby uzyskać więcej informacji, zobacz [powiązywanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) i [porady: wyświetlanie powiązanych danych w aplikacji Windows Forms](https://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
+    >  Poniższe kroki nie mają zastosowania do programu Visual Studio 2005, który używa **źródeł danych** okna dla powiązania danych w czasie projektowania. Aby uzyskać więcej informacji, zobacz [powiązywanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) i [porady: wyświetlanie powiązanych danych w aplikacji Windows Forms](https://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
   
 2.  Przeciągnij dwóch lub więcej tabel z **Eksploratora serwera** do formularza.  
   

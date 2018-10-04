@@ -6,20 +6,19 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 204869d0a7a7b8d56449c28cb37b18624a1701cf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5947e70b0dc4ef5838322722f2ee2a55034bae96
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207130"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582177"
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
-
 Tematy zawarte w tej sekcji są przeznaczone do umożliwiają szybkie narażenia na Windows Communication Foundation (WCF) środowisko programowania. Mają zostać wykonane zgodnie z kolejnością na liście w dolnej części tego tematu. Ten samouczek umożliwia poznanie wprowadzające kroków wymaganych do tworzenia aplikacji usługi i klienta WCF. Usługa udostępnia jeden lub więcej punktów końcowych, z których każdy ujawnia co najmniej jednej operacji usługi. *Punktu końcowego* usługi Określa adres, gdzie można znaleźć usługi, powiązania, który zawiera informacje opisujące, jak klientowi komunikowanie się z usługą i kontrakt definiujący funkcje udostępniane przez usługę do swoich klientów.
 
  Po zakończeniu pracy z sekwencją tematów w tym samouczku będą mieć uruchomioną usługę i klienta, który wywołuje usługę. W pierwszych trzech tematach opisano, jak definiowanie kontraktu usługi, jak zaimplementować kontrakt usługi i sposobu obsługi usługi. Usługa, która jest tworzona jest samodzielnie hostowany w aplikacji konsoli. Usługi może też być hostowana w ramach usługi Internet Information Services (IIS). Aby uzyskać więcej informacji na temat jak to zrobić, zobacz [instrukcje: hostowanie usługi WCF w programie IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Usługa jest skonfigurowana w kodzie Jednak usługi mogą być skonfigurowane w pliku konfiguracji. Aby uzyskać więcej informacji na temat przy użyciu pliku konfiguracji zobacz [Konfigurowanie usług za pomocą plików konfiguracji](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).
 
- W trzech kolejnych tematach opisano, jak utworzyć serwer proxy klienta, skonfigurować aplikację klienta i serwer proxy klienta jest używany do wywoływania operacji usług udostępnianych przez usługę. Usługi publikowania metadanych, który definiuje informacje, które aplikacja kliencka musi komunikować się z usługą. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] automatyzuje proces uzyskiwania dostępu do metadanych i używa ich do tworzenia i konfigurowania aplikacji klienckiej dla usługi. Jeśli nie używasz [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], możesz użyć [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to utworzyć i skonfigurować aplikację klienta dla usługi.
+ W trzech kolejnych tematach opisano, jak utworzyć serwer proxy klienta, skonfigurować aplikację klienta i serwer proxy klienta jest używany do wywoływania operacji usług udostępnianych przez usługę. Usługi publikowania metadanych, który definiuje informacje, które aplikacja kliencka musi komunikować się z usługą. Program Visual Studio 2012 automatyzuje proces uzyskiwania dostępu do metadanych i używa ich do tworzenia i konfigurowania aplikacji klienckiej dla usługi. Jeśli nie używasz programu Visual Studio 2012, możesz użyć [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to utworzyć i skonfigurować aplikację klienta dla usługi.
 
 Tematy w tej sekcji założono, że używasz programu Visual Studio jako środowiska deweloperskiego. Jeśli używasz innego środowiska deweloperskiego, zignorować instrukcje dotyczące programu Visual Studio.
 

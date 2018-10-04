@@ -2,25 +2,22 @@
 title: Właściwości wykonania przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 2681152ba89baa2f65d5402a8c8c9d872cadb65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b72782b4b9fef127e61bb22b7800740af1d8d2b
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518647"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582073"
 ---
 # <a name="workflow-execution-properties"></a>Właściwości wykonania przepływu pracy
-Za pomocą lokalny magazyn wątków (TLS) środowisko CLR przechowuje kontekstu wykonywania dla każdego wątku. Ten kontekst wykonywania kontroluje wątku dobrze znane właściwości, takie jak tożsamości wątku, transakcja otoczenia, oraz uprawnienia bieżącego zestawu właściwości wątku zdefiniowane przez użytkownika, takie jak o nazwie gniazda.  
+Za pomocą lokalny magazyn wątków (TLS) środowisko CLR utrzymuje kontekst wykonania dla każdego wątku. Ten kontekst wykonywania kontroluje wątku dobrze znane właściwości, takich jak tożsamość wątku otoczenia transakcji, oraz uprawnień bieżącego zestawu właściwości wątków użytkownika, takie jak o nazwie miejsc.  
   
- W odróżnieniu od programów bezpośrednio przeznaczonych dla środowiska CLR programy przepływu pracy są drzew hierarchicznie zakresie działań, które są wykonywane w środowisku niezależny od wątku. Oznacza to, że stosowanie standardowych mechanizmów TLS bezpośrednio nie można użyć do określenia, jakie kontekstu znajduje się w zakresie dla elementu roboczego danego. Na przykład mogą korzystać z dwóch równoległych gałęziach wykonywania różnych transakcji, ale planista może interleave ich wykonania na tym samym wątku CLR.  
+ W odróżnieniu od programów bezpośrednio przeznaczonych dla środowiska CLR programy przepływu pracy są hierarchicznie zakresie drzewa działań, które są wykonywane w środowisku niezależny od wątku. Oznacza to, że standardowych mechanizmów TLS nie bezpośrednio można określić, jakie kontekstu znajduje się w zakresie dla elementu roboczego danego. Na przykład dwie gałęzie równoległego wykonywania mogą używać różnych transakcji, ale harmonogram może przeplot ich wykonanie w tym samym wątku środowiska CLR.  
   
- Właściwości wykonania przepływu pracy udostępniają mechanizm do dodania do środowiska działania właściwości specyficzne dla kontekstu. Dzięki temu działanie, aby zadeklarować, właściwości, które znajdują się w zakresie dla jego poddrzewa i udostępnia punkty zaczepienia dotyczące konfigurowania i przerwanie dół TLS prawidłowo współdziałanie z obiektami środowiska CLR.  
+ Właściwości wykonania przepływu pracy zapewniają mechanizm, aby dodać określonej właściwości kontekstu do działania środowiska. Dzięki temu działanie, aby zadeklarować właściwości, które znajdują się w zakresie dla jego poddrzewa i udostępnia również punkty zaczepienia dotyczące konfigurowania i zniszczenia TLS do prawidłowego współdziałania z obiektów CLR.  
   
-## <a name="creating-and-using-workflow-execution-properties"></a>Tworzenie i korzystanie z właściwości wykonania przepływu pracy  
- Właściwości wykonania przepływu pracy jest zwykle zaimplementować <xref:System.Activities.IExecutionProperty> interfejsu, chociaż może wdrożyć właściwości koncentruje się na wiadomości <xref:System.ServiceModel.Activities.ISendMessageCallback> i <xref:System.ServiceModel.Activities.IReceiveMessageCallback> zamiast tego. Aby utworzyć właściwość wykonywania przepływu pracy, należy utworzyć klasę implementującą <xref:System.Activities.IExecutionProperty> interfejsu i implementować członków <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> i <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>. Te elementy członkowskie Podaj właściwość wykonywania możliwość poprawnie skonfigurować i zniszcz lokalny magazyn wątków podczas każdego pulse pracy działania zawierającego właściwości, łącznie z żadnych działań podrzędnych. W tym przykładzie `ConsoleColorProperty` jest tworzony w tym zestawy `Console.ForegroundColor`.  
-  
-> [!NOTE]
->  Poniższy przykładowy kod w tym temacie jest oparta na [właściwości wykonania](../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md) próbki.  
+## <a name="creating-and-using-workflow-execution-properties"></a>Tworzenie i używanie właściwości wykonania przepływu pracy  
+ Właściwości wykonania przepływu pracy jest zwykle implementuje <xref:System.Activities.IExecutionProperty> interfejsu, chociaż może wdrożyć właściwości koncentruje się na komunikaty <xref:System.ServiceModel.Activities.ISendMessageCallback> i <xref:System.ServiceModel.Activities.IReceiveMessageCallback> zamiast tego. Aby utworzyć właściwości wykonania przepływu pracy, należy utworzyć klasę, która implementuje <xref:System.Activities.IExecutionProperty> interfejsu i zaimplementuj elementy członkowskie <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> i <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>. Te elementy członkowskie Podaj właściwości wykonywania z szansą sprzedaży poprawnie skonfigurować i zatrzymywania pamięci lokalnej wątku podczas każdego pulse pracy działania, który zawiera właściwości, łącznie z dowolnego działania podrzędne. W tym przykładzie `ConsoleColorProperty` jest tworzony w tym zestawy `Console.ForegroundColor`.  
   
 ```csharp  
 class ConsoleColorProperty : IExecutionProperty  
@@ -48,7 +45,7 @@ class ConsoleColorProperty : IExecutionProperty
 }  
 ```  
   
- Działanie autorzy mogą używać tej właściwości w zarejestrowani zastąpienie wykonania działania. W tym przykładzie `ConsoleColorScope` zdefiniowano działania, który rejestruje `ConsoleColorProperty` przez dodanie go do <xref:System.Activities.NativeActivityContext.Properties%2A> kolekcji bieżącego <xref:System.Activities.NativeActivityContext>.  
+ Autorzy aktywności można użyć tej właściwości, rejestrując je w działania wykonywania zastąpienie. W tym przykładzie `ConsoleColorScope` działania jest zdefiniowany, który rejestruje `ConsoleColorProperty` przez dodanie jej do <xref:System.Activities.NativeActivityContext.Properties%2A> kolekcji bieżącego <xref:System.Activities.NativeActivityContext>.  
   
 ```csharp  
 public sealed class ConsoleColorScope : NativeActivity  
@@ -73,7 +70,7 @@ public sealed class ConsoleColorScope : NativeActivity
 }  
 ```  
   
- Podczas działania treści uruchamiania pulse pracy, <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> wywoływana jest metoda właściwości, a po zakończeniu pulse pracy <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A> jest wywoływana. W tym przykładzie przepływ pracy jest tworzony, który używa <xref:System.Activities.Statements.Parallel> działania o trzy gałęzie. Użyć dwóch pierwszych gałęzie `ConsoleColorScope` działania i trzeci gałęzi nie. Wszystkie trzy gałęzie zawierać dwa <xref:System.Activities.Statements.WriteLine> działań i <xref:System.Activities.Statements.Delay> działania. Gdy <xref:System.Activities.Statements.Parallel> wykonuje działania, wykonywania działań, które są zawarte w gałęzi w sposób przeplotem, ale ponieważ wykonuje każde działanie podrzędne kolor poprawne konsoli jest stosowana przez `ConsoleColorProperty`.  
+ Uruchomienia działania treści pulse pracy <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> nosi nazwę metody, właściwości, a po zakończeniu pulse pracy <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A> jest wywoływana. W tym przykładzie przepływ pracy jest tworzony, który używa <xref:System.Activities.Statements.Parallel> działanie przy użyciu trzech gałęzi. Użyj najpierw dwie gałęzie `ConsoleColorScope` działanie i trzeci gałęzi, nie ma. Wszystkie trzy gałęzie zawierać dwa <xref:System.Activities.Statements.WriteLine> działań i <xref:System.Activities.Statements.Delay> działania. Gdy <xref:System.Activities.Statements.Parallel> wykonuje działania, wykonywania działań, które są zawarte w gałęzi, w sposób przeplotem, ale ponieważ wykonuje każde działanie podrzędne przez stosowania kolorów poprawnej konsoli `ConsoleColorProperty`.  
   
 ```csharp  
 Activity wf = new Parallel  
@@ -148,7 +145,7 @@ Activity wf = new Parallel
 WorkflowInvoker.Invoke(wf);  
 ```  
   
- Jeśli przepływ pracy zostanie wywołane, następujące dane wyjściowe są zapisywane w oknie konsoli.  
+ Jeśli przepływ pracy zostanie wywołane, następujące dane wyjściowe są zapisywane do okna konsoli.  
   
 ```  
 Start blue text.  
@@ -162,7 +159,7 @@ End default text.
 > [!NOTE]
 >  Chociaż nie jest wyświetlany w danych wyjściowych poprzedniej, każdy wiersz tekstu w oknie konsoli jest wyświetlane w kolorze wskazane.  
   
- Właściwości wykonania przepływu pracy mogą być używane przez autora działania niestandardowego, a także zapewniają mechanizm zarządzania dojścia do działań takich jak <xref:System.ServiceModel.Activities.CorrelationScope> i <xref:System.Activities.Statements.TransactionScope> działań.  
+ Właściwości wykonania przepływu pracy mogą być używane przez autorów niestandardowe działanie oraz zapewniają także przy użyciu mechanizmu zarządzania uchwyt działań takich jak <xref:System.ServiceModel.Activities.CorrelationScope> i <xref:System.Activities.Statements.TransactionScope> działań.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Activities.IExecutionProperty>  

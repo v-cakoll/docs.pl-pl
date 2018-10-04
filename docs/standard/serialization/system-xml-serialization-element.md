@@ -7,11 +7,11 @@ helpviewer_keywords:
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
 ms.openlocfilehash: b67c1ec1ec737976e4e50b80b42f34e508dc0224
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425930"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48776809"
 ---
 # <a name="ltsystemxmlserializationgt-element"></a>&lt;System.XML.serialization&gt; — Element
 Element najwyższego poziomu do sterowania serializacji XML. Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md).  

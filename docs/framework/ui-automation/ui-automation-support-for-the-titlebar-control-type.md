@@ -9,11 +9,11 @@ ms.assetid: 3b7a4e13-0305-45d5-bc33-1f4133c50782
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: f200f2f2a739ac49b96b9294a50c06732000028a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233109"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261327"
 ---
 # <a name="ui-automation-support-for-the-titlebar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu TitleBar
 > [!NOTE]

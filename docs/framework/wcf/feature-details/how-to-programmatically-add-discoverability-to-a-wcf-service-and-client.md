@@ -2,19 +2,19 @@
 title: 'Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524143"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779897"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF
 W tym temacie wyjaśniono, jak stał się wykrywalny usługi Windows Communication Foundation (WCF). Jest on oparty na [hosta samodzielnego](https://go.microsoft.com/fwlink/?LinkId=145523) próbki.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Aby skonfigurować istniejący przykład hosta samodzielnego usługi odnajdywania  
   
-1.  Otwórz rozwiązanie samodzielnego hostowania w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Przykład znajduje się w katalogu TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1.  Otwórz rozwiązanie hosta samodzielnego w programie Visual Studio 2012. Przykład znajduje się w katalogu TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
 2.  Dodaj odwołanie do `System.ServiceModel.Discovery.dll` do projektu usługi. Może zostać wyświetlony komunikat o błędzie informujący o tym, "System. ServiceModel.Discovery.dll lub jednej z jego zależności wymaga nowszej wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] niż określona w projekcie... " Jeśli ten komunikat jest wyświetlony, kliknij prawym przyciskiem myszy projekt w Eksploratorze rozwiązań i wybierz polecenie **właściwości**. W **właściwości projektu** okna, upewnij się, że **platformę docelową** jest [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   

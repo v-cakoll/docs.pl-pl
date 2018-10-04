@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 54fc56e5e7d6ee5cd0e7bc55bd22c7d4127eb4d3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747128"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580933"
 ---
 # <a name="security-in-windows-forms-overview"></a>Przegląd zabezpieczeń w formularzach systemu Windows
 Przed wydaniem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], cały kod uruchomiony na koncie użytkownika na komputerze miał tych samych praw i uprawnień dostępu do zasobów, których użytkownik komputera. Na przykład jeśli użytkownik był dozwolony dostęp do systemu plików, kod zezwolono na dostęp do systemu plików; Jeśli użytkownik zezwolono na dostęp do bazy danych, kod mógł uzyskiwać dostęp do tej bazy. Mimo że te prawa lub uprawnienia można zaakceptować dla kodu w plikach wykonywalnych, który użytkownik jawnie zainstalowany na komputerze lokalnym, nie może być możliwa do kod potencjalnie złośliwy, pochodzące z Internetu lub lokalny Intranet. Ten kod nie należy uzyskiwać dostęp do zasobów komputera użytkownika bez uprawnień.  
@@ -49,7 +49,7 @@ Przed wydaniem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ca�
   
  Opcjonalne uprawnienia w przypadku żądania, musi obsługiwać wyjątki zabezpieczeń, które mają być generowane, gdy aplikacja wykonuje akcję, która wymaga uprawnienia nie udzielone. Odpowiednie, obsługa <xref:System.Security.SecurityException> zapewni, że aplikacja może w dalszym ciągu działać. Aplikacja może używać wyjątek, aby ustalić, czy funkcja powinna stać się wyłączony dla użytkownika. Na przykład można wyłączyć aplikacji **Zapisz** opcję menu, jeśli nie zostało udzielone uprawnienie wymaganego pliku.  
   
- Czasami trudno jest znać, jeśli zostały potwierdzone odpowiednie uprawnienia. Wywołanie metody, która wygląda nieszkodliwe na powierzchni na przykład, mogą uzyskiwać dostęp do systemu plików w pewnym momencie podczas jego wykonywania. Jeśli nie należy wdrażać aplikacji przy użyciu wszystkich wymaganych uprawnień, jego może przetestować prawidłowo podczas jej debugowania na komputerze, ale się nie powieść podczas wdrażania. Zarówno [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] zestawu SDK i [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] narzędzia do obliczania uprawnienia, aplikacja musi zawierać: MT.exe polecenia narzędzia wiersza i funkcja Obliczanie uprawnień programu Visual Studio, odpowiednio.  
+ Czasami trudno jest znać, jeśli zostały potwierdzone odpowiednie uprawnienia. Wywołanie metody, która wygląda nieszkodliwe na powierzchni na przykład, mogą uzyskiwać dostęp do systemu plików w pewnym momencie podczas jego wykonywania. Jeśli nie należy wdrażać aplikacji przy użyciu wszystkich wymaganych uprawnień, jego może przetestować prawidłowo podczas jej debugowania na komputerze, ale się nie powieść podczas wdrażania. Zarówno [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] zestawu SDK i programu Visual Studio 2005 zawiera narzędzia do obliczania uprawnienia, aplikacja musi: MT.exe polecenia narzędzia wiersza i funkcja Obliczanie uprawnień programu Visual Studio, odpowiednio.  
   
  W poniższych tematach opisano dodatkowe funkcje zabezpieczeń Windows Forms.  
   

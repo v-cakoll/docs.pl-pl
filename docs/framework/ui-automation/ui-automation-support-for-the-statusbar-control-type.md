@@ -9,11 +9,11 @@ ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 44e1440ca9ab49ffcbc849991891eb5c4c0e7357
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863558"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580917"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu StatusBar
 > [!NOTE]

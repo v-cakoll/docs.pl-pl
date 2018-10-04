@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037044"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263508"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Wyłącz rozpoznawanie DPI w programie Visual Studio
 
@@ -68,6 +68,10 @@ Visual Studio można oznaczyć jako świadomości DPI przez modyfikację rejestr
 Aby ustawić ekranu skalowanie ustawienie do 100% w systemie Windows 10, wpisz **ustawienia wyświetlania** na pasku wyszukiwania, a następnie zaznacz zadań **Zmienianie ustawień wyświetlania**. W **ustawienia** oknie **Zmień rozmiar tekstu, aplikacji i innych elementów** do **100%**.
 
 Ustawianie ekranu skalowanie do 100% może być niepożądane, może sprawić, że interfejs użytkownika zbyt mały, może być używany.
+
+## <a name="troubleshoot"></a>Rozwiązywanie problemów
+
+Jeśli przejście rozpoznawanie DPI nie działa zgodnie z oczekiwaniami w programie Visual Studio, sprawdź, czy masz `dpiAwareness` wartość w **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image pliku wykonywania Options\devenv.exe**  podkluczy w Edytorze rejestru. Jeśli jest obecny, usuń wartość.
 
 ## <a name="see-also"></a>Zobacz także
 

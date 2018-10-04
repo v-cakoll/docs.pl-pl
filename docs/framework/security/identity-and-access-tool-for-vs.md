@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
 ms.openlocfilehash: 1177048d8124c955220605e52dde539b84510cba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48244909"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584166"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Narzędzie tożsamości i dostępu dla programu Visual Studio 2012
 W tym temacie opisano nowe narzędzie tożsamości i dostępu dla programu Visual Studio 11. To narzędzie można pobrać spod następującego adresu URL: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) lub bezpośrednio z poziomu programu Visual Studio 11, wyszukując "tożsamość" w Menedżerze rozszerzeń.  

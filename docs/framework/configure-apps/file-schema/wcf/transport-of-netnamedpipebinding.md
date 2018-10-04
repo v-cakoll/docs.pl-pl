@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; w &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 0006be71ee67d5f274d8af8087f2d111cddb12b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c42132f774257589b9020248188ee8d972eb92ba
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512422"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779249"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;transport&gt; w &lt;netNamedPipeBinding&gt;
 Określa ustawienia zabezpieczenia transportu nazwanego potoku.  
@@ -57,5 +57,5 @@ Określa ustawienia zabezpieczenia transportu nazwanego potoku.
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

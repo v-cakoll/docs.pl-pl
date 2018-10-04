@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; w &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 03e245acd8cb31630d6154e01d934ce6d293f4e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 092072df2b88c59c7744a694175ce5ddf39cf79b
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507967"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580537"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;transport&gt; w &lt;netHttpBinding&gt;
 Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu HTTP.  
@@ -120,5 +120,5 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

@@ -20,11 +20,11 @@ ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f89bf9e3ea9f2b3c385d267cfc77a05ee8eb82d6
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031672"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266434"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Za pomocą asynchronicznego gniazda serwera
 Server asynchronicznego gniazda używają modelu programowania asynchronicznego środowiska .NET Framework do przetwarzania żądania usługi sieci. <xref:System.Net.Sockets.Socket> Klasy postępuje zgodnie ze standardowym .NET Framework asynchroniczny wzorzec nazewnictwa; na przykład synchronicznego <xref:System.Net.Sockets.Socket.Accept%2A> metody odpowiada asynchroniczną <xref:System.Net.Sockets.Socket.BeginAccept%2A> i <xref:System.Net.Sockets.Socket.EndAccept%2A> metody.  

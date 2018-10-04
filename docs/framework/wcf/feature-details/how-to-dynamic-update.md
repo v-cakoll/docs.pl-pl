@@ -3,11 +3,11 @@ title: 'Instrukcje: Aktualizacja dynamiczna'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
 ms.openlocfilehash: 597a4f8776398769307214090a8b463981bc0d46
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399284"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777146"
 ---
 # <a name="how-to-dynamic-update"></a>Instrukcje: Aktualizacja dynamiczna
 W tym temacie przedstawiono podstawowe kroki wymagane do tworzenia i dynamicznie aktualizować konfiguracji routingu. W tym przykładzie początkowej konfiguracji routingu jest uzyskiwana z pliku konfiguracji i kieruje wszystkie wiadomości w usłudze Kalkulator regularCalc; jednak jest następnie aktualizowany programowo Aby zmienić docelowy punkt końcowy usługi roundingCalc.  

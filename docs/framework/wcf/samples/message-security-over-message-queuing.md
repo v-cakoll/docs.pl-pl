@@ -3,42 +3,42 @@ title: Zabezpieczenia komunikatów w ramach kolejkowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 author: BrucePerlerMS
-ms.openlocfilehash: 48318206844b8d3289d367435cc737e2421ff491
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4578f93759379fabe258f6a70e38a9c5d46433dc
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196970"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777818"
 ---
 # <a name="message-security-over-message-queuing"></a>Zabezpieczenia komunikatów w ramach kolejkowania komunikatów
-Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania certyfikatu X.509v3 dla klienta i wymaga uwierzytelnienia serwera za pomocą certyfikatu X.509v3 serwera za pośrednictwem usługi MSMQ. Komunikat zabezpieczeń jest czasem korzystniejsze, aby upewnić się, że komunikaty w magazynie usługi MSMQ pozostają zaszyfrowane i aplikacji można wykonać swoje własne uwierzytelniania wiadomości.  
-  
- Ten przykład jest oparty na [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. Komunikaty są szyfrowane i podpisany.  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
-  
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-2.  Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.  
-  
-    1.  Otwórz Menedżera serwera w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
-  
-    2.  Rozwiń **funkcji** kartę.  
-  
-    3.  Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.  
-  
-    4.  Sprawdź **transakcyjna** pole.  
-  
-    5.  Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.  
-  
-3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-  
-### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze  
-  
-1.  Upewnij się, że ścieżka zawiera folder, który zawiera Makecert.exe i FindPrivateKey.exe.  
-  
-2.  Uruchom Setup.bat jest z poziomu folderu instalacji przykładowej. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.  
-  
+Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania certyfikatu X.509v3 dla klienta i wymaga uwierzytelnienia serwera za pomocą certyfikatu X.509v3 serwera za pośrednictwem usługi MSMQ. Komunikat zabezpieczeń jest czasem korzystniejsze, aby upewnić się, że komunikaty w magazynie usługi MSMQ pozostają zaszyfrowane i aplikacji można wykonać swoje własne uwierzytelniania wiadomości.
+
+ Ten przykład jest oparty na [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. Komunikaty są szyfrowane i podpisany.
+
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
+
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+
+2.  Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.
+
+    1.  Otwórz Menedżera serwera w programie Visual Studio 2012.
+
+    2.  Rozwiń **funkcji** kartę.
+
+    3.  Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.
+
+    4.  Sprawdź **transakcyjna** pole.
+
+    5.  Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
+
+3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+
+### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
+
+1.  Upewnij się, że ścieżka zawiera folder, który zawiera Makecert.exe i FindPrivateKey.exe.
+
+2.  Uruchom Setup.bat jest z poziomu folderu instalacji przykładowej. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.
+
     > [!NOTE]
     >  Upewnij się, usunąć certyfikaty, uruchamiając Cleanup.bat po zakończeniu dla próbki. Inne przykłady zabezpieczeń za pomocą tych samych certyfikatów.  
   
@@ -81,262 +81,262 @@ Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z pro
 -   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
     > [!NOTE]
-    >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
-  
-## <a name="requirements"></a>Wymagania  
- Ten przykładowy skrypt wymaga, że usługa MSMQ jest zainstalowana i uruchomiona.  
-  
-## <a name="demonstrates"></a>Demonstracje  
- Klient szyfruje wiadomości przy użyciu klucza publicznego usługi i zarejestruje komunikat przy użyciu własnego certyfikatu. Usługi, odczytywanie wiadomości z kolejki uwierzytelnianie certyfikatu klienta przy użyciu certyfikatu w magazynie zaufanych osób. Następnie odszyfrowuje komunikat i wysyła komunikat do operacji usługi.  
-  
- Ponieważ komunikat usług Windows Communication Foundation (WCF) jest przenoszone jako ładunek w treści wiadomości usługi MSMQ, treść pozostają zaszyfrowane w magazynie usługi MSMQ. W ten sposób wiadomości przed ujawnieniem niechciane wiadomości. Zwróć uwagę, że usługi MSMQ, sama nie świadomość tego, czy komunikat go prowadzi są szyfrowane.  
-  
- W przykładzie pokazano sposób wzajemnego uwierzytelniania wglądu do wiadomości poziom może być używany z usługi MSMQ. Certyfikaty są wymieniane poza pasmem. Jest to zawsze w przypadku aplikacji umieszczonych w kolejce, ponieważ usługa i klient nie ma być uruchomiona w tym samym czasie.  
-  
-## <a name="description"></a>Opis  
- Przykładowy kod klienta i usługi są takie same jak [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki z jedną różnicą. Kontrakt operacji jest oznaczony za pomocą poziom ochrony, co sugeruje, że wiadomości muszą być podpisane i szyfrowane.  
+    >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+
+## <a name="requirements"></a>Wymagania
+ Ten przykładowy skrypt wymaga, że usługa MSMQ jest zainstalowana i uruchomiona.
+
+## <a name="demonstrates"></a>Demonstracje
+ Klient szyfruje wiadomości przy użyciu klucza publicznego usługi i zarejestruje komunikat przy użyciu własnego certyfikatu. Usługi, odczytywanie wiadomości z kolejki uwierzytelnianie certyfikatu klienta przy użyciu certyfikatu w magazynie zaufanych osób. Następnie odszyfrowuje komunikat i wysyła komunikat do operacji usługi.
+
+ Ponieważ komunikat usług Windows Communication Foundation (WCF) jest przenoszone jako ładunek w treści wiadomości usługi MSMQ, treść pozostają zaszyfrowane w magazynie usługi MSMQ. W ten sposób wiadomości przed ujawnieniem niechciane wiadomości. Zwróć uwagę, że usługi MSMQ, sama nie świadomość tego, czy komunikat go prowadzi są szyfrowane.
+
+ W przykładzie pokazano sposób wzajemnego uwierzytelniania wglądu do wiadomości poziom może być używany z usługi MSMQ. Certyfikaty są wymieniane poza pasmem. Jest to zawsze w przypadku aplikacji umieszczonych w kolejce, ponieważ usługa i klient nie ma być uruchomiona w tym samym czasie.
+
+## <a name="description"></a>Opis
+ Przykładowy kod klienta i usługi są takie same jak [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki z jedną różnicą. Kontrakt operacji jest oznaczony za pomocą poziom ochrony, co sugeruje, że wiadomości muszą być podpisane i szyfrowane.
 
 ```csharp
-// Define a service contract.   
-[ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
-public interface IOrderProcessor  
-{  
-    [OperationContract(IsOneWay = true, ProtectionLevel=ProtectionLevel.EncryptAndSign)]  
-    void SubmitPurchaseOrder(PurchaseOrder po);  
-}  
+// Define a service contract.
+[ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
+public interface IOrderProcessor
+{
+    [OperationContract(IsOneWay = true, ProtectionLevel=ProtectionLevel.EncryptAndSign)]
+    void SubmitPurchaseOrder(PurchaseOrder po);
+}
 ```
 
- Aby upewnić się, że wiadomość jest zabezpieczona przy użyciu tokenu wymagany do identyfikowania usługi i klienta, App.config zawiera informacji o poświadczeniach.  
-  
- Konfiguracja klienta Określa certyfikat usługi do uwierzytelniania usługi. Użyto jej magazynie jako zaufany magazyn do zależą od ważności usługi. Określa również certyfikat klienta, który jest dołączony komunikat do usługi uwierzytelniania klienta.  
-  
-```xml  
-<?xml version="1.0" encoding="utf-8" ?>  
-<configuration>  
-  
-  <system.serviceModel>  
-  
-    <client>  
-      <!-- Define NetMsmqEndpoint -->  
-      <endpoint address="net.msmq://localhost/private/ServiceModelSamplesMessageSecurity"   
-                binding="netMsmqBinding"   
-                bindingConfiguration="messageSecurityBinding"  
-                contract="Microsoft.ServiceModel.Samples.IOrderProcessor"  
-                behaviorConfiguration="ClientCertificateBehavior" />  
-    </client>  
-  
-    <bindings>  
-        <netMsmqBinding>  
-            <binding name="messageSecurityBinding">  
-                <security mode="Message">  
-                    <message clientCredentialType="Certificate"/>  
-                </security>  
-            </binding>  
-        </netMsmqBinding>  
-    </bindings>  
-  
-    <behaviors>  
-      <endpointBehaviors>  
-        <behavior name="ClientCertificateBehavior">  
-          <!--   
-        The clientCredentials behavior allows one to define a certificate to present to a service.  
-        A certificate is used by a client to authenticate itself to the service and provide message integrity.  
-        This configuration references the "client.com" certificate installed during the setup instructions.  
-        -->  
-          <clientCredentials>  
-            <clientCertificate findValue="client.com" storeLocation="CurrentUser" storeName="My" x509FindType="FindBySubjectName" />  
-            <serviceCertificate>  
-                <defaultCertificate findValue="localhost" storeLocation="CurrentUser" storeName="TrustedPeople" x509FindType="FindBySubjectName"/>  
-              <!--   
-            Setting the certificateValidationMode to PeerOrChainTrust means that if the certificate   
-            is in the user's Trusted People store, then it is trusted without performing a  
-            validation of the certificate's issuer chain. This setting is used here for convenience so that the   
-            sample can be run without having to have certificates issued by a certification authority (CA).  
-            This setting is less secure than the default, ChainTrust. The security implications of this   
-            setting should be carefully considered before using PeerOrChainTrust in production code.   
-            -->  
-              <authentication certificateValidationMode="PeerOrChainTrust" />  
-            </serviceCertificate>  
-          </clientCredentials>  
-        </behavior>  
-      </endpointBehaviors>  
-    </behaviors>  
-  
-  </system.serviceModel>  
-</configuration>  
-```  
-  
- Należy zauważyć, że tryb zabezpieczeń jest ustawiony na komunikat i ClientCredentialType jest ustawiony na certyfikatu.  
-  
- Konfiguracja usługi zawiera zachowanie usługi, który określa poświadczenia, które są używane, gdy klient uwierzytelnia się usługi. Nazwa podmiotu certyfikatu serwera jest określona w `findValue` atrybutu w [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
-  
-```xml  
-<?xml version="1.0" encoding="utf-8" ?>  
-<configuration>  
-  
-  <appSettings>  
-    <!-- Use appSetting to configure MSMQ queue name. -->  
-    <add key="queueName" value=".\private$\ServiceModelSamplesMessageSecurity" />  
-  </appSettings>  
-  
-  <system.serviceModel>  
-    <services>  
-      <service   
-          name="Microsoft.ServiceModel.Samples.OrderProcessorService"  
-          behaviorConfiguration="PurchaseOrderServiceBehavior">  
-        <host>  
-          <baseAddresses>  
-            <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  
-          </baseAddresses>  
-        </host>  
-        <!-- Define NetMsmqEndpoint -->  
-        <endpoint address="net.msmq://localhost/private/ServiceModelSamplesMessageSecurity"  
-                  binding="netMsmqBinding"  
-                  bindingConfiguration="messageSecurityBinding"  
-                  contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />  
-        <!-- The mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex. -->  
-        <endpoint address="mex"  
-                  binding="mexHttpBinding"  
-                  contract="IMetadataExchange" />  
-      </service>  
-    </services>  
-  
-    <bindings>  
-        <netMsmqBinding>  
-            <binding name="messageSecurityBinding">  
-                <security mode="Message">  
-                    <message clientCredentialType="Certificate" />  
-                </security>  
-            </binding>  
-        </netMsmqBinding>  
-    </bindings>  
-  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="PurchaseOrderServiceBehavior">  
-          <serviceMetadata httpGetEnabled="True"/>  
-          <!--   
-               The serviceCredentials behavior allows one to define a service certificate.  
-               A service certificate is used by the service to authenticate itself to its clients and to provide message protection.  
-               This configuration references the "localhost" certificate installed during the setup instructions.  
-          -->  
-          <serviceCredentials>  
-            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName" />  
-            <clientCertificate>  
-                <certificate findValue="client.com" storeLocation="LocalMachine" storeName="TrustedPeople" x509FindType="FindBySubjectName"/>  
-              <!--   
-            Setting the certificateValidationMode to PeerOrChainTrust means that if the certificate   
-            is in the user's Trusted People store, then it is trusted without performing a  
-            validation of the certificate's issuer chain. This setting is used here for convenience so that the   
-            sample can be run without having to have certificates issued by a certification authority (CA).  
-            This setting is less secure than the default, ChainTrust. The security implications of this   
-            setting should be carefully considered before using PeerOrChainTrust in production code.   
-            -->  
-              <authentication certificateValidationMode="PeerOrChainTrust" />  
-            </clientCertificate>  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-  
-  </system.serviceModel>  
-  
-</configuration>  
-```  
-  
- W przykładzie pokazano kontroli uwierzytelniania za pomocą konfiguracji i jak można uzyskać tożsamości elementu wywołującego z kontekstu zabezpieczeń, jak pokazano w poniższym przykładowym kodzie:  
-  
+ Aby upewnić się, że wiadomość jest zabezpieczona przy użyciu tokenu wymagany do identyfikowania usługi i klienta, App.config zawiera informacji o poświadczeniach.
+
+ Konfiguracja klienta Określa certyfikat usługi do uwierzytelniania usługi. Użyto jej magazynie jako zaufany magazyn do zależą od ważności usługi. Określa również certyfikat klienta, który jest dołączony komunikat do usługi uwierzytelniania klienta.
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+  <system.serviceModel>
+
+    <client>
+      <!-- Define NetMsmqEndpoint -->
+      <endpoint address="net.msmq://localhost/private/ServiceModelSamplesMessageSecurity"
+                binding="netMsmqBinding"
+                bindingConfiguration="messageSecurityBinding"
+                contract="Microsoft.ServiceModel.Samples.IOrderProcessor"
+                behaviorConfiguration="ClientCertificateBehavior" />
+    </client>
+
+    <bindings>
+        <netMsmqBinding>
+            <binding name="messageSecurityBinding">
+                <security mode="Message">
+                    <message clientCredentialType="Certificate"/>
+                </security>
+            </binding>
+        </netMsmqBinding>
+    </bindings>
+
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="ClientCertificateBehavior">
+          <!--
+        The clientCredentials behavior allows one to define a certificate to present to a service.
+        A certificate is used by a client to authenticate itself to the service and provide message integrity.
+        This configuration references the "client.com" certificate installed during the setup instructions.
+        -->
+          <clientCredentials>
+            <clientCertificate findValue="client.com" storeLocation="CurrentUser" storeName="My" x509FindType="FindBySubjectName" />
+            <serviceCertificate>
+                <defaultCertificate findValue="localhost" storeLocation="CurrentUser" storeName="TrustedPeople" x509FindType="FindBySubjectName"/>
+              <!--
+            Setting the certificateValidationMode to PeerOrChainTrust means that if the certificate
+            is in the user's Trusted People store, then it is trusted without performing a
+            validation of the certificate's issuer chain. This setting is used here for convenience so that the
+            sample can be run without having to have certificates issued by a certification authority (CA).
+            This setting is less secure than the default, ChainTrust. The security implications of this
+            setting should be carefully considered before using PeerOrChainTrust in production code.
+            -->
+              <authentication certificateValidationMode="PeerOrChainTrust" />
+            </serviceCertificate>
+          </clientCredentials>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+
+  </system.serviceModel>
+</configuration>
+```
+
+ Należy zauważyć, że tryb zabezpieczeń jest ustawiony na komunikat i ClientCredentialType jest ustawiony na certyfikatu.
+
+ Konfiguracja usługi zawiera zachowanie usługi, który określa poświadczenia, które są używane, gdy klient uwierzytelnia się usługi. Nazwa podmiotu certyfikatu serwera jest określona w `findValue` atrybutu w [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+  <appSettings>
+    <!-- Use appSetting to configure MSMQ queue name. -->
+    <add key="queueName" value=".\private$\ServiceModelSamplesMessageSecurity" />
+  </appSettings>
+
+  <system.serviceModel>
+    <services>
+      <service
+          name="Microsoft.ServiceModel.Samples.OrderProcessorService"
+          behaviorConfiguration="PurchaseOrderServiceBehavior">
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>
+          </baseAddresses>
+        </host>
+        <!-- Define NetMsmqEndpoint -->
+        <endpoint address="net.msmq://localhost/private/ServiceModelSamplesMessageSecurity"
+                  binding="netMsmqBinding"
+                  bindingConfiguration="messageSecurityBinding"
+                  contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />
+        <!-- The mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex. -->
+        <endpoint address="mex"
+                  binding="mexHttpBinding"
+                  contract="IMetadataExchange" />
+      </service>
+    </services>
+
+    <bindings>
+        <netMsmqBinding>
+            <binding name="messageSecurityBinding">
+                <security mode="Message">
+                    <message clientCredentialType="Certificate" />
+                </security>
+            </binding>
+        </netMsmqBinding>
+    </bindings>
+
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="PurchaseOrderServiceBehavior">
+          <serviceMetadata httpGetEnabled="True"/>
+          <!--
+               The serviceCredentials behavior allows one to define a service certificate.
+               A service certificate is used by the service to authenticate itself to its clients and to provide message protection.
+               This configuration references the "localhost" certificate installed during the setup instructions.
+          -->
+          <serviceCredentials>
+            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName" />
+            <clientCertificate>
+                <certificate findValue="client.com" storeLocation="LocalMachine" storeName="TrustedPeople" x509FindType="FindBySubjectName"/>
+              <!--
+            Setting the certificateValidationMode to PeerOrChainTrust means that if the certificate
+            is in the user's Trusted People store, then it is trusted without performing a
+            validation of the certificate's issuer chain. This setting is used here for convenience so that the
+            sample can be run without having to have certificates issued by a certification authority (CA).
+            This setting is less secure than the default, ChainTrust. The security implications of this
+            setting should be carefully considered before using PeerOrChainTrust in production code.
+            -->
+              <authentication certificateValidationMode="PeerOrChainTrust" />
+            </clientCertificate>
+          </serviceCredentials>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+
+  </system.serviceModel>
+
+</configuration>
+```
+
+ W przykładzie pokazano kontroli uwierzytelniania za pomocą konfiguracji i jak można uzyskać tożsamości elementu wywołującego z kontekstu zabezpieczeń, jak pokazano w poniższym przykładowym kodzie:
+
 ```csharp
-// Service class which implements the service contract.  
-// Added code to write output to the console window.  
-public class OrderProcessorService : IOrderProcessor  
-{  
-    private string GetCallerIdentity()  
-    {  
-        // The client certificate is not mapped to a Windows identity by default.  
-        // ServiceSecurityContext.PrimaryIdentity is populated based on the information  
-        // in the certificate that the client used to authenticate itself to the service.  
-        return ServiceSecurityContext.Current.PrimaryIdentity.Name;  
-    }  
+// Service class which implements the service contract.
+// Added code to write output to the console window.
+public class OrderProcessorService : IOrderProcessor
+{
+    private string GetCallerIdentity()
+    {
+        // The client certificate is not mapped to a Windows identity by default.
+        // ServiceSecurityContext.PrimaryIdentity is populated based on the information
+        // in the certificate that the client used to authenticate itself to the service.
+        return ServiceSecurityContext.Current.PrimaryIdentity.Name;
+    }
 
-    [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
-    public void SubmitPurchaseOrder(PurchaseOrder po)  
-    {  
-        Console.WriteLine("Client's Identity {0} ", GetCallerIdentity());  
-        Orders.Add(po);  
-        Console.WriteLine("Processing {0} ", po);  
-    }  
-  //…  
-}  
+    [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]
+    public void SubmitPurchaseOrder(PurchaseOrder po)
+    {
+        Console.WriteLine("Client's Identity {0} ", GetCallerIdentity());
+        Orders.Add(po);
+        Console.WriteLine("Processing {0} ", po);
+    }
+  //…
+}
 ```
-  
- Po uruchomieniu kodu usługi Wyświetla identyfikator klienta. Poniżej przedstawiono przykładowe dane wyjściowe z kodem usługi:  
-  
-```  
-The service is ready.  
-Press <ENTER> to terminate service.  
-  
-Client's Identity CN=client.com; ECA6629A3C695D01832D77EEE836E04891DE9D3C  
-Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d  
-        Customer: somecustomer.com  
-        OrderDetails  
-                Order LineItem: 54 of Blue Widget @unit price: $29.99  
-                Order LineItem: 890 of Red Widget @unit price: $45.89  
-        Total cost of this order: $42461.56  
-        Order status: Pending  
-```  
-  
-## <a name="comments"></a>Komentarze  
-  
--   Tworzenie certyfikatu klienta.  
-  
-     Następujący wiersz w pliku wsadowym tworzy certyfikat klienta. Podana nazwa klienta jest używany w nazwie podmiotu certyfikatu, utworzony. Certyfikat jest przechowywany w `My` przechowywać `CurrentUser` lokalizacji magazynu.  
-  
+
+ Po uruchomieniu kodu usługi Wyświetla identyfikator klienta. Poniżej przedstawiono przykładowe dane wyjściowe z kodem usługi:
+
+```
+The service is ready.
+Press <ENTER> to terminate service.
+
+Client's Identity CN=client.com; ECA6629A3C695D01832D77EEE836E04891DE9D3C
+Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
+        Customer: somecustomer.com
+        OrderDetails
+                Order LineItem: 54 of Blue Widget @unit price: $29.99
+                Order LineItem: 890 of Red Widget @unit price: $45.89
+        Total cost of this order: $42461.56
+        Order status: Pending
+```
+
+## <a name="comments"></a>Komentarze
+
+-   Tworzenie certyfikatu klienta.
+
+     Następujący wiersz w pliku wsadowym tworzy certyfikat klienta. Podana nazwa klienta jest używany w nazwie podmiotu certyfikatu, utworzony. Certyfikat jest przechowywany w `My` przechowywać `CurrentUser` lokalizacji magazynu.
+
     ```bat
-    echo ************  
-    echo making client cert  
-    echo ************  
-    makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
-    ```  
-  
--   Instalowanie certyfikatu klienta do magazynu zaufanych certyfikatów serwera.  
-  
-     Następujący wiersz w kopii pliku wsadowego certyfikat klienta do serwera TrustedPeople przechowywać tak, aby istotne zaufania lub decyzji dotyczących zaufania nie mogą być serwera. Certyfikat zainstalowany w magazynie TrustedPeople, aby być uważany za zaufany przez usługę Windows Communication Foundation (WCF), tryb walidacji certyfikatu klienta musi być równa `PeerOrChainTrust` lub `PeerTrust` wartość. Zobacz poprzedni przykład konfiguracji usługi, aby dowiedzieć się, jak można to zrobić przy użyciu pliku konfiguracji.  
-  
+    echo ************
+    echo making client cert
+    echo ************
+    makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
+    ```
+
+-   Instalowanie certyfikatu klienta do magazynu zaufanych certyfikatów serwera.
+
+     Następujący wiersz w kopii pliku wsadowego certyfikat klienta do serwera TrustedPeople przechowywać tak, aby istotne zaufania lub decyzji dotyczących zaufania nie mogą być serwera. Certyfikat zainstalowany w magazynie TrustedPeople, aby być uważany za zaufany przez usługę Windows Communication Foundation (WCF), tryb walidacji certyfikatu klienta musi być równa `PeerOrChainTrust` lub `PeerTrust` wartość. Zobacz poprzedni przykład konfiguracji usługi, aby dowiedzieć się, jak można to zrobić przy użyciu pliku konfiguracji.
+
     ```bat
-    echo ************  
-    echo copying client cert to server's LocalMachine store  
-    echo ************  
-    certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople  
-    ```  
-  
--   Tworzenie certyfikatu serwera.  
-  
-     Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany:  
-  
-    ```bat  
-    echo ************  
-    echo Server cert setup starting  
-    echo %SERVER_NAME%  
-    echo ************  
-    echo making server cert  
-    echo ************  
-    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-    ```  
-  
-     % Zmienna % nazwa_serwera Określa nazwę serwera. Certyfikat jest przechowywany w magazynie LocalMachine. Jeśli instalacyjny plik wsadowy jest uruchamiany z nieprawidłowym argumentem usługi (takie jak `setup.bat service`) nazwa_serwera % zawiera w pełni kwalifikowana nazwa domeny komputera. W przeciwnym razie jego wartość domyślna to hosta lokalnego  
-  
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.  
-  
-     Następujący wiersz kopiuje certyfikatu serwera w magazynie zaufanych osób klienta. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.  
-  
-    ```  
-    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-    ```  
-  
+    echo ************
+    echo copying client cert to server's LocalMachine store
+    echo ************
+    certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
+    ```
+
+-   Tworzenie certyfikatu serwera.
+
+     Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany:
+
+    ```bat
+    echo ************
+    echo Server cert setup starting
+    echo %SERVER_NAME%
+    echo ************
+    echo making server cert
+    echo ************
+    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
+    ```
+
+     % Zmienna % nazwa_serwera Określa nazwę serwera. Certyfikat jest przechowywany w magazynie LocalMachine. Jeśli instalacyjny plik wsadowy jest uruchamiany z nieprawidłowym argumentem usługi (takie jak `setup.bat service`) nazwa_serwera % zawiera w pełni kwalifikowana nazwa domeny komputera. W przeciwnym razie jego wartość domyślna to hosta lokalnego
+
+-   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.
+
+     Następujący wiersz kopiuje certyfikatu serwera w magazynie zaufanych osób klienta. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.
+
+    ```
+    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
+    ```
+
     > [!NOTE]
-    >  Jeśli używasz spoza USA Wersja programu Microsoft Windows, należy edytować Setup.bat i zastąp nazwę konta "NT AUTHORITY\NETWORK SERVICE" ekwiwalent regionalne w języku angielskim.  
-  
+    >  Jeśli używasz spoza USA Wersja programu Microsoft Windows, należy edytować Setup.bat i zastąp nazwę konta "NT AUTHORITY\NETWORK SERVICE" ekwiwalent regionalne w języku angielskim.
+
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   

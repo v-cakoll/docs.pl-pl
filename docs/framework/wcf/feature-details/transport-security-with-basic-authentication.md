@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 author: BrucePerlerMS
 ms.openlocfilehash: 4a6ad2746bea9dfea1999e272796d44f0341e64d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235575"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777282"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem podstawowym
 Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation (WCF) i klienta. Serwer musi mieć prawidłowy certyfikat X.509, który może służyć do Secure Sockets Layer (SSL), a klienci muszą ufać certyfikatowi serwera. Ponadto usługa sieci Web już implementacją protokołu SSL, który może służyć. Aby uzyskać więcej informacji dotyczących włączania uwierzytelniania podstawowego w Internet Information Services (IIS), zobacz [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  

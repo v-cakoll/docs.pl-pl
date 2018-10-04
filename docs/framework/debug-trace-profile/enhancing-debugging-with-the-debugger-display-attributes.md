@@ -16,11 +16,11 @@ ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4150658f713e626c5578c21cfada0f6410cbd37b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208071"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779598"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Udoskonalanie debugowania za pomocą atrybutów wyświetlania debugera
 

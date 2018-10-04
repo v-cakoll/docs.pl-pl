@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 773708eab617e7f4cfdffad2e5019e66c60ebf37
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787067"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584223"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Wskazówki: powiązanie z danymi w aplikacjach hybrydowych
 Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniając użytkownikom dostęp do danych bazowych, czy używasz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. W tym instruktażu przedstawiono sposób korzystania powiązanie danych w aplikacjach hybrydowych, które zawierają zarówno [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki.  
@@ -41,7 +41,7 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+-   Program Visual Studio.  
   
 -   Dostęp do przykładowej bazy danych Northwind uruchomiony program Microsoft SQL Server.  
   
@@ -140,34 +140,34 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
      Ten kod deklaruje <xref:System.Windows.Forms.BindingSource> składników i klas pomocniczych skojarzone, łączących się z bazą danych.  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
-     [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]  
-  
-3.  Skopiuj następujący kod do konstruktora.  
-  
-     Ten kod tworzy i inicjuje <xref:System.Windows.Forms.BindingSource> składnika.  
-  
+     [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
+
+3.  Skopiuj następujący kod do konstruktora.
+
+     Ten kod tworzy i inicjuje <xref:System.Windows.Forms.BindingSource> składnika.
+
      [!code-csharp[WPFWithWFAndDatabinding#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
-     [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]  
-  
-4.  Open MainWindow.xaml.  
-  
-5.  W widoku projektu lub XAML, wybierz <xref:System.Windows.Window> elementu.  
-  
-6.  W oknie dialogowym właściwości kliknij **zdarzenia** kartę.  
-  
-7.  Kliknij dwukrotnie <xref:System.Windows.FrameworkElement.Loaded> zdarzeń.  
-  
-8.  Skopiuj następujący kod do <xref:System.Windows.FrameworkElement.Loaded> programu obsługi zdarzeń.  
-  
-     Ten kod przypisuje <xref:System.Windows.Forms.BindingSource> składnika, ponieważ kontekst danych i wypełnienie `Customers` i `Orders` obiektów karty.  
-  
+     [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
+
+4.  Open MainWindow.xaml.
+
+5.  W widoku projektu lub XAML, wybierz <xref:System.Windows.Window> elementu.
+
+6.  W oknie dialogowym właściwości kliknij **zdarzenia** kartę.
+
+7.  Kliknij dwukrotnie <xref:System.Windows.FrameworkElement.Loaded> zdarzeń.
+
+8.  Skopiuj następujący kod do <xref:System.Windows.FrameworkElement.Loaded> programu obsługi zdarzeń.
+
+     Ten kod przypisuje <xref:System.Windows.Forms.BindingSource> składnika, ponieważ kontekst danych i wypełnienie `Customers` i `Orders` obiektów karty.
+
      [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
-     [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]  
-  
-9. Skopiuj następujący kod do `MainWindow` definicji klasy.  
-  
-     Ta metoda obsługuje <xref:System.Windows.Data.CollectionView.CurrentChanged> zdarzeń i aktualizacji bieżący element powiązania danych.  
-  
+     [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
+
+9. Skopiuj następujący kod do `MainWindow` definicji klasy.
+
+     Ta metoda obsługuje <xref:System.Windows.Data.CollectionView.CurrentChanged> zdarzeń i aktualizacji bieżący element powiązania danych.
+
      [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
   

@@ -7,11 +7,11 @@ ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19353bd068e3b04bc3d852c1e22db9c97ebef628
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48245052"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583168"
 ---
 # <a name="whats-new-in-the-net-standard"></a>What's new in .NET Standard
 

@@ -3,11 +3,11 @@ title: Windows Workflow (WF) przykładowa dokumentacja
 ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
 ms.openlocfilehash: 64153e885cd4203134d429d2d8b8e246628de5fb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027000"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266549"
 ---
 # <a name="windows-workflow-wf-samples"></a>Przykłady Windows Workflow
 

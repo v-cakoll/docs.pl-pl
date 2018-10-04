@@ -2,12 +2,12 @@
 title: Tworzenie działania w czasie wykonywania za pomocą działania DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 880dbc6263b64c877d3211347541766d91534c85
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 32a35d5220950d8547b1f934c431bdb9c3627e8e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027367"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583878"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Tworzenie działania w czasie wykonywania za pomocą działania DynamicActivity
 <xref:System.Activities.DynamicActivity> jest klasą konkretną, sealed przy użyciu publicznego konstruktora. <xref:System.Activities.DynamicActivity> może służyć do włączenia funkcji działania w czasie wykonywania za pomocą działania modelu DOM.  
@@ -21,7 +21,7 @@ ms.locfileid: "48027367"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Aby utworzyć działanie w czasie wykonywania przy użyciu kodu imperatywnego  
   
-1.  Otwórz[!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Otwórz program Visual Studio 2010.  
   
 2.  Wybierz **pliku**, **nowe**, **projektu**. Wybierz **Workflow 4.0** w obszarze **Visual C#** w **typów projektów** okna, a następnie wybierz **v2010** węzła. Wybierz **sekwencyjne Aplikacja konsoli przepływu pracy** w **szablony** okna. Nazwa nowego projektu DynamicActivitySample.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48027367"
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>Aby utworzyć działanie w czasie wykonywania przy użyciu XAML  
   
-1.  Otwórz [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Otwórz program Visual Studio 2010.  
   
 2.  Wybierz **pliku**, **nowe**, **projektu**. Wybierz **Workflow 4.0** w obszarze **Visual C#** w **typów projektów** okna, a następnie wybierz **v2010** węzła. Wybierz **Aplikacja konsoli przepływu pracy** w **szablony** okna. Nazwa nowego projektu DynamicActivitySample.  
   

@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
 ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030625"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582427"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Weryfikacja po stronie klienta (Weryfikacja w warstwach prezentacji)
 

@@ -3,12 +3,12 @@ title: '&lt;security&gt; w &lt;wsDualHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
 author: BrucePerlerMS
-ms.openlocfilehash: c817ea6faf5229a8d372a06b866c75e0f40af3b3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 761eb9d111630d64d0fe4450c7a8950a8181366d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033106"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48776546"
 ---
 # <a name="ltsecuritygt-of-ltwsdualhttpbindinggt"></a>&lt;security&gt; w &lt;wsDualHttpBinding&gt;
 Definiuje możliwości zabezpieczeń [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -67,5 +67,5 @@ Definiuje możliwości zabezpieczeń [ \<wsDualHttpBinding >](../../../../../doc
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

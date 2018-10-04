@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034223"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579916"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete — funkcja
 Usuwa określony kwalifikator według nazwy.  

@@ -2,12 +2,12 @@
 title: Zagadnienia dotyczące migracji (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d6643986190b376e188b19851b044bcf05ff7f02
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cf705caa84742d654465a2dba005f2d8f32abcca
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511025"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778026"
 ---
 # <a name="migration-considerations-entity-framework"></a>Zagadnienia dotyczące migracji (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework zapewnia kilka korzyści z istniejącą aplikacją. Jednym z najbardziej istotna te korzyści jest możliwość stosowania modelu koncepcyjnego do oddzielnych struktur danych używanych przez aplikację ze schematu w źródle danych. Dzięki temu można łatwo wprowadzić przyszłe zmiany w modelu magazynu lub do źródła danych bez wprowadzania zmian wyrównującej do aplikacji. Aby uzyskać więcej informacji o zaletach korzystania z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], zobacz [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) i [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -29,11 +29,11 @@ ms.locfileid: "43511025"
  Ścieżka do migrowania istniejących aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zależy od zarówno typ aplikacji i istniejąca strategia dostępu do danych. Jednak należy zawsze wykonać następujące zadania podczas migracji istniejącej aplikacji do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 > [!NOTE]
->  Wszystkie te zadania są wykonywane automatycznie za pomocą narzędzia modelu Entity Data Model, począwszy od [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)]. Aby uzyskać więcej informacji, zobacz [porady: Użyj Kreator modelu Entity Data Model](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  Wszystkie te zadania są wykonywane automatycznie, gdy jest możliwe użycie narzędzi modelu Entity Data Model, począwszy od programu Visual Studio 2008. Aby uzyskać więcej informacji, zobacz [porady: Użyj Kreator modelu Entity Data Model](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 1.  Uaktualnienie aplikacji.  
   
-     Projekt, który został utworzony przy użyciu wcześniejszej wersji programu Visual Studio i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] musi zostać uaktualniony do użycia [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] z dodatkiem SP1 i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] począwszy od wersji 3.5 z dodatkiem SP1.  
+     Projekt, który został utworzony przy użyciu wcześniejszej wersji programu Visual Studio i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] musi zostać uaktualniony, aby użyć programu Visual Studio 2008 z dodatkiem SP1 i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] począwszy od wersji 3.5 z dodatkiem SP1.  
   
 2.  Zdefiniuj modeli i mapowania.  
   

@@ -2,106 +2,106 @@
 title: Obsługa nowych funkcji Foundation 4.5 w Rehostowanym projektancie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: f0afc9f0a6254b0df1e0c6e724ec5b3cfd1f86d0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c6f6c6baedba0c932472a087d378ccce90b60db7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800638"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266735"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowych funkcji Foundation 4.5 w Rehostowanym projektancie przepływu pracy
-Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, w tym kilka ulepszeń środowiska projektanta przepływu pracy. W tym temacie przedstawiono, które z tych funkcji są obsługiwane w rehostowanym projektancie i te, które nie są obecnie obsługiwane.  
-  
+Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, w tym kilka ulepszeń środowiska projektanta przepływu pracy. W tym temacie przedstawiono, które z tych funkcji są obsługiwane w rehostowanym projektancie i te, które nie są obecnie obsługiwane.
+
 > [!NOTE]
->  Aby uzyskać listę wszystkich nowych funkcji Windows Workflow Foundation (WF), wprowadzone w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], w tym te, które są powiązane z rehostowanie projektanta, zobacz [What's New in Windows Workflow Foundation w .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
-  
-## <a name="activities"></a>Kategoria Activities  
- Wbudowana biblioteka działań zawiera nowe działania i nowe funkcje dla istniejących działań. Wszystkie te nowe działania są obsługiwane w rehostowanym projektancie. Aby uzyskać więcej informacji na temat tych nowych działań, zobacz [działania](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) części [What's New in Windows Workflow Foundation w .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
-  
-## <a name="c-expressions"></a>Wyrażeń języka C#  
- Przed [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wszystkie wyrażenia w przepływach pracy można zapisać tylko w języku Visual Basic. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wyrażeń języka Visual Basic są używane tylko w przypadku projektów utworzonych za pomocą języka Visual Basic. Projekty języka Visual C# teraz używać języka C# dla wyrażenia. Podczas tworzenia przepływów pracy w programie [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], w pełni funkcjonalny edytor wyrażeń języka C# znajduje się które możliwości, takie jak intellisense i wyróżnianie gramatyki. Przepływ pracy projektów języka C# utworzone w poprzednich wersjach, które używają wyrażeń języka Visual Basic będą nadal działać.  
-  
+>  Aby uzyskać listę wszystkich nowych funkcji Windows Workflow Foundation (WF), wprowadzone w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], w tym te, które są powiązane z rehostowanie projektanta, zobacz [What's New in Windows Workflow Foundation w .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).
+
+## <a name="activities"></a>Kategoria Activities
+ Wbudowana biblioteka działań zawiera nowe działania i nowe funkcje dla istniejących działań. Wszystkie te nowe działania są obsługiwane w rehostowanym projektancie. Aby uzyskać więcej informacji na temat tych nowych działań, zobacz [działania](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) części [What's New in Windows Workflow Foundation w .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).
+
+## <a name="c-expressions"></a>Wyrażeń języka C#
+ Przed [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wszystkie wyrażenia w przepływach pracy można zapisać tylko w języku Visual Basic. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wyrażeń języka Visual Basic są używane tylko w przypadku projektów utworzonych za pomocą języka Visual Basic. Projekty języka Visual C# teraz używać języka C# dla wyrażenia. Podczas tworzenia przepływów pracy w programie Visual Studio 2012, w pełni funkcjonalny edytor wyrażeń języka C# znajduje się które możliwości, takie jak intellisense i wyróżnianie gramatyki. Przepływ pracy projektów języka C# utworzone w poprzednich wersjach, które używają wyrażeń języka Visual Basic będą nadal działać.
+
 > [!WARNING]
->  Wyrażeń języka C# nie są obsługiwane w rehostowanym projektancie.  
-  
-## <a name="new-designer-capabilities"></a>Nowe funkcje projektanta  
-  
-### <a name="designer-search"></a>Wyszukiwanie projektanta  
- [Szybkie znajdowanie](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [Znajdź w plikach](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) funkcje wprowadzone w programie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] nie są obsługiwane w rehostowanym projektancie. `Toolbox` Wyszukiwanie jest obsługiwane w rehostowanym projektancie. Aby uzyskać więcej informacji o tych funkcjach, zobacz [wyszukiwania projektanta](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).  
-  
+>  Wyrażeń języka C# nie są obsługiwane w rehostowanym projektancie.
+
+## <a name="new-designer-capabilities"></a>Nowe funkcje projektanta
+
+### <a name="designer-search"></a>Wyszukiwanie projektanta
+ [Szybkie znajdowanie](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [Znajdź w plikach](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) funkcje wprowadzone w programie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] nie są obsługiwane w rehostowanym projektancie. `Toolbox` Wyszukiwanie jest obsługiwane w rehostowanym projektancie. Aby uzyskać więcej informacji o tych funkcjach, zobacz [wyszukiwania projektanta](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
+
 > [!WARNING]
->  [Szybkie wyszukiwanie](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [Znajdź w plikach](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) nie są obsługiwane w rehostowanym projektancie.  
-  
-### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Usuń element menu kontekstowego w Projektancie zmienną i argument  
- W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], zmienne i argumenty można usunąć tylko w projektancie, za pomocą klawiatury. Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zmienne i argumenty można usunąć za pomocą menu kontekstowego. Ta funkcja jest obsługiwana w rehostowanym projektancie.  
-  
- Poniższy zrzut ekranu przedstawia zmienną i argument menu kontekstowe projektanta.  
-  
- ![Zmienna i Menu kontekstowego projektanta argumentów](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")  
-  
-### <a name="auto-surround-with-sequence"></a>Auto umieszczanie w sekwencji  
- Od przepływu pracy lub niektóre działania kontenera (takie jak <xref:System.Activities.Statements.NoPersistScope>) może zawierać tylko jednej jednostki działania, dodawanie drugiego działania wymagane dla deweloperów usunąć pierwsze działanie, Dodaj <xref:System.Activities.Statements.Sequence> działania, a następnie dodaj oba działań działanie w sekwencji. Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], podczas dodawania drugiego działania do powierzchni projektanta `Sequence` działanie zostanie automatycznie utworzone do opakowania obu działań. Ta funkcja jest obsługiwana w rehostowanym projektancie.  
-  
- Poniższy zrzut ekranu przedstawia `WriteLine` działania w `Body` z `NoPersistScope`.  
-  
- ![Automatyczne&#45;otaczające lokalizację wrzucania](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
-  
- Poniższy zrzut ekranu przedstawia utworzone automatycznie `Sequence` działania w `Body` po drugiej `WriteLine` jest spadła poniżej pierwszej.  
-  
- ![Automatycznie utworzone działaniu sequence](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
-  
-### <a name="pan-mode"></a>Tryb Pan  
- Aby łatwiej przejść z dużych przepływów pracy w projektancie, można włączyć tryb Przesuń, umożliwiając deweloperom kliknij i przeciągnij, aby przenieść widocznej części przepływu pracy, zamiast konieczności używania pasków przewijania. Przycisk, aby uaktywnić tryb panoramowanie jest w prawym dolnym rogu projektanta. Ta funkcja jest obsługiwana w rehostowanym projektancie.  
-  
- Poniższy zrzut ekranu przedstawia przycisk przesunięcie, który znajduje się w prawym dolnym rogu projektanta przepływów pracy.  
-  
- ![Przycisk przesunięcie w Projektancie przepływu pracy](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")  
-  
- Środkowy przycisk myszy lub spacji może również służyć do Przesuń w Projektancie przepływu pracy.  
-  
-### <a name="multi-select"></a>Możliwość wielokrotnego wyboru  
- Wiele działań można wybrać w tym samym czasie, przeciągając prostokąt wokół nich (gdy nie jest włączony tryb pan) i, przytrzymując klawisz Ctrl i kliknij żądany działania po kolei. Ta funkcja jest obsługiwana w rehostowanym projektancie.  
-  
- Wielokrotny działania można też przeciąganie i upuszczanie w Projektancie i może również przetwarzanie za pomocą menu kontekstowego.  
-  
-### <a name="outline-view-of-workflow-items"></a>Wyświetlanie konspektu elementów przepływu pracy  
- Aby ułatwić hierarchiczne przepływów pracy można przejść, składniki przepływu pracy są wyświetlane w widoku konspektu stylu drzewa. Wyświetlanie konspektu jest wyświetlany w **konspekt dokumentu** widoku. Aby otworzyć ten widok w programie Visual Studio z górnego menu, wybierz **widoku**, **Windows inne**, **konspekt dokumentu**, lub naciśnij klawisze Ctrl W U. Klikając węzeł w widoku konspektu spowoduje przejście do odpowiadającego im działania w Projektancie przepływów pracy i widoku konspektu zostaną zaktualizowane w celu wyświetlenia działań, które są wybrane w projektancie. Ta funkcja jest obsługiwana w rehostowanym projektancie.  
-  
- Poniższy zrzut ekranu przedstawiający ukończony przepływ pracy z [Samouczek wprowadzający](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) Pokazuje widok konspektu sekwencyjnego przepływu pracy.  
-  
- ![Widoku w Projektancie przepływu pracy konspektu](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")  
-  
-### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Większa kontrola nad widoczność pasek powłoki i nagłówek elementów  
- W rehostowanym projektancie niektóre standardowych kontrolek interfejsu użytkownika nie może mieć znaczenie dla danego przepływu pracy i może być wyłączona. W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], to dostosowanie jest obsługiwana tylko przez pasek powłoki w dolnej części projektanta. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], widoczność powłoki elementy nagłówka w górnej części projektanta może być regulowany poprzez ustawienie <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> z odpowiednią <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> wartość.  
-  
-### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Automatyczne łączenie i automatyczne wstawianie w przepływach pracy schematu blokowego i automatu stanów  
- W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], musiały ręcznie dodawać połączeń między węzłami w przepływie pracy schematu blokowego. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], jest blokowy i automatu stanów węzłów automatycznie połączyć z punkty, które stają się widoczne, gdy działanie zostanie przeciągnięty z przybornika na powierzchni projektowej. Upuszczanie działania na jednym z tych punktów automatycznie dodaje działanie oraz niezbędne połączenie.  
-  
- Poniższy zrzut ekranu przedstawia punkty załącznika, które stają się widoczne, gdy działanie zostanie przeciągnięty z przybornika.  
-  
- ![Węzeł początkowy schemat blokowy przedstawiający punktów połączenie automatyczne](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")  
-  
- Działania również można przeciągać połączeń między węzłami schemat blokowy i Stanami automatyczne wstawianie węzła między dwóch pozostałych węzłach. Poniższy zrzut ekranu przedstawia wyróżnione linii łączącej, gdzie można przeciągnąć z przybornika i porzucić działania.  
-  
- ![Automatyczne&#45;Wstaw uchwytu upuszczanie działania](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "automatycznego wstawiania")  
-  
- Automatyczne łączenie i automatyczne wstawianie są obsługiwane w rehostowanym projektancie.  
-  
-### <a name="designer-annotations"></a>Adnotacje projektanta  
- W celu ułatwienia tworzenia większych przepływów pracy, Projektant obsługuje dodawanie adnotacji, aby ułatwić śledzenie procesu projektowania. Adnotację można dodać do działań, Stany, węzłów schematu blokowego, zmienne i argumenty. Poniższy zrzut ekranu przedstawia menu kontekstowe służy do dodawania adnotacji do projektanta.  
-  
- ![Menu kontekstowe adnotacji](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")  
-  
- Adnotacje projektanta są obsługiwane w rehostowanym projektancie.  
-  
-### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definiowanie oraz stosowanie ActivityDelegate obiektów w Projektancie  
- Działania w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] używane <xref:System.Activities.ActivityDelegate> obiekty do udostępnienia punktami wykonania, gdy inne części przepływu pracy można wchodzić w interakcje z wykonywania przepływu pracy, ale zazwyczaj przy użyciu tych punktów wykonywania wymagana ilość kodu. W tej wersji deweloperzy mogą zdefiniować i stosowanie delegowania działania, za pomocą projektanta przepływów pracy. Aby uzyskać więcej informacji, zobacz [porady: Definiowanie oraz stosowanie delegowania działania w Projektancie przepływu pracy](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).  
-  
- Działania delegatach są obsługiwane w rehostowanym projektancie.  
-  
-### <a name="build-time-validation"></a>Sprawdzanie poprawności w czasie kompilacji  
- W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], błędy sprawdzania poprawności przepływu pracy nie traktowane jako błędy kompilacji podczas kompilacji projektu przepływu pracy. Oznacza to, tworzenia przepływu pracy projektu może zakończyć się pomyślnie, nawet wtedy, gdy wystąpiły błędy sprawdzania poprawności przepływu pracy. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kompilacja nie powiedzie się, że błędy walidacji przepływu pracy.  
-  
+>  [Szybkie wyszukiwanie](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) i [Znajdź w plikach](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) nie są obsługiwane w rehostowanym projektancie.
+
+### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Usuń element menu kontekstowego w Projektancie zmienną i argument
+ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], zmienne i argumenty można usunąć tylko w projektancie, za pomocą klawiatury. Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zmienne i argumenty można usunąć za pomocą menu kontekstowego. Ta funkcja jest obsługiwana w rehostowanym projektancie.
+
+ Poniższy zrzut ekranu przedstawia zmienną i argument menu kontekstowe projektanta.
+
+ ![Zmienna i Menu kontekstowego projektanta argumentów](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+
+### <a name="auto-surround-with-sequence"></a>Auto umieszczanie w sekwencji
+ Od przepływu pracy lub niektóre działania kontenera (takie jak <xref:System.Activities.Statements.NoPersistScope>) może zawierać tylko jednej jednostki działania, dodawanie drugiego działania wymagane dla deweloperów usunąć pierwsze działanie, Dodaj <xref:System.Activities.Statements.Sequence> działania, a następnie dodaj oba działań działanie w sekwencji. Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], podczas dodawania drugiego działania do powierzchni projektanta `Sequence` działanie zostanie automatycznie utworzone do opakowania obu działań. Ta funkcja jest obsługiwana w rehostowanym projektancie.
+
+ Poniższy zrzut ekranu przedstawia `WriteLine` działania w `Body` z `NoPersistScope`.
+
+ ![Automatyczne&#45;otaczające lokalizację wrzucania](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+
+ Poniższy zrzut ekranu przedstawia utworzone automatycznie `Sequence` działania w `Body` po drugiej `WriteLine` jest spadła poniżej pierwszej.
+
+ ![Automatycznie utworzone działaniu sequence](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+
+### <a name="pan-mode"></a>Tryb Pan
+ Aby łatwiej przejść z dużych przepływów pracy w projektancie, można włączyć tryb Przesuń, umożliwiając deweloperom kliknij i przeciągnij, aby przenieść widocznej części przepływu pracy, zamiast konieczności używania pasków przewijania. Przycisk, aby uaktywnić tryb panoramowanie jest w prawym dolnym rogu projektanta. Ta funkcja jest obsługiwana w rehostowanym projektancie.
+
+ Poniższy zrzut ekranu przedstawia przycisk przesunięcie, który znajduje się w prawym dolnym rogu projektanta przepływów pracy.
+
+ ![Przycisk przesunięcie w Projektancie przepływu pracy](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+
+ Środkowy przycisk myszy lub spacji może również służyć do Przesuń w Projektancie przepływu pracy.
+
+### <a name="multi-select"></a>Możliwość wielokrotnego wyboru
+ Wiele działań można wybrać w tym samym czasie, przeciągając prostokąt wokół nich (gdy nie jest włączony tryb pan) i, przytrzymując klawisz Ctrl i kliknij żądany działania po kolei. Ta funkcja jest obsługiwana w rehostowanym projektancie.
+
+ Wielokrotny działania można też przeciąganie i upuszczanie w Projektancie i może również przetwarzanie za pomocą menu kontekstowego.
+
+### <a name="outline-view-of-workflow-items"></a>Wyświetlanie konspektu elementów przepływu pracy
+ Aby ułatwić hierarchiczne przepływów pracy można przejść, składniki przepływu pracy są wyświetlane w widoku konspektu stylu drzewa. Wyświetlanie konspektu jest wyświetlany w **konspekt dokumentu** widoku. Aby otworzyć ten widok w programie Visual Studio z górnego menu, wybierz **widoku**, **Windows inne**, **konspekt dokumentu**, lub naciśnij klawisze Ctrl W U. Klikając węzeł w widoku konspektu spowoduje przejście do odpowiadającego im działania w Projektancie przepływów pracy i widoku konspektu zostaną zaktualizowane w celu wyświetlenia działań, które są wybrane w projektancie. Ta funkcja jest obsługiwana w rehostowanym projektancie.
+
+ Poniższy zrzut ekranu przedstawiający ukończony przepływ pracy z [Samouczek wprowadzający](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) Pokazuje widok konspektu sekwencyjnego przepływu pracy.
+
+ ![Widoku w Projektancie przepływu pracy konspektu](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+
+### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Większa kontrola nad widoczność pasek powłoki i nagłówek elementów
+ W rehostowanym projektancie niektóre standardowych kontrolek interfejsu użytkownika nie może mieć znaczenie dla danego przepływu pracy i może być wyłączona. W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], to dostosowanie jest obsługiwana tylko przez pasek powłoki w dolnej części projektanta. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], widoczność powłoki elementy nagłówka w górnej części projektanta może być regulowany poprzez ustawienie <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> z odpowiednią <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> wartość.
+
+### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Automatyczne łączenie i automatyczne wstawianie w przepływach pracy schematu blokowego i automatu stanów
+ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], musiały ręcznie dodawać połączeń między węzłami w przepływie pracy schematu blokowego. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], jest blokowy i automatu stanów węzłów automatycznie połączyć z punkty, które stają się widoczne, gdy działanie zostanie przeciągnięty z przybornika na powierzchni projektowej. Upuszczanie działania na jednym z tych punktów automatycznie dodaje działanie oraz niezbędne połączenie.
+
+ Poniższy zrzut ekranu przedstawia punkty załącznika, które stają się widoczne, gdy działanie zostanie przeciągnięty z przybornika.
+
+ ![Węzeł początkowy schemat blokowy przedstawiający punktów połączenie automatyczne](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+
+ Działania również można przeciągać połączeń między węzłami schemat blokowy i Stanami automatyczne wstawianie węzła między dwóch pozostałych węzłach. Poniższy zrzut ekranu przedstawia wyróżnione linii łączącej, gdzie można przeciągnąć z przybornika i porzucić działania.
+
+ ![Automatyczne&#45;Wstaw uchwytu upuszczanie działania](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "automatycznego wstawiania")
+
+ Automatyczne łączenie i automatyczne wstawianie są obsługiwane w rehostowanym projektancie.
+
+### <a name="designer-annotations"></a>Adnotacje projektanta
+ W celu ułatwienia tworzenia większych przepływów pracy, Projektant obsługuje dodawanie adnotacji, aby ułatwić śledzenie procesu projektowania. Adnotację można dodać do działań, Stany, węzłów schematu blokowego, zmienne i argumenty. Poniższy zrzut ekranu przedstawia menu kontekstowe służy do dodawania adnotacji do projektanta.
+
+ ![Menu kontekstowe adnotacji](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+
+ Adnotacje projektanta są obsługiwane w rehostowanym projektancie.
+
+### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definiowanie oraz stosowanie ActivityDelegate obiektów w Projektancie
+ Działania w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] używane <xref:System.Activities.ActivityDelegate> obiekty do udostępnienia punktami wykonania, gdy inne części przepływu pracy można wchodzić w interakcje z wykonywania przepływu pracy, ale zazwyczaj przy użyciu tych punktów wykonywania wymagana ilość kodu. W tej wersji deweloperzy mogą zdefiniować i stosowanie delegowania działania, za pomocą projektanta przepływów pracy. Aby uzyskać więcej informacji, zobacz [porady: Definiowanie oraz stosowanie delegowania działania w Projektancie przepływu pracy](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+
+ Działania delegatach są obsługiwane w rehostowanym projektancie.
+
+### <a name="build-time-validation"></a>Sprawdzanie poprawności w czasie kompilacji
+ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], błędy sprawdzania poprawności przepływu pracy nie traktowane jako błędy kompilacji podczas kompilacji projektu przepływu pracy. Oznacza to, tworzenia przepływu pracy projektu może zakończyć się pomyślnie, nawet wtedy, gdy wystąpiły błędy sprawdzania poprawności przepływu pracy. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kompilacja nie powiedzie się, że błędy walidacji przepływu pracy.
+
 > [!WARNING]
 >  Czas kompilacji sprawdzania poprawności nie jest obsługiwana w rehostowanym projektancie.  
   

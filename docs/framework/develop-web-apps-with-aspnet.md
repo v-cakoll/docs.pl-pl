@@ -1,26 +1,44 @@
 ---
 title: Tworzenie aplikacji internetowej z wykorzystaniem technologii ASP.NET
-ms.date: 10/10/2017
+ms.date: 09/25/2018
 helpviewer_keywords:
 - ASP.NET
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 9033927f714a6788a10d6966973ad2ac51d17945
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 51cc54d67d5b68e07f1dcfcb4c62f32cd509d51a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191387"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580514"
 ---
-# <a name="developing-web-applications-with-aspnet"></a>Tworzenie aplikacji internetowej z wykorzystaniem technologii ASP.NET
-ASP.NET jest technologią .NET Framework do tworzenia aplikacji sieci web. Dla wygody użytkownika dostępne są następujące łącza:  
+# <a name="developing-web-apps-with-aspnet"></a>Tworzenie aplikacji sieci Web przy użyciu platformy ASP.NET
 
-- [Dokumentacja programu ASP.NET Core](/aspnet/core/)   
-- [Dokumentacja platformy ASP.NET](/aspnet/overview)   
-- [ASP.NET MVC](https://go.microsoft.com/fwlink/p/?LinkID=227227)   
-- [ASP.NET Web Pages](https://go.microsoft.com/fwlink/p/?LinkId=251040)   
+ASP.NET jest technologią .NET Framework do tworzenia aplikacji sieci web. Aby uzyskać więcej informacji na temat platformy ASP.NET zobacz:
+
+- [Dokumentacja platformy ASP.NET](/aspnet/overview)
+- [ASP.NET MVC](https://go.microsoft.com/fwlink/p/?LinkID=227227)
+- [ASP.NET Web Pages](https://go.microsoft.com/fwlink/p/?LinkId=251040)
 - [ASP.NET Web API](https://go.microsoft.com/fwlink/p/?LinkId=251041)  
+- [Tworzenie aplikacji internetowej środowiska ASP.NET Framework na platformie Azure](/azure/app-service/app-service-web-get-started-dotnet-framework)
+- 
+## <a name="developing-web-apps-with-aspnet-core"></a>Tworzenie aplikacji sieci Web przy użyciu platformy ASP.NET Core
+
+Platforma ASP.NET Core to przeprojektowana platforma ASP.NET 4.x. Niektóre z korzyści platformy ASP.NET Core oferuje za pośrednictwem programu ASP.NET:
+
+- Wiele platform.
+- Bardziej zwartej i modułowej więcej.
+- Ujednolicony scenariusz na potrzeby tworzenia internetowego interfejsu użytkownika i internetowych interfejsów API.
+
+Zobacz [Dlaczego warto korzystać z platformy ASP.NET Core?](/aspnet/core#why-use-aspnet-core) dla rozwiniętą listę korzyści.
+
+Aby uzyskać więcej informacji na temat ASP.NET Core](/aspnet/core) zobacz:
+
+- [Wprowadzenie do korzystania ze stron Razor](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+- [Tworzenie interfejsu Web API](/aspnet/core/tutorials/first-web-api)
+- [Tworzenie aplikacji internetowej platformy ASP.NET Core na platformie Azure](/azure/app-service/app-service-web-get-started-dotnet)
   
 ## <a name="see-also"></a>Zobacz także
- [Podręcznik programowania](../../docs/framework/development-guide.md)
+
+[Podręcznik programowania](../../docs/framework/development-guide.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
 ms.openlocfilehash: d577754e8cb686c40172abd6c0bbd00bc481f737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027182"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582505"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Przekazywanie parametrów typu odwołanie (Przewodnik programowania w języku C#)
 Zmienna [odwołania do typu](../../../csharp/language-reference/keywords/reference-types.md) nie zawierają swoje dane bezpośrednio; zawiera on odwołanie do swoich danych. Należy podać parametr typu odwołania przez wartość, jest możliwość zmiany danych należących do przywoływanego obiektu, na przykład wartość składowej klasy. Jednak nie możesz zmienić wartości odwołania. na przykład nie można użyć tego samego odwołania można przydzielić pamięci dla nowej klasy i jego utrwalenia poza metodą. Aby to zrobić, należy przekazać przy użyciu parametru [ref](../../../csharp/language-reference/keywords/ref.md) lub [się](../../../csharp/language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Dla uproszczenia w poniższych przykładach używane `ref`.  

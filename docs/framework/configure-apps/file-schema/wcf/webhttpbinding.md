@@ -2,12 +2,12 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 19b82500c1d24dbbf3e630e3021f195149e19b92
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0138eab4db42a64a74212d5c68f693916d7b702a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516950"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582544"
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Definiuje element powiązania, który jest używany do konfigurowania punktów końcowych usługi sieci Web Windows Communication Foundation (WCF), które odpowiadają na żądania HTTP zamiast na wiadomości SOAP.  
@@ -97,5 +97,5 @@ Definiuje element powiązania, który jest używany do konfigurowania punktów k
  [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

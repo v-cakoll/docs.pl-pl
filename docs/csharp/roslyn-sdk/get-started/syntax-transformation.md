@@ -3,12 +3,12 @@ title: Wprowadzenie do składni przekształcania (interfejsy API Roslyn)
 description: Wprowadzenie do przechodzenie przez wykonywanie zapytań i zalet drzewa składni.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400793"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266718"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Wprowadzenie do składni przekształcania
 
@@ -120,7 +120,7 @@ public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatem
 ```
 
 > [!NOTE]
-> Wiele interfejsów API Roslyn Zadeklaruj typy zwracane, które są klasy bazowe typy rzeczywiste środowiska uruchomieniowego, zwracany. n wiele scenariuszy, może być zastąpiony przez inny rodzaj węzła całkowicie — lub nawet usunąć jeden rodzaj węzła. W tym przykładzie <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> metoda zwraca <xref:Microsoft.CodeAnalysis.SyntaxNode>, a nie typ pochodny <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Ta dysków zwraca nowy <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> węzła oparte na istniejącą grupę.
+> Wiele interfejsów API Roslyn Zadeklaruj typy zwracane, które są klasy bazowe typy rzeczywiste środowiska uruchomieniowego, zwracany. W wielu scenariuszach jeden rodzaj węzła może być zastąpiony przez inny rodzaj węzła całkowicie — lub nawet usunąć. W tym przykładzie <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> metoda zwraca <xref:Microsoft.CodeAnalysis.SyntaxNode>, a nie typ pochodny <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Ta dysków zwraca nowy <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> węzła oparte na istniejącą grupę.
 
 Ten przewodnik szybkiego startu obsługuje deklaracje zmiennych lokalnych. Można rozszerzyć do innych deklaracji takich jak `foreach` pętli, `for` pętle, wyrażenia LINQ i wyrażeń lambda. Ponadto to dysków spowoduje przekształcenie tylko deklaracje najprostszej postaci:
 

@@ -9,11 +9,11 @@ ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 666f8f60e27a2e513d9d33ddb6ca09c312e40126
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421758"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777844"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ScrollBar
 > [!NOTE]

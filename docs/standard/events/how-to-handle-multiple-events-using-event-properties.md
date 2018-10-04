@@ -15,11 +15,11 @@ ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029428"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778354"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Porady: obsługa wielu zdarzeń przy użyciu właściwości zdarzenia
 Aby użyć właściwości zdarzeń należy zdefiniować właściwości zdarzenia w klasie, która wywołuje zdarzenia, a następnie ustawić delegatów dla właściwości zdarzenia w klasach, które obsługują zdarzenia. Aby zaimplementować w klasie wiele właściwości zdarzeń, klasa musi wewnętrznie przechowywać i zachowywać zdefiniowanego delegata dla każdego zdarzenia. Typowym podejściem jest implementacja kolekcji delegata, która jest indeksowana przy użyciu klucza zdarzenia.  

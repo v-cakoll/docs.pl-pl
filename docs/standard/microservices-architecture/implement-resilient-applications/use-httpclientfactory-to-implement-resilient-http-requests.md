@@ -4,12 +4,12 @@ description: HttpClientFactory to ceniona fabryki, dostępne od platformy .NET C
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: d40e587966b2e62a197ad10770bf3e28bcbcb511
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 800dc410d0cc49aecb7d936d50f9e575389cf278
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037219"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778500"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Użyj HttpClientFactory do zaimplementowania odporne na błędy żądań HTTP
 
@@ -17,7 +17,7 @@ ms.locfileid: "48037219"
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>Problemy związane z oryginalnej klasy HttpClient dostępnych w programie .NET Core
 
-Oryginalny i dobrze znanym [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) klasy mogą być łatwo używane, ale w niektórych przypadkach go nie jest prawidłowo używany przez wielu deweloperów. 
+Oryginalne i dobrze znane [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) klasy mogą być łatwo używane, ale w niektórych przypadkach go nie jest prawidłowo używany przez wielu deweloperów. 
 
 Jako pierwszego wydania tej klasy jest możliwe do rozporządzania, korzystania z niego przy użyciu `using` instrukcja nie jest najlepszym rozwiązaniem, ponieważ nawet wtedy, gdy użytkownik dispose `HttpClient` obiektu bazowego gniazda nie jest od razu zwolniony i może spowodować poważne zagrożenie o nazwie "gniazda wyczerpanie ". Aby uzyskać więcej informacji na temat tego problemu, zobacz [używasz problem HttpClient i jest on destabilizing oprogramowania](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) wpis w blogu.
 

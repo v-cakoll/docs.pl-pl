@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
 ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032767"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48581843"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Porady: Konfigurowanie ustawień usługi COM +
 Interfejs aplikacji są dodawane lub usuwane za pomocą narzędzia konfiguracji usług COM +, konfiguracji usługi sieci Web jest aktualizowana w pliku konfiguracji aplikacji. W trybie hostowanej modelu COM + plik Application.config jest umieszczany w katalogu głównym aplikacji (aplikacje %PROGRAMFILES%\ComPlus\\{appid} jest wartością domyślną). W obu trybach hostowanych w sieci Web w katalogu określonym vroot znajduje się plik Web.config.  

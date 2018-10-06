@@ -5,12 +5,13 @@ hide_bc: true
 title: Dokumentacja platformy .NET
 description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
 ms.custom: updateeachrelease
-ms.openlocfilehash: a62586689d1fe1c3352171fe71d92620269d9a72
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.date: 06/21/2018
+ms.openlocfilehash: dd07b771f267eb2c022b1e0b8de02aca5b0c7a5c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "39227961"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837472"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -62,7 +63,7 @@ ms.locfileid: "39227961"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Dokumentacja interfejsów API platformy .NET Framework</h3>
+                                    <h3>Dokumentacja interfejsów API programu .NET Framework</h3>
                                 </div>
                             </div>
                         </div>

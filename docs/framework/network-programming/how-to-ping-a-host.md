@@ -7,16 +7,16 @@ ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: e066af175982b71fb42bf2eec75fe9d92f532e61
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264391"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836151"
 ---
-# <a name="how-to-ping-a-host"></a><span data-ttu-id="56c98-102">Porady: polecenie Ping do hosta</span><span class="sxs-lookup"><span data-stu-id="56c98-102">How to: Ping a Host</span></span>
-<span data-ttu-id="56c98-103">W tym przykładzie przedstawiono polecenie ping do hosta zdalnego.</span><span class="sxs-lookup"><span data-stu-id="56c98-103">This sample shows how to ping a remote host.</span></span>  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="b71bc-102">Porady: polecenie Ping do hosta</span><span class="sxs-lookup"><span data-stu-id="b71bc-102">How to: Ping a Host</span></span>
+<span data-ttu-id="b71bc-103">W tym przykładzie przedstawiono polecenie ping do hosta zdalnego.</span><span class="sxs-lookup"><span data-stu-id="b71bc-103">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="56c98-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="56c98-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b71bc-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="b71bc-104">Example</span></span>  
   
 ```  
 using System;  
@@ -122,7 +122,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="56c98-105">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="56c98-105">Compiling the Code</span></span>  
- <span data-ttu-id="56c98-106">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="56c98-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="b71bc-105">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="b71bc-105">Compiling the Code</span></span>  
+ <span data-ttu-id="b71bc-106">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="b71bc-106">This example requires:</span></span>  
   
--   <span data-ttu-id="56c98-107">Odwołuje się do **przestrzeni nazw System.Net** przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="56c98-107">References to the **System.Net** namespace.</span></span>
+-   <span data-ttu-id="b71bc-107">Odwołuje się do **przestrzeni nazw System.Net** przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="b71bc-107">References to the **System.Net** namespace.</span></span>

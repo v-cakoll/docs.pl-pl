@@ -5,22 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a88d5bf99e2d9bb6465413cb5419058014d113a1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004052"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839047"
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="137e5-102">Mapowanie typów danych XML na typy CLR</span><span class="sxs-lookup"><span data-stu-id="137e5-102">Mapping XML Data Types to CLR Types</span></span>
-<span data-ttu-id="137e5-103">W poniższej tabeli opisano domyślne mapowanie między typami danych XML i popularnych typów środowiska uruchomieniowego (języka wspólnego CLR) języka.</span><span class="sxs-lookup"><span data-stu-id="137e5-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
-  
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="137e5-104">W poniższej tabeli opisano domyślne mapowania typu danych XML do typu CLR.</span><span class="sxs-lookup"><span data-stu-id="137e5-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="b537e-102">Mapowanie typów danych XML na typy CLR</span><span class="sxs-lookup"><span data-stu-id="b537e-102">Mapping XML Data Types to CLR Types</span></span>
+
+<span data-ttu-id="b537e-103">W poniższej tabeli opisano domyślne mapowanie między typami danych XML i popularnych typów środowiska uruchomieniowego (języka wspólnego CLR) języka.</span><span class="sxs-lookup"><span data-stu-id="b537e-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>
   
 > [!NOTE]
->  <span data-ttu-id="137e5-105">`xs` i `xdt` prefiksy są mapowane na http://www.w3.org/2001/XMLSchema i http://www.w3.org/2003/05/xpath-datatypes URI przestrzeni nazw odpowiednio.</span><span class="sxs-lookup"><span data-stu-id="137e5-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
+> <span data-ttu-id="b537e-104">`xs` i `xdt` prefiksy są mapowane na <https://www.w3.org/2001/XMLSchema> i <https://www.w3.org/2003/05/xpath-datatypes> URI przestrzeni nazw odpowiednio.</span><span class="sxs-lookup"><span data-stu-id="b537e-104">The `xs` and the `xdt` prefixes are mapped to the <https://www.w3.org/2001/XMLSchema> and the <https://www.w3.org/2003/05/xpath-datatypes> namespace URIs respectively.</span></span>
   
-|<span data-ttu-id="137e5-106">Typ XML o NAZWIE</span><span class="sxs-lookup"><span data-stu-id="137e5-106">XML Type</span></span>|<span data-ttu-id="137e5-107">Typ CLR</span><span class="sxs-lookup"><span data-stu-id="137e5-107">CLR Type</span></span>|  
+|<span data-ttu-id="b537e-105">Typ XML o NAZWIE</span><span class="sxs-lookup"><span data-stu-id="b537e-105">XML Type</span></span>|<span data-ttu-id="b537e-106">Typ CLR</span><span class="sxs-lookup"><span data-stu-id="b537e-106">CLR Type</span></span>|  
 |--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
@@ -71,14 +70,14 @@ ms.locfileid: "46004052"
 |`xdt:untypedAtomic`|<xref:System.String>|  
 |`xdt:anyAtomicType`|<xref:System.Object>|  
 |`xs:anySimpleType`|<xref:System.String>|  
-|<span data-ttu-id="137e5-108">Węzłem dokumentu</span><span class="sxs-lookup"><span data-stu-id="137e5-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="137e5-109">Węzeł elementu</span><span class="sxs-lookup"><span data-stu-id="137e5-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="137e5-110">Węzeł atrybutu</span><span class="sxs-lookup"><span data-stu-id="137e5-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="137e5-111">Węzeł Namespace</span><span class="sxs-lookup"><span data-stu-id="137e5-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="137e5-112">Węzeł tekstowy</span><span class="sxs-lookup"><span data-stu-id="137e5-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="137e5-113">Węzeł komentarzy</span><span class="sxs-lookup"><span data-stu-id="137e5-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="137e5-114">Węzeł przetwarzania instrukcji</span><span class="sxs-lookup"><span data-stu-id="137e5-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="b537e-107">Węzłem dokumentu</span><span class="sxs-lookup"><span data-stu-id="b537e-107">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="b537e-108">Węzeł elementu</span><span class="sxs-lookup"><span data-stu-id="b537e-108">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="b537e-109">Węzeł atrybutu</span><span class="sxs-lookup"><span data-stu-id="b537e-109">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="b537e-110">Węzeł Namespace</span><span class="sxs-lookup"><span data-stu-id="b537e-110">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="b537e-111">Węzeł tekstowy</span><span class="sxs-lookup"><span data-stu-id="b537e-111">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="b537e-112">Węzeł komentarzy</span><span class="sxs-lookup"><span data-stu-id="b537e-112">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="b537e-113">Węzeł przetwarzania instrukcji</span><span class="sxs-lookup"><span data-stu-id="b537e-113">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a><span data-ttu-id="137e5-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="137e5-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b537e-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b537e-114">See also</span></span>
 
-- [<span data-ttu-id="137e5-116">Obsługa typu w ramach klas zestawu System.Xml</span><span class="sxs-lookup"><span data-stu-id="137e5-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [<span data-ttu-id="b537e-115">Obsługa typu w ramach klas zestawu System.Xml</span><span class="sxs-lookup"><span data-stu-id="b537e-115">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

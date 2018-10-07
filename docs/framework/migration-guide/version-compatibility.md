@@ -10,11 +10,11 @@ ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48263365"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845544"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Zgodność wersji w programie .NET Framework
 Zgodność ze starszymi wersjami oznacza, że aplikacja opracowana dla konkretnej wersji platformy będzie działać w nowszych wersjach tej platformy. .NET Framework próbuje maksymalizować zgodność ze starszymi wersjami: kod źródłowy napisany dla jednej wersji programu .NET Framework powinien kompilować się w nowszych wersjach .NET Framework i pliki binarne, które działają w jednej wersji programu .NET Framework powinien zachowują się identycznie w nowsze wersje programu .NET Framework.  

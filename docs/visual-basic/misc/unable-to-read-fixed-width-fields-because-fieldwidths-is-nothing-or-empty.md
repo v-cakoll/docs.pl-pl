@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_FieldWidthsNothing
 ms.assetid: 623e0825-5640-4e47-8341-7eeec80fc145
 ms.openlocfilehash: cb9051269bf46e23d5ae070956994212d3e98675
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781937"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842466"
 ---
 # <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>Nie można odczytać stała szerokość pola, ponieważ nic nie stoi FieldWidths lub jest pusty
 `TextFieldParser` Nie może odczytać pola o stałej szerokości, ponieważ `FieldWidths` właściwość jest ustawiona na `Nothing` lub jest pusty.  

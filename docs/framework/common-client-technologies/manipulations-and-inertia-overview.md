@@ -3,11 +3,11 @@ title: Omówienie manipulacji i bezwładności
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
 ms.openlocfilehash: 93d995d7afec24dedf168274fe29f6a250c0a532
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793269"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845817"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Omówienie manipulacji i bezwładności
 *Manipulacje* umożliwić użytkownikom przenoszenie, obracać i zmień rozmiar elementów interfejsu użytkownika przy użyciu *manipulatory*. Manipulator reprezentuje myszy lub (w przypadku komputerów z obsługą dotyku) pióro lub linii papilarnych.  

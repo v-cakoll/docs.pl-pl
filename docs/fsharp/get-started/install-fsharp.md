@@ -2,12 +2,12 @@
 title: 'Zainstaluj język F #'
 description: 'Dowiedz się, jak zainstalować zależności od używanego środowiska F #.'
 ms.date: 08/28/2018
-ms.openlocfilehash: 6c10b958e35bf7925965d076a48839b0ce19d2c0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515900"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844010"
 ---
 # <a name="install-f"></a>Zainstaluj język F # #
 
@@ -17,13 +17,13 @@ Można zainstalować F # na wiele sposobów, w zależności od środowiska.
 
 Jeśli masz pobieranie [programu Visual Studio](https://visualstudio.microsoft.com/) po raz pierwszy zostanie najpierw zainstalować Instalatora programu Visual Studio. Zainstaluj odpowiednie jednostki SKU programu Visual Studio z poziomu Instalatora. Jeśli masz już zainstalowany, kliknij przycisk **Modyfikuj**.
 
-Następnie zobaczysz listę obciążeń. Wybierz **ASP.NET i tworzenie aplikacji internetowych**, którego zostanie zainstalowana obsługa języka F #, Obsługa platformy .NET Core oraz projekty F # — Obsługa platformy ASP.NET Core.
+Następnie zobaczysz listę obciążeń. Wybierz **ASP.NET i tworzenie aplikacji internetowych** które zainstaluje obsługę F # i .NET Core dla projektów ASP.NET Core.
 
 Następnie kliknij przycisk **Modyfikuj** w dolnym po prawej stronie.  Spowoduje to zainstalowanie wszystko, co jest wybrane. Następnie możesz otworzyć programu Visual Studio 2017 z obsługą języka F #, klikając **Uruchom**.
 
 ## <a name="install-f-with-visual-studio-for-mac"></a>Zainstaluj język F # za pomocą programu Visual Studio dla komputerów Mac
 
-F # jest instalowany domyślnie w [programu Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/), niezależnie od tego, jaka konfiguracja wybierzesz.
+F # jest instalowany domyślnie w [programu Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/), niezależnie od tego, która Konfiguracja wybierzesz.
 
 Po zakończeniu instalacji wybierz pozycję "Uruchom Visual Studio". Można również uruchomić go za pomocą wyszukiwania w systemie macOS.
 

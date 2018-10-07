@@ -8,24 +8,26 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: bda9bb71dd2e9b6da2de2444013ed724979f61af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ce9ced0c7e6bc13d5cdf331135590ba48c624fb
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535288"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844920"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList — Informacje o składniku (Formularze systemu Windows)
-Formularze systemu Windows <xref:System.Windows.Forms.ImageList> składnik jest używany do przechowywania obrazów, które mogą być następnie wyświetlane przez formanty. Listy obrazów umożliwia pisanie kodu dla wykazu powinny być zawsze obrazów. Na przykład można obracać obrazów wyświetlanych przez <xref:System.Windows.Forms.Button> formantu, zmieniając po prostu przycisku <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> lub <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> właściwości. Można również kojarzyć tej samej listy obrazów z wielu formantów. Na przykład, jeśli używasz zarówno <xref:System.Windows.Forms.ListView> kontroli i <xref:System.Windows.Forms.TreeView> formantu, aby wyświetlić tę samą listę plików, zmieniając ikonę pliku na liście obrazów spowoduje, że nowa ikona pojawią się w obu widokach.  
-  
-## <a name="using-imagelist-with-controls"></a>Przy użyciu listy obrazów z formantami  
- Można użyć listy obrazów z żadnego formantu, który ma `ImageList` właściwości — lub w przypadku liczby <xref:System.Windows.Forms.ListView> kontroli, <xref:System.Windows.Forms.ListView.SmallImageList%2A> i <xref:System.Windows.Forms.ListView.LargeImageList%2A> właściwości. Formanty, które mogą być skojarzone z listy obrazów obejmują: <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton>, i <xref:System.Windows.Forms.Label> kontrolki. Aby skojarzyć listy obrazów z formantem, ustaw dla formantu `ImageList` właściwość na nazwę <xref:System.Windows.Forms.ImageList> składnika.  
-  
-## <a name="key-properties"></a>Właściwości klucza  
- Właściwość klucza <xref:System.Windows.Forms.ImageList> składnik jest <xref:System.Windows.Forms.ImageList.Images%2A>, zawierający obrazy, które mają być używane przez skojarzony formant. Każdy poszczególnych obraz jest dostępny przez jej wartość indeksu lub za pomocą klucza. <xref:System.Windows.Forms.ImageList.ColorDepth%2A> Właściwość określa liczbę kolorów, które mają być renderowane obrazów z. Obrazy wszystkie pojawi się w tym samym rozmiarze, ustawione przez <xref:System.Windows.Forms.ImageList.ImageSize%2A> właściwości. Obrazy, które są większe będą skalowane w celu dopasowania.  
-  
- Jeśli używasz [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], masz dostęp do dużych biblioteki standardowe obrazów, które można używać w aplikacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.ImageList>  
- [Instrukcje: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+
+Formularze Windows <xref:System.Windows.Forms.ImageList> składnik jest używany do przechowywania obrazów, które następnie mogą być wyświetlane przez formanty. Listy obrazów umożliwia pisanie kodu dla jednego, spójne katalog obrazów. Na przykład, można też obrócić obrazy wyświetlane przez <xref:System.Windows.Forms.Button> kontroli po prostu zmieniając przycisku <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> lub <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> właściwości. Można również skojarzyć tę samą listę obrazów z wieloma formantami. Na przykład, jeśli używasz zarówno <xref:System.Windows.Forms.ListView> kontroli i <xref:System.Windows.Forms.TreeView> formantu, aby wyświetlić ta sama lista plików, zmieniając ikonę pliku z listy obrazów spowoduje, że nowa ikona pojawią się w obu widokach.
+
+## <a name="using-imagelist-with-controls"></a>Używanie listy obrazów z kontrolkami
+
+Za pomocą listy obrazów żadnego formantu, który ma `ImageList` właściwość — lub w przypadku właściwości <xref:System.Windows.Forms.ListView> kontroli <xref:System.Windows.Forms.ListView.SmallImageList%2A> i <xref:System.Windows.Forms.ListView.LargeImageList%2A> właściwości. Formanty, które mogą być skojarzone z listy obrazów obejmują: <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton>, i <xref:System.Windows.Forms.Label> kontrolki. Aby skojarzyć listy obrazów z formantem, ustawić `ImageList` właściwość na nazwę <xref:System.Windows.Forms.ImageList> składnika.
+
+## <a name="key-properties"></a>Właściwości klucza
+
+Właściwość klucza <xref:System.Windows.Forms.ImageList> składnik to <xref:System.Windows.Forms.ImageList.Images%2A>, który zawiera obrazy, które ma być używany przez skojarzony formant. Każdy obraz poszczególnych może zostać oceniony przez jej wartość indeksu lub za pomocą klucza. <xref:System.Windows.Forms.ImageList.ColorDepth%2A> Właściwość określa liczbę kolorów, które obrazy są renderowane przy użyciu. Obrazy wszystkie wyświetlane są w taki sam rozmiar, ustawiane przez <xref:System.Windows.Forms.ImageList.ImageSize%2A> właściwości. Obrazy, które są większe zostaną odpowiednio dopasowane.
+
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Windows.Forms.ImageList>
+- [Instrukcje: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

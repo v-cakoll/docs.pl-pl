@@ -3,11 +3,11 @@ title: '&lt;transport&gt; w &lt;msmqIntegrationBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
 ms.openlocfilehash: 8f6fcb19f67caba34334b649cc2e452c9e10bf93
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580144"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845613"
 ---
 # <a name="lttransportgt-of-ltmsmqintegrationbindinggt"></a>&lt;transport&gt; w &lt;msmqIntegrationBinding&gt;
 Definiuje ustawienia zabezpieczeń transport integracji usługi kolejkowania komunikatów.  

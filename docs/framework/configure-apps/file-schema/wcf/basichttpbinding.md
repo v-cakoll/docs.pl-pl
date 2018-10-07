@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: 1453923fd916519f92f36fed47afdc2ba2e7488b
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 45c245b886c8b113ed49972f1ba94caa01330eb2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321421"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847974"
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;BasicHttpBinding&gt;
 Reprezentuje powiązanie, używanego przez usługi Windows Communication Foundation (WCF) do konfiguracji i ekspozycji punktów końcowych, które są w stanie komunikować się z usługami bazującymi na ASMX i klientami i innych usług, które odpowiadają WS-I Basic Profile 1.1.  
@@ -183,5 +183,5 @@ Reprezentuje powiązanie, używanego przez usługi Windows Communication Foundat
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

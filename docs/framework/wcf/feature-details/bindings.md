@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 ms.openlocfilehash: e69cd500c50e9d76824d0e438a1af86f3a722c52
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780701"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848039"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Powiązania WCF (Windows Communication Foundation)
 Windows Communication Foundation (WCF) oddziela, jak oprogramowania dla aplikacji został napisany, uwzględniając jak ją komunikuje się z innym oprogramowaniem. Powiązania są używane do określenia transportu, kodowanie i szczegóły protokołu wymagane dla klientów i usług komunikować się ze sobą. WCF używa powiązania do generowania podstawowej reprezentacji przewodowy punktu końcowego, więc większość Szczegóły powiązania uzgadnia przez strony komunikujące się. Najprostszym sposobem osiągnięcia tego jest dla klientów usługi użyto tych samych powiązanie punktu końcowego dla zastosowań usługi. Aby uzyskać więcej informacji na temat jak to zrobić, zobacz [przy użyciu powiązania do konfigurowania usług i klientów](~/docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  

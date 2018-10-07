@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d2f3f015689510237142572f230b53ba7bd393ca
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 81b0f69306a0f9a4ed6d35e3c8ef95271a779294
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780956"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847935"
 ---
 # <a name="configuring-internet-applications"></a>Konfigurowanie aplikacji internetowych
 [ \<Przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element konfiguracji zawiera informacje o konfiguracji sieci dla aplikacji. Przy użyciu [ \<przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elementu, ustaw serwerów proxy, Ustaw połączenie z parametrami zarządzania i obejmują moduły niestandardowe uwierzytelnianie i żądanie w aplikacji.  
@@ -37,7 +37,7 @@ ms.locfileid: "48780956"
   
  Jest to należy zwrócić uwagę, czy ustawienia programu Microsoft Internet Explorer są łączone z ustawienia konfiguracji z pierwszeństwem ostatnie wykonywanie.  
   
- Poniższy przykład ustawia domyślny serwer proxy adres serwera http://proxyserver, wskazuje, że serwer proxy nie powinna być używana dla adresów lokalnych i określa, czy wszystkich żądań do serwerów znajdujących się w domenie contoso.com, należy pominąć serwer proxy.  
+ Poniższy przykład ustawia domyślny serwer proxy adres serwera `http://proxyserver`, wskazuje, że serwer proxy nie powinna być używana dla adresów lokalnych i określa, czy wszystkich żądań do serwerów znajdujących się w domenie contoso.com, należy pominąć serwer proxy.  
   
 ```xml  
 <configuration>  

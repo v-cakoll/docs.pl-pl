@@ -2,12 +2,12 @@
 title: Aktywacja TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: c10cc1edfb06d55fc8a59a32bf905c95b20a19dc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0a65e5ca20a11f50133efc90e6da923280a30f46
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084627"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846555"
 ---
 # <a name="tcp-activation"></a>Aktywacja TCP
 Niniejszy przykład pokazuje usługi, który używa usługi aktywacji procesów Windows (WAS), aby aktywować usługę, która komunikuje się za pośrednictwem protokołu net.tcp hosta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -175,7 +175,7 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  To polecenie jest pojedynczy wiersz tekstu. To polecenie włącza aplikację /servicemodelsamples można uzyskać za pomocą zarówno http://localhost/servicemodelsamples i net.tcp://localhost/servicemodelsamples.  
+        > To polecenie jest pojedynczy wiersz tekstu. To polecenie włącza aplikację /servicemodelsamples można uzyskać za pomocą zarówno `http://localhost/servicemodelsamples` i `net.tcp://localhost/servicemodelsamples`.  
   
 4.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

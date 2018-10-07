@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6f754a2a66187ac94d31d0d5a3a665c969652d26
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861627"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846516"
 ---
 # <a name="how-to-configure-client-application-services"></a>Porady: konfigurowanie usług aplikacji klienta
 W tym temacie opisano, jak używać programu Visual Studio **projektanta projektu** Włączanie i konfigurowanie usług aplikacji klienta. Usługi aplikacji klienta można użyć do weryfikowania użytkowników i pobierania ról użytkownika i ustawienia z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji. Po przeprowadzeniu konfiguracji, jest dostępne włączone usługi w kodzie aplikacji zgodnie z opisem w [przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Aby uzyskać więcej informacji na temat [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji, zobacz [przegląd usług aplikacji ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
- Można włączyć i skonfigurować usługi aplikacji klienta na **usług** strony **projektanta projektu**. **Usług** strona aktualizuje wartości w pliku App.config projektu. Aby uzyskać dostęp do **projektanta projektu**, użyj **właściwości** polecenie **projektu** menu. Aby uzyskać więcej informacji na temat **usług** stronie, zobacz [Strona usług, Projektant projektu](https://msdn.microsoft.com/library/bb398109).  
+ Można włączyć i skonfigurować usługi aplikacji klienta na **usług** strony **projektanta projektu**. **Usług** strona aktualizuje wartości w pliku App.config projektu. Aby uzyskać dostęp do **projektanta projektu**, użyj **właściwości** polecenie **projektu** menu. Aby uzyskać więcej informacji na temat **usług** stronie, zobacz [Strona usług, Projektant projektu](/visualstudio/ide/reference/services-page-project-designer).  
   
  Poniższa procedura opisuje sposób przeprowadzania podstawowej konfiguracji dla usług aplikacji klienta. Zaawansowana konfiguracja, które opcje są opisane w kolejnych sekcjach.  
   
@@ -143,7 +143,7 @@ W tym temacie opisano, jak używać programu Visual Studio **projektanta projekt
 ## <a name="see-also"></a>Zobacz też  
  [Usługi aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Omówienie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [Strona usług, Projektant projektu](https://msdn.microsoft.com/library/bb398109)  
+ [Strona usług, Projektant projektu](/visualstudio/ide/reference/services-page-project-designer)  
  [Zaawansowane ustawienia dla usług, okno dialogowe](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [Instrukcje: implementowanie logowania użytkownika przy użyciu usług aplikacji klienckich](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Przewodnik: używanie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  

@@ -7,35 +7,35 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: ea0a107a67753e919439a6be2035ab77001641ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508582"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848312"
 ---
 # <a name="using-message-contracts"></a>Używanie kontraktów komunikatu
-Zazwyczaj podczas kompilowania aplikacji Windows Communication Foundation (WCF), deweloperzy zwracać szczególną uwagę na struktur danych oraz problemy serializacji i nie trzeba zajmować się struktury wiadomości, w których odbywa się dane. W przypadku tych aplikacji prostego jest utworzenie kontraktów danych do parametrów lub zwracanych wartości. (Aby uzyskać więcej informacji, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Zwykle podczas tworzenia aplikacji Windows Communication Foundation (WCF), deweloperzy zwracać szczególną uwagę na struktur danych oraz problemy z serializacją i nie trzeba zajmować się struktury komunikaty, w których odbywa się dane. Dla tych aplikacji tworząc kontraktów danych dla parametrów lub zwracanych wartości jest bardzo proste. (Aby uzyskać więcej informacji, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
- Jednak czasami pełną kontrolę nad struktury wiadomości SOAP jest równie ważne co kontrolę nad jego zawartość. Dotyczy to szczególnie ważne jest współdziałanie, lub aby specjalnie kontroli zabezpieczeń problemy na poziomie komunikatu lub części komunikatu. W takich przypadkach można utworzyć *kontraktu komunikatu* , umożliwia określenie struktury dokładne komunikatu protokołu SOAP wymagane.  
+ Jednak czasami pełną kontrolę nad struktury komunikatu protokołu SOAP jest równie ważne jak kontrolę nad jego zawartość. Jest to szczególnie istotne w przypadku, gdy ważne jest współdziałanie lub specjalnie Sterowanie zabezpieczeniami problemy na poziomie komunikatu lub części komunikatu. W takich przypadkach można utworzyć *kontraktu komunikatu* , pozwala na określenie struktury dokładne wiadomości SOAP wymagane.  
   
- W tym temacie omówiono tworzenie kontraktu określonego komunikatu dla operacji przy użyciu różnych atrybutów kontraktu komunikatu.  
+ W tym temacie omówiono, jak utworzyć kontrakt szczegółowy komunikat o błędzie dla operacji za pomocą różnych atrybutów kontraktu komunikatu.  
   
-## <a name="using-message-contracts-in-operations"></a>Używanie kontraktów komunikatu w operacji  
- Usługi WCF obsługuje operacje uformowany albo *zdalnego wywoływania (procedur RPC) styl* lub *wiadomości styl*. W przypadku operacji stylu wywołania RPC, można użyć dowolnego typu do serializacji i masz dostęp do funkcji, które są dostępne dla połączeń lokalnych, takich jak wiele parametrów i `ref` i `out` parametrów. W tym stylu formantu serializacji wybrany struktury danych w podstawowej wiadomości i środowiska uruchomieniowego WCF tworzy komunikaty do obsługi operacji. Dzięki temu deweloperzy, którzy nie są jeszcze znane z protokołu SOAP i SOAP komunikatów szybkie i łatwe tworzenie i korzystanie z usługi aplikacji.  
+## <a name="using-message-contracts-in-operations"></a>Używanie kontraktów komunikatu podczas operacji  
+ Usługi WCF obsługuje operacje modelowane w dowolnym *zdalnego wywoływania (procedur RPC) styl* lub *komunikatów styl*. W przypadku operacji stylu RPC mogą mieć dowolny typ możliwy do serializacji i mieć dostęp do funkcji, które są dostępne dla połączeń lokalnych, takich jak wiele parametrów i `ref` i `out` parametrów. W przypadku tego stylu formantu serializacji wybrany struktury danych w podstawowej wiadomości i środowisko wykonawcze programu WCF tworzy wiadomości do obsługi operacji. Dzięki temu deweloperzy, którzy nie jest zaznajomiony z protokołu SOAP i SOAP komunikaty, aby szybko i łatwo tworzyć i korzystać z usługi aplikacji.  
   
- Poniższy przykład kodu pokazuje operacji usługi zgodnie z modelem w stylu wywołania RPC.  
+ Poniższy przykład kodu pokazuje operacji usługi w modelu w stylu RPC.  
   
 ```csharp  
 [OperationContract]  
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Zwykle kontrakt danych jest wystarczająca do definiowania schematu dla wiadomości. Na przykład w poprzednim przykładzie jest wystarczające dla większości aplikacji Jeśli `BankingTransaction` i `BankingTransactionResponse` ma kontraktów danych do definiowania zawartości źródłowej wiadomości protokołu SOAP. Aby uzyskać więcej informacji na temat kontraktów danych, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Zazwyczaj kontraktu danych jest wystarczająca do zdefiniowania schematu dla wiadomości. Na przykład w poprzednim przykładzie, jest wystarczające dla większości aplikacji Jeśli `BankingTransaction` i `BankingTransactionResponse` mają kontraktów danych do definiowania zawartości źródłowej komunikaty protokołu SOAP. Aby uzyskać więcej informacji na temat kontraktów danych zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- Jednak czasami zachodzi konieczność precyzyjne sterowanie jak struktury wiadomości SOAP są przesyłane przez sieć. Najbardziej typowym scenariuszem dla tego wstawia niestandardowe nagłówki SOAP. Inny typowy scenariusz polega do definiowania właściwości zabezpieczeń w nagłówkach wiadomości i treści, oznacza to, aby zdecydować, czy te elementy są cyfrowo podpisane i zaszyfrowane. Ponadto niektóre stosy SOAP innych firm wymagają wiadomości w określonym formacie. Styl wiadomości operacji Podaj tego formantu.  
+ Jednak czasami jest niezbędne precyzyjnie kontrolować, jak struktury wiadomości SOAP przesyłane przez sieć. Najbardziej typowym scenariuszem dla tego jest wstawianie niestandardowych nagłówków protokołu SOAP. Inny typowy scenariusz polega do definiowania właściwości zabezpieczeń dla komunikatu nagłówki i treść, oznacza to, aby zdecydować, czy te elementy są cyfrowo podpisane i szyfrowane. Na koniec niektórych stosów protokołu SOAP firm wymagają komunikatów w określonym formacie. Operacje obsługi komunikatów w stylu zapewniają tej kontrolki.  
   
- Operacja styl wiadomości ma co najwyżej jeden parametr i jednej wartości zwracanej gdzie oba typy są typy komunikatu; oznacza to, że ich serializować bezpośrednio do określonej struktury komunikatu SOAP. Może to być dowolnego typu oznaczone <xref:System.ServiceModel.MessageContractAttribute> lub <xref:System.ServiceModel.Channels.Message> typu. Poniższy przykład kodu pokazuje operacji podobne do poprzedniego stylu RCP, ale styl obsługi komunikatów, który używa.  
+ Operacja stylu komunikatów ma co najwyżej jeden parametr i jedną wartość zwracaną gdzie oba typy są typy komunikatów; oznacza to, że ich serializować bezpośrednio do określonej struktury komunikatu protokołu SOAP. Może to być dowolny typ oznaczone <xref:System.ServiceModel.MessageContractAttribute> lub <xref:System.ServiceModel.Channels.Message> typu. Poniższy przykład kodu pokazuje operacją podobny do poprzedniego RCP stylu, ale, który używa stylu komunikatów.  
   
  Na przykład jeśli `BankingTransaction` i `BankingTransactionResponse` są oba typy, które są kontrakty komunikatów, a następnie kod w następujących operacji jest nieprawidłowy.  
   
@@ -48,7 +48,7 @@ void Store(BankingTransaction bt);
 BankingTransactionResponse GetResponse();  
 ```  
   
- Jednak następujący kod jest nieprawidłowy.  
+ Jednakże poniższy kod jest nieprawidłowy.  
   
 ```csharp  
 [OperationContract]  
@@ -59,14 +59,14 @@ void Reconcile(BankingTransaction bt1, BankingTransaction bt2);
 // Invalid, there is more than one parameter.  
 ```  
   
- Wyjątek do żadnej operacji, która obejmuje typ kontraktu komunikatu i który nie jest zgodna z jednym z prawidłową. Oczywiście operacje, które nie obejmują typy kontraktu komunikatu nie podlegają te ograniczenia.  
+ Wyjątek jest generowany dla każdej operacji, która obejmuje typ kontraktu komunikatu i który nie jest zgodna z jednym z wzorców prawidłowe. Oczywiście operacje, które nie obejmują typy kontraktu komunikatu nie podlegają te ograniczenia.  
   
- Jeśli typ ma kontraktu komunikatu i kontraktu danych, jej kontraktu komunikatu gdy jest traktowany jako typ jest używany w operacji.  
+ Jeśli typ ma kontraktu komunikatu i kontraktu danych, jej kontraktu komunikatu uznaje się, gdy typ jest używany w operacji.  
   
 ## <a name="defining-message-contracts"></a>Definiowanie kontraktów komunikatu  
- Aby zdefiniować kontraktu komunikatu dla typu (oznacza to, aby zdefiniować mapowania między typem i koperty protokołu SOAP), zastosuj <xref:System.ServiceModel.MessageContractAttribute> do typu. Następnie Zastosuj <xref:System.ServiceModel.MessageHeaderAttribute> do tych elementów członkowskich tego typu, aby przekształcić nagłówki SOAP i zastosować <xref:System.ServiceModel.MessageBodyMemberAttribute> do tych elementów członkowskich mają być na części treści protokołu SOAP wiadomości.  
+ Do zdefiniowania kontraktu komunikatu dla typu (oznacza to, aby zdefiniować mapowania między typem i koperty protokołu SOAP), zastosuj <xref:System.ServiceModel.MessageContractAttribute> do typu. Następnie Zastosuj <xref:System.ServiceModel.MessageHeaderAttribute> do tych członków typ, który chcesz przekształcić nagłówków protokołu SOAP, a następnie zastosować <xref:System.ServiceModel.MessageBodyMemberAttribute> do tych elementów członkowskich mają być na części treści protokołu SOAP wiadomości.  
   
- Poniższy kod stanowi przykład z użyciem kontraktu komunikatu.  
+ Poniższy kod zawiera przykład z użyciem kontraktu komunikatu.  
   
 ```csharp  
 [MessageContract]  
@@ -80,7 +80,7 @@ public class BankingTransaction
 }  
 ```  
   
- Korzystając z tego typu jako parametr operacji, jest generowany koperty protokołu SOAP następujące:  
+ Korzystając z tego typu jako parametru operacja, jest generowany w następujących koperty protokołu SOAP:  
   
 ```xml  
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -98,21 +98,21 @@ public class BankingTransaction
 </s:Envelope>  
 ```  
   
- Zwróć uwagę, że `operation` i `transactionDate` widoczne jako nagłówki SOAP i treści protokołu SOAP składa się z elementu otoki `BankingTransaction` zawierający `sourceAccount`,`targetAccount`, i `amount`.  
+ Należy zauważyć, że `operation` i `transactionDate` są wyświetlane jako nagłówków protokołu SOAP i treści protokołu SOAP składa się z element otoki `BankingTransaction` zawierający `sourceAccount`,`targetAccount`, i `amount`.  
   
- Możesz zastosować <xref:System.ServiceModel.MessageHeaderAttribute> i <xref:System.ServiceModel.MessageBodyMemberAttribute> wszystkie pola, właściwości i zdarzenia, niezależnie od tego, czy są one publiczne, prywatne, chronionych lub wewnętrzny.  
+ Można zastosować <xref:System.ServiceModel.MessageHeaderAttribute> i <xref:System.ServiceModel.MessageBodyMemberAttribute> do pola, właściwości i zdarzenia, niezależnie od tego, czy są publiczne, prywatne, chroniony lub wewnętrzny.  
   
- <xref:System.ServiceModel.MessageContractAttribute> Pozwala określić atrybuty WrapperName i WrapperNamespace, które kontrolują nazwa elementu otoki w treści komunikatu protokołu SOAP. Domyślnie nazwa kontraktu komunikatu typu służy do otoka i przestrzeni nazw, w którym jest zdefiniowany kontraktu komunikatu `HYPERLINK "http://tempuri.org/" http://tempuri.org/` jest używana jako domyślna przestrzeń nazw.  
+ <xref:System.ServiceModel.MessageContractAttribute> Pozwala określić atrybuty WrapperName i WrapperNamespace, które kontrolować nazwę element otoki w treści komunikatu protokołu SOAP. Domyślnie nazwa kontraktu komunikatu typ jest używany do otoki i przestrzeni nazw, w którym zdefiniowano kontraktu komunikatu `http://tempuri.org/` jest używany jako domyślny obszar nazw.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybuty są ignorowane w kontraktach wiadomości. Jeśli <xref:System.Runtime.Serialization.KnownTypeAttribute> jest wymagane, umieść ją na operację, której używa kontraktu komunikatu zagrożona.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybuty są ignorowane w kontrakty komunikatów. Jeśli <xref:System.Runtime.Serialization.KnownTypeAttribute> jest wymagane, umieść go w operacji, który używa kontraktu komunikatu w danym.  
   
-## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Kontrolowanie nagłówek i treść części nazwy i przestrzenie nazw  
- Każda część nagłówek i treść mapowanie w SOAP reprezentację kontraktu komunikatu do elementu XML, który zawiera nazwę i przestrzeń nazw.  
+## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Kontrolowanie nagłówka i treści część nazwy i przestrzenie nazw  
+ W reprezentacji SOAP kontraktu komunikatu każda część nagłówka i treści mapuje do elementu XML, który ma nazwę i przestrzeni nazw.  
   
- Domyślnie przestrzeń nazw jest taka sama jak przestrzeń nazw kontraktu usługi, komunikat uczestniczy w, która nazwa jest określona przez nazwę elementu członkowskiego, do którego <xref:System.ServiceModel.MessageHeaderAttribute> lub <xref:System.ServiceModel.MessageBodyMemberAttribute> atrybuty są stosowane.  
+ Domyślnie, przestrzeń nazw jest taka sama jak przestrzeń nazw kontraktu usługi, komunikat jest uczestnikiem, która nazwa jest określana przez nazwę elementu członkowskiego, do którego <xref:System.ServiceModel.MessageHeaderAttribute> lub <xref:System.ServiceModel.MessageBodyMemberAttribute> atrybuty są stosowane.  
   
- Te ustawienia domyślne można zmienić, manipulowanie <xref:System.ServiceModel.MessageContractMemberAttribute.Name%2A?displayProperty=nameWithType> i <xref:System.ServiceModel.MessageContractMemberAttribute.Namespace%2A?displayProperty=nameWithType> (w klasie nadrzędnej <xref:System.ServiceModel.MessageHeaderAttribute> i <xref:System.ServiceModel.MessageBodyMemberAttribute> atrybutów).  
+ Możesz zmienić te ustawienia domyślne, manipulowanie <xref:System.ServiceModel.MessageContractMemberAttribute.Name%2A?displayProperty=nameWithType> i <xref:System.ServiceModel.MessageContractMemberAttribute.Namespace%2A?displayProperty=nameWithType> (w klasie nadrzędnej <xref:System.ServiceModel.MessageHeaderAttribute> i <xref:System.ServiceModel.MessageBodyMemberAttribute> atrybutów).  
   
  Należy wziąć pod uwagę klasy w poniższym przykładzie kodu.  
   
@@ -126,7 +126,7 @@ public class BankingTransaction
 }  
 ```  
   
- W tym przykładzie `IsAudited` nagłówka znajduje się w przestrzeni nazw określonej w kodzie i część treści, która reprezentuje `theData` członek jest reprezentowany przez element XML o nazwie `transactionData`. Poniżej przedstawiono XML wygenerowany dla tego kontraktu komunikatu.  
+ W tym przykładzie `IsAudited` nagłówka znajduje się w przestrzeni nazw określonej w kodzie, a część treści, która reprezentuje `theData` elementu członkowskiego jest reprezentowany przez element XML o nazwie `transactionData`. Na poniższym obrazie przedstawiono XML generowanych dla tego kontraktu komunikatu.  
   
 ```xml  
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -142,28 +142,28 @@ public class BankingTransaction
 </s:Envelope>  
 ```  
   
-## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>Kontrolowanie, czy są opakowywane części treści protokołu SOAP  
- Domyślnie części treści protokołu SOAP są serializowane w elemencie opakowana. Na przykład poniższy kod przedstawia `HelloGreetingMessage` element otoki wygenerowane z nazwy <xref:System.ServiceModel.MessageContractAttribute> typ kontraktu komunikatu dla `HelloGreetingMessage` wiadomości.  
+## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>Kontrolowanie, czy zostaną opakowane części treści protokołu SOAP  
+ Domyślnie części treści protokołu SOAP są serializowane w elemencie opakowana. Na przykład, poniższy kod przedstawia `HelloGreetingMessage` element otoki wygenerowany na podstawie nazwy <xref:System.ServiceModel.MessageContractAttribute> typ kontraktu komunikatu, aby uzyskać `HelloGreetingMessage` wiadomości.  
   
  [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
  [!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
   
- Aby pominąć element otoki, ustaw <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> właściwości `false`. Aby kontrolować nazwę i przestrzeń nazw elementu otoki, użyj <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> i <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A> właściwości.  
+ Aby pominąć element otoki, należy ustawić <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> właściwość `false`. Aby kontrolować nazwę i przestrzeń nazw elementu otoki, należy użyć <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> i <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A> właściwości.  
   
 > [!NOTE]
->  Mając więcej niż jedną część treści wiadomości w wiadomości, które nie zostały opakowane nie jest zgodne z WS-I Basic Profile 1.1 i nie jest zalecane podczas projektowania nowego kontraktów komunikatu. Jednak może być konieczne więcej niż jedną część treści wiadomości bez otoki w niektórych scenariuszach określonych współdziałania. Ma przesyłać więcej niż jednego elementu danych w treści wiadomości, zalecane jest w trybie domyślne (opakowana). Mając więcej niż jeden nagłówek komunikatu w komunikaty bez otoki jest całkowicie dopuszczalne.  
+>  Posiadanie więcej niż jedną część treści wiadomości w wiadomości, które nie zostały zapakowane nie jest zgodne z protokołu WS-I Basic Profile 1.1 i nie jest zalecane podczas projektowania nowych kontrakty komunikatów. Jednak może być konieczne więcej niż jedną część treści komunikatu odkodowany w niektórych scenariuszach współpracy określone. Jeśli ma zostać przesłany więcej niż jednego elementu danych w treści komunikatu, zaleca się do używania trybu domyślnego (zawinięte). Całkowicie dopuszczalne jest posiadanie więcej niż jeden nagłówek wiadomości w nieopakowane komunikaty.  
   
-## <a name="using-custom-types-inside-message-contracts"></a>Używanie niestandardowych typów wewnątrz kontraktów komunikatu  
- Każdy nagłówek poszczególnych komunikatów i część treści wiadomości jest serializowany (zamieniło XML) używany aparat wybrany serializacji dla kontraktu usługi których komunikat jest używany. Domyślny aparat serializacji `XmlFormatter`, może obsługiwać dowolnego typu, który ma kontraktu danych, albo jawnie (dzięki użyciu <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) albo niejawnie (poprzez jest typem pierwotnym, o <xref:System.SerializableAttribute?displayProperty=nameWithType>i tak dalej). Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+## <a name="using-custom-types-inside-message-contracts"></a>Przy użyciu niestandardowych typów wewnątrz kontrakty komunikatów  
+ Każdy nagłówek wiadomości poszczególnych i część treści wiadomości jest serializowana (przekształcane w XML) przy użyciu aparatu wybranym serializacji w dla kontraktu usługi użycia wiadomości. Domyślny mechanizm serializacji, `XmlFormatter`, może obsłużyć dowolny typ, który ma kontraktu danych, albo jawnie (dzięki <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) lub niejawnie (poprzez jest typ pierwotny, posiadające <xref:System.SerializableAttribute?displayProperty=nameWithType>i tak dalej). Aby uzyskać więcej informacji, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- W powyższym przykładzie `Operation` i `BankingTransactionData` typy muszą mieć kontrakt danych i `transactionDate` można serializować ponieważ <xref:System.DateTime> jest właściwością pierwotną (i dlatego ma niejawnych danych kontraktu).  
+ W powyższym przykładzie `Operation` i `BankingTransactionData` typy muszą mieć kontraktu danych i `transactionDate` jest możliwy do serializacji ponieważ <xref:System.DateTime> jest podstawowy (i dlatego ma umowę niejawne danych).  
   
- Jednak istnieje możliwość przełączyć się do silnika różnych serializacji, `XmlSerializer`. Jeśli takie przełącznika, użytkownik powinien zapewnić wszystkich typów, używany w nagłówkach wiadomości i części treści serializacji przy użyciu `XmlSerializer`.  
+ Jednak istnieje możliwość przełączyć się na aparat serializacji różnych `XmlSerializer`. W przypadku wprowadzenia takiego przełącznika, należy upewnić się, że wszystkie typy używane do nagłówków wiadomości i części treści są serializacji przy użyciu `XmlSerializer`.  
   
-## <a name="using-arrays-inside-message-contracts"></a>Używanie tablic wewnątrz kontraktów komunikatu  
- Możesz użyć tablice powtarzających się elementów w kontraktach wiadomości na dwa sposoby.  
+## <a name="using-arrays-inside-message-contracts"></a>Używanie tablic wewnątrz kontrakty komunikatów  
+ Możesz użyć tablic powtarzających się elementów w kontrakty komunikatów na dwa sposoby.  
   
- Pierwsza to użycie <xref:System.ServiceModel.MessageHeaderAttribute> lub <xref:System.ServiceModel.MessageBodyMemberAttribute> bezpośrednio w tablicy. W takim przypadku całą macierz jest szeregowana jako jeden element (czyli jeden nagłówek lub jedną część treści) z wieloma elementami podrzędnymi. Należy wziąć pod uwagę klasy w poniższym przykładzie.  
+ Pierwsza to użycie <xref:System.ServiceModel.MessageHeaderAttribute> lub <xref:System.ServiceModel.MessageBodyMemberAttribute> bezpośrednio w tablicy. W tym przypadku całej tablicy jest serializowany jako jeden element (czyli jeden nagłówek lub jedną część treści) z wieloma elementami podrzędnymi. Należy wziąć pod uwagę klasy w poniższym przykładzie.  
   
 ```csharp  
 [MessageContract]  
@@ -175,7 +175,7 @@ public class BankingDepositLog
 }  
 ```  
   
- Powoduje to nagłówki SOAP jest podobny do następującego.  
+ Powoduje to nagłówków protokołu SOAP jest podobny do następującego.  
   
 ```xml  
 <BankingDepositLog>  
@@ -189,7 +189,7 @@ public class BankingDepositLog
 </BankingDepositLog>  
 ```  
   
- Innym sposobem jest użycie <xref:System.ServiceModel.MessageHeaderArrayAttribute>. W takim przypadku każdy element tablicy jest serializowany niezależnie, a więc tablicy każdy element ma jeden nagłówek, podobny do następującego.  
+ Innym sposobem jest użycie <xref:System.ServiceModel.MessageHeaderArrayAttribute>. W takim przypadku każdy element tablicy jest serializowana niezależnie i, że każdy element w tablicy ma jeden nagłówek, podobny do następującego.  
   
 ```xml  
 <numRecords>3</numRecords>  
@@ -199,27 +199,27 @@ public class BankingDepositLog
 <branchID>20643</branchID>  
 ```  
   
- Domyślna nazwa wpisy tablicy jest nazwą elementu członkowskiego, do którego <xref:System.ServiceModel.MessageHeaderArrayAttribute> zastosować atrybutów.  
+ Domyślna nazwa dla wpisów tablicy jest nazwą elementu członkowskiego, do którego <xref:System.ServiceModel.MessageHeaderArrayAttribute> zastosować atrybutów.  
   
- <xref:System.ServiceModel.MessageHeaderArrayAttribute> Dziedziczy atrybut <xref:System.ServiceModel.MessageHeaderAttribute>. Ma ten sam zestaw funkcji jako atrybuty tablicy, na przykład można ustawić kolejność, nazwę i przestrzeń nazw dla tablicy nagłówków w taki sam sposób, należy ustawić dla pojedynczego nagłówka. Jeśli używasz `Order` właściwości w macierzy, dotyczy całego tablicy.  
+ <xref:System.ServiceModel.MessageHeaderArrayAttribute> Dziedziczy atrybut <xref:System.ServiceModel.MessageHeaderAttribute>. Ma ona ten sam zestaw funkcji jako atrybuty inny niż tablica, na przykład możliwość określenia kolejność, nazwę i przestrzeń nazw dla tablicy nagłówków w taki sam sposób, gdy ustawiasz dla pojedynczego nagłówka. Kiedy używasz `Order` właściwość w tablicy, dotyczy ona całej tablicy.  
   
- Możesz zastosować <xref:System.ServiceModel.MessageHeaderArrayAttribute> tylko dla tablic, nie kolekcji.  
+ Można zastosować <xref:System.ServiceModel.MessageHeaderArrayAttribute> tylko do tablic, nie kolekcji.  
   
-## <a name="using-byte-arrays-in-message-contracts"></a>Korzystanie z tablic bajtowych w kontraktów komunikatu  
- Tablice typu byte, gdy jest używany z atrybutami nietablicowego (<xref:System.ServiceModel.MessageBodyMemberAttribute> i <xref:System.ServiceModel.MessageHeaderAttribute>), nie są traktowane jako tablic, ale jako specjalny typ pierwotny reprezentowane jako algorytmem Base64 danych w wynikowym pliku XML.  
+## <a name="using-byte-arrays-in-message-contracts"></a>Korzystanie z tablic bajtowych w kontrakty komunikatów  
+ Tablice typu byte, gdy jest używana z atrybutami inny niż tablica (<xref:System.ServiceModel.MessageBodyMemberAttribute> i <xref:System.ServiceModel.MessageHeaderAttribute>), nie są traktowane jako tablic, ale jako specjalny typ pierwotny, reprezentowane jako dane zakodowane w formacie Base64 wynikowy kod XML.  
   
- Jeśli używasz tablice typu byte atrybutem tablicy <xref:System.ServiceModel.MessageHeaderArrayAttribute>, wyniki są zależne od elementu serializującego w użyciu. Z domyślnego elementu serializującego tablicy jest reprezentowany jako poszczególnych wpis dla każdego bajtu. Jednakże, gdy `XmlSerializer` jest zaznaczone, (przy użyciu <xref:System.ServiceModel.XmlSerializerFormatAttribute> na kontrakt usługi), tablice typu byte są traktowane jako dane Base64, niezależnie od tego, czy są używane atrybuty tablicy lub tablica nie.  
+ Kiedy używać tablic bajtowych z atrybutem tablicy <xref:System.ServiceModel.MessageHeaderArrayAttribute>, wyniki zależą od serializator używany. Przy użyciu domyślnego elementu serializującego tablica jest przedstawiana jako pojedynczy wpis dla każdego bajtu. Jednak gdy `XmlSerializer` jest zaznaczone, (przy użyciu <xref:System.ServiceModel.XmlSerializerFormatAttribute> w kontrakcie usługi), tablice bajtowe są traktowane jako dane Base64, niezależnie od tego, czy są używane atrybuty tablicy lub inny niż tablica.  
   
 ## <a name="signing-and-encrypting-parts-of-the-message"></a>Podpisywanie i szyfrowanie części wiadomości  
- Kontrakt komunikatu można wskazać, czy nagłówki i/lub treści wiadomości powinna być cyfrowo podpisane i zaszyfrowane.  
+ Kontrakt komunikatu można wskazać, czy nagłówki i/lub treści komunikatu powinna być cyfrowo podpisane i szyfrowane.  
   
- Odbywa się przez ustawienie <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> właściwość <xref:System.ServiceModel.MessageHeaderAttribute> i <xref:System.ServiceModel.MessageBodyMemberAttribute> atrybutów. Ta właściwość jest wyliczeniem <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> typu i może być ustawiony na <xref:System.Net.Security.ProtectionLevel.None> (nie szyfrowania lub podpis), <xref:System.Net.Security.ProtectionLevel.Sign> (podpisu cyfrowego tylko), lub <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (szyfrowanie i podpis cyfrowy). Wartość domyślna to <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+ Jest to realizowane przez ustawienie <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> właściwość <xref:System.ServiceModel.MessageHeaderAttribute> i <xref:System.ServiceModel.MessageBodyMemberAttribute> atrybutów. Właściwość jest wyliczeniem <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> wpisz i może być równa <xref:System.Net.Security.ProtectionLevel.None> (nie szyfrowania lub podpis), <xref:System.Net.Security.ProtectionLevel.Sign> (podpis cyfrowy tylko), lub <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (szyfrowanie i podpisu cyfrowego). Wartość domyślna to <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
- Te funkcje zabezpieczeń do pracy należy poprawnie skonfigurować powiązania i zachowania. Jeśli używasz funkcji zabezpieczeń bez odpowiedniej konfiguracji (np. Próba zalogowania się wiadomość bez podawania poświadczeń), jest zwracany wyjątek podczas sprawdzania poprawności.  
+ Te funkcje zabezpieczeń do pracy należy poprawnie skonfigurować powiązania i zachowania. Jeśli używasz tych funkcji zabezpieczeń bez odpowiedniej konfiguracji (na przykład, próba zalogowania się wiadomość bez podawania poświadczeń), wyjątek jest generowany w momencie sprawdzania poprawności.  
   
- Nagłówki komunikatów poziom ochrony jest określany osobno dla każdego nagłówka.  
+ Nagłówki komunikatów poziom ochrony jest określana osobno dla każdego nagłówka.  
   
- Dla części treści wiadomości poziom ochrony można traktować jako "poziom ochrony minimalnej." Treść ma ochrony tylko jeden poziom, niezależnie od liczby części treści. Poziom ochrony treści jest określany przez najwyższą <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A> ustawienie właściwości wszystkie części treści. Jednak rzeczywista ochrony minimalny wymagany poziom należy ustawić poziom ochrony każdej części treści.  
+ Dla części treści wiadomości poziom ochrony można traktować jako "minimalny poziom ochrony." Treść ma poziom ochrony tylko jeden, niezależnie od liczby części treści. Poziom ochrony treści jest określana przez najwyższy <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A> ustawienie właściwości wszystkie części treści. Jednak należy ustawić poziom ochrony każdej części treści do rzeczywistego protection minimalny wymagany poziom.  
   
  Należy wziąć pod uwagę klasy w poniższym przykładzie kodu.  
   
@@ -236,13 +236,13 @@ public class PatientRecord
 }  
 ```  
   
- W tym przykładzie `recordID` nagłówka nie jest chroniony, `patientName` jest `signed`, i `SSN` jest zaszyfrowana i podpisana. Co najmniej jednej części, `medicalHistory`, ma <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> zastosowano, i w związku z tym cała treść jest zaszyfrowana i podpisana, mimo że komentarze i diagnozowania części treści Określ niższe poziomy ochrony.  
+ W tym przykładzie `recordID` nagłówka nie są chronione, `patientName` jest `signed`, i `SSN` zostaje zaszyfrowany i podpisany. Część treści co najmniej jeden `medicalHistory`, ma <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> zastosowane, i w związku z tym treść cały komunikat zostaje zaszyfrowany i podpisany, mimo że komentarze i diagnozowania części treści Określ niższe poziomy ochrony.  
   
 ## <a name="soap-action"></a>Akcja SOAP  
- Powiązane standardów usług sieci Web i SOAP Zdefiniuj właściwość o nazwie `Action` które może być stosowany w przypadku każdej wysyłane wiadomości protokołu SOAP. Operacja <xref:System.ServiceModel.OperationContractAttribute.Action%2A?displayProperty=nameWithType> i <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A?displayProperty=nameWithType> właściwości formantu wartości tej właściwości.  
+ Powiązane standardów usług sieci Web i SOAP zdefiniować właściwość o nazwie `Action` , może być obecny dla każdego komunikatu protokołu SOAP, wysyłane. Operacja <xref:System.ServiceModel.OperationContractAttribute.Action%2A?displayProperty=nameWithType> i <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A?displayProperty=nameWithType> właściwości formantu wartość tej właściwości.  
   
-## <a name="soap-header-attributes"></a>Atrybuty nagłówka SOAP  
- SOAP standard definiuje następujące atrybuty, które mogą wystąpić w nagłówku:  
+## <a name="soap-header-attributes"></a>Atrybuty nagłówek SOAP  
+ SOAP standard definiuje następujące atrybuty, które mogą występować w nagłówku:  
   
 -   `Actor/Role` (`Actor` w SOAP 1.1, `Role` w SOAP 1.2)  
   
@@ -250,9 +250,9 @@ public class PatientRecord
   
 -   `Relay`  
   
- `Actor` Lub `Role` atrybut określa jednolity identyfikator zasobów (URI) węzła, dla którego ma określony nagłówek. `MustUnderstand` Atrybut określa, czy węzeł przetwarzania nagłówka musi go zrozumieć. `Relay` Atrybut określa, czy nagłówek jest przekazywanie węzły podrzędne. Usługi WCF nie wykonuje żadnych przetwarzania tych atrybutów w komunikatach przychodzących, z wyjątkiem `MustUnderstand` atrybutu, jak określono w sekcji "Przechowywanie wersji kontraktów komunikatu" w dalszej części tego tematu. Jednak umożliwia odczytywanie i zapisywanie tych atrybutów, w razie potrzeby, tak jak następujący opis.  
+ `Actor` Lub `Role` atrybut określa identyfikator (URI) węzła, dla których przeznaczony jest dany nagłówek. `MustUnderstand` Atrybut określa, czy węzeł przetwarzania nagłówka musi go zrozumieć. `Relay` Atrybut określa, czy nagłówek do węzłów podrzędnych. Usługi WCF nie wykonuje jakiegokolwiek przetwarzania tych atrybutów na komunikaty przychodzące z wyjątkiem `MustUnderstand` atrybutu, jak to określono w sekcji "Przechowywanie wersji kontraktów komunikatu" w dalszej części tego tematu. Jednakże umożliwia odczytywanie i zapisywanie tych atrybutów zgodnie z potrzebami, tak jak w poniższym opisie.  
   
- Podczas wysyłania wiadomości, te atrybuty nie są emitowane domyślnie. Można to zmienić na dwa sposoby. Najpierw, użytkownik może statycznie Ustaw atrybuty wszystkie odpowiednie wartości, zmieniając <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, i <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> właściwości, jak pokazano w poniższym przykładzie kodu. (Należy pamiętać, że ma nie `Role` właściwości; ustawienie <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> emituje właściwości `Role` atrybut, jeśli używasz protokołu SOAP 1.2).  
+ Podczas wysyłania komunikatu, te atrybuty nie są generowane domyślnie. Możesz to zmienić na dwa sposoby. Najpierw możesz statycznie ustawić atrybuty do dowolnych wartości, żądane przez zmianę <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, i <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> właściwości, jak pokazano w poniższym przykładzie kodu. (Należy pamiętać, że ma nie `Role` właściwości; ustawienie <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> emituje właściwość `Role` atrybutu, jeśli używasz protokołu SOAP 1.2).  
   
 ```csharp  
 [MessageContract]  
@@ -264,7 +264,7 @@ public class BankingTransaction
 }  
 ```  
   
- Drugi sposób kontrolowania tych atrybutów jest dynamicznie, za pomocą kodu. Można to osiągnąć, opakowując typu żądanego nagłówka w <xref:System.ServiceModel.MessageHeader%601> typu (nie należy mylić tego typu z wersją nieogólnego być) i przy użyciu typu razem z <xref:System.ServiceModel.MessageHeaderAttribute>. Następnie należy użyć właściwości na <xref:System.ServiceModel.MessageHeader%601> można ustawić atrybutów protokołu SOAP, jak pokazano w poniższym przykładzie kodu.  
+ Drugi sposób kontroluje te atrybuty jest dynamicznie, za pomocą kodu. Można to osiągnąć przez opakowywanie typ żądanego nagłówka w <xref:System.ServiceModel.MessageHeader%601> typu (Upewnij się, nie należy mylić tego typu za pomocą wersji nieogólnego) i za pomocą typu wraz z <xref:System.ServiceModel.MessageHeaderAttribute>. Następnie należy użyć właściwości na <xref:System.ServiceModel.MessageHeader%601> można ustawić atrybutów protokołu SOAP, jak pokazano w poniższym przykładzie kodu.  
   
 ```csharp  
 [MessageContract]  
@@ -282,7 +282,7 @@ bt.IsAudited.Actor="http://auditingservice.contoso.com";
 bt.IsAudited.MustUnderstand=true;  
 ```  
   
- Jeśli używasz zarówno dynamiczny, jak i mechanizmy kontroli statycznych, statyczne ustawienia są używane jako domyślny, ale później może zostać przesłonięta przez przy użyciu mechanizmu dynamicznej, jak pokazano w poniższym kodzie.  
+ Jeśli używasz mechanizmy kontroli statycznej i dynamicznej statyczne ustawienia są używane jako domyślne, ale później może zostać przesłonięta przez przy użyciu mechanizmu dynamiczne, jak pokazano w poniższym kodzie.  
   
 ```csharp  
 [MessageHeader(MustUnderstand=true)] public MessageHeader<Person> documentApprover;  
@@ -292,20 +292,20 @@ bt.documentApprover = new MessageHeader<Person>();
 bt.documentApprover.MustUnderstand = false; // override the static default of 'true'  
 ```  
   
- Tworzenie powtarzane nagłówki za pomocą formantu atrybutu dynamic jest dozwolone, jak pokazano w poniższym kodzie.  
+ Tworzenie powtarzanych nagłówki przy użyciu atrybutu dynamic kontroli jest dozwolone, jak pokazano w poniższym kodzie.  
   
 ```csharp  
 [MessageHeaderArray] public MessageHeader<Person> documentApprovers[];  
 ```  
   
- Po stronie odbiorczej odczytywania tych atrybutów SOAP jest możliwe tylko jeśli <xref:System.ServiceModel.MessageHeader%601> klasy jest używany do nagłówka w typie. Sprawdź `Actor`, `Relay`, lub `MustUnderstand` właściwości nagłówka o <xref:System.ServiceModel.MessageHeader%601> typ, aby wykryć ustawienia atrybutu dla odebranego komunikatu.  
+ Po stronie odbierającej odczytywania tych atrybutów protokołu SOAP jest możliwe tylko jeśli <xref:System.ServiceModel.MessageHeader%601> klasa jest używana dla nagłówka typu. Sprawdź `Actor`, `Relay`, lub `MustUnderstand` właściwości nagłówek <xref:System.ServiceModel.MessageHeader%601> typu, aby odnaleźć ustawień atrybutów na odebranym komunikacie.  
   
- Gdy komunikat jest odbierany i następnie odesłał, ustawienia atrybutu SOAP postępować tylko obustronne dla nagłówków <xref:System.ServiceModel.MessageHeader%601> typu.  
+ Gdy komunikat jest odbierany i następnie odesłał, ustawień atrybutów protokołu SOAP tylko Przejdź błądzenia dla nagłówków <xref:System.ServiceModel.MessageHeader%601> typu.  
   
-## <a name="order-of-soap-body-parts"></a>Kolejność części treści protokołu SOAP  
- W niektórych sytuacjach może być konieczne sterować kolejnością części treści. Kolejność elementów treści jest alfabetycznej domyślnie, ale mogą być kontrolowane na podstawie <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości. Ta właściwość nie ma tej samej semantyki jako <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości, z wyjątkiem zachowanie w scenariuszach dziedziczenia (w kontraktów komunikatu, elementy członkowskie nie są sortowane przed członków treści typu pochodnego treści typu podstawowego). Aby uzyskać więcej informacji, zobacz [kolejność elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+## <a name="order-of-soap-body-parts"></a>Zlecenia części treści protokołu SOAP  
+ W niektórych sytuacjach może być konieczne kontrolować kolejność części treści. Kolejność elementów treści jest porządek alfabetyczny domyślnie, ale mogą być kontrolowane przez <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości. Właściwość ta ma tą samą semantyką jako <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości, z wyjątkiem zachowanie w scenariuszach dziedziczenia (w treści typu podstawowego, elementy członkowskie nie są sortowane przed elementy członkowskie typu pochodnego treści kontrakty komunikatów). Aby uzyskać więcej informacji, zobacz [kolejność elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
- W poniższym przykładzie `amount` zwykle przybyły, najpierw ponieważ pierwszy jest alfabetycznie. Jednak <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> właściwości umieszcza je w trzecim pozycji.  
+ W poniższym przykładzie `amount` zwykle przybyły, aby najpierw ponieważ ona jest pierwszy w kolejności alfabetycznej. Jednak <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> właściwość umieszcza położenia trzeciego.  
   
 ```csharp  
 [MessageContract]  
@@ -319,24 +319,24 @@ public class BankingTransaction
 ```  
   
 ## <a name="message-contract-versioning"></a>Przechowywanie wersji kontraktów komunikatu  
- Czasami może być konieczna zmiana kontraktów komunikatu. Na przykład nowa wersja aplikacji może dodać dodatkowe nagłówka do wiadomości. Następnie podczas wysyłania z nowej wersji do starego, system musi uwzględniać dodatkowe nagłówka, jak również brak nagłówka podczas przechodzenia w innym kierunku.  
+ Od czasu do czasu może być konieczna zmiana kontrakty komunikatów. Na przykład nową wersję aplikacji może dodać dodatkowe nagłówka do wiadomości. Następnie podczas wysyłania z nowej wersji do starego, system musi obsłużyć dodatkowe nagłówka, jak również brak nagłówka podczas przechodzenia w drugą stronę.  
   
- Przechowywanie wersji nagłówków mają zastosowanie następujące reguły:  
+ Obowiązują następujące reguły dla nagłówków wersji:  
   
--   Usługi WCF nie object Brak nagłówków — odpowiednie elementy członkowskie są pozostawiane w wartości domyślnych.  
+-   Usługi WCF nie obiekt do brakujących nagłówków — odpowiednie elementy członkowskie są pozostawiane wartościami domyślnymi.  
   
--   Usługi WCF ignoruje także nieoczekiwany dodatkowych nagłówków. Jedynym wyjątkiem od tej reguły jest dodatkowy nagłówek zawiera `MustUnderstand` ustawić atrybutu `true` przychodzących wiadomości SOAP — w tym przypadku jest zwracany wyjątek, ponieważ nie można przetworzyć nagłówek, który musi być rozpatrywana.  
+-   Usługi WCF ignoruje także nieoczekiwane dodatkowe nagłówki. Jedynym wyjątkiem od tej reguły jest, jeśli dodatkowe nagłówek ma `MustUnderstand` ustawioną wartość atrybutu `true` w przychodzącej wiadomości SOAP — w tym przypadku jest zgłaszany wyjątek, ponieważ nie można przetworzyć nagłówek, który musi być rozumiane.  
   
- Komunikat treści mają podobne reguły kontroli wersji — zarówno brak i dodatkowe części treści wiadomości są ignorowane.  
+ Komunikat o treści mają podobne zasady przechowywania wersji — Brak i dodatkowe części treści wiadomości są ignorowane.  
   
 ## <a name="inheritance-considerations"></a>Uwagi dotyczące dziedziczenia  
- Typ kontraktu komunikatu może dziedziczyć z innego typu, jak typ podstawowy ma również kontraktu komunikatu.  
+ Typ kontraktu komunikatu może dziedziczyć z innego typu, tak długo, jak typ podstawowy ma również kontraktu komunikatu.  
   
  Podczas tworzenia lub uzyskiwania dostępu do wiadomości przy użyciu typ kontraktu komunikatu, która dziedziczy inne typy kontraktu komunikatu, obowiązują następujące reguły:  
   
--   Wszystkie nagłówki komunikatów w hierarchii dziedziczenia zebrane do pełnego zestawu nagłówków wiadomości.  
+-   Wszystkie nagłówki wiadomości w hierarchii dziedziczenia pochodzą ze sobą w celu utworzenia pełnego zestawu nagłówków wiadomości.  
   
--   Wszystkie części treści wiadomości w hierarchii dziedziczenia zebrane do utworzenia treści cały komunikat. Części treści są uporządkowane zgodnie z regułami porządkowania zwykle (przez <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości, a następnie alfabetycznym), niezwiązany z miejsca w hierarchii dziedziczenia. Przy użyciu dziedziczenia kontraktu komunikatu, której części treści wiadomości są na różnych poziomach drzewa dziedziczenia jest zalecane. Jeśli klasa podstawowa i Klasa pochodna definiuje nagłówka lub część treści o takiej samej nazwie, element członkowski z klasy podstawowej większość służy do przechowywania wartości tej części nagłówka lub treści.  
+-   Wszystkie części treści wiadomości w hierarchii dziedziczenia pochodzą ze sobą w celu utworzenia pełnego treść. Części treści są uporządkowane zgodnie ze zwykłymi regułami sortowania (przez <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> właściwości i następnie alfabetycznej), niezwiązany z ich miejsca w hierarchii dziedziczenia. Za pomocą Dziedziczenie kontraktów komunikatu, w których części treści wiadomości wystąpić na różnych poziomach drzewa dziedziczenia jest zdecydowanie odradzane. Jeśli klasa bazowa i Klasa pochodna należy zdefiniować nagłówek lub część treści o takiej samej nazwie, elementu członkowskiego z klasy podstawowej większość służy do przechowywania wartości w tej części w nagłówku lub w treści.  
   
  Należy wziąć pod uwagę klas w poniższym przykładzie kodu.  
   
@@ -356,31 +356,31 @@ public class PatientRecord : PersonRecord
 }  
 ```  
   
- `PatientRecord` Klasa opisuje komunikat o jeden nagłówek o nazwie `ID`. Nagłówek odpowiada `personID` i nie `patientID` elementu członkowskiego, ponieważ większość podstawowy element członkowski jest wybrany. W związku z tym `patientID` pola w tym przypadku jest bezużyteczny. Treść wiadomości zawiera `diagnosis` następuje element `patientName` elementu, ponieważ jest ona w kolejności alfabetycznej. Zwróć uwagę, przykładzie wzorzec, który jest zdecydowanie niezalecane: zarówno dla typu podstawowego, jak i kontrakty pochodne wiadomości ma części treści wiadomości.  
+ `PatientRecord` Klasa opisuje komunikat jeden nagłówek o nazwie `ID`. Nagłówek odnosi się do `personID` i nie `patientID` elementu członkowskiego, ponieważ większość podstawowy element członkowski jest wybierany. W efekcie `patientID` pola w tym przypadku jest bezużyteczny. Treść wiadomości zawiera `diagnosis` następuje `patientName` elementu, ponieważ jest w porządku alfabetycznym. Należy zauważyć, że w przykładzie pokazano wzorzec, który jest zdecydowanie odradzane: zarówno podstawowy, jak i kontrakty komunikatów pochodna ma części treści wiadomości.  
   
 ## <a name="wsdl-considerations"></a>Zagadnienia dotyczące WSDL  
- Podczas generowania kontrakt usługi sieci Web Services Description Language (WSDL) z usługą, która używa kontrakty komunikatów, jest pamiętać, że nie wszystkie funkcje kontraktu komunikatu są uwzględniane w wynikowej WSDL. Należy rozważyć następujące kwestie:  
+ Podczas generowania kontraktu usługi sieci Web Services Description Language (WSDL) z usługi, który używa kontrakty komunikatów, to należy pamiętać, że nie wszystkie funkcje kontraktu komunikatu są odzwierciedlane w wynikowej WSDL. Należy wziąć pod uwagę następujące kwestie:  
   
--   WSDL nie można wyrazić pojęcie tablicy nagłówków. Podczas tworzenia wiadomości przy użyciu tablicy nagłówków przy użyciu <xref:System.ServiceModel.MessageHeaderArrayAttribute>, wynikowy WSDL odzwierciedla tylko jeden nagłówek zamiast tablicy.  
+-   WSDL nie można wyrazić koncepcji tablicy nagłówków. Podczas tworzenia wiadomości z tablicą przy użyciu nagłówków <xref:System.ServiceModel.MessageHeaderArrayAttribute>, WSDL wynikowy odzwierciedla tylko jeden nagłówek zamiast tablicy.  
   
--   Dokument WSDL wynikowy może nie odzwierciedlać niektóre informacje poziomu ochrony.  
+-   Dokument WSDL wynikowy może nie odzwierciedlać pewne informacje poziom ochrony.  
   
 -   Typ komunikatu wygenerowany w formacie WSDL ma taką samą nazwę jak nazwa klasy typ kontraktu komunikatu.  
   
--   Gdy za pomocą tego samego komunikatu kontraktu w wielu operacjach, wiele typów wiadomości są generowane w dokumencie WSDL. Przez dodanie liczby "2", "3" i tak dalej do celów kolejnych składają unikatowe nazwy. Podczas importowania ponownie WSDL, wiele typów kontraktu komunikatu są tworzone i są identyczne z wyjątkiem ich nazw.  
+-   Gdy kontrakt przy użyciu tego samego komunikatu w wielu operacjach, wiele typów wiadomości są generowane w dokumencie WSDL. Nazwy są tworzone unikatowe, przez dodanie liczby "2", "3" i tak dalej do późniejszego wykorzystania. Podczas importowania pliku WSDL Wstecz, wiele typy kontraktu komunikatu są tworzone i są identyczne, z wyjątkiem ich nazwy.  
   
-## <a name="soap-encoding-considerations"></a>Uwagi dotyczące kodowania protokołu SOAP  
- Usługi WCF umożliwia przy użyciu starszej wersji styl XML, kodowania SOAP jednak jego użycie nie jest zalecane. Korzystając z tym stylem (przez ustawienie `Use` właściwości `Encoded` na <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> stosowane do kontraktu usługi), zastosuj następujące dodatkowe zagadnienia:  
+## <a name="soap-encoding-considerations"></a>Uwagi dotyczące kodowania SOAP  
+ WCF pozwala na używanie starszej wersji protokołu SOAP stylu XML, kodowania, jego użycie nie jest zalecane. Korzystając z tego stylu (przez ustawienie `Use` właściwości `Encoded` na <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> stosowane do umowy serwisowej), mają zastosowanie następujące dodatkowe kwestie:  
   
--   Nagłówki komunikatów są nieobsługiwane. oznacza to, że atrybut <xref:System.ServiceModel.MessageHeaderAttribute> i atrybut tablicy <xref:System.ServiceModel.MessageHeaderArrayAttribute> są niezgodne z kodowaniem protokołu SOAP.  
+-   Nagłówki wiadomości są nieobsługiwane. oznacza to, że atrybut <xref:System.ServiceModel.MessageHeaderAttribute> i atrybut tablicy <xref:System.ServiceModel.MessageHeaderArrayAttribute> są niezgodne z kodowaniem SOAP.  
   
--   Jeśli kontraktu komunikatu jest nie opakowane, oznacza to, że właściwość <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> ma ustawioną wartość `false`, kontraktu komunikatu może mieć tylko jeden części.  
+-   Jeśli kontraktu komunikatu jest nie zawinięty, oznacza to, jeśli właściwość <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> ustawiono `false`, kontraktu komunikatu może mieć część treści tylko jeden.  
   
--   Nazwa elementu otoki dla kontraktu komunikatu żądania musi odpowiadać nazwie operacji. Użyj `WrapperName` kontraktu komunikatu dla tej właściwości.  
+-   Nazwa elementu otoki dla kontraktu komunikatu żądania musi odpowiadać nazwie operacji. Użyj `WrapperName` właściwości kontraktu komunikatu, w tym.  
   
--   Nazwa elementu otoki dla kontraktu komunikatu odpowiedzi musi być taka sama jak nazwa operacji sufiks przez "Odpowiedzi". Użyj <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> kontraktu komunikatu dla tej właściwości.  
+-   Nazwa elementu otoki dla kontraktu komunikatu odpowiedzi musi być taka sama jak nazwa operacji sufiks przez "Response". Użyj <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> właściwości kontraktu komunikatu, w tym.  
   
--   Kodowania SOAP zachowuje odwołania do obiektów. Rozważmy na przykład następujący kod.  
+-   Kodowaniem SOAP zachowuje odwołania do obiektu. Rozważmy na przykład, poniższy kod.  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  
@@ -407,10 +407,10 @@ public class PatientRecord : PersonRecord
     cr.changedTo=p;  
     ```  
   
- Po serializacji komunikatów przy użyciu kodowania protokołu SOAP, `changedFrom` i `changedTo` nie zawierają własne kopie `p`, ale zamiast tego punktu do kopiowania wewnątrz `changedBy` elementu.  
+ Po serializacji wiadomości przy użyciu kodowania SOAP, `changedFrom` i `changedTo` nie zawierają własne kopie `p`, ale zamiast tego wskazać polecenie kopiowania wewnątrz `changedBy` elementu.  
   
 ## <a name="performance-considerations"></a>Zagadnienia dotyczące wydajności  
- Każdy nagłówek komunikatu i część treści wiadomości jest serializowany niezależnie od innych. W związku z tym samym przestrzeni nazw mogą być deklarowane ponownie dla każdego nagłówka i część treści. Aby poprawić wydajność, szczególnie pod względem rozmiar wiadomości w sieci, należy skonsolidować wiele nagłówków i części treści w Jednoczęściowa nagłówka lub treści. Na przykład zamiast następujący kod:  
+ Każdy nagłówek wiadomości i część treści wiadomości jest serializowana, niezależnie od innych. W związku z tym ten sam przestrzenie nazw mogą być deklarowane ponownie dla każdego nagłówka i część treści. Aby zwiększyć wydajność, zwłaszcza jeśli chodzi o rozmiar wiadomości w sieci, należy skonsolidować wiele nagłówków i części treści w jednoczęściowych nagłówku lub w treści. Na przykład zamiast następujący kod:  
   
 ```csharp  
 [MessageContract]  
@@ -442,10 +442,10 @@ public class OperationDetails
 }  
 ```  
   
-### <a name="event-based-asynchronous-and-message-contracts"></a>Oparty na zdarzeniach asynchronicznych i kontrakty komunikatów  
- Wskazówek dotyczących modelu asynchroniczny oparty na zdarzeniach stanu, że jeśli zostanie zwrócony więcej niż jedną wartość, jedna wartość jest zwracana jako `Result` właściwości, a inne są zwracane jako właściwości na <xref:System.EventArgs> obiektu. Jeden wynik tego jest to, że jeśli klient importuje metadanych za pomocą opcji polecenia asynchroniczny oparty na zdarzeniach i operacji zwraca więcej niż jedną wartość, domyślna <xref:System.EventArgs> obiektu zwraca jedną wartość jako `Result` właściwość i pozostałej właściwości <xref:System.EventArgs> obiektu.  
+### <a name="event-based-asynchronous-and-message-contracts"></a>Oparte na zdarzeniach asynchronicznych i kontrakt komunikatu  
+ Dotyczących projektowania opartego na zdarzeniach modelu asynchronicznego stanu, że jeśli zwracana jest więcej niż jedną wartość, jedną wartość jest zwracana jako `Result` właściwości i inne są zwracane jako właściwości na <xref:System.EventArgs> obiektu. Jeden wynik tego jest to, że jeśli klient importuje metadane przy użyciu opcji oparte na zdarzeniach asynchronicznych polecenia, a operacja zwraca więcej niż jedną wartość, wartość domyślna <xref:System.EventArgs> zwraca jedną wartość jako `Result` właściwość i pozostałej właściwości <xref:System.EventArgs> obiektu.  
   
- Jeśli chcesz otrzymywać obiekt komunikatu jako `Result` właściwości i mieć zwracanych wartości jako właściwości tego obiektu, użyj `/messageContract` — opcja polecenia. Spowoduje to wygenerowanie podpisie, który zwraca komunikat odpowiedzi jako `Result` właściwość <xref:System.EventArgs> obiektu. Wszystkie wewnętrzny zwracanych wartości są następnie właściwości obiektu komunikatu odpowiedzi.  
+ Jeśli chcesz otrzymywać obiekt komunikatu jako `Result` właściwości i mają zwracanych wartości, jak używać właściwości dla tego obiektu `/messageContract` opcja polecenia. Spowoduje to wygenerowanie sygnaturę, która zwraca komunikat odpowiedzi jako `Result` właściwość <xref:System.EventArgs> obiektu. Wszystkie wewnętrzne wartości zwracane są następnie właściwości obiektu komunikat odpowiedzi.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  

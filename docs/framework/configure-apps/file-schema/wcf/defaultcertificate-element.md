@@ -2,15 +2,15 @@
 title: '&lt;defaultCertificate&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b99ee36fdb924ea12f3023984a3aa4b590937e8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751015"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847857"
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt;, element
-Określa certyfikat X.509 do użycia podczas usługa lub STS nie zapewnia go poprzez protokół negocjacji.  
+Określa certyfikat X.509, który ma być używany gdy usługa lub STS nie zapewnia go poprzez protokół negocjacji.  
   
  \<system.ServiceModel>  
 \<zachowania >  
@@ -30,40 +30,40 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty i elementy podrzędne, elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|findValue|Ciąg. Wartość do wyszukania.|  
+|findValue|ciąg. Wartość do wyszukania.|  
 |X509FindType|Wyliczenie. Jedno z pól certyfikatu do wyszukiwania.|  
-|storeLocation|Wyliczenie. Jeden z dwóch systemów przechowywania lokalizacji do wyszukiwania.|  
+|storeLocation|Wyliczenie. Jedną z dwóch systemów przechowywania lokalizacji do przeszukania.|  
 |storeName|Wyliczenie. Jednym z systemów magazynowania do wyszukiwania.|  
   
 ## <a name="findvalue-attribute"></a>findValue atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|String|Wartość jest zależna od pola (określony przez atrybut X509FindType) przeszukiwany. Na przykład wyszukiwania odcisk palca, wartość musi być ciągiem szesnastkowym liczb.|  
+|String|Wartość zależy od pola (określony przez atrybut X509FindType) wyszukiwany. Na przykład jeśli wyszukiwanie odcisku palca, wartość musi być ciągiem liczb szesnastkowych.|  
   
 ## <a name="x509findtype-attribute"></a>Atrybut x509FindType  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Wartości to: postać FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Wyliczenie|Wartości obejmują: FindByThumbprint FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Lub LocalMachine CurrentUser.|  
+|Wyliczenie|CurrentUser lub LocalMachine.|  
   
 ## <a name="storename-attribute"></a>storeName atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Wartości to: książka adresowa, AuthRoot, urząd certyfikacji, niedozwolone mojej, głównego, TrustedPeople i TrustedPublisher.|  
+|Wyliczenie|Wartości obejmują: książka adresowa, AuthRoot, urząd certyfikacji, niedozwolone mojej, główny, TrustedPeople i TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -72,13 +72,13 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Określa certyfikat używany podczas uwierzytelniania usługi do klienta.|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Określa certyfikat używany podczas uwierzytelniania usługi dla klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Dla powiązań, które korzystają z zabezpieczeń wiadomości opartego na certyfikatach certyfikatu określonego przez ten element konfiguracji jest używany do szyfrowania wiadomości do usługi i powinien być używany przez usługę do podpisywania odpowiedzi do klienta. Przechowuje jeden certyfikat do użycia, gdy żaden certyfikat nie jest określona przez usługę.  
+ Dla powiązań, które korzystają z zabezpieczeń komunikatów opartego na certyfikatach certyfikatu określonego przez ten element konfiguracji jest używany do szyfrowania komunikatów do usługi i powinien być używany przez usługę do podpisywania odpowiedzi do klienta. Przechowuje jeden certyfikat, który ma być używany, gdy żaden certyfikat nie jest określona przez usługę.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie certyfikat do użycia dla punktów końcowych, którego identyfikator URI, który rozpoczyna się od http://www.contoso.com i certyfikat do użycia dla wszystkich innych punktów końcowych, które nie wykonuj negocjowanie certyfikatu.  
+ W poniższym przykładzie określono certyfikat do użycia dla punktów końcowych, którego identyfikator URI rozpoczyna się od `http://www.contoso.com` i certyfikat do użycia dla wszystkich innych punktów końcowych, które nie wykonują negocjacji certyfikatu.  
   
 ```xml  
 <serviceCertificate>  

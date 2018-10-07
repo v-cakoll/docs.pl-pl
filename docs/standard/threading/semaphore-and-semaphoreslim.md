@@ -13,11 +13,11 @@ ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580001"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847623"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semafor i klasa SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Klasa reprezentuje nazwane (ogólnosystemowe) lub semafor lokalnego. To cienka otokę wokół obiektu semafora Win32. Semaforów Win32 są liczenie semaforów, które mogą być używane do kontrolowania dostępu do puli zasobów.  

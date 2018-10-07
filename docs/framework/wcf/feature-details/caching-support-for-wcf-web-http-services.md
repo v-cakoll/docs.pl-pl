@@ -2,12 +2,12 @@
 title: Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972991"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847645"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Umożliwia użycie deklaratywne mechanizm buforowania, dostępnych w programie ASP.NET w usługach WCF Web HTTP. Dzięki temu można buforowanie odpowiedzi z operacji usługi WCF Web HTTP. Gdy użytkownik wysyła żądania HTTP GET do usługi, który jest skonfigurowany do buforowania, ASP.NET odsyła odpowiedzi z pamięci podręcznej i nie jest wywoływana metoda usługi. Po wygaśnięciu pamięci podręcznej, następnym razem użytkownik wysyła żądania HTTP GET, wywoływana jest metoda swoje usługi i odpowiedź jest zbuforowana z jeszcze raz. Aby uzyskać więcej informacji na temat buforowania platformy ASP.NET, zobacz [omówienie buforowania programu ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -58,7 +58,7 @@ public class Service
 </system.web>  
 ```  
   
- Jest to ten sam element konfiguracji, która jest dostępna dla aplikacji ASP.NET. Aby uzyskać więcej informacji na temat profilów w pamięci podręcznej programu ASP.NET, zobacz <xref:System.Web.Configuration.OutputCacheProfile>. Dla usług HTTP w sieci Web są najważniejsze atrybutów w pamięci podręcznej profilu: `cacheDuration` i `varyByParam`. Te atrybuty są wymagane. `cacheDuration` Określa ilość czasu, które mają być buforowane odpowiedzi w ciągu kilku sekund. `varyByParam` Pozwala określić parametr ciągu zapytania używanego do buforowanie odpowiedzi. Wszystkie żądania przekazywane za inne wartości parametrów ciągów są buforowane osobno. Na przykład, po nawiązaniu początkowego żądania do http://MyServer/MyHttpService/MyOperation?param=10 wszystkich kolejnych żądań wykonywanych przy użyciu tego samego identyfikatora URI zostałyby zwrócone w odpowiedzi z pamięci podręcznej (, dopóki nie upłynie czas trwania pamięci podręcznej). Odpowiedzi dla podobne żądania, która jest taka sama, ale ma inną wartość dla parametru ciągu zapytania parametr są buforowane osobno. Jeśli nie mają oddzielne zachowania buforowania, ustaw `varyByParam` na "none".  
+ Jest to ten sam element konfiguracji, która jest dostępna dla aplikacji ASP.NET. Aby uzyskać więcej informacji na temat profilów w pamięci podręcznej programu ASP.NET, zobacz <xref:System.Web.Configuration.OutputCacheProfile>. Dla usług HTTP w sieci Web są najważniejsze atrybutów w pamięci podręcznej profilu: `cacheDuration` i `varyByParam`. Te atrybuty są wymagane. `cacheDuration` Określa ilość czasu, które mają być buforowane odpowiedzi w ciągu kilku sekund. `varyByParam` Pozwala określić parametr ciągu zapytania używanego do buforowanie odpowiedzi. Wszystkie żądania przekazywane za inne wartości parametrów ciągów są buforowane osobno. Na przykład, po nawiązaniu początkowego żądania do `http://MyServer/MyHttpService/MyOperation?param=10`, wszystkie kolejne żądania z tego samego identyfikatora URI zostałyby zwrócone w odpowiedzi z pamięci podręcznej (, dopóki nie upłynie czas trwania pamięci podręcznej). Odpowiedzi dla podobne żądania, która jest taka sama, ale ma inną wartość dla parametru ciągu zapytania parametr są buforowane osobno. Jeśli nie mają oddzielne zachowania buforowania, ustaw `varyByParam` na "none".  
   
 ## <a name="sql-cache-dependency"></a>Zależności pamięci podręcznej SQL  
  Odpowiedzi usługi HTTP sieci Web można buforować w taki sposób, w przypadku zależności pamięci podręcznej SQL. Jeśli usługi WCF Web HTTP jest zależna od danych przechowywanych w bazie danych SQL, można buforować odpowiedzi usługi i unieważnić buforowaną odpowiedź, gdy danych w SQL bazy danych zmian w tabeli. To zachowanie jest całkowicie skonfigurowany w pliku Web.config. Należy określić ciąg połączenia w <`connectionStrings`> element.  

@@ -3,12 +3,12 @@ title: Wykonanie podzapytania w operacji grupowania (LINQ w C#)
 description: Jak wykonanie podzapytania w operacji grupowania, za pomocą LINQ w C#.
 ms.date: 12/1/2016
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: 514db81b80557a3026589f00177910cc9446c0f4
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 19be93fe695982e93abea9a59153a4245dce4a60
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261123"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846321"
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>Wykonanie podzapytania w operacji grupowania
 
@@ -23,7 +23,11 @@ Aby uzyskać więcej informacji dotyczących kontynuacji, zobacz [do](../languag
 > [!NOTE]
 > Ten przykład zawiera odwołania do obiektów, które są zdefiniowane w przykładowym kodzie w [kwerenda dotycząca kolekcji obiektów](query-a-collection-of-objects.md).
 
-[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
+[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)] 
+
+Zapytania w powyższym fragmencie mogą również będą zapisywane przy użyciu składni metody. Poniższy fragment kodu zawiera zapytanie semantycznie równoważne napisane przy użyciu składni metody.
+
+[!code-csharp[csProgGuideLINQ#86](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_2.cs)]
 
 ## <a name="see-also"></a>Zobacz także
 

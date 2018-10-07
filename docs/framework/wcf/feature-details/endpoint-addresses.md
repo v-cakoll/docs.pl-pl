@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855718"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847415"
 ---
 # <a name="endpoint-addresses"></a>Adresy punktów końcowych
 Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zlokalizować i zidentyfikować punkt końcowy. Ten adres składa się przede wszystkim z zasobów identyfikator URI (Uniform), który określa położenie punktu końcowego. Adres punktu końcowego jest reprezentowana w modelu programowania Windows Communication Foundation (WCF) przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera opcjonalny <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiany wiadomości z nim i zestaw opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, które definiują innych nagłówków protokołu SOAP, wymagane w celu dotarcia do usługi. Opcjonalne nagłówki zapewnić dodatkowe i bardziej szczegółowe informacje dotyczące adresowania do identyfikacji lub interakcji z punktu końcowego usługi. Adres punktu końcowego jest reprezentowany w sieci jako odwołanie WS-Addressing punktu końcowego (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Identyfikator URI struktury adresu  
- Adres URI dla większości transportu ma cztery części. Na przykład czterech części identyfikatora URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint może być wyszczególnione w następujący sposób:  
+ Adres URI dla większości transportu ma cztery części. Na przykład czterech części identyfikatora URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` może być wyszczególnione w następujący sposób:  
   
--   Schemat: http:  
+-   Schemat: `http:`
   
 -   Maszyny: `www.fabrikam.com`  
   
@@ -56,9 +56,9 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
   
  Na przykład lokacji może zawierać następujące adresy podstawowy:  
   
--   http://payroll.myorg.com/Service.svc  
+- `http://payroll.myorg.com/Service.svc`
   
--   http://shipping.myorg.com/Service.svc  
+- `http://shipping.myorg.com/Service.svc`
   
  Za pomocą [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], określić filtr prefiksu na poziomie elementu AppDomain w pliku konfiguracji. W tym z [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) element, który zawiera listę prefiksów. Przychodzące adres podstawowy, dostarczone przez usługi IIS, są filtrowane w oparciu o listę prefiksów opcjonalne. Domyślnie jeśli prefiks, który nie jest określony, wszystkie adresy są przekazywane za pośrednictwem. Określenie prefiksu wyniki w tylko pasujących adres podstawowy dla tego schematu, które zostaną przekazane za pośrednictwem.  
   
@@ -75,7 +75,7 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
 </system.serviceModel>  
 ```  
   
- W powyższym przykładzie net.tcp://payroll.myorg.com: 8000 i http://shipping.myorg.com:8000 są tylko podstawowy adres, ich systemów, które są przekazywane.  
+ W powyższym przykładzie `net.tcp://payroll.myorg.com:8000` i `http://shipping.myorg.com:8000` są tylko podstawowy adres, ich systemów, które są przekazywane.  
   
  `baseAddressPrefixFilter` Nie obsługuje symboli wieloznacznych.  
   

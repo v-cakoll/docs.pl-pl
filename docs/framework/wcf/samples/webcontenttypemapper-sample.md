@@ -2,12 +2,12 @@
 title: WebContentTypeMapper — przykład
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 91e5cca478521a343f7528f878f114b85eff2d08
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 572bea9fc38668d554ef467be7689ac01b652fb8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618535"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847609"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper — przykład
 Niniejszy przykład pokazuje jak mapować nowych typów zawartości do formatów treści komunikat usług Windows Communication Foundation (WCF).  
@@ -58,7 +58,7 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2.  Skompiluj rozwiązanie WebContentTypeMapperSample.sln, zgodnie z opisem w [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Przejdź do http://localhost/ServiceModelSamples/JCTMClientPage.htm (nie należy otwierać JCTMClientPage.htm w przeglądarce z katalogu projektu).  
+3.  Przejdź do `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (nie należy otwierać JCTMClientPage.htm w przeglądarce z katalogu projektu).  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
-ms.openlocfilehash: bf88073c25351aac0e421d69a947605de3e37759
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b9b7d78601790cfcd7cf54688db1750df96a19f9
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200701"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848234"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows
 W tym temacie przedstawiono sposób włączania zabezpieczenia transportu usługi Windows Communication Foundation (WCF), który znajduje się w domenie, Windows i jest wywoływana przez klientów w tej samej domenie. Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [zabezpieczenia transportu z uwierzytelnianiem Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Dla przykładowej aplikacji, zobacz [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) próbki.  
@@ -55,7 +55,7 @@ W tym temacie przedstawiono sposób włączania zabezpieczenia transportu usług
   
 3.  Utwórz drugi `Type` zmiennej o nazwie `serviceType` i przypisać jej typ kontraktu zaimplementowano (`Calculator`).  
   
-4.  Utwórz wystąpienie obiektu <xref:System.Uri> klasę o nazwie `baseAddress` przy użyciu podstawowego adresu usługi. Adres podstawowy musi mieć schemat, który odpowiada transportu. W takim przypadku schemat transportu jest protokół HTTP, a adres zawiera specjalne identyfikator (URI) "localhost" i numer portu (8036) oraz adres podstawowego punktu końcowego ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/.  
+4.  Utwórz wystąpienie obiektu <xref:System.Uri> klasę o nazwie `baseAddress` przy użyciu podstawowego adresu usługi. Adres podstawowy musi mieć schemat, który odpowiada transportu. W takim przypadku schemat transportu jest protokół HTTP, a adres zawiera specjalne identyfikator (URI) "localhost" i numer portu (8036) oraz adres podstawowego punktu końcowego ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
   
 5.  Utwórz wystąpienie obiektu <xref:System.ServiceModel.ServiceHost> klasy `serviceType` i `baseAddress` zmiennych.  
   

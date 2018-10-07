@@ -8,11 +8,11 @@ ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 33fdaf883e465b1c39b2f4d00d31c5d6b000a5cc
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781086"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848325"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Wersje programu .NET framework i zależności
 Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka wspólnego (CLR), biblioteki klas bazowych i inne zarządzane biblioteki. W tym temacie opisano kluczowe funkcje programu .NET Framework według wersji, podano informacje o bazowych wersjach środowiska CLR i skojarzonych środowiskach deweloperskich oraz zidentyfikowano wersje, które są instalowane przez system operacyjny Windows.  

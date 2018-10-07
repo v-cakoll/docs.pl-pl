@@ -8,11 +8,11 @@ ms.assetid: 0ab8d42c-5b8b-481b-b788-2caecc2f0191
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 7d8df325d18c3657d4955fa534d29bb7fdbc595c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793540"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846503"
 ---
 # <a name="ui-automation-threading-issues"></a>Problemy wielowątkowości dotyczące automatyzacji interfejsu użytkownika
 > [!NOTE]

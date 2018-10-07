@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: 6f5a89ebe359ca2fdae1d5545192dc2dcecca6a2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5a931199ff8d09412d536a173f3cd12e451def64
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529817"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48845983"
 ---
 # <a name="synclock-statement"></a>SyncLock — Instrukcja
 Uzyskuje blokady na wyłączność dla bloku instrukcji, przed wykonaniem tego bloku.  
@@ -91,8 +91,8 @@ End SyncLock
   
 ### <a name="comments"></a>Komentarze  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading>  
- <xref:System.Threading.Monitor>  
- [Synchronizacja wątku](../../programming-guide/concepts/threading/thread-synchronization.md)  
- [Wątkowość](../../programming-guide/concepts/threading/index.md)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.Interlocked?displayProperty=nameWithType>
+- [Przegląd elementów podstawowych synchronizacji](../../../standard/threading/overview-of-synchronization-primitives.md)

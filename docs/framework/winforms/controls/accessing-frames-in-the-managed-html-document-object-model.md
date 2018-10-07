@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 5b214a3b3c8d59d27a60b5cee28ea168edb9bf4a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779776"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847646"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Uzyskiwanie dostępu do ramek w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą pomieścić własnych unikatowych dokumentów HTML. Przy użyciu klatek można łatwo tworzyć strony HTML, w których statyczne, takie jak pasek nawigacyjny pozostały jedną lub kilka części strony, podczas gdy inne ramki stale zmienić jego zawartość.  
@@ -34,7 +34,7 @@ Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą po
 3.  Jeśli uzyskujesz dostęp do `FRAME` lub `IFRAME` tagu za pomocą <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> właściwość <xref:System.Windows.Forms.HtmlWindow>, <xref:System.Windows.Forms.HtmlElement.Children%2A> kolekcji lub metody takie jak <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> lub <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, pobierają elementu ramki. Reprezentuje statycznej właściwości ramki, w tym adres URL określony w oryginalnym pliku HTML.  
   
 ## <a name="frames-and-security"></a>Ramki i zabezpieczeń  
- Dostęp do ramki jest skomplikowane faktem, że zarządzany HTML DOM implementuje środkiem bezpieczeństwa, znane jako *między ramkami skryptów zabezpieczeń*. Jeśli dokument zawiera `FRAMESET` z co najmniej dwóch `FRAME`s w różnych domenach, te `FRAME`s nie mogą współdziałać ze sobą. Innymi słowy `FRAME` , wyświetla zawartość w witrynie sieci Web nie może uzyskać dostęp do informacji w `FRAME` obsługujący takich jak witryny innych firm http://www.adatum.com/. To są implementowane na poziomie <xref:System.Windows.Forms.HtmlWindow> klasy. Można uzyskać ogólne informacje na temat `FRAME` hostingu z innej witryny sieci Web, takich jak adres URL, ale będzie mógł uzyskać dostępu do jego <xref:System.Windows.Forms.HtmlWindow.Document%2A> lub zmienić rozmiar lub położenie jego hostingu `FRAME` lub `IFRAME`.  
+ Dostęp do ramki jest skomplikowane faktem, że zarządzany HTML DOM implementuje środkiem bezpieczeństwa, znane jako *między ramkami skryptów zabezpieczeń*. Jeśli dokument zawiera `FRAMESET` z co najmniej dwóch `FRAME`s w różnych domenach, te `FRAME`s nie mogą współdziałać ze sobą. Innymi słowy `FRAME` , wyświetla zawartość w witrynie sieci Web nie może uzyskać dostęp do informacji w `FRAME` obsługujący takich jak witryny innych firm `http://www.adatum.com/`. To są implementowane na poziomie <xref:System.Windows.Forms.HtmlWindow> klasy. Można uzyskać ogólne informacje na temat `FRAME` hostingu z innej witryny sieci Web, takich jak adres URL, ale będzie mógł uzyskać dostępu do jego <xref:System.Windows.Forms.HtmlWindow.Document%2A> lub zmienić rozmiar lub położenie jego hostingu `FRAME` lub `IFRAME`.  
   
  Ta reguła obowiązuje także w systemie windows, które można otworzyć za pomocą <xref:System.Windows.Forms.HtmlWindow.Open%2A> i <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> metody. Jeśli okno otwierania znajduje się w innej domenie niż strona hostowana w <xref:System.Windows.Forms.WebBrowser> control, nie będzie mógł przenieść to okno, lub przejrzyj jego zawartość. Ograniczenia te są wymuszane również, jeśli używasz <xref:System.Windows.Forms.WebBrowser> formantu, aby wyświetlić witrynę sieci Web, która różni się od witryny sieci Web, używane do wdrażania aplikacji opartej na formularzach Windows. Jeśli używasz [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] używać technologii wdrażania, aby zainstalować aplikację z witryny sieci Web A, a <xref:System.Windows.Forms.WebBrowser> Aby wyświetlić witrynę sieci Web B, nie będzie dostępu do witryny sieci Web użytkownika B danych.  
   

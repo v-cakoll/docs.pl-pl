@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
 author: BrucePerlerMS
 ms.openlocfilehash: 703e89342cbfd4a957c10419d6583e85ec6f6d2a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778130"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837459"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.  

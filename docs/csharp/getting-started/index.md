@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972533"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837896"
 ---
 # <a name="get-started-with-c"></a>Rozpoczynanie pracy przy użyciu języka C\#
 
@@ -26,7 +26,7 @@ Dostępne są następujące tematy:
 
 * [Tworzenie aplikacji Hello world w języku C# na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio 2017, czyli najnowsza wersja programu Visual Studio, umożliwia pisanie kodu, kompilowanie, uruchamianie, debugowanie, profilowanie oraz publikowanie własnych aplikacji za pomocą zintegrowanego środowiska deweloperskiego dla systemu Windows.
+   Visual Studio 2017, najnowsza wersja programu Visual Studio umożliwia kodu, kompilowania, uruchamiania, debugowanie, profilowanie i Publikuj swoje aplikacje z zintegrowane środowisko projektowe dla Windows.
 
    Temat ten umożliwi Ci utworzenie i uruchomienie prostej aplikacji Hello World, a następnie zmodyfikowanie jej do formy nieco bardziej interaktywnej. Kiedy już utworzysz i uruchomisz swoją aplikację, możesz też dowiedzieć się, jak ją [debugować](../../core/tutorials/debugging-with-visual-studio.md) oraz [opublikować](../../core/tutorials/publishing-with-visual-studio.md), tak aby można było ją uruchomić na dowolnej platformie obsługiwanej przez .NET Core.
 

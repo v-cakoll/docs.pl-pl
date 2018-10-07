@@ -2,15 +2,15 @@
 title: '&lt;scopedCertificates&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748867"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838283"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt;, element
-Reprezentuje kolekcję certyfikatów X.509 dostarczonych przez określone usługi (w zakresie) do uwierzytelniania. Ta kolekcja jest zwykle można określić certyfikaty usługi dla usługi tokenu zabezpieczeń w federacyjnym scenariuszu.  
+Reprezentuje kolekcję certyfikatów X.509 dostarczonych przez określone usługi (w zakresie) do uwierzytelniania. Ta kolekcja jest zazwyczaj pozwala ustalić certyfikaty usługi usługi tokenu zabezpieczeń w federacyjnym scenariuszu.  
   
  \<system.ServiceModel>  
 \<zachowania >  
@@ -18,8 +18,8 @@ sekcja endpointBehaviors
 \<zachowanie >  
 \<clientCredentials>  
 \<serviceCertificate >  
-\<scopedCertificates > — Element  
-\<Dodaj > elementu \<scopedCertificates >  
+\<scopedCertificates > Element  
+\<Dodaj >, element dla \<scopedCertificates >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,17 +49,17 @@ sekcja endpointBehaviors
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|Określa certyfikat używany podczas uwierzytelniania usługi do klienta.|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|Określa certyfikat używany podczas uwierzytelniania usługi dla klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta kolekcja umożliwia klientowi skonfigurować certyfikaty usługi do użycia na podstawie adresu URL usługi, z którym się komunikuje. Jest to szczególnie przydatne w wystawionego tokenu scenariuszach, gdzie klient może komunikować się wiele usług (usług a także usługi tokenu zabezpieczeń pośredniczące). Dla powiązań, które korzystają z zabezpieczeń wiadomości opartego na certyfikatach ten certyfikat jest używany do szyfrowania wiadomości do usługi, a powinien być używany przez usługę do podpisywania odpowiedzi do klienta.  
+ Ta kolekcja umożliwia klienta skonfigurować certyfikaty usługi do użycia na podstawie adresu URL usługi, którym się komunikuje. Jest to szczególnie przydatne w wystawionych tokenów scenariuszach, gdzie klienta może się komunikować z wielu usług (service zakończenia także usługach tokenów zabezpieczeń pośrednie). Dla powiązań, które korzystają z zabezpieczeń komunikatów opartego na certyfikatach ten certyfikat jest używany do szyfrowania komunikatów do usługi, a powinien być używany przez usługę do podpisywania odpowiedzi do klienta.  
   
  Jeśli powiązanie wymaga certyfikatu dla usługi i nie określonego certyfikatu dla usługi, którą można odnaleźć adresu URL w ScopedCertificates, jest używany certyfikat domyślny.  
   
  Aby uzyskać więcej informacji, zobacz sekcję "O zakresie certyfikatów" [porady: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie certyfikat usługi dla klienta podczas komunikacji z punktami końcowymi, których nazwa domeny jest http://www.contoso.com za pośrednictwem protokołu HTTP.  
+ W poniższym przykładzie określono certyfikatu usługi dla klientów do użycia podczas komunikowania się z punktami końcowymi, których nazwa domeny jest `http://www.contoso.com` za pośrednictwem protokołu HTTP.  
   
 ```xml  
 <serviceCertificate>  

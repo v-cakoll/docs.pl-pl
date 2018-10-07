@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 author: BrucePerlerMS
-ms.openlocfilehash: 32fd1ebede841488d1bfabd2f92bd3fb1ffb55e8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 0efa9ecbe384009cc8fc4735ec9fc3db8ed3ce59
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035659"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841459"
 ---
 # <a name="how-to-set-the-security-mode"></a>Instrukcje: Ustawianie trybu zabezpieczeń
 Zabezpieczenia usług Windows Communication Foundation (WCF) ma trzy często używanych trybów zabezpieczeń, które znajdują się na najbardziej wstępnie zdefiniowanych powiązań: transportu, wiadomości i "transport z poświadczeniami komunikatu". Dwa tryby dodatkowe są specyficzne dla dwa powiązania: tryb "tylko transportu credential" znalezione na <xref:System.ServiceModel.BasicHttpBinding>i "Oba" Tryb znalezione na <xref:System.ServiceModel.NetMsmqBinding>. Jednak ten temat koncentruje się na trzech często używanych trybów zabezpieczeń: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, i <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -88,7 +88,7 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) ma trzy często uż
     ```xml  
     <wsHttpBinding>  
     <binding name="TransportSecurity">  
-        <security mode="Transport" />  
+        <security mode="Transport" >  
            <transport clientCredentialType = "Windows" />  
         </security>  
     </binding>  
@@ -100,7 +100,7 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) ma trzy często uż
     ```xml  
     <wsHttpBinding>  
     <binding name="MessageSecurity">  
-        <security mode="Message" />  
+        <security mode="Message" >  
            <message clientCredentialType = "Certificate" />  
         </security>  
     </binding>  

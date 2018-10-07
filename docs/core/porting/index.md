@@ -1,49 +1,49 @@
 ---
-title: Eksportowanie do platformy .NET Core z .NET Framework
-description: Opis procesu przenoszenia i odnajdywanie narzędzia, które mogą być przydatne podczas przenoszenia projekt .NET Framework .NET Core.
+title: Eksportowanie do programu .NET Core z .NET Framework
+description: Zrozumieć proces przenoszenia i Odkryj narzędzia, które mogą być przydatne podczas przenoszenia projektu .NET Framework i .NET Core.
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: bf4f50ca915f21cdda6b99ae6bdf9e837eca3ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210085"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835395"
 ---
-# <a name="porting-to-net-core-from-net-framework"></a>Eksportowanie do platformy .NET Core z .NET Framework
+# <a name="porting-to-net-core-from-net-framework"></a>Eksportowanie do programu .NET Core z .NET Framework
 
-Jeśli masz kodu uruchomionego w programie .NET Framework może Cię zainteresować systemem kodu .NET Core 1.0.  Ten artykuł zawiera omówienie procesu przenoszenia listę narzędzi, które mogą być przydatne przy eksportowaniu na .NET Core.
+Jeśli masz kod uruchomiony w środowisku .NET Framework, może Cię zainteresować uruchamianie kodu na platformy .NET Core 1.0.  W tym artykule opisano przebieg procesu przenoszenia oraz listę narzędzi, które mogą być przydatne w przypadku przenoszenia do platformy .NET Core.
 
 ## <a name="overview-of-the-porting-process"></a>Omówienie procesu przenoszenia
 
-Zalecany proces przy eksportowaniu obejmuje następujące serie kroków.  Każdy z tych elementów procesu są opisane bardziej szczegółowo w dalszej artykułach.
+Zalecany proces przenoszenia następuje poniższą sekwencję czynności.  Każdy z tych elementów, proces zostały omówione bardziej szczegółowo w dalszej artykułów.
 
-1. Identyfikowanie i konta dla zależności innych firm.
+1. Identyfikuj i uwzględnić zależności innych firm.
 
-   Obejmuje understanding jakie zależności innych firm są, jak zależeć na ich sposób, aby sprawdzić, czy są one również uruchomić na oprogramowanie .NET Core i kroki można wykonać, jeśli tak nie jest.
+   Działania te obejmują zrozumienie, jakie zależności innych firm są, jak zależeć na ich, w jaki sposób, aby sprawdzić, czy działają one również na platformy .NET Core i kroki można wykonać, jeśli nie.
    
-2. Przekieruj wszystkie projekty, które chcesz dodać port do docelowej platformy .NET Framework 4.6.2.
+2. Przekieruj wszystkie projekty, które chcesz dodać port do środowiska .NET Framework 4.6.2.
 
-   Dzięki temu, że można użyć interfejsu API alternatyw dla celów specyficzne dla platformy .NET Framework w przypadkach, gdy oprogramowanie .NET Core nie obsługuje określonego interfejsu API.
+   Daje to gwarancję, że można użyć interfejsu API alternatyw dla celów specyficzne dla platformy .NET Framework w przypadkach, w której platformy .NET Core nie obsługuje określony interfejs API.
    
-3. Użyj [narzędzia Analizator przenośność interfejsu API](https://github.com/Microsoft/dotnet-apiport/) do analizowania ponownie zestawy i opracowanie planu portu, na podstawie jej wyników.
+3. Użyj [narzędzia .NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) do analizowania zestawów i opracować plan do portu, na podstawie jej wyników.
 
-   Narzędzie Analizator przenośność interfejsu API analizowanie ponownie skompilowane zestawy i Generowanie raportu, który znajduje się podsumowanie wysokiego poziomu przenośność i podział każdego interfejsu API używasz niedostępny na .NET Core.  Ten raport z analizy można użyć programu codebase aby opracować plan dla jak będzie port kodu za pośrednictwem.
+   Narzędzie Analizator przenośności interfejsu API analizy skompilowanych zestawów i Generowanie raportu, który przedstawia podsumowanie wysokiego poziomu przenośność i podział każdy interfejs API używasz, nie jest dostępna na platformie .NET Core.  Możesz użyć tego raportu, wraz z analizą Twojej bazy kodu, aby opracować plan dla jak Twój kod będzie portu za pośrednictwem.
    
-4. Port kodu testy.
+4. Przyłącz kod testów.
 
-   Eksportowanie do platformy .NET Core jest duży zmiany do baza kodu, ma zalecane uzyskanie przenoszone, aby uruchomić testy zgodnie z portu kodu w testach.  MSTest, xUnit i NUnit obsługuje obecnie .NET Core 1.0.
+   Eksportowanie do programu .NET Core jest naprawdę spora zmiana bazie kodu, ma zdecydowanie zaleca uzyskać przenoszone, aby uruchomić testy zgodnie z portu kodu przez testy.  MSTest, xUnit i NUnit platformy .NET Core 1.0 już obsługę linuksa.
    
-6. Wykonanie planu przy eksportowaniu!
+6. Wykonaj swój plan w celu przenoszenia!
 
 ## <a name="tools-to-help"></a>Narzędzia ułatwiające
 
-Poniżej przedstawiono krótką listę narzędzi, które znajdują się pomocne:
+Poniżej przedstawiono krótką listę narzędzi, które będzie pomocne:
 
-* NuGet - [klienta Nuget](https://dist.nuget.org/index.html) lub [Explorer pakietu NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer), Menedżer pakietów firmy Microsoft dla implementacji .NET.
-* Analizator przenośność interfejsu API - [narzędzia wiersza polecenia](https://github.com/Microsoft/dotnet-apiport/releases) lub [rozszerzenie programu Visual Studio](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b), łańcuch narzędzi, które można wygenerować raport jak przenośnego kodu jest między .NET Framework i .NET Core z Podział zestawu przez zestaw problemów.  Zobacz [narzędzi, aby ułatwić proces](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/) Aby uzyskać więcej informacji.
-* Wstecznego wyszukiwania pakietu - A [usługi sieci web przydatne](https://packagesearch.azurewebsites.net) który służy do wyszukiwania typów i Znajdź pakiety zawierające tego typu.
+* NuGet — [klienta programu Nuget](https://dist.nuget.org/index.html) lub [Eksplorator pakietów NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer), Menedżer pakietów firmy Microsoft dla implementacji platformy .NET.
+* Analizator przenośności interfejsu API — [narzędzia wiersza polecenia](https://github.com/Microsoft/dotnet-apiport/releases) lub [rozszerzenie programu Visual Studio](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b), łańcuch narzędzi, który można wygenerować raport jak przenośny kod jest między .NET Framework i .NET Core za pomocą zestaw, zestaw z rozbiciem na poszczególne problemy.  Zobacz [narzędzia ułatwiające procesu](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/) Aby uzyskać więcej informacji.
+* Odwrócone wyszukiwanie pakietu - A [usługi sieci web przydatne](https://packagesearch.azurewebsites.net) umożliwiająca wyszukiwania dla typu i znajdowania pakiety zawierające tego typu.
 
 ## <a name="next-steps"></a>Następne kroki
 

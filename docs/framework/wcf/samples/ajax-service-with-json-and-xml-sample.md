@@ -2,24 +2,24 @@
 title: Usługa AJAX z formatami JSON i XML — przykład
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 1beb89c11fccefec24ccbebc3fe30033a646718d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 17b0fd362ac84c7fbc0c9e88fb3d318966356bc6
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520077"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836196"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Usługa AJAX z formatami JSON i XML — przykład
 W tym przykładzie pokazano, jak używać usług Windows Communication Foundation (WCF) do tworzenia asynchronicznych języka JavaScript i XML (technologia AJAX) usługa, która zwraca dane JavaScript Object Notation (JSON) lub XML. Usługa AJAX dostęp przy użyciu kodu JavaScript w kliencie przeglądarki sieci Web. W tym przykładzie opiera się na [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki.  
   
- W przeciwieństwie do innych przykładów AJAX, w tym przykładzie nie korzysta z technologii ASP.NET AJAX i <xref:System.Web.UI.ScriptManager> kontroli. Za pomocą dodatkowej konfiguracji usług WCF AJAX jest możliwy z dowolnej strony HTML przy użyciu języka JavaScript, a w tym scenariuszu jest następująca. Przykład przy użyciu usługi WCF przy użyciu rozszerzeń ASP.NET AJAX, zobacz [przykłady AJAX](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ W przeciwieństwie do innych przykładów AJAX, w tym przykładzie nie korzysta z technologii ASP.NET AJAX i <xref:System.Web.UI.ScriptManager> kontroli. Za pomocą dodatkowej konfiguracji usług WCF AJAX jest możliwy z dowolnej strony HTML przy użyciu języka JavaScript, a w tym scenariuszu jest następująca. Przykład przy użyciu usługi WCF przy użyciu rozszerzeń ASP.NET AJAX, zobacz [przykłady AJAX](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).
   
  Niniejszy przykład pokazuje, jak przełączyć typ odpowiedzi operacji między formatami JSON i XML. Ta funkcja jest dostępna niezależnie od tego, czy usługa jest skonfigurowana do można uzyskać dostępu do kodu ASP.NET AJAX lub strony klienta HTML/JavaScript.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
+> Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.
   
- Aby umożliwić korzystanie z klientów — ASP.NET AJAX, należy użyć <xref:System.ServiceModel.Activation.WebServiceHostFactory> (nie <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) w pliku svc. <xref:System.ServiceModel.Activation.WebServiceHostFactory> dodaje <xref:System.ServiceModel.Description.WebHttpEndpoint> standardowy punkt końcowy do usługi. Punkt końcowy jest skonfigurowana pod adresem pusty względem plików .svc; oznacza, że adres usługi http://localhost/ServiceModelSamples/service.svc, za pomocą nie dodatkowe sufiksy inna niż nazwa operacji.  
+Aby umożliwić korzystanie z klientów — ASP.NET AJAX, należy użyć <xref:System.ServiceModel.Activation.WebServiceHostFactory> (nie <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) w pliku svc. <xref:System.ServiceModel.Activation.WebServiceHostFactory> dodaje <xref:System.ServiceModel.Description.WebHttpEndpoint> standardowy punkt końcowy do usługi. Punkt końcowy jest skonfigurowana pod adresem pusty względem plików .svc; oznacza, że adres usługi `http://localhost/ServiceModelSamples/service.svc`, za pomocą nie dodatkowe sufiksy inna niż nazwa operacji.  
   
 ```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
@@ -109,7 +109,7 @@ xmlHttp.onreadystatechange=function(){
   
 2.  Skompiluj rozwiązanie XmlAjaxService.sln, zgodnie z opisem w [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Przejdź do http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm (nie należy otwierać XmlAjaxClientPage.htm w przeglądarce z katalogu projektu).  
+3.  Przejdź do `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (nie należy otwierać XmlAjaxClientPage.htm w przeglądarce z katalogu projektu).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Usługa AJAX używająca żądań POST protokołu HTTP](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

@@ -1,13 +1,13 @@
 ---
 title: Operacje na elementach (C#)
-ms.date: 07/20/2015
+ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dbae8c0b3d98fe9674fbbeb432c1e42763e81026
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856893"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836780"
 ---
 # <a name="element-operations-c"></a>Operacje na elementach (C#)
 
@@ -25,8 +25,8 @@ Operacje na elementach Zwróć element jednej, określonej sekwencji.
 |FirstOrDefault|Zwraca pierwszy element kolekcji lub pierwszego elementu, który spełnia warunek. Zwraca wartość domyślną, jeśli taki element nie istnieje.|Nie dotyczy.|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
 |ostatni|Zwraca ostatni element kolekcji lub ostatniego elementu, który spełnia warunek.|Nie dotyczy.|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
 |Lastordefault —|Zwraca ostatni element kolekcji lub ostatniego elementu, który spełnia warunek. Zwraca wartość domyślną, jeśli taki element nie istnieje.|Nie dotyczy.|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
-|Single|Zwraca tylko element kolekcji lub jedynym elementem, który spełnia warunek.|Nie dotyczy.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
-|SingleOrDefault|Zwraca tylko element kolekcji lub jedynym elementem, który spełnia warunek. Zwraca wartość domyślną, jeśli taki element nie istnieje lub kolekcja nie zawiera dokładnie jeden element.|Nie dotyczy.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
+|Single|Zwraca tylko element kolekcji lub jedynym elementem, który spełnia warunek. Zgłasza <xref:System.InvalidOperationException> przypadku żaden element lub więcej niż jednego elementu do zwrócenia. |Nie dotyczy.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|SingleOrDefault|Zwraca tylko element kolekcji lub jedynym elementem, który spełnia warunek. Zwraca wartość domyślną, jeśli nie ma żadnego elementu do zwrócenia. Zgłasza <xref:System.InvalidOperationException> Jeśli istnieje więcej niż jednego elementu do zwrócenia. |Nie dotyczy.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Zobacz też
 

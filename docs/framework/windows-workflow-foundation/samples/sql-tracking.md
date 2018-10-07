@@ -2,12 +2,12 @@
 title: Śledzenie SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 84d3fb994c790301ceb55b945bf972c21ed2a971
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 741df337187b2a5fffe63052c9fafbd430f7c2fc
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584330"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836384"
 ---
 # <a name="sql-tracking"></a>Śledzenie SQL
 W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia SQL, który zapisuje rekordy śledzenia bazą danych SQL. Windows Workflow Foundation (WF) zapewnia wgląd w wykonywania wystąpienia przepływu pracy śledzenia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [przepływu pracy i śledzenie](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).
@@ -33,7 +33,7 @@ W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia
   
 7.  W przeglądarce pojawi się stronie StockPriceService zawiera usługę lokalnego adresu WSDL. Skopiuj ten adres.  
   
-     Na przykład adres WSDL Usługa lokalna http://localhost:65193/StockPriceService.xamlx?wsdl.  
+     Na przykład adres WSDL Usługa lokalna `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
 8.  Za pomocą [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], uruchom klienta testowego WCF (WcfTestClient.exe). Znajduje się on w katalogu programu Microsoft Visual Studio 10.0\Common7\IDE.  
   

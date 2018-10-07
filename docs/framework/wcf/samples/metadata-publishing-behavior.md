@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: c3e26454cc9b29620d80a86df7d7aee131e18200
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b728d1c5a794fa6e0cadef136050d8fa31fb4afe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197100"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838796"
 ---
 # <a name="metadata-publishing-behavior"></a>Zachowanie publikowania metadanych
 Przykład zachowania publikowania metadanych pokazuje, jak do kontrolowania funkcji publikowania metadanych usługi. Aby zapobiegać niezamierzonym ujawnieniem metadanych usługi potencjalnie poufnych, konfigurację domyślną dla usług Windows Communication Foundation (WCF) powoduje wyłączenie publikowania metadanych. To zachowanie jest domyślnie bezpieczny, ale również zaimportować narzędzia (takie jak Svcutil.exe) oznacza, że metadane nie można użyć do wygenerowania kodu klienta wymaganych do wywołania tej usługi, chyba że jawnie włączone jest zachowanie publikowania metadanych usługi w konfiguracji.  
@@ -23,7 +23,7 @@ Przykład zachowania publikowania metadanych pokazuje, jak do kontrolowania funk
 > [!NOTE]
 >  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Usługi do udostępnienia metadanych <xref:System.ServiceModel.Description.ServiceMetadataBehavior> musi być skonfigurowany w usłudze. Jeśli jest to zachowanie, możesz opublikować metadanych, konfigurując punkt końcowy do udostępnienia <xref:System.ServiceModel.Description.IMetadataExchange> kontrakt co implementacją protokołu WS-MetadataExchange (MEX). Dla wygody ten kontrakt nadano nazwę skróconą konfiguracji "IMetadataExchange". W tym przykładzie użyto `mexHttpBinding`, czyli standardowa powiązanie udogodnienie jest odpowiednikiem `wsHttpBinding` tryb zabezpieczeń, ustawiono na `None`. Względna adres "mex" jest używany w punkcie końcowym, który, gdy rozstrzygnięte na usług podstawowy adres skutkuje adres punktu końcowego http://localhost/servicemodelsamples/service.svc/mex. Poniżej przedstawiono konfigurację zachowania:  
+ Usługi do udostępnienia metadanych <xref:System.ServiceModel.Description.ServiceMetadataBehavior> musi być skonfigurowany w usłudze. Jeśli jest to zachowanie, możesz opublikować metadanych, konfigurując punkt końcowy do udostępnienia <xref:System.ServiceModel.Description.IMetadataExchange> kontrakt co implementacją protokołu WS-MetadataExchange (MEX). Dla wygody ten kontrakt nadano nazwę skróconą konfiguracji "IMetadataExchange". W tym przykładzie użyto `mexHttpBinding`, czyli standardowa powiązanie udogodnienie jest odpowiednikiem `wsHttpBinding` tryb zabezpieczeń, ustawiono na `None`. Względna adres "mex" jest używany w punkcie końcowym, który, gdy rozstrzygnięte na usług podstawowy adres skutkuje adres punktu końcowego `http://localhost/servicemodelsamples/service.svc/mex`. Poniżej przedstawiono konfigurację zachowania:  
   
 ```xml  
 <behaviors>  
@@ -55,7 +55,7 @@ Przykład zachowania publikowania metadanych pokazuje, jak do kontrolowania funk
           contract="IMetadataExchange" />  
 ```  
   
- W tym przykładzie ustawia <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwość `true`, która udostępnia również metadane usługi przy użyciu HTTP GET. Aby włączyć punkt końcowy metadanych HTTP GET, usługa musi mieć określony podstawowy adres HTTP. Ciąg zapytania `?wsdl` na adres podstawowy usługi służy do dostępu do metadanych. Na przykład, aby zobaczyć WSDL usługi w przeglądarce sieci Web możesz użyć adresu http://localhost/servicemodelsamples/service.svc?wsdl. Alternatywnie możesz użyć tego zachowania do udostępnienia metadanych za pośrednictwem protokołu HTTPS, ustawiając <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> do `true`. Wymaga to bazowy adres HTTPS.  
+ W tym przykładzie ustawia <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwość `true`, która udostępnia również metadane usługi przy użyciu HTTP GET. Aby włączyć punkt końcowy metadanych HTTP GET, usługa musi mieć określony podstawowy adres HTTP. Ciąg zapytania `?wsdl` na adres podstawowy usługi służy do dostępu do metadanych. Na przykład, aby zobaczyć WSDL usługi w przeglądarce sieci Web możesz użyć adresu `http://localhost/servicemodelsamples/service.svc?wsdl`. Alternatywnie możesz użyć tego zachowania do udostępnienia metadanych za pośrednictwem protokołu HTTPS, ustawiając <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> do `true`. Wymaga to bazowy adres HTTPS.  
   
  Użyj punktu końcowego MEX usługi dostępu do [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -63,7 +63,7 @@ Przykład zachowania publikowania metadanych pokazuje, jak do kontrolowania funk
   
  Spowoduje to wygenerowanie klienta na podstawie metadanych usługi.  
   
- Aby uzyskać dostęp do metadanych usługi przy użyciu HTTP GET, należy wskazać przeglądarkę, aby http://localhost/servicemodelsamples/service.svc?wsdl.  
+ Aby uzyskać dostęp do metadanych usługi przy użyciu HTTP GET, należy wskazać przeglądarkę, aby `http://localhost/servicemodelsamples/service.svc?wsdl`.  
   
  Jeśli możesz usunąć to zachowanie i spróbuj otworzyć usługi otrzymujesz wyjątek. Ten błąd występuje, ponieważ bez zachowania, punkt końcowy skonfigurowany przy użyciu `IMetadataExchange` Umowy nie ma implementacji.  
   

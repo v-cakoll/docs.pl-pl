@@ -4,12 +4,12 @@ description: Więcej informacji na temat skryptów instalacji dotnet do zainstal
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004013"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837079"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dokumentacja skryptów instalacji DotNet
 
@@ -33,8 +33,8 @@ System macOS/Linux:
 
 Zalecane jest użycie stabilną wersję, która jest hostowana na [głównej witryny internetowej platformy .NET Core](https://dot.net). Bezpośrednie ścieżki do skryptów są:
 
-* https://dot.net/v1/dotnet-install.sh (powłoki bash, UNIX)
-* https://dot.net/v1/dotnet-install.ps1 (Program Powershell, Windows)
+* <https://dot.net/v1/dotnet-install.sh> (powłoki bash, UNIX)
+* <https://dot.net/v1/dotnet-install.ps1> (Program Powershell, Windows)
 
 Główne użyteczność tych skryptów znajduje się w scenariuszach automatyzacji oraz przed instalacjami bez uprawnień administratora. Istnieją dwa skrypty: jeden z nich jest skrypt programu PowerShell, który działa na Windows. Skrypt programu jest skrypt powłoki bash, który działa w systemie Linux/macOS. Zarówno skryptów mają takie samo zachowanie. Skrypt powłoki bash odczytuje również przełączników programu PowerShell, aby można było używać przełączników programu PowerShell przy użyciu skryptu w systemach Linux/macOS.
 

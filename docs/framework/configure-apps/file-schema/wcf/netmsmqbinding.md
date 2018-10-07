@@ -2,12 +2,12 @@
 title: '&lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 05ab1b064f6dd7bb28d1d118ec8c4249da5a75e1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0fb174488f3505eeab8195df361af1f203d0f8a5
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087593"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839082"
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Definiuje Zakolejkowane powiązanie odpowiednie dla komunikacji między komputerami.  
@@ -139,5 +139,5 @@ Definiuje Zakolejkowane powiązanie odpowiednie dla komunikacji między komputer
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

@@ -4,12 +4,12 @@ description: Poznaj funkcje telemetryczne zestawu .NET Core SDK, które zbieraj�
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: b60fc9d9d619334269343fd858a782cdfeb09ba4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513343"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841629"
 ---
 # <a name="net-core-sdk-telemetry"></a>Dane telemetryczne zestawu SDK programu .NET core
 
@@ -106,7 +106,7 @@ Dystrybucja programu Microsoft .NET Core jest licencjonowany za pomocą [MICROSO
 
 [Pakiety .NET NuGet](https://www.nuget.org/profiles/dotnetframework) użyć tego samego licencji, ale nie włączysz danych telemetrycznych (zobacz [zakres](#scope)).
 
-> 2. DATA. Oprogramowanie może zbierać informacje o Tobie i użytkowanie oprogramowania i wysyłać je do firmy Microsoft. Firma Microsoft może używać tych informacji w celu poprawy naszych produktów i usług. Możesz dowiedzieć się więcej na temat zbierania danych i używać w dokumentacji pomocy i zasady zachowania poufności w http://go.microsoft.com/fwlink/?LinkId=528096. Korzystanie z oprogramowania oznacza Państwa zgodę na tych rozwiązań.
+> 2. DATA. Oprogramowanie może zbierać informacje o Tobie i użytkowanie oprogramowania i wysyłać je do firmy Microsoft. Firma Microsoft może używać tych informacji w celu poprawy naszych produktów i usług. Możesz dowiedzieć się więcej na temat zbierania danych i używać w dokumentacji pomocy i zasady zachowania poufności w <http://go.microsoft.com/fwlink/?LinkId=528096>. Korzystanie z oprogramowania oznacza Państwa zgodę na tych rozwiązań.
 
 ## <a name="disclosure"></a>Ujawnienie
 

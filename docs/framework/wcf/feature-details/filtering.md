@@ -2,12 +2,12 @@
 title: Filtrowanie
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 49813ac0f493d628a941b3060be93ef19bb1e802
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208110"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836070"
 ---
 # <a name="filtering"></a>Filtrowanie
 Windows Communication Foundation (WCF) systemu filtrowania umożliwia deklaratywne filtry dopasowanie wiadomości i podejmowania decyzji operacyjne. Filtry można użyć, aby określić, co należy zrobić z komunikatem, sprawdzając część komunikatu. Proces kolejkowania, na przykład, można użyć zapytania XPath 1.0 do sprawdzenia elementu priority znanych nagłówka w celu ustalenia, czy można przenieść komunikatu z przodu kolejki.  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) systemu filtrowania umożliwia deklaratyw
   
 ### <a name="prefix-endpoint-address-filters"></a>Prefiks filtry adres punktu końcowego  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> Podobnie jak funkcje <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtrowania, z tą różnicą, że dopasowanie może to być prefiksem komunikat o identyfikatorze URI. Na przykład filtr, określając adres http://www.adatum.com odpowiada na komunikaty adresowane do http://www.adatum.com/userA.  
+1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> Podobnie jak funkcje <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtrowania, z tą różnicą, że dopasowanie może to być prefiksem komunikat o identyfikatorze URI. Na przykład filtr, określając adres `http://www.adatum.com` odpowiada na komunikaty adresowane do `http://www.adatum.com/userA`.  
   
 ### <a name="xpath-message-filters"></a>Filtry komunikatów XPath  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> Używa wyrażenia XPath do określenia, czy dokument XML zawiera określone elementy, atrybuty, tekst lub inne składni XML tworzy. Filtr jest zoptymalizowany do być bardzo wydajny podzbiór XPath. Język ścieżki XML jest opisana w [specyfikacji W3C XML ścieżka język 1.0](https://go.microsoft.com/fwlink/?LinkId=94779).  

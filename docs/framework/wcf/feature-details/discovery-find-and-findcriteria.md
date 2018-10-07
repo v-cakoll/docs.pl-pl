@@ -2,12 +2,12 @@
 title: Odnajdywanie — znajdowanie i kryteria znajdowania
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: bd54a7bc896870035972daf1ea6f56d84dc5414e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 7c389a4f0b8fb9789db33fe3edbb01a1d6302137
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583934"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836806"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Odnajdywanie — znajdowanie i kryteria znajdowania
 Operacja Znajdź odnajdywania jest inicjowane przez klienta, aby dowiedzieć się, co najmniej jednej usługi i jest jednym z głównych działań podczas odnajdywania. Wykonywanie Znajdź wysyła komunikat sondowania usługi WS-Discovery za pośrednictwem sieci. Usługi, które spełniają kryteria określone odpowiedzi przy użyciu protokołu WS Discovery ProbeMatch komunikatów. Aby uzyskać więcej informacji na temat odnajdywania wiadomości zobacz [specyfikacji WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -28,7 +28,7 @@ Operacja Znajdź odnajdywania jest inicjowane przez klienta, aby dowiedzieć si�
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> uwzględniana wielkość liter podstawowego ciągu porównania.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> Dopasowuje przez segmenty oddzielone "/". Wyszukiwanie http://contoso/building1 jest zgodny z zakresem usługi http://contoso/building/floor1. Należy zauważyć, że nie jest zgodny http://contoso/building100 ponieważ ostatnie dwa segmenty nie są zgodne.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> Dopasowuje przez segmenty oddzielone "/". Wyszukiwanie `http://contoso/building1` jest zgodny z zakresem usługi `http://contoso/building/floor1`. Należy zauważyć, że nie jest zgodny `http://contoso/building100` ponieważ ostatnie dwa segmenty nie są zgodne.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> Dopasowuje zakresy segmentami przy użyciu adresu URL protokołu LDAP.  
   

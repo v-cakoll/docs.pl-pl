@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
 author: BrucePerlerMS
 ms.openlocfilehash: 2d9fd78e349f5c3affb1184ba0ee146eb7076922
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793724"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845666"
 ---
 # <a name="ltmsmqtransportsecuritygt"></a>&lt;msmqTransportSecurity&gt;
 Określa ustawienia zabezpieczenia transportu MSMQ dla niestandardowego powiązania.  

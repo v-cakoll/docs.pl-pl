@@ -4,12 +4,12 @@ description: Dowiedz się, jak .NET Core umożliwia znalezienie i wybiera wersje
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 34e31cbb224b58b1aad2935ea7310f2e4f5f9ee0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036269"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841543"
 ---
 # <a name="net-core-version-selection"></a>Wybór wersji platformy .NET core
 
@@ -22,7 +22,7 @@ W tym artykule opisano zasady używane przez narzędzia .NET Core, zestaw SDK i 
 
 Występuje, wybór wersji:
 
-- Po uruchomieniu polecenia zestawu SDK [zestaw sdk używa najnowszej zainstalowanej wersji](#the-sdk-uses-the-latest-installed-version).
+- Po uruchomieniu polecenia zestawu SDK [zestaw SDK używa najnowszej zainstalowanej wersji](#the-sdk-uses-the-latest-installed-version).
 - Podczas kompilowania zestawu [target framework monikerów definiują czas kompilacji interfejsów API](#target-framework-monikers-define-build-time-apis).
 - Po uruchomieniu aplikacji platformy .NET Core, [aplikacji zależnych target framework uaktualniane](#framework-dependent-apps-roll-forward).
 - Gdy opublikujesz aplikację niezależna [niezależna obejmuje wybrane środowisko uruchomieniowe](#self-contained-deployments-include-the-selected-runtime).

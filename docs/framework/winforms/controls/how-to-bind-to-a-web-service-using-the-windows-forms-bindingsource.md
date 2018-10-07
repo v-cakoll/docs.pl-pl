@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: fdbf1e1b419e5ad296376ec1f06fd361077895c4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 34d40cb9b0f4929330473ae0dc2f4c12dd309270
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702897"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840170"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Porady: powiązanie z usługą sieci Web za pomocą formantu BindingSource formularzy systemu Windows
 Jeśli chcesz powiązać kontrolkę formularza Windows wyniki uzyskane z wywołaniem usługi sieci Web XML, możesz użyć <xref:System.Windows.Forms.BindingSource> składnika. Ta procedura jest podobna do powiązania <xref:System.Windows.Forms.BindingSource> składnik do typu. Należy utworzyć serwer proxy po stronie klienta, który zawiera metody i typy udostępnianych przez usługę sieci Web. Możesz wygenerować, serwer proxy po stronie klienta z usługi sieci Web (.asmx), samego lub plik sieci Web Services Description Language (WSDL). Ponadto serwer proxy po stronie klienta, należy ujawnić pola złożone typy używane przez usługę sieci Web jako właściwości publiczne. Następnie Powiąż <xref:System.Windows.Forms.BindingSource> do jednego z typów ujawnione w sieci Web usługi serwera proxy.  
@@ -32,7 +32,7 @@ Jeśli chcesz powiązać kontrolkę formularza Windows wyniki uzyskane z wywoła
   
 4.  Za pomocą narzędzia WSDL wprowadź `wsdl` adres URL .asmx lub pliku WSDL usługi sieci Web, a następnie przestrzeni nazw aplikacji i opcjonalnie język, w którym pracujesz.  
   
-     Poniższy przykład kodu wykorzystuje usługę sieci Web, znajduje się w http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx. Na przykład typ C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`, lub dla języka Visual Basic typu `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Przekazanie ścieżki jako argument do języka WSDL narzędzie wygeneruje serwer proxy po stronie klienta w tym samym katalogu i przestrzeni nazw jako aplikację w wybranym języku. Jeśli używasz programu Visual Studio, należy dodać plik do projektu.  
+     Poniższy przykład kodu wykorzystuje usługę sieci Web, znajduje się w `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Na przykład typ C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`, lub dla języka Visual Basic typu `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Przekazanie ścieżki jako argument do języka WSDL narzędzie wygeneruje serwer proxy po stronie klienta w tym samym katalogu i przestrzeni nazw jako aplikację w wybranym języku. Jeśli używasz programu Visual Studio, należy dodać plik do projektu.  
   
 5.  Wybierz typ serwera proxy po stronie klienta, aby powiązać.  
   

@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778472"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838081"
 ---
 # <a name="globaljson-overview"></a>Omówienie Global.JSON
 
@@ -96,12 +96,12 @@ Przy użyciu zestawu SDK programu .NET Core 1.x, jeśli określona wersja i dok�
 ## <a name="troubleshooting-build-warnings"></a>Rozwiązywanie problemów z ostrzeżenia kompilacji
 
 > [!WARNING]
-> Pracujesz z wersję zapoznawczą programu .NET Core SDK. Wersja zestawu SDK przy użyciu pliku global.json można zdefiniować w bieżącym projekcie. Więcej na stronie https://go.microsoft.com/fwlink/?linkid=869452
+> Pracujesz z wersję zapoznawczą programu .NET Core SDK. Wersja zestawu SDK przy użyciu pliku global.json można zdefiniować w bieżącym projekcie. Więcej na stronie <https://go.microsoft.com/fwlink/?linkid=869452>
 
 To ostrzeżenie wskazuje, że projekt jest kompilowany przy użyciu zestawu .NET Core SDK w wersji zapoznawczej zgodnie z objaśnieniem w [reguł dopasowania](#matching-rules) sekcji. Wersje programu .NET core SDK ma historię i zaangażowanie on wysokiej jakości. Jeśli nie chcesz użyć wersji zapoznawczej, jednak dodać *global.json* pliku do struktury projektu hierarchii w celu określenia którą wersję zestawu SDK i wykorzystaj `dotnet --list-sdks` aby upewnić się, że na komputerze jest zainstalowana wersja. Po wydaniu nowej wersji do nowej wersji, albo usuń *global.json* pliku, lub zaktualizuj go do korzystania z nowszej wersji.
 
 > [!WARNING]
-> Platformy elementy docelowe projektu "{Projekt startowy}" Uruchamianie ". Element NETCoreApp "wersja"{targetFrameworkVersion}". Ta wersja narzędzia wiersza polecenia programu Entity Framework Core .NET obsługuje tylko w wersji 2.0 lub nowszej. Aby uzyskać informacji na temat używania starszych wersji narzędzia Zobacz https://go.microsoft.com/fwlink/?linkid=871254
+> Platformy elementy docelowe projektu "{Projekt startowy}" Uruchamianie ". Element NETCoreApp "wersja"{targetFrameworkVersion}". Ta wersja narzędzia wiersza polecenia programu Entity Framework Core .NET obsługuje tylko w wersji 2.0 lub nowszej. Aby uzyskać informacji na temat używania starszych wersji narzędzia Zobacz <https://go.microsoft.com/fwlink/?linkid=871254>
 
 Począwszy od platformy .NET Core SDK 2.1 (v. 2.1.300) `dotnet ef` polecenia jest uwzględniony w zestawie SDK. To ostrzeżenie wskazuje, że projekt jest ukierunkowany EF Core 1.0 i 1.1, która nie jest zgodna z platformy .NET Core SDK 2.1 i nowsze wersje. Aby skompilować projekt, zainstaluj zestaw .NET Core SDK 2.0 (v. 2.1.201) i starszych na Twojej maszynie i definiują żądany zestaw SDK w wersji przy użyciu *global.json* pliku. Aby uzyskać więcej informacji na temat `dotnet ef` polecenia, zobacz [narzędzia wiersza polecenia platformy .NET Core EF](/ef/core/miscellaneous/cli/dotnet).
 

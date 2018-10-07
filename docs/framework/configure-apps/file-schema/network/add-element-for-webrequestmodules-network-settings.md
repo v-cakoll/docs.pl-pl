@@ -13,11 +13,11 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 64df186be7d9e503ac22e177bca8da31e165f240
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266315"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837014"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;Dodaj&gt; Element dla webRequestModules (ustawienia sieci)
 Dodaje niestandardowy moduł żądania sieci Web do aplikacji.  

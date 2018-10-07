@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 29399beebef3de3e7b4ae8ce7f3611e3d158296f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002877"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835584"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer — Klasa
 `SoundPlayer` Klasy umożliwia łatwe uwzględnianie dźwięki w aplikacji.  
@@ -51,4 +51,6 @@ ms.locfileid: "46002877"
  [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
   
- Zobacz też [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer — obiekt](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) lub [My.Computer — obiekt](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).
+## <a name="see-also"></a>Zobacz także 
+
+- [My.Computer, obiekt](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d51cd3bcef44c32c24630c1a3a332b2144a41469
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188387"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839433"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting w Usłudze aktywacji procesów systemu Windows
 Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji zawierających usługi Windows Communication Foundation (WCF). Stanowi uogólnienie modelu procesów WAS [!INCLUDE[iis601](../../../../includes/iis601-md.md)] model procesów dla serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu usługi WCF do użycia protokołów HTTP i protokołów innych niż HTTP, np. Net.TCP, w środowisku macierzystym, który obsługuje aktywację w oparciu o wiadomości i oferuje możliwość hostowania wielu aplikacji na danym komputerze.  
@@ -45,8 +45,8 @@ Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia
   
  Maszyny wirtualne i zasoby w ramach aplikacji również może zostać zlikwidowane. W ramach aplikacji zasobów aplikacji są adresowane względem ścieżki podstawowej aplikacji. Na przykład załóżmy, że witryna w contoso.com Nazwa maszyny zawiera powiązania witryny dla protokołów HTTP i Net.TCP. Również założono, że witryna zawiera jedną aplikację znajdujący się w /Billing, która udostępnia usługę GetOrders.svc. Następnie, jeśli usługa GetOrders.svc uwidaczniany punkt końcowy z adresem względnym SecureEndpoint, punkt końcowy usługi będą widoczne w następujących dwóch identyfikatorów URI:  
   
- http://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
-NET.TCP://contoso.com/billing/GetOrders.svc/SecureEndpoint  
+- `http://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
+- `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>WAS środowiska uruchomieniowego  
  Aplikacje są zorganizowane w witrynach na potrzeby adresowania i zarządzania. W czasie wykonywania aplikacje są również grupowane w pulach aplikacji. Pula aplikacji mogą znajdować się wiele różnych aplikacji pochodzących od wielu witryn. Wszystkie aplikacje w puli aplikacji korzystają ze wspólnego zestawu, właściwości środowiska wykonawczego. Na przykład wszystkie działają w ramach tej samej wersji środowiska uruchomieniowego języka wspólnego (CLR), a wszystkie mają wspólną tożsamość procesu. Każda pula aplikacji odnosi się do wystąpienia procesu roboczego (w3wp.exe). Każdej zarządzanej aplikacji, które działają w ramach puli aplikacji udostępnionej jest odizolowana od innych aplikacji za pomocą CLR AppDomain.  

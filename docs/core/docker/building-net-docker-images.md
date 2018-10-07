@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 675b6821588f8d0dd9495346a13665a32986f060
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "34827342"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841167"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Tworzenie obrazów platformy Docker dla aplikacji .NET Core
 
@@ -130,17 +130,17 @@ Klient platformy Docker można zainstalować w:
 
 * Dystrybucje systemu Linux
 
-   * [CentOS](https://www.docker.com/docker-centos-distribution)
+   * [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
-   * [Debian](https://www.docker.com/docker-debian)
+   * [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
 
-   * [Fedora](https://www.docker.com/docker-fedora)
+   * [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
 
-   * [Ubuntu](https://www.docker.com/docker-ubuntu)
+   * [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-* [macOS](https://docs.docker.com/docker-for-mac/)
+* [macOS](https://docs.docker.com/docker-for-mac/install/)
 
-* [Windows](https://docs.docker.com/docker-for-windows/).
+* [Windows](https://docs.docker.com/docker-for-windows/install/).
 
 #### <a name="installing-git-for-sample-repository"></a>Instalowanie usługi Git do repozytorium przykładów
 
@@ -205,7 +205,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> Musisz przejść do **adres IP kontenera** (w przeciwieństwie do http://localhost) w przeglądarce bezpośrednio podczas korzystania z kontenerów Windows. Można uzyskać adresu IP kontenera wykonując następujące kroki:
+> Musisz przejść do **adres IP kontenera** (w przeciwieństwie do `http://localhost`) w przeglądarce bezpośrednio podczas korzystania z kontenerów Windows. Można uzyskać adresu IP kontenera wykonując następujące kroki:
 
 * Otwórz innego wiersza polecenia.
 * Uruchom `docker ps` Aby wyświetlić uruchomione kontenery. Kontener "aspnetcore_sample" powinny być dostępne.

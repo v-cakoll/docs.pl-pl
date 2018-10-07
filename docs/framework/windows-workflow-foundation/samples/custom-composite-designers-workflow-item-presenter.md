@@ -3,11 +3,11 @@ title: Niestandardowi projektanci złożonych — Prezenter elementu przepływu 
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
 ms.openlocfilehash: 7a3089f1b96cfc766143dd62d9f917fb014af636
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48776929"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836699"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Niestandardowi projektanci złożonych — Prezenter elementu przepływu pracy
 <xref:System.Activities.Presentation.WorkflowItemPresenter> Typ klucza w WF projektanta modelu programowania umożliwiający tworzenie "strefy listy" gdzie można umieścić dowolne działanie. W tym przykładzie przedstawiono sposób tworzenia projektanta działań, który uwypukli najistotniejsze takiej "listy strefy."

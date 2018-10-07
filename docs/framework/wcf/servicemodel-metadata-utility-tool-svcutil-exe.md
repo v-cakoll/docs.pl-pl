@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 01a30ac6cb252eba51cfff8a221c28425f347b0a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200766"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837267"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)
 
@@ -236,7 +236,7 @@ Następujące polecenie generuje typy serializacji dla <xref:System.Xml.Serializ
 
 Generowanie metadanych dla usługi za pomocą narzędzia svcutil, może zostać wyświetlony następujący komunikat:
 
-Błąd: Nie można uzyskać metadanych z http://localhost:8000/somesservice/mex podczas odczytywania danych XML został przekroczony maksymalny przydział liczby znaków (16384). Tabela nazw jest strukturą danych używaną do przechowywania ciągów napotkanych podczas przetwarzania XML — długie dokumenty XML z innych niepowtarzającymi się nazwami, nazwami atrybutów i wartości atrybutów może spowodować przekroczenie tego przydziału. Tę można zwiększyć, zmieniając właściwość MaxNameTableCharCount obiektu XmlDictionaryReaderQuotas użytego podczas tworzenia modułu odczytującego XML.
+Błąd: Nie można uzyskać metadanych z `http://localhost:8000/somesservice/mex` podczas odczytywania danych XML został przekroczony maksymalny przydział liczby znaków (16384). Tabela nazw jest strukturą danych używaną do przechowywania ciągów napotkanych podczas przetwarzania XML — długie dokumenty XML z innych niepowtarzającymi się nazwami, nazwami atrybutów i wartości atrybutów może spowodować przekroczenie tego przydziału. Tę można zwiększyć, zmieniając właściwość MaxNameTableCharCount obiektu XmlDictionaryReaderQuotas użytego podczas tworzenia modułu odczytującego XML.
 
 Ten błąd może być spowodowany przez usługę, która zwraca dużego pliku WSDL, gdy żądanie metadanych. Problem polega na tym, czy zostanie przekroczony przydział znak narzędzia svcutil.exe. Ta wartość jest równa pomaga zapobiegać atakom typu odmowa usługi (dos). Możesz zwiększyć ten limit przydziału, określając następującego pliku konfiguracji dla narzędzia svcutil.
 

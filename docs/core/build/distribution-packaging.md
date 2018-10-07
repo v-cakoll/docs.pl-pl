@@ -1,23 +1,23 @@
 ---
-title: OPAKOWYWANIE dystrybucji .NET core
-description: Dowiedz się, jak pakietu, nazwę i wersję platformy .NET Core do dystrybucji.
+title: Tworzenie pakietów dystrybucji platformy .NET core
+description: Dowiedz się, jak spakować, nazwa i wersja platformy .NET Core w celu dystrybucji.
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 084de6bbb3ce280beb0846431aeceacbb57d9a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217405"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840498"
 ---
-# <a name="net-core-distribution-packaging"></a>OPAKOWYWANIE dystrybucji .NET core
+# <a name="net-core-distribution-packaging"></a>Tworzenie pakietów dystrybucji platformy .NET core
 
-W miarę wprowadzania na coraz więcej platformy .NET Core jest przydatne informacje na temat pakietu, nazwę i wersję go. W ten sposób maintainers pakietu pomoże zapewnić spójne środowisko niezależnie od tego, w której użytkownicy muszą wybrać do uruchomienia .NET.
+.NET Core staje się dostępny na platformach coraz większe, jest przydatne informacje na temat pakietu, nazwę i wersję go. W ten sposób maintainers pakietu można zapewnić spójne środowisko niezależnie od tego, gdzie użytkownicy zdecydować się na uruchomienie platformy .NET.
 
 ## <a name="disk-layout"></a>Układ dysku
 
-Podczas instalowania platformy .NET Core składa się z kilku składników, które są layed się w następujący sposób w systemie plików:
+Po zainstalowaniu platformy .NET Core zawiera kilka składników, które są layed się w następujący sposób w systemie plików:
 
 ```
 .
@@ -44,80 +44,80 @@ Podczas instalowania platformy .NET Core składa się z kilku składników, któ
         └── dotnet               (10)
 ```
 
-- (1) **dotnet** host (znanej także jako "muxer") ma dwa różne role: aktywować runtime, aby uruchomić aplikację i Aktywuj zestaw SDK, aby wysłać do niego poleceń. Host jest natywny plik wykonywalny (`dotnet.exe`).
+- (1) **dotnet** hosta (znany także jako "muxer") ma dwie różne role: Aktywacja środowiska uruchomieniowego, aby uruchomić aplikację i Aktywuj zestaw SDK do wysyłania poleceń do niego. Host jest natywny plik wykonywalny (`dotnet.exe`).
 
-W trakcie jednego hosta, większość innych składników znajdują się w określonej wersji katalogów (kwas 2,3,5,6). Te oznacza wiele wersji mogą być obecne w systemie, ponieważ są one zainstalowane obok siebie.
+W trakcie jednego hosta większości innych składników znajdują się w określonej wersji katalogów (kwas 2,3,5,6). Te oznacza, że wiele wersji mogą być obecne w systemie, ponieważ są one zainstalowane side-by-side.
 
-- (2) **hosta/fxr/\<wersji fxr >** zawiera logikę rozpoznawania framework używany przez hosta. Host używa najnowszych hostfxr, który jest zainstalowany. Hostfxr jest odpowiedzialny za wybranie odpowiedniego środowiska uruchomieniowego podczas wykonywania aplikacji .NET Core. Na przykład aplikacji skompilowany dla platformy .NET Core 2.0.0, zostanie użyta 2.0.5 środowiska uruchomieniowego, gdy jest ona dostępna. Podobnie hostfxr wybiera odpowiednią zestawu SDK podczas tworzenia.
+- (2) **hosta/fxr/\<wersji fxr >** zawiera logikę rozpoznawania framework używany przez hosta. Host używa najnowszej hostfxr, który jest zainstalowany. Hostfxr jest odpowiedzialny za wybranie odpowiedniego środowiska uruchomieniowego, podczas wykonywania aplikacji .NET Core. Na przykład aplikacja skompilowana dla platformy .NET Core 2.0.0, zostanie użyta 2.0.5 środowiska uruchomieniowego, gdy będzie ona dostępna. Podobnie hostfxr wybiera odpowiedni zestaw SDK podczas programowania.
 
-- (3) **sdk /\<zestawu sdk w wersji >** SDK (znanej także jako "narzędzia") to zestaw narzędzi zarządzanych, które mogą służyć do zapisu i tworzenia bibliotek .NET Core i aplikacji. Zestaw SDK zawiera nowe szablony projektu interfejsu wiersza polecenia, Roslyn kompilatora, MSBuild i zadań kompilacji i obiekty docelowe, NuGet, itp.
+- (3) **sdk /\<wersja zestawu sdk >** zestaw SDK (znany także jako "narzędzia") to zestaw funkcji wspomagających zarządzanych, które mogą służyć do zapisywania i tworzenia biblioteki .NET Core i aplikacji. Zestaw SDK zawiera nowe szablony projektów interfejsu wiersza polecenia, Roslyn kompilatora, MSBuild i skojarzone zadania kompilacji i elementy docelowe, NuGet, itp.
 
-- (4) **sdk/NuGetFallbackFolder** zawiera pamięć podręczną pakietów NuGet używana przez zestaw SDK podczas `dotnet restore` kroku.
+- (4) **sdk/NuGetFallbackFolder** zawiera pamięć podręczną pakietów NuGet, używane przez zestaw SDK podczas `dotnet restore` kroku.
 
-**Udostępnionego** folder zawiera struktury. Udostępniony framework zawiera zestaw bibliotek w centralnej lokalizacji, dzięki mogą być używane przez różne aplikacje.
+**Udostępnionego** folder zawiera struktury. Udostępnione framework zawiera zestaw bibliotek w centralnej lokalizacji, dzięki czemu może być używany przez różne aplikacje.
 
-- (5) **shared/Microsoft.NETCore.App/\<wersja środowiska uruchomieniowego >** ta struktura zawiera środowisko uruchomieniowe .NET Core i obsługa bibliotek zarządzanych.
+- (5) **shared/Microsoft.NETCore.App/\<wersji środowiska uruchomieniowego >** ta struktura zawiera środowisko uruchomieniowe platformy .NET Core i obsługa bibliotek zarządzanych.
 
-- (6,7) **shared/Microsoft.AspNetCore. { Aplikacja, wszystkie} /\<wersji aspnetcore >** zawiera biblioteki platformy ASP.NET Core. Biblioteki w obszarze `Microsoft.AspNetCore.App` opracowany i jest obsługiwany w ramach projektu platformy .NET Core. Biblioteki w obszarze `Microsoft.AspNetCore.All` jest nadzbiorem zawierającą 3 bibliotek strony.
+- (6,7) **shared/Microsoft.AspNetCore. { Aplikacja, wszystkie} /\<wersji aspnetcore >** zawiera biblioteki ASP.NET Core. Biblioteki w obszarze `Microsoft.AspNetCore.App` opracowany i jest obsługiwany w ramach projektu .NET Core. Biblioteki w obszarze `Microsoft.AspNetCore.All` jest nadzbiorem, co obejmuje również 3 bibliotek innych firm.
 
-- 8 **LICENSE.txt,ThirdPartyNotices.txt** .NET Core licencji i licencji bibliotek innych firm używane w .NET Core.
+- (8) **LICENSE.txt,ThirdPartyNotices.txt** platformy .NET Core licencji i licencji bibliotek innych firm używane w programie .NET Core.
 
-- (9, 10) **dotnet.1.gz, dotnet** `dotnet.1.gz` jest strona man dotnet. `dotnet` jest łącza symbolicznego do dotnet host(1). Pliki te są instalowane w lokalizacjach dobrze znanych integracji systemu.
+- (9, 10) **dotnet.1.gz, dotnet** `dotnet.1.gz` jest stroną man dotnet. `dotnet` jest Link symboliczny do dotnet host(1). Te pliki są instalowane w lokalizacjach dobrze znanych dla integracji systemów.
 
 ## <a name="recommended-packages"></a>Zalecane pakiety
 
 Przechowywanie wersji platformy .NET core opiera się na składnika środowiska wykonawczego `[major].[minor]` numerów wersji.
-Wersja zestawu SDK wykorzystuje takie same `[major].[minor]` i ma niezależnego `[patch]` które łączy semantykę funkcji i poprawek dla zestawu SDK.
-Na przykład: zestaw SDK w wersji 2.2.302 2 wersji poprawki w wersji 3 funkcji zestawu SDK, obsługujący 2,2 środowiska wykonawczego.
+Wersja zestawu SDK używa tych samych `[major].[minor]` i ma niezależny `[patch]` której łączy semantykę funkcji i poprawek dla zestawu SDK.
+Na przykład: zestaw SDK w wersji 2.2.302 2nd wydaniu poprawek w wersji 3 funkcji zestawu SDK, który obsługuje środowisko wykonawcze 2,2.
 
-Pakiety między innymi część numeru wersji w ich imieniu. Dzięki temu użytkownika końcowego zainstalować określoną wersję.
-W pozostałej części wersji nie jest uwzględniony w nazwie wersji. Dzięki temu pakietu systemu operacyjnego manager ma zaktualizować pakiety (np. automatyczne instalowanie zabezpieczeń poprawki błędów).
+Pakiety między innymi część numeru wersji w ich imieniu. Dzięki temu użytkownik końcowy zainstalować określoną wersję.
+W pozostałej części wersji nie są objęte nazwą wersji. Dzięki temu pakietu systemu operacyjnego Menedżer aktualizację pakietów (np. automatyczne instalowanie zabezpieczeń poprawki).
 
-Następujące tabele są wyświetlane zalecane pakiety.
+Poniższych tabelach przedstawiono zalecane pakiety.
 
 | Nazwa                                    | Przykład                | Przypadek użycia: Zainstaluj...           | Zawiera           | Zależności                                   | Wersja            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
-| dotnet-sdk-[major]                      | dotnet-sdk-2           | Najnowszej wersji zestawu sdk dla środowiska uruchomieniowego głównych    |                    | dotnet-sdk-[major].[latestminor]               | \<Wersja zestawu SDK >     |
-| dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | Najnowszej wersji zestawu sdk dla określonego środowiska wykonawczego |                    | DotNet - sdk-[główna]. [pomocnicza]. [najnowszy zestaw sdk feat] xx | \<Wersja zestawu SDK >     |
-| DotNet - sdk-[główna]. [pomocnicza]. xx [sdk feat] | dotnet-sdk-2.1.3xx     | Wersja funkcji określonego zestawu sdk    | (3),(4)            | aspnetcore-runtime-[major].[minor]             | \<Wersja zestawu SDK >     |
-| aspnetcore-runtime-[major].[minor]      | aspnetcore-runtime-2.1 | Określone platformy ASP.NET Core środowiska wykonawczego   | (6),[(7)]          | dotnet-runtime-[major].[minor]                 | \<wersja środowiska uruchomieniowego > |
-| dotnet-runtime-[major].[minor]          | dotnet-runtime-2.1     | Określonego środowiska wykonawczego                | (5)                | host-fxr:\<runtime version>+                   | \<wersja środowiska uruchomieniowego > |
-| dotnet-host-fxr                         | dotnet-host-fxr        | _zależności_                    | (2)                | Host:\<wersja środowiska uruchomieniowego > +                       | \<wersja środowiska uruchomieniowego > |
-| dotnet-host                             | dotnet-host            | _zależności_                    | (1),(8),(9),(10)   |                                                | \<wersja środowiska uruchomieniowego > |
+| dotnet-sdk-[major]                      | dotnet-sdk-2           | Najnowszy zestaw sdk dla środowiska uruchomieniowego główne    |                    | dotnet-sdk-[major].[latestminor]               | \<Wersja zestawu SDK >     |
+| dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | Najnowszy zestaw sdk dla określonego środowiska uruchomieniowego |                    | DotNet - sdk-[główna]. [pomocnicza]. [najnowszy zestaw sdk feat] xx | \<Wersja zestawu SDK >     |
+| DotNet - sdk-[główna]. [pomocnicza]. xx [sdk feat] | dotnet-sdk-2.1.3xx     | Wydawanie funkcji określonego zestawu sdk    | (3),(4)            | aspnetcore-runtime-[major].[minor]             | \<Wersja zestawu SDK >     |
+| aspnetcore-runtime-[major].[minor]      | aspnetcore-runtime-2.1 | Określonego środowiska uruchomieniowego platformy ASP.NET Core   | (6),[(7)]          | dotnet-runtime-[major].[minor]                 | \<wersja środowiska uruchomieniowego > |
+| dotnet-runtime-[major].[minor]          | dotnet-runtime-2.1     | Określonego środowiska uruchomieniowego                | (5)                | host-fxr:\<runtime version>+                   | \<wersja środowiska uruchomieniowego > |
+| dotnet-host-fxr                         | dotnet-host-fxr        | _Zależności_                    | (2)                | Host:\<wersji środowiska uruchomieniowego > +                       | \<wersja środowiska uruchomieniowego > |
+| dotnet-host                             | dotnet-host            | _Zależności_                    | (1),(8),(9),(10)   |                                                | \<wersja środowiska uruchomieniowego > |
 
-Większości dystrybucji wymagają wszystkie artefakty ma zostać utworzony ze źródła. Ma pewien wpływ na pakiety:
+Większości dystrybucji wymagają wszystkich artefaktów, które ma zostać utworzony ze źródła. Ma pewne wpływ na pakiety:
 
-- 3 bibliotek firmy w obszarze `shared/Microsoft.AspNetCore.All` nie można łatwo utworzyć ze źródła. Dlatego ten folder został pominięty `aspnetcore-runtime` pakietu.
+- 3 bibliotek innych firm pod `shared/Microsoft.AspNetCore.All` nie można łatwo utworzyć ze źródła. Aby ten folder jest pomijane w `aspnetcore-runtime` pakietu.
 
-- `NuGetFallbackFolder` Jest wypełniana przy użyciu binarnej artefaktów z `nuget.org`. Powinna pozostać pusta.
+- `NuGetFallbackFolder` Jest wypełniana przy użyciu artefaktów binarnych z `nuget.org`. Powinna pozostać pusta.
 
-Wiele `dotnet-sdk` pakiety może udostępnić tych samych plików dla `NuGetFallbackFolder`. Aby uniknąć problemów z Menedżera pakietów, pliki te powinny być identyczne (sumy kontrolnej, daty modyfikacji,...).
+Wiele `dotnet-sdk` pakietów może dostarczyć tych samych plików dla `NuGetFallbackFolder`. Aby uniknąć problemów przy użyciu Menedżera pakietów, pliki te powinny być identyczne (sumy kontrolnej, Data modyfikacji,...).
 
-#### <a name="preview-versions"></a>Wersji Preview
+#### <a name="preview-versions"></a>Wersje (wersja zapoznawcza)
 
-Maintainers pakietu może zadecydować o Podaj wersji zapoznawczych udostępnionego framework i zestawu SDK. Wersje zapoznawcze mogą być dostarczane za pomocą `dotnet-sdk-[major].[minor].[sdk feat]xx`, `aspnetcore-runtime-[major].[minor]`, `dotnet-runtime-[major].[minor]` pakietów. Dla wersji preview główna wersja pakietu musi mieć ustawioną wartość zero. W ten sposób ostateczną wersją zostanie zainstalowany jako uaktualnienie pakietu.
+Pakiet maintainers może zdecydować o zapewniają wersje zapoznawcze udostępnionej platformy i zestaw SDK. Wersje zapoznawcze mogą podać przy użyciu `dotnet-sdk-[major].[minor].[sdk feat]xx`, `aspnetcore-runtime-[major].[minor]`, `dotnet-runtime-[major].[minor]` pakietów. Dla wersji zapoznawczych główna wersja pakietu musi być równa zero. W ten sposób ostatecznej wersji zostanie zainstalowany jako uaktualnienie pakietu.
 
 #### <a name="patch-packages"></a>Pakiety poprawek
 
-Ponieważ wersja poprawki pakiety może spowodować istotne zmiany, Element utrzymujący pakietu może być zapewnienie _poprawka pakiety_. Te pakiety umożliwia zainstalowanie wersji określonych patch, który nie zostanie automatycznie uaktualniona. Pakiety poprawek należy używać w rzadkich przypadkach tylko, ponieważ nie będą poprawki uaktualnionym z (zabezpieczenia).
+Ponieważ wersję poprawki pakietów może spowodować istotną zmianę, Element utrzymujący pakietu może wystąpić potrzeba zapewnienia _patch pakietów_. Te pakiety umożliwia zainstalowanie wersji określona poprawka, która nie zostanie automatycznie uaktualniona. Pakiety Patch powinny można używać tylko w rzadkich przypadkach, jak nie zostaną uaktualnione za pomocą (zabezpieczenia) poprawki.
 
-W poniższej tabeli przedstawiono zalecane pakiety i **poprawka pakiety**.
+W poniższej tabeli przedstawiono zalecane pakiety i **patch pakietów**.
 
 | Nazwa                                           | Przykład                  | Zawiera         | Zależności                                              |
 |------------------------------------------------|--------------------------|------------------|-----------------------------------------------------------|
-| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | DotNet - sdk-[główna]. [najnowszej wersji zestawu sdk pomocnicza]                     |
+| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | DotNet - sdk-[główna]. [najnowszy zestaw sdk pomocnicza]                     |
 | dotnet-sdk-[major].[minor]                     | dotnet-sdk-2.1           |                  | DotNet - sdk-[główna]. [pomocnicza]. [najnowszy zestaw sdk feat] xx            |
-| DotNet - sdk-[główna]. [pomocnicza]. xx [sdk feat]        | dotnet-sdk-2.1.3xx       |                  | DotNet - sdk-[główna]. [pomocnicza]. [najnowsze poprawki sdk]             |
-| **dotnet-sdk-[major].[minor].[patch]**         | dotnet-sdk-2.1.300       | (3),(4)          | aspnetcore — środowisko uruchomieniowe — [główna]. [pomocnicza]. [poprawka zestawu sdk środowiska wykonawczego]    |
-| aspnetcore-runtime-[major].[minor]             | aspnetcore-runtime-2.1   |                  | aspnetcore — środowisko uruchomieniowe — [główna]. [pomocnicza]. [najnowsze poprawki środowiska wykonawczego] |
+| DotNet - sdk-[główna]. [pomocnicza]. xx [sdk feat]        | dotnet-sdk-2.1.3xx       |                  | DotNet - sdk-[główna]. [pomocnicza]. [najnowszą poprawkę sdk]             |
+| **dotnet-sdk-[major].[minor].[patch]**         | dotnet-sdk-2.1.300       | (3),(4)          | aspnetcore — środowisko uruchomieniowe — [główna]. [pomocnicza]. [poprawki zestawu sdk środowiska wykonawczego]    |
+| aspnetcore-runtime-[major].[minor]             | aspnetcore-runtime-2.1   |                  | aspnetcore — środowisko uruchomieniowe — [główna]. [pomocnicza]. [najnowszą poprawkę środowiska wykonawczego] |
 | **aspnetcore-runtime-[major].[minor].[patch]** | aspnetcore-runtime-2.1.0 | (6),[(7)]        | dotnet-runtime-[major].[minor].[patch]                    |
-| dotnet-runtime-[major].[minor]                 | dotnet-runtime-2.1       |                  | DotNet — środowisko uruchomieniowe — [główna]. [pomocnicza]. [najnowsze poprawki środowiska wykonawczego]     |
+| dotnet-runtime-[major].[minor]                 | dotnet-runtime-2.1       |                  | DotNet — środowisko uruchomieniowe — [główna]. [pomocnicza]. [najnowszą poprawkę środowiska wykonawczego]     |
 | **dotnet-runtime-[major].[minor].[patch]**     | dotnet-runtime-2.1.0     | (5)              | host-fxr:\<runtime version>+                              |
-| dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | Host:\<wersja środowiska uruchomieniowego > +                                  |
+| dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | Host:\<wersji środowiska uruchomieniowego > +                                  |
 | dotnet-host                                    | dotnet-host              | (1),(8),(9),(10) |                                                           |
 
-Jest to alternatywa dla użycia pakietów poprawki _przypinanie_ pakietów do określonej wersji za pomocą Menedżera pakietów. Aby uniknąć wpływu na inne aplikacje/użytkownicy, można wbudowane i wdrażać w kontenerze takich aplikacji.
+Alternatywą do korzystania z pakietów poprawki jest _przypinanie_ pakietów do określonej wersji przy użyciu Menedżera pakietów. Aby uniknąć wpływu na innych użytkowników/aplikacji, takich aplikacji można skompilować i wdrożyć w kontenerze.
 
 ## <a name="building-packages"></a>Tworzenie pakietów
 
-https://github.com/dotnet/source-build Repozytorium zawiera instrukcje dotyczące sposobu konstruowania tarball źródła .NET Core SDK i wszystkich jego składników. Dane wyjściowe repozytorium źródło kompilacji odpowiada układu opisane w pierwszej sekcji tego artykułu.
+[Źródła dotnet-build](https://github.com/dotnet/source-build) repozytorium zawiera instrukcje dotyczące sposobu tworzenia pliku tar źródła programu .NET Core SDK wraz ze wszystkimi składnikami. Dane wyjściowe repozytorium źródła kompilacji odpowiada układ opisane w pierwszej sekcji tego artykułu.

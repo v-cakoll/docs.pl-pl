@@ -2,12 +2,12 @@
 title: Uproszczona konfiguracja usług WCF
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: ebdf7ab62676bb0c8ac99a5335a3047fcdd5a9b3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 333469cecdf2acae72e6d1add8f96829a127dcf8
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500716"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836725"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Uproszczona konfiguracja usług WCF
 W tym przykładzie pokazano, jak zaimplementować i skonfigurować typowe usługi i klienta przy użyciu usługi Windows Communication Foundation (WCF). Te przykładowe dane stanowią podstawę dla wszystkich przykładów podstawową technologię.  
@@ -37,7 +37,7 @@ W tym przykładzie pokazano, jak zaimplementować i skonfigurować typowe usług
 </configuration>  
 ```  
   
- W [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], `<service>` element jest opcjonalne. Jeśli usługi nie definiuje żadnych punktów końcowych, punkt końcowy dla każdego adresu podstawowego i zaimplementować kontrakt są dodawane do usługi. Adres podstawowy jest dołączany do nazwy kontraktu, aby ustalić punkt końcowy, a następnie powiązanie jest określana przez schemat adresów. Poniższy przykład kodu demonstruje pliku uproszczona konfiguracja. Zgodnie z konfiguracją, usługi mogą być wyświetlane w http://localhost/servicemodelsamples/service.svc przez klienta na tym samym komputerze. W przypadku klientów na komputerach zdalnych w celu uzyskania dostępu do usługi należy określić w pełni kwalifikowanej nazwy domeny zamiast nazwy localhost. Domyślnie usługa nie ujawnia metadanych. W efekcie usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> zachowanie.  
+ W [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], `<service>` element jest opcjonalne. Jeśli usługi nie definiuje żadnych punktów końcowych, punkt końcowy dla każdego adresu podstawowego i zaimplementować kontrakt są dodawane do usługi. Adres podstawowy jest dołączany do nazwy kontraktu, aby ustalić punkt końcowy, a następnie powiązanie jest określana przez schemat adresów. Poniższy przykład kodu demonstruje pliku uproszczona konfiguracja. Zgodnie z konfiguracją, usługi mogą być wyświetlane w `http://localhost/servicemodelsamples/service.svc` przez klienta na tym samym komputerze. W przypadku klientów na komputerach zdalnych w celu uzyskania dostępu do usługi należy określić w pełni kwalifikowanej nazwy domeny zamiast nazwy localhost. Domyślnie usługa nie ujawnia metadanych. W efekcie usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> zachowanie.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

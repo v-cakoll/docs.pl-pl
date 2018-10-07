@@ -2,12 +2,12 @@
 title: Ustawianie właściwości Use i Style
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: d5e6409e3921d40b14b940786f6344aea657b84b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c4cee5fac84d8fb47565cc4ebde47f04365b989e
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865543"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836855"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Ustawianie właściwości Use i Style
 W tym przykładzie pokazano, jak korzystać z właściwości Use i Style na <xref:System.ServiceModel.XmlSerializerFormatAttribute> i <xref:System.ServiceModel.DataContractFormatAttribute>. Te właściwości mają wpływ na sposób sformatowanych wiadomości. Domyślnie, treść komunikatu jest sformatowany przy użyciu stylu równa <xref:System.ServiceModel.OperationFormatStyle.Document>. Te ustawienia można określić na poziomie kontraktu usługi lub poziomu kontrakt operacji.  
@@ -73,7 +73,7 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- Aby zobaczyć różnicę między różnymi <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> i <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ustawienia, zmodyfikuj je w usłudze, ponownie wygenerować klienta, uruchom aplikację przykładową i zapoznaj się z plikiem c:\logs\message.logs za pomocą narzędzia przeglądarki danych śledzenia usługi. Również obserwować wpływ na metadane, wyświetlając http://localhost/ServiceModelSamples/service.svc?wsdl. Metadane dla usług jest zazwyczaj dzielone na wielu stronach. Na stronie głównej wsdl zawiera powiązania WSDL, ale wyświetlać http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 do obserwowania definicje wiadomości.  
+ Aby zobaczyć różnicę między różnymi <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> i <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ustawienia, zmodyfikuj je w usłudze, ponownie wygenerować klienta, uruchom aplikację przykładową i zapoznaj się z plikiem c:\logs\message.logs za pomocą narzędzia przeglądarki danych śledzenia usługi. Również obserwować wpływ na metadane, wyświetlając `http://localhost/ServiceModelSamples/service.svc?wsdl`. Metadane dla usług jest zazwyczaj dzielone na wielu stronach. Na stronie głównej wsdl zawiera powiązania WSDL, ale wyświetlać `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` do obserwowania definicje wiadomości.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   

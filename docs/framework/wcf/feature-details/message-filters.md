@@ -5,11 +5,11 @@ helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
 ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780456"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839108"
 ---
 # <a name="message-filters"></a>Filtry komunikatów
 Aby zaimplementować, routingu opartego na zawartości, usługa routingu korzysta z <xref:System.ServiceModel.Dispatcher.MessageFilter> implementacji, które sprawdzanie określonych sekcji wiadomości, takich jak adres, nazwę punktu końcowego lub określonych instrukcji języka XPath. Jeśli żaden z filtry komunikatów za pomocą [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] własnych potrzeb, możesz utworzyć niestandardowy filtr, tworząc nową metodę implementacji elementu bazowego <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy.  

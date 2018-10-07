@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 74c3b825bbd51a082f20e8e2009e1ca5f0b35100
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857098"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837157"
 ---
 # <a name="getting-started-sample"></a>Wprowadzenie — przykład
 Wprowadzenie do przykładu demonstruje sposób implementacji typowych usług i typowego klienta za pomocą usługi Windows Communication Foundation (WCF). Te przykładowe dane stanowią podstawę dla wszystkich przykładów podstawową technologię.  
@@ -141,9 +141,9 @@ public class CalculatorService : ICalculator
   
  Usługa udostępnia punkt końcowy pod podstawowym adresem udostępniane przez hosta usług IIS i WAS. Powiązanie jest skonfigurowane przy użyciu standardowego <xref:System.ServiceModel.WSHttpBinding>, który zapewnia komunikacji HTTP i standardowych protokołów usług sieci Web do adresowania i zabezpieczeń. Kontrakt jest `ICalculator` implementowane przez usługę.  
   
- Zgodnie z konfiguracją, usługi mogą być wyświetlane w http://localhost/servicemodelsamples/service.svc przez klienta na tym samym komputerze. Dla klientów dostępu zdalnego computersto usługi należy określić w pełni kwalifikowanej nazwy domeny zamiast nazwy localhost.  
+ Zgodnie z konfiguracją, usługi mogą być wyświetlane w `http://localhost/servicemodelsamples/service.svc` przez klienta na tym samym komputerze. W przypadku klientów na komputerach zdalnych w celu uzyskania dostępu do usługi należy określić w pełni kwalifikowanej nazwy domeny zamiast nazwy localhost.  
   
- Struktura nie ujawnia metadanych domyślnie. W efekcie usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> i udostępnia punkt końcowy programu exchange (MEX) metadanych w http://localhost/servicemodelsamples/service.svc/mex. Następującej konfiguracji pokazuje to.  
+ Struktura nie ujawnia metadanych domyślnie. W efekcie usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> i udostępnia punkt końcowy programu exchange (MEX) metadanych w `http://localhost/servicemodelsamples/service.svc/mex`. Następującej konfiguracji pokazuje to.  
   
 ```xaml  
 <system.serviceModel>  

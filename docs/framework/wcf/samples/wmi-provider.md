@@ -2,12 +2,12 @@
 title: Dostawca WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: c3eb97537706282491de1863224e1502d6b56fda
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7947d9a1bedfe7a2a550a7b4d52b3cf5a8f40126
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617944"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839401"
 ---
 # <a name="wmi-provider"></a>Dostawca WMI
 W tym przykładzie pokazano, jak zbieranie danych z usługi Windows Communication Foundation (WCF) w czasie wykonywania przy użyciu dostawcy Instrumentacji zarządzania Windows (WMI), która jest wbudowana w usługi WCF. Ponadto w tym przykładzie przedstawiono sposób dodawania obiektu WMI zdefiniowanych przez użytkownika do usługi. Przykładowe aktywuje dostawcy WMI o [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i pokazuje, jak zbierać dane z `ICalculator` usługi w czasie wykonywania.  
@@ -125,7 +125,7 @@ cscript EnumerateCustomObjects.js
   
 2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Opublikuj schemat usługi WMI, uruchamiając InstallUtil.exe (domyślne lokalizacje programu InstallUtil.exe jest "% WINDIR%\Microsoft.NET\Framework\v4.0.30319") w pliku service.dll w katalogu macierzystym. Ten krok wymaga tylko do wykonania, gdy wprowadzono zmiany w pliku service.dll. Aby uzyskać więcej informacji, zobacz dostarczanie Zarządzanie informacji dotyczących instrumentacji aplikacji na: http://msdn2.microsoft.com/library/ms186147.aspx w sekcji "Jak do: publikowanie schemat do usługi WMI dla Instrumentacji aplikacji".  
+3.  Opublikuj schemat usługi WMI, uruchamiając InstallUtil.exe (domyślne lokalizacje programu InstallUtil.exe jest "% WINDIR%\Microsoft.NET\Framework\v4.0.30319") w pliku service.dll w katalogu macierzystym. Ten krok wymaga tylko do wykonania, gdy wprowadzono zmiany w pliku service.dll.
   
 4.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

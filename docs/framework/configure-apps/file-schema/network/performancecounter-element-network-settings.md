@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 549f3dcfd7225937fd04ad2116e2be311687861b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 259d8e0297025d496b3a10c3ef3ec2b3c96cffaa
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399453"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849792"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; — Element (ustawienia sieci)
 Włącza lub wyłącza liczniki wydajności funkcji sieciowych.  
@@ -54,7 +54,7 @@ Włącza lub wyłącza liczniki wydajności funkcji sieciowych.
 ## <a name="remarks"></a>Uwagi  
  Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
- Liczniki wydajności sieci muszą być włączone w pliku konfiguracji do użycia. Wszystkie liczniki wydajności funkcji sieciowych są włączone lub wyłączone przy użyciu pojedynczego ustawienia w pliku konfiguracji. Poszczególne liczniki wydajności funkcji sieciowych nie może być włączona lub wyłączona. Aby uzyskać więcej informacji na temat określonych liczniki wydajności funkcji sieciowych, zobacz [liczniki wydajności funkcji sieciowych](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
+ Liczniki wydajności sieci muszą być włączone w pliku konfiguracji do użycia. Wszystkie liczniki wydajności funkcji sieciowych są włączone lub wyłączone przy użyciu pojedynczego ustawienia w pliku konfiguracji. Poszczególne liczniki wydajności funkcji sieciowych nie może być włączona lub wyłączona. Aby uzyskać więcej informacji na temat określonych liczniki wydajności funkcji sieciowych, zobacz [liczniki wydajności funkcji sieciowych](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).  
   
  Wartość domyślna to tego wydajność sieci, które liczniki są wyłączone.  
   
@@ -79,4 +79,4 @@ Włącza lub wyłącza liczniki wydajności funkcji sieciowych.
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
  [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Liczniki wydajności funkcji sieciowych](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [Liczniki wydajności funkcji sieciowych](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

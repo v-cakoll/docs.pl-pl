@@ -1,23 +1,23 @@
 ---
 title: Lock — instrukcja (odwołanie w C#)
-description: Użyj instrukcji lock języka C# do synchronizowania dostępu wątku do udostępnionego zasobu
-ms.date: 08/28/2018
+description: Umożliwia synchronizację dostępu wątków we współdzielonym zasobie przez instrukcję lock języka C#
+ms.date: 10/01/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 802f447e1ae01020fa80fa3048e3783ea24db3d3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858359"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850104"
 ---
 # <a name="lock-statement-c-reference"></a>Lock — instrukcja (odwołanie w C#)
 
-`lock` Instrukcji uzyskuje blokadę wykluczania wzajemnego dla danego obiektu, wykonuje blok instrukcji, a następnie zwalnia blokadę. Gdy blokada jest używana, wątek, który posiada blokadę ponownie uzyskać i zwalnia blokadę. Inne wątku jest zablokowana dla rezygnację z włączenia blokady i czeka, aż blokada jest zwalniana.
+`lock` Instrukcji uzyskuje blokadę wykluczania wzajemnego dla danego obiektu, wykonuje blok instrukcji, a następnie zwalnia blokadę. Dopóki blokada jest utrzymywana, wątek, który posiada blokadę można ponownie pobrać i zwalnia blokadę. Inne wątku Zablokowano pobieranie blokady i czeka, aż blokada jest zwalniana.
 
 `lock` Instrukcja jest formularza
 
@@ -50,13 +50,11 @@ Nie można użyć [await](await.md) — słowo kluczowe w treści `lock` instruk
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas synchronizowania wątku dostęp do udostępnionego zasobu blokady w wystąpieniu obiektu dedykowane (na przykład `private readonly object balanceLock = new object();`) lub innego wystąpienia, który prawdopodobnie nie ma być używany jako obiekt blokady przez niezwiązanych części kodu. Należy unikać tego samego wystąpienia obiektu blokady dla różnych zasobów udostępnionych, ponieważ może to spowodować zakleszczenia lub lock rywalizacji o zasoby. W szczególności należy unikać
+Podczas synchronizowania dostępu wątków we współdzielonym zasobie blokady w wystąpieniu obiektu dedykowane (na przykład `private readonly object balanceLock = new object();`) lub innego wystąpienia, który prawdopodobnie nie ma być używany jako obiekt blokady przez niezwiązanych części kodu. Należy unikać tego samego wystąpienia obiektu blokady dla różnych zasobów udostępnionych, ponieważ może to spowodować zakleszczenia lub lock rywalizacji o zasoby. W szczególności należy unikać następujące jako obiekty blokady:
 
-- `this` (może być używana przez obiekty wywołujące jako blokady),
-- <xref:System.Type> wystąpienia (może otrzymać [typeof](typeof.md) operatora lub odbicie),
-- wystąpienia ciągu, w tym literałów ciągów
-
-jako obiekty blokady.
+- `this`, jak mogą być używane przez obiekty wywołujące jako blokadę.
+- <xref:System.Type> wystąpienia jako te, można uzyskać przez [typeof](typeof.md) operatora lub odbicia.
+- ciąg wystąpienia, w tym Literały ciągu, ponieważ te mogą być [interned](/dotnet/api/system.string.intern#remarks).
 
 ## <a name="example"></a>Przykład
 

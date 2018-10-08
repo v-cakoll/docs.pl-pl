@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 0f143f8c023102f44b41e3898f29d18be0083128
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778708"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849493"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;obejmują&gt; (Visual Basic)
 Odnosi się do innego pliku, który opisuje typy i elementy członkowskie w kodzie źródłowym.  
@@ -37,7 +37,7 @@ Odnosi się do innego pliku, który opisuje typy i elementy członkowskie w kodz
 ## <a name="remarks"></a>Uwagi  
  Użyj `<include>` tag do odwoływania się do komentarzy w innym pliku, które opisują typy i elementy członkowskie w kodzie źródłowym. Jest to alternatywa do wprowadzania komentarzy dokumentacji bezpośrednio w pliku kodu źródłowego.  
   
- `<include>` Tag używa zalecenie w wersji 1.0 W3C XML Path Language (XPath). Więcej informacji o sposobach dostosowywania swoje `<include>` użycia znajduje się w temacie http://www.w3.org/TR/xpath.  
+ `<include>` Tag używa zalecenie w wersji 1.0 W3C XML Path Language (XPath). Aby uzyskać więcej informacji na temat sposobów dostosowania Twojego `<include>` , zobacz <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie użyto `<include>` tag, aby zaimportować komentarzy dokumentacji elementu członkowskiego z pliku o nazwie `commentFile.xml`.  

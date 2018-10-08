@@ -2,12 +2,12 @@
 title: 'Wzorce projektowe: Lista publikowanie/subskrybowanie oparte na'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: caec9a9aa6de267cb5407ad4a7166701740f9a63
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664699"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850130"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Wzorce projektowe: Lista publikowanie/subskrybowanie oparte na
 W tym przykładzie pokazano wzorzec listy publikowanie/subskrybowanie oparte na zaimplementowane jako program Windows Communication Foundation (WCF).  
@@ -118,7 +118,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1.  Test, czy można uzyskać dostęp do usługi, za pomocą przeglądarki, wpisując następujący adres: http://localhost/servicemodelsamples/service.svc. Strona potwierdzenia powinna być wyświetlana w odpowiedzi.  
+1.  Test, czy można uzyskać dostęp do usługi, za pomocą przeglądarki, wpisując następujący adres: `http://localhost/servicemodelsamples/service.svc`. Strona potwierdzenia powinna być wyświetlana w odpowiedzi.  
   
 2.  Uruchom Client.exe z \client\bin\\, jest dostępna z folderu specyficzny dla języka. Aktywność klienta jest wyświetlany w oknie konsoli klienta. Uruchom kilka klientów.  
   

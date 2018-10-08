@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 03ddcbacf7de3753ca74c398e585447b2d769cd6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4c74777a9af3df346c093ea9c3d68e788d075bd5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210630"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849467"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Porady: Określanie zasad pamięci podręcznej dla żądania
-W poniższym przykładzie pokazano, ustawianie zasad pamięci podręcznej dla żądania. Przykładowe dane wejściowe to identyfikator URI, taki jak http://www.contoso.com/.  
+W poniższym przykładzie pokazano, ustawianie zasad pamięci podręcznej dla żądania. Przykładowe dane wejściowe to identyfikator URI, taki jak `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu tworzy zasady pamięci podręcznej, która umożliwia żądany zasób do użycia z pamięci podręcznej, jeśli nie było w pamięci podręcznej przez czas dłuższy niż jeden dzień. Przykład wyświetla komunikat informujący o tym, czy zasób został użyty z pamięci podręcznej — na przykład `"The response was retrieved from the cache : False."`— a następnie wyświetla zasobu. Żądanie może być spełnione przez wszelkie pamięci między klientem i serwerem.  

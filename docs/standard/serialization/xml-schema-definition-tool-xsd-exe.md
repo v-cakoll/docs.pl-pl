@@ -2,12 +2,12 @@
 title: Narzędzie definicji schematu XML (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: a3a16e92dab6994de6bfa99c248ff0b13658e22d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615446"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850866"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Narzędzie definicji schematu XML (Xsd.exe)
 Narzędzie definicji schematu XML (Xsd.exe) generuje schemat XML lub wspólnej klasy środowiska wykonawczego języka z PLików XDR, XML i XSD lub klasy w zestawie czasu wykonywania.  
@@ -86,7 +86,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  Klasy do XSD  
  Generuje schematu XML na podstawie typ lub typy w PLiku zestawu czasu wykonywania. Wygenerowany schemat definiuje format XML używany przez `System.Xml.Serialization.XmlSerializer`.  
   
- XSD.exe służy tylko do modyfikowania schematów XML, które podlegają języka definicji schematu XML (XSD) proponowanych przez konsorcjum World Wide Web (W3C). Aby uzyskać więcej informacji na propozycję definicji schematu XML lub standardu XML zobacz http://w3.org.  
+ XSD.exe służy tylko do modyfikowania schematów XML, które podlegają języka definicji schematu XML (XSD) proponowanych przez konsorcjum World Wide Web (W3C). Aby uzyskać więcej informacji na propozycję definicji schematu XML lub standardu XML zobacz <https://w3.org>.  
   
 ## <a name="setting-options-with-an-xml-file"></a>Ustawianie opcji z PLiku XML  
  Za pomocą `/parameters` przełącznika, można określić pojedynczy plik XML, który ustawia różne opcje. Opcje, które można ustawić zależą od sposobu korzystania z narzędzia XSD.exe. Można także wybrać opcję generowania schematy, generowanie kodu PLików lub generowania kodu PLiki, które zawierają `DataSet` funkcji. Na przykład można ustawić `<assembly\>` element na nazwę pliku wykonywalnego (.exe) lub wpisz biblioteki (.dll) pliku podczas generowania schematu, ale nie w momencie generowania pliku kodu. Następujące kodu XML przedstawiono sposoby używania `<generateSchemas\>` element z określonego PLiku wykonywalnego:  

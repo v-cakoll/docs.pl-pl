@@ -3,11 +3,11 @@ title: 'Porady: Tworzenie punktu końcowego usługi w konfiguracji'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
 ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266276"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850599"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Porady: Tworzenie punktu końcowego usługi w konfiguracji
 Punkty końcowe udostępniać klientom dostęp do funkcji, które oferuje usługa Windows Communication Foundation (WCF). Można zdefiniować jeden lub więcej punktów końcowych usługi za pomocą kombinacji adresy punktów końcowych względnych i bezwzględnych lub jeśli nie zdefiniowano żadnych punktów końcowych usługi, środowisko wykonawcze zapewnia niektóre domyślnie dla Ciebie. W tym temacie przedstawiono sposób dodawania punktów końcowych przy użyciu pliku konfiguracji, które zawierają zarówno względnych i bezwzględnych adresów.  

@@ -3,11 +3,11 @@ title: Działania dostępu do bazy danych
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777909"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850405"
 ---
 # <a name="database-access-activities"></a>Działania dostępu do bazy danych
 Działania dostępu do bazy danych umożliwiają dostęp do bazy danych w przepływie pracy. Te działania, Zezwalaj na dostęp do bazy danych do pobierania lub modyfikowanie informacji i użycia [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) dostęp do bazy danych.  

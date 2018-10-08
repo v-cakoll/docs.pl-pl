@@ -3,11 +3,11 @@ title: Śledzenie danych analitycznych programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 9464f2a4c9bc52134e439c98b06ae50c828a14f6
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580448"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850260"
 ---
 # <a name="wcf-analytic-tracing"></a>Śledzenie danych analitycznych programu WCF
 W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia w strumieniu analityczne śladów, które zapisuje ETW w Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Śledzenie analityczne są przeznaczone do ułatwiają Uzyskaj wgląd w swoje usługi bez konieczności płacenia spadek wysokiej wydajności. Ten przykład ilustruje sposób używania <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsy API w celu zapisu zdarzenia, które integrują się z usługi WCF.  

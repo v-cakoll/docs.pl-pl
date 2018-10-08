@@ -12,11 +12,11 @@ ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 55fd8c33f80ecf3b31fdbacec1abd73ebab92396
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777490"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849486"
 ---
 # <a name="synchronous-client-socket-example"></a>Przykład synchronicznego gniazda klienta
 Poniższy przykład program tworzy klienta, który nawiązuje połączenie z serwerem. Klient jest tworzone za pomocą synchronicznego gniazda, więc zawiesza wykonywanie aplikacji klienckiej, dopóki serwer nie zwróci odpowiedź. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwracany przez serwer w konsoli.  

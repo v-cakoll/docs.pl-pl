@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2dbc6b5ffaa3a381bdd657059a682a3d12dc4cf1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208136"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850210"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod — Metoda
 Tworzy definicję metody lub funkcja globalna o określonej sygnaturze i zwraca token do tej definicji metody.  

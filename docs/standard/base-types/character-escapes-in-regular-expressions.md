@@ -17,11 +17,11 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
-ms.translationtype: HT
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781768"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837170"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Znaki specjalne w wyrażeniach regularnych
 Ukośnik odwrotny (\\) w wyrażeniu regularnym wskazuje jedną z następujących czynności:  

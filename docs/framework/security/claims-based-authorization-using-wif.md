@@ -3,12 +3,12 @@ title: Za pomocą programu WIF autoryzacja oparta na oświadczeniach
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: c13ea5c9f2f62c9c01139741d06de35dd2ff4be1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236059"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872931"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Za pomocą programu WIF autoryzacja oparta na oświadczeniach
 W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów może uzyskać dostęp uwierzytelniona tożsamość i jakie operacje może wykonywać w odniesieniu do tych zasobów. Niewłaściwa lub słaba autoryzacja może doprowadzić do ujawnienia informacji i nieuprawnionej modyfikacji danych. W tym temacie opisano dostępne sposoby zaimplementowania autoryzacji dla aplikacji i usług internetowych programu ASP.NET obsługujących oświadczenia, za pomocą programu Windows Identity Foundation (WIF) i usługi tokenu zabezpieczającego (STS), na przykład usługi kontroli dostępu (ACS) systemu Microsoft Azure.  
@@ -36,7 +36,7 @@ W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów mo�
 ### <a name="expressing-roles-as-claims"></a>Wyrażanie ról jako oświadczeń  
  Gdy **IsInRole()** metoda jest wywoływana, jest sprawdzenie, czy bieżący użytkownik ma tę rolę. W aplikacjach obsługujących oświadczenia rola jest wyrażana przez typ oświadczenia roli, który powinien być dostępny w tokenie. Typ oświadczenia roli jest wyrażany za pomocą następującego identyfikatora URI:  
   
- http://schemas.microsoft.com/ws/2008/06/identity/claims/role  
+ `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   
  Istnieje kilka sposobów wzbogacenia tokenu o typ oświadczenia roli:  
   

@@ -8,11 +8,11 @@ ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 60e95d79ae7cd43b79ec4fd79285bfea071f20f8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034824"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873560"
 ---
 # <a name="accessibility-best-practices"></a>Najlepsze praktyki dotyczące ułatwień dostępu
 > [!NOTE]

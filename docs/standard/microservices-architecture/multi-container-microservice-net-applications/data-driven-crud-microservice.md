@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Tw
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: bba0b93ee7e68ae0320460c6a45ab252ac34c326
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582739"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873503"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostego mikrousługi CRUD na podstawie danych
 
@@ -393,7 +393,7 @@ Po zakończeniu tej operacji możesz uruchomić aplikację, a następnie Przegl�
   http://<your-root-url>/swagger/
 ```
 
-Widać wcześniej wygenerowany interfejsu użytkownika tworzone przez pakiet Swashbuckle dla adresu URL typu http://&lt;adres url katalogu głównego &gt; /swagger/interfejsu użytkownika. W rysunek 8 – 9 widać również sposób testowania dowolnej metody interfejsu API.
+Wcześniej był wyświetlany wygenerowanego interfejsu użytkownika tworzone przez pakiet Swashbuckle dla danego adresu URL, takich jak `http://<your-root-url>/swagger/ui`. W rysunek 8 – 9 widać również sposób testowania dowolnej metody interfejsu API.
 
 ![](./media/image10.png)
 

@@ -4,12 +4,12 @@ description: Dowiedz się, przenoszenie i shift i modernizacji istniejących apl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 4/28/2018
-ms.openlocfilehash: 07e1a1e2ef145dce1b292d9425f33fcd99ffd1ae
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747007"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873506"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów Windows (wersja 2)
 
@@ -25,7 +25,7 @@ Copyright © 2018 Microsoft Corporation
 
 Wszelkie prawa zastrzeżone. Nie części zawartości tej książki może odtworzyć w jakiejkolwiek formie lub za pomocą jakichkolwiek środków bez pisemnej zgody wydawcy.
 
-Ten podręcznik jest dostępna bezpłatnie w formie elektronicznej book (książka) dostępnych za pośrednictwem wielu kanałów w firmie Microsoft takie jak http://dot.net/architecture.
+Ten podręcznik jest dostępna bezpłatnie w formie elektronicznej book (książka) dostępnych za pośrednictwem wielu kanałów w firmie Microsoft takie jak <http://dot.net/architecture>.
 
 Jeśli masz pytania dotyczące tej książki, adresem e-mail [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -33,7 +33,7 @@ Ten podręcznik jest dostarczany "jako — jest" i wyraża, widoki i opinie od a
 
 Niektóre przedstawione przykłady znajdują się wyłącznie do celów informacyjnych i są fikcyjne. Nie rzeczywiste skojarzenia ani powiązania nie są zamierzone ani powinny być zakładane.
 
-Firma Microsoft i znaków towarowych, opisane w temacie http://www.microsoft.com na stronie sieci Web "Znakami" są znakami towarowymi grupy firm Microsoft. Wszelkie inne znaki są własnością ich prawnych właścicieli.
+Firma Microsoft i znaków towarowych, opisane w temacie <https://www.microsoft.com> na stronie sieci Web "Znakami" są znakami towarowymi grupy firm Microsoft. Wszelkie inne znaki są własnością ich prawnych właścicieli.
 
 Autor:
 > **Torre'a de la Cesarowi**, Stanowisko kierownicze wyższego PM, .NET Product Team, Microsoft Corp.

@@ -3,11 +3,11 @@ title: Hosting1
 ms.date: 03/30/2017
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
 ms.openlocfilehash: 6cbd05bd0d478898807ef0bfadfc64f1feea0574
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780235"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873764"
 ---
 # <a name="hosting"></a>Hosting
 Ta sekcja zawiera przykłady pokazujące, hostingu usług Windows Communication Foundation (WCF).  

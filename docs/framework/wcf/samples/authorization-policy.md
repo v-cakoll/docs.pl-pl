@@ -2,12 +2,12 @@
 title: Zasady autoryzacji
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198322"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873482"
 ---
 # <a name="authorization-policy"></a>Zasady autoryzacji
 
@@ -284,7 +284,7 @@ Lub można zrobić to samo w konfiguracji:
 
 Windows Communication Foundation (WCF) zapewnia rozbudowane modelu opartego na oświadczeniach do wykonywania kontroli dostępu. <xref:System.ServiceModel.ServiceAuthorizationManager> Obiekt jest używany do wykonywania kontroli dostępu i określić, czy oświadczenia skojarzone z klientami spełnia wymagania niezbędne do uzyskania dostępu do metody usługi.
 
-Dla celów demonstracyjnych, w tym przykładzie pokazano implementację <xref:System.ServiceModel.ServiceAuthorizationManager> implementującej <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metodę, aby umożliwić użytkownikowi dostęp do metod na podstawie oświadczeń typu http://example.com/claims/allowedoperation którego wartością jest identyfikator URI akcji operacji, która jest może zostać wywołana.
+Dla celów demonstracyjnych, w tym przykładzie pokazano implementację <xref:System.ServiceModel.ServiceAuthorizationManager> implementującej <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metodę, aby umożliwić użytkownikowi dostęp do metod na podstawie oświadczeń typu `http://example.com/claims/allowedoperation` którego wartością jest identyfikator URI akcji operacji, która jest może zostać wywołana.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager

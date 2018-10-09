@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964387"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873125"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Tworzenie schematu kryptograficznego
 Można łączyć kryptograficznych składników .NET Framework do tworzenia różnych systemów do szyfrowania i odszyfrowywania danych.  
@@ -30,7 +30,7 @@ Można łączyć kryptograficznych składników .NET Framework do tworzenia ró�
   
 5.  Strony następnie zainicjuj konwersacji za pomocą szyfrowania symetrycznego.  
   
- Tworzenie schematu kryptograficznego nie jest prostym zadaniem. Aby uzyskać więcej informacji na temat korzystania z szyfrowania, zobacz temat kryptografii w dokumentacji platformy SDK pod adresem http://msdn.microsoft.com/library.  
+ Tworzenie schematu kryptograficznego nie jest prostym zadaniem.
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -160,11 +160,11 @@ ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780891"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873790"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe — komunikaty o błędach
 Wywołania procesu kompilacji [Winmdexp.exe (Windows Runtime narzędzie do eksportu metadanych)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) zastosowania  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika** szablonu w programie Visual Studio 2012, dzięki czemu komunikaty o błędach Winmdexp.exe są wyświetlane w **Lista błędów**. Winmdexp.exe działa w module, który jest kompilowany za pomocą `/target:winmdobj` opcji. Ponieważ wymaga, aby moduł skompilowany jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088040"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873722"
 ---
 # <a name="data-contract-schema-reference"></a>Odwołanie do schematu kontraktu danych
 W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref:System.Runtime.Serialization.DataContractSerializer> do opisania wspólnego języka wspólnego (CLR) typy serializacji XML.  
@@ -47,7 +47,7 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
 |`elementFormDefault`|Musi być kwalifikowany. Wszystkie elementy muszą zakwalifikować się do schematu obsługiwane przez `DataContractSerializer`. Można to osiągnąć przez ustawienie albo xs:schema/@elementFormDefault "kwalifikowany" lub przez ustawienie xs:element/@form pozycji "kwalifikowany" w deklaracji każdego pojedynczego elementu.|  
 |`finalDefault`|Ignorowane.|  
 |`Id`|Ignorowane.|  
-|`targetNamespace`|Obsługiwane i mapowane na przestrzeń nazw kontraktu danych. Jeśli ten atrybut nie jest określony, pustą przestrzeń nazw jest używana. Nie może być zarezerwowaną przestrzenią nazw http://schemas.microsoft.com/2003/10/Serialization/.|  
+|`targetNamespace`|Obsługiwane i mapowane na przestrzeń nazw kontraktu danych. Jeśli ten atrybut nie jest określony, pustą przestrzeń nazw jest używana. Nie może być zarezerwowaną przestrzenią nazw `http://schemas.microsoft.com/2003/10/Serialization/`.|  
 |`version`|Ignorowane.|  
   
 ### <a name="xsschema-contents"></a>\<xs:Schema >: zawartość  
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Mapowanie typów iSerializable  
- W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] w wersji 1.0 `ISerializable` została wprowadzona jako mechanizm ogólnego do wykonywania serializacji obiektów dla trwałości lub transfer danych. Istnieje wiele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typami, które implementują `ISerializable` i mogą być przekazywane między aplikacjami. `DataContractSerializer` naturalnie zapewnia obsługę `ISerializable` klasy. `DataContractSerializer` Mapuje `ISerializable` typów schematu implementacji różnią się jedynie QName (kwalifikowana nazwa) tego typu, które są faktycznymi kolekcji właściwości. Na przykład `DataContractSerializer` mapuje <xref:System.Exception> następujący typ XSD w http://schemas.datacontract.org/2004/07/System przestrzeni nazw.  
+ W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] w wersji 1.0 `ISerializable` została wprowadzona jako mechanizm ogólnego do wykonywania serializacji obiektów dla trwałości lub transfer danych. Istnieje wiele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typami, które implementują `ISerializable` i mogą być przekazywane między aplikacjami. `DataContractSerializer` naturalnie zapewnia obsługę `ISerializable` klasy. `DataContractSerializer` Mapuje `ISerializable` typów schematu implementacji różnią się jedynie QName (kwalifikowana nazwa) tego typu, które są faktycznymi kolekcji właściwości. Na przykład `DataContractSerializer` mapuje <xref:System.Exception> następujący typ XSD w `http://schemas.datacontract.org/2004/07/System` przestrzeni nazw.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -541,7 +541,7 @@ public class Employee : Person
 ## <a name="datacontract-serialization-schema"></a>DataContract schematu serializacji  
  Liczba schematów wyeksportowany przez `DataContractSerializer` typy, elementy i atrybuty z przestrzeni nazw specjalnych serializacji kontrakt danych:  
   
- http://schemas.microsoft.com/2003/10/Serialization  
+ `http://schemas.microsoft.com/2003/10/Serialization`
   
  Poniżej przedstawiono pełną deklarację schematu serializacji kontrakt danych.  
   

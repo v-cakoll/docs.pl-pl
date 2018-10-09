@@ -2,12 +2,12 @@
 title: Aktywowanie elementu NamedPipe
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5f277d2c72822d8828355d3d728864bedb6dc4f4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504275"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873365"
 ---
 # <a name="namedpipe-activation"></a>Aktywowanie elementu NamedPipe
 Niniejszy przykład pokazuje usługi, używającej Windows Process Activation Service (WAS), aby aktywować usługę, która komunikuje się za pośrednictwem potoków nazwy hosta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i wymaga [!INCLUDE[wv](../../../../includes/wv-md.md)] do uruchomienia.  
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  To polecenie jest pojedynczy wiersz tekstu.  
   
-         To polecenie włącza aplikację /servicemodelsamples można uzyskać za pomocą zarówno http://localhost/servicemodelsamples i net.tcp://localhost/servicemodelsamples.  
+         To polecenie włącza aplikację /servicemodelsamples można uzyskać za pomocą zarówno `http://localhost/servicemodelsamples` i `net.tcp://localhost/servicemodelsamples`.  
   
 4.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

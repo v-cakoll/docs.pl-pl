@@ -1,17 +1,16 @@
-# .NET Docs
+# <a name="net-docs"></a>Dokumentacja platformy .NET
 
-This repo contains work-in-progress documentation for .NET. To contribute, see the [Contributing Guide](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) and the [issues list](https://github.com/dotnet/docs/issues). 
+To repozytorium zawiera dokumentacji koncepcyjnego dla platformy .NET. [Witrynie dokumentacji .NET](https://docs.microsoft.com/dotnet) składa się z wieloma repozytoriami, oprócz tego:
 
-We welcome contributions to help us improve and complete the .NET docs. Feel free to copy/paste documentation from [.NET Framework docs](https://msdn.microsoft.com/library/w0x726c2.aspx) as a starting point for .NET docs. We anticipate that [Xamarin](http://developer.xamarin.com/api/root/classlib/), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) and [Unity](http://docs.unity3d.com/Manual/index.html) will also use this documentation.
+- [Przykłady kodu i fragmentów kodu](https://github.com/dotnet/samples)
+- [Dokumentacja interfejsu API](https://github.com/dotnet/dotnet-api-docs)
+- [Odwołanie do zestawu SDK platformy kompilatora .NET](https://github.com/dotnet/roslyn-api-docs)
 
-This project has adopted the code of conduct defined by the Contributor Covenant
-to clarify expected behavior in our community.
-For more information, see the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct).
+Zagadnienia i zadania dla wszystkich trzech tych repozytoriów są śledzone w tym miejscu. Mamy duże społeczności przy użyciu tych zasobów. Ułatwiamy naszych wszelkich starań, aby reagować na problemy w odpowiednim czasie. Możesz dowiedzieć się więcej o naszych procedury dotyczące klasyfikacji i rozwiązywanie problemów z naszych [problemy z zasadami](issues-policy.md) tematu.
 
-Samples Build Status
-===
+Chętnie poznamy wkładów, aby pomóc nam w ulepszeniu ukończenia dokumentacji platformy .NET. Aby współtworzyć, zobacz [projektów dla platformy .NET, uczestnicy społeczności](https://github.com/dotnet/docs/projects/35) zapoznać się z pomysłami. [Współtworzenia przewodnik](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) zawiera instrukcje na procedurach używamy. Lub sprawdź [listę problemów](https://github.com/dotnet/docs/issues) zadań, które Cię interesują.
 
-| Samples | Ubuntu 16.04<br/>_.NET Core 1.1.0_ | Ubuntu 16.04<br/>_.NET Core 2.0.0-preview_  |
-| ------------- |------------| -----|
-| `/samples/core` | ![](https://constructors.visualstudio.com/_apis/public/build/definitions/3186585f-1677-4c9e-a8b2-baac48a4032a/56/badge)| ![](https://constructors.visualstudio.com/_apis/public/build/definitions/3186585f-1677-4c9e-a8b2-baac48a4032a/57/badge) |
-|`/samples/csharp`| ![](https://constructors.visualstudio.com/_apis/public/build/definitions/3186585f-1677-4c9e-a8b2-baac48a4032a/54/badge)| ![](https://constructors.visualstudio.com/_apis/public/build/definitions/3186585f-1677-4c9e-a8b2-baac48a4032a/55/badge) |
+Przewidujemy, że [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) i [Unity](http://docs.unity3d.com/Manual/index.html) spowoduje również użycie tej dokumentacji.
+
+Ten projekt przyjęła Kodeks postępowania definicją Przymierzem współautorem, aby wyjaśnić, oczekiwane zachowanie w naszej społeczności.
+Aby uzyskać więcej informacji, zobacz [.NET Foundation Kodeks postępowania](https://dotnetfoundation.org/code-of-conduct).

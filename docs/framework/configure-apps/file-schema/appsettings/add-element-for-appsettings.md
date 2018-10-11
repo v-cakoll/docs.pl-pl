@@ -10,21 +10,21 @@ ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046373"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086326"
 ---
-# <a name="add-element-for-appsettings"></a><span data-ttu-id="315a8-102">\<Dodaj >, element dla \<appSettings ></span><span class="sxs-lookup"><span data-stu-id="315a8-102">\<add> element for \<appSettings></span></span>
+# <a name="add-element-for-appsettings"></a><span data-ttu-id="bede4-102">\<Dodaj >, element dla \<appSettings ></span><span class="sxs-lookup"><span data-stu-id="bede4-102">\<add> element for \<appSettings></span></span>
 
-<span data-ttu-id="315a8-103">Dodaje ustawienia aplikacji niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="315a8-103">Adds a custom application setting.</span></span>
+<span data-ttu-id="bede4-103">Dodaje ustawienia aplikacji niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="bede4-103">Adds a custom application setting.</span></span>
 
-<span data-ttu-id="315a8-104">[**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="315a8-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="315a8-105">&nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="315a8-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span></span>  
-<span data-ttu-id="315a8-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<Dodaj >**</span><span class="sxs-lookup"><span data-stu-id="315a8-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
+<span data-ttu-id="bede4-104">[**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="bede4-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="bede4-105">&nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="bede4-105">&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) </span></span>  
+<span data-ttu-id="bede4-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<Dodaj >**</span><span class="sxs-lookup"><span data-stu-id="bede4-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="315a8-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="315a8-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="bede4-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="bede4-107">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -32,26 +32,26 @@ ms.locfileid: "48046373"
 </appSettings>
 ```
 
-## <a name="attributes"></a><span data-ttu-id="315a8-108">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="315a8-108">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="bede4-108">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="bede4-108">Attributes</span></span>
 
-|           | <span data-ttu-id="315a8-109">Opis</span><span class="sxs-lookup"><span data-stu-id="315a8-109">Description</span></span> |
+|           | <span data-ttu-id="bede4-109">Opis</span><span class="sxs-lookup"><span data-stu-id="bede4-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="315a8-110">**Klucz**</span><span class="sxs-lookup"><span data-stu-id="315a8-110">**key**</span></span>   | <span data-ttu-id="315a8-111">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="315a8-111">Required attribute.</span></span><br><br><span data-ttu-id="315a8-112">Określa nazwę klucz do dodania.</span><span class="sxs-lookup"><span data-stu-id="315a8-112">Specifies the name of the key to add.</span></span> |
-| <span data-ttu-id="315a8-113">**value**</span><span class="sxs-lookup"><span data-stu-id="315a8-113">**value**</span></span> | <span data-ttu-id="315a8-114">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="315a8-114">Required attribute.</span></span><br><br><span data-ttu-id="315a8-115">Określa wartość klucz do dodania.</span><span class="sxs-lookup"><span data-stu-id="315a8-115">Specifies the value of the key to add.</span></span> |
+| <span data-ttu-id="bede4-110">**Klucz**</span><span class="sxs-lookup"><span data-stu-id="bede4-110">**key**</span></span>   | <span data-ttu-id="bede4-111">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="bede4-111">Required attribute.</span></span><br><br><span data-ttu-id="bede4-112">Określa nazwę klucz do dodania.</span><span class="sxs-lookup"><span data-stu-id="bede4-112">Specifies the name of the key to add.</span></span> |
+| <span data-ttu-id="bede4-113">**value**</span><span class="sxs-lookup"><span data-stu-id="bede4-113">**value**</span></span> | <span data-ttu-id="bede4-114">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="bede4-114">Required attribute.</span></span><br><br><span data-ttu-id="bede4-115">Określa wartość klucz do dodania.</span><span class="sxs-lookup"><span data-stu-id="bede4-115">Specifies the value of the key to add.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="315a8-116">Element nadrzędny</span><span class="sxs-lookup"><span data-stu-id="315a8-116">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="bede4-116">Element nadrzędny</span><span class="sxs-lookup"><span data-stu-id="bede4-116">Parent element</span></span>
 
-|     | <span data-ttu-id="315a8-117">Opis</span><span class="sxs-lookup"><span data-stu-id="315a8-117">Description</span></span> |
+|     | <span data-ttu-id="bede4-117">Opis</span><span class="sxs-lookup"><span data-stu-id="bede4-117">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="315a8-118">**\<appSettings >**</span><span class="sxs-lookup"><span data-stu-id="315a8-118">**\<appSettings>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | <span data-ttu-id="315a8-119">Zawiera ustawienia aplikacji niestandardowych, takich jak ścieżki do plików, adresy URL usługi sieci Web XML lub inne informacje konfiguracji niestandardowej dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="315a8-119">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
+| [<span data-ttu-id="bede4-118">**\<appSettings >**</span><span class="sxs-lookup"><span data-stu-id="bede4-118">**\<appSettings>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | <span data-ttu-id="bede4-119">Zawiera ustawienia aplikacji niestandardowych, takich jak ścieżki do plików, adresy URL usługi sieci Web XML lub inne informacje konfiguracji niestandardowej dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="bede4-119">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="315a8-120">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="315a8-120">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="bede4-120">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="bede4-120">Child elements</span></span>
 
-<span data-ttu-id="315a8-121">Brak</span><span class="sxs-lookup"><span data-stu-id="315a8-121">None</span></span>
+<span data-ttu-id="bede4-121">Brak</span><span class="sxs-lookup"><span data-stu-id="bede4-121">None</span></span>
 
-## <a name="example"></a><span data-ttu-id="315a8-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="315a8-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="bede4-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="bede4-122">Example</span></span>
 
-<span data-ttu-id="315a8-123">Poniższy przykład pokazuje, jak dodać ustawienie Konfiguracja niestandardowa nazwa aplikacji:</span><span class="sxs-lookup"><span data-stu-id="315a8-123">The following example shows how to add a custom configuration setting for the application's name:</span></span>
+<span data-ttu-id="bede4-123">Poniższy przykład pokazuje, jak dodać ustawienie Konfiguracja niestandardowa nazwa aplikacji:</span><span class="sxs-lookup"><span data-stu-id="bede4-123">The following example shows how to add a custom configuration setting for the application's name:</span></span>
 
 ```xml
 <appSettings>
@@ -59,7 +59,7 @@ ms.locfileid: "48046373"
 </appSettings>
 ```
 
-<span data-ttu-id="315a8-124">W poniższym przykładzie użyto `<add>` elementu, aby zdefiniować dwa ustawienia zgodności w aplikacji ASP.NET:</span><span class="sxs-lookup"><span data-stu-id="315a8-124">The following example uses the `<add>` element to define two compatibility settings in an ASP.NET application:</span></span>
+<span data-ttu-id="bede4-124">W poniższym przykładzie użyto `<add>` elementu, aby zdefiniować dwa ustawienia zgodności w aplikacji ASP.NET:</span><span class="sxs-lookup"><span data-stu-id="bede4-124">The following example uses the `<add>` element to define two compatibility settings in an ASP.NET application:</span></span>
 
 ```xml
 <appSettings>
@@ -68,6 +68,6 @@ ms.locfileid: "48046373"
 </appSettings>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="315a8-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="315a8-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bede4-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bede4-125">See also</span></span>
 
-[<span data-ttu-id="315a8-126">Schemat pliku konfiguracji dla programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="315a8-126">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+[<span data-ttu-id="bede4-126">Schemat pliku konfiguracji dla programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="bede4-126">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

@@ -2,12 +2,12 @@
 title: Omówienie manipulacji i bezwładności
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 93d995d7afec24dedf168274fe29f6a250c0a532
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 52cef7e617d577e6a63c8eaa79a6d9f74dd54bdf
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845817"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086742"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Omówienie manipulacji i bezwładności
 *Manipulacje* umożliwić użytkownikom przenoszenie, obracać i zmień rozmiar elementów interfejsu użytkownika przy użyciu *manipulatory*. Manipulator reprezentuje myszy lub (w przypadku komputerów z obsługą dotyku) pióro lub linii papilarnych.  
@@ -41,7 +41,7 @@ ms.locfileid: "48845817"
  Gdy manipulatory są dodawane, przeniesione lub usunięte, aby element interfejsu użytkownika, aplikacja aktualizuje <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> obiektu przez wywołanie metody <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> metody. Podczas modyfikowania rozpoczyna się najpierw, <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> zdarzenie jest wywoływane.  
   
 > [!NOTE]
->  Manipulowanie przetwarzania jest bardziej wydajne, gdy jest używana w środowiskach opartych na klatkach aktualizacji. Korzystając z przetwarzania w aplikacji Microsoft XNA manipulowania, to nie ma znaczenia, ponieważ program XNA framework zawiera opartych na klatkach aktualizacji za pomocą [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) metody. W innym środowisku (na przykład WinForms), może być konieczne zapewnienie własnej logiki opartych na klatkach zbieranie manipulacje i okresowo wysyłają je do <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> metody jako zadania wsadowego.  
+> Manipulowanie przetwarzania jest bardziej wydajne, gdy jest używana w środowiskach opartych na klatkach aktualizacji. Korzystając z przetwarzania w aplikacji Microsoft XNA manipulowania, to nie ma znaczenia, ponieważ program XNA framework zawiera opartych na klatkach aktualizacji za pomocą [Game.Update](/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) metody. W innym środowisku (na przykład WinForms), może być konieczne zapewnienie własnej logiki opartych na klatkach zbieranie manipulacje i okresowo wysyłają je do <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> metody jako zadania wsadowego.  
   
  Jako liczba manipulatory lub ich zmiana położenia <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> zdarzenie jest wywoływane. Właściwości <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> obiekt, który jest przekazywany do <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> program obsługi zdarzeń Określanie zmian w pochodzenia, skala, obrotu i tłumaczenia, które miały miejsce od ostatniego zdarzenia. Pochodzenie operowanie zmienia manipulatory przenoszenia i gdy manipulatory są dodawane lub usuwane. Tłumaczenie wartości wskazują, ile operowanie obejmuje przenoszenie X lub Y.  
   

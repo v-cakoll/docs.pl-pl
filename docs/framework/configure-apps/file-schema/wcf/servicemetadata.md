@@ -1,22 +1,22 @@
 ---
-title: '&lt;serviceMetadata&gt;'
+title: '&lt;serviceMetadata w pliku&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 3c59a47f8a45fbccb05eb1f385215fe2aa739836
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5f69093a8eca7bfbdfd3b0d933a2689b552ec8f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751792"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086716"
 ---
-# <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
+# <a name="ltservicemetadatagt"></a>&lt;serviceMetadata w pliku&gt;
 Określa publikację usługi metadanych i skojarzonych informacji.  
   
 \<system.serviceModel>  
 \<zachowania >  
 \<serviceBehaviors>  
 \<zachowanie >  
-\<serviceMetadata >  
+\<serviceMetadata w pliku >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,16 +40,16 @@ Określa publikację usługi metadanych i skojarzonych informacji.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|externalMetadataLocation|Identyfikator Uri zawiera lokalizację pliku WSDL, który jest zwracany do użytkownika w odpowiedzi na żądania WSDL oraz MEX zamiast automatycznie generowanego WSDL. Ten atrybut nie jest ustawiona, wartość domyślna WSDL jest zwracany w trakcie. Wartość domyślna to ciąg pusty.|  
-|httpGetBinding|Ciąg określający typ powiązania, który będzie używany do pobierania metadanych za pośrednictwem HTTP GET. To ustawienie jest opcjonalne. Jeśli nie zostanie określony, będą używane domyślne powiązania.<br /><br /> Tylko powiązania z elementami powiązania, które obsługują <xref:System.ServiceModel.Channels.IReplyChannel> będą obsługiwane. Ponadto <xref:System.ServiceModel.Channels.MessageVersion> właściwość powiązania musi być <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
-|httpGetBindingConfiguration|Ciąg ustawiający nazwę powiązania, które jest określone w `httpGetBinding` atrybut, który odwołuje się do informacji dodatkowej konfiguracji tego powiązania. Taką samą nazwę, muszą być zdefiniowane w `<bindings>` sekcji.|  
-|httpGetEnabled|Wartość logiczna określająca, czy publikować metadane usługi dla pobierania za pomocą żądania HTTP/Get. Wartość domyślna to `false`.<br /><br /> Jeśli nie określono atrybut httpGetUrl, adres, w którym publikowane są metadane jest adres usługi oraz "? wsdl". Na przykład, jeśli adres usługi jest "http://localhost:8080/CalculatorService", adres metadanych HTTP/Get jest"http://localhost:8080/CalculatorService?wsdl".<br /><br /> Jeśli ta właściwość jest `false`, lub adres usługi nie jest oparty na HTTP lub HTTPS, "? wsdl" zostanie zignorowany.|  
-|httpGetUrl|Identyfikator Uri, który określa adres, w którym publikowane są metadane dla pobierania za pomocą żądania HTTP/Get. Jeśli względny identyfikator Uri jest określony, będzie traktowane jako względem adres podstawowy usługi.|  
-|httpsGetBinding|Ciąg określający typ powiązania, które będą używane do pobierania metadanych za pośrednictwem HTTPS GET. To ustawienie jest opcjonalne. Jeśli nie zostanie określony, będą używane domyślne powiązania.<br /><br /> Tylko powiązania z elementami powiązania, które obsługują <xref:System.ServiceModel.Channels.IReplyChannel> będą obsługiwane. Ponadto <xref:System.ServiceModel.Channels.MessageVersion> właściwość powiązania musi być <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
-|httpsGetBindingConfiguration|Ciąg ustawiający nazwę powiązania, które jest określone w `httpsGetBinding` atrybut, który odwołuje się do informacji dodatkowej konfiguracji tego powiązania. Taką samą nazwę, muszą być zdefiniowane w `<bindings>` sekcji.|  
-|httpsGetEnabled|Wartość logiczna określająca, czy publikować metadane usługi dla pobierania za pomocą żądania HTTPS/Get. Wartość domyślna to `false`.<br /><br /> Jeśli nie określono atrybut httpsGetUrl, adres, w którym publikowane są metadane jest adres usługi oraz "? wsdl". Na przykład, jeśli adres usługi jest "https://localhost:8080/CalculatorService", adres metadanych HTTP/Get jest"https://localhost:8080/CalculatorService?wsdl".<br /><br /> Jeśli ta właściwość jest `false`, lub adres usługi nie jest oparty na HTTP lub HTTPS, "? wsdl" zostanie zignorowany.|  
-|httpsGetUrl|Identyfikator Uri, który określa adres, w którym publikowane są metadane dla pobierania za pomocą żądania HTTPS/Get.|  
-|PolicyVersion|Ciąg, który określa wersję specyfikacji WS-Policy używane. Ten atrybut jest typu <xref:System.ServiceModel.Description.PolicyVersion>.|  
+|externalMetadataLocation|Identyfikator Uri, który zawiera lokalizację pliku WSDL, który jest zwracany do użytkownika w odpowiedzi na żądania WSDL oraz MEX zamiast automatycznie generowanego WSDL. Gdy ten atrybut nie jest ustawiona, wartość domyślna, zwracany jest WSDL. Wartość domyślna to ciąg pusty.|  
+|httpGetBinding|Ciąg określający typ powiązania, który będzie używany do pobierania metadanych za pośrednictwem HTTP GET. To ustawienie jest opcjonalne. Jeśli nie zostanie określony, będą używane domyślne powiązania.<br /><br /> Tylko powiązania z elementami wewnętrznymi powiązania, które obsługują <xref:System.ServiceModel.Channels.IReplyChannel> będą obsługiwane. Ponadto <xref:System.ServiceModel.Channels.MessageVersion> właściwości powiązania musi być <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
+|httpGetBindingConfiguration|Ciąg ustawiający nazwę powiązania, który jest określony w `httpGetBinding` atrybut, który odwołuje się do informacji dodatkowej konfiguracji tego powiązania. Taką samą nazwę muszą być zdefiniowane w `<bindings>` sekcji.|  
+|httpGetEnabled|Wartość logiczna określająca, czy publikować metadane usługi dla pobrania za pomocą żądania HTTP/Get. Wartość domyślna to `false`.<br /><br /> Jeśli nie określono atrybutu httpGetUrl, adres, w którym publikowane są metadane jest adres usługi oraz "? wsdl". Na przykład, jeśli jest adres usługi "http://localhost:8080/CalculatorService", adres metadanych HTTP/Get jest"http://localhost:8080/CalculatorService?wsdl".<br /><br /> Jeśli ta właściwość jest `false`, lub adres usługi nie jest oparty na HTTP lub HTTPS, "? wsdl" zostanie zignorowany.|  
+|httpGetUrl|Identyfikator Uri, który określa adres, w którym publikowane są metadane dla pobrania za pomocą żądania HTTP/Get. Jeśli względny identyfikator Uri jest określona, będzie traktowane jak jest określany względem adresu podstawowego tej usługi.|  
+|httpsGetBinding|Ciąg określający typ powiązania, które będą używane do pobierania metadanych za pośrednictwem HTTPS GET. To ustawienie jest opcjonalne. Jeśli nie zostanie określony, będą używane domyślne powiązania.<br /><br /> Tylko powiązania z elementami wewnętrznymi powiązania, które obsługują <xref:System.ServiceModel.Channels.IReplyChannel> będą obsługiwane. Ponadto <xref:System.ServiceModel.Channels.MessageVersion> właściwości powiązania musi być <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
+|httpsGetBindingConfiguration|Ciąg ustawiający nazwę powiązania, który jest określony w `httpsGetBinding` atrybut, który odwołuje się do informacji dodatkowej konfiguracji tego powiązania. Taką samą nazwę muszą być zdefiniowane w `<bindings>` sekcji.|  
+|httpsGetEnabled|Wartość logiczna określająca, czy publikować metadane usługi dla pobrania za pomocą żądania HTTPS/Get. Wartość domyślna to `false`.<br /><br /> Jeśli nie określono atrybutu httpsGetUrl, adres, w którym publikowane są metadane jest adres usługi oraz "? wsdl". Na przykład, jeśli jest adres usługi "https://localhost:8080/CalculatorService", adres metadanych HTTP/Get jest"https://localhost:8080/CalculatorService?wsdl".<br /><br /> Jeśli ta właściwość jest `false`, lub adres usługi nie jest oparty na HTTP lub HTTPS, "? wsdl" zostanie zignorowany.|  
+|httpsGetUrl|Identyfikator Uri, który określa adres, w którym publikowane są metadane dla pobrania za pomocą żądania HTTPS/Get.|  
+|policyVersion|Ciąg określający używaną wersję specyfikacji WS-Policy używane. Ten atrybut jest typu <xref:System.ServiceModel.Description.PolicyVersion>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -61,13 +61,13 @@ Określa publikację usługi metadanych i skojarzonych informacji.
 |[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element konfiguracji służy do kontrolowania funkcji publikowania metadanych usługi. Aby zapobiec przypadkowe ujawnienie metadanych usługi potencjalnie poufnych, konfigurację domyślną dla usług Windows Communication Foundation (WCF) wyłącza Publikowanie metadanych. To zachowanie jest domyślnie bezpieczne, ale również zaimportować narzędzia (na przykład Svcutil.exe) oznacza, że metadane nie można użyć do generowania kodu klienta wymaganych do wywołania tej usługi, chyba że jawnie włączone jest zachowanie podczas publikowania metadanych usługi w konfiguracji. Za pomocą tego elementu konfiguracji, można włączyć to zachowanie podczas publikowania dla usługi.  
+ Ten element konfiguracji umożliwia kontrolowanie funkcji publikowania metadanych usługi. Aby zapobiegać niezamierzonym ujawnieniem metadanych usługi potencjalnie poufnych, konfigurację domyślną dla usług Windows Communication Foundation (WCF) powoduje wyłączenie publikowania metadanych. To zachowanie jest domyślnie bezpieczny, ale również zaimportować narzędzia (takie jak Svcutil.exe) oznacza, że metadane nie można użyć do wygenerowania kodu klienta wymaganych do wywołania tej usługi, chyba że jawnie włączone jest zachowanie publikowania metadanych usługi w konfiguracji. Korzystając z tego elementu konfiguracji, można włączyć to zachowanie podczas publikowania dla usługi.  
   
- Aby uzyskać szczegółowy przykład konfiguracji tego zachowania, zobacz [zachowanie podczas publikowania metadanych](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).  
+ Aby uzyskać szczegółowy przykład konfiguracji tego zachowania, zobacz [zachowanie publikowania metadanych](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).  
   
- Opcjonalny `httpGetBinding` i `httpsGetBinding` atrybutów umożliwiają konfigurowanie powiązania używane do pobierania metadanych za pośrednictwem HTTP GET (lub HTTPS GET). Jeśli nie są one określone, powiązania domyślnego (`HttpTransportBindingElement`, w przypadku protokołu HTTP i `HttpsTransportBindingElement`, w przypadku protokołu HTTPS) są używane do pobierania metadanych zależnie od potrzeb. Zwróć uwagę, że nie można użyć tych atrybutów z wbudowanych powiązaniami WCF. Tylko powiązania z elementami powiązania, które obsługują <xref:System.ServiceModel.Channels.IReplyChannel> będą obsługiwane. Ponadto <xref:System.ServiceModel.Channels.MessageVersion> właściwość powiązania musi być <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.  
+ Opcjonalny `httpGetBinding` i `httpsGetBinding` atrybutów umożliwiają skonfigurowanie powiązania używane do pobierania metadanych za pośrednictwem HTTP GET (lub HTTPS GET). Jeśli nie są określone, domyślne powiązania (`HttpTransportBindingElement`, w przypadku protokołu HTTP i `HttpsTransportBindingElement`, w przypadku protokołu HTTPS) są używane do pobierania metadanych zgodnie z potrzebami. Należy zauważyć, że nie możesz użyć tych atrybutów z wbudowanych powiązaniami WCF. Tylko powiązania z elementami wewnętrznymi powiązania, które obsługują <xref:System.ServiceModel.Channels.IReplyChannel> będą obsługiwane. Ponadto <xref:System.ServiceModel.Channels.MessageVersion> właściwości powiązania musi być <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.  
   
- Aby zmniejszyć ryzyko usługi złośliwych użytkowników, jest możliwe do zabezpieczenia przy użyciu protokołu SSL za pośrednictwem protokołu HTTP (HTTPS) mechanizm transferu. Aby to zrobić, należy najpierw powiązać odpowiedniego certyfikatu X.509 określonego portu na komputerze, na którym uruchomiono usługę. (Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Po drugie, Dodaj ten element w konfiguracji usługi i ustaw `httpsGetEnabled` atrybutu `true`. Wreszcie, ustaw `httpsGetUrl` atrybutu na adres URL punktu końcowego metadanych usługi, jak pokazano w poniższym przykładzie.  
+ Aby zmniejszyć prawdopodobieństwo ujawnienia danych usługi do złośliwych użytkowników, istnieje możliwość bezpiecznego transferu za pomocą protokołu SSL za pośrednictwem mechanizmu HTTP (HTTPS). Aby to zrobić, możesz powiązać odpowiedniego certyfikatu X.509 do określonego portu, na komputerze, który jest hostem usługi. (Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Po drugie, Dodaj ten element do konfiguracji usługi i ustaw `httpsGetEnabled` atrybutu `true`. Wreszcie, ustaw `httpsGetUrl` atrybutu do adresu URL punktu końcowego metadanych usługi, jak pokazano w poniższym przykładzie.  
   
 ```xml
 <behaviors>  
@@ -81,7 +81,7 @@ Określa publikację usługi metadanych i skojarzonych informacji.
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład skonfigurować usługę do udostępnienia metadanych za pomocą \<serviceMetadata > elementu. Konfiguruje również punkt końcowy do udostępnienia `IMetadataExchange` kontrakt, co implementacji protokołu WS-MetadataExchange (MEX). W przykładzie użyto `mexHttpBinding`, który jest powiązanie standardowe udogodnienie jest odpowiednikiem `wsHttpBinding` tryb zabezpieczeń ustawiono na `None`. Względny adres "mex" jest używany w punkcie końcowym, w przypadku których nazwy zostały rozstrzygnięte na podstawowej usługi adres powoduje adres punktu końcowego http://localhost/servicemodelsamples/service.svc/mex.  
+ Poniższy przykład Konfigurowanie usługi do udostępnienia metadanych za pomocą \<serviceMetadata w pliku > element. Konfiguruje również punkt końcowy do udostępnienia `IMetadataExchange` kontrakt co implementacją protokołu WS-MetadataExchange (MEX). W przykładzie użyto `mexHttpBinding`, czyli standardowa powiązanie udogodnienie jest odpowiednikiem `wsHttpBinding` tryb zabezpieczeń, ustawiono na `None`. Względna adres "mex" jest używany w punkcie końcowym, który, gdy rozstrzygnięte na usług podstawowy adres skutkuje adres punktu końcowego `http://localhost/servicemodelsamples/service.svc/mex`.  
   
 ```xml
 <configuration>  

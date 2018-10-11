@@ -2,12 +2,12 @@
 title: 'Konwencje kodowania F #'
 description: 'Informacje ogólne wytyczne i idiomy podczas pisania kodu, F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237412"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087391"
 ---
 # <a name="f-coding-conventions"></a>Konwencje kodowania F #
 
@@ -420,7 +420,7 @@ Ta technika nie powinny być powszechnie stosowane do całej bazie kodu, ale jes
 
 F # zawiera wiele opcji [kontroli dostępu](../language-reference/access-control.md), dziedziczone od co to jest dostępne w środowisku uruchomieniowym .NET. Nie są one po prostu użyteczne dla typów — można ich użyć zbyt dla funkcji.
 
-* Preferuj non -`public` typów i elementów członkowskich, dopóki nie będą one potrzebne do być publicznie w użyciu. W ten sposób można również jakie kilku klientów do
+* Preferuj non -`public` typów i elementów członkowskich, dopóki nie będą one potrzebne do być publicznie w użyciu. Zmniejsza to także jakie kilku klientów do.
 * Dokładamy wszelkich starań zachować wszystkie funkcje Pomocnika `private`.
 * Rozważ użycie `[<AutoOpen>]` na prywatny moduł funkcji pomocnika, gdy staną się wiele.
 

@@ -19,11 +19,11 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848169"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086625"
 ---
 # <a name="how-to-use-data-protection"></a>Porady: stosowanie ochrony danych
 .NET Framework zapewnia dostęp do ochrony danych interfejsu API (DPAPI), co pozwala na szyfrowanie danych, korzystając z informacji z bieżącego konta użytkownika lub komputera.  Korzystając z interfejsu DPAPI złagodzić się trudne problem jawnie generowania i przechowywania klucza kryptograficznego.  

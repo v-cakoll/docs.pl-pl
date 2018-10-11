@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084757"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086067"
 ---
 # <a name="class-c-reference"></a>class (odwołanie w C#)
 
@@ -39,7 +39,7 @@ Tylko pojedyncze dziedziczenie jest dozwolone w języku C#. Innymi słowy klasy 
 
 Klasy, Zadeklaruj bezpośrednio z poziomu obszaru nazw, nie są zagnieżdżone w innych klas, które mogą być albo [publicznych](../../../csharp/language-reference/keywords/public.md) lub [wewnętrzny](../../../csharp/language-reference/keywords/internal.md). Klasy są `internal` domyślnie.
 
-Składowych klasy, łącznie z klas zagnieżdżonych, może być [publicznych](../../../csharp/language-reference/keywords/public.md), `protected internal`, [chronione](../../../csharp/language-reference/keywords/protected.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), [prywatnej](../../../csharp/language-reference/keywords/private.md), lub `private protected`. Elementy członkowskie są [prywatnej](../../../csharp/language-reference/keywords/private.md) domyślnie.
+Składowych klasy, łącznie z klas zagnieżdżonych, może być [publicznych](public.md), [chronionych wewnętrznych](protected-internal.md), [chronione](protected.md), [wewnętrzny](internal.md), [ prywatne](private.md), lub [prywatny chroniony](private-protected.md). Elementy członkowskie są `private` domyślnie.
 
 Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md). 
 
@@ -65,7 +65,7 @@ Klasa może zawierać deklaracje następujące elementy członkowskie:
 
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)
 
-- [Delegaci](../../../csharp/programming-guide/delegates/index.md)
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)
 
 - [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)
 

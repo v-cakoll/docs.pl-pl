@@ -1,68 +1,68 @@
 ---
-title: 'Porady: Konfigurowanie usługi WCF hostowanych przez usługi IIS przy użyciu protokołu SSL'
+title: 'Porady: Konfigurowanie usługi WCF hostowanej przez usługi IIS przy użyciu protokołu SSL'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: e739eb47611e5b73e7f1d62191a5aa61ad77abe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d6e367748222d7401bec6dc919815399b63b1d9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493503"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086222"
 ---
-# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Porady: Konfigurowanie usługi WCF hostowanych przez usługi IIS przy użyciu protokołu SSL
-W tym temacie opisano konfigurowanie usługi WCF hostowanych przez usługi IIS, aby użyć zabezpieczeń transportu HTTP. Zabezpieczenia transportu HTTP wymaga certyfikatu SSL do zarejestrowana w programie IIS. Jeśli nie ma certyfikatu SSL można używać usług IIS do wygenerowania certyfikatu testowego. Następnie musi dodać powiązanie protokołu SSL do witryny sieci web i skonfiguruj właściwości uwierzytelniania witryny sieci web. Na koniec należy skonfigurować usługi WCF do używania protokołu HTTPS.  
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Porady: Konfigurowanie usługi WCF hostowanej przez usługi IIS przy użyciu protokołu SSL
+W tym temacie opisano sposób konfigurowania usługi WCF hostowanej przez usługi IIS do używania zabezpieczeń transportu HTTP. Zabezpieczenia transportu HTTP wymaga certyfikatu SSL w celu zarejestrowana w programie IIS. Jeśli nie masz certyfikat SSL, usługi IIS można użyć do wygenerowania certyfikatu testowego. Następnie należy dodać powiązanie protokołu SSL do witryny sieci web i skonfigurować właściwości uwierzytelniania witryny sieci web. Na koniec należy skonfigurować usługi WCF do używania protokołu HTTPS.  
   
 ### <a name="creating-a-self-signed-certificate"></a>Tworzenie certyfikatu z podpisem własnym  
   
 1.  Otwórz Menedżera internetowych usług informacyjnych (inetmgr.exe), a następnie wybierz nazwę komputera w widoku drzewa po lewej stronie. Po prawej stronie ekranu wybierz certyfikaty serwera  
   
-     ![Ekran głównej Menedżera usług IIS](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
+     ![Ekranu głównego menedżera usług IIS](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2.  Kliknij w oknie Certyfikaty serwera **Tworzenie certyfikatu z podpisem własnym...** Łącze.  
+2.  Kliknij w oknie Certyfikaty serwera **Utwórz certyfikat z podpisem własnym...** łącze.  
   
-     ![Tworzenie własnym&#45;podpisanego certyfikatu z programem IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
+     ![Tworzenie własnym&#45;podpisany certyfikat z usługami IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
 3.  Wprowadź przyjazną nazwę certyfikatu z podpisem własnym, a następnie kliknij przycisk **OK**.  
   
-     ![Tworzenie własnych&#45;okna dialogowego certyfikatu podpisanego](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
+     ![Utwórz własny&#45;okna dialogowego certyfikatu podpisanego](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
-     Szczegóły nowo utworzonego certyfikatu z podpisem własnym są wyświetlane w **certyfikaty serwera** okna.  
+     Szczegóły nowo utworzonego certyfikatu z podpisem własnym są teraz wyświetlane w **certyfikaty serwera** okna.  
   
      ![Okno certyfikatu serwera](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
   
-     Wygenerowany certyfikat został zainstalowany w zaufane główne urzędy certyfikacji przechowywania.  
+     Wygenerowany certyfikat został zainstalowany w zaufanych głównych urzędów certyfikacji przechowywane.  
   
 ### <a name="add-ssl-binding"></a>Dodaj powiązanie SSL  
   
-1.  W Menedżerze internetowych usług informacyjnych, rozwiń węzeł **witryny** folder, a następnie **domyślna witryna sieci Web** folderu w widoku drzewa po lewej stronie ekranu.  
+1.  Nadal w Internet Information Services Manager, rozwiń węzeł **witryn** folder i następnie **domyślna witryna sieci Web** folder w widoku drzewa po lewej stronie ekranu.  
   
-2.  Kliknij przycisk **powiązań...** Łącze w **akcje** sekcji w prawym górnym części okna.  
+2.  Kliknij przycisk **powiązania...** Łącze w **akcje** sekcji w prawym górnym części okna.  
   
-     ![Dodawanie powiązania SSL](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
+     ![Dodanie wiązania SSL](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
   
 3.  W oknie powiązania witryny kliknij **Dodaj** przycisku.  
   
      ![Okno dialogowe powiązania witryny](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4.  W **Dodawanie powiązania witryny** okno dialogowe, wybierz https typu oraz przyjazną nazwę certyfikatu z podpisem własnym właśnie utworzone.  
+4.  W **Dodawanie powiązania witryny** okno dialogowe, wybierz opcję https typu oraz przyjazną nazwę certyfikatu z podpisem własnym został właśnie utworzony.  
   
      ![Przykład powiązanie witryny](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
-### <a name="configure-virtual-directory-for-ssl"></a>Skonfiguruj katalog wirtualny dla protokołu SSL  
+### <a name="configure-virtual-directory-for-ssl"></a>Konfiguruj katalog wirtualny dla protokołu SSL  
   
-1.  W Menedżerze internetowych usług informacyjnych wybierz katalogu wirtualnego, który zawiera bezpiecznego usługi WCF.  
+1.  W Menedżerze internetowych usług informacyjnych wybierz katalogu wirtualnego, który zawiera bezpieczne usługi WCF.  
   
 2.  W środkowym okienku okna, wybierz **ustawienia protokołu SSL** w sekcji usług IIS.  
   
      ![Ustawienia protokołu SSL dla katalogu wirtualnego](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
   
-3.  W okienku ustawień protokołu SSL, wybierz **Wymagaj protokołu SSL** wyboru i kliknij przycisk **Zastosuj** łącze w **akcje** sekcji po prawej stronie ekranu.  
+3.  W okienku ustawienia protokołu SSL, zaznacz **Wymagaj protokołu SSL** pole wyboru i kliknij przycisk **Zastosuj** łącze w **akcje** sekcji po prawej stronie ekranu.  
   
      ![Ustawienia protokołu SSL katalog wirtualny](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")  
   
-### <a name="configure-wcf-service-for-http-transport-security"></a>Konfigurowanie usługi WCF dla zabezpieczeń transportu HTTP  
+### <a name="configure-wcf-service-for-http-transport-security"></a>Konfigurowanie usługi WCF do zabezpieczenia transportu HTTP  
   
-1.  W programie WCF web.config usługi skonfigurować wiązanie HTTP, aby użyć zabezpieczeń transportu, jak pokazano w poniższych XML.  
+1.  W programie WCF web.config usługi skonfigurować powiązania protokołu HTTP w celu użycia zabezpieczeń transportu, jak pokazano w poniższym formacie XML.  
   
     ```xml  
     <bindings>  
@@ -76,7 +76,7 @@ W tym temacie opisano konfigurowanie usługi WCF hostowanych przez usługi IIS, 
     </bindings>  
     ```  
   
-2.  Określ usługi, a punkt końcowy usługi, jak pokazano w poniższych XML.  
+2.  Określ usługi i punktu końcowego usługi, jak pokazano w poniższym formacie XML.  
   
     ```xml  
     <services>  
@@ -94,7 +94,7 @@ W tym temacie opisano konfigurowanie usługi WCF hostowanych przez usługi IIS, 
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się pełny przykład pliku web.config dla usługi WCF, za pomocą zabezpieczeń transportu HTTP  
+ Oto kompletny przykładowy plik web.config dla usługi WCF, za pomocą zabezpieczeń transportu HTTP  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -145,7 +145,7 @@ W tym temacie opisano konfigurowanie usługi WCF hostowanych przez usługi IIS, 
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Hostowanie przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Instrukcje dotyczące hostowania internetowej usługi informacyjnej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Hostowanie usług IIS przy użyciu kodu wbudowanego](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+* [Hostowanie przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+* [Instrukcje dotyczące hostowania internetowej usługi informacyjnej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+* [Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+* [Hostowanie usług IIS przy użyciu kodu wbudowanego](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

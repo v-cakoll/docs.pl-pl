@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d09ad4b1f518ac6f4c42dffd4b3ca17249b95700
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788931"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087859"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Wskazówki: używanie usług aplikacji klienta
 W tym temacie opisano sposób tworzenia aplikacji Windows, która korzysta z usług aplikacji klienta do uwierzytelniania użytkowników oraz pobieranie ról użytkownika i ustawień.  
@@ -35,9 +35,8 @@ W tym temacie opisano sposób tworzenia aplikacji Windows, która korzysta z us�
 -   Włącz tryb offline. Należy podać pole wyboru, aby użytkownicy mogą określić ich stan połączenia. Ta wartość zostanie następnie użyta do określenia, czy dostawców usług aplikacji klienta będą używać lokalnie buforowanych danych zamiast uzyskiwanie dostępu do swoich usług sieci Web. Ponownie zostaną na koniec uwierzytelnienia bieżącego użytkownika, gdy aplikacja powróci do trybu online.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Potrzebne są następujące składnik do przeprowadzenia tego instruktażu:  
-  
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+
+Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 ## <a name="creating-the-client-application"></a>Tworzenie aplikacji klienckiej  
  Pierwszą rzeczą, który będzie wykonywać jest, Utwórz projekt Windows Forms. W tym instruktażu wykorzystano Windows Forms, ponieważ więcej osób zapoznać się z nią, ale proces jest podobny do projektów Windows Presentation Foundation (WPF).  
@@ -367,7 +366,7 @@ W tym temacie opisano sposób tworzenia aplikacji Windows, która korzysta z us�
   	|Właściwość|Wartość|  
   	|--------------|-----------|  
   	|**(Name)**|managerOnlyButton|  
-  	|**Tekst**|& Menedżera zadań|  
+  	|**Text**|& Menedżera zadań|  
   	|**Widoczne**|`False`|  
   
 4.  W edytorze kodu formularza Form1, Dodaj następujący kod na końcu `Form1_Load` metody.  

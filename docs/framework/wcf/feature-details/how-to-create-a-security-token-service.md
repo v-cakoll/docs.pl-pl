@@ -9,29 +9,29 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046738"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087729"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Instrukcje: Tworzenie usługi tokenów zabezpieczeń
 Usługa tokenu zabezpieczającego implementuje protokół zdefiniowane w specyfikacji WS-Trust. Protokół ten definiuje formaty wiadomości i wzorców wymiany wiadomości dla wystawiającego certyfikaty, odnawiania, anulowanie i sprawdzanie poprawności tokenów zabezpieczających. Usługa tokenu zabezpieczającego danego zawiera co najmniej jedną z tych funkcji. W tym temacie wygląda najbardziej typowy scenariusz: Implementowanie wystawiania tokenu.  
   
 ## <a name="issuing-tokens"></a>Wystawianie tokenów  
- WS-Trust definiuje formaty wiadomości, w oparciu o `RequestSecurityToken` elementu schematu języka (XSD) definicji schematu XML, i `RequestSecurityTokenResponse` elementu schematu XSD do operacji wystawiania tokenów. Ponadto definiuje skojarzonych akcji Uniform Resource Identifier (URI). Akcja identyfikator URI skojarzony z `RequestSecurityToken` komunikat http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. Akcja identyfikator URI skojarzony z `RequestSecurityTokenResponse` komunikat http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ WS-Trust definiuje formaty wiadomości, w oparciu o `RequestSecurityToken` elementu schematu języka (XSD) definicji schematu XML, i `RequestSecurityTokenResponse` elementu schematu XSD do operacji wystawiania tokenów. Ponadto definiuje skojarzonych akcji Uniform Resource Identifier (URI). Akcja identyfikator URI skojarzony z `RequestSecurityToken` komunikat `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`. Akcja identyfikator URI skojarzony z `RequestSecurityTokenResponse` komunikat `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue`.  
   
 ### <a name="request-message-structure"></a>Struktura komunikatu żądania  
  Struktura komunikatu żądania problem zwykle składa się z następujących elementów:  
   
--   Żądanie wpisz identyfikator URI o wartości http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   Żądanie wpisz identyfikator URI o wartości `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Typ tokenu identyfikatora URI. Tokeny zabezpieczeń potwierdzenia Markup Language (SAML) 1.1, wartość tego identyfikatora URI jest http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Typ tokenu identyfikatora URI. Tokeny zabezpieczeń potwierdzenia Markup Language (SAML) 1.1, wartość tego identyfikatora URI jest `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
 -   Wartość rozmiaru klucza, która wskazuje liczbę bitów w kluczu, który ma zostać skojarzony z wystawiony token.  
   
--   Typ klucza identyfikatora URI. Klucze symetryczne, wartość tego identyfikatora URI jest http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
+-   Typ klucza identyfikatora URI. Klucze symetryczne, wartość tego identyfikatora URI jest `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  Ponadto kilka innych elementów mogą być obecne:  
   

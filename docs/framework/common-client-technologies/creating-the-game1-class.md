@@ -2,18 +2,18 @@
 title: Tworzenie klasy Game1
 ms.date: 03/30/2017
 ms.assetid: 47932ce3-2ba5-476f-a26b-3ddfd5226f27
-ms.openlocfilehash: 368da9df4dffc7017abb02888bc2eb2641f04b8b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ad3c8bc46bec137d0baf4eeec09bcd5ec277e71a
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201026"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086664"
 ---
 # <a name="creating-the-game1-class"></a>Tworzenie klasy Game1
-Zgodnie ze wszystkich projektów Microsoft XNA pochodną klasy Game1 [Microsoft.Xna.Framework.Game](https://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx) klasy, która dostarcza inicjowania urządzenia podstawowych elementów graficznych, gra logiczna i renderowania kodu dla XNA gry. Klasy Game1 jest dość prosty, ponieważ większość pracy w GamePiece i GamePieceCollection klasy.  
+Zgodnie ze wszystkich projektów Microsoft XNA pochodną klasy Game1 [Microsoft.Xna.Framework.Game](/previous-versions/windows/xna/bb197040%28v%3dxnagamestudio.41%29) klasy, która dostarcza inicjowania urządzenia podstawowych elementów graficznych, gra logiczna i renderowania kodu dla XNA gry. Klasy Game1 jest dość prosty, ponieważ większość pracy w GamePiece i GamePieceCollection klasy.  
   
 ## <a name="creating-the-code"></a>Tworzenie kodu  
- Prywatne składowe klasy składają się z **GamePieceCollection** obiekt do przechowywania figur, [GraphicsDeviceManager](https://msdn.microsoft.com/library/microsoft.xna.framework.graphicsdevicemanager.aspx) obiektu, a [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) obiekt używany do renderowania sztuk gier.  
+ Prywatne składowe klasy składają się z **GamePieceCollection** obiekt do przechowywania figur, [GraphicsDeviceManager](/previous-versions/windows/xna/bb197317%28v%3dxnagamestudio.41%29) obiektu, a [SpriteBatch](/previous-versions/windows/xna/bb199034%28v%3dxnagamestudio.41%29) obiekt używany do renderowania sztuk gier.  
   
  [!code-csharp[ManipulationXNA#_Game1_PrivateMembers](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_privatemembers)]  
   
@@ -21,15 +21,15 @@ Zgodnie ze wszystkich projektów Microsoft XNA pochodną klasy Game1 [Microsoft.
   
  [!code-csharp[ManipulationXNA#_Game1_ConstructorInitialize](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_constructorinitialize)]  
   
- Gdy [LoadContent](https://msdn.microsoft.com/library/microsoft.xna.framework.game.loadcontent.aspx) metoda jest wywoływana, gry elementy zostały utworzone i przypisane do **GamePieceCollection** obiektu. Istnieją dwa rodzaje figur. Współczynnik skali dla fragmentów jest nieznacznie zmienione tak, istnieje kilka mniejszych i większych niektóre elementy.  
+ Gdy [LoadContent](/previous-versions/windows/xna/bb975766%28v%3dxnagamestudio.41%29) metoda jest wywoływana, gry elementy zostały utworzone i przypisane do **GamePieceCollection** obiektu. Istnieją dwa rodzaje figur. Współczynnik skali dla fragmentów jest nieznacznie zmienione tak, istnieje kilka mniejszych i większych niektóre elementy.  
   
  [!code-csharp[ManipulationXNA#_Game1_LoadContent](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_loadcontent)]  
   
- [Aktualizacji](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) metoda jest wywoływana wielokrotnie przez program XNA Framework gra jest uruchomiona. [Aktualizacji](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) wywołania metody **ProcessInertia** i **UpdateFromMouse** metod na grę element kolekcji. Te metody są opisane w [Tworzenie klasy GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md).  
+ [Aktualizacji](/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) metoda jest wywoływana wielokrotnie przez program XNA Framework gra jest uruchomiona. [Aktualizacji](/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) wywołania metody **ProcessInertia** i **UpdateFromMouse** metod na grę element kolekcji. Te metody są opisane w [Tworzenie klasy GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md).  
   
  [!code-csharp[ManipulationXNA#_Game1_UpdateGame](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_updategame)]  
   
- [Rysowanie](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) metoda jest również wywoływany wielokrotnie przez program XNA Framework gra jest uruchomiona. [Rysowanie](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) metoda wykonuje renderowania sztuk gier, wywołując **Rysowanie** metody **GamePieceCollection** obiektu. Ta metoda została opisana w[Tworzenie klasy GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md).  
+ [Rysowanie](/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) metoda jest również wywoływany wielokrotnie przez program XNA Framework gra jest uruchomiona. [Rysowanie](/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) metoda wykonuje renderowania sztuk gier, wywołując **Rysowanie** metody **GamePieceCollection** obiektu. Ta metoda została opisana w[Tworzenie klasy GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md).  
   
  [!code-csharp[ManipulationXNA#_Game1_DrawGame](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_drawgame)]  
   

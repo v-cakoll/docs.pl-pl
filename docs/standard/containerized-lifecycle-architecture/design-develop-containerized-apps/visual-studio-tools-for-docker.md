@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: faae4b3e3ef96d1d8dd73b7ac313b0a5deffec34
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838237"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086391"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Za pomocą narzędzi Visual Studio Tools for Docker (Visual Studio Windows)
 
@@ -76,12 +76,15 @@ Ilustracja 4-30 platformy Docker narzędzia, opcje
 
 Poniższa tabela może pomóc zdecydować, jak ustawić te opcje.
 
-| Nazwa | Ustawienie domyślne | Opis |
-| -----|:---------------:| ----------- |
-| Automatycznie Ściągnij wymagane obrazy platformy Docker po załadowaniu projektu | On | Aby zwiększyć wydajność, podczas ładowania projektów Visual Studio rozpocznie operacji ściągania aparatu Docker w tle, tak, aby gdy jesteś gotowy do uruchomienia kodu, obraz, który został już pobrany, lub w trakcie pobierania. Jeśli właśnie trwa ładowanie projektów i przeglądania kodu, możesz Wyłącz tę opcję, aby uniknąć pobierania obrazów kontenerów, które nie są potrzebne. |
-| Automatycznie uruchom kontenery w tle | On | Ponownie do zwiększenia wydajności programu Visual Studio tworzy kontener z instaluje wolumin gotowy do podczas kompilowania i uruchamiania kontenera. Jeśli chcesz kontrolować, po utworzeniu kontenera, wyłącz tę opcję. |
-| Automatycznie zabij kontenery rozwiązanie, zamknij | On | Wyłącz tę opcję, jeśli chcesz kontenerów do rozwiązania w celu będą nadal działać po zamknięcie rozwiązania lub zamknięcia programu Visual Studio. |
-| Nie monituj o zaufanie certyfikatowi protokołu SSL | Off | Programu Visual Studio będzie monitować o nowe projekty, nawet po certyfikatu SSL zaufanego dla wcześniejszego projektu. Możesz ustawić to pole wyboru, aby uniknąć wiersza po otwarciu innych projektów. |
+| Nazwa | Ustawienie domyślne | Dotyczy: | Opis |
+| -----|:---------------:|:----------:| ----------- |
+| Automatycznie Ściągnij wymagane obrazy platformy Docker po załadowaniu projektu | On | Narzędzia docker Compose | Aby zwiększyć wydajność, podczas ładowania projektów Visual Studio rozpocznie operacji ściągania aparatu Docker w tle, tak, aby gdy jesteś gotowy do uruchomienia kodu, obraz, który został już pobrany, lub w trakcie pobierania. Jeśli właśnie trwa ładowanie projektów i przeglądania kodu, możesz Wyłącz tę opcję, aby uniknąć pobierania obrazów kontenerów, które nie są potrzebne. |
+| Automatycznie uruchom kontenery w tle | On | Narzędzia docker Compose | Ponownie do zwiększenia wydajności programu Visual Studio tworzy kontener z instaluje wolumin gotowy do podczas kompilowania i uruchamiania kontenera. Jeśli chcesz kontrolować, po utworzeniu kontenera, wyłącz tę opcję. |
+| Automatycznie zabij kontenery rozwiązanie, zamknij | On | Narzędzia docker Compose | Wyłącz tę opcję, jeśli chcesz kontenerów do rozwiązania w celu będą nadal działać po zamknięcie rozwiązania lub zamknięcia programu Visual Studio. |
+| Nie monituj o zaufanie certyfikatowi protokołu SSL | Off | Projekty ASP.NET Core 2.1 | Jeśli certyfikatowi protokołu SSL nie jest zaufany, Visual Studio wyświetli monit o za każdym razem, gdy uruchamiasz projekt, chyba że to pole wyboru jest zaznaczone. |
+
+> [!WARNING]
+> Jeśli certyfikatowi protokołu SSL nie jest zaufany, a następnie zaznacz odpowiednie pole, aby pominąć monit, żądań sieci web protokołu HTTPS może przestać działać w czasie wykonywania aplikacji lub usługi. W takim przypadku usuń zaznaczenie pola wyboru **nie Monituj** zaznacz pole wyboru Uruchom projekt i wskazać zaufania w wierszu.
 
 **Więcej informacji:** więcej szczegółowych informacji dotyczących wdrażania usług i korzystanie z programu Visual Studio Tools for Docker, przeczytaj następujące artykuły:
 

@@ -2,17 +2,17 @@
 title: '&lt;activityScheduledQuery&gt; w WCF'
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 4efd6ba13e8a54d3338c25b077477d4abdbe9ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9a53d72316dad0178f24e05656a4fb4531b88aec
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746241"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087768"
 ---
 # <a name="ltactivityscheduledquerygt-of-wcf"></a>&lt;activityScheduledQuery&gt; w WCF
 Reprezentuje kolekcję zapytań, które są używane do śledzenia działania zaPLanowane do wykonania przez działanie nadrzędne. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania zaPLanowane rekordów.  
   
- Aby uzyskać więcej informacji na zapytania dotyczące profilu śledzenia, zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
  \<system.serviceModel>  
 \<Śledzenie >  
@@ -24,7 +24,16 @@ Reprezentuje kolekcję zapytań, które są używane do śledzenia działania za
 ## <a name="syntax"></a>Składnia  
   
 ```xml
-<tracking>     <trackingProfile name="Name">       <workflow>          <activityScheduledQueries>             <activityScheduledQuery activityName="String"                 childActivityName="String"/>          </activityScheduledQueries>       </workflow>     </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <activityScheduledQueries>
+        <activityScheduledQuery activityName="String"   
+                                childActivityName="String"/>
+      </activityScheduledQueries>
+    </workflow>
+  </trackingProfile>
+</tracking> 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  

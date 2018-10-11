@@ -9,11 +9,11 @@ ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d838f3d9f4c9400fbbef0fb24f5275eff2038c49
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863512"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086781"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>Wyodrębnianie danych XML przy użyciu klasy XPathNavigator
 Istnieje kilka różnych sposobów, aby przedstawić dokumentu XML w programie Microsoft .NET Framework. W tym za pomocą <xref:System.String>, lub za pomocą <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument>, lub <xref:System.Xml.XPath.XPathDocument> klasy. Aby ułatwić przenoszenie między te różne reprezentacje dokumentu XML <xref:System.Xml.XPath.XPathNavigator> klasy udostępnia kilka metod i właściwości XML jako wyodrębniania <xref:System.String>, <xref:System.Xml.XmlReader> obiektu lub <xref:System.Xml.XmlWriter> obiektu.  

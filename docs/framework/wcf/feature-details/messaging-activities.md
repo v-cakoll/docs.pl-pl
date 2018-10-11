@@ -3,11 +3,11 @@ title: Działania dotyczące komunikatów
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
 ms.openlocfilehash: 3391f7442ef4922a847a58b6316eb177cbcfbd5e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780469"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086345"
 ---
 # <a name="messaging-activities"></a>Działania dotyczące komunikatów
 Działań dotyczących komunikatów umożliwiają przepływy pracy służące do wysyłania i odbierania komunikatów WCF. Dodając działań dotyczących komunikatów do przepływu pracy można modelować wszystkie wzorce exchange dowolnie złożone komunikat (MEP).

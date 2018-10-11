@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201143"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086859"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Narzędzie zasad zabezpieczeń dostępu kodu)
 Narzędzie (Caspol.exe) sprawdzania zabezpieczeń dostępu kodu (CAS) pozwala użytkownikom i administratorom na modyfikowanie zasad bezpieczeństwa na poziomie zasad komputera, na poziomie zasad użytkownika i na poziomie zasad przedsiębiorstwa.  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name*&#124;<br /><br /> **-pliku** *signed_file_name* &#124; **-hex***hex_string* }  |Określa kod, który posiada podanego wydawcę oprogramowania wskazanego przez plik certyfikatu, sygnaturę pliku lub reprezentację szesnastkową certyfikatu X509. Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-witryny** *witryny sieci Web*|Określa kod, który posiada określoną witrynę pochodzenia. Na przykład:<br /><br /> `-site** www.proseware.com`<br /><br /> Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong - pliku** *nazwa_pliku* {*nazwa* &#124; **- noname**} {*wersji* &#124; **- noversion**}|Określa kod, który posiada określoną silną nazwę wskazaną przez nazwę pliku, nazwę zestawu jako ciąg i wersję zestawu w formacie *głównych*. *drobne*. *Tworzenie*. *poprawka*. Na przykład:<br /><br /> **-strong - pliku** } myAssembly.exe myAssembly 1.2.3.4<br /><br /> Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
-|**— adres url** *adresu URL*|Określa kod, który pochodzi z określonego adresu URL. Adres URL musi zawierać nazwę protokołu, taką jak http:// lub ftp://. Ponadto symbolu wieloznacznego (\*) można określić wiele zestawów z określonego adresu URL. **Uwaga:** ponieważ adres URL może być zidentyfikowany za pomocą wielu nazw, przy użyciu adresu URL jako warunku członkostwa, nie jest bezpieczną metodą ustalania tożsamości kodu. Gdy jest to możliwe, należy używać silnej nazwy jako warunku członkostwa, wydawcy jako warunku członkostwa lub skrótu jako warunku członkostwa. <br /><br /> Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
+|**— adres url** *adresu URL*|Określa kod, który pochodzi z określonego adresu URL. Adres URL musi zawierać nazwę protokołu, taką jak `http://` lub `ftp://`. Ponadto symbolu wieloznacznego (\*) można określić wiele zestawów z określonego adresu URL. **Uwaga:** ponieważ adres URL może być zidentyfikowany za pomocą wielu nazw, przy użyciu adresu URL jako warunku członkostwa, nie jest bezpieczną metodą ustalania tożsamości kodu. Gdy jest to możliwe, należy używać silnej nazwy jako warunku członkostwa, wydawcy jako warunku członkostwa lub skrótu jako warunku członkostwa. <br /><br /> Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-strefy** *zonename*|Określa kod, który pochodzi z określonej strefy. *Zonename* argument może być jednym z następujących wartości: **MyComputer**, **Intranet**, **zaufanego**, **Internet** , lub **niezaufanych**. Aby uzyskać więcej informacji dotyczących warunku członkostwa, zobacz <xref:System.Security.Policy.ZoneMembershipCondition> klasy.|  
   
  *Flagi* argumentu, który może być używany z **– addgroup** i **– chggroup** opcje, jest określony, przy użyciu jednej z następujących czynności.  

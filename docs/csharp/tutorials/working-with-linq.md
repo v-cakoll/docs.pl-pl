@@ -1,48 +1,48 @@
 ---
-title: Praca z LINQ
-description: W tym samouczku jest przedstawienie sposobu generowania sekwencji za pomocą LINQ, zapisać metod do użycia w zapytaniach LINQ i rozróżnienia oceny wczesny i opóźnieniem.
+title: Praca z technologią LINQ
+description: Ten samouczek omawia sposób generowania sekwencji za pomocą LINQ, pisanie metody używane w kwerendach LINQ i rozróżnienie między eager i leniwa ocena.
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: dc5f6cc4fd38b32f54a576a3947187cbed4e70e8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172428"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086755"
 ---
-# <a name="working-with-linq"></a>Praca z LINQ
+# <a name="working-with-linq"></a>Praca z technologią LINQ
 
 ## <a name="introduction"></a>Wprowadzenie
 
-Ten samouczek zawiera szereg funkcji .NET Core i języka C#. Dowiesz się:
+W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#. Dowiesz się:
 
 *   Sposób generowania sekwencji za pomocą LINQ
-*   Jak napisać metody, które mogą być łatwo używane w zapytaniach LINQ.
-*   Jak rozróżnienia oceny wczesny i opóźnieniem.
+*   Jak napisać metody, które mogą być łatwo używane w kwerendach LINQ.
+*   Jak rozróżnianie między eager i leniwa ocena.
 
-Te techniki dowiesz się, tworząc aplikację prezentującą podstawowe umiejętności żadnych magician: [losowa faro](https://en.wikipedia.org/wiki/Faro_shuffle). Krótko mówiąc losowa faro to technika gdzie podzielić talii karty dokładnie w połowie, a następnie losowa przeplata każdego jednej karty z każdej połowy odbudować talii oryginalnego.
+Te techniki dowiesz się, tworząc aplikację, która przedstawia jedną z podstawowych umiejętności wszelkie magician: [faro shuffle](https://en.wikipedia.org/wiki/Faro_shuffle). Krótko mówiąc faro shuffle jest techniką, gdzie możesz podzielić talii kart dokładnie w połowie, a następnie shuffle przeplatają każdego jedną kartę, z każda część odbudować oryginalnego slajdów.
 
-Magicians użyć tej metody, ponieważ wszystkie karty w znanej lokalizacji po każdym losowa, a kolejność jest powtarzane wzorca. 
+Magicians Użyj tej techniki, ponieważ wszystkie karty w znanej lokalizacji po każdym losowa, a kolejność jest wzorzec powtarzające się. 
 
-W celach naszych jest światła hearted przyjrzeć się manipulowanie sekwencji danych. Aplikację, która będzie kompilacji zostanie skonstruować talii kart, a następnie wykonaj sekwencję przesuwa zapisywania sekwencji zawsze wtedy. Będzie także porównać zaktualizowane kolejności do oryginalnego zamówienia.
+Dla naszych potrzeb jest światła hearted przyjrzeć manipulowanie sekwencji danych. Aplikację, którą utworzysz konstruowania talii kart, a następnie wykonać sekwencję przesuwa, zapisywanie sekwencji zawsze wtedy. Zostanie również porównać zaktualizowane kolejność oryginalnej kolejności.
 
-Ten samouczek ma wiele kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlany jest postęp. Możesz również sprawdzić [ukończone próbki](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) w repozytorium GitHub dotnet/próbek. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+W tym samouczku składa się z wielu kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlić postęp. Można również wyświetlić [ukończone przykładowe](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) w repozytorium dotnet/samples w witrynie GitHub. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Należy skonfigurować komputer, aby uruchomić oprogramowanie .NET core. Instrukcje instalacji można znaleźć na [.NET Core](https://www.microsoft.com/net/core) strony. Można uruchomić tej aplikacji, w systemie Windows, Ubuntu Linux, OS X lub w kontenerze Docker. Należy zainstalować w edytorze kodu dotyczącego elementów ulubionych. Opisy poniżej użyj [Visual Studio Code](https://code.visualstudio.com/) czyli typu open source cross platform edytora. Można jednak użyć dowolnego narzędzia potrafisz.
+Należy skonfigurować maszynę w taki sposób, aby uruchomić platformy .NET core. Instrukcje dotyczące instalacji można znaleźć na [platformy .NET Core](https://www.microsoft.com/net/core) strony. Mogą uruchamiać tę aplikację w systemie Windows, Ubuntu Linux, OS X lub w kontenerze platformy Docker. Musisz zainstalować wybrany edytor kodu. Opisy poniżej użycia [programu Visual Studio Code](https://code.visualstudio.com/) czyli typu open source cross platform edytora. Można jednak użyć dowolnego narzędzia potrafisz.
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
-Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Utwórz nowy katalog aplikacji. Upewnij się, że sposób bieżącego katalogu. Wpisz polecenie `dotnet new console` w wierszu polecenia. Spowoduje to utworzenie plików starter podstawowe aplikacji "Hello World".
+Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Utwórz nowy katalog aplikacji. Upewnij się, że sposób bieżącego katalogu. Wpisz polecenie `dotnet new console` w wierszu polecenia. Spowoduje to utworzenie plikach startowych dla podstawowych aplikacji "Hello World".
 
 Jeśli nie znasz języka C#, [w tym samouczku](console-teleprompter.md) wyjaśnienie struktury programu w języku C#. Może odczytywać, który i następnie wróć tutaj, aby dowiedzieć się więcej na temat LINQ. 
 
 ## <a name="creating-the-data-set"></a>Tworzenie zestawu danych
 
-Zacznijmy od utworzenia zbiór kart. Należy to zrobić to przy użyciu zapytania LINQ, która ma dwa źródła (po jednej dla czterech kolorów, jeden dla trzynaście wartości). Tych źródeł będzie łączyć w talii 52 karty. A `Console.WriteLine` instrukcja wewnątrz `foreach` pętli Wyświetla karty.
+Zacznijmy od utworzenia talii kart. Należy to zrobić tego przy użyciu zapytania LINQ, która ma dwa źródła (jedną dla czterech odpowiada, jeden dla trzynaście wartości). Tych źródeł będzie łączyć w talii kart 52. A `Console.WriteLine` instrukcji wewnątrz `foreach` pętli Wyświetla karty.
 
-Oto zapytania:
+Oto zapytanie:
 
 ```csharp
 var startingDeck = from s in Suits()
@@ -55,9 +55,9 @@ foreach (var c in startingDeck)
 }
 ```
 
-Wielokrotność `from` utworzyć klauzule `SelectMany`, co powoduje pojedynczego ciągu z łączenie każdego elementu w pierwszej kolejności z każdego elementu w drugim sekwencji. Kolejność jest ważna dla naszych celów. Pierwszym elementem w pierwszym sekwencji źródłowej (mechanizmy) jest połączona z każdym elementem w drugim sekwencji (wartości). Daje to wszystkich kart trzynaście koloru pierwszego. Ten proces jest powtarzany z każdego elementu w pierwszym sekwencji (mechanizmy). W rezultacie jest talii kart uporządkowanych według kolorów, a następnie według wartości.
+Wielokrotność `from` generuje klauzule `SelectMany`, co powoduje utworzenie pojedynczego ciągu z łączenia każdego elementu w pierwszej kolejności, przy czym każdy element w drugiej sekwencji. Kolejność jest ważna dla naszych potrzeb. Pierwszy element w pierwszej sekwencji źródłowej (kolory) w połączeniu z każdego elementu w drugiej sekwencji (wartości). To zapewnia wszystkie karty trzynaście pierwszy koloru. Ten proces jest powtarzany, przy czym każdy element w pierwszej kolejności (kolory). Wynik końcowy jest talii kart uporządkowane według kolory, a następnie według wartości.
 
-Następnie należy utworzyć metody Suits() i Ranks(). Zacznijmy od naprawdę proste zbiór *metody iteracyjne* który Generowanie sekwencji jako element wyliczalny z ciągami:
+Następnie należy tworzyć metody Suits() i Ranks(). Zacznijmy od bardzo prosty zestaw *metody iteracyjne* , którzy generują sekwencja jako wyliczalny element z ciągami:
 
 ```csharp
 static IEnumerable<string> Suits()
@@ -86,22 +86,30 @@ static IEnumerable<string> Ranks()
 }
 ```
 
-Korzystanie z tych dwóch metod zarówno `yield return` składnię, aby utworzyć sekwencję podczas ich działania. Kompilator tworzy obiekt, który implementuje `IEnumerable<T>` i generuje sekwencję ciągów, ponieważ są one wymagane.
+Korzystanie z tych dwóch metod zarówno `yield return` składni, aby utworzyć sekwencję podczas ich działania. Kompilator tworzy obiekt, który implementuje `IEnumerable<T>` i generuje sekwencję ciągów, ponieważ są one wymagane.
 
-Przejdź dalej i uruchom na tym etapie konstruowania próbki. Będzie ono wszystkie 52 karty w talii. Może być bardzo przydatne do uruchomienia tego przykładu w debugerze, aby przyjrzeć się jak `Suits()` i `Values()` wykonania metody. Wyraźnie widać, że każdy ciąg każdej sekwencji jest generowany tylko wtedy, gdy jest to potrzebne.
+W tym można skompilować należy dodać następujące dwa wiersze na początku pliku:
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+```
+
+Przejdź dalej i uruchom aplikację przykładową na tym etapie konstruowania. Wszystkie karty 52 będzie wyświetlany w talii kart. Może okazać się bardzo pomocne uruchomić ten przykład w debugerze, aby obserwować sposób, w jaki `Suits()` i `Values()` wykonywania metody. Wyraźnie widać, że każdego ciągu w każdej sekwencji jest generowany tylko wtedy, gdy jest to konieczne.
 
 ![Okno konsoli aplikacji wypisywanie 52 kart](./media/working-with-linq/console.png)
 
 ## <a name="manipulating-the-order"></a>Manipulowanie kolejności
 
-Następnie utworzymy metody narzędzia, która może przeprowadzać losowa. Pierwszym krokiem jest podzielenie talii w dwóch. `Take()` i `Skip()` metod, które są częścią interfejsów API LINQ zapewnienia tej funkcji nam:
+Następnie utworzymy metody narzędzie, które może wykonywać losowa. Pierwszym krokiem jest podzielenie slajdów w dwóch. `Take()` i `Skip()` metody, które są częścią interfejsów API LINQ zapewnia tę funkcję dla nas:
 
 ```csharp
 var top = startingDeck.Take(26);
 var bottom = startingDeck.Skip(26);
 ```
 
-Metoda losowa nie istnieje w biblioteki standardowej, będzie trzeba napisać własne. Ta nowa metoda przedstawiono kilka technik, które będą używane z programów opartych na LINQ, więc warto wyjaśnić, każdego częścią metody w krokach.
+Metoda shuffle nie istnieje w standardowej bibliotece, dzięki czemu będzie trzeba napisać własny. Ta nowa metoda przedstawiono kilka technik, które ma być używany do programów opartych na LINQ, więc opisano każdej części metody w krokach.
 
 Podpis metody tworzy *— metoda rozszerzenia*:
 
@@ -110,11 +118,11 @@ public static IEnumerable<T> InterleaveSequenceWith<T>
     (this IEnumerable<T> first, IEnumerable<T> second)
 ```
 
-Metody rozszerzenia jest specjalnego przeznaczenia *metody statycznej.* Zostanie wyświetlony dodanie `this` modyfikator na pierwszy argument do metody. Oznacza to, że należy wywołać metodę tak, jakby była metody elementu członkowskiego typu pierwszy argument.
+Metoda rozszerzenia jest specjalnego przeznaczenia *metody statycznej.* Możesz zobaczyć dodanie `this` modyfikator na pierwszy argument do metody. Oznacza to, że należy wywołać metodę, tak jakby był metodą elementu członkowskiego typu pierwszego argumentu.
 
-Metody rozszerzenia mogą być deklarowane tylko wewnątrz `static` klas, więc warto utworzyć nowe klasy statycznej o nazwie `extensions` dla tej funkcji. Dodasz więcej metod rozszerzenia nadal w tym samouczku, a te zostaną umieszczone w tej samej klasy.
+Metody rozszerzenia mogą być deklarowane tylko w `static` klasy, więc Utwórz nową klasę statycznego o nazwie `extensions` dla tej funkcji. Kontynuuj w tym samouczku, a te zostaną umieszczone w tej samej klasy należy dodać więcej metod rozszerzenia.
 
-Ta deklaracja metody również następuje standardowe idiom gdzie typy wejściowe i wyjściowe są `IEnumerable<T>`. Czy rozwiązanie umożliwia tworzenie łańcucha metody LINQ ze sobą w celu wykonywania bardziej złożonych zapytań.
+Tej deklaracji metody również następujące standardowe idiom gdzie typy wejściowe i wyjściowe są `IEnumerable<T>`. Czy rozwiązanie umożliwia metody LINQ zezwalającym ze sobą, aby wykonywać bardziej złożone zapytania.
 
 ```csharp
 using System.Collections.Generic;
@@ -132,15 +140,15 @@ namespace LinqFaroShuffle
 }
 ```
 
-Będzie można wyliczania sekwencji obu na raz, naprzemiennego wykonywania elementów i tworzenie jeden obiekt.  Pisanie zapytań LINQ metodę, która współdziała z dwóch sekwencji wymaga, że rozumiesz, jak `IEnumerable` działa.
+Będziesz wyliczanie zarówno sekwencje jednocześnie, z przeplotem elementy i utworzenie jednego obiektu.  Zapisywanie LINQ metodę, która współdziała z dwóch sekwencji wymaga zrozumienia sposobu `IEnumerable` działa.
 
-`IEnumerable` Interfejs ma jedną metodę: `GetEnumerator()`. Obiekt zwrócony przez `GetEnumerator()` ma metodę, aby przejść do następnego elementu i właściwości, która pobiera bieżący element w sekwencji. Użyjesz tych dwóch członków wyliczyć kolekcji, a następnie wróć elementów. Ta metoda przeplotu będzie metodę iteratora, zamiast tworzenia kolekcji i zwracanie kolekcji, użyjesz `yield return` składni przedstawionych powyżej. 
+`IEnumerable` Interfejs ma jedną z metod: `GetEnumerator()`. Obiekt zwrócony przez `GetEnumerator()` ma metodę, aby przejść do następnego elementu i właściwości, która pobiera bieżącego elementu w sekwencji. Te dwa elementy członkowskie użyje do wyliczania kolekcji i zwracają elementy. Ta metoda przeplotu będzie metody iteratora, więc zamiast tworzenia kolekcji i zwraca kolekcję, użyjesz `yield return` składni pokazanych powyżej. 
 
 Oto implementacja tej metody:
 
 [!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
-Teraz, gdy napisanych tej metody, wróć do `Main` — metoda i losowa talii raz:
+Teraz, gdy ta metoda jest napisanych, wróć do `Main` metody i shuffle slajdów, gdy:
 
 ```csharp
 public static void Main(string[] args)
@@ -167,15 +175,15 @@ public static void Main(string[] args)
 
 ## <a name="comparisons"></a>Porównania
 
-Zobaczmy, ile przesuwa zajmuje można ustawić talii z powrotem do jej oryginalnej kolejności. Będzie konieczne napisanie metody, która określa, czy dwie sekwencje mają takie same. Po utworzeniu tej metody należy umieścić kod, który shuffles talii w pętli i sprawdź, gdy jest talii w kolejności.
+Zobaczmy, ile przesuwa zajmuje można ustawić na pokład z powrotem do jego oryginalnej kolejności. Będzie konieczne napisanie metody, która określa, czy dwie sekwencje mają taki sam. Po utworzeniu tej metody, należy umieścić kod, który rozmieszcza slajdów w pętli i sprawdź, gdy jest użyta w kolejności.
 
-Pisanie metodę, aby ustalić, czy dwie sekwencje są równe powinna być prosta. Jest strukturze podobnej metody, którą zapisano losowo talii. Teraz, zamiast yield zwracanie każdego elementu, można będzie porównywać tylko zgodnych elementów w każdej sekwencji. Sekwencje całą sekwencję wyliczeniu, jeśli pasuje do każdego elementu, są takie same:
+Zapisywanie metodę, aby określić, czy dwie sekwencje są równe powinno być proste. Jest podobną strukturę z metodą, którą zapisano mieszania slajdów. Tylko tym razem zamiast wydajności zwracanie każdego elementu, można będzie porównywać zgodnych elementów w każdej sekwencji. Sekwencje całą sekwencję zostać wyliczone, jeśli pasuje do każdego elementu, są takie same:
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-Oznacza to, drugi idiom Linq: metody terminala. Podejmij sekwencji jako dane wejściowe (lub w tym przypadku dwóch sekwencji) i zwraca pojedynczą wartość skalarną. Te metody, gdy są one używane są zawsze metodę końcową zapytania. (Stąd nazwa). 
+Spowoduje to pokazanie drugi idiom Linq: metody terminala. Wykonaj sekwencję jako dane wejściowe (lub w tym przypadku dwie sekwencje) i zwraca pojedynczą wartość skalarną. Te metody, gdy są one używane, są zawsze ostatnią metodę zapytania. (Stąd nazwa). 
 
-Widać to w akcji używanej do określania, kiedy talii jest w jej oryginalnej kolejności. Umieść kod losowa wewnątrz pętli i Zatrzymaj, gdy sekwencja jest w jej oryginalnej kolejności, stosując `SequenceEquals()` metody. Można zauważyć, że zawsze powinien być ostatnią metodą każde zapytanie operacji, ponieważ zwraca pojedynczą wartość zamiast sekwencji:
+Można to zobaczyć w działaniu używanej do określania, kiedy talii jest w jego oryginalnej kolejności. Umieść kod shuffle wewnątrz pętli, a następnie Zatrzymaj, gdy sekwencja jest ponownie w jego oryginalnej kolejności, stosując `SequenceEquals()` metody. Widać, że zawsze będzie ostatnią metodę w każdym zapytaniu, ponieważ zwraca pojedynczą wartość zamiast sekwencji:
 
 ```csharp
 var times = 0;
@@ -197,29 +205,29 @@ do
 Console.WriteLine(times);
 ```
 
-Uruchom próbkę i zobacz, jak talii Reorganizuje na każdym losowa, dopóki zwróci oryginalnej konfiguracji po 8 iteracji.
+Uruchamianie aplikacji przykładowej i zobacz, jak talii Reorganizuje na każdym shuffle aż powraca do oryginalnej konfiguracji po 8 iteracjach.
 
 ## <a name="optimizations"></a>Optymalizacje
 
-Wykonuje próbki zostały już utworzone w do tej pory *limit losowa*, gdzie kart górny i dolny nie zmieniają się przy każdym uruchomieniu. Można wprowadzić zmiany, i uruchom *w losowo*, w którym wszystkie karty 52 zmienić położenie. Dla w losowa, możesz interleave talii tak, aby pierwszy karty w dolnej połowie staje się pierwszym karty w talii. Oznacza to, że ostatni karty w górnej połowie staje się karty dolnej. To jest tylko jeden wiersz zmiany. Aktualizacja wywołanie losowo, aby zmienić kolejność górny i dolny połowy talii:
+Wykonuje przykładowe dołączeniu do tej pory *się shuffle*, gdzie kart górny i dolny pozostają takie same, przy każdym uruchomieniu. Upewnijmy się zmienić, i uruchom *w losowo*, gdzie wszystkie karty 52 zmiana położenia. Dla w losowo możesz przeplot slajdów, aby pierwszy karty w dolnej połowie staje się pierwszej karty w talii kart. Oznacza to, że ostatnią kartę w górnej połowie staje się karta dolnej. Który różni się tylko jeden wiersz. Zaktualizuj mieszania, aby zmienić kolejność górnej i dolnej części talii wywołanie:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 ```
 
-Ponownie uruchom program, i zobaczysz trwa 52 iteracji w celu talii zmienić kolejność samej siebie. Będzie również uruchomić należy zauważyć niektórych degradations obniżyć wydajność, ponieważ program będzie kontynuował działanie.
+Ponownie uruchom program, a zobaczysz, że zajmuje 52 iteracji dla slajdów zmienić kolejność sam. Będzie również uruchomić, należy zwrócić uwagę spadku wydajności niektórych obniżyć wydajność, ponieważ program kontynuuje działanie.
 
-Istnieje wiele przyczyn tej. Umożliwia spełnienia jednego z głównych powodów: nieefektywne użycie *obliczanie leniwe*.
+Istnieje kilka przyczyn. Udzielmy jedną z głównych przyczyn: nieefektywne użycie *obliczanie leniwe*.
 
-Zapytania LINQ są oceniane w trybie opóźnienia. Sekwencje są generowane tylko wtedy, gdy elementy są wymagane. Zwykle, który jest główną zaletą LINQ. Jednak użycie takich jak ten program, powoduje wykładniczym wzrostem czasu wykonywania.
+Zapytania LINQ są oceniane opóźnieniem. Sekwencji są generowane tylko wtedy, gdy elementy są wymagane. Zazwyczaj, który jest główną zaletą LINQ. Jednak użycie takich jak ten program, powoduje to wykładniczy wzrost w czasie wykonywania.
 
-Oryginalny talii został wygenerowany za pomocą zapytań LINQ. Każdy losowa jest generowany przez wykonywanie zapytań LINQ trzy na poprzedniej talii. Wszystkie te są wykonywane w trybie opóźnienia. Oznacza to również, że są wykonywane ponownie każdym razem, gdy wymagany jest sekwencja. W czasie, uzyskasz 52nd iteracji możesz jest ponownie wygenerować oryginalnego talii wiele, wiele razy. Napisz dziennika, aby pokazać to zachowanie. Następnie będzie napraw go.
+Oryginalny slajdów został wygenerowany przy użyciu zapytania LINQ. Każdy losowa jest generowany, wykonując trzy zapytań LINQ w poprzednim slajdów. Wszystkie te są wykonywane opóźnieniem. Oznacza to również, że te procedury są wykonywane ponownie każdorazowo, gdy wymagane są sekwencji. Przez razem, gdy można uzyskać dostęp do 52nd iteracji możesz teraz trwa ponowne generowanie oryginalnego slajdów many, wiele razy. Napiszmy dziennika, aby zademonstrować to zachowanie. Następnie możesz go ma naprawić.
 
-Oto metoda dziennika, który można dołączyć do dowolnej kwerendy do oznaczenia, że zapytanie jest wykonywane.
+Oto metoda dziennika, który można dołączyć do dowolnego zapytania, aby oznaczyć, że zapytanie jest wykonywane.
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
-Następnie Instrumentacja definicji każdego zapytania o komunikat dziennika:
+Następnie przygotuj Instrumentację definicję każdego zapytania za pomocą komunikatu dziennika:
 
 ```csharp
 public static void Main(string[] args)
@@ -265,51 +273,51 @@ public static void Main(string[] args)
 }
 ```
 
-Należy zauważyć, że nie możesz zalogować się za każdym razem, gdy dostęp zapytania. Możesz zalogować się wyłącznie w przypadku utworzenia oryginalne zapytanie. Program nadal trwa długo do uruchomienia, ale spowoduje to wyświetlenie dlaczego. Po uruchomieniu o cierpliwość systemem wewnętrzny losowo z rejestrowaniem włączona, wrócić do zewnętrznego losowa. Obliczanie leniwe efekty będą nadal wyświetlane. W jednym przebiegu wykonywania kwerend 2592, w tym wszystkie wartości i koloru generacji.
+Należy zauważyć, że nie logujesz się za każdym razem, gdy możesz uzyskać dostęp do kwerendy. Zaloguj się tylko wtedy, gdy tworzysz oryginalnego zapytania. Program nadal zajmuje dużo czasu do uruchomienia, ale spowoduje to wyświetlenie dlaczego. Po uruchomieniu o cierpliwość systemem wewnętrzny mieszania za pomocą funkcji rejestrowania włączona, przejdź z powrotem do zewnętrznego losowa. Nadal zobaczysz efekty obliczanie z opóźnieniem. W jednym przebiegu wykonuje kwerendy 2592, w tym wszystkich wartości i sposób generowania.
 
-Jest to prosty sposób można zaktualizować tego programu, aby uniknąć wszystkich tych wykonania. Brak metody LINQ `ToArray()` i `ToList()` spowodować zapytania do uruchomienia i odpowiednio zapisane wyniki w tablicy lub na liście. Te metody umożliwiają pamięci podręcznej danych wyników zapytania, zamiast ponownie wykonaj zapytanie źródła.  Dołącz zapytania generujących talii kart z wywołaniem do `ToArray()` i ponownie uruchom zapytanie:
+Istnieje łatwy sposób zaktualizować ten program, aby uniknąć tych operacji wykonywania. Istnieją metody LINQ `ToArray()` i `ToList()` spowodować, że zapytanie, aby uruchomić i zapisać wyniki w tablicy lub listy, odpowiednio. Metody te służy do danych wyników zapytania w pamięci podręcznej, zamiast ponownie wykonaj zapytanie źródła.  Dołącz zapytania, które generują talii kart z wywołaniem `ToArray()` i ponownie uruchom zapytanie:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Uruchom ponownie, a jest losowa zewnętrzne do 30 zapytania. Uruchom ponownie, nadając wewnętrzny losowa i zobaczysz ulepszenia podobne. (Go teraz wykonuje zapytania 162).
+Uruchom ponownie i zewnętrzne losowa jest poniżej 30 zapytania. Ponownie uruchom za pomocą wewnętrznego losowa i zostaną wyświetlone podobne ulepszenia. (Obecnie wykonuje zapytania 162).
 
-Nie błędnie interpretuje planowanie, który dzielenia na uruchamiać wszystkie zapytania w tym przykładzie. W tym przykładzie jest przeznaczona do Wyróżnij przypadków użycia, w którym obliczanie leniwe może spowodować problemy z wydajnością. Wynika to z każdego nowego rozmieszczenie talii składa się z poprzednim rozmieszczenia. Przy użyciu obliczanie leniwe oznacza, że każda nowa konfiguracja talii składa się z oryginalnego talii, nawet wykonywanie kodu, który skompilowany `startingDeck`. Która powoduje dużą ilość dodatkowej pracy. 
+Nie błędnie interpretuje planowanie, który eagerly uruchamiać wszystkie zapytania w tym przykładzie. W tym przykładzie jest przeznaczony do wyróżnienia przypadki użycia, w którym leniwa ocena może spowodować problemy z wydajnością. Wynika to z każdej z umów nowy zbiór kart składa się z poprzednich rozmieszczenia. Przy użyciu leniwa ocena oznacza, że każda nowa konfiguracja slajdów składa się z oryginalnego slajdów, nawet wykonywania kodu, który skompilowany `startingDeck`. Dzięki któremu dużą ilość dodatkowej pracy. 
 
-W praktyce niektóre algorytmy Uruchom znacznie poprawia przy użyciu wczesny oceny, a pozostałe — znacznie poprawia przy użyciu obliczanie leniwe. (Ogólnie rzecz biorąc, obliczanie leniwe jest znacznie lepszym rozwiązaniem gdy źródłem danych jest oddzielnych procesach, takich jak aparatu bazy danych. W takich przypadkach obliczanie leniwe umożliwia bardziej złożonych zapytań można wykonać tylko jeden obiegu do procesu bazy danych.) LINQ umożliwia zarówno opóźnieniem i wczesny oceny. Zmierz i wybierz najlepszym rozwiązaniem.
+W praktyce niektóre algorytmy Uruchom znacznie lepsze, za pomocą eager oceny, a pozostałe — znacznie lepsze, za pomocą obliczanie z opóźnieniem. (Ogólnie rzecz biorąc, obliczanie z opóźnieniem jest dużo lepszym rozwiązaniem, gdy źródło danych jest oddzielnym procesie, takich jak aparat bazy danych. W takich przypadkach opóźnieniem umożliwia bardziej złożone zapytania, które można wykonać tylko jeden komunikację dwustronną proces bazy danych.) LINQ umożliwia zarówno z opóźnieniem i chętnie Zapoznamy oceny. Zmierz i wybrać najlepszy wybór.
 
-## <a name="preparing-for-new-features"></a>Przygotowywanie do nowych funkcji
+## <a name="preparing-for-new-features"></a>Przygotowanie do nowych funkcji
 
-Napisanych dla tego przykładu kodu jest przykład tworzenia prostego prototyp, który wykonuje zadanie. Jest to doskonały sposób, aby eksplorować miejsca problem, a dla wielu funkcji, może być najlepszym rozwiązaniem trwałych. Zostały użyte *typy anonimowe* dla kart, a każda karta jest reprezentowana przez parametry.
+Kod napisany w tym przykładzie to przykład tworzenia prostego prototypu, który wykonuje zadania. Jest to doskonały sposób eksplorowania obszar problemu, a dla wielu funkcji, może być najlepszym rozwiązaniem stałe. Już wykorzystywane *typy anonimowe* dla karty, a każda karta jest reprezentowany przez parametry.
 
-*Typy anonimowe* mają wiele zalet wydajności. Nie trzeba zdefiniować klasę samodzielnie do reprezentowania magazynu. Kompilator generuje typ dla Ciebie. Typ wygenerowanego przez kompilator używa wielu najlepszych rozwiązań dotyczących obiektów proste danych. Ma ona *niezmienialnych*, co oznacza, że żaden z jego właściwości można zmienić po ma zostać wykonane. Typy anonimowe są wewnętrzne dla zestawu, więc nie są one widoczne jako część publicznego interfejsu API dla tego zestawu. Typy anonimowe zawierają również zastąpienia z `ToString()` metodę, która zwraca ciąg sformatowany z każdej wartości.
+*Typy anonimowe* mają wiele zalet produktywności. Nie trzeba zdefiniować klasę sobie, aby reprezentować pamięć masową. Kompilator generuje typ dla Ciebie. Typ wygenerowanego przez kompilator korzysta z wielu najlepszych rozwiązań dla obiektów danych proste. Ma ona *niezmienne*, co oznacza, że żaden z jej właściwości można zmienić po został skonstruowany. Typy anonimowe są wewnętrzne dla zestawu, więc nie są widoczne jako część publicznego interfejsu API dla tego zestawu. Typy anonimowe zawierają również przesłonięcia z `ToString()` metodę, która zwraca sformatowany ciąg z każdej wartości.
 
-Typy anonimowe ma także wady. Nie ma nazw dostępnych, więc nie można ich użyć jako wartości zwracane lub argumentów. Można zauważyć, które żadnych metod powyżej używane te typy anonimowe są metody ogólne. Zastąpienie z `ToString()` nie może być mają zgodnie z większą liczbą funkcji rozwoju aplikacji. 
+Typy anonimowe ma również wady. Nie mają nazw dostępnych, więc nie można go użyć jako wartości zwracane lub argumentów Można zauważyć, że używanym żadnych metod powyżej w te typy anonimowe są metody rodzajowe. Zastępowania metody `ToString()` może nie być ma więcej funkcji wzrostem aplikacji. 
 
-Przykład również używa ciągów dla kolor a rangą każdej karty. Która jest otwarta dość zakończone. System typów języka C# mogą pomóc nam w ulepszaniu lepsze kodu, wykorzystując `enum` typy dla tych wartości.
+W przykładzie użyto również ciągi, kolor i rangi każdej karty. Który jest dość Otwórz zakończone. System typów języka C# mogą pomóc nam w ulepszaniu lepszego kodu, wykorzystując `enum` typów w przypadku tych wartości.
 
-Rozpocznij od kolory. Jest to idealne czas na użycie `enum`:
+Zacznij od kolory. Jest to idealny moment, aby użyć `enum`:
 
 [!CODE-csharp[Suit enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet2)]
 
-`Suits()` Metody również zmianę typu i implementacji:
+`Suits()` Metoda zmienia się również typ i implementację:
 
 [!CODE-csharp[Suit IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet4)]
 
-Następnie wykonaj te same zmiany o randze kart:
+Następnie wykonaj tę samą zmianę o randze kart:
 
 [!CODE-csharp[Rank enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet3)]
 
-I metoda generuje je:
+I metoda, która generuje je:
 
 [!CODE-csharp[Rank IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet5)]
 
-Jako jeden końcowego oczyszczania można wprowadzić typu do reprezentowania karty, zdejmując to zadanie typu anonimowego. Typy anonimowe są bardzo niewielka, lokalne typów, ale w tym przykładzie karty do gry jest jednym z głównych pojęć. Należy go konkretnego typu.
+Jako jeden końcowy oczyszczania stwórzmy typu reprezentującego karty, zamiast polegania na typ anonimowy. Typy anonimowe to idealne rozwiązanie dla typów lokalna, lekki, ale w tym przykładzie karty gry jest jednym z głównych pojęć. Powinna ona konkretnego typu.
 
 [!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
 
-Ten typ używa *automatycznie implementowane właściwości tylko do odczytu* które są ustawiane w konstruktorze, a następnie nie może być modyfikowany. On również sprawia, że użycie [ciągu interpolacji](../language-reference/tokens/interpolated.md) funkcja, która ułatwia format ciąg w danych wyjściowych.
+Ten typ korzysta *automatycznie implementowane właściwości tylko do odczytu* które są ustawiane w konstruktorze, a następnie nie może być modyfikowany. On również sprawia, że użycie [Interpolacja ciągów](../language-reference/tokens/interpolated.md) funkcja, która ułatwia formatowanie ciągów w danych wyjściowych.
 
-Zaktualizuj zapytanie, które generuje początkowy talii do użycia nowego typu:
+Zaktualizuj zapytanie, które generuje początkowy slajdów, aby użyć nowego typu:
 
 ```csharp
 var startingDeck = (from s in Suits().LogQuery("Suit Generation")
@@ -319,10 +327,10 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
                     .ToArray();
 ```
 
-Skompiluj i uruchom ponownie. Dane wyjściowe są nieco bardziej przejrzyste i kod jest bardziej wyczyść i można ją rozszerzyć, co ułatwia.
+Skompiluj i uruchom ponownie. Dane wyjściowe są nieco bardziej przejrzyste i kod jest nieco bardziej oczywiste i można rozszerzyć, aby łatwiej.
 
 ## <a name="conclusion"></a>Wniosek
 
-W tym przykładzie pokazano, możesz niektórych metod LINQ, jak utworzyć własne metody, które będą używane łatwo za pomocą LINQ włączone kodu. On również wyświetlał różnice między opóźnieniem i wczesny ocena oraz wpływ, jaki decyzji może mieć na wydajność.
+Ten przykład pokazuje niektórych metod LINQ, jak utworzyć swoje własne metody, które będą używane łatwo za pomocą LINQ włączone kodu. On również pokazuje różnice między obliczanie z opóźnieniem i chętnie Zapoznamy oraz wpływ, jaki decyzja może mieć na wydajność.
 
-Poznanie nieco technika magician jeden. Magicians Użyj losowa faro, ponieważ można kontrolować, którym przechodzi wszystkie karty w talii. W niektórych lewy magician ma umieść karty u góry talii członka grupy odbiorców i przesuwa kilka razy, wiedząc, gdzie przejdzie do tej karty. Inne Iluzje wymagają talii ustawić określony sposób. Magician ustawi talii przed wykonaniem lewy. Następnie użytkownik będzie losowo talii 5 razy przy użyciu zewnętrznego losowa. Na etapie klika Pokaż wygląd losowe talii, losowo go 3 razy więcej i talii ustawić dokładnie tak jak chce mieć.
+Omówiono nieco jeden magician techniki. Magicians Użyj faro shuffle, ponieważ może kontrolować, gdzie wszystkie karty przemieszcza się w talii kart. W niektórych wskazówki magician ma zachować karty na pokład członka grupy odbiorców i rozmieszcza kilka razy, wiedząc, gdzie przejdzie tej karty. Inne Iluzje wymagają talii ustawić w określony sposób. Magician ustawi slajdów, przed wykonaniem lewy. Następnie zostanie ona mieszania slajdów 5 razy przy użyciu zewnętrznego losowa. Na etapie ona pokazują, jak wygląda losowe slajdów, mieszania go 3 razy więcej i slajdów, ustaw dokładnie tak jak chce mieć.

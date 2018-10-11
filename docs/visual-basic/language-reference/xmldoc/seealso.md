@@ -6,11 +6,11 @@ helpviewer_keywords:
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
 ms.openlocfilehash: a792bbea108bcdf33d430c47773466ef3dccdb0c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48776574"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086144"
 ---
 # <a name="ltseealsogt-visual-basic"></a>&lt;SeeAlso —&gt; (Visual Basic)
 Określa łącze, które pojawia się w sekcji Zobacz też.  

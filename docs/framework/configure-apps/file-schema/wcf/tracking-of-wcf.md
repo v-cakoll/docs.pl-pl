@@ -2,49 +2,101 @@
 title: '&lt;tracking&gt; w WCF'
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: f09c8c59bf805ec7a061fba3ebfecd5fb457e402
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e033b569502bba795b5dcd1abdf9f68a726fac21
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749322"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121308"
 ---
-# <a name="lttrackinggt-of-wcf"></a><span data-ttu-id="303ac-102">&lt;tracking&gt; w WCF</span><span class="sxs-lookup"><span data-stu-id="303ac-102">&lt;tracking&gt; of WCF</span></span>
-<span data-ttu-id="303ac-103">Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="303ac-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  
+# <a name="lttrackinggt-of-wcf"></a><span data-ttu-id="55ff2-102">&lt;tracking&gt; w WCF</span><span class="sxs-lookup"><span data-stu-id="55ff2-102">&lt;tracking&gt; of WCF</span></span>
+<span data-ttu-id="55ff2-103">Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="55ff2-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  
   
- <span data-ttu-id="303ac-104">Aby uzyskać więcej informacji w śledzenia przepływu pracy i jego konfiguracja, zobacz [przepływu pracy śledzenia i śledzenia](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) i [Konfigurowanie śledzenia przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="303ac-104">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>  
+ <span data-ttu-id="55ff2-104">Aby uzyskać więcej informacji śledzenia przepływu pracy i jego konfiguracji, zobacz [przepływu pracy i śledzenie](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) i [Konfigurowanie śledzenia przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="55ff2-104">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>  
   
- <span data-ttu-id="303ac-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="303ac-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="303ac-106">\<Śledzenie ></span><span class="sxs-lookup"><span data-stu-id="303ac-106">\<tracking></span></span>  
+ <span data-ttu-id="55ff2-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="55ff2-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="55ff2-106">\<Śledzenie ></span><span class="sxs-lookup"><span data-stu-id="55ff2-106">\<tracking></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="303ac-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="303ac-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55ff2-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="55ff2-107">Syntax</span></span>  
   
 ```xml
-   <system.serviceModel>  <tracking>       <participants>       <add name="String"            profileName="String"           type="String" />      </participants>     <trackingProfile name="String">      <workflow activityDefinitionId="String">          <activityScheduledQueries>             <activityScheduledQuery activityName="String"                 childActivityName="String"/>          </activityScheduledQueries>             <activityStateQuery activityName="String" />                <arguments>                   <argument name="String"/>                </arguments>                <states>                   <state name="String"/>                </states>                <variables>                   <variable name="String"/>                </variables>          </activityStateQueries>          <bookmarkResumptionQueries>             <bookmarkResumptionQuery name="String" />          </bookmarkResumptionQueries>          <cancelRequestQueries>             <cancelRequestQuery activityName="String"                 childActivityName="String"/>          </cancelRequestQueries>          <customTrackingQueries>             <customTrackingQuery activityName="String"                 name="String"/>          </customTrackingQueries>          <faultPropagationQueries>             <faultPropagationQuery activityName="String"                 faultHandlerActivityName="String"/>          </faultPropagationQueries>         <workflowInstanceQueries>            <workflowInstanceQuery>              <states>                 <state name="String"/>              </states>          </workflowInstanceQuery>        </workflowInstanceQueries>      </workflow>    </trackingProfile>           </profiles>  </tracking></system.serviceModel>  
+<system.serviceModel>
+  <tracking>
+    <participants>
+      <add name="String" 
+           profileName="String" 
+           type="String" />
+    </participants>
+    <profiles>
+      <trackingProfile name="String">
+        <workflow activityDefinitionId="String">
+          <activityScheduledQueries>
+            <activityScheduledQuery activityName="String"       
+                                    childActivityName="String"/>
+          </activityScheduledQueries>
+          <activityStateQueries>
+            <activityStateQuery activityName="String" />
+            <arguments>
+              <argument name="String"/>
+            </arguments>
+            <states>
+              <state name="String"/>
+            </states>
+            <variables>
+              <variable name="String"/>
+            </variables>
+          </activityStateQueries>
+          <bookmarkResumptionQueries>
+            <bookmarkResumptionQuery name="String" />
+          </bookmarkResumptionQueries>
+          <cancelRequestQueries>
+            <cancelRequestQuery activityName="String" 
+                                childActivityName="String"/>
+          </cancelRequestQueries>
+          <customTrackingQueries>
+            <customTrackingQuery activityName="String" 
+                                 name="String"/>
+          </customTrackingQueries>
+          <faultPropagationQueries>
+            <faultPropagationQuery activityName="String" 
+                                   faultHandlerActivityName="String"/>
+          </faultPropagationQueries>
+          <workflowInstanceQueries>
+            <workflowInstanceQuery>
+              <states>
+                <state name="String"/>
+              </states>
+            </workflowInstanceQuery>
+          </workflowInstanceQueries>
+        </workflow>
+      </trackingProfile>
+    </profiles>
+  </tracking>
+</system.serviceModel>   
 ```
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="303ac-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="303ac-108">Attributes and Elements</span></span>  
- <span data-ttu-id="303ac-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="303ac-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="55ff2-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="55ff2-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="55ff2-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="55ff2-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="303ac-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="303ac-110">Attributes</span></span>  
- <span data-ttu-id="303ac-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="303ac-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="55ff2-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="55ff2-110">Attributes</span></span>  
+ <span data-ttu-id="55ff2-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="55ff2-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="303ac-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="303ac-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="55ff2-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="55ff2-112">Child Elements</span></span>  
   
-|<span data-ttu-id="303ac-113">Element</span><span class="sxs-lookup"><span data-stu-id="303ac-113">Element</span></span>|<span data-ttu-id="303ac-114">Opis</span><span class="sxs-lookup"><span data-stu-id="303ac-114">Description</span></span>|  
+|<span data-ttu-id="55ff2-113">Element</span><span class="sxs-lookup"><span data-stu-id="55ff2-113">Element</span></span>|<span data-ttu-id="55ff2-114">Opis</span><span class="sxs-lookup"><span data-stu-id="55ff2-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="303ac-115">\<Uczestnicy ></span><span class="sxs-lookup"><span data-stu-id="303ac-115">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="303ac-116">Kolekcję elementów konfiguracji Definiowanie uczestników subskrybować śledzenie rekordów.</span><span class="sxs-lookup"><span data-stu-id="303ac-116">A collection of configuration elements defining participants that subscribe to tracking records.</span></span> <span data-ttu-id="303ac-117">Uczestników śledzenia zawierają logikę przetwarzania ładunku z rekordów śledzenia (na przykład ich można zapisać do pliku).</span><span class="sxs-lookup"><span data-stu-id="303ac-117">The tracking participants contain the logic to process the payload from the tracking records (for example, they could choose to write to a file).</span></span>|  
-|[<span data-ttu-id="303ac-118">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="303ac-118">\<trackingProfile></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|<span data-ttu-id="303ac-119">Profil śledzenia do filtrowania rekordów śledzenia emitowane z wystąpienia przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="303ac-119">A tracking profile to filter tracking records emitted from a workflow instance.</span></span>|  
+|[<span data-ttu-id="55ff2-115">\<Uczestnicy ></span><span class="sxs-lookup"><span data-stu-id="55ff2-115">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="55ff2-116">Kolekcja elementów konfiguracji definiowania uczestników subskrybowania śledzenie rekordów.</span><span class="sxs-lookup"><span data-stu-id="55ff2-116">A collection of configuration elements defining participants that subscribe to tracking records.</span></span> <span data-ttu-id="55ff2-117">Uczestnicy śledzenia zawiera logikę do przetwarzania ładunku z rekordów śledzenia (na przykład ich można wybrać do zapisu do pliku).</span><span class="sxs-lookup"><span data-stu-id="55ff2-117">The tracking participants contain the logic to process the payload from the tracking records (for example, they could choose to write to a file).</span></span>|  
+|[<span data-ttu-id="55ff2-118">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="55ff2-118">\<trackingProfile></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|<span data-ttu-id="55ff2-119">Profil śledzenia do filtrowania rekordów śledzenia emitowane z wystąpienia przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="55ff2-119">A tracking profile to filter tracking records emitted from a workflow instance.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="303ac-120">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="303ac-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="55ff2-120">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="55ff2-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="303ac-121">Element</span><span class="sxs-lookup"><span data-stu-id="303ac-121">Element</span></span>|<span data-ttu-id="303ac-122">Opis</span><span class="sxs-lookup"><span data-stu-id="303ac-122">Description</span></span>|  
+|<span data-ttu-id="55ff2-121">Element</span><span class="sxs-lookup"><span data-stu-id="55ff2-121">Element</span></span>|<span data-ttu-id="55ff2-122">Opis</span><span class="sxs-lookup"><span data-stu-id="55ff2-122">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="303ac-123">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="303ac-123">system.ServiceModel</span></span>|<span data-ttu-id="303ac-124">Element główny wszystkich elementów konfiguracji przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="303ac-124">The root element of all workflow configuration elements.</span></span>|  
+|<span data-ttu-id="55ff2-123">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="55ff2-123">system.ServiceModel</span></span>|<span data-ttu-id="55ff2-124">Element główny wszystkich elementów konfiguracji przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="55ff2-124">The root element of all workflow configuration elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="303ac-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="303ac-125">Remarks</span></span>  
- <span data-ttu-id="303ac-126">Śledzenie umożliwia należy sprawdzić, czy wykonywania przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="303ac-126">Tracking provides you with the ability to examine the execution of a workflow.</span></span> <span data-ttu-id="303ac-127">Infrastruktura śledzenia przepływu pracy instruments przepływu pracy, aby emitować rekordów odzwierciedlający kluczy zdarzeń podczas wykonywania.</span><span class="sxs-lookup"><span data-stu-id="303ac-127">The workflow tracking infrastructure instruments a workflow to emit records reflecting key events during the execution.</span></span> <span data-ttu-id="303ac-128">Na przykład podczas uruchamiania wystąpienia przepływu pracy, lub zakończeniu są emitowane rekordów śledzenia.</span><span class="sxs-lookup"><span data-stu-id="303ac-128">For example, when a workflow instance starts or completes tracking records are emitted.</span></span> <span data-ttu-id="303ac-129">Śledzenie również można wyodrębnić business odpowiednie dane skojarzone z zmienne przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="303ac-129">Tracking can also extract business relevant data associated with the workflow variables.</span></span> <span data-ttu-id="303ac-130">Na przykład jeśli przepływ pracy reprezentuje kolejność przetwarzania systemu identyfikator zamówienia można wyodrębnić wraz z rekordem śledzenia.</span><span class="sxs-lookup"><span data-stu-id="303ac-130">For example, if the workflow represents an order processing system the order id can be extracted along with the tracking record.</span></span> <span data-ttu-id="303ac-131">Ogólnie rzecz biorąc włączania WF śledzenia umożliwia wykonywanie operacji diagnostyki lub analiz biznesowych za wykonywanie przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="303ac-131">In general, enabling WF tracking facilitates diagnostics or business analytics over a workflow execution.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="55ff2-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="55ff2-125">Remarks</span></span>  
+ <span data-ttu-id="55ff2-126">Śledzenie umożliwia należy sprawdzić, czy wykonywania przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="55ff2-126">Tracking provides you with the ability to examine the execution of a workflow.</span></span> <span data-ttu-id="55ff2-127">Infrastruktura śledzenia przepływu pracy instruments przepływu pracy, aby emitować rekordów odzwierciedlający kluczy zdarzeń podczas wykonywania.</span><span class="sxs-lookup"><span data-stu-id="55ff2-127">The workflow tracking infrastructure instruments a workflow to emit records reflecting key events during the execution.</span></span> <span data-ttu-id="55ff2-128">Na przykład gdy wystąpienie przepływu pracy rozpoczyna się lub kończy są emitowane rekordów śledzenia.</span><span class="sxs-lookup"><span data-stu-id="55ff2-128">For example, when a workflow instance starts or completes tracking records are emitted.</span></span> <span data-ttu-id="55ff2-129">Śledzenie również można wyodrębnić business odpowiednie dane skojarzone z zmienne przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="55ff2-129">Tracking can also extract business relevant data associated with the workflow variables.</span></span> <span data-ttu-id="55ff2-130">Na przykład jeśli przepływ pracy reprezentuje kolejność przetwarzania systemu identyfikator zamówienia wyodrębniania wraz z rekordem śledzenia.</span><span class="sxs-lookup"><span data-stu-id="55ff2-130">For example, if the workflow represents an order processing system the order id can be extracted along with the tracking record.</span></span> <span data-ttu-id="55ff2-131">Ogólnie rzecz biorąc włączania WF śledzenia umożliwia wykonywanie operacji diagnostyki lub analiz biznesowych za wykonywanie przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="55ff2-131">In general, enabling WF tracking facilitates diagnostics or business analytics over a workflow execution.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="303ac-132">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="303ac-132">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="55ff2-132">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="55ff2-132">See Also</span></span>  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>       
- [<span data-ttu-id="303ac-133">Kontrola i śledzenie przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="303ac-133">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+ [<span data-ttu-id="55ff2-133">Kontrola i śledzenie przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="55ff2-133">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

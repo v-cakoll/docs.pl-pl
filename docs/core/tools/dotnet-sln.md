@@ -1,15 +1,15 @@
 ---
-title: polecenie sln DotNet - .NET Core interfejsu wiersza polecenia
-description: Polecenie dotnet sln oferuje wygodny możliwość dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.
+title: polecenie sln DotNet - interfejsu wiersza polecenia platformy .NET Core
+description: Polecenia dotnet sln udostępnia wygodne możliwość dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.
 author: mairaw
 ms.author: mairaw
 ms.date: 06/13/2018
-ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 2651e8e14ad43f41354b8165179f95f65e732f4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208336"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121224"
 ---
 # <a name="dotnet-sln"></a>DotNet sln
 
@@ -17,7 +17,7 @@ ms.locfileid: "36208336"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet sln` -Modyfikuje plik rozwiązania .NET Core.
+`dotnet sln` — Modyfikuje plik rozwiązania .NET Core.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -32,9 +32,9 @@ dotnet sln [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet sln` Polecenia oferuje wygodny sposób dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.
+`dotnet sln` Polecenie zapewnia wygodny sposób dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.
 
-Aby użyć `dotnet sln` polecenia, pliku rozwiązania musi już istnieć. Aby go utworzyć, należy użyć [dotnet nowe](dotnet-new.md) polecenia, takich jak w poniższym przykładzie:
+Aby użyć `dotnet sln` polecenia Plik rozwiązania musi już istnieć. Jeśli musisz utworzyć jeden, użyj [dotnet nowe](dotnet-new.md) polecenia, podobnie jak w poniższym przykładzie:
 
 ```
 dotnet new sln
@@ -46,29 +46,29 @@ dotnet new sln
 
 `add <GLOBBING_PATTERN>`
 
-Dodaje projekt lub wielu projektach pliku rozwiązania. [Wzorce globbing](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w terminali z systemem Unix/Linux.
+Dodaje projekt lub wielu projektów do pliku rozwiązania. [Wzorce obsługi symboli wieloznacznych](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w terminale systemu Unix/Linux.
 
 `remove <PROJECT> ...`
 
 `remove <GLOBBING_PATTERN>`
 
-Usuwa projekt lub wielu projektów z pliku rozwiązania. [Wzorce globbing](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w terminali z systemem Unix/Linux.
+Usuwa projekt lub wieloma projektami z pliku rozwiązania. [Wzorce obsługi symboli wieloznacznych](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w terminale systemu Unix/Linux.
 
 `list`
 
-Lista wszystkich projektów w pliku rozwiązania.
+Wyświetla listę wszystkich projektów w pliku rozwiązania.
 
 ## <a name="arguments"></a>Argumenty
 
 `SOLUTION_NAME`
 
-Plik rozwiązania do użycia. Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla jednego. Jeśli istnieje wiele plików rozwiązania w katalogu, co jest wymagane.
+Plik rozwiązania do użycia. Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla jednego. W przypadku wielu rozwiązań plików w katalogu, należy określić jedną.
 
 ## <a name="options"></a>Opcje
 
 `-h|--help`
 
-Drukuje krótkich pomocy dla polecenia.
+Drukuje krótki pomoc dotyczącą polecenia.
 
 ## <a name="examples"></a>Przykłady
 
@@ -76,22 +76,25 @@ Dodaj projekt C# do rozwiązania:
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj`
 
-Usuwanie projektu C# z rozwiązania:
+Usuń projekt C# za pomocą rozwiązania:
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-Dodawanie wielu projektów C# do rozwiązania:
+Dodawanie wielu projektów języka C# do rozwiązania:
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
 
-Usuń wiele projektów C# z rozwiązania:
+Usuń wiele projektów języka C# za pomocą rozwiązania:
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
 
-Dodawanie wielu projektów C# do rozwiązania przy użyciu wzorca globbing:
+Dodawanie wielu projektów języka C# do rozwiązania przy użyciu wzorca obsługi symboli wieloznacznych:
 
 `dotnet sln todo.sln add **/*.csproj`
 
-Usuń wiele projektów C# z rozwiązania przy użyciu wzorca globbing:
+Za pomocą rozwiązania przy użyciu wzorca obsługi symboli wieloznacznych, należy usunąć wielu projektów języka C#:
 
 `dotnet sln todo.sln remove **/*.csproj`
+
+> [!NOTE]
+> Symboli wieloznacznych nie jest funkcją interfejsu wiersza polecenia, ale raczej funkcja powłoki poleceń programu. Aby pomyślnie rozszerzyć plików, należy użyć powłoki, który obsługuje symboli wieloznacznych. Aby uzyskać więcej informacji na temat obsługi symboli wieloznacznych, zobacz [Wikipedia](https://en.wikipedia.org/wiki/Glob_(programming)).

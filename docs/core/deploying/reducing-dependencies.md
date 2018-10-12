@@ -4,12 +4,12 @@ description: Ogranicz zależności pakietów, podczas tworzenia bibliotek oparty
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 67d53b45e5cb02f146f763966d1f76e8a8a469ce
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193621"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122580"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Zmniejszenie zależności pakietów przy użyciu pliku project.json
 
@@ -127,7 +127,7 @@ Następnie skopiuj odwołania do pakietu do `dependencies` części biblioteki `
 }
 ```
 
-To bardzo dużo pakietów, wiele którym na pewno nie są niezbędne do rozszerzania typy kolekcji.  Można ręcznie usunąć pakiety lub użyj narzędzia takiego jak [użyciu narzędzia do dekompilacji](http://ilspy.net) lub [odblaskowego .NET](http://www.red-gate.com/products/dotnet-development/reflector) do identyfikowania, która faktycznie pakiety kodu używa.
+To bardzo wiele pakietów, wiele z nich na pewno nie są niezbędne do rozszerzania typy kolekcji.  Można ręcznie usunąć pakiety lub użyj narzędzia takiego jak [użyciu narzędzia do dekompilacji](http://ilspy.net) lub [odblaskowego .NET](http://www.red-gate.com/products/dotnet-development/reflector) do identyfikowania, która faktycznie pakiety kodu używa.
 
 Poniżej przedstawiono, jak może wyglądać przycięty pakietu:
 

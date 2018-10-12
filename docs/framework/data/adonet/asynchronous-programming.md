@@ -1,13 +1,13 @@
 ---
 title: Programowanie asynchroniczne
-ms.date: 03/30/2017
+ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c16fecc9e79f36c122c13909be0eeba848b7c20
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504978"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123660"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
@@ -23,8 +23,9 @@ W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnp
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  Ta funkcja pozostanie w SqlClient w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
-  
- Począwszy od [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], te metody nie wymagają już `Asynchronous Processing=true` w parametrach połączenia.  
+
+> [!TIP]
+> Począwszy od [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], tych starszych metod nie wymagają już `Asynchronous Processing=true` w parametrach połączenia.  
   
 ## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Funkcje asynchroniczne programowanie dodane w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
  Nowa funkcja programowania asynchronicznego udostępnia proste techniki umożliwiają kodu asynchronicznego.  
@@ -87,6 +88,9 @@ W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnp
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
  Inni członkowie asynchroniczne zostały dodane do obsługi [obsługi przesyłania strumieniowego SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
+
+> [!TIP]
+> Nie wymaga nowych metod asynchronicznych `Asynchronous Processing=true` w parametrach połączenia.  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>Synchroniczne do otwarcia połączenia asynchronicznego  
  Można uaktualnić istniejącą aplikację do nowej funkcji asynchronicznych. Załóżmy na przykład, aplikacja ma algorytm synchroniczne połączenia i blokuje wątek interfejsu użytkownika za każdym razem, gdy nawiązuje połączenie z bazy danych, a po nawiązaniu połączenia aplikacja wywołuje procedury przechowywanej, która sygnalizuje innym użytkownikom w nich, po prostu zalogowany.  

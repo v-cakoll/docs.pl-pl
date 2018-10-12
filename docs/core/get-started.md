@@ -4,18 +4,18 @@ description: Znajdź zasoby, aby dowiedzieć się, jak do kompilowania aplikacji
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: fa5deb46b64e1a09c9ad6582486a993a24336b42
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 3fff7884082c46477d37b08560a2c71e7ee345e5
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792403"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121257"
 ---
 # <a name="get-started-with-net-core"></a>Rozpoczynanie pracy z platformą .NET Core
 
 Ten artykuł zawiera informacje na temat rozpoczynania pracy z platformą .NET Core. .NET core można zainstalować na Windows, Linux i macOS. Można programować w swoim ulubionym edytorze tekstów i tworzenia bibliotek dla wielu platform i aplikacji. 
 
-Jeśli wiesz nowości platformy .NET Core lub jak on odnosi się do innych technologii .NET, skorzystaj z [co to jest .NET](https://www.microsoft.com/net/learn/what-is-dotnet) Przegląd. Najprościej mówiąc, .NET Core jest implementacją open source, dla wielu platform .NET.
+Jeśli wiesz nowości platformy .NET Core lub jak on odnosi się do innych technologii .NET, skorzystaj z [co to jest .NET](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet) Przegląd. Najprościej mówiąc, .NET Core jest implementacją open source, dla wielu platform .NET.
 
 ## <a name="create-an-application"></a>Tworzenie aplikacji
 

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5825f0425947f109ed834879684357fef7b70959
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426939"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123777"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints — Metoda
-Definiuje grupę punkty sekwencji w bieżącej metodzie. Każdego wiersza początkowego i kolumna początkowa definiują rozpoczęcia instrukcji w metodzie. Każdy zakończenia wiersza i kończąc na kolumnie zdefiniuj końca instrukcji w metodzie. Tablice mają być sortowane w rosnącej kolejności przesunięcia. Przesunięcie jest zawsze mierzona od początku metody, w bajtach.  
+Definiuje grupę punktów sekwencji w bieżącej metodzie. Każda linia początkowa i kolumnę początkową definiują rozpoczęcia instrukcji wewnątrz metody. Zakończenie każdego wiersza i zakończenie kolumnę zdefiniuj końca instrukcji wewnątrz metody. Tablice powinny być sortowane rosnąco przesunięcia. Przesunięcie zawsze jest mierzony od początku metody, w bajtach.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,28 +42,28 @@ HRESULT DefineSequencePoints(
   
 #### <a name="parameters"></a>Parametry  
  `document`  
- [in] Obiekt dokumentu, dla której są zdefiniowane punkty sekwencji.  
+ [in] Obiekt dokumentu, dla której są zdefiniowane punktów sekwencji.  
   
  `spCount`  
- [in] A `ULONG32` czy wskazuje rozmiar poszczególnych `offsets`, `lines`, `columns`, `endLines`, i `endColumns` buforów.  
+ [in] A `ULONG32` oznacza to rozmiar wszystkich `offsets`, `lines`, `columns`, `endLines`, i `endColumns` buforów.  
   
  `offsets`  
- [in] Przesunięcie punkty sekwencji zmierzony od początku metody.  
+ [in] Przesunięcie punktów sekwencji jest mierzony od początku metody.  
   
  `lines`  
- [in] Numery wiersza początkowego punkty sekwencji.  
+ [in] Linia początkowa liczby punktów sekwencji.  
   
  `columns`  
- [in] Początkowy numery kolumn punkty sekwencji.  
+ [in] Począwszy od liczby kolumn punktów sekwencji.  
   
  `endLines`  
- [in] Końcowy numery wierszy punkty sekwencji. Ten parametr jest opcjonalny.  
+ [in] Końcowy numery wierszy punktów sekwencji. Ten parametr jest opcjonalny.  
   
  `endColumns`  
- [in] Końcowy numery kolumn punkty sekwencji. Ten parametr jest opcjonalny.  
+ [in] Końcowej kolumny liczby punktów sekwencji. Ten parametr jest opcjonalny.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Header:** CorSym.idl, CorSym.h  

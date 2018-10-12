@@ -4,12 +4,12 @@ description: Dowiedz się więcej o różnicach między istniejące i pliki cspr
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0efca768545ab11319b2fe7b062cb6a4e751dc4d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216919"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121418"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -110,11 +110,11 @@ Element, który określa zależność NuGet w projekcie. `Include` Atrybut okre�
 `Version` Określa numer wersji pakietu do przywrócenia. Ten atrybut przestrzega zasad [wersji NuGet](/nuget/create-packages/dependency-versions#version-ranges) schematu. Domyślnym zachowaniem jest dokładna wersja dopasowania. Na przykład określenie `Version="1.2.3"` jest odpowiednikiem notacji NuGet `[1.2.3]` dla 1.2.3 dokładną wersję pakietu.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets i PrivateAssets
-`IncludeAssets` atrybut określa zasoby należące do pakietu określony przez `<PackageReference>` powinny być używane. 
+`IncludeAssets` atrybut określa, które zasoby należące do pakietu określony przez `<PackageReference>` powinny być używane. 
 
-`ExcludeAssets` atrybut określa zasoby należące do pakietu określony przez `<PackageReference>` nie powinny być używane.
+`ExcludeAssets` atrybut określa, które zasoby należące do pakietu określony przez `<PackageReference>` nie powinny być używane.
 
-`PrivateAssets` atrybut określa zasoby należące do pakietu określony przez `<PackageReference>` powinny być używane jednak, że nie powinna przepływać do następnego projektu. 
+`PrivateAssets` atrybut określa, które zasoby należące do pakietu określony przez `<PackageReference>` powinny być używane, ale nie przepływać do następnego projektu. 
 
 > [!NOTE]
 > `PrivateAssets` jest odpowiednikiem *project.json*/*xproj* `SuppressParent` elementu.

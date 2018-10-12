@@ -2,12 +2,12 @@
 title: Tworzenie klasy GamePieceCollection
 ms.date: 03/30/2017
 ms.assetid: e4b037ee-1201-4a55-b198-0d6532ed6f35
-ms.openlocfilehash: 6323122735273f77bfe9d61bf2df84cabe3e5d6c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 960512e75e918779a598f7978ebedf1f1bd0065c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041229"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121379"
 ---
 # <a name="creating-the-gamepiececollection-class"></a>Tworzenie klasy GamePieceCollection
 **GamePieceCollection** klasa pochodzi od klasy ogólnej listy i wprowadza metody, aby łatwiej zarządzać wieloma **GamePiece** obiektów.  
@@ -17,7 +17,7 @@ ms.locfileid: "44041229"
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_PrivateMembersAndConstructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_privatemembersandconstructor)]  
   
- **ProcessInertia** i **Rysowanie** metody upraszczają kod potrzebny w grze [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) i [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) metod przez Wyliczanie wszystkie gier elementy w kolekcji i wywołanie odpowiedniej metody na każdym **GamePiece** obiektu.  
+ **ProcessInertia** i **Rysowanie** metody upraszczają kod potrzebny w grze [Game.Update](/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) i [Game.Draw](/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) metod przez Wyliczanie wszystkie gier elementy w kolekcji i wywołanie odpowiedniej metody na każdym **GamePiece** obiektu.  
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_ProcessInertiaAndDraw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_processinertiaanddraw)]  
   

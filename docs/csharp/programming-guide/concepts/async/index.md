@@ -2,12 +2,12 @@
 title: Programowanie asynchroniczne z async i await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bd1493319dd7f742158fe7d3e1b286a4900b05b5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e95010f966119db72a32c21408852d6c3bd6521
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529166"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122841"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programowanie asynchroniczne z async i await (C#)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
@@ -173,7 +173,7 @@ Należy określić <xref:System.Threading.Tasks.Task%601> jako typ zwracany, je�
   
 Możesz użyć <xref:System.Threading.Tasks.Task> jako typ zwracany, jeśli metoda nie zawiera instrukcji return lub zawiera instrukcję return, która nie zwraca operandu.  
 
-Począwszy od języka C# 7.0, można również określić inny typ zwracany, pod warunkiem, że tego typu zawiera `GetAwaiter` metody. <xref:System.Threading.Tasks.ValueTask%601> jest przykładem takiego typu. Jest on dostępny w [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) pakietu NuGet.
+Począwszy od języka C# 7.0, można również określić inny typ zwracany, pod warunkiem, że zawiera typ `GetAwaiter` metody. <xref:System.Threading.Tasks.ValueTask%601> jest przykładem takiego typu. Jest on dostępny w [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) pakietu NuGet.
   
  W poniższym przykładzie pokazano, jak deklarować i wywoływać metodę zwracającą <xref:System.Threading.Tasks.Task%601> lub <xref:System.Threading.Tasks.Task>.  
   

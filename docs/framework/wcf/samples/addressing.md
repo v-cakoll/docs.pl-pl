@@ -2,12 +2,12 @@
 title: Adresowanie
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468368"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123205"
 ---
 # <a name="addressing"></a>Adresowanie
 W przykładzie adresowanie pokazano różne aspekty i funkcje adresy punktów końcowych. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). W tym przykładzie usługa jest samodzielnie hostowana. Usługi i klienta są aplikacji konsoli. Usługa definiuje wiele punktów końcowych przy użyciu kombinacji adresy punktów końcowych względnych i bezwzględnych.  
@@ -40,7 +40,7 @@ W przykładzie adresowanie pokazano różne aspekty i funkcje adresy punktów ko
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- W takim przypadku adres względny jest pusty (""), więc adres punktu końcowego jest taka sama jak adres podstawowy. Adres istniejący punkt końcowy jest http://localhost:8000/servicemodelsamples/service.  
+ W takim przypadku adres względny jest pusty (""), więc adres punktu końcowego jest taka sama jak adres podstawowy. Adres istniejący punkt końcowy jest `http://localhost:8000/servicemodelsamples/service`.
   
  Drugi definicji punktu końcowego określa również adres względny, jak pokazano w poniższym Przykładowa konfiguracja.  
   
@@ -53,7 +53,7 @@ W przykładzie adresowanie pokazano różne aspekty i funkcje adresy punktów ko
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Adres względny "test", jest dołączana do podstawowego adresu. Adres istniejący punkt końcowy jest http://localhost:8000/servicemodelsamples/service/test.  
+ Adres względny "test", jest dołączana do podstawowego adresu. Adres istniejący punkt końcowy jest `http://localhost:8000/servicemodelsamples/service/test`.
   
  Trzeci definicji punktu końcowego określa adresem bezwzględnym, jak pokazano w poniższym Przykładowa konfiguracja.  
   
@@ -63,9 +63,9 @@ W przykładzie adresowanie pokazano różne aspekty i funkcje adresy punktów ko
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Adres podstawowy odgrywa żadnej roli w adresie. Adres istniejący punkt końcowy jest http://localhost:8001/hello/servicemodelsamples.  
+ Adres podstawowy odgrywa żadnej roli w adresie. Adres istniejący punkt końcowy jest `http://localhost:8001/hello/servicemodelsamples`.
   
- Adres punktu końcowego czwarty określa adresem bezwzględnym i innego transportu — TCP. Adres podstawowy odgrywa żadnej roli w adresie. Adres istniejący punkt końcowy jest NET.TCP://localhost: 9000/servicemodelsamples/usługi.  
+ Adres punktu końcowego czwarty określa adresem bezwzględnym i innego transportu — TCP. Adres podstawowy odgrywa żadnej roli w adresie. Adres istniejący punkt końcowy jest `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  

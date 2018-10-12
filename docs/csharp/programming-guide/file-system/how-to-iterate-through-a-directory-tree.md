@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6725463b042d51e20e5b293d7177903d2d35956
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515764"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123634"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Porady: iterowanie drzewa katalogów (Przewodnik programowania w języku C#)
 Wyrażenie "Iterowanie drzewa katalogów" oznacza, że dostęp do każdego pliku w każdej zagnieżdżonej podkatalogu w folderze określonym katalogu głównym, na dowolnym poziomie. Zawsze, nie trzeba otwierać każdego pliku. Możesz po prostu pobrać nazwę pliku lub podkatalog jako `string`, lub można pobrać dodatkowe informacje w formie <xref:System.IO.FileInfo?displayProperty=nameWithType> lub <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> obiektu.  
@@ -54,7 +54,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Jeśli zawartość drzewa katalogów, muszą być przechowywane w pamięci lub na dysku, najlepszym rozwiązaniem jest przechowywanie tylko <xref:System.IO.FileSystemInfo.FullName%2A> właściwości (typu `string`) dla każdego pliku. Można następnie użyć tego ciągu do utworzenia nowego <xref:System.IO.FileInfo> lub <xref:System.IO.DirectoryInfo> obiektu zgodnie z potrzebami, lub otworzyć dowolny plik, który wymaga dodatkowego przetwarzania.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Kod iteracji niezawodne pliku należy wziąć pod uwagę wiele złożoności systemu plików. Aby uzyskać więcej informacji w systemie plików Windows, zobacz [informacje techniczne dotyczące systemu plików NTFS](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4).  
+ Kod iteracji niezawodne pliku należy wziąć pod uwagę wiele złożoności systemu plików. Aby uzyskać więcej informacji w systemie plików Windows, zobacz [Omówienie systemu plików NTFS](/windows-server/storage/file-server/ntfs-overview).  
   
 ## <a name="see-also"></a>Zobacz też
 

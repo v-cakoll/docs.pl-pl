@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 8e4103f8e71858ec74c348ee1f675828e6468eb2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 037144c47a97a44cad504882fdf8c88caf4918d7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170590"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121313"
 ---
 # <a name="is-c-reference"></a>is (odwołanie w C#) #
 
@@ -153,7 +153,7 @@ gdy wartość *expr* jest zawsze przypisywana do zmiennej lokalnej o nazwie *naz
 
 Należy pamiętać, że jeśli *expr* jest `null`, `is` wyrażenie nadal ma wartość true, przypisuje `null` do *nazwa_zmiennej*. 
 
-# <a name="c-language-specification"></a>Specyfikacja języka C#
+## <a name="c-language-specification"></a>Specyfikacja języka C#
   
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   

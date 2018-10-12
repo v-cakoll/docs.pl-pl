@@ -4,12 +4,12 @@ description: Dowiedz się, jak wykrywać i eliminowanie luk w zabezpieczeniach c
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840537"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123647"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Chronometraż luk, wraz z trybie CBC odszyfrowanie symetryczne, za pomocą wypełnienia
 
@@ -65,7 +65,7 @@ W przeszłości było zgodne, które są ważne do szyfrowania i uwierzytelniani
 
 Klasa określane jako "dopełnienie oracle ataków" znane istniał ponad 10 lat luk w zabezpieczeniach. Te luki w zabezpieczeniach umożliwia atakującemu odszyfrować dane szyfrowane przez algorytmy symetryczne bloku, takie jak AES i 3DES, przy użyciu nie więcej niż 4096 prób na bloku danych. Wprowadź te luki w zabezpieczeniach użytkowania fakt, że block szyfry są najczęściej używane przy użyciu danych uzupełniania weryfikowalne na końcu. Ustalono, że jeśli osoba atakująca może manipulować tekstu szyfrowanego i Dowiedz się, czy naruszanie spowodował błąd w formacie uzupełnienia na końcu, osoba atakująca może odszyfrować danych.
 
-Początkowo praktyczne ataków znajdowały się na usługami zwracającymi kody błędów różnych oparte na czy dopełnienie był prawidłowy, takich jak ASP.NET luk w zabezpieczeniach [MS10-070](https://technet.microsoft.com/library/security/ms10-070.aspx). Jednak program Microsoft teraz uważa, jest praktyczne przeprowadzenie podobne ataków przy użyciu tylko różnice czasu między przetwarzania dopełnienie prawidłowe i nieprawidłowe.
+Początkowo praktyczne ataków znajdowały się na usługami zwracającymi kody błędów różnych oparte na czy dopełnienie był prawidłowy, takich jak ASP.NET luk w zabezpieczeniach [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Jednak program Microsoft teraz uważa, jest praktyczne przeprowadzenie podobne ataków przy użyciu tylko różnice czasu między przetwarzania dopełnienie prawidłowe i nieprawidłowe.
 
 Pod warunkiem, że schemat szyfrowania wykorzystuje sygnatury i weryfikacji podpisu jest wykonywane przy użyciu stałej środowiska uruchomieniowego dla podanej długości data (niezależnie od zawartości), bez żadnych informacji do emitowania można zweryfikować integralności danych Osoba atakująca za pośrednictwem [kanału po stronie](https://en.wikipedia.org/wiki/Side-channel_attack). Ponieważ sprawdzania integralności odrzuca komunikaty zmodyfikowany, jest zmniejszany dopełnienie zagrożeń bazy danych oracle.
 

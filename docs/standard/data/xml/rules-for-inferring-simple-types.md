@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615316"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123582"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Zasady wnioskowania typów prostych
 W tym artykule opisano sposób, w jaki <xref:System.Xml.Schema.XmlSchemaInference> klasy wnioskuje typ danych dla atrybutów i elementów.  
@@ -65,8 +65,9 @@ W tym artykule opisano sposób, w jaki <xref:System.Xml.Schema.XmlSchemaInferenc
   
  Po pierwsze `attr2` napotkano wartość typu `attr2` jest wnioskowany jako `unsignedByte` na podstawie wartości `0`. Podczas drugiego `attr2` jest napotkano typ zostanie podwyższony do `string` oparte na aktualnie wnioskowany typ `unsignedByte` i bieżącą wartość `true` ponieważ <xref:System.Xml.Schema.XmlSchemaInference> klasy należy wziąć pod uwagę poprzednie wartości podczas podwyższania poziomu wnioskowany typ. Jednak jeśli oba wystąpienia elementu `attr2` napotkano w dokumencie XML, a nie w dwóch różnych dokumentów XML, jak pokazano powyżej, `attr2` może wywnioskować jako `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Ignorowane atrybuty z http://www.w3.org/2001/XMLSchema-instance Namespace  
- Poniżej przedstawiono definiowania schematu atrybutów, które są ignorowane podczas wnioskowania schematu.  
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a>Ignorowane atrybuty z <https://www.w3.org/2001/XMLSchema-instance> przestrzeni nazw
+
+Poniżej przedstawiono definiowania schematu atrybutów, które są ignorowane podczas wnioskowania schematu.  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  

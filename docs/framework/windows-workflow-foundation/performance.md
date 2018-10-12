@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 wydajności
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873696"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123816"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 wydajności
 Dustin Metzgar
@@ -287,7 +287,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Nawet w przypadku złożonych przepływów pracy za pomocą mnóstwo głębi i dużą liczbę działań wyniki są zgodne z inne liczby przepływności przedstawiony we wcześniejszej części tego artykułu.  Przepływność WF4 firmy jest szybsza rzędy wielkości i ma być porównywana na skali logarytmicznej.
 
 ### <a name="memory"></a>Pamięć
- Obciążenie pamięci programu Windows Workflow Foundation jest mierzony w dwóch podstawowych obszarach: złożoność przepływu pracy i liczbę definicji przepływu pracy.  Pomiary pamięci zostały pobrane na stacji roboczej x 64 Windows 7.  Istnieje wiele sposobów na uzyskanie pomiarów Ustaw rozmiar, takich jak monitorowanie liczników wydajności, sondowanie Environment.WorkingSet lub przy użyciu narzędzia, takiego jak VMMap dostępne praca [VMMap](https://technet.microsoft.com/sysinternals/dd535533.aspx). Kombinacji metod został użyty do uzyskania i sprawdzić wyniki każdego testu.
+ Obciążenie pamięci programu Windows Workflow Foundation jest mierzony w dwóch podstawowych obszarach: złożoność przepływu pracy i liczbę definicji przepływu pracy.  Pomiary pamięci zostały pobrane na stacji roboczej x 64 Windows 7.  Istnieje wiele sposobów na uzyskanie pomiarów Ustaw rozmiar, takich jak monitorowanie liczników wydajności, sondowanie Environment.WorkingSet lub przy użyciu narzędzia, takiego jak VMMap dostępne praca [VMMap](/sysinternals/downloads/vmmap). Kombinacji metod został użyty do uzyskania i sprawdzić wyniki każdego testu.
 
 ### <a name="workflow-complexity-test"></a>Test złożoności przepływu pracy
  Złożoność przepływu pracy testu środków zestaw roboczy różnica, zależnie od stopnia złożoności przepływu pracy.  Oprócz złożone przepływy pracy, wykorzystywane w poprzedniej sekcji, nowe zmiany są dodawane do obejmuje dwa podstawowe przypadki: jedno działanie przepływu pracy i sekwencję działań 1000.  Testy te przepływy pracy są zainicjowany i wykonywane w celu ukończenia w jednej pętli szeregowe w okresie jednej minuty.  Poszczególnych odmian test jest uruchamiany trzy razy, a dane zapisane jest średnią z tych trzech przebiegów.

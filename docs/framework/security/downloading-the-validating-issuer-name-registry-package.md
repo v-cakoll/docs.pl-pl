@@ -1,40 +1,40 @@
 ---
 title: Pobieranie pakietu sprawdzania poprawności rejestru nazwy dostawcy
-ms.date: 03/30/2017
+ms.date: 10/10/2018
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
-ms.openlocfilehash: 03b68f4b9dc6fde02c951968067e0311e4981d33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 654a513e06f528f617bc19fbc59961c5b0e16049
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398752"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121159"
 ---
-# <a name="downloading-the-validating-issuer-name-registry-package"></a>Pobieranie pakietu sprawdzania poprawności rejestru nazwy dostawcy
-W tym temacie omówiono sposób pobranie i użycie rejestru nazwy wystawcy sprawdzania poprawności (VINR) w projekcie.  
-  
-## <a name="downloading-the-validating-issuer-name-registry"></a>Pobieranie sprawdzania poprawności rejestru nazwy dostawcy  
- VINR jest dostępna jako pakietu NuGet, który dodaje konieczne zestawy, a odwołania do projektu. Jeśli nie masz już zainstalowany NuGet, przejdź do [nuget.org](http://nuget.org) go zainstalować. Widać Historia wersji rozszerzenia odwiedzając jej stronę na NuGet: [rejestru sprawdzania poprawności nazwy wystawcy firmy Microsoft na NuGet](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)  
-  
-#### <a name="downloading-the-validating-issuer-name-registry-by-using-the-package-manager-gui"></a>Pobieranie sprawdzanie poprawności rejestru nazwy dostawcy przy użyciu graficznego interfejsu użytkownika Menedżera pakietów  
-  
-1.  W programie Visual Studio, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań**, a następnie wybierz **Zarządzaj pakietami NuGet**.  
-  
-2.  W **Zarządzaj pakietami NuGet** okna, kliknij pole wyszukiwania i wprowadź `ValidatingIssuerNameRegistry` i naciśnij klawisz **Enter**.  
-  
-3.  W okienku wyników kliknij **zainstalować** przycisku do pierwszego wyniku.  
-  
-4.  Pakiet zostanie rozpocząć pobieranie. Przed dodaniem jej do projektu, pojawi się okno dialogowe akceptacji licencji. Jeśli akceptujesz postanowienia licencyjne, kliknij przycisk **akceptuję**.  
-  
-5.  Najnowsze zestawy VINR zostanie pobrany i dodane do projektu.  
-  
-#### <a name="downloading-the-validating-issuer-name-registry-by-using-the-package-manager-console"></a>Pobieranie sprawdzanie poprawności rejestru nazwy dostawcy przy użyciu konsoli Menedżera pakietów  
-  
-1.  W programie Visual Studio, kliknij przycisk **narzędzia**, **Menedżer pakietów biblioteki**, a następnie **Konsola Menedżera pakietów**.  
-  
-2.  **Konsola Menedżera pakietów** pojawi się. Wprowadź poniższy tekst i naciśnij klawisz **Enter**:  
-  
-    ```powershell  
-    Install-Package System.IdentityModel.Tokens.ValidatingIssuerNameRegistry  
-    ```  
-  
-3.  Najnowsze zestawy VINR zostanie pobrany i dodane do projektu.
+# <a name="download-the-validating-issuer-name-registry-package"></a>Pobieranie pakietu sprawdzania poprawności rejestru nazwy wystawcy
+
+W tym temacie omówiono sposób pobierania i wykorzystywania rejestru nazwy wystawcy sprawdzania poprawności (VINR) w projekcie.
+
+Rozszerzenie VINR jest dostępne jako pakiet NuGet, który dodaje niezbędne zespoły i odwołania do projektu. Jeśli nie masz jeszcze zainstalowanego Menedżera NuGet, przejdź do strony [nuget.org](http://nuget.org) go zainstalować. Można zobaczyć historię wersji rozszerzenia odwiedzając jego stronę na NuGet: [Microsoft Validating Issuer Name Registry dla narzędzia NuGet](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
+
+## <a name="use-the-package-manager-gui"></a>Użyj Menedżera pakietów GUI
+
+1. W programie Visual Studio, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań**, a następnie wybierz pozycję **Zarządzaj pakietami NuGet**.
+
+2. W **Zarządzaj pakietami NuGet** okna, kliknij pole wyszukiwania i wprowadź `ValidatingIssuerNameRegistry` i naciśnij klawisz **Enter**.
+
+3. W okienku wyników kliknij **zainstalować** przycisku dla pierwszego wyniku.
+
+4. Pakiet rozpocznie się pobieranie. Zanim zostanie dodany do projektu, pojawi się okno dialogowe akceptacja licencji. Jeśli akceptujesz postanowienia licencyjne, kliknij przycisk **akceptuję**.
+
+5. Najnowsze zestawy VINR zostaną pobrane i dodane do projektu.
+
+## <a name="use-the-package-manager-console"></a>Za pomocą konsoli Menedżera pakietów
+
+1. W programie Visual Studio, kliknij przycisk **narzędzia** > **Menedżera pakietów NuGet** > **Konsola Menedżera pakietów**.
+
+2. **Konsola Menedżera pakietów** pojawia się. Wprowadź poniższy tekst i naciśnij klawisz **Enter**:
+
+    ```powershell
+    Install-Package System.IdentityModel.Tokens.ValidatingIssuerNameRegistry
+    ```
+
+3. Najnowsze zestawy VINR zostaną pobrane i dodane do projektu.

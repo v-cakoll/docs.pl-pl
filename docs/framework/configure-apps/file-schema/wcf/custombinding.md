@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 514d0770bd94e55ef3eb7ce2421d1d031c90c3e9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 741f195a78c1716b95d8d4d88594207708ce6289
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527138"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123829"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.  
@@ -306,4 +306,4 @@ Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.
  [customBinding — Element](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+ [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

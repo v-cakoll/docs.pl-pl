@@ -4,12 +4,12 @@ description: Ten temat przeprowadzi Cię przez tworzenie rozwiązania .NET Core,
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 589b3e72f7e8425051a96f66f07f24327d273c45
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530499"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122830"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 
@@ -32,7 +32,7 @@ Aby uzyskać więcej informacji na temat wymagań wstępnych, zobacz [wymagania 
 
 ## <a name="building-a-library"></a>Tworzenie biblioteki
 
-1. Na ekranie powitalnym wybierz **nowy projekt**. W **nowy projekt** , okno dialogowe **dla wielu platform** węzeł **Biblioteka .NET Standard** szablonu. Wybierz **dalej**.
+1. Na ekranie powitalnym wybierz **nowy projekt**. W **nowy projekt** , okno dialogowe **dla wielu platform** węzeł **Biblioteka .NET Standard** szablonu. Spowoduje to utworzenie biblioteki .NET Standard, który jest przeznaczony dla platformy .NET Core oraz ewentualne innych implementacji .NET, która obsługuje wersję 2.0 [.Net Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard). Wybierz **dalej**.
 
    ![Okno dialogowe nowego projektu](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 

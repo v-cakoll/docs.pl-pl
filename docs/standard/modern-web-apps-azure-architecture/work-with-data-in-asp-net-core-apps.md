@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 3ec7acb7bdb5e0e22965475ec267616694842ed0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842089"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122854"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacji platformy ASP.NET Core
 
@@ -91,7 +91,7 @@ var brandItems = await _context.CatalogBrands
 
 Jest ważne w powyższym przykładzie, aby dodać wywołanie do ToListAsync, aby można było przeprowadzić zapytanie natychmiastowo. W przeciwnym razie instrukcji przypisze element IQueryable<SelectListItem> do brandItems, który nie zostanie wykonany dopóki go wyliczenia. Istnieją zalety i wady do zwracania wyników IQueryable z metod. Umożliwia to zapytanie, które programu EF Core będzie konstruowania można dalej modyfikować, ale może również powodować błędy występujące tylko w czasie wykonywania, jeśli działania są dodawane do zapytania, które nie może tłumaczyć programu EF Core. Zazwyczaj bezpieczniej przekazać jakiekolwiek filtry do metody wykonywania dostępu do danych, a zwracany z powrotem kolekcji w pamięci (na przykład listy<T>) jako wynik.
 
-EF Core śledzi zmiany w jednostkach, który pobiera się go z trwałości. Aby zapisać zmiany do śledzonych jednostki, po prostu Wywołaj metodę SaveChanges dla kontekstu DbContext, upewniając się, że jest to samo wystąpienie typu DbContext, który został użyty do pobrania jednostki. Dodawanie i usuwanie jednostek jest bezpośrednio w odpowiedniej właściwości DbSet ponownie z wywołaniem funkcji SaveChanges można wykonać polecenia bazy danych. Poniższy przykład pokazuje, dodawanie, aktualizowanie i usuwanie jednostek trwałości.
+EF Core śledzi zmiany w jednostkach, który pobiera się go z trwałości. Aby zapisać zmiany do śledzonych jednostki, po prostu Wywołaj metodę SaveChanges dla kontekstu DbContext, upewniając się, że jest to samo wystąpienie typu DbContext, który został użyty do pobrania jednostki. Dodawanie i usuwanie jednostek odbywa się bezpośrednio na odpowiedniej właściwości DbSet ponownie z wywołaniem funkcji SaveChanges można wykonać polecenia bazy danych. Poniższy przykład pokazuje, dodawanie, aktualizowanie i usuwanie jednostek trwałości.
 
 ```csharp
 // create

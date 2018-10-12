@@ -3,11 +3,11 @@ title: 'Zainstaluj język F #'
 description: 'Dowiedz się, jak zainstalować zależności od używanego środowiska F #.'
 ms.date: 08/28/2018
 ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844010"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120937"
 ---
 # <a name="install-f"></a>Zainstaluj język F # #
 

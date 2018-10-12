@@ -1,29 +1,27 @@
 ---
 title: Ogólne typy (Ogólne) — omówienie
-description: Dowiedz się, jak ogólne działanie jako kod szablonów, które umożliwiają zdefiniowanie struktury danych bezpieczny, nie poświęcając na to rzeczywisty typ danych.
+description: Dowiedz się, jak ogólne działają jako szablony kodu, które umożliwiają zdefiniowanie struktury danych bezpiecznego typu nie poświęcając na to rzeczywisty typ danych.
 author: kuhlenh
 ms.author: wiwagn
-ms.date: 06/20/2016
-ms.technology: dotnet-standard
-ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.openlocfilehash: ad6216998dff70ca7e36b52b374c5ffb9fd0cd45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 10/09/2018
+ms.openlocfilehash: 1d1899d482738bc6cc9f638b6a74eab8d4ca70c1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575482"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121184"
 ---
-# <a name="generic-types-generics-overview"></a>Ogólne typy (Ogólne) — omówienie
+# <a name="generic-types-overview"></a>Przegląd typów ogólnych
 
-Używamy ogólne cały czas w języku C#, czy jawnie lub niejawnie. Korzystając z LINQ w C#, kiedykolwiek Zwróć uwagę, że korzystasz z interfejsu IEnumerable<T>? Lub jeśli kiedykolwiek widać online próbki "repository ogólnego" do rozmowy baz danych przy użyciu programu Entity Framework, czy widoczny czy większości metod zwracać interfejs IQueryable<T>? Użytkownik może zaawansowanych co **T** znajduje się w tych przykładach i dlaczego jest w nim?
+Deweloperzy używaj typów ogólnych przez cały czas na platformie .NET, czy jawnie lub niejawnie. Korzystając z programu LINQ na platformie .NET, nigdy nie Zwróć uwagę, że pracujesz z <xref:System.Collections.Generic.IEnumerable%601>? Lub Jeśli nigdy nie był wyświetlany próbki online "ogólnego repozytorium" do rozmowy baz danych przy użyciu platformy Entity Framework, czy zobaczysz, że większość metod zwracają IQueryable<T>? Użytkownik może być bardziej co **T** znajduje się w tych przykładach i dlaczego jest tam.
 
-Po raz pierwszy wprowadzone do programu .NET Framework 2.0, ogólne zaangażowany zmiany języka C# i środowiska uruchomieniowego języka wspólnego (CLR). **Typy ogólne** są zasadniczo "kod szablonu" który umożliwia deweloperom Zdefiniuj [bezpieczne](https://msdn.microsoft.com/library/hbzz1a9a.aspx) struktury danych, nie poświęcając na to rzeczywisty typ danych. Na przykład `List<T>` jest [kolekcji ogólnej](xref:System.Collections.Generic) który zadeklarowany i używane w przypadku każdego typu: `List<int>`, `List<string>`, `List<Person>`itp.
+Po raz pierwszy wprowadzone w programie .NET Framework 2.0 **ogólne** są zasadniczo "kodu szablon", umożliwia deweloperom definiowanie [bezpieczny](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) struktur danych, nie poświęcając na to rzeczywisty typ danych. Na przykład <xref:System.Collections.Generic.List%601> jest [kolekcji generycznej](xref:System.Collections.Generic) , zadeklarowany i używać z dowolnego typu, takie jak `List<int>`, `List<string>`, lub `List<Person>`.
 
-Tak co to jest punkt? Typy ogólne są przydatne Aby to zrozumieć, należy spojrzeć na określonej klasy przed i po dodaniu typów ogólnych. Przyjrzyjmy się `ArrayList`. W języku C# 1.0 `ArrayList` elementy zostały typu `object`. Oznacza to, że dowolny element, który został dodany dyskretnie został przekonwertowany na `object`; tym samym co się dzieje na odczyt elementów na liście (ten proces jest nazywany [boxing](../../docs/csharp/programming-guide/types/boxing-and-unboxing.md) i konwersja unboxing odpowiednio). Opakowywanie i rozpakowywanie wpływają na wydajność. Więcej niż ta ponieważ nie ma można sprawdzić w czasie kompilacji, co jest rzeczywisty typ danych na liście. Dzięki temu wrażliwych kodu. Typy ogólne rozwiązać ten problem, udostępniając dodatkowe informacje typu danych, który będzie zawierać każde wystąpienie listy. Po prostu umieść, można dodawać tylko liczb całkowitych na `List<int>` i osoby, które mają być dodawane tylko `List<Person>`itp.
+Aby zrozumieć, dlaczego typy ogólne są przydatne, Przyjrzyjmy się w określonej klasie przed i po dodaniu ogólne: <xref:System.Collections.ArrayList>. W programie .NET Framework 1.0 `ArrayList` elementy były typu <xref:System.Object>. Oznacza to, że dowolny element dodany został dyskretnie konwertowane na `Object`. Taka sama sytuacja może mieć miejsce podczas odczytywania elementów z listy. Ten proces jest nazywany [opakowywanie i rozpakowywanie](../csharp/programming-guide/types/boxing-and-unboxing.md), i ma wpływ na wydajność. Więcej niż ten jednak nie ma możliwości można ustalić typu danych na liście w czasie kompilacji. To sprawia, że niektóre słabe kodu. Typy ogólne rozwiązują ten problem przez zdefiniowanie typu danych, który będzie zawarty w każde wystąpienie listy. Na przykład, można dodawać tylko liczb całkowitych na `List<int>` i dodawać tylko osoby, które mają `List<Person>`.
 
-Typy ogólne są również dostępne w czasie wykonywania, lub **reified**. Oznacza to, że środowisko wykonawcze wie, jakiego rodzaju struktury danych używany i nie można przechowywać go wydajniej w pamięci.
+Typy ogólne są również dostępne w czasie wykonywania. Oznacza to, że środowisko uruchomieniowe wie, jakiego rodzaju strukturę danych używasz i będą przechowywane jego efektywniej w pamięci.
 
-W tym miejscu jest mały program, który przedstawia wydajność wiedząc danych struktury typu w czasie wykonywania:
+Poniższy przykład jest mały program, który przedstawia wydajność, wiedząc, dane struktury typu w czasie wykonywania:
 
 ```csharp
   using System;
@@ -55,18 +53,20 @@ W tym miejscu jest mały program, który przedstawia wydajność wiedząc danych
   }
 ```
 
-Ten program daje następujące dane wyjściowe:
+Ten program tworzy dane wyjściowe podobne do następujących:
 
 ```console
-Generic Sort: System.Collections.Generic.List\`1[System.Int32] Time taken: 0.0789ms
-Non-Generic Sort: System.Collections.ArrayList Time taken: 2.4324ms
+Generic Sort: System.Collections.Generic.List`1[System.Int32]
+ Time taken: 0.0034ms
+Non-Generic Sort: System.Collections.ArrayList
+ Time taken: 0.2592ms
 ```
 
-Pierwszą czynnością, którą można zauważyć, że w tym miejscu jest sortowanie listy ogólnej jest znacznie szybsze niż listy nierodzajową. Można również zauważyć, że typu listy ogólnej jest różne ([System.Int32]), podczas gdy uogólniony typu listy nierodzajową. Ponieważ środowisko uruchomieniowe zna ogólnego `List<int>` jest typu int umożliwia przechowywanie listy elementów w tablicy źródłowej całkowitą w pamięci podczas nieogólnego `ArrayList` ma można rzutować każdego elementu listy jako obiekt jako przechowywane w tablicy obiektów w pamięci. Jak widoczny w tym przykładzie, dodatkowe odlewów zajmuje czasu i spowolnić sortowanie listy.
+Pierwszą rzeczą, jaką można zauważyć, że w tym miejscu jest sortowanie listy ogólnej jest znacznie szybsze niż sortowanie listy nieogólnego. Można też zauważyć typu listy ogólnej to odrębne ([System.Int32]), natomiast typ listy nieogólnego jest uogólniona. Ponieważ środowisko uruchomieniowe wie ogólnego `List<int>` typu <xref:System.Int32>, może ona przechowywać elementy listy w podstawowej tablicę liczb całkowitych w pamięci podczas niepodstawowy `ArrayList` ma rzutowanie każdego elementu listy do obiektu. Jak pokazano w tym przykładzie dodatkowe rzutowania zajmuje czasu i spowolnić sortowanie listy.
 
-Ostatnim etapem przydatne informacje o środowisku uruchomieniowym, znajomość typu zwykłego użytkownika jest działanie lepiej debugowania. Podczas debugowania ogólnego w języku C#, wiesz, jakiego typu jest każdego elementu w strukturze danych. Bez ogólne trzeba nie wiadomo typ każdego elementu.
+Dodatkową zaletą środowiska uruchomieniowego, wiedząc, typ ogólny usługi jest to lepszy proces debugowania. Podczas debugowania zwykłego w języku C#, wiadomo, jakiego typu każdy element jest w strukturze danych. Bez ogólne czy nie masz jakiego typu została każdego elementu.
 
-## <a name="further-reading-and-resources"></a>Dalsze informacje i zasoby
+## <a name="see-also"></a>Zobacz także
 
-*   [Wprowadzenie do typami ogólnymi C#](https://msdn.microsoft.com/library/ms379564.aspx)
-*   [C# przewodnik programowania w języku — ogólne](../../docs/csharp/programming-guide/generics/index.md)
+- [Wprowadzenie do typów ogólnych języka C#](https://msdn.microsoft.com/library/ms379564.aspx)
+- [C# Programming Guide - ogólne](../../docs/csharp/programming-guide/generics/index.md)

@@ -2,12 +2,12 @@
 title: Kolekcje schematów programu SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 7020c74d41ce1feef38c4dfc66117a7b8c8eff4e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7f710af5c05942d2ff1718c9d59d4d776f45c6e7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508493"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123868"
 ---
 # <a name="sql-server-schema-collections"></a>Kolekcje schematów programu SQL Server
 Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsługuje kolekcje schematów dodatkowe, oprócz Typowe kolekcje schematów. Kolekcje schematów nieco różnią się zależnie od wersji programu SQL Server, którego używasz. Aby określić listę obsługiwanych schematu kolekcji, należy wywołać **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcje schematów obsługiwanych, liczba ograniczeń, które obsługują one każdego i części identyfikator, których używają.  

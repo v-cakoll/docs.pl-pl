@@ -1,15 +1,18 @@
 ---
 title: What's new in .NET Core 2.1
 description: Dowiedz się więcej o nowych funkcjach w programie .NET Core 2.1.
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.date: 06/06/2018
-ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/10/2018
+ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400070"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120950"
 ---
 # <a name="whats-new-in-net-core-21"></a>What's new in .NET Core 2.1
 
@@ -166,9 +169,11 @@ Możesz zdecydować się na warstwowy kompilacji na dwa sposoby.
 
 Bez tych typów przy przekazywaniu takie elementy jako część tablicy lub sekcji bufora pamięci należy utworzyć kopię część danych przed przekazaniem go do metody. Te typy zapewniają wirtualny widok tych danych, która eliminuje potrzebę stosowania alokacji więcej pamięci i operacji kopiowania.
 
-W poniższym przykładzie użyto <xref:System.Span%601> wystąpienia, aby przedstawić widok wirtualny 10 elementów tablicy.
+W poniższym przykładzie użyto <xref:System.Span%601> i <xref:System.Memory%601> wystąpienia, aby przedstawić widok wirtualny 10 elementów tablicy.
 
 [!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+
+[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Kompresja Brotli
 

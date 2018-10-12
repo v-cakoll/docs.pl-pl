@@ -4,18 +4,18 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586049"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123231"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 
 Podstawowy kontenerów jest niezmienności. W porównaniu do maszyny Wirtualnej, kontenery nie znikają jako typowych wystąpienie. Maszyna wirtualna może się nie powieść w różnych formach martwy procesów, przeciążone procesora CPU lub dysk zapełniony lub nie powiodło się. Jeszcze oczekujemy, że maszyna wirtualna była dostępna, i RAID dyski są powszechne, aby mieć pewność, że błędy dysku przechowywania danych.
 
-Jednak kontenery są uznawane za wystąpień procesów. Proces nie zachowują stan trwały. Mimo że kontener może zapisywać jej magazynu lokalnego, przy założeniu, że to wystąpienie będzie wokół przez czas nieokreślony byłaby równoważna przy założeniu, że pamięć jedną kopię będą trwałe. Należy przyjąć, że kontenery, takich jak procesy, są duplikowane zabite, lub gdy jest zarządzana z koordynatorem kontenera, może być przeniesiony.
+Jednak kontenery są uznawane za wystąpień procesów. Proces nie zachowują stan trwały. Mimo że kontener może zapisywać jej magazynu lokalnego, przy założeniu, że wystąpienie będzie wokół przez czas nieokreślony byłaby równoważna przy założeniu, że pamięć jedną kopię będą trwałe. Należy przyjąć, że kontenery, takich jak procesy, są duplikowane zabite, lub gdy jest zarządzana z koordynatorem kontenera, może być przeniesiony.
 
 Platforma docker korzysta funkcje znane jako *nakładki system plików* do zaimplementowania procesu kopii przy zapisie, który przechowuje dowolne zaktualizowane informacje do głównego systemu plików kontenera, w porównaniu do oryginalnego obrazu, na którym bazuje. Te zmiany zostaną utracone, jeśli kontener są usuwane z systemu. Kontener, w związku z tym, nie ma Magazyn trwały domyślnie. Chociaż istnieje możliwość zapisania stanu kontenera, projektowanie systemu obejścia tego problemu będzie konflikt z zasadą architekturę kontener.
 

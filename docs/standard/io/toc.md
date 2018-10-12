@@ -14,6 +14,7 @@
 ### [Tworzenie strumieni](composing-streams.md)
 ### [Instrukcje: konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [Asynchroniczne operacje We/Wy pliku](asynchronous-file-i-o.md)
+## [Obsługa błędów operacji we/wy](handling-io-errors.md)
 ## [Wydzielona pamięć masowa](isolated-storage.md)
 ### [Typy izolacji](types-of-isolation.md)
 ### [Instrukcje: uzyskiwanie magazynów dla wydzielonej pamięci masowej](how-to-obtain-stores-for-isolated-storage.md)

@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404648"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308594"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Tworzenie platformy ASP.NET Core MVC aplikacji
 
@@ -290,7 +290,7 @@ Możesz dowiedzieć się więcej o implementacji filtry i pobrać przykładowy p
 
 ## <a name="security"></a>Zabezpieczenia
 
-Zabezpieczanie aplikacji sieci web jest duże tematu, z wiele uwagi. Na najbardziej podstawowym poziomie zabezpieczeń obejmuje zapewnienie, że wiesz, kto pochodzące z danego żądania i zapewnienie, że to żądanie tylko ma dostęp do zasobów, które powinno. Uwierzytelnianie to proces porównanie poświadczenia dostarczone z żądaniem w zaufanym magazynie danych, aby zobaczyć, czy żądanie powinny być traktowane jako pochodzący od znanych jednostki. Autoryzacja to proces ograniczanie dostępu do niektórych zasobów na podstawie tożsamości użytkownika. Trzeci kwestią zabezpieczeń chroni żądań podsłuchiwaniu przez osoby trzecie, dla których należy co najmniej [upewnij się, że protokół SSL jest używany przez aplikację](/aspnet/core/security/enforcing-ssl).
+Zabezpieczanie aplikacji sieci web jest duże tematu, z wiele uwagi. Na najbardziej podstawowym poziomie zabezpieczeń obejmuje zapewnienie, że wiesz, kto pochodzące z danego żądania i zapewnienie, że żądanie musi jedynie dostęp do zasobów, które powinno. Uwierzytelnianie to proces porównanie poświadczenia dostarczone z żądaniem w zaufanym magazynie danych, aby zobaczyć, czy żądanie powinny być traktowane jako pochodzący od znanych jednostki. Autoryzacja to proces ograniczanie dostępu do niektórych zasobów na podstawie tożsamości użytkownika. Trzeci kwestią zabezpieczeń chroni żądań podsłuchiwaniu przez osoby trzecie, dla których należy co najmniej [upewnij się, że protokół SSL jest używany przez aplikację](/aspnet/core/security/enforcing-ssl).
 
 ### <a name="authentication"></a>Uwierzytelnianie
 

@@ -2,29 +2,29 @@
 title: Interfejs API sieci Web programu WCF i platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: c8bc8d3483d2f6c85ff14073f34caaf75d639bdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca44a439fa73b16764725ff56019a1d01cc0c8cd
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504110"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308464"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>Interfejs API sieci Web programu WCF i platformy ASP.NET
-Usługi WCF jest firmy Microsoft ujednolicony model programowania do tworzenia aplikacji korzystających z usług. Umożliwia ona deweloperom tworzenie rozwiązań bezpieczne, niezawodne i transakcyjne, zintegrowanie na różnych platformach, które współdziałają z dotychczasowych inwestycji. [ASP.NET Web API](http://www.asp.net/web-api) to platforma, która ułatwia tworzenie usług HTTP, które są używane przez szeroki wachlarz klientów, w tym przeglądarki i urządzenia przenośne. Interfejs API sieci Web ASP.NET jest idealną platformą do tworzenia RESTful aplikacji w programie .NET Framework. W tym temacie przedstawiono pewne wskazówki ułatwiające podjęcie technologii, które będzie najlepiej odpowiadać potrzebom użytkownika.  
+Usługi WCF jest jednolity model programowania firmy Microsoft do budowania aplikacji usługowych. Umożliwia deweloperom tworzenie rozwiązań bezpieczne, niezawodne i transakcyjnych, które integrują się na platformach oraz współpraca z istniejących inwestycji. [ASP.NET Web API](http://www.asp.net/web-api) to struktura, która ułatwia tworzenie usług HTTP, docierających do szerokiej gamy klientów, w tym przeglądarek i urządzeń przenośnych. Web API platformy ASP.NET jest idealną platformą do tworzenia aplikacji typu RESTful na .NET Framework. W tym temacie przedstawiono wskazówki pomagające w podjęciu decyzji, technologii, które będzie najlepiej odpowiadać potrzebom użytkownika.  
   
 ## <a name="choosing-which-technology-to-use"></a>Wybór technologii  
- W poniższej tabeli opisano najważniejszych funkcji poszczególnych technologii.  
+ W poniższej tabeli opisano główne funkcje poszczególnych technologii.  
   
 |WCF|ASP.NET Web API|  
 |---------|---------------------|  
-|Umożliwia tworzenie usług, które obsługują wiele protokołów (HTTP, TCP, UDP i niestandardowych transportów) oraz pozwala na przełączanie się między nimi.|Tylko protokół HTTP. Najwyższej jakości modelu programowania protokołu HTTP. Bardziej odpowiednie dla dostępu z różnych przeglądarek, etc włączenie całego osiągnąć urządzeń przenośnych.|  
-|Umożliwia tworzenie usług, które obsługują wiele kodowań ten sam komunikat (tekst, MTOM i Binary) wpisz i pozwala na przełączanie się między nimi.|Umożliwia tworzenie interfejsów API sieci Web, która obsługuje wiele różnych typów nośników, w tym XML, JSON itp.|  
-|Obsługuje tworzenie usług za pomocą usługi WS-* zabezpieczenia komunikatów niezawodnej obsługi komunikatów, transakcje, takie jak standardów.|Używa protokołu podstawowego i formatuje np. HTTP, protokół WebSockets SSL, JSON i XML. Nie jest obsługiwane dla protokołów wyższego poziomu, takich jak niezawodna obsługa komunikatów lub transakcji.|  
-|Obsługuje żądanie-odpowiedź, jeden sposób i dupleks wzorce wymiany wiadomości.|HTTP jest żądanie/odpowiedź, ale dodatkowe wzorce mogą być obsługiwane za pośrednictwem [SignalR](https://github.com/SignalR/SignalR) i integracja protokołu WebSockets.|  
-|Usług WCF SOAP można przedstawić w języku WSDL umożliwiające automatyczne narzędzia do generowania proxy klienta, nawet w przypadku usług o schematach złożonych.|Brak na różne sposoby do opisu interfejsu API sieci Web — od automatycznie generowanej HTML strony Pomocy opisujące wstawki metadanych strukturalnych dla interfejsów API zintegrowane OData.|  
-|Jest dostarczany z programu .NET framework.|Dostarczany z programem .NET framework, ale jest open source i jest również dostępny poza pasmem jako niezależne pobierania.|  
+|Włącza usług budynku, które obsługują wiele protokołów (HTTP, TCP, UDP i niestandardowe transportu) i pozwala na przełączanie się między nimi.|Tylko protokół HTTP. Najwyższej klasy modelu programowania protokołu HTTP. Bardziej odpowiednie dla dostępu z różnych przeglądarek, etc Włączanie szeroki zasięg urządzeń przenośnych.|  
+|Umożliwia tworzenie usług, które obsługują wiele kodowania tego samego komunikatu (tekst, MTOM i danych binarnych) wpisz i pozwala na przełączanie się między nimi.|Umożliwia tworzenie interfejsów API sieci Web, która obsługuje wiele różnych typów nośników, w tym XML, JSON itp.|  
+|Obsługuje tworzenie usług przy użyciu usługi WS-* standardów, takich jak niezawodną obsługę komunikatów, transakcje, zabezpieczenia wiadomości.|Używa protokołu podstawowego i formatów, takich jak HTTP, funkcja WebSockets, protokołu SSL, JSON i XML. Nie jest obsługiwane dla protokołów wyższego poziomu, takie jak niezawodna obsługa komunikatów lub transakcji.|  
+|Obsługuje żądanie-odpowiedź, jeden sposób i komunikacja dwukierunkowa wzorców wymiany komunikatów.|Protokół HTTP jest żądań/odpowiedzi, ale dodatkowe wzorce mogą być obsługiwane za pośrednictwem [SignalR](https://github.com/SignalR/SignalR) i integrację funkcji WebSockets.|  
+|Usług WCF SOAP można opisać w WSDL, dzięki czemu zautomatyzowanych narzędzi Generowanie serwerów proxy klientów nawet w przypadku usług za pomocą złożonych schematów.|Istnieje szereg sposobów w celu opisania interfejsu API sieci Web — od generowanych automatycznie HTML strony Pomocy opisujące fragmentów kodu, aby metadane strukturalne dla protokołu OData zintegrowane interfejsy API.|  
+|Dostarczany z .NET framework.|Jest dostarczany z .NET framework, ale jest typu open source i jest również dostępna out-of-band jako niezależne do pobrania.|  
   
- Używają WCF do tworzenia usług sieci web niezawodne, bezpieczne to dostępne za pośrednictwem różnych transportów. Użyj interfejsu API sieci Web platformy ASP.NET, aby utworzyć oparte na protokole HTTP usług, które są dostępne w różnych klientów. Jeśli są tworzone i projektowanie nowych usług typu REST, należy użyć interfejsu API sieci Web platformy ASP.NET. Mimo że WCF zapewnia obsługę niektórych pisanie usługi typu REST, obsługa REST w interfejsie API sieci Web ASP.NET jest bardziej szczegółowy i wszystkie przyszłe ulepszenia funkcji REST zostaną wprowadzone w interfejsie API sieci Web ASP.NET. Jeśli masz istniejącą usługę WCF i chcesz udostępnić dodatkowe punkty końcowe REST, użyj programu WCF i <xref:System.ServiceModel.WebHttpBinding>.  
+ Użyj usługi WCF do tworzenia usług niezawodnej, bezpiecznej sieci web, które są dostępne za pośrednictwem różnych transportów. Do tworzenia usług opartych na protokole HTTP, które są dostępne z szerokiej gamy klientów, należy użyć interfejsu API sieci Web platformy ASP.NET. Jeśli tworzenie i projektowanie nowych usług opartego na interfejsie REST, należy użyć interfejsu API sieci Web platformy ASP.NET. Chociaż WCF niektóre pomocy technicznej dotyczące pisania usługi typu REST, obsługa PRZECHOWYWANYCH na interfejs API sieci Web platformy ASP.NET jest bardziej szczegółowy, a wszystkie przyszłe ulepszenia funkcji REST, które zostaną wprowadzone w Web API platformy ASP.NET. Jeśli masz istniejącą usługę WCF i chcesz udostępnić dodatkowe punkty końcowe REST, należy użyć programu WCF i <xref:System.ServiceModel.WebHttpBinding>.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649220"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308555"
 ---
 # <a name="code-contracts"></a>Kontrakty kodu
 Kontrakty kodu zapewniają możliwość określenia warunków wstępnych, warunków końcowych i invariants obiektu w kodzie. Są one wymagania, które muszą zostać spełnione, podczas wprowadzania metodę lub właściwość. Warunków końcowych opisują oczekiwania w czasie, który zamyka kodu metody lub właściwości. Obiekt invariants opisują oczekiwany stan dla klasy, która jest w dobrym stanie.  
@@ -90,7 +90,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
 -   Wartość prestate postcondition odnosi się do wartości wyrażenia na początku metody lub właściwości. Używa wyrażenia `Contract.OldValue<T>(e)`, gdzie `T` jest typem `e`. Można pominąć argument typu ogólnego, zawsze wtedy, gdy kompilator może wywnioskować jej typu. (Na przykład, kompilator języka C# zawsze wnioskuje typ z powodu argumentu.) Ma kilka ograniczeń dotyczących co może mieć miejsce w `e` i konteksty, w których może występować wyrażenie stary. Stare wyrażenie nie może zawierać innego wyrażenia stary. Co najważniejsze stare wyrażenie musi odwoływać się do wartości, które istniały w stanie wstępnym metody. Innymi słowy, musi być wyrażenie, które mogą być obliczane tak długo, jak jest warunkiem wstępnym metody `true`. Poniżej przedstawiono kilka wystąpień tej reguły.  
   
-    -   Wartość musi istnieć w stanie wstępnym metody. Aby można było odwoływać się do pola w obiekcie warunki wstępne musi gwarantować, czy ten obiekt zawsze jest różna od null.  
+    -   Wartość musi istnieć w stanie wstępnym metody. Aby można było odwoływać się do pola w obiekcie warunki wstępne musi gwarantować, że obiekt zawsze jest różna od null.  
   
     -   Nie można odwołać się do wartości zwracanej metody w wyrażeniu stare:  
   

@@ -3,12 +3,12 @@ title: Co nowego w języku C# 6 — Przewodnik po języku C#
 description: Dowiedz się, nowych funkcji w języku C# w wersji 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 53d9c5e60ac00b4c7c96aa3e42a60253219e1c70
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841119"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308457"
 ---
 # <a name="whats-new-in-c-6"></a>Co nowego w języku C# 6
 
@@ -22,13 +22,13 @@ Wersja 6.0 C# zawiera wiele funkcji, które zwiększają produktywność dla dew
     - Umożliwia tworzenie metod jednej linii za pomocą wyrażenia lambda.
 * [przy użyciu statycznej](#using-static):
     - Wszystkie metody klasy pojedynczej można zaimportować do bieżącej przestrzeni nazw.
-* [Null — operatorów warunkowych](#null-conditional-operators):
+* [Operatory warunkowe null](#null-conditional-operators):
     - Możesz można zwięźle i bezpiecznie uzyskiwać dostęp do elementów członkowskich obiektu nadal trwa sprawdzanie dostępności o wartości null za pomocą operatora warunkowego wartości null.
 * [Interpolacja ciągów](#string-interpolation):
     - Możesz zapisać ciąg formatowania wyrażeń za pomocą wbudowanego wyrażeń, zamiast argumentów pozycyjnych.
 * [Filtry wyjątków](#exception-filters):
     - Możesz przechwytywać wyrażenia na podstawie właściwości wyjątku lub inny stan programu. 
-* [Wyrażenie nameof](#nameof-expressions):
+* [`nameof` Wyrażenie](#the-nameof-expression):
     - Można pozwolić kompilatorowi Generowanie ciągów reprezentujących symboli.
 * [await w catch i finally blokuje](#await-in-catch-and-finally-blocks):
     - Możesz użyć `await` wyrażeń w lokalizacjach, które wcześniej niedopuszczalne je.
@@ -211,34 +211,34 @@ Zapewnienie, że po lewej stronie jest oceniane tylko raz, umożliwi to równie�
 
 ## <a name="string-interpolation"></a>Interpolacja ciągów
 
-C# 6 zawiera nową składnię do redagowania ciągi z ciągiem formatu i wyrażenia, które są obliczane, aby utworzyć inne wartości typu ciąg.
+C# 6 zawiera nową składnię do redagowania ciągi znaków z ciągu i osadzone wyrażenia, które są obliczane, aby utworzyć inne wartości typu ciąg.
 
-Tradycyjnie, trzeba było używać parametry pozycyjne w metodzie, takie jak `string.Format`:
+Tradycyjnie, trzeba było używać parametry pozycyjne w metodzie, takie jak <xref:System.String.Format%2A?displayProperty=nameWithType>:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Za pomocą języka C# 6 nowe [Interpolacja ciągów](../language-reference/tokens/interpolated.md) funkcji umożliwia osadzanie wyrażeń w ciągu formatu. Po prostu poprzedzony ciąg z `$`:
+Za pomocą języka C# 6 nowe [Interpolacja ciągów](../language-reference/tokens/interpolated.md) funkcji umożliwia osadzanie wyrażeń w ciągu. Po prostu poprzedzony ciąg z `$`:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-W tym przykładzie początkowej użyto wyrażenia właściwości podstawione wyrażeń. Możesz rozwinąć na tej składni, aby użyć dowolnego wyrażenia. Na przykład można obliczyć Średnia ocen studenta w ramach interpolacji:
+W tym przykładzie użyto wyrażenia właściwości podstawione wyrażeń. Możesz rozwinąć na tej składni, aby użyć dowolnego wyrażenia. Na przykład można obliczyć Średnia ocen studenta w ramach interpolacji:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
-Uruchomione w poprzednim przykładzie, może stwierdzisz, że dane wyjściowe `Grades.Average()` może mieć więcej miejsc dziesiętnych niż chcesz. Składnia interpolacji ciągu obsługuje format ciągów dostępne za pomocą metod formatowania wcześniej. Możesz dodać ciągów formatu w nawiasach klamrowych. Dodaj `:` następujące wyrażenie które ma format:
+Uruchomione w poprzednim przykładzie, może stwierdzisz, że dane wyjściowe `Grades.Average()` może mieć więcej miejsc dziesiętnych niż chcesz. Składnia interpolacji ciągu obsługuje format ciągów dostępne za pomocą metod formatowania wcześniej. Należy określić ciąg formatu w nawiasach klamrowych. Dodaj `:` następujące wyrażenie które ma format:
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
 Poprzedni wiersz kodu formatuje wartość `Grades.Average()` jako liczba zmiennoprzecinkowa z dwóch miejsc po przecinku.
 
-`:` Zawsze jest interpretowany jako separator wyrażeń formatowana i ciąg formatu. Gdy używa wyrażenie może prowadzić do problemów `:` w inny sposób, na przykład operator warunkowy:
+`:` Zawsze jest interpretowany jako separator wyrażeń formatowana i ciąg formatu. Gdy używa wyrażenie może prowadzić do problemów `:` w inny sposób, takie jak [operator warunkowy](../language-reference/operators/conditional-operator.md):
 
 ```csharp
 public string GetGradePointPercentages() =>
     $"Name: {LastName}, {FirstName}. G.P.A: {Grades.Any() ? Grades.Average() : double.NaN:F2}";
 ```
 
-W powyższym przykładzie `:` jest analizowany jako początek ciągu formatu nie należą do operatora warunkowego. We wszystkich przypadkach, w którym dzieje się tak można otoczyć wyrażenia z nawiasami, aby wymusić na kompilatorze interpretowanie wyrażenia, ponieważ planowane:
+W powyższym przykładzie `:` jest analizowany jako początek ciągu formatu nie należą do operatora warunkowego. We wszystkich przypadkach, w którym dzieje się tak należy ująć wyrażenia z nawiasami, aby wymusić na kompilatorze interpretowanie wyrażenia, ponieważ planowane:
 
 [!code-csharp[stringInterpolationConditional](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationConditional)]
 
@@ -249,19 +249,21 @@ Nie ma żadnych ograniczeń wyrażenia, które można umieścić między nawiasa
 W tym przykładzie widać, że można zagnieżdżać wyrażenia interpolacji ciągu wewnątrz innego wyrażenia interpolacji ciągu. W tym przykładzie jest bardzo prawdopodobne, bardziej złożone niż może pojawić się w kodzie produkcyjnym.
 Jest to raczej przedstawiają szeroki zakres funkcji. Dowolne wyrażenie języka C# mogą być umieszczone między nawiasami klamrowymi ciągu interpolowanym.
 
+Aby rozpocząć pracę z Interpolacja ciągów, zapoznaj się z [Interpolacja w języku C# ciągów](../quick-starts/interpolated-strings.yml) interaktywnego przewodnika Szybki Start.
+
 ### <a name="string-interpolation-and-specific-cultures"></a>Interpolacja ciągów i określonych kultur
 
-Wszystkie przykłady, które są wyświetlane w poprzedniej sekcji Formatowanie ciągów przy użyciu bieżącej kultury i języka na komputerze gdzie kod jest wykonywany. Często potrzebne formatującej ciąg powstały, używając określonej kultury.
-Aby zrobić, użyj fakt, że obiekt utworzony przez Interpolacja ciągów, które mogą być niejawnie konwertowane na <xref:System.FormattableString>.
+W przykładach pokazano format sekcji ciągi użyciu bieżącej kultury na komputerze, w której kod jest wykonywany. Często potrzebne formatującej ciąg powstały, używając określonej kultury.
+Aby zrobić, użyj fakt, że obiekt utworzony przez Interpolacja ciągów, które mogą być niejawnie konwertowane na <xref:System.FormattableString?displayProperty=nameWithType>.
 
-<xref:System.FormattableString> Wystąpienie zawiera ciąg formatu oraz wynikiem oceny wyrażenia przed rozpoczęciem konwertowania ich na ciągi. Możesz użyć metody publiczne <xref:System.FormattableString> do określania kulturę, gdy ciąg formatowania. Na przykład poniższy przykład tworzy ciąg przy użyciu kultury niemieckim. (Używa znaku ',' jako separatora dziesiętnego i "." znaków jako separatora.)
+<xref:System.FormattableString> Wystąpienie zawiera ciąg formatu złożonego oraz wynikiem oceny wyrażenia przed rozpoczęciem konwertowania ich na ciągi. Użyj <xref:System.FormattableString.ToString(System.IFormatProvider)> metodę, aby określić kulturę, gdy ciąg formatowania. Na przykład poniższy przykład tworzy ciąg przy użyciu kultury niemieckim. (Używa znaku ',' jako separatora dziesiętnego i "." znaków jako separatora.)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Aby uzyskać więcej informacji, zobacz [Interpolacja ciągów](../language-reference/tokens/interpolated.md) tematu.
+Aby uzyskać więcej informacji, zobacz [Interpolacja ciągów](../language-reference/tokens/interpolated.md) artykułu i [Interpolacja w języku C# ciągów](../tutorials/string-interpolation.md) samouczka.
 
 ## <a name="exception-filters"></a>Filtry wyjątków
 
@@ -311,7 +313,7 @@ W kodzie należy dodać filtra wyjątku, aby każdy kod odzyskiwania jest wykony
 Po dodaniu w kodzie, należy ustawić swoje debuger przerywa przy wszystkich wyjątkach nieobsługiwanych. Uruchom program w debugerze i debuger przerywa zawsze, gdy `PerformFailingOperation()` zgłasza `RecoverableException`.
 Debuger przerywa programu, ponieważ w klauzuli "catch" nie można wykonać z powodu filtru wyjątków zwraca wartość false.
 
-## <a name="nameof-expressions"></a>`nameof` Wyrażenia
+## <a name="the-nameof-expression"></a>`nameof` Wyrażenia
 
 `nameof` Wyrażenie ma nazwę symbolu. Jest doskonałym sposobem na narzędzia do pracy w każdym przypadku, gdy potrzebna jest nazwa zmiennej, właściwość lub pole elementu członkowskiego.
 

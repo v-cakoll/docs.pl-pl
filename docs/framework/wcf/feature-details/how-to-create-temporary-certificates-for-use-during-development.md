@@ -110,7 +110,7 @@ Aby uzyskać więcej informacji na temat korzystania z certyfikatów w programie
 
 ## <a name="net-framework-security"></a>zabezpieczenia .NET Framework
 
-Pamiętaj usunąć wszystkie certyfikaty urzędu głównego tymczasowe z **zaufane główne urzędy certyfikacji** i **osobistych** foldery, klikając prawym przyciskiem myszy certyfikat, a następnie klikając ** Usuń**.
+Pamiętaj usunąć wszystkie certyfikaty urzędu głównego tymczasowe z **zaufane główne urzędy certyfikacji** i **osobistych** foldery, klikając prawym przyciskiem myszy certyfikat, a następnie klikając  **Usuń**.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,12 +2,12 @@
 title: '&lt;authentication&gt; w &lt;serviceCertificate&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 9ef17c8bedf6bcef21a7c59d98a86bb20ad2da80
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811d54b49d8cd4fddbf196dbb524c5d303805c4f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752549"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316457"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;authentication&gt; w &lt;serviceCertificate&gt;, element
 Określa ustawienia używane przez serwer proxy klienta do uwierzytelniania certyfikatów usługi, które są uzyskiwane przy użyciu negocjacji SSL/TLS.  
@@ -29,40 +29,40 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty i elementy podrzędne, elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|customCertificateValidatorType|Ciąg. Typ i zestaw używany do walidacji typu niestandardowego.|  
-|tryb certificateValidationMode|Określa jeden z trzech trybów używanych do walidacji poświadczenia. Jeśli ustawiono `Custom`, a następnie należy dostarczyć także customCertificateValidator. Wartość domyślna to `ChainTrust`.|  
+|customCertificateValidatorType|ciąg. Typ i zestaw używany do walidacji typu niestandardowego.|  
+|tryb certificateValidationMode|Określa jeden z trzech trybów używanych do walidacji poświadczenia. Jeśli ustawiono `Custom`, a następnie customCertificateValidator musi również zostać dostarczony. Wartość domyślna to `ChainTrust`.|  
 |revocationMode|Jeden z trybów użytych do sprawdzenia odwołanych list certyfikatów (CRL). Wartość domyślna to `Online`.|  
-|trustedStoreLocation|Jeden z dwóch lokalizacji magazynu systemu: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana, gdy negocjowane jest certyfikat usługi do klienta. Sprawdzanie poprawności jest wykonywane przed **zaufane osoby** są przechowywane w lokalizacji określonej magazynu. Wartość domyślna to `CurrentUser`.|  
+|trustedStoreLocation|Jedną z dwóch lokalizacji magazynu systemu: `LocalMachine` lub `CurrentUser`. Ta wartość jest używana, gdy certyfikat usługi jest negocjowane do klienta. Sprawdzanie poprawności jest wykonywane względem **zaufane osoby** są przechowywane w lokalizacji określonego magazynu. Wartość domyślna to `CurrentUser`.|  
   
 ## <a name="customcertificatevalidator-attribute"></a>customCertificateValidator atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|String|Określa nazwę typu i zestawu i innych danych można znaleźć typu.|  
+|String|Określa nazwę typu i zestawu i inne dane, używana do znajdowania typu.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>tryb certificateValidationMode atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Jedną z następujących wartości: None, uległ awarii, ChainTrust, PeerOrChainTrust, niestandardowe.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Wyliczenie|Jedną z następujących wartości: Brak zaufania elementów równorzędnych, ChainTrust, PeerOrChainTrust, niestandardowe.<br /><br /> Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Jedną z następujących wartości: NoCheck, Online, w trybie Offline.<br /><br /> Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Wyliczenie|Jedną z następujących wartości: NoCheck, Online, w trybie Offline.<br /><br /> Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|Wyliczenie|Jedną z następujących wartości: LocalMachine lub CurrentUser. Wartość domyślna to CurrentUser. Jeśli aplikacja kliencka jest uruchomiona na koncie systemu, następnie certyfikat jest zwykle w obszarze LocalMachine. Jeśli aplikacja kliencka jest uruchomiona na koncie użytkownika, następnie certyfikat ten jest zwykle w CurrentUser.|  
+|Wyliczenie|Jedną z następujących wartości: LocalMachine lub CurrentUser. Wartość domyślna to CurrentUser. Jeśli aplikacja kliencka jest uruchomiona w ramach konta systemowego, następnie certyfikat jest zazwyczaj w obszarze LocalMachine. Jeśli aplikacja kliencka jest uruchomiona w ramach konta użytkownika, następnie certyfikat znajduje się zwykle w CurrentUser.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -71,15 +71,15 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Określa certyfikat używany podczas uwierzytelniania usługi do klienta.|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Określa certyfikat używany podczas uwierzytelniania usługi dla klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- `certificateValidationMode` Atrybut ten element konfiguracji określa poziom zaufania używany do uwierzytelniania certyfikatów. Domyślnie po ustawieniu poziomu `ChainTrust`, który określa, że każdy certyfikat musi zostać znaleziony w hierarchii kończy się za zaufany urząd certyfikacji w górnej części łańcucha certyfikatów. Jest to najbardziej bezpieczny tryb. Można również ustawić wartość `PeerOrChainTrust`, która określa, że certyfikaty wystawionej samodzielnie (relacja zaufania elementów równorzędnych) są akceptowane oraz certyfikaty, które znajdują się w łańcuchu zaufanego. Ta wartość jest używana podczas opracowywania i debugowania klientów i usług, ponieważ własnym wystawione certyfikaty nie muszą można zakupić z zaufanego urzędu. Podczas wdrażania klienta, użyj `ChainTrust` wartość zmiennej. Można również ustawić wartość `Custom` lub `None`. Aby użyć `Custom` wartości, należy także ustawić `customCertificateValidator` atrybutu zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć własnego niestandardowego modułu weryfikacji, musi dziedziczyć z klasy abstrakcyjnej obiektu X509CertificateValidator. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi korzystającej z niestandardowego moduł weryfikacji certyfikatów](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ `certificateValidationMode` Atrybut ten element konfiguracji określa poziom zaufania, używany do uwierzytelniania certyfikatów. Domyślnie ustawiono poziom `ChainTrust`, która określa, że każdy certyfikat musi zostać znaleziony w hierarchii końcówce zaufanego urzędu certyfikacji w górnej części łańcucha certyfikatów. Jest to najbezpieczniejsza opcja Tryb. Można również ustawić wartość, `PeerOrChainTrust`, która określa, że własnym wystawionych certyfikatów (relacja zaufania elementów równorzędnych) są akceptowane oraz certyfikaty, które znajdują się w zaufanym łańcuchem. Ta wartość jest używana podczas opracowywania i debugowania klientów i usług, ponieważ własnym wystawionych certyfikatów nie należy zakupić od zaufanego urzędu. Podczas wdrażania klienta, użyj `ChainTrust` jest wartość. Można również ustawić wartość, `Custom` lub `None`. Aby użyć `Custom` wartości, należy także ustawić `customCertificateValidator` atrybutu do zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć własny niestandardowy moduł sprawdzania poprawności, musi dziedziczyć z klasy abstrakcyjnej X509CertificateValidator. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi korzystającej z modułu weryfikacji certyfikatów niestandardowe](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
- `revocationMode` Atrybut określa, jak certyfikaty są sprawdzane pod kątem odwołań. Wartość domyślna to `online` co oznacza, że certyfikaty będzie sprawdzana automatycznie odwołania. Aby uzyskać więcej informacji, zobacz [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ `revocationMode` Atrybut określa, jak certyfikaty są sprawdzane pod kątem odwołań. Wartość domyślna to `online` co oznacza, że certyfikaty będą automatycznie sprawdzane dla odwołania. Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład ma dwa zadania. Określa pierwszy certyfikat usługi dla klienta podczas komunikacji z punktami końcowymi, których nazwa domeny jest www.contoso.com za pośrednictwem protokołu HTTP. Po drugie go określa lokalizację trybu i magazynu odwołania używany podczas uwierzytelniania.  
+ Poniższy przykład wykonuje dwa zadania. Najpierw Określa certyfikat usługi dla klienta do użycia podczas komunikowania się z punktami końcowymi, których nazwa domeny jest `www.contoso.com` za pośrednictwem protokołu HTTP. Po drugie określa wartości odwołania tryb i magazynem lokalizację używane podczas uwierzytelniania.  
   
 ```xml  
 <serviceCertificate>  

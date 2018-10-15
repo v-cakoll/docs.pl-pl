@@ -2,12 +2,12 @@
 title: Aktualizacja dynamiczna
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076722"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323126"
 ---
 # <a name="dynamic-update"></a>Aktualizacja dynamiczna
 Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów aplikacji, aby zaktualizować definicję przepływu pracy z istniejącym wystąpieniem przepływu pracy. Może to być do zaimplementowania poprawki, nowe wymagania, lub aby pomieścić nieoczekiwanych zmian. Ten temat zawiera omówienie funkcji aktualizacji dynamicznej wprowadzona w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -24,7 +24,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów 
 4.  [Zastosuj mapy aktualizacji do wystąpień żądaną utrwalonych przepływów pracy](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
->  Należy pamiętać, że kroki od 1 do 3, które obejmują tworzenie mapy aktualizacji, może być odbywa się niezależnie od zastosowania aktualizacji. Typowy scenariusz, to, że przepływ pracy dla deweloperów spowoduje utworzenie aktualizacji mapy w trybie offline, a następnie administrator zastosuje aktualizację w późniejszym czasie.  
+>  Należy pamiętać, że kroki od 1 do 3, które obejmują tworzenie mapy aktualizacji, może być odbywa się niezależnie od zastosowania aktualizacji. Typowy scenariusz, że przepływ pracy dla deweloperów utworzy aktualizacji mapy w trybie offline, a następnie administrator zastosuje aktualizację w późniejszym czasie.  
   
  Ten temat zawiera omówienie procesu aktualizacji dynamicznej dodawania nowe działanie do utrwalonego wystąpienia skompilowanych Xaml przepływu pracy.  
   

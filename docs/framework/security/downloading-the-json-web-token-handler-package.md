@@ -1,40 +1,40 @@
 ---
 title: Pobieranie pakietu programu obsługi tokenów sieci Web JSON
-ms.date: 03/30/2017
+ms.date: 10/10/2018
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
-ms.openlocfilehash: 5a4846a5ec92324105f41b320d0d77f8749c28f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f878d23afd76488de7da03f16f72cbfa43c17d7
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404680"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316483"
 ---
-# <a name="downloading-the-json-web-token-handler-package"></a>Pobieranie pakietu programu obsługi tokenów sieci Web JSON
-W tym temacie omówiono sposób pobierania i używania programu obsługi tokenów sieci Web JSON w projekcie.  
-  
-## <a name="downloading-the-json-web-token-handler"></a>Pobieranie programu obsługi tokenów sieci Web JSON  
- Rozszerzenia JSON programu obsługi tokenów sieci Web jest dostępna jako pakietu NuGet, który dodaje konieczne zestawy, a odwołania do projektu. Jeśli nie masz już zainstalowany NuGet, przejdź do [nuget.org](http://nuget.org) go zainstalować. Widać Historia wersji rozszerzenia odwiedzając jej stronę na NuGet: [obsługi tokenów sieci Web JSON na NuGet](http://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)  
-  
-#### <a name="downloading-the-json-web-token-handler-by-using-the-package-manager-gui"></a>Pobieranie programu obsługi tokenów sieci Web JSON przy użyciu graficznego interfejsu użytkownika Menedżera pakietów  
-  
-1.  W programie Visual Studio, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań**, a następnie wybierz **Zarządzaj pakietami NuGet**.  
-  
-2.  W **Zarządzaj pakietami NuGet** okna, kliknij pole wyszukiwania i wprowadź `JWT Token Handler` i naciśnij klawisz **Enter**.  
-  
-3.  W okienku wyników kliknij **zainstalować** przycisku do pierwszego wyniku.  
-  
-4.  Pakiet zostanie rozpocząć pobieranie. Przed dodaniem jej do projektu, pojawi się okno dialogowe akceptacji licencji. Jeśli akceptujesz postanowienia licencyjne, kliknij przycisk **akceptuję**.  
-  
-5.  Najnowsze zestawów programu obsługi tokenów sieci Web JSON zostanie pobrany i dodane do projektu.  
-  
-#### <a name="downloading-the-json-web-token-handler-by-using-the-package-manager-console"></a>Pobieranie programu obsługi tokenów sieci Web JSON przy użyciu konsoli Menedżera pakietów  
-  
-1.  W programie Visual Studio, kliknij przycisk **narzędzia**, **Menedżer pakietów biblioteki**, a następnie **Konsola Menedżera pakietów**.  
-  
-2.  **Konsola Menedżera pakietów** pojawi się. Wprowadź poniższy tekst i naciśnij klawisz **Enter**:  
-  
-    ```powershell  
-    Install-Package System.IdentityModel.Tokens.Jwt  
-    ```  
-  
-3.  Najnowsze zestawów programu obsługi tokenów sieci Web JSON zostanie pobrany i dodane do projektu.
+# <a name="download-the-json-web-token-handler-package"></a>Pobieranie pakietu programu obsługi tokenów Web JSON
+
+W tym temacie omówiono sposób pobierania i używania programu obsługi tokenów Web JSON w projekcie.
+
+Rozszerzenie JSON Web Token Handler jest dostępne jako pakiet NuGet, który dodaje niezbędne zespoły i odwołania do projektu. Jeśli nie masz jeszcze zainstalowanego Menedżera NuGet, przejdź do strony [nuget.org](https://nuget.org) go zainstalować. Można zobaczyć historię wersji rozszerzenia odwiedzając jego stronę na NuGet: [JSON Web Token Handler dla narzędzia NuGet](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
+
+## <a name="use-the-package-manager-gui"></a>Użyj Menedżera pakietów GUI
+
+1. W programie Visual Studio, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań**, a następnie wybierz pozycję **Zarządzaj pakietami NuGet**.
+
+2. W **Zarządzaj pakietami NuGet** okna, kliknij pole wyszukiwania i wprowadź `JWT Token Handler` i naciśnij klawisz **Enter**.
+
+3. W okienku wyników kliknij **zainstalować** przycisku dla pierwszego wyniku.
+
+4. Pakiet rozpocznie się pobieranie. Zanim zostanie dodany do projektu, pojawi się okno dialogowe akceptacja licencji. Jeśli akceptujesz postanowienia licencyjne, kliknij przycisk **akceptuję**.
+
+5. Najnowsze zestawy programu obsługi tokenów Web JSON zostaną pobrane i dodane do projektu.
+
+## <a name="use-the-package-manager-console"></a>Za pomocą konsoli Menedżera pakietów
+
+1. W programie Visual Studio, kliknij przycisk **narzędzia** > **Menedżera pakietów NuGet** > **Konsola Menedżera pakietów**.
+
+2. **Konsola Menedżera pakietów** pojawia się. Wprowadź poniższy tekst i naciśnij klawisz **Enter**:
+
+    ```powershell
+    Install-Package System.IdentityModel.Tokens.Jwt
+    ```
+
+3. Najnowsze zestawy programu obsługi tokenów Web JSON zostaną pobrane i dodane do projektu.

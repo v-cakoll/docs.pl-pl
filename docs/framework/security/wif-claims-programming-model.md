@@ -3,12 +3,12 @@ title: Model programowania oświadczeń programu WIF
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 95df026684f536a64ffe15f65264c470dff164da
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197568"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316509"
 ---
 # <a name="wif-claims-programming-model"></a>Model programowania oświadczeń programu WIF
 Deweloperzy platformy ASP.NET i Windows Communication Foundation (WCF) zwykle używać interfejsów IIdentity i IPrincipal do pracy z informacji o tożsamości użytkownika. W .NET 4.5 Windows Identity Foundation (WIF) jest zintegrowana w taki sposób, że oświadczenia są teraz zawsze stosowany w przypadku dowolnego podmiotu zabezpieczeń, jak pokazano na poniższym diagramie:
@@ -23,7 +23,7 @@ Deweloperzy platformy ASP.NET i Windows Communication Foundation (WCF) zwykle u�
 
 - <xref:System.Security.Claims.Claim.Value%2A> zawiera wartość oświadczenia i jest reprezentowany jako ciąg. Na przykład adres e-mail może być reprezentowany jako "someone@contoso.com".
 
-- <xref:System.Security.Claims.Claim.ValueType%2A> reprezentuje typ wartości oświadczenia i zazwyczaj jest to identyfikator URI. Na przykład typ string jest reprezentowany jako `http://www.w3.org/2001/XMLSchema#string`. Typ wartości musi mieć postać QName zgodnie ze schematem XML. Wartość powinna być w formacie `namespace#format` umożliwiające programu WIF do wypełniania wyjściowego prawidłową wartość QName. Jeśli przestrzeń nazw nie jest dobrze zdefiniowany przestrzeni nazw, wygenerowany kod XML prawdopodobnie nie może być schematu sprawdzania poprawności, ponieważ nie będzie opublikowana plik XSD dla tej przestrzeni nazw. Typ wartości domyślnej jest `http://www.w3.org/2001/XMLSchema#string`. Zobacz [ http://www.w3.org/2001/XMLSchema ](https://go.microsoft.com/fwlink/?LinkId=209155) dla typów dobrze znaną wartością, która umożliwia bezpieczne.
+- <xref:System.Security.Claims.Claim.ValueType%2A> reprezentuje typ wartości oświadczenia i zazwyczaj jest to identyfikator URI. Na przykład typ string jest reprezentowany jako `http://www.w3.org/2001/XMLSchema#string`. Typ wartości musi mieć postać QName zgodnie ze schematem XML. Wartość powinna być w formacie `namespace#format` umożliwiające programu WIF do wypełniania wyjściowego prawidłową wartość QName. Jeśli przestrzeń nazw nie jest dobrze zdefiniowany przestrzeni nazw, wygenerowany kod XML prawdopodobnie nie może być schematu sprawdzania poprawności, ponieważ nie będzie opublikowana plik XSD dla tej przestrzeni nazw. Typ wartości domyślnej jest `http://www.w3.org/2001/XMLSchema#string`. Aby uzyskać informacje o typach dobrze znaną wartością, których można bezpiecznie zobacz [schematu XML W3C](https://www.w3.org/2001/XMLSchema) strony.
 
 - <xref:System.Security.Claims.Claim.Issuer%2A> jest to identyfikator usługę tokenu zabezpieczającego (STS), który wystawił oświadczenie. To może być reprezentowana jako adres URL usługi STS lub nazwę, która reprezentuje usługi STS, takie jak `https://sts1.contoso.com/sts`.
 

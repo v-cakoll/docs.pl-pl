@@ -3,12 +3,12 @@ title: Historia języka C# — Przewodnik po języku C#
 description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504416"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316262"
 ---
 # <a name="the-history-of-c"></a>Historia języka C# #
 
@@ -29,7 +29,7 @@ Główne funkcje języka C# 1.0 obejmuje:
 - [Interfejsy](../programming-guide/interfaces/index.md)
 - [Zdarzenia](../events-overview.md)
 - [Właściwości](../properties.md)
-- [Delegaci](../delegates-overview.md)
+- [Delegaty](../delegates-overview.md)
 - [Wyrażenia](../programming-guide/statements-expressions-operators/expressions.md)
 - [Instrukcje](../programming-guide/statements-expressions-operators/statements.md)
 - [Atrybuty](../programming-guide/concepts/attributes/index.md)
@@ -145,10 +145,10 @@ Chociaż nie jest funkcją języka tradycyjnego sam jak jeden element wraz z tą
 
 Najbardziej aktualną wersję główną jest C# w wersji 7.0. Ta wersja ma kilka rzeczy ewolucyjny, jak i chłodnej w szyjnej języka C# 6.0, ale bez kompilator jako usługa. Poniżej przedstawiono nowe funkcje:
 
-- [Limit zmiennych](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [Limit zmiennych](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [Dekonstrukcja i kolekcje](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [Dopasowanie wzorca](./csharp-7.md#pattern-matching)
-- [Funkcje lokalne](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [Funkcje lokalne](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [Wyrażenie rozwiniętej zabudowanych członków](./csharp-7.md#more-expression-bodied-members)
 - [Zmienne lokalne ref i zwraca](./csharp-7.md#ref-locals-and-returns)
 

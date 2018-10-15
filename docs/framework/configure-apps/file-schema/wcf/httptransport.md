@@ -2,12 +2,12 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: cbd375652a2051c22e12e12e7650077e56ed2d7d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ddce1053a7494a84d0266c7ad14f6b1937365fa5
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086417"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316431"
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Określa protokół transportu HTTP przekazywania wiadomości SOAP do niestandardowego powiązania.  
@@ -47,7 +47,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |allowCookies|Wartość logiczna określająca, czy klient akceptuje pliki cookie i propaguje je do przyszłych żądań. Wartość domyślna to `false`.<br /><br /> Podczas interakcji z usługami sieci Web ASMX, które używają plików cookie, można użyć tego atrybutu. W ten sposób można się upewnić, że pliki cookie, zwrócona z serwera są automatycznie kopiowane do wszystkich przyszłych żądań za daną usługę.|  
 |authenticationScheme|Określa protokół używany do uwierzytelniania żądań klienta przetwarzanych przez odbiornik HTTP. Prawidłowe wartości są następujące:<br /><br /> -Podsumowanie: Określa uwierzytelnianie szyfrowane.<br />-Negocjowania: Negocjuje z klientem, aby określić schemat uwierzytelniania. Jeśli zarówno klient, jak i serwer obsługują protokół Kerberos, jest używany; w przeciwnym razie uwierzytelnianie NTLM jest używany.<br />-Ntlm: Określa uwierzytelniania NTLM.<br />-Podstawowa: Określa podstawowego uwierzytelniania.<br />-Anonimowe: Określa uwierzytelnianie anonimowe.<br /><br /> Wartość domyślna to anonimowe. Ten atrybut jest typu <xref:System.Net.AuthenticationSchemes>. Ten atrybut można ustawić tylko raz.|  
 |bypassProxyOnLocal|Wartość logiczna, która wskazuje, czy pominąć serwer proxy dla adresów lokalnych. Wartość domyślna to `false`.<br /><br /> Lokalny adres jest taki, który znajduje się w lokalnej sieci LAN albo sieci intranet.<br /><br /> Windows Communication Foundation (WCF) zawsze ignoruje serwera proxy, jeśli adres usługi zaczyna się od `http://localhost`.<br /><br /> Należy używać nazwy hosta zamiast nazwy localhost, gdy klienci mają go za pośrednictwem serwera proxy w przypadku usług na tym samym komputerze.|  
-|hostnameComparisonMode|Określa tryb porównywania nazwy hosta HTTP używany do analizowania identyfikatorów URI. Prawidłowe wartości to,<br /><br /> -StrongWildcard: ("+") jest zgodna wszystkich możliwych nazw hostów w kontekście określony schemat, port i względną identyfikatora URI.<br />— Dokładnie: bez symboli wieloznacznych<br />-WeakWildcard: ("*") jest zgodna wszystkich możliwych nazwą hosta w kontekście określony schemat, port i względną UIR, które nie zostały jawnie dopasowany lub za pośrednictwem mechanizmu silny symbol wieloznaczny.<br /><br /> Wartość domyślna to StrongWildcard. Ten atrybut jest typu `System.ServiceModel.HostnameComparisonMode`.|  
+|hostnameComparisonMode|Określa tryb porównywania nazwy hosta HTTP używany do analizowania identyfikatorów URI. Prawidłowe wartości to,<br /><br /> -StrongWildcard: ("+") jest zgodna wszystkich możliwych nazw hostów w kontekście określony schemat, port i względną identyfikatora URI.<br />— Dokładnie: bez symboli wieloznacznych<br />-WeakWildcard: ("\*") jest zgodna wszystkich możliwych nazwą hosta w kontekście określony schemat, port i względną UIR, które nie zostały jawnie dopasowany lub za pośrednictwem mechanizmu silny symbol wieloznaczny.<br /><br /> Wartość domyślna to StrongWildcard. Ten atrybut jest typu `System.ServiceModel.HostnameComparisonMode`.|  
 |keepAliveEnabled|Wartość logiczna określająca, czy ustanowić trwałe połączenie z zasobem internetowym.|  
 |wartość maxBufferSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar buforu. Wartość domyślna to 524288|  
 |proxyAddress|Identyfikator URI, który określa adres serwera proxy HTTP. Jeśli `useSystemWebProxy` jest `true`, to ustawienie musi być `null`. Wartość domyślna to `null`.|  

@@ -4,12 +4,12 @@ description: Dowiedz się, jak zaimplementować bramy interfejsu API za pomocą 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6e03909074fbf1d72dace35f38996a761f1a437d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522203"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121431"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>Wdrażanie bramy interfejsu API za pomocą Ocelot
 
@@ -346,9 +346,9 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5203:80"   
+    - "5203:80"
   volumes:
     - ./src/ApiGateways/Web.Bff.Marketing/apigw:/app/configuration
 ```
@@ -363,25 +363,25 @@ Dzieląc bramy interfejsu API na wiele bram interfejsu API, zespoły deweloperó
 
 Teraz po uruchomieniu ramach aplikacji eShopOnContainers przy użyciu bramy interfejsu API (domyślnie włączone w programie VS podczas otwierania rozwiązania w ramach aplikacji eShopOnContainers ServicesAndWebApps.sln, czy działa "docker-compose up"), zostaną wykonane następujące trasy próbki. 
 
-Na przykład podczas odwiedzania adresu URL połączenia nadrzędnego http://localhost:5202/api/v1/c/catalog/items/2/ obsługiwanej przez webshoppingapigw bramy interfejsu API, uzyskać wynik z wewnętrznego adresu URL podrzędne http://catalog.api/api/v1/2 w ramach hosta platformy Docker, tak jak w poniższym przeglądarki.
+Na przykład podczas odwiedzania adresu URL połączenia nadrzędnego `http://localhost:5202/api/v1/c/catalog/items/2/` obsługiwanej przez webshoppingapigw bramy interfejsu API, uzyskać wynik z wewnętrznego adresu URL podrzędne `http://catalog.api/api/v1/2` w ramach hosta platformy Docker, tak jak w poniższym przeglądarki.
 
 ![](./media/image35.png)
 
-**Rysunek 8-34.** Uzyskiwanie dostępu do mikrousług przy użyciu adresu URL podany przez bramę interfejsu API 
+**Rysunek 8-34.** Uzyskiwanie dostępu do mikrousług przy użyciu adresu URL podany przez bramę interfejsu API
 
-Ze względu na testowania i debugowania ze względu na, jeśli chce się uzyskać bezpośredni dostęp do kontenera Docker katalogu (tylko w środowisku programistycznym), bez przekazywania przez bramę interfejsu API, ponieważ "catalog.api" jest wewnętrznym hosta platformy Docker (usługa rozpoznawania nazw DNS Odnajdywanie obsługiwane przez docker-compose nazw usług), jedynym sposobem uzyskiwania bezpośredniego dostępu do kontenera jest za pośrednictwem portu zewnętrznego, opublikowane w docker-compose.override.yml, która jest dostępna tylko w przypadku tworzenia testów, takich jak http://localhost:5101/api/v1/Catalog/items/1 poniżej Przeglądarka.
+Ze względu na testowania i debugowania ze względu na, jeśli chce się uzyskać bezpośredni dostęp do kontenera Docker katalogu (tylko w środowisku programistycznym), bez przekazywania przez bramę interfejsu API, ponieważ "catalog.api" jest wewnętrznym hosta platformy Docker (usługa rozpoznawania nazw DNS Odnajdywanie obsługiwane przez docker-compose nazw usług), jedynym sposobem uzyskiwania bezpośredniego dostępu do kontenera jest za pośrednictwem portu zewnętrznego, opublikowane w docker-compose.override.yml, która jest dostępna tylko w przypadku tworzenia testów, takich jak `http://localhost:5101/api/v1/Catalog/items/1` poniżej Przeglądarka.
 
 ![](./media/image36.png)
 
 **Rysunek 8 – 35.** Bezpośredni dostęp do mikrousług do celów testowych 
 
-Ale gdy aplikacja jest skonfigurowana, dzięki czemu uzyskuje dostęp wszystkie mikrousługi za pośrednictwem bramy interfejsu API nie jest jednak przeniesiony bezpośrednio "skróty". 
+Ale gdy aplikacja jest skonfigurowana, dzięki czemu uzyskuje dostęp wszystkie mikrousługi za pośrednictwem bramy interfejsu API nie jest jednak przeniesiony bezpośrednio "skróty".
 
 ### <a name="the-gateway-aggregation-pattern-in-eshoponcontainers"></a>Wzorzec agregacji za pomocą bramy w ramach aplikacji eShopOnContainers
 
-Jak wprowadzone wcześniej, elastyczny sposób implementacji agregacji żądania jest za pomocą niestandardowych usług przez kod. Można również wdrożyć agregacji żądania z funkcją agregacji żądania w Ocelot, ale może nie być tak elastyczne, ilu potrzebujesz. Dlatego wybrane sposobem realizowania agregacji w ramach aplikacji eShopOnContainers jest jawne usługi internetowego interfejsu API platformy ASP.NET Core dla każdego agregatora. 
+Jak wprowadzone wcześniej, elastyczny sposób implementacji agregacji żądania jest za pomocą niestandardowych usług przez kod. Można również wdrożyć agregacji żądania z funkcją agregacji żądania w Ocelot, ale może nie być tak elastyczne, ilu potrzebujesz. Dlatego wybrane sposobem realizowania agregacji w ramach aplikacji eShopOnContainers jest jawne usługi internetowego interfejsu API platformy ASP.NET Core dla każdego agregatora.
 
-Zgodnie z tego podejścia diagram składu bramę interfejsu API jest w rzeczywistości nieco bardziej rozszerzony, biorąc pod uwagę usług agregatora, które nie są wyświetlane na diagramie uproszczona architektura globalnego przedstawionego wcześniej. 
+Zgodnie z tego podejścia diagram składu bramę interfejsu API jest w rzeczywistości nieco bardziej rozszerzony, biorąc pod uwagę usług agregatora, które nie są wyświetlane na diagramie uproszczona architektura globalnego przedstawionego wcześniej.
 
 Na poniższym diagramie widać również jak usług agregatora odnoszą się do ich powiązane bramy interfejsu API.
 
@@ -389,13 +389,13 @@ Na poniższym diagramie widać również jak usług agregatora odnoszą się do 
 
 **Rysunek 8-36.** Architektura ramach aplikacji eShopOnContainers z usługami agregatora
 
-Poniższa ilustracja jest powiększania sprawy, dzięki czemu można zauważyć, jak dla obszaru "Zakupy" biznesowe aplikacje klienckie można poprawić, zmniejszając liczbę operacji przy użyciu mikrousług, korzystając z tych usług agregator w ramach obszaru bramy interfejsu API. 
+Poniższa ilustracja jest powiększania sprawy, dzięki czemu można zauważyć, jak dla obszaru "Zakupy" biznesowe aplikacje klienckie można poprawić, zmniejszając liczbę operacji przy użyciu mikrousług, korzystając z tych usług agregator w ramach obszaru bramy interfejsu API.
 
  ![](./media/image38.png)
 
 **Rysunek 8-37.** Powiększ wizji usług agregatora
 
-Można zauważyć, jak podczas na diagramie przedstawiono możliwe żądania pochodzące z bramy interfejsu API go uzyskać dość złożony. Mimo że można zobaczyć, jak strzałki w kolorze niebieskim będzie można uprościć, z punktu widzenia aplikacji klienta podczas używania wzorca agregatora, zmniejszając liczbę operacji i opóźnień w komunikacji, ostatecznie znacznego poprawienia użytkownika środowisko (aplikacje zdalne aplikacje mobilne i SPA), szczególnie. 
+Można zauważyć, jak podczas na diagramie przedstawiono możliwe żądania pochodzące z bramy interfejsu API go uzyskać dość złożony. Mimo że można zobaczyć, jak strzałki w kolorze niebieskim będzie można uprościć, z punktu widzenia aplikacji klienta podczas używania wzorca agregatora, zmniejszając liczbę operacji i opóźnień w komunikacji, ostatecznie znacznego poprawienia użytkownika środowisko (aplikacje zdalne aplikacje mobilne i SPA), szczególnie.
 
 W przypadku "Marketing" obszar działalności i mikrousług jest bardzo prosty przypadek użycia, więc nie istniała potrzeba, aby użyć agregatora, ale może być również możliwe, jeśli to konieczne.
 
@@ -466,9 +466,12 @@ namespace OcelotApiGw
                     x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                     {
                         ValidAudiences = new[] { "orders", "basket", "locations", "marketing", "mobileshoppingagg", "webshoppingagg" }
-                    };                   
+                    };
                 });
             //...
+        }
+    }
+}
 ```
 
 Następnie również należy ustawić autoryzacji za pomocą atrybutu [Authorize] na żaden zasób były dostępne takich jak mikrousługi, takie jak w następującym kontrolerem mikrousług koszyka.
@@ -479,7 +482,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.Controllers
     [Route("api/v1/[controller]")]
     [Authorize]
     public class BasketController : Controller
-    {   
+    {
       //...
     }
 }
@@ -506,9 +509,9 @@ services.AddAuthentication(options =>
 });
 ```
 
-Jako następny krok, jeśli zostanie podjęta próba dostępu do żadnych zabezpieczonej mikrousług, takie jak mikrousługi koszyka za pomocą adresu URL przekierowuje oparte na bramy interfejsu API, takich jak http://localhost:5202/api/v1/b/basket/1 , a następnie otrzymasz 401 Brak autoryzacji, chyba że należy podać prawidłowy token. Z drugiej strony Jeśli adres URL przekierowuje jest uwierzytelniony, Ocelot wywoła, niezależnie od transmisji schemat jest skojarzony z nim (adres URL wewnętrznej mikrousług).
+Jako następny krok, jeśli zostanie podjęta próba dostępu do żadnych zabezpieczonej mikrousług, takie jak mikrousługi koszyka za pomocą adresu URL przekierowuje oparte na bramy interfejsu API, takich jak `http://localhost:5202/api/v1/b/basket/1`, a następnie otrzymasz 401 Brak autoryzacji, chyba że należy podać prawidłowy token. Z drugiej strony Jeśli adres URL przekierowuje jest uwierzytelniony, Ocelot wywoła, niezależnie od transmisji schemat jest skojarzony z nim (adres URL wewnętrznej mikrousług).
 
-**Autoryzacja w warstwie przekieruje Ocelot firmy.**  Ocelot obsługuje autoryzacji opartej na oświadczeniach, ocenione po uwierzytelniania. Autoryzacja jest ustawiona na poziomie trasy, dodając następujący kod do konfiguracji ponownie rozesłać. 
+**Autoryzacja w warstwie przekieruje Ocelot firmy.**  Ocelot obsługuje autoryzacji opartej na oświadczeniach, ocenione po uwierzytelniania. Autoryzacja jest ustawiona na poziomie trasy, dodając następujący kod do konfiguracji ponownie rozesłać.
 
 ```
 "RouteClaimsRequirement": {
@@ -516,13 +519,13 @@ Jako następny krok, jeśli zostanie podjęta próba dostępu do żadnych zabezp
 }
 ```
 
-W tym przykładzie wywołanego oprogramowania pośredniczącego autoryzacji Ocelot znajdzie Jeśli użytkownik ma typ oświadczenia "UserType" w tokenie, a wartość to roszczenie "pracownik". Jeśli nie, użytkownik nie będzie autoryzowany, a odpowiedź będzie miała 403 — Dostęp zabroniony. 
+W tym przykładzie wywołanego oprogramowania pośredniczącego autoryzacji Ocelot znajdzie Jeśli użytkownik ma typ oświadczenia "UserType" w tokenie, a wartość to roszczenie "pracownik". Jeśli nie, użytkownik nie będzie autoryzowany, a odpowiedź będzie miała 403 — Dostęp zabroniony.
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>Przy użyciu transferu danych przychodzących rozwiązania Kubernetes, a także Ocelot interfejsu API bramy
 
-Korzystając z rozwiązania Kubernetes (na przykład w klastrze usługi Azure Kubernetes Service), zwykle ujednolicenie żądań HTTP za pośrednictwem [Kuberentes ruch przychodzący warstwy](https://kubernetes.io/docs/concepts/services-networking/ingress/) na podstawie *Nginx*. 
+Korzystając z rozwiązania Kubernetes (na przykład w klastrze usługi Azure Kubernetes Service), zwykle ujednolicenie żądań HTTP za pośrednictwem [warstwy transferu danych przychodzących rozwiązania Kubernetes](https://kubernetes.io/docs/concepts/services-networking/ingress/) na podstawie *Nginx*. 
 
-Kuberentes Jeśli nie używasz jakiejkolwiek metody transferu danych przychodzących, wówczas usług i zasobników miała tylko rutowalne adresy IP przez sieć klastra. 
+W usłudze Kubernetes Jeśli nie używasz jakiejkolwiek metody transferu danych przychodzących, następnie zasobników i usług mają adresy IP tylko routing przez sieć klastra. 
 
 Jednak jeśli używasz metody transferu danych przychodzących, będziesz mieć warstwy środkowej między Internetem a usługi (łącznie z bram Twojego interfejsu API), działający jako zwrotny serwer proxy.
 
@@ -530,19 +533,19 @@ Definicja ruchu przychodzącego to zbiór reguł zezwalających na połączenia 
 
 W ramach aplikacji eShopOnContainers, podczas opracowywania lokalnie i za pomocą tylko maszynie deweloperskiej jako hosta platformy Docker nie używasz dowolnego ruchu przychodzącego, ale tylko wielu bramy interfejsu API. 
 
-Jednak gdy przeznaczonych dla środowiska "produkcyjne", w oparciu o Kuberentes, ramach aplikacji eShopOnCOntainers korzysta z transferu danych przychodzących przed bramy interfejsu API. Dzięki temu klienci wciąż wywołać tego samego podstawowego adresu URL, ale żądania są kierowane do wielu bram API lub BFF. 
+Jednak gdy przeznaczonych dla środowiska "produkcyjne", oparte na platformie Kubernetes, ramach aplikacji eShopOnContainers korzysta z transferu danych przychodzących przed bramy interfejsu API. Dzięki temu klienci wciąż wywołać tego samego podstawowego adresu URL, ale żądania są kierowane do wielu bram API lub BFF. 
 
-Należy pamiętać, że bramy interfejsu API są Frontony lub fasad, dzięki czemu są ujawniane tylko usług, ale nie aplikacje sieci web, które są zazwyczaj poza ich zakresem. Ponadto bramy interfejsu API może ukryć niektórych wewnętrznych mikrousług. 
+Należy pamiętać, że bramy interfejsu API są Frontony lub fasad, dzięki czemu są ujawniane tylko usług, ale nie aplikacje sieci web, które są zazwyczaj poza ich zakresem. Ponadto bramy interfejsu API może ukryć niektórych wewnętrznych mikrousług.
 
 Ruch przychodzący, jednak jest po prostu Przekierowywanie żądań HTTP, ale nie próbuje ukryć wszystkie mikrousługi lub aplikacji sieci web.
 
-Umieszczenie warstwą Nginx ruch przychodzący w Kuberentes przed aplikacji sieci web, a także kilka bramy interfejsu API Ocelot / BFF jest idealnym rozwiązaniem architektury, jak pokazano na poniższym diagramie.
+Posiadanie warstwą Nginx ruch przychodzący w usłudze Kubernetes przed aplikacji sieci web, a także kilka bramy interfejsu API Ocelot / BFF jest idealnym rozwiązaniem architektury, jak pokazano na poniższym diagramie.
 
  ![](./media/image41.png)
 
 **Rysunek 8-40.** Warstwa danych przychodzących w ramach aplikacji eShopOnContainers podczas wdrażania do rozwiązania Kubernetes
 
-Gdy wdrażasz ramach aplikacji eShopOnContainers do Kuberentes udostępnia kilka usług lub punktów końcowych za pośrednictwem _ruch przychodzący_, po prostu poniżej postfixes na adresy URL:
+Gdy wdrażasz ramach aplikacji eShopOnContainers do rozwiązania Kubernetes, udostępnia kilka usług lub punktów końcowych za pośrednictwem _ruch przychodzący_, po prostu poniżej postfixes na adresy URL:
 
 -   `/` SPA klienta aplikacji sieci web
 -   `/webmvc` dla klienta aplikacji sieci web MVC
@@ -552,10 +555,9 @@ Gdy wdrażasz ramach aplikacji eShopOnContainers do Kuberentes udostępnia kilka
 -   `/mobileshoppingapigw` dla mobilnych BFF i zakupów procesów biznesowych
 -   `/mobilemarketingapigw` przenośne BFF i marketingowych procesów biznesowych
 
-Podczas wdrażania usługi Kubernetes, każdej bramy interfejsu API Ocelot jest używany plik różnych "configuration.json" dla każdego _zasobnika_ uruchamianie bramy interfejsu API. Te pliki "configuration.json" są dostarczane przez zainstalowanie (pierwotnie ze skryptem deploy.ps1) woluminu, który został utworzony w oparciu o Kuberentes _mapy config_ o nazwie "ocelot". Każdy kontener instaluje jego pliku konfiguracji powiązane w folderze kontenera o nazwie `/app/configuration`.
+Podczas wdrażania usługi Kubernetes, każdej bramy interfejsu API Ocelot jest używany plik różnych "configuration.json" dla każdego _zasobnika_ uruchamianie bramy interfejsu API. Te pliki "configuration.json" są dostarczane przez zainstalowanie (pierwotnie ze skryptem deploy.ps1) wolumin utworzony w oparciu o usługi Kubernetes _mapy config_ o nazwie "ocelot". Każdy kontener instaluje jego pliku konfiguracji powiązane w folderze kontenera o nazwie `/app/configuration`.
 
 W ramach aplikacji eShopOnContainers plików kodu źródłowego oryginalnych plików "configuration.json" znajdują się w obrębie `k8s/ocelot/` folderu. Istnieje jeden plik dla każdego BFF/APIGateway.
-
 
 ## <a name="additional-cross-cutting-features-in-an-ocelot-api-gateway"></a>Dodatkowe funkcje przekrojowe bramy interfejsu API Ocelot
 
@@ -575,9 +577,6 @@ Istnieją inne ważne funkcje zbadaniu i użyć w przypadku użycia Ocelot bramy
 
 -   **Ograniczanie szybkości** 
     [*http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
-
-
-
 
 >[!div class="step-by-step"]
 [Poprzedniego](background-tasks-with-ihostedservice.md) [dalej] (../microservice-ddd-cqrs-patterns/index.md)

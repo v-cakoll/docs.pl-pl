@@ -15,54 +15,54 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/04/2018
 ms.locfileid: "43512341"
 ---
-# <a name="c-guide"></a>Przewodnik po C#
+# <a name="c-guide"></a>Przewodnik po języku C#
 
-Podręcznik języka C# zawiera wiele informacji o języku C#. Ta strona jest przeznaczona dla wielu różnych odbiorców. W zależności od twojego doświadczenia z programowaniem lub używaniem języka C# i platformy .NET możesz chcieć zapoznać się z różnymi sekcjami tego przewodnika.
+Przewodnik po języku C# zawiera wiele zasobów dotyczących języka C# i jest przeznaczony dla różnych odbiorców. W zależności od Twojego doświadczenia z programowaniem, używaniem języka C# i platformy .NET możesz zapoznać się z różnymi sekcjami tego przewodnika.
 
-* Dla zupełnie nowych deweloperów:
-  * Zacznij z sekcją [Szybki start](quick-starts/index.md). Te przewodniki pozwalają eksplorować język C# interaktywnie w twojej przeglądarce. Kolejny krok to sekcja [samouczków](tutorials/index.md). Przedstawiono w nich sposoby tworzenia od podstaw programów w języku C#. Samouczki zawierają opisany krok po kroku proces tworzenia programów. Pokazują one koncepcje językowe, a także uczą jak tworzyć programy w C# na własną rękę. Jeśli wolisz najpierw przeczytac ogólny przegląd języka wypróbuj [Podróż po języku](tour-of-csharp/index.md). Wyjaśniono tam pojęcia obowiązujące w C#. Po przeczytaniu zdobędziesz podstawową wiedzę na temat języka i będziesz w stanie wypróbować samouczki lub zbudować coś na własną rękę.
+* Dla deweloperów bez żadnego doświadczenia:
+  * Rozpocznij od sekcji [przewodników Szybki start](quick-starts/index.md). Te przewodniki umożliwiają zapoznanie się z językiem C# interaktywnie w przeglądarce. Następnie możesz przejść do sekcji [samouczków](tutorials/index.md). Przedstawiono w nich sposoby tworzenia programów w języku C# od podstaw. Samouczki zawierają opisane krok po kroku procesy tworzenia programów. Przedstawiają one pojęcia dotyczące języka i pokazują, jak samodzielnie tworzyć programy w języku C#. Jeśli wolisz najpierw zapoznać się z ogólnymi informacjami, zobacz [prezentację języka C#](tour-of-csharp/index.md). Wyjaśniono tam pojęcia dotyczące języka C#. Po zapoznaniu się z nimi zdobędziesz podstawową wiedzę na temat języka i będziesz w stanie wypróbować samouczki lub utworzyć coś samodzielnie.
 
-* Dla deweloperów zaczynających z językiem C#:
-  * Jeżeli masz już wiedzę na temat programowania, ale nie znasz C#, zapoznaj się z [opisem języka C#](tour-of-csharp/index.md). Poruszono w nim tematy podstawowej składni i struktury języka, więc możesz skorzystać z niego, by porównać C# z innymi znanymi ci językami. Możesz również przejrzeć [samouczki](tutorials/index.md), by przetestować podstawowe programy napisane w C#.
+* Dla deweloperów nie znających języka C#:
+  * Jeżeli masz już doświadczenie w programowaniu, ale nie znasz języka C#, zapoznaj się z [prezentacją języka C#](tour-of-csharp/index.md). Zawiera ona opisy podstawowej składni i struktury języka, więc może służyć do porównania języka C# z innymi znanymi Ci językami. Możesz również przejrzeć [samouczki](tutorials/index.md), aby wypróbować podstawowe programy w języku C#.
 
 * Dla doświadczonych deweloperów języka C#:
-  * Jeżeli znasz już język, możesz zacząć od przeczytania na temat nowości, które pojawiły się w jego ostatniej wersji. Zapoznaj się z [Co nowego w C#](whats-new/index.md), by poznać nowe możliwości bieżącej wersji języka.
+  * Jeżeli znasz już język C#, możesz zacząć od przeczytania nowości, które pojawiły się w ostatniej wersji. Aby poznać nowe funkcje, zapoznaj się z sekcją [Co nowego w języku C#](whats-new/index.md).
   
-## <a name="how-the-c-guide-is-organized"></a>Organizacja przewodnika po C#
+## <a name="how-the-c-guide-is-organized"></a>Jak jest zorganizowany przewodnik po języku C#
 
-Istnieje kilka sekcji przewodnika. Możesz je czytać po kolei lub przejść bezpośrednio do interesujących cię rozdziałów. Niektóre sekcje koncentrują się intensywnie na języku. Inne dostarczają kompletnych scenariuszy, pokazujących niektóre rodzaje programów, które można utworzyć przy użyciu C# i .NET Frameworku.
+Przewodnik zawiera kilka sekcji. Możesz je czytać po kolei lub przejść bezpośrednio do interesujących Cię tematów. Niektóre sekcje koncentrują się intensywnie na języku. Inne zawierają kompletne scenariusze demonstrujące niektóre typy programów, jakie można utworzyć przy użyciu języka C# i program .NET Framework.
 
 * [Wprowadzenie](getting-started/index.md)
-  * W tej sekcji opisano, co należy zainstalować, by móc używać środowiska deweloperskiego C# na preferowanej platformie. Poszczególne tematy wyjaśniają jak utworzyć pierwszy program w C# na różnych wspieranych środowiskach.
+  * W tej sekcji opisano, co należy zainstalować, aby używać środowiska deweloperskiego języka C# na preferowanej platformie. Poszczególne tematy wyjaśniają, jak utworzyć pierwszy program w języku C# w różnych obsługiwanych środowiskach.
 
-* [Szybki start](quick-starts/index.md):
-  * Ten przewodnik dostarcza interaktywnych samouczków dla nowych deweloperów oraz uczy języka C# z pomocą przeglądarki przy użyciu interfejsu REPL (Read-Eval-Print Loop). Po zakończeniu lekcji można rozwijać swoje umiejętności programowania poprzez ćwiczenie tych samych lekcji na swojej maszynie.
+* [Przewodniki Szybki start dla języka C#](quick-starts/index.md):
+  * Przewodniki Szybki start dla języka C# zawierają interaktywne samouczki przeznaczone dla deweloperów bez doświadczenia. Ich celem jest zapoznanie się z językiem C# i nauka tego języka bezpośrednio w przeglądarce przy użyciu interfejsu REPL (Read-Eval-Print Loop). Po zakończeniu interaktywnych lekcji można rozwijać swoje umiejętności programowania, wykonując te same zadania na swojej maszynie.
 
 * [Samouczki](tutorials/index.md)
-  * Ta sekcja zawiera szereg kompletnych scenariuszy, zawierających zarówno kod, jak i opisy. Pokazuje preferowane idiomy, jakie funkcje języka C# najlepiej działają w różnych sytuacjach a także rozwiązania typowych zadań. Jeżeli najlepiej uczysz się widząc kod, ta sekcja jest dla ciebie. Możesz także pobrać cały kod i poeksperymentować z nim w swoim środowisku.
+  * Ta sekcja zawiera szereg kompletnych scenariuszy z uwzględnieniem zarówno opisów, jak i kodu. Wskazuje, dlaczego niektóre idiomy są preferowane, które funkcje języka C# najlepiej działają w różnych sytuacjach, a także pokazuje referencyjne wdrożenia dla typowych zadań. Jeżeli najlepiej uczysz się, widząc kod, zacznij od tej sekcji. Możesz także pobrać cały kod i poeksperymentować z nim w swoim środowisku.
 
-* [Podróż po języku](tour-of-csharp/index.md)
-  * Ta sekcja zawiera omówienie języka. Opisuje ona elementy, z których składają się programy napisane w C#, a także pokazuje możliwości języka. Zawiera przykłady wszystkich rozwiązań składniowych i tłumaczy najważniejsze zagadnienia.
+* [Prezentacja języka C#](tour-of-csharp/index.md)
+  * Ta sekcja zawiera ogólne omówienie języka. Opisuje ona elementy, z których składają się programy napisane w języku C#, a także pokazuje możliwości tego języka. Zawiera krótkie przykłady wszystkich elementów składni i tłumaczy najważniejsze zagadnienia dotyczące języka C#.
 
-* [Co nowego w C#](whats-new/index.md)
-  * Zawiera omówienie nowych funkcji dodanych w najnowszych wersjach języka i historię C#.
+* [Co nowego w języku C#](whats-new/index.md)
+  * Zawiera omówienie nowych funkcji dodanych w najnowszych wersjach języka C# oraz historię tego języka.
 
 <!--
 * [.NET Compiler Platform SDK](roslyn-sdk/index.md)
-  * SDK umożliwia pisanie komponentów, które analizują kod, sugerują zmiany lub dokonują w nim poprawek. W tej sekcji nauczysz się jak zorganizowane są poszczególne API, a także jak możesz tworzyć kod, który umożliwia ustalenie zasad i praktyk dla twojego zespołu. Zobaczysz tu także próbki kodu, pełne scenariusze i odnośniki do innych bibliotek wraz z przykładami użycia ich API.
+  * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [Przewodnik programowania w C#](../csharp/programming-guide/index.md)
+* [Przewodnik programowania w języku C#](../csharp/programming-guide/index.md)
   * Informacje dotyczące sposobów używania konstrukcji języka C# oraz praktyczne przykłady.
 
 * [Przewodniki](../csharp/walkthroughs.md)
-  * Zawiera linki do przewodników po C# wraz z krótkimi ich opisami.
+  * Zawiera linki do przewodników programowania, w których jest używany język C#, wraz z krótkimi opisami tych przewodników.
 
 * [Dokumentacja języka](language-reference/index.md)
-  * Ta sekcja zawiera materiały dotyczące języka C#. Pomaga zrozumieć składnię i semantykę C#. Zawiera również materiał referencyjny dotyczący typów, operatorów, atrybutów, dyrektyw preprocesora, przełączników kompilatora, błędów i ostrzeżeń kompilacji.
+  * Ta sekcja zawiera materiały referencyjne dotyczące języka C#. Pomaga zrozumieć składnię i semantykę języka C#. Zawiera również materiały referencyjne dotyczące typów, operatorów, atrybutów, dyrektyw preprocesora, przełączników kompilatora, błędów i ostrzeżeń kompilacji.
 
 * [Specyfikacja języka C#](../csharp/language-reference/language-specification/index.md)
-  * Odnośnik do najnowszej wersji specyfikacji języka C#.
+  * To jest link do najnowszej wersji specyfikacji języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 

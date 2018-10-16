@@ -2,12 +2,12 @@
 title: Używanie monikera programu WCF z klientami COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: f052504648d381d6fb19fb6db0ebb1dd1086ed3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1deeb125b94bcbab52db522b7304b972c05a28ed
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515722"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348786"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Używanie monikera programu WCF z klientami COM
 W tym przykładzie pokazano, jak użyć monikera programu Windows Communication Foundation (WCF) do integracji usług internetowych w środowiskach programistycznych opartych na modelu COM, takich jak Microsoft Office Visual Basic for Applications (VBA pakietu Office) lub Visual Basic 6.0. W tym przykładzie składa się z klienta Windows Script Host (VBS), obsługi klienta biblioteki (.dll) i usługi biblioteki (.dll), hostowanej przez Internetowe usługi informacyjne (IIS). Usługa jest usługą Kalkulator i klient modelu COM wywołuje operacji matematycznych — dodawania, odejmowania, mnożenia i dzielenia — w usłudze. Aktywność klienta jest widoczny w systemie windows okno komunikatu.  
@@ -26,7 +26,7 @@ W tym przykładzie pokazano, jak użyć monikera programu Windows Communication 
   
  Implementuje usługi `ICalculator` kontrakt zdefiniowany jak pokazano w poniższym przykładzie kodu.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -52,19 +52,19 @@ public interface ICalculator
 ## <a name="typed-contract"></a>Wpisane kontraktu  
  Aby użyć monikera programu przy użyciu umowy wpisane, odpowiednio opartego na atrybutach typy kontraktu usługi musi być zarejestrowana w modelu COM. Po pierwsze, klient musi zostać wygenerowany przy użyciu [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Uruchom następujące polecenie w wierszu polecenia w katalogu klienta można wygenerować typizowanego serwera proxy.  
   
-```  
+```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
 ```  
   
  Ta klasa muszą być zawarte w projekcie i projektu powinny być skonfigurowane do generowania modelu COM-widoczne, podpisanego zestawu podczas kompilowania. Plik AssemblyInfo.cs powinny być objęte następujący atrybut.  
   
-```  
+```csharp
 [assembly: ComVisible(true)]  
 ```  
   
  Po utworzeniu projektu, należy zarejestrować typy widoczne dla modelu COM za pomocą `regasm` jak pokazano w poniższym przykładzie.  
   
-```  
+```console  
 regasm.exe /tlb:CalcProxy.tlb client.dll  
 ```  
   
@@ -79,7 +79,7 @@ gacutil.exe /i client.dll
   
  Aplikacja kliencka ComCalcClient.vbs używa `GetObject` funkcję, aby utworzyć serwer proxy dla usługi przy użyciu składni moniker usługi, aby określić adres, powiązanie i kontraktu usługi.  
   
-```  
+```vbscript
 Set typedServiceMoniker = GetObject(  
 "service4:address=http://localhost/ServiceModelSamples/service.svc, binding=wsHttpBinding,   
 contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")  
@@ -95,7 +95,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  Posiadanie skonstruowany wystąpienia serwera proxy przy użyciu monikera programu, aplikacja kliencka może wywoływać metody na serwerze proxy, co skutkuje infrastruktury monikera usługi wywoływania odpowiednich operacji usługi.  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
@@ -107,7 +107,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
   
  Aplikacja kliencka ComCalcClient.vbs używa `FileSystemObject` dostępu do pliku zapisanego lokalnie WSDL, a następnie ponownie używa `GetObject` funkcję, aby utworzyć serwer proxy dla usługi.  
   
-```  
+```vbscript  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
 Const ForReading = 1  
 Set objFSO = CreateObject("Scripting.FileSystemObject")  
@@ -140,7 +140,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  Posiadanie skonstruowany wystąpienia serwera proxy przy użyciu monikera programu, aplikacja kliencka może wywoływać metody na serwerze proxy, co skutkuje infrastruktury monikera usługi wywoływania odpowiednich operacji usługi.  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
@@ -152,7 +152,7 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
   
  Aplikacja kliencka ComCalcClient.vbs ponownie używa `GetObject` funkcję, aby utworzyć serwer proxy dla usługi.  
   
-```  
+```vbscript  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
 mexMonikerString = "service4:mexAddress='http://localhost/servicemodelsamples/service.svc/mex'"  
 mexMonikerString = mexMonikerString + ", address='http://localhost/ServiceModelSamples/service.svc'"  
@@ -175,7 +175,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  Posiadanie skonstruowany wystąpienia serwera proxy przy użyciu monikera programu, aplikacja kliencka może wywoływać metody na serwerze proxy, co skutkuje infrastruktury monikera usługi wywoływania odpowiednich operacji usługi.  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 620f9e59d65630895c01aff7d47c76876f3319d1
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214826"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347802"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Zarządzanie przestrzeniami nazw w dokumencie XML
 Obszary nazw XML skojarzyć nazw elementów i atrybutów w dokumencie XML przy użyciu wstępnie zdefiniowanych i niestandardowych identyfikatorów URI. Aby utworzyć te skojarzenia, zdefiniuj prefiksów identyfikatorów URI przestrzeni nazw, a używać tych prefiksów do kwalifikowania nazwy elementów i atrybutów w danych XML. Przestrzenie nazw zapobiec kolizjom nazw elementów i atrybutów i umożliwić elementów i atrybutów o tej samej nazwie i obsługi sprawdzania poprawności w różny sposób.  
@@ -23,7 +23,7 @@ Obszary nazw XML skojarzyć nazw elementów i atrybutów w dokumencie XML przy u
   
  gdzie `<name>` jest prefiks przestrzeni nazw i `<"uri">` jest identyfikator URI, który identyfikuje przestrzeni nazw. Po zadeklarowaniu prefiks służy do kwalifikowania elementów i atrybutów w dokumencie XML i skojarzyć je z identyfikatora URI obszaru nazw. Ponieważ prefiks przestrzeni nazw są używane w całym dokumencie, powinno być krótki długości.  
   
- W tym przykładzie definiuje dwa `BOOK` elementów. Pierwszy element element kwalifikuje się według prefiksu, `mybook`, a drugi element kwalifikuje się według prefiksu, `bb`. Prefiksu dla każdego jest skojarzona z innej przestrzeni nazw identyfikatora URI:  
+ W tym przykładzie definiuje dwa `BOOK` elementów. Pierwszy element kwalifikuje się według prefiksu, `mybook`, a drugi element kwalifikuje się według prefiksu, `bb`. Prefiksu dla każdego jest skojarzona z innej przestrzeni nazw identyfikatora URI:  
   
 ```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  

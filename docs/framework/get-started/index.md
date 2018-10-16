@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99da0b0367270c4cea470a23ea97f0165a712a9b
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522333"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349072"
 ---
 # <a name="get-started-with-the-net-framework"></a>Wprowadzenie do programu .NET Framework
 
@@ -67,7 +67,7 @@ Jeśli jesteś deweloperem aplikacji, należy wybrać dowolny język programowan
 
 Tworzenie aplikacji .NET Framework lub składniki, wykonaj następujące czynności:
 
-1. Jeśli nie jest preinstalowany w systemie operacyjnym, należy zainstalować wersję programu .NET Framework, przeznaczony dla twojej aplikacji. Najnowsza wersja produkcyjna jest .NET Framework 4.7.2, który jest preinstalowany w systemie Windows 10 kwietnia 2018 r. Zaktualizuj i jest dostępny do pobrania we wcześniejszych wersjach systemu operacyjnego Windows. Aby uzyskać wymagania systemowe programu .NET Framework, zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md). Aby uzyskać informacje na temat instalowania innych wersji systemu .NET Framework, zobacz [Przewodnik instalacji](../../../docs/framework/install/guide-for-developers.md). Dodatkowe pakiety .NET Framework są wydawane poza pasmem, która oznacza, że ich wydaniu w sposób ciągły poza wszelkie regularnie lub według harmonogramu cyklu. Aby uzyskać informacje o tych paloetach, zobacz [.NET Framework i wersji Out-of-Band](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. Jeśli nie jest preinstalowany w systemie operacyjnym, należy zainstalować wersję programu .NET Framework, przeznaczony dla twojej aplikacji. Najnowsza wersja produkcyjna jest .NET Framework 4.7.2. Jest preinstalowany w systemie Windows 10 kwietnia 2018 Update i Windows 10 października 2018 r. Zaktualizuj i jest dostępna do pobrania we wcześniejszych wersjach systemu operacyjnego Windows. Aby uzyskać wymagania systemowe programu .NET Framework, zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md). Aby uzyskać informacje na temat instalowania innych wersji systemu .NET Framework, zobacz [Przewodnik instalacji](../../../docs/framework/install/guide-for-developers.md). Dodatkowe pakiety .NET Framework są wydawane poza pasmem, która oznacza, że ich wydaniu w sposób ciągły poza wszelkie regularnie lub według harmonogramu cyklu. Aby uzyskać informacje o tych paloetach, zobacz [.NET Framework i wersji Out-of-Band](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
 2. Wybierz język lub języki obsługiwane przez .NET Framework, która ma być używany do tworzenia aplikacji. Dostępnych jest kilka języków, w tym [języka Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F #](../../fsharp/index.md)i C + +/ interfejsu wiersza polecenia platformy firmy Microsoft. (Język programowania, który pozwala na opracowywanie aplikacji dla programu .NET Framework działa zgodnie z [specyfikacja Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkId=199862).)
 

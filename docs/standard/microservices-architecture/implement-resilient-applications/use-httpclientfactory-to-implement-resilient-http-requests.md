@@ -4,12 +4,12 @@ description: HttpClientFactory to ceniona fabryki, dostępne od platformy .NET C
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 800dc410d0cc49aecb7d936d50f9e575389cf278
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308336"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347932"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Użyj HttpClientFactory do zaimplementowania odporne na błędy żądań HTTP
 
@@ -21,7 +21,7 @@ Oryginalne i dobrze znane [HttpClient](https://docs.microsoft.com/dotnet/api/sys
 
 Jako pierwszego wydania tej klasy jest możliwe do rozporządzania, korzystania z niego przy użyciu `using` instrukcja nie jest najlepszym rozwiązaniem, ponieważ nawet wtedy, gdy użytkownik dispose `HttpClient` obiektu bazowego gniazda nie jest od razu zwolniony i może spowodować poważne zagrożenie o nazwie "gniazda wyczerpanie ". Aby uzyskać więcej informacji na temat tego problemu, zobacz [używasz problem HttpClient i jest on destabilizing oprogramowania](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) wpis w blogu.
 
-W związku z tym `HttpClient` jest przeznaczony do jednorazowego utworzenia ich i ponownie używane w całym cyklu życia aplikacji. Utworzenie wystąpienia `HttpClient` klasy dla każdego żądania będą wyczerpać liczbę gniazd, które są dostępne pod dużym obciążeniem. Czy problem spowoduje `SocketException` błędy. Możliwe sposoby rozwiązania tego problemu są oparte na tworzeniu `HttpClient` obiektu jako pojedyncze lub statyczna, zgodnie z opisem w tym [artykule firmy Microsoft dotyczących użycia HttpClient](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient). 
+W związku z tym `HttpClient` jest przeznaczony do jednorazowego utworzenia ich i ponownie używane w całym cyklu życia aplikacji. Utworzenie wystąpienia `HttpClient` klasy dla każdego żądania będą wyczerpać liczbę gniazd, które są dostępne pod dużym obciążeniem. Czy problem spowoduje `SocketException` błędy. Możliwe sposoby rozwiązania tego problemu są oparte na tworzeniu `HttpClient` obiektu jako pojedyncze lub statyczna, zgodnie z opisem w tym [artykule firmy Microsoft dotyczących użycia HttpClient](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient). 
 
 Ale drugi problem ze `HttpClient` , może mieć w przypadku użycia jej jako pojedyncze lub obiektu statycznego. W tej sprawy, pojedyncze lub statyczna `HttpClient` zmian systemu DNS nie jest zgodny z zgodnie z opisem w tym [problemu w repozytorium .NET Core w usłudze GitHub](https://github.com/dotnet/corefx/issues/11224). 
 
@@ -33,7 +33,7 @@ Do rozwiązania tych problemów wymienionych i zarządzania `HttpClient` przypad
 
 - Podaj centralną lokalizację do nazywania i konfigurowanie HttpClients logiczne. Na przykład może skonfigurować klienta (usługi agenta), który jest wstępnie skonfigurowana pod kątem dostępu do określonych mikrousług.
 - Skodyfikowanie koncepcji wychodzących oprogramowania pośredniczącego za pośrednictwem Delegowanie obsługi w `HttpClient` i wdrażanie na podstawie Polly oprogramowaniu pośredniczącym, aby korzystać z zasad firmy Polly pod kątem odporności.
-- `HttpClient` ma już pojęcie Delegowanie obsługi, które można połączyć ze sobą dla wychodzących żądań HTTP. Rejestrowanie klientów http do fabryki, a także można użyć procedury obsługi Polly, umożliwiająca Polly zasady służący do ponawiania, CircuitBreakers itp.
+- Klasa `HttpClient` ma już pojęcie delegowania programów obsługi, które można połączyć ze sobą dla wychodzących żądań HTTP. Rejestrowanie klientów http do fabryki, a także można użyć procedury obsługi Polly, umożliwiająca Polly zasady służący do ponawiania, CircuitBreakers itp.
 - Zarządzanie okresem istnienia HttpClientMessageHandlers, aby uniknąć wymienionych problemów/problemy, które mogą wystąpić podczas zarządzania `HttpClient` okresy istnienia samodzielnie. 
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>Wiele sposobów, aby użyć HttpClientFactory
@@ -155,7 +155,7 @@ Do tej pory kod przedstawiony jest po prostu wykonując regularne żądań Http,
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Za pomocą HttpClientFactory w programie .NET Core 2.1**
-    [*https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+    [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 
 -   **Repozytorium HttpClientFactory GitHub**

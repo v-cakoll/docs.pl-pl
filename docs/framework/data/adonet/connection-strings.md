@@ -1,26 +1,27 @@
 ---
 title: Parametry połączenia w ADO.NET
-ms.date: 03/30/2017
+ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1e6e2b6870195c99279639e1f4576a30b7126d4d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583698"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347945"
 ---
 # <a name="connection-strings-in-adonet"></a>Parametry połączenia w ADO.NET
-.NET Framework 2.0 wprowadzono nowe możliwości do pracy z parametrów połączenia, łącznie z wprowadzeniem nowych słów kluczowych do klasy konstruktora parametrów połączenia, które ułatwiają tworzenie ciągów prawidłowego połączenia w czasie wykonywania.  
-  
-Parametry połączenia zawierają informacje inicjowania, który jest przekazywany jako parametr od dostawcy danych do źródła danych. Składnia jest zależna od dostawcy danych, a ciąg połączenia jest analizowany podczas próby otwarcia połączenia. Błędy składniowe generowania wyjątków czasu wykonywania, ale inne błędy występują tylko wtedy, gdy źródło danych otrzymuje informacje o połączeniu. Po zweryfikowaniu źródła danych dotyczy opcje określone w parametrach połączenia i otwarcie połączenia.
-  
-Format ciągu połączenia jest rozdzielaną średnikami listę par klucz/wartość do parametru:
+
+Parametry połączenia zawierają informacje inicjowania, który jest przekazywany jako parametr od dostawcy danych do źródła danych. Dostawca danych otrzymuje parametry połączenia jako wartość <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> właściwości. Dostawca analizuje ciąg połączenia i zapewnia, że składnia jest poprawna i że słowa kluczowe są obsługiwane. A następnie <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> metoda przekazuje parametry przeanalizowany połączenia ze źródłem danych. Źródło danych dalsze przeprowadza weryfikację i nawiąże połączenie.
+
+## <a name="connection-string-syntax"></a>Składnia ciągu połączenia
+
+Ciąg połączenia jest rozdzielaną średnikami listę par klucz/wartość do parametru:
   
     keyword1=value; keyword2=value;
   
-Słowa kluczowe nie jest rozróżniana wielkość liter. Jednakże, wartości, może być uwzględniana jest wielkość liter, w zależności od źródła danych. Słowa kluczowe i wartości mogą zawierać [białych znaków](https://en.wikipedia.org/wiki/Whitespace_character#Unicode), mimo że początkowe i końcowe białe znaki, jest ignorowany słów kluczowych i nienotowane wartości.
+Słowa kluczowe nie jest rozróżniana wielkość liter. Jednakże, wartości, może być uwzględniana jest wielkość liter, w zależności od źródła danych. Słowa kluczowe i wartości mogą zawierać [białych znaków](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Początkowe i końcowe białe znaki, jest ignorowany słów kluczowych i nienotowane wartości.
 
-Jeśli wartość zawiera średnika, [znaków kontrolnych Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters)początkowe i końcowe białe znaki go muszą być ujęte w pojedyncze lub podwójne znaki cudzysłowu, np.:
+Jeśli wartość zawiera średnika, [znaków kontrolnych Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), lub wiodące lub końcowe białe znaki, muszą być ujęte w pojedyncze lub podwójne znaki cudzysłowu. Na przykład:
 
     Keyword=" whitespace  ";
     Keyword='special;character';
@@ -37,10 +38,12 @@ Znaki cudzysłowu, same, jak również równości, nie wymagają anulowania zape
 
 Ponieważ każda wartość jest do odczytu do następnego średnika lub końca ciągu, wartości w drugim przykładzie jest `a=b=c`, i końcowy średnik jest opcjonalne.
 
-Składnia ciągu prawidłowe połączenie jest zależna od dostawcy i został przekształcony w ciągu lat, za pomocą starszych interfejsów API, takich jak ODBC. .NET Framework Data Provider for SQL Server (SqlClient) zawiera wiele elementów z starsza składnia i jest zazwyczaj bardziej elastyczne, przy użyciu typowej składni ciągu połączenia. Są często równie prawidłowe synonimy dla elementów składnia ciągu połączenia, ale niektóre składni oraz błędy pisowni może powodować problemy. Na przykład "`Integrated Security=true`" jest prawidłowy, natomiast "`IntegratedSecurity=true`" powoduje wystąpienie błędu. Ponadto parametry połączenia, tworzony w czasie wykonywania z danych wejściowych użytkownika niezweryfikowanych mogą powodować atakami polegającymi na iniekcji ciągu, bezpiecznemu zabezpieczeń w źródle danych.
-  
-Aby rozwiązać te problemy, ADO.NET w wersji 2.0 wprowadzono nowe Konstruktorzy parametrów połączeń dla każdego dostawcy danych .NET Framework. Słowa kluczowe są widoczne jako właściwości, umożliwiając składnia ciągu połączenia zostać uwierzytelnionym przed przesłaniem do źródła danych.
-  
+Wszystkie ciągi połączenia współużytkować tę samą składnię podstawowe opisanych powyżej. Zbiór rozpoznane słowa kluczowe, jest zależna od dostawcy i został przekształcony w ciągu lat, za pomocą starszych interfejsów API, takich jak *ODBC*. *.NET Framework* dostawca danych dla *programu SQL Server* (`SqlClient`) obsługuje wiele słów kluczowych z interfejsów API starszych, ale jest zazwyczaj bardziej elastyczne i akceptuje synonimy dla wielu typowych parametrów połączenia słowa kluczowe.
+
+Błędów może spowodować błędy. Na przykład `Integrated Security=true` jest prawidłowy, ale `IntegratedSecurity=true` powoduje błąd.
+
+Parametry połączenia, tworzony ręcznie, w czasie wykonywania z danych wejściowych użytkownika niezweryfikowanych są narażone na ataki polegające na iniekcji ciągu i zagrozić zabezpieczeń w źródle danych. Aby rozwiązać te problemy *ADO.NET* 2.0 wprowadzono [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md) dla każdego *.NET Framework* dostawcy danych. Te Konstruktorzy parametrów połączeń ujawnić parametry jako silnie typizowane właściwości, dzięki czemu będzie można sprawdzić poprawność parametrów połączenia przed wysłaniem ich do źródła danych.
+
 ## <a name="in-this-section"></a>W tej sekcji  
  [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  Pokazuje sposób użycia `ConnectionStringBuilder` klas do utworzenia prawidłowego połączenia ciągów w czasie wykonywania.

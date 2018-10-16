@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 987f8e25014e8ce6413c998f6eb78d821558ecec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 27bd71d4caf59a44a45c70217aa351cf43a5c1c7
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518667"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349124"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Wdrażanie aplikacji klienta za pomocą programu .NET Framework
 
@@ -55,7 +55,7 @@ Wyświetla listę API .NET Framework, można użyć do tworzenia aplikacji za po
 [Tworzenie aplikacji dla wielu platform](../../docs/standard/cross-platform/index.md)  
 W tym artykule opisano różne metody, można użyć programu .NET Framework pod kątem wielu typów aplikacji klienckich.
 
-[Rozpoczynanie pracy z witrynami sieci Web platformy ASP.NET](http://www.asp.net/get-started/websites)  
+[Rozpoczynanie pracy z witrynami sieci Web platformy ASP.NET](https://www.asp.net/get-started/websites)  
 W tym artykule opisano sposób, możesz opracowywać aplikacje sieci web za pomocą programu ASP.NET.
 
 ## <a name="see-also"></a>Zobacz także

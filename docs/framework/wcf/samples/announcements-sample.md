@@ -2,12 +2,12 @@
 title: Anonse — przykład
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d03f22b7dd4d9886151e61a2a846f2dc64e661c3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865725"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347522"
 ---
 # <a name="announcements-sample"></a>Anonse — przykład
 W tym przykładzie pokazano, jak korzystać z funkcji ogłoszenie funkcji odnajdywania. Anonse Zezwól usługom do wysłania komunikatów Anons, które zawierają metadane dotyczące usługi. Domyślnie ogłoszenie hello jest wysyłany podczas uruchamiania usługi i ogłoszenie bye jest wysyłana, gdy usługa kończy pracę. Anonse te mogą być multiemisji lub mogą być wysyłane point-to-point. W tym przykładzie składa się z dwóch projektów usługi i klienta.  
@@ -15,7 +15,7 @@ W tym przykładzie pokazano, jak korzystać z funkcji ogłoszenie funkcji odnajd
 ## <a name="service"></a>Usługa  
  Ten projekt zawiera Kalkulator samodzielnie hostowanej usługi. W `Main` metoda, host usługi jest tworzona i punkt końcowy usługi jest dodawany do niego. Następnie <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> zostanie utworzony. Aby włączyć anonsów, punkt końcowy ogłoszenie musi zostać dodany do <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. W tym przypadku standardowy punkt końcowy przy użyciu protokołu UDP multiemisji jest dodawany jako punkt końcowy anonsu. Emituje to anonsów, za pośrednictwem dobrze znanego adresu protokołu UDP.  
   
-```  
+```csharp
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());  
   
 // Create a ServiceHost for the CalculatorService type.  
@@ -39,7 +39,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ## <a name="client"></a>Klient  
  W tym projekcie, należy pamiętać, że hosty klienta <xref:System.ServiceModel.Discovery.AnnouncementService>. Ponadto dwa delegaty są rejestrowane zdarzenia. Zdarzenia te określają, klient działanie po odebraniu anonsów online i offline.  
   
-```  
+```csharp
 // Create an AnnouncementService instance  
 AnnouncementService announcementService = new AnnouncementService();  
   
@@ -50,7 +50,7 @@ announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
   
  `OnOnlineEvent` i `OnOfflineEvent` metody obsługi komunikatów Anons hello i bye odpowiednio.  
   
-```  
+```csharp
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)  
 {  
     Console.WriteLine();              

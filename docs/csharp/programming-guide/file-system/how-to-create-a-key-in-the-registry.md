@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 383d47413078359d7491bf5f7f61dc5e70d842a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a3a6af8eb493ce17ac73769decd1f60b903ae165
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526741"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49337613"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Porady: tworzenie klucza w rejestrze (Visual C#)
 Ten przykład dodaje parę wartości "Name" i "Isabella" do rejestru bieżącego użytkownika, pod kluczem "Nazwy".  
@@ -60,4 +60,4 @@ key.Close();
 - <xref:System.IO?displayProperty=nameWithType>  
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)  
-- [Odczyt, zapis i usuwanie z rejestru z C#](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
+- [Odczyt, zapis i usuwanie z rejestru z C#](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

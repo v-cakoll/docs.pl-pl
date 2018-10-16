@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2bfc497076c99337d22512c657a40ba3963c974c
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195553"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347880"
 ---
 # <a name="using-client-sockets"></a>Używanie gniazd klientów
 Przed rozpoczęciem konwersacji za pośrednictwem <xref:System.Net.Sockets.Socket>, należy utworzyć potok danych między aplikacją i urządzenie zdalne. Mimo że istnieją inne rodziny adresów sieciowych i protokołów, w tym przykładzie pokazano, jak utworzyć połączenie TCP/IP do usługi zdalnej.  
@@ -42,7 +42,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- Internet Assigned Numbers Authority (Iana) definiuje numery portów dla usług common (Aby uzyskać więcej informacji, zobacz www.iana.org/assignments/port-numbers). Inne usługi można zarejestrowano numery portów z zakresu od 1024 do 65 535. Poniższy kod łączy adres IP dla host.contoso.com z numerem portu, aby utworzyć zdalnego punktu końcowego połączenia.  
+ Internet Assigned Numbers Authority (Iana) definiuje numery portów dla usług common (Aby uzyskać więcej informacji, zobacz [nazwę usługi i rejestru numer portu protokołu transportu](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Inne usługi można zarejestrowano numery portów z zakresu od 1024 do 65 535. Poniższy kod łączy adres IP dla host.contoso.com z numerem portu, aby utworzyć zdalnego punktu końcowego połączenia.  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  

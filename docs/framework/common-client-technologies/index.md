@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 733fc580-337e-4b7c-9756-b70798c18bc3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c12fdcaeefb2a7bcb1bcc7bae2aca6cb637e6f6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 166d0512a9d78c4019d8078124f3543ac37139a0
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753498"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347613"
 ---
 # <a name="common-client-technologies-in-the-net-framework"></a>Typowe technologie klienckie zastosowane w oprogramowaniu .NET Framework
-W tej sekcji opisano różne technologie, których można użyć w aplikacji klienta.  
+W tej sekcji opisano różne technologie, których można używać w aplikacjach klienckich.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Manipulacje i bezwładność](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
- Informacje dotyczące używania manipulacji i bezwładności klasy procesora w różnych platform interfejsu użytkownika, takich jak Microsoft Windows Presentation Foundation (WPF) lub XNA firmy Microsoft.  
+ Opisuje sposób używania manipulacji i bezwładności procesora klas w różnych platform tworzenia interfejsu użytkownika, takich jak Microsoft Windows Presentation Foundation (WPF) lub XNA firmy Microsoft.  
   
  [Usługi aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services.md)  
- Informacje dotyczące używania użyj [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] logowania, ról i usług aplikacji profil w ramach rozszerzenia Microsoft ASP.NET 2.0 AJAX w aplikacjach opartych na systemie Windows.
+ Opisuje sposób używania [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] logowania, ról i profilu usługi aplikacji w ramach rozszerzenia Microsoft ASP.NET 2.0 AJAX w aplikacjach z systemem Windows.

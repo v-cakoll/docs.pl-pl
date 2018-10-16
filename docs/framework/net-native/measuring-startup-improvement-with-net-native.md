@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2603c29fe9108a32f3c3ba86a5aba9fae5042b17
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9d8e104b5d32c07c4730154ff3fc69b452a024b7
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025522"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347906"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Dokonywanie pomiaru poprawy szybkości uruchomienia za pomocą architektury .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] znacznie poprawia czas uruchamiania aplikacji. To ulepszenie jest szczególnie widoczny na urządzeniach przenośnych, niskim poziomie zasilania i złożonych aplikacji. Ten temat ułatwia rozpoczęcie pracy z Instrumentacją podstawowe, potrzebne do mierzenia to ulepszenie uruchamiania.  
@@ -54,7 +54,7 @@ ms.locfileid: "48025522"
  Podczas instrumentacji aplikacji, możesz przystąpić do zbierania zdarzeń.  
   
 ## <a name="gathering-events-with-perfview"></a>Zbieranie zdarzeń za pomocą narzędzia PerfView  
- Narzędzia PerfView używa zdarzenia ETW, aby poddawać wszelkiego rodzaju badania wydajności aplikacji. Zawiera on również konfiguracji graficznego interfejsu użytkownika, który pozwala włączyć rejestrowanie dla różnych typów zdarzeń lub wyłączyć. Narzędzia PerfView to bezpłatne narzędzie i można je pobrać z [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=28567). Aby uzyskać więcej informacji, obejrzyj [filmom instruktażowym narzędzia PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial).  
+ Narzędzia PerfView używa zdarzenia ETW, aby poddawać wszelkiego rodzaju badania wydajności aplikacji. Zawiera on również konfiguracji graficznego interfejsu użytkownika, który pozwala włączyć rejestrowanie dla różnych typów zdarzeń lub wyłączyć. Narzędzia PerfView to bezpłatne narzędzie i można je pobrać z [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=28567). Aby uzyskać więcej informacji, obejrzyj [filmom instruktażowym narzędzia PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial).  
   
 > [!NOTE]
 >  Narzędzia PerfView nie może służyć do zbierania zdarzeń w systemach ARM. Służąca do gromadzenia zdarzeń w systemach ARM, należy użyć Rejestratora wydajności Windows (WPR). Aby uzyskać więcej informacji, zobacz [wpis w blogu Morrison zaliczko](https://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx).  
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Wybierz wszystkie zdarzenia wymienione w okienku po lewej stronie (Ctrl-A) i wybierz polecenie **Enter** klucza. Teraz można wyświetlić sygnatury czasowe z każdego zdarzenia. Tych sygnatury czasowe są względem początku śledzenia, więc należy odjąć czasu każdego zdarzenia od czasu rozpoczęcia do identyfikowania czas, jaki upłynął od uruchomienia procesu. Jeśli używasz Ctrl + kliknięcie zaznacz dwa sygnatury czasowe, zobaczysz różnią się one być wyświetlane na pasku stanu u dołu strony. Dzięki temu można łatwo sprawdzić czas między dwoma zdarzeń wyświetlania (w tym uruchomienie procesu). Można otworzyć menu skrótów dla widoku i wybierz z szereg użyteczne opcje, takie jak eksportowania do plików CSV lub otwierania Microsoft Excel, aby zapisać lub przetwarzania danych.  
   
- Powtarzając procedurę dla oryginalnej aplikacji i wersji skompilowanych przy użyciu [!INCLUDE[net_native](../../../includes/net-native-md.md)] narzędzia łańcucha, można porównać różnice w wydajności.   [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacje zazwyczaj początek szybciej niż non -[!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji. Jeśli interesuje Cię możesz głębiej, narzędzia PerfView można zidentyfikować także fragmenty kodu, które mają najwięcej czasu. Aby uzyskać więcej informacji, obejrzyj [samouczki narzędzia PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) lub przeczytaj [wpis w blogu Morrison zaliczko](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
+ Powtarzając procedurę dla oryginalnej aplikacji i wersji skompilowanych przy użyciu [!INCLUDE[net_native](../../../includes/net-native-md.md)] narzędzia łańcucha, można porównać różnice w wydajności.   [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacje zazwyczaj początek szybciej niż non -[!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji. Jeśli interesuje Cię możesz głębiej, narzędzia PerfView można zidentyfikować także fragmenty kodu, które mają najwięcej czasu. Aby uzyskać więcej informacji, obejrzyj [samouczki narzędzia PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) lub przeczytaj [wpis w blogu Morrison zaliczko](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Diagnostics.Tracing.EventSource>

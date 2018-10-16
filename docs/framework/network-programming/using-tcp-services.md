@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e6ab51da72a7cecac02a2bbd5664dee164239401
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c586416daedca63628672ddf090fa808fad3f4e
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195473"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347605"
 ---
 # <a name="using-tcp-services"></a>Stosowanie usług TCP
 <xref:System.Net.Sockets.TcpClient> Klasy żąda danych od zasobu w Internecie przy użyciu protokołu TCP. Metody i właściwości **TcpClient** abstrakcji szczegółowe informacje dotyczące tworzenia <xref:System.Net.Sockets.Socket> dla żądania i odbierania danych przy użyciu protokołu TCP. Ponieważ połączenie z urządzeniem zdalnym jest reprezentowany jako strumień, dane można czytać i napisane przy użyciu techniki obsługi strumienia środowiska .NET Framework.  
   
  Protokół TCP nawiązuje połączenie ze zdalnego punktu końcowego, a następnie używa tego połączenia do wysyłania i odbierania pakietów danych. TCP jest odpowiedzialny za zagwarantowanie, że pakiety danych są wysyłane do punktu końcowego i zebranych w odpowiedniej kolejności, po ich nadejściu.  
   
- Do nawiązywania połączeń TCP, musisz znać adres urządzenia sieciowego, obsługujący usługę, czego potrzebujesz, i musi znać port TCP używany przez usługę do komunikowania się. Internet Assigned Numbers Authority (Iana) definiuje numery portów dla usług common (patrz www.iana.org/assignments/port-numbers). Usługi nie ma na liście Iana może mieć numery portów z zakresu od 1024 do 65 535.  
+ Do nawiązywania połączeń TCP, musisz znać adres urządzenia sieciowego, obsługujący usługę, czego potrzebujesz, i musi znać port TCP używany przez usługę do komunikowania się. Internet Assigned Numbers Authority (Iana) definiuje numery portów dla usług common (zobacz [nazwę usługi i rejestru numer portu protokołu transportu](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Usługi nie ma na liście Iana może mieć numery portów z zakresu od 1024 do 65 535.  
   
  W poniższym przykładzie pokazano ustawienie zapasowej **TcpClient** nawiązać połączenia z serwerem czasu na porcie TCP 13.  
   

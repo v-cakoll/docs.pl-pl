@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a2a27f788fa84c41ccb818266fffc816237bb48
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 13dfdfd89bf91510146ce388620d3e51c2aa1f02
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44248920"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347529"
 ---
 # <a name="net-native-reflection-api-reference"></a>Dokumentacja interfejsu API odbicia dla platformy .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] zawiera trzy nowe typy wyjątków: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), i [ System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Należy pamiętać o następujących dotyczących wszystkich trzech typów:  
@@ -20,9 +20,9 @@ ms.locfileid: "44248920"
  Nie obsługują tych wyjątków w kodzie.  
  Te wyjątki wskazują, albo metadane wymagane przez aplikację jest nieobecne ( [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) i [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) wyjątki) i kod realizacji wymagane przez aplikację nie istnieje ( [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątek). Popraw tych warunków wyjątków, modyfikując dyrektywy środowiska uruchomieniowego (. rd.xml) plik, aby udostępnić kod wymagany metadanych lub implementacji w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [dyrektywy środowiska uruchomieniowego (rd.xml) odwołanie do pliku konfiguracji](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Dostępne są dwa narzędzia do rozwiązywania problemów, podaj odpowiednie wpisy dla pliku dyrektyw środowiska uruchomieniowego, które zostanie całkowicie wyeliminować [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) i [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątki:  
   
--   [MissingMetadataException narzędzia do rozwiązywania problemów](http://dotnet.github.io/native/troubleshooter/type.html) dla typów.  
+-   [MissingMetadataException narzędzia do rozwiązywania problemów](https://dotnet.github.io/native/troubleshooter/type.html) dla typów.  
   
--   [MissingMetadataException narzędzia do rozwiązywania problemów](http://dotnet.github.io/native/troubleshooter/method.html) dla metod.  
+-   [MissingMetadataException narzędzia do rozwiązywania problemów](https://dotnet.github.io/native/troubleshooter/method.html) dla metod.  
   
 > [!NOTE]
 >  Ta dokumentacja dokumenty trzy typy wyjątków, które są unikatowe dla [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Aby uzyskać dokumentację referencyjną dla interfejs API odbicia core .NET Framework, zobacz [przestrzenie nazw System.Reflection](https://msdn.microsoft.com/library/gg145033.aspx). Aby uzyskać dokumentację referencyjną dla .NET Framework core interoperacyjnego API, zobacz <xref:System.Runtime.InteropServices>.  

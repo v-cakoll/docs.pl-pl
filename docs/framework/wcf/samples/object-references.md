@@ -2,12 +2,12 @@
 title: Odwołania do obiektów
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 1aa8b1c9d135186dba9e4da75f0c7cb9297d8e5c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 00caccaeed8cebeec2e053d418ae6a5bf9a12138
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000245"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347747"
 ---
 # <a name="object-references"></a>Odwołania do obiektów
 W tym przykładzie przedstawiono sposób przekazywania obiektów według odwołania między serwerem a klientem. Zastosowań przykładowe symulowane *sieci społecznościowych*. Sieci społecznościowej składa się z `Person` klasę, która zawiera listy znajomych, w których każdy friend jest wystąpieniem `Person` klasy z listy znajomych. Spowoduje to utworzenie grafu obiektów. Usługa udostępnia operacje w tych sieciach społecznościowych.  
@@ -20,7 +20,7 @@ W tym przykładzie przedstawiono sposób przekazywania obiektów według odwoła
 ## <a name="service"></a>Usługa  
  `Person` Klasa ma <xref:System.Runtime.Serialization.DataContractAttribute> zastosowany, za pomocą <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> pola `true` do deklarowania go jako typu odwołania. Wszystkie właściwości mają <xref:System.Runtime.Serialization.DataMemberAttribute> zastosowany.  
   
-```  
+```csharp
 [DataContract(IsReference=true)]  
 public class Person  
 {  
@@ -53,7 +53,7 @@ public class Person
   
  `GetPeopleInNetwork` Operacja przyjmuje parametr typu `Person` i zwraca wszystkie osoby w sieci; oznacza to, że wszystkie osoby w `friends` listy, przyjazne znajomych i tak dalej, bez duplikatów.  
   
-```  
+```csharp
 public List<Person> GetPeopleInNetwork(Person p)  
 {  
     List<Person> people = new List<Person>();  
@@ -65,7 +65,7 @@ public List<Person> GetPeopleInNetwork(Person p)
   
  `GetMutualFriends` Operacja przyjmuje parametr typu `Person` i zwraca wszystkich znajomych na liście, mających tę osobę w ich `friends` listy.  
   
-```  
+```csharp
 public List<Person> GetMutualFriends(Person p)  
 {  
     List<Person> mutual = new List<Person>();  
@@ -80,7 +80,7 @@ public List<Person> GetMutualFriends(Person p)
   
  `GetCommonFriends` Operacja pobiera listę typów `Person`. Lista powinna mieć dwie `Person` obiektów w nim. Operacja zwraca listę `Person` obiekty, które znajdują się w `friends` wykaz obu `Person` obiekty na liście wejściowej.  
   
-```  
+```csharp
 public List<Person> GetCommonFriends(List<Person> people)  
 {  
     List<Person> common = new List<Person>();  

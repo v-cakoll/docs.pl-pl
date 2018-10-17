@@ -1,5 +1,5 @@
 ---
-title: Przewodnik dla języka C#
+title: Przewodnik po języku C#
 description: Dowiedz się, jak przewodnik po języku C# może pomóc uzyskać doskonałej znajomości języka C#, czy jesteś deweloperem nowego, czy doświadczonym ekspertem.
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
@@ -17,7 +17,7 @@ ms.locfileid: "43512341"
 ---
 # <a name="c-guide"></a>Przewodnik po języku C#
 
-Przewodnik po języku C# zawiera wiele zasobów dotyczących języka C# i jest przeznaczony dla różnych odbiorców. W zależności od Twojego doświadczenia z programowaniem, używaniem języka C# i platformy .NET możesz zapoznać się z różnymi sekcjami tego przewodnika.
+Podręcznik języka C# zawiera wiele zasobów o języku C#. Ta lokacja ma wiele różnych grup odbiorców. Zależnie od doświadczenia z programowania lub przy użyciu języka C# i .NET możesz zapoznaj się z różnymi sekcjami tego przewodnika.
 
 * Dla deweloperów bez żadnego doświadczenia:
   * Rozpocznij od sekcji [przewodników Szybki start](quick-starts/index.md). Te przewodniki umożliwiają zapoznanie się z językiem C# interaktywnie w przeglądarce. Następnie możesz przejść do sekcji [samouczków](tutorials/index.md). Przedstawiono w nich sposoby tworzenia programów w języku C# od podstaw. Samouczki zawierają opisane krok po kroku procesy tworzenia programów. Przedstawiają one pojęcia dotyczące języka i pokazują, jak samodzielnie tworzyć programy w języku C#. Jeśli wolisz najpierw zapoznać się z ogólnymi informacjami, zobacz [prezentację języka C#](tour-of-csharp/index.md). Wyjaśniono tam pojęcia dotyczące języka C#. Po zapoznaniu się z nimi zdobędziesz podstawową wiedzę na temat języka i będziesz w stanie wypróbować samouczki lub utworzyć coś samodzielnie.
@@ -27,7 +27,7 @@ Przewodnik po języku C# zawiera wiele zasobów dotyczących języka C# i jest p
 
 * Dla doświadczonych deweloperów języka C#:
   * Jeżeli znasz już język C#, możesz zacząć od przeczytania nowości, które pojawiły się w ostatniej wersji. Aby poznać nowe funkcje, zapoznaj się z sekcją [Co nowego w języku C#](whats-new/index.md).
-  
+
 ## <a name="how-the-c-guide-is-organized"></a>Jak jest zorganizowany przewodnik po języku C#
 
 Przewodnik zawiera kilka sekcji. Możesz je czytać po kolei lub przejść bezpośrednio do interesujących Cię tematów. Niektóre sekcje koncentrują się intensywnie na języku. Inne zawierają kompletne scenariusze demonstrujące niektóre typy programów, jakie można utworzyć przy użyciu języka C# i program .NET Framework.
@@ -36,7 +36,7 @@ Przewodnik zawiera kilka sekcji. Możesz je czytać po kolei lub przejść bezpo
   * W tej sekcji opisano, co należy zainstalować, aby używać środowiska deweloperskiego języka C# na preferowanej platformie. Poszczególne tematy wyjaśniają, jak utworzyć pierwszy program w języku C# w różnych obsługiwanych środowiskach.
 
 * [Przewodniki Szybki start dla języka C#](quick-starts/index.md):
-  * Przewodniki Szybki start dla języka C# zawierają interaktywne samouczki przeznaczone dla deweloperów bez doświadczenia. Ich celem jest zapoznanie się z językiem C# i nauka tego języka bezpośrednio w przeglądarce przy użyciu interfejsu REPL (Read-Eval-Print Loop). Po zakończeniu interaktywnych lekcji można rozwijać swoje umiejętności programowania, wykonując te same zadania na swojej maszynie.
+  * Przewodniki Szybki Start języka C# przedstawia interaktywnych samouczków dobór deweloperom oraz uczyć się języka C# w przeglądarce, za pomocą interfejsu odczytu-Eval-Print pętli (REPL). Po zakończeniu interaktywne lekcje, można podnieść swoje umiejętności programowania, ćwiczenia, ten sam lekcje na swojej maszynie.
 
 * [Samouczki](tutorials/index.md)
   * Ta sekcja zawiera szereg kompletnych scenariuszy z uwzględnieniem zarówno opisów, jak i kodu. Wskazuje, dlaczego niektóre idiomy są preferowane, które funkcje języka C# najlepiej działają w różnych sytuacjach, a także pokazuje referencyjne wdrożenia dla typowych zadań. Jeżeli najlepiej uczysz się, widząc kod, zacznij od tej sekcji. Możesz także pobrać cały kod i poeksperymentować z nim w swoim środowisku.

@@ -47,7 +47,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |Termin|Definicja|  
 |----------|----------------|  
 |`Preserve`|Opcjonalna. Modyfikator używany w celu zachowania danych w istniejącej tablicy, gdy zmieniany jest rozmiar tylko ostatniego wymiaru.|  
-|`name`|Wymagana. Nazwa zmiennej tablicy. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Wymagana. Nazwa zmiennej tablicowej. Zobacz [Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`boundlist`|Wymagana. Lista granic każdego wymiaru dla ponownie definiowanej tablicy.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -83,7 +83,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Inicjowanie bez zachowania zawartości.** Jeśli nie określisz części `Preserve`, instrukcja `ReDim` zainicjuje elementy nowej tablicy, używając domyślnej wartości dla ich typu danych.  
   
--   **Inicjacja za pomocą atrybutu Preserve.** Jeśli określisz `Preserve`, Visual Basic kopiuje elementy z istniejącej tablicy do nowej tablicy.  
+-   **Inicjowanie z zachowaniem zawartości** Jeśli określisz część `Preserve`, język Visual Basic skopiuje elementy z istniejącej tablicy do nowej tablicy.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie jest pokazane zwiększenie rozmiaru ostatniego wymiaru tablicy dynamicznej bez utraty istniejących danych w tablicy, a następnie zmniejszenie rozmiaru z częściową utratą danych. Na koniec następuje zmniejszenie rozmiaru do oryginalnej wartości i ponownie inicjowanie wszystkich elementów tablicy.  

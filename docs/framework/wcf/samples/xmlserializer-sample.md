@@ -2,12 +2,12 @@
 title: Klasa XMLSerializer — przykład
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 7b43af08758de1d33bcc6ab8f477885c7ecc0825
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 46f3d10305a244d23be19c87566edacfaf7bff46
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503093"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188407"
 ---
 # <a name="xmlserializer-sample"></a>Klasa XMLSerializer — przykład
 W tym przykładzie pokazano, jak do serializacji i deserializacji typów, które są zgodne z <xref:System.Xml.Serialization.XmlSerializer>. Domyślny element formatujący Windows Communication Foundation (WCF) jest <xref:System.Runtime.Serialization.DataContractSerializer> klasy. <xref:System.Xml.Serialization.XmlSerializer> Klasa może być używana do serializacji i deserializacji typów, kiedy <xref:System.Runtime.Serialization.DataContractSerializer> klasa nie może być używana. To sytuacja często dotyczy gdy precyzyjną kontrolę nad tym kod XML jest wymagany — na przykład, jeśli element danych musi być atrybut XML i nie zawiera elementu XML. Ponadto <xref:System.Xml.Serialization.XmlSerializer> często pobiera wybierana podczas tworzenia klientów usług WCF nie.  
@@ -108,7 +108,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
   
  Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  
 Multiply(2 + 3i, 4 + 7i) = -13 + 26i  

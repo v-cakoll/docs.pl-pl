@@ -1,33 +1,33 @@
 ---
-title: Projektowanie poprawności warstwy modelu domeny
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie poprawności warstwy modelu domeny
+title: Projektowanie reguł weryfikacji w warstwie modelu domeny
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Projektowanie reguł weryfikacji w warstwie modelu domeny
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c071d269977ccecea9a7d4d79da78d7967bb1618
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6ff325bb062da2ebff815fc847d2247707a0bf7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105738"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188056"
 ---
-# <a name="designing-validations-in-the-domain-model-layer"></a>Projektowanie poprawności warstwy modelu domeny
+# <a name="designing-validations-in-the-domain-model-layer"></a>Projektowanie reguł weryfikacji w warstwie modelu domeny
 
-W DDD można traktować jako invariants reguł sprawdzania poprawności. Podstawowa odpowiedzialność agregacji jest wymuszenie invariants zachowuje zmiany stanu dla wszystkich obiektów w tym agregacji.
+W DDD reguł sprawdzania poprawności można traktować jako invariants. Podstawowa odpowiedzialność agregacji jest wymusić invariants na zmiany stanu dla wszystkich jednostek w ramach tej agregacji.
 
-Domeny jednostek powinna być zawsze prawidłowe jednostki. Istnieją pewne invariants dla obiekt, który powinien mieć zawsze wartość PRAWDA. Na przykład obiekt elementu kolejności zawsze musi mieć ilość, która musi być dodatnią liczbą całkowitą, a także nazwę artykułu i ceny. W związku z tym wymuszania invariants jest odpowiedzialny za jednostek domeny (szczególnie elementu głównego agregacji) i do obiektu jednostki nie powinien móc istnieje nie są prawidłowe. Niezmienna reguły po prostu są wyrażane jako kontrakty i wyjątków lub powiadomienia są wywoływane, gdy są one naruszone.
+Jednostki domeny powinny być zawsze prawidłowe jednostki. Istnieją pewne invariants dla obiektu, który powinien zawsze być prawdziwe. Na przykład obiekt elementu kolejności zawsze musi mieć ilość, który musi być dodatnią liczbą całkowitą, a także nazwę artykułu i ceny. Dlatego wymuszania invariants odpowiada jednostki domeny (zwłaszcza w zakresie głównego agregacji) i obiektu jednostki nie powinno być możliwe istnieje nie są prawidłowe. Zasad niezmiennej po prostu są wyrażane jako kontraktów i powiadomienia lub wyjątki są zgłaszane w przypadku ich naruszenia.
 
-To uzasadnienie jest wiele usterek wystąpić, ponieważ obiekt jest w stanie, który powinien być nigdy nie był w. Poniżej przedstawiono dobrej wyjaśnienie z małych Gregowi w [online dyskusji](http://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
+Uzasadnienie to to, że wiele błędów być fakt, że obiekty są w stanie, które powinny mieć nigdy nie był w. Poniżej przedstawiono dobry opis z Grega Younga w [dyskusji](https://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
 
-Proponować Przyjrzyjmy się, że mamy teraz SendUserCreationEmailService, pobierającej UserProfile... jak można możemy racjonalizacja w tej usługi, nazwa nie jest zerowa? Czy możemy sprawdź go ponownie? Lub bardziej prawdopodobne... właśnie nie zostanie odblokowane można sprawdzić i "nadzieję najlepszą" — Mamy nadzieję, że ktoś bothered do weryfikowania go przed wysłaniem do użytkownika. Oczywiście przy użyciu TDD pierwszy testów, które firma Microsoft powinien zapisu, jest to, że wysyłania się klientów z zerową nazwą czy powinna Zgłoś błąd. Jednak po Rozpoczniemy wielokrotnie pisania tego rodzaju testy Zdajemy sobie sprawę... "oczekiwania, jeśli firma Microsoft nigdy nie mogą nazwę, stając się wartości null nie mamy wszystkie te testy"
+Zaproponuj Załóżmy że mamy teraz SendUserCreationEmailService, wykorzystującej UserProfile... jak można możemy racjonalizować w tej usłudze, że nazwa nie jest null? Czy możemy sprawdzić go ponownie? Lub bardziej prawdopodobne... po prostu nie zostanie odblokowane można sprawdzić i "najlepszą nadzieję, że" — Mamy nadzieję, że ktoś bothered, aby zweryfikować, czy przed wysłaniem ich do Ciebie. Oczywiście za pomocą TDD pierwszy testy, które firma Microsoft należy pisania, jest to, że jeśli wysyła się klientów z nazwą wartości null, należy je zgłosić błąd. Jednak gdy Rozpoczniemy wielokrotnie pisania tego rodzaju testy Zdajemy sobie sprawę... "oczekiwania, jeśli firma Microsoft nigdy nie mogą nazwę, aby stać się o wartości null nie mamy wszystkich tych testów"
 
-## <a name="implementing-validations-in-the-domain-model-layer"></a>Implementowanie operacji sprawdzania poprawności w warstwy modelu domeny
+## <a name="implementing-validations-in-the-domain-model-layer"></a>Implementowanie walidacji w warstwie modelu domeny
 
-Sprawdzanie poprawności zwykle są implementowane w konstruktorów jednostek domeny lub metody aktualizowanych jednostki. Istnieje wiele sposobów, aby zaimplementować metodę sprawdzania, takie jak weryfikowanie danych i wywoływanie wyjątków w przypadku niepowodzenia weryfikacji. Istnieją również bardziej zaawansowanych wzorców, takich jak przy użyciu wzorca specyfikacji dla operacji sprawdzania poprawności i wzorzec powiadomień zwrócić kolekcję błędów zamiast zwracać wyjątek dla każdego weryfikacji występujące.
+Sprawdzanie poprawności zwykle są implementowane w konstruktorach jednostki domeny lub za pomocą metod, które mogą aktualizować jednostki. Istnieje wiele sposobów implementowania operacji sprawdzania poprawności, takie jak weryfikowanie danych i wywoływanie wyjątków w przypadku niepowodzenia weryfikacji. Istnieją również bardziej zaawansowane wzorców, takich jak przy użyciu wzorca specyfikacji dla sprawdzanie poprawności i wzorzec powiadomień do zwrócenia zbierania błędów zamiast zwracać wyjątek dla każdego sprawdzania poprawności, ponieważ występuje.
 
-### <a name="validating-conditions-and-throwing-exceptions"></a>Sprawdzanie poprawności warunki i zgłaszanie wyjątków
+### <a name="validating-conditions-and-throwing-exceptions"></a>Sprawdzanie poprawności warunków i zgłaszanie wyjątków
 
-Poniższy przykład kodu pokazuje najprostsza metoda weryfikacji w jednostce domeny przez wywołanie wyjątku. Tabela odwołań na końcu tej sekcji przedstawiono łącza do bardziej zaawansowanych implementacje na podstawie wzorców, które wcześniej Omówiliśmy.
+Poniższy przykład kodu pokazuje najprostsza metoda sprawdzania poprawności w jednostce domeny, podnosząc wyjątek. W tabeli odniesienia na końcu tej sekcji można zobaczyć łącza do bardziej zaawansowanych implementacji na podstawie wzorców, które Omówiliśmy wcześniej.
 
 ```csharp
 public void SetAddress(Address address)
@@ -36,7 +36,7 @@ public void SetAddress(Address address)
 }
 ```
 
-Przykład lepsze wskazywałoby konieczność zapewnienia wewnętrzny stan nie został zmieniony lub że wszystkie mutacji metody wystąpił. Na przykład następująca implementacja spowoduje obiektu w nieprawidłowym stanie:
+Przykład lepsze wskazywałoby potrzebę zapewnienia wewnętrzny stan nie został zmieniony lub że wszystkie mutację dla metody wystąpił. Na przykład następującą implementacją spowoduje, że obiekt w nieprawidłowym stanie:
 
 ```csharp
 public void SetAddress(string line1, string line2,
@@ -49,15 +49,15 @@ public void SetAddress(string line1, string line2,
 }
 ```
 
-Jeśli wartość stanu jest nieprawidłowa, pierwszy wiersz adresu i Miasto już zostały zmienione. Który może być adres nieprawidłowy.
+Jeśli wartość stanu jest nieprawidłowa, pierwszy wiersz adresu i Miasto już zostały zmienione. Który może mieć adres nieprawidłowy.
 
-Podejście podobne można używać w Konstruktorze jednostki, który wywołał wyjątek, aby upewnić się, że obiekt jest prawidłowy, po jego utworzeniu.
+Podejście podobne może służyć w Konstruktorze jednostki, zgłaszania wyjątku, aby upewnić się, że jednostka jest prawidłowa, po jego utworzeniu.
 
-### <a name="using-validation-attributes-in-the-model-based-on-data-annotations"></a>Za pomocą atrybutów sprawdzania poprawności na adnotacje danych na podstawie modelu
+### <a name="using-validation-attributes-in-the-model-based-on-data-annotations"></a>W modelu, w oparciu o adnotacje danych przy użyciu atrybutów sprawdzania poprawności
 
-Innym rozwiązaniem jest używanie na adnotacje danych na podstawie atrybutów sprawdzania poprawności. Atrybuty weryfikacji umożliwiają konfigurowanie weryfikacji modelu, który jest podobny koncepcyjnie do sprawdzania poprawności dla pól w tabelach bazy danych. W tym ograniczenia, takie jak przypisywanie typów danych lub wymagane pola. Inne typy weryfikacji obejmują stosowania wzorców do danych do wymuszania reguł biznesowych, takich jak numer karty kredytowej lub numer telefonu lub adres e-mail. Atrybuty weryfikacji ułatwiają wymuszanie wymagania.
+Innym podejściem jest używać atrybutów sprawdzania poprawności, w zależności od adnotacji danych. Atrybuty weryfikacji umożliwiają konfigurowanie weryfikacji modelu, które są podobne pod względem koncepcyjnym do sprawdzania poprawności w polach w tabelach bazy danych. Obejmuje to ograniczenia, takie jak przypisywanie typów danych lub wymagane pola. Inne rodzaje weryfikacji obejmują stosowania wzorców do danych w celu wymuszania reguł biznesowych, takich jak numer karty kredytowej lub numer telefonu lub adres e-mail. Atrybuty weryfikacji ułatwiają wymuszanie wymagań dotyczących.
 
-Jednak jak pokazano w poniższym kodzie, to takie podejście może być zbyt niepożądanych w modelu DDD, ponieważ trwa zależności na ModelState.IsValid z Microsoft.AspNetCore.Mvc.ModelState, które należy wywołać z kontrolerów MVC. Sprawdzanie poprawności modelu występuje przed wywoływaną akcję każdego kontrolera i metody kontrolera odpowiedzialność za inspekcji wyników wywołania ModelState.IsValid i odpowiednio zareagować. Zależy decyzji o użyciu go ściśle powiązane ma modelu, który ma być z tej infrastruktury.
+Jednakże jak pokazano w poniższym kodzie, to takie podejście może być zbyt bez wprowadzania niepożądanych w modelu DDD, z powodu zależności na ModelState.IsValid z Microsoft.AspNetCore.Mvc.ModelState, który musi wywołać z kontrolerów MVC. Sprawdzanie poprawności modelu występującą przed każdym wywoływana Akcja kontrolera i odpowiada za metody kontrolera sprawdzić wynik wywoływania ModelState.IsValid i odpowiednio reagują. Decyzja z niej korzystać zależy ściśle mają model, który ma być z tej infrastruktury.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -87,44 +87,44 @@ public class Product : Entity
 }
 ```
 
-Jednak z punktu widzenia DDD, model domeny jest najlepiej pozostawić gotowa przy użyciu wyjątków w metodach zachowania użytkownika jednostki lub implementując wzorce specyfikację i powiadomień do wymuszania reguł sprawdzania poprawności. Struktury sprawdzania poprawności podobnie jak adnotacji danych w ASP.NET Core lub innych platform sprawdzania poprawności podobnie jak FluentValidation przenoszenia wymagane do wywołania struktury aplikacji. Na przykład podczas wywoływania metody ModelState.IsValid w adnotacjach danych, należy wywołać kontrolery ASP.NET.
+Jednak z punktu widzenia DDD, model domeny jest najlepiej pozostawić zwarte przy użyciu wyjątków w metodach zachowanie Twojej jednostki lub poprzez implementację wzorców Specyfikacja i powiadomień w celu wymuszania reguł sprawdzania poprawności. Sprawdzanie poprawności środowisk, takich jak adnotacje danych na platformie ASP.NET Core lub innych struktur sprawdzania poprawności podobnie jak FluentValidation wykonać wymagane do wywołania struktury aplikacji. Na przykład podczas wywoływania metody ModelState.IsValid w adnotacjach danych, należy wywołać kontrolerów platformy ASP.NET.
 
-Go wykrywanie używania adnotacji danych w warstwie aplikacji w klasach ViewModel (a nie jednostek domeny), które będzie akceptować dane wejściowe, aby umożliwić sprawdzanie poprawności modelu w ramach warstwy interfejsu użytkownika. Jednak to nie należy przypisywać na wyłączenie sprawdzania poprawności w ramach modelu domeny.
+Sensowne może używać adnotacji danych w warstwie aplikacji w klas ViewModel (zamiast domeny podmioty), które akceptują dane wejściowe, aby zezwolić na potrzeby weryfikacji modelu w ramach warstwy interfejsu użytkownika. Jednak to nie należy wykonywać na wyłączenie sprawdzania poprawności w ramach modelu domeny.
 
-### <a name="validating-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Sprawdzanie poprawności jednostek zaimplementowanie wzoru specyfikacji i powiadomienia
+### <a name="validating-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Sprawdzanie poprawności jednostek poprzez implementację wzoru specyfikacji i powiadomienia
 
-Na koniec bardziej złożonych podejście do wykonania operacji sprawdzania poprawności w modelu domeny jest zaimplementowanie wzorzec specyfikacji w połączeniu z wzorcem powiadomień zgodnie z objaśnieniem w niektórych dodatkowych zasobów wymienionych później.
+Na koniec bardziej złożonych podejściem implementowania operacji sprawdzania poprawności w modelu domeny jest implementacja wzorca specyfikacji w połączeniu z wzorcem powiadomień, jak wyjaśniono w niektóre dodatkowe zasoby wymienione w dalszej części.
 
-Warto zauważyć, że umożliwia także tylko w jednej z tych wzorców — na przykład, sprawdzanie poprawności ręcznie z instrukcji sterowania, ale przy użyciu wzorca powiadomień stosu i zwracający listę błędów weryfikacji.
+Warto zauważyć, że umożliwia także tylko jeden z tych wzorców — na przykład, sprawdzanie poprawności ręcznie za pomocą instrukcji sterowania, ale przy użyciu wzorca powiadomień do stosu i powrócić do listy błędów sprawdzania poprawności.
 
-### <a name="using-deferred-validation-in-the-domain"></a>Przy użyciu odroczone sprawdzanie poprawności w domenie
+### <a name="using-deferred-validation-in-the-domain"></a>Za pomocą odroczonego sprawdzania poprawności w domenie
 
-Istnieją różne metody radzenia sobie z odroczone sprawdzanie poprawności w domenie. W jego książce [projekt Implementing Domain-Driven](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577), Vaughn Vernon omówiono w sekcji weryfikacji.
+Istnieją różne metody radzenia sobie z opóźnieniem walidacji w domenie. W książce [projektowania Implementing Domain-Driven](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577), Vaughn Vernon w tym artykule omówiono w sekcji podczas weryfikacji.
 
 ### <a name="two-step-validation"></a>Weryfikacja dwuetapowa
 
-Należy również rozważyć weryfikacji dwuetapowej. Użyj weryfikacji na poziomie pola na polecenie obiekty Transfer danych (DTOs) i weryfikacji na poziomie dla domeny wewnątrz jednostki. Można to zrobić, zwracając obiekt wyniku zamiast wyjątków w celu ułatwienia postępowania z błędami sprawdzania poprawności.
+Należy również rozważyć weryfikacji dwuetapowej. Użyj weryfikacji na poziomie pola na polecenia obiektów transferu danych (dto) i weryfikacji na poziomie dla domeny wewnątrz jednostek. Można to zrobić, zwracając obiekt wyniku zamiast tego wyjątki ułatwi radzić sobie z błędami sprawdzania poprawności.
 
-Za pomocą pola weryfikacji przy użyciu adnotacji danych, na przykład nie duplikowania definicji sprawdzania poprawności. Wykonywanie, jednak może być zarówno po stronie serwera i po stronie klienta w przypadku DTOs (polecenia i ViewModels, na przykład).
+Za pomocą weryfikacji pola przy użyciu adnotacji danych, na przykład nie duplikowania definicji sprawdzania poprawności. Wykonanie, jednak może być zarówno po stronie serwera, jak i po stronie klienta w przypadku dto (polecenia i modele widoków, na przykład).
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Rachel Appel. Wprowadzenie do sprawdzania poprawności modelu w programie ASP.NET MVC Core**
+-   **Rachel Appel. Wprowadzenie do weryfikacji modelu w aplikacji ASP.NET Core MVC**
     [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
 
 -   **Rick Anderson. Dodawanie walidacji**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Pole Fowler. Zastępowanie zgłaszanie wyjątków z powiadomień w operacji sprawdzania poprawności**
+-   **Martina Fowlera. Zastępowanie zgłaszanie wyjątków z powiadomieniem w walidacji**
     [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
 -   **Specyfikacja i wzorce powiadomień**
     [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
--   **LEV Gorodinski. Sprawdzanie poprawności w projekcie oparte na domenie (DDD)**
+-   **Lew Gorodinski. Sprawdzanie poprawności w projektowania opartego na domenach (DDD)**
     [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
--   **Gniazdo Colin. Weryfikacja modelu domeny**
+-   **Gniazdo Colin. Sprawdzanie poprawności modelu domeny**
     [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
 -   **Jimmy Bogard. Sprawdzanie poprawności w świecie DDD**

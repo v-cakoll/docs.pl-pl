@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2a72e57156903c9d436a49aaf6da596868af4003
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f1da226fb62c55f37183404765430c094f1cd63f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581852"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188277"
 ---
 # <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a>Porady: Pobieranie elementu WebResponse specyficznego dla protokołu, który odpowiada elementowi WebRequest
 W tym przykładzie pokazano, jak można pobrać elementu WebResponse specyficznego dla protokołu, który odpowiada elementowi WebRequest.  

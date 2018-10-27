@@ -2,12 +2,12 @@
 title: Aktywacja TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 0a65e5ca20a11f50133efc90e6da923280a30f46
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1939f611067d65d70849748604e0589a8928b09d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846555"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191171"
 ---
 # <a name="tcp-activation"></a>Aktywacja TCP
 Niniejszy przykład pokazuje usługi, który używa usługi aktywacji procesów Windows (WAS), aby aktywować usługę, która komunikuje się za pośrednictwem protokołu net.tcp hosta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -28,7 +28,7 @@ Niniejszy przykład pokazuje usługi, który używa usługi aktywacji procesów 
   
  Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź". Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (dodawania, odejmowania, mnożenia i dzielenia,) jak pokazano w poniższym przykładowym kodzie:  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -45,7 +45,7 @@ public interface ICalculator
   
  Implementacja usługi oblicza i zwraca odpowiedni wynik:  
   
-```  
+```csharp
 // Service class that implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -129,7 +129,7 @@ public class CalculatorService : ICalculator
   
  Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
     1.  Aby zapewnić obsługę aktywacji net.tcp, domyślna witryna sieci Web musi zostać powiązana portów net.tcp. Można to zrobić za pomocą Appcmd.exe, który jest instalowany z zestawem narzędzi zarządzania programu Internet Information Services 7.0 (IIS). Z wiersza polecenia z uprawnieniami administratora na poziomie uruchom następujące polecenie:  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  
   
@@ -169,7 +169,7 @@ Press <ENTER> to terminate client.
   
     2.  Mimo że wszystkie aplikacje w ramach lokacji mają wspólne powiązanie net.tcp, każdej aplikacji można włączyć obsługę net.tcp indywidualnie. Aby włączyć net.tcp aplikacji /servicemodelsamples, uruchom następujące polecenie z wiersza polecenia z uprawnieniami administratora na poziomie:  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set app   
         "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.tcp  
         ```  
@@ -187,7 +187,7 @@ Press <ENTER> to terminate client.
   
     1.  Usuń z listy włączone protokoły net.tcp, uruchamiając następujące polecenie z wiersza polecenia z uprawnieniami administratora na poziomie:  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set app   
         "Default Web Site/servicemodelsamples" /enabledProtocols:http  
         ```  
@@ -197,7 +197,7 @@ Press <ENTER> to terminate client.
   
     2.  Usuń powiązanie witryny net.tcp, uruchamiając następujące polecenie z wiersza polecenia z uprawnieniami administratora na poziomie:  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
         --bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  

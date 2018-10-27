@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b555ad88b90e48da39624686a37898f47d90c1e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bed7c6c856c55662b46ff581f007f9df6b67149d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743098"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190999"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Porady dotyczące zestawów i domen aplikacji
-Poniższe sekcje zawierają łącza do wszystkich — tematy porad znajdującego się w dokumentacji koncepcyjnego do programowania za pomocą zestawów i domen aplikacji.  
+Poniższe sekcje zawierają łącza do wszystkich tematów instrukcje w dokumentacji koncepcyjnego dla programowania, korzystając z domeny aplikacji i zestawy.  
   
  **Domeny aplikacji**  
   
@@ -54,4 +54,4 @@ Poniższe sekcje zawierają łącza do wszystkich — tematy porad znajdującego
 -   [Instrukcje: wyświetlanie zawartości zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Domeny aplikacji i zestawy](../../../docs/framework/app-domains/index.md)
+- [Domeny aplikacji i zestawy](../../../docs/framework/app-domains/index.md)

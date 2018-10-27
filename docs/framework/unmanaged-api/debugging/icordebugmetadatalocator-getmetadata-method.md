@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521357"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189553"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData — Metoda
 Pyta, czy debugera, aby przywrócić pełną ścieżkę do modułu, którego metadanych jest potrzebne do ukończenia operacja, którą żądany debuger.  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] Ciąg zakończony znakiem null, który reprezentuje pełną ścieżkę do pliku. Jeśli pełna ścieżka nie jest dostępna, nazwę i rozszerzenie nazwy pliku (*filename*. *rozszerzenie*).  
   
  `dwImageTimeStamp`  
- [in] Sygnatura czasowa z nagłówków pliku PE obrazu. Ten parametr potencjalnie może służyć do serwera symboli ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) wyszukiwania.  
+ [in] Sygnatura czasowa z nagłówków pliku PE obrazu. Ten parametr potencjalnie może służyć do serwera symboli ([SymSrv](/windows/desktop/debug/using-symsrv)) wyszukiwania.  
   
  `dwImageSize`  
  [in] Rozmiar obrazu z nagłówków pliku PE. Ten parametr potencjalnie może służyć do wyszukiwania SymSrv.  

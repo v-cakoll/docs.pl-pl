@@ -2,23 +2,21 @@
 title: 'Porady: tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 873a5bf235b43b4460a1489a964539c4e4c18de3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643068"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188334"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Porady: tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)
-Ten przykład przedstawia sposób użycia przyjaznych zestawów z zestawów, które nie mają znaku.  
+W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, które są bez znaku.  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Aby utworzyć zestaw i przyjaznego zestawu  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Aby utworzyć zestaw i zestaw przyjazny  
   
 1.  Otwórz wiersz polecenia.  
   
-2.  Utwórz plik języka Visual Basic, o nazwie `friend_signed_A.` zawierający następujący kod. W kodzie użyto <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować friend_signed_B jako przyjaznego zestawu.  
+2.  Utwórz plik w języku Visual Basic o nazwie `friend_signed_A.` zawierający poniższy kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować friend_signed_B jako przyjaznego zestawu.  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -44,13 +42,13 @@ Ten przykład przedstawia sposób użycia przyjaznych zestawów z zestawów, kt�
     End Class  
     ```  
   
-3.  Skompiluj i podpisz friend_signed_A za pomocą następującego polecenia.  
+3.  Skompiluj i podpisać friend_signed_A przy użyciu następującego polecenia.  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  Utwórz plik języka Visual Basic, o nazwie `friend_unsigned_B` zawierający następujący kod. Ponieważ friend_unsigned_A określa friend_unsigned_B jako przyjaznego zestawu, może uzyskać dostęp przez kod friend_unsigned_B `Friend` typów i członków z friend_unsigned_A.  
+4.  Utwórz plik w języku Visual Basic o nazwie `friend_unsigned_B` zawierający poniższy kod. Ponieważ friend_unsigned_A określa friend_unsigned_B jako zestaw przyjazny, kod w friend_unsigned_B mogą uzyskiwać dostęp do `Friend` typów i elementów członkowskich z friend_unsigned_A.  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -71,24 +69,24 @@ Ten przykład przedstawia sposób użycia przyjaznych zestawów z zestawów, kt�
     End Module  
     ```  
   
-5.  Kompiluj friend_signed_B za pomocą następującego polecenia.  
+5.  Skompiluj friend_signed_B przy użyciu następującego polecenia.  
   
     ```console
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
     ```  
   
-     Nazwa zestawu, który jest generowany przez kompilator musi odpowiadać nazwy przyjaznego zestawu, który jest przekazywany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu. Należy jawnie określić zestaw przy użyciu `/out` — opcja kompilatora.  
+     Nazwa zestawu, który jest generowany przez kompilator musi odpowiadać nazwy przyjaznego zestawu, który jest przekazywany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu. Należy jawnie określić zestawu przy użyciu `/out` — opcja kompilatora.  
   
 6.  Uruchom plik friend_signed_B.exe.  
   
-     Program wyświetla dwóch ciągów: "Class1.Test" i "Class2.Test".  
+     Ten program wyświetla dwa ciągi: "Class1.Test" i "Class2.Test".  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Brak podobieństwa między usługami <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu i <xref:System.Security.Permissions.StrongNameIdentityPermission> klasy. Główną różnicą jest to, że <xref:System.Security.Permissions.StrongNameIdentityPermission> można zażądać uprawnienia zabezpieczeń do uruchomienia określonej części kodu, podczas gdy <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut kontroluje widoczność `Friend` typy i składniki.  
+ Istnieją podobieństwa między usługami <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu i <xref:System.Security.Permissions.StrongNameIdentityPermission> klasy. Główną różnicą jest to, że <xref:System.Security.Permissions.StrongNameIdentityPermission> może wymagać uprawnienia zabezpieczeń do uruchamiania w określonej sekcji kodu, natomiast <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut kontroluje widoczność `Friend` typów i elementów członkowskich.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Przyjazne zestawy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [Porady: tworzenie oznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Koncepcje Podręcznik programowania](../../../../visual-basic/programming-guide/concepts/index.md)
+ [Pojęcia związane z programowaniem przewodnik](../../../../visual-basic/programming-guide/concepts/index.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 25c0b34bd33bee626df14c8dbedce0b82e895b58
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a42f9b2101266857e56dee6836f4c3b27b3c6f96
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857342"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188342"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Jak za pomocą programowania drukować pliki XPS
 Możesz użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A> metodę, aby wydrukować [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] plików bez otwierania <xref:System.Windows.Controls.PrintDialog> lub w zasadzie dowolnego [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] na wszystkich.  
   
- Możesz również wydrukować [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] plików przy użyciu wielu <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> i <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metody <xref:System.Windows.Xps.XpsDocumentWriter>. Aby uzyskać więcej informacji na ten temat [drukowanie dokumentu XPS](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90)).  
+ Możesz również wydrukować [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] plików przy użyciu wielu <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> i <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metody <xref:System.Windows.Xps.XpsDocumentWriter>. Aby uzyskać więcej informacji na ten temat [drukowanie dokumentu XPS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90)).  
   
  Innym sposobem drukowanie [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] jest użycie <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> lub <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> metody <xref:System.Windows.Controls.PrintDialog> kontroli. Zobacz [Wywołaj okno dialogowe drukowania](how-to-invoke-a-print-dialog.md).  
   
@@ -56,7 +56,7 @@ Możesz użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A
   
  Ten kamuflażu umożliwią przekazać `true` jako ostatni parametr z <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> bez powodowania wyjątek, ale ponieważ  *\<PseudoXPSPrinter >* nie jest tak naprawdę drukarki XPSDrv będzie drukować tylko wyrzucania elementów.  
   
- **Uwaga** dla uproszczenia w powyższym przykładzie użyto obecności \*rozszerzenie .xps jako jego test, który jest plikiem [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Jednak [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pliki nie mają mieć tego rozszerzenia. [IsXPS.exe (narzędzie zgodności isXPS)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100)) jeden ze sposobów testowania pliku dla [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ważności.  
+ **Uwaga** dla uproszczenia w powyższym przykładzie użyto obecności \*rozszerzenie .xps jako jego test, który jest plikiem [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Jednak [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pliki nie mają mieć tego rozszerzenia. [IsXPS.exe (narzędzie zgodności isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) jeden ze sposobów testowania pliku dla [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ważności.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Printing.PrintQueue>  
@@ -64,8 +64,8 @@ Możesz użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](https://www.microsoft.com/xps)  
- [Drukowanie dokumentów XPS](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))  
- [Zarządzana i niezarządzana wątkowość](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
- [isXPS.exe (narzędzie zgodności isXPS)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))  
+ [Drukowanie dokumentów XPS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))  
+ [Zarządzana i niezarządzana wątkowość](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
+ [isXPS.exe (narzędzie zgodności isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))  
  [Dokumenty w WPF](documents-in-wpf.md)  
  [Przegląd drukowania](printing-overview.md)

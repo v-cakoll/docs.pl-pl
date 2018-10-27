@@ -2,12 +2,12 @@
 title: Iterowania przez kolekcje w języku C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d8a39569df517dffa8ff4b2f638f089f420e44c7
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024509"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191197"
 ---
 # <a name="iterators-c"></a>Iteratory (C#)
 
@@ -342,7 +342,7 @@ Na każdą kolejną iteracją z `foreach` pętli (lub bezpośrednie wywołanie `
 
 Iteratory nie obsługują <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> metody. Przypomnę od samego początku, należy pobrać nowe iteratora. Wywoływanie <xref:System.Collections.IEnumerator.Reset%2A> na zwracany przez metodę iteratora iterator zgłasza <xref:System.NotSupportedException>.
 
-Aby uzyskać więcej informacji, zobacz [specyfikacji języka C#](../../../csharp/language-reference/language-specification/index.md).
+Aby uzyskać więcej informacji, zobacz [specyfikacji języka C#](~/_csharplang/spec/classes.md#iterators).
 
 ## <a name="use-of-iterators"></a>Użyj Iteratory
 

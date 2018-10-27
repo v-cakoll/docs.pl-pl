@@ -2,12 +2,12 @@
 title: Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5efa4c56cafe32dcc6864ba0bd68d14ea10b15e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840748"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187573"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych
 W tym temacie opisano najlepsze rozwiązania dotyczące hostowania usług Windows Communication Foundation (WCF).  
@@ -35,7 +35,7 @@ W tym temacie opisano najlepsze rozwiązania dotyczące hostowania usług Window
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>Usługi WCF w scenariuszach wieloadresowych lub wielu nazwane  
  Można wdrożyć usługi WCF w ramach farmy sieci Web usług IIS, w której zestaw komputerów używają tej samej nazwy zewnętrzne (takie jak `http://www.contoso.com`), ale indywidualnie są rozwiązywane przez różne nazwy hostów (na przykład `http://www.contoso.com` może kierować ruch do dwóch różnych komputerach o nazwie `http://machine1.internal.contoso.com` i `http://machine2.internal.contoso.com`). Ten scenariusz wdrażania jest w pełni obsługiwany przez architekturę WCF, ale wymaga specjalnej konfiguracji witryny sieci Web usług IIS, hostowanie usługi WCF, aby wyświetlić poprawną nazwę hosta (zewnętrzne) w metadanych usługi (Web Services Description Language).  
   
- Aby upewnić się, że poprawna nazwa hosta jest wyświetlana w metadanych usługi WCF generuje, konfigurowanie tożsamości domyślnej witryny sieci Web usług IIS, który jest hostem usług WCF do użycia jawnej nazwy hosta. Na przykład komputery, które znajdują się wewnątrz farmy www.contoso.com powinien używać powiązanie witryny usług IIS *:80:www.contoso.com dla protokołu HTTP i \*: 443:www.contoso.com dla protokołu HTTPS.  
+ Aby upewnić się, że poprawna nazwa hosta jest wyświetlana w metadanych usługi WCF generuje, konfigurowanie tożsamości domyślnej witryny sieci Web usług IIS, który jest hostem usług WCF do użycia jawnej nazwy hosta. Na przykład komputery, które znajdują się wewnątrz `www.contoso.com` farmy, należy użyć powiązania witryny usług IIS z *:80:www.contoso.com dla protokołu HTTP i \*: 443:www.contoso.com dla protokołu HTTPS.  
   
  Powiązania witryny sieci Web usług IIS można skonfigurować za pomocą przystawki usług IIS programu Microsoft Management Console (MMC).  
   

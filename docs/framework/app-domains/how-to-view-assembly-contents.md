@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abe4c130fb5da49ed0f53c776e23dba8fb5b15f7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 10ba2930dcaee6c118562e685ad49dd73c980564
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157060"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191106"
 ---
 # <a name="how-to-view-assembly-contents"></a>Porady: wyświetlanie zawartości zestawu
 Możesz użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić informacje o Microsoft intermediate language (MSIL) w pliku. Jeśli plik sprawdzane jest zestawem, te informacje mogą obejmować zestawu atrybutów, a także odwołania do innych modułach i zestawach. Te informacje mogą być pomocne w określeniu, czy plik jest zestaw lub częścią zespołu i tego, czy plik ma odwołania do innych modułów lub zestawów.  
@@ -89,6 +89,6 @@ Możesz użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildas
  Manifest zestawu może zawierać wiele różnych dyrektyw, w zależności od zawartości zestawu. Aby obszerną listę dyrektyw w manifeście zestawu zobacz dokumentację ECMA, szczególnie "Partycja II: metadane definicji i semantyka" oraz "Partition III: CIL instrukcji Set". Dokumentacja jest dostępna w trybie online; zobacz [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) w witrynie MSDN i [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) w witrynie Ecma International w sieci Web.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Domeny aplikacji i zestawy](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)  
- [Instrukcje dotyczące zestawów i domen aplikacji](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
- [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Domeny aplikacji i zestawy](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)  
+- [Instrukcje dotyczące zestawów i domen aplikacji](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
+- [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

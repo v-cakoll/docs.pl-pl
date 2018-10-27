@@ -12,26 +12,26 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 08b63d67b6175d18bee1317cc8908d876fbb4039
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836769"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188615"
 ---
 # <a name="switch-c-reference"></a>Switch (odwołanie w C#)
 
 `switch` jest instrukcją zaznaczenia, który wybiera jeden *Przełącz sekcję* do wykonania z listy kandydatów na podstawie dopasowania wzorca z *pasuje do wyrażenia*.
 
-[!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
+[!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
 `switch` Instrukcji jest często używana jako alternatywa [if-else](if-else.md) konstruowania, jeśli pojedyncze wyrażenie jest testowany dla trzech lub więcej warunków. Na przykład następująca `switch` Instrukcja określa, czy zmienna typu `Color` ma jedną z trzech wartości:
 
-[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
+[!code-csharp[switch#3](~/samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
 Jest to równoważne do poniższego przykładu, który używa `if` - `else` konstruowania.
 
-[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
+[!code-csharp[switch#3a](~/samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
 ## <a name="the-match-expression"></a>Wyrażenie dopasowania
 
@@ -98,7 +98,7 @@ Można rozwiązać ten problem i wyeliminować ostrzeżenia kompilatora, w jeden
 
 - Zmieniając ich kolejność sekcji przełączników.
 
-- Przy użyciu < /a name = "kiedy" > po klauzuli</a> w `case` etykiety.
+- Za pomocą [po klauzuli](#when) w `case` etykiety.
 
 ## <a name="the-default-case"></a>`default` Case
 
@@ -171,11 +171,11 @@ case null:
 
 W poniższym przykładzie użyto wzorca typu, aby podać informacje o różnych rodzajów typów kolekcji.
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+[!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
 Bez dopasowywania do wzorca, ten kod może być zapisana w następujący sposób. Używanie dopasowania wzorca typu generuje kod bardziej zwarty, czytelny dzięki wyeliminowaniu konieczności, aby sprawdzić, czy wynik konwersji jest `null` lub do wykonywania powtarzających rzutowania.
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+[!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
 ## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> `case` Instrukcji i `when` — klauzula
 
@@ -183,13 +183,13 @@ Uruchamianie przy użyciu języka C# 7.0, ponieważ instrukcji case nie muszą b
 
 W poniższym przykładzie zdefiniowano podstawowej `Shape` klasy `Rectangle` klasę pochodzącą od `Shape`, a `Square` klasę pochodzącą od `Rectangle`. Używa ona `when` klauzuli, aby upewnić się, że `ShowShapeInfo` traktuje `Rectangle` obiekt, który został przypisany równy długości i szerokości jako `Square` nawet, jeśli nie utworzono wystąpienia jako `Square` obiektu. Metoda nie jest podejmowana próba wyświetlenia informacji o obiekt, który jest `null` lub kształtu, w których obszar jest równa zero.
 
-[!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+[!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
 Należy pamiętać, że `when` klauzuli w przykładzie, który próbuje testów czy `Shape` obiekt jest `null` nie jest wykonywane. Wzorzec poprawnego typu do testowania `null` jest `case null:`.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [instrukcji switch](/dotnet/csharp/language-reference/language-specification/statements#the-switch-statement) w [specyfikacji języka C#](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [instrukcji switch](~/_csharplang/spec/statements.md#the-switch-statement) w [specyfikacji języka C#](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 

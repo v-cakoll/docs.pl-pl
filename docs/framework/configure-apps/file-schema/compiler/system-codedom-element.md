@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: ea9fd06887c9a4bc9f121945f27753dfc666cfec
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: de0b026b0e4e76b7409e873813f4700c6ced9afd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237374"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187900"
 ---
 # <a name="ltsystemcodedomgt-element"></a>&lt;System.CodeDom&gt; — Element
 Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców języka.  
@@ -90,8 +90,8 @@ Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców język
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.CodeDom.Compiler.CompilerInfo>  
- <xref:System.CodeDom.Compiler.CodeDomProvider>  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Schemat ustawień kompilatora i dostawcy języka](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
- [\<Kompilator > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- <xref:System.CodeDom.Compiler.CompilerInfo>  
+- <xref:System.CodeDom.Compiler.CodeDomProvider>  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Schemat ustawień kompilatora i dostawcy języka](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+- [\<Kompilator > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

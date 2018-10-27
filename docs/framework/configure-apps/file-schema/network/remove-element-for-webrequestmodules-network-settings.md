@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2f787206c503c047a34383e12c5676296e39c1fe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208584"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190752"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Usuń&gt; Element dla webRequestModules (ustawienia sieci)
 Usuwa niestandardowego modułu żądania sieci Web z aplikacji.  
@@ -56,13 +54,14 @@ Usuwa niestandardowego modułu żądania sieci Web z aplikacji.
 ## <a name="remarks"></a>Uwagi  
  `remove` Elementu usuwa zarejestrowanego modułu żądania sieci Web dla określonego prefiksu identyfikatora URI.  
   
- Wartość `prefix` atrybut powinien być wiodące znaki prawidłowy identyfikator URI — na przykład "http" lub "`http://www.contoso.com` ".  
+ Wartość `prefix` atrybut powinien być wiodące znaki prawidłowy identyfikator URI — na przykład "`http`", lub "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa istniejący moduł żądania sieci Web do obsługi protokołu HTTP, a następnie rejestruje nowe niestandardowe sieci Web żądania modułu dla żądania HTTP do www.contoso.com.  
+
+Poniższy przykład usuwa istniejący moduł żądania sieci Web do obsługi protokołu HTTP, a następnie rejestruje nowy niestandardowy moduł sieci Web żądania dla protokołu HTTP żądania `www.contoso.com`.
   
 ```xml  
 <configuration>  
@@ -79,5 +78,5 @@ Usuwa niestandardowego modułu żądania sieci Web z aplikacji.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.Net.WebRequest>  
- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebRequest>  
+- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

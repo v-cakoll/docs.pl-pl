@@ -1,22 +1,20 @@
 ---
-title: -deterministyczna
+title: -deterministyczne
 ms.date: 04/11/2018
 helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffb1d27f614afc3b07f9d663831fc2071535236f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dde79ca9ce6e77102c05fce7c507784457af4a4b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653211"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187939"
 ---
-# <a name="-deterministic"></a>-deterministyczna
+# <a name="-deterministic"></a>-deterministyczne
 
-Powoduje, że kompilator, aby utworzyć zestaw, której wyjście bajtów dla bajtów jest identyczne w kompilacji dla identycznych danych wejściowych. 
+Powoduje, że kompilator generuje zestawu, którego dane wyjściowe dla bajt jest identyczna w kompilacjach identycznych danych wejściowych. 
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,32 +24,32 @@ Powoduje, że kompilator, aby utworzyć zestaw, której wyjście bajtów dla baj
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie dane wyjściowe kompilatora z danego zestawu danych wejściowych jest unikatowa, ponieważ kompilator dodaje znacznikiem czasu i identyfikatorem GUID, który jest generowany na podstawie liczby losowe. Możesz użyć `-deterministic` opcję, aby utworzyć *deterministyczne zestawu*, jedną z którego zawartość binarna jest identyczne w kompilacji, tak długo, jak dane wejściowe jest taka sama.
+Domyślnie dane wyjściowe kompilatora z danego zestawu danych wejściowych jest unikatowa, ponieważ kompilator sam doda sygnaturę czasową i identyfikator GUID, który jest generowany na podstawie liczby losowe. Możesz użyć `-deterministic` opcję, aby wygenerować *deterministyczne zestawu*, jedną z którego zawartość binarna jest identyczne w kompilacji, tak długo, jak dane wejściowe pozostają bez zmian.
 
-Kompilator uwzględnia następujące dane wejściowe na potrzeby determinizm:
+Kompilator traktuje następujące dane wejściowe na potrzeby determinizm:
 
 - Sekwencja parametry wiersza polecenia.
-- Zawartość pliku odpowiedzi .rsp — kompilatora.
-- Dokładne wersja kompilatora używane i jego zestawów występujących w odwołaniach.
+- Zawartość pliku odpowiedzi rsp kompilatora.
+- Dokładne wersję kompilatora, używane, a jego przywoływanych zestawów.
 - Ścieżka bieżącego katalogu.
-- Wszystkie pliki binarne treści jawnie przekazany do kompilatora bezpośrednio lub pośrednio, w tym: 
+- Binarny zawartość wszystkich plików jawnie przekazywane do kompilator bezpośrednio lub pośrednio, w tym: 
     - Pliki źródłowe
     - przywoływanych zestawach
-    - Przywoływany modułów
-    - Zasoby
+    - Moduły odwołania
+    - Resources
     - Plik klucza silnej nazwy
     - @ pliki odpowiedzi
     - Analizatory
     - Zestawy reguł
-    - Dodatkowe pliki, które mogą być używane przez analizatory
-- Bieżąca kultura (język, w którym diagnostyki i wyjątków są produkowane wiadomości).
+    - Dodatkowe pliki, które mogą być używane przez analizatorów
+- Bieżącą kulturą (język, w których dane diagnostyczne i wyjątków są produkowane wiadomości).
 - Domyślnym kodowaniem (lub bieżącej stronie kodowej) Jeśli nie określono kodowanie.
-- Istnienie, brak i zawartość plików w ścieżkach wyszukiwania przez kompilator (określonej, na przykład przez `/lib` lub `/recurse`).
-- Platforma CLR, na którym jest wykonywane przez kompilator.
+- Istnienie, nie istnieje i zawartość plików na ścieżki wyszukiwania kompilatora (określone, na przykład przez `/lib` lub `/recurse`).
+- Platforma CLR, na którym jest uruchamiany kompilator.
 - Wartość `%LIBPATH%`, co może wpłynąć na ładowanie zależności analizatora.
 
-Gdy publicznie dostępnych źródeł, kompilacji deterministycznej może służyć do ustalenia, czy dane binarne ma być kompilowana z zaufanego źródła. Może być również przydatne w systemie kompilacji ciągłej do określenia, czy konieczne można wykonać kroki procesu kompilacji, które są zależne od zmian w pliku binarnym. 
+W przypadku publicznie dostępnego źródła kompilacji deterministycznej może służyć do ustalenia, czy plik binarny jest kompilowany z zaufanego źródła. Również może być przydatne w systemie kompilacji ciągłej do określenia, czy należy wykonać kroki kompilacji, które są zależne od zmian w pliku binarnym. 
 
 ## <a name="see-also"></a>Zobacz też
-[Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+[Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
 [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

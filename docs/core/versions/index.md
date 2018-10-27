@@ -4,12 +4,12 @@ description: Dowiedz się, jak działa wersji platformy .NET Core.
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 0ce64aa266f8e1de2c2cefd366bcbfa3f5cfc8f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518605"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188472"
 ---
 # <a name="net-core-versioning"></a>Przechowywanie wersji platformy .NET core
 
@@ -43,7 +43,7 @@ Można zobaczyć więcej szczegółów, w początkowej wniosek na [dotnet/projek
 
 ## <a name="semantic-versioning"></a>Przechowywanie wersji semantyczne
 
-.NET Core *środowiska uruchomieniowego* około działa zgodnie z [Semantic Versioning (SemVer)](http://semver.org/), przyjęcie użytkowania `MAJOR.MINOR.PATCH` przechowywania wersji, użycie różnych części numeru wersji w celu opisania stopnia i typ Zmiana.
+.NET Core *środowiska uruchomieniowego* około działa zgodnie z [Semantic Versioning (SemVer)](https://semver.org/), przyjęcie użytkowania `MAJOR.MINOR.PATCH` przechowywania wersji, użycie różnych części numeru wersji w celu opisania stopnia i typ Zmiana.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]

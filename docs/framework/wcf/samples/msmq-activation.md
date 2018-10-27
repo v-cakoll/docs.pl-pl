@@ -2,12 +2,12 @@
 title: Aktywacja usługi MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 649159f83dee2674f68cdd534a7000f173826bbf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 20287af1c1d93bbdcfa83d88e5790284fbbff170
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840261"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194127"
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
 Niniejszy przykład pokazuje, jak hostować aplikacje w Windows Process Activation Service (WAS), które są odczytywane z kolejki komunikatów. W tym przykładzie użyto `netMsmqBinding` i opiera się na [komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md) próbki. Usługa jest w tym przypadku aplikacji hostowanej w sieci Web w języku klienta i jest samodzielnie hostowana w konsoli, aby obserwować stan zamówienia zakupu przesłane dane wyjściowe.  
@@ -91,13 +91,13 @@ public class OrderProcessorService : IOrderProcessor
   
  Sam plik Service.svc zawiera dyrektywy do tworzenia `OrderProcessorService`.  
   
-```xml  
+```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>  
 ```  
   
  Plik Service.svc zawiera również dyrektywę zestawu, aby upewnić się, że System.Transactions.dll zostanie załadowana.  
   
-```xml  
+```svc  
 <%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>  
 ```  
   
@@ -208,7 +208,7 @@ public class OrderStatusService : IOrderStatus
   
  Klient Wyświetla informacje o stanie zamówienia, które zostały przesłane przez serwer:  
   
-```Output  
+```console  
 Press <ENTER> to terminate client.  
 Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending  
 ```  
@@ -251,7 +251,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     1.  Aby zapewnić obsługę aktywacji net.msmq, domyślna witryna sieci Web musi zostać powiązana z protokołem net.msmq. Można to zrobić za pomocą appcmd.exe, który został zainstalowany przy użyciu [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zestaw narzędzi do zarządzania. Z wiersza polecenia o podniesionych uprawnień (administrator) uruchom następujące polecenie.  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
         -+bindings.[protocol='net.msmq',bindingInformation='localhost']  
         ```  
@@ -263,7 +263,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     2.  Mimo że wszystkie aplikacje w ramach lokacji mają wspólne powiązanie net.msmq, każdej aplikacji można włączyć obsługę net.msmq indywidualnie. Aby włączyć net.msmq aplikacji /servicemodelsamples, uruchom następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq  
         ```  
   
@@ -276,7 +276,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 8.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Ponadto można zmienić kodu na komputerze klienckim, który przesyła zamówienia zakupu w celu odzwierciedlenia nazwy komputera w identyfikatorze URI kolejki podczas przesyłania zamówienia zakupu. Użyj następującego kodu:  
   
-    ```  
+    ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
     ```  
   
@@ -286,7 +286,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     1.  Usuń net.msmq z listy włączone protokoły, uruchamiając następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
         ```  
   
@@ -295,7 +295,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     2.  Usuń powiązanie witryny net.msmq, uruchamiając następujące polecenie z wiersza polecenia z podwyższonym poziomem uprawnień.  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.msmq',bindingInformation='localhost']  
         ```  
   
@@ -346,7 +346,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 5.  W grupie roboczej należy również uruchomić usługę przy użyciu tokenu bez ograniczeń. Aby to zrobić, uruchom następujące polecenie w oknie polecenia:  
   
-    ```  
+    ```console  
     sc sidtype netmsmqactivator unrestricted  
     ```  
   

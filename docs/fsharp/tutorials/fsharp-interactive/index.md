@@ -1,64 +1,72 @@
 ---
 title: Odwołanie interakcyjne F# (fsi.exe)
-description: 'Dowiedz się, jak F # Interactive (fsi.exe) jest używany do interakcyjnego uruchamiania kodzie języka F # za pomocą konsoli lub wykonywanie skryptów F #.'
+description: Dowiedz się, jak F# Interactive (fsi.exe) jest używany do uruchamiania F# kodu interaktywnego w konsoli lub wykonać F# skryptów.
 ms.date: 05/16/2016
-ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564888"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195258"
 ---
-# <a name="interactive-programming-with-f"></a>Programowanie w języku F # Interactive #
+# <a name="interactive-programming-with-f"></a>Interaktywny, programowanie za pomocąF# #
 
 > [!NOTE]
-W tym artykule opisano obecnie środowisko dla systemu Windows tylko.  Będzie ona ulegną.
+W tym artykule opisano aktualnie środowisko Windows tylko.  Będzie inaczej.
 
 > [!NOTE]
-Łącze odwołania API spowoduje przejście do MSDN.  Dokumentacja interfejsu API docs.microsoft.com nie została ukończona.
+Łącze odwołania API spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
-F # Interactive (fsi.exe) jest używany interakcyjne uruchomianie kodzie języka F # za pomocą konsoli lub wykonywanie skryptów F #. Innymi słowy F # interactive wykonuje REPL (Odczyt, Evaluate pętli drukowania) dla języka F #.
+F#Interactive (fsi.exe) jest używany do uruchamiania F# kodu interaktywnego w konsoli, lub wykonać F# skryptów. Innymi słowy F# interaktywne wykonuje REPL (Odczyt, oszacowanie, drukowania Loop) dla F# języka.
 
-Aby uruchomić narzędzia F # Interactive z konsoli, uruchom fsi.exe.  Dostępne są fsi.exe w "c:\Program pliki (x86) \Microsoft SDKs\F#\<wersji > \Framework\<wersji >\". Aby uzyskać informacje o dostępnych opcjach wiersza polecenia, zobacz [Opcje interakcyjne F #](../../language-reference/fsharp-interactive-options.md).
+Aby uruchomić F# interakcyjne z poziomu konsoli, uruchom fsi.exe.  Znajdziesz fsi.exe w:
 
-Aby uruchomić narzędzia F # Interactive za pomocą programu Visual Studio, kliknięcie przycisku odpowiednich narzędzi etykietą **F # Interactive**, lub użyj klawiszy **Ctrl + Alt + F**. W ten sposób otworzy okno interaktywne okna narzędzia, w którym działa sesja F # Interactive. Możesz też wybrać niektórych kod, który chcesz uruchomić w oknie interaktywnym i naciśnij kombinację klawiszy **ALT + ENTER**. F # Interactive rozpoczyna się w oknie narzędzia etykietą **F # Interactive**. Użycie tej kombinacji klawiszy, upewnij się, że okno edytora ma fokus.
+```console
+C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
+```
 
-Zarówno w przypadku korzystania z konsoli lub Visual Studio pojawi się wiersz polecenia i interpretera oczekujące na dane wejściowe. Można wprowadzić kod, tak samo jak w pliku kodu. Aby skompilować i uruchomić kod, wprowadź dwie średnikami (**;** ) zakończenie wiersza lub kilka wierszy danych wejściowych.
+gdzie `sku` jest `Community`, `Professional`, lub `Enterprise`.
 
-F # Interactive prób skompilować kod i, jeśli to się powiedzie, wykonuje kod i wyświetla podpisu typów i wartości, które go skompilować. Jeśli wystąpią błędy, interpretera wyświetla komunikaty o błędach.
+Aby uzyskać informacje o dostępnych opcjach wiersza polecenia, zobacz [ F# interaktywnych opcji](../../language-reference/fsharp-interactive-options.md).
 
-Wprowadzony w tej samej sesji ma dostęp do konstrukcji, wszelkie wprowadzone uprzednio,, można je tworzyć działanie programów. Rozbudowana buforu w oknie narzędzia umożliwia skopiuj kod do pliku, jeśli to konieczne.
+Aby uruchomić F# Interactive za pomocą programu Visual Studio, możesz kliknąć przycisk odpowiednich narzędzi, oznaczone  **F# Interactive**, lub użyj klawiszy **Ctrl + Alt + F**. W ten sposób spowoduje otwarcie okna interaktywnego okna narzędzi, uruchamianie F# interaktywnej sesji. Możesz również wybrać kodu, który chcesz uruchomić w oknie interaktywnym i naciśnij kombinację klawiszy **klawisze ALT + ENTER**. F#Interaktywne rozpoczyna się w oknie narzędzi etykietą  **F# interaktywne**. Gdy używasz tej kombinacji klawiszy, upewnij się, że okno edytora ma fokus.
 
-Po uruchomieniu programu Visual Studio, F # Interactive działa niezależnie od projektu, tak, na przykład, nie możesz użyć konstrukcji zdefiniowane w projekcie w F # Interactive, chyba że skopiuj kod dla tej funkcji do okna interaktywnego.
+Czy używasz konsoli lub Visual Studio, zostanie wyświetlony wiersz polecenia, a następnie interpreter czeka na dane wejściowe. Można wprowadzić kod, tak samo jak w pliku kodu. Aby skompilować i wykonywania kodu, wprowadź dwie średnikami (**;** ) do zakończenia wiersza lub kilka wierszy danych wejściowych.
 
-Jeśli masz otwarte projektu, który odwołuje się do niektórych bibliotek mogą odwoływać je w F # Interactive przez **Eksploratora rozwiązań**. Aby odwołać biblioteki w F # Interactive, rozwiń węzeł **odwołania** węzła, otwórz menu skrótów biblioteki, a następnie wybierz pozycję **wysyłać do narzędzia F # Interactive**.
+F#Interakcyjne próbuje skompilować kod i, jeśli to się powiedzie, wykonuje kod i drukuje podpis typy i wartości jego skompilowany. Jeśli wystąpią błędy, interpreter wypisuje komunikaty o błędach.
 
-Argumenty wiersza polecenia F # Interactive (Opcje) można kontrolować, dostosowując ustawienia. Na **narzędzia** menu, wybierz opcję **opcje...** , a następnie rozwiń węzeł **narzędzia F #**. Opcje narzędzia F # Interactive są dwa ustawienia, które można zmienić i **64-bitowych F # Interactive** ustawienie, które ma zastosowanie tylko wtedy, gdy używasz narzędzia F # Interactive na komputerze 64-bitowych. To ustawienie określa, czy chcesz uruchomić dedykowanych 64-bitowej wersji fsi.exe lub fsianycpu.exe, używający architektura komputera do ustalenia, czy można uruchomić jako proces 32-bitowy lub 64-bitowej.
+Wprowadzono w tej samej sesji kod ma dostęp do konstrukcji, wszystkie wprowadzone wcześniej, można je tworzyć programy grupy. Rozbudowane buforu, w oknie narzędzia pozwala skopiować kod do pliku, jeśli to konieczne.
+
+Podczas uruchamiania w programie Visual Studio, F# interaktywne działa niezależnie od projektu, dlatego na przykład nie można użyć konstrukcji zdefiniowana w projekcie w F# interaktywne, chyba że skopiuj kod funkcji w oknie interaktywnym.
+
+W przypadku otwarciu projektu, który odwołuje się do niektórych bibliotek możesz odwoływać się do tych F# Interactive za pośrednictwem **Eksploratora rozwiązań**. Aby odwoływać się do biblioteki w F# Interactive, rozwiń węzeł **odwołania** węzła, otwórz menu skrótów dla biblioteki, a następnie wybierz **wysyłać F# Interactive**.
+
+Możesz kontrolować F# argumenty interaktywne wiersza polecenia (Opcje), dostosowując ustawienia. Na **narzędzia** menu, wybierz opcję **opcje...** , a następnie rozwiń węzeł  **F# narzędzia**. Są dwa ustawienia, które mogą być zmieniane F# Opcje interakcyjne i **64-bitowych F# Interactive** ustawienie, które ma zastosowanie tylko wtedy, gdy są uruchomione F# Interactive na komputerze 64-bitowym. To ustawienie określa, czy chcesz uruchomić dedykowanych 64-bitowej wersji fsi.exe lub fsianycpu.exe, która korzysta z architektury maszyny w celu ustalenia, czy można uruchomić jako proces 32-bitową lub 64-bitowych.
 
 
-## <a name="scripting-with-f"></a>Obsługa skryptów w języku F # #
-Skrypty używane rozszerzenie pliku **fsx** lub **fsscript**. Zamiast kompilowanie kodu źródłowego i ponownie uruchomić w skompilowanym zestawie, możesz po prostu uruchomić **fsi.exe** i określ nazwę pliku skryptu języka F # kodu źródłowego i interakcyjne F # odczytuje kod i wykonuje go w czasie rzeczywistym.
+## <a name="scripting-with-f"></a>Obsługa skryptów w programieF# #
+Skrypty za pomocą rozszerzenia pliku **.fsx** lub **.fsscript**. Zamiast kompilowanie kodu źródłowego, a następnie uruchamiając skompilowanego zestawu, można po prostu uruchomisz **fsi.exe** i określ nazwę pliku skryptu na F# kod źródłowy, a F# interaktywne odczytuje kod i wykonuje rzeczywistą czas.
 
 
-## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Różnice między środowiskami interaktywne, skryptów i skompilowanych
-Podczas kompilowania kodu w języku F # Interactive, czy są interakcyjnego lub uruchamianie skryptu, symbol **INTERACTIVE** jest zdefiniowany. Gdy kompilacja kodu w kompilatorze, symbol **COMPILED** jest zdefiniowany. W związku z tym kod musi być różna w trybach skompilowany i interaktywne, można użyć dyrektywy preprocesora dla kompilacji warunkowej ustalenie, który ma zostać użyty.
+## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Różnice między środowiskami interaktywne, skryptów i skompilowany
+Gdy kompilujesz kod w F# Interactive, czy są interakcyjnego lub uruchamiając skrypt, symbol **INTERACTIVE** jest zdefiniowana. Gdy kompilujesz kod w kompilatorze symbol **COMPILED** jest zdefiniowana. W związku z tym kod musi różnić się w trybie skompilowane i interaktywnych, można użyć dyrektywy preprocesora dla kompilacji warunkowej do określenia, które do użycia.
 
-Niektóre dyrektywy są dostępne, gdy są wykonywanie skryptów w F # Interactive nie są dostępne, gdy są wykonywane przez kompilator. Poniższa tabela zawiera podsumowanie dyrektywy, które są dostępne w przypadku korzystania z narzędzia F # Interactive.
+Niektóre dyrektywy są dostępne w przypadku, gdy są wykonywanie skryptów w F# Interactive, które nie są dostępne, gdy są wykonywane kompilator. Poniższa tabela zawiera podsumowanie dyrektyw, które są dostępne podczas korzystania z F# interakcyjne.
 
-|Dyrektywy|Opis|
+|— Dyrektywa|Opis|
 |---------|-----------|
 |**#help**|Wyświetla informacje o dostępnych dyrektywy.|
 |**#I**|Określa ścieżkę wyszukiwania zestawu w znaki cudzysłowu.|
 |**#load**|Odczytuje plik źródłowy, kompiluje go i uruchamia go.|
-|**#quit**|Kończy sesję F # Interactive.|
+|**#quit**|Kończy F# interaktywnej sesji.|
 |**#r**|Odwołuje się do zestawu.|
-|**#time ["na"&#124;"off"]**|Samodzielnie **#time** przełącza, czy mają być wyświetlane informacje o wydajności. Gdy jest włączone, F # Interactive mierzy czasu rzeczywistego, czas procesora CPU i pamięci zbierają informacje dla każdej sekcji kodu, który jest interpretowany i wykonywane.|
+|**#time ["włączone"&#124;"wyłączone"]**|Przez siebie **#time** przełącza, czy mają być wyświetlane informacje o wydajności. Po jej włączeniu F# Interactive mierzy czasu rzeczywistego, czas procesora CPU i informacje o kolekcji wyrzucania elementów dla każdej sekcji kodu, który jest interpretowany i wykonywane.|
 
-Po określeniu pliki lub ścieżki w F # Interactive, oczekiwano literału ciągu. W związku z tym pliki i ścieżki musi być w cudzysłowie, a następnie zastosować znaki specjalne zwykle. Ponadto można użyć znaku spowodować F # Interactive zinterpretować ciąg, który zawiera ścieżkę jako ciągu dosłownego wyrażenia @. Powoduje to F # Interactive zignorować wszelkie znaki specjalne.
+Po określeniu pliki lub ścieżki w F# Interactive, oczekiwano literału ciągu. W związku z tym pliki i ścieżki muszą być ujęte w znaki cudzysłowu i znaków ucieczki zwykle zastosowania. Ponadto, możesz użyć znaku, aby spowodować @ F# Interactive zinterpretować ciąg, który zawiera ścieżkę jako ciąg verbatim. Powoduje to, że F# Interactive, aby ignorować wszystkie znaki ucieczki.
 
-Jednym z różnic między trybem skompilowany i interaktywne jest sposób uzyskać dostępu do argumentów wiersza polecenia. W trybie skompilowanych za pomocą **System.Environment.GetCommandLineArgs**. W skryptach, użyj **elementu fsi.CommandLineArgs**.
+Jedną z różnic między trybem skompilowane i interaktywne to sposób, możesz uzyskać dostęp do argumentów wiersza polecenia. W trybie skompilowanych za pomocą **System.Environment.GetCommandLineArgs**. W skryptach, należy użyć **fsi.CommandLineArgs**.
 
-Poniższy kod ilustruje sposób tworzenia funkcję, która odczytuje argumenty wiersza polecenia skryptu i również pokazano, jak odwołać się do innego zestawu ze skryptu. Pierwszy plik kodu **MyAssembly.fs**, to kod dla zestawu, do którego nastąpiło odwołanie. Kompiluj tego pliku w wierszu polecenia: **nadzoru - MyAssembly.fs** , a następnie wykonaj drugi plik jako skrypt przy użyciu wiersza polecenia: **fsi - exec file1.fsx** testu
+Poniższy kod ilustruje sposób tworzenia funkcji, która odczytuje argumenty wiersza polecenia w skrypcie, a także pokazuje, jak odwołać się do innego zestawu pochodzące ze skryptu. Pierwszy plik kodu **MyAssembly.fs**, to kod dla zestawu, do którego nastąpiło odwołanie. Skompiluj ten plik przy użyciu wiersza polecenia: **nadzoru — MyAssembly.fs** , a następnie wykonaj drugiego pliku jako skrypt przy użyciu wiersza polecenia: **fsi — exec file1.fsx** testu
 
 ```fsharp
 // MyAssembly.fs
@@ -78,7 +86,7 @@ for arg in fsi.CommandLineArgs do
 printfn "%A" (MyAssembly.myFunction 10 40)
 ```
 
-Wynik jest następujący:
+Dane wyjściowe wyglądają następująco:
 
 ```
 Command line arguments: 
@@ -91,5 +99,5 @@ test
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Opcje F# Interactive](../../language-reference/fsharp-interactive-options.md)|Zawiera opis składni wiersza polecenia i opcje dotyczące programu F # Interactive, fsi.exe.|
-|[Odwołanie do biblioteki interakcyjnej F #](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Opisuje funkcje biblioteki są dostępne podczas wykonywania kodu w języku F # interactive.|
+|[Opcje F# Interactive](../../language-reference/fsharp-interactive-options.md)|W tym artykule opisano składnia wiersza polecenia i opcje dla F# Interactive, fsi.exe.|
+|[F#Odwołanie do biblioteki interakcyjnej](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Zawiera opis funkcji biblioteki, które są dostępne podczas wykonywania kodu w F# interaktywne.|

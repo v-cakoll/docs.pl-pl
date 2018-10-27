@@ -3,11 +3,11 @@ title: Współdziałanie z aplikacjami POX
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850091"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192645"
 ---
 # <a name="interoperability-with-pox-applications"></a>Współdziałanie z aplikacjami POX
 

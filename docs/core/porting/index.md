@@ -3,17 +3,17 @@ title: Eksportowanie do programu .NET Core z .NET Framework
 description: Zrozumieć proces przenoszenia i Odkryj narzędzia, które mogą być przydatne podczas przenoszenia projektu .NET Framework i .NET Core.
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 10/23/2018
+ms.openlocfilehash: 0c0ec3d8ab09e34e8dae24623903ca571f2cca6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835395"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192775"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>Eksportowanie do programu .NET Core z .NET Framework
 
-Jeśli masz kod uruchomiony w środowisku .NET Framework, może Cię zainteresować uruchamianie kodu na platformy .NET Core 1.0.  W tym artykule opisano przebieg procesu przenoszenia oraz listę narzędzi, które mogą być przydatne w przypadku przenoszenia do platformy .NET Core.
+Jeśli masz kod uruchomiony w środowisku .NET Framework, może Cię zainteresować uruchamiania kodu na platformie .NET Core.  W tym artykule opisano przebieg procesu przenoszenia oraz listę narzędzi, które mogą być przydatne w przypadku przenoszenia do platformy .NET Core.
 
 ## <a name="overview-of-the-porting-process"></a>Omówienie procesu przenoszenia
 
@@ -23,7 +23,7 @@ Zalecany proces przenoszenia następuje poniższą sekwencję czynności.  Każd
 
    Działania te obejmują zrozumienie, jakie zależności innych firm są, jak zależeć na ich, w jaki sposób, aby sprawdzić, czy działają one również na platformy .NET Core i kroki można wykonać, jeśli nie.
    
-2. Przekieruj wszystkie projekty, które chcesz dodać port do środowiska .NET Framework 4.6.2.
+2. Przekieruj wszystkie projekty, które chcesz portów pod kątem najnowszych wersji programu .NET Framework.
 
    Daje to gwarancję, że można użyć interfejsu API alternatyw dla celów specyficzne dla platformy .NET Framework w przypadkach, w której platformy .NET Core nie obsługuje określony interfejs API.
    
@@ -33,7 +33,7 @@ Zalecany proces przenoszenia następuje poniższą sekwencję czynności.  Każd
    
 4. Przyłącz kod testów.
 
-   Eksportowanie do programu .NET Core jest naprawdę spora zmiana bazie kodu, ma zdecydowanie zaleca uzyskać przenoszone, aby uruchomić testy zgodnie z portu kodu przez testy.  MSTest, xUnit i NUnit platformy .NET Core 1.0 już obsługę linuksa.
+   Eksportowanie do programu .NET Core jest naprawdę spora zmiana bazie kodu, ma zdecydowanie zaleca uzyskać przenoszone, aby uruchomić testy zgodnie z portu kodu przez testy.  MSTest, xUnit i NUnit obecnie obsługuje platformy .NET Core.
    
 6. Wykonaj swój plan w celu przenoszenia!
 

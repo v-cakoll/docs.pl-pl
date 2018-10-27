@@ -4,12 +4,12 @@ description: Informacje o sposobie tworzenia i debugowania pierwszej aplikacji p
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668226"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192586"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i Visual Studio Code
 
@@ -58,7 +58,7 @@ Możesz też obejrzeć krótki samouczek wideo, aby uzyskać dalszą pomoc Insta
 
 ## <a name="debug"></a>Debugowanie
 
-1. Otwórz *Program.cs* , klikając ją. Przy pierwszym otwarciu pliku C# w programie Visual Studio Code [technologię OmniSharp](http://www.omnisharp.net/) ładuje w edytorze.
+1. Otwórz *Program.cs* , klikając ją. Przy pierwszym otwarciu pliku C# w programie Visual Studio Code [technologię OmniSharp](https://www.omnisharp.net/) ładuje w edytorze.
 
     ![Otwórz plik Program.cs](media/with-visual-studio-code/opencs.png)
 

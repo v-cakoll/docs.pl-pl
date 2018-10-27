@@ -1,19 +1,20 @@
 ---
-title: stackalloc (odwołanie w C#)
+title: stackalloc — słowo kluczowe (C# odwołania)
 ms.date: 04/12/2018
 f1_keywords:
 - stackalloc_CSharpKeyword
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 5926550eea1f5a2f8fb74645f22ca54c2bed3136
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 16b2933423599e985ce57257595d67026dba93ca
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508583"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184533"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (odwołanie w C#)
+
 `stackalloc` Słowo kluczowe jest używane w kontekście niebezpieczny kod można przydzielić blok pamięci na stosie.
 
 ```csharp
@@ -41,7 +42,7 @@ int* second = stackalloc int[] { 1, 2, 3 };
 int* third = stackalloc[] { 1, 2, 3 };
 ```
 
-Ponieważ typy wskaźników, `stackalloc` wymaga [niebezpieczne](unsafe.md) kontekstu. Aby uzyskać więcej informacji, zobacz [niebezpieczny kod i wskaźniki](../../programming-guide/unsafe-code-pointers/index.md) 
+Ponieważ typy wskaźników, `stackalloc` wymaga [niebezpieczne](unsafe.md) kontekstu. Aby uzyskać więcej informacji, zobacz [niebezpieczny kod i wskaźniki](../../programming-guide/unsafe-code-pointers/index.md).
 
 `stackalloc` przypomina [_alloca](/cpp/c-runtime-library/reference/alloca) biblioteki wykonawczej C.
 
@@ -49,23 +50,24 @@ Ponieważ typy wskaźników, `stackalloc` wymaga [niebezpieczne](unsafe.md) kont
 
 Poniższy przykład oblicza i wyświetla pierwszych 20 cyfr w sekwencji Fibonacci. Każdy numer to suma poprzednich dwóch liczb. W kodzie, blok pamięci wystarczająco duży, aby zawierała 20 elementów typu `int` jest przydzielony na stosie nie sterty. Adres bloku jest przechowywany we wskaźniku `fib`. Ta pamięć nie podlega wyrzucania elementów bezużytecznych i w związku z tym nie trzeba przypiąć (przy użyciu [stałej](fixed-statement.md)). Okres istnienia blok pamięci jest ograniczona do okresu istnienia metody, który go definiuje. Nie można zwolnić pamięć, przed powrotem z metody.
 
-[!code-csharp[csrefKeywordsOperator#15](../../../../samples/snippets/csharp/keywords/StackAllocExamples.cs#1)]
+[!code-csharp[csrefKeywordsOperator#15](~/samples/snippets/csharp/keywords/StackAllocExamples.cs#1)]
 
 Poniższy przykład inicjuje `stackalloc` tablica liczb całkowitych do maski bitowej o jeden bit ustawiona w każdym elemencie. W tym przykładzie pokazano, jak nowa składnia inicjatora dostępnych w języku C# 7.3:
 
-[!code-csharp[csrefKeywordsOperator#15](../../../../samples/snippets/csharp/keywords/StackAllocExamples.cs#2)]
+[!code-csharp[csrefKeywordsOperator#15](~/samples/snippets/csharp/keywords/StackAllocExamples.cs#2)]
 
 ## <a name="security"></a>Zabezpieczenia
 
 Niebezpieczny kod jest mniej bezpieczna niż bezpiecznych metod. Jednak użycie `stackalloc` automatycznie włącza funkcje wykrywania przepełnienia buforu, w środowisku uruchomieniowym języka (wspólnego CLR). W przypadku wykrycia przepełnienie buforu tak szybko, jak to możliwe, aby zminimalizować prawdopodobieństwo, że złośliwy kod jest wykonywany zakończenia procesu.
 
-## <a name="c-language-specification"></a>Specyfikacja języka C#
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+- [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)
 - [Niebezpieczny kod i wskaźniki](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

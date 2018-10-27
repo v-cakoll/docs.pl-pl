@@ -2,12 +2,12 @@
 title: Podstawowy przykład
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 29edc8acb0293210e66e31660e3215220440fbae
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: c16ad22a63958bd7c7b2b3d94f2c82b5b7db6f65
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580319"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193295"
 ---
 # <a name="basic-sample"></a>Podstawowy przykład
 Niniejszy przykład pokazuje, jak usługa stał się wykrywalny i jak wyszukiwanie i wywoływać odnajdywanej usługi. W tym przykładzie składa się z dwóch projektów: usługi i klienta.
@@ -18,7 +18,7 @@ Niniejszy przykład pokazuje, jak usługa stał się wykrywalny i jak wyszukiwan
 ## <a name="service"></a>Usługa  
  Jest to implementacja usługi prosty kalkulator. Odnajdywanie związane z kodem znajduje się w `Main` gdzie <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> jest dodawany do hosta usługi i <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> jest dodawany, jak pokazano w poniższym kodzie.  
   
-```  
+```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))  
 {  
     serviceHost.AddServiceEndpoint(typeof(ICalculatorService), new   

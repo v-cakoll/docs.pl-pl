@@ -3,12 +3,12 @@ title: 'Instrukcje: Debugowanie aplikacji obsługujących oświadczenia i usług
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: e10d8d2ea869b03586b4680ad8320aeb2de90620
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 38e168fff9bc351b6239c41197348d24129a4747
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584276"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453396"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Instrukcje: Debugowanie aplikacji obsługujących oświadczenia i usług za pomocą śledzenia programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
@@ -104,7 +104,7 @@ ms.locfileid: "48584276"
   
 |**Identyfikator błędu**|**Komunikat o błędzie**|**Wymagana akcja naprawić błąd**|  
 |-|-|-|  
-|ID4175|Wystawca tokenu zabezpieczającego nie został rozpoznany przez IssuerNameRegistry.  Aby zaakceptować tokeny zabezpieczające z tym wystawcą, skonfiguruj IssuerNameRegistry zwrócić prawidłową nazwę tego wystawcy.|Ten błąd może być spowodowany przez skopiowanie odcisku palca z przystawki programu MMC i wklejenie go do *Web.config* pliku. W szczególności można uzyskać dodatkowych niedrukowalne znaki w ciągu tekstowym, podczas kopiowania z okna właściwości certyfikatu. Ten dodatkowy znak powoduje, że dopasowanie odcisku palca, aby zakończyć się niepowodzeniem. Procedurę poprawnie kopiowania odcisk palca można znaleźć tutaj: [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|Wystawca tokenu zabezpieczającego nie został rozpoznany przez IssuerNameRegistry.  Aby zaakceptować tokeny zabezpieczające z tym wystawcą, skonfiguruj IssuerNameRegistry zwrócić prawidłową nazwę tego wystawcy.|Ten błąd może być spowodowany przez skopiowanie odcisku palca z przystawki programu MMC i wklejenie go do *Web.config* pliku. W szczególności można uzyskać dodatkowych niedrukowalne znaki w ciągu tekstowym, podczas kopiowania z okna właściwości certyfikatu. Ten dodatkowy znak powoduje, że dopasowanie odcisku palca, aby zakończyć się niepowodzeniem. Procedurę poprawnie kopiowania odcisk palca znajduje się w temacie [logowania jednokrotnego opartego na oświadczeniach — na sieci Web i Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
   
 ## <a name="related-items"></a>Powiązane elementy  
   

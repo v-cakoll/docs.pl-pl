@@ -1,57 +1,56 @@
 ---
-title: Spójne kolekcje w języku Visual Basic
+title: Kolekcje w języku Visual Basic
 ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b2c8205dd413b1749d181daa8d0e84d62534e28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d76c14aa83fcf47faea41946614e83cfbc8ad57b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195505"
 ---
 # <a name="tuples-visual-basic"></a>Krotki (Visual Basic)
 
-Począwszy od programu Visual Basic 2017 języka Visual Basic udostępnia wbudowaną obsługę krotek, która umożliwia tworzenie krotek i uzyskiwanie dostępu do elementów krotek łatwiejsze. Krotka jest strukturą lekki danych, która ma określoną liczbę i sekwencja wartości. W przypadku wystąpienia spójnej kolekcji, należy zdefiniować liczbę i typ danych w każdej wartości (lub elementu). Na przykład krotki 2 (lub parę) zawiera dwa elementy. Może być pierwszym `Boolean` wartości, podczas gdy druga `String`. Ponieważ spójne kolekcje ułatwiają przechowywanie wielu wartości w jednym obiekcie, często są one używane jako lekkie sposób zwrócenia wiele wartości z metody.
+Począwszy od 2017 Visual Basic języka Visual Basic oferuje wbudowaną obsługę krotek, który ułatwia tworzenie krotek i uzyskiwania dostępu do elementów krotek łatwiejsze. Spójna Kolekcja to struktura danych lekki, która ma określoną liczbę i sekwencję wartości. Podczas tworzenia wystąpienia spójnej kolekcji należy zdefiniować numer i typ danych w każdej wartości (lub elementu). Na przykład 2-krotka (lub para) ma dwa elementy. Może być pierwszym `Boolean` wartości, a drugą jest wartość `String`. Ponieważ kolekcje ułatwiają do przechowywania wielu wartości w pojedynczy obiekt, często są one używane jako lekka sposób zwracanie wielu wartości z metody.
 
 > [!IMPORTANT]
-> Obsługa krotki wymaga <xref:System.ValueTuple> typu. .NET Framework 4.7 nie jest zainstalowany, należy dodać pakiet NuGet `System.ValueTuple`, która jest dostępna w galerii NuGet. Bez tego pakietu może wystąpić błąd kompilacji podobne do "Wstępnie zdefiniowany typ"ValueTuple(Of,,,)"nie został zdefiniowany ani zaimportowany."
+> Obsługa krotki wymaga <xref:System.ValueTuple> typu. Jeśli nie zainstalowano programu .NET Framework 4.7, należy dodać pakiet NuGet `System.ValueTuple`, który jest dostępny w galerii NuGet. Bez tego pakietu może wystąpić błąd kompilacji podobny do "Wstępnie zdefiniowany typ"ValueTuple(Of,,,)"nie został zdefiniowany ani zaimportowany."
 
-## <a name="instantiating-and-using-a-tuple"></a>Tworzenie wystąpień i przy użyciu spójnych kolekcji
+## <a name="instantiating-and-using-a-tuple"></a>Utworzenie wystąpienia i korzystania z krotki
 
-Umieszczając nawiasami wiadomości błyskawicznych wartości rozdzielanych przecinkami Utwórz wystąpienie spójnej kolekcji. Każdy z tych wartości staje się pole spójnej kolekcji. Na przykład poniższy kod definiuje triple (lub krotki 3) z `Date` jako wartość pierwszego `String` jako jego, a `Boolean` jako jego innych.
+Umieszczając nawiasami wiadomości błyskawicznych wartości rozdzielonych przecinkami Utwórz wystąpienie spójnej kolekcji. Każda z tych wartości stanie się polem spójnej kolekcji. Na przykład, poniższy kod definiuje triple (lub 3-krotka) za pomocą `Date` jako wartość pierwszej `String` jako jego sekunda i `Boolean` jako jego innych.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#1)]
 
-Domyślnie nazwa każdego pola w krotce składa się z ciągu `Item` wraz z pozycji na podstawie jednego pola w spójnej kolekcji. Dla tego krotki 3 `Date` pole jest `Item1`, `String` pole jest `Item2`i `Boolean` pole jest `Item3`. W poniższym przykładzie przedstawiono wartości pól spójna kolekcja znajdująca się w poprzednim wierszu kodu
+Domyślnie nazwa każdego pola w krotce składa się z ciągu `Item` wraz z pozycji liczonego od jednego pola w spójnej kolekcji. Dla tego 3-krotka `Date` pole jest `Item1`, `String` pole jest `Item2`i `Boolean` pole jest `Item3`. Poniższy przykład wyświetla wartości pól spójna kolekcja znajdująca się w poprzednim wierszu kodu
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#2)]
 
-Pola spójnych kolekcji Visual Basic są odczytu i zapisu; Po krotka został uruchomiony, można modyfikować jej wartości. Poniższy przykład modyfikuje dwie z trzech pól krotki utworzony w poprzednim przykładzie i wyświetla wyniki.
+Pola krotki języka Visual Basic są odczytu / zapisu Po został uruchomiony spójnej kolekcji, można zmodyfikować jego wartości. Poniższy przykład modyfikuje dwa z trzech pól krotki utworzony w poprzednim przykładzie i wyświetla wynik.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#3)]
 
-## <a name="instantiating-and-using-a-named-tuple"></a>Tworzenie wystąpień i przy użyciu spójnej kolekcji o nazwie
+## <a name="instantiating-and-using-a-named-tuple"></a>Utworzenie wystąpienia i przy użyciu nazwanego krotki
 
-Zamiast przy użyciu domyślnych nazw pól spójnej kolekcji, można utworzyć wystąpienia *o nazwie krotki* przez przypisanie własne nazwy elementów spójnej kolekcji. Pola krotki mają dostęp przy użyciu nazw przypisane *lub* przez domyślne nazwy. Poniższy przykład tworzy wystąpienie tego samego krotki 3 jak poprzednio, z wyjątkiem tego, że jawnie nazwy pierwsze pole `EventDate`, drugi `Name`, a trzeci `IsHoliday`. Następnie wyświetla wartości pól, modyfikuje je i ponownie wyświetla wartości pól.
+Zamiast używania nazw domyślnych pól spójnej kolekcji, można utworzyć wystąpienie *o nazwie krotki* , przypisując własnymi nazwami elementów krotki. Pola spójnej kolekcji następnie są dostępne przy użyciu ich nazw przypisane *lub* przez ich domyślne nazwy. Poniższy przykład tworzy wystąpienie tego samego 3-krotka jak poprzednio, chyba że jawnie nazw pierwsze pole `EventDate`, drugi `Name`, a trzeci `IsHoliday`. Go następnie wyświetla wartości pól modyfikuje je i ponownie wyświetla wartości pól.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#4)]
 
-## <a name="inferred-tuple-element-names"></a>Nazwy elementów wywnioskowanych spójnej kolekcji
+## <a name="inferred-tuple-element-names"></a>Wywnioskowane nazwy elementów krotki
 
-Począwszy od 15 ustęp 3 Visual Basic, Visual Basic można wywnioskować nazwy elementów krotki; nie masz ich jawnie przypisać. Wywnioskowane krotki nazwy są przydatne, gdy zainicjować spójną kolekcję z zestawu zmiennych i ma być taka sama jak nazwa zmiennej nazwy elementu spójnej kolekcji. 
+Począwszy od 15.3 programu Visual Basic, Visual Basic można wywnioskować nazwami elementów krotki; nie trzeba przypisać je jawnie. Nazwy wywnioskowanego krotki są przydatne podczas inicjowania spójną kolekcję na podstawie zestawu zmiennych i chcesz, aby nazwa elementu krotki być taka sama jak nazwa zmiennej. 
 
-Poniższy przykład tworzy `stateInfo` elementy, o nazwie spójnej kolekcji, która zawiera trzy jawnie `state`, `stateName`, i `capital`. Należy zauważyć, że w nazw elementów, instrukcja inicjowania spójnej kolekcji po prostu przypisuje elementy o wartości zmiennych o identycznej nazwie.
+Poniższy przykład tworzy `stateInfo` spójną kolekcją, która zawiera trzy jawnie nazwane elementy `state`, `stateName`, i `capital`. Należy zauważyć, że w nazwach elementów, instrukcja inicjowania krotki po prostu przypisuje elementy o wartości zmiennych o identycznej nazwie.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#1)]
  
-Ponieważ elementy i zmienne mają taką samą nazwę, kompilator Visual Basic można wywnioskować nazwy pól, jak w poniższym przykładzie pokazano.
+Ponieważ elementy i zmienne mają taką samą nazwę, kompilator Visual Basic można wywnioskować nazw pól, co ilustruje poniższy przykład.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-Aby włączyć nazwy elementów interred spójnej kolekcji, należy zdefiniować wersji kompilatora Visual Basic do użycia w projekcie języka Visual Basic (\*.vbproj) plików: 
+Aby włączyć nazwami elementów krotki interred, należy zdefiniować wersji kompilatora języka Visual Basic do użycia w projekcie języka Visual Basic (\*.vbproj) pliku: 
 
 ```xml 
 <PropertyGroup> 
@@ -59,68 +58,70 @@ Aby włączyć nazwy elementów interred spójnej kolekcji, należy zdefiniować
 </PropertyGroup> 
 ```
 
-Numer wersji może być dowolna wersja kompilatora Visual Basic, począwszy od 15 ustęp 3. Zamiast kodować kompilatora określonej wersji, można określić "R" jako wartości `LangVersion` do kompilacji z najnowszej wersji kompilatora Visual Basic zainstalowanych w systemie.
+Numer wersji może być dowolną wersję kompilatora języka Visual Basic, począwszy od 15.3. Zamiast kodować na określonej wersji kompilatora, można również określić "najnowszej wersji" jako wartość `LangVersion` można skompilować przy użyciu najnowszej wersji kompilatora języka Visual Basic, zainstalowanych w systemie.
 
-W niektórych przypadkach kompilator Visual Basic nie można wywnioskować nazwy elementu krotki z nazwy candidate, a pole krotki tylko można odwoływać się przy użyciu domyślnej nazwy, takich jak `Item1`, `Item2`itp. Należą do nich następujące elementy:
+Aby uzyskać więcej informacji, zobacz [ustawienie wersji języka Visual Basic](../../../language-reference/configure-language-version.md).
 
-- Nazwa candidate jest taka sama jak nazwa elementu członkowskiego spójnej kolekcji, takie jak `Item3`, `Rest`, lub `ToString`.
+W niektórych przypadkach kompilator Visual Basic nie można wywnioskować nazwa elementu krotki z nazwy Release candidate, a pole spójnej kolekcji mogą być przywoływane tylko, przy użyciu domyślnej nazwy, takie jak `Item1`, `Item2`itp. Należą do nich następujące elementy:
 
-- Nazwa candidate jest zduplikowany w spójnej kolekcji.
+- Nazwa Release candidate jest taka sama jak nazwa elementu członkowskiego spójnej kolekcji, takie jak `Item3`, `Rest`, lub `ToString`.
+
+- Nazwa Release candidate jest zduplikowana w spójnej kolekcji.
  
-Podczas wnioskowania Nazwa pola nie powiedzie się, nie generuje błąd kompilatora Visual Basic, nie jest wyjątek w czasie wykonywania. Zamiast tego pola krotki musi odwoływać się ich wstępnie zdefiniowanych nazw, takich jak `Item1` i `Item2`. 
+Podczas wnioskowania Nazwa pola nie powiedzie się, Visual Basic nie generuje błąd kompilatora nie jest wyjątek w czasie wykonywania. Zamiast tego pola krotki musi odwoływać się ich wstępnie zdefiniowanych nazw, takich jak `Item1` i `Item2`. 
   
-## <a name="tuples-versus-structures"></a>Spójne kolekcje i struktury
+## <a name="tuples-versus-structures"></a>Kolekcje i struktury
 
-Krotka Visual Basic jest typem wartości, który jest wystąpieniem jednej z **System.ValueTuple** typów ogólnych. Na przykład `holiday` krotki zdefiniowane w poprzednim przykładzie jest wystąpieniem <xref:System.ValueTuple%603> struktury. Zaprojektowano go jako lekkie kontener dla danych. Ponieważ spójnej kolekcji ma na celu ułatwić tworzenie obiektu z wieloma elementami danych, brakuje niektórych funkcji, które mogą mieć strukturze niestandardowej. Należą do nich następujące elementy:
+Krotki języka Visual Basic jest typem wartości, który jest wystąpieniem jednej z **System.ValueTuple** typów ogólnych. Na przykład `holiday` krotki zdefiniowane w poprzednim przykładzie to wystąpienie <xref:System.ValueTuple%603> struktury. Zaprojektowano go jako lekka kontener dla danych. Ponieważ spójnej kolekcji ma na celu ułatwić utworzenia obiektu z wielu elementów danych, brakuje niektórych funkcji, które może mieć strukturze niestandardowej. Należą do nich następujące elementy:
 
-- Niestandardowe elementy członkowskie. Nie można definiować własnych właściwości, metody lub zdarzenia dla spójnych kolekcji.
+- Niestandardowe elementy członkowskie. Nie można zdefiniować własne właściwości, metody i zdarzenia dla krotki.
 
-- Sprawdzanie poprawności. Nie można sprawdzić poprawności danych przypisany do pola.
+- Sprawdzanie poprawności. Nie można zweryfikować danych przypisane do pól.
 
-- Immutability. Modyfikowalne są krotek Visual Basic. Natomiast w strukturze niestandardowej umożliwia kontrolowanie, czy wystąpienie jest modyfikowalna lub modyfikować.
+- Niezmienności. Kolekcje języka Visual Basic są modyfikowalna. Natomiast w strukturze niestandardowej umożliwia kontrolowanie czy wystąpienie jest modyfikowalną niezmienne.
 
-Jeśli niestandardowe elementy członkowskie, właściwość i pole weryfikacji lub immutability są ważne, należy użyć programu Visual Basic [struktury](../../../language-reference/statements/structure-statement.md) instrukcji, aby zdefiniować typu wartości niestandardowych.
+W przypadku niestandardowych elementów członkowskich, właściwości i sprawdzanie poprawności pól lub niezmienności ważna, należy używać języka Visual Basic [struktury](../../../language-reference/statements/structure-statement.md) instrukcji, aby zdefiniować typ wartości niestandardowych.
 
-Krotka Visual Basic dziedziczą członkowie jego **ValueTuple** typu. Oprócz pól należą do nich następujące metody:
+Krotki języka Visual Basic dziedziczą członkowie jej **ValueTuple** typu. Oprócz jego pól należą do nich następujące metody:
 
 | Element członkowski | Opis |
 | ---|---|
-| Wykonanie funkcji CompareTo | Porównuje bieżącą spójną kolekcję do innego krotki z taką samą liczbę elementów. |
+| Element compareTo | Porównuje bieżącą spójną kolekcję do innego krotki z taką samą liczbę elementów. |
 | równa się | Określa, czy bieżącą spójną kolekcję jest równa innego spójnej kolekcji lub obiektu. |
 | GetHashCode | Oblicza wartość skrótu dla bieżącego wystąpienia. |
-| ToString | Zwraca reprezentację ciągu tego spójnej kolekcji, która ma postać `(Item1, Item2...)`, gdzie `Item1` i `Item2` reprezentują wartości pól spójnej kolekcji. |
+| ToString | Zwraca reprezentację ciągu tego spójna kolekcja, która ma postać `(Item1, Item2...)`, gdzie `Item1` i `Item2` reprezentują wartości pól spójnej. |
 
-Ponadto **ValueTuple** typy implementować <xref:System.Collections.IStructuralComparable> i <xref:System.Collections.IStructuralEquatable> interfejsów, które umożliwiają definiowanie comparers klienta.
+Ponadto **ValueTuple** typy implementują <xref:System.Collections.IStructuralComparable> i <xref:System.Collections.IStructuralEquatable> interfejsów, które umożliwiają definiowanie porównywanie klienta.
 
-## <a name="assignment-and-tuples"></a>Przypisanie i spójnych kolekcji
+## <a name="assignment-and-tuples"></a>Przypisanie i krotki
 
-Visual Basic obsługuje przypisanie między typami spójnej kolekcji, które mają taką samą liczbę pól. Typy pól mogą być konwertowane, jeśli spełniony jest jeden z następujących czynności:
+Visual Basic obsługuje przypisanie między typy krotek, które mają taką samą liczbę pól. Typy pól mogą być konwertowane, jeśli jest spełniony jeden z następujących czynności:
 
-- W polu źródłowa i docelowa są tego samego typu.
+- Pole źródłowe i docelowe mają tego samego typu.
 
-- Zdefiniowano konwersji rozszerzającej (lub niejawne) typu źródłowego na typ docelowy. 
+- Zdefiniowano rozszerzającą (lub niejawnie) konwersji typu źródłowego na typ docelowy. 
 
-- `Option Strict` jest `On`, a zdefiniowano konwersji zawężającej (bezpośredniego lub pośredniego) typu źródłowego na typ docelowy. Ta konwersja może zgłoszenia wyjątku, jeśli wartością źródłową jest poza zakresem typu docelowego.
+- `Option Strict` jest `On`, i zdefiniowano konwersji zawężającej (lub jawny) typu źródłowego na typ docelowy. Ta konwersja może zgłosić wyjątek, jeśli wartość źródła znajduje się poza zakresem typu docelowego.
 
-Inne konwersje nie są uznawane za przydziałów. Oto typy przydziałów, które mogą między typami spójnej kolekcji.
+Inne konwersje nie są uwzględniane przydziałów. Przyjrzyjmy się rodzaje przypisania, które są dozwolone między typami spójnej kolekcji.
 
-Należy wziąć pod uwagę następujące zmienne używane w poniższych przykładach:
+Należy wziąć pod uwagę te zmienne używane w następujących przykładach:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-Pierwsze dwie zmienne `unnamed` i `anonymous`, nie ma nazwy semantycznego podana dla pola. Ich nazwy pól są domyślnymi `Item1` i `Item2`. Ostatnie dwie zmienne `named` i `differentName` mają nazwy pól semantycznego. Należy pamiętać, że te dwie spójne kolekcje mają różne nazwy pól.
+Pierwsze dwie zmienne `unnamed` i `anonymous`, nie zawiera semantyczną nazw podane dla pól. Ich nazwy pól są domyślnie `Item1` i `Item2`. Ostatnie dwie zmienne `named` i `differentName` mają nazwy pól semantycznego. Należy pamiętać, że te dwie spójne kolekcje mają różne nazwy pól.
 
-Wszystkie cztery te krotki mają taką samą liczbę pól (określanych jako "Liczba ról") i typy pól są identyczne. W związku z tym wszystkie te przydziały działają:
+Wszystkie cztery krotek, te mają taką samą liczbę pola (nazywane "liczby argumentów") i typy tych pól są identyczne. W związku z tym wszystkie te przydziały pracy:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-Należy zauważyć, że nazwy krotki nie są przypisane. Wartości pól są przypisywane kolejności pól w spójnej kolekcji.
+Należy zauważyć, że nazwy kolekcje nie są przypisane. Wartości pól są przypisywane w kolejności pól w spójnej kolekcji.
 
-Warto zauważyć, że firma Microsoft można przypisać `named` spójnej kolekcji do `conversion` spójnej kolekcji, nawet jeśli pierwsze pole `named` jest `Integer`, a pierwsze pole `conversion` jest `Long`. To przypisanie zakończy się pomyślnie, ponieważ konwersja `Integer` do `Long` jest konwersję rozszerzającą.
+Na koniec Zauważ, że można przypisywać `named` krotka `conversion` spójnej kolekcji, nawet jeśli pierwsze pole `named` jest `Integer`, a pierwsze pole `conversion` jest `Long`. To przypisanie zakończy się pomyślnie, ponieważ konwersja `Integer` do `Long` konwersji rozszerzającej.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Spójnych kolekcji zawierający różne liczby pól nie są można przypisać:
+Krotki z różną liczbą pól nie są możliwe do przypisania:
 
 ```vb
 ' Does not compile.
@@ -130,43 +131,43 @@ var differentShape = (1, 2, 3)
 named = differentShape
 ```
 
-## <a name="tuples-as-method-return-values"></a>Wartości zwracane krotek jako — metoda
+## <a name="tuples-as-method-return-values"></a>Krotki jako wartości zwracane metody
 
-Metoda może zwracać tylko jedną wartość. Często jednak chcesz wywołania metody, aby zwrócić wielu wartości. Istnieje kilka sposobów obejścia tego ograniczenia:
+Metoda może zwracać pojedynczą wartość. Często jednak chcesz wywołanie metody zwracanie wielu wartości. Istnieje kilka sposobów obejścia tego ograniczenia:
 
-- Możesz tworzyć niestandardowe klasy lub struktury którego właściwości lub pola reprezentują wartości zwracanych przez metodę. W związku z tym jest to rozwiązanie ogromnych; wymaga zdefiniowania typu niestandardowego, którego jedynym celem jest można pobrać wartości z wywołania metody.
+- Można utworzyć niestandardową klasę lub strukturę którego właściwości lub pól reprezentują wartości zwracanych przez metodę. Ten sposób jest rozwiązaniem niewielkich; wymaga zdefiniowania typ niestandardowy, którego jedynym celem jest można pobrać wartości z wywołania metody.
 
-- Zwraca pojedynczą wartość z metody i pozostałe wartości zwracane przez przekazywanie ich poprzez odwołanie do metody. Obejmuje to obciążenie tworzenia wystąpienia w zmiennej i ryzyka nieodwracalne nadpisanie wartość zmiennej, który jest przekazywany przez odwołanie.
+- Może zwracać pojedynczą wartość z metody, a pozostałe wartości są zwracane, przekazując je przez odwołanie do metody. Obejmuje to obciążenie związane z wystąpienia zmienną i ryzyko nieodwracalne nadpisanie wartość zmiennej, który jest przekazywany przez odwołanie.
 
-- Można użyć spójnej kolekcji, która to lekkie rozwiązanie do pobierania wiele wartości zwrotnych.
+- Można użyć spójnej kolekcji, która zapewnia rozwiązanie o małych wymaganiach do pobierania z wieloma wartościami zwracanymi.
 
-Na przykład **TryParse** metod .NET powrotu `Boolean` wartość, która wskazuje, czy podczas analizowania operacja zakończyła się pomyślnie. Wynik operacji przetwarzania jest zwracana w zmiennej przekazywana przez odwołanie do metody. Zazwyczaj wywołanie metodę analizowania, takich jak <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> wygląda podobnie do następującego:
+Na przykład **TryParse** metod .NET powrotu `Boolean` wartość, która wskazuje, czy podczas analizowania operacja zakończyła się pomyślnie. Wynik operacji analizowania jest zwracany w zmiennej, przekazywany przez odwołanie do metody. Zazwyczaj wywołanie w celu analizowania metody takie jak <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> wygląda podobnie do następującego:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#1)]
 
-Zostanie zwrócona krotka z przetwarzaniem operacji, jeśli firma Microsoft zawijać wywołanie <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> metody własnej metody. W poniższym przykładzie `NumericLibrary.ParseInteger` wywołania <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> metodę i zwraca spójną kolekcję o nazwie z dwoma elementami. 
+Firma Microsoft zwraca spójną kolekcję z operacji analizowania, jeśli możemy opakować wywołanie <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> metody w własną metodę. W poniższym przykładzie `NumericLibrary.ParseInteger` wywołania <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> metodę i zwraca spójną kolekcję o nazwie z dwóch elementów. 
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
-Następnie można wywołać metody z kodu podobne do poniższych:
+Następnie możesz wywołać metody z kodu, jak pokazano poniżej:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)]
 
-## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Krotki Visual Basic i spójnych kolekcji w programie .NET Framework
+## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Spójne kolekcje w programie .NET Framework i Visual Basic kolekcje
 
-Krotka Visual Basic jest wystąpienie jednego z **System.ValueTuple** typów ogólnych, które zostały wprowadzone w .NET Framework 4.7. .NET Framework obejmuje również zestaw ogólny **System.Tuple** klasy. Te klasy jednak różnić się od krotek Visual Basic i **System.ValueTuple** typów ogólnych na kilka sposobów:
+Spójna kolekcja języka Visual Basic to wystąpienie jednego z **System.ValueTuple** typów ogólnych, które zostały wprowadzone w .NET Framework 4.7. Program .NET Framework zawiera również zestaw ogólnych **System.Tuple** klasy. Te klasy jednak różnić się od krotek języka Visual Basic i **System.ValueTuple** typów ogólnych w na kilka sposobów:
 
-- Elementy **krotki** klasy są właściwości o nazwie `Item1`, `Item2`i tak dalej. W Visual Basic krotek i **ValueTuple** pola są typy elementów spójnej kolekcji.
+- Elementy **krotki** klasy są właściwości o nazwie `Item1`, `Item2`i tak dalej. W języku Visual Basic w spójnych kolekcjach i **ValueTuple** typy, elementy krotki są polami.
 
-- Nie można przypisać łatwy do rozpoznania nazwy elementów **krotki** wystąpienia lub **ValueTuple** wystąpienia. Visual Basic umożliwia przypisanie nazw, które komunikują się znaczenie pola.
+- Nie można przypisać opisowych nazw elementów **krotki** wystąpienia lub **ValueTuple** wystąpienia. Visual Basic umożliwia można przypisać nazwy, które komunikują się znaczenie pola.
 
-- Właściwości **krotki** wystąpienia są tylko do odczytu; spójne kolekcje są niezmienne. W Visual Basic krotek i **ValueTuple** typów, pól krotki są odczytu i zapisu; spójne kolekcje są modyfikowalne.
+- Właściwości **krotki** wystąpienia są przeznaczone tylko do odczytu; kolekcje są niezmienne. W języku Visual Basic w spójnych kolekcjach i **ValueTuple** typy, pola krotki są odczytu i zapisu; kolekcje są modyfikowalna.
 
-- Ogólnego **krotki** typy są typy referencyjne. Korzystanie z tych **krotki** typy oznacza Alokacja obiektów. Na gorąco ścieżki to ma zauważalnego wpływu na wydajność aplikacji. Krotki Visual Basic i **ValueTuple** typy są typami wartości.
+- Ogólny **krotki** typy są typami odwołań. Korzystanie z tych **krotki** typy oznacza, że alokacja obiektów. W ścieżkach, gorąca może to mieć zauważalnego wpływu na wydajność aplikacji. Krotek języka Visual Basic i **ValueTuple** typy są typami wartości.
 
-Metody rozszerzenia w <xref:System.TupleExtensions> klasy ułatwia konwersję między krotek Visual Basic .NET **krotki** obiektów. **ToTuple** metoda konwertuje spójnych kolekcji Visual Basic .NET **krotki** obiektu i **ToValueTuple** metoda konwertuje .NET **krotki** obiekt do spójnych kolekcji Visual Basic.
+Metody rozszerzające w <xref:System.TupleExtensions> klasy ułatwiają konwertowanie krotek języka Visual Basic .NET **krotki** obiektów. **ToTuple** metoda konwertuje krotki języka Visual Basic .NET **krotki** obiektu, a **ToValueTuple** metoda konwertuje .NET **krotki** obiekt do krotki języka Visual Basic.
 
-Poniższy przykład tworzy spójną kolekcję, konwertuje ją na .NET **krotki** obiektu i konwertuje ją z powrotem do spójnych kolekcji Visual Basic. Przykład następnie porównuje to krotki z oryginału, aby upewnić się, że są one takie same.
+Poniższy przykład tworzy spójną kolekcję, konwertuje go na .NET **krotki** obiektu i konwertuje je z powrotem do krotki języka Visual Basic. Przykład następnie porównuje ten krotki z oryginałem, aby upewnić się, że są równe.
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 

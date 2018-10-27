@@ -8,14 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07e6b201056614237a433ed7a297d40eab23da59
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122650"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194062"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w języku Visual Basic
 
@@ -158,7 +156,7 @@ Aby uzyskać więcej informacji, zobacz [odwołania Return Values](../programmin
 [Interpolacja ciągów](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Wyrażenie interpolacji ciągu służy do konstruowania ciągów.  Wyrażenie ciągu interpolowanego wygląda jak ciąg szablonu, który zawiera wyrażenia.  Ciąg interpolowany łatwiej zrozumieć względem argumentów niż [formatowania złożonego](../../standard/base-types/composite-format.md).  
   
-[Dostęp do elementu członkowskiego warunkowe null i indeksowania](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Dostęp do elementu członkowskiego warunkowe null i indeksowania](../language-reference/operators/null-conditional-operators.md)  
 Możesz sprawdzić o wartości null w sposób bardzo małe, składni przed wykonaniem dostęp do elementu członkowskiego (`?.`) lub indeksu (`?[]`) operacji.  Operatory te pomagają ograniczyć ilość kodu potrzebnego do sprawdzenia wystąpień wartości „null”, zwłaszcza w przypadku wchodzenia głębiej w struktury danych.  W przypadku o wartości null po lewej stronie operatora lub obiektu odwołania operacji zwraca wartość null.  
   
 [Literały ciągu wielowierszowy](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

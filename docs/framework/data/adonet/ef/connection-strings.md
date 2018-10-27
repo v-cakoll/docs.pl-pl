@@ -1,32 +1,33 @@
 ---
-title: Parametry połączenia
-ms.date: 03/30/2017
+title: Parametry połączenia w programie ADO.NET Entity Framework
+ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842181"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193997"
 ---
-# <a name="connection-strings"></a>Parametry połączenia
+# <a name="connection-strings-in-the-adonet-entity-framework"></a>Parametry połączenia w programie ADO.NET Entity Framework
 Parametry połączenia zawierają informacje inicjowania, który jest przekazywany jako parametr od dostawcy danych do źródła danych. Składnia jest zależna od dostawcy danych, a ciąg połączenia jest analizowany podczas próby otwarcia połączenia. Parametry połączenia używane przez program Entity Framework zawiera informacje używane do łączenia z podstawowego dostawcy danych ADO.NET, który obsługuje platformy Entity Framework. Zawierają one informacje o wymaganych modelu i mapowania plików.  
   
  Ciąg połączenia jest używany dostawca EntityClient podczas uzyskiwania dostępu do modelu i mapowania metadanych i nawiązania połączenia ze źródłem danych. Parametry połączenia można uzyskać dostępu do lub ustawić za pomocą <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> właściwość <xref:System.Data.EntityClient.EntityConnection>. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> Klasa może być używana do programowego tworzenia lub dostęp do parametrów w parametrach połączenia. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie ciągu połączenia EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  [Narzędzia modelu Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) wygenerować parametry połączenia, które są przechowywane w pliku konfiguracji aplikacji. <xref:System.Data.Objects.ObjectContext> pobiera informacje o połączeniu automatycznie podczas tworzenia zapytań dotyczących obiektów. <xref:System.Data.EntityClient.EntityConnection> Posługują się <xref:System.Data.Objects.ObjectContext> wystąpienia jest możliwy z <xref:System.Data.Objects.ObjectContext.Connection%2A> właściwości. Aby uzyskać więcej informacji, zobacz [zarządzania połączeniami i transakcje](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
-  
+
+## <a name="connection-string-syntax"></a>Składnia ciągu połączenia
+
+Aby uzyskać informacje dotyczące składni ogólnej dla parametrów połączenia, zobacz [składnia ciągu połączenia | Parametry połączenia w ADO.NET](../connection-strings.md#connection-string-syntax).
+
 ## <a name="connection-string-parameters"></a>Parametry połączenia  
- Format ciągu połączenia jest rozdzielaną średnikami listę par klucz/wartość do parametru:  
-  
- `keyword1=value; keyword2=value;`  
-  
- Znak równości (=) łączy każde słowo kluczowe i jego wartość. Słowa kluczowe nie jest uwzględniana wielkość liter i spacje między pary klucz/wartość są ignorowane. Jednakże wartości mogą być uwzględniana wielkość liter, w zależności od źródła danych. Wszelkie wartości, które zawierają średnikiem, pojedynczy cudzysłów lub podwójne znaki cudzysłowu, muszą być ujęte w podwójny cudzysłów. W poniższej tabeli wymieniono prawidłowe nazwy wartości — słowo kluczowe w <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
+
+W poniższej tabeli wymieniono prawidłowe nazwy wartości — słowo kluczowe w <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
   
 |Słowo kluczowe|Opis|  
 |-------------|-----------------|  
 |`Provider`|Jeśli wymagane `Name` — słowo kluczowe nie jest określony. Nazwa dostawcy, która służy do pobierania <xref:System.Data.Common.DbProviderFactory> obiektu źródłowego dostawcy. Ta wartość jest stała.<br /><br /> Gdy `Name` — słowo kluczowe nie jest uwzględniony w parametry połączenia obiektu niepusta wartość dla `Provider` — słowo kluczowe jest wymagana. This — słowo kluczowe jest wzajemnie wykluczających się przy użyciu `Name` — słowo kluczowe.|  
-|`Provider Connection String`|Opcjonalna. Określa parametry połączenia specyficzne dla dostawcy, który jest przekazywany do bazowego źródła danych. Ten ciąg połączenia jest wyrażany za pomocą prawidłową — słowo kluczowe/pary wartości dla dostawcy danych. Nieprawidłowy `Provider Connection String` spowoduje błąd w czasie wykonywania, gdy zostanie on oceniony przez źródło danych.<br /><br /> This — słowo kluczowe jest wzajemnie wykluczających się przy użyciu `Name` — słowo kluczowe.<br /><br /> Wartość `Provider Connection String` muszą być ujęte w cudzysłowy. Oto przykład:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> Poniższy przykład nie będzie działać:<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Provider Connection String`|Opcjonalna. Określa parametry połączenia specyficzne dla dostawcy, który jest przekazywany do bazowego źródła danych. Te parametry połączenia zawiera nieprawidłowy — słowo kluczowe/pary wartości dla dostawcy danych. Nieprawidłowy `Provider Connection String` spowoduje błąd w czasie wykonywania, gdy zostanie on oceniony przez źródło danych.<br /><br /> This — słowo kluczowe jest wzajemnie wykluczających się przy użyciu `Name` — słowo kluczowe.<br /><br /> Upewnij się wprowadzić wartość zgodnie z ogólna składnia [parametry połączenia ADO.NET](../../../../../docs/framework/data/adonet/connection-strings.md). Na przykład rozważmy następujący ciąg połączenia: `Server=serverName; User ID = userID`. Należy zmienić, ponieważ zawiera ona średnikiem. Ponieważ nie zawiera podwójne znaki cudzysłowu, mogą być wykorzystywane do anulowania zapewnianego element:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|  
 |`Metadata`|Jeśli wymagane `Name` — słowo kluczowe nie jest określony. Rozdzielany potoku lista katalogów, plików i lokalizacje zasobów, w których warto szukać informacji mapowania i metadanych. Oto przykład:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Spacje na każdej stronie separatora potoku są ignorowane.<br /><br /> This — słowo kluczowe jest wzajemnie wykluczających się przy użyciu `Name` — słowo kluczowe.|  
 |`Name`|Aplikację można opcjonalnie określić nazwę połączenia w pliku konfiguracyjnym aplikacji, który zawiera wartości parametrów połączeń wymaganych — słowo kluczowe i wartości. W tym przypadku nie podajesz je bezpośrednio w parametrach połączenia. `Name` — Słowo kluczowe nie jest dozwolona w pliku konfiguracji.<br /><br /> Gdy `Name` — słowo kluczowe jest niedostępna w parametrach połączenia, wartości niepuste dostawcy — słowo kluczowe jest wymagana.<br /><br /> This — słowo kluczowe jest wzajemnie wykluczających się przy użyciu wszystkich innych połączenia ciąg słów kluczowych.|  
   

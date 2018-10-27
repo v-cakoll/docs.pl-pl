@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cea8a322fab6ef76873e668c622ac63e3a3f2862
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e133333d735ca53d194bbb535710bc62bde6bb0e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428228"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188459"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 — Metoda
-Podany interfejs metadanych i nazwę pliku, zwraca poprawny <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> interfejs, który będzie odczytywać symbole debugowania skojarzone z modułu.  
+Podany interfejs metadanych i nazwę pliku, zwraca poprawny [isymunmanagedreader —](isymunmanagedreader-interface.md) interfejs, który zostanie odczytany symbole debugowania, skojarzone z modułem.  
   
- Ta metoda zapewnia bardziej rozległych Wyszukaj plik programu (PDB) bazy danych niż [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) metody.  
+ Ta metoda zapewnia bardziej rozbudowane wyszukiwanie pliku bazy danych (PDB) programu niż [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,30 +40,30 @@ HRESULT GetReaderForFile2(
     [out,retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `importer`  
- [in] Wskaźnik do interfejsu importu metadanych.  
+ [in] Wskaźnik do interfejsu Importowanie metadanych.  
   
  `fileName`  
- [in] Wskaźnik do nazwy pliku.  
+ [in] Wskaźnik na nazwę pliku.  
   
  `searchPath`  
  [in] Wskaźnik do ścieżki wyszukiwania.  
   
  `searchPolicy`  
- [in] Wartość [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) wyliczenia, która określa zasady, która ma być używane podczas wyszukiwania dla czytnika symboli.  
+ [in] Wartość [corsymsearchpolicyattributes —](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) wyliczenie, które określa zasady, które ma być używany podczas wyszukiwania dla czytnika symboli.  
   
  `pRetVal`  
- [out] Wskaźnik, który jest ustawiony na zwracana <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> interfejsu.  
+ [out] Wskaźnik, który jest ustawiony do zwracanego [isymunmanagedreader —](isymunmanagedreader-interface.md) interfejsu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="remarks"></a>Uwagi  
- Ta wersja metody można wyszukiwać pliku PDB w obszarach innych niż prawo obok modułu. Wyszukiwanie zasad mogą być kontrolowane przez połączenie [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md). Na przykład `AllowReferencePathAccess | AllowSymbolServerAccess` szuka pliku PDB obok pliku wykonywalnego i na serwerze symboli nie zapytanie dotyczące rejestru lub użyj ścieżki pliku wykonywalnego. Jeśli `searchPath` podano parametru, te katalogi zawsze będą wyszukiwane.  
+ Ta wersja metody wyszukać plik PDB w obszarach innych niż obok modułu. Zasady wyszukiwania mogą być kontrolowane przez łączenie [corsymsearchpolicyattributes —](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md). Na przykład `AllowReferencePathAccess | AllowSymbolServerAccess` szuka pliku PDB, obok pliku wykonywalnego i na serwerze symboli, nie wykonaj zapytanie dotyczące rejestru lub użyj ścieżki w pliku wykonywalnym. Jeśli `searchPath` parametr zostanie podany, zawsze będą przeszukiwane te katalogi.  
   
 ## <a name="see-also"></a>Zobacz też  
  [ISymUnmanagedBinder2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 61110413f43e95060aa2cfecb4acdb3ebaae14df
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 362c5ba479c845a8183fe705e72ea3a12fb7a94c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027588"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195648"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; — Element (ustawienia sieci)
 Konfiguruje format dostarczania, metodę dostarczania i z adresu do wysyłania wiadomości e-mail.  
@@ -81,8 +79,8 @@ Konfiguruje format dostarczania, metodę dostarczania i z adresu do wysyłania w
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
- <xref:System.Net.Mail.SmtpDeliveryFormat>  
- <xref:System.Net.Mail.SmtpDeliveryMethod>  
- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
+- <xref:System.Net.Mail.SmtpDeliveryFormat>  
+- <xref:System.Net.Mail.SmtpDeliveryMethod>  
+- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

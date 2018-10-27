@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 1d193b0cac56f365a4f0a294145369502754a1b1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 61d966599d06c65690e317be0d514eba944beb77
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696591"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193698"
 ---
 # <a name="instancing"></a>Tworzenie wystąpienia
 Przykład Instancing pokazuje ustawienie zachowania wystąpień, które kontroluje sposób tworzenia wystąpienia klasy usługi w odpowiedzi na żądania klientów. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. Ta przykładowa aplikacja definiuje kontrakt nowe `ICalculatorInstance`, który dziedziczy z `ICalculator`. Kontrakt określony przez `ICalculatorInstance` zawiera trzy dodatkowych operacji sprawdzania stanu wystąpienia usługi. Zmieniając ustawienie wystąpień, można obserwować zmiany w zachowaniu przez uruchomienie klienta.  
@@ -30,7 +30,7 @@ Przykład Instancing pokazuje ustawienie zachowania wystąpień, które kontrolu
   
  Klasa usługi określa zachowanie wystąpień z `[ServiceBehavior(InstanceContextMode=<setting>)]` atrybutu, jak pokazano w poniższym przykładzie kodu. Zmieniając wierszy, które są oznaczone jako komentarz, możesz przyjrzeć się zachowaniu trybach wystąpienia. Pamiętaj, aby odbudować usługi po zmianie trybu wystąpień. Nie istnieją żadne ustawienia związane z wystąpień, aby określić na komputerze klienckim.  
   
-```  
+```csharp
 // Enable one of the following instance modes to compare instancing behaviors.  
  [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
   

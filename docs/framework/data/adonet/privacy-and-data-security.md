@@ -2,18 +2,18 @@
 title: Prywatność i bezpieczeństwo danych
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: dd74abcd95faf27485efcefa1a0a76e830df60fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508867"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194933"
 ---
 # <a name="privacy-and-data-security"></a>Prywatność i bezpieczeństwo danych
 Zabezpieczenia i zarządzanie nimi poufnych informacji w aplikacji ADO.NET zależy od bazowego produkty i technologie używane do jego utworzenia. ADO.NET nie są bezpośrednio dostępne usługi dla zabezpieczenia i szyfrowanie danych.  
   
 ## <a name="cryptography-and-hash-codes"></a>Kryptografii i kodów skrótów  
- Klasy w .NET Framework <xref:System.Security.Cryptography> przestrzeni nazw można z poziomu aplikacji ADO.NET danych odczytu i modyfikacji nieautoryzowanym osobom trzecim. Niektóre klasy są otoki dla niezarządzanych CryptoAPI firmy Microsoft, a inne implementacje zarządzanych. [Usługi kryptograficzne](https://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781) temat zawiera omówienie kryptografii w programie .NET Framework, w tym artykule opisano sposób implementacji cryptograph i sposobu wykonywania określonych zadań kryptograficznych.  
+ Klasy w .NET Framework <xref:System.Security.Cryptography> przestrzeni nazw można z poziomu aplikacji ADO.NET danych odczytu i modyfikacji nieautoryzowanym osobom trzecim. Niektóre klasy są otoki dla niezarządzanych CryptoAPI firmy Microsoft, a inne implementacje zarządzanych. [Usługi kryptograficzne](../../../../docs/standard/security/cryptographic-services.md) temat zawiera omówienie kryptografii w programie .NET Framework, w tym artykule opisano sposób implementacji cryptograph i sposobu wykonywania określonych zadań kryptograficznych.  
   
  W przeciwieństwie do szyfrowania, który pozwala na być szyfrowane, a następnie odszyfrować danych, tworzenia skrótu danych jest procesem jednokierunkowym. Mieszania danych jest przydatne, jeśli chcesz zapobiec modyfikowaniu, sprawdzając, czy dane nie zostały zmienione: podana identyczne ciągi wejściowe, algorytmy wyznaczania wartości skrótu zawsze produkcji wartości identyczny krótkich danych wyjściowych, które można łatwo porównać. [Zapewnianie integralności danych za pomocą wartości skrótu](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md) opisuje sposób generowania i sprawdź wartości skrótu.  
   

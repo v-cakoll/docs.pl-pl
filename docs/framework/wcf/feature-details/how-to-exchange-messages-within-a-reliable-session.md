@@ -2,12 +2,12 @@
 title: 'Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 6b204749ce86b79bf46b2d5c96be1b00dca9500d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037379"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195739"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej
 
@@ -23,7 +23,7 @@ Kluczowa część tej procedury jest, że element konfiguracji punktu końcowego
 
    [!code-csharp[c_HowTo_UseReliableSession#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1121)]
 
-1. Implementowanie kontraktu usługi, w klasie usługi. Należy pamiętać, że informacji adres lub powiązanie nie jest określona wewnątrz implementacji usługi. Nie są wymagane, aby napisać kod, aby pobrać adres lub powiązania informacji o informacje z pliku konfiguracji.
+1. Implementowanie kontraktu usługi, w klasie usługi. Należy pamiętać, że informacji adres lub powiązanie nie jest określona wewnątrz implementacji usługi. Nie są wymagane, aby napisać kod, aby pobrać adres lub powiązania informacji z pliku konfiguracji.
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
@@ -51,7 +51,7 @@ Kluczowa część tej procedury jest, że element konfiguracji punktu końcowego
 
    [!code-csharp[C_HowTo_UseReliableSession#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1221)]
 
-1. Aplikacja wygenerowanego klienta zawiera również implementację `ClientCalculator`. Należy pamiętać, że informacje dotyczące adresów i powiązanie nie jest określona w dowolne miejsce wewnątrz implementacji usługi. Nie są wymagane, aby napisać kod, aby pobrać adres lub powiązania informacji o informacje z pliku konfiguracji.
+1. Aplikacja wygenerowanego klienta zawiera również implementację `ClientCalculator`. Należy pamiętać, że informacje dotyczące adresów i powiązanie nie jest określona w dowolne miejsce wewnątrz implementacji usługi. Nie są wymagane, aby napisać kod, aby pobrać adres lub powiązania informacji z pliku konfiguracji.
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 

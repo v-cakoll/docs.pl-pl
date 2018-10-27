@@ -2,12 +2,12 @@
 title: Nietypizowane żądanie odpowiedź.
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 55692282aa06b8e988f44806394bdfcbb6e2f3ec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b6e93ad0782fcacbc4ce20c0e9bb407abdf2366f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528596"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195310"
 ---
 # <a name="untyped-requestreply"></a>Nietypizowane żądanie/nietypizowana odpowiedź
 Niniejszy przykład pokazuje jak zdefiniować kontrakty operacji, korzystających z klasy wiadomości.  
@@ -17,14 +17,14 @@ Niniejszy przykład pokazuje jak zdefiniować kontrakty operacji, korzystającyc
   
  Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Kontrakt usługi definiuje jedna operacja, która przyjmuje typ komunikatu jako argument i zwraca komunikat. Operacja zbiera wszystkie dane wymagane do obliczenia sum z treści wiadomości, a następnie wysyła Suma jako treść w komunikacie zwrotu.  
   
-```  
+```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
  W usłudze operacja pobiera tablicę liczb całkowitych przekazanej do komunikatu wejściowego, a następnie oblicza sumę. Aby wysłać komunikat odpowiedzi, próbka tworzy nowy komunikat z wersją odpowiedni komunikat i akcji i dodaje obliczona suma jako jej treści. Następujący przykładowy kod pokazuje to.  
   
-```  
+```csharp
 public Message ComputeSum(Message request)  
 {  
     //The body of the message contains a list of numbers which will be   
@@ -45,7 +45,7 @@ public Message ComputeSum(Message request)
   
  Klient korzysta z kodu, który jest generowany przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do utworzenia serwera proxy do zdalnej usługi. Aby wysłać komunikat żądania, klient musi mieć wersji wiadomości, która jest zależna od kanału źródłowego. W związku z tym, tworzy nową <xref:System.ServiceModel.OperationContextScope> ograniczone do serwera proxy kanału on utworzony, co powoduje utworzenie <xref:System.ServiceModel.OperationContext> wersją komunikatów wypełnionych w jego `OutgoingMessageHeaders.MessageVersion` właściwości. Klient przekazuje tablicy wejściowej jako treść komunikatu żądania, a następnie wywołuje `ComputeSum` na serwerze proxy. Klient pobiera następnie sumę przeszła, uzyskując dostęp do danych wejściowych `GetBody<T>` metody na komunikat odpowiedzi. Następujący przykładowy kod pokazuje to.  
   
-```  
+```csharp
 using (new OperationContextScope(client.InnerChannel))  
 {  
     // Call the Sum service operation.  
@@ -63,7 +63,7 @@ using (new OperationContextScope(client.InnerChannel))
   
  W tym przykładzie przedstawiono przykładowe hostowanych w sieci Web i musi być uruchamiany tylko plik wykonywalny klienta. Poniżej przedstawiono przykładowe dane wyjściowe na komputerze klienckim.  
   
-```  
+```console  
 Prompt>Client.exe  
 Sum of numbers passed (1,2,3,4,5) = 15  
   

@@ -1,34 +1,35 @@
 ---
-title: Instrukcje wyboru (odwołanie w C#)
+title: Instrukcje wyboru (C# odwołania)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
-ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b4575884acc63489f3e40bd040257a9c6bca5df9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48026308"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181423"
 ---
-# <a name="selection-statements-c-reference"></a>Instrukcje wyboru (odwołanie w C#)
-Instrukcja zaznaczenie powoduje, że formant programu do przeniesienia do określonego przepływu, w zależności od tego, czy określony warunek jest `true` czy nie.  
-  
- Następujące słowa kluczowe są używane w instrukcji wyboru:  
-  
--   [if](../../../csharp/language-reference/keywords/if-else.md)  
-  
--   [else](../../../csharp/language-reference/keywords/if-else.md)  
-  
--   [switch](../../../csharp/language-reference/keywords/switch.md)  
-  
--   [przypadek](../../../csharp/language-reference/keywords/switch.md)  
-  
--   [default](../../../csharp/language-reference/keywords/switch.md)  
+# <a name="selection-statements-c-reference"></a>Instrukcje wyboru (C# odwołania)
 
-## <a name="see-also"></a>Zobacz też
+Instrukcja zaznaczenie powoduje, że formant programu do przeniesienia do określonego przepływu, w zależności od tego, czy określony warunek jest `true` czy nie.
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Słowa kluczowe instrukcji](../../../csharp/language-reference/keywords/statement-keywords.md)
+Następujące słowa kluczowe są używane w instrukcji wyboru:
+
+- [if](if-else.md)
+
+- [else](if-else.md)
+
+- [switch](switch.md)
+
+- [case](switch.md)
+
+- [default](switch.md)
+
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Słowa kluczowe instrukcji](statement-keywords.md)

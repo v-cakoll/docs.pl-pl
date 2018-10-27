@@ -1,7 +1,7 @@
 ---
 title: Transport Layer Security (TLS) najlepszych rozwiązań za pomocą programu .NET Framework
 description: W tym artykule opisano najlepsze rozwiązania przy użyciu zabezpieczeń TLS (Transport Layer) za pomocą programu .NET Framework
-ms.date: 03/15/2018
+ms.date: 10/22/2018
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-author: blowdart
-ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424483"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194140"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Transport Layer Security (TLS) najlepszych rozwiązań za pomocą programu .NET Framework
 
-Protokołu Transport Layer Security (TLS) jest standardem branżowym, zaprojektowany w celu ochrony prywatności informacji przekazywanych za pośrednictwem Internetu. [Protokół TLS 1.2](https://tools.ietf.org/html/rfc5246) to najnowsza standard wydana i zawiera ulepszenia bezpieczeństwa w porównaniu z poprzednimi wersjami. Protokół TLS 1.2 po pewnym czasie zostaną zastąpione przez [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22). W tym artykule przedstawiono zalecenia w celu zabezpieczenia aplikacji .NET Framework, które używają protokołu TLS.
+Protokołu Transport Layer Security (TLS) jest standardem branżowym, zaprojektowany w celu ochrony prywatności informacji przekazywanych za pośrednictwem Internetu. [Protokół TLS 1.2](https://tools.ietf.org/html/rfc5246) jest standardem, który zapewnia poprawę zabezpieczeń w porównaniu z poprzednimi wersjami. Protokołu TLS 1.2 ostatecznie zostanie zastąpiona przez najnowszą standard wydana [TLS 1.3](https://tools.ietf.org/html/rfc8446) który jest szybszy i zawiera ulepszone zabezpieczenia. W tym artykule przedstawiono zalecenia w celu zabezpieczenia aplikacji .NET Framework, które używają protokołu TLS.
 
 Aby upewnić się, .NET Framework, aplikacje będą nadal bezpiecznego, powinien wersję protokołu TLS **nie** być zapisane na stałe. .NET framework aplikacje powinny używać wersji protokołu TLS, który obsługuje systemu operacyjnego (OS).
 
@@ -258,7 +257,7 @@ Aby zaktualizować .NET Framework, aby system operacyjny wybrać najlepszą wers
 
 Zobacz też:
 
-- [Wersje programu .NET framework i zależności](../migration-guide/versions-and-dependencies.md)
+- [Wersje i zależności platformy .NET Framework](../migration-guide/versions-and-dependencies.md)
 - [Porady: Określanie, które wersje programu .NET Framework są zainstalowane](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 ## <a name="support-for-tls-12"></a>Obsługa protokołu TLS 1.2
@@ -278,7 +277,7 @@ Aby włączyć lub ponownie włączyć protokół TLS 1.2 i/lub protokołu TLS 1
 | Windows Server 2008 | Obsługa protokołu TLS 1.2, TLS 1.1 wymaga aktualizacji. Zobacz [aktualizacji, aby dodać obsługę protokołu TLS 1.1 i TLS 1.2 w systemie Windows Server 2008 z dodatkiem SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | Nieobsługiwane. |
 
-Aby uzyskać informacje o protokole TLS/SSL, które protokoły są włączone domyślnie w każdej wersji systemu Windows, zobacz [protokołów TLS/SSL (dostawca SSP Schannel)](https://msdn.microsoft.com/library/windows/desktop/mt808159).
+Aby uzyskać informacje o protokole TLS/SSL, które protokoły są włączone domyślnie w każdej wersji systemu Windows, zobacz [protokołów TLS/SSL (dostawca SSP Schannel)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-).
 
 **Wymagania dotyczące obsługi protokołu TLS 1.2, za pomocą programu .NET Framework 3.5**
 
@@ -305,6 +304,6 @@ Jeśli aplikacja jest przeznaczona na .NET Framework w wersji, która nie jest d
 
 ### <a name="azure-guest-os-registry-settings"></a>Ustawienia rejestru systemu operacyjnego gościa platformy Azure
 
-Obraz systemu operacyjnego gościa platformy Azure, dla [usług Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) ma już `SchUseStrongCrypto` klucz rejestru jest ustawiony na wartość 1. Aby uzyskać więcej informacji, zobacz [SchUseStrongCrypto](#schusestrongcrypto).
+Obraz 5 rodziny systemów operacyjnych gościa platformy Azure dla [usług Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) ma już `SchUseStrongCrypto` klucz rejestru jest ustawiony na wartość 1. Aby uzyskać więcej informacji, zobacz [SchUseStrongCrypto](#schusestrongcrypto).
 
 Ustaw [SystemDefaultTlsVersions](#systemdefaulttlsversions) klucz rejestru na wartość 1. Zobacz [Konfigurowanie zabezpieczeń za pomocą rejestru Windows](#configuring-security-via-the-windows-registry).

@@ -2,19 +2,19 @@
 title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-ms.openlocfilehash: 83fa879fbef94e2dc9c142dfb92a51a54a7b60cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49a640a666131491366646d6d486d25a515e35bf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486537"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185709"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class MtomMessageEncodingBindingElement : MessageEncodingBindingElement  
 {  
   string Encoding;  
@@ -33,36 +33,36 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 ### <a name="encoding"></a>Kodowanie  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Zestaw znaków kodowania używanego w celu emisji komunikatów w powiązaniu.  
+ Kodowanie do użycia dla emisji komunikatów w powiązaniu zestawu znaków.  
   
-### <a name="maxreadpoolsize"></a>MaxReadPoolSize  
+### <a name="maxreadpoolsize"></a>maxReadPoolSize  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Liczba całkowita definiująca, ile komunikatów można jednocześnie odczytać bez przydziału nowych czytników.  
   
-### <a name="maxwritepoolsize"></a>MaxWritePoolSize  
+### <a name="maxwritepoolsize"></a>maxWritePoolSize  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Liczba całkowita definiująca, ile komunikatów można jednocześnie wysłać bez przydziału nowych modułów zapisujących.  
   
-### <a name="readerquotas"></a>ReaderQuotas  
+### <a name="readerquotas"></a>readerQuotas  
  Typ danych: XmlDictionaryReaderQuotas  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Przydziały czytników.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>

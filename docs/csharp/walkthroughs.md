@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ae29c8fbe8d5d87ccee4d6a43a3c9285f0c41ee1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583902"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192567"
 ---
 # <a name="c-walkthroughs"></a>C# — wskazówki
 Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariuszy, które sprawia, że ich dobrym miejscem do uruchomienia, informacje o strefie dana funkcja lub produktu.  
@@ -23,7 +23,7 @@ Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariu
  [Uzyskiwanie dostępu do sieci Web za pomocą Async i Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  Pokazuje, jak utworzyć rozwiązanie asynchroniczne przy użyciu [async](../csharp/language-reference/keywords/async.md) i [await](../csharp/language-reference/keywords/await.md).  
   
- [Tworzenie składników środowiska wykonawczego Windows w języku C# lub Visual Basic i wywoływanie z kodu JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
+ [Tworzenie składników środowiska wykonawczego Windows w języku C# lub Visual Basic i wywoływanie z kodu JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  Pokazuje, jak utworzyć [!INCLUDE[wrt](~/includes/wrt-md.md)] wpisz, spakujesz ją w [!INCLUDE[wrt](~/includes/wrt-md.md)] składnika, a następnie wywołać składnika z [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplikację, która została stworzona z myślą Windows przy użyciu języka JavaScript.  
   
  [Office programowania (C# i Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  

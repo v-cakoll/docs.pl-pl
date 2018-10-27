@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 7b91d13cbcb9d211d4ca18c8e48c7494bf6eccc6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588083"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50039026"
 ---
 # <a name="end-of-statement-expected"></a>Oczekiwano końca instrukcji
-Wykonywanie instrukcji zostało składniowo ukończone, ale dodatkowy element programowania zgodny element kończące instrukcję. Terminator wiersza jest wymagany na końcu każdej instrukcji.
+Instrukcja jest syntaktycznie ukończone, ale dodatkowy element programowania następuje po elemencie, kończące instrukcję. Terminator wiersza jest wymagany na końcu każdej instrukcji.
   
- Terminator wiersza dzieli znaki plik źródłowy języka Visual Basic wierszy. Przykłady terminatory wiersza są Unicode karetki zwracanych znaków (& HD), Unicode wysuwu wiersza znak (& HA), a znak Unicode wysuwu wiersza znak powrotu karetki Unicode. Aby uzyskać więcej informacji o wierszu terminatory, zobacz [specyfikacja języka Visual Basic](../../../visual-basic/reference/language-specification/index.md).
+ Terminator wiersza dzieli znaki plik źródłowy w języku Visual Basic na wierszach. Terminatory wiersza przykłady Unicode karetki zwracany znak (& HD), Unicode wysuwu wiersza znaku (i wysokiej dostępności) i następuje znak wysuwu wiersza Unicode znak powrotu karetki Unicode. Aby uzyskać więcej informacji na temat terminatory wiersza zobacz [specyfikacja języka Visual Basic](~/_vblang/spec/lexical-grammar.md#line-terminators).
   
  **Identyfikator błędu:** BC30205
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
   
-1.  Sprawdź, czy dwa różne instrukcje przypadkowo zostały wprowadzone w tym samym wierszu.
+1.  Sprawdź, jeśli dwie różne instrukcje zostały przypadkowo wprowadzone w tym samym wierszu.
   
-2.  Wstaw terminator wiersza po elemencie kończące instrukcję.
+2.  Wstaw terminator wiersza po elemencie, kończące instrukcję.
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  

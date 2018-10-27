@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591959"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183896"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Wskazówki: tworzenie aplikacji rozszerzalnej
 W tym przewodniku opisano tworzenie potoku dodatku, który wykonuje funkcje prosty kalkulator. Nie przedstawiono tu rzeczywistych scenariuszy; zamiast pokazuje podstawową funkcjonalność potoku i jak dodatek mogą udostępniać usługi hosta.  
@@ -355,8 +355,8 @@ W tym przewodniku opisano tworzenie potoku dodatku, który wykonuje funkcje pros
 4.  Typ **wyjść** i naciśnij klawisz **Enter** klawisz, aby zamknąć aplikację.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przewodnik: Włączanie zgodności z poprzednimi wersjami w miarę zmieniania hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [Wskazówki: Przekazywanie kolekcji między hostami i dodatkami](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [Wymagania dotyczące opracowywania potoku](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [Kontrakty, widoki i adaptery](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [Opracowywanie potoku](../../../docs/framework/add-ins/pipeline-development.md)
+- [Przewodnik: Włączanie zgodności z poprzednimi wersjami w miarę zmieniania hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-  [Wskazówki: Przekazywanie kolekcji między hostami i dodatkami](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-  [Wymagania dotyczące opracowywania potoku](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+-  [Kontrakty, widoki i adaptery](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
+-  [Opracowywanie potoku](../../../docs/framework/add-ins/pipeline-development.md)

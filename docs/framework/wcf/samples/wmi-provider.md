@@ -2,12 +2,12 @@
 title: Dostawca WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 7947d9a1bedfe7a2a550a7b4d52b3cf5a8f40126
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4541c411d6bd1f13a03a0b6750e6683a7c2b3f3f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839401"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194907"
 ---
 # <a name="wmi-provider"></a>Dostawca WMI
 W tym przykładzie pokazano, jak zbieranie danych z usługi Windows Communication Foundation (WCF) w czasie wykonywania przy użyciu dostawcy Instrumentacji zarządzania Windows (WMI), która jest wbudowana w usługi WCF. Ponadto w tym przykładzie przedstawiono sposób dodawania obiektu WMI zdefiniowanych przez użytkownika do usługi. Przykładowe aktywuje dostawcy WMI o [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i pokazuje, jak zbierać dane z `ICalculator` usługi w czasie wykonywania.  
@@ -32,7 +32,7 @@ W tym przykładzie pokazano, jak zbieranie danych z usługi Windows Communicatio
  Dodawanie obiektów WMI do usługi umożliwia do ujawnienia informacji użytkownika wraz z wbudowaną informacji o dostawcy WMI. Jest to realizowane przez opublikowanie schemat usługi WMI za pomocą aplikacji Installutil.exe. Instrukcje, aby to osiągnąć, podając więcej szczegółów można znaleźć w instrukcjach instalacji na końcu tego tematu.  
   
 ## <a name="accessing-wmi-information"></a>Uzyskiwanie dostępu do informacji usługi WMI  
- Dane usługi WMI są dostępne wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, aplikacji Visual Basic, aplikacji w języku C++ i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
+ Dane usługi WMI są dostępne wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, aplikacji Visual Basic, aplikacji w języku C++ i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
   
  W tym przykładzie użyto dwóch skryptów języka Java: jeden wyliczyć usługi uruchomione na komputerze oraz niektóre z ich właściwości, a druga do wyświetlania danych WMI zdefiniowanych przez użytkownika. Skrypt otwiera połączenie z dostawcą WMI, analizuje dane i wyświetla dane zebrane.  
   

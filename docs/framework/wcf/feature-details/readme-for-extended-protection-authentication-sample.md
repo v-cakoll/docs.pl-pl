@@ -2,13 +2,12 @@
 title: Plik ReadMe dla uwierzytelniania na potrzeby zabezpieczeń rozszerzonych — przykład
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-author: BrucePerlerMS
-ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 19fe961e346874346485442bd0ba90badab5f79f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847948"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192476"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Plik ReadMe dla uwierzytelniania na potrzeby zabezpieczeń rozszerzonych — przykład
 Rozszerzona ochrona jest inicjatywy zabezpieczeń, aby zapewnić ochronę przed ataków typu man-in--middle (MITM) ataków, w których osoba atakująca ("man-in--middle") przechwytuje poświadczenia klienta i są one używane do dostępu do bezpiecznych zasobów na serwerze zamierzonego klienta.  

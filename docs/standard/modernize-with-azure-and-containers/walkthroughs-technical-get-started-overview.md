@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą chmury platfor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 41fbeb3abc201ef03cf0c237a069e7687c98dd18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594014"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372854"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Przewodniki i technicznych wprowadzająca
 
@@ -203,7 +203,7 @@ Pełna pomoc przewodnik jest dostępna w wiki repozytorium GitHub eShopModernizi
 
 ### <a name="overview"></a>Omówienie
 
-[Usługa Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/) jest najszybszym sposobem kontenerów środowiska dev/test/wdrażanie przejściowe, którym można wdrożyć z pojedynczego wystąpienia kontenerów.
+[Usługa Azure Container Instances (ACI)](https://docs.microsoft.com/azure/container-instances/) jest najszybszym sposobem kontenerów środowiska dev/test/wdrażanie przejściowe, którym można wdrożyć z pojedynczego wystąpienia kontenerów.
 
 ### <a name="goals"></a>Cele
 

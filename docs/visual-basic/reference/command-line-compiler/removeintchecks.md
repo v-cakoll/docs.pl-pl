@@ -9,14 +9,12 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 26485fe2ba3f5647266147744cbe53f978694a9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f061497083dc23fd07f61108938a4129c0af5f3a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656129"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188541"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
 Włącza sprawdzanie operacji liczby całkowitej lub wyłącz błąd przepełnienia.  
@@ -31,11 +29,11 @@ Włącza sprawdzanie operacji liczby całkowitej lub wyłącz błąd przepełnie
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalna. `-removeintchecks-` Opcja powoduje, że kompilator, aby sprawdzić wszystkie obliczenia całkowitą błędy przepełnienia. Wartość domyślna to `-removeintchecks-`.<br /><br /> Określanie `-removeintchecks` lub `-removeintchecks+` uniemożliwia sprawdzanie błędów i może wykonywać szybsze obliczenia liczby całkowitej. Jednak bez sprawdzania błędów, i jeśli są przepełnienie danych typu pojemności, niepoprawne wyniki mogą być przechowywane bez zgłaszania błędu.|  
+|`+` &#124; `-`|Opcjonalna. `-removeintchecks-` Opcja powoduje, że kompilator będzie sprawdzać wszystkich obliczeń na liczbach całkowitych błędy przepełnienia. Wartość domyślna to `-removeintchecks-`.<br /><br /> Określanie `-removeintchecks` lub `-removeintchecks+` zapobiega, sprawdzanie błędów i może szybciej obliczeń na liczbach całkowitych. Jednak bez sprawdzania błędów, i jeśli są przepełnienie pojemności typu danych, bez zgłaszania błędu mogą być przechowywane niepoprawne wyniki.|  
   
-|Aby ustawić - removeintchecks w programie Visual Studio zintegrowane środowisko deweloperskie|  
+|Aby ustawić - removeintchecks w programie Visual Studio zintegrowane środowisko projektowe|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Kliknij przycisk **zaawansowane** przycisku.<br />4.  Zmodyfikuj wartość **Wyłącz sprawdzanie przepełnienia całkowitych** pole.|  
+|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Kliknij przycisk **zaawansowane** przycisku.<br />4.  Zmodyfikuj wartość **Usuń nadmiaru** pole.|  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje `Test.vb` i wyłącza sprawdzanie błąd przepełnienia liczby całkowitej.  
@@ -45,5 +43,5 @@ vbc -removeintchecks+ test.vb
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
  [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

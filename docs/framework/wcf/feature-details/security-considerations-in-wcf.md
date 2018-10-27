@@ -6,13 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-author: BrucePerlerMS
-ms.openlocfilehash: f26369a567e89fc502f777383c22e74b96fe503c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f7bcaff5cd30566f2bf729695a7c4c44cd45c5d3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198042"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192840"
 ---
 # <a name="security-considerations-in-wcf"></a>Zagadnienia dotyczące zabezpieczeń w programie WCF
 Tematy w tej sekcji listy różne elementy związane z zabezpieczeniami wziąć pod uwagę podczas projektowania aplikacji Windows Communication Foundation (WCF).  

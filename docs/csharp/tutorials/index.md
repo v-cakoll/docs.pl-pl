@@ -1,29 +1,66 @@
 ---
-title: Samouczki C#
-description: Poznaj te samouczki C# informacje na temat tworzenia programów C# i Dowiedz się więcej funkcji języka C#.
-ms.date: 09/07/2017
-ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
-ms.openlocfilehash: 1809e9237429bccdc5c2b384cd247c4dd64e47ab
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+title: Samouczki języka C#
+description: Zapoznaj się z tych C# samouczki, aby dowiedzieć się, jak tworzyć C# programów i ucz się C# funkcje języka.
+ms.date: 10/25/2018
+ms.openlocfilehash: 2e7981c0b958e6ff4682dc502b83766f56d6c528
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33955995"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195128"
 ---
-# <a name="c-tutorials"></a>Samouczki C#
+# <a name="c-tutorials"></a>Samouczki języka C#
 
-Następujące samouczki umożliwiają tworzenie za pomocą programów C# [.NET Core](../../core/index.md):
+Witamy w C# samouczków. One rozpoczynać się interakcyjne lekcji, które można uruchomić w przeglądarce. Kolejnych samouczkach, pomagając w bardziej zaawansowanych samouczków pracy z narzędziami programistycznymi .NET do tworzenia C# programy na komputerze.
 
-* [Aplikacja konsolowa](console-teleprompter.md): Pokazuje konsoli operacji We/Wy, struktury aplikacji konsoli i podstawy opartego na zadaniach asynchronicznej modelu programowania.
+## <a name="introduction-to-c-interactive-tutorials"></a>Wprowadzenie do C# interaktywne samouczki #
 
-* [Klient REST](console-webapiclient.md): przedstawia komunikacji w sieci web, serializacji JSON i zorientowanym obiektowo funkcje w języku C#.
+Pierwszy lekcji opisano C# pojęć przy użyciu małych fragmentów kodu. Poznasz podstawy C# składni i sposób pracy z typami danych, takich jak ciągi, liczby i wartości logiczne. To wszystkie interaktywne, a użytkownik będzie pisanie i uruchamianie kodu w ciągu kilku minut. Te lekcje pierwszy założono nie uprzednia umiejętność programowania lub C# języka.
 
-* [Dziedziczenie w języku C# i .NET](inheritance.md): Pokazuje dziedziczenia w języku C#, łącznie z użyciem dziedziczenia do definiowania klas podstawowych, abstrakcyjnych klas podstawowych i klasach pochodnych.
+## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello World](intro-to-csharp/hello-world.yml)
 
-* [Praca z LINQ](working-with-linq.md): pokazano wiele funkcji LINQ i elementy języka, które ją obsługują.
+W [Witaj, świecie](intro-to-csharp/hello-world.yml) samouczka, utworzysz najbardziej podstawowym C# program. Dowiesz się o `string` typu i sposób pracy z tekstem.
 
-* [Mikrousług hostowanych w Docker](microservices.md): pokazano tworzenie mikrousługi platformy ASP.NET Core i hostując go na Docker.
+## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[Liczby w języku C#](intro-to-csharp/numbers-in-csharp.yml)
 
-* [Ciąg interpolacji](string-interpolation.md): Pokazuje, jak używać interpolacji ciąg do tworzenia ciągi sformatowane w języku C#.
+W [liczby w elemencie C# ](intro-to-csharp/numbers-in-csharp.yml) samouczka, dowiesz się, jak komputery przechowujące liczby oraz sposób wykonywania obliczeń na różne typy liczbowe. Poznasz podstawy zaokrąglania oraz sposób wykonywania obliczeń matematycznych za pomocą C#. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](intro-to-csharp/numbers-in-csharp-local.md).
 
-* [Przy użyciu atrybutów](attributes.md): demonstruje sposób tworzenia i używania atrybutów w języku C#.
+W tym samouczku założono, że zakończono [Witaj, świecie](intro-to-csharp/hello-world.yml) lekcji.
+
+## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[Gałęzie i pętle](intro-to-csharp/branches-and-loops.yml)
+
+[Gałęzie i pętle](intro-to-csharp/branches-and-loops.yml) samouczek omawia podstawowe informacje dotyczące wybierania różnych ścieżek wykonywania kodu na podstawie wartości przechowywane w zmiennych. Poznasz podstawy przepływu sterowania, która jest podstawą jak programy podejmowanie decyzji i wybierz różne akcje. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](intro-to-csharp/branches-and-loops-local.md).
+
+W tym samouczku założono, że zakończono [Witaj, świecie](intro-to-csharp/hello-world.yml) i [liczby w elemencie C# ](intro-to-csharp/numbers-in-csharp.yml) lekcje.
+
+## <a name="string-interpolationintro-to-csharpinterpolated-stringsyml"></a>[Interpolacja ciągów](intro-to-csharp/interpolated-strings.yml)
+
+[Interpolacja ciągów](intro-to-csharp/interpolated-strings.yml) samouczku przedstawiono sposób wstawiania wartości do ciągu. Dowiesz się, jak utworzyć ciągu interpolowanego z osadzonymi C# wyrażeń i jak kontrolować wygląd tekstu wyniki wyrażenia w ciągu wynikowym. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](intro-to-csharp/interpolated-strings-local.md).
+
+## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[Lista kolekcji](intro-to-csharp/list-collection.yml)
+
+[Listy kolekcji](intro-to-csharp/list-collection.yml) lekcji przedstawi Przewodnik po typ kolekcji listy, który przechowuje sekwencji danych. Dowiesz się, jak dodać i usunąć elementy, wyszukiwać elementy i sortowanie listy. Dowiesz się o różnych rodzajów list. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](intro-to-csharp/arrays-and-collections.md).
+
+Ten samouczek zakłada, Zakończono lekcje wymienionych powyżej.
+
+## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Wprowadzenie do C# — pracować lokalnie](intro-to-csharp/local-environment.md)
+
+Wprowadzających samouczków po lekcji Witaj, świecie są dostępne w środowisku projektowym lokalnego. Na koniec każdego samouczka zdecyduj, czy chcesz kontynuować z następnej lekcji online lub na własnym komputerze. Brak łącza, które ułatwiają konfigurowanie środowiska i przejdź do następnego samouczka na komputerze.
+
+## <a name="general-tutorials"></a>Samouczki ogólne
+
+Następujące samouczki umożliwiają tworzenie C# programy przy użyciu [platformy .NET Core](../../core/index.md):
+
+* [Aplikacja konsoli](console-teleprompter.md): Pokazuje konsoli operacje We/Wy, struktury aplikacji konsoli i podstawy opartego na zadaniach asynchronicznego modelu programowania.
+
+* [Klient REST](console-webapiclient.md): demonstruje komunikacji w sieci web, serializację JSON i funkcji zorientowanych obiektowo w C# języka.
+
+* [Dziedziczenie w C# i .NET](inheritance.md): Pokazuje dziedziczenie w C#, łącznie z użyciem dziedziczenia, aby zdefiniować klas bazowych, abstrakcyjne klasy podstawowe i klasach pochodnych.
+
+* [Praca z technologią LINQ](working-with-linq.md): Pokazuje wiele funkcji LINQ i elementów języka, które go obsługują.
+
+* [Mikrousługi hostowane na platformie Docker](microservices.md): Pokazuje, tworzenia mikrousług platformy ASP.NET Core, a następnie hostując go na platformie Docker.
+
+* [Interpolacja ciągów](string-interpolation.md): Pokazuje, jak używać Interpolacja ciągów w celu utworzenia sformatowane ciągi w C#.
+
+* [Przy użyciu atrybutów](attributes.md): Pokazuje, jak utworzyć i używać atrybutów w C#.

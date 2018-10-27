@@ -2,12 +2,12 @@
 title: Dyrektywy kompilatora (F#)
 description: 'Więcej informacji na temat F # języka dyrektywy preprocesora, dyrektywy kompilacji warunkowej, dyrektywy line i dyrektywy kompilatora.'
 ms.date: 05/16/2016
-ms.openlocfilehash: eeb33cd3b1d6a228555724a307bf2e2407c6b4c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042464"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181371"
 ---
 # <a name="compiler-directives"></a>Dyrektywy kompilatora
 
@@ -33,7 +33,7 @@ Wpływ wyłączenia ostrzeżenie ma zastosowanie do całego pliku, w tym częśc
 
 ## <a name="conditional-compilation-directives"></a>Dyrektywy kompilacji warunkowej
 
-Kod, który jest dezaktywowany za pomocą jednej z tych dyrektyw jest wyszarzony w edytorze programu Visual StudioCode.
+Kod, który jest dezaktywowany za pomocą jednej z tych dyrektyw jest wyszarzony w edytorze kodu programu Visual Studio.
 
 >[!NOTE]
 Zachowanie dyrektywy kompilacji warunkowej nie jest taka sama jak w innych językach. Na przykład nie można używać wyrażeń logicznych obejmujących symbole, i `true` i `false` nie mają specjalnego znaczenia. Symbole, których używasz w `if` dyrektywy muszą być zdefiniowane przy użyciu wiersza polecenia lub w ustawieniach projektu; jest nie `define` dyrektywy preprocesora.

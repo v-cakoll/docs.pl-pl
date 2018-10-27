@@ -2,12 +2,12 @@
 title: 'Wprowadzenie do języka F # w programie Visual Studio Code'
 description: 'Dowiedz się, jak używać języka F # za pomocą programu Visual Studio Code i Ionide zestawu wtyczki.'
 ms.date: 05/28/2018
-ms.openlocfilehash: 1afe985a4fe73d18b1e47b071b119c15a4672022
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874354"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192671"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Wprowadzenie do języka F # w programie Visual Studio Code
 
@@ -19,7 +19,7 @@ Aby rozpocząć, upewnij się, że [języka F # i poprawnie zainstalowaną wtycz
 
 Aby utworzyć nowy projekt języka F #, Otwórz program Visual Studio Code w nowym folderze (można określić nazwę wedle uznania).
 
-Następnie otwórz pallette polecenia (**Widok > Pallette polecenia**) i wpisz następujące polecenie:
+Następnie otwórz paletę poleceń (**Widok > paletę poleceń**) i wpisz następujące polecenie:
 
 ```
 > F# new project

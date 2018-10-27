@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848312"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194088"
 ---
 # <a name="using-message-contracts"></a>Używanie kontraktów komunikatu
 Zwykle podczas tworzenia aplikacji Windows Communication Foundation (WCF), deweloperzy zwracać szczególną uwagę na struktur danych oraz problemy z serializacją i nie trzeba zajmować się struktury komunikaty, w których odbywa się dane. Dla tych aplikacji tworząc kontraktów danych dla parametrów lub zwracanych wartości jest bardzo proste. (Aby uzyskać więcej informacji, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -145,8 +145,8 @@ public class BankingTransaction
 ## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>Kontrolowanie, czy zostaną opakowane części treści protokołu SOAP  
  Domyślnie części treści protokołu SOAP są serializowane w elemencie opakowana. Na przykład, poniższy kod przedstawia `HelloGreetingMessage` element otoki wygenerowany na podstawie nazwy <xref:System.ServiceModel.MessageContractAttribute> typ kontraktu komunikatu, aby uzyskać `HelloGreetingMessage` wiadomości.  
   
- [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
- [!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
+[!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
+[!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
   
  Aby pominąć element otoki, należy ustawić <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> właściwość `false`. Aby kontrolować nazwę i przestrzeń nazw elementu otoki, należy użyć <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> i <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A> właściwości.  
   

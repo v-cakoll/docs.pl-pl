@@ -2,12 +2,12 @@
 title: Strumień
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed77d8231df8a2272e398f5b1a126c6ed8cab354
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861117"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191184"
 ---
 # <a name="stream"></a>Strumień
 Przykładowe Stream zademonstrowano użycie przesyłania strumieniowego komunikacji tryb transferu. Kilka operacji wysyłania i odbierania strumieni, które uwidacznia usługa. W tym przykładzie jest samodzielnie hostowana. Klient i usługa są programy konsoli.  
@@ -20,7 +20,7 @@ Przykładowe Stream zademonstrowano użycie przesyłania strumieniowego komunika
 ## <a name="streaming-and-service-contracts"></a>Przesyłanie strumieniowe i kontraktów usług  
  Przesyłanie strumieniowe jest coś, co wziąć pod uwagę podczas projektowania kontraktu usługi. Jeśli operacja odbiera lub zwraca dużych ilości danych, należy rozważyć, przesyłanie strumieniowe tych danych w celu uniknięcia wysokiego użycia pamięci z powodu buforowania komunikatów wejściowych lub wyjściowych. Przesyłanie strumieniowe danych parametr, który przechowuje, że dane muszą być jedynym parametrem w komunikacie. Na przykład jeśli komunikat wejściowy jest repliką strumieniowe przesyłanie, operacja musi mieć dokładnie jeden parametr wejściowy. Podobnie jeśli komunikat wyjściowy jest przesyłane strumieniowo, operacja musi mieć dokładnie jeden wyjściowy parametru lub wartości zwracanej. Wartość case, parametr lub zwracany typ musi być albo `Stream`, `Message`, lub `IXmlSerializable`. To jest Umowa serwisowa używane w tym przykładzie przesyłania strumieniowego.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamingSample  
 {  
@@ -68,7 +68,7 @@ public interface IStreamingSample
   
  `GetReversedStream` Tworzy i zwraca nowe wystąpienie klasy `ReverseStream`. Rzeczywiste przetwarzanie odbywa się zgodnie z system odczytuje przy jego użyciu `ReverseStream` obiektu. `ReverseStream.Read` Implementacji odczytuje fragmentów bajtów z pliku podstawowego, cofa ich, a następnie zwraca bajtów odwróconej. Będą zawartości całego pliku; Odwraca ono jednym fragmencie bajtów w danym momencie. Jest to przykład demonstrujący, jak można wykonać przetwarzania strumienia, ponieważ zawartość jest odczytywanych lub zapisywanych od i do strumienia.  
   
-```  
+```csharp
 class ReverseStream : Stream  
 {  
   
@@ -117,7 +117,7 @@ class ReverseStream : Stream
   
  Dane wyjściowe usługi:  
   
-```  
+```console  
 The streaming service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -131,7 +131,7 @@ File D:\...\uploadedfile saved
   
  Dane wyjściowe z klienta:  
   
-```  
+```console  
 Press <ENTER> when service is ready  
 ------ Using HTTP ------   
 Calling GetStream()  

@@ -1,103 +1,103 @@
 ---
 title: Oparta na komunikatach komunikacji asynchronicznej
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Oparta na komunikatach komunikacji asynchronicznej
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Oparta na komunikatach komunikacji asynchronicznej
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 5fb5d2f9f4f63ee885752a5dcc45cc45f71dc32f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 865966a70f18c9023e4c733d82ea90aba9478753
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106411"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50135378"
 ---
 # <a name="asynchronous-message-based-communication"></a>Oparta na komunikatach komunikacji asynchronicznej
 
-Asynchroniczne obsługi wiadomości i sterowane zdarzeniami komunikacji są krytyczne, gdy propagowanie zmian w wielu mikrousług oraz ich modeli domeny powiązane. Jak wspomniano wcześniej w mikrousług dyskusji i konteksty ograniczone (usług łączności biznesowej), różne na różnych mikrousług lub usług łączności biznesowej oznacza modeli (użytkownika, klienta, produktu, konto, itp.). Oznacza to, że podczas wprowadzania zmian, należy w celu uzgodnienia zmian w różnych modelach. Rozwiązanie jest spójność ostateczna i komunikacji sterowane zdarzeniami oparte na asynchroniczną obsługę wiadomości.
+Asynchroniczna Obsługa komunikatów i komunikacji oparte na zdarzeniach mają kluczowe znaczenie, gdy propagowanie zmian przez wiele mikrousług i ich modeli powiązanych domeny. Jak wspomniano wcześniej w dyskusji mikrousług i ograniczone konteksty (usług łączności biznesowej), modele (użytkownika, klient, produkt, konta itp.) może mieć różne znaczenie w różnych mikrousług lub usług łączności biznesowej. Oznacza to, że zmianach, należy jakiś sposób, aby uzgadniać zmiany w różnych modelach. To rozwiązanie jest spójność i oparte na zdarzeniach komunikacji asynchronicznej obsługi komunikatów w oparciu.
 
-Korzystając z komunikatów, procesy komunikują się przez wymianę wiadomości asynchronicznie. Klient wysyła polecenie lub żądanie do usługi wysyłając wiadomość. Jeśli usługa musi odpowiedzieć, wysyła inną wiadomość do klienta. Ponieważ jest oparta na komunikatach komunikatu, klient przyjmie założenie, że odpowiedź nie otrzyma natychmiast, i że może być brak odpowiedzi na wszystkich.
+Korzystając z komunikatów, procesy komunikują się przez wymianę wiadomości asynchronicznie. Klient wysyła polecenie lub żądanie do usługi wysyłając wiadomość. Jeśli usługa musi odpowiedzieć, wysyła inny komunikat do klienta. Ponieważ jest oparta na komunikatach komunikacji, klient przyjmie założenie, że odpowiedź nie otrzyma od razu i że może być brak odpowiedzi na wszystkich.
 
-Komunikat składa się nagłówka (metadane, takie jak informacje identyfikacyjne lub zabezpieczeń) i treść. Komunikaty są zwykle przesyłane za pośrednictwem protokołów asynchroniczne jak protokołu AMQP.
+Komunikat składa się nagłówka (metadane, takie jak informacje identyfikacyjne lub zabezpieczeń) i treść. Komunikaty są zwykle wysyłane za pośrednictwem protokołów asynchronicznych, takich jak AMQP.
 
-Preferowany infrastruktury dla tego typu komunikacji w społeczności mikrousług jest brokera komunikatów lekkie, który jest inny niż brokerzy dużych i orchestrators używane w SOA. W brokerze lekkie wiadomości infrastruktury jest zazwyczaj "bez," działa tylko jako brokera komunikatów, z prostych implementacji, takie jak RabbitMQ lub magistralą skalowalna usługa w chmurze, takich jak usługi Azure Service Bus. W tym scenariuszu większość "inteligentne" planowania nadal znajduje się w punkty końcowe, które tworzenie i korzystanie z komunikatów — to znaczy w mikrousług.
+Preferowany infrastrukturę dla tego typu komunikacji w społeczności mikrousług jest broker uproszczone komunikatów, który jest inny niż brokerów duże i koordynatorów używane w SOA. Broker komunikatów uproszczone infrastruktura jest zazwyczaj "bez," działają wyłącznie jako broker komunikatów, za pomocą prostych implementacji, takich jak RabbitMQ lub skalowalne usługi Service bus w chmurze, taka jak Azure Service Bus. W tym scenariuszu większość "eleganckie" myśleć nadal znajduje się punkty końcowe, które tworzenie i korzystanie z komunikatów — czyli w mikrousług.
 
-Inną regułę, które należy wykonać, jak to możliwe, jest do użycia tylko asynchroniczne wysyłanie komunikatów między wewnętrznych usług, a także używają synchroniczne komunikacji (takich jak HTTP) tylko z aplikacji klienta do usługi frontonu (bram interfejsu API oraz pierwszy poziom z mikrousług).
+Inną regułę, które należy wykonać, jak to możliwe, jest używanie tylko asynchronicznej obsługi komunikatów między usługami wewnętrznej i do użycia synchronicznego komunikacji (na przykład HTTP) tylko z poziomu aplikacji klienta do usługi frontonu (bramy interfejsu API oraz pierwszy poziom mikrousługi).
 
-Istnieją dwa rodzaje komunikacji asynchronicznej obsługi komunikatów: komunikacji jednego odbiorcę komunikatów i wiele odbiorników komunikacji na podstawie komunikatu. W poniższych sekcjach udostępniamy szczegółowe informacje o nich.
+Istnieją dwa rodzaje komunikacji asynchronicznej obsługi komunikatów: komunikacja oparta na komunikatach jednego odbiornika i wiele odbiorników komunikacji oparta na komunikatach. W poniższych sekcjach, firma Microsoft zapewnia szczegółowe informacje o nich.
 
 ## <a name="single-receiver-message-based-communication"></a>Komunikacja oparta na komunikatach jednego odbiornika 
 
-Komunikat asynchroniczne komunikacji z jednego odbiornika oznacza, że występuje komunikacja punkt-punkt, który zapewnia komunikat dokładnie jeden z użytkowników, która odczytuje z kanału i komunikat jest przetwarzany tylko raz. Istnieją jednak sytuacji specjalnych. Na przykład w systemie chmury, która podejmuje próbę usuwania skutków błędów, ten sam komunikat mógł zostać wysłany wiele razy. Z powodu sieci lub inne błędy klient musi być w stanie ponowić próbę wysyłanie wiadomości, a serwer ma do wykonania operacji być idempotentności, aby przetworzyć komunikatu o określonym tylko raz.
+Oparta na komunikatach komunikacji asynchronicznej za pomocą jednego odbiornika oznacza, że ma bezpośredniej komunikacji, który zapewnia komunikat z dokładnie jednym konsumentów, która odczytuje z kanału, a komunikat jest przetwarzany tylko raz. Istnieją jednak szczególnych sytuacjach. Na przykład w system w chmurze, która próbuje automatycznie odzyskać sprawność po awarii, ten sam komunikat można było wysłać wiele razy. Z powodu sieci lub inne błędy klient musi umożliwiać ponowne wysyłanie wiadomości, a serwer musi przeprowadzić wdrażanie operacji być idempotentne, aby przetworzyć określonego komunikatu o tylko raz.
 
-Komunikacja oparta na komunikatach jednego odbiornika najlepiej nadaje się do wysyłania poleceń asynchroniczne z jednego mikrousługi do innego, jak pokazano w rysunek 4-18 ilustrujący takie podejście.
+Komunikacja oparta na komunikatach jednego odbiornika szczególnie dobrze nadaje się do wysyłania poleceń asynchronicznego z jednego mikrousług innemu pokazany w rysunek 4-18, to podejście pokazano.
 
-Po uruchomieniu wysyłania wiadomości-komunikacji (albo z poleceń i zdarzeń), należy unikać mieszanie komunikacji wiadomości z synchronicznego komunikacji HTTP.
+Po rozpoczęciu wysyłania oparta na komunikatach komunikacji (albo za pomocą poleceń lub zdarzenia), należy unikać mieszania oparta na komunikatach komunikacji przy użyciu synchronicznej komunikacji HTTP.
 
 ![](./media/image18.PNG)
 
-**Rysunek 4-18**. Pojedynczy mikrousługi, otrzymywanie komunikatów asynchronicznych
+**Rysunek 4-18**. Odbieranie komunikatów asynchronicznych pojedynczych mikrousług
 
-Należy pamiętać, że gdy polecenia pochodzą z aplikacji klienckich, ich można zaimplementować jako synchroniczne polecenia HTTP. Należy używać poleceń oparta na komunikatach, gdy będziesz potrzebować skalowalności lub, gdy już proces biznesowy oparta na komunikatach.
+Należy pamiętać, że przypadku polecenia pochodzących z aplikacji klienckich, ich można zaimplementować jako synchroniczna poleceń protokołu HTTP. Należy użyć poleceń oparta na komunikatach, gdy będziesz potrzebować skalowalności, lub gdy masz już proces biznesowy oparta na komunikatach.
 
-## <a name="multiple-receivers-message-based-communication"></a>Wiele odbiorników komunikacji wiadomości 
+## <a name="multiple-receivers-message-based-communication"></a>Komunikacja oparta na komunikatach wielu odbiorców 
 
-Jako bardziej elastyczne podejście można również używać mechanizmu publikowania/subskrypcji, tak aby komunikacji od nadawcy będzie mikrousług dodatkowe subskrybenta lub aplikacjami zewnętrznymi. W związku z tym pomaga wykonaj [otwarty/zamknięty zasady](https://en.wikipedia.org/wiki/Open/closed_principle) wysyłania usługi. Można dodać w ten sposób dodatkowe subskrybentów w przyszłości, bez konieczności modyfikowania usługi nadawcy.
+Co jest bardziej elastyczne podejście można również używany był mechanizm publikowania/subskrybowania, tak, aby komunikacja od nadawcy, dostępna dla mikrousług dodatkowe subskrybenta lub do aplikacji zewnętrznych. W związku z tym, pomaga postępuj zgodnie z [otwarty/zamknięty zasady](https://en.wikipedia.org/wiki/Open/closed_principle) wysyłania usługi. W ten sposób dodatkowe subskrybentów można dodawać w przyszłości, bez konieczności modyfikowania usługi nadawcy.
 
-Korzystając z komunikatu publikowania/subskrypcji, być może używasz interfejsu magistrali zdarzenia do publikowania zdarzeń do dowolnego subskrybenta.
+Użycie opcji publikowania/subskrybowania komunikacji, być może używasz interfejs magistrali zdarzeń do publikowania zdarzeń w celu każdy subskrybent.
 
-## <a name="asynchronous-event-driven-communication"></a>Komunikacji asynchronicznej sterowane zdarzeniami
+## <a name="asynchronous-event-driven-communication"></a>Komunikacji asynchronicznej oparte na zdarzeniach
 
-Podczas korzystania z komunikacji asynchronicznej sterowane zdarzeniami, mikrousługi publikuje integracji zdarzenie, gdy wydarzy się coś w jego domenie i innym mikrousługi musi wiedzieć, jak zmiany ceny mikrousługi katalogu produktów. Mikrousług dodatkowe subskrybować zdarzenia, aby mogły one odbierać je asynchronicznie. W takim przypadku odbiorców może aktualizować jednostek własnej domeny, co może powodować więcej zdarzeń integracji do opublikowania. Ten system publikowania/subskrypcji zwykle odbywa się przy użyciu implementacji magistrali zdarzeń. Magistrali zdarzeń mogą służyć jako abstrakcji lub interfejsu z interfejsu API, który chcesz subskrybować zdarzeń oraz do publikowania zdarzeń. Magistrali zdarzeń również może zawierać jeden lub więcej implementacje oparte na wszystkie brokera między procesami i obsługi wiadomości, jak kolejki wiadomości lub obsługującego komunikacji asynchronicznej i modelu publikowania/subskrypcji usługi service bus.
+Korzystając z komunikacji asynchronicznej oparte na zdarzeniach, mikrousługi publikuje zdarzenie integracji, gdy coś, co się dzieje w jego domenie i innym mikrousług musi wiedzieć, jak zmiany ceny w mikrousługach katalogu produktów. Dodatkowe mikrousług subskrybują zdarzenia, dzięki czemu mogą one odbierać je asynchronicznie. Jeśli tak się stanie, odbiorców może aktualizować własne jednostki domeny, co może powodować więcej zdarzeń integracji do opublikowania. Ten system publikowania/subskrybowania zwykle odbywa się przy użyciu implementacji magistrali zdarzeń. Magistrali zdarzeń mogą służyć jako abstrakcji lub interfejs, za pomocą interfejsu API, który chcesz subskrybować zdarzenia oraz do publikowania zdarzeń. Magistrali zdarzeń może również zawierać jeden lub więcej implementacje oparte na każdego brokera między procesami i obsługi komunikatów, takich jak kolejki komunikatów lub usługi service bus, który obsługuje komunikacji asynchronicznej i modelu publikowania/subskrybowania.
 
-Jeśli system używa spójność ostateczna regulowane przez zdarzeń integracji, zaleca się czy tego podejścia być jasno całkowicie dla użytkownika końcowego. System nie należy używać metody, która symuluje zdarzeń integracji, takich jak SignalR lub systemów sondowania z klienta. Użytkownik końcowy i właściciel firmy muszą jawnie obejmować spójność ostateczna w systemie i pamiętaj, że w wielu przypadkach firmy nie ma problem z tej metody, tak długo, jak jest jawne.
+Jeśli system używa prowadzona przez zdarzenia integracji spójność ostateczną, zalecane jest, czy tego podejścia być jasno całkowicie użytkownikowi końcowemu. System nie należy używać metody, która naśladuje zdarzenia integracji, takich jak SignalR lub systemy sondowania z klienta. Użytkownik końcowy i właściciel firmy trzeba jawnie Uwzględniaj spójność ostateczną w systemie i weź pod uwagę, że w wielu przypadkach firmy nie ma żadnych problem tego podejścia tak długo, jak jest jawne.
 
-Jak wspomniano wcześniej w [problemy i rozwiązania rozproszone Zarządzanie danych](#challenges-and-solutions-for-distributed-data-management) sekcji zdarzeń integracji można użyć do wykonania zadań biznesowych, które obejmują wiele mikrousług. W związku z tym konieczne będzie spójność ostateczna między tymi usługami. Po pewnym czasie spójne transakcji składa się z kolekcji rozproszonej akcji. W każdej akcji powiązanych mikrousługi aktualizuje jednostką domeny i publikuje inne zdarzenie integracji, który wywołuje akcję dalej w ramach tego samego zadania biznesowe na trasie.
+Jak wspomniano wcześniej w [problemy i rozwiązania dotyczące rozproszonego zarządzania danymi](#challenges-and-solutions-for-distributed-data-management) sekcji, można użyć zdarzenia integracji do zaimplementowania zadań biznesowych, obejmujących wiele mikrousług. Ten sposób będziesz mieć spójności ostatecznej między tymi usługami. Transakcja ostatecznie spójną składa się z kolekcją rozproszonych działań. W każdej akcji powiązanych mikrousług zaktualizuje jednostkę domeny i publikuje inne zdarzenie integracji, która wywołuje następnej akcji w obrębie tego samego zadania biznesowe end-to-end.
 
-Punkt ważne jest, czy może chcesz komunikują się z wielu mikrousług, który subskrybują tego samego zdarzenia. Aby to zrobić, można użyć publikowania/subskrypcji wiadomości na podstawie sterowane zdarzeniami komunikacji, jak pokazano w rysunek 4-19. Ten mechanizm publikowania/subskrypcji nie jest zarezerwowana architektury mikrousługi. Jest on podobny do sposobu [ograniczone kontekstów](https://martinfowler.com/bliki/BoundedContext.html) w skontaktować się DDD lub sposób propagacji aktualizacji z bazy danych zapisu do bazy danych do odczytu w [poleceń i zapytań podział odpowiedzialności (CQRS)](https://martinfowler.com/bliki/CQRS.html)wzorzec architektury. Celem jest spójność ostateczna między wiele źródeł danych w rozproszonym systemie.
+To ważny punkt jest, możesz zechcieć do komunikacji z wielu mikrousług, które mają subskrypcję do tego samego zdarzenia. Aby to zrobić, można użyć publikowania/subskrybowania komunikatów na podstawie oparte na zdarzeniach komunikacji, jak pokazano w rysunek 4-19. Ten mechanizm publikowania/subskrybowania nie jest wyłącznie w architekturze mikrousług. Jest on podobny do sposobu [ograniczone konteksty](https://martinfowler.com/bliki/BoundedContext.html) w DDD skontaktować się lub sposób Propagacja aktualizacje z bazy danych zapisu do bazy danych do odczytu w [odpowiedzialności polecenia i zapytania podziału (CQRS)](https://martinfowler.com/bliki/CQRS.html)wzorzec architektury. Celem jest zapewnienie spójności ostatecznej między wieloma źródłami danych w rozproszonym systemie.
 
 ![](./media/image19.png)
 
-**Rysunek 4-19**. Komunikacja komunikatów asynchronicznych sterowane zdarzeniami
+**Rysunek 4-19**. Komunikacja komunikatów oparte na zdarzeniach asynchronicznych
 
-Implementacji zależy, który protokół do użycia na potrzeby komunikacji sterowane zdarzeniami, na podstawie komunikatu. [Protokół AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) mogą pomóc osiągnąć niezawodny umieszczonych w kolejce.
+Twoja implementacja określi, co protokołu na potrzeby komunikacji oparte na zdarzeniach, oparta na komunikatach. [Protokół AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) może pomóc w osiągnięciu niezawodnej komunikacji umieszczonych w kolejce.
 
-Korzystając z magistrali zdarzeń, warto użyć poziom abstrakcji (np. interfejsu magistrali zdarzenia) oparty na powiązanych implementacja klas z kodem przy użyciu interfejsu API z brokera komunikatów, takie jak [RabbitMQ](https://www.rabbitmq.com/) lub service bus, podobnie jak [Usługi azure Service Bus z tematów](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Alternatywnie można użyć wyższego poziomu magistrali usług, takich jak NServiceBus, MassTransit lub Brighter zwrócone z magistrali zdarzeń i publikowania/subskrypcji systemu.
+Korzystając z magistrali zdarzeń, warto użyć poziom abstrakcji (np. interfejsu magistrali zdarzenia) oparty na powiązane implementacji klas z kodu za pomocą interfejsu API z brokera komunikatów, takie jak [RabbitMQ](https://www.rabbitmq.com/) lub service bus, podobnie jak [Usługi azure Service Bus z obsługą tematów](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Alternatywnie można umożliwiają wyższego poziomu magistrali usług, takich jak NServiceBus, MassTransit lub Brighter sformułowania usługi Service bus event i publikowania/subskrybowania systemu.
 
-## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Uwagi dotyczące obsługi wiadomości technologii dla systemów produkcyjnych.
+## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Uwaga dotycząca komunikatów technologii dla systemów produkcyjnych.
 
-Są dostępne dla implementacji magistrali sieci zdarzenia abstrakcyjnego technologie obsługi wiadomości na różnych poziomach. Na przykład produktów, takich jak RabbitMQ (wiadomości transportu brokera) i usługi Azure Service Bus znajdują się na niższym poziomie niż innych produktów, takich jak NServiceBus, MassTransit albo Brighter, który może pracować na górze RabbitMQ i usługi Azure Service Bus. Wybór zależy od liczby różnorodnych funkcji na poziomie aplikacji i poza pole skalowalność, potrzebnych aplikacji. Do wykonania po prostu magistrali Weryfikacja koncepcji zdarzeń środowiska deweloperskiego, jak możemy to zostało zrobione w przykładowym eShopOnContainers proste wdrożenia na uruchomione w kontenerze Docker RabbitMQ może być wystarczającej ilości.
+Technologii obsługi komunikatów, która jest dostępna dla implementacji usługi Service bus zdarzenie abstrakcyjne są na różnych poziomach. Na przykład produktów, takich jak RabbitMQ (komunikatów transportu brokera) i usługi Azure Service Bus znajdują się na niższym poziomie niż innych produktów, takich jak NServiceBus, MassTransit lub Brighter, która może działać na podstawie RabbitMQ i usługi Azure Service Bus. Wybór zależy od liczby rozbudowanych funkcji na poziomie aplikacji i skalowalności out-of--box, czego potrzebujesz do aplikacji. Do wykonania po prostu magistrali zdarzeń weryfikacji koncepcji dla swojego środowiska programowania, jak wykonaliśmy w tym przykładzie w ramach aplikacji eShopOnContainers proste wdrażanie na podstawie RabbitMQ uruchomione w kontenerze platformy Docker może wystarczyć.
 
-Niemniej jednak w przypadku krytycznym i systemów produkcyjnych, które wymagają skalowalność funkcji hyper może chcesz ocenić Azure Service Bus. Wysokiego poziomu obiektów abstrakcyjnych i funkcje, które ułatwia projektowanie aplikacji rozproszonych zaleca się dokonanie oceny innych magistrali usługi handlowych i open source, takie jak NServiceBus, MassTransit i Brighter. Oczywiście można tworzyć własne funkcje usługi service bus na niższym poziomie technologii, takich jak RabbitMQ i Docker. Ale pracy żmudne procesy może koszt za dużo aplikacji niestandardowych przedsiębiorstwa.
+Jednak w przypadku o kluczowym znaczeniu oraz systemów produkcyjnych, wymagających hyper skalowalność, warto do oceny usługi Azure Service Bus. Dla abstrakcji wysokiego poziomu i funkcje, które ułatwić opracowywanie zawartości aplikacji rozproszonych firma Microsoft zaleca oceny innych magistrali usługi komercyjnych i typu open source, takich jak NServiceBus MassTransit i Brighter. Oczywiście można tworzyć własne funkcje usługi service bus na podstawie technologii niższego poziomu, takie jak RabbitMQ i platformy Docker. Ale działające nadmiar kosztów za dużo aplikacji niestandardowych przedsiębiorstwa.
 
-## <a name="resiliently-publishing-to-the-event-bus"></a>Publikowanie resiliently magistrali zdarzeń
+## <a name="resiliently-publishing-to-the-event-bus"></a>Publikowanie odpornych magistrali zdarzeń
 
-Żądanie w przypadku implementowania architekturę sterowane zdarzeniami między wieloma mikrousług jest automatycznie aktualizacji stanu w oryginalnym mikrousługi podczas resiliently publikowania do magistrali zdarzeń, w jakiś sposób na podstawie jej zdarzenia pokrewne integracji transakcje. Poniżej przedstawiono na kilka sposobów, aby to osiągnąć, chociaż może to być również dodatkowych metod.
+Wyzwanie w przypadku implementowania architektury oparte na zdarzeniach między wiele mikrousług jest sposób niepodzielne aktualizacji stanu w oryginalnym mikrousług podczas odpornych publikowania jej zdarzenia powiązane integracji do magistrali zdarzeń, w jakiś sposób na podstawie transakcje. Poniżej przedstawiono kilka sposobów, aby to osiągnąć, chociaż może to być także dodatkowe metody.
 
--   Przy użyciu transakcyjne kolejki (w oparciu o usługi DTC) takie jak usługi MSMQ. (Jednak jest podejście starszej wersji).
+-   Za pomocą transakcyjne kolejki (w oparciu o usługi DTC) takich jak usługi MSMQ. (Jednak to podejście starszej wersji.)
 
--   Przy użyciu [wyszukiwania dziennik transakcji](https://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Za pomocą [wyszukiwania dziennik transakcji](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Przy użyciu pełnego [źródłem zdarzeń](https://msdn.microsoft.com/library/dn589792.aspx) wzorca.
+-   Przy użyciu pełnej [określania źródła zdarzeń](https://msdn.microsoft.com/library/dn589792.aspx) wzorca.
 
--   Przy użyciu [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/): Tabela transakcyjne bazy danych jako kolejki komunikatów, który ma być base składnika tworzenia zdarzeń, który może utworzyć zdarzenia i opublikuj go.
+-   Za pomocą [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/): Tabela transakcji bazy danych jako kolejki komunikatów, który ma być base, aby składnik Twórca zdarzenia, który może utworzyć zdarzenia i opublikujesz je.
 
-Tematy dodatkowe, które należy wziąć pod uwagę podczas komunikacji asynchronicznej są projektu wiadomości i deduplikacji wiadomości. Te tematy w sekcji [wdrożenie oparte na zdarzeniu komunikacji między mikrousług (zdarzeń integracji)](#implementing_event_based_comms_microserv) dalszej części tego przewodnika.
+Tematy dodatkowe, które należy wziąć pod uwagę podczas korzystania z komunikacji asynchronicznej są idempotentność wiadomości i deduplikacji wiadomości. Te tematy zostały omówione w sekcji [Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)](#implementing_event_based_comms_microserv) później w tym przewodniku.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Sterowane zdarzeniami obsługi wiadomości**
+-   **Aktivita typu EventDriven komunikatów**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Kanał publikowania/subskrypcji**
-    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+-   **Publikowania/subskrybowania kanału**
+    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Udi Dahan. Sklarowanego CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Polecenie i podział odpowiedzialności kwerendy (CQRS)**
+-   **Polecenie and Query Responsibility Segregation (CQRS)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **Komunikacja między kontekstami ograniczonego**
+-   **Komunikacja między ograniczone konteksty**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **Spójność ostateczna**

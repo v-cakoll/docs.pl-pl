@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-author: BrucePerlerMS
-ms.openlocfilehash: a32c49aebaf1ec856dd464ec4526ae744fa34013
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1cb18f1be8e418ace4c9f9f71b7f97ac37ff8074
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847792"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193893"
 ---
 # <a name="programming-wcf-security"></a>Programowanie zabezpieczeń WCF
 W tym temacie opisano podstawowe zadania programowania, służące do tworzenia bezpiecznych aplikacji Windows Communication Foundation (WCF). W tym temacie omówiono uwierzytelniania, poufności i integralności, nazywane zbiorczo *transferu zabezpieczeń*. W tym temacie nie omówiono autoryzacji (kontrola dostępu do zasobów lub usług); Aby uzyskać informacje dotyczące autoryzacji, zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

@@ -2,17 +2,17 @@
 title: Wyprowadzanie relacyjnej struktury DataSet ze schematu XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504950"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195297"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Wyprowadzanie relacyjnej struktury DataSet ze schematu XML (XSD)
 Ta sekcja zawiera omówienie sposobów schemat relacyjnej `DataSet` została stworzona od do dokumentu schematu języka (XSD) definicji schematu XML. Ogólnie rzecz biorąc, dla każdego `complexType` element podrzędny elementu schematu, tabeli jest generowany w `DataSet`. Struktura tabeli jest określana zgodnie z definicją typu złożonego. Tabele zostały utworzone w `DataSet` najwyższego poziomu elementów w schemacie. Jednak tabeli jest tworzone tylko dla najwyższego poziomu `complexType` elementu po `complexType` element jest zagnieżdżony w innym `complexType` zamierzone, Zapisz zagnieżdżonego elementu, w którym `complexType` element jest mapowany na `DataTable` w ramach `DataSet`.  
   
- Aby uzyskać więcej informacji na temat XSD Zobacz World Wide Web Consortium (W3C) XML schematu część 0: podstawy zalecenie, XML schematu część 1: zalecenie struktur i XML schematu część 2: zalecenie typy danych, znajdujący się w [ http://www.w3.org/ ](http://www.w3.org/TR/).  
+ Aby uzyskać więcej informacji na temat XSD, zobacz World Wide Web Consortium (W3C) [XML schematu część 0: zalecenie Elementarz](https://www.w3.org/TR/xmlschema-0/), [XML schematu część 1: zalecenie struktur](https://www.w3.org/TR/xmlschema-1/)i [XML Schematu część 2: Typy danych zalecenie](https://www.w3.org/TR/xmlschema-2/).  
   
  W poniższym przykładzie pokazano schematu XML gdzie `customers` jest elementem podrzędnym `MyDataSet` elementu, który jest **DataSet** elementu.  
   

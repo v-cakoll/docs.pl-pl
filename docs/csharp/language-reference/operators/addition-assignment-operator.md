@@ -1,46 +1,52 @@
 ---
 title: += — Operator (odwołanie w C#)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +=_CSharpKeyword
 helpviewer_keywords:
 - += operator [C#]
 - addition assignment operator (+=) [C#]
+- event subscription [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: bd0997ec5b7d79a41e01f9c2b17533293e412c1e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ee335e3e2e7d352d4e26b802bad2b08a05c666ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857510"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192034"
 ---
 # <a name="-operator-c-reference"></a>+= — Operator (odwołanie w C#)
-Operator przypisania dodawania.  
-  
-## <a name="remarks"></a>Uwagi  
- Wyrażenie używające operatora przypisania `+=`, takie jak  
-  
-```csharp  
-x += y  
-```  
-  
- odpowiada wyrażeniu  
-  
-```csharp  
-x = x + y  
-```  
-  
- z tą różnicą, że `x` jest obliczany tylko raz. Znaczenie [+ — operator](../../../csharp/language-reference/operators/addition-operator.md) zależy od typów `x` i `y` (Dodawanie liczbową argumentów operacji, łączenia dla argumentów ciągu i tak dalej).  
-  
- `+=` Operator nie może zostać przeciążony bezpośrednio, ale typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia [+ — operator](../../../csharp/language-reference/operators/addition-operator.md) (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).  
-  
- `+=` Operator jest również używany do określają metodę, która będzie wywoływana w odpowiedzi na zdarzenie; metody te są wywoływane programy obsługi zdarzeń. Korzystanie z `+=` operatora w tym kontekście jest określany jako *subskrybowanie zdarzenia*. Aby uzyskać więcej informacji, zobacz [porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) i [delegatów](../../../csharp/programming-guide/delegates/index.md).  
-  
-## <a name="example"></a>Przykład  
- [!code-csharp[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
-  
-## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)
+Operator przypisania dodawania.
+
+Usługi za pomocą wyrażenia `+=` operatora, takich jak  
+
+```csharp
+x += y
+```  
+
+odpowiada wyrażeniu  
+
+```csharp
+x = x + y
+```  
+
+z tą różnicą, że `x` jest obliczany tylko raz.
+  
+Dla typów liczbowych [operator dodawania](addition-operator.md) `+` oblicza sumę argumentów. Jeśli jeden lub obydwa operandy typu [ciąg](../keywords/string.md), łączy on ciągów reprezentujących swoich argumentów. Dla typów delegowanych `+` operator zwraca nowe wystąpienie delegata, który jest kombinacja argumentów.
+
+Jeśli typ zdefiniowany przez użytkownika [przeciążenia](../keywords/operator.md) [operator dodawania](addition-operator.md) `+`, operator przypisania dodawania `+=` niejawnie jest przeciążony.
+
+Możesz także użyć `+=` operatora, aby określić metodę programu obsługi zdarzeń podczas subskrybowania [zdarzeń](../keywords/event.md). Aby uzyskać więcej informacji, zobacz [porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+W poniższym przykładzie pokazano użycie `+=` operator:
+
+[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddAndAssign)]
+  
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Operatory języka C#](index.md)
+- [Zdarzenia](../../programming-guide/events/index.md)
+- [Delegaty](../../programming-guide/delegates/index.md)

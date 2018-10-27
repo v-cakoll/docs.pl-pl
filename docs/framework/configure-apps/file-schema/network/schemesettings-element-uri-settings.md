@@ -2,14 +2,12 @@
 title: '&lt;schemeSettings&gt; — Element (ustawienia identyfikatora Uri)'
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 76ca5acc22eca07d372a2964cf3a6df4ea3b58d5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7c75e9a6d29637e1701fe0b9e05adf0ccc3596b9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025311"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192554"
 ---
 # <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; — Element (ustawienia identyfikatora Uri)
 Określa, jak <xref:System.Uri> będzie być analizowana pod kątem określonych systemów.  
@@ -86,10 +84,10 @@ Określa, jak <xref:System.Uri> będzie być analizowana pod kątem określonych
 |Może być pusta||  
   
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
- <xref:System.Uri?displayProperty=nameWithType>  
- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+- <xref:System.Uri?displayProperty=nameWithType>  
+- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

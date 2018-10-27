@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-author: BrucePerlerMS
-ms.openlocfilehash: e90232a9e30a7da6234cb2884cdaaceb936d69ab
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8b31ebc846992f51484ae058ce05d9aa12590372
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839885"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195193"
 ---
 # <a name="message-security-anonymous"></a>Zabezpieczenia komunikatów z anonimowością
 Komunikat zabezpieczeń anonimowe przykład demonstruje sposób implementacji aplikacji Windows Communication Foundation (WCF) korzystającą zabezpieczenia na poziomie komunikatu bez uwierzytelniania klienta, ale, która wymaga uwierzytelnienia serwera za pomocą serwera X.509 certyfikat. Wszystkie komunikaty aplikacji między klientem i serwerem są podpisane i szyfrowane. Ten przykład jest oparty na [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) próbki. W tym przykładzie składa się z konsoli programu klienckiego (.exe) i usługi biblioteki (.dll), hostowanej przez Internetowe usługi informacyjne (IIS). Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: d3fa8a1a1b378fe1e18a63fec1c0d2f9eb40ecb3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029859"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181059"
 ---
 # <a name="using-directive-c-reference"></a>using — Dyrektywa (odwołanie w C#)
 `using` Dyrektywy ma trzy zastosowań:  
@@ -68,7 +68,7 @@ W przeciwnym razie, błąd kompilatora [CS1529](../../misc/cs1529.md) jest gener
   
  Utwórz `using` dyrektywy na używanie typów w przestrzeni nazw bez konieczności określania przestrzeni nazw. A `using` dyrektywy nie umożliwiają dostęp do wszelkich przestrzenie nazw, które są zagnieżdżone w przestrzeni nazw, należy określić.  
   
- Przestrzenie nazw są dostępne w dwóch kategorii: zdefiniowane przez użytkownika i zdefiniowane przez system. Zdefiniowane przez użytkownika przestrzenie nazw są przestrzenie nazw zdefiniowane w kodzie. Aby uzyskać listę nazw zdefiniowaną przez system, zobacz [przeglądarka interfejsu API .NET](https://docs.microsoft.com/en-us/dotnet/api/).  
+ Przestrzenie nazw są dostępne w dwóch kategorii: zdefiniowane przez użytkownika i zdefiniowane przez system. Zdefiniowane przez użytkownika przestrzenie nazw są przestrzenie nazw zdefiniowane w kodzie. Aby uzyskać listę nazw zdefiniowaną przez system, zobacz [przeglądarka interfejsu API .NET](https://docs.microsoft.com/dotnet/api/).  
   
  Przykłady dotyczące odwoływania się do metody w innych zestawach, zobacz [tworzenie i użyj zestawów przy użyciu wiersza polecenia](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   

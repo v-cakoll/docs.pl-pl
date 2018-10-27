@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e657e91e586d7fe409646ea4fb8946c026e84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a53493d666cb16fcc9b407ca3a46072afa306b97
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424342"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182479"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables — Metoda
 Pobiera zmienne lokalne.  
@@ -38,21 +38,21 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `mdMethodToken`  
  [in] Token metadanych metody.  
   
  `cLocals`  
- [in] A `ULONG` wskazuje, że rozmiar `rgLocals` parametru.  
+ [in] A `ULONG` oznacza rozmiar `rgLocals` parametru.  
   
  `rgLocals`  
- [out] Tablica zwrócona <!--zz<xref:ISymUnmanagedVariable>--> `ISymUnmanagedVariable` wystąpień.  
+ [out] Tablica zwrócona [isymunmanagedvariable —](isymunmanagedvariable-interface.md) wystąpień.  
   
  `pceltFetched`  
- [out] Wskaźnik do `ULONG` odbierająca rozmiar `rgLocals` buforu, muszą zawierać zmiennych lokalnych.  
+ [out] Wskaźnik do `ULONG` wielkości, która otrzymuje `rgLocals` buforu, muszą zawierać zmienne lokalne.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Header:** CorSym.idl, CorSym.h  

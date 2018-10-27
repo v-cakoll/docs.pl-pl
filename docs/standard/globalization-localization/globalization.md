@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221912"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453362"
 ---
 # <a name="globalization"></a>Globalizacja
 Globalizacja obejmuje projektowania i opracowywania aplikacji gotowej dla całego świata, która obsługuje dane regionalne i zlokalizowane interfejsy dla użytkowników w wielu kulturach. Przed rozpoczęciem fazy projektowania, należy określić, które kultury Twoja aplikacja będzie obsługiwać. Mimo że aplikacja jest przeznaczona na jednej kulturze lub regionie jako domyślnej, można projektować i zapisać go tak, aby łatwo mogła zostać rozszerzona do użytkowników innych kultur lub regionów.  
@@ -116,7 +116,7 @@ Globalizacja obejmuje projektowania i opracowywania aplikacji gotowej dla całeg
   
  Porównania dla równości niekiedy dotyczą wyszukiwania lub porównań podciągów zamiast wywołań <xref:System.String.Equals%2A?displayProperty=nameWithType> metody. W niektórych przypadkach może użyć wyszukiwania podciągu do określenia, czy podciąg jest równy innemu ciągowi. Jeśli cel tego porównania jest niejęzykowy, wyszukiwanie należy również porządkowe a nie zależne od kultury.  
   
- Poniższy przykład ilustruje niebezpieczeństwo wyszukiwania wrażliwość na ustawienia kulturowe nielingwistyczne danych. `AccessesFileSystem` Metoda jest przeznaczona do Stanów Zjednoczonych zabraniają dostępu do systemu plików dla identyfikatorów URI, które zaczynają się od podciągu "FILE". Aby to zrobić, wykonuje porównanie zależne od kultury, bez uwzględniania wielkości liter początku identyfikatora URI z ciągiem "FILE". Ponieważ identyfikator URI, który uzyskuje dostęp do systemu plików może zaczynać "pliku:" lub "pliku:", domyślnym założeniem jest, że "i" (U + 0069) jest zawsze litery odpowiednikiem "I" (U + 0049). Jednak w turecki i Azerbejdżański, wersję z wielkimi literami "i" to "İ" (U + 0130). Ze względu na tę rozbieżność porównanie zależne od kultury umożliwia dostęp do systemu plików, czy powinno być zabronione.  
+ Poniższy przykład ilustruje niebezpieczeństwo wyszukiwania wrażliwość na ustawienia kulturowe nielingwistyczne danych. `AccessesFileSystem` Metoda jest przeznaczona do Stanów Zjednoczonych zabraniają dostępu do systemu plików dla identyfikatorów URI, które zaczynają się od podciągu "FILE". Aby to zrobić, wykonuje porównanie zależne od kultury, bez uwzględniania wielkości liter początku identyfikatora URI z ciągiem "FILE". Ponieważ identyfikator URI, który uzyskuje dostęp do systemu plików może zaczynać "pliku:" lub "pliku:", niejawne zakłada się, że "i" (U + 0069) jest zawsze litery odpowiednikiem "I" (U + 0049). Jednak w turecki i Azerbejdżański, wersję z wielkimi literami "i" to "İ" (U + 0130). Ze względu na tę rozbieżność porównanie zależne od kultury umożliwia dostęp do systemu plików, czy powinno być zabronione.  
   
  [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
  [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]  

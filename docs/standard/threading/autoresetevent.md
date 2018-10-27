@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 6d39c48d-6b37-4a9b-8631-f2924cfd9c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38efbe0ecd88c02752d610de4b1eec8b62eca1f8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 519776b5c1c237deb520476384495b8dd96a4e39
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937551"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50039286"
 ---
 # <a name="autoresetevent"></a>AutoResetEvent
 <xref:System.Threading.AutoResetEvent> Klasa reprezentuje zdarzenie dojścia oczekiwania lokalne, które automatycznie po resetuje sygnalizowane po przy zwalnianiu pojedynczego wątku oczekiwania. Ta klasa reprezentuje przypadkiem szczególnym klasy bazowej, <xref:System.Threading.EventWaitHandle>. Zobacz [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) dokumentacji koncepcyjnego dla użycia i funkcji automatycznego resetowania zdarzeń.  
@@ -24,9 +24,8 @@ ms.locfileid: "46937551"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Threading.ManualResetEvent>  
-- <xref:System.Threading.Monitor>  
-- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
-- [Wątkowość](../../../docs/standard/threading/index.md)  
-- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
-- [Uchwyty oczekiwania](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)
+- <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+- [Wątkowość obiektów i funkcji](threading-objects-and-features.md)  
+- [Wątkowość](index.md)  

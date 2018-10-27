@@ -2,15 +2,15 @@
 title: Modyfikatory (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 5e4a37a53d04174c53fdbdc30139d61ecd9998cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 466d69ec966037ae3a980bba381fc61be52f30e6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600636"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192827"
 ---
 # <a name="modifiers-visual-basic"></a>Modyfikatory (Visual Basic)
-Tematy w tej części dokumentu Modyfikatory środowiska wykonawczego Visual Basic.  
+Tematy w tej części dokumentu Modyfikatory środowiska wykonawczego języka Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
@@ -29,13 +29,13 @@ Tematy w tej części dokumentu Modyfikatory środowiska wykonawczego Visual Bas
   
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [W](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
   
  [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)  
   
  [Key](../../../visual-basic/language-reference/modifiers/key.md)  
   
- [Moduł \<— słowo kluczowe >](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
+ [Module \<słowo kluczowe>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
@@ -63,7 +63,11 @@ Tematy w tej części dokumentu Modyfikatory środowiska wykonawczego Visual Bas
   
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
+ [Prywatny chroniony](../../../visual-basic/language-reference/modifiers/private-protected.md)  
+  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+
+ [Chronione Friend](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
   
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   

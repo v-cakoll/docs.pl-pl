@@ -2,12 +2,12 @@
 title: Usługa AJAX używająca żądań POST protokołu HTTP
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: c102d9d403cefb1bf3d4ab75859a81172895c2e0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041112"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192801"
 ---
 # <a name="ajax-service-using-http-post"></a>Usługa AJAX używająca żądań POST protokołu HTTP
 W tym przykładzie pokazano, jak używać usług Windows Communication Foundation (WCF) do tworzenia [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] asynchronicznego języka JavaScript i XML (technologia AJAX) usługą, która używa metody POST protokołu HTTP. Usługa AJAX to taki, który możesz uzyskać dostęp przy użyciu podstawowego kodu JavaScript w kliencie przeglądarki sieci Web. W tym przykładzie opiera się na [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) Przykładowe; Jedyną różnicą między dwa przykłady jest użycie metody POST protokołu HTTP zamiast HTTP GET.  
@@ -33,7 +33,7 @@ public interface ICalculator
 
  Tworzenie punktu końcowego AJAX w usłudze przy użyciu <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>— podobnie jak w przykładzie podstawowa usługa AJAX.  
   
- Inaczej niż w przypadku żądania GET nie można wywołać usługi WPIS w przeglądarce. Na przykład, przechodząc do http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 powoduje błąd, ponieważ usługa WPIS oczekuje `n1` i `n2` parametrów do wysłania w treści wiadomości — w formacie JSON — a nie w adresie URL.  
+ Inaczej niż w przypadku żądania GET nie można wywołać usługi WPIS w przeglądarce. Na przykład, przechodząc do `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` powoduje błąd, ponieważ usługa WPIS oczekuje `n1` i `n2` parametrów do wysłania w treści wiadomości w formacie JSON, a nie w adresie URL.  
   
  Klient PostAjaxClientPage.aspx strony sieci Web zawiera kod platformy ASP.NET, aby wywołać usługę, gdy użytkownik kliknie jeden z przycisków operacji na tej stronie. Usługa odpowiada w taki sam sposób jak w [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki, przy użyciu żądania GET.  
   
@@ -52,6 +52,4 @@ public interface ICalculator
   
 2.  Skompiluj rozwiązanie PostAjaxService.sln, zgodnie z opisem w [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Przejdź do http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx (nie należy otwierać PostAjaxClientPage.aspx w przeglądarce z katalogu projektu).  
-  
-## <a name="see-also"></a>Zobacz też
+3.  Przejdź do `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` (nie należy otwierać PostAjaxClientPage.aspx w przeglądarce z katalogu projektu).

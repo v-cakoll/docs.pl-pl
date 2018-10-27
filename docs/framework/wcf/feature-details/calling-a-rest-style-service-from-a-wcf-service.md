@@ -2,18 +2,18 @@
 title: Wywoływanie usługi typu REST z poziomu usługi WCF
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: 8f520b1f77b9ca41b9fd2b8d51c1b935ab1e0a87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488514"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184247"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Wywoływanie usługi typu REST z poziomu usługi WCF
-Podczas wywoływania usługi typu REST z regularne usługi WCF (opartego na protokole SOAP), kontekstu operacji na metodzie usługi (zawierający informacje dotyczące żądania przychodzące) przesłania kontekstu, która powinna być używana przez żądania wychodzącego. Powoduje to, że żądania HTTP GET, można zmienić na żądania HTTP POST. Aby wymusić usługi WCF do kontekstu prawo do wywoływania usługi typu REST, Utwórz nową <xref:System.ServiceModel.OperationContextScope> i wywołać usługi typu REST z wewnątrz operacji kontekstu zakresu. W tym temacie opisano sposób tworzenia prostego przykładu, która ilustruje tej metody.  
+Podczas wywoływania usługi typu REST z regularnych usługi WCF (w oparciu o protokół SOAP), kontekst operacji dla metody usługi, (który zawiera informacje dotyczące żądania przychodzące) zastępuje kontekstu, który powinien być używany przez żądania wychodzącego. Powoduje to, że żądania HTTP GET przejść do żądania HTTP POST. Aby wymusić uruchomienia usługi WCF do użycia w kontekście wywoływanie usługi typu REST, Utwórz nowy <xref:System.ServiceModel.OperationContextScope> i wywoływanie usługi typu REST z wewnątrz zakresu kontekstu operacji. W tym temacie opisano sposób tworzenia prostych przykładowych, który ilustruje tej techniki.  
   
-## <a name="define-the-rest-style-service-contract"></a>Definiowanie kontraktu usługi typu REST  
- Zdefiniuj kontrakt usługi typu REST prosty:  
+## <a name="define-the-rest-style-service-contract"></a>Definiowanie kontraktu usługi opartego na interfejsie REST  
+ Definiowanie prostych opartego na interfejsie REST kontraktu usługi:  
   
 ```csharp
 [ServiceContract]
@@ -27,7 +27,7 @@ public interface IRestInterface
 }
 ```
   
-## <a name="implement-the-rest-style-service-contract"></a>Implementowanie kontraktu usługi typu REST  
+## <a name="implement-the-rest-style-service-contract"></a>Implementowanie kontraktu usługi opartego na interfejsie REST  
  Implementowanie kontraktu usługi typu REST:  
   
 ```csharp
@@ -46,7 +46,7 @@ public class RestService : IRestInterface
 ```
   
 ## <a name="define-the-wcf-service-contract"></a>Definiowanie kontraktu usługi WCF  
- Definiowanie kontraktu usługi WCF, która będzie służyć do wywołania tej usługi typu REST:  
+ Definiowanie kontraktu usługi WCF, która będzie służyć do wywołania usługi typu REST:  
   
 ```csharp
 [ServiceContract]
@@ -79,8 +79,8 @@ public class NormalService : INormalInterface
 }  
 ```  
   
-## <a name="create-the-client-proxy-for-the-rest-style-service"></a>Tworzenie klienta serwera proxy usługi typu REST  
- Przy użyciu <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` wdrożenie serwera proxy klienta. Dla każdej metody o nazwie nowy <xref:System.ServiceModel.OperationContextScope> są tworzone i używane do wywołania operacji.  
+## <a name="create-the-client-proxy-for-the-rest-style-service"></a>Utwórz serwer proxy klienta dla usługi opartego na interfejsie REST  
+ Za pomocą <xref:System.ServiceModel.ClientBase%601> wdrożyć serwer proxy klienta. Dla każdej metody o nazwie nową <xref:System.ServiceModel.OperationContextScope> są tworzone i używane do wywołania operacji.  
   
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
@@ -110,7 +110,7 @@ public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
 ```  
   
 ## <a name="host-and-call-the-services"></a>Hostowanie i wywołania usług  
- Host obie te usługi w aplikacji konsoli, dodawanie wymagane punkty końcowe i zachowania. A następnie wywołać regularne usługi WCF:  
+ Hostowanie obie te usługi w aplikacji konsolowej, dodając wymagane punkty końcowe i zachowania. A następnie wywołać regularne usługi WCF:  
   
 ```csharp
 public static void Main()
@@ -133,8 +133,8 @@ public static void Main()
 }
 ```  
   
-## <a name="complete-code-listing"></a>Kompletny kod  
- Poniżej znajduje się pełna lista próbki zaimplementowana w tym temacie:  
+## <a name="complete-code-listing"></a>Kompletna lista kodu  
+ Poniżej przedstawiono pełną listę przykładowych zaimplementowane w tym temacie:  
   
 ```csharp
 public class CallingRESTSample  

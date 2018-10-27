@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9359d196ecdaa83d7f5f14c3570392d54691be73
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037472"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195635"
 ---
 # <a name="lttypegt-element-net-native"></a>Element &lt;Type&gt; (architektura .NET Native)
 Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie jak klasy lub struktury.  
@@ -95,10 +95,10 @@ Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie j
   
  Element `<Type>` elementu typu ogólnego stosuje swoje zasady do wszystkich wystąpień, które nie mają własnych zasad. Zasady skonstruowany typów ogólnych jest definiowany przez [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementu.  
   
- Jeśli typ jest typem ogólnym, jego nazwa zostanie nadany przez symbol akcent (\`) i jego numer parametrów ogólnych. Na przykład `Name` atrybutu `<Type>` elementu <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> klasa jest wyświetlany jako `Name="System.Collections.Generic.List`1"".  
+ Jeśli typ jest typem ogólnym, jego nazwa zostanie nadany przez symbol akcent (\`) i jego numer parametrów ogólnych. Na przykład `Name` atrybutu `<Type>` elementu <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> klasa jest wyświetlany jako ``Name="System.Collections.Generic.List`1"``.
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto odbicia, aby wyświetlić informacje dotyczące pola, właściwości i metod <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> klasy. Zmienna `b` w tym przykładzie jest [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) kontroli. Ponieważ w tym przykładzie po prostu pobiera informacje o typie, dostępność metadanych jest kontrolowany przez `Browse` ustawienie zasad.  
+ W poniższym przykładzie użyto odbicia, aby wyświetlić informacje dotyczące pola, właściwości i metod <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> klasy. Zmienna `b` w tym przykładzie jest <xref:Windows.UI.Xaml.Controls.TextBlock> kontroli. Ponieważ w tym przykładzie po prostu pobiera informacje o typie, dostępność metadanych jest kontrolowany przez `Browse` ustawienie zasad.  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
@@ -116,7 +116,7 @@ Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie j
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto odbicia w celu pobrania <xref:System.Reflection.PropertyInfo> obiekt, który reprezentuje <xref:System.String.Chars%2A?displayProperty=nameWithType> właściwości. Następnie używa <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody można pobrać wartość siódmego znaku w ciągu, aby wyświetlić wszystkie znaki w ciągu. Zmienna `b` w tym przykładzie jest [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) kontroli.  
+ W poniższym przykładzie użyto odbicia w celu pobrania <xref:System.Reflection.PropertyInfo> obiekt, który reprezentuje <xref:System.String.Chars%2A?displayProperty=nameWithType> właściwości. Następnie używa <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody można pobrać wartość siódmego znaku w ciągu, aby wyświetlić wszystkie znaki w ciągu. Zmienna `b` w tym przykładzie jest <xref:Windows.UI.Xaml.Controls.TextBlock> kontroli.  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   

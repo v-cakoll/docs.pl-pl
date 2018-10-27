@@ -9,17 +9,15 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4de37c58543aed9ed13be8b0d2bcec9830ca9082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656103"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195180"
 ---
 # <a name="-define-visual-basic"></a>-Definiowanie (Visual Basic)
-Definiuje warunkowe stałe kompilatora.  
+Definiuje stałe warunkowe kompilatora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,19 +31,19 @@ Definiuje warunkowe stałe kompilatora.
   
 |Termin|Definicja|  
 |---|---|  
-|`symbol`|Wymagana. Symbol do definiowania.|  
-|`value`|Opcjonalna. Wartość do przypisania `symbol`. Jeśli `value` jest ciągiem, muszą być ujęte przez sekwencje ukośnik odwrotny cudzysłowu (\\") zamiast znaków cudzysłowu. Jeśli nie określono wartości, a następnie jest traktowana jako True.|  
+|`symbol`|Wymagana. Aby zdefiniować symbol.|  
+|`value`|Opcjonalna. Wartość do przypisania `symbol`. Jeśli `value` jest ciągiem, muszą być ujęte przez sekwencje ukośnik odwrotny — cudzysłów (\\") zamiast znaki cudzysłowu. Jeśli nie określono wartości, a następnie jest traktowana jako wartość True.|  
   
 ## <a name="remarks"></a>Uwagi  
- `-define` Opcji jest efekt jest podobny do sposobu używania `#Const` dyrektywy preprocesora w pliku źródłowym, z wyjątkiem tego stałe zdefiniowane z `-define` są publiczne i dotyczą wszystkich plików w projekcie.  
+ `-define` Opcji obowiązuje, podobnie jak przy użyciu `#Const` dyrektywy preprocesora w pliku źródłowym, z wyjątkiem tego stałe zdefiniowane za pomocą `-define` były publiczne i zastosować do wszystkich plików w projekcie.  
   
- Można użyć symboli utworzone przez tę opcję z `#If`... `Then`... `#Else` dyrektywy warunkowo skompilować plików źródłowych.  
+ Można użyć symboli utworzone przez tę opcję z `#If`... `Then`... `#Else` dyrektywy, aby warunkowo skompilować pliki źródłowe.  
   
- `-d` jest krótka forma `-define`.  
+ `-d` jest to forma krótka `-define`.  
   
- Można zdefiniować wiele symboli z `-define` za pomocą przecinka do oddzielania definicji symbolu.  
+ Można zdefiniować wiele symboli z `-define` za pomocą przecinków do oddzielenia definicje symbolu.  
   
-|Aby ustawić / define w programie Visual Studio zintegrowane środowisko deweloperskie|  
+|Aby ustawić / define w programie Visual Studio zintegrowane środowisko projektowe|  
 |---|  
 |1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Kliknij przycisk **zaawansowane**.<br />4.  Zmodyfikuj wartość w **stałe niestandardowe** pole.|  
   
@@ -55,7 +53,7 @@ Definiuje warunkowe stałe kompilatora.
  [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/define_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
  [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
  [#Const, dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)  
  [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3354f22f5d1c1f1807388542c4ada5e67a9d5a14
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207325"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192710"
 ---
 # <a name="double-c-reference"></a>double (odwołanie w C#)
 
@@ -20,7 +20,7 @@ ms.locfileid: "47207325"
 
 |Typ|Przybliżony zakres|Dokładność|Typ architektury .NET|
 |----------|-----------------------|---------------|-------------------------|
-|`double`|±5.0 x 10<sup>−324</sup> do ±1.7 x 10<sup>308</sup>|15-16 cyfr|<xref:System.Double?displayProperty=nameWithType>|
+|`double`|±5.0 x 10<sup>−324</sup> do ±1.7 x 10<sup>308</sup>|około 15 – 17 cyfr|<xref:System.Double?displayProperty=nameWithType>|
 
 ## <a name="literals"></a>Literały
 

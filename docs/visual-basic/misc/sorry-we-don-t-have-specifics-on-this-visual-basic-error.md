@@ -3044,33 +3044,33 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231466"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192788"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Niestety, nie ma żadnych szczegółów dotyczących tego błędu języka Visual Basic
 Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Możesz także zapytać innych deweloperów, korzystając z następujących forów:  
   
  [Język Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
- Udostępnia forum odpowiedzi na pytania o i ogólnych dyskusjach na składni języka Visual Basic i kompilatora.  
+ Dyskusje na forum, na którym pytania na temat i ogólne składni języka Visual Basic i kompilatora.  
   
  [Visual Basic Interop and Upgrade](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
- Udostępnia forum odpowiedzi na pytania dotyczące i problemy związane z uaktualnieniem do programu Visual Basic i Praca z funkcji współdziałania.  
+ Udostępnia forum dla pytania o i problemów z uaktualnieniem do programu Visual Basic i Praca z funkcjami współpracy.  
   
  [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
- Udostępnia forum odpowiedzi na pytania dotyczące pracy w środowisku Visual Studio.  
+ Udostępnia forum pytania na temat sposobu pracy w środowisku Visual Studio.  
   
  [Visual Basic General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
- Udostępnia forum odpowiedzi na pytania dotyczące i problemy związane z języka Visual Basic, które nie zostały omówione w innych forach.  
+ Udostępnia forum dla pytania o, a następnie generuje za pomocą Visual Basic, które nie są omawiane na innych forach.  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Udostępnia forum odpowiedzi na pytania dotyczące i problemy związane z języka Visual Basic.  
+ [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
+ Udostępnia forum dla pytania o, a następnie generuje za pomocą Visual Basic.  
   
  Zobacz też:  
- [Dodatkowe dla programistów Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
+ [Dodatkowe zasoby dla programistów Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku Visual Basic](../../visual-basic/programming-guide/index.md)  

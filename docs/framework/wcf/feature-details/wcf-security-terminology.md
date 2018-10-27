@@ -6,13 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-author: BrucePerlerMS
-ms.openlocfilehash: ac7f5fdef2df17d3120d240e5efc79c34977de40
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397702"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50046529"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia dotycząca zabezpieczeń programu WCF
 Niektóre z terminologią używaną podczas omawiania zabezpieczeń mogą być nieznane. Ten temat zawiera krótkie objaśnienia niektóre pojęcia dotyczące zabezpieczeń, ale nie mają na celu dostarczenie pełną dokumentację dla każdego elementu.  

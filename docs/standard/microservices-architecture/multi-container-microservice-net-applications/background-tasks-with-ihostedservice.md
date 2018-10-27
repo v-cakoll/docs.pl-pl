@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Im
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6ce9e40334e80e8bd17ce2f3d2569a1e3c39d09e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 981a20ca80f0652a9c3597d36b960d6b44d97912
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003753"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195830"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementowanie zadań w tle w mikrousługach za pomocą interfejsu IHostedService i klasa BackgroundService
 
@@ -236,7 +236,7 @@ Poniższa ilustracja 8 26 przedstawia podsumowanie klasy wizualizacji i połącz
 
 ### <a name="deployment-considerations-and-takeaways"></a>Zagadnienia dotyczące wdrażania i wnioski
 
-Ważne jest, aby należy pamiętać, że sposób wdrażania ASP.NET Core `WebHost` lub .NET Core `Host` mogą mieć wpływ na ostateczne rozwiązanie. Na przykład w przypadku wdrożenia usługi `WebHost` w usługach IIS lub regularnych usługi Azure App Service hosta może zostać wyłączony z powodu odtwarzanie puli aplikacji. Jeżeli wdrażasz hosta jako kontener, do programu orchestrator, takich jak Kubernetes lub usługi Service Fabric można jednak sterować bezpieczne liczbę wystąpień na żywo hosta. Ponadto można rozważyć inne podejścia w chmurze, szczególnie wprowadzone dla tych scenariuszy, takich jak Azure Functions. 
+Ważne jest, aby należy pamiętać, że sposób wdrażania ASP.NET Core `WebHost` lub .NET Core `Host` mogą mieć wpływ na ostateczne rozwiązanie. Na przykład w przypadku wdrożenia usługi `WebHost` w usługach IIS lub regularnych usługi Azure App Service hosta może zostać wyłączony z powodu odtwarzanie puli aplikacji. Jeżeli wdrażasz hosta jako kontener, do programu orchestrator, takich jak Kubernetes lub usługi Service Fabric można jednak sterować bezpieczne liczbę wystąpień na żywo hosta. Ponadto można rozważyć inne podejścia w chmurze, szczególnie wprowadzone dla tych scenariuszy, takich jak Azure Functions. Ponadto jeśli niezbędna jest usługa działa przez cały czas i są wdrażane na systemie Windows Server można użyć usługa Windows.
 
 Ale nawet w przypadku `WebHost` wdrożone do puli aplikacji, istnieją scenariusze, takie jak uważnie lub opróżniania pamięci podręcznej w pamięci aplikacji, które będą nadal stosowane.
 

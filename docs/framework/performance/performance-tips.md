@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3d5d91db9256cdfb3aa0062d66333f13797ee1bb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e0ef9baa6405a8c49674afb4208b502085dc8554
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025256"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195869"
 ---
 # <a name="net-performance-tips"></a>Wskazówki dotyczące wydajności .NET
 Termin *wydajności* zazwyczaj odnosi się do szybkości wykonywania programu. Czasami możesz zwiększyć szybkość realizacji przez następujących podstawowych reguł w kodzie źródłowym. W niektórych programach jest ważne, aby dokładnie sprawdzić kod i użyć profilerów, aby upewnić się, że działa tak szybko, jak to możliwe. W innych programach nie trzeba wykonywać takiej optymalizacji, ponieważ kod działa zadowalająco szybko, jak jest pisany. W tym artykule wymieniono niektóre typowe obszary, w których może to spowodować obniżenie wydajności i wskazówki dotyczące poprawiania go, a także łącza do tematów wyższą wydajność. Aby uzyskać więcej informacji na temat planowania i dokonywania jej pomiarów wydajności, zobacz [wydajności](../../../docs/framework/performance/index.md)  
@@ -46,4 +46,4 @@ Termin *wydajności* zazwyczaj odnosi się do szybkości wykonywania programu. C
  [Wydajność](../../../docs/framework/performance/index.md)  
  [Pojęcia związane z programowaniem](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
  [Przewodnik programowania w języku Visual Basic](../../visual-basic/programming-guide/index.md)  
- [Przewodnik programowania w języku C#](https://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)
+ [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)

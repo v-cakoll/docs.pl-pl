@@ -2,13 +2,12 @@
 title: 'Punkt końcowy: Wywołania zabezpieczeń bez autoryzacji'
 ms.date: 03/30/2017
 ms.assetid: d25095ff-9ff0-4c69-a674-4e6a9fe3f4dc
-author: BrucePerlerMS
-ms.openlocfilehash: 2d2f114d45675ece23f818d4d56bcc40684f9dbf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b37d4cd33c41c6e978dd82ca7ce6332302a843de
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47194084"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50046694"
 ---
 # <a name="endpoint-security-calls-not-authorized"></a>Punkt końcowy: Wywołania zabezpieczeń bez autoryzacji
 Nazwa licznika: Wywołania zabezpieczeń bez autoryzacji.  

@@ -2,19 +2,19 @@
 title: WSAT_TraceRecord
 ms.date: 03/30/2017
 ms.assetid: 99bc7f66-1335-40d8-aa68-e754d569dc0d
-ms.openlocfilehash: 1136647ce668dbb69bdb8acf8ed62343831464b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 907e764cf032e595c7aba455fd4808a640f68016
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487779"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194777"
 ---
 # <a name="wsattracerecord"></a>WSAT_TraceRecord
 WSAT_TraceRecord  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class WSAT_TraceRecord : WSAT_TraceEvent  
 {  
   object ActivityID;  
@@ -31,24 +31,24 @@ class WSAT_TraceRecord : WSAT_TraceEvent
   
 ### <a name="activityid"></a>Identyfikator działania  
  Typ danych: obiekt  
-Dostęp typu: tylko do odczytu  
+Dostęp do typu: tylko do odczytu  
   
- Identyfikator działania rekordu śledzenia.  
+ Identyfikator działania rekord śledzenia.  
   
 ### <a name="eventid"></a>Identyfikator zdarzenia  
  Typ danych: sint32  
-Dostęp typu: tylko do odczytu  
+Dostęp do typu: tylko do odczytu  
   
  Identyfikator zdarzenia Rekord śledzenia.  
   
 ### <a name="tracerecord"></a>TraceRecord  
  Typ danych: ciąg  
-Dostęp typu: tylko do odczytu  
+Dostęp do typu: tylko do odczytu  
   
  Rekord śledzenia  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|

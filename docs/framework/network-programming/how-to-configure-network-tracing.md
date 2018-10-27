@@ -11,14 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4b8fa55375de5057eca92591cbf4d9da628a3f85
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 257f417fa573577ca8e8ceb4edc9c4f481af1f72
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582492"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192450"
 ---
 # <a name="how-to-configure-network-tracing"></a>Porady: Konfigurowanie śledzenia sieci
 Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określają format i zawartość danych ze śledzenia sieci. Przed rozpoczęciem procedury należy się upewnić, że śledzenie jest włączone. Aby uzyskać informacje na temat włączania śledzenia, zobacz [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -102,4 +100,4 @@ Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określaj
  [Interpretowanie śledzenia sieci](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
  [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Wprowadzenie do Instrumentacji i śledzenia](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

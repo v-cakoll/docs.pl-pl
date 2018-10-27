@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bee42db7b9a92723b0640d0b3747a7921b8617c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b16ad5b3426316197d69fc137e2da7f96e7ab49
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525765"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185644"
 ---
 # <a name="controlling-net-framework-logging"></a>Kontrolowanie logowania w programie .NET Framework
 Śledzenia zdarzeń systemu Windows (ETW) można użyć do rejestrowania zdarzeń środowiska uruchomieniowego języka wspólnego (CLR). Można tworzyć i przeglądać ślady za pomocą następujących narzędzi:  
   
--   [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) i [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) narzędzi wiersza polecenia, które są zawarte w systemie operacyjnym Windows.  
+-   [Logman](/windows-server/administration/windows-commands/logman) i [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) narzędzi wiersza polecenia, które są zawarte w systemie operacyjnym Windows.  
   
--   [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) narzędzi w [narzędzi wydajności Windows](https://msdn.microsoft.com/library/windows/hardware/hh162945.aspx). Aby uzyskać więcej informacji dotyczących narzędzia Xperf, zobacz [blog poświęcony wydajności Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
+-   [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) narzędzi w [narzędzi wydajności Windows](/windows-hardware/test/wpt/). Aby uzyskać więcej informacji dotyczących narzędzia Xperf, zobacz [blog poświęcony wydajności Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  Aby można było przechwytywać informacje o zdarzeniu CLR, dostawca CLR musi być zainstalowany na komputerze. Aby upewnić się, że dostawca jest zainstalowany, wpisz `logman query providers` w wierszu polecenia. Zostanie wyświetlona lista dostawców. Ta lista powinna zawierać następujący wpis dla dostawcy CLR.  
   
@@ -28,12 +28,12 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- Jeśli dostawcy CLR nie ma na liście, możesz zainstalować go w systemach Windows Vista i nowszych systemów operacyjnych przy użyciu Windows [Wevtutil](https://go.microsoft.com/fwlink/?LinkID=150915) narzędzie wiersza polecenia. Otwórz okno wiersza polecenia jako administrator. Zmień katalog monitu [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] folderu (% WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET wersji>\ ). Ten folder zawiera plik CLR-ETW.man. W wierszu polecenia wpisz następujące polecenie, aby zainstalować dostawcę CLR:  
+ Jeśli dostawcy CLR nie ma na liście, możesz zainstalować go w systemach Windows Vista i nowszych systemów operacyjnych przy użyciu Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) narzędzie wiersza polecenia. Otwórz okno wiersza polecenia jako administrator. Zmień katalog monitu [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] folderu (% WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET wersji>\ ). Ten folder zawiera plik CLR-ETW.man. W wierszu polecenia wpisz następujące polecenie, aby zainstalować dostawcę CLR:  
   
  `wevtutil im CLR-ETW.man`  
   
 ## <a name="capturing-clr-etw-events"></a>Przechwytywanie zdarzeń CLR ETW  
- Możesz użyć [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) i [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) narzędzia wiersza polecenia, aby przechwytywać zdarzenia ETW i [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) i [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) narzędzia do zdekodowania zdarzenia śledzenia.  
+ Możesz użyć [Logman](/windows-server/administration/windows-commands/logman) i [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) narzędzia wiersza polecenia, aby przechwytywać zdarzenia ETW i [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) i [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) narzędzia do zdekodowania zdarzenia śledzenia.  
   
  Aby włączyć rejestrowanie, użytkownik musi określić trzy rzeczy:  
   
@@ -109,5 +109,5 @@ Provider                                 GUID
      To polecenie powoduje zrzucenie przez narzędzie XPerf zdarzeń do pliku z wartościami rozdzielanymi przecinkami (CSV), który można wyświetlać. Różne zdarzenia mają różne pola, więc ten plik CSV zawiera więcej niż jeden wiersz nagłówka przed danymi. Pierwsze pole w każdym wierszu jest typem zdarzenia wskazującym, który nagłówek powinien być używany do określenia pozostałych pól.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zestaw narzędzi wydajności Windows](https://go.microsoft.com/fwlink/?LinkID=161141)  
+ [Zestaw narzędzi wydajności Windows](/windows-hardware/test/wpt/)  
  [Zdarzenia ETW w środowisku CLR](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

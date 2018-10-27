@@ -7,36 +7,36 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee9eb30d6966d8162b29286140c068d854f7911c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee5f223d5e92d9a60776df6bf2108a4fd14b9e0f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397458"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195206"
 ---
 # <a name="in-process-side-by-side-execution"></a>Wykonywanie równoczesne i wewnątrzprocesowe
-Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć w trakcie side-by-side hosting do uruchamiania wielu wersji środowisko uruchomieniowe języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM działać z wersją .NET Framework, które ich nie zostały skompilowane, niezależnie od wersji programu .NET Framework, który jest ładowany do procesu.  
+Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć w trakcie side-by-side hostingu do uruchamiania wielu wersji środowiska uruchomieniowego języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM, uruchom z .NET Framework w wersji, które zostały skompilowane, niezależnie od wersji programu .NET Framework, który jest ładowany do procesu.  
   
 ## <a name="background"></a>Tło  
- .NET Framework zawsze ma podany side-by-side hosting dla zarządzanego kodu aplikacji, ale przed wysłaniem [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], nie zapewniają te funkcje składników COM zarządzanych. W przeszłości zarządzane składniki COM, które zostały załadowane do procesu został uruchomiony z wersją środowiska uruchomieniowego, który został już załadowany lub z najnowszej zainstalowanej wersji programu .NET Framework. Jeśli ta wersja nie jest zgodny z składnika modelu COM, składnik nie powiedzie się.  
+ .NET Framework zawsze ma pod warunkiem side-by-side hosting dla zarządzanego kodu aplikacji, lecz przed [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], nie zapewniają tej funkcji dla składników COM zarządzanych. W przeszłości zarządzanych składników COM, które zostały załadowane do procesu został uruchomiony z wersją środowiska uruchomieniowego, który został już załadowany lub z najnowszej zainstalowanej wersji programu .NET Framework. Jeśli ta wersja nie jest zgodny ze składnikiem COM, składnik może zakończyć się niepowodzeniem.  
   
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Udostępnia nowe podejście do hostingu side-by-side, który zapewnia następujące:  
+ [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Udostępnia nowe podejście do hostingu side-by-side, która zapewnia następujące:  
   
 -   Instalowanie nowej wersji programu .NET Framework nie ma wpływu na istniejące aplikacje.  
   
--   Aplikacje są uruchamiane z wersją programu .NET Framework, które zostały skompilowane. Używają nowej wersji programu .NET Framework, chyba że wyraźnie skierowane w tym celu. Jednak jest łatwiejsze do przejścia aplikacji przy użyciu nowej wersji programu .NET Framework.  
+-   Aplikacje są uruchamiane z wersją programu .NET Framework, które zostały skompilowane. Używają nowej wersji programu .NET Framework, chyba że wyraźnie kierowany Aby to zrobić. Jednak jest łatwiej aplikacji do przejścia do korzystania z nowej wersji programu .NET Framework.  
   
 ## <a name="effects-on-users-and-developers"></a>Wpływ na użytkowników i deweloperów  
   
--   **Użytkownicy końcowi i Administratorzy systemu**. Ci użytkownicy mają teraz większa pewność, że przy instalacji nowej wersji środowiska uruchomieniowego można niezależnie lub za pomocą aplikacji, jego zostanie nie mają wpływu na swoich komputerach. Istniejące aplikacje będą nadal działać tak jak przed.  
+-   **Użytkownicy końcowi i Administratorzy systemu**. Ci użytkownicy mogą teraz mają większą pewność, że przy instalacji nowej wersji środowiska uruchomieniowego, niezależnie od siebie lub za pomocą aplikacji, nie będzie mieć żadnego wpływu na swoich komputerach. Istniejące aplikacje, będą w dalszym ciągu działać tak jak przed.  
   
--   **Deweloperzy aplikacji**. Hosting Side-by-side prawie nie ma wpływu na deweloperzy aplikacji. Domyślnie aplikacje zawsze uruchamiana w wersji programu .NET Framework, że zostały zbudowane na; nie została zmieniona. Jednak deweloperzy mogą zmienić to zachowanie i skierować aplikację do uruchamiania w nowszej wersji programu .NET Framework (zobacz [Scenariusz 2](#scenarios)).  
+-   **Deweloperzy aplikacji**. Hosting Side-by-side prawie nie ma wpływu na deweloperów aplikacji. Domyślnie aplikacje zawsze uruchamiana w wersji programu .NET Framework, w których zostały zbudowane; to nie została zmieniona. Jednakże, deweloperzy mogą zmienić to zachowanie i skierować aplikację do uruchamiania w nowszej wersji programu .NET Framework (zobacz [Scenariusz 2](#scenarios)).  
   
--   **Biblioteka deweloperów i konsumentów**. Hosting Side-by-side nie rozwiązuje problemy ze zgodnością napotykane przez deweloperów biblioteki. Biblioteki, która jest bezpośrednio ładowany przez aplikację — poprzez bezpośrednie odwołanie lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> wywołać — będzie później nadal używać środowiska wykonawczego o <xref:System.AppDomain> został załadowany. Należy przetestować bibliotek względem wszystkich wersji platformy .NET, które mają być obsługiwane. Jeśli aplikacja została skompilowana przy użyciu [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] środowiska uruchomieniowego zawiera jednak bibliotekę został zbudowany przy użyciu wcześniejszych środowiska uruchomieniowego, użyje tej biblioteki [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] również w czasie wykonywania. Jednak jeśli masz aplikację, która została skompilowana przy użyciu wcześniejszych środowiska uruchomieniowego i biblioteki, który został utworzony przy użyciu [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], należy wymusić aplikacji można również użyć [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (zobacz [Scenariusz 3](#scenarios)).  
+-   **Deweloperów bibliotek i konsumentów**. Side-by-side hostingu nie rozwiązuje problemy ze zgodnością napotykane przez deweloperów biblioteki. Biblioteka, która jest ładowane bezpośrednio przez aplikację — za pośrednictwem bezpośredniego odwołania lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> wywołania — będzie później nadal używać środowiska uruchomieniowego <xref:System.AppDomain> jest ładowany. Należy przetestować bibliotek względem wszystkich wersji programu .NET Framework, które mają być obsługiwane. Jeśli aplikacja jest skompilowana przy użyciu [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] środowiska uruchomieniowego ale zawiera bibliotekę, który został zbudowany przy użyciu starszych środowiska uruchomieniowego, użyje tej biblioteki [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] także w czasie wykonywania. Jednak jeśli masz aplikację, która została skompilowana przy użyciu starszych środowisko uruchomieniowe i Biblioteka, który został zbudowany przy użyciu [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], trzeba wymusić jego aplikacji można także użyć [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (zobacz [Scenariusz 3](#scenarios)).  
   
--   **Zarządzane deweloperzy składnika COM**. W przeszłości zarządzane składniki COM automatycznie została uruchomiona przy użyciu najnowszej wersji środowiska uruchomieniowego zainstalowany na komputerze. Można teraz wykonać składniki modelu COM z wersją środowiska uruchomieniowego, które zostały skompilowane.  
+-   **Zarządzane Deweloperzy składników COM**. W przeszłości składniki COM zarządzane automatycznie została uruchomiona przy użyciu najnowszej wersji środowiska uruchomieniowego zainstalowanego na komputerze. Można teraz wykonać składników modelu COM z wersją środowiska uruchomieniowego, które zostały skompilowane.  
   
-     Jak pokazano w poniższej tabeli, składników, które nie zostały skompilowane dla platformy .NET Framework w wersji 1.1 można uruchomić równolegle składniki w wersji 4, ale ich nie można uruchomić w wersji 2.0, 3.0 lub 3.5 składników, ponieważ side-by-side hostingu nie jest dostępna dla osób wersje.  
+     Jak pokazano w poniższej tabeli, składników, które zostały utworzone przy użyciu platformy .NET Framework w wersji 1.1, można uruchomić równolegle składniki w wersji 4, ale nie działają one w wersji 2.0, 3.0 lub 3.5 składników, ponieważ side-by-side hostingu nie jest dostępny dla osób wersje.  
   
     |Wersja programu .NET Framework|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
@@ -45,22 +45,22 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], mo
     |4|Tak|Tak|Nie dotyczy|  
   
 > [!NOTE]
->  Wersje programu .NET framework 3.0 i 3.5 są tworzone przyrostowo w wersji 2.0 i nie trzeba uruchomić obok siebie. Są z założenia tej samej wersji.  
+>  Wersje programu .NET framework 3.0 i 3.5 są tworzone przyrostowo w wersji 2.0 i nie trzeba uruchamiać równolegle. Te założenia mają taką samą wersję.  
   
 <a name="scenarios"></a>   
-## <a name="common-side-by-side-hosting-scenarios"></a>Typowe scenariusze hostingu Side-by-Side  
+## <a name="common-side-by-side-hosting-scenarios"></a>Typowe scenariusze Side-by-Side hostingu  
   
--   **Scenariusz 1:** aplikacji natywnej używającej składniki COM utworzone we wcześniejszych wersjach programu .NET Framework.  
+-   **Scenariusz 1:** aplikacji natywnej używającej składniki COM, utworzone w starszych wersjach programu .NET Framework.  
   
-     Zainstalowane wersje .NET framework: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i wszystkich wersji platformy .NET używanego przez składniki COM.  
+     Wersje programu .NET framework zainstalowana: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i wszystkich wersji programu .NET Framework używanego przez składniki COM.  
   
-     Co należy zrobić: W tym scenariuszu, nic nie rób. Składniki modelu COM będą uruchamiane z wersją programu .NET Framework w zarejestrowani z.  
+     Co należy zrobić: W tym scenariuszu, nic nie rób. Składniki COM będą uruchamiane przy użyciu wersji programu .NET Framework zostały zarejestrowane w usłudze.  
   
--   **Scenariusz 2**: zarządzanych aplikacji skompilowanej za pomocą [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] , który chcesz uruchomić z [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ale nie jest gotowa do uruchomienia na [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Jeśli nie jest w wersji 2.0.  
+-   **Scenariusz 2**: zarządzana aplikacja skompilowana przy użyciu [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] , którego chcesz użyć uruchomić program z [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ale są gotowi do uruchamiania na [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Jeśli nie jest w wersji 2.0.  
   
-     Zainstalowane wersje .NET framework: starszej wersji programu .NET Framework i [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Wersje programu .NET framework zainstalowana: wcześniejszej wersji programu .NET Framework i [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Co należy zrobić: W [pliku konfiguracji aplikacji](../../../docs/framework/configure-apps/index.md) w katalogu aplikacji, użyj [ \<uruchamiania > element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) i [ \<supportedRuntime > element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) ustawione w następujący sposób:  
+     Co należy zrobić: W [pliku konfiguracji aplikacji](../../../docs/framework/configure-apps/index.md) w katalogu aplikacji za pomocą [ \<uruchamiania > element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) i [ \<supportedRuntime > element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) ustawione w następujący sposób:  
   
     ```xml  
     <configuration>  
@@ -71,11 +71,11 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], mo
     </configuration>  
     ```  
   
--   **Scenariusz 3:** natywnych aplikacji, która używa składniki COM utworzone we wcześniejszych wersjach programu .NET Framework, która ma zostać uruchomione z [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+-   **Scenariusz 3:** aplikacji natywnej używającej składniki COM, utworzone w starszych wersjach programu .NET Framework, która ma zostać uruchomiony z [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Zainstalowane wersje .NET framework: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Wersje programu .NET framework zainstalowana: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Co należy zrobić: W pliku konfiguracyjnym aplikacji w katalogu aplikacji, użyj `<startup>` element z `useLegacyV2RuntimeActivationPolicy` ustawić atrybutu `true` i `<supportedRuntime>` element ustawiony w następujący sposób:  
+     Co należy zrobić: W pliku konfiguracyjnym aplikacji w katalogu aplikacji, należy użyć `<startup>` element z `useLegacyV2RuntimeActivationPolicy` ustawioną wartość atrybutu `true` i `<supportedRuntime>` element jest ustawiony w następujący sposób:  
   
     ```xml  
     <configuration>  
@@ -86,9 +86,9 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], mo
     ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano niezarządzane COM host, na którym działa zarządzanego składnika modelu COM przy użyciu wersji programu .NET Framework, która składnik został skompilowany do użycia.  
+ W poniższym przykładzie pokazano niezarządzany host COM, działającego zarządzanego składnika COM za pomocą wersji programu .NET Framework, który składnik był skompilowany do użycia.  
   
- Aby uruchomić poniższy przykład, kompilowania i zarejestrować następujące zarządzanych za pomocą składnika COM [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Aby zarejestrować składnika, na **projektu** menu, kliknij przycisk **właściwości**, kliknij przycisk **kompilacji** , a następnie wybierz **Zarejestruj dla międzyoperacyjności z modelem COM**pole wyboru.  
+ Z poniższego przykładu, kompilowania i zarejestrowania następujących zarządzanych za pomocą składnika COM [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Można zarejestrować składnika, na **projektu** menu, kliknij przycisk **właściwości**, kliknij przycisk **kompilacji** , a następnie wybierz pozycję **Zarejestruj dla współdziałania COM**pole wyboru.  
   
 ```  
 using System;  
@@ -113,7 +113,7 @@ namespace BasicComObject
 }  
 ```  
   
- Kompiluj następujące niezarządzanej aplikacji C++, które aktywuje obiektu COM, który jest utworzony w poprzednim przykładzie.  
+ Skompiluj następujący niezarządzanej aplikacji C++, które uaktywnia się obiekt COM, który jest tworzony w poprzednim przykładzie.  
   
 ```  
 #include "stdafx.h"  
@@ -174,5 +174,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<Uruchamianie > — Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
- [\<supportedRuntime > — Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<Uruchamianie > Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+- [\<supportedRuntime > Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

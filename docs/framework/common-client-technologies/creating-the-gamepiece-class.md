@@ -2,12 +2,12 @@
 title: Tworzenie klasy GamePiece
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f9f08437cda685d2ec1d2d0c8d54d370d9d38341
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857904"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195882"
 ---
 # <a name="creating-the-gamepiece-class"></a>Tworzenie klasy GamePiece
 **GamePiece** klasa hermetyzuje wszystkie funkcje, które są wymagane do załadowania obrazu w element gry XNA firmy Microsoft, śledzić stan myszy w odniesieniu do gier fragment, przechwytywanie myszy, podaj manipulacji i bezwładności przetwarzania, i oferowanie możliwości odbijania, gdy element gier osiągnie limity porcie widoku.  
@@ -25,7 +25,7 @@ ms.locfileid: "43857904"
 ## <a name="class-constructor"></a>Konstruktor klasy  
  Konstruktor **GamePiece** klasy przyjmuje następujące parametry:  
   
--   A [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) typu. Odwołania przekazywane w tym miejscu jest przypisany do prywatnego członka `spriteBatch`i jest używana do dostępu [SpriteBatch.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) metody, gdy gra element renderowany. Ponadto [GraphicsDevice](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) właściwość jest używana do tworzenia [tekstury](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) obiekt skojarzony z fragmentem gier oraz w celu uzyskania rozmiar porcie widoku w celu wykrycia, gdy napotka element gier granica okna tak, że fragment można Odbijanie.  
+-   A [SpriteBatch](https://docs.microsoft.com/previous-versions/windows/xna/bb199034%28v%3dxnagamestudio.41%29) typu. Odwołania przekazywane w tym miejscu jest przypisany do prywatnego członka `spriteBatch`i jest używana do dostępu [SpriteBatch.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196426%28v%3dxnagamestudio.41%29) metody, gdy gra element renderowany. Ponadto [GraphicsDevice](https://docs.microsoft.com/previous-versions/windows/xna/bb197338%28v%3dxnagamestudio.41%29) właściwość jest używana do tworzenia [tekstury](https://docs.microsoft.com/previous-versions/windows/xna/bb199375%28v%3xnagamestudio.41%29) obiekt skojarzony z fragmentem gier oraz w celu uzyskania rozmiar porcie widoku w celu wykrycia, gdy napotka element gier granica okna tak, że fragment można Odbijanie.  
   
 -   Ciąg, który określa nazwę pliku obrazu do użycia dla gier fragmentu.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "43857904"
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- Brak logiki prezentowane do tej pory faktycznie powoduje, że ekstrapolacji bezwładności wystąpić. Jest to realizowane w **ProcessInertia** metody. Ta metoda, która jest wywoływana wielokrotnie z pętli gry aktualizacji ( [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) metoda) sprawdza, czy *processInertia* flaga jest ustawiona na `true`i jeśli tak jest, wywołuje metodę <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> Metoda. Wywołanie tej metody ekstrapolacji powoduje, że występuje i zgłasza <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> zdarzeń.  
+ Brak logiki prezentowane do tej pory faktycznie powoduje, że ekstrapolacji bezwładności wystąpić. Jest to realizowane w **ProcessInertia** metody. Ta metoda, która jest wywoływana wielokrotnie z pętli gry aktualizacji ( [Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) metoda) sprawdza, czy *processInertia* flaga jest ustawiona na `true`i jeśli tak jest, wywołuje metodę <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> Metoda. Wywołanie tej metody ekstrapolacji powoduje, że występuje i zgłasza <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> zdarzeń.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- Gry element nie jest faktycznie renderowane aż nosi nazwę jednego z przeciążeń metody rysowania. Pierwsze przeciążenie tej metody jest wywoływany wielokrotnie z pętli remis ( [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) metody). Renderuje to gier element z bieżącego położenia, obrotu i skalowania czynników.  
+ Gry element nie jest faktycznie renderowane aż nosi nazwę jednego z przeciążeń metody rysowania. Pierwsze przeciążenie tej metody jest wywoływany wielokrotnie z pętli remis ( [Game.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) metody). Renderuje to gier element z bieżącego położenia, obrotu i skalowania czynników.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   

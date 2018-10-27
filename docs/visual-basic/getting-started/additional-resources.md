@@ -8,18 +8,16 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f82ed592a78bb2d13000216cda8ce8334d1f3c83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0ff04bf67faea4c834570e8faa4197369289fb7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591667"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195675"
 ---
 # <a name="additional-resources"></a>Dodatkowe zasoby
 
-Następujące witryny sieci web zawierają wskazówki i mogą pomóc w odpowiedzi na typowe problemy.
+Następujące witryny sieci web, wytyczne i mogą pomóc w znalezieniu odpowiedzi na typowe problemy.
 
 ## <a name="microsoft-resources"></a>Zasoby firmy Microsoft
 
@@ -27,8 +25,8 @@ Następujące witryny sieci web zawierają wskazówki i mogą pomóc w odpowiedz
 
 |Termin|Definicja|
 |----------|----------------|
-|[Projekt języka programu Visual Basic .NET](https://github.com/dotnet/vblang)|Oficjalne repozytorium w usłudze GitHub, przeznaczone dla projektów w języku Visual Basic .NET.|
-|[Blog zespołu programu Microsoft Visual Basic](https://blogs.msdn.microsoft.com/vbteam/)|Zapewnia dostęp do blogu zespołu Visual Basic.|
+|[Projektowanie języków platformy .NET w Visual Basic](https://github.com/dotnet/vblang)|Oficjalne repozytorium w usłudze GitHub, przeznaczone dla projektów w języku Visual Basic .NET.|
+|[Blog zespołu programu Microsoft Visual Basic](https://blogs.msdn.microsoft.com/vbteam/)|Zapewnia dostęp do blogu zespołu języka Visual Basic.|
 
 ### <a name="code-samples"></a>Przykłady kodu
 
@@ -41,9 +39,9 @@ Następujące witryny sieci web zawierają wskazówki i mogą pomóc w odpowiedz
 
 |Termin|Definicja|
 |----------|----------------|
-|[Fora programu Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|W tym artykule omówiono zagadnienia ogólne Visual Basic.|
+|[Forum języka Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|W tym artykule omówiono zagadnienia ogólne języka Visual Basic.|
 
-### <a name="videos-and-webcasts"></a>Filmy wideo i emisji w sieci Web
+### <a name="videos-and-webcasts"></a>Filmy i audycje w sieci Web
 
 |Termin|Definicja|
 |----------|----------------|

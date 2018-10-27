@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 255c7e068cc83b7dcb9489eeeda5ce33be983c81
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a8519f7ecfc430aaa9b888f9239f669e6e54eb02
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522094"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192749"
 ---
 # <a name="overview-of-the-net-framework"></a>Przegląd programu .NET Framework
 
@@ -93,9 +93,9 @@ Klas formularzy Windows są kompleksowymi zestawami typów wielokrotnego użytku
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md)   
-[Przewodnik instalacji](../../../docs/framework/install/index.md)   
-[Podręcznik programowania](../../../docs/framework/development-guide.md)   
-[Narzędzia](../../../docs/framework/tools/index.md)   
-[Przykłady dla platformy .NET framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
-[Biblioteka klas programu .NET framework](https://go.microsoft.com/fwlink/?LinkID=227195)
+- [Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md)   
+- [Przewodnik instalacji](../../../docs/framework/install/index.md)   
+- [Podręcznik programowania](../../../docs/framework/development-guide.md)   
+- [Narzędzia](../../../docs/framework/tools/index.md)   
+- [Przykłady dla platformy .NET framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+- [Biblioteka klas programu .NET framework](https://go.microsoft.com/fwlink/?LinkID=227195)

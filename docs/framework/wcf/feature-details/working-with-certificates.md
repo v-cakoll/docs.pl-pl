@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201117"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453466"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrowe X.509 często są używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje cyfrowego certyfikatu X.509 oraz sposobu ich używania w programie WCF i zawiera łącza do tematów, opisano te pojęcia dalsze lub które pokazują sposób wykonywania typowych zadań przy użyciu programu WCF i certyfikatów.  
@@ -42,7 +42,7 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
   
 -   **Osobiste**. Ten magazyn jest używany dla certyfikatów skojarzonych z użytkownikiem komputerze. Zazwyczaj ten magazyn jest używany do certyfikatów wystawianych przez jeden z certyfikatów urzędów certyfikacji w magazynie zaufanych głównych urzędów certyfikacji. Alternatywnie tutaj certyfikat może być własnym wystawiony i zaufane przez aplikację.  
   
- Aby uzyskać więcej informacji na temat magazynów certyfikatów Zobacz [magazynów certyfikatów](https://go.microsoft.com/fwlink/?LinkId=88912).  
+ Aby uzyskać więcej informacji na temat magazynów certyfikatów Zobacz [magazynów certyfikatów](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Wybieranie Store  
  Wybieranie miejsce przechowywania certyfikatu zależy od sposobu i czasu uruchomienia usługi lub klienta. Obowiązują następujące reguły ogólne:  

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ki
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 9e1ff03421f1a5d23878c74f13423cec9625c4c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 128801fbe49a3f7618b1cedc814b7663d57df624
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609985"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195336"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 
@@ -23,9 +23,9 @@ W większości przypadków w tym scenariuszu nie należy do migrowania istnieją
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Za pomocą biblioteki .NET innych firm lub pakiety NuGet nie są dostępne dla platformy .NET Core
 
-Szybko używają bibliotek innych firm [.NET Standard](https://docs.microsoft.com/dotnet/articles/standard/library), która umożliwia udostępnianie we wszystkich wersjach platformy .NET, w tym .NET Core kodu. Za pomocą platformy .NET Standard 2.0 biblioteki i nie tylko powierzchni interfejsu API zgodność dla różnych platform stało się znacznie większe i platformie .NET Core 2.x aplikacji można także bezpośrednio odwoływać się do istniejących bibliotek .NET Framework (zobacz [zgodności podkładki](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)).
+Szybko używają bibliotek innych firm [.NET Standard](../../net-standard.md), która umożliwia udostępnianie we wszystkich wersjach platformy .NET, w tym .NET Core kodu. Za pomocą platformy .NET Standard 2.0 biblioteki i nie tylko powierzchni interfejsu API zgodność dla różnych platform stało się znacznie większe i platformie .NET Core 2.x aplikacji można także bezpośrednio odwoływać się do istniejących bibliotek .NET Framework (zobacz [zgodności podkładki](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)).
 
-Ponadto [systemie Windows Compatibility Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) został wydany Listopada 2017 r. Aby rozszerzyć powierzchni interfejsu API dostępne dla platformy .NET Standard 2.0 na Windows. Ten pakiet umożliwia ponownej kompilacji większość istniejącego kodu .NET Standard 2.x z niewielkie modyfikacje, systemem Windows.
+Ponadto [systemie Windows Compatibility Pack](../../../core/porting/windows-compat-pack.md) został wydany Listopada 2017 r. Aby rozszerzyć powierzchni interfejsu API dostępne dla platformy .NET Standard 2.0 na Windows. Ten pakiet umożliwia ponownej kompilacji większość istniejącego kodu .NET Standard 2.x z niewielkie modyfikacje, systemem Windows.
 
 Jednak nawet w przypadku tego wyjątkowych postęp od .NET Standard 2.0 i .NET Core 2.1, może istnieć przypadkach, gdy niektóre pakiety NuGet muszą Windows do uruchomienia i nie może obsługiwać platformę .NET Core. Jeśli te pakiety są krytyczne dla swojej aplikacji, należy używać .NET Framework w kontenerach Windows.
 
@@ -37,7 +37,7 @@ Na poniższej liście przedstawiono najbardziej technologii, które nie są dost
 
 -   Formularze sieci Web ASP.NET. Ta technologia jest dostępna tylko w programie .NET Framework. Obecnie nie ma żadnych planów, aby wyświetlić formularzy sieci Web ASP.NET i .NET Core.
 
--   Usługi WCF. Nawet wtedy, gdy [biblioteki klienta platformy WCF](https://github.com/dotnet/wcf) jest dostępna do korzystania z usług WCF z platformy .NET Core, ponieważ połowie 2017 implementacji serwera WCF jest dostępna tylko w programie .NET Framework. Ten scenariusz może zostać uznane za w przyszłych wersjach programu .NET Core, istnieją nawet z niektórych interfejsów API uwzględnione w w [systemie Windows Compatibility Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack).
+-   Usługi WCF. Nawet wtedy, gdy [biblioteki klienta platformy WCF](https://github.com/dotnet/wcf) jest dostępna do korzystania z usług WCF z platformy .NET Core, ponieważ połowie 2017 implementacji serwera WCF jest dostępna tylko w programie .NET Framework. Ten scenariusz może zostać uznane za w przyszłych wersjach programu .NET Core, istnieją nawet z niektórych interfejsów API uwzględnione w w [systemie Windows Compatibility Pack](../../../core/porting/windows-compat-pack.md).
 
 -   Usługi związane z przepływu pracy. Windows Workflow Foundation (WF), usługi przepływu pracy (WCF + WF w jednej usłudze) i usługi danych WCF (wcześniej znane jako architektury ADO.NET Data Services) są dostępne tylko w programie .NET Framework. Obecnie nie ma żadnych planów, aby dostosować je do programu .NET Core.
 
@@ -54,16 +54,16 @@ W międzyczasie dowolnej platformy i usługi na platformie Azure nadal nie obsł
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Przewodnik platformy .NET Core**  
-    [https://docs.microsoft.com/dotnet/articles/core/index](https://docs.microsoft.com/dotnet/articles/core/index)
+    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 -   **Przenoszenie z .NET Framework i .NET Core**  
-    [https://docs.microsoft.com/dotnet/articles/core/porting/index](https://docs.microsoft.com/dotnet/articles/core/porting/index)
+    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 -   **.NET Framework na platformie Docker — przewodnik**  
-    [https://docs.microsoft.com/dotnet/articles/framework/docker/](https://docs.microsoft.com/dotnet/articles/framework/docker/)
+    [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
 
 -   **Omówienie składników platformy .NET**  
-    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
+    [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
 
 

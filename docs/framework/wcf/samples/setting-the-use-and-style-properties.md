@@ -2,12 +2,12 @@
 title: Ustawianie właściwości Use i Style
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: c4cee5fac84d8fb47565cc4ebde47f04365b989e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6728ab0a02c4fc171019564fa2a55bc3a5afd394
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836855"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195908"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Ustawianie właściwości Use i Style
 W tym przykładzie pokazano, jak korzystać z właściwości Use i Style na <xref:System.ServiceModel.XmlSerializerFormatAttribute> i <xref:System.ServiceModel.DataContractFormatAttribute>. Te właściwości mają wpływ na sposób sformatowanych wiadomości. Domyślnie, treść komunikatu jest sformatowany przy użyciu stylu równa <xref:System.ServiceModel.OperationFormatStyle.Document>. Te ustawienia można określić na poziomie kontraktu usługi lub poziomu kontrakt operacji.  
@@ -56,7 +56,7 @@ W tym przykładzie pokazano, jak korzystać z właściwości Use i Style na <xre
   
  Poniższy kod przedstawia kontraktu usługi o <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> właściwością <xref:System.ServiceModel.OperationFormatUse> i format treści wiadomości, zmienić domyślną opcję <xref:System.ServiceModel.OperationFormatStyle> do <xref:System.ServiceModel.OperationFormatStyle.Document>.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
 XmlSerializerFormat(Style = OperationFormatStyle.Rpc,   
                                  Use = OperationFormatUse.Encoded)]  

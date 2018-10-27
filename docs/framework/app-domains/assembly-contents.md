@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c0081e5677ca65e8c730c7199ebac5d4c86261
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1aed7e1e9e85f746c4b55b10c59dd82e85565b00
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741831"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194842"
 ---
 # <a name="assembly-contents"></a>Zawartość zestawu
 Ogólnie rzecz biorąc statyczny zestaw może składać się z czterech elementów:  
   
--   [Manifest zestawu](../../../docs/framework/app-domains/assembly-manifest.md), który zawiera metadanych zestawu.  
+-   [Manifestu zestawu](../../../docs/framework/app-domains/assembly-manifest.md), który zawiera metadane zestawu.  
   
 -   Metadane typu.  
   
@@ -49,6 +49,6 @@ Zestaw wieloplikowy
  Obecnie podczas projektowania kodu źródłowego, należy podejmować jawne decyzje dotyczące partycji funkcje aplikacji w jeden lub więcej plików. Podczas projektowania kodu .NET Framework, podejmiesz podobne decyzje, o tym jak podzielić funkcjonalności, tworząc jeden lub więcej zestawów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Manifest zestawu](../../../docs/framework/app-domains/assembly-manifest.md)  
- [Zagadnienia dotyczące zabezpieczeń zestawów](../../../docs/framework/app-domains/assembly-security-considerations.md)
+- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Manifest zestawu](../../../docs/framework/app-domains/assembly-manifest.md)  
+- [Zagadnienia dotyczące zabezpieczeń zestawów](../../../docs/framework/app-domains/assembly-security-considerations.md)

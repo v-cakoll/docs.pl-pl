@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 2f888fbc063799e258040edf5116fc02e3f9a668
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 32da68206e2415d42df9cc820ff1ca2814fbf58f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512341"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195843"
 ---
 # <a name="c-guide"></a>Przewodnik po języku C#
 
 Przewodnik po języku C# zawiera wiele zasobów dotyczących języka C# i jest przeznaczony dla różnych odbiorców. W zależności od Twojego doświadczenia z programowaniem, używaniem języka C# i platformy .NET możesz zapoznać się z różnymi sekcjami tego przewodnika.
 
 * Dla deweloperów bez żadnego doświadczenia:
-  * Rozpocznij od sekcji [przewodników Szybki start](quick-starts/index.md). Te przewodniki umożliwiają zapoznanie się z językiem C# interaktywnie w przeglądarce. Następnie możesz przejść do sekcji [samouczków](tutorials/index.md). Przedstawiono w nich sposoby tworzenia programów w języku C# od podstaw. Samouczki zawierają opisane krok po kroku procesy tworzenia programów. Przedstawiają one pojęcia dotyczące języka i pokazują, jak samodzielnie tworzyć programy w języku C#. Jeśli wolisz najpierw zapoznać się z ogólnymi informacjami, zobacz [prezentację języka C#](tour-of-csharp/index.md). Wyjaśniono tam pojęcia dotyczące języka C#. Po zapoznaniu się z nimi zdobędziesz podstawową wiedzę na temat języka i będziesz w stanie wypróbować samouczki lub utworzyć coś samodzielnie.
+  * Rozpoczynać [wprowadzenie do C# samouczki](tutorials/intro-to-csharp/index.md). Te samouczki pozwalają eksplorować C# języka interaktywnie w przeglądarce. Z tego miejsca możesz przejść do innych [samouczki](tutorials/index.md). Przedstawiono w nich sposoby tworzenia programów w języku C# od podstaw. Samouczki zawierają opisane krok po kroku procesy tworzenia programów. Pokazują one koncepcje językowe i jak tworzyć C# programy na własną rękę. Jeśli wolisz najpierw zapoznać się z ogólnymi informacjami, zobacz [prezentację języka C#](tour-of-csharp/index.md). Wyjaśniono tam pojęcia dotyczące języka C#. Po zapoznaniu się z nimi zdobędziesz podstawową wiedzę na temat języka i będziesz w stanie wypróbować samouczki lub utworzyć coś samodzielnie.
 
 * Dla deweloperów nie znających języka C#:
   * Jeżeli masz już doświadczenie w programowaniu, ale nie znasz języka C#, zapoznaj się z [prezentacją języka C#](tour-of-csharp/index.md). Zawiera ona opisy podstawowej składni i struktury języka, więc może służyć do porównania języka C# z innymi znanymi Ci językami. Możesz również przejrzeć [samouczki](tutorials/index.md), aby wypróbować podstawowe programy w języku C#.
@@ -35,8 +35,8 @@ Przewodnik zawiera kilka sekcji. Możesz je czytać po kolei lub przejść bezpo
 * [Wprowadzenie](getting-started/index.md)
   * W tej sekcji opisano, co należy zainstalować, aby używać środowiska deweloperskiego języka C# na preferowanej platformie. Poszczególne tematy wyjaśniają, jak utworzyć pierwszy program w języku C# w różnych obsługiwanych środowiskach.
 
-* [Przewodniki Szybki start dla języka C#](quick-starts/index.md):
-  * Przewodniki Szybki start dla języka C# zawierają interaktywne samouczki przeznaczone dla deweloperów bez doświadczenia. Ich celem jest zapoznanie się z językiem C# i nauka tego języka bezpośrednio w przeglądarce przy użyciu interfejsu REPL (Read-Eval-Print Loop). Po zakończeniu interaktywnych lekcji można rozwijać swoje umiejętności programowania, wykonując te same zadania na swojej maszynie.
+* [Wprowadzenie do C# samouczki](tutorials/intro-to-csharp/index.md):
+  * Wprowadzenie do C# samouczków przedstawia interaktywnych samouczków dobór deweloperom Eksploruj i poznawaj C# języka w przeglądarce, za pomocą interfejsu odczytu-Eval-Print pętli (REPL). Po zakończeniu interaktywnych lekcji można rozwijać swoje umiejętności programowania, wykonując te same zadania na swojej maszynie.
 
 * [Samouczki](tutorials/index.md)
   * Ta sekcja zawiera szereg kompletnych scenariuszy z uwzględnieniem zarówno opisów, jak i kodu. Wskazuje, dlaczego niektóre idiomy są preferowane, które funkcje języka C# najlepiej działają w różnych sytuacjach, a także pokazuje referencyjne wdrożenia dla typowych zadań. Jeżeli najlepiej uczysz się, widząc kod, zacznij od tej sekcji. Możesz także pobrać cały kod i poeksperymentować z nim w swoim środowisku.

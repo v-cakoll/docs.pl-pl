@@ -2,12 +2,12 @@
 title: 'Zainstaluj język F #'
 description: 'Dowiedz się, jak zainstalować zależności od używanego środowiska F #.'
 ms.date: 08/28/2018
-ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d53ecdcba5411db62208cb683a0fad795711b77c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120937"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193906"
 ---
 # <a name="install-f"></a>Zainstaluj język F # #
 
@@ -33,7 +33,7 @@ Konieczne jest posiadanie [zainstalowane narzędzie git](https://git-scm.com/dow
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-[Narzędzie mono](http://www.mono-project.com) służy do [F # Interactive](../tutorials/fsharp-interactive/index.md) pomocy technicznej. Najprostszym sposobem zainstalowania platformy Mono w systemie macOS jest za pośrednictwem Homebrew. Po prostu wpisz następujące polecenie w terminalu:
+[Narzędzie mono](https://www.mono-project.com) służy do [F # Interactive](../tutorials/fsharp-interactive/index.md) pomocy technicznej. Najprostszym sposobem zainstalowania platformy Mono w systemie macOS jest za pośrednictwem Homebrew. Po prostu wpisz następujące polecenie w terminalu:
 
 ```console
 brew install mono

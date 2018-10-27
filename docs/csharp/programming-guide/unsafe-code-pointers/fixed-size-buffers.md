@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 0691c33b551e39b2384950cfcd0be6e8a3a29cee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 134a219acd02caa2b16c5a6e8716c3245579ecca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506904"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049558"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Bufory o ustalonym rozmiarze (Przewodnik programowania w języku C#)
 
@@ -34,7 +34,7 @@ Element `struct` może zawierać osadzoną tablicę w niebezpieczny kod. W poni�
 
 Rozmiar elementu 128 `char` tablicy to 256 bajtów. Ustalony rozmiar [char](../../language-reference/keywords/char.md) buforów zawsze pobierają dwóch bajtów na znak, niezależnie od tego, kodowania. Ta zasada obowiązuje nawet po buforów char są wysyłane do metody interfejsu API lub struktury z `CharSet = CharSet.Auto` lub `CharSet = CharSet.Ansi`. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.InteropServices.CharSet>.
 
-W poprzednim przykładzie pokazano, uzyskiwanie dostępu do `fixed` bez przypinania, pola, których jest dostępna, począwszy od języka C# 7.3...
+W poprzednim przykładzie pokazano, uzyskiwanie dostępu do `fixed` bez przypinania, pola, których jest dostępna, począwszy od C# 7.3.
 
 Innej wspólnej tablicy o stałym rozmiarze jest [bool](../../language-reference/keywords/bool.md) tablicy. Elementy w `bool` tablicy są zawsze jednobajtowego w rozmiarze. `bool` tablice nie są odpowiednie do tworzenia tablic bitowe lub buforów.
 

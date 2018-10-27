@@ -10,52 +10,52 @@ helpviewer_keywords:
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b0ef0072e6e9a1e9f4a28d6e19894f301fe3fc0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 75c782cbe7a45c05212c99448df6e8536a17f38d
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864803"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49635230"
 ---
-# <a name="cert2spcexe-software-publisher-certificate-test-tool"></a><span data-ttu-id="9fe50-102">Cert2spc.exe (Narzędzie testowe certyfikatów wydawców oprogramowania)</span><span class="sxs-lookup"><span data-stu-id="9fe50-102">Cert2spc.exe (Software Publisher Certificate Test Tool)</span></span>
-<span data-ttu-id="9fe50-103">Narzędzie testowe certyfikatów wydawców oprogramowania tworzy certyfikat wydawcy oprogramowania (SPC) z co najmniej jednego certyfikatu X.509.</span><span class="sxs-lookup"><span data-stu-id="9fe50-103">The Software Publisher Certificate Test tool creates a Software Publisher's Certificate (SPC) from one or more X.509 certificates.</span></span> <span data-ttu-id="9fe50-104">Cert2spc.exe służy tylko do celów testowych.</span><span class="sxs-lookup"><span data-stu-id="9fe50-104">Cert2spc.exe is for test purposes only.</span></span> <span data-ttu-id="9fe50-105">Prawidłowy SPC można uzyskać od urzędu certyfikacji, np. VeriSign lub Thawte.</span><span class="sxs-lookup"><span data-stu-id="9fe50-105">You can obtain a valid SPC from a Certification Authority such as VeriSign or Thawte.</span></span> <span data-ttu-id="9fe50-106">Aby uzyskać więcej informacji na temat tworzenia certyfikatów X.509, zobacz [Makecert.exe (narzędzie tworzenia certyfikatów)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d).</span><span class="sxs-lookup"><span data-stu-id="9fe50-106">For more information about creating X.509 certificates, see [Makecert.exe (Certificate Creation Tool)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d).</span></span>  
+# <a name="cert2spcexe-software-publisher-certificate-test-tool"></a><span data-ttu-id="fc25a-102">Cert2spc.exe (Narzędzie testowe certyfikatów wydawców oprogramowania)</span><span class="sxs-lookup"><span data-stu-id="fc25a-102">Cert2spc.exe (Software Publisher Certificate Test Tool)</span></span>
+<span data-ttu-id="fc25a-103">Narzędzie testowe certyfikatów wydawców oprogramowania tworzy certyfikat wydawcy oprogramowania (SPC) z co najmniej jednego certyfikatu X.509.</span><span class="sxs-lookup"><span data-stu-id="fc25a-103">The Software Publisher Certificate Test tool creates a Software Publisher's Certificate (SPC) from one or more X.509 certificates.</span></span> <span data-ttu-id="fc25a-104">Cert2spc.exe służy tylko do celów testowych.</span><span class="sxs-lookup"><span data-stu-id="fc25a-104">Cert2spc.exe is for test purposes only.</span></span> <span data-ttu-id="fc25a-105">Prawidłowy SPC można uzyskać od urzędu certyfikacji, np. VeriSign lub Thawte.</span><span class="sxs-lookup"><span data-stu-id="fc25a-105">You can obtain a valid SPC from a Certification Authority such as VeriSign or Thawte.</span></span> <span data-ttu-id="fc25a-106">Aby uzyskać więcej informacji na temat tworzenia certyfikatów X.509, zobacz [Makecert.exe (narzędzie tworzenia certyfikatów)](/windows/desktop/SecCrypto/makecert).</span><span class="sxs-lookup"><span data-stu-id="fc25a-106">For more information about creating X.509 certificates, see [Makecert.exe (Certificate Creation Tool)](/windows/desktop/SecCrypto/makecert).</span></span>  
   
- <span data-ttu-id="9fe50-107">To narzędzie jest instalowane automatycznie z programem Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9fe50-107">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="9fe50-108">Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7).</span><span class="sxs-lookup"><span data-stu-id="9fe50-108">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="9fe50-109">Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="9fe50-109">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
+ <span data-ttu-id="fc25a-107">To narzędzie jest instalowane automatycznie z programem Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fc25a-107">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="fc25a-108">Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7).</span><span class="sxs-lookup"><span data-stu-id="fc25a-108">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="fc25a-109">Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="fc25a-109">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- <span data-ttu-id="9fe50-110">W wierszu polecenia wpisz następujące polecenie:</span><span class="sxs-lookup"><span data-stu-id="9fe50-110">At the command prompt, type the following:</span></span>  
+ <span data-ttu-id="fc25a-110">W wierszu polecenia wpisz następujące polecenie:</span><span class="sxs-lookup"><span data-stu-id="fc25a-110">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9fe50-111">Składnia</span><span class="sxs-lookup"><span data-stu-id="9fe50-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc25a-111">Składnia</span><span class="sxs-lookup"><span data-stu-id="fc25a-111">Syntax</span></span>  
   
 ```  
 cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9fe50-112">Parametry</span><span class="sxs-lookup"><span data-stu-id="9fe50-112">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="fc25a-112">Parametry</span><span class="sxs-lookup"><span data-stu-id="fc25a-112">Parameters</span></span>  
   
-|<span data-ttu-id="9fe50-113">Argument</span><span class="sxs-lookup"><span data-stu-id="9fe50-113">Argument</span></span>|<span data-ttu-id="9fe50-114">Opis</span><span class="sxs-lookup"><span data-stu-id="9fe50-114">Description</span></span>|  
+|<span data-ttu-id="fc25a-113">Argument</span><span class="sxs-lookup"><span data-stu-id="fc25a-113">Argument</span></span>|<span data-ttu-id="fc25a-114">Opis</span><span class="sxs-lookup"><span data-stu-id="fc25a-114">Description</span></span>|  
 |--------------|-----------------|  
-|`certN.cer`|<span data-ttu-id="9fe50-115">Nazwa certyfikatu X.509 do zawarcia w pliku SPC.</span><span class="sxs-lookup"><span data-stu-id="9fe50-115">The name of an X.509 certificate to include in the SPC file.</span></span> <span data-ttu-id="9fe50-116">Można określić wiele nazw i oddzielić je spacjami.</span><span class="sxs-lookup"><span data-stu-id="9fe50-116">You can specify multiple names separated by spaces.</span></span>|  
-|`crlN.crl`|<span data-ttu-id="9fe50-117">Nazwa listy odwołania certyfikatów X.509 do zawarcia w pliku SPC.</span><span class="sxs-lookup"><span data-stu-id="9fe50-117">The name of a certificate revocation list to include in the SPC file.</span></span> <span data-ttu-id="9fe50-118">Można określić wiele nazw i oddzielić je spacjami.</span><span class="sxs-lookup"><span data-stu-id="9fe50-118">You can specify multiple names separated by spaces.</span></span>|  
-|`outputSPCfile.spc`|<span data-ttu-id="9fe50-119">Nazwa obiektu PKCS #7, który zawiera certyfikaty X.509.</span><span class="sxs-lookup"><span data-stu-id="9fe50-119">The name of the PKCS #7 object that will contain the X.509 certificates.</span></span>|  
+|`certN.cer`|<span data-ttu-id="fc25a-115">Nazwa certyfikatu X.509 do zawarcia w pliku SPC.</span><span class="sxs-lookup"><span data-stu-id="fc25a-115">The name of an X.509 certificate to include in the SPC file.</span></span> <span data-ttu-id="fc25a-116">Można określić wiele nazw i oddzielić je spacjami.</span><span class="sxs-lookup"><span data-stu-id="fc25a-116">You can specify multiple names separated by spaces.</span></span>|  
+|`crlN.crl`|<span data-ttu-id="fc25a-117">Nazwa listy odwołania certyfikatów X.509 do zawarcia w pliku SPC.</span><span class="sxs-lookup"><span data-stu-id="fc25a-117">The name of a certificate revocation list to include in the SPC file.</span></span> <span data-ttu-id="fc25a-118">Można określić wiele nazw i oddzielić je spacjami.</span><span class="sxs-lookup"><span data-stu-id="fc25a-118">You can specify multiple names separated by spaces.</span></span>|  
+|`outputSPCfile.spc`|<span data-ttu-id="fc25a-119">Nazwa obiektu PKCS #7, który zawiera certyfikaty X.509.</span><span class="sxs-lookup"><span data-stu-id="fc25a-119">The name of the PKCS #7 object that will contain the X.509 certificates.</span></span>|  
   
-|<span data-ttu-id="9fe50-120">Opcja</span><span class="sxs-lookup"><span data-stu-id="9fe50-120">Option</span></span>|<span data-ttu-id="9fe50-121">Opis</span><span class="sxs-lookup"><span data-stu-id="9fe50-121">Description</span></span>|  
+|<span data-ttu-id="fc25a-120">Opcja</span><span class="sxs-lookup"><span data-stu-id="fc25a-120">Option</span></span>|<span data-ttu-id="fc25a-121">Opis</span><span class="sxs-lookup"><span data-stu-id="fc25a-121">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="9fe50-122">**/?**</span><span class="sxs-lookup"><span data-stu-id="9fe50-122">**/?**</span></span>|<span data-ttu-id="9fe50-123">Wyświetla składnię polecenia i opcje narzędzia.</span><span class="sxs-lookup"><span data-stu-id="9fe50-123">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="fc25a-122">**/?**</span><span class="sxs-lookup"><span data-stu-id="fc25a-122">**/?**</span></span>|<span data-ttu-id="fc25a-123">Wyświetla składnię polecenia i opcje narzędzia.</span><span class="sxs-lookup"><span data-stu-id="fc25a-123">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="examples"></a><span data-ttu-id="9fe50-124">Przykłady</span><span class="sxs-lookup"><span data-stu-id="9fe50-124">Examples</span></span>  
- <span data-ttu-id="9fe50-125">Następujące polecenie tworzy SPC z `myCertificate.cer` i umieszcza je w `mySPCFile.spc`.</span><span class="sxs-lookup"><span data-stu-id="9fe50-125">The following command creates an SPC from `myCertificate.cer` and places it in `mySPCFile.spc`.</span></span>  
+## <a name="examples"></a><span data-ttu-id="fc25a-124">Przykłady</span><span class="sxs-lookup"><span data-stu-id="fc25a-124">Examples</span></span>  
+ <span data-ttu-id="fc25a-125">Następujące polecenie tworzy SPC z `myCertificate.cer` i umieszcza je w `mySPCFile.spc`.</span><span class="sxs-lookup"><span data-stu-id="fc25a-125">The following command creates an SPC from `myCertificate.cer` and places it in `mySPCFile.spc`.</span></span>  
   
 ```  
 cert2spc myCertificate.cer mySPCFile.spc  
 ```  
   
- <span data-ttu-id="9fe50-126">Następujące polecenie tworzy SPC z `oneCertificate.cer` i `twoCertificate.cer`i umieszcza je w `mySPCFile.spc`.</span><span class="sxs-lookup"><span data-stu-id="9fe50-126">The following command creates an SPC from `oneCertificate.cer` and `twoCertificate.cer`, and places it in `mySPCFile.spc`.</span></span>  
+ <span data-ttu-id="fc25a-126">Następujące polecenie tworzy SPC z `oneCertificate.cer` i `twoCertificate.cer`i umieszcza je w `mySPCFile.spc`.</span><span class="sxs-lookup"><span data-stu-id="fc25a-126">The following command creates an SPC from `oneCertificate.cer` and `twoCertificate.cer`, and places it in `mySPCFile.spc`.</span></span>  
   
 ```  
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9fe50-127">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="9fe50-127">See Also</span></span>  
- [<span data-ttu-id="9fe50-128">Narzędzia</span><span class="sxs-lookup"><span data-stu-id="9fe50-128">Tools</span></span>](../../../docs/framework/tools/index.md)  
- [<span data-ttu-id="9fe50-129">MakeCert.exe (narzędzie tworzenia certyfikatów)</span><span class="sxs-lookup"><span data-stu-id="9fe50-129">Makecert.exe (Certificate Creation Tool)</span></span>](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
- [<span data-ttu-id="9fe50-130">Wiersze polecenia</span><span class="sxs-lookup"><span data-stu-id="9fe50-130">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a><span data-ttu-id="fc25a-127">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="fc25a-127">See Also</span></span>  
+ [<span data-ttu-id="fc25a-128">Narzędzia</span><span class="sxs-lookup"><span data-stu-id="fc25a-128">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="fc25a-129">MakeCert.exe (narzędzie tworzenia certyfikatów)</span><span class="sxs-lookup"><span data-stu-id="fc25a-129">Makecert.exe (Certificate Creation Tool)</span></span>](/windows/desktop/SecCrypto/makecert)  
+ [<span data-ttu-id="fc25a-130">Wiersze polecenia</span><span class="sxs-lookup"><span data-stu-id="fc25a-130">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

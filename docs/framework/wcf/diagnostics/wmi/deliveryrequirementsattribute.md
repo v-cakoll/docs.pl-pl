@@ -2,19 +2,19 @@
 title: DeliveryRequirementsAttribute
 ms.date: 03/30/2017
 ms.assetid: 40c5435c-a325-4cf8-9dd0-d6e24b4a56a3
-ms.openlocfilehash: d294ba4f14472012b9e311ee53742633b5173f54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bfc03299fffc8070a7d8a4b3885706ea861bdf6
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485825"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50042899"
 ---
 # <a name="deliveryrequirementsattribute"></a>DeliveryRequirementsAttribute
 DeliveryRequirementsAttribute  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class DeliveryRequirementsAttribute : Behavior  
 {  
   string QueuedDeliveryRequirements;  
@@ -24,37 +24,37 @@ class DeliveryRequirementsAttribute : Behavior
 ```  
   
 ## <a name="methods"></a>Metody  
- Element DeliveryRequirementsAttribute klasa nie definiuje żadnych metod.  
+ Klasa Element DeliveryRequirementsAttribute nie definiuje żadnych metod.  
   
 ## <a name="properties"></a>Właściwości  
- Element DeliveryRequirementsAttribute klasa ma następujące właściwości:  
+ Klasa Element DeliveryRequirementsAttribute ma następujące właściwości:  
   
-### <a name="queueddeliveryrequirements"></a>Pola QueuedDeliveryRequirements  
+### <a name="queueddeliveryrequirements"></a>QueuedDeliveryRequirements  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Określa, czy wiązanie dla usługi obsługuje kontrakty.  
+ Określa, czy wiązanie dla usługi obsługuje umów.  
   
 ### <a name="requireordereddelivery"></a>RequireOrderedDelivery  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Określa, czy wiązanie obsługuje uporządkowane komunikaty.  
+ Określa, czy powiązanie obsługuje uporządkowane komunikaty.  
   
 ### <a name="targetcontract"></a>TargetContract  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Kontrakt, którego dotyczy.  
+ Kontrakt, której dotyczy.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.DeliveryRequirementsAttribute>

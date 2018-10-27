@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925847"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038308"
 ---
 # <a name="methods"></a>Metody #
 
@@ -114,7 +114,7 @@ W poniższym przykładzie zdefiniowano klasę (który jest typem referencyjnym) 
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>Przekazywanie parametrów przez odwołanie ###
 
-Należy podać parametr według odwołania, jeśli chcesz zmienić wartość argumentu w metodzie i chcesz refect tej zmiany, gdy sterowanie powraca do wywoływania metody. Aby przekazać parametr według odwołania, należy użyć [ `ref` ](language-reference/keywords/ref.md) lub [ `out` ](language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Można również przekazać wartość przez odwołanie, aby unikać kopiowania, ale nadal zapobiec przy użyciu [ `in` ](language-reference/keywords/in-parameter-modifier.md) — słowo kluczowe.
+Należy podać parametr według odwołania, jeśli chcesz zmienić wartość argumentu w metodzie i ma na celu odzwierciedlenia tej zmiany, gdy sterowanie powraca do wywoływania metody. Aby przekazać parametr według odwołania, należy użyć [ `ref` ](language-reference/keywords/ref.md) lub [ `out` ](language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Można również przekazać wartość przez odwołanie, aby unikać kopiowania, ale nadal zapobiec przy użyciu [ `in` ](language-reference/keywords/in-parameter-modifier.md) — słowo kluczowe.
 
 Poniższy przykład jest taka sama jak poprzedni, z wyjątkiem wartość jest przekazywana przez odwołanie do `ModifyValue` metody. Po zmodyfikowaniu wartości parametru w `ModifyValue` znajduje odzwierciedlenie metody zmianę wartości, gdy sterowanie powraca do obiektu wywołującego.
 
@@ -129,7 +129,7 @@ Przekazywanie parametrów typu Odwołanie umożliwia zmianę wartości samo odwo
 <a name="paramarray"></a>
 ### <a name="parameter-arrays"></a>Parameter — tablice ###
 
-Czasami wymagania Określ dokładna liczba argumentów do metody jest restrykcyjne. Za pomocą `params` — słowo kluczowe, aby wskazać, że parametr jest tablicą parametrów, musisz zezwolić na metodę do wywołania z różną liczbą argumentów. Parametr oznakowane za pomocą `params` — słowo kluczowe musi być typem tablicy i musi być ostatnim parametrem na liście parametrów metody.
+Czasami wymagania Określ dokładna liczba argumentów do metody jest restrykcyjne. Za pomocą `params` — słowo kluczowe, aby wskazać, że parametr jest tablicą parametrów, musisz zezwolić na metodę do wywołania z różną liczbą argumentów. Parametr oznakowane za pomocą `params` — słowo kluczowe musi być typem tablicy, a musi być ostatnim parametrem na liście parametrów metody.
 
 Obiekt wywołujący może następnie wywołania metody w jednym z trzech sposobów:
 

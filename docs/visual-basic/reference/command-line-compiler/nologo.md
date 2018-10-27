@@ -7,17 +7,15 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 011c9499eaa728588e6181e33a96dd75b4a7b84b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21c708ef632cc0ed923713cd49e22d44848b4db3
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648544"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50037285"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-Pomija wyświetlanie banera praw autorskich i komunikaty informacyjne podczas kompilacji.  
+Pomija wyświetlanie transparentu praw autorskich i komunikaty informacyjne, podczas kompilacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,18 +24,18 @@ Pomija wyświetlanie banera praw autorskich i komunikaty informacyjne podczas ko
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli określisz `-nologo`, kompilator nie wyświetla transparentu o prawach autorskich. Domyślnie `-nologo` nie jest włączone.  
+ Jeśli określisz `-nologo`, kompilator nie wyświetla transparentu praw autorskich. Domyślnie `-nologo` nie jest włączone.  
   
 > [!NOTE]
 >  `-nologo` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `T2.vb` i nie wyświetla transparentu o prawach autorskich.  
+ Poniższy kod kompiluje `T2.vb` i nie wyświetla transparentu praw autorskich.  
   
 ```console
 vbc -nologo t2.vb  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
  [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -2,12 +2,12 @@
 title: Znane typy
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 76e0dadd372df4bc2755db0c3ff7cce5cc31ba20
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192499"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454411"
 ---
 # <a name="known-types"></a>Znane typy
 W tym przykładzie pokazano, jak Podaj informacje o typach pochodnych w kontraktu danych. Kontrakty danych umożliwia przekazanie ze strukturą danych do i z usługi. W programowanie zorientowane obiektowo, typu, który dziedziczy z innego typu, może służyć zamiast oryginalnego typu. Podczas programowania zorientowanego na usługi, schematów, a nie typy są przekazywane, a w związku z tym, nie są zachowywane relacji między typami. <xref:System.Runtime.Serialization.KnownTypeAttribute> Atrybut umożliwia informacji na temat typów pochodnych, które mają zostać uwzględnione w kontraktu danych. Mechanizm ten nie jest używany, typem pochodnym nie wysyłane lub odbierane, gdy oczekiwany jest typ podstawowy.  
@@ -17,7 +17,7 @@ W tym przykładzie pokazano, jak Podaj informacje o typach pochodnych w kontrakt
   
  Umowa serwisowa usługi używa liczby zespolone, jak pokazano w poniższym przykładowym kodzie.  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> jest stosowany do `ComplexNumber` klasy, aby wskazać, które pola klasy mogą być przekazywane między klientem a usługą. Pochodnej `ComplexNumberWithMagnitude` klasa może być używana zamiast `ComplexNumber`. <xref:System.Runtime.Serialization.KnownTypeAttribute> Atrybutu na `ComplexNumber` typ wskazuje na to.  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 [KnownType(typeof(ComplexNumberWithMagnitude))]  
 public class ComplexNumber  
@@ -55,7 +55,7 @@ public class ComplexNumber
   
  `ComplexNumberWithMagnitude` Typ pochodzi z `ComplexNumber` , ale dodaje element członkowski danych dodatkowych `Magnitude`.  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class ComplexNumberWithMagnitude : ComplexNumber  
 {  
@@ -73,7 +73,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
   
  Aby zademonstrować tę funkcję znane typy, usługa jest wdrażana w taki sposób, który zwraca `ComplexNumberWithMagnitude` tylko w przypadku dodawania i odejmowania. (Mimo że kontrakt Określa `ComplexNumber`, jest to dozwolone z powodu `KnownTypeAttribute` atrybutu). Mnożenia i dzielenia, nadal zwracają base `ComplexNumber` typu.  
   
-```  
+```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -116,14 +116,14 @@ public class DataContractCalculatorService : IDataContractCalculator
   
  Na komputerze klienckim, kontrakt usługi i kontraktu danych są zdefiniowane w generatedClient.cs pliku źródłowego, który jest generowany przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z metadanych usługi. Ponieważ <xref:System.Runtime.Serialization.KnownTypeAttribute> atrybut jest określony w umowie danych usługi, klient jest możliwość odbierania zarówno `ComplexNumber` i `ComplexNumberWithMagnitude` klasy podczas korzystania z usługi. Klient wykrywa, czy masz `ComplexNumberWithMagnitude` i wygenerować odpowiednie dane wyjściowe:  
   
-```  
+```csharp
 // Create a client  
 DataContractCalculatorClient client =   
     new DataContractCalculatorClient();  
   
 // Call the Add service operation.  
-ComplexNumber value1 = new ComplexNumber(); value1.real = 1; value1.imaginary = 2;  
-ComplexNumber value2 = new ComplexNumber(); value2.real = 3; value2.imaginary = 4;  
+ComplexNumber value1 = new ComplexNumber() { real = 1, imaginary = 2 };  
+ComplexNumber value2 = new ComplexNumber() { real = 3, imaginary = 4 };  
 ComplexNumber result = client.Add(value1, value2);  
 Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",  
     value1.real, value1.imaginary, value2.real, value2.imaginary,  
@@ -141,7 +141,7 @@ else
   
  Po uruchomieniu przykładu, żądań i odpowiedzi operacji są wyświetlane w oknie konsoli klienta. Należy pamiętać, że powstanie zostanie wydrukowany do dodawania i odejmowania, ale nie dla mnożenia i dzielenia, ze względu na sposób usługa została zaimplementowana. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Magnitude: 7.21110255092798  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  

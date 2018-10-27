@@ -9,14 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d05e0f374f4454c95dd02be8bd2eff573040f97e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025230"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50042301"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretowanie śledzenia sieci
 Po włączeniu funkcji śledzenia sieci umożliwia śledzenie przechwytywania wywołania aplikacji sprawia, że do różnych <xref:System.Net> składowych klasy. Dane wyjściowe z tych wywołań może być podobne do poniższych przykładach.  

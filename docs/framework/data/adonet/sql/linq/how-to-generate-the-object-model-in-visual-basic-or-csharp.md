@@ -1,35 +1,35 @@
 ---
-title: 'Porady: Generowanie modelu obiektów w Visual Basic lub C#'
+title: 'Porady: Generowanie modelu obiektu w języku Visual Basic lub C#'
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: ce7f1f30a606c0d0c81a1afbfc2552ece4fc1029
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21266ca2d1230a1afc903734d1b4c53b259e50e1
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036791"
 ---
-# <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Porady: Generowanie modelu obiektów w Visual Basic lub C# #
-W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], model obiektowy w języku programowania jest mapowany na relacyjnej bazy danych. Dwa narzędzia są dostępne do automatycznego generowania modelu kodu języka Visual Basic lub C# z istniejącej bazy danych metadanych.  
+# <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Porady: Generowanie modelu obiektu w języku Visual Basic lub C# #
+W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], model obiektów w języku programowania jest mapowany w relacyjnej bazie danych. Dwa narzędzia są dostępne dla automatycznego generowania języka Visual Basic lub C# modelu z metadanych istniejącej bazy danych.  
   
--   Jeśli używasz programu Visual Studio, możesz użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do wygenerowania modelu typu obiektu. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Oferuje interfejs użytkownika zaawansowanych, aby wygenerować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obiektu modelu. Aby uzyskać więcej informacji, zobacz [składnika Linq to SQL narzędzia w programie Visual Studio](https://docs.microsoft.com/en-us/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).
+-   Jeśli używasz programu Visual Studio, możesz użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do generowania modelu obiektu. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Udostępnia interfejs użytkownika zaawansowanych, które ułatwiają pozyskanie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów. Aby uzyskać więcej informacji, zobacz [Linq to SQL Tools w programie Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).
   
--   SQLMetal narzędzie wiersza polecenia. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+-   Narzędzie wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
     > [!NOTE]
-    >  Jeśli nie masz istniejącej bazy danych, aby utworzyć model obiektowy, można utworzyć modelu obiektu przy użyciu kodu edytora i <xref:System.Data.Linq.DataContext.CreateDatabase%2A>. Aby uzyskać więcej informacji, zobacz [porady: dynamiczne tworzenie bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
+    >  Jeśli nie masz istniejącej bazy danych, aby utworzyć ją z modelu obiektów, można utworzyć modelu obiektu przy użyciu kodu edytora i <xref:System.Data.Linq.DataContext.CreateDatabase%2A>. Aby uzyskać więcej informacji, zobacz [porady: dynamiczne tworzenie bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
- Dokumentacja [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] przykłady sposobu generowania modelu obiektu języka Visual Basic lub C# przy użyciu [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Poniższe informacje zawierają przykłady sposobów użycia narzędzia wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ Dokumentacja [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] zawiera przykłady sposobu generowania języka Visual Basic lub C# modelu obiektów przy użyciu [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Poniższe informacje zawierają przykłady dotyczące używania narzędzia wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="example"></a>Przykład  
- Wiersz polecenia SQLMetal pokazano w poniższym przykładzie tworzy kod Visual Basic jako model obiektu na podstawie atrybutów przykładowej bazy danych Northwind. Procedury składowane i funkcje także są renderowane.  
+ Pokazano w poniższym przykładzie wiersza polecenia SQLMetal tworzy kod języka Visual Basic jako model opartych na atrybutach obiektu w bazie danych Northwind. Procedur przechowywanych i funkcji również są renderowane.  
   
 ```  
 sqlmetal /code:northwind.vb /language:vb "c:\northwnd.mdf" /sprocs /functions  
 ```  
   
 ## <a name="example"></a>Przykład  
- Wiersz polecenia SQLMetal pokazano w poniższym przykładzie generuje kod w języku C# jako model obiektu na podstawie atrybutów przykładowej bazy danych Northwind. Procedury składowane i funkcje są również wyświetlane, a nazwy tabeli są automatycznie pluralized.  
+ Pokazano w poniższym przykładzie wiersza polecenia SQLMetal generuje C# kod jako model opartych na atrybutach obiektu w bazie danych Northwind. Procedur przechowywanych i funkcji również są renderowane, a nazwy tabel są automatycznie pluralized.  
   
 ```  
 sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /functions /pluralize  

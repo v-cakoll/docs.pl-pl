@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 8ac0d70458d7c3762ae9dc5fc90058f0caafc4ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ea63bedd207a9904a5f6aa656ed19469394290fa
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184931"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50041651"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() — zwracane wartości (C# Programming Guide)
 
@@ -25,7 +25,7 @@ Jeśli wartość zwracana z `Main` nie jest używany, zwracając `void` umożliw
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie użyto [platformy .NET Core](../../../core/index.md) narzędzi wiersza polecenia. Jeśli jesteś unfamilar za pomocą narzędzia wiersza polecenia platformy .NET Core, informacje na temat ich w tym [temacie wprowadzenie Get](../../../core/tutorials/using-with-xplat-cli.md).
+W tym przykładzie użyto [platformy .NET Core](../../../core/index.md) narzędzi wiersza polecenia. Jeśli jesteś zaznajomiony z narzędzi wiersza polecenia platformy .NET Core, informacje na temat ich w tym [temacie wprowadzenie Get](../../../core/tutorials/using-with-xplat-cli.md).
 
 Modyfikowanie `Main` method in Class metoda *program.cs* w następujący sposób:
 

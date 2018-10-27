@@ -14,20 +14,20 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: d2e131b770d8498a634d946a5900f9b373ca7e56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 393127353a020c1db5df3011b2a97b1c53097f27
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651521"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50035647"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Porady: chronienie argumentu procedury przed zmianami wartości (Visual Basic)
-Jeśli procedura deklaruje jako parametru [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic daje kodu procedury bezpośrednie odwołanie do elementu programistycznego bazowy argumentu w wywoływanym kodzie. Pozwala to na procedurę, aby zmienić wartość bazowy argumentu w wywoływanym kodzie. W niektórych przypadkach kod wywołujący może być przydatna ochrona przed tej zmiany.  
+Jeśli procedura deklaruje jako parametru [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic, zawiera kod procedury bezpośrednie odwołanie do elementu programistycznego, bazowy argumentu w wywoływanym kodzie. Pozwala to na procedurę, aby zmienić wartość bazowego argumentu w wywoływanym kodzie. W niektórych przypadkach kod wywołujący może mają być chronione przed takich zmian.  
   
- Zawsze chronić argumentu z zmiany przez zadeklarowanie odpowiadającego mu parametru [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) w procedurze. Jeśli chcesz mieć możliwość zmiany podany argument w niektórych przypadkach, ale nie można zadeklarować go `ByRef` i pozwolić, aby określić mechanizm przekazywania w każdym wywołaniu kodu wywołującego. Jest to możliwe dzięki otaczającej odpowiadającego mu argumentu w nawiasach przekazywany przez wartość lub nie należy ująć w nawias przekazywany przez odwołanie. Aby uzyskać więcej informacji, zobacz [porady: Wymuszanie przekazywania argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ Argument może zawsze chronić zmiana, deklarując z odpowiadającym mu parametrem [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) w procedurze. Jeśli chcesz można było zmienić w niektórych przypadkach, ale nie inne podany argument, trzeba je zadeklarować `ByRef` i pozwolić określić mechanizm przekazywania w każdym wywołaniu kodu wywołującego. Dzieje się tak, otaczający odnośnego argumentu w nawiasach przekazywany przez wartość lub nie otaczający w nawiasach przekazywany przez odwołanie. Aby uzyskać więcej informacji, zobacz [porady: Wymuszanie argumentu przekazywane przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono dwie procedury, które podejmują zmienną tablicową i które działają na swoich elementów. `increase` Procedury po prostu dodaje je do każdego elementu. `replace` Procedury przypisuje nową macierz do parametru `a()` , a następnie dodaje je do każdego elementu. Jednak ponowne przypisanie nie ma wpływu na podstawowe zmiennej tablicy w wywoływanym kodzie.  
+ Poniższy przykład przedstawia dwie procedury używające zmiennej tablicy i działać na jego elementach. `increase` Procedura dodaje po prostu jednym do każdego elementu. `replace` Procedury przypisuje nową tablicę z parametrem `a()` , a następnie dodaje je do każdego elementu. Jednak ponowne przypisanie nie ma wpływu na podstawowe zmienną tablicy w wywoływanym kodzie.  
   
  [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_1.vb)]  
   
@@ -35,12 +35,12 @@ Jeśli procedura deklaruje jako parametru [ByRef](../../../../visual-basic/langu
   
  [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
   
- Pierwszy `MsgBox` wywołać Wyświetla "po increase(n): 11, 21, 31, 41". Ponieważ tablicy `n` jest typem referencyjnym `replace` można zmienić jej członków, nawet jeśli jest mechanizm przekazywania `ByVal`.  
+ Pierwszy `MsgBox` wywołać Wyświetla "po increase(n): 11, 21, 31, 41". Ponieważ tablicy `n` jest typem referencyjnym `increase` można zmienić jej członków, nawet jeśli jest mechanizm przekazywania `ByVal`.  
   
- Drugi `MsgBox` wywołać Wyświetla "po replace(n): 11, 21, 31, 41". Ponieważ `n` jest przekazywany `ByVal`, `replace` nie można zmodyfikować zmienną `n` w wywoływanym kodzie przez przypisanie nowej tablicy. Gdy `replace` tworzy nowe wystąpienie tablicy `k` i przypisuje go do zmiennej lokalnej `a`, tym samym odwołanie do `n` przekazany przez wywołującego kodu. Podczas zmiany jego elementów członkowskich `a`, lokalnej tablicy `k` dotyczy. W związku z tym `replace` nie zwiększa się wartości w tablicy `n` w wywoływanym kodzie.  
+ Drugi `MsgBox` wywołać Wyświetla "po replace(n): 11, 21, 31, 41". Ponieważ `n` jest przekazywany `ByVal`, `replace` nie można zmodyfikować zmienną `n` w wywoływanym kodzie, przez przypisanie nowej tablicy. Gdy `replace` tworzy nowe wystąpienie tablicy `k` i przypisuje go do zmiennej lokalnej `a`, utracie odwołanie do `n` przekazany kod wywołujący. Kiedy zmienia członkowie `a`, tylko lokalnej tablicy `k` dotyczy. W związku z tym `replace` nie zwiększa się wartości tablicy `n` w wywoływanym kodzie.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Domyślnie w języku Visual Basic nie jest przekazywanie argumentów według wartości. Jednak jest dobre rozwiązanie to dołączenie albo programowania [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe z każdym zadeklarowany parametr. Ułatwia to kodu do odczytu.  
+ Domyślnie w języku Visual Basic nie jest przekazywanie argumentów według wartości. Jednak dobrą praktyką, aby uwzględnić albo programowania jest [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe z każdym zadeklarowany parametr. Dzięki temu można łatwiej odczytać kodu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  

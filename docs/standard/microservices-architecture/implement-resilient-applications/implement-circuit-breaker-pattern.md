@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Im
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 343b9cc23f9d72d75a83ad785a3d565b8f5704e7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842693"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453155"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementowanie wzorca wyłącznika
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-W powyższym przykładzie kodu skonfigurowano zasad wyłącznika, dlatego przerywa ani otwiera obwodu, gdy było pięć kolejnych błędów podczas ponownego wykonywania żądania Http. Jeśli tak się stanie, obwodu spowoduje przerwanie przez 30 sekund: w tym okresie wywołania nie powiedzie się natychmiast przez wyłącznik — zamiast faktycznie umieszczone.  Zasady automatycznie interpretuje [istotne wyjątki i kodów stanu HTTP](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) jako błędy.  
+W powyższym przykładzie kodu skonfigurowano zasad wyłącznika, dlatego przerywa ani otwiera obwodu, gdy było pięć kolejnych błędów podczas ponownego wykonywania żądania Http. Jeśli tak się stanie, obwodu spowoduje przerwanie przez 30 sekund: w tym okresie wywołania nie powiedzie się natychmiast przez wyłącznik — zamiast faktycznie umieszczone.  Zasady automatycznie interpretuje [istotne wyjątki i kodów stanu HTTP](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) jako błędy.  
 
 Wyłączniki powinien również przekierować żądania do rezerwowego infrastruktury, jeśli masz problemy dotyczące określonego zasobu, który jest wdrożony w innym środowisku niż aplikacja kliencka lub usługa, która wykonuje wywołania HTTP. W ten sposób w przypadku wystąpienia awarii w centrum danych, która ma wpływ na tylko mikrousługi wewnętrznej bazy danych, ale nie w aplikacji klienta, aplikacje klienckie mogą przekierowywać do rezerwowego usługi. Polly jest planowanie nowe zasady w celu zautomatyzowania tego [zasad trybu failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) scenariusza. 
 

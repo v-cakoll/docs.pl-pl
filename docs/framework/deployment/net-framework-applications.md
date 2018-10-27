@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c999b6c391294a05eb7fae1d1f076f1d52b8c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9536b53531d3ee7575a51b8702b34b57338b4f8b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391654"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50040910"
 ---
 # <a name="deploying-net-framework-applications"></a>Wdrażanie aplikacji .NET Framework
-Ta sekcja dokumentacji programu .NET Framework zapewnia podstawowe informacje dotyczące wdrażania aplikacji .NET Framework, w tym wytyczne dotyczące ładowania zestawów, rozpoznawania odwołań do zestawów i poprawa wydajności aplikacji za pomocą generowanie obrazu macierzystego.  
+Ta sekcja dokumentacji .NET Framework zawiera podstawowe informacje dotyczące wdrażania aplikacji .NET Framework, w tym wytyczne dotyczące ładowania zestawów, rozpoznawania odwołań do zestawów i zwiększanie wydajności aplikacji za pomocą generowanie obrazu natywnego.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- W tym artykule opisano, jak środowisko uruchomieniowe języka wspólnego lokalizuje i wiąże zestawy, które składają się na aplikację.  
+ W tym artykule opisano, jak środowisko uruchomieniowe języka wspólnego lokalizuje i wiąże zestawów, które składają się na aplikację.  
   
  [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, który może prowadzić do <xref:System.InvalidCastException>, <xref:System.MissingMethodException>oraz innych błędów.  
+ W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, który może prowadzić do <xref:System.InvalidCastException>, <xref:System.MissingMethodException>i inne błędy.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podręcznik programowania](../../../docs/framework/development-guide.md)
+- [Podręcznik programowania](../../../docs/framework/development-guide.md)

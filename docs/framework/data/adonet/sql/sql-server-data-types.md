@@ -2,17 +2,17 @@
 title: SQL Server Data typów i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 878bbe41f259f1e50cd0a41669c7a352e78bc0f1
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: e519dc82fac7b8755155dcf40696030f2a1d266c
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108063"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453008"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server Data typów i ADO.NET
 Program SQL Server i .NET Framework są oparte na różnych typów systemów, które może spowodować utratę danych. Aby zachować spójność danych, dla programu .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) udostępnia metody typizowane metody dostępu do pracy z danymi programu SQL Server. Można używać wyliczenia w <xref:System.Data.SqlDbType> klasy, aby określić <xref:System.Data.SqlClient.SqlParameter> typów danych.  
   
- Więcej informacji i tabelę, która, które zawiera opis danych typu mapowania między typy danych .NET Framework i programu SQL Server, zobacz [mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
+ Więcej informacji i tabelę, która opisuje mapowanie typu danych między serwerem SQL i typów danych programu .NET Framework, zobacz [mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
   
  Program SQL Server 2008 wprowadzono nowe typy danych, które są przeznaczone do zaspokojenia potrzeb biznesowych do pracy z daty i godziny, ze strukturą, częściową strukturą i bez struktury danych. Te opisano w dokumentacji programu SQL Server 2008 — książki Online.  
   

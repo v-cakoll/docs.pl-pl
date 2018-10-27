@@ -3,12 +3,12 @@ title: Tłumaczenie drzew wyrażeń
 description: Dowiedz się, jak znaleźć każdy węzeł w drzewie wyrażeń podczas kompilowania zmodyfikowanej kopii takiego drzewa wyrażeń.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 6fe35983119bba443ed9132ff0c52361e1f07da8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45971899"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480087"
 ---
 # <a name="translating-expression-trees"></a>Tłumaczenie drzew wyrażeń
 
@@ -64,7 +64,7 @@ Tym samym węzłów może służyć w całym drzewie lub w wielu drzewach wyraż
 
 ## <a name="traversing-and-executing-an-addition"></a>Przeglądanie i wykonywanie dodatku
 
-Możemy to sprawdzić, tworząc drugi obiekt odwiedzający, który przegląda drzewo dodawania węzłów i oblicza wynik. Można to zrobić, wprowadzając kilka zmian vistor, który w tym samouczku do tej pory. W tej nowej wersji odwiedzający zwróci częściowej sumy operacji dodawania do tej pory. Wyrażenie stałe to po prostu wartość wyrażenie stałe. Wyrażenie dodawania wynik jest sumę argumentów operacji po lewej i prawej stronie, gdy-przenoszone tych drzew.
+Możemy to sprawdzić, tworząc drugi obiekt odwiedzający, który przegląda drzewo dodawania węzłów i oblicza wynik. Można to zrobić, wprowadzając kilka zmian obiekt odwiedzający, który w tym samouczku do tej pory. W tej nowej wersji odwiedzający zwróci częściowej sumy operacji dodawania do tej pory. Wyrażenie stałe to po prostu wartość wyrażenie stałe. Wyrażenie dodawania wynik jest sumę argumentów operacji po lewej i prawej stronie, gdy-przenoszone tych drzew.
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970076"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034302"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Izolacja migawki w programie SQL Server
 Izolacja migawki zwiększa współbieżności dla aplikacji OLTP.  
@@ -24,7 +24,7 @@ Izolacja migawki zwiększa współbieżności dla aplikacji OLTP.
   
  Izolacja migawki musi być włączona przez ustawienie opcji bazy danych na ALLOW_SNAPSHOT_ISOLATION, zanim zostaną one użyte w transakcji. Aktywuje to mechanizm do przechowywania wersji wierszy w bazie danych tymczasowych (**bazy danych tempdb**). Należy włączyć izolację migawki w każdej bazie danych, która używa go za pomocą instrukcji języka Transact-SQL ALTER DATABASE. W związku z tym izolację migawki różni się od poziomów tradycyjnych izolacji READ COMMITTED, REPEATABLE READ, SERIALIZABLE i READ UNCOMMITTED, które nie wymagają konfiguracji. Poniższe instrukcje Aktywacja izolacji migawki i zastąpić domyślne zachowanie READ COMMITTED SNAPSHOT:  
   
-```  
+```sql  
 ALTER DATABASE MyDatabase  
 SET ALLOW_SNAPSHOT_ISOLATION ON  
   
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   Możliwy do SERIALIZACJI jest najbardziej restrykcyjny poziom izolacji, ponieważ umożliwia zablokowanie całych zakresów kluczy i posiada blokady do czasu ukończenia transakcji. On obejmuje odczyt POWTARZALNY i dodaje ograniczenie, które inne transakcje nie można wstawić nowe wiersze do zakresów, które zostały odczytane przez transakcję do czasu ukończenia transakcji.  
   
- Aby uzyskać więcej informacji zobacz "Poziomy izolacji" w podręcznikach Online programu SQL Server.  
+ Aby uzyskać więcej informacji, zobacz [przewodnik przechowywania wersji wierszy i blokowanie transakcji](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Rozszerzeń poziomu izolacji migawki  
  SQL Server wprowadził rozszerzenia do poziomu izolacji SQL 92 z wprowadzeniem poziomie izolacji MIGAWKI i implementację dodatkowych READ COMMITTED. Poziom izolacji READ_COMMITTED_SNAPSHOT przezroczyste zastąpić READ COMMITTED dla wszystkich transakcji.  
@@ -132,7 +132,7 @@ SqlTransaction sqlTran =
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>Za pomocą wskazówki blokady z użyciem izolacji migawki  
  W poprzednim przykładzie pierwszej transakcji wybiera dane, a druga transakcja aktualizuje dane, zanim pierwszej transakcji będzie mógł ukończyć, powodując konflikt aktualizacji, podczas pierwszej transakcji próbuje zaktualizować tego samego wiersza. Można zmniejszyć prawdopodobieństwo konflikty aktualizacji w długotrwałych transakcji migawki, podając wskazówki blokady na początku transakcji. Poniższa instrukcja SELECT używa wskazówka UPDLOCK zablokować wybrane wiersze:  
   
-```  
+```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
@@ -143,4 +143,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>Zobacz też  
  [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)      
+ [Przewodnik obsługi wersji wiersza i blokowanie transakcji](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8d533ac4d4287af551e4fc0c3131c761dbbc135a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842108"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50034120"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Odbicia w .NET Framework dla aplikacji sklepu Windows Store
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], program .NET Framework zawiera zestaw odbicia typów i elementów członkowskich do użycia w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Te typy i składowe dostępnych w pełny program .NET Framework oraz jak w [.NET for Windows Store apps](https://go.microsoft.com/fwlink/?LinkID=225700). W tym dokumencie opisano najważniejsze różnice między te i ich odpowiedniki w .NET Framework 4 i starszych wersji.  
@@ -36,7 +36,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], program .NET
  W [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, dostęp do niektórych typów programu .NET Framework i elementów członkowskich jest ograniczona. Na przykład nie można wywołać metody .NET Framework, które nie są uwzględnione w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], za pomocą <xref:System.Reflection.MethodInfo> obiektu. W dodatku, niektórych typów i elementów członkowskich, które nie są uznawane za bezpieczne w kontekście [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji są zablokowane, ponieważ są <xref:System.Runtime.InteropServices.Marshal> i <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> elementów członkowskich. To ograniczenie dotyczy tylko typów programu .NET Framework i elementów członkowskich; można wywołać kodu lub kodu innych firm, tak jak zwykle.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto odbicia, typy i elementy członkowskie w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] do pobrania, metod i właściwości <xref:System.Globalization.Calendar> typu, w tym właściwości i metody dziedziczone. Aby uruchomić ten kod, wklej go do pliku kodu dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] strony, która zawiera [Windows.UI.Xaml.Controls.Textblock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) formantu o nazwie `textblock1` w projekcie o nazwie odbicia. Po wklejeniu tego kodu w projekcie o innej nazwie, po prostu upewnij się, że możesz zmienić nazwę przestrzeni nazw, aby dopasować projektu.  
+ W tym przykładzie użyto odbicia, typy i elementy członkowskie w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] do pobrania, metod i właściwości <xref:System.Globalization.Calendar> typu, w tym właściwości i metody dziedziczone. Aby uruchomić ten kod, wklej go do pliku kodu dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] strony, która zawiera <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> formantu o nazwie `textblock1` w projekcie o nazwie odbicia. Po wklejeniu tego kodu w projekcie o innej nazwie, po prostu upewnij się, że możesz zmienić nazwę przestrzeni nazw, aby dopasować projektu.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  

@@ -4,12 +4,12 @@ description: Ogranicz zależności pakietów, podczas tworzenia bibliotek oparty
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 67d53b45e5cb02f146f763966d1f76e8a8a469ce
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122580"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040884"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Zmniejszenie zależności pakietów przy użyciu pliku project.json
 
@@ -36,7 +36,7 @@ Obecnie nie ma żadnych official będzie przydatna `dotnet` polecenie, które us
 Możesz dowiedzieć się które pakiety, nie musisz za pomocą jednej z następujących sposobów:
 
 1. Prób i błędów.  Obejmuje to usunięcie pakietu, przywracanie, wyświetlanie, jeśli Twoja Biblioteka nadal będzie się kompilować i powtórzyć ten proces.
-2. Za pomocą narzędzia, takie jak [użyciu narzędzia do dekompilacji](http://ilspy.net) lub [odblaskowego .NET](http://www.red-gate.com/products/dotnet-development/reflector) wglądu odwołania, aby zobaczyć, co Twój kod faktycznie używa.  Następnie można usunąć pakiety, które nie odnoszą się do typów, których używasz.
+2. Za pomocą narzędzia, takie jak [użyciu narzędzia do dekompilacji](https://github.com/icsharpcode/ILSpy#ilspy-------) lub [odblaskowego .NET](https://www.red-gate.com/products/dotnet-development/reflector) wglądu odwołania, aby zobaczyć, co Twój kod faktycznie używa.  Następnie można usunąć pakiety, które nie odnoszą się do typów, których używasz.
 
 ## <a name="example"></a>Przykład 
 
@@ -127,7 +127,7 @@ Następnie skopiuj odwołania do pakietu do `dependencies` części biblioteki `
 }
 ```
 
-To bardzo wiele pakietów, wiele z nich na pewno nie są niezbędne do rozszerzania typy kolekcji.  Można ręcznie usunąć pakiety lub użyj narzędzia takiego jak [użyciu narzędzia do dekompilacji](http://ilspy.net) lub [odblaskowego .NET](http://www.red-gate.com/products/dotnet-development/reflector) do identyfikowania, która faktycznie pakiety kodu używa.
+To bardzo wiele pakietów, wiele z nich na pewno nie są niezbędne do rozszerzania typy kolekcji.  Można ręcznie usunąć pakiety lub użyj narzędzia takiego jak [użyciu narzędzia do dekompilacji](https://github.com/icsharpcode/ILSpy#ilspy-------) lub [odblaskowego .NET](https://www.red-gate.com/products/dotnet-development/reflector/) do identyfikowania, która faktycznie pakiety kodu używa.
 
 Poniżej przedstawiono, jak może wyglądać przycięty pakietu:
 

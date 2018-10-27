@@ -2,19 +2,19 @@
 title: Procedura wielobieżna ConcurrencyMode
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: c5fa690ca3b8ffe14eb9f19f0bb096b867ab992f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 94ea62d18fec202a099c2797602224eab43299b4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740532"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034133"
 ---
 # <a name="concurrencymode-reentrant"></a>Procedura wielobieżna ConcurrencyMode
 Niniejszy przykład pokazuje konieczność i zagadnień dotyczących używania pomocą właściwości ConcurrencyMode.Reentrant od implementacji usługi. Pomocą właściwości ConcurrencyMode.Reentrant oznacza, że usługi (lub wywołania zwrotnego) przetwarza tylko jeden komunikat w danym momencie (odpowiednikiem `ConcurencyMode.Single`). Aby zapewnić bezpieczeństwo wątków, Windows Communication Foundation (WCF) blokuje `InstanceContext` przetwarzania komunikatu, tak aby nie inne komunikaty mogą być przetwarzane. W przypadku trybu współużytkowane `InstanceContext` jest odblokowany, po prostu, zanim usługa wykonuje wywołanie wychodzące, co pozwoli na kolejne wywołanie, (które mogą być współużytkowane, jak pokazano w przykładzie) można pobrać blokady następnym razem, jest dostępna w usłudze. Aby zademonstrować zachowanie, przykład pokazuje, jak klienta i usługi mogą wysyłać między sobą za pomocą kontraktu dwukierunkowego.  
   
  Kontrakt zdefiniowany jest za pomocą kontraktu dwukierunkowego `Ping` metoda implementowanych przez usługę oraz metody wywołania zwrotnego `Pong` implementowanych przez klienta. Klient wywołuje serwera `Ping` metody za pomocą znaczników liczba, tym samym inicjowanie wywołania. Usługa sprawdza, czy liczba cykli nie jest równa 0, a następnie wywołuje wywołania zwrotne `Pong` metody podczas zmniejszanie liczby taktów. Odbywa się przez następujący kod w przykładzie.  
   
-```  
+```csharp
 public void Ping(int ticks)  
 {  
      Console.WriteLine("Ping: Ticks = " + ticks);  
@@ -28,7 +28,7 @@ public void Ping(int ticks)
   
  Wywołanie zwrotne `Pong` implementacja ma tę samą logikę jako `Ping` implementacji. Oznacza to, sprawdzi, czy liczba cykli jest różna od zera, a następnie wywołuje `Ping` metody na kanale wywołania zwrotnego (w tym przypadku jest kanału, który został użyty do wysłania, oryginalnym `Ping` wiadomości) przy użyciu znaczników liczba zmniejszona o 1. Gdy tylko liczbę cykli będzie wynosić 0, metoda zwraca wartość w tym samym rozpakowanie wszystkie odpowiedzi powrót do pierwszego wywołania klienta, który zainicjował wywołanie. Jest to pokazane w celu wykonania wywołania zwrotnego.  
   
-```  
+```csharp
 public void Pong(int ticks)  
 {  
     Console.WriteLine("Pong: Ticks = " + ticks);  
@@ -55,7 +55,7 @@ public void Pong(int ticks)
 ## <a name="demonstrates"></a>Demonstracje  
  Aby uruchomić przykład, kompilować projekty klienta i serwera. Następnie otwórz dwa okna polecenia i zmień katalogi na \<przykładowe > \CS\Service\bin\debug i \<przykładowe > \CS\Client\bin\debug katalogów. Następnie uruchom usługę, wpisując `service.exe` i Wywołaj Client.exe wartością początkową taktów przekazywany jako argument wejściowy. Przykładowe dane wyjściowe dla 10 najmniejszych jest wyświetlany.  
   
-```  
+```console  
 Prompt>Service.exe  
 ServiceHost Started. Press Enter to terminate service.  
 Ping: Ticks = 10  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04e44a6b58fd334b6a23e113922b980f69de627b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8e583bf7768c60477effb6c1cf9b838ae4c8c182
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198650"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50042535"
 ---
 # <a name="usage-guidelines"></a>Wytyczne dotyczące użycia
 
@@ -21,7 +21,7 @@ Ta sekcja zawiera wskazówki dotyczące korzystania z popularnych typów w publi
 <xref:System.IDisposable?displayProperty=nameWithType> Interfejsu nie została uwzględniona w tej sekcji, ale została omówiona w [wzorzec Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) sekcji.
 
 > [!NOTE]
-> Wytyczne i dowiedzieć się więcej o innych typowych wbudowanych typów programu .NET Framework, zobacz Tematy referencyjne dla następujących: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.
+> Wytyczne i dodatkowe informacje na temat innych typowych wbudowanych typów programu .NET Framework, zobacz Tematy referencyjne dla następujących: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

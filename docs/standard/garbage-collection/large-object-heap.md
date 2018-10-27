@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003090"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50042444"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Stos dużych obiektów w systemach Windows
 
@@ -66,7 +66,7 @@ Rysunek 3: LOH po GC generacji 2
 
 ## <a name="when-is-a-large-object-collected"></a>Gdy dużego obiektu są zbierane?
 
-Ogólnie rzecz biorąc GC występuje, gdy jedna z następujących warunków 3 następujących sytuacji:
+Ogólnie rzecz biorąc GC występuje, gdy jedna z następujących warunków 3 sytuacji:
 
 - Alokacja przekracza generacji 0 lub próg dużego obiektu.
 
@@ -164,7 +164,7 @@ Liczniki wydajności można również można wykonywać zapytania programowo. Wi
 > [!NOTE]
 > Firma Microsoft zaleca, że przy użyciu zdarzenia ETW zamiast wydajności liczników, ponieważ ETW zapewnia znacznie bogatsze informacje.
 
-### <a name="etw"></a>ETW
+### <a name="etw-events"></a>zdarzenia ETW
 
 Moduł zbierający elementy bezużyteczne zawiera bogaty zestaw zdarzeń ETW, które pomagają zrozumieć, co robi sterty i dlaczego. Następujące wpisy na blogu pokazują, jak zbierać i zrozumieć zdarzenia GC za pomocą funkcji ETW:
 
@@ -204,7 +204,7 @@ Jak widać, jest to bardzo prosty test, który po prostu przydziela dużych obie
 
 ### <a name="a-debugger"></a>Debuger
 
-Jeśli masz wystarczy zrzutu pamięci i należy przyjrzeć się, jakie obiekty są faktycznie na LOH, możesz użyć [rozszerzenie debugowania SoS](http://msdn2.microsoft.com/ms404370.aspx) dostarczone przez platformy .NET.
+Jeśli masz wystarczy zrzutu pamięci i należy przyjrzeć się, jakie obiekty są faktycznie na LOH, możesz użyć [rozszerzenie debugowania SoS](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) dostarczone przez platformy .NET.
 
 > [!NOTE]
 > Debugowanie polecenia wymienione w tej sekcji mają zastosowanie do [debugery Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

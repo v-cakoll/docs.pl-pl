@@ -10,19 +10,17 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193151"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038922"
 ---
 # <a name="cache-policy"></a>Zasady pamięci podręcznej
 Zasady pamięci podręcznej definiuje reguły, które są używane do ustalenia, czy można spełnić żądania przy użyciu pamięci podręcznej kopię żądanego zasobu. Aplikacje określić wymagania dotyczące pamięci podręcznej klienta dla daty utworzenia, ale zasady obowiązujące w pamięci podręcznej jest określana przez wymagania dotyczące pamięci podręcznej klienta, wygaśnięcia zawartości serwera oraz wymagania ponowną weryfikację serwera. Interakcja wymagania zasad i serwera pamięci podręcznej klienta zawsze skutkuje najbardziej umiarkowaną zasad pamięci podręcznej, aby mieć pewność, że najnowsza zawartość jest zwracana do aplikacji klienckiej.  
   
- Zasady pamięci podręcznej są oparte na lokalizacji lub na podstawie czasu. Zasady pamięci podręcznej na podstawie lokalizacji definiuje aktualności buforowanych wpisy podstawę, z którego można pobrać żądanego zasobu. Zasady pamięci podręcznej na podstawie czasu definiuje aktualność pozycji z pamięci podręcznej przy użyciu czasu, który został pobrany zasobu, nagłówki zwrócony z zasobów i bieżąca godzina. Większość aplikacji można użyć domyślne zasady pamięci podręcznej na podstawie czasu, która implementuje zasady buforowania, określona w dokumencie RFC 2616, dostępne pod adresem [ http://www.ietf.org ](http://www.ietf.org/).  
+ Zasady pamięci podręcznej są oparte na lokalizacji lub na podstawie czasu. Zasady pamięci podręcznej na podstawie lokalizacji definiuje aktualności buforowanych wpisy podstawę, z którego można pobrać żądanego zasobu. Zasady pamięci podręcznej na podstawie czasu definiuje aktualność pozycji z pamięci podręcznej przy użyciu czasu, który został pobrany zasobu, nagłówki zwrócony z zasobów i bieżąca godzina. Większość aplikacji można użyć domyślne zasady pamięci podręcznej na podstawie czasu, która implementuje zasady buforowania, określona w dokumencie RFC 2616, dostępne pod adresem [Internet Engineering Task Force (IETF)](https://www.ietf.org/) witryny sieci Web.  
   
  Klas opisanych w poniższej tabeli służą do określania zasad pamięci podręcznej.  
   

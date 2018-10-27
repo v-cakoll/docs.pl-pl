@@ -3,11 +3,11 @@ title: Rehostowanie projektanta przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
 ms.openlocfilehash: f5964b5c150dbe2a4132d072672a621315270fd5
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579936"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452943"
 ---
 # <a name="rehosting-the-workflow-designer"></a>Rehostowanie projektanta przepływu pracy
 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Można rehosted w środowiskach poza programem Visual Studio 2012 na potrzeby tworzenia, modyfikowania i przepływy pracy monitorowania.

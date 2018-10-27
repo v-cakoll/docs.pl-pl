@@ -2,12 +2,12 @@
 title: Store wystąpienia przepływu pracy SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 680a233ca721cd8a0c620b797832419f460b13b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d35cf6e94b010291276b5a543df1038715a0d50c
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594288"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453021"
 ---
 # <a name="sql-workflow-instance-store"></a>Store wystąpienia przepływu pracy SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Jest dostarczany z programem SQL Store wystąpienia przepływu pracy, który umożliwia przepływy pracy, aby utrwalić informacje o stanie dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Ta funkcja jest zaimplementowany głównie w formie <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> klasy, która jest pochodną abstrakcyjnej <xref:System.Runtime.DurableInstancing.InstanceStore> klasy framework trwałości. Funkcja Store wystąpienia przepływu pracy SQL stanowi dostawcy stanów trwałych programu SQL, który jest konkretną implementację trwałości interfejsu API, który korzysta z hosta do wysyłania poleceń trwałości do magazynu.  
@@ -18,7 +18,7 @@ ms.locfileid: "45594288"
   
  Tematy w tej sekcji opisują właściwości i funkcji Store wystąpienia przepływu pracy SQL i udostępniać szczegółowe informacje na temat konfigurowania magazynu.  
   
- AppFabric w systemie Windows Server oferuje swój własny magazyn wystąpienia i narzędzi można uproszczenie konfiguracji i użytkowania magazyn wystąpienia. Aby uzyskać więcej informacji, zobacz zobacz [systemu Windows Server App Fabric wystąpienia Store](https://go.microsoft.com/fwlink/?LinkId=201201). Aby uzyskać więcej informacji o danych trwałości aplikacji Service Fabric programu SQL Server, zobacz [danych trwałości aplikacji Service Fabric programu SQL Server](https://go.microsoft.com/fwlink/?LinkId=201202)  
+ AppFabric w systemie Windows Server oferuje swój własny magazyn wystąpienia i narzędzi można uproszczenie konfiguracji i użytkowania magazyn wystąpienia. Aby uzyskać więcej informacji, zobacz [systemu Windows Server App Fabric wystąpienia Store](https://go.microsoft.com/fwlink/?LinkId=201201). Aby uzyskać więcej informacji o danych trwałości aplikacji Service Fabric programu SQL Server, zobacz [danych trwałości aplikacji Service Fabric programu SQL Server](https://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   

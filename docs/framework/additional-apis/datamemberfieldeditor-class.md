@@ -1,5 +1,5 @@
 ---
-title: Klasa DataMemberFieldEditor
+title: DataMemberFieldEditor, klasa
 ms.date: 03/30/2017
 ms.technology:
 - dotnet-winforms
@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca28c0c440ea67716244670e2b636a3099987e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741883"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452956"
 ---
-# <a name="datamemberfieldeditor-class"></a>Klasa DataMemberFieldEditor
+# <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor, klasa
 
-Udostępnia interfejs użytkownika do edytowania właściwości obiektów powiązanych z danymi poprzez wyszczególnienie wszystkich właściwości `DataSource` obiektu, aby wybrać źródło wartości.  
+Udostępnia interfejs użytkownika do edycji właściwości obiektów powiązanych z danymi, wyświetlając listę wszystkich właściwości `DataSource` wybierz źródło wartości z obiektu.  
   
 ## <a name="syntax"></a>Składnia
   
@@ -32,9 +32,9 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberFieldEditor` Klasa jest wewnętrzna i nie są one przeznaczone do użycia bezpośrednio w kodzie.
+> `DataMemberFieldEditor` Klasa jest wewnętrzny i nie są one przeznaczone do użycia bezpośrednio w kodzie.
 > 
-> Microsoft w aplikacji produkcyjnej, w żadnym przypadku nie obsługuje korzystanie z tej klasy.
+> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnym wypadku.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -46,4 +46,4 @@ internal class DataMemberFieldEditor : UITypeEditor
   
 ## <a name="see-also"></a>Zobacz także
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

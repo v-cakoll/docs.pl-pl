@@ -2,19 +2,19 @@
 title: Usługa
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-ms.openlocfilehash: 0cfeb178e26f6c93e29210accf5d7866cc1fca02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c59672b3b7617d9c28d99f7d534b6e7f2f2e9fbb
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487150"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49633953"
 ---
 # <a name="service"></a>Usługa
 Usługa  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class Service  
 {  
   string BaseAddresses[];  
@@ -39,91 +39,91 @@ class Service
  Klasa usługi ma następujące właściwości:  
   
 ### <a name="baseaddresses"></a>BaseAddresses  
- Typ danych: tablicy ciągów  
+ Typ danych: tablica ciągów  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Adres podstawowy używany przez usługę.  
   
 ### <a name="behaviors"></a>Zachowania  
  Typ danych: zachowanie tablicy  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Zachowania skojarzone z tą usługą.  
   
 ### <a name="configurationname"></a>ConfigurationName  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  ServiceElement_BehaviorConfiguration  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Nazwa wystąpienia wystąpienia liczników wydajności usługi.  
   
 ### <a name="distinguishedname"></a>DistinguishedName  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Nazwa usługi pod adresem.  
   
 ### <a name="extensions"></a>Rozszerzenia  
- Typ danych: tablicy ciągów  
+ Typ danych: tablica ciągów  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Konteksty wystąpienia dla rozszerzeń wystąpienia tej usługi.  
+ Konteksty wystąpień dla rozszerzeń wystąpienie usługi.  
   
 ### <a name="metadata"></a>Metadane  
- Typ danych: tablicy ciągów  
+ Typ danych: tablica ciągów  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Ustawienia metadanych usługi.  
   
 ### <a name="name"></a>Nazwa  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Unikatowa nazwa tej usługi.  
   
 ### <a name="namespace"></a>Przestrzeń nazw  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Przestrzeń nazw usługi.  
   
 ### <a name="opened"></a>Otwarte  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Czas otwarcia usługi.  
   
 ### <a name="outgoingchannels"></a>OutgoingChannels  
  Typ danych: tablica kanału  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Kanały wychodzące z wystąpienia usługi.  
   
 ### <a name="processid"></a>Identyfikator procesu  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Identyfikator procesu obsługującego usługę.  
+ Identyfikator procesu procesu, który hostuje usługę.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|

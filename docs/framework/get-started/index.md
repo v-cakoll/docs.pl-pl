@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99da0b0367270c4cea470a23ea97f0165a712a9b
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349072"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453138"
 ---
 # <a name="get-started-with-the-net-framework"></a>Wprowadzenie do programu .NET Framework
 
@@ -89,7 +89,7 @@ Aby uzyskać więcej informacji na temat tworzenia aplikacji przeznaczonych dla 
 
 ## <a name="see-also"></a>Zobacz także
 
-[.NET framework — przewodnik](../../../docs/framework/index.md)   
-[Co nowego](../../../docs/framework/whats-new/index.md)   
-[Przeglądarka interfejsu API .NET](/dotnet/api/)   
-[Podręcznik programowania](../../../docs/framework/development-guide.md)
+- [.NET framework — przewodnik](../../../docs/framework/index.md)   
+- [Co nowego](../../../docs/framework/whats-new/index.md)   
+- [Przeglądarka interfejsu API .NET](/dotnet/api/)   
+- [Podręcznik programowania](../../../docs/framework/development-guide.md)

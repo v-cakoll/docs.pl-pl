@@ -2,100 +2,100 @@
 title: Działanie
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 3100d5bb60dc1b11d23b0705f4d6f23a3675ac51
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806835"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453349"
 ---
 # <a name="activity"></a>Działanie
-W tym temacie opisano działania śledzenia w modelu śledzenia usług Windows Communication Foundation (WCF). Działania są przetwarzania jednostki, które pomagają użytkownikowi zawęzić zakres awarii. Błędy występujące w tej samej działania są bezpośrednio powiązane. Na przykład kończy się niepowodzeniem, ponieważ odszyfrowywania wiadomości nie powiodło się. Ślady za działanie i błąd odszyfrowywania wiadomości są wyświetlane w to samo działanie przedstawiający bezpośredniego korelacja błędu odszyfrowywania Błąd żądania.  
+W tym temacie opisano ślady działania w modelu śledzenia usług Windows Communication Foundation (WCF). Działania to przetwarzania jednostek, które pomagają użytkownikowi zawęzić zakres awarii. Błędy w ramach tego samego działania są bezpośrednio powiązane. Na przykład kończy się niepowodzeniem, ponieważ odszyfrowywania wiadomości nie powiodło się. Śledzenie operacji i błędu odszyfrowywania wiadomości pojawiają się w tym samym działaniu, przedstawiający bezpośrednia korelacja między błąd odszyfrowywania i Błąd żądania.  
   
-## <a name="configuring-activity-tracing"></a>Konfigurowanie śledzenia działania  
- Usługi WCF udostępnia wstępnie zdefiniowane działań do przetwarzania aplikacji (zobacz [lista działania](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Działania można również definiować programowo do grupy użytkowników śladów. Aby uzyskać więcej informacji, zobacz [emitowanie danych śledzenia User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+## <a name="configuring-activity-tracing"></a>Konfigurowanie śledzenia działań  
+ Usługi WCF zapewnia wstępnie zdefiniowane działania związane z przetwarzaniem (zobacz [lista działań](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Działania można również zdefiniować programowo, aby śledzenie użytkowników grupy. Aby uzyskać więcej informacji, zobacz [emitowanie danych śledzenia User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
- Aby wysyłać ślady działania w czasie wykonywania, należy użyć `ActivityTracing` ustawienie `System.ServiceModel` śledzenia źródła, lub inne WCF lub źródła śledzenia niestandardowych, jak pokazano w następującym kodem konfiguracji.  
+ Emitowanie danych śledzenia działań w czasie wykonywania, użyj `ActivityTracing` ustawienie `System.ServiceModel` śledzenia, lub inne usługi WCF lub niestandardowe śledzenia źródeł, jak pokazano w następującym kodem konfiguracji.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
 ```  
   
- Aby dowiedzieć się więcej o elementem konfiguracji i atrybuty używany, zobacz [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) tematu.  
+ Aby dowiedzieć się więcej na temat elementu konfiguracji i atrybuty są używane, zobacz [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) tematu.  
   
 ## <a name="viewing-activities"></a>Wyświetlanie działań  
- Można wyświetlić działań i ich narzędzie w [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Po włączeniu ActivityTracing to narzędzie ma dane śledzenia i sortuje zależnie od aktywności. Można również sprawdzić transferów śledzenia. Wskazuje, jak różnych działań transferu śledzenia są ze sobą powiązane. Widać określone działanie spowodowało innego można uruchomić. Na przykład żądanie komunikatu uruchomiona uzgadniania zabezpieczeń, aby uzyskać bezpieczny konwersacji tokenu.  
+ Można przeglądać działania i ich użyteczność w [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Po włączeniu ActivityTracing to narzędzie pobiera ślady i sortuje je na podstawie aktywności. Widać również transfery śledzenia. Transfer śledzenia wskazuje, jak różne działania są powiązane ze sobą. Możesz zobaczyć danego działania spowodowane innej, aby rozpocząć. Na przykład żądanie komunikatu uruchomione uzgadnianie zabezpieczeń w celu uzyskania bezpiecznego konwersacji tokenu.  
   
-### <a name="correlating-activities-in-service-trace-viewer"></a>Korelowanie działań w podglądzie śledzenia usługi  
- To narzędzie przeglądarki danych śledzenia usługi zawiera dwa widoki działań:  
+### <a name="correlating-activities-in-service-trace-viewer"></a>Korelowanie działań w przeglądarki danych śledzenia usługi  
+ To narzędzie przeglądarki danych śledzenia usługi zawiera dwa widoki działania:  
   
--   **Lista** widok, w którym identyfikator działania jest używany do bezpośrednio korelowanie śladów między procesami. Ślady z różnych procesów, na przykład klienta i usługi, ale o tym samym identyfikatorze działania są grupowane w tym samym działaniu. W związku z tym błędów występujących na usługę, która następnie powoduje błąd na komputerze klienckim zarówno pojawi się w jednym widoku działania w narzędziu.  
+-   **Lista** widoku, gdy identyfikator działania jest używana w celu bezpośrednio korelowanie śladów procesów. Ślady z różnych procesów, na przykład, klienta i usługi, ale ten sam identyfikator działania są grupowane w ramach tego samego działania. W związku z tym błąd występujących na usługi, która powoduje błąd, na komputerze klienckim oba pojawią się w jednym widoku działań w narzędziu.  
   
--   **Wykres** widok, w których działania są pogrupowane według procesów. W tym widoku klienta i usługę mających taki sam identyfikator działania ma swoje dane śledzenia w różnych działań. Służące do skorelowania działań mających taki sam identyfikator działania w różnych procesów, narzędzie zawiera przepływów wiadomości między powiązanych działań.  
+-   **Wykres** widok, w których działania są pogrupowane według procesów. W tym widoku klienta i usługi o tym samym identyfikatorze działanie ma ich ślady w różnych działaniach. Aby skorelować działań mających taki sam identyfikator działania w różnych procesach, w narzędziu jest wyświetlany komunikat przepływów różnych działań powiązanych z.  
   
- Aby uzyskać więcej informacji i aby zobaczyć widoku graficznego narzędzia podglądu śledzenia usługi, zobacz [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) i [przy użyciu przeglądarki śledzenia usługi do wyświetlania skorelowanych danych śledzenia i Rozwiązywanie problemów z](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ Aby uzyskać więcej informacji i wyświetlić graficznego narzędzia przeglądarki danych śledzenia usługi, zobacz [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) i [za pomocą przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i Rozwiązywanie problemów z](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 ## <a name="defining-the-scope-of-an-activity"></a>Definiowanie zakresu działania  
- Działanie jest definiowany w czasie projektowania i oznacza jednostkę logiczną pracy. Ślady emitowany z tego samego identyfikatora działania są bezpośrednio powiązane, są częścią tego samego działania. Ponieważ działania mogą przechodzić przez granice punktu końcowego (żądanie), są zdefiniowane dwa zakresy dla działania.  
+ Działanie jest zdefiniowana w czasie projektowania i oznacza jednostkę logiczną w pracy. Emitowany ślady za pomocą tego samego identyfikatora działania są bezpośrednio powiązane, są one częścią tego samego działania. Ponieważ działania mogą przechodzić granic punktu końcowego (żądanie), są zdefiniowane dwa zakresy dla działania.  
   
--   `Global` zakres na aplikację. W tym zakresie działanie jest identyfikowane przez jego działania globalnie unikatowy identyfikator 128-bitowego gAId. GAid to, co to są propagowane w obrębie punktów końcowych.  
+-   `Global` zakres każdej aplikacji. W tym zakresie działanie jest identyfikowane przez jego działania globalnie unikatowy identyfikator 128-bitowego gAId. GAid to, co to są propagowane w obrębie punktów końcowych.  
   
--   `Local` zakres na punkt końcowy. W tym zakresie działanie jest identyfikowane przez jego gAId, oraz nazwę źródła śledzenia śledzenia działań i identyfikator procesu. Ta Trzykolumnowa stanowi identyfikator działania lokalnych, którego układ określa. Ustalonymi służy do definiowania (local) granice działania.  
+-   `Local` zakres za punkt końcowy. W tym zakresie działanie jest identyfikowane przez jego gAId wraz z nazwą źródła śledzenia emitowanie danych śledzenia działań i identyfikator procesu. Ta trójkę stanowi identyfikator działań lokalnych ustanowione. Ustalonymi służy do definiowania (local) granice tego działania.  
   
 ## <a name="trace-schema"></a>Schemat śledzenia  
- Dane śledzenia może być wysyłany przy użyciu dowolnego schematu i na platformach firmy Microsoft. "e2e" (dla "pełny") jest często używane schematu. Ten schemat zawiera identyfikator 128-bitowego (gAId), nazwa źródła śledzenia i identyfikatora procesu. W kodzie zarządzanym <xref:System.Diagnostics.XmlWriterTraceListener> emituje dane śledzenia w schemacie E2E.  
+ Może być emitowana danych śledzenia przy użyciu dowolnego schematu i na platformach firmy Microsoft. "e2e" (dla "End to End") to najczęściej używany schemat. Ten schemat obejmuje identyfikatorem 128-bitowego (gAId), nazwa źródła śledzenia i identyfikatora procesu. W kodzie zarządzanym <xref:System.Diagnostics.XmlWriterTraceListener> emituje ślady w schemacie E2E.  
   
- Deweloperzy mogą ustawić pomocy emitowanego śledzenia przez ustawienie <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> właściwości za pomocą identyfikatora Guid w wątku lokalnego magazynu (TLS). W poniższym przykładzie pokazano to.  
+ Deweloperzy mogą ustawić pomocy, który jest emitowane przy użyciu śledzenia, ustawiając <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> właściwości przy użyciu identyfikatora Guid na wątku lokalnego magazynu (TLS). Poniższy przykład przedstawia to.  
   
-```  
+```csharp
 // set the current Activity ID to a new GUID.  
 CorrelationManager.ActivityId = Guid.NewGuid();  
-```  
+```
   
  Ustawienie gAId w protokole TLS będą widoczne podczas śledzenia są emitowane przy użyciu źródła śledzenia, jak pokazano na poniższym przykładzie.  
   
-```  
+```csharp
 TraceSource traceSource = new TraceSource("myTraceSource");  
 traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");  
 ```  
   
- Śledzenie wysyłanego będzie zawierać gAId obecnie w protokół TLS, nazwę źródła śledzenia przekazany jako parametr do konstruktora źródła śledzenia i identyfikator bieżącego procesu.  
+ Informacje śledzenia emitowane będą zawierać gAId aktualnie w TLS, nazwa źródła śledzenia przekazany jako parametr do konstruktora źródła śledzenia i identyfikator bieżącego procesu.  
   
 ## <a name="activity-lifetime"></a>Okres istnienia działania  
- W najbardziej rygorystyczne warunki dowód działanie uruchamia się po raz pierwszy identyfikator działania jest używana w emitowanym śledzenia i kończy się czasu, gdy jest on używany w emitowanym śledzenia. Zestaw wstępnie zdefiniowanych typów śledzenia są dostarczane przez <xref:System.Diagnostics>, w tym uruchamianie i zatrzymywanie, aby jawnie oznaczyć granice okres istnienia działania.  
+ W sposób najbardziej rygorystyczne dowód działania uruchamiania po raz pierwszy identyfikator działania jest używana w emitowany śledzenia i kończy ostatniego, jest ono używane w emitowany śledzenia. Zestaw wstępnie zdefiniowanych typów śledzenia są dostarczane przez <xref:System.Diagnostics>, w tym uruchamianie i zatrzymywanie, aby wyraźnie oznaczyć granice okres istnienia działania.  
   
--   Start: Wskazuje początek działania. Śledzenia "Start" zawiera rekord początkowego nowego punktu kontrolnego przetwarzania. Zawiera nowy identyfikator działania dla danego źródła w ramach danego procesu, z wyjątkiem przypadków, gdy identyfikator działania są propagowane w obrębie punktów końcowych, w tym przypadku widzimy na punkt końcowy jeden "Start". Uruchamianie nowego działania przykładem tworzenia nowego wątku przetwarzania lub wprowadzenie nowych publiczną metodę.  
+-   Start: Wskazuje początek działania. Śledzenie "Start" zawiera rejestr od nowego punktu kontrolnego przetwarzania. Zawiera nowy identyfikator działania śledzenia danego źródła danego procesu, z wyjątkiem sytuacji, gdy identyfikator działania są propagowane w obrębie punktów końcowych, w którym to przypadku widzimy za punkt końcowy jeden "Start". Uruchamianie nowego działania przykłady tworzenia nowego wątku przetwarzania lub wprowadzania nowej metody publiczne.  
   
--   Zatrzymaj: Wskazuje koniec działania. Śledzenia "Stop" zawiera rekord końcowy istniejący punkt kontrolny przetwarzania. Zawiera istniejącego Identyfikatora aktywności dla danego źródła w ramach danego procesu, z wyjątkiem przypadków, gdy identyfikator działania są propagowane w obrębie punktów końcowych, w tym przypadku widzimy jeden "Stop" na punkt końcowy.  Zatrzymywanie działania przykładami przerywanie wątku przetwarzania lub zamykanie metody, której początek zostało oznaczone symbolem śledzenia "Start".  
+-   Stop: Wskazuje koniec działania. Śledzenie "Zatrzymaj" zawiera rejestr zakończenia istniejący punkt kontrolny przetwarzania. Zawiera on istniejący identyfikator działania śledzenia danego źródła danego procesu, z wyjątkiem sytuacji, gdy identyfikator działania są propagowane w obrębie punktów końcowych, w którym to przypadku widzimy jeden "Stop" na punkt końcowy.  Zatrzymywanie działania przykładami zakończenie wątku przetwarzania lub Kończenie wykonywania metody, którego początek została oznaczona za pomocą śledzenia "Start".  
   
--   Wstrzymanie: Wskazuje zawieszenie przetwarzania działania. Śledzenia "Wstrzymaj" zawiera oczekuje się wznowić w późniejszym czasie, których przetwarzanie istniejący identyfikator działania. Ślady są emitowane o tym identyfikatorze między zdarzeniami wstrzymywanie i wznawianie z bieżącego źródła śledzenia. Przykładami wstrzymanie działania podczas wywoływania metody do funkcji zewnętrznej biblioteki lub podczas oczekiwania na zasobów, takich jak portu zakończenia We/Wy.  
+-   Wstrzymywanie: Wskazuje zawieszenia przetwarzania działania. Śledzenie "Wstrzymaj" zawiera istniejący identyfikator działania przetwarzania, którego oczekuje się, aby wznowić w późniejszym czasie. Ślady są emitowane o tym identyfikatorze między zdarzeniami wstrzymywanie i wznawianie z bieżącego źródła śledzenia. Przykłady obejmują wstrzymywanie działania, gdy wywołanie do funkcji zewnętrznej biblioteki lub Oczekiwanie na zasób, taki jak port zakończenia operacji We/Wy.  
   
--   Wznów: Wskazuje na wznowienie przetwarzania działania. Śledzenie "Resume" zawiera istniejący identyfikator działania którego ostatniego śledzenia wyemitowanego z bieżącego źródła śledzenia został śledzenia "Wstrzymaj". Przykładami powrotem z wywołania funkcji zewnętrznej biblioteki lub gdy sygnalizowane wznowienia przetwarzania przez zasób, takich jak portu zakończenia We/Wy.  
+-   Wznów: Wskazuje wznowienie przetwarzania działania. Śledzenie "Resume" zawiera istniejący identyfikator działania, w których ostatni ślad emitowany z bieżącego źródła śledzenia został śledzenia "Wstrzymaj". Do przykładów należą, zwracając po wywołaniu do funkcji zewnętrznej biblioteki lub gdy sygnalizowane, aby wznowić przetwarzanie przez zasób, taki jak port zakończenia operacji We/Wy.  
   
--   Transfer: Ponieważ niektóre działania są powodowane przez innych użytkowników lub odnoszą się do innych użytkowników, działania mogą związane z innych działań za pośrednictwem "Transfer" śladów. Przeniesienie rejestruje ukierunkowanej relacji z jednego działania do drugiego  
+-   Transfer: Ponieważ niektóre działania są spowodowane przez inne osoby lub odnoszą się do innych osób, działania mogą dotyczyć innych działań za pośrednictwem ślady "Przekazywać". Przeniesienie rejestruje kierowanych relacji jednego działania do innego  
   
- Uruchomienia i zatrzymania śledzenia nie są krytyczne dla korelacji. Jednak może pomóc w zwiększenie wydajności, profilowania i weryfikacji zakresu działania.  
+ Uruchamiania i zatrzymania śledzenia nie są krytyczne dla korelacji. Jednak może pomóc w zwiększaniu wydajności, profilowanie i walidacji zakres działania.  
   
- Używanie tych typów, narzędzi można zoptymalizować Nawigacja dzienniki śledzenia do znalezienia natychmiast powiązanych zdarzeń tego samego działania, lub zdarzenia w działań związanych z Jeśli narzędzie transferu danych śledzenia. Na przykład narzędzi spowoduje zatrzymanie analizy dzienników dla danego działania, po zgłoszeniu śledzenia uruchamiania i zatrzymywania.  
+ Korzystając z tych typów, narzędzia można zoptymalizować przechodząc dzienniki śledzenia, aby znaleźć zdarzenia bezpośrednio powiązane z tego samego działania lub zdarzenia w działania powiązane z Jeśli narzędzie transferu danych śledzenia. Na przykład narzędzia zostanie zatrzymane, analizy dzienników dla danego działania, po zgłoszeniu śledzenia uruchomień/zatrzymań.  
   
- Te typy śledzenia mogą służyć do profilowania. Zasoby używane między znacznikami rozpoczęcie i zakończenie reprezentują całkowity czas działania tym zawarte działania logiczne. Odejmowanie interwałów czasu między śladów wstrzymywanie i wznawianie zapewnia czasu rzeczywistego działania.  
+ Te typy śledzenia może również używane na potrzeby profilowania. Zasoby używane między znacznikami uruchamianie i zatrzymywanie reprezentują całkowity czas działania, tym zawarte działania logiczne. Odejmowanie interwałami między ślady wstrzymywanie i wznawianie udostępnia w czasie działania rzeczywistych.  
   
- Zatrzymaj śledzenie też jest szczególnie przydatne podczas sprawdzania poprawności zakres zaimplementowanym czynności. Jeśli niektóre przetwarzania śladów pojawią się po Zatrzymaj śledzenie zamiast w obrębie danego działania, może to sugeruje wad kodu.  
+ Zatrzymaj śledzenie również jest szczególnie przydatne w przypadku sprawdzania zakresu działalności zaimplementowane. Jeśli niektóre dane śledzenia przetwarzania pojawią się po Zatrzymaj śledzenie zamiast wewnątrz danego działania, może to sugeruje wady kodu.  
   
-## <a name="guidelines-for-using-activity-tracing"></a>Wskazówki dotyczące używania działania śledzenia  
- Poniżej znajduje się wskazówek dotyczących używania śladów ActivityTracing (Start, Stop, wstrzymania, wznowienia i Transfer).  
+## <a name="guidelines-for-using-activity-tracing"></a>Wskazówki dotyczące używania śledzenie aktywności  
+ Poniżej znajduje się wytyczne użycia ślady ActivityTracing (uruchamianie, Zatrzymaj, Wstrzymaj, Wznów i transferu).  
   
--   Śledzenie jest ukierunkowanego wykresu cykliczne nie drzewa. Kontrolki można wrócić do działania, która zduplikowany działania.  
+-   Śledzenie jest directed graph cykliczne nie drzewa. Kontrolka możesz wrócić do działania, które zduplikowany działania.  
   
--   Działanie oznacza granic przetwarzania, który może być istotnych dla administratora systemu lub obsługi.  
+-   Działanie oznacza granicy przetwarzania, który może być istotnych dla administratora systemu lub obsługi.  
   
--   Każda metoda WCF, zarówno na kliencie i serwerze, jest ograniczona przez od nowego działania, a następnie (po zakończeniu pracy) kończy nowe działanie i powrót do działania otoczenia.  
+-   Każda metoda WCF, zarówno na kliencie i serwerze, jest ograniczony przez rozpoczęciem nowe działanie, a następnie (po zakończeniu pracy) Kończenie nowe działanie i powrocie do otoczenia działania.  
   
--   Czas uruchamiania (ciągłe) działania, takie jak nasłuchiwania dla połączeń lub Oczekiwanie na komunikaty są reprezentowane przez odpowiednie znaczniki uruchamiania i zatrzymywania.  
+-   Czas uruchamiania (ciągłe) działań, takich jak nasłuchiwać w poszukiwaniu połączeń lub Oczekiwanie na komunikaty są reprezentowane przez odpowiednie znaczników rozpoczęcia/zakończenia.  
   
--   Działania wyzwalane przez przyjęcie lub przetwarzania komunikatów są reprezentowane przez granice śledzenia.  
+-   Działania wyzwolone przez przyjęcie lub przetwarzania komunikatów są reprezentowane przez granice śledzenia.  
   
--   Działania reprezentują działania, niekoniecznie obiektów. Działanie powinny być rozumiane jako "ten został występować po. . . (emisji znaczący śledzenia wystąpił)."  
+-   Działania reprezentują działań, niekoniecznie obiektów. Działanie powinno być interpretowane jako "to się dzieje po. . . (emisji śledzenia istotnych wystąpił)."  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  

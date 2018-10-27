@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9fefa302a269e08300f0393434b66ca8738a27b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5277b056c11de4c3e32d33c72bafc8f64ee17d05
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777785"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033872"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>Element &lt;TypeInstantiation&gt; (architektura .NET Native)
 Skonstruowany typ rodzajowy dotyczy zasad odbicia środowiska uruchomieniowego.  
@@ -99,7 +99,7 @@ Skonstruowany typ rodzajowy dotyczy zasad odbicia środowiska uruchomieniowego.
  Jeśli `<TypeInstantiation>` element jest elementem podrzędnym elementu [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md), [ \<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md), lub [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md), element Ustawienie to zastępuje ustawienia zasad zdefiniowanych w elemencie nadrzędnym. Jeśli [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) element definiuje odpowiedniej definicji typu ogólnego, `<TypeInstantiation>` element zastąpienia zasad odbicia środowiska uruchomieniowego tylko w przypadku wystąpień określonego zbudowany typ ogólny.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto odbicia do pobierania definicji typu ogólnego z skonstruowany <xref:System.Collections.Generic.Dictionary%602> obiektu. Również używa odbicia do wyświetlania informacji o <xref:System.Type> obiekty reprezentujące skonstruowany typy ogólne i definicji typu ogólnego. Zmienna `b` w tym przykładzie jest [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) kontroli.  
+ W poniższym przykładzie użyto odbicia do pobierania definicji typu ogólnego z skonstruowany <xref:System.Collections.Generic.Dictionary%602> obiektu. Również używa odbicia do wyświetlania informacji o <xref:System.Type> obiekty reprezentujące skonstruowany typy ogólne i definicji typu ogólnego. Zmienna `b` w tym przykładzie jest <xref:Windows.UI.Xaml.Controls.TextBlock> kontroli.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

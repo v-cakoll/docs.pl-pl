@@ -7,16 +7,18 @@ helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45645921"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041261"
 ---
 # <a name="-operator-c-reference"></a>Operator % (odwołanie w C#)
 
-Operator reszty `%` oblicza pozostałą po podzieleniu pierwszy argument operacji za drugim argumentem. Typy zdefiniowane przez użytkownika może [przeciążenia](../keywords/operator.md) `%` operatora. Gdy `%` jest przeciążona, [operator przypisania reszty](remainder-assignment-operator.md) `%=` jest również niejawnie przeciążona.
+Operator reszty `%` oblicza pozostałą po podzieleniu pierwszy argument operacji za drugim argumentem.
+
+Typy zdefiniowane przez użytkownika może [przeciążenia](../keywords/operator.md) `%` operatora. Gdy `%` jest przeciążona, [operator przypisania reszty](remainder-assignment-operator.md) `%=` jest również niejawnie przeciążona.
 
 Wszystkie typy liczbowe obsługuje operator reszty.
 
@@ -33,7 +35,7 @@ Dla [float](../keywords/float.md) i [double](../keywords/double.md) operandów, 
 - znak `z`, jeśli różna od zera, jest taka sama jak znak `x`;
 - wartość bezwzględna `z` wartość jest generowany przez `|x| - n * |y|` gdzie `n` jest największa możliwa liczba całkowita, która jest mniejsza niż lub równa `|x| / |y|` i `|x|` i `|y|` są wartości bezwzględne dla `x` i `y`, odpowiednio.
 
-Aby uzyskać informacje o zachowanie `%` operatora w przypadku argumentów operacji nieskończona, zobacz [operator reszty](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) części [specyfikacji języka C#](/dotnet/csharp/language-reference/language-specification/index).
+Aby uzyskać informacje o zachowanie `%` operator nieskończona argumentów, zobacz [operator reszty](~/_csharplang/spec/expressions.md#remainder-operator) części [ C# specyfikacji języka](../language-specification/index.md).
 
 > [!NOTE]
 > Ta metoda obliczeniowych reszta jest odpowiednikiem używanym dla liczby całkowitej argumentów, ale różni się od IEEE 754. Operacja Reminder, który jest zgodny z IEEE 754, należy użyć <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> metody.

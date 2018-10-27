@@ -4,12 +4,12 @@ description: Przewodnik, na które implementacji .NET należy rozważyć podczas
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: ab44cca7c9a832dc7e5f03cfc2972de9d0785fd4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777883"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034289"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework dla aplikacji serwerowych
 
@@ -104,7 +104,7 @@ Niektóre firmy Microsoft lub innych platform nie obsługują platformy .NET Cor
 ## <a name="see-also"></a>Zobacz także
 
 * [Wybieranie między ASP.NET i ASP.NET Core](/aspnet/core/choose-aspnet-framework)
-* [Platforma ASP.NET Core przeznaczone dla .NET Framework](/aspnet/core#target-framework)
+* [Platforma ASP.NET Core przeznaczone dla .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
 * [Platformy docelowe](frameworks.md)
 * [Przewodnik platformy .NET Core](../core/index.md)  
 * [Przenoszenie z .NET Framework i .NET Core](../core/porting/index.md)  

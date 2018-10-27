@@ -1,29 +1,29 @@
 ---
 title: Indeksatory
-description: Dowiedz się więcej o języku C# indeksatory i sposobu wdrażania indeksowane właściwości, które są właściwościami odwoływać się przy użyciu co najmniej jeden argument.
+description: Dowiedz się więcej o C# indeksatory i sposób implementacji indeksowane właściwości, które są właściwościami wskazywane za pomocą jednego lub więcej argumentów.
 ms.date: 06/20/2016
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 012213a4cdf8b70ec919639a082d5700228dde6b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: a13163cb6bd835dfdd16c83c905c134eb8a86e7d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207498"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50041144"
 ---
 # <a name="indexers"></a>Indeksatory
 
-*Indeksatory* są podobne do właściwości. Na wiele sposobów indeksatory kompilacji na te same funkcje języka jako [właściwości](properties.md). Włącz indeksatory *indeksowane* właściwości: właściwości odwoływać się przy użyciu co najmniej jeden argument. Tych argumentów Podaj indeksu w pewnej kolekcji wartości.
+*Indeksatory* są podobne do właściwości. Na wiele sposobów indeksatory kompilacji na te same funkcje języka jako [właściwości](properties.md). Włącz indeksatory *indeksowane* właściwości: właściwości, do których odwołuje się przy użyciu jednego lub więcej argumentów. Te argumenty zawierają indeksu do niektórych kolekcji wartości.
 
 ## <a name="indexer-syntax"></a>Składnia indeksatora
 
-Indeksator dostępu za pomocą nazwy zmiennej i nawiasy kwadratowe. Możesz umieścić argumenty indeksatora w nawiasie:
+Indeksator dostępu za pomocą nazwy zmiennej i nawiasami kwadratowymi. Możesz umieścić argumenty indeksatora w nawiasie:
 
 ```csharp
 var item = someObject["key"];
 someObject["AnotherKey"] = item;
 ```
 
-Można zadeklarować indeksatorów przy użyciu `this` słowa kluczowego jako nazwy właściwości i typ deklarujący argumenty w nawiasach kwadratowych. Ta deklaracja spowoduje dopasowanie użycia pokazano powyżej:
+Można zadeklarować indeksatorów za pomocą `this` słowa kluczowego jako nazwy właściwości i deklarowanie argumentów w nawiasy kwadratowe. Ta deklaracja będzie odpowiadać użycia pokazano w poprzednim akapicie:
 
 ```csharp
 public int this[string key]
@@ -33,25 +33,25 @@ public int this[string key]
 }
 ```
 
-W tym przykładzie początkowej można zobaczyć relację pomiędzy składni dla właściwości i indeksatorów. Prowadzi to odpowiednio do większości składni reguł dla indeksatorów. Indeksatory może mieć modyfikatorów żadnych prawomocny dostęp (publicznych, chronionych wewnętrznych, chronione, wewnętrzne, prywatne lub prywatny chroniony). Mogą być zapieczętowane, wirtualne lub abstrakcyjne. Podobnie jak w przypadku właściwości, można określić modyfikatorów dostępu różnych GET i ustaw accesssors w indeksatora.
-Indeksatory tylko do odczytu (na przykład, pomijając metody dostępu set) lub tylko do zapisu indeksatory mogą określać również (, pomijając metody dostępu get).
+W tym przykładzie początkowej można zobaczyć relację pomiędzy składni dla właściwości i indeksatorów. Ten sposób analogiczny niesie ze sobą za pośrednictwem większość reguł dotyczących składni dla indeksatorów. Indeksatory może mieć żadnych modyfikatorów dostępu nie jest ważna (publicznych, chronionych wewnętrznych, chronione, wewnętrzne, prywatne lub prywatnych chronionych). Mogą one sealed, wirtualne ani abstrakcyjne. Podobnie jak w przypadku właściwości, można określić modyfikatorów różny dostęp do pobierania i zestawu metod dostępu w indeksatorze.
+Możesz również określić indeksatory tylko do odczytu (pomijając metody dostępu set) lub indeksatory tylko do zapisu (pomijając metody dostępu get).
 
-Możesz zastosować prawie wszystko, czego możesz dowiedzieć się, Praca z właściwości indeksatorów. Jedynym wyjątkiem od tej reguły jest *automatycznie implementowane właściwości*. Kompilator nie może wygenerować zawsze poprawny magazyn dla indeksatora.
+Można zastosować prawie wszystko, czego nauczysz się praca z właściwości w celu indeksatorów. Jedynym wyjątkiem od tej reguły jest *automatycznie implementowane właściwości*. Kompilator nie zawsze Generuj poprawny magazyn dla indeksatora.
 
-Obecność argumentów, aby odwołać się do elementu w zestawie elementów odróżnia indeksatory od właściwości. Można zdefiniować wiele indeksatorów w typie, tak długo, jak argument wymieniono dla każdego indeksatora jest unikatowy. Przyjrzyjmy różnych scenariuszy których można użyć co najmniej jeden indeksatorów w definicji klasy. 
+Obecność argumenty, które odwołuje się do elementu w zestawie elementów odróżnia indeksatory od właściwości. Można zdefiniować wiele indeksatorów w danym typie tak długo, jak wykazy argumentów dla każdego indeksatora jest unikatowa. Przyjrzyjmy się różne scenariusze których można użyć co najmniej jeden indeksatorów w definicji klasy. 
 
 ## <a name="scenarios"></a>Scenariusze
 
-Należy zdefiniować *indeksatory* w danego typu, gdy jej interfejsu API modele pewnej kolekcji miejscu należy określić argumenty do tej kolekcji. Twoje indeksatory mogą lub nie mogą być mapowane bezpośrednio do typów kolekcji, które są częścią programu .NET framework core. Danego typu może mieć inne obowiązki oprócz modelowania kolekcji.
-Indeksatory umożliwiają stosowanie odpowiadającego danego typu abstrakcji bez narażania wewnętrzny szczegóły jak przechowywane lub obliczanej wartości dla tego abstrakcji interfejsu API.
+Należy zdefiniować *indeksatory* w danego typu, gdy jej interfejsu API modeli niektóre kolekcji, w którym zdefiniuj argumenty do tej kolekcji. Twoje indeksatory mogą lub nie mogą być mapowane bezpośrednio do typów kolekcji, które są częścią platformy .NET core framework. Danego typu może mieć inne obowiązki oprócz modelowania kolekcji.
+Indeksatory umożliwiają interfejsu API, który odpowiada abstrakcji danego typu bez narażania wewnętrzny szczegóły jak przechowywane lub obliczonych wartości dla tego abstrakcji.
 
-Przejdźmy niektóre typowe scenariusze dotyczące korzystania z *indeksatory*. Dostęp można uzyskać [przykładowy folder dla indeksatorów](https://github.com/dotnet/samples/tree/master/csharp/indexers). Instrukcje pobrania, zobacz [przykłady i samouczki](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Przejdźmy teraz przez niektóre typowe scenariusze za pomocą *indeksatory*. Możesz uzyskać dostęp [przykładowy folder dla indeksatorów](https://github.com/dotnet/samples/tree/master/csharp/indexers). Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="arrays-and-vectors"></a>Tablice i wektorów
+### <a name="arrays-and-vectors"></a>Tablice i wektory
 
-Jest jednym z najbardziej typowych scenariuszy tworzenia indeksatorów, gdy modele danego typu tablicy lub wektora. Można utworzyć indeksatora do modelowania uporządkowaną listę danych. 
+Jest jednym z najbardziej typowych scenariuszy, do tworzenia indeksatorów, gdy typu modele tablicy lub wektora. Można utworzyć indeksator do modelowania uporządkowaną listę danych. 
 
-Zaletą tworzenia własnych indeksatora jest zdefiniować magazynu dla tej kolekcji, w zależności od potrzeb. Wyobraź sobie scenariusz, w którym danego typu modeli danych historycznych, który jest zbyt duży, aby załadować do pamięci na raz. Musisz ładowanie i zwalnianie sekcje kolekcji na podstawie użycia. Poniższy przykład modele tego zachowania. Raporty na liczbę punktów danych istnieje. Tworzy stron do przechowywania części danych na żądanie. Usuwa stron z pamięci, aby zwolnić miejsce dla strony wymagany przez nowszą żądania.
+Zaletą tworzenia własnych indeksatora jest zdefiniować magazynu dla tej kolekcji, w zależności od potrzeb. Wyobraź sobie scenariusz, w którym typu modele danych historycznych, który jest zbyt duży, aby załadować do pamięci na raz. Należy załadować i rozładować sekcje kolekcji na podstawie użycia. Poniższy przykład modeluje zachowania. Raportuje, na ile punktów danych istnieje. Tworzy strony do przechowywania części danych na żądanie. Usuwa stron z pamięci, aby zwolnić miejsce dla stron wymagane przez nowszą żądań.
 
 ```csharp
 public class DataSamples
@@ -172,11 +172,11 @@ public class DataSamples
 }
 ```
 
-Idiom tego projektu do modelowania dowolny rodzaj kolekcji można wykonać w przypadku, gdy istnieją powody nie można załadować cały zestaw danych do kolekcji w pamięci. Zwróć uwagę, że `Page` klasa jest klasą zagnieżdżonych prywatnych nie jest częścią interfejs publiczny. Te szczegóły są ukryte przed wszyscy użytkownicy tej klasy.
+Można wykonać tego idiomu projektu do modelowania dowolny rodzaj kolekcji w przypadku, gdy istnieje wiele powodów, nie można załadować cały zestaw danych do kolekcji w pamięci. Należy zauważyć, że `Page` klasa jest klasą zagnieżdżoną prywatnych nie jest częścią interfejsu publicznego. Te informacje są ukryte przed wszyscy użytkownicy tej klasy.
 
-### <a name="dictionaries"></a>słowników
+### <a name="dictionaries"></a>słowniki
 
-Inny typowy scenariusz polega, gdy trzeba modelu słownika lub mapy. Ten scenariusz jest w przypadku danego typu przechowuje wartości oparte na kluczu, zwykle klucze tekstu. W tym przykładzie tworzy słownik mapujący argumenty wiersza polecenia do [wyrażenia lambda](delegates-overview.md) który Zarządzanie tych opcji. W poniższym przykładzie przedstawiono dwie klasy: `ArgsActions` klasa, która mapuje opcji wiersza polecenia, aby `Action` delegować i `ArgsProcessor` używającą `ArgsActions` do wykonania poszczególnych `Action` po napotkaniu tej opcji.
+Inny typowy scenariusz polega, gdy trzeba modelu obiekt dictionary lub mapy. Ten scenariusz jest, jeśli danego typu przechowuje wartości na podstawie klucza, zazwyczaj klucze tekstu. W tym przykładzie tworzy słownik mapujący argumenty wiersza polecenia do [wyrażeń lambda](delegates-overview.md) zarządzające tych opcji. W poniższym przykładzie przedstawiono dwóch klas: `ArgsActions` klasa, która mapuje opcję wiersza polecenia, aby `Action` delegować i `ArgsProcessor` , który używa `ArgsActions` do wykonania każdego `Action` po napotkaniu tej opcji.
 
 ```csharp
 public class ArgsProcessor
@@ -218,15 +218,15 @@ public class ArgsActions
 }
 ```
 
-W tym przykładzie `ArgsAction` kolekcji ściśle Mapowana kolekcja źródłowa.
-`get` Określa, czy dany opcji został skonfigurowany. Jeśli tak, zwraca `Action` skojarzone z tej opcji. Jeśli nie, zwraca `Action` nie działają. Nie ma publicznego akcesora `set` metody dostępu. Zamiast projektu za pomocą metody publicznej do ustawiania opcji.
+W tym przykładzie `ArgsAction` kolekcji ściśle mapuje do podstawowej kolekcji.
+`get` Decyduje, jeśli skonfigurowano danej opcji. Jeśli tak, zwraca `Action` skojarzone z tej opcji. Jeśli nie, zwraca `Action` , nic nie robi. Nie ma publicznej metody dostępu `set` metody dostępu. Zamiast projektu za pomocą publicznej metody do ustawiania opcji.
 
-### <a name="multi-dimensional-maps"></a>Mapy wielowymiarowych
+### <a name="multi-dimensional-maps"></a>Wielowymiarowe mapy
 
-Można utworzyć indeksatory korzystających z wielu argumentów. Ponadto tych argumentów nie są ograniczone do tego samego typu. Oto dwa przykłady.   
+Możesz tworzyć indeksatory, korzystających z wielu argumentów. Oprócz tych argumentów nie są ograniczone do tego samego typu. Przyjrzyjmy się dwa przykłady.   
 
-W pierwszym przykładzie klasy, które generuje wartości z zestawu Mandelbrot. Aby uzyskać więcej informacji na matematyce za zestaw odczytu [w tym artykule](https://en.wikipedia.org/wiki/Mandelbrot_set). Indeksator używa dwóch symulacyjnych, aby zdefiniować punkt w X, Y płaszczyzny.
-Metoda dostępu get oblicza liczba iteracji, dopóki nie stwierdzono, że punkt nie może być w zestawie. Jeśli zostanie osiągnięta maksymalna liczba iteracji, punkt znajduje się w zestawie, i jest zwracana wartość maxIterations tej klasy. (Obrazy generowane komputera popularized zestawu Mandelbrot zdefiniowanie kolorów liczba iteracji, które są niezbędne do określenia, czy punkt znajduje się poza zestaw.
+W pierwszym przykładzie pokazano klasę, która generuje wartości z zestawu Mandelbrot. Aby uzyskać więcej informacji na matematyce za zestaw odczytu [w tym artykule](https://en.wikipedia.org/wiki/Mandelbrot_set). Indeksator używa dwóch wartości podwójnej precyzji, aby zdefiniować punkt x, Y płaszczyzny.
+Metody dostępu get oblicza liczbę iteracji, dopóki punkt zostanie uznane za nie może być w zestawie. Jeśli zostanie osiągnięta maksymalna liczba iteracji, punkt znajduje się w zestawie i zwracana jest wartość maxIterations tej klasy. (Obrazy wygenerowanego przez komputer spopularyzowany dla zestawu Mandelbrot zdefiniowanie kolorów liczba iteracji, które są niezbędne w celu ustalenia, czy punkt znajduje się poza zestaw.
 
 ```csharp
 public class Mandelbrot
@@ -261,9 +261,9 @@ public class Mandelbrot
 ```
 
 Zestaw Mandelbrot definiuje wartości w każdym folderu (x, y) koordynować rzeczywiste wartości liczbowe.
-Definiuje słownik, który może zawierać nieograniczoną liczbę wartości. Dlatego nie jest Brak magazynu poza zestaw. Zamiast tego należy ta klasa oblicza wartość dla każdego punktu, gdy kod wywołuje `get` metody dostępu. Nie ma żadnych powiązany magazyn używany.
+Definiuje słownik, który może zawierać nieograniczoną liczbę wartości. Dlatego jest Brak magazynu poza zestaw. Zamiast tego należy ta klasa oblicza wartość dla każdego punktu, gdy kod wywołuje `get` metody dostępu. Nie ma żadnych magazynu.
 
-Przeanalizujmy jedno ostatniego Użycie indeksatorów, gdzie indeksatora przyjmuje wiele argumentów o różnych typach. Należy wziąć pod uwagę program, który zarządza temperatury historycznych danych. Ten indeksator używa miejscowość i Data ustawić lub pobrać temperatury wysoki i niski dla tej lokalizacji:
+Przeanalizujmy ostatniego użycia jeden z indeksatorów, w której indeksator ma wiele argumentów o różnych typach. Należy wziąć pod uwagę program, który zarządza dane historyczne dotyczące temperatury. Ten indeksator używa miejscowość i datę można ustawiać ani pobierać wysokich i niskich temperatur wobec tej lokalizacji:
 
 ```csharp
 using DateMeasurements = 
@@ -309,21 +309,21 @@ public class HistoricalWeatherData
 }
 ```
 
-W tym przykładzie jest tworzony indeksatorze, który mapuje dane o pogodzie w dwóch różnych argumentów: Miejscowość (reprezentowane przez `string`) i datę (reprezentowane przez `DateTime`). Wewnętrzny magazyn korzysta z dwóch `Dictionary` klasy do reprezentowania dwuwymiarowa słownika. Publiczny interfejs API reprezentuje nie jest już powiązany magazyn. Zamiast funkcji języka indeksatory umożliwia utworzenie publiczny interfejs, który reprezentuje użytkownika abstrakcji, mimo że powiązany magazyn muszą używać różnych podstawowych typów kolekcji.
+W tym przykładzie tworzy działanie indeksatora, który mapuje dane pogody na dwa różne argumenty: mieście (reprezentowane przez `string`) i daty (reprezentowane przez `DateTime`). Wewnętrzny magazyn korzysta z dwóch `Dictionary` klasy do reprezentowania dwuwymiarową słownika. Publiczny interfejs API nie jest już reprezentuje podstawowy magazyn. Zamiast funkcji języka, indeksatorów pozwala na tworzenie publiczny interfejs, który reprezentuje swoje abstrakcji, mimo że bazowego magazynu, należy użyć różne podstawowe typy kolekcji.
 
-Istnieją dwie części tego kodu, które mogą być nieznane niektórzy deweloperzy. Te dwa `using` instrukcji:
+Istnieją dwie części ten kod, który może być nieznane dla niektórych programistów. Te dwa `using` instrukcji:
 
 ```csharp
 using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-Utwórz *alias* do skonstruowanego typu ogólnego. Te instrukcje Włącz kod później używany bardziej opisowe `DateMeasurements` i `CityDateMeasurements` nazw zamiast ogólnego konstrukcji `Dictionary<DateTime, Measurements>` i `Dictionary<string, Dictionary<DateTime, Measurements> >`. Ta konstrukcja wymaga użycia pełni kwalifikowane nazwy typów w prawej części `=` logowania.
+Tworzenie *alias* dla zbudowany typ ogólny. Te instrukcje należy włączyć kod później użyć bardziej opisowe `DateMeasurements` i `CityDateMeasurements` nazwy zamiast ogólnych konstrukcja `Dictionary<DateTime, Measurements>` i `Dictionary<string, Dictionary<DateTime, Measurements> >`. Ta konstrukcja wymaga przy użyciu w pełni kwalifikowanych nazw typów na prawej krawędzi `=` logowania.
 
-Drugi technika jest paska Wyłącz fragmenty czasu dowolnego `DateTime` obiekt używany do indeksu w kolekcji. .NET framework nie obejmuje jedynym typem daty.
-Deweloperzy za pomocą `DateTime` typu, ale użyj `Date` właściwość, aby upewnić się, że wszelkie `DateTime` obiektów z danego dnia są takie same.
+Drugi techniką jest paska Wyłącz fragmenty czas dowolnych `DateTime` obiekt używany do indeksowania w kolekcji. .NET framework nie zawiera typu tylko data.
+Deweloperzy używają `DateTime` typu, ale użyj `Date` właściwość, aby upewnić się, że dowolne `DateTime` obiektu z tego samego dnia są takie same.
 
 ## <a name="summing-up"></a>Podsumowanie
 
-Należy utworzyć indeksatorów w dowolnym momencie ma elementu właściwości w klasie, w których tej właściwości reprezentuje pojedynczą wartość, ale raczej kolekcję wartości, w którym każdego elementu jest identyfikowany przez zestaw argumentów. Tych argumentów można jednoznacznie zidentyfikować, który element w kolekcji ma być utworzone odwołanie.
-Indeksatory rozszerzenie pojęcia [właściwości](properties.md), której członkiem jest traktowany jak elementu danych z poza klasą, ale jak metody na stronie. Indeksatory zezwalają na argumenty można znaleźć pojedynczego elementu we właściwości, która reprezentuje zestaw elementów.
+Indeksatory należy utworzyć w dowolnym momencie ma elementu właściwości w klasie gdzie tę właściwość reprezentuje pojedynczą wartość, ale raczej zbiór wartości, gdzie poszczególnych elementów jest identyfikowany przez zestawu argumentów. Te argumenty może jednoznacznie zidentyfikować, który element w kolekcji, które powinny istnieć odwołania.
+Indeksatory rozszerzenie pojęcia [właściwości](properties.md), której członkiem jest traktowany jak elementu danych z poza klasy, ale jak metoda po stronie. Indeksatory zezwalają na argumenty znaleźć pojedynczy element we właściwości, które reprezentuje zestaw elementów.

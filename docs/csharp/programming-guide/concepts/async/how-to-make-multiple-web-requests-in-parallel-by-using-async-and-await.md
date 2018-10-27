@@ -2,12 +2,12 @@
 title: 'Porady: wiele żądań sieci Web równolegle za pomocą async i await (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: e8fc5cad11f862884d64c9e7fc6a38f2edaf0a43
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b366b43cf1c6114f02f026da25aeb5e30dc91c6f
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513924"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453427"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Porady: wiele żądań sieci Web równolegle za pomocą async i await (C#)
 W metodzie asynchronicznej zadania są uruchamiane po ich utworzeniu. [Await](../../../../csharp/language-reference/keywords/await.md) operator jest stosowany do zadania w tym punkcie metody, których nie można kontynuować przetwarzania przed zakończeniem zadania. Często zadanie jest oczekiwane, zaraz po jego utworzeniu, co ilustruje poniższy przykład.  
@@ -87,8 +87,8 @@ var result = await myTask;
         // is designed to be used with a monospaced font, such as  
         // Lucida Console or Global Monospace.  
         var bytes = content.Length;  
-        // Strip off the "http://".  
-        var displayURL = url.Replace("http://", "");  
+        // Strip off the "https://".  
+        var displayURL = url.Replace("https://", "");  
         resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
     }  
     ```  
@@ -116,11 +116,11 @@ var result = await myTask;
         // Create and start the tasks. As each task finishes, DisplayResults   
         // displays its length.  
         Task<int> download1 =   
-            ProcessURLAsync("http://msdn.microsoft.com", client);  
+            ProcessURLAsync("https://msdn.microsoft.com", client);  
         Task<int> download2 =   
-            ProcessURLAsync("http://msdn.microsoft.com/library/hh156528(VS.110).aspx", client);  
+            ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client);  
         Task<int> download3 =   
-            ProcessURLAsync("http://msdn.microsoft.com/library/67w7t67f.aspx", client);  
+            ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client);  
   
         // Await each task.  
         int length1 = await download1;  
@@ -187,11 +187,11 @@ namespace AsyncExample_MultipleTasks
             // Create and start the tasks. As each task finishes, DisplayResults   
             // displays its length.  
             Task<int> download1 =   
-                ProcessURLAsync("http://msdn.microsoft.com", client);  
+                ProcessURLAsync("https://msdn.microsoft.com", client);  
             Task<int> download2 =   
-                ProcessURLAsync("http://msdn.microsoft.com/library/hh156528(VS.110).aspx", client);  
+                ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client);  
             Task<int> download3 =   
-                ProcessURLAsync("http://msdn.microsoft.com/library/67w7t67f.aspx", client);  
+                ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client);  
   
             // Await each task.  
             int length1 = await download1;  
@@ -218,8 +218,8 @@ namespace AsyncExample_MultipleTasks
             // is designed to be used with a monospaced font, such as  
             // Lucida Console or Global Monospace.  
             var bytes = content.Length;  
-            // Strip off the "http://".  
-            var displayURL = url.Replace("http://", "");  
+            // Strip off the "https://".  
+            var displayURL = url.Replace("https://", "");  
             resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
         }  
     }  

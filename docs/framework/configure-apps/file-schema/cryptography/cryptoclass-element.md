@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e74cc5fa99473562b158cd5068fb8bbaeb6a4a17
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: aec786123357337cbaa6251191a023c092af3049
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196983"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181072"
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoclass —&gt; — Element
 Zawiera klasy kryptografii, która ma mapowania do przyjazną nazwę w [ \<nameentry — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) elementu.  
@@ -78,7 +78,7 @@ Zawiera klasy kryptografii, która ma mapowania do przyjazną nazwę w [ \<namee
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)  
- [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)  
+- [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

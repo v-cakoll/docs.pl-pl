@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 125aab04b5b323855e44c02e0c576b99618d70df
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 940bd8b7fe0be79ea6448b1eab69359bdb92fdc9
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873612"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480047"
 ---
 # <a name="64-bit-applications"></a>Aplikacje 64-bitowe
 Podczas kompilowania aplikacji można określić, że powinna działać w systemie operacyjnym Windows 64-bitowych jako natywną aplikację lub w emulatorze WOW64 (Windows 32-bit na Windows 64-bitowych). WOW64 jest środowiskiem zgodności, które umożliwia aplikacji 32-bitowy, do uruchomienia w systemie 64-bitowych. Emulator WOW64 znajduje się we wszystkich 64-bitowych wersjach systemu operacyjnego Windows.  
@@ -58,7 +58,7 @@ Podczas kompilowania aplikacji można określić, że powinna działać w system
 |--------------|---------------------|  
 |Visual Basic|[/ platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[/ platform (opcje kompilatora C#)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|Możesz utworzyć niezależne od platformy, aplikacje języka intermediate language (MSIL) firmy Microsoft przy użyciu **/CLR: Safe**. Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ zawiera kompilator osobne dla każdego 64-bitowym systemie operacyjnym. Aby uzyskać więcej informacji o tym, jak używać języka Visual C++ do tworzenia natywnych aplikacji działających na 64-bitowym systemie operacyjnym Windows, zobacz [programowanie 64-bitowe](https://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
+|Visual C++|Możesz utworzyć niezależne od platformy, aplikacje języka intermediate language (MSIL) firmy Microsoft przy użyciu **/CLR: Safe**. Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ zawiera kompilator osobne dla każdego 64-bitowym systemie operacyjnym. Aby uzyskać więcej informacji o tym, jak używać języka Visual C++ do tworzenia natywnych aplikacji działających na 64-bitowym systemie operacyjnym Windows, zobacz [programowanie 64-bitowe](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Określanie stanu pliku .exe lub pliku .dll  
  Aby określić, czy pliku .exe lub pliku dll jest przeznaczona do uruchamiania tylko na danej platformie lub w emulatorze WOW64, użyj [CorFlags.exe (narzędzie konwersji CorFlags)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) bez żadnych opcji. CorFlags.exe umożliwia również zmienić stan platformy pliku .exe lub .dll. Nagłówku CLR zestawu Visual Studio ma ustawiony numer wersji środowiska uruchomieniowego głównych do 2 i ustawiony numer wersji środowiska uruchomieniowego pomocnicza do 5. Aplikacje, które mają wersję pomocniczą środowiska uruchomieniowego, równa 0, są traktowane jako starsze aplikacje i są zawsze wykonywane w emulatorze WOW64.  

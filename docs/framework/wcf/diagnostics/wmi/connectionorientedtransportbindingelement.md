@@ -2,19 +2,19 @@
 title: ConnectionOrientedTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-ms.openlocfilehash: 3b1055e6e2329fd213ae973ad32cdf8014d30a04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49f030c05f02280d483ac2a836cbe75716b7b5cc
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487451"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185057"
 ---
 # <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
 ConnectionOrientedTransportBindingElement  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class ConnectionOrientedTransportBindingElement : TransportBindingElement  
 {  
   datetime ChannelInitializationTimeout;  
@@ -34,67 +34,67 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 ## <a name="properties"></a>Właściwości  
  Klasa ConnectionOrientedTransportBindingElement ma następujące właściwości:  
   
-### <a name="channelinitializationtimeout"></a>limitu czasu channelInitializationTimeout  
- Typ danych: daty i godziny  
+### <a name="channelinitializationtimeout"></a>channelInitializationTimeout  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Obiekt timespan określający sposób inicjacji kanału musi zostać ukończona przed przekroczeniem limitu czasu.  
+ Timespan określający czas inicjowania kanału musi ukończyć przed przekroczeniem limitu czasu.  
   
-### <a name="connectionbuffersize"></a>connectionBufferSize  
+### <a name="connectionbuffersize"></a>ConnectionBufferSize  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Rozmiar buforu używany do przesyłania fragmentu szeregowanego komunikatu podczas transmisji od klienta lub usługi.  
+ Rozmiar buforu używany do przesyłania fragmentów serializacji wiadomości na łączu z klienta lub usługi.  
   
 ### <a name="hostnamecomparisonmode"></a>parametru hostNameComparisonMode  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Wartość, która wskazuje, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI.  
   
 ### <a name="maxbuffersize"></a>wartość maxBufferSize  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalny rozmiar bufora.  
+ Maksymalny rozmiar buforu do użycia.  
   
-### <a name="maxoutputdelay"></a>maxOutputDelay  
- Typ danych: daty i godziny  
+### <a name="maxoutputdelay"></a>MaxOutputDelay  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalny interwał czasu, przez który fragment lub całość komunikatu może pozostawać buforowana w pamięci przed wysłaniem.  
+ Maksymalny interwał czasu, który fragment wiadomości lub cały komunikat może pozostać buforowanych w pamięci przed wysłane.  
   
 ### <a name="maxpendingaccepts"></a>maxPendingAccepts  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalna liczba oczekujących asynchronicznych wątków dostępnych do przetwarzania przychodzących połączeń z usługą akceptujących.  
+ Maksymalna liczba oczekujących asynchronicznych zaakceptować wątki, które są dostępne do przetwarzania przychodzących połączeń z usługą.  
   
 ### <a name="maxpendingconnections"></a>maxPendingConnections  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Maksymalna liczba oczekujących połączeń.  
   
 ### <a name="transfermode"></a>Tryb transferu  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Wartość, która określa, czy komunikaty są buforowane, czy strumieniowo z nawiązaniem połączenia transportu.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

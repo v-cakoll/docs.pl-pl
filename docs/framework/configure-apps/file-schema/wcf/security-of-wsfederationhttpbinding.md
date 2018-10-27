@@ -2,13 +2,12 @@
 title: '&lt;security&gt; w &lt;wsFederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-author: BrucePerlerMS
-ms.openlocfilehash: 2e7ec6b73ec56aa679040e8d3ee50843c9286183
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9473fa062867383f84ba5931c394f1ac665a74fb
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847779"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50046152"
 ---
 # <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a>&lt;security&gt; w &lt;wsFederationHttpBinding&gt;
 Definiuje ustawienia zabezpieczeń [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  

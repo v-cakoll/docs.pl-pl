@@ -1,5 +1,5 @@
 ---
-title: '&lt;System.Runtime.Caching —&gt; — Element (ustawienia pamięci podręcznej)'
+title: '&lt;System.Runtime.Caching&gt; — Element (ustawienia pamięci podręcznej)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <system.runtime.caching> element
@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 659a168f6c0bcb459bcfbdb247a9959c61c9c996
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0c9932d1328f010158535b096e4ead599c7b3f47
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750612"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50043442"
 ---
-# <a name="ltsystemruntimecachinggt-element-cache-settings"></a>&lt;System.Runtime.Caching —&gt; — Element (ustawienia pamięci podręcznej)
-Zapewnia konfigurację domyślną w pamięci <xref:System.Runtime.Caching.ObjectCache> wykonywania za pośrednictwem `memoryCache` wpis w pliku konfiguracji.  
+# <a name="ltsystemruntimecachinggt-element-cache-settings"></a>&lt;System.Runtime.Caching&gt; — Element (ustawienia pamięci podręcznej)
+Udostępnia konfigurację dla domyślnej w pamięci <xref:System.Runtime.Caching.ObjectCache> wdrożenia za pośrednictwem `memoryCache` wpisu w pliku konfiguracji.  
   
  \<Konfiguracja >  
 \<system.runtime.caching>  
@@ -39,24 +39,24 @@ Zapewnia konfigurację domyślną w pamięci <xref:System.Runtime.Caching.Object
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|Definiuje element, który jest używany do konfigurowania pamięci podręcznej, która jest oparta na <xref:System.Runtime.Caching.MemoryCache> klasy.|  
+|[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|Definiuje element, który jest używany do konfigurowania pamięci podręcznej, który jest oparty na <xref:System.Runtime.Caching.MemoryCache> klasy.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Konfiguracja >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Określa element główny w każdym pliku konfiguracyjnym, który jest używany przez środowisko uruchomieniowe języka wspólnego i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplikacji.|  
+|[\<Konfiguracja >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Określa element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplikacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klasy w tej przestrzeni nazw umożliwiają używanie buforowania obiektów, podobnie jak w programie ASP.NET, ale bez zależności w `System.Web` zestawu. Aby uzyskać więcej informacji, zobacz [buforowanie w aplikacjach .NET Framework](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).  
+ Klasy w tej przestrzeni nazw zapewniają sposób na korzystanie z pamięci podręcznej urządzenia, podobnie jak w programie ASP.NET, ale bez zależności `System.Web` zestawu. Aby uzyskać więcej informacji, zobacz [buforowanie w aplikacjach .NET Framework](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
->  Dane wyjściowe pamięci podręcznej funkcji i typów w <xref:System.Runtime.Caching> przestrzeni nazw są nowością w programie [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].  
+>  Zapisywanie funkcji i typów w pamięci podręcznej danych wyjściowych <xref:System.Runtime.Caching> przestrzeni nazw są nowością w programie [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób skonfigurować pamięć podręczną, która jest oparta na <xref:System.Runtime.Caching.MemoryCache> klasy. W przykładzie pokazano sposób konfigurowania wystąpienia `namedCaches` wpis pamięci podręcznej. Nazwa pamięci podręcznej ma ustawioną domyślną nazwę wpisu pamięci podręcznej przez ustawienie `name` atrybutu "default".  
+ Poniższy przykład pokazuje, jak skonfigurować pamięć podręczną, która jest oparta na <xref:System.Runtime.Caching.MemoryCache> klasy. W przykładzie pokazano, jak skonfigurować wystąpienie `namedCaches` wpis dla pamięci podręcznej. Nazwę pamięci podręcznej jest ustawiona na domyślną nazwę wpisu pamięci podręcznej, ustawiając `name` atrybutu "default".  
   
- `cacheMemoryLimitMegabytes` Atrybutu i `physicalMemoryPercentage` atrybutu zostaną ustawione na zero. Ustawienia te atrybuty zero oznacza <xref:System.Runtime.Caching.MemoryCache> domyślnie są używane algorytmy heurystyczne automatyczna zmiana rozmiaru. Implementacja pamięci podręcznej należy porównać bieżącego obciążenia pamięci na wartości bezwzględne lub wartości procentowej pamięci co dwie minuty.  
+ `cacheMemoryLimitMegabytes` Atrybutu i `physicalMemoryPercentage` atrybutu jest równa zero. Ustawienia te atrybuty zero oznacza, że <xref:System.Runtime.Caching.MemoryCache> domyślnie są używane algorytmy heurystyczne automatyczne określanie rozmiaru. Implementacja pamięci podręcznej należy porównać bieżące obciążenie pamięci względem limity pamięci bezwzględne i opartych na procentach co dwie minuty.  
   
 ```xml  
 <configuration>  
@@ -65,7 +65,7 @@ Zapewnia konfigurację domyślną w pamięci <xref:System.Runtime.Caching.Object
       <namedCaches>  
           <add name="default"   
                cacheMemoryLimitMegabytes="0"   
-               physicalMemoryPercentage="0"  
+               physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
     </memoryCache>  
@@ -74,4 +74,4 @@ Zapewnia konfigurację domyślną w pamięci <xref:System.Runtime.Caching.Object
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<memoryCache > elementu (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+ [\<memoryCache >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 726e41e8cde028fb86004ff06e2ad0663a042287
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2979f8e50b7fc0d0fab419a89e708517fd271be8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838354"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135119"
 ---
 # <a name="workflow-security"></a>Zabezpieczenia przepływu pracy
 Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii, takich jak Microsoft SQL Server i Windows Communication Foundation (WCF). Interakcja z tych technologii może powodować problemy z zabezpieczeniami w Twój przepływ pracy, jeśli będą wykonywane niepoprawnie.
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii,
 
 4.  Prowadząca do tokenu zabezpieczeń klienta z usługą zaplecza (delegacji opartej na oświadczeniach) za pomocą usługi WS-Trust ActAs
 
-Aby uzyskać więcej informacji i Pobierz CTP pakietu programu WF zabezpieczeń, zobacz: [CTP pakietu zabezpieczeń WF](http://wf.codeplex.com/releases/view/48114)
+Aby uzyskać więcej informacji i Pobierz CTP pakietu programu WF zabezpieczeń, zobacz: [CTP pakietu zabezpieczeń WF](https://wf.codeplex.com/releases/view/48114)

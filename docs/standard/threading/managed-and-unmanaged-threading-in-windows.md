@@ -1,22 +1,25 @@
 ---
 title: Zarządzana i niezarządzana wątkowość w systemie Windows
-ms.date: 03/30/2017
+ms.date: 10/24/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
+- threading [.NET], managed
+- threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 34bd959890717a16df80d3870099757dd7400943
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864553"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50034029"
 ---
-# <a name="managed-and-unmanaged-threading-in-windows"></a>Zarządzana i niezarządzana wątkowość w systemie Windows
+# <a name="managed-and-unmanaged-threading-in-windows"></a>Zarządzana i niezarządzana wątkowość w Windows
+
 Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threading.Thread> klasy, w tym wątków utworzone przez środowisko uruchomieniowe języka wspólnego, a utworzone poza środowisko uruchomieniowe, które należy wprowadzić zarządzane środowisko do wykonywania kodu. Środowisko uruchomieniowe monitoruje wszystkie wątki w swoim procesie, które kiedykolwiek wykonali kod w zarządzanym środowisku wykonywania. Żądania nie Śledź innych wątków. Wątki, które można wprowadzić zarządzanym środowisku wykonywania za pomocą COM interop (ponieważ środowisko uruchomieniowe uwidacznia zarządzane obiekty jako obiekty COM do niezarządzanego świata), COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) funkcji i wywołanie platformy.  
   
  Gdy wątek niezarządzany wejdzie w czasie wykonywania za pomocą, na przykład wywołalne opakowanie COM, system sprawdza magazynu wątków lokalnych wątek do wyszukiwania dla zarządzanych przy użyciu wewnętrznego <xref:System.Threading.Thread> obiektu. Jeśli został znaleziony, środowisko wykonawcze jest już pamiętać o tym wątku. Nie można znaleźć jednego, jednak środowisko uruchomieniowe tworzy nową <xref:System.Threading.Thread> obiektu i instaluje je w magazynie wątków lokalnych w tym wątku.  
@@ -26,7 +29,8 @@ Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threadi
 > [!NOTE]
 >  System operacyjny **ThreadId** nie ma stałej relacji wątków zarządzanych, ponieważ niezarządzany host może kontrolować relacji między wątkami zarządzanych i niezarządzanych. W szczególności zaawansowanych hosta można użyć interfejsu API Fiber zaplanować wiele wątków zarządzanych względem tego samego wątku systemu operacyjnego lub Przenieś wątek między wątkami innego systemu operacyjnego.  
   
-## <a name="mapping-from-win32-threading-to-managed-threading"></a>Mapowanie z Win32 wątków do zarządzanych wątkach  
+## <a name="mapping-from-win32-threading-to-managed-threading"></a>Mapowanie z Win32 wątków do zarządzana wątkowość
+
  Poniższa tabela zawiera mapowanie elementów wątkowości Win32 do ich przybliżony środowiska uruchomieniowego równoważne. Należy pamiętać, że to mapowanie nie reprezentuje identyczną funkcjonalność. Na przykład **TerminateThread** nie jest wykonywane **na koniec** klauzule lub Zwolnij część zasobów i nie można zapobiec. Jednak <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> wykonuje kod wycofywania, odzyskuje wszystkie zasoby i może nastąpić odmowa przy użyciu <xref:System.Threading.Thread.ResetAbort%2A>. Należy zapoznać się z dokumentacją ściśle przed wprowadzania założeń dotyczących funkcji.  
   
 |W systemie Win32|W środowisku uruchomieniowym języka|  
@@ -44,8 +48,9 @@ Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threadi
 |Odpowiednika|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
 |Zamknij, aby **CoInitializeEx** (OLE32. BIBLIOTEKA DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
-## <a name="managed-threads-and-com-apartments"></a>Zarządzanych wątkami i Apartamentach COM  
- Wątków zarządzanych mogą zostać oznaczone jako, aby wskazać, że będzie obsługiwać [apartamentem](/windows/desktop/com/single-threaded-apartments) lub [wielowątkowe](/windows/desktop/com/multithreaded-apartments) typu apartment. (Aby uzyskać więcej informacji na temat COM wątkowości architektury, zobacz [procesy, wątki i Apartamentach](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A>, I <xref:System.Threading.Thread.TrySetApartmentState%2A> metody <xref:System.Threading.Thread> klasy return i przypisz stan apartamentu wątku. Jeśli nie ustawiono stan <xref:System.Threading.Thread.GetApartmentState%2A> zwraca <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+## <a name="managed-threads-and-com-apartments"></a>Zarządzanych wątkami i apartamentach COM
+
+Wątków zarządzanych mogą zostać oznaczone jako, aby wskazać, że będzie obsługiwać [apartamentem](/windows/desktop/com/single-threaded-apartments) lub [wielowątkowe](/windows/desktop/com/multithreaded-apartments) typu apartment. (Aby uzyskać więcej informacji na temat COM wątkowości architektury, zobacz [procesy, wątki i Apartamentach](/windows/desktop/com/processes--threads--and-apartments).) <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A>, I <xref:System.Threading.Thread.TrySetApartmentState%2A> metody <xref:System.Threading.Thread> klasy return i przypisz stan apartamentu wątku. Jeśli nie ustawiono stan <xref:System.Threading.Thread.GetApartmentState%2A> zwraca <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  Właściwość można ustawić tylko wtedy, gdy znajduje się wątek <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> stanu; można ustawić tylko raz dla wątku.  
   
@@ -61,8 +66,13 @@ Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threadi
  Wywołuje kodu zarządzanego do obiektów COM, jest zawsze zgodna COM reguły. Innymi słowy połączenia za pośrednictwem serwerów proxy apartamentu COM i otoki kontekstu COM + 1.0, zgodnie z ustawieniem OLE32.  
   
 ## <a name="blocking-issues"></a>Problemy z blokowaniem  
- Jeśli wątek sprawia, że wywołanie niezarządzanych w systemie operacyjnym, który został zablokowany wątek w niezarządzanym kodzie, środowisko wykonawcze nie podejmie kontrolę nad nim dla <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> lub <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. W przypadku właściwości <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, środowisko uruchomieniowe oznacza wątku dla **przerwać** i ma kontrolę nad nim, gdy wejdzie ona ponownie kodu zarządzanego. Zaleca się, można ich używać blokowania zarządzanych zamiast blokowania niezarządzanych. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>i tak dalej wszystkie reagują na <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Ponadto jeśli wątek jest jednowątkowym apartamentem, tych zarządzanych operacji blokowania będzie poprawnie pompy komunikatów w Twojego mieszkania podczas, gdy wątek jest zablokowany.  
-  
+
+Jeśli wątek sprawia, że wywołanie niezarządzanych w systemie operacyjnym, który został zablokowany wątek w niezarządzanym kodzie, środowisko wykonawcze nie podejmie kontrolę nad nim dla <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> lub <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. W przypadku właściwości <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, środowisko uruchomieniowe oznacza wątku dla **przerwać** i ma kontrolę nad nim, gdy wejdzie ona ponownie kodu zarządzanego. Zaleca się, można ich używać blokowania zarządzanych zamiast blokowania niezarządzanych. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>i tak dalej wszystkie reagują na <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Ponadto jeśli wątek jest jednowątkowym apartamentem, tych zarządzanych operacji blokowania będzie poprawnie pompy komunikatów w Twojego mieszkania podczas, gdy wątek jest zablokowany.  
+
+## <a name="threads-and-fibers"></a>Wątków i włókien
+
+Model wątkowości platformy .NET nie obsługuje [włókien](/windows/desktop/procthread/fibers). Nie należy wywołać do niezarządzanej funkcji, który jest implementowany przy użyciu włókien. Takie połączenia może spowodować awarię środowiska uruchomieniowego .NET.
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  

@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40820a805310786eeb0effd7c5284c1a70a6e70b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407603"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452917"
 ---
 # <a name="cordebugehclause-structure"></a>Struktura CorDebugEHClause
 [Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
   
- Reprezentuje wyjątek klauzuli (EH) dla danej fragment kodu w języku pośrednim (IL).  
+ Reprezentuje wyjątek obsługi klauzuli (EH) dla danego kodu języka pośredniego (IL).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,26 +45,26 @@ typedef struct _CorDebugEHClause {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`Flags`|Pole bitowe, który opisuje informacje o wyjątku w klauzuli EH. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|  
-|`TryOffset`|Przesunięcie, w bajtach z `try` bloku od początku treści metody.|  
+|`TryOffset`|Przesunięcie, w bajtach, z `try` bloku od początku treści metody.|  
 |`TryLength`|Długość w bajtach z `try` bloku.|  
 |`HandlerOffset`|Lokalizacja programu obsługi dla tego `try` bloku.|  
 |`HandlerLength`|Rozmiar kod obsługi w bajtach.|  
-|`ClassToken`|Token metadanych dla obsługi wyjątków na podstawie typu.|  
-|`FilterOffset`|Przesunięcie w bajtach, od początku treści metody obsługi na podstawie filtru wyjątków.|  
+|`ClassToken`|Token metadanych w przypadku obsługi na podstawie typu wyjątku.|  
+|`FilterOffset`|Przesunięcie w bajtach od początku treści metody obsługi wyjątków na podstawie filtru.|  
   
 ## <a name="remarks"></a>Uwagi  
- Tablica `CoreDebugEHClause` wartości zwracane przez [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) metody.  
+ Tablica `CoreDebugEHClause` wartości jest zwracana przez [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) metody.  
   
- Informacje klauzuli EH jest zdefiniowany w specyfikacji interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [standardowe ECMA-355: infrastruktury języka wspólnego (CLI), w wersji 6](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Informacje o klauzuli EH jest definiowany przez specyfikację interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [standardowe ECMA-355: infrastruktury języka wspólnego (CLI), w wersji 6](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
- `flags` Pole może zawierać następujące flagi. Należy pamiętać, że nie są zdefiniowane w CorDebug.idl lub CorDebug.h.  
+ `flags` Pole może zawierać następujących flag. Należy pamiętać, że nie są zdefiniowane w CorDebug.idl lub CorDebug.h.  
   
 |Flaga|Wartość|Opis|  
 |----------|-----------|-----------------|  
-|`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|Klauzula typu wyjątku.|  
-|`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|Wyjątek filtru i obsługi klauzuli.|  
+|`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|Klauzula typizowanego wyjątku.|  
+|`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|Wyjątek filtr i obsługi klauzuli.|  
 |`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|A `finally` klauzuli.|  
-|`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Klauzula usterek ( `finally` klauzuli, która jest wywoływana tylko wtedy, gdy jest zgłaszany wyjątek).|  
+|`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Klauzuli fault ( `finally` klauzula, która jest wywoływana tylko wtedy, gdy zostanie zgłoszony wyjątek).|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

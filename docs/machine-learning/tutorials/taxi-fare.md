@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 133b7ad17a98e4eea510f1704555b690b98e9091
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bfae97d65ec192e9289841c82d84807b4937b09a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252847"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183818"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Samouczek: Używanie strukturze ML.NET do prognozowania cen biletów usługi New York taksówek (Regresja)
 
@@ -150,13 +150,13 @@ pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, sep
 
 W następnych krokach nazywamy kolumny według nazw zdefiniowana w `TaxiTrip` klasy.
 
-Gdy wiedzę i oceniane, domyślne wartości w modelu **etykiety** kolumny będą traktowane jako prawidłowe wartości do można przewidzieć. Ponieważ chcemy przewidzieć taryfy taksówek w podróży, skopiuj `FareAmount` kolumny na **etykiety** kolumny. Aby to zrobić, należy użyć <xref:Microsoft.ML.Transforms.ColumnCopier> i Dodaj następujący kod:
+Gdy wiedzę i oceniane, domyślne wartości w modelu **etykiety** kolumny będą traktowane jako prawidłowe wartości do można przewidzieć. Ponieważ chcemy przewidzieć taryfy taksówek w podróży, skopiuj `FareAmount` kolumny na **etykiety** kolumny. Aby to zrobić, należy użyć <xref:Microsoft.ML.Legacy.Transforms.ColumnCopier> i Dodaj następujący kod:
 
 ```csharp
 pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
 ```
 
-Algorytm, który przygotowuje model wymaga **liczbowych** funkcji, więc do przekształcania danych podzielonych na kategorie (`VendorId`, `RateCode`, i `PaymentType`) wartości jako liczby. Aby to zrobić, użyj <xref:Microsoft.ML.Transforms.CategoricalOneHotVectorizer>, co powoduje przypisanie różnych liczbowe wartości różne wartości w każdej z kolumn klucza i Dodaj następujący kod:
+Algorytm, który przygotowuje model wymaga **liczbowych** funkcji, więc do przekształcania danych podzielonych na kategorie (`VendorId`, `RateCode`, i `PaymentType`) wartości jako liczby. Aby to zrobić, użyj <xref:Microsoft.ML.Legacy.Transforms.CategoricalOneHotVectorizer>, co powoduje przypisanie różnych liczbowe wartości różne wartości w każdej z kolumn klucza i Dodaj następujący kod:
 
 ```csharp
 pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
@@ -164,7 +164,7 @@ pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
                                              "PaymentType"));
 ```
 
-Ostatnim krokiem w przygotowaniu danych łączy wszystkie kolumny funkcji do **funkcji** przy użyciu kolumny <xref:Microsoft.ML.Transforms.ColumnConcatenator> klasy przekształcenia. Domyślnie algorytmu uczenia przetwarza tylko funkcje z **funkcji** kolumny. Dodaj następujący kod:
+Ostatnim krokiem w przygotowaniu danych łączy wszystkie kolumny funkcji do **funkcji** przy użyciu kolumny <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> klasy przekształcenia. Domyślnie algorytmu uczenia przetwarza tylko funkcje z **funkcji** kolumny. Dodaj następujący kod:
 
 ```csharp
 pipeline.Add(new ColumnConcatenator("Features",
@@ -182,9 +182,9 @@ Należy zauważyć, że `TripTime` kolumny, która odpowiada `trip_time_in_secs`
 
 ## <a name="choose-a-learning-algorithm"></a>Wybieranie algorytmu uczenia
 
-Po dodaniu danych z potokiem i przekształcane na poprawny format danych wejściowych, wybrać algorytm uczenia (**learner**). Uczeń przygotowuje modelu. Wybrano **regresji** zadań dla tego problemu, dzięki czemu używasz <xref:Microsoft.ML.Trainers.FastTreeRegressor> uczeń, który jest jednym z uczących regresji, dostarczone przez strukturze ML.NET.
+Po dodaniu danych z potokiem i przekształcane na poprawny format danych wejściowych, wybrać algorytm uczenia (**learner**). Uczeń przygotowuje modelu. Wybrano **regresji** zadań dla tego problemu, dzięki czemu używasz <xref:Microsoft.ML.Legacy.Trainers.FastTreeRegressor> uczeń, który jest jednym z uczących regresji, dostarczone przez strukturze ML.NET.
 
-<xref:Microsoft.ML.Trainers.FastTreeRegressor> Uczeń korzysta, wzrostu gradientu. Ulepszanie gradientu jest techniką problemów regresji uczenia maszynowego. Zbudował każdego drzewa regresji, w sposób stopniowy. Aby zmierzyć błędów w każdym kroku i popraw go w ciągu następnych widoku jest używana funkcja utraty wstępnie zdefiniowane. Wynik jest model predykcyjny, który jest faktycznie zespołu słabszy modele predykcyjne. Aby uzyskać więcej informacji na temat zwiększania wyniku gradientu zobacz [wzmocnione regresji drzewa decyzyjnego](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
+<xref:Microsoft.ML.Legacy.Trainers.FastTreeRegressor> Uczeń korzysta, wzrostu gradientu. Ulepszanie gradientu jest techniką problemów regresji uczenia maszynowego. Zbudował każdego drzewa regresji, w sposób stopniowy. Aby zmierzyć błędów w każdym kroku i popraw go w ciągu następnych widoku jest używana funkcja utraty wstępnie zdefiniowane. Wynik jest model predykcyjny, który jest faktycznie zespołu słabszy modele predykcyjne. Aby uzyskać więcej informacji na temat zwiększania wyniku gradientu zobacz [wzmocnione regresji drzewa decyzyjnego](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
 
 Dodaj następujący kod do `Train` metoda przetwarzania danych kodzie dodanym w poprzednim kroku:
 

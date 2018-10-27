@@ -11,14 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f4ae905b7500a8555691557b264985acf538d075
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: eaabb382a7bbb2cdd19c884fcd8499e626f70d4a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48776821"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180994"
 ---
 # <a name="proxy-configuration"></a>Konfiguracja serwera proxy
 Serwer proxy obsługuje żądania klienta dla zasobów. Serwer proxy można zwrócić żądany zasób z pamięci podręcznej lub przekazywać żądania do serwera, na którym znajduje się zasób. Serwery proxy może poprawić wydajność sieci dzięki zmniejszeniu liczby żądań wysyłanych do serwerów zdalnych. Serwery proxy można również ograniczyć dostęp do zasobów.  

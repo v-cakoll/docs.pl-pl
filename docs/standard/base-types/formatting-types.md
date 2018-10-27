@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0185d79d8663d552378248f0e021a7fee8f0522
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502218"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189722"
 ---
 # <a name="formatting-types-in-net"></a>Typy formatowania na platformie .NET
 <a name="Introduction"></a> Formatowanie jest procesem konwertowania instancji klasy, struktury lub wartości wyliczenia na jego reprezentację ciągu często tak, aby wynikowy ciąg znaków, które mogą być wyświetlane użytkownikom lub deserializowany w celu przywrócenia oryginalnego typu danych. Ta konwersja może stwarzać wiele wyzwań:  
@@ -120,7 +120,7 @@ ms.locfileid: "43502218"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  Zaczynając od [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] obejmuje [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) interfejsu z jednej metody [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), który zapewnia domyślną obsługę formatowania. Jednak zaleca się że typy zarządzane nie implementowały `IStringable` interfejsu. Aby uzyskać więcej informacji, zobacz " [!INCLUDE[wrt](../../../includes/wrt-md.md)] i `IStringable` interfejsu" sekcji na <xref:System.Object.ToString%2A?displayProperty=nameWithType> odwołania do stron.  
+>  Zaczynając od [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] obejmuje <xref:Windows.Foundation.IStringable> interfejsu z jednej metody [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), który zapewnia domyślną obsługę formatowania. Jednak zaleca się że typy zarządzane nie implementowały `IStringable` interfejsu. Aby uzyskać więcej informacji, zobacz " [!INCLUDE[wrt](../../../includes/wrt-md.md)] i `IStringable` interfejsu" sekcji na <xref:System.Object.ToString%2A?displayProperty=nameWithType> odwołania do stron.  
   
  Ponieważ wszystkie typy inne niż interfejsy są pochodną <xref:System.Object>, ta funkcjonalność jest dostarczana automatycznie do niestandardowych klas lub struktur. Jednak funkcjonalność oferowana przez domyślną `ToString` metoda, jest ograniczona: mimo że identyfikuje typ, nie podaje żadnych informacji o instancji tego typu. Aby zapewnić reprezentację ciągu obiektu, który zawiera informacje dotyczące tego obiektu, konieczne jest przesłonięcie `ToString` metody.  
   

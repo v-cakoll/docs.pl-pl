@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d06f1c93275cb6adf4f1da02ccd5d889cb06c5d0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b934816073a48936afca119895488ddf2f0e37d2
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203673"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50040163"
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>IHostSyncManager::CreateMonitorEvent — Metoda
 Tworzy obiekt monitorowanych zdarzenie z resetowaniem automatycznym.  
@@ -73,4 +73,4 @@ HRESULT CreateMonitorEvent (
  [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
  [IHostAutoEvent, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
  [IHostSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Monitory](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)
+ <xref:System.Threading.Monitor>

@@ -2,28 +2,27 @@
 title: Elementu równorzędnego publikowanie i rozwiązywanie nazw
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 436c84c948a867acedf69af1bc7b3e78c308ce54
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582297"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184559"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Elementu równorzędnego publikowanie i rozwiązywanie nazw
+
 ## <a name="publishing-a-peer-name"></a>Nazwa elementu równorzędnego publikowania  
+
  Aby opublikować nowy identyfikator PNRP, peer wykonuje następujące działania:  
   
 -   Wysyła komunikaty publikacji PNRP dla swoich sąsiadów pamięci podręcznej (elementów równorzędnych, które zostały zarejestrowane identyfikatory PNRP na najniższym poziomie pamięci podręcznej) w celu umieszczenia ich w pamięci podręcznej.  
   
 -   Wybiera losową węzły w chmurze, które nie są jego sąsiadami, a następnie wysyła je żądań rozpoznawania nazw PNRP dla własnego identyfikatora P2P. Wynikowy procesu określania punktu końcowego inicjowania inicjuje pamięci podręcznych losowe węzłów w chmurze o identyfikatorze PNRP publikowania elementów równorzędnych.  
   
--  
+PNRP w wersji 2 węzłów nie opublikowano identyfikatory PNRP, jeśli tylko są one rozpoznawanie innych identyfikatorów P2P. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly = 1 wartość rejestru (typu REG_DWORD) określa, że elementy równorzędne tylko używać PNRP do rozpoznawania nazw, nigdy nie dla nazwy publikacji. Ta wartość rejestru można również skonfigurować za pomocą zasad grupy.  
   
- PNRP w wersji 2 węzłów nie opublikowano identyfikatory PNRP, jeśli tylko są one rozpoznawanie innych identyfikatorów P2P. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly = 1 wartość rejestru (typu REG_DWORD) określa, że elementy równorzędne tylko używać PNRP do rozpoznawania nazw, nigdy nie dla nazwy publikacji. Ta wartość rejestru można również skonfigurować za pomocą zasad grupy.  
-  
-## <a name="resolving-a-peer-name"></a>Rozpoznawanie nazwy elementów równorzędnych  
+## <a name="resolving-a-peer-name"></a>Rozpoznawanie nazwy elementów równorzędnych
+
  Lokalizowanie innych elementów równorzędnych w protokole PNRP sieci lub w chmurze to proces obejmuje dwa etapy:  
   
 1.  Określenie punktu końcowego  
@@ -44,11 +43,9 @@ ms.locfileid: "48582297"
   
 -   Nie znaleziono Identyfikatora PNRP, jeśli nie ma żadnego Identyfikatora PNRP w jego pamięci podręcznej, które znajduje się bliżej docelowy identyfikator PNRP, żądanego elementu równorzędnego wysyła żądanie elementu równorzędnego odpowiedź, która wskazuje na taki stan. Żądanie elementu równorzędnego następnie wybiera najbliższy Identyfikator PNRP.  
   
--  
-  
- Żądanie elementu równorzędnego kontynuuje ten proces w z kolejnymi iteracjami ostatecznie lokalizowanie węzeł, który jest zarejestrowany identyfikator PNRP.  
+Żądanie elementu równorzędnego kontynuuje ten proces w z kolejnymi iteracjami ostatecznie lokalizowanie węzeł, który jest zarejestrowany identyfikator PNRP.  
   
  W ramach <xref:System.Net.PeerToPeer> przestrzeni nazw, istnieje relacja wiele do wielu między <xref:System.Net.PeerToPeer.PeerName> rekordy, które zawierają punkty końcowe i chmury PNRP lub siatki, w których komunikują. Istnieją zduplikowane lub nieaktualne wpisy lub wiele węzłów o takiej samej nazwie elementu równorzędnego, PNRP węzłów można uzyskać bieżące informacje przy użyciu <xref:System.Net.PeerToPeer.PeerNameResolver> klasy. <xref:System.Net.PeerToPeer.PeerNameResolver> Metody uprościć z perspektywy rekordy nazwy jednego elementu równorzędnego do wielu elementów równorzędnych i tego samego elementu równorzędnego jeden do wielu chmur, użyj nazwy pojedynczego elementu równorzędnego. Jest to podobne do zapytanie wykonywane przy użyciu tabeli relacyjnej sprzężenia. Po pomyślnym zakończeniu zwraca obiekt rozpoznawania <xref:System.Net.PeerToPeer.PeerNameRecordCollection> dla nazwy określonego elementu równorzędnego.  Na przykład nazwa elementu równorzędnego może mieć miejsce we wszystkich rekordach nazwa elementu równorzędnego w kolekcji, uporządkowane według chmury. Są to wystąpień nazwa elementu równorzędnego, którego dane pomocnicze może zostać wyświetlony przez aplikację na podstawie PNRP.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>Zobacz także  
+- <xref:System.Net.PeerToPeer>

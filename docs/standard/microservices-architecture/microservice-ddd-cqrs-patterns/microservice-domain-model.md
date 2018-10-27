@@ -1,120 +1,120 @@
 ---
 title: Projektowanie modelu domeny mikrousługi
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie modelu domeny mikrousługi
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Projektowanie modelu domeny mikrousługi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106255"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048479"
 ---
 # <a name="designing-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 
-*Zdefiniuj jeden model domeny sformatowanego dla każdego mikrousługi biznesowych lub ograniczonych kontekstu*
+*Zdefiniuj jeden model domeny sformatowanego dla poszczególnych mikrousług biznesowych lub ograniczony kontekst*
 
-Celem użytkownika jest utworzyć model pojedynczej domeny spójności dla każdej mikrousługi biznesowych lub ograniczonych kontekstu (BC). Należy pamiętać, mimo że BC lub business mikrousługi czasami może składają się z kilka fizycznych usług mających modelu pojedynczej domeny. Model domeny konieczne jest przechwycenie reguł, zachowanie, języka biznesowych i ograniczenia w pojedynczym kontekście ograniczony lub mikrousługi biznesowych, który reprezentuje.
+Celem użytkownika jest, aby utworzyć model pojedynczej domeny spójny dla poszczególnych mikrousług biznesowych lub ograniczony kontekst (BC). Należy pamiętać, jednak, że BC lub mikrousług firmy może czasami składać się z kilka fizycznych usług, które mają model domeny pojedynczej. Model domeny konieczne jest przechwycenie reguły, zachowanie, język biznesowy i ograniczenia pojedynczego ograniczonego kontekstu lub mikrousług firmy, który reprezentuje.
 
-## <a name="the-domain-entity-pattern"></a>Wzorzec jednostką domeny
+## <a name="the-domain-entity-pattern"></a>Wzorzec jednostka domeny
 
-Jednostki reprezentują obiektów domeny i są zdefiniowane głównie przez ich tożsamość, ciągłość działania i trwałości wraz z upływem czasu i nie tylko atrybuty, które obejmują je. Jak Evans marek jest wyświetlany komunikat "obiekt zdefiniowane głównie przez jego tożsamość jest nazywany jednostką." Jednostki są bardzo ważne w modelu domeny, ponieważ są one base dla modelu. W związku z tym należy zidentyfikować i zaprojektować je dokładnie.
+Jednostki reprezentują obiektów domeny i są zdefiniowane głównie przez ich tożsamości, ciągłość działalności biznesowej i trwałości wraz z upływem czasu, a nie tylko przez atrybuty, które składają się z nimi. Jak wynika z Eric Evans, "obiektu zdefiniowane głównie przez jego tożsamość nosi nazwę jednostki." Jednostki są bardzo ważna w modelu domeny, ponieważ są one base dla modelu. W związku z tym należy zidentyfikować i je uważnie projektować.
 
-*Tożsamość jednostki mogą przechodzić wielu mikrousług lub kontekstów ograniczone.*
+*Tożsamość obiektu można krzyżowe w wielu mikrousługach lub ograniczonych kontekstów.*
 
-Tej samej tożsamości (choć nie tego samego obiektu) należy modelować wielu kontekstów ograniczony lub mikrousług. Która nie oznacza, że tej samej jednostki o tej samej logiki i atrybuty są realizowane w wielu sytuacjach ograniczone. Zamiast tego jednostek w kontekście każdego ograniczone ograniczyć ich atrybuty i zachowania do wymaganych w tym ograniczone kontekście domeny.
+Ta sama tożsamość (choć nie tej samej jednostki) mogą być modelowane w wielu kontekstach ograniczonych lub mikrousług. Jednakże, nie oznacza, że tej samej jednostki o tej samej logiki i atrybuty mogą być realizowane w wielu kontekstach ograniczonych. Zamiast tego jednostki w każdym kontekście ograniczonych ograniczyć ich atrybuty i zachowaniami służącymi do wymaganych w domenie ten ograniczony kontekst.
 
-Na przykład jednostki nabywcy może być najbardziej atrybutów osoby, które są zdefiniowane w jednostce użytkownika w profilu lub tożsamości mikrousługi, włącznie z tożsamością. Jednak obiektu nabywców porządkowania mikrousługi może być mniej atrybutów, ponieważ niektóre dane nabywców jest związane z procesem kolejności. Kontekst każdego mikrousługi lub ograniczonych kontekstu ma wpływ na jego modelu domeny.
+Na przykład jednostki nabywcy może być najbardziej atrybutów osoby, które są zdefiniowane w jednostce użytkownika w profilu lub tożsamości mikrousług, włącznie z tożsamością. Ale jednostki nabywcy w mikrousługach szeregowania może być mniej atrybutów, ponieważ określone dane kupujący jest powiązany z procesu zamówień. Kontekst poszczególne mikrousługi lub ograniczony kontekst ma wpływ na jej modelu domeny.
 
-*Domeny jednostek musi implementować zachowanie oprócz atrybuty danych wykonawczych*
+*Jednostki domeny należy zaimplementować zachowanie oprócz atrybutów danych wykonawczych*
 
-Jednostka w domenie w DDD musi implementować logika domeny lub zachowanie związane z danymi jednostki (obiekt dostęp do pamięci). Na przykład w ramach klasy jednostki kolejności musi mieć logiki biznesowej i operacje zaimplementowane jako metody dla zadań, takich jak dodawanie elementu kolejności, sprawdzanie poprawności danych i obliczenie razem. Metody jednostki zajmie się invariants i reguł jednostki zamiast te reguły rozłożyć na warstwie aplikacji.
+Jednostka domeny w DDD musi implementować logikę domeny lub zachowania związane z danymi jednostki (object, dostępne w pamięci). Na przykład jako część klasy jednostki zamówienia konieczne jest posiadanie logiki biznesowej i operacje zaimplementowane jako metody dla zadań, takich jak dodawanie przedmiot zamówienia, sprawdzanie poprawności danych i obliczenia całkowitej. Metody jednostki zajmujemy się invariants i reguł, jednostki, zamiast tych zasad, rozkładają się na warstwie aplikacji.
 
-Rysunek 9-8 zawiera jednostki domeny, która implementuje nie tylko atrybuty danych, ale metod lub operacji z logiką pokrewne domeny.
+Rysunek 9-8 przedstawia jednostka domeny, który implementuje nie tylko atrybuty danych, ale operacje lub metody w logice domeny powiązane.
 
 ![](./media/image9.png)
 
-**Rysunek 9 — 8**. Przykład projektu jednostki domeny Implementowanie danych oraz zachowanie
+**Rysunek 9-8**. Przykładowy projekt jednostka domeny Implementowanie danych oraz zachowania
 
-Oczywiście czasami może być jednostek, które nie implementują wszelka logika jako część klasy jednostka. Może to nastąpić w obiektów podrzędnych w agregacji, jeśli obiekt podrzędny nie ma żadnych specjalnych logiki, ponieważ większość logiki jest zdefiniowana w katalogu głównym łączny. Jeśli masz mikrousługi złożonych, ma dużo logiki zaimplementowana w klasach usługi zamiast w jednostkach domeny może być należących do modelu domeny anemic wyjaśniono w poniższej sekcji.
+Oczywiście czasami może być jednostek, które implementuje żadnej logiki jako część klasy jednostki. Przyczyną może być w jednostki podrzędne w ramach agregacji jednostce podrzędnej nie ma jakąkolwiek logikę specjalną, ponieważ większość logiki jest definiowana w głównym agregacji. W przypadku złożonych mikrousług, zawierającego wiele logiki implementowane w klasach usługi zamiast w jednostkach domeny może być należących do modelu domeny anemic szczegółowo opisane w poniższej sekcji.
 
-### <a name="rich-domain-model-versus-anemic-domain-model"></a>Model domeny sformatowany i model domeny anemic
+### <a name="rich-domain-model-versus-anemic-domain-model"></a>Model domeny rozbudowane i model domeny anemic
 
-W jego post [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html), Fowler pole w tym artykule opisano model domeny anemic w ten sposób:
+W jego wpis [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html), Martina Fowlera w tym artykule opisano model domeny anemic w ten sposób:
 
-Podstawowe objawem Anemic Model domeny jest najpierw co blush wygląda czegoś. Istnieją obiekty o nazwie wiele po rzeczowniki w obszarze domeny i te obiekty są połączone z zaawansowanych relacje i struktura, która ma modeli domeny wartość true. Catch zaczyna się po wyświetleniu zachowania i okazuje się, że tych obiektów, jest bardzo trudno żadnych zachowanie nadawania nieco więcej niż torebki o metodach ustawiających i pobierających.
+Podstawowe objaw Anemic modelu domeny to, co najpierw blush wygląda czegoś. Istnieją obiekty, wiele nazwana rzeczowniki w obszarze domeny i te obiekty są połączone za pomocą zaawansowanych relacje i strukturę, która ma modeli domeny true. Catch jest dostarczany, Przyjrzyj się zachowanie, gdy okazuje się, że występuje niewiele wszelkich zachowań tych obiektów, dzięki czemu można je nieco więcej niż zbiory metod pobierających i ustawiających.
 
-Oczywiście, gdy używasz modelu domeny anemic tych modeli danych będą używane w z zestawu obiektów usługi (tradycyjnie nazwane *warstwie business*) który Przechwyć wszystkie domeny lub logikę biznesową. Warstwa biznesowa znajduje się w modelu danych i używa modelu danych tylko jako dane.
+Oczywiście, korzystając z modelu domeny anemic te modele danych będą używane w z zestawu obiektów usługi (tradycyjnie nazwane *warstwy biznesowej*) który Przechwyć wszystkie domeny lub logikę biznesową. Warstwy biznesowej znajduje się na podstawie modelu danych i używa modelu danych, podobnie jak dane.
 
-Model domeny anemic to po prostu projekt styl procedurach. Obiekty anemic obiektów nie są prawdziwe obiektów, ponieważ mają zachowanie (metody). Posiadają tylko właściwości danych i dlatego nie jest zorientowany obiektowo projektu. Ustawiając limit to zachowanie na obiekty usługi (warstwie business) zasadniczo na końcu [kod postaci spaghetti](https://en.wikipedia.org/wiki/Spaghetti_code) lub [skryptów transakcji](https://martinfowler.com/eaaCatalog/transactionScript.html), i w związku z tym utracić zalety modelu domeny udostępnia.
+Model domeny anemic jest po prostu procedurach styl projektowania. Obiekty anemic jednostki nie są rzeczywistych obiektów, ponieważ mają zachowanie (metod). Mogą zawierać tylko właściwości danych i dlatego nie jest zorientowany na obiekt. Poprzez umieszczenie wszystkich zachowanie na zewnątrz w obiektach usługi (warstwy biznesowej) zasadniczo na końcu [kodu w postaci spaghetti](https://en.wikipedia.org/wiki/Spaghetti_code) lub [skrypty transakcji](https://martinfowler.com/eaaCatalog/transactionScript.html), i w związku z tym utracić zalety modelu domeny udostępnia.
 
-Niezależnie od tego, jeśli mikrousługi lub ograniczonych kontekstu jest bardzo proste (CRUD usługa), modelu domeny anemic w formie obiektów jednostek z tylko właściwości danych może być wystarczająca i nie może być warto Implementowanie bardziej złożonych wzorców DDD. W takim przypadku będzie po prostu modelu trwałości, ponieważ utworzono celowo jednostki z danych tylko do celów CRUD.
+Niezależnie od tego, jeśli mikrousług lub ograniczony kontekst jest bardzo proste (CRUD usługi), model domeny anemic w formie obiektów jednostek przy użyciu tylko właściwości danych może być wystarczające i może nie być warte Implementowanie wzorców DDD bardziej złożone. W takiej sytuacji będzie po prostu modelu trwałości, ponieważ zostały celowo utworzone jednostki danymi tylko do celów CRUD.
 
-Właśnie dlatego architektury mikrousług są idealne w przypadku wielu architektura w zależności od kontekstu każdego ograniczone. Na przykład w eShopOnContainers, porządkowania mikrousługi implementuje wzorce DDD, ale mikrousługi katalogu, co jest proste usługi CRUD, nie ma.
+Właśnie dlatego architektur mikrousług są idealne dla wielu architektury podejście w zależności od każdego kontekstu ograniczonego. Na przykład w ramach aplikacji eShopOnContainers, szeregowania mikrousługa implementuje wzorców DDD, ale mikrousług katalogu, który jest prostą usługę CRUD, nie ma.
 
-Niektórzy użytkownicy powiedzieć, że model anemic domeny jest uruchomiony wzorca. Naprawdę zależy to implementacja. Jeśli mikrousługi tworzona jest prosty wystarczająco (na przykład usługa CRUD), po modelu anemic domeny nie jest uruchomiony wzorca. Jednak jeśli zachodzi potrzeba rozwiązania złożoność mikrousługi domeny, która ma wiele kiedykolwiek zmiana reguł biznesowych, model anemic domeny może być układ wzorca dla tego mikrousługi lub ograniczonych kontekstu. W takim przypadku projektowania jako wzbogaconej modelu za pomocą jednostek zawierających dane plus zachowanie, a także wykonania dodatkowych wzorce DDD (agregacje, obiekty wartości itp.) może być ogromnych korzyści długoterminowe Powodzenie takich mikrousługi.
+Niektóre osoby powiedzieć o tym, że model domeny anemic jest zapobieganie wzorca. Tak naprawdę zależy to implementacja. Jeśli mikrousług, tworzona jest prosty wystarczająco (na przykład usługa CRUD), zgodnie z modelu anemic domeny nie jest zapobieganie wzorca. Jednak jeśli zachodzi potrzeba czoła złożoności domeny mikrousług, która ma wiele kolejne zmiany reguł biznesowych, model domeny anemic może być zapobieganie wzorzec dla tego mikrousług lub ograniczone do kontekstu. W takim przypadku projektowania jako zaawansowane modelu przy użyciu jednostek zawierających dane, a także zachowanie, a także wdrażanie dodatkowych wzorców DDD (agregacje, obiekty wartości itp.) może być ogromne korzyści długoterminowe powodzenia takich mikrousług.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **DevIQ. Domain Entity**
-    [*http://deviq.com/entity/*](http://deviq.com/entity/)
+    [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
--   **Pole Fowler. Model domeny**
+-   **Martina Fowlera. Model domeny**
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Pole Fowler. Model domeny Anemic**
+-   **Martina Fowlera. Model domeny Anemic**
 
     <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
-### <a name="the-value-object-pattern"></a>Wzorzec obiektu wartości
+### <a name="the-value-object-pattern"></a>Wzorzec wartość obiektu
 
-Wspomnianego Evans marek ma "wiele obiektów nie miały koncepcyjnej tożsamości. Te obiekty opisują niektórych parametrów przedmiotu".
+Wspomniane Eric Evans ma "wiele obiektów ma koncepcyjny tożsamości. Te obiekty opisują określoną wspólną charakterystykę rzeczy."
 
-Jednostka wymaga tożsamości, ale w systemie, która nie istnieje wiele obiektów, takich jak wzorzec obiektu wartości. Obiekt wartości jest obiektem przy nie koncepcyjnej tożsamości, która opisuje aspekt domeny. Są to obiekty, które można utworzyć wystąpienia do reprezentowania elementów projektu, które tylko dotyczą możesz tymczasowo. Najważniejsze informacje dotyczące *co* , nie są *kto* są. Przykłady obejmują liczb i ciągów, ale można też pojęcia wyższego poziomu, takich jak grupy atrybutów.
+Jednostka wymaga tożsamości, ale istnieje wiele obiektów w systemie, które w przeciwnym razie, takich jak wzorzec obiektu wartości. Obiekt wartości jest obiekt z nie pojęciach tożsamości, która opisuje aspekt domeny. Są to obiekty, które wystąpienia do reprezentowania elementów projektu, które tylko dotyczą możesz tymczasowo. Interesujące Cię *co* , nie są *kto* są. Przykłady obejmują liczby i ciągi, ale można też koncepcji wyższego poziomu, takich jak grupy atrybutów.
 
-Coś, co jest jednostką w mikrousługi może nie być jednostki w innym mikrousługi, ponieważ w drugim przypadku kontekstu ograniczone może mieć inne znaczenie. Na przykład adres w aplikacji handlu elektronicznego może nie mieć tożsamości, ponieważ może stanowić jedynie grupy atrybutów profilu klienta dla osoby lub firmy. W takim przypadku adres powinny być klasyfikowane jako obiekt wartości. Jednak w aplikacji firmy narzędzie energii elektrycznej adres odbiorcy może być ważne dla domeny biznesowych. Adres musi mieć tożsamość, więc systemów rozliczeniowych może być bezpośrednio połączony adres. W takim przypadku adres powinny być klasyfikowane jako jednostką domeny.
+Coś, co jest jednostką w mikrousługach może być jednostki w innym mikrousług, ponieważ w drugim przypadku ograniczony kontekst może mieć inne znaczenie. Na przykład adres w aplikacji handlu elektronicznego utracić tożsamości, ponieważ może być reprezentowana grupy atrybutów profilu klienta dla osoby lub firmy. W takim przypadku adres powinny być klasyfikowane jako obiekt wartości. Jednak w aplikacji prądu energii elektrycznej adres odbiorcy może być ważne dla domeny biznesowej. Adres musi mieć tożsamości, więc systemów rozliczeniowych, które może być bezpośrednio połączony do adresu. W takim przypadku adres powinny być klasyfikowane jako jednostka domeny.
 
-Osoba mająca imię i nazwisko jest zwykle jednostki osoba ma tożsamość, nawet jeśli imię i nazwisko pokrywa się z innego zestawu wartości, np. Jeśli te nazwy odnosi się także do innej osoby.
+Osoba mająca imię i nazwisko, zwykle jest jednostką, ponieważ osoba ma tożsamości, nawet wtedy, gdy imię i nazwisko pokrywa się z innego zestawu wartości, np. Jeśli te nazwy odnosi się także do innej osobie.
 
-Obiekty wartości są trudne do zarządzania relacyjnymi bazami danych i ORMs, takie jak EF, natomiast w dokumencie ukierunkowane bazy danych, które są łatwiejsze do zaimplementowania i użycia.
+Obiekty wartości są trudny do zarządzania relacyjnymi bazami danych i ORMs, takie jak EF, natomiast w dokumencie korzystający z bazy danych, które są łatwiejsze do wdrożenia i użycia.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Pole Fowler. Value — wzorzec obiektu**
+-   **Martina Fowlera. Value — wzorzec obiektu**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Wartość obiektu**
-    [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
+-   **Obiekt wartości**
+    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
 -   **Obiekty wartości w Test-Driven Development**
     [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Evans marek. Projektowanie oparte na domenie: Czoła złożoności serca oprogramowania.** (Książki; zawiera omówienie obiekty wartości) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Projektowania opartego na domenie: Co dzień do czynienia złożoności serce oprogramowania.** (Zarezerwuj; zawiera omówienie obiekty wartości) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Wzorzec agregacji
 
-Model domeny zawiera klaster jednostek inne dane i procesy, które można kontrolować istotny obszar funkcje, takie jak realizacji order lub magazynu. Do bardziej szczegółowych DDD jest agregacji, opisujący klastra lub grupy jednostek i zachowania, które mogą być traktowane jako jednostka spójności.
+Model domeny zawiera klaster jednostek różne dane i procesy, które można kontrolować istotny obszar funkcji, takich jak spełnienia kolejności lub magazynu. Do bardziej szczegółowych DDD jest funkcję agregacji, w tym artykule opisano klastra lub grupy jednostek i zachowań, które mogą być traktowane jako jednostka cohesive.
 
-Zazwyczaj Definiowanie agregacji na podstawie transakcji, które są potrzebne. Klasycznym przykładem jest zamówienie zawiera także listę kolejności elementów. Element kolejności zwykle jest jednostką. Ale będzie ona jednostce podrzędnej w wartości zagregowanej kolejności, będzie również zawierać jednostki zamówienia jego obiektu głównego, zwykle nazywane głównego agregacji.
+Zazwyczaj zdefiniujesz agregacją, w oparciu o transakcji, które są potrzebne. Klasycznym przykładem jest zamówienie, zawierający listę elementów w kolejności. Przedmiot zamówienia zwykle jest jednostką. Ale będzie ona jednostce podrzędnej w agregacji kolejność, która będzie również zawierać jednostki zamówienia jego jednostkę główną, zwykle nazywane głównego agregacji.
 
-Identyfikowanie agregacji może być trudne. Wartość zagregowana jest grupy obiektów, które muszą być zgodne ze sobą, ale nie można po prostu wybierz grupy obiektów i etykietowanie agregacji. Musi rozpoczynać się od domeny koncepcji i zastanowić, jednostek, które są używane w najbardziej typowych transakcje powiązane z tą koncepcją. Tych jednostek, które muszą być spójna transakcyjnie są, co stanowi agregacji. Analiza operacji transakcji jest prawdopodobnie najlepszy sposób, aby zidentyfikować agregacji.
+Identyfikowanie zagregowanych danych może okazać się trudne. Wartość zagregowana jest grupy obiektów, które muszą być zgodne ze sobą, ale nie można po prostu wybierz grupę obiektów i nadaj im etykiety na wartość zagregowana. Musi rozpoczynać się koncepcja domeny i myśleć o jednostek, które są używane w najbardziej typowych transakcje powiązane z związany z tą koncepcją. Te jednostki, które muszą być transakcyjnie spójne to, co stanowi agregację. Myśleć o operacji transakcji jest prawdopodobnie najlepszym sposobem identyfikacji agregacji.
 
-### <a name="the-aggregate-root-or-root-entity-pattern"></a>Wzorzec główny agregacji lub głównego jednostki
+### <a name="the-aggregate-root-or-root-entity-pattern"></a>Wzorzec głównego agregacji lub jednostki głównej
 
-Wartość zagregowana składa się z co najmniej jedną jednostkę: głównego agregacji, nazywany również jednostki głównej lub podstawowej jednostki. Ponadto może mieć wiele jednostek podrzędnych i obiekty wartości ze wszystkimi jednostek i obiektów, które współpracują, aby zaimplementować wymagane zachowanie i transakcji.
+Wartość zagregowana składa się z co najmniej jedną jednostkę: głównego agregacji, nazywane również jednostki głównej lub podstawowej jednostki. Ponadto może mieć wiele podrzędnych jednostek i obiektów wartości wszystkich jednostek i obiektów współpracując do zaimplementowania transakcji i wymagane zachowanie.
 
-Główny agregacji ma na celu zapewnienia spójności agregacji; należy go tylko punkt wejścia dla aktualizacji do zagregowania za pośrednictwem metody lub operacji w całkowitym Klasa główna. Należy wprowadzić zmiany do podmiotów w obrębie agregacji tylko przy użyciu głównego agregacji. Jest ochrona spójności wartości zagregowanej, biorąc pod uwagę wszystkie invariants i reguły spójności, potrzebne do wykonania w Twojej agregacji. W przypadku zmiany obiektu podrzędnego jednostka lub wartość niezależnie głównego agregacji nie powiodło się, że agregacji jest w prawidłowym stanie. Byłoby jak tabelę z utracić etap. Obsługa spójności jest głównym celem głównego agregacji.
+Główny agregacji ma na celu zapewnienie spójności agregacji; należy go tylko punkt wejścia dla aktualizacji do agregacji za pomocą metod lub operacji w całkowitym Klasa główna. Należy wprowadzić zmiany do jednostki w ramach agregacji tylko przy użyciu głównego agregacji. Jest ochrona spójności agregacji, biorąc pod uwagę invariants i zasady spójności, może być potrzebnych do wykonania w swojej agregacji. Jeśli zmienisz niezależnie jednostka lub wartość obiektu podrzędnego, głównego agregacji nie upewnij się, że agregacja w prawidłowym stanie. Jest podobna do tabeli za pomocą nie będzie gałęzi. Związane z utrzymaniem spójności jest głównym celem głównego agregacji.
 
-9 rysunek-9, widać agreguje próbki jak kupujący agregacji, zawierający pojedynczy element (łączny głównego nabywców). Agregacja kolejności zawiera wiele jednostek i obiektu wartości.
+9 rysunek-9, możesz zobaczyć agreguje próbki takich jak kupujący agregacji, która zawiera pojedynczą jednostkę (kupujący w katalogu głównym agregacji). Agregacja kolejności zawiera wiele jednostek i wartość obiektu.
 
 ![](./media/image10.png)
 
-**Rysunek 9 — 9**. Przykład agregacji w wielu lub pojedynczego jednostek
+**Rysunek 9 – 9**. Przykład wartości zagregowanych z wieloma lub pojedynczego jednostek
 
-Należy zauważyć, że Agregacja nabywców można kolejne podrzędne jednostki, w zależności od domeny, co w porządkowania mikrousługi w aplikacji odwołanie eShopOnContainers. Rysunek 9 — 9 przedstawiono tylko przypadek, w którym kupujący ma pojedynczej jednostki, na przykład wartość zagregowaną, która zawiera tylko głównego agregacji.
+Należy zauważyć, że agregacji kupujący może dodatkowe podrzędne jednostki, w zależności od domeny, co w szeregowania mikrousługi w ramach aplikacji eShopOnContainers aplikacji odwołanie. Rysunek 9 – 9 po prostu ilustruje przypadek, w którym kupujący ma pojedynczej jednostki, na przykład agregacji, która zawiera tylko głównego agregacji.
 
-Aby zachowanie separacji agregacji i zapewnić wyraźne granice między nimi, jest dobrym rozwiązaniem w modelu domeny DDD, aby uniemożliwić bezpośrednie nawigacji między wartości zagregowanych i tylko posiadające pole klucza obcego (klucz OBCY) zgodnie z implementacją w [ Kolejność modelu domeny mikrousługi](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) w eShopOnContainers. Jednostki kolejności ma tylko pola klucza Obcego dla kupującemu, ale nie EF Core właściwość nawigacji, jak pokazano w poniższym kodzie:
+Aby można było obsługiwać separację agregacji i zachować wyraźne granice między nimi, jest dobrym rozwiązaniem w modelu domeny DDD nie zezwala na bezpośrednie Nawigacja pomiędzy agregacje i posiadanie tylko pole klucza obcego (klucz OBCY), zgodnie z implementacją w [ Kolejność modelu domeny mikrousługi](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) w ramach aplikacji eShopOnContainers. Jednostki zamówienia ma tylko pole klucza Obcego kupujący, ale nie do programu EF Core nawigacji właściwości, jak pokazano w poniższym kodzie:
 
 ```csharp
 public class Order : Entity, IAggregateRoot
@@ -129,28 +129,27 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Identyfikowanie i Praca z wartości zagregowanych wymaga badań i obsługi. Aby uzyskać więcej informacji zobacz następujące listę dodatkowych zasobów.
+Identyfikowanie i Praca z agregacjami wymaga badania i doświadczenie. Aby uzyskać więcej informacji przejrzyj następującą listę dodatkowych zasobów.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Vaughn Vernon. Efektywnym projektowaniu agregacji — część I: modelowania pojedynczego agregacji**
+-   **Vaughn Vernon. Efektywnym projektowaniu agregacji - Part I: modelowania jednej wartości zagregowanej**
     [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. Skuteczne agregacji projektu — część II: Tworzenie wartości zagregowanych współpracują**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
+-   **Vaughn Vernon. Skuteczne agregacji projektu — część II: Wprowadzanie wartości zagregowanych pracują razem**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
 
--   **Vaughn Vernon. Skuteczne agregacji projektu — część III: Uzyskanie wglądu za pomocą odnajdywania**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
+-   **Vaughn Vernon. Skuteczne agregacji projektu — część III: Uzyskiwanie wglądu za pośrednictwem odnajdywania**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
 
 -   **Sergey Grybniak. Wzorce projektowe taktyczne DDD**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Krzysztof Richardson. Tworzenie Mikrousług transakcyjne przy użyciu wartości zagregowanych**
+-   **Chris Leonard. Tworzenie transakcji Mikrousług przy użyciu wartości zagregowanych**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 -   **DevIQ. Wzorzec agregacji**
-    [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
-
+    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
 [Poprzednie](ddd-oriented-microservice.md)

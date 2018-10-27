@@ -2,12 +2,12 @@
 title: Usługi i śledzenie zdarzeń programu WCF dla systemu Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 100f9c0ce71eedaa4061fc894521597074b21b00
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086586"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49480034"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Usługi i śledzenie zdarzeń programu WCF dla systemu Windows
 Ten przykład pokazuje sposób użycia śledzenia danych analitycznych w Windows Communication Foundation (WCF) aby emitować zdarzenia w śledzenie zdarzeń dla Windows (ETW). Śledzenie analityczne są zdarzenia emitowane w kluczowych punktach w stosie usługi WCF, które umożliwiają rozwiązywanie problemów z usług WCF w środowisku produkcyjnym.
@@ -26,11 +26,11 @@ Ten przykład pokazuje sposób użycia śledzenia danych analitycznych w Windows
 
      W przeglądarce internetowej kliknij **Calculator.svc**. Identyfikator URI dokumentu WSDL usługi powinna zostać wyświetlona w przeglądarce. Skopiuj ten identyfikator URI.
 
-     Domyślnie usługa rozpoczyna nasłuchiwanie żądań na porcie 1378 (http://localhost:1378/Calculator.svc).
+     Domyślnie usługa rozpoczyna nasłuchiwanie żądań na porcie 1378 `http://localhost:1378/Calculator.svc`.
 
 4.  Uruchom klienta testowego WCF (WcfTestClient.exe).
 
-     Testowy klient WCF (WcfTestClient.exe) znajduje się w \<Visual Studio 2012 zainstalować Dir > \Common7\IDE\ WcfTestClient.exe (katalog domyślny program Visual Studio 2012 to C:\Program Files\Microsoft Visual Studio 10.0).
+     Testowy klient WCF (WcfTestClient.exe) znajduje się w `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`.  Katalog instalacji programu Visual Studio 2012 domyślny jest `C:\Program Files\Microsoft Visual Studio 10.0`.
 
 5.  W kliencie testowym WCF, należy dodać usługę, wybierając **pliku**, a następnie **Dodaj usługę**.
 

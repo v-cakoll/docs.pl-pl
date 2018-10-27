@@ -4,12 +4,12 @@ description: Pojęcia dotyczące jednostek testów w języku C# i .NET Core za p
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: efeb12eb43539b0a85168b1162e0f8b94ad67e90
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1c2b0bdd4bf76a17217db0c98b8f951f7d58f2ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213835"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183779"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Jednostki testowania C# przy użyciu MSTest i .NET Core
 
@@ -88,11 +88,11 @@ Następujące konspektu przedstawia wybrany układ ostateczne rozwiązanie:
         PrimeServiceTests.csproj
 ```
 
-Wykonaj [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` ](../tools/dotnet-sln.md) w *testowania — przy użyciu dotnet-test jednostkowy* katalogu. 
+Wykonaj [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` ](../tools/dotnet-sln.md) w *jednostki — testowanie-przy użyciu mstest* katalogu. 
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy plik C# o nazwie *PrimeService_IsPrimeShould.cs* o następującej zawartości:
+Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy C# plik o nazwie *PrimeService_IsPrimeShould.cs* o następującej zawartości:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;

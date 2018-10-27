@@ -1,54 +1,54 @@
 ---
-title: Nowości w języku C# — przewodnik C#
-description: Jak ewoluuje w języku C#
+title: Co nowego C# - C# przewodnik
+description: Jak jest C# ewoluują języka
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 399550178a12ff520dff033f0f1dc4a7cdfb9591
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314675"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047257"
 ---
-# <a name="whats-new-in-c"></a>Nowości w języku C# #
+# <a name="whats-new-in-c"></a>Co nowego w języku C# #
 
-Ta strona zawiera plan nowych funkcji każdego wydania programu w języku C#. Poniższe linki udostępniają szczegółowe informacje o głównych funkcje dodane w poszczególnych wersjach.
+Ta strona zawiera plan działania o nowe funkcje w każdej wersji głównej programu C# języka. Połączone artykuły zawierają szczegółowe informacji na temat główne funkcje dodane w każdej wersji. Zawiera informacje na temat nowych funkcji, które zostały zwolnione, w głównym wydaniu lub w publicznej wersji zapoznawczej. Szczegóły stanów funkcji języka, w tym funkcje uznane za dla przyszłych wydaniach można znaleźć [w repozytorium dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) w witrynie GitHub.
 
 > [!IMPORTANT]
-> W języku C# zależy od typów i metod w *biblioteki standardowej* dla niektórych funkcji. Przykładem jest wyjątek podczas przetwarzania. Każdy `throw` instrukcja lub wyrażenie zaznaczono zapewnienie obiekt został zgłoszony jest pochodną <xref:System.Exception>. Podobnie co `catch` jest sprawdzane pod kątem upewnij się, że typ jest przechwycono pochodzi od <xref:System.Exception>. Każda wersja może dodać nowe wymagania. Aby korzystać z najnowszych funkcji języka w środowiskach starsze, może być konieczne zainstalować określone biblioteki. Te zależności są opisane na stronie dla każdej określonej wersji. Użytkownik może dowiedzieć się więcej o [relacje między języka i biblioteki](relationships-between-language-and-library.md) w tle na tę zależność. 
+> C# Języka zależy od typów i metod w *biblioteki standardowej* dla niektórych funkcji. Przykładem jest wyjątek podczas przetwarzania. Każdy `throw` instrukcję lub wyrażenie jest zaznaczone, aby upewnić się, obiekt jest zgłaszana jest tworzony na podstawie <xref:System.Exception>. Podobnie co `catch` jest sprawdzany w celu zapewnienia, że typ wciągnięcia jest tworzony na podstawie <xref:System.Exception>. Każda wersja może dodawać nowych wymagań. Aby korzystać z najnowszych funkcji języków, w środowiskach starsze, może być konieczne zainstalowanie określonych bibliotek. Te zależności są udokumentowane na stronie informacjach dotyczących określonej wersji. Możesz dowiedzieć się więcej [relacje między językiem a biblioteki](relationships-between-language-and-library.md) tła na tę zależność. 
 
-Aby korzystać z najnowszych funkcji w wersji punktu, należy [skonfigurować kompilatora wersji języka](../language-reference/configure-language-version.md) i wybierz wersję.
+Korzystanie z najnowszych funkcji w wersji punktu należy [skonfigurować wersję językową kompilatora](../language-reference/configure-language-version.md) i wybierz wersję.
 
-* [C# 7.3](csharp-7-3.md):
-  - Ta strona zawiera opis najnowszych funkcji w języku C#. Jest obecnie dostępna w C# 7.3 [programu Visual Studio 2017 wersji 15.7](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core-SDK 2.1 2.1.300 RC1](../../core/whats-new/index.md).
-* [C# 7.2](csharp-7-2.md):
-  - Ta strona opisano funkcje dodane w języku C#. Jest obecnie dostępna w C# 7.2 [programu Visual Studio 2017 wersji 15,5 cala](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
-* [C# 7.1](csharp-7-1.md):
-  - Ta strona opisano funkcje dodane w języku C# 7.1. Te funkcje zostały dodane w [programu Visual Studio 2017 wersji 15 ustęp 3](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
-* [C# 7.0](csharp-7.md):
-  - Ta strona opisano funkcje dodane w języku C# w wersji 7.0. Te funkcje zostały dodane w [programu Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/) i [.NET Core 1.0](../../core/whats-new/index.md) i nowsze
-* [C# 6](csharp-6.md):
-  - Ta strona zawiera opis funkcji, które zostały dodane w języku C# 6. Te funkcje są dostępne w programie Visual Studio 2015 dla deweloperów systemu Windows, a następnie na .NET Core 1.0 dla deweloperów eksploracji C# w macOS i Linux.
+* [C#7.3](csharp-7-3.md):
+  - Ta strona zawiera opis najnowszych funkcji C# języka. C#7.3 jest obecnie dostępna w [Visual Studio 2017 w wersji 15.7](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [zestawu SDK platformy .NET Core 2.1 2.1.300 RC1](../../core/whats-new/index.md).
+* [C#7.2](csharp-7-2.md):
+  - Ta strona w tym artykule opisano funkcje dodane w C# języka. C#7.2 jest obecnie dostępna w [programu Visual Studio 2017 w wersji 15.5](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
+* [C#7.1](csharp-7-1.md):
+  - Ta strona w tym artykule opisano funkcje dodane w C# 7.1. Te funkcje zostały dodane w [programu Visual Studio 2017 w wersji 15.3](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
+* [C#7.0](csharp-7.md):
+  - Ta strona w tym artykule opisano funkcje dodane w C# 7.0. Te funkcje zostały dodane w [programu Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/) i [platformy .NET Core 1.0](../../core/whats-new/index.md) lub nowszy
+* [C#6](csharp-6.md):
+  - Ta strona zawiera opis funkcji, które zostały dodane w C# 6. Te funkcje są dostępne w programie Visual Studio 2015 dla deweloperów Windows i platformy .NET Core 1.0 dla deweloperów, eksplorowanie C# w systemach macOS i Linux.
 * [Obsługa wielu Platform](../../core/index.md):
-  - C# za pomocą obsługi .NET Core działa na wielu platformach. Jeśli interesuje Cię w trakcie C# macOS lub jedną z wielu obsługiwane dystrybucje systemu Linux, Dowiedz się więcej na temat platformy .NET Core.
+  - C#, dzięki obsłudze platformy .NET Core działa na wielu platformach. Jeśli chcesz wypróbować C# w systemie macOS lub na jednym z wielu obsługiwane dystrybucje systemu Linux, więcej informacji na temat platformy .NET Core.
 * [Zestaw SDK platformy kompilatora .NET](../roslyn-sdk/index.md):
-  - Zestawu SDK platformy kompilatora .NET umożliwia pisanie kodu, który przeprowadza analizę statyczną w kodzie języka C#. Te interfejsy API umożliwia odnaleźć potencjalne błędy lub nieprawidłowe wskazówki, sugerować poprawki i nawet zaimplementować te poprawki.
+  - Zestaw SDK platformy kompilatora .NET pozwala napisać kod, który wykonuje analizę statyczną na C# kodu. Te interfejsy API umożliwia znajdowanie potencjalnych błędów lub rozwiązań, sugerowanie poprawki i nawet zaimplementować te poprawki.
 
 ## <a name="previous-versions"></a>Poprzednie wersje
 
-Poniższe listy kluczy funkcje, które zostały wprowadzone w poprzednich wersjach programu w języku C# i Visual Studio .NET.
+Poniższa lista zawiera najważniejsze funkcje, które zostały wprowadzone w poprzednich wersjach C# języka i programu Visual Studio .NET.
 
 * Visual Studio .NET 2013:
-  - Ta wersja programu Visual Studio zawiera poprawki błędów, wydajności i wersji zapoznawczych platformy technologię platformy kompilatora .NET ("Roslyn"), które stały się [zestawu SDK platformy kompilatora .NET](../roslyn-sdk/index.md).
-* C# 5, programu Visual Studio .NET 2012:
+  - Ta wersja programu Visual Studio dołączony poprawki błędów, ulepszenia wydajności i technologii z podglądem platformie kompilatora .NET ("Roslyn"), który stał się [zestawu SDK platformy kompilatora .NET](../roslyn-sdk/index.md).
+* C#5, visual Studio .NET 2012:
   - `Async` / `await`, a [informacje o wywołującym](../programming-guide/concepts/caller-information.md) atrybutów.
-* C# 4, programu Visual Studio .NET 2010:
-  - `Dynamic`, [argumentami nazwanymi](../programming-guide/classes-and-structs/named-and-optional-arguments.md), następujące parametry opcjonalne i rodzajowy [Kowariancja i ma przeciwwskazań wariancji](../programming-guide/concepts/covariance-contravariance/index.md).
-* C# 3, programu Visual Studio .NET 2008:
-  - Inicjatory obiektów i kolekcji, wyrażenia lambda, metody rozszerzenia, typy anonimowe, automatyczne właściwości, lokalnego `var` wnioskowanie, i [języka zapytań zintegrowanym (LINQ)](../programming-guide/concepts/linq/index.md).
-* C# 2, Visual Studio .NET 2005:
-  - Metody anonimowe, ogólne, typy dopuszczające wartości zerowe, Iteratory/yield `static` klasy i Kowariancja i ma przeciwwskazań wariancji dla delegatów.
-* C# 1.1, Visual Studio .NET 2003:
-  - `#line` komentarze w dokumencie pragma i xml.
-* C# 1, Visual Studio .NET 2002:
-  - Pierwszą wersję [C#](../csharp.md).
+* C#4, visual Studio .NET 2010:
+  - `Dynamic`, [argumenty nazwane](../programming-guide/classes-and-structs/named-and-optional-arguments.md), następujące parametry opcjonalne i ogólny [wariancji kowariancji i ma przeciwwskazań](../programming-guide/concepts/covariance-contravariance/index.md).
+* C#3, visual Studio .NET 2008:
+  - Inicjatory obiektów i kolekcji, wyrażeń lambda, metody rozszerzenia, typy anonimowe, właściwości automatycznych, lokalnego `var` wnioskowanie, typu i [Language Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md).
+* C#2 programu visual Studio .NET 2005:
+  - Metody anonimowe, ogólne, typy dopuszczające wartości null, Iteratory/yield `static` klasy i kowariancji i ma przeciwwskazań wariancji dla delegatów.
+* C#1.1, visual Studio .NET 2003:
+  - `#line` komentarze dokumentacji pragma i xml.
+* C#1 programu visual Studio .NET 2002:
+  - Pierwsza wersja [ C# ](../csharp.md).

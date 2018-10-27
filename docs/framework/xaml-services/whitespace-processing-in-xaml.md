@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873443"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047530"
 ---
 # <a name="white-space-processing-in-xaml"></a>Znak odstępu przetwarzanie w XAML
 Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora. W tym temacie opisano te reguły języka XAML. Również dokumenty obsługi dodatkowe biały znak, który jest definiowany przez [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementacji procesora XAML i zapisywania XAML do serializacji.  
@@ -59,7 +59,7 @@ Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>Znaki wschodnioazjatyckie  
- "Znaki wschodnioazjatyckie" jest zdefiniowany jako zestaw [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] znak zakresów 20000 U + do U + 2FFFD i U + 30000 do U + 3FFFD. Podzbiór ten jest również czasami określane jako "Ideogramy CJK". Aby uzyskać więcej informacji, zobacz [http://www.unicode.org](http://www.unicode.org/).  
+ "Znaki wschodnioazjatyckie" jest zdefiniowany jako zestaw [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] znak zakresów 20000 U + do U + 2FFFD i U + 30000 do U + 3FFFD. Podzbiór ten jest również czasami określane jako "Ideogramy CJK". Aby uzyskać więcej informacji, zobacz <https://www.unicode.org>.  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="white-space-and-text-content-models"></a>Modele zawartości biały znak i tekstu  

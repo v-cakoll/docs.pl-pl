@@ -2,19 +2,19 @@
 title: Punkt końcowy
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 5d597e9e029cec3552c94b47a64dfbf36d933e67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487649"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452930"
 ---
 # <a name="endpoint"></a>Punkt końcowy
 Punkt końcowy  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class Endpoint  
 {  
   string Address;  
@@ -45,89 +45,89 @@ class Endpoint
 ### <a name="address"></a>Adres  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Identyfikator URI zawierający adres punktu końcowego.  
+ Identyfikator URI, który zawiera adres punktu końcowego.  
   
 ### <a name="addressheaders"></a>AddressHeaders  
- Typ danych: tablicy ciągów  
+ Typ danych: tablica ciągów  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Kolekcja nagłówków adresu przyłączonych do tego punktu końcowego.  
+ Kolekcja nagłówków adresowych, dołączony do tego punktu końcowego.  
   
 ### <a name="addressidentity"></a>AddressIdentity  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Tożsamość punktu końcowego.  
   
 ### <a name="appdomainid"></a>AppDomainId  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Identyfikator domeny aplikacji obsługującej punkt końcowy.  
+ Identyfikator elementu appdomain punktu końcowego.  
   
 ### <a name="behaviors"></a>Zachowania  
  Typ danych: zachowanie tablicy  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Kolekcja zachowań implementowanych przez ten punkt końcowy.  
   
 ### <a name="binding"></a>Powiązanie  
  Typ danych: powiązanie  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Powiązanie używane przez ten punkt końcowy.  
+ Wiązanie używane przez ten punkt końcowy.  
   
 ### <a name="contractname"></a>ContractName  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Ciąg określający, który kontrakt jest ujawniany ten punkt końcowy.  
+ Ciąg, który określa, który kontrakt tego punktu końcowego jest uwidaczniany.  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Nazwa wystąpienia liczników wydajności punktu końcowego.  
   
-### <a name="listenuri"></a>Identyfikator ListenUri  
+### <a name="listenuri"></a>Identyfikatorze ListenUri  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Identyfikator Uri punktu końcowego nasłuchuje.  
   
 ### <a name="name"></a>Nazwa  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Unikatowa nazwa tego punktu końcowego.  
   
 ### <a name="processid"></a>Identyfikator procesu  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Identyfikator procesu obsługującego punkt końcowy procesu.  
+ Proces identyfikator procesu, który jest hostem punktu końcowego.  
   
 ### <a name="ref"></a>ref  
  Typ danych: kontraktu  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Kontrakt ujawniany jest ten punkt końcowy.  
+ Kontrakt tego punktu końcowego jest uwidaczniany.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|

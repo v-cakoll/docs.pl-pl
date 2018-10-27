@@ -1,25 +1,25 @@
 ---
 title: Wspólne zasady projektowania kontenera
-description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
+description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d3ae0c05a7e94d739a3442ecdb11564a70567963
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071178"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049090"
 ---
 # <a name="common-container-design-principles"></a>Wspólne zasady projektowania kontenera
 
-Wyprzedzeniem wprowadzenie do procesu tworzenia dostępnych jest kilka podstawowych pojęć, warto zauważyć w odniesieniu do sposobu korzystania kontenerów.
+Dalej pobierania z procesem tworzenia aplikacji istnieje kilka podstawowych pojęć, warto zauważyć, jak używać kontenerów w odniesieniu do.
 
 ## <a name="container-equals-a-process"></a>Kontener jest równe procesu
 
-W modelu kontenera kontener reprezentuje jednego procesu. Definiując kontener jako granica procesu, rozpoczęciem tworzenia podstawowych używane do skalowania, lub wyłącz partii, procesów. Po uruchomieniu kontenera Docker zobaczysz [punktu wejścia](https://docs.docker.com/engine/reference/builder/#/entrypoint) definicji. Definiuje proces i okresem istnienia kontenera. Po zakończeniu tego procesu, kończy się cyklu życia kontenera. Brak procesy długotrwałe, takie jak serwery sieci web i krótkim okresie procesy, takie jak zadania wsadowego, które może być zaimplementowany jako Microsoft Azure [Webjob](https://azure.microsoft.com/en-us/documentation/articles/websites-webjobs-resources/). Jeśli proces zakończy się niepowodzeniem, kończy się kontenera i orchestrator ma. Jeśli poinstruowano orchestrator w celu zachowania pięć uruchomionych wystąpień i zawiedzie, orchestrator utworzy innego kontenera, aby zastąpić procesu nie powiodło się. Proces jest uruchomiony w ramach zadania wsadowego parametrów. Po zakończeniu tego procesu, praca jest ukończona.
+W modelu kontenera kontener reprezentuje pojedynczego procesu. Definiując kontener jako granica procesu, rozpoczęciem tworzenia podstawowych używaną do skalowania, lub wyłączyć usługi batch, procesów. Po uruchomieniu kontenera platformy Docker, zobaczysz [punktu wejścia](https://docs.docker.com/engine/reference/builder/#/entrypoint) definicji. Definiuje proces i okresu istnienia kontenera. Po zakończeniu procesu, kończy się cyklu życia kontenera. Istnieją długotrwałe procesy takie jak serwery sieci web i krótkotrwałe procesy, takie jak zadania usługi batch, które może być implementowana jako Microsoft Azure [WebJobs](https://azure.microsoft.com/documentation/articles/websites-webjobs-resources/). Jeśli proces zakończy się niepowodzeniem, kończy się kontenera i koordynatora przejmuje. Jeśli koordynatora poinstruowano zapewnienie pięć wystąpień i zawiedzie, koordynatora spowoduje utworzenie innego kontenera w celu zastąpienia procesu nie powiodło się. W ramach zadania usługi batch proces zostanie uruchomiony przy użyciu parametrów. Po zakończeniu tego procesu roboczego zostało ukończone.
 
-Może się okazać scenariusz, w którym ma wiele procesów uruchomionych w jeden kontener. Architektura dokumentów, nigdy nie jest nigdy "," nie ma zawsze jako "zawsze". W scenariuszach wymagających wielu procesów, jest użycie wspólnego wzorca [przełożonego](http://supervisord.org/).
+Może się okazać scenariusz, w którym ma wiele procesów w jeden kontener. W każdym dokumencie architektury nigdy nie jest nigdy nie "," nie ma zawsze wiadomość "zawsze". W przypadku scenariuszy wymagających wielu procesów typowym wzorcem jest użycie [nadzorcy](http://supervisord.org/).
 
 
 >[!div class="step-by-step"]

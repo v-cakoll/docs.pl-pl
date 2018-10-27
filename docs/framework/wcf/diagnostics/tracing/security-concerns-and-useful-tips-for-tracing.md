@@ -2,13 +2,12 @@
 title: Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-author: BrucePerlerMS
-ms.openlocfilehash: 51db352913999d5527ead5273e6488cd09d88670
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 439484cf5df6311bef56be0e28e5949c79d9a8f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582479"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184849"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia
 W tym temacie opisano, jak możesz chronić poufne informacje przed przypadkowym, a także przydatne porady, korzystając z hostem sieci Web.  

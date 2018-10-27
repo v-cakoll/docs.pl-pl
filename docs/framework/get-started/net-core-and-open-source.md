@@ -4,48 +4,48 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 707e73705e5e96e1b0b92976d22f763afef64929
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90dd72fae71f4283e6eefeb7c878b32e9c155cff
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389255"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454398"
 ---
 # <a name="net-core-and-open-source"></a>Oprogramowanie .NET Core i Open-Source
-Ten temat zawiera krótki przegląd co .NET Core i pokazuje, jak można znaleźć więcej informacji. Aby uzyskać pełną listę tematów dla platformy .NET Core, odwiedź stronę [.NET Core przewodnik](../../core/index.md).
+Ten temat zawiera krótkie omówienie platformy .NET Core, a czego pokazuje, jak można znaleźć więcej informacji. Aby uzyskać pełną listę tematów dla platformy .NET Core, odwiedź stronę [przewodnik platformy .NET Core](../../core/index.md).
   
 <a name="BKMK_WhatisNETCore"></a>   
-## <a name="what-is-net-core"></a>Co to jest oprogramowanie .NET Core?  
- Oprogramowanie .NET core jest ogólnego przeznaczenia, implementacja moduły, obsługujący wiele platform i otwórz źródła .NET Standard. Zawiera on wiele z tych samych interfejsów API jako programu .NET Framework (ale .NET Core jest mniejszy zestaw) i obejmuje składniki środowiska uruchomieniowego, framework, narzędzi i kompilatora, które obsługują różnych systemów operacyjnych i układu obiektów docelowych. Implementacja .NET Core została zależne głównie przez obciążeń platformy ASP.NET Core, ale również przez muszą i chcesz bardziej nowoczesnych implementacją. Może służyć w urządzenia, chmur i scenariusze osadzonych IoT.  
+## <a name="what-is-net-core"></a>Co to jest .NET Core?  
+ Platforma .NET core to ogólnego przeznaczenia, moduły, dla wielu platform typu open source implementacji .NET Standard. Zawiera on wiele z tych samych interfejsów API jako .NET Framework (ale platformy .NET Core jest mniejszy zestaw) i obejmuje składniki środowiska uruchomieniowego, framework, kompilatora i narzędzi, które obsługują różne systemy operacyjne i mikroukładu elementów docelowych. Wdrożenie platformy .NET Core została zależne głównie przez obciążeń platformy ASP.NET Core, ale również przez konieczność i pragną nowocześniejszego implementacją. Może służyć w urządzeń, chmury i scenariuszach osadzonych IoT.  
   
- Aby rozpocząć pracę z platformą .NET Core, przejdź na stronę [strony głównej platformy .NET Core](https://www.microsoft.com/net/core).  
+ Aby rozpocząć pracę z platformą .NET Core, odwiedź stronę [strony głównej platformy .NET Core](https://www.microsoft.com/net/core).  
   
- Poniżej przedstawiono głównych cech usługi .NET Core:  
+ Poniżej przedstawiono główne cechy platformy .NET Core:  
   
--   **Obsługujący wiele platform:** .NET Core zawiera najważniejsze funkcje do implementowania funkcji aplikacji, należy go i ponownie wykorzystać ten kod, niezależnie od docelowego platformy. Obecnie obsługuje trzy główne systemy operacyjne (systemu operacyjnego): Windows, Linux lub macOS. Można pisać aplikacje i bibliotek, które zostały zmodyfikowane spotkać obsługiwanych systemów operacyjnych. Aby wyświetlić listę obsługiwanych systemów operacyjnych, odwiedź stronę [plan .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md).
+-   **Dla wielu platform:** platformy .NET Core udostępnia kluczowe funkcje do wdrożenia funkcji aplikacji zgodnie z potrzebami i ponowne użycie tego kodu, niezależnie od docelowej platformy. Obecnie obsługuje trzech głównych systemach operacyjnych (OS): Windows, Linux i macOS. Można napisać aplikacji i bibliotek, które uruchomienie niemodyfikowanego w obsługiwanych systemach operacyjnych. Aby wyświetlić listę obsługiwanych systemów operacyjnych, odwiedź stronę [harmonogram działania dla platformy .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md).
   
--   **Typu open source:** .NET Core jest jednym z wielu projektów w obszarze zarządzania programu [.NET Foundation](http://www.dotnetfoundation.org/) i jest dostępny w [GitHub](https://github.com/).  O .NET Core jako projekt typu open source wspiera bardziej przejrzyste procesu projektowania i wspiera active i zaangażowani społeczności.  
+-   **"Open source":** platformy .NET Core jest jednym z wielu projektów w ramach kształtowanie [.NET Foundation](https://www.dotnetfoundation.org/) i jest dostępna w [GitHub](https://github.com/).  .NET Core jako projekt typu open source o promuje bardziej przejrzyste procesu opracowywania i wspiera aktywne, zaangażowanej społeczności.  
   
--   **Elastyczne wdrażanie:** istnieją dwa sposoby wdrażania aplikacji: wdrażania zależne od framework lub niezależne wdrożenia. Z wdrożeniem framework zależne są instalowane tylko zależności aplikacji i innych firm i aplikacji zależy od wersji systemu .NET Core znajdować się.  Z wdrożeniem niezależna wersja platformy .NET Core używany do tworzenia aplikacji również jest wdrażany wraz z zależności aplikacji i innych firm i uruchomić side-by-side z innymi wersjami.    Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji .NET Core](../../core/deploying/index.md).
+-   **Elastyczne wdrażanie:** istnieją dwa główne sposoby wdrażania aplikacji: wdrożenie zależny od struktury lub niezależna wdrożenia. Z wdrożeniem zależny od struktury są instalowane tylko zależności aplikacji i innych firm i aplikacji zależy od całego systemu wersję platformy .NET Core, znajdować się.  Z wdrożeniem niezależna wersja platformy .NET Core, używany do tworzenia aplikacji również jest wdrożony wraz z zależności aplikacji i innych firm i uruchomić side-by-side z innymi wersjami.    Aby uzyskać więcej informacji, zobacz [wdrożenie aplikacji programu .NET Core](../../core/deploying/index.md).
 
--   **Moduły:** .NET Core jest moduły, ponieważ jego zwolnienia za pośrednictwem pakietu NuGet w mniejszych pakietów zestawu. Zamiast jeden duży zestaw, który zawiera większość podstawowych funkcji .NET Core staje się dostępna jako mniejszych pakietów skoncentrowane na funkcji. Umożliwia firmie Microsoft był bardziej elastyczny model programowania i umożliwia optymalizowanie aplikacji obejmują tylko pakietów NuGet, które są potrzebne. Mniejsze powierzchni aplikacji zalety większego bezpieczeństwa obniżona Obsługa, poprawioną wydajność i zmniejszyć koszty w modelu płatności do co — użytkownik użycia.  
+-   **Modułowy:** platforma .NET Core to moduły, ponieważ jest on zwalniany za pośrednictwem pakietu NuGet w mniejszych pakietów zestawu. Zamiast jeden duży zestaw, który zawiera większość podstawowych funkcji .NET Core jest udostępniany jako mniejszych pakietów skoncentrowane na funkcji. Pozwala bardziej elastyczny model programowania nam oraz pozwala zoptymalizować aplikację, uwzględniając tylko tych pakietów NuGet, których potrzebujesz. Korzyści wynikające z mniejszego obszaru powierzchni aplikacji obejmują większego bezpieczeństwa ograniczona obsługa, zwiększona wydajność i zmniejszyć koszty w modelu płatności dla what-rzeczywiste użycie.  
   
-## <a name="the-net-core-platform"></a>Podstawowej platformy .NET  
- Platforma .NET Core składa się z kilku składników, w tym zarządzanych kompilatory, środowiska uruchomieniowego bibliotek klasy podstawowej i wiele modeli aplikacji, takich jak ASP.NET Core. Dodatkowe informacje na temat różnych składników i pobrać zaangażowane w następującej [GitHub](https://github.com/) repozytoriów:  
+## <a name="the-net-core-platform"></a>Platforma .NET Core  
+ Platformy .NET Core składa się z kilku składników, w tym zarządzane kompilatory, środowisko uruchomieniowe, biblioteki klas bazowych i wiele modeli aplikacji, takich jak ASP.NET Core. Dodatkowe informacje na temat różnych składników i Uzyskaj zaangażowane w następującej [GitHub](https://github.com/) repozytoriów:  
   
 -   [.NET Core](https://github.com/dotnet/core)  
   
--   [CoreFX - podstawowych bibliotek .NET Core](https://github.com/dotnet/corefx)  
+-   [CoreFX - podstawowe biblioteki .NET Core](https://github.com/dotnet/corefx)  
   
--   [Środowisko CoreCLR - podstawowego środowiska wykonawczego .NET](https://github.com/dotnet/coreclr)  
+-   [CoreCLR — środowisko uruchomieniowe programu .NET Core](https://github.com/dotnet/coreclr)  
   
 -   [Interfejs wiersza polecenia — narzędzia wiersza polecenia platformy .NET Core](https://github.com/dotnet/cli)  
   
--   [Roslyn - platformę .NET kompilatora](https://github.com/dotnet/roslyn)  
+-   [Roslyn — platforma kompilatora .NET](https://github.com/dotnet/roslyn)  
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Strona główna platformy .NET core](https://www.microsoft.com/net/core)  
- [Przewodnik platformy .NET Core](../../core/index.md)  
- [Dokumentacja platformy ASP.NET Core](/aspnet/core/)
+- [Strona główna platformy .NET core](https://www.microsoft.com/net/core)  
+- [Przewodnik platformy .NET Core](../../core/index.md)  
+- [Dokumentacja programu ASP.NET Core](/aspnet/core/)

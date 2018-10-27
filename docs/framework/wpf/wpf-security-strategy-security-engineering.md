@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: fd29696d88eba5c1363464334b63cb2ab0df4a0e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 60def26d21ff065bda3209ac90161af0672a38af
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698552"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181699"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia zabezpieczeń WPF - projekt zabezpieczeń
 Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft, zapewniających produkcji bezpiecznego kodu. To kluczowy element wiarygodne technologie komputerowe [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Jest praktykę, który jest używany w połączeniu z standardowa inżynieryjnym ułatwiają dostarczanie bezpiecznego kodu. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Składa się z dziesięciu fazy, które łączą najlepsze rozwiązania z ujęcie w formalne ramy measurability oraz dodatkowe struktury, w tym:  
@@ -67,7 +67,7 @@ Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft, zapewniającyc
 ### <a name="source-analysis-and-editing-tools"></a>Analiza źródła i narzędzia do edycji  
  Oprócz kod zabezpieczający ręcznego przeglądu elementów [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] zespół używa kilku narzędzi do analizy źródła i skojarzone zmiany do zmniejszenia luk w zabezpieczeniach. Szeroki zakres źródła, narzędzia są używane i obejmują następujące elementy:  
   
--   **FXCop**: umożliwia znalezienie typowych problemów z zabezpieczeniami w kodzie zarządzanym, począwszy od zasady dziedziczenia do użycia zabezpieczeń dostępu kodu jak bezpiecznie współpracować z kodem niezarządzanym. Zobacz [FXCop](http://www.gotdotnet.com/team/fxcop/).  
+-   **FXCop**: umożliwia znalezienie typowych problemów z zabezpieczeniami w kodzie zarządzanym, począwszy od zasady dziedziczenia do użycia zabezpieczeń dostępu kodu jak bezpiecznie współpracować z kodem niezarządzanym. Zobacz [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
 -   **Prefiks/Prefast**: formatu luk w zabezpieczeniach znajduje i typowe problemy z zabezpieczeniami w niezarządzanym kodzie, takich jak przekroczenia buforu ciągu problemów i sprawdzania błędów.  
   

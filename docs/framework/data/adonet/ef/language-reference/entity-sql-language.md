@@ -2,19 +2,19 @@
 title: Jednostki języka SQL
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 1df5372bed2c4c4b026662e0d1912683dd8752e9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f12a20f85a0449778614d3098f69d3da90902c95
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509612"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50048446"
 ---
 # <a name="entity-sql-language"></a>Jednostki języka SQL
 Jednostka SQL jest język zapytania niezależnie od magazynu, który jest podobny do bazy danych SQL. Jednostka SQL pozwala przesyłać zapytania dotyczące danych jednostki, jako obiekty lub w formie tabelarycznej. Należy rozważyć użycie jednostki SQL w następujących przypadkach:  
   
 -   Gdy zapytania muszą być dynamicznie skonstruowane w czasie wykonywania. W takim przypadku warto także za pomocą metody konstruktora zapytań z <xref:System.Data.Objects.ObjectQuery%601> zamiast tworzenia SQL jednostki ciągu w czasie wykonywania zapytania.  
   
--   Jeśli chcesz zdefiniować zapytanie jako część definicji modelu. Tylko jednostki SQL jest obsługiwana w modelu danych. Aby uzyskać więcej informacji, zobacz [QueryView — Element (MSL)](https://msdn.microsoft.com/library/f0426b34-45cb-4fd7-9777-e0570c5e0e80)  
+-   Jeśli chcesz zdefiniować zapytanie jako część definicji modelu. Tylko jednostki SQL jest obsługiwana w modelu danych. Aby uzyskać więcej informacji, zobacz [QueryView — Element (MSL)](/ef/ef6/modeling/designer/advanced/edmx/msl-spec#queryview-element-msl)  
   
 -   W przypadku używania EntityClient do zwracania danych tylko do odczytu jednostki jako za pomocą zestawów wierszy <xref:System.Data.EntityClient.EntityDataReader>. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ae36736ac7174ff7f77ae5bba45e1fd3880169c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 57c47fab98d7def3c3548769da091951819db1b1
+ms.sourcegitcommit: dfc8aa44246a97f4611cc441d9ef71b03cc31260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972978"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49413641"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (narzędzie PEVerify)
 Narzędzie PEVerify pomaga deweloperom, którzy generują język Microsoft intermediate language (MSIL) (na przykład twórcom kompilatorów, deweloperom aparatów skryptów itd.), w ustalaniu, czy ich kod MSIL i związane z nim metadane spełniają wymogi bezpieczeństwa typu. Niektóre kompilatory generują weryfikowalny kod bezpieczny ze względu na typy tylko wtedy, gdy unika się używania pewnych konstrukcji języka. Jeśli jako programista używasz takiego kompilatora, możesz chcieć sprawdzić, czy nie występują zagrożenia bezpieczeństwa typów kodu. W tej sytuacji możesz uruchomić narzędzie PEVerify, aby sprawdzić MSIL i metadane plików.  
@@ -57,7 +57,7 @@ peverify filename [options]
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe języka wspólnego opiera się na wykonywaniu kodu aplikacji bezpiecznego pod kątem typów, aby ułatwić wymuszanie stosowania mechanizmów zabezpieczeń i izolacji. Normalnie, kodu, który nie jest [sprawdzalnie bezpieczny](https://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc) nie można uruchomić, chociaż można ustawić zasady zabezpieczeń umożliwiające wykonanie kodu zaufanego, choć nieweryfikowalnego.  
+ Środowisko uruchomieniowe języka wspólnego opiera się na wykonywaniu kodu aplikacji bezpiecznego pod kątem typów, aby ułatwić wymuszanie stosowania mechanizmów zabezpieczeń i izolacji. Normalnie, kodu, który nie jest [sprawdzalnie bezpieczny](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security) nie można uruchomić, chociaż można ustawić zasady zabezpieczeń umożliwiające wykonanie kodu zaufanego, choć nieweryfikowalnego.  
   
  Jeśli żadna **/MD** ani **/il** opcje są określone, Peverify.exe wykonuje oba rodzaje sprawdzenia. Peverify.exe wykonuje **/MD** najpierw sprawdza. Jeśli nie ma żadnych błędów **/il** kontrole są wprowadzane. Jeśli określisz zarówno **/MD** i **/il**, **/il** kontrole są wprowadzane, nawet jeśli występują błędy w metadanych. Dlatego, jeśli nie ma żadnych błędów metadanych **peverify** *filename* jest odpowiednikiem **peverify** *filename*   **/MD** **/il**.  
   
@@ -122,6 +122,6 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia](../../../docs/framework/tools/index.md)  
- [NIB: Pisanie Sprawdzalnie bezpieczny kod](https://msdn.microsoft.com/library/d18f10ef-3b48-4f47-8726-96714021547b)  
- [Zabezpieczenia i ochrona typu](https://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
+ [Sprawdzalnie bezpieczny kod](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)  
+ [Zabezpieczenia i ochrona typu](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)  
  [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -1,73 +1,73 @@
 ---
-title: Wbudowanymi aplikacji
-description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
+title: Aplikacje monolityczne
+description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4d25ef131cf149eb869fa2acd40eddff5ee0b55d
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106622"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49633901"
 ---
-# <a name="monolithic-applications"></a>Wbudowanymi aplikacji
+# <a name="monolithic-applications"></a>Aplikacje monolityczne
 
-W tym scenariuszu są Tworzenie pojedynczych i wbudowanymi sieci web aplikacji lub usługi i wdrażanie go jako kontener. W aplikacji struktura nie może być wbudowanymi; może on zawierać kilka bibliotek, składniki lub nawet warstwy (warstwy aplikacji, warstwy domeny, Warstwa dostępu do danych itp.). Zewnętrznie jest jeden kontener, takimi jak jednego procesu, aplikacji sieci web jednej lub pojedynczą usługę.
+W tym scenariuszu są tworzenia pojedynczej i monolitycznych aplikacji sieci web lub usługi i wdrożyć go jako kontener. W aplikacji struktura może nie być monolityczne; może on zawierać kilka bibliotek, składników lub nawet warstwy (warstwa aplikacji, warstwa domeny, warstwy dostępu do danych itp.). Zewnętrznie jest jeden kontener, takich jak pojedynczego procesu, aplikacji sieci web jednej lub jednej usługi.
 
-Aby zarządzać tego modelu, możesz wdrożyć jeden kontener do reprezentowania aplikacji. Można go skalować, wystarczy dodać kilka większej liczby kopii usługi równoważenia obciążenia z przodu. Łatwość pochodzi z zarządzania pojedynczego wdrożenia w jeden kontener lub maszyny wirtualnej (VM).
+Aby zarządzać tym modelu, możesz wdrożyć jeden kontener, do reprezentowania aplikacji. W celu skalowania, wystarczy dodać kilka większej liczby kopii z modułem równoważenia obciążenia z przodu. Prostotę pochodzi z zarządzania pojedyncze wdrożenie w ramach jednego kontenera lub maszyny wirtualnej (VM).
 
-Następujące podmiot zabezpieczeń kontener jest tylko jeden element czy jest ona w jednym procesie wbudowanymi wzorzec jest w konflikcie. Zgodnie z opisami w rysunek 4-1 może zawierać wiele składników/biblioteki lub wewnętrzny warstw w ramach każdego kontenera.
+Następujące jednostki kontenera jest tylko jedno i zrobi to w jednym procesie monolityczne wzorzec jest w konflikcie. Może zawierać wielu składniki i biblioteki lub wewnętrzny warstwy w ramach każdego kontenera, jak pokazano w rysunek 4-1.
 
 ![](./media/image1.png)
 
-Rysunek 4-1: przykład wbudowanymi aplikacja — architektura
+Rysunek 4-1: przykład architektury aplikacji monolitycznej
 
-Wadą tego podejścia interfejsu pochodzi, lub w przypadku rozwoju aplikacji wymaganiem go do skalowania. W przypadku zmiany skali całej aplikacji nie jest naprawdę problem. Jednak w większości przypadków kilka części aplikacji są punkty urządzenie rozruchowe, które wymagają skalowania, inne składniki są używane mniej.
+Wadą tego podejścia jest dostarczany, lub gdy aplikacja powiększa się w wymaganiem go do skalowania. W przypadku zmiany skali całej aplikacji nie jest tak naprawdę problem. Jednak w większości przypadków kilka części aplikacji są punkty urządzenie rozruchowe, które wymagają skalowania, inne składniki są używane w mniej.
 
-W przykładzie typowe handlu elektronicznego, co prawdopodobnie należy jest skalowania składnika informacji produktu. Wielu klientów więcej Przeglądanie produktów, niż ich zakupu. Więcej klientów użyj koszyka niż używanie potoku płatności. Mniejszą liczbę klientów Dodawanie komentarzy i wyświetlanie ich historii zakupów. I może mieć tylko grupy pracowników w pojedynczym regionie, które są potrzebne do zarządzania zawartością i kampanii marketingowych. Skalując wbudowanymi projektowania cały kod jest wdrażany wiele razy.
+Korzystając z przykładu typowe handlu elektronicznego, prawdopodobnie potrzebne jest skalowanie składnik informacji produktu. Wielu klientów więcej Przeglądaj produktów, niż je zakupić. Większej liczby klientów użyj koszyka, niż korzystanie z potoku płatności. Dodaj komentarze lub mniejszej liczby klientów, w którym zostanie wyświetlanie ich historii zakupów. I prawdopodobnie masz tylko grupy pracowników w jednym regionie, musisz zarządzać zawartości i kampanii marketingowych. Przy użyciu skalowania monolityczny projekt, cały kod jest wdrażany wiele razy.
 
-Dodatkowo "skali — wszystko" problemu, zmiany pojedynczego składnika wymagają pełne ponowne całej aplikacji, a także ukończenie ponownego rozmieszczenia wszystkich wystąpień.
+Oprócz "skali — wszystko, czego" problemu, zmiany pojedynczego składnika wymagają pełne ponowne przetestowanie całej aplikacji, a także pełne ponowne wdrożenie wszystkich wystąpień.
 
-W wielu organizacjach opracowujesz przy użyciu tej metody architektury i wbudowanymi podejście jest. Wiele dobre kredyty za mało wyników, napotykają inne ograniczenia. Wiele zaprojektowane swoich aplikacji, w tym modelu, ponieważ infrastruktura i narzędzia było zbyt trudne do tworzenia SOAs i nie widzą na potrzeby — do momentu zwiększył aplikacji.
+Podejścia monolitycznego jest wspólny, i tworzysz wiele organizacji przy użyciu tej metody architektury. Wiele Ciesz się dobra wystarczająco dużo wyników napotykają inne ograniczenia. Wiele zaprojektowane swoich aplikacji, w tym modelu, ponieważ infrastruktura i narzędzia było zbyt trudne do tworzenia SOAs i nie widzą potrzeby — do momentu zwiększył aplikacji.
 
-Z perspektywy infrastruktury każdego serwera można uruchomić wiele aplikacji w obrębie tego samego hosta i mieć zaakceptowania wskaźnik wydajności w użycie zasobów, jak pokazano na rysunku 4-2.
+Z perspektywy infrastruktury każdy serwer można uruchomić wiele aplikacji, w tym samym hoście i mieć zaakceptowania wskaźnik wydajności w wykorzystanie zasobów, jak pokazano w rysunek 4-2.
 
 ![](./media/image2.png)
 
-Rysunek 4-2: hosta z systemem wiele aplikacji/kontenerów
+Rysunek 4-2: hoście z uruchomionym wiele aplikacji/kontenerów
 
-Wbudowanymi aplikacji na platformie Azure można wdrożyć przy użyciu dedykowanych maszyn wirtualnych dla poszczególnych wystąpień. Przy użyciu [zestawy skalowania maszyny Wirtualnej Azure](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), można łatwo skalować maszyn wirtualnych. [Usługa Azure App Service](https://azure.microsoft.com/en-us/services/app-service/) można uruchamiać aplikacje wbudowanymi i łatwego skalowania wystąpienia bez konieczności zarządzania maszynami wirtualnymi. Od 2016 usługi aplikacji Azure można uruchomić pojedynczego wystąpienia Docker kontenerów, jak również uprościć wdrażanie. I przy użyciu rozwiązania Docker, można wdrożyć jeden maszynę Wirtualną jako hosta Docker i uruchomić wiele wystąpień. Przy użyciu równoważenia Azure, jak pokazano na rysunku 4-3, można zarządzać skalowania.
+Aplikacje monolityczne na platformie Azure można wdrożyć przy użyciu dedykowanych maszyn wirtualnych dla poszczególnych wystąpień. Za pomocą [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), łatwe skalowanie maszyn wirtualnych. [Usługi Azure App Services](https://azure.microsoft.com/services/app-service/) uruchamiać aplikacje monolityczne i łatwo skalować wystąpień bez konieczności zarządzania maszynami wirtualnymi. Od 2016 r. usługi Azure App Services można uruchomić jednego wystąpienia kontenerów platformy Docker, jak również uproszczenia procesu wdrażania. Ponadto za pomocą platformy Docker, możesz wdrożyć jedną maszynę Wirtualną jako hosta Docker i uruchomić wiele wystąpień. Za pomocą równoważenie Azure, jak pokazano w rysunek 4-3, możesz zarządzać, skalowanie.
 
 ![](./media/image3.png)
 
-Rysunek 4-3: wiele hostów skalowania w poziomie pojedynczego Docker aplikacji/kontenerów aplikacji
+Rysunek 4-3: wiele hostów skalowanie w poziomie w jednej aplikacji aplikacji/kontenerów Docker
 
-Można zarządzać wdrażaniem na różnych hostach za pomocą techniki tradycyjnego wdrażania. Hostach Docker można zarządzać za pomocą poleceń, takich jak `docker run` ręcznie, za pomocą automatyzacji, takie jak potoki ciągłego dostarczania (CD), które firma Microsoft wyjaśniono dalej w tej sekcji e.
+Możesz zarządzać wdrożenia na różnych hostach przy użyciu techniki wdrażania tradycyjnych. Hostów platformy Docker można zarządzać za pomocą poleceń, takich jak `docker run` ręcznie, za pomocą usługi automation, takie jak potoki ciągłe dostarczanie (CD), które firma Microsoft opisano w dalszej części tej książce elektronicznej.
 
-## <a name="monolithic-application-deployed-as-a-container"></a>Wbudowanymi aplikacji wdrożonych jako kontener
+## <a name="monolithic-application-deployed-as-a-container"></a>Monolitycznych wdrożone jako kontener
 
-Istnieją korzyści wynikające z używania kontenery Zarządzanie wbudowanymi wdrożeniami. Skalowanie wystąpienia kontenery jest znacznie szybsze i łatwiejsze niż wdrażanie dodatkowych maszyn wirtualnych. Mimo że zestawy skalowania maszyny Wirtualnej to doskonały funkcji skalowania maszyn wirtualnych, które są wymagane do obsługi kontenerów Docker, ich trwać do skonfigurowania. Po wdrożeniu jako wystąpienia aplikacji Konfiguracja aplikacji jest zarządzana w ramach maszyny wirtualnej.
+Istnieją korzyści wynikające z używania kontenerów, zarządzanie wdrożeniami monolitycznego. Skalowanie wystąpienia kontenerów jest znacznie szybsze i prostsze wdrażania dodatkowych maszyn wirtualnych. Mimo że zestawy skalowania maszyn wirtualnych są doskonałe funkcji skalowania maszyn wirtualnych, które są wymagane do obsługi kontenerów Docker, ich trwać do skonfigurowania. Po wdrożeniu jako wystąpień aplikacji, konfiguracji aplikacji odbywa się w ramach maszyny wirtualnej.
 
-Wdrażanie aktualizacji, jak obrazy usługi Docker jest znacznie szybsze i wydajność sieci. Wystąpienia Vn można skonfigurować na tej samej hostach jako swoich wystąpień Vn-1 eliminowanie dodany kosztów wynikających z dodatkowych maszyn wirtualnych. Obrazy usługi docker zazwyczaj rozpoczyna się w sekundach, przyspieszania wdrożeniach. Przerwanie w dół wystąpienia Docker jest równie proste jak wywoływanie `docker stop` polecenia zwykle kończonych w mniej niż 1 sekunda.
+Wdrażanie aktualizacji zgodnie z obrazów platformy Docker jest znacznie szybszy i wydajność sieci. Wystąpienia Vn można skonfigurować tak, na tym samym hosty jako wystąpień Vn-1, eliminując koszty dodano dodatkowe maszyny wirtualne. Obrazy platformy docker zazwyczaj rozpoczyna się w ciągu kilku sekund, skracając wdrożeniach. Zniszczenia wystąpienia platformy Docker jest równie proste jak wywoływanie `docker stop` polecenia, zwykle Kończenie pracy w ciągu niecałej sekundy.
 
-Ponieważ kontenery są z założenia niezmienne, zgodnie z projektem, nigdy nie trzeba martwić uszkodzony maszyn wirtualnych, ponieważ skrypt aktualizacji nie pamiętasz dla niektórych określonej konfiguracji lub pliku pozostałego miejsca na dysku.
+Ponieważ kontenery są założenia niezmienne, zgodnie z projektem, nigdy nie trzeba martwić się o uszkodzony maszyn wirtualnych, ponieważ skrypt aktualizacji to, że nie można uwzględnić niektóre konkretnej konfiguracji lub plik pozostanie na dysku.
 
-Mimo że wbudowanymi aplikacje mogą korzystać z Docker, firma Microsoft jest dotknięcie na tylko porady korzyści. Większe korzyści wynikające z zarządzania kontenery pochodzi z wdrażania z orchestrators kontenera, zarządzających różnych wystąpień i cyklu życia każde wystąpienie kontenera. Podzielenie wbudowanymi aplikacji na podsystemy, które można skalować, opracowany i wdrażane pojedynczo jest punkt wejścia do obszaru mikrousług.
+Mimo że monolitycznych aplikacji mogą korzystać z platformy Docker, firma Microsoft jest dotknięcie na tylko porady dotyczące korzyści. Większe korzyści wynikające z zarządzania kontenerów pochodzi z wdrażania przy użyciu koordynatorów kontenerów, które zarządzają różnych wystąpień i cyklu życia każdego wystąpienia kontenera. Podzielenie aplikacji monolitycznej na podsystemy, które można skalować, opracowane i wdrażane indywidualnie jest punktem wejścia do obszaru mikrousług.
 
-## <a name="publishing-a-single-docker-container-app-to-azure-app-service"></a>Publikowanie tylko jednej aplikacji kontenera Docker w usłudze Azure App Service
+## <a name="publishing-a-single-docker-container-app-to-azure-app-service"></a>Publikowanie jednym aplikacji kontenera aparatu Docker w usłudze Azure App Service
 
-Ponieważ w celu uzyskania szybkiego sprawdzania poprawności kontenera wdrożeniu na platformie Azure lub aplikacja jest po prostu kontenera pojedynczej aplikacji, usługi aplikacji Azure albo zawiera doskonałym sposobem zapewnienia skalowalnych usług jeden kontener.
+Albo ponieważ w celu uzyskania szybkiego sprawdzania poprawności kontenera wdrażane na platformie Azure lub aplikacja jest po prostu kontener pojedynczej aplikacji usługi Azure App Services zapewnia doskonały sposób zapewnienia skalowalnych usług po jednym kontenerze.
 
-Przy użyciu usługi Azure App Service jest intuicyjne i można uzyskać w i szybko uruchomić, ponieważ zapewnia dużą Git integracji do wykonania kodu, skompiluj go w programie Microsoft Visual Studio i bezpośrednie wdrażanie na platformie Azure. Ale, tradycyjnie (nie z rozwiązaniem Docker z), w razie potrzeby innych możliwości, struktury lub zależności, które nie są obsługiwane w usługach aplikacji, konieczne jest poczekaj na jej przez zespół Azure aktualizacji tych zależności w usłudze App Service lub przełączone do innych usług, takich jak Sieć szkieletowa usług, usługi w chmurze lub nawet zwykły maszyn wirtualnych, dla których mają dodatkowe kontrolę i można zainstalować wymaganego składnika lub struktury aplikacji.
+Za pomocą usługi Azure App Service jest intuicyjna i można rozpocząć pracę i szybkie uruchomione, ponieważ udostępnia doskonałe narzędzia Git integracji do wykonania kodu, skompiluj go w programie Microsoft Visual Studio i bezpośrednie wdrażanie na platformie Azure. Ale, tradycyjnie (przy użyciu nie platformy Docker), jeśli to konieczne, inne możliwości, struktury lub zależności, które nie są obsługiwane w usługach App potrzebnych do poczekaj na jego zespół Azure aktualizuje te zależności w usłudze App Service lub przełączone do innych usług, takich jak Usługa Service Fabric, Cloud Services lub nawet zwykły maszyn wirtualnych, dla których masz dodatkowe kontroli i może zainstalować wymaganego składnika lub framework dla aplikacji.
 
-Teraz, jednak (ogłaszane w Microsoft Connect 2016 w listopada 2016) oraz jak pokazano na 4‑4 rysunku, korzystając z programu Visual Studio 2017, obsługa kontenerów w usłudze Azure App Service udostępnia możliwość zawierać dowolne w danym środowisku aplikacji. Jeśli dodano zależności do aplikacji, ponieważ jest on używany w kontenerze, możesz uzyskać możliwość włączenia tych zależności w obrazie plik Dockerfile lub Docker.
+Teraz, jednak (o którym poinformowano na konferencji Microsoft Connect 2016 w listopadzie 2016) i pokazany na rysunku 4‑4, korzystając z programu Visual Studio 2017, obsługa kontenerów w usłudze Azure App Service daje możliwość zawierać dowolne w danym środowisku aplikacji. Jeśli dodano zależności aplikacji, ponieważ jest on używany w kontenerze, zostanie wyświetlony możliwości tych zależności, w tym obrazie pliku Dockerfile lub rozwiązania Docker.
 
 ![](./media/image4.png)
 
-Rysunek 4 — 4: publikowanie kontener usłudze Azure App Service z programu Visual Studio aplikacje/kontenerów.
+Rysunek 4-4: publikowanie kontenera w usłudze Azure App Service z programu Visual Studio aplikacje/kontenerów
 
-Rysunek 4-4 przedstawiono również, że przepływ publikowania wypchnięcia obrazu za pomocą rejestru kontenera, który może być rejestru kontenera platformy Azure (rejestru w pobliżu do wdrożeń na platformie Azure i zabezpieczane przez usługi Azure Active Directory grup i kont) lub innych rejestru Docker Podobnie jak Centrum Docker lub lokalnie rejestry organizacji.
+Rysunek 4-4 pokazuje również, że przepływ publikowania wypycha obraz do rejestru kontenerów, która może być usługa Azure Container Registry (rejestru blisko wdrożenia na platformie Azure i chronione przez usługę Azure Active Directory, grupy i konta) lub dowolnego rejestru platformy Docker Podobnie jak rejestry usługi Docker Hub lub w środowisku lokalnym.
 
 
 >[!div class="step-by-step"]

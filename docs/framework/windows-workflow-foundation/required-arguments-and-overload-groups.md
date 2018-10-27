@@ -2,12 +2,12 @@
 title: Wymagane Argumenty i Grupy metod Przeciążonych
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842076"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452904"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Wymagane Argumenty i Grupy metod Przeciążonych
 Działania można skonfigurować tak, aby niektóre argumenty są wymagane powiązać na ważne potrzeby wykonywania działania. `RequiredArgument` Atrybut jest używany do wskazania, że niektórych argumentów w ramach działania są wymagane i `OverloadGroup` atrybut służy do grupowania kategorii wymaganych argumentów. Za pomocą atrybutów, autorzy działanie może zapewnić proste lub złożone działanie sprawdzania poprawności konfiguracji.  
@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **Nieprawidłowa wartość argumentu wymagane działania "Operand1".**  
 > [!NOTE]
-> Aby uzyskać informacje dotyczące sprawdzania i obsługa błędy i ostrzeżenia walidacji, zobacz [wywoływanie walidacji działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+> Aby uzyskać więcej informacji dotyczących sprawdzania i obsługa błędy i ostrzeżenia walidacji, zobacz [wywoływanie walidacji działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Za pomocą Grupy metod Przeciążonych
 

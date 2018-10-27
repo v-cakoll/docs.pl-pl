@@ -3,11 +3,11 @@ title: Informacje o wywołującym (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
 ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850468"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185277"
 ---
 # <a name="caller-information-c"></a>Informacje o wywołującym (C#)
 

@@ -2,23 +2,21 @@
 title: Peer-to-Peer współpracy
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c81300d160e2ec175f61f286047fa92015345942
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a7d382006921487ea91f82ee830c75b6355a01f3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198153"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180790"
 ---
-# <a name="peer-to-peer-collaboration"></a>Peer-to-Peer współpracy
+# <a name="peer-to-peer-collaboration"></a>Peer-to-peer współpracy
+
 Sieci peer-to-peer to wykorzystania stosunkowo zaawansowanych komputerów (komputery osobiste), znajdujące się na granicy Internetu dla zadań obliczeniowej więcej niż tylko opartego na kliencie. Nowoczesne komputer osobisty (PC) ma bardzo szybki procesor, pamięć ogromna i dużych dysków twardych, które są w pełni wykorzystywane podczas wykonywania typowych zadań obliczeniowych, takich jak wiadomości e-mail i przeglądania sieci Web. Nowoczesnych PC łatwo może działać jako klient i serwer (element równorzędny) dla wielu typów aplikacji.  
   
--   Infrastruktura współpracy Peer-to-Peer jest uproszczone wdrożenia infrastruktury Peer-to-Peer Microsoft Windows, który wykorzystuje osoby w pobliżu mnie usługi w systemach Windows Vista i nowszych platform. Najlepiej jest używana dla aplikacji z obsługą elementów równorzędnych w obrębie podsieci dla którego osoby w pobliżu mi usługa działa, chociaż może obsłużyć, punkty końcowe w Internecie lub także kontaktów. Zawiera typowe skontaktuj się z kierownika któremu jest używany przez Live Messenger i innych aplikacji obsługujących na żywo, aby określić, skontaktuj się z punktami końcowymi, dostępności i obecności.  
+Infrastruktura współpracy Peer-to-Peer jest uproszczone wdrożenia infrastruktury Peer-to-Peer Microsoft Windows, który wykorzystuje osoby w pobliżu mnie usługi w systemach Windows Vista i nowszych platform. Najlepiej jest używana dla aplikacji z obsługą elementów równorzędnych w obrębie podsieci dla którego osoby w pobliżu mi usługa działa, chociaż może obsłużyć, punkty końcowe w Internecie lub także kontaktów. Zawiera typowe skontaktuj się z kierownika któremu jest używany przez Live Messenger i innych aplikacji obsługujących na żywo, aby określić, skontaktuj się z punktami końcowymi, dostępności i obecności.  
   
--  
-  
-## <a name="collaboration-applications"></a>Aplikacje współpracy  
+## <a name="collaboration-applications"></a>Aplikacje współpracy
+
  Aplikacja typowych współpracy peer-to-peer składa się z następujących czynności:  
   
 -   Elementu równorzędnego określa tożsamość elementu równorzędnego, kto jest zainteresowany hostingu sesji współpracy  
@@ -37,11 +35,10 @@ Sieci peer-to-peer to wykorzystania stosunkowo zaawansowanych komputerów (kompu
   
 -   W tym momencie równorzędnej hosta można uruchomić sesję współpracy z wszystkich elementów równorzędnych zaproszonego lub zarejestrować aplikację za pomocą infrastruktury współpracy.  P2p aplikacje korzystają z infrastruktury współpracy Peer-to-Peer i <xref:System.Net.PeerToPeer.Collaboration> przestrzeni nazw na potrzeby koordynowania komunikacji dla gier, biuletyny, konferencje i inne aplikacje bezserwerowe obecności.  
   
--  
-  
-## <a name="peer-to-peer-networking-security"></a>Zabezpieczenia sieci peer-to-Peer  
+## <a name="peer-to-peer-networking-security"></a>Zabezpieczenia sieci peer-to-peer  
+
  W domenie usługi Active Directory kontrolery domeny zapewniają usługi uwierzytelniania, przy użyciu protokołu Kerberos. W środowisku bez użycia serwera elementu równorzędnego równorzędnym należy podać własny mechanizm uwierzytelniania. Peer-to-Peer Networking dowolny węzeł może pełnić urzędu certyfikacji, usuwając wymagania certyfikatu głównego w magazynie zaufany główny urząd certyfikacji każdego elementu równorzędnego. Uwierzytelnianie jest obsługiwane przy użyciu certyfikatów z podpisem własnym, w formacie certyfikatu x.509. Są certyfikaty, które są tworzone przez każdy komputer, która powoduje wygenerowanie pary kluczy publiczny klucz/prywatny i certyfikat, który jest podpisany przy użyciu klucza prywatnego. Certyfikat z podpisem własnym służy do uwierzytelniania i podaj informacje o jednostce elementów równorzędnych. Takich jak uwierzytelnianie X.509 uwierzytelnianie sieci węzłów równorzędnych opiera się na łańcuch certyfikatów śledzenia do klucza publicznego, który jest zaufany.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Net.PeerToPeer.Collaboration>  
- [Przestrzeń nazw System.Net.PeerToPeer.Collaboration — informacje](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.PeerToPeer.Collaboration>  
+- [Przestrzeń nazw System.Net.PeerToPeer.Collaboration — informacje](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

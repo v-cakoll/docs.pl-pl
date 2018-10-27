@@ -2,14 +2,12 @@
 title: '&lt;iriParsing&gt; — Element (ustawienia identyfikatora Uri)'
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 446447f0d279755dbc06e0e3a25d50ad86ad555b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: de4eafc735bae69df5a2eb0adf263ba5cdca2097
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028286"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50048414"
 ---
 # <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt; — Element (ustawienia identyfikatora Uri)
 Określa, jeśli analizy międzynarodowego identyfikatora zasobów (IRI) są stosowane do <xref:System.Uri> , czy powinna być stosowana IRI podczas analizowania reguły.  

@@ -2,19 +2,19 @@
 title: MsmqBindingElementBase
 ms.date: 03/30/2017
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-ms.openlocfilehash: 9a9d48cc49b19f737236939c83a4e9421013f48f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7f4cf41168bd1e5483524195e20541d896a6569
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486604"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183194"
 ---
 # <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp  
 class MsmqBindingElementBase : TransportBindingElement  
 {  
   string CustomDeadLetterQueue;  
@@ -37,88 +37,88 @@ class MsmqBindingElementBase : TransportBindingElement
 ## <a name="properties"></a>Właściwości  
  Klasa MsmqBindingElementBase ma następujące właściwości:  
   
-### <a name="customdeadletterqueue"></a>CustomDeadLetterQueue  
+### <a name="customdeadletterqueue"></a>customDeadLetterQueue  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Identyfikator URI zawiera lokalizację kolejki utraconych wiadomości dla każdej aplikacji, gdzie umieścić są komunikaty wygasłe, lub które nie przeszły przesłanie bądź dostarczenie.  
+ Identyfikator URI, który zawiera lokalizację kolejki utraconych wiadomości dla każdej aplikacji, gdzie umieszcza komunikaty wygasły lub mają niepowodzeniem transferu lub dostarczania.  
   
 ### <a name="deadletterqueue"></a>DeadLetterQueue wartość  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Wartość wyliczenia wskazująca typ używanej kolejki utraconych wiadomości.  
+ Wartość wyliczenia, który wskazuje na typ używanej kolejki utraconych wiadomości.  
   
 ### <a name="durable"></a>trwałe  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Wartość, która wskazuje, czy komunikaty przetwarzane przez to powiązanie są trwałe lub zmienne.  
   
-### <a name="exactlyonce"></a>ExactlyOnce  
+### <a name="exactlyonce"></a>exactlyOnce  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Wartość logiczna wskazująca, czy komunikaty przetwarzane przez to powiązanie są odbierane dokładnie raz.  
   
-### <a name="maxretrycycles"></a>MaxRetryCycles  
+### <a name="maxretrycycles"></a>maxRetryCycles  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalna liczba cykli ponawiania próby dostarczenia komunikatów do aplikacji odbierającej.  
+ Maksymalna liczba ponownych prób cyklów próby dostarczenia komunikatów do aplikacji odbierającej.  
   
-### <a name="receiveerrorhandling"></a>ReceiveErrorHandling  
+### <a name="receiveerrorhandling"></a>receiveErrorHandling  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Ustawienia dotyczące obsługi uszkodzonych komunikatów.  
+ Ustawienia obsługi Zarządzanie skażonymi komunikatami.  
   
-### <a name="receiveretrycount"></a>ReceiveRetryCount  
+### <a name="receiveretrycount"></a>receiveRetryCount  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalna liczba natychmiastowego ponawiania prób w przypadku komunikatu odczytywanego z kolejki aplikacji.  
+ Maksymalna liczba natychmiastowego ponawiania próby w wiadomości, które są odczytywane z kolejki aplikacji.  
   
-### <a name="retrycycledelay"></a>RetryCycleDelay  
- Typ danych: daty i godziny  
+### <a name="retrycycledelay"></a>retryCycleDelay  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Wartość wskazująca zwłokę między kolejnymi próbami dostarczenia komunikatu, którego nie można było dostarczyć natychmiast.  
+ Wartość wskazująca czas opóźnienia między cykle przy próbie dostarczenia komunikatu, którego nie można dostarczyć natychmiast.  
   
-### <a name="timetolive"></a>Wartość TimeToLive  
- Typ danych: daty i godziny  
+### <a name="timetolive"></a>timeToLive  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Przedział czasu, która wskazuje, jak długo komunikaty przetwarzane przez to powiązanie mogą znajdować się w kolejce, zanim wygasną.  
   
-### <a name="usemsmqtracing"></a>UseMsmqTracing  
+### <a name="usemsmqtracing"></a>useMsmqTracing  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Wartość logiczna, która wskazuje, czy komunikaty przetwarzane przez to powiązanie powinny być śledzone.  
   
-### <a name="usesourcejournal"></a>UseSourceJournal  
+### <a name="usesourcejournal"></a>useSourceJournal  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Wartość logiczna wskazująca, czy kopie komunikatów przetwarzanych przez to powiązanie powinny być przechowywane w kolejce dziennika źródła.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.NetMsmqBinding>  

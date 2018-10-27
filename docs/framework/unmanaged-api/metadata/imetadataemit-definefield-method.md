@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b54ceb099df15855b6b30b8c28d7d8917a9c71eb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446577"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184952"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField — Metoda
-Tworzy definicję pola z podpisem określonych metadanych i pobiera token do tej definicji pola.  
+Tworzy definicję dla pola przy użyciu podpisu określonych metadanych, a następnie pobiera token do tej definicji pola.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,22 +45,22 @@ HRESULT DefineField (
   
 #### <a name="parameters"></a>Parametry  
  `td`  
- [in] `mdTypeDef` Token otaczającej klasy lub interfejsu.  
+ [in] `mdTypeDef` Tokenu dla otaczającej klasy lub interfejsu.  
   
  `szName`  
- [in] Nazwa pola w standardzie Unicode.  
+ [in] Nazwa pola w formacie Unicode.  
   
  `dwFieldFlags`  
- [in] Atrybuty pól. To jest maską bitów z `CorFieldAttr` wartości.  
+ [in] Atrybuty pól. Jest to z `CorFieldAttr` wartości.  
   
  `pvSigBlob`  
- [in] Podpis pola jako obiektu BLOB.  
+ [in] Podpis pola jako obiekt BLOB.  
   
  `cbSigBlob`  
  [in] Liczba bajtów w `pvSigBlob`.  
   
- `dwCPlusTypeFlage`  
- [in] `ELEMENT_TYPE_` *\** Wartości stałej. Jest to `CorElementType` wartość. Jeśli nie definiuje wartości stałej dla pola, użyj `ELEMENT_TYPE_END`.  
+ `dwCPlusTypeFlag`  
+ [in] `ELEMENT_TYPE_` *\** Wartości stałej. Jest to `CorElementType` wartość. Jeśli nie definiuje stałą wartość dla pola, użyj `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] Stała wartość dla pola.  

@@ -2,19 +2,19 @@
 title: ServiceToEndpointAssociation
 ms.date: 03/30/2017
 ms.assetid: 03c3cd15-e1b2-4dc2-bdc2-59fdccdae110
-ms.openlocfilehash: b1e5b87b053e947432cba9f6e716f7d1ea8f013f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d23a3ee10c47e04ea7bdba202ea5063c0d84fac
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484332"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452712"
 ---
 # <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
-Mapuje usługi do punktu końcowego.  
+Mapy usługi do punktu końcowego.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class ServiceToEndpointAssociation  
 {  
   Service ref;  
@@ -31,21 +31,21 @@ class ServiceToEndpointAssociation
 ### <a name="ref"></a>ref  
  Typ danych: usługi  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
 Kwalifikatory: klucz  
   
- Usługa skojarzona z punktem końcowym.  
+ Usługa skojarzonej z punktem końcowym.  
   
 ### <a name="ref"></a>ref  
- Typ danych: punktu końcowego  
+ Typ danych: punkt końcowy  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
 Kwalifikatory: klucz  
   
- Punkt końcowym skojarzony z usługą.  
+ Punkt końcowy skojarzony z usługą.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|

@@ -2,19 +2,19 @@
 title: BindingElement
 ms.date: 03/30/2017
 ms.assetid: fdbfde0c-2e52-4fc5-9eb8-14b42e647263
-ms.openlocfilehash: 11e3686de7efc1402ea1410ed4b8cab9f1bc76a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1c39dff654f36231cfe229ad9460feeb7990d2f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33483692"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183883"
 ---
 # <a name="bindingelement"></a>BindingElement
 BindingElement  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp  
 class BindingElement  
 {  
 };  
@@ -25,9 +25,9 @@ class BindingElement
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.Binding>

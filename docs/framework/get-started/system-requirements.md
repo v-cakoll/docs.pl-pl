@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8f9205863ce65b480aa048f99df62d9b522aac9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e9d1c6dff4a1a8722a2ca196763756336d512631
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845765"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047218"
 ---
 # <a name="net-framework-system-requirements"></a>Wymagania systemowe programu .NET framework
 
@@ -55,6 +55,7 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej wersji programu .NET F
 
 | System operacyjny | Obsługiwane wersje | Wstępnie zainstalowane w systemie operacyjnym | Do zainstalowania osobno |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Usługa Windows Update 10 października 2018 r. | 32-bitowych i 64-bitowych | .NET framework 4.7.2 |--|
 | Usługa Windows Update 10 kwietnia 2018 r. | 32-bitowych i 64-bitowych | .NET framework 4.7.2 |--|
 | Windows 10 Fall Creators Update | 32-bitowych i 64-bitowych | .NET Framework 4.7.1 | .NET framework 4.7.2 |
 | Windows 10 Creators Update | 32-bitowych i 64-bitowych | .NET framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET framework 4.7.2 | 

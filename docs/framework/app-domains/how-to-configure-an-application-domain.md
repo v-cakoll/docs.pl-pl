@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab5a4c5f06e7b1789b9252820374ab1b0aca75be
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 012f0220afa0e444d68af5998fb2492a03a371d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743410"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183168"
 ---
 # <a name="how-to-configure-an-application-domain"></a>Porady: konfigurowanie domeny aplikacji
-Środowisko uruchomieniowe języka wspólnego można udostępnić informacje o konfiguracji dla nowej domeny aplikacji, przy użyciu <xref:System.AppDomainSetup> klasy. Podczas tworzenia domeny aplikacji, najważniejsze właściwości to <xref:System.AppDomainSetup.ApplicationBase%2A>. Druga **AppDomainSetup** właściwości są używane głównie przez hosty w czasie wykonywania, aby skonfigurować domenę określonej aplikacji.  
+Środowisko uruchomieniowe języka wspólnego może udostępniać informacje o konfiguracji dla nowej domeny aplikacji, za pomocą <xref:System.AppDomainSetup> klasy. Podczas tworzenia domen aplikacji, najważniejsze właściwości to <xref:System.AppDomainSetup.ApplicationBase%2A>. Druga **AppDomainSetup** właściwości są używane głównie przez hosty środowiska uruchomieniowego, aby skonfigurować domeny określonej aplikacji.  
   
- **ApplicationBase** właściwość definiuje katalogu głównego aplikacji. Gdy środowiska uruchomieniowego musi spełnić żądania typu, sondy go do zestawu zawierającego typ w katalogu określonym przez **ApplicationBase** właściwości.  
+ **ApplicationBase** właściwość definiuje katalogu głównego aplikacji. Gdy środowisko wykonawcze musi spełnić żądanie typu, sondy jej zestawu zawierającego typ w katalogu określonym przez **ApplicationBase** właściwości.  
   
 > [!NOTE]
->  Nowa domena aplikacji dziedziczy tylko **ApplicationBase** właściwości twórcy.  
+>  Nowa domena aplikacji dziedziczy tylko **ApplicationBase** właściwość twórcy.  
   
- Poniższy przykład tworzy wystąpienie **AppDomainSetup** klasy, używa tej klasy w celu utworzenia nowej domeny aplikacji, zapisuje te informacje w konsoli i następnie zwalnia domeny aplikacji.  
+ Poniższy przykład tworzy wystąpienie **AppDomainSetup** klasa, używa tej klasy w celu utworzenia nowej domeny aplikacji, zapisuje te informacje w konsoli i następnie zwalnia domeny aplikacji.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[ADApplicationBase#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADApplicationBase/CPP/source2.cpp#2)]
@@ -34,5 +34,5 @@ ms.locfileid: "32743410"
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Programowanie za pomocą domeny aplikacji](application-domains.md#programming-with-application-domains)  
- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)
+- [Programowanie z domenami aplikacji](application-domains.md#programming-with-application-domains)  
+- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)

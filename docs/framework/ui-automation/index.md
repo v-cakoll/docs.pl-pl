@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 12fc92c716cf0ff1ab15786a067ad955caee0d20
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a99d42b4d61f3270b50e0c4698683cf89458ec9c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205307"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180196"
 ---
 # <a name="accessibility"></a>Ułatwienia dostępu
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "47205307"
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] to nowe środowisko ułatwień dostępu do [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]. Spełnia potrzeby produktów technologii pomocniczych i platform testów automatycznych, zapewniając programowy dostęp do informacji o [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Ponadto [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] umożliwia deweloperom kontroli i aplikacji udostępnić swoje produkty.  
   
- W tej dokumentacji opisano [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] dla kodu zarządzanego. Aby uzyskać informacje o programowaniu dla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] w języku C++, zobacz [automatyzacji interfejsu użytkownika dla aplikacji Win32](https://msdn.microsoft.com/library/ms726294.aspx).  
+ W tej dokumentacji opisano [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] dla kodu zarządzanego. Aby uzyskać informacje o programowaniu dla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] w języku C++, zobacz [automatyzacji interfejsu użytkownika dla aplikacji Win32](/windows/desktop/winauto/windows-automation-api-portal).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Najlepsze rozwiązania dotyczące ułatwień dostępu](../../../docs/framework/ui-automation/accessibility-best-practices.md)  

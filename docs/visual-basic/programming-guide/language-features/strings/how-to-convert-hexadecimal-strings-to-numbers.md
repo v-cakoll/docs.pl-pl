@@ -8,32 +8,30 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: af0e6c1e30c116709ed98240de7bf3471fa842d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65184bbb742ad549a8398d55dc7bdeed05a9d973
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648645"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50048557"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Porady: konwertowanie ciągów szestnastkowych na numery (Visual Basic)
-W tym przykładzie konwertuje ciąg szesnastkowy całkowitą przy użyciu <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> metody.  
+Ten przykład konwertuje ciąg szesnastkowy do liczby całkowitej przy użyciu <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> metody.  
   
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Aby przekonwertować ciąg szesnastkowy na liczbę  
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Aby przekonwertować ciągu szesnastkowego na liczbę  
   
--   Użyj <xref:System.Convert.ToInt32(System.String,System.Int32)> metodę, aby przekonwertować liczby wyrażone w base-16, do liczby całkowitej.  
+-   Użyj <xref:System.Convert.ToInt32(System.String,System.Int32)> metodę, aby przekonwertować numer wyrażone w base-16 na liczbę całkowitą.  
   
-     Pierwszy argument funkcji <xref:System.Convert.ToInt32(System.String,System.Int32)> metoda jest ciąg do przekonwertowania. Drugi argument opisuje jakie base numer jest wyrażona w; szesnastkowe jest podstawowy 16.  
+     Pierwszy argument <xref:System.Convert.ToInt32(System.String,System.Int32)> metody jest ciąg do przekonwertowania. Drugi argument opisuje jakie podstawowa, liczba jest będzie wyrażana; szesnastkowa to podstawa 16.  
   
      [!code-vb[HexConversion](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
 
-- Należy pamiętać, że ciąg szesnastkowy ma następujące ograniczenia:
+- Należy zwrócić uwagę na to, że ciąg szesnastkowy ma następujące ograniczenia:
 
    - Nie może zawierać `&h` prefiks.
    - Nie może zawierać `_` separator cyfr.
 
-   Jeśli prefiks lub separator cyfr jest obecna, wywołanie <xref:System.Convert.ToInt32(System.String,System.Int32)> metoda zgłasza <xref:System.FormatException>.
+   Jeśli prefiks lub separator cyfr jest obecna, wywołanie <xref:System.Convert.ToInt32(System.String,System.Int32)> metoda zgłasza wyjątek <xref:System.FormatException>.
 
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  

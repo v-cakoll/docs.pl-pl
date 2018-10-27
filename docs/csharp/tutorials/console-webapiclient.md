@@ -3,12 +3,12 @@ title: Tworzenie klienta REST przy użyciu platformy .NET Core
 description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 521c6edfa7163219ea86c6fb8444bc95859c9aa1
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397924"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170305"
 ---
 # <a name="rest-client"></a>Klient REST
 
@@ -57,7 +57,7 @@ Większość edytory kodu zapewni uzupełnianie przez różne wersje tych biblio
 Po wprowadzeniu tych zmian, należy uruchomić `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) ponownie, aby pakiet jest zainstalowany w systemie.
 
 ## <a name="making-web-requests"></a>Tworzenie żądania sieci Web
-Teraz możesz rozpocząć pobieranie danych z sieci web. W tej aplikacji będzie odczytu informacji z [interfejsu API usługi GitHub](https://developer.github.com/v3/). Spróbujmy odczytać informacji na temat projektów w ramach [.NET Foundation](http://www.dotnetfoundation.org/) ogólny. Można będzie uruchomić w żądaniu skierowanym do interfejsu API usługi GitHub, aby pobrać informacje na temat projektów. Punkt końcowy będziesz używał jest: [ https://api.github.com/orgs/dotnet/repos ](https://api.github.com/orgs/dotnet/repos). Chcesz pobrać wszystkie informacje dotyczące tych projektów, dzięki czemu będziesz używać żądanie HTTP GET.
+Teraz możesz rozpocząć pobieranie danych z sieci web. W tej aplikacji będzie odczytu informacji z [interfejsu API usługi GitHub](https://developer.github.com/v3/). Spróbujmy odczytać informacji na temat projektów w ramach [.NET Foundation](https://www.dotnetfoundation.org/) ogólny. Można będzie uruchomić w żądaniu skierowanym do interfejsu API usługi GitHub, aby pobrać informacje na temat projektów. Punkt końcowy będziesz używał jest: [ https://api.github.com/orgs/dotnet/repos ](https://api.github.com/orgs/dotnet/repos). Chcesz pobrać wszystkie informacje dotyczące tych projektów, dzięki czemu będziesz używać żądanie HTTP GET.
 Przeglądarka używa także żądania HTTP GET, dzięki czemu można wkleić, że adres URL w przeglądarce, aby zobaczyć, jakie informacje należy będziesz otrzymywać i przetwarzania.
 
 Możesz użyć <xref:System.Net.Http.HttpClient> klasy żądań sieci web. Wszystkie nowoczesnych interfejsów API programu .NET, takich jak <xref:System.Net.Http.HttpClient> obsługuje tylko metody asynchroniczne dla długotrwałych interfejsów API.

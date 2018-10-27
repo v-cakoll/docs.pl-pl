@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
 ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032282"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50041882"
 ---
 # <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
 Udostępnia konfigurację dla Włączanie opcji Windows Identity Foundation (WIF) w aplikacjach.  

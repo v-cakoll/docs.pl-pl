@@ -2,14 +2,12 @@
 title: Temat Namespace system.NET.peertopeer.Collaboration — informacje
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0b9e95c4ca723166639adf5b93d0811638378470
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9e95dc571bc520c0abd0cf676ce37f383fed84ba
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195761"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049357"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Temat Namespace system.NET.peertopeer.Collaboration — informacje
 <xref:System.Net.PeerToPeer.Collaboration> Przestrzeń nazw zawiera klasy i interfejsy API, które są używane do wykonywania działań współpracy elementów równorzędnych przy użyciu infrastruktury współpracy Peer-to-Peer.  

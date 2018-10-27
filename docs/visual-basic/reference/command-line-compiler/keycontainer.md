@@ -6,14 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc6453dc188e7621444b6f44b805aab9354d81f0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f64e47922aea35ac9ddf51428107af0d4002d33e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43854687"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185826"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Określa nazwę kontenera kluczy parę kluczy zapewnić zestawu z silną nazwą.  
@@ -28,7 +26,7 @@ Określa nazwę kontenera kluczy parę kluczy zapewnić zestawu z silną nazwą.
   
 |Termin|Definicja|  
 |---|---|  
-|`container`|Wymagane. Plik kontenera, który zawiera klucz. Nazwę pliku należy ująć w znaki cudzysłowu (""), jeśli nazwa zawiera spację.|  
+|`container`|Wymagana. Plik kontenera, który zawiera klucz. Nazwę pliku należy ująć w znaki cudzysłowu (""), jeśli nazwa zawiera spację.|  
   
 ## <a name="remarks"></a>Uwagi  
  Kompilator tworzy składnik, które można udostępnić przez wstawienie klucza publicznego do manifestu zestawu i rejestrując ostateczny zestaw przy użyciu klucza prywatnego. Aby wygenerować plik klucza, wpisz `sn -k file` w wierszu polecenia. `-i` Opcja instaluje parę kluczy w kontenerze. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnych nazw)][Sn.exe (narzędzie silnych nazw)](../../../framework/tools/sn-exe-strong-name-tool.md)).  

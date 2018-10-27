@@ -2,20 +2,21 @@
 title: '&lt;activityScheduledQueries&gt; w WCF'
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: 946406e5513a0fee6793071c397f61bf1fe71c65
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 35bcb0dc0c33d30eee566869579edb32f131f495
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744892"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452699"
 ---
 # <a name="ltactivityscheduledqueriesgt-of-wcf"></a>&lt;activityScheduledQueries&gt; w WCF
 Reprezentuje kolekcję zapytań, które są używane do śledzenia działania zaPLanowane do wykonania przez działanie nadrzędne. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania zaPLanowane rekordów.  
   
- Aby uzyskać więcej informacji na zapytania dotyczące profilu śledzenia, zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel>  
+\<system.serviceModel>  
 \<Śledzenie >  
+\<profile >  
 \<trackingProfile>  
 \<przepływ pracy >  
 \<activityScheduledQueries >  
@@ -23,20 +24,33 @@ Reprezentuje kolekcję zapytań, które są używane do śledzenia działania za
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<tracking>     <trackingProfile name="Name">       <workflow>          <activityScheduledQueries>             <activityScheduledQuery activityName="String"                 childActivityName="String"/>          </activityScheduledQueries>       </workflow>     </trackingProfile></tracking>  
+<tracking>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <activityScheduledQueries>
+          <activityScheduledQuery activityName="String"   
+                                  childActivityName="String"/>
+        </activityScheduledQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
+</tracking>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
+
+W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
   
 ### <a name="attributes"></a>Atrybuty  
- Brak.  
+
+Brak.  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<activityScheduledQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|Zapytanie, które jest używane do śledzenia działania zaPLanowane do wykonania przez działanie nadrzędne.|  
+|[\<activityScheduledQuery >](activityscheduledquery-of-wcf.md)|Zapytanie, które jest używane do śledzenia działania zaPLanowane do wykonania przez działanie nadrzędne.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -44,8 +58,9 @@ Reprezentuje kolekcję zapytań, które są używane do śledzenia działania za
 |-------------|-----------------|  
 |[\<przepływ pracy >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Element konfiguracji, który zawiera wszystkie zapytania dla określonego przepływu pracy identyfikowane przez `activityDefinitionId` właściwości.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection>     
- <xref:System.Activities.Tracking.ActivityScheduledQuery>     
- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Zobacz także  
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection>
+- <xref:System.Activities.Tracking.ActivityScheduledQuery>
+- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

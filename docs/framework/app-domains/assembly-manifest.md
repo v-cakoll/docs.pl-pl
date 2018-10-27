@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0f5d8e2e465e9dfa64a57c5ec7b99001f768492
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a0b68eaefcd2901f9cf05d491459b18f94a2614a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753654"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415073"
 ---
 # <a name="assembly-manifest"></a>Manifest zestawu
 Każdy zestaw statyczny i dynamiczny zawiera kolekcję danych, które opisują powiązania między elementami zawartymi w zestawie. Manifest zestawu zawiera metadane zestawu. W manifeście zestawu znajdują się wszystkie metadane potrzebne do określenia wymagań w zakresie wersji zestawu i tożsamości jego zabezpieczeń, a także wszystkie metadane niezbędne do definiowania zakresu zestawu oraz rozpoznawania odwołań do zasobów i klas. Manifest zestawu może być przechowywany w pliku PE (.exe lub .dll) mającym kod w języku Microsoft Intermediate Language (MSIL) lub w samodzielnym pliku PE, który zawiera tylko dane manifestu zestawu.  
@@ -52,10 +52,10 @@ Typy zestawów
 |Informacje o odwołaniu do typu|Informacje, na podstawie których środowisko uruchomieniowe mapuje odwołanie do typu na plik zawierający jego deklarację i implementację. Wykorzystywane do typów eksportowanych z zestawu.|  
 |Informacje o przywoływanych zestawach|Lista innych zestawów, do których prowadzą statyczne odwołania z zestawu. Każde odwołanie zawiera nazwę zależnego zestawu, metadane zestawu (wersja, kultura, system operacyjny itd.) oraz klucz publiczny, jeśli zestaw ma silną nazwę.|  
   
- Niektóre informacje w manifeście zestawu można dodawać i zmieniać w kodzie za pomocą atrybutów zestawu. M.in. można zmienić informacje o wersji i atrybuty informacyjne, w tym dotyczące znaku towarowego, praw autorskich, produktu, firmy i danych informacyjnych wersji. Aby uzyskać pełną listę atrybutów zestawu, zobacz [ustawienie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md).  
+ Niektóre informacje w manifeście zestawu można dodawać i zmieniać w kodzie za pomocą atrybutów zestawu. M.in. można zmienić informacje o wersji i atrybuty informacyjne, w tym dotyczące znaku towarowego, praw autorskich, produktu, firmy i danych informacyjnych wersji. Aby uzyskać pełną listę atrybutów zestawu, zobacz [Konfigurowanie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zawartość zestawu](../../../docs/framework/app-domains/assembly-contents.md)  
- [Przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md)  
- [Tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Zawartość zestawu](../../../docs/framework/app-domains/assembly-contents.md)  
+- [Przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md)  
+- [Tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)

@@ -1,107 +1,107 @@
 ---
-title: Projektowanie zorientowane na DDD mikrousługi
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie zorientowane na DDD mikrousługi
+title: Projektowanie mikrousługi zorientowanej na wzorzec DDD
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Projektowanie mikrousługi zorientowanej na wzorzec DDD
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105774"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183506"
 ---
-# <a name="designing-a-ddd-oriented-microservice"></a>Projektowanie zorientowane na DDD mikrousługi
+# <a name="designing-a-ddd-oriented-microservice"></a>Projektowanie mikrousługi zorientowanej na wzorzec DDD
 
-Projektowanie oparte na domenie (DDD) zaleca modelowania w oparciu firm jako istotne dla Twojej przypadki użycia zasobów rzeczywistymi. W kontekście tworzenia aplikacji DDD zawiera informacje o problemach jako domeny. Opisuje obszarów problemów niezależne jako kontekstów ograniczone (każdy kontekst ograniczone skorelowany mikrousługi) i jest kładzie nacisk wspólnego języka aby porozmawiać na temat tych problemów. Podano tu także wiele zagadnienia techniczne i wzorców, takich jak jednostki domeny przy użyciu zaawansowanych modeli (nie [modelu domeny anemic](https://martinfowler.com/bliki/AnemicDomainModel.html)), wartość obiektów, agreguje i agregacji główny (lub podmiot główny) reguły do obsługi wewnętrznej implementacji. W tej sekcji przedstawiono projekt i implementację wewnętrzne zaczną obowiązywać.
+Projektowania opartego na domenach (DDD) promuje modelowania oparte na rzeczywistości firm jako istotne dla Twojej przypadki użycia. W kontekście tworzenia aplikacji DDD opowiada o problemach jako domeny. Opisano w nim obszarów problemów niezależnych jako ograniczone konteksty (każdego kontekstu ograniczonego skorelowany mikrousługi) oraz podkreśla języka wspólnego, aby porozmawiać na temat tych problemów. Podano tu także wiele zagadnienia techniczne i wzorców, takich jak jednostki domeny przy użyciu zaawansowanych modeli (nie [modelu domeny anemic](https://martinfowler.com/bliki/AnemicDomainModel.html)), wartość obiektów, agregacje i agregacji głównego (lub jednostkę główną) reguły do obsługi wewnętrznej implementacji. Ta sekcja wprowadza projektowania i implementacji tych wzorców wewnętrznego.
 
-Czasami te reguły techniczne DDD i wzorce są postrzegane jako przeszkód, które mają problemy z ich opanowaniem nauki implementacji metod DDD. Ale ważnym elementem jest nie wzorców, ale organizowania kodu, więc jest wyrównywany do problemów biznesowych i przy użyciu tych samych warunków biznesowych (powszechny language). Ponadto podejścia DDD powinny być stosowane tylko wtedy, gdy wdraża mikrousług złożonych reguł biznesowych znaczące. Obowiązki prostszy, takich jak usługi CRUD, można zarządzać za pomocą metod prostsze.
+Czasami te reguły techniczne DDD i wzorce są postrzegane jako wąskich gardeł mających intensywnego szkolenia dotyczące implementowania DDD podejścia. Jednak ważnym elementem jest nie wzorów, ale organizowania kodu, dzięki czemu jest wyrównany do problemów biznesowych i przy użyciu tych samych warunków firmy (wszechobecne language). Ponadto podejścia DDD powinny być stosowane tylko wtedy, gdy w przypadku wdrażania złożonych mikrousługach reguły biznesowe znaczące. Prostsze odpowiedzialności, takim jak usługa CRUD, można zarządzać za pomocą metod prostsze.
 
-Gdzie ma zostać narysowany granice jest klucza zadań podczas projektowania i definiowania mikrousługi. Wzorce DDD pomaga w zrozumieniu złożoności w domenie. Dla modelu domeny dla każdego z ograniczonym kontekstu identyfikowanie i definiowanie jednostek, obiekty wartości i wartości zagregowane, które modelu domeny. Skompiluj i Dostosuj modelu domeny, który znajduje się w obrębie granicy, który definiuje kontekstu. I jest bardzo jawne w formie mikrousługi. Składniki w tych granicach przechodzili są Twoje mikrousług, chociaż w niektórych przypadkach a BC lub mikrousług biznesowych może składać się z kilku usług fizycznych. DDD dotyczy granice i są mikrousług.
+Gdzie mają być wyznaczone granice to kluczowe zadania podczas projektowania i definiowania mikrousługi. Wzorców DDD ułatwiają zrozumienie złożoności w domenie. W przypadku modelu domeny dla każdego kontekstu ograniczonego identyfikować i definiowanie jednostek, obiekty wartości i wartości zagregowane, które modelują domenę. Twórz i uściślić modelu domeny, który znajduje się w granicach, który definiuje kontekst. I to już bardzo jawne w postaci mikrousług. Składniki w tych granicach znajdą się są mikrousługi, chociaż w niektórych przypadkach a BC lub mikrousług firmy może składać się z kilku usług fizycznych. DDD dotyczy granice i dlatego są mikrousług.
 
-## <a name="keep-the-microservice-context-boundaries-relatively-small"></a>Zachowaj mikrousługi granice kontekstu stosunkowo mały
+## <a name="keep-the-microservice-context-boundaries-relatively-small"></a>Zachowaj mikrousług granic kontekstowych stosunkowo mały
 
-Określanie, gdzie umieścić granicę między ograniczone kontekstów równoważy dwóch celów konkurencyjnych. Najpierw chcesz początkowo utworzyć najmniejsza możliwa mikrousług, chociaż nie powinny zostać sterownik main; należy utworzyć obramowanie rzeczy, które wymagają spójności. Po drugie chce się uniknąć chatty komunikacji między mikrousług. Tych celów mogą być sprzeczne z sobą. Należy je równoważenie przez decomposing systemu na tyle mały mikrousług, jak to możliwe, aż zostanie wyświetlony granice komunikacji szybko rośnie z każdego dodatkowych prób do oddzielania nowy kontekst ograniczone. Spójności jest klucz w pojedynczym kontekście ograniczone.
+Określanie miejsca umieszczenia granic między ograniczone konteksty równoważy dwóch celów konkurencyjnych. Najpierw chcesz utworzyć początkowo najmniejsza możliwa mikrousług, ale który nie powinien być sterownik main; należy utworzyć obramowanie wokół rzeczy, które wymagają spójności. Po drugie chcesz uniknąć duża liczba komunikacji między mikrousługami. Cele te mogą być siebie nawzajem. Należy je saldo przez podzielenie systemu na tyle mały mikrousługi, jak to możliwe, aż zobaczysz granice komunikacji szybko rośnie z kolejnymi próbami dodatkowe do oddzielania nowy kontekst ograniczone. Spójności jest kluczem w ramach pojedynczego kontekstach.
 
-Jest on podobny do [Intimacy nieodpowiedni kod zapachu](https://sourcemaking.com/refactoring/smells/inappropriate-intimacy) podczas implementowania klas. Jeśli dwa mikrousług potrzeba znacznie współpracują ze sobą, prawdopodobnie powinny być tym samym mikrousługi.
+Jest on podobny do [Intimacy nieodpowiedni kod zapachu](https://sourcemaking.com/refactoring/smells/inappropriate-intimacy) podczas implementowania klas. Jeśli potrzebujesz mikrousług dwóch znacznie współpracować ze sobą, należy prawdopodobnie będzie tego samego mikrousług.
 
-Innym sposobem na niego jest autonomiczne. Jeśli mikrousługi należy zależą od innej usługi bezpośrednio obsługi żądania, nie jest rzeczywiście autonomicznego.
+Innym sposobem na niego jest autonomii. Jeśli mikrousługi muszą polegać na inną usługę bezpośrednio zrealizować żądania, nie jest naprawdę autonomicznego.
 
-## <a name="layers-in-ddd-microservices"></a>Warstwy mikrousług DDD
+## <a name="layers-in-ddd-microservices"></a>Warstwy w mikrousługach DDD
 
-Większość aplikacji przedsiębiorstwa firma i złożonością techniczne wynika z wielu warstw. Warstwy są artefaktu logicznych i nie są związane z wdrożenia usługi. Istnieją one pomóc deweloperom w zarządzaniu złożonością w kodzie. Różnych warstwach (na przykład warstwy modelu domeny i warstwę prezentacji, itp.) może być różnych typów, które ma tłumaczenie między tymi typami.
+Większość aplikacji przedsiębiorstwa znaczące biznesowe i techniczne złożonością są definiowane przez wiele warstw. Warstwy są logicznej artefaktów i nie są związane z wdrożeniem usługi. Istnieją one w celu ułatwienia deweloperom zarządzanie złożonością w kodzie. Różne warstwy (np. warstwy modelu domeny i Warstwa prezentacji, itp.), może być różnych typów nakładającego obowiązek tłumaczeń między tymi typami.
 
-Na przykład jednostki można załadować z bazy danych. Następnie część informacji lub zagregowane informacje dodatkowe dane z innymi obiektami, mogą być wysyłane do klienta Interfejsu API sieci Web REST. Punkt, w tym miejscu jest jednostką domeny znajduje się w ramach warstwy modelu domeny oraz nie powinien propagowane do innych obszarów, które nie należy ona do, tak samo, jak do warstwy prezentacji.
+Na przykład jednostka mogła być załadowana z bazy danych. Następnie część tych informacji lub zagregowane informacje w tym dodatkowe dane z innymi jednostkami mogą być wysyłane do klienta interfejsu użytkownika za pośrednictwem internetowego interfejsu API REST. Punkt, w tym miejscu jest, że jednostka domeny znajduje się w warstwie modelu domeny i nie powinien propagowane do innych obszarów, które go nie należy do, takie jak do warstwy prezentacji.
 
-Ponadto musisz mieć zawsze prawidłowe jednostki (zobacz [projektowania poprawności warstwy modelu domeny](#designing-validations-in-the-domain-model-layer) sekcji) kontrolowane przez korzenie agregacji (jednostek głównego). W związku z tym jednostki powinien nie można powiązać z widokami klienta, ponieważ na poziomie interfejsu użytkownika część danych może nadal nie można sprawdzić poprawności. Jest to co ViewModel dla. ViewModel to model danych wyłącznie na potrzeby warstwy prezentacji. Jednostek domeny nie należy bezpośrednio do ViewModel. Zamiast tego potrzebne jest tłumaczenie między jednostkami ViewModels i domeny i na odwrót.
+Ponadto musisz mieć zawsze prawidłowe jednostki (zobacz [projektowanie reguł weryfikacji w warstwie modelu domeny](#designing-validations-in-the-domain-model-layer) sekcji) w wartości clientauthtrustmode korzenie agregacji (jednostki głównej). W związku z tym jednostek powinna nie można powiązać z widokami klienta, ponieważ na poziomie interfejsu użytkownika niektóre dane mogą nadal nie można sprawdzić poprawności. Jest to, co to jest ViewModel. ViewModel jest model danych, wyłącznie na potrzeby warstwy prezentacji. Jednostki domeny nie należy bezpośrednio do ViewModel. Zamiast tego należy do tłumaczenia między jednostkami modele widoków i domeny i na odwrót.
 
-Kiedy realizowanie złożoności, ważne jest, aby mieć modelu domeny kontrolowane przez katalogi agregacji upewnij się, że wszystkie invariants i reguły związane z tej grupy jednostek (agregacji) są wykonywane za pośrednictwem punktu pojedynczy wpis lub bramy, głównego agregacji.
+Kiedy realizowanie złożoność, ważne jest, aby mieć modelu domeny w wartości clientauthtrustmode agregacji elementy główne, które upewnij się, że invariants i reguły związane z tej grupy jednostek (agregacji) są wykonywane za pośrednictwem punktem pojedynczy wpis lub bramy, głównego agregacji.
 
-Rysunek 9-5 zawiera implementowania warstwowego projektu w aplikacji eShopOnContainers.
+Rysunek 9 – 5 zawiera implementacji warstwowej projektu w ramach aplikacji eShopOnContainers aplikacji.
 
 ![](./media/image6.png)
 
-**Rysunek 9-5**. Warstwy DDD porządkowania mikrousługi w eShopOnContainers
+**Rysunek 9 – 5**. Warstwy DDD w mikrousługach sortowania, w ramach aplikacji eShopOnContainers
 
-Chcesz zaprojektować system tak, aby każda warstwa komunikuje się tylko z niektórych innych warstw. Może to być łatwiejsze do wymuszania Jeśli warstwy są zaimplementowane jako biblioteki inną klasę, ponieważ wyraźnie określenie, jakie zależności są ustawione między bibliotekami. Na przykład warstwy modelu domeny nie powinna przyjmować zależności na inną warstwę (klasy modelu domeny powinien być zwykłym stare obiekty CLR lub [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), klasy). Jak pokazano w rysunku 9-6 **Ordering.Domain** Biblioteka warstwy ma zależności tylko w przypadku bibliotek .NET Core i pakiety NuGet, ale nie na inne niestandardowe biblioteki, takich jak dane biblioteki lub biblioteki trwałości.
+Użytkownik chce zaprojektować systemu, tak, aby każda warstwa komunikuje się tylko w przypadku niektórych innych warstw. Może to być łatwiejsze do wymuszania Jeśli warstwy są implementowane jako biblioteki innej klasy, ponieważ jednoznacznie zidentyfikować, jakie zależności są ustawione między bibliotekami. Na przykład warstwie modelu domeny nie powinna przyjmować zależności na wszystkich innych warstwach (klasy modelu domeny powinny być zwykłych starych obiektów CLR lub [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), klasy). Jak pokazano w rysunek 9 – 6 **Ordering.Domain** biblioteki warstwy ma zależności tylko w bibliotekach .NET Core lub pakiety NuGet, ale nie w innych niestandardową biblioteką, takich jak dane biblioteki lub bibliotekę trwałości.
 
 ![](./media/image7.PNG)
 
-**Rysunek 9 – 6**. Warstwy zaimplementowana bibliotek zapewnić lepszą kontrolę zależności między warstwami
+**Rysunek 9 – 6**. Warstwy zaimplementowane dopuszcza bibliotek lepszą kontrolę nad zależności między warstwami
 
-### <a name="the-domain-model-layer"></a>Warstwa modelu domeny
+### <a name="the-domain-model-layer"></a>Warstwie modelu domeny
 
-Marek Evans znakomity książki [konstrukcyjnych domeny](https://domainlanguage.com/ddd/) mówi następujące o warstwy modelu domeny i warstwy aplikacji.
+Eric Evans doskonałą książki [projektowania opartego na domenie](https://domainlanguage.com/ddd/) mówi następujące o warstwie modelu domeny i warstwy aplikacji.
 
-**Warstwa modelu domeny**: odpowiedzialny za reprezentujący założeń biznesowych, informacje dotyczące sytuacji i reguł biznesowych. Stanu, które odzwierciedla sytuacji jest kontrolowany i używane w tym miejscu, mimo że szczegóły techniczne jego przechowywania mają delegowane do infrastruktury. Ta warstwa jest centralnym oprogramowanie firm.
+**Warstwie modelu domeny**: odpowiedzialny za reprezentujący koncepcji biznesowych, informacje o sytuacja biznesowa i reguł biznesowych. Stan, który odzwierciedla sytuacja biznesowa jest kontrolowany i używane w tym miejscu, mimo że szczegóły techniczne jego przechowywania są delegowane do infrastruktury. Ta warstwa jest Sercem oprogramowania dla firm.
 
-Warstwa modelu domeny jest, gdzie jest wyrażone biznesowe. Po zaimplementowaniu mikrousługi warstwy modelu domeny w środowisku .NET tej warstwie jest zakodowane jako biblioteki klas z jednostkami domeny, które przechwytują dane oraz zachowanie (metody z logiką).
+Warstwie modelu domeny jest, gdzie jest wyrażone firmy. Podczas implementowania warstwie modelu domeny mikrousługi na platformie .NET, warstwa ta jest zakodowane jako bibliotekę klas przy użyciu jednostek domeny, które zbierają dane, a także zachowanie (metody z logiką).
 
-Po [nieznajomości trwałości](http://deviq.com/persistence-ignorance/) i [nieznajomości infrastruktury](https://ayende.com/blog/3137/infrastructure-ignorance) zasady, tej warstwy należy całkowicie Ignoruj szczegóły trwałość danych. Te zadania trwałości powinny być wykonywane przez warstwę infrastruktury. W związku z tym ta warstwa nie powinna przyjmować zależności bezpośrednich w infrastrukturze, co oznacza, że reguła ważne jest należy klas entity model domeny [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)s.
+Następujące [nieznajomości trwałości](https://deviq.com/persistence-ignorance/) i [nieznajomości infrastruktury](https://ayende.com/blog/3137/infrastructure-ignorance) zasady, tej warstwy należy całkowicie Ignoruj Szczegóły stanu trwałego danych. Te zadania trwałości powinna być wykonywana przez warstwę infrastruktury. Dlatego ta warstwa nie powinna przyjmować zależności bezpośrednich w infrastrukturę, która oznacza, że regułę ważne jest, należy klasach jednostki modeli domeny [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)s.
 
-Jednostek domeny nie powinien mieć żadnych zależności bezpośrednich (np. wynikające z klasy podstawowej) w dowolnej architektury infrastruktury dostępu do danych Entity Framework lub NHibernate. Najlepiej, jeśli obiekty domeny powinien nie implementować lub pochodzić od dowolnego typu zdefiniowanego w dowolnej architektury infrastruktury.
+Jednostki domeny nie powinna mieć żadnych zależności bezpośrednich (na przykład pochodząca z klasy bazowej) w dowolnej architektury infrastruktury dostępu do danych Entity Framework lub NHibernate. W idealnym przypadku jednostki domeny powinien nie implementować lub pochodzić od dowolnego typu zdefiniowane w dowolnej architektury infrastruktury.
 
-Większość nowoczesnych struktur ORM, takich jak Entity Framework Core Zezwalaj takie podejście, tak, aby w klasach modeli domeny nie są powiązane infrastruktury. Jednak po jednostki POCO nie zawsze jest możliwe podczas korzystania z niektórych baz danych NoSQL i platform, takich jak złośliwych użytkowników i niezawodne kolekcji w sieci szkieletowej usług Azure.
+Większość nowoczesnych środowisk ORM, takich jak Entity Framework Core zezwala na takie podejście, tak, aby w klasach modeli domeny nie są powiązane w infrastrukturze. Jednak posiadanie jednostki POCO nie zawsze jest możliwe podczas korzystania z niektórych baz danych NoSQL i struktur, takich jak aktorów i elementów Reliable Collections w usłudze Azure Service Fabric.
 
-Nawet wtedy, gdy jest to ważne jest, aby postępuj zgodnie z zasadą nieznajomości trwałości dla modelu domeny, nie należy zignorować dotyczy trwałości. Nadal jest bardzo ważne zrozumieć modelu danych fizycznych i sposób mapowania modelu obiektu jednostki. W przeciwnym razie można tworzyć projektów niemożliwe.
+Nawet w przypadku, gdy jest to ważne, aby zasady nieznajomości stanów trwałych dla modelu domeny, możesz nie zignorować wątpliwości trwałości. Nadal jest bardzo ważne poznać model danych fizycznych i sposób mapowania modelu obiektu jednostki. W przeciwnym razie można tworzyć projekty niemożliwe.
 
-Ponadto oznacza to, możesz pobrać model przeznaczony do relacyjnej bazy danych i bezpośrednio Przenieś go do NoSQL lub zorientowane na dokument bazy danych. W niektórych modeli entity model mogą mieścić, ale zwykle nie. Ograniczenia, które modelu jednostki musi być zgodne, na podstawie zarówno na technologii magazynowania i technologii ORM nadal istnieją.
+Ponadto nie oznacza to, możesz wykonać model przeznaczony do relacyjnej bazy danych i przenieś ją bezpośrednio NoSQL lub korzystający z dokumentów bazy danych. W niektórych modelach jednostki może spełniać modelu, ale zazwyczaj tak nie jest. Nadal występują ograniczenia, które modelu entity muszą być zgodne, oparte na technologii magazynowania i technologii ORM.
 
 ### <a name="the-application-layer"></a>Warstwa aplikacji
 
-Przechodzi do warstwy aplikacji, możemy ponownie cytowanych książki marek Evans [konstrukcyjnych domeny](https://domainlanguage.com/ddd/):
+Przejście do warstwy aplikacji, firma Microsoft może ponownie zacytować książki Eric Evans [projektowania opartego na domenie](https://domainlanguage.com/ddd/):
 
-**Warstwa aplikacji:** definiuje zadań oprogramowania powinien wykonać i kieruje obiektów domeny obszerne opracowywanie problemów. Zadania, które ta warstwa jest odpowiedzialny za są przydatne w firmie lub niezbędne do interakcji z warstwy aplikacji innych systemów. Ta warstwa jest przechowywana elastycznej. Nie zawiera reguły biznesowe lub wiedzy, ale tylko współrzędne zadań i delegatów pracy definicje współpracy obiektów domeny w warstwie dalej w dół. Nie ma stanu w czasie wykonywania odbicia sytuacji, ale może mieć stanu, które odzwierciedla postęp zadania użytkownika lub programu.
+**Warstwa aplikacji:** definiuje zadań oprogramowania powinien zrobić i kieruje obiektów ekspresyjny domeny, aby sprawdzić problemy. Zadania, które ta warstwa jest odpowiedzialny za są zrozumiałe dla firmy lub niezbędne do interakcji z warstw aplikacji z innymi systemami. Ta warstwa jest przechowywana alokowania elastycznego. Zawiera reguły biznesowe lub wiedzy przedsiębiorstwa, ale tylko zadania współrzędnych i delegatów działa współpraca obiektów domeny w następnej warstwie w dół. Nie ma stanu odzwierciedlający sytuacja biznesowa, ale może mieć stan, który będzie odzwierciedlać postęp zadania dla użytkownika lub programu.
 
-Mikrousługi warstwy aplikacji w środowisku .NET jest często zakodowane jako projekt interfejsu API platformy ASP.NET Core sieci Web. Projekt implementuje mikrousługi interakcji, zdalny dostęp do sieci i użycia w aplikacji klienta lub interfejsu użytkownika zewnętrznego interfejsów API sieci Web. Obejmuje on zapytania, jeśli przy użyciu CQRS podejścia polecenia zaakceptowane mikrousługi, a nawet sterowane zdarzeniami komunikację między mikrousług (integracji zdarzeń). ASP.NET interfejsu API sieci Web Core, który reprezentuje warstwy aplikacji nie może zawierać reguł biznesowych lub wiedzy domeny (szczególnie zasad domeny dla transakcji lub aktualizacji); te powinny należeć do biblioteki klas modelu domeny. Współrzędna tylko musi warstwy aplikacji zadania i nie może przechowywania ani zdefiniować każdy stan domeny (model domeny). Deleguje ona wykonywanie reguły biznesowe do domeny modelu klas sami (łączny katalogów głównych i jednostek domeny), które ostatecznie spowoduje zaktualizowanie danych w ramach tych jednostek domeny.
+Warstwy aplikacji mikrousług na platformie .NET jest często zakodowane jako projekt internetowego interfejsu API platformy ASP.NET Core. Projekt implementuje interakcji mikrousług, zdalny dostęp do sieci i zewnętrzne interfejsy API sieci Web użycia w aplikacji interfejsu użytkownika lub klienta. W przypadku używania podejścia CQRS podejście poleceń akceptowanych przez mikrousług, a nawet oparte na zdarzeniach komunikację między mikrousługami (zdarzenia integracji), zawiera kwerendy. ASP.NET Core internetowy interfejs API reprezentujący warstwy aplikacji nie może zawierać reguł biznesowych lub wiedzy specjalistycznej (szczególnie zasad domeny dla transakcji lub aktualizacji); te powinny należeć do biblioteki klas modelu domeny. Współrzędna tylko musi warstwy aplikacji zadań i musi nie przechowują i zdefiniuj dowolny stan domeny (model domeny). Deleguje ona wykonywanie reguły biznesowe modelu klas domeny samodzielnie (agregacji katalogów głównych i jednostki domeny), które ostatecznie spowoduje zaktualizowanie danych w tych jednostkach domeny.
 
-Zasadniczo logiki aplikacji jest, gdzie wdrożenia wszystkich przypadków użycia, które są zależne od danego frontonu. Na przykład implementacja związane z usługą sieci Web interfejsu API.
+Po prostu logika aplikacji jest, gdzie możesz wdrożyć wszystkie przypadki użycia, które są zależne od danego frontonu. Na przykład implementacja związane z usługą internetowego interfejsu API.
 
-Celem jest, że logikę domeny warstwy modelu domeny, jego invariants, model danych i reguły biznesowe pokrewnych musi być całkowicie niezależna od warstwy prezentacji i aplikacji. Najbardziej, warstwy modelu domeny nie bezpośrednio zależy od dowolnej architektury infrastruktury.
+Celem jest, że logika domeny w warstwie modelu domeny, jego invariants, modelu danych i reguł biznesowych powiązane musi być całkowicie niezależne od warstwy prezentacji i aplikacji. Przede wszystkim warstwie modelu domeny nie może bezpośrednio zależeć od dowolnej architektury infrastruktury.
 
 ### <a name="the-infrastructure-layer"></a>Warstwa infrastruktury
 
-Warstwa infrastruktury jest, jak dane, które jest początkowo utrzymywana w domenie jednostki (w pamięci) jest trwały z baz danych lub innego magazynu trwałego. Przykładem jest przy użyciu kodu programu Entity Framework Core do zaimplementowania klasy wzorca repozytorium, korzystających z elementu DBContext do utrwalenia danych relacyjnej bazy danych.
+Warstwa infrastruktury jest o tym, jak dane, które początkowo są przechowywane w jednostkach domeny (w pamięci) są utrwalane w bazach danych lub innym magazynie trwałym. Przykładem jest za pomocą kodu platformy Entity Framework Core do zaimplementowania klasy wzorzec repozytorium, które umożliwia utrwalanie danych w relacyjnej bazie danych typu DBContext.
 
-Zgodnie z wcześniej wspomniano [nieznajomości trwałości](http://deviq.com/persistence-ignorance/) i [nieznajomości infrastruktury](https://ayende.com/blog/3137/infrastructure-ignorance) zasad, warstwie infrastrukturze musi nie "skażenia" warstwy modelu domeny. Funkcja klasy entity model domeny od infrastruktury używanej do utrwalenia danych (EF lub innych framework) muszą być stale nie biorąc pod uwagę twardych zależności struktury. Biblioteki klas warstwy modelu domeny powinien mieć tylko kod domeny, po prostu [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) jednostki klasy Implementowanie Puls oprogramowania i całkowicie całkowicie niezależna od technologii infrastruktury.
+Zgodnie z wymienionych wcześniej [nieznajomości trwałości](https://deviq.com/persistence-ignorance/) i [nieznajomości infrastruktury](https://ayende.com/blog/3137/infrastructure-ignorance) zasad, warstwy infrastruktury musi nie "skażenie" warstwie modelu domeny. Pochodzącego od dowolnego domeny modelu jednostki klasy musi przechowywać z infrastruktury, która umożliwia utrwalanie danych (EF lub innych framework), nie biorąc pod uwagę zależności twardych struktur. Biblioteki klas warstwy modelu domeny powinien mieć tylko Twój kod domeny, po prostu [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) jednostki klasy Implementowanie serce oprogramowania i całkowicie całkowicie niezależna od technologii infrastruktury.
 
-W związku z tym z warstwy lub bibliotek klas i projektów ostatecznie zależy od warstwą modelu domeny (biblioteki), nie odwrotnie, jak pokazano w rysunek 9-7.
+W związku z warstwy lub biblioteki klas i projekty ostatecznie powinna zależeć od warstwie modelu domeny (biblioteki), nie na odwrót, jak pokazano w rysunek 9 – 7.
 
 ![](./media/image8.png)
 
-**Rysunek 9-7**. Zależności między warstwami w DDD
+**Rysunek 9 – 7**. Zależności między warstwami w DDD
 
-W tym projekcie warstwy powinny być niezależne dla każdego mikrousługi. Jak wspomniano wcześniej, można zaimplementować najbardziej złożonych mikrousług po wzorce DDD podczas implementowania prostsze opartych na danych mikrousług (proste CRUD w pojedynczej warstwie) w prostszy sposób.
+W tym projekcie warstwy powinny być niezależne dla poszczególnych mikrousług. Jak wspomniano wcześniej, można zaimplementować mikrousługi najbardziej złożonych następujące wzorców DDD podczas implementowania prostsze opartych na danych mikrousługi (proste CRUD w pojedynczej warstwie) w prostszy sposób.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **DevIQ. Zasada nieznajomości trwałości**
-    [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
+    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
 -   **Oren Eini. Nieznajomości infrastruktury**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. Architektura warstwowych w projekcie oparte na domenie**
+-   **Angel Lopez. Architektury warstwowej w projektowania opartego na domenie**
     [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 

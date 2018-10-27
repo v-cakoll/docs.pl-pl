@@ -3,12 +3,12 @@ title: Zapytanie o języku zintegrowanym (LINQ) w języku C#
 description: Wprowadza Language Integrated Query (LINQ) w języku C#.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 89630245a33c03851c7607b3b299eb7b9c477177
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404583"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038425"
 ---
 # <a name="language-integrated-query-linq"></a>Zapytanie o języku zintegrowanym (LINQ)
 
@@ -30,7 +30,7 @@ Poniższy przykład przedstawia pełną operację zapytania. Zakończyć operacj
 
 - Zapytanie nie jest wykonywana do czasu iteracji nad zmienną kwerendy, na przykład w `foreach` instrukcji. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
-- W czasie kompilacji wyrażeń zapytania są konwertowane na wywołania metody standardowej kwerendy operatora zgodnie z regułami określonymi w specyfikacji języka C#. Każde zapytanie, które mogą być wyrażone za pomocą składni zapytania można również wyrazić za pomocą składni metody. Jednak w większości przypadków Składnia kwerendy jest bardziej czytelne i zwięzłe. Aby uzyskać więcej informacji, zobacz [specyfikacji języka C#](../language-reference/language-specification/index.md) i [omówienie operatorów standardowej kwerendy](../programming-guide/concepts/linq/standard-query-operators-overview.md).
+- W czasie kompilacji wyrażeń zapytania są konwertowane na wywołania metody standardowej kwerendy operatora zgodnie z regułami określonymi w specyfikacji języka C#. Każde zapytanie, które mogą być wyrażone za pomocą składni zapytania można również wyrazić za pomocą składni metody. Jednak w większości przypadków Składnia kwerendy jest bardziej czytelne i zwięzłe. Aby uzyskać więcej informacji, zobacz [specyfikacji języka C#](~/_csharplang/spec/expressions.md#query-expressions) i [omówienie operatorów standardowej kwerendy](../programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 - Zgodnie z zasadą podczas pisania zapytań LINQ, firma Microsoft zaleca użycie składni zapytań, jeśli to możliwe, a składnia metody, jeśli zajdzie taka potrzeba. Brak nie semantycznego lub wydajność różnica między dwoma formami różne. Wyrażenia zapytań są często bardziej czytelne niż równoważne wyrażenia napisane przy użyciu składni metody.
 

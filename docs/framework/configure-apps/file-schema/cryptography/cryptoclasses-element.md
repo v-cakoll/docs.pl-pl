@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 671302003c3a1f3a37e1773aeeae9cb09a457d13
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8363351efd0b6cbcfee5b137cf9f222e16dcc425
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033366"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188745"
 ---
 # <a name="ltcryptoclassesgt-element"></a>&lt;cryptoclasses —&gt; — Element
 Zawiera listę klas kryptografii, które mają mapowanie do przyjazną nazwę w [ \<nameentry — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) elementu.  
@@ -79,9 +79,9 @@ Zawiera listę klas kryptografii, które mają mapowanie do przyjazną nazwę w 
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.Security.Cryptography>  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)  
- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
- [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- <xref:System.Security.Cryptography>  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)  
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
+- [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

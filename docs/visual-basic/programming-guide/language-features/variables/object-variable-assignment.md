@@ -13,15 +13,15 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: f20a03c4d9a0e33203629ae066686f4c9f25c105
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656061"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995370"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Przypisanie zmiennej obiektu (Visual Basic)
-Instrukcja przydział normalny umożliwia przydzielanie obiektu do zmiennej obiektu. Można przypisać wyrażenia obiektu lub [nic](../../../../visual-basic/language-reference/nothing.md) — słowo kluczowe, jak w poniższym przykładzie przedstawiono.  
+Instrukcja przypisania normalne umożliwia przydzielanie obiektu do zmiennej obiektu. Możesz przypisać wyrażenie obiektu lub [nic](../../../../visual-basic/language-reference/nothing.md) — słowo kluczowe, w poniższym przykładzie pokazano.  
   
 ```  
 Dim thisObject As Object  
@@ -31,20 +31,20 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing` oznacza, że nie ma żadnego obiektu aktualnie przypisane do zmiennej.  
+ `Nothing` oznacza, że nie ma obiektu aktualnie przypisana do zmiennej.  
   
 ## <a name="initialization"></a>Inicjalizacja  
- Po kodzie rozpoczyna, zmienne są inicjowane do obiektu `Nothing`. Te, których deklaracje zawierają inicjowania są ponownie inicjowane do wartości, które można określić podczas wykonywania instrukcji deklaracji.  
+ Po kodzie rozpoczyna się uruchomiony, zmienne są inicjowane na obiekt `Nothing`. Te, których deklaracje zawierają inicjowania są ponownie inicjowane na wartości, które określisz, gdy wykonywane są instrukcje deklaracji.  
   
- Inicjowanie można uwzględnić w deklaracji z za pomocą [New](../../../../visual-basic/language-reference/operators/new-operator.md) — słowo kluczowe. Poniższe instrukcje deklaracji Zadeklaruj zmienne obiektu `testUri` i `ver` i przypisz konkretne obiekty do nich. W każdej jedną przeciążone konstruktory odpowiedniej klasy używane do inicjalizacji obiektu.  
+ Inicjowanie można uwzględnić w swojej deklaracji, za pomocą [New](../../../../visual-basic/language-reference/operators/new-operator.md) — słowo kluczowe. Poniższe instrukcje deklaracji deklarują zmienne obiektów `testUri` i `ver` i przypisywać im konkretnych obiektów. Każdy używa jednego z przeciążenia konstruktorów z odpowiedniej klasy do inicjalizacji obiektu.  
   
 ```  
-Dim testUri As New System.Uri("http://www.microsoft.com")  
+Dim testUri As New System.Uri("https://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## <a name="disassociation"></a>Ukończona  
- Ustawienie zmiennej obiektu `Nothing` zaprzestaje skojarzenie zmiennej z dowolnego określonego obiektu. Zapobiega to przypadkowym zmianom, zmieniając zmiennej obiektu. Można też sprawdzić, czy zmienna obiektu wskazuje prawidłowy obiekt, jak przedstawiono na poniższym przykładzie.  
+## <a name="disassociation"></a>Usuwanie skojarzeń  
+ Ustawienie zmiennej obiektu `Nothing` zaprzestaje skojarzenia zmiennej z dowolnego określonego obiektu. Zapobiega to przypadkowym zmianom obiektu przez zmianę zmiennej. Umożliwia on również sprawdzić, czy zmienna obiektu wskazuje prawidłowego obiektu, co ilustruje poniższy przykład.  
   
 ```  
 If otherObject IsNot Nothing Then  
@@ -52,16 +52,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- W przypadku obiektu, do którego odnosi się zmienna użytkownika w innej aplikacji, ten test nie może określić, czy tę aplikację ma zakończone lub po prostu unieważnienie obiektu.  
+ Jeśli obiekt, który Twoja zmienna odwołuje się do innej aplikacji, ten test nie może określić, czy tę aplikację ma zakończone lub po prostu unieważnione obiektu.  
   
- Zmienna obiektu o wartości `Nothing` jest również nazywany *odwołanie o wartości null*.  
+ Zmienna obiektu z wartością `Nothing` jest również nazywany *null odwołanie*.  
   
 ## <a name="current-instance"></a>Bieżące wystąpienie  
- *Bieżącego wystąpienia* obiektu jest ten, w którym kod jest aktualnie wykonywany. Ponieważ cały kod jest wykonywana wewnątrz procedury, bieżące wystąpienie jest w którym została wywołana procedura.  
+ *Bieżącego wystąpienia* obiektu jest ten, w którym aktualnie wykonuje kod. Ponieważ cały kod jest wykonywany wewnątrz procedury, bieżące wystąpienie jest w której wywołano procedury.  
   
- `Me` — Słowo kluczowe działa jako zmienna obiektu odwołanie do bieżącego wystąpienia. Jeśli nie jest procedurą [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), może użyć `Me` — słowo kluczowe uzyskać wskaźnik do bieżącego wystąpienia. Procedury udostępnionego nie może być skojarzony z określonym wystąpieniem klasy.  
+ `Me` — Słowo kluczowe działa jako zmienną obiektu odwołanie do bieżącego wystąpienia. Jeśli nie jest procedurą [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), można użyć `Me` — słowo kluczowe, aby uzyskać wskaźnik do bieżącego wystąpienia. Udostępnione procedury można skojarzyć z określonego wystąpienia klasy.  
   
- Przy użyciu `Me` jest szczególnie przydatne podczas przekazywania do procedury w innym module bieżącego wystąpienia. Na przykład załóżmy, że liczba dokumentów XML i chcesz dodać tekst standardowy do wszystkich z nich. W poniższym przykładzie zdefiniowano procedury w tym celu.  
+ Za pomocą `Me` jest szczególnie przydatne w przypadku przekazywania bieżącego wystąpienia do procedury w innym module. Na przykład załóżmy, że masz wiele dokumentów XML i chcesz dodać standardowy tekst do wszystkich z nich. W poniższym przykładzie zdefiniowano procedury, aby to zrobić.  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -69,7 +69,7 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- Każdego obiektu dokumentu XML można następnie wywołania tej procedury i przekaż jej bieżące wystąpienie jako argument. W poniższym przykładzie pokazano to.  
+ Każdy obiekt dokumentu XML może następnie wywołania tej procedury i przekaż jej bieżące wystąpienie jako argument. Poniższy przykład przedstawia to.  
   
 ```  
 addStandardText(Me)  

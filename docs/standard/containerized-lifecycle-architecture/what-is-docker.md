@@ -1,55 +1,55 @@
 ---
 title: Co to jest Docker?
-description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
+description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 2dfff13f00d4ea0e57161c21d7773eead41c28ee
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105388"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50044733"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 
-[Docker](https://www.docker.com/) jest [projekt open source](https://github.com/docker/docker) automatyzację wdrażania aplikacji jako przenośny, samowystarczalne kontenerów, które można uruchomić w chmurze lub lokalnie (zobacz rysunek 1 - 2). Docker jest również [firmy](https://www.docker.com/) wspiera i rozwija tej technologii w współpracy z chmury, Linux i dostawców systemu Windows, takie jak Microsoft.
+[Docker](https://www.docker.com/) jest [projektu open-source](https://github.com/docker/docker) automatyzację wdrażania aplikacji jako przenośne, samowystarczalne kontenery, działających w chmurze lub lokalnie (zobacz rysunek 1 - 2). Docker to również [firmy](https://www.docker.com/) który promuje i rozwija tej technologii w współpracy z chmury, Linux i Windows producentów, takie jak Microsoft.
 
 ![](./media/image2.png)
 
-Rysunek 1-2: Docker wdraża kontenerów na wszystkie warstwy chmury hybrydowej
+Rysunek 1 – 2: platformy Docker służy do wdrażania kontenerów we wszystkich warstwach chmury hybrydowej
 
-Kontenery obrazu docker można uruchomić natywnie w systemie Linux i Windows. Jednak obrazów systemu Windows można uruchamiać tylko na hostach z systemem Windows i Linux obrazy można uruchomić tylko na hostach Linux, co oznacza serwera hosta lub maszyny Wirtualnej.
+Kontenery obrazu platformy docker można uruchomić natywnie w systemie Linux i Windows. Jednak obrazów Windows można uruchamiać tylko na hostach Windows i obrazów systemu Linux można uruchamiać tylko na hostach systemu Linux, co oznacza serwera hosta lub maszyny Wirtualnej.
 
-Deweloperzy mogą używać środowiska projektowania w systemie Windows, Linux lub macOS. Na komputerze dewelopera dewelopera uruchamia hostów Docker, do których Docker są wdrażane obrazy, w tym aplikacji i jego zależności. Deweloperzy, którzy pracują w systemie Linux lub Mac Użyj hosta Docker, który jest opartymi na systemie Linux i mogli tworzyć obrazy tylko dla systemu Linux kontenerów. (Deweloperów pracujących na Mac można edytować kodu lub uruchomić interfejsu wiersza polecenia Docker \[CLI\] z macOS, ale opracowywania tego tekstu, kontenery nie należy uruchamiać bezpośrednio na macOS.) Deweloperzy, którzy pracują w systemie Windows można tworzyć obrazy dla systemu Linux lub kontenery systemu Windows.
+Deweloperzy mogą używać środowisk deweloperskich w Windows, Linux lub macOS. Na komputerze deweloperskim Deweloper uruchamia hosta platformy Docker, które Docker obrazy są wdrożone, łącznie z aplikacji i jego zależności. Deweloperzy pracujący w systemie Linux lub na komputerze Mac, użyj hosta platformy Docker, który jest opartych na systemie Linux, a mogą utworzyć obrazy tylko dla kontenerów systemu Linux. (Deweloperzy pracujący na komputerze Mac można edytować kod lub uruchomić interfejs wiersza polecenia platformy Docker \[interfejsu wiersza polecenia\] z systemem macOS, ale na chwilę obecną, nie uruchamiaj kontenery bezpośrednio w systemie macOS.) Deweloperzy, którzy pracują nad Windows można tworzyć obrazy systemu Linux lub Windows kontenery.
 
-Host kontenery w środowiskach programistycznych i narzędzia deweloperskie dodatkowych, dostarczany Docker [Docker Community Edition (CE)](https://www.docker.com/community-edition) dla systemu Windows lub macOS. Te produkty zainstalować niezbędne maszyny Wirtualnej (Docker hosta) do obsługi kontenerów. Docker powoduje udostępnienie [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), który jest przeznaczony dla rozwoju przedsiębiorstwa i jest używany przez zespoły IT, którzy tworzą wysyłki i uruchomić dużych aplikacji biznesowych o znaczeniu krytycznym w środowisku produkcyjnym.
+Do hostowania kontenerów w środowiskach programistycznych i zapewniają narzędzia programistyczne dodatkowe, Docker jest dostarczany [Docker Community Edition (CE)](https://www.docker.com/community-edition) Windows lub macOS. Te produkty zainstalować niezbędnych maszyny Wirtualnej (hosta platformy Docker) do hostowania kontenerów. Docker powoduje udostępnienie [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), który jest przeznaczony dla rozwoju przedsiębiorstwa i jest używana przez zespoły IT, którzy tworzą, dostarczanie i uruchamiać duże aplikacje krytyczne dla działania firmy w środowisku produkcyjnym.
 
-Aby uruchomić [kontenery Windows](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview), istnieją dwa typy środowisk uruchomieniowych:
+Aby uruchomić [kontenery Windows](/virtualization/windowscontainers/about/), istnieją dwa rodzaje środowisk uruchomieniowych:
 
--   **Windows Server kontenera** to środowisko uruchomieniowe zapewnia izolację aplikacji za pomocą technologii izolacji procesu i przestrzeni nazw. Kontener systemu Windows Server udostępnia jądra z hosta kontenera i wszystkich kontenerów uruchomiona na hoście.
+-   **Kontenera z systemem Windows Server** to środowisko wykonawcze zapewnia izolację aplikacji za pomocą technologii izolacji procesu i przestrzeni nazw. Kontener systemu Windows Server udostępnia jądra hosta kontenera i wszystkie kontenery uruchomione na hoście.
 
--   **Kontener funkcji Hyper-V** to rozszerzenie izolacji udostępniane przez kontenery systemu Windows Server, uruchamiając każdy kontener zoptymalizowanego maszynie wirtualnej. W tej konfiguracji jądra hosta kontenera nie jest współużytkowany z kontenerów funkcji Hyper-V, zapewniając lepsze izolacji.
+-   **Kontener funkcji Hyper-V** rozszerza to izolacja świadczona przez kontenery systemu Windows Server, uruchamiając każdego kontenera na wysoce zoptymalizowanej maszynie Wirtualnej. W tej konfiguracji jądra hosta kontenera nie jest udostępniony za pomocą kontenerów funkcji Hyper-V, zapewniając lepsze izolację.
 
-Obrazy te kontenerów są tworzone w taki sam sposób i działać takie same. Różnica polega na tym, w jaki sposób ten kontener jest tworzony z obrazu — uruchamianie kontener funkcji Hyper-V wymaga dodatkowego parametru. Aby uzyskać więcej informacji, zobacz [kontenery funkcji Hyper-V](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
+Obrazy dla tych kontenerów są tworzone w taki sam sposób, a funkcja takie same. Różnica polega na tym, w jaki sposób ten kontener jest tworzony z obrazu — uruchamianie kontenera funkcji Hyper-V wymaga dodatkowego parametru. Aby uzyskać więcej informacji, zobacz [kontenery funkcji Hyper-V](/virtualization/windowscontainers/about/).
 
-## <a name="comparing-docker-containers-with-vms"></a>Porównywanie kontenery Docker z maszynami wirtualnymi
+## <a name="comparing-docker-containers-with-vms"></a>Porównywanie kontenerów platformy Docker przy użyciu maszyn wirtualnych
 
-Rysunek 1 – 3 przedstawiono porównanie maszyn wirtualnych i Docker kontenerów.
+Rysunek 1 – 3 przedstawiono porównanie między maszynami wirtualnymi i Docker kontenerów.
 
-Ponieważ kontenery wymaga mniej zasobów (na przykład nie potrzebują oni pełnej wersji systemu operacyjnego), łatwych do wdrożenia i szybkiego uruchamiania. Dzięki temu można mieć zwiększeniu, co oznacza, że można uruchomić więcej usług w tej samej jednostce sprzętu, a tym samym obniżenie kosztów.
+Ponieważ kontenery wymaga znacznie mniej zasobów (na przykład, nie ma potrzeby pełnej wersji systemu operacyjnego), są one łatwe do wdrożenia i szybkiego uruchamiania. Dzięki temu umożliwiają zwiększenie gęstości, co oznacza, czy można uruchomić więcej usług w tej samej jednostce sprzętu, zmniejszając w ten sposób kosztów.
 
-Jako efekt uboczny uruchomionych na tym samym jądra uzyskania izolacji mniejsze niż maszyn wirtualnych.
+Jako efekt uboczny uruchomionych na tym samym jądra osiągasz izolacji jest mniejszy niż maszyny wirtualne.
 
-Głównym celem obrazu jest fakt, że środowisko (zależności) takie same w różnych wdrożeniach. Oznacza to, można debugować go na komputerze i wdrożyć go na inny komputer o tym samym środowisku gwarancji.
+Głównym celem obrazu jest fakt, że środowisko (zależności) takie same w różnych wdrożeniach. Oznacza to, można to debugować na maszynie i następnie wdrożyć go na inny komputer, z tym samym środowisku, gwarantowana.
 
-Obraz kontenera to sposób pakietu aplikacji lub usługi, a następnie wdrożyć go w sposób niezawodny i odtworzenia. W związku z tym Docker nie tylko technologii, jest również zasady klas i procesu.
+Obraz kontenera jest sposobem pakietu aplikacji lub usługi oraz wdrożyć ją w sposób niezawodny i odtworzenia. W związku z tym Docker nie jest tylko technologii, również jest filozofii i procesu.
 
-Używając Docker, nie usłyszysz deweloperzy powiedzieć, "Działa na komputerze, dlaczego nie w środowisku produkcyjnym?" Można po prostu mówią, "Jest uruchamiany na Docker," ponieważ spakowanych aplikacji Docker można uruchomić na dowolnym obsługiwanym środowisku Docker i będzie działał jak ma na wszystkich miejsc docelowych wdrożenia (deweloperów, pytań i odpowiedzi, przemieszczania, produkcji, itd.).
+Korzystając z platformy Docker, nie otrzymasz od deweloperów powiedzieć, "działa na komputerze, dlaczego w środowisku produkcyjnym?" Można po prostu mówią, "Korzystają one z platformy Docker," ponieważ spakowanej aplikacji platformy Docker, można uruchomić na dowolnym obsługiwanych środowisku platformy Docker i sposób, który ma to na wszystkich docelowych wdrożenia (deweloperskie, QA, przemieszczania, produkcyjne itp.), będzie działać.
 
 ![](./media/image3.png)
 
-Rysunek 1-3: porównanie tradycyjnych maszyn wirtualnych do kontenerów Docker
+Rysunek 1-3: porównanie tradycyjne maszyny wirtualne dostępne w kontenerach platformy Docker
 
 
 >[!div class="step-by-step"]

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 5f8eb4afe53292b2589964f1a745f00d761ee019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 145c28a2f36b2d53487004af214f3c6048f0687e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542967"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415214"
 ---
 # <a name="documents"></a>Dokumenty
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia wszechstronny zestaw składników, które umożliwiają deweloperom tworzenie aplikacji za pomocą funkcji zaawansowanych dokumentu i ulepszone czytanie. Oprócz udoskonalone funkcje i jakości [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia usługi uproszczone zarządzanie pakowania dokumentu, zabezpieczeń i magazynu.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawiera wszechstronny zestaw składników, które umożliwiają deweloperom tworzenie aplikacji za pomocą dokumentów zaawansowane funkcje i ulepszone czytanie. Oprócz rozszerzone możliwości i jakość [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje również uproszczone zarządzanie infrastrukturą usługi pakowania dokumentu, zabezpieczeń i magazynu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Dokumenty w WPF](documents-in-wpf.md)  
@@ -28,4 +28,4 @@ ms.locfileid: "33542967"
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps>  
- [isXPS.exe (narzędzie zgodności isXPS)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))
+ [isXPS.exe (narzędzie zgodności isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))

@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595564"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186073"
 ---
 # <a name="net-standard"></a>.NET standard
 
@@ -49,6 +49,8 @@ Ogólnie rzecz biorąc, firma Microsoft zaleca pod kątem *najniższy* wersji pr
 
 1. Docelowa dalej starszej wersji programu .NET Standard i skompiluj projekt.
 2. Jeśli projekt jest kompilowany pomyślnie, powtórz krok 1. W przeciwnym razie Przekieruj do następnej wersji wyższej, a to wersja, do której należy użyć.
+
+Jednak przeznaczonymi dla wersji .NET Standard niższe wprowadza wiele zależności pomocy technicznej. Jeśli projekt jest przeznaczony dla .NET Standard 1.x, zalecamy, aby użytkownik *również* docelowych .NET Standard 2.0. Upraszcza to wykres zależności dla biblioteki użytkowników, działających na platformach .NET Standard 2.0, zgodne i zmniejsza liczbę pakietów, które są im potrzebne do pobrania.
 
 ### <a name="net-standard-versioning-rules"></a>.NET standard reguły kontroli wersji
 

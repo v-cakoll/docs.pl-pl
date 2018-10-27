@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 45c838fbac5e6f576a242c8839f849dc9529ef7d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779276"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453180"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczeń dostępu kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury, dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji są wykonywane z uprawnienia użytkownika lub jednostki. W rezultacie systemów komputerowych, może być uszkodzone i prywatnych danych naruszenia zabezpieczeń w przypadku złośliwego lub wypełnione błąd oprogramowania jest uruchamiane przez użytkownika z podwyższonym poziomem uprawnień.  
@@ -192,11 +192,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym  
  Kod, który działa poza środowisko CLR jest nazywany kodem niezarządzanym. W związku z tym mechanizmy zabezpieczeń, takich jak urzędy certyfikacji nie można zastosować do kodu niezarządzanego. Składniki COM, interfejsów ActiveX i funkcji Win32 API są przykłady kodu niezarządzanego. Zagadnienia dotyczące zabezpieczeń specjalne się podczas wykonywania kodu niezarządzanego, tak aby nie stanowią zagrożenia bezpieczeństwa cała aplikacja. Aby uzyskać więcej informacji, zobacz [współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md).  
   
- .NET Framework obsługuje także zgodności z poprzednimi wersjami istniejących składników COM, zapewniając dostęp za pośrednictwem współdziałania z modelem COM. Za pomocą narzędzia międzyoperacyjności modelu COM do importowania odpowiednich typów modelu COM, można zastosować składników modelu COM w aplikacji .NET Framework. Po zaimportowaniu typy modelu COM są gotowe do użycia. Usługa międzyoperacyjna modelu COM umożliwia również klientów modelu COM uzyskać dostęp do kodu zarządzanego, eksportowanie metadanych zestawu na bibliotekę typów i rejestrując składnik zarządzany jako składnik COM. Aby uzyskać więcej informacji, zobacz [zaawansowane współdziałanie COM](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
+ .NET Framework obsługuje także zgodności z poprzednimi wersjami istniejących składników COM, zapewniając dostęp za pośrednictwem współdziałania z modelem COM. Za pomocą narzędzia międzyoperacyjności modelu COM do importowania odpowiednich typów modelu COM, można zastosować składników modelu COM w aplikacji .NET Framework. Po zaimportowaniu typy modelu COM są gotowe do użycia. Usługa międzyoperacyjna modelu COM umożliwia również klientów modelu COM uzyskać dostęp do kodu zarządzanego, eksportowanie metadanych zestawu na bibliotekę typów i rejestrując składnik zarządzany jako składnik COM. Aby uzyskać więcej informacji, zobacz [zaawansowane współdziałanie COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [PAVE zabezpieczeń w natywnym i kodzie .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Zabezpieczenia dostępu kodu](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)  
- [Zabezpieczenia oparte na rolach](https://msdn.microsoft.com/library/239442e3-5be4-4203-b7fd-793baffea803)  
+ [Zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md)  
+ [Zabezpieczenia oparte na rolach](../../../../docs/standard/security/role-based-security.md)  
  [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

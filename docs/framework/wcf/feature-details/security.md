@@ -6,13 +6,12 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-author: BrucePerlerMS
-ms.openlocfilehash: 2d4f2d67c8afd1687d9de506cf8a7616408069d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 36a7943ec9a4bab361784b99c569dbf6c42f61e5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200792"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181416"
 ---
 # <a name="windows-communication-foundation-security"></a>Zabezpieczenia programu WCF (Windows Communication Foundation)
 Tematy w tej sekcji opisano funkcje zabezpieczeń usługi Windows Communication Foundation (WCF) i jak z nich korzystać, aby ułatwić zabezpieczonych wiadomości.  

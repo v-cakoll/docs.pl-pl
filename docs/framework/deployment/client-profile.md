@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0fbf40c6af63cfabe7b35e2bdf3e0998761b801
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5a104b6c755eb0b97f11e577fb3eeb182e465fe4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505125"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50135391"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile jest podzbiorem .NET Framework, która została dostarczona z [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i wcześniejsze wersje i został zoptymalizowany dla aplikacji klienckich. .NET Framework to platforma deweloperska dla Windows, Windows Phone i platformą Microsoft Azure i zapewnia zarządzanie środowisko wykonywania aplikacji i biblioteki klas .NET Framework. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i jego wcześniejsze wersje oferowały dwie opcje wdrożenia: pełny program .NET Framework i Client Profile. Program Client Profile umożliwiał szybsze wdrażanie i tworzenie mniejszych pakietów instalacyjnych aplikacji, niż pełny program .NET Framework.  
   
  Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Client Profile został wycofany i jedynie pełny pakiet redystrybucyjny jest dostępny. Optymalizacje dostarczone przez [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], takie jak mniejszy rozmiar do pobrania i szybsze wdrożenie, wyeliminowały konieczność oddzielnego pakietu wdrażania. Pojedynczy pakiet redystrybucyjny usprawnia proces instalacji i upraszcza opcje wdrażania aplikacji.  
   
- Jednakże, jeśli są przeznaczone dla .NET Framework 4 lub 3.5 i chcesz dowiedzieć się więcej na temat Client Profile oraz kiedy go używać, zobacz [.NET Framework Client Profile](https://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx) w dokumentacji programu .NET Framework 4.  
+ Jednakże, jeśli są przeznaczone dla .NET Framework 4 lub 3.5 i chcesz dowiedzieć się więcej na temat Client Profile oraz kiedy go używać, zobacz [.NET Framework Client Profile](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29) w dokumentacji programu .NET Framework 4.  
   
  Po zainstalowaniu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4 Client Profile jest aktualizowany do pełnej wersji programu .NET Framework. Aby uzyskać informacje o instalowaniu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zobacz [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [.NET framework Client Profile (.NET Framework 4)](https://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
- [Wielowersyjność kodu w programie Visual Studio ― przegląd](https://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
- [Rozwiązywanie problemów z błędami obiektów docelowych programu .NET Framework](https://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
- [Instrukcje: Określanie wersji docelowej programu .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+- [.NET framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)  
+- [Wielowersyjność kodu w programie Visual Studio ― przegląd](/visualstudio/ide/visual-studio-multi-targeting-overview)  
+- [Rozwiązywanie problemów z błędami obiektów docelowych programu .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)  
+- [Instrukcje: Określanie wersji docelowej programu .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

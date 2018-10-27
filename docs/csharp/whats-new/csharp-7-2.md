@@ -2,12 +2,12 @@
 title: Co nowego w języku C# 7.2
 description: Omówienie nowych funkcji w języku C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261358"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181176"
 ---
 # <a name="whats-new-in-c-72"></a>Co nowego w języku C# 7.2
 
@@ -20,7 +20,7 @@ Używa języka C# 7.2 [wybór wersji języka](../language-reference/configure-la
 
 Dostępne są następujące nowe funkcje języka w tej wersji:
 
-* [Semantyka odwołań z typami wartości](#reference-semantics-with-value-types)
+* [Techniki do pisania kodu efektywne bezpieczne](#safe-efficient-code-enhancements)
   - Kombinacja ulepszenia składni, które umożliwiają pracę z typów wartości za pomocą semantyki odwołania.
 * [Inne niż końcowe argumenty nazwane](#non-trailing-named-arguments)
   - Argumenty nazwane może następować argumentów pozycyjnych.
@@ -29,7 +29,7 @@ Dostępne są następujące nowe funkcje języka w tej wersji:
 * [`private protected` Modyfikator dostępu](#private-protected-access-modifier)
   - `private protected` Modyfikator dostępu umożliwia dostęp do klas pochodnych tego samego zestawu.
 
-## <a name="reference-semantics-with-value-types"></a>Semantyka odwołań z typami wartości
+## <a name="safe-efficient-code-enhancements"></a>Ulepszenia bezpieczne efektywnego kodu
 
 Funkcje językowe, które wprowadzono w 7.2 pozwalają pracować z typami wartości podczas korzystania z semantyką odwołań. Są one przeznaczone do zwiększenia wydajności, minimalizując kopiowania typów wartości bez powodowania alokacji pamięci, związanych z użyciem typów odwołań. Funkcje obejmują:
 
@@ -38,7 +38,7 @@ Funkcje językowe, które wprowadzono w 7.2 pozwalają pracować z typami warto�
  - `readonly struct` Deklaracji, aby wskazać, że struktury jest niemodyfikowalna i mają być przekazywane jako `in` parametru do metody jego elementu członkowskiego. Dodawanie `readonly` modyfikator do istniejącej deklaracji struktury jest [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
  - `ref struct` Deklaracji, aby wskazać, że typ struktury uzyskuje dostęp do pamięci zarządzanej bezpośrednio i muszą zawsze być stosu przydzielone. Dodawanie `ref` modyfikator do istniejącego `struct` deklaracja jest [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Element `ref struct` nie może być składową klasy ani używane w innych lokalizacjach, w którym może zostać przydzielone na stercie.
 
-Możesz przeczytać więcej na temat wszystkich tych zmian w [przy użyciu typów wartości z semantyką odwołań](../reference-semantics-with-value-types.md).
+Możesz przeczytać więcej na temat wszystkich tych zmian w [pisanie kodu efektywne bezpieczne](../write-safe-efficient-code.md).
 
 ## <a name="non-trailing-named-arguments"></a>Inne niż końcowe argumenty nazwane
 

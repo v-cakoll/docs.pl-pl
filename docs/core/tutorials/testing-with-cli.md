@@ -4,12 +4,12 @@ description: W tym samouczku wyjaśniono, jak organizowanie i testowanie projekt
 author: cartermp
 ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 8131e51577bcad9191c0cacb61317fa146bf476d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025496"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415227"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 
@@ -101,7 +101,7 @@ Opcjonalne Ćwiczenia: można dodać nowy typ domowych, takich jak `Bird`, rozsz
 
 ### <a name="testing-the-sample"></a>Badanie próbki
 
-`NewTypes` Projektu w miejscu, a ułożone ją, przechowując typy związane z zwierzęta w folderze. Następnie utwórz projekt testu i zacząć pisać testy z [xUnit](https://xunit.github.io/) struktury testowej. Testy jednostkowe umożliwia automatyczne sprawdzenie dostępności bevahior pet typów, aby upewnić się, że są one działających prawidłowo.
+`NewTypes` Projektu w miejscu, a ułożone ją, przechowując typy związane z zwierzęta w folderze. Następnie utwórz projekt testu i zacząć pisać testy z [xUnit](https://xunit.github.io/) struktury testowej. Testy jednostkowe umożliwia automatyczne sprawdzenie dostępności zachowanie pet typów, aby upewnić się, że są one działających prawidłowo.
 
 Tworzenie *test* folder z *NewTypesTests* folder znajdujący się w nim. W wierszu polecenia z *NewTypesTests* folderu wykonaj `dotnet new xunit`. Pozwala to na utworzenie dwóch plików: *NewTypesTests.csproj* i *UnitTest1.cs*.
 

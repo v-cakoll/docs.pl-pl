@@ -2,14 +2,12 @@
 title: PNRP w projektowaniu aplikacji
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0f86b2569b9d4864586a0a7daea0ae5d3b901fd4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b19138c43185f4d31bef4fe67af48f89dc03eba4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205268"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180436"
 ---
 # <a name="pnrp-in-application-development"></a>PNRP w projektowaniu aplikacji
 W systemie Windows Vista sieci aplikacje mają dostęp do nazwy publikacji i funkcji rozpoznawania za pomocą uproszczonego PNRP interfejsu programowania aplikacji (API).  

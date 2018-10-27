@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89e7a0929bd5f07c5a1986d885984332d692d3a9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a861da011898c3648c66b6a0ea0f97cdb26ff288
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180296"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452763"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Przykład: obsługa wyjątków podczas powiązywania danych
 > [!NOTE]
@@ -39,7 +39,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Została aplikacja działania?  
- Podstawową stosu, ramek z [Windows.UI.Xaml](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) przestrzeni nazw wskazują, że aparat renderowania XAML została uruchomiona.   Korzystanie z <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> metoda wskazuje oparty na odbiciu wyszukiwania wartości właściwości w typie, którego metadanych został usunięty.  
+ Podstawową stosu, ramek z <xref:Windows.UI.Xaml?displayProperty=nameWithType> przestrzeni nazw wskazują, że aparat renderowania XAML została uruchomiona.   Korzystanie z <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> metoda wskazuje oparty na odbiciu wyszukiwania wartości właściwości w typie, którego metadanych został usunięty.  
   
  Pierwszym krokiem w dostarczaniu dyrektywy metadanych byłoby dodać `serialize` metadanych dla typu, aby jego właściwości są wszystkie dostępne:  
   
@@ -57,7 +57,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Można dopasować kod nie używać odbicia?  
  Wiązanie danych jest intensywnie korzystających z odbicia, zmiany kodu, aby uniknąć odbicie nie jest możliwe.  
   
- Istnieją sposoby określania `ViewModel` do strony XAML, dzięki czemu można skojarzyć łańcucha narzędzi właściwości powiązania przy użyciu poprawnego typu w czas kompilacji i zachować metadane bez przy użyciu dyrektyw środowiska uruchomieniowego.  Na przykład, można zastosować [Windows.UI.Xaml.Data.BindableAttribute](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) atrybutu dla właściwości. To powoduje, że kompilator XAML do generowania informacji wymaganych wyszukiwania i pozwala uniknąć konieczności dyrektyw środowiska uruchomieniowego, w pliku Default.rd.xml.  
+ Istnieją sposoby określania `ViewModel` do strony XAML, dzięki czemu można skojarzyć łańcucha narzędzi właściwości powiązania przy użyciu poprawnego typu w czas kompilacji i zachować metadane bez przy użyciu dyrektyw środowiska uruchomieniowego.  Na przykład, można zastosować <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> atrybutu dla właściwości. To powoduje, że kompilator XAML do generowania informacji wymaganych wyszukiwania i pozwala uniknąć konieczności dyrektyw środowiska uruchomieniowego, w pliku Default.rd.xml.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)  

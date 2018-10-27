@@ -7,30 +7,30 @@ helpviewer_keywords:
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91fc7cf6ea66952fa5770ce73ecb1a8c129a9a2d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 19c4b030e8b44bed5377827d016127b4a574f5ee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743917"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183753"
 ---
 # <a name="assembly-location"></a>Lokalizacja zestawu
-Lokalizacji zestawu Określa, czy można zlokalizować gdy odwołuje się do środowisko uruchomieniowe języka wspólnego i można również określić, czy zestaw może być współużytkowana z innych zestawów. Można wdrożyć zestawu w następujących lokalizacjach:  
+Lokalizacja zestawu Określa, czy można wyszukanie w przypadku odwołania do środowiska uruchomieniowego języka wspólnego i można również określić, czy zestaw mogą być współużytkowane z innymi zestawami. Można wdrożyć zestaw w następujących lokalizacjach:  
   
--   Katalog aplikacji lub jego podkatalogach.  
+-   Katalog aplikacji lub podkatalogi.  
   
-     Jest to lokalizacja najczęściej używane do wdrażania zestawu. Podkatalogi katalogu głównego aplikacji może być oparta na języka i kultury. Jeśli zestaw informacji w atrybucie kultury, musi być w podkatalogu w katalogu aplikacji o nazwie tej kultury.  
+     Jest to najbardziej typowe lokalizacja do wdrażania zestawu. Podkatalogi katalogu głównego aplikacji może bazować na języka lub kultury. Jeśli zestaw ma informacje w atrybucie kultury, należy w podkatalogu w katalogu aplikacji o nazwie tej kultury.  
   
--   Globalna pamięć podręczna zestawów.  
+-   Global assembly cache.  
   
-     To jest kod komputera pamięci podręcznej, zainstalowanym wszędzie tam, gdzie jest zainstalowane środowisko uruchomieniowe języka wspólnego. W większości przypadków Jeśli zamierzasz dzielenie się zestawem z wielu aplikacji, należy wdrożyć ją w pamięci podręcznej GAC.  
+     Jest to pamięć podręczna kodu dla całego komputera, zainstalowanym wszędzie tam, gdzie zainstalowano środowisko uruchomieniowe języka wspólnego. W większości przypadków Jeśli zamierzasz dzielenie się zestawem z wielu aplikacji, należy wdrożyć ją w globalnej pamięci podręcznej.  
   
 -   Na serwerze HTTP.  
   
-     Zestaw wdrożonych na serwerze HTTP musi mieć silnej nazwy; wskaż zestawu w sekcji codebase pliku konfiguracji aplikacji.  
+     Zestaw wdrożonych na serwerze HTTP musi mieć silną nazwą; wskaż zestawu w części bazy kodu w pliku konfiguracji aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

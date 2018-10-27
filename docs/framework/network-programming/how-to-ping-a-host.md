@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e066af175982b71fb42bf2eec75fe9d92f532e61
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ffade286882608f98c8771c0bdf2c70803769e38
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836151"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183571"
 ---
 # <a name="how-to-ping-a-host"></a>Porady: polecenie Ping do hosta
 W tym przykładzie przedstawiono polecenie ping do hosta zdalnego.  

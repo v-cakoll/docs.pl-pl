@@ -2,18 +2,19 @@
 title: MatchAllEndpointBehavior
 ms.date: 03/30/2017
 ms.assetid: 510977a7-ec38-40be-8cd8-4774dc4f75ec
-ms.openlocfilehash: a9728c54cdb4259fc09649f4d8693a297a7a9266
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fc5c591487afd86ab605b0a7c7fdfbda7538e22
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180851"
 ---
 # <a name="matchallendpointbehavior"></a>MatchAllEndpointBehavior
 MatchAllEndpointBehavior  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class MatchAllEndpointBehavior : Behavior  
 {  
 };  
@@ -24,6 +25,6 @@ class MatchAllEndpointBehavior : Behavior
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|

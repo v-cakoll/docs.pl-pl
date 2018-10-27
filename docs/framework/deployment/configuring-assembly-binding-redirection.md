@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04743dc7a0fc821f2e3b94929e2384eb25c69f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3abf42790757708b235b3eab82ea9a11ff545215
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387188"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182869"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Konfigurowanie przekierowywania powiązań zestawów
-Domyślnie aplikacje używają zbiór zestawy .NET Framework, które zostały wydane z wersją środowiska uruchomieniowego umożliwia kompilowanie aplikacji. Można użyć **appliesTo** atrybutu [ \<assemblybinding — >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) elementu w pliku konfiguracyjnym aplikacji ma nastąpić przekierowanie powiązania odwołania do zestawów do określonej wersji programu .NET Zestawy struktury. Ten opcjonalny atrybut używa numeru wersji .NET Framework w celu wskazania wersję, która dotyczy. Jeśli nie **appliesTo** określono atrybut  **\<assemblybinding — >** element ma zastosowanie do wszystkich wersji platformy .NET Framework.  
+Domyślnie aplikacje używają zbiór zestawów .NET Framework, które są dostarczane z wersji środowiska uruchomieniowego, które umożliwiają kompilowanie aplikacji. Możesz użyć **appliesTo** atrybutu na [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) elementu w pliku konfiguracji aplikacji do przekierowywania odwołań do powiązań zestawów do określonej wersji programu .NET Zestawy struktury. Ten atrybut opcjonalny używa numeru wersji .NET Framework w celu wskazania, której wersji ma zastosowanie do. Jeśli nie **appliesTo** atrybut jest określony,  **\<assemblyBinding >** element ma zastosowanie do wszystkich wersji programu .NET Framework.  
   
- **AppliesTo** atrybutu została wprowadzona w programie .NET Framework w wersji 1.1; jest ignorowana przez program .NET Framework w wersji 1.0. Oznacza to, że wszystkie  **\<assemblybinding — >** elementy są stosowane, gdy przy użyciu platformy .NET Framework w wersji 1.0, nawet jeśli **appliesTo** jest określony atrybut.  
+ **AppliesTo** atrybut wprowadzono w programie .NET Framework w wersji 1.1; jest ignorowana przez program .NET Framework w wersji 1.0. Oznacza to, że wszystkie  **\<assemblyBinding >** elementy są stosowane podczas korzystania z wersji programu .NET Framework 1.0, nawet jeśli **appliesTo** atrybut jest określony.  
   
 > [!NOTE]
 >  Użyj **appliesTo** atrybutu, aby ograniczyć przekierowanie powiązań zestawów do określonej wersji środowiska uruchomieniowego.  
   
- Na przykład aby przekierować zestawu powiązania dla zestawu .NET Framework w wersji 1.0, można dołączyć następujący kod XML w pliku konfiguracyjnym aplikacji.  
+ Na przykład aby przekierować powiązanie zestawu dla zestawu .NET Framework w wersji 1.0, należy dołączyć następujący kod XML w pliku konfiguracyjnym aplikacji.  
   
 ```xml  
 <runtime>  
@@ -34,9 +34,9 @@ Domyślnie aplikacje używają zbiór zestawy .NET Framework, które zostały wy
 </runtime>  
 ```  
   
- **\<Assemblybinding — >** elementy są zależne od kolejności. Wprowadź informacje przekierowania powiązania zestawu dla dowolne zestawy, .NET Framework w wersji 1.0 najpierw następuje informacji przekierowania powiązania zestawu dla dowolne zestawy, .NET Framework w wersji 1.1. Na koniec wprowadź informacje dotyczące przekierowania powiązania zestawu dla przekierowania zestawu .NET Framework, które nie są używane **appliesTo** atrybut i dlatego ma zastosowanie do wszystkich wersji platformy .NET Framework. W przypadku konfliktu przekierowania pierwszej instrukcji pasującego przekierowania w pliku konfiguracji jest używany.  
+ **\<AssemblyBinding >** elementy są zależne od kolejności. Należy wprowadzić informacje o przekierowaniach powiązań zestawów dla dowolnego środowiska .NET Framework w wersji 1.0 zestawów najpierw następuje informacje o przekierowaniach powiązań zestawów dla dowolne zestawy, .NET Framework w wersji 1.1. Na koniec wprowadź informacje o przekierowaniach powiązań zestawów dla przekierowania z zestawu .NET Framework, która nie korzysta z **appliesTo** atrybut i dlatego ma zastosowanie do wszystkich wersji programu .NET Framework. W przypadku konfliktu przekierowania jest używana pierwsza pasująca instrukcja przekierowania w pliku konfiguracji.  
   
- Na przykład aby przekierować jedno odwołanie do zestawu .NET Framework w wersji 1.0 oraz inne odwołanie do zestawu .NET Framework w wersji 1.1, możesz użyć wzorzec pokazano w poniższych pseudocode.  
+ Na przykład aby przekierować jedno odwołanie do zestawu .NET Framework w wersji 1.0, a inne odwołanie do zestawu .NET Framework w wersji 1.1, możesz użyć wzoru pokazanego w poniższym pseudokodzie.  
   
 ```xml  
 <assemblyBinding xmlns="..." appliesTo="v1.0.3705">   
@@ -53,9 +53,9 @@ Domyślnie aplikacje używają zbiór zestawy .NET Framework, które zostały wy
 ```  
   
 ## <a name="debugging-configuration-file-errors"></a>Debugowanie błędów pliku konfiguracji  
- Środowisko uruchomieniowe analizuje pliki konfiguracji raz po utworzeniu domeny aplikacji i ładuje kodu do tej domeny aplikacji. Środowisko uruchomieniowe języka wspólnego obsługuje błędy w pliku konfiguracji, pomijając wpis. Środowisko uruchomieniowe ignoruje pliku całą konfigurację, jeśli zawiera on nieprawidłowo sformułowany kod XML. Nieprawidłowy kod XML, aby uzyskać nieprawidłowe sekcje są ignorowane.  
+ Środowisko uruchomieniowe analizuje pliki konfiguracji raz, gdy domeny aplikacji, zostanie utworzona i ładuje kodu do tej domeny aplikacji. Środowisko uruchomieniowe języka wspólnego obsługuje błędy w pliku konfiguracji, ignorując wpis. Środowisko wykonawcze ignoruje plik całą konfigurację, jeśli zawiera on nieprawidłowo sformułowany kod XML. Nieprawidłowy kod XML, aby uzyskać tylko nieprawidłowe sekcje są ignorowane.  
   
- Można określić, czy plik konfiguracji jest używana przez określenie, czy występują przekierowania powiązania zestawu. Użyj [Podgląd dziennika powiązań zestawów (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) wyświetlić zestawy, które są ładowane. Aby wyświetlić wszystkie powiązania przy użyciu zestawu, należy ustawić wpis dotyczący **ForceLog** w rejestrze.  
+ Można określić, czy plik konfiguracji jest on używany przez określenie, czy występują przekierowania powiązań zestawu. Użyj [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) Aby wyświetlić zestawy, które są ładowane. Aby wyświetlić wszystkie powiązania zestawów, należy ustawić wpis dla **ForceLog** w rejestrze.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Instrukcje: włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Instrukcje: włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

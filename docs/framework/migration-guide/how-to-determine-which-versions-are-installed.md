@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7a8fc72735c5e45fb87c503272871fc687bacd3e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199726"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453245"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Porady: Określanie, które wersje programu .NET Framework są zainstalowane.
 
@@ -97,7 +97,7 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     |W Rocznicowej aktualizacji systemu Windows 10 i Windows Server 2016:394802<br /><br /> W innych wersjach systemu operacyjnego: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |W systemie Windows 10 dla twórców tylko zaktualizować: 460798<br/><br/> W innych wersjach systemu operacyjnego: 460805 | .NET framework 4.7 |
     |Na Windows 10 Fall Creators Update tylko: 461308<br/><br/> W innych wersjach systemu operacyjnego: 461310 | .NET Framework 4.7.1 |
-    |W usłudze Windows Update 10 kwietnia 2018 r. tylko: 461808<br/><br/> W innych wersjach systemu operacyjnego: 461814| .NET framework 4.7.2 |
+    |W usłudze Windows Update 10 października 2018 r. tylko: 461814<br/><br/> W usłudze Windows Update 10 kwietnia 2018 r. tylko: 461808<br/><br/> W innych wersjach systemu operacyjnego: 461814| .NET framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Można znaleźć wersji programu .NET Framework, wykonując zapytanie w rejestrze w kodzie (.NET Framework 1 – 4)
@@ -148,8 +148,9 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     |.NET framework 4.7 zainstalowany w innych wersjach systemu operacyjnego Windows|460805|
     |.NET framework 4.7.1 w systemie Windows 10 Fall Creators Update|461308|
     |.NET framework 4.7.1 zainstalowany w innych wersjach systemu operacyjnego Windows|461310|
+    |.NET framework 4.7.2 zainstalowany w systemie Windows 10 października 2018 r. Zaktualizuj|461814|
     |.NET framework 4.7.2 zainstalowany w systemie Windows 10 kwietnia 2018 r. Zaktualizuj|461808|
-    |.NET framework 4.7.2 zainstalowany w innych wersjach systemu operacyjnego Windows|461814|
+    |.NET framework 4.7.2 w systemie Windows 10 Fall Creators Update i wcześniejszych wersji systemu operacyjnego|461814|
     
      Następujące testy przykład `Release` wartości w rejestrze, aby określić, czy [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub nowsza wersja programu .NET Framework jest zainstalowana.
 

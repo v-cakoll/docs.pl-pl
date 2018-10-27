@@ -2,14 +2,12 @@
 title: Izolacja sieci dla aplikacji Windows Store
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 034dbfaf63826f8fd3b04e23ea4568e41783eb38
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 537d94201b3e0ae92707c858f10032848a690004
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308243"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182674"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Izolacja sieci dla aplikacji Windows Store
 Klasy w <xref:System.Net>, <xref:System.Net.Http>, i <xref:System.Net.Http.Headers> przestrzeni nazw może służyć do tworzenia aplikacji Windows Store lub aplikacjami pulpitu. W przypadku użycia w aplikacji Windows Store, klas w tych obszarach nazw dotyczy izolacji sieci, częścią modelu zabezpieczeń aplikacji, które są używane przez [!INCLUDE[win8](../../../includes/win8-md.md)]. Możliwości odpowiedniej sieci musi być włączony w manifeście aplikacji dla aplikacji Windows Store dla systemu zezwolić na dostęp do sieci.  

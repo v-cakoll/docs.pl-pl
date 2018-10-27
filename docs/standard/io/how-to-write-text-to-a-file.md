@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677152"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181241"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Porady: wpisywanie tekstu do pliku
 Ten temat przedstawia różne sposoby można wpisać tekst w pliku dla aplikacji .NET Framework lub [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Następujące klasy i metody są zwykle używane do zapisywanie tekstu do pliku:  
@@ -27,7 +27,7 @@ Ten temat przedstawia różne sposoby można wpisać tekst w pliku dla aplikacji
   
 -   <xref:System.IO.File> — do użycia w aplikacjach .NET Framework. Zapewnia metody statyczne próbę zapisania tekstu do pliku, taką jak <xref:System.IO.File.WriteAllLines%2A> i <xref:System.IO.File.WriteAllText%2A>, lub dołączyć tekst do pliku (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> lub <xref:System.IO.File.AppendText%2A>).  
   
--   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) — do użycia z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zawiera on metod asynchronicznych próbę zapisania tekstu do pliku ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) lub [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) lub dołączyć tekst do pliku ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) lub [ AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
+-   <xref:Windows.Storage.FileIO> — do użycia z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zawiera on metod asynchronicznych próbę zapisania tekstu do pliku (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> lub <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) lub dołączyć tekst do pliku (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> lub <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).  
 
 - <xref:System.IO.Path> — do użycia na ciągi, które zawierają informacje o ścieżce pliku lub katalogu. Zawiera on <xref:System.IO.Path.Combine%2A> metody, która umożliwia łączenie ciągów, aby zbudować ścieżki pliku lub katalogu.
 
@@ -59,7 +59,7 @@ Ten temat przedstawia różne sposoby można wpisać tekst w pliku dla aplikacji
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak asynchronicznego zapisu danych wejściowych użytkownika do pliku tekstowego w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Ze względów bezpieczeństwa, otwierając plik z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji zwykle wymaga użycia [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx) kontroli. W tym przykładzie `FileOpenPicker` jest filtrowany w celu wyświetlania plików tekstowych.  
+ Poniższy przykład pokazuje, jak asynchronicznego zapisu danych wejściowych użytkownika do pliku tekstowego w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Ze względów bezpieczeństwa, otwierając plik z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji zwykle wymaga użycia <xref:Windows.Storage.Pickers.FileOpenPicker> kontroli. W tym przykładzie `FileOpenPicker` jest filtrowany w celu wyświetlania plików tekstowych.  
   
 ```xaml  
 <Page  

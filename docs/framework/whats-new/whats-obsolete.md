@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 58ef462fdccc31a7694721b3ab9c3bec52d66abe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855338"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183480"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Co&#39;s jako przestarzałe w bibliotece klas programu .NET Framework
 .NET Framework zmienia się wraz z upływem czasu. Każda nowa wersja dodaje nowe typy i składowe typu, które zapewniają nowe funkcje. Istniejące typy i składowe są również zmienić wraz z upływem czasu. Na przykład niektóre typy stać się mniej ważne technologii, które obsługują zostaje zastąpiona przez nową technologię, a niektóre metody są zastępowane przez nowszą metody, które są bardziej wygodne lub zaawansowanych funkcji.  
@@ -25,7 +25,7 @@ ms.locfileid: "43855338"
 >  Warunki *przestarzałe* i *przestarzałe* mają takie samo znaczenie, gdy jest stosowany do typów i członków programu .NET Framework.  
   
 ## <a name="the-obsoleteattribute-attribute"></a>Atrybut ObsoleteAttribute  
- .NET Framework wskazuje, że dany typ lub członek typu jest przestarzałe, oznaczając je za pomocą <xref:System.ObsoleteAttribute> atrybutu. Stosowanie atrybutu do typu lub elementu członkowskiego wskazuje, że typ lub element członkowski zostanie usunięty w niektórych przyszłych wersjach programu .NET Framework bez przerywania skompilowany kod, który używa tego członka.  
+ .NET Framework wskazuje, że dany typ lub członek typu jest przestarzałe, oznaczając je za pomocą <xref:System.ObsoleteAttribute> atrybutu. Stosowanie atrybutu do typu lub elementu członkowskiego wskazuje, że typ lub element członkowski zostanie usunięta w niektórych przyszłych wersjach programu .NET Framework bez kod skompilowany podziału, który używa tego członka.  
   
  Oprócz wskazujący, że typ lub członek typu jest przestarzały, <xref:System.ObsoleteAttribute> definiuje, jak kompilator obsługuje kod źródłowy, który zawiera tego typu lub elementu członkowskiego. Kompilator może skompilować kod, ale emitują komunikat ostrzegawczy lub użycie typu lub elementu członkowskiego go traktować jako błąd. W pierwszym przypadku pomyślnie skompilować kod, ale komunikat ostrzegawczy wskazuje, że typ lub element członkowski jest przestarzały. W drugim przypadku kompilacja kończy się niepowodzeniem.  
   

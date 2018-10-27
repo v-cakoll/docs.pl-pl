@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8738e8d0f6a74e1b8ba963e487d4c153a0a6a872
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196478"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454502"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -66,7 +66,7 @@ Managed Extensibility Framework lub MEF to biblioteka do tworzenia aplikacji nie
 
 Najprostszym sposobem, aby zobaczyć, co można zrobić MEF jest tworzenie prostej aplikacji MEF. W tym przykładzie utworzysz bardzo prosty kalkulator, o nazwie SimpleCalculator. Celem SimpleCalculator jest, aby utworzyć aplikację konsolową, która akceptuje podstawowe polecenia arytmetyczne, w postaci "5 + 3" lub "6-2" i zwraca poprawnych odpowiedzi. Za pomocą MEF, będziesz mieć możliwość dodawania nowych operatorów bez konieczności zmieniania kodu aplikacji.
 
-Aby pobrać kompletny kod dla tego przykładu, zobacz [przykładowe SimpleCalculator](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
+Aby pobrać kompletny kod dla tego przykładu, zobacz [przykładowe SimpleCalculator](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
 
 > [!NOTE]
 > Celem SimpleCalculator jest, aby zademonstrować pojęć i składnia MEF, a nie zapewnienie niekoniecznie realistyczny scenariusz, w ramach jego użycia. Wiele aplikacji, które będą korzystać z najbardziej z możliwości MEF jest bardziej skomplikowane niż SimpleCalculator. Aby bardziej rozległe przykładów, zobacz [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) w witrynie GitHub.
@@ -485,6 +485,6 @@ public class Mod : SimpleCalculator.IOperation
 
 <a name="where_do_i_go_now"></a>
 ## <a name="where-do-i-go-now"></a>Gdzie mogę teraz?
- Aby pobrać kompletny kod dla tego przykładu, zobacz [przykładowe SimpleCalculator](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
+ Aby pobrać kompletny kod dla tego przykładu, zobacz [przykładowe SimpleCalculator](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
 
- Aby uzyskać więcej informacji i przykłady kodu, zobacz [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282). Aby uzyskać listę typów MEF, zobacz <xref:System.ComponentModel.Composition?displayProperty=nameWithType> przestrzeni nazw.
+ Aby uzyskać więcej informacji i przykłady kodu, zobacz [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef). Aby uzyskać listę typów MEF, zobacz <xref:System.ComponentModel.Composition?displayProperty=nameWithType> przestrzeni nazw.

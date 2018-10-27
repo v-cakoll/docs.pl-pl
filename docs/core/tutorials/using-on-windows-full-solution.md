@@ -5,12 +5,12 @@ author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
 ms.custom: vs-dotnet
-ms.openlocfilehash: c21c257b55c4389ea4a60fca55eb83cff60ff3b5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b3e466511fcae447f5bb54b83f13b25bc90c6539
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840943"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185082"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Tworzenie kompletnego rozwiązania .NET Core w Windows, przy użyciu programu Visual Studio 2017
 
@@ -24,7 +24,7 @@ Postępuj zgodnie z instrukcjami [naszą stronę wymagań wstępnych](../windows
 
 ### <a name="writing-the-library"></a>Zapisywanie w bibliotece
 
-1. W programie Visual Studio, wybierz **pliku**, **New**, **projektu**. W **nowy projekt** okna dialogowego, rozwiń węzeł **Visual C#** węzła i wybierz polecenie **.NET Standard** węzła, a następnie wybierz **biblioteki klas (.NET Standard)**. Spowoduje to utworzenie biblioteki .NET Standard, który jest przeznaczony dla platformy .NET Core oraz ewentualne innych implementacji .NET, która obsługuje wersję 2.0 [.Net Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
+1. W programie Visual Studio, wybierz **pliku**, **New**, **projektu**. W **nowy projekt** okna dialogowego, rozwiń węzeł **Visual C#** węzła i wybierz polecenie **.NET Standard** węzła, a następnie wybierz **biblioteki klas (.NET Standard)**. Spowoduje to utworzenie biblioteki .NET Standard, który jest przeznaczony dla platformy .NET Core oraz ewentualne innych implementacji .NET, która obsługuje wersję 2.0 [.NET Standard](../../standard/net-standard.md).
 
 2. Nazwa projektu "Library" i "Golden" rozwiązania. Pozostaw **Utwórz katalog rozwiązania** zaznaczone. Kliknij przycisk **OK**.
 
@@ -73,6 +73,6 @@ Postępuj zgodnie z instrukcjami [naszą stronę wymagań wstępnych](../windows
 
 8. Ustaw punkt przerwania po wierszu, który właśnie został dodany.
 
-9. Naciśnij klawisz F5, aby uruchomić aplikację...
+9. Naciśnij klawisz F5, aby uruchomić aplikację.
 
    Aplikacja powinien być kompilowany bez błędów i powinna trafiony punkt przerwania. Należy również możliwość sprawdzenia, czy dane wyjściowe aplikacji, "odpowiedź brzmi 42.".

@@ -2,12 +2,12 @@
 title: Publikowanie usług WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: b62b2616233eb81e64945e997a2efe17973dedd2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 515885658612cf11ecff8e084c466a70ba698625
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781508"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453002"
 ---
 # <a name="wcf-service-publishing"></a>Publikowanie usług WCF
 
@@ -21,7 +21,7 @@ Publikowanie usług WCF obsługuje Publikowanie usług WCF, utworzony na podstaw
 
 -   Biblioteka usługi syndykacji.
 
-Te szablony usług można znaleźć, wybierając **pliku** > **nowy projekt** > [**języka Visual Basic** lub **Visual C#**] > **WCF**. W przypadku innych szablonów usług WCF w tej lokalizacji (w tym aplikacja usługi przepływu pracy WCF i aplikacja usługi WCF), można opublikować za pomocą [jednym kliknięciem publikowania dla aplikacji sieci web](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).
+Te szablony usług można znaleźć, wybierając **pliku** > **nowy projekt** > [**języka Visual Basic** lub **Visual C#** ] > **WCF**. W przypadku innych szablonów usług WCF w tej lokalizacji (w tym aplikacja usługi przepływu pracy WCF i aplikacja usługi WCF), można opublikować za pomocą [jednym kliknięciem publikowania dla aplikacji sieci web](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).
 
 Usługi mogą być publikowane w następujących lokalizacjach docelowych.
 
@@ -41,9 +41,9 @@ Wykonaj poniższe kroki, aby wdrożyć implementacji usługi:
 
 3.  **Publikuj** zostanie wyświetlone okno. Kliknij przycisk **...** . przycisk, aby określić lokalizację docelową, wdrożona usługa. Możesz wybrać, aby wdrożyć aplikację do lokalnych usług IIS, System plików lub witryny FTP. Jeśli wdrożenie aplikacji do lokalnych usług IIS, można wybrać witryny sieci Web i utworzyć aplikację sieci web, znajdujący się w nim, klikając **Tworzenie nowej aplikacji sieci Web** ikonę w prawym górnym rogu.
 
-4.  Po kliknięciu **Publikuj** w głównym oknie programu Visual Studio wdroży aplikację określona lokalizacja docelowa i kopiuje pliki Web.config, .svc i zestaw do katalogu docelowego. . Nazwa .svc będzie "ProjectName.ServiceName.svc". Po pomyślnym opublikowaniu usługi, możesz znaleźć popularne łącze w oknie programu Visual Studio danych wyjściowych podobny do "Łączenie z HYPERLINK"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ...". Można nacisnąć klawisz CTRL i kliknij link, aby otworzyć stronę przeglądarki w programie Visual Studio, aby wyświetlić strukturę katalogów usługi.
+4.  Po kliknięciu **Publikuj** w głównym oknie programu Visual Studio wdroży aplikację określona lokalizacja docelowa i kopiuje pliki Web.config, .svc i zestaw do katalogu docelowego. . Nazwa .svc będzie "ProjectName.ServiceName.svc". Po pomyślnym opublikowaniu usługi, możesz znaleźć popularne łącze w oknie programu Visual Studio danych wyjściowych podobny do "łączenie z `http://localhost/WebApplicationFolderName...`". Można nacisnąć klawisz CTRL i kliknij link, aby otworzyć stronę przeglądarki w programie Visual Studio, aby wyświetlić strukturę katalogów usługi.
 
-     Jeśli nie możesz przejść do witryny, może być, ponieważ katalog przeglądarki nie jest włączone w usługach IIS. Postępuj zgodnie z poradami w sekcji "Rzeczy można spróbować", aby ją włączyć. Alternatywnie, możesz bezpośrednio wpisać"HYPERLINK"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc", aby wyświetlić stronę usługi.
+     Jeśli nie możesz przejść do witryny, może być, ponieważ katalog przeglądarki nie jest włączone w usługach IIS. Postępuj zgodnie z poradami w sekcji "Rzeczy można spróbować", aby ją włączyć. Alternatywnie, można bezpośrednio wpisać `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` Aby wyświetlić stronę usługi.
 
 Możesz użyć **Publikuj** Aby określić, jeśli chcesz skopiować zestaw, konfiguracji i pliku svc dla wszystkich usług zdefiniowane w projekcie do lokalizacji docelowej, a Nadpisz istniejące pliki w lokalizacji docelowej.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: cf1782eaf54701f0cf93576325b3d46e8bc4d3f1
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d4b4c776db542b6326fcceb8f2fd057d9caabf94
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261514"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49415253"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Tworzenie i wdrażanie usług danych WCF
 
@@ -80,7 +80,7 @@ Podczas projektowania usługi danych należy wziąć pod uwagę następujące kw
 
 -   Program inspekcji HTTP może być bardzo pomocny podczas debugowania usługi danych, umożliwiając inspekcję zawartości komunikatów żądań i odpowiedzi. Dowolnego analizatora pakietów sieciowych, który może wyświetlać pakiety nieprzetworzone, można używać do inspekcji żądań HTTP i odpowiedzi z usługi danych.
 
--   Podczas debugowania usługi danych można uzyskać więcej informacji o błędzie z usługi danych niż podczas normalnej pracy. Dodatkowe informacje o błędzie można uzyskać z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> właściwość <xref:System.Data.Services.DataServiceConfiguration> do `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybut w klasie usługi danych `true`. Aby uzyskać więcej informacji, zobacz wpis [debugowanie usług danych WCF](https://go.microsoft.com/fwlink/?LinkId=201868). Możesz również włączyć śledzenie w programie WCF, aby wyświetlić wyjątki wywoływane w warstwie obsługi komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
+-   Podczas debugowania usługi danych, można uzyskać więcej informacji o błędzie z usługi danych niż podczas normalnej pracy. Dodatkowe informacje o błędzie można uzyskać z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> właściwość <xref:System.Data.Services.DataServiceConfiguration> do `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybut w klasie usługi danych `true`. Aby uzyskać więcej informacji, zobacz wpis [debugowanie usług danych WCF](https://go.microsoft.com/fwlink/?LinkId=201868). Możesz również włączyć śledzenie w programie WCF, aby wyświetlić wyjątki wywoływane w warstwie obsługi komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
 -   Usługa danych zazwyczaj projektuje się jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt aplikacji, ale można również utworzyć usługę danych jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektu witryny sieci Web w programie Visual Studio. Aby uzyskać informacje o różnicach między dwoma typami projektów, zobacz [NIB: Web Application Projects versus projektów witryny sieci Web w programie Visual Studio](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
 

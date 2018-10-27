@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fca25786096ebeb97c133d306129f33f2bb4580
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 055c7db652426651dd3c2a74825a11e305d939f1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181053"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183909"
 ---
 # <a name="working-with-calendars"></a>Praca z kalendarzami
 
@@ -60,7 +60,7 @@ Wszystkie kalendarze w programie .NET pochodzić od <xref:System.Globalization.C
 
 Kalendarza można używać na jeden z dwóch sposobów:
 
-* Jako kalendarz używany przez określoną kulturę. Każdy <xref:System.Globalization.CultureInfo> obiekt ma bieżącym kalendarzem jest kalendarz aktualnie używany obiekt. Reprezentacje wszystkich wartości daty i godziny w formacie ciągu automatycznie odzwierciedlają bieżącą kulturę i jej bieżący kalendarz. Zazwyczaj bieżącym kalendarzem jest kalendarz domyślny kultury. <xref:System.Globalization.CultureInfo> obiekty mają także opcjonalne kalendarze, w tym dodatkowe kalendarze, których może używać dana kultura.
+* Jako kalendarz używany przez określoną kulturę. Każdy <xref:System.Globalization.CultureInfo> obiekt ma bieżącym kalendarzem jest kalendarz aktualnie używany obiekt. Reprezentacje wszystkich wartości daty i godziny w formacie ciągu automatycznie odzwierciedlają bieżącą kulturę i jej bieżący kalendarz. Zazwyczaj bieżącym kalendarzem jest kalendarz domyślny kultury. <xref:System.Globalization.CultureInfo> obiekty mają także opcjonalne kalendarze, w tym dodatkowe kalendarze, których można użyć kultury.
 
 * Jako kalendarz autonomiczny, niezależny od określonej kultury. W tym przypadku <xref:System.Globalization.Calendar> metody są używane do wyrażania dat jako wartości odzwierciedlających kalendarz.
 

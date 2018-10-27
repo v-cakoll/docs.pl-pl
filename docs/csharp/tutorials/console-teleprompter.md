@@ -3,12 +3,12 @@ title: Aplikacja konsoli
 description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9255ad9b1fefc828e767fb8e6ccc62b2eaf23fd6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937595"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183623"
 ---
 # <a name="console-application"></a>Aplikacja konsoli
 
@@ -155,7 +155,7 @@ Uruchom aplikację przykładową, a będzie można odczytywać w jej wstępnie s
 
 ## <a name="async-tasks"></a>Zadań asynchronicznych
 
-W tym ostatnim kroku dodasz kod, aby zapisywać dane wyjściowe asynchronicznie w ramach jednego zadania podczas również działa inne zadanie, które można odczytać danych wejściowych od użytkownika, jeśli chcesz przyspieszyć lub zwolnić wyświetlania tekstu. Ma kilka kroków i do końca, będziesz mieć wszystkie aktualizacje, które są potrzebne.
+W tym ostatnim kroku możesz dodać kod, aby zapisywać dane wyjściowe asynchronicznie w ramach jednego zadania podczas również działa inne zadanie, które można odczytać danych wejściowych od użytkownika, jeśli chcesz przyspieszyć lub spowolnić wyświetlania tekstu lub całkowicie zatrzymanie wyświetlania tekstu. Ma kilka kroków i do końca, będziesz mieć wszystkie aktualizacje, które są potrzebne.
 Pierwszym krokiem jest utworzenie asynchronicznego <xref:System.Threading.Tasks.Task> zwracania metody, która przedstawia kod do tej pory utworzono do odczytywania i wyświetlić plik.
 
 Dodaj tę metodę, aby Twoje `Program` klasy (jest zajęta z treści usługi `Main` metody):
@@ -190,7 +190,7 @@ W tym miejscu, w `Main`, kod synchronicznie oczekiwania. Należy używać `await
 > [!NOTE]
 > Jeśli używasz języka C# 7.1 lub nowszy, możesz tworzyć aplikacje konsoli przy użyciu [ `async` `Main` metoda](../whats-new/csharp-7-1.md#async-main).
 
-Następnie należy napisać drugiej metodzie asynchronicznej odczytywany z konsoli, zwracając uwagę na "<" (mniejsze niż) i ">" (większe niż) kluczy. Poniżej przedstawiono metodę, którą możesz dodać do tego zadania:
+Następnie należy napisać drugiej metodzie asynchronicznej odczytywany z konsoli, zwracając uwagę na "<" (mniejsze niż), ">" (większe niż) i "X" lub,, x"kluczy. Poniżej przedstawiono metodę, którą możesz dodać do tego zadania:
 
 ```csharp
 private static async Task GetInput()
@@ -208,13 +208,18 @@ private static async Task GetInput()
             {
                 delay += 10;
             }
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+            {
+                break;
+            }
         } while (true);
     };
     await Task.Run(work);
 }
 ```
 
-Spowoduje to utworzenie wyrażenia lambda do reprezentowania <xref:System.Action> delegat, który odczytuje klucz z konsoli i modyfikuje zmienną lokalną, reprezentujący opóźnienie w przypadku, gdy użytkownik naciśnie "<" (mniejsze niż) lub ">" (większe niż) kluczy. Ta metoda używa <xref:System.Console.ReadKey> do blokowania i poczekać na użytkownika poprzez naciśnięcie klawisza.
+Spowoduje to utworzenie wyrażenia lambda do reprezentowania <xref:System.Action> delegat, który odczytuje klucz z konsoli i modyfikuje zmienną lokalną, reprezentujący opóźnienie w przypadku, gdy użytkownik naciśnie "<" (mniejsze niż) lub ">" (większe niż) kluczy. Metody delegata kończy działanie, gdy użytkownik naciśnie klawisz "X" lub,, x"klucze, które umożliwia użytkownikowi wyświetlanie tekstu w dowolnym momencie zatrzymać.
+Ta metoda używa <xref:System.Console.ReadKey> do blokowania i poczekać na użytkownika poprzez naciśnięcie klawisza.
 
 Aby zakończyć tę funkcję, musisz utworzyć nowy `async Task` metodę, która rozpoczyna się w obu tych zadań zwracającą (`GetInput` i `ShowTeleprompter`), a także zarządza udostępnionych danych między te dwa zadania.
 

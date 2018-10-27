@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5049ed1b44155f3c21c53bef24a13006fe97a3fa
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188543"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452589"
 ---
 # <a name="threads-and-threading"></a>Wątki i wątkowość
 Systemy operacyjne używają procesów do oddzielania innej aplikacji, które są one wykonywane. Wątki są podstawową jednostką, do której system operacyjny przydziela czas procesora, a więcej niż jeden wątek może wykonywać kod wewnątrz tego procesu. Każdy wątek obsługuje programy obsługi wyjątków, priorytet planowania i zestaw struktur, które system używa do zapisania kontekst wątku, dopóki nie zostało zaplanowane. Kontekst wątku zawiera wszystkie informacje wymagane przez wątek do bezbłędnie wznowić wykonania, w tym wątku zestaw rejestrów Procesora i stosu, w przestrzeni adresowej procesu hosta dla wątku.  
@@ -26,7 +26,7 @@ Systemy operacyjne używają procesów do oddzielania innej aplikacji, które s�
  Długość przedziału czasu, zależy od systemu operacyjnego i procesora. Ponieważ każdego przedziału czasu jest mała, można wykonywać w tym samym czasie, pojawiają się wiele wątków, nawet jeśli dostępny jest tylko jeden procesor. Jest to rzeczywiście przypadek w systemach wieloprocesorowych, pliku wykonywalnego wątki są dystrybuowane między procesorów dostępnych.  
   
 ## <a name="when-to-use-multiple-threads"></a>Kiedy należy używać wielu wątków  
- Oprogramowanie, które wymaga interakcji użytkownika, musi reagują tak szybko jak to możliwe, aby zapewnić rozbudowane środowisko do działań użytkownika. W tym samym czasie jednak należy ją wykonać obliczeń niezbędnych do prezentowania danych użytkowników tak szybko, jak to możliwe. Jeśli aplikacja używa tylko jeden wątek wykonywania, można połączyć [programowania asynchronicznego](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) z[wywołaniem funkcji zdalnych .NET Framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) lub [usług XML sieci Web](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) utworzone za pomocą ASP .NET do użycia czasu przetwarzania innych komputerów dodatkowo niż swoje własne, aby zwiększyć szybkość reakcji, użytkownika i zmniejszyć czas przetwarzania danych w aplikacji. Jeśli przeprowadzasz intensywnie korzystających z operacji wejścia/wyjścia pracy umożliwia także porty zakończenia operacji We/Wy na zwiększenie szybkości reakcji aplikacji.  
+ Oprogramowanie, które wymaga interakcji użytkownika, musi reagują tak szybko jak to możliwe, aby zapewnić rozbudowane środowisko do działań użytkownika. W tym samym czasie jednak należy ją wykonać obliczeń niezbędnych do prezentowania danych użytkowników tak szybko, jak to możliwe. Jeśli aplikacja używa tylko jeden wątek wykonywania, można połączyć [programowania asynchronicznego](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) z [wywołaniem funkcji zdalnych .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100)) lub [usług XML sieci Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100)) utworzone za pomocą ASP .NET do użycia czasu przetwarzania innych komputerów dodatkowo niż swoje własne, aby zwiększyć szybkość reakcji, użytkownika i zmniejszyć czas przetwarzania danych w aplikacji. Jeśli przeprowadzasz intensywnie korzystających z operacji wejścia/wyjścia pracy umożliwia także porty zakończenia operacji We/Wy na zwiększenie szybkości reakcji aplikacji.  
   
 ### <a name="advantages-of-multiple-threads"></a>Korzyści wynikające z wielu wątków  
  Jednak przy użyciu więcej niż jeden wątek, jest najbardziej zaawansowane techniki umożliwiające zwiększenie szybkości reakcji użytkownika i przetwarzać dane niezbędne do swoją pracę w niemal tym samym czasie. Na komputerze z jednym procesorem wiele wątków można utworzyć ten efekt, korzystając z zalet małych okresy Between zdarzenia użytkownika do przetwarzania danych w tle. Na przykład użytkownik może edytować arkusz kalkulacyjny, podczas gdy inny wątek jest obliczanie innych części arkusza kalkulacyjnego w tej samej aplikacji.  

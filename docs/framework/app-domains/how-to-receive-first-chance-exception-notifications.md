@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e1a6514f0f5ba2fa68c2ec724b9ed0fe59af221
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 875cdb2837109e922233f42d6241a7e1888e0693
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580303"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452277"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Porady: odbieranie powiadomień o wyjątkach pierwszej szansy
 <xref:System.AppDomain.FirstChanceException> Zdarzenia <xref:System.AppDomain> klasa umożliwia otrzymywanie powiadomień, który jest zwracany wyjątek, przed języka wspólnego środowiska uruchomieniowego została rozpoczęta, wyszukując obsługi wyjątków.
@@ -103,4 +103,4 @@ ms.locfileid: "48580303"
 -   W tym przykładzie jest aplikacją wiersza polecenia. Aby skompilować i uruchomić ten kod w programie Visual Studio, należy dodać kod C# `Console.ReadLine();` (w języku Visual Basic `Console.ReadLine()`) na końcu `Main()`, aby uniemożliwić zamknięcie, zanim może odczytywać dane wyjściowe z okna poleceń.
 
 ## <a name="see-also"></a>Zobacz też
- <xref:System.AppDomain.FirstChanceException>
+- <xref:System.AppDomain.FirstChanceException>

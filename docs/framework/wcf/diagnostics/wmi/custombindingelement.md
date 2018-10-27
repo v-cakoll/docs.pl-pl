@@ -2,19 +2,19 @@
 title: CustomBindingElement
 ms.date: 03/30/2017
 ms.assetid: df959dc5-1aef-4338-a123-6ff3e7bc37af
-ms.openlocfilehash: 2261af592120eac65923108ed5a20265fccb6b4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff0d7d8d6c6cb180043a834a60ca58159ca84c58
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485508"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183155"
 ---
 # <a name="custombindingelement"></a>CustomBindingElement
 CustomBindingElement  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class CustomBindingElement : BindingElement  
 {  
   string Name;  
@@ -30,15 +30,15 @@ class CustomBindingElement : BindingElement
 ### <a name="name"></a>Nazwa  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Ciąg zawierający nazwę konfiguracji powiązania. Ta wartość jest ciągiem zdefiniowane przez użytkownika pełniącym rolę ciągu identyfikacyjnego niestandardowego powiązania.  
+ Ciąg, który zawiera nazwę konfiguracji powiązania. Ta wartość jest ciągu zdefiniowany przez użytkownika, który działa jako ciąg identyfikacyjny dla niestandardowego powiązania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.CustomBinding>

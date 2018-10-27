@@ -1,16 +1,14 @@
 ---
-title: Glosariusz uczenia maszynowego
+title: Machine learning słownik
 description: Słownik terminy dotyczące uczenia maszynowego.
-author: jralexander
-ms.author: johalex
 ms.date: 05/31/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6b175a8e89479dae81a7e5769e8d10c09a193898
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081101"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453206"
 ---
 # <a name="machine-learning-glossary"></a>Machine learning słownik
 
@@ -20,13 +18,13 @@ Poniższa lista jest kompilacja terminy dotyczące uczenia maszynowego ważne, k
 
 W [klasyfikacji](#classification), dokładności jest liczba elementów poprawnie sklasyfikowane podzielona przez całkowitą liczbę elementów w zestawie testów. Z zakresu od 0 (co najmniej z dokładnością) do 1 (najdokładniejszych). Dokładność jest jedną z metryk oceny wydajności modelu. Należy wziąć pod uwagę w połączeniu z [dokładności](#precision), [odwołania](#recall), i [wynik F](#f-score).
 
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
 ## <a name="area-under-the-curve-auc"></a>Powierzchni pod krzywą (AUC)
 
 W [klasyfikacji binarnej](#binary-classification), metryki oceny, która jest wartością powierzchni pod krzywą geograficzne współczynnik prawdziwie dodatnie (na osi y) względem współczynnik wyników fałszywie dodatnich (na osi x). Dla zakresu od 0,5 (najgorzej) do 1 (najlepszą). Nazywane również obszarze krzywej ROC, czyli odbiorcy cech krzywej działania. Aby uzyskać więcej informacji, zobacz [Receiver operating cechy](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) artykuł w witrynie Wikipedia.
 
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
 
 ## <a name="binary-classification"></a>Klasyfikacja binarna
 
@@ -40,7 +38,7 @@ Gdy dane są używane do prognozowania kategorię, [uczenia maszynowego w trybie
 
 W [regresji](#regression), metryki oceny, która wskazuje, jak dobrze pasuje do modelu danych. Z zakresu od 0 do 1. Wartość 0 oznacza, że dane są losowych lub w inny sposób nie można dopasować do modelu. Wartość 1 oznacza, że model dokładnie pasują do danych. To jest często nazywany r<sup>2</sup>, R<sup>2</sup>, lub r kwadrat.
 
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
 ## <a name="feature"></a>Funkcja
 
@@ -54,7 +52,7 @@ Inżynieria funkcji to proces, który obejmuje zdefiniowanie zestawu [funkcji](#
 
 W [klasyfikacji](#classification), metryki oceny, która równoważy [dokładności](#precision) i [odwołania](#recall).
 
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
 
 ## <a name="hyperparameter"></a>Hiperparametrycznego
 
@@ -68,13 +66,13 @@ Element można przewidzieć przy użyciu modelu uczenia maszynowego. Na przykła
 
 W [klasyfikacji](#classification), metryki oceny, który charakteryzuje dokładność klasyfikatora. Jest mniejsze utrata dziennika, jest bardziej precyzyjne klasyfikatora.
 
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
 
 ## <a name="mean-absolute-error-mae"></a>Średni bezwzględny błąd (dostosowania)
 
 W [regresji](#regression), metryki oceny średnią wszystkich błędów modelu, w których jest błąd modelu odległość między przewidywane [etykiety](#label) i wartością prawidłowa etykieta.
 
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
 
 ## <a name="model"></a>Model
 
@@ -100,13 +98,13 @@ Wszystkie operacje wymagane do dopasowania modelu do zestawu danych. Potok skła
 
 W [klasyfikacji](#classification), dokładność dla klasy jest liczba elementów, poprawnie przewidzieć jako należące do tej klasy podzielona przez całkowitą liczbę elementów, które przewiduje jako należące do tej klasy.
 
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Odwołania
 
 W [klasyfikacji](#classification), odwołania do klasy jest liczba elementów, poprawnie przewidzieć jako należące do tej klasy podzielona przez całkowitą liczbę elementów, które faktycznie należą do klasy.
 
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
 
 ## <a name="regression"></a>Regresji
 
@@ -124,7 +122,7 @@ W [regresji](#regression), metryki oceny, która jest sumą wszystkich kwadrat b
 
 W [regresji](#regression), metryki oceny pierwiastek kwadratowy ze średniej kwadratów błędów.
 
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
+Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
 
 ## <a name="supervised-machine-learning"></a>Uczenie maszynowe nadzorowanych
 

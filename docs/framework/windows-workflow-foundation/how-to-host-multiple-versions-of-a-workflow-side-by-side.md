@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316470"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181622"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Instrukcje: hostowanie wielu wersji przepływu pracy Side-by-Side
 `WorkflowIdentity` Umożliwia deweloperom aplikacji przepływu pracy skojarzyć nazwę i wersję z definicji przepływu pracy i te informacje, które ma zostać skojarzony z istniejącym wystąpieniem przepływu pracy. Informacje o tożsamości może służyć przez deweloperów aplikacji przepływu pracy można obsługiwać scenariusze takie jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i zapewnia podstawę dla innych funkcji, takich jak aktualizacja dynamiczna. Ten krok, w tym samouczku przedstawiono sposób użycia `WorkflowIdentity` do hostowania wielu wersji przepływu pracy w tym samym czasie.
@@ -555,14 +555,15 @@ ms.locfileid: "49316470"
 
 2.  Rozpocznij nowy przepływ pracy, klikając **nową grę**. Wersja przepływu pracy jest wyświetlany w oknie stanu i uwzględnia zaktualizowaną wersję z powiązanego `WorkflowIdentity`. Zwróć uwagę na `InstanceId` , można wyświetlić pliku śledzenia dla przepływu pracy po jego ukończeniu, a następnie wprowadź liczbę prób, aż do zakończenia gry. Należy zauważyć, jak odgadnięcia użytkownika jest wyświetlany w informacjach wyświetlanych w oknie stanu na podstawie aktualizacji do `WriteLine` działań.
 
- **Wprowadź liczbę między 1 a 10**
-**5 jest zbyt wysoka.** 
- **Wprowadź liczbę między 1 a 10**
-**3 jest zbyt wysoka.** 
- **Wprowadź liczbę między 1 a 10**
-**ma zbyt niską wartość 1.** 
- **Wprowadź liczbę między 1 a 10**
-**Gratulacje, można złamać numer w włącza 4.**
+ **Wprowadź liczbę między 1 a 10**  
+**5 jest zbyt duża.**  
+**Wprowadź liczbę między 1 a 10**  
+**3 jest zbyt duża.**  
+**Wprowadź liczbę między 1 a 10**  
+**1 jest zbyt mała.**  
+**Wprowadź liczbę między 1 a 10**  
+**Gratulacje, złamać numer w włącza 4.**  
+
     > [!NOTE]
     >  Zaktualizowany tekst z `WriteLine` działania jest wyświetlane, ale dane wyjściowe końcowe `WriteLine` braku aktywności, który został dodany w tym temacie. Wynika to z okna stanu jest aktualizowana przez `PersistableIdle` programu obsługi. Ponieważ przepływ pracy zakończy i nie przechodzi bezczynności po ostatnim działaniu `PersistableIdle` nie zostanie wywołana procedura obsługi. Jednak podobny komunikat jest wyświetlany w oknie stanu przez `Completed` programu obsługi. Jeśli to konieczne, kod może zostać dodany do `Completed` obsługi do wyodrębniania tekstu z `StringWriter` i wyświetl ją w oknie stanu.
 

@@ -2,13 +2,12 @@
 title: Omówienie rozszerzonej ochrony uwierzytelniania
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-author: BrucePerlerMS
-ms.openlocfilehash: 77ebaeaeb82d931a24d35fc1b5c2034fce03a032
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6063aa7093ed6c70e835364fdf5dd1c4293dd2eb
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199856"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50038074"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Omówienie rozszerzonej ochrony uwierzytelniania
 Rozszerzona ochrona uwierzytelniania pomaga w ochronie przed ataków typu man-in--middle (MITM) ataków, w których osoba atakująca przechwytuje poświadczenia klienta i przekazuje je do serwera.  

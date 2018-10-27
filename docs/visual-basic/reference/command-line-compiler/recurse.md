@@ -6,17 +6,15 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd5dde46cdea67825b14a6f5fa96a82c8bab8d3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1edb648ec574c0052b7b8314f4ada710c8b0fe01
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652425"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183337"
 ---
 # <a name="-recurse"></a>-recurse
-Kompiluje pliki kodu źródłowego we wszystkich katalogach podrzędnych katalogu określonego lub katalogu projektu.  
+Kompiluje pliki kodu źródłowego we wszystkich katalogach podrzędnych w określonym katalogu lub katalog projektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,31 +24,31 @@ Kompiluje pliki kodu źródłowego we wszystkich katalogach podrzędnych katalog
   
 ## <a name="arguments"></a>Argumenty  
  `dir`  
- Opcjonalna. Katalog, w którym ma rozpocząć wyszukiwanie. Jeśli nie zostanie określony, wyszukiwanie rozpoczyna się w katalogu projektu.  
+ Opcjonalna. Katalog, w którym chcesz rozpocząć wyszukiwanie. Jeśli nie zostanie określony, wyszukiwanie rozpoczyna się w katalogu projektu.  
   
  `file`  
  Wymagana. Pliki do wyszukania. Symbole wieloznaczne są dozwolone.  
   
 ## <a name="remarks"></a>Uwagi  
- Symbole wieloznaczne w nazwie pliku służy do Kompiluj wszystkie zgodne pliki w katalogu projektu bez użycia `-recurse`. Jeśli nazwa pliku wyjściowego, nie zostanie określona, kompilator Określa nazwę pliku wyjściowego na pierwszy plik wejściowy przetworzone. Zwykle jest to pierwszy plik listy plików skompilowanych widzianego alfabetycznie. Z tego powodu najlepiej określić plik danych wyjściowych za pomocą `-out` opcji.  
+ Można używać symboli wieloznacznych w nazwach plików do kompilacji wszystkie odpowiednie pliki w katalogu projektu bez użycia `-recurse`. Jeśli nazwa pliku wyjściowego nie jest określony, kompilator Określa nazwę pliku wyjściowego na pierwszego pliku wejściowego przetworzone. Zwykle jest to pierwszy plik listy plików skompilowany podczas wyświetlania w kolejności alfabetycznej. Z tego powodu najlepiej określić przy użyciu pliku wyjściowego jest `-out` opcji.  
   
 > [!NOTE]
 >  `-recurse` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
   
 ## <a name="example"></a>Przykład  
- Poniższe polecenie kompiluje wszystkie pliki Visual Basic w bieżącym katalogu.  
+ Poniższe polecenie kompiluje wszystkie pliki języka Visual Basic w bieżącym katalogu.  
   
 ```console
 vbc *.vb  
 ```  
   
- Poniższe polecenie kompiluje wszystkie pliki Visual Basic w `Test\ABC` katalogu i wszystkie jego katalogów, a następnie generuje `Test.ABC.dll`.  
+ Poniższe polecenie kompiluje wszystkie pliki języka Visual Basic w `Test\ABC` katalog i wszystkie jego katalogów, a następnie generuje `Test.ABC.dll`.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
  [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
  [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

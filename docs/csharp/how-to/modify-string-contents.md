@@ -3,12 +3,12 @@ title: 'Porady: modyfikowanie zawartości ciągu — Przewodnik po języku C#'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 23d52a52291b3d5c36fc2ed0f299ab82aa5ffabd
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260181"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453440"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Porady: modyfikowanie zawartości ciągu w języku C\#
 
@@ -65,7 +65,7 @@ Poniższy przykład pokazuje, jak zastąpić zestaw znaków w ciągu. Po pierwsz
 ## <a name="unsafe-modifications-to-string"></a>Niebezpieczne modyfikacji ciągu
 
 Przy użyciu **niebezpieczne** kodu, ciąg "w miejscu" można zmodyfikować po utworzeniu. Niebezpieczny kod pomija wielu funkcji programu .NET, aby zminimalizować niektórych rodzajów błędów w kodzie. Należy użyć niebezpieczny kod można zmodyfikować parametry w miejscu, ponieważ klasa string został zaprojektowany jako **niezmienne** typu. Po jego utworzeniu, jego wartość nie ulega zmianie. Niebezpieczny kod zmierzone tej właściwości przez dostęp i modyfikowania pamięci używanej przez `string` bez korzystania z normalnym `string` metody.
-Poniższy przykład znajduje się w tych rzadkich sytuacjach, gdzie chcesz zmodyfikować parametry w miejscu przy użyciu niebezpieczny kod. W przykładzie pokazano sposób użycia `fixed` — słowo kluczowe. `fixed` — Słowo kluczowe zapobiega przenoszenie z obiektem ciągu w pamięci, gdy kod uzyskuje dostęp do pamięci, przy użyciu wskaźnika niebezpieczny moduł odśmiecania pamięci (GC). Ilustruje też możliwe po stronie efektem użycia niebezpieczne operacje na ciągi powstałego w sposób, że kompilator języka C# wewnętrznie przechowuje ciągi (stażystów). Ogólnie rzecz biorąc nie należy używać tej techniki, chyba że jest to absolutnie konieczne. Możesz dowiedzieć się więcej, czytając artykuły na [niebezpieczne](../language-reference/keywords/unsafe.md) i [stałej](../language-reference/keywords/fixed-statement.md). Dokumentacja interfejsu API <xref:System.String.Intern%2A> obejmuje informacji na temat wewnętrzne przygotowanie ciągu.
+Poniższy przykład znajduje się w tych rzadkich sytuacjach, gdzie chcesz zmodyfikować parametry w miejscu przy użyciu niebezpieczny kod. W przykładzie pokazano sposób użycia `fixed` — słowo kluczowe. `fixed` — Słowo kluczowe zapobiega przenoszenie z obiektem ciągu w pamięci, gdy kod uzyskuje dostęp do pamięci, przy użyciu wskaźnika niebezpieczny moduł odśmiecania pamięci (GC). Ilustruje też możliwe po stronie efektem użycia niebezpieczne operacje na ciągi powstałego w sposób, że kompilator języka C# wewnętrznie przechowuje ciągi (stażystów). Ogólnie rzecz biorąc nie należy używać tej techniki, chyba że jest to absolutnie konieczne. Możesz dowiedzieć się więcej, czytając artykuły na [niebezpieczne](../language-reference/keywords/unsafe.md) i [stałej](../language-reference/keywords/fixed-statement.md). Dokumentacja interfejsu API <xref:System.String.Intern%2A> zawiera informacje na temat wewnętrzne przygotowanie ciągu.
 
 [!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 

@@ -2,12 +2,12 @@
 title: Overview2 zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db7b45fef28b0b28e7da550c24d510da73c02aa9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861861"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183532"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w której deweloper może zagwarantować, czy aplikacja jest bezpieczne przed atakami wszystkich, ponieważ nie jest możliwe do przewidzenia, jakie rodzaje nowe technologie atakom w przyszłości nastąpi. Z drugiej strony po prostu, ponieważ nikt nie ma luki w zabezpieczeniach jeszcze odnalezionych (lub opublikowany) w systemie nie oznacza brak istnieje, lub może istnieć. Należy Planowanie zabezpieczeń w fazie projektowania projektu, a także zaplanować, jak zabezpieczenia zostaną zachowane w okresie istnienia aplikacji.  
@@ -67,7 +67,7 @@ Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w któ
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Zabezpieczenia dostępu kodu i ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|W tym artykule opisano interakcje między zabezpieczenia dostępu kodu, zabezpieczenia oparte na rolach i środowisk częściowo zaufanym z perspektywy aplikacji ADO.NET.|  
-|[Zabezpieczenia dostępu kodu](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Zawiera łącza do dodatkowych tematów opisujących urzędów certyfikacji w programie .NET Framework.|  
+|[Zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md)|Zawiera łącza do dodatkowych tematów opisujących urzędów certyfikacji w programie .NET Framework.|  
   
 ## <a name="database-security"></a>Zabezpieczenia bazy danych  
  Zasadę najmniejszych uprawnień ma zastosowanie także do źródła danych. Ogólne wskazówki dotyczące zabezpieczeń bazy danych obejmują:  

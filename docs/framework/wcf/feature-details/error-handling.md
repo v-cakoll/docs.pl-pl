@@ -2,12 +2,12 @@
 title: Obsługa błędów
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486157"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452852"
 ---
 # <a name="error-handling"></a>Obsługa błędów
 ## <a name="error-handling-in-windows-communication-foundation"></a>Obsługa błędów w programie Windows Communication Foundation  
@@ -30,7 +30,7 @@ ms.locfileid: "43486157"
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Obsługa wyjątków nieoczekiwany, za pomocą IErrorHandler  
  Aby poradzić sobie z nieoczekiwane wyjątki, zalecany sposób postępowania jest "dołączyć" IErrorHandler. Procedury obsługi błędów tylko przechwytywać wyjątków, na poziomie środowiska uruchomieniowego usługi WCF (warstwa "model usługi"), a nie w warstwie kanału. Jedynym sposobem na utworzenie punktu zaczepienia IErrorHandler na poziomie kanału jest Utwórz kanał niestandardowy, który nie jest zalecane w większości scenariuszy.  
   
- "Nieoczekiwany wyjątek" ogólnie nie jest nieodwracalny wyjątek ani wyjątku przetwarzania; jest zamiast tego użytkownik nieoczekiwany wyjątek. Wystąpił nieodwracalny wyjątek (na przykład wyjątek braku pamięci) — jeden ogólnie obsługiwane przez [Obsługa wyjątków modelu usługi](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) automatycznie — nie jest ogólnie można obsługiwać poprawnie, a jedyny przypadek, kiedy do obsługi takiego wyjątku może być w ogóle wykonaj dodatkowe rejestrowanie lub w celu zwrócenia standardowych wyjątków do klienta. Wystąpi wyjątek przetwarzania w przetwarzanie komunikatu — na przykład poziomie serializacji, koder lub program formatujący — ogólnie nie mogą być obsługiwane na IErrorHandler, ponieważ jest zazwyczaj zbyt wcześnie albo za późno obsługi błędów interweniować przez razem te wyjątki występują. Podobnie transportowanie wyjątków nie mogą być obsługiwane w IErrorHandler.  
+ "Nieoczekiwany wyjątek" ogólnie nie jest nieodwracalny wyjątek ani wyjątku przetwarzania; jest zamiast tego użytkownik nieoczekiwany wyjątek. Wystąpił nieodwracalny wyjątek (na przykład wyjątek braku pamięci) — jeden ogólnie obsługiwane przez [Obsługa wyjątków modelu usługi](xref:System.ServiceModel.Dispatcher.ExceptionHandler) automatycznie — nie jest ogólnie można obsługiwać poprawnie, a jedyny przypadek, kiedy do obsługi takiego wyjątku może być w ogóle wykonaj dodatkowe rejestrowanie lub w celu zwrócenia standardowych wyjątków do klienta. Wystąpi wyjątek przetwarzania w przetwarzanie komunikatu — na przykład poziomie serializacji, koder lub program formatujący — ogólnie nie mogą być obsługiwane na IErrorHandler, ponieważ jest zazwyczaj zbyt wcześnie albo za późno obsługi błędów interweniować przez razem te wyjątki występują. Podobnie transportowanie wyjątków nie mogą być obsługiwane w IErrorHandler.  
   
  Za pomocą IErrorHandler można jawnie kontrolować zachowanie aplikacji, gdy wyjątek jest zgłaszany. Użytkownik może:  
   

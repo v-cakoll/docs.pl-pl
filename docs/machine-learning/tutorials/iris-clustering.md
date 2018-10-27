@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: eddafc14de3a38cbf6f238199733ee667e6868b3
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308568"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453193"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Samouczek: Używanie strukturze ML.NET do klastra iris kwiatów (klastrowania)
 
@@ -138,19 +138,19 @@ Pierwszym krokiem do wykonania jest ładowany zestaw danych szkoleniowych. W nas
 
 [!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
 
-Następnym krokiem jest łączenie wszystkich kolumn funkcji do **funkcji** przy użyciu kolumny <xref:Microsoft.ML.Transforms.ColumnConcatenator> klasy przekształcenia. Domyślnie algorytmu uczenia przetwarza tylko funkcje z **funkcji** kolumny. Dodaj następujący kod:
+Następnym krokiem jest łączenie wszystkich kolumn funkcji do **funkcji** przy użyciu kolumny <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> klasy przekształcenia. Domyślnie algorytmu uczenia przetwarza tylko funkcje z **funkcji** kolumny. Dodaj następujący kod:
 
 [!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
 
 ## <a name="choose-a-learning-algorithm"></a>Wybieranie algorytmu uczenia
 
-Po dodaniu danych z potokiem i przekształcane na poprawny format danych wejściowych, wybrać algorytm uczenia (**learner**). Uczeń przygotowuje modelu. Strukturze ML.NET udostępnia <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer> learner, który implementuje [algorytm k średnich](https://en.wikipedia.org/wiki/K-means_clustering) ulepszone metodę wyboru centroids klastra.
+Po dodaniu danych z potokiem i przekształcane na poprawny format danych wejściowych, wybrać algorytm uczenia (**learner**). Uczeń przygotowuje modelu. Strukturze ML.NET udostępnia <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer> learner, który implementuje [algorytm k średnich](https://en.wikipedia.org/wiki/K-means_clustering) ulepszone metodę wyboru centroids klastra.
 
 Dodaj następujący kod do `Train` metoda przetwarzania danych kodzie dodanym w poprzednim kroku:
 
 [!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
 
-Użyj <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> właściwości w celu określenia liczby klastrów. Powyższy kod określa, że zestaw danych powinny być podzielone w trzech klastrów.
+Użyj <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> właściwości w celu określenia liczby klastrów. Powyższy kod określa, że zestaw danych powinny być podzielone w trzech klastrów.
 
 ## <a name="train-the-model"></a>Uczenie modelu
 

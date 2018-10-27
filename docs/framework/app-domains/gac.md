@@ -12,37 +12,37 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3667a644253ab52d8421a1d4222e0bf8c03624c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0508e9291b089ec7af6a0b41bbc231fdb0701ad6
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751977"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452994"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
-Każdy komputer, na którym zainstalowano środowisko uruchomieniowe języka wspólnego używa pamięci podręcznej kodu dla komputera o nazwie Global Assembly Cache. Global Assembly Cache przechowuje zestawy wyznaczonych być współużytkowane przez kilka aplikacji na komputerze.  
+Każdy komputer, na którym zainstalowano środowisko uruchomieniowe języka wspólnego zawiera pamięć podręczna kodu komputera o nazwie Global Assembly Cache. Global Assembly Cache przechowuje zestawy specjalnie na potrzeby być współużytkowane przez wiele aplikacji na komputerze.  
   
- Zestawy powinny współużytkować przez zainstalowanie ich w globalnej pamięci podręcznej zestawów, tylko wtedy, gdy jest to konieczne. Generalnie zachowywać prywatność zestawów i lokalizowanie zestawów w katalogu aplikacji, chyba że jawnie wymagana jest udostępnianie zestawu. Ponadto nie jest konieczne zainstalowanie zestawów w globalnej pamięci podręcznej zestawów, aby udostępnić COM interop lub kodu niezarządzanego.  
+ Należy udostępnianie zestawów poprzez instalowanie ich w globalnej pamięci podręcznej zestawów, tylko wtedy, gdy jest to konieczne. Ogólną wytyczną iż zależności zestawów, a zestawy należy umieszczać w katalogu aplikacji, chyba że współużytkowanie zestawu jest wyraźnie wymagane. Ponadto nie jest konieczne instalowanie zestawów w globalnej pamięci podręcznej zestawów, aby udostępnić je do COM interop lub niezarządzanego kodu.  
   
 > [!NOTE]
->  Istnieją scenariusze, w którym jawnie nie chcesz instalować zestawów w globalnej pamięci podręcznej zestawów. Jeśli jeden z zestawów, które tworzą aplikację w globalnej pamięci podręcznej zestawów, może już replikacji lub zainstalować aplikację przy użyciu **xcopy** polecenie, aby skopiować z katalogu aplikacji. Należy przenieść zestawu w globalnej pamięci podręcznej zestawów również.  
+>  Istnieją scenariusze, w którym możesz jawnie nie chcesz instalować zestawów w globalnej pamięci podręcznej zestawów. Jeśli umieścisz jednego z zestawów tworzących aplikację w globalnej pamięci podręcznej zestawów, może już replikacji lub zainstalować aplikację przy użyciu **xcopy** polecenie, aby skopiować katalog aplikacji. Musisz przenieść zestawu w globalnej pamięci podręcznej zestawów także.  
   
- Istnieją dwa sposoby wdrożenia zestawu w globalnej pamięci podręcznej zestawów:  
+ Istnieją dwa sposoby wdrożyć zestaw w globalnej pamięci podręcznej zestawów:  
   
--   Użyj Instalatora zaprojektowane do pracy z globalnej pamięci podręcznej zestawów. Jest to preferowaną opcję instalowania zestawów w globalnej pamięci podręcznej zestawów.  
+-   Skorzystaj z Instalatora, przeznaczony do pracy z globalnej pamięci podręcznej zestawów. To jest preferowaną opcją do instalowania zestawów w globalnej pamięci podręcznej zestawów.  
   
--   Za pomocą narzędzia Projektant o nazwie [narzędzie Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), podany przez [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+-   Użyj narzędzia dla deweloperów, o nazwie [narzędzia Globalna pamięć podręczna zestawów (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), podana przez [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
     > [!NOTE]
-    >  W scenariuszach wdrażania za pomocą Instalatora Windows zainstaluj zestawów w globalnej pamięci podręcznej zestawów. Narzędzie Global Assembly Cache tylko w przypadku scenariuszy programowania, ponieważ nie zawiera on liczenie odwołań zestawu i inne funkcje podany przy wywołaniu metody za pomocą Instalatora Windows.  
+    >  W scenariuszach wdrażania przy użyciu Instalatora Windows instalować zestawów w globalnej pamięci podręcznej zestawów. Narzędzie Global Assembly Cache tylko w scenariuszach programowania, ponieważ nie dostarcza zliczanie odwołań zestawu i inne funkcje podany przy wywołaniu metody przy użyciu Instalatora Windows.  
   
- Począwszy od programu .NET Framework 4, jest domyślną lokalizacją Global Assembly Cache **%windir%\Microsoft.NET\assembly**. We wcześniejszych wersjach programu .NET Framework, domyślna lokalizacja to **%windir%\assembly**.  
+ Począwszy od programu .NET Framework 4 jest domyślną lokalizacją Global Assembly Cache **%windir%\Microsoft.NET\assembly**. We wcześniejszych wersjach programu .NET Framework, domyślna lokalizacja to **%windir%\assembly**.  
   
- Administratorzy często chronią katalog do kontrolowania zapisu i wykonywania dostępu za pomocą listy kontroli dostępu (ACL). Ponieważ Global Assembly Cache jest instalowany w podkatalogu w katalogu systemowym, dziedziczy ACL tego katalogu. Zaleca się, że tylko użytkownicy z uprawnieniami administratora można usunąć pliki z globalnej pamięci podręcznej zestawów.  
+ Administratorzy często chronią główny katalog systemowy do zapisu i wykonywania dostępu za pomocą listy kontroli dostępu (ACL). Ponieważ globalnej pamięci podręcznej zestawów jest instalowany w podkatalogu katalogu systemowym, dziedziczy listę kontroli dostępu tego katalogu. Zaleca się, że tylko użytkownicy z uprawnieniami administratora mogła usunąć pliki z globalnej pamięci podręcznej zestawów.  
   
- Zestawy wdrożone w globalnej pamięci podręcznej zestawów musi mieć silnej nazwy. Zestaw został dodany do globalnej pamięci podręcznej zestawów, sprawdzania integralności są wykonywane na wszystkie pliki wchodzące w skład zestawu. Pamięć podręczna wykonuje te testy integralności, aby upewnić się, że zestaw nie został zmodyfikowany, na przykład, gdy plik został zmieniony, ale manifest nie odzwierciedla zmiany.  
+ Zestawy wdrożony w globalnej pamięci podręcznej zestawów, musi mieć silną nazwę. Gdy zestaw zostanie dodany do globalnej pamięci podręcznej zestawów, sprawdzania integralności są wykonywane na wszystkie pliki wchodzące w skład zestawu. Pamięć podręczna wykonuje te sprawdzania integralności, aby upewnić się, że zestaw nie został zmodyfikowany, na przykład, jeśli plik został zmieniony, ale manifest nie odzwierciedla zmianę.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Praca z zestawami i globalną pamięcią podręczną zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Praca z zestawami i globalną pamięcią podręczną zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)

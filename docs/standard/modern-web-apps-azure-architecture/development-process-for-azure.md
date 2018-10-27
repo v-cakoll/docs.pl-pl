@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 487a303e5cf572cf4173423588ee7fb5a93cb394
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863601"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185626"
 ---
 # <a name="development-process-for-azure"></a>Proces programistyczny dla platformy Azure
 
@@ -94,7 +94,7 @@ Nowa kompilacja jest wyzwalana na serwerze kompilacji zawsze wtedy, gdy przeprow
 
 #### <a name="step-4-build-server-continuous-delivery"></a>Krok 4. Serwer kompilacji: Ciągłe dostarczanie
 
-Po kompilacji, ponieważ zakończyło się pomyślnie, proces ciągłego Dostarczania przejmą artefaktów kompilacji utworzone. Dotyczy to sieci web wdrożenia pakietu. Serwer kompilacji zostanie wdrożona ten pakiet w usłudze Azure App Service, zastępując wszystkie istniejące usługi na nowo utworzony zestaw. Zazwyczaj ten krok jest przeznaczony dla środowisko przejściowe, ale niektóre aplikacje wdrażać bezpośrednio w środowisku produkcyjnym przez proces ciągłego Dostarczania.
+Gdy kompilacja zakończyła się pomyślnie, proces ciągłego Dostarczania przejmą artefaktów kompilacji utworzone. Dotyczy to sieci web wdrożenia pakietu. Serwer kompilacji zostanie wdrożona ten pakiet w usłudze Azure App Service, zastępując wszystkie istniejące usługi na nowo utworzony zestaw. Zazwyczaj ten krok jest przeznaczony dla środowisko przejściowe, ale niektóre aplikacje wdrażać bezpośrednio w środowisku produkcyjnym przez proces ciągłego Dostarczania.
 
 #### <a name="step-5-azure-app-service-web-app"></a>Krok 5. Usługa Azure App Service Web App
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d67dec8814dc659e012b55439c2c8debd21e03ed
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 1af25660fc38e7182cc290d64f010c914c6e8c4e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122677"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480203"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Zmiany w uwierzytelnianiu NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1
 Zmiany zabezpieczeń zostały wprowadzone w .NET Framework w wersji 3.5 z dodatkiem SP1 i później, wpływają na Windows jak zintegrowane uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, i pokrewne klasy w przestrzeni nazw System.Net. Te zmiany mogą mieć wpływ na aplikacje, które używają tych klas do żądań sieci web i odbierania odpowiedzi, gdy jest używane zintegrowane uwierzytelnianie Windows oparte na NTLM. Ta zmiana może wpłynąć na serwerach sieci web i aplikacji klienckich, które są skonfigurowane do korzystania ze zintegrowanego uwierzytelniania Windows.  
@@ -24,7 +24,7 @@ Zmiany zabezpieczeń zostały wprowadzone w .NET Framework w wersji 3.5 z dodatk
   
  Podczas uzyskiwania dostępu do usługi uruchomionej na wewnętrznym serwerze sieci Web, są często uzyskać dostępu do usługi przy użyciu adresu URL, które są podobne do `http://contoso/service` lub `https://contoso/service`. Nazwy "contoso" nie jest często nazwę komputera komputera, na którym została wdrożona usługa. <xref:System.Net> Pokrewne obszary nazw obsługi za pomocą protokołu NetBIOS usługi Active Directory, DNS, hosty komputera lokalnego pliku (zazwyczaj WINDOWS\system32\drivers\etc\hosts, na przykład) lub lmhosts komputera lokalnego pliku (zazwyczaj WINDOWS\system32\ drivers\etc\lmhosts, na przykład) do rozpoznawania nazw na adresy. Nazwy "contoso" zostanie rozwiązany, tak aby żądania wysyłane na "contoso" są wysyłane do odpowiedniego serwera.  
   
- W przypadku skonfigurowania w przypadku dużych wdrożeń, jest również typowe dla nazwy pojedynczego serwera wirtualnego, należy podać do wdrożenia z podstawowej nazwy maszyn nigdy używane przez aplikacje klienckie i użytkowników końcowych. Na przykład możesz wywołać www.contoso.com serwera, ale w wewnętrznej sieci po prostu użyć "contoso". Ta nazwa nosi nazwę nagłówka hosta w żądaniu klienta sieci web. Określone przez protokół HTTP pole Host w nagłówku żądania określa Internetu hosta i portu numer żądanych zasobów. Te informacje są uzyskiwane z oryginalnego identyfikatora URI, podane przez użytkownika lub odwołuje się do innych zasobów (zwykle adres HTTP URL). W programie .NET Framework w wersji 4, te informacje można również ustawić przez klienta za pomocą nowego <xref:System.Net.HttpWebRequest.Host%2A> właściwości.  
+ W przypadku skonfigurowania w przypadku dużych wdrożeń, jest również typowe dla nazwy pojedynczego serwera wirtualnego, należy podać do wdrożenia z podstawowej nazwy maszyn nigdy używane przez aplikacje klienckie i użytkowników końcowych. Na przykład może wywołać serwera `www.contoso.com`, ale w wewnętrznej sieci po prostu użyć "contoso". Ta nazwa nosi nazwę nagłówka hosta w żądaniu klienta sieci web. Określone przez protokół HTTP pole Host w nagłówku żądania określa Internetu hosta i portu numer żądanych zasobów. Te informacje są uzyskiwane z oryginalnego identyfikatora URI, podane przez użytkownika lub odwołuje się do innych zasobów (zwykle adres HTTP URL). W programie .NET Framework w wersji 4, te informacje można również ustawić przez klienta za pomocą nowego <xref:System.Net.HttpWebRequest.Host%2A> właściwości.  
   
  <xref:System.Net.AuthenticationManager> Klasy kontrolki składników zarządzanych uwierzytelniania ("moduły"), które są używane przez <xref:System.Net.WebRequest> klas pochodnych i <xref:System.Net.WebClient> klasy. <xref:System.Net.AuthenticationManager> Klasy zawiera właściwości, która udostępnia <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType> obiektu indeksowane przez ciąg identyfikatora URI, dla aplikacji, aby podać niestandardowy ciąg nazwy SPN, który ma być używany podczas uwierzytelniania.  
   
@@ -50,7 +50,7 @@ Zmiany zabezpieczeń zostały wprowadzone w .NET Framework w wersji 3.5 z dodatk
   
  7. Zamknij Edytor rejestru, a następnie ponownie uruchom usługę IISAdmin i uruchom polecenie IISReset.  
   
- Mniej bezpieczna opcja pracy około jest wyłączenie sprawdzania wstecz pętli, zgodnie z opisem w [ http://support.microsoft.com/kb/896861 ](https://go.microsoft.com/fwlink/?LinkID=179657). Powoduje to wyłączenie ochrony przed atakami odbicia. Dlatego lepiej jest ograniczyć zestaw alternatywnych nazw tylko te, które oczekują maszynę aby rzeczywiście używane.  
+ Mniej bezpieczna opcja pracy około jest wyłączenie sprawdzania wstecz pętli, zgodnie z opisem w <https://support.microsoft.com/kb/896861>. Powoduje to wyłączenie ochrony przed atakami odbicia. Dlatego lepiej jest ograniczyć zestaw alternatywnych nazw tylko te, które oczekują maszynę aby rzeczywiście używane.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

@@ -2,12 +2,12 @@
 title: Niestandardowe działanie SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845258"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181293"
 ---
 # <a name="sendmail-custom-activity"></a>Niestandardowe działanie SendMail
 W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, która pochodzi od klasy <xref:System.Activities.AsyncCodeActivity> do wysyłania wiadomości e-mail przy użyciu protokołu SMTP do użycia w aplikacji przepływu pracy. Niestandardowe działanie korzysta z możliwości <xref:System.Net.Mail.SmtpClient> asynchroniczne wysyłanie wiadomości e-mail i Wyślij wiadomość e-mail z uwierzytelnianiem. Umożliwia także niektóre funkcje użytkowników końcowych, takich jak przetestować tryb zastępowania tokenu, Szablony plików i przetestować ścieżki docelowej.  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Wysyłanie wiadomości E-mail w tryb testowania  
- Następujący fragment kodu przedstawia sposób ustawiania dwie właściwości testowania: ustawiając `TestMailTo` na wszystkie komunikaty zostaną wysłane do john.doe@contoso.con (bez uwzględniania wartości do, DW, UDW). Ustawiając TestDropPath wszystkie wychodzących wiadomości e-mail będą również rejestrowane w podanej ścieżce. Te właściwości można skonfigurować niezależnie (nie jest ona powiązana).  
+ Następujący fragment kodu przedstawia sposób ustawiania dwie właściwości testowania: ustawiając `TestMailTo` na wszystkie komunikaty zostaną wysłane do `john.doe@contoso.con` (bez uwzględniania wartości do, DW, UDW). Ustawiając TestDropPath wszystkie wychodzących wiadomości e-mail będą również rejestrowane w podanej ścieżce. Te właściwości można skonfigurować niezależnie (nie jest ona powiązana).  
   
 ```  
 new SendMail  

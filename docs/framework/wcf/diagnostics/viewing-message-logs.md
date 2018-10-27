@@ -2,12 +2,12 @@
 title: Wyświetlanie dzienników komunikatów
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 025d4020002a56deb9d5b8a2fe628f50cabad4d3
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912091"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50047504"
 ---
 # <a name="viewing-message-logs"></a>Wyświetlanie dzienników komunikatów
 W tym temacie opisano, jak można wyświetlić dzienniki komunikatów.  
@@ -33,7 +33,7 @@ W tym temacie opisano, jak można wyświetlić dzienniki komunikatów.
   
 -   Czy należy wyświetlać wszystkie trzy dzienniki w [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) w tym samym czasie można zmodyfikować usługi przekazywania przez utworzenie nowego <xref:System.ServiceModel.Channels.Message> wystąpienia. To wystąpienie powinno być kopią treści komunikatu przychodzącego, a także wszystkie nagłówki z wyjątkiem `ActivityId` i `Action` nagłówków. Poniższy przykład kodu pokazuje, jak to zrobić.  
   
-```  
+```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
   
 for (int i = 0; i < incomingMessage.Headers.Count; i++)  

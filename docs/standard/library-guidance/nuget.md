@@ -4,16 +4,16 @@ description: Zalecane najlepsze dla pakietu nuget biblioteki .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 845af3b34827e1f284bb52e040f9de09f22baf37
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 479d1786c232ef1f843877169954e847453681c9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087872"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185629"
 ---
 # <a name="nuget"></a>NuGet
 
-NuGet to Menedżer pakietów dla ekosystemu .NET i deweloperów podstawowym sposobem odnajdywanie i nabyć bibliotek typu open source platformy .NET. NuGet.org, bezpłatna usługa udostępniana przez firmę Microsoft do obsługi pakietów NuGet jest hostem głównym publicznych pakietów NuGet, ale możesz opublikować niestandardowych usług NuGet, takich jak MyGet i DevOps platformy Azure.
+NuGet to Menedżer pakietów dla ekosystemu .NET i deweloperów podstawowym sposobem odnajdywanie i nabyć bibliotek typu open source platformy .NET. [NuGet.org](https://www.nuget.org/), bezpłatna usługa udostępniana przez firmę Microsoft do obsługi pakietów NuGet jest hostem głównym publicznych pakietów NuGet, ale możesz opublikować niestandardowych usług NuGet, takich jak [MyGet](https://www.myget.org/) i [artefaktów platformy Azure ](https://azure.microsoft.com/services/devops/artifacts/).
 
 ![NuGet](./media/nuget/nuget-logo.png "NuGet")
 
@@ -21,7 +21,7 @@ NuGet to Menedżer pakietów dla ekosystemu .NET i deweloperów podstawowym spos
 
 Pakiet NuGet (`*.nupkg`) jest plikiem zip, zawierający zestawy .NET oraz skojarzone metadane.
 
-Istnieją dwa główne sposoby, aby utworzyć pakiet NuGet. Sposobem nowszej i zalecane jest utworzenie pakietu z projektu zestawu SDK stylu (plik projektu zawartości rozpoczyna się od `<Project Sdk="Microsoft.NET.Sdk">`). Zespoły i elementy docelowe są automatycznie dodawane do pakietu, a pozostałe metadanych jest dodawany do pliku programu MSBuild, takich jak numer nazwą i wersją pakietu. Kompilowanie przy użyciu [ `dotnet pack` ](../../core/tools/dotnet-pack.md) dane wyjściowe polecenia `*.nupkg` pliku zamiast zestawów.
+Istnieją dwa główne sposoby, aby utworzyć pakiet NuGet. Sposobem nowszej i zalecane jest utworzenie pakietu z projektu zestawu SDK stylu (plik projektu, którego zawartość rozpoczyna się od `<Project Sdk="Microsoft.NET.Sdk">`). Zespoły i elementy docelowe są automatycznie dodawane do pakietu, a pozostałe metadanych jest dodawany do pliku programu MSBuild, takich jak numer nazwą i wersją pakietu. Kompilowanie przy użyciu [ `dotnet pack` ](../../core/tools/dotnet-pack.md) dane wyjściowe polecenia `*.nupkg` pliku zamiast zestawów.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -62,7 +62,7 @@ Pakiet NuGet obsługuje wiele [właściwości metadanych](/nuget/reference/nuspe
 
 **ROZWAŻ ✔️** Wybieranie nazwy pakietów NuGet z prefiksem, który spełnia rezerwowanie prefiksów identyfikatorów NuGet [kryteria](/nuget/reference/id-prefix-reservation).
 
-**ROZWAŻ ✔️** przy użyciu `LICENSE` plików w kontroli źródła, ponieważ `LicenseUrl`. Na przykład:https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md
+**ROZWAŻ ✔️** przy użyciu `LICENSE` plików w kontroli źródła, ponieważ `LicenseUrl`. Na przykład [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md).
 
 > [!IMPORTANT]
 > Projekt bez licencji, wartość domyślna to [wyłącznych praw autorskich](https://choosealicense.com/no-permission/), uniemożliwiając innym użytkownikom.
@@ -92,13 +92,22 @@ Pakiety NuGet za pomocą sufiksu wersji są traktowane jako [wersji wstępnej](/
 
 ## <a name="symbol-packages"></a>Pakiety symboli
 
-Obsługuje NuGet [generowania pakietu oddzielne symbol](/nuget/create-packages/symbol-packages) zawierający debugowania plików PDB obok pakietu głównego zawierającego zestawy .NET. Koncepcja pakiety symboli jest one hostowane na serwerze symboli i są pobierane tylko wtedy, narzędzia, takiego jak Visual Studio na żądanie.
+Pliki symboli (`*.pdb`) są produkowane przez kompilator platformy .NET, wraz z zestawów. Lokalizacje wykonywania mapy plików symboli do oryginalnego kodu źródłowego, dzięki czemu możesz przejrzeć kod źródłowy w postaci, w jakiej jest uruchomiona, przy użyciu debugera. Obsługuje NuGet [generowania pakietu oddzielne symbol](/nuget/create-packages/symbol-packages) zawierający pliki symboli, wraz z pakietu głównego zawierającego zestawy .NET. Koncepcja pakiety symboli jest one hostowane na serwerze symboli i są pobierane tylko wtedy, narzędzia, takiego jak Visual Studio na żądanie.
 
-Obecnie głównym gospodarzem publicznego symboli - [SymbolSource](http://www.symbolsource.org/) — nie obsługuje plików przenośnych PDB, utworzone przez zestaw SDK stylu projektów i pakiety symboli nie są użyteczne.
+Obecnie głównym gospodarzem publicznego symboli - [SymbolSource](http://www.symbolsource.org/) — nie obsługują nowe [pliki symboli przenośne](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) utworzone przez projektów w stylu zestawu SDK i pakiety symboli nie są przydatne. Dopóki zalecany host dla pakietów symboli, plików symboli można osadzić w głównym pakietu NuGet. Jeśli tworzysz pakiet NuGet za pomocą zestawu SDK stylu projektu, możesz osadzić plików symboli, ustawiając `AllowedOutputExtensionsInPackageBuildOutputFolder` właściwości: 
 
-**ROZWAŻ ✔️** osadzanie plików PDB w głównym pakietu NuGet.
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+    <!-- Include symbol files (*.pdb) in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+</Project>
+```
 
-**Należy UNIKAĆ ❌** tworzenie symbole pakietu zawierającego pliki PDB.
+**ROZWAŻ ✔️** osadzanie plików symboli w głównym pakietu NuGet.
+
+**Należy UNIKAĆ ❌** tworzenie symbole pakietu zawierającego pliki symboli.
 
 >[!div class="step-by-step"]
 [Poprzednie](./strong-naming.md)

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Im
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 8cf1abb3ce400b72a3b02c705bd29f01b29cbaf0
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 663515e0a863ef703006df0f96b4bc8a2976ca78
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349153"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50042808"
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementowanie warstwy trwałości infrastruktury za pomocą platformy Entity Framework Core
 
@@ -39,7 +39,7 @@ Wprowadzenie do programu EF Core jest już dostępne w dokumentacji firmy Micros
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Z punktu widzenia DDD infrastruktury platformy Entity Framework Core
 
-Z punktu widzenia DDD, to ważny czynnik EF jest możliwość korzystania z jednostki domeny POCO, zwane w terminologii programu EF jako POCO *najpierw kod jednostki*. Jeśli używasz jednostki domeny POCO, klasach modeli domeny są trwałości zakresu, zgodnie z [nieznajomości trwałości](http://deviq.com/persistence-ignorance/) i [nieznajomości infrastruktury](https://ayende.com/blog/3137/infrastructure-ignorance) zasad.
+Z punktu widzenia DDD, to ważny czynnik EF jest możliwość korzystania z jednostki domeny POCO, zwane w terminologii programu EF jako POCO *najpierw kod jednostki*. Jeśli używasz jednostki domeny POCO, klasach modeli domeny są trwałości zakresu, zgodnie z [nieznajomości trwałości](https://deviq.com/persistence-ignorance/) i [nieznajomości infrastruktury](https://ayende.com/blog/3137/infrastructure-ignorance) zasad.
 
 Na wzorców DDD powinna hermetyzować zachowanie domeny i reguł w klasie jednostki, dzięki czemu podczas uzyskiwania dostępu do żadnej kolekcji może kontrolować invariants, sprawdzanie poprawności i reguł. W związku z tym nie jest dobrym rozwiązaniem DDD, aby zezwolić na publiczny dostęp do kolekcji podrzędnej obiektów lub obiekty wartości. Zamiast tego chcesz udostępnić, metody, które kontrolują, jak i kiedy Twoja pola i kolekcje właściwości mogą być aktualizowane, i jakie zachowanie i akcji powinny być wykonywane, kiedy tak się stanie.
 
@@ -467,7 +467,7 @@ Mimo że firma Microsoft nie jest zalecane jest, aby zwrócić IQueryable z repo
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
 -   **Wzorzec specyfikacji**
-    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+    [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
     
 
 >[!div class="step-by-step"]

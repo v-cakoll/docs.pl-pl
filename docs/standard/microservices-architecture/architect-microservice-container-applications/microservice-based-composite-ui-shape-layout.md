@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Tw
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3c5f4c5a1dd1c1065be63ad916af078050c069c1
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199011"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50033652"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Tworzenie złożonego interfejsu użytkownika opartego na mikrousługach, w tym kształt graficzny interfejsu użytkownika i układ generowany przez wiele mikrousług
 
@@ -42,10 +42,10 @@ Jednak firma Microsoft zachęca Dowiedz się więcej o złożonego interfejsu u�
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Złożonego interfejsu użytkownika za pomocą programu ASP.NET (w szczególności Workshop)**
-    [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
+    [*https://go.particular.net/workshop-composite-ui-demo*](https://go.particular.net/workshop-composite-ui-demo)
 
 -   **Ruben Oostinga. Monolityczny frontonu w architekturze Mikrousług**
-    [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
+    [*https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/*](https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/)
 
 -   **Mauro Servienti. Klucz tajny lepsze kompozycji interfejsu użytkownika**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)

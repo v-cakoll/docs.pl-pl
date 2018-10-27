@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: fc7aa27c07946b3a3da7e1ede8adaea30c06e58f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6f956a8dc3e899012144ccf266a7cbe1c5f9dab4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201013"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50039169"
 ---
 # <a name="internet-protocol-version-6"></a>Protokół internetowy w wersji 6
 Protokołu internetowego w wersji 6 (IPv6) to nowy zestaw standardowych protokołów służący do warstwy sieci Internet. Protokół IPv6 pozwala rozwiązać wiele problemów w bieżącej wersji pakietu Internet Protocol (nazywane IPv4) w odniesieniu do adresów wyczerpanie, zabezpieczeń, konfiguracji automatycznego, rozszerzalność i tak dalej. Protokół IPv6 rozszerza możliwości Internetu, aby włączyć nowych rodzajów aplikacji, w tym aplikacji peer-to-peer i na urządzeniach przenośnych. Oto główne kwestie bieżącego protokołu IPv4:  
@@ -47,7 +45,7 @@ Protokołu internetowego w wersji 6 (IPv6) to nowy zestaw standardowych protoko�
  Aby uzyskać więcej informacji, zobacz [adresowanie IPv6](../../../docs/framework/network-programming/ipv6-addressing.md), [IPv6 Routing](../../../docs/framework/network-programming/ipv6-routing.md), [automatyczna konfiguracja IPv6](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Włączanie i wyłączanie protokołu IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md), i [Porady: modyfikowanie pliku konfiguracji komputera, aby włączyć obsługę protokołu IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
   
 ## <a name="references"></a>Odwołania  
- Poniżej przedstawiono wybrane dokumenty RFC, które znajdują się w witrynie Internet Engineering Task Force ([http://www.ietf.org](http://www.ietf.org/)):  
+ Poniżej przedstawiono wybrane dokumenty RFC, które znajdują się w [Internet Engineering Task Force (IETF)](https://www.ietf.org/) witryny sieci Web:  
   
 -   RFC 1287, kierunku architektura przyszłych internetowych.  
   
@@ -57,9 +55,9 @@ Protokołu internetowego w wersji 6 (IPv6) to nowy zestaw standardowych protoko�
   
 -   RFC 2374, Format się agregowaniu globalnego adresu emisji pojedynczej protokołu IPv6.  
   
- Można również znaleźć informacje dotyczące protokołu IPv6 na [obszaru protokołu IPv6 w witrynie Technet](https://go.microsoft.com/fwlink/?LinkID=179658).  
+ Można również znaleźć informacje dotyczące protokołu IPv6 na [adresów IP w wersji 6 (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe gniazda IPv6](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  
+ [Przykładowe gniazda IPv6](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)  
  [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Gniazda](../../../docs/framework/network-programming/sockets.md)

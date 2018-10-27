@@ -2,12 +2,12 @@
 title: Przegląd korelacji
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 1f9e4db4002e53af5cdf91ab9d563764495b30d3
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: cc165bb4b74c70b740632c5cb873ed200b2283bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261251"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185867"
 ---
 # <a name="correlation-overview"></a>Przegląd korelacji
 Korelacja jest mechanizm dotyczących komunikatów usługi przepływu pracy lub stan wystąpienia aplikacji, takich jak odpowiedzi na żądanie podania początkowej lub Identyfikatora określonej kolejności utrwalonego stanu przepływu pracy przetwarzania zamówień. Ten temat zawiera omówienie korelacji. W innych tematach w tej sekcji Podaj dodatkowe informacje dla każdego typu korelacji.  
@@ -21,7 +21,7 @@ Korelacja jest mechanizm dotyczących komunikatów usługi przepływu pracy lub 
 
 Korelacja oparta na protokół używany mechanizm transportu do powiązania wiadomości do siebie nawzajem i odpowiednie wystąpienie. Niektóre korelacji protokołu dostarczane przez system obejmują korelacji "żądanie-odpowiedź" i korelacja oparta na kontekście. Korelacja "żądanie-odpowiedź" służy do skorelowania jedna para działań dotyczących komunikatów w celu utworzenia dwukierunkowej operacji, takich jak <xref:System.ServiceModel.Activities.Send> parowania z <xref:System.ServiceModel.Activities.ReceiveReply>, lub <xref:System.ServiceModel.Activities.Receive> parowania z <xref:System.ServiceModel.Activities.SendReply>. Projektanta przepływu pracy programu Visual Studio udostępnia również zestaw szablonów działania szybko implementacja tego wzorca. Korelacja na podstawie kontekstu opiera się na mechanizm wymiany kontekstu, które są opisane w [specyfikacji protokół wymiany kontekstu .NET](https://go.microsoft.com/fwlink/?LinkID=166059). Korelacja oparta na kontekście, na podstawie kontekstu wiązania takich jak używać <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> lub <xref:System.ServiceModel.NetTcpContextBinding> muszą być używane w punkcie końcowym.  
   
-Aby uzyskać więcej informacji na temat protokołu korelacji, zobacz [trwałe dwukierunkowego](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) i ["żądanie-odpowiedź"](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Aby uzyskać więcej informacji o używaniu Szablony działań projektanta przepływów pracy w usłudze Visual Studio, zobacz [działań Messaging](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Przykładowy kod, zobacz [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) próbki.  
+Aby uzyskać więcej informacji na temat protokołu korelacji, zobacz [trwałe dwukierunkowego](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) i ["żądanie-odpowiedź"](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Aby uzyskać więcej informacji o używaniu Szablony działań projektanta przepływów pracy w usłudze Visual Studio, zobacz [działań Messaging](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Przykładowy kod, zobacz [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) próbki.  
   
 ## <a name="content-based-correlation"></a>Korelacja na podstawie zawartości
 
@@ -29,4 +29,4 @@ Korelacja oparta na zawartości używa jakiegoś fragmentu informacji w komunika
   
 ## <a name="see-also"></a>Zobacz też  
 
-- [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)
+- [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

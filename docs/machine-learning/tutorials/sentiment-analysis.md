@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfik
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fd0a1ad246c6d50db35e3d0f0332a82b256902c1
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838831"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453167"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Używanie strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -175,11 +175,11 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="ingest-the-data"></a>Pozyskiwanie danych
 
-Inicjuje nowe wystąpienie klasy <xref:Microsoft.ML.LearningPipeline> zawierające ładowania danych, przetwarzanie danych/cechowania i modelu. Dodaj następujący kod jako pierwsza linia `Train` metody:
+Inicjuje nowe wystąpienie klasy <xref:Microsoft.ML.Legacy.LearningPipeline> zawierające ładowania danych, przetwarzanie danych/cechowania i modelu. Dodaj następujący kod jako pierwsza linia `Train` metody:
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-<xref:Microsoft.ML.Data.TextLoader> Obiektu jest pierwszą częścią potoku i ładuje plik danych szkoleniowych.
+<xref:Microsoft.ML.Legacy.Data.TextLoader> Obiektu jest pierwszą częścią potoku i ładuje plik danych szkoleniowych.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -187,13 +187,13 @@ Inicjuje nowe wystąpienie klasy <xref:Microsoft.ML.LearningPipeline> zawierają
 
 Wstępne przetwarzanie i czyszczenie danych są ważne zadania, które występują przed zestaw danych jest efektywnie używać uczenia maszynowego. Nieprzetworzone dane są często hałas i zawodnych i może brakować wartości. Korzystanie z danych bez tych zadań modelowania może spowodować wyświetlenie nieprawdziwych wyników. UCZENIE MASZYNOWE. Potoki przekształcenie firmy NET umożliwiają tworzą zbiór niestandardowych przekształceń, które są stosowane do danych przed szkolenie i testowanie. Przekształcenia głównym celem jest dla cechowania danych. Potok przekształcania zaletą jest to, że po definicji potoku transformacji, Zapisz potoku, aby zastosować dane testowe.
 
-Zastosuj <xref:Microsoft.ML.Transforms.TextFeaturizer> można przekonwertować `SentimentText` kolumny na [liczbowych wektor](../resources/glossary.md#numerical-feature-vector) o nazwie `Features` używane przez algorytm uczenia maszynowego. Jest to krok przetwarzania wstępnego cechowania. Za pomocą dodatkowych składników dostępnych w strukturze ML.NET umożliwiają lepsze wyniki za pomocą modelu. Dodaj `TextFeaturizer` do potoku jako następnego wiersza kodu:
+Zastosuj <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> można przekonwertować `SentimentText` kolumny na [liczbowych wektor](../resources/glossary.md#numerical-feature-vector) o nazwie `Features` używane przez algorytm uczenia maszynowego. Jest to krok przetwarzania wstępnego cechowania. Za pomocą dodatkowych składników dostępnych w strukturze ML.NET umożliwiają lepsze wyniki za pomocą modelu. Dodaj `TextFeaturizer` do potoku jako następnego wiersza kodu:
 
 [!code-csharp[TextFeaturizer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizer to the pipeline")]
 
 ## <a name="choose-a-learning-algorithm"></a>Wybieranie algorytmu uczenia
 
-<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier> Obiekt jest uczeń drzewa decyzyjne, zostanie użyty w tym potoku. Podobnie jak w kroku cechowania wypróbowania różnych uczestników kursów, które są dostępne w strukturze ML.NET i zmienianie ich parametrów prowadzi do różne wyniki. W przypadku dostosowywania, można ustawić [hiperparametrów](../resources/glossary.md#hyperparameter) takich jak <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumLeaves>, i <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>. Te hiperparametrów są ustawiane przed wszystko wpływa na modelu i są specyficzne dla modelu. Służą one do dostrojenia drzewa decyzyjnego dla wydajności, więc większe wartości może negatywnie wpłynąć na wydajność.
+<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier> Obiekt jest uczeń drzewa decyzyjne, zostanie użyty w tym potoku. Podobnie jak w kroku cechowania wypróbowania różnych uczestników kursów, które są dostępne w strukturze ML.NET i zmienianie ich parametrów prowadzi do różne wyniki. W przypadku dostosowywania, można ustawić [hiperparametrów](../resources/glossary.md#hyperparameter) takich jak <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumLeaves>, i <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>. Te hiperparametrów są ustawiane przed wszystko wpływa na modelu i są specyficzne dla modelu. Służą one do dostrojenia drzewa decyzyjnego dla wydajności, więc większe wartości może negatywnie wpłynąć na wydajność.
 
 Dodaj następujący kod do `Train` metody:
 
@@ -201,7 +201,7 @@ Dodaj następujący kod do `Train` metody:
 
 ## <a name="train-the-model"></a>Uczenie modelu
 
-Uczenie modelu, <xref:Microsoft.ML.PredictionModel%602>zgodnie z zestawu danych, który został załadowany i przekształcone. `pipeline.Train<SentimentData, SentimentPrediction>()` szkolenie modeli potoku (służy do ładowania danych, pociągów featurized i uczeń). Eksperyment nie jest wykonywane, dopóki nie dzieje.
+Uczenie modelu, <xref:Microsoft.ML.Legacy.PredictionModel%602>zgodnie z zestawu danych, który został załadowany i przekształcone. `pipeline.Train<SentimentData, SentimentPrediction>()` szkolenie modeli potoku (służy do ładowania danych, pociągów featurized i uczeń). Eksperyment nie jest wykonywane, dopóki nie dzieje.
 
 Dodaj następujący kod do `Train` metody:
 
@@ -239,15 +239,15 @@ Dodaj wywołanie do nowej metody z `Main` metody, po prawej stronie w obszarze `
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-<xref:Microsoft.ML.Data.TextLoader> Klasy ładuje nowego zestawu danych testowych za pomocą tego samego schematu. Możesz ocenić modelu przy użyciu tego zestawu danych w celu sprawdzenia jakości. Dodaj następujący kod do `Evaluate` metody:
+<xref:Microsoft.ML.Legacy.Data.TextLoader> Klasy ładuje nowego zestawu danych testowych za pomocą tego samego schematu. Możesz ocenić modelu przy użyciu tego zestawu danych w celu sprawdzenia jakości. Dodaj następujący kod do `Evaluate` metody:
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationEvaluator> Obiektu oblicza metryk jakości `PredictionModel` przy użyciu określonego zestawu danych. Aby wyświetlić te metryki, należy dodać ewaluatora w następnym wierszu `Evaluate` metoda następującym kodem:
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationEvaluator> Obiektu oblicza metryk jakości `PredictionModel` przy użyciu określonego zestawu danych. Aby wyświetlić te metryki, należy dodać ewaluatora w następnym wierszu `Evaluate` metoda następującym kodem:
 
 [!code-csharp[BinaryEvaluator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Create the binary evaluator")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationMetrics> Zawiera ogólne metryki obliczone przez ewaluatory klasyfikacji binarnej. Aby je wyświetlić, aby określić jakość modelu, należy pobrać pierwszy metryki. Dodaj następujący kod:
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics> Zawiera ogólne metryki obliczone przez ewaluatory klasyfikacji binarnej. Aby je wyświetlić, aby określić jakość modelu, należy pobrać pierwszy metryki. Dodaj następujący kod:
 
 [!code-csharp[CreateMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Evaluate the model and create metrics")]
 
@@ -283,7 +283,7 @@ Dodaj niektóre komentarze, aby przetestować prognozy uczonego modelu w `Predic
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for predictions")]
 
-Teraz, gdy model, możesz go używać, aby przewidzieć dodatnie lub ujemne tonacji przy użyciu danych komentarz <xref:Microsoft.ML.PredictionModel.Predict%2A?displayProperty=nameWithType> metody. Aby uzyskać prognozę, użyj `Predict` na nowych danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy.
+Teraz, gdy model, możesz go używać, aby przewidzieć dodatnie lub ujemne tonacji przy użyciu danych komentarz <xref:Microsoft.ML.Legacy.PredictionModel.Predict%2A?displayProperty=nameWithType> metody. Aby uzyskać prognozę, użyj `Predict` na nowych danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create predictions of sentiments")]
 

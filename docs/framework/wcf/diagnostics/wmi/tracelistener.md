@@ -2,19 +2,19 @@
 title: TraceListener
 ms.date: 03/30/2017
 ms.assetid: c2c0b595-a384-4eb3-b94d-1b3be7cc7a5c
-ms.openlocfilehash: be8c003b1980bdf80218bd226d25f51a2ebcea43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bd15aafc85e5553a4b4acef6901beb9a0f1745e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485072"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50033353"
 ---
 # <a name="tracelistener"></a>TraceListener
-Klasy TraceListener.  
+TraceListener.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class TraceListener  
 {  
   string Name;  
@@ -23,27 +23,27 @@ class TraceListener
 ```  
   
 ## <a name="methods"></a>Metody  
- Klasy TraceListener nie definiuje żadnych metod.  
+ Klasa zdarzeń TraceListener nie definiuje żadnych metod.  
   
 ## <a name="properties"></a>Właściwości  
- Klasy TraceListener ma następujące właściwości:  
+ Klasa zdarzeń TraceListener ma następujące właściwości:  
   
 ### <a name="name"></a>Nazwa  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Nazwa obiektu nasłuchującego śledzenia.  
+ Nazwa odbiornika śledzenia.  
   
 ### <a name="tracelistenerarguments"></a>TraceListenerArguments  
  Typ danych: TraceListenerArgument tablicy  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Argumenty obiektu nasłuchującego śledzenia.  
+ Argumenty odbiornik śledzenia.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|

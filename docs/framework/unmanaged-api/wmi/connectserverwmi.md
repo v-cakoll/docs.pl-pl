@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193817"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049285"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi — funkcja
 Tworzy połączenie za pomocą modelu DCOM do przestrzeni nazw usługi WMI na określonym komputerze.  
@@ -94,7 +94,7 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemLocator::ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemLocator::ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver) metody.
 
  Lokalny dostęp do domyślnej przestrzeni nazw `strNetworkResource` może być ścieżką prosty obiekt: "root\default" lub "\\.\root\default". Aby uzyskać dostęp do domyślnej przestrzeni nazw na komputerze zdalnym za pomocą modelu COM lub zgodny z programem Microsoft sieci, należy dołączyć nazwę komputera: "\\myserver\root\default". Nazwa komputera może również być nazwy DNS lub adres IP. `ConnectServerWmi` Funkcji można też połączyć z komputerami z systemem IPv6 przy użyciu adresu IPv6.
 

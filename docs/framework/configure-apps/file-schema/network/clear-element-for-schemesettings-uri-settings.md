@@ -2,14 +2,12 @@
 title: '&lt;Wyczyść&gt; Element dla schemeSettings (ustawienia identyfikatora Uri)'
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f0daa689ba09fa39ffe0f38d769112f0f095592a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b7dba6335f12b546fa4309ba9eb26d6007ec1bac
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028043"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50043299"
 ---
 # <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>&lt;Wyczyść&gt; Element dla schemeSettings (ustawienia identyfikatora Uri)
 Usuwa wszystkie istniejące ustawienia schematu.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 10f1d62c5aa29f2074106ab102775b9a0283d646
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 021a4291f550eca517cbdc9769c2a9f0aca99d1e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510965"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049103"
 ---
 # <a name="async-c-reference"></a>async (odwołanie w C#)
 Użyj `async` modyfikator, aby określić, że metoda, [wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), lub [metody anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) jest asynchroniczna. Jeśli metoda lub wyrażenie jest używany ten modyfikator, nazywa się *metody asynchronicznej*. W poniższym przykładzie zdefiniowano metodę async o nazwie `ExampleMethodAsync`: 
@@ -78,7 +78,7 @@ Należy określić `Task<TResult>` jako zwracany typ metody asynchronicznej Jeś
   
 Możesz użyć `void` zwracany typ głównie do definiowania uchwytów zdarzeń, które wymagają typów zwracanych. Obiekt wywołujący `void`— metodę asynchroniczną zwracającą nie może oczekiwać i nie może przechwytywać wyjątków, które metoda wygeneruje.  
 
-Począwszy od języka C# 7.0, zwróć inny typ, zwykle typu wartości, która ma `GetAwaiter` metodę alokacji pamięci miminize w newralgicznym dla wydajności sekcje kodu. 
+Począwszy od C# 7.0, zwróć inny typ, zwykle typu wartości, która ma `GetAwaiter` metodę, aby zminimalizować, alokacje pamięci w newralgicznym dla wydajności sekcje kodu. 
 
 Aby uzyskać więcej informacji i przykładów, zobacz [Async Return Types](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   

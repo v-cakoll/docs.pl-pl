@@ -3,11 +3,11 @@ title: 'Komunikacja podstawowa: Kanały transportu HTTP i HTTPS'
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
 ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844192"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50045408"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Komunikacja podstawowa: Kanały transportu HTTP/HTTPS
 Ten temat zawiera listę wszystkich wyjątków generowanych przez kanały programu Windows Communication Foundation (WCF) transportu HTTP/HTTPS.  

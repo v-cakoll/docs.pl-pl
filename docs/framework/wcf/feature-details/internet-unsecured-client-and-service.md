@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-author: BrucePerlerMS
-ms.openlocfilehash: b7f382f364538ecf0d425dab1571ac865ebf48c3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7f4a5fada6c2c17563796ae634ee742285551160
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195748"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181488"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Niezabezpieczony klient internetowy i usługa
 Na poniższej ilustracji przedstawiono przykład publiczne, niezabezpieczony klient usługi Windows Communication Foundation (WCF) i usługi.  

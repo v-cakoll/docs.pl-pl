@@ -4,12 +4,12 @@ description: Opisano obsługę języka C# w odrzucenia, które są nieprzypisane
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.openlocfilehash: d70067194ea9921f8af31fe436d04e2b780e1a73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524206"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045655"
 ---
 # <a name="discards---c-guide"></a>Odrzuca — Przewodnik po języku C#
 
@@ -38,7 +38,7 @@ Odrzuca są szczególnie przydatne w pracy z krotek, gdy kod aplikacji używa ni
 
 Aby uzyskać więcej informacji na temat dekonstrukcja krotek przy użyciu odrzucenia, zobacz [Dekonstrukcja krotek i innych typów](deconstruct.md#deconstructing-tuple-elements-with-discards).
 
-`Deconstruct` Metody klasy, struktury lub interfejsu umożliwia również pobrać i dekonstruować określonego zestawu danych z obiektu. Możesz użyć odrzucenia, jeśli interesują Cię Praca z podzbiorem śródwierszową wartości. Poniższy przykład deconstructs Ihe `Person` obiektu do czterech ciągów (imiona i nazwiska, miasta i stanu), ale odrzuca nazwisko i stanu.
+`Deconstruct` Metody klasy, struktury lub interfejsu umożliwia również pobrać i dekonstruować określonego zestawu danych z obiektu. Możesz użyć odrzucenia, jeśli interesują Cię Praca z podzbiorem śródwierszową wartości. Poniższy przykład deconstructs `Person` obiektu do czterech ciągów (imiona i nazwiska, miasta i stanu), ale odrzuca nazwisko i stanu.
 
 [!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
 

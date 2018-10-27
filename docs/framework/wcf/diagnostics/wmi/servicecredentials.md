@@ -2,19 +2,19 @@
 title: ServiceCredentials
 ms.date: 03/30/2017
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
-ms.openlocfilehash: bf906e09ae71d26f8e95877f1c545c0724d57b9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26bd0c95f930bf7859ae6409d797afbb596844fa
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485764"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180670"
 ---
 # <a name="servicecredentials"></a>ServiceCredentials
 ServiceCredentials  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class ServiceCredentials : Behavior  
 {  
   string ClientCertificate;  
@@ -36,57 +36,57 @@ class ServiceCredentials : Behavior
 ### <a name="clientcertificate"></a>ClientCertificate  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Certyfikat uwierzytelniania i dostarczania ustawień klienta dla tej usługi.  
+ Certyfikat uwierzytelniania i inicjowania obsługi ustawień klienta dla tej usługi.  
   
-### <a name="issuedtokenauthentication"></a>IssuedTokenAuthentication  
+### <a name="issuedtokenauthentication"></a>issuedTokenAuthentication  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Bieżący wystawiony token uwierzytelniania ustawienia dla tej usługi.  
   
-### <a name="peer"></a>elementów równorzędnych  
+### <a name="peer"></a>Elementu równorzędnego  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Bieżące poświadczenia uwierzytelniania i dostarczania ustawienia używane przez punkty końcowego transportów elementów równorzędnych.  
+ Bieżący poświadczeń uwierzytelniania i inicjowania obsługi ustawienia używane przez punkty końcowe transport elementu równorzędnego.  
   
 ### <a name="secureconversationauthentication"></a>SecureConversationAuthentication  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Określa bieżące ustawienia bezpiecznej konwersacji.  
   
-### <a name="servicecertificate"></a>ServiceCertificate  
+### <a name="servicecertificate"></a>serviceCertificate  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Certyfikat skojarzony z tą usługą.  
   
 ### <a name="usernameauthentication"></a>UserNameAuthentication  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Ustawienia nazwy użytkownika i hasła dla tej usługi.  
   
 ### <a name="windowsauthentication"></a>WindowsAuthentication  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Ustawienia uwierzytelniania systemu Windows dla tej usługi.  
+ Ustawienia uwierzytelniania Windows dla tej usługi.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Description.ServiceCredentials>

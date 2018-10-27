@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024587"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181556"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;Usuń&gt; Element dla connectionManagement (ustawienia sieci)
 Usuwa adres IP lub nazwę DNS na liście zarządzania połączenia.  
@@ -62,7 +60,7 @@ Usuwa adres IP lub nazwę DNS na liście zarządzania połączenia.
  Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład usuwa żadnych połączeń zarządzania wpisów na liście www.adventure-works.com serwera, a następnie konfiguruje aplikację do korzystania z czterech połączeń www.contoso.com serwera i dwóch połączeń na inne serwery.  
+ Poniższy przykład usuwa wszystkie wpisy listy zarządzania połączenia dla serwera `www.adventure-works.com` , a następnie konfiguruje aplikację do korzystania z czterech połączenia z serwerem `www.contoso.com` i dwóch połączeń na inne serwery.  
   
 ```xml  
 <configuration>  
@@ -77,6 +75,6 @@ Usuwa adres IP lub nazwę DNS na liście zarządzania połączenia.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e0f1ad373f8ec7687b44856a53e1e35b8b6baf8c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 245e94cab61c0c60672476aadb417fc798b30362
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089065"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181046"
 ---
 # <a name="internet-authentication"></a>Uwierzytelnianie internetowe
 <xref:System.Net> Klasy obsługi różnych mechanizmów uwierzytelniania klienta, w tym standardowa Internet metod uwierzytelniania, podstawowe, szyfrowane, negocjowania NTLM, a uwierzytelnianie Kerberos, a także niestandardowych metod, które można utworzyć.  

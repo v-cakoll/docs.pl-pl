@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 730b1188a95d0e35d7431d43884e867e5520585e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6d568c1c78677b53f4b79f5aefd3a56d71c2685f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838981"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182934"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Kojarzy fabryka użyta do wyprodukowania hosta usługi przy użyciu usługi hostowane i innych aspektów programowania wymagane w celu uzyskania dostępu lub skompilować kod hostingu z pliku .svc.  
@@ -43,7 +43,7 @@ CodeBehind = "CodeBehind"%>
 ## <a name="remarks"></a>Uwagi  
  <xref:System.ServiceModel.ServiceHost> Używane do hostowania usługi jest punktem rozszerzalność w modelu programowania Windows Communication Foundation (WCF). Wzorzec fabryki jest używany do utworzenia wystąpienia <xref:System.ServiceModel.ServiceHost> ponieważ, potencjalnie, typem polimorficznym, środowisko hostingu nie należy bezpośrednio wystąpienia.  
   
- Domyślna implementacja używa <xref:System.ServiceModel.Activation.ServiceHostFactory> do utworzenia wystąpienia <xref:System.ServiceModel.ServiceHost>. Ale możesz podać własne fabryki (taki, który zwraca pochodnej hosta), określając nazwę typu CLR fabryki implementacji w [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy.  
+ Domyślna implementacja używa <xref:System.ServiceModel.Activation.ServiceHostFactory> do utworzenia wystąpienia <xref:System.ServiceModel.ServiceHost>. Ale możesz podać własne fabryki (taki, który zwraca pochodnej hosta), określając nazwę typu CLR fabryki implementacji w [ \@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy.  
   
  Aby użyć własnych niestandardowych usługi fabryka hostów zamiast domyślną fabrykę, wystarczy podać nazwę typu w [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy w następujący sposób:  
   

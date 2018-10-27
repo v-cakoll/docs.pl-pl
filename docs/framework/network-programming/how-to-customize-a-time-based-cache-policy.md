@@ -9,14 +9,12 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2d46f88b40fc48eb819877c49ff9e04e487a0f5a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1a9e0d3197dcba63ef5497613e216a96868a03da
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205255"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182453"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Porady: Dostosowywanie zasad pamięci podręcznej na podstawie czasu
 Podczas tworzenia zasad pamięci podręcznej na podstawie czasu, można dostosować zachowanie buforowania, określając wartości maksymalny wiek, minimalna świeżość, maksymalna nieaktualność lub Data synchronizacji pamięci podręcznej. <xref:System.Net.Cache.HttpRequestCachePolicy> Obiekt zawiera kilka konstruktorów, które pozwalają na określenie prawidłowe kombinacje tych wartości.  

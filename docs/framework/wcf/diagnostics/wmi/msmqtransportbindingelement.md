@@ -2,19 +2,19 @@
 title: MsmqTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
-ms.openlocfilehash: 643ab0f30c771f79df8ef7dd885013d5186fba59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33cd9c427ed5ad04eaf9e9889f60f091f335d1e7
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485911"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045991"
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
 MsmqTransportBindingElement  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class MsmqTransportBindingElement : MsmqBindingElementBase  
 {  
   sint32 MaxPoolSize;  
@@ -32,29 +32,29 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 ### <a name="maxpoolsize"></a>MaxPoolSize  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalny rozmiar puli zawierającej wewnętrzne obiekty komunikatów MSMQ.  
+ Maksymalny rozmiar puli, która zawiera obiekty wewnętrzne wiadomości usługi MSMQ.  
   
 ### <a name="queuetransferprotocol"></a>Właściwość queueTransferProtocol  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Wartość wyliczenia wskazująca kolejkowany kanał komunikacyjny transportu przez to wiązanie.  
+ Wartość wyliczenia, która wskazuje kanał transportowy komunikacji z obsługą kolejek, który używa tego powiązania.  
   
-### <a name="useactivedirectory"></a>Właściwość UseActiveDirectory  
+### <a name="useactivedirectory"></a>UseActiveDirectory  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Zwraca wartość logiczną, wskazującą, czy adresy kolejek powinny być konwertowane przy użyciu usługi Active Directory.  
+ Zwraca wartość logiczną wskazującą, czy adresy kolejki powinny być konwertowane przy użyciu usługi Active Directory.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>

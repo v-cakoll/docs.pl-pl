@@ -2,12 +2,12 @@
 title: Komunikacja jednokierunkowa
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 25720285e29641c3c040444cb643af2790f10d3b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9a8af4bcdc76afd96ada595a7234cbc5e0250dfc
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740730"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180864"
 ---
 # <a name="one-way"></a>Komunikacja jednokierunkowa
 Niniejszy przykład pokazuje usługi skontaktuj się z operacji usługi jednokierunkowej. Klient nie czeka na zakończenie, jak w przypadku operacji dwukierunkowe usługi przy użyciu operacji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i używa `wsHttpBinding` powiązania. Usługi w tym przykładzie to aplikacja konsoli Self-Hosted umożliwia obserwowanie usługa, która odbiera i przetwarza żądania. Klient jest również Aplikacja konsoli.  
@@ -17,7 +17,7 @@ Niniejszy przykład pokazuje usługi skontaktuj się z operacji usługi jednokie
   
  Aby utworzyć kontrakt usługi jednokierunkowej, definiowanie kontraktu usługi, usługi, zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasy do każdej operacji, a następnie ustaw <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> do `true` jak pokazano w poniższym przykładowym kodzie:  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOneWayCalculator  
 {  
@@ -34,8 +34,8 @@ public interface IOneWayCalculator
   
  Aby zademonstrować, że klient nie czeka na zakończenie operacji usługi, kod usługi, w tym przykładzie implementuje pięciu sekund opóźnienia, jak pokazano w poniższym przykładowym kodzie:  
   
-```  
-/ This service class implements the service contract.  
+```csharp
+// This service class implements the service contract.  
 // This code writes output to the console window.  
  [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple,  
     InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -58,7 +58,7 @@ public class CalculatorService : IOneWayCalculator
   
  Klient zakończy się wcześniej usługi, prezentacja, że klient nie czeka na zakończenie operacji usługi jednokierunkowej. Dane wyjściowe klienta jest następujący:  
   
-```  
+```console  
 Add(100,15.99)  
 Subtract(145,76.54)  
 Multiply(9,81.25)  
@@ -69,7 +69,7 @@ Press <ENTER> to terminate client.
   
  Następujące dane wyjściowe usługi jest wyświetlany:  
   
-```  
+```console  
 The service is ready.  
 Press <ENTER> to terminate service.  
   

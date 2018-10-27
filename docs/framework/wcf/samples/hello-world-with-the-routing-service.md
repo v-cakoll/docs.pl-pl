@@ -2,12 +2,12 @@
 title: Program Hello World z usługą routingu
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 52b5c3b167cbbfb032d8e6104a118c5c9384938e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 25d0ce0663b60410912be94780fe8e89f6bf0d39
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845778"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182545"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Program Hello World z usługą routingu
 Niniejszy przykład pokazuje usługi routingu Windows Communication Foundation (WCF). Usługa routingu jest składnikiem usługi WCF, który ułatwia to dołączenie routerem na podstawie zawartości do aplikacji. W tym przykładzie dostosowuje się standardowej próbki Kalkulator WCF do komunikowania się za pomocą usługi routingu. W tym przykładzie klient Kalkulator jest skonfigurowany do wysyłania wiadomości do punktu końcowego uwidocznionego przez router. Usługa routingu jest skonfigurowana do akceptowania wszystkie komunikaty wysyłane do niej i przekazują je do punktu końcowego, który odnosi się do usługi kalkulatora. Ten sposób wiadomości wysłanych z klienta są odebrany przez router i ponownie kierowane do rzeczywistej usługi kalkulatora. Komunikaty z Kalkulatora usługi są wysyłane do routera, który z kolei przekazuje je do klienta kalkulatora.
@@ -29,13 +29,15 @@ Niniejszy przykład pokazuje usługi routingu Windows Communication Foundation (
 
      Powinny zostać wyświetlone następujące dane wyjściowe:
 
+    ```console
      Add(100,15.99) = 115.99
 
-     SUBTRACT(145,76.54) = 68.46
+     Subtract(145,76.54) = 68.46
 
-     MULTIPLY(9,81.25) = 731.25
+     Multiply(9,81.25) = 731.25
 
      Divide(22,7) = 3.14285714285714
+    ```
 
 ## <a name="configurable-via-code-or-appconfig"></a>Można konfigurować za pomocą kodu lub pliku App.Config
  Dostarczany próbki, skonfigurowany do używania pliku App.config do definiowania zachowania routera. Można również zmienić nazwę pliku App.config się czymś innym, tak aby nie został rozpoznany i usuń znaczniki komentarza wywołania metody, które ma ConfigureRouterViaCode(). Każda z tych metod powoduje takie samo zachowanie z routera.

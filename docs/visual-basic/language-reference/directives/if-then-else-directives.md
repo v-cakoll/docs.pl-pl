@@ -18,14 +18,12 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 05aac9109e49897d1c4dbbad60d807eb3e47798d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c98868e16fc609a49721724fdd32221a380ff834
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081953"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182895"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else — Dyrektywy
 Kompiluje warunkowo wybrane bloki kodu języka Visual Basic.  

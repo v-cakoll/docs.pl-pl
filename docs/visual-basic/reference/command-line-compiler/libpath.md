@@ -6,59 +6,57 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5044bc0093960fdf6b063450d8d3a57575ff07c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d713a63c9503581f38048fe79c559883dc96efd2
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653881"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50040137"
 ---
-# <a name="-libpath"></a><span data-ttu-id="178ee-102">-libpath</span><span class="sxs-lookup"><span data-stu-id="178ee-102">-libpath</span></span>
-<span data-ttu-id="178ee-103">Określa lokalizację zestawów występujących w odwołaniach.</span><span class="sxs-lookup"><span data-stu-id="178ee-103">Specifies the location of referenced assemblies.</span></span>  
+# <a name="-libpath"></a><span data-ttu-id="4edee-102">-libpath</span><span class="sxs-lookup"><span data-stu-id="4edee-102">-libpath</span></span>
+<span data-ttu-id="4edee-103">Określa lokalizację przywoływanych zestawów.</span><span class="sxs-lookup"><span data-stu-id="4edee-103">Specifies the location of referenced assemblies.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="178ee-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="178ee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4edee-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4edee-104">Syntax</span></span>  
   
 ```  
 -libpath:dirList  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="178ee-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="178ee-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="4edee-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="4edee-105">Arguments</span></span>  
   
-|<span data-ttu-id="178ee-106">Termin</span><span class="sxs-lookup"><span data-stu-id="178ee-106">Term</span></span>|<span data-ttu-id="178ee-107">Definicja</span><span class="sxs-lookup"><span data-stu-id="178ee-107">Definition</span></span>|  
+|<span data-ttu-id="4edee-106">Termin</span><span class="sxs-lookup"><span data-stu-id="4edee-106">Term</span></span>|<span data-ttu-id="4edee-107">Definicja</span><span class="sxs-lookup"><span data-stu-id="4edee-107">Definition</span></span>|  
 |---|---|  
-|`dirList`|<span data-ttu-id="178ee-108">Wymagana.</span><span class="sxs-lookup"><span data-stu-id="178ee-108">Required.</span></span> <span data-ttu-id="178ee-109">Rozdzielana średnikami lista katalogów dla kompilatora do przeszukania Jeśli przywoływany zestaw nie znajduje się w jednym bieżący katalog roboczy (katalogu, z którego są wywoływanie kompilatora) lub środowisko uruchomieniowe języka wspólnego w katalogu systemowym.</span><span class="sxs-lookup"><span data-stu-id="178ee-109">Semicolon-delimited list of directories for the compiler to look in if a referenced assembly is not found in either the current working directory (the directory from which you are invoking the compiler) or the common language runtime's system directory.</span></span> <span data-ttu-id="178ee-110">Jeśli nazwa katalogu zawiera spację, nazwę należy ująć w cudzysłów ("").</span><span class="sxs-lookup"><span data-stu-id="178ee-110">If the directory name contains a space, enclose the name in quotation marks (" ").</span></span>|  
+|`dirList`|<span data-ttu-id="4edee-108">Wymagana.</span><span class="sxs-lookup"><span data-stu-id="4edee-108">Required.</span></span> <span data-ttu-id="4edee-109">Rozdzielana średnikami lista katalogów dla kompilatora do przeszukania Jeśli przywoływany zestaw nie znajduje się w jednym bieżący katalog roboczy (katalog, z którego są wywołując kompilator) lub katalogu systemu wykonywalnych języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="4edee-109">Semicolon-delimited list of directories for the compiler to look in if a referenced assembly is not found in either the current working directory (the directory from which you are invoking the compiler) or the common language runtime's system directory.</span></span> <span data-ttu-id="4edee-110">Jeśli nazwa katalogu zawiera spację, nazwę należy ująć w znaki cudzysłowu ("").</span><span class="sxs-lookup"><span data-stu-id="4edee-110">If the directory name contains a space, enclose the name in quotation marks (" ").</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="178ee-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="178ee-111">Remarks</span></span>  
- <span data-ttu-id="178ee-112">`-libpath` Opcji określa lokalizację zestawów odwołuje się [— odwołanie](../../../visual-basic/reference/command-line-compiler/reference.md) opcji.</span><span class="sxs-lookup"><span data-stu-id="178ee-112">The `-libpath` option specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4edee-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4edee-111">Remarks</span></span>  
+ <span data-ttu-id="4edee-112">`-libpath` Opcja określa lokalizację zestawów odwołuje się [— dokumentacja](../../../visual-basic/reference/command-line-compiler/reference.md) opcji.</span><span class="sxs-lookup"><span data-stu-id="4edee-112">The `-libpath` option specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>  
   
- <span data-ttu-id="178ee-113">Kompilator szuka odwołań do zestawu, które nie są w pełni kwalifikowana w następującej kolejności:</span><span class="sxs-lookup"><span data-stu-id="178ee-113">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
+ <span data-ttu-id="4edee-113">Kompilator wyszukuje odwołania do zestawów, które nie są w pełni kwalifikowane w następującej kolejności:</span><span class="sxs-lookup"><span data-stu-id="4edee-113">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
   
-1.  <span data-ttu-id="178ee-114">Bieżący katalog roboczy.</span><span class="sxs-lookup"><span data-stu-id="178ee-114">Current working directory.</span></span> <span data-ttu-id="178ee-115">To jest katalog, z którego jest wywoływany przez kompilator.</span><span class="sxs-lookup"><span data-stu-id="178ee-115">This is the directory from which the compiler is invoked.</span></span>  
+1.  <span data-ttu-id="4edee-114">Bieżący katalog roboczy.</span><span class="sxs-lookup"><span data-stu-id="4edee-114">Current working directory.</span></span> <span data-ttu-id="4edee-115">Jest to katalog, w którym kompilator jest wywoływany.</span><span class="sxs-lookup"><span data-stu-id="4edee-115">This is the directory from which the compiler is invoked.</span></span>  
   
-2.  <span data-ttu-id="178ee-116">Katalogu środowiska CLR systemu.</span><span class="sxs-lookup"><span data-stu-id="178ee-116">The common language runtime system directory.</span></span>  
+2.  <span data-ttu-id="4edee-116">Katalogu środowiska CLR systemu.</span><span class="sxs-lookup"><span data-stu-id="4edee-116">The common language runtime system directory.</span></span>  
   
-3.  <span data-ttu-id="178ee-117">Katalogi określone przez `/libpath`.</span><span class="sxs-lookup"><span data-stu-id="178ee-117">Directories specified by `/libpath`.</span></span>  
+3.  <span data-ttu-id="4edee-117">Katalogi określone przez `/libpath`.</span><span class="sxs-lookup"><span data-stu-id="4edee-117">Directories specified by `/libpath`.</span></span>  
   
-4.  <span data-ttu-id="178ee-118">Katalogi określonej przez zmienną środowiskową LIB.</span><span class="sxs-lookup"><span data-stu-id="178ee-118">Directories specified by the LIB environment variable.</span></span>  
+4.  <span data-ttu-id="4edee-118">Katalogi określone przez zmienną środowiskową LIB.</span><span class="sxs-lookup"><span data-stu-id="4edee-118">Directories specified by the LIB environment variable.</span></span>  
   
- <span data-ttu-id="178ee-119">`-libpath` Jest opcja dodawania; Określanie on więcej niż raz dołącza wszystkie wcześniejsze wartości.</span><span class="sxs-lookup"><span data-stu-id="178ee-119">The `-libpath` option is additive; specifying it more than once appends to any prior values.</span></span>  
+ <span data-ttu-id="4edee-119">`-libpath` Opcja jest dodatku; Określanie on więcej niż jeden raz dołącza do dowolnych wartości wcześniejsze.</span><span class="sxs-lookup"><span data-stu-id="4edee-119">The `-libpath` option is additive; specifying it more than once appends to any prior values.</span></span>  
   
- <span data-ttu-id="178ee-120">Użyj `-reference` do określenia odwołania do zestawu.</span><span class="sxs-lookup"><span data-stu-id="178ee-120">Use `-reference` to specify an assembly reference.</span></span>  
+ <span data-ttu-id="4edee-120">Użyj `-reference` do określenia odwołania do zestawu.</span><span class="sxs-lookup"><span data-stu-id="4edee-120">Use `-reference` to specify an assembly reference.</span></span>  
   
-|<span data-ttu-id="178ee-121">Aby ustawić/libpath w programie Visual Studio zintegrowane środowisko deweloperskie</span><span class="sxs-lookup"><span data-stu-id="178ee-121">To set /libpath in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="4edee-121">Aby ustawić/libpath — w programie Visual Studio zintegrowane środowisko projektowe</span><span class="sxs-lookup"><span data-stu-id="4edee-121">To set /libpath in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="178ee-122">1.  Projekt wybrany w **Eksploratora rozwiązań**.</span><span class="sxs-lookup"><span data-stu-id="178ee-122">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="178ee-123">Na **projektu** menu, kliknij przycisk **właściwości**.</span><span class="sxs-lookup"><span data-stu-id="178ee-123">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="178ee-124">2.  Kliknij przycisk **odwołania** kartę.</span><span class="sxs-lookup"><span data-stu-id="178ee-124">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="178ee-125">3.  Kliknij przycisk **ścieżek odwołania...**  przycisku.</span><span class="sxs-lookup"><span data-stu-id="178ee-125">3.  Click the **Reference Paths...** button.</span></span><br /><span data-ttu-id="178ee-126">4.  W **ścieżek odwołania** okna dialogowego wprowadź nazwę katalogu w **Folder:** pole.</span><span class="sxs-lookup"><span data-stu-id="178ee-126">4.  In the **Reference Paths** dialog box, enter the directory name in the **Folder:** box.</span></span><br /><span data-ttu-id="178ee-127">5.  Kliknij przycisk **dodać Folder**.</span><span class="sxs-lookup"><span data-stu-id="178ee-127">5.  Click **Add Folder**.</span></span>|  
+|<span data-ttu-id="4edee-122">1.  Projekt wybrany w **Eksploratora rozwiązań**.</span><span class="sxs-lookup"><span data-stu-id="4edee-122">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="4edee-123">Na **projektu** menu, kliknij przycisk **właściwości**.</span><span class="sxs-lookup"><span data-stu-id="4edee-123">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="4edee-124">2.  Kliknij przycisk **odwołania** kartę.</span><span class="sxs-lookup"><span data-stu-id="4edee-124">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="4edee-125">3.  Kliknij przycisk **odwoływać się do ścieżki...**  przycisku.</span><span class="sxs-lookup"><span data-stu-id="4edee-125">3.  Click the **Reference Paths...** button.</span></span><br /><span data-ttu-id="4edee-126">4.  W **ścieżki odwołania** okna dialogowego wprowadź nazwę katalogu, w **Folder:** pole.</span><span class="sxs-lookup"><span data-stu-id="4edee-126">4.  In the **Reference Paths** dialog box, enter the directory name in the **Folder:** box.</span></span><br /><span data-ttu-id="4edee-127">5.  Kliknij przycisk **Dodaj Folder**.</span><span class="sxs-lookup"><span data-stu-id="4edee-127">5.  Click **Add Folder**.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="178ee-128">Przykład</span><span class="sxs-lookup"><span data-stu-id="178ee-128">Example</span></span>  
- <span data-ttu-id="178ee-129">Poniższy kod kompiluje `T2.vb` do utworzenia pliku .exe.</span><span class="sxs-lookup"><span data-stu-id="178ee-129">The following code compiles `T2.vb` to create an .exe file.</span></span> <span data-ttu-id="178ee-130">Kompilator w katalogu roboczym, w katalogu głównym dysku C: i w katalogu zestawy nowego dysku C: szuka odwołań do zestawu.</span><span class="sxs-lookup"><span data-stu-id="178ee-130">The compiler looks in the working directory, in the root directory of the C: drive, and in the New Assemblies directory of the C: drive for assembly references.</span></span>  
+## <a name="example"></a><span data-ttu-id="4edee-128">Przykład</span><span class="sxs-lookup"><span data-stu-id="4edee-128">Example</span></span>  
+ <span data-ttu-id="4edee-129">Poniższy kod kompiluje `T2.vb` do tworzenia pliku .exe.</span><span class="sxs-lookup"><span data-stu-id="4edee-129">The following code compiles `T2.vb` to create an .exe file.</span></span> <span data-ttu-id="4edee-130">Kompilator w katalogu roboczym, w katalogu głównym dysku C: i w katalogu nowych zestawów na dysku C: szuka odwołania do zestawu.</span><span class="sxs-lookup"><span data-stu-id="4edee-130">The compiler looks in the working directory, in the root directory of the C: drive, and in the New Assemblies directory of the C: drive for assembly references.</span></span>  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="178ee-131">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="178ee-131">See Also</span></span>  
- [<span data-ttu-id="178ee-132">Zestawy i globalna pamięć podręczna zestawów</span><span class="sxs-lookup"><span data-stu-id="178ee-132">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [<span data-ttu-id="178ee-133">Kompilator w wierszu polecenia programu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="178ee-133">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="178ee-134">Przykłady kompilacji — wiersze poleceń</span><span class="sxs-lookup"><span data-stu-id="178ee-134">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="4edee-131">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4edee-131">See Also</span></span>  
+ [<span data-ttu-id="4edee-132">Zestawy i globalna pamięć podręczna zestawów</span><span class="sxs-lookup"><span data-stu-id="4edee-132">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="4edee-133">Kompilator wiersza polecenia programu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4edee-133">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="4edee-134">Przykłady kompilacji — wiersze poleceń</span><span class="sxs-lookup"><span data-stu-id="4edee-134">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

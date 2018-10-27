@@ -1,34 +1,35 @@
 ---
-title: Instrukcje wyboru (odwołanie w C#)
+title: Instrukcje wyboru (C# odwołania)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
-ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b4575884acc63489f3e40bd040257a9c6bca5df9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48026308"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181423"
 ---
-# <a name="selection-statements-c-reference"></a><span data-ttu-id="198fe-102">Instrukcje wyboru (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="198fe-102">Selection Statements (C# Reference)</span></span>
-<span data-ttu-id="198fe-103">Instrukcja zaznaczenie powoduje, że formant programu do przeniesienia do określonego przepływu, w zależności od tego, czy określony warunek jest `true` czy nie.</span><span class="sxs-lookup"><span data-stu-id="198fe-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>  
-  
- <span data-ttu-id="198fe-104">Następujące słowa kluczowe są używane w instrukcji wyboru:</span><span class="sxs-lookup"><span data-stu-id="198fe-104">The following keywords are used in selection statements:</span></span>  
-  
--   [<span data-ttu-id="198fe-105">if</span><span class="sxs-lookup"><span data-stu-id="198fe-105">if</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
-  
--   [<span data-ttu-id="198fe-106">else</span><span class="sxs-lookup"><span data-stu-id="198fe-106">else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
-  
--   [<span data-ttu-id="198fe-107">switch</span><span class="sxs-lookup"><span data-stu-id="198fe-107">switch</span></span>](../../../csharp/language-reference/keywords/switch.md)  
-  
--   [<span data-ttu-id="198fe-108">przypadek</span><span class="sxs-lookup"><span data-stu-id="198fe-108">case</span></span>](../../../csharp/language-reference/keywords/switch.md)  
-  
--   [<span data-ttu-id="198fe-109">default</span><span class="sxs-lookup"><span data-stu-id="198fe-109">default</span></span>](../../../csharp/language-reference/keywords/switch.md)  
+# <a name="selection-statements-c-reference"></a><span data-ttu-id="cd659-102">Instrukcje wyboru (C# odwołania)</span><span class="sxs-lookup"><span data-stu-id="cd659-102">Selection statements (C# Reference)</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="198fe-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="198fe-110">See Also</span></span>
+<span data-ttu-id="cd659-103">Instrukcja zaznaczenie powoduje, że formant programu do przeniesienia do określonego przepływu, w zależności od tego, czy określony warunek jest `true` czy nie.</span><span class="sxs-lookup"><span data-stu-id="cd659-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>
 
-- [<span data-ttu-id="198fe-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="198fe-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="198fe-112">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="198fe-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="198fe-113">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="198fe-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="198fe-114">Słowa kluczowe instrukcji</span><span class="sxs-lookup"><span data-stu-id="198fe-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)
+<span data-ttu-id="cd659-104">Następujące słowa kluczowe są używane w instrukcji wyboru:</span><span class="sxs-lookup"><span data-stu-id="cd659-104">The following keywords are used in selection statements:</span></span>
+
+- [<span data-ttu-id="cd659-105">if</span><span class="sxs-lookup"><span data-stu-id="cd659-105">if</span></span>](if-else.md)
+
+- [<span data-ttu-id="cd659-106">else</span><span class="sxs-lookup"><span data-stu-id="cd659-106">else</span></span>](if-else.md)
+
+- [<span data-ttu-id="cd659-107">switch</span><span class="sxs-lookup"><span data-stu-id="cd659-107">switch</span></span>](switch.md)
+
+- [<span data-ttu-id="cd659-108">case</span><span class="sxs-lookup"><span data-stu-id="cd659-108">case</span></span>](switch.md)
+
+- [<span data-ttu-id="cd659-109">default</span><span class="sxs-lookup"><span data-stu-id="cd659-109">default</span></span>](switch.md)
+
+## <a name="see-also"></a><span data-ttu-id="cd659-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cd659-110">See also</span></span>
+
+- [<span data-ttu-id="cd659-111">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="cd659-111">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="cd659-112">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="cd659-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="cd659-113">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="cd659-113">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="cd659-114">Słowa kluczowe instrukcji</span><span class="sxs-lookup"><span data-stu-id="cd659-114">Statement Keywords</span></span>](statement-keywords.md)

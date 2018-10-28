@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: a8c71551adc2b88b5300994134eaec329a083709
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316444"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188290"
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultftpcachepolicy —&gt; — Element (ustawienia sieci)
 Opisuje, czy buforowanie FTP jest aktywny i w tym artykule opisano domyślne zasady buforowania.  
@@ -82,7 +80,7 @@ Opisuje, czy buforowanie FTP jest aktywny i w tym artykule opisano domyślne zas
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.Net.Cache>  
- <xref:System.Net.WebRequest>  
- <xref:System.Net.Cache.RequestCacheLevel>  
- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.Cache>  
+- <xref:System.Net.WebRequest>  
+- <xref:System.Net.Cache.RequestCacheLevel>  
+- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

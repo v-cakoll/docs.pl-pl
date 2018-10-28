@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć biblioteki dla platformy .NET przy użyc
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: a6db7a15c484122600afd54814d19ea11bd1abc1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
-ms.translationtype: MT
+ms.openlocfilehash: eb1dc404f9a08940464eca83a6848076b589afa8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256199"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188264"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Tworzenie bibliotek za pomocą narzędzi międzyplatformowych
 
@@ -167,7 +167,7 @@ namespace MultitargetLib
         // .NET Framework 4.0 does not have async/await
         public string GetDotNetCount()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             var uri = new Uri(url);
 
@@ -187,7 +187,7 @@ namespace MultitargetLib
         // .NET 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             // HttpClient is thread-safe, so no need to explicitly lock here
             var result = await _client.GetStringAsync(url);
@@ -213,7 +213,7 @@ Każdy z nich zawiera `.dll` plików dla każdego obiektu docelowego.
 
 ## <a name="how-to-test-libraries-on-net-core"></a>Jak przetestować bibliotek na platformie .NET Core
 
-Jest ważne można było przetestować na wielu platformach. Można użyć dowolnego [xUnit](http://xunit.github.io/) lub MSTest gotowe. Zarówno nadają się idealnie do biblioteki, na platformie .NET Core testów jednostkowych. Jak skonfigurować rozwiązanie z projektami testowymi będzie zależeć od [struktury rozwiązania](#structuring-a-solution). W poniższym przykładzie założono, że katalogi testu i źródła na żywo w tym samym katalogu najwyższego poziomu.
+Jest ważne można było przetestować na wielu platformach. Można użyć dowolnego [xUnit](https://xunit.github.io/) lub MSTest gotowe. Zarówno nadają się idealnie do biblioteki, na platformie .NET Core testów jednostkowych. Jak skonfigurować rozwiązanie z projektami testowymi będzie zależeć od [struktury rozwiązania](#structuring-a-solution). W poniższym przykładzie założono, że katalogi testu i źródła na żywo w tym samym katalogu najwyższego poziomu.
 
 > [!NOTE]
 > Ta metoda korzysta z niektórych [poleceń interfejsu wiersza polecenia platformy .NET Core](../tools/index.md). Zobacz [dotnet nowe](../tools/dotnet-new.md) i [dotnet sln](../tools/dotnet-sln.md) Aby uzyskać więcej informacji.

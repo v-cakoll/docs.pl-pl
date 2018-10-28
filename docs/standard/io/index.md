@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4452ad2445f81659d04bca3d64885148895aeb88
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025600"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188303"
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
 Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W .NET Framework `System.IO` przestrzenie nazw zawierają typy umożliwiające odczyt lub zapis, synchronicznie i asynchronicznie, w strumieniach i plikach danych. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.  
@@ -122,7 +122,7 @@ Dla ścieżki konwencji nazewnictwa i sposoby express ścieżkę pliku dla syste
 ## <a name="isolated-storage"></a>Izolowany magazyn  
  Wydzielona pamięć masowa to mechanizm magazynu, który dostarcza izolację i bezpieczeństwo przez definiowanie ustandaryzowanych metod kojarzenia kodu z zapisanymi danymi. Ta pamięć masowa oferuje wirtualny system plików, który jest izolowany dla konkretnego użytkownika, zestawu i (opcjonalnie) domeny. Wydzielona pamięć masowa jest szczególnie użyteczna, gdy aplikacja nie ma uprawnień dostępu do plików użytkownika. Można zapisać ustawienia lub pliki aplikacji w sposób, który jest kontrolowany przez zasady zabezpieczeń komputera.  
   
- Wydzielona pamięć masowa nie jest dostępna dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji; zamiast tego należy użyć klas danych [Windows.Storage](/uwp/api/Windows.Storage) przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) w Centrum deweloperów Windows.  
+ Wydzielona pamięć masowa nie jest dostępna dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji; zamiast tego należy użyć klas danych <xref:Windows.Storage?displayProperty=nameWithType> przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).  
   
  Podczas implementowania wydzielonej pamięci masowej często używane są następujące klasy:  
   
@@ -139,13 +139,13 @@ Dla ścieżki konwencji nazewnictwa i sposoby express ścieżkę pliku dla syste
   
  Kilka poważnych różnic, należy pamiętać, korzystając z operacji We/Wy w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji:  
   
--   Typy związane z operacjami na plikach, takich jak <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> i <xref:System.IO.DirectoryInfo>, nie są uwzględnione w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Zamiast tego należy używać typów z [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) przestrzeń nazw [!INCLUDE[wrt](../../../includes/wrt-md.md)], takich jak [obiektu StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) i [StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Typy związane z operacjami na plikach, takich jak <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> i <xref:System.IO.DirectoryInfo>, nie są uwzględnione w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Zamiast tego należy używać typów z <xref:Windows.Storage?displayProperty=nameWithType> przestrzeń nazw [!INCLUDE[wrt](../../../includes/wrt-md.md)], takich jak <xref:Windows.Storage.StorageFile> i <xref:Windows.Storage.StorageFolder>.  
   
 -   Wydzielona pamięć masowa nie jest dostępna; Zamiast tego należy użyć [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Używanie metod asynchronicznych, takiej jak <xref:System.IO.Stream.ReadAsync%2A> i <xref:System.IO.Stream.WriteAsync%2A>, aby zapobiec blokowaniu wątku interfejsu użytkownika.  
   
--   Typy kompresji opartej na ścieżkach <xref:System.IO.Compression.ZipFile> i <xref:System.IO.Compression.ZipFileExtensions> nie są dostępne. Zamiast tego należy używać typów z [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) przestrzeni nazw.  
+-   Typy kompresji opartej na ścieżkach <xref:System.IO.Compression.ZipFile> i <xref:System.IO.Compression.ZipFileExtensions> nie są dostępne. Zamiast tego należy używać typów z <xref:Windows.Storage.Compression?displayProperty=nameWithType> przestrzeni nazw.  
   
  W razie potrzeby można wykonywać konwersje między strumieniami programu .NET Framework i strumieniami środowiska wykonawczego systemu Windows. Aby uzyskać więcej informacji, zobacz [porady: konwertowanie między .NET Framework i strumieni środowiska wykonawczego Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) lub [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   

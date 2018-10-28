@@ -1,6 +1,6 @@
 ---
 title: + Operator (odwołanie w C#)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +_CSharpKeyword
 helpviewer_keywords:
@@ -8,34 +8,57 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839595"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192307"
 ---
 # <a name="-operator-c-reference"></a>+ — Operator (odwołanie w C#)
-`+` Operator może działać jako jednoargumentowy lub binarny.  
-  
-## <a name="remarks"></a>Uwagi  
- Jednoargumentowy `+` operatory są wstępnie zdefiniowane dla wszystkich typów liczbowych. Wynik jednoargumentowy `+` operacja na typ liczbowy jest po prostu wartość operandu.  
-  
- Binarny `+` operatory są wstępnie zdefiniowane dla typów liczbowych i. Dla liczbowych typów i oblicza sumę dwóch argumentów operacji. Kiedy jeden lub obydwa operandy są typu ciąg i łączy ciągów reprezentujących argumenty operacji.  
-  
- Typy delegatów udostępniają dane binarne `+` operatora, który wykonuje łączenie delegatów.  
-  
- Typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia jednoargumentowe `+` binarnej i `+` operatorów. Operacje na typach całkowitych w wyliczeniach są zazwyczaj dozwolone. Aby uzyskać więcej informacji, zobacz [— operator (odwołanie w C#)](../../../csharp/language-reference/keywords/operator.md).  
-  
-## <a name="example"></a>Przykład  
- [!code-csharp[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)  
-- [Operator (odwołanie w C#)](../../../csharp/language-reference/keywords/operator.md)
+`+` Operator jest obsługiwany w dwóch formach: jednoargumentowe plus operatora lub operator binarny dodawania.
+
+Typy zdefiniowane przez użytkownika może [przeciążenia](../keywords/operator.md) jednoargumentowy i danych binarnych `+` operatorów. Gdy dane binarne `+` operator jest przeciążony, [operator przypisania dodawania](addition-assignment-operator.md) `+=` jest również niejawnie przeciążona.
+
+## <a name="unary-plus-operator"></a>Jednoargumentowy operator plus
+
+Jednoargumentowy `+` operator zwraca wartość swojego operandu. Jest ona obsługiwana przez wszystkie typy liczbowe.
+
+## <a name="numeric-addition"></a>Dodawanie numeryczne
+
+Dla typów liczbowych `+` operator oblicza sumę argumentów:
+
+[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+## <a name="string-concatenation"></a>{1&gt;Łączenie ciągów&lt;1}
+
+Kiedy jeden lub obydwa operandy są typu [ciąg](../keywords/string.md), `+` operator łączy ciągów reprezentujących argumentów:
+
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+
+Począwszy od C# 6, [Interpolacja ciągów](../tokens/interpolated.md) zapewnia wygodny sposób na ciągi formatu:
+
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+
+## <a name="delegate-combination"></a>Delegatów
+
+Aby uzyskać [delegować](../keywords/delegate.md) typów `+` operator zwraca nowe wystąpienie delegata, gdy wywoływany, wywołuje pierwszy operand, a następnie wywołuje drugiego operandu. Jeśli którykolwiek z argumentów jest `null`, `+` operator zwraca wartość innego operandu (które mogą być również `null`). W poniższym przykładzie pokazano, jak delegaty można łączyć z `+` operator:
+
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+
+Aby uzyskać więcej informacji na temat typów obiektów delegowanych, zobacz [delegatów](../../programming-guide/delegates/index.md).
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz [jednoargumentowe plus operator](~/_csharplang/spec/expressions.md#unary-plus-operator) i [operator dodawania](~/_csharplang/spec/expressions.md#addition-operator) sekcje [ C# specyfikacji języka](../language-specification/index.md).
+
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Operatory języka C#](index.md)
+- [Interpolacja ciągów](../tokens/interpolated.md)
+- [Instrukcje: łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)
+- [Delegaty](../../programming-guide/delegates/index.md)
+- [Checked i unchecked](../keywords/checked-and-unchecked.md)

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 25663774c639e9fea13ced54a9aa7f456922fa1a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 82e022e28d3559791be3236fb80081807426a456
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209941"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192541"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;przestrzeni nazw system.Net&gt; — Element (ustawienia sieci)
 Zawiera ustawienia, które określają, jak .NET Framework łączy się z siecią.  
@@ -95,4 +93,4 @@ Zawiera ustawienia, które określają, jak .NET Framework łączy się z sieci�
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

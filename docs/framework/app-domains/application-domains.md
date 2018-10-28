@@ -14,28 +14,21 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698318"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192619"
 ---
 # <a name="application-domains"></a>Domeny aplikacji
+
 Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną formę izolacji między aplikacjami. Na przykład Windows używa procesów do izolowania aplikacji. Ta Izolacja jest niezbędna do zapewnienia, że kod uruchomiony w jednej aplikacji nie może niekorzystnie wpłynąć na inne, niezależne aplikacje.  
   
  Domeny aplikacji umożliwiają wyznaczanie granic izolacji w zakresie bezpieczeństwa, niezawodności i przechowywanie wersji i zwalniania zestawów. Domeny aplikacji są zwykle tworzone przez hosty środowiska uruchomieniowego, które są odpowiedzialne za ładowanie początkowe środowiska uruchomieniowego języka wspólnego, przed uruchomieniem aplikacji.  
   
- Tematy w tej sekcji dokumentacji wyjaśniają sposób używania domen aplikacji w celu uzyskania izolacji między zestawami.  
-  
- Ten przegląd zawiera następujące sekcje:  
-  
--   [Korzyści wynikające z izolowania aplikacji](#benefits)  
-  
--   [Dokumentacja](#reference)  
-  
-<a name="benefits"></a>   
-## <a name="the-benefits-of-isolating-applications"></a>Korzyści wynikające z izolowania aplikacji  
+## <a name="the-benefits-of-isolating-applications"></a>Korzyści wynikające z izolowania aplikacji
+
  Historycznie granice procesów były używane do izolowania aplikacji uruchomionych na tym samym komputerze. Każda aplikacja jest ładowana w oddzielnym procesie, który izoluje ją od innych aplikacji działających na tym samym komputerze.  
   
  Aplikacje są odizolowane, ponieważ adresy pamięci są względne dla procesu; wskaźnik pamięci przekazywany z jednego procesu do innego nie można używać w żaden znaczący sposób w procesie docelowym. Ponadto nie można wykonywać bezpośrednich wywołań między dwoma procesami. Zamiast tego należy użyć serwerów proxy, które zapewniają poziom pośrednictwa.  
@@ -61,9 +54,9 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną formę
   
 -   Uprawnienia udzielone do kodu mogą być kontrolowane przez domenę aplikacji, w którym wykonywany jest kod.  
   
-  
-## <a name="application-domains-and-assemblies"></a>Domeny aplikacji i zestawy  
- W tym temacie opisano relacje między domenami aplikacji a zestawami. Aby można było wykonać kod zawarty w zestawie, należy go załadować do domeny aplikacji. Uruchomienie typowej aplikacji powoduje wczytanie kilku zestawów do domeny aplikacji.  
+## <a name="application-domains-and-assemblies"></a>Domeny aplikacji i zestawy
+
+ W tej sekcji opisano relację między domenami aplikacji oraz zestawów. Aby można było wykonać kod zawarty w zestawie, należy go załadować do domeny aplikacji. Uruchomienie typowej aplikacji powoduje wczytanie kilku zestawów do domeny aplikacji.  
   
  Sposób ładowania zestawu określa, czy jego kod kompilowany dokładnie na czas (JIT) kod może być współużytkowany przez wiele domen aplikacji uczestniczących w procesie oraz czy zestaw można zwolnić z pamięci procesu.  
   
@@ -95,21 +88,24 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną formę
   
 -   Gdy zestaw jest wczytywany jako niezależny od domen, muszą być odnajdowane i ładowane jego wszystkie zależności, ponieważ zależność, której nie można wczytać jako neutralnej dla domen, uniemożliwia wczytanie w ten sposób całego zestawu.  
   
-## <a name="application-domains-and-threads"></a>Domeny aplikacji i wątki  
+## <a name="application-domains-and-threads"></a>Domeny aplikacji i wątków
+
  Domeny aplikacji tworzą izolującą granicę dla zabezpieczeń, obsługi wersji, niezawodności i zwalnianie kodu zarządzanego. Wątek jest konstrukcji systemu operacyjnego używany przez środowisko uruchomieniowe języka wspólnego do wykonywania kodu. W czasie wykonywania wszystkich zarządzanych kodów jest ładowany do domeny aplikacji i jest uruchamiane przez jeden lub więcej wątków zarządzanych.  
   
  Nie jest sygnałowych domeny aplikacji i wątków. Wiele wątków można wykonać w domenie pojedynczej aplikacji w dowolnym momencie i określonego wątku nie ogranicza się do domeny pojedynczej aplikacji. Oznacza to, że wątki mogą przekraczać granice domeny aplikacji; nowy wątek nie jest tworzony dla każdej domeny aplikacji.  
   
- W dowolnym momencie każdy wątek wykonuje w domenie aplikacji. Zero, jeden lub wiele wątków może wykonywać w dowolnej domenie danej aplikacji. Przechowuje informacje o czasie wykonywania, wątki, które są uruchomione w domenach aplikacji, które. Można znaleźć domeny, w którym wykonywany jest wątek, w dowolnym momencie przez wywołanie metody <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> metody.  
-  
-### <a name="application-domains-and-cultures"></a>Domeny aplikacji i kultur  
+ W dowolnym momencie każdy wątek wykonuje w domenie aplikacji. Zero, jeden lub wiele wątków może wykonywać w dowolnej domenie danej aplikacji. Środowisko uruchomieniowe przechowuje informacje o wątkach, które są uruchomione w domenach aplikacji, które. Można znaleźć domeny, w którym wykonywany jest wątek, w dowolnym momencie przez wywołanie metody <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> metody.
+
+### <a name="application-domains-and-cultures"></a>Domeny aplikacji i kultur
+
  Kultury, która jest reprezentowana przez <xref:System.Globalization.CultureInfo> obiektu, jest skojarzona z wątków. Możesz uzyskać kultury, który jest skojarzony z aktualnie wykonywany wątek przy użyciu <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwości, na które można uzyskać lub ustawić kulturę, który jest skojarzony z aktualnie wykonywany wątek przy użyciu <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Jeśli jawnie ustawiono kultury, który jest skojarzony z wątkiem, za pomocą <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości go w dalszym ciągu być skojarzone z tym wątkiem, gdy wątek przekracza granice domen aplikacji. W przeciwnym razie kultury, który jest skojarzony z wątkiem w danym momencie jest określana przez wartość <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> właściwości w domenie aplikacji, w którym wykonywany jest wątek:  
   
 -   Jeśli wartość właściwości nie jest `null`, kultury, który jest zwracany przez właściwość jest skojarzony z wątkiem (i w związku z tym zwrócone przez <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwości).  
   
 -   Jeśli wartość właściwości jest `null`, bieżącą kulturą systemu jest skojarzony z wątkiem.  
   
-## <a name="programming-with-application-domains"></a>Programowanie za pomocą domen aplikacji  
+## <a name="programming-with-application-domains"></a>Programowanie z domenami aplikacji
+
  Zazwyczaj domeny aplikacji tworzy się i wykonuje na nich operacje programowo za pomocą hostów środowiska uruchomieniowego. Czasami jednak z domenami aplikacji chcą pracować programy. Na przykład program może wczytywać składnik aplikacji do domeny, aby umożliwić zwolnienie domeny (i składnika) z pamięci bez konieczności zatrzymywania całej aplikacji.  
   
  <xref:System.AppDomain> Jest interfejsem programistycznym domen aplikacji. Zawiera ona metody tworzenia domen i zwalniania ich z pamięci, tworzenia wystąpień typów w domenach oraz rejestrowania w celu otrzymywania różnych powiadomień, np. o zwalnianiu domen aplikacji z pamięci. Poniższa tabela zawiera listę najczęściej używanych <xref:System.AppDomain> metody.  
@@ -126,7 +122,8 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną formę
   
  Dostęp do domen aplikacji zapewniają również niezarządzane interfejsy opisane w specyfikacji interfejsów hostujących środowiska uruchomieniowego języka wspólnego. Hosty środowiska uruchomieniowego mogą za pomocą interfejsów z niezarządzanego kodu tworzyć domeny aplikacji i uzyskiwać do nich dostęp wewnątrz procesu.  
   
-## <a name="complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization — Zmienna środowiskowa  
+## <a name="the-complusloaderoptimization-environment-variable"></a>Complus_loaderoptimization — zmienna środowiskowa
+
  Zmienna środowiskowa, który ustawia domyślną zasadę optymalizacji programu ładującego pliku wykonywalnego aplikacji.  
   
 ### <a name="syntax"></a>Składnia  
@@ -135,7 +132,8 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną formę
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Uwagi  
+### <a name="remarks"></a>Uwagi
+
  Typowa aplikacja ładuje kilka zestawów do domeny aplikacji przed wykonaniem kodu, które zawierają.  
   
  Sposób zestaw jest ładowany Określa, czy kod skompilowany jego just-in-time (JIT) może być współużytkowany przez wiele domen aplikacji w procesie.  
@@ -149,7 +147,8 @@ COMPLUS_LoaderOptimization = 1
 > [!CAUTION]
 >  Flaga środowiska COMPLUS_LoaderOptimization została zaprojektowana do użycia w diagnostyce oraz testowania scenariuszy. Posiadanie włączonej flagi może spowodować poważne spowolnienie i wzrost użycia pamięci.  
   
-### <a name="code-example"></a>Przykład kodu  
+### <a name="code-example"></a>Przykładowy kod
+
  Aby wymusić wszystkie zestawy nie można załadować jako niezależne od domeny dla usługi IISADMIN usługi można osiągnąć, dodając `COMPLUS_LoaderOptimization=1` do wartości wielociągu środowiska w kluczu HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN.  
   
 ```  
@@ -159,6 +158,9 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-<a name="reference"></a>   
-## <a name="reference"></a>Tematy pomocy  
- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.AppDomain?displayProperty=nameWithType>
+- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+- [Programowanie z domenami aplikacji i zestawy](index.md)
+- [Używanie domen aplikacji](use.md)

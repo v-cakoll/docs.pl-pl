@@ -2,19 +2,19 @@
 title: NamedPipeConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-ms.openlocfilehash: 3548a1f19672a98ad0fc81eec15d5be29e5170bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77d8403947d341ea2efcef98bbf166f94f75f31f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486289"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188732"
 ---
 # <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
 NamedPipeConnectionPoolSettings  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class NamedPipeConnectionPoolSettings  
 {  
   string GroupName;  
@@ -32,29 +32,29 @@ class NamedPipeConnectionPoolSettings
 ### <a name="groupname"></a>Nazwa grupy  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Nazwa grupy puli połączeń używanej przez element powiązania.  
+ Nazwa grupy puli połączeń używane przez element powiązania.  
   
 ### <a name="idletimeout"></a>IdleTimeout  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Maksymalny czas, który połączenie może być bezczynne, zanim zostanie rozłączone.  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalna liczba połączeń wychodzących dla każdego punktu końcowego na kliencie.  
+ Maksymalna liczba połączeń wychodzących dla każdego punktu końcowego na komputerze klienckim.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>

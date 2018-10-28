@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845401"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189696"
 ---
 # <a name="net-architectural-components"></a>Składniki architektury .NET
 
@@ -63,7 +63,7 @@ Aby dowiedzieć się więcej na temat platformy Mono, zobacz [dokumentacja narz�
 
 Platformy uniwersalnej systemu Windows jest implementacją platformy .NET, który jest używany do tworzenia nowoczesnych, obsługą dotyku aplikacje Windows, jak i oprogramowania dla Internetu rzeczy (IoT). Ustalono, aby zunifikować różnych typów urządzeń, które ma pod kątem, w tym komputerów, tabletów, phablets, telefony i nawet konsoli Xbox. Platformy uniwersalnej systemu Windows zapewnia wiele usług, takich jak w sklepie z aplikacjami scentralizowanego, środowisko wykonawcze (AppContainer) i zestaw interfejsów API Windows, zamiast Win32 (WinRT). Aplikacje mogą być napisane w języku C++, C#, VB.NET i JavaScript. Korzystając z języka C# i VB.NET, interfejsów API platformy .NET są dostarczane przez platformy .NET Core.
 
-Aby dowiedzieć się więcej na temat platformy uniwersalnej systemu Windows, zobacz [wprowadzenie do platformy uniwersalnej Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
+Aby dowiedzieć się więcej na temat platformy uniwersalnej systemu Windows, zobacz [wprowadzenie do platformy uniwersalnej Windows](/windows/uwp/get-started/universal-application-platform-guide).
 
 ## <a name="net-runtimes"></a>Środowiska uruchomieniowe platformy .NET
 
@@ -91,5 +91,5 @@ Masz dostęp do obszerny zestaw narzędzi i składników infrastruktury, współ
 - [Przewodnik platformy .NET Core](../core/index.md)  
 - [.NET framework — przewodnik](../framework/index.md)  
 - [Przewodnik dla języka C#](../csharp/index.md)  
-- [Podręcznik języka F #](../fsharp/index.md)  
+- [Podręcznik języka F#](../fsharp/index.md)  
 - [VB.NET Guide](../visual-basic/index.md)  

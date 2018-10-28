@@ -16,14 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b3e39b952b37f70513b3a84ce6b6059b85e01c28
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 987a8aa789d8c4585a58a031c9d920ee5cab45aa
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845463"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191878"
 ---
 # <a name="tcp-udp"></a>TCP I UDP
 Aplikacje mogą używać usług Transmission Control Protocol (TCP) i protokołu UDP (User Datagram) za pomocą <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, i <xref:System.Net.Sockets.UdpClient> klasy. W ramach tych zajęć protokołu są wbudowane w górnej części <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> klasy i zadbać o szczegółach transferu danych.  

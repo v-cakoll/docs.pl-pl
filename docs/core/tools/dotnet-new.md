@@ -3,13 +3,13 @@ title: polecenia DotNet nowego polecenia — interfejs wiersza polecenia platfor
 description: Nowe polecenie dotnet tworzy nowe projekty .NET Core, na podstawie określonego szablonu.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/31/2018
-ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.date: 10/24/2018
+ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036133"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188208"
 ---
 # <a name="dotnet-new"></a>nowe polecenia DotNet
 
@@ -65,27 +65,27 @@ Szablon do utworzenia wystąpienia podczas wywoływania polecenia. Każdy szablo
 
 Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyskać listę dostępnych szablonów. W poniższej tabeli przedstawiono szablony, które są zainstalowane przy użyciu zestawu .NET Core SDK 2.1.300. Domyślny język dla szablonu jest wyświetlany w nawiasie.
 
-|Opis szablonu                          | Nazwa szablonu   | Języki     |
-|----------------------------------------------|-----------------|---------------|
-| Aplikacja konsolowa                          | `console`       | [C#], F#, VB  |
-| Biblioteka klas                                | `classlib`      | [C#], F#, VB  |
-| Projekt testów jednostkowych                            | `mstest`        | [C#], F#, VB  |
-| projekt testu xUnit                           | `xunit`         | [C#], F#, VB  |
-| Strona razor                                   | `page`          | [C#]          |
-| MVC ViewImports                              | `viewimports`   | [C#]          |
-| MVC ViewStart                                | `viewstart`     | [C#]          |
-| Platforma ASP.NET Core puste                           | `web`           | [C#], F#      |
-| Aplikacja sieci Web platformy ASP.NET Core (Model-View-Controller) | `mvc`           | [C#], F#      |
-| Aplikacja sieci Web platformy ASP.NET Core                         | `razor`         | [C#]          |
-| Platforma ASP.NET Core przy użyciu usługi Angular                    | `angular`       | [C#]          |
-| Platforma ASP.NET Core z użyciem biblioteki React.js                   | `react`         | [C#]          |
-| Platforma ASP.NET Core z użyciem biblioteki React.js i Redux         | `reactredux`    | [C#]          |
-| Interfejs API sieci Web platformy ASP.NET Core                         | `webapi`        | [C#], F#      |
-| Biblioteki klas razor                          | `razorclasslib` | [C#]          |
-| plik Global.JSON                             | `globaljson`    |               |
-| NuGet config                                 | `nugetconfig`   |               |
-| Konfiguracja sieci Web                                   | `webconfig`     |               |
-| Plik rozwiązania                                | `sln`           |               |
+|Opis szablonu                          | Nazwa szablonu    | Języki     |
+|----------------------------------------------|------------------|---------------|
+| Aplikacja konsolowa                          | `console`        | [C#], F#, VB  |
+| Biblioteka klas                                | `classlib`       | [C#], F#, VB  |
+| Projekt testów jednostkowych                            | `mstest`         | [C#], F#, VB  |
+| projekt testu xUnit                           | `xunit`          | [C#], F#, VB  |
+| Strona razor                                   | `page`           | [C#]          |
+| MVC ViewImports                              | `viewimports`    | [C#]          |
+| MVC ViewStart                                | `viewstart`      | [C#]          |
+| Platforma ASP.NET Core puste                           | `web`            | [C#], F#      |
+| Aplikacja sieci Web platformy ASP.NET Core (Model-View-Controller) | `mvc`            | [C#], F#      |
+| Aplikacja sieci Web platformy ASP.NET Core                         | `razor`, `webapp`| [C#]          |
+| Platforma ASP.NET Core przy użyciu usługi Angular                    | `angular`        | [C#]          |
+| Platforma ASP.NET Core z użyciem biblioteki React.js                   | `react`          | [C#]          |
+| Platforma ASP.NET Core z użyciem biblioteki React.js i Redux         | `reactredux`     | [C#]          |
+| Interfejs API sieci Web platformy ASP.NET Core                         | `webapi`         | [C#], F#      |
+| Biblioteki klas razor                          | `razorclasslib`  | [C#]          |
+| plik Global.JSON                             | `globaljson`     |               |
+| NuGet config                                 | `nugetconfig`    |               |
+| Konfiguracja sieci Web                                   | `webconfig`      |               |
+| Plik rozwiązania                                | `sln`            |               |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

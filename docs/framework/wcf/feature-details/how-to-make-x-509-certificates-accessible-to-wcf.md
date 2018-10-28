@@ -10,11 +10,11 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0917569b556c31413b715d75c83a96f3a4b015d7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579975"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192203"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Instrukcje: Udostępnianie certyfikatów X.509 w architekturze WCF
 Aby udostępnić certyfikat X.509 do programu Windows Communication Foundation (WCF), kod aplikacji należy określić nazwę magazynu certyfikatów i lokalizacji. W pewnych okolicznościach tożsamość procesu musi mieć dostęp do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509. Aby uzyskać klucz prywatny skojarzony z certyfikatem X.509 w magazynie certyfikatów, WCF musi mieć uprawnienie, aby to zrobić. Domyślnie tylko właściciel i konto systemowe dostęp klucza prywatnego certyfikatu.  

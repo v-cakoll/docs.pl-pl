@@ -2,13 +2,12 @@
 title: Ochrona komunikatów za pomocą zabezpieczeń transportu
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-author: BrucePerlerMS
-ms.openlocfilehash: 1c2eafc4d1b955fe99d1c18314c490d7205b3f29
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 660c3c002f1892a91a5c0eaefb2cc5c16bb460a3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196218"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187757"
 ---
 # <a name="securing-messages-using-transport-security"></a>Ochrona komunikatów za pomocą zabezpieczeń transportu
 W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikatów (MSMQ) używanego do zabezpieczenia komunikatów wysłanych do kolejki.  

@@ -2,18 +2,18 @@
 title: Hostowanie usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d51157863984314583c5d225bc9d8d0b6cf74874
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505549"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186099"
 ---
 # <a name="hosting-workflow-services"></a>Hostowanie usług przepływu pracy
 Usługi przepływu pracy musi być hostowany na jego odpowiadanie na wiadomości przychodzące. Usługi przepływu pracy korzystają z infrastruktury obsługi komunikatów usługi WCF i w związku z tym znajdują się w podobny sposób. Podobnie jak usługi WCF usług przepływu pracy mogą być hostowane w dowolnej aplikacji zarządzanych, w ramach usługi Internet Information Services (IIS) lub w obszarze Windows Process Activation usług (WAS). Ponadto usługi przepływu pracy mogą być hostowane w ramach systemu Windows Server AppFabric. Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric zobacz [dokumentacji systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [funkcje hostingu programu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), i [pojęcia hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Aby uzyskać więcej informacji na temat różnych sposobów hosta usługi WCF usług zobacz [usług obsługującego](../../../../docs/framework/wcf/hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Hosting w aplikacji zarządzanej
- Hostowanie usługi przepływu pracy w zarządzanej aplikacji, należy użyć <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Konstruktor pozwala na określenie pojedyncze wystąpienie usługi przepływu pracy, definicji usługi przepływu pracy lub działaniem używającym wiadomości działania przepływu pracy. Wywoływanie <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> powoduje, że Usługa rozpoczyna nasłuchiwanie przychodzących wiadomości.
+ Hostowanie usługi przepływu pracy w zarządzanej aplikacji, należy użyć <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Konstruktor pozwala na określenie pojedyncze wystąpienie usługi przepływu pracy, definicji usługi przepływu pracy lub działaniem używającym wiadomości działania przepływu pracy. Wywoływanie <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> powoduje, że Usługa rozpoczyna nasłuchiwanie przychodzących wiadomości.
 
 ## <a name="hosting-under-iis-or-was"></a>Hosting w ramach usług IIS i WAS
  Hostowanie usługi przepływu pracy w ramach usług IIS i WAS obejmuje tworzenie katalogów wirtualnych i umieszczanie plików w katalogu wirtualnym, który definiuje usługę i jego zachowanie. W przypadku hostowanie usługi przepływu pracy w ramach usług IIS i WAS istnieje kilka możliwości:

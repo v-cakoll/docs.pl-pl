@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47ed75d377814a740edece2b6a69e44acbd8ef0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1b4541bc5a878739c17179576739fbe33384445d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004354"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50038909"
 ---
 # <a name="ltpropertygt-element-net-native"></a>Element &lt;Property&gt; (architektura .NET Native)
 Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.  
@@ -75,7 +75,7 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.
   
  Plik ma zastosowanie `All` wartość `Activate` zasady dla `Book` klasy, która zezwala na dostęp do konstruktorów klas przy użyciu odbicia. `Browse` Zasady `Book` klasy jest dziedziczony z jego nadrzędna przestrzeń nazw. Jest ono ustawione na `Required Public`, co sprawia, że metadane dostępne w czasie wykonywania.  
   
- Poniżej znajduje się kod źródłowy dla przykładu. `outputBlock` Reprezentuje zmienną [TextBlock](https://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) kontroli.  
+ Poniżej znajduje się kod źródłowy dla przykładu. `outputBlock` Reprezentuje zmienną <xref:Windows.UI.Xaml.Controls.TextBlock> kontroli.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

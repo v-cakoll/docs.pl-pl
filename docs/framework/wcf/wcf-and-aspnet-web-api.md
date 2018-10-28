@@ -2,15 +2,15 @@
 title: Interfejs API sieci Web programu WCF i platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: ca44a439fa73b16764725ff56019a1d01cc0c8cd
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
-ms.translationtype: MT
+ms.openlocfilehash: 9ff974ca59b5a6448a140cbb1e7d6e8114840bdf
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308464"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040649"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>Interfejs API sieci Web programu WCF i platformy ASP.NET
-Usługi WCF jest jednolity model programowania firmy Microsoft do budowania aplikacji usługowych. Umożliwia deweloperom tworzenie rozwiązań bezpieczne, niezawodne i transakcyjnych, które integrują się na platformach oraz współpraca z istniejących inwestycji. [ASP.NET Web API](http://www.asp.net/web-api) to struktura, która ułatwia tworzenie usług HTTP, docierających do szerokiej gamy klientów, w tym przeglądarek i urządzeń przenośnych. Web API platformy ASP.NET jest idealną platformą do tworzenia aplikacji typu RESTful na .NET Framework. W tym temacie przedstawiono wskazówki pomagające w podjęciu decyzji, technologii, które będzie najlepiej odpowiadać potrzebom użytkownika.  
+Usługi WCF jest jednolity model programowania firmy Microsoft do budowania aplikacji usługowych. Umożliwia deweloperom tworzenie rozwiązań bezpieczne, niezawodne i transakcyjnych, które integrują się na platformach oraz współpraca z istniejących inwestycji. [ASP.NET Web API](https://www.asp.net/web-api) to struktura, która ułatwia tworzenie usług HTTP, docierających do szerokiej gamy klientów, w tym przeglądarek i urządzeń przenośnych. Web API platformy ASP.NET jest idealną platformą do tworzenia aplikacji typu RESTful na .NET Framework. W tym temacie przedstawiono wskazówki pomagające w podjęciu decyzji, technologii, które będzie najlepiej odpowiadać potrzebom użytkownika.  
   
 ## <a name="choosing-which-technology-to-use"></a>Wybór technologii  
  W poniższej tabeli opisano główne funkcje poszczególnych technologii.  

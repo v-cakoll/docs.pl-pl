@@ -3,12 +3,12 @@ title: Podręcznik języka F#
 description: 'Ten przewodnik zawiera omówienie różnych materiałów szkoleniowych dla języka F #, funkcjonalny język programowania, który działa na platformie .NET.'
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: d3e10b6eb99f35b8eddeaa1f0ae257dd17d5cc41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cd5bd95373c8a52a8d2b2348a51970560e8b272
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480681"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188368"
 ---
 # <a name="f-guide"></a>Podręcznik języka F#
 
@@ -56,7 +56,7 @@ Podręcznik języka F # zawiera wiele zasobów, aby dowiedzieć się więcej ję
 
 [Witryny sieci Web fragmenty F #](http://www.fssnip.net) zawiera zbiór dużych fragmentów kodu, przedstawiający sposób zrobić wszystko, co w języku F #, począwszy od początkujących bezwzględne do fragmentów bardzo zaawansowane.
 
-[F # Software Foundation Slack](http://fsharp.org/guides/slack/) jest doskonałym miejscem dla początkujących i ekspertów, jak to bardzo aktywne, a ma kilka na świecie najlepsze F # w programowaniu dostępne w celu prowadzenia rozmowy. Firma Microsoft zdecydowanie zaleca się dołączania.
+[F # Software Foundation Slack](https://fsharp.org/guides/slack/) jest doskonałym miejscem dla początkujących i ekspertów, jak to bardzo aktywne, a ma kilka na świecie najlepsze F # w programowaniu dostępne w celu prowadzenia rozmowy. Firma Microsoft zdecydowanie zaleca się dołączania.
 
 ## <a name="the-f-software-foundation"></a>F # Software Foundation
 
@@ -64,4 +64,4 @@ Mimo że firma Microsoft jest podstawowym dewelopera języka F # i jego narzędz
 
 Celem F # Software Foundation jest wspieranie, ochronę i Rozwijaj język programowania, F # i pomocy technicznej i ułatwienia rozwój społeczności zróżnicowanych i międzynarodowe w programowaniu w języku F #.
 
-Aby dowiedzieć się więcej i Dołącz do społeczności, zapoznaj się z [fsharp.org](http://fsharp.org). To bezpłatne dołączyć i sieci deweloperów F # w podstawą jest coś, czego nie chcesz ominęła!
+Aby dowiedzieć się więcej i Dołącz do społeczności, zapoznaj się z [fsharp.org](https://fsharp.org). To bezpłatne dołączyć i sieci deweloperów F # w podstawą jest coś, czego nie chcesz ominęła!

@@ -3,12 +3,12 @@ title: Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym
 description: Dowiedz się, jak i dynamiczne określanie filtrów predykatów w czasie wykonywania za pomocą LINQ w C#.
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 6798b80d482bd6ae2133c0bf861f30c43f6738b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ece5940edd615f30acab06a429de300e27811a66
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512579"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038491"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym
 
@@ -44,7 +44,7 @@ W niektórych przypadkach nie wiesz, do czasu wykonywania ile predykaty, należy
 
 8. Następnym krokiem jest, aby ponownie uruchomić projekt, tym razem przy użyciu danych wejściowych wprowadzić w czasie wykonywania, zamiast tablicy `ids`. Zmiana `QueryByID(ids)` do `QueryByID(args)` w `Main` metody.
 
-9. Uruchom projekt z argumentami wiersza polecenia `122 117 120 115`. Po uruchomieniu projektu, te wartości stają się elementy `args`, parametr `Main` metody...
+9. Uruchom projekt z argumentami wiersza polecenia `122 117 120 115`. Po uruchomieniu projektu, te wartości stają się elementy `args`, parametr `Main` metody.
 
 10. W oknie konsoli wyświetlane są następujące dane wyjściowe:
 

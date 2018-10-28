@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd2714b8220b6c4255a08d09275a015ba3966fa9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 53b757417f1f37c1a76021a518570da85dc04ad2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744359"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187325"
 ---
 # <a name="assembly-versioning"></a>Przechowywanie wersji zestawu
 Zarządzanie wszystkimi wersjami zestawów używających środowiska uruchomieniowego języka wspólnego odbywa się na poziomie zestawów. Konkretna wersja zestawu oraz wersje zestawów zależnych są rejestrowane w manifeście zestawu. Domyślna zasada dotycząca wersji środowiska dla środowiska uruchomieniowego stanowi, że aplikacje są uruchamiane tylko w wersjach, w których zostały skompilowane i przetestowane, chyba że inaczej stanowią jawnie zasady dotyczące wersji określone w plikach konfiguracji (plik konfiguracji aplikacji, plik zasad wydawcy i plik konfiguracji administratora komputera).  
@@ -31,14 +31,14 @@ Zarządzanie wszystkimi wersjami zestawów używających środowiska uruchomieni
   
 3.  Na podstawie oryginalnego odwołania do zestawu ustala poprawny zestaw oraz wszelkie przekierowania określone w plikach konfiguracji, po czym ustala wersję, która ma zostać powiązana z wywołującym zestawem.  
   
-4.  Sprawdza globalnej pamięci podręcznej zestawów, codebases określony w pliki konfiguracji, a następnie kontroli katalogu i jego podkatalogach, przy użyciu sondowania reguł aplikacji wyjaśniono w [jak zestawy środowiska wykonawczego lokalizuje](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+4.  Sprawdza, czy globalnej pamięci podręcznej zestawów, bazy kodów określone w plikach konfiguracji, a następnie katalog i podkatalogi, przy użyciu zasad sondowania wyjaśnionych aplikacji wyjaśnione w [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
  Poniższa ilustracja przedstawia te kroki.  
   
- ![Deklaracja myAssembly extern](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
+ ![Deklaracja extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
 Rozpoznawanie żądania powiązania zestawu  
   
- Aby uzyskać więcej informacji dotyczących konfigurowania aplikacji, zobacz [konfigurowania aplikacji](../../../docs/framework/configure-apps/index.md). Aby uzyskać więcej informacji na temat powiązania zasad, zobacz [jak zestawy środowiska wykonawczego lokalizuje](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Aby uzyskać więcej informacji na temat konfigurowania aplikacji, zobacz [konfigurowania aplikacji](../../../docs/framework/configure-apps/index.md). Aby uzyskać więcej informacji na temat zasad tworzenia powiązań, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 ## <a name="version-information"></a>Informacje o wersji  
  Każdy zestaw może przedstawiać informacje o wersji na dwa odrębne sposoby:  
@@ -60,7 +60,7 @@ Rozpoznawanie żądania powiązania zestawu
   
  Na potrzeby zarządzania wersjami środowisko uruchomieniowe rozróżnia między zestawami zwykłymi i o silnej nazwie. Sprawdzanie wersji dotyczy tylko zestawów o silnej nazwie.  
   
- Informacji o określaniu wersji powiązania zasad, zobacz [konfigurowania aplikacji](../../../docs/framework/configure-apps/index.md). Aby dowiedzieć się jak używa informacje o wersji środowiska uruchomieniowego można znaleźć określonego zestawu, zobacz [jak zestawy środowiska wykonawczego lokalizuje](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Aby uzyskać informacje dotyczące określania zasad powiązań wersji, zobacz [konfigurowania aplikacji](../../../docs/framework/configure-apps/index.md). Aby uzyskać informacje o tym, jak środowisko wykonawcze używa informacji o wersji można znaleźć określonego zestawu, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 ### <a name="assembly-informational-version"></a>Informacje o wersji zestawu  
  Informacje o wersji zestawu to ciąg tekstowy, który dołącza do zestawu dodatkowe informacje o wersji jedynie w celach informacyjnych. Informacje te nie są używane w czasie wykonywania. Tekstowe informacje o wersji nawiązują do materiałów marketingowych, opakowania lub nazwy produktu. Informacjami o wersji mogą być na przykład ciągi „Środowisko uruchomieniowe języka wspólnego w wersji 1.0” lub „NET Control z dodatkiem SP 2”. W systemie Microsoft Windows w oknie dialogowym właściwości pliku na karcie Wersja informacje te są wyświetlane w polu „Wersja produktu”.  
@@ -68,10 +68,10 @@ Rozpoznawanie żądania powiązania zestawu
 > [!NOTE]
 >  Można podać dowolny tekst, ale jeśli ciąg tekstowy nie będzie w formacie używanym przez numer wersji zestawu albo jeśli będzie w tym formacie, ale będzie zawierać symbole wieloznaczne, podczas kompilacji pojawi się komunikat ostrzegawczy. Ostrzeżenie to jest nieszkodliwe.  
   
- Informacje o wersji są reprezentowane za pomocą niestandardowego atrybutu <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Aby uzyskać więcej informacji na temat atrybutu wersji informacyjny zobacz [ustawienie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md).  
+ Informacje o wersji są reprezentowane za pomocą niestandardowego atrybutu <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Aby uzyskać więcej informacji na temat atrybutu wersji, zobacz [Konfigurowanie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)  
- [Ustawienie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md)  
- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)  
+- [Ustawienie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md)  
+- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

@@ -2,12 +2,12 @@
 title: Protokoły obsługi komunikatów
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 7d94b917f3d8d2fd7faed28b9320edc240724e0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703014"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183857"
 ---
 # <a name="messaging-protocols"></a>Protokoły obsługi komunikatów
 
@@ -47,7 +47,7 @@ Specyfikacja/dokumentu:
 
 Następujące obszary nazw XML i skojarzone prefiksy są używane w tym temacie:
 
-| Prefiks | Namespace Uniform Resource Identifier (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope`| | s12 | `http://www.w3.org/2003/05/soap-envelope`| | wsa | `http://www.w3.org/2004/08/addressing`| | wsam | `http://www.w3.org/2007/05/addressing/metadata`| | wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing`| | wsa10 | `http://www.w3.org/2005/08/addressing`| | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl`| | xop | `http://www.w3.org/2004/08/xop/include`| | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime`| | dp |`http://schemas.microsoft.com/net/2006/06/duplex`|
+| Prefiks | Namespace Uniform Resource Identifier (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope` || s12 | `http://www.w3.org/2003/05/soap-envelope` || wsa | `http://www.w3.org/2004/08/addressing` || wsam | `http://www.w3.org/2007/05/addressing/metadata` || wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` || wsa10 | `http://www.w3.org/2005/08/addressing` || wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl` || xop | `http://www.w3.org/2004/08/xop/include` || xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | | punkt dystrybucji |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>Protokołu SOAP 1.1 i SOAP 1.2
 
@@ -190,20 +190,20 @@ Jeśli punkt końcowy usługi WCF została skonfigurowana do wiadomości z danym
 ### <a name="web-services-addressing-faults"></a>Eliminowanie błędów usługi sieci Web
 R3411: WCF tworzy następujące błędy, zdefiniowane przez WS-Addressing 2004/08.
 
-|Kod|Przyczyna|
+| Kod | Przyczyna |
 |----------|-----------|
-|`wsa:DestinationUnreachable`|Wiadomość dotarła z `ReplyTo` inny niż adres zwrotny ustanowione dla tego kanału; Brak punktów końcowych nasłuchujących pod adresem określonym w nagłówku na.|
-|`wsa:ActionNotSupported`|kanały infrastruktury lub dyspozytora skojarzonej z punktem końcowym nie rozpoznają action określony w `Action` nagłówka.|
+| `wsa:DestinationUnreachable` | Wiadomość dotarła z `ReplyTo` inny niż adres zwrotny ustanowione dla tego kanału; Brak punktów końcowych nasłuchujących pod adresem określonym w nagłówku na. |
+| `wsa:ActionNotSupported` | kanały infrastruktury lub dyspozytora skojarzonej z punktem końcowym nie rozpoznają action określony w `Action` nagłówka. |
 
 R3412: WCF tworzy następujące błędy, zdefiniowane przez WS-Addressing 1.0.
 
-|Kod|Przyczyna|
+| Kod | Przyczyna |
 |----------|-----------|
-|`wsa10:InvalidAddressingHeader`|Duplikuj `wsa:To`, `wsa:ReplyTo`, `wsa:From` lub `wsa:MessageID`. Duplikuj `wsa:RelatesTo` o takiej samej `RelationshipType`.|
-|`wsa10:MessageAddressingHeaderRequired`|Brak wymaganego nagłówka adresowanie.|
-|`wsa10:DestinationUnreachable`|Wiadomość dotarła z `ReplyTo` innego niż adres zwrotny ustanowione dla tego kanału. Brak punktów końcowych nasłuchujących pod adresem określonym w nagłówku na.|
-|`wsa10:ActionNotSupported`|Akcja określona w `Action` nagłówka nie jest rozpoznawane przez infrastrukturę kanałów lub dyspozytora skojarzonej z punktem końcowym.|
-|`wsa10:EndpointUnavailable`|Kanał RM wysyła ten błąd, wskazujący na punkt końcowy nie będzie przetwarzać sekwencji na podstawie badania `CreateSequence` nagłówków adresowych wiadomości.|
+| `wsa10:InvalidAddressingHeader` | Duplikuj `wsa:To`, `wsa:ReplyTo`, `wsa:From` lub `wsa:MessageID`. Duplikuj `wsa:RelatesTo` o takiej samej `RelationshipType`. |
+| `wsa10:MessageAddressingHeaderRequired` | Brak wymaganego nagłówka adresowanie. |
+| `wsa10:DestinationUnreachable` | Wiadomość dotarła z `ReplyTo` innego niż adres zwrotny ustanowione dla tego kanału. Brak punktów końcowych nasłuchujących pod adresem określonym w nagłówku na. |
+| `wsa10:ActionNotSupported` | Akcja określona w `Action` nagłówka nie jest rozpoznawane przez infrastrukturę kanałów lub dyspozytora skojarzonej z punktem końcowym. |
+| `wsa10:EndpointUnavailable` | Kanał RM wysyła ten błąd, wskazujący na punkt końcowy nie będzie przetwarzać sekwencji na podstawie badania `CreateSequence` nagłówków adresowych wiadomości. |
 
 Mapy kodu w poprzednich tabelach, aby `FaultCode` w SOAP 1.1 i `SubCode` (przy użyciu kodu = nadawcy) w SOAP 1.2.
 

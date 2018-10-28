@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 8583c74f85d9638313db1779610c0f6dac9cfbe5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2c49c28d99bb3d300fd4589a088b2f086bdfd45d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857761"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184481"
 ---
 # <a name="default-service-behavior"></a>Domyślne zachowanie usługi
 Niniejszy przykład pokazuje, jak można skonfigurować ustawienia zachowania usługi. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. W tym przykładzie jawnie definiuje zachowania usługi i zachowania operacji za pomocą <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutów. Zachowania można skonfigurować w plikach konfiguracyjnych lub obowiązkowo w kodzie (tak jak w przykładzie pokazano).  
@@ -22,7 +22,7 @@ Niniejszy przykład pokazuje, jak można skonfigurować ustawienia zachowania us
   
  Klasa usługi określa zachowania <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> jak pokazano w następującym przykładzie kodu. Wszystkie wartości są wartości domyślne.  
   
-```  
+```csharp
 [ServiceBehavior(  
     AutomaticSessionShutdown=true,  
     ConcurrencyMode=ConcurrencyMode.Single,  
@@ -68,7 +68,7 @@ public class CalculatorService : ICalculator
   
  Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Opóźnienie między wywołania jest wynikiem wywołania `System.Threading.Thread.Sleep()` w operacji usługi. Pozostałe przykłady zachowanie wyjaśnić te zachowania bardziej szczegółowo. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

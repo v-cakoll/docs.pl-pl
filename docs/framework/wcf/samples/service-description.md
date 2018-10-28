@@ -2,12 +2,12 @@
 title: Opis usługi
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: 1acd82fddd378a379023c7aa46ead2ce36c5b243
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c31edae952b20823945403dd5aebb438bcbf0c11
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003350"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195271"
 ---
 # <a name="service-description"></a>Opis usługi
 Przykładowy opis usługi pokazuje, jak usługa można pobrać jego informacje o opisie usługi w czasie wykonywania. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), z operacją dodatkowych usług zdefiniowane, zwracają opisowe informacje na temat usługi. Informacje, która jest zwracana Wyświetla adresy podstawowe i punktów końcowych usługi. Te informacje przy użyciu udostępnianych przez usługę <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, i <xref:System.ServiceModel.Description.ServiceDescription> klasy.  
@@ -19,7 +19,7 @@ Przykładowy opis usługi pokazuje, jak usługa można pobrać jego informacje o
   
  W tym przykładzie została zmodyfikowana wersja kontraktu Kalkulator, o nazwie `IServiceDescriptionCalculator`. Kontrakt definiuje operacji dodatkowej usługi o nazwie `GetServiceDescriptionInfo` zwracającego ciąg wielowierszowy do klienta, który opisuje podstawowy adres lub adresy i punkt końcowy usługi lub punktów końcowych usługi.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IServiceDescriptionCalculator  
 {  
@@ -38,7 +38,7 @@ public interface IServiceDescriptionCalculator
   
  Kod implementacji `GetServiceDescriptionInfo` używa <xref:System.ServiceModel.Description.ServiceDescription> Aby wyświetlić listę punktów końcowych usługi. Ponieważ punktów końcowych usługi może mieć względnych adresów, najpierw Wyświetla adres podstawowy dla usługi. Aby uzyskać wszystkie te informacje, kod uzyskuje jego operacji kontekstu za pomocą <xref:System.ServiceModel.OperationContext.Current%2A>. <xref:System.ServiceModel.ServiceHost> i jego <xref:System.ServiceModel.Description.ServiceDescription> obiektu są pobierane z kontekstu operacji. Aby wyświetlić listę podstawowych punktów końcowych usługi, kod wykonuje iterację przez hosta usługi <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> kolekcji. Aby wyświetlić listę punktów końcowych usługi dla usługi, kodu iteruje po kolekcji punktów końcowych opisu usługi.  
   
-```  
+```csharp
 public string GetServiceDescriptionInfo()  
 {  
     string info = "";  
@@ -65,7 +65,7 @@ public string GetServiceDescriptionInfo()
   
  Po uruchomieniu przykładu, zobacz operacje obliczeniowe, a następnie informacji usługi zwracanych przez `GetServiceDescriptionInfo` operacji. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  

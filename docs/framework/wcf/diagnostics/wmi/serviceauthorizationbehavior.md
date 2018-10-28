@@ -2,19 +2,19 @@
 title: ServiceAuthorizationBehavior
 ms.date: 03/30/2017
 ms.assetid: 77dad8e8-fea4-4d1c-b366-2f01a2a87f78
-ms.openlocfilehash: e03f83927ec5aef7f916b2262c9c8cff1db68ac9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: c916d0820a1eae333384deab7b0619abfbdc8167
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486476"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "49415383"
 ---
 # <a name="serviceauthorizationbehavior"></a>ServiceAuthorizationBehavior
 ServiceAuthorizationBehavior  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class ServiceAuthorizationBehavior : Behavior  
 {  
   boolean ImpersonateCallerForAllOperations;  
@@ -33,36 +33,36 @@ class ServiceAuthorizationBehavior : Behavior
 ### <a name="impersonatecallerforalloperations"></a>ImpersonateCallerForAllOperations  
  Typ danych: wartość logiczna  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Wartość, która kontroluje, czy usługa próbuje dokonać personifikacji, używając poświadczeń dostarczonych w komunikacie przychodzącym.  
+ Wartość, która kontroluje, czy usługa próbuje personifikować przy użyciu poświadczeń dostarczonych przez wiadomości przychodzącej.  
   
 ### <a name="principalpermissionmode"></a>PrincipalPermissionMode  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Podmiot zabezpieczeń używany do wykonywania operacji na serwerze.  
   
 ### <a name="roleprovider"></a>Element RoleProvider  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Nazwa dostawcy ról ASP.NET.  
   
-### <a name="serviceauthorizationmanager"></a>Obiekt ServiceAuthorizationManager  
+### <a name="serviceauthorizationmanager"></a>ServiceAuthorizationManager  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Menedżer autoryzacji używany do przeprowadzania niestandardowej autoryzacji.  
+ Menedżer autoryzacji używanych na potrzeby autoryzacji niestandardowej.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>

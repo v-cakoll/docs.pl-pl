@@ -5,12 +5,12 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36529414d5b51e9e4ade7447ff6e5e908e5153ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515283"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188576"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Sposób porównywania ciągów w języku C\#
 
@@ -21,7 +21,7 @@ Czynniki mające wpływ na porównania ciągów są skomplikowany te dwa pytania
 - Możesz wybrać porównania porządkowego lub językową.
 - Możesz wybrać, jeśli przypadek ma znaczenie.
 - Możesz wybrać kultury określonej porównania.
-- Comparisions językowe są kultury i platformy zależnych.
+- Porównań lingwistycznych są kultury i platformy zależnych.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -82,7 +82,7 @@ Zależne od kultury porównań są zwykle używane do porównywania i sortowania
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-Comparisions językowe są zależne od bieżącej kultury i są zależne systemu operacyjnego. Należy wykonać, pod uwagę podczas pracy z porównania ciągów.
+Porównania są zależne od bieżącej kultury i są zależne systemu operacyjnego. Należy wykonać, pod uwagę podczas pracy z porównania ciągów.
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>Językowej wyszukiwania i sortowania ciągów w tablicach
 

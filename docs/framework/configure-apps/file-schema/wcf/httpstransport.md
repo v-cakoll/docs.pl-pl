@@ -2,12 +2,12 @@
 title: '&lt;httpsTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: 972fc94234d5eeabcdb428bc5f0cff81e69cec9b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b31965d5c61969f673dfa5627e40567ea0a189a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850312"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181582"
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 Określa protokół transportu HTTP przekazywania wiadomości SOAP do niestandardowego powiązania.  
@@ -49,7 +49,7 @@ Określa protokół transportu HTTP przekazywania wiadomości SOAP do niestandar
 |allowCookies|Wartość logiczna określająca, czy klient akceptuje pliki cookie i propaguje je do przyszłych żądań. Wartość domyślna to `false`.<br /><br /> Podczas interakcji z usługami sieci Web ASMX, które używają plików cookie, można użyć tego atrybutu. W ten sposób można się upewnić, że pliki cookie, zwrócona z serwera są automatycznie kopiowane do wszystkich przyszłych żądań za daną usługę.|  
 |authenticationScheme|Określa protokół używany do uwierzytelniania żądań klienta przetwarzanych przez odbiornik HTTP. Prawidłowe wartości są następujące:<br /><br /> -Podsumowanie: Określa uwierzytelnianie szyfrowane.<br />-Negocjowania: Negocjuje z klientem, aby określić schemat uwierzytelniania. Jeśli zarówno klient, jak i serwer obsługują protokół Kerberos, jest używany; w przeciwnym razie uwierzytelnianie NTLM jest używany.<br />-Ntlm: Określa uwierzytelniania NTLM.<br />-Podstawowa: Określa podstawowego uwierzytelniania.<br />-Anonimowe: Określa uwierzytelnianie anonimowe.<br /><br /> Wartość domyślna to anonimowe. Ten atrybut jest typu <xref:System.Net.AuthenticationSchemes>. Ten atrybut można ustawić tylko raz.|  
 |bypassProxyOnLocal|Wartość logiczna, która wskazuje, czy pominąć serwer proxy dla adresów lokalnych. Wartość domyślna to `false`.<br /><br /> Lokalny adres jest taki, który znajduje się w lokalnej sieci LAN albo sieci intranet.<br /><br /> Windows Communication Foundation (WCF) zawsze ignoruje serwera proxy, jeśli adres usługi zaczyna się od `http://localhost`.<br /><br /> Należy używać nazwy hosta zamiast nazwy localhost, gdy klienci mają go za pośrednictwem serwera proxy w przypadku usług na tym samym komputerze.|  
-|hostnameComparisonMode|Określa tryb porównywania nazwy hosta HTTP używany do analizowania identyfikatorów URI. Prawidłowe wartości to,<br /><br /> -StrongWildcard: ("+") jest zgodna wszystkich możliwych nazw hostów w kontekście określony schemat, port i względną identyfikatora URI.<br />— Dokładnie: bez symboli wieloznacznych<br />-WeakWildcard: ("*") jest zgodna wszystkich możliwych nazwą hosta w kontekście określony schemat, port i względną UIR, które nie zostały jawnie dopasowany lub za pośrednictwem mechanizmu silny symbol wieloznaczny.<br /><br /> Wartość domyślna to StrongWildcard. Ten atrybut jest typu `System.ServiceModel.HostnameComparison`.|  
+|hostnameComparisonMode|Określa tryb porównywania nazwy hosta HTTP używany do analizowania identyfikatorów URI. Prawidłowe wartości to,<br /><br /> -StrongWildcard: ("+") jest zgodna wszystkich możliwych nazw hostów w kontekście określony schemat, port i względną identyfikatora URI.<br />— Dokładnie: bez symboli wieloznacznych<br />-WeakWildcard: ("\*") jest zgodna wszystkich możliwych nazwą hosta w kontekście określony schemat, port i względną UIR, które nie zostały jawnie dopasowany lub za pośrednictwem mechanizmu silny symbol wieloznaczny.<br /><br /> Wartość domyślna to StrongWildcard. Ten atrybut jest typu `System.ServiceModel.HostnameComparison`.|  
 |opcję manualAddressing|Wartość logiczna umożliwiająca użytkownikowi przejęcie kontroli nad adresowaniem komunikatów. Ta właściwość jest zwykle używana w scenariuszach routera, gdzie Określa, co kilka miejsc docelowych, można wysłać wiadomości do aplikacji.<br /><br /> Po ustawieniu `true`, kanał zakłada komunikat już został rozwiązany i nie dodaje żadnych dodatkowych informacji do niego. Użytkownik może następnie indywidualnie adresów każdej wiadomości.<br /><br /> Po ustawieniu `false`, domyślnego mechanizmu adresowania Windows Communication Foundation (WCF) automatycznie tworzy adresy wszystkich wiadomości.<br /><br /> Wartość domyślna to `false`.|  
 |maxBufferPoolSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar puli bufora. Wartość domyślna to 524288.<br /><br /> Wiele elementów usług WCF za pomocą buforów. Tworzenie i niszczenie buforów za każdym razem, gdy są one używane jest kosztowne, a także jest kosztowne wyrzucania elementów bezużytecznych dla buforów. Dzięki pulom buforu zająć buforu z puli, go używać i przywrócić go do puli, gdy wszystko będzie gotowe. Ten sposób unika się obciążenie tworzeniem i likwidowaniem buforów.|  
 |wartość maxBufferSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar buforu. Wartość domyślna to 524288|  

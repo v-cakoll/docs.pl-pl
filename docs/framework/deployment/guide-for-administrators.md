@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502369"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195687"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework — Przewodnik wdrażania dla administratorów
 W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego zależności systemowe przez sieć przy użyciu programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby uzyskać listę wymagania sprzętowe i programowe dotyczące instalowania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md).  
@@ -37,16 +37,16 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
 ## <a name="the-deployment-process"></a>Proces wdrażania  
  Gdy jest dostępna wymagana infrastruktura, należy użyć programu System Center 2012 Manager Configuration w celu wdrożenia pakietu redystrybucyjnego programu .NET Framework na komputerach w sieci. Tworzenie infrastruktury obejmuje utworzenie i zdefiniowanie pięciu podstawowych obszarów: kolekcji, pakietu i programu dla oprogramowania, punktów dystrybucji i wdrożeń.  
   
--   **Kolekcje** grup zasobów programu Configuration Manager, takich jak użytkownicy, grupy użytkowników lub komputerów, na których jest wdrożona programu .NET Framework. Aby uzyskać więcej informacji, zobacz [kolekcje w programie Configuration Manager](https://technet.microsoft.com/library/gg682169.aspx) w bibliotece dokumentacji programu Configuration Manager.  
+-   **Kolekcje** grup zasobów programu Configuration Manager, takich jak użytkownicy, grupy użytkowników lub komputerów, na których jest wdrożona programu .NET Framework. Aby uzyskać więcej informacji, zobacz [wprowadzenie do kolekcji w programie System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) w bibliotece dokumentacji programu Configuration Manager.  
   
--   **Pakiety i programy** zazwyczaj reprezentują aplikacje do zainstalowania na komputerze klienckim, ale mogą także zawierać pojedyncze pliki, aktualizacji lub nawet polecenia. Aby uzyskać więcej informacji, zobacz [pakiety i programy w programie Configuration Manager](https://technet.microsoft.com/library/gg699369.aspx) w bibliotece dokumentacji programu Configuration Manager.  
+-   **Pakiety i programy** zazwyczaj reprezentują aplikacje do zainstalowania na komputerze klienckim, ale mogą także zawierać pojedyncze pliki, aktualizacji lub nawet polecenia. Aby uzyskać więcej informacji, zobacz [pakiety i programy w programie System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs) w bibliotece dokumentacji programu Configuration Manager.  
   
--   **Punkty dystrybucji** są przechowywania plików wymaganych do działania oprogramowania na komputery klienckie ról systemu lokacji programu Configuration Manager. Gdy klient programu Configuration Manager odbiera i przetwarza wdrożenie oprogramowania, kontaktuje się z punktem dystrybucji w celu pobrania zawartości skojarzonej z oprogramowaniem i rozpoczęcia procesu instalacji. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zarządzania zawartością w programie Configuration Manager](https://technet.microsoft.com/library/gg682083.aspx) w bibliotece dokumentacji programu Configuration Manager.  
+-   **Punkty dystrybucji** są przechowywania plików wymaganych do działania oprogramowania na komputery klienckie ról systemu lokacji programu Configuration Manager. Gdy klient programu Configuration Manager odbiera i przetwarza wdrożenie oprogramowania, kontaktuje się z punktem dystrybucji w celu pobrania zawartości skojarzonej z oprogramowaniem i rozpoczęcia procesu instalacji. Aby uzyskać więcej informacji, zobacz [podstawowe pojęcia związane z zarządzaniem zawartością w programie Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) w bibliotece dokumentacji programu Configuration Manager.  
   
--   **Wdrożenia** poinstruować odpowiednie elementy członkowskie określonej kolekcji docelowej można zainstalować pakietu oprogramowania. Aby uzyskać więcej informacji, zobacz [jak wdrażać aplikacje w programie Configuration Manager](https://technet.microsoft.com/library/gg682082.aspx) w bibliotece dokumentacji programu Configuration Manager.  
+-   **Wdrożenia** poinstruować odpowiednie elementy członkowskie określonej kolekcji docelowej można zainstalować pakietu oprogramowania. 
   
 > [!IMPORTANT]
->  Procedury opisane w tym temacie zawierają typowe ustawienia służące do tworzenia i wdrażania pakietu oraz programu i mogą nie obejmować wszystkich możliwych ustawień. Inne opcje wdrażania programu Configuration Manager, zobacz [bibliotece dokumentacji programu Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  
+>  Procedury opisane w tym temacie zawierają typowe ustawienia służące do tworzenia i wdrażania pakietu oraz programu i mogą nie obejmować wszystkich możliwych ustawień. Inne opcje wdrażania programu Configuration Manager, zobacz [bibliotece dokumentacji programu Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29).  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>Wdrażanie programu .NET Framework  
@@ -62,7 +62,7 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Tworzenie kolekcji  
- W tym kroku należy wybrać komputery, na których będzie wdrażany pakiet i program, i zgrupować je w kolekcji urządzeń. Aby utworzyć kolekcję w programie Configuration Manager, można użyć bezpośrednich reguł członkostwa (elementy członkowskie kolekcji są określane ręcznie) lub reguł zapytań (program Configuration Manager określa elementy członkowskie kolekcji na podstawie określonych kryteriów). Aby uzyskać więcej informacji na temat reguł członkostwa, w tym o zapytaniach i regułach bezpośrednich, zobacz [wprowadzenie do kolekcji w programie Configuration Manager](https://technet.microsoft.com/library/gg682177.aspx) w bibliotece dokumentacji programu Configuration Manager.  
+ W tym kroku należy wybrać komputery, na których będzie wdrażany pakiet i program, i zgrupować je w kolekcji urządzeń. Aby utworzyć kolekcję w programie Configuration Manager, można użyć bezpośrednich reguł członkostwa (elementy członkowskie kolekcji są określane ręcznie) lub reguł zapytań (program Configuration Manager określa elementy członkowskie kolekcji na podstawie określonych kryteriów). Aby uzyskać więcej informacji na temat reguł członkostwa, w tym o zapytaniach i regułach bezpośrednich, zobacz [wprowadzenie do kolekcji w programie System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) w bibliotece dokumentacji programu Configuration Manager.  
   
  Aby utworzyć kolekcję:  
   
@@ -83,8 +83,6 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
 8.  Na **Wybieranie zasobów** strony, zaznacz pole wyboru dla każdego komputera, który chcesz wdrożyć program .NET Framework do. Wybierz **dalej**, a następnie ukończ jego pracę.  
   
 9. Na **reguł członkostwa** strony **Kreatora tworzenia kolekcji urządzeń**, wybierz **dalej**, a następnie ukończ jego pracę.  
-  
- Aby uzyskać więcej informacji na temat kolekcji, zobacz [kolekcje w programie Configuration Manager](https://technet.microsoft.com/library/bb693730.aspx) w bibliotece dokumentacji programu Configuration Manager.  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>Tworzenie pakietu i programu dla redystrybucyjnego pakietu programu .NET Framework  
@@ -154,7 +152,7 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
   
 8.  Ukończ pracę kreatora.  
   
- Pakiet zawiera teraz wszystkie informacje niezbędne do dyskretnego wdrożenia programu .NET Framework 4.5. Przed przystąpieniem do wdrażania pakietów i programów, sprawdź, czy został on zainstalowany w punkcie dystrybucji; zobacz sekcję "Monitorowanie zawartości" [operacje i Obsługa zarządzania zawartością w programie Configuration Manager](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) w bibliotece dokumentacji programu Configuration Manager.  
+ Pakiet zawiera teraz wszystkie informacje niezbędne do dyskretnego wdrożenia programu .NET Framework 4.5. Przed przystąpieniem do wdrażania pakietów i programów, sprawdź, czy został on zainstalowany w punkcie dystrybucji; zobacz sekcję "Monitorowanie zawartości" [monitorowanie zawartości dystrybuowanej za pomocą System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) w bibliotece dokumentacji programu Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Wdrażanie pakietu  
@@ -193,27 +191,27 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
   
  **Usługa Active Directory, DNS, DHCP:**  
   
--   [Usługi Active Directory Domain Services dla systemu Windows Server 2008](https://technet.microsoft.com/library/dd378891.aspx)  
+-   [Usług domenowych Active Directory](/windows/desktop/ad/active-directory-domain-services)  
   
--   [Serwer DNS](https://technet.microsoft.com/library/cc732997.aspx)  
+-   [System nazw domen (DNS)](/windows-server/networking/dns/dns-top)  
   
--   [Serwer DHCP](https://technet.microsoft.com/library/cc896553.aspx)  
+-   [Protokół dynamicznej konfiguracji hosta (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **Program SQL Server 2008:**  
   
--   [Instalowanie programu SQL Server 2008 (SQL Server wideo)](https://technet.microsoft.com/library/dd299415.aspx)  
+-   [Instalowanie programu SQL Server 2008 (SQL Server wideo)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
   
 -   [Omówienie zabezpieczeń usługi SQL Server 2008 dla administratorów baz danych](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager, (punkt zarządzania, punkt dystrybucji):**  
   
--   [Administrowanie lokacją dla programu System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg681983.aspx)  
+-   [Administrowanie lokacją dla programu System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
 -   [Menedżer konfiguracji pojedyncza witryna planowania i wdrażania](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **Klient programu System Center 2012 Configuration Manager dla komputerów Windows:**  
   
--   [Wdrażanie klientów dla programu System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg699391.aspx)  
+-   [Wdrażanie klientów dla programu System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
@@ -248,18 +246,18 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>Kody błędów pobierania  
   
--   [Kody błędów Intelligent Transfer Service (BITS) w tle](https://msdn.microsoft.com/library/aa362823.aspx)  
+-   [Kody błędów Intelligent Transfer Service (BITS) w tle](/windows/desktop/Bits/bits-return-values)  
   
--   [Kody błędu krótkiej nazwy adresu URL](https://msdn.microsoft.com/library/ms775145.aspx)  
+-   [Kody błędu krótkiej nazwy adresu URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
 -   [Kody błędów usługi WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Inne kody błędów:  
   
--   [Kody błędów usługi Instalator Windows](https://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Kody błędów usługi Instalator Windows](/windows/desktop/msi/error-codes)  
   
--   [Kody wyników programu Windows Update Agent](https://technet.microsoft.com/library/cc720442.aspx)  
+-   [Kody wyników programu Windows Update Agent](/security-updates/WindowsUpdateServices/18127055)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md)
+- [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md)

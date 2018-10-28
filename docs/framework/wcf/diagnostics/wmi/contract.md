@@ -2,19 +2,19 @@
 title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 12b45c08a3d8dc69e740ce77d0d2abd097907ac2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12e9cbf5232ebbad33ccc4fdca33233997d27357
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485710"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194673"
 ---
 # <a name="contract"></a>Kontrakt
 Kontrakt  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class Contract  
 {  
   sint32 AppDomainId;  
@@ -30,7 +30,7 @@ class Contract
 ```  
   
 ## <a name="methods"></a>Metody  
- Klasa kontraktu nie definiuje żadnych metod.  
+ Klasy kontraktu nie definiuje żadnych metod.  
   
 ## <a name="properties"></a>Właściwości  
  Klasa kontraktu ma następujące właściwości:  
@@ -38,71 +38,71 @@ class Contract
 ### <a name="appdomainid"></a>AppDomainId  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Identyfikator domeny aplikacji obsługującej kontrakt.  
+ Identyfikator elementu appdomain umowy.  
   
 ### <a name="behaviors"></a>Zachowania  
  Typ danych: zachowanie tablicy  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Zachowania skojarzone z tym kontraktem.  
+ Zachowania skojarzonego z nim.  
   
 ### <a name="name"></a>Nazwa  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Nazwa kontraktu w języku WSDL.  
   
 ### <a name="namespace"></a>Przestrzeń nazw  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Przestrzeń nazw `portType` elementu w języku WSDL.  
   
 ### <a name="operations"></a>Operacje  
  Typ danych: operacja tablicy  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Operacje tego kontraktu.  
+ Operace tohoto kontraktu.  
   
 ### <a name="processid"></a>Identyfikator procesu  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Identyfikator procesu obsługującego kontrakt procesu.  
+ Proces identyfikator procesu, który obsługuje kontrakt.  
   
 ### <a name="ref"></a>ref  
  Typ danych: kontraktu  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Typ wywołania zwrotnego w przypadku kontraktu dupleksowego.  
+ Rodzaj wywołania zwrotnego, gdy kontrakt jest kontraktu dwukierunkowego.  
   
 ### <a name="sessionmode"></a>SessionMode  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Wskazuje, czy kontrakt wymaga powiązanie skojarzone z tym kontraktem, aby używać sesji kanału.  
+ Wskazuje, czy kontrakt wymaga powiązania skojarzonego z nim do użycia kanału sesji.  
   
 ### <a name="type"></a>Typ  
  Typ danych: ciąg  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Typ kontraktu.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Description.ContractDescription>

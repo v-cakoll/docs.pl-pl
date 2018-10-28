@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581937"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50037103"
 ---
 # <a name="recoverable-xslt-errors"></a>Odwracalne błędy XSLT
 Zalecenie w wersji 1.0 W3C przekształcenia XSL (XSLT) obejmuje obszary, w których implementacja dostawcy może podjąć decyzję sposób obsługi sytuacji. Te obszary są uznawane za poufne zachowanie. Na przykład, w sekcji 7.3 tworzenia przetwarzania instrukcji, zalecenie specyfikacji XSLT 1.0 stwierdza, występuje błąd, jeśli utworzenie wystąpienia zawartość `xsl:processing-instruction` tworzy węzłów innych niż węzły tekstowe. Dla niektórych problemów specyfikacji XSLT 1.0 zalecenie wskazuje, jakie decyzją należy dokonać, jeśli procesor zdecyduje się odzyskać sprawność po błędzie. Ten problem, podane w sekcji 7.3 W3C mówi, że implementacja można odzyskać z tego błędu, ignorując węzły i ich zawartości.  
@@ -22,7 +22,7 @@ Zalecenie w wersji 1.0 W3C przekształcenia XSL (XSLT) obejmuje obszary, w któr
   
 -   Błąd wskazuje, czy wyjątek jest zgłaszany tego warunku.  
   
--   Odwołania do sekcji znajdują się w [W3C przekształcenia XSL (XSLT) w wersji 1.0 zalecenie](http://www.w3.org/TR/xslt) i [Errata specyfikacji wersji 1.0 W3C przekształcenia XSL (XSLT)](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+-   Odwołania do sekcji znajdują się w [W3C przekształcenia XSL (XSLT) w wersji 1.0 zalecenie](https://www.w3.org/TR/xslt) i [Errata specyfikacji wersji 1.0 W3C przekształcenia XSL (XSLT)](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Warunek XSLT|Sekcja|Zachowanie XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  

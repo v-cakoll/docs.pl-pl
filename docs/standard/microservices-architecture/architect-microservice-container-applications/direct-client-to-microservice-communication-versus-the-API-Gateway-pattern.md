@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Wz
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198686"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183610"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 
@@ -84,13 +84,13 @@ Należy zachować ostrożność podczas implementowania wzorca bramy interfejsu 
 
 W związku z tym bramy interfejsu API powinno rozdzielony na podstawie granic firm i aplikacje klienckie i nie act jako pojedynczy agregatora wewnętrznego mikrousług.
 
-W przypadku dzielenia warstwa bramy interfejsu API do wielu bram interfejsu API, jeśli aplikacja ma wiele aplikacji klienckich, które mogą być tabelę przestawną podstawowej przy identyfikowaniu wiele typów bramy interfejsu API, dzięki czemu może mieć różne fasada dla potrzeb każdej aplikacji klienta. Ten przypadek jest wzorcem o nazwie "Wewnętrznej bazy danych dla serwera sieci Web" ([BFF](http://samnewman.io/patterns/architectural/bff/)) w przypadku, gdy każda brama interfejsu API może zapewnić innego interfejsu API, dostosowane do poszczególnych typów aplikacji klienckich, potencjalnie nawet na podstawie współczynnika postaci klienta przez zaimplementowanie określonej karty kodu, który na dole wywołuje wiele mikrousług wewnętrznych, jak pokazano na poniższej ilustracji:
+W przypadku dzielenia warstwa bramy interfejsu API do wielu bram interfejsu API, jeśli aplikacja ma wiele aplikacji klienckich, które mogą być tabelę przestawną podstawowej przy identyfikowaniu wiele typów bramy interfejsu API, dzięki czemu może mieć różne fasada dla potrzeb każdej aplikacji klienta. Ten przypadek jest wzorcem o nazwie "Wewnętrznej bazy danych dla serwera sieci Web" ([BFF](https://samnewman.io/patterns/architectural/bff/)) w przypadku, gdy każda brama interfejsu API może zapewnić innego interfejsu API, dostosowane do poszczególnych typów aplikacji klienckich, potencjalnie nawet na podstawie współczynnika postaci klienta przez zaimplementowanie określonej karty kodu, który na dole wywołuje wiele mikrousług wewnętrznych, jak pokazano na poniższej ilustracji:
 
 ![Diagram przedstawiający kilka niestandardowych bramy interfejsu API](./media/image13.1.png)
 
 **Rysunek 4-13.1**. Za pomocą wielu niestandardowych bramy interfejsu API
 
-Na poprzedniej ilustracji przedstawiono uproszczona architektura o wiele szczegółowych bramy interfejsu API. W tym przypadku granice dla każdej bramy interfejsu API są oparte wyłącznie na "Wewnętrznej bazy danych dla frontonu" ([BFF](http://samnewman.io/patterns/architectural/bff/)) wzorzec, dlatego tylko na podstawie interfejsu API potrzebne dla aplikacji klienckich. Jednak w dużych aplikacji należy również użyteczność i utworzyć dodatkowe bramy interfejsu API oparte na granice firmy jako drugi pivot projektu.
+Na poprzedniej ilustracji przedstawiono uproszczona architektura o wiele szczegółowych bramy interfejsu API. W tym przypadku granice dla każdej bramy interfejsu API są oparte wyłącznie na "Wewnętrznej bazy danych dla frontonu" ([BFF](https://samnewman.io/patterns/architectural/bff/)) wzorzec, dlatego tylko na podstawie interfejsu API potrzebne dla aplikacji klienckich. Jednak w dużych aplikacji należy również użyteczność i utworzyć dodatkowe bramy interfejsu API oparte na granice firmy jako drugi pivot projektu.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Główne funkcje we wzorcu bramy interfejsu API
 
@@ -168,7 +168,7 @@ Po początkowej architektura i wzorce wyjaśnienie sekcje, w kolejnych sekcjach 
 
 - **Wzorzec bramy interfejsu API** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- **Wzorzec agregacji i kompozycji** [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html)
+- **Wzorzec agregacji i kompozycji** [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
 
 - **Usługa Azure API Management** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 

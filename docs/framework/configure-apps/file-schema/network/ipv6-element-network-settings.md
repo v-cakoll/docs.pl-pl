@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5b1707d7490de07520603f6fdf6d1ee1a44ffba7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 02ac6ecb372b1e902d65d4b35ef71fbf0ac093c4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840491"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170123"
 ---
 # <a name="ltipv6gt-element-network-settings"></a>&lt;Protokół IPv6&gt; — Element (ustawienia sieci)
 Włącza protokołu internetowego w wersji 6 (IPv6) odpowiedzi od przestarzałe elementy członkowskie <xref:System.Net.Dns> klasy.  

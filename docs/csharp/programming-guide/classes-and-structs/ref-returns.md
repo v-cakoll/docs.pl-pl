@@ -4,12 +4,12 @@ description: Dowiedz się, jak zdefiniować i zastosować zwracane ref i wartoś
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: ca518b124bc95a5bc3a2910d9c3d9e5338e1b464
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45616143"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193763"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Wartości zwracane ref i zmienne lokalne ref
 
@@ -125,4 +125,4 @@ Ta druga wersja jest bardziej wydajne, za pomocą sekwencji dłużej w scenarius
 ## <a name="see-also"></a>Zobacz także
 
 - [ref keyword](../../language-reference/keywords/ref.md)  
-- [Semantyka odwołań z typami wartości](../../../csharp/reference-semantics-with-value-types.md)
+- [Pisanie kodu efektywne bezpieczne](../../../csharp/write-safe-efficient-code.md)

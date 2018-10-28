@@ -4,12 +4,12 @@ description: Dowiedz się, jak wykonać istniejącą aplikację konsoli .NET Fra
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193333"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374758"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Uruchamianie aplikacji konsoli w kontenerach Windows
 
@@ -46,7 +46,7 @@ Przenoszenie aplikacji konsoli polega na kilka kroków.
 Kontenery Windows są obsługiwane na [Rocznicowej aktualizacji systemu Windows 10](https://www.microsoft.com/en-us/software-download/windows10/) lub [systemu Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
->Jeśli używasz systemu Windows Server 2016, należy włączyć kontenerów ręcznie, ponieważ Instalator Windows dla Docker nie włączy tę funkcję. Upewnij się, że wszystkie aktualizacje zostały uruchomione dla systemu operacyjnego, a następnie postępuj zgodnie z instrukcjami [wdrażania hosta kontenera](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) artykuł, aby zainstalować kontenerów i funkcje platformy Docker.
+>Jeśli używasz systemu Windows Server 2016, należy włączyć kontenerów ręcznie, ponieważ Instalator Windows dla Docker nie włączy tę funkcję. Upewnij się, że wszystkie aktualizacje zostały uruchomione dla systemu operacyjnego, a następnie postępuj zgodnie z instrukcjami [wdrażania hosta kontenera](/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server) artykuł, aby zainstalować kontenerów i funkcje platformy Docker.
 
 Musisz mieć Docker for Windows, wersja 1.12 26 lub nowszej wersji Beta do obsługi Windows kontenery. Domyślnie program Docker umożliwia kontenerów opartych na systemie Linux; Przełącz się do kontenerów Windows, klikając prawym przyciskiem myszy ikonę platformy Docker, na pasku zadań, a następnie wybierz pozycję **przełączyć się do kontenerów Windows**. Docker uruchomi proces zmiany i może być wymagane ponowne uruchomienie.
 

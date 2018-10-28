@@ -3,12 +3,12 @@ title: Co nowego w języku C# 6 — Przewodnik po języku C#
 description: Dowiedz się, nowych funkcji w języku C# w wersji 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 53d9c5e60ac00b4c7c96aa3e42a60253219e1c70
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308457"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194036"
 ---
 # <a name="whats-new-in-c-6"></a>Co nowego w języku C# 6
 
@@ -88,7 +88,7 @@ public class Student
 
 Ta funkcja umożliwia obsługę języka wartość true, aby tworzenie typów niezmienne i za pomocą składni właściwości automatycznej bardziej zwięzłe i wygodne.
 
-Jeśli dodanie tej składni nie nie powoduje usunięcia dostępnej metody, [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
+Jeśli dodanie tej składni nie powoduje usunięcia dostępnej metody, [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
 
 ### <a name="auto-property-initializers"></a>Inicjatory właściwości automatycznej
 
@@ -249,7 +249,7 @@ Nie ma żadnych ograniczeń wyrażenia, które można umieścić między nawiasa
 W tym przykładzie widać, że można zagnieżdżać wyrażenia interpolacji ciągu wewnątrz innego wyrażenia interpolacji ciągu. W tym przykładzie jest bardzo prawdopodobne, bardziej złożone niż może pojawić się w kodzie produkcyjnym.
 Jest to raczej przedstawiają szeroki zakres funkcji. Dowolne wyrażenie języka C# mogą być umieszczone między nawiasami klamrowymi ciągu interpolowanym.
 
-Aby rozpocząć pracę z Interpolacja ciągów, zapoznaj się z [Interpolacja w języku C# ciągów](../quick-starts/interpolated-strings.yml) interaktywnego przewodnika Szybki Start.
+Aby rozpocząć pracę z Interpolacja ciągów, zapoznaj się z [Interpolacja w ciągów C# ](../tutorials/intro-to-csharp/interpolated-strings.yml) interaktywnego samouczka.
 
 ### <a name="string-interpolation-and-specific-cultures"></a>Interpolacja ciągów i określonych kultur
 

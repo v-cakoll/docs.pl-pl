@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837443"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036687"
 ---
 # <a name="getpropertyhandle-function"></a>Funkcja GetPropertyHandle
 Zwraca unikatowy uchwytu, który identyfikuje właściwość.
@@ -52,7 +52,7 @@ HRESULT GetPropertyHandle (
 [in] Ciąg zakończony wartością null characaters UTF16 zakodowane w formacie, który zawiera nazwę właściwości.   
 
 `pType`  
-[out] Wskaźnik do [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) członka wyliczenia, który reprezentuje typ właściwości w modelu wspólnych informacji.
+[out] Wskaźnik do [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) członka wyliczenia, który reprezentuje typ właściwości w modelu wspólnych informacji.
 
 `pHandle`   
 [out] Wskaźnik do liczby całkowitej, który zawiera dojście właściwości.

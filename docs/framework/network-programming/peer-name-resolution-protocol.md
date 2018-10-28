@@ -2,14 +2,12 @@
 title: Protokół PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f17c5e7e2fa7a5eba66f0b9dd8c950a7464eea8e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196760"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185160"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protokół PNRP
 W środowiskach peer-to-peer elementów równorzędnych użyć systemy rozpoznawania nazw określonych w ustalaniu siebie nawzajem lokalizacje sieciowe (adresy, protokoły i porty) na podstawie nazw lub innych typów identyfikatorów. W przeszłości rozpoznawania nazw równorzędnych ma zostały skomplikowane natury przejściowy łączność, a także innych braków w ramach systemu nazw domen (DNS).  
@@ -20,7 +18,7 @@ W środowiskach peer-to-peer elementów równorzędnych użyć systemy rozpoznaw
   
  Pod względem zabezpieczeń, nazwy elementów równorzędnych może być publikowane jako zabezpieczone (chroniony) lub niezabezpieczone (bez ochrony). Protokół PNRP używa kryptografii klucza publicznego do ochrony nazwy bezpiecznego elementów równorzędnych przed fałszowaniem; zarówno komputerów, jak i usług może być nazwany przy użyciu protokołu PNRP.  
   
--   Peer Name Resolution Protocol pokazuje następujące właściwości:  
+Peer Name Resolution Protocol pokazuje następujące właściwości:  
   
 -   Rozproszone i niemal całkowicie bez użycia serwera. Serwery są tylko wymagane dla bootstrapping procesu.  
   
@@ -30,21 +28,13 @@ W środowiskach peer-to-peer elementów równorzędnych użyć systemy rozpoznaw
   
 -   Rozpoznawanie nazw za pośrednictwem protokołu PNRP wykracza poza komputerów, umożliwiając również rozpoznawania nazw dla usług.  
   
--  
-  
-## <a name="the-systemnetpeertopeer-namespace"></a>Namespace System.Net.PeerToPeer  
+## <a name="the-systemnetpeertopeer-namespace"></a>Przestrzeń nazw System.Net.PeerToPeer  
   
 -   Funkcje PNRP jest definiowany przez <xref:System.Net.PeerToPeer> przestrzeni nazw w ramach platformy .NET Framework w wersji 3.5. Zapewnia ona zestaw typów, które może służyć do rejestrowania i rozpoznawania nazw równorzędnych za pomocą usługi dostępne PNRP.  
   
--  
-  
 -   (PNRP i mechanizmy rozpoznawania elementów równorzędnych niestandardowe można tworzyć i utworzona przy użyciu typów podawany <xref:System.ServiceModel.PeerResolvers> przestrzeni nazw.)  
   
--  
-  
 -   Podstawowe typy, które są używane do rejestrowania i rozpoznawania nazw za pomocą usługi PNRP dostępne są następujące:  
-  
--  
   
 -   <xref:System.Net.PeerToPeer.Cloud>: Definiuje informacje opisujące dostępne chmury PNRP, łącznie z jego zakres.  
   
@@ -56,12 +46,8 @@ W środowiskach peer-to-peer elementów równorzędnych użyć systemy rozpoznaw
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: Definiuje proces rozpoznawania nazw równorzędnych do swojej sieci punkty końcowe:, w tym synchroniczne i asynchroniczne metody dla rozpoznawania.  
   
--  
-  
--  
-  
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.PeerResolvers>  
- <xref:System.Net.PeerToPeer>  
- [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Przykład technologii PeerToPeer](https://go.microsoft.com/fwlink/?LinkID=179571)
+## <a name="see-also"></a>Zobacz także  
+- <xref:System.ServiceModel.PeerResolvers>  
+- <xref:System.Net.PeerToPeer>  
+- [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Przykład technologii PeerToPeer](https://go.microsoft.com/fwlink/?LinkID=179571)

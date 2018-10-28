@@ -3,16 +3,16 @@ title: Interpolacja ciągów w języku C#
 description: Dowiedz się, jak obejmują wyrażenie sformatowane wyniki w ciągu wynikowym w języku C# przy użyciu interpolacji ciągu.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086706"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188641"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolacja ciągów w języku C# #
 
-W tym samouczku dowiesz się, jak używać [Interpolacja ciągów](../language-reference/tokens/interpolated.md) do formatu i Dołącz wyniki wyrażenia w ciągu wynikowym. W przykładach założono, że znasz podstawowe pojęcia języka C# i .NET typu formatowania. Jeśli jesteś nowym użytkownikiem Interpolacja ciągów lub formatowanie typu .NET, zapoznaj się z [interpolacji ciągu interaktywnego przewodnika Szybki Start](../quick-starts/interpolated-strings.yml) pierwszy. Aby uzyskać więcej informacji na temat typy formatowania w programie .NET, zobacz [typy formatowania na platformie .NET](../../standard/base-types/formatting-types.md) tematu.
+W tym samouczku dowiesz się, jak używać [Interpolacja ciągów](../language-reference/tokens/interpolated.md) do formatu i Dołącz wyniki wyrażenia w ciągu wynikowym. W przykładach założono, że znasz podstawowe pojęcia języka C# i .NET typu formatowania. Jeśli jesteś nowym użytkownikiem Interpolacja ciągów lub formatowanie typu .NET, zapoznaj się z [samouczek interpolacji ciągu interaktywne](../tutorials/intro-to-csharp/interpolated-strings.yml) pierwszy. Aby uzyskać więcej informacji na temat typy formatowania w programie .NET, zobacz [typy formatowania na platformie .NET](../../standard/base-types/formatting-types.md) tematu.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 

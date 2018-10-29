@@ -4,12 +4,12 @@ description: Ten temat przeprowadzi Cię przez tworzenie rozwiązania .NET Core,
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 589b3e72f7e8425051a96f66f07f24327d273c45
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: fbbbbc20b45981a41695eac73dcc251ef74a0cb6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122830"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186021"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 
@@ -20,7 +20,7 @@ Ten samouczek pokazuje, jak utworzyć aplikację, która akceptuje szukanym wyra
 > [!NOTE]
 > Twoja opinia jest bardzo ważnych. Istnieją dwa sposoby, możesz przekazywać opinie do zespołu programistycznego w programie Visual Studio dla komputerów Mac:
 > * W programie Visual Studio dla komputerów Mac, wybierz **pomocy** > **Zgłoś Problem** z menu lub **Zgłoś Problem** na ekranie powitalnym, który powoduje otwarcie okna zgłoszenia Raport o usterce. Swoje opinie możesz śledzić w portalu [Społeczność deweloperów](https://developercommunity.visualstudio.com/spaces/41/index.html).
-> * Aby sugestię, wybierz **pomocy** > **sugestię** z menu lub **sugestię** na ekranie powitalnym, która spowoduje przejście do [ Program Visual Studio for Mac UserVoice strony sieci Web](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).
+> * Aby sugestię, wybierz **pomocy** > **sugestię** z menu lub **sugestię** na ekranie powitalnym, która spowoduje przejście do [ Program Visual Studio dla sieci Web społeczności deweloperów Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -32,7 +32,7 @@ Aby uzyskać więcej informacji na temat wymagań wstępnych, zobacz [wymagania 
 
 ## <a name="building-a-library"></a>Tworzenie biblioteki
 
-1. Na ekranie powitalnym wybierz **nowy projekt**. W **nowy projekt** , okno dialogowe **dla wielu platform** węzeł **Biblioteka .NET Standard** szablonu. Spowoduje to utworzenie biblioteki .NET Standard, który jest przeznaczony dla platformy .NET Core oraz ewentualne innych implementacji .NET, która obsługuje wersję 2.0 [.Net Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard). Wybierz **dalej**.
+1. Na ekranie powitalnym wybierz **nowy projekt**. W **nowy projekt** , okno dialogowe **platformy .NET Core** węzeł **Biblioteka .NET Standard** szablonu. Spowoduje to utworzenie biblioteki .NET Standard, który jest przeznaczony dla platformy .NET Core oraz ewentualne innych implementacji .NET, która obsługuje wersję 2.0 [.NET Standard](../../standard/net-standard.md). Wybierz **dalej**.
 
    ![Okno dialogowe nowego projektu](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 

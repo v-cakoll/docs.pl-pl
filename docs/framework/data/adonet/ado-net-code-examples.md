@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
 ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845570"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183805"
 ---
 # <a name="adonet-code-examples"></a>Przykłady kodu ADO.NET
 Zamieszczone w tym temacie pokazują, jak pobierać dane z bazy danych przy użyciu następujących technologii ADO.NET:

@@ -3,12 +3,12 @@ title: Dokumentowanie kodu przy użyciu komentarzy XML
 description: Dowiedz się, jak dokumentowanie kodu za pomocą komentarzy dokumentacji XML do generowania pliku dokumentacji XML w czasie kompilacji.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397062"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453271"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu przy użyciu komentarzy XML
 
@@ -51,7 +51,7 @@ Oto kod biblioteki matematyczne proste:
 Biblioteka przykładowe obsługuje cztery główne operacje arytmetyczne `add`, `subtract`, `multiply` i `divide` na `int` i `double` typy danych.
 
 Teraz chcesz mieć możliwość tworzenia dokument referencyjny dotyczący interfejsu API z poziomu kodu dla deweloperów innych firm, którzy użyj biblioteki, ale nie masz dostępu do kodu źródłowego.
-Jak wspomniano wcześniej tagów dokumentacji XML może służyć do można to osiągnąć, możesz teraz zostaną wprowadzone w standard obsługuje kompilator znaczników języka C# XML.
+Jak wspomniano wcześniej tagów dokumentacji XML można to osiągnąć. Możesz teraz zostaną wprowadzone do standardowych tagów XML C# kompilator obsługuje.
 
 ### <a name="ltsummarygt"></a>&lt;Podsumowanie&gt;
 

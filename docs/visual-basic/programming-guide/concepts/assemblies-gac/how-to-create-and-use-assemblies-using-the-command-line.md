@@ -1,26 +1,24 @@
 ---
-title: 'Porady: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia (Visual Basic)'
+title: 'Porady: tworzenie i używanie zestawów przy użyciu wiersza polecenia (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643292"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194660"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Porady: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia (Visual Basic)
-Zestaw lub dynamicznej biblioteki połączeń (DLL), jest połączony z programu w czasie wykonywania. Aby zademonstrować, tworzenie i używanie biblioteki DLL, rozważmy następujący scenariusz:  
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Porady: tworzenie i używanie zestawów przy użyciu wiersza polecenia (Visual Basic)
+Zestaw lub łączenia Biblioteka dynamiczna (DLL), jest połączony z programu w czasie wykonywania. Aby zademonstrować, tworzenie i używanie biblioteki DLL, należy rozważyć następujący scenariusz:  
   
 -   `MathLibrary.DLL`Plik biblioteki, który zawiera metody do wywołania w czasie wykonywania. W tym przykładzie biblioteki DLL zawiera dwie metody `Add` i `Multiply`.  
   
--   `Add`Plik źródłowy, który zawiera metodę `Add`. Zwraca sumę wartości jego parametrów. Klasa `AddClass` zawiera metodę `Add` jest elementem członkowskim przestrzeni nazw `UtilityMethods`.  
+-   `Add`Plik źródłowy, który zawiera metodę `Add`. Zwraca sumę jego parametrów. Klasa `AddClass` zawierający metody `Add` jest elementem członkowskim przestrzeń nazw `UtilityMethods`.  
   
--   `Mult`: Kod źródłowy, który zawiera metodę `Multiply`. Zwraca iloczyn jego parametrów. Klasa `MultiplyClass` zawiera metodę `Multiply` jest również członkiem przestrzeń nazw `UtilityMethods`.  
+-   `Mult`: Kod źródłowy, który zawiera metodę `Multiply`. Zwraca iloczyn jego parametrów. Klasa `MultiplyClass` zawierający metody `Multiply` jest również członkiem obszaru nazw `UtilityMethods`.  
   
--   `TestCode`: Plik zawierający `Main` metody. Używa metody w pliku DLL do obliczania sum i produktu argumentów czasu wykonywania.  
+-   `TestCode`Plik, który zawiera `Main` metody. Używa metody w pliku DLL do obliczania sumy i produktu argumentów czasu wykonywania.  
   
 ## <a name="example"></a>Przykład  
   
@@ -81,9 +79,9 @@ End Module
 ' 1234 * 5678 = 7006652  
 ```  
   
- Ten plik zawiera algorytm używa metody DLL `Add` i `Multiply`. Rozpoczyna się analizowanie argumentów wprowadzona w wierszu polecenia `num1` i `num2`. Następnie suma jest obliczana na podstawie `Add` metody na `AddClass` klasy i produktu za pomocą `Multiply` metoda `MultiplyClass` klasy.  
+ Ten plik zawiera algorytmu, który używa metody biblioteki DLL `Add` i `Multiply`. Zaczyna się od analizowanie argumentów, podane z wiersza polecenia `num1` i `num2`. Następnie suma jest obliczana na podstawie `Add` metody `AddClass` klasy i produkt przy użyciu `Multiply` metody `MultiplyClass` klasy.  
   
- Zwróć uwagę, że `Imports` instrukcji na początku pliku pozwala na użycie nazwy niekwalifikowanej klas do metody DLL referencyjne w czasie kompilacji, w następujący sposób:  
+ Należy zauważyć, że `Imports` instrukcji na początku pliku umożliwia użycie nazwy niekwalifikowanej klas k odkazu metody biblioteki DLL w czasie kompilacji w następujący sposób:  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
@@ -96,20 +94,20 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 ```  
   
 ## <a name="execution"></a>Wykonanie  
- Aby uruchomić program, wprowadź nazwę pliku EXE, następuje dwóch liczb w następujący sposób:  
+ Aby uruchomić program, wprowadź nazwę pliku EXE, a po nim dwóch liczb, w następujący sposób:  
   
  `TestCode 1234 5678`  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby utworzyć plik `MathLibrary.DLL`, Kompiluj dwa pliki `Add` i `Mult` przy użyciu poniższego polecenia.  
+ Aby utworzyć plik `MathLibrary.DLL`, skompilować dwa pliki `Add` i `Mult` przy użyciu następującego polecenia.  
   
 ```console  
 vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [-Docelowego (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) — opcja kompilatora informuje kompilator, aby dane wyjściowe biblioteki DLL zamiast pliku EXE. [-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) następuje nazwa pliku — opcja kompilatora jest używany do określenia nazwy pliku DLL. W przeciwnym razie kompilator używa pierwszego pliku (`Add.vb`) jako nazwę biblioteki DLL.  
+ [-Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) — opcja kompilatora informuje kompilator, aby dane wyjściowe biblioteki DLL, a nie plikiem EXE. [-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) następuje nazwa pliku — opcja kompilatora służy do określania nazwy pliku biblioteki DLL. W przeciwnym razie kompilator używa pierwszego pliku (`Add.vb`) jako nazwę biblioteki DLL.  
   
- Aby utworzyć plik wykonywalny `TestCode.exe`, należy użyć następującego polecenia:  
+ Aby utworzyć plik wykonywalny `TestCode.exe`, użyj następującego polecenia:  
   
 ```console  
 vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  

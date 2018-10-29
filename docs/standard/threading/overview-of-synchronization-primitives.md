@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ba4eb0308665e82042510b74fd8210642e09c53
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850853"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201601"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Przegląd elementów podstawowych synchronizacji
 
@@ -79,7 +79,7 @@ Aby uzyskać więcej informacji na temat zalety i wady wynikające z użycia pok
 
 ### <a name="readerwriterlockslim-class"></a>Klasa ReaderWriterLockSlim
 
-<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> Klasy udziela wyłączny dostęp do udostępnionego zasobu do zapisu i zezwala na wiele wątków dostęp zasobu równocześnie do odczytu. Możesz chcieć użyć <xref:System.Threading.ReaderWriterLockSlim> do synchronizowania dostępu do struktury danych udostępnionych, która obsługuje operacje odczytu metodą o bezpiecznych wątkach, ale wymaga wyłącznego dostępu do wykonywania operacji zapisu. Gdy wątek żąda wyłącznego dostępu (na przykład przez wywołanie metody <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> metoda), Czytelnik kolejnych żądań bloku dopiero po zamknięciu wszystkich istniejących czytelników blokady i Edytor wprowadził i zakończony blokady.
+<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> Klasy udziela wyłączny dostęp do udostępnionego zasobu do zapisu i umożliwia wielu wątkach, aby uzyskać dostęp do zasobu, jednocześnie do odczytu. Możesz chcieć użyć <xref:System.Threading.ReaderWriterLockSlim> do synchronizowania dostępu do struktury danych udostępnionych, która obsługuje operacje odczytu metodą o bezpiecznych wątkach, ale wymaga wyłącznego dostępu do wykonywania operacji zapisu. Gdy wątek żąda wyłącznego dostępu (na przykład przez wywołanie metody <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> metoda), Czytelnik kolejnych żądań bloku dopiero po zamknięciu wszystkich istniejących czytelników blokady i Edytor wprowadził i zakończony blokady.
   
 Aby uzyskać więcej informacji, zobacz [reader_writer_lock](reader-writer-locks.md) artykułu i <xref:System.Threading.ReaderWriterLockSlim> dokumentacja interfejsu API.
 

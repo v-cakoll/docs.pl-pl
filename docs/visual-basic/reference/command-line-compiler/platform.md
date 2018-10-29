@@ -6,14 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec3a7e01e62b60688080fee95cf70e0ed38917f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aececd9d99b87782b943f9be905a4b399be85d56
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552195"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199725"
 ---
 # <a name="-platform-visual-basic"></a>-platformy (Visual Basic)
 Określa, którą platformy wersję środowiska uruchomieniowego języka wspólnego (CLR) można uruchomić pliku wyjściowego.  

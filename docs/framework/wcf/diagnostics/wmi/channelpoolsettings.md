@@ -2,19 +2,19 @@
 title: ChannelPoolSettings
 ms.date: 03/30/2017
 ms.assetid: d3f475bd-f780-4bbe-b291-339387322964
-ms.openlocfilehash: 48b41d2f3f45cd9c590f87151253450962b994de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d763be92243768bce9fdaefcd3e3575effac464b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485300"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200486"
 ---
 # <a name="channelpoolsettings"></a>ChannelPoolSettings
 ChannelPoolSettings  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```csharp
 class ChannelPoolSettings  
 {  
   datetime IdleTimeout;  
@@ -30,31 +30,31 @@ class ChannelPoolSettings
  Klasa ChannelPoolSettings ma następujące właściwości:  
   
 ### <a name="idletimeout"></a>IdleTimeout  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
  Maksymalny czas, który połączenie może być bezczynne, zanim zostanie rozłączone.  
   
 ### <a name="leasetimeout"></a>LeaseTimeout  
- Typ danych: daty i godziny  
+ Typ danych: Data i godzina  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalny czas na zakończenie przed przekroczeniem limitu czasu operacji dzierżawy.  
+ Maksymalny czas dzierżawy na zakończenie operacji przed przekroczeniem limitu czasu.  
   
 ### <a name="maxoutboundchannelsperendpoint"></a>MaxOutboundChannelsPerEndpoint  
  Typ danych: sint32  
   
- Dostęp typu: tylko do odczytu  
+ Dostęp do typu: tylko do odczytu  
   
- Maksymalna liczba kanałów wychodzących dla każdego punktu końcowego.  
+ Maksymalna liczba wychodzących kanałów dla każdego punktu końcowego.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|MOF|Zadeklarowany w Servicemodel.mof.|  
+|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Przestrzeń nazw|Zdefiniowany w root\ServiceModel|  
+|Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.ChannelPoolSettings>

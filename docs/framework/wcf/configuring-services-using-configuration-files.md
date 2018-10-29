@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004513"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200865"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurowanie usług za pomocą plików konfiguracji
 Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfiguracyjnym zapewnia elastyczność związanych z udostępnianiem punktu końcowego i danych zachowanie usługi na miejscu wdrożenia, a nie w czasie projektowania. W tym temacie opisano dostępne metody podstawowej.  
   
  Usługa WCF jest konfigurowane za pomocą [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] technologia konfiguracji. Najczęściej XML elementy są dodawane do pliku Web.config dla witryny usług Internet Information Services (IIS), który hostuje usługę WCF. Elementy umożliwiają zmianę szczegóły, takie jak adresy punktów końcowych (rzeczywista adresy, używane do komunikacji z usługą) na podstawie maszyny według komputera. Ponadto WCF zawiera kilku elementów dostarczanych przez system, które pozwalają szybko wybrać najbardziej podstawowe funkcje dla usługi. Począwszy od [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF, który jest dostarczany z nowy model konfiguracji domyślnej, który upraszcza wymagania dotyczące konfiguracji usługi WCF. Jeśli nie podano żadnej konfiguracji programu WCF dla określonej usługi, środowisko wykonawcze automatycznie konfiguruje usługi przy użyciu niektóre standardowe punkty końcowe i zachowanie wiązania domyślne. W praktyce Zapisywanie konfiguracji jest poważnym należą do programowania aplikacji WCF.  
   
- Aby uzyskać więcej informacji, zobacz [konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Zobacz listę najczęściej używanych powszechnie elementów, [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązania i zachowań, zobacz [uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Aby uzyskać więcej informacji, zobacz [konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Lista najczęściej często używanych elementów, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązania i zachowań, zobacz [uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Podczas wdrażania scenariuszy obok siebie, w których są wdrażane dwa różne wersje usługi, należy określić częściowych nazw zestawów, do których odwołuje się w plikach konfiguracji. Jest to spowodowane plik konfiguracji jest współużytkowany przez wszystkie wersje usługi i mogą być wykonywane w ramach różnych wersji programu .NET Framework.  
@@ -186,9 +186,9 @@ Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfigur
 ## <a name="behavior-merge"></a>Zachowanie scalania  
  Funkcja scalania zachowanie ułatwia zarządzanie zachowania, gdy chcesz, aby zestaw wspólny zbiór wykonywanych czynności zawsze korzystać. Ta funkcja pozwala określić zachowania na różnych poziomach hierarchii konfiguracji i usług, które dziedziczą zachowań na różnych poziomach hierarchii konfiguracji. Aby zilustrować, jak ta działa przyjęto założenie, że masz następujące układu katalogu wirtualnego w usługach IIS:  
   
- ~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc  
+ `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- I plik ~\Web.config ma następującą zawartość:  
+ I `~\Web.config` plik ma następującą zawartość:  
   
 ```xml  
 <configuration>  

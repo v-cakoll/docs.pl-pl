@@ -6,11 +6,11 @@ ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50037103"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202988"
 ---
 # <a name="recoverable-xslt-errors"></a>Odwracalne błędy XSLT
 Zalecenie w wersji 1.0 W3C przekształcenia XSL (XSLT) obejmuje obszary, w których implementacja dostawcy może podjąć decyzję sposób obsługi sytuacji. Te obszary są uznawane za poufne zachowanie. Na przykład, w sekcji 7.3 tworzenia przetwarzania instrukcji, zalecenie specyfikacji XSLT 1.0 stwierdza, występuje błąd, jeśli utworzenie wystąpienia zawartość `xsl:processing-instruction` tworzy węzłów innych niż węzły tekstowe. Dla niektórych problemów specyfikacji XSLT 1.0 zalecenie wskazuje, jakie decyzją należy dokonać, jeśli procesor zdecyduje się odzyskać sprawność po błędzie. Ten problem, podane w sekcji 7.3 W3C mówi, że implementacja można odzyskać z tego błędu, ignorując węzły i ich zawartości.  

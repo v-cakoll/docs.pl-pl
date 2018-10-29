@@ -2,14 +2,12 @@
 title: Zmiany w uwierzytelnianiu NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1af25660fc38e7182cc290d64f010c914c6e8c4e
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d20707bbecb7521408d2ea1a3d6a6e3d6e892504
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480203"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202871"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Zmiany w uwierzytelnianiu NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1
 Zmiany zabezpieczeń zostały wprowadzone w .NET Framework w wersji 3.5 z dodatkiem SP1 i później, wpływają na Windows jak zintegrowane uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, i pokrewne klasy w przestrzeni nazw System.Net. Te zmiany mogą mieć wpływ na aplikacje, które używają tych klas do żądań sieci web i odbierania odpowiedzi, gdy jest używane zintegrowane uwierzytelnianie Windows oparte na NTLM. Ta zmiana może wpłynąć na serwerach sieci web i aplikacji klienckich, które są skonfigurowane do korzystania ze zintegrowanego uwierzytelniania Windows.  

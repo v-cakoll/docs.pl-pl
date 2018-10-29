@@ -4,14 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13aeab52cfd43aa8dfd7fda69e2eb9be798473e1
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2723104de8a583dc09f2fcfdd91a4119c5dec6d9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932170"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200969"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opcje kompilatora Visual Basic według kategorii
 Kompilator wiersza polecenia programu Visual Basic jest dostarczany jako alternatywę do kompilowania programów z w ramach programu Visual Studio zintegrowane środowisko programistyczne (IDE). Oto lista opcje wiersza polecenia kompilatora Visual Basic, które są sortowane według kategorii funkcji.  

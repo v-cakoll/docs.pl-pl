@@ -19,15 +19,16 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 9fd5bc2a8db8d98791cdd1a75b007555226c050b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261110"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202097"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Porady: wyszukiwanie istniejących plików i katalogów w izolowanym magazynie
-Aby wyszukać katalogu w wydzielonej pamięci masowej, należy użyć <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> metody. Ta metoda przyjmuje ciąg, który reprezentuje wzorzec wyszukiwania. Można użyć zarówno pojedynczych znaków (?), jak i wielu znaków (*) znaki symboli wieloznacznych w wzorzec wyszukiwania, ale znaki symboli wieloznacznych, musi znajdować się w końcowej części nazwy. Na przykład `directory1/*ect*` jest prawidłowy ciąg wyszukiwania, ale `*ect*/directory2` nie jest.  
+
+Aby wyszukać katalogu w wydzielonej pamięci masowej, należy użyć <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> metody. Ta metoda przyjmuje ciąg, który reprezentuje wzorzec wyszukiwania. Można użyć zarówno pojedynczych znaków (?), jak i wielu znaków (\*) znaki symboli wieloznacznych w wzorzec wyszukiwania, ale znaki symboli wieloznacznych, musi znajdować się w końcowej części nazwy. Na przykład `directory1/*ect*` jest prawidłowy ciąg wyszukiwania, ale `*ect*/directory2` nie jest.  
   
  Aby wyszukać plik, użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> metody. Ograniczenie dla symboli wieloznacznych w ciągów wyszukiwania, których dotyczy <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> dotyczy także <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>.  
   

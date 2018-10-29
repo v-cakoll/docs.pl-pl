@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: f214e3a5230d6cf16b3bde5d89078160ed95f96f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1337b5d1c4c18700f0722bbb6912e934b2170b01
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519169"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202058"
 ---
 # <a name="throttling"></a>Dławienie
 Przykładowe ograniczania demonstruje użycie ograniczania kontrolki. Formanty ograniczania przepływności ogranicza liczbę równoczesnych wywołań, wystąpienia lub sesji, aby uniknąć nadmiernego zużycia zasobów. Zachowanie funkcji ograniczania przepływności jest określony w ustawieniach pliku konfiguracji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora.  
@@ -40,7 +40,7 @@ Przykładowe ograniczania demonstruje użycie ograniczania kontrolki. Formanty o
   
  W celu przedstawienia ograniczania definiujemy czas uśpienia na metody usługi w następujący sposób:  
   
-```  
+```csharp
 public double Add(double n1, double n2)  
 {  
     System.Threading.Thread.Sleep(2000);  
@@ -50,7 +50,7 @@ public double Add(double n1, double n2)
   
  Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Metody dodawania i odejmowania są wykonywane równolegle i Multiply i dzielenie metody są wykonywane jednocześnie potwierdzające, że metody nie większej niż 2 mogą być wykonywane jednocześnie związku z tym ukazujące ograniczania przepustowości.  
   
-```  
+```console  
 Press <ENTER> to terminate client.  
 Add(100,15.99)  
 Subtract(145,76.54)  

@@ -15,11 +15,11 @@ ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdd610ade931bedc9ee387b65b18efd1909ef58b
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033932"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202214"
 ---
 # <a name="resolving-assembly-loads"></a>Rozwiązywanie załadowań zestawów
 Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia dla aplikacji wymagających większej kontroli nad ładowania zestawu. Obsługa tego zdarzenia, aplikacja może załadowania zestawu w kontekstu ładowania z poza normalny sondowania ścieżek, wybierz której z kilku wersji zestawu do załadowania, emitują zestawu dynamicznego i przywrócić go i tak dalej. Ten temat zawiera wskazówki dotyczące obsługi <xref:System.AppDomain.AssemblyResolve> zdarzeń.  

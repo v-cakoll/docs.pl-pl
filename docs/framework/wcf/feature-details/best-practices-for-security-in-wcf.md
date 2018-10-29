@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-author: BrucePerlerMS
-ms.openlocfilehash: a45ec6b5cdd241cb92069e8097bc94baa65b2166
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 25cc1a1e4c6e7e7d3f695c06eade8be546ee6c05
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193726"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205259"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Najlepsze rozwiązania dotyczące zabezpieczeń programu WCF
 W poniższych sekcjach wymieniono najlepsze rozwiązania, należy wziąć pod uwagę podczas tworzenia bezpiecznych aplikacji za pomocą usługi Windows Communication Foundation (WCF). Aby uzyskać więcej informacji na temat zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), i [zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  

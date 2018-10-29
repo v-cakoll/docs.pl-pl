@@ -3,11 +3,11 @@ title: Interfejs API sieci Web programu WCF i platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
 ms.openlocfilehash: 9ff974ca59b5a6448a140cbb1e7d6e8114840bdf
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50040649"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198422"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>Interfejs API sieci Web programu WCF i platformy ASP.NET
 Usługi WCF jest jednolity model programowania firmy Microsoft do budowania aplikacji usługowych. Umożliwia deweloperom tworzenie rozwiązań bezpieczne, niezawodne i transakcyjnych, które integrują się na platformach oraz współpraca z istniejących inwestycji. [ASP.NET Web API](https://www.asp.net/web-api) to struktura, która ułatwia tworzenie usług HTTP, docierających do szerokiej gamy klientów, w tym przeglądarek i urządzeń przenośnych. Web API platformy ASP.NET jest idealną platformą do tworzenia aplikacji typu RESTful na .NET Framework. W tym temacie przedstawiono wskazówki pomagające w podjęciu decyzji, technologii, które będzie najlepiej odpowiadać potrzebom użytkownika.  

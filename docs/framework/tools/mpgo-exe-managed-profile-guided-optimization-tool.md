@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4fea49a3200ca58264eb7c1bc1ead0a8ddc5914
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 68593509e384b2acd33fad0f476b6f300f2dbd92
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584231"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202189"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (narzędzie optymalizacji sterowania zarządzanym profilem)
 
@@ -100,7 +100,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
  Ten proces daje pewność, że wszystkie zestawy posiadają dane optymalizacji. Jeśli ewidencjonujesz zaktualizowane zoptymalizowane zestawy (kroki 1 i 2) częściej, wydajności będą spójniejsze w całym procesie tworzenia produktu.  
   
 ## <a name="using-mpgoexe-from-visual-studio"></a>Przy użyciu Mpgo.exe z Visual Studio  
- Mpgo.exe można uruchomić z programu Visual Studio (zapoznaj się z artykułem [jak: Specify Build Events (C#)](https://msdn.microsoft.com/library/b4ce1ad9-5215-4b6f-b6a2-798b249aa335)) z następującymi zastrzeżeniami:  
+ Mpgo.exe można uruchomić z programu Visual Studio (zapoznaj się z artykułem [jak: Specify Build Events (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) z następującymi zastrzeżeniami:  
   
 -   Nie można używać ścieżek w cudzysłowie ze znakami ukośnika na końcu, ponieważ makra Visual Studio również domyślnie używają końcowych ukośników. (Na przykład `–OutDir "C:\Output Folder\"` jest nieprawidłowy.) Aby obejść to ograniczenie, można pominąć końcowy ukośnik. (Na przykład użyć `-OutDir "$(OutDir)\"` zamiast.)  
   

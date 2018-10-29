@@ -5,28 +5,28 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: a43b3c0e008025171e3b1fdeba3bc514d01e28c8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856040"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201559"
 ---
 # <a name="use-automatic-layout-overview"></a>Przegląd Użyj automatycznego układu
-W tym temacie przedstawiono wskazówki dla deweloperów dotyczące programowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji przy użyciu możliwych do zlokalizowania [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. W przeszłości, lokalizacja [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] został czasochłonny proces. Każdy język, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] została dostosowana do wymagana korekta poszczególne piksele. Dzisiaj z właściwy projekt i po prawej stronie standardy, kodowania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] można skonstruować tak, aby lokalizatorzy mają mniejsza Zmienianie rozmiaru i położenia celu. Podejścia do pisania aplikacji, które można łatwiej o zmienionym rozmiarze i zmienionym nosi nazwę automatycznego układu oraz można osiągnąć za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] projektowania aplikacji.  
-  
+W tym temacie przedstawiono wskazówki dla deweloperów dotyczące programowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji przy użyciu możliwych do zlokalizowania [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. W przeszłości lokalizacja interfejs użytkownika był czasochłonny proces. Każdego z języków interfejsu użytkownika została dostosowana do wymagana korekta poszczególne piksele. Dzisiaj z właściwy projekt i po prawej stronie standardy, kodowania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] można skonstruować tak, aby lokalizatorzy mają mniejsza Zmienianie rozmiaru i położenia celu. Podejścia do pisania aplikacji, które można łatwiej o zmienionym rozmiarze i zmienionym nosi nazwę automatycznego układu oraz można osiągnąć za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] projektowania aplikacji.  
+
 <a name="advantages_of_autolayout"></a>   
 ## <a name="advantages-of-using-automatic-layout"></a>Korzyści wynikające z używania automatycznego układu  
  Ponieważ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system prezentacji jest wydajny i elastyczny, daje możliwość elementów układu w aplikacji, którą można dostosować zgodnie z wymaganiami w różnych językach. Poniższa lista wskazuje niektóre korzyści wynikające z układem automatycznym.  
-  
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Wyświetla również w dowolnym języku.  
-  
+
+-   Interfejs użytkownika wyświetla się także w dowolnym języku.  
+
 -   Ogranicza potrzebę ponownie dopasować położenie i rozmiar kontrolki po jest przetłumaczony tekst.  
   
 -   Ogranicza potrzebę Dopasuj rozmiar okna.  
-  
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Układ poprawnie renderowany w dowolnym języku.  
-  
+
+-   Układ interfejsu użytkownika poprawnie renderowany w dowolnym języku.  
+
 -   Lokalizacja można zmniejszyć do punktu, jest on nieco więcej niż ciąg tłumaczenia.  
   
 <a name="autolayout_controls"></a>   
@@ -46,20 +46,52 @@ Zmienny rozmiar przycisku automatycznie
   
 <a name="autolayout_coding"></a>   
 ## <a name="automatic-layout-and-coding-standards"></a>Automatyczny układ i standardy kodowania  
- Przy użyciu metody automatycznego układu wymaga zestawu standardy kodowania i projektowania i zasad do produkcji w pełni Lokalizowalny [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Poniższe wskazówki będą pomocy kodowania automatycznego układu.  
-  
-| Standardy kodowania | Opis |
-| ---------------------- | ----------------- |
-| Nie należy używać położenia bezwzględne. | <ul><li>Nie używaj <xref:System.Windows.Controls.Canvas> ponieważ umieszcza elementy absolutnie.</li><li>Użyj <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, i <xref:System.Windows.Controls.Grid> położenie kontrolki.</li><li>Aby uzyskać informacje o różnych typach paneli, zobacz [Przegląd panele](../../../../docs/framework/wpf/controls/panels-overview.md).</li></ul> |
-| Nie należy ustawiać ustalony rozmiar okna. | -Użyj <xref:System.Windows.Window.SizeToContent%2A>.<br />Na przykład:<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)] |
-| Dodaj <xref:System.Windows.FrameworkElement.FlowDirection%2A>. | <ul><li>Dodaj <xref:System.Windows.FrameworkElement.FlowDirection%2A> do elementu głównego aplikacji.</li><li>WPF zapewnia wygodny sposób obsługi poziomej, dwukierunkowe i układów w pionie. W ramach prezentacji <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwość może służyć do definiowania układu. Wzorce kierunek przepływu są:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb) — układ poziomy łaciński, Azja Wschodnia i tak dalej.</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb) — dwukierunkowych dla arabskiego, hebrajskiego i tak dalej.</li></ul></li></ul> |
-| Użyj czcionki zamiast fizycznych czcionki. | <ul><li>W przypadku złożonych czcionek <xref:System.Windows.Controls.Control.FontFamily%2A> właściwości nie musi być lokalizowany.</li><li>Deweloperzy można użyć jednej z następujących czcionek lub utworzyć własne.<br /><br /> <ul><li>Globalny interfejs użytkownika</li><li>Serif globalne sieci San</li><li>Globalne Serif</li></ul></li></ul> |
-| Dodaj XML: lang. | <ul><li>Dodaj `xml:lang` atrybutu w elemencie głównym Twojego [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], takich jak `xml:lang="en-US"` dla aplikacji w języku angielskim.</li><li>Ponieważ używają czcionki `xml:lang` Aby ustalić, jakie czcionki do użycia, należy ustawić tę właściwość, do obsługi wielu języków scenariuszy.</li></ul> |
-  
+ Przy użyciu metody automatycznego układu wymaga zestawu kodowania i projektowania standardów i zasad do produkcji w pełni Lokalizowalny interfejsu użytkownika. Poniższe wskazówki będą pomocy kodowania automatycznego układu.  
+
+**Nie używaj położenia bezwzględne**
+
+- Nie używaj <xref:System.Windows.Controls.Canvas> ponieważ umieszcza elementy absolutnie.
+
+- Użyj <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, i <xref:System.Windows.Controls.Grid> położenie kontrolki.
+
+Aby uzyskać informacje o różnych typach paneli, zobacz [Przegląd panele](../../../../docs/framework/wpf/controls/panels-overview.md).
+
+**Nie należy ustawiać o stałym rozmiarze okna**
+
+- Użyj <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Na przykład:
+
+   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+
+**Dodaj <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
+
+- Dodaj <xref:System.Windows.FrameworkElement.FlowDirection%2A> do elementu głównego aplikacji.
+
+   WPF zapewnia wygodny sposób obsługi poziomej, dwukierunkowe i układów w pionie. W ramach prezentacji <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwość może służyć do definiowania układu. Wzorce kierunek przepływu są:
+   
+     - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb) — układ poziomy łaciński, Azja Wschodnia i tak dalej.
+     
+     - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb) — dwukierunkowych dla arabskiego, hebrajskiego i tak dalej.
+
+**Użyj czcionki zamiast fizycznych czcionek**
+
+- W przypadku złożonych czcionek <xref:System.Windows.Controls.Control.FontFamily%2A> właściwości nie musi być lokalizowany.
+
+- Deweloperzy można użyć jednej z następujących czcionek lub utworzyć własne.
+
+   - Globalny interfejs użytkownika
+   - Serif globalne sieci San
+   - Globalne Serif
+
+**Dodaj XML: lang**
+
+- Dodaj `xml:lang` atrybutu w elemencie głównym interfejsu użytkownika, takie jak `xml:lang="en-US"` dla aplikacji w języku angielskim.
+
+- Ponieważ używają czcionki `xml:lang` Aby ustalić, jakie czcionki do użycia, należy ustawić tę właściwość, do obsługi wielu języków scenariuszy.
+
 <a name="autolay_grids"></a>   
 ## <a name="automatic-layout-and-grids"></a>Automatyczny układ i siatki  
- <xref:System.Windows.Controls.Grid> Elementu, jest przydatne w przypadku automatycznego układu, ponieważ umożliwia deweloperom położenie elementów. A <xref:System.Windows.Controls.Grid> kontrolka jest w stanie dystrybucji dostępna ilość miejsca między jego elementów podrzędnych, za pomocą w układzie wierszy i kolumn. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elementów może obejmować wiele komórek, a istnieje możliwość mają siatki w obrębie siatki. Siatki są przydatne, ponieważ umożliwiają one tworzenie i umieść złożonych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Poniższy przykład demonstruje użycie siatki do pozycji niektóre przyciski i tekst. Należy zauważyć, że wysokość i szerokość komórek są ustawione na <xref:System.Windows.GridUnitType.Auto>; dlatego komórkę, która zawiera przycisk za pomocą obrazu jest dopasowywany obrazu.  
-  
+ <xref:System.Windows.Controls.Grid> Elementu, jest przydatne w przypadku automatycznego układu, ponieważ umożliwia deweloperom położenie elementów. A <xref:System.Windows.Controls.Grid> kontrolka jest w stanie dystrybucji dostępna ilość miejsca między jego elementów podrzędnych, za pomocą w układzie wierszy i kolumn. Elementy interfejsu użytkownika może obejmować wiele komórek. Ponadto istnieje możliwość mają siatki w obrębie siatki. Siatki są przydatne, ponieważ umożliwiają one tworzenie i umieść złożonego interfejsu użytkownika. Poniższy przykład demonstruje użycie siatki do pozycji niektóre przyciski i tekst. Należy zauważyć, że wysokość i szerokość komórek są ustawione na <xref:System.Windows.GridUnitType.Auto>; dlatego komórkę, która zawiera przycisk za pomocą obrazu jest dopasowywany obrazu.  
+
  [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  Na poniższym rysunku przedstawiono siatki produkowane przez poprzedniego kodu.  

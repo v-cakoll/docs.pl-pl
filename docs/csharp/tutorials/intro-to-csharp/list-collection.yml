@@ -1,0 +1,205 @@
+### YamlMime:Tutorial
+title: Dowiedz się, jak zarządzać zbierania danych przy użyciu typu listy ogólnej
+metadata:
+  title: Kolekcje danych — wprowadzenie do C# interaktywnego samouczka
+  description: W tym samouczku użyjesz przeglądarki, aby interaktywnie poznawać język C#. Możesz pisać kod w języku C# i wyświetlić wyniki kompilacji i uruchomienia kodu bezpośrednio w przeglądarce.
+  audience: Developer
+  ms.custom: mvc
+  ms.date: 10/23/2018
+  level: Beginner
+  displayType: two-column
+  interactive: csharp
+  ms.openlocfilehash: 6b7a00a0d7ea17ab48e673b735bdd1a77328c099
+  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 10/28/2018
+  ms.locfileid: "50200218"
+items:
+- durationInMinutes: 1
+  content: >
+    W tym samouczku pokazano C# interaktywnie przy użyciu przeglądarki do zapisania C# kodu oraz zobaczyć wyniki kompilowania i uruchamiania kodu. Zawiera serię lekcji, które tworzenia, modyfikacji i Poznaj kolekcje i tablice.
+- title: Tworzenie list
+  durationInMinutes: 2
+  content: >
+    Uruchom następujący kod w oknie interaktywnym. Aby to zrobić, wpisz poniższy blok kodu w oknie interaktywnym (Zastąp `<name>` z Twoją nazwą) i kliknij przycisk **Uruchom** przycisku:
+
+
+    ```csharp
+
+    var names = new List<string> { "<name>", "Ana", "Felipe" };
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    Została właśnie utworzona lista ciągów, dodane trzy nazwy do tej listy i drukowane nazwy w całości wielkimi. Używasz pojęcia, które wyjaśniono w samouczkach wcześniej pętli na liście.
+
+
+    Kod, aby wyświetlić nazwy sprawia, że użycie [Interpolacja ciągów](../../language-reference/tokens/interpolated.md) funkcji. Kiedy należy poprzedzić `string` z `$` kodu C# można osadzić w deklaracji ciąg znaków. Rzeczywistego ciągu zastępuje wartość, która generuje kod C#. W tym przykładzie zastępuje `{name.ToUpper()}` przy użyciu nazwy, konwertowane na wielkie litery, ponieważ wywołujesz <xref:System.String.ToUpper%2A?displayProperty=nameWithType> metody.
+
+
+    Możemy kontynuować Eksplorowanie.
+
+
+    > [!NOTE]
+
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Modyfikowanie zawartości listy
+  durationInMinutes: 3
+  content: >
+    Kolekcja utworzona używa <xref:System.Collections.Generic.List%601> typu. Tego typu przechowuje elementów. Należy określić typ elementów między nawiasami.
+
+
+    Jednym ważnym aspektem to <xref:System.Collections.Generic.List%601> typ jest, może rosnąć lub maleć, dzięki któremu można dodawać lub usuwać elementy. Dodaj następujący kod poniższego kodu, które zostały już wpisane:
+
+
+    ```csharp
+
+    Console.WriteLine();
+
+    names.Add("Maria");
+
+    names.Add("Bill");
+
+    names.Remove("Ana");
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    Dwa więcej nazw zostały dodane na końcu listy. Został również usunięty jeden także.
+
+
+    <xref:System.Collections.Generic.List%601> Umożliwia odwoływać się do pojedynczych elementów przez **indeksu** także. Dostęp przy użyciu elementów `[` i `]` tokenów. Dodaj następujący kod poniżej co już i wypróbuj:
+
+
+    ```csharp
+
+    Console.WriteLine($"My name is {names[0]}.");
+
+    Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
+
+    ```
+
+
+    Nie możesz uzyskać dostęp poza koniec listy. Możesz sprawdzić, jak długo używa listy <xref:System.Collections.Generic.List%601.Count%2A> właściwości. Dodaj następujący kod, aby spróbować zrobić to:
+
+
+    ```csharp
+
+    Console.WriteLine($"The list has {names.Count} people in it");
+
+    ```
+
+
+    Kliknij przycisk **Uruchom** ponownie, aby zobaczyć wyniki. W języku C#, indeksów rozpoczynają się od 0, dlatego największego indeksu nieprawidłowy jest jednym mniejszy niż liczba elementów na liście.
+
+
+    > [!NOTE]
+
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Wyszukiwanie i sortowanie list
+  durationInMinutes: 5
+  content: >
+    Nasze przykłady za pomocą list stosunkowo mały, ale aplikacje często może utworzyć listy o wiele więcej elementów, czasami numerowania w tysiącach. Aby znaleźć elementy w tych kolekcjach większe, musisz wyszukiwania na liście dla różnych elementów. <xref:System.Collections.Generic.List%601.IndexOf%2A> Metoda wyszukuje element i zwraca indeks elementu. Spróbuj, aby zobaczyć, jak to działa.  Dodaj następujący kod poniżej co napisanych do tej pory:
+
+
+    ```csharp
+
+    var index = names.IndexOf("Felipe");
+
+    if (index != -1)
+      Console.WriteLine($"The name {names[index]} is at index {index}");
+
+    var notFound = names.IndexOf("Not Found");
+      Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+    ```
+
+
+    Być może nie wiesz, czy element jest na liście, dlatego należy zawsze sprawdzić, wskaźnik zwracany przez <xref:System.Collections.Generic.List%601.IndexOf%2A>. Jeśli jest to wartość -1, element nie został znaleziony.
+
+
+    Można również sortować elementy na liście. <xref:System.Collections.Generic.List%601.Sort%2A> Metoda sortuje wszystkie elementy na liście w kolejności ich normalne (alfabetycznie w przypadku ciągów znaków). Dodaj następujący kod, a następnie ponownie uruchom:
+
+
+    ```csharp
+
+    names.Sort();
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    > [!NOTE]
+
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Listę innych typów
+  durationInMinutes: 5
+  content: >
+    Wcześniej użyto `string` typu na listach do tej pory. Upewnijmy się <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Utwórzmy zbioru liczb. Usuń kod, który napiszesz do tej pory i zastąp go to:
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+    ```
+
+
+    Który tworzy listę liczb całkowitych i ustawia pierwszych dwóch liczb całkowitych na wartości 1. Są to dwie pierwsze wartości *sekwencji Fibonacci*, sekwencji liczb. Każdy kolejny numer Fibonacci zostanie znaleziony, wykonując sumie poprzednich dwóch liczb. Dodaj następujący kod:
+
+
+    ```csharp
+
+    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+
+    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+
+    fibonacciNumbers.Add(previous + previous2);
+
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    Naciśnij klawisz **Uruchom** aby zobaczyć wyniki.
+
+
+    > [!NOTE]
+
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Wyzwanie
+  durationInMinutes: 10
+  content: >
+    Zobacz, można umieścić ze sobą pewne pojęcia z tego i starszych wersji lekcje. Rozwiń węzeł, na jakie dołączeniu do tej pory z międzynarodowymi numerami identyfikującymi Fibonacci. Wypróbuj i napisać kod, aby wygenerować pierwszych 20 cyfr w sekwencji. (Wskazówka 20 numer Fibonacci jest 6765).
+
+
+    > [!NOTE]
+
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Ukończenie wyzwania
+  durationInMinutes: 3
+  content: "Czy Twój pomysł był podobny do poniższego?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nZ każdą iteracją pętli tworzenia ostatnich dwóch liczb całkowitych na liście sumowanie je, a następnie dodanie wartości do listy. Pętla powtarza się, aż 20 elementów zostały dodane do listy.\n\n> [!NOTE]\n> To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).\n"
+- content: >-
+    Pomyślnie ukończono samouczek listy. Niniejszy samouczek jest ostateczny interaktywnego samouczka. Możesz kontynuować te samouczki na własnym środowisku programistycznym. Poznaj podstawy [rozwoju lokalnego](local-environment.md) a następnie wybierz zapoznać się z samouczkiem. Możesz wypróbować to samo ćwiczenie, przejść bezpośrednio do następnego samouczka lub zacząć ponownie z [liczby w elemencie C# ](numbers-in-csharp-local.md) samouczka.
+
+
+    Dowiedz się więcej o pracy z `List` wpisać [.NET — przewodnik](../../../standard/index.md) tematu [kolekcje](../../../standard/collections/index.md). Ponadto dowiesz się o innych typach kolekcji.

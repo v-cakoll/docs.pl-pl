@@ -2,26 +2,26 @@
 title: Składnia dyrektyw programu WCF
 ms.date: 03/30/2017
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
-ms.openlocfilehash: 18cc3eda23154af143cdae5e3861242e20d64d50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ba39812b96940683ae52bd64d28730f5c97c61f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386174"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205129"
 ---
 # <a name="wcf-directive-syntax"></a>Składnia dyrektyw programu WCF
-Określa ustawienia używane przez Windows Communication Foundation (WCF) dyrektywy w pliku svc przekierować kompilatory. Dyrektywy każdy może zawierać jeden lub więcej atrybutów (łączyć się z wartościami), które są specyficzne dla tej dyrektywy. Usługi WCF ma tylko [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy.  
+Określa ustawienia używane przez dyrektywy Windows Communication Foundation (WCF) w plikach .svc do kierowania kompilatory. Każda dyrektywa może zawierać jeden lub więcej atrybutów (łączyć przy użyciu wartości), które są specyficzne dla tej dyrektywy. Usługi WCF ma tylko [ \@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)  
- Definiuje atrybuty specyficzne dla strony używany przez kompilator .svc. Może obejmować tylko pliki SVC.  
+ Definiuje atrybuty specyficzne dla strony, używane przez kompilator .svc. Mogą być dołączane tylko w plikach .svc.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Instrukcje: hostowanie usługi WCF w programie IIS](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
- Opisuje sposób @ServiceHost dyrektywa jest używany podczas obsługującego usługę w Internet Information Services (IIS)  
+ W tym artykule opisano sposób, w jaki @ServiceHost dyrektywy jest używany w przypadku hostowania usługi w Internet Information Services (IIS)  
   
  [Instrukcje: hostowanie usługi WCF w usłudze WAS](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- Opisuje sposób @ServiceHost dyrektywa jest używany podczas obsługującego usługę w usługi aktywacji procesów systemu Windows (WAS)  
+ W tym artykule opisano sposób, w jaki @ServiceHost dyrektywy jest używany w przypadku hostowania usługi w Windows Process Activation Service (WAS)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)  

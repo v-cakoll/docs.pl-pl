@@ -4,11 +4,11 @@ description: Jak jest C# ewoluują języka
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
 ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047257"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201442"
 ---
 # <a name="whats-new-in-c"></a>Co nowego w języku C# #
 

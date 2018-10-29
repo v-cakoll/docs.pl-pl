@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 3b28876106205f7b13f8609c7a1e3bb0a6548cce
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ad903efcf03eae346233f4eb84e61ca407336de9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199552"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205246"
 ---
 # <a name="traverse-text-using-ui-automation"></a>Przenoszenie tekstu przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -30,8 +30,8 @@ ms.locfileid: "47199552"
 > [!NOTE]
 >  Ponieważ tylko do obiektów osadzonych oparte na tekście są traktowane jako części strumienia tekstu, obiekty osadzone, takie jak obrazy nie wpływają na `Move` lub jego wartość zwracaną.  
   
- [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
- [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
+[!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
+[!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
 [!code-csharp[FindText#FindTextProvider](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#findtextprovider)]
 [!code-vb[FindText#FindTextProvider](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#findtextprovider)]  
 [!code-csharp[FindText#Navigate](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#navigate)]

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c3904ad60df3d9d7ce2b58d5911e4e19a2ebb7e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193908"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194107"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern i obiekty osadzone — omówienie
 > [!NOTE]
@@ -45,7 +45,7 @@ Przykład strumienia tekstu przy użyciu osadzonych obiektów i ich zakresy zakr
   
  Gdy jest to konieczne przechodzenie przez zawartość zakres tekstu, szereg kroków biorących udział w tle, aby <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> pomyślnie wykonać metodę.  
   
-1.  Zakres tekstu jest znormalizować; oznacza to, że zakres tekstu jest zwinięte do wymiaru degeneracji zakresu na <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> punktu końcowego, co sprawia, że <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> zbędny punktu końcowego. Ten krok jest niezbędny usunąć niejednoznaczność w sytuacjach, w którym obejmuje zakres tekstu <xref:System.Windows.Automation.Text.TextUnit> granice: na przykład "{N} RL [ http://www.microsoft.com ](https://www.microsoft.com) jest osadzony w tekście" gdzie "{" i "}" są wartościami tekstowymi punkty końcowe zakresu.  
+1.  Zakres tekstu jest znormalizować; oznacza to, że zakres tekstu jest zwinięte do wymiaru degeneracji zakresu na <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> punktu końcowego, co sprawia, że <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> zbędny punktu końcowego. Ten krok jest niezbędny usunąć niejednoznaczność w sytuacjach, w którym obejmuje zakres tekstu <xref:System.Windows.Automation.Text.TextUnit> granice: na przykład `{The URL https://www.microsoft.com is embedded in text` których "{" i "}" są wartościami tekstowymi punkty końcowe zakresu.  
   
 2.  Wynikowy zakres zostaje przeniesiony do tyłu <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> na początku żądany <xref:System.Windows.Automation.Text.TextUnit> granic.  
   
@@ -66,22 +66,22 @@ Przykłady jak zakres tekstu jest uwzględniany Move() i ExpandToEnclosingUnit()
   
  } = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>  
   
-<a name="Hyperlink"></a>   
 ### <a name="hyperlink"></a>Hyperlink  
- **Przykład 1 - zakres tekstu, który zawiera hiperłącze osadzonego tekstu**  
+
+**Przykład 1 - zakres tekstu, który zawiera hiperłącze osadzonego tekstu**
   
- {Adres URL [ http://www.microsoft.com ](https://www.microsoft.com) jest osadzony w tekście}.  
+`{The URL https://www.microsoft.com is embedded in text}.`
   
 |Metoda wywoływana|Wynik|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Zwraca ciąg "adres URL http://www.microsoft.com jest osadzony w tekście".|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Zwraca ciąg `The URL https://www.microsoft.com is embedded in text`.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Zwraca najbardziej wewnętrzną funkcją <xref:System.Windows.Automation.AutomationElement> który otacza zakres tekstu; w takim przypadku <xref:System.Windows.Automation.AutomationElement> reprezentujący dostawcę tekstu sam.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Zwraca <xref:System.Windows.Automation.AutomationElement> reprezentujące kontrolki hiperlinku.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> gdzie <xref:System.Windows.Automation.AutomationElement> to obiekt zwrócony przez poprzednie `GetChildren` metody.|Zwraca zakres, który reprezentuje "http://www.microsoft.com".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> gdzie <xref:System.Windows.Automation.AutomationElement> to obiekt zwrócony przez poprzednie `GetChildren` metody.|Zwraca zakres, który reprezentuje "https://www.microsoft.com".|  
   
  **Przykład 2 - zakres tekstu, które częściowo obejmuje hiperłącze osadzonego tekstu**  
   
- Adres URL `http://{[www]}` jest osadzony w tekście.  
+ Adres URL `https://{[www]}` jest osadzony w tekście.  
   
 |Metoda wywoływana|Wynik|  
 |-------------------|------------|  
@@ -89,9 +89,9 @@ Przykłady jak zakres tekstu jest uwzględniany Move() i ExpandToEnclosingUnit()
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Zwraca najbardziej wewnętrzną funkcją <xref:System.Windows.Automation.AutomationElement> który otacza zakres tekstu; w takim przypadku kontrolować hiperłącze.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Zwraca `null` ponieważ zakres tekstu nie obejmować cały ciąg adresu URL.|  
   
- **Przykład 3 - zakres tekstu, które częściowo obejmuje zawartość kontenerów tekstu. Kontener tekst ma hiperłącze osadzonego tekstu, który nie jest częścią zakresu tekstu.**  
+**Przykład 3 - zakres tekstu, które częściowo obejmuje zawartość kontenerów tekstu. Kontener tekst ma hiperłącze osadzonego tekstu, który nie jest częścią zakresu tekstu.**  
   
- {URL} [ http://www.microsoft.com ](https://www.microsoft.com) jest osadzony w tekście.  
+`{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
 |Metoda wywoływana|Wynik|  
 |-------------------|------------|  

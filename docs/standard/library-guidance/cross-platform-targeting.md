@@ -5,17 +5,17 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
 ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049077"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202819"
 ---
 # <a name="cross-platform-targeting"></a>Przeznaczone dla wielu platform
 
 Nowoczesne .NET obsługuje wiele systemów operacyjnych i urządzeń. Ważne jest dla platformy .NET bibliotek typu open source do obsługi tak wielu programistów, jak to możliwe, czy jest tworzone w witrynie sieci Web platformy ASP.NET hostowanej na platformie Azure lub gra .NET na platformie Unity.
 
-## <a name="net-standard"></a>.NET standard
+## <a name="net-standard"></a>.NET Standard
 
 .NET standard jest najlepszym sposobem dodania obsługi wielu platform w bibliotece platformy .NET. [.NET standard](../net-standard.md) to specyfikacja interfejsów API platformy .NET, które są dostępne na wszystkich implementacji .NET. Przeznaczonych dla platformy .NET Standard umożliwia tworzenie godnych bibliotek, które są ograniczone do użycia interfejsów API, które znajdują się w danej wersji programu .NET Standard, co oznacza, że jest użyteczne przez wszystkie platformy, które implementują tę wersję .NET Standard.
 

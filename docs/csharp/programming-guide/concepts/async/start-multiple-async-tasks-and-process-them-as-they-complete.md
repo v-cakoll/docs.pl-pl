@@ -2,12 +2,12 @@
 title: Przetwarzanie zadań asynchronicznych po ich zakończeniu
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 5ce677a791427e7e064a2c12a9e09aba34a67560
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9380be1dc24d7c147c22dbb1a362777f56a32358
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617185"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202045"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich, po ich zakończeniu (C#)
 
@@ -189,13 +189,13 @@ namespace ProcessTasksAsTheyFinish
         {
             List<string> urls = new List<string>
             {
-                "http://msdn.microsoft.com",
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",
-                "http://msdn.microsoft.com/library/hh290136.aspx",
-                "http://msdn.microsoft.com/library/dd470362.aspx",
-                "http://msdn.microsoft.com/library/aa578028.aspx",
-                "http://msdn.microsoft.com/library/ms404677.aspx",
-                "http://msdn.microsoft.com/library/ff730837.aspx"
+                "https://msdn.microsoft.com",
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",
+                "https://msdn.microsoft.com/library/hh290136.aspx",
+                "https://msdn.microsoft.com/library/dd470362.aspx",
+                "https://msdn.microsoft.com/library/aa578028.aspx",
+                "https://msdn.microsoft.com/library/ms404677.aspx",
+                "https://msdn.microsoft.com/library/ff730837.aspx"
             };
             return urls;
         }

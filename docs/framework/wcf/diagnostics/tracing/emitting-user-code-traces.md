@@ -3,11 +3,11 @@ title: Emitowanie danych śledzenia elementu User-Code
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049168"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200590"
 ---
 # <a name="emitting-user-code-traces"></a>Emitowanie danych śledzenia elementu User-Code
 Oprócz włączenia śledzenia w konfiguracji, aby zebrać dane Instrumentacji wygenerowane przez Windows Communication Foundation (WCF), można również wysyłać ślady programowo w kodzie użytkownika. W ten sposób można utworzyć z wyprzedzeniem danych instrumentacji, które można przejrzeć w dalszej części w celu diagnostyki. W tym temacie omówiono, jak to zrobić.  

@@ -10,11 +10,11 @@ ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bec27165d1bfd6a501ba8b96a1eb133276fe7269
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50043338"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197954"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest redystrybucyjnego środowiska uruchomieniowego. W przypadku tworzenia aplikacji dla tej wersji programu .NET Framework, można dołączyć (łańcuch) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator w ramach wymagań wstępnych instalacji aplikacji. Obecne środowisko dostosowany lub ujednoliconego Instalatora, może chcesz uruchomić w trybie dyskretnym [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i śledzić postęp podczas wyświetlania postępu instalacji aplikacji. Aby włączyć śledzenie dyskretnej [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora (mogą być odtwarzane) definiuje protokół, za pomocą mapowanych na pamięć segment operacji We/Wy (rozwiązanie MMIO) do komunikowania się z ustawień (obserwatora lub chainer). Protokół ten definiuje sposób chainer uzyskać informacje o postępie, Uzyskaj szczegółowe wyniki, odpowiadanie na wiadomości i anulować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora.  

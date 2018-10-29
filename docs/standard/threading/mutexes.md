@@ -11,11 +11,11 @@ ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 31c99d38cd608e93e9ee3467e0ce425835a3d572
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50044896"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201481"
 ---
 # <a name="mutexes"></a>Muteksy
 Możesz użyć <xref:System.Threading.Mutex> obiekt, aby zapewnić wyłącznego dostępu do zasobu. <xref:System.Threading.Mutex> Klasy wykorzystuje więcej zasobów systemowych niż <xref:System.Threading.Monitor> klasy, ale mogą być organizowane poza granice domeny aplikacji, można za pomocą wielu czeka i może służyć do synchronizacji wątków w różnych procesach. Dla porównania mechanizmów synchronizacji zarządzanych, zobacz [Przegląd podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

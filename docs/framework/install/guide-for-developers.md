@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96e3ae8bf826931f39fab58fc2b7ad3f58f8e431
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308581"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199894"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalowanie programu .NET Framework dla deweloperów
 
@@ -37,7 +37,7 @@ Skorzystaj z poniższej tabeli szybkich łączy lub Czytaj dalej, aby uzyskać s
 
 |Wersja programu .NET Framework|Instalacja dla deweloperów|Instalacji pakietu redystrybucyjnego|Obsługa różnych platform|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[.NET framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Instalator sieci web Centrum pobierania 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Centrum pobierania 4.7.2 Instalator w trybie offline](https://go.microsoft.com/fwlink/?LinkId=863265)|Zawartość: <br/>Usługa Windows Update 10 kwietnia 2018 r.<br /><br /> Można zainstalować na:<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starszych<br /> W systemie Windows Server w wersji 1709 i starsze<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.2**|[.NET framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Instalator sieci web Centrum pobierania 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Centrum pobierania 4.7.2 Instalator w trybie offline](https://go.microsoft.com/fwlink/?LinkId=863265)|Zawartość: <br/>Usługa Windows Update 10 października 2018 r.<br/>Usługa Windows Update 10 kwietnia 2018 r.<br /><br /> Można zainstalować na:<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starszych<br /> W systemie Windows Server w wersji 1709 i starsze<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.1**|[Pakiet dla deweloperów .NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852105)|[Strona pobierania dla 4.7.1 Instalator sieci web](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Strona pobierania dla 4.7.1 Instalator w trybie offline](https://go.microsoft.com/fwlink/?LinkId=852107)|Zawartość: <br/>Windows 10 Fall Creators Update<br/>W systemie Windows Server w wersji 1709<br /><br /> Można zainstalować na:<br/> Windows 10 Creators Update <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starszych<br /> Windows Server 2016 i starsze wersje<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
 |**4.7**|[Pakiet dla deweloperów .NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825319)|[Strona pobierania dla Instalatora sieci web w wersji 4.7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Strona pobierania dla wersji 4.7 Instalator w trybie offline](https://go.microsoft.com/fwlink/?LinkId=825303)|Zawartość: <br/>Windows 10 Creators Update<br /><br /> Można zainstalować na:<br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starszych<br /> Windows Server 2016 i starsze wersje<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
 |**4.6.2**|[.NET Framework 4.6.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=780617)|[Strona pobierania dla 4.6.2 Instalator sieci web](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Strona pobierania dla 4.6.2 Instalator w trybie offline](https://go.microsoft.com/fwlink/?LinkId=780601)|Zawartość: <br /> Rocznicowa aktualizacja systemu Windows 10<br /><br /> Można zainstalować na:<br /> Usługa Windows Update 10 listopada <br/> Windows 10 <br /> Windows 8.1 i starszych<br /> Windows Server 2012 R2 i wcześniejsze wersje<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|

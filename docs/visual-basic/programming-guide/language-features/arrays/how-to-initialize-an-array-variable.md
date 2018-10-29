@@ -8,11 +8,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
 ms.openlocfilehash: 4ce2e061c5f523fae3020b08034875422a0062a7
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170175"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202006"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Porady: inicjowanie zmiennej tablicy w języku Visual Basic
 Inicjowanie zmiennej tablicy, umieszczając dołączyć literał tablicy `New` klauzula i określić wartość początkową tablicy. Możesz określić typ lub Zezwalaj, aby był wywnioskowany z wartości w literale tablicy. Aby uzyskać więcej informacji na temat sposobu typ jest wnioskowany, zobacz "Wypełnianie tablicy początkowymi wartościami" w [tablic](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  

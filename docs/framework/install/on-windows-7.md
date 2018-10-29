@@ -5,12 +5,12 @@ description: Dowiedz się, jak zainstalować program .NET Framework na Windows 7
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 828680c0591f9603d14c57dd9e82fe1f3970ede3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.openlocfilehash: 091fb93f26695df01f2f95fdec7ed168d96ba90d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861874"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034562"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Instalowanie programu .NET Framework na Windows 7 z dodatkiem SP1 i Windows Server 2008 R2
 
@@ -18,7 +18,7 @@ ms.locfileid: "43861874"
 
 ![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Jest obsługiwana na Windows 7 z dodatkiem SP1 i Windows Server 2008 R2 i jest dołączany [Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10).
+Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Jest obsługiwana na Windows 7 z dodatkiem SP1 i Windows Server 2008 R2 i jest dołączony do [Windows Update 10 października 2018 r.](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) i [Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-472"></a>.NET framework 4.7.2
 

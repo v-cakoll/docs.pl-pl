@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 wydajności
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ba6120284b3ab189b0f34e2d3ef25f6967f04e5d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123816"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202292"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 wydajności
 Dustin Metzgar
@@ -424,7 +424,7 @@ public class Workflow1 : Activity
 
  Gdy WF4 nie ma dostawcy śledzenia bazy danych SQL, wykonuje AppFabric.  Podejście śledzenia SQL w AppFabric jest do subskrybowania zdarzenia ETW za pomocą usługi Windows, która partii zdarzeń i zapisuje je do tabeli SQL przeznaczony do wstawienia szybkie.  Jako osobne zadanie wstrzymanie danych z tej tabeli i reforms go do tabel, które mogą być wyświetlane na pulpicie nawigacyjnym rozwiązania AppFabric raportowania.  Oznacza to, że partii śledzenia zdarzeń odbywa się niezależnie od przepływu pracy, pochodzi z i w związku z tym nie trzeba czekać na punkcie trwałości przed rejestrowane.
 
- Zdarzenia ETW mogą być rejestrowane za pomocą narzędzi takich jak logman lub narzędzia xperf.  Można wyświetlić za pomocą narzędzia, takiego jak xperfview lub przekonwertowane na bardziej czytelnym formacie, takich jak XML, za pomocą tracerpt compact pliku ETL.  W WF3 jedyną opcją, w celu uzyskania śledzenia zdarzeń, bez bazy danych SQL jest tworzenie niestandardowe śledzenia usługi. Aby uzyskać więcej informacji na temat funkcji ETW, zobacz [usługi WCF i zdarzenia śledzenia dla Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) i [Event Tracing for Windows](https://msdn.microsoft.com/library/ff190903.aspx\)).
+ Zdarzenia ETW mogą być rejestrowane za pomocą narzędzi takich jak logman lub narzędzia xperf.  Można wyświetlić za pomocą narzędzia, takiego jak xperfview lub przekonwertowane na bardziej czytelnym formacie, takich jak XML, za pomocą tracerpt compact pliku ETL.  W WF3 jedyną opcją, w celu uzyskania śledzenia zdarzeń, bez bazy danych SQL jest tworzenie niestandardowe śledzenia usługi. Aby uzyskać więcej informacji na temat funkcji ETW, zobacz [usługi WCF i zdarzenia śledzenia dla Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) i [Event Tracing for Windows](https://msdn.microsoft.com/library/ff190903.aspx).
 
  Włączanie śledzenia przepływu pracy wpływają na wydajność w różnym stopniu.  Test porównawczy poniżej używa narzędzia logman do wykorzystania funkcji ETW śledzenia zdarzeń i zarejestruj je w pliku ETL.  Koszt SQL śledzenia w AppFabric nie znajduje się w zakresie tego artykułu.  Profil śledzenia podstawowego, używany również w AppFabric, jest wyświetlany w tym testów porównawczych.  Również obejmuje koszt śledzenia tylko zdarzeń monitorowania kondycji.  Zdarzenia te są przydatne do rozwiązywania problemów i określania średniej przepływności systemu.
 

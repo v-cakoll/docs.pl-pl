@@ -4,12 +4,12 @@ description: Dowiedz się więcej o różnicach między istniejące i pliki cspr
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 0efca768545ab11319b2fe7b062cb6a4e751dc4d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121418"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203959"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -72,7 +72,7 @@ Ta zmiana nie powoduje modyfikacji głównego zawiera mechanika innych. Jednak j
 Aby wyłączyć **wszystkie niejawne elementy globalne**, można ustawić `<EnableDefaultItems>` właściwość `false` jak w poniższym przykładzie:
 ```xml
 <PropertyGroup>
-    <EnableDefaultItems>false</EnableDefaultItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
 
@@ -92,10 +92,11 @@ Jeśli projekt zawiera wiele platform docelowych, wyniki polecenia powinna zosta
 ## <a name="additions"></a>Dodatki
 
 ### <a name="sdk-attribute"></a>Atrybutu zestawu SDK 
-`<Project>` Elementu *.csproj* plik ma nowy atrybut o nazwie `Sdk`. `Sdk` Określa zestaw SDK będzie używane przez projekt. Zestaw SDK, jako [dokumentu warstwowe](cli-msbuild-architecture.md) opisuje, to zbiór MSBuild [zadania](/visualstudio/msbuild/msbuild-tasks) i [cele](/visualstudio/msbuild/msbuild-targets) , można tworzyć kod platformy .NET Core. Publikujemy dwóch głównych zestawów SDK z narzędziami .NET Core:
+`<Project>` Elementu *.csproj* plik ma nowy atrybut o nazwie `Sdk`. `Sdk` Określa zestaw SDK będzie używane przez projekt. Zestaw SDK, jako [dokumentu warstwowe](cli-msbuild-architecture.md) opisuje, to zbiór MSBuild [zadania](/visualstudio/msbuild/msbuild-tasks) i [cele](/visualstudio/msbuild/msbuild-targets) , można tworzyć kod platformy .NET Core. Publikujemy trzech głównych zestawów SDK z narzędziami .NET Core:
 
 1. .NET Core SDK o identyfikatorze `Microsoft.NET.Sdk`
 2. .NET Core web SDK o identyfikatorze `Microsoft.NET.Sdk.Web`
+3. Biblioteki klas Razor platformy .NET Core SDK z Identyfikatorem programu `Microsoft.NET.Sdk.Razor`
 
 Musisz mieć `Sdk` atrybut do jednego z tych identyfikatorów w `<Project>` element, aby użyć narzędzi .NET Core i kompilowanie kodu. 
 

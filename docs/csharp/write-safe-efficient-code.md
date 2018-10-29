@@ -3,12 +3,12 @@ title: Zapis w bezpieczny i skuteczny C# kodu
 description: Najnowsze ulepszenia C# języka umożliwiają pisanie weryfikowalny kod bezpieczny, że wydajność była poprzednio skojarzona z niebezpieczny kod.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: c5505f69a4706ef0f631c82e075e422cb8e13885
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 8e58a7f870c742f1c0a90a7b5507ac1e5d8074ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50043116"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201590"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Zapis w bezpieczny i skuteczny C# kodu #
 
@@ -73,7 +73,7 @@ Zawsze wtedy, gdy zgodną z planem projektu w celu utworzenia typu wartości nie
 Może zwracać wartości przez odwołanie, kiedy wartość zwracana nie jest lokalnym zwracanych metody. Zwracanie przez odwołanie oznacza, że kopiowane jest tylko odwołanie, nie struktury. W poniższym przykładzie `Origin` właściwości nie można użyć `ref` zwrócić, ponieważ wartość zwracana jest zmienna lokalna:
 
 ```csharp
-public Point3D Origin {get;} => new Point3D(0,0,0);
+public Point3D Origin => new Point3D(0,0,0);
 ```
 
 Jednak następującą definicję właściwości mogą być zwrócone przez odwołanie, ponieważ zwrócona wartość jest składową statyczną:
@@ -84,7 +84,7 @@ public struct Point3D
     private static Point3D origin = new Point3D(0,0,0);
 
     // Dangerous! returning a mutable reference to internal storage
-    public ref Point3D Origin { get; } => ref origin;
+    public ref Point3D Origin => ref origin;
 
     // other members removed for space
 }
@@ -97,13 +97,13 @@ public struct Point3D
 {
     private static Point3D origin = new Point3D(0,0,0);
 
-    public ref readonly Point3D Origin { get; } => ref origin;
+    public ref readonly Point3D Origin => ref origin;
 
     // other members removed for space
 }
 ```
 
-Zwracanie przez `readonly ref` umożliwia zapisywanie, kopiowanie większych struktur i zachować niezmienności członkowie danych wewnętrznych.
+Zwracanie `ref readonly` umożliwia zapisywanie, kopiowanie większych struktur i zachować niezmienności członkowie danych wewnętrznych.
 
 W witrynie wywołania obiektów wywołujących wprowadzić decyzja o korzystaniu z `Origin` właściwość jako `readonly ref` lub jako wartość:
 
@@ -127,7 +127,11 @@ Typy wartości są kopiowane, gdy przekazywane do metody o nazwie, jeśli nie ok
 - `ref`: Ta metoda może ustawić wartość argumentu jako parametr.
 - `in`: Ta metoda nie modyfikuje wartość argumentu jako parametr.
 
-Dodaj `in` modyfikator do przekazywania argumentu przez odwołanie i Zadeklaruj swoje założenia projektowe, aby przekazywać argumentów przez odwołanie, aby uniknąć niepotrzebnego kopiowania. Nie zamierzasz zmodyfikować obiekt używany w roli tego argumentu. Poniższy kod przedstawia przykład metody, które oblicza odległość między dwoma punktami w przestrzeni 3D.
+Dodaj `in` modyfikator do przekazywania argumentu przez odwołanie i Zadeklaruj swoje założenia projektowe, aby przekazywać argumentów przez odwołanie, aby uniknąć niepotrzebnego kopiowania. Nie zamierzasz zmodyfikować obiekt używany w roli tego argumentu.
+
+Praktyka ta często zwiększa wydajność w przypadku typów wartości tylko do odczytu, które są większe niż <xref:System.IntPtr.Size?displayProperty=nameWithType>. Dla typów prostych (`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` i `bool`, i `enum` typów), wszelkie potencjalne zwiększenie wydajności są minimial. W rzeczywistości limitu może obniżyć wydajność przy użyciu przekazywany przez odwołanie dla typów mniejszych niż <xref:System.IntPtr.Size?displayProperty=nameWithType>.
+
+Poniższy kod przedstawia przykład metody, które oblicza odległość między dwoma punktami w przestrzeni 3D.
 
 [!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 

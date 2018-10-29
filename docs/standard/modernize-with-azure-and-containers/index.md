@@ -4,12 +4,12 @@ description: Dowiedz się, przenoszenie i shift i modernizacji istniejących apl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b8c293730b0921924584359ffad32efd2b83a19b
-ms.sourcegitcommit: dfc8aa44246a97f4611cc441d9ef71b03cc31260
+ms.openlocfilehash: 0cfb052daa41264ae00d48906477eae99ea159d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49413942"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200088"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów Windows (wersja 2)
 
@@ -25,7 +25,7 @@ Copyright © 2018 Microsoft Corporation
 
 Wszelkie prawa zastrzeżone. Nie części zawartości tej książki może odtworzyć w jakiejkolwiek formie lub za pomocą jakichkolwiek środków bez pisemnej zgody wydawcy.
 
-Ten podręcznik jest dostępna bezpłatnie w formie elektronicznej book (książka) dostępnych za pośrednictwem wielu kanałów w firmie Microsoft takie jak <http://dot.net/architecture>.
+Ten podręcznik jest dostępna bezpłatnie w formie elektronicznej book (książka) dostępnych za pośrednictwem wielu kanałów w firmie Microsoft takie jak <https://dot.net/architecture>.
 
 Jeśli masz pytania dotyczące tej książki, adresem e-mail [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -72,7 +72,7 @@ Dla nowoczesnych aplikacji za pomocą najlepsze długoterminowe elastyczność i
 
 Rysunek 1-1 przedstawiono możliwe ścieżki, które można wykonać po przeniesieniu istniejące aplikacje .NET do chmury w fazach przyrostowe.
 
- ![Ścieżki modernizacji istniejących aplikacji .NET i usługi](./media/image1-1.png)
+ ![Ścieżki modernizacji istniejących aplikacji .NET i usługi](./media/image1-1.png)
 
 > **Rysunek 1-1**. Ścieżki modernizacji istniejących aplikacji .NET i usługi
 

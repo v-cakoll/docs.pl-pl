@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1ca4e0f0e0d88004d6c2059af4c774c916efd5ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1ae62cca72831b0319243acd9c5bf7a2b86138c3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035074"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205272"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu lista
 > [!NOTE]
@@ -36,21 +36,19 @@ ms.locfileid: "48035074"
   
  Widok kontrolki dla formantu, który implementuje typ kontrolki listy (na przykład kontrolka w postaci listy) składa się z:  
   
--   Zero lub więcej elementów w ramach kontrolki listy (elementy mogą być oparte na typy kontrolek elementu listy lub element danych)  
+- Zero lub więcej elementów w obrębie kontrolki listy (elementy mogą być oparte na typy kontrolek elementu listy lub element danych).
   
--   Zero lub więcej kontrolek grupy w ramach kontrolki listy  
+- Zero lub więcej grupowanie kontrolek w kontrolce listy.
   
--   Zero, jeden znak lub formanty paska przewijania w dwóch  
+- Zero, jeden lub dwa formanty paska przewijania.
   
--  
+Widok zawartości formantu, który implementuje typ kontrolki listy (na przykład kontrolka w postaci listy) składa się z:  
   
- Widok zawartości formantu, który implementuje typ kontrolki listy (na przykład kontrolka w postaci listy) składa się z:  
+- Zero lub więcej elementów w obrębie kontrolki listy (elementy mogą być oparte na typy kontrolek elementu listy lub element danych).
   
--   Zero lub więcej elementów w ramach kontrolki listy (elementy mogą być oparte na typy kontrolek elementu listy lub element danych)  
-  
--   Zero lub więcej grup w ramach kontrolki listy  
-  
- Kontrolka listy nie może mieć elementy, które mają hierarchicznych relacji innej niż są zgrupowane razem. Jeśli elementy podrzędne [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, a następnie wyświetlenie listy kontenerów powinna być oparta na Tree — typ kontrolki.  
+- Zero lub więcej grup w ramach kontrolki listy.
+
+Kontrolka listy nie może mieć elementy, które mają hierarchicznych relacji innej niż są zgrupowane razem. Jeśli elementy podrzędne [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa, a następnie wyświetlenie listy kontenerów powinna być oparta na Tree — typ kontrolki.  
   
  Elementy dostępne do wyboru w kontrolce listy będzie dostępny z poziomu obiektów podrzędnych w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa kontrolki listy. Wszystkie elementy w kontrolce listy musi należeć do tej samej grupie zaznaczenia. Elementy dostępne do wyboru na liście powinny zostać ujawnione jako typy kontroli wyszczególnij (zamiast elementu danych).  
   

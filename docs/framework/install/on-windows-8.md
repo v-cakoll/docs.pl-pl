@@ -5,12 +5,12 @@ description: Dowiedz się, jak zainstalować program .NET Framework w systemach 
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: f1edc928318ec56853df06c1382465e24d9604c9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 2304e8e2865c00ef480cc3d595195248db3f4d2a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515887"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50039138"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Instalowanie programu .NET Framework w systemach Windows 8 i Windows Server 2012
 
@@ -18,7 +18,7 @@ ms.locfileid: "43515887"
 
 ![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Jest obsługiwany w systemie Windows Server 2012, ale nie jest obsługiwana w systemie Windows 8. Nie jest dołączony [Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10).
+Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Jest obsługiwany w systemie Windows Server 2012, ale nie jest obsługiwana w systemie Windows 8. Nie jest dołączony [Windows Update 10 października 2018 r.](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) i [Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-472"></a>.NET framework 4.7.2
 

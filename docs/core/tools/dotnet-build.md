@@ -4,12 +4,12 @@ description: Dotnet kompilacji polecenia kompilacji w projekt i wszystkie jego z
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: da33647e583af8441218f64fb8ac76d5de3cee38
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c9d1478e3d3e298b01e707242cc7ad5cd924a9b3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580112"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200558"
 ---
 # <a name="dotnet-build"></a>Kompilacja DotNet
 
@@ -23,14 +23,16 @@ ms.locfileid: "46580112"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
     [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+
 dotnet build [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
     [-r|--runtime] [-v|--verbosity] [--version-suffix]
+
 dotnet build [-h|--help]
 ```
 ---
@@ -61,9 +63,9 @@ Aby wygenerować bibliotekę, Pomiń `<OutputType>` właściwości. Główną r�
 
 ## <a name="arguments"></a>Argumenty
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-Plik projektu do skompilowania. Jeśli nie określono pliku projektu, MSBuild przeszukuje bieżącego katalogu roboczego dla pliku, który ma rozszerzenie pliku, który kończy się *proj* i używa tego pliku.
+Plik projektu lub rozwiązania do kompilacji. Jeśli nie określono pliku projektu lub rozwiązania, MSBuild przeszukuje bieżącego katalogu roboczego dla pliku, który ma rozszerzenie pliku, który kończy się w jednym *proj* lub *sln* i używa tego pliku.
 
 ## <a name="options"></a>Opcje
 

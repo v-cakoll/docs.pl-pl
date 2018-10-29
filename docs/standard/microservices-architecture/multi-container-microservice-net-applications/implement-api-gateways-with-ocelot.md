@@ -4,12 +4,12 @@ description: Dowiedz się, jak zaimplementować bramy interfejsu API za pomocą 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 6e03909074fbf1d72dace35f38996a761f1a437d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 26b3c3510aa06fb1c7aa4c3a44f23c8e526fe60c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121431"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200036"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>Wdrażanie bramy interfejsu API za pomocą Ocelot
 
@@ -271,7 +271,7 @@ DownstreamHostAndPorts jest tablica zawierająca hosta i portu usługami podrzę
 
 UpstreamPathTemplate jest adres URL, który Ocelot będzie używany do identyfikowania które DownstreamPathTemplate do użycia dla danego żądania od klienta. Na koniec UpstreamHttpMethod jest używana, więc Ocelot można odróżnić różne żądania (POST, GET PUT) do tego samego adresu URL.
 
-W tym momencie może mieć jednej bramy interfejsu API Ocelot (ASP.NET Core WebHost) przy użyciu jednej lub [wielu scalić pliki configuration.json](http://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files) lub można również przechowywać [konfiguracji w magazynie KV Konsul](http://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul). 
+W tym momencie może mieć jednej bramy interfejsu API Ocelot (ASP.NET Core WebHost) przy użyciu jednej lub [wielu scalić pliki configuration.json](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files) lub można również przechowywać [konfiguracji w magazynie KV Konsul](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul).
 
 Ale wprowadzoną w sekcjach architektury i projektu, jeśli na pewno chcesz mieć autonomicznego mikrousług, może być lepszym rozwiązaniem podzielić tego jednego monolityczne bramy interfejsu API na wiele bramy interfejsu API i/lub BFF (zaplecze dla frontonu). W tym celu Zobaczmy, jak zaimplementować podejście z kontenerami aparatu Docker.
 
@@ -417,7 +417,7 @@ Jednak Ocelot obsługuje również siedzieć mikrousług tożsamości/uwierzytel
 
 Ponieważ aplikacji w ramach aplikacji eShopOnContainers została podzielona bramy interfejsu API na wiele BFF (zaplecze dla serwera sieci Web) i obszarów działalności bramy interfejsu API i inną opcją będzie była do utworzenia dodatkowych bramy interfejsu API dla odciąż przekrojowe zagadnienia. Wybór będzie podejście w bardziej złożonych mikrousług na podstawie architektury z wielu mikrousług odciąż przekrojowe zagadnienia. Ponieważ istnieje tylko jeden kwestią przekrojowe w ramach aplikacji eShopOnContainers, zdecydowano tylko obsługi usługi zabezpieczeń z obszaru bramy interfejsu API dla uproszczenia firmy sake.
 
-W każdym przypadku jeśli aplikacja jest zabezpieczona na poziomie bramy interfejsu API, moduł uwierzytelniania bramy interfejsu API Ocelot odwiedzeniu na początku podczas próby użycia wszystkie mikrousługi zabezpieczone. Który ponownie kieruje żądania HTTP do odwiedzenia mikrousługi tożsamości lub uwierzytelniania, tak więc, możesz odwiedzić stronę usług chronionych za pomocą access_token uzyskiwanie tokenu dostępu.
+W każdym przypadku jeśli aplikacja jest zabezpieczona na poziomie bramy interfejsu API, moduł uwierzytelniania bramy interfejsu API Ocelot odwiedzeniu na początku podczas próby użycia wszystkie mikrousługi zabezpieczone. Który ponownie kieruje żądania HTTP, aby odwiedzić tożsamości lub uwierzytelniania mikrousługi można pobrać tokenu dostępu, dzięki czemu użytkownik może odwiedzić usługami chronionymi za pomocą access_token.
 
 Metodą zabezpieczanie przy użyciu uwierzytelniania dowolnej usługi na poziomie bramy interfejsu API jest ustawienie AuthenticationProviderKey w powiązanych ustawieniami configuration.json.
 
@@ -564,19 +564,19 @@ W ramach aplikacji eShopOnContainers plików kodu źródłowego oryginalnych pli
 Istnieją inne ważne funkcje zbadaniu i użyć w przypadku użycia Ocelot bramy interfejsu API, opisane w poniższych łączy.
 
 -   **Odnajdowanie usługi integracji Ocelot z Konsul lub Eureka po stronie klienta** 
-    [*http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
 
 -   **Pamięć podręczna w warstwie bramy interfejsu API** 
-    [*http://ocelot.readthedocs.io/en/latest/features/caching.html*](http://ocelot.readthedocs.io/en/latest/features/caching.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
 
 -   **Rejestrowanie na poziomie warstwy bramy interfejsu API** 
-    [*http://ocelot.readthedocs.io/en/latest/features/logging.html*](http://ocelot.readthedocs.io/en/latest/features/logging.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
 
 -   **Jakość usług (ponownych prób i wyłączniki) w warstwie bramy interfejsu API** 
-    [*http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
 
 -   **Ograniczanie szybkości** 
-    [*http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
+    [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 >[!div class="step-by-step"]
 [Poprzedniego](background-tasks-with-ihostedservice.md) [dalej] (../microservice-ddd-cqrs-patterns/index.md)

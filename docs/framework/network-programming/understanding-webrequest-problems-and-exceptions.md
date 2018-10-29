@@ -2,14 +2,12 @@
 title: Opis elementu WebRequest problemów i wyjątków
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 08f4422422724436d5641a72e900611c12e95107
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 14bce9e9791e74f70f9bd91fc2551f55eaabfc5e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316314"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200603"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Opis elementu WebRequest problemów i wyjątków
 <xref:System.Net.WebRequest> i jej klasy pochodne (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, i <xref:System.Net.FileWebRequest>) zgłaszać wyjątków do sygnalizowania nietypowe warunku. Czasami rozwiązania tych problemów nie jest oczywisty.  

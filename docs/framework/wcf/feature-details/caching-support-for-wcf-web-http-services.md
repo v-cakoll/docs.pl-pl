@@ -2,12 +2,12 @@
 title: Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6c601b19a0b3b9b3eddbd686c316ce7e2cdf7778
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453297"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196807"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Umożliwia użycie deklaratywne mechanizm buforowania, dostępnych w programie ASP.NET w usługach WCF Web HTTP. Dzięki temu można buforowanie odpowiedzi z operacji usługi WCF Web HTTP. Gdy użytkownik wysyła żądania HTTP GET do usługi, który jest skonfigurowany do buforowania, ASP.NET odsyła odpowiedzi z pamięci podręcznej i nie jest wywoływana metoda usługi. Po wygaśnięciu pamięci podręcznej, następnym razem użytkownik wysyła żądania HTTP GET, wywoływana jest metoda swoje usługi i odpowiedź jest zbuforowana z jeszcze raz. Aby uzyskać więcej informacji na temat buforowania platformy ASP.NET, zobacz [omówienie buforowania programu ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -15,7 +15,7 @@ ms.locfileid: "49453297"
 ## <a name="basic-web-http-service-caching"></a>Usługa HTTP Basic Web buforowania  
  Aby włączyć protokół HTTP sieci WEB usługi pamięci podręcznej, należy najpierw włączyć zgodność platformy ASP.NET, stosując <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> do ustawienia usługi <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> do <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> lub <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wprowadza nowy atrybut o nazwie <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> pozwala określić nazwę profilu pamięci podręcznej. Ten atrybut jest stosowany do operacji usługi. Następujący przykład dotyczy <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> do usługi, aby włączyć zgodności z platformą ASP.NET i konfiguruje `GetCustomer` operacji do buforowania. <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` Atrybut określa profil pamięci podręcznej, który zawiera ustawienia pamięci podręcznej, który ma być używany.  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wprowadza nowy atrybut o nazwie <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> pozwala określić nazwę profilu pamięci podręcznej. Ten atrybut jest stosowany do operacji usługi. Następujący przykład dotyczy <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> do usługi, aby włączyć zgodności z platformą ASP.NET i konfiguruje `GetCustomer` operacji do buforowania. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Atrybut określa profil pamięci podręcznej, który zawiera ustawienia pamięci podręcznej, który ma być używany.  
   
 ```csharp
 [ServiceContract] 

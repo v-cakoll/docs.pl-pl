@@ -5,57 +5,57 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805863"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197200"
 ---
 # <a name="service-channel-level-programming"></a>Programowanie na poziomie kanału usługi
-W tym temacie opisano sposób tworzenia aplikacji usługi Windows Communication Foundation (WCF) bez użycia <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> i jego skojarzony obiekt modelu.  
+W tym temacie opisano sposób pisania aplikacji usługi Windows Communication Foundation (WCF) bez użycia <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> i jego skojarzonego obiektu modelu.  
   
 ## <a name="receiving-messages"></a>Odbieranie komunikatów  
  Będzie gotowa do odbierania i przetwarzania wiadomości, wymagane są następujące kroki:  
   
-1.  Utwórz powiązanie.  
+1.  Tworzenie powiązania.  
   
 2.  Tworzenie odbiornika kanałów.  
   
-3.  Otworzyć odbiornika kanałów.  
+3.  Otwórz odbiornika kanałów.  
   
 4.  Żądania odczytu i wysyłać odpowiedzi.  
   
 5.  Zamknij wszystkie obiekty kanału.  
   
 #### <a name="creating-a-binding"></a>Tworzenie powiązania  
- Pierwszym etapem nasłuchiwania i odbierania wiadomości jest utworzenie powiązania. Usługi WCF jest dostarczany z powiązaniami kilka wbudowanych lub dostarczane przez system, które mogą być używane bezpośrednio przez utworzenie wystąpienia jednego z nich. Ponadto można również utworzyć własne niestandardowe powiązanie przez utworzenie wystąpienia klasy CustomBinding, czyli, co oznacza kod w wyświetlania 1.  
+ Pierwszym etapem nasłuchiwać i odbierać wiadomości jest utworzenie powiązania. Usługi WCF jest dostarczany z kilku wbudowanych lub dostarczane przez system powiązań, które mogą być używane bezpośrednio przez utworzenie wystąpienia jednego z nich. Ponadto można również utworzyć własne powiązania niestandardowego przez utworzenie wystąpienia klasy CustomBinding, która jest wykonuje kod w ofercie 1.  
   
- Poniższy przykład kodu tworzy wystąpienie <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> i dodaje <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> do jego kolekcję elementów, który jest kolekcją elementów, które są używane do tworzenia kanału stosu wiązania. W tym przykładzie ponieważ kolekcja elementów zawiera tylko <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, wynikowy stosu kanału ma kanał transportu HTTP.  
+ Poniższy przykładowy kod tworzy wystąpienie <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> i dodaje <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> do swojej kolekcji elementów, który jest kolekcją elementów, które są używane do tworzenia stosu kanału wiązania. W tym przykładzie ponieważ kolekcja elementów zawiera tylko <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, wynikowy stos kanał ma kanał transportu HTTP.  
   
 #### <a name="building-a-channellistener"></a>Tworzenie ChannelListener  
- Po utworzeniu powiązanie, nazywamy <!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>--> `System.ServiceModel.Channels.Binding.BuildChannelListener` do utworzenia odbiornika kanałów, gdzie parametr typu jest kształtu kanału do utworzenia. W tym przykładzie używamy <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> ponieważ chcemy nasłuchiwać komunikatów przychodzących w wymiany komunikatów żądania/odpowiedzi.  
+ Po utworzeniu powiązanie nazywamy <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> do tworzenia odbiornika kanałów, w której parametr typu jest kształtu kanału do utworzenia. W tym przykładzie używamy <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> ponieważ chcemy nasłuchiwać komunikatów przychodzących w wymiany komunikatów typu żądanie/odpowiedź.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> jest używany do odbierania komunikatów i odsyła odpowiedź komunikatów żądania. Wywoływanie <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> zwraca <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, które mogą służyć do komunikatu żądania i przesyła komunikat odpowiedzi z powrotem.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> jest używany do odbierania żądań wiadomości i ponownie wysyłanie komunikatów odpowiedzi. Wywoływanie <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> zwraca <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, które mogą służyć do odbierania komunikatów żądań i przesyła z powrotem komunikat odpowiedzi.  
   
- Podczas tworzenia odbiornika, jest przekazywana adresu sieciowego, na którym ją nasłuchuje, w tym przypadku `http://localhost:8080/channelapp`. Ogólnie rzecz biorąc, każdy kanał transportu obsługuje co najmniej prawdopodobnie kilka Schematy adresów, na przykład transportu HTTP obsługuje schematy http i https.  
+ Podczas tworzenia odbiornika, przekazujemy adresu sieciowego, na którym nasłuchuje on, w tym przypadku `http://localhost:8080/channelapp`. Ogólnie rzecz biorąc każdy kanał transportowy obsługuje co najmniej prawdopodobnie kilka schematów adresów, na przykład transportu HTTP obsługuje schematy http i https.  
   
- Możemy również przekazać pustą <xref:System.ServiceModel.Channels.BindingParameterCollection?displayProperty=nameWithType> podczas tworzenia odbiornika. Parametr wiązania jest mechanizm do przekazania parametrów, które kontrolują sposób odbiornika powinny zostać skompilowane. W naszym przykładzie nie używamy tych parametrów, jest przekazywana pustej kolekcji.  
+ Możemy również przekazać pusty <xref:System.ServiceModel.Channels.BindingParameterCollection?displayProperty=nameWithType> podczas tworzenia odbiornika. Parametr wiązania to mechanizm, aby przekazać parametry, które kontrolują, jak powinny zostać skompilowane odbiornika. W naszym przykładzie nie używamy tych parametrów, dzięki czemu możemy przekazać pustą kolekcję.  
   
-#### <a name="listening-for-incoming-messages"></a>Nasłuchiwanie przychodzących komunikatów  
- Następnie wywołaj <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> na początek akceptowanie kanałów i odbiornika. Zachowanie <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> zależy od tego, czy transport jest zorientowany na połączenie lub bez połączenia. Dla transportu z nawiązaniem połączenia <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> blokuje dopóki nowego żądania połączenia efektem punktu, który zwraca nowy kanał, reprezentujący tego nowego połączenia. Dla transportu bez połączenia, takich jak HTTP <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> zwraca bezpośrednio z jednym i tylko kanału, który tworzy odbiornik transportu.  
+#### <a name="listening-for-incoming-messages"></a>Nasłuchiwanie przychodzących wiadomości  
+ Następnie wywołaj <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> na odbiornik i rozpoczęcia akceptowanie kanałów. Zachowanie <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> zależy od tego, czy transport jest ukierunkowane na połączenia lub bez połączenia. Dla transportu z nawiązaniem połączenia <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> blokuje, aż nowego żądania połączenia są obciążone tym momencie zwraca nowy kanał, który reprezentuje tego nowego połączenia. Dla mniej połączenia transportu, takich jak HTTP <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> zwraca bezpośrednio z jednego i kanału, który tworzy odbiornika transportu.  
   
- W tym przykładzie odbiornika zwraca kanału implementującego interfejs <xref:System.ServiceModel.Channels.IReplyChannel>. Do odbierania wiadomości dla tego kanału, możemy pierwsze wywołanie <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> on umieszczony w stanie gotowy do komunikacji. Następnie wywołaj <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> które bloki aż do nadejścia wiadomości.  
+ W tym przykładzie odbiornik zwraca kanału, który implementuje <xref:System.ServiceModel.Channels.IReplyChannel>. Do odbierania komunikatów na ten kanał, firma Microsoft pierwsze wywołanie <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> na nim zostać umieszczone w stanie gotowy do komunikacji. Następnie wywołaj <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> które bloków, dopóki nadejścia wiadomości.  
   
-#### <a name="reading-the-request-and-sending-a-reply"></a>Odczytywanie żądania i wysyłania odpowiedzi  
- Gdy <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> zwraca <xref:System.ServiceModel.Channels.RequestContext>, uzyskujemy odebranej wiadomości przy użyciu jego <xref:System.ServiceModel.Channels.RequestContext.RequestMessage%2A> właściwości. Możemy zapisać zawartości komunikatu akcji i treści, (który jest ciągiem założono).  
+#### <a name="reading-the-request-and-sending-a-reply"></a>Żądania odczytu i wysyłania odpowiedzi  
+ Gdy <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> zwraca <xref:System.ServiceModel.Channels.RequestContext>, uzyskujemy odebranej wiadomości przy użyciu jego <xref:System.ServiceModel.Channels.RequestContext.RequestMessage%2A> właściwości. Możemy zapisać zawartości komunikatu akcji i treści, (który przyjęto założenie, że jest to ciąg).  
   
- Aby wysłać odpowiedzi, utworzymy nowy komunikat odpowiedzi w tym przypadku ponownie przekazywanie danych ciągu będziemy odebrana w żądaniu. Następnie wywołaj <xref:System.ServiceModel.Channels.RequestContext.Reply%2A> do wysłania komunikatu odpowiedzi.  
+ Aby wysłać odpowiedź, utworzymy nowy komunikat odpowiedzi w tym przypadku ponownie przekazując dane ciągu, że firma Microsoft została odebrana w żądaniu. Następnie wywołaj <xref:System.ServiceModel.Channels.RequestContext.Reply%2A> do wysłania komunikatu odpowiedzi.  
   
 #### <a name="closing-objects"></a>Zamykanie obiektów  
- Aby uniknąć przeciek zasobów, jest bardzo ważne, aby zamknąć obiekty używane podczas komunikacji, gdy nie są już wymagane. W tym przykładzie możemy zamknąć komunikat żądania, kontekst żądania, kanału i odbiornika.  
+ Aby uniknąć wyciek zasobów, jest bardzo ważne, aby zamknąć obiekty używane podczas komunikacji, gdy nie są już wymagane. W tym przykładzie firma Microsoft Zamknij komunikat żądania, kontekst żądania, kanału i odbiornika.  
   
- Poniższy przykładowy kod przedstawia podstawowe usługi, w którym odbiornika kanałów odbiera tylko jeden komunikat. Rzeczywiste usługi temu akceptowanie kanałów i odbieranie wiadomości do momentu kończy działanie usługi.  
+ Poniższy przykład kodu pokazuje podstawowe usługi, w której odbiornik kanału odbiera tylko jeden komunikat. Rzeczywista Usługa przechowuje akceptowanie kanałów i odbieranie wiadomości, dopóki nie kończy działanie usługi.  
   
  [!code-csharp[ChannelProgrammingBasic#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/channelprogrammingbasic/cs/serviceprogram.cs#1)]
  [!code-vb[ChannelProgrammingBasic#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelprogrammingbasic/vb/serviceprogram.vb#1)]

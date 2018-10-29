@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-author: BrucePerlerMS
-ms.openlocfilehash: 8ca3a3e44386c1576610fe3d42f8697c66bee9ab
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 09ca073a39322e54433c25321e3a9ef44c9efe90
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49635640"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199373"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń
 Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez protokół Kerberos.  

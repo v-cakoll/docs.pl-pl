@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 612550dd2e3cda4e3549bfc14c9ada712c6653bf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582791"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197564"
 ---
 # <a name="regular-expression-options"></a>Opcje wyrażeń regularnych
 <a name="Top"></a> Domyślnie porównanie ciągu wejściowego z dowolnymi literałami we wzorcu wyrażenia regularnego jest uwzględniana wielkość liter, biały znak we wzorcu wyrażenia regularnego jest interpretowany jako znaki spacji literału, a grupy przechwytywania w wyrażeniu regularnym są nazywane niejawnie jak również jawnie. Można zmodyfikować te i wiele innych aspektów regularnej ekspresji przez specyfikowanie opcji regularnej ekspresji. Te opcje, które są wymienione w poniższej tabeli, mogą być wbudowane jako część wzorca wyrażenia regularnego lub mogą być dostarczane do <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy lub statycznym wzorca dopasowania metodę jako <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> wartość wyliczenia.  
@@ -42,7 +42,7 @@ ms.locfileid: "48582791"
   
 -   W `options` parametru <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy lub statycznym (`Shared` w języku Visual Basic) metoda dopasowania do wzorca, takich jak <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. `options` Parametr jest bitową kombinacją OR <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> wyliczonych wartości.  
   
-     Jeśli opcje są dostarczane do <xref:System.Text.RegularExpressions.Regex> wystąpienia przy użyciu `options` parametr konstruktora klasy, dostępne są następujące opcje są przypisane do <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwości. Jednak <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwość nie będzie odzwierciedlał opcje wbudowane we wzorcu wyrażenia regularnego, sam.  
+     Jeśli opcje są dostarczane do <xref:System.Text.RegularExpressions.Regex> wystąpienia przy użyciu `options` parametr konstruktora klasy, opcje są przypisane do <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwości. Jednak <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> właściwość nie będzie odzwierciedlał opcje wbudowane we wzorcu wyrażenia regularnego, sam.  
   
      Poniższy przykład stanowi ilustrację. Używa ona `options` parametru <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody, aby umożliwić dopasowanie bez uwzględniania wielkości liter i Ignorowanie wzorca odstępu przy identyfikowaniu wyrazy zaczynające się na literę "d".  
   

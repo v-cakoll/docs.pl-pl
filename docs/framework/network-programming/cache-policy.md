@@ -11,11 +11,11 @@ helpviewer_keywords:
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
 ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038922"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199438"
 ---
 # <a name="cache-policy"></a>Zasady pamięci podręcznej
 Zasady pamięci podręcznej definiuje reguły, które są używane do ustalenia, czy można spełnić żądania przy użyciu pamięci podręcznej kopię żądanego zasobu. Aplikacje określić wymagania dotyczące pamięci podręcznej klienta dla daty utworzenia, ale zasady obowiązujące w pamięci podręcznej jest określana przez wymagania dotyczące pamięci podręcznej klienta, wygaśnięcia zawartości serwera oraz wymagania ponowną weryfikację serwera. Interakcja wymagania zasad i serwera pamięci podręcznej klienta zawsze skutkuje najbardziej umiarkowaną zasad pamięci podręcznej, aby mieć pewność, że najnowsza zawartość jest zwracana do aplikacji klienckiej.  

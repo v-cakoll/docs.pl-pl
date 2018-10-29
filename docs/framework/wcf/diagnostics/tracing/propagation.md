@@ -3,11 +3,11 @@ title: Propagacja
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50033639"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198253"
 ---
 # <a name="propagation"></a>Propagacja
 W tym temacie opisano Propagacja działania w modelu śledzenia usług Windows Communication Foundation (WCF).  

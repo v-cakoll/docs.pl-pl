@@ -3,11 +3,11 @@ title: Automatyczna konfiguracja IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
 ms.openlocfilehash: 31aaebaefa0d2682ee20ae93496aff42ae1633d8
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170669"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199139"
 ---
 # <a name="ipv6-auto-configuration"></a>Automatyczna konfiguracja IPv6
 Jeden cel ważne w przypadku protokołu IPv6 jest obsługuje węzeł typu Plug and Play. Oznacza to, że powinno być możliwe do podłączyć węzła do sieci IPv6 i jest automatycznie konfigurowany bez żadnej interwencji człowieka.  

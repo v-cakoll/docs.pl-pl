@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752120"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199698"
 ---
-# <a name="remove-element-for-appsettings"></a>\<Usuń > elementu \<appSettings >
+# <a name="remove-element-for-appsettings"></a>\<Usuń >, element dla \<appSettings >
 
-Usuwa ustawień niestandardowych aplikacji.
+Usunięcie ustawień aplikacji niestandardowej.
 
 [**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
@@ -36,13 +36,13 @@ Usuwa ustawień niestandardowych aplikacji.
 
 |         | Opis |
 | ------- | ----------- |
-| **Klucz** | Atrybut wymagany.<br><br>Określa nazwę klucz do usunięcia. |
+| **Klucz** | Atrybut wymagany.<br><br>Określa nazwę klucza do usunięcia. |
 
 ### <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Zawiera ustawienia aplikacji niestandardowych, takich jak ścieżki plików, adresy URL usługi XML sieci Web lub inne informacje konfiguracji niestandardowej dla aplikacji. |
+| [**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Zawiera ustawienia aplikacji niestandardowych, takich jak ścieżki do plików, adresy URL usługi sieci Web XML lub inne informacje konfiguracji niestandardowej dla aplikacji. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -50,7 +50,7 @@ Brak
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób usuwania ustawienia konfiguracji niestandardowej dla `ApplicationName`:
+Poniższy przykład pokazuje, jak usunąć ustawienia konfiguracji niestandardowej dla `ApplicationName`:
 
 ```xml
 <appSettings>
@@ -60,4 +60,4 @@ Poniższy przykład przedstawia sposób usuwania ustawienia konfiguracji niestan
 
 ## <a name="see-also"></a>Zobacz także
 
-[Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

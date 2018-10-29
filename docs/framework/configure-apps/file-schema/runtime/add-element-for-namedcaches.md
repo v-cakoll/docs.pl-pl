@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 695ee744bdf2226f0647c4cdf142a2dca4e97a4a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b77ead51b4e064d223735ca52affdec434e5c818
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033457"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198188"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;Dodaj&gt; elementu &lt;namedCaches&gt;
 Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.  
@@ -79,4 +79,4 @@ Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [\<namedCaches >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

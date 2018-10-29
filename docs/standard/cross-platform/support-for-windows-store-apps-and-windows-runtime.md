@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18bd35495d1cb7cfffe39efa8f7313b75c7f5378
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 0476fe7ed731dbb2c6b86cff3255673ecee6f98d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261566"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198461"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Obsługuje wiele scenariuszy programowania oprogramowania za pomocą [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Te scenariusze można podzielić na trzy kategorie:
@@ -25,7 +25,7 @@ ms.locfileid: "48261566"
 
 -   Tworzenie biblioteki klas do użycia w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji utworzonych za pomocą programu .NET Framework.
 
--   Tworzenie [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników, w jednym pakiecie w. Pliki WinMD, które mogą być używane przez każdy język programowania, który obsługuje [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Na przykład zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C# i Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301(v=VS.110).aspx).
+-   Tworzenie [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników, w jednym pakiecie w. Pliki WinMD, które mogą być używane przez każdy język programowania, który obsługuje [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Na przykład zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C# i Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
  W tym temacie opisano obsługę programu .NET Framework oferuje dla wszystkich trzech kategorii, która opisuje scenariusze związane z [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników. Pierwsza sekcja obejmuje podstawowe informacje na temat relacji między .NET Framework i [!INCLUDE[wrt](../../../includes/wrt-md.md)]i opisano niektóre oddities mogą wystąpić w systemie pomocy i środowiska IDE. [Druga sekcja](#WindowsRuntimeComponents) omawia scenariusze tworzenia [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników.
 
@@ -84,7 +84,7 @@ ms.locfileid: "48261566"
 
  Interfejsy sposób pojawiają się w sposób typy, które implementują te interfejsy są wyświetlane ma wpływ kodu zarządzanego. Na przykład `PropertySet` klasy implementuje `IMap<K, V>`, która jest wyświetlana w zarządzanym kodzie jako `IDictionary<TKey, TValue>`. `PropertySet` pojawi się tak, jakby zaimplementowane `IDictionary<TKey, TValue>` zamiast `IMap<K, V>`, więc w kodzie zarządzanym wydaje się być `Add` metody, która zachowuje się jak `Add` metody słowników .NET Framework. Ponieważ prawdopodobnie nie masz `Insert` metody.
 
- Aby uzyskać więcej informacji o korzystaniu z programu .NET Framework do tworzenia [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika i wskazówki, który pokazuje, jak używać tych składników za pomocą języka JavaScript, zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C# i Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx).
+ Aby uzyskać więcej informacji o korzystaniu z programu .NET Framework do tworzenia [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika i wskazówki, który pokazuje, jak używać tych składników za pomocą języka JavaScript, zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C# i Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
 ### <a name="primitive-types"></a>Typy pierwotne
  Umożliwia użycie fizycznych [!INCLUDE[wrt](../../../includes/wrt-md.md)] pierwotnych typów programu .NET Framework są wyświetlane w kodzie zarządzanym zamiast [!INCLUDE[wrt](../../../includes/wrt-md.md)] typów pierwotnych w kodzie. W .NET Framework, takich jak typy pierwotne `Int32` struktury mają wiele użytecznych właściwości i metod, takich jak `Int32.TryParse` metody. Z kolei podstawowego typy i struktury w [!INCLUDE[wrt](../../../includes/wrt-md.md)] mają tylko pola. Gdy używasz podstawowych w kodzie zarządzanym wydają się być typów programu .NET Framework, a następnie można użyć właściwości i metody typów programu .NET Framework w zwykły sposób. Poniższa lista zawiera podsumowanie:
@@ -149,6 +149,6 @@ ms.locfileid: "48261566"
 |[Omówienie aplikacji .NET dla Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx)|Zawiera opis typów programu .NET Framework i elementów członkowskich, które umożliwia tworzenie [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji i [!INCLUDE[wrt](../../../includes/wrt-md.md)]składników. (W Centrum deweloperów Windows.)|
 |[Harmonogram działania dla aplikacji Windows Store przy użyciu języka C# lub Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Zawiera kluczowych zasobów ułatwiających rozpoczęcie pracy tworzenia [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji przy użyciu języka C# lub Visual Basic, w tym wiele tematów w przewodniku Szybki Start, wskazówki i najlepsze rozwiązania. (W Centrum deweloperów Windows.)|
 |[Jak OT (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Zawiera kluczowych zasobów ułatwiających rozpoczęcie pracy tworzenia [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji przy użyciu języka C# lub Visual Basic, w tym wiele tematów w przewodniku Szybki Start, wskazówki i najlepsze rozwiązania. (W Centrum deweloperów Windows.)|
-|[Tworzenie składników środowiska wykonawczego Windows w języku C# i Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx)|W tym artykule opisano sposób tworzenia [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika za pomocą programu .NET Framework, wyjaśnia, jak używać go jako część [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji skompilowany dla Windows przy użyciu języka JavaScript, a w tym artykule opisano sposób debugowania w połączeniu z programem Visual Studio. (W Centrum deweloperów Windows.)|
+|[Tworzenie składników środowiska wykonawczego Windows w języku C# i Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|W tym artykule opisano sposób tworzenia [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika za pomocą programu .NET Framework, wyjaśnia, jak używać go jako część [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji skompilowany dla Windows przy użyciu języka JavaScript, a w tym artykule opisano sposób debugowania w połączeniu z programem Visual Studio. (W Centrum deweloperów Windows.)|
 |[Dokumentacja środowiska uruchomieniowego Windows](/uwp/api/)|Dokumentacja dotycząca [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (W Centrum deweloperów Windows.)|
 |[Przekazywanie identyfikatora URI do środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|W tym artykule opisano problem, który mogą wystąpić, jeśli przekazujesz identyfikatora URI z kodu zarządzanego do [!INCLUDE[wrt](../../../includes/wrt-md.md)]oraz jak uniknąć tego błędu.|

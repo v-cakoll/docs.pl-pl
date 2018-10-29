@@ -2,12 +2,12 @@
 title: Listy (F#)
 description: 'Więcej informacji na temat list języka F #, uporządkowany i niezmienne szeregu elementów tego samego typu.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210165"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201627"
 ---
 # <a name="lists"></a>Listy
 
@@ -48,7 +48,7 @@ Można dołączyć elementy do listy przy użyciu `::` — operator (wad). Jeśl
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
 
-Można łączyć ze sobą list, które mają niezgodne typy przy użyciu `@` operatora, jak w poniższym kodzie. Jeśli `list1` jest `[2; 3; 4]` i `list2` jest `[100; 2; 3; 4 ]`, ten kod tworzy `list3` jako `[2; 3; 4; 100; 2; 3; 4]`.
+Można łączyć ze sobą list, które mają niezgodne typy przy użyciu `@` operatora, jak w poniższym kodzie. Jeśli `list1` jest `[2; 3; 4]` i `list2` jest `[100; 2; 3; 4]`, ten kod tworzy `list3` jako `[2; 3; 4; 100; 2; 3; 4]`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 

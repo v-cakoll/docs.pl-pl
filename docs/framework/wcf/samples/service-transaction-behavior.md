@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
 ms.openlocfilehash: bfdf0c9ddb8654bf7a6736bcccb0d9350e9a12a6
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50042496"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198474"
 ---
 # <a name="service-transaction-behavior"></a>Zachowanie transakcji usługi
 Niniejszy przykład pokazuje użycie transakcji koordynowane przez klienta i ustawień ServiceBehaviorAttribute i gdy, aby kontrolować zachowanie transakcji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementuje usługi Kalkulator, ale jest rozszerzony do obsługi operacji wykonywanych w tabeli bazy danych i stanowe, Suma operacji Kalkulator dziennika serwera. Utrwalonych zapisy do tabeli dziennika serwera są zależne od wyniku transakcji klienta koordynowany — Jeśli transakcja klienta nie zostanie ukończone, transakcji usługi sieci Web zapewnia aktualizacji do bazy danych nie są przekazywane.  

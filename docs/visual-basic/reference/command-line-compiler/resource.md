@@ -10,11 +10,11 @@ helpviewer_keywords:
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
 ms.openlocfilehash: ca9aea526d1039c09883696ed2a35ed930c92872
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044791"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199022"
 ---
 # <a name="-resource-visual-basic"></a>-zasobów (Visual Basic)
 Osadza zasobów zarządzanych w zestawie.  

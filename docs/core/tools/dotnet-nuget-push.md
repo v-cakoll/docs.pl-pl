@@ -5,35 +5,35 @@ author: karann-msft
 ms.author: mairaw
 ms.date: 09/04/2018
 ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50045551"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200029"
 ---
-# <a name="dotnet-nuget-push"></a><span data-ttu-id="911a1-103">wypychane nuget DotNet</span><span class="sxs-lookup"><span data-stu-id="911a1-103">dotnet nuget push</span></span>
+# <a name="dotnet-nuget-push"></a><span data-ttu-id="69467-103">wypychane nuget DotNet</span><span class="sxs-lookup"><span data-stu-id="69467-103">dotnet nuget push</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="911a1-104">Nazwa</span><span class="sxs-lookup"><span data-stu-id="911a1-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="69467-104">Nazwa</span><span class="sxs-lookup"><span data-stu-id="69467-104">Name</span></span>
 
-<span data-ttu-id="911a1-105">`dotnet nuget push` -Wypycha pakietu do serwera i publikuje go.</span><span class="sxs-lookup"><span data-stu-id="911a1-105">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
+<span data-ttu-id="69467-105">`dotnet nuget push` -Wypycha pakietu do serwera i publikuje go.</span><span class="sxs-lookup"><span data-stu-id="69467-105">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="911a1-106">Streszczenie</span><span class="sxs-lookup"><span data-stu-id="911a1-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="69467-106">Streszczenie</span><span class="sxs-lookup"><span data-stu-id="69467-106">Synopsis</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="911a1-107">.NET core 2.1</span><span class="sxs-lookup"><span data-stu-id="911a1-107">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="69467-107">.NET core 2.1</span><span class="sxs-lookup"><span data-stu-id="69467-107">.NET Core 2.1</span></span>](#tab/netcore21)
 ```
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="911a1-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="911a1-108">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="69467-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="69467-108">.NET Core 2.0</span></span>](#tab/netcore20)
 ```
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
     [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="911a1-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="911a1-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="69467-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="69467-109">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
     [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
@@ -41,160 +41,160 @@ dotnet nuget push [-h|--help]
 ```
 ---
 
-## <a name="description"></a><span data-ttu-id="911a1-110">Opis</span><span class="sxs-lookup"><span data-stu-id="911a1-110">Description</span></span>
+## <a name="description"></a><span data-ttu-id="69467-110">Opis</span><span class="sxs-lookup"><span data-stu-id="69467-110">Description</span></span>
 
-<span data-ttu-id="911a1-111">`dotnet nuget push` Polecenie wypycha pakietu do serwera i publikuje go.</span><span class="sxs-lookup"><span data-stu-id="911a1-111">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="911a1-112">Używa polecenia push serwera i szczegóły poświadczeń znalezionych w pliku config NuGet systemu lub łańcucha plików konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="911a1-112">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="911a1-113">Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [Konfigurowanie zachowania pakietu NuGet](/nuget/consume-packages/configuring-nuget-behavior).</span><span class="sxs-lookup"><span data-stu-id="911a1-113">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="911a1-114">Konfiguracja domyślna NuGet uzyskuje się przez ładowanie *%AppData%\NuGet\NuGet.config* (Windows) lub *$HOME/.local/share* (Linux/macOS), następnie ładowania *nuget.config*lub *.nuget\nuget.config* od katalogu głównego dysku i kończący się w bieżącym katalogu.</span><span class="sxs-lookup"><span data-stu-id="911a1-114">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
+<span data-ttu-id="69467-111">`dotnet nuget push` Polecenie wypycha pakietu do serwera i publikuje go.</span><span class="sxs-lookup"><span data-stu-id="69467-111">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="69467-112">Używa polecenia push serwera i szczegóły poświadczeń znalezionych w pliku config NuGet systemu lub łańcucha plików konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="69467-112">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="69467-113">Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [Konfigurowanie zachowania pakietu NuGet](/nuget/consume-packages/configuring-nuget-behavior).</span><span class="sxs-lookup"><span data-stu-id="69467-113">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="69467-114">Konfiguracja domyślna NuGet uzyskuje się przez ładowanie *%AppData%\NuGet\NuGet.config* (Windows) lub *$HOME/.local/share* (Linux/macOS), następnie ładowania *nuget.config*lub *.nuget\nuget.config* od katalogu głównego dysku i kończący się w bieżącym katalogu.</span><span class="sxs-lookup"><span data-stu-id="69467-114">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="911a1-115">Argumenty</span><span class="sxs-lookup"><span data-stu-id="911a1-115">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="69467-115">Argumenty</span><span class="sxs-lookup"><span data-stu-id="69467-115">Arguments</span></span>
 
 `ROOT`
 
-<span data-ttu-id="911a1-116">Określa ścieżkę pliku do pakietu, który ma zostać wypchnięty.</span><span class="sxs-lookup"><span data-stu-id="911a1-116">Specifies the file path to the package to be pushed.</span></span>
+<span data-ttu-id="69467-116">Określa ścieżkę pliku do pakietu, który ma zostać wypchnięty.</span><span class="sxs-lookup"><span data-stu-id="69467-116">Specifies the file path to the package to be pushed.</span></span>
 
-## <a name="options"></a><span data-ttu-id="911a1-117">Opcje</span><span class="sxs-lookup"><span data-stu-id="911a1-117">Options</span></span>
+## <a name="options"></a><span data-ttu-id="69467-117">Opcje</span><span class="sxs-lookup"><span data-stu-id="69467-117">Options</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="911a1-118">.NET core 2.1</span><span class="sxs-lookup"><span data-stu-id="911a1-118">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="69467-118">.NET core 2.1</span><span class="sxs-lookup"><span data-stu-id="69467-118">.NET Core 2.1</span></span>](#tab/netcore21)
 
 `-d|--disable-buffering`
 
-<span data-ttu-id="911a1-119">Wyłącza buforowanie podczas wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.</span><span class="sxs-lookup"><span data-stu-id="911a1-119">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
+<span data-ttu-id="69467-119">Wyłącza buforowanie podczas wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.</span><span class="sxs-lookup"><span data-stu-id="69467-119">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
 
 `--force-english-output`
 
-<span data-ttu-id="911a1-120">Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.</span><span class="sxs-lookup"><span data-stu-id="911a1-120">Forces the application to run using an invariant, English-based culture.</span></span>
+<span data-ttu-id="69467-120">Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.</span><span class="sxs-lookup"><span data-stu-id="69467-120">Forces the application to run using an invariant, English-based culture.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="911a1-121">Drukuje krótki pomoc dotyczącą polecenia.</span><span class="sxs-lookup"><span data-stu-id="911a1-121">Prints out a short help for the command.</span></span>
+<span data-ttu-id="69467-121">Drukuje krótki pomoc dotyczącą polecenia.</span><span class="sxs-lookup"><span data-stu-id="69467-121">Prints out a short help for the command.</span></span>
 
 `-k|--api-key <API_KEY>`
 
-<span data-ttu-id="911a1-122">Klucz interfejsu API dla serwera.</span><span class="sxs-lookup"><span data-stu-id="911a1-122">The API key for the server.</span></span>
+<span data-ttu-id="69467-122">Klucz interfejsu API dla serwera.</span><span class="sxs-lookup"><span data-stu-id="69467-122">The API key for the server.</span></span>
 
 `-n|--no-symbols`
 
-<span data-ttu-id="911a1-123">Nie wypychania symbole (nawet jeśli istnieje).</span><span class="sxs-lookup"><span data-stu-id="911a1-123">Doesn't push symbols (even if present).</span></span>
+<span data-ttu-id="69467-123">Nie wypychania symbole (nawet jeśli istnieje).</span><span class="sxs-lookup"><span data-stu-id="69467-123">Doesn't push symbols (even if present).</span></span>
 
 `--no-service-endpoint`
 
-<span data-ttu-id="911a1-124">Nie dołącza "interfejsu api w wersji 2/pakiet" adres URL źródła.</span><span class="sxs-lookup"><span data-stu-id="911a1-124">Doesn't append "api/v2/package" to the source URL.</span></span>
+<span data-ttu-id="69467-124">Nie dołącza "interfejsu api w wersji 2/pakiet" adres URL źródła.</span><span class="sxs-lookup"><span data-stu-id="69467-124">Doesn't append "api/v2/package" to the source URL.</span></span>
 
 `-s|--source <SOURCE>`
 
-<span data-ttu-id="911a1-125">Określa adres URL serwera.</span><span class="sxs-lookup"><span data-stu-id="911a1-125">Specifies the server URL.</span></span> <span data-ttu-id="911a1-126">Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.</span><span class="sxs-lookup"><span data-stu-id="911a1-126">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
+<span data-ttu-id="69467-125">Określa adres URL serwera.</span><span class="sxs-lookup"><span data-stu-id="69467-125">Specifies the server URL.</span></span> <span data-ttu-id="69467-126">Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.</span><span class="sxs-lookup"><span data-stu-id="69467-126">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
 
 `-sk|--symbol-api-key <API_KEY>`
 
-<span data-ttu-id="911a1-127">Klucz interfejsu API serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="911a1-127">The API key for the symbol server.</span></span>
+<span data-ttu-id="69467-127">Klucz interfejsu API serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="69467-127">The API key for the symbol server.</span></span>
 
 `-ss|--symbol-source <SOURCE>`
 
-<span data-ttu-id="911a1-128">Określa adres URL serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="911a1-128">Specifies the symbol server URL.</span></span>
+<span data-ttu-id="69467-128">Określa adres URL serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="69467-128">Specifies the symbol server URL.</span></span>
 
 `-t|--timeout <TIMEOUT>`
 
-<span data-ttu-id="911a1-129">Określa limit czasu Wypychanie do serwera w ciągu kilku sekund.</span><span class="sxs-lookup"><span data-stu-id="911a1-129">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="911a1-130">Wartość domyślna to 300 sekund (5 minut).</span><span class="sxs-lookup"><span data-stu-id="911a1-130">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="911a1-131">Określanie 0 (zero sekund) stosuje się wartością domyślną.</span><span class="sxs-lookup"><span data-stu-id="911a1-131">Specifying 0 (zero seconds) applies the default value.</span></span>
+<span data-ttu-id="69467-129">Określa limit czasu Wypychanie do serwera w ciągu kilku sekund.</span><span class="sxs-lookup"><span data-stu-id="69467-129">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="69467-130">Wartość domyślna to 300 sekund (5 minut).</span><span class="sxs-lookup"><span data-stu-id="69467-130">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="69467-131">Określanie 0 (zero sekund) stosuje się wartością domyślną.</span><span class="sxs-lookup"><span data-stu-id="69467-131">Specifying 0 (zero seconds) applies the default value.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="911a1-132">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="911a1-132">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="69467-132">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="69467-132">.NET Core 2.0</span></span>](#tab/netcore20)
 
 `-d|--disable-buffering`
 
-<span data-ttu-id="911a1-133">Wyłącza buforowanie podczas wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.</span><span class="sxs-lookup"><span data-stu-id="911a1-133">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
+<span data-ttu-id="69467-133">Wyłącza buforowanie podczas wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.</span><span class="sxs-lookup"><span data-stu-id="69467-133">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
 
 `--force-english-output`
 
-<span data-ttu-id="911a1-134">Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.</span><span class="sxs-lookup"><span data-stu-id="911a1-134">Forces the application to run using an invariant, English-based culture.</span></span>
+<span data-ttu-id="69467-134">Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.</span><span class="sxs-lookup"><span data-stu-id="69467-134">Forces the application to run using an invariant, English-based culture.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="911a1-135">Drukuje krótki pomoc dotyczącą polecenia.</span><span class="sxs-lookup"><span data-stu-id="911a1-135">Prints out a short help for the command.</span></span>
+<span data-ttu-id="69467-135">Drukuje krótki pomoc dotyczącą polecenia.</span><span class="sxs-lookup"><span data-stu-id="69467-135">Prints out a short help for the command.</span></span>
 
 `-k|--api-key <API_KEY>`
 
-<span data-ttu-id="911a1-136">Klucz interfejsu API dla serwera.</span><span class="sxs-lookup"><span data-stu-id="911a1-136">The API key for the server.</span></span>
+<span data-ttu-id="69467-136">Klucz interfejsu API dla serwera.</span><span class="sxs-lookup"><span data-stu-id="69467-136">The API key for the server.</span></span>
 
 `-n|--no-symbols`
 
-<span data-ttu-id="911a1-137">Nie wypychania symbole (nawet jeśli istnieje).</span><span class="sxs-lookup"><span data-stu-id="911a1-137">Doesn't push symbols (even if present).</span></span>
+<span data-ttu-id="69467-137">Nie wypychania symbole (nawet jeśli istnieje).</span><span class="sxs-lookup"><span data-stu-id="69467-137">Doesn't push symbols (even if present).</span></span>
 
 `-s|--source <SOURCE>`
 
-<span data-ttu-id="911a1-138">Określa adres URL serwera.</span><span class="sxs-lookup"><span data-stu-id="911a1-138">Specifies the server URL.</span></span> <span data-ttu-id="911a1-139">Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.</span><span class="sxs-lookup"><span data-stu-id="911a1-139">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
+<span data-ttu-id="69467-138">Określa adres URL serwera.</span><span class="sxs-lookup"><span data-stu-id="69467-138">Specifies the server URL.</span></span> <span data-ttu-id="69467-139">Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.</span><span class="sxs-lookup"><span data-stu-id="69467-139">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
 
 `-sk|--symbol-api-key <API_KEY>`
 
-<span data-ttu-id="911a1-140">Klucz interfejsu API serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="911a1-140">The API key for the symbol server.</span></span>
+<span data-ttu-id="69467-140">Klucz interfejsu API serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="69467-140">The API key for the symbol server.</span></span>
 
 `-ss|--symbol-source <SOURCE>`
 
-<span data-ttu-id="911a1-141">Określa adres URL serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="911a1-141">Specifies the symbol server URL.</span></span>
+<span data-ttu-id="69467-141">Określa adres URL serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="69467-141">Specifies the symbol server URL.</span></span>
 
 `-t|--timeout <TIMEOUT>`
 
-<span data-ttu-id="911a1-142">Określa limit czasu Wypychanie do serwera w ciągu kilku sekund.</span><span class="sxs-lookup"><span data-stu-id="911a1-142">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="911a1-143">Wartość domyślna to 300 sekund (5 minut).</span><span class="sxs-lookup"><span data-stu-id="911a1-143">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="911a1-144">Określanie 0 (zero sekund) stosuje się wartością domyślną.</span><span class="sxs-lookup"><span data-stu-id="911a1-144">Specifying 0 (zero seconds) applies the default value.</span></span>
+<span data-ttu-id="69467-142">Określa limit czasu Wypychanie do serwera w ciągu kilku sekund.</span><span class="sxs-lookup"><span data-stu-id="69467-142">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="69467-143">Wartość domyślna to 300 sekund (5 minut).</span><span class="sxs-lookup"><span data-stu-id="69467-143">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="69467-144">Określanie 0 (zero sekund) stosuje się wartością domyślną.</span><span class="sxs-lookup"><span data-stu-id="69467-144">Specifying 0 (zero seconds) applies the default value.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="911a1-145">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="911a1-145">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="69467-145">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="69467-145">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `-d|--disable-buffering`
 
-<span data-ttu-id="911a1-146">Wyłącza buforowanie podczas wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.</span><span class="sxs-lookup"><span data-stu-id="911a1-146">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
+<span data-ttu-id="69467-146">Wyłącza buforowanie podczas wypychania do serwera HTTP (S), aby zmniejszyć użycie pamięci.</span><span class="sxs-lookup"><span data-stu-id="69467-146">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
 
 `--force-english-output`
 
-<span data-ttu-id="911a1-147">Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.</span><span class="sxs-lookup"><span data-stu-id="911a1-147">Forces the application to run using an invariant, English-based culture.</span></span>
+<span data-ttu-id="69467-147">Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.</span><span class="sxs-lookup"><span data-stu-id="69467-147">Forces the application to run using an invariant, English-based culture.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="911a1-148">Drukuje krótki pomoc dotyczącą polecenia.</span><span class="sxs-lookup"><span data-stu-id="911a1-148">Prints out a short help for the command.</span></span>
+<span data-ttu-id="69467-148">Drukuje krótki pomoc dotyczącą polecenia.</span><span class="sxs-lookup"><span data-stu-id="69467-148">Prints out a short help for the command.</span></span>
 
 `-k|--api-key <API_KEY>`
 
-<span data-ttu-id="911a1-149">Klucz interfejsu API dla serwera.</span><span class="sxs-lookup"><span data-stu-id="911a1-149">The API key for the server.</span></span>
+<span data-ttu-id="69467-149">Klucz interfejsu API dla serwera.</span><span class="sxs-lookup"><span data-stu-id="69467-149">The API key for the server.</span></span>
 
 `-n|--no-symbols`
 
-<span data-ttu-id="911a1-150">Nie wypychania symbole (nawet jeśli istnieje).</span><span class="sxs-lookup"><span data-stu-id="911a1-150">Doesn't push symbols (even if present).</span></span>
+<span data-ttu-id="69467-150">Nie wypychania symbole (nawet jeśli istnieje).</span><span class="sxs-lookup"><span data-stu-id="69467-150">Doesn't push symbols (even if present).</span></span>
 
 `-s|--source <SOURCE>`
 
-<span data-ttu-id="911a1-151">Określa adres URL serwera.</span><span class="sxs-lookup"><span data-stu-id="911a1-151">Specifies the server URL.</span></span> <span data-ttu-id="911a1-152">Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.</span><span class="sxs-lookup"><span data-stu-id="911a1-152">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
+<span data-ttu-id="69467-151">Określa adres URL serwera.</span><span class="sxs-lookup"><span data-stu-id="69467-151">Specifies the server URL.</span></span> <span data-ttu-id="69467-152">Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiana w pliku konfiguracyjnym NuGet.</span><span class="sxs-lookup"><span data-stu-id="69467-152">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
 
 `-sk|--symbol-api-key <API_KEY>`
 
-<span data-ttu-id="911a1-153">Klucz interfejsu API serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="911a1-153">The API key for the symbol server.</span></span>
+<span data-ttu-id="69467-153">Klucz interfejsu API serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="69467-153">The API key for the symbol server.</span></span>
 
 `-ss|--symbol-source <SOURCE>`
 
-<span data-ttu-id="911a1-154">Określa adres URL serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="911a1-154">Specifies the symbol server URL.</span></span>
+<span data-ttu-id="69467-154">Określa adres URL serwera symboli.</span><span class="sxs-lookup"><span data-stu-id="69467-154">Specifies the symbol server URL.</span></span>
 
 `-t|--timeout <TIMEOUT>`
 
-<span data-ttu-id="911a1-155">Określa limit czasu Wypychanie do serwera w ciągu kilku sekund.</span><span class="sxs-lookup"><span data-stu-id="911a1-155">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="911a1-156">Wartość domyślna to 300 sekund (5 minut).</span><span class="sxs-lookup"><span data-stu-id="911a1-156">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="911a1-157">Określanie 0 (zero sekund) stosuje się wartością domyślną.</span><span class="sxs-lookup"><span data-stu-id="911a1-157">Specifying 0 (zero seconds) applies the default value.</span></span>
+<span data-ttu-id="69467-155">Określa limit czasu Wypychanie do serwera w ciągu kilku sekund.</span><span class="sxs-lookup"><span data-stu-id="69467-155">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="69467-156">Wartość domyślna to 300 sekund (5 minut).</span><span class="sxs-lookup"><span data-stu-id="69467-156">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="69467-157">Określanie 0 (zero sekund) stosuje się wartością domyślną.</span><span class="sxs-lookup"><span data-stu-id="69467-157">Specifying 0 (zero seconds) applies the default value.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="911a1-158">Przykłady</span><span class="sxs-lookup"><span data-stu-id="911a1-158">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="69467-158">Przykłady</span><span class="sxs-lookup"><span data-stu-id="69467-158">Examples</span></span>
 
-<span data-ttu-id="911a1-159">Wypycha *foo.nupkg* do domyślnego źródła wypychania, określając klucz interfejsu API:</span><span class="sxs-lookup"><span data-stu-id="911a1-159">Pushes *foo.nupkg* to the default push source, specifying an API key:</span></span>
+<span data-ttu-id="69467-159">Wypycha *foo.nupkg* do domyślnego źródła wypychania, określając klucz interfejsu API:</span><span class="sxs-lookup"><span data-stu-id="69467-159">Pushes *foo.nupkg* to the default push source, specifying an API key:</span></span>
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-<span data-ttu-id="911a1-160">Wypychania *foo.nupkg* do źródła niestandardowego wypychania `https://customsource`, określając klucz interfejsu API:</span><span class="sxs-lookup"><span data-stu-id="911a1-160">Push *foo.nupkg* to the custom push source `https://customsource`, specifying an API key:</span></span>
+<span data-ttu-id="69467-160">Wypychania *foo.nupkg* do źródła niestandardowego wypychania `https://customsource`, określając klucz interfejsu API:</span><span class="sxs-lookup"><span data-stu-id="69467-160">Push *foo.nupkg* to the custom push source `https://customsource`, specifying an API key:</span></span>
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
 
-<span data-ttu-id="911a1-161">Wypycha *foo.nupkg* do domyślnego źródła push:</span><span class="sxs-lookup"><span data-stu-id="911a1-161">Pushes *foo.nupkg* to the default push source:</span></span>
+<span data-ttu-id="69467-161">Wypycha *foo.nupkg* do domyślnego źródła push:</span><span class="sxs-lookup"><span data-stu-id="69467-161">Pushes *foo.nupkg* to the default push source:</span></span>
 
 `dotnet nuget push foo.nupkg`
 
-<span data-ttu-id="911a1-162">Wypycha *foo.symbols.nupkg* do domyślnego źródła symboli:</span><span class="sxs-lookup"><span data-stu-id="911a1-162">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
+<span data-ttu-id="69467-162">Wypycha *foo.symbols.nupkg* do domyślnego źródła symboli:</span><span class="sxs-lookup"><span data-stu-id="69467-162">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
 
 `dotnet nuget push foo.symbols.nupkg`
 
-<span data-ttu-id="911a1-163">Wypycha *foo.nupkg* do domyślnego źródła wypychania, określając 360-sekundowy limit:</span><span class="sxs-lookup"><span data-stu-id="911a1-163">Pushes *foo.nupkg* to the default push source, specifying a 360-second timeout:</span></span>
+<span data-ttu-id="69467-163">Wypycha *foo.nupkg* do domyślnego źródła wypychania, określając 360-sekundowy limit:</span><span class="sxs-lookup"><span data-stu-id="69467-163">Pushes *foo.nupkg* to the default push source, specifying a 360-second timeout:</span></span>
 
 `dotnet nuget push foo.nupkg --timeout 360`
 
-<span data-ttu-id="911a1-164">Wypychanie wszystkich *.nupkg* plików w bieżącym katalogu, do domyślnego źródła push:</span><span class="sxs-lookup"><span data-stu-id="911a1-164">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
+<span data-ttu-id="69467-164">Wypychanie wszystkich *.nupkg* plików w bieżącym katalogu, do domyślnego źródła push:</span><span class="sxs-lookup"><span data-stu-id="69467-164">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
 
 `dotnet nuget push *.nupkg`

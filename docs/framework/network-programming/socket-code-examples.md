@@ -14,34 +14,32 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b744690cf2af1c2935a381c3edc2198840704425
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f709c2e0780b89e072c43e9acaf722e6851d4cbe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197912"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199958"
 ---
-# <a name="socket-code-examples"></a><span data-ttu-id="198d2-102">Przykłady kodu gniazd</span><span class="sxs-lookup"><span data-stu-id="198d2-102">Socket Code Examples</span></span>
-<span data-ttu-id="198d2-103">Poniższe przykłady kodu przedstawiają sposoby użycia <xref:System.Net.Sockets.Socket> klasy jako klienta, aby połączyć się z usługami sieci zdalnej, a serwer do nasłuchiwania połączeń z klientami zdalnymi.</span><span class="sxs-lookup"><span data-stu-id="198d2-103">The following code examples demonstrate how to use the <xref:System.Net.Sockets.Socket> class as a client to connect to remote network services and as a server to listen for connections from remote clients.</span></span>  
+# <a name="socket-code-examples"></a><span data-ttu-id="3e7ca-102">Przykłady kodu gniazd</span><span class="sxs-lookup"><span data-stu-id="3e7ca-102">Socket Code Examples</span></span>
+<span data-ttu-id="3e7ca-103">Poniższe przykłady kodu przedstawiają sposoby użycia <xref:System.Net.Sockets.Socket> klasy jako klienta, aby połączyć się z usługami sieci zdalnej, a serwer do nasłuchiwania połączeń z klientami zdalnymi.</span><span class="sxs-lookup"><span data-stu-id="3e7ca-103">The following code examples demonstrate how to use the <xref:System.Net.Sockets.Socket> class as a client to connect to remote network services and as a server to listen for connections from remote clients.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="198d2-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="198d2-104">In This Section</span></span>  
- [<span data-ttu-id="198d2-105">Przykład synchronicznego gniazda klienta</span><span class="sxs-lookup"><span data-stu-id="198d2-105">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
- <span data-ttu-id="198d2-106">Pokazuje, jak zaimplementować synchronicznego <xref:System.Net.Sockets.Socket> klienta, który nawiązuje połączenie z serwerem i wyświetla dane zwrócone z serwera.</span><span class="sxs-lookup"><span data-stu-id="198d2-106">Shows how to implement a synchronous <xref:System.Net.Sockets.Socket> client that connects to a server and displays the data returned from the server.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="3e7ca-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="3e7ca-104">In This Section</span></span>  
+ [<span data-ttu-id="3e7ca-105">Przykład synchronicznego gniazda klienta</span><span class="sxs-lookup"><span data-stu-id="3e7ca-105">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
+ <span data-ttu-id="3e7ca-106">Pokazuje, jak zaimplementować synchronicznego <xref:System.Net.Sockets.Socket> klienta, który nawiązuje połączenie z serwerem i wyświetla dane zwrócone z serwera.</span><span class="sxs-lookup"><span data-stu-id="3e7ca-106">Shows how to implement a synchronous <xref:System.Net.Sockets.Socket> client that connects to a server and displays the data returned from the server.</span></span>  
   
- [<span data-ttu-id="198d2-107">Przykład synchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="198d2-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- <span data-ttu-id="198d2-108">Pokazuje, jak zaimplementować synchronicznego <xref:System.Net.Sockets.Socket> serwera, który akceptuje połączenia od klienta i zwraca ponownie dane otrzymane od klienta.</span><span class="sxs-lookup"><span data-stu-id="198d2-108">Shows how to implement a synchronous <xref:System.Net.Sockets.Socket> server that accepts connections from a client and echoes back the data received from the client.</span></span>  
+ [<span data-ttu-id="3e7ca-107">Przykład synchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="3e7ca-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
+ <span data-ttu-id="3e7ca-108">Pokazuje, jak zaimplementować synchronicznego <xref:System.Net.Sockets.Socket> serwera, który akceptuje połączenia od klienta i zwraca ponownie dane otrzymane od klienta.</span><span class="sxs-lookup"><span data-stu-id="3e7ca-108">Shows how to implement a synchronous <xref:System.Net.Sockets.Socket> server that accepts connections from a client and echoes back the data received from the client.</span></span>  
   
- [<span data-ttu-id="198d2-109">Przykład asynchronicznego gniazda klienta</span><span class="sxs-lookup"><span data-stu-id="198d2-109">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
- <span data-ttu-id="198d2-110">Pokazuje sposób implementacji asynchronicznego <xref:System.Net.Sockets.Socket> klienta, który nawiązuje połączenie z serwerem i wyświetla dane zwrócone z serwera.</span><span class="sxs-lookup"><span data-stu-id="198d2-110">Shows how to implement an asynchronous <xref:System.Net.Sockets.Socket> client that connects to a server and displays the data returned from the server.</span></span>  
+ [<span data-ttu-id="3e7ca-109">Przykład asynchronicznego gniazda klienta</span><span class="sxs-lookup"><span data-stu-id="3e7ca-109">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
+ <span data-ttu-id="3e7ca-110">Pokazuje sposób implementacji asynchronicznego <xref:System.Net.Sockets.Socket> klienta, który nawiązuje połączenie z serwerem i wyświetla dane zwrócone z serwera.</span><span class="sxs-lookup"><span data-stu-id="3e7ca-110">Shows how to implement an asynchronous <xref:System.Net.Sockets.Socket> client that connects to a server and displays the data returned from the server.</span></span>  
   
- [<span data-ttu-id="198d2-111">Przykład asynchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="198d2-111">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- <span data-ttu-id="198d2-112">Pokazuje sposób implementacji asynchronicznego <xref:System.Net.Sockets.Socket> serwera, który akceptuje połączenia od klienta i zwraca ponownie dane otrzymane od klienta.</span><span class="sxs-lookup"><span data-stu-id="198d2-112">Shows how to implement an asynchronous <xref:System.Net.Sockets.Socket> server that accepts connections from a client and echoes back the data received from the client.</span></span>  
+ [<span data-ttu-id="3e7ca-111">Przykład asynchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="3e7ca-111">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ <span data-ttu-id="3e7ca-112">Pokazuje sposób implementacji asynchronicznego <xref:System.Net.Sockets.Socket> serwera, który akceptuje połączenia od klienta i zwraca ponownie dane otrzymane od klienta.</span><span class="sxs-lookup"><span data-stu-id="3e7ca-112">Shows how to implement an asynchronous <xref:System.Net.Sockets.Socket> server that accepts connections from a client and echoes back the data received from the client.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="198d2-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="198d2-113">Related Sections</span></span>  
- [<span data-ttu-id="198d2-114">Gniazda</span><span class="sxs-lookup"><span data-stu-id="198d2-114">Sockets</span></span>](../../../docs/framework/network-programming/sockets.md)  
- <span data-ttu-id="198d2-115">Zawiera podstawowe informacje na temat <xref:System.Net.Sockets> przestrzeni nazw i <xref:System.Net.Sockets.Socket> klasy.</span><span class="sxs-lookup"><span data-stu-id="198d2-115">Provides basic information about the <xref:System.Net.Sockets> namespace and the <xref:System.Net.Sockets.Socket> class.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="3e7ca-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="3e7ca-113">Related Sections</span></span>  
+ [<span data-ttu-id="3e7ca-114">Gniazda</span><span class="sxs-lookup"><span data-stu-id="3e7ca-114">Sockets</span></span>](../../../docs/framework/network-programming/sockets.md)  
+ <span data-ttu-id="3e7ca-115">Zawiera podstawowe informacje na temat <xref:System.Net.Sockets> przestrzeni nazw i <xref:System.Net.Sockets.Socket> klasy.</span><span class="sxs-lookup"><span data-stu-id="3e7ca-115">Provides basic information about the <xref:System.Net.Sockets> namespace and the <xref:System.Net.Sockets.Socket> class.</span></span>  
   
- [<span data-ttu-id="198d2-116">Zabezpieczenia w programowaniu sieciowym</span><span class="sxs-lookup"><span data-stu-id="198d2-116">Security in Network Programming</span></span>](../../../docs/framework/network-programming/security-in-network-programming.md)  
- <span data-ttu-id="198d2-117">Opis używania standardowych technik zabezpieczania i uwierzytelniania w Internecie.</span><span class="sxs-lookup"><span data-stu-id="198d2-117">Describes how to use standard Internet security and authentication techniques.</span></span>
+ [<span data-ttu-id="3e7ca-116">Zabezpieczenia w programowaniu sieciowym</span><span class="sxs-lookup"><span data-stu-id="3e7ca-116">Security in Network Programming</span></span>](../../../docs/framework/network-programming/security-in-network-programming.md)  
+ <span data-ttu-id="3e7ca-117">Opis używania standardowych technik zabezpieczania i uwierzytelniania w Internecie.</span><span class="sxs-lookup"><span data-stu-id="3e7ca-117">Describes how to use standard Internet security and authentication techniques.</span></span>

@@ -6,18 +6,18 @@ title: Dokumentacja platformy .NET
 description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
 ms.custom: updateeachrelease
 ms.date: 06/21/2018
-ms.openlocfilehash: dd07b771f267eb2c022b1e0b8de02aca5b0c7a5c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 658c464cd7871306c7172e06c7041517ccea5ffe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837472"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183584"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/dotnet/csharp/quick-starts">
+                <a href="/dotnet/csharp/tutorials/intro-to-csharp/">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -172,7 +172,7 @@ ms.locfileid: "48837472"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Przewodnik dla języka C#</a></h3>
-                                                <p><a href="/dotnet/csharp/quick-starts">Przewodniki Szybki start</a></p>
+                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">Nauka C#</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Wprowadzenie</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Przewodnik po środowisku C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Dokumentacja języka C#</a></p>
@@ -191,7 +191,7 @@ ms.locfileid: "48837472"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp">Podręcznik języka F #</a></h3>
+                                                <h3><a href="/dotnet/fsharp">Podręcznik języka F#</a></h3>
                                                 <p><a href="/dotnet/fsharp/tutorials/getting-started">Wprowadzenie</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">Przewodnik po F#</a></p>
                                                 <p><a href="/dotnet/fsharp/language-reference">Dokumentacja języka F#</a></p>

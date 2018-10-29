@@ -5,11 +5,11 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50048258"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198085"
 ---
 # <a name="auditing-security-events"></a>Inspekcja zdarzeń dotyczących zabezpieczeń
 Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń związanych z zabezpieczeniami (Powodzenie, Niepowodzenie lub obie) za pomocą funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można zbadać za pomocą Podglądu zdarzeń.  

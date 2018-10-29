@@ -3,11 +3,11 @@ title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
 ms.openlocfilehash: e117c30ba2583158ee21fd11ff4a38b094c18fd9
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50045931"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197642"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
 Określ ustawienia zabezpieczenia strumienia Windows niestandardowego powiązania.  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 27cce8a77d4236829124b45650d5d0ac32a5150c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49634096"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198006"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 — Interfejs
 Udostępnia metody, które profilery kodu używać do komunikowania się za pomocą środowiska uruchomieniowego języka wspólnego (CLR) do kontrolowania, monitorowanie zdarzeń i informacje o żądaniu. . `ICorProfilerInfo4` Interfejs jest rozszerzeniem innych `ICorProfilerInfo` interfejsów. Zapewnia nowe metody obsługi ponownej kompilacji just-in-time (JIT), dodane w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  

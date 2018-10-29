@@ -5,20 +5,20 @@ author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 692d49cc940925f629e55cf5cc103522bd3cbb38
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 448edabf624f04311695e8b8c224f653b9939966
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348983"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199464"
 ---
 # <a name="net-core-guide"></a>Przewodnik platformy .NET Core
 
-[.NET core](about.md) jest [typu open-source](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT) platforma deweloperska ogólnego przeznaczenia, obsługiwane przez firmę Microsoft i społeczności platformy .NET w [GitHub](https://github.com/dotnet/core). Jest dla wielu platform, obsługi Windows, macOS i Linux i mogą być używane w urządzeń, chmury i aplikacji IoT.
+[.NET core](about.md) jest [typu open-source](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT), platforma deweloperska ogólnego przeznaczenia, obsługiwane przez firmę Microsoft i społeczności platformy .NET w [GitHub](https://github.com/dotnet/core). Jest wiele platform (Obsługa Windows, macOS i Linux) i może służyć do tworzenia urządzeń, chmury i aplikacji IoT.
 
 Zobacz [platformy .NET Core](about.md) Aby dowiedzieć się więcej na temat platformy .NET Core, w tym właściwości, języków i struktur i klucza API.
 
-Zapoznaj się z [Samouczki programu .NET Core](tutorials/index.md) dowiesz się, jak utworzyć prostą aplikację platformy .NET Core. Trwa tylko kilka minut, aby uzyskać swoją pierwszą aplikację, działanie. Jeśli chcesz wypróbować platformy .NET Core w przeglądarce, Przyjrzyj się [liczb w języku C#](../csharp/quick-starts/numbers-in-csharp.yml) Szybki Start.
+Zapoznaj się z [Samouczki programu .NET Core](tutorials/index.md) dowiesz się, jak utworzyć prostą aplikację platformy .NET Core. Trwa tylko kilka minut, aby uzyskać swoją pierwszą aplikację, działanie. Jeśli chcesz wypróbować platformy .NET Core w przeglądarce, Przyjrzyj się [liczby w elemencie C# ](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) samouczek online.
 
 ## <a name="download-net-core-21"></a>Pobierz program .NET Core 2.1
 

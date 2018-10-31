@@ -10,7 +10,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/27/2018
 ms.locfileid: "50186151"
 ---
-# <a name="introduction-to-c"></a>Wprowadzenie doC# #
+# <a name="introduction-to-c"></a>Wprowadzenie do C# #
 
 Wprowadzenie do — Zapraszamy C# samouczków. One rozpoczynać się interakcyjne lekcji, które można uruchomić w przeglądarce.
 

@@ -3,10 +3,10 @@ title: Materiały referencyjne dotyczące języka F#
 description: 'Informacje o F # języka funkcji z tego odwołania tokeny języka, pojęć, typów, wyrażenia i obsługiwane przez kompilator konstrukcji tematów.'
 ms.date: 05/16/2016
 ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45646418"
 ---
 # <a name="f-language-reference"></a>Materiały referencyjne dotyczące języka F#
@@ -79,7 +79,7 @@ W poniższej tabeli przedstawiono dostępne tematy referencyjne, które opisują
 |[Klasy abstrakcyjne](abstract-classes.md)|W tym artykule opisano klasy abstrakcyjnej, które są klasami, które opuszczają niektórych lub wszystkich elementów członkowskich niezaimplementowane, tak aby implementacji może być udostępniane przez klasy pochodne.|
 |[Rozszerzenia typu](type-extensions.md)|Opisuje typ rozszerzenia, które pozwalają na dodawanie nowych członków do typu obiektu zdefiniowanego wcześniej.|
 |[Typy elastyczne](flexible-types.md)|W tym artykule opisano typy elastyczne. Adnotacja elastycznym typem jest określony wskazanie, że parametr, zmienna lub wartość ma typ, który jest zgodny z typem, w którym zgodność jest określana przez pozycji w hierarchii zorientowane obiektowo, klas lub interfejsów.|
-|[Delegaci](delegates.md)|W tym artykule opisano delegatów, które reprezentują wywołania funkcji jako obiekt.|
+|[Delegaty](delegates.md)|W tym artykule opisano delegatów, które reprezentują wywołania funkcji jako obiekt.|
 |[Jednostki miary](units-of-measure.md)|W tym artykule opisano jednostki miary. Wartości zmiennoprzecinkowych w języku F # mogą mieć skojarzone jednostki miary, które są zwykle używane w celu wskazania, długość, woluminu, urządzeń pamięci masowej i tak dalej.|
 |[Dostawcy typów](../tutorials/type-providers/index.md)|Opisuje typ zapewnia i zawiera łącza do przewodników na dostęp do baz danych i usług sieci web za pomocą wbudowanych dostawców typów.|
 

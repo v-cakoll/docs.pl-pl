@@ -3,10 +3,10 @@ title: Jednostki miary (F#)
 description: 'Dowiedz się, jak zmiennoprzecinkowych i wartości liczby całkowitej ze znakiem w języku F # można skojarzyć jednostki miary, które są zazwyczaj używane do wskazać, długości, woluminów i urządzeń pamięci masowej.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45972520"
 ---
 # <a name="units-of-measure"></a>Jednostki miary

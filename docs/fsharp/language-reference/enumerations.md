@@ -3,10 +3,10 @@ title: Wyliczenia (F#)
 description: 'Dowiedz się, jak sprawić, że kod bardziej czytelny i łatwy w obsłudze za pomocą wyliczenia F # zamiast literałów.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "46003168"
 ---
 # <a name="enumerations"></a>Wyliczenia

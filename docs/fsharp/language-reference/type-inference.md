@@ -3,10 +3,10 @@ title: Wnioskowanie o typie (F#)
 description: 'Dowiedz się, jak kompilator F # wnioskuje typów wartości, zmiennych, parametrów i zwracanych wartości.'
 ms.date: 05/16/2016
 ms.openlocfilehash: fd826ac48fb9a70aa6f4ff746599c11b7e21a02e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43865699"
 ---
 # <a name="type-inference"></a>Wnioskowanie o typie

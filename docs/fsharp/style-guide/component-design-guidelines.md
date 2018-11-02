@@ -3,10 +3,10 @@ title: 'F # składnika wytyczne dotyczące projektowania'
 description: 'Dowiedz się, zalecenia dotyczące pisania F # składników przeznaczonych do użytku przez inne obiekty wywołujące.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 446cba0f810af9517b655ef5741ddf7a919676d5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43488290"
 ---
 # <a name="f-component-design-guidelines"></a>F # składnika wytyczne dotyczące projektowania

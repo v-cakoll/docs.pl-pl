@@ -3,10 +3,10 @@ title: 'Konwencje kodowania F #'
 description: 'Informacje ogólne wytyczne i idiomy podczas pisania kodu, F #.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "49087391"
 ---
 # <a name="f-coding-conventions"></a>Konwencje kodowania F #

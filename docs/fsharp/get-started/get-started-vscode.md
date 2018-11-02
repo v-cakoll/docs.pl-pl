@@ -3,10 +3,10 @@ title: 'Wprowadzenie do języka F # w programie Visual Studio Code'
 description: 'Dowiedz się, jak używać języka F # za pomocą programu Visual Studio Code i Ionide zestawu wtyczki.'
 ms.date: 05/28/2018
 ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "50192671"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Wprowadzenie do języka F # w programie Visual Studio Code

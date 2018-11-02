@@ -1,73 +1,73 @@
 ---
 title: Opcje interakcyjne F#
-description: 'Więcej informacji na temat opcji wiersza polecenia obsługiwane przez narzędzia F # Interactive, fsi.exe.'
+description: Więcej informacji na temat opcji wiersza polecenia obsługiwane przez F# Interactive, fsi.exe.
 ms.date: 05/16/2016
 ms.openlocfilehash: a461dd0eeff2de3d15e557ba37138fbd62ca43ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33565808"
 ---
 # <a name="f-interactive-options"></a>Opcje interakcyjne F#
 
 > [!NOTE]
-W tym artykule opisano obecnie środowisko dla systemu Windows tylko.  Będzie ona ulegną.
+W tym artykule opisano aktualnie środowisko Windows tylko.  Będzie inaczej.
 
-W tym temacie opisano opcje wiersza polecenia obsługiwane przez narzędzia F # Interactive, `fsi.exe`. F # Interactive akceptuje wiele z tych samych opcji wiersza polecenia jako kompilator języka F #, ale również zawierać niektóre dodatkowe opcje.
+W tym temacie opisano opcje wiersza polecenia obsługiwane przez F# Interactive, `fsi.exe`. F#Interactive akceptuje wiele tych samych opcji wiersza polecenia jako F# kompilatora, ale akceptuje również pewne dodatkowe opcje.
 
-## <a name="using-f-interactive-for-scripting"></a>Przy użyciu interakcyjne F # dla skryptów
-F # Interactive, `fsi.exe`, można uruchomić interakcyjnego lub można uruchomić z wiersza polecenia do uruchomienia skryptu. Składnia wiersza polecenia
+## <a name="using-f-interactive-for-scripting"></a>Za pomocą F# interaktywne dla skryptów
+F#Interaktywny, `fsi.exe`, może być uruchamiane interaktywnie lub można je uruchomić z wiersza polecenia, aby uruchomić skrypt. Składnia wiersza polecenia
 
 ```
 > fsi.exe [options] [ script-file [arguments] ]
 ```
 
-Rozszerzenie pliku plikach skryptu języka F # jest `.fsx`.
+Rozszerzenie pliku F# pliki skryptów jest `.fsx`.
 
-## <a name="table-of-f-interactive-options"></a>Tabela Opcje interakcyjne F #
-W poniższej tabeli przedstawiono opcje obsługiwane przez narzędzia F # Interactive. Te opcje można ustawić w wierszu polecenia lub za pomocą środowiska IDE programu Visual Studio. Aby ustawić te opcje w programie Visual Studio IDE, otwórz **narzędzia** menu, wybierz opcję **opcje...** , następnie rozwiń węzeł **narzędzia F #** a następnie wybierz węzeł **F # Interactive**.
+## <a name="table-of-f-interactive-options"></a>Tabela F# interaktywnych opcji
+W poniższej tabeli przedstawiono opcje obsługiwane przez F# interakcyjne. Te opcje można ustawić w wierszu polecenia lub za pośrednictwem środowiska IDE programu Visual Studio. Aby ustawić te opcje w programie Visual Studio IDE, otwórz **narzędzia** menu, wybierz opcję **opcje...** , następnie rozwiń  **F# narzędzia** a następnie wybierz węzeł  **F# Interactive**.
 
-W przypadku, gdy są wyświetlane w F # Interactive argumentów opcji, elementy listy są oddzielone średnikami (`;`).
+Gdzie są wyświetlane w F# opcji Interactive argumentów, elementy listy są oddzielone średnikami (`;`).
 
 |Opcja|Opis|
 |------|-----------|
-|**--**|Używanych w celu poinstruowania F # Interactive do Traktuj pozostałe argumenty jak argumenty wiersza polecenia F # program lub skrypt, które jest dostępne w kodzie za pomocą listy **elementu fsi.CommandLineArgs**.|
-|**--checked**[**+**&#124;**-**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**-codepage:&lt;int&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**--consolecolors**[**+**&#124;**-**]|Dane wyjściowe, ostrzeżenia i komunikaty o błędach w kolorze.|
-|**--crossoptimize**[**+**&#124;**-**]|Włącz lub wyłącz optymalizacje między modułami.|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debugowania:**[**pełne**&#124;**pdbonly**&#124;**przenośne**&#124;**osadzone**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**pełne**&#124;**pdbonly**&#124;**przenośne**&#124;**osadzone**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**— Zdefiniuj:&lt;ciągu&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**--deterministyczne**[**+**&#124;**-**]|Tworzy zestaw deterministyczne (w tym identyfikator GUID wersji modułu i sygnatura czasowa).|
-|**--exec**|Nakazuje interakcyjne F # można zamknąć po załadowaniu plików lub uruchamianie pliku skryptu w wierszu polecenia.|
-|**--fullpaths**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**--gui**[**+**&#124;**-**]|Włącza lub wyłącza pętli zdarzenia Windows Forms. Domyślnie włączone.|
-|**--help**<br /><br />**-?**|Umożliwia wyświetlenie składnia wiersza polecenia i krótki opis każdej z nich.|
-|**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;folder-list&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**— obciążenia:&lt;filename&gt;**|Kompiluje kod źródłowy danego podczas uruchamiania i ładuje skompilowanych konstrukcje F # do sesji. Jeśli docelowe źródło zawiera dyrektywy skryptów, takich jak **#use** lub **#load**, należy użyć **--użyj** lub **#use** zamiast **--załadować** lub **#load**.|
-|**--mlcompatibility**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**--noframework**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md)|
-|**-nologo**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**--nowarn:&lt;ostrzeżenie listy&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**--optimize**[**+**&#124;**-**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**-preferreduilang:&lt;lang&gt;**| Określa nazwę preferowanego języka wyjściowego kultury (np. es-ES, ja-JP). |
-|**--quiet**|Pomiń F # Interactive przez dane wyjściowe do **stdout** strumienia.|
-|**--quotations-debug**|Określa, że dodatkowe informacje o debugowaniu powinien wysyłanego dla wyrażeń, które pochodzą z literałów cytatu F # i odzwierciedlone definicje. Informacje debugowania są dodawane do niestandardowych atrybutów węzła drzewa wyrażenia F #. Zobacz [kodu ofert](code-quotations.md) i [Expr.customattributes —](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
-|**--readline**[**+**&#124;**-**]|Włącz lub wyłącz uzupełniania po naciśnięciu tabulatora w trybie interaktywnym.|
-|**--odwołania:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**--shadowcopyreferences**[**+**&#124;**-**]|Uniemożliwia blokowanie przez proces narzędzia F # Interactive odwołań.|
-|**--simpleresolution**|Usuwa odwołania do zestawów przy użyciu reguł opartych na katalogu, a nie rozpoznawania narzędzia MSBuild.|
-|**--tailcalls**[**+**&#124;**-**]|Włącza lub wyłącza użycie instrukcji IL tail, co powoduje, że ramka stosu zostanie ponownie tail funkcji cyklicznej. Ta opcja jest domyślnie włączona.|
-|**--targetprofile:&lt;ciągu&gt;**|Określa profil platformy docelowej tego zestawu. Prawidłowe wartości to mscorlib, netcore lub krótkich nazw netstandard.  Wartość domyślna to mscorlib.|
-|**— Użyj:&lt;filename&gt;**|Określa, że interpreter do używania danego pliku przy uruchamianiu jako początkowych danych wejściowych.|
-|**--utf8output**|Taka sama jak fsc.exe — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**— Ostrzeżenie:&lt;poziom ostrzeżeń&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**--warnaserror**[**+**&#124;**-**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
-|**--warnaserror**[**+**&#124;**-**]:**&lt;int-list&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
+|**--**|Używany w celu poinstruowania F# Interactive o traktowaniu pozostałych argumentów jako argumentów wiersza polecenia, aby F# programu lub skryptu, który jest dostępny w kodzie za pomocą listy **fsi.CommandLineArgs**.|
+|**--checked**[**+**&#124;**-**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**-codepage:&lt;int&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**--consolecolors**[**+**&#124;**-**]|Dane wyjściowe, ostrzeżenia i komunikaty o błędach są oznaczone kolorem.|
+|**--crossoptimize**[**+**&#124;**-**]|Włącza lub wyłącza optymalizacje między modułami.|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debugowania:**[**pełną**&#124;**pdbonly**&#124;**przenośne**&#124;**osadzonego**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**pełne**&#124;**pdbonly**&#124;**przenośne**&#124;**osadzone**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**— Zdefiniuj:&lt;ciągu&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**--deterministyczne**[**+**&#124;**-**]|Tworzy zestaw deterministyczny (w tym identyfikator GUID wersji modułu i sygnaturę czasową).|
+|**--exec**|Powoduje, że F# interaktywnego, aby zakończyło po ładowaniu plików lub uruchamiania pliku skryptu podanego w wierszu polecenia.|
+|**--fullpaths**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**--gui**[**+**&#124;**-**]|Włącza lub wyłącza pętlę zdarzeń Windows Forms. Wartość domyślna jest ustawiona.|
+|**--help**<br /><br />**-?**|Umożliwia wyświetlenie składnia wiersza polecenia i krótkiego opisu każdej opcji.|
+|**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;folder-list&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**— obciążenia:&lt;nazwy pliku&gt;**|Kompiluje podany kod źródłowy przy uruchamianiu i ładuje skompilowane F# konstrukcji do sesji. Jeśli docelowe źródło zawiera dyrektywy wykonywania skryptów, takie jak **#use** lub **#load**, należy użyć **— użyj** lub **#use** zamiast **— obciążenia** lub **#load**.|
+|**--mlcompatibility**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**--noframework**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md)|
+|**nologo —**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**-nowarn:&lt;ostrzeżenie listy&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**--optimize**[**+**&#124;**-**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**preferreduilang —:&lt;lang&gt;**| Określa nazwę preferowanego języka wyjściowego kultury (na przykład, es-ES, ja-JP). |
+|**--quiet**|Pomiń F# Interactive danych wyjściowych do **stdout** strumienia.|
+|**--quotations-debug**|Określa, że dodatkowe informacje dotyczące debugowania powinny być emitowane dla wyrażeń, które są uzyskiwane z F# literałów oferty i odbitych definicje. Informacje debugowania są dodawane do atrybutów niestandardowych F# węzła drzewa wyrażeń. Zobacz [kodu ofert](code-quotations.md) i [Expr.customattributes —](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
+|**--readline**[**+**&#124;**-**]|Włącz lub wyłącz zakończenie karty w trybie interaktywnym.|
+|**— odwołania:&lt;nazwy pliku&gt;**<br /><br />**-r:&lt;nazwy pliku&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**--shadowcopyreferences**[**+**&#124;**-**]|Zapobiega odwołań z blokowany przez F# procesu interaktywnego.|
+|**--simpleresolution**|Usuwa odwołania do zestawów za pomocą reguł opartych na katalog, a nie rozdzielczości MSBuild.|
+|**--tailcalls**[**+**&#124;**-**]|Włącza lub wyłącza korzystanie z fragmentarycznej instrukcji IL, co powoduje, że ramek stosu, można użyć ponownie dla funkcji cyklicznych. Ta opcja jest domyślnie włączona.|
+|**--targetprofile:&lt;ciągu&gt;**|Określa profil platformy docelowej tego zestawu. Prawidłowe wartości to mscorlib, netcore lub netstandard.  Wartość domyślna to mscorlib.|
+|**— Użyj:&lt;nazwy pliku&gt;**|Informuje interpreter używania danego pliku podczas uruchamiania jako początkowych danych wejściowych.|
+|**--utf8output**|Tak samo jak opcja kompilatora fsc.exe. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**— Ostrzeżenie:&lt;poziom ostrzeżeń&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**--warnaserror**[**+**&#124;**-**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
+|**--warnaserror**[**+**&#124;**-**]:**&lt;int-list&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).|
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Opcje kompilatora](compiler-options.md)|Zawiera opis opcji wiersza polecenia dostępnych dla kompilator języka F # **fsc.exe**.|
+|[Opcje kompilatora](compiler-options.md)|W tym artykule opisano opcje wiersza polecenia dostępne dla F# kompilatora, **fsc.exe**.|

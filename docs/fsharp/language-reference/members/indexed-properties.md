@@ -3,10 +3,10 @@ title: Właściwości indeksowane (F#)
 description: Więcej informacji na temat właściwości indeksowanych w F#, które umożliwiają dostęp tablicy do danych uporządkowanych.
 ms.date: 10/17/2018
 ms.openlocfilehash: 3dac60eba3d9e7a9c3e76ad7ee051e6b30b88636
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "49452251"
 ---
 # <a name="indexed-properties"></a>Właściwości indeksowane

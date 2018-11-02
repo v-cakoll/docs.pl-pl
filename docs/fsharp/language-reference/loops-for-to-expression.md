@@ -3,10 +3,10 @@ title: 'Pętle: for...to — Wyrażenie (F#)'
 description: 'Zobacz jak F # for... wyrażenie jest używany do wykonywania iteracji w pętli zakresu wartości zmiennej pętli.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43800472"
 ---
 # <a name="loops-forto-expression"></a>Pętle: for...to — Wyrażenie

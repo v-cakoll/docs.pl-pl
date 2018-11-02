@@ -3,10 +3,10 @@ title: Typy kolekcji F#
 description: 'Poznaj typy kolekcji F # i jak będą się różnić od typy kolekcji w programie .NET Framework.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43864764"
 ---
 # <a name="f-collection-types"></a>Typy kolekcji F#

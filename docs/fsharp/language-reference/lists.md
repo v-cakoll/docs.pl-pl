@@ -3,10 +3,10 @@ title: Listy (F#)
 description: 'Więcej informacji na temat list języka F #, uporządkowany i niezmienne szeregu elementów tego samego typu.'
 ms.date: 05/16/2016
 ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "50201627"
 ---
 # <a name="lists"></a>Listy

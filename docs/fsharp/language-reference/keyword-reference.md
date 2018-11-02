@@ -3,10 +3,10 @@ title: Odwołanie do słowa kluczowego (F#)
 description: 'Znajdź łącza do informacji na temat wszystkich słów kluczowych języka F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43856027"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
@@ -27,7 +27,7 @@ W poniższej tabeli przedstawiono wszystkie F # słowa kluczowe w kolejności al
 |`begin`|[Pełna składnia](verbose-syntax.md)|W składni pełne wskazuje początek bloku kodu.|
 |`class`|[Klasy](classes.md)|W składni pełne wskazuje początek definicji klasy.|
 |`default`|[Elementy członkowskie](members/index.md)|Wskazuje implementację metody abstrakcyjnej; używany razem z deklaracji metody abstrakcyjnej, aby utworzyć metodę wirtualną.|
-|`delegate`|[Delegaci](delegates.md)|Używane do deklarowania delegata.|
+|`delegate`|[Delegaty](delegates.md)|Używane do deklarowania delegata.|
 |`do`|[Powiązania „do”](functions/do-bindings.md)<br /><br />[Pętle: `for...to` wyrażenia](loops-for-to-expression.md)<br /><br />[Pętle: `for...in` wyrażenia](loops-for-in-expression.md)<br /><br />[Pętle: `while...do` wyrażenia](loops-while-do-expression.md)|Używane w konstrukcji pętli lub wykonywanie kodu imperatywnego.|
 |`done`|[Pełna składnia](verbose-syntax.md)|W składni pełne wskazuje koniec bloku kodu w wyrażeniu pętli.|
 |`downcast`|[Rzutowanie i konwersje](casting-and-conversions.md)|Używana do konwersji do typu, które jest niżej w łańcuchu dziedziczenia.|
@@ -62,7 +62,7 @@ W poniższej tabeli przedstawiono wszystkie F # słowa kluczowe w kolejności al
 |`new`|[Konstruktory](members/constructors.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane do deklarowania, zdefiniuj lub wywoływania konstruktora, który tworzy, lub który można utworzyć obiekt.<br /><br />Umożliwia również w ograniczenia parametru ogólnego wskazują, że typ musi mieć określone konstruktora.|
 |`not`|[Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)<br /><br />[Ograniczenia](generics/constraints.md)|Bez faktycznego słowem kluczowym. Jednak `not struct` w połączeniu jest używany jako ograniczenie parametru ogólnego.|
 |`null`|[Wartości null](values/null-values.md)<br /><br />[Ograniczenia](generics/constraints.md)|Wskazuje brak obiektu.<br /><br />Również używany w ograniczenia parametru ogólnego.|
-|`of`|[Sumy rozłączne](discriminated-unions.md)<br /><br />[Delegaci](delegates.md)<br /><br />[Typy wyjątków](exception-handling/exception-types.md)|Używane w połączenia dyskryminowanych, aby wskazać typ kategorii wartości, a w deklaracjach delegata i wyjątków.|
+|`of`|[Sumy rozłączne](discriminated-unions.md)<br /><br />[Delegaty](delegates.md)<br /><br />[Typy wyjątków](exception-handling/exception-types.md)|Używane w połączenia dyskryminowanych, aby wskazać typ kategorii wartości, a w deklaracjach delegata i wyjątków.|
 |`open`|[Deklaracje importowania: `open` — słowo kluczowe](import-declarations-the-open-keyword.md)|Używane, aby udostępnić zawartość przestrzeni nazw lub module bez kwalifikacji.|
 |`or`|[Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane z warunkami logiczną jako wartość logiczna `or` operatora. Odpowiednikiem "||`.<br /><br />Również używany w ograniczeniami elementu członkowskiego.|
 |`override`|[Elementy członkowskie](members/index.md)|Używany do implementowania nieco inna niż wersja podstawowa metody abstrakcyjne lub wirtualne.|

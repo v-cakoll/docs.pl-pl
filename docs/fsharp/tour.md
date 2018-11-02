@@ -2,12 +2,12 @@
 title: Przewodnik po F#
 description: Sprawdź, niektóre najważniejsze funkcje w języku programowania w ten samouczek przy użyciu przykładów kodu F#.
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924524"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235716"
 ---
 # <a name="tour-of-f"></a>Przewodnik po F# #
 
@@ -193,6 +193,6 @@ Klasy to idealne rozwiązanie dla wielu powodów, na przykład gdy trzeba reprez
 
 Teraz, gdy wiesz, niektóre z podstawowych funkcji języka, powinno być gotowe do pisania pierwszego programów F#!  Zapoznaj się z [wprowadzenie](tutorials/getting-started/index.md) informacje na temat konfigurowania środowiska deweloperskiego i pisanie kodu.
 
-Następne kroki zawierające więcej może być dowolną, ale zalecamy [funkcje jako wartości pierwszej klasy](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> do przyzwyczaić się podstawowe pojęcia programowania funkcyjnego.  Będą one niezbędne do tworzenia niezawodnych programów w języku F#.
+Następne kroki zawierające więcej może być dowolną, ale zalecamy [wprowadzenie do programowania funkcyjnego w F# ](introduction-to-functional-programming/index.md) do przyzwyczaić się podstawowe pojęcia programowania funkcyjnego.  Będą one niezbędne do tworzenia niezawodnych programów w języku F#.
 
 Ponadto zapoznaj się z [dokumentacja języka F#](language-reference/index.md) wyświetlić obszerna kolekcja zawartości koncepcyjnej F#.

@@ -1,6 +1,6 @@
 ---
 title: Odwołanie do symbolu i operatora (F#)
-description: 'Więcej informacji na temat symboli i operatorów, które są używane w języku programowania F #.'
+description: Więcej informacji na temat symboli i operatorów, które są używane w języku programowania F#.
 ms.date: 04/04/2018
 ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,16 +14,16 @@ ms.locfileid: "47216831"
 > [!NOTE]
 Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
-Ten temat zawiera tabelę symboli i operatorów, które są używane w języku F #.
+Ten temat zawiera tabelę symboli i operatorów, które są używane w języku F#.
 
 ## <a name="table-of-symbols-and-operators"></a>Tabela symboli i operatorów
 
-Poniższa tabela opisuje symbole używane w języku F # zawiera łącza do tematów, które zawierają więcej informacji i krótki opis niektórych zastosowań symbolu. Symbole są uporządkowane według zestawu, kolejności znaków ASCII.
+Poniższa tabela opisuje symbole używane w języku F# zawiera łącza do tematów, które zawierają więcej informacji i krótki opis niektórych zastosowań symbolu. Symbole są uporządkowane według zestawu, kolejności znaków ASCII.
 
 |Symbol or — operator|Łącza|Opis|
 |------------------|-----|-----------|
 |`!`|[Komórki odwołań](../reference-cells.md)<br /><br />[Wyrażenia obliczeń](../computation-expressions.md)|<ul><li>Wyłuskania komórki odwołania.<br /></li><li>Po słowo kluczowe wskazuje zmodyfikowaną wersję zachowanie słowa kluczowego jako kontrolowana przez przepływ pracy.<br /></li></ul>|
-|`!=`|Nie dotyczy.|<ul><li>Nie jest używany w języku F #. Użyj `<>` operacji nierówności.<br /></li></ul>|
+|`!=`|Nie dotyczy.|<ul><li>Nie jest używany w języku F#. Użyj `<>` operacji nierówności.<br /></li></ul>|
 |`"`|[Literały](../literals.md)<br /><br />[Ciągi](../strings.md)|<ul><li>Rozgranicza ciąg tekstowy.<br /></li></ul>|
 |`"""`|[Ciągi](../strings.md)|Rozgranicza ciąg verbatim tekstowy. Różni się od `@"..."` , możesz wskazać znak cudzysłowu, za pomocą pojedynczego cudzysłowu w ciągu.|
 |`#`|[Dyrektywy kompilatora](../compiler-directives.md)<br /><br />[Typy elastyczne](../flexible-types.md)|<ul><li>Prefiksy takich jak dyrektywa preprocesora lub kompilatora `#light`.<br /></li><li>W przypadku użycia z typem, oznacza *elastycznym typem*, która odnosi się do typu lub jednego z jego typów pochodnych.<br /></li></ul>|
@@ -81,7 +81,7 @@ Poniższa tabela opisuje symbole używane w języku F # zawiera łącza do temat
 |`<@@...@@>`|[Cytaty kodu](../code-quotations.md)|<ul><li>Rozgranicza kodu bez typu oferty.<br /></li></ul>|
 |`=`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Zwraca `true` Jeśli po lewej stronie jest równy po prawej stronie; w przeciwnym razie zwraca `false`.<br /></li></ul>|
 |`=?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Oblicza operacji "equal", gdy po prawej stronie jest typ dopuszczający wartość null.<br /></li></ul>|
-|`==`|Nie dotyczy.|<ul><li>Nie jest używany w języku F #. Użyj `=` operacji porównania.<br /></li></ul>|
+|`==`|Nie dotyczy.|<ul><li>Nie jest używany w języku F#. Użyj `=` operacji porównania.<br /></li></ul>|
 |`>`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Zwraca `true` po lewej stronie jest większa niż po prawej stronie; w przeciwnym razie, zwraca wartość `false`.<br /></li></ul>|
 |`>?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Oblicza operacji "większe niż", gdy po prawej stronie jest typ dopuszczający wartość null.<br /></li></ul>|
 |`>>`|[Funkcje](../functions/index.md)|<ul><li>Redaguj dwóch funkcji (do przodu kompozycji operator).<br /></li></ul>|
@@ -116,7 +116,7 @@ Poniższa tabela opisuje symbole używane w języku F # zawiera łącza do temat
 
 ## <a name="operator-precedence"></a>Kolejność wykonywania działań
 
-W poniższej tabeli przedstawiono kolejność pierwszeństwa operatorów i innych słów kluczowych wyrażenia w języku F #, w kolejności od najniższego pierwszeństwa, aby najwyższy priorytet. Na liście również jest łączność, jeśli ma to zastosowanie.
+W poniższej tabeli przedstawiono kolejność pierwszeństwa operatorów i innych słów kluczowych wyrażenia w języku F#, w kolejności od najniższego pierwszeństwa, aby najwyższy priorytet. Na liście również jest łączność, jeśli ma to zastosowanie.
 
 |Operator|Łączność|
 |--------|-------------|
@@ -146,7 +146,7 @@ W poniższej tabeli przedstawiono kolejność pierwszeństwa operatorów i innyc
 |`.`|Lewe|
 |`f(x)`|Lewe|
 |`f<`*Typy*`>`|Lewe|
-Język F # obsługuje niestandardowe przeciążenia operatora. Oznacza to, czy można zdefiniować własne operatorów. W poprzedniej tabeli *op* może być dowolną prawidłową sekwencją (prawdopodobnie puste), znaków operatora, wbudowany lub zdefiniowany przez użytkownika. W związku z tym można użyć tej tabeli można określić, jakie sekwencji znaków, które mają używać dla niestandardowy operator, aby osiągnąć żądany poziom priorytetu. Początkowe `.` znaki są ignorowane, gdy kompilator określa priorytet.
+Język F# obsługuje niestandardowe przeciążenia operatora. Oznacza to, czy można zdefiniować własne operatorów. W poprzedniej tabeli *op* może być dowolną prawidłową sekwencją (prawdopodobnie puste), znaków operatora, wbudowany lub zdefiniowany przez użytkownika. W związku z tym można użyć tej tabeli można określić, jakie sekwencji znaków, które mają używać dla niestandardowy operator, aby osiągnąć żądany poziom priorytetu. Początkowe `.` znaki są ignorowane, gdy kompilator określa priorytet.
 
 ## <a name="see-also"></a>Zobacz także
 

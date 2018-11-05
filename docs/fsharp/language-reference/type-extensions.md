@@ -1,6 +1,6 @@
 ---
 title: Rozszerzenia typu (F#)
-description: 'Dowiedz się, jak rozszerzeń typu F # zezwala na dodawanie nowych członków do typu obiektu zdefiniowanego wcześniej.'
+description: Dowiedz się, jak rozszerzeń typu F# zezwala na dodawanie nowych członków do typu obiektu zdefiniowanego wcześniej.
 ms.date: 07/20/2018
 ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -127,7 +127,7 @@ Co to jest pożądane to metody statyczne, "float w miejscu", które może być 
 
 ## <a name="extension-methods"></a>Metody rozszerzenia
 
-Na koniec metody rozszerzenia (nazywane czasem "C# styl elementy członkowskie rozszerzeń") może być zadeklarowana w F # jako metodę statyczną składową klasy.
+Na koniec metody rozszerzenia (nazywane czasem "C# styl elementy członkowskie rozszerzeń") może być zadeklarowana w F# jako metodę statyczną składową klasy.
 
 Metody rozszerzenia są przydatne w przypadku gdy chcesz zdefiniować rozszerzenia dla typu ogólnego, który będzie ograniczać zmienna typu. Na przykład:
 
@@ -163,7 +163,7 @@ Dla typu rozszerzenia dostępne są także następujące ograniczenia:
 * Rozszerzenia typu nie może być zdefiniowana w [skróty typów](type-abbreviations.md).
 * Rozszerzenia typu nie są prawidłowe dla `byref<'T>` (chociaż może być deklarowane).
 * Rozszerzenia typu jest nieprawidłowa dla atrybutów (chociaż może być deklarowane).
-* Można zdefiniować rozszerzenia, które przeciążać inne metody o tej samej nazwie, ale kompilator F # preferuje metod bez rozszerzeń w przypadku wywołania niejednoznacznego.
+* Można zdefiniować rozszerzenia, które przeciążać inne metody o tej samej nazwie, ale kompilator F# preferuje metod bez rozszerzeń w przypadku wywołania niejednoznacznego.
 
 Na koniec Jeśli istnieje wiele rozszerzeń typu wewnętrznego dla jednego typu, wszystkie elementy członkowskie muszą być unikatowe. Dla opcjonalnych rozszerzeń typów elementy członkowskie w innych rozszerzeniach typów tego samego typu mogą mieć tej samej nazwy. Dwuznaczne błędy występują tylko wtedy, gdy kod klienta otwiera dwa różne zakresy definiujące te same nazwy składników.
 

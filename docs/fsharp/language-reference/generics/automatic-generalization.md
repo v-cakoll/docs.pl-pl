@@ -1,6 +1,6 @@
 ---
 title: Automatyczna generalizacja (F#)
-description: 'Dowiedz się, jak F # automatycznie stanowi uogólnienie argumentów i typy funkcji, aby mogły działać z wieloma typami, gdy jest to możliwe.'
+description: Dowiedz się, jak F# automatycznie stanowi uogólnienie argumentów i typy funkcji, aby mogły działać z wieloma typami, gdy jest to możliwe.
 ms.date: 05/16/2016
 ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "43855780"
 ---
 # <a name="automatic-generalization"></a>Automatyczna generalizacja
 
-F # używa wnioskowanie o typie, aby ocenić typy funkcje i wyrażenia. W tym temacie opisano, jak F # automatycznie stanowi uogólnienie argumentów i typy funkcji, aby mogły działać z wieloma typami, gdy jest to możliwe.
+F# używa wnioskowanie o typie, aby ocenić typy funkcje i wyrażenia. W tym temacie opisano, jak F# automatycznie stanowi uogólnienie argumentów i typy funkcji, aby mogły działać z wieloma typami, gdy jest to możliwe.
 
 ## <a name="automatic-generalization"></a>Automatyczna generalizacja
 
-Kompilator F #, gdy wykonuje wnioskowanie o typie dla funkcji określa, czy danego parametru może być ogólny. Kompilator sprawdza każdy parametr i określa, czy funkcja zależny od określonego typu parametru. Jeśli nie, typ jest wnioskowany jako ogólnego.
+Kompilator F#, gdy wykonuje wnioskowanie o typie dla funkcji określa, czy danego parametru może być ogólny. Kompilator sprawdza każdy parametr i określa, czy funkcja zależny od określonego typu parametru. Jeśli nie, typ jest wnioskowany jako ogólnego.
 
 Poniższy przykładowy kod przedstawia funkcję, która kompilator wnioskuje się ogólnego.
 

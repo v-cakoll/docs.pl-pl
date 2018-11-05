@@ -1,6 +1,6 @@
 ---
 title: Operatory logiczne (F#)
-description: 'Więcej informacji na temat operatorów logicznych, które są dostępne w F # języka programowania.'
+description: Więcej informacji na temat operatorów logicznych, które są dostępne w F# języka programowania.
 ms.date: 05/16/2016
 ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "45638483"
 ---
 # <a name="boolean-operators"></a>Operatory logiczne
 
-W tym temacie opisano obsługę operatorów logicznych w języku F #.
+W tym temacie opisano obsługę operatorów logicznych w języku F#.
 
 ## <a name="summary-of-boolean-operators"></a>Podsumowanie operatory logiczne
 
-Poniższa tabela zawiera podsumowanie operatorów logicznych, które są dostępne w języku F #. Jest to jedyny typ obsługiwanych przez te operatory `bool` typu.
+Poniższa tabela zawiera podsumowanie operatorów logicznych, które są dostępne w języku F#. Jest to jedyny typ obsługiwanych przez te operatory `bool` typu.
 
 |Operator|Opis|
 |--------|-----------|

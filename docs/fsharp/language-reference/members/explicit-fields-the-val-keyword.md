@@ -1,6 +1,6 @@
 ---
 title: 'Pola jawne: val — Słowo kluczowe (F#)'
-description: 'Więcej informacji na temat języka F # "val" słowo kluczowe, które jest używane do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury, bez inicjowania typu.'
+description: Więcej informacji na temat języka F# "val" słowo kluczowe, które jest używane do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury, bez inicjowania typu.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -65,7 +65,7 @@ Poniższy kod przedstawia użycie pola jawne w strukturze. Ponieważ struktura j
 
 Dane wyjściowe są `11 xyz`.
 
-Pola jawne nie są przeznaczone do użytku procedur. Ogólnie rzecz biorąc, gdy jest to możliwe należy używać `let` powiązania w klasie zamiast jawnego pola. Pola jawne są przydatne w niektórych scenariuszach współpracy, takie jak kiedy należy zdefiniować strukturę, która będzie używana w wywołaniu do natywnych interfejsów API lub w scenariuszach międzyoperacyjnego modelu COM wywołania platformy. Aby uzyskać więcej informacji, zobacz [funkcji zewnętrznych](../functions/external-functions.md). Innej sytuacji, w którym może być konieczne jawne pola jest podczas pracy z F # generatora kodu, który emituje klasy bez konstruktora podstawowego. Pola jawne są także przydatne zmienne statyczne wątku lub podobne konstrukcji. Aby uzyskać więcej informacji, zobacz `System.ThreadStaticAttribute`.
+Pola jawne nie są przeznaczone do użytku procedur. Ogólnie rzecz biorąc, gdy jest to możliwe należy używać `let` powiązania w klasie zamiast jawnego pola. Pola jawne są przydatne w niektórych scenariuszach współpracy, takie jak kiedy należy zdefiniować strukturę, która będzie używana w wywołaniu do natywnych interfejsów API lub w scenariuszach międzyoperacyjnego modelu COM wywołania platformy. Aby uzyskać więcej informacji, zobacz [funkcji zewnętrznych](../functions/external-functions.md). Innej sytuacji, w którym może być konieczne jawne pola jest podczas pracy z F# generatora kodu, który emituje klasy bez konstruktora podstawowego. Pola jawne są także przydatne zmienne statyczne wątku lub podobne konstrukcji. Aby uzyskać więcej informacji, zobacz `System.ThreadStaticAttribute`.
 
 Gdy słowa kluczowe `member val` pojawiają się razem w definicji typu, jest on definicją automatycznie implementowanej właściwości. Aby uzyskać więcej informacji, zobacz [właściwości](properties.md).
 

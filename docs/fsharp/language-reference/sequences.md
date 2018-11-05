@@ -1,6 +1,6 @@
 ---
 title: Sekwencje (F#)
-description: 'Dowiedz się, jak sekwencje F #, gdy masz duży, uporządkowany zbiór danych, ale nie zawsze będziesz korzystać ze wszystkich elementów.'
+description: Dowiedz się, jak sekwencje F#, gdy masz duży, uporządkowany zbiór danych, ale nie zawsze będziesz korzystać ze wszystkich elementów.
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -22,7 +22,7 @@ A *sekwencji wyrażeń* jest na wyrażenie obliczane do sekwencji. Wyrażenia se
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Wyrażenia sekwencyjne składają się z wyrażeń języka F #, które generują wartości sekwencji. Mogą używać `yield` — słowo kluczowe do produkcji wartości, które stają się częścią sekwencji.
+Wyrażenia sekwencyjne składają się z wyrażeń języka F#, które generują wartości sekwencji. Mogą używać `yield` — słowo kluczowe do produkcji wartości, które stają się częścią sekwencji.
 
 Poniżej znajduje się przykład.
 
@@ -62,7 +62,7 @@ W poniższym przykładzie pokazano użycie `yield!` połączyć poszczególnych 
 
 Sekwencje obsługują wiele tych samych funkcjach jak [Wyświetla](lists.md). Sekwencje obsługuje również operacje, takie jak grupowanie, a wciąż dochodzą nowe, za pomocą funkcji generowania klucza. Sekwencje również obsługę funkcji bardziej zróżnicowane wyodrębnianie podciągów.
 
-Wiele typów danych, takich jak list, tablic, zestawy i map są niejawnie sekwencje, ponieważ są one przeliczalne kolekcje. Funkcja, która wykonuje sekwencję, jak argument działa ze wszystkimi F # typy danych, oprócz dowolnego typu danych .NET Framework, który implementuje `System.Collections.Generic.IEnumerable<'T>`. Natomiast to do funkcji, która przyjmuje listę jako argument, który przyjmuje tylko listy. Typ `seq<'T>` jest skrótem typu dla `IEnumerable<'T>`. Oznacza to, że dowolny typ, który implementuje ogólnego `System.Collections.Generic.IEnumerable<'T>`, która obejmuje tablic, list, ustawia i map w F #, a także większość typów programu .NET Framework kolekcji, jest zgodna z `seq` typu i może służyć wszędzie tam, gdzie oczekuje sekwencji.
+Wiele typów danych, takich jak list, tablic, zestawy i map są niejawnie sekwencje, ponieważ są one przeliczalne kolekcje. Funkcja, która wykonuje sekwencję, jak argument działa ze wszystkimi F# typy danych, oprócz dowolnego typu danych .NET Framework, który implementuje `System.Collections.Generic.IEnumerable<'T>`. Natomiast to do funkcji, która przyjmuje listę jako argument, który przyjmuje tylko listy. Typ `seq<'T>` jest skrótem typu dla `IEnumerable<'T>`. Oznacza to, że dowolny typ, który implementuje ogólnego `System.Collections.Generic.IEnumerable<'T>`, która obejmuje tablic, list, ustawia i map w F#, a także większość typów programu .NET Framework kolekcji, jest zgodna z `seq` typu i może służyć wszędzie tam, gdzie oczekuje sekwencji.
 
 ## <a name="module-functions"></a>Funkcje modułu
 

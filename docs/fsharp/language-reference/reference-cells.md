@@ -1,6 +1,6 @@
 ---
 title: Komórki odwołań (F#)
-description: 'Dowiedz się, jak komórki odwołań F # są lokalizacje przechowywania, które umożliwiają tworzenie modyfikowalnych wartości z semantyką odwołań.'
+description: Dowiedz się, jak komórki odwołań F# są lokalizacje przechowywania, które umożliwiają tworzenie modyfikowalnych wartości z semantyką odwołań.
 ms.date: 05/16/2016
 ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ Dane wyjściowe są następujące:
 
 Pole `contents` zapewnia zgodność z innymi wersjami języka ML i spowoduje wygenerowanie ostrzeżenia podczas kompilacji. Aby wyłączyć to ostrzeżenie, użyj `--mlcompatibility` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).
 
-Programiści języka C# powinni wiedzieć, że `ref` w języku C# nie jest tak samo jak `ref` w języku F #. Równoważne konstrukcje w języku F # są [zkratka](byrefs.md), które są różne koncepcji z komórki odwołań.
+Programiści języka C# powinni wiedzieć, że `ref` w języku C# nie jest tak samo jak `ref` w języku F#. Równoważne konstrukcje w języku F# są [zkratka](byrefs.md), które są różne koncepcji z komórki odwołań.
 
 Wartości oznaczone jako `mutable`może zostać automatycznie podwyższony do `'a ref` przechwycone przez zamknięcie; zobacz [wartości](values/index.md).
 

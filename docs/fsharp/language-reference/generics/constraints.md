@@ -1,6 +1,6 @@
 ---
 title: Ograniczenia (F#)
-description: 'Więcej informacji na temat ograniczeń F #, które są stosowane do parametrów typu ogólnego, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji.'
+description: Więcej informacji na temat ograniczeń F#, które są stosowane do parametrów typu ogólnego, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -26,7 +26,7 @@ Istnieje kilka różnych ograniczeń, które można zastosować, aby ograniczyć
 |Ograniczenia|Składnia|Opis|
 |----------|------|-----------|
 |Ograniczenia typu|*Parametr typu* :&gt; *typu*|Podany typ musi być większa lub równa pochodnej z typu określonego lub, jeśli typ jest interfejsem, podany typ musi implementować interfejs.|
-|Ograniczenie o wartości null|*Parametr typu* : wartość null|Podany typ musi obsługiwać literałem o wartości null. Obejmuje to wszystkie typy obiektów platformy .NET, ale nie F # listy, spójnej kolekcji, funkcji, klasy, rekord lub typy Unii.|
+|Ograniczenie o wartości null|*Parametr typu* : wartość null|Podany typ musi obsługiwać literałem o wartości null. Obejmuje to wszystkie typy obiektów platformy .NET, ale nie F# listy, spójnej kolekcji, funkcji, klasy, rekord lub typy Unii.|
 |Ograniczenie jawnego członka|[(]*parametr typu* [lub... lub *parametr typu*)]: (*sygnatura elementu członkowskiego*)|Co najmniej jeden z podanych argumentów typu musi mieć element członkowski, który ma określony podpis; nie są przeznaczone w typowych zastosowaniach. Elementy członkowskie muszą być albo jawnie zdefiniowane na typ lub część rozszerzenia niejawnego typu jako prawidłowe obiekty docelowe dla jawnego ograniczenia elementu członkowskiego.|
 |Ograniczenie konstruktora|*Parametr typu* : (nowe: jednostka -&gt; ")|Podany typ musi mieć domyślnego konstruktora.|
 |Ograniczenie typu wartości|: — struktura|Podany typ musi być typem wartości platformy .NET.|
@@ -40,7 +40,7 @@ Masz Dodaj ograniczenie, jeśli kod ma można użyć funkcji, która jest ogóln
 
 Określanie ograniczeń czasami jest wymagana podczas zapisywania parametrów typu w sposób jawny, ponieważ bez ograniczeń, kompilator nie ma możliwości weryfikacji, że funkcje, które są używane będzie dostępna na dowolny typ, który może być dostarczane w czasie wykonywania dla typu parametr.
 
-Najbardziej typowe ograniczenia, używanej w kodzie języka F # to ograniczenia typu, określających klas podstawowych lub interfejsów. Innych ograniczeń albo są używane przez biblioteki języka F # do wykonania niektórych funkcji, takich jak ograniczenie jawny element członkowski, który jest używany do implementowania operatora przeciążania operatorów arytmetycznych lub znajdują się przede wszystkim, ponieważ język F # obsługuje pełne zestaw ograniczeń, który jest obsługiwany przez środowisko uruchomieniowe języka wspólnego.
+Najbardziej typowe ograniczenia, używanej w kodzie języka F# to ograniczenia typu, określających klas podstawowych lub interfejsów. Innych ograniczeń albo są używane przez biblioteki języka F# do wykonania niektórych funkcji, takich jak ograniczenie jawny element członkowski, który jest używany do implementowania operatora przeciążania operatorów arytmetycznych lub znajdują się przede wszystkim, ponieważ język F# obsługuje pełne zestaw ograniczeń, który jest obsługiwany przez środowisko uruchomieniowe języka wspólnego.
 
 Podczas procesu wnioskowania typu niektóre ograniczenia są automatycznie wykryta przez kompilator. Na przykład, jeśli używasz `+` operatora w funkcji, kompilator wnioskuje ograniczenie jawnego członka typy zmiennych, które są używane w wyrażeniu.
 

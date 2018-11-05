@@ -1,5 +1,5 @@
 ---
-title: 'Kopiowanie i aktualizacja wyrażeń rekordów (F #)'
+title: Kopiowanie i aktualizacja wyrażeń rekordów (F#)
 description: Dowiedz się, jak napisać "Kopiuj i Aktualizuj rekordu wyrażenia" istniejących aktualizacji rekordu, kopiuje określone pola i zwraca zaktualizowanym rekordem.
 author: ChrSteinert
 ms.date: 06/04/2016

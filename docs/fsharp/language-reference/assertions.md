@@ -1,6 +1,6 @@
 ---
 title: Potwierdzenia (F#)
-description: 'Dowiedz się, jak używać wyrażeń "Potwierdź" jako funkcja debugowania do testowania wyrażenia w języku programowania F #.'
+description: Dowiedz się, jak używać wyrażeń "Potwierdź" jako funkcja debugowania do testowania wyrażenia w języku programowania F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -27,7 +27,7 @@ W poprzedniej składni *warunek* reprezentuje wyrażenie logiczne, które ma zos
 
 Sprawdzanie potwierdzenia jest włączone, tylko wtedy, gdy kompilujesz w trybie debugowania; oznacza to jeśli stała `DEBUG` jest zdefiniowana. W systemie projektu, domyślnie `DEBUG` stała jest zdefiniowany w konfiguracji debugowania, ale nie w konfiguracji wydania.
 
-Błąd potwierdzenia nie można przechwycić za pomocą obsługi wyjątków w języku F #.
+Błąd potwierdzenia nie można przechwycić za pomocą obsługi wyjątków w języku F#.
 
 >[!NOTE]
 `assert` Funkcji jest rozpoznawane jako <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.

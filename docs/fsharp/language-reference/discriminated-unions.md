@@ -1,6 +1,6 @@
 ---
 title: Sumy rozłączne (F#)
-description: 'Dowiedz się, jak używać języka F # związków wyróżniających.'
+description: Dowiedz się, jak używać języka F# związków wyróżniających.
 ms.date: 05/16/2016
 ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 Ten kod wskazuje, że możesz użyć nazwanych pól podczas inicjowania lub możesz polegać na określeniu kolejności pól w deklaracji i po prostu Podaj wartości dla każdego pola, z kolei. Wywołanie konstruktora dla `rect` w poprzednim kodzie używa pól nazwanych, ale wywołanie konstruktora dla `circ` używa kolejności. Możesz mieszać pola zamówione i pola nazwane, tak jak w konstrukcji `prism`.
 
-`option` Typu jest proste złożeniem dyskryminowanym w podstawowej biblioteki języka F #. `option` Typ jest zadeklarowany w następujący sposób.
+`option` Typu jest proste złożeniem dyskryminowanym w podstawowej biblioteki języka F#. `option` Typ jest zadeklarowany w następujący sposób.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ Zazwyczaj identyfikatory przypadków mogą służyć bez kwalifikowania ich nazw
 
 ### <a name="unwrapping-discriminated-unions"></a>Odkodowywanie sumy rozłączne
 
-W F # sumy rozłączne są często używane w domenie modelowania zawijania jednego typu. To ułatwia wyodrębnić wartości podstawowej za pomocą także dopasowywania do wzorca. Nie należy użyć wyrażenia dopasowania dla jednego przypadku:
+W F# sumy rozłączne są często używane w domenie modelowania zawijania jednego typu. To ułatwia wyodrębnić wartości podstawowej za pomocą także dopasowywania do wzorca. Nie należy użyć wyrażenia dopasowania dla jednego przypadku:
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -103,7 +103,7 @@ let someMethodUsingShaderProgram shaderProgram =
 
 ## <a name="struct-discriminated-unions"></a>Sumy rozłączne
 
-Począwszy od F # 4.1, może również reprezentować sumy rozłączne jako struktury.  Jest to zrobić za pomocą `[<Struct>]` atrybutu.
+Począwszy od F# 4.1, może również reprezentować sumy rozłączne jako struktury.  Jest to zrobić za pomocą `[<Struct>]` atrybutu.
 
 ```fsharp
 [<Struct>]

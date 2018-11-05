@@ -1,6 +1,6 @@
 ---
 title: Dopasowanie wzorca (F#)
-description: 'Dowiedz się, jak wzorce są używane w języku F # do porównywania danych ze struktury logicznej, rozkładania danych do części składowych lub wyodrębnienia informacji z danych.'
+description: Dowiedz się, jak wzorce są używane w języku F# do porównywania danych ze struktury logicznej, rozkładania danych do części składowych lub wyodrębnienia informacji z danych.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45991427"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 
-Wzorce są regułami dotyczącymi przekształcania danych wejściowych. Są one używane w całym języku F # do porównywania danych ze strukturą logiczną lub strukturami, rozkładania danych do części składowych lub wyodrębnienia informacji z danych na różne sposoby.
+Wzorce są regułami dotyczącymi przekształcania danych wejściowych. Są one używane w całym języku F# do porównywania danych ze strukturą logiczną lub strukturami, rozkładania danych do części składowych lub wyodrębnienia informacji z danych na różne sposoby.
 
 ## <a name="remarks"></a>Uwagi
 

@@ -1,6 +1,6 @@
 ---
-title: 'Samouczek: Tworzenie dostawcy typów (F #)'
-description: 'Dowiedz się, jak utworzyć własne dostawcy typów F # w F # 3.0, sprawdzając kilku dostawców typu prostego, w celu zilustrowania podstawowych koncepcji.'
+title: 'Samouczek: Tworzenie dostawcy typów (F#)'
+description: Dowiedz się, jak utworzyć własne dostawcy typów F# w F# 3.0, sprawdzając kilku dostawców typu prostego, w celu zilustrowania podstawowych koncepcji.
 ms.date: 05/16/2016
 ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,15 +11,15 @@ ms.locfileid: "50183922"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Samouczek: Tworzenie dostawcy typów
 
-Mechanizm dostawcy typu F # jest znaczna część jej obsługę programowania zaawansowanych informacji. W tym samouczku opisano sposób tworzenia własnych dostawców typów, prowadzące przez proces tworzenia kilku dostawców typu prostego, w celu zilustrowania podstawowych koncepcji. Aby uzyskać więcej informacji na temat mechanizmu dostawcy typu F #, zobacz [dostawców typów](index.md).
+Mechanizm dostawcy typu F# jest znaczna część jej obsługę programowania zaawansowanych informacji. W tym samouczku opisano sposób tworzenia własnych dostawców typów, prowadzące przez proces tworzenia kilku dostawców typu prostego, w celu zilustrowania podstawowych koncepcji. Aby uzyskać więcej informacji na temat mechanizmu dostawcy typu F#, zobacz [dostawców typów](index.md).
 
-Ekosystem F # zawiera szeroką gamę dostawców typów dla często używanych internetowych i firmowych usług danych. Na przykład:
+Ekosystem F# zawiera szeroką gamę dostawców typów dla często używanych internetowych i firmowych usług danych. Na przykład:
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/) obejmuje dostawców typów dla formatu JSON, XML, CSV i HTML dokumentu formatów.
 
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) udostępnia silnie typizowane baz danych SQL za pomocą mapowanie obiektów i LINQ języka F # zapytań dotyczących tych źródeł danych.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) udostępnia silnie typizowane baz danych SQL za pomocą mapowanie obiektów i LINQ języka F# zapytań dotyczących tych źródeł danych.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) zestaw dostawców typów dla kompilacji zaewidencjonowanego osadzania T-SQL w języku F #.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) zestaw dostawców typów dla kompilacji zaewidencjonowanego osadzania T-SQL w języku F#.
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) to starszy zestaw dostawców typów do użycia tylko w programowaniu .NET Framework do uzyskiwania dostępu do usługi danych SQL, platformy Entity Framework, OData i WSDL.
 
@@ -27,7 +27,7 @@ W przypadku, gdy to konieczne, można tworzyć niestandardowych dostawców typó
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
-Mechanizm dostawcy typu jest przeznaczony głównie do wprowadza stabilnych danych i miejsca do magazynowania usługi informacji do programowania środowiska F #.
+Mechanizm dostawcy typu jest przeznaczony głównie do wprowadza stabilnych danych i miejsca do magazynowania usługi informacji do programowania środowiska F#.
 
 Ten mechanizm nie jest przeznaczona dla wprowadzanie informacji miejsca do magazynowania, którego schemat zmienia się podczas wykonywania programu, w sposób, które mają zastosowanie do logiki programu. Również mechanizm nie jest przeznaczona dla meta-programowania wewnątrz języka, mimo że tej domeny zawiera niektóre prawidłowego użycia. Ten mechanizm należy używać tylko wtedy, gdy jest to konieczne, i gdzie tworzenie dostawcy typów daje bardzo duża wartość.
 
@@ -35,7 +35,7 @@ Należy unikać pisania dostawcy typów, których schemat jest niedostępna. Pod
 
 Przed rozpoczęciem może odpowiedzieć na następujące pytania:
 
-- Czy masz schematu dla źródła informacji? Jeśli tak, co to jest mapowanie języka F # i .NET typu systemu?
+- Czy masz schematu dla źródła informacji? Jeśli tak, co to jest mapowanie języka F# i .NET typu systemu?
 
 - Można użyć istniejącego interfejsu API (o typach określanych dynamicznie) jako punktu wyjścia dla wdrożenia?
 
@@ -53,7 +53,7 @@ Dostawcy typów są najlepiej sprawdza się w sytuacjach, gdy schemat jest stabi
 
 ## <a name="a-simple-type-provider"></a>Dostawca typu prostego
 
-Te przykładowe dane stanowią Samples.HelloWorldTypeProvider podobne do próbek w `examples` katalogu [SDK dostawcy typu F #](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Dostawca udostępnia "przestrzenią typu", która zawiera 100 typów wymazane, co ilustruje poniższy kod, używając składni Sygnatura F # i pomijanie szczegóły wszystkie z wyjątkiem `Type1`. Aby uzyskać więcej informacji na temat typów wymazane, zobacz [szczegółowe informacje o wymazane podane typy](#details-about-erased-provided-types) w dalszej części tego tematu.
+Te przykładowe dane stanowią Samples.HelloWorldTypeProvider podobne do próbek w `examples` katalogu [SDK dostawcy typu F#](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Dostawca udostępnia "przestrzenią typu", która zawiera 100 typów wymazane, co ilustruje poniższy kod, używając składni Sygnatura F# i pomijanie szczegóły wszystkie z wyjątkiem `Type1`. Aby uzyskać więcej informacji na temat typów wymazane, zobacz [szczegółowe informacje o wymazane podane typy](#details-about-erased-provided-types) w dalszej części tego tematu.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-Użyj tego dostawcy, otwórz osobnego wystąpienia programu Visual Studio, utworzyć skrypt F #, a następnie dodaj odwołanie do dostawcy ze skryptu przy użyciu #r, co ilustruje poniższy kod:
+Użyj tego dostawcy, otwórz osobnego wystąpienia programu Visual Studio, utworzyć skrypt F#, a następnie dodaj odwołanie do dostawcy ze skryptu przy użyciu #r, co ilustruje poniższy kod:
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -148,7 +148,7 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 
 Następnie poszukaj typów pod `Samples.HelloWorldTypeProvider` przestrzeni nazw, który wygenerował dostawcy typów.
 
-Przed ponownym skompilowaniem dostawcy, upewnij się, zamknęli wszystkie wystąpienia programu Visual Studio i F # Interactive, które korzystają z biblioteki DLL dostawcy. W przeciwnym razie wystąpi błąd kompilacji ponieważ dane wyjściowe biblioteki DLL będzie zablokowany.
+Przed ponownym skompilowaniem dostawcy, upewnij się, zamknęli wszystkie wystąpienia programu Visual Studio i F# Interactive, które korzystają z biblioteki DLL dostawcy. W przeciwnym razie wystąpi błąd kompilacji ponieważ dane wyjściowe biblioteki DLL będzie zablokowany.
 
 Aby debugować ten dostawca za pomocą instrukcji drukowania, wprowadź skrypt, który opisuje problem z dostawcą, a następnie użyj poniższego kodu:
 
@@ -175,7 +175,7 @@ Ta sekcja przeprowadzi Cię przez główne sekcji implementacja dostawcy typu. N
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-Tego typu muszą być publiczne i należy go oznaczyć [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) atrybutu, aby kompilator, rozpoznawał dostawcę typów, gdy oddzielny projekt języka F # odwołuje się do zestawu, który zawiera typu. *Config* parametr jest opcjonalny i, jeśli jest obecny, zawiera informacje o konfiguracji kontekstowych wystąpienia dostawcy typu, który tworzy kompilatora języka F #.
+Tego typu muszą być publiczne i należy go oznaczyć [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) atrybutu, aby kompilator, rozpoznawał dostawcę typów, gdy oddzielny projekt języka F# odwołuje się do zestawu, który zawiera typu. *Config* parametr jest opcjonalny i, jeśli jest obecny, zawiera informacje o konfiguracji kontekstowych wystąpienia dostawcy typu, który tworzy kompilatora języka F#.
 
 Następnie możesz wdrożyć [itypeprovider —](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) interfejsu. W tym przypadku używasz `TypeProviderForNamespaces` typ z `ProvidedTypes` API jako typu podstawowego. Tego typu pomocnika zapewniają skończoną zbiór eagerly, pod warunkiem przestrzeni nazw, z których każdy bezpośrednio zawiera skończoną liczbę stałej, eagerly dostarczone typy. W tym kontekście, dostawca *eagerly* generuje typy, nawet jeśli nie są potrzebne lub używane.
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-Wprowadzenie tej właściwości będzie zawsze przyjmowało ciąg "Hello!". `GetterCode` Dla właściwości używa F # oferty, który reprezentuje kod generowany przez kompilator hosta w celu uzyskania właściwości. Aby uzyskać więcej informacji na temat ofert zobacz [cytaty kodu (F #)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
+Wprowadzenie tej właściwości będzie zawsze przyjmowało ciąg "Hello!". `GetterCode` Dla właściwości używa F# oferty, który reprezentuje kod generowany przez kompilator hosta w celu uzyskania właściwości. Aby uzyskać więcej informacji na temat ofert zobacz [cytaty kodu (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
 
 Dodaj dokumentacji XML do właściwości.
 
@@ -276,7 +276,7 @@ let ctor = ProvidedConstructor(parameters = [ ],
                                invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
-`InvokeCode` Dla konstruktora zwraca F # oferty, który reprezentuje kod, który kompilator hosta generuje podczas wywołania konstruktora. Na przykład można użyć następującego konstruktora:
+`InvokeCode` Dla konstruktora zwraca F# oferty, który reprezentuje kod, który kompilator hosta generuje podczas wywołania konstruktora. Na przykład można użyć następującego konstruktora:
 
 ```fsharp
 new Type10()
@@ -300,7 +300,7 @@ ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ],
                     invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
-`InvokeCode` Dla konstruktora ponownie zwraca F # oferty, który reprezentuje kod, który dla wywołania do metody generowane przez kompilator hosta. Na przykład można użyć następującego konstruktora:
+`InvokeCode` Dla konstruktora ponownie zwraca F# oferty, który reprezentuje kod, który dla wywołania do metody generowane przez kompilator hosta. Na przykład można użyć następującego konstruktora:
 
 ```fsharp
 new Type10("ten")
@@ -318,7 +318,7 @@ instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
 
-Wprowadzenie tej właściwości zostanie zwrócona długość ciągu, który jest obiektem reprezentacji. `GetterCode` Właściwość zwraca oferty F #, który określa kod, który kompilator hosta generuje pobrać właściwości. Podobnie jak `InvokeCode`, `GetterCode` :: gettotalsize() zwróciło oferty. Kompilator hosta wywołuje tę funkcję z listy argumentów. W tym przypadku argumenty zawierają tylko pojedyncze wyrażenie, który reprezentuje wystąpienie, na którym jest wywoływana metoda pobierająca, możesz uzyskać dostęp za pomocą `args.[0]`. Implementacja `GetterCode` następnie splices do oferty wynik wymazane wpisz `obj`, i używane jest rzutowanie do zaspokojenia kompilatora mechanizmu sprawdzania typów, że obiekt jest ciągiem. Kolejnym etapem `makeOneProvidedType` zawiera metodę instancji za pomocą jednego parametru.
+Wprowadzenie tej właściwości zostanie zwrócona długość ciągu, który jest obiektem reprezentacji. `GetterCode` Właściwość zwraca oferty F#, który określa kod, który kompilator hosta generuje pobrać właściwości. Podobnie jak `InvokeCode`, `GetterCode` :: gettotalsize() zwróciło oferty. Kompilator hosta wywołuje tę funkcję z listy argumentów. W tym przypadku argumenty zawierają tylko pojedyncze wyrażenie, który reprezentuje wystąpienie, na którym jest wywoływana metoda pobierająca, możesz uzyskać dostęp za pomocą `args.[0]`. Implementacja `GetterCode` następnie splices do oferty wynik wymazane wpisz `obj`, i używane jest rzutowanie do zaspokojenia kompilatora mechanizmu sprawdzania typów, że obiekt jest ciągiem. Kolejnym etapem `makeOneProvidedType` zawiera metodę instancji za pomocą jednego parametru.
 
 ```fsharp
 let instanceMeth = 
@@ -370,7 +370,7 @@ W przykładzie, w tej sekcji przedstawiono jedynie *wymazane podane typy*, któr
 
 - Kiedy piszesz dostawcę dla przestrzeń informacji, więc dużej i wzajemnie połączonych, że nie jest technicznie możliwe, można wygenerować rzeczywistych typów .NET do przestrzeń informacji.
 
-W tym przykładzie każdy z podanych typu są usuwane na typ `obj`, a wszystkie przypadki użycia typu pojawi się jako typ `obj` w skompilowany kod. W rzeczywistości obiektów w tych przykładach są ciągami, ale typ będą wyświetlane jako `System.Object` na platformie .NET skompilowany kod. Ponieważ wszystkie przypadki użycia wymazywania typie, będzie można użyć jawne pakowanie, Rozpakowywanie i rzutowania można złamać usuwane typów. W tym przypadku wyjątek rzutowania, który nie jest prawidłową może spowodować, jeśli obiekt jest używany. Dostawca środowiska uruchomieniowego, można zdefiniować swój własny typ reprezentujący prywatnych w celu zabezpieczenia przed reprezentacje false. Nie można zdefiniować typy wymazane w języku F # sam. Tylko podane typy mogą zostać wymazane. Musisz rozumieć konsekwencje, zarówno praktyczne, i semantyczne, albo korzystania z wymazanej typy dla dostawcy typu lub dostawcę, który zawiera usunięte typów. Typem wymazane nie ma rzeczywistych .NET typu. W związku z tym nie można wykonać dokładne odbicie nad typem i może złamać wymazane typy rzutowania środowiska uruchomieniowego i innych technik, które opierają się na semantyce typu dokładnego czasu wykonywania za pomocą. Subversion typów wymazane często skutkuje wyjątki rzutowanie typu w czasie wykonywania.
+W tym przykładzie każdy z podanych typu są usuwane na typ `obj`, a wszystkie przypadki użycia typu pojawi się jako typ `obj` w skompilowany kod. W rzeczywistości obiektów w tych przykładach są ciągami, ale typ będą wyświetlane jako `System.Object` na platformie .NET skompilowany kod. Ponieważ wszystkie przypadki użycia wymazywania typie, będzie można użyć jawne pakowanie, Rozpakowywanie i rzutowania można złamać usuwane typów. W tym przypadku wyjątek rzutowania, który nie jest prawidłową może spowodować, jeśli obiekt jest używany. Dostawca środowiska uruchomieniowego, można zdefiniować swój własny typ reprezentujący prywatnych w celu zabezpieczenia przed reprezentacje false. Nie można zdefiniować typy wymazane w języku F# sam. Tylko podane typy mogą zostać wymazane. Musisz rozumieć konsekwencje, zarówno praktyczne, i semantyczne, albo korzystania z wymazanej typy dla dostawcy typu lub dostawcę, który zawiera usunięte typów. Typem wymazane nie ma rzeczywistych .NET typu. W związku z tym nie można wykonać dokładne odbicie nad typem i może złamać wymazane typy rzutowania środowiska uruchomieniowego i innych technik, które opierają się na semantyce typu dokładnego czasu wykonywania za pomocą. Subversion typów wymazane często skutkuje wyjątki rzutowanie typu w czasie wykonywania.
 
 ### <a name="choosing-representations-for-erased-provided-types"></a>Wybieranie oświadczenia dla wymazane dostarczone typy
 
@@ -388,7 +388,7 @@ Do niektórych zastosowań wymazane podane typy nie jest wymagana. Na przykład 
 
 - Zestaw obiektów możliwych do wymazane, podany typ są nazywane oświadczeń. W przykładzie w tym dokumencie reprezentacje wszystkich wymazane podane typy `Type1..Type100` są zawsze obiektów w postaci ciągów.
 
-Reprezentacje wszystkich podany typ musi być zgodny z wymazywania podanego typu. (W przeciwnym razie kompilator F # błąd uniemożliwiający do użycia dostawcy typów lub zweryfikowanie kodu platformy .NET, który nie jest prawidłowy, zostanie wygenerowany. Dostawcy typów nie jest prawidłowy, jeśli zwróci ona kod, który zawiera reprezentację, który nie jest prawidłowy).
+Reprezentacje wszystkich podany typ musi być zgodny z wymazywania podanego typu. (W przeciwnym razie kompilator F# błąd uniemożliwiający do użycia dostawcy typów lub zweryfikowanie kodu platformy .NET, który nie jest prawidłowy, zostanie wygenerowany. Dostawcy typów nie jest prawidłowy, jeśli zwróci ona kod, który zawiera reprezentację, który nie jest prawidłowy).
 
 Możesz wybrać reprezentację podanych obiektów przy użyciu jednej z poniższych metod, które są bardzo popularne:
 
@@ -469,7 +469,7 @@ Pamiętaj o następujących kwestiach:
 
 - Każda grupa o nazwie wyników w podanej właściwości i uzyskiwania dostępu do właściwości powoduje użycie indeksatora w przypadku dopasowania `Groups` kolekcji.
 
-Poniższy kod stanowi podstawę logiki do zaimplementowania takich dostawcy, a w tym przykładzie pomija dodanie wszystkich elementów członkowskich do podanego typu. Informacje dla każdego członka dodano zobacz odpowiednią sekcję w dalszej części tego tematu. Aby uzyskać pełny kod pobrać przykład z [F # 3.0 przykładowy pakiet](https://fsharp3sample.codeplex.com) w witrynie Codeplex.
+Poniższy kod stanowi podstawę logiki do zaimplementowania takich dostawcy, a w tym przykładzie pomija dodanie wszystkich elementów członkowskich do podanego typu. Informacje dla każdego członka dodano zobacz odpowiednią sekcję w dalszej części tego tematu. Aby uzyskać pełny kod pobrać przykład z [F# 3.0 przykładowy pakiet](https://fsharp3sample.codeplex.com) w witrynie Codeplex.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1052,7 +1052,7 @@ Każde wystąpienie dostawcy typów można podać `TypeProviderConfig` wartości
 
 ### <a name="invalidation"></a>Unieważnieniu
 
-Dostawców może zgłosić sygnały unieważniania powiadomić usługi języka F #, która założeń schematu mógł ulec zmianie. W przypadku unieważniania typecheck jest dokonania, jeśli dostawca jest hostowany w programie Visual Studio. Sygnał ten zostanie zignorowany, gdy dostawca jest hostowana w F # Interactive lub przez kompilator F # (fsc.exe).
+Dostawców może zgłosić sygnały unieważniania powiadomić usługi języka F#, która założeń schematu mógł ulec zmianie. W przypadku unieważniania typecheck jest dokonania, jeśli dostawca jest hostowany w programie Visual Studio. Sygnał ten zostanie zignorowany, gdy dostawca jest hostowana w F# Interactive lub przez kompilator F# (fsc.exe).
 
 ### <a name="caching-schema-information"></a>Buforowanie informacji o schemacie
 
@@ -1060,7 +1060,7 @@ Dostawców często pamięci podręcznej dostęp do informacji o schemacie. Powin
 
 ### <a name="backing-assembly"></a>Tworzenie kopii zestawu
 
-Gdy kompilujesz `.dll` lub `.exe` pliku, plik .dll zapasowy wygenerowane typy są łączone statycznie do wynikowego zestawu. Ten link jest tworzony przez skopiowanie definicje typów języka pośredniego (IL) i wszelkie zarządzane zasoby z zestawu zapasowy w końcowym zestawie. Podczas korzystania z F # Interactive, tworzenie kopii pliku .dll nie zostaną skopiowane i zamiast tego są ładowane bezpośrednio do procesu F # Interactive.
+Gdy kompilujesz `.dll` lub `.exe` pliku, plik .dll zapasowy wygenerowane typy są łączone statycznie do wynikowego zestawu. Ten link jest tworzony przez skopiowanie definicje typów języka pośredniego (IL) i wszelkie zarządzane zasoby z zestawu zapasowy w końcowym zestawie. Podczas korzystania z F# Interactive, tworzenie kopii pliku .dll nie zostaną skopiowane i zamiast tego są ładowane bezpośrednio do procesu F# Interactive.
 
 ### <a name="exceptions-and-diagnostics-from-type-providers"></a>Wyjątki i Diagnostyka z dostawcami typów
 
@@ -1070,11 +1070,11 @@ Wszystkie przypadki użycia wszystkich członków z podane typy może zgłaszać
 
 - Dostawcy typów nie można zgłosić ostrzeżenia.
 
-- Gdy dostawca typów znajduje się w kompilatorze F #, środowiska deweloperskiego F # lub F # Interactive, wszystkie wyjątki z tego dostawcy są przechwytywane. Właściwości wiadomości, zawsze jest tekst błędu i zostanie wyświetlone nie ślad stosu. Jeśli zamierzasz zgłosić wyjątek, może zgłosić następujące przykłady: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
+- Gdy dostawca typów znajduje się w kompilatorze F#, środowiska deweloperskiego F# lub F# Interactive, wszystkie wyjątki z tego dostawcy są przechwytywane. Właściwości wiadomości, zawsze jest tekst błędu i zostanie wyświetlone nie ślad stosu. Jeśli zamierzasz zgłosić wyjątek, może zgłosić następujące przykłady: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
 
 #### <a name="providing-generated-types"></a>Zapewnianie wygenerowane typy
 
-Do tej pory ten dokument ma wyjaśniono, jak zawierają typy wymazane. Umożliwia także mechanizm dostawcy typu F # zapewnienie wygenerowane typy, które są dodawane jako rzeczywiste definicje typów .NET do użytkowników programu. Użytkownik musi odwoływać się do wygenerowanego dostarczone typy przy użyciu definicji typu.
+Do tej pory ten dokument ma wyjaśniono, jak zawierają typy wymazane. Umożliwia także mechanizm dostawcy typu F# zapewnienie wygenerowane typy, które są dodawane jako rzeczywiste definicje typów .NET do użytkowników programu. Użytkownik musi odwoływać się do wygenerowanego dostarczone typy przy użyciu definicji typu.
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
@@ -1082,7 +1082,7 @@ open Microsoft.FSharp.TypeProviders
 type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
-Kod pomocniczy ProvidedTypes 0.2, który jest częścią wersji języka F # 3.0 tylko ma ograniczoną obsługę zapewniające wygenerowane typy. Poniższe instrukcje muszą być spełnione dla definicji wygenerowany typ:
+Kod pomocniczy ProvidedTypes 0.2, który jest częścią wersji języka F# 3.0 tylko ma ograniczoną obsługę zapewniające wygenerowane typy. Poniższe instrukcje muszą być spełnione dla definicji wygenerowany typ:
 
 - `isErased` musi być równa `false`.
 
@@ -1102,9 +1102,9 @@ Na przykład niektórzy dostawcy udostępniają statyczne klasy takie jak `DataT
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>Ograniczenia dotyczące mechanizmu dostawcy typów
 
-Mechanizm dostawcy typu F # ma następujące ograniczenia:
+Mechanizm dostawcy typu F# ma następujące ograniczenia:
 
-- Podstawowej infrastruktury dla dostawców typów języka F # nie obsługuje, pod warunkiem ogólnych typów lub podano metod ogólnych.
+- Podstawowej infrastruktury dla dostawców typów języka F# nie obsługuje, pod warunkiem ogólnych typów lub podano metod ogólnych.
 
 - Mechanizm nie obsługuje zagnieżdżone typy z parametry statyczne.
 
@@ -1120,9 +1120,9 @@ Można tworzyć dostawcy typów w jednym wystąpieniu i test dostawcy w innym, p
 
 Dostawcy typów można wywołać za pomocą następujących narzędzi:
 
-- FSC.exe (kompilator F # wiersza polecenia)
+- FSC.exe (kompilator F# wiersza polecenia)
 
-- fsi.exe (kompilator F # Interactive)
+- fsi.exe (kompilator F# Interactive)
 
 - Devenv.exe (Visual Studio)
 

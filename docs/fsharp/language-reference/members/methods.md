@@ -1,6 +1,6 @@
 ---
 title: Metody (F#)
-description: 'Dowiedz się, jak metoda F # jest skojarzony z typem, które są używane do udostępnienia i wdrażaniu funkcji i zachowanie obiektów i typy funkcji.'
+description: Dowiedz się, jak metoda F# jest skojarzony z typem, które są używane do udostępnienia i wdrażaniu funkcji i zachowanie obiektów i typy funkcji.
 ms.date: 05/16/2016
 ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -59,7 +59,7 @@ Inne niż wbudowane metody mogą być używane cyklicznie w ramach typu; nie trz
 
 ## <a name="instance-methods"></a>Metody wystąpienia
 
-Metody wystąpienia są uznane za pomocą `member` — słowo kluczowe i *własny identyfikator*, a następnie kropka (.) i nazwy metody i parametrów. Podobnie jak w przypadku dla `let` powiązań *listy parametrów* może być wzorca. Zazwyczaj uwzględnisz metodę, której parametry w nawiasach w formularzu krotki, czyli metody sposób są wyświetlane w języku F #, gdy są one tworzone w innych językach .NET Framework. Rozwinięte formularza (rozdzielone spacjami parametry) jest również typowe i inne wzorce są również obsługiwane.
+Metody wystąpienia są uznane za pomocą `member` — słowo kluczowe i *własny identyfikator*, a następnie kropka (.) i nazwy metody i parametrów. Podobnie jak w przypadku dla `let` powiązań *listy parametrów* może być wzorca. Zazwyczaj uwzględnisz metodę, której parametry w nawiasach w formularzu krotki, czyli metody sposób są wyświetlane w języku F#, gdy są one tworzone w innych językach .NET Framework. Rozwinięte formularza (rozdzielone spacjami parametry) jest również typowe i inne wzorce są również obsługiwane.
 
 Poniższy przykład ilustruje definicja oraz wykorzystanie metody wystąpienia nieabstrakcyjnej.
 
@@ -97,11 +97,11 @@ Poniższy przykład ilustruje klasę pochodną, która zastępuje metodę klasy 
 
 ## <a name="overloaded-methods"></a>Przeciążone metody
 
-Przeciążone metody są metody, które mają identyczne nazwy w danego typu, ale mają różnymi argumentami. W języku F # Argumenty opcjonalne są zwykle używane zamiast przeciążonych metod. Jednak przeciążone metody są dozwolone w języku, pod warunkiem, że argumenty znajdują się w formularzu krotki i nie rozwinięte formularza.
+Przeciążone metody są metody, które mają identyczne nazwy w danego typu, ale mają różnymi argumentami. W języku F# Argumenty opcjonalne są zwykle używane zamiast przeciążonych metod. Jednak przeciążone metody są dozwolone w języku, pod warunkiem, że argumenty znajdują się w formularzu krotki i nie rozwinięte formularza.
 
 ## <a name="optional-arguments"></a>Argumenty opcjonalne.
 
-Począwszy od F # 4.1, również masz Argumenty opcjonalne z wartością domyślną parametru za pomocą metod.  To, aby ułatwić współdziałanie z kodem C#.  Poniższy przykład pokazuje składnię:
+Począwszy od F# 4.1, również masz Argumenty opcjonalne z wartością domyślną parametru za pomocą metod.  To, aby ułatwić współdziałanie z kodem C#.  Poniższy przykład pokazuje składnię:
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.

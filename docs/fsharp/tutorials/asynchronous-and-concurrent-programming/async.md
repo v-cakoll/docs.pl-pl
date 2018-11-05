@@ -1,5 +1,5 @@
 ---
-title: 'Programowanie asynchroniczne w języku F #'
+title: Programowanie asynchroniczne w języku F#
 description: Dowiedz się, jak F# programowanie async odbywa się za pośrednictwem modelu programowania poziomu języka, który jest łatwy w użyciu i fizycznych dla języka.
 ms.date: 06/20/2016
 ms.openlocfilehash: de07f1252df56e3dfec5ea7a34a283b1c9508523
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "50195063"
 ---
-# <a name="async-programming-in-f"></a>Programowanie asynchroniczne w języku F # #
+# <a name="async-programming-in-f"></a>Programowanie asynchroniczne w języku F# #
 
 > [!NOTE]
 > Niektóre nieścisłości zostały odnalezione w tym artykule.  Jego jest modyfikowany.  Zobacz [666 # problem](https://github.com/dotnet/docs/issues/666) Aby dowiedzieć się więcej o zmianach.

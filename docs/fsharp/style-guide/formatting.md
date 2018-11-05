@@ -1,6 +1,6 @@
 ---
-title: Wskazówki dotyczące formatowania kodu F#
-description: Dowiedz się, wskazówki dotyczące formatowania kodu F#.
+title: 'Wskazówki dotyczące formatowania kodu F #'
+description: 'Dowiedz się, wskazówki dotyczące formatowania kodu F #.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,19 +9,19 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43858008"
 ---
-# <a name="f-code-formatting-guidelines"></a>Wskazówki dotyczące formatowania kodu F#
+# <a name="f-code-formatting-guidelines"></a>Wskazówki dotyczące formatowania kodu F #
 
-Ten artykuł zawiera wskazówki dotyczące formatowania kodu, aby Twój kod F#:
+Ten artykuł zawiera wskazówki dotyczące formatowania kodu, aby Twój kod F #:
 
 * Zazwyczaj są wyświetlane jako bardziej czytelne.
 * Jest zgodna z konwencjami stosowane przez formatowanie narzędzi w programie Visual Studio i innych edytorów
 * Podobnie jak inny kod w trybie online
 
-Te wytyczne są oparte na [kompletny przewodnik po F# konwencje dotyczące formatowania](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) przez [Anh-Dung Phan](https://github.com/dungpa).
+Te wytyczne są oparte na [kompletny przewodnik po F # konwencje dotyczące formatowania](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) przez [Anh-Dung Phan](https://github.com/dungpa).
 
 ## <a name="general-rules-for-indentation"></a>Ogólne reguły dotyczące wcięć
 
-F# domyślnie używa istotnych białych. Poniższe wskazówki są przeznaczone do zapewnienia wskazówek dotyczących tego, jak łatwiejszą obsługę niektóre wyzwania, które może to powodować.
+F # domyślnie używa istotnych białych. Poniższe wskazówki są przeznaczone do zapewnienia wskazówek dotyczących tego, jak łatwiejszą obsługę niektóre wyzwania, które może to powodować.
 
 ### <a name="using-spaces"></a>Przy użyciu miejsc do magazynowania
 
@@ -62,7 +62,7 @@ let f x = x + 1 // Increment by one.
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Użyj camelCase dla wartości powiązane z klasy, powiązane z wyrażenia i powiązane z wzorca i funkcji
 
-Powszechne jest wprowadzanie i zaakceptowane F# stylu camelCase dla wszystkich nazw powiązany jako zmienne lokalne lub dopasowania do wzorca i definicje funkcji.
+Powszechne jest wprowadzanie i zaakceptowane F # stylu camelCase dla wszystkich nazw powiązany jako zmienne lokalne lub dopasowania do wzorca i definicje funkcji.
 
 ```fsharp
 // OK
@@ -165,13 +165,13 @@ Przestrzenie nazw, wyjątki, zdarzenia i projekt /`.dll` nazwy należy również
 
 ### <a name="avoid-underscores-in-names"></a>Należy unikać podkreślenia w nazwach
 
-W przeszłości niektórych bibliotek F# używanych podkreślenia w nazwach. Jednak to się nie są już powszechnie akceptowane, częściowo, ponieważ ona jest niezgodna z konwencjami nazewnictwa platformy .NET. Inaczej mówiąc, niektórych programistów języka F# użyj podkreślenia intensywnie, częściowo ze względów historycznych, a na uszkodzenia i przestrzegania jest ważne. Należy jednak pamiętać, że styl jest często disliked przez innych użytkowników, którzy mają możliwość wyboru o tym, czy z niego korzystać.
+W przeszłości niektórych bibliotek F # używanych podkreślenia w nazwach. Jednak to się nie są już powszechnie akceptowane, częściowo, ponieważ ona jest niezgodna z konwencjami nazewnictwa platformy .NET. Inaczej mówiąc, niektórych programistów języka F # użyj podkreślenia intensywnie, częściowo ze względów historycznych, a na uszkodzenia i przestrzegania jest ważne. Należy jednak pamiętać, że styl jest często disliked przez innych użytkowników, którzy mają możliwość wyboru o tym, czy z niego korzystać.
 
 Niektóre wyjątki obejmuje współdziałanie z składnikami macierzystymi, gdzie są bardzo popularne znaki podkreślenia.
 
-### <a name="use-standard-f-operators"></a>Użyj standardowych operatorów F#
+### <a name="use-standard-f-operators"></a>Użyj standardowych operatorów F #
 
-Następujące operatory są zdefiniowane w standardowej bibliotece języka F# i powinny być używane zamiast zdefiniowanie odpowiedniki. Korzystanie z tych operatorów jest zalecane, ponieważ sprawia kod bardziej czytelne i idiomatyczną. Deweloperów z doświadczeniem w OCaml lub innych funkcjonalny język programowania może być przyzwyczajeni do różnych idiomy. Poniższa lista zawiera podsumowanie zalecanych operatory języka F#.
+Następujące operatory są zdefiniowane w standardowej bibliotece języka F # i powinny być używane zamiast zdefiniowanie odpowiedniki. Korzystanie z tych operatorów jest zalecane, ponieważ sprawia kod bardziej czytelne i idiomatyczną. Deweloperów z doświadczeniem w OCaml lub innych funkcjonalny język programowania może być przyzwyczajeni do różnych idiomy. Poniższa lista zawiera podsumowanie zalecanych operatory języka F #.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,11 +193,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Użyj składni prefiks dla typów ogólnych (`Foo<T>`) zamiast składni przyrostka (`T Foo`)
 
-F# dziedziczy zarówno przyrostkowe ML styl nazewnictwa typów ogólnych (na przykład `int list`) oraz prefiks stylu .NET (na przykład `list<int>`). Preferuj styl .NET, z wyjątkiem czterech określonych typów:
+F # dziedziczy zarówno przyrostkowe ML styl nazewnictwa typów ogólnych (na przykład `int list`) oraz prefiks stylu .NET (na przykład `list<int>`). Preferuj styl .NET, z wyjątkiem czterech określonych typów:
 
-1. Dla listy języka F#, należy użyć formy przyrostkowe: `int list` zamiast `list<int>`.
-2. Opcje F#, można użyć w przyrostkowej formy: `int option` zamiast `option<int>`.
-3. Dla tablic F#, należy użyć składni nazwy `int[]` zamiast `int array` lub `array<int>`.
+1. Dla listy języka F #, należy użyć formy przyrostkowe: `int list` zamiast `list<int>`.
+2. Opcje F #, można użyć w przyrostkowej formy: `int option` zamiast `option<int>`.
+3. Dla tablic F #, należy użyć składni nazwy `int[]` zamiast `int array` lub `array<int>`.
 4. Komórki odwołań, można użyć `int ref` zamiast `ref<int>` lub `Ref<int>`.
 
 W przypadku wszystkich innych typów formularz prefiks.
@@ -591,7 +591,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>Formatowanie biały znak w wyrażeniach
 
-Należy unikać nadmiarowe biały znak w wyrażeniach języka F#.
+Należy unikać nadmiarowe biały znak w wyrażeniach języka F #.
 
 ```fsharp
 // OK

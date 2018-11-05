@@ -1,6 +1,6 @@
 ---
 title: Operatory bitowe (F#)
-description: Więcej informacji na temat operatory bitowe, które są dostępne w F# języka programowania.
+description: 'Więcej informacji na temat operatory bitowe, które są dostępne w F # języka programowania.'
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "48581511"
 ---
 # <a name="bitwise-operators"></a>Operatory bitowe
 
-W tym temacie opisano operatory bitowe, które są dostępne w języku F#.
+W tym temacie opisano operatory bitowe, które są dostępne w języku F #.
 
 ## <a name="summary-of-bitwise-operators"></a>Podsumowanie operatory bitowe
 
-W poniższej tabeli opisano operatory bitowe, które są obsługiwane w przypadku rozpakowany typów całkowitych w języku F#.
+W poniższej tabeli opisano operatory bitowe, które są obsługiwane w przypadku rozpakowany typów całkowitych w języku F #.
 
 |Operator|Uwagi|
 |--------|-----|

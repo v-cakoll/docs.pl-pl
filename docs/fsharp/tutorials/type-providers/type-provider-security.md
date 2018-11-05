@@ -1,6 +1,6 @@
 ---
 title: Zabezpieczenia dostawcy typów
-description: Więcej informacji na temat zabezpieczenia dostawcy typów F#, w tym sposobu zmiany ustawień zaufania dla dostawcy typu.
+description: 'Więcej informacji na temat zabezpieczenia dostawcy typów F #, w tym sposobu zmiany ustawień zaufania dla dostawcy typu.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "43861910"
 ---
 # <a name="type-provider-security"></a>Zabezpieczenia dostawcy typów
 
-Dostawcy typów są zestawy (dll) odwołuje się z projektu języka F# lub skryptu, które zawierają kod, aby nawiązać połączenie z zewnętrznymi źródłami danych, a następnie publikować informacje o typie środowiska typu F#. Zazwyczaj w przywoływanych zestawach tylko uruchamiania kodu po skompilowaniu i następnie wykonać ten kod (lub w przypadku skryptu, wyślij kod do programu F# Interactive). Jednak zestawu dostawcy typów będą uruchamiane w programie Visual Studio, gdy jedynie przeglądania kodu w edytorze. Dzieje się tak, ponieważ dostawców typów, które należy uruchomić, aby dodać dodatkowe informacje do edytora, takiego jak etykietki szybka podpowiedź, uzupełnianiu IntelliSense i tak dalej. W wyniku istnieją zapewnienia dodatkowego bezpieczeństwa informacje dotyczące typu zestawy dostawcy, ponieważ są automatycznie uruchamiane wewnątrz procesu programu Visual Studio.
+Dostawcy typów są zestawy (dll) odwołuje się z projektu języka F # lub skryptu, które zawierają kod, aby nawiązać połączenie z zewnętrznymi źródłami danych, a następnie publikować informacje o typie środowiska typu F #. Zazwyczaj w przywoływanych zestawach tylko uruchamiania kodu po skompilowaniu i następnie wykonać ten kod (lub w przypadku skryptu, wyślij kod do programu F # Interactive). Jednak zestawu dostawcy typów będą uruchamiane w programie Visual Studio, gdy jedynie przeglądania kodu w edytorze. Dzieje się tak, ponieważ dostawców typów, które należy uruchomić, aby dodać dodatkowe informacje do edytora, takiego jak etykietki szybka podpowiedź, uzupełnianiu IntelliSense i tak dalej. W wyniku istnieją zapewnienia dodatkowego bezpieczeństwa informacje dotyczące typu zestawy dostawcy, ponieważ są automatycznie uruchamiane wewnątrz procesu programu Visual Studio.
 
 ## <a name="security-warning-dialog"></a>Okno dialogowe ostrzeżenia o zabezpieczeniach
 

@@ -1,6 +1,6 @@
 ---
 title: Wyrażenia zapytań (F#)
-description: Dowiedz się więcej o obsłudze wyrażenia zapytań LINQ języka F# języka programowania.
+description: 'Dowiedz się więcej o obsłudze wyrażenia zapytań LINQ języka F # języka programowania.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,7 +14,7 @@ ms.locfileid: "48033496"
 > [!NOTE]
 Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
-Wyrażenia zapytań umożliwia badanie źródła danych i umieść je w postaci żądanego. Wyrażenia zapytań zapewnia pomoc techniczną dla programu LINQ w języku F#.
+Wyrażenia zapytań umożliwia badanie źródła danych i umieść je w postaci żądanego. Wyrażenia zapytań zapewnia pomoc techniczną dla programu LINQ w języku F #.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenia kwerendy są typem wyrażenia obliczeń, podobnie jak wyrażenia sekwencji. Tak, podając kod w wyrażeniu sekwencji jest określić kombinację, należy określić zestaw danych, podając kod w wyrażeniu zapytania. W wyrażeniu sekwencji `yield` — słowo kluczowe identyfikuje dane, które będą zwracane jako część wynikowa sekwencja. W wyrażeniach zapytań `select` taką samą funkcję wykonuje — słowo kluczowe. Oprócz `select` — słowo kluczowe, F# obsługuje również wiele operatorów zapytań, które są podobne do części instrukcję SQL SELECT. Oto przykład wyrażenie proste zapytanie wraz z kodem, który nawiązuje połączenie ze źródłem Northwind OData.
+Wyrażenia kwerendy są typem wyrażenia obliczeń, podobnie jak wyrażenia sekwencji. Tak, podając kod w wyrażeniu sekwencji jest określić kombinację, należy określić zestaw danych, podając kod w wyrażeniu zapytania. W wyrażeniu sekwencji `yield` — słowo kluczowe identyfikuje dane, które będą zwracane jako część wynikowa sekwencja. W wyrażeniach zapytań `select` taką samą funkcję wykonuje — słowo kluczowe. Oprócz `select` — słowo kluczowe, F # obsługuje również wiele operatorów zapytań, które są podobne do części instrukcję SQL SELECT. Oto przykład wyrażenie proste zapytanie wraz z kodem, który nawiązuje połączenie ze źródłem Northwind OData.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -56,7 +56,7 @@ Operatory zapytań umożliwiają określenie szczegółów zapytania, takie jak 
 
 Tylko wyrażenia, które mogą być tłumaczone do bazy danych SQL są dozwolone w wyrażeniach zapytań. Na przykład, nie wywołania funkcji są dozwolone w wyrażeniach, gdy używasz `where` — operator zapytań.
 
-Tabela 1 zawiera dostępnych operatorów zapytań. Ponadto zobacz Table2, który porównuje zapytania SQL oraz równoważne wyrażenia kwerendy F# w dalszej części tego tematu. Niektóre operatory zapytań nie są obsługiwane przez niektórych dostawców typów. W szczególności dostawcy typów OData jest ograniczony operatorów zapytań, które obsługuje ze względu na ograniczenia w protokole OData. Aby uzyskać więcej informacji, zobacz [odataservice — dostawca typów (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tabela 1 zawiera dostępnych operatorów zapytań. Ponadto zobacz Table2, który porównuje zapytania SQL oraz równoważne wyrażenia kwerendy F # w dalszej części tego tematu. Niektóre operatory zapytań nie są obsługiwane przez niektórych dostawców typów. W szczególności dostawcy typów OData jest ograniczony operatorów zapytań, które obsługuje ze względu na ograniczenia w protokole OData. Aby uzyskać więcej informacji, zobacz [odataservice — dostawca typów (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 Ta tabela zakłada bazy danych w następującej postaci:
 
@@ -499,7 +499,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Porównanie języka Transact-SQL z wyrażeniem zapytania F#
-W poniższej tabeli przedstawiono niektóre typowe zapytania Transact-SQL i ich odpowiedniki w języku F#. Kod w tej tabeli również założenie tej samej bazy danych w poprzedniej tabeli oraz ten sam kod początkowy, aby skonfigurować dostawcę typów.
+W poniższej tabeli przedstawiono niektóre typowe zapytania Transact-SQL i ich odpowiedniki w języku F #. Kod w tej tabeli również założenie tej samej bazy danych w poprzedniej tabeli oraz ten sam kod początkowy, aby skonfigurować dostawcę typów.
 
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tabela 2. Transact-SQL i wyrażenia zapytania F#
@@ -508,7 +508,7 @@ W poniższej tabeli przedstawiono niektóre typowe zapytania Transact-SQL i ich 
 <table style="width:100%">
   <tr>
     <th>Języka Transact-SQL (bez uwzględniania wielkości liter)</th>
-    <th>F# wyrażeniu zapytania (z uwzględnieniem wielkości liter)</th>
+    <th>F # wyrażeniu zapytania (z uwzględnieniem wielkości liter)</th>
   </tr>
 <tr><td>
 Zaznacz wszystkie pola z tabeli.</br>
@@ -1864,7 +1864,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-A Oto pełne dane wyjściowe, gdy ten kod jest uruchamiany w F# Interactive.
+A Oto pełne dane wyjściowe, gdy ten kod jest uruchamiany w F # Interactive.
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'

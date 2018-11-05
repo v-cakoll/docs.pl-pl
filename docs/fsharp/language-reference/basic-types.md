@@ -1,6 +1,6 @@
 ---
-title: Typy podstawowe (F#)
-description: Poznaj podstawowe typy podstawowe, które są używane w języku F#.
+title: 'Typy podstawowe (F #)'
+description: 'Poznaj podstawowe typy podstawowe, które są używane w języku F #.'
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48026946"
 ---
 # <a name="basic-types"></a>Typy podstawowe
 
-Ten temat zawiera podstawowe typy, które są zdefiniowane w języku F#. Te typy są zasadnicze znaczenie w języku F#, na podstawie prawie każdy program F#. Są one podzbiorem .NET typów pierwotnych.
+Ten temat zawiera podstawowe typy, które są zdefiniowane w języku F #. Te typy są zasadnicze znaczenie w języku F #, na podstawie prawie każdy program F #. Są one podzbiorem .NET typów pierwotnych.
 
 |Typ|Typ architektury .NET|Opis|
 |----|---------|-----------|

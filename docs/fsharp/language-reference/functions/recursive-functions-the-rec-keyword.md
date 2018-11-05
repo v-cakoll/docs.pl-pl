@@ -1,6 +1,6 @@
 ---
 title: 'Funkcje rekursywne: rec — Słowo kluczowe (F#)'
-description: Dowiedz się, jak użyć słowa kluczowego "rec" F# za pomocą słowa kluczowego "let", do definiowania funkcji recursive.
+description: 'Dowiedz się, jak użyć słowa kluczowego "rec" F # za pomocą słowa kluczowego "let", do definiowania funkcji recursive.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -30,7 +30,7 @@ function2-body
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje rekursywne, funkcje, które wywołują się, są identyfikowane jawnie w języku F#. Spowoduje to udostępnienie identyfikator, który jest definiowany w zakresie funkcji.
+Funkcje rekursywne, funkcje, które wywołują się, są identyfikowane jawnie w języku F #. Spowoduje to udostępnienie identyfikator, który jest definiowany w zakresie funkcji.
 
 Poniższy kod ilustruje funkcji recursive, które oblicza *n*<sup>th</sup> Fibonacci numer.
 

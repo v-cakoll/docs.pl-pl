@@ -1,6 +1,6 @@
 ---
 title: Ciągi (F#)
-description: Dowiedz się, jak typu "string" F# reprezentuje niezmienny tekst jako sekwencja znaków Unicode.
+description: 'Dowiedz się, jak typu "string" F # reprezentuje niezmienny tekst jako sekwencja znaków Unicode.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -18,7 +18,7 @@ ms.locfileid: "43799346"
 
 ## <a name="remarks"></a>Uwagi
 
-Literały ciągów są rozdzielone znakiem cudzysłowu ("). Znak ukośnika odwrotnego ( \\ ) jest używany do kodowania niektórych znaków specjalnych. Ukośnik odwrotny i następny znak razem są określane jako *sekwencji unikowej*. Znak ucieczki sekwencje obsługiwane w F# ciąg, który literały są wyświetlane w poniższej tabeli.
+Literały ciągów są rozdzielone znakiem cudzysłowu ("). Znak ukośnika odwrotnego ( \\ ) jest używany do kodowania niektórych znaków specjalnych. Ukośnik odwrotny i następny znak razem są określane jako *sekwencji unikowej*. Znak ucieczki sekwencje obsługiwane w F # ciąg, który literały są wyświetlane w poniższej tabeli.
 
 |Znak|Sekwencja unikowa|
 |---------|---------------|
@@ -78,7 +78,7 @@ Poniższy przykład ilustruje ciągów.
 
 ## <a name="string-class"></a>Klasa String
 
-Ponieważ typ ciągu w języku F# jest faktycznie .NET Framework `System.String` wpisz wszystkie `System.String` składowe są dostępne. Obejmuje to `+` operatora, który jest używany do łączenia ciągów, `Length` właściwości i `Chars` właściwość, która zwraca ciąg w postaci tablicy znaków Unicode. Aby uzyskać więcej informacji na temat ciągów, zobacz `System.String`.
+Ponieważ typ ciągu w języku F # jest faktycznie .NET Framework `System.String` wpisz wszystkie `System.String` składowe są dostępne. Obejmuje to `+` operatora, który jest używany do łączenia ciągów, `Length` właściwości i `Chars` właściwość, która zwraca ciąg w postaci tablicy znaków Unicode. Aby uzyskać więcej informacji na temat ciągów, zobacz `System.String`.
 
 Za pomocą `Chars` właściwość `System.String`, dostęp do poszczególnych znaków w ciągu, określając indeksu, jak pokazano w poniższym kodzie.
 

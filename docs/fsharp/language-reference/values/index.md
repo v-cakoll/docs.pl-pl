@@ -1,6 +1,6 @@
 ---
 title: Wartości (F#)
-description: Dowiedz się, jak wartości w języku F# są ilości, które mają określonego typu.
+description: 'Dowiedz się, jak wartości w języku F # są ilości, które mają określonego typu.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45991171"
 ---
 # <a name="values"></a>Wartości
 
-Wartości w języku F# są ilości, które mają określony typ; wartości mogą być liczb zmiennoprzecinkowych typu całkowitego lub zmiennoprzecinkowego, znaki lub tekst, list, sekwencji, tablice, krotek, związki dyskryminowane, rekordy, typy klas lub wartości funkcji.
+Wartości w języku F # są ilości, które mają określony typ; wartości mogą być liczb zmiennoprzecinkowych typu całkowitego lub zmiennoprzecinkowego, znaki lub tekst, list, sekwencji, tablice, krotek, związki dyskryminowane, rekordy, typy klas lub wartości funkcji.
 
 ## <a name="binding-a-value"></a>Powiązania wartości
 
@@ -25,15 +25,15 @@ Kompilator nie generuje diagnostycznych dotyczących powiązań nieużywane domy
 
 ## <a name="why-immutable"></a>Dlaczego niezmienne?
 
-Niezmienne wartości są wartościami, których nie można zmienić w czasie wykonywania programu. Jeśli używane są języków, takich jak C++, Visual Basic lub C#, może okazać się Zaskakujące, że F# umieszcza nadrzędności za pośrednictwem niezmienne wartości zamiast zmiennych, które można przypisać nowe wartości podczas wykonywania programu. Niezmienialnymi danymi jest istotnym elementem programowania funkcjonalnego. W środowisku wielowątkowym udostępnionego zmienne modyfikowalne, które mogą być zmieniane przez wielu inne wątki są trudne do zarządzania. Ponadto za pomocą zmienne modyfikowalne, czasami może być trudno stwierdzić, jeśli zmienna może ulec zmianie, gdy jest przekazywana do innej funkcji.
+Niezmienne wartości są wartościami, których nie można zmienić w czasie wykonywania programu. Jeśli używane są języków, takich jak C++, Visual Basic lub C#, może okazać się Zaskakujące, że F # umieszcza nadrzędności za pośrednictwem niezmienne wartości zamiast zmiennych, które można przypisać nowe wartości podczas wykonywania programu. Niezmienialnymi danymi jest istotnym elementem programowania funkcjonalnego. W środowisku wielowątkowym udostępnionego zmienne modyfikowalne, które mogą być zmieniane przez wielu inne wątki są trudne do zarządzania. Ponadto za pomocą zmienne modyfikowalne, czasami może być trudno stwierdzić, jeśli zmienna może ulec zmianie, gdy jest przekazywana do innej funkcji.
 
 W czystych języków funkcjonalnych istnieją nie zmienne i funkcje zachowują się wyłącznie jako funkcji matematycznych. W przypadku, gdy kodu w języku procedurach używa przypisanie zmiennej, aby zmienić wartość, równoważny kod w języku funkcjonalności ma niezmienne wartość danych wejściowych, funkcję niezmienne i różne wartości niezmienne jako dane wyjściowe. Ta matematyczne poziom ścisłości umożliwia głębsze wnioskowania o zachowanie programu. Uzasadnienie większego jest kompilatory dokładniej sprawdzić kod i zoptymalizować bardziej efektywne i pomaga wykonywać stało się łatwiejsze do zrozumienia i wpisz poprawny kod. Funkcjonalny kod jest w związku z tym może być łatwiejszy do debugowania niż zwykłe kod proceduralny.
 
-Język F# nie jest czysty język funkcjonalności jeszcze w pełni obsługuje programowania funkcjonalnego. Za pomocą niezmienialnych wartości jest dobrym rozwiązaniem, ponieważ w ten sposób swój kod, aby korzystać z ważnym aspektem programowania funkcjonalnego.
+Język F # nie jest czysty język funkcjonalności jeszcze w pełni obsługuje programowania funkcjonalnego. Za pomocą niezmienialnych wartości jest dobrym rozwiązaniem, ponieważ w ten sposób swój kod, aby korzystać z ważnym aspektem programowania funkcjonalnego.
 
 ## <a name="mutable-variables"></a>Zmienne modyfikowalne
 
-Można użyć słowa kluczowego `mutable` można określić zmienną, którą można zmienić. Zmienne modyfikowalne w języku F# zwykle mają ograniczony zakres jako pole typu lub wartości lokalnej. Zmienne modyfikowalne o ograniczonym zakresie są łatwiejsze do kontroli i mniej prawdopodobne, można zmodyfikować w nieprawidłowy sposób.
+Można użyć słowa kluczowego `mutable` można określić zmienną, którą można zmienić. Zmienne modyfikowalne w języku F # zwykle mają ograniczony zakres jako pole typu lub wartości lokalnej. Zmienne modyfikowalne o ograniczonym zakresie są łatwiejsze do kontroli i mniej prawdopodobne, można zmodyfikować w nieprawidłowy sposób.
 
 Początkowa wartość można przypisać do modyfikowalnej zmiennej, za pomocą `let` — słowo kluczowe w taki sam sposób, jak definiuje się wartość. Jednak różnica polega na tym, można następnie przypisać nowe wartości zmienne modyfikowalne przy użyciu `<-` operatora, jak w poniższym przykładzie.
 
@@ -46,7 +46,7 @@ Wartości oznaczone `mutable` może zostać automatycznie podwyższony do `'a re
 |Tytuł|Opis|
 |-----|-----------|
 |[Powiązania „let”](../functions/let-bindings.md)|Zawiera informacje o używaniu `let` — słowo kluczowe, aby powiązać nazwy wartości i funkcje.|
-|[Funkcje](../functions/index.md)|Zawiera omówienie funkcji w języku F#.|
+|[Funkcje](../functions/index.md)|Zawiera omówienie funkcji w języku F #.|
 
 ## <a name="see-also"></a>Zobacz także
 

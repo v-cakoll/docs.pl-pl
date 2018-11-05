@@ -1,5 +1,5 @@
 ---
-title: Informacje o wywołującym (F#)
+title: 'Informacje o wywołującym (F #)'
 description: Opisuje sposób używania Caller — atrybuty Argument informacji, aby uzyskać informacje o wywołującym z metody.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556

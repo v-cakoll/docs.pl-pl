@@ -1,6 +1,6 @@
 ---
 title: Funkcje zewnętrzne (F#)
-description: Więcej informacji na temat Obsługa języka F# do wywoływania funkcji w kodzie natywnym.
+description: 'Więcej informacji na temat Obsługa języka F # do wywoływania funkcji w kodzie natywnym.'
 ms.date: 05/16/2016
 ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45973108"
 ---
 # <a name="external-functions"></a>Funkcje zewnętrzne
 
-W tym temacie opisano obsługę języka F# do wywoływania funkcji w kodzie natywnym.
+W tym temacie opisano obsługę języka F # do wywoływania funkcji w kodzie natywnym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-Możesz wywołać tę funkcję z języka F# za pomocą następującego kodu.
+Możesz wywołać tę funkcję z języka F # za pomocą następującego kodu.
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,7 +46,7 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-Współdziałanie z kodem natywnym nazywa się *wywołania platformy* funkcja środowiska CLR. Aby uzyskać więcej informacji, zobacz [współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md). Informacje przedstawione w tej sekcji ma zastosowanie do F#.
+Współdziałanie z kodem natywnym nazywa się *wywołania platformy* funkcja środowiska CLR. Aby uzyskać więcej informacji, zobacz [współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md). Informacje przedstawione w tej sekcji ma zastosowanie do F #.
 
 ## <a name="see-also"></a>Zobacz także
 

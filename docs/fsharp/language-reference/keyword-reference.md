@@ -1,6 +1,6 @@
 ---
 title: Odwołanie do słowa kluczowego (F#)
-description: Znajdź łącza do informacji na temat wszystkich słów kluczowych języka F#.
+description: 'Znajdź łącza do informacji na temat wszystkich słów kluczowych języka F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "43856027"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
 
-Ten temat zawiera łącza do informacji o wszystkich kluczowych języka F#.
+Ten temat zawiera łącza do informacji o wszystkich kluczowych języka F #.
 
-## <a name="f-keyword-table"></a>Tabela F# — słowo kluczowe
+## <a name="f-keyword-table"></a>Tabela F # — słowo kluczowe
 
-W poniższej tabeli przedstawiono wszystkie F# słowa kluczowe w kolejności alfabetycznej, wraz z krótkie opisy i linki do powiązanych tematów, które zawierają więcej informacji.
+W poniższej tabeli przedstawiono wszystkie F # słowa kluczowe w kolejności alfabetycznej, wraz z krótkie opisy i linki do powiązanych tematów, które zawierają więcej informacji.
 
 |Słowo kluczowe|Łącze|Opis|
 |-------|----|-----------|
@@ -90,7 +90,7 @@ W poniższej tabeli przedstawiono wszystkie F# słowa kluczowe w kolejności alf
 |`yield`|[Sekwencje](sequences.md)|W wyrażeniu sekwencji służy do uzyskiwania wartości sekwencji.|
 |`yield!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Używany w wyrażeniu obliczeń, można dołączyć wynik wyrażenia dane obliczenie do zbierania wyników zawierających wyrażenia obliczeń.|
 
-Następujące generatory kodów są zastrzeżone w języku F#, ponieważ są one słów kluczowych w języku OCaml:
+Następujące generatory kodów są zastrzeżone w języku F #, ponieważ są one słów kluczowych w języku OCaml:
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ Następujące generatory kodów są zastrzeżone w języku F#, ponieważ są one
 
 Jeśli używasz `--mlcompatibility` — opcja kompilatora, powyżej słowa kluczowe są dostępne do użycia jako identyfikatorów.
 
-Następujące generatory kodów są zastrzeżone słowa kluczowe na przyszłe rozszerzenia języka F#:
+Następujące generatory kodów są zastrzeżone słowa kluczowe na przyszłe rozszerzenia języka F #:
 
 * `atomic`
 * `break`

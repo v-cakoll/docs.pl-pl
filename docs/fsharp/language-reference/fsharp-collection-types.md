@@ -1,6 +1,6 @@
 ---
 title: Typy kolekcji F#
-description: Poznaj typy kolekcji F# i jak będą się różnić od typy kolekcji w programie .NET Framework.
+description: 'Poznaj typy kolekcji F # i jak będą się różnić od typy kolekcji w programie .NET Framework.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,13 +11,13 @@ ms.locfileid: "43864764"
 ---
 # <a name="f-collection-types"></a>Typy kolekcji F#
 
-Przeglądając w tym temacie, można określić, które typów języka F# kolekcji najlepiej pasujące do potrzebne. Te typy kolekcji różnią się od typy kolekcji w programie .NET Framework, takich jak te w `System.Collections.Generic` przestrzeni nazw, w tym typy kolekcji F# są przeznaczone na widzenia programowania funkcjonalnego, a nie na perspektywy zorientowane obiektowo. Dokładniej mówiąc tylko kolekcja tablicy ma modyfikowalnych elementów. W związku z tym podczas modyfikowania kolekcji utworzysz wystąpienie zmodyfikowaną kolekcję, zamiast zmieniania oryginalnej kolekcji.
+Przeglądając w tym temacie, można określić, które typów języka F # kolekcji najlepiej pasujące do potrzebne. Te typy kolekcji różnią się od typy kolekcji w programie .NET Framework, takich jak te w `System.Collections.Generic` przestrzeni nazw, w tym typy kolekcji F # są przeznaczone na widzenia programowania funkcjonalnego, a nie na perspektywy zorientowane obiektowo. Dokładniej mówiąc tylko kolekcja tablicy ma modyfikowalnych elementów. W związku z tym podczas modyfikowania kolekcji utworzysz wystąpienie zmodyfikowaną kolekcję, zamiast zmieniania oryginalnej kolekcji.
 
 Typy kolekcji różnią się także w rodzaju strukturę danych, w którym przechowywane są obiekty. Struktury danych, takie jak tabele zbędnych danych, połączonej listy i tablic mają różną charakterystykę wydajności i inny zestaw dostępnych operacji.
 
 ## <a name="f-collection-types"></a>Typy kolekcji F#
 
-W poniższej tabeli przedstawiono typy kolekcji F#.
+W poniższej tabeli przedstawiono typy kolekcji F #.
 
 |Typ|Opis|Linki pokrewne|
 |----|-----------|-------------|
@@ -25,11 +25,11 @@ W poniższej tabeli przedstawiono typy kolekcji F#.
 |[Tablica](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Stałym rozmiarze, zaczynający się od zera, modyfikowalna kolekcja kolejnych elementów danych, które są wszystkie tego samego typu.|[Tablice](arrays.md)<br /><br />[Moduł tablic](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2d — moduł](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3d — moduł](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[SEQ](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Logicznej serii elementów, które są wszystkie tego typu. Sekwencje są szczególnie przydatne, gdy masz duży, uporządkowany zbiór danych, ale nie zawsze będziesz wszystkie elementy. Sekwencja poszczególne elementy są obliczane tylko jako wymagane, dlatego sekwencji można mają lepszą wydajność niż listy, jeśli nie wszystkie elementy są używane. Sekwencje są reprezentowane przez `seq<'T>` typ, który jest aliasem dla `IEnumerable<T>`. W związku z tym, dowolny typ .NET Framework, który implementuje `System.Collections.Generic.IEnumerable<'T>` może służyć jako sekwencja.|[Sekwencje](sequences.md)<br /><br />[SEQ — moduł](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[Mapy](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Niezmienne słownikiem elementów. Elementy są dostępne przez klucz.|[Map — moduł](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Niezmienne zestaw, który jest oparty na drzew binarnych, gdzie porównanie jest funkcją porównania strukturalnego F#, która korzysta z potencjalnie implementacje `System.IComparable` interfejsu na wartościach kluczowych.|[Set — moduł](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Niezmienne zestaw, który jest oparty na drzew binarnych, gdzie porównanie jest funkcją porównania strukturalnego F #, która korzysta z potencjalnie implementacje `System.IComparable` interfejsu na wartościach kluczowych.|[Set — moduł](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Tabela funkcji
 
-Ta sekcja zawiera porównanie funkcji, które są dostępne na typy kolekcji F#. Obliczeniową złożoność funkcji zostanie podany, gdzie N to rozmiar pierwszej kolekcji i M jest większy niż druga kolekcja, jeśli istnieje. Łączniki (-) wskazuje, że ta funkcja jest niedostępna w kolekcji. Ponieważ sekwencje opóźnieniem są oceniane, funkcji, takich jak Seq.distinct może być O(1) zwraca wynik natychmiast, mimo że nadal ma wpływ na wydajność sekwencji, gdy wyliczenia.
+Ta sekcja zawiera porównanie funkcji, które są dostępne na typy kolekcji F #. Obliczeniową złożoność funkcji zostanie podany, gdzie N to rozmiar pierwszej kolekcji i M jest większy niż druga kolekcja, jeśli istnieje. Łączniki (-) wskazuje, że ta funkcja jest niedostępna w kolekcji. Ponieważ sekwencje opóźnieniem są oceniane, funkcji, takich jak Seq.distinct może być O(1) zwraca wynik natychmiast, mimo że nadal ma wpływ na wydajność sekwencji, gdy wyliczenia.
 
 |Funkcja|Tablica|Lista|Sekwencja|Mapy|Zestaw|Opis|
 |--------|-----|----|--------|---|---|-----------|

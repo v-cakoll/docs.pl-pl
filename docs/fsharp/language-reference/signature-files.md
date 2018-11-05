@@ -1,6 +1,6 @@
 ---
-title: Pliki podpisów (F#)
-description: Dowiedz się, jak używać plików sygnatur F# do przechowywania informacji na temat podpisów publicznych zestaw elementów języka F# programów, takich jak typy, przestrzenie nazw i moduły.
+title: 'Pliki podpisów (F #)'
+description: 'Dowiedz się, jak używać plików sygnatur F # do przechowywania informacji na temat podpisów publicznych zestaw elementów języka F # programów, takich jak typy, przestrzenie nazw i moduły.'
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,17 +11,17 @@ ms.locfileid: "45991236"
 ---
 # <a name="signatures"></a>Podpisy
 
-Plik podpisu zawiera informacje o podpisów publicznych zestawu elementów języka F# programów, takich jak typy, przestrzenie nazw i moduły. Może służyć do określenia dostępności te elementy programu.
+Plik podpisu zawiera informacje o podpisów publicznych zestawu elementów języka F # programów, takich jak typy, przestrzenie nazw i moduły. Może służyć do określenia dostępności te elementy programu.
 
 ## <a name="remarks"></a>Uwagi
 
-Dla każdego języka F# pliku kodu, może mieć *plik podpisu*, czyli pliku, który ma taką samą nazwę jak plik kodu, ale .fsi rozszerzenia zamiast .fs. Pliki podpisów mogą być również dodawane do kompilacji wiersza polecenia, korzystając z wiersza polecenia bezpośrednio. Aby rozróżnić plików kodu i plików sygnatur, pliki kodu są czasami określane jako *pliki wdrożenia*. W projekcie plik podpisu powinien poprzedzać skojarzony plik kodu.
+Dla każdego języka F # pliku kodu, może mieć *plik podpisu*, czyli pliku, który ma taką samą nazwę jak plik kodu, ale .fsi rozszerzenia zamiast .fs. Pliki podpisów mogą być również dodawane do kompilacji wiersza polecenia, korzystając z wiersza polecenia bezpośrednio. Aby rozróżnić plików kodu i plików sygnatur, pliki kodu są czasami określane jako *pliki wdrożenia*. W projekcie plik podpisu powinien poprzedzać skojarzony plik kodu.
 
 Plik podpisu opisuje przestrzenie nazw, moduły, typy i elementy członkowskie w odpowiedni plik implementacji. Użyj informacji w pliku podpisu do określenia, jakie części kodu w odpowiedniej implementacji plików jest możliwy z kodu poza plikiem wdrożenia i jakie części są wewnętrzne w pliku implementacji. Przestrzenie nazw, moduły i typy, które znajdują się w pliku podpisu musi być podzestawem przestrzenie nazw, moduły i typy, które znajdują się w pliku implementacji. Z pewnymi wyjątkami, podane w dalszej części tego tematu te elementy języka, które nie są wymienione w pliku podpisu są uznawane za prywatne pliku implementacji. Jeśli plik podpisu nie zostanie znaleziony w projekcie lub w wierszu polecenia, jest używana wartość domyślna dostępu.
 
 Aby uzyskać więcej informacji na temat ułatwień dostępu domyślne zobacz [kontroli dostępu](access-control.md).
 
-V souboru signatury nie Powtórz definicji typów i implementacje każdej metody lub funkcji. Zamiast tego należy użyć podpis dla każdej metody i funkcji, która działa jako pełna Specyfikacja funkcji, który jest implementowany przez fragment modułu lub przestrzeni nazw. Składnia dla podpisu typu jest taki sam sposób, który jest używany w deklaracji metody abstrakcyjnej w interfejsach i klasy abstrakcyjne i również jest wyświetlany przez funkcję IntelliSense, jak również fsi.exe interpretera F#, gdy zawiera dane wejściowe poprawnie skompilowany.
+V souboru signatury nie Powtórz definicji typów i implementacje każdej metody lub funkcji. Zamiast tego należy użyć podpis dla każdej metody i funkcji, która działa jako pełna Specyfikacja funkcji, który jest implementowany przez fragment modułu lub przestrzeni nazw. Składnia dla podpisu typu jest taki sam sposób, który jest używany w deklaracji metody abstrakcyjnej w interfejsach i klasy abstrakcyjne i również jest wyświetlany przez funkcję IntelliSense, jak również fsi.exe interpretera F #, gdy zawiera dane wejściowe poprawnie skompilowany.
 
 Jeśli nie jest wystarczająco dużo informacji w podpisie typu, aby wskazać, czy typ jest zapieczętowany, lub czy jest ono typu interfejsu, należy dodać atrybut wskazujący rodzaj typu w kompilatorze. W poniższej tabeli opisano atrybuty, które używają do tego celu.
 

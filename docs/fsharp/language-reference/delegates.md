@@ -1,6 +1,6 @@
 ---
 title: Delegaty (F#)
-description: Dowiedz się, jak pracować z delegatów w języku F#.
+description: 'Dowiedz się, jak pracować z delegatów w języku F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: be58997dffe8fcd949bbc2d47d86ffccc157d43e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45745497"
 ---
 # <a name="delegates"></a>Delegaty
 
-Obiekt delegowany reprezentuje wywołanie funkcji jako obiekt. W F# zazwyczaj należy użyć wartości funkcji do reprezentowania funkcje jako wartości pierwszej klasy. Jednak obiekty delegowane są używane w programie .NET Framework i dlatego są wymagane podczas współdziałania z interfejsami API, które ich wymagają. One może również służyć podczas tworzenia bibliotek przeznaczone do użycia z innych językach .NET Framework.
+Obiekt delegowany reprezentuje wywołanie funkcji jako obiekt. W F # zazwyczaj należy użyć wartości funkcji do reprezentowania funkcje jako wartości pierwszej klasy. Jednak obiekty delegowane są używane w programie .NET Framework i dlatego są wymagane podczas współdziałania z interfejsami API, które ich wymagają. One może również służyć podczas tworzenia bibliotek przeznaczone do użycia z innych językach .NET Framework.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,7 +23,7 @@ type delegate-typename = delegate of type1 -> type2
 
 W poprzedniej składni `type1` reprezentuje argument typu lub typów i `type2` reprezentuje typ zwracany. Typy argumentów, które są reprezentowane przez `type1` są automatycznie przenoszeni. Sugeruje to, że dla tego typu, możesz użyć formularzu krotki, jeśli są przenoszeni argumentów funkcji docelowej i krotki ujęty w nawiasy dla argumentów, które już znajdują się w formularzu krotki. Automatyczne currying usuwa zestaw nawiasów, pozostawiając argument spójnej kolekcji, który pasuje do metody docelowej. Zobacz przykład kodu dla składni, do którego należy używać w każdym przypadku.
 
-Delegaty mogą być dołączane do F# wartości funkcji i statycznych lub wystąpienie metody. Wartości funkcji języka F# mogą być przekazywane bezpośrednio jako argumenty do delegowanie konstruktorów. W przypadku statycznej metody delegata konstruowania przy użyciu nazwy klasy i metody. Dla metody wystąpienia możesz podać wystąpienie obiektu i metody w jeden argument. W obu przypadkach należy uzyskać dostęp — operator (`.`) jest używany.
+Delegaty mogą być dołączane do F # wartości funkcji i statycznych lub wystąpienie metody. Wartości funkcji języka F # mogą być przekazywane bezpośrednio jako argumenty do delegowanie konstruktorów. W przypadku statycznej metody delegata konstruowania przy użyciu nazwy klasy i metody. Dla metody wystąpienia możesz podać wystąpienie obiektu i metody w jeden argument. W obu przypadkach należy uzyskać dostęp — operator (`.`) jest używany.
 
 `Invoke` Metody na typ delegata wywołania zhermetyzowanych funkcji. Ponadto delegatów mogą być przekazywane jako wartości funkcji, odwołując się do nazwy metody Invoke, bez nawiasów.
 

@@ -1,6 +1,6 @@
 ---
-title: Wyrażenia dopasowania (F#)
-description: Dowiedz się, jak wyrażenie dopasowania F# zapewnia rozgałęziania formant, który jest oparty na porównaniu wyrażenia zestaw wzorców.
+title: 'Wyrażenia dopasowania (F #)'
+description: 'Dowiedz się, jak wyrażenie dopasowania F # zapewnia rozgałęziania formant, który jest oparty na porównaniu wyrażenia zestaw wzorców.'
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

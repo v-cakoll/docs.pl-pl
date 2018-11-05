@@ -1,5 +1,5 @@
 ---
-title: Rozpoczynanie pracy z usługą Azure Queue storage przy użyciu języka F#
+title: 'Rozpoczynanie pracy z usługą Azure Queue storage przy użyciu języka F #'
 description: Usługa Azure Queues zapewnia niezawodne, asynchroniczne przesyłanie komunikatów między składnikami aplikacji. Chmura komunikatów umożliwia składnikom aplikacji niezależne skalowanie obu elementów.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569421"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure Queue storage przy użyciu języka F# #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure Queue storage przy użyciu języka F # #
 
 Usługa Azure Queue storage umożliwia przesyłanie komunikatów między składnikami aplikacji w chmurze. Projektowanie aplikacji do skalowania, składniki aplikacji są często odłączane, tak aby mogły być skalowane niezależnie. Usługa queue storage zapewnia asynchroniczne przesyłanie komunikatów do komunikacji między składnikami aplikacji, czy działają w chmurze, na komputerze, na serwerze lokalnym lub na urządzeniu przenośnym. Usługa queue storage obsługuje również zarządzanie asynchronicznymi zadaniami oraz przepływy pracy procesu kompilacji.
 
@@ -25,9 +25,9 @@ Omówienie pojęć usługi queue storage, zobacz [przewodnik platformy .NET dla 
 Aby użyć tego przewodnika, należy najpierw [Tworzenie konta usługi Azure storage](/azure/storage/storage-create-storage-account).
 Należy także klucz dostępu do magazynu dla tego konta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz skrypt F# i Rozpocznij języka F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz skrypt F # i Rozpocznij języka F # Interactive
 
-Przykłady w tym artykule może służyć w aplikacji F# lub skryptu F#. Aby utworzyć skrypt F#, Utwórz plik o `.fsx` rozszerzenia, na przykład `queues.fsx`, w środowisku projektowym F#.
+Przykłady w tym artykule może służyć w aplikacji F # lub skryptu F #. Aby utworzyć skrypt F #, Utwórz plik o `.fsx` rozszerzenia, na przykład `queues.fsx`, w środowisku projektowym F #.
 
 Następnie użyj [Menedżera pakietów](package-management.md) takich jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) zainstalował `WindowsAzure.Storage` pakietów i odwołań `WindowsAzure.Storage.dll` w skrypcie za pomocą `#r`dyrektywy.
 

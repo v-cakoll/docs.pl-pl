@@ -1,6 +1,6 @@
 ---
 title: Wyrażenia obliczeń (F#)
-description: Dowiedz się, jak utworzyć wygodnej składni do pisania obliczeń w F#, który może być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania.
+description: 'Dowiedz się, jak utworzyć wygodnej składni do pisania obliczeń w F #, który może być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania.'
 ms.date: 07/27/2018
 ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48839872"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
-Wyrażenia obliczeń w języku F# Obejmij wygodnej składni pisania obliczeń, które mogą być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania. W zależności od rodzaju wyrażenia obliczeń one można traktować jako sposób express monads, monoids, transformatory monad i applicative funktory. Jednak w przeciwieństwie do innych języków (takie jak *zapisu czy* w Haskell), nie są powiązane z jednym pozyskiwania i nie należy polegać na makr lub innych form metaprogramowanie wykonywania wygodne i kontekstowym składni.
+Wyrażenia obliczeń w języku F # Obejmij wygodnej składni pisania obliczeń, które mogą być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania. W zależności od rodzaju wyrażenia obliczeń one można traktować jako sposób express monads, monoids, transformatory monad i applicative funktory. Jednak w przeciwieństwie do innych języków (takie jak *zapisu czy* w Haskell), nie są powiązane z jednym pozyskiwania i nie należy polegać na makr lub innych form metaprogramowanie wykonywania wygodne i kontekstowym składni.
 
 ## <a name="overview"></a>Omówienie
 
@@ -22,7 +22,7 @@ Obliczenia może mieć wiele form. Najczęściej używany typ wyliczenia jest je
 * Effectful obliczeń
 * Generatywną obliczeń
 
-Ogólnie rzecz biorąc, istnieją *kontekstową* obliczenia, które należy wykonać w niektórych części aplikacji. Pisanie kodu kontekstową może stanowić wyzwanie, ponieważ jest łatwy do obliczenia "przeciek" poza podanym kontekście bez abstrakcji, aby zapobiec temu. Te elementy abstrakcji często wyzwaniem napisać samodzielnie, dlatego F# został uogólniony sposób przeprowadzenia tak zwane **wyrażenia obliczeń**.
+Ogólnie rzecz biorąc, istnieją *kontekstową* obliczenia, które należy wykonać w niektórych części aplikacji. Pisanie kodu kontekstową może stanowić wyzwanie, ponieważ jest łatwy do obliczenia "przeciek" poza podanym kontekście bez abstrakcji, aby zapobiec temu. Te elementy abstrakcji często wyzwaniem napisać samodzielnie, dlatego F # został uogólniony sposób przeprowadzenia tak zwane **wyrażenia obliczeń**.
 
 Wyrażenia obliczeń oferuje jednolite składni i abstrakcji model dla kodowania kontekstową obliczeń.
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Każda z tych słów kluczowych i innych standardowych F# słowa kluczowe są dostępne tylko w wyrażeniu obliczeń jeśli zostały zdefiniowane w zapasowy typ konstruktora. Jedynym wyjątkiem jest `match!`, która sama jest sugar składni do użycia z `let!` następuje dopasowania do wzorca w wyniku.
+Każda z tych słów kluczowych i innych standardowych F # słowa kluczowe są dostępne tylko w wyrażeniu obliczeń jeśli zostały zdefiniowane w zapasowy typ konstruktora. Jedynym wyjątkiem jest `match!`, która sama jest sugar składni do użycia z `let!` następuje dopasowania do wzorca w wyniku.
 
-Typ konstruktora jest obiektem, który definiuje specjalne metody, które określają sposób, w jaki fragmenty wyrażenia obliczeń są łączone; oznacza to, że jego metod kontroli zachowania wyrażenia obliczeń. Inny sposób w celu opisania klasy, Konstruktor jest powiedzieć, pozwala dostosować działanie wielu konstrukcje F#, takie jak pętle i powiązania.
+Typ konstruktora jest obiektem, który definiuje specjalne metody, które określają sposób, w jaki fragmenty wyrażenia obliczeń są łączone; oznacza to, że jego metod kontroli zachowania wyrażenia obliczeń. Inny sposób w celu opisania klasy, Konstruktor jest powiedzieć, pozwala dostosować działanie wielu konstrukcje F #, takie jak pętle i powiązania.
 
 ### `let!`
 
@@ -179,7 +179,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-Począwszy od F# 4.5, `match!` — słowo kluczowe pozwala na tekście wywołania do innego obliczenie wyrażenia i wzorzec dopasowania na jego wynik:
+Począwszy od F # 4.5, `match!` — słowo kluczowe pozwala na tekście wywołania do innego obliczenie wyrażenia i wzorzec dopasowania na jego wynik:
 
 ```fsharp
 let doThingsAsync url =
@@ -194,7 +194,7 @@ Podczas wywoływania wyrażeniu obliczeń z `match!`, będzie weź pod uwagę wy
 
 ## <a name="built-in-computation-expressions"></a>Wyrażenia obliczeń wbudowane
 
-Biblioteka core F# definiuje trzy wyrażenia obliczeń wbudowane: [wyrażenia sekwencji](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia zapytań](query-expressions.md).
+Biblioteka core F # definiuje trzy wyrażenia obliczeń wbudowane: [wyrażenia sekwencji](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia zapytań](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Tworzenie nowego typu wyrażenia obliczeń
 
@@ -227,7 +227,7 @@ Zagnieżdżone wyrażenie ma następującą postać:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-W kodzie powyżej wywołania `Run` i `Delay` są pomijane, jeśli nie są zdefiniowane w klasie Konstruktor wyrażeń obliczeń. Treść wyrażenia obliczeń, w tym miejscu są oznaczone jako `{| cexpr |}`, przetłumaczyć obejmujące metod klasy konstruktora połączeń przez tłumaczenia opisane w poniższej tabeli. Wyrażenia obliczeń `{| cexpr |}` jest zdefiniowanego cyklicznie zgodnie z ich gdzie `expr` jest wyrażeniem F# i `cexpr` jest wyrażenia obliczeń.
+W kodzie powyżej wywołania `Run` i `Delay` są pomijane, jeśli nie są zdefiniowane w klasie Konstruktor wyrażeń obliczeń. Treść wyrażenia obliczeń, w tym miejscu są oznaczone jako `{| cexpr |}`, przetłumaczyć obejmujące metod klasy konstruktora połączeń przez tłumaczenia opisane w poniższej tabeli. Wyrażenia obliczeń `{| cexpr |}` jest zdefiniowanego cyklicznie zgodnie z ich gdzie `expr` jest wyrażeniem F # i `cexpr` jest wyrażenia obliczeń.
 
 |Wyrażenie|{1&gt;Translacja&lt;1}|
 |----------|-----------|

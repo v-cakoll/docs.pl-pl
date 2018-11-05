@@ -1,6 +1,6 @@
 ---
 title: Powiązania let w klasach (F#)
-description: Dowiedz się, jak zdefiniować pola prywatne i prywatne funkcje dla klas F# za pomocą powiązania "let" w definicji klasy.
+description: 'Dowiedz się, jak zdefiniować pola prywatne i prywatne funkcje dla klas F # za pomocą powiązania "let" w definicji klasy.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48033223"
 ---
 # <a name="let-bindings-in-classes"></a>Powiązania let w klasach
 
-Można zdefiniować pola prywatne i prywatne funkcje dla klas F# za pomocą `let` powiązania w definicji klasy.
+Można zdefiniować pola prywatne i prywatne funkcje dla klas F # za pomocą `let` powiązania w definicji klasy.
 
 ## <a name="syntax"></a>Składnia
 

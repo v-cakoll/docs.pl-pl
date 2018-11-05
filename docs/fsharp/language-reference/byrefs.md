@@ -1,6 +1,6 @@
 ---
-title: Zkratka (F#)
-description: Więcej informacji na temat byref i byref typy w języku F#, które są używane na potrzeby programowania niskiego poziomu.
+title: 'Zkratka (F #)'
+description: 'Więcej informacji na temat byref i byref typy w języku F #, które są używane na potrzeby programowania niskiego poziomu.'
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48836884"
 ---
 # <a name="byrefs"></a>Zkratka
 
-F# zawiera dwa obszary najważniejszych funkcji, które zajmują w obszarze programowania niskiego poziomu:
+F # zawiera dwa obszary najważniejszych funkcji, które zajmują w obszarze programowania niskiego poziomu:
 
 * `byref` / `inref` / `outref` Typów, które są wskaźnikami zarządzanymi. Mają one ograniczenia dotyczące użycia, więc, że nie można skompilować program, który jest nieprawidłowy w czasie wykonywania.
 * A `byref`— takie jak struktury, która jest [struktury](structures.md) ma podobną semantyką i takim samym ograniczeniom kompilacji, jak `byref<'T>`. Przykładem jest <xref:System.Span%601>.
@@ -97,7 +97,7 @@ Oto również wartość true:
 * Istnieje nie domniemanie na to, że inne wątki, lub aliasy nie ma dostęp do zapisu `x`.
 * Nie ma żadnych domniemanie, `SomeStruct` można modyfikować na mocy niniejszej `x` trwa `inref`.
 
-Jednak dla języka F# wartości typów, które **są** niemodyfikowalny `this` wskaźnik wywnioskowana jest `inref`.
+Jednak dla języka F # wartości typów, które **są** niemodyfikowalny `this` wskaźnik wywnioskowana jest `inref`.
 
 Wszystkie te reguły, które są razem oznaczają, że właściciel `inref` wskaźnik nie może modyfikować natychmiastowego zawartość pamięci wskazywany.
 
@@ -107,18 +107,18 @@ Celem `outref<'T>` jest, aby wskazać, że wskaźnik powinni czytać tylko z. Ni
 
 ### <a name="interop-with-c"></a>Współdziałanie z języka C# #
 
-C# obsługuje `in ref` i `out ref` słów kluczowych, oprócz `ref` zwraca. W poniższej tabeli przedstawiono, jak F# interpretuje co C# emituje:
+C# obsługuje `in ref` i `out ref` słów kluczowych, oprócz `ref` zwraca. W poniższej tabeli przedstawiono, jak F # interpretuje co C# emituje:
 
-|Konstrukcja w języku C#|Wnioskuje F#|
+|Konstrukcja w języku C#|Wnioskuje F #|
 |------------|---------|
 |`ref` Wartość zwracana|`outref<'T>`|
 |`ref readonly` Wartość zwracana|`inref<'T>`|
 |`in ref` Parametr|`inref<'T>`|
 |`out ref` Parametr|`outref<'T>`|
 
-W poniższej tabeli przedstawiono, jakie F# emituje:
+W poniższej tabeli przedstawiono, jakie F # emituje:
 
-|Konstrukcji F#|Konstrukcja emitowany|
+|Konstrukcji F #|Konstrukcja emitowany|
 |------------|-----------------|
 |`inref<'T>` Argument|`[In]` argument atrybutu|
 |`inref<'T>` Wróć|`modreq` atrybut na wartość|
@@ -127,7 +127,7 @@ W poniższej tabeli przedstawiono, jakie F# emituje:
 
 ### <a name="type-inference-and-overloading-rules"></a>Wnioskowanie o typie i przeciążenie reguły
 
-`inref<'T>` Typ jest wnioskowany przez kompilator F# w następujących przypadkach:
+`inref<'T>` Typ jest wnioskowany przez kompilator F # w następujących przypadkach:
 
 1. .NET parametr lub zwracany typ, który ma `IsReadOnly` atrybutu.
 2. `this` Wskaźnika na typie struct, który nie ma tych pól.
@@ -165,20 +165,20 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` nie oznacza `Struct`. Zarówno musi być obecny w typie.
 
-Element "`byref`— takich jak" struct w języku F# to typ wartości powiązanym ze stosu. Nigdy nie zostanie przydzielona na stosie zarządzanym. A `byref`— takie jak struktura jest przydatne w przypadku programowania o wysokiej wydajności, jak są wymuszane za pomocą zestawu silne testów o okresie istnienia i -capture. Dostępne są następujące reguły:
+Element "`byref`— takich jak" struct w języku F # to typ wartości powiązanym ze stosu. Nigdy nie zostanie przydzielona na stosie zarządzanym. A `byref`— takie jak struktura jest przydatne w przypadku programowania o wysokiej wydajności, jak są wymuszane za pomocą zestawu silne testów o okresie istnienia i -capture. Dostępne są następujące reguły:
 
 * One może służyć jako parametry funkcji, parametrów metody, zmienne lokalne, metoda zwraca wartość.
 * Nie mogą one być statyczne lub wystąpieniami elementów członkowskich klasy lub struktury normalne.
 * Nie można przechwycić według konstrukcji zamknięcia (`async` metod lub wyrażenia lambda).
 * Nie mogą one służyć jako parametr ogólny.
 
-Ten ostatni punkt ma kluczowe znaczenie dla F# potoku programowaniu w stylu jako `|>` jest funkcja ogólna, które parametryzuje dane jego typów wejściowych. To ograniczenie może zostać złagodzone dla `|>` w przyszłości, ponieważ jest wbudowana i nie wprowadzać wszelkie wywołania-śródwierszowych ogólne funkcje w jej treści.
+Ten ostatni punkt ma kluczowe znaczenie dla F # potoku programowaniu w stylu jako `|>` jest funkcja ogólna, które parametryzuje dane jego typów wejściowych. To ograniczenie może zostać złagodzone dla `|>` w przyszłości, ponieważ jest wbudowana i nie wprowadzać wszelkie wywołania-śródwierszowych ogólne funkcje w jej treści.
 
 Mimo że te reguły ograniczają bardzo silnie użycia, to zrobią do spełnienia obietnicy o wysokiej wydajności obliczeniowej w bezpieczny sposób.
 
 ## <a name="byref-returns"></a>Wartości zwracane ByRef
 
-Wartości zwracane ByRef z F# funkcji lub elementów członkowskich może być tworzone i używane. Podczas używania `byref`— metodę zwracającą, wartość jest wyłuskiwany niejawnie. Na przykład:
+Wartości zwracane ByRef z F # funkcji lub elementów członkowskich może być tworzone i używane. Podczas używania `byref`— metodę zwracającą, wartość jest wyłuskiwany niejawnie. Na przykład:
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

@@ -1,6 +1,6 @@
 ---
 title: Krotki (F#)
-description: Więcej informacji na temat F# krotki, grupowanie bez nazwy, ale uporządkowane wartości, prawdopodobnie różnych typów.
+description: 'Więcej informacji na temat F # krotki, grupowanie bez nazwy, ale uporządkowane wartości, prawdopodobnie różnych typów.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e7628e4c4b538c2fe52fca25d2597b10fec28d1c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -22,7 +22,7 @@ struct(element, ... ,element )
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy *elementu* w poprzedniej składni może być dowolnym prawidłowym wyrażeniem języka F#.
+Każdy *elementu* w poprzedniej składni może być dowolnym prawidłowym wyrażeniem języka F #.
 
 ## <a name="examples"></a>Przykłady
 
@@ -88,7 +88,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Współdziałanie z Krotkami języka C#
 
-C# 7.0 wprowadzono krotek języka.  Spójne kolekcje w języku C# są strukturami i są równoważne z krotek struktur w języku F#.  Jeśli musisz współdziałać z C#, należy użyć krotek struktur.
+C# 7.0 wprowadzono krotek języka.  Spójne kolekcje w języku C# są strukturami i są równoważne z krotek struktur w języku F #.  Jeśli musisz współdziałać z C#, należy użyć krotek struktur.
 
 Jest to proste.  Załóżmy, że trzeba przekazać krotki do klasy C#, a następnie zużyć je jej wynik, który jest również spójnej kolekcji:
 
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-W F# kodzie można przekazać krotki struktury jako parametr i korzystać z wynik w postaci krotki struktury.
+W F # kodzie można przekazać krotki struktury jako parametr i korzystać z wynik w postaci krotki struktury.
 
 ```fsharp
 open TupleInterop
@@ -126,7 +126,7 @@ Należy wzorca dopasowania po jednej krotce i konstruowania, pozostałe części
 
 W tej sekcji opisano formularza krotek, gdy są one skompilowane.  W tym miejscu nie są one niezbędne do odczytu, o ile nie są przeznaczone dla .NET Framework 3.5 lub niższą.
 
-Kolekcje są kompilowane do jednego z kilku typów ogólnych, wszystkie nazwane obiekty `System.Tuple`, które są przeciążone na liczby argumentów lub liczbę parametrów typu. Typy krotek są wyświetlane w tym formularzu, podczas wyświetlania ich w innym języku, takich jak C# lub Visual Basic lub korzystając z narzędzia, która nie ma informacji o konstrukcje F#. `Tuple` Typy zostały wprowadzone w programie .NET Framework 4. Jeśli jest przeznaczony dla starszej wersji programu .NET Framework, kompilator używa wersji [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) z podstawowej biblioteki języka F# w wersji 2.0. Typy w tej bibliotece są używane tylko w przypadku aplikacji przeznaczonych dla wersji 2.0, 3.0 i 3.5 wersje programu .NET Framework. Przekazywanie dalej typu jest używany w celu zapewnienia zgodność binarną między składnikami programu .NET Framework 2.0 i .NET Framework 4 F#.
+Kolekcje są kompilowane do jednego z kilku typów ogólnych, wszystkie nazwane obiekty `System.Tuple`, które są przeciążone na liczby argumentów lub liczbę parametrów typu. Typy krotek są wyświetlane w tym formularzu, podczas wyświetlania ich w innym języku, takich jak C# lub Visual Basic lub korzystając z narzędzia, która nie ma informacji o konstrukcje F #. `Tuple` Typy zostały wprowadzone w programie .NET Framework 4. Jeśli jest przeznaczony dla starszej wersji programu .NET Framework, kompilator używa wersji [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) z podstawowej biblioteki języka F # w wersji 2.0. Typy w tej bibliotece są używane tylko w przypadku aplikacji przeznaczonych dla wersji 2.0, 3.0 i 3.5 wersje programu .NET Framework. Przekazywanie dalej typu jest używany w celu zapewnienia zgodność binarną między składnikami programu .NET Framework 2.0 i .NET Framework 4 F #.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Skompilowanej formy krotek struktur
 

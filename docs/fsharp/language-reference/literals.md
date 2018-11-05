@@ -1,6 +1,6 @@
 ---
 title: Literały (F#)
-description: Poznaj typy literałów w F# języka programowania.
+description: 'Poznaj typy literałów w F # języka programowania.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,11 +14,11 @@ ms.locfileid: "44087628"
 > [!NOTE]
 Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN (na razie).
 
-Ten temat zawiera tabelę, która pokazuje sposób określania rodzaju literału w F#.
+Ten temat zawiera tabelę, która pokazuje sposób określania rodzaju literału w F #.
 
 ## <a name="literal-types"></a>Typy literałów
 
-W poniższej tabeli przedstawiono typy literałów w F#. Znaki, które reprezentują cyfr w zapisie szesnastkowym nie jest rozróżniana wielkość liter; znaki, które identyfikują typ jest rozróżniana wielkość liter.
+W poniższej tabeli przedstawiono typy literałów w F #. Znaki, które reprezentują cyfr w zapisie szesnastkowym nie jest rozróżniana wielkość liter; znaki, które identyfikują typ jest rozróżniana wielkość liter.
 
 |Typ|Opis|Prefiks lub sufiks|Przykłady|
 |----|-----------|----------------|--------|
@@ -47,7 +47,7 @@ W poniższej tabeli przedstawiono typy literałów w F#. Znaki, które reprezent
 
 Ciągi Unicode mogą zawierać jawne kodowania, które można określić za pomocą `\u` następuje 16-bitowych kodów szesnastkowych lub kodowania UTF-32, które można określić za pomocą `\U` następuje kod szesnastkowy 32-bitowy, który reprezentuje Unicode Para zastępcza.
 
-Jak dla F# 3.1 można użyć `+` Zaloguj się połączyć literały ciągów znaków. Możesz również użyć operatora testu koniunkcji lub (`|||`) operator, aby łączyć flagi wyliczeń. Na przykład poniższy kod jest niedozwolony w F# 3.1:
+Jak dla F # 3.1 można użyć `+` Zaloguj się połączyć literały ciągów znaków. Możesz również użyć operatora testu koniunkcji lub (`|||`) operator, aby łączyć flagi wyliczeń. Na przykład poniższy kod jest niedozwolony w F # 3.1:
 
 ```fsharp
 [<Literal>]
@@ -82,7 +82,7 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Podkreślenia w literałach numerycznych
 
-Począwszy od F# 4.1, można oddzielić cyfr od znaku podkreślenia (`_`).
+Począwszy od F # 4.1, można oddzielić cyfr od znaku podkreślenia (`_`).
 
 ```fsharp
 let DeadBeef = 0xDEAD_BEEF

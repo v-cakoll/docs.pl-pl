@@ -1,6 +1,6 @@
 ---
 title: let — Powiązania (F#)
-description: Dowiedz się, jak używać języka F# "let" powiązania, co umożliwi skojarzenie identyfikatora z wartością lub funkcji.
+description: 'Dowiedz się, jak używać języka F # "let" powiązania, co umożliwi skojarzenie identyfikatora z wartością lub funkcji.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -110,7 +110,7 @@ let function3 x =
     function1 x
 ```
 
-Niektóre moduły mają atrybut [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), co oznacza, że funkcje, które udostępniają musi być kwalifikowana z nazwą modułu. Na przykład moduł F# listy ma tego atrybutu.
+Niektóre moduły mają atrybut [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), co oznacza, że funkcje, które udostępniają musi być kwalifikowana z nazwą modułu. Na przykład moduł F # listy ma tego atrybutu.
 
 Aby uzyskać więcej informacji na temat modułów i kontroli dostępu, zobacz [modułów](../modules.md) i [kontroli dostępu](../access-control.md).
 

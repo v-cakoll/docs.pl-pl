@@ -1,6 +1,6 @@
 ---
 title: Identyfikatory wiersza źródłowego, pliku i ścieżki (F#)
-description: Dowiedz się, jak używać wbudowanych F# wartości identyfikatorów, które umożliwiają dostęp do numeru wiersza źródłowego, katalogu i nazwa pliku w kodzie.
+description: 'Dowiedz się, jak używać wbudowanych F # wartości identyfikatorów, które umożliwiają dostęp do numeru wiersza źródłowego, katalogu i nazwa pliku w kodzie.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -25,7 +25,7 @@ __SOURCE_FILE__
 
 Każda z tych wartości ma typ `string`.
 
-W poniższej tabeli podsumowano wiersza źródłowego, pliku i identyfikatory ścieżki, które są dostępne w języku F#. Te identyfikatory nie są makra preprocesora; są one wbudowane wartości, które są rozpoznawane przez kompilator.
+W poniższej tabeli podsumowano wiersza źródłowego, pliku i identyfikatory ścieżki, które są dostępne w języku F #. Te identyfikatory nie są makra preprocesora; są one wbudowane wartości, które są rozpoznawane przez kompilator.
 
 |Predefiniowany identyfikator|Opis|
 |---------------------|-----------|

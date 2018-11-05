@@ -1,6 +1,6 @@
 ---
 title: Dokumentacja XML (F#)
-description: Dowiedz się więcej o pomocy technicznej w języku F# do generowania dokumentacji z komentarzy.
+description: 'Dowiedz się więcej o pomocy technicznej w języku F # do generowania dokumentacji z komentarzy.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a4cb132e65b630821e5eb2b39276c1de99aff80
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,17 +11,17 @@ ms.locfileid: "45641628"
 ---
 # <a name="xml-documentation"></a>Dokumentacja XML
 
-Dokumentacja z trzema ukośnikami (/ / /) służy do tworzenia kodu komentarzy w języku F#. Komentarze XML może znajdować się przed deklaracjami w kodu pliki (.fs) lub podpisu (.fsi).
+Dokumentacja z trzema ukośnikami (/ / /) służy do tworzenia kodu komentarzy w języku F #. Komentarze XML może znajdować się przed deklaracjami w kodu pliki (.fs) lub podpisu (.fsi).
 
 ## <a name="generating-documentation-from-comments"></a>Generowanie komentarzy dokumentacji
 
-Obsługa języka F# Generowanie komentarzy dokumentacji jest taka sama jak w innych językach .NET Framework. Tak jak w innych językach .NET Framework [-doc — opcja kompilatora](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) pozwala wygenerować plik XML, który zawiera informacje, które można przekształcić w dokumentacji, za pomocą narzędzia takiego jak Sandcastle. Dokumentacja, wygenerowane za pomocą narzędzia, które są przeznaczone do użytku z zestawów, które są zwykle zapisywane w innych językach .NET Framework generuje widok interfejsów API, które opiera się na formularzu skompilowane konstrukcje F#. Chyba, że narzędzia przeznaczone do obsługi F#, dokumentacji, generowanych przez te narzędzia jest niezgodna widoku F# interfejsu API.
+Obsługa języka F # Generowanie komentarzy dokumentacji jest taka sama jak w innych językach .NET Framework. Tak jak w innych językach .NET Framework [-doc — opcja kompilatora](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) pozwala wygenerować plik XML, który zawiera informacje, które można przekształcić w dokumentacji, za pomocą narzędzia takiego jak Sandcastle. Dokumentacja, wygenerowane za pomocą narzędzia, które są przeznaczone do użytku z zestawów, które są zwykle zapisywane w innych językach .NET Framework generuje widok interfejsów API, które opiera się na formularzu skompilowane konstrukcje F #. Chyba, że narzędzia przeznaczone do obsługi F #, dokumentacji, generowanych przez te narzędzia jest niezgodna widoku F # interfejsu API.
 
 Aby uzyskać więcej informacji na temat generowania dokumentacji z pliku XML, zobacz [komentarze dokumentacji XML &#40;C&#35; Programming Guide&#41;](https://msdn.microsoft.com/library/b2s063f7).
 
 ## <a name="recommended-tags"></a>Zalecane tagi
 
-Istnieją dwa sposoby, aby zapisać komentarze dokumentacji XML. Jeden to wystarczy napisać dokumentację bezpośrednio w komentarzu potrójnym ukośnikiem, bez użycia tagów XML. Jeśli to zrobisz, cały tekst jest traktowana jako podsumowania dokumentacji konstrukcję kodu, który poprzedza. Użyj tej metody, gdy chcesz napisać tylko krótkie podsumowanie każdego konstrukcji. Inna metoda jest udostępnić więcej dokumentacji ze strukturą za pomocą tagów XML. Druga metoda, można określić oddzielne informacje o krótkie podsumowanie, dodatkowe uwagi, dokumentacji dla każdego parametru, parametr typu i wyjątki zgłaszane i opis wartości zwracanej. W poniższej tabeli opisano tagi XML, które są rozpoznawane w komentarzach do kodu XML F#.
+Istnieją dwa sposoby, aby zapisać komentarze dokumentacji XML. Jeden to wystarczy napisać dokumentację bezpośrednio w komentarzu potrójnym ukośnikiem, bez użycia tagów XML. Jeśli to zrobisz, cały tekst jest traktowana jako podsumowania dokumentacji konstrukcję kodu, który poprzedza. Użyj tej metody, gdy chcesz napisać tylko krótkie podsumowanie każdego konstrukcji. Inna metoda jest udostępnić więcej dokumentacji ze strukturą za pomocą tagów XML. Druga metoda, można określić oddzielne informacje o krótkie podsumowanie, dodatkowe uwagi, dokumentacji dla każdego parametru, parametr typu i wyjątki zgłaszane i opis wartości zwracanej. W poniższej tabeli opisano tagi XML, które są rozpoznawane w komentarzach do kodu XML F #.
 
 |Składnia znacznika|Opis|
 |----------|-----------|

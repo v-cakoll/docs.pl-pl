@@ -1,6 +1,6 @@
 ---
 title: Skróty typów (F#)
-description: Więcej informacji na temat typu skróty F#, aby zapewnić bardziej opisową nazwę typu w celu zwiększenia czytelności kodu.
+description: 'Więcej informacji na temat typu skróty F #, aby zapewnić bardziej opisową nazwę typu w celu zwiększenia czytelności kodu.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -33,7 +33,7 @@ Skróty typów mogą zawierać parametrów ogólnych, tak jak w poniższym kodzi
 
 W poprzednim kodzie `Transform` jest skrótem typu reprezentujący funkcja, która przyjmuje jeden argument dowolnego typu i który zwraca pojedynczą wartość tego samego typu.
 
-Skróty typów nie są zachowywane w kodzie .NET Framework MSIL. W związku z tym gdy używasz zestawu F# w innym języku .NET Framework, należy użyć podstawowej nazwę typu skrótem typu.
+Skróty typów nie są zachowywane w kodzie .NET Framework MSIL. W związku z tym gdy używasz zestawu F # w innym języku .NET Framework, należy użyć podstawowej nazwę typu skrótem typu.
 
 Skróty typów można również w jednostkach miary. Aby uzyskać więcej informacji, zobacz [jednostki miary](units-of-measure.md).
 

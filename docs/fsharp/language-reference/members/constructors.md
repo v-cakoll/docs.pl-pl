@@ -1,6 +1,6 @@
 ---
 title: Konstruktorzy (F#)
-description: Dowiedz się, jak zdefiniować i używać konstruktorów języka F# do tworzenia i inicjowania obiektów klasy i struktury.
+description: 'Dowiedz się, jak zdefiniować i używać konstruktorów języka F # do tworzenia i inicjowania obiektów klasy i struktury.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

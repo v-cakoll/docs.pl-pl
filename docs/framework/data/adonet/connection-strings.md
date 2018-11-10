@@ -2,12 +2,12 @@
 title: Parametry połączenia w ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50409460"
 ---
 # <a name="connection-strings-in-adonet"></a>Parametry połączenia w ADO.NET
 
@@ -19,9 +19,9 @@ Ciąg połączenia jest rozdzielaną średnikami listę par klucz/wartość do p
   
     keyword1=value; keyword2=value;
   
-Słowa kluczowe nie jest rozróżniana wielkość liter. Jednakże, wartości, może być uwzględniana jest wielkość liter, w zależności od źródła danych. Słowa kluczowe i wartości mogą zawierać [białych znaków](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Początkowe i końcowe białe znaki, jest ignorowany słów kluczowych i nienotowane wartości.
+Słowa kluczowe nie jest rozróżniana wielkość liter. Jednakże, wartości, może być uwzględniana jest wielkość liter, w zależności od źródła danych. Słowa kluczowe i wartości mogą zawierać [białych znaków](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Początkowe i końcowe biały jest ignorowany słów kluczowych i nienotowane wartości.
 
-Jeśli wartość zawiera średnika, [znaków kontrolnych Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), lub wiodące lub końcowe białe znaki, muszą być ujęte w pojedyncze lub podwójne znaki cudzysłowu. Na przykład:
+Jeśli wartość zawiera średnika, [znaków kontrolnych Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), lub wiodące lub końcowe biały znak, muszą być ujęte w pojedyncze lub podwójne znaki cudzysłowu. Na przykład:
 
     Keyword=" whitespace  ";
     Keyword='special;character';

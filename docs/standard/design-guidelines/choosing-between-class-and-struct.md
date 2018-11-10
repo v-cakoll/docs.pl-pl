@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06661cb2c34d1da9085fa2129cb0c3307b99097e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7590d5628f4951a8c7c2199f0e954007ed9fa962
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865556"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757429"
 ---
 # <a name="choosing-between-class-and-struct"></a>Wybieranie między klasą i strukturą
 Jednym z decyzji projektowych podstawowe twarzy każdego Projektant framework jest czy zaprojektować typu jako klasę (typ odwołania) lub struct (typu wartości). Dobre zrozumienie różnic w zachowaniu typy odwołań i typy wartości jest sprawą kluczową podczas wprowadzania tego wyboru.  
@@ -28,7 +28,7 @@ Jednym z decyzji projektowych podstawowe twarzy każdego Projektant framework je
   
  Następnie tablice, odwołania, które typy są przydzielane poza wierszem, co oznacza tablicy, które elementy są tylko odwołania do wystąpienia typu referencyjnego znajdującej się na stosie. Tablicami typu wartości są przydzielane w tekście, co oznacza, że elementy tablicy są bieżące wystąpienia typu wartości. W związku z tym alokacji i liczbą tablicami typu wartości są znacznie tańsze niż alokacji i liczbą tablicami typu odwołania. Ponadto w większości przypadków tablicami typu wartości następującej liczby etapów stwierdzono znacznie lepiej miejscowość odwołania.  
   
- Następna różnica dotyczy użycia pamięci. Typy wartości Pobierz zapakowany, jeśli zrzutować na typ referencyjny lub jeden z interfejsów, które implementują. Otrzymają one rozpakowany Jeśli zrzutować do typu wartości. Ponieważ pola są obiekty, które są przydzielane na stosie i zebranych elementów bezużytecznych, zbyt dużo pakowania, jak i rozpakowania może mieć negatywny wpływ na stercie modułu odśmiecania pamięci i ostatecznie wydajność aplikacji.  Z kolei nie takich pakowania wypada rzutowania są typami odwołań.  
+ Następna różnica dotyczy użycia pamięci. Typy wartości Pobierz zapakowany, jeśli zrzutować na typ referencyjny lub jeden z interfejsów, które implementują. Otrzymają one rozpakowany Jeśli zrzutować do typu wartości. Ponieważ pola są obiekty, które są przydzielane na stosie i zebranych elementów bezużytecznych, zbyt dużo pakowania, jak i rozpakowania może mieć negatywny wpływ na stercie modułu odśmiecania pamięci i ostatecznie wydajność aplikacji.  Z kolei nie takich pakowania wypada rzutowania są typami odwołań. (Aby uzyskać więcej informacji, zobacz [opakowywanie i rozpakowywanie](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
   
  Następnie przypisania typu odwołania wykonywać kopiowanie odwołania, natomiast wartość typu przypisania skopiować całą wartość. Dlatego przypisania typów referencyjnych dużych są tańsze niż przypisania duża wartość.  
   

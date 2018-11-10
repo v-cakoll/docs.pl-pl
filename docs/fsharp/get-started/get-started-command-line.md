@@ -1,6 +1,6 @@
 ---
-title: 'Wprowadzenie do F # za pomocą narzędzia wiersza polecenia'
-description: 'Dowiedz się, jak tworzenie prostego rozwiązania wielu projektów F # za pomocą interfejsu wiersza polecenia platformy .NET Core w dowolnym systemie operacyjnym (Windows, macOs lub Linux).'
+title: Wprowadzenie do F# za pomocą narzędzia wiersza polecenia
+description: Dowiedz się, jak tworzenie prostego rozwiązania wielu projektów F# za pomocą interfejsu wiersza polecenia platformy .NET Core w dowolnym systemie operacyjnym (Windows, macOs lub Linux).
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,15 +9,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45673912"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>Wprowadzenie do F # za pomocą interfejsu wiersza polecenia platformy .NET Core
+# <a name="get-started-with-f-with-the-net-core-cli"></a>Wprowadzenie do F# za pomocą interfejsu wiersza polecenia platformy .NET Core
 
-W tym artykule opisano, jak możesz rozpocząć pracę z F # w dowolnym systemie operacyjnym (Windows, macOS lub Linux) przy użyciu interfejsu wiersza polecenia platformy .NET Core. Przechodzi on przez tworzenie rozwiązania wielu projektów za pomocą biblioteki klas, który jest wywoływany przez aplikację konsolową w języku.
+W tym artykule opisano, jak możesz rozpocząć pracę z F# w dowolnym systemie operacyjnym (Windows, macOS lub Linux) przy użyciu interfejsu wiersza polecenia platformy .NET Core. Przechodzi on przez tworzenie rozwiązania wielu projektów za pomocą biblioteki klas, który jest wywoływany przez aplikację konsolową w języku.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Aby rozpocząć, należy zainstalować najnowsze [zestawu .NET Core SDK](https://www.microsoft.com/net/download/).
 
-W tym artykule trzeba wiedzieć, jak za pomocą wiersza polecenia i tekst preferowanego edytora. Jeśli już nie używasz go, [programu Visual Studio Code](get-started-vscode.md) jest świetnym rozwiązaniem jako edytora tekstu w języku F #.
+W tym artykule trzeba wiedzieć, jak za pomocą wiersza polecenia i tekst preferowanego edytora. Jeśli już nie używasz go, [programu Visual Studio Code](get-started-vscode.md) jest świetnym rozwiązaniem jako edytora tekstu w języku F#.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Tworzenie prostego rozwiązania wielu projektów
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Następne kroki
 
-Następnie zapoznaj się z [samouczek programu F #](../tour.md) Aby dowiedzieć się więcej na temat różnych funkcji języka F #.
+Następnie zapoznaj się z [samouczek programu F#](../tour.md) Aby dowiedzieć się więcej na temat różnych funkcji języka F#.

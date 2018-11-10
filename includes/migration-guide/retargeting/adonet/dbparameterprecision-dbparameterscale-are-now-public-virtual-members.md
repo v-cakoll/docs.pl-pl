@@ -1,11 +1,11 @@
-### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a>DbParameter.Precision i DbParameter.Scale są teraz publicznych wirtualnych elementów członkowskich
+### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a>Właściwości DbParameter.Precision i DbParameter.Scale są teraz publicznymi wirtualnymi elementami członkowskimi
 
 |   |   |
 |---|---|
-|Szczegóły|<xref:System.Data.Common.DbParameter.Precision> i <xref:System.Data.Common.DbParameter.Scale> są implementowane jako właściwości publiczne wirtualne. Zastępują one odpowiedniej implementacji interfejsu jawnego <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision> i <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>.|
-|Sugestia|Podczas ponownego kompilowania dostawcy bazy danych programu ADO.NET, tych różnic będzie wymagać — słowo kluczowe "override", ma zostać zastosowany do właściwości dokładności i skali. Jest to potrzebne tylko wtedy, gdy ponowne kompilowanie składników; istniejące pliki binarne, będą nadal działać.|
-|Zakres|Pomocnicza|
+|Szczegóły|<xref:System.Data.Common.DbParameter.Precision> i <xref:System.Data.Common.DbParameter.Scale> są implementowane jako publiczne właściwości wirtualne. Zastępują one odpowiednie implementacje interfejsu jawnego <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision> i <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>.|
+|Sugestia|Podczas ponownego kompilowania dostawcy bazy danych programu ADO.NET te różnice będą wymagać zastosowania słowa kluczowego „override” do właściwości Precision i Scale. Jest to potrzebne tylko w przypadku ponownego kompilowania składników; istniejące pliki binarne będą nadal działać.|
+|Zakres|Mały|
 |Wersja|4.5.1|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.Data.Common.DbParameter.Precision?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbParameter.Scale?displayProperty=nameWithType></li></ul>|
 

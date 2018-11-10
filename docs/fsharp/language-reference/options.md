@@ -1,6 +1,6 @@
 ---
 title: Opcje (F#)
-description: 'Dowiedz się, jak użyć opcji F #, typów, gdy rzeczywista wartość nie może istnieć dla nazwanej wartości lub zmiennej.'
+description: Dowiedz się, jak użyć opcji F#, typów, gdy rzeczywista wartość nie może istnieć dla nazwanej wartości lub zmiennej.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "46479523"
 ---
 # <a name="options"></a>Opcje
 
-Typ opcji w F # jest używany, gdy rzeczywista wartość może nie istnieć dla nazwanej wartości lub zmiennej. Opcja ma podstawowy typ i może zawierać wartość tego typu lub nie może mieć wartość.
+Typ opcji w F# jest używany, gdy rzeczywista wartość może nie istnieć dla nazwanej wartości lub zmiennej. Opcja ma podstawowy typ i może zawierać wartość tego typu lub nie może mieć wartość.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -33,7 +33,7 @@ Opcje są często używane podczas wyszukiwania nie zwraca wynik dopasowania, ja
 
 W poprzednim kodzie listy jest rekursywnie przeszukiwane. Funkcja `tryFindMatch` przyjmuje funkcji predykatu `pred` zwracającego wartość typu Boolean i listę wyszukiwania. Jeśli zostanie znaleziony element, który spełnia predykat, kończy się rekursji i funkcja zwraca wartość jako opcja w wyrażeniu `Some(head)`. Rekursji kończy się po dopasowaniu pustej listy. W tym momencie wartość `head` nie została znaleziona, i `None` jest zwracana.
 
-Wiele F # funkcji biblioteki, które wyszukiwania kolekcji dla wartość, która może lub nie istnieje zwrócenia `option` typu. Zgodnie z Konwencją, te funkcje zaczynają się od `try` prefiksu, na przykład [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
+Wiele F# funkcji biblioteki, które wyszukiwania kolekcji dla wartość, która może lub nie istnieje zwrócenia `option` typu. Zgodnie z Konwencją, te funkcje zaczynają się od `try` prefiksu, na przykład [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
 
 Opcje również może być przydatne, gdy wartość może nie istnieć, na przykład, jeśli jest to możliwe, że wyjątek zostanie zgłoszony podczas próby utworzenia wartości. Pokazano to w poniższym przykładzie kodu.
 

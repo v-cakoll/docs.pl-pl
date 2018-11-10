@@ -1,6 +1,6 @@
 ---
 title: Funkcje (F#)
-description: 'Więcej informacji na temat funkcji w F # oraz jak F # obsługuje typowych konstrukcji programowania funkcjonalnego.'
+description: Więcej informacji na temat funkcji w F# oraz jak F# obsługuje typowych konstrukcji programowania funkcjonalnego.
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48839579"
 ---
 # <a name="functions"></a>Funkcje
 
-Funkcje są podstawową jednostką wykonywanie programu w dowolnym języku programowania. Tak jak w innych językach funkcja języka F # o nazwie, mogą mieć parametry i argumenty take i ma treść. F # obsługuje również konstrukcji programowania funkcjonalnego, takich jak traktowanie funkcje jako wartości, przy użyciu funkcji bez nazwy w wyrażeniach kompozycja funkcji w celu utworzenia nowych funkcji, funkcje rozwinięte i definicję niejawną funkcji za pomocą częściowego Stosowanie argumentów funkcji.
+Funkcje są podstawową jednostką wykonywanie programu w dowolnym języku programowania. Tak jak w innych językach funkcja języka F# o nazwie, mogą mieć parametry i argumenty take i ma treść. F# obsługuje również konstrukcji programowania funkcjonalnego, takich jak traktowanie funkcje jako wartości, przy użyciu funkcji bez nazwy w wyrażeniach kompozycja funkcji w celu utworzenia nowych funkcji, funkcje rozwinięte i definicję niejawną funkcji za pomocą częściowego Stosowanie argumentów funkcji.
 
 Funkcje są definiowane za pomocą `let` — słowo kluczowe, lub, jeśli funkcja jest cykliczna, `let rec` kombinacja słów kluczowych.
 
@@ -102,7 +102,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="partial-application-of-arguments"></a>Częściowe stosowanie argumentów
 
-Jeśli podasz mniej niż określoną liczbę argumentów, utworzysz nową funkcję, która oczekuje, że pozostałe argumenty. Ta metoda obsługi argumentów jest określany jako *currying* i jest to cecha funkcjonalności języków programowania, takich jak F #. Załóżmy, że pracujesz z dwóch rozmiarach potoku: jedna z nich ma promieniu **2.0** , a druga ma promieniu **3.0**. Można utworzyć funkcji, które określają ilość potoku w następujący sposób:
+Jeśli podasz mniej niż określoną liczbę argumentów, utworzysz nową funkcję, która oczekuje, że pozostałe argumenty. Ta metoda obsługi argumentów jest określany jako *currying* i jest to cecha funkcjonalności języków programowania, takich jak F#. Załóżmy, że pracujesz z dwóch rozmiarach potoku: jedna z nich ma promieniu **2.0** , a druga ma promieniu **3.0**. Można utworzyć funkcji, które określają ilość potoku w następujący sposób:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
@@ -120,7 +120,7 @@ Niektóre funkcje rekursywne może przepełnienie stosu program lub wykonać nie
 
 ## <a name="function-values"></a>Wartości funkcji
 
-W języku F # wszystkie funkcje są traktowane jako wartości. w rzeczywistości są one znane jako *funkcji wartości*. Ponieważ funkcje są wartościami, ich może służyć jako argumenty do innych funkcji lub w innych kontekstach których wartości są używane. Poniżej znajduje się przykład funkcji, która przyjmuje wartość funkcji jako argumentem:
+W języku F# wszystkie funkcje są traktowane jako wartości. w rzeczywistości są one znane jako *funkcji wartości*. Ponieważ funkcje są wartościami, ich może służyć jako argumenty do innych funkcji lub w innych kontekstach których wartości są używane. Poniżej znajduje się przykład funkcji, która przyjmuje wartość funkcji jako argumentem:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
@@ -146,7 +146,7 @@ Wyrażenia lambda są definiowane za pomocą `fun` — słowo kluczowe. Wyrażen
 
 ## <a name="function-composition-and-pipelining"></a>Kompozycja funkcji i przetwarzanie potokowe
 
-Funkcje w języku F # może składać się z innych funkcji. Kompozycja dwie funkcje **function1** i **function2** jest inną funkcję, która reprezentuje stosowania **function1** po zastosowaniu **function2**:
+Funkcje w języku F# może składać się z innych funkcji. Kompozycja dwie funkcje **function1** i **function2** jest inną funkcję, która reprezentuje stosowania **function1** po zastosowaniu **function2**:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 

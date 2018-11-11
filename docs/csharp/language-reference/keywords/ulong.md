@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-ms.openlocfilehash: a68ebe1d382bf39e945d333a728fad66934fd286
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9a1e7457812bac64b8ef27141a174dc01ca466c3
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505180"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50980849"
 ---
 # <a name="ulong-c-reference"></a>ulong (odwołanie w C#)
 
@@ -93,7 +93,8 @@ ulong y = (ulong)3.0;
  Aby uzyskać więcej informacji na temat reguł niejawnych konwersji liczbowych, zobacz [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Aby uzyskać więcej informacji, zobacz [typów całkowitych](~/_csharplang/spec/types.md#integral-types) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz też
 

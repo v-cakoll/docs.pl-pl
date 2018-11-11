@@ -1,6 +1,6 @@
 ---
 title: Dziedziczenie (F#)
-description: 'Dowiedz się, jak określić dziedziczenia relacji F # za pomocą słowa kluczowego "inherit".'
+description: Dowiedz się, jak określić dziedziczenia relacji F# za pomocą słowa kluczowego "inherit".
 ms.date: 05/16/2016
 ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -34,7 +34,7 @@ Słowo kluczowe `base` jest dostępna w klasach pochodnych i odnosi się do wyst
 
 ## <a name="virtual-methods-and-overrides"></a>Metody wirtualne i zastąpień
 
-Metody wirtualne (i właściwości) działają trochę inaczej w języku F # w porównaniu do innych języków platformy .NET. Aby zadeklarować nowa wirtualna składowa, należy użyć `abstract` — słowo kluczowe. W tym niezależnie od tego, czy zapewniasz Domyślna implementacja tej metody. Ten sposób kompletną definicję metody wirtualnej w klasie bazowej ze wzorcem to:
+Metody wirtualne (i właściwości) działają trochę inaczej w języku F# w porównaniu do innych języków platformy .NET. Aby zadeklarować nowa wirtualna składowa, należy użyć `abstract` — słowo kluczowe. W tym niezależnie od tego, czy zapewniasz Domyślna implementacja tej metody. Ten sposób kompletną definicję metody wirtualnej w klasie bazowej ze wzorcem to:
 
 ```fsharp
 abstract member [method-name] : [type]

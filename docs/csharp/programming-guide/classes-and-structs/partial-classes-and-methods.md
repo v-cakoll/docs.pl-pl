@@ -6,11 +6,11 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 21350c28f5fcce812f47742bebe07f5bcdf842f1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2975b9e79824560c711e96382a9ccc03bdc72810
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43521172"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Klasy częściowe i metody (Przewodnik programowania w języku C#)
@@ -158,7 +158,8 @@ partial void onNameChanged()
 -   Możesz wprowadzić [delegować](../../../csharp/language-reference/keywords/delegate.md) do metody częściowej, które zostały zdefiniowane i zaimplementowane, ale nie do metody częściowej, który tylko został zdefiniowany.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Aby uzyskać więcej informacji, zobacz [typów częściowych](~/_csharplang/spec/classes.md#partial-types) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz też
 

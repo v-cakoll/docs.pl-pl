@@ -1,6 +1,6 @@
 ---
 title: 'Wyjątki: failwith — Funkcja (F#)'
-description: 'Dowiedz się, jak funkcja failwith "—" generuje wyjątek F #.'
+description: Dowiedz się, jak funkcja failwith "—" generuje wyjątek F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 69a2eb69e0157d3bde8cb8884cb0ae960634dddc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "43863432"
 ---
 # <a name="exceptions-the-failwith-function"></a>Wyjątki: failwith — Funkcja
 
-`failwith` Funkcja generuje wyjątek F #.
+`failwith` Funkcja generuje wyjątek F#.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,7 +23,7 @@ failwith error-message-string
 
 *Ciąg komunikatu o błędzie* w poprzedniej składni jest ciągiem literału lub wartości typu `string`. Staje się `Message` właściwości wyjątku.
 
-Wyjątek, który jest generowany przez `failwith` jest `System.Exception` wyjątek, który jest odwołaniem o nazwie `Failure` w kodzie języka F #. Poniższy kod ilustruje sposób korzystania z `failwith` do zgłoszenia wyjątku.
+Wyjątek, który jest generowany przez `failwith` jest `System.Exception` wyjątek, który jest odwołaniem o nazwie `Failure` w kodzie języka F#. Poniższy kod ilustruje sposób korzystania z `failwith` do zgłoszenia wyjątku.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6001.fs)]
 

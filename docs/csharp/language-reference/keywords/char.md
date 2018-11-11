@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 95ecfaaf1397f7a4598faba6528b38170062145a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4d4e4719eabf7dbe31a59cc2e1e3d3d9019f080d
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43742029"
 ---
 # <a name="char-c-reference"></a>char (odwołanie w C#)
@@ -36,9 +36,9 @@ A `char` mogą być niejawnie konwertowane na [ushort](../../../csharp/language-
 
 <xref:System.Char?displayProperty=nameWithType> Typu udostępnia kilka metod statycznych do pracy z `char` wartości.
 
-## <a name="c-language-specification"></a>specyfikacja języka C#
+## <a name="c-language-specification"></a>specyfikacja języka C#  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Aby uzyskać więcej informacji, zobacz [typów całkowitych](~/_csharplang/spec/types.md#integral-types) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 

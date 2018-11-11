@@ -9,12 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424392"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214197"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżki plików w systemach Windows
 
@@ -202,7 +202,7 @@ Należy pamiętać o możliwości ścieżki ponad `MAX_PATH` znaków [GetFullPat
 Cecha systemu plików Windows, który użytkowników innych niż Windows i deweloperów Znajdź mylące jest tej ścieżki i nazwy katalogów jest rozróżniana wielkość liter. Oznacza to, że nazwy katalogów i plików uwzględniają wielkość liter w wyrazie ciągi tekstowe używane podczas ich tworzenia. Na przykład wywołanie metody
 
 ```csharp
-Directory.Create(TeStDiReCtOrY);
+Directory.Create("TeStDiReCtOrY");
 ```
 Tworzy katalog o nazwie katalog testowy. W przypadku zmiany nazwy, katalog lub plik, aby zmienić jego przypadek, nazwa pliku lub katalogu odzwierciedla wielkość liter w ciągu używany, gdy można zmienić jego nazwę. Na przykład poniższy kod zmienia nazwę pliku o nazwie jako się jako:
 

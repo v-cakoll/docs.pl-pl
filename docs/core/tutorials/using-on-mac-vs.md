@@ -5,11 +5,11 @@ author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
 ms.openlocfilehash: f751e7532e9627de3d3733476f7214654089e468
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170734"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744117"
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Wprowadzenie do platformy .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 

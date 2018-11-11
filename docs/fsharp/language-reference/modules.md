@@ -1,6 +1,6 @@
 ---
 title: Moduły (F#)
-description: 'Dowiedz się, jak moduł F # to grupa kodzie języka F #, takie jak wartości, typy i wartości funkcji, w programie F #.'
+description: Dowiedz się, jak moduł F# to grupa kodzie języka F#, takie jak wartości, typy i wartości funkcji, w programie F#.
 ms.date: 04/24/2017
 ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45528529"
 ---
 # <a name="modules"></a>Moduły
 
-W kontekście języka F # *modułu* to grupa kodzie języka F #, takie jak wartości, typy i wartości funkcji, w programie F #. Grupowanie kodu w modułach pomaga zachować kod pokrewny ze sobą oraz uniknąć konfliktów nazw w programie.
+W kontekście języka F# *modułu* to grupa kodzie języka F#, takie jak wartości, typy i wartości funkcji, w programie F#. Grupowanie kodu w modułach pomaga zachować kod pokrewny ze sobą oraz uniknąć konfliktów nazw w programie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,7 +26,7 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Uwagi
 
-Moduł F # to grupa kodu konstrukcji F #, takie jak typy wartości, wartości funkcji i kodu w `do` powiązania. Są one zaimplementowane jako wspólnej klasy środowiska uruchomieniowego (języka wspólnego CLR) języka, która ma tylko statyczne elementy członkowskie. Istnieją dwa typy deklaracje modułów, w zależności od tego, czy cały plik znajduje się w module: deklaracji najwyższego poziomu modułu i deklaracja modułu lokalnego. Deklaracji najwyższego poziomu modułu obejmuje cały plik w module. Deklaracji najwyższego poziomu modułu może znajdować się tylko jako pierwszej deklaracji w pliku.
+Moduł F# to grupa kodu konstrukcji F#, takie jak typy wartości, wartości funkcji i kodu w `do` powiązania. Są one zaimplementowane jako wspólnej klasy środowiska uruchomieniowego (języka wspólnego CLR) języka, która ma tylko statyczne elementy członkowskie. Istnieją dwa typy deklaracje modułów, w zależności od tego, czy cały plik znajduje się w module: deklaracji najwyższego poziomu modułu i deklaracja modułu lokalnego. Deklaracji najwyższego poziomu modułu obejmuje cały plik w module. Deklaracji najwyższego poziomu modułu może znajdować się tylko jako pierwszej deklaracji w pliku.
 
 W składni deklaracji najwyższego poziomu modułu opcjonalnego *kwalifikowaną przestrzeń nazw* jest sekwencji nazwy zagnieżdżone przestrzenie nazw, która zawiera moduł. Kwalifikowanych przestrzeni nazw ma być uprzednio zadeklarowany.
 
@@ -44,7 +44,7 @@ Jeśli masz wiele modułów w pliku dla każdego modułu, należy użyć deklara
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6603.fs)]
 
-Jeśli masz wiele plików w projekcie lub w pojedynczej kompilacji lub jeśli tworzysz biblioteki, musi zawierać deklaracji przestrzeni nazw lub module deklaracji w górnej części pliku. Kompilator F # Określa tylko nazwy modułu niejawnie, gdy istnieje tylko jeden plik w wierszu polecenia kompilacji lub projektu, w przypadku tworzenia aplikacji.
+Jeśli masz wiele plików w projekcie lub w pojedynczej kompilacji lub jeśli tworzysz biblioteki, musi zawierać deklaracji przestrzeni nazw lub module deklaracji w górnej części pliku. Kompilator F# Określa tylko nazwy modułu niejawnie, gdy istnieje tylko jeden plik w wierszu polecenia kompilacji lub projektu, w przypadku tworzenia aplikacji.
 
 *Modyfikator dostępności* może być jedną z następujących czynności: `public`, `private`, `internal`. Aby uzyskać więcej informacji, zobacz [kontroli dostępu](access-control.md). Wartość domyślna jest publiczny.
 
@@ -88,7 +88,7 @@ Jeśli chcesz, aby cały kod w pliku w pojedynczym module zewnętrzne i wewnętr
 
 ## <a name="recursive-modules"></a>Moduły cykliczne
 
-F # 4.1 wprowadzono pojęcie modułów, które umożliwia wzajemnie się być typem rekursywnym wszystkie zawarte kodu.  Odbywa się za pośrednictwem `module rec`.  Korzystanie z `module rec` mogą złagodzić ich niektóre problemy, które nie jest możliwość pisania kodu wzajemnie referencyjne typy i moduły.  Oto przykład:
+F# 4.1 wprowadzono pojęcie modułów, które umożliwia wzajemnie się być typem rekursywnym wszystkie zawarte kodu.  Odbywa się za pośrednictwem `module rec`.  Korzystanie z `module rec` mogą złagodzić ich niektóre problemy, które nie jest możliwość pisania kodu wzajemnie referencyjne typy i moduły.  Oto przykład:
 
 ```fsharp
 module rec RecursiveModule =
@@ -128,12 +128,12 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Należy pamiętać, że wyjątek `DontSqueezeTheBananaException` i klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i klasa `Banana` także odwoływać się do siebie.  To nie jest możliwe do wyrażenia w języku F #, jeśli usunięto `rec` słowo kluczowe z `RecursiveModule` modułu.
+Należy pamiętać, że wyjątek `DontSqueezeTheBananaException` i klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i klasa `Banana` także odwoływać się do siebie.  To nie jest możliwe do wyrażenia w języku F#, jeśli usunięto `rec` słowo kluczowe z `RecursiveModule` modułu.
 
-Ta funkcja jest również możliwe w [przestrzenie nazw](namespaces.md) z F # 4.1.
+Ta funkcja jest również możliwe w [przestrzenie nazw](namespaces.md) z F# 4.1.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)  
 - [Przestrzenie nazw](namespaces.md)  
-- [F # RFC FS-1009 — Zezwalaj na wzajemnie referencyjne typy i moduły za pośrednictwem szerszego zakresu w plikach](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
+- [F# RFC FS-1009 — Zezwalaj na wzajemnie referencyjne typy i moduły za pośrednictwem szerszego zakresu w plikach](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  

@@ -4,12 +4,12 @@ description: Zalecenia dotyczące najlepszych rozwiązań do publikowania NuGet 
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0602712311411ef3d59825bec8c5e550bc8d8265
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: e0244d2a9d09382c289c74a45969bca0a1311445
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337659"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757312"
 ---
 # <a name="publishing-a-nuget-package"></a>Publikowanie pakietu NuGet
 
@@ -17,7 +17,7 @@ Pakiety NuGet są publikowane i używane z repozytoriów pakietów. NuGet.org na
 
 * **[NuGet.org](https://www.nuget.org/)**  głównej repozytorium online dla pakietów NuGet. Wszystkie pakiety w witrynie NuGet.org są publicznie dostępne dla wszystkich użytkowników. Domyślnie program Visual Studio zawiera NuGet.org jako źródło pakietów i wielu deweloperów NuGet.org znajduje się tylko repozytorium pakietów, który będzie interakcji z. NuGet.org to najlepsze miejsce do publikowania stabilne pakiety i pakiety w wersji wstępnej, które ma być opinii społeczności.
 
-* **[MyGet](https://myget.org/)**  repozytorium usługa obsługuje [bezpłatny pakiet niestandardowych źródeł danych na potrzeby projektów typu open-source](https://www.myget.org/opensource). MyGet publiczne źródło niestandardowe to idealne miejsce do publikowania utworzone przez usługę CI pakiety w wersji wstępnej. MyGet także kanały prywatne dostępnym w sprzedaży.
+* **[MyGet](https://myget.org/)**  to usługa repozytorium, która obsługuje źródła danych pakiet niestandardowy w przypadku projektów typu open source. MyGet publiczne źródło niestandardowe to idealne miejsce do publikowania utworzone przez usługę CI pakiety w wersji wstępnej. MyGet także kanały prywatne dostępnym w sprzedaży.
 
 * A **[lokalne źródła danych](/nuget/hosting-packages/local-feeds)** umożliwia traktowanie folderem, takich jak repozytorium pakietów i sprawia, że `*.nupkg` pliki w folderze dostępne przez NuGet. Lokalne źródło danych jest przydatna przy testowaniu pakietu NuGet przed jego opublikowaniem NuGet.org.
 

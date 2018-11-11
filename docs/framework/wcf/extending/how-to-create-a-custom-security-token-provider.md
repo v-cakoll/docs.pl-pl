@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 ms.openlocfilehash: 88200b41346a18732647602fb16774610014330c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185134"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744174"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Porady: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń
 W tym temacie pokazano, jak utworzyć nowe typy tokenów przy użyciu niestandardowego dostawcy tokenów zabezpieczeń i sposobu integracji dostawcę z Menedżer tokenów zabezpieczeń niestandardowych.  

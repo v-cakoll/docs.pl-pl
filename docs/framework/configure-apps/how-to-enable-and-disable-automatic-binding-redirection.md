@@ -1,26 +1,38 @@
 ---
-title: 'Porady: włączanie i wyłączanie automatycznego przekierowania powiązań'
-ms.date: 09/12/2018
+title: Włączanie lub wyłączanie wygenerowany automatycznie przekierowania powiązań
+ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9b9c9cbdb89ccf67942dcccee37ea410c6fa39a5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036204"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50980836"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Porady: włączanie i wyłączanie automatycznego przekierowania powiązań
 
-Podczas kompilowania aplikacji w programie Visual Studio, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] i nowsze wersje, przekierowania powiązań mogą być automatycznie dodawane do pliku konfiguracyjnego aplikacji w celu zastąpienia ujednolicenia zestawów. Przekierowania powiązań są dodawane, jeśli aplikacja lub jej składniki odwołują się do więcej niż jednej wersji tego samego zestawu, nawet jeśli przekierowania powiązań zostaną określone ręcznie w pliku konfiguracji aplikacji. Funkcja automatycznego przekierowywania powiązań dotyczy tradycyjnych aplikacji komputerowych i aplikacji sieci web, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] lub nowszej, chociaż zachowanie jest nieco inne w przypadku aplikacji sieci web. Można włączyć automatyczne przekierowywanie połączeń, jeśli są używane aplikacje, których platformami docelowymi są poprzednie wersje programu .NET Framework, ale można też wyłączyć tę funkcję, aby używać tworzonych ręcznie przekierowań powiązań.
+Podczas kompilowania aplikacji w programie Visual Studio, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] i nowsze wersje, przekierowania powiązań mogą być automatycznie dodawane do pliku konfiguracyjnego aplikacji w celu zastąpienia ujednolicenia zestawów. Przekierowania powiązań są dodawane, jeśli aplikacja lub jej składniki odwołują się do więcej niż jednej wersji tego samego zestawu, nawet jeśli przekierowania powiązań zostaną określone ręcznie w pliku konfiguracji aplikacji. Funkcja automatycznego przekierowywania powiązań dotyczy aplikacje komputerowe i aplikacje sieci web, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] lub nowszej, chociaż zachowanie jest nieco inne w przypadku aplikacji sieci web. Można włączyć automatyczne przekierowywanie powiązań, jeśli masz istniejące aplikacje w tym docelowymi są poprzednie wersje programu .NET Framework lub wyłączyć tę funkcję, jeśli chcesz ręcznie tworzyć przekierowania powiązań.
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Wyłączyć automatyczne przekierowywanie powiązań w aplikacjach klasycznych
 
-Automatyczne przekierowania powiązań są domyślnie włączone dla tradycyjnych aplikacji komputerowych, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] i nowszych wersjach. Przekierowania powiązań są dodawane do wyjściowego pliku konfiguracji (app.config), gdy aplikacja jest kompilowana, co powoduje zastąpienie ujednolicenia zestawów, które mogłoby mieć miejsce. Źródłowy plik app.config nie jest modyfikowany. Tę funkcję można wyłączyć, modyfikując plik projektu dla aplikacji.
+Automatyczne przekierowania powiązań są domyślnie włączone dla aplikacji komputerowych Windows, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] i nowszych wersjach. Przekierowania powiązań są dodawane do konfiguracji danych wyjściowych (**app.config**) plik, gdy aplikacja jest kompilowana i zastąpienia ujednolicenia zestawów, które mogłoby mieć miejsce. Źródło **app.config** plik nie został zmodyfikowany. Tę funkcję można wyłączyć, modyfikując plik projektu dla aplikacji lub usunięcie zaznaczenia pola wyboru w oknie właściwości projektu w programie Visual Studio.
+
+### <a name="disable-through-project-properties"></a>Wyłączyć za pomocą właściwości projektu
+
+Jeśli masz program Visual Studio 2017 w wersji 15.7 lub nowszej, łatwo można wyłączyć przekierowania powiązań automatycznie wygenerowana na stronach właściwości projektu.
+
+1. Kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i wybierz **właściwości**.
+
+2. Na **aplikacji** strony, usuń zaznaczenie pola wyboru **automatycznego generowania przekierowania powiązań** opcji.
+
+3. Naciśnij klawisz **Ctrl**+**S** można zapisać zmiany.
+
+### <a name="disable-manually-in-the-project-file"></a>Wyłącz ręcznie w pliku projektu
 
 1. Otwórz plik projektu do edycji przy użyciu jednej z następujących metod:
 
@@ -75,9 +87,9 @@ Automatyczne przekierowania powiązań w istniejących aplikacjach można włąc
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Włącz automatyczne przekierowania powiązań w aplikacjach sieci web
 
-Automatyczne przekierowania powiązań są w przypadku aplikacji internetowych implementowane w inny sposób. Ponieważ źródłowy plik konfiguracji (web.config) musi zostać zmodyfikowany dla aplikacji internetowych, przekierowania powiązań nie są automatycznie dodawane do pliku konfiguracji. Jednak program Visual Studio powiadamia o konfliktach powiązań, więc można dodać przekierowania powiązań, aby rozwiązać konflikty. Ponieważ zawsze monit o dodanie przekierowań powiązań, nie trzeba jawnie wyłączać tej funkcji dla aplikacji sieci web.
+Automatyczne przekierowania powiązań są w przypadku aplikacji internetowych implementowane w inny sposób. Ponieważ konfiguracja źródła (**web.config**) plik musi zostać zmodyfikowany dla aplikacji sieci web, przekierowania powiązań nie są automatycznie dodawane do pliku konfiguracji. Jednak program Visual Studio powiadamia o konfliktach powiązań, więc można dodać przekierowania powiązań, aby rozwiązać konflikty. Ponieważ zawsze monit o dodanie przekierowań powiązań, nie trzeba jawnie wyłączać tej funkcji dla aplikacji sieci web.
 
-Aby dodać przekierowania powiązań do pliku web.config:
+Aby dodać przekierowania powiązań do **web.config** pliku:
 
 1. W programie Visual Studio skompiluj aplikację i sprawdź, czy występują ostrzeżenia kompilacji.
 
@@ -85,7 +97,7 @@ Aby dodać przekierowania powiązań do pliku web.config:
 
 2. Jeśli występują konflikty powiązań zestawów, zostanie wyświetlone ostrzeżenie. Kliknij dwukrotnie ostrzeżenie, lub Wybierz ostrzeżenie i naciśnij klawisz **Enter**.
 
-   Zostanie wyświetlone okno dialogowe umożliwiające automatyczne dodanie niezbędnych przekierowań powiązań do źródłowego pliku web.config.
+   Okno dialogowe, która umożliwia automatyczne dodawanie powiązania niezbędne przekierowuje do źródła **web.config** pojawia się w pliku.
 
    ![Okno dialogowe uprawnienia przekierowania powiązania](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 

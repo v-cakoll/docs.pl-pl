@@ -4,11 +4,11 @@ description: Polecenia publikowania dotnet publikuje projekt .NET Core w katalog
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: a60777d613573076f41fba3e5ed610b236884063
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 17bacc92eea90072b95b2d42a87cb57e9fa0be67
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43511427"
 ---
 # <a name="dotnet-publish"></a>Publikowanie DotNet
@@ -58,7 +58,7 @@ dotnet publish [-h|--help]
 
 `PROJECT`
 
-Projekt do opublikowania. Jeśli nie zostanie określony, jego wartość domyślna w bieżącym katalogu.
+Projekt do opublikowania. Ścieżka i nazwa pliku jest [ C# ](csproj.md), F#, lub plik projektu języka Visual Basic lub ścieżkę do katalogu, który zawiera C#, F#, lub plik projektu języka Visual Basic. Jeśli nie zostanie określony, jego wartość domyślna w bieżącym katalogu.
 
 ## <a name="options"></a>Opcje
 

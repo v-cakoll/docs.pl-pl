@@ -3,11 +3,11 @@ title: Wyświetlanie dzienników komunikatów
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199789"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757416"
 ---
 # <a name="viewing-message-logs"></a>Wyświetlanie dzienników komunikatów
 W tym temacie opisano, jak można wyświetlić dzienniki komunikatów.  

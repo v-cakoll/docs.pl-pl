@@ -1,6 +1,6 @@
 ---
 title: Struktury (F#)
-description: 'Dowiedz się więcej o F # struktury, typ obiektu compact, który jest często bardziej efektywne niż klasy dla typów z małą ilością danych i prostego zachowanie.'
+description: Dowiedz się więcej o F# struktury, typ obiektu compact, który jest często bardziej efektywne niż klasy dla typów z małą ilością danych i prostego zachowanie.
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -64,7 +64,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` nie oznacza `Struct`. Zarówno musi być obecny w typie.
 
-Element "`byref`— takich jak" struct w języku F # to typ wartości powiązanym ze stosu. Nigdy nie zostanie przydzielona na stosie zarządzanym. A `byref`— takie jak struktura jest przydatne w przypadku programowania o wysokiej wydajności, jak są wymuszane za pomocą zestawu silne testów o okresie istnienia i -capture. Dostępne są następujące reguły:
+Element "`byref`— takich jak" struct w języku F# to typ wartości powiązanym ze stosu. Nigdy nie zostanie przydzielona na stosie zarządzanym. A `byref`— takie jak struktura jest przydatne w przypadku programowania o wysokiej wydajności, jak są wymuszane za pomocą zestawu silne testów o okresie istnienia i -capture. Dostępne są następujące reguły:
 
 * One może służyć jako parametry funkcji, parametrów metody, zmienne lokalne, metoda zwraca wartość.
 * Nie mogą one być statyczne lub wystąpieniami elementów członkowskich klasy lub struktury normalne.
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` nie oznacza `Struct`. Musisz dodać oba mieć `IsReadOnly` struktury.
 
-Użyj tego atrybutu emituje metadane, umożliwiając F # i C#, aby traktować jako `inref<'T>` i `in ref`, odpowiednio.
+Użyj tego atrybutu emituje metadane, umożliwiając F# i C#, aby traktować jako `inref<'T>` i `in ref`, odpowiednio.
 
 Definiowanie wartości modyfikowalne wewnątrz struktury tylko do odczytu powoduje błąd.
 

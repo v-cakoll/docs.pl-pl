@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2e792a230ccead5d9a73f9b78a83d57738c31085
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44260074"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Tworzenie i zgłaszanie wyjątków (Przewodnik programowania w języku C#)
@@ -62,11 +62,12 @@ Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania p
  Nowe właściwości powinny być dodane tylko do klasy wyjątku, gdy dane, które zapewniają przydaje się do rozpoznawania wyjątku. Jeśli zostaną dodane do klasy pochodnej wyjątek `ToString()` powinna zostać zastąpiona w celu zwracania informacji dodano.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Aby uzyskać więcej informacji, zobacz [wyjątki](~/_csharplang/spec/exceptions.md) i [instrukcji "throw"](~/_csharplang/spec/statements.md#the-throw-statement) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)  
-- [Hierarchia wyjątków](https://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+- [Hierarchia wyjątków](../../../standard/exceptions/index.md)  
 - [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)

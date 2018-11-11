@@ -3,11 +3,11 @@ title: Przewodnik dotyczący współpracy protokołów usług sieci Web
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49995402"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744551"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Przewodnik dotyczący współpracy protokołów usług sieci Web
 Windows Communication Foundation (WCF) implementuje wiele protokołów usług sieci Web. Wiele z tych protokołów zawierają wiele opcji i punkty rozszerzalności w gestii implementujący. Ten temat zawiera listę protokołów usług sieci Web, który implementuje usługi WCF. Inne tematy w tej sekcji Podaj szczegóły implementacji dla każdego protokołu, obsługiwane.  

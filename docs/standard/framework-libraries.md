@@ -1,62 +1,62 @@
 ---
 title: Biblioteki Framework
-description: Dowiedz się, jak biblioteki zapewniają implementacji dla wielu typów ogólnych i specyficznych dla aplikacji, algorytmów i funkcji narzędzia.
+description: Dowiedz się, jak dostarczać implementacje bibliotek dla wielu typów ogólnych i specyficznych dla aplikacji, algorytmów i funkcjonalności narzędzie.
 author: richlander
 ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: dd8baa481e51aa44c4c884b4b165bdf319ac1c4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b5099c73264f3175aa05094f4460c1c97774533
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576285"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743966"
 ---
 # <a name="framework-libraries"></a>Biblioteki Framework
 
-.NET ma rozszerzania zestaw standardowych bibliotek klas, określany jako klasy podstawowej biblioteki (podstawowy zestaw) albo bibliotek klas framework (pełny zestaw). Te biblioteki zapewniają implementacji dla wielu typów ogólnych i specyficznych dla aplikacji, algorytmów i funkcji narzędzia. Biblioteki zarówno komercyjnej, jak i społeczności bazując na framework biblioteki klas, zapewniając łatwy w użyciu standardowych bibliotek dla wielu różnych zadań wykonywanych w firmie.
+.NET zawiera szerokiej gamy standardowych bibliotek klas, określane jako bibliotek klas bazowych (podstawowy zestaw) lub biblioteki klas framework (kompletny zestaw). Te biblioteki zapewniają implementacje dla wielu typów ogólnych i specyficznych dla aplikacji, algorytmów i funkcjonalności narzędzie. Komercyjnych i społeczności biblioteki są oparte na bibliotek klas framework, zapewniając łatwy w użyciu standardowych bibliotek dla wielu różnych zadań wykonywanych w firmie.
 
-Podzbiór biblioteki te są dostarczane z każdej implementacji .NET. Oczekiwano Base API biblioteki klas (BCL) z implementacji .NET, zarówno ponieważ deweloperzy będą potrzebne, a popularnych bibliotek będą potrzebne do uruchomienia. Specyficzny dla aplikacji biblioteki powyżej BCL, takich jak ASP.NET, nie będzie dostępny dla wszystkich implementacji .NET.
+Podzbiór biblioteki te są dostarczane z każdej implementacji .NET. Podstawowej klasy biblioteki (BCL) interfejsy API powinny z implementacji .NET, zarówno ponieważ deweloperzy będą chcieli je i popularnych bibliotek będą one potrzebne do uruchomienia. Biblioteki charakterystyczne dla aplikacji powyżej BCL, takich jak ASP.NET, nie będzie dostępny w wszystkich implementacji .NET.
 
-## <a name="base-class-libraries"></a>Biblioteki klasy podstawowej
+## <a name="base-class-libraries"></a>Biblioteki klas bazowych
 
-BCL zapewnia najbardziej podstawowym typy i funkcje narzędzia i jest podstawą wszystkich innych bibliotek klas .NET. One mają na celu dostarczenie bardzo ogólne implementacje bez żadnych odchylenia do dowolnego obciążenia. Wydajność jest zawsze ważną kwestią, ponieważ aplikacje łączyli konkretne zasady, takie jak małych opóźnieniach do wysokiej przepustowości lub do użycia procesora CPU małej ilości pamięci. Te biblioteki mają być zazwyczaj wysokiej wydajności i podejmij podejście podstaw bliski zgodnie z tymi różnych problemów z wydajnością. Dla większości aplikacji ta metoda została dość pomyślnie.
+BCL udostępnia najbardziej podstawowe typy i funkcje narzędzia i są podstawą wszystkie inne biblioteki klas platformy .NET. One na celu dostarczać implementacje bardzo ogólny bez żadnych odchylenie do dowolnych obciążeń. Wydajność zawsze jest ważną kwestią, ponieważ aplikacje preferować konkretne zasady, takie jak o małych opóźnieniach do wysokiej przepływności lub małej ilości pamięci do użycia procesora CPU na niskim. Biblioteki te są przeznaczone do ogólnie można o wysokiej wydajności i podejścia podstaw bliski według tych różnych problemów z wydajnością. W przypadku większości aplikacji ta metoda zakończy się powodzeniem dość.
 
 ## <a name="primitive-types"></a>Typy pierwotne
 
-.NET zawiera zbiór typy pierwotne, które są używane (w różnym stopniu) w wszystkie programy. Te typy zawierać dane, takie jak numery, ciągów i bajtów dowolnych obiektów. W języku C# zawiera słowa kluczowe dla tych typów. Przykładowy zestaw tych typów jest poniżej dopasowania słów kluczowych C#.
+.NET zawiera zestaw typów pierwotnych, które są używane (w różnym stopniu) we wszystkich programach. Te typy zawierać dane, takie jak liczby, ciągi, bajtów i dowolnych obiektów. C# Język zawiera słowa kluczowe dla tych typów. Przykładowy zestaw te typy są wymienione poniżej pod warunkiem za pomocą dopasowywania C# słów kluczowych.
 
-* <xref:System.Object?displayProperty=nameWithType> ([obiektu](../csharp/language-reference/keywords/object.md))-system typów ultimate klasy podstawowej w środowisku CLR. Jest elementem głównym hierarchii typów.
-* <xref:System.Int16?displayProperty=nameWithType> ([krótki](../csharp/language-reference/keywords/short.md))-A 16-bitowych podpisany typu Liczba całkowita. Niepodpisane <xref:System.UInt16> również istnieje.
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md))-A 32-bitowej podpisanej typu Liczba całkowita. Niepodpisane [UInt32](../csharp/language-reference/keywords/uint.md) również istnieje.
-* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)) — typ zmiennoprzecinkowy A 32-bitowych.
-* <xref:System.Decimal?displayProperty=nameWithType> ([dziesiętną](../csharp/language-reference/keywords/decimal.md))-A 128-bitowego typu decimal.
-* <xref:System.Byte?displayProperty=nameWithType> ([bajtów](../csharp/language-reference/keywords/byte.md))-niepodpisane 8-bitową liczbę całkowitą reprezentującą bajtów pamięci.
+* <xref:System.Object?displayProperty=nameWithType> ([obiektu](../csharp/language-reference/keywords/object.md)) — system typów ultimate klasy podstawowej w środowisku CLR. Jest głównym hierarchii typów.
+* <xref:System.Int16?displayProperty=nameWithType> ([krótki](../csharp/language-reference/keywords/short.md))-16-bitowe podpisane typu Liczba całkowita. Niepodpisane <xref:System.UInt16> istnieje również.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md))-32-bitowe podpisane typu Liczba całkowita. Niepodpisane [UInt32](../csharp/language-reference/keywords/uint.md) istnieje również.
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)) — typ zmiennoprzecinkowy 32-bitowych.
+* <xref:System.Decimal?displayProperty=nameWithType> ([dziesiętna](../csharp/language-reference/keywords/decimal.md))-128-bitowego typu dziesiętnego.
+* <xref:System.Byte?displayProperty=nameWithType> ([bajtów](../csharp/language-reference/keywords/byte.md))-8-bitowa liczba całkowita bez znaku reprezentuje bajtów pamięci.
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) — typu boolean, która reprezentuje `true` lub `false`.
-* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md))-A 16-bitowych typ liczbowy reprezentujący znak Unicode.
-* <xref:System.String?displayProperty=nameWithType> ([ciąg](../csharp/language-reference/keywords/string.md))-reprezentuje ciąg znaków. Inne niż `char[]`, ale umożliwia indeksowania w poszczególnych `char` w `string`.
+* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md))-16-bitowych typu liczbowego, który reprezentuje znak Unicode.
+* <xref:System.String?displayProperty=nameWithType> ([ciąg](../csharp/language-reference/keywords/string.md))-reprezentuje serię znaków. Różni się od `char[]`, ale umożliwia indeksowanie w poszczególnych osób `char` w `string`.
 
 ## <a name="data-structures"></a>Struktury danych
 
-.NET zawiera zestaw struktur danych, które są narzędzie baz prawie każdej aplikacji .NET. Te są kolekcjami przede wszystkim, ale także inne typy.
+.NET zawiera zestaw struktur danych, które są narzędzie baz niemal wszystkich aplikacji .NET. To są kolekcjami przede wszystkim, ale także innych typów.
 
-*   <xref:System.Array> -Reprezentuje tablicę silnie typów obiektów, które mogą być udostępniane przez indeks. Ma stały rozmiar, na jego konstrukcji.
-*   <xref:System.Collections.Generic.List%601> -Reprezentuje silnie typizowaną listę obiektów, które mogą być udostępniane przez indeks. Automatycznie zmieniany jest zgodnie z potrzebami.
-*   <xref:System.Collections.Generic.Dictionary%602> -Reprezentuje kolekcję wartości, które są indeksowane według klucza. Wartości są dostępne za pośrednictwem klucza. Automatycznie zmieniany jest zgodnie z potrzebami.
-*   <xref:System.Uri> — Umożliwia reprezentację obiektu identyfikator uniform resource identifier (URI) i łatwy dostęp do części identyfikatora URI.
-*   <xref:System.DateTime> -Reprezentuje moment w czasie, zwykle wyrażone jako datę i godzinę.
+*   <xref:System.Array> -Reprezentuje tablicę obiektów silnie typy, które mogą być udostępniane przez indeks. Ma stały rozmiar, na jego konstrukcji.
+*   <xref:System.Collections.Generic.List%601> -Reprezentuje silnie typizowaną listę obiektów, które mogą być udostępniane przez indeks. Automatycznie zmiany rozmiaru zgodnie z potrzebami.
+*   <xref:System.Collections.Generic.Dictionary%602> -Reprezentuje kolekcję wartości, które są indeksowane według klucza. Wartości są dostępne za pośrednictwem klucza. Automatycznie zmiany rozmiaru zgodnie z potrzebami.
+*   <xref:System.Uri> -Zawiera reprezentację obiektu jednolity identyfikator zasobów (URI) oraz łatwy dostęp do elementów identyfikatorów URI.
+*   <xref:System.DateTime> -Reprezentuje moment w czasie, zwykle wyrażona jako datę i godzinę.
 
-## <a name="utility-apis"></a>Narzędzie interfejsów API
+## <a name="utility-apis"></a>Narzędzia interfejsów API
 
-.NET zawiera zestaw interfejsów API, które zawierają wiele zadań ważne funkcje narzędzia.
+.NET zawiera zbiór narzędzia interfejsów API, które udostępniają funkcje wiele istotnych zadań.
 
-*   <xref:System.Net.Http.HttpClient> — Interfejs API do wysyłania żądań HTTP i odbierania odpowiedzi HTTP z zasobu identyfikowanego przez identyfikator URI.
-*   <xref:System.Xml.Linq.XDocument> — Interfejs API do ładowania i badania dokumentów XML za pomocą LINQ.
-*   <xref:System.IO.StreamReader> — Interfejs API do odczytywania plików (<xref:System.IO.StringWriter>) może służyć do zapisania plików.
+*   <xref:System.Net.Http.HttpClient> -Interfejs API do wysyłania żądań HTTP i odbierania odpowiedzi HTTP z zasobu zidentyfikowanego z użyciem identyfikatora URI.
+*   <xref:System.Xml.Linq.XDocument> -Interfejs API, ładowanie i wykonywanie zapytań względem dokumentów XML za pomocą LINQ.
+*   <xref:System.IO.StreamReader> -Interfejs API do odczytu plików (<xref:System.IO.StringWriter>) może służyć do zapisania plików.
 
 ## <a name="app-model-apis"></a>Interfejsy API modelu aplikacji
 
-Istnieje wiele modeli aplikacji, które mogą być używane z platformy .NET, które są udostępniane przez kilka firm.
+Istnieje wiele modeli aplikacji, które mogą służyć za pomocą platformy .NET, dostarczone przez kilka przedsiębiorstw.
 
-*   [ASP.NET](http://asp.net) — zapewnia platformę sieci web do tworzenia witryn sieci Web i usług. Obsługiwane w systemach Windows, Linux i macOS (zależy od wersji platformy ASP.NET).
+*   [ASP.NET](https://www.asp.net) — udostępnia platformę internetową do tworzenia witryn sieci Web i usług. Obsługiwana na Windows, Linux i macOS (w zależności od wersji programu ASP.NET).

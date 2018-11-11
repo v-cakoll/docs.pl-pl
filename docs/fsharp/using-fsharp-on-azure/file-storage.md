@@ -1,5 +1,5 @@
 ---
-title: 'Rozpoczynanie pracy z usługą Azure File storage przy użyciu języka F #'
+title: Rozpoczynanie pracy z usługą Azure File storage przy użyciu języka F#
 description: Store danych plików w chmurze za pomocą usługi Azure File storage i instalowanie udziału plików w chmurze z maszyny wirtualnej (VM) platformy Azure lub z aplikacji w środowisku lokalnym systemem Windows.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569346"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure File storage przy użyciu języka F # #
+# <a name="get-started-with-azure-file-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure File storage przy użyciu języka F# #
 
 Usługa Azure File storage to usługa, która oferuje udziały plików w chmurze przy użyciu standardowych [protokołu bloku komunikatów serwera (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Obsługiwane są zarówno protokół SMB 2.1, jak i protokołu SMB 3.0. Za pomocą usługi Azure File storage można migrować starsze aplikacje korzystające z udziałów plików na platformę Azure, szybko i bez kosztownych modyfikacji oprogramowania. Aplikacje działające w usłudze Azure virtual machines lub cloud services lub z klientów lokalnych można zainstalować udział plików w chmurze, tak samo, jak aplikacja na komputerze instalująca typowy udział SMB. Dowolna liczba składników aplikacji, a następnie można zainstalować i jednocześnie dostęp do udziału pliku magazynu.
 
@@ -21,9 +21,9 @@ Omówienie usługi file storage można znaleźć [przewodnik platformy .NET dla 
 Aby użyć tego przewodnika, należy najpierw [Tworzenie konta usługi Azure storage](/azure/storage/storage-create-storage-account).
 Należy także klucz dostępu do magazynu dla tego konta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz skrypt F # i Rozpocznij języka F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz skrypt F# i Rozpocznij języka F# Interactive
 
-Przykłady w tym artykule może służyć w aplikacji F # lub skryptu F #. Aby utworzyć skrypt F #, Utwórz plik o `.fsx` rozszerzenia, na przykład `files.fsx`, w środowisku projektowym F #.
+Przykłady w tym artykule może służyć w aplikacji F# lub skryptu F#. Aby utworzyć skrypt F#, Utwórz plik o `.fsx` rozszerzenia, na przykład `files.fsx`, w środowisku projektowym F#.
 
 Następnie użyj [Menedżera pakietów](package-management.md) takich jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) zainstalował `WindowsAzure.Storage` pakietów i odwołań `WindowsAzure.Storage.dll` w skrypcie za pomocą `#r`dyrektywy.
 

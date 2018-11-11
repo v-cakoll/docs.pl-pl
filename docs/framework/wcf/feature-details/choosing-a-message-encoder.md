@@ -2,11 +2,11 @@
 title: Wybieranie kodera komunikatów
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44248933"
 ---
 # <a name="choosing-a-message-encoder"></a>Wybieranie kodera komunikatów
@@ -25,14 +25,14 @@ W tym temacie omówiono kryteria wybierania koderów wiadomości, które znajduj
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, koder komunikatu binarnego używa compact format binarny jest zoptymalizowany pod kątem usługi WCF do komunikacji WCF i dlatego nie jest międzyoperacyjnych. Dotyczy to również większość kodera wydajne wszystkich koderów udostępnia usługi WCF.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>, element powiązania Określa kodowanie znaków i wersjonowanie wiadomości dla wiadomości przy użyciu kodowanie MTOM. MTOM to technologia wydajne przekazywania danych binarnych w wiadomościach WCF. Koder MTOM podejmuje próbę utworzenia równowagi między współdziałania i wydajność. Kodowanie MTOM przesyła większość kodu XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazywania ich jako — jest bez konwersji na tekst. Pod względem wydajności między koderów, który udostępnia usługi WCF MTOM jest wewnętrzne tekstu (najwolniejsze) i plik binarny (najszybciej).  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, element powiązania określa znak kodowanie i wersjonowanie wiadomości dla wiadomości przy użyciu kodowanie MTOM. MTOM to technologia wydajne przekazywania danych binarnych w wiadomościach WCF. Koder MTOM podejmuje próbę utworzenia równowagi między współdziałania i wydajność. Kodowanie MTOM przesyła większość kodu XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazywania ich jako — jest bez konwersji na tekst. Pod względem wydajności między koderów, który udostępnia usługi WCF MTOM jest wewnętrzne tekstu (najwolniejsze) i plik binarny (najszybciej).  
   
 ## <a name="how-to-choose-a-message-encoder"></a>Wybieranie kodera komunikatów  
  W poniższej tabeli opisano typowe czynniki, które umożliwiają wybieranie kodera komunikatów. Ustaw priorytet czynników, które są ważne w przypadku aplikacji, a następnie najlepiej wybierz koderów komunikat współpracujące z tych czynników. Należy wziąć pod uwagę czynników dodatkowe niewymienionych w tej tabeli oraz wszelkie koderów niestandardowy komunikat, które mogą być wymagane w aplikacji.  
   
 |współczynnik|Opis|Kodery, które obsługują ten współczynnik|  
 |------------|-----------------|---------------------------------------|  
-|Obsługiwanych zestawów znaków|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> i <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> obsługuje tylko UTF8 i UTF16 Unicode (*big-endian* i *little-endian*) kodowania. Jeśli inne kodowanie są wymagane, na przykład UTF7 lub ASCII, należy użyć niestandardowego kodera. Aby uzyskać przykład niestandardowego kodera, zobacz [niestandardowy koder komunikatów](https://go.microsoft.com/fwlink/?LinkId=119857).|Tekst|  
+|Obsługiwanych zestawów znaków|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> i <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> obsługuje tylko UTF8 i UTF16 Unicode (*big-endian* i *little-endian*) kodowania. Jeśli inne kodowanie są wymagane, na przykład UTF7 lub ASCII, należy użyć niestandardowego kodera. Aby uzyskać przykład niestandardowego kodera, zobacz [niestandardowy koder komunikatów](https://go.microsoft.com/fwlink/?LinkId=119857).|Tekst|  
 |Inspekcja|Inspekcja jest możliwość zbadania komunikatów podczas transmisji. Kodowania tekstu, z lub bez użycia protokołu SOAP, zezwalania na komunikaty inspekcji i analizowane przez wiele aplikacji bez użycia specjalistycznych narzędzi. Należy pamiętać, że użycie bezpieczeństwie transferu, na poziomie komunikatu lub transportu, ma wpływ na możliwość kontroli wiadomości. Poufność ochronę komunikat sprawdzane i integralność chroni komunikatu przed modyfikacją.|Tekst|  
 |Niezawodność|Niezawodność jest odporność koder błędy transmisji. Niezawodność, może być również dostarczona w wiadomości, transportu lub warstwie aplikacji. Wszystkie standardowe koderów WCF przyjęto założenie, że kolejna warstwa jest zapewnienie niezawodności. Koder zdolność nieco odzyskać sprawność po błędzie transmisji.|Brak|  
 |Prostota|Prostota reprezentuje łatwe za pomocą którego można utworzyć kodeków dla specyfikację kodowania. Kodowania tekstu jest szczególnie korzystne dla uproszczenia i kodowanie tekstu POX ma dodatkową zaletą nie wymagających obsługi przetwarzania protokołu SOAP.|Tekst (POX)|  

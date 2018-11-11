@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: a0ec7b1a91dc701093131b8807b25e66d291a746
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6cacf3cc613ffb23c6656d5d5718064a91b777a6
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188329"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744226"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Wyjątki i obsługa wyjątków (Przewodnik programowania w języku C#)
 Obsługa funkcji pomocy wyjątków języka C# zajmuje nieoczekiwane lub wyjątkowych sytuacji, które występują, gdy program jest uruchomiony. Używa obsługi wyjątków `try`, `catch`, i `finally` słów kluczowych obsługi błędów w przypadku podjęcia decyzji, że jest uzasadnione, aby to zrobić, a potem wyczyścić zasoby, aby spróbować akcje, które mogą się nie powieść. Wyjątki mogą być generowane przez środowisko uruchomieniowe języka wspólnego (CLR) .NET Framework lub żadnych bibliotek innych firm lub przez kod aplikacji. Wyjątki są tworzone za pomocą `throw` — słowo kluczowe.  
@@ -61,7 +61,8 @@ Obsługa funkcji pomocy wyjątków języka C# zajmuje nieoczekiwane lub wyjątko
 -   [Instrukcje: wykonywanie czyszczenia kodu za pomocą instrukcji finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Aby uzyskać więcej informacji, zobacz [wyjątki](~/_csharplang/spec/exceptions.md) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz też
 

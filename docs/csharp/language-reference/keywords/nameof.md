@@ -5,12 +5,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 726abfd903f37826a247e6e98c0d11f230447550
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 01c87f8d63264aa342b04b8d3fcfc7e6f38db44b
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035256"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744370"
 ---
 # <a name="nameof-c-reference"></a>nameof (odwołanie w C#)
 
@@ -131,8 +131,9 @@ class C {
  Nie ma możliwości można pobrać informacji podpisów, takie jak "`Method1 (str, str)`".  Jednym ze sposobów, aby to zrobić, jest użycie wyrażenia `Expression e = () => A.B.Method1("s1", "s2")`i ściąganie MemberInfo z wynikowego drzewa wyrażeń.  
   
 ## <a name="language-specifications"></a>Specyfikacje języka  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Aby uzyskać więcej informacji, zobacz [wyrażeń Nameof](~/_csharplang/spec/expressions.md#nameof-expressions) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+ 
 ## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  

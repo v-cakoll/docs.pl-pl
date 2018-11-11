@@ -4,11 +4,11 @@ description: Polecenia dotnet test służy do wykonywania testów jednostkowych 
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: e80ba874ec8d0fbc49858719dc3b9b6e02254c78
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 73b1d832b855798dd053187bbb24e8fb989fedf1
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "46696459"
 ---
 # <a name="dotnet-test"></a>polecenia DotNet test
@@ -25,7 +25,9 @@ ms.locfileid: "46696459"
 
 ```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
+    [-v|--verbosity] [-- <RunSettings arguments>]
+
 dotnet test [-h|--help]
 ```
 
@@ -34,6 +36,7 @@ dotnet test [-h|--help]
 ```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+
 dotnet test [-h|--help]
 ```
 
@@ -41,6 +44,7 @@ dotnet test [-h|--help]
 
 ```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
+
 dotnet test [-h|--help]
 ```
 
@@ -127,6 +131,14 @@ Listę wszystkich odnalezionych testów w bieżącym projekcie.
 `-v|--verbosity <LEVEL>`
 
 Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
+
+`RunSettings arguments`
+
+Argumenty są przekazywane jako RunSettings konfiguracji testu. Argumenty są określane jako `[name]=[value]` pary po "--" (Uwaga miejsca po —). Spacja jest używana do oddzielania wielu `[name]=[value]` pary.
+
+Przykład: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
+
+Aby uzyskać więcej informacji na temat RunSettings zobacz [vstest.console.exe: argumenty przekazywanie RunSettings](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
@@ -285,7 +297,7 @@ Wyrażenia może być łączone z operatorów warunkowych:
 
 | Operator            | Funkcja |
 | ------------------- | -------- |
-| <code>&#124;</code> | LUB       |
+| <code>&#124;</code> | LUB       |
 | `&`                 | AND      |
 
 Może być częścią wyrażenia w nawiasach przy użyciu operatorów warunkowych (na przykład `(Name~TestMethod1) | (Name~TestMethod2)`).

@@ -1,6 +1,6 @@
 ---
 title: Kontrola dostępu (F#)
-description: 'Dowiedz się, jak kontrolować dostęp do elementów programowania, takich jak typy, metody i funkcje w języku programowania F #.'
+description: Dowiedz się, jak kontrolować dostęp do elementów programowania, takich jak typy, metody i funkcje w języku programowania F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -15,7 +15,7 @@ ms.locfileid: "43803977"
 
 ## <a name="basics-of-access-control"></a>Podstawowe informacje o kontroli dostępu
 
-W języku F #, kontroli dostępu w specyfikatory `public`, `internal`, i `private` można zastosować do modułów, typów, metod, definicje wartości, funkcje, właściwości i pola jawne.
+W języku F#, kontroli dostępu w specyfikatory `public`, `internal`, i `private` można zastosować do modułów, typów, metod, definicje wartości, funkcje, właściwości i pola jawne.
 
 - `public` Wskazuje, czy jednostki są dostępne dla wszystkich obiektów wywołujących.
 
@@ -24,13 +24,13 @@ W języku F #, kontroli dostępu w specyfikatory `public`, `internal`, i `privat
 - `private` Wskazuje, że jednostki są dostępne tylko z otaczającej typu lub modułu.
 
 >[!NOTE]
-Specyfikator dostępu `protected` nie jest używana w języku F #, mimo że jest dopuszczalne, jeśli używasz typów, utworzone w językach, które obsługują `protected` dostępu. Dlatego Jeśli zastąpisz Metoda chroniona metoda pozostaje dostępny tylko w klasie i jego elementów potomnych.
+Specyfikator dostępu `protected` nie jest używana w języku F#, mimo że jest dopuszczalne, jeśli używasz typów, utworzone w językach, które obsługują `protected` dostępu. Dlatego Jeśli zastąpisz Metoda chroniona metoda pozostaje dostępny tylko w klasie i jego elementów potomnych.
 
 Ogólnie rzecz biorąc, specyfikator jest umieszczany przed nazwą jednostki, chyba że `mutable` lub `inline` specyfikator jest używany, które występują po specyfikatorze kontroli dostępu.
 
 Jeśli jest używany nie specyfikatora dostępu, wartość domyślna to `public`, z wyjątkiem `let` powiązania w typie, które są zawsze `private` do typu.
 
-Podpisy w języku F # udostępniają innego mechanizmu do kontrolowania dostępu do elementów programu F #. Podpisy nie są wymagane dla kontroli dostępu. Aby uzyskać więcej informacji, zobacz [podpisy](signatures.md).
+Podpisy w języku F# udostępniają innego mechanizmu do kontrolowania dostępu do elementów programu F#. Podpisy nie są wymagane dla kontroli dostępu. Aby uzyskać więcej informacji, zobacz [podpisy](signatures.md).
 
 ## <a name="rules-for-access-control"></a>Zasady kontroli dostępu
 

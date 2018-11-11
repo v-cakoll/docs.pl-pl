@@ -1,6 +1,6 @@
 ---
 title: Przestrzenie nazw (F#)
-description: 'Dowiedz się, jak przestrzeń nazw F # umożliwia organizowanie kodu w obszarach powiązane funkcje, dzięki któremu można dołączyć nazwę do grupowania elementów programu.'
+description: Dowiedz się, jak przestrzeń nazw F# umożliwia organizowanie kodu w obszarach powiązane funkcje, dzięki któremu można dołączyć nazwę do grupowania elementów programu.
 ms.date: 04/24/2017
 ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ Umożliwia także globalne k odkazu .NET przestrzeń nazw najwyższego poziomu, 
 
 ## <a name="recursive-namespaces"></a>Przestrzenie nazw cykliczne
 
-F # 4.1 wprowadzono pojęcie przestrzenie nazw, która zezwala na wszystkie zawarte kodu wzajemnie się być typem rekursywnym.  Odbywa się za pośrednictwem `namespace rec`.  Korzystanie z `namespace rec` mogą złagodzić ich niektóre problemy, które nie jest możliwość pisania kodu wzajemnie referencyjne typy i moduły.  Oto przykład:
+F# 4.1 wprowadzono pojęcie przestrzenie nazw, która zezwala na wszystkie zawarte kodu wzajemnie się być typem rekursywnym.  Odbywa się za pośrednictwem `namespace rec`.  Korzystanie z `namespace rec` mogą złagodzić ich niektóre problemy, które nie jest możliwość pisania kodu wzajemnie referencyjne typy i moduły.  Oto przykład:
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +115,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Należy pamiętać, że wyjątek `DontSqueezeTheBananaException` i klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i klasa `Banana` także odwoływać się do siebie.  To nie jest możliwe do wyrażenia w języku F #, jeśli usunięto `rec` słowo kluczowe z `MutualReferences` przestrzeni nazw.
+Należy pamiętać, że wyjątek `DontSqueezeTheBananaException` i klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i klasa `Banana` także odwoływać się do siebie.  To nie jest możliwe do wyrażenia w języku F#, jeśli usunięto `rec` słowo kluczowe z `MutualReferences` przestrzeni nazw.
 
-Ta funkcja jest również dostępna dla najwyższego poziomu [modułów](modules.md) w F # 4.1 lub nowszej.
+Ta funkcja jest również dostępna dla najwyższego poziomu [modułów](modules.md) w F# 4.1 lub nowszej.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
 - [Moduły](modules.md)
-- [F # RFC FS-1009 — Zezwalaj na wzajemnie referencyjne typy i moduły za pośrednictwem szerszego zakresu w plikach](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F# RFC FS-1009 — Zezwalaj na wzajemnie referencyjne typy i moduły za pośrednictwem szerszego zakresu w plikach](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

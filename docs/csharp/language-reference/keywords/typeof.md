@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: 2493e78fd0782eebee17afd979e1c429339d0a3f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aff7462f0df938a8e96cca33155489bee4891da0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529211"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744447"
 ---
 # <a name="typeof-c-reference"></a>typeof (odwołanie w C#)
 Uzywany do uzyskania obiektu `System.Type` dla typu. Wyrazenie `typeof` ma nastepujaca postac:  
@@ -44,8 +44,9 @@ System.Type type = i.GetType();
  [!code-csharp[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Aby uzyskać więcej informacji, zobacz [typeof operator](~/_csharplang/spec/expressions.md#the-typeof-operator) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+ 
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Type?displayProperty=nameWithType>  

@@ -1,6 +1,6 @@
 ---
 title: Interfejsy (F#)
-description: 'Dowiedz się, jak interfejsy F # określić zestawy powiązane elementy członkowskie, które implementują innych klas.'
+description: Dowiedz się, jak interfejsy F# określić zestawy powiązane elementy członkowskie, które implementują innych klas.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -47,7 +47,7 @@ Deklaracje interfejsu przypominają deklaracji klasy, z tą różnicą, że żad
 
 Wartość domyślna dostępu dla interfejsów `public`.
 
-Każdy parametr metody można opcjonalnie nadać nazwę przy użyciu normalnego języka F # składni:
+Każdy parametr metody można opcjonalnie nadać nazwę przy użyciu normalnego języka F# składni:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 

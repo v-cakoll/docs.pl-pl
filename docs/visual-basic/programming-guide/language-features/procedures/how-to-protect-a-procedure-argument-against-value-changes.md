@@ -15,11 +15,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
 ms.openlocfilehash: 393127353a020c1db5df3011b2a97b1c53097f27
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50035647"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225337"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Porady: chronienie argumentu procedury przed zmianami wartości (Visual Basic)
 Jeśli procedura deklaruje jako parametru [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic, zawiera kod procedury bezpośrednie odwołanie do elementu programistycznego, bazowy argumentu w wywoływanym kodzie. Pozwala to na procedurę, aby zmienić wartość bazowego argumentu w wywoływanym kodzie. W niektórych przypadkach kod wywołujący może mają być chronione przed takich zmian.  

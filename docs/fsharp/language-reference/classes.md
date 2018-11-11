@@ -1,6 +1,6 @@
 ---
 title: Klasy (F#)
-description: 'Dowiedz się, jak klas F # są typy, które reprezentują obiektów, które mogą mieć właściwości, metod i zdarzeń.'
+description: Dowiedz się, jak klas F# są typy, które reprezentują obiektów, które mogą mieć właściwości, metod i zdarzeń.
 ms.date: 05/16/2016
 ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -33,7 +33,7 @@ and [access-modifier] type-name2 ...
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy reprezentują opis podstawowych typów obiektów .NET; Klasa jest pojęciem typu podstawowego, który obsługuje programowanie zorientowane obiektowo w F #.
+Klasy reprezentują opis podstawowych typów obiektów .NET; Klasa jest pojęciem typu podstawowego, który obsługuje programowanie zorientowane obiektowo w F#.
 
 W poprzedniej składni `type-name` jest dowolnym prawidłowym identyfikatorem. `type-params` Opisano parametry opcjonalne typu ogólnego. Składa się z nazwy parametrów typu i ograniczenia, ujęte w nawiasy (`<` i `>`). Aby uzyskać więcej informacji, zobacz [ogólne](generics/index.md) i [ograniczenia](generics/constraints.md). `parameter-list` Opisano parametry konstruktora. Pierwszy modyfikator dostępu odnoszą się do typu; druga dotyczy tylko podstawowy Konstruktor. W obu przypadkach wartość domyślna to `public`.
 
@@ -51,7 +51,7 @@ Wzajemnie typów cyklicznych, które są typów odwołujących się do siebie na
 
 ## <a name="constructors"></a>Konstruktorów
 
-Konstruktor jest kod, który tworzy wystąpienie typu klasy. Konstruktory dla klas działają trochę inaczej w języku F # niż w innych językach .NET. W F # klasy, jest zawsze konstruktora podstawowego, w której argumenty są opisane w `parameter-list` występujący na nazwę typu, a których treść składa się z `let` (i `let rec`) powiązania na początku deklaracji klasy `do`powiązania, które należy wykonać. Argumenty konstruktora podstawowego znajdują się w zakresie deklaracji klasy.
+Konstruktor jest kod, który tworzy wystąpienie typu klasy. Konstruktory dla klas działają trochę inaczej w języku F# niż w innych językach .NET. W F# klasy, jest zawsze konstruktora podstawowego, w której argumenty są opisane w `parameter-list` występujący na nazwę typu, a których treść składa się z `let` (i `let rec`) powiązania na początku deklaracji klasy `do`powiązania, które należy wykonać. Argumenty konstruktora podstawowego znajdują się w zakresie deklaracji klasy.
 
 Możesz dodać dodatkowe konstruktory przy użyciu `new` — słowo kluczowe do dodania elementu członkowskiego, w następujący sposób:
 
@@ -104,7 +104,7 @@ Argumenty typu są wnioskowane, gdy typ jest używany. W poniższym kodzie wnios
 
 ## <a name="specifying-inheritance"></a>Określanie dziedziczenia
 
-`inherit` Klauzula identyfikuje bezpośrednie klasy bazowej, jeśli taka istnieje. W języku F # jest dozwolony tylko jedną bezpośrednią klasą bazową. Interfejsy, które implementuje klasa nie są uwzględniane klas bazowych. Interfejsy są omówione w [interfejsów](Interfaces.md) tematu.
+`inherit` Klauzula identyfikuje bezpośrednie klasy bazowej, jeśli taka istnieje. W języku F# jest dozwolony tylko jedną bezpośrednią klasą bazową. Interfejsy, które implementuje klasa nie są uwzględniane klas bazowych. Interfejsy są omówione w [interfejsów](Interfaces.md) tematu.
 
 Dostępne metody i właściwości klasy bazowej z klasy pochodnej za pomocą słowa kluczowego języka `base` jako identyfikator, a następnie kropka (.) i nazwę elementu członkowskiego.
 
@@ -112,7 +112,7 @@ Aby uzyskać więcej informacji, zobacz [dziedziczenia](inheritance.md).
 
 ## <a name="members-section"></a>Sekcja elementy członkowskie
 
-W tej sekcji można zdefiniować statyczne lub metody wystąpienia, właściwości, implementacje interfejsu, abstrakcyjne składowe, deklaracji zdarzeń i dodatkowych konstruktorów. Let, a następnie wykonaj wiązania nie może występować w tej sekcji. Ponieważ elementy Członkowskie mogą być dodawane do różnych typów F # oprócz klas, zostały omówione w osobnych tematach [członków](members/index.md).
+W tej sekcji można zdefiniować statyczne lub metody wystąpienia, właściwości, implementacje interfejsu, abstrakcyjne składowe, deklaracji zdarzeń i dodatkowych konstruktorów. Let, a następnie wykonaj wiązania nie może występować w tej sekcji. Ponieważ elementy Członkowskie mogą być dodawane do różnych typów F# oprócz klas, zostały omówione w osobnych tematach [członków](members/index.md).
 
 ## <a name="mutually-recursive-types"></a>Wzajemnie typów cyklicznych
 
@@ -124,7 +124,7 @@ Dane wyjściowe znajduje się lista wszystkich plików w bieżącym katalogu.
 
 ## <a name="when-to-use-classes-unions-records-and-structures"></a>Kiedy należy używać klas, Unii, rekordy i struktury
 
-Biorąc pod uwagę różne typy do wyboru, musisz dysponować dobrą znajomością programu co każdy typ jest przeznaczona dla wybrać odpowiedni typ w konkretnej sytuacji. Klasy są przeznaczone do użytku w kontekstach programowania obiektowego. Programowanie zorientowane obiektowo jest dominującym paradygmat, używany w aplikacjach, które zostały napisane dla platformy .NET Framework. Jeśli kod F # jest bliska współpraca z .NET Framework lub innej biblioteki zorientowane obiektowo, a zwłaszcza, jeśli zajdzie potrzeba rozszerzyć system zorientowane obiektowo typów, takich jak biblioteka interfejsów użytkownika, klasy są prawdopodobnie odpowiednie.
+Biorąc pod uwagę różne typy do wyboru, musisz dysponować dobrą znajomością programu co każdy typ jest przeznaczona dla wybrać odpowiedni typ w konkretnej sytuacji. Klasy są przeznaczone do użytku w kontekstach programowania obiektowego. Programowanie zorientowane obiektowo jest dominującym paradygmat, używany w aplikacjach, które zostały napisane dla platformy .NET Framework. Jeśli kod F# jest bliska współpraca z .NET Framework lub innej biblioteki zorientowane obiektowo, a zwłaszcza, jeśli zajdzie potrzeba rozszerzyć system zorientowane obiektowo typów, takich jak biblioteka interfejsów użytkownika, klasy są prawdopodobnie odpowiednie.
 
 Czy można nie są ściśle współdziałanie z kodem zorientowane obiektowo, czy piszesz kod, który jest niezależna i w związku z tym chronione przed interakcja z kodem zorientowane obiektowo, należy wziąć pod uwagę przy użyciu rekordów i związków wyróżniających. Jeden dobrze myślenia — limit czasu złożenia dyskryminowanego, wraz z odpowiednią wzorzec dopasowywania kodu, często może służyć jako prostszej alternatywy hierarchii obiektów. Aby uzyskać więcej informacji na temat sumy rozłączne zobacz [sumy rozłączne](discriminated-unions.md).
 

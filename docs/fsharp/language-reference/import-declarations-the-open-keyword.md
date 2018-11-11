@@ -1,6 +1,6 @@
 ---
 title: 'Deklaracje importowania: open — Słowo kluczowe (F#)'
-description: 'Dowiedz się więcej o deklaracje importowania F # i jak określić modułu lub przestrzeni nazw elementów, których możesz odwoływać się bez korzystania z w pełni kwalifikowanej nazwy.'
+description: Dowiedz się więcej o deklaracje importowania F# i jak określić modułu lub przestrzeni nazw elementów, których możesz odwoływać się bez korzystania z w pełni kwalifikowanej nazwy.
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -36,7 +36,7 @@ Poniższy kod przedstawia użycie `open` — słowo kluczowe w celu uproszczenia
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-Kompilator F # emituje błąd lub ostrzeżenie przypadku niejednoznaczności wystąpienia sytuacji takiej samej nazwie w więcej niż jeden otwarty modułu lub przestrzeni nazw. Gdy występują niejasności, F # preferuje bardziej ostatnio otwieranych modułu lub przestrzeni nazw. Na przykład w poniższym kodzie `empty` oznacza `Seq.empty`, nawet jeśli `empty` znajduje się w obu `List` i `Seq` modułów.
+Kompilator F# emituje błąd lub ostrzeżenie przypadku niejednoznaczności wystąpienia sytuacji takiej samej nazwie w więcej niż jeden otwarty modułu lub przestrzeni nazw. Gdy występują niejasności, F# preferuje bardziej ostatnio otwieranych modułu lub przestrzeni nazw. Na przykład w poniższym kodzie `empty` oznacza `Seq.empty`, nawet jeśli `empty` znajduje się w obu `List` i `Seq` modułów.
 
 ```fsharp
 open List
@@ -48,11 +48,11 @@ W związku z tym, należy zachować ostrożność podczas takich jak otwierania 
 
 ## <a name="namespaces-that-are-open-by-default"></a>Przestrzenie nazw, które są domyślnie otwarty
 
-Niektóre przestrzenie nazw są tak często używane w kodzie języka F #, że są one otwarte niejawnie bez konieczności deklaracji jawny import. W poniższej tabeli przedstawiono przestrzenie nazw, które są domyślnie otwarty.
+Niektóre przestrzenie nazw są tak często używane w kodzie języka F#, że są one otwarte niejawnie bez konieczności deklaracji jawny import. W poniższej tabeli przedstawiono przestrzenie nazw, które są domyślnie otwarty.
 
 |Przestrzeń nazw|Opis|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Zawiera podstawowe definicje typów języka F # dla wbudowanych typów, takie jak `int` i `float`.|
+|`Microsoft.FSharp.Core`|Zawiera podstawowe definicje typów języka F# dla wbudowanych typów, takie jak `int` i `float`.|
 |`Microsoft.FSharp.Core.Operators`|Zawiera podstawowe operacje arytmetyczne, takie jak `+` i `*`.|
 |`Microsoft.FSharp.Collections`|Zawiera klasy kolekcji niezmienialnej, takie jak `List` i `Array`.|
 |`Microsoft.FSharp.Control`|Zawiera typy dla konstrukcji kontrolki, takie jak obliczanie z opóźnieniem i asynchroniczne przepływy pracy.|

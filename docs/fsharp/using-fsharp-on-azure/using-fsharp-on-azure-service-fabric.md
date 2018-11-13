@@ -7,7 +7,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25864459"
 ---
-# <a name="using-f-on-azure-service-fabric"></a><span data-ttu-id="97e51-101">Za pomocą F# w usłudze Azure Service Fabric</span><span class="sxs-lookup"><span data-stu-id="97e51-101">Using F# on Azure Service Fabric</span></span>
+# <a name="using-f-on-azure-service-fabric"></a><span data-ttu-id="377a0-101">Za pomocą F# w usłudze Azure Service Fabric</span><span class="sxs-lookup"><span data-stu-id="377a0-101">Using F# on Azure Service Fabric</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="97e51-102">To jest nadal w toku.</span><span class="sxs-lookup"><span data-stu-id="97e51-102">This is still in progress.</span></span>
+> <span data-ttu-id="377a0-102">To jest nadal w toku.</span><span class="sxs-lookup"><span data-stu-id="377a0-102">This is still in progress.</span></span>

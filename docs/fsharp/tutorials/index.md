@@ -7,7 +7,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25864522"
 ---
-# <a name="f-tutorials"></a><span data-ttu-id="7431b-101">F#Samouczki</span><span class="sxs-lookup"><span data-stu-id="7431b-101">F# Tutorials</span></span>
+# <a name="f-tutorials"></a><span data-ttu-id="c0fd5-101">F#Samouczki</span><span class="sxs-lookup"><span data-stu-id="c0fd5-101">F# Tutorials</span></span>
 
 > [!NOTE]
-<span data-ttu-id="7431b-102">To jest nadal w toku.</span><span class="sxs-lookup"><span data-stu-id="7431b-102">This is still in-progress.</span></span>
+<span data-ttu-id="c0fd5-102">To jest nadal w toku.</span><span class="sxs-lookup"><span data-stu-id="c0fd5-102">This is still in-progress.</span></span>

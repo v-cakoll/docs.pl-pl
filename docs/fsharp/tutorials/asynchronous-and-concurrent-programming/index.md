@@ -7,7 +7,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25864546"
 ---
-# <a name="asynchronous-and-concurrent-programming-in-f"></a><span data-ttu-id="924a7-101">Programowanie asynchroniczne i współbieżne wF#</span><span class="sxs-lookup"><span data-stu-id="924a7-101">Asynchronous and Concurrent Programming in F#</span></span> #
+# <a name="asynchronous-and-concurrent-programming-in-f"></a><span data-ttu-id="3a9af-101">Programowanie asynchroniczne i współbieżne wF#</span><span class="sxs-lookup"><span data-stu-id="3a9af-101">Asynchronous and Concurrent Programming in F#</span></span> #
 
 > [!NOTE]
-<span data-ttu-id="924a7-102">To jest nadal w toku.</span><span class="sxs-lookup"><span data-stu-id="924a7-102">This is still in-progress.</span></span>
+<span data-ttu-id="3a9af-102">To jest nadal w toku.</span><span class="sxs-lookup"><span data-stu-id="3a9af-102">This is still in-progress.</span></span>

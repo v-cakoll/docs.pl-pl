@@ -1,1 +1,0 @@
-# [Wątkowość](index.md)

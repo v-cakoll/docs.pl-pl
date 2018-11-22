@@ -2,11 +2,11 @@
 title: Niestandardowe kodery
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
+ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/22/2018
 ms.locfileid: "50034390"
 ---
 # <a name="custom-encoders"></a>Niestandardowe kodery
@@ -60,7 +60,7 @@ W tym temacie omówiono, jak utworzyć niestandardowe kodery.
  Oprócz przetwarzania dynamiczny słownik kluczy, buforowane sesji komunikaty są odbierane w nietypowy sposób. Zamiast tworzenia modułu odczytującego za pośrednictwem dokumentu, a następnie przetwarza go, używa wewnętrznego kodera binarnego `MessagePatterns` klasy dekonstruować strumień danych binarnych. Chodzi o to, że większość komunikaty mają zestaw nagłówków, które pojawiają się w określonej kolejności podczas generowania przez architekturę WCF. System wzorzec przerywa komunikatu od siebie na podstawie jego oczekuje. Jeśli to się powiodło, inicjuje <xref:System.ServiceModel.Channels.MessageHeaders> obiekt bez analiza kodu XML. W przeciwnym razie nastąpi powrót do standardową metodę.  
   
 ### <a name="mtom-encoding"></a>Kodowanie MTOM  
- <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> Klasa ma właściwość dodatkowe czynności konfiguracyjne o nazwie <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`.MaxBufferSize%2A>. Te umieszcza górną granicę na ile danych jest ona dozwolona do zbuforowania podczas odczytywania wiadomości. XML informacji o zestawie (zestaw informacji) lub innych części MIME może być konieczne buforowane odtworzyć wszystkie części MIME w pojedynczym komunikacie.  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> Klasa ma właściwość dodatkowe czynności konfiguracyjne o nazwie <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A>. Te umieszcza górną granicę na ile danych jest ona dozwolona do zbuforowania podczas odczytywania wiadomości. XML informacji o zestawie (zestaw informacji) lub innych części MIME może być konieczne buforowane odtworzyć wszystkie części MIME w pojedynczym komunikacie.  
   
  Działała prawidłowo, za pośrednictwem protokołu HTTP, wewnętrzny klasy koder MTOM wiadomości zawiera niektórych wewnętrznych interfejsów API dla `GetContentType` (jest to również wewnętrznego) i `WriteMessage`, która jest publiczna i może zostać zastąpiona. Więcej komunikacji musi wystąpić, aby upewnić się, że wartości w nagłówkach HTTP zgadza się z wartości nagłówków MIME.  
   

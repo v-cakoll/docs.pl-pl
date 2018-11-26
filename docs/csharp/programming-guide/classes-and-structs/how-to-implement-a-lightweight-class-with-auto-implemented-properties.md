@@ -5,17 +5,17 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: fb5d11ed43246f2c4dd67ef35b71e899ab978fc4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cdd90685985b4a48b8fb98451eba0d4ebbbbc6bf
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837909"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297208"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Porady: implementowanie klasy lekkiej przy użyciu automatycznie implementowanych właściwości (Przewodnik programowania w języku C#)
 Ten przykład przedstawia sposób tworzenia niezmienne klasy lightweight, która służy tylko do hermetyzacji zbiór właściwości zaimplementowane automatycznie. Użyj ten rodzaj konstrukcji zamiast struktury, gdy należy użyć semantyki typu odwołania.  
   
- Istnieje możliwość niezmienialnych właściwości na dwa sposoby.  Można zadeklarować [ustaw](../../../csharp/language-reference/keywords/set.md) można accessor.to [prywatnej](../../../csharp/language-reference/keywords/private.md).  Właściwość jest tylko do ustawienia w ramach typu, ale jest niezmienny do klientów.  Zamiast tego można zadeklarować tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) dostępu, co sprawia, że właściwość niezmienne wszędzie, z wyjątkiem w Konstruktorze typu.  
+ Istnieje możliwość niezmienialnych właściwości na dwa sposoby.  Można zadeklarować [ustaw](../../../csharp/language-reference/keywords/set.md) dostępu jako [prywatnej](../../../csharp/language-reference/keywords/private.md).  Właściwość jest tylko do ustawienia w ramach typu, ale jest niezmienny do klientów.  Zamiast tego można zadeklarować tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) dostępu, co sprawia, że właściwość niezmienne wszędzie, z wyjątkiem w Konstruktorze typu.  
   
  Kiedy Deklarujesz prywatnej `set` dostępu, nie można używać inicjatora obiektu można zainicjować właściwości. Należy użyć konstruktora lub metody fabryki.  
   

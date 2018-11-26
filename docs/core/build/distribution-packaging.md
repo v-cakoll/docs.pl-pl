@@ -4,12 +4,12 @@ description: Dowiedz się, jak spakować, nazwa i wersja platformy .NET Core w c
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840498"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297221"
 ---
 # <a name="net-core-distribution-packaging"></a>Tworzenie pakietów dystrybucji platformy .NET core
 
@@ -46,7 +46,7 @@ Po zainstalowaniu platformy .NET Core zawiera kilka składników, które są lay
 
 - (1) **dotnet** hosta (znany także jako "muxer") ma dwie różne role: Aktywacja środowiska uruchomieniowego, aby uruchomić aplikację i Aktywuj zestaw SDK do wysyłania poleceń do niego. Host jest natywny plik wykonywalny (`dotnet.exe`).
 
-W trakcie jednego hosta większości innych składników znajdują się w określonej wersji katalogów (kwas 2,3,5,6). Te oznacza, że wiele wersji mogą być obecne w systemie, ponieważ są one zainstalowane side-by-side.
+W trakcie jednego hosta większości innych składników znajdują się w określonej wersji katalogów (kwas 2,3,5,6). Oznacza to, że wiele wersji może być obecny w systemie, ponieważ są one zainstalowane side-by-side.
 
 - (2) **hosta/fxr/\<wersji fxr >** zawiera logikę rozpoznawania framework używany przez hosta. Host używa najnowszej hostfxr, który jest zainstalowany. Hostfxr jest odpowiedzialny za wybranie odpowiedniego środowiska uruchomieniowego, podczas wykonywania aplikacji .NET Core. Na przykład aplikacja skompilowana dla platformy .NET Core 2.0.0, zostanie użyta 2.0.5 środowiska uruchomieniowego, gdy będzie ona dostępna. Podobnie hostfxr wybiera odpowiedni zestaw SDK podczas programowania.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: d48c2cab7100d8227b33ee0eeefb825dd81a5f88
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 4faa674f3f3d65b7c555d7feb9789637f39e9bd7
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084572"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296533"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Porady: testowanie równości odwołań (tożsamości) (Przewodnik programowania w języku C#)
 Nie masz implementuje żadnej logiki niestandardowej obsługuje porównania równości odwołań w typy. Ta funkcjonalność jest dostarczana dla wszystkich typów przez statyczną <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> metody.  
@@ -22,7 +22,7 @@ Nie masz implementuje żadnej logiki niestandardowej obsługuje porównania rów
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideObjects#90](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-test-for-reference-equality-identity_1.cs)]  
   
- Implementacja `Equals` w <xref:System.Object?displayProperty=nameWithType> universal klasa bazowa wykonuje sprawdzanie równości odwołań, ale zaleca się nie należy używać tego, ponieważ jeśli Klasa docelowa przesłonić metodę, wyniki mogą być czego oczekiwać. Dotyczy to także `==` i `!=` operatorów. Gdy działają w odwołaniu do typów, domyślne zachowanie == i `!=` jest sprawdzania równości odwołań. Jednak klasy pochodne doprowadzić do przeciążenia operatora sprawdzania równości wartości. Aby zminimalizować ryzyko błędów, najlepiej zawsze używaj <xref:System.Object.ReferenceEquals%2A> w przypadku określenia, czy dwa obiekty mają odniesienie równości.  
+ Implementacja `Equals` w <xref:System.Object?displayProperty=nameWithType> universal klasa bazowa wykonuje sprawdzanie równości odwołań, ale zaleca się nie należy używać tego, ponieważ jeśli Klasa docelowa przesłonić metodę, wyniki mogą być czego oczekiwać. Dotyczy to także `==` i `!=` operatorów. Gdy działają w odwołaniu do typów, domyślne zachowanie `==` i `!=` jest sprawdzania równości odwołań. Jednak klasy pochodne doprowadzić do przeciążenia operatora sprawdzania równości wartości. Aby zminimalizować ryzyko błędów, najlepiej zawsze używaj <xref:System.Object.ReferenceEquals%2A> w przypadku określenia, czy dwa obiekty mają odniesienie równości.  
   
  Stałe ciągów w ramach tego samego zestawu są zawsze interned w czasie wykonywania. Oznacza to obsługiwane jest tylko jedno wystąpienie każdego unikatowy ciąg literału. Jednak środowisko uruchomieniowe nie gwarantuje, że są interned ciągi tworzony w czasie wykonywania, ponieważ gwarantuje to, że są interned równa dwa ciągi stałej w różnych zestawach.  
   

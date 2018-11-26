@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ef4dce290a7a7f6340b15aa4083cd40518e37d0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507395"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296870"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent — Instrukcja
 Wyzwala zdarzenie zadeklarowane na poziomie modułu w obrębie klasy, formularza lub dokumentu.  
@@ -28,7 +28,7 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>Części  
  `eventname`  
- Wymagane. Nazwa zdarzenia w celu wyzwolenia.  
+ Wymagana. Nazwa zdarzenia w celu wyzwolenia.  
   
  `argumentlist`  
  Opcjonalna. Rozdzielana przecinkami lista zmiennych, tablic lub wyrażenia. `argumentlist` Argument musi być ujęta w nawiasy. Jeśli nie ma żadnych argumentów, nawiasy musi zostać pominięty.  
@@ -73,7 +73,7 @@ RaiseEvent eventname[( argumentlist )]
  Naciśnij klawisz F5, aby uruchomić poprzedniego przykładu, a następnie kliknij przycisk **Start**. Pierwsze pole tekstowe rozpoczyna odliczanie sekund. Po upływie pełnoetatowi (10 sekund), pierwszego pola tekstowego wyświetla "Gotowe".  
   
 > [!NOTE]
->  `My.Application.DoEvents` Metody nie przetwarza zdarzeń w taki sam sposób jak formularz. Aby zezwolić na formularzu do obsługi zdarzeń bezpośrednio, możesz użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz [wątki](../../programming-guide/concepts/threading/index.md).  
+>  `My.Application.DoEvents` Metody nie przetwarza zdarzeń w taki sam sposób jak formularz. Aby zezwolić na formularzu do obsługi zdarzeń bezpośrednio, możesz użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz [zarządzana wątkowość](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)  

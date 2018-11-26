@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Pr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/05/2018
-ms.openlocfilehash: 16e539af2ab503bddbd958ae4b60662b5923b1f1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 00cffde7e7eb548f755b60f64aa596210b570d07
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035386"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297520"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -35,7 +35,7 @@ Aplikacja składa się z własnych usług, a także dodatkowe biblioteki (zależ
 
 W tym przewodniku opisano szczegółowo całego tego procesu i na każdym kroku głównych zostało wyjaśnione, skupiając się na środowisko Visual Studio.
 
-Korzystając z podejście do tworzenia edytora/CLI (na przykład programu Visual Studio Code oraz interfejsu wiersza polecenia platformy Docker w systemie macOS lub Windows), musisz wiedzieć każdego kroku, zazwyczaj bardziej szczegółowo niż Jeśli używasz programu Visual Studio. Aby uzyskać więcej informacji na temat pracy w środowisku interfejsu wiersza polecenia, zobacz książki elektronicznej [cykl życia aplikacji kontenerowych nimi platformy Docker z Platforms i narzędzi Microsoft](http://aka.ms/dockerlifecycleebook/).
+Korzystając z podejście do tworzenia edytora/CLI (na przykład programu Visual Studio Code oraz interfejsu wiersza polecenia platformy Docker w systemie macOS lub Windows), musisz wiedzieć każdego kroku, zazwyczaj bardziej szczegółowo niż Jeśli używasz programu Visual Studio. Aby uzyskać więcej informacji na temat pracy w środowisku interfejsu wiersza polecenia, zobacz książki elektronicznej [cykl życia aplikacji kontenerowych nimi platformy Docker z Platforms i narzędzi Microsoft](https://aka.ms/dockerlifecycleebook/).
 
 Podczas korzystania z programu Visual Studio, wiele z tych kroków są obsługiwane dla Ciebie, co znacznie zwiększa wydajność pracy. Jest to szczególnie istotne w przypadku, gdy są przy użyciu programu Visual Studio 2017 i ustawianie elementów docelowych wielokontenerowych aplikacji. Na przykład w tylko jednym kliknięciem, program Visual Studio dodaje *pliku Dockerfile* i *docker-compose.yml* plików do swoich projektów za pomocą konfiguracji dla aplikacji. Po uruchomieniu aplikacji w programie Visual Studio tworzy obraz platformy Docker i uruchamia aplikację obsługującą wiele kontenerów bezpośrednio na platformie Docker. Umożliwia ona nawet jednocześnie debugowanie kilka kontenerów. Te funkcje zwiększania szybkiego rozwoju.
 
@@ -360,7 +360,7 @@ Istotną kwestią jest, jak pokazano na rysunku 5-12, w programie Visual Studio 
 
 Narzędzia docker compose się i platformy docker, Uruchom polecenia (lub uruchamianie i debugowanie kontenerów w programie Visual Studio) są odpowiednie do testowania kontenerów w środowisku programistycznym. Ale nie powinni używać tej metody, jeśli są przeznaczone dla klastrów platformy Docker i koordynatorów, takich jak Docker Swarm, Mesosphere DC/OS lub Kubernetes. Jeśli używasz klastra, takie jak [trybu Docker Swarm](https://docs.docker.com/engine/swarm/) (dostępne w Docker CE dla Windows i Mac od wersji 1.12), należy wdrożyć i przetestować przy użyciu dodatkowych poleceń, takich jak [tworzenia usługi docker](https://docs.docker.com/engine/reference/commandline/service_create/) dla jednej usługi. Jeśli wdrażasz aplikację składa się z kilku kontenerów, możesz użyć [pakietu Narzędzia docker compose](https://docs.docker.com/compose/reference/bundle/) i [myBundleFile wdrażana w rozwiązaniu docker](https://docs.docker.com/engine/reference/commandline/deploy/) wdrożyć złożone aplikację jako *stosu*. Aby uzyskać więcej informacji, zobacz wpis w blogu [Przedstawiamy eksperymentalne rozproszonych aplikacji pakiety](https://blog.docker.com/2016/06/docker-app-bundle/) w dokumentacji platformy Docker. w witrynie platformy Docker.
 
-Dla [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) i [Kubernetes](http://kubernetes.io/docs/user-guide/deployments/) użyje wdrożenia różnych poleceń i skryptów w także.
+Dla [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) i [Kubernetes](https://kubernetes.io/docs/user-guide/deployments/) użyje wdrożenia różnych poleceń i skryptów w także.
 
 ![Krok 6 grafiki](./media/image17.png)
 
@@ -422,7 +422,7 @@ Ponadto należy wykonać tylko raz w kroku 2 (Dodawanie obsługę platformy Dock
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Używanie poleceń programu PowerShell w pliku Dockerfile do konfigurowania kontenerów Windows
 
-[Kontenery Windows](/virtualization/windowscontainers/about/index) umożliwiają konwertowanie istniejących aplikacji Windows obrazów platformy Docker i wdrożyć je przy użyciu tych samych narzędzi, jak w pozostałych ekosystemie Docker. Aby użyć kontenery Windows, możesz uruchomić poleceń programu PowerShell w pliku Dockerfile, jak pokazano w poniższym przykładzie:
+[Kontenery Windows](/virtualization/windowscontainers/about/) umożliwiają konwertowanie istniejących aplikacji Windows obrazów platformy Docker i wdrożyć je przy użyciu tych samych narzędzi, jak w pozostałych ekosystemie Docker. Aby użyć kontenery Windows, możesz uruchomić poleceń programu PowerShell w pliku Dockerfile, jak pokazano w poniższym przykładzie:
 
 ```Dockerfile
 FROM microsoft/windowsservercore

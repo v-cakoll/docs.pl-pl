@@ -2,19 +2,18 @@
 title: Formaty ścieżki plików w systemach Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214197"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296831"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżki plików w systemach Windows
 
@@ -90,8 +89,8 @@ System operacyjny Windows ma modelu ujednoliconego obiektu, który wskazuje wszy
 
    Istnieje jedno łącze UNC, która jest wywoływana, nie zaskakująco `UNC`. Na przykład:
 
-      `\\.\UNC\Server\Share\Test\Foo.txt`
-      `\\?\UNC\Server\Share\Test\Foo.txt`
+  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\?\UNC\Server\Share\Test\Foo.txt`
 
     Dla urządzenia UNC fragment serwera/udział jest formularzy woluminu. Na przykład w `\\?\server1\e:\utilities\\filecomparer\`, fragment serwera/udział jest server1\utilities. Jest to istotne podczas wywoływania metody takie jak <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> segmentów względna katalogu; nigdy nie jest możliwe do nawigacji w przeszłości woluminu. 
 
@@ -114,7 +113,7 @@ Prawie wszystkie ścieżki przekazany do Windows API są znormalizowane. Podczas
 - Ocenia składniki względna katalogu (`.` dla bieżącego katalogu i `..` dla katalogu nadrzędnego).
 - Przycina niektórych znaków.
 
-Ta normalizacji lubi niejawnie, ale możesz zrobić to jawnie przez wywołanie metody <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> metody, która zawija wywołanie do [funkcja GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). Można również wywołać Windows [funkcja GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) bezpośrednio przy użyciu metody P/Invoke. Można również wywołać 
+Ta normalizacji lubi niejawnie, ale możesz zrobić to jawnie przez wywołanie metody <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> metody, która zawija wywołanie do [funkcja GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea). Można również wywołać Windows [funkcja GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) bezpośrednio przy użyciu metody P/Invoke.
 
 ### <a name="identifying-the-path"></a>Identyfikowanie ścieżki
 

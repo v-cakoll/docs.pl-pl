@@ -4,11 +4,11 @@ description: Dowiedz się, jak i dynamiczne określanie filtrów predykatów w c
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
 ms.openlocfilehash: ece5940edd615f30acab06a429de300e27811a66
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038491"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296077"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym
 

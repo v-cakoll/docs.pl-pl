@@ -3,12 +3,12 @@ title: Standardowe wzorce zdarzeń platformy .NET
 description: Więcej informacji na temat wzorce zdarzeń platformy .NET oraz jak utworzyć źródła zdarzeń w wersji standard i subskrybowanie i przetworzyć standardowych zdarzeń w kodzie.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266772"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297039"
 ---
 # <a name="standard-net-event-patterns"></a>Standardowe wzorce zdarzeń platformy .NET
 
@@ -117,7 +117,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ## <a name="adding-another-event-declaration"></a>Dodawanie innego deklaracja zdarzenia
 
-Dodajmy jedną funkcję więcej i pokazują innych idiomy języka dla zdarzeń. Dodajmy przeciążenia `Search()` metodę, która przechodzi przez wszystkie podkatalogi w poszukiwaniu plików.
+Dodajmy jedną funkcję więcej i pokazują innych idiomy języka dla zdarzeń. Dodajmy przeciążenia `Search` metodę, która przechodzi przez wszystkie podkatalogi w poszukiwaniu plików.
 
 To można pobrać jako długotrwałej operacji w katalogu z wielu katalogach podrzędnych. Dodajmy zdarzenia, które pobiera zgłaszane w przypadku każdego nowego wyszukiwania w katalogu rozpoczyna się. Dzięki temu subskrybentów do śledzenia postępu i zaktualizować użytkownika dotyczące postępu. Wszystkie przykłady, utworzonych przez siebie do tej pory były publiczne. Upewnijmy się, to zdarzenie wewnętrzne. Oznacza to, że można również ustawić jako typy również używany dla wewnętrznych argumentów.
 
@@ -133,7 +133,7 @@ Następnie zdefiniuj zdarzenie. Tym razem użyjesz różnej składni. Oprócz u�
 
 Na wiele sposobów kod, który możesz zapisu w tym miejscu duplikatów kodu, kompilator generuje definicje zdarzeń pola przedstawiono wcześniej. Tworzenie zdarzenia za pomocą składni bardzo podobne do celów [właściwości](properties.md). Zwróć uwagę, że programy obsługi mają inne nazwy: `add` i `remove`. Są one nazywane do subskrybowania zdarzenia lub anulować subskrypcję zdarzenia. Należy zauważyć, że również należy zadeklarować polem zapasowym prywatnych do przechowania zmiennej zdarzeń. Jest inicjowany do wartości null.
 
-Następnie Dodajmy przeciążenia metody Search(), przechodzi przez podkatalogów, która wywołuje zdarzenia obu. Najprostszym sposobem, aby osiągnąć ten cel jest określenie, że wszystkie katalogi wyszukiwania za pomocą domyślnego argumentu:
+Następnie Dodajmy przeciążenia `Search` metodę, która przechodzi podkatalogów i wywołuje zarówno zdarzenia. Najprostszym sposobem, aby osiągnąć ten cel jest określenie, że wszystkie katalogi wyszukiwania za pomocą domyślnego argumentu:
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 

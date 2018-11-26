@@ -7,11 +7,11 @@ ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 89724e9a322f2f28dbe5d18ae697acbdd0a32d8e
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744473"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296727"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Porady: debugowanie problemów aktywacji środowiska CLR
 Jeśli wystąpią problemy podczas uzyskiwania aplikację do uruchamiania w odpowiedniej wersji środowiska uruchomieniowego języka wspólnego (CLR), można wyświetlać i debugowania dzienniki aktywacji środowiska CLR. Te dzienniki może być bardzo przydatne podczas ustalania głównej przyczyny problemu aktywacji, kiedy aplikacja różnych wersji środowiska CLR ładuje, niż oczekiwano lub w ogóle nie jest ładowana środowiska CLR. [Błędy inicjowania programu .NET Framework: Zarządzanie środowiska użytkownika](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) tym artykule omówiono środowisko CLR nie został znaleziony dla aplikacji.  

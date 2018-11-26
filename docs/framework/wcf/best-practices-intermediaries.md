@@ -2,19 +2,19 @@
 title: 'Najlepsze praktyki: Elementy pośredniczące'
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
-ms.openlocfilehash: d69baae9b4f5851f60d8d1336c40e0d18db8e77d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b0e0e635c0e790b342115b988905ba29a6b8ad1
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458422"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296407"
 ---
 # <a name="best-practices-intermediaries"></a>Najlepsze praktyki: Elementy pośredniczące
-Należy uważać poprawnie obsłużyć błędy podczas wywoływania metody pośredników, aby upewnić się, że kanały po stronie usługi na pośrednik zostały prawidłowo zamknięte.  
+Należy uważać, aby poprawnie obsługi błędów podczas wywoływania pośredników, aby upewnić się, że kanały po stronie usługi na pośrednika są prawidłowo zamknięte.  
   
- Rozważmy poniższy scenariusz. Klient nawiązuje połączenie pośrednika, który wywołuje usługi zaplecza.  Usługi zaplecza definiuje kontrakt nie błędu, więc winy wyjątek od tej usługi będzie traktowana jako błąd wyrażeniami bez typu.  Zwraca usługi zaplecza <xref:System.ApplicationException> i WCF poprawnie przerywa kanału po stronie serwera. <xref:System.ApplicationException> Następnie powierzchnie <xref:System.ServiceModel.FaultException> który jest zgłaszany do pośrednika. Ponownie zgłasza wyjątek pośrednik <xref:System.ApplicationException>. Usługi WCF interpretuje jako błąd wyrażeniami bez typu z pośrednik i przekazuje je do klienta. Po odebraniu usterki, zarówno klient, jak i pośrednik fault ich kanały po stronie klienta. Kanału po stronie usługi pośrednika jednak pozostanie otwarty, ponieważ WCF nie może ustalić, czy błąd jest krytyczny.  
+ Rozważmy następujący scenariusz. Klient wysyła wywołania pośrednika, która następnie wywołuje usługi zaplecza.  Usługi zaplecza definiuje kontrakt nie błędów, więc żadnych błędów zgłaszane z tej usługi będzie traktowane jako błąd bez.  Zgłasza usługi zaplecza <xref:System.ApplicationException> i WCF poprawnie przerywa kanału po stronie usługi. <xref:System.ApplicationException> Następnie powierzchnie <xref:System.ServiceModel.FaultException> , jest zgłaszany do pośrednik. Generuje ponownie pośrednik <xref:System.ApplicationException>. Usługi WCF interpretuje to jako bez błędów, z pośrednik i przekazuje go do klienta. Po odebraniu usterki, zarówno klient, jak i pośrednik błędów ich kanały po stronie klienta. Kanału po stronie usługi pośrednika jednak pozostaje otwarty, ponieważ usługi WCF nie wie, że błąd jest krytyczny.  
   
- Najlepszym rozwiązaniem w tym scenariuszu jest wykryć, czy jest krytyczny błąd przesyłanych przez usługę, a jeśli tak pośrednik powinien fault kanału po stronie serwera, jak pokazano w poniższy fragment kodu.  
+ Najlepszym rozwiązaniem, w tym scenariuszu jest wykryć, czy błędów pochodzące z usługi jest krytyczny, a jeśli więc pośrednik powinien błędów kanału po stronie usługi, jak pokazano w poniższym fragmencie kodu.  
   
 ```csharp  
 catch (Exception e)  
@@ -25,7 +25,7 @@ catch (Exception e)
     {  
         throw new ApplicationException(e.Message);  
     }  
-    Else  
+    else  
     {  
         throw;  
     }  

@@ -1,45 +1,45 @@
 ---
-title: Implementowanie obiekty wartości
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie obiekty wartości
+title: Implementowanie obiektów wartości
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Pobierz szczegóły i funkcje umożliwiające implementowanie obiektów wartości przy użyciu nowych funkcji programu Entity Framework.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 4ba2e48e742e580a1c96743fa89e413c488b8dc7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 057e2e65f975c1de8f332b77c8a23d07329381e6
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106726"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297481"
 ---
-# <a name="implementing-value-objects"></a>Implementowanie obiekty wartości
+# <a name="implement-value-objects"></a>Implementowanie obiektów wartości
 
-Zgodnie z opisem we wcześniejszych sekcjach jednostek i agreguje informacje tożsamości jest podstawą dla jednostek. Istnieją jednak wiele obiektów i elementy danych w systemie, które nie wymagają tożsamości i tożsamości śledzenia, takich jak obiekty wartości.
+Zgodnie z opisem we wcześniejszych sekcjach dotyczących jednostek i agregacji, tożsamość ma zasadnicze znaczenie dla jednostki. Istnieją jednak wiele obiektów i elementów danych w systemie, które nie wymagają usługi tożsamości i tożsamości, śledzenie, takie jak obiekty wartości.
 
-Obiekt wartości może się odwoływać inne jednostki. Na przykład w aplikacji, która generuje trasy, który opisuje metodę get z jednego miejsca do innego tej trasy byłoby obiektu wartości. Byłoby migawkę punktów na określoną trasę, ale ta trasa sugerowane nie miałoby tożsamości, mimo że wewnętrznie może dotyczyć jednostek Miasto, drogowej itd.
+Obiekt wartości można odwoływać się do innych jednostek. Na przykład w aplikacji, która generuje trasę, która opisuje, jak można uzyskać z jednego miejsca do innego tej trasy będzie obiektu wartości. Byłoby migawek punktów na określoną trasę, ale ta trasa sugerowane nie miałoby tożsamości, mimo że wewnętrznie go, może odnosić się do jednostek, takich jak miasto, drogi itp.
 
-Rysunek 9-13 przedstawiono obiektu wartości adresu w kolejności agregacji.
+Rysunek 7-13 przedstawiono obiektu wartość adresu w agregacji zamówienia.
 
-![](./media/image14.png)
+![Wartość adresu — obiekt wewnątrz agregacji zamówienia.](./media/image14.png)
 
-**Rysunek 9-13**. Adres obiektu wartości w kolejności agregacji
+**Rysunek 7-13**. Adres obiektu wartości w kolejności agregacji
 
-Jak pokazano w rysunek 9-13, jednostki zazwyczaj składa się z wielu atrybutów. Na przykład `Order` jednostki można modelowane jako jednostki o tożsamości i wewnętrznie składa się z zestawu atrybutów, takich jak OrderId OrderDate, OrderItems itp. Ale adresu, który jest po prostu złożona wartość składa się z kraju ulicy, miasta itp. i ma nie tożsamość w tej domenie, musi być modelowane i traktowane jako obiekt wartości.
+Jak pokazano w rysunek 7-13, jednostki zwykle składa się z wielu atrybutów. Na przykład `Order` jednostki mogą być modelowane jako jednostki przy użyciu tożsamości i wewnętrznie składa się z zestawu atrybutów, takich jak OrderId OrderDate, OrderItems itp. Ale adresu, który jest po prostu złożone wartością, składa się z kraju, ulicy, Miasto itp. i ma Brak tożsamości w tej domenie, musi być modelowane i traktowane jako obiekt wartości.
 
-## <a name="important-characteristics-of-value-objects"></a>Najważniejsze czynniki wartość obiektów
+## <a name="important-characteristics-of-value-objects"></a>Istotne cechy obiektów wartości
 
-Istnieją dwa główne cechy dla obiektów wartości:
+Istnieją dwa główne właściwości dla obiektów wartości:
 
--   Mają one nie tożsamości.
+- Mają one nie tożsamości.
 
--   Są one niezmienialny.
+- Są niezmienne.
 
-Pierwszy cech już został omówiony. Immutability musi być spełniony ważne. Wartości obiektu wartości należy modyfikować po utworzeniu obiektu. W związku z tym podczas konstruowania obiektu, należy podać wartości wymagane, ale musi zezwala zmienić okres istnienia obiektu.
+Charakterystyka pierwszy już został omówiony. Niezmienność jest ważne wymagania. Po utworzeniu obiektu musi być niezmienialne wartości obiektu wartości. W związku z tym gdy obiekt jest konstruowany, należy podać wartości wymagane, ale nie muszą umożliwiać mu zmiany w okresie istnienia obiektu.
 
-Obiekty wartości umożliwiają wykonywanie niektórych lewy wydajności dzięki użyciu natury niezmienialny. Jest to szczególnie istotne w systemach gdzie mogą być tysiące wartość wystąpienia obiektów, z których wiele mają takie same wartości. Natury niezmienne umożliwia ich ponowne użycie; od czasu ich wartości są takie same i mają tożsamości nie mogą być wymienne obiektów. Ten rodzaj optymalizacji czasami wprowadzić różnica między oprogramowaniem dobrą wydajność i oprogramowania, które działa powoli. Oczywiście wszystkich tych przypadkach zależą od środowiska aplikacji i wdrażania kontekstu.
+Obiekty wartości umożliwiają wykonywanie niektórych wskazówki wydajność dzięki natury niezmienne. Jest to szczególnie istotne w systemach w przypadku, gdy może być tysiące wartości wystąpienia obiektów, z których wiele ma takie same wartości. Natury niezmienne umożliwia ich ponowne użycie; wymienne obiekty mogą być ich wartości są takie same, ponieważ mają one nie tożsamości. Tego rodzaju optymalizacji, czasami mogą się przyczynić między oprogramowania, który działa wolno i dobrą wydajność. Oczywiście wszystkich tych przypadkach są zależne od aplikacji środowiska i kontekstu wdrożenia.
 
-## <a name="value-object-implementation-in-c"></a>Wartość implementacji obiektu w języku C\#
+## <a name="value-object-implementation-in-c"></a>Wartość obiektu wdrożenia w języku C\#
 
-W implementacji może mieć klasy podstawowej obiektu wartość, która ma metody podstawowe narzędzia, takie jak równości na podstawie porównania między wszystkie atrybuty (ponieważ obiektu wartości nie musi być oparta na tożsamości) oraz innych podstawowych właściwości. W poniższym przykładzie przedstawiono wartości obiektu klasy podstawowej, używany w porządkowania mikrousługi z eShopOnContainers.
+Pod względem implementacji może mieć klasy podstawowej obiektu wartość, która zawiera podstawowe narzędzia metod, takich jak na podstawie porównania między wszystkie atrybuty (ponieważ jest to obiekt wartości nie muszą być oparte na tożsamości) oraz innych podstawowych charakterystyk równości. Poniższy przykład pokazuje wartość obiektu klasy bazowej, używane w szeregowania mikrousługi w ramach aplikacji eShopOnContainers.
 
 ```csharp
 public abstract class ValueObject
@@ -97,16 +97,16 @@ public abstract class ValueObject
 }
 ```
 
-Tej klasy można użyć podczas wykonywania obiekt rzeczywistej wartości, tak jak w przypadku obiektu wartości adresu pokazano w poniższym przykładzie:
+Za pomocą tej klasy podczas implementowania rzeczywistej wartości obiektu, jak pokazano w poniższym przykładzie obiekt wartości adresów:
 
 ```csharp
 public class Address : ValueObject
 {
-    public String Street { get; }
-    public String City { get; }
-    public String State { get; }
-    public String Country { get; }
-    public String ZipCode { get; }
+    public String Street { get; private set; }
+    public String City { get; private set; }
+    public String State { get; private set; }
+    public String Country { get; private set; }
+    public String ZipCode { get; private set; }
 
     private Address() { }
 
@@ -131,15 +131,21 @@ public class Address : ValueObject
 }
 ```
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Jak zachować wartości obiektów w bazie danych EF Core 2.0
+Możesz zobaczyć, jak ta implementacja obiektu wartość adresu ma, Brak tożsamości, a w związku z tym, żadne pole ID, ani w klasie adres, nawet w klasie ValueObject.
 
-Widać tylko sposób definiowania obiektu wartości do modelu domeny. Ale, jak można można faktycznie utrwalić go do bazy danych za pośrednictwem Core Entity Framework (EF), która zwykle jest przeznaczony dla jednostek z tożsamością?
+Posiadanie żadne pole Identyfikatora w klasie, który będzie używany przez Entity Framework nie było możliwe aż do programu EF Core 2.0, co znacznie ułatwia Implementowanie lepsze obiekty wartości nie identyfikatorem To dokładnie wyjaśnienie w następnej sekcji. 
 
-### <a name="background-and-older-approaches-using-ef-core-11"></a>Tło i starszych podejścia przy użyciu EF Core 1.1
+Może być podniesiono, że obiekty wartości, są niezmienne, powinny być odczytywane tylko (czyli get tylko właściwości) i że jest rzeczywiście. Jednak wartość jest zazwyczaj serializacji i deserializacji za pośrednictwem kolejki komunikatów i jest tylko do odczytu, zatrzymuje Deserializator przypisywaniu wartości, dzięki czemu możemy po prostu pozostaw je prywatnej Ustaw których jest tylko do odczytu wystarczająco to praktyczne.
 
-Jako tło, to ograniczenie, używając EF Core 1.0 i 1.1 został, że nie można użyć [typów złożonych](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) zgodnie z definicją w EF 6.x w tradycyjnych .NET Framework. W związku z tym jeśli przy użyciu EF Core w wersji 1.0 lub 1.1, potrzebne do przechowywania wartości obiektu jako jednostka EF z pola identyfikator. Następnie tak będzie wyglądał więcej takich jak obiekt wartości przy nie tożsamości, można ukryć jego identyfikator, więc można wyjaśnić, że tożsamość obiektu wartości nie jest ważna w modelu domeny. Ten identyfikator można ukryć przy użyciu Identyfikatora jako [w tle właściwości](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Ponieważ tego ukrywania identyfikator modelu jest skonfigurowany na poziomie infrastruktury EF, byłoby rodzaj niewidoczny dla modelu domeny.
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Jak zachować wartość obiektów w bazie danych przy użyciu programu EF Core 2.0
 
-W pierwotnej wersji eShopOnContainers (.NET Core 1.1) identyfikator ukryte potrzebne w infrastrukturze podstawowej EF został wdrożony w następujący sposób na poziomie typu DbContext w projekcie infrastruktury przy użyciu interfejsu API Fluent. W związku z tym Identyfikatorem była ukrytych z punktu widzenia modelu domeny, lecz nadal znajdują się w infrastrukturze.
+Możesz już wiesz, jak zdefiniować obiekt wartości w modelu domeny. Ale jak może faktycznie powiedzmy go do bazy danych za pośrednictwem podstawowych Entity Framework (EF), która zwykle jest przeznaczony dla jednostek o tożsamości?
+
+### <a name="background-and-older-approaches-using-ef-core-11"></a>Tło i starszych metod przy użyciu programu EF Core 1.1
+
+Jako tła, ograniczenie, w przypadku korzystania z programów EF Core 1.0 i 1.1 został może nie używać [typy złożone](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) zgodnie z definicją w programie EF w tradycyjnych .NET Framework w wersji 6.x. W związku z tym przy użyciu programu EF Core 1.0 i 1.1, potrzebna do przechowywania wartości obiektu jako jednostki EF o pole Identyfikatora. Następnie, dzięki czemu będzie wyglądał bardziej jak obiekt wartości przy użyciu tożsamości nie, można ukryć jego Identyfikatora, dzięki czemu można wyjaśnić, że tożsamość obiektu wartości nie jest ważna w modelu domeny. Ten identyfikator można ukryć za pomocą Identyfikatora jako [w tle właściwość](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Ponieważ ten ukrywania identyfikator modelu jest skonfigurowany na poziomie infrastruktury EF, byłoby rodzaju przezroczyste dla modelu domeny.
+
+W wersji początkowej w ramach aplikacji eShopOnContainers (.NET Core 1.1) identyfikator ukryte wymagane przez infrastrukturę programu EF Core została zaimplementowana w następujący sposób na poziomie kontekstu DbContext przy użyciu interfejsu API Fluent w projekcie infrastruktury. W związku z tym identyfikator został ukryty z punktu widzenia modelu domeny, ale nadal znajdują się w ramach infrastruktury.
 
 ```csharp
 // Old approach with EF Core 1.1
@@ -154,36 +160,35 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 }
 ```
 
-Jednak trwałości wartość obiektu do bazy danych została wykonana, takie jak regularne jednostki w innej tabeli.
+Jednak trwałości wartość obiektu do bazy danych została wykonana jak regularne jednostki w innej tabeli.
 
-EF Core 2.0, są nowe i lepsze metody, aby utrwalić obiekty wartości.
+Przy użyciu programu EF Core 2.0, są nowe i lepsze sposoby utrwalania obiektów wartości.
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>Utrwalanie obiekty wartości jako typy jednostek należące do firmy w programie EF Core 2.0
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>Utrwalanie obiekty wartości jako posiadane typy jednostek w programie EF Core 2.0
 
-Nawet w przypadku niektórych luki pomiędzy wzorzec obiektu wartości kanonicznej w DDD i typ należących do jednostki w podstawowej EF obecnie jest najlepszy sposób, aby utrwalić obiekty wartości EF Core 2.0. Widać ograniczenia na końcu tej sekcji.
+Nawet w przypadku niektórych luki między wzorzec object canonical wartość w DDD i typ jednostki należące do firmy w wersji EF Core jest obecnie najlepszym sposobem, aby utrwalić obiekty wartości przy użyciu programu EF Core 2.0. Możesz zobaczyć ograniczenia na końcu tej sekcji.
 
-Funkcja Typ należących do jednostki został dodany do EF Core od wersji 2.0.
+Funkcja Typ jednostki należące do firmy został dodany do programu EF Core od wersji 2.0.
 
-Typ jednostki należące do firmy pozwala na mapowanie typów, które nie mają własnych jawnie tożsamości zdefiniowanej w modelu domeny i są używane jako właściwości, takie jak obiekt wartości w żadnej jednostki. Typ jednostki należących do udziałów tego samego typu CLR z innym typem jednostki. Obiekt zawierający definiującego nawigacji jest jednostką właściciela. Podczas wykonywania zapytania właściciela, typy należące do firmy są domyślnie dołączone.
+Typ jednostki należące do firmy umożliwia mapowanie typów, które nie mają własnej tożsamości jawnie zdefiniowany w modelu domeny i są używane jako właściwości, takie jak obiekt wartości w ramach danej jednostki. Typ jednostki należące do firmy udostępni inny typ jednostki tego samego typu CLR (czyli jest zwykłej klasy). Obiekt zawierający definiujące nawigacji to jednostka właściciela. Podczas wykonywania zapytania właściciela, typy należące do firmy są domyślnie dołączone.
 
-Tylko na podstawie modelu domeny, należących do typu prawdopodobnie nie ma żadnych tożsamości.
-Jednak w obszarze obejmuje należących do typów ma tożsamość, ale właściwość nawigacji właściciela jest częścią tej tożsamości.
+Po prostu patrząc na model domeny, typem należące do firmy wygląda na to nie ma żadnych tożsamości. Jednak dzieje się w tle, posiadane typy mają tożsamości, ale właściwość nawigacji właściciel jest częścią tej tożsamości.
 
-Tożsamość wystąpienia własnych typów nie jest całkowicie własne. Składa się z trzech składników:
+Tożsamość wystąpień typów należące do firmy, nie jest całkowicie swoje własne. Składa się z trzech składników:
 
 - Tożsamość właściciela
 
-- Wskazuje właściwość nawigacji
+- Właściwość nawigacji, wskazując je
 
-- W przypadku kolekcji należących do typów, niezależnie od składnika (nie jest jeszcze obsługiwane w programie EF Core 2.0).
+- W przypadku kolekcji typów będących własnością, niezależnie od składnika (nie są jeszcze obsługiwane w programie EF Core 2.0, pojawi się na 2.2).
 
-Na przykład w modelu domeny porządkowanie na eShopOnContainers jako część jednostki kolejności obiekt wartość adres jest zaimplementowany jako typu jednostki należące do firmy w ramach jednostki właściciela, czyli kolejność jednostki. Adres jest typem z ma właściwości tożsamości zdefiniowanej w modelu domeny. Aby określić adres wysyłkowy dla określonej kolejności służy jako właściwość typu kolejności.
+Na przykład w modelu domeny porządkowanie w ramach aplikacji eShopOnContainers jednostce zamówienia w ramach obiektu wartość adresu jest implementowany jako typ jednostki należące do firmy w ramach jednostki właściciela, czyli jednostki zamówienia. Adres jest typu z żadnej właściwości tożsamości zdefiniowanych w modelu domeny. Aby określić adres wysyłkowy dla określonej kolejności służy jako właściwość typu zamówienia.
 
-Konwencja klucz podstawowy w tle jest tworzony dla typu należące do firmy i będzie on zamapowany do tej samej tabeli jako właściciel przy użyciu dzielenia tabeli. Dzięki temu Użyj należące do typów podobnie jak złożonych typów są używane w EF6 w tradycyjnych .NET Framework.
+Zgodnie z Konwencją klucz podstawowy w tle jest tworzony dla typu należące do firmy i będzie można zamapować na tej samej tabeli jako właściciel przy użyciu dzielenie tabeli. Dzięki temu Użyj należące do typów podobnie jak złożonych typów są używane w EF6 tradycyjnych .NET Framework.
 
-Należy pamiętać, że który należące do typów nigdy nie są wykrywane przez Konwencję w podstawowej EF, dlatego należy je jawnie deklarować.
+Należy pamiętać, że że należące do typów nigdy nie są wykrywane przez Konwencję w programie EF Core, więc trzeba je zadeklarować jawnie.
 
-W eShopOnContainers w OrderingContext.cs, w metodzie OnModelCreating() istnieje wiele konfiguracji infrastruktury, które są stosowane. Jeden z nich jest powiązany z jednostki kolejności.
+W ramach aplikacji eShopOnContainers u OrderingContext.cs, w metodzie OnModelCreating() istnieje wiele konfiguracji infrastruktury, które są stosowane. Jeden z nich jest powiązany z jednostką zamówienia.
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
@@ -198,7 +203,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 }
 ```
 
-W poniższym kodzie infrastruktury trwałości jest zdefiniowany dla encji kolejności:
+W poniższym kodzie infrastruktury trwałości jest zdefiniowany dla jednostki zamówienia:
 
 ```csharp
 // Part of the OrderEntityTypeConfiguration.cs class 
@@ -221,11 +226,11 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 }
 ```
 
-W poprzednim kodzie `orderConfiguration.OwnsOne(o => o.Address)` Metoda określa, że `Address` właściwość jest należących do jednostki `Order` typu.
+W poprzednim kodzie `orderConfiguration.OwnsOne(o => o.Address)` Metoda określa, że `Address` właściwość jest własnością jednostki `Order` typu.
 
-Domyślnie EF podstawowe konwencje nazw kolumn bazy danych dla właściwości typu jednostki należące do firmy jako `EntityProperty_OwnedEntityProperty`. W związku z tym wewnętrzna właściwości `Address` będą wyświetlane w `Orders` tabeli z nazwami `Address_Street`, `Address_City` (i tak dalej dla `State`, `Country` i `ZipCode`).
+Domyślnie, konwencje programu EF Core nazwę kolumny bazy danych dla właściwości typu jednostki należące do firmy, co `EntityProperty_OwnedEntityProperty`. W związku z tym, wewnętrzny właściwości `Address` pojawi się w `Orders` tabel o nazwach `Address_Street`, `Address_City` (i tak dalej dla `State`, `Country` i `ZipCode`).
 
-Możesz dołączyć `Property().HasColumnName()` fluent metody można zmienić nazwy kolumny. W przypadku gdy `Address` jest właściwością publiczną mapowania będzie podobnie do następującej:
+Możesz dołączyć `Property().HasColumnName()` fluent metodę, aby zmienić nazwę kolumny. W przypadku których `Address` jest właściwością publiczną mapowania będzie następujący:
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.Address)
@@ -235,7 +240,7 @@ orderConfiguration.OwnsOne(p => p.Address)
                             .Property(p=>p.City).HasColumnName("ShippingCity");
 ```
 
-Istnieje możliwość łańcucha `OwnsOne` metody w mapowaniu fluent. W poniższym przykładzie hipotetyczny `OrderDetails` właścicielem `BillingAddress` i `ShippingAddress`, które są oba `Address` typów. Następnie `OrderDetails` jest własnością `Order` typu.
+Istnieje możliwość łańcucha `OwnsOne` metody w mapowaniu fluent. W poniższym przykładzie hipotetyczny `OrderDetails` właścicielem `BillingAddress` i `ShippingAddress`, które są zarówno `Address` typów. Następnie `OrderDetails` jest własnością `Order` typu.
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>
@@ -264,66 +269,66 @@ public class Address
 }
 ```
 
-### <a name="additional-details-on-owned-entity-types"></a>Więcej informacji na temat typów jednostek należące do firmy
+### <a name="additional-details-on-owned-entity-types"></a>Więcej informacji na temat posiadane typy jednostek
 
-• Należące do typów zdefiniowanych podczas konfigurowania właściwości nawigacji do określonego typu przy użyciu interfejsu API fluent OwnsOne.
+- Posiadane typy są definiowane podczas konfigurowania właściwości nawigacji do określonego typu przy użyciu interfejsu API fluent OwnsOne.
 
-• Definicji należących do typu w modelu metadanych jest złożone z: Typ właściciela, właściwość nawigacji i typu CLR typu należące do firmy.
+- Definicja typu należące do firmy w naszym modelu metadanych jest złożone z: Typ właściciela, właściwość nawigacji i typ CLR tego typu należące do firmy.
 
-• Tożsamości (klucz) wystąpienia typu należących do naszej stosu jest złożone tożsamości typu właściciela i definicji typu należące do firmy.
+- Tożsamość (klucz) wystąpienia typu należących do naszego stosu jest złożone tożsamości typu właściciela i definicji typu należące do firmy.
 
-#### <a name="owned-entities-capabilities"></a>Należących do podmiotów możliwości:
+#### <a name="owned-entities-capabilities"></a>Funkcje jednostki należące do firmy:
 
-• Należące do typu może odwoływać się inne jednostki, albo własnością (zagnieżdżone typy należące do firmy) lub będących własnością (właściwości nawigacji odwołania regularnych dla innych jednostek).
+- Posiadane typy mogą odwoływać się inne jednostki, albo właścicielem (zagnieżdżone typy należące do firmy) lub należących do firmy (właściwości nawigacji regularne odwołania do innych jednostek).
 
-• Można mapowania tej samej CLR typu jako różne typy należące do firmy w tej samej jednostki właściciela za pośrednictwem właściwości oddzielne nawigacji.
+- Można mapować tego samego typu CLR jako różne typy należące do firmy w tej samej jednostki właściciel za pośrednictwem właściwości nawigacji oddzielne.
 
-• Tabeli dzielenia została skonfigurowana przez Konwencję, ale można zrezygnować z przez mapowanie do innej tabeli za pomocą ToTable należących do typu.
+- Dzielenie tabeli została skonfigurowana zgodnie z Konwencją, ale możesz zrezygnować z przez mapowanie typu należące do innej tabeli przy użyciu ToTable.
 
-• Wczesny ładowania jest realizowane automatycznie należących do typów, tj. nie trzeba wywołać Include() w zapytaniu.
+- Wczesne ładowanie odbywa się automatycznie w typach należące do firmy, czyli nie trzeba wywoływać include() — na tym zapytaniu.
 
-#### <a name="owned-entities-limitations"></a>Jednostek należących do ograniczenia:
+- Można skonfigurować za pomocą atrybutu \[posiadane\], zgodnie z programem EF Core 2.1
 
-• Nie można utworzyć klasę DbSet<T> należących do typu (zgodnie z projektem).
+#### <a name="owned-entities-limitations"></a>Ograniczenia jednostki należące do firmy:
 
-• Nie można wywołać ModelBuilder.Entity<T>() na należących do typów (obecnie zgodnie z projektem).
+- Nie można utworzyć DbSet\<T\> typu należące do firmy (według projektu).
 
-• Nie kolekcje należące do typów jeszcze (ale zostaną one obsługiwane w wersji po EF Core 2.0).
+- Nie można wywołać ModelBuilder.Entity\<T\>() dla typów należące do firmy (obecnie według projektu).
 
-• Obsługa ich konfiguracji w atrybucie.
+- Nie kolekcji typów będących własnością jeszcze (począwszy od programu EF Core 2.1, ale będą obsługiwane w 2.2).
 
-• Nie obsługuje dla typów opcjonalne należące do firmy (tj. wartości null), które są mapowane z właścicielem w tej samej tabeli (np. przy użyciu dzielenia tabeli). To dlatego nie mamy oddzielne wartownik dla wartości null.
+- Brak obsługi opcjonalne (oznacza to, dopuszczającego wartość null) należące do typów, które są mapowane z właścicielem w tej samej tabeli (np. za pomocą dzielenia tabeli). Jest to spowodowane mapowanie jest wykonywane dla każdej właściwości, nie mamy oddzielne wartownik zawiera wartości null dla złożonych jako całego.
 
-• Nie obsługuje mapowania dziedziczenia dla typów należące do firmy, ale powinno być możliwe do mapowania dwa typy liścia jako różnych typów należących do tej samej hierarchii dziedziczenia. Podstawowe EF nie będzie przyczyny o tym, że są one częścią tej samej hierarchii.
+- Brak obsługi mapowania dziedziczenia należące do typów, ale powinno być możliwe do mapowania dwa typy tej samej hierarchii dziedziczenia w jako należących do różnego typu liść. EF Core nie będzie przyczyny o tym, że są one częścią tej samej hierarchii.
 
-#### <a name="main-differences-with-ef6s-complex-types"></a>Główne różnice z typów złożonych EF6 firmy
+#### <a name="main-differences-with-ef6s-complex-types"></a>Główne różnice przy użyciu platformy EF6 dla typów złożonych
 
-Dzielenie tabeli • jest opcjonalny, tj. Opcjonalnie można mapować do osobnej tabeli i nadal należeć do typów.
+- Dzielenie tabeli jest opcjonalne, czyli opcjonalnie mogą zostać zmapowane do osobnej tabeli i nadal należeć do typów.
 
-• Odwołujących się inne jednostki (tj. mogą pełnić stronie zależnych na relacje z innych typów nie jest właścicielem).
-
+- Mogą odwoływać się do innych jednostek (czyli mogą pełnić zależne side w relacji z innymi typami należących do firmy).
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Pole Fowler. Wzorzec ValueObject**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martina Fowlera. Wzorzec ValueObject** \
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Evans marek. Projektowanie oparte na domenie: Czoła złożoności serca oprogramowania.** (Książki; zawiera omówienie obiekty wartości) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Projektowania opartego na domenie: Co dzień do czynienia złożoności serce oprogramowania.** (Zarezerwuj; zawiera omówienie obiekty wartości) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Vaughn Vernon. Implementowanie projektu opartych na domenie.** (Książki; zawiera omówienie obiekty wartości) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+- **Vaughn Vernon. Implementowanie projektu opartego na domenach.** (Zarezerwuj; zawiera omówienie obiekty wartości) \
+  [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Właściwości w tle**
-    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+- **Właściwości w tle** \
+  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **Typy złożone i/lub obiekty wartości**. Omówienie w repozytorium EF Core GitHub (karta problemów) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
+- **Typy złożone i/lub obiekty wartości**. Dyskusja w repozytorium programu EF Core w witrynie GitHub (karta problemy) \
+  [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
 
--   **ValueObject.cs.** Wartość podstawową klasy obiektów w eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
+- **ValueObject.cs.** Podstawowa klasa obiektu wartości w eShopOnContainers.* * \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
 
--   **Klasy adresów.** Przykładowe wartości klasy obiektów w eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
-
-
+- **Klasy adresów.** Klasa obiektu wartość próbki w ramach aplikacji eShopOnContainers. \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
 >[!div class="step-by-step"]
 [Poprzednie](seedwork-domain-model-base-classes-interfaces.md)

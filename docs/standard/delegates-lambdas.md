@@ -1,139 +1,147 @@
 ---
-title: Delegaci i wyrażeń lambda
-description: Dowiedz się, jak delegatów Definiowanie typu, które określą podpisu konkretnej metody, które można wywołać bezpośrednio lub przekazana do innej metody i wywołać.
+title: Delegaci i wyrażenia lambda
+description: Dowiedz się, jak delegatów Definiowanie typu, które określą podpis konkretnej metody, które mogą być wywoływane bezpośrednio lub przekazana do innej metody o nazwie.
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: f8184b87fc62f378fe72138733f87de924da60f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fb926683de90516bcf67d99026a0134d82cb683
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574566"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296948"
 ---
-# <a name="delegates-and-lambdas"></a><span data-ttu-id="340c5-103">Delegaci i wyrażeń lambda</span><span class="sxs-lookup"><span data-stu-id="340c5-103">Delegates and lambdas</span></span>
+# <a name="delegates-and-lambdas"></a><span data-ttu-id="cb308-103">Delegaci i wyrażenia lambda</span><span class="sxs-lookup"><span data-stu-id="cb308-103">Delegates and lambdas</span></span>
 
-<span data-ttu-id="340c5-104">Obiekty delegowane Definiowanie typu, które określą sygnatury określonej metody.</span><span class="sxs-lookup"><span data-stu-id="340c5-104">Delegates define a type, which specify a particular method signature.</span></span> <span data-ttu-id="340c5-105">Metody (statyczny lub wystąpienia) odpowiadającej tego podpisu może być przypisany do zmiennej tego typu, a następnie wywołać bezpośrednio (za pomocą odpowiednie argumenty) lub przekazanego jako argument się do innej metody i następnie wywołuje.</span><span class="sxs-lookup"><span data-stu-id="340c5-105">A method (static or instance) that satisfies this signature can be assigned to a variable of that type, then called directly (with the appropriate arguments) or passed as an argument itself to another method and then called.</span></span> <span data-ttu-id="340c5-106">W poniższym przykładzie pokazano Użyj delegata.</span><span class="sxs-lookup"><span data-stu-id="340c5-106">The following example demonstrates delegate use.</span></span>
+<span data-ttu-id="cb308-104">Delegaty zdefiniować typ, które określą podpisu konkretnej metody.</span><span class="sxs-lookup"><span data-stu-id="cb308-104">Delegates define a type, which specify a particular method signature.</span></span> <span data-ttu-id="cb308-105">Metody (statyczny lub wystąpienia) odpowiadającej ten podpis mogą zostać przypisane do zmiennej tego typu, a następnie wywoływana bezpośrednio (z odpowiednimi argumentami) lub przekazywany jako argument sam do innej metody i następnie wywoływana.</span><span class="sxs-lookup"><span data-stu-id="cb308-105">A method (static or instance) that satisfies this signature can be assigned to a variable of that type, then called directly (with the appropriate arguments) or passed as an argument itself to another method and then called.</span></span> <span data-ttu-id="cb308-106">W poniższym przykładzie pokazano użycie delegata.</span><span class="sxs-lookup"><span data-stu-id="cb308-106">The following example demonstrates delegate use.</span></span>
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
+    public delegate string Reverse(string s);
 
-  public delegate string Reverse(string s);
+    static string ReverseString(string s)
+    {
+        return new string(s.Reverse().ToArray());
+    }
 
-  static string ReverseString(string s)
-  {
-      return new string(s.Reverse().ToArray());
-  }
+    static void Main(string[] args)
+    {
+        Reverse rev = ReverseString;
 
-  static void Main(string[] args)
-  {
-      Reverse rev = ReverseString;
-
-      Console.WriteLine(rev("a string"));
-  }
+        Console.WriteLine(rev("a string"));
+    }
 }
 ```
 
-*   <span data-ttu-id="340c5-107">W wierszu 4 utworzymy typem obiektu delegowanego niektórych podpisu w tym przypadku metoda który przyjmuje parametr typu string i zwraca parametr typu string.</span><span class="sxs-lookup"><span data-stu-id="340c5-107">On line 4 we create a delegate type of a certain signature, in this case a method that takes a string parameter and then returns a string parameter.</span></span>
-*   <span data-ttu-id="340c5-108">W wierszu 6 definiujemy implementacji delegata dzięki udostępnieniu metod, który ma dokładnie takiego samego podpisu.</span><span class="sxs-lookup"><span data-stu-id="340c5-108">On line 6, we define the implementation of the delegate by providing a method that has the exact same signature.</span></span>
-*   <span data-ttu-id="340c5-109">W wierszu 13 metody jest przypisany do typu, który odpowiada `Reverse` delegowanie.</span><span class="sxs-lookup"><span data-stu-id="340c5-109">On line 13, the method is assigned to a type that conforms to the `Reverse` delegate.</span></span>
-*   <span data-ttu-id="340c5-110">Na koniec wiersza 15 możemy wywołać delegata przekazywanie ciągu do wycofania.</span><span class="sxs-lookup"><span data-stu-id="340c5-110">Finally, on line 15 we invoke the delegate passing a string to be reversed.</span></span>
+* <span data-ttu-id="cb308-107">`public delegate string Reverse(string s);` Wiersz tworzy typ delegata podpisu w tym przypadku metoda, która przyjmuje parametr ciąg, a następnie zwraca parametr ciągu.</span><span class="sxs-lookup"><span data-stu-id="cb308-107">The `public delegate string Reverse(string s);` line creates a delegate type of a certain signature, in this case a method that takes a string parameter and then returns a string parameter.</span></span>
+* <span data-ttu-id="cb308-108">`static string ReverseString(string s)` Metody, która ma dokładnie tę samą sygnaturę jak typ delegata zdefiniowane, implementuje delegata.</span><span class="sxs-lookup"><span data-stu-id="cb308-108">The `static string ReverseString(string s)` method, which has the exact same signature as the defined delegate type, implements the delegate.</span></span>
+* <span data-ttu-id="cb308-109">`Reverse rev = ReverseString;` Wiersz wskazuje, czy metody można przypisać do zmiennej odpowiedni typ delegata.</span><span class="sxs-lookup"><span data-stu-id="cb308-109">The `Reverse rev = ReverseString;` line shows that you can assign a method to a variable of the corresponding delegate type.</span></span>
+* <span data-ttu-id="cb308-110">`Console.WriteLine(rev("a string"));` Linii pokazuje, jak używana zmienna typu delegata do wywołania delegata.</span><span class="sxs-lookup"><span data-stu-id="cb308-110">The `Console.WriteLine(rev("a string"));` line demonstrates how to use a variable of a delegate type to invoke the delegate.</span></span>
 
-<span data-ttu-id="340c5-111">W celu uproszczenia procesu tworzenia, .NET zawiera zestaw typów delegatów, które programiści mogą ponownie wykorzystać i nie trzeba tworzyć nowych typów.</span><span class="sxs-lookup"><span data-stu-id="340c5-111">In order to streamline the development process, .NET includes a set of delegate types that programmers can reuse and not have to create new types.</span></span> <span data-ttu-id="340c5-112">Są to `Func<>`, `Action<>` i `Predicate<>`, i mogą być używane w różnych miejscach interfejsów API architektury .NET bez konieczności do definiowania nowych typów delegata.</span><span class="sxs-lookup"><span data-stu-id="340c5-112">These are `Func<>`, `Action<>` and `Predicate<>`, and they can be used in various places throughout the .NET APIs without the need to define new delegate types.</span></span> <span data-ttu-id="340c5-113">Oczywiście są pewne różnice między trzy jak widać w ich sygnaturach, które przede wszystkim ze sposobem, które zostały one przeznaczone do użycia:</span><span class="sxs-lookup"><span data-stu-id="340c5-113">Of course, there are some differences between the three as you will see in their signatures which mostly have to do with the way they were meant to be used:</span></span>
+<span data-ttu-id="cb308-111">W celu uproszczenia procesu tworzenia, .NET zawiera zbiór typami delegatów, które programiści mogą ponownie użyć i nie trzeba tworzyć nowe typy.</span><span class="sxs-lookup"><span data-stu-id="cb308-111">In order to streamline the development process, .NET includes a set of delegate types that programmers can reuse and not have to create new types.</span></span> <span data-ttu-id="cb308-112">Są to `Func<>`, `Action<>` i `Predicate<>`, i można ich używać w różnych miejscach interfejsów API platformy .NET bez konieczności do definiowania nowych typów obiektów delegowanych.</span><span class="sxs-lookup"><span data-stu-id="cb308-112">These are `Func<>`, `Action<>` and `Predicate<>`, and they can be used in various places throughout the .NET APIs without the need to define new delegate types.</span></span> <span data-ttu-id="cb308-113">Jak widać w ich sygnaturach, które przede wszystkim ze sposobem, w których zostały one przeznaczone do użycia istnieją oczywiście niektóre różnice między trzy:</span><span class="sxs-lookup"><span data-stu-id="cb308-113">Of course, there are some differences between the three as you will see in their signatures which mostly have to do with the way they were meant to be used:</span></span>
 
-*   <span data-ttu-id="340c5-114">`Action<>` jest używany, gdy istnieje potrzeba wykonania akcji na podstawie argumentów delegata.</span><span class="sxs-lookup"><span data-stu-id="340c5-114">`Action<>` is used when there is a need to perform an action using the arguments of the delegate.</span></span>
-*   <span data-ttu-id="340c5-115">`Func<>` jest używana zazwyczaj, gdy masz transformację dostępnych produktów, oznacza to, należy przekształcić argumenty delegata w innych wyników.</span><span class="sxs-lookup"><span data-stu-id="340c5-115">`Func<>` is used usually when you have a transformation on hand, that is, you need to transform the arguments of the delegate into a different result.</span></span> <span data-ttu-id="340c5-116">Projekcje są podstawowym przykładem.</span><span class="sxs-lookup"><span data-stu-id="340c5-116">Projections are a prime example of this.</span></span>
-*   <span data-ttu-id="340c5-117">`Predicate<>` jest używany podczas należy ustalić, jeśli argument spełnia warunek delegata.</span><span class="sxs-lookup"><span data-stu-id="340c5-117">`Predicate<>` is used when you need to determine if the argument satisfies the condition of the delegate.</span></span> <span data-ttu-id="340c5-118">Można również będą zapisywane jako `Func<T, bool>`.</span><span class="sxs-lookup"><span data-stu-id="340c5-118">It can also be written as a `Func<T, bool>`.</span></span>
+*   <span data-ttu-id="cb308-114">`Action<>` jest używany, gdy trzeba wykonać akcję przy użyciu argumentów delegata.</span><span class="sxs-lookup"><span data-stu-id="cb308-114">`Action<>` is used when there is a need to perform an action using the arguments of the delegate.</span></span>
+*   <span data-ttu-id="cb308-115">`Func<>` jest używana zazwyczaj w przypadku transformacji w kasie, oznacza to, należy przekształcić argumenty delegata w różne wyniki.</span><span class="sxs-lookup"><span data-stu-id="cb308-115">`Func<>` is used usually when you have a transformation on hand, that is, you need to transform the arguments of the delegate into a different result.</span></span> <span data-ttu-id="cb308-116">Prognozy są głównym przykładem.</span><span class="sxs-lookup"><span data-stu-id="cb308-116">Projections are a prime example of this.</span></span>
+*   <span data-ttu-id="cb308-117">`Predicate<>` jest używany, gdy zachodzi potrzeba określenia, jeśli argument spełnia warunek delegata.</span><span class="sxs-lookup"><span data-stu-id="cb308-117">`Predicate<>` is used when you need to determine if the argument satisfies the condition of the delegate.</span></span> <span data-ttu-id="cb308-118">Można również będą zapisywane jako `Func<T, bool>`.</span><span class="sxs-lookup"><span data-stu-id="cb308-118">It can also be written as a `Func<T, bool>`.</span></span>
 
-<span data-ttu-id="340c5-119">Możemy teraz pobrać naszym przykładzie powyżej i przepisywania za pomocą `Func<>` delegować zamiast typu niestandardowego.</span><span class="sxs-lookup"><span data-stu-id="340c5-119">We can now take our example above and rewrite it using the `Func<>` delegate instead of a custom type.</span></span> <span data-ttu-id="340c5-120">Program nadal będzie działać, dokładnie tak samo.</span><span class="sxs-lookup"><span data-stu-id="340c5-120">The program will continue running exactly the same.</span></span>
+<span data-ttu-id="cb308-119">Możemy teraz pobrać naszym powyższym przykładzie i ponownie napisać przy użyciu `Func<>` delegować zamiast typu niestandardowego.</span><span class="sxs-lookup"><span data-stu-id="cb308-119">We can now take our example above and rewrite it using the `Func<>` delegate instead of a custom type.</span></span> <span data-ttu-id="cb308-120">Program będzie nadal uruchomione, dokładnie tak samo.</span><span class="sxs-lookup"><span data-stu-id="cb308-120">The program will continue running exactly the same.</span></span>
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
+    static string ReverseString(string s)
+    {
+        return new string(s.Reverse().ToArray());
+    }
 
-  static string ReverseString(string s)
-  {
-      return new string(s.Reverse().ToArray());
-  }
+    static void Main(string[] args)
+    {
+        Func<string, string> rev = ReverseString;
 
-  static void Main(string[] args)
-  {
-      Func<string, string> rev = ReverseString;
-
-      Console.WriteLine(rev("a string"));
-  }
+        Console.WriteLine(rev("a string"));
+    }
 }
 ```
 
-<span data-ttu-id="340c5-121">W tym przykładzie prosty o metoda poza metodą Main() wydaje się nieco zbędny.</span><span class="sxs-lookup"><span data-stu-id="340c5-121">For this simple example, having a method defined outside of the Main() method seems a bit superfluous.</span></span> <span data-ttu-id="340c5-122">Jest w związku z tym, że .NET Framework 2.0 wprowadzono koncepcję **anonimowych delegatów**.</span><span class="sxs-lookup"><span data-stu-id="340c5-122">It is because of this that .NET Framework 2.0 introduced the concept of **anonymous delegates**.</span></span> <span data-ttu-id="340c5-123">Z pomocy technicznej jest możliwość tworzenia delegatów "wbudowany" bez konieczności określania wszelkie dodatkowe typu lub metody.</span><span class="sxs-lookup"><span data-stu-id="340c5-123">With their support you are able to create "inline" delegates without having to specify any additional type or method.</span></span> <span data-ttu-id="340c5-124">Możesz po prostu wbudowanej definicji delegata, w których należy.</span><span class="sxs-lookup"><span data-stu-id="340c5-124">You simply inline the definition of the delegate where you need it.</span></span>
+<span data-ttu-id="cb308-121">W przypadku ten prosty przykład o metoda zdefiniowana poza `Main` metoda wydaje się nieco zbędny.</span><span class="sxs-lookup"><span data-stu-id="cb308-121">For this simple example, having a method defined outside of the `Main` method seems a bit superfluous.</span></span> <span data-ttu-id="cb308-122">Jest ze względu na to, że .NET Framework 2.0 wprowadzono koncepcję **anonimowe delegatów**.</span><span class="sxs-lookup"><span data-stu-id="cb308-122">It is because of this that .NET Framework 2.0 introduced the concept of **anonymous delegates**.</span></span> <span data-ttu-id="cb308-123">Za pomocą ich obsługa jest możliwe do tworzenia obiektów delegowanych "inline" bez konieczności określania żadnych dodatkowych typu lub metody.</span><span class="sxs-lookup"><span data-stu-id="cb308-123">With their support you are able to create "inline" delegates without having to specify any additional type or method.</span></span> <span data-ttu-id="cb308-124">Możesz po prostu wbudowanej definicji delegata, gdy jej potrzebujesz.</span><span class="sxs-lookup"><span data-stu-id="cb308-124">You simply inline the definition of the delegate where you need it.</span></span>
 
-<span data-ttu-id="340c5-125">Na przykład zamierzamy przełączyć go się i użyć naszych anonimowe delegata do odfiltrowywania listę tylko liczby parzyste i wydrukuj je w konsoli.</span><span class="sxs-lookup"><span data-stu-id="340c5-125">For an example, we are going to switch it up and use our anonymous delegate to filter out a list of only even numbers and then print them to the console.</span></span>
+<span data-ttu-id="cb308-125">Aby uzyskać przykład użyjemy zmienić się i użyj naszych delegata anonimowego, aby odfiltrować listę tylko liczby parzyste z zakresu, a następnie wydrukuj je w konsoli.</span><span class="sxs-lookup"><span data-stu-id="cb308-125">For an example, we are going to switch it up and use our anonymous delegate to filter out a list of only even numbers and then print them to the console.</span></span>
 
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
-
-  public static void Main(string[] args)
-  {
-    List<int> list = new List<int>();
-
-    for (int i = 1; i <= 100; i++)
+    public static void Main(string[] args)
     {
-        list.Add(i);
-    }
+        List<int> list = new List<int>();
 
-    List<int> result = list.FindAll(
-      delegate(int no)
-      {
-          return (no%2 == 0);
-      }
-    );
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
 
-    foreach (var item in result)
-    {
-        Console.WriteLine(item);
+        List<int> result = list.FindAll(
+          delegate (int no)
+          {
+              return (no % 2 == 0);
+          }
+        );
+
+        foreach (var item in result)
+        {
+            Console.WriteLine(item);
+        }
     }
-  }
 }
 ```
 
-<span data-ttu-id="340c5-126">Zwróć uwagę, wyróżnione wiersze.</span><span class="sxs-lookup"><span data-stu-id="340c5-126">Notice the highlighted lines.</span></span> <span data-ttu-id="340c5-127">Jak widać, treść delegata jest tylko zestaw wyrażeń, co inne delegata.</span><span class="sxs-lookup"><span data-stu-id="340c5-127">As you can see, the body of the delegate is just a set of expressions, as any other delegate.</span></span> <span data-ttu-id="340c5-128">Ale gdy jest osobnym definicji, a nie dodaliśmy go _ad hoc_ w naszym wywołaniu `FindAll()` metody `List<T>` typu.</span><span class="sxs-lookup"><span data-stu-id="340c5-128">But instead of it being a separate definition, we’ve introduced it _ad hoc_ in our call to the `FindAll()` method of the `List<T>` type.</span></span>
+<span data-ttu-id="cb308-126">Jak widać, treść delegata jest po prostu zestaw wyrażeń, jak inne obiekt delegowany.</span><span class="sxs-lookup"><span data-stu-id="cb308-126">As you can see, the body of the delegate is just a set of expressions, as any other delegate.</span></span> <span data-ttu-id="cb308-127">Ale zamiast jej definicję oddzielne, wprowadziliśmy go _ad hoc_ w wywołaniu elementu naszych <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> metody.</span><span class="sxs-lookup"><span data-stu-id="cb308-127">But instead of it being a separate definition, we’ve introduced it _ad hoc_ in our call to the <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> method.</span></span>
 
-<span data-ttu-id="340c5-129">Jednak nawet w przypadku tej metody jest nadal większej ilości kodu, który mamy wyrzucać.</span><span class="sxs-lookup"><span data-stu-id="340c5-129">However, even with this approach, there is still much code that we can throw away.</span></span> <span data-ttu-id="340c5-130">Jest to, gdy **wyrażenia lambda** wchodzić w grę.</span><span class="sxs-lookup"><span data-stu-id="340c5-130">This is where **lambda expressions** come into play.</span></span>
+<span data-ttu-id="cb308-128">Jednak nawet w przypadku tej metody, ma nadal większej ilości kodu, który możemy wyrzucać.</span><span class="sxs-lookup"><span data-stu-id="cb308-128">However, even with this approach, there is still much code that we can throw away.</span></span> <span data-ttu-id="cb308-129">Jest to miejsce **wyrażeń lambda** dochodzą do głosu.</span><span class="sxs-lookup"><span data-stu-id="cb308-129">This is where **lambda expressions** come into play.</span></span>
 
-<span data-ttu-id="340c5-131">Wyrażenia lambda lub po prostu "wyrażeń lambda" skrócie, wprowadzono najpierw w języku C# 3.0 jako jeden z podstawowych bloków konstrukcyjnych z języka zintegrowane zapytania (LINQ).</span><span class="sxs-lookup"><span data-stu-id="340c5-131">Lambda expressions, or just "lambdas" for short, were introduced first in C# 3.0, as one of the core building blocks of Language Integrated Query (LINQ).</span></span> <span data-ttu-id="340c5-132">Są one tylko wygodniejsze składnia przy użyciu delegatów.</span><span class="sxs-lookup"><span data-stu-id="340c5-132">They are just a more convenient syntax for using delegates.</span></span> <span data-ttu-id="340c5-133">One zadeklarować podpisu i treści metody, ale nie ma formalnych tożsamości we własnym, o ile nie są przypisane do delegata.</span><span class="sxs-lookup"><span data-stu-id="340c5-133">They declare a signature and a method body, but don’t have an formal identity of their own, unless they are assigned to a delegate.</span></span> <span data-ttu-id="340c5-134">W przeciwieństwie do delegatów bezpośrednio przypisać jako po lewej stronie rejestracji zdarzeń lub w wielu klauzul Linq i metod.</span><span class="sxs-lookup"><span data-stu-id="340c5-134">Unlike delegates, they can be directly assigned as the left-hand side of event registration or in various Linq clauses and methods.</span></span>
+<span data-ttu-id="cb308-130">Wyrażenia lambda lub po prostu "wyrażenia lambda" w skrócie, zostały najpierw wprowadzone w systemie C# 3.0 jako jeden z podstawowych bloków konstrukcyjnych z Language Integrated Query (LINQ).</span><span class="sxs-lookup"><span data-stu-id="cb308-130">Lambda expressions, or just "lambdas" for short, were introduced first in C# 3.0, as one of the core building blocks of Language Integrated Query (LINQ).</span></span> <span data-ttu-id="cb308-131">Są one po prostu bardziej wygodne składnia przy użyciu delegatów.</span><span class="sxs-lookup"><span data-stu-id="cb308-131">They are just a more convenient syntax for using delegates.</span></span> <span data-ttu-id="cb308-132">One deklarować podpisu i treści metody, ale nie ma formalnych tożsamości własnych, o ile nie są przypisane do delegata.</span><span class="sxs-lookup"><span data-stu-id="cb308-132">They declare a signature and a method body, but don’t have an formal identity of their own, unless they are assigned to a delegate.</span></span> <span data-ttu-id="cb308-133">W przeciwieństwie do delegatów bezpośrednio przypisać jako po lewej stronie rejestracji zdarzeń lub różne klauzule zapytań LINQ i metody.</span><span class="sxs-lookup"><span data-stu-id="cb308-133">Unlike delegates, they can be directly assigned as the left-hand side of event registration or in various LINQ clauses and methods.</span></span>
 
-<span data-ttu-id="340c5-135">Wyrażenie lambda jest po prostu innym sposobem określania delegata, możemy powinno być możliwe do edycji w powyższym przykładzie, aby użyć wyrażenia lambda zamiast anonimowego obiektu delegowanego.</span><span class="sxs-lookup"><span data-stu-id="340c5-135">Since a lambda expression is just another way of specifying a delegate, we should be able to rewrite the above sample to use a lambda expression instead of an anonymous delegate.</span></span>
+<span data-ttu-id="cb308-134">Ponieważ wyrażenie lambda jest po prostu inny sposób określania delegata, firma Microsoft powinno być możliwe do przepisania w powyższym przykładzie, można użyć wyrażenia lambda zamiast delegata anonimowego.</span><span class="sxs-lookup"><span data-stu-id="cb308-134">Since a lambda expression is just another way of specifying a delegate, we should be able to rewrite the above sample to use a lambda expression instead of an anonymous delegate.</span></span>
 
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
-
-  public static void Main(string[] args)
-  {
-    List<int> list = new List<int>();
-
-    for (int i = 1; i <= 100; i++)
+    public static void Main(string[] args)
     {
-        list.Add(i);
-    }
+        List<int> list = new List<int>();
 
-    List<int> result = list.FindAll(i => i % 2 == 0);
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
 
-    foreach (var item in result)
-    {
-        Console.WriteLine(item);
+        List<int> result = list.FindAll(i => i % 2 == 0);
+
+        foreach (var item in result)
+        {
+            Console.WriteLine(item);
+        }
     }
-  }
 }
 ```
 
-<span data-ttu-id="340c5-136">Jeśli Spójrz na wyróżnione wiersze widać, jak wygląda wyrażenia lambda.</span><span class="sxs-lookup"><span data-stu-id="340c5-136">If you take a look at the highlighted lines, you can see how a lambda expression looks like.</span></span> <span data-ttu-id="340c5-137">Ponownie, to po prostu **bardzo** wygodny składnia przy użyciu delegatów, co się stanie, w obszarze obejmuje przypomina co się dzieje z anonimowego obiektem delegowanym.</span><span class="sxs-lookup"><span data-stu-id="340c5-137">Again, it is just a **very** convenient syntax for using delegates, so what happens under the covers is similar to what happens with the anonymous delegate.</span></span>
+<span data-ttu-id="cb308-135">W powyższym przykładzie jest używane wyrażenie lambda `i => i % 2 == 0`.</span><span class="sxs-lookup"><span data-stu-id="cb308-135">In the preceding example, the lambda expression used is `i => i % 2 == 0`.</span></span> <span data-ttu-id="cb308-136">Ponownie, jest po prostu **bardzo** wygodnej składni dla przy użyciu delegatów, więc co się stanie w sposób niewidoczny przypomina co się dzieje z delegata anonimowego.</span><span class="sxs-lookup"><span data-stu-id="cb308-136">Again, it is just a **very** convenient syntax for using delegates, so what happens under the covers is similar to what happens with the anonymous delegate.</span></span>
 
-<span data-ttu-id="340c5-138">Ponownie wyrażenia lambda są tylko delegatów, co oznacza może być używany jako program obsługi zdarzeń bez problemów, jak pokazano w poniższy fragment kodu.</span><span class="sxs-lookup"><span data-stu-id="340c5-138">Again, lambdas are just delegates, which means that they can be used as an event handler without any problems, as the following code snippet illustrates.</span></span>
+<span data-ttu-id="cb308-137">Ponownie wyrażenia lambda są po prostu delegatów, co oznacza, że mogą być używane jako procedura obsługi zdarzeń bez problemów, tak jak pokazano w poniższym fragmencie kodu.</span><span class="sxs-lookup"><span data-stu-id="cb308-137">Again, lambdas are just delegates, which means that they can be used as an event handler without any problems, as the following code snippet illustrates.</span></span>
 
 ```csharp
 public MainWindow()
@@ -147,8 +155,8 @@ public MainWindow()
 }
 ```
 
-## <a name="further-reading-and-resources"></a><span data-ttu-id="340c5-139">Dalsze informacje i zasoby</span><span class="sxs-lookup"><span data-stu-id="340c5-139">Further reading and resources</span></span>
+## <a name="further-reading-and-resources"></a><span data-ttu-id="cb308-138">Dalsze informacje i zasoby</span><span class="sxs-lookup"><span data-stu-id="cb308-138">Further reading and resources</span></span>
 
-*   [<span data-ttu-id="340c5-140">Delegaci</span><span class="sxs-lookup"><span data-stu-id="340c5-140">Delegates</span></span>](../../docs/csharp/programming-guide/delegates/index.md)
-*   [<span data-ttu-id="340c5-141">Funkcje anonimowe</span><span class="sxs-lookup"><span data-stu-id="340c5-141">Anonymous Functions</span></span>](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-*   [<span data-ttu-id="340c5-142">Wyrażenia lambda</span><span class="sxs-lookup"><span data-stu-id="340c5-142">Lambda expressions</span></span>](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+*   [<span data-ttu-id="cb308-139">Delegaty</span><span class="sxs-lookup"><span data-stu-id="cb308-139">Delegates</span></span>](../../docs/csharp/programming-guide/delegates/index.md)
+*   [<span data-ttu-id="cb308-140">Funkcje anonimowe</span><span class="sxs-lookup"><span data-stu-id="cb308-140">Anonymous Functions</span></span>](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+*   [<span data-ttu-id="cb308-141">Wyrażenia lambda</span><span class="sxs-lookup"><span data-stu-id="cb308-141">Lambda expressions</span></span>](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

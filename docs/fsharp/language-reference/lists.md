@@ -1,20 +1,20 @@
 ---
 title: Listy (F#)
-description: Więcej informacji na temat list języka F#, uporządkowany i niezmienne szeregu elementów tego samego typu.
+description: Dowiedz się więcej o F# listy uporządkowanej, niezmienne szeregu elementów tego samego typu.
 ms.date: 05/16/2016
-ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50201627"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297507"
 ---
 # <a name="lists"></a>Listy
 
 > [!NOTE]
-Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
+> Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
-Na liście w F# jest uporządkowany i niezmienne szereg elementów tego samego typu. Aby wykonywać podstawowe operacje na listach, należy użyć funkcji w [lista modułów](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
+Na liście F# jest uporządkowany i niezmienne szereg elementów tego samego typu. Aby wykonywać podstawowe operacje na listach, należy użyć funkcji w [lista modułów](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 
 ## <a name="creating-and-initializing-lists"></a>Tworzenie i Inicjowanie listy
 
@@ -54,9 +54,9 @@ Można łączyć ze sobą list, które mają niezgodne typy przy użyciu `@` ope
 
 W dostępnych funkcji w celu wykonywania operacji na listach [lista modułów](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 
-Ponieważ listy języka F# są niezmienne, wszystkie operacje modyfikowania wygenerować nowe listy zamiast modyfikowania istniejących list.
+Ponieważ list w F# są niezmienne, wszystkie operacje modyfikowania wygenerować nowe listy zamiast modyfikowania istniejących list.
 
-List w języku F# są implementowane jako pojedynczo połączoną list, które oznacza, że operacje, do których dostęp tylko nagłówek listy O(1), a dostęp do elementu jest O (*n*).
+Wyświetla listę w F# są implementowane jako listy pojedynczo połączoną, co oznacza, że operacje, do których dostęp tylko nagłówek listy są O(1), a dostęp do elementu O (*n*).
 
 ## <a name="properties"></a>Właściwości
 
@@ -290,7 +290,7 @@ Dane wyjściowe wyglądają następująco:
 
 ### <a name="operating-on-list-elements"></a>Wykonywanie operacji na liście elementów
 
-Język F# obsługuje różnych operacji na elementach listy. To najprostszy [List.iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f), co umożliwia wywoływanie funkcji dla każdego elementu listy. Zmiany obejmują [List.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40), która umożliwia wykonywanie operacji na elementy z dwóch list [List.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60), który przypomina `List.iter` z tą różnicą, że indeks każdy element jest przekazywany jako argument do funkcji, która jest wywoływana dla każdego elementu i [List.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c), który jest kombinacją funkcji `List.iter2` i `List.iteri`. Poniższy przykładowy kod przedstawia te funkcje.
+F#obsługuje wiele różnych operacji na elementy listy. To najprostszy [List.iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f), co umożliwia wywoływanie funkcji dla każdego elementu listy. Zmiany obejmują [List.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40), która umożliwia wykonywanie operacji na elementy z dwóch list [List.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60), który przypomina `List.iter` z tą różnicą, że indeks każdy element jest przekazywany jako argument do funkcji, która jest wywoływana dla każdego elementu i [List.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c), który jest kombinacją funkcji `List.iter2` i `List.iteri`. Poniższy przykładowy kod przedstawia te funkcje.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet17.fs)]
 

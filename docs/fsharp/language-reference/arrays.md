@@ -1,18 +1,18 @@
 ---
 title: Tablice (F#)
-description: Dowiedz się, jak utworzyć i korzystanie z tablic w języku programowania F#.
+description: Dowiedz się, jak utworzyć i używać różnych macierzy w F# języka programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0f72718988ee401631c53b74f02948030e83aac1
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48032734"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297195"
 ---
 # <a name="arrays"></a>Tablice
 
 > [!NOTE]
-Łącze odwołania API spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
+> Łącze odwołania API spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
 Tablice są stałym rozmiarze, zaczynający się od zera, mutable kolekcjami kolejnych elementów danych, które są wszystkie tego samego typu.
 
@@ -57,7 +57,7 @@ Stosowania zapisu wycinkowego tworzona jest nowa kopia tablicy.
 
 ## <a name="array-types-and-modules"></a>Typy tablic i moduły
 
-Typ wszystkich tablic F# to typ .NET Framework <xref:System.Array?displayProperty=nameWithType>. W związku z tym, tablice F# obsługują wszystkie funkcje dostępne w <xref:System.Array?displayProperty=nameWithType>.
+Typ wszystkich F# tablic to typ .NET Framework <xref:System.Array?displayProperty=nameWithType>. W związku z tym F# tablice obsługują wszystkie funkcje dostępne w <xref:System.Array?displayProperty=nameWithType>.
 
 Moduł biblioteki [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) obsługuje operacje na tablicach jednowymiarowych. Moduły `Array2D`, `Array3D`, i `Array4D` zawierają funkcje obsługujące operacje w tablicach o dwóch, trzech i czterech wymiarach, odpowiednio. Można utworzyć tablice o randze większej niż cztery za pomocą <xref:System.Array?displayProperty=nameWithType>.
 
@@ -218,7 +218,7 @@ matrix.[*, 1..3]
 matrix.[1..3, 1..3]
 ```
 
-Jak dla F# 3.1 można rozkładać tablicę wielowymiarową na podtablice tego samego lub niższego wymiaru. Na przykład można uzyskać wektor z macierzy, określając pojedynczy wiersz lub kolumnę.
+Począwszy od programu F# 3.1 można rozkładać tablicę wielowymiarową na podtablice tego samego lub niższego wymiaru. Na przykład można uzyskać wektor z macierzy, określając pojedynczy wiersz lub kolumnę.
 
 ```fsharp
 // Get row 3 from a matrix as a vector:
@@ -228,7 +228,7 @@ matrix.[3, *]
 matrix.[*, 3]
 ```
 
-Możesz użyć tej składni wycinków dla typów, które implementuje operatory dostępu do elementu i przeciążone `GetSlice` metody. Na przykład, poniższy kod tworzy typ macierzy, który otacza tablicę 2D języka F#, implementuje właściwość element zapewniającą wsparcia dla indeksowania tablic i implementuje trzy wersje obiektu `GetSlice`. Jeśli tego kodu można użyć jako szablonu dla typów macierzy użytkownika, można użyć wszystkich operacji tworzenia wycinków, które w tej sekcji opisano.
+Możesz użyć tej składni wycinków dla typów, które implementuje operatory dostępu do elementu i przeciążone `GetSlice` metody. Na przykład, poniższy kod tworzy typ macierzy, który otacza F# tablicę 2D, implementuje właściwość element zapewniającą wsparcia dla indeksowania tablic i implementuje trzy wersje obiektu `GetSlice`. Jeśli tego kodu można użyć jako szablonu dla typów macierzy użytkownika, można użyć wszystkich operacji tworzenia wycinków, które w tej sekcji opisano.
 
 ```fsharp
 type Matrix<'T>(N: int, M: int) =

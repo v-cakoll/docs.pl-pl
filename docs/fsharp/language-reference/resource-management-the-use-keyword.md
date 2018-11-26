@@ -1,13 +1,13 @@
 ---
 title: 'Zarządzanie zasobami: use — Słowo kluczowe (F#)'
-description: Informacje na temat F# — słowo kluczowe "use" i "using" funkcji, która może kontrolować, inicjowanie i zwolnienia zasobów.
+description: Dowiedz się więcej o F# — słowo kluczowe "use" i "using" funkcji, która może kontrolować, inicjowanie i zwolnienia zasobów.
 ms.date: 05/16/2016
-ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45616072"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296883"
 ---
 # <a name="resource-management-the-use-keyword"></a>Zarządzanie zasobami: use — Słowo kluczowe
 
@@ -19,7 +19,7 @@ Termin *zasobów* jest używana w więcej niż jeden sposób. Tak, zasobów mog�
 
 ## <a name="managing-resources"></a>Zarządzanie zasobami
 
-Do efektywnego i odpowiedzialnego zarządzania zasobami w aplikacji, należy zwolnić zasoby, szybko i w przewidywalny sposób. Program .NET Framework pomaga, możesz to zrobić, podając `System.IDisposable` interfejsu. Typ, który implementuje `System.IDisposable` ma `System.IDisposable.Dispose` metody, która poprawnie zwalnia zasoby. Dobrze napisane aplikacje Microsoft gwarantuje, że `System.IDisposable.Dispose` niezwłocznie jest wywoływana, gdy dowolnego obiektu, który posiada ograniczone zasób, który nie jest już potrzebny. Na szczęście większość języków .NET zapewnia pomoc techniczną, aby to ułatwić, i F# nie jest wyjątkiem. Istnieją dwa konstrukcji językowych użyteczne, obsługujące wzorzec usuwania: `use` powiązania i `using` funkcji.
+Do efektywnego i odpowiedzialnego zarządzania zasobami w aplikacji, należy zwolnić zasoby, szybko i w przewidywalny sposób. Program .NET Framework pomaga, możesz to zrobić, podając `System.IDisposable` interfejsu. Typ, który implementuje `System.IDisposable` ma `System.IDisposable.Dispose` metody, która poprawnie zwalnia zasoby. Dobrze napisane aplikacje Microsoft gwarantuje, że `System.IDisposable.Dispose` niezwłocznie jest wywoływana, gdy dowolnego obiektu, który posiada ograniczone zasób, który nie jest już potrzebny. Na szczęście większość języków .NET zapewniają obsługę, aby to ułatwić, i F# nie jest wyjątkiem. Istnieją dwa konstrukcji językowych użyteczne, obsługujące wzorzec usuwania: `use` powiązania i `using` funkcji.
 
 ## <a name="use-binding"></a>Użyj powiązań
 
@@ -33,8 +33,8 @@ Poniższy przykład pokazuje, jak i zamknij plik automatycznie przy użyciu `use
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
->[!NOTE]
-Możesz użyć `use` w wyrażenia obliczeń, w którym to przypadku dostosowaną wersję `use` wyrażenie jest używane. Aby uzyskać więcej informacji, zobacz [sekwencje](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia obliczeń](computation-expressions.md).
+> [!NOTE]
+> Możesz użyć `use` w wyrażenia obliczeń, w którym to przypadku dostosowaną wersję `use` wyrażenie jest używane. Aby uzyskać więcej informacji, zobacz [sekwencje](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia obliczeń](computation-expressions.md).
 
 ## <a name="using-function"></a>przy użyciu funkcji
 

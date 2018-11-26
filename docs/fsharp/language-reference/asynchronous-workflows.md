@@ -1,20 +1,20 @@
 ---
 title: Asynchroniczne przepływy pracy (F#)
-description: Dowiedz się więcej o obsługę języka programowania dla asynchronicznie, wykonywanie obliczeń F# uruchamiane bez blokowania wykonywania innych zadań.
+description: Dowiedz się więcej o obsłudze w F# języka programowania dla wykonywania obliczeń w sposób asynchroniczny, którego wykonane bez blokowania wykonywania innych zadań.
 ms.date: 05/16/2016
-ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 720996106d2b90392eacc75eb99147691ee83334
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861565"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297078"
 ---
 # <a name="asynchronous-workflows"></a>Asynchroniczne przepływy pracy
 
 > [!NOTE]
-Łącze odwołania API spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
+> Łącze odwołania API spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
-W tym temacie opisano obsługę F# do wykonywania obliczeń asynchronicznie, oznacza to, że nie blokuje wykonywanie innych zadań. Na przykład asynchronicznych obliczeń może służyć do pisania aplikacji, które mają interfejsów użytkownika, które ciągle reagować na użytkowników, jak aplikacja wykonuje inne prace.
+W tym temacie opisano obsługę F# do wykonywania obliczeń asynchronicznie, bez blokowania wykonywania innych pracy. Na przykład asynchronicznych obliczeń może służyć do pisania aplikacji, które mają interfejsów użytkownika, które ciągle reagować na użytkowników, jak aplikacja wykonuje inne prace.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,17 +41,17 @@ let (result1 : Async<byte[]>) = stream.AsyncRead(bufferSize)
 let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 ```
 
-Oprócz `let!`, możesz użyć `use!` do wykonania asynchronicznej powiązania. Różnica między `let!` i `use!` jest taka sama jak różnica między `let` i `use`. Aby uzyskać `use!`, obiekt jest usunięty na zakończenie bieżącego zakresu. Należy pamiętać, że w bieżącej wersji języka F# `use!` nie zezwala na wartość, aby być inicjowane na wartość null, nawet jeśli `use` jest.
+Oprócz `let!`, możesz użyć `use!` do wykonania asynchronicznej powiązania. Różnica między `let!` i `use!` jest taka sama jak różnica między `let` i `use`. Aby uzyskać `use!`, obiekt jest usunięty na zakończenie bieżącego zakresu. Należy pamiętać, że w bieżącej wersji funkcji F# języka, `use!` nie zezwala na wartość, aby być inicjowane na wartość null, nawet jeśli `use` jest.
 
 ## <a name="asynchronous-primitives"></a>Asynchroniczne w nim elementów podstawowych
 
-Wywoływana jest metoda, która wykonuje jedno zadanie asynchroniczne i zwraca wynik *asynchronicznego podstawowego*, i są one przeznaczone specjalnie do użytku z `let!`. Kilka podstawowych asynchronicznych są definiowane w podstawowej biblioteki języka F#. Dwie metody takie aplikacje sieci Web są zdefiniowane w module [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) i [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Oba elementy podstawowe pobrać dane ze strony sieci Web danego adresu URL. `AsyncGetResponse` Tworzy `System.Net.WebResponse` obiektu, a `AsyncDownloadString` daje ciąg, który reprezentuje kod HTML dla strony sieci Web.
+Wywoływana jest metoda, która wykonuje jedno zadanie asynchroniczne i zwraca wynik *asynchronicznego podstawowego*, i są one przeznaczone specjalnie do użytku z `let!`. Kilka podstawowych asynchronicznych są zdefiniowane w F# podstawowej biblioteki. Dwie metody takie aplikacje sieci Web są zdefiniowane w module [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) i [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Oba elementy podstawowe pobrać dane ze strony sieci Web danego adresu URL. `AsyncGetResponse` Tworzy `System.Net.WebResponse` obiektu, a `AsyncDownloadString` daje ciąg, który reprezentuje kod HTML dla strony sieci Web.
 
 Kilka podstawowych dla asynchronicznych operacji We/Wy są objęte [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) modułu. Te metody rozszerzenia `System.IO.Stream` klasy są [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) i [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618).
 
 Można także napisać własny podstawowych asynchronicznych, definiując funkcji, w których pełną treść jest ujęty w bloku async.
 
-Aby używać metod asynchronicznych na platformie .NET Framework, które są przeznaczone dla innymi modelami asynchronicznymi z F# asynchronicznego modelu programowania, należy utworzyć funkcję, która zwraca języka F# `Async` obiektu. Biblioteka języka F# zawiera funkcje, które ułatwiają to zrobić.
+Używać metod asynchronicznych na platformie .NET Framework, które są przeznaczone dla innymi modelami asynchronicznymi z F# modelu programowania asynchronicznego, utworzyć funkcję, która zwraca F# `Async` obiektu. F# Biblioteka ma funkcje, które ułatwiają to zrobić.
 
 Przykładem przy użyciu asynchronicznych przepływów pracy jest uwzględniony w tym miejscu; istnieje wiele innych w dokumentacji metody [Async — klasa](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).
 

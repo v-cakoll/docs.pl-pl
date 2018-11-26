@@ -1,31 +1,31 @@
 ---
 title: Ciągi (F#)
-description: Dowiedz się, jak typu "string" F# reprezentuje niezmienny tekst jako sekwencja znaków Unicode.
+description: Dowiedz się, jak F# typu "string" reprezentuje niezmienny tekst jako sekwencja znaków Unicode.
 ms.date: 05/16/2016
-ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 158e30224fe50c2324e40d550b75e6abaf843597
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43799346"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296793"
 ---
 # <a name="strings"></a>Ciągi
 
 > [!NOTE]
-Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
+> Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
 `string` Typu reprezentuje niezmienny tekst jako sekwencja znaków Unicode. `string` jest aliasem dla `System.String` w .NET Framework.
 
 ## <a name="remarks"></a>Uwagi
 
-Literały ciągów są rozdzielone znakiem cudzysłowu ("). Znak ukośnika odwrotnego ( \\ ) jest używany do kodowania niektórych znaków specjalnych. Ukośnik odwrotny i następny znak razem są określane jako *sekwencji unikowej*. Znak ucieczki sekwencje obsługiwane w F# ciąg, który literały są wyświetlane w poniższej tabeli.
+Literały ciągów są rozdzielone znakiem cudzysłowu ("). Znak ukośnika odwrotnego ( \\ ) jest używany do kodowania niektórych znaków specjalnych. Ukośnik odwrotny i następny znak razem są określane jako *sekwencji unikowej*. Obsługiwane w sekwencjach specjalnych F# literały ciągów są wyświetlane w poniższej tabeli.
 
 |Znak|Sekwencja unikowa|
 |---------|---------------|
 |Backspace|`\b`|
 |nowy wiersz|`\n`|
 |Powrót karetki|`\r`|
-|Tab|`\t`|
+|Tabulacja|`\t`|
 |Ukośnik odwrotny|`\\`|
 |Znak cudzysłowu|`\"`|
 |Apostrof|`\'`|
@@ -78,7 +78,7 @@ Poniższy przykład ilustruje ciągów.
 
 ## <a name="string-class"></a>Klasa String
 
-Ponieważ typ ciągu w języku F# jest faktycznie .NET Framework `System.String` wpisz wszystkie `System.String` składowe są dostępne. Obejmuje to `+` operatora, który jest używany do łączenia ciągów, `Length` właściwości i `Chars` właściwość, która zwraca ciąg w postaci tablicy znaków Unicode. Aby uzyskać więcej informacji na temat ciągów, zobacz `System.String`.
+Ponieważ wpisać ciąg F# jest faktycznie .NET Framework `System.String` wpisz wszystkie `System.String` składowe są dostępne. Obejmuje to `+` operatora, który jest używany do łączenia ciągów, `Length` właściwości i `Chars` właściwość, która zwraca ciąg w postaci tablicy znaków Unicode. Aby uzyskać więcej informacji na temat ciągów, zobacz `System.String`.
 
 Za pomocą `Chars` właściwość `System.String`, dostęp do poszczególnych znaków w ciągu, określając indeksu, jak pokazano w poniższym kodzie.
 

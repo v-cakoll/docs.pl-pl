@@ -1,15 +1,15 @@
 ---
 title: Subskrybowanie zdarzeń
-description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Subskrybowanie zdarzeń
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Poznaj szczegóły publikowanie i subskrybowanie zdarzeń integracji.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 5e53e0a3578c19b09f5327f444d1a5c013ad4cd9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/02/2018
+ms.openlocfilehash: d32c643e553dfe3ce52e3e2ce8aaf1ea3a296de6
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194075"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297319"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -61,7 +61,7 @@ public class CatalogController : ControllerBase
 Następnie przy użyciu go z poziomu kontrolera metod, takich jak w metodzie UpdateProduct:
 
 ```csharp
-[Route("update")]
+[Route("items")]
 [HttpPost]
 public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 {
@@ -91,14 +91,13 @@ W tym przypadku mikrousług pochodzenia jest proste mikrousługi CRUD, ten kod j
  
 W bardziej zaawansowanych mikrousług, takich jak przy użyciu podejścia CQRS może być implementowany w `CommandHandler` klasy poziomu `Handle()` metody. 
 
-
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Projektowanie niepodzielność i zwiększa odporność podczas publikowania w magistrali zdarzeń
 
-Podczas publikowania zdarzenia integracji za pomocą rozproszonej obsługi wiadomości usługi Service bus zdarzeń, takich jak system, masz problem niepodzielne aktualizowanie oryginalnej bazy danych i publikowania zdarzeń. Na przykład uproszczony przykład przedstawionej wcześniej kod zapisuje dane w bazie danych po cena produktu jest zmienione, a następnie publikuje komunikat ProductPriceChangedIntegrationEvent. Początkowo może wyglądać istotne, że te dwie operacje być wykonywane atomowo. Jednak jeśli używasz obejmujące transakcji rozproszonej bazy danych i komunikat brokera, tak jak w starszych systemów, takich jak [Microsoft usługi kolejkowania komunikatów (MSMQ)](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx), to nie jest zalecane z powodów opisanych przez [Kolejnego elementu teorii CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
+Podczas publikowania zdarzenia integracji za pomocą rozproszonej obsługi wiadomości usługi Service bus zdarzeń, takich jak system, masz problem niepodzielne aktualizowanie oryginalnej bazy danych i publikowanie zdarzenia (czyli zarówno zakończenie operacji lub żadna z nich). Na przykład uproszczony przykład przedstawionej wcześniej kod zapisuje dane w bazie danych po cena produktu jest zmienione, a następnie publikuje komunikat ProductPriceChangedIntegrationEvent. Początkowo może wyglądać istotne, że te dwie operacje być wykonywane atomowo. Jednak jeśli używasz obejmujące transakcji rozproszonej bazy danych i komunikat brokera, tak jak w starszych systemów, takich jak [Microsoft usługi kolejkowania komunikatów (MSMQ)](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx), to nie jest zalecane z powodów opisanych przez [Kolejnego elementu teorii CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
 
-Po prostu umożliwia mikrousług tworzenie systemów skalowalna i wysoko dostępna. Upraszczanie nieco, kolejnego elementu teorii CAP mówi, że nie można utworzyć bazy danych (lub mikrousług, który jest właścicielem swój model) jest stale dostępna, zdecydowanie spójnych *i* odporne na żadnej partycji. Musisz wybrać dwa z tych trzech właściwości.
+Po prostu umożliwia mikrousług tworzenie systemów skalowalna i wysoko dostępna. Upraszczanie nieco, kolejnego elementu teorii CAP mówi, że nie można utworzyć bazę danych (rozproszone) (lub mikrousług, który jest właścicielem swój model) jest stale dostępna, zdecydowanie spójnych *i* odporne na żadnej partycji. Musisz wybrać dwa z tych trzech właściwości.
 
-W opartych na mikrousługach architektury należy wybrać dostępności i na uszkodzenia i powinien cieszących silnej spójności. W związku z tym, w większości współczesnych aplikacji opartych na mikrousługach, zwykle nie chcesz używać transakcji rozproszonych, w przypadku komunikatów, w jak podczas implementowania [transakcje rozproszone](https://msdn.microsoft.com/library/ms978430.aspx#bdadotnetasync2_topic3c) oparte na transakcję rozproszoną Windows Koordynator (transakcji rozproszonych DTC) za pomocą [MSMQ](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx).
+W opartych na mikrousługach architektury należy wybrać dostępności i na uszkodzenia i powinien cieszących silnej spójności. W związku z tym, w większości współczesnych aplikacji opartych na mikrousługach, zwykle nie chcesz używać transakcji rozproszonych, w przypadku komunikatów, w jak podczas implementowania [transakcje rozproszone](https://msdn.microsoft.com/library/ms681205\(v=vs.85\).aspx) oparte na transakcję rozproszoną Windows Koordynator (transakcji rozproszonych DTC) za pomocą [MSMQ](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx).
 
 Wróćmy do początkowego problemu i jego przykład. Jeśli usługa ulegnie awarii po zaktualizowaniu bazy danych (w tym przypadku kliknij prawym przyciskiem myszy, po wierszu kodu za pomocą \_kontekstu. SaveChangesAsync()), ale przed opublikowaniem zdarzenia integracji całego systemu może stać się niespójna. Może to być krytyczne dla działania, w zależności od operacji biznesowych, który masz do czynienia z.
 
@@ -110,7 +109,7 @@ Jak wspomniano wcześniej, w sekcji architektury, może mieć różne podejścia
 
 -   Za pomocą [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/). To jest tabela transakcji do przechowywania zdarzeń integracji (Rozszerzanie lokalnej transakcji).
 
-W tym scenariuszu przy użyciu pełnej wzorca określania źródła zdarzeń (ES) jest jednym z najlepszych metod, jeśli nie ** najlepsze. Jednak w wielu scenariuszach aplikacji, nie można zaimplementować pełnego ES. ES oznacza przechowywanie tylko domeny zdarzenia w transakcji bazy danych, zamiast przechowywania danych bieżącego stanu. Przechowywanie tylko domeny zdarzenia może mieć wiele korzyści, takich jak o historii dostępności systemu i możliwość określenia stanu systemu w dowolnym momencie w przeszłości. Jednak implementacja pełnego ES wymaga Przekształcanie większość systemu i wprowadza wiele złożoności i wymagania. Na przykład chcesz korzystać z bazy danych, które celowo do określania źródła zdarzeń, takich jak [Store zdarzeń](https://geteventstore.com/), lub korzystający z dokumentów bazy danych, takich jak usługi Azure Cosmos DB, bazy danych MongoDB, Cassandra, CouchDB lub RavenDB. ES jest to doskonałe podejście do problemu, ale nie najprostszym rozwiązaniu, chyba że znasz już określania źródła zdarzeń.
+W tym scenariuszu przy użyciu pełnej wzorca określania źródła zdarzeń (ES) jest jednym z najlepszych metod, jeśli nie *najlepsze*. Jednak w wielu scenariuszach aplikacji, nie można zaimplementować pełnego ES. ES oznacza przechowywanie tylko domeny zdarzenia w transakcji bazy danych, zamiast przechowywania danych bieżącego stanu. Przechowywanie tylko domeny zdarzenia może mieć wiele korzyści, takich jak o historii dostępności systemu i możliwość określenia stanu systemu w dowolnym momencie w przeszłości. Jednak implementacja pełnego ES wymaga Przekształcanie większość systemu i wprowadza wiele złożoności i wymagania. Na przykład chcesz korzystać z bazy danych, które celowo do określania źródła zdarzeń, takich jak [Store zdarzeń](https://eventstore.org/), lub korzystający z dokumentów bazy danych, takich jak usługi Azure Cosmos DB, bazy danych MongoDB, Cassandra, CouchDB lub RavenDB. ES jest to doskonałe podejście do problemu, ale nie najprostszym rozwiązaniu, chyba że znasz już określania źródła zdarzeń.
 
 Możliwość użycia dziennika transakcji wyszukiwania początkowo wygląda bardzo przejrzysty. Jednak aby użyć tego podejścia, mikrousług ma zostać dołączone do dziennika transakcji RDBMS, takie jak dziennik transakcji programu SQL Server. Prawdopodobnie nie jest to pożądane. Inny wadą jest to, że aktualizacje niskiego poziomu, rejestrowane w dzienniku transakcji może nie być tym samym poziomie, jako zdarzenia wysokiego poziomu integracji. Jeśli tak, proces odtwarzania te operacje dziennika transakcji może być trudne.
 
@@ -124,7 +123,15 @@ W związku z tym ta metoda o zrównoważonym obciążeniu jest uproszczony syste
 
 Jeśli już używasz relacyjnej bazy danych, można użyć transakcji tabeli do przechowywania zdarzeń integracji. Aby osiągnąć niepodzielność w aplikacji, należy użyć dwuetapowego procesu na podstawie lokalnej transakcji. Zasadniczo masz tabelę IntegrationEvent w tej samej bazy danych, których mają jednostki domeny. Ta tabela działa zgodnie z branży ubezpieczeniowej do osiągnięcia niepodzielność, tak że uwzględnisz utrwalone zdarzenia integracji w tej samej transakcji, które są w trakcie zatwierdzania danych domeny.
 
-Krok po kroku proces przechodzi następująco: aplikacja rozpocznie transakcji lokalnej bazy danych. Następnie aktualizuje stan jednostki domeny i wstawia zdarzenia do tabeli zdarzeń integracji. Na koniec zatwierdzeń transakcji. Możesz uzyskać odpowiednią niepodzielność.
+Krok po kroku proces wykracza następująco:
+
+1.  Aplikacja rozpocznie transakcji lokalnej bazy danych.
+
+2.  Następnie aktualizuje stan jednostki domeny i wstawia zdarzenia do tabeli zdarzeń integracji.
+
+3.  Na koniec jej zatwierdzenia transakcji, dzięki czemu uzyskujesz żądaną niepodzielność i następnie
+
+4.  Jakiś sposób opublikować wydarzenie (dalej).
 
 Implementując kroki publikowania zdarzenia, masz następujące opcje:
 
@@ -132,21 +139,21 @@ Implementując kroki publikowania zdarzenia, masz następujące opcje:
 
 -   Skorzystaj z tabeli jako rodzaj kolejki. Wątek oddzielną aplikację lub procesu zapytania w tabeli zdarzeń integracji, publikuje w magistrali zdarzeń zdarzenia i następnie używa lokalnej transakcji do oznaczenia zdarzeń jako opublikowane.
 
-Rysunek 8 do 22 przedstawiono architekturę jako pierwsza z tych metod.
+Rysunek 6-22 przedstawiono architekturę jako pierwsza z tych metod.
 
-![](./media/image23.png)
+![Jedno z podejść do obsługi niepodzielność podczas publikowania zdarzeń: publikować (używanych w ramach aplikacji eShopOnContainers) za pomocą jednej transakcji do zatwierdzenia zdarzenia do tabeli dziennika zdarzeń, a następnie inną transakcję](./media/image23.png)
 
-**Rysunek 8 do 22**. Niepodzielność podczas publikowania zdarzeń w magistrali zdarzeń
+**Rysunek 6-22**. Niepodzielność podczas publikowania zdarzeń w magistrali zdarzeń
 
-Podejście pokazano w rysunek 8 do 22 brakuje mikrousług dodatkowe procesu roboczego, który jest odpowiedzialny za sprawdzenie i Potwierdzanie Powodzenie zdarzenia opublikowanych integracji. W przypadku awarii tego dodatkowe sprawdzanie procesu roboczego mikrousług można odczytywać zdarzenia z tabeli i ich opublikowanie.
+Podejście pokazano w rysunek 6-22 brakuje mikrousług dodatkowe procesu roboczego, który jest odpowiedzialny za sprawdzenie i Potwierdzanie Powodzenie zdarzenia opublikowanych integracji. W przypadku awarii tego dodatkowe sprawdzanie procesu roboczego mikrousług można odczytywać zdarzenia z tabeli i ponownie opublikować je, czyli liczba Powtórz krok 2.
 
-Temat drugiego podejścia: skorzystaj z tabeli dziennika zdarzeń, co kolejka i zawsze używaj mikrousług procesu roboczego do publikowania wiadomości. W takiej sytuacji proces Krewny, który jest wyświetlany w rysunek 8 – 23. Spowoduje to pokazanie dodatkowe mikrousług, a tabela jest pojedyncze źródło podczas publikowania zdarzeń.
+Temat drugiego podejścia: skorzystaj z tabeli dziennika zdarzeń, co kolejka i zawsze używaj mikrousług procesu roboczego do publikowania wiadomości. W takiej sytuacji proces Krewny, który jest wyświetlany w rysunek 6 – 23. Spowoduje to pokazanie dodatkowe mikrousług, a tabela jest pojedyncze źródło podczas publikowania zdarzeń.
 
-![](./media/image24.png)
+![Innym sposobem obsługi niepodzielność: publikowanie do tabeli dziennika zdarzeń, a następnie mają inny mikrousługi (procesu roboczego tła) opublikować zdarzenia.](./media/image24.png)
 
-**Rysunek 8-23**. Niepodzielność podczas publikowania zdarzeń w magistrali zdarzeń z mikrousług procesu roboczego
+**Rysunek 6-23**. Niepodzielność podczas publikowania zdarzeń w magistrali zdarzeń z mikrousług procesu roboczego
 
-Dla uproszczenia przykładowe w ramach aplikacji eShopOnContainers korzysta z pierwszej metody (bez dodatkowych procesów i z mikrousług sprawdzania) oraz magistrali zdarzeń. Jednak ramach aplikacji eShopOnContainers nie obsługuje wszystkich przypadkach mogą występować awarie. W rzeczywistej aplikacji wdrożonych w chmurze możesz wykorzystać fakt, że będzie problemów po pewnym czasie oraz musi implementować i sprawdź i Wyślij ponownie logiki. Przy użyciu tabeli jako kolejka może być bardziej efektywne niż pierwszego podejścia, jeśli masz tę tabelę jako pojedyncze źródło zdarzenia, publikując je za pośrednictwem magistrali zdarzeń.
+Dla uproszczenia przykładowe w ramach aplikacji eShopOnContainers korzysta z pierwszej metody (bez dodatkowych procesów i z mikrousług sprawdzania) oraz magistrali zdarzeń. Jednak ramach aplikacji eShopOnContainers nie obsługuje wszystkich przypadkach mogą występować awarie. W rzeczywistej aplikacji wdrożonych w chmurze możesz wykorzystać fakt, że będzie problemów po pewnym czasie oraz musi implementować i sprawdź i Wyślij ponownie logiki. Przy użyciu tabeli jako kolejka może być bardziej efektywne niż pierwszego podejścia, jeśli masz tę tabelę jako pojedyncze źródło zdarzenia, gdy w ich opublikowaniem (z proces roboczy), za pośrednictwem magistrali zdarzeń.
 
 ### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Implementowanie niepodzielność podczas publikowania zdarzeń integracja za pośrednictwem magistrali zdarzeń
 
@@ -217,7 +224,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
 
 Po utworzeniu zdarzenia integracji ProductPriceChangedIntegrationEvent transakcji, która przechowuje operacji pierwotnej domeny (Aktualizacja elementów katalogu) zawiera również trwałości zdarzenia w tabeli w dzienniku zdarzeń. Dzięki temu pojedynczą transakcję i zawsze można sprawdzić, czy komunikaty o zdarzeniach zostały wysłane.
 
-Tabela dziennika zdarzeń jest aktualizowana niepodzielne operacji pierwotnej bazy danych przy użyciu lokalnej transakcji w tej samej bazie danych. Jeśli dowolne operacje kończą się niepowodzeniem, zostanie zgłoszony wyjątek i transakcji powoduje wycofanie zakończonych operacji, w związku z tym utrzymanie spójności między operacjami domeny i wysyłane komunikaty o zdarzeniach.
+Tabela dziennika zdarzeń jest aktualizowana niepodzielne operacji pierwotnej bazy danych przy użyciu lokalnej transakcji w tej samej bazie danych. Jeśli dowolne operacje kończą się niepowodzeniem, zostanie zgłoszony wyjątek i transakcji powoduje wycofanie zakończonych operacji, w związku z tym utrzymanie spójności między operacjami domeny i komunikaty o zdarzeniach, zapisane w tabeli.
 
 ### <a name="receiving-messages-from-subscriptions-event-handlers-in-receiver-microservices"></a>Odbieranie komunikatów z subskrypcji: obsługi zdarzeń w mikrousługach odbiorcy
 
@@ -272,11 +279,11 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 }
 ```
 
-Program obsługi zdarzeń musi sprawdzić, czy produkt istnieje we wszystkich wystąpieniach koszyka. Aktualizuje cenę dla każdego elementu wiersza powiązane koszyka. Na koniec tworzy alert ma być wyświetlany dla użytkownika o zmianę ceny, jak pokazano w rysunek 8-24.
+Program obsługi zdarzeń musi sprawdzić, czy produkt istnieje we wszystkich wystąpieniach koszyka. Aktualizuje cenę dla każdego elementu wiersza powiązane koszyka. Na koniec tworzy alert ma być wyświetlany dla użytkownika o zmianę ceny, jak pokazano w rysunek 6 do 24.
 
-![](./media/image25.png)
+![Wyświetlany w przeglądarce widok procesu zmiany powiadomienia na koszyka użytkownika.](./media/image25.png)
 
-**Rysunek 8-24**. Wyświetlanie zmian cen elementów w koszyku jako przekazywane przez zdarzenia integracji
+**Rysunek 6 – 24**. Wyświetlanie zmian cen elementów w koszyku jako przekazywane przez zdarzenia integracji
 
 ## <a name="idempotency-in-update-message-events"></a>Idempotentność w aktualizacji komunikat zdarzenia
 
@@ -286,7 +293,7 @@ Jak wspomniano wcześniej, idempotentność oznacza, że operacja może zostać 
 
 Przykładem operacja idempotentna jest instrukcję SQL, który wstawia dane do tabeli, tylko wtedy, gdy dane nie są już w tabeli. Nie ma znaczenia, ile razy należy uruchomić, które wstawiają instrukcję SQL wynik będzie taki sam — tabela będzie zawierać tych danych. Idempotentności, np. to może być również niezbędne podczas pracy z komunikatów, jeśli potencjalnie być wysyłane komunikaty i w związku z tym przetworzonych więcej niż raz. Na przykład jeśli Logika ponawiania powoduje, że nadawca wysyłać ten sam komunikat więcej niż jeden raz, należy się upewnić, że jest idempotentna.
 
-Istnieje możliwość projektowania idempotentne wiadomości. Na przykład można utworzyć zdarzenie i mówi "równa cena produktu \$25" zamiast "Dodaj \$5 z ceną produktu." Użytkownik może bezpiecznie przetworzyć pierwszy komunikat o dowolną liczbę razy, a wynik będzie taki sam. To nie dotyczy drugi komunikat. Ale nawet w przypadku pierwszego, nie można przetworzyć pierwsze zdarzenie, ponieważ system może również wysłane nowszych zdarzeń zmian cen i spowoduje zastąpienie nową cenę.
+Istnieje możliwość projektowania idempotentne wiadomości. Na przykład można utworzyć zdarzenie i mówi "Ustaw cena produktu do 25 USD" zamiast "Dodaj 5 USD cena produktu" Użytkownik może bezpiecznie przetworzyć pierwszy komunikat o dowolną liczbę razy, a wynik będzie taki sam. To nie dotyczy drugi komunikat. Ale nawet w przypadku pierwszego, nie można przetworzyć pierwsze zdarzenie, ponieważ system może również wysłane nowszych zdarzeń zmian cen i spowoduje zastąpienie nową cenę.
 
 Innym przykładem mogą być zdarzenie ukończone w kolejności propagowana do wielu subskrybentów. Ważne jest, informacji o zamówieniach zaktualizowania w innych systemach tylko raz, nawet jeśli występują zduplikowany komunikat zdarzenia dla tego samego zdarzenia ukończone w kolejności.
 
@@ -296,7 +303,8 @@ Przetwarza komunikat jest idempotentna. Na przykład jeśli system generuje obra
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Zapewniane idempotentności komunikat** (Podnagłówek na tej stronie) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **Zapewniane idempotentności wiadomości** <br/>
+    [*https://msdn.microsoft.com/library/jj591565.aspx#honoring_message_idempotency*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplikacja integracji komunikaty o zdarzeniach
 
@@ -304,7 +312,7 @@ Można należy upewnić się, że zdarzenia dotyczące wiadomości wysyłanych i
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>Komunikat zdarzenia na poziomie EventHandler deduplikacja
 
-Jednym ze sposobów, aby upewnić się, że zdarzenie jest przetwarzany tylko raz przez żadnego odbiorcy jest zaimplementowanie logiki określonych podczas przetwarzania zdarzeń komunikatów w procedurze obsługi zdarzeń. Na przykład, to podejście użyte w ramach aplikacji eShopOnContainers aplikacji, jak widać w [kod źródłowy](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Controllers/OrdersController.cs) klasy OrdersController, gdy odbierze polecenie CreateOrderCommand. (W tym przypadku użyjemy polecenia żądanie HTTP nie oparta na komunikatach polecenia, ale logiki, musisz wprowadzić idempotentne oparta na komunikatach polecenie jest podobne).
+Jednym ze sposobów, aby upewnić się, że zdarzenie jest przetwarzany tylko raz przez żadnego odbiorcy jest zaimplementowanie logiki określonych podczas przetwarzania zdarzeń komunikatów w procedurze obsługi zdarzeń. Na przykład, to podejście użyte w ramach aplikacji eShopOnContainers aplikacji, jak widać w [źródła kod klasy UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) po odebraniu UserCheckoutAcceptedIntegrationEvent Zdarzenie integracji. (W tym przypadku możemy opakować CreateOrderCommand z IdentifiedCommand przy użyciu eventMsg.RequestId jako identyfikator przed wysłaniem ich do obsługi polecenia).
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>Deduplikacja wiadomości w przypadku korzystania z oprogramowania RabbitMQ
 
@@ -316,63 +324,71 @@ Jeśli flaga "redelivered" jest ustawiona, odbiorca musi uwzględniać który, p
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Rozwidlone w ramach aplikacji eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)**
+-   **Rozwidlone w ramach aplikacji eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **Aktivita typu EventDriven komunikatów**
+-   **Aktivita typu EventDriven komunikatów** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Refaktoryzacja kierunku odporności: Ocena sprzężenia**
+-   **Jimmy Bogard. Refaktoryzacja kierunku odporności: Ocena sprzężenia** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publikowanie/subskrybowanie kanałów**
+-   **Publikowanie/subskrybowanie kanałów** <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Komunikacja między ograniczone konteksty**
+-   **Komunikacja między ograniczone konteksty** <br/>
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Spójność ostateczna**
+-   **Spójność ostateczna** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Integrowanie strategii ograniczone konteksty**
-    [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+-   **Philip Brown. Integrowanie strategii ograniczone konteksty** <br/>
+    [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Leonard. Tworzenie Mikrousług transakcyjne przy użyciu wartości zagregowane, określania źródła zdarzeń i podejście CQRS — część 2**
+-   **Chris Leonard. Tworzenie Mikrousług transakcyjne przy użyciu wartości zagregowane, określania źródła zdarzeń i podejście CQRS — część 2** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Leonard. Wzorzec określania źródła zdarzeń**
+-   **Chris Leonard. Wzorzec określania źródła zdarzeń** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Wprowadzenie do określania źródła zdarzeń**
+-   **Wprowadzenie do określania źródła zdarzeń** <br/>
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
--   **Bazy danych zdarzeń Store**. Oficjalna witryna.
+-   **Bazy danych zdarzeń Store**. Oficjalna witryna. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Zarządzanie oparte na zdarzeniach danych dla Mikrousług**
+-   **Patrick Nommensen. Zarządzanie oparte na zdarzeniach danych dla Mikrousług** <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **Kolejnego elementu teorii CAP**
+-   **Kolejnego elementu teorii CAP** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Co to jest kolejnego elementu teorii CAP?**
+-   **Co to jest kolejnego elementu teorii CAP?** <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Podstawy spójności danych**
+-   **Podstawy spójności danych** <br/>
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling. Kolejnego elementu teorii CAP: Dlaczego "Wszystko, co jest różne" chmura i Internet**
+-   **Rick Saling. Kolejnego elementu teorii CAP: Dlaczego "Wszystko, co jest różne" chmura i Internet** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewera. LIMIT później dwunastu lat: jak "Zasady" zostały zmienione**
+-   **Eric Brewera. LIMIT później dwunastu lat: jak "Zasady" zostały zmienione** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Udział w transakcji zewnętrznych (DTC)** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
-
--   **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów**
+-   **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Przewodnik niezawodność** (dokumentacja RabbitMQ) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Przewodnik niezawodność** (dokumentacja RabbitMQ) * <br/>
+    [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
+
+-   **Udział w transakcji zewnętrznych (DTC)** (MSMQ) <br/>
+    [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+
+-   **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów** <br/>
+    [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+
+-   **Przewodnik niezawodność** (dokumentacja RabbitMQ) <br/>
+    [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

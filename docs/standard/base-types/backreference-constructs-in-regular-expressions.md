@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615329"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672040"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Konstrukcje dopasowań w wyrażeniach regularnych
 Dopasowywania wstecznego zapewniają wygodny sposób identyfikowania powtarzających się znaków lub podciągu wewnątrz ciągu. Na przykład jeśli ciąg wejściowy zawiera wiele wystąpień dowolnego podciąg, można dopasować pierwsze wystąpienie z grupy przechwytywania, a następnie należy użyć dopasowywania wstecznego do dopasowania pozostałe wystąpienia podciągu.  
@@ -103,7 +103,7 @@ Jednak jeśli *nazwa* jest ciąg reprezentujący liczbę, a grupy przechwytywani
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`(?<1>a)`|Dopasowuje znak "a" i przypisz wynik do grupy przechwytywania o nazwie `1`.|  
-|`(?<1>\1b)*`|Wystąpienie dopasowania 0 lub 1 grupę o nazwie `1` wraz z "b" i przypisz wynik do grupa przechwytywania o nazwie `1`.|  
+|`(?<1>\1b)*`|Dopasowuje zero lub więcej wystąpień grupy o nazwie `1` wraz z "b" i przypisz wynik do grupa przechwytywania o nazwie `1`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
@@ -114,7 +114,7 @@ Jednak jeśli *nazwa* jest ciąg reprezentujący liczbę, a grupy przechwytywani
   
 2.  Przechodzi do drugim znakiem i pomyślnie pasuje do ciągu "ab" z wyrażeniem `\1b`, lub "ab". Następnie przypisuje wynik, "ab", aby `\1`.  
   
-3.  Przechodzi do czwartej znaków. Wyrażenie `(?<1>\1b)` to być dopasowane zero lub więcej razy, więc go pomyślnie pasuje do ciągu "abb" z wyrażeniem `\1b`. Przypisuje wynik, "abb", wróć do `\1`.  
+3.  Przechodzi do czwartej znaków. Wyrażenie `(?<1>\1b)*` to być dopasowane zero lub więcej razy, więc go pomyślnie pasuje do ciągu "abb" z wyrażeniem `\1b`. Przypisuje wynik, "abb", wróć do `\1`.  
   
  W tym przykładzie `*` jest pętli kwantyfikator — zostanie ono ocenione wielokrotnie, dopóki aparat wyrażeń regularnych nie pasuje do wzorca, definiuje. Kwantyfikatory pętli nie usuwaj zaznaczenia opcji definicje grup.  
   

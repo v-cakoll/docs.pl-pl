@@ -2,12 +2,12 @@
 title: Udzielanie uprawnień na poziomie wiersza w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873708"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671990"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Udzielanie uprawnień na poziomie wiersza w programie SQL Server
 W niektórych scenariuszach istnieje wymóg do kontrolowania dostępu do danych na bardziej szczegółowym poziomie niż zapewnia jakie po prostu udzielanie, odwoływanie lub odmawianie uprawnień. Na przykład szpitali aplikacji bazy danych może wymagać poszczególnych lekarzy ograniczona do uzyskiwania dostępu do informacji dotyczących tylko pacjentów. Istnieją podobne wymagania w wielu środowiskach, w tym Finanse, prawo, instytucji rządowych i wojskowe aplikacji. Aby ułatwić obsługę tych scenariuszy, programu SQL Server 2016 zapewnia [zabezpieczenia na poziomie wiersza](https://msdn.microsoft.com/library/dn765131.aspx) funkcja, która upraszcza i umożliwia scentralizowanie logiki dostępu na poziomie wiersza w zasadach zabezpieczeń. We wcześniejszych wersjach programu SQL Server podobne funkcje można osiągnąć przy użyciu widoków wprowadzenie filtrowanie na poziomie wiersza.  
@@ -58,13 +58,6 @@ W niektórych scenariuszach istnieje wymóg do kontrolowania dostępu do danych 
 -   Odmowa uprawnień wszystkie tabele (i widoki, jeśli ma to zastosowanie) do `public` roli. Użytkownicy nie będą mogli dziedziczą uprawnienia z innych ról bazy danych, ponieważ predykatu filtru opartego na użytkownika lub nazwy logowania, nie na rolach.  
   
 -   Udziel wykonać na procedurach przechowywanych do ról bazy danych. Użytkownicy mogą tylko dostęp do danych przy użyciu przechowywanych procedur.  
-  
-## <a name="external-resources"></a>Zasoby zewnętrzne  
- Aby uzyskać więcej informacji zobacz następujące zasoby.  
-  
-|||  
-|-|-|  
-|[Implementowanie zabezpieczeń na poziomie wierszy i komórek w niejawnych baz danych przy użyciu programu SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=98227) w witrynie Centrum TechCenter programu SQL Server.|Opisuje sposób używania zabezpieczeń na poziomie wierszy i komórek do wymagań zabezpieczeń niejawnych bazy danych.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia na poziomie wiersza](https://msdn.microsoft.com/library/dn765131.aspx)  

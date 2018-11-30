@@ -6,5 +6,5 @@
 |Sugestia|Aby zapobiec wyjątek, upewnij się, że żadne nazwy dwóch zdarzeń różniących się tylko &quot;Start&quot; lub &quot;zatrzymać&quot; sufiks. To wymaganie jest usuwany, począwszy od programu .NET Framework 4.6.2; środowisko uruchomieniowe można odróżnić nazwy zdarzeń, które różnią się tylko przez &quot;Start&quot; i &quot;zatrzymać&quot; sufiks.|
 |Zakres|Krawędź|
 |Wersja|4.6|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 

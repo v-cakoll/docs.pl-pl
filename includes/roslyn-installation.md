@@ -1,4 +1,4 @@
-## <a name="installation-instructions"></a>Instrukcje dotyczące instalacji 
+## <a name="installation-instructions"></a>Instrukcje instalacji 
 
 Istnieją dwa różne sposoby, aby znaleźć **zestawu SDK platformy kompilatora .NET** w **Instalatora programu Visual Studio**:
 

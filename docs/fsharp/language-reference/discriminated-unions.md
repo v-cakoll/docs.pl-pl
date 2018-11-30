@@ -1,13 +1,13 @@
 ---
 title: Sumy rozłączne (F#)
-description: Dowiedz się, jak używać języka F# związków wyróżniających.
+description: Dowiedz się, jak używać F# związków wyróżniających.
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43788126"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672250"
 ---
 # <a name="discriminated-unions"></a>Sumy rozłączne
 
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 Ten kod wskazuje, że możesz użyć nazwanych pól podczas inicjowania lub możesz polegać na określeniu kolejności pól w deklaracji i po prostu Podaj wartości dla każdego pola, z kolei. Wywołanie konstruktora dla `rect` w poprzednim kodzie używa pól nazwanych, ale wywołanie konstruktora dla `circ` używa kolejności. Możesz mieszać pola zamówione i pola nazwane, tak jak w konstrukcji `prism`.
 
-`option` Typu jest proste złożeniem dyskryminowanym w podstawowej biblioteki języka F#. `option` Typ jest zadeklarowany w następujący sposób.
+`option` Typu jest proste złożeniem dyskryminowanym w F# podstawowej biblioteki. `option` Typ jest zadeklarowany w następujący sposób.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -95,10 +95,18 @@ Poniższy przykład przedstawia to:
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
+```
+
+Dopasowywania do wzorca jest też dozwolony bezpośrednio w parametrów funkcji, dzięki czemu można Odkodowywanie jeden przypadek:
+
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
 ```
 
 ## <a name="struct-discriminated-unions"></a>Sumy rozłączne

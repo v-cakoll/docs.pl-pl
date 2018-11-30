@@ -4,7 +4,7 @@
 |---|---|
 |Szczegóły|Aby można było zgodne z RFC 2396, miejsca do magazynowania w ścieżkach trasy są teraz poprzedzone znakiem zmiany znaczenia podczas wypełniania parametry akcji z trasy. Tak podczas gdy <code>/controller/action/some data</code> wcześniej będzie odpowiadać trasy <code>/controller/action/{data}</code> i podaj <code>some data</code> jako parametr danych, będzie teraz zapewniać <code>some%20data</code> zamiast tego.|
 |Sugestia|Kod powinien zostać zaktualizowany do unescape parametry ciągu z trasy. W razie potrzeby oryginalnego identyfikatora URI jest dostępny za pomocą <xref:System.Net.HttpWebRequest.RequestUri>. OriginalString interfejsu API.|
-|Zakres|Pomocnicza|
+|Zakres|Mały|
 |Wersja|4.5.2|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)?displayProperty=nameWithType></li></ul>|

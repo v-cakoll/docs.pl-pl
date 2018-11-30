@@ -11,11 +11,11 @@ ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192684"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672322"
 ---
 # <a name="ltassertgt-element"></a>&lt;asercja&gt; — Element
 Określa, czy należy wyświetlić okno komunikatu, gdy wywołujesz <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> metody; określa także nazwę pliku do zapisywania komunikatów.  

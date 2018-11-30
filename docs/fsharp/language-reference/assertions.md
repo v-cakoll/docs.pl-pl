@@ -1,13 +1,13 @@
 ---
 title: Potwierdzenia (F#)
-description: Dowiedz się, jak używać wyrażeń "Potwierdź" jako funkcja debugowania do testowania wyrażenia w języku programowania F#.
+description: Dowiedz się, jak użyć wyrażenia "Potwierdź" jako funkcja debugowania do testowania wyrażeń w F# języka programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842479"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671925"
 ---
 # <a name="assertions"></a>Potwierdzenia
 
@@ -27,10 +27,10 @@ W poprzedniej składni *warunek* reprezentuje wyrażenie logiczne, które ma zos
 
 Sprawdzanie potwierdzenia jest włączone, tylko wtedy, gdy kompilujesz w trybie debugowania; oznacza to jeśli stała `DEBUG` jest zdefiniowana. W systemie projektu, domyślnie `DEBUG` stała jest zdefiniowany w konfiguracji debugowania, ale nie w konfiguracji wydania.
 
-Błąd potwierdzenia nie można przechwycić za pomocą obsługi wyjątków w języku F#.
+Błąd potwierdzenia nie można przechwycić za pomocą F# obsługi wyjątków.
 
->[!NOTE]
-`assert` Funkcji jest rozpoznawane jako <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
+> [!NOTE]
+> `assert` Funkcji jest rozpoznawane jako <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Przykład
 

@@ -4,12 +4,12 @@ description: Dowiedz się, jak dokonać wyboru między tradycyjnych aplikacji i 
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404151"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671910"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybierz między aplikacjami tradycyjnej sieci Web i aplikacje jednostronicowe (źródła)
 
@@ -70,10 +70,10 @@ Pisanie aplikacji jednostronicowych wymaga znajomości języka JavaScript i/lub 
 
 > ### <a name="references--spa-frameworks"></a>Odwołania — struktury SPA
 >
-> - **Platformy angular**  
+> - **Angular**  
 >   <https://angular.io>
 > - **Porównanie platformy JavaScript**  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **Aplikacja musi już uwidaczniania interfejsu API dla innych klientów (wewnętrznego lub publicznego)**
 
@@ -91,5 +91,5 @@ W poniższej tabeli decyzji zawiera podsumowanie podstawowych czynników, które
 | Wymagania dotyczące interfejsu użytkownika zaawansowane, złożone            | **Ograniczone**             | **Well-Suited**             |
 
 >[!div class="step-by-step"]
-[Poprzednie](modern-web-applications-characteristics.md)
-[dalej](architectural-principles.md)
+>[Poprzednie](modern-web-applications-characteristics.md)
+>[dalej](architectural-principles.md)

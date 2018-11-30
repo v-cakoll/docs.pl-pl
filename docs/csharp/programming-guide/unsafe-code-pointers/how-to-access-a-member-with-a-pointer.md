@@ -1,17 +1,17 @@
 ---
-title: 'Porady: uzyskiwanie dostępu do członka za pomocą wskaźnika (Przewodnik programowania w języku C#)'
+title: 'Porady: uzyskiwanie dostępu do członka za pomocą wskaźnika (C# Programming Guide)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
-ms.openlocfilehash: 715bc2c493b58757154aa114d1e0527cbad46f46
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b51239be8da8c45aa2d7f1ff0700884c43c07299
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511305"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671976"
 ---
-# <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Porady: uzyskiwanie dostępu do członka za pomocą wskaźnika (Przewodnik programowania w języku C#)
+# <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Porady: uzyskiwanie dostępu do członka za pomocą wskaźnika (C# Programming Guide)
 Do uzyskania dostępu do członka struktury, która jest zadeklarowana w niebezpiecznym kontekście, można używać operatora dostępu do elementu członkowskiego, jak pokazano w poniższym przykładzie, w którym `p` jest wskaźnikiem do [struktury](../../../csharp/language-reference/keywords/struct.md) zawierający element członkowski `x`.  
   
 ```  

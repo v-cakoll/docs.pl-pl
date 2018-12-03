@@ -4,16 +4,16 @@ description: Przewodnik dotyczący architektury bezserwerowej. Dowiedz się, kie
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: 89e5f387e218703a2f6311ef848b3d613a9279f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404960"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745319"
 ---
-![](./media/Cover.jpg)
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplikacje niewymagające użycia serwera: Architektura, wzorce i implementacji platformy Azure
+
+![](./media/Cover.jpg)
 
 > Pobierz dostępne pod adresem: <https://aka.ms/serverless-ebook>
 
@@ -61,7 +61,7 @@ Uczestnicy i osób dokonujących przeglądu:
 
 ## <a name="introduction"></a>Wprowadzenie
 
-Bez użycia serwera stanowi ewolucyjne rozwinięcie funkcji platformach w chmurze w kierunku kodu natywnego w chmurze. Aplikacje niewymagające użycia serwera udostępnia deweloperom bliżej logiki biznesowej podczas izolacji je z uwagi infrastrukturze. Jest to wzorzec, który nie oznacza "nie server" ale raczej "mniej serwera." Kod bezserwerowy jest oparte na zdarzeniach. Kod może zostać wyzwolone przez coś z tradycyjnych żądania sieci web HTTP czasomierz lub wynik przekazywania pliku. Infrastruktura za bez użycia serwera umożliwia natychmiastowe skalowanie do spełnienia wymagań elastyczne i oferuje micro rozliczeń, aby naprawdę "płatność za rzeczywiste użycie." Aplikacje niewymagające użycia serwera wymaga nowy sposób myślenia i podejścia do tworzenia aplikacji i nie jest właściwe rozwiązanie dla każdego problemu. Jako deweloper musi określić:
+[Bez użycia serwera](https://azure.microsoft.com/solutions/serverless/) stanowi ewolucyjne rozwinięcie funkcji platformach w chmurze w kierunku kodu natywnego w chmurze. Aplikacje niewymagające użycia serwera udostępnia deweloperom bliżej logiki biznesowej podczas izolacji je z uwagi infrastrukturze. Jest to wzorzec, który nie oznacza "nie server" ale raczej "mniej serwera." Kod bezserwerowy jest oparte na zdarzeniach. Kod może zostać wyzwolone przez coś z tradycyjnych żądania sieci web HTTP czasomierz lub wynik przekazywania pliku. Infrastruktura za bez użycia serwera umożliwia natychmiastowe skalowanie do spełnienia wymagań elastyczne i oferuje micro rozliczeń, aby naprawdę "płatność za rzeczywiste użycie." Aplikacje niewymagające użycia serwera wymaga nowy sposób myślenia i podejścia do tworzenia aplikacji i nie jest właściwe rozwiązanie dla każdego problemu. Jako deweloper musi określić:
 
 * Co to są zalet i wad bez użycia serwera?
 * Dlaczego należy rozważyć bez użycia serwera na potrzeby własnych aplikacji?
@@ -138,4 +138,4 @@ Pierwsza część tego przewodnika sprawdza Dlaczego bez użycia serwera jest wy
 Wskazówki i przykłady są stale ewoluuje, dzięki czemu Twoja opinia jest przyjęte! Jeśli masz komentarze na temat sposobu ten przewodnik można zwiększyć, użyj sekcji opinii u dołu każdej strony w oparciu [problemy usługi GitHub](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
-[Next](architecture-approaches.md)
+>[Next](architecture-approaches.md)

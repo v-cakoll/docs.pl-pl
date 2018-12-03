@@ -2,23 +2,23 @@
 title: Zdarzenia (F#)
 description: Dowiedz się, jak F# zdarzenia umożliwiają kojarzenie wywołań funkcji z akcjami użytkownika, które są ważne w programowaniu graficznych interfejsów użytkownika.
 ms.date: 05/16/2016
-ms.openlocfilehash: ce547bc9ec7b5e0ef9a7492c0889bb690e3040c2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 82cde0e1df980a2ae204ad0923f4bac0769f0831
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43871936"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745345"
 ---
 # <a name="events"></a>Zdarzenia
 
 > [!NOTE]
-Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
+> Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
 Zdarzenia umożliwiają kojarzenie wywołań funkcji z akcjami użytkownika i są ważne w programowaniu graficznych interfejsów użytkownika. Zdarzenia mogą być też wywoływane przez aplikacje lub system operacyjny.
 
 ## <a name="handling-events"></a>Obsługa zdarzeń
 
-Gdy jest używana biblioteka graficznych interfejsów użytkownika, taka jak Windows Forms lub Windows Presentation Foundation (WPF), większość kodu aplikacji działa w odpowiedzi na zdarzenia, które są wstępnie zdefiniowane w tej bibliotece. Te wstępnie zdefiniowane zdarzenia są składowymi klas graficznego interfejsu użytkownika, takich jak formularze i formanty. Możesz dodać niestandardowe zachowanie do już istniejącego zdarzenia, takie jak kliknięcie przycisku, odwołując się do określonego nazwanego zdarzenia (na przykład `Click` zdarzenia `Form` klasy) i wywołując `Add` metodzie, jak pokazano w poniższym kodzie . Jeśli uruchamiasz to z F# Interactive, pomiń wywołanie `System.Windows.Forms.Application.Run(System.Windows.Forms.Form)`.
+Gdy jest używana biblioteka graficznych interfejsów użytkownika, taka jak Windows Forms lub Windows Presentation Foundation (WPF), większość kodu aplikacji działa w odpowiedzi na zdarzenia, które są wstępnie zdefiniowane w tej bibliotece. Te wstępnie zdefiniowane zdarzenia są składowymi klas graficznego interfejsu użytkownika, takich jak formularze i formanty. Możesz dodać niestandardowe zachowanie do już istniejącego zdarzenia, takie jak kliknięcie przycisku, odwołując się do określonego nazwanego zdarzenia (na przykład `Click` zdarzenia `Form` klasy) i wywołując `Add` metodzie, jak pokazano w poniższym kodzie . Jeśli uruchamiasz ten program z F# Interactive, pomiń wywołanie `System.Windows.Forms.Application.Run(System.Windows.Forms.Form)`.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3601.fs)]
 
@@ -28,7 +28,7 @@ Typ `Add` metodą jest `('a -> unit) -> unit`. Dlatego metoda obsługi zdarzeń 
 
 ## <a name="creating-custom-events"></a>Tworzenie zdarzeń niestandardowych
 
-Zdarzenia języka F# są reprezentowane przez język F# [zdarzeń](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) klasy, która implementuje [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interfejsu. `IEvent` jest interfejsem łączącym funkcje dwóch innych interfejsów `System.IObservable<'T>` i [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). W związku z tym `Event`są równoważne funkcje delegatów w innych językach oraz dodatkową funkcjonalność z `IObservable`, co oznacza, że zdarzenia języka F# obsługują filtrowanie zdarzeń i używanie funkcji pierwszej klasy F# oraz wyrażeń lambda jako programów obsługi zdarzeń. Ta funkcjonalność jest dostarczana w [modułu zdarzeń](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+F#zdarzenia są reprezentowane przez F# [zdarzeń](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) klasy, która implementuje [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interfejsu. `IEvent` jest interfejsem łączącym funkcje dwóch innych interfejsów `System.IObservable<'T>` i [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). W związku z tym `Event`są równoważne funkcje delegatów w innych językach oraz dodatkową funkcjonalność z `IObservable`, co oznacza, że F# zdarzenia obsługują filtrowanie zdarzeń i używanie F# funkcje pierwszej klasy i wyrażenia lambda jako programów obsługi zdarzeń. Ta funkcjonalność jest dostarczana w [modułu zdarzeń](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
 Aby utworzyć zdarzenie w klasie, która działa podobnie jak inne zdarzenie programu .NET Framework, Dodaj do klasy `let` powiązania, który definiuje `Event` jako pole w klasie. Odpowiedni typ argumentu zdarzenia można określić jako argument typu, ale można też pozostawić ten typu pusty, co spowoduje, że kompilator wywnioskuje odpowiedni typ. Należy także zdefiniować element członkowski zdarzenia, który będzie uwidaczniał zdarzenie jako zdarzenie CLI. Ten element członkowski musi mieć [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) atrybutu. Jest on zadeklarowany jako tak jak właściwość i jego implementacja to po prostu wywołanie do [Publikuj](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) właściwości zdarzenia. Użytkownicy klasy mogą używać `Add` metoda opublikowanego zdarzenia w celu dodawania programu obsługi. Argument `Add` metoda może być wyrażenie lambda. Możesz użyć `Trigger` właściwości zdarzenia, aby zgłosić zdarzenie, przekazując argumenty do funkcji obsługi. Pokazano to w poniższym przykładzie kodu. W tym przykładzie wywnioskowany argument typu dla zdarzenia to spójna kolekcja, która reprezentuje argumenty wyrażenia lambda.
 

@@ -1,82 +1,84 @@
 ---
-title: Odporność i wysokiej dostępności w mikrousług
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Odporność i wysokiej dostępności w mikrousług
+title: Odporność i wysoka dostępność w mikrousługach
+description: Mikrousługi mają być tak zaprojektowana, radzić sobie ze przejściowe problemy z siecią i błędów zależności, które muszą być odporne na błędy w celu uzyskania wysokiej dostępności.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106320"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745332"
 ---
-# <a name="resiliency-and-high-availability-in-microservices"></a>Odporność i wysokiej dostępności w mikrousług
+# <a name="resiliency-and-high-availability-in-microservices"></a>Odporność i wysoka dostępność w mikrousługach
 
-Zajmowanie nieoczekiwanych awarii jest jednym z najtrudniejsze problemy można rozwiązać, szczególnie w rozproszonym systemie. Obejmuje wiele deweloperom pisanie kodu, obsługa wyjątków i jest to również gdzie jest zużywany czas najbardziej podczas testowania. Problem jest bardziej skomplikowane niż pisania kodu do obsługi błędów. Co się stanie, gdy maszyny, na którym jest uruchomiona mikrousługi nie powiodło się? Nie tylko muszą wykryć ten błąd mikrousługi (twarde problem samodzielnie), ale może też być konieczne coś o ponowne uruchomienie programu mikrousługi.
+Zajmowanie się nieoczekiwanych awarii jest jednym z najtrudniejszych problemów do rozwiązania, szczególnie w rozproszonym systemie. Obejmuje większość kodu, który napisać deweloperów, obsługa wyjątków i jest to również gdzie najlepiej jest zużywany czas podczas testowania. Problem polega na bardziej skomplikowane niż pisanie kodu w celu obsługi błędów. Co się stanie, gdy maszyna, na którym jest uruchomione mikrousługa nie powiedzie się? Nie tylko potrzebne wykryć ten błąd mikrousługi (twardego problem samodzielnie), ale należy również coś o ponowne uruchomienie usługi mikrousług.
 
-Mikrousługi musi być odporność na awarie i mieć możliwość ponownego uruchomienia często na innym komputerze na potrzeby dostępności. To odporności również zawiera stanu, który został zapisany w imieniu mikrousługi, gdzie mikrousługi można odzyskać tego stanu z, a także czy mikrousługi można pomyślnie uruchomić ponownie. Innymi słowy musi istnieć odporność możliwości obliczeniowych (proces ponownie można w dowolnym momencie) oraz odporność w stanie lub danych (brak utraty danych i dane pozostają spójne).
+Mikrousługi wymaga, aby była odporna na awarie i mieć możliwość ponownego uruchomienia często na innej maszynie dostępności. Odporność to również sprowadza się do stanu, który został zapisany w imieniu mikrousług, gdzie mikrousługi można odzyskać tego stanu z, a także czy mikrousługi można pomyślnie uruchomić ponownie. Innymi słowy musi istnieć odporności w możliwości obliczeniowych (ten proces może ponownie w dowolnym momencie) oraz odporności w stanie lub dane (bez utraty danych i dane pozostają spójne).
 
-Problemy odporności są ich w innych scenariuszach, na przykład gdy wystąpią błędy podczas uaktualniania aplikacji. Mikrousługi, Praca w systemie wdrożenia musi ustalić, czy może on nadal przejście do nowszej wersji lub zamiast tego przywrócenie poprzedniej wersji, aby zachować w spójnym stanie. Pytania, takie jak czy maszyn wystarcza są dostępne do zachowania przenoszenie do przodu i jak odzyskać poprzednie wersje mikrousługi należy wziąć pod uwagę. Wymaga to mikrousługi można wyemitować informacji o kondycji, aby ogólną aplikacji i programu orchestrator mogą podjąć decyzje te.
+Problemy odporność jest rozliczana w innych scenariuszach, takich jak kiedy występują błędy podczas uaktualniania aplikacji. Mikrousłudze oraz pracy z systemem wdrażania musi ustalić, czy może on nadal przejść od razu do nowszej wersji lub zamiast niego wrócić do poprzedniej wersji do utrzymania spójnego stanu. Pytania, takie jak czy maszyn wystarcza są dostępne do zachowania przenoszenie do przodu i sposób odzyskać poprzednie wersje mikrousługi należy wziąć pod uwagę. Wymaga to mikrousług emitowanie informacji o kondycji, aby cała aplikacja i orchestrator można podejmowanie tych decyzji.
 
-Ponadto dotyczące odporności systemów jak oparte na chmurze musi działać. Jak wspomniano, oparte na chmurze system musi obejmować błędy i spróbuj musi automatycznie odzyskać ich. Na przykład w przypadku awarii sieci lub kontenera, klienta aplikacji lub usług klienta musi mieć strategii, aby ponowić próbę wysyłanie wiadomości lub aby ponowić próbę żądania, ponieważ w wielu przypadkach częściowe są błędy w chmurze. [Implementacja odporność aplikacji](#implementing_resilient_apps) w tym przewodniku omówiono sposób obsługi awarii częściowej. Zawiera opis technik, takich jak ponownych prób z wykładniczego wycofywania lub wzorca wyłącznika w .NET Core za pomocą biblioteki, takich jak [Polly](https://github.com/App-vNext/Polly), które oferuje wielu różnych zasad w celu obsługi tego tematu.
+Ponadto dotyczące odporności systemów jak oparte na chmurze musi zachowywać się. Jak wspomniano wcześniej, oparte na chmurze system musi wykorzystywać błędów i będą musieli spróbować automatycznie odzyskiwać po nich sprawność. Na przykład w przypadku awarii sieci lub kontenera, aplikacje klienckie lub usług klienta musi mieć strategii, aby ponowić próbę wysyłanie wiadomości lub aby ponowić próbę żądania, ponieważ w wielu przypadkach są częściowej awarii w chmurze. [Implementowanie aplikacji odpornych na błędy](../implement-resilient-applications/index.md) sekcji, w tym przewodniku omówiono sposób obsługi częściowych niepowodzeń. Opisano w nim technik, takich jak ponawiają próby z wykorzystaniem wykładniczego wycofywania lub wzorzec wyłącznika w programie .NET Core przy użyciu bibliotek, takich jak [Polly](https://github.com/App-vNext/Polly), które oferuje szerokiej gamy zasad w celu obsługi tego tematu.
 
-## <a name="health-management-and-diagnostics-in-microservices"></a>Zarządzanie Kondycja i Diagnostyka w mikrousług
+## <a name="health-management-and-diagnostics-in-microservices"></a>Zarządzanie stanem zdrowia i diagnostyki w mikrousługach
 
-Może wydawać się oczywiste i jest często pomijane, ale mikrousługi muszą zgłosić, jego kondycja i Diagnostyka. W przeciwnym razie jest niewiele wglądu z perspektywy operacji. Korelowanie zdarzeń diagnostycznych przez zestaw usług niezależnych i zajmujących maszyny zegara pochyla rozsądnie kolejność zdarzeń jest trudne. W taki sam sposób interakcji z mikrousługi za pośrednictwem protokołów ustalonym i formatów danych ma potrzeby normalizacji w sposób kondycji i zdarzeń diagnostycznych, które ostatecznie kończą w magazynie zdarzeń do badania i wyświetlania dziennika. W podejściu mikrousług jest klucz czy różnych zespołów wyrażanie zgody na format jednego rejestrowania. Musi istnieć jednolity sposób wyświetlania zdarzeń diagnostycznych w aplikacji.
+Może wydawać się oczywiste, jest często pomijane, ale mikrousługi należy zgłosić, jego kondycja i Diagnostyka. W przeciwnym razie jest mały wgląd z perspektywy operacji. Korelowanie zdarzeń diagnostycznych na zestaw niezależnych usług i korzystające z niesymetryczności zegara komputera rozsądnie kolejność zdarzeń jest trudne. W ten sam sposób, że możesz korzystać z mikrousług za pośrednictwem protokołów uzgodnionego i formatów danych istnieje potrzeba normalizacji w sposób kondycji i zdarzenia diagnostyczne, które ostatecznie znajdą się w magazynie zdarzeń do wykonywania zapytań i wyświetlania dziennika. W podejściu z mikrousług go ma klucza różne zespoły dojdą do Porozumienia w postaci pojedynczego logowania. Musi istnieć spójnego podejścia do wyświetlania zdarzeń diagnostycznych w aplikacji.
 
-### <a name="health-checks"></a>Sprawdzanie kondycji
+### <a name="health-checks"></a>Kontrole kondycji
 
-Kondycja jest inny niż diagnostyki. Kondycja jest o mikrousługi raportowania swojego bieżącego stanu podjęcia odpowiednich działań. Dobrym przykładem jest praca z uaktualnieniu i wdrożeniu mechanizmów w celu zapewnienia dostępności. Mimo że usługa może obecnie niezdrowy z powodu awarii procesu lub ponowne uruchomienie komputera, usługi może nadal działać. Ostatnim zadaniem, które są potrzebne jest zapewnienie to pogarsza się wraz z wykonując uaktualnienie. Najlepszym rozwiązaniem jest przeprowadzenie dochodzenia lub poczekać na mikrousługi do odzyskania. Zdarzenia kondycji z mikrousługi Pomóż nam podejmowania świadomych decyzji, a w efekcie ułatwić tworzenie usług samonaprawiania.
+Kondycja różni się od diagnostyki. Kondycja jest o mikrousługach raportowania swojego bieżącego stanu, aby podjąć odpowiednie działania. Dobrym przykładem jest praca z mechanizmów uaktualnieniu i wdrożeniu w celu zapewnienia dostępności. Mimo, że usługa może obecnie będącą w złej kondycji ze względu na awarię procesu lub ponowne uruchomienie komputera, usługi może nadal działać. Ostatnią czynnością, jaką potrzebne jest zapewnienie to niższa, wykonując uaktualnienie. Najlepszym rozwiązaniem jest w celu badania lub poczekaj na mikrousługach odzyskać. Zdarzenia dotyczące kondycji z mikrousługi pomagają nam podejmowanie świadomych decyzji, a w efekcie pomagają stworzyć samonaprawiania usług.
 
-W Implementowanie kondycji sprawdza w sekcji usług platformy ASP.NET Core tego przewodnika, możemy wyjaśniono, jak używać nowej biblioteki ASP.NET HealthChecks w sieci mikrousług, dlatego zgłaszają stanu do monitorowania usługi podjąć odpowiednie działania.
+W [Implementowanie kondycji sprawdza, czy w programie ASP.NET Core services](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) sekcji tego przewodnika firma Microsoft wyjaśniają jak używać nowej biblioteki ASP.NET HealthChecks w mikrousługi, więc zgłaszają stanu do monitorowania usługi i podejmij odpowiednie Akcje.
+
+Istnieje również możliwość korzystania z doskonałą biblioteki typu open source o nazwie zapewniała Pulse, dostępne na [GitHub](https://github.com/Xabaril/BeatPulse) i [pakietu NuGet](https://www.nuget.org/packages/BeatPulse/). Ta biblioteka jest również kontrole kondycji, za pomocą akcentem, obsługiwane są dwa typy kontroli:
+
+- **Żywotności**: sprawdza, czy mikrousługach podtrzymania połączenia, oznacza to, jeśli będzie to możliwe do akceptowania żądań i odpowiedzi. 
+- **Gotowość**: sprawdza, czy mikrousług zależności (bazy danych, usługi kolejki, itp.) czy samodzielnie wszystko będzie gotowe, więc mikrousługi można zrobić, co ma odbywać się zrobić. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Za pomocą strumieni zdarzeń diagnostycznych i dzienniki
 
-Dzienniki zawierają informacje dotyczące sposobu aplikacja lub usługa jest uruchomiona, łącznie z wyjątkami, ostrzeżenia i komunikaty informacyjne proste. Zazwyczaj każdy dziennik jest w formacie tekstowym o jeden wiersz dla każdego zdarzenia, chociaż często wyjątki Pokaż ślad stosu w wielu liniach.
+Dzienniki zawierają informacje dotyczące sposobu aplikacja lub usługa jest uruchomiona, łącznie z wyjątkami, ostrzeżenia i komunikaty informacyjne proste. Zazwyczaj każdy dziennik jest w formacie tekstowym o jeden wiersz dla każdego zdarzenia, chociaż wyjątki często Pokaż ślad stosu w wielu wierszach.
 
-W przypadku aplikacji serwerowych wbudowanymi można po prostu zapisywanie dzienników do pliku na dysku (pliku dziennika), a następnie analizować przy użyciu dowolnego narzędzia. Ponieważ wykonanie aplikacji jest ograniczony do środka serwera lub maszyny Wirtualnej, zwykle nie jest zbyt złożone, aby przeanalizować przepływu zdarzeń. Jednak w aplikacji rozproszonej, gdzie są wykonywane wiele usług w wielu węzłach w klastrze programu orchestrator, możliwość skorelować zdarzenia rozproszonej jest żądanie.
+W monolitycznych aplikacji serwerowych można po prostu zapisują dzienniki w pliku na dysku (plik dziennika), a następnie analizować za pomocą dowolnego narzędzia. Ponieważ wykonanie aplikacji jest ograniczony do stałej server lub maszyny Wirtualnej, zazwyczaj nie jest zbyt złożona, aby analizować przepływu zdarzeń. Jednak w których wielu usług są wykonywane na wielu węzłach w klastrze usługi orchestrator aplikacji rozproszonej, móc skorelować zdarzenia rozproszonej jest trudne.
 
-Aplikacja mikrousługi należy próbuje zapisać w strumieniu wyjściowym zdarzenia lub logfiles samodzielnie, a nawet spróbuj Zarządzanie routingiem zdarzenia, które centralne miejsce. Powinno być przezroczysty, co oznacza, że każdy proces właśnie należy zapisać jego strumienia zdarzeń do wyjścia standardowego, który poniżej zostaną zebrane przez infrastruktura środowiska uruchamiania którym jest uruchomiona. Na przykład z tych routerów strumienia zdarzeń [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), który służy do zbierania strumieni zdarzeń z wielu źródeł i publikuje ją do wyjściowego systemów. Obejmują one proste standardowego wyjścia dla środowiska programowania lub systemy chmur, takich jak [usługi Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (dla aplikacji lokalnych) i [diagnostyki Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Istnieją również dobrym dziennika innych firm analizy platform i narzędzi, które można wyszukiwać alertu, raport, i dzienników monitorowania, nawet w czasie rzeczywistym, takich jak [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Aplikacją opartą na mikrousługach powinna nie próbuje zapisać w strumieniu wyjściowym zdarzeń lub logfiles samodzielnie, a nawet spróbuj do zarządzania routingiem zdarzeń w centralnym miejscu. Powinny być przezroczyste, co oznacza, że każdy proces powinien zapisać jej strumienia zdarzeń do wyjścia standardowego, które mają być zbierane przez infrastrukturę środowiska wykonywania gdzie działa pod. Na przykład te routery strumienia zdarzeń [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), który służy do zbierania strumieni zdarzeń z wielu źródeł i publikuje go w danych wyjściowych systemy. Obejmują one proste standardowe dane wyjściowe w środowisku deweloperskim lub systemów w chmurze, takich jak [usługi Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (dla aplikacji w środowisku lokalnym) i [diagnostyki Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Dostępne są także dobry dziennika firm analizy platform i narzędzi, które można wyszukiwać, alertów i raportów, i dzienniki monitora, nawet w czasie rzeczywistym, takich jak [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
-### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Zarządzanie informacjami o Kondycja i Diagnostyka orchestrators
+### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Zarządzanie informacjami o Kondycja i Diagnostyka koordynatorów
 
-Podczas tworzenia aplikacji opartych na mikrousługi należy uwzględniać złożoności. Oczywiście pojedynczego mikrousługi jest prosty na wypadek, ale dziesiątki lub setki typów i tysiące wystąpień mikrousług to złożony problem. Nie jest tylko tworzenie architektury mikrousługi — należy również wysokiej dostępności, adresowanie odporności, kondycja i Diagnostyka, jeśli mają być stabilny i spójny system.
+Podczas tworzenia aplikacji opartych na mikrousługach, należy radzenia sobie z złożoności. Oczywiście pojedynczych mikrousług jest prosty do czynienia z dziesiątek, jak i setek typów oraz tysięcy wystąpień mikrousług jest jednak złożony problem. Nie jest niemal tworzenia architektury mikrousług, należy również wysoką dostępność, adresowanie, odporności, kondycja i Diagnostyka, jeśli użytkownik zamierza umieścić stabilne i spójny system.
 
-![](./media/image22.png)
+![Koordynatorów, podaj to platforma pomocy technicznej do uruchamiania mikrousługi.](./media/image22.png)
 
-**Rysunek 4-22**. Platforma Mikrousługi ma zasadnicze znaczenie dla zarządzania kondycji aplikacji
+**Rysunek 4-22**. To platforma Mikrousług ma zasadnicze znaczenie dla zarządzania stanem aplikacji
 
-Złożonych problemów wyświetlany w rysunek 4-22 są bardzo trudne do rozwiązania samodzielnie. Zespoły deweloperów skoncentrować się rozwiązywania problemów biznesowych i tworzenia niestandardowych aplikacji z podejścia mikrousługi. Nie należy skoncentrować się na temat rozwiązywania złożonych problemów z infrastrukturą; Jeśli tak, kosztów dowolnej aplikacji opartej na mikrousługi będzie ogromnych. W związku z tym istnieje zorientowane na mikrousługi platform, określany jako orchestrators lub mikrousługi klastry, które próbują rozwiązania problemów twardych tworzenia i uruchamiania usługi i wydajne użycie zasobów infrastruktury. Powoduje to zmniejszenie złożoności tworzenia aplikacji korzystających z podejścia mikrousług.
+Złożone problemy, które przedstawiono w rysunek 4-22 są bardzo trudne rozwiązać samodzielnie. Zespoły deweloperów należy skoncentrować się na rozwiązywaniu problemów biznesowych i tworzących niestandardowe aplikacje za pomocą metod opartych na mikrousługach. Nie należy skoncentrować się na temat rozwiązywania złożonych problemów z infrastrukturą; Jeżeli tak, opłata aplikacji opartych na mikrousługach wyniesie duży. W związku z tym czy platformy opartej na mikrousługach, nazywane koordynatorów lub klastrów mikrousług, w których podejmowana jest próba rozwiązywaniu trudnych problemów, kompilowania i uruchamiania usługi i efektywne używanie zasobów infrastruktury. Pozwala to zmniejszyć złożoność tworzenia aplikacji korzystających z podejścia mikrousług.
 
-Różne orchestrators może dźwiękowej podobne, ale diagnostyki i kontroli kondycji oferowane przez każdego z nich różnią się w funkcji i stan dojrzałości czasami w zależności od platformy systemu operacyjnego, zgodnie z objaśnieniem w następnej sekcji.
+Różne koordynatorów może brzmią podobnie, ale dane diagnostyczne i kontrole kondycji oferowanych przez każdą z nich różnią się w funkcjach i stan dojrzałości czasami w zależności od platformy systemu operacyjnego, zgodnie z opisem w następnej sekcji.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Aplikacja Multi-Factor 12. XI. Dzienniki: Traktuje dzienniki jako strumieni zdarzeń**
-    [*https://12factor.net/logs*](https://12factor.net/logs)
+- **12 Factor aplikacji. XI. Dzienniki: Traktować dzienniki jako strumieni zdarzeń** \
+  [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Biblioteka EventFlow diagnostyczne do firmy Microsoft.** Repozytorium GitHub.
+- **Biblioteka programu Microsoft diagnostycznych użyciu struktury EventFlow** repozytorium GitHub. \
+  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
-    [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+- **Co to jest Azure Diagnostics** \
+  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **Co to jest Azure Diagnostics**
-    [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+- **Łączenie komputerów Windows do usługi Log Analytics na platformie Azure** \
+  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Łączenie komputerów z systemem Windows z usługą analizy dzienników na platformie Azure**
-    [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Rejestrowanie tym, co oznacza: Przy użyciu blok semantycznego rejestrowania aplikacji** \
+  [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
--   **Rejestrowanie wykonywanych średniej: Za pomocą bloku semantycznego rejestrowania aplikacji**
-    [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+- **Splunk** oficjalna witryna. \
+  [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **Splunk.** Oficjalna witryna.
-    [*https://www.splunk.com/*](https://www.splunk.com/)
-
--   **EventSource — klasa**. Interfejs API dla zdarzenia śledzenia zdarzeń systemu Windows (ETW) [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
-
-
-
+- **EventSource — klasa** interfejsu API dla zdarzenia śledzenia dla Windows (ETW) \
+  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
 
 >[!div class="step-by-step"]
-[Poprzednie](microservice-based-composite-ui-shape-layout.md)
-[dalej](scalable-available-multi-container-microservice-applications.md)
+>[Poprzednie](microservice-based-composite-ui-shape-layout.md)
+>[dalej](scalable-available-multi-container-microservice-applications.md)

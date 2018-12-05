@@ -1,27 +1,27 @@
 ---
-title: Wskazówki dotyczące formatowania kodu F#
-description: Dowiedz się, wskazówki dotyczące formatowania kodu F#.
-ms.date: 05/14/2018
-ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: F#wskazówki dotyczące formatowania kodu
+description: Dowiedz się, wskazówki dotyczące formatowania F# kodu.
+ms.date: 11/26/2018
+ms.openlocfilehash: 993ba8d42570d92789a9fc1967b8185b45643d56
+ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "43858008"
 ---
-# <a name="f-code-formatting-guidelines"></a>Wskazówki dotyczące formatowania kodu F#
+# <a name="f-code-formatting-guidelines"></a>F#wskazówki dotyczące formatowania kodu
 
-Ten artykuł zawiera wskazówki dotyczące formatowania kodu, aby Twój kod F#:
+Ten artykuł zawiera wskazówki dotyczące formatowania kodu, aby Twoje F# kod:
 
 * Zazwyczaj są wyświetlane jako bardziej czytelne.
 * Jest zgodna z konwencjami stosowane przez formatowanie narzędzi w programie Visual Studio i innych edytorów
 * Podobnie jak inny kod w trybie online
 
-Te wytyczne są oparte na [kompletny przewodnik po F# konwencje dotyczące formatowania](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) przez [Anh-Dung Phan](https://github.com/dungpa).
+Te wytyczne są oparte na [kompletny przewodnik dotyczący F# konwencje dotyczące formatowania](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) przez [Anh-Dung Phan](https://github.com/dungpa).
 
 ## <a name="general-rules-for-indentation"></a>Ogólne reguły dotyczące wcięć
 
-F# domyślnie używa istotnych białych. Poniższe wskazówki są przeznaczone do zapewnienia wskazówek dotyczących tego, jak łatwiejszą obsługę niektóre wyzwania, które może to powodować.
+F#Domyślnie używa istotnych białych. Poniższe wskazówki są przeznaczone do zapewnienia wskazówek dotyczących tego, jak łatwiejszą obsługę niektóre wyzwania, które może to powodować.
 
 ### <a name="using-spaces"></a>Przy użyciu miejsc do magazynowania
 
@@ -30,6 +30,63 @@ Gdy wymagana jest wcięcia, należy użyć miejsca do magazynowania, nie karty. 
 **Firma Microsoft zaleca 4 odstępów na znak wcięcia.**
 
 Inaczej mówiąc, wcięcia programy polega na subiektywnej. Różnice są dozwolone, ale jest pierwszą regułę, należy wykonać *spójności wcięcia*. Wybierz powszechnie akceptowane styl wcięcia i systematycznie używane w całej bazie kodu.
+
+## <a name="formatting-white-space"></a>Formatowanie biały znak
+
+F#biały znak jest wielkość liter. Mimo że większość semantyki z biały znak są objęte właściwe wcięcia, istnieją niektóre inne kwestie należy wziąć pod uwagę.
+
+### <a name="formatting-operators-in-arithmetic-expressions"></a>Formatowanie w wyrażeniach arytmetycznych
+
+Zawsze używaj odstęp wokół wyrażenia arytmetyczne binarne:
+
+```fsharp
+let subtractThenAdd x = x - 1 + 3
+```
+
+Jednoargumentowy `-` operatory zawsze powinien mieć wartość, są one Negacja bezpośrednio po:
+
+```fsharp
+// OK
+let negate x = -x
+
+// Bad
+let negateBad x = - x
+```
+
+Znak odstępu, po dodaniu `-` operator może wprowadzać w błąd dla innych użytkowników.
+
+Podsumowując jest ważne, aby zawsze:
+
+* Operatory dwuargumentowe Otocz białymi znakami
+* Nigdy nie miała odstępu, po operator jednoargumentowy
+
+Wytyczna binarnego operatora arytmetycznego jest szczególnie ważne. Niepowodzenie otoczyć plik binarny `-` operatora w połączeniu z niektórych opcjami formatowania, może prowadzić do interpretacji jako jednoargumentowy `-`.
+
+### <a name="surround-a-custom-operator-definition-with-white-space"></a>Otocz definicję niestandardowych operatorów białymi znakami
+
+Zawsze używaj biały otoczyć definicję operatora:
+
+```fsharp
+// OK
+let ( !> ) x f = f x
+
+// Bad
+let (!>) x f = f x
+```
+
+Dla niestandardowego operatora, który rozpoczyna się od `*`, należy dodać biały znak na początku definicji, aby uniknąć niejednoznaczności kompilatora. W związku z tym zalecane jest, po prostu Otocz definicje wszystkich operatorów o pojedynczy znak odstępu.
+
+### <a name="surround-function-parameter-arrows-with-white-space"></a>Otocz strzałki parametru funkcji białymi znakami
+
+Podczas definiowania podpis funkcji należy używać odstęp wokół `->` symbol:
+
+```fsharp
+// OK
+type MyFun = int -> int -> string
+
+// Bad
+type MyFunBad = int->int->string
+```
 
 ## <a name="formatting-blank-lines"></a>Formatowanie puste wiersze
 
@@ -62,7 +119,7 @@ let f x = x + 1 // Increment by one.
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Użyj camelCase dla wartości powiązane z klasy, powiązane z wyrażenia i powiązane z wzorca i funkcji
 
-Powszechne jest wprowadzanie i zaakceptowane F# stylu camelCase dla wszystkich nazw powiązany jako zmienne lokalne lub dopasowania do wzorca i definicje funkcji.
+Typowe i dopuszczalne jest F# styl do użycia camelCase dla wszystkich nazw powiązany jako zmienne lokalne lub dopasowania do wzorca i definicji funkcji.
 
 ```fsharp
 // OK
@@ -165,13 +222,13 @@ Przestrzenie nazw, wyjątki, zdarzenia i projekt /`.dll` nazwy należy również
 
 ### <a name="avoid-underscores-in-names"></a>Należy unikać podkreślenia w nazwach
 
-W przeszłości niektórych bibliotek F# używanych podkreślenia w nazwach. Jednak to się nie są już powszechnie akceptowane, częściowo, ponieważ ona jest niezgodna z konwencjami nazewnictwa platformy .NET. Inaczej mówiąc, niektórych programistów języka F# użyj podkreślenia intensywnie, częściowo ze względów historycznych, a na uszkodzenia i przestrzegania jest ważne. Należy jednak pamiętać, że styl jest często disliked przez innych użytkowników, którzy mają możliwość wyboru o tym, czy z niego korzystać.
+W przeszłości, niektóre F# bibliotek używanych w nazwach znaki podkreślenia. Jednak to się nie są już powszechnie akceptowane, częściowo, ponieważ ona jest niezgodna z konwencjami nazewnictwa platformy .NET. Jednak niektóre F# programistów używać znaków podkreślenia intensywnie, częściowo powodów historycznych i na uszkodzenia i przestrzegania jest ważne. Należy jednak pamiętać, że styl jest często disliked przez innych użytkowników, którzy mają możliwość wyboru o tym, czy z niego korzystać.
 
 Niektóre wyjątki obejmuje współdziałanie z składnikami macierzystymi, gdzie są bardzo popularne znaki podkreślenia.
 
-### <a name="use-standard-f-operators"></a>Użyj standardowych operatorów F#
+### <a name="use-standard-f-operators"></a>Użyj standardowych F# operatorów
 
-Następujące operatory są zdefiniowane w standardowej bibliotece języka F# i powinny być używane zamiast zdefiniowanie odpowiedniki. Korzystanie z tych operatorów jest zalecane, ponieważ sprawia kod bardziej czytelne i idiomatyczną. Deweloperów z doświadczeniem w OCaml lub innych funkcjonalny język programowania może być przyzwyczajeni do różnych idiomy. Poniższa lista zawiera podsumowanie zalecanych operatory języka F#.
+Następujące operatory są zdefiniowane w F# biblioteki standardowej i powinny być używane zamiast zdefiniowanie odpowiedniki. Korzystanie z tych operatorów jest zalecane, ponieważ sprawia kod bardziej czytelne i idiomatyczną. Deweloperów z doświadczeniem w OCaml lub innych funkcjonalny język programowania może być przyzwyczajeni do różnych idiomy. Poniższa lista zawiera podsumowanie zalecanych F# operatorów.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,11 +250,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Użyj składni prefiks dla typów ogólnych (`Foo<T>`) zamiast składni przyrostka (`T Foo`)
 
-F# dziedziczy zarówno przyrostkowe ML styl nazewnictwa typów ogólnych (na przykład `int list`) oraz prefiks stylu .NET (na przykład `list<int>`). Preferuj styl .NET, z wyjątkiem czterech określonych typów:
+F#dziedziczy zarówno przyrostkowe ML styl nazewnictwa typów ogólnych (na przykład `int list`) oraz prefiks stylu .NET (na przykład `list<int>`). Preferuj styl .NET, z wyjątkiem czterech określonych typów:
 
-1. Dla listy języka F#, należy użyć formy przyrostkowe: `int list` zamiast `list<int>`.
-2. Opcje F#, można użyć w przyrostkowej formy: `int option` zamiast `option<int>`.
-3. Dla tablic F#, należy użyć składni nazwy `int[]` zamiast `int array` lub `array<int>`.
+1. Aby uzyskać F# listy, formularz przyrostkowe: `int list` zamiast `list<int>`.
+2. Aby uzyskać F# opcje formularz przyrostkowe: `int option` zamiast `option<int>`.
+3. Aby uzyskać F# tablic, użyj składni nazwy `int[]` zamiast `int array` lub `array<int>`.
 4. Komórki odwołań, można użyć `int ref` zamiast `ref<int>` lub `Ref<int>`.
 
 W przypadku wszystkich innych typów formularz prefiks.
@@ -411,13 +468,13 @@ Użyj `|` dla każdej klauzuli dopasowania z wcięciem nie. Jeśli wyrażenie je
 ```fsharp
 // OK
 match l with
-| { him = x; her = "Posh" } :: tail -> _
+| { him = x; her = "Posh" } :: tail -> x
 | _ :: tail -> findDavid tail
 | [] -> failwith "Couldn't find David"
 
 // Not OK
 match l with
-    | { him = x; her = "Posh" } :: tail -> _
+    | { him = x; her = "Posh" } :: tail -> x
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
 ```
@@ -591,7 +648,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>Formatowanie biały znak w wyrażeniach
 
-Należy unikać nadmiarowe biały znak w wyrażeniach języka F#.
+Należy unikać nadmiarowe biały znak w F# wyrażenia.
 
 ```fsharp
 // OK
@@ -610,3 +667,59 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
+
+## <a name="formatting-attributes"></a>Formatowanie atrybutów
+
+[Atrybuty](../language-reference/attributes.md) są umieszczane powyżej konstrukcję:
+
+```fsharp
+[<SomeAttribute>]
+type MyClass() = ...
+
+[<RequireQualifiedAccess>]
+module M =
+    let f x = x
+
+[<Struct>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+### <a name="formatting-attributes-on-parameters"></a>Atrybuty formatowania w parametrach
+
+Atrybuty mogą być także miejsca w parametrach. W tym przypadku umieść następnie, w tym samym wierszu jako parametru i przed nazwą:
+
+```fsharp
+// Defines a class that takes an optional value as input defaulting to false.
+type C() =
+    member __.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
+```
+
+### <a name="formatting-multiple-attributes"></a>Formatowanie wiele atrybutów
+
+Gdy wiele atrybutów są stosowane do konstrukcja, która nie jest parametrem, powinien zostać umieszczony taki sposób, że istnieje jeden atrybut na wiersz:
+
+```fsharp
+[<Struct>]
+[<IsByRefLike>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+Po zastosowaniu do parametru, musi znajdować się na tym samym wierszu i oddzielone `;` separatora.
+
+## <a name="formatting-literals"></a>Literały formatowania
+
+[F#literały](../language-reference/literals.md) przy użyciu `Literal` atrybut powinien należy umieścić atrybut w osobnym wierszu i użyj nazw camelCase:
+
+```fsharp
+[<Literal>]
+let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+
+[<Literal>]
+let myUrl = "www.mywebsitethatiamworkingwith.com"
+```
+
+Należy unikać wprowadzania atrybutu na tym samym wierszu jako wartość.

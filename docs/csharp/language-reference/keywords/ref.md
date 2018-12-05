@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50195973"
 ---
 # <a name="ref-c-reference"></a>ref (odwołanie w C#)
@@ -92,7 +92,7 @@ Aby obiekt wywołujący, aby zmodyfikować stan obiektu, musi być przechowywana
 
 Wywoływana metoda również mogą zadeklarować wartość zwracana jako `ref readonly` zwraca wartość przez odwołanie w celu wymuszenia, aby kod wywołujący nie można zmodyfikować zwracanej wartości. Kopiowanie zwracanego zwracającej dzięki przechowywaniu wartości w lokalnej uniknąć wywoływania metody [ref tylko do odczytu](#ref-readonly-locals) zmiennej.
 
-Aby uzyskać przykład, zobacz [A wartości zwracane ref i przykład zmienne lokalne ref](#a-ref-returns-and-ref-locals-example)
+Aby uzyskać przykład, zobacz [A wartości zwracane ref i przykład zmienne lokalne ref](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Zmienne lokalne REF
 
@@ -113,6 +113,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
 Należy pamiętać, że w obu przykładach `ref` w obu miejscach, można użyć słowa kluczowego lub kompilator generuje błąd CS8172, "Nie można zainicjować zmiennej przez odwołanie o wartości".
+
+Począwszy od C# 7.3, zmiennej iteracji `foreach` instrukcja może być zmienna lokalna ref lub zmiennej lokalnej tylko do odczytu ref. Aby uzyskać więcej informacji, zobacz [Instrukcja foreach](foreach-in.md) artykułu.
 
 ## <a name="ref-readonly-locals"></a>Zmienne lokalne REF tylko do odczytu
 
@@ -152,6 +154,9 @@ Można połączyć modyfikatorów, aby zadeklarować struktury jako `readonly re
 ## <a name="see-also"></a>Zobacz także
 
 - [Pisanie kodu efektywne bezpieczne](../../write-safe-efficient-code.md)  
+- [Wartości zwracane ref i zmienne lokalne ref](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Wyrażenie warunkowe ref](../operators/conditional-operator.md#conditional-ref-expression)
+- [operator przypisania REF](../operators/assignment-operator.md#ref-assignment-operator)
 - [Przekazywanie parametrów](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Parametry metody](method-parameters.md)  
 - [Dokumentacja języka C#](../index.md)  

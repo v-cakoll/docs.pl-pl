@@ -3,14 +3,14 @@ title: Zapis w bezpieczny i skuteczny C# kodu
 description: Najnowsze ulepszenia C# języka umożliwiają pisanie weryfikowalny kod bezpieczny, że wydajność była poprzednio skojarzona z niebezpieczny kod.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 8e58a7f870c742f1c0a90a7b5507ac1e5d8074ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2f0bd616a7af6e23a93e18240e30749ed7d1e32c
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50201590"
 ---
-# <a name="write-safe-and-efficient-c-code"></a>Zapis w bezpieczny i skuteczny C# kodu #
+# <a name="write-safe-and-efficient-c-code"></a>Zapis w bezpieczny i skuteczny C# kodu
 
 Nowe funkcje w C# umożliwiają pisanie weryfikowalny kod bezpieczny lepszą wydajność. Jeśli zastosujesz dokładnie te techniki, mniej scenariusze wymagają niebezpieczny kod. Te funkcje ułatwiają użyć odwołania do typów wartości jako metoda argumenty i zwraca metoda. Po zakończeniu bezpiecznie tych technik zminimalizować kopiowania typów wartości. Korzystając z typów wartości, można zminimalizować liczbę alokacji i przekazuje kolekcji wyrzucania elementów.
 
@@ -205,10 +205,15 @@ Kontrast wpisywany z odwołaniem w tej samej sytuacji:
 
 - Magazyn dla typów referencyjnych są sterty przydzielonej dla zmiennych lokalnych i argumenty metody. Odwołania są przechowywane w stosie.
 - Magazyn dla typów odwołań, które należą do innych obiektów oddzielnie są przydzielane na stosie. Obiekt zawierający przechowuje odwołania.
-- Magazyn dla typu wartości zwracać wartości jest sterty przydzielonej. Odwołanie do tego magazynu są przechowywane w stosie.
+- Magazyn dla typu referencyjnego zwracają wartości jest sterty przydzielonej. Odwołanie do tego magazynu są przechowywane w stosie.
 
 Minimalizacja alokacji jest powiązana z stosowania kompromisów. Skopiuj większej ilości pamięci podczas rozmiar `struct` jest większy niż rozmiar odwołania. Odwołanie jest zwykle 64-bitowy lub 32-bitowy i zależy od Procesora komputera docelowego.
 
 Tych kompromisów ogólnie ma wpływ na wydajność minimalny. Jednak dla dużych struktur lub większych kolekcji, zwiększa negatywny wpływ na wydajność. Wpływ mogą być duże w ścisłej pętli i ścieżek krytycznych dla programów.
 
 Te ulepszenia C# języka są przeznaczone dla algorytmów krytyczne wydajności w przypadku, gdy minimalizując alokacji pamięci jest czynnikiem w osiąganiu niezbędne wydajności. Może się okazać, że nie są często używane funkcje te w kodzie, którą piszesz. Jednak te ulepszenia zostały przyjęte w całej platformy .NET. Ponieważ coraz więcej interfejsy API korzystać z tych funkcji, zobaczysz wydajności aplikacji, zwiększyć.
+
+## <a name="see-also"></a>Zobacz także
+
+- [ref keyword](language-reference/keywords/ref.md)
+- [Wartości zwracane ref i zmienne lokalne ref](programming-guide/classes-and-structs/ref-returns.md)

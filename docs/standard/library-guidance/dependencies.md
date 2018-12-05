@@ -4,11 +4,11 @@ description: Zalecenia dotyczące najlepszych rozwiązań do zarządzania zależ
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: c5df30c606e77c9ef44387233b0072ab890f612f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "49400495"
 ---
 # <a name="dependencies"></a>Zależności
@@ -92,10 +92,12 @@ Udostępnione źródło, które pakiety są doskonale sprawdza się w tym małe 
 
 > Udostępnione źródło typy są kompilowane do zestawu odwołującego się i nie można wymienić poza granicami zestawu. Na przykład udostępniane source `IRepository` typ w jednym projekcie to oddzielne z tego samego udostępnionego źródła `IRepository` w innym projekcie. Typy w pakietach źródłowy udostępniony powinny mieć `internal` widoczności.
 
-**❌ NIE** Publikowanie pakietów źródłowy udostępniony na stronie nuget.org.
+**❌ NIE** Publikowanie pakietów źródłowy udostępniony na stronie NuGet.org.
 
 > Udostępnione źródło pakiety zawierają kod źródłowy i mogą być używane tylko przez projektów za pomocą tego samego typu języka. Na przykład C# udostępnionego źródła pakietu nie może używać F# aplikacji.
+>
+> Publikowanie pakietów źródłowy udostępniony na [lokalne źródła danych lub MyGet](./publish-nuget-package.md) do korzystania z nich wewnętrznie w obrębie projektu.
 
 >[!div class="step-by-step"]
-[Poprzednie](./nuget.md)
-[dalej](./sourcelink.md)
+>[Poprzednie](nuget.md)
+>[dalej](sourcelink.md)

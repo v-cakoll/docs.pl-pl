@@ -313,7 +313,7 @@ ms.locfileid: "50189722"
   
 -   A <xref:System.Globalization.NumberFormatInfo> obiekt, który definiuje konwencje formatowania specyficzne dla kultury, ma być używany. Jego <xref:System.Globalization.NumberFormatInfo.GetFormat%2A> metoda zwraca instancję samego siebie.  
   
- W poniższym przykładzie użyto <xref:System.Globalization.NumberFormatInfo> obiekty reprezentujące angielski (Stany Zjednoczone) i angielska (Wielka Brytania) oraz kultury neutralne francuska i Rosyjska w celu sformatowania liczby zmiennopozycyjnej.  
+ W poniższym przykładzie użyto <xref:System.Globalization.NumberFormatInfo> obiekty reprezentujące angielski (Stany Zjednoczone) i angielska (Zjednoczone Królestwo) oraz kultury neutralne francuska i Rosyjska w celu sformatowania liczby zmiennopozycyjnej.  
   
  [!code-csharp[Conceptual.Formatting.Overview#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific4.cs#20)]
  [!code-vb[Conceptual.Formatting.Overview#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific4.vb#20)]  
@@ -331,7 +331,7 @@ ms.locfileid: "50189722"
   
 -   A <xref:System.Globalization.DateTimeFormatInfo> obiekt, który definiuje konwencje formatowania specyficzne dla kultury, ma być używany. Jego <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> metoda zwraca instancję samego siebie.  
   
- W poniższym przykładzie użyto <xref:System.Globalization.DateTimeFormatInfo> obiekty reprezentujące angielski (Stany Zjednoczone) i angielska (Wielka Brytania) oraz kultury neutralne francuska i Rosyjska w celu sformatowania daty.  
+ W poniższym przykładzie użyto <xref:System.Globalization.DateTimeFormatInfo> obiekty reprezentujące angielski (Stany Zjednoczone) i angielska (Zjednoczone Królestwo) oraz kultury neutralne francuska i Rosyjska w celu sformatowania daty.  
   
  [!code-csharp[Conceptual.Formatting.Overview#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific2.cs#18)]
  [!code-vb[Conceptual.Formatting.Overview#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific2.vb#18)]  

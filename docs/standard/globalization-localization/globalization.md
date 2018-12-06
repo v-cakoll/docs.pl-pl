@@ -177,14 +177,14 @@ Globalizacja obejmuje projektowania i opracowywania aplikacji gotowej dla całeg
   
 -   [Formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) funkcji, gdy jest używany z datami  
   
- Poniższy przykład wyświetla wschodzie i zachodzie słońca dane dwa razy dla daty 11 października 2012. Najpierw Ustawia bieżącą kulturę na Chorwacką (Chorwacja), a następnie na angielski (Wielka Brytania). W każdym przypadku daty i godziny są wyświetlane w formacie, który jest odpowiedni dla tej kultury.  
+ Poniższy przykład wyświetla wschodzie i zachodzie słońca dane dwa razy dla daty 11 października 2012. Najpierw Ustawia bieżącą kulturę na Chorwacką (Chorwacja), a następnie na angielski (Zjednoczone Królestwo). W każdym przypadku daty i godziny są wyświetlane w formacie, który jest odpowiedni dla tej kultury.  
   
  [!code-csharp[Conceptual.Globalization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates1.cs#2)]
  [!code-vb[Conceptual.Globalization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates1.vb#2)]  
   
 <a name="DatesAndTimes_Persist"></a>   
 ### <a name="persisting-dates-and-times"></a>Przechowywanie daty i godziny  
- Nigdy nie należy utrwalać danych daty i godziny w formacie, który może się różnić od kultury. Jest to częsty błąd programowania powodujący uszkodzenie danych lub wyjątek czasu wykonywania. Poniższy przykład szereguje dwie daty, 9 stycznia 2013 i 18 sierpnia 2013 r., jako ciągi przy użyciu konwencji formatowania kultury angielski (Stany Zjednoczone). Gdy dane są pobierane i analizowane za pomocą Konwencji kultury angielski (Stany Zjednoczone), są pomyślnie przywracane. Jednakże gdy są pobierane i analizowane za pomocą Konwencji kultury angielski (Wielka Brytania), pierwsza data jest niewłaściwie interpretowana jako 1 września, a druga nie można przeanalizować ponieważ kalendarz gregoriański nie ma osiemnastego miesiąca.  
+ Nigdy nie należy utrwalać danych daty i godziny w formacie, który może się różnić od kultury. Jest to częsty błąd programowania powodujący uszkodzenie danych lub wyjątek czasu wykonywania. Poniższy przykład szereguje dwie daty, 9 stycznia 2013 i 18 sierpnia 2013 r., jako ciągi przy użyciu konwencji formatowania kultury angielski (Stany Zjednoczone). Gdy dane są pobierane i analizowane za pomocą Konwencji kultury angielski (Stany Zjednoczone), są pomyślnie przywracane. Jednakże gdy są pobierane i analizowane za pomocą Konwencji kultury angielski (Zjednoczone Królestwo), pierwsza data jest niewłaściwie interpretowana jako 1 września, a druga nie można przeanalizować ponieważ kalendarz gregoriański nie ma osiemnastego miesiąca.  
   
  [!code-csharp[Conceptual.Globalization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates2.cs#3)]
  [!code-vb[Conceptual.Globalization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates2.vb#3)]  

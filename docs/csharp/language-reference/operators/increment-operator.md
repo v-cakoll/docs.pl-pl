@@ -1,34 +1,53 @@
 ---
 title: ++ — Operator (odwołanie w C#)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - ++_CSharpKeyword
 helpviewer_keywords:
 - increment operator (++) [C#]
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
-ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b29f4f1ab00c0f8026f118cb72b090e3b728bfc5
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "48030473"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="002a2-102">++ — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="002a2-102">++ Operator (C# Reference)</span></span>
-<span data-ttu-id="002a2-103">Operator inkrementacji (`++`) zwiększa wartość argumentu operacji o 1.</span><span class="sxs-lookup"><span data-stu-id="002a2-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="002a2-104">Operator inkrementacji może występować przed argumentem operacji lub po nim: `++variable` i `variable++`.</span><span class="sxs-lookup"><span data-stu-id="002a2-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="002a2-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="002a2-105">Remarks</span></span>  
- <span data-ttu-id="002a2-106">Pierwsza forma to inkrementacja prefiksowa.</span><span class="sxs-lookup"><span data-stu-id="002a2-106">The first form is a prefix increment operation.</span></span> <span data-ttu-id="002a2-107">Wynikiem tej operacji jest wartość argumentu po zwiększeniu.</span><span class="sxs-lookup"><span data-stu-id="002a2-107">The result of the operation is the value of the operand after it has been incremented.</span></span>  
-  
- <span data-ttu-id="002a2-108">Druga forma to inkrementacja odwrotna.</span><span class="sxs-lookup"><span data-stu-id="002a2-108">The second form is a postfix increment operation.</span></span> <span data-ttu-id="002a2-109">Wynikiem tej operacji jest wartość argumentu przed zwiększeniem.</span><span class="sxs-lookup"><span data-stu-id="002a2-109">The result of the operation is the value of the operand before it has been incremented.</span></span>  
-  
- <span data-ttu-id="002a2-110">Typy numeryczne i wyliczenia mają wstępnie zdefiniowane operatory inkrementacji.</span><span class="sxs-lookup"><span data-stu-id="002a2-110">Numeric and enumeration types have predefined increment operators.</span></span> <span data-ttu-id="002a2-111">W typach definiowanych przez użytkownika można przeciążać operator `++`.</span><span class="sxs-lookup"><span data-stu-id="002a2-111">User-defined types can overload the `++` operator.</span></span> <span data-ttu-id="002a2-112">Operacje na typach całkowitych w wyliczeniach są zazwyczaj dozwolone.</span><span class="sxs-lookup"><span data-stu-id="002a2-112">Operations on integral types are generally allowed on enumeration.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="002a2-113">Przykład</span><span class="sxs-lookup"><span data-stu-id="002a2-113">Example</span></span>  
- [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="002a2-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="002a2-114">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="7362e-102">++ — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="7362e-102">++ Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="002a2-115">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="002a2-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="002a2-116">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="002a2-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="002a2-117">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="002a2-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="7362e-103">Jednoargumentowy operator inkrementacji `++` zwiększa się argumentem operacji o 1.</span><span class="sxs-lookup"><span data-stu-id="7362e-103">The unary increment operator `++` increments its operand by 1.</span></span> <span data-ttu-id="7362e-104">Jest obsługiwany w dwóch formach: przyrostkowego operatora inkrementacyjnego `x++`i operator inkrementacji prefiks `++x`.</span><span class="sxs-lookup"><span data-stu-id="7362e-104">It's supported in two forms: the postfix increment operator, `x++`, and the prefix increment operator, `++x`.</span></span>
+
+## <a name="postfix-increment-operator"></a><span data-ttu-id="7362e-105">Operator inkrementacji przyrostkowej</span><span class="sxs-lookup"><span data-stu-id="7362e-105">Postfix increment operator</span></span>
+
+<span data-ttu-id="7362e-106">Wynik `x++` jest wartością `x` *przed* operacji, co ilustruje poniższy przykład:</span><span class="sxs-lookup"><span data-stu-id="7362e-106">The result of `x++` is the value of `x` *before* the operation, as the following example shows:</span></span>
+
+[!code-csharp-interactive[postfix increment](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PostfixIncrement)]
+
+## <a name="prefix-increment-operator"></a><span data-ttu-id="7362e-107">Operator inkrementacji przedrostka</span><span class="sxs-lookup"><span data-stu-id="7362e-107">Prefix increment operator</span></span>
+
+<span data-ttu-id="7362e-108">Wynik `++x` jest wartością `x` *po* operacji, co ilustruje poniższy przykład:</span><span class="sxs-lookup"><span data-stu-id="7362e-108">The result of `++x` is the value of `x` *after* the operation, as the following example shows:</span></span>
+
+[!code-csharp-interactive[prefix increment](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PrefixIncrement)]
+
+## <a name="remarks"></a><span data-ttu-id="7362e-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7362e-109">Remarks</span></span>
+
+<span data-ttu-id="7362e-110">Operator inkrementacji jest wstępnie zdefiniowane dla wszystkich [typów całkowitych](../keywords/integral-types-table.md) (w tym [char](../keywords/char.md) typu), [typów zmiennoprzecinkowych](../keywords/floating-point-types-table.md)oraz wszelkie [wyliczenia](../keywords/enum.md) Typ.</span><span class="sxs-lookup"><span data-stu-id="7362e-110">The increment operator is predefined for all [integral types](../keywords/integral-types-table.md) (including the [char](../keywords/char.md) type), [floating-point types](../keywords/floating-point-types-table.md), and any [enum](../keywords/enum.md) type.</span></span>
+
+<span data-ttu-id="7362e-111">Operand operatora inkrementacji musi być zmienną, [właściwość](../../programming-guide/classes-and-structs/properties.md) dostęp, lub [indeksatora](../../../csharp/programming-guide/indexers/index.md) dostępu.</span><span class="sxs-lookup"><span data-stu-id="7362e-111">An operand of the increment operator must be a variable, a [property](../../programming-guide/classes-and-structs/properties.md) access, or an [indexer](../../../csharp/programming-guide/indexers/index.md) access.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="7362e-112">Overloadability — operator</span><span class="sxs-lookup"><span data-stu-id="7362e-112">Operator overloadability</span></span>
+
+<span data-ttu-id="7362e-113">Typy zdefiniowane przez użytkownika może [przeciążenia](../keywords/operator.md) `++` operatora.</span><span class="sxs-lookup"><span data-stu-id="7362e-113">User-defined types can [overload](../keywords/operator.md) the `++` operator.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="7362e-114">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="7362e-114">C# language specification</span></span>
+
+<span data-ttu-id="7362e-115">Aby uzyskać więcej informacji, zobacz [przyrostka inkrementacji i dekrementacji operatory](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) i [przedrostkowe i operatory dekrementacji](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) sekcje [ C# specyfikacji języka](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="7362e-115">For more information, see the [Postfix increment and decrement operators](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) and [Prefix increment and decrement operators](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7362e-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7362e-116">See also</span></span>
+
+- [<span data-ttu-id="7362e-117">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="7362e-117">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="7362e-118">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="7362e-118">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="7362e-119">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="7362e-119">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="7362e-120">--, operator</span><span class="sxs-lookup"><span data-stu-id="7362e-120">-- Operator</span></span>](decrement-operator.md)
+- [<span data-ttu-id="7362e-121">Porady: inkrementacja i dekrementacja wskaźników</span><span class="sxs-lookup"><span data-stu-id="7362e-121">How to: increment and decrement pointers</span></span>](../../programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)

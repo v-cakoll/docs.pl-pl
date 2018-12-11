@@ -1,6 +1,6 @@
 ---
 title: Nazwy klas, struktur i interfejsów
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 helpviewer_keywords:
 - type names, guidelines
 - classes [.NET Framework], names
@@ -12,14 +12,13 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: ce0daae9b5994808a6ef5d35f09533d96d1d697f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454331"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127943"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nazwy klas, struktur i interfejsów
 Wskazówkami nazewnictwa, które należy wykonać dotyczą nazewnictwa typ ogólny.  
@@ -99,7 +98,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
+ *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz także
 

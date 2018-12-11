@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: przesyłanie danych przy użyciu klasy WebRequest'
+title: 'Instrukcje: Przesyłanie danych przy użyciu klasy WebRequest'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 ms.openlocfilehash: 1f10c5e0c6c266b7b31d658ec561bd8d6d85697b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192658"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129470"
 ---
-# <a name="how-to-send-data-using-the-webrequest-class"></a>Instrukcje: przesyłanie danych przy użyciu klasy WebRequest
+# <a name="how-to-send-data-using-the-webrequest-class"></a>Instrukcje: Przesyłanie danych przy użyciu klasy WebRequest
 Poniższa procedura opisuje kroki używane do przesyłania danych do serwera. Ta procedura jest często używane dane do strony sieci Web.  
   
 ### <a name="to-send-data-to-a-host-server"></a>Do przesyłania danych do serwera hosta  
@@ -260,4 +260,4 @@ End Namespace
  [Stosowanie strumieni w sieci](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
  [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)  
- [Instrukcje: żądanie danych przy użyciu klasy WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+ [Jak: Żądanie danych przy użyciu klasy WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)

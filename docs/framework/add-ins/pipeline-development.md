@@ -12,11 +12,11 @@ ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50135451"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151346"
 ---
 # <a name="pipeline-development"></a>Opracowywanie potoku
 Potok dodatku jest ścieżka segmenty potoku, których aplikacja hosta i jego dodatku musi komunikować się ze sobą.  
@@ -76,11 +76,11 @@ Potok dodatku z typami
 ## <a name="walkthroughs"></a>Wskazówki  
  Istnieją trzy instruktaże, które zawierają opis sposobu tworzenia potoków przy użyciu programu Visual Studio:  
   
--   [Przewodnik: tworzenie aplikacji rozszerzalnej](../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)  
+-   [Wskazówki: Tworzenie aplikacji rozszerzalnej](../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)  
   
      W tym artykule opisano dodatek Kalkulator, który wykonuje Dodawanie, odejmowanie, mnożenie i dzielenie obliczeń dla hosta.  
   
--   [Przewodnik: Włączanie zgodności z poprzednimi wersjami w miarę zmieniania hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [Wskazówki: Włączanie zgodności z poprzednimi wersjami w miarę zmieniania hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      W tym artykule opisano Kalkulator dodatek za pomocą obliczeń rozszerzone możliwości oraz sposobu utrzymania zgodności z pierwszą Kalkulator dodatku programu.  
   

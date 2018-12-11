@@ -8,11 +8,11 @@ ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e192266aa7b98637cb05f400901f51afd3046a72
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "49415207"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142721"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Zestawy i wykonywanie równoczesne
 Wykonanie Side-by-side jest możliwość przechowywania i wykonywania wielu wersji aplikacji lub składnika na jednym komputerze. Oznacza to, że można mieć wiele wersji środowiska uruchomieniowego i wiele wersji aplikacji i składników, które używają wersji środowiska uruchomieniowego, na tym samym komputerze, w tym samym czasie. Wykonanie Side-by-side daje większą kontrolę nad jakie wersje składnika jest powiązana aplikacja, i mieć większą kontrolę nad jakie wersje środowiska uruchomieniowego używa aplikacja.  

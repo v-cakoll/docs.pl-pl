@@ -23,11 +23,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296454"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151316"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Przekazywanie argumentów według pozycji i według nazwy (Visual Basic)
 Gdy wywołujesz `Sub` lub `Function` procedury, można przekazać argumenty *według pozycji* — w kolejności, w jakiej są wyświetlane w definicji procedury — lub przekazać je *według nazwy*, bez uwzględniając pozycji.  
@@ -97,7 +97,7 @@ Tablica parametrów nie można przekazać według nazwy. Jest to spowodowane po 
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
+ [Jak: Przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
  [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)  
  [Parametry opcjonalne](./optional-parameters.md)  
  [Tablice parametrów](./parameter-arrays.md)  

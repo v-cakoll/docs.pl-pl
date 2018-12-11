@@ -1,30 +1,30 @@
 ---
 title: Cytaty kodu (F#)
-description: Dowiedz się więcej o kodzie cytatów F#, funkcji języka, który umożliwia generowanie i pracować programowo z wyrażeń kodu języka F#.
+description: Dowiedz się więcej o F# cytaty kodu, funkcji języka, który umożliwia generowanie i pracować z F# programowo kodu wyrażenia.
 ms.date: 05/16/2016
-ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 565fd2a07c617d156f1d43f94a7cb98fc22f1401
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47397205"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150787"
 ---
 # <a name="code-quotations"></a>Cytaty kodu
 
 > [!NOTE]
-Łącze odwołania API spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
+> Łącze odwołania API spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
-W tym temacie opisano *kodu ofert*, funkcji języka, który umożliwia generowanie i pracować programowo z wyrażeń kodu języka F#. Ta funkcja pozwala wygenerować drzewo abstrakcyjnej składni, która przedstawia kod F#. Drzewo abstrakcyjnej składni można następnie przesunięta i przetwarzane odpowiednio do potrzeb aplikacji. Na przykład można użyć drzewa, aby wygenerować kod w języku F# lub wygenerować kod w inny język.
+W tym temacie opisano *kodu ofert*, funkcji języka, który umożliwia generowanie i pracować z F# programowo kodu wyrażenia. Ta funkcja umożliwia generowanie drzewo abstrakcyjnej składni, która reprezentuje F# kodu. Drzewo abstrakcyjnej składni można następnie przesunięta i przetwarzane odpowiednio do potrzeb aplikacji. Na przykład, można użyć drzewa do generowania F# kod lub wygenerować kod w inny język.
 
 ## <a name="quoted-expressions"></a>Wyrażenia w cudzysłowach
 
-A *wyrażenia w cudzysłowach* to wyrażenie F# w kodzie, które są rozdzielane w taki sposób, że nie jest kompilowana jako część programu, ale zamiast tego jest skompilowany w obiekt, który reprezentuje wyrażenie F#. Można oznaczać cudzysłowach wyrażeń w jeden z dwóch sposobów: za pomocą informacji o typie lub bez informacji o typie. Jeśli chcesz uwzględnić informacje o typie, użyj symboli `<@` i `@>` ograniczającej wyrażenie w cudzysłowie. Jeśli nie potrzebujesz informacji o typie, użyj symboli `<@@` i `@@>`. Poniższy kod przedstawia ofert typizowane i nietypizowane.
+A *wyrażenia w cudzysłowach* jest F# wyrażenia w kodzie, które są rozdzielane w taki sposób, że nie jest kompilowana jako część programu, ale zamiast tego jest skompilowany w obiekt, który reprezentuje F# wyrażenia. Można oznaczać cudzysłowach wyrażeń w jeden z dwóch sposobów: za pomocą informacji o typie lub bez informacji o typie. Jeśli chcesz uwzględnić informacje o typie, użyj symboli `<@` i `@>` ograniczającej wyrażenie w cudzysłowie. Jeśli nie potrzebujesz informacji o typie, użyj symboli `<@@` i `@@>`. Poniższy kod przedstawia ofert typizowane i nietypizowane.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet501.fs)]
 
-Przechodzenie drzewa wyrażenie dużych jest szybsze, ponieważ nie zawiera informacji o typie. Wynikowy typ wyrażenia z symbolami wpisane w cudzysłowach jest `Expr<'T>`, gdzie parametr typu ma typ wyrażenia zgodnie z ustaleniami algorytm wnioskowania typu kompilatora języka F#. Gdy używasz cytaty kodu bez informacji o typie, typ wyrażenia w cudzysłowach jest typu nieogólnego [Expr](https://msdn.microsoft.com/library/ed6a2caf-69d4-45c2-ab97-e9b3be9bce65). Możesz wywołać [Raw](https://msdn.microsoft.com/library/47fb94f1-e77f-4c68-aabc-2b0ba40d59c2) właściwość wpisanego `Expr` klasy w celu uzyskania danych `Expr` obiektu.
+Przechodzenie drzewa wyrażenie dużych jest szybsze, ponieważ nie zawiera informacji o typie. Wynikowy typ wyrażenia z symbolami wpisane w cudzysłowach jest `Expr<'T>`, gdzie parametr typu ma typ wyrażenia zgodnie z ustaleniami F# algorytm wnioskowanie o typie kompilatora. Gdy używasz cytaty kodu bez informacji o typie, typ wyrażenia w cudzysłowach jest typu nieogólnego [Expr](https://msdn.microsoft.com/library/ed6a2caf-69d4-45c2-ab97-e9b3be9bce65). Możesz wywołać [Raw](https://msdn.microsoft.com/library/47fb94f1-e77f-4c68-aabc-2b0ba40d59c2) właściwość wpisanego `Expr` klasy w celu uzyskania danych `Expr` obiektu.
 
-Istnieją różne metody statyczne, które umożliwiają generowanie F# obiekty wyrażeń Programując `Expr` klasy bez użycia wyrażenia w cudzysłowach.
+Istnieją różne metody statyczne, które umożliwiają generowanie F# wyrażenia obiektów programowo w `Expr` klasy bez użycia wyrażenia w cudzysłowach.
 
 Należy pamiętać, że oferty kod musi zawierać pełne wyrażenie. Aby uzyskać `let` powiązania, na przykład potrzebujesz definicji powiązanej nazwy i wyrażenie dodatkowe, które używa powiązania. Pełne składnię, to wyrażenie, który następuje po `in` — słowo kluczowe. Na najwyższym poziomie w module to po prostu następnego wyrażenia w module, ale w ofercie, jest wyraźnie wymagane.
 
@@ -41,15 +41,15 @@ Ale następujących wyrażeń są prawidłowe.
 
 Aby użyć cytaty kodu, należy dodać deklaracji importu (przy użyciu `open` — słowo kluczowe) które otwiera [Microsoft.fsharp.quotations —](https://msdn.microsoft.com/library/e9ce8a3a-e00c-4190-bad5-cce52ee089b2) przestrzeni nazw.
 
-F# PowerPack zapewnia obsługę oceniania i wykonywania obiekty wyrażeń F#.
+F# PowerPack zapewnia obsługę oceniania i wykonywania F# obiektów wyrażeń.
 
 ## <a name="expr-type"></a>Wyrażenie typu
 
-Wystąpienie `Expr` typu reprezentuje wyrażenie F#. Zarówno ogólnego ogólnych i nieogólnych `Expr` typy są opisane w dokumentacji biblioteki języka F#. Aby uzyskać więcej informacji, zobacz [Namespace Microsoft.fsharp.quotations —](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d) i [quotations.Expr — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d).
+Wystąpienie `Expr` wpisz reprezentuje F# wyrażenia. Zarówno ogólnego ogólnych i nieogólnych `Expr` typy są udokumentowane w artykule F# dokumentacji biblioteki. Aby uzyskać więcej informacji, zobacz [Namespace Microsoft.fsharp.quotations —](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d) i [quotations.Expr — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d).
 
 ## <a name="splicing-operators"></a>Łączenie operatorów
 
-Łączenie umożliwia łączenie cytaty kodu literału z wyrażeniami, które zostały utworzone programowo, albo z innej oferty kodu. `%` i `%%` operatory umożliwiają dodawanie obiektu będącego wyrażeniem F# w cudzysłowie kodu. Możesz użyć `%` operatora, aby wstawić obiektu wpisane wyrażenie do typizowanych oferty; użyj `%%` operatora, aby wstawić obiektu niewpisanych wyrażeń do bez typu oferty. Oba operatory są operatorami przedrostkowymi jednoargumentowy. Dlatego jeśli `expr` jest bez typu wyrażenia typu `Expr`, poniższy kod jest nieprawidłowy.
+Łączenie umożliwia łączenie cytaty kodu literału z wyrażeniami, które zostały utworzone programowo, albo z innej oferty kodu. `%` i `%%` operatory umożliwiają dodawanie F# obiektu będącego wyrażeniem w cudzysłowie kodu. Możesz użyć `%` operatora, aby wstawić obiektu wpisane wyrażenie do typizowanych oferty; użyj `%%` operatora, aby wstawić obiektu niewpisanych wyrażeń do bez typu oferty. Oba operatory są operatorami przedrostkowymi jednoargumentowy. Dlatego jeśli `expr` jest bez typu wyrażenia typu `Expr`, poniższy kod jest nieprawidłowy.
 
 ```fsharp
 <@@ 1 + %%expr @@>
@@ -65,7 +65,7 @@ Jeśli `expr` jest wpisane oferty typu `Expr<int>`, poniższy kod jest nieprawid
 
 ### <a name="description"></a>Opis
 
-Poniższy przykład ilustruje użycie cytaty kodu, aby umieścić kod w języku F# w obiektu będącego wyrażeniem, a następnie wydrukuj kodzie języka F#, która reprezentuje wyrażenie. Funkcja `println` zdefiniowano zawierający funkcji recursive `print` wyświetlającą obiektu będącego wyrażeniem F# (typu `Expr`) w formacie przyjazna. Istnieje kilka wzorców, które znajdują się w [Microsoft.FSharp.Quotations.Patterns](https://msdn.microsoft.com/library/093944a9-c752-403a-8983-5fcd5dbf92a4) i [Microsoft.FSharp.Quotations.DerivedPatterns](https://msdn.microsoft.com/library/d2434a6e-ae7b-4f3d-b567-c162938bc9cd) modułów, które mogą służyć do analizowania obiekty wyrażeń. W tym przykładzie nie obejmuje wszystkich możliwych wzorców, które mogą być wyświetlane w wyrażeniach języka F#. Dowolny Nierozpoznany wzorzec wyzwala dopasowania do wzorca symbolu wieloznacznego (`_`) i jest renderowany przy użyciu `ToString` metody, która na `Expr` wpisz informuje Cię do dodania do w wyrażeniu dopasowania — aktywny wzorzec.
+Poniższy przykład ilustruje użycie cytaty kodu, aby umieścić F# kodu do obiektu będącego wyrażeniem, a następnie wydrukuj F# kod, który reprezentuje wyrażenie. Funkcja `println` zdefiniowano zawierający funkcji recursive `print` wyświetlającą F# obiektu będącego wyrażeniem (typu `Expr`) w formacie przyjazna. Istnieje kilka wzorców, które znajdują się w [Microsoft.FSharp.Quotations.Patterns](https://msdn.microsoft.com/library/093944a9-c752-403a-8983-5fcd5dbf92a4) i [Microsoft.FSharp.Quotations.DerivedPatterns](https://msdn.microsoft.com/library/d2434a6e-ae7b-4f3d-b567-c162938bc9cd) modułów, które mogą służyć do analizowania obiekty wyrażeń. W tym przykładzie nie obejmują wszystkich możliwych wzorców, które mogą być wyświetlane w F# wyrażenia. Dowolny Nierozpoznany wzorzec wyzwala dopasowania do wzorca symbolu wieloznacznego (`_`) i jest renderowany przy użyciu `ToString` metody, która na `Expr` wpisz informuje Cię do dodania do w wyrażeniu dopasowania — aktywny wzorzec.
 
 ### <a name="code"></a>Kod
 
@@ -83,7 +83,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 
 ### <a name="description"></a>Opis
 
-Można również użyć trzy wzorce aktywne w [exprshape — moduł](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) przechodzenie drzewa wyrażeń przy użyciu mniejszej liczby wzorców. Te wzorce aktywne może być przydatne, gdy chcesz przenoszenie drzewa, ale nie są wszystkie informacje w większości węzłów. Korzystając z tych wzorców dowolne wyrażenie F# jest zgodny z jednym z następujących trzech wzorców: `ShapeVar` Jeśli wyrażenie jest zmienną, `ShapeLambda` Jeśli wyrażenie jest wyrażeniem lambda lub `ShapeCombination` Jeśli wyrażenie jest inny. Jeśli przy użyciu wzorców, tak jak w poprzednim przykładzie kodu przechodzić przez drzewo wyrażenia, należy użyć wielu więcej wzorców do obsługi wszystkich możliwych typów wyrażeń F#, a Twój kod będzie bardziej złożone. Aby uzyskać więcej informacji, zobacz [ExprShape.ShapeVar&#124;shapelambda —&#124;shapecombination — aktywny wzorzec](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
+Można również użyć trzy wzorce aktywne w [exprshape — moduł](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) przechodzenie drzewa wyrażeń przy użyciu mniejszej liczby wzorców. Te wzorce aktywne może być przydatne, gdy chcesz przenoszenie drzewa, ale nie są wszystkie informacje w większości węzłów. Kiedy używać tych wzorców wszystkie F# wyrażenie pasuje do jednej z następujących trzech wzorców: `ShapeVar` Jeśli wyrażenie jest zmienną, `ShapeLambda` Jeśli wyrażenie jest wyrażeniem lambda lub `ShapeCombination` Jeśli wyrażenie jest inny. Jeśli przy użyciu wzorców, tak jak w poprzednim przykładzie kodu przechodzić przez drzewo wyrażenia, będzie konieczne użycie wielu więcej wzorców w celu obsługi wszystkich możliwych F# typy wyrażenia, a Twój kod będzie bardziej złożone. Aby uzyskać więcej informacji, zobacz [ExprShape.ShapeVar&#124;shapelambda —&#124;shapecombination — aktywny wzorzec](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
 
 Poniższy przykład kodu może służyć jako podstawa dla bardziej złożonych przejścia. W tym kodzie drzewa wyrażenie jest tworzony dla wyrażenie, które polega na wywołanie funkcji `add`. [Specificcall —](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) — aktywny wzorzec jest używany do wykrywania wszelkich wywołanie `add` drzewa wyrażeń. To — aktywny wzorzec przypisuje argumenty wywołanie `exprList` wartość. W tym przypadku istnieją tylko dwa, więc te są pobierane w i funkcja jest wywoływana cyklicznie w argumenty. Wyniki są wstawiane do oferty kod, który reprezentuje wywołanie `mul` za pomocą operatora splice (`%%`). `println` Funkcja z poprzedniego przykładu jest używana do wyświetlania wyników.
 

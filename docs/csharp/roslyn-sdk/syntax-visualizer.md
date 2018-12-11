@@ -3,12 +3,12 @@ title: Eksplorowanie kodu za pomocą wizualizatora składni Roslyn w programie V
 description: Wizualizatora składni obejmuje narzędzia wizualne Eksplorowanie modeli, które generuje kod w zestawie SDK platformy kompilatora .NET.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750209"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143569"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Eksplorowanie kodu za pomocą wizualizatora składni Roslyn w programie Visual Studio
 
@@ -32,7 +32,7 @@ Utwórz nowy projekt za pomocą **pliku** > **nowy projekt** polecenia. Można u
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Wizualizacja drzewo składni języka C#](media/syntax-visualizer/visualize-csharp.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![Wizualizacja drzewo składni języka VB](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -41,7 +41,7 @@ Jak pokazano na poprzednim obrazów, okna narzędzi wizualizatora Wyświetla drz
 
 Drzewa składni obejmuje trzy typy elementów — *węzłów*, *tokenów*, i *elementy towarzyszące składni*. Możesz przeczytać więcej na temat tych typów w [korzystanie ze składni](work-with-syntax.md) artykułu. Elementy każdego rodzaju są reprezentowane w innym kolorze. Kliknij przycisk "Legendy" Omówienie kolorów używanych.
 
-Każdego elementu w drzewie wyświetla również swój własny **span**. **Span** jest indeksów (pozycja początkowy i końcowy) tego węzła w pliku tekstowym.  W tym C# przykładzie, wybrane "UsingKeyword [0..5)" token ma **zakres** szerokości, oznacza to pięć znaków [0..5). "[.)" Notation oznacza, że wartość początkowa indeksu jest częścią zakresu, ale indeks końcowy nie jest.
+Każdego elementu w drzewie wyświetla również swój własny **span**. **Span** jest indeksów (pozycja początkowy i końcowy) tego węzła w pliku tekstowym.  W poprzednim C# przykład wybranego "UsingKeyword [0..5)" token ma **zakres** szerokości, oznacza to pięć znaków [0..5). "[.)" Notation oznacza, że wartość początkowa indeksu jest częścią zakresu, ale indeks końcowy nie jest.
 
 Istnieją dwa sposoby, aby przejść w drzewie:
 * Rozwiń lub kliknąć elementy w drzewie. Wizualizator automatycznie wybiera tekst odpowiadający zakresu tego elementu w edytorze kodu.
@@ -62,7 +62,7 @@ Kliknij prawym przyciskiem myszy dowolny element w drzewie, a następnie kliknij
 Wizualizator Wyświetla graficzną reprezentację poddrzewo osadzone na wybrany element. Spróbuj wykonać następujące kroki, aby uzyskać **MethodDeclaration** węzeł odpowiadający `Main()` metody w przykładzie języka C#. Wizualizatora przedstawiony jest wykres składni, która wygląda w następujący sposób:
 
 ![Wyświetlanie grafu składni języka C#](media/syntax-visualizer/csharp-syntax-graph.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 Spróbuj wykonać takie same dla **SubBlock** węzeł odpowiadający `Main()` metody w poprzednim przykładzie VB. Wizualizatora przedstawiony jest wykres składni, która wygląda w następujący sposób:
 
@@ -84,7 +84,7 @@ Innym rozwiązaniem jest umieszczenie okno wykresu składni na drugim monitorze 
 
 Syntax Visualizer włącza podstawowe kontrolę symboli i informacje semantyczne. Typ `double x = 1 + 1;` wewnątrz Main() w przykładzie języka C#. Następnie wybierz wyrażenie `1 + 1` w oknie edytora kodu. Wyróżnia wizualizatora **AddExpression** węzła w wizualizatorze. Kliknij prawym przyciskiem myszy to **AddExpression** i kliknij pozycję **Symbol widoku (jeśli istnieje)**. Należy zauważyć, że większość elementów menu ma kwalifikator "ewentualne". Syntax Visualizer sprawdza właściwości węzła, w tym właściwości, które może nie być dostępne dla wszystkich węzłów. 
 
-Siatki właściwości w wizualizatorze aktualizacji, jak pokazano na poniższym rysunku: symbol dla wyrażenia jest **SynthesizedIntrinsicOperatorSymbol** z **rodzaj = metoda**.
+W siatce właściwości aktualizacji wizualizatora, jak pokazano na poniższej ilustracji: Symbol dla wyrażenia jest **SynthesizedIntrinsicOperatorSymbol** z **rodzaj = metoda**.
 
 ![Właściwości symbolu](media/syntax-visualizer/symbol-properties.png)
 
@@ -128,7 +128,7 @@ Sprawdź, czy symbol odpowiadający wszelkie deklarowany typ, metoda, właściwo
 
 Powyższe przykłady VB mogą łatwo zreplikowane w języku C#. Typ `using C = System.Console;` zamiast `Imports C = System.Console` aliasu. Powyższych kroków w języku C# przynieść takie same wyniki w oknie wizualizatora.
 
-Operacje semantycznego inspekcji są dostępne tylko w węzłach. Nie są one dostępne na tokeny lub elementy towarzyszące składni. Nie wszystkie węzły mają interesujących informacji semantycznych do wglądu. Gdy węzeł nie interesujące informacje semantyczne, klikając **widoku * symboli (jeśli istnieje)** z siatką właściwości puste.
+Operacje semantycznego inspekcji są dostępne tylko w węzłach. Nie są one dostępne na tokeny lub elementy towarzyszące składni. Nie wszystkie węzły mają interesujących informacji semantycznych do wglądu. Gdy węzeł nie interesujące informacje semantyczne, klikając **widoku \* symboli (jeśli istnieje)** z siatką właściwości puste.
 
 Możesz dowiedzieć się więcej o interfejsach API do wykonywania analizy semantycznej w [korzystanie z semantyki](work-with-semantics.md) przeglądu.
 

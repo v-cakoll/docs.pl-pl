@@ -2,27 +2,27 @@
 title: Wprowadzenie do platformy .NET Core w systemie macOS
 description: Ten dokument zawiera kroki i przepływ pracy, aby utworzyć rozwiązanie podstawowych platformy .NET przy użyciu programu Visual Studio Code.
 author: bleroy
-ms.author: mairaw
 ms.date: 03/23/2017
-ms.openlocfilehash: 5a4b2734137f59b29535f302dd17fb94329d676f
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.custom: seodec18
+ms.openlocfilehash: ad403ed96435f162899e600a317d00bab00638f2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245595"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170290"
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Wprowadzenie do platformy .NET Core w systemie macOS
 
 Ten dokument zawiera kroki i przepływ pracy, aby utworzyć rozwiązanie platformy .NET Core dla systemu macOS. Dowiedz się, jak tworzyć projekty, testy jednostkowe, użyj narzędzi debugowania i zestawowi bibliotek innych firm za pomocą [NuGet](https://www.nuget.org/).
 
 > [!NOTE]
-> W tym artykule wykorzystano [programu Visual Studio Code](http://code.visualstudio.com) w systemie macOS.
+> W tym artykule wykorzystano [programu Visual Studio Code](https://code.visualstudio.com) w systemie macOS.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Zainstaluj [platformy .NET Core SDK](https://www.microsoft.com/net/core). .NET Core SDK zawiera najnowszą wersję platformy .NET Core framework i środowiska uruchomieniowego.
 
-Zainstaluj [programu Visual Studio Code](http://code.visualstudio.com). W trakcie tego artykułu także zainstalować rozszerzenia, które zwiększają programowania .NET Core środowisko Visual Studio Code.
+Zainstaluj [programu Visual Studio Code](https://code.visualstudio.com). W trakcie tego artykułu także zainstalować rozszerzenia, które zwiększają programowania .NET Core środowisko Visual Studio Code.
 
 Zainstaluj rozszerzenie programu Visual Studio kodu C#, otwierając program Visual Studio Code i naciskając klawisz <kbd>F1</kbd> aby otworzyć paletę programu Visual Studio Code. Typ **zainstalować ext** Aby wyświetlić listę rozszerzeń. Wybierz rozszerzenie języka C#. Uruchom ponownie Visual Studio Code, aby aktywować rozszerzenia. Aby uzyskać więcej informacji, zobacz [dokumentację kodu C# rozszerzenie programu Visual Studio](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 

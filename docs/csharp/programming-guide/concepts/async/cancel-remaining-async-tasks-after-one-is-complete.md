@@ -2,12 +2,12 @@
 title: Anulowanie pozostałych zadań asynchronicznych po jednym jest pełny (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: 40f010c4e1d84e6378334c826c58514f83b84657
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 969309f50f59a413e731113b6daec0c32bd1b540
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349046"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126917"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Anulowanie pozostałych zadań asynchronicznych po jednym jest pełny (C#)
 Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> metoda wraz z <xref:System.Threading.CancellationToken>, możesz anulować wszystkie pozostałe zadania po wykonaniu jednego zadania. `WhenAny` Metoda przyjmuje argument, który jest kolekcją zadań. Metoda uruchamia wszystkie zadania i zwrócenie pojedynczego zadania. Pojedyncze zadanie jest ukończone po zakończeniu każdego zadania w kolekcji.  
@@ -18,7 +18,7 @@ Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWith
 >  Aby uruchomić przykłady, konieczne jest posiadanie programu Visual Studio 2012 lub nowszego oraz programu .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
   
 ## <a name="downloading-the-example"></a>Pobieranie przykładu  
- Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
+ Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [próbka asynchroniczna: Poprawnie Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
   
 1.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
@@ -97,7 +97,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
     ```csharp  
     var length = await firstFinishedTask;  
-    resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
+    resultsTextBox.Text += $"\r\nLength of the downloaded website:  {length}\r\n";
     ```  
   
  Uruchom program kilka razy, aby sprawdzić, najpierw Zakończ różne pliki do pobrania.  
@@ -107,7 +107,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  Należy zauważyć, że musisz dodać odwołanie do <xref:System.Net.Http>.  
   
- Można ściągnąć projekt z [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Można ściągnąć projekt z [próbka asynchroniczna: Dostrajania aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```csharp  
 using System;  
@@ -197,7 +197,7 @@ namespace CancelAfterOneTask
             //    byte[] urlContents = await response.Content.ReadAsByteArrayAsync();  
   
             //    resultsTextBox.Text +=  
-            //        String.Format("\r\nLength of the downloaded string: {0}.\r\n", urlContents.Length);  
+            //        $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
             //}  
   
             // ***Create a query that, when executed, returns a collection of tasks.  
@@ -218,7 +218,7 @@ namespace CancelAfterOneTask
             // Run the program several times to demonstrate that different  
             // websites can finish first.  
             var length = await firstFinishedTask;  
-            resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
+            resultsTextBox.Text += $"\r\nLength of the downloaded website:  {length}\r\n";
         }  
   
         // ***Bundle the processing steps for a website into one async method.  

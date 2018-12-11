@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086391"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151216"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Za pomocą narzędzi Visual Studio Tools for Docker (Visual Studio Windows)
 
@@ -33,7 +33,7 @@ Istnieją dwa poziomy obsługę platformy Docker, które można dodać do projek
 
 ![Dodaj opcję menu obsługę platformy Docker w programie Visual Studio](media/add-docker-support-menu.png)
 
-Rysunek 4-26: Dodawanie obsługi programu Docker do projektu programu Visual Studio 2017
+Rysunek 4-26: Dodawanie obsługi platformy Docker do projektu programu Visual Studio 2017
 
 ### <a name="add-docker-support"></a>Dodaj obsługę platformy Docker
 
@@ -41,7 +41,7 @@ Obsługę platformy Docker można dodać do istniejącego projektu aplikacji sie
 
 ![Włącz obsługę platformy Docker dla nowej aplikacji sieci web platformy ASP.NET Core w programie Visual Studio](./media/enable-docker-support-visual-studio.png)
 
-Rysunek 4-27: Włącz obsługę platformy Docker podczas tworzenia projektu w programie Visual Studio 2017
+Ilustracja 4-27 Włącz obsługę platformy Docker podczas tworzenia projektu w programie Visual Studio 2017
 
 Podczas dodawania lub Włącz obsługę platformy Docker, program Visual Studio dodaje *pliku Dockerfile* pliku do projektu.
 
@@ -50,7 +50,7 @@ Podczas dodawania lub Włącz obsługę platformy Docker, program Visual Studio 
 >
 > ![Włącz Docker compose obsługę projektu aplikacji sieci web w języku .NET Framework](media/enable-docker-compose-support.png)
 
-> Rysunek 4-28: Włączanie narzędzia Docker Compose pomocy technicznej w projekcie aplikacji sieci web .NET Framework w programie Visual Studio 2017
+> Ilustracja 4-28 Włączanie obsługi narzędzia Docker Compose w projekcie aplikacji sieci web .NET Framework w programie Visual Studio 2017
 
 ### <a name="add-container-orchestration-support"></a>Dodanie obsługi aranżacji kontenerów
 
@@ -62,7 +62,7 @@ Po dodaniu obsługi aranżacji kontenerów do projektu, zobacz plik Dockerfile d
 
 ![Pliki docker w Eksploratorze rozwiązań w programie Visual Studio](media/docker-support-solution-explorer.png)
 
-Ilustracja 4-29 plików Docker w Eksploratorze rozwiązań w programie Visual Studio 2017
+Rysunek 4-29: Pliki docker w Eksploratorze rozwiązań w programie Visual Studio 2017
 
 Jeśli *docker-compose.yml* już istnieje, program Visual Studio po prostu dodaje wymagane wierszy kodu konfiguracji do niego.
 
@@ -72,7 +72,7 @@ W menu głównym wybierz **narzędzia** > **opcje**i rozwiń **narzędzia konten
 
 ![](./media/visual-studio-docker-tools-options.png)
 
-Ilustracja 4-30 platformy Docker narzędzia, opcje
+Ilustracja 4-30 Platformy docker narzędzia, opcje
 
 Poniższa tabela może pomóc zdecydować, jak ustawić te opcje.
 
@@ -93,5 +93,5 @@ Kompilowanie, debugowanie, aktualizacji i odświeżanie aplikacji w lokalnym kon
 Wdrażanie kontenera platformy ASP.NET Core Docker do rejestru kontenerów: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 >[!div class="step-by-step"]
-[Poprzednie](docker-apps-inner-loop-workflow.md)
-[dalej](set-up-windows-containers-with-powershell.md)
+>[Poprzednie](docker-apps-inner-loop-workflow.md)
+>[dalej](set-up-windows-containers-with-powershell.md)

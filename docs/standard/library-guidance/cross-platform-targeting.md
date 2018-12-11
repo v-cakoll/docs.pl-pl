@@ -1,15 +1,15 @@
 ---
-title: Przeznaczone dla wielu platform
+title: Dla wielu platform przeznaczonych dla bibliotek platformy .NET
 description: Zalecenia dotyczące najlepszych rozwiązań do tworzenia bibliotek .NET między platformami.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202819"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129717"
 ---
 # <a name="cross-platform-targeting"></a>Przeznaczone dla wielu platform
 
@@ -59,7 +59,7 @@ Można włączyć osłony dla klientów z konieczności tworzenia dla poszczegó
 >
 > Gdy to zrobisz, nie porzucić pomocy technicznej dla platformy .NET Standard. Zamiast tego należy zgłaszać z wdrożenia i oferuje możliwości interfejsów API. W ten sposób biblioteki mogą być używane w dowolnym miejscu i obsługuje środowisko uruchomieniowe światła w górę funkcji.
 
-**Należy UNIKAĆ ❌** przy użyciu wielowersyjności kodu za pomocą platformy .NET Standard, jeśli kod źródłowy jest taka sama dla wszystkich obiektów docelowych.
+**Należy UNIKAĆ ❌** wielowersyjnością kodu — a także przeznaczonych dla platformy .NET Standard, jeśli kod źródłowy jest taka sama dla wszystkich obiektów docelowych.
 
 > Zestaw .NET Standard automatycznie będą używane przez NuGet. Przeznaczone dla poszczególnych implementacji .NET zwiększa `*.nupkg` rozmiar bez żadnych korzyści.
 
@@ -95,5 +95,5 @@ Można włączyć osłony dla klientów z konieczności tworzenia dla poszczegó
 **❌ NIE** obejmują elementy docelowe dla platform .NET, które nie są już obsługiwane. Na przykład `SL4`, `WP`.
 
 >[!div class="step-by-step"]
-[Poprzednie](./get-started.md)
-[dalej](./strong-naming.md)
+>[Poprzednie](get-started.md)
+>[dalej](strong-naming.md)

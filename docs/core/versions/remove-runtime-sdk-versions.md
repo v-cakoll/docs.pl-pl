@@ -1,23 +1,32 @@
 ---
-title: Jak usunąć środowisko uruchomieniowe platformy .NET i zestawu SDK
-description: Instrukcje dotyczące usuwania składników środowiska uruchomieniowego programu .NET Core i zestawu SDK w Windows, Mac i Linux
+title: Usuń środowisko uruchomieniowe programu .NET Core i zestawu SDK
+description: W tym artykule opisano sposób określania, które wersje środowiska uruchomieniowego programu .NET Core i zestawu SDK są zainstalowane, a następnie jak je usunąć w Windows, Mac i Linux.
 ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
-ms.openlocfilehash: 1806d1af3b10e44ccc2eff788d8958ca976fe85b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 6204a28200f1db6350e695a9ab29502c46c25590
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989816"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129704"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Jak usunąć środowisko uruchomieniowe programu .NET Core i zestawu SDK
 
 Wraz z upływem czasu jak zainstalować zaktualizowane wersje środowiska uruchomieniowego .NET Core i zestawu SDK, warto Usuń nieaktualne wersje programu .NET Core z poziomu Twojej maszyny. Trwa usuwanie starszych wersji środowiska uruchomieniowego mogą ulec zmianie środowiska uruchomieniowego, wybierany do uruchamiania aplikacji udostępnionej platformy, zgodnie z opisem w artykule na [wybór wersji platformy .NET Core](selection.md).
 
+## <a name="should-i-remove-a-version"></a>Czy należy usunąć wersję?
+
+[Wybór wersji platformy .NET Core](selection.md) zachowań i zgodność środowiska uruchomieniowego programu .NET Core między aktualizacjami umożliwia bezpieczne usuwanie wcześniejszych wersji. Aktualizacje środowiska uruchomieniowego .NET core są zgodne w ramach wersji głównej "pasma, takich jak wersji 1.x i 2.x. Ponadto nowsze wersje programu .NET Core SDK zazwyczaj zachować możliwość tworzenia aplikacji w tym docelowymi są poprzednie wersje środowiska uruchomieniowego w sposób zgodny.
+
+Ogólnie rzecz biorąc wystarczy tylko najnowszy zestaw SDK i najnowszą wersję poprawki środowisk uruchomieniowych wymagane dla aplikacji. Wystąpienia, których przechowywanie starsze wersje zestawu SDK lub środowiska uruchomieniowego obejmują ochronną **project.json**— na podstawie aplikacji. Jeśli aplikacja ma określone przyczyny, dla starszych zestawów SDK lub środowisk wykonawczych, możesz bezpiecznie usunąć starsze wersje.
+
+## <a name="determine-what-is-installed"></a>Określić, co jest zainstalowana
+
 Począwszy od platformy .NET Core 2.1 interfejsu wiersza polecenia platformy .NET zawiera opcje, których można użyć, aby wyświetlić listę wersji zestawu SDK i środowiska uruchomieniowego, które są zainstalowane na komputerze.  Użyj [ `dotnet --list-sdks` ](../tools/dotnet.md#options) Aby wyświetlić listę zestawów SDK zainstalowany na tym komputerze. Użyj [ `dotnet --list-runtimes` ](../tools/dotnet.md#options) Aby wyświetlić listę środowiska uruchomieniowe zainstalowane na tym komputerze. Następujący tekst przedstawiono typowe dane wyjściowe, Windows, macOS i Linux:
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 ```console
 C:\> dotnet --list-sdks
@@ -55,7 +64,7 @@ Microsoft.NETCore.App 2.1.1 [C:\Program Files\dotnet\shared\Microsoft.NETCore.Ap
 Microsoft.NETCore.App 2.1.2 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 ```console
 $ dotnet --list-sdks
@@ -89,7 +98,7 @@ Microsoft.NETCore.App 2.1.0 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.1 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 ```console
 $ dotnet --list-sdks
@@ -127,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="uninstalling-net-core"></a>Odinstalowywanie platformy .NET Core
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 Windows korzysta z platformy .NET core **Dodaj/Usuń programy** okno dialogowe, aby usunąć wersje środowiska uruchomieniowego .NET Core i zestawu SDK. Poniższy rysunek przedstawia **Dodaj/Usuń programy** okna dialogowego z różnymi wersjami środowiska uruchomieniowego .NET i zainstalowany zestaw SDK.
 
@@ -135,7 +144,7 @@ Windows korzysta z platformy .NET core **Dodaj/Usuń programy** okno dialogowe, 
 
 Wybierz wszystkie wersje, które chcesz usunąć z komputera, a następnie kliknij przycisk **Odinstaluj**.
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 Istnieje więcej opcji, aby odinstalować platformy .NET Core (zestaw SDK lub środowisko uruchomieniowe) w systemie Linux. Najlepszym sposobem odinstalować platformy .NET Core jest duplikatów akcję, która umożliwia instalowanie programu .NET Core. Szczegółowe informacje na temat, zależy od wybranej dystrybucji i metody instalacji.
 
@@ -178,7 +187,7 @@ sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
 
 Katalogi nadrzędne dla zestawu SDK i środowiska uruchomieniowego są wymienione w danych wyjściowych `dotnet --list-sdks` i `dotnet --list-runtimes` polecenia, jak pokazano w tabeli wcześniej.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 Na komputerze Mac należy usunąć zestawy SDK i środowiska uruchomieniowe oddzielnie, usuwając katalogu, który zawiera tę wersję. Na przykład, aby usunąć 1.0.1 SDK i środowisko uruchomieniowe, należy użyć następujących poleceń powłoki bash:
 
@@ -190,7 +199,5 @@ sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
 ```
 
 Katalogi nadrzędne dla zestawu SDK i środowiska uruchomieniowego są wymienione w danych wyjściowych `dotnet --list-sdks` i `dotnet --list-runtimes` polecenia, jak pokazano w tabeli wcześniej.
-
-Począwszy od platformy .NET Core 2.1 nie ma potrzeby odinstalowania zestawu .NET Core SDK, podczas uaktualniania go przy użyciu Menedżera pakietów. Menedżer pakietów `update` lub `refresh` polecenia spowoduje automatyczne usunięcie starszej wersji po pomyślnej instalacji w nowszej wersji.
 
 ---

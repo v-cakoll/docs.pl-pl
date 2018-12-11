@@ -1,27 +1,28 @@
 ---
-title: Testy jednostkowe za pomocą Visual Basic w .NET Core za pomocą testu dotnet i xUnit
-description: Dowiedz się koncepcje testu jednostki w .NET Core za pośrednictwem interaktywnego środowisko budowania rozwiązania Visual Basic próbki krok po kroku przy użyciu platformy dotnet testu i xUnit.
+title: Testowanie jednostek za pomocą języka Visual Basic w programie .NET Core za pomocą polecenia dotnet test i struktury xUnit
+description: Pojęcia dotyczące jednostek testów platformie .NET Core za pomocą środowisko interaktywne tworzenie rozwiązania języka Visual Basic przykładowe instrukcje krok po kroku za pomocą polecenia dotnet test i struktury xUnit.
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 dev_langs:
 - vb
-ms.openlocfilehash: 7a9aef47b323c0b3cf8bceac752186a65ab59acc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: eae5f0727d2d75044c072e8cc1d9a1c6faf53a9a
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214029"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170538"
 ---
-# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Biblioteki języka Visual Basic .NET Core za pomocą testu dotnet i xUnit testy jednostkowe
+# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Jednostki testowania bibliotek języka Visual Basic .NET Core za pomocą polecenia dotnet test i struktury xUnit
 
-Ten samouczek przedstawia interaktywna tworzenia przykładowe rozwiązanie krok po kroku, aby dowiedzieć się pojęcia testowania jednostek. Jeśli chcesz wykonać czynności opisane w samouczku za pomocą wbudowanych rozwiązania, [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-dotnet-test) przed rozpoczęciem. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Ten samouczek przeprowadzi Cię przez środowisko interaktywne tworzenie przykładowe rozwiązanie krok po kroku, aby dowiedzieć się więcej pojęcia testów jednostkowych. Jeśli chcesz wykonać kroki samouczka przy użyciu wstępnie utworzone rozwiązania [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-dotnet-test) przed przystąpieniem do wykonywania. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
 
-Umożliwia otwarcie okna powłoki. Utwórz katalog o nazwie *unit-testing-vb-using-dotnet-test* do przechowywania rozwiązania.
-Wewnątrz tego nowego katalogu Uruchom [ `dotnet new sln` ](../tools/dotnet-new.md) do tworzenia nowego rozwiązania. Takie rozwiązanie ułatwia zarządzanie biblioteki klas i jednostkowy projekt testowy.
-Utwórz katalog rozwiązania *PrimeService* katalogu. Masz dotychczasowych następującą strukturę katalogów i plików:
+Otwieranie okna powłoki. Utwórz katalog o nazwie *unit-testing-vb-using-dotnet-test* do przechowywania rozwiązania.
+Wewnątrz tego nowy katalog uruchamiania [ `dotnet new sln` ](../tools/dotnet-new.md) do tworzenia nowego rozwiązania. Praktyka ta ułatwia zarządzać biblioteki klas i projekt testów jednostkowych.
+Utwórz katalog rozwiązania *PrimeService* katalogu. Mają następującą strukturę katalogów i plików z tej pory:
 
 ```
 /unit-testing-using-dotnet-test
@@ -29,7 +30,7 @@ Utwórz katalog rozwiązania *PrimeService* katalogu. Masz dotychczasowych nast�
     /PrimeService
 ```
 
-Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib -lang VB` ](../tools/dotnet-new.md) do tworzenia projektu źródłowego. Zmień nazwę *Class1.VB* do *PrimeService.VB*. Aby użyć projektowanie oparte na testach (TDD), należy utworzyć niepowodzenie wykonania `PrimeService` klasy:
+Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib -lang VB` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego. Zmień nazwę *Class1.VB* do *PrimeService.VB*. Aby użyć Programowanie oparte na testach (TDD), należy utworzyć z implementacją niepowodzenie `PrimeService` klasy:
 
 ```vb
 Namespace Prime.Services
@@ -41,7 +42,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-Zmień katalog z powrotem do *unit-testing-vb-using-dotnet-test* katalogu. Uruchom [ `dotnet sln add .\PrimeService\PrimeService.vbproj` ](../tools/dotnet-sln.md) można dodać projektu biblioteki klas do rozwiązania.
+Zmień katalog kopii do *unit-testing-vb-using-dotnet-test* katalogu. Uruchom [ `dotnet sln add .\PrimeService\PrimeService.vbproj` ](../tools/dotnet-sln.md) można dodać projektu biblioteki klas w rozwiązaniu.
 
 ## <a name="creating-the-test-project"></a>Tworzenie projektu testu
 
@@ -56,7 +57,7 @@ Następnie należy utworzyć *PrimeService.Tests* katalogu. Następujące konspe
     /PrimeService.Tests
 ```
 
-Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy projekt za pomocą [ `dotnet new xunit -lang VB` ](../tools/dotnet-new.md). To polecenie tworzy projekt testowy używającą xUnit jako biblioteka testów. Wygenerowanego szablonu konfiguruje uruchamiający w *PrimeServiceTests.vbproj*:
+Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy projekt za pomocą [ `dotnet new xunit -lang VB` ](../tools/dotnet-new.md). To polecenie umożliwia utworzenie projektu testowego, który używa rozwiązania xUnit, jako biblioteka testów. Wygenerowany szablon konfiguruje narzędzie test runner w *PrimeServiceTests.vbproj*:
 
 ```xml
 <ItemGroup>
@@ -66,15 +67,15 @@ Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy proj
 </ItemGroup>
 ```
 
-Projekt testowy wymaga inne pakiety do tworzenia i uruchamiania testów jednostkowych. `dotnet new` w poprzednim kroku należy dodać xUnit i xUnit modułu uruchamiającego testy. Teraz Dodaj `PrimeService` biblioteki klas jako zależność od innego projektu. Użyj [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
+Projekt testowy wymaga innych pakietów, aby utworzyć i uruchomić testy jednostkowe. `dotnet new` w poprzednim kroku dodawany xUnit, a moduł uruchamiający testy xUnit. Teraz Dodaj `PrimeService` biblioteki klas jako inny zależności do projektu. Użyj [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
 
 ```
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
-Widoczny cały plik w [przykłady repozytorium](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService.Tests.vbproj) w witrynie GitHub.
+Widać cały plik w [repozytorium przykładów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService.Tests.vbproj) w witrynie GitHub.
 
-Masz następujące układu ostatniego folderu:
+Masz następujące nazwie ostatniego folderu układu:
 
 ```
 /unit-testing-using-dotnet-test
@@ -87,11 +88,11 @@ Masz następujące układu ostatniego folderu:
         PrimeServiceTests.vbproj
 ```
 
-Wykonanie [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` ](../tools/dotnet-sln.md) w *unit-testing-vb-using-dotnet-test* katalogu. 
+Wykonaj [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` ](../tools/dotnet-sln.md) w *unit-testing-vb-using-dotnet-test* katalogu. 
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Podejście TDD odwołuje się do pisania niepowodzeniu jednego testu, co Przekaż, a następnie powtórzyć proces. Usuń *UnitTest1.vb* z *PrimeService.Tests* katalogu i Utwórz nowy plik Visual Basic o nazwie *PrimeService_IsPrimeShould.VB*. Dodaj następujący kod:
+Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. Usuń *UnitTest1.vb* z *PrimeService.Tests* katalogu i Utwórz nowy plik języka Visual Basic o nazwie *PrimeService_IsPrimeShould.VB*. Dodaj następujący kod:
 
 ```vb
 Imports Xunit
@@ -111,9 +112,9 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-`<Fact>` Atrybut oznacza metodę test jest uruchamiany przez moduł uruchamiający. Z *testowania — przy użyciu dotnet testu jednostkowego*, wykonać [ `dotnet test` ](../tools/dotnet-test.md) do tworzenia testów i biblioteki klas, a następnie uruchom testy. Moduł uruchamiający xUnit zawiera punkt wejścia programu do uruchomienia testów. `dotnet test` Uruchamia uruchamiający przy użyciu jednostkowy projekt testowy, który został utworzony.
+`<Fact>` Atrybut oznacza metodę testową, która jest uruchamiany przez narzędzie test runner. Z *testowania — przy użyciu dotnet-test jednostkowy*, wykonaj [ `dotnet test` ](../tools/dotnet-test.md) do kompilacji, testów i biblioteki klas, a następnie uruchom testy. Moduł uruchamiający xUnit zawiera punkt wejścia programu, aby uruchomić testy. `dotnet test` Uruchamia narzędzie test runner, za pomocą projektu testu jednostkowego, który został utworzony.
 
-Test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Należy ten test przez pisania kodu najprostsza w `PrimeService` klasy, która działa:
+Test nie powiedzie się. Nie utworzono jeszcze wdrożenia. Należy ten test przez napisanie kodu najprostsza `PrimeService` klasę, która działa:
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
@@ -124,22 +125,22 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-W *unit-testing-vb-using-dotnet-test* katalogu, uruchom `dotnet test` ponownie. `dotnet test` Polecenia uruchamiane kompilacji dla `PrimeService` projektu i następnie `PrimeService.Tests` projektu. Po utworzeniu oba projekty, jest uruchamiana ta pojedynczy test. Przekazuje ono.
+W *unit-testing-vb-using-dotnet-test* katalogu, uruchom `dotnet test` ponownie. `dotnet test` Polecenie uruchamia kompilację dla `PrimeService` projektu i następnie `PrimeService.Tests` projektu. Po utworzeniu obu projektów, działa ten jeden test. Przekazuje on.
 
-## <a name="adding-more-features"></a>Dodawanie więcej funkcji.
+## <a name="adding-more-features"></a>Dodawanie większej liczby funkcji
 
-Teraz, kiedy dokonano jeden test przekazać nadszedł czas na zapis więcej. Istnieje kilka innych przypadków proste dla liczb pierwszych: 0, -1. Możesz dodać tych przypadkach jako nowe testy z `<Fact>` atrybut, ale szybko staje się nużące. Istnieją inne atrybuty xUnit, które pozwalają na zapis zestaw testów podobne.  A `<Theory>` atrybut reprezentuje zestaw testów, wykonanie tego samego kodu, które mają różne argumenty wejściowe. Można użyć `<InlineData>` atrybutu, aby określić wartości dla tych danych wejściowych.
+Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczby pierwsze: 0, -1. Możesz dodać te przypadki jako nowe testy za pomocą `<Fact>` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty xUnit, które umożliwiają pisanie zestaw testów podobne.  A `<Theory>` atrybut reprezentuje zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe. Możesz użyć `<InlineData>` atrybutu, aby określić wartości dla tych danych wejściowych.
 
-Zamiast tworzyć nowe testy, należy zastosować te atrybuty można utworzyć jeden teorii. Teorii jest metodę, która sprawdza kilka wartości mniejszej niż dwa, czyli o najniższej liczbie pierwsze:
+Zamiast tworzyć nowe testy, należy zastosować te atrybuty do utworzenia pojedynczego teorii. Teorii to metoda, która sprawdza kilka wartości mniejszej niż dwa, czyli najniższy numer prime:
 
 [!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-Uruchom `dotnet test`, i dwa pola spośród wymienionych testów kończyć się niepowodzeniem. Aby wszystkie karty testy, należy zmienić `if` klauzuli na początku metody:
+Uruchom `dotnet test`, i dwa pola spośród wymienionych testów kończyć się niepowodzeniem. Aby wszystkie przebieg testów, należy zmienić `if` klauzuli na początku metody:
 
 ```vb
 if candidate < 2
 ```
 
-Nadal Iterowanie przez dodanie większej liczby testów, więcej teorii i więcej kodu w bibliotece głównego. Masz [Zakończono wersji testów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) i [zakończenia wdrożenia biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService/PrimeService.vb).
+Przejdź do iteracji, dodając więcej testów, więcej teorii i więcej kodu w bibliotece głównej. Masz [ukończoną wersję testy](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) i [pełną implementację biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService/PrimeService.vb).
 
-Został utworzony małych biblioteki i zestaw testów jednostkowych dla tej biblioteki. Zostały strukturę rozwiązania, aby dodać nowe pakiety i testów jest częścią Normalny przepływ pracy. Już skoncentrowany większość czasu i uwagi na temat rozwiązywania problemów celów aplikacji.
+Gdy masz utworzoną małych biblioteki i zestaw testów jednostkowych dla tej biblioteki. Tak, aby dodawania nowych pakietów została ze strukturą rozwiązania i testów jest częścią normalnego przepływu pracy. Po skoncentrowany większość czasu i wysiłku niewiele rozwiązywania cele aplikacji.

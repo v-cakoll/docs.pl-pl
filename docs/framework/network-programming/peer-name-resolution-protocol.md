@@ -3,11 +3,11 @@ title: Protokół PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185160"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129160"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protokół PNRP
 W środowiskach peer-to-peer elementów równorzędnych użyć systemy rozpoznawania nazw określonych w ustalaniu siebie nawzajem lokalizacje sieciowe (adresy, protokoły i porty) na podstawie nazw lub innych typów identyfikatorów. W przeszłości rozpoznawania nazw równorzędnych ma zostały skomplikowane natury przejściowy łączność, a także innych braków w ramach systemu nazw domen (DNS).  
@@ -40,7 +40,7 @@ Peer Name Resolution Protocol pokazuje następujące właściwości:
   
 -   <xref:System.Net.PeerToPeer.PeerName>: Określa nazwę elementu równorzędnego, który może służyć do rejestrowania i następnie rozpoznawania elementu równorzędnego w chmurze.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>: Definiuje rekordu w chmurze PNRP, który zawiera informacje o rejestracji dla elementu równorzędnego, która zawiera punkty końcowe sieci, w których równorzędną można nawiązać połączenie.  
+-   <xref:System.Net.PeerToPeer.PeerNameRecord>: Określa rekord w chmurze PNRP, który zawiera informacje o rejestracji dla elementu równorzędnego, która zawiera punkty końcowe sieci, w których równorzędną można nawiązać połączenie.  
   
 -   <xref:System.Net.PeerToPeer.PeerNameRegistration>: Definiuje procesu rejestracji dla nazwy elementów równorzędnych, włączając w to metody, uruchamianie i zatrzymywanie rejestrowania nazw elementów równorzędnych.  
   

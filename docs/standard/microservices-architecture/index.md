@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Mi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193919"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152685"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi .NET: Architektura konteneryzowanych aplikacji .NET
 
@@ -43,7 +43,7 @@ Ponadto [mikrousług](https://martinfowler.com/articles/microservices.html) arch
 
 Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzanie nimi przy użyciu kontenerów. Omówiono w nim kwestie projektowania architektonicznego i zbliża się do wdrożenia przy użyciu platformy .NET Core i kontenerów rozwiązania Docker. Aby ułatwić rozpoczęcie korzystania z kontenerów i mikrousług, przewodnik koncentruje się na odwołanie kontenerowych nimi i aplikacji opartych na mikrousługach, która pozwala zapoznać się z. Przykładowa aplikacja jest dostępna w [ramach aplikacji eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) repozytorium GitHub.
 
-Ten przewodnik zawiera podstawowe rozwoju i wskazówki dotyczące architektury, przede wszystkim na poziomie środowiska programowania skupiając się na dwie technologie: platforma Docker i platformy .NET Core. Zamierzone jest, że przeczytaniem tego przewodnika, jeśli zastanawiasz się nad projektu aplikacji bez konieczności zajmowania się infrastrukturą (w chmurze lub lokalnie) środowiska produkcyjnego. Będzie decyzje dotyczące infrastruktury później, podczas tworzenia aplikacji gotowych do produkcji. W związku z tym ten przewodnik jest przeznaczony jako niezależny od infrastruktury bardziej rozwoju środowiska — skoncentrowane na.
+Ten przewodnik zawiera podstawowe rozwoju i wskazówki dotyczące architektury, przede wszystkim na poziomie środowiska programowania skupiając się na dwie technologie: Platforma docker i platformy .NET Core. Zamierzone jest, że przeczytaniem tego przewodnika, jeśli zastanawiasz się nad projektu aplikacji bez konieczności zajmowania się infrastrukturą (w chmurze lub lokalnie) środowiska produkcyjnego. Będzie decyzje dotyczące infrastruktury później, podczas tworzenia aplikacji gotowych do produkcji. W związku z tym ten przewodnik jest przeznaczony jako niezależny od infrastruktury bardziej rozwoju środowiska — skoncentrowane na.
 
 Po mają materiałami tego przewodnika, następnym krokiem jest więcej informacji na temat mikrousług gotowe do produkcji w systemie Microsoft Azure.
 
@@ -84,13 +84,13 @@ Napisaliśmy tego przewodnika, aby lepiej zrozumieć architekturę konteneryzowa
 
 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
 
-## <a name="credits"></a>Środki na korzystanie z
+## <a name="credits"></a>Napisy końcowe
 
 Współautorzy:
 
-> **Torre'a de la Cesarowi**, Stanowisko kierownicze wyższego PM, zespół produktu platformy .NET, Microsoft Corp.
+> **Torre'a de la Cesarowi**, starszy PM, zespół produktu platformy .NET, Microsoft Corp.
 >
-> **Bill Wagnera**, Stanowisko kierownicze wyższego Deweloper zawartości C + E, Microsoft Corp.
+> **Bill Wagnera**, starszy zawartości dla deweloperów, C + E, Microsoft Corp.
 >
 > **Mike Rousos**, inżynier ds. oprogramowania jednostki, zespołu DevDiv CAT, Microsoft
 
@@ -110,15 +110,15 @@ Uczestnicy i osób dokonujących przeglądu:
 >
 > **Jimmy Nilsson**, współzałożyciel i Dyrektor Generalny firmy z Factor10
 >
-> **Glenn Condron**, Stanowisko kierownicze wyższego Menedżer programu, zespół programu ASP.NET
+> **Glenn Condron**, starszy Menedżer programu, zespół programu ASP.NET
 >
 > **Oznacz Fussell**, Kierownik jednostki PM, zespół usługi Azure Service Fabric, Microsoft
 >
 > **Diego Vega**, kierownik PM, platformy Entity Framework zespołu firmy Microsoft
 >
-> **Marcin Dorrans**, Stanowisko kierownicze wyższego Menedżer programów zabezpieczeń
+> **Marcin Dorrans**, Menedżer programów zabezpieczeń starszy
 >
-> **Rowan Miller**, Sr. Menedżer programów firmy Microsoft
+> **Rowan Miller**, starszy Kierownik ds. programów, Microsoft
 >
 > **Ankit Asthana**, główny menedżer PM, zespołem platformy .NET, Microsoft
 >
@@ -140,13 +140,13 @@ Uczestnicy i osób dokonujących przeglądu:
 >
 > **Javier Valero**, Dyrektor operacyjny ds. na rozwiązanie Grupo
 >
-> **Pierre proso**, Stanowisko kierownicze wyższego Consultant, Microsoft
+> **Pierre proso**, starszy konsultant, Microsoft
 >
 > **Michael Friis**, Menedżer produktu, Inc platformy Docker
 >
 > **Charles Lowell**, inżynier ds. oprogramowania, zespołu CAT programu VS, Microsoft
 >
-> **Miguel Veloso**, Stanowisko kierownicze wyższego Konsultant na żądanie Turing
+> **Miguel Veloso**, starszy konsultant na żądanie Turing
 
 
 ## <a name="copyright"></a>Prawa autorskie
@@ -179,6 +179,5 @@ Logo whale platformy Docker jest zastrzeżonym znakiem towarowym firmy Docker, I
 
 Wszystkie inne znaki i logo są własnością ich prawnych właścicieli.
 
-
 >[!div class="step-by-step"]
-[Next](container-docker-introduction/index.md)
+>[Next](container-docker-introduction/index.md)

@@ -1,15 +1,15 @@
 ---
 title: Tworzenie bibliotek za pomocą narzędzi międzyplatformowych
-description: Dowiedz się, jak tworzyć biblioteki dla platformy .NET przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core.
+description: Dowiedz się, jak utworzyć biblioteki .NET Core przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core. Utworzysz bibliotekę, która obsługuje wiele platform.
 author: cartermp
-ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: eb1dc404f9a08940464eca83a6848076b589afa8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.custom: seodec18
+ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188264"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169368"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Tworzenie bibliotek za pomocą narzędzi międzyplatformowych
 
@@ -19,9 +19,9 @@ W tym artykule opisano sposób pisania biblioteki dla platformy .NET przy użyci
 
 Potrzebujesz [zestawu .NET Core SDK i interfejsu wiersza polecenia](https://www.microsoft.com/net/core) zainstalowana na tym komputerze.
 
-W przypadku części tego dokumentu zajmowanie się wersje programu .NET Framework, należy [.NET Framework](http://getdotnet.azurewebsites.net/) zainstalowane na komputerze Windows.
+W przypadku części tego dokumentu zajmowanie się wersje programu .NET Framework, należy [.NET Framework](https://dotnet.microsoft.com) zainstalowane na komputerze Windows.
 
-Ponadto, jeśli chcesz obsługiwać starsze cele .NET Framework, należy zainstalować pakiety przeznaczone dla deweloperów w przypadku starszych wersji framework z [strony platformy docelowej .NET](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html). Zapoznaj się z tej tabeli:
+Ponadto, jeśli chcesz obsługiwać starsze cele .NET Framework, należy zainstalować pakiety przeznaczone dla deweloperów w przypadku starszych wersji framework z [pobierania .NET archiwa strony](https://dotnet.microsoft.com/download/archives). Zapoznaj się z tej tabeli:
 
 | Wersja programu .NET Framework | Co do pobrania                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -39,7 +39,7 @@ Jeśli nie znasz jeszcze przy użyciu platformy .NET Standard, zapoznaj się [.N
 
 W tym artykule raporcie uwzględniona jest tabela mapujący wersji .NET Standard do różnych implementacji:
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 Oto, co oznacza tej tabeli na potrzeby tworzenia biblioteki:
 
@@ -136,7 +136,7 @@ Można zauważyć trzy duże zmiany w tym miejscu:
 
 System kompilacji ma informacje o następujących symboli preprocesora używane w `#if` dyrektywy:
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../../includes/preprocessor-symbols.md)]
 
 Poniżej przedstawiono przykładowe zastosowanie wprowadzania kompilacji warunkowej dla elementu docelowego:
 
@@ -253,7 +253,7 @@ Jest ważne można było przetestować na wielu platformach. Można użyć dowol
    dotnet build
    ```
 
-   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Sprawdź, że xUnit działa, wykonując `dotnet test` polecenia. Jeśli została wybrana opcja używania MSTest, modułu uruchamiającego MSTest konsoli należy uruchomić zamiast tego.
     
@@ -268,7 +268,7 @@ Twój kod będzie automatycznie odbudować po wywołaniu `dotnet test` polecenia
 
 Potrzebują większych biblioteki jest umieszczenie funkcji w różnych projektach.
 
-Załóżmy, że chcieliby Tworzenie biblioteki, w którym można korzystać w idiomatyczną C# i F #. Oznacza to, że konsumenci biblioteki korzystania z nich w sposób naturalny C# lub F #. Na przykład w języku C# może używać biblioteki następująco:
+Wyobraź sobie zamierza utworzyć bibliotekę, która może być używane w idiomatyczną C# i F#. Oznacza to, że konsumenci biblioteki korzystania z nich w sposób naturalny do C# lub F#. Na przykład w języku C# może używać biblioteki następująco:
 
 ```csharp
 using AwesomeLibrary.CSharp;
@@ -281,7 +281,7 @@ public Task DoThings(Data data)
 }
 ```
 
-W języku F # może wyglądać następująco:
+W F#, może wyglądać następująco:
 
 ```fsharp
 open AwesomeLibrary.FSharp
@@ -292,11 +292,11 @@ let doWork data = async {
 }
 ```
 
-Scenariusze użycia, np. oznacza to, że interfejsy API, do którego uzyskiwany jest dostęp, trzeba mieć różną strukturę języka C# i F #.  Typowym podejściem do realizacji tego zadania jest wziąć pod uwagę całą logikę biblioteki do projektu core, w projektach C# i F # Definiowanie warstwy interfejsu API, odwołujące się do tego projektu core.  Pozostała część sekcji użyje następujących nazw:
+Oznacza to, że interfejsy API, do którego uzyskiwany jest dostęp, trzeba mieć różną strukturę dla scenariuszy użycia, takich jak C# i F#.  Typowym podejściem do realizacji tego zadania jest aby uwzględnić całą logikę biblioteki do projektu core za pomocą C# i F# projektów Definiowanie interfejsu API warstwy to wywołanie, w tym projekcie core.  Pozostała część sekcji użyje następujących nazw:
 
 * **AwesomeLibrary.Core** -projekt core, która zawiera całą logikę dla biblioteki
 * **AwesomeLibrary.CSharp** -projektu przy użyciu publicznych interfejsów API przeznaczonych do użycia w języku C#
-* **AwesomeLibrary.FSharp** -projektu przy użyciu publicznych interfejsów API przeznaczonych do użycia w języku F #
+* **AwesomeLibrary.FSharp** -projektów z publicznych interfejsów API przeznaczonych do użycia wF#
 
 W terminalu, aby utworzyć tę samą strukturę jako tego przewodnika, można uruchomić następujące polecenia:
 

@@ -3,11 +3,11 @@ title: Sumy rozłączne (F#)
 description: Dowiedz się, jak używać F# związków wyróżniających.
 ms.date: 05/16/2016
 ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672250"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154414"
 ---
 # <a name="discriminated-unions"></a>Sumy rozłączne
 
@@ -39,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-Powyższy kod deklaruje kształt złożenia dyskryminowanego, który może zawierać wartości dowolnego z trzech przypadków: prostokąt, okrąg i pryzmat. Każdy przypadek ma inny zestaw pól. Przypadek prostokąt ma dwa o nazwane pola, oba typu `float`, które mają szerokości i długości nazwy. Przypadek okręg ma tylko jedno nazwane pole, promień. Przypadek pryzmat ma trzy pola są dwa (szerokość i wysokość) o nazwie pola. Bez nazwy pól są określane jako pola anonimowe.
+Powyższy kod deklaruje kształt złożenia dyskryminowanego, który może zawierać wartości dowolnego z trzech przypadków: Prostokąt, okrąg i pryzmat. Każdy przypadek ma inny zestaw pól. Przypadek prostokąt ma dwa o nazwane pola, oba typu `float`, które mają szerokości i długości nazwy. Przypadek okręg ma tylko jedno nazwane pole, promień. Przypadek pryzmat ma trzy pola są dwa (szerokość i wysokość) o nazwie pola. Bez nazwy pól są określane jako pola anonimowe.
 
 Konstruujesz obiekty podając wartości dla pól nazwanych i anonimowych według poniższych przykładów.
 
@@ -140,7 +140,7 @@ Zamiast tego metody wirtualnej do obliczenia powierzchni lub obwodu, która zost
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 Area of circle that has radius 15.000000: 706.858347

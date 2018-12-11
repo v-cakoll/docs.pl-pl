@@ -1,32 +1,33 @@
 ---
-title: Pobieranie przykładowych baz danych, przykłady kodu ADO.NET
-description: Pobierz przykładowe bazy danych używany w przykładach kodu w dokumentacji programu ADO.NET, a także narzędzia programu SQL Server i zarządzania
+title: Pobieranie przykładowych baz danych programu SQL Server, przykłady kodu ADO.NET
+description: Pobieranie przykładowych baz danych programu SQL Server, używany w przykładach kodu w dokumentacji programu ADO.NET, a także narzędzia programu SQL Server i zarządzania
 ms.date: 10/18/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 9779300288135cb9332a028d547ce55a07e89471
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ab65f992c9cf2b65271a237fa06eb96e358ae6a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188394"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153491"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>Pobieranie przykładowych baz danych, przykłady kodu ADO.NET
 
-Liczba przykłady i wskazówki dotyczące w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji Korzystanie z przykładowych baz danych i programu SQL Server Express. Możesz pobrać te produkty bezpłatnie od firmy Microsoft.
+Liczba przykłady i przewodniki w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji Korzystanie z przykładowych baz danych z programu SQL Server i programu SQL Server Express. Możesz pobrać te produkty bezpłatnie od firmy Microsoft.
 
-## <a name="get-the-northwind-sample-database"></a>Pobieranie przykładowej bazy danych Northwind
+## <a name="get-the-northwind-sample-database-for-sql-server"></a>Pobieranie przykładowej bazy danych Northwind dla programu SQL Server
 
-Pobieranie przykładowej bazy danych Northwind z następującej strony w programie Microsoft Download Center:
+Pobierz skrypt `instnwnd.sql` z następujących repozytorium GitHub, aby utworzyć i załadować przykładowej bazy danych Northwind dla programu SQL Server:
 
-[Northwind i Pubs przykładowych baz danych](https://go.microsoft.com/fwlink?linkid=64296)
+[Northwind i pubs przykładowych baz danych programu Microsoft SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
 
-Po pobraniu pliku, kliknij dwukrotnie plik aby wyodrębnić baz danych i skryptów. Domyślnie pliki są instalowane w folderze `<drive>:\SQL Server 2000 Sample Databases`.
+Zanim będzie możliwe użycie bazy danych Northwind, musisz uruchomić pobrany `instnwnd.sql` plik skryptu w celu ponownego utworzenia bazy danych w wystąpieniu programu SQL Server przy użyciu [SQL Server Management Studio](#get_ssms) lub podobnego narzędzia. Postępuj zgodnie z instrukcjami w pliku Readme w repozytorium.
 
-Zanim będzie możliwe użycie bazy danych Northwind, należy ponownie utworzyć bazę danych w wystąpieniu programu SQL Server przy użyciu [SQL Server Management Studio](#get_ssms) lub podobnego narzędzia, aby uruchomić `instnwnd.sql` plik skryptu w folderze instalacyjnym.
+> [!TIP]
+> Jeśli szukasz bazy danych Northwind dla programu Microsoft Access, zobacz [Instalowanie przykładowej bazy danych Northwind dla programu Microsoft Access](#northwind_access).
 
-## <a name="get-the-adventureworks-sample-database"></a>Pobierz przykładową bazę danych AdventureWorks
+## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>Pobierz przykładową bazę danych AdventureWorks programu SQL Server
 
-Pobierz przykładową bazę danych AdventureWorks z repozytorium GitHub na następujące:
+Pobierz przykładową bazę danych AdventureWorks programu SQL Server z następujących repozytorium GitHub:
 
 [Przykładowe bazy danych AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 
@@ -36,9 +37,9 @@ Po pobraniu jedną kopię zapasową bazy danych (\*bak) plików, przywrócenia k
 
 SQL Server Express jest bezpłatny, klasy podstawowej wersji programu SQL Server, które można redystrybuować z aplikacjami. Pobieranie programu SQL Server Express z następującej strony:
   
-[Edycje Express programu SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)
+[SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-Jeśli używasz [programu Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB są objęte bezpłatna wersja Community, a także wersje Professional i wyższych.  
+Jeśli używasz [programu Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB znajduje się w wersji Professional lub nowszy, a także bezpłatna wersja Community programu Visual Studio.  
 
 ## <a name="get_ssms"></a> Pobieranie programu SQL Server Management Studio
 Jeśli chcesz wyświetlić lub zmodyfikować bazy danych, który został pobrany, można użyć programu SQL Server Management Studio (SSMS). Pobierz program SSMS z następującej strony:
@@ -46,7 +47,23 @@ Jeśli chcesz wyświetlić lub zmodyfikować bazy danych, który został pobrany
 [Pobieranie programu SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) 
 
 Można również wyświetlać i zarządzać bazami danych w programie Visual Studio zintegrowane środowisko programistyczne (IDE). W [programu Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), połączenia z bazą danych z **Eksplorator obiektów SQL Server**, lub Utwórz połączenie danych z bazy danych w **Eksploratora serwera**. Otwórz te okienka Eksploratora z **widoku** menu.
-  
+
+## <a name="northwind_access"></a> Instalowanie przykładowej bazy danych Northwind dla programu Microsoft Access
+
+Przykładowej bazy danych Northwind dla programu Microsoft Access nie jest dostępna w Microsoft Download Center. Aby zainstalować Northwind bezpośrednio z poziomu programu Access, wykonaj następujące czynności:
+
+1. Otwórz program Access.
+
+1. Wprowadź **Northwind** w **wyszukiwanie szablonów Online** , a następnie wybierz **Enter**.
+
+1. Na ekranie wyników wybierz **Northwind**. Otwiera nowe okno z opisem bazy danych Northwind.
+
+1. W nowym oknie w **nazwy pliku** tekst Podaj nazwę pliku dla kopii bazy danych Northwind.
+
+1. Wybierz pozycję **Utwórz**. Dostęp pliki do pobrania z bazy danych Northwind i przygotowuje plik.
+
+1. Po zakończeniu tego procesu zostanie otwarty ekran powitalny bazy danych.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

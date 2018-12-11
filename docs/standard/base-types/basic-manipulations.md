@@ -1,5 +1,6 @@
 ---
-title: 'Porady: wykonywanie podstawowych działań na ciągach w programie .NET Framework'
+title: 'Instrukcje: Wykonywanie podstawowych działań na ciągach w .NET'
+description: Zobacz przykład, który wywołuje wiele metod ciągów.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +11,15 @@ helpviewer_keywords:
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1206648c694c9f09a600e3c70f4aa27118b2d458
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: seodec18
+ms.openlocfilehash: 11f8043745c631a642b437339240cbf06fc8df5b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178055"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130640"
 ---
-# <a name="how-to-perform-basic-string-manipulations-in-net"></a>Porady: wykonywanie podstawowych działań na ciągach w .NET
+# <a name="how-to-perform-basic-string-manipulations-in-net"></a>Instrukcje: Wykonywanie podstawowych działań na ciągach w .NET
 W poniższym przykładzie użyto niektórych metod omówione w [podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md) tematy, aby utworzyć klasę, która wykonuje działań na ciągach w taki sposób, który można znaleźć w rzeczywistych aplikacjach. `MailToData` Klasa przechowuje nazwę i adres osoba w oddzielnych właściwości i zapewnia sposób łączenia `City`, `State`, i `Zip` pól w jeden ciąg do wyświetlania użytkownikowi. Ponadto klasa pozwala użytkownikowi wprowadzanie miejscowość, stan i kod POCZTOWY jako pojedynczy ciąg; Aplikacja automatycznie analizuje jeden ciąg i wprowadza odpowiednie informacje w odpowiednich właściwości.  
   
  Dla uproszczenia w tym przykładzie użyto aplikacji konsoli przy użyciu interfejsu wiersza polecenia.  

@@ -1,93 +1,114 @@
 ---
 title: Za pomocą usługi Azure Service Fabric
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Za pomocą usługi Azure Service Fabric
+description: Dowiedz się, jakie modeli aplikacji usługi Azure Service Fabric, możesz użyć, oprócz tylko za pomocą do aranżacji kontenerów.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 5058023aa7cbb42bcf39d061a3273b30e0e9b74c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105823"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126968"
 ---
 # <a name="using-azure-service-fabric"></a>Za pomocą usługi Azure Service Fabric
 
-Sieć szkieletowa usług Azure powstały od firmy Microsoft przejście z dostarczeniem pole produktów, które były najczęściej wbudowanymi w stylu, do dostarczania usług. Środowisko tworzenia i obsługi dużej usług na dużą skalę, takich jak bazy danych SQL Azure, bazy danych rozwiązania Cosmos Azure, Azure Service Bus lub zaplecza na funkcję Cortana w kształcie sieci szkieletowej usług. Platforma ewoluował w czasie przyjęta coraz więcej usług go. Ważne sieci szkieletowej usług było uruchomić nie tylko na platformie Azure, ale także w autonomicznych wdrożeniach systemu Windows Server.
+Usługa Azure Service Fabric, powstały od firmy Microsoft przejście od dostarczania produktów, pole, które były zazwyczaj monolitycznych w stylu, dostarczaniu usług. Środowisko tworzenia i obsługi dużych usług na dużą skalę, takich jak Azure SQL Database, Azure Cosmos DB, Azure Service Bus lub Cortany back-end, kształt usługi Service Fabric. Platforma ewoluował wraz z upływem czasu coraz więcej usług przyjęty go. Co ważniejsze usługi Service Fabric musiał uruchomić nie tylko na platformie Azure, ale także w autonomicznych wdrożeniach systemu Windows Server.
 
-Sieć szkieletowa usług ma na celu rozwiązania problemów twardych tworzenia oraz z usługą i wydajne, wykorzystania zasobów infrastruktury, tak, aby zespoły można rozwiązać problemy biznesowe przy użyciu metody mikrousług.
+Usługa Service Fabric ma na celu rozwiązywanie trudnych problemów, kompilowania i uruchamiania usługi i efektywnie wykorzystując zasoby infrastruktury tak, aby zespoły można rozwiązać problemy biznesowe przy użyciu podejścia mikrousług.
 
-Usługa Service Fabric realizuje dwa obszary do tworzenia aplikacji, które używają podejście mikrousług:
+Usługa Service Fabric udostępnia dwa obszary ułatwiające tworzenie aplikacji korzystających z podejścia mikrousług:
 
--   Platforma, która zapewnia usługi systemowe, aby wdrożyć, skalowania, uaktualniania, wykrywanie, ponowne uruchomienie usługi nie powiodło się, odnajdywanie lokalizacji usługi, zarządzanie stanem i monitorowanie kondycji. Te usługi systemu Włącz obowiązywać wielu cech mikrousług opisanych powyżej.
+- Platforma, która zapewnia usługi systemowe na wdrażanie, skalowanie, uaktualnienia, wykrywanie, ponowne uruchomienie usługi nie powiodło się, odnajdywanie lokalizacji usługi, zarządzanie stanem i monitorowanie kondycji. Te usługi systemu obowiązuje udostępniają wiele z właściwości opisanych powyżej mikrousług.
 
--   Interfejsów API programowania lub struktury, ułatwiające tworzenie aplikacji jako mikrousług: [podmiotów niezawodnych i niezawodne usługi](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework). Oczywiście można wybrać dowolny kod do kompilacji z mikrousługi, ale te interfejsy API upewnij bardziej bezpośrednie zadanie, a integrują się z platformą jest dokładniejsze. W ten sposób można uzyskać kondycji i informacje diagnostyczne lub mogą wykorzystać do zarządzania stanem niezawodnej.
+- Interfejsy API programowania lub struktury, ułatwiające tworzenie aplikacji zgodnie z mikrousług: [interfejsu Reliable actors oraz usług reliable services](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework). Można wybrać żadnego kodu do tworzenia usługi mikrousług, ale te interfejsy API upewnij zadania prostsze, a ich integracja z platformą dokładniej. W ten sposób można uzyskać kondycji i informacji diagnostycznych lub możesz korzystać z zalet zarządzania stanem niezawodne.
 
-Sieć szkieletowa usług jest niezależny względem sposobie tworzenia usługi, a można użyć innych technologii. Niemniej jednak zawiera wbudowane programowania interfejsów API, które ułatwiają tworzenie mikrousług.
+Usługa Service Fabric jest niezależny od względem jak opracować swoje usługi, a następnie można użyć dowolnej technologii. Jednak zapewnia wbudowane programowania interfejsów API, które ułatwiają tworzenie mikrousług.
 
-Jak pokazano w rysunek 4-26, możesz tworzyć i uruchamiać mikrousług w sieci szkieletowej usług jako procesy prostego lub kontenery Docker. Użytkownik może również mieszać na podstawie kontenera mikrousług z mikrousług na podstawie proces w ramach tego samego klastra sieci szkieletowej usług.
+Jak pokazano w rysunek 4-27, można tworzyć i uruchamianie mikrousług w usłudze Service Fabric, jako prosty procesy lub jako kontenery platformy Docker. Istnieje również możliwość mieszać opartych na kontenerach mikrousług przy użyciu procesu na podstawie mikrousług, w tym samym klastrze usługi Service Fabric.
 
-![](./media/image30.png)
+![Porównanie usługi Azure Service Fabric clusters: Mikrousługi jako procesy, w którym każdy węzeł działa jeden proces dla poszczególnych mikrousług; Mikrousługi jako kontenery, w którym każdy węzeł działa platformy Docker za pomocą kilku kontenerów jednego kontenera na mikrousługach.](./media/image30.png)
 
-**Rysunek 4-26**. Wdrażanie mikrousług jako procesy lub kontenerów w sieci szkieletowej usług Azure
+**Rysunek 4-27**. Wdrażanie mikrousług, jako procesów lub kontenerów w usłudze Azure Service Fabric
 
-Klastrów sieci szkieletowej usług oparte na hostach z systemem Linux i Windows można uruchamiać odpowiednio kontenery Docker Linux i kontenery systemu Windows.
+Klastry usługi Service Fabric, oparte na hostach z systemem Linux i Windows można uruchamiać kontenery platformy Docker w systemie Linux i kontenerów Windows, odpowiednio.
 
-Aby uzyskać aktualne informacje o obsłudze kontenery w sieci szkieletowej usług Azure, zobacz [sieci szkieletowej usług i kontenery](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
+Aby uzyskać aktualne informacje na temat obsługi kontenerów w usłudze Azure Service Fabric, zobacz [usługi Service Fabric i kontenery](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
-Sieci szkieletowej usług jest dobrym przykładem platformy, w którym można zdefiniować innej logicznej architektury (mikrousług biznesowych lub ograniczonych kontekstów) niż implementacji fizycznych, które zostały wprowadzone w systemie [architektura logiczna i fizyczna Architektura](#logical-architecture-versus-physical-architecture) sekcji. Na przykład w przypadku zastosowania [stanowych usług Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) w [sieć szkieletowa usług Azure](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), które zostały wprowadzone w sekcji [Stateless i mikrousług stanowe](#stateless-versus-stateful-microservices) później może mieć koncepcja mikrousługi firmy z wieloma usługami fizycznych.
+Usługi Service Fabric jest dobrym przykładem platformy, w którym można zdefiniować różne architekturę logiczną (mikrousług biznesowych lub ograniczone konteksty) niż fizyczna implementacja, które zostały wprowadzone w [architektura logiczna a fizycznych Architektura](logical-versus-physical-architecture.md) sekcji. Na przykład w przypadku zaimplementowania [stanowych usług Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction), które zostały wprowadzone w sekcji [Stateless w porównaniu z mikrousług stanowych](#stateless-versus-stateful-microservices) później, masz koncepcji biznesowych mikrousług przy użyciu wiele usług fizycznych.
 
-Jak pokazano na rysunku 4-27 i planowania z punktu widzenia mikrousługi/biznesowych, podczas wdrażania usługi Usługa niezawodnej Stateful sieci szkieletowej zazwyczaj należy zaimplementować dwie warstwy usług. Pierwsza to zaplecza stanowe niezawodnej usługi, która obsługuje wiele partycji (każda partycja jest usługi stanowej). Drugim jest usługa frontonu lub Usługa bramy odpowiedzialnym za routingu i danych agregacji wielu partycji lub wystąpienia usługi stanowej. Czy Usługa bramy również obsługuje komunikację klienta z pętli ponawiania uzyskiwanie dostępu do usługi zaplecza.
-W przypadku zastosowania usługi niestandardowej lub alternatevely można również użyć usługi sieć szkieletowa poza pole jest to Usługa bramy [wstecznego serwera Proxy usługi](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Jak pokazano na rysunku 4-28 i myśleć z punktu widzenia mikrousług/biznesowych podczas implementowania usługi Service Fabric Reliable usługa stanowa zazwyczaj należy zaimplementować dwie warstwy usług. Pierwszy jest zaplecza niezawodnej usługi stanowej, która obsługuje wiele partycji (każda partycja jest stanowej usługi). Drugim jest usługa frontonu, czyli usługę bramy, odpowiedzialnym za routingu i agreguje dane należące do wielu partycji lub wystąpień usługi stanowej. Usługi bramy również obsługuje komunikacji po stronie klienta za pomocą pętli ponawiania, uzyskiwanie dostępu do usługi zaplecza. Usługa bramy jest nazywane implementować niestandardowe usługi, czy też można również użyć usługi Service Fabric out-of--box [zwrotny serwer proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
 
 ![](./media/image31.png)
 
-**Rysunek 4-27**. Mikrousługi biznesowe z kilku wystąpień usługi stanowej i niestandardowych frontonu bramy
+**Rysunek 4-28**. Mikrousługi biznesowych z wielu wystąpień usługi stanowej, jak i niestandardowe bramy frontonu
 
-W każdym przypadku gdy używasz usługi sieć szkieletowa stanowych usług Reliable Services, masz również logicznych lub pracy mikrousługi (kontekst ograniczone), który zazwyczaj składa się z wielu fizycznych usług. Można je Usługa bramy i partycji usługi można zaimplementować jako usługi interfejsu API sieci Web platformy ASP.NET, jak pokazano w rysunek 4-26.
+W każdym przypadku gdy używasz usługi Service Fabric stanowych usług Reliable Services, masz również logicznych lub pracy mikrousługi (ograniczony kontekst), zwykle składa się z wielu usług fizycznych. Można je usługi bramy i partycji usługi można zaimplementować jako usług interfejsu API sieci Web platformy ASP.NET, jak pokazano w rysunek 4-28.
 
-W sieci szkieletowej usług, grupy i wdrażanie grup usług jako [aplikacji sieci szkieletowej usług](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model), która jest jednostki pakowania i wdrażania dla klastra lub orchestrator. W związku z tym aplikacji sieci szkieletowej usług mogą zostać zamapowane do tego autonomicznego biznesowych i granic mikrousługi logicznych lub ograniczonych kontekstu również tak mogłaby autonomicznie wdrożenia tych usług.
+W usłudze Service Fabric, grupy i wdrażanie grup usług jako [aplikacji usługi Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model), czyli jednostki pakowania i wdrażania dla programu orchestrator lub klastra. W związku z tym aplikacji usługi Service Fabric mógłby być mapowany na tego autonomicznego biznesowych i granic mikrousługi logicznych lub ograniczony kontekst, jak również, dzięki czemu można niezależnie wdrożyć te usługi.
 
-## <a name="service-fabric-and-containers"></a>Sieć szkieletowa usług i kontenerów
+## <a name="service-fabric-and-containers"></a>Usługa Service Fabric i kontenery
 
-W odniesieniu do kontenerów w sieci szkieletowej usług można także wdrożyć usługi kontenera obrazów w ramach klastra sieci szkieletowej usług. Jak pokazano na rysunku 4-28, w większości przypadków będą istnieć tylko jeden kontener dla danej usługi.
+W odniesieniu do kontenerów w usłudze Service Fabric można także wdrożyć usługi w obrazów kontenerów w ramach klastra usługi Service Fabric. Jak pokazano na rysunku 4-29, w większości przypadków będzie istnieć tylko jeden kontener dla danej usługi.
 
-![](./media/image32.png)
+![Aplikacja usługi Service Fabric można uruchomić kilka kontenerów, uzyskiwanie dostępu do bazy danych extern i cały zestaw będzie logiczne granic mikrousługi biznesowych](./media/image32.png)
 
-**Rysunek 4-28**. Mikrousługi biznesowe z kilku usług (kontenery) w sieci szkieletowej usług
+**Rysunek 4-29**. Mikrousługi biznesowych za pomocą kilku usług (kontenery) w usłudze Service Fabric
 
-Jednak kontenery tak zwane "boczną" (dwa kontenerów, które muszą zostać wdrożone razem w ramach usługi logicznej) są również dostępne w sieci szkieletowej usług. Ważne jest mikrousługi firm logicznej obramowanie kilku elementów spójności. W wielu przypadkach może być pojedynczą usługę z modelem danych, ale w innych przypadkach może być fizyczny również kilka usług.
+Jednak kontenery tak zwane "przyczepki" (dwa kontenery, które muszą zostać wdrożone razem jako część usługi logiczne) również są możliwe w usłudze Service Fabric. Ważne jest mikrousług firm logiczne obramowanie kilku elementów cohesive. W wielu przypadkach może być pojedynczą usługę za pomocą pojedynczego modelu danych, ale w innych przypadkach może być także kilka usług fizycznych.
 
-Począwszy od połowy 2017 w sieci szkieletowej usług nie można wdrożyć rz niezawodne Stateful usługi kontenerów — można wdrożyć tylko usługi bezstanowej oraz usługi aktora w kontenerach. Jednak pamiętaj, że można mieszać usług w procesach i usług w kontenerach w tej samej aplikacji usługi Service Fabric, jak pokazano w rysunek 4-29.
+Należy pamiętać, że można łączyć usługi w procesach i usługi w kontenerach w tej samej aplikacji usługi Service Fabric, jak pokazano w rysunek 4-30.
 
-![](./media/image33.png)
+![Aplikacja usługi Service Fabric, uruchamianie kontenerów i usług, w tym samym węźle.](./media/image33.png)
 
-**Rysunek 4-29**. Mapowany do aplikacji sieci szkieletowej usług z kontenerami usługi stanowej mikrousługi biznesowa
+**Rysunek 4-30**. Mikrousługi firm mapowane do aplikacji usługi Service Fabric z kontenerami i usług stanowych
 
-Aby uzyskać więcej informacji na temat obsługi kontenera w sieci szkieletowej usług Azure, zobacz [sieci szkieletowej usług i kontenery](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
+Aby uzyskać więcej informacji na temat obsługi kontenerów w usłudze Azure Service Fabric, zobacz [usługi Service Fabric i kontenery](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
-## <a name="stateless-versus-stateful-microservices"></a>Bezstanowe i stanowe mikrousług
+## <a name="stateless-versus-stateful-microservices"></a>Bezstanowe i stanowe mikrousługi
 
-Jak wspomniano wcześniej, każdy mikrousługi (logiczne ograniczone kontekst) musi być właścicielem jego model domeny (dane i logiki). W przypadku mikrousług bezstanowych bazy danych będzie zewnętrznych wykorzystujących relacyjne opcje, takie jak SQL Server lub opcji NoSQL, takie jak bazy danych MongoDB lub bazy danych Azure rozwiązania Cosmos.
+Jak wspomniano wcześniej, każda mikrousługa (logiczne ograniczony kontekst) musi być właścicielem swój model domeny (dane i logikę). W przypadku mikrousługi bezstanowe bazy danych będą zewnętrznych, wykorzystujące relacyjne opcje, takie jak SQL Server lub opcje NoSQL, takie jak usługi Azure Cosmos DB lub MongoDB.
 
-Ale uwierzytelnienia usługi można też stanowe w sieci szkieletowej usług, co oznacza, że dane znajdują się w obrębie mikrousługi. Te dane mogą istnieć nie tylko na tym samym serwerze, ale w ramach procesu mikrousługi w pamięci i utrwalony na dyskach twardych i replikowane do innych węzłów. Rysunek 4-30 zawiera różne podejścia.
+Ale samych usług może być również stanowych w usłudze Service Fabric, co oznacza, że dane znajdują się w ramach mikrousług. Te dane mogą istnieć nie tylko na tym samym serwerze, ale w ramach procesu mikrousług w pamięci i utrwalane na dyskach twardych i replikowane do innych węzłów. Rysunek 4-30 przedstawia różne podejścia.
 
-![](./media/image34.png)
+![W przypadku usług bezstanowych stanu (stan trwały, bazy danych) są przechowywane z mikrousług. W przypadku usług stanowych stany są przechowywane w mikrousługach.](./media/image34.png)
 
-**Rysunek 4-30**. Bezstanowe i stanowe mikrousług
+**Rysunek 4-31**. Bezstanowe i stanowe mikrousługi
 
-Podejście bezstanowych nadaje się doskonale i jest łatwiejsze do zaimplementowania niż mikrousług stanową, ponieważ podejście jest podobne do tradycyjnych i dobrze znane wzorców. Ale bezstanowych mikrousług nałożyć opóźnienia między procesu i źródeł danych. Wymagają one również więcej przenoszenie części próbując zwiększyć wydajność z kolejkami i dodatkowe pamięci podręcznej. Wynik jest, że można na końcu złożonych architektury, które ma zbyt wiele poziomów.
+Bezstanowe podejście nadaje się doskonale i jest prostsza do zaimplementowania niż mikrousług stanowych, ponieważ to podejście jest podobne do tradycyjnych i dobrze znanych wzorców. Jednak mikrousługi bezstanowe powodować opóźnienia między źródłami danych i procesów. Wymagają one również więcej ruchomych części gdy próbujesz poprawianie wydajności za pomocą dodatkowych pamięci podręcznej i kolejki. Powoduje to, że użytkownik może wystąpić złożone architektury, które mają zbyt wiele warstw.
 
-Z kolei [mikrousług stanowe](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) można programu excel w zaawansowanych scenariuszach, ponieważ nie istnieje żadne opóźnienia między domeny logikę i dane. Duże przetwarzania danych, ponownie gry kończy, baz danych jako usługa, i wszystkie inne scenariusze, małe opóźnienia korzystać z usług stanowych, które włączyć stan lokalnego szybszy dostęp.
+Z kolei [mikrousług stanowych](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) można programu excel w zaawansowanych scenariuszach, ponieważ nie istnieje żadne opóźnienie między domeny logikę i dane. Duże przetwarzania danych, gry ponownie kończy, baz danych jako usługa i innych scenariuszy o małych opóźnieniach, wszystkie korzystają z usług stanowych umożliwiających lokalne stan szybszy dostęp.
 
-Uzupełniają usług bezstanowych i stanowych. Na przykład widać 4 rysunek-30, prawo diagramie, że usługa stanowa może zostać podzielony na wiele partycji. Aby uzyskać dostęp do tych partycji, może być konieczne usługi bezstanowej działający jako Usługa bramy, który potrafi w celu rozwiązania każdej partycji w oparciu kluczy partycji.
+Uzupełniające są usługi stanowe i bezstanowe. Na przykład widać w rysunek 4-31, prawo diagramie, czy usługa stanowa może zostać podzielony na wiele partycji. Aby uzyskać dostęp do tych partycji, możesz potrzebować usługę bezstanową działający jako usługę bramy, której wie, jak rozwiązywać każdej partycji na podstawie kluczy partycji.
 
-Usługi stanowej mają wady. Jakie nakłada poziom złożoności, który pozwala na skalowanie w poziomie. Funkcje, które zazwyczaj są realizowane przez systemy zewnętrzne bazy danych należy rozwiązać kwestie dotyczące zadań, takich jak replikacja danych między mikrousług stanowe i partycjonowanie danych. Jednak to jedno z obszarów, w którym orchestrator, takich jak [sieć szkieletowa usług Azure](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) z jego [niezawodne usługi stanowej](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) może pomóc w najbardziej — dzięki uproszczeniu opracowywania i cyklem życia stateful przy użyciu mikrousług [niezawodnej usługi interfejsu API](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) i [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+Usługi stanowe mają wady. Jakie nakłada stopień złożoności, która umożliwia skalowanie w poziomie. Funkcje, które zazwyczaj są realizowane przez systemy zewnętrzne bazy danych muszą być kierowane zadań, takich jak replikacja danych między mikrousług stanowych i partycjonowanie danych. Jednak jest to jeden z obszarów, gdzie koordynatora, takich jak [usługi Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) z jego [stanowych usług reliable services](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) ułatwiają maksymalnie — poprzez uproszczenie programowania i cyklem życia stanowe przy użyciu mikrousług [interfejsu API usług Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) i [elementów Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
-Inne platformy mikrousługi, które umożliwiają stanowych usług, który obsługuje wzorca aktora i poprawiających odporność na uszkodzenia i opóźnienia między logikę biznesową i danych są Microsoft [Orleans](https://github.com/dotnet/orleans), Microsoft Research i [ Akka.NET](https://getakka.net/). Obu platform obecnie umożliwiają zwiększenie ich obsługę Docker.
+Innych platform tworzenia mikrousług, które umożliwiają usług stanowych obsługujące wzorcem aktora i który zwiększyć odporność na uszkodzenia i opóźnienie między logiki biznesowej i danych są programy Microsoft [Orleans](https://github.com/dotnet/orleans), począwszy od Microsoft Research oraz [ Akka.NET](https://getakka.net/). Obu platform obecnie umożliwiają zwiększenie ich obsługę platformy Docker.
 
-Należy zauważyć, że kontenery Docker bezstanowego same. Jeśli chcesz wdrożyć usługi stanowej, konieczne dodatkowe porady i wyższego poziomu struktur wspomniano wcześniej. 
+Należy zauważyć, że kontenery platformy Docker samodzielnie bezstanowe. Jeśli chcesz wdrożyć usługi stanowej konieczne dodatkowe struktury profesjonalnie opracowany i wyższego poziomu zanotowanej wcześniej.
+
+## <a name="using-azure-service-fabric-mesh"></a>Za pomocą usługi Azure Service Fabric siatki 
+
+Usługa Azure Service Fabric siatki jest w pełni zarządzana usługa, która umożliwia deweloperom tworzenie i wdrażanie aplikacji krytycznych dla misji bez jakiejkolwiek infrastruktury zarządzania. Użyj usługi Service Fabric siatki, aby tworzenie i uruchamianie aplikacji bezpiecznego, rozproszonych mikrousług, które można skalować na żądanie. 
+
+Jak pokazano na rysunku 4 – 32, aplikacjach hostowanych w systemie usługi Service Fabric siatki uruchamianie i skalowanie bez konieczności martwienia się o infrastrukturę wyłączania jego.
+
+![Wieloma kontenerami w celu aplikacja działająca na platformie Docker desktop można wdrożyć do usługi Azure Service Fabric siatki bez martwienia się o infrastrukturę.](media/image39.png)
+
+**Rysunek 4-32**. Wdrażanie aplikacji mikrousług/kontenerów do usługi Service Fabric siatki
+
+Dzieje się w tle Usługa Service Fabric siatki składa się z klastrami tysięcy maszyn. Wszystkie operacje klastra są ukryte od dewelopera. Po prostu musisz przekazać kontenerów, a następnie określ zasoby, których potrzebujesz, wymagania w zakresie dostępności i limity zasobów. Usługa Service Fabric siatki jest automatycznie alokowana, infrastruktury, żądane przez wdrożenie aplikacji i obsługuje także błędy infrastruktury, upewniając się, że Twoje aplikacje są o wysokiej dostępności. Należy zadbać o kondycji i szybkość reakcji aplikacji, nie na infrastrukturze.
+
+Aby uzyskać więcej informacji, zobacz [dokumentację usługi Service Fabric siatki](https://docs.microsoft.com/azure/service-fabric-mesh/).
+
+## <a name="choosing-orchestrators-in-azure"></a>Wybieranie koordynatorów na platformie Azure
+
+Poniższa tabela zawiera wskazówki dotyczące jakie orchestrator do użycia w zależności od obciążenia i przedstawienie systemu operacyjnego.
+
+![Usługi platformy Azure Kubernetes jest bardziej dojrzałych w systemie Linux niż w Windows i jest najczęściej używany do wdrażania microsevices oparte na kontenerach. Usługa Azure Service Fabric (klaster i siatki) jest bardziej dojrzałych Windows niż w systemie Linux, często używane do mikrousług w oparciu o kontenery, mikrousługi oparte na zwykły procesy i usługi stanowej.](media/image40.png)
+
+**Rysunek 4-33**. Wybór koordynatora w wskazówki dotyczące platformy Azure
 
 >[!div class="step-by-step"]
-[Poprzednie](scalable-available-multi-container-microservice-applications.md)
-[dalej](../docker-application-development-process/index.md)
+>[Poprzednie](scalable-available-multi-container-microservice-applications.md)
+>[dalej](../docker-application-development-process/index.md)

@@ -2,12 +2,12 @@
 title: '&lt;udpTransportSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: f1ec25a5747186ade1d721f266ff58fa5e559a49
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50e3b283bb10ba3f34303acbbd76b42d37fa7078
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767599"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127800"
 ---
 # <a name="ltudptransportsettingsgt"></a>&lt;udpTransportSettings&gt;
 Ten element konfiguracji udostępnia ustawienia transportu UDP [ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md).  
@@ -45,15 +45,15 @@ Ten element konfiguracji udostępnia ustawienia transportu UDP [ \<udpDiscoveryE
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|duplicateMessageHistoryLength|Liczba całkowita określająca maksymalną liczbę wartości skrótu wiadomości w celu zidentyfikowania zduplikowanych komunikatów używany przez transport.  Wykrywanie duplikatów zostaną wykonane na poziomie Obiekt TransportManager. Ustawienie tej właściwości na wartość 0 powoduje wyłączenie wykrywania duplikatów.<br /><br /> Ten atrybut umożliwia administratorom systemu lub deweloperom wyłączyć algorytmy wykrywania zduplikowanych komunikatów. Może to być pożądane, aby wdrożyć własny algorytm wykrywania duplikatów.<br /><br /> Wartość domyślna to 4112.|  
-|MaxBufferPoolSize|Liczba całkowita określająca maksymalny rozmiar pulami buforu, używany przez transport.|  
-|maxMulticastRetransmitCount|Liczba całkowita określająca maksymalną liczbę razy (oprócz pierwszego wysyłania) powinny zostać ponownie wysłane wiadomości.<br /><br /> Wartość domyślna to 2.|  
-|maxPendingMessageCount|Liczba całkowita określająca maksymalną liczbę wiadomości, które zostały odebrane, ale jeszcze nie zostały usunięte z obiektu InputQueue dla wystąpienia kanałów.  Jeśli obiektu InputQueue osiągnęła swój limit liczby oczekujących komunikatów, komunikat zostanie usunięty.<br /><br /> Wartość domyślna to 32.|  
+|duplicateMessageHistoryLength|Liczba całkowita określająca maksymalną liczbę wartości skrótu wiadomości używane przez transportu do identyfikowania zduplikowanych komunikatów.  Wykrywanie duplikatów, zostanie wykonane na poziomie elementu TransportManager. Ustawienie tej właściwości na wartość 0 powoduje wyłączenie wykrywania duplikatów.<br /><br /> Ten atrybut umożliwia administratorom systemu lub deweloperów, aby wyłączyć algorytmy wykrywania duplikatów wiadomości. Może to być pożądane, jeśli chcesz zaimplementować algorytm wykrywania duplikatów.<br /><br /> Wartość domyślna to 4112.|  
+|maxBufferPoolSize|Liczba całkowita określająca maksymalny rozmiar żadnych pul buforu używany przez transportu.|  
+|maxMulticastRetransmitCount|Liczba całkowita określająca maksymalną liczbę przypadków, gdy komunikat powinien zostać ponownie wysłane (oprócz pierwszego wysyłania).<br /><br /> Wartość domyślna to 2.|  
+|maxPendingMessageCount|Liczba całkowita określająca maksymalną liczbę wiadomości, które zostały przyjęte, ale nie zostały jeszcze usunięte z InputQueue wystąpienia pojedynczy kanał.  Jeśli InputQueue osiągnie swój limit liczby oczekujących komunikatów, komunikat zostanie usunięty.<br /><br /> Wartość domyślna to 32.|  
 |maxReceivedMessageSize|Liczba całkowita określająca maksymalny rozmiar komunikatu, który może przetworzyć wiązanie.<br /><br /> Wartość domyślna to 65507.|  
-|maxUnicastRetransmitCount|Liczba całkowita określająca maksymalną liczbę razy (oprócz pierwszego wysyłania) powinny zostać ponownie wysłane wiadomości.  Jeśli komunikat jest wysyłany do adresu emisji pojedynczej, odebrano komunikat odpowiedzi odpowiedniego nagłówka RelatesTo retransmisji może zakończyć się wcześniej (przed zainicjowaniu o skonfigurowaną liczbę razy).<br /><br /> Wartość domyślna to 1.|  
-|multicastInterfaceId|Ciąg unikatowo identyfikujący karty sieciowej, które mają być używane podczas wysyłania i odbierania multiemisji na maszynach wieloadresowych. W czasie wykonywania, transport użyje ta wartość atrybutu do wyszukiwania indeksu interfejsu, który jest następnie używana do ustawiania `IP_MULTICAST_IF` i `IPV6_MULTICAST_IF` gniazda opcje.  Ten sam indeks interfejsu będą używane podczas dołączanie do grupy multiemisji, jeśli ma to zastosowanie.<br /><br /> Wartość domyślna to `null`.|  
-|socketReceiveBufferSize|Liczba całkowita określająca rozmiar buforów odbioru na podstawowym gniazda interfejsu WinSock.<br /><br /> Użytkownik odbierający kanału można użyć tego atrybutu w powiązaniu do kontroli zachowania systemu odbiera dane.  Na przykład mając aplikacji, która zajmuje przychodzących komunikatów usługi WCF na maksymalną wartość progową, za pomocą większej wartości tego atrybutu umożliwia komunikaty, aby zająć w buforze WinSock podczas oczekiwania na aplikacji można było je przetworzyć.  Przy użyciu niższą wartość w tej samej sytuacji spowoduje wiadomości porzucane. Ten atrybut przedstawia podstawowy WinSock `SO_RCVBUF` gniazda opcji. Wartość tego atrybutu musi być co najmniej rozmiar `maxReceivedMessageSize`.   Ustawienie jej na wartość mniejszą niż `maxReceivedMessageSize` spowodują wyjątek czasu wykonywania.<br /><br /> Wartość domyślna to 65536.|  
-|timeToLive|Liczba całkowita określająca liczbę przeskoków sieciowych segmentu, przechodzących pakiety multiemisji.  Ten atrybut dostęp do funkcji skojarzonych z `IP_MULTICAST_TTL` i `IP_TTL` gniazda opcje.<br /><br /> Wartość domyślna to 1.|  
+|maxUnicastRetransmitCount|Liczba całkowita określająca maksymalną liczbę przypadków, gdy komunikat powinien zostać ponownie wysłane (oprócz pierwszego wysyłania).  Jeśli komunikat jest wysyłany na adres emisji pojedynczej, odebraniu komunikatu odpowiedzi za pomocą odpowiedniego nagłówka RelatesTo retransmisji może rozwiązać niniejszą wcześnie (przed zainicjowaniu skonfigurowaną liczbę razy).<br /><br /> Wartość domyślna to 1.|  
+|multicastInterfaceId|Ciąg, który unikatowo identyfikuje kartę sieciową, które mają być używane podczas wysyłania i odbierania ruchu multiemisji w przypadku komputerów wieloadresowych. W czasie wykonywania, transport ta wartość zostanie użyta atrybutów do wyszukiwania indeks interfejsu, który jest następnie używana do ustawiania `IP_MULTICAST_IF` i `IPV6_MULTICAST_IF` gniazda opcje.  Tego samego indeksu interfejsu będzie używany podczas dołączania do grupy multiemisji, jeśli ma to zastosowanie.<br /><br /> Wartość domyślna to `null`.|  
+|socketReceiveBufferSize|Liczba całkowita określająca rozmiar buforów odbioru na podstawowej gniazda interfejsu WinSock.<br /><br /> Użytkownik odbieranie kanału, można użyć tego atrybutu w powiązaniu do kontrolowania, jak system zachowuje się po odebraniu danych.  Na przykład biorąc pod uwagę aplikację, która zużywa wiadomości przychodzące usługi WCF w osiągnie maksymalny próg, przy użyciu większej wartości tego atrybutu będzie Zezwalaj na wiadomości wypadasz w buforze WinSock podczas oczekiwania na aplikację można było je przetworzyć.  Korzystanie z niższą wartość w tej samej sytuacji spowodowałaby wprowadzenie porzucone komunikaty. Ten atrybut udostępnia podstawowe WinSock `SO_RCVBUF` gniazda opcji. Ta wartość atrybutu musi być co najmniej rozmiar `maxReceivedMessageSize`.   Ustawienie na wartość mniejszą niż `maxReceivedMessageSize` spowodują wyjątek czasu wykonywania.<br /><br /> Wartość domyślna to 65536.|  
+|timeToLive|Liczba całkowita określająca liczbę przeskoków sieciowych segmentu, przechodzących pakiety multiemisji.  Ten atrybut uwidacznia funkcje skojarzone z `IP_MULTICAST_TTL` i `IP_TTL` gniazda opcje.<br /><br /> Wartość domyślna to 1.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -62,7 +62,7 @@ Ten element konfiguracji udostępnia ustawienia transportu UDP [ \<udpDiscoveryE
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|Standardowy punkt końcowy ze stałym odnajdywania powiązania transportu kontraktu i UDP.|  
+|[\<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|Standardowy punkt końcowy ze stałym odnajdywania kontraktu i UDP transportu powiązania.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Discovery.UdpTransportSettings>

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: e633c7cdd105125fc5fb595566d15cf5f5fe4e6f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ad0045f926b05b6a73dd64089290f4b8937004ca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845622"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150995"
 ---
 # <a name="dataadapter-parameters"></a>Parametry elementu DataAdapter
 <xref:System.Data.Common.DbDataAdapter> Ma cztery właściwości, które są używane do pobierania danych z i aktualizować dane do źródła danych: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> właściwość zwraca dane ze źródła danych; i <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, i <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> właściwości są używane do zarządzania zmiany w źródle danych. `SelectCommand` Właściwość musi być ustawiona przed wywołaniem `Fill` metody `DataAdapter`. `InsertCommand`, `UpdateCommand`, Lub `DeleteCommand` właściwości musi być ustawiona przed `Update` metody `DataAdapter` jest wywoływana w zależności od tego, jakie zmiany zostały wprowadzone do danych w <xref:System.Data.DataTable>. Załóżmy, że wiersze zostały dodane `InsertCommand` musi być ustawiona przed wywołaniem `Update`. Gdy `Update` przetwarza wierszy wstawionych, zaktualizowanych lub usuniętych `DataAdapter` używa odpowiednich `Command` właściwości przetwarzania akcji. Aktualne informacje na temat zmodyfikowanych wierszy jest przekazywany do `Command` obiektu za pomocą `Parameters` kolekcji.  
   
  Po zaktualizowaniu wiersza w źródle danych, należy wywołać instrukcji UPDATE, który używa do identyfikowania wiersza w tabeli, unikatowy identyfikator aktualizacji. Unikatowy identyfikator jest zazwyczaj wartość klucz podstawowy. Instrukcja UPDATE używa parametrów, które zawierają zarówno Unikatowy identyfikator, kolumny i wartości, które mają zostać zaktualizowane, jak pokazano w następującej instrukcji języka Transact-SQL.  
   
-```  
+```sql
 UPDATE Customers SET CompanyName = @CompanyName   
   WHERE CustomerID = @CustomerID  
 ```  
@@ -27,7 +27,7 @@ UPDATE Customers SET CompanyName = @CompanyName
   
  W tym przykładzie Visual Basic `CompanyName` pola do zaktualizowania z wartością `@CompanyName` parametr wiersza gdzie `CustomerID` jest równa wartości `@CustomerID` parametru. Parametry pobieranie informacji z przy użyciu zmodyfikowanych wierszy <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> właściwość <xref:System.Data.SqlClient.SqlParameter> obiektu. Poniżej przedstawiono parametry poprzednich instrukcji UPDATE próbki. Kod zakłada, że zmienna `adapter` reprezentuje prawidłowy <xref:System.Data.SqlClient.SqlDataAdapter> obiektu.  
   
-```  
+```vb
 adapter.Parameters.Add( _  
   "@CompanyName", SqlDbType.NChar, 15, "CompanyName")  
 Dim parameter As SqlParameter = _  

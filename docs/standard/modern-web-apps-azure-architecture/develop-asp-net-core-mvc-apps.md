@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308594"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152785"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Tworzenie platformy ASP.NET Core MVC aplikacji
 
@@ -83,7 +83,7 @@ Platforma ASP.NET Core ma wbudowaną obsługę i wewnętrznie sprawia, że użyc
 
 Statyczne przylepna występuje, gdy Twoich zajęciach wykonywać wywołania do metod statycznych lub dostępu do właściwości statycznej, które ma efekty uboczne ani zależności w infrastrukturze. Na przykład w przypadku metody, która wywołuje statyczną metodę, która z kolei zapis w bazie danych, metoda jest ściśle powiązany z bazą danych. Wszystko, co powoduje przerwanie wywołania bazy danych spowoduje przerwanie metodę. Testowanie takich metod jest bardzo trudne, ponieważ takie testy wymagają komercyjnych pozorowania bibliotek testowanie wywołania statycznych, lub należy badać tylko z bazą danych testów w miejscu. Wywołania statycznych, które nie mają żadnych zależności w infrastrukturze, zwłaszcza tych, które są całkowicie bezstanowe są w dobrym stanie wywołać i nie ma wpływu na sprzężenie lub testowania (poza sprzężenia kodu na wywołanie statyczne, sam).
 
-Wielu programistów zrozumieć ryzyko przylepna statycznych i stan globalny, ale będzie nadal ściśle Połącz swój kod do implementacji określonego poprzez bezpośrednie utworzenie wystąpienia. "Nowe jest pośredniczącego" ma być przypomnieniem o tym sprzężenia, a nie ogólny potępianiu użycie słowa kluczowego new. Podobnie jak za pomocą wywołania metody statycznej nowych wystąpień typów, które zwykle mają bez zewnętrznych zależności nie ściśle sprzęgnięcie kodu do szczegółów implementacji lub utrudniają testowania. Ale każdorazowo, gdy jest tworzone wystąpienie klasy przyjrzeć tylko krótkie należy wziąć pod uwagę, czy warto się kodować sprzętowo tego konkretnego wystąpienia w tej konkretnej lokalizacji, czy byłoby lepsze projektu, aby zażądać tego wystąpienia jako zależność.
+Wielu programistów zrozumieć ryzyko przylepna statycznych i stan globalny, ale będzie nadal ściśle Połącz swój kod do implementacji określonego poprzez bezpośrednie utworzenie wystąpienia. "Nowe jest pośredniczącego" ma być przypomnieniem o tym sprzężenia, a nie ogólne potępianiu użytkowania `new` — słowo kluczowe. Podobnie jak za pomocą wywołania metody statycznej nowych wystąpień typów, które zwykle mają bez zewnętrznych zależności nie ściśle sprzęgnięcie kodu do szczegółów implementacji lub utrudniają testowania. Ale każdorazowo, gdy jest tworzone wystąpienie klasy przyjrzeć tylko krótkie należy wziąć pod uwagę, czy warto się kodować sprzętowo tego konkretnego wystąpienia w tej konkretnej lokalizacji, czy byłoby lepsze projektu, aby zażądać tego wystąpienia jako zależność.
 
 ### <a name="declare-your-dependencies"></a>Zadeklaruj zależności
 
@@ -138,7 +138,7 @@ Oddzielenie aplikacji, od szczegółów implementacji na innym sposobem jest mik
 
 ### <a name="feature-organization"></a>Funkcja organizacji
 
-Domyślnie aplikacje platformy ASP.NET Core organizowanie ich strukturę folderów w celu uwzględnienia kontrolery i widoki i często modele widoków. Kod po stronie klienta do obsługi tych struktur po stronie serwera są zwykle przechowywane osobno w folderze wwwroot. Jednak duże aplikacje mogą wystąpić problemy z tej organizacji, ponieważ często nad dowolnym dana funkcja wymaga przechodzenie między te foldery. Pobiera to bardziej trudne, wraz z rozwojem liczbę plików i podfolderów w folderze każdego skutkuje dużym stopniem przewijanie w Eksploratorze rozwiązań. Jedno rozwiązanie tego problemu jest zorganizowanie kod aplikacji przez _funkcji_ zamiast według typu pliku. Ten styl organizacji jest zwykle określane jako funkcja foldery lub wycinki funkcji (Zobacz również: [pionowe wycinki](https://deviq.com/vertical-slices/)).
+Domyślnie aplikacje platformy ASP.NET Core organizowanie ich strukturę folderów w celu uwzględnienia kontrolery i widoki i często modele widoków. Kod po stronie klienta do obsługi tych struktur po stronie serwera są zwykle przechowywane osobno w folderze wwwroot. Jednak duże aplikacje mogą wystąpić problemy z tej organizacji, ponieważ często nad dowolnym dana funkcja wymaga przechodzenie między te foldery. Pobiera to bardziej trudne, wraz z rozwojem liczbę plików i podfolderów w folderze każdego skutkuje dużym stopniem przewijanie w Eksploratorze rozwiązań. Jedno rozwiązanie tego problemu jest zorganizowanie kod aplikacji przez _funkcji_ zamiast według typu pliku. Ten styl organizacji jest zwykle określane jako funkcja foldery lub wycinki funkcji (Zobacz również: [Wycinki pionowy](https://deviq.com/vertical-slices/)).
 
 Platforma ASP.NET Core MVC obsługuje obszary, w tym celu. Obszary można utworzyć oddzielne zestawy kontrolery i widoki folderów (a także żadnych modeli skojarzone) w każdym folderze obszaru. Rysunek 7-1 przedstawiono przykład struktury folderów, korzystać z obszarów.
 
@@ -403,7 +403,7 @@ Oprócz obsługi stron i odpowiadanie na żądania dotyczące danych za pośredn
 
 SignalR platformy ASP.NET Core jest dostępny za pomocą platformy ASP.NET Core 2.1.
 
-Komunikacja z klientem w czasie rzeczywistym, czy przy użyciu funkcji WebSockets bezpośrednio lub innych technik przydają się w różnych zastosowaniach. Niektóre przykłady:
+Komunikacja z klientem w czasie rzeczywistym, czy przy użyciu funkcji WebSockets bezpośrednio lub innych technik przydają się w różnych zastosowaniach. Oto niektóre przykłady:
 
 - Aplikacje na żywo pokoju rozmów
 
@@ -559,5 +559,5 @@ _Dowiedz się więcej o opcjach wdrażania platformy Azure w programie [rozdzia�
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Poprzednie](common-client-side-web-technologies.md)
-[dalej](work-with-data-in-asp-net-core-apps.md)
+>[Poprzednie](common-client-side-web-technologies.md)
+>[dalej](work-with-data-in-asp-net-core-apps.md)

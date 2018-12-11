@@ -1,31 +1,31 @@
 ---
 title: Seedwork (klasy bazowe wielokrotnego użytku i interfejsy dla modelu domeny)
-description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Seedwork (klasy bazowe wielokrotnego użytku i interfejsy dla modelu domeny)
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Użyj koncepcji seedwork jako punktu wyjścia, aby uruchomić implementacji modelu zorientowanej na wzorzec DDD domeny.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 7a38d90caab2232c17d8d58ca0c57d5bb56b3ce9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 9a7ddbc8a15e4064b4446ff322148720312e7937
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198401"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152237"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (klasy bazowe wielokrotnego użytku i interfejsy dla modelu domeny)
 
-Folder rozwiązania zawiera *SeedWork* folderu. *SeedWork* folder zawiera niestandardowe klasy bazowej, która służy jako podstawa dla domen, jednostek i obiektów wartości. Użyj tych klas bazowych, więc nie trzeba nadmiarowy kod w klasie obiektów w każdej domenie. Folder dla tych typów klasy jest nazywany *SeedWork* i nie mielibyśmy mieć czegoś podobnego *Framework*. Jest on nazywany *SeedWork* ponieważ folder zawiera tylko mały podzbiór klasy wielokrotnego użytku, które naprawdę nie należy traktować platformę. *Seedwork* termin wprowadzone przez [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) i spopularyzowany przez [Martina Fowlera](https://martinfowler.com/bliki/Seedwork.html) , ale można też nazwać tego folderu wspólnego, SharedKernel, lub podobne.
+Folder rozwiązania zawiera *SeedWork* folderu. Ten folder zawiera niestandardowe klasy bazowej, która służy jako podstawa dla domen, jednostek i obiektów wartości. Użyj tych klas bazowych, więc nie trzeba nadmiarowy kod w klasie obiektów w każdej domenie. Folder dla tych typów klasy jest nazywany *SeedWork* i nie mielibyśmy mieć czegoś podobnego *Framework*. Jest on nazywany *SeedWork* ponieważ folder zawiera tylko mały podzbiór klasy wielokrotnego użytku, które naprawdę nie należy traktować platformę. *Seedwork* termin wprowadzone przez [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) i spopularyzowany przez [Martina Fowlera](https://martinfowler.com/bliki/Seedwork.html) , ale można też nazwać tego folderu wspólnego, SharedKernel, lub podobne.
 
-Rysunek 9 – 12 zawiera klasy, które tworzą seedwork modelu domeny w mikrousługę szeregowania. Ma ona kilka niestandardowych klas podstawowych, takich jak jednostki, ValueObject i wyliczenia, a także kilka interfejsów. Te interfejsy (IRepository i IUnitOfWork) informuje warstwy infrastruktury o jakie musi zostać wdrożone. Te interfejsy są również używane przez wstrzykiwanie zależności od warstwy aplikacji.
+Rysunek 7-12 zawiera klasy, które tworzą seedwork modelu domeny w mikrousługę szeregowania. Ma ona kilka niestandardowych klas podstawowych, takich jak jednostki, ValueObject i wyliczenia, a także kilka interfejsów. Te interfejsy (IRepository i IUnitOfWork) informuje warstwy infrastruktury o jakie musi zostać wdrożone. Te interfejsy są również używane przez wstrzykiwanie zależności od warstwy aplikacji.
 
-![](./media/image13.PNG)
+![Szczegółowa zawartość folderu SeedWork, zawierające klasy podstawowe i interfejsy: Entity.CS, Enumeration.cs, IAggregateRoot.cs IRepository.cs, IUnitOfWork.cs i ValueObject.cs](./media/image13.PNG)
 
-**Rysunek 9 – 12**. Przykładowy zestaw klas bazowych "seedwork" model domeny i interfejsy
+**Rysunek 7-12**. Przykładowy zestaw klas bazowych "seedwork" model domeny i interfejsy
 
 Jest to typ, kopiowanie i wklejanie ponowne używanie wielu deweloperów na udziale między projektami, a nie formalny strukturę. Może mieć seedworks w dowolnej warstwy lub biblioteki. Jednak zestaw klas i interfejsy pobiera wystarczająco duża, można utworzyć bibliotekę pojedynczą klasę.
 
 ## <a name="the-custom-entity-base-class"></a>Niestandardowe klasy podstawowej jednostki
 
-Poniższy kod jest przykładem klasy podstawowej jednostki, gdy umieścisz kod, który może być taki sam sposób używany przez wszystkie jednostki domeny, takich jak identyfikator jednostki [Operatory równości](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal), listy zdarzeń domeny na jednostkę, np.
+Poniższy kod jest przykładem klasy podstawowej jednostki, gdy umieścisz kod, który może być taki sam sposób używany przez wszystkie jednostki domeny, takich jak identyfikator jednostki [Operatory równości](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-comparison-operator), listy zdarzeń domeny na jednostkę, np.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
@@ -105,13 +105,13 @@ public abstract class Entity
 }
 ```
 
-Poprzedni kod, korzystając z listy zdarzeń domeny na jednostkę zostaną wyjaśnione w kolejnych sekcjach, w przypadku skupienia się na zdarzeń domeny. 
+Poprzedni kod, korzystając z listy zdarzeń domeny na jednostkę zostaną wyjaśnione w kolejnych sekcjach, w przypadku skupienia się na zdarzeń domeny.
 
 ## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Kontrakty repozytorium (interfejsy) w warstwie modelu domeny
 
-Kontrakty repozytorium są po prostu interfejsy platformy .NET, które wyrażania wymagań kontraktu repozytoriów ma być używany dla każdej agregacji. 
+Kontrakty repozytorium są po prostu interfejsy platformy .NET, które wyrażania wymagań kontraktu repozytoriów ma być używany dla każdej agregacji.
 
-Repozytoria, z kod programem EF Core lub innymi zależności infrastruktury i kodu (Linq, SQL itp.), nie może być realizowana w ramach modelu domeny; repozytoriów tylko powinny implementować interfejsy, które należy zdefiniować. 
+Repozytoria, z kod programem EF Core lub innymi zależności infrastruktury i kodu (Linq, SQL itp.), nie może być realizowana w ramach modelu domeny; repozytoriów tylko powinny implementować interfejsy, które są zdefiniowane w modelu domeny.
 
 Wzorzec związane z tym rozwiązaniem (wprowadzenie do interfejsów repozytorium w warstwie modelu domeny) jest wzorcem rozdzielonych interfejsu. Jako [wyjaśniono](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) Martina fowlera "w użyciu interfejsu oddzielone, aby zdefiniować interfejs w jednym pakietu, ale jej wdrożenia w innej. W ten sposób klient, który wymaga zależności do interfejsu może być całkowicie nieświadome implementacji."
 
@@ -124,7 +124,7 @@ Na przykład w poniższym przykładzie, za pomocą interfejsu IOrderRepository z
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
-        
+
     void Update(Order order);
 
     Task<Order> GetAsync(int orderId);
@@ -139,10 +139,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Martina Fowlera. Interfejs rozdzielonych.**
-    [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
-
+- **Martina Fowlera. Interfejs rozdzielonych.** \
+  [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 >[!div class="step-by-step"]
-[Poprzednie](net-core-microservice-domain-model.md)
-[dalej](implement-value-objects.md)
+>[Poprzednie](net-core-microservice-domain-model.md)
+>[dalej](implement-value-objects.md)

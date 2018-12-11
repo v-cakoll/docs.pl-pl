@@ -1,1 +1,1 @@
-**Ten temat dotyczy: ✓** zestawu .NET Core SDK 2.1.300 i nowsze wersje
+**Ten temat dotyczy: ✓** zestawu SDK programu .NET Core 2.1 i nowsze wersje

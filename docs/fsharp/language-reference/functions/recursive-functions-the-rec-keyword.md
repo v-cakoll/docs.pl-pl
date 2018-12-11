@@ -1,15 +1,15 @@
 ---
-title: 'Funkcje rekursywne: rec — Słowo kluczowe (F#)'
-description: Dowiedz się, jak użyć słowa kluczowego "rec" F# za pomocą słowa kluczowego "let", do definiowania funkcji recursive.
+title: 'Funkcje rekursywne: Słowo kluczowe "rec" (F#)'
+description: Dowiedz się, jak F# — słowo kluczowe "rec" służy do definiowania funkcji recursive za pomocą słowa kluczowego "let".
 ms.date: 05/16/2016
-ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0db3ed7f85a1380654f2827b4773985b661589c7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48024522"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127735"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>Funkcje rekursywne: rec — Słowo kluczowe
+# <a name="recursive-functions-the-rec-keyword"></a>Funkcje rekursywne: Rec — słowo kluczowe
 
 `rec` — Słowo kluczowe jest używany razem z `let` — słowo kluczowe do definiowania funkcji recursive.
 
@@ -30,14 +30,14 @@ function2-body
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje rekursywne, funkcje, które wywołują się, są identyfikowane jawnie w języku F#. Spowoduje to udostępnienie identyfikator, który jest definiowany w zakresie funkcji.
+Funkcje rekursywne, funkcje, które wywołują się, są identyfikowane jawnie w F# języka. Spowoduje to udostępnienie identyfikator, który jest definiowany w zakresie funkcji.
 
 Poniższy kod ilustruje funkcji recursive, które oblicza *n*<sup>th</sup> Fibonacci numer.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
->[!NOTE]
-W praktyce tak jak w powyższym kodzie jest marnotrawstwa czasu pamięci i procesora, ponieważ spowodowałoby to przeprowadzanie ponownego obliczania wcześniej obliczanej wartości.
+> [!NOTE]
+> W praktyce tak jak w powyższym kodzie jest marnotrawstwa czasu pamięci i procesora, ponieważ spowodowałoby to przeprowadzanie ponownego obliczania wcześniej obliczanej wartości.
 
 Metody są niejawnie cykliczne w obrębie typu; nie ma potrzeby można dodać `rec` — słowo kluczowe. Powiązania Let w klasach nie są niejawnie cykliczne.
 

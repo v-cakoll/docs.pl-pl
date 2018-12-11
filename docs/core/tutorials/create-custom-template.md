@@ -2,14 +2,14 @@
 title: Utwórz nowy szablon niestandardowy dla platformy dotnet
 description: Dowiedz się, jak utworzyć niestandardowy szablon dla nowego polecenia dotnet w tę zabawną samouczka.
 author: guardrex
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 63f8c8a4d029285a02255637c8a79358e5ef0095
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516656"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169739"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Utwórz nowy szablon niestandardowy dla platformy dotnet
 
@@ -64,7 +64,7 @@ Szablon jest ukończona. W tym momencie masz dwie opcje dystrybucji szablonu. Ab
 1. Skopiuj zawartość do folderu projektu, łącznie z jej *.template.config/template.json* pliku do *zawartości* utworzony folder.
 1. Obok pozycji *zawartości* folderu, Dodaj [ *nuspec* pliku](/nuget/create-packages/creating-a-package). Soubor nuspec jest plik manifestu XML, który opisuje zawartość pakietu i dyski proces tworzenia pakietu NuGet.
 
-   ![Struktura katalogów przedstawiający układ pakietu NuGet](./media/create-custom-template/nugetdirectorylayout.png)
+   ![Struktura katalogów przedstawiający układ pakietu NuGet](./media/create-custom-template/nuget-directory-layout.png)
 
 1. Wewnątrz  **\<packageTypes >** element *nuspec* plików, obejmują  **\<packageType >** element z `name` wartość atrybutu `Template`. Zarówno *zawartości* folder i *nuspec* plik powinien znajdować się w tym samym katalogu. W tabeli przedstawiono minimalne *nuspec* pliku elementów wymaganych do utworzenia szablonu jako pakiet NuGet.
 
@@ -136,7 +136,7 @@ dotnet new -i NUnit3.DotNetNew.Template
 
 Po wyświetleniu listy szablonów za pomocą `dotnet new -l`, zostanie wyświetlony *NUnit 3 Test projekt* nazwą krótkim *nunit* na liście szablonów. Możesz użyć szablonu w następnej sekcji.
 
-![Wyświetlana szablonu NUnit z innych zainstalowanych szablonów w oknie konsoli](./media/create-custom-template/nunit1.png)
+![Okno konsoli przedstawiający szablon NUnit z innych szablonów](./media/create-custom-template/nunit-template-console-window.png)
 
 ### <a name="create-a-project-from-the-template"></a>Tworzenie projektu z szablonu
 
@@ -148,7 +148,7 @@ dotnet new nunit
 
 Konsolę pokazuje, że projekt zostanie utworzony i czy projektu pakiety zostaną przywrócone. Po uruchomieniu polecenia Projekt jest gotowy do użycia.
 
-![Okno konsoli przedstawiający dane wyjściowe nowego polecenia dotnet, ponieważ tworzy projekt NUnit i przywraca zależności projektu](./media/create-custom-template/nunit2.png)
+![Oknie konsoli zostaną wyświetlone dane wyjściowe nunit nowe dotnet, w tym Przywracanie zależności projektu](./media/create-custom-template/dotnet-new-nunit-console-output.png)
 
 ### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a>Aby odinstalować szablonu z pakietu NuGet, przechowywane w witrynie nuget.org
 

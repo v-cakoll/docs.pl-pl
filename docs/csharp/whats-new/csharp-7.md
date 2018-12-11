@@ -3,12 +3,12 @@ title: Co nowego w języku C# 7.0 — przewodnik po języku C#
 description: Zapoznaj się z omówieniem nowych funkcji, które zostaną dodane w przyszłych wersji języka C# 7.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237387"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155291"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w języku C# 7.0
 
@@ -22,7 +22,7 @@ C# 7.0 dodaje wiele nowych funkcji do języka C#:
 * [Dopasowanie do wzorca](#pattern-matching)
     - Można utworzyć logikę rozgałęziania, na podstawie dowolnego typu i wartości elementów członkowskich tych typów.
 * [`ref` Zmienne lokalne i](#ref-locals-and-returns)
-    - Argumenty metody i zmienne lokalne mogą być odwołania do innego magazynu.
+    - Metoda zmienne lokalne i wartości zwracane mogą być odwołania do innych magazynów.
 * [Funkcje lokalne](#local-functions)
     - Można zagnieżdżać funkcji w innych funkcjach, aby ograniczyć ich zakres i widoczność.
 * [Więcej elementy członkowskie z wyrażeniem](#more-expression-bodied-members)
@@ -105,7 +105,7 @@ Po lewej i prawej stronie przypisania, można określić nazwy pól:
 
 Wiersz powyżej generuje ostrzeżenie, `CS8123`, informacją, że nazwy po prawej stronie przypisania, `Alpha` i `Beta` są ignorowane, ponieważ są w konflikcie z nazwami po lewej stronie `First` i `Second`.
 
-W powyższych przykładach podstawowa składnia do deklarowania krotek. Kolekcje są najbardziej przydatne jako typów zwracanych dla `private` i `internal` metody. Krotek zapewnia prostą składnię dla tych metod zwrócić wiele wartości dyskretnych: zapisywania pracy tworzenia `class` lub `struct` definiujący typ zwracany. Nie ma potrzeby tworzenia nowego typu.
+W powyższych przykładach podstawowa składnia do deklarowania krotek. Kolekcje są najbardziej przydatne jako typów zwracanych dla `private` i `internal` metody. Kolekcje zapewniają prostą składnię dla tych metod zwrócić wiele wartości dyskretnych: Zapisywanie pracy tworzenia `class` lub `struct` definiujący typ zwracany. Nie ma potrzeby tworzenia nowego typu.
 
 Utworzenie spójnej kolekcji jest wydajniejsze i bardziej produktywne.
 Jest prostsze, lekki Składnia umożliwiająca zdefiniowanie struktury danych, który zawiera więcej niż jedną wartość. Przykładowa metoda poniżej zwraca minimalne i maksymalne wartości znajdujących się w sekwencji liczb całkowitych:
@@ -281,6 +281,8 @@ Zmienne lokalne ref i ref zwraca algorytmy Włącz, które są bardziej wydajne,
 
 Dodawanie `ref` wartość zwracana jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes). Kompiluje istniejący kod, ale odwołania zwracana wartość jest kopiowany po przypisaniu. Obiekty wywołujące muszą zaktualizować magazyn dla zwracanej wartości `ref` zmienną lokalną, aby przechowywać zwracany jako odwołanie.
 
+Aby uzyskać więcej informacji, zobacz [ref — słowo kluczowe](../language-reference/keywords/ref.md) artykułu.
+
 ## <a name="local-functions"></a>Funkcje lokalne
 
 Wiele projektów dla klasy zawierają metody, które są wywoływane z tylko jedną lokalizację. Te dodatkowe metody prywatnej Zachowaj każdej metody niewielkiego i skupionego projektu. Jednak ich może utrudnić zrozumienie klasę, odczytując je po raz pierwszy. Te metody musi być rozumiane poza kontekstem jednej lokalizacji wywoływania.
@@ -327,7 +329,7 @@ C# 6 wprowadzono [elementy członkowskie z wyrażeniem](csharp-6.md#expression-b
 > [!NOTE]
 > W tym przykładzie nie potrzebuje finalizatora, jednak wyświetleniem pokazano składnię. Nie należy implementować finalizator w klasie, chyba że jest to niezbędne zwolnić niezarządzane zasoby. Należy również rozważyć użycie <xref:System.Runtime.InteropServices.SafeHandle> klasy zamiast na zarządzaniu bezpośrednio niezarządzane zasoby.
 
-Te nowe lokalizacje dla elementy członkowskie z wyrażeniem reprezentują ważnym kamieniem milowym dla języka C#: te funkcje zostały zaimplementowane przez członków społeczności nad typu open-source [Roslyn](https://github.com/dotnet/Roslyn) projektu.
+Te nowe lokalizacje dla elementy członkowskie z wyrażeniem reprezentują ważnym kamieniem milowym dla C# języka: Te funkcje zostały zaimplementowane przez członków społeczności nad typu open-source [Roslyn](https://github.com/dotnet/Roslyn) projektu.
 
 Zmiana metody do elementu członkowskiego zabudowanego wyrażenie jest [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
 

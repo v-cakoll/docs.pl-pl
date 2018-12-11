@@ -8,7 +8,7 @@ To repozytorium zawiera dokumentacji koncepcyjnego dla platformy .NET. [Witrynie
 
 Zagadnienia i zadania dla wszystkich trzech tych repozytoriów są śledzone w tym miejscu. Mamy duże społeczności przy użyciu tych zasobów. Ułatwiamy naszych wszelkich starań, aby reagować na problemy w odpowiednim czasie. Możesz dowiedzieć się więcej o naszych procedury dotyczące klasyfikacji i rozwiązywanie problemów z naszych [problemy z zasadami](issues-policy.md) tematu.
 
-Chętnie poznamy wkładów, aby pomóc nam w ulepszeniu ukończenia dokumentacji platformy .NET. Aby współtworzyć, zobacz [projektów dla platformy .NET, uczestnicy społeczności](https://github.com/dotnet/docs/projects/35) zapoznać się z pomysłami. [Współtworzenia przewodnik](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) zawiera instrukcje na procedurach używamy. Lub sprawdź [listę problemów](https://github.com/dotnet/docs/issues) zadań, które Cię interesują.
+Chętnie poznamy wkładów, aby pomóc nam w ulepszeniu ukończenia dokumentacji platformy .NET. Aby współtworzyć, zobacz [projektów dla platformy .NET, uczestnicy społeczności](https://github.com/dotnet/docs/projects/35) zapoznać się z pomysłami. [Współtworzenia przewodnik](CONTRIBUTING.md) zawiera instrukcje na procedurach używamy. Lub sprawdź [listę problemów](https://github.com/dotnet/docs/issues) zadań, które Cię interesują.
 
 Przewidujemy, że [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) i [Unity](http://docs.unity3d.com/Manual/index.html) spowoduje również użycie tej dokumentacji.
 

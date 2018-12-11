@@ -1,15 +1,14 @@
 ---
-title: DotNet nuget Usuwanie polecenia — interfejs wiersza polecenia platformy .NET Core
+title: polecenie Usuń nuget DotNet
 description: Polecenia dotnet-nuget-delete Usuwa lub unlists pakietu z serwera.
 author: karann-msft
-ms.author: mairaw
-ms.date: 06/01/2018
-ms.openlocfilehash: f4aa027a465c4adea1de13853063d03e8e295411
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 827d295d7a52b6c9c82adbcf3d25281bd1cc98fd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180884"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168315"
 ---
 # <a name="dotnet-nuget-delete"></a>Usuń nuget DotNet
 
@@ -21,16 +20,10 @@ ms.locfileid: "50180884"
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--no-service-endpoint]
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
-dotnet nuget delete [-h|--help]
-```
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
-    [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
@@ -47,92 +40,80 @@ dotnet nuget delete [-h|--help]
 
 ## <a name="arguments"></a>Argumenty
 
-`PACKAGE_NAME`
+* **`PACKAGE_NAME`**
 
-Nazwa/identyfikator pakietu do usunięcia.
+  Nazwa/identyfikator pakietu do usunięcia.
 
-`PACKAGE_VERSION`
+* **`PACKAGE_VERSION`**
 
-Wersja pakietu do usunięcia.
+  Wersja pakietu do usunięcia.
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`--force-english-output`
+* **`--force-english-output`**
 
- Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.
+  Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.
 
-`-h|--help`
+* **`-h|--help`**
 
-Drukuje krótki pomoc dotyczącą polecenia.
+  Drukuje krótki pomoc dotyczącą polecenia.
 
-`-k|--api-key <API_KEY>`
+* **`--interactive`**
 
-Klucz interfejsu API dla serwera.
+  Umożliwia polecenie, aby zablokować i wymaga ręcznej akcji dla operacji, takich jak uwierzytelnianie. Opcja dostępna od zestawu SDK programu .NET Core 2.2.
 
-`--no-service-endpoint` Nie dołącza "interfejsu api w wersji 2/pakiet" adres URL źródła.
+* **`-k|--api-key <API_KEY>`**
 
-`--non-interactive`
+  Klucz interfejsu API dla serwera.
 
-Nie monit o podanie danych wejściowych użytkownika lub potwierdzenia.
+* **`--no-service-endpoint`**
 
-`-s|--source <SOURCE>`
+  Nie dołącza "interfejsu api w wersji 2/pakiet" adres URL źródła. Opcja dostępna od zestawu SDK programu .NET Core 2.1.
 
-Określa adres URL serwera. Obsługiwane adresów URL dla dołączania nuget.org `https://www.nuget.org`, `https://www.nuget.org/api/v3`, i `https://www.nuget.org/api/v2/package`. Dla prywatnych źródeł danych, zastąp nazwę hosta (na przykład `%hostname%/api/v3`).
+* **`--non-interactive`**
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+  Nie monit o podanie danych wejściowych użytkownika lub potwierdzenia.
 
-`--force-english-output`
+* **`-s|--source <SOURCE>`**
 
- Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.
-
-`-h|--help`
-
-Drukuje krótki pomoc dotyczącą polecenia.
-
-`-k|--api-key <API_KEY>`
-
-Klucz interfejsu API dla serwera.
-
-`--non-interactive`
-
-Nie monit o podanie danych wejściowych użytkownika lub potwierdzenia.
-
-`-s|--source <SOURCE>`
-
-Określa adres URL serwera. Obsługiwane adresów URL dla dołączania nuget.org `https://www.nuget.org`, `https://www.nuget.org/api/v3`, i `https://www.nuget.org/api/v2/package`. Dla prywatnych źródeł danych, zastąp nazwę hosta (na przykład `%hostname%/api/v3`).
+  Określa adres URL serwera. Obsługiwane adresów URL dla dołączania nuget.org `https://www.nuget.org`, `https://www.nuget.org/api/v3`, i `https://www.nuget.org/api/v2/package`. Dla prywatnych źródeł danych, zastąp nazwę hosta (na przykład `%hostname%/api/v3`).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`--force-english-output`
+* **`--force-english-output`**
 
- Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.
+  Wymusza na aplikacji do uruchamiania przy użyciu kultury niezmiennej, oparte na język angielski.
 
-`-h|--help`
+* **`-h|--help`**
 
-Drukuje krótki pomoc dotyczącą polecenia.
+  Drukuje krótki pomoc dotyczącą polecenia.
 
-`-k|--api-key <API_KEY>`
+* **`-k|--api-key <API_KEY>`**
 
-Klucz interfejsu API dla serwera.
+  Klucz interfejsu API dla serwera.
 
-`--non-interactive`
+* **`--non-interactive`**
 
-Nie monit o podanie danych wejściowych użytkownika lub potwierdzenia.
+  Nie monit o podanie danych wejściowych użytkownika lub potwierdzenia.
 
-`-s|--source <SOURCE>`
+* **`-s|--source <SOURCE>`**
 
-Określa adres URL serwera. Obsługiwane adresów URL dla dołączania nuget.org `https://www.nuget.org`, `https://www.nuget.org/api/v3`, i `https://www.nuget.org/api/v2/package`. Dla prywatnych źródeł danych, zastąp nazwę hosta (na przykład `%hostname%/api/v3`).
+  Określa adres URL serwera. Obsługiwane adresów URL dla dołączania nuget.org `https://www.nuget.org`, `https://www.nuget.org/api/v3`, i `https://www.nuget.org/api/v2/package`. Dla prywatnych źródeł danych, zastąp nazwę hosta (na przykład `%hostname%/api/v3`).
 
 ---
 
 ## <a name="examples"></a>Przykłady
 
-Usuwa pakiet w wersji 1.0 dla `Microsoft.AspNetCore.Mvc`:
+* Usuwa pakiet w wersji 1.0 dla `Microsoft.AspNetCore.Mvc`:
 
-`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0`
+  ```console
+  dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
+  ```
 
-Usuwa pakiet w wersji 1.0 dla `Microsoft.AspNetCore.Mvc`, nie monitowania użytkownika o poświadczenia lub inne dane wejściowe:
+* Usuwa pakiet w wersji 1.0 dla `Microsoft.AspNetCore.Mvc`, nie monitowania użytkownika o poświadczenia lub inne dane wejściowe:
 
-`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive`
+  ```console
+  dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive
+  ```

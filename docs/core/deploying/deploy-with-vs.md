@@ -1,21 +1,21 @@
 ---
-title: Wdrażanie aplikacji .NET core za pomocą programu Visual Studio
-description: Dowiedz się, wdrażanie aplikacji .NET Core za pomocą programu Visual Studio
+title: Wdrażanie platformy .NET Core z aplikacji za pomocą programu Visual Studio
+description: Dowiedz się wdrożyć aplikację platformy .NET Core w programie Visual Studio.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 095c0f02df0de0b276c3677095e224316ac76cff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584396"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127111"
 ---
-# <a name="deploying-net-core-apps-with-visual-studio"></a>Wdrażanie platformy .NET Core z aplikacji za pomocą programu Visual Studio
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Wdrażanie platformy .NET Core z aplikacji za pomocą programu Visual Studio
 
 Możesz wdrożyć aplikację platformy .NET Core albo jako *wdrożenia zależny od struktury*, który zawiera pliki binarne aplikacji, ale zależy od obecności platformy .NET Core w systemie docelowym lub jako *niezależna wdrożenie*, który zawiera aplikację i pliki binarne .NET Core. Omówienie wdrażania aplikacji .NET Core, zobacz [wdrożenie aplikacji programu .NET Core](index.md).
 
@@ -34,7 +34,7 @@ Wdrożenie zależny od struktury bez zależności innych firm po prostu polega n
 
 1. Utwórz projekt.
 
-   Wybierz **pliku** > **nowe** > **projektu**. W **nowy projekt** okno dialogowe, rozwiń węzeł kategorii danego języka (C# lub Visual Basic) projektu w **zainstalowane** okienku typów projektu, wybierz polecenie **platformy .NET Core**, a następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonów w środkowym okienku. Wprowadź nazwę projektu, takich jak "Dyskietki" w **nazwa** pola tekstowego. Wybierz **OK** przycisku.
+   Wybierz **pliku** > **nowe** > **projektu**. W **nowy projekt** okno dialogowe, rozwiń węzeł kategorii danego języka (C# lub Visual Basic) projektu w **zainstalowane** okienku typów projektu, wybierz polecenie **platformy .NET Core**, a następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonów w środkowym okienku. Wprowadź nazwę projektu, takich jak "Dyskietki" w **nazwa** pola tekstowego. Wybierz przycisk **OK**.
 
 1. Dodawanie kodu źródłowego aplikacji.
 
@@ -150,7 +150,7 @@ Aby opublikować aplikację z poziomu programu Visual Studio, wykonaj następuj�
 
          1. Wybierz **Utwórz nowy profil** w **Publikuj** okna dialogowego.
 
-         1. W **wybierz lokalizację docelową publikowania** okno dialogowe, zmiana **wybierz folder** lokalizację *bin\Release\PublishOutput\win10 x64*. Wybierz **OK**.
+         1. W **wybierz lokalizację docelową publikowania** okno dialogowe, zmiana **wybierz folder** lokalizację *bin\Release\PublishOutput\win10 x64*. Kliknij przycisk **OK**.
 
          1. Wybierz nowy profil (**FolderProfile1**) na liście profilów i upewnij się, że **docelowe środowisko uruchomieniowe** jest `win10-x64`. Jeśli nie, wybierz **ustawienia**. W **ustawienia profilu** okno dialogowe, zmiana **docelowe środowisko uruchomieniowe** do `win10-x64` i wybierz **Zapisz**. W przeciwnym razie wybierz **anulować**.
 

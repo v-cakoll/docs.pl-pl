@@ -2,17 +2,17 @@
 title: Architektura i projektowanie
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530473"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154271"
 ---
 # <a name="architecture-and-design"></a>Architektura i projektowanie
-Moduł generowania SQL w [dostawcy próbki](https://go.microsoft.com/fwlink/?LinkId=180616) jest implementowany jako obiekt odwiedzający na drzewo wyrażenia, który reprezentuje drzewo poleceń. Generowanie odbywa się w jednym przebiegu za pośrednictwem drzewa wyrażeń.  
+Moduł generowania SQL w [dostawcy próbki](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) jest implementowany jako obiekt odwiedzający na drzewo wyrażenia, który reprezentuje drzewo poleceń. Generowanie odbywa się w jednym przebiegu za pośrednictwem drzewa wyrażeń.  
   
- Węzły drzewa są przetwarzane od dołu w górę. Najpierw jest generowany strukturę pośredni: SqlSelectStatement lub SqlBuilder, zarówno ISqlFragment implementującej. Następnie ciąg instrukcja SQL jest generowany z tej struktury. Istnieją dwa powody, dla struktury pośredniego:  
+ Węzły drzewa są przetwarzane od dołu w górę. Po pierwsze jest generowany strukturę pośredniego: SqlSelectStatement lub SqlBuilder, zarówno ISqlFragment implementującej. Następnie ciąg instrukcja SQL jest generowany z tej struktury. Istnieją dwa powody, dla struktury pośredniego:  
   
 -   Logicznie instrukcję SQL SELECT jest wypełniana poza kolejnością. Węzły, które uczestniczą w klauzuli FROM są odwiedzi przed tymi, które uczestniczą w WHERE, GROUP BY i ORDER BY — klauzula.  
   
@@ -25,7 +25,7 @@ Moduł generowania SQL w [dostawcy próbki](https://go.microsoft.com/fwlink/?Lin
  W drugim etapie, podczas produkcji rzeczywistego ciągu aliasy zostały zmienione.  
   
 ## <a name="data-structures"></a>Struktury danych  
- W tej sekcji opisano typy używane w [dostawcy próbki](https://go.microsoft.com/fwlink/?LinkId=180616) umożliwia tworzenie instrukcji SQL.  
+ W tej sekcji opisano typy używane w [dostawcy próbki](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) umożliwia tworzenie instrukcji SQL.  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  W tej sekcji omówiono klasy, które implementują interfejs ISqlFragment, który służy do dwóch celów:  
@@ -226,9 +226,9 @@ private bool IsParentAJoin{get}
  Spłaszczanie alias sprzężenia jest osiągana, gdy odwiedzający DbPropertyExpression zgodnie z opisem w sekcji zatytułowanej DbPropertyExpression.  
   
 ### <a name="column-name-and-extent-alias-renaming"></a>Nazwa kolumny i zakresu, Alias zmiana nazwy  
- Ten problem, nazwa kolumny i zmiana nazwy aliasu w zakresie jest skierowana przy użyciu symboli, które tylko pobieranie zastępowane z aliasami w drugim etapie generowania opisane w sekcji drugiej fazy generowanie kodu SQL: generowanie ciągu polecenia.  
+ Ten problem, nazwa kolumny i zmiana nazwy aliasu w zakresie jest skierowana przy użyciu symboli, które tylko pobieranie zastępowane z aliasami w drugim etapie generowania opisane w sekcji drugiej fazy generowanie kodu SQL: Generowanie ciągu polecenia.  
   
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Pierwsza faza generowanie kodu SQL: odwiedzający drzewa wyrażeń  
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Pierwsza faza generowanie kodu SQL: Odwiedzający drzewa wyrażeń  
  W tej sekcji opisano pierwszą fazę generowanie kodu SQL, gdy reprezentujący wyrażenie, które odwiedzeniu zapytania i pośredniego struktury jest generowany, albo SqlSelectStatement lub SqlBuilder.  
   
  W tej sekcji opisano zasad zaproszonych innego wyrażenia węzeł kategorii i szczegółowe informacje o odwiedzenie typy określonego wyrażenia.  
@@ -405,7 +405,7 @@ Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(inp
 IsEmpty(inut) = Not Exists(input)  
 ```  
   
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Drugi etap generowanie kodu SQL: generowanie ciągu polecenia  
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Drugi etap generowanie kodu SQL: Generowanie ciągu polecenia  
  Podczas generowania ciąg polecenia SQL, SqlSelectStatement tworzy rzeczywistych aliasów dla symboli, który dotyczy ten problem, nazwa kolumny i zmiana nazwy aliasu w zakresie.  
   
  Zmiana nazwy aliasu w zakresie występuje podczas zapisywania obiektu SqlSelectStatement na ciąg. Najpierw utwórz listę wszystkie aliasy, które są używane przez zewnętrzne zakresów. Każdy symbol w FromExtents (lub AllJoinExtents, jeśli jest inna niż null), pobiera zmieniona, jeśli powoduje ona konflikt z żadnym z zakresów zewnętrznych. Jeśli potrzebna jest zmiana nazwy, nie spowoduje ona konflikt z żadnym z zakresów, zbierane w AllExtentNames.  

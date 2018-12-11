@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: tworzenie aplikacji rozszerzalnej'
+title: 'Przewodnik: Tworzenie aplikacji rozszerzalnej'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744616"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155080"
 ---
-# <a name="walkthrough-creating-an-extensible-application"></a>Wskazówki: tworzenie aplikacji rozszerzalnej
+# <a name="walkthrough-creating-an-extensible-application"></a>Przewodnik: Tworzenie aplikacji rozszerzalnej
 W tym przewodniku opisano tworzenie potoku dodatku, który wykonuje funkcje prosty kalkulator. Nie przedstawiono tu rzeczywistych scenariuszy; zamiast pokazuje podstawową funkcjonalność potoku i jak dodatek mogą udostępniać usługi hosta.  
   
  W tym przewodniku opisano następujące zadania:  
@@ -43,11 +43,11 @@ W tym przewodniku opisano tworzenie potoku dodatku, który wykonuje funkcje pros
   
 -   Uruchamianie aplikacji hosta.  
   
- Ten potok przekazuje tylko typów możliwych do serializacji (<xref:System.Double> i <xref:System.String>), między hostem a dodatkiem. Aby uzyskać przykład pokazujący sposób przekazywania kolekcji typów złożonych danych, zobacz [wskazówki: przekazywanie kolekcji między hostami i Add-Ins](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Ten potok przekazuje tylko typów możliwych do serializacji (<xref:System.Double> i <xref:System.String>), między hostem a dodatkiem. Aby uzyskać przykład pokazujący sposób przekazywania kolekcji typów złożonych danych, zobacz [instruktażu: Przekazywanie kolekcji między hostami i dodatkami](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  Kontrakt dla tego potoku definiuje model obiektu cztery operacje arytmetyczne: dodawania, odejmowania, mnożenia i dzielenia. Host zapewnia dodatek równania, aby obliczyć, takie jak 2 + 2, i dodatku zwraca wynik do hosta.  
   
- W wersji 2 dodatku Kalkulator zapewnia możliwości bardziej obliczania i przedstawia przechowywanie wersji. Jest on opisany w [przewodnik: Włączanie zgodności z poprzednimi wersjami Your zmian hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ W wersji 2 dodatku Kalkulator zapewnia możliwości bardziej obliczania i przedstawia przechowywanie wersji. Opisano w [instruktażu: Włączanie zgodności z poprzednimi wersjami w miarę zmieniania hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Potrzebne są następujące czynności w celu przeprowadzenia tego instruktażu:  
@@ -86,7 +86,7 @@ W tym przewodniku opisano tworzenie potoku dodatku, który wykonuje funkcje pros
      Nie jest konieczne umieścić potoku strukturę folderów w folderze aplikacji; jest wykonywane tutaj wyłącznie dla wygody. Na etapie odpowiednie przewodnik wyjaśnia, jak zmiany kodu, jeśli struktura folderów potoku znajduje się w innej lokalizacji. Zobacz Omówienie wymagań katalogu potoku w [wymagania dotyczące opracowywania potoku](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  `CalcV2` Folder nie jest używany w tym przewodniku; jest symbolem zastępczym dla [przewodnik: Włączanie zgodności z poprzednimi wersjami Your zmian hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  `CalcV2` Folder nie jest używany w tym przewodniku; jest symbolem zastępczym dla [instruktażu: Włączanie zgodności z poprzednimi wersjami w miarę zmieniania hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Tworzenie kontraktu i widoków  
  Określa segment umowy, dla tego potoku `ICalc1Contract` interfejs, który definiuje cztery metody: `add`, `subtract`, `multiply`, i `divide`.  
@@ -355,7 +355,7 @@ W tym przewodniku opisano tworzenie potoku dodatku, który wykonuje funkcje pros
 4.  Typ **wyjść** i naciśnij klawisz **Enter** klawisz, aby zamknąć aplikację.  
   
 ## <a name="see-also"></a>Zobacz też  
-- [Przewodnik: Włączanie zgodności z poprzednimi wersjami w miarę zmieniania hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+- [Wskazówki: Włączanie zgodności z poprzednimi wersjami w miarę zmieniania hosta](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
 -  [Wskazówki: Przekazywanie kolekcji między hostami i dodatkami](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
 -  [Wymagania dotyczące opracowywania potoku](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
 -  [Kontrakty, widoki i adaptery](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  

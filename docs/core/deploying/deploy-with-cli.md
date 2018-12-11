@@ -1,20 +1,21 @@
 ---
-title: Wdrażanie aplikacji .NET core za pomocą narzędzi interfejsu wiersza polecenia
-description: Dowiedz się, wdrażanie aplikacji .NET Core za pomocą narzędzia interfejsu wiersza polecenia (CLI)
+title: Wdrażanie aplikacji .NET Core przy użyciu narzędzi interfejsu wiersza polecenia (CLI)
+description: Dowiedz się, jak wdrożyć aplikację platformy .NET Core za pomocą narzędzi interfejsu wiersza polecenia (CLI)
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454452"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151099"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia (CLI)
+# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>Wdrażanie aplikacji .NET Core przy użyciu narzędzi interfejsu wiersza polecenia (CLI)
 
 Możesz wdrożyć aplikację platformy .NET Core albo jako *wdrożenia zależny od struktury*, który zawiera pliki binarne aplikacji, ale zależy od obecności platformy .NET Core w systemie docelowym lub jako *niezależna wdrożenie*, który zawiera pliki binarne .NET Core i aplikacji. Aby uzyskać przegląd, zobacz [wdrożenie aplikacji programu .NET Core](index.md).
 

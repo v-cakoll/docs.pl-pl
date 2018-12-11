@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59a2b7f7ed855cd6b7d363ea5d4723c7d7b8d629
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4623e8060b93c9331c99f9713598e177b6807472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386356"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131316"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
-`illegalPrepareConstrainedRegion` Zarządzany Asystent debugowania (MDA) została aktywowana po <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> wywołanie metody nie bezpośrednio poprzedza `try` instrukcji obsługi wyjątków. To ograniczenie jest na MSIL poziomu, więc jest dozwolone ma generowanie kodu źródłowego między wywołania i `try`, takich jak komentarze.  
+`illegalPrepareConstrainedRegion` Zarządzanego Asystenta debugowania (MDA) jest aktywowany po <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> wywołanie metody nie bezpośrednio poprzedzać `try` instrukcji obsługi wyjątków. To ograniczenie jest w MSIL poziomu, więc jest dozwolone do generowania kodu źródło między wywołanie i `try`, takich jak komentarze.  
   
 ## <a name="symptoms"></a>Symptomy  
- Region ograniczonego wykonania (CER), który nigdy nie jest traktowana tak, ale proste wyjątek obsługi bloku (`finally` lub `catch`). Region nie działa w konsekwencji w przypadku przerwania wątku lub warunku braku pamięci.  
+ Region ograniczonego wykonania (CER), która nigdy nie jest traktowana jako takie, ale jako prosty bloku obsługi wyjątków (`finally` lub `catch`). W konsekwencji regionie nie działa w przypadku warunku braku pamięci lub przerwanie wątku.  
   
 ## <a name="cause"></a>Przyczyna  
- Wzór przygotowania CER nie jest prawidłowo zakończony.  To zdarzenie błędu. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Wywołania metody, które służy do oznaczania programy obsługi wyjątków jako wprowadzenie CER w ich `catch` / `finally` / `fault` / `filter` bloki musi być używany bezpośrednio przed `try` instrukcji.  
+ Wzorzec przygotowania CER nie jest prawidłowo zakończony.  To zdarzenie błędu. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Wywołania metody, używany do oznaczania obsługi wyjątków jako wprowadzenie do CER w ich `catch` / `finally` / `fault` / `filter` bloków musi używać bezpośrednio przed `try` instrukcji.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Upewnij się, że wywołanie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> się stanie, bezpośrednio przed `try` instrukcji.  
+ Upewnij się, że wywołanie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> ma miejsce bezpośrednio przed `try` instrukcji.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA Wyświetla nazwę wywołanie metody <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> metody, przesunięcie MSIL i komunikat informujący o wywołaniu nie poprzedzają bezpośrednio na początku bloku try.  
+ MDA Wyświetla nazwę wywołanie metody <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> metodę, przesunięcie MSIL i komunikat informujący o wywołaniu nie bezpośrednio poprzedzać początku bloku try.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -46,9 +46,9 @@ ms.locfileid: "33386356"
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje wzorzec, który powoduje, że to zdarzenie MDA do aktywacji.  
+ Poniższy przykład kodu demonstruje wzorzec, który powoduje, że to zdarzenie MDA zostanie uaktywniony.  
   
-```  
+```csharp
 void MethodWithInvalidPCR()  
 {  
     RuntimeHelpers.PrepareConstrainedRegions();  

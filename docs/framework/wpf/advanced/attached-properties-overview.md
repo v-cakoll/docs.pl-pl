@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: c9eed211b65e7069897718d98c301667a23aaec2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: bcf218efeb7bff5f7457164411efed796314ba82
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702910"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129483"
 ---
 # <a name="attached-properties-overview"></a>Przegląd Właściwości dołączone
 
@@ -60,7 +60,7 @@ Najbardziej typowym scenariuszem, gdzie WPF definiuje dołączoną właściwoś�
 
 ## Dołączone właściwości w kodzie <a name="attached_properties_code"></a>
 
-Właściwości dołączone w WPF nie masz typowej [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "otoki" metod get/set łatwy dostęp. Jest to spowodowane dołączona właściwość nie jest zawsze częścią [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzeń nazw dla wystąpień, gdy właściwość jest ustawiona. Jednak procesor XAML musi mieć możliwość ustawienia tych wartości, gdy XAML jest analizowany. Do obsługi użycia skuteczne dołączona właściwość, typ właściciela dołączona właściwość musi implementować metody dostępu dedykowanych w formie **Uzyskaj * PropertyName*** i **ustaw*PropertyName ***. Te metody dostępu dedykowane są również przydatne do pobierania lub ustawiania dołączona właściwość w kodzie. Z punktu widzenia kodu dołączoną właściwość jest podobne do pola pomocniczego, który ma zamiast metod dostępu do właściwości metod dostępu do metody, że pole pomocnicze może istnieć dla dowolnego obiektu, a nie musi w szczególności można zdefiniować.
+Właściwości dołączone w WPF nie masz typowej [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "otoki" metod get/set łatwy dostęp. Jest to spowodowane dołączona właściwość nie jest zawsze częścią [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzeń nazw dla wystąpień, gdy właściwość jest ustawiona. Jednak procesor XAML musi mieć możliwość ustawienia tych wartości, gdy XAML jest analizowany. Do obsługi użycia skuteczne dołączona właściwość, typ właściciela dołączona właściwość musi implementować metody dostępu dedykowanych w formie **Get_PropertyName_** i **Set_PropertyName_**. Te metody dostępu dedykowane są również przydatne do pobierania lub ustawiania dołączona właściwość w kodzie. Z punktu widzenia kodu dołączoną właściwość jest podobne do pola pomocniczego, który ma zamiast metod dostępu do właściwości metod dostępu do metody, że pole pomocnicze może istnieć dla dowolnego obiektu, a nie musi w szczególności można zdefiniować.
 
 Poniższy przykład pokazuje, jak można ustawić dołączonej właściwości w kodzie. W tym przykładzie `myCheckBox` jest wystąpieniem <xref:System.Windows.Controls.CheckBox> klasy.
 
@@ -91,14 +91,14 @@ Jak wspomniano wcześniej, jeśli chcesz używać dziedziczenie wartości właś
 
 Jeśli klasa jest zdefiniowanie dołączona właściwość wyłącznie do użytku dla innych typów, a następnie klasy nie musi pochodzić od <xref:System.Windows.DependencyObject>. Ale trzeba dziedziczyć <xref:System.Windows.DependencyObject> dzięki stosowaniu ogólnej model WPF wystąpienia usługi dołączonej właściwości również być właściwość zależności.
 
-Zdefiniuj z dołączoną właściwość jako właściwość zależności od zadeklarowania `public static readonly` pole typu <xref:System.Windows.DependencyProperty>. To pole jest definiowane za pomocą wartość zwracaną przez <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metody. Nazwa pola musi odpowiadać nazwie dołączona właściwość, dołączany parametrami `Property`, oparte na wzorcu ustanowionych WPF nazewnictwa identyfikacji pola i właściwości, które reprezentują one. Dostawca dołączonej właściwości należy również podać statyczne **Uzyskaj * PropertyName*** i **Ustaw * PropertyName*** metod jako Akcesory dla dołączonych właściwości; kończy się niepowodzeniem, w tym celu spowoduje we właściwości System nie będzie w stanie korzystać z dołączoną właściwość.
+Zdefiniuj z dołączoną właściwość jako właściwość zależności od zadeklarowania `public static readonly` pole typu <xref:System.Windows.DependencyProperty>. To pole jest definiowane za pomocą wartość zwracaną przez <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metody. Nazwa pola musi odpowiadać nazwie dołączona właściwość, dołączany parametrami `Property`, oparte na wzorcu ustanowionych WPF nazewnictwa identyfikacji pola i właściwości, które reprezentują one. Dostawca dołączonej właściwości należy również podać statyczne **Get_PropertyName_** i **Set_PropertyName_** metod jako Akcesory dla dołączonych właściwości; kończy się niepowodzeniem, w tym celu spowoduje we właściwości System nie będzie w stanie korzystać z dołączoną właściwość.
 
 > [!NOTE]
 > Jeżeli pominięto metody dostępu get dołączona właściwość powiązania danych we właściwości nie będzie działać w narzędzia do projektowania, takich jak Visual Studio oraz Expression Blend.
 
 #### <a name="the-get-accessor"></a>Metody dostępu Get
 
-Podpis dla **Uzyskaj * PropertyName*** musi mieć metody dostępu:
+Podpis dla **Get_PropertyName_** metody dostępu muszą być:
 
 `public static object GetPropertyName(object target)`
 
@@ -108,7 +108,7 @@ Podpis dla **Uzyskaj * PropertyName*** musi mieć metody dostępu:
 
 #### <a name="the-set-accessor"></a>Metody dostępu Set
 
-Podpis dla **Ustaw * PropertyName*** musi mieć metody dostępu:
+Podpis dla **Set_PropertyName_** metody dostępu muszą być:
 
 `public static void SetPropertyName(object target, object value)`
 
@@ -116,7 +116,7 @@ Podpis dla **Ustaw * PropertyName*** musi mieć metody dostępu:
 
 -   `value` Obiektu może być określony jako bardziej specyficznego typu w danej implementacji. Na przykład <xref:System.Windows.Controls.DockPanel.SetDock%2A> metoda typów jako <xref:System.Windows.Controls.Dock>, ponieważ wartość można ustawić tylko do tego wyliczenia. Pamiętaj, że wartość ta metoda ma pochodzących z modułu ładującego XAML, po napotkaniu usługi dołączonej właściwości użycia dołączonej właściwości w znaczniku w danych wejściowych. Te dane wejściowe to wartość określona jako wartość atrybutu XAML w znacznikach. W związku z tym musi istnieć konwersji typów, wartość serializatora lub obsługa rozszerzenia znaczników dla typu, którego używasz, takie, że odpowiedni typ można tworzyć na podstawie wartości atrybutu (co ostatecznie to klient jest po prostu określonym ciągiem).
 
-W poniższym przykładzie pokazano rejestrację właściwości zależności (przy użyciu <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metoda), jak również **Uzyskaj * PropertyName*** i **Ustaw * PropertyName*** metod dostępu. W tym przykładzie nazwa dołączonych właściwości jest `IsBubbleSource`. W związku z tym, musi nosić nazwę metody dostępu `GetIsBubbleSource` i `SetIsBubbleSource`.
+W poniższym przykładzie pokazano rejestrację właściwości zależności (przy użyciu <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metody), jak również **Get_PropertyName_** i **Set_PropertyName_** metod dostępu. W tym przykładzie nazwa dołączonych właściwości jest `IsBubbleSource`. W związku z tym, musi nosić nazwę metody dostępu `GetIsBubbleSource` i `SetIsBubbleSource`.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]

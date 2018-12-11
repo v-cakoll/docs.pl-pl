@@ -1,15 +1,16 @@
 ---
-title: Historia wersji platformy .NET core
-description: Zobacz oś czasu dla wersji środowiska uruchomieniowego .NET Core, .NET Core SDK, kompilator języka C# i VB.NET kompilatora.
+title: Jak przechowywanie wersji zestawu .NET Core SDK zmieniło się
+description: W tym artykule opisano, jak przechowywanie wersji zestawu .NET Core SDK i środowisko uruchomieniowe zmieniło się w przedziale czasu wersja 2.1.
 ms.date: 07/26/2018
-ms.openlocfilehash: 90fd4ba57620a3a005f2148c0335a76a6fa54a30
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: e4b87d2ebd6dc5a0d5b874dc35dcaf746fdd4a0a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519068"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131134"
 ---
-# <a name="net-core-version-history"></a>Historia wersji .NET Core
+# <a name="net-core-version-changes-between-10-and-21"></a>.NET Core w wersji zmiany między 1.0 i 2.1
 
 Numery wersji dla platformy .NET Core to wyzwanie, ponieważ zestaw .NET Core SDK i środowisko uruchomieniowe programu .NET Core w wersji na inną odstępach czasu. Różne odstępach czasu oznaczają, że zespół wymuszono wykonaj tylko dwa spośród następujących czynności:
 

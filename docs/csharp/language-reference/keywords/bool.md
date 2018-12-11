@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 2041182dffa0330ea601b30e047c0b09731618f2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a5a5fa37905df9fb9369e9c0c26a2e39d03353f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042403"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128326"
 ---
 # <a name="bool-c-reference"></a>bool (odwołanie w C#)
 
-`bool` — Słowo kluczowe jest aliasem <xref:System.Boolean?displayProperty=nameWithType>. Służy do deklarowania zmiennych do przechowywania wartości logiczne [true](../../../csharp/language-reference/keywords/true.md) i [false](../../../csharp/language-reference/keywords/false.md).
+`bool` — Słowo kluczowe jest aliasem <xref:System.Boolean?displayProperty=nameWithType>. Służy do deklarowania zmiennych do przechowywania wartości logiczne: [true](true-literal.md) i [false](false-literal.md).
 
 > [!NOTE]
-> Jeśli potrzebujesz zmiennej typu Boolean, który może mieć również wartość `null`, użyj `bool?`. Aby uzyskać więcej informacji, zobacz [typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md).
+> Jeśli potrzebujesz zmiennej typu Boolean, który może mieć również wartość `null`, użyj `bool?`. Aby uzyskać więcej informacji, zobacz [bool? typu](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) części [przy użyciu typów dopuszczających wartości zerowe](../../programming-guide/nullable-types/using-nullable-types.md) artykułu.
 
 ## <a name="literals"></a>Literały
 

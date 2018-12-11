@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ki
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b283916d6ae4d19fdc6a4f7976a3adbb66d26b2c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873378"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143412"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
 
@@ -53,7 +53,6 @@ Gdy opartych na kontenerach systemu musi najlepsze możliwe gęstości, poziom s
 
 Jest to szczególnie istotne dla architektury mikrousług, gdzie mogą istnieć setki mikrousługi (kontenery) uruchomiona. Przy użyciu platformy ASP.NET Core obrazów (oparte na środowisko uruchomieniowe platformy .NET Core) w systemie Linux lub Windows Nano możesz uruchomić systemu za pomocą znacznie mniejszej liczby serwerów lub maszyn wirtualnych, ostatecznie minimalizując koszty w infrastrukturze i hostingu.
 
-
 >[!div class="step-by-step"]
-[Poprzednie](general-guidance.md)
-[dalej](net-framework-container-scenarios.md)
+>[Poprzednie](general-guidance.md)
+>[dalej](net-framework-container-scenarios.md)

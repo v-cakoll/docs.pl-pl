@@ -1,15 +1,13 @@
 ---
-title: polecenie Serwer kompilacji DotNet - interfejsu wiersza polecenia platformy .NET Core
+title: polecenie Serwer kompilacji DotNet
 description: Polecenia dotnet serwer kompilacji wchodzi w interakcję z serwerami, uruchomione przez kompilację.
-author: mairaw
-ms.author: mairaw
-ms.date: 07/02/2018
-ms.openlocfilehash: 1c59c85f246b79c7e2552f704db5b4f076f9b502
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.date: 12/04/2018
+ms.openlocfilehash: 7f78a0cae6e3297f3084754dc56b0da4eac38caf
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404336"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169664"
 ---
 # <a name="dotnet-build-server"></a>Serwer kompilacji DotNet
 
@@ -29,24 +27,24 @@ dotnet build-server [-h|--help]
 
 ## <a name="commands"></a>Polecenia
 
-`shutdown`
+* **`shutdown`**
 
-Zamyka serwerów kompilacji, które są uruchamiane z dotnet. Domyślnie wszystkie serwery są zamykane.
+  Zamyka serwerów kompilacji, które są uruchamiane z dotnet. Domyślnie wszystkie serwery są zamykane.
 
 ## <a name="options"></a>Opcje
 
-`-h|--help`
+* **`-h|--help`**
 
-Drukuje krótki pomoc dotyczącą polecenia.
+  Drukuje krótki pomoc dotyczącą polecenia.
 
-`--msbuild`
+* **`--msbuild`**
 
-Serwer kompilacji zostanie zamknięte MSBuild.
+  Serwer kompilacji zostanie zamknięte MSBuild.
 
-`--razor`
+* **`--razor`**
 
-Serwer kompilacji zamknięciem elementu Razor.
+  Serwer kompilacji zamknięciem elementu Razor.
 
-`--vbcscompiler`
+* **`--vbcscompiler`**
 
-Zamyka VB / serwer kompilacji kompilator języka C#.
+  Zamyka VB / serwer kompilacji kompilator języka C#.

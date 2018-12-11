@@ -1,18 +1,18 @@
 ---
-title: Machine learning słownik
-description: Słownik terminy dotyczące uczenia maszynowego.
-ms.date: 05/31/2018
-ms.topic: conceptual
-ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+title: Usługi Machine learning — słownik w strukturze ML.NET
+description: Słownik ważne terminy dotyczące uczenia maszynowego, które są przydatne podczas tworzenia niestandardowych modeli w strukturze ML.NET.
+ms.custom: seodec18
+ms.date: 12/06/2018
+ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453206"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150579"
 ---
-# <a name="machine-learning-glossary"></a>Machine learning słownik
+# <a name="machine-learning-glossary-of-important-terms"></a>Machine learning słownik terminów ważne
 
-Poniższa lista jest kompilacja terminy dotyczące uczenia maszynowego ważne, które są przydatne podczas tworzenia niestandardowych modeli.
+Poniższa lista jest kompilacja terminy dotyczące uczenia maszynowego ważne, które są przydatne podczas tworzenia niestandardowych modeli w strukturze ML.NET.
 
 ## <a name="accuracy"></a>dokładność
 
@@ -100,7 +100,7 @@ W [klasyfikacji](#classification), dokładność dla klasy jest liczba elementó
 
 Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
-## <a name="recall"></a>Odwołania
+## <a name="recall"></a>Odwołaj
 
 W [klasyfikacji](#classification), odwołania do klasy jest liczba elementów, poprawnie przewidzieć jako należące do tej klasy podzielona przez całkowitą liczbę elementów, które faktycznie należą do klasy.
 
@@ -128,7 +128,7 @@ Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.Reg
 
 Podklasa klasy usługi machine learning, w którym żądany model przewiduje etykiety danych, ale niewidzianych. Przykłady obejmują klasyfikacji, regresji i ze strukturą prognozy. Aby uzyskać więcej informacji, zobacz [uczenia nadzorowanego](https://en.wikipedia.org/wiki/Supervised_learning) artykuł w witrynie Wikipedia.
 
-## <a name="training"></a>Szkolenie
+## <a name="training"></a>Szkolenia
 
 Proces identyfikowania [modelu](#model) dla danego szkoleniowy zestaw danych. Dla modelu liniowego oznacza to, znajdowanie wag. Dla drzewa obejmuje to identyfikowanie punktów podziału.
 

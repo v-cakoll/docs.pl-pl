@@ -2,14 +2,14 @@
 title: Model rozszerzalności interfejsu wiersza polecenia platformy .NET core
 description: Dowiedz się, jak można je rozszerzyć narzędzi interfejsu wiersza polecenia (CLI).
 author: blackdwarf
-ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842739"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170239"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Model rozszerzalności narzędzi interfejsu wiersza polecenia platformy .NET core
 
@@ -36,7 +36,7 @@ Trzy mechanizmy rozszerzania opisanych powyżej, nie są wyłączne. Można uży
 ## <a name="per-project-based-extensibility"></a>Na podstawie rozszerzalność projektu
 Narzędzia dla projektu są [wdrożeń zależny od struktury](../deploying/index.md#framework-dependent-deployments-fdd) dystrybuowanych jako pakiety NuGet. Narzędzia są dostępne tylko w kontekście projektu, który odwołuje się do nich i dla których zostaną przywrócone. Wywołanie poza kontekstem projektu (na przykład spoza katalogu, który zawiera projekt) zakończy się niepowodzeniem, ponieważ nie można odnaleźć polecenia.
 
-Te narzędzia są doskonałe dla serwerów kompilacji, ponieważ nic nie poza plik projektu jest wymagana. Uruchamia proces kompilacji dla projektu go przywrócić kompilacje i narzędzia będą dostępne. Projekty języka, takie jak F # są również w tej kategorii, ponieważ każdy projekt może być zapisany tylko w jednym języku określonych.
+Te narzędzia są doskonałe dla serwerów kompilacji, ponieważ nic nie poza plik projektu jest wymagana. Uruchamia proces kompilacji dla projektu go przywrócić kompilacje i narzędzia będą dostępne. Projekty języka, takich jak F#, znajdują się również w tej kategorii, ponieważ każdy projekt może być zapisany tylko w jednym określonym języku.
 
 Na koniec tego modelu rozszerzalności zapewnia obsługę tworzenia narzędzi, które muszą mieć dostęp do skompilowanych danych wyjściowych projektu. Na przykład widoku Razor dla różnych narzędzi w [ASP.NET](https://www.asp.net/) aplikacji MVC należą do tej kategorii.
 

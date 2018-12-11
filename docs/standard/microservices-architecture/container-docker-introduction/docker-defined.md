@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0493e7c08a742abed26ff00ce84b9d77da73ea63
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185930"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153868"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 
@@ -83,5 +83,5 @@ Można traktować obrazu jako pomocniczego tylko do odczytu dysku twardego gotow
 Podobnie można traktować kontener jako "komputer" z obrazu dysk twardy zainstalowany. Kontener, podobnie jak komputer, można wyłączyć lub wyłączyć.
 
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](docker-terminology.md)
+>[Poprzednie](index.md)
+>[dalej](docker-terminology.md)

@@ -5,11 +5,11 @@ ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5277b056c11de4c3e32d33c72bafc8f64ee17d05
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033872"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154834"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>Element &lt;TypeInstantiation&gt; (architektura .NET Native)
 Skonstruowany typ rodzajowy dotyczy zasad odbicia środowiska uruchomieniowego.  

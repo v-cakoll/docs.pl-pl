@@ -3,12 +3,12 @@ title: Gałęzie i pętle — wprowadzenie do C# samouczek
 description: W tym samouczku omawiającym gałęzie i pętle zapisu C# kodu, aby poznać składnię języka, obsługującego warunkowych gałęzi i pętli, aby wykonać instrukcje wielokrotnie.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0997c0b4a8f450c0e5eadc9616457a1ab84e7d96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186152"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153777"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dowiedz się, logikę warunkową instrukcji gałęzi i pętli
 
@@ -223,7 +223,7 @@ for(int index = 0; index < 10; index++)
 
 To działa ten sam jako `while` pętli i `do` pętli został już użyty. `for` Instrukcja składa się z trzech części, które sterują jej pracą.
 
-Pierwsza część to **dla inicjatora**: `for index = 0;` oświadcza, że `index` jako zmienną pętli i ustawia jej wartość początkową `0`.
+Pierwsza część to **dla inicjatora**: `int index = 0;` oświadcza, że `index` jako zmienną pętli i ustawia jej wartość początkową `0`.
 
 Środkowa część to **warunku**: `index < 10` oświadcza, że `for` pętli kontynuuje wykonywanie dopóki wartość licznika jest mniejsza niż 10.
 

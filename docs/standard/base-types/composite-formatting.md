@@ -1,6 +1,6 @@
 ---
 title: Złożone formatowanie
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397936"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126864"
 ---
 # <a name="composite-formatting"></a>Złożone formatowanie
+
 Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu złożonego jako dane wejściowe. Ciąg formatu złożonego składa się ze stałego tekstu zmieszanego z indeksowanymi symbolami zastępczymi (nazywanymi też elementami formatu), które odpowiadają obiektom na liście. Operacja formatowania zwraca ciąg wynikowy, który składa się z oryginalnego stałego tekstu zmieszanego z ciągiem reprezentującym obiekty na liście.  
   
- Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:  
+> [!IMPORTANT]
+> Zamiast używania ciągów formatowania złożonego, należy użyć *ciągi interpolowane* Jeśli języka i języka w wersji, których używasz ich obsługi. Ciąg interpolowany jest ciąg zawierający *wyrażeń interpolowanych*. Każde wyrażenie interpolowane jest rozwiązany wartość wyrażenia i uwzględnione w ciągu wynikowym, jeśli ciąg jest przypisany. Aby uzyskać więcej informacji, zobacz [Interpolacja ciągów (C# odwołania)](../../csharp/language-reference/tokens/interpolated.md) i [interpolowane ciągów (odwołanie w Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:  
   
--   <xref:System.String.Format%2A?displayProperty=nameWithType>, która zwraca sformatowany ciąg wynikowy.  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>, która zwraca sformatowany ciąg wynikowy.  
   
--   <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, która dołącza sformatowany ciąg wynikowy do <xref:System.Text.StringBuilder> obiektu.  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, która dołącza sformatowany ciąg wynikowy do <xref:System.Text.StringBuilder> obiektu.   
+- Niektóre przeciążenia <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> metody, która wyświetlić sformatowany ciąg wynikowy na konsoli.  
   
--   Niektóre przeciążenia <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> metody, która wyświetlić sformatowany ciąg wynikowy na konsoli.  
+- Niektóre przeciążenia <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> metody, która zapisuje sformatowany ciąg wynikowy w strumieniu lub pliku. Klasy pochodne <xref:System.IO.TextWriter>, takich jak <xref:System.IO.StreamWriter> i <xref:System.Web.UI.HtmlTextWriter>, także mają tę funkcjonalność.  
   
--   Niektóre przeciążenia <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> metody, która zapisuje sformatowany ciąg wynikowy w strumieniu lub pliku. Klasy pochodne <xref:System.IO.TextWriter>, takich jak <xref:System.IO.StreamWriter> i <xref:System.Web.UI.HtmlTextWriter>, także mają tę funkcjonalność.  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, która wysyła sformatowany komunikat do odbiorników śledzenia.  
   
--   <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, która wysyła sformatowany komunikat do odbiorników śledzenia.  
+- <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, I <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metod, które wysyłają sformatowane komunikaty do odbiorników śledzenia.  
   
--   <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, I <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metod, które wysyłają sformatowane komunikaty do odbiorników śledzenia.  
-  
--   <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> Metody, która zapisuje metodę informacyjną w odbiornikach śledzenia.  
+- <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> Metody, która zapisuje metodę informacyjną w odbiornikach śledzenia.  
   
 ## <a name="composite-format-string"></a>Złożony ciąg formatujący  
  Ciąg formatu złożonego i lista obiektów są używane jako argumenty metod, które obsługują funkcję formatowania złożonego. Ciąg formatu złożonego składa się z zera lub większej liczby serii stałego tekstu zmieszanego z co najmniej jednym elementem formatu. Stały tekst to dowolnie wybrany ciąg, a każdy element formatu odpowiada obiektowi lub strukturze opakowanej na liście. Funkcja formatowania złożonego zwraca nowy ciąg wynikowy, w którym każdy element formatu jest zamieniany na ciąg reprezentujący odpowiadający mu obiekt na liście.  

@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3783bdde100aa83bd7fbbc2a0f2ee616ef9a729d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646249"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148637"
 ---
 # <a name="key-takeaways"></a>Najważniejsze wnioski
 
@@ -26,4 +26,4 @@ ms.locfileid: "45646249"
 Usługi Azure DevOps znacznie upraszcza środowiska DevOps umieszczoną w środowiskach platformy Docker z potoków ciągłego wdrażania, w tym proste środowiskach platformy Docker lub bardziej zaawansowanych koordynatorów mikrousług i kontenerów, oparty na platformie Azure.
 
 >[!div class="step-by-step"]
-[Poprzednie](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+>[Poprzednie](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

@@ -2,12 +2,12 @@
 title: Część stylu dokument1 WordprocessingML
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-ms.openlocfilehash: 96ed7445379d9a8ca64250ef4d923786555a3882
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8300cd96c70fd90a09543fdf5bd86398e5397a2b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179601"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131550"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Część stylu dokumentu WordprocessingML
 W tym temacie przedstawiono przykład część stylu dokumentu Office Open XML WordprocessingML.  
@@ -17,7 +17,7 @@ W tym temacie przedstawiono przykład część stylu dokumentu Office Open XML W
   
  Domyślnego stylu akapitu zawiera element z następujących otwierający tag:  
   
-```  
+```xml
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   

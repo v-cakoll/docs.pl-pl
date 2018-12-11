@@ -1,15 +1,13 @@
 ---
-title: polecenie — .NET Core interfejsu wiersza polecenia instalacji narzędzia DotNet
+title: polecenia instalacji narzędzia DotNet
 description: Narzędzia dotnet zainstalować polecenie instaluje określonego narzędzia globalnej podstawowych platformy .NET na maszynie.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: aad5a3e815936749d90f40975a8b13d34e89386c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 251e7b04be96ac2340727fa03dbaa2d548110fa9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512198"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168718"
 ---
 # <a name="dotnet-tool-install"></a>Instalowanie narzędzi DotNet
 
@@ -33,7 +31,7 @@ dotnet tool install <-h|--help>
 
 Globalne narzędzia są instalowane w następujących katalogach domyślnie po określeniu `-g` (lub `--global`) opcja:
 
-| SYSTEM OPERACYJNY          | Ścieżka                          |
+| System operacyjny          | Ścieżka                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |

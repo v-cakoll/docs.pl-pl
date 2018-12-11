@@ -3,11 +3,11 @@ title: Zabezpieczenia zachowania
 ms.date: 03/30/2017
 ms.assetid: 19710ae3-f197-4d28-ba9d-52e465006819
 ms.openlocfilehash: f5fd9cdb5fa0a84a151bc00ba63f1f5e89530629
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192814"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146904"
 ---
 # <a name="behavior-security"></a>Zabezpieczenia zachowania
 Ta sekcja zawiera przykłady pokazujące, konfigurowanie zabezpieczeń dla zachowania usługi.  

@@ -2,12 +2,12 @@
 title: Kształt dokumentów WordprocessingML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: aeb047f23f60ba6951950a85a6e2ef57fcbd9dda
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 11dfd06f6236b2815989b0f7570868e436c7047a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002960"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125736"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Kształt dokumentów WordprocessingML (C#)
 W tym temacie przedstawiono kształt XML w dokumencie WordprocessingML.  
@@ -88,8 +88,8 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 ```  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- [Wprowadzenie do formatów pakietu Office (2007) Open XML](https://msdn.microsoft.com/library/ms406049.aspx)  
- [Omówienie WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx)  
+ [Wprowadzenie do formatów pakietu Office (2007) Open XML](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)  
+ [Omówienie WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)  
  [Anatomia pliku WordProcessingML](http://officeopenxml.com/anatomyofOOXML.php)  
  [Wprowadzenie do WordprocessingML](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
  [Office 2003: XML odwołanie schematów strony plików do pobrania](https://www.microsoft.com/en-us/download/details.aspx?id=101)  

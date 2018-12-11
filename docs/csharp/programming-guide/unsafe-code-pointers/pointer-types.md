@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 124cc98b6f73b6014ab845ce5b9331e9f5292757
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509281"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146844"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Typy wskaźników (Przewodnik programowania w języku C#)
 
@@ -20,10 +20,10 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-Typ określony przed `*` w wskaźnik typu jest nazywana **typu referrent**. Dowolne z następujących typów może być typem referrent:
+Typ określony przed `*` w wskaźnik typu jest nazywana **typu Obiekt obsługujący**. Dowolne z następujących typów może być typem obiekt obsługujący:
 
 - Dowolnego typu całkowitoliczbowego: [sbyte](../../language-reference/keywords/sbyte.md), [bajtów](../../language-reference/keywords/byte.md), [krótki](../../language-reference/keywords/short.md), [ushort](../../language-reference/keywords/ushort.md), [int](../../language-reference/keywords/int.md), [uint](../../language-reference/keywords/uint.md), [długie](../../language-reference/keywords/long.md), [ulong](../../language-reference/keywords/ulong.md).
-- Wszelkie zmiennoprzecinkowa typu: [float](../../language-reference/keywords/float.md), [double](../../language-reference/keywords/double.md).
+- Wszystkie typy zmiennoprzecinkowe: [float](../../language-reference/keywords/float.md), [double](../../language-reference/keywords/double.md).
 - [CHAR](../../language-reference/keywords/char.md).
 - [wartość logiczna](../../language-reference/keywords/bool.md).
 - [dziesiętna](../../language-reference/keywords/decimal.md).

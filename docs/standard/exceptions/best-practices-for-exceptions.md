@@ -1,6 +1,6 @@
 ---
 title: Najlepsze praktyki dotyczące wyjątków
-ms.date: 03/30/2017
+ms.date: 12/05.2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,26 +9,22 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6aa1049c531550687a2c6289ccd87e763ca2f58
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199633"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149591"
 ---
 # <a name="best-practices-for-exceptions"></a>Najlepsze praktyki dotyczące wyjątków
 
 Dobrze zaprojektowana aplikacja obsługuje wyjątki i błędy, aby zapobiegać awariom aplikacji. W tej sekcji opisano najlepsze rozwiązania dotyczące obsługi i tworzenia wyjątków.
 
-## <a name="use-trycatchfinally-blocks"></a>Użyj bloki try/catch/finally
+## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Bloki try/catch/finally umożliwia odzyskiwanie w razie błędów lub zwolnienia zasobów
 
-Użyj `try` / `catch` / `finally` bloki wokół kodu, który potencjalnie może generować wyjątek. 
+Użyj `try` / `catch` bloki wokół kodu, który potencjalnie może generować wyjątek ***i*** kodu można odzyskać z tego wyjątku. W `catch` blokuje zawsze porządkować wyjątki od najbardziej pochodnej do najmniej pochodnego. Wszystkie wyjątki pochodzić od <xref:System.Exception>. Bardziej pochodnego wyjątki nie są obsługiwane przez klauzuli catch, który jest poprzedzona klauzulą catch dla klasy bazowej wyjątku. Gdy kodu nie można odzyskać z wyjątku, nie Złap, ten wyjątek. Włącz metody dalsze górę stosu wywołań, aby odzyskać, jeśli jest to możliwe.
 
-W `catch` blokuje zawsze porządkować wyjątki od najbardziej specyficznych do najmniej specyficznych.
-
-Użyj `finally` bloku, aby wyczyścić zasoby, czy można odzyskać, czy nie.
+Czyszczenie zasobów przydzielonych z oboma `using` instrukcji lub `finally` bloków. Preferuj `using` instrukcji, aby automatycznie wyczyścić zasoby, gdy wyjątki zostaną zgłoszone. Użyj `finally` bloków, aby wyczyścić zasoby, które nie implementują <xref:System.IDisposable>. Możesz pisać kod w `finally` claus prawie zawsze jest wykonywane, nawet wtedy, gdy wyjątki zostaną zgłoszone.
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>Obsługa typowe warunki bez zgłaszanie wyjątków
 
@@ -58,11 +54,11 @@ Klasa może zapewnić metody lub właściwości, które pozwalają uniknąć naw
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
 
-Innym sposobem na uniknięcie wyjątków jest zwracana wartość null dla ekstremalnie częstych przypadków błędów zamiast zgłaszać wyjątek. Ekstremalnie częste przypadki błędów należy traktować jako normalny przepływ sterowania. Zwracanie w takich przypadkach wartości null minimalizuje ich wpływ na wydajność aplikacji.
+Innym sposobem na uniknięcie wyjątki, które ma zwrócić `null` dla ekstremalnie częstych przypadków błędów zamiast zgłaszać wyjątek. Ekstremalnie częste przypadki błędów należy traktować jako normalny przepływ sterowania. Zwracając `null` w takich przypadkach można zminimalizować wpływ na wydajność aplikacji.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Zgłaszają wyjątki, zamiast zwracać kod błędu:
 
-Wyjątki upewnij się, że awarie nie niezauważone ponieważ wywołanie kodu nie Sprawdź kod powrotny. 
+Wyjątki upewnij się, że awarie nie niezauważone ponieważ wywołanie kodu nie Sprawdź kod powrotny.
 
 ## <a name="use-the-predefined-net-exception-types"></a>Użyj wstępnie zdefiniowanych typów wyjątków platformy .NET
 
@@ -90,7 +86,7 @@ Użyj co najmniej trzech typowych konstruktorów, podczas tworzenia własnych kl
   
 * <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, który akceptuje komunikat w formacie ciągu i wyjątek wewnętrzny.  
   
-Aby uzyskać przykład, zobacz [porady: wyjątki create user-defined](how-to-create-user-defined-exceptions.md).
+Aby uzyskać przykład, zobacz [jak: Tworzenie wyjątków zdefiniowanych przez użytkownika](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Upewnij się, że wyjątku jest dostępny, gdy kod jest wykonywany zdalnie
 
@@ -132,7 +128,7 @@ Klasy często zgłaszają takie same wyjątki z różnych miejsc w swojej implem
   
 W niektórych przypadkach jest bardziej odpowiednie użycie konstruktora wyjątków w celu utworzenia wyjątku. Przykładem jest klasą globalnych <xref:System.ArgumentException>.
 
-## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>Czyścić wyniki pośrednie podczas zgłaszania wyjątków
+## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>Przywracanie stanu, gdy metody nie zakończą się z powodu wyjątków
 
 Obiekty wywołujące powinny być w stanie założyć, że nie występują efekty uboczne, gdy wyjątek jest zgłaszany przez metodę. Na przykład jeśli kod, który przesyła pieniądze wycofania z jednego konta, a zdeponowanie na innym koncie, a wyjątek jest zgłaszany podczas wykonywania złożenia, nie chcesz wycofania do obowiązywać.
 
@@ -144,6 +140,8 @@ public void TransferFunds(Account from, Account to, decimal amount)
     to.Deposit(amount);
 }
 ```
+
+Powyższej metody bezpośrednio nie generuje żadnych wyjątków, ale musi być pamiętać o napisana tak, aby w przypadku niepowodzenia operacji złożenia wycofanie została odwrócona.
 
 Jednym ze sposobów, aby obsłużyć taką sytuację jest przechwytywać wyjątki zgłaszane przez transakcję depozytu i wycofać wycofania.
 
@@ -172,8 +170,8 @@ catch (Exception ex)
     throw new TransferFundsException("Withdrawal failed", innerException: ex)
     {
         From = from,
-    To = to,
-    Amount = amount
+        To = to,
+        Amount = amount
     };
 }
 ```

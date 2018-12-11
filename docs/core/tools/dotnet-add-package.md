@@ -1,15 +1,13 @@
 ---
-title: polecenia DotNet Dodaj polecenie pakietu — interfejs wiersza polecenia platformy .NET Core
+title: polecenia DotNet Dodaj pakiet — polecenie
 description: Polecenie "dotnet Dodaj pakiet" zapewnia wygodny sposób, aby dodać odwołanie do pakietu NuGet do projektu.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.date: 12/04/2018
+ms.openlocfilehash: 159b208feafb82e267629ea47dcef02d6b575055
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244396"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170005"
 ---
 # <a name="dotnet-add-package"></a>polecenia DotNet Dodaj pakiet
 
@@ -21,78 +19,91 @@ ms.locfileid: "39244396"
 
 ## <a name="synopsis"></a>Streszczenie
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>Opis
 
 `dotnet add package` Polecenia oferuje wygodne możliwość dodania odwołania do pakietu do pliku projektu. Po uruchomieniu polecenia, istnieje sprawdzania zgodności w celu zapewnienia, że pakiet jest zgodna ze strukturami w projekcie. Jeśli sprawdzenie zakończy się pomyślnie, `<PackageReference>` element zostanie dodany do pliku projektu i [dotnet restore](dotnet-restore.md) jest uruchamiany.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 Na przykład dodanie `Newtonsoft.Json` do *ToDo.csproj* generuje dane wyjściowe podobne do poniższego przykładu:
 
 ```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
-log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
+log  : Restoring packages for C:\Temp\projects\consoleproj\consoleproj.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
-info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json 235ms
+info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json 79ms
+info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/12.0.1/newtonsoft.json.12.0.1.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/12.0.1/newtonsoft.json.12.0.1.nupkg 232ms
+log  : Installing Newtonsoft.Json 12.0.1.
 info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'C:\projects\ToDo\ToDo.csproj'.
-info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to file 'C:\projects\ToDo\ToDo.csproj'.
+info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
 *ToDo.csproj* plik zawiera teraz [ `<PackageReference>` ](/nuget/consume-packages/package-references-in-project-files) element dla odpowiedniego pakietu.
 
 ```xml
-<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+<PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
 
 ## <a name="arguments"></a>Argumenty
 
-`PROJECT`
+* **`PROJECT`**
 
-Określa plik projektu. Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla jednego.
+  Określa plik projektu. Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla jednego.
 
-`PACKAGE_NAME`
+* **`PACKAGE_NAME`**
 
-Odwołania pakietu do dodania.
+  Odwołania pakietu do dodania.
 
 ## <a name="options"></a>Opcje
 
-`-h|--help`
+* **`-f|--framework <FRAMEWORK>`**
 
-Drukuje krótki pomoc dotyczącą polecenia.
+  Dodaje odwołanie do pakietu tylko wtedy, gdy przeznaczonych dla określonego [framework](../../standard/frameworks.md).
 
-`-f|--framework <FRAMEWORK>`
+* **`-h|--help`**
 
-Dodaje odwołanie do pakietu tylko wtedy, gdy przeznaczonych dla określonego [framework](../../standard/frameworks.md).
+  Drukuje krótki pomoc dotyczącą polecenia.
 
-`-n|--no-restore`
+* **`--interactive`**
 
-Dodaje odwołanie do pakietu bez sprawdzanie przywracania (wersja zapoznawcza) i zgodności.
+  Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji (na przykład w celu ukończenia uwierzytelniania). Dostępne od .NET Core SDK 2.1, wersja 2.1.400 lub nowszej.
 
-`--package-directory <PACKAGE_DIRECTORY>`
+* **`-n|--no-restore`**
 
-Przywraca pakietu w określonym katalogu.
+  Dodaje odwołanie do pakietu bez sprawdzanie przywracania (wersja zapoznawcza) i zgodności.
 
-`-s|--source <SOURCE>`
+* **`--package-directory <PACKAGE_DIRECTORY>`**
 
-Używa określonego źródła pakietu NuGet podczas operacji przywracania.
+  Przywraca pakietu w określonym katalogu.
 
-`-v|--version <VERSION>`
+* **`-s|--source <SOURCE>`**
 
-Wersja pakietu.
+  Używa określonego źródła pakietu NuGet podczas operacji przywracania.
+
+* **`-v|--version <VERSION>`**
+
+  Wersja pakietu.
 
 ## <a name="examples"></a>Przykłady
 
-Dodaj `Newtonsoft.Json` pakiet NuGet do projektu:
+* Dodaj `Newtonsoft.Json` pakiet NuGet do projektu:
 
-`dotnet add package Newtonsoft.Json`
+  ```console
+  dotnet add package Newtonsoft.Json
+  ```
 
-Dodaj określoną wersję pakietu do projektu:
+* Dodaj określoną wersję pakietu do projektu:
 
-`dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0`
+  ```console
+  dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
+  ```
 
-Dodaj pakiet przy użyciu określonego źródła NuGet:
+* Dodaj pakiet przy użyciu określonego źródła NuGet:
 
-`dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json`
+  ```console
+  dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
+  ```

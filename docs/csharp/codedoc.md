@@ -3,12 +3,12 @@ title: Dokumentowanie kodu przy użyciu komentarzy XML
 description: Dowiedz się, jak dokumentowanie kodu za pomocą komentarzy dokumentacji XML do generowania pliku dokumentacji XML w czasie kompilacji.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453271"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129672"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu przy użyciu komentarzy XML
 
@@ -20,7 +20,7 @@ Komentarze dokumentacji XML, podobnie jak wszystkie inne komentarze są ignorowa
 
 Aby wygenerować plik XML w czasie kompilacji, wykonując jedną z następujących czynności:
 
-- Jeśli tworzysz aplikację za pomocą programu .NET Core z poziomu wiersza polecenia, możesz dodać [elementu DocumentationFile](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) do `<PropertyGroup>` sekcji w pliku projektu csproj. Poniższy przykład generuje plik XML w katalogu projektu o takiej samej nazwie głównego pliku zestawu:
+- Jeśli tworzysz aplikację za pomocą programu .NET Core z poziomu wiersza polecenia, możesz dodać [elementu DocumentationFile](/visualstudio/msbuild/common-msbuild-project-properties) do `<PropertyGroup>` sekcji w pliku projektu csproj. Poniższy przykład generuje plik XML w katalogu projektu o takiej samej nazwie głównego pliku zestawu:
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -136,7 +136,7 @@ Może to być dowolny typ zdefiniowany w projekcie lub przywoływanego zestawu.
 
 ### <a name="ltparamgt"></a>&lt;param&gt;
 
-Możesz użyć `<param>` tag do opisania parametrów metody. Poniżej przedstawiono przykład podwójnego `Add` metoda: określono parametr, w tym artykule opisano tagu w **wymagane** `name` atrybutu.
+Możesz użyć `<param>` tag do opisania parametrów metody. Poniżej przedstawiono przykład podwójnego `Add` metody: Opisuje tagu określono parametr w **wymagane** `name` atrybutu.
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -196,7 +196,7 @@ I są dostępne: naszego kodu jest do odczytu i utracono żadnych informacji o d
 
 `filename` Atrybut reprezentuje nazwę pliku XML zawierającego dokumentację.
 
-`path` Atrybutu reprezentuje [XPath](https://msdn.microsoft.com/library/ms256115.aspx) zapytania `tag name` obecne w określonym `filename`.
+`path` Atrybutu reprezentuje [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) zapytania `tag name` obecne w określonym `filename`.
 
 `name` Atrybut reprezentuje określenie nazwy w tagu, który poprzedza komentarze.
 

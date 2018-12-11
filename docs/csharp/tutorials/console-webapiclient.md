@@ -4,11 +4,11 @@ description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.openlocfilehash: 521c6edfa7163219ea86c6fb8444bc95859c9aa1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199919"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126645"
 ---
 # <a name="rest-client"></a>Klient REST
 
@@ -158,7 +158,7 @@ namespace WebAPIClient
 }
 ``` 
 
-Powyższy kod należy umieścić w nowym pliku o nazwie "repo.cs". Ta wersja klasy reprezentuje to najprostsza ścieżka do przetwarzania danych JSON. Nazwa klasy i nazwę elementu członkowskiego zgodne nazwy używane w pakiecie JSON zamiast następujących konwencji języka C#. Można to naprawić, zapewniając niektóre atrybuty konfiguracji później. Ta klasa przedstawia inną ważną cechą JSON serializacji i deserializacji: nie wszystkie pola w pakiecie JSON należą do tej klasy.
+Powyższy kod należy umieścić w nowym pliku o nazwie "repo.cs". Ta wersja klasy reprezentuje to najprostsza ścieżka do przetwarzania danych JSON. Nazwa klasy i nazwę elementu członkowskiego zgodne nazwy używane w pakiecie JSON zamiast następujących konwencji języka C#. Można to naprawić, zapewniając niektóre atrybuty konfiguracji później. Ta klasa przedstawia inną ważną cechą JSON serializacji i deserializacji: Nie wszystkie pola w pakiecie JSON należą do tej klasy.
 Serializator JSON będzie ignorować informacje, które nie są objęte na typ klasy, które są używane.
 Ta funkcja sprawia, że łatwiej tworzyć typy, które działają z tylko podzestaw pól w pakiecie JSON.
 

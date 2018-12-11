@@ -3,12 +3,13 @@ title: Jednostki testowania C# za pomocą NUnit i .NET Core
 description: Pojęcia dotyczące jednostek testów w języku C# i .NET Core za pomocą interaktywnych doświadczenia przykładowe rozwiązanie krok po kroku za pomocą polecenia dotnet test i NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746747"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169043"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Jednostki testowania C# za pomocą NUnit i .NET Core
 
@@ -16,7 +17,7 @@ Ten samouczek przeprowadzi Cię przez środowisko interaktywne tworzenie przykł
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [.NET core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) lub nowszy.
+- [Zestaw SDK programu .NET core 2.1](https://www.microsoft.com/net/download) lub nowszy.
 - Edytor tekstu lub ulubionego edytora kodu.
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
@@ -166,7 +167,7 @@ W *jednostki — testowanie-przy użyciu nunit* katalogu, uruchom `dotnet test` 
 
 ## <a name="adding-more-features"></a>Dodawanie większej liczby funkcji
 
-Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczb pierwszych: 0, -1. Można dodać nowe testy za pomocą `[Test]` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty NUnit, które umożliwiają pisanie zestaw testów podobne.  A `[TestCase]` atrybut jest używany do tworzenia zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe. Możesz użyć `[TestCase]` atrybutu, aby określić wartości dla tych danych wejściowych.
+Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczby pierwsze: 0, -1. Można dodać nowe testy za pomocą `[Test]` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty NUnit, które umożliwiają pisanie zestaw testów podobne.  A `[TestCase]` atrybut jest używany do tworzenia zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe. Możesz użyć `[TestCase]` atrybutu, aby określić wartości dla tych danych wejściowych.
 
 Zamiast tworzyć nowe testy, należy zastosować ten atrybut do utworzenia pojedynczego testu opartego na danych. Opartych na test danych to metoda, która sprawdza kilka wartości mniejszej niż dwa, czyli najniższy numer prime:
 

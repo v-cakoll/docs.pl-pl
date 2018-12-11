@@ -24,7 +24,7 @@ Zagadnienia i zadania dla tych repozytoriów są śledzone w tym miejscu.
 
 Potrzebujesz podstawową wiedzę na temat [Git i GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Krok 1:** pominąć ten krok w przypadku niewielkich zmian. Jeśli interesują w pisaniu nowych treści lub dokładnie zmieniającego istniejącej zawartości, należy otworzyć [problem](https://github.com/dotnet/docs/issues) opisujący, co chcesz zrobić.
+**Krok 1:** Pomiń ten krok w przypadku niewielkich zmian. Jeśli interesują w pisaniu nowych treści lub dokładnie zmieniającego istniejącej zawartości, należy otworzyć [problem](https://github.com/dotnet/docs/issues) opisujący, co chcesz zrobić.
 Zawartość wewnątrz **docs** folderu jest podzielona na sekcje, które są odzwierciedlone w tabeli z treści (TOC). Zdefiniuj lokalizację tematu w spisie treści. Uzyskiwanie opinii na temat swojej propozycji.
 
 —lub—
@@ -39,11 +39,11 @@ Możesz również z istniejących problemów dla społeczności, które obejmuj�
 
 Można także przyjrzeć się nasze [zgłaszanie problemów](https://github.com/dotnet/docs/issues) listy i volunteer do pracy nad tymi interesuje Cię. Używamy [w górę do chwyty](https://github.com/dotnet/docs/labels/up-for-grabs) etykietę do tagu problemy otwarte dla udziału. 
 
-**Krok 2:** rozwidlenia `/dotnet/docs`, `dotnet/samples` lub `dotnet/dotnet-api-docs` repozytoriów jako potrzebne i utwórz gałąź dla Twoich zmian.
+**Krok 2:** Rozwidlenia `/dotnet/docs`, `dotnet/samples` lub `dotnet/dotnet-api-docs` repozytoriów jako potrzebne i utwórz gałąź dla Twoich zmian.
 
 Dla niewielkich zmian można użyć interfejsu sieci web usługi GitHub. Po prostu kliknij **Edytuj plik w Twoim rozwidleniu ten projekt** w pliku, czy chcesz zmienić. GitHub tworzy nową gałąź dla Ciebie, po przesłaniu zmian.
 
-**Krok 3:** wprowadzić zmiany w tej nowej gałęzi.
+**Krok 3:** Wprowadź zmiany w tej nowej gałęzi.
 
 Jeśli jest to nowy temat, możesz użyć tej funkcji [plik szablonu](./styleguide/template.md) jako punktu początkowego. Zawiera wskazówki dotyczące pisania i wyjaśniono również metadane wymagane dla każdego artykułu, takie jak informacje o autorze.
 
@@ -66,7 +66,7 @@ Pamiętaj wykonać poprawnej składni języka Markdown. Aby uzyskać więcej inf
             /porting-overview
                 portability_report.png
 
-**Krok 4:** przesłać ściągnięcia żądania (PR) z gałęzi `dotnet/docs/master`.
+**Krok 4:** Prześlij ściągnięcia żądania (PR) z gałęzi `dotnet/docs/master`.
 
 Każdego żądania Ściągnięcia powinien zwykle adres jednym problemem w danym momencie. Żądania Ściągnięcia można zmodyfikować jeden lub wiele plików. Jeśli masz adresowania wiele poprawek dla innych plików, oddzielne żądania ściągnięcia są preferowane.
 
@@ -74,7 +74,7 @@ Jeśli żądanie Ściągnięcia jest adresowanie istniejący problem, Dodaj `Fix
 
 Zespół .NET przejrzy żądanie Ściągnięcia i powiadomienie Cię o tym, czy istnieją inne aktualizacje/zmiany niezbędne, aby można było ją zatwierdzić.
 
-**Krok 5:** wprowadź wymagane zmiany w gałęzi, zgodnie z opisem z zespołem.
+**Krok 5:** Wprowadź wymagane zmiany w gałęzi, zgodnie z opisem z zespołem.
 
 Maintainers spowoduje scalenie żądania Ściągnięcia z gałęzią główną, po zastosowaniu opinii i zmiana zostaje zatwierdzona.
 

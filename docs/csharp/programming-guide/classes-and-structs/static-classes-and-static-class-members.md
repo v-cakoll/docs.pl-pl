@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 60a75946d30b1555aea01507d846e790dd00f767
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6709344002ebc433c8d13d9cfa48a179fae9991b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122726"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125996"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Klasy statyczne i statyczni członkowie klas (Przewodnik programowania w języku C#)
 A [statyczne](../../../csharp/language-reference/keywords/static.md) klasy jest zasadniczo taki sam jak niestatycznych klas, ale ma jedną różnicą: nie można utworzyć wystąpienia klasy statycznej. Innymi słowy, nie można użyć [nowe](../../../csharp/language-reference/keywords/new.md) — słowo kluczowe, aby utworzyć zmienną typu klasy. Ponieważ nie ma żadnej zmiennej wystąpienia, uzyskujesz dostęp do członków klasy statycznej za pomocą sama nazwa klasy. Na przykład jeśli masz statyczna klasy, która jest o nazwie `UtilityClass` który posiada publiczną metodę o nazwie `MethodA`, należy wywołać metodę, jak pokazano w poniższym przykładzie:  
@@ -39,7 +39,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Podobnie jak w przypadku wszystkich typów klasy, informacje o typie dla klasy statycznej jest ładowany przez [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] środowisko uruchomieniowe języka wspólnego (CLR), gdy jest ładowany przez program, który odwołuje się do klasy. Program nie można określić dokładnie, gdy klasa jest ładowany. Jednak jest gwarantowane do załadowania i jego pola zainicjowane i jego statyczny Konstruktor wywołuje się, zanim po raz pierwszy w programie odwołuje się do klasy. Statyczny Konstruktor jest wywoływany tylko jeden raz, a Klasa statyczna pozostaje w pamięci dla okresu istnienia domeny aplikacji, w której znajduje się program.  
   
 > [!NOTE]
->  Aby utworzyć klasę niestatyczna, która zezwala na tylko jedno wystąpienie sam ma zostać utworzony, zobacz [wdrażanie pojedynczego wystąpienia w języku C#](https://msdn.microsoft.com/library/ms998558.aspx).  
+>  Aby utworzyć klasę niestatyczna, która zezwala na tylko jedno wystąpienie sam ma zostać utworzony, zobacz [wdrażanie pojedynczego wystąpienia w języku C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29).  
   
  Poniższa lista zawiera główne funkcje klasy statycznej:  
   
@@ -84,7 +84,8 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Wywołanie metody statycznej generuje instrukcją call w języka Microsoft intermediate language (MSIL), natomiast generuje wywołanie metody wystąpienia `callvirt` instrukcji, co sprawdza również dla odwołuje się obiekt z wartością null. Jednak w większości przypadków różnicy wydajności między tymi dwoma nie ma znaczenia.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Aby uzyskać więcej informacji, zobacz [klas statycznych](~/_csharplang/spec/classes.md#static-classes) i [statyczna i wystąpienia elementów członkowskich](~/_csharplang/spec/classes.md#static-and-instance-members) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz też
 

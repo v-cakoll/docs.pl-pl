@@ -1,18 +1,18 @@
 ---
 title: Sekwencje (F#)
-description: Dowiedz się, jak sekwencje F#, gdy masz duży, uporządkowany zbiór danych, ale nie zawsze będziesz korzystać ze wszystkich elementów.
+description: Dowiedz się, jak używać F# sekwencji znaków, w przypadku dużych, uporządkowany zbiór danych, ale nie zawsze będziesz korzystać ze wszystkich elementów.
 ms.date: 05/16/2016
-ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 835aa5fdc32f98efdc7e1795efd09541a5f1b791
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48838913"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129210"
 ---
 # <a name="sequences"></a>Sekwencje
 
 > [!NOTE]
-Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
+> Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
 A *sekwencji* logicznej serii elementów jest jeden typ. Sekwencje są szczególnie przydatne, gdy masz duży, uporządkowany zbiór danych, ale nie planujesz korzystać ze wszystkich elementów. Sekwencja poszczególne elementy są obliczane tylko jako wymagane, dlatego sekwencji może zapewnić lepszą wydajność niż lista w sytuacjach, w którym nie wszystkie elementy są używane. Sekwencje są reprezentowane przez `seq<'T>` typ, który jest aliasem dla `System.Collections.Generic.IEnumerable`. W związku z tym, dowolny typ .NET Framework, który implementuje `System.IEnumerable` może służyć jako sekwencja. [Seq — moduł](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) zapewnia obsługę manipulacje obejmujące sekwencji.
 
@@ -22,7 +22,7 @@ A *sekwencji wyrażeń* jest na wyrażenie obliczane do sekwencji. Wyrażenia se
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Wyrażenia sekwencyjne składają się z wyrażeń języka F#, które generują wartości sekwencji. Mogą używać `yield` — słowo kluczowe do produkcji wartości, które stają się częścią sekwencji.
+Wyrażenia sekwencyjne składają się z F# wyrażeń, które generują wartości sekwencji. Mogą używać `yield` — słowo kluczowe do produkcji wartości, które stają się częścią sekwencji.
 
 Poniżej znajduje się przykład.
 
@@ -62,7 +62,7 @@ W poniższym przykładzie pokazano użycie `yield!` połączyć poszczególnych 
 
 Sekwencje obsługują wiele tych samych funkcjach jak [Wyświetla](lists.md). Sekwencje obsługuje również operacje, takie jak grupowanie, a wciąż dochodzą nowe, za pomocą funkcji generowania klucza. Sekwencje również obsługę funkcji bardziej zróżnicowane wyodrębnianie podciągów.
 
-Wiele typów danych, takich jak list, tablic, zestawy i map są niejawnie sekwencje, ponieważ są one przeliczalne kolekcje. Funkcja, która wykonuje sekwencję, jak argument działa ze wszystkimi F# typy danych, oprócz dowolnego typu danych .NET Framework, który implementuje `System.Collections.Generic.IEnumerable<'T>`. Natomiast to do funkcji, która przyjmuje listę jako argument, który przyjmuje tylko listy. Typ `seq<'T>` jest skrótem typu dla `IEnumerable<'T>`. Oznacza to, że dowolny typ, który implementuje ogólnego `System.Collections.Generic.IEnumerable<'T>`, która obejmuje tablic, list, ustawia i map w F#, a także większość typów programu .NET Framework kolekcji, jest zgodna z `seq` typu i może służyć wszędzie tam, gdzie oczekuje sekwencji.
+Wiele typów danych, takich jak list, tablic, zestawy i map są niejawnie sekwencje, ponieważ są one przeliczalne kolekcje. Funkcja, która wykonuje sekwencję, jak argument działa ze wszystkimi typowe F# typy danych, oprócz dowolny typ danych .NET Framework, który implementuje `System.Collections.Generic.IEnumerable<'T>`. Natomiast to do funkcji, która przyjmuje listę jako argument, który przyjmuje tylko listy. Typ `seq<'T>` jest skrótem typu dla `IEnumerable<'T>`. Oznacza to, że dowolny typ, który implementuje ogólnego `System.Collections.Generic.IEnumerable<'T>`, w tym tablice, listy, zestawy, a następnie mapuje w F#, a także większość typów programu .NET Framework kolekcji, jest zgodny z `seq` typu i może służyć wszędzie tam, gdzie oczekiwano sekwencji .
 
 ## <a name="module-functions"></a>Funkcje modułu
 
@@ -102,7 +102,7 @@ Można zdefiniować nieograniczony sekwencji za pomocą [Seq.initInfinite](https
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 The sequence seq1 contains numbers from 0 to 20.
@@ -120,7 +120,7 @@ Poniższy kod jest przykładem, który używa wielu funkcji modułu sekwencji, k
 
 ## <a name="searching-and-finding-elements"></a>Wyszukiwanie i znajdowanie elementów
 
-Sekwencje obsługuje funkcje dostępne z listami: [Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [ SEQ.Pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47), i [Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Wersje tych funkcji, które są dostępne dla sekwencji ocenić sekwencji tylko do elementu, który jest przeszukiwany dla. Aby uzyskać przykłady, zobacz [Wyświetla](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
+Sekwencje obsługuje funkcje dostępne przy użyciu list: [SEQ.EXISTS](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [Seq.tryFind ](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47), i [Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Wersje tych funkcji, które są dostępne dla sekwencji ocenić sekwencji tylko do elementu, który jest przeszukiwany dla. Aby uzyskać przykłady, zobacz [Wyświetla](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
 
 ## <a name="obtaining-subsequences"></a>Uzyskiwanie podciągów
 

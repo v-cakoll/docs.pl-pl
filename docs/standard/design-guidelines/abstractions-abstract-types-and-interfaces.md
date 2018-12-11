@@ -1,6 +1,6 @@
 ---
 title: Abstrakcje (typy abstrakcyjne i interfejsy)
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - interfaces [.NET Framework], abstract
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ad8b2dd3dbf2a7a75c98a3115d4351dfea4e1a0
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+author: KrzysztofCwalina
+ms.openlocfilehash: 4ff79af968c8a0a360cade687b8c60cdd71de192
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480685"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149916"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstrakcje (typy abstrakcyjne i interfejsy)
 Abstrakcja to typ, który zawiera opis kontraktu, ale nie zapewnia pełnej implementacji kontraktu. Abstrakcje są zwykle implementowane jako abstrakcyjnych klas lub interfejsów, a pochodzą one z dobrze zdefiniowanego zestawu dokumentacji opisujące wymagany semantykę typów Implementowanie kontraktu. Najważniejsze elementy abstrakcji w programie .NET Framework między innymi <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, i <xref:System.Object>.  
@@ -36,7 +35,7 @@ Abstrakcja to typ, który zawiera opis kontraktu, ale nie zapewnia pełnej imple
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
+ *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz także
 

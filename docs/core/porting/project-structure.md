@@ -1,19 +1,19 @@
 ---
-title: Organizowanie projekt do obsługi platformy .NET Framework i .NET Core
+title: Organizowanie projektów programu .NET Framework i .NET Core
 description: Pomoc dla właścicieli projektu, którzy chcą Kompiluj swoje rozwiązanie dla platformy .NET Framework i .NET Core side-by-side.
 author: conniey
-ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 97673e1ccaeb094bf8c7cb835a84ae9389fac502
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512269"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169134"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organizowanie projekt do obsługi platformy .NET Framework i .NET Core
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Zorganizować projekt do obsługi środowiska .NET Framework i .NET Core
 
-Ten artykuł pomaga projektu właścicieli, którzy chcą Kompiluj swoje rozwiązanie dla platformy .NET Framework i .NET Core side-by-side. Zapewnia kilka opcji do organizowania projektów, aby pomóc deweloperom osiągnięcie tego celu. Poniższa lista zawiera niektóre typowe scenariusze wziąć pod uwagę podczas wybierania sposobu konfigurowania układ projektu za pomocą programu .NET Core. Lista nie może obejmować wszystkie potrzebne mu; Ustaw priorytet zależnie od potrzeb Twojego projektu.
+Dowiedz się, jak utworzyć rozwiązanie, które jest kompilowany dla środowiska .NET Framework i .NET Core side-by-side. Zobacz kilka opcji do organizowania projektów, aby pomóc Ci osiągnąć ten cel. Poniżej przedstawiono niektóre typowe scenariusze należy wziąć pod uwagę podczas wybierania sposobu konfigurowania układ projektu za pomocą programu .NET Core. Lista nie może obejmować wszystkie potrzebne mu; Ustaw priorytet zależnie od potrzeb Twojego projektu.
 
 * [**Łączenie istniejących projektów i projektów .NET Core w jednym projektów**][option-csproj]
 

@@ -1,26 +1,26 @@
 ---
-title: Umożliwia strukturze ML.NET kwiatów iris klastra (klastrowania)
+title: Kwiatów iris klastra przy użyciu klastrowania uczeń - strukturze ML.NET
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klastrowania
 author: pkulikov
 ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 5bd73c774f60466daaf52215c34e7e17b5f5cc9c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453193"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145635"
 ---
-# <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Samouczek: Używanie strukturze ML.NET do klastra iris kwiatów (klastrowania)
+# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Samouczek: Kwiatów iris klastra przy użyciu klastrowania uczeń za pomocą platformy ML.NET
 
 > [!NOTE]
 > W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, zobacz [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 W tym samouczku pokazano, jak za pomocą strukturze ML.NET tworzyć [model klastra](../resources/tasks.md#clustering) dla [zbiór danych na temat irysów](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
-W tym samouczku dowiesz się, jak:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 > - Omówienie problemu
 > - Wybierz zadanie uczenia odpowiedniej maszyny
@@ -42,7 +42,7 @@ Ten problem dotyczy dzielenia zbiór kwiatów irysów w różnych grupach na pod
 
 Nie wiesz, grupę, do której należy każdego Kwiatek, możesz wybrać [nienadzorowane uczenia maszynowego](../resources/glossary.md#unsupervised-machine-learning) zadania. Aby podzielić zestawu danych w grupach w taki sposób, że elementy w tej samej grupie przypominają bardziej do innych niż w innych grupach, należy użyć [klastrowania](../resources/tasks.md#clustering) machine learning zadania.
 
-## <a name="create-a-console-application"></a>Tworzenie aplikacji konsoli
+## <a name="create-a-console-application"></a>Tworzenie aplikacji konsolowej
 
 1. Otwórz program Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W **nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** pole tekstowe, wpisz "IrisClustering", a następnie wybierz **OK** przycisku.
 
@@ -172,7 +172,7 @@ Musisz również dodać następujące `using` dyrektywę w górnej części *Pro
 
 [!code-csharp[Add System.Threading.Tasks using](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#12)]
 
-Ponieważ `async Main` metodą jest funkcja, dodany w języku C# 7.1 i wersją języka domyślnego projektu języka C# 7.0, musisz zmienić wersję języka C# 7.1 lub nowszy. Aby to zrobić, kliknij prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań** i wybierz **właściwości**. Wybierz **kompilacji** kartę, a następnie wybierz pozycję **zaawansowane** przycisku. Z listy rozwijanej wybierz **języka C# 7.1** (lub nowsza wersja). Wybierz **OK** przycisku.
+Ponieważ `async Main` metodą jest funkcja, dodany w języku C# 7.1 i wersją języka domyślnego projektu języka C# 7.0, musisz zmienić wersję języka C# 7.1 lub nowszy. Aby to zrobić, kliknij prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań** i wybierz **właściwości**. Wybierz **kompilacji** kartę, a następnie wybierz pozycję **zaawansowane** przycisku. Z listy rozwijanej wybierz **języka C# 7.1** (lub nowsza wersja). Wybierz przycisk **OK**.
 
 ## <a name="use-the-model-for-predictions"></a>Na użytek modelu prognozy
 
@@ -203,7 +203,7 @@ Gratulacje! Usługi machine learning model iris klastrowania i użyto jej do pro
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym samouczku przedstawiono sposób:
+W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 > - Omówienie problemu
 > - Wybierz zadanie uczenia odpowiedniej maszyny

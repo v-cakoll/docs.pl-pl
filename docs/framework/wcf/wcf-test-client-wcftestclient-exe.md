@@ -3,11 +3,11 @@ title: Testowy klient WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181595"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149006"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Testowy klient WCF (WcfTestClient.exe)
 Windows Communication Foundation (WCF) testowanie klient (WcfTestClient.exe) jest narzędziem graficznego interfejsu użytkownika, które umożliwia użytkownikom testu parametrów wejściowych, przesyłanie, że dane wejściowe do usługi i wyświetlanie odpowiedzi, który usługa wysyła z powrotem. Zapewnia bezproblemowe usługi testowania doświadczenie w połączeniu z hosta usługi WCF.  
@@ -136,7 +136,7 @@ Windows Communication Foundation (WCF) testowanie klient (WcfTestClient.exe) jes
 ## <a name="features-supported-by-wcf-test-client"></a>Funkcje obsługiwane przez klienta testowego WCF  
  Oto lista funkcji obsługiwanych przez klienta testowego WCF:  
   
--   Usługa wywołania: Żądanie/odpowiedź, a komunikat jednokierunkowy.  
+-   Wywołania usługi: Żądanie/odpowiedź i komunikat jednokierunkowy.  
   
 -   Powiązania: obsługiwane przez Svcutil.exe wszystkie powiązania.  
   

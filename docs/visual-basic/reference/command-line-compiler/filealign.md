@@ -10,11 +10,11 @@ helpviewer_keywords:
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
 ms.openlocfilehash: db70749f28592ae6711b6d9544f8704af9416490
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181725"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128170"
 ---
 # <a name="-filealign"></a>-filealign —
 Określa, gdzie należy wyrównać sekcje pliku wyjściowego.  

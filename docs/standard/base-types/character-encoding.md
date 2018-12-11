@@ -1,5 +1,6 @@
 ---
 title: Kodowanie znaków w .NET
+description: Więcej informacji na temat znaków kodowania i dekodowania na platformie .NET.
 ms.date: 12/22/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cac7e0fca4a009b7f5b6f677abed70cf2519052d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.custom: seodec18
+ms.openlocfilehash: 55eb1d713c25314877fffd8a683ce5a8d9516d92
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711760"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149929"
 ---
 # <a name="character-encoding-in-net"></a>Kodowanie znaków w .NET
 Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele różnych sposobów. Kodowanie znaków to system, który pary, każdy znak w obsługiwanych znaków, zestaw z jakąś wartość, która reprezentuje ten znak. Na przykład Morse'a jest znakiem kodowania tej pary każdego znaku w alfabetu łacińskiego z wzorcem kropki i łączniki, które są odpowiednie na potrzeby transmisji przez telegraficznego wierszy. Kodowanie znaków dla pary komputerów dla każdego znaku obsługiwany zestaw z wartością liczbową, który reprezentuje ten znak znaków. Kodowanie znaków ma dwa różne składniki:  
@@ -60,7 +62,7 @@ Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele róż
 > [!NOTE]
 >  Unicode Standard przypisuje punkt kodowy (liczba) i nazwę każdego znaku w każdej obsługiwanej skryptu. Na przykład znak "A" jest reprezentowany przez punkt kodowy U + 0041 i nazwie "LATIN CAPITAL LETTER A". Kodowania Format przekształcenia Unicode (UTF) zdefiniuj sposoby kodowanie tego punktu kodu do sekwencji bajtów jednego lub więcej. Schemat kodowania Unicode upraszcza opracowywanie aplikacji gotowej dla całego świata, ponieważ zezwala ona na znaki z dowolnego zestawu może być reprezentowana w jednym kodowania znaków. Deweloperzy aplikacji nie ma już do śledzenia schemat kodowania, który został użyty do utworzenia znaków dla określonego języka lub zapis systemu, a dane mogą być udostępniane między systemami w wielu krajach bez jest uszkodzony.  
 >   
->  .NET wspomaga trzy kodowania z definicją w standardzie Unicode: UTF-8, UTF-16 i UTF-32. Aby uzyskać więcej informacji, zobacz Unicode Standard na [strony głównej Unicode](https://www.unicode.org/).  
+>  .NET obsługuje trzy rodzaje kodowania zdefiniowane w standardzie Unicode standard: UTF-8, UTF-16 i UTF-32. Aby uzyskać więcej informacji, zobacz Unicode Standard na [strony głównej Unicode](https://www.unicode.org/).  
   
  Można pobrać informacji na temat kodowania dostępne na platformie .NET, wywołując <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> metody. .NET wspomaga znaków kodowania systemów wymienionych w poniższej tabeli.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4839513f28de0fd79de7a8dc5245d4d0a2fb1622
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 39472662cd26799e9adbbbd199129e2c83dd0d93
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123803"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155369"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Liczniki wydajności w oprogramowaniu .NET Framework
 Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
@@ -223,7 +223,7 @@ Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Perf
   
  Liczniki wydajności są podzielone na kategorie. Aplikację można wyświetlić listę wszystkich kategorii w poniższym przykładowym kodem:  
   
-```  
+```csharp
 PerformanceCounterCategory[] Array = PerformanceCounterCategory.GetCategories();  
 for (int i = 0; i < Array.Length; i++)  
 {  

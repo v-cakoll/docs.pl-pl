@@ -4,12 +4,12 @@ description: Informacje o sposobie obsługi błędów HTTP za pomocą Polly i Ht
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/10/2018
-ms.openlocfilehash: c16f4c0f2ef09f346c8b46ff8089883cedcf0c7e
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874900"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143990"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementowanie ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania z zasadami dotyczącymi HttpClientFactory i Polly
 
@@ -81,12 +81,10 @@ Policy
 
     [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
--   **Marc Brooker. Zakłócenia: Wprowadzania czynności lepiej za pomocą losowości**
+-   **Marc Brooker. Zakłócenia: Lepiej wprowadzania rzeczy za pomocą losowości**
 
     [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
-
-
 >[!div class="step-by-step"]
-[Poprzednie](explore-custom-http-call-retries-exponential-backoff.md)
-[dalej](implement-circuit-breaker-pattern.md)
+>[Poprzednie](explore-custom-http-call-retries-exponential-backoff.md)
+>[dalej](implement-circuit-breaker-pattern.md)

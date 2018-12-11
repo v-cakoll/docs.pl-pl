@@ -8,11 +8,11 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744590"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129821"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework — Przewodnik wdrażania dla administratorów
 W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego zależności systemowe przez sieć przy użyciu programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby uzyskać listę wymagania sprzętowe i programowe dotyczące instalowania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md).  
@@ -114,9 +114,9 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
   
     2.  **Wiersz polecenia:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (Opcje wiersza polecenia są opisane w tabeli po wykonaniu tych kroków)  
   
-    3.  **Uruchom:** wybierz **ukryte**.  
+    3.  **Uruchom polecenie:** Wybierz **ukryte**.  
   
-    4.  **Program może zostać uruchomiony:** wybierz opcję określającą, czy program można uruchomić niezależnie od tego, czy użytkownik jest zalogowany.  
+    4.  **Program może zostać uruchomiony:** Wybierz opcję określającą, czy program można uruchomić niezależnie od tego, czy użytkownik jest zalogowany.  
   
 8.  Na **wymagania** wybierz **dalej** aby zaakceptować wartości domyślne, a następnie ukończ jego pracę.  
   
@@ -177,7 +177,7 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
 9. Na **komfortu** strony w Kreatorze Użyj wartości domyślnych i wybierz **dalej**.  
   
 > [!WARNING]
-> W środowisku produkcyjnym mogą obowiązywać zasady wymagające wybrania innych ustawień harmonogramu wdrażania. Aby uzyskać informacje o tych opcjach, zobacz [właściwości nazwy reklamy: karta harmonogram](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
+> W środowisku produkcyjnym mogą obowiązywać zasady wymagające wybrania innych ustawień harmonogramu wdrażania. Aby uzyskać informacje o tych opcjach, zobacz [właściwości nazwy reklamy: Zaplanuj kartę](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
   
 10. Na **punktów dystrybucji** strony w Kreatorze Użyj wartości domyślnych i wybierz **dalej**.  
   

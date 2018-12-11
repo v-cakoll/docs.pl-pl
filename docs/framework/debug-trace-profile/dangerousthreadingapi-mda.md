@@ -12,34 +12,34 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02f16bd9560346cca9b24d4e5b8e760fdb3afd18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bfc3aa2bb7d1819f5f6221154ba1d276e0c202c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357316"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149370"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
-`dangerousThreadingAPI` Zarządzany Asystent debugowania (MDA) została aktywowana po <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> metoda jest wywoływana w wątku innego niż bieżący wątek.  
+`dangerousThreadingAPI` Zarządzanego Asystenta debugowania (MDA) jest aktywowany po <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> metoda jest wywoływana z wątku innego niż bieżący wątek.  
   
 ## <a name="symptoms"></a>Symptomy  
- Aplikacja nie odpowiada lub zawiesza się przez nieograniczony czas. Dane systemu lub aplikacji może pozostać w nieprzewidywalnym stanie tymczasowo lub nawet po zamknięciu aplikacji. Niektóre operacje nie są wykonywane zgodnie z oczekiwaniami.  
+ Aplikacja nie odpowiada lub zawiesza się na czas nieokreślony. Dane systemu lub aplikacji może pozostać w nieprzewidywalnym stanie tymczasowo, lub nawet po zakończeniu zamknij aplikację. Niektóre operacje nie są wykonywane zgodnie z oczekiwaniami.  
   
- Objawy różnią może z powodu problemu związanego z używaniem losowości.  
+ Objawy mogą się znacznie zmieniać z powodu losowości związane z problemem.  
   
 ## <a name="cause"></a>Przyczyna  
- Wątek asynchronicznie został wstrzymany za pomocą innego wątku <xref:System.Threading.Thread.Suspend%2A> metody. Brak nie można określić, kiedy jest bezpieczne zawiesić inny wątek, która może być w trakcie wykonywania operacji. Zawieszanie wątków może spowodować uszkodzenie danych lub dzieleniu invariants. Należy umieścić wątku w stanie wstrzymania i wznowienia nigdy nie przy użyciu <xref:System.Threading.Thread.Resume%2A> metody, aplikacja może zostać zawieszona na nieograniczony czas i potencjalnie uszkodzić dane aplikacji. Te metody oznaczono jako przestarzały.  
+ Wątek asynchronicznie została zawieszona przez inny wątek przy użyciu <xref:System.Threading.Thread.Suspend%2A> metody. Nie istnieje żaden sposób, aby określić, kiedy jest bezpieczne wstrzymania innego wątku, która może być w trakcie wykonywania operacji. Zawieszanie wątków może spowodować uszkodzenie danych lub dzieleniu invariants. Wątek będzie umieszczona w stanie wstrzymania i wznowienia nigdy nie przy użyciu <xref:System.Threading.Thread.Resume%2A> metody, aplikację można odłożyć na czas nieokreślony i potencjalnie uszkodzić dane aplikacji. Tych metod oznaczono jako przestarzałe.  
   
- Jeśli elementy podstawowe synchronizacji są przechowywane przez wątek docelowy, pozostaną one przechowywanych podczas zawieszenia. Może to prowadzić do zakleszczenia powinien innego wątku, na przykład wątku wykonywania <xref:System.Threading.Thread.Suspend%2A>, próba uzyskania blokady na element pierwotny. W takiej sytuacji problem sam się uwidacznia zakleszczenie.  
+ Jeśli podstawowych synchronizacji są przechowywane przez wątek docelowy, pozostaną one konsekwencje na gruncie podczas zawieszenia. Może to prowadzić do zakleszczenia powinien innego wątku, na przykład wątek wykonywania <xref:System.Threading.Thread.Suspend%2A>, próba uzyskania blokady na element pierwotny. W takiej sytuacji problem w sytuacji, jak zakleszczenia.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Unikaj projekty, które wymagają użycia <xref:System.Threading.Thread.Suspend%2A> i <xref:System.Threading.Thread.Resume%2A>. Współpracy między wątkami, użyj takiego jak elementy podstawowe synchronizacji <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex>, C# lub `lock` instrukcji. Jeśli jest konieczne korzystanie z tych metod, zmniejsza okno czasu i zminimalizować ilość kodu, który wykonuje, gdy wątek jest w stanie wstrzymania.  
+ Unikaj projektów, które korzystają z <xref:System.Threading.Thread.Suspend%2A> i <xref:System.Threading.Thread.Resume%2A>. Współpracy między wątkami, użyj elementów podstawowych synchronizacji takich jak <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex>, lub C# `lock` instrukcji. Jeśli musisz użyć następujących metod, przedział czasu i minimalizując zakres ilość kodu, który jest wykonywany, gdy wątek jest w stanie wstrzymania.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko CLR. Zwraca tylko dane o niebezpieczne operacje na wątkach.  
+ To zdarzenie MDA nie ma wpływu na środowisko CLR. Informuje jedynie dane o niebezpieczne operacje na wątkach.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA identyfikuje niebezpiecznych metodę wątków, który spowodował jej uruchomienia.  
+ MDA identyfikuje niebezpiecznych metodę wątkowości, który spowodował zostanie uaktywniony.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -52,9 +52,9 @@ ms.locfileid: "33357316"
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje wywołanie <xref:System.Threading.Thread.Suspend%2A> metodę, która powoduje, że aktywacji `dangerousThreadingAPI`.  
+ Poniższy przykład kodu demonstruje wywołanie <xref:System.Threading.Thread.Suspend%2A> metodę, która powoduje, że aktywacja `dangerousThreadingAPI`.  
   
-```  
+```csharp
 using System.Threading;  
 void FireMda()  
 {  

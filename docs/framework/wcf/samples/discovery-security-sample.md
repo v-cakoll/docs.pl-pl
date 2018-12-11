@@ -3,11 +3,11 @@ title: Zabezpieczenia odnajdywania — przykład
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50041209"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129353"
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
 Specyfikacja odnajdywania nie jest wymagane, czy punkty końcowe, które uczestniczą w procesie odnajdowania, można zabezpieczyć. Udoskonalanie komunikaty odnajdywania Dzięki zabezpieczeniom zmniejsza różne rodzaje ataków (komunikat zmiany, odmowa usługi, oparte na metodzie powtórzeń, fałszowanie adresów). W tym przykładzie implementuje niestandardowe kanały, które obliczeń i sprawdzanie podpisów komunikat w formacie compact podpisu (opisanej w sekcji 8.2 specyfikacji WS-Discovery). Przykład obsługuje zarówno [specyfikacji odnajdywania 2005](https://go.microsoft.com/fwlink/?LinkId=177912) i [wersji 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -49,11 +49,11 @@ Specyfikacja odnajdywania nie jest wymagane, czy punkty końcowe, które uczestn
   
 -   **DiscoverySecurityChannels**: Biblioteka, która udostępnia bezpiecznego powiązania. Biblioteka oblicza i weryfikuje podpis compact dla wiadomości wychodzących/przychodzących.  
   
--   **Usługa**: usługa Udostępnianie ICalculatorService kontraktu (Self-Hosted). Usługa jest oznaczona jako wykrywalny. Użytkownik określa szczegóły certyfikatu używanego do podpisywania wiadomości, określając lokalizację magazynu i nazw i nazwę podmiotu lub inny unikatowy identyfikator certyfikatu i magazynu, których certyfikaty klienta znajduje się (certyfikatów służących do Sprawdzanie podpisu dla komunikatów przychodzących). Oparte na te informacje, UdpDiscoveryEndpoint o bezpieczeństwo jest wbudowane i używać.  
+-   **Usługa**: Udostępnianie ICalculatorService kontraktu, samodzielnie hostowanej usługi. Usługa jest oznaczona jako wykrywalny. Użytkownik określa szczegóły certyfikatu używanego do podpisywania wiadomości, określając lokalizację magazynu i nazw i nazwę podmiotu lub inny unikatowy identyfikator certyfikatu i magazynu, których certyfikaty klienta znajduje się (certyfikatów służących do Sprawdzanie podpisu dla komunikatów przychodzących). Oparte na te informacje, UdpDiscoveryEndpoint o bezpieczeństwo jest wbudowane i używać.  
   
 -   **Klient**: Ta klasa próbuje odnaleźć ICalculatorService i wywoływać metody dla usługi. Ponownie <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> dodać bezpieczeństwo jest wbudowane i używany do podpisywania i Sprawdź komunikaty.  
   
--   **AnnouncementListener**: Usługa Self-Hosted, nasłuchuje anonsów online i offline, który używa ogłoszenie bezpiecznego punktu końcowego.  
+-   **AnnouncementListener**: Samodzielnie hostowany usługa, która nasłuchuje zapowiedzi online i offline, a następnie używa ogłoszenie bezpiecznego punktu końcowego.  
   
 > [!NOTE]
 >  Jeśli Setup.bat jest wykonywany wielokrotnie, w Menedżer certyfikatów zostanie wyświetlony monit o wybranie certyfikatu, aby dodać, jak istnieją zduplikowane certyfikatów. W takim przypadku Setup.bat powinien przerwane i Cleanup.bat powinna być wywoływana, ponieważ duplikaty zostały już utworzone. CleanUp.bat również wyświetli monit o wybranie certyfikatu do usunięcia. Wybierz certyfikat z listy i kontynuowania wykonywania Cleanup.bat, dopóki pozostałych żadnych certyfikatów.  

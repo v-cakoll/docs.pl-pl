@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d19f238136ed4ce1eb9b9821ef12c6305c06e429
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208799"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150040"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Przegląd współdziałania (Przewodnik programowania w języku C#)
 Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarządzanego i niezarządzanego kodu.  
@@ -21,7 +21,7 @@ Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarzą
 ## <a name="platform-invoke"></a>Wywołanie platformy  
  *Wywołanie platformy* to usługa, że umożliwia zarządzanemu kodowi wywoływanie funkcji niezarządzanych, które są implementowane w biblioteki dołączanej dynamicznie (dll), takich jak w programie Microsoft Win32 API. Lokalizuje i wywołuje eksportowanych funkcji i kieruje argumentów (liczby całkowite, ciągi, tablice, struktur i tak dalej) wewnątrz międzyoperacyjnej granicy, zgodnie z potrzebami.  
   
- Aby uzyskać więcej informacji, zobacz [wykorzystywanie niezarządzanych funkcji DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md) i [porady: użycie wywołania platformy do odtwarzania pliku Wave](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
+ Aby uzyskać więcej informacji, zobacz [wykorzystywanie niezarządzanych funkcji DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md) i [jak: Użycie wywołania platformy do odtwarzania pliku Wave](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
   
 > [!NOTE]
 >  [Środowiska uruchomieniowego języka wspólnego](../../../standard/clr.md) (CLR) zarządza dostępem do zasobów systemowych. Wywoływanie niezarządzanego kodu, który znajduje się poza środowisko CLR pomija ten mechanizm bezpieczeństwa, a w związku z tym może stanowić zagrożenie bezpieczeństwa. Na przykład kodu niezarządzanego może wywołać zasoby w niezarządzanym kodzie bezpośrednio z pominięciem mechanizmów zabezpieczeń CLR. Aby uzyskać więcej informacji, zobacz [zabezpieczeń na platformie .NET](../../../standard/security/index.md).  
@@ -59,8 +59,8 @@ Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarzą
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Poprawa wydajności międzyoperacyjności](https://msdn.microsoft.com/library/ms998551.aspx)  
-- [Wprowadzenie do współdziałania między COM i .NET](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+- [Poprawa wydajności międzyoperacyjności](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)  
+- [Wprowadzenie do współdziałania między COM i .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)  
 - [Wprowadzenie do COM Interop w języku Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
 - [Szeregowanie między kodem zarządzanym i niezarządzanym](../../../../docs/framework/interop/interop-marshaling.md)  
 - [Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)  

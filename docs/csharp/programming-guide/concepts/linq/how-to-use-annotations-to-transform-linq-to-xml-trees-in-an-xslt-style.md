@@ -1,15 +1,15 @@
 ---
-title: 'Porady: Korzystanie z adnotacji, przekształcanie drzew LINQ to XML w stylu XSLT (C#)'
+title: 'Instrukcje: Adnotacje umożliwiają przekształcanie drzew LINQ to XML w stylu XSLT (C#)'
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 13b65b5b4e1926910ad68204fdffffd7020f07f2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c93ba3209b80cf2467c0f3b49dc25e729c6a14c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864355"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144536"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Porady: Korzystanie z adnotacji, przekształcanie drzew LINQ to XML w stylu XSLT (C#)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Instrukcje: Adnotacje umożliwiają przekształcanie drzew LINQ to XML w stylu XSLT (C#)
 Adnotacje może służyć do ułatwienia przekształcenia drzewa XML.  
   
  Niektóre dokumenty XML są "dokument przetwarzających z zawartością mieszaną". Za pomocą tych dokumentów nie zawsze wiadomo kształt podrzędny węzłów elementu. Na przykład węzeł, który zawiera tekst może wyglądać następująco:  
@@ -34,7 +34,7 @@ Adnotacje może służyć do ułatwienia przekształcenia drzewa XML.
   
 -   Nowy element, który jest dodawany jako adnotacja może zawierać nowe węzły podrzędne; utworzenia poddrzewie przy użyciu dowolnego żądanego kształtu.  
   
--   Jest specjalną regułę: czy węzeł podrzędny nowego elementu w innej przestrzeni nazw przestrzeni nazw, która składa się w tym celu (w tym przykładzie obszar nazw jest `http://www.microsoft.com/LinqToXmlTransform/2007`), a następnie ten element podrzędny nie jest kopiowany do nowego drzewa. Zamiast tego, czy przestrzeń nazw jest wyżej specjalne przestrzeni nazw i lokalna nazwa elementu jest `ApplyTransforms`, a następnie węzły podrzędne elementu w drzewie źródła są postanowiliśmy i skopiowane do nowego drzewa (z wyjątkiem, które są elementy podrzędne z adnotacjami same przekształcane zgodnie z tych reguł).  
+-   Brak specjalną regułę: Jeśli węzeł podrzędny nowego elementu jest w innej przestrzeni nazw przestrzeni nazw, która składa się w tym celu (w tym przykładzie obszar nazw jest `http://www.microsoft.com/LinqToXmlTransform/2007`), a następnie ten element podrzędny nie jest kopiowany do nowego drzewa. Zamiast tego, czy przestrzeń nazw jest wyżej specjalne przestrzeni nazw i lokalna nazwa elementu jest `ApplyTransforms`, a następnie węzły podrzędne elementu w drzewie źródła są postanowiliśmy i skopiowane do nowego drzewa (z wyjątkiem, które są elementy podrzędne z adnotacjami same przekształcane zgodnie z tych reguł).  
   
 -   Jest to nieco analogiczne do specyfikacji przekształcenia w XSL. Zapytania, który wybiera zestaw węzłów jest odpowiednikiem wyrażenie XPath dla szablonu. Kod, aby utworzyć nowy <xref:System.Xml.Linq.XElement> zapisane jako adnotacja jest analogiczne do konstruktora sekwencji w XSL i `ApplyTransforms` element jest analogiczne w funkcji `xsl:apply-templates` elementu XSL.  
   
@@ -91,18 +91,12 @@ XElement data = new XElement("Root",
 );  
   
 // while adding annotations, you can query the source tree all you want,  
-// as the tree is not mutated while annotating.  
+// as the tree is not mutated while annotating.
+var avg = data.Elements("Data").Select(z => (Decimal)z).Average();
 data.AddAnnotation(  
     new XElement("Root",  
         new XElement(xf + "ApplyTransforms"),  
-        new XElement("Average",  
-            String.Format("{0:F4}",  
-                data  
-                .Elements("Data")  
-                .Select(z => (Decimal)z)  
-                .Average()  
-            )  
-        ),  
+        new XElement("Average", $"{avg:F4}"),
         new XElement("Sum",  
             data  
             .Elements("Data")  

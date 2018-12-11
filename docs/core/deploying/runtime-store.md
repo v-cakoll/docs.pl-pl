@@ -1,15 +1,15 @@
 ---
 title: Magazyn pakietu środowiska uruchomieniowego
-description: W tym temacie opisano manifesty docelowych, które korzystają z platformy .NET Core i Magazyn pakietu środowiska uruchomieniowego.
+description: Dowiedz się, jak używać Magazyn pakietu środowiska uruchomieniowego do manifesty docelowy używany przez platformy .NET Core.
 author: bleroy
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: a190e148715547fde29d3a852183ea4d75065e79
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511587"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170356"
 ---
 # <a name="runtime-package-store"></a>Magazyn pakietu środowiska uruchomieniowego
 

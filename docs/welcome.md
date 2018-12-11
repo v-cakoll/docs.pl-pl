@@ -3,15 +3,14 @@ title: Zapraszamy do platformy .NET
 description: Wprowadzenie do technologii z rodziny .NET.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/07/2018
-ms.topic: article
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 020976efd12685c32c6d3a107fe403883359ed7f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ee4f9cd33e33006697a15f0bdafb4cc9d7ecf809
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579098"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147208"
 ---
 # <a name="welcome-to-net"></a>Zapraszamy do platformy .NET
 
@@ -30,6 +29,7 @@ Najnowsze wiadomości dotyczące platformy .NET Sprawdź następujących blogach
 
 To samo wykonać również najnowszych zdarzeń platformy .NET:
 
+- [Microsoft Connect()](https://www.microsoft.com/connectevent)
 - [Microsoft Build 2018](https://channel9.msdn.com/Events/Build/2018)
 - [.NET Conf](https://www.dotnetconf.net/)
 
@@ -48,19 +48,20 @@ Ta dokumentacja obejmuje zakresem .NET, platform i języków.  Możesz rozpoczą
 - [Przewodnik platformy .NET Core](core/index.md)
 - [.NET framework — przewodnik](framework/index.md)
 - [Przewodnik dla języka C#](csharp/index.md)
-- [Podręcznik języka F #](fsharp/index.md)
+- [Podręcznik języka F#](fsharp/index.md)
 - [Przewodnik po Visual Basic](visual-basic/index.md)
+- [Przewodnik po strukturze ML.NET](machine-learning/index.md)
 
 Ponadto możesz przeglądać [dokumentacja interfejsu API .NET](/dotnet/api).
 
 ## <a name="open-source"></a>Kod open source
 
-Ta dokumentacja jest całkowicie ["open source"](https://github.com/dotnet/docs). Może współtworzyć zawartość w dowolny sposób lubisz, od tworzenia zagadnień, które piszesz dokumentację.  Ponadto większość .NET, sama jest również "open source":
+Ta dokumentacja jest całkowicie ["open source"](https://github.com/dotnet/docs). Może współtworzyć zawartość w dowolny sposób lubisz, od tworzenia zagadnień, które piszesz dokumentację. Ponadto większość .NET, sama jest również "open source":
 
 - [Strona główna programu .NET core](https://github.com/dotnet/core)
 - [Biblioteki platformy .NET](https://github.com/dotnet/corefx)
 - [Środowisko uruchomieniowe programu .NET core](https://github.com/dotnet/coreclr)
 - [Platforma kompilatora Roslyn (C# i Visual Basic) i narzędzia IDE](https://github.com/dotnet/roslyn)
-- [Kompilator F # i narzędzi IDE](https://github.com/microsoft/visualfsharp)
+- [F#Kompilator i narzędzia IDE](https://github.com/microsoft/visualfsharp)
 
 Możesz dołączyć inne osoby, które są już aktywny w [społeczności .NET](https://www.microsoft.com/net/community) Aby dowiedzieć się nowości, lub poprosić o pomoc.

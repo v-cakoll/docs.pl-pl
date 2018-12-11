@@ -2,12 +2,12 @@
 title: Narzędzie definicji schematu XML (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01f980162a2d356c6c3ff31e4a0c01644b74d461
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850866"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143938"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Narzędzie definicji schematu XML (Xsd.exe)
 Narzędzie definicji schematu XML (Xsd.exe) generuje schemat XML lub wspólnej klasy środowiska wykonawczego języka z PLików XDR, XML i XSD lub klasy w zestawie czasu wykonywania.  
@@ -35,7 +35,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/ h**[**elp**]|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/o**[**utputdir**] **: *** katalogu*|Określa katalog danych dla PLików danych wyjściowych. Ten argument może wystąpić tylko raz. Ustawieniem domyślnym jest bieżący katalog.|  
+|**/o**[**utputdir**]**:**_katalogu_|Określa katalog danych dla PLików danych wyjściowych. Ten argument może wystąpić tylko raz. Ustawieniem domyślnym jest bieżący katalog.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/P [arameters]:** *file.xml*|Opcje dla różnych trybach operacji odczytu z PLiku .xml określony. Formularz Skrócony jest "/ p:". Aby uzyskać więcej informacji zobacz następujące sekcji uwag.|  
   
@@ -51,22 +51,22 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/e**[**lementuj**] **: *** — element*|Określa schemat do generowania kodu dla elementu. Domyślnie wszystkie elementy są wpisane. Tego argumentu można określić więcej niż raz.|  
+|**/e**[**lementuj**]**:**_— element_|Określa schemat do generowania kodu dla elementu. Domyślnie wszystkie elementy są wpisane. Tego argumentu można określić więcej niż raz.|  
 |**/enableDataBinding**|Implementuje <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu dla wszystkich typów wygenerowanego umożliwiające powiązanie danych. Formularz Skrócony jest `/edb`.|  
 |**/enableLinqDataSet**|(Skrócona forma: `/eld`.) Określa, że wygenerowanego zestawu danych mogą być wyszukiwane względem przy użyciu LINQ do zestawu danych. Ta opcja jest stosowana, gdy określona jest również opcja /dataset. Aby uzyskać więcej informacji, zobacz [omówienie LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) i [zapytań wpisanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md). Aby uzyskać ogólne informacje o korzystaniu z LINQ, zobacz [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Generuje pola, a nie właściwości. Domyślnie są generowane, właściwości.|  
-|**/l**[**język**] **: *** języka*|Określa język programowania. Wybierz z `CS` (C#, który jest domyślnie), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić w pełni kwalifikowaną nazwę klasy wykonania <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
-|**/n**[**amespace**] **: *** przestrzeni nazw*|Określa przestrzeń nazw czasu wykonywania wygenerowany typów. Domyślny obszar nazw jest `Schemas`.|  
+|**/l**[**język**]**:**_języka_|Określa język programowania. Wybierz z `CS` (C#, który jest domyślnie), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić w pełni kwalifikowaną nazwę klasy wykonania <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
+|**/n**[**amespace**]**:**_przestrzeni nazw_|Określa przestrzeń nazw czasu wykonywania wygenerowany typów. Domyślny obszar nazw jest `Schemas`.|  
 |**/nologo**|Pomija transparentu.|  
 |**/ ORDER**|Generuje jawnego kolejności identyfikatorów dla wszystkich członków cząstek.|  
 |**/o [ut]:** *directoryName*|Określa katalog danych wyjściowych do umieszczenia plików w. Ustawieniem domyślnym jest bieżący katalog.|  
-|**/u**[**wystąpień zarezerwowanych**] **: *** identyfikatora uri*|Określa identyfikator URI dla elementów w schemacie do generowania kodu. Ten identyfikator URI, jeśli jest obecny, ma zastosowanie do wszystkich elementów określony za pomocą `/element` opcji.|  
+|**/u**[**wystąpień zarezerwowanych**]**:**_identyfikatora uri_|Określa identyfikator URI dla elementów w schemacie do generowania kodu. Ten identyfikator URI, jeśli jest obecny, ma zastosowanie do wszystkich elementów określony za pomocą `/element` opcji.|  
   
 ## <a name="dll-and-exe-file-options"></a>Biblioteka DLL i opcje PLiku EXE  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/t**[**yp**] **: *** typename*|Określa nazwę typu można utworzyć schemat. Można określić wiele argumentów typu. Jeśli *typename* nie określa obszar nazw dopasowań Xsd.exe wszystkie typy w zestawie z określonym typem. Jeśli *typename* określa obszar nazw, tylko dopasowaniu typu. Jeśli *typename* kończy się znakiem gwiazdki (\*), to narzędzie jest zgodna wszystkich typów, które zaczyna się od ciągu poprzedniego \*. W przypadku pominięcia `/type` opcji Xsd.exe generuje schematów dla wszystkich typów w zestawie.|  
+|**/t**[**yp**]**:**_typename_|Określa nazwę typu można utworzyć schemat. Można określić wiele argumentów typu. Jeśli *typename* nie określa obszar nazw dopasowań Xsd.exe wszystkie typy w zestawie z określonym typem. Jeśli *typename* określa obszar nazw, tylko dopasowaniu typu. Jeśli *typename* kończy się znakiem gwiazdki (\*), to narzędzie jest zgodna wszystkich typów, które zaczyna się od ciągu poprzedniego \*. W przypadku pominięcia `/type` opcji Xsd.exe generuje schematów dla wszystkich typów w zestawie.|  
   
 ## <a name="remarks"></a>Uwagi  
  W poniższej tabeli przedstawiono operacje, że Xsd.exe wykonuje.  

@@ -3,12 +3,12 @@ title: C# struktur — Przewodnik po przykładzie w języku C#
 description: Dowiedz się, że podstawy języka C# wartości typów nazywanych struktury
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323100"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142739"
 ---
 # <a name="structs"></a>Struktury
 
@@ -35,5 +35,5 @@ Jeśli `Point` jest klasą, dane wyjściowe to 20, ponieważ i b odwoływać si�
 W poprzednim przykładzie wyróżniono dwa ograniczenia dotyczące struktury. Po pierwsze całej strukturze jest to zazwyczaj mniej wydajne niż kopiowanie odwołanie do obiektu, dzięki czemu przekazywanie przypisania i wartość parametru może być bardziej kosztowne przy użyciu struktury niż w przypadku typów referencyjnych. Drugi, z wyjątkiem `in`, `ref`, i `out` parametrów, nie jest możliwe do utworzenia odwołania do struktury, która wyklucza ich użycia w różnych sytuacjach.
 
 >[!div class="step-by-step"]
-[Poprzednie](classes-and-objects.md)
-[dalej](arrays.md)
+>[Poprzednie](classes-and-objects.md)
+>[dalej](arrays.md)

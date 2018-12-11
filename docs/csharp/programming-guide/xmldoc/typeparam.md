@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: ec19060008c1c06c54c89dbddee7d24001bcdebc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5db257cc655b7d9112fc4efc917f5d2175fcf665
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187117"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143119"
 ---
 # <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
@@ -33,7 +33,7 @@ ms.locfileid: "50187117"
   
  Aby uzyskać więcej informacji, zobacz [ogólne](../../../csharp/programming-guide/generics/index.md).  
   
- Tekst dla `<typeparam>` będą wyświetlane w technologii IntelliSense, [okna przeglądarki obiektów](https://msdn.microsoft.com/library/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) kodu komentarza raport sieci web.  
+ Tekst dla `<typeparam>` będą wyświetlane w technologii IntelliSense, [okna przeglądarki obiektów](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) kodu komentarza raport sieci web.  
   
  Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   

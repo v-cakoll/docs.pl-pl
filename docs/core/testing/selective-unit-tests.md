@@ -1,15 +1,15 @@
 ---
 title: Uruchamianie selektywnych testów jednostkowych
-description: Dowiesz się, jak uruchamianie selektywnych testów jednostkowych za pomocą polecenia dotnet test za pomocą wyrażenia filtru.
+description: Jak używać wyrażenia filtru uruchamianie selektywnych testów jednostkowych za pomocą polecenia dotnet testu w programie .NET Core.
 author: smadala
-ms.author: mairaw
 ms.date: 03/22/2017
-ms.openlocfilehash: 428e31014f5d8d487deb7c4b4317ebcef13c294d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 1a90438e3b0b2eb095124208010bbe9558424d91
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517223"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170206"
 ---
 # <a name="running-selective-unit-tests"></a>Uruchamianie selektywnych testów jednostkowych
 
@@ -45,7 +45,7 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | Przebiegi testów, których `FullyQualifiedName` zawiera `Method`. Dostępne w `vstest 15.1+`. |
 | `dotnet test --filter Name~TestMethod1` | Uruchamia testy, których nazwa zawiera `TestMethod1`. |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Uruchamia testy, które są w klasie `MSTestNamespace.UnitTest1`.<br>**Uwaga:** `ClassName` wartości powinny mieć obszaru nazw, więc `ClassName=UnitTest1` nie będzie działać. |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Uruchamia testy, które są w klasie `MSTestNamespace.UnitTest1`.<br>**Uwaga:** `ClassName` Wartości powinny mieć obszaru nazw, więc `ClassName=UnitTest1` nie będzie działać. |
 | `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | Uruchamia wszystkie testy z wyjątkiem `MSTestNamespace.UnitTest1.TestMethod1`. |
 | `dotnet test --filter TestCategory=CategoryA` | Uruchamia testy, które są przypisane przy użyciu `[TestCategory("CategoryA")]`. |
 | `dotnet test --filter Priority=2` | Uruchamia testy, które są przypisane przy użyciu `[Priority(2)]`.<br>

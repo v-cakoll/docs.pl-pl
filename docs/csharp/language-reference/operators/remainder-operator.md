@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
 ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041261"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144206"
 ---
 # <a name="-operator-c-reference"></a>Operator % (odwołanie w C#)
 

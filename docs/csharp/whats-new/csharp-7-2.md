@@ -2,12 +2,12 @@
 title: Co nowego w języku C# 7.2
 description: Omówienie nowych funkcji w języku C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181176"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148178"
 ---
 # <a name="whats-new-in-c-72"></a>Co nowego w języku C# 7.2
 
@@ -28,6 +28,8 @@ Dostępne są następujące nowe funkcje języka w tej wersji:
   - Literały numeryczne, mogą teraz zawierać podkreśleniami wiodącymi przed wszystkie cyfry drukowanych.
 * [`private protected` Modyfikator dostępu](#private-protected-access-modifier)
   - `private protected` Modyfikator dostępu umożliwia dostęp do klas pochodnych tego samego zestawu.
+* [Warunkowe `ref` wyrażeń](#conditional-ref-expressions)
+  - Wynik wyrażenia warunkowego (`?:`) teraz może być odwołaniem.
 
 ## <a name="safe-efficient-code-enhancements"></a>Ulepszenia bezpieczne efektywnego kodu
 
@@ -56,6 +58,18 @@ int binaryValue = 0b_0101_0101;
 
 ## <a name="private-protected-access-modifier"></a>_prywatny chroniony_ modyfikator dostępu
 
-Na koniec nowy modyfikator dostępu złożone: `private protected` wskazuje, czy członek mogą być używane przez zawierający klasy lub klas pochodnych, które są zadeklarowane w tym samym zestawie. Gdy `protected internal` zezwala na dostęp przez klasy pochodne lub klasy, które znajdują się w tym samym zestawie `private protected` ogranicza dostęp do typów pochodnych zadeklarowanych w tym samym zestawie.
+New — modyfikator dostępu złożone: `private protected` wskazuje, czy członek mogą być używane przez zawierający klasy lub klas pochodnych, które są zadeklarowane w tym samym zestawie. Gdy `protected internal` zezwala na dostęp przez klasy pochodne lub klasy, które znajdują się w tym samym zestawie `private protected` ogranicza dostęp do typów pochodnych zadeklarowanych w tym samym zestawie.
 
 Aby uzyskać więcej informacji, zobacz [modyfikatorach dostępu](../language-reference/keywords/access-modifiers.md) w dokumentacji języka.
+
+## <a name="conditional-ref-expressions"></a>Warunkowe `ref` wyrażeń
+
+Na koniec wyrażenie warunkowe może dać wynik ref, zamiast wynik wartości. Na przykład należy napisać poniższe polecenie, aby pobrać odwołanie do pierwszego elementu w jednym z dwóch tablic:
+
+```csharp
+ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
+```
+
+Zmienna `r` jest odwołaniem do pierwszej wartości albo `arr` lub `otherArr`.
+
+Aby uzyskać więcej informacji, zobacz [operator warunkowy (?:) ](../language-reference/operators/conditional-operator.md) w dokumentacji języka.

@@ -1,17 +1,17 @@
 ---
 title: Typy podstawowe (F#)
-description: Poznaj podstawowe typy podstawowe, które są używane w języku F#.
+description: Odkryj podstawowych typów podstawowych, które są używane w F# języka.
 ms.date: 07/09/2018
-ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8a1154a211d8c87571b47cb41cb091096569472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48026946"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145127"
 ---
 # <a name="basic-types"></a>Typy podstawowe
 
-Ten temat zawiera podstawowe typy, które są zdefiniowane w języku F#. Te typy są zasadnicze znaczenie w języku F#, na podstawie prawie każdy program F#. Są one podzbiorem .NET typów pierwotnych.
+W tym temacie przedstawiono podstawowe typy, które są zdefiniowane w F# języka. Te typy są zasadnicze znaczenie w F#, stanowiący podstawę prawie w każdym F# program. Są one podzbiorem .NET typów pierwotnych.
 
 |Typ|Typ architektury .NET|Opis|
 |----|---------|-----------|
@@ -34,8 +34,8 @@ Ten temat zawiera podstawowe typy, które są zdefiniowane w języku F#. Te typy
 |`float32`, `single`|<xref:System.Single>|32-bitowych punktu typ zmiennoprzecinkowy.|
 |`float`, `double`|<xref:System.Double>|64-bitowych punktu typ zmiennoprzecinkowy.|
 
->[!NOTE]
-Można wykonać obliczeń na liczbach całkowitych zbyt duży dla typu 64-bitową liczbę całkowitą, przy użyciu [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) typu. `bigint` nie jest uważany za typu podstawowego; jest skrótem `System.Numerics.BigInteger`.
+> [!NOTE]
+> Można wykonać obliczeń na liczbach całkowitych zbyt duży dla typu 64-bitową liczbę całkowitą, przy użyciu [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) typu. `bigint` nie jest uważany za typu podstawowego; jest skrótem `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Zobacz także
 

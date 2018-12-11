@@ -4,12 +4,12 @@ description: Wprowadzenie do tworzenia bibliotek platformy .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6377e3fe606bf7603b418decdd0e3f9d2de6a510
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201246"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145728"
 ---
 # <a name="get-started"></a>Wprowadzenie
 
@@ -46,5 +46,5 @@ Dobre bibliotek .NET z czasem ewoluować, dodawanie funkcji, naprawianie błęd�
 Jest ważne dla biblioteki .NET znaleźć równowagę między stabilności istniejących użytkowników i innowacji w przyszłości. Więcej informacji na temat różnych rodzajów przełomowe zmiany i strategie Dodawanie nowych funkcji, przy zachowaniu wstecznej zgodności.
 
 >[!div class="step-by-step"]
-[Poprzednie](./index.md)
-[dalej](./cross-platform-targeting.md)
+>[Poprzednie](index.md)
+>[dalej](cross-platform-targeting.md)

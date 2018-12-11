@@ -1,6 +1,6 @@
 ---
 title: Funkcje konwersji typu (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 10/24/2018
 f1_keywords:
 - vb.CUShort
 - vb.csng
@@ -81,15 +81,15 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: c9222bdb31f4fd7c792d5a50c100067e29e9d537
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbc9891170cde4b993a5dc890ed71c07a6f59f9e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605085"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129561"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funkcje konwersji typu (Visual Basic)
-Te funkcje są skompilowaną wbudowaną, co oznacza, że kod konwersji jest częścią kodu, który wylicza wartość wyrażenia. Czasami nie istnieje żadne wywołanie procedury do wykonania konwersji, co zwiększa wydajność. Każda funkcja przekształca wyrażenie określonego typu danych.  
+Te funkcje są skompilowany w tekście, co oznacza, że kod konwersji jest częścią kodu, który oblicza wyrażenie. Czasami jest Brak wywołania do procedury wykonywania konwersji, co zwiększa wydajność. Każda funkcja przekształca wynik wyrażenia na określony typ danych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -117,78 +117,105 @@ CUShort(expression)
  Wymagana. Dowolne wyrażenie typu źródła danych.  
   
 ## <a name="return-value-data-type"></a>Zwraca typ danych wartości  
- Nazwa funkcji określa typ danych wartości, która zwraca, jak pokazano w poniższej tabeli.  
+ Nazwa funkcji określa typ danych wartości, która zwraca wartość, jak pokazano w poniższej tabeli.  
   
 |Nazwa funkcji|Zwracany typ danych|Zakres dla `expression` argumentu|  
 |-------------------|----------------------|-------------------------------------|  
-|`CBool`|[Boolean, typ danych](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Wszystkie prawidłowe `Char` lub `String` lub wyrażenia liczbowego.|  
-|`CByte`|[Byte, typ danych](../../../visual-basic/language-reference/data-types/byte-data-type.md)|0 do 255 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CChar`|[Char, typ danych](../../../visual-basic/language-reference/data-types/char-data-type.md)|Wszystkie prawidłowe `Char` lub `String` wyrażenia, tylko pierwszy znak `String` konwersji; możliwe wartości od 0 do 65535 (bez znaku).|  
-|`CDate`|[Date, typ danych](../../../visual-basic/language-reference/data-types/date-data-type.md)|Wszystkie prawidłowe reprezentacja daty i godziny.|  
-|`CDbl`|[Double, typ danych](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych; 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 do wartości dodatnie.|  
-|`CDec`|[Decimal, typ danych](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79,228,162,514,264,337,593,543,950,335 162 514 liczb, czyli liczby bez miejsc dziesiętnych. W przypadku numerów 28 miejsc dziesiętnych zakres jest +/-7.9228162514264337593543950335. Najmniejsza możliwa liczba niezerowa to 0,0000000000000000000000000001 (+/-1E-28).|  
-|`CInt`|[Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)|-2,147,483,648 do 2 147 483 647; są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CLng`|[Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)|-9,223,372,036,854,775,808 za pośrednictwem 9,223,372,036,854,775,807; są zaokrąglane ułamkowych części. <sup>1</sup>|  
+|`CBool`|[Boolean, typ danych](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Dowolne, prawidłowe `Char` lub `String` lub wyrażenia liczbowego.|  
+|`CByte`|[Byte, typ danych](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0) za pośrednictwem <xref:System.Byte.MaxValue?displayProperty=nameWithType> (255) (bez znaku); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych, konwersja bajtów z `CByte` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  
+|`CChar`|[Char, typ danych](../../../visual-basic/language-reference/data-types/char-data-type.md)|Dowolne, prawidłowe `Char` lub `String` wyrażenie; tylko pierwszy znak `String` jest konwertowany; możliwe wartości od 0 do 65535 (bez znaku).|  
+|`CDate`|[Date, typ danych](../../../visual-basic/language-reference/data-types/date-data-type.md)|Wszelkie Nieprawidłowa reprezentacja daty i godziny.|  
+|`CDbl`|[Double, typ danych](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych; 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 dla wartości dodatnich.|  
+|`CDec`|[Decimal, typ danych](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79,228,162,514,264,337,593,543,950,335 numerów skalowanych na zero oznacza to, liczby bez miejsc dziesiętnych. W przypadku liczb 28 miejsc dziesiętnych zakres jest +/-7.9228162514264337593543950335. Najmniejsza możliwa liczba różna od zera jest 0,0000000000000000000000000001 (+/-1E-28).|  
+|`CInt`|[Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2,147,483,648) za pośrednictwem <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2 147 483 647); ułamkowe są zaokrąglane.<sup> 1</sup> <br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych, konwersja liczby całkowitej z `CInt` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład. |  
+|`CLng`|[Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) za pośrednictwem <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9,223,372,036,854,775,807); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych, konwersja 64-bitową liczbę całkowitą z `CLng` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  
 |`CObj`|[Object, typ danych](../../../visual-basic/language-reference/data-types/object-data-type.md)|Dowolne prawidłowe wyrażenie.|  
-|`CSByte`|[SByte, typ danych](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|-128 do 127; są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CShort`|[Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)|-32 768 do 32 767; są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CSng`|[Single, typ danych](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823E + 38 do - 1, 401298E-45 dla wartości ujemnych; 1, 401298E-45 za pośrednictwem 3.402823E + 38 dla wartości dodatnie.|  
-|`CStr`|[String, typ danych](../../../visual-basic/language-reference/data-types/string-data-type.md)|Zwraca `CStr` są zależne od `expression` argumentu. Zobacz [zwracane wartości dla funkcji CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
-|`CUInt`|[UInteger, typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|od 0 do 4 294 967 295 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CULng`|[ULong, typ danych](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|od 0 do 18,446,744,073,709,551,615 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
-|`CUShort`|[UShort, typ danych](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|od 0 do 65 535 (bez znaku); są zaokrąglane ułamkowych części. <sup>1</sup>|  
+|`CSByte`|[SByte, typ danych](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (od -128) za pośrednictwem <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych Aby konwersja bajt oznaczony za pomocą `CSByte` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  
+|`CShort`|[Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32 768) za pośrednictwem <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32 767); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych, konwersja 16-bitową liczbę całkowitą z `CShort` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  
+|`CSng`|[Single, typ danych](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823E + 38-do - 1, 401298E-45 dla wartości ujemnych; 1, 401298E-45 za pośrednictwem 3.402823E + 38 dla wartości dodatnich.|  
+|`CStr`|[String, typ danych](../../../visual-basic/language-reference/data-types/string-data-type.md)|Zwraca `CStr` zależą od `expression` argumentu. Zobacz [zwracane wartości dla funkcji CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
+|`CUInt`|[UInteger, typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32.MinValue?displayProperty=nameWithType> (0) za pośrednictwem <xref:System.UInt32.MaxValue?displayProperty=nameWithType> (4 294 967 295) (bez znaku); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych do konwersji liczb całkowitych bez znaku z `CUInt` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  
+|`CULng`|[ULong, typ danych](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64.MinValue?displayProperty=nameWithType> (0) za pośrednictwem <xref:System.UInt64.MaxValue?displayProperty=nameWithType> (18,446,744,073,709,551,615) (bez znaku); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych, konwersja niepodpisane długa liczba całkowita z `CULng` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  
+|`CUShort`|[UShort, typ danych](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16.MinValue?displayProperty=nameWithType> (0) za pośrednictwem <xref:System.UInt16.MaxValue?displayProperty=nameWithType> (65 535) (bez znaku); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych na liczbę całkowitą bez znaku 16-bitowych konwersja za pomocą `CUShort` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  
   
- <sup>1</sup> ułamkowych części mogą podlegać specjalny typ zaokrąglania wywołane *zaokrąglenie do zaokrąglania*. Aby uzyskać więcej informacji, zobacz "Uwagi".  
+ <sup>1</sup> ułamkowe mogą podlegać specjalny rodzaj zaokrąglania o nazwie *banker przez zaokrąglenie*. Aby uzyskać więcej informacji, zobacz "Uwagi".  
   
 ## <a name="remarks"></a>Uwagi  
- Jako regułę, należy używać funkcje konwersji typu Visual Basic, zamiast metod .NET Framework takie jak `ToString()`, albo na <xref:System.Convert> klasy lub na poszczególnych typ struktury lub klasy. Funkcje Visual Basic są przeznaczone do optymalnego interakcji z kodu języka Visual Basic, a także umożliwiają kod źródłowy krótsze i łatwiejsze do odczytu. Ponadto metody konwersji .NET Framework nie zawsze utworzyć takie same wyniki jako funkcje języka Visual Basic, na przykład podczas konwertowania `Boolean` do `Integer`. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
-  
+ Zgodnie z zasadą, należy użyć funkcje konwersji typu języka Visual Basic mieszcząca metodach programu .NET Framework takiego jak `ToString()`, albo na <xref:System.Convert> klasy lub na poszczególnych typu struktury lub klasy. Funkcje języka Visual Basic są przeznaczone dla optymalnej interakcji z kodem języka Visual Basic, a także wprowadzić w kodzie źródłowym, krótsze i łatwiejsze do odczytania. Ponadto metody konwersji .NET Framework nie zawsze działają tak samo jak funkcje języka Visual Basic, na przykład podczas konwertowania `Boolean` do `Integer`. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+
+
+Począwszy od programu Visual Basic 15.8 floating-point na całkowite konwersji jest zoptymalizowane pod kątem podczas przekazywania <xref:System.Single> lub <xref:System.Double> wartość zwracana za pomocą następujących metod do jednej z funkcji konwersji liczby całkowitej (`CByte`, `CShort`, `CInt`, `CLng`, `CSByte`, `CUShort`, `CUInt`, `CULng`):
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+Tego rodzaju optymalizacji umożliwia kod, który obsługuje dużą liczbę całkowitą konwersje można uruchomić maksymalnie na dwa razy szybciej. Poniższy przykład ilustruje te zoptymalizowane konwersje floating-point na całkowite:
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+```
+
 ## <a name="behavior"></a>Zachowanie  
   
--   **Koercja.** Ogólnie rzecz biorąc można użyć funkcji konwersji typu danych konwersji wynik operacji do określonego typu danych niż domyślny typ danych. Na przykład użyć `CDec` wymusić dziesiętną arytmetyczne w przypadkach, gdy pojedynczej precyzji, podwójnej precyzji lub liczba całkowita arytmetyczne zwykle nastąpiłoby.  
+-   **Wymuszenia.** Ogólnie rzecz biorąc można użyć funkcje konwersji typu danych można przekształcić wynik operacji do określonego typu danych, a nie domyślnym typem danych. Na przykład użyć `CDec` wymusić dziesiętna operacji arytmetycznych w przypadkach, w którym pojedynczej precyzji, podwójnej precyzji lub liczba całkowita arytmetyczne normalnie zajęłoby miejsce.  
   
--   **Konwersje nie powiodło się.** Jeśli `expression` przekazany do funkcji jest poza zakresem typu danych, których ma zostać przekonwertowany, <xref:System.OverflowException> występuje.  
+-   **Konwersje nie powiodło się.** Jeśli `expression` przekazany do funkcji znajduje się poza zakresem typu danych, na który ma być przekonwertowany <xref:System.OverflowException> występuje.  
   
--   **Ułamkowych części.** Podczas konwertowania wartości nonintegral typem całkowitym typ, liczbę całkowitą funkcji konwersji (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, i `CUShort`) Usuń ułamkowych części i zaokrąglona do najbliższej liczby całkowitej wartość.  
+-   **Ułamkowe.** Podczas konwertowania nonintegral wartość całkowita, liczba całkowita funkcje konwersji typu (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, i `CUShort`) Usuń ułamkową część i zaokrąglania wartości do najbliższej liczby całkowitej.  
   
-     Jeśli część ułamkowa jest dokładnie 0,5, funkcje konwersji całkowitą zaokrąglona do najbliższej parzystej liczby całkowitej. Na przykład 0,5 zaokrągla wartość 0 i w wersji 1.5 i 2.5, który zarówno zaokrąglona do 2. Jest to czasem nazywane *zaokrąglenie do zaokrąglania*, a jej celem jest kompensacji odchylenia, który może narastać, dodając takiej liczby razem.  
+     Jeśli część ułamkową jest dokładnie 0,5, funkcje konwersji liczby całkowitej czytelności warto je zaokrąglić do najbliższej parzystej liczby całkowitej. Na przykład 0,5 zaokrągla 0, i w wersji 1.5 2.5, które zarówno zaokrąglanie do 2. Jest to czasem nazywane *banker przez zaokrąglenie*, a jej celem jest, aby zrekompensować odchylenie, który może gromadzenie podczas dodawania wielu takich liczb ze sobą.  
   
-     `CInt` i `CLng` różnią się od <xref:Microsoft.VisualBasic.Conversion.Int%2A> i <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funkcji, które truncate, zamiast zaokrąglona ułamkową część liczby. Ponadto `Fix` i `Int` zawsze zwraca wartość typu danych podczas przemieszczania w.  
+     `CInt` i `CLng` różnią się od <xref:Microsoft.VisualBasic.Conversion.Int%2A> i <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funkcji, które truncate, zamiast zaokrąglanie część ułamkową liczby. Ponadto `Fix` i `Int` zawsze zwraca wartość typu danych, ponieważ są przekazywane w.  
   
--   **Data/Godzina konwersji.** Użyj <xref:Microsoft.VisualBasic.Information.IsDate%2A> funkcji, aby określić, jeśli można przekonwertować wartości na datę i godzinę. `CDate` rozpoznaje literałów dat i godzin, ale wartości liczbowych nie. Aby przekonwertować Visual Basic 6.0 `Date` do wartości `Date` wartość w języku Visual Basic 2005 lub nowszym, można użyć <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> — metoda.  
+-   **Data/Godzina konwersji.** Użyj <xref:Microsoft.VisualBasic.Information.IsDate%2A> funkcję, aby określić, jeśli można przekonwertować wartości do daty i godziny. `CDate` rozpoznaje literałów dat i godzin, ale wartości liczbowe nie. Aby przekonwertować Visual Basic 6.0 `Date` wartość, która `Date` wartość w języku Visual Basic 2005 lub nowszych wersjach można użyć <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> metody.  
   
--   **Neutralna wartości daty/godziny.** [Date — typ danych](../../../visual-basic/language-reference/data-types/date-data-type.md) zawsze zawiera informacje zarówno datę i godzinę. W celu konwersji typu, Visual Basic uważa 1/1/0001 (1 stycznia 1 roku) *neutralne wartość* daty i 00:00:00 (północ) jako neutralny wartość po raz. W przypadku przekonwertowania `Date` wartość na ciąg `CStr` nie ma wartości neutralne w ciągu wynikowym. Na przykład, jeśli przekonwertujesz `#January 1, 0001 9:30:00#` na ciąg, wynikiem jest "9:30:00 AM"; informacje o dacie jest pomijane. Jednak informacje o dacie jest nadal znajdują się w oryginalnym `Date` wartości i może zostać przywrócona z funkcji takich jak <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> funkcji.  
+-   **Niezależny od wartości daty/godziny.** [Date — typ danych](../../../visual-basic/language-reference/data-types/date-data-type.md) zawsze zawiera informacje daty i godziny. W celu konwersji typu, Visual Basic traktuje 1/1/0001 (1 stycznia 1 rok) jako *neutralne wartość* dla daty i 00:00:00 (północ) jako neutralne wartość po raz. Po skonwertowaniu `Date` wartość na ciąg `CStr` nie zawiera neutralne wartości w ciągu wynikowym. Na przykład, jeśli można przekonwertować `#January 1, 0001 9:30:00#` na ciąg wyniku "9:30:00 AM"; informacje o dacie jest pomijane. Informacje o dacie jest jednak nadal znajdują się w oryginalnym `Date` wartości i można odzyskać za pomocą funkcji takich jak <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> funkcji.  
   
--   **Czułość kultury.** Funkcje konwersji typu obejmującego ciągów wykonaj konwersje w oparciu o bieżące ustawienia kultury dla aplikacji. Na przykład `CDate` rozpoznaje formaty daty zgodnie z ustawieniem ustawień regionalnych systemu. Należy podać dzień, miesiąc i rok w odpowiedniej kolejności dla ustawień regionalnych użytkownika lub daty może nie być prawidłowo interpretowane. Nie rozpoznano formatu daty długiej, jeśli zawiera ciąg dzień tygodnia, takie jak "Środa".  
+-   **Czułość kultury.** Funkcje konwersji typu obejmujące ciągi wykonać konwersje w oparciu o bieżące ustawienia kultury w aplikacji. Na przykład `CDate` rozpoznaje formaty daty zgodnie z ustawieniami regionalnymi systemu. Należy podać dzień, miesiąc i rok w odpowiedniej kolejności dla ustawień regionalnych lub datę nie może zostać zinterpretowane poprawnie. Nie rozpoznano formatu daty długiej, jeśli zawiera ciąg, dzień tygodnia, taki jak "Środa".  
   
-     Jeśli chcesz przekonwertować z reprezentacji ciągu wartości w formacie innym niż określony przez ustawienia regionalne lub nie można użyć funkcje konwersji typu Visual Basic. Aby to zrobić, użyj `ToString(IFormatProvider)` i `Parse(String, IFormatProvider)` metod z typem tej wartości. Na przykład użyć <xref:System.Double.Parse%2A?displayProperty=nameWithType> podczas konwertowania ciągu na `Double`i użyj <xref:System.Double.ToString%2A?displayProperty=nameWithType> podczas konwertowania wartości typu `Double` na ciąg.  
+     Jeśli musisz konwertować do lub z ciągu reprezentującego wartość w formacie innym niż ten, który został określony przez ustawienia regionalne, nie można użyć funkcje konwersji typu języka Visual Basic. Aby to zrobić, należy użyć `ToString(IFormatProvider)` i `Parse(String, IFormatProvider)` metod z typem tej wartości. Na przykład użyć <xref:System.Double.Parse%2A?displayProperty=nameWithType> podczas konwertowania ciągu do `Double`i użyj <xref:System.Double.ToString%2A?displayProperty=nameWithType> podczas konwertowania wartości typu `Double` na ciąg.  
   
 ## <a name="ctype-function"></a>CType — Funkcja  
- [CType — funkcja](../../../visual-basic/language-reference/functions/ctype-function.md) przyjmuje drugi argument, `typename`i przekształca wynik dane `expression` do `typename`, gdzie `typename` może być typu danych, struktury, klasy lub interfejsu, do którego istnieje prawidłowa konwersja.  
+ [Funkcja CType](../../../visual-basic/language-reference/functions/ctype-function.md) przyjmuje drugi argument `typename`i przekształca wynik dane `expression` do `typename`, gdzie `typename` może być typu danych, struktury, klasy lub interfejsu, do której istnieje prawidłowa konwersja.  
   
- Porównanie `CType` z innych typów słowa kluczowe konwersji, zobacz [operatora DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) i [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md).  
+ Porównanie `CType` przy użyciu innych typów słowa kluczowe konwersji, zobacz [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) i [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md).  
   
 ## <a name="cbool-example"></a>Przykład CBool  
- W poniższym przykładzie użyto `CBool` funkcji konwersji wyrażenia do `Boolean` wartości. Jeśli wyrażenie ma wartość różną od zera `CBool` zwraca `True`; w przeciwnym razie zwraca `False`.  
+ W poniższym przykładzie użyto `CBool` funkcji konwersji wyrażenia do `Boolean` wartości. Jeśli wyrażenie ma wartość różną od zera, `CBool` zwraca `True`; w przeciwnym razie zwraca `False`.  
   
  [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_1.vb)]  
   
 ## <a name="cbyte-example"></a>Przykład CByte  
- W poniższym przykładzie użyto `CByte` funkcji konwersji wyrażenia do `Byte`.  
+ W poniższym przykładzie użyto `CByte` funkcji konwersji wyrażenia `Byte`.  
   
  [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_2.vb)]  
   
 ## <a name="cchar-example"></a>Przykład CChar  
- W poniższym przykładzie użyto `CChar` funkcji konwersji pierwszego znaku `String` wyrażenie `Char` typu.  
+ W poniższym przykładzie użyto `CChar` funkcję, aby skonwertować pierwszy znak `String` wyrażenie `Char` typu.  
   
  [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_3.vb)]  
   
- Argument wejściowy `CChar` musi być typu danych `Char` lub `String`. Nie można użyć `CChar` do konwertowania wartości na znak, ponieważ `CChar` nie może akceptować dane typu liczbowego. Poniższy przykład uzyskuje liczba reprezentująca punkt kodu (kod znaku) i konwertuje ją na odpowiedni znak. Używa <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> funkcji, aby uzyskać ciąg cyfr, `CInt` można przekonwertować ciągu na typ `Integer`, i `ChrW` do konwertowanie liczby na typ `Char`.  
+ Argument wejściowy `CChar` musi być typu danych `Char` lub `String`. Nie można użyć `CChar` do konwertowania wartości na znak, ponieważ `CChar` nie może akceptować zawierającą dane typu liczbowego. Poniższy przykład pobiera liczba reprezentująca punkt kodowy (kod znaku) i konwertuje je do odpowiedniego znaku. Używa ona <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> funkcję, aby uzyskać ciąg cyfr, `CInt` konwersji ciągu znaków na typ `Integer`, i `ChrW` do przekonwertowania liczby na typ `Char`.  
   
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## <a name="cdate-example"></a>Przykład CDate  
- W poniższym przykładzie użyto `CDate` funkcji konwersji ciągów na `Date` wartości. Ogólnie rzecz biorąc kodować dat i godzin jako ciągi (jak pokazano w tym przykładzie) nie jest zalecane. Użyj literałów dat i godzin, takie jak #Feb 12, 1969 # i # 4:45:23 PM #, zamiast tego.  
+ W poniższym przykładzie użyto `CDate` funkcji konwersji ciągów w celu `Date` wartości. Ogólnie rzecz biorąc kodować daty i godziny jako ciągi (jak pokazano w tym przykładzie) nie jest zalecane. Użyj literałów dat i godzin, takie jak #Feb 12, 1969 # i # 4:45:23 PM #, zamiast tego.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
@@ -196,65 +223,65 @@ CUShort(expression)
  [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_6.vb)]  
   
 ## <a name="cdec-example"></a>Przykład CDec  
- W poniższym przykładzie użyto `CDec` funkcji konwersji wartość liczbową `Decimal`.  
+ W poniższym przykładzie użyto `CDec` funkcję, aby skonwertować wartość liczbowa `Decimal`.  
   
  [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_7.vb)]  
   
 ## <a name="cint-example"></a>Przykład CInt  
- W poniższym przykładzie użyto `CInt` funkcji można przekonwertować wartości na `Integer`.  
+ W poniższym przykładzie użyto `CInt` funkcję, aby przekonwertować wartości na `Integer`.  
   
  [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_8.vb)]  
-  
-## <a name="clng-example"></a>Przykład CLng  
- W poniższym przykładzie użyto `CLng` funkcji można przekonwertować wartości na `Long`.  
+
+## <a name="clng-example"></a>Przykład CLng
+ W poniższym przykładzie użyto `CLng` funkcji konwersji wartości `Long`.  
   
  [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_9.vb)]  
   
 ## <a name="cobj-example"></a>Przykład CObj  
- W poniższym przykładzie użyto `CObj` funkcji konwersji wartość liczbową `Object`. `Object` Samej zmiennej zawierają tylko wskaźnik 4 bajtowych, która wskazuje na `Double` wartość przypisana do niego.  
+ W poniższym przykładzie użyto `CObj` funkcję, aby skonwertować wartość liczbowa `Object`. `Object` Sama zmienna zawierają tylko wskaźnik 4 bajtowych, które wskazuje `Double` wartości przypisanej do niego.  
   
  [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
   
 ## <a name="csbyte-example"></a>Przykład CSByte  
- W poniższym przykładzie użyto `CSByte` funkcji konwersji wartość liczbową `SByte`.  
+ W poniższym przykładzie użyto `CSByte` funkcję, aby skonwertować wartość liczbowa `SByte`.  
   
  [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
   
 ## <a name="cshort-example"></a>Przykład CShort  
- W poniższym przykładzie użyto `CShort` funkcji konwersji wartość liczbową `Short`.  
+ W poniższym przykładzie użyto `CShort` funkcję, aby skonwertować wartość liczbowa `Short`.  
   
  [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_12.vb)]  
   
 ## <a name="csng-example"></a>Przykład CSng  
- W poniższym przykładzie użyto `CSng` funkcji można przekonwertować wartości na `Single`.  
+ W poniższym przykładzie użyto `CSng` funkcji konwersji wartości `Single`.  
   
  [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_13.vb)]  
   
 ## <a name="cstr-example"></a>Przykład CStr  
- W poniższym przykładzie użyto `CStr` funkcji konwersji wartość liczbową `String`.  
+ W poniższym przykładzie użyto `CStr` funkcję, aby skonwertować wartość liczbowa `String`.  
   
  [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_14.vb)]  
   
- W poniższym przykładzie użyto `CStr` funkcji konwersji `Date` wartości do `String` wartości.  
+ W poniższym przykładzie użyto `CStr` funkcję, aby skonwertować `Date` wartości `String` wartości.  
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr` zawsze renderuje `Date` wartość w standardowym formacie krótkiej dla bieżących ustawień regionalnych, na przykład "15-6-2003 4:35:47 PM". Jednak `CStr` pomija *niezależnym od wartości* z 1/1/0001 daty i 00:00:00 czasu.  
+ `CStr` zawsze renderuje `Date` wartość w standardowym formacie krótkich dla bieżących ustawień regionalnych, na przykład, "6/15/2003 4:35:47 PM". Jednak `CStr` pomija *neutralne wartości* z 1/1/0001 dla daty i 00:00:00 czasu.  
   
- Aby uzyskać więcej szczegółów na wartości zwracanych przez `CStr`, zobacz [zwracać wartości dla funkcji CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
+ Aby uzyskać więcej szczegółów na wartości zwracane przez `CStr`, zobacz [zwrócić wartości dla funkcji CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
   
 ## <a name="cuint-example"></a>Przykład CUInt  
- W poniższym przykładzie użyto `CUInt` funkcji konwersji wartość liczbową `UInteger`.  
+ W poniższym przykładzie użyto `CUInt` funkcję, aby skonwertować wartość liczbowa `UInteger`.  
   
  [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_16.vb)]  
   
 ## <a name="culng-example"></a>Przykład CULng  
- W poniższym przykładzie użyto `CULng` funkcji konwersji wartość liczbową `ULong`.  
+ W poniższym przykładzie użyto `CULng` funkcję, aby skonwertować wartość liczbowa `ULong`.  
   
  [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_17.vb)]  
   
 ## <a name="cushort-example"></a>Przykład CUShort  
- W poniższym przykładzie użyto `CUShort` funkcji konwersji wartość liczbową `UShort`.  
+ W poniższym przykładzie użyto `CUShort` funkcję, aby skonwertować wartość liczbowa `UShort`.  
   
  [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   

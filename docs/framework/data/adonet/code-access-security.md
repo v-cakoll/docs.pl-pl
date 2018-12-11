@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453180"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144874"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczeń dostępu kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury, dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji są wykonywane z uprawnienia użytkownika lub jednostki. W rezultacie systemów komputerowych, może być uszkodzone i prywatnych danych naruszenia zabezpieczeń w przypadku złośliwego lub wypełnione błąd oprogramowania jest uruchamiane przez użytkownika z podwyższonym poziomem uprawnień.  
@@ -38,7 +38,7 @@ ms.locfileid: "49453180"
 ### <a name="requesting-permissions"></a>Żądanie uprawnień  
  Żądanie uprawnień ma na celu poinformować środowiska uruchomieniowego, uprawnienia, które aplikacja wymaga, aby można było uruchomić i upewnij się, że będzie ona otrzymywać tylko uprawnienia, które jest faktycznie potrzebny. Na przykład, jeśli Twoja aplikacja potrzebuje do zapisywania danych na dysku lokalnym, wymaga <xref:System.Security.Permissions.FileIOPermission>. Jeśli nie zostało udzielone uprawnienie, aplikacja zakończy się niepowodzeniem podczas próby zapisania na dysku. Jednak jeśli aplikacja żąda `FileIOPermission` i że nie przyznano uprawnienia aplikacji zostanie wygenerowany wyjątek na początku i nie zostanie załadowany.  
   
- W przypadku której aplikacja musi tylko do odczytu danych z dysku możesz poprosić, że jej nigdy nie zostać przyznane uprawnienia do zapisu. W przypadku błędu lub złośliwymi atakami kod nie może uszkodzić dane, na którym działa. Aby uzyskać więcej informacji, zobacz [NIB: żąda uprawnienia](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
+ W przypadku której aplikacja musi tylko do odczytu danych z dysku możesz poprosić, że jej nigdy nie zostać przyznane uprawnienia do zapisu. W przypadku błędu lub złośliwymi atakami kod nie może uszkodzić dane, na którym działa. Aby uzyskać więcej informacji, zobacz [NIB: Żądanie uprawnień](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
   
 ## <a name="role-based-security-and-cas"></a>Zabezpieczenia oparte na rolach i urzędy certyfikacji  
  Implementowanie zabezpieczeń opartych na rolach i zabezpieczeń dostępne z kodu (CAS) zwiększa ogólną zabezpieczeń aplikacji. Zabezpieczenia oparte na rolach może opierać się na konto Windows lub tożsamość niestandardowa, udostępniając informacje podmiotu zabezpieczeń bieżącego wątku. Ponadto aplikacje często są wymagane w celu zapewnienia dostępu do danych lub zasobów, w oparciu o poświadczenia podane przez użytkownika. Zazwyczaj takie aplikacje sprawdzić rolę użytkownika i umożliwiają dostęp do zasobów na podstawie tych ról.  
@@ -71,8 +71,8 @@ ms.locfileid: "49453180"
 |-----------------------------------|-----------------|  
 |`Action`|Pobiera lub ustawia akcji zabezpieczeń. Odziedziczone po <xref:System.Security.Permissions.SecurityAttribute>.|  
 |`AllowBlankPassword`|Włącza lub wyłącza przyciski regulacji puste hasło w parametrach połączenia. Prawidłowe wartości to `true` (Aby włączyć używanie pustych haseł) i `false` (Aby zablokować używanie pustych haseł). Odziedziczone po <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`ConnectionString`|Określa ciąg dozwolone połączenia. Można określić wiele parametrów połączenia. **Uwaga:** nie ma Identyfikatora użytkownika lub hasła w ciągu połączenia. W tej wersji nie można zmienić ograniczenia parametrów połączenia przy użyciu narzędzia .NET Framework Configuration Tool. <br /><br /> Odziedziczone po <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictions`|Określa parametry połączenia, które są dozwolone lub niedozwolone. Parametry połączenia są identyfikowane w formie  *\<Nazwa parametru > =*. Można określić wiele parametrów, rozdzielonych średnikami (;). **Uwaga:** Jeśli nie określisz `KeyRestrictions`, ale ustawisz `KeyRestrictionBehavior` właściwości `AllowOnly` lub `PreventUsage`, nie dodatkowych parametrów połączenia są dozwolone. Odziedziczone po <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`ConnectionString`|Określa ciąg dozwolone połączenia. Można określić wiele parametrów połączenia. **Uwaga:**  Nie dołączaj nazwy użytkownika i hasła w ciągu połączenia. W tej wersji nie można zmienić ograniczenia parametrów połączenia przy użyciu narzędzia .NET Framework Configuration Tool. <br /><br /> Odziedziczone po <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictions`|Określa parametry połączenia, które są dozwolone lub niedozwolone. Parametry połączenia są identyfikowane w formie  *\<Nazwa parametru > =*. Można określić wiele parametrów, rozdzielonych średnikami (;). **Uwaga:**  Jeśli nie określisz `KeyRestrictions`, ale ustawisz `KeyRestrictionBehavior` właściwości `AllowOnly` lub `PreventUsage`, nie dodatkowych parametrów połączenia są dozwolone. Odziedziczone po <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`KeyRestrictionBehavior`|Określa parametry połączenia jako tylko dodatkowe parametry, które są niedozwolone (`AllowOnly`), lub identyfikuje dodatkowe parametry, które nie są dozwolone (`PreventUsage`). `AllowOnly` jest ustawieniem domyślnym. Odziedziczone po <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`TypeID`|Pobiera unikatowy identyfikator dla tego atrybutu w przypadku zaimplementowania w klasie pochodnej. Odziedziczone po <xref:System.Attribute>.|  
 |`Unrestricted`|Wskazuje, czy zadeklarowano nieograniczonych uprawnień do zasobu. Odziedziczone po <xref:System.Security.Permissions.SecurityAttribute>.|  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Weryfikowanie dostępu kodu ADO.NET przy użyciu uprawnień zabezpieczeń  
- W przypadku scenariuszy częściowego zaufania może wymagać uprawnienia urzędów certyfikacji dla określonej metody w kodzie, określając <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Jeśli to uprawnienie nie jest dozwolone przez zasady zabezpieczeń z ograniczeniami obowiązuje, wyjątek jest zgłaszany, przed uruchomieniem kodu. Aby uzyskać więcej informacji na temat zasad zabezpieczeń, zobacz [NIB: Zarządzanie zasadami zabezpieczeń](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) i [NIB: najlepsze rozwiązania dotyczące zabezpieczeń zasad](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ W przypadku scenariuszy częściowego zaufania może wymagać uprawnienia urzędów certyfikacji dla określonej metody w kodzie, określając <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Jeśli to uprawnienie nie jest dozwolone przez zasady zabezpieczeń z ograniczeniami obowiązuje, wyjątek jest zgłaszany, przed uruchomieniem kodu. Aby uzyskać więcej informacji na temat zasad zabezpieczeń, zobacz [NIB: Zarządzanie zasadami zabezpieczeń](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) i [NIB: Najlepsze rozwiązania dotyczące zabezpieczeń zasad](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak napisać kod, który wymaga ciągu określonego połączenia. Symuluje, odmawianie nieograniczonych uprawnień do <xref:System.Data.SqlClient>, której administrator systemu może zaimplementować, za pomocą zasady CAS w świecie rzeczywistym.  
@@ -197,6 +197,5 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [PAVE zabezpieczeń w natywnym i kodzie .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md)  
  [Zabezpieczenia oparte na rolach](../../../../docs/standard/security/role-based-security.md)  
  [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,17 +1,18 @@
 ---
-title: Narzędzia dotnet svcutil Microsoft WCF
+title: Omówienie narzędzia svcutil WCF
 description: Omówienie narzędzia dotnet svcutil Microsoft WCF, który dodaje funkcje dla projektów .NET Core i ASP.NET Core, podobny do narzędzia svcutil WCF dla projektów programu .NET Framework.
 author: mlacouture
 ms.author: jralexander
 ms.date: 08/20/2018
-ms.openlocfilehash: bb4d8e5f3997318b720535b0f1e07fc33d13338a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: c8240f02e97d4c0cd63efb2c30611188b1451b07
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511889"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168292"
 ---
-# <a name="microsoft-wcf-dotnet-svcutil-tool"></a>Narzędzia dotnet svcutil Microsoft WCF
+# <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Narzędzia dotnet svcutil WCF dla platformy .NET Core
 
 Windows Communication Foundation (WCF) **narzędzia svcutil dotnet** narzędzie to narzędzie wiersza polecenia platformy .NET Core, pobiera metadane z usługi sieci web w lokalizacji sieciowej lub z pliku WSDL, która generuje klasę usługi WCF, zawierająca metody serwera proxy klienta, dostęp do operacji usługi sieci web.
 
@@ -24,7 +25,7 @@ Podobnie jak [ **metadanych modelu usługi - svcutil** ](../../framework/wcf/ser
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Zestaw .NET core SDK](https://www.microsoft.com/net/download) v1.0.4 lub nowsze wersje
+* [Zestaw .NET core SDK](https://dotnet.microsoft.com/download) v1.0.4 lub nowsze wersje
 * Wybrany edytor kodu
 
 ## <a name="getting-started"></a>Wprowadzenie
@@ -99,7 +100,7 @@ static void Main(string[] args)
 ```console
 dotnet run
 ```
-Powinien zostać wyświetlony następujący komunikat: "Hello narzędzia svcutil dotnet"!
+Powinny zostać wyświetlone następujące dane wyjściowe: "Hello dotnet-svcutil /!"
 
 Aby uzyskać szczegółowy opis `dotnet-svcutil` narzędzia parametrów, wywołaj narzędzie przekazywania parametru pomocy w następujący sposób:
 

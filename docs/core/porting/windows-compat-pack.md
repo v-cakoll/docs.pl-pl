@@ -1,28 +1,29 @@
 ---
-title: Eksportowanie do platformy .NET Core - przy użyciu pakietu zgodności systemu Windows
-description: Więcej informacji na temat pakietu zgodności systemu Windows i jak można go używać do portu istniejącego kodu .NET Framework do platformy .NET Core
+title: Użyj pakietu Windows zgodności do portu kodu platformy .NET Core
+description: Więcej informacji na temat pakietu Windows zgodności i jak można jej używać do portu istniejącego kodu .NET Framework i .NET Core
 author: terrajobst
-ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 6b25a2d5c197a6c9b0a7ead18370870ddc091e1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: 0a409c953ce38ed4c2959adaf4de9d3730ce37f4
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169940"
 ---
-# <a name="using-the-windows-compatibility-pack"></a>Przy użyciu pakietu zgodności systemu Windows
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Użyj pakietu Windows zgodności do portu kodu platformy .NET Core
 
-Jednym z najbardziej typowe problemy, które deweloperzy stają przed podczas przenoszenia ich istniejącego kodu do platformy .NET Core jest ich są zależne od interfejsów API i technologie, które istnieją tylko w programie .NET Framework. *Pakiet zgodności systemu Windows* jest o wiele z tych technologii zapewnienie, że tworzenie aplikacji platformy .NET Core, a także bibliotek .NET Standard staje się bardziej mogą zostać wykorzystane do istniejącego kodu.
+Niektóre z najczęściej spotykanych problemów podczas przenosisz istniejący kod do programu .NET Core są zależności o interfejsach API i technologii, które znajdują się tylko w programie .NET Framework. *Systemie Windows Compatibility Pack* zapewnie wiele z tych technologii, więc jest znacznie łatwiejsze tworzenie aplikacji .NET Core i biblioteki .NET Standard.
 
-Ten pakiet jest logiczną [rozszerzenia .NET 2.0 standardowe](../whats-new/index.md#api-changes-and-library-support) czy znacznie zwiększa zestawu interfejsów API i istniejący kod kompiluje z prawie żadnych modyfikacji. Aby zapewnić promise .NET Standard, ale ("jest zestaw interfejsów API, które zapewniają wszystkich implementacji .NET"), to nie zostały uwzględnione technologie, które nie może działać na wszystkich platformach, takich jak rejestru Instrumentacji zarządzania Windows (WMI) lub emisja odbicia Interfejsy API.
+Ten pakiet jest wartość logiczna [rozszerzenia .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) , znacznie zwiększa zestawu interfejsów API i istniejący kod kompiluje bez niemal żadnych modyfikacji. Aby zachować obietnicy .NET Standard, ale ("to zbiór interfejsów API, które zapewniają wszystkich implementacji .NET"), to nie zostały uwzględnione technologie, które nie może działać na wszystkich platformach, takich jak rejestru, Instrumentacji zarządzania Windows (WMI) lub emisji odbicia Interfejsy API.
 
-*Pakiet zgodności systemu Windows* znajduje się na szczycie .NET Standard i zapewnia dostęp do technologii, które są tylko systemu Windows. Jest to szczególnie przydatne dla użytkowników, którzy mają zostać przeniesione do platformy .NET Core, ale planu, aby zachować zgodność z systemem Windows jako pierwszy krok. W tym scenariuszu nie będzie mógł korzystać z technologii systemu Windows jest tylko próg migracji wykluczający się o zerowej architektury korzyści.
+*Systemie Windows Compatibility Pack* znajduje się na szczycie .NET Standard i zapewnia dostęp do technologii, które są tylko Windows. Jest to szczególnie przydatne w przypadku klientów, które chcesz przenieść do platformy .NET Core, ale plan pozostanie w Windows jako pierwszy krok. W tym scenariuszu nie będzie mógł korzystać z technologii Windows tylko jest tylko próg migracji wykluczający się zero zalety architektury.
 
 ## <a name="package-contents"></a>Zawartość pakietu
 
-*Pakiet zgodności systemu Windows* zostaną przekazane za pośrednictwem pakietu NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) i może być przywoływany w projektach przeznaczonych dla platformy .NET Core lub .NET Standard.
+*Systemie Windows Compatibility Pack* znajduje się za pośrednictwem pakietu NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) i mogą być przywoływane z projektów przeznaczonych dla platformy .NET Core lub .NET Standard.
 
-Zapewnia około 20 000 interfejsów API, łącznie z interfejsów API systemu Windows, jak również między platformami z następujących obszarów technologii:
+Zapewnia około 20 000 interfejsów API, tylko do Windows, a także dla wielu platform interfejsów API z następujących obszarów technologii w tym:
 
 * Strony kodowe
 * CodeDom
@@ -32,29 +33,29 @@ Zapewnia około 20 000 interfejsów API, łącznie z interfejsów API systemu Wi
 * ODBC
 * Uprawnienia
 * Porty
-* Listy kontroli dostępu do systemu Windows (ACL)
+* Listy kontroli dostępu systemu Windows (ACL)
 * Windows Communication Foundation (WCF)
-* Kryptografia systemu Windows
-* Dziennik zdarzeń systemu Windows
+* Kryptografia Windows
+* Windows w dzienniku zdarzeń
 * Instrumentacja zarządzania Windows (WMI)
-* Liczniki wydajności systemu Windows
-* Rejestr systemu Windows
-* Buforowanie środowiska wykonawczego systemu Windows
+* Liczniki wydajności Windows
+* Rejestr Windows
+* Buforowanie środowiska uruchomieniowego Windows
 * Usługi systemu Windows
 
 Aby uzyskać więcej informacji, zobacz [specyfikacji pakietu zgodności](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 
 ## <a name="get-started"></a>Wprowadzenie
 
-1. Przed eksportowanie, upewnij się, że Przyjrzyjmy się [eksportowanie procesu](index.md).
+1. Przed przenoszenie, upewnij się, że Przyjrzyj się [proces przenoszenia](index.md).
 
-2. Podczas przenoszenia istniejącego kodu platformy .NET Core lub .NET Standard, zainstaluj pakiet NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).
+2. Jeśli przenosisz istniejący kod platformy .NET Core lub .NET Standard, należy zainstalować pakiet NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).
 
-3. Jeśli chcesz zachować zgodność z systemem Windows, wszystko jest gotowe.
+3. Jeśli chcesz pozostać na Windows, wszystko jest gotowe.
 
-4. Uruchamianie aplikacji .NET Core i biblioteki .NET Standard w systemie Linux lub macOS, należy użyć [analizator interfejsu API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) można znaleźć użycia interfejsów API, które nie będą działać na różnych platformach.
+4. Uruchamianie aplikacji .NET Core i biblioteki .NET Standard w systemie Linux lub macOS, należy użyć [analizatora API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) można znaleźć użycia interfejsów API, które nie będą działać na różnych platformach.
 
-5. Usuń użycia tych interfejsów API, Zamień alternatyw i platform lub zabezpieczenia je za pomocą wyboru platform, takich jak:
+5. Usuń użycia tych interfejsów API, zastąp je alternatywy dla wielu platform lub je przed nieprzewidzianymi je za pomocą wyboru platform, takich jak:
 
     ```csharp
     private static string GetLoggingPath()
@@ -76,5 +77,5 @@ Aby uzyskać więcej informacji, zobacz [specyfikacji pakietu zgodności](https:
     }
     ```
 
-Dla demonstrację, zapoznaj się z [wideo z witryny Channel 9 pakietu zgodności systemu Windows](https://channel9.msdn.com/Events/Connect/2017/T123).
+Pokaz, zapoznaj się z [wideo Channel 9 z pakietu zgodności Windows](https://channel9.msdn.com/Events/Connect/2017/T123).
 

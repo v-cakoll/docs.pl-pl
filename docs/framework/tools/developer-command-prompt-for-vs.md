@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 20dc7caa9e4c3e023bf2848b1dd8c63a9b94a01b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: cded8ce271ea0f3d1dbb8fc3d9a072ee4a23d1ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170012"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149175"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Wiersz polecenia programisty dla programu Visual Studio
 
 Wiersz polecenia dla deweloperów programu Visual Studio pozwala łatwiej używać narzędzi programu .NET Framework. Jest automatycznie ustawia zmienne środowiskowe określonego wiersza polecenia.
 
 > [!div class="button"]
-[Pobierz program Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+> [Pobierz program Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>Wyszukaj wiersz polecenia na komputerze
 
@@ -68,7 +68,7 @@ Zwykle, skróty klawiaturowe wiersz polecenia, zainstalowane są umieszczane na 
 
 ## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Uruchom wiersz polecenia z poziomu programu Visual Studio
 
-W celu ułatwienia dostępu, można dodać wiersz polecenia dla deweloperów Visual Studio lub inne polecenia do **narzędzia** menu w programie Visual Studio. Aby udostępnić narzędzia, należy go dodać do listy zewnętrznych narzędzi. Poniżej przedstawiono kroki:
+W celu ułatwienia dostępu, można dodać wiersz polecenia dla deweloperów Visual Studio lub inne polecenia do **narzędzia** menu w programie Visual Studio. Aby udostępnić narzędzia, należy go dodać do listy zewnętrznych narzędzi. Oto konkretne kroki:
 
 1. Otwórz program Visual Studio.
 

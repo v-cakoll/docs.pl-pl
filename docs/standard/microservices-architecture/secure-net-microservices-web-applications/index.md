@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Za
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 0e55a68432dfd44c7a73ae51512f50d481ae100c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 7ee559f3881101a2382e6767607d5de1482d74ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937036"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126474"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Zabezpieczanie Mikrousług .NET i aplikacji sieci Web
 
@@ -248,7 +248,6 @@ Oprogramowanie pośredniczące uwierzytelniania elementu nośnego JWT może rów
 -   **Pomocą usługi IdentityServer4. Oficjalna dokumentacja**
     [*https://identityserver4.readthedocs.io/en/release/*](https://identityserver4.readthedocs.io/en/release/)
 
-
 >[!div class="step-by-step"]
-[Poprzednie](../implement-resilient-applications/monitor-app-health.md)
-[dalej](authorization-net-microservices-web-applications.md)
+>[Poprzednie](../implement-resilient-applications/monitor-app-health.md)
+>[dalej](authorization-net-microservices-web-applications.md)

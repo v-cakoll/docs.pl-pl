@@ -4,12 +4,12 @@ description: Więcej informacji na temat języka C# poziomu języka asynchronicz
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: e562ef9fffa5bf77fd5dee1cb19cee0a2492b986
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349098"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126500"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
@@ -29,7 +29,7 @@ Kod, zależne od Procesora CPU możesz `await` operacji, która jest uruchomiona
 
 Istnieją inne sposoby kod asynchroniczny podejście niż `async` i `await` opisane w artykule wzorca TAP linki umieszczono powyżej, ale ten dokument koncentruje się na konstrukcji poziomu języka od tego momentu.
 
-### <a name="io-bound-example-downloading-data-from-a-web-service"></a>Przykład I/O-powiązane z: pobieranie danych z usługi sieci web
+### <a name="io-bound-example-downloading-data-from-a-web-service"></a>Przykład I/O-granicy: Pobieranie danych z usługi sieci web
 
 Może być konieczne po naciśnięciu przycisku, Pobierz dane z usługi sieci web, ale nie chcesz zablokować wątek interfejsu użytkownika. Można to osiągnąć po prostu następująco:
 
@@ -108,7 +108,7 @@ Poniżej przedstawiono dwa pytań, na które należy zapytać przed napisaniem j
     
 W przypadku pracy, masz **I/O-powiązane z**, użyj `async` i `await` *bez* `Task.Run`.  Możesz *nie powinien* Użyj Biblioteka zadań równoległych.  Przyczyną jest opisany w [asynchronicznych w artykule głębokość](../standard/async-in-depth.md).
 
-W przypadku pracy, masz **zależne od Procesora CPU** i interesujące Cię czas reakcji, użyj `async` i `await` , ale zduplikować pracy w innym wątku *z* `Task.Run`.  Jeżeli praca jest odpowiednia dla współbieżność i równoległości, należy również rozważyć użycie Biblioteka zadań równoległych.
+W przypadku pracy, masz **zależne od Procesora CPU** i interesujące Cię czas reakcji, użyj `async` i `await` , ale zduplikować pracy w innym wątku *z* `Task.Run`.  Jeżeli praca jest odpowiednia dla współbieżność i równoległości, należy również rozważyć użycie [Biblioteka zadań równoległych](../standard/parallel-programming/task-parallel-library-tpl.md).
 
 Ponadto należy zawsze zmierzyć wykonywania kodu.  Na przykład można znaleźć samodzielnie w sytuacji, gdy Twoje zadań intensywnie angażujących Procesor nie jest kosztowna wystarczająco w porównaniu z obciążeniem przełączeń kontekstu po wielowątkowości.  Każdy element ma jego kosztem i należy wybrać poprawny kosztem w danej sytuacji.
 

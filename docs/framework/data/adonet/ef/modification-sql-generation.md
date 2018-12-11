@@ -2,12 +2,12 @@
 title: Modyfikowanie generowania kodu SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836942"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127072"
 ---
 # <a name="modification-sql-generation"></a>Modyfikowanie generowania kodu SQL
 W tej sekcji opisano kroki umożliwiające tworzenie modyfikacji modułu generowania SQL dla usługi (SQL:1999-danych zgodnej ze standardem) dostawcy. Ten moduł jest odpowiedzialny za tłumaczenie drzewo poleceń modyfikacji w odpowiedniej instrukcji SQL INSERT, UPDATE lub DELETE.  
@@ -83,11 +83,11 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Modyfikowanie generowania kodu SQL w dostawcy próbki  
- [Dostawcy programu Entity Framework przykładowe](https://go.microsoft.com/fwlink/?LinkId=180616) przedstawiono składniki dostawcy danych ADO.NET, który obsługuje [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Jest przeznaczony dla bazy danych programu SQL Server 2005, a jest implementowany jako otoki na podstawie System.Data.SqlClient dostawca danych programu ADO.NET w wersji 2.0.  
+ [Dostawcy programu Entity Framework przykładowe](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) przedstawiono składniki dostawcy danych ADO.NET, który obsługuje [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Jest przeznaczony dla bazy danych programu SQL Server 2005, a jest implementowany jako otoki na podstawie System.Data.SqlClient dostawca danych programu ADO.NET w wersji 2.0.  
   
  Moduł generowania SQL modyfikacji dostawcy próbki (znajdujący się w pliku SQL Generation\DmlSqlGenerator.cs) przyjmuje DbModificationCommandTree danych wejściowych i generuje pojedynczy modyfikacji instrukcji SQL, prawdopodobnie następuje instrukcję select do zwrócenia Czytnik, jeśli określony przez DbModificationCommandTree. Należy pamiętać, że kształt polecenia wygenerowany ma wpływ docelowej bazy danych programu SQL Server.  
   
-### <a name="helper-classes-expressiontranslator"></a>Klasy pomocnika: ExpressionTranslator  
+### <a name="helper-classes-expressiontranslator"></a>Klasy pomocy: ExpressionTranslator  
  ExpressionTranslator służy jako translator uproszczone wspólne dla wszystkich właściwości drzewa polecenia modyfikacji typu DbExpression. Go obsługuje translację tylko typy wyrażenia, do których są one ograniczone właściwości drzewo poleceń modyfikacji i został utworzony za pomocą określonego ograniczenia należy pamiętać.  
   
  Poniższe informacje omawiają, odwiedzając typy określonego wyrażenia (pominięto węzłów za pomocą uproszczonych tłumaczenia).  

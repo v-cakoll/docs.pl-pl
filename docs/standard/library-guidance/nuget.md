@@ -4,12 +4,12 @@ description: Zalecane najlepsze dla pakietu nuget biblioteki .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 479d1786c232ef1f843877169954e847453681c9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185629"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129613"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -37,8 +37,6 @@ Istnieją dwa główne sposoby, aby utworzyć pakiet NuGet. Sposobem nowszej i z
 Starszy sposób tworzenia pakietu NuGet jest `*.nuspec` pliku i `nuget.exe` narzędzie wiersza polecenia. Soubor nuspec zapewnia dużą kontrolę, ale należy określić dokładnie do końcowego pakietu NuGet, jakie zestawy i elementy docelowe. Łatwo popełnienia błędu lub niepowołanym zapomnij zaktualizować nuspec podczas wprowadzania zmian. Ma tę zaletę nuspec umożliwia tworzenie pakietów NuGet, struktur, które nie obsługują pliku projektu zestawu SDK stylu.
 
 **ROZWAŻ ✔️** przy użyciu zestawu SDK stylu pliku projektu do utworzenia pakietu NuGet.
-
-**ROZWAŻ ✔️** ustawienie SourceLink do dodawania metadanych do kontroli źródła do zestawów i pakietów NuGet.
 
 ## <a name="package-dependencies"></a>Zależności pakietów
 
@@ -73,6 +71,12 @@ Pakiet NuGet obsługuje wiele [właściwości metadanych](/nuget/reference/nuspe
 
 **CZY ✔️** za pomocą pakietu obrazu ikony, 64 x 64 z przezroczystym tłem, aby uzyskać najlepszy wygląd.
 
+**ROZWAŻ ✔️** Konfigurowanie [SourceLink](./sourcelink.md) do dodawania metadanych do kontroli źródła do zestawów i pakietów NuGet.
+
+> Automatycznie dodaje SourceLink `RepositoryUrl` i `RepositoryType` metadanych do pakietu NuGet.
+> SourceLink dodaje również, że informacje o kodzie źródłowym dokładnie pakiet został zbudowany z.
+> Na przykład pakiet utworzony na podstawie repozytorium Git będzie mieć skrót zatwierdzenia dodać jako metadane.
+
 ## <a name="pre-release-packages"></a>Pakiety w wersji wstępnej
 
 Pakiety NuGet za pomocą sufiksu wersji są traktowane jako [wersji wstępnej](/nuget/create-packages/prerelease-packages). Domyślnie interfejs użytkownika Menedżera pakietów NuGet zawiera stabilnej wersji, chyba że użytkownik zdecyduje się na do wersji wstępnej pakietów, dzięki czemu pakiety w wersji wstępnej niezwykle przydatna przy testowaniu użytkownika z ograniczonymi.
@@ -92,9 +96,14 @@ Pakiety NuGet za pomocą sufiksu wersji są traktowane jako [wersji wstępnej](/
 
 ## <a name="symbol-packages"></a>Pakiety symboli
 
-Pliki symboli (`*.pdb`) są produkowane przez kompilator platformy .NET, wraz z zestawów. Lokalizacje wykonywania mapy plików symboli do oryginalnego kodu źródłowego, dzięki czemu możesz przejrzeć kod źródłowy w postaci, w jakiej jest uruchomiona, przy użyciu debugera. Obsługuje NuGet [generowania pakietu oddzielne symbol](/nuget/create-packages/symbol-packages) zawierający pliki symboli, wraz z pakietu głównego zawierającego zestawy .NET. Koncepcja pakiety symboli jest one hostowane na serwerze symboli i są pobierane tylko wtedy, narzędzia, takiego jak Visual Studio na żądanie.
+Pliki symboli (`*.pdb`) są produkowane przez kompilator platformy .NET, wraz z zestawów. Lokalizacje wykonywania mapy plików symboli do oryginalnego kodu źródłowego, dzięki czemu możesz przejrzeć kod źródłowy w postaci, w jakiej jest uruchomiona, przy użyciu debugera. Obsługuje NuGet [generowania pakietu oddzielne symbol (`*.snupkg`)](/nuget/create-packages/symbol-packages-snupkg) zawierający pliki symboli, wraz z pakietu głównego zawierającego zestawy .NET. Koncepcja pakiety symboli jest one hostowane na serwerze symboli i są pobierane tylko wtedy, narzędzia, takiego jak Visual Studio na żądanie.
 
-Obecnie głównym gospodarzem publicznego symboli - [SymbolSource](http://www.symbolsource.org/) — nie obsługują nowe [pliki symboli przenośne](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) utworzone przez projektów w stylu zestawu SDK i pakiety symboli nie są przydatne. Dopóki zalecany host dla pakietów symboli, plików symboli można osadzić w głównym pakietu NuGet. Jeśli tworzysz pakiet NuGet za pomocą zestawu SDK stylu projektu, możesz osadzić plików symboli, ustawiając `AllowedOutputExtensionsInPackageBuildOutputFolder` właściwości: 
+NuGet.org znajduje się własną [repozytorium serwera symboli](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server). Deweloperzy mogą używać symbole opublikowane na serwerze symboli NuGet.org, dodając `https://symbols.nuget.org/download/symbols` do ich [symboli źródła w programie Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger).
+
+> [!IMPORTANT]
+> Serwer symboli NuGet.org obsługuje tylko nowe [pliki symboli przenośne](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) utworzone przez projektów w stylu zestawu SDK.
+
+Alternatywą dla tworzenia pakietu symboli jest osadzanie plików symboli w głównym pakietu NuGet. Głównym pakietu NuGet jest większy, ale osadzone symboli plików oznacza, że deweloperzy nie muszą skonfigurować serwer symboli NuGet.org. Jeśli tworzysz pakiet NuGet za pomocą zestawu SDK stylu projektu, a następnie umożliwia osadzanie plików symboli, ustawiając `AllowedOutputExtensionsInPackageBuildOutputFolder` właściwości:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -107,8 +116,10 @@ Obecnie głównym gospodarzem publicznego symboli - [SymbolSource](http://www.sy
 
 **ROZWAŻ ✔️** osadzanie plików symboli w głównym pakietu NuGet.
 
-**Należy UNIKAĆ ❌** tworzenie symbole pakietu zawierającego pliki symboli.
+> Osadzanie plików symboli w głównym pakietu NuGet daje deweloperom to lepszy proces debugowania domyślnie. Nie muszą znaleźć i skonfigurować serwer symboli NuGet w ich środowisku IDE, aby pobrać pliki symboli.
+>
+> Wadą plików symboli osadzony jest zwiększają rozmiar pakietu przez około 30% do bibliotek .NET skompilowanych przy użyciu zestawu SDK stylu projektów. Jeśli rozmiar pakietu jest istotna, należy zamiast tego opublikować symbole w pakietach symboli.
 
 >[!div class="step-by-step"]
-[Poprzednie](./strong-naming.md)
-[dalej](./dependencies.md)
+>[Poprzednie](strong-naming.md)
+>[dalej](dependencies.md)

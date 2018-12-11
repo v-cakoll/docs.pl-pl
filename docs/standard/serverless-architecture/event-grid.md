@@ -4,14 +4,14 @@ description: Usługa Azure Event Grid to rozwiązanie bez użycia serwera do nie
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b2507da61cbea3b4bdc51c6eecfe4d784737e924
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404965"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143665"
 ---
-# <a name="event-grid"></a>Usługa Event Grid
+# <a name="event-grid"></a>Event Grid
 
 [Usługa Azure Event Grid](/azure-event-grid/overview) zapewnia infrastrukturę bez użycia serwera dla aplikacji opartych na zdarzeniach. Możesz publikować do usługi Event Grid z dowolnego źródła i używać komunikatów z dowolnej platformy. Usługa Event Grid również ma wbudowaną obsługę zdarzeń z zasobów platformy Azure, aby usprawnić integracji z aplikacjami. Na przykład możesz subskrybować zdarzenia usługi blob storage do powiadamiania aplikacji, gdy plik zostanie przekazany. Aplikację można następnie publikować komunikat siatki zdarzeń niestandardowych, który jest używany przez inne chmurę lub lokalne aplikacje. Usługa Event Grid została stworzona z myślą niezawodny sposób będą obsługiwać bardzo dużą skalę. Korzyści publikowania i subskrybowania komunikatów bez konieczności konfigurowania infrastruktury wymaganej.
 
@@ -98,9 +98,9 @@ Główną zaletą używania usługi Event Grid jest automatyczne komunikaty gene
 |  | Microsoft.Resources.ResourceDeleteSuccess | Wywoływane, gdy operacja usuwania zasobu zakończy się pomyślnie. |
 |  | Microsoft.Resources.ResourceDeleteFailure | Wywoływane, gdy operacja usuwania zasobu nie powiodło się. |
 | | Microsoft.Resources.ResourceDeleteCancel | Wywoływane, gdy operacja usuwania zasobu zostało anulowane. To zdarzenie występuje, gdy wdrożenie szablonu zostanie anulowane. |
-| Magazyn obiektów blob | Microsoft.Storage.BlobCreated | Wywoływane, gdy zostanie utworzony obiekt blob. |
+| Blob Storage | Microsoft.Storage.BlobCreated | Wywoływane, gdy zostanie utworzony obiekt blob. |
 | | Microsoft.Storage.BlobDeleted | Wywoływane, gdy obiekt blob zostanie usunięty. |
-| Usługa Event hubs | Microsoft.EventHub.CaptureFileCreated | Wywoływane, gdy tworzony jest plik przechwytywania.
+| Usługa Event Hubs | Microsoft.EventHub.CaptureFileCreated | Wywoływane, gdy tworzony jest plik przechwytywania.
 | Usługa IoT Hub | Microsoft.Devices.DeviceCreated | Opublikowane po zarejestrowaniu urządzenia do usługi IoT hub. |
 | | Microsoft.Devices.DeviceDeleted | Opublikowana, gdy urządzenie zostanie usunięty z usługi IoT hub. |
 | Grupy zasobów | Microsoft.Resources.ResourceWriteSuccess | Wywoływane, gdy zasób utworzyć lub zaktualizować operacji powiedzie się. |
@@ -123,15 +123,15 @@ W tym rozdziale opisano bezserwerowej platformy Azure, które składa się z us�
 * [Plany usługi App service](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Analiza usługi Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-* [Azure: Przenoszenie aplikacji do chmury przy użyciu bezserwerowej usługi Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Usługi Azure Event Grid](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Azure: Udostępnij swoją aplikację w chmurze przy użyciu bezserwerowej usługi Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)
+* [Azure Event Grid](https://docs.microsoft.com/azure/azure-event-grid/overview)
 * [Schemat zdarzeń w usłudze Azure Event Grid](https://docs.microsoft.com/azure/event-grid/event-schema)
-* [Usługi Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
+* [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
 * [Dokumentacja usługi Azure Functions](https://docs.microsoft.com/azure/azure-functions)
 * [Pojęcia powiązania i Wyzwalacze usługi Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
-* [Usługi Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
+* [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
 * [Usługi Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
-* [Usługa Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+* [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
 * [Porównanie funkcji wersji 1.x i 2.x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 * [Nawiązywanie połączenia z lokalnymi źródłami danych za pomocą bramy danych lokalnych platformy Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
 * [Tworzenie pierwszej funkcji w witrynie Azure portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
@@ -142,5 +142,5 @@ W tym rozdziale opisano bezserwerowej platformy Azure, które składa się z us�
 * [Praca z serwerów proxy usługi Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
-[Poprzednie](logic-apps.md)
-[dalej](durable-azure-functions.md)
+>[Poprzednie](logic-apps.md)
+>[dalej](durable-azure-functions.md)

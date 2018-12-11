@@ -1,25 +1,24 @@
 ---
-title: Projektowanie i tworzenie wielu kontenera i Mikrousługi na podstawie aplikacji .NET
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie i tworzenie wielu kontenera i Mikrousługi na podstawie aplikacji .NET
+title: Projektowanie i tworzenie wielu kontenerach i Mikrousługach na podstawie aplikacji .NET
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Informacje na temat architektury zewnętrznych do projektowania i tworzenia wielu kontenerach i Mikrousługach .NET aplikacji.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 13abff090d42c5d59476612942560c126836dbb0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 3bbf746aa9c0b66a097b8c4df2964b5679342fd0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104481"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144146"
 ---
-# <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>Projektowanie i tworzenie aplikacji na podstawie Mikrousługi i usługi kontenera platformy .NET
+# <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>Projektowanie i opracowywanie aplikacji obsługującej wiele kontenerów i opartych na Mikrousługach .NET
 
-*Opracowywanie aplikacji konteneryzowanych mikrousługi oznacza, że są tworzenia wielu kontenera aplikacji. Jednak aplikacji kontenera usługi mogą być również prostsze — na przykład trójwarstwowa aplikacja — i nie może zostać utworzony przy użyciu architektury mikrousługi.*
+*Tworzenie aplikacji konteneryzowanych mikrousług oznacza, że tworzysz wielokontenerowych aplikacji. Jednak aplikację obsługującą wiele kontenerów może być również prostsze — na przykład trójwarstwowej aplikacji — i może nie być kompilowane przy użyciu architektury mikrousług.*
 
-Wcześniej możemy wywoływane pytanie "Jest Docker niezbędne podczas kompilowania architektury mikrousługi?" Odpowiedź brzmi wyczyść nie. Docker jest czynnik i oferuje istotne korzyści, ale kontenery i Docker nie są wymagane twardych dla mikrousług. Na przykład można utworzyć aplikacji sieci mikrousług z lub bez Docker podczas korzystania z sieci szkieletowej usług Azure, obsługujący mikrousług uruchomione jako procesy prostego lub kontenery Docker.
+Wcześniej zgłoszone możemy pytanie "Jest Docker niezbędne podczas tworzenia architektury mikrousług?" Odpowiedź brzmi wyczyść nie. Platforma docker jest włącznik i może zapewnić znaczne korzyści, ale kontenery i Docker nie są to bezwględnie wymagane dla mikrousług. Na przykład można utworzyć aplikacji opartych na mikrousługach z lub bez platformy Docker przy użyciu usługi Azure Service Fabric, który obsługuje mikrousługi uruchomiona jako proste procesy lub jako kontenery platformy Docker.
 
-Jednak jeśli wiesz, jak projektowanie i tworzenie aplikacji na podstawie mikrousług, opartą na Docker kontenerów, można do projektowania i opracowywania innych, łatwiejsze modelu aplikacji. Na przykład może projektowania aplikacji trójwarstwowej wymagającego podejście wielu kontenera. Z tego powodu i architektury mikrousługi są ważne trendu w świecie kontenera, w tej sekcji koncentruje się na implementacji architektury mikrousługi, za pomocą kontenerów Docker.
-
+Jednak jeśli wiesz, jak projektowanie i opracowywanie aplikacji opartych na mikrousługach, który również opiera się na kontenery platformy Docker, można projektować i tworzyć inne, prostsze modelu aplikacji. Na przykład można zaprojektować aplikacji trójwarstwowej, która wymaga również podejście obsługującej wiele kontenerów. Z tego powodu a ponieważ architektur mikrousług są ważne trendów w środowisku kontenera, ta sekcja koncentruje się na implementacji architektury mikrousług, za pomocą kontenerów platformy Docker.
 
 >[!div class="step-by-step"]
-[Poprzednie](../containerize-net-framework-applications/index.md)
-[dalej](microservice-application-design.md)
+>[Poprzednie](../docker-application-development-process/docker-app-development-workflow.md)
+>[dalej](microservice-application-design.md)

@@ -1,20 +1,20 @@
 ---
-title: Tworzenie biblioteki klas w języku Visual Basic i .NET Core w programie Visual Studio 2017
-description: Dowiedz się, jak utworzyć bibliotekę klas, napisany w języku Visual Basic w programie Visual Studio 2017
+title: Tworzenie biblioteki klas w języku Visual Basic .NET Core w programie Visual Studio 2017
+description: Dowiedz się, jak utworzyć bibliotekę klas platformy .NET Core, napisany w języku Visual Basic w programie Visual Studio 2017
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52bbae330afe4a9ea376c6388a06941f74f6606a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 04d866c0615d299fe3df72553bafce2514a1c121
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035977"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168835"
 ---
-# <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>Tworzenie biblioteki klas w języku Visual Basic i .NET Core w programie Visual Studio 2017
+# <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie biblioteki klas w języku Visual Basic i .NET Core SDK w programie Visual Studio 2017
 
 A *biblioteki klas* Określa typy i metody, które są wywoływane przez aplikację. Biblioteka klas, który jest przeznaczony dla .NET Standard 2.0 umożliwia biblioteki można wywoływać za pomocą dowolnego implementacji .NET, która obsługuje daną wersję .NET Standard. Po zakończeniu biblioteki klas, można zdecydować, czy chcesz rozprowadzić go jako składników innych firm lub tego, czy chcesz dołączyć go jako składnik powiązane z jedną lub więcej aplikacji.
 
@@ -31,7 +31,7 @@ Rozpocznij od utworzenia rozwiązania dla Twojego projektu biblioteki klas i jej
 
 1. W **nowy projekt** okna dialogowego, rozwiń węzeł **inne typy projektów** , a następnie wybierz węzeł **Visual Studio Solutions**. Nazwij rozwiązanie "ClassLibraryProjects", a następnie wybierz pozycję **OK** przycisku.
 
-   ![Okno dialogowe nowego projektu](./media/library-with-visual-studio/newproject.png)
+   ![Visual Studio utworzyć okno dialogowe Nowy projekt testu](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Tworzenie projektu biblioteki klas
 
@@ -41,15 +41,15 @@ Utwórz projekt biblioteki klas:
 
 1. W **Dodaj nowy projekt** okna dialogowego, rozwiń węzeł **języka Visual Basic** węzła, następnie wybierz pozycję **.NET Standard** węzła następuje **biblioteki klas (.NET Standard)**  szablonu projektu. W **nazwa** tekstu wprowadź "StringLibrary" jako nazwę projektu. Wybierz **OK** Aby utworzyć projekt biblioteki klas.
 
-   ![Dodaj okno dialogowe Nowy projekt](./media/vb-library-with-visual-studio/libproject.png)
+   ![Program Visual Studio Dodaj okno dialogowe Nowy projekt biblioteki](./media/vb-library-with-visual-studio/create-new-library-project.png)
 
    W oknie kodu, a następnie zostanie otwarta w środowisku programowania Visual Studio. 
  
-   ![Visual Studio okna aplikacji, przedstawiający kod szablonu domyślnego klasy biblioteki](./media/vb-library-with-visual-studio/stringlibrary.png)
+   ![Visual Studio okna aplikacji, przedstawiający kod szablonu domyślnego klasy biblioteki](./media/vb-library-with-visual-studio/visual-studio-library.png)
 
 1. Sprawdź, czy biblioteka jest przeznaczony dla prawidłowej wersji programu .NET Standard. Kliknij prawym przyciskiem myszy na projekt biblioteki w **Eksploratora rozwiązań** systemu windows, następnie wybierz pozycję **właściwości**. **Platformę docelową** pole tekstowe pokazuje, że firma Microsoft objęci .NET Standard 2.0.
 
-   ![Właściwości projektu biblioteki klas](./media/library-with-visual-studio/properties.png)
+   ![Właściwości projektu biblioteki klas](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Również w **właściwości** okno dialogowe, usuń wartość tekstową z **głównej przestrzeni nazw** pola tekstowego. Dla każdego projektu języka Visual Basic automatycznie tworzy przestrzeń nazw, która odnosi się do nazwy projektu, a wszelkie przestrzenie nazw zdefiniowane w plikach kodu źródłowego są nadrzędne tego obszaru nazw. Chcemy określić przestrzeń nazw najwyższego poziomu za pomocą [ `namespace` ](../../visual-basic/language-reference/statements/namespace-statement.md) — słowo kluczowe.
   
@@ -61,7 +61,7 @@ Utwórz projekt biblioteki klas:
 
 1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**. Projekt powinien być skompilowana bez błędów.
 
-   ![Okienko danych wyjściowych, pokazujący, że kompilacja zakończyła się pomyślnie](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Okienko danych wyjściowych, pokazujący, że kompilacja zakończyła się pomyślnie](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 
 

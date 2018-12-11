@@ -12,32 +12,32 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e20a04e76fb26409396a4f0b9fbfc7d86f253e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ebc449985a8e2617b278f04c91d243ca11b637e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392089"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145205"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
-`memberInfoCacheCreation` Zarządzany Asystent debugowania (MDA) została aktywowana po <xref:System.Reflection.MemberInfo> pamięci podręcznej. To silne wskazanie program, który jest użycie funkcji odbicia zasobów.  
+`memberInfoCacheCreation` Zarządzanego Asystenta debugowania (MDA) jest aktywowany po <xref:System.Reflection.MemberInfo> utworzeniu pamięci podręcznej. To silne wskazanie program, który wykonuje korzystania z funkcji odbicia drogich zasobów.  
   
 ## <a name="symptoms"></a>Symptomy  
- Program roboczy zwiększa zestawu, ponieważ program jest za pomocą odbicia zasobów.  
+ Program użytkownika działa zestaw rośnie, ponieważ program używa odbicia drogich zasobów.  
   
 ## <a name="cause"></a>Przyczyna  
- Operacje odbicia, które obejmują <xref:System.Reflection.MemberInfo> obiekty są traktowane jako zasób kosztowne, ponieważ muszą one odczytu metadanych, które są przechowywane na stronach zimnych i ogólnie wskazują one program używa pewien typ scenariusza z późnym wiązaniem.  
+ Operacje odbicia, obejmujące <xref:System.Reflection.MemberInfo> obiekty są traktowane jako zasób kosztowne, ponieważ będzie musi odczytać metadane, które są przechowywane na stronach zimnych i ogólnie rzecz biorąc wskazują program używa jakiegoś rodzaju scenariusza z późnym wiązaniem.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Można określić, gdzie odbicia jest używane w programie przez włączenie to zdarzenie MDA i ponownie uruchomić kodu w debugerze lub związane z debugera, po aktywowaniu MDA. W debugerze otrzymasz ślad stosu przedstawiający miejsce <xref:System.Reflection.MemberInfo> pamięci podręcznej został utworzony i z tego miejsca można określić, których program jest za pomocą odbicia.  
+ Można określić, gdy odbicie jest używany w programie przez włączenie to zdarzenie MDA i ponownie uruchomić usługi kodu w debugerze lub dołączania za pomocą debugera, gdy zdarzenie MDA jest aktywowane. W debugerze, zostanie wyświetlony ślad stosu, przedstawiający miejsce <xref:System.Reflection.MemberInfo> pamięci podręcznej został utworzony, a w tym miejscu możesz określić, gdzie program używa odbicia.  
   
- Rozdzielczość jest zależny od celów kodu. To zdarzenie MDA alertów, czy program ma scenariusza z późnym wiązaniem. Można określić, czy można podstawić scenariusza z wczesnym wiązaniem też należy wziąć pod uwagę wydajności późne powiązania scenariusza.  
+ Rozwiązanie jest zależna od celów kodu. To zdarzenie MDA alertów, czy program ma scenariusza z późnym wiązaniem. Możesz chcieć ustalenia, czy należy zastąpić scenariusza z wczesnym wiązaniem lub należy wziąć pod uwagę wydajność pod koniec scenariusza związanego.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA został aktywowany dla każdego <xref:System.Reflection.MemberInfo> pamięci podręcznej, która jest tworzona. Wpływ na wydajność jest niewielka.  
+ To zdarzenie MDA jest aktywowane dla każdego <xref:System.Reflection.MemberInfo> pamięci podręcznej, który jest tworzony. Wpływ na wydajność jest niewielki.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA wyświetla komunikat informujący <xref:System.Reflection.MemberInfo> pamięci podręcznej został utworzony. Użyj debugera, aby uzyskać ślad stosu wyświetlane, gdy program jest za pomocą odbicia.  
+ MDA wyświetla komunikat informujący o <xref:System.Reflection.MemberInfo> pamięć podręczna została utworzona. Należy użyć debugera, aby uzyskać ślad stosu przedstawiający, gdzie program używa odbicia.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -50,9 +50,9 @@ ms.locfileid: "33392089"
 ```  
   
 ## <a name="example"></a>Przykład  
- Ten przykładowy kod uaktywni `memberInfoCacheCreation` MDA.  
+ Ten przykładowy kod będą aktywowane `memberInfoCacheCreation` MDA.  
   
-```  
+```csharp
 using System;  
   
 public class Exe  

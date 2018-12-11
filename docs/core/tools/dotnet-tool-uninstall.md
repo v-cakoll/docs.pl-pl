@@ -1,15 +1,13 @@
 ---
-title: narzędzia DotNet odinstalowania polecenia — interfejs wiersza polecenia platformy .NET Core
+title: polecenie odinstalowania narzędzia DotNet
 description: Polecenie odinstalowania narzędzia dotnet odinstalowuje określonego narzędzia globalnej podstawowych platformy .NET z poziomu Twojej maszyny.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 93a43e19df4c7f220ac1e2d2db397cba4d791e83
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2ac0046d012fcf4a4be1c9bfa2e942e35b2c7290
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738181"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168354"
 ---
 # <a name="dotnet-tool-uninstall"></a>Odinstalowywanie narzędzia DotNet
 

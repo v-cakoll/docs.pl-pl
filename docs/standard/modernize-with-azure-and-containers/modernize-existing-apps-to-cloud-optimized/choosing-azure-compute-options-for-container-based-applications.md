@@ -1,42 +1,41 @@
 ---
-title: Wybieranie platformy obliczeń platformy Azure dla aplikacji kontenera
-description: Modernizacji istniejących aplikacji .NET z kontenerami chmury Azure i systemu Windows | Wybieranie platformy obliczeń platformy Azure dla aplikacji kontenera
+title: Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
+description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: ebf022a52aaaf95ae335976f5e097921b0ac8006
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958243"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125499"
 ---
-# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Wybieranie platformy obliczeń platformy Azure dla aplikacji kontenera
+# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 
-Jak można zauważyć po odczytaniu w poprzednich sekcjach, platforma Azure jest Otwórz chmury, które oferuje wiele wyborów. Można użyć najlepiej spełnia Twoje potrzeby, jednak również powierzchni pytania o jakie/technologii produktów należy używać konteneryzowanych aplikacji.
+Jak zauważono, należy po przeczytaniu w poprzednich sekcjach, platforma Azure jest Otwórz chmury, która oferuje wiele opcji do wyboru. Można użyć optymalnego dopasowania do własnych potrzeb, jednak również prezentuje pytania o jakie produktu/technologii, należy używać w przypadku aplikacji konteneryzowanych.
 
-Jako *domyślnie* zalecenia, poniżej przedstawiono główne kryteria zalecane w tych wskazówkach:
+Jako *domyślnie* zalecenia, poniżej przedstawiono główne kryteria, zaleca się w tych wskazówkach:
 
-  - **Jednej aplikacji wbudowanymi:** wybierz usługi aplikacji Azure
-  - **N-warstwowa aplikacja:** wybierz orchestrators, takie jak usługi Kubernetes Azure (AKS), usługa sieci szkieletowej (CPP) lub usługi aplikacji, jeśli masz jedną lub kilka usług zaplecza
-  - **Linux mikrousług:** wybierz AKS/Kubernetes
-  - **Mikrousług systemu Windows:** wybierz sieci szkieletowej usług
-  - **Funkcje niekorzystającą & procedury obsługi zdarzeń:** wybierz usługi Azure Functions
-  - **Na dużą skalę partii:** wybierz partii zadań Azure
+  - **Pojedynczy monolityczną aplikację:** Wybierz usługi Azure App Service
+  - **Aplikacja N-warstwowa:** Wybierz koordynatorów, takich jak Azure Kubernetes Service (AKS), Usługa Service Fabric (CPP) lub usługi App Service, jeśli masz jeden lub kilka usług zaplecza
+  - **Mikrousługi systemu Linux:** Wybierz usługi AKS/Kubernetes
+  - **Mikrousługi Windows:** Wybierz usługę Service Fabric
+  - **Funkcje bezserwerowe & procedury obsługi zdarzeń:** Wybierz usługę Azure Functions
+  - **Na dużą skalę usługi Batch:** Wybierz usługi Azure Batch
 
-Jednak tego zalecenia należy zwrócić na powiększanie soli, jak wybór produktu będzie zależeć od potrzeb i właściwości określonej aplikacji. Nie wszystkie aplikacje są takie same, nawet wtedy, gdy początkowo może wyglądać podobnych typów.
+Jednak to zalecenie powinna zostać podjęta uszczypnięcia soli, jak wybór produktu będzie zależeć od określonej aplikacji potrzebom i właściwości. Nie wszystkie aplikacje są takie same, nawet wtedy, gdy początkowo może wyglądać podobnych typów.
 
-Po dokładniejszej analizy potrzeb aplikacji zaznaczono produkt może być różne. Jednak jako punkt początkowy, warto mieć początkowej wskazówek, z którym rozpoczęcia ewaluacji i testowania na podstawie określonych priorytetu.
+Po dogłębną analizę aplikacji potrzebom produktu wybrane mogą być inne. Jednak jako punktu wyjścia, warto mieć początkową pomoc, z których można uruchomić oceny i testowania na podstawie niektórych priorytetu.
 
-Następny rysunek można analizować bardziej globalnego podczas tabeli szczegółowe decyzji.
+Na poniższej ilustracji można analizować bardziej globalnego podczas tabeli szczegółowych decyzji.
 
 ![](./media/image8.5.png)
 
-Powiadomienie jak podstawowego systemu operacyjnego (w porównaniu z systemem Windows. Linux) można także współczynnik decyzji, niektóre orchestrators są bardziej dojrzałe Linux kontenerów i innych kontenerów systemu Windows. Na przykład kontenery Linux są bardzo dojrzałe w Kubernetes (AKS na platformie Azure) ale mniej dojrzałe w sieci szkieletowej usług. Z drugiej strony kontenery systemu Windows są bardziej dojrzałe w sieci szkieletowej usług (wydane w 2017 maja) i mniej dojrzałe w AKS.
+Zwróć uwagę sposób, w jaki bazowego systemu operacyjnego (Windows vs. System Linux) można także współczynnik decyzji, zgodnie z niektórych koordynatorów są bardziej dojrzała na kontenery systemu Linux i innych kontenerów Windows. Na przykład kontenery systemu Linux są bardzo dla dorosłych w usłudze Kubernetes (AKS na platformie Azure) ale mniej dojrzałe w usłudze Service Fabric. Z drugiej strony kontenery Windows są bardziej dojrzałych w usłudze Service Fabric (wydany w maja 2017 r.) i mniej dojrzałe w usłudze AKS.
 
-Jednak różnic w dojrzałości system operacyjny będzie w przyszłości zanikania i wielu platform będą mieli porównywalne dojrzałości systemu operacyjnego i decyzja będzie leżą więcej informacji na temat Preferencje na podstawie konkretnych cech aplikacji może być konieczne lub oparte na każdej z platform ekosystemu przyczyny.
-
+Jednak te różnice w dojrzałości system operacyjny będzie w przyszłości zanikanie i wiele platform będą mieć porównywalne dojrzałości systemu operacyjnego i decyzji będzie określić więcej informacji na temat Preferencje na podstawie konkretnych cech, aplikacja może być konieczne lub oparte na każdej z platform ekosystem przyczyny.
 
 >[!div class="step-by-step"]
-[Poprzednie](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
-[dalej](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+>[Poprzednie](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+>[dalej](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

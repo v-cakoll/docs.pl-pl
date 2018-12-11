@@ -2,17 +2,17 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 75719e91daba189c1d93491a1db26acc80100bea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93789cf64653af863cbedbf1caeea886afb713f5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514755"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129392"
 ---
 # <a name="dataviews"></a>DataView
 A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych przechowywanych w <xref:System.Data.DataTable>, możliwości, jest często używany w aplikacjach powiązanie danych. Za pomocą **DataView**, może uwidaczniać dane w tabeli z zamówieniami sortowania i dane można filtrować według wierszy, stanu lub w zależności od wyrażenia filtru.  
   
- A **DataView** udostępnia dynamiczny widok danych w źródłowym **DataTable**: zawartość, kolejność i członkostwa odzwierciedlenia zmian w miarę ich występowania. To zachowanie różni się od **wybierz** metody **DataTable**, co powoduje zwrócenie <xref:System.Data.DataRow> tablica z tabeli opartym na określonej kolejności filtrowania lub sortowania: thiscontent odzwierciedla zmian podstawowy w tabeli, ale członkostwo i kolejność pozostaną statyczne. Dynamiczne możliwości **DataView** jest idealnym rozwiązaniem dla wiązania danych aplikacji.  
+ A **DataView** udostępnia dynamiczny widok danych w źródłowym **DataTable**: zawartość, kolejność i członkostwa odzwierciedlenia zmian w miarę ich występowania. To zachowanie różni się od **wybierz** metody **DataTable**, co powoduje zwrócenie <xref:System.Data.DataRow> tablica z tabeli opartym na określonej kolejności filtrowania lub sortowania: Ta zawartość zawiera zmiany podstawowy w tabeli, ale członkostwo i kolejność pozostaną statyczne. Dynamiczne możliwości **DataView** jest idealnym rozwiązaniem dla wiązania danych aplikacji.  
   
  A **DataView** udostępnia dynamiczny widok jednego zestawu danych, podobnie jak widok bazy danych, do którego można zastosować różne sortowanie i kryteria filtrowania. W przeciwieństwie do widoku bazy danych, jednak **DataView** nie może być traktowany jako tabelę i nie można udostępnić widok Tabele sprzężone. Również nie można wykluczyć kolumny, które istnieją w tabeli źródłowej i nie można dołączyć kolumn, takich jak kolumny obliczeniowej, które nie istnieją w tabeli źródłowej.  
   

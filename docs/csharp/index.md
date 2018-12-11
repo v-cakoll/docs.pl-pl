@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C# language
 - Visual C#
 ms.openlocfilehash: 5b0f3cc4a090e3479489285631a8d13b8b134c56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296753"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145663"
 ---
 # <a name="c-guide"></a>Przewodnik po języku C#
 

@@ -3,11 +3,11 @@ title: Pamięci podręczne PNRP
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
 ms.openlocfilehash: 53df90a9bb3da90145ebe30bb274b4ff4950c00f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180968"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147190"
 ---
 # <a name="pnrp-caches"></a>Pamięci podręczne PNRP
 Elementu równorzędnego protokołu PNRP (Name Resolution Protocol) w pamięci podręcznej są kolekcji lokalnych punktów końcowych algorithmically wybranego elementu równorzędnego w elementu równorzędnego.  

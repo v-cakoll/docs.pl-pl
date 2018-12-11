@@ -1,27 +1,27 @@
 ---
-title: Eksportowanie do programu .NET Core — analizowanie zależności innych firm
-description: Dowiedz się, jak i analizowanie zależności innych firm w celu portu projekty w programie .NET Framework i .NET Core.
+title: Analizowanie zależności kodu portów w celu platformy .NET Core
+description: Dowiedz się, jak analizować zależnościami zewnętrznymi w celu portu projekty w programie .NET Framework i .NET Core.
 author: cartermp
-ms.author: mairaw
-ms.date: 02/15/2018
-ms.openlocfilehash: 06d8d36d8369680c54af4d16513b2b871b57079c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.date: 12/04/2018
+ms.custom: seodec18
+ms.openlocfilehash: dce8e6cd4986b15cf926154b378964db4beef398
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46001004"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170330"
 ---
-# <a name="analyze-your-third-party-dependencies"></a>Analizowanie zależności innych firm
+# <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analizowanie zależności kodu portów w celu platformy .NET Core
 
-Jeśli szukasz przyłącz kod platformy .NET Core lub .NET Standard, jest pierwszym krokiem w procesie przenoszenia, aby zrozumieć zależności innych firm. Zależności innych firm są albo [pakiety NuGet](#analyze-referenced-nuget-packages-on-your-project) lub [biblioteki dll](#analyze-dependencies-that-arent-nuget-packages) odwołujesz w projekcie. Oceń poszczególne zależności i opracować plan awaryjny zależności, które nie są zgodne z platformą .NET Core. W tym artykule pokazano, jak ustalić, czy zależność jest zgodna z platformą .NET Core.
+Do portu kodu platformy .NET Core lub .NET Standard, należy zrozumieć zależności. Zależności zewnętrzne to [pakiety NuGet](#analyze-referenced-nuget-packages-on-your-project) lub [biblioteki dll](#analyze-dependencies-that-arent-nuget-packages) odwołania w projekcie, ale nie kompilacji. Oceń poszczególne zależności i opracować plan awaryjny te, które nie są zgodne z platformą .NET Core. Poniżej przedstawiono sposób ustalić, czy zależność jest zgodna z platformą .NET Core.
 
-## <a name="analyze-referenced-nuget-packages-in-your-project"></a>Analizowanie odwołania pakietów NuGet w swoim projekcie
+## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Analizowanie odwołania pakietów NuGet w projektach
 
-Jeśli masz odwołujące się do pakietów NuGet w projekcie, należy sprawdzić, jeśli są one zgodne z platformą .NET Core.
+Jeśli odwołujesz pakietów NuGet w projekcie, należy sprawdzić, jeśli są one zgodne z platformą .NET Core.
 Istnieją dwa sposoby, aby to zrobić:
 
-* [Za pomocą aplikacji Eksplorator pakietów NuGet](#analyze-nuget-packages-using-nuget-package-explorer) (najbardziej niezawodna metoda).
-* [Przy użyciu witryny nuget.org](#analyze-nuget-packages-using-nugetorg).
+* [Za pomocą narzędzia NuGet Tworzenie pakietu aplikacji Eksploratora](#analyze-nuget-packages-using-nuget-package-explorer)
+* [Przy użyciu witryny nuget.org](#analyze-nuget-packages-using-nugetorg)
 
 Po przeanalizowaniu pakietów, jeśli tak nie jest zgodny z platformy .NET Core i docelowego środowiska .NET Framework, można sprawdzić Jeśli [.NET Framework w trybie zgodności](#net-framework-compatibility-mode) może pomóc w procesie przenoszenia.
 
@@ -52,6 +52,7 @@ netcoreapp1.0
 netcoreapp1.1
 netcoreapp2.0
 netcoreapp2.1
+netcoreapp2.2
 portable-net45-win8
 portable-win8-wpa8
 portable-net451-win81
@@ -63,24 +64,6 @@ Te wartości są [Target Framework monikerów (krótkich nazw)](../../standard/f
 > [!IMPORTANT]
 > Po wyświetleniu krótkich nazw, obsługiwanych przez pakiet, należy pamiętać, że `netcoreapp*`, podczas gdy zgodne, jest tylko dla projektów .NET Core, a nie projektów .NET Standard.
 > Biblioteki, który jest przeznaczony tylko dla `netcoreapp*` i nie `netstandard*` mogą być używane tylko przez inne aplikacje platformy .NET Core.
-
-Dostępne są także niektóre starsze krótkich nazw używanych w wersji wstępnej wersji programu .NET Core, która może być również zgodna:
-
-```
-dnxcore50
-dotnet5.0
-dotnet5.1
-dotnet5.2
-dotnet5.3
-dotnet5.4
-dotnet5.5
-```
-
-Chociaż te krótkich nazw może pracować z kodu, nie ma gwarancji zgodności. Pakiety za pomocą tych krótkich nazw zostały utworzone za pomocą pakietów .NET Core w wersji wstępnej. Zwróć uwagę na, gdy (lub) pakiety przy użyciu tych krótkich nazw są zaktualizowane pod kątem oparte na .NET Standard.
-
-> [!NOTE]
-> Aby użyć pakietu z tradycyjnych aplikacji PCL lub docelowej platformy .NET Core w wersji wstępnej, należy użyć `PackageTargetFallback` elementu MSBuild w pliku projektu.
-> Aby uzyskać więcej informacji o tym elemencie programu MSBuild, zobacz [ `PackageTargetFallback` ](../tools/csproj.md#packagetargetfallback).
 
 ### <a name="analyze-nuget-packages-using-nugetorg"></a>Analizowanie pakietów NuGet za pomocą nuget.org
 
@@ -109,6 +92,12 @@ Aby pominąć to ostrzeżenie, edytując plik projektu, znaleźć `PackageRefere
 ```
 
 Aby uzyskać więcej informacji na temat sposobu pomijanie ostrzeżeń kompilatora w programie Visual Studio, zobacz [pomijanie ostrzeżeń dla pakietów NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages).
+
+### <a name="port-your-packages-to-packagereference"></a>Pakietów do portu `PackageReference`
+
+Korzysta z platformy .NET core [PackageReference](/nuget/consume-packages/package-references-in-project-files) do określania zależności pakietów. Jeśli używasz [packages.config](/nuget/reference/packages-config) do określenia pakietów, musisz przekonwertować za pośrednictwem `PackageReference`.
+
+Dowiedz się więcej na [migracja z pliku packages.config na PackageReference](/nuget/reference/migrate-packages-config-to-package-reference).
 
 ### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Co zrobić, gdy Twoje zależności pakietów NuGet nie zostanie uruchomiona na platformie .NET Core
 

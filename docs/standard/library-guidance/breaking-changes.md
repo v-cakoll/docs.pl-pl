@@ -4,14 +4,14 @@ description: Zalecenia dotyczące najlepszych rozwiązań do nawigowania między
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 83c01fdad7d836877bf692b87eeb0230219ded36
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: e0e62cda1b7475cd5d1f8bcd3558dc2fe7f6e07c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349158"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148516"
 ---
-# <a name="breaking-changes"></a>Fundamentalne zmiany
+# <a name="breaking-changes"></a>Zmiany powodujące niezgodność
 
 Jest ważne dla biblioteki .NET znaleźć równowagę między stabilności istniejących użytkowników i innowacji w przyszłości. Dowiedz się autorzy biblioteki kierunku refaktoryzacji i przemyślenie kod, dopóki nie jest doskonała, ale istotne istniejących użytkowników ma negatywnego wpływu, szczególnie w przypadku bibliotek niskiego poziomu.
 
@@ -94,6 +94,10 @@ public class Document
 }
 ```
 
+**✔️ ROZWAŻ** utrzymywanie typy i metody o <xref:System.ObsoleteAttribute> przez czas nieokreślony w bibliotekach niski i wyższych.
+
+> Usuwanie interfejsów API jest zmiana powodująca niezgodność dane binarne. Biorąc pod uwagę zachowanie przestarzałe typy i metody, jeśli ich obsługi jest niskie koszty i nie powoduje dodania dług techniczny do biblioteki. Nie usuwanie typów i metod może pomóc uniknąć najgorszego przypadku scenariuszy wymienionych powyżej.
+
 ## <a name="see-also"></a>Zobacz także
 
 * [Wersja i zaktualizuj uwagi dla deweloperów języka C#](../../csharp/whats-new/version-update-considerations.md)
@@ -101,4 +105,4 @@ public class Document
 * [CoreFX istotnej zmiany zasad](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
-[Poprzednie](./versioning.md)
+>[Poprzednie](versioning.md)

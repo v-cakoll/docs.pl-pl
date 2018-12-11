@@ -1,15 +1,15 @@
 ---
-title: 'Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie migracji w przyszłości'
+title: 'Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie migracji w przyszłości'
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 171a31b375eae4c032849c2a1c2090f5d9ff856f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 306ffbae86058a2caad70d3788fb7bb4e7998eec
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837404"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129587"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie migracji w przyszłości
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie migracji w przyszłości
 Aby zapewnić łatwiejsze migracji w przyszłości nowej aplikacji ASP.NET do programu WCF, postępuj zgodnie z poprzednim zalecenia, a także poniższe zalecenia.  
   
 ## <a name="protocols"></a>Protokoły  
@@ -36,7 +36,7 @@ Aby zapewnić łatwiejsze migracji w przyszłości nowej aplikacji ASP.NET do pr
   
 -   Podać jawne nazwy dla operacji usługi za pomocą `MessageName` parametru <xref:System.Web.Services.WebMethodAttribute>.  
   
-    ```  
+    ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
     string Echo(string input);  
     ```  
@@ -47,7 +47,7 @@ Aby zapewnić łatwiejsze migracji w przyszłości nowej aplikacji ASP.NET do pr
   
 -   Użyj <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> podać jawne wartości nagłówków SOAPAction HTTP, przez które HTTP żądania będą kierowane do metody.  
   
-    ```  
+    ```csharp  
     [WebMethod]  
     [SoapDocumentMethod(RequestElementName="ExplicitAction")]  
     string Echo(string input);  
@@ -63,7 +63,7 @@ Aby zapewnić łatwiejsze migracji w przyszłości nowej aplikacji ASP.NET do pr
 ## <a name="exception-handling"></a>Obsługa wyjątków  
  Projektowanie struktury typów danych, aby być wysyłane i odbierane przez usługę, również struktury projektu do reprezentowania różne rodzaje wyjątków, które mogą wystąpić w ramach usługi ten. może chcieć przekazania do klienta.  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(  
      Namespace="ExplicitNamespace", IsNullable=true)]  
@@ -84,7 +84,7 @@ Aby zapewnić łatwiejsze migracji w przyszłości nowej aplikacji ASP.NET do pr
   
  Zapewnianie takich klas możliwości serializacji się do pliku XML:  
   
-```  
+```csharp  
 public XmlNode ToXML()  
 {  
      XmlSerializer serializer = new XmlSerializer(  
@@ -103,7 +103,7 @@ public XmlNode ToXML()
   
  Klasy mogą następnie służyć do Podaj szczegóły, aby jawnie zgłoszony <xref:System.Web.Services.Protocols.SoapException> wystąpień:  
   
-```  
+```csharp  
 AnctipatedException exception = new AnticipatedException();  
 exception.AnticipatedExceptionInformation = "…";  
 throw new SoapException(  
@@ -113,7 +113,7 @@ throw new SoapException(
      exception.ToXML());  
 ```  
   
- Te klasy wyjątków będzie łatwo wielokrotnego użytku z programem WCF<xref:System.ServiceModel.FaultException%601> klasy, aby wygenerować nowy `FaultException<AnticipatedException>(anticipatedException);`  
+ Te klasy wyjątków będzie łatwo wielokrotnego użytku z programem WCF <xref:System.ServiceModel.FaultException%601> klasy, aby wygenerować nowy `FaultException<AnticipatedException>(anticipatedException);`  
   
 ## <a name="security"></a>Zabezpieczenia  
  Poniżej przedstawiono kilka zaleceń dotyczących zabezpieczeń.  
@@ -125,4 +125,4 @@ throw new SoapException(
 -   Należy rozważyć użycie dostawcy roli programu ASP.NET 2.0 do autoryzowania dostępu do zasobów usługi.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie integracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+ [Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie integracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

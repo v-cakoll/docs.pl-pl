@@ -11,11 +11,11 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199894"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146742"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalowanie programu .NET Framework dla deweloperów
 
@@ -28,7 +28,7 @@ Ten artykuł zawiera łącza do instalacji wszystkich wersji programu .NET Frame
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-Aby uzyskać więcej informacji o wersjach programu .NET Framework i jak określić, które wersje są zainstalowane na komputerze, zobacz [wersje i zależności](~/docs/framework/migration-guide/versions-and-dependencies.md) i [jak: ustalić, które .NET Framework są wersje Zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+Aby uzyskać więcej informacji o wersjach programu .NET Framework i jak określić, które wersje są zainstalowane na komputerze, zobacz [wersje i zależności](~/docs/framework/migration-guide/versions-and-dependencies.md) i [jak: Określanie, które wersje programu .NET Framework są zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!NOTE]
 > Aby uzyskać informacji na temat programu .NET Framework 3.5, zobacz [Instalowanie programu .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8](~/docs/framework/install/dotnet-35-windows-10.md).
@@ -189,14 +189,14 @@ Pakiety językowe są pliki wykonywalne, które zawierają zlokalizowane zasoby 
 
 Poniższa tabela zawiera listę obsługiwanych języków.
 
-| Język              | Kultury |
+| Język              | Kultura |
 | --------------------- | :-----: |
 | Arabski                | ar      |
 | czeski                 | CS      |
 | duński                | da      |
 | Holenderski                 | nl      |
 | fiński               | fi      |
-| Angielski (USA)         | pl pl   |
+| Angielski (USA)         | en-US   |
 | Francuski                | FR      |
 | niemiecki                | Niemcy      |
 | grecki                 | el      |

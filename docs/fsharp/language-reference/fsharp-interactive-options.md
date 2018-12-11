@@ -2,17 +2,17 @@
 title: Opcje interakcyjne F#
 description: Więcej informacji na temat opcji wiersza polecenia obsługiwane przez F# Interactive, fsi.exe.
 ms.date: 05/16/2016
-ms.openlocfilehash: a461dd0eeff2de3d15e557ba37138fbd62ca43ba
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33565808"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128157"
 ---
 # <a name="f-interactive-options"></a>Opcje interakcyjne F#
 
 > [!NOTE]
-W tym artykule opisano aktualnie środowisko Windows tylko.  Będzie inaczej.
+> W tym artykule opisano aktualnie środowisko Windows tylko.  Będzie inaczej.
 
 W tym temacie opisano opcje wiersza polecenia obsługiwane przez F# Interactive, `fsi.exe`. F#Interactive akceptuje wiele tych samych opcji wiersza polecenia jako F# kompilatora, ale akceptuje również pewne dodatkowe opcje.
 

@@ -1,18 +1,18 @@
 ---
-title: Tworzenie aplikacji Hello World platformy .NET Core w języku C# w programie Visual Studio 2017
+title: Tworzenie C# aplikacji Hello World platformy .NET Core w programie Visual Studio 2017
 description: Dowiedz się, jak utworzyć prostą aplikację konsoli .NET Core przy użyciu języka C# za pomocą programu Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 031c0a433391fbe4cdd40f6ce648f476787baf48
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003025"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168926"
 ---
-# <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Tworzenie aplikacji C# Hello World z platformą .NET Core w programie Visual Studio 2017
+# <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie C# aplikacji Hello World przy użyciu zestawu .NET Core SDK w programie Visual Studio 2017
 
 Ten temat zawiera instrukcje krok po kroku wprowadzenie do tworzenia, debugowania i publikowania prostego aplikacji konsolowej .NET Core przy użyciu języka C# w programie Visual Studio 2017. Program Visual Studio 2017 zapewnia środowisko projektowe w pełni funkcjonalne służące do tworzenia aplikacji platformy .NET Core. Tak długo, jak aplikacja nie ma zależności specyficzne dla platformy, aplikację można uruchomić na dowolnej platformie przeznaczonego platformy .NET Core i w każdym systemie, który ma zainstalowany .NET Core.
 
@@ -26,13 +26,13 @@ Aby uzyskać więcej informacji, zobacz [wymagania wstępne dla platformy .NET C
 
 Rozpocznij od utworzenia prostej aplikacji konsoli "Hello World". Wykonaj następujące kroki:
 
-1. Uruchom program Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W *nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "nazwę HelloWorld". Wybierz **OK** przycisku.
+1. Uruchom program Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W *nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "nazwę HelloWorld". Wybierz przycisk **OK**.
 
-   ![Okno dialogowe nowego projektu za pomocą aplikacji Konsolowej wybrane](./media/with-visual-studio/newproject.png)
+   ![Okno dialogowe nowego projektu za pomocą aplikacji Konsolowej wybrane](./media/with-visual-studio/visual-studio-new-project.png)
    
 1. Program Visual Studio używa tego szablonu do utworzenia projektu. Szablon aplikacji Konsolowej C# dla platformy .NET Core automatycznie definiuje klasę, `Program`, z jedną metodą `Main`, która przyjmuje <xref:System.String> tablic jako argumentu. `Main` jest punkt wejścia aplikacji, metody, która jest wywoływana automatycznie w czasie wykonywania po jej uruchomieniu aplikacji. Argumenty wiersza polecenia, dostarczana, gdy aplikacja zostanie uruchomiona, są dostępne w *args* tablicy.
 
-   ![Program Visual Studio i nowego projektu HelloWorld](./media/with-visual-studio/devenv.png)
+   ![Program Visual Studio i nowego projektu HelloWorld](./media/with-visual-studio/visual-studio-main-window.png)
 
    Ten szablon tworzy prostą aplikację "Hello World". Wywołuje <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> metodę w celu wyświetlenia literału ciągu "Hello World!" w oknie konsoli. Wybierając **HelloWorld** przycisk z zieloną strzałkę na pasku narzędzi, można uruchomić program w trybie debugowania. Jeśli to zrobisz, okno konsoli jest widoczna na interwał krótki czas przed jej zamknięciem. Dzieje się tak dlatego `Main` metoda kończy działanie i aplikacja kończy się najszybciej, jak pojedynczą instrukcję w `Main` metoda jest wykonywana.
 
@@ -48,7 +48,7 @@ Rozpocznij od utworzenia prostej aplikacji konsoli "Hello World". Wykonaj nastę
 
 1. Uruchom program, wybierając **HelloWorld** przycisk z zieloną strzałkę na pasku narzędzi.
 
-   ![Okno konsoli przedstawiający Hello World naciśnij dowolny klawisz, aby kontynuować](./media/with-visual-studio/helloworld1.png)
+   ![Okno konsoli przedstawiający Hello World naciśnij dowolny klawisz, aby kontynuować](./media/with-visual-studio/hello-world-console.png)
 
 1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli.
 
@@ -62,7 +62,7 @@ Rozszerz aplikację, aby monitować użytkownika o ich nazwy i wyświetl ją wra
 
    Ten kod zastępuje istniejące <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType>, i <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> instrukcji.
 
-   ![Plik c sharp Visual Studio Program przy użyciu zaktualizowanych metody Main](./media/with-visual-studio/codewindow.png)
+   ![Plik c sharp Visual Studio Program przy użyciu zaktualizowanych metody Main](./media/with-visual-studio/visual-csharp-code-window.png)
 
    Ten kod wyświetla "Jak ma nazwę"? w oknie konsoli i czeka, aż użytkownik wprowadza się ciąg, a następnie klawisz Enter. Ten ciąg jest przechowywana w zmiennej o nazwie `name`. Pobiera również wartość <xref:System.DateTime.Now?displayProperty=nameWithType> właściwość, która zawiera bieżący czas lokalny, a następnie przypisuje go do zmiennej o nazwie `date`. Na koniec używa [ciągiem interpolowanym](../../csharp/language-reference/tokens/interpolated.md) można wyświetlać te wartości w oknie konsoli.
 
@@ -70,7 +70,7 @@ Rozszerz aplikację, aby monitować użytkownika o ich nazwy i wyświetl ją wra
 
 1. Uruchom program w trybie debugowania w programie Visual Studio, wybierając zieloną strzałkę na pasku narzędzi, naciskając klawisz F5 lub wybierając pozycję **debugowania** > **Rozpocznij debugowanie** elementu menu. Odpowiedzieć na monit podawania nazwy i naciskając klawisz Enter.
 
-   ![Okno konsoli z danych wyjściowych zmodyfikowane programu](./media/with-visual-studio/helloworld2.png)
+   ![Okno konsoli z danych wyjściowych zmodyfikowane programu](./media/with-visual-studio/hello-world-update.png)
 
 1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli.
 

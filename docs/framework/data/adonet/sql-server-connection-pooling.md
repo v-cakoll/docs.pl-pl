@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514966"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147681"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Połączenie z serwerem SQL buforowanie (ADO.NET)
 Nawiązywanie połączenia z serwerem bazy danych zazwyczaj składa się z kilku kroków czasochłonne. Kanał fizycznych, takich jak gniazda lub nazwany potok należy ustalić, musi nastąpić uzgadnianie początkową z serwerem, informacje o parametrach połączenia musi zostać przeanalizowany, połączenie musi zostać uwierzytelniony przez serwer, należy uruchomić testy dla rejestrowanie w Bieżąca transakcja i tak dalej.  
@@ -31,7 +31,7 @@ Nawiązywanie połączenia z serwerem bazy danych zazwyczaj składa się z kilku
   
  W języku C# przykładzie trzy nowe <xref:System.Data.SqlClient.SqlConnection> obiekty są tworzone, ale tylko dwóch pul połączeń są wymagane do zarządzania nimi. Należy pamiętać, że parametry połączenia pierwszego i drugiego różnią się wartość przypisana do `Initial Catalog`.  
   
-```  
+```csharp
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=Northwind"))  
     {  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  Pulę połączeń spełnia żądań dla połączeń przez ponowne przydzielanie połączenia po ich wydaniu do puli. Jeśli osiągnięty maksymalny rozmiar puli, a nie można używać połączenia jest dostępna, żądanie znajduje się w kolejce. Pulę następnie próbuje odzyskać wszystkie połączenia, dopóki nie zostanie osiągnięty limit czasu (wartość domyślna wynosi 15 sekund). Jeśli pulę nie może zrealizować żądanie, zanim upłynie limit czasu połączenia, zwracany jest wyjątek.  
   
 > [!CAUTION]
->  Zdecydowanie zaleca się zawsze zamykaj połączenie po zakończeniu korzystania z niego, tak aby połączenie zostanie zwrócony do puli. Można to zrobić za pomocą `Close` lub `Dispose` metody `Connection` obiektu lub otwierając wszystkich połączeń wewnątrz `using` instrukcji w języku C# lub `Using` instrukcji w języku Visual Basic. Połączenia, które nie są jawnie zamknięty, nie może dodać lub zwrócone do puli. Aby uzyskać więcej informacji, zobacz [za pomocą instrukcji](~/docs/csharp/language-reference/keywords/using-statement.md) lub [porady: usuwanie zasobu systemu](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) dla języka Visual Basic.  
+>  Zdecydowanie zaleca się zawsze zamykaj połączenie po zakończeniu korzystania z niego, tak aby połączenie zostanie zwrócony do puli. Można to zrobić za pomocą `Close` lub `Dispose` metody `Connection` obiektu lub otwierając wszystkich połączeń wewnątrz `using` instrukcji w języku C# lub `Using` instrukcji w języku Visual Basic. Połączenia, które nie są jawnie zamknięty, nie może dodać lub zwrócone do puli. Aby uzyskać więcej informacji, zobacz [za pomocą instrukcji](~/docs/csharp/language-reference/keywords/using-statement.md) lub [jak: Usuwanie zasobu systemu](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) dla języka Visual Basic.  
   
 > [!NOTE]
 >  Nie wywołuj `Close` lub `Dispose` na `Connection`, `DataReader`, lub inne obiekt zarządzany w `Finalize` metody klasy. W finalizatora zwolnić tylko niezarządzane zasoby, które należą bezpośrednio do swojej klasy. Jeśli klasa nie ma żadnych niezarządzanych zasobów, nie dołączaj `Finalize` metody w swojej definicji klasy. Aby uzyskać więcej informacji, zobacz [wyrzucania elementów bezużytecznych](../../../../docs/standard/garbage-collection/index.md).  

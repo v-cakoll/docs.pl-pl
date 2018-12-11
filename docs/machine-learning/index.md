@@ -1,39 +1,51 @@
 ---
-title: Przewodnik po strukturze ML.NET
-description: Informacje o sposobie tworzenia niestandardowych rozwiązań AI i integrowanie aplikacji platformy .NET przy użyciu ML.NET.
-author: aditidugar
-ms.date: 05/07/2018
-ms.openlocfilehash: a5be91283d8b8d00b727ec43d1137a0a245175d3
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+title: Przewodnik po strukturze ML.NET zawartości
+description: Dowiedz się, jak tworzyć niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET za pomocą strukturze ML.NET
+ms.date: 11/06/2018
+ms.custom: seodec18
+ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35017284"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126253"
 ---
-# <a name="mlnet-guide"></a>Przewodnik po strukturze ML.NET
+# <a name="mlnet-content-guide"></a>Przewodnik po strukturze ML.NET zawartości
 
-ML.NET to platforma learning bezpłatna, open source i Międzyplatformowe maszyny, która umożliwia tworzenie rozwiązań uczenia maszynowego niestandardowych i integrowanie aplikacji platformy .NET. Ten przewodnik zawiera wiele zasobów dotyczących pracy z ML.NET.
+Ten przewodnik wyjaśnia podstawowe pojęcia i zawiera samouczki i dokumentacja interfejsu API do pracy za pomocą platformy ML.NET.
 
-Aby uzyskać więcej informacji o ML.NET, zobacz [wprowadzenie ML.NET: między platformami, Proven i otwórz źródła Machine Learning Framework](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/) opublikuj wpis na blogu .NET.
+> [!NOTE]
+> Ta dokumentacja dotyczy strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej. Materiał może ulec zmianie. Aby uzyskać więcej informacji, zobacz [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="get-started"></a>Wprowadzenie
 
-Aby rozpocząć pracę z ML.NET, zapoznaj się [szybkiego startu prognozowania Motyw Płatek Iris](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet/get-started) lub bardziej szczegółowym [samouczki](tutorials/index.md).
+Aby zainstalować i zacznij tworzyć w strukturze ML.NET, postępuj zgodnie z [samouczek z wprowadzeniem](https://www.microsoft.com/net/learn/machinelearning-ai/ml-dotnet-get-started-tutorial).
 
-Jeśli jesteś nowym użytkownikiem usługi machine learning, można również przejrzeć [Machine Learning podstawy](resources/basics.md), gdzie można znaleźć materiałów szkoleniowych maszyny, aby pomóc.
+Aby dowiedzieć się więcej o strukturze ML.NET, zobacz [co to jest strukturze ML.NET?](what-is-mldotnet.md)
 
-## <a name="how-the-mlnet-guide-is-organized"></a>Jak Podręcznik ML.NET
+Aby poznać podstawy, zobacz [podstawowe pojęcia do trenowania modelu w strukturze ML.NET](basic-concepts-model-training-in-mldotnet.md).
 
-Istnieje kilka sekcji przewodnika ML.NET. Możesz je czytać w kolejności lub przejście bezpośrednio do czego można omawiać najczęściej.
+## <a name="tutorials"></a>Samouczki
 
-**[Tutorials](tutorials/index.md)**
+[Analizowanie opinii za pomocą model klasyfikacji binarnej](tutorials/sentiment-analysis.md) pokazuje, jak utworzyć aplikację, która określa, czy Tonacja jest dodatnia lub ujemna.
 
-W tej sekcji możesz znaleźć samouczki krok po kroku, które pomagają w budowania modeli uczenia maszynowego niestandardowych dla typowych scenariuszy developer.
+[Przewidywanie taryfy taksówek za pomocą modelu regresji](tutorials/taxi-fare.md) przedstawiono sposób tworzenia predykcyjnego aplikację, która używa wielu czynników z danych historycznych w celu ustalenia odpowiedź.
 
-**[Słownik](resources/glossary.md)**
+[Klasyfikowanie irysów kwiatów przy użyciu funkcji](tutorials/iris-clustering.md) pokazano, jak model klastrowania umożliwia analizowanie zestawu danych iris. 
 
-Znajdź listę machine learning terminy i ich definicje.
+## <a name="how-to-guide"></a>Jak przewodnik
+
+[Tworzenie aplikacji gry dopasowania w górę listy Infer.NET i programowania Probabilistyczne](how-to-guides/matchup-app-infer-net.md) dowiesz się, jak tworzyć uproszczoną wersję aplikacji dopasowania w górę, jak powinny zostać wyświetlone gier Xbox.
+
+## <a name="resources"></a>Resources
+
+[Machine learning słownik](resources/glossary.md) definiuje terminologii.
+
+[Zadania uczenia maszynowego](resources/tasks.md) w tym artykule opisano zadania, takie jak Klasyfikacja i wykrywanie anomalii. 
+
+[Przekształcenia danych](resources/transforms.md) zawiera opis możliwości przygotowywania danych w strukturze ML.NET.
+
 
 ## <a name="api-reference"></a>Odwołanie API
 
-Zapoznaj się z [dokumentacja interfejsu API ML.NET](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) do szerokości interfejsami API dostępnymi w temacie.
+[Dokumentacja interfejsu API w strukturze ML.NET](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) opisuje szerokość interfejsami API dostępnymi.

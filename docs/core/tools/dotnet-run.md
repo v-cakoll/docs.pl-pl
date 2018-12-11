@@ -1,15 +1,13 @@
 ---
-title: polecenia DotNet, uruchom polecenie — interfejs wiersza polecenia platformy .NET Core
+title: polecenia DotNet, uruchom polecenie
 description: Polecenia dotnet, uruchom polecenie zapewnia wygodny sposób, aby uruchomić aplikację z kodu źródłowego.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: f560e6f795f00488818647a4b5c711dcf9d59dcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: effca44db19e512a01f858e7a149e3fc4fe076a2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235497"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170252"
 ---
 # <a name="dotnet-run"></a>Uruchom polecenia DotNet
 

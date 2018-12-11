@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: c43505497b947004ffb282346459967579d52375
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199547"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126406"
 ---
 # <a name="xaml-resources"></a>Zasoby XAML
 Zasób jest obiektem, który może być ponownie używane w różnych miejscach w aplikacji. Przykładami zasobów pędzle i stylów. W tym omówieniu opisano, jak użyć zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Można również tworzyć i uzyskiwać dostęp do zasobów przy użyciu kodu lub zamiennie między kodem i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [zasoby i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -147,7 +147,7 @@ Zasób jest obiektem, który może być ponownie używane w różnych miejscach 
   
  Czy styl tak naprawdę mieć klucz: niejawny klucz `typeof(` <xref:System.Windows.Controls.Button> `)`. W znaczniku, można określić <xref:System.Windows.Style.TargetType%2A> bezpośrednio jako typ nazwy (możesz też opcjonalnie [{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) Aby zwrócić <xref:System.Type>.  
   
- Za pomocą mechanizmów style motyw domyślny używany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], że stylów jest stosowana jako styl środowiska uruchomieniowego <xref:System.Windows.Controls.Button> na stronie mimo że <xref:System.Windows.Controls.Button> sam nie jest podejmowana próba określenia jego <xref:System.Windows.FrameworkElement.Style%2A> właściwości lub określonego zasobu Odwołanie do stylu. Własnego stylu zdefiniowana na stronie znajduje się we wcześniejszej części sekwencji wyszukiwania starszych niż motyw stylu słownika przy użyciu tego samego klucza, zawierającej styl słownika motywu. Można określić `<Button>Hello</Button>` w dowolnym miejscu strony i style zdefiniowane za pomocą <xref:System.Windows.Style.TargetType%2A> z `Button` zastosowanie do tego przycisku. Jeśli chcesz, możesz nadal jawnie klucza styl z taką samą wartość typu, jak <xref:System.Windows.Style.TargetType%2A>dla jasności znaczników, ale jest opcjonalny.  
+ Za pomocą mechanizmów style motyw domyślny używany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], że stylów jest stosowana jako styl środowiska uruchomieniowego <xref:System.Windows.Controls.Button> na stronie mimo że <xref:System.Windows.Controls.Button> sam nie jest podejmowana próba określenia jego <xref:System.Windows.FrameworkElement.Style%2A> właściwości lub określonego zasobu Odwołanie do stylu. Własnego stylu zdefiniowana na stronie znajduje się wcześniej w kolejności wyszukiwania niż motyw stylu słownika przy użyciu tego samego klucza, zawierającej styl słownika motywu. Można określić `<Button>Hello</Button>` w dowolnym miejscu strony i style zdefiniowane za pomocą <xref:System.Windows.Style.TargetType%2A> z `Button` zastosowanie do tego przycisku. Jeśli chcesz, możesz nadal jawnie klucza styl z taką samą wartość typu, jak <xref:System.Windows.Style.TargetType%2A>dla jasności znaczników, ale jest opcjonalny.  
   
  Style niejawne klucze nie mają zastosowania w kontrolce, jeśli <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> jest `true` (należy również zauważyć, że <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> może być ustawiony jako część natywnych zachowanie dla klasy kontrolki, a nie jawnie na wystąpienie kontrolki). Ponadto w celu obsługi niejawne kluczy dla scenariuszy w klasie pochodnej, formant przesłonięcie <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (wszystkich istniejących kontrolek w ramach [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] to). Aby uzyskać więcej informacji na temat style, motywy i projektu kontroli zobacz [wytyczne dotyczące projektowania kontrolek w określonych stylach](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
   

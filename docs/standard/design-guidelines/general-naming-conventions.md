@@ -1,6 +1,6 @@
 ---
 title: Ogólne konwencje nazewnictwa
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -14,14 +14,13 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cd3defd969b5f26fb95e7feca9c3d533e67272b1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 9febc7eed7d6dedad6655b51a96694b72b78711b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209513"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147284"
 ---
 # <a name="general-naming-conventions"></a>Ogólne konwencje nazewnictwa
 W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wybranego słowa wskazówki na temat używania skrótów i akronimów i zalecenia dotyczące sposobu uniknięcia używania nazw specyficzny dla języka.  
@@ -74,7 +73,7 @@ W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wybr
 |**bool**|**Boolean**|**bool**|**Boolean**|  
 |**char**|**Char**|**wchar_t**|**Char**|  
 |**string**|**Ciąg**|**Ciąg**|**Ciąg**|  
-|**object**|**obiekt**|**obiekt**|**obiekt**|  
+|**object**|**Obiekt**|**Obiekt**|**Obiekt**|  
   
  **✓ DO** Użyj nazwą pospolitą, takiego jak `value` lub `item`, zamiast powtarzające się nazwa typu w rzadkich przypadkach, gdy identyfikator nie ma znaczenia semantycznego i typ parametru nie jest ważna.  
   
@@ -97,7 +96,7 @@ W tej sekcji opisano ogólne konwencje nazewnictwa, które odnoszą się do wybr
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
+ *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz także
 

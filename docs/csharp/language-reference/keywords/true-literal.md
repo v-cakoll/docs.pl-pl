@@ -1,31 +1,27 @@
 ---
 title: TRUE — literał (C# odwołania)
-ms.date: 07/20/2015
+ms.date: 12/03/2018
 helpviewer_keywords:
 - true literal keyword [C#]
 ms.assetid: 7e36d493-1acf-460d-9258-a6d76c6b5a3a
-ms.openlocfilehash: c8be0af4d7d90fe1dc8b3e0ee5d67c29d0a5aeac
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 3f51f8bb65b882b29f7cd168a0dddefd195df2b6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296091"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128353"
 ---
 # <a name="true-literal-c-reference"></a>TRUE — literał (C# odwołania)
 
-Reprezentuje wartość logiczną true.
+Reprezentuje [bool](bool.md) wartość `true`:
 
-## <a name="example"></a>Przykład
+[!code-csharp-interactive[true literal example](~/samples/snippets/csharp/keywords/TrueFalseLiteralsExamples.cs#TrueLiteral)]
 
-[!code-csharp[csrefKeywordsOperator#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#14)]
-
-## <a name="c-language-specification"></a>Specyfikacja języka C#
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
+- [TRUE — operator](true-operator.md)
 - [false](false.md)
+- [?: operator](../operators/conditional-operator.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562284"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148915"
 ---
 # <a name="listview-overview"></a>ListView — Przegląd
 <xref:System.Windows.Controls.ListView> Control oferuje infrastrukturę do wyświetlenia zbiór elementów danych w różnych układów lub widoków. Na przykład użytkownik może być do wyświetlenia elementów danych w tabeli, a także do sortowania kolumn.  
@@ -75,13 +75,11 @@ ms.locfileid: "46562284"
 ## <a name="sharing-the-same-view-mode"></a>Udostępnianie tego samego trybu widoku  
  Dwa <xref:System.Windows.Controls.ListView> kontrolki nie mogą udostępniać tego samego trybu widoku w tym samym czasie. Jeśli spróbujesz użyć tego samego trybu widoku z więcej niż jednym <xref:System.Windows.Controls.ListView> kontrolować, wystąpi wyjątek.  
   
- Aby określić tryb widoku, który może być jednocześnie używany przez więcej niż jedną <xref:System.Windows.Controls.ListView>, użyj szablonów i stylów. Aby uzyskać przykład sposobu definiowania widoków jako <xref:System.Windows.FrameworkElement.Resources%2A>, zobacz [ListView z wielu widoków](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Aby określić tryb widoku, który może być jednocześnie używany przez więcej niż jedną <xref:System.Windows.Controls.ListView>, użyj szablonów i stylów.
   
 <a name="CreatingaCustomView"></a>   
 ## <a name="creating-a-custom-view-mode"></a>Tworząc niestandardowy tryb widoku  
- Dostosowane widoki, takich jak <xref:System.Windows.Controls.GridView> są uzyskiwane z <xref:System.Windows.Controls.ViewBase> abstrakcyjnej klasy, która udostępnia narzędzia umożliwiające wyświetlanie elementów danych, które są reprezentowane jako <xref:System.Windows.Controls.ListViewItem> obiektów.  
-  
- Na przykład niestandardowy tryb widoku zobacz [ListView z wielu widoków](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Dostosowane widoki, takich jak <xref:System.Windows.Controls.GridView> są uzyskiwane z <xref:System.Windows.Controls.ViewBase> abstrakcyjnej klasy, która udostępnia narzędzia umożliwiające wyświetlanie elementów danych, które są reprezentowane jako <xref:System.Windows.Controls.ListViewItem> obiektów.    
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.GridView>  

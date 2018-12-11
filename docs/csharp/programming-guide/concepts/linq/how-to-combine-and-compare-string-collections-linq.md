@@ -1,15 +1,15 @@
 ---
-title: 'Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (C#)'
+title: 'Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 679dde2d2d1607c2703468f64903f3cd9e59bcb8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c95736f184f3298fb7142b8f8c7b29c65b3f7227
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083576"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130742"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)
 W tym przykładzie pokazano, jak można scalić plików, które zawierają wiersze tekstu, a następnie Sortuj wyniki. W szczególności pokazują sposób wykonywania prostych łączenia, Unii i część wspólną na dwa zestawy wierszy tekstu.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Aby skonfigurować projekt i plików tekstowych  
@@ -93,7 +93,7 @@ class MergeStrings
   
             IEnumerable<string> nameMatchQuery =  
                 tempQuery1.Concat(tempQuery2).OrderBy(s => s);  
-            OutputQueryResults(nameMatchQuery, String.Format("Concat based on partial name match \"{0}\":", nameMatch));  
+            OutputQueryResults(nameMatchQuery, $"Concat based on partial name match \"{nameMatch}\":");
   
             // Keep the console window open in debug mode.  
             Console.WriteLine("Press any key to exit");  

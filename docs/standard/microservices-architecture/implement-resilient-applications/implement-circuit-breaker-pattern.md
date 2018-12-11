@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Im
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453155"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147271"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementowanie wzorca wyłącznika
 
@@ -146,14 +146,11 @@ Można zaimplementować logikę różnych kiedy open/break obwodu. Lub możesz s
 
 Na koniec inną możliwością `CircuitBreakerPolicy` jest użycie `Isolate` (który wymusza otwarte i przechowuje Otwórz obwodu) i `Reset` (który zamyka go ponownie). Mogą one służyć do tworzenia punktu końcowego HTTP narzędzie wywołującego odizolować i resetowanie bezpośrednio w zasadach.  Punkt końcowy HTTP można również użyć odpowiednio zabezpieczony w środowisku produkcyjnym tymczasowo izolowania podrzędnego systemu, takie jak kiedy chcesz ją uaktualnić. Lub można go przełączył obwodu ręcznie, aby chronić system podrzędnego, gdy istnieje podejrzenie, aby być powodujący błąd.
 
-
 ## <a name="additional-resources"></a>Dodatkowe zasoby
-
 
 -   **Wzorzec wyłącznika**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
-
 >[!div class="step-by-step"]
-[Poprzednie](implement-http-call-retries-exponential-backoff-polly.md)
-[dalej](monitor-app-health.md)
+>[Poprzednie](implement-http-call-retries-exponential-backoff-polly.md)
+>[dalej](monitor-app-health.md)

@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/10/2018
-ms.openlocfilehash: a03853a508cfb3d5dd5fbfe66e4ef484b685faaa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653242"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143652"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki w przepływie pracy DevOps zewnętrznej pętli dla aplikacji platformy Docker
 
@@ -17,15 +17,15 @@ Rysunek 5-1 przedstawiono kroki przepływu pracy DevOps zewnętrzna pętla wchod
 
 ![](./media/image1.png)
 
-Rysunek 5-1: przepływ pracy zewnętrzna pętla DevOps dla aplikacji platformy Docker przy użyciu narzędzi firmy Microsoft
+Rysunek 5-1. Przepływ pracy zewnętrzna pętla DevOps dla aplikacji platformy Docker przy użyciu narzędzi firmy Microsoft
 
 Teraz Przeanalizujmy każdy z tych kroków, które bardziej szczegółowo.
 
-## <a name="step-1-inner-loop-development-workflow"></a>Krok 1: Pętla wewnętrzny — przepływ pracy tworzenia oprogramowania
+## <a name="step-1-inner-loop-development-workflow"></a>Krok 1: Przepływ pracy wewnętrznej pętli tworzenia kodu
 
 Ten krok jest omówiona szczegółowo w rozdziale 4, ale aby podsumowanie, Oto gdzie zewnętrzna pętla rozpoczyna się, moment, w którym Deweloper wypycha kodu do systemu zarządzania kontrolą źródła (takich jak Git), inicjowanie działania potoku ciągłej integracji.
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>Krok 2: Integracji kontroli kodu źródłowego i zarządzanie za pomocą usługi Azure DevOps Services i Git
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>Krok 2: Integracja kontroli kodu źródłowego i zarządzanie za pomocą usługi Azure DevOps Services i Git
 
 W tym kroku musisz mieć systemu kontroli wersji, aby zebrać jednolity całego kodu pochodzących z różnych deweloperów w zespole.
 
@@ -35,7 +35,7 @@ Obrazów lokalnych generowane przez deweloperów, samodzielnie powinny być uży
 
 Usługa Azure DevOps usług i Team Foundation Server obsługuje Git i kontroli wersji serwera Team Foundation. Można wybrać między nimi i użyć jej do środowiska Microsoft end-to-end. Można jednak również mogą zarządzać kodu w repozytoriach zewnętrznych (takich jak GitHub, lokalne repozytoria Git i Subversion) i nadal mieć możliwość nawiązania połączenia i pobrania kodu jako punktu wyjścia dla potoku ciągłej integracji metodyki DevOps.
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Krok 3: Kompilacji ciągłej integracji, integracja i testowanie na platformie Azure DevOps usług i platformą Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Krok 3: Tworzenie elementu konfiguracji, integracja i testowanie na platformie Azure DevOps usług i platformą Docker
 
 Ciągła Integracja została uznana zawiera standardowe rozwiązanie dla nowoczesnych oprogramowania testowania i dostarczania. Rozwiązanie Docker przechowuje separacji między zespołami deweloperów i operacyjne. Niezmienność obrazów platformy Docker zapewnia powtarzalne wdrożenia między co został opracowany, przetestowane za pośrednictwem ciągłej integracji i uruchomić w środowisku produkcyjnym. Aparat platformy docker wdrożony na komputery przenośne dla deweloperów i infrastrukturę testowania sprawia, że kontenery przenośny między środowiskami.
 
@@ -47,11 +47,11 @@ Umożliwia usługom DevOps platformy Azure jako podstawa do tworzenia aplikacji,
 
 W przypadku używania platformy Docker dla wdrożenia "końcowe artefakty" do wdrożenia są obrazy platformy Docker do aplikacji lub usługi z osadzone wewnątrz nich. Te obrazy są wypychane lub opublikowane na *rejestru platformy Docker* (prywatne repozytorium, takich jak te mogą mieć w usłudze Azure Container Registry, lub publiczny podobny rejestru koncentratora platformy Docker, która jest powszechnie używana oficjalne obrazy podstawowej).
 
-Poniżej przedstawiono podstawowe pojęcia: potoku CI będą się wyłączone przez zatwierdzenia do repozytorium SCC, takich jak Git. Zatwierdzenie spowoduje, że usługom DevOps platformy Azure Uruchom zadanie kompilacji w kontenerze platformy Docker, i po pomyślnym zakończeniu tego zadania, Wypchnij obraz platformy Docker do rejestru platformy Docker, jak pokazano w rysunek 5-2.
+Poniżej przedstawiono podstawowe pojęcia: Potok ciągłej integracji będą się wyłączone przez zatwierdzenia do repozytorium SCC, takich jak Git. Zatwierdzenie spowoduje, że usługom DevOps platformy Azure Uruchom zadanie kompilacji w kontenerze platformy Docker, i po pomyślnym zakończeniu tego zadania, Wypchnij obraz platformy Docker do rejestru platformy Docker, jak pokazano w rysunek 5-2.
 
 ![](./media/image2.png)
 
-Rysunek 5-2 kroki związane z elementu konfiguracji
+Rysunek 5-2: Kroki wykonywane w elemencie konfiguracji
 
 Poniżej przedstawiono podstawowe kroki przepływu pracy ciągłej integracji z platformami Docker i usługom DevOps platformy Azure:
 
@@ -73,7 +73,7 @@ Poniżej przedstawiono podstawowe kroki przepływu pracy ciągłej integracji z 
 
 ![](./media/image3.png)
 
-Rysunek 5-3: potok ciągłej integracji platformy Docker w usługom DevOps platformy Azure
+Rysunek 5-3: Potok ciągłej integracji platformy Docker w usługom DevOps platformy Azure
 
 Rozszerzenia platformy Docker można użyć punktów końcowych usługi dla hostów platformy Docker i kontenerów lub rejestry obrazów. Domyślnie zadania i używa lokalnego hosta platformy Docker, jeśli jest dostępny, (obecnie wymaga niestandardowych agenta usługom DevOps platformy Azure); w przeciwnym razie wymagają one, że podajesz połączenia hosta platformy Docker. Akcje, które są zależne od uwierzytelniane za pomocą rejestru platformy Docker, takich jak wypychanie obrazu wymaga zapewnienia Docker registry połączenia.
 
@@ -145,7 +145,7 @@ Zazwyczaj warto mieć prywatnych repozytoriów dla obrazów niestandardowych w p
 
 ![](./media/image4.png)
 
-Rysunek 5-4: publikowanie niestandardowych obrazów do rejestru platformy Docker
+Rysunek 5-4: Publikowanie niestandardowych obrazów do rejestru platformy Docker
 
 Istnieje wiele ofert z rejestrów platformy Docker z dostawców chmury, takich jak usługa Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, rejestr nabrzeża i tak dalej.
 
@@ -153,11 +153,11 @@ Korzystanie z rozszerzenia Azure DevOps usługi Docker, możesz wypchnąć zesta
 
 ![](./media/image5.png)
 
-Rysunek 5-5: przy użyciu usługi DevOps platformy Azure do publikowania niestandardowych obrazów do rejestru platformy Docker
+Rysunek 5-5: Publikowanie niestandardowych obrazów do rejestru platformy Docker przy użyciu usługi DevOps platformy Azure
 
 **Więcej informacji o** Aby dowiedzieć się więcej o rozszerzeniu Docker dla usługi DevOps platformy Azure, przejdź do <https://aka.ms/vstsdockerextension>. Aby dowiedzieć się więcej na temat usługi Azure Container Registry, przejdź do <https://aka.ms/azurecontainerregistry>.
 
-## <a name="step-4-cd-deploy"></a>Krok 4: Dysku CD, wdrażanie
+## <a name="step-4-cd-deploy"></a>Krok 4: Ciągłe wdrażanie, wdrażanie
 
 Niezmienność obrazów platformy Docker zapewnia powtarzalne wdrożenia za pomocą co został opracowany, przetestowane za pośrednictwem ciągłej integracji i uruchomić w środowisku produkcyjnym. Po utworzeniu aplikacji obrazów platformy Docker, opublikowane w rejestrze Docker (prywatnej lub publicznej), można wdrożyć je do kilku środowiskach, które mogą wystąpić (produkcyjne, QA, przemieszczania, itp.) z potok ciągłego wdrażania za pomocą usługi DevOps platformy Azure zadania potoku lub usługi Azure DevOps usługi Release Management.
 
@@ -175,7 +175,7 @@ Rysunek 5 – 7 pokazuje, jak połączyć kompilacji ciągłej integracji do odp
 
 ![](./media/image7.png)
 
-Rysunek 5 – 7: dodanie zadania narzędzia Docker Compose w potoku usługom DevOps platformy Azure
+Rysunek 5 – 7: Dodawanie zadania narzędzia Docker Compose w potoku usługom DevOps platformy Azure
 
 Po utworzeniu wydania w usługom DevOps platformy Azure ma zbiór wejściowy artefaktów. Te powinny być niezmienialny w okresie istnienia wersji w wielu środowiskach. Po wprowadzeniu kontenerów, danych wejściowych artefaktów zidentyfikować obrazów w rejestrze, aby wdrożyć. W zależności od tego, jak są one zidentyfikowane mają nie gwarancję, że pozostają takie same, w okresie obowiązywania wersji najbardziej oczywisty przypadek, że gdy odwołujesz się z plikiem docker-compose "myimage:latest".
 
@@ -207,13 +207,13 @@ Początkowo podczas wdrażania aplikacji na niektórych klastrów lub koordynato
 
 ![](./media/image10.png)
 
-Rysunek 5 – 10: dodanie zadania wdrażania platformy Docker do swojego menedżera zasobów w środowisku
+Rysunek 5 – 10: Dodawanie zadania wdrażania platformy Docker do swojego menedżera zasobów w środowisku
 
 Rysunek 5 – 11 pokazano, jak można edytować zadania wdrażania platformy Docker i określić typ docelowy (Azure Container Service DC/OS, w tym przypadku), plik Docker Compose i połączenie rejestru platformy Docker (np. usługi Azure Container Registry lub Docker Hub). Jest to, gdy zadanie pobiera gotowych do użycia niestandardowe obrazy usługi Docker do wdrożenia jako kontenery w klastrze DC/OS.
 
 ![](./media/image11.png)
 
-Rysunek 5 – 11: Wdróż Docker zadań definicji wdrażania do Azure Container Service DC/OS
+Rysunek 5 – 11: Docker Wdróż zadań definicji wdrażania do Azure Container Service DC/OS
 
 **Więcej informacji o** Aby dowiedzieć się więcej o potok ciągłego wdrażania za pomocą usługi DevOps platformy Azure i Docker, odwiedź następującą witrynę:
 
@@ -234,5 +234,5 @@ W tym temacie również jest objęte w następnym rozdziale zadań wykonywanych 
 Tylko w przypadku monitorowania i diagnostyki 100 procent, w obszarze metodyki DevOps są procesy monitorowania i analizy, wykonywane przez zespół programistyczny dla środowisk testowych lub wersji beta. Jest to realizowane przez wykonywanie testów obciążenia lub po prostu monitorowania w wersji beta lub odpowiedzi na pytania środowisk, w którym próbujesz się nowe wersje testerów wersji beta.
 
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](../run-manage-monitor-docker-environments/index.md)
+>[Poprzednie](index.md)
+>[dalej](../run-manage-monitor-docker-environments/index.md)

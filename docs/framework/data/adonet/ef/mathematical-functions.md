@@ -2,12 +2,12 @@
 title: Funkcje matematyczne
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837313"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143678"
 ---
 # <a name="mathematical-functions"></a>Funkcje matematyczne
 
@@ -35,7 +35,7 @@ Zwraca arcus cosinus wartości podanego wyrażenia.
 
 **Argumenty**
 
-`expression`: ELEMENT `Double`.
+`expression`: A `Double`.
 
 **Wartość zwracana**
 
@@ -51,7 +51,7 @@ Zwraca arcus sinus wartości podanego wyrażenia.
 
 **Argumenty**
 
-`expression`: ELEMENT `Double`.
+`expression`: A `Double`.
 
 **Wartość zwracana**
 
@@ -67,7 +67,7 @@ Zwraca arcus tangens wartości podanego wyrażenia liczbowego.
 
 **Argumenty**
 
-`expression`: ELEMENT `Double`.
+`expression`: A `Double`.
 
 **Wartość zwracana**
 
@@ -83,7 +83,7 @@ Zwraca kąt w radianach, którego tangens jest między dwoma określonych wyraż
 
 **Argumenty**
 
-`expression`: ELEMENT `Double`.
+`expression`: A `Double`.
 
 **Wartość zwracana**
 
@@ -116,7 +116,7 @@ Oblicza trygonometrycznych cosinus określonego kąta podany w radianach.
 
 **Argumenty** 
 
-`expression`: ELEMENT `Double`. 
+`expression`: A `Double`. 
 
 **Wartość zwracana** 
 
@@ -132,7 +132,7 @@ Oblicza trygonometrycznych cotangens kąta określonego w radianach.
 
 **Argumenty** 
 
-`expression`: ELEMENT `Double`. 
+`expression`: A `Double`. 
 
 **Wartość zwracana** 
 
@@ -164,7 +164,7 @@ Oblicza wartość wykładniczą określonego wyrażenia liczbowego.
 
 **Argumenty** 
 
-`expression`: ELEMENT `Double`. 
+`expression`: A `Double`. 
 
 **Wartość zwracana** 
 
@@ -178,7 +178,7 @@ Konwertuje określony wyrażenie największą liczbą całkowitą mniejszą lub 
 
 **Argumenty** 
 
-`expression`: ELEMENT `Double`. 
+`expression`: A `Double`. 
 
 **Wartość zwracana** 
 
@@ -195,7 +195,7 @@ Oblicza logarytm naturalny z określonym `float` wyrażenia.
 
 **Argumenty** 
 
-`expression`: ELEMENT `Double`. 
+`expression`: A `Double`. 
 
 **Wartość zwracana** 
 
@@ -211,7 +211,7 @@ Zwraca logarytm o podstawie base 10 określonego `Double` wyrażenia.
 
 **Argumenty** 
 
-`expression`: ELEMENT `Double`. 
+`expression`: A `Double`. 
 
 **Wartość zwracana** 
 
@@ -326,7 +326,7 @@ Oblicza trygonometrycznych sinus określonego kąta podany w radianach, a nastę
 
 **Argumenty** 
 
-`expression`: ELEMENT `Double`. 
+`expression`: A `Double`. 
 
 **Wartość zwracana** 
 
@@ -340,7 +340,7 @@ Zwraca pierwiastek kwadratowy z określonego wyrażenia.
 
 **Argumenty** 
 
-`expression`: ELEMENT `Double`. 
+`expression`: A `Double`. 
 
 **Wartość zwracana** 
 
@@ -354,7 +354,7 @@ Zwraca kwadrat określone wyrażenie.
 
 **Argumenty** 
 
-`expression`: ELEMENT `Double`. 
+`expression`: A `Double`. 
 
 **Wartość zwracana** 
 
@@ -384,8 +384,8 @@ Oblicza tangens określonego wyrażenia.
 
 Aby uzyskać więcej informacji na temat funkcji matematycznych, które obsługuje klient SQL zobacz dokumentację dla używanej wersji programu SQL Server określonego w manifeście dostawcy SqlClient:  
   
-**Program SQL Server 2005:** [funkcje matematyczne (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**Program SQL Server 2008:** [funkcje matematyczne (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**Program SQL Server 2012 lub nowszy:** [funkcje matematyczne (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+**Program SQL Server 2005:** [Funkcje matematyczne (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**Program SQL Server 2008:** [Funkcje matematyczne (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**Program SQL Server 2012 lub nowszy:** [Funkcje matematyczne (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
  [Klient SQL dla funkcji programu Entity Framework](sqlclient-for-ef-functions.md)

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Wy
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 57c4af55bab9b17da5809f912d7c2d0b76eba40b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296714"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149500"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Użyj klas wyliczeń zamiast typów wyliczeń
 
@@ -125,8 +125,6 @@ public abstract class CardType : Enumeration
 - **SmartEnum**. Ardalis - klasy, aby utworzyć silnie typizowane wyliczenia inteligentniejsze na platformie .NET. \
   [*https://www.nuget.org/packages/Ardalis.SmartEnum/*](https://www.nuget.org/packages/Ardalis.SmartEnum/)
 
-
 >[!div class="step-by-step"]
-[Poprzednie](implement-value-objects.md)
-[dalej](domain-model-layer-validations.md)
-
+>[Poprzednie](implement-value-objects.md)
+>[dalej](domain-model-layer-validations.md)

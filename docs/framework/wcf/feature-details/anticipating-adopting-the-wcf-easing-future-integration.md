@@ -3,11 +3,11 @@ title: 'Prognozowanie wdrożeń programu Windows Communication Foundation: Ułat
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
 ms.openlocfilehash: f4cc450b04fd05d390a1f41f3d14c19f4b23be29
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296497"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155148"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie integracji w przyszłości
 Jeśli obecnie używają platformy ASP.NET i przewidywać, przy użyciu usługi WCF w przyszłości, w tym temacie przedstawiono wskazówki, aby upewnić się, że nowych usług sieci Web programu ASP.NET będą działać poprawnie wraz z aplikacji WCF.  
@@ -44,4 +44,4 @@ public interface IEcho
  Należy unikać używania opcji uwierzytelniania udostępniane przez Internetowe usługi informacyjne (IIS). Klienci WCF nie obsługują je. Jeśli usługa musi być bezpieczne, użyj opcji dostępnych przez architekturę WCF, ponieważ te opcje są bardziej rozbudowane i bazują na standardowych protokołów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie migracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+ [Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie migracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

@@ -1,46 +1,47 @@
 ---
-title: C# Program struktury — samouczek języka C#
-description: Dowiedz się, podstawowe bloki konstrukcyjne program C#
+title: C#Program, struktura — Przewodnik po przykładzie C# języka
+description: Dowiedz się, podstawowe bloki konstrukcyjne C# programu
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: dee24077f9f6287780320d979c44aef5230be81e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de10cd000b4028a66ce6dd6f21e39c013e38ecd2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131030"
 ---
 # <a name="program-structure"></a>Struktura programu
 
-Podstawowe pojęcia organizacji w języku C# to ***programy***, ***przestrzeni nazw***, ***typy***, ***członków***, i ***zestawy***. C# programy składają się z co najmniej jeden plik źródłowy. Programy deklaruj typy, które zawierają elementy członkowskie i można organizować w przestrzeni nazw. Klasy i interfejsy są przykłady typów. Pola, metody, właściwości i zdarzenia są przykłady elementów członkowskich. Gdy są kompilowane programów C#, są one fizycznie umieszczone w zestawy. Zestawy zwykle mają rozszerzenia pliku `.exe` lub `.dll`w zależności od tego, czy wdrożenie ***aplikacji*** lub ***biblioteki***odpowiednio.
+Kluczowe założenia organizacji w języku C# są ***programy***, ***przestrzenie nazw***, ***typy***, ***członków***, i ***zestawy***. C# programy składają się z jednego lub więcej plików źródłowych. Programy deklarują typy, które zawierają elementy członkowskie i mogą być organizowane w przestrzeni nazw. Klasy i interfejsy są przykłady typów. Pola, metody, właściwości i zdarzenia są przykłady elementów członkowskich. Po skompilowaniu C# programy są fizycznie spakowane do zestawów. Zestawy zwykle z rozszerzeniem pliku `.exe` lub `.dll`, w zależności od tego, czy zaimplementować ***aplikacje*** lub ***biblioteki***, odpowiednio.
 
-Przykład deklaruje klasę o nazwie `Stack` w obszarze nazw o nazwie `Acme.Collections`:
+Przykład deklaruje klasę o nazwie `Stack` w przestrzeni nazw o nazwie `Acme.Collections`:
 
 [!code-csharp[Stack](../../../samples/snippets/csharp/tour/program-structure/program.cs#L1-L34)]
 
-W pełni kwalifikowana nazwa ta klasa jest `Acme.Collections.Stack`. Klasa zawiera kilka elementów członkowskich: pola o nazwie `top`, dwie metody o nazwie `Push` i `Pop`i zagnieżdżone klasy o nazwie `Entry`. `Entry` Dalsze klasa zawiera trzy elementy członkowskie: pola o nazwie `next`, pole o nazwie `data`ani konstruktora. Przy założeniu, że kod źródłowy przykładu znajduje się w pliku `acme.cs`, wiersza polecenia
+W pełni kwalifikowana nazwa tej klasy to `Acme.Collections.Stack`. Klasa zawiera kilka elementów członkowskich: pole o nazwie `top`, dwie metody o nazwie `Push` i `Pop`i klasę zagnieżdżoną o nazwie `Entry`. `Entry` Dodatkowo klasa zawiera trzy elementy członkowskie: pole o nazwie `next`, pole o nazwie `data`i konstruktora. Przy założeniu, że kod źródłowy przykładu znajduje się w pliku `acme.cs`, wiersza polecenia
 
 ```
 csc /t:library acme.cs
 ```
 
-kompiluje przykład jako biblioteki (code bez `Main` punktu wejścia) i tworzy zestaw o nazwie `acme.dll`.
+kompiluje przykład jako biblioteki (kod bez `Main` punktu wejścia) i tworzy zestaw o nazwie `acme.dll`.
 
 > [!IMPORTANT]
-> Przykłady powyżej użyj `csc` jako kompilatora wiersza polecenia języka C#. Ten kompilator jest wykonywalne systemu windows. Aby użyć C# na innych platformach, należy używać narzędzi dla platformy .NET Core. Używa ekosystemu platformy .NET Core `dotnet` interfejsu wiersza polecenia do zarządzania kompilacji wiersza polecenia. W tym zarządzanie zależności i wywoływanie kompilatora C#. Zobacz [w tym samouczku](../../core/tutorials/using-with-xplat-cli.md) pełen opis tych narzędzi na platformach obsługiwanych przez oprogramowanie .NET Core.
+> Przykłady powyżej użyj `csc` wiersz polecenia C# kompilatora. Tym kompilatorze jest plikiem wykonywalnym Windows. Aby użyć C# na innych platformach, należy używać narzędzi dla platformy .NET Core. Ekosystem platformy .NET Core używa `dotnet` interfejsu wiersza polecenia do zarządzania kompilacji z wiersza polecenia. Obejmuje to zarządzanie zależnościami i wywoływanie C# kompilatora. Zobacz [w tym samouczku](../../core/tutorials/using-with-xplat-cli.md) pełny opis tych narzędzi na platformach obsługiwanych przez platformy .NET Core.
 
-Zestaw nie zawiera kodu wykonywalnego w postaci instrukcji w języku pośrednim (IL) i symboliczne informacje w postaci metadanych. Przed wykonaniem jego kod IL w zestawie jest automatycznie konwertowany do specyficznych dla procesora kodu za pomocą kompilatora just in Time (JIT) aparatu plików wykonywalnych języka wspólnego .NET.
+Zestawy zawierają kodu wykonywalnego w formie instrukcje języka pośredniego (IL) i informacji o symbolach w postaci metadanych. Przed wykonaniem jego kodu IL w zestawie jest automatycznie konwertowany na kod specyficzny dla procesora przez kompilator just in Time (JIT) środowiska uruchomieniowego języka wspólnego platformy .NET.
 
-Ponieważ zestaw jest samoopisujące jednostka zawierająca kod i metadanych funkcji, nie jest wymagane dla `#include` dyrektywy i pliki nagłówkowe w języku C#. Typy publiczne i elementów członkowskich zawartych w określonym zestawie stają się dostępne w programie C# za pomocą odwołania do tego zestawu, w przypadku kompilowania kodu programu. Na przykład ten program używa `Acme.Collections.Stack` klasę z `acme.dll` zestawu:
+Ponieważ zestaw jest samoopisujący jednostka zawierająca kod i metadanych funkcji, nie ma potrzeby dla `#include` dyrektyw i pliki nagłówkowe w języku C#. Typy publiczne i elementów członkowskich znajdujących się w określonym zestawie są udostępniane w programie C# poprzez odwołanie do tego zestawu podczas kompilowania kodu programu. Na przykład ten program używa `Acme.Collections.Stack` klasy z `acme.dll` zestawu:
 
 [!code-csharp[UsingStack](../../../samples/snippets/csharp/tour/program-structure/Program.cs#L38-L52)]
 
-Jeśli program jest przechowywany w pliku `example.cs`, gdy `example.cs` jest skompilowany, zestawu acme.dll można odwoływać się przy użyciu /r — opcja kompilatora:
+Jeśli program jest przechowywany w pliku `example.cs`, gdy `example.cs` jest kompilowany, zestawu acme.dll można odwoływać się za pomocą /r — opcja kompilatora:
 
 ```
 csc /r:acme.dll example.cs
 ```
 
-Spowoduje to utworzenie pliku wykonywalnego zestawu o nazwie `example.exe`, która po uruchomieniu tworzy dane wyjściowe:
+Spowoduje to utworzenie pliku wykonywalnego zestaw o nazwie `example.exe`, który, po uruchomieniu tworzy dane wyjściowe:
 
 ```
 100
@@ -48,8 +49,8 @@ Spowoduje to utworzenie pliku wykonywalnego zestawu o nazwie `example.exe`, któ
 1
 ```
 
-C# zezwala na tekst źródłowy program ma być przechowywana w kilka plików źródłowych. Podczas kompilowania wielu plików programu C#, są ze sobą przetwarzanie wszystkich plików źródłowych i plików źródłowych za darmo można odwoływać się siebie nawzajem — koncepcyjnie, są tak, jakby wszystkie pliki źródłowe zostały połączone w jeden plik dużych przed przetworzeniem. Deklaracje do przodu nigdy nie są potrzebne w języku C#, ponieważ z nielicznymi wyjątkami kolejności deklaracji jest niewielka. C# nie istnieje limit pliku źródłowego do deklarowania tylko jeden typ publiczny, ani nie wymaga nazwy pliku źródłowego, aby dopasować typ zadeklarowany w pliku źródłowym.
+C# umożliwia tekst źródłowy program ma być przechowywany w kilku plików źródłowych. Wielu plików języka C# program jest skompilowany, wszystkie pliki źródłowe są przetwarzane razem, gdy pliki źródłowe mogą swobodnie odwoływać się do siebie nawzajem — model jest tak, jakby wszystkie pliki źródłowe zostały połączone w jeden duży plik przed przetworzeniem. Deklaracje przechodzenia do przodu nigdy nie są wymagane w języku C#, ponieważ z nielicznymi wyjątkami, kolejności deklaracji jest niewielka. C# nie istnieje limit pliku źródłowego do deklarowania tylko jeden typ publiczny ani nie wymaga nazwy pliku źródłowego, aby dopasować typ zadeklarowany w pliku źródłowym.
 
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](types-and-variables.md)
+>[Poprzednie](index.md)
+>[dalej](types-and-variables.md)

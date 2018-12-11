@@ -4,12 +4,12 @@ description: Najlepszym rozwiązaniem, zalecenia dotyczące używania SourceLink
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: fa4af47eaa5dd1510640c2bf0ebb2187b56efae0
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123875"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128933"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -27,10 +27,18 @@ Możesz użyć [Eksplorator pakietów NuGet](https://github.com/NuGetPackageExpl
 
 ![SourceLink w Eksploratorze pakietu NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "SourceLink w Eksploratorze pakietu NuGet")
 
-**ROZWAŻ ✔️** używanie SourceLink do dodawania metadanych kontroli źródła do zestawów i pakietów NuGet.
+**ROZWAŻ ✔️** używanie SourceLink do dodawania metadanych do kontroli źródła do zestawów i pakietów NuGet.
 
-**ROZWAŻ ✔️** w tym pliki PDB w pakiecie NuGet.
+> [!TIP]
+> Przez dodanie atrybutów debugera do typów, może dodatkowo ulepszyć środowisko debugowania dla deweloperów.
+> * <xref:System.Diagnostics.DebuggerDisplayAttribute> można dostosować, jak klasa lub pole jest wyświetlana w oknach zmiennych debugera.
+> * <xref:System.Diagnostics.DebuggerStepThroughAttribute> Nakazuje debugerowi, aby przejść przez kod zamiast Przechodzenie do kodu.
+> * <xref:System.Diagnostics.DebuggerBrowsableAttribute> Określa, czy członek jest wyświetlana w oknach zmiennych debugera.
+
+**ROZWAŻ ✔️** w tym pliki symboli (`*.pdb`) w pakiecie NuGet.
+
+> Zazwyczaj chcesz opublikować pliki symboli w [pakiet symboli](./nuget.md#symbol-packages). Obecnie głównym gospodarzem publicznych pakietów symboli nie obsługuje plików przenośnych symboli (`*.pdb`) utworzone przez projektów w stylu zestawu SDK i pakiety symboli nie są użyteczne.
 
 >[!div class="step-by-step"]
-[Poprzednie](./dependencies.md)
-[dalej](./publish-nuget-package.md)
+>[Poprzednie](dependencies.md)
+>[dalej](publish-nuget-package.md)

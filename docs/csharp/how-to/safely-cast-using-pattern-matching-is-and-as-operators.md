@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 88289099864293b3b19da62155d58ba4797948bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4e0eb53a44a6348d0f5154a0a08222da90985864
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216707"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149318"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-is-and-as-operators"></a>Porady: bezpieczne rzutowanie za pomocą dopasowywania do wzorca jest i operatory
 
@@ -23,7 +23,7 @@ Poniższy przykład demonstruje wzorzec dopasowywania `is` instrukcji. Zawiera m
 
 [!code-csharp-interactive[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
-W poprzednim przykładzie pokazano kilka funkcji Składnia dopasowania do wzorca. `if (a is Mammal m)` i `if (o is Mammal m)` instrukcje łączenia testu z przydziałem inicjowania. Przypisanie tnie odbywa się tylko wtedy gdy test zakończy się pomyślnie. Zmienna `m` jest tylko w zakresie osadzonego `if` instrukcji, w którym został przypisany. Nie można uzyskać dostępu `m` dalej w tej samej metody. Wypróbuj go w oknie interaktywnym.
+W poprzednim przykładzie pokazano kilka funkcji Składnia dopasowania do wzorca. `if (a is Mammal m)` i `if (o is Mammal m)` instrukcje łączenia testu z przydziałem inicjowania. Przypisanie odbywa się tylko wtedy gdy test zakończy się pomyślnie. Zmienna `m` jest tylko w zakresie osadzonego `if` instrukcji, w którym został przypisany. Nie można uzyskać dostępu `m` dalej w tej samej metody. Wypróbuj go w oknie interaktywnym.
 
 Można również użyć tej samej składni do badania, jeśli [typu dopuszczającego wartość null](../programming-guide/nullable-types/index.md) ma wartość, jak pokazano w poniższym przykładowym kodzie:
 

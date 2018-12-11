@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: e3e9493b5371fbd6f53a779ba73743efc6d6e05b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f465bc98c0348c3b3522c062cf3be5ed90ee414a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514063"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143509"
 ---
 # <a name="while-c-reference"></a>while (odwołanie w C#)
 
@@ -32,13 +32,12 @@ W poniższym przykładzie pokazano użycie `while` instrukcji. Wybierz **Uruchom
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Aby uzyskać więcej informacji, zobacz [while, instrukcja](~/_csharplang/spec/statements.md#the-while-statement) części [ C# specyfikacji języka](../language-specification/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)  
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
 - [Słowa kluczowe języka C#](index.md)  
-- [while, instrukcja (C++)](/cpp/cpp/while-statement-cpp)  
 - [Instrukcje iteracji](iteration-statements.md)  
 - [— Instrukcja](do.md)  

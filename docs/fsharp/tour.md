@@ -1,19 +1,23 @@
 ---
 title: Przewodnik po F#
 description: Sprawdź, niektóre najważniejsze funkcje w języku programowania w ten samouczek przy użyciu przykładów kodu F#.
-ms.date: 02/28/2018
-ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.date: 11/06/2018
+ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50235716"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143751"
 ---
 # <a name="tour-of-f"></a>Przewodnik po F# #
 
-Najlepszym sposobem, aby dowiedzieć się więcej na temat języka F# jest do odczytu i zapisu w kodzie języka F#.  Ten artykuł będzie pełnić rolę przez samouczek prowadzący przez niektóre kluczowe funkcje języka F# i zapewniają fragmenty kodu, które mogą być wykonywane na komputerze.  Aby dowiedzieć się więcej na temat konfigurowania środowiska deweloperskiego, zapoznaj się z [wprowadzenie](tutorials/getting-started/index.md).
+Najlepszym sposobem, aby dowiedzieć się więcej na temat języka F# jest do odczytu i zapisu w kodzie języka F#. Ten artykuł będzie pełnić rolę przez samouczek prowadzący przez niektóre kluczowe funkcje języka F# i zapewniają fragmenty kodu, które mogą być wykonywane na komputerze. Aby dowiedzieć się więcej na temat konfigurowania środowiska deweloperskiego, zapoznaj się z [wprowadzenie](tutorials/getting-started/index.md).
 
 Istnieją dwa podstawowe pojęcia języka F#: funkcji i typów.  Ten samouczek będzie podkreślić funkcji języka, które dzielą się na tych dwóch koncepcji.
+
+## <a name="executing-the-code-online"></a>Wykonywanie kodu w trybie online
+
+Jeśli nie masz F# zainstalowany na komputerze, można wykonywać wszystkie przykłady online za pomocą [Fable REPL](http://fable.io/repl/). Fable jest dialekt F# , który jest wykonywany bezpośrednio w przeglądarce. Aby wyświetlić przykłady, które należy wykonać w rozwiązaniu REPL, zapoznaj się z **przykłady > Dowiedz się więcej > Przewodnik po przykładzie F#**  na pasku menu po lewej stronie replikacja Fable
 
 ## <a name="functions-and-modules"></a>Funkcje i modułów
 
@@ -81,8 +85,8 @@ Są trzy typy kolekcji głównej w podstawowej biblioteki języka F#, list, tabl
 
 Przetwarzanie kolekcji lub sekwencji elementów odbywa się zwykle z [rekursji](language-reference/functions/index.md#recursive-functions) w języku F#.  Mimo że F# obsługuje pętle for i programowanie imperatywne, rekursja jest preferowana, ponieważ jest łatwiejsza w celu zagwarantowania poprawności.
 
->[!NOTE]
-Poniższy przykład wykorzystuje dopasowanie wzorca za pośrednictwem `match` wyrażenia.  Ta konstrukcja podstawowe zostało omówione w dalszej części tego artykułu.
+> [!NOTE]
+> Poniższy przykład wykorzystuje dopasowanie wzorca za pośrednictwem `match` wyrażenia.  Ta konstrukcja podstawowe zostało omówione w dalszej części tego artykułu.
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 

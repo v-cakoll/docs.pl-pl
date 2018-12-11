@@ -1,20 +1,18 @@
 ---
-title: 'Porady: Przesłoń wyboru globalnego serwera Proxy'
+title: 'Instrukcje: Zastąp wyboru globalnego serwera Proxy'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2be271123e34f155a79269d3b810c50fe24a40c6
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: bda2da2400c97b3cc0ad2bbc573283cff8035310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849935"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129067"
 ---
-# <a name="how-to-override-a-global-proxy-selection"></a>Porady: Przesłoń wyboru globalnego serwera Proxy
+# <a name="how-to-override-a-global-proxy-selection"></a>Instrukcje: Zastąp wyboru globalnego serwera Proxy
 W tym przykładzie wysyła **WebRequest** do `www.contoso.com` , zastępuje wyboru globalnego serwera proxy przy użyciu serwera proxy, o nazwie `alternateproxy` na porcie 80.  
   
 ## <a name="example"></a>Przykład  

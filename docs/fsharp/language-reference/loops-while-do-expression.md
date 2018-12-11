@@ -2,12 +2,12 @@
 title: 'Pętle: while...do — Wyrażenie (F#)'
 description: Zobacz jak podczas... zrobić wyrażenie jest używany do wykonywania iteracji wykonywanie (pętli), gdy spełniony jest warunek określony test.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 43e2098ad6c7f103babc2471aebe987040feb989
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45664712"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127280"
 ---
 # <a name="loops-whiledo-expression"></a>Pętle: while...do — Wyrażenie
 
@@ -35,11 +35,11 @@ Dane wyjściowe poprzedniego kodu jest strumienia liczb losowych z zakresu od 1 
 Found a 10!
 ```
 
->[!NOTE]
-Możesz użyć `while...do` w sekwencji, wyrażenia i inne wyrażenia obliczeń, w którym to przypadku dostosowaną wersję `while...do` wyrażenie jest używane. Aby uzyskać więcej informacji, zobacz [sekwencje](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia obliczeń](computation-expressions.md).
+> [!NOTE]
+> Możesz użyć `while...do` w sekwencji, wyrażenia i inne wyrażenia obliczeń, w którym to przypadku dostosowaną wersję `while...do` wyrażenie jest używane. Aby uzyskać więcej informacji, zobacz [sekwencje](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia obliczeń](computation-expressions.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
-- [Pętle: `for...in` wyrażenia](loops-for-in-expression.md)
-- [Pętle: `for...to` wyrażenia](loops-for-to-expression.md)
+- [Pętle: `for...in` Wyrażenie](loops-for-in-expression.md)
+- [Pętle: `for...to` Wyrażenie](loops-for-to-expression.md)

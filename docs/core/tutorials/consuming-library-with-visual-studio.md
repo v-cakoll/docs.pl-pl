@@ -1,19 +1,19 @@
 ---
 title: Korzystanie z biblioteki .NET Standard w programie Visual Studio 2017
-description: Dowiedz się, jak wywołać składowe w bibliotece klas w programie Visual Studio 2017.
+description: Tworzenie aplikacji .NET Core, która wywołuje członków innego biblioteki klas w programie Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52ec46c23bb928b49f034270ed1d510d1acf992e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518168"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168904"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Korzystanie z biblioteki .NET Standard w programie Visual Studio 2017
 
@@ -32,19 +32,19 @@ Tak, jak testy jednostkowe są zawarte w tym samym rozwiązaniu jako biblioteki 
 
 1. W **Dodaj nowy projekt** okna dialogowego, rozwiń węzeł **Visual C#** a następnie wybierz węzeł **platformy .NET Core** węzła następuje **Aplikacja konsoli (.NET Core)** szablon projektu. W **nazwa** pole tekstowe, wpisz "Pokaz", a następnie wybierz **OK** przycisku.
 
-   ![Dodaj okno dialogowe Nowy projekt](./media/consuming-library-with-visual-studio/addnewproject.png)
+   ![Visual Studio Dodaj nowy projekt okno dialogowe-C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **pokaz** projektu, a następnie wybierz **Ustaw jako projekt startowy** w menu kontekstowym. 
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **pokaz** projektu, a następnie wybierz **Ustaw jako projekt startowy** w menu kontekstowym.
 
-   ![Menu kontekstowe pokaz](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Visual Studio projektu menu kontekstowego można ustawić projekt startowy-C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. Początkowo projektu nie ma dostępu do biblioteki klas. Aby umożliwić go do wywoływania metody w bibliotece klasy, należy utworzyć odwołanie do biblioteki klas. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `ShowCase` projektu **zależności** a następnie wybierz węzeł **Dodaj odwołanie**.
 
-   ![Menu kontekstowe zależności pokaz](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Projektu programu Visual Studio Dodaj odwołanie do menu kontekstowego-C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. W **Menadżer odwołań** okno dialogowe, wybierz opcję **StringLibrary**, projekt biblioteki klas, a następnie wybierz **OK** przycisku.
 
-   ![Menadżer odwołań](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Zarządzanie Visual Studio odwołuje się do okna dialogowego —C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. W oknie kodu *Program.cs* pliku, Zastąp cały kod następującym kodem:
 
@@ -56,25 +56,25 @@ Tak, jak testy jednostkowe są zawarte w tym samym rozwiązaniu jako biblioteki 
 
 1. W razie potrzeby zmień narzędzi do kompilowania **debugowania** wersji `ShowCase` projektu. Skompilować i uruchomić program, wybierając zieloną strzałkę na **pokaz** przycisku.
 
-   ![Obraz](./media/consuming-library-with-visual-studio/toolbar.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+   ![Przycisk debugowania przedstawiający narzędzi projektu programu Visual Studio —C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Otwórz `ClassLibraryProjects` rozwiązanie utworzone w [tworzenia klasy biblioteki w języku Visual Basic i .NET Core w programie Visual Studio 2017](vb-library-with-visual-studio.md) tematu. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ClassLibraryProjects** rozwiązań i wybierz pozycję **Dodaj** > **nowy projekt** z menu kontekstowe.
 
 1. W **Dodaj nowy projekt** okna dialogowego, rozwiń węzeł **języka Visual Basic** a następnie wybierz węzeł **platformy .NET Core** węzła następuje **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** pole tekstowe, wpisz "Pokaz", a następnie wybierz **OK** przycisku.
 
-   ![Dodaj okno dialogowe Nowy projekt](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
+   ![Visual Studio Dodaj okno dialogowe Nowy projekt - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **pokaz** projektu, a następnie wybierz **Ustaw jako projekt startowy** w menu kontekstowym. 
 
-   ![Menu kontekstowe pokaz](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Visual Studio projektu menu kontekstowego można ustawić projekt startowy - Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. Początkowo projektu nie ma dostępu do biblioteki klas. Aby umożliwić go do wywoływania metody w bibliotece klasy, należy utworzyć odwołanie do biblioteki klas. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `ShowCase` projektu **zależności** a następnie wybierz węzeł **Dodaj odwołanie**.
 
-   ![Menu kontekstowe zależności pokaz](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Projektu programu Visual Studio Dodaj odwołanie do menu kontekstowego - Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. W **Menadżer odwołań** okno dialogowe, wybierz opcję **StringLibrary**, projekt biblioteki klas, a następnie wybierz **OK** przycisku.
 
-   ![Menadżer odwołań](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Zarządzanie Visual Studio odwołuje się do okna dialogowego - Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. W oknie kodu *Program.vb* pliku, Zastąp cały kod następującym kodem:
 
@@ -86,7 +86,7 @@ Tak, jak testy jednostkowe są zawarte w tym samym rozwiązaniu jako biblioteki 
 
 1. W razie potrzeby zmień narzędzi do kompilowania **debugowania** wersji `ShowCase` projektu. Skompilować i uruchomić program, wybierając zieloną strzałkę na **pokaz** przycisku.
 
-   ![Obraz](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Debugowanie na pasku narzędzi - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 ---
 
 Możesz debugować i publikować aplikacji, która korzysta z tej biblioteki, wykonując kroki opisane w [debugowanie aplikacji Hello World w programie Visual Studio 2017](debugging-with-visual-studio.md) i [publikowanie aplikacji Hello World z programem Visual Studio 2017](publishing-with-visual-studio.md).

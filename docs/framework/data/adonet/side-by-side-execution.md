@@ -2,12 +2,12 @@
 title: Wykonanie Side-by-Side w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 7435f64afa9ce45a29f4d0a537219f31968eb3f5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f69a269e5f6370cf7c5a60920b3d5a47ce1079cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042156"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126617"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Wykonanie Side-by-Side w ADO.NET
 Wykonywanie Side-by-side w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] jest możliwość wykonywania aplikacji na komputerze, który ma wiele wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zainstalowany, wyłącznie przy użyciu wersji, dla którego aplikacja została skompilowana. Aby uzyskać szczegółowe informacje o konfigurowaniu side-by-side wykonywania, zobacz [Side-by-Side Execution](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -47,7 +47,7 @@ Wykonywanie Side-by-side w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnsho
   
  Należy wziąć pod uwagę następujące partii poleceń wykonanych podczas wywołania <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM dbo.Customers;
   
  W przypadku aplikacji korzystających z zarówno starszych i nowszych wersjach [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], można napisać kod, aby upewnić się, że zachowanie jest takie same, niezależnie od wersji są uruchomione na. Jeśli chcesz upewnić się, że polecenie modyfikuje stan połączenia dla wszystkich kolejnych poleceń, zaleca się wykonanie za pomocą polecenia <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>. Jeśli chcesz upewnić się, że polecenie nie powoduje modyfikacji połączenia dla wszystkich kolejnych poleceń, zaleca się, że zawrzesz poleceń można zresetować stan połączenia w poleceniu. Na przykład:  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 SET NOCOUNT OFF;  

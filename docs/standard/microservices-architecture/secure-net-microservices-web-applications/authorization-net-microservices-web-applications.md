@@ -1,21 +1,21 @@
 ---
-title: Temat autoryzacji w aplikacji sieci web i mikrousług .NET
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Temat autoryzacji w aplikacji sieci web i mikrousług .NET
+title: Informacje o autoryzacji w aplikacji sieci web i mikrousługi platformy .NET
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Informacje o autoryzacji w aplikacji sieci web i mikrousługi platformy .NET
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7b2981579f28c083a31d7af6ae42f4e3ca8bbd88
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 53202d0f890df040480b9f54c54aaefdd025dffa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105504"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149569"
 ---
-# <a name="about-authorization-in-net-microservices-and-web-applications"></a>Temat autoryzacji w aplikacji sieci web i mikrousług .NET
+# <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informacje o autoryzacji w aplikacji sieci web i mikrousługi platformy .NET
 
-Po uwierzytelnieniu interfejsów API platformy ASP.NET Core sieci Web wymagane do autoryzowania dostępu. Ten proces umożliwia usłudze upewnij interfejsów API, niektóre uwierzytelnionych użytkowników, ale nie do wszystkich. [Autoryzacji](https://docs.microsoft.com/aspnet/core/security/authorization/introduction) mogą być wykonywane w oparciu o role użytkowników lub na podstawie niestandardowych zasad, która może obejmować sprawdzania oświadczeń lub inne algorytmy heurystyczne.
+Po uwierzytelnieniu interfejsów API sieci Web programu ASP.NET Core konieczne Autoryzowanie dostępu. Ten proces umożliwia usłudze się interfejsów API, niektórzy użytkownicy uwierzytelnieni, ale nie dla wszystkich. [Autoryzacja](https://docs.microsoft.com/aspnet/core/security/authorization/introduction) mogą być oparte na rolach użytkowników lub na podstawie zasad niestandardowych, która może obejmować kontrolę opartą na oświadczeniach lub inne algorytmy heurystyczne.
 
-Ograniczanie dostępu do platformy ASP.NET Core MVC trasy jest tak proste, jak zastosowanie atrybutu autoryzacji do metody akcji (lub do klasy kontrolera, jeśli wszystkie kontrolera akcji wymaga autoryzacji), jak pokazano w poniższym przykładzie:
+Ograniczanie dostępu do trasy ASP.NET Core MVC jest równie proste jak stosowanie atrybutu autoryzacji do metody akcji (lub klasy kontrolera, jeśli wszystkie kontrolera akcji wymaga autoryzacji), jak pokazano w poniższym przykładzie:
 
 ```csharp
 public class AccountController : Controller
@@ -31,13 +31,13 @@ public class AccountController : Controller
 }
 ```
 
-Domyślnie dodając atrybut autoryzacji bez parametrów zostaną ograniczyć dostęp do uwierzytelnionych użytkowników dla tego kontrolera lub akcji. Aby bardziej ograniczyć interfejsu API, które mają być dostępne tylko dla określonych użytkowników, atrybut można rozszerzyć, aby określić wymagane role lub zasady, które muszą spełniać użytkownicy.
+Domyślnie Dodawanie atrybutu autoryzacji bez parametrów zostaną ograniczyć dostęp do uwierzytelnionych użytkowników dla tego kontrolera lub akcji. Aby bardziej ograniczyć interfejsu API, które będą dostępne dla tylko przez określonych użytkowników, ten atrybut można rozszerzyć, aby określić wymagane role lub zasad, które muszą spełniać użytkownicy.
 
 ## <a name="implementing-role-based-authorization"></a>Implementowanie autoryzacji opartej na rolach
 
-Tożsamość platformy ASP.NET Core ma wbudowane koncepcji ról. Oprócz użytkowników ASP.NET Core Identity są przechowywane informacje o różnych ról używany przez aplikację i śledzi użytkowników, którzy są przypisane do ról. Te przydziały można zmienić programowo z RoleManager typu (aktualizacje ról w utrwalonego magazynu) i typ interfejs UserManager, (które można przypisać lub Cofnij przypisanie ról użytkowników).
+Tożsamość platformy ASP.NET Core ma wbudowane koncepcji ról. Oprócz użytkowników ASP.NET Core Identity przechowuje informacje dotyczące różnych ról, używanych przez aplikację i śledzi użytkowników, którzy są przypisane do ról. Te przypisania można zmienić programowo za pomocą typu RoleManager, (które aktualizuje ról w trwałego magazynu) i typu interfejs UserManager, (które można przypisać lub cofnąć to przypisanie użytkowników z ról).
 
-Jeśli uwierzytelnianych tokenów elementu nośnego JWT, oprogramowanie pośredniczące uwierzytelniania elementu nośnego ASP.NET Core JWT są powielane ról użytkownika na podstawie oświadczeń roli znaleziono ją w tokenie. Aby ograniczyć dostęp do MVC akcji lub kontrolera dla użytkowników w określonych ról, może zawierać parametru ról w nagłówku autoryzacji, jak pokazano w poniższym przykładzie:
+Jeśli używasz uwierzytelniania za pomocą tokenów elementu nośnego JWT oprogramowanie pośredniczące uwierzytelniania elementu nośnego tokenu JWT programu ASP.NET Core spowoduje wypełnienie role użytkownika na podstawie oświadczeń roli w tokenie. Aby ograniczyć dostęp do kontrolera dla użytkowników w określonych ról lub Akcja kontrolera MVC, może zawierać parametru role w nagłówku autoryzacji, jak pokazano w poniższym przykładzie:
 
 ```csharp
 [Authorize(Roles = "Administrator, PowerUser")]
@@ -54,9 +54,9 @@ public class ControlPanelController : Controller
 }
 ```
 
-W tym przykładzie tylko użytkownicy o rolach administratora lub Użytkownik_zaawansowany można uzyskać dostępu do interfejsów API w Panelu sterowania kontrolera (np. wykonywanie akcji SetTime). Interfejs API zamykania dalsze jest ograniczona do zezwolić na dostęp tylko do użytkowników w roli administratora.
+W tym przykładzie tylko użytkownicy w roli administratora lub Użytkownik_zaawansowany mogą dostęp do interfejsów API w kontrolerze Panelu sterowania (takie jak wykonanie akcji SetTime). Interfejs API zamykania dalsze jest ograniczony do zezwolenia na dostęp tylko do użytkowników w roli administratora.
 
-Wymagać, aby być użytkownik był w wiele ról, należy użyć wiele atrybutów autoryzacji, jak pokazano w poniższym przykładzie:
+Aby wymagać od użytkownika znajdowała się na wiele ról, użyj wiele atrybutów autoryzacji, jak pokazano w poniższym przykładzie:
 
 ```csharp
 [Authorize(Roles = "Administrator, PowerUser")]
@@ -67,19 +67,19 @@ public ActionResult API1 ()
 }
 ```
 
-W tym przykładzie aby wywołać API1, użytkownik musi:
+W tym przykładzie do wywołania API1, użytkownik musi:
 
--   Można w administrator *lub* roli Użytkownik_zaawansowany *i*
+-   Mieć administrator *lub* roli Użytkownik_zaawansowany *i*
 
--   W roli RemoteEmployee *i*
+-   Należeć do roli RemoteEmployee *i*
 
--   Spełnia niestandardowego programu obsługi dla CustomPolicy autoryzacji.
+-   Spełnia niestandardowe Obsługa CustomPolicy autoryzacji.
 
-## <a name="implementing-policy-based-authorization"></a>Wdrażanie na podstawie zasad autoryzacji
+## <a name="implementing-policy-based-authorization"></a>Implementowanie autoryzacji opartej na zasadach
 
-Reguły autoryzacji niestandardowej można także napisane przy użyciu [zasady autoryzacji](https://docs.asp.net/en/latest/security/authorization/policies.html). W tej sekcji, firma Microsoft udostępnia przegląd. Więcej szczegółów znajduje się w dokumentacji online [Workshop autoryzacji programu ASP.NET](https://github.com/blowdart/AspNetAuthorizationWorkshop).
+Reguły autoryzacji niestandardowej można również będą zapisywane przy użyciu [zasady autoryzacji](https://docs.asp.net/en/latest/security/authorization/policies.html). Ta sekcja zawiera omówienie. Więcej szczegółów znajduje się w dokumentacji online [Workshop autoryzacji programu ASP.NET](https://github.com/blowdart/AspNetAuthorizationWorkshop).
 
-Zasady autoryzacji niestandardowe są rejestrowane w metodzie Startup.ConfigureServices przy użyciu usługi. Metoda AddAuthorization. Ta metoda przyjmuje delegata, który konfiguruje argumentu AuthorizationOptions.
+Zasady autoryzacji dla niestandardowego są rejestrowane w metodzie Startup.ConfigureServices przy użyciu usługi. Metoda AddAuthorization. Ta metoda przyjmuje obiekt delegowany, który konfiguruje AuthorizationOptions argument.
 
 ```csharp
 services.AddAuthorization(options =>
@@ -93,41 +93,38 @@ services.AddAuthorization(options =>
 });
 ```
 
-Jak pokazano w przykładzie, mogą być skojarzone z różnymi typami wymagania. Gdy zasady są zarejestrowane, mogą być stosowane do akcji lub kontrolera przez przekazanie jako argument zasad autoryzacji atrybutu nazwy zasad (na przykład \[Authorize(Policy="EmployeesOnly")\]) może mieć zasady wiele wymagań, nie tylko jedną (jak pokazano w tym przykładzie).
+Jak pokazano w przykładzie, mogą być skojarzone z różnymi typami wymagania. Po zasady są zarejestrowane, mogą być stosowane do akcji lub kontrolera przez przekazanie nazwy zasad jako argument zasad autoryzacji atrybutu (na przykład \[Authorize(Policy="EmployeesOnly")\]) może mieć zasady wiele wymagań, nie tylko jeden (jak pokazano w tych przykładach).
 
-W poprzednim przykładzie pierwsze wywołanie AddPolicy to po prostu alternatywny sposób autoryzowania przez rolę. Jeśli \[Authorize(Policy="AdministratorsOnly")\] jest stosowany do interfejsu API, tylko użytkownicy w roli administratora będą mogli uzyskać do niego dostęp.
+W poprzednim przykładzie pierwsze wywołanie AddPolicy jest po prostu alternatywny sposób autoryzowania przez rolę. Jeśli \[Authorize(Policy="AdministratorsOnly")\] jest stosowany do interfejsu API, tylko użytkownicy w roli administratora będą mogli uzyskać do niego dostęp.
 
-Drugie wywołanie AddPolicy przedstawiono prosty sposób wymagają określonej oświadczenia powinna występować dla użytkownika. Metoda RequireClaim również opcjonalnie przyjmuje oczekiwanych wartości oświadczenia. Jeśli wartości są określone, to wymaganie można spełnić tylko wtedy, gdy użytkownik ma zarówno poprawnego typu oświadczenia i jednej z określonymi wartościami. Jeśli używasz oprogramowania pośredniczącego uwierzytelniania elementu nośnego JWT wszystkie właściwości JWT będą dostępne jako oświadczenia użytkownika.
+Drugie wywołanie AddPolicy pokazuje prosty sposób wymagają danego oświadczenia powinna istnieć dla użytkownika. Metoda RequireClaim przyjmuje również opcjonalnie oczekiwane wartości oświadczenia. Jeśli nie określono wartości, to wymaganie można spełnić tylko wtedy, gdy użytkownik ma zarówno poprawnego typu oświadczenia i jednej z określonymi wartościami. Jeśli używasz oprogramowania pośredniczącego uwierzytelniania elementu nośnego JWT wszystkie właściwości JWT będą dostępne jako oświadczenia użytkownika.
 
-Najbardziej interesujących zasady pokazane są w metodzie AddPolicy trzeci, ponieważ używa wymaganie autoryzacji niestandardowej. Za pomocą wymagania autoryzacji niestandardowej, może mieć wiele kontrolę nad realizację autoryzacji. Aby to zrobić należy zaimplementować te typy:
+Najbardziej interesujących zasady przedstawione w tym miejscu jest w Trzecia metoda AddPolicy, ponieważ używa ona wymagania autoryzacja niestandardowa. Za pomocą niestandardowych określonych wymagań, możesz mieć dużą kontrolę nad jak odbywa się autoryzacji. Aby to zrobić należy zaimplementować te typy:
 
--   Typ wymagania, która jest pochodną IAuthorizationRequirement i zawiera pola, określając szczegóły zapotrzebowania. W tym przykładzie jest pola wiek dla typu MinimumAgeRequirement próbki.
+-   Typ wymagania, która jest pochodną IAuthorizationRequirement, i zawiera pola, określając szczegóły zapotrzebowania. W tym przykładzie to wiek pole jest typu MinimumAgeRequirement próbki.
 
--   Program obsługi, który implementuje AuthorizationHandler&lt;T&gt;, gdzie T jest typ IAuthorizationRequirement, która spełnia program obsługi. Program obsługi musi implementować metodę HandleRequirementAsync, która sprawdza, czy określony kontekst, który zawiera informacje dotyczące użytkownika spełnia wymagania.
+-   Program obsługi, który implementuje AuthorizationHandler&lt;T&gt;, gdzie T jest typem IAuthorizationRequirement, która może spełnić program obsługi. Program obsługi musi implementować metody HandleRequirementAsync, która sprawdza, czy określony kontekst, który zawiera informacje o użytkowniku spełnia wymagania.
 
-Jeśli użytkownika spełnia wymagania, wywołania do kontekstu. Pomyślnie będzie wskazywać, że użytkownik jest autoryzowany. Jeśli istnieje wiele sposobów, że użytkownik może spełniają wymagania autoryzacji można utworzyć procedury obsługi wielu.
+Jeśli użytkownik spełnia wymagania, wywołanie do kontekstu. Powodzenie będzie wskazywać, że użytkownik jest autoryzowany. Jeśli istnieje wiele sposobów, że użytkownik może spełniają wymagania autoryzacji można utworzyć procedury obsługi wielu.
 
-Oprócz rejestrowania wymagania zasad niestandardowych za pomocą wywołania AddPolicy, należy również zarejestrować wymagania niestandardowe programy obsługi, za pomocą iniekcji zależności (usługi. AddTransient&lt;IAuthorizationHandler, MinimumAgeHandler&gt;()).
+Oprócz rejestrowania wymagania dotyczące niestandardowych zasad z wywołaniami AddPolicy, należy również zarejestrować obsługi niestandardowe wymagania za pośrednictwem wstrzykiwanie zależności (usługi. AddTransient&lt;IAuthorizationHandler, MinimumAgeHandler&gt;()).
 
-Przykład wymaganie autoryzacji niestandardowej i obsługi sprawdzania wiek użytkownika (na podstawie DateOfBirth oświadczenia) jest dostępny w ASP.NET Core [dokumentacji autoryzacji](https://docs.asp.net/en/latest/security/authorization/policies.html).
+Przykład wymóg autoryzacji niestandardowego oraz obsługi kontroli wieku użytkownika (oparte na oświadczenia DateOfBirth) jest dostępna w programie ASP.NET Core [dokumentacji autoryzacji](https://docs.asp.net/en/latest/security/authorization/policies.html).
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Uwierzytelnianie ASP.NET Core**
+-   **Uwierzytelnianie programu ASP.NET Core**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
 
--   **Platformy ASP.NET Core autoryzacji**
+-   **Autoryzacji platformy ASP.NET Core**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
 
 -   **Autoryzacja oparta na rolach**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
 
--   **Niestandardowe autoryzacji opartych na zasadach**
+-   **Autoryzacja niestandardowa oparta na zasadach**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
 
-
-
-
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](developer-app-secrets-storage.md)
+>[Poprzednie](index.md)
+>[dalej](developer-app-secrets-storage.md)

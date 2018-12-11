@@ -1,15 +1,13 @@
 ---
-title: polecenie odwołania listy DotNet - .NET Core interfejsu wiersza polecenia
-description: Polecenie dotnet listy odwołania zapewnia to wygodny sposób na liście odwołań projektów.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 821e6d276af44bf984c8ac1b42b4e954dbe69556
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+title: polecenie odwołania list DotNet
+description: Polecenia dotnet list odwołania zapewnia wygodny sposób do listy odwołania projekt-projekt.
+ms.date: 12/03/2018
+ms.openlocfilehash: d22ea27f8e8f6b94d763e44a6d8644f814663797
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697186"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169836"
 ---
 # <a name="dotnet-list-reference"></a>Odwołanie do listy DotNet
 
@@ -17,7 +15,7 @@ ms.locfileid: "34697186"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet list reference` -Listy odwołania projektu do projektu.
+`dotnet list reference` — Wyświetla listę odwołania projekt projekt.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -25,26 +23,30 @@ ms.locfileid: "34697186"
 
 ## <a name="description"></a>Opis
 
-`dotnet list reference` Polecenie zapewnia to wygodny sposób na liście odwołań do projektu dla danego projektu.
+`dotnet list reference` Polecenia oferuje wygodne opcję do listy odwołań projektu dla danego projektu lub rozwiązania.
 
 ## <a name="arguments"></a>Argumenty
 
-`PROJECT`
+* **`PROJECT`**
 
-Określa plik projektu, który będzie używany do wyświetlania listy odwołania. Jeśli nie zostanie określony, polecenie wyszukuje bieżący katalog dla pliku projektu.
+  Określa plik projektu na potrzeby wyświetlania listy odwołania. Jeśli nie zostanie określony, polecenie wyszukuje w bieżącym katalogu dla pliku projektu.
 
 ## <a name="options"></a>Opcje
 
-`-h|--help`
+* **`-h|--help`**
 
-Drukuje krótkich pomocy dla polecenia.
+  Drukuje krótki pomoc dotyczącą polecenia.
 
 ## <a name="examples"></a>Przykłady
 
-Lista odwołań do projektu dla określonego projektu:
+* Utwórz listę odwołań projektu dla określonego projektu.
 
-`dotnet list app/app.csproj reference`
+  ```console
+  dotnet list app/app.csproj reference
+  ```
 
-Lista odwołań do projektu dla projektu w bieżącym katalogu:
+* Listy odwołań projektu dla projektu w bieżącym katalogu:
 
-`dotnet list reference`
+  ```console
+  dotnet list reference
+  ```

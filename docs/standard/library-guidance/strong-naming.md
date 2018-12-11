@@ -4,12 +4,12 @@ description: Zalecenia dotyczące najlepszych rozwiązań dla silnego nazewnictw
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201455"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129002"
 ---
 # <a name="strong-naming"></a>Silne nazewnictwo
 
@@ -71,5 +71,5 @@ Strong należy nadać nazwę bibliotek .NET typu open source. Silne nazewnictwo 
 > Publikowanie oba pakiety rozwidlenia ekosystemu usługi dla deweloperów. Ponadto jeśli aplikacji, kończy się w zależności od tego, oba pakiety Deweloper mogą wystąpić konflikty nazw typu. Chodzi .NET jest są różnych typów w różnych zestawach.
 
 >[!div class="step-by-step"]
-[Poprzednie](./cross-platform-targeting.md)
-[dalej](./nuget.md)
+>[Poprzednie](cross-platform-targeting.md)
+>[dalej](nuget.md)

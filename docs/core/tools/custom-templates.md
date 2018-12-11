@@ -2,14 +2,13 @@
 title: Szablony niestandardowe dla nowej platformy dotnet
 description: Dowiedz się więcej na temat szablonów niestandardowych dla dowolnego typu projektu .NET lub plików.
 author: guardrex
-ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60ae9a6f0af7e75ba721a739ec51d77c59d7792e
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525970"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169424"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Szablony niestandardowe dla nowej platformy dotnet
 
@@ -129,7 +128,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a>Aby odinstalować szablonu z pliku lokalnego nupkg
 
-Jeśli chcesz odinstalować szablonu nie próbują użyć ścieżki do *nupkg* pliku. *Podjęto próbę ją odinstalować przy użyciu szablonu `dotnet new -u <PATH_TO_NUPKG_FILE>` zakończy się niepowodzeniem.* Odwołują się do pakietu, jego `id`:
+Aby odinstalować szablonu, nie próbują użyć ścieżki do *nupkg* pliku. Podjęto próbę ją odinstalować przy użyciu szablonu `dotnet new -u <PATH_TO_NUPKG_FILE>` zakończy się niepowodzeniem. Odwołują się do pakietu, jego `id`:
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
@@ -137,7 +136,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>Aby odinstalować szablonu z katalogu w systemie plików
 
-`FILE_SYSTEM_DIRECTORY` Jest folder projektu, zawierający projekt i *. template.config* folderu:
+`FILE_SYSTEM_DIRECTORY` Jest folder projektu, zawierający projekt i *. template.config* folderu. Ścieżka podana musi być ścieżką bezwzględną. Podjęto próbę odinstalowanie szablonu za pomocą ścieżki względnej zakończy się niepowodzeniem. Aby uzyskać więcej informacji, zobacz [dotnet nowe](dotnet-new.md) artykułu.
 
 ```console
 dotnet new -u <FILE_SYSTEM_DIRECTORY>
@@ -153,8 +152,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Tworzenie szablonu niestandardowego dla platformy dotnet w nowych (samouczek)](../tutorials/create-custom-template.md)  
-* [repozytorium GitHub DotNet/szablonów witryny typu Wiki](https://github.com/dotnet/templating/wiki)  
-* [repozytorium GitHub DotNet/dotnet-— przykłady szablonów](https://github.com/dotnet/dotnet-template-samples)  
-* [Jak utworzyć nowe szablony dla platformy dotnet](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-* [*Template.JSON* schemat w Store schematu JSON](http://json.schemastore.org/template)  
+* [Tworzenie szablonu niestandardowego dla platformy dotnet w nowych (samouczek)](../tutorials/create-custom-template.md)
+* [repozytorium GitHub DotNet/szablonów witryny typu Wiki](https://github.com/dotnet/templating/wiki)
+* [repozytorium GitHub DotNet/dotnet-— przykłady szablonów](https://github.com/dotnet/dotnet-template-samples)
+* [Jak utworzyć nowe szablony dla platformy dotnet](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* [*Template.JSON* schemat w Store schematu JSON](http://json.schemastore.org/template)

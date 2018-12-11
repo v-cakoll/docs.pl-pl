@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 17bf06864016ece571b21bee2c180b5781a62959
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d8fb10d1ad9218d8113c95a4c67dbb32cf87beb1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528262"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131368"
 ---
 # <a name="local-transactions"></a>Transakcje lokalne
 Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używane, gdy chcesz powiązać ze sobą wiele zadań, tak, aby są wykonywane jako pojedyncza jednostka pracy. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw aktualizuje tabelę z informacjami o kolejności. Po drugie aktualizuje tabelę, która zawiera informacje dotyczące spisu, obciążenie elementy uporządkowane. Zadanie nie powiedzie się, zarówno aktualizacje zostaną wycofane.  
@@ -21,7 +21,7 @@ Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używ
  Każdy z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawców danych ma swój własny `Transaction` obiektu do wykonywania transakcji lokalnych. Jeśli potrzebujesz transakcji wykonywanych w bazie danych programu SQL Server, wybierz <xref:System.Data.SqlClient> transakcji. W przypadku transakcji bazy danych Oracle, użyj <xref:System.Data.OracleClient> dostawcy. Ponadto, istnieje <xref:System.Data.Common.DbTransaction> klasę, która jest dostępna dla zapisywania kod niezależny od dostawcy, który wymaga transakcji.  
   
 > [!NOTE]
-> Transakcje są najbardziej efektywny, gdy jest wykonywana na serwerze. Jeśli pracujesz z bazą danych programu SQL Server, który sprawia, że zwiększone użycie jawnego transakcji, należy rozważyć, zapisując je jako procedur przechowywanych, za pomocą instrukcji języka Transact-SQL BEGIN TRANSACTION.
+> Transakcje są najbardziej efektywne, gdy są one wykonywane na serwerze. Jeśli pracujesz z bazą danych programu SQL Server, który sprawia, że zwiększone użycie jawnego transakcji, należy rozważyć, zapisując je jako procedur przechowywanych, za pomocą instrukcji języka Transact-SQL BEGIN TRANSACTION.
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>Wykonywanie transakcji za pomocą pojedynczego połączenia  
  W [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], możesz kontrolować transakcji za pomocą `Connection` obiektu. Możesz zainicjować lokalnej transakcji przy użyciu `BeginTransaction` metody. Po rozpoczęciu transakcji można zarejestrować polecenia w ramach transakcji przy użyciu `Transaction` właściwość `Command` obiektu. Można następnie Zatwierdź lub wycofać zmiany dokonane w źródle danych, w oparciu o powodzeniu lub niepowodzeniu składniki transakcji.  

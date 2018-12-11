@@ -1,15 +1,15 @@
 ---
-title: 'Wskazówki: Generowanie kodu SQL'
+title: 'Przewodnik: Generowanie kodu SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672020"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149045"
 ---
-# <a name="walkthrough-sql-generation"></a>Wskazówki: Generowanie kodu SQL
+# <a name="walkthrough-sql-generation"></a>Przewodnik: Generowanie kodu SQL
 W tym temacie przedstawiono, jak odbywa się generowanie kodu SQL w [dostawcy próbki](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). Następujące zapytanie SQL jednostki używa modelu, który jest uwzględniona w dostawcy próbki:  
   
 ```  
@@ -105,7 +105,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]  
 ```  
   
-## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Pierwsza faza generowanie kodu SQL: odwiedzający drzewa wyrażeń  
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Pierwsza faza generowanie kodu SQL: Odwiedzający drzewa wyrażeń  
  Na poniższym rysunku przedstawiono początkowy stan pusty obiekt odwiedzający.  W tym temacie są wyświetlane tylko te właściwości, które są istotne dla wyjaśnienie wskazówki.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
@@ -192,7 +192,7 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Drugi etap generowanie kodu SQL: generowanie ciągu polecenia  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Drugi etap generowanie kodu SQL: Generowanie ciągu polecenia  
  Drugi etap tworzy rzeczywiste nazwy symboli, a tylko skupimy się na symbole reprezentujący kolumn o nazwach "OrderID", jak w przypadku, ten konflikt musi zostać rozpoznane. Te zostały wyróżnione SqlSelectStatement. Należy pamiętać, że sufiksy używane na ilustracji są tylko po to, aby podkreślić, że są one w różnych wystąpieniach, aby nie przedstawiają żadnych nowych nazw w tym testowanie ich końcowego nazwy (być może różnymi tworzą oryginalne nazwy) nie został jeszcze przypisany.  
   
  Pierwszym symbolem znaleziono, który wymaga zmiany nazwy jest < symbol_OrderID >. Nie przypisano jej nową nazwę jako "OrderID1", 1 jest oznaczony jako ostatni umożliwiający sufiks "OrderID" i symbol jest oznaczony jako nie wymagające zmiany nazwy. Następnie znajduje się pierwsze użycie < symbol_OrderID_2 >. Jest zmieniana na Użyj następnej sufiksu dostępne ("OrderID2") i ponownie oznaczenie nie musi, zmiana nazwy, tak, aby następnym razem, gdy jest używany go nie uzyskać zmieniono jego nazwę. Jest to wykonywane < symbol_OrderID_3 > zbyt.  

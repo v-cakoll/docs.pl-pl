@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183805"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143626"
 ---
 # <a name="adonet-code-examples"></a>Przykłady kodu ADO.NET
 Zamieszczone w tym temacie pokazują, jak pobierać dane z bazy danych przy użyciu następujących technologii ADO.NET:
@@ -63,7 +63,7 @@ Kod w tym przykładzie przyjęto założenie, połączenie pokaz. KLIENTÓW na s
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>Entity Framework przykłady
-Następujące fragmentów kodu pokazują, jak można pobrać danych ze źródła danych, badając jednostek w Entity Data Model (EDM). Użyj tych przykładach [modelu Northwind](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Aby uzyskać więcej informacji, zobacz [Omówienie programu Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
+Następujące fragmentów kodu pokazują, jak można pobrać danych ze źródła danych, badając jednostek w Entity Data Model (EDM). Tych przykładach używany jest model oparty na bazie danych Northwind. Aby uzyskać więcej informacji na temat platformy Entity Framework, zobacz [Omówienie programu Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
 
 ### <a name="linq-to-entities"></a>LINQ do Jednostek
 Kod w tym przykładzie używa zapytania LINQ, aby zwrócić dane jako obiekty kategorie, które jest przekazywany jako typ anonimowy, który zawiera tylko właściwości CategoryID i CategoryName. Aby uzyskać więcej informacji, zobacz [LINQ to Entities — Przegląd](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
@@ -348,5 +348,5 @@ End Class
  [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Tworzenie aplikacji do danych](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
  [Wykonywanie zapytań z modelem EDM (Entity Framework zadania)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [Porady: wykonywanie zapytania, które zwraca obiekty typu anonimowego](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [Jak: Wykonywanie zapytania, które zwraca obiekty typu anonimowego](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
  [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)  

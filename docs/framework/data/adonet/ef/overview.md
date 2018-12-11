@@ -2,12 +2,12 @@
 title: Omówienie programu Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 35eb3b1503c8754752662aef0c5101251d60d49c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216945"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145796"
 ---
 # <a name="entity-framework-overview"></a>Omówienie programu Entity Framework
 
@@ -26,11 +26,11 @@ ms.locfileid: "47216945"
 
  Podczas pracy z narzędziami modelu danych jednostki, modelu koncepcyjnego, model magazynu i mapowania między nimi są wyrażone w schematach opartych na języku XML i zdefiniowane w plikach, które mają odpowiednie rozszerzenia nazw:
 
--   Język definicji schematu koncepcyjnego (CSDL) definiuje modelu koncepcyjnego. Jest CSDL [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]przez implementację [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md). Rozszerzenie pliku jest .csdl.
+- Język definicji schematu koncepcyjnego (CSDL) definiuje modelu koncepcyjnego. Jest CSDL [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]przez implementację [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md). Rozszerzenie pliku jest .csdl.
 
--   Język definicji schematu Store (SSDL) definiuje modelu magazynu, który jest również nazywany modelu logicznego. Rozszerzenie pliku jest ssdl.
+- Język definicji schematu Store (SSDL) definiuje modelu magazynu, który jest również nazywany modelu logicznego. Rozszerzenie pliku jest ssdl.
 
--   Mapowanie specification language (MSL) definiuje mapowania między magazynu i modeli koncepcyjnych. Rozszerzenie pliku jest MSL albo identyfikatorem.
+- Mapowanie specification language (MSL) definiuje mapowania między magazynu i modeli koncepcyjnych. Rozszerzenie pliku jest MSL albo identyfikatorem.
 
 Model magazynu i mapowania można zmienić zgodnie z potrzebami bez konieczności wprowadzania zmian w modelu koncepcyjnym, klas danych lub kod aplikacji. Ponieważ modeli magazynowania są właściwe dla dostawcy, spójny model koncepcyjny można pracować w różnych źródłach danych.
 
@@ -45,9 +45,9 @@ Model magazynu i mapowania można zmienić zgodnie z potrzebami bez koniecznośc
 
 Więcej niż kolejna rozwiązaniu mapowania obiektowo relacyjny [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] to zasadniczo dotyczące włączania aplikacji dostępu i zmiany danych, która jest reprezentowana jako jednostek i relacji w modelu koncepcyjnym. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Używa informacji w modelu i mapowania plików do translacji zapytań obiektu dla typów jednostek reprezentowanych w model koncepcyjny do zapytań specyficznych dla źródła danych. Wyniki zapytania są zmaterializowanego w obiektach, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zarządza. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Oferuje następujące sposoby wykonywania zapytań modelu koncepcyjnego i zwracać obiekty:
 
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Wykonywanie zapytania dotyczącego typów jednostek, które są zdefiniowane w modelu koncepcyjnym zapewnia obsługę Language-Integrated Query (LINQ). Aby uzyskać więcej informacji, zobacz [składnik LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Wykonywanie zapytania dotyczącego typów jednostek, które są zdefiniowane w modelu koncepcyjnym zapewnia obsługę Language-Integrated Query (LINQ). Aby uzyskać więcej informacji, zobacz [składnik LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Dialekt niezależny od magazynu, programu SQL Server, który współpracuje bezpośrednio z jednostkami w modelu koncepcyjnym i obsługujący [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] pojęcia. [!INCLUDE[esql](../../../../../includes/esql-md.md)] jest używany zarówno za pomocą zapytań dotyczących obiektów i zapytania, które są wykonywane przy użyciu dostawca EntityClient. Aby uzyskać więcej informacji, zobacz [omówienie jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Dialekt niezależny od magazynu, programu SQL Server, który współpracuje bezpośrednio z jednostkami w modelu koncepcyjnym i obsługujący [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] pojęcia. [!INCLUDE[esql](../../../../../includes/esql-md.md)] jest używany zarówno za pomocą zapytań dotyczących obiektów i zapytania, które są wykonywane przy użyciu dostawca EntityClient. Aby uzyskać więcej informacji, zobacz [omówienie jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obejmuje EntityClient dostawcy danych. Ten dostawca zarządza połączeniami przekłada zapytania jednostki na kwerendach specyficznymi dla źródła danych i zwraca wartość czytnik danych [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] używa do zmaterializowania jednostki danych w obiektach. Gdy materializacja obiektu nie jest wymagane, dostawca EntityClient również mogą być używane jak standardowy [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych, dzięki czemu aplikacje mogą wykonać [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania i używanie czytnika zwracanych danych tylko do odczytu. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
@@ -71,7 +71,7 @@ Wraz z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] środowisk
 
 Aby dowiedzieć się więcej na temat [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], zobacz:
 
-[Wprowadzenie do](../../../../../docs/framework/data/adonet/ef/getting-started.md) — zawiera informacje dotyczące sposobów rozpocząć i uruchomiona szybko przy użyciu [Szybki Start](https://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675), który pokazuje, jak utworzyć prostą [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji.
+[Wprowadzenie do](../../../../../docs/framework/data/adonet/ef/getting-started.md) — zawiera informacje dotyczące sposobów rozpocząć i uruchomiona szybko przy użyciu [Szybki Start](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100)), który pokazuje, jak utworzyć prostą [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji.
 
 [Terminologia programu Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md) — definiuje wiele warunków, które są wprowadzone w modelu Entity Data Model i [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , które są używane w [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji.
 

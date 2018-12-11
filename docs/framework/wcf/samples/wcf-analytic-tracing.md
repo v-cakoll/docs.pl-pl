@@ -3,11 +3,11 @@ title: Śledzenie danych analitycznych programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181660"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147427"
 ---
 # <a name="wcf-analytic-tracing"></a>Śledzenie danych analitycznych programu WCF
 W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia w strumieniu analityczne śladów, które zapisuje ETW w Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Śledzenie analityczne są przeznaczone do ułatwiają Uzyskaj wgląd w swoje usługi bez konieczności płacenia spadek wysokiej wydajności. Ten przykład ilustruje sposób używania <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsy API w celu zapisu zdarzenia, które integrują się z usługi WCF.  
@@ -106,7 +106,7 @@ W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia
 4.  Kliknij przycisk **wyczyść** można wyczyścić zdarzenia.  
   
 ## <a name="known-issue"></a>Znany problem  
- Jest to znany problem w **Podgląd zdarzeń** go mogą spowodować awarię zdekodować zdarzenia ETW. Może zostać wyświetlony komunikat o błędzie jest wyświetlany komunikat: "opisu Identyfikatora zdarzenia \<id > ze źródła nie można odnaleźć aplikacji serwera firmy Microsoft-Windows-aplikacji. Składnik, który wywołuje to zdarzenie nie jest zainstalowany na komputerze lokalnym albo instalacja jest uszkodzona. Można zainstalować lub naprawić składnik na komputerze lokalnym." Jeśli wystąpi ten błąd, wybierz **Odśwież** z **akcje** menu. Następnie należy się poprawnie dekodowane zdarzenia.  
+ Jest to znany problem w **Podgląd zdarzeń** go mogą spowodować awarię zdekodować zdarzenia ETW. Może zostać wyświetlony komunikat o błędzie informujący, że: "Opisu Identyfikatora zdarzenia \<id > ze źródła, nie można odnaleźć aplikacji serwera firmy Microsoft-Windows-aplikacji. Składnik, który wywołuje to zdarzenie nie jest zainstalowany na komputerze lokalnym albo instalacja jest uszkodzona. Można zainstalować lub naprawić składnik na komputerze lokalnym." Jeśli wystąpi ten błąd, wybierz **Odśwież** z **akcje** menu. Następnie należy się poprawnie dekodowane zdarzenia.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

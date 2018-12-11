@@ -9,15 +9,15 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 66e6f0da417e62bb592fdd8654f85cdb80ccf9bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1dd0f81a454475d6d668324198eb498cdfe20310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197209"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149552"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Ograniczanie dostępności metody dostępu (Przewodnik programowania w języku C#)
-[Uzyskać](../../../csharp/language-reference/keywords/get.md) i [ustaw](../../../csharp/language-reference/keywords/set.md) noszą nazwę porcjach właściwości lub indeksatora *Akcesory*. Domyślnie te metody dostępu mają taką samą widoczność lub poziom dostępu: w przypadku właściwości lub indeksatora, do której należą. Aby uzyskać więcej informacji, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). Jednak czasami jest przydatne ograniczyć dostęp do jednej z tych metod dostępu. Zwykle wymaga to, ograniczenie dostępności `set` akcesor przy zachowaniu `get` publicznie dostępne metody dostępu. Na przykład:  
+[Uzyskać](../../../csharp/language-reference/keywords/get.md) i [ustaw](../../../csharp/language-reference/keywords/set.md) noszą nazwę porcjach właściwości lub indeksatora *Akcesory*. Domyślnie te metody dostępu mają ten sam poziom widoczności lub dostęp do właściwości lub indeksatora, do której należą. Aby uzyskać więcej informacji, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). Jednak czasami jest przydatne ograniczyć dostęp do jednej z tych metod dostępu. Zwykle wymaga to, ograniczenie dostępności `set` akcesor przy zachowaniu `get` publicznie dostępne metody dostępu. Na przykład:  
   
  [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "44197209"
 -   Poziom dostępności metody dostępu musi być bardziej restrykcyjny niż poziom dostępności na właściwość lub indeksator sam.  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>Modyfikatory dostępu w przypadku przesłaniania metody dostępu  
- Gdy zastąpisz właściwość lub indeksator przesłoniętych metod dostępu muszą być dostępne dla kodu nadrzędnych. Ponadto poziom dostępności zarówno właściwość/indeksatora i w przypadku metod dostępu muszą być zgodne odpowiedniego zastąpione właściwości/indeksatora i metod dostępu. Na przykład:  
+ Gdy zastąpisz właściwość lub indeksator przesłoniętych metod dostępu muszą być dostępne dla kodu nadrzędnych. Ponadto dostępność właściwości/indeksatora i jego metod dostępu muszą być zgodne, odpowiedni zastąpione właściwości/indeksatora i jego metod dostępu. Na przykład:  
   
  [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   

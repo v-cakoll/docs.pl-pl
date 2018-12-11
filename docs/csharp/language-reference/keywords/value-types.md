@@ -1,6 +1,6 @@
 ---
-title: Typy wartości (odwołanie w C#)
-ms.date: 07/20/2015
+title: Typy wartości (C# odwołania)
+ms.date: 11/26/2018
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -8,51 +8,55 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: baf0db751cd70d50d4cf440626dd405b01c8d7ad
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526466"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147726"
 ---
-# <a name="value-types-c-reference"></a>Typy wartości (odwołanie w C#)
-Typy wartości obejmują dwie główne kategorie:  
+# <a name="value-types-c-reference"></a>Typy wartości (C# odwołania)
+
+Istnieją dwa rodzaje typów wartości:
+
+- [Struktury](struct.md)
+
+- [Wyliczenia](enum.md)
+
+## <a name="main-features-of-value-types"></a>Główne funkcje typów wartości
+
+Zmienna typu wartości zawiera wartość typu. Na przykład zmiennej `int` typ może zawierać wartość `42`. To różni się od zmiennej typu odwołania, który zawiera odwołanie do wystąpienia typu, znany także jako obiekt. Po przypisaniu nową wartość do zmiennej typu wartości jest kopiowana. Po przypisaniu nową wartość do zmiennej typu odwołania odwołanie jest kopiowane, nie samego obiektu.
+
+Wszystkie typy wartości niejawnie pochodzą od <xref:System.ValueType?displayProperty=nameWithType>.  
   
--   [Struktury](../../../csharp/language-reference/keywords/struct.md)  
+Inaczej niż w przypadku typów referencyjnych nie może pochodzić nowy typ z typem wartości. Jednakże, takie jak typy odwołań struktury mogą implementować interfejsów.  
   
--   [Wyliczenia](../../../csharp/language-reference/keywords/enum.md)  
+Zmienne typu wartości nie może być `null` domyślnie. Jednakże zmienne odpowiadającego [typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md) może być `null`.
   
- Struktury można podzielić na następujące kategorie:  
+Różne wartości mają niejawnego domyślnego konstruktora, który jest inicjowana wartością domyślną tego typu. Aby uzyskać informacje o wartościach domyślnych typów wartości, zobacz [tabela wartości domyślnych](default-values-table.md).  
   
--   Typy liczbowe  
+## <a name="simple-types"></a>Typy proste
+
+*Typów prostych* zestaw wstępnie zdefiniowanych struktura typów dostarczonych przez C# i składają się następujące typy:
+
+- [Typy całkowite](integral-types-table.md): liczbowych typów całkowitych i [char](char.md) typu
+- [Typy zmiennoprzecinkowe](floating-point-types-table.md)
+- [bool](bool.md)
+
+Proste typy są identyfikowane za pomocą słów kluczowych, ale te słowa kluczowe są po prostu aliasami dla struktury wstępnie zdefiniowanych typów w pakietach <xref:System> przestrzeni nazw. Na przykład [int](int.md) jest aliasem <xref:System.Int32?displayProperty=nameWithType>. Aby uzyskać pełną listę aliasów, zobacz [Tabela typów wbudowanych](built-in-types-table.md).
+
+Proste typy różnią się od innych typów struktury w sposób, aby umożliwić pewne dodatkowe operacje:
+
+- Proste typy mogą być inicjowane za pomocą literałów ciągów. Na przykład `'A'` jest literał o typie `char` i `2001` jest literał o typie `int`.
+
+- Można zadeklarować stałe proste typy z [const](const.md) — słowo kluczowe. Nie jest możliwe stałe inne typy struktury.
+
+- Wyrażenia stałe, w której argumenty operacji są stałymi typu prostego, są oceniane w czasie kompilacji.
+
+Aby uzyskać więcej informacji, zobacz [typów prostych](~/_csharplang/spec/types.md#simple-types) części [ C# specyfikacji języka](../language-specification/index.md).
   
-    -   [Typy całkowite](../../../csharp/language-reference/keywords/integral-types-table.md)  
-  
-    -   [Typy zmiennoprzecinkowe](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-  
--   [bool](../../../csharp/language-reference/keywords/bool.md)  
-  
--   Struktury zdefiniowany przez użytkownika.  
-  
-## <a name="main-features-of-value-types"></a>Główne funkcje typów wartości  
- Zmienne, które są oparte na typach wartości bezpośrednio zawierają wartości. Przypisanie jednej zmiennej typu wartości do innej kopii zawarte wartości. To różni się od przypisania zmiennych typu odwołania, która kopiuje odwołanie do obiektu, ale nie samego obiektu.  
-  
- Wszystkie typy wartości niejawnie pochodzą od <xref:System.ValueType?displayProperty=nameWithType>.  
-  
- Inaczej niż w przypadku typów referencyjnych nie może pochodzić nowy typ z typem wartości. Jednakże, takie jak typy odwołań struktury mogą implementować interfejsów.  
-  
- W przeciwieństwie do typów referencyjnych, typ wartości nie może zawierać `null` wartość. Jednak [typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md) funkcja pozwala dla typów wartości, które ma być przypisane do `null`.  
-  
- Różne wartości mają niejawnego domyślnego konstruktora, który jest inicjowana wartością domyślną tego typu. Aby uzyskać informacje o wartościach domyślnych typów wartości, zobacz [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md).  
-  
-## <a name="main-features-of-simple-types"></a>Najważniejsze typy proste  
- Wszystkie typy proste — te całkowite języka C# — są aliasy typów programu .NET Framework System. Na przykład [int](../../../csharp/language-reference/keywords/int.md) jest aliasem <xref:System.Int32?displayProperty=nameWithType>. Aby uzyskać pełną listę aliasów, zobacz [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md).  
-  
- Wyrażenia stałe, w której argumenty operacji są stałymi typu prostego, są obliczane w czasie kompilacji.  
-  
- Proste typy mogą być inicjowane za pomocą literałów ciągów. Na przykład, "A" jest literał o typie `char` i 2001 jest literał o typie `int`.  
-  
-## <a name="initializing-value-types"></a>Inicjowanie typów wartości  
+## <a name="initializing-value-types"></a>Inicjowanie typów wartości
+
  Zmienne lokalne w języku C# muszą zostać zainicjowane, przed są one używane. Na przykład może zadeklarować zmienną lokalną bez inicjowania, jak w poniższym przykładzie:  
   
 ```csharp  
@@ -83,9 +87,9 @@ int myInt = new int();
 int myInt = 0;  
 ```  
   
- Za pomocą [nowe](../../../csharp/language-reference/keywords/new.md) operator wywołuje domyślnego konstruktora określonego typu i przypisuje wartość domyślną do zmiennej. W powyższym przykładzie konstruktora domyślnego przypisaną wartość `0` do `myInt`. Aby uzyskać więcej informacji na temat wartości przypisane przez wywołanie metody konstruktory domyślne zobacz [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md).  
+ Za pomocą [nowe](new.md) operator wywołuje domyślnego konstruktora określonego typu i przypisuje wartość domyślną do zmiennej. W powyższym przykładzie konstruktora domyślnego przypisaną wartość `0` do `myInt`. Aby uzyskać więcej informacji na temat wartości przypisane przez wywołanie metody konstruktory domyślne zobacz [tabela wartości domyślnych](default-values-table.md).  
   
- W przypadku typów zdefiniowanych przez użytkownika, należy użyć [nowe](../../../csharp/language-reference/keywords/new.md) do wywołania konstruktora domyślnego. Na przykład następująca instrukcja wywołuje domyślny konstruktor obiektu `Point` struktury:  
+ W przypadku typów zdefiniowanych przez użytkownika, należy użyć [nowe](new.md) do wywołania konstruktora domyślnego. Na przykład następująca instrukcja wywołuje domyślny konstruktor obiektu `Point` struktury:  
   
 ```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
@@ -93,16 +97,16 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  Po tym wywołaniu struktury uznaje się być zdecydowanie przypisywany; oznacza to, że wszystkie jego elementy członkowskie są inicjowane do wartości domyślnych.  
   
- Aby uzyskać więcej informacji na temat operatora new zobacz [nowe](../../../csharp/language-reference/keywords/new.md).  
+ Aby uzyskać więcej informacji na temat `new` operatora, zobacz [nowe](new.md).  
   
- Aby dowiedzieć się, jak formatowanie danych wyjściowych typów liczbowych, zobacz [formatowanie tabeli wyników liczbowych](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
+ Aby dowiedzieć się, jak formatowanie danych wyjściowych typów liczbowych, zobacz [formatowanie tabeli wyników liczbowych](formatting-numeric-results-table.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Typy](../../../csharp/language-reference/keywords/types.md)  
-- [Tabele odwołań dla typów](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Dokumentacja języka C#](../index.md)  
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
+- [Słowa kluczowe języka C#](index.md)  
+- [Typy](types.md)  
+- [Tabele odwołań dla typów](reference-tables-for-types.md)  
+- [Typy odwołań](reference-types.md)  
 - [Typy dopuszczające wartości zerowe](../../programming-guide/nullable-types/index.md)  

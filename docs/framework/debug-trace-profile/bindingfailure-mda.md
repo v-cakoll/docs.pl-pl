@@ -11,58 +11,58 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a75efaf6703858fdb48a3f09635da1be4463d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6cf0c944fc904a50a5b652f666f50c457a60204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364704"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130843"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
-`bindingFailure` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy zestaw nie udało się załadować.  
+`bindingFailure` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy zestaw nie udało się załadować.  
   
 ## <a name="symptoms"></a>Symptomy  
- Kod podjął próbę załadowania zestawu przy użyciu odwołanie statyczne lub jednej z metod modułu ładującego, takich jak <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. Zestaw nie został załadowany i <xref:System.IO.FileNotFoundException> lub <xref:System.IO.FileLoadException> wyjątku.  
+ Kod podjął próbę załadowania zestawu przy użyciu statyczne odwołanie lub jednej z metod modułu ładującego, takich jak <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. Zestaw nie jest załadowany i <xref:System.IO.FileNotFoundException> lub <xref:System.IO.FileLoadException> jest zgłaszany wyjątek.  
   
 ## <a name="cause"></a>Przyczyna  
- Niepowodzenie powiązania występuje, gdy środowisko uruchomieniowe nie może załadować zestawu. Niepowodzenie powiązania może być skutkiem jednej z następujących sytuacji:  
+ Niepowodzenie powiązania występuje, gdy środowisko uruchomieniowe nie może załadować zestawu. Niepowodzenie powiązania mogą wynikać z jednej z następujących sytuacji:  
   
--   Środowisko uruchomieniowe języka wspólnego (CLR) nie można odnaleźć żądanego zestawu. Istnieje wiele przyczyn, może to się zdarzyć, takich jak zestaw nie jest zainstalowany lub aplikacja nie jest poprawnie skonfigurowana można znaleźć zestawu.  
+-   Środowisko uruchomieniowe języka wspólnego (CLR) nie można odnaleźć żądanego zestawu. Istnieje wiele przyczyn, że taka sytuacja może wystąpić, np. zestaw nie jest zainstalowany lub aplikacja nie jest prawidłowo skonfigurowane do znajdowania zestawu.  
   
--   Typowy scenariusz problemu jest przekazanie typu do innej domeny aplikacji, co wymaga CLR można załadować zestawu zawierającego tego typu w innej domenie aplikacji. Nie być może środowiska uruchomieniowego można załadować zestawu, jeśli domena aplikacji jest inaczej skonfigurowana od oryginalnej domeny aplikacji. Na przykład domen aplikacji dwóch mają różne <xref:System.AppDomain.BaseDirectory%2A> wartości właściwości.  
+-   Typowy scenariusz problemu to przekazanie typu do innej domeny aplikacji, co wymaga środowiska CLR do załadowania zestawu zawierającego tego typu w domenie aplikacji. Może nie być możliwe dla środowiska uruchomieniowego do załadowania zestawu, jeśli domena aplikacji jest inaczej skonfigurowana od oryginalnego domeny aplikacji. Na przykład, obu domen aplikacji może mieć różne <xref:System.AppDomain.BaseDirectory%2A> wartości właściwości.  
   
 -   Żądany zestaw jest uszkodzony lub nie jest zestawem.  
   
--   Podjęto próbę załadowania zestawu kod nie ma uprawnienia zabezpieczeń dostępu kodu poprawne ładowanie zestawów.  
+-   Kod próby załadowania zestawu nie ma uprawnienia zabezpieczeń dostępu kodu poprawne ładować zestawy.  
   
--   Poświadczenia użytkownika nie zapewniają wymagane uprawnienia do odczytu pliku.  
+-   Poświadczenia użytkownika nie są oferowane wymaganych uprawnień do odczytu tego pliku.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Pierwszym krokiem jest ustalenie, dlaczego CLR nie można powiązać żądany zestaw. Istnieje wiele przyczyn, dlaczego środowiska uruchomieniowego nie zostały znalezione lub został stanie obciążenia żądany zestaw, takich jak scenariusze opisane w sekcji Przyczyna. Aby wyeliminować przyczynę niepowodzenia powiązania zalecane są następujące akcje:  
+ Pierwszym krokiem jest ustalenie, dlaczego CLR nie można powiązać żądany zestaw. Istnieje wiele powodów, dlaczego środowisko wykonawcze nie zostały znalezione lub został stanie obciążenia żądany zestaw, takich jak scenariusze opisane w sekcji Przyczyna. Aby wyeliminować przyczynę niepowodzenia powiązania, zaleca się następujące akcje:  
   
--   Ustal przyczynę przy użyciu danych dostarczonych przez `bindingFailure` MDA:  
+-   Ustalić przyczynę przy użyciu danych udostępnionych przez `bindingFailure` MDA:  
   
-    -   Uruchom [Fuslogvw.exe (Podgląd dziennika powiązań zestawów)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) odczytać dzienniki błędów, utworzonego przez obiekt wiążący zestawu.  
+    -   Uruchom [Fuslogvw.exe (Podgląd dziennika powiązań zestawów)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) odczytać dzienniki błędów, generowane przez binder zestawu.  
   
-    -   Ustal, jeśli zestaw w lokalizacji jest wymagane. W przypadku liczby <xref:System.Reflection.Assembly.LoadFrom%2A> i <xref:System.Reflection.Assembly.LoadFile%2A> metod, żądanej lokalizacji można łatwo ustalić. W przypadku liczby <xref:System.Reflection.Assembly.Load%2A> metodę, która wiąże przy użyciu tożsamości zestawu, musisz sprawdzić dla zestawów zgodnych jego tożsamość w domenie aplikacji <xref:System.AppDomain.BaseDirectory%2A> ścieżka sondowania właściwości i globalnej pamięci podręcznej zestawów.  
+    -   Określ, jeśli zestaw znajduje się w lokalizacji, na żądanie. W przypadku właściwości <xref:System.Reflection.Assembly.LoadFrom%2A> i <xref:System.Reflection.Assembly.LoadFile%2A> można łatwo określić metod, żądanej lokalizacji. W przypadku właściwości <xref:System.Reflection.Assembly.Load%2A> metody, która wiąże przy użyciu tożsamości zestawu, musisz sprawdzić dla zestawów, które odpowiadają tej tożsamości w domenie aplikacji <xref:System.AppDomain.BaseDirectory%2A> ścieżka sondy właściwości i globalnej pamięci podręcznej.  
   
--   Usuń przyczynę oparte na poprzednie określenie. Opcje rozpoznawania możliwe są następujące:  
+-   Rozwiąż przyczynę oparte na określenie poprzedniej. Opcje rozpoznawania możliwe są następujące:  
   
-    -   Zainstaluj żądany zestaw w globalnej pamięci podręcznej zestawów i wywołania. <xref:System.Reflection.Assembly.Load%2A> Metoda ładowania zestawu przez tożsamości.  
+    -   Zainstaluj żądany zestaw w globalnej pamięci podręcznej zestawów i wywołania. <xref:System.Reflection.Assembly.Load%2A> Metoda można załadować zestawu przez tożsamość.  
   
-    -   Skopiuj żądany zestaw do katalogu aplikacji i wywołanie <xref:System.Reflection.Assembly.Load%2A> metodę, aby załadować zestawu przez tożsamości.  
+    -   Skopiuj żądany zestaw do katalogu aplikacji i wywołanie <xref:System.Reflection.Assembly.Load%2A> metodę, aby załadować zestaw przez tożsamość.  
   
-    -   Skonfiguruj ponownie domeny aplikacji, w którym wystąpił błąd powiązania uwzględnienie ścieżkę zestawu albo zmieniając <xref:System.AppDomain.BaseDirectory%2A> właściwości lub Dodawanie prywatnej sondowania ścieżek.  
+    -   Ponownie skonfiguruj domenę aplikacji, w którym wystąpił błąd powiązania obejmujący ścieżkę zestawu, wprowadzając dowolną zmianę <xref:System.AppDomain.BaseDirectory%2A> właściwości lub dodawanie prywatnych ścieżkach sondowania.  
   
-    -   Zmiana listy kontroli dostępu dla plików umożliwiają zalogowanego użytkownika do odczytu pliku.  
+    -   Zmiana listy kontroli dostępu do pliku umożliwić zalogowanego użytkownika można odczytać pliku.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko CLR. Zwraca tylko dane o powiązanie błędów.  
+ To zdarzenie MDA nie ma wpływu na środowisko CLR. Informuje jedynie dane o powiązaniu błędów.  
   
 ## <a name="output"></a>Dane wyjściowe  
- MDA raporty zestawu, którego nie udało się załadować, w tym żądana ścieżka lub nazwa wyświetlana, kontekst powiązania, domena aplikacji, w której zażądano obciążenia i przyczynę błędu.  
+ MDA raporty zestawu, który nie udało się załadować, w tym żądana ścieżka lub nazwa wyświetlana, kontekstu powiązania, domeny aplikacji, w której zażądano obciążenia i przyczynę błędu.  
   
- Żądana ścieżka lub nazwa wyświetlana może być pusta, jeśli dane nie był dostępny do środowiska CLR. Jeśli wywołanie, której nie można było <xref:System.Reflection.Assembly.Load%2A> — metoda, prawdopodobnie środowiska uruchomieniowego nie można ustalić nazwę wyświetlaną dla zestawu.  
+ Żądana ścieżka lub nazwa wyświetlana może być pusta, jeśli te dane są niedostępne do środowiska CLR. Jeśli było wywołanie, który uległ awarii <xref:System.Reflection.Assembly.Load%2A> metoda, prawdopodobnie środowisko wykonawcze nie można określić nazwę wyświetlaną dla zestawu.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -75,9 +75,9 @@ ms.locfileid: "33364704"
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie kodu pokazano sytuację, której można uaktywnić to zdarzenie MDA:  
+ W poniższym przykładzie kodu pokazano sytuację, która może aktywować to zdarzenie MDA:  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Text;  

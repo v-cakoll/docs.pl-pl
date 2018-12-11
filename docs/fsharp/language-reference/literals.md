@@ -1,18 +1,18 @@
 ---
 title: Literały (F#)
-description: Poznaj typy literałów w F# języka programowania.
+description: Dowiedz się więcej o typy literałów w F# języka programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087628"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131342"
 ---
 # <a name="literals"></a>Literały
 
 > [!NOTE]
-Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN (na razie).
+> Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN (na razie).
 
 Ten temat zawiera tabelę, która pokazuje sposób określania rodzaju literału w F#.
 
@@ -47,20 +47,20 @@ W poniższej tabeli przedstawiono typy literałów w F#. Znaki, które reprezent
 
 Ciągi Unicode mogą zawierać jawne kodowania, które można określić za pomocą `\u` następuje 16-bitowych kodów szesnastkowych lub kodowania UTF-32, które można określić za pomocą `\U` następuje kod szesnastkowy 32-bitowy, który reprezentuje Unicode Para zastępcza.
 
-Jak dla F# 3.1 można użyć `+` Zaloguj się połączyć literały ciągów znaków. Możesz również użyć operatora testu koniunkcji lub (`|||`) operator, aby łączyć flagi wyliczeń. Na przykład poniższy kod jest niedozwolony w F# 3.1:
+Począwszy od programu F# 3.1, można użyć `+` Zaloguj się połączyć literały ciągów znaków. Możesz również użyć operatora testu koniunkcji lub (`|||`) operator, aby łączyć flagi wyliczeń. Na przykład, poniższy kod jest niedozwolony w F# 3.1:
 
 ```fsharp
 [<Literal>]
-let Literal1 = "a" + "b"
+let literal1 = "a" + "b"
 
 [<Literal>]
-let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let Literal2 = 1 ||| 64
+let literal2 = 1 ||| 64
 
 [<Literal>]
-let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 Nie jest dozwolone używanie innych operatorów bitowych.
@@ -85,11 +85,11 @@ let Numbers = (0x9F, 0o77, 0b1010)
 Począwszy od F# 4.1, można oddzielić cyfr od znaku podkreślenia (`_`).
 
 ```fsharp
-let DeadBeef = 0xDEAD_BEEF
+let value = 0xDEAD_BEEF
 
-let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
+let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
-let ExampleSSN = 123_456_7890
+let exampleSSN = 123_456_7890
 ```
 
 ## <a name="see-also"></a>Zobacz także

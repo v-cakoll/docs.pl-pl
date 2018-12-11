@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ja
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297182"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145257"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą platformy docker-compose.yml 
 
@@ -448,11 +448,11 @@ W modelu mikrousług i kontenerów, są stale uruchamianie kontenerów. Typowy s
 
 Zespołem platformy .NET ma zostały wykonywania pracy zapewnienie platformy .NET Core i ASP.NET Core platforma zoptymalizowane pod kątem kontenera. Nie tylko to platformy .NET Core uproszczone środowisko z zużycie pamięci; zespół koncentruje się na zoptymalizowane obrazy platformy Docker dla trzech głównych scenariuszy i opublikowane je w rejestrze usługi Docker Hub w <span class="underline">microsoft/dotnet</span>, zaczynające się od wersji 2.1:
 
-1.  **Programowanie**: interate których priorytet jest możliwość szybkiego i debugowania zmian i rozmiaru to dodatkowa baza danych.
+1.  **Programowanie**: Których priorytet jest możliwość szybkiego interate i debugowania zmian i rozmiaru to dodatkowa baza danych.
 
-2.  **Tworzenie**: priorytet jest Kompilowanie aplikacji i zawiera pliki binarne i inne zależności, aby zoptymalizować pliki binarne.
+2.  **Tworzenie**: Priorytet jest Kompilowanie aplikacji i zawiera pliki binarne i inne zależności, aby zoptymalizować pliki binarne.
 
-3.  **Produkcji**: w przypadku, gdy fokus jest szybkie wdrażanie i uruchamianie kontenerów, więc te obrazy są ograniczone do plików binarnych i nedded zawartości, aby uruchomić aplikację.
+3.  **Produkcji**: Gdy fokus jest szybkie wdrażanie i uruchamianie kontenerów, dzięki czemu te obrazy są ograniczone do plików binarnych i nedded zawartości, aby uruchomić aplikację.
 
 Aby to osiągnąć, zespół .NET dostarcza trzy podstawowe warianty w [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (w usłudze Docker Hub):
 
@@ -471,5 +471,5 @@ Aby to osiągnąć, zespół .NET dostarcza trzy podstawowe warianty w [microsof
     [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
-[Poprzednie](data-driven-crud-microservice.md)
-[dalej](database-server-container.md)
+>[Poprzednie](data-driven-crud-microservice.md)
+>[dalej](database-server-container.md)

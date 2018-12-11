@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297455"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149903"
 ---
 # <a name="arrays-in-visual-basic"></a>Tablice w Visual Basic
 
@@ -126,7 +126,7 @@ Podobnie jak w przypadku tablic jednowymiarowych, tworząc tablicę wielowymiaro
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-Aby uzyskać więcej przykładów, zobacz [porady: inicjowanie zmiennej tablicy w języku Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
+Aby uzyskać więcej przykładów, zobacz [jak: Inicjowanie zmiennej tablicy w języku Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
 ## <a name="iterating-through-an-array"></a>Iterowanie przez tablicę
 
@@ -299,9 +299,9 @@ Aby uzyskać więcej informacji na temat kolekcji, zobacz [kolekcje](../../conce
 |Termin|Definicja|
 |----------|----------------|
 |[Wymiary tablic w języku Visual Basic](../../language-features/arrays/array-dimensions.md)|Wyjaśnia rangę i wymiary w tablicach.|
-|[Porady: inicjowanie zmiennej tablicy w języku Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Zawiera opis sposobu wypełniania tablic z wartościami początkowymi.|
-|[Porady: Sortowanie tablicy w języku Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Pokazuje jak alfabetycznie sortować elementy tablicy.|
-|[Instrukcje: przypisywanie tablicy do innej tablicy](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|W tym artykule opisano zasady i czynności podczas przypisywania tablicy do innej zmiennej tablicy.|
+|[Jak: Inicjowanie zmiennej tablicy w języku Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Zawiera opis sposobu wypełniania tablic z wartościami początkowymi.|
+|[Jak: Sortowanie tablicy w języku Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Pokazuje jak alfabetycznie sortować elementy tablicy.|
+|[Jak: Przypisywanie tablicy do innej tablicy](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|W tym artykule opisano zasady i czynności podczas przypisywania tablicy do innej zmiennej tablicy.|
 |[Rozwiązywanie problemów związanych z tablicami](../../language-features/arrays/troubleshooting-arrays.md)|W tym artykule omówiono niektóre typowe problemy, które występują podczas pracy z tablicami.|
 
 ## <a name="see-also"></a>Zobacz także

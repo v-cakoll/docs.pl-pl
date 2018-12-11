@@ -1,27 +1,26 @@
 ---
 title: Framework — zalecenia dotyczące projektowania
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - libraries, .NET Framework class library
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df2ccf3d778e26e16937554304ae847f624cfec0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085643"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147609"
 ---
 # <a name="framework-design-guidelines"></a>Framework — zalecenia dotyczące projektowania
 Ta sekcja zawiera wskazówki dotyczące projektowania bibliotek, które rozszerzają i wchodzić w interakcje z programu .NET Framework. Celem jest pomoc projektantów Biblioteka zapewnia spójność interfejsu API i łatwość użycia, udostępniając ujednolicony model programowania, który jest niezależny od języka programowania, używany do tworzenia aplikacji. Zaleca się przestrzegać następujących wytycznych projektowania, podczas tworzenia klas i składników, które rozszerzają programu .NET Framework. Biblioteka niespójne projektu niekorzystnie wpływa na wydajność pracy deweloperskiej i zniechęca do przyjęcia.  
   
  Wytyczne są uporządkowane jako prosty zalecenia prefiksem warunki `Do`, `Consider`, `Avoid`, i `Do not`. Te wytyczne są celem projektantów biblioteki klasy zrozumieć wad i zalet różnych rozwiązań. Może to być sytuacje, w których projekt biblioteki w dobrej wymaga, że naruszają te wytyczne dotyczące projektowania. Takiej sytuacji należy rzadkich i jest ważne, czy masz czytelne i atrakcyjne przyczynę swojej decyzji.  
   
- Te wytyczne pochodzą z książki *wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2*, Krzysztof Cwalina i Brad Abrams.  
+ Te wytyczne pochodzą z książki *wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla bibliotek .NET wielokrotnego użytku, wydanie 2*, Krzysztof Cwalina i Brad Abrams.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)  
@@ -47,7 +46,7 @@ Ta sekcja zawiera wskazówki dotyczące projektowania bibliotek, które rozszerz
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
+ *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz także
 

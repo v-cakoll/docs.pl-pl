@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 221ea2a9fc154468f16ce09195a0415883ada9df
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404531"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125935"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące aplikacji sieci web platformy ASP.NET Core hostingu platformy Azure
 
@@ -48,7 +48,7 @@ Usługa App Service Web Apps oferuje w pełni zarządzana platforma, zoptymalizo
 
 Usługa Azure App Service jest najlepszym wyborem dla większości aplikacji sieci web. Wdrażanie i zarządzanie są zintegrowane z platformą, witryny można szybko skalować w celu obsługi obciążeń z dużym ruchem i wbudowanego obciążenia równoważenia i usługa traffic manager zapewniają wysoką dostępność. Można przenieść istniejące witryny w usłudze Azure App Service za pomocą narzędzia do migracji online, korzystanie z aplikacji typu open source z galerii aplikacji sieci Web lub Utwórz nową witrynę przy użyciu framework i wybranych przez siebie narzędzi. Funkcja zadań Webjob ułatwia dodawanie zadania w tle przetwarzania do aplikacji sieci web usługi App Service.
 
-### <a name="azure-kubernetes-service"></a>Usługa Azure Kubernetes Service
+### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
 Usługa Azure Kubernetes Service (AKS) zarządza hostowanym środowiskiem Kubernetes, pozwalając szybko i łatwo wdrażać konteneryzowane aplikacje i Zarządzaj bez doświadczenia z organizowaniem kontenerów. Eliminuje to również obciążenia i konserwacją dzięki inicjowania obsługi administracyjnej, aktualizowaniu i skalowaniu zasobów na żądanie bez przełączania aplikacji w trybie offline.
 
@@ -71,7 +71,7 @@ Jeśli masz istniejącą aplikację, która wymagałaby istotnych zmian do uruch
 
 #### <a name="feature-comparison"></a>Porównanie funkcji
 
-| Funkcja                                                                                    | Usługa App Service | Kontenery (AKS) | Usługa Service Fabric | Maszyna wirtualna |
+| Funkcja                                                                                    | App Service | Kontenery (AKS) | Service Fabric | Maszyna wirtualna |
 | ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
 | Niemal natychmiastowe wdrażanie                                                                    | X           | X                | X              |                 |
 | Skalowanie na większe maszyny bez ponownego wdrażania                                               | X           | X                | X              |                 |
@@ -128,4 +128,4 @@ Rysunek 11-2 przedstawiono przykład architektury referencyjnej. Ten diagram w t
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
-[Poprzednie](development-process-for-azure.md)
+>[Poprzednie](development-process-for-azure.md)

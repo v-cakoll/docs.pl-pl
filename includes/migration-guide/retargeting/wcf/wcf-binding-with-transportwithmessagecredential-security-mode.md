@@ -6,6 +6,6 @@
 |Sugestia|Ponieważ jest to funkcja opcjonalna, nie powinien wpływać na działanie istniejących aplikacji.<br/>Aby kontrolować, czy nowe zachowanie jest używany, należy użyć następującego ustawienia konfiguracji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.AllowUnsignedToHeader=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
 |Zakres|Przezroczyste|
 |Wersja|4.6.1|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.BasicHttpsSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li></ul>|
 

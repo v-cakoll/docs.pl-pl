@@ -2,12 +2,12 @@
 title: Bezpieczny dostęp do danych
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: e5bb96a091dcd64f12d086d864643d00c34d8f17
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185943"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129197"
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
 Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostępnych w podstawowym magazynie danych lub bazy danych. Należy również wziąć pod uwagę ryzyko związane z innych funkcji lub składniki, które Twoja aplikacja może zawierać.  
@@ -66,11 +66,8 @@ Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostę
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Zagadnienia dotyczące zabezpieczeń i wskazówki dotyczące programu Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|W tym artykule opisano technik zabezpieczeń dla programu Access 2007 takich szyfrowania plików, administrowanie hasła, Konwersja bazy danych do nowego formatu ACCDB i ACCDE i przy użyciu innych opcji zabezpieczeń.|  
-|[Ochrona bazy danych programu Access z poziomu użytkownika zabezpieczeń (MDB)](https://go.microsoft.com/fwlink/?LinkId=47697)|Dotyczy 2003 dostępu. Instrukcje dotyczące implementowania zabezpieczeń na poziomie użytkownika w celu ochrony danych w programie Access 2003.|  
 |[Opis roli pliki informacji o grupie roboczej w zabezpieczenia dostępu](https://support.microsoft.com/kb/305542)|Wyjaśniono, roli i relacji tego pliku w usłudze security 2003 dostępu.|  
 |[Często zadawane pytania dotyczące zabezpieczeń firmy Microsoft dostęp dla programu Microsoft Access w wersji 2.0 za pomocą 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Wersja do pobrania dostępu firmy Microsoft Security — często zadawane pytania.|  
-|[Rozwiązywanie problemów dotyczących zabezpieczeń i ochrony](https://go.microsoft.com/fwlink/?LinkId=47703)|Przedstawia rozwiązania typowych problemów z zabezpieczeniami w programie Excel 2003.|  
-  
 ## <a name="enterprise-services"></a>Enterprise Services  
  COM + zawiera własny model zabezpieczeń, która opiera się na konta Windows NT i personifikacji wątku/procesu. <xref:System.EnterpriseServices> Przestrzeń nazw zapewnia otoki, które umożliwiają aplikacji platformy .NET do integracji aplikacji kod zarządzanego przy użyciu zabezpieczeń usług COM + za pośrednictwem <xref:System.EnterpriseServices.ServicedComponent> klasy.  
   
@@ -87,9 +84,9 @@ Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostę
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)|Zawiera tematów opisujących sposób udostępnianie składników COM programowi .NET Framework oraz udostępnianie składników .NET Framework dla modelu COM.|  
-|[Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)|Zawiera tematy zaawansowane, takie jak podstawowe zestawy międzyoperacyjne, wątków i przekazywanie niestandardowe.|  
-  
+|[Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)|Zawiera tematów opisujących sposób udostępnianie składników COM programowi .NET Framework oraz udostępnianie składników .NET Framework dla modelu COM.|
+|[Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Zawiera tematy zaawansowane, takie jak podstawowe zestawy międzyoperacyjne, wątków i przekazywanie niestandardowe.|
+
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  

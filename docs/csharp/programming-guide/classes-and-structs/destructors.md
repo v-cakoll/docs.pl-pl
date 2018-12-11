@@ -1,20 +1,20 @@
 ---
 title: Finalizatory (C# Programming Guide)
-ms.date: 05/10/2017
+ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b24884d2650a5e799eda630bc65f3c5a5c2508a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526038"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127267"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizatory (C# Programming Guide)
-Finalizatory są używane do niszczenia wystąpień klas.  
+Finalizatory (są one również nazywane **destruktory**) są używane do wykonywania wszelkich niezbędnych końcowego oczyszczania, gdy wystąpienie klasy są gromadzone przez moduł odśmiecania pamięci.  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -63,7 +63,7 @@ protected override void Finalize()
   
  Istnieje możliwość wymuszenia wyrzucania elementów bezużytecznych przez wywołanie metody <xref:System.GC.Collect%2A>, ale w większości przypadków, to należy unikać, ponieważ mogą one stanowić problemy z wydajnością.  
   
-## <a name="using-finalizers-to-release-resources"></a>Za pomocą finalizatory w celu zwolnienia zasobów  
+## <a name="using-finalizers-to-release-resources"></a>Aby zwolnić zasoby przy użyciu finalizatory  
  Ogólnie rzecz biorąc C# nie wymaga tak dużej ilości pamięci zarządzania zgodnie z potrzebami, podczas pracy z językiem, który nie jest przeznaczony do aparatu plików wykonywalnych wyrzucania elementów bezużytecznych. To dlatego moduł odśmiecania pamięci środowiska .NET Framework niejawnie zarządza alokacją i zwolnieniem pamięci dla obiektów. Jednak w przypadku aplikacji hermetyzuje niezarządzane zasoby, takie jak windows, pliki i połączenia sieciowe, należy używać finalizatory zwolnienie tych zasobów. Gdy obiekt jest uprawniona do finalizacji, wyrzucanie elementów bezużytecznych działa `Finalize` metody obiektu.  
   
 ## <a name="explicit-release-of-resources"></a>Jawnego zwolnienia zasobów  
@@ -82,10 +82,11 @@ protected override void Finalize()
   
  [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>specyfikacja języka C#  
+
+Aby uzyskać więcej informacji, zobacz [destruktory](~/_csharplang/spec/classes.md#destructors) części [ C# specyfikacji języka](../../language-reference/language-specification/index.md).
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.IDisposable>  
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  

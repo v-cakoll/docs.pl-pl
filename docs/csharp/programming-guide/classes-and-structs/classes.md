@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: db490225bbef4517c1306aee7afb5c01d2d0fec6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 656e16352e8a88cc2c95483551dd71600f3fec0e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081479"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126292"
 ---
 # <a name="classes-c-programming-guide"></a>Klasy (Przewodnik programowania w języku C#)
 
@@ -19,7 +19,7 @@ ms.locfileid: "44081479"
 Typ, który jest zdefiniowany jako [klasy](../../../csharp/language-reference/keywords/class.md) jest *odwołania do typu*. W czasie wykonywania, kiedy Deklarujesz zmienną typu odwołania, zmienna zawiera wartość [null](../../../csharp/language-reference/keywords/null.md) aż jawnie tworzone jest wystąpienie klasy za pomocą [nowe](../../../csharp/language-reference/keywords/new.md) operatora, lub obiekt niezgodny typ, który mógł zostać utworzony w innych miejscach, jak pokazano w poniższym przykładzie:
 
 ```csharp
-//Declaring a object of type MyClass.
+//Declaring an object of type MyClass.
 MyClass mc = new MyClass();
 
 //Declaring another object of the same type, assigning it the value of the first object.

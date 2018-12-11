@@ -1,0 +1,38 @@
+---
+title: Co to jest strukturze ML.NET i jak poznać podstawy usługi Machine Learning?
+description: Więcej informacji o strukturze ML.NET, struktura learning maszyny bezpłatny, open source i dla wielu platform, która umożliwia tworzenie niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET.
+author: cjgronlund
+ms.custom: seodec18
+ms.topic: overview
+ms.date: 11/06/2018
+ms.openlocfilehash: fb0ece94d77c76fddc667070a8aaef154fd2053a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131574"
+---
+# <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a><span data-ttu-id="32b34-103">Co to jest strukturze ML.NET i jak poznać podstawy usługi Machine Learning?</span><span class="sxs-lookup"><span data-stu-id="32b34-103">What is ML.NET and how do I understand Machine Learning basics?</span></span>
+
+<span data-ttu-id="32b34-104">Strukturze ML.NET to platforma uczenia maszyny bezpłatny, open source i dla wielu platform, która umożliwia tworzenie rozwiązań do niestandardowego uczenia maszynowego i integrowanie aplikacji .NET.</span><span class="sxs-lookup"><span data-stu-id="32b34-104">ML.NET is a free, open-source, and cross-platform machine learning framework that enables you to build custom machine learning solutions and integrate them into your .NET applications.</span></span> <span data-ttu-id="32b34-105">Za pomocą interfejsów API strukturze ML.NET można zastosować sztucznej Inteligencji w swoich aplikacjach, korzystając z umiejętności .NET, którą już posiadasz i bez opuszczania .NET.</span><span class="sxs-lookup"><span data-stu-id="32b34-105">With the ML.NET APIs you can incorporate AI into your apps using the .NET skills you already have and without leaving .NET.</span></span>
+
+## <a name="what-is-machine-learning"></a><span data-ttu-id="32b34-106">Co to jest usługa machine learning?</span><span class="sxs-lookup"><span data-stu-id="32b34-106">What is machine learning?</span></span>
+
+<span data-ttu-id="32b34-107">Uczenie maszynowe to technika przetwarzania danych, która zezwala na komputerach, aby korzystać z istniejących danych w celu przewidywania przyszłych zachowań, rezultatów i trendów.</span><span class="sxs-lookup"><span data-stu-id="32b34-107">Machine learning is a data science technique that allows computers to use existing data to forecast future behaviors, outcomes, and trends.</span></span> <span data-ttu-id="32b34-108">Za pomocą usługi machine learning, komputery Dowiedz się, bez konieczności faktycznego.</span><span class="sxs-lookup"><span data-stu-id="32b34-108">Using machine learning, computers learn without being explicitly programmed.</span></span>
+
+<span data-ttu-id="32b34-109">Dzięki prognozom lub z usługi machine learning ułatwia aplikacji i urządzeń pozwalają na sprawną.</span><span class="sxs-lookup"><span data-stu-id="32b34-109">Forecasts or predictions from machine learning can make apps and devices smarter.</span></span> <span data-ttu-id="32b34-110">Podczas zakupów w Internecie uczenie maszynowe wspomaga proces rekomendowania innych produktów, które mogą być oparte na została zakupiona.</span><span class="sxs-lookup"><span data-stu-id="32b34-110">When you shop online, machine learning helps recommend other products you might like based on what you've purchased.</span></span> <span data-ttu-id="32b34-111">Gdy z kartą kredytową, uczenie maszynowe porównuje transakcję z bazą danych transakcji i ułatwia wykrycie oszustwa.</span><span class="sxs-lookup"><span data-stu-id="32b34-111">When your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud.</span></span> <span data-ttu-id="32b34-112">Twoje robot odkurzający sprząta pomieszczenie, uczenie maszynowe pomaga mu zdecydować, czy zadanie jest wykonywane.</span><span class="sxs-lookup"><span data-stu-id="32b34-112">When your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.</span></span>
+
+
+## <a name="short-videos-on-data-science"></a><span data-ttu-id="32b34-113">Krótkie wideo dotyczące do nauki o danych</span><span class="sxs-lookup"><span data-stu-id="32b34-113">Short videos on data science</span></span> 
+
+<span data-ttu-id="32b34-114">Skorzystaj z krótkiego wprowadzenia do podstawy machine learning i analizy danych z *przetwarzanie danych dla początkujących* w pięciu krótkich filmach wideo z najważniejszych danych.</span><span class="sxs-lookup"><span data-stu-id="32b34-114">Get a quick introduction to the basics of machine learning and data science from *Data Science for Beginners* in five short videos from a top data scientist.</span></span> <span data-ttu-id="32b34-115">Te wideo stanowią podstawowy, ale przydatne, czy interesuje Cię nauki o danych, czy pracujesz z analityków danych.</span><span class="sxs-lookup"><span data-stu-id="32b34-115">These videos are basic but useful, whether you're interested in doing data science or you work with data scientists.</span></span>
+
+* <span data-ttu-id="32b34-116">Wideo 1: [5 pytań, analiza danych daje odpowiedzi](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers) *(5 s 14 min)*.</span><span class="sxs-lookup"><span data-stu-id="32b34-116">Video 1: [The 5 questions data science answers](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers) *(5 min 14 sec)*.</span></span>
+
+* <span data-ttu-id="32b34-117">Wideo 2: [Czy dane są gotowe do analizy danych?](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science)</span><span class="sxs-lookup"><span data-stu-id="32b34-117">Video 2: [Is your data ready for data science?](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science)</span></span> <span data-ttu-id="32b34-118">*(4 min 56 sek.)*</span><span class="sxs-lookup"><span data-stu-id="32b34-118">*(4 min 56 sec)*</span></span>
+
+* <span data-ttu-id="32b34-119">Wideo 3: [Zadaj pytanie, można odpowiedzieć za pomocą danych](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(4 min 17 sek.)*</span><span class="sxs-lookup"><span data-stu-id="32b34-119">Video 3: [Ask a question you can answer with data](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(4 min 17 sec)*</span></span>
+
+* <span data-ttu-id="32b34-120">Wideo 4: [Prognozowanie odpowiedzi za pomocą prostego modelu](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-predict-an-answer-with-a-simple-model) *(7 min 42 sek.)*</span><span class="sxs-lookup"><span data-stu-id="32b34-120">Video 4: [Predict an answer with a simple model](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-predict-an-answer-with-a-simple-model) *(7 min 42 sec)*</span></span>
+
+* <span data-ttu-id="32b34-121">Wideo 5: [Kopiowanie pracy innych osób w celu przeprowadzenia analizy danych](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-copy-other-peoples-work-to-do-data-science) *(3 min 18 sek.)*</span><span class="sxs-lookup"><span data-stu-id="32b34-121">Video 5: [Copy other people's work to do data science](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-copy-other-peoples-work-to-do-data-science) *(3 min 18 sec)*</span></span>

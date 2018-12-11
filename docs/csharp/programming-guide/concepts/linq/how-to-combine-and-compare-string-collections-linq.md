@@ -1,20 +1,20 @@
 ---
-title: 'Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (C#)'
+title: 'Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 679dde2d2d1607c2703468f64903f3cd9e59bcb8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c95736f184f3298fb7142b8f8c7b29c65b3f7227
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083576"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130742"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="b5770-102">Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b5770-102">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>
-<span data-ttu-id="b5770-103">W tym przykładzie pokazano, jak można scalić plików, które zawierają wiersze tekstu, a następnie Sortuj wyniki.</span><span class="sxs-lookup"><span data-stu-id="b5770-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="b5770-104">W szczególności pokazują sposób wykonywania prostych łączenia, Unii i część wspólną na dwa zestawy wierszy tekstu.</span><span class="sxs-lookup"><span data-stu-id="b5770-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="bcd74-102">Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="bcd74-102">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>
+<span data-ttu-id="bcd74-103">W tym przykładzie pokazano, jak można scalić plików, które zawierają wiersze tekstu, a następnie Sortuj wyniki.</span><span class="sxs-lookup"><span data-stu-id="bcd74-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="bcd74-104">W szczególności pokazują sposób wykonywania prostych łączenia, Unii i część wspólną na dwa zestawy wierszy tekstu.</span><span class="sxs-lookup"><span data-stu-id="bcd74-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="b5770-105">Aby skonfigurować projekt i plików tekstowych</span><span class="sxs-lookup"><span data-stu-id="b5770-105">To set up the project and the text files</span></span>  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="bcd74-105">Aby skonfigurować projekt i plików tekstowych</span><span class="sxs-lookup"><span data-stu-id="bcd74-105">To set up the project and the text files</span></span>  
   
-1.  <span data-ttu-id="b5770-106">Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names1.txt i zapisz go w folderze projektu:</span><span class="sxs-lookup"><span data-stu-id="b5770-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1.  <span data-ttu-id="bcd74-106">Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names1.txt i zapisz go w folderze projektu:</span><span class="sxs-lookup"><span data-stu-id="bcd74-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "44083576"
     Garcia, Debra  
     ```  
   
-2.  <span data-ttu-id="b5770-107">Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names2.txt i zapisz go w folderze projektu.</span><span class="sxs-lookup"><span data-stu-id="b5770-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="b5770-108">Należy zauważyć, że te dwa pliki nazwy niektórych wspólnych.</span><span class="sxs-lookup"><span data-stu-id="b5770-108">Note that the two files have some names in common.</span></span>  
+2.  <span data-ttu-id="bcd74-107">Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names2.txt i zapisz go w folderze projektu.</span><span class="sxs-lookup"><span data-stu-id="bcd74-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="bcd74-108">Należy zauważyć, że te dwa pliki nazwy niektórych wspólnych.</span><span class="sxs-lookup"><span data-stu-id="bcd74-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "44083576"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="b5770-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="b5770-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="bcd74-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="bcd74-109">Example</span></span>  
   
 ```csharp  
 class MergeStrings  
@@ -93,7 +93,7 @@ class MergeStrings
   
             IEnumerable<string> nameMatchQuery =  
                 tempQuery1.Concat(tempQuery2).OrderBy(s => s);  
-            OutputQueryResults(nameMatchQuery, String.Format("Concat based on partial name match \"{0}\":", nameMatch));  
+            OutputQueryResults(nameMatchQuery, $"Concat based on partial name match \"{nameMatch}\":");
   
             // Keep the console window open in debug mode.  
             Console.WriteLine("Press any key to exit");  
@@ -168,10 +168,10 @@ class MergeStrings
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b5770-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="b5770-110">Compiling the Code</span></span>  
- <span data-ttu-id="b5770-111">Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.</span><span class="sxs-lookup"><span data-stu-id="b5770-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="bcd74-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="bcd74-110">Compiling the Code</span></span>  
+ <span data-ttu-id="bcd74-111">Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.</span><span class="sxs-lookup"><span data-stu-id="bcd74-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5770-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="b5770-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bcd74-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="bcd74-112">See Also</span></span>
 
-- [<span data-ttu-id="b5770-113">LINQ i ciągi (C#)</span><span class="sxs-lookup"><span data-stu-id="b5770-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [<span data-ttu-id="b5770-114">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="b5770-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="bcd74-113">LINQ i ciągi (C#)</span><span class="sxs-lookup"><span data-stu-id="bcd74-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [<span data-ttu-id="bcd74-114">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="bcd74-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

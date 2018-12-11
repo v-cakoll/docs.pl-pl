@@ -1,13 +1,13 @@
 ---
 title: Ograniczenia (F#)
-description: Więcej informacji na temat ograniczeń F#, które są stosowane do parametrów typu ogólnego, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji.
+description: Dowiedz się więcej o F# ograniczenia, które są stosowane do parametrów typu ogólnego, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2dfc99e0ef41a224fbd03f325582365b7caab78b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48837376"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152497"
 ---
 # <a name="constraints"></a>Ograniczenia
 
@@ -26,7 +26,7 @@ Istnieje kilka różnych ograniczeń, które można zastosować, aby ograniczyć
 |Ograniczenia|Składnia|Opis|
 |----------|------|-----------|
 |Ograniczenia typu|*Parametr typu* :&gt; *typu*|Podany typ musi być większa lub równa pochodnej z typu określonego lub, jeśli typ jest interfejsem, podany typ musi implementować interfejs.|
-|Ograniczenie o wartości null|*Parametr typu* : wartość null|Podany typ musi obsługiwać literałem o wartości null. Obejmuje to wszystkie typy obiektów platformy .NET, ale nie F# listy, spójnej kolekcji, funkcji, klasy, rekord lub typy Unii.|
+|Ograniczenie o wartości null|*Parametr typu* : wartość null|Podany typ musi obsługiwać literałem o wartości null. Obejmuje to wszystkich typów obiektów platformy .NET, ale nie F# listy, spójnej kolekcji, funkcji, klasy, rekord lub typy Unii.|
 |Ograniczenie jawnego członka|[(]*parametr typu* [lub... lub *parametr typu*)]: (*sygnatura elementu członkowskiego*)|Co najmniej jeden z podanych argumentów typu musi mieć element członkowski, który ma określony podpis; nie są przeznaczone w typowych zastosowaniach. Elementy członkowskie muszą być albo jawnie zdefiniowane na typ lub część rozszerzenia niejawnego typu jako prawidłowe obiekty docelowe dla jawnego ograniczenia elementu członkowskiego.|
 |Ograniczenie konstruktora|*Parametr typu* : (nowe: jednostka -&gt; ")|Podany typ musi mieć domyślnego konstruktora.|
 |Ograniczenie typu wartości|: — struktura|Podany typ musi być typem wartości platformy .NET.|
@@ -36,11 +36,12 @@ Istnieje kilka różnych ograniczeń, które można zastosować, aby ograniczyć
 |Ograniczenia porównania|: porównanie|Podany typ musi obsługiwać porównania.|
 |Ograniczenie równości|: równości|Podany typ musi obsługiwać równości.|
 |Ograniczenie Unmanaged|: niezarządzanych|Podany typ musi być typem niezarządzanym. Typy niezarządzanwe są albo niektóre typy pierwotne (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, lub `decimal`), Typy wyliczeniowe `nativeptr<_>`, lub struktury nieogólnego, których pola są wszystkie typy niezarządzanych.|
+
 Masz Dodaj ograniczenie, jeśli kod ma można użyć funkcji, która jest ogólnie dostępne na typ ograniczenia, ale nie w typach. Na przykład ograniczenia typu umożliwia określenie typu klasy, można użyć jednej z metod tej klasy, typ lub funkcja ogólna.
 
 Określanie ograniczeń czasami jest wymagana podczas zapisywania parametrów typu w sposób jawny, ponieważ bez ograniczeń, kompilator nie ma możliwości weryfikacji, że funkcje, które są używane będzie dostępna na dowolny typ, który może być dostarczane w czasie wykonywania dla typu parametr.
 
-Najbardziej typowe ograniczenia, używanej w kodzie języka F# to ograniczenia typu, określających klas podstawowych lub interfejsów. Innych ograniczeń albo są używane przez biblioteki języka F# do wykonania niektórych funkcji, takich jak ograniczenie jawny element członkowski, który jest używany do implementowania operatora przeciążania operatorów arytmetycznych lub znajdują się przede wszystkim, ponieważ język F# obsługuje pełne zestaw ograniczeń, który jest obsługiwany przez środowisko uruchomieniowe języka wspólnego.
+Najbardziej typowe ograniczenia, możesz użyć w F# kodu są ograniczenia typu, określających klas podstawowych lub interfejsów. Innych ograniczeń albo są używane przez F# biblioteki do wykonania niektórych funkcji, takich jak ograniczenie jawny element członkowski, który jest używany do implementowania operatora przeciążania operatorów arytmetycznych lub znajdują się przede wszystkim z powodu F# obsługuje kompletny zestaw ograniczeń, który jest obsługiwany przez środowisko uruchomieniowe języka wspólnego.
 
 Podczas procesu wnioskowania typu niektóre ograniczenia są automatycznie wykryta przez kompilator. Na przykład, jeśli używasz `+` operatora w funkcji, kompilator wnioskuje ograniczenie jawnego członka typy zmiennych, które są używane w wyrażeniu.
 

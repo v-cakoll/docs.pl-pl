@@ -1,42 +1,43 @@
 ---
-title: Niejawnie wpisane tablice (Przewodnik programowania w języku C#)
+title: Niejawnie wpisane tablice - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], implicity-typed
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 879955a7362af7dceda5767923c5e872cd0f6b5c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9c235b6084238917c2cb3f2cd745aef0264f82ce
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522592"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238276"
 ---
-# <a name="implicitly-typed-arrays-c-programming-guide"></a><span data-ttu-id="30733-102">Niejawnie wpisane tablice (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="30733-102">Implicitly Typed Arrays (C# Programming Guide)</span></span>
+# <a name="implicitly-typed-arrays-c-programming-guide"></a><span data-ttu-id="7675f-102">Niejawnie wpisane tablice (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="7675f-102">Implicitly Typed Arrays (C# Programming Guide)</span></span>
 
-<span data-ttu-id="30733-103">Można utworzyć tablicę niejawnie wpisany, w którym Typ wystąpienia tablicy jest wnioskowany z elementami określonymi w inicjatorze tablicy.</span><span class="sxs-lookup"><span data-stu-id="30733-103">You can create an implicitly-typed array in which the type of the array instance is inferred from the elements specified in the array initializer.</span></span> <span data-ttu-id="30733-104">Reguły dotyczące niejawnie typizowanej zmiennej dotyczą również niejawnie wpisane tablice.</span><span class="sxs-lookup"><span data-stu-id="30733-104">The rules for any implicitly-typed variable also apply to implicitly-typed arrays.</span></span> <span data-ttu-id="30733-105">Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span><span class="sxs-lookup"><span data-stu-id="30733-105">For more information, see [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>  
+<span data-ttu-id="7675f-103">Można utworzyć tablicę niejawnie wpisany, w którym Typ wystąpienia tablicy jest wnioskowany z elementami określonymi w inicjatorze tablicy.</span><span class="sxs-lookup"><span data-stu-id="7675f-103">You can create an implicitly-typed array in which the type of the array instance is inferred from the elements specified in the array initializer.</span></span> <span data-ttu-id="7675f-104">Reguły dotyczące niejawnie typizowanej zmiennej dotyczą również niejawnie wpisane tablice.</span><span class="sxs-lookup"><span data-stu-id="7675f-104">The rules for any implicitly-typed variable also apply to implicitly-typed arrays.</span></span> <span data-ttu-id="7675f-105">Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span><span class="sxs-lookup"><span data-stu-id="7675f-105">For more information, see [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>  
   
- <span data-ttu-id="30733-106">Niejawnie wpisane tablice są zazwyczaj używane w wyrażeniach zapytań oraz typy anonimowe i inicjatory obiektów i kolekcji.</span><span class="sxs-lookup"><span data-stu-id="30733-106">Implicitly-typed arrays are usually used in query expressions together with anonymous types and object and collection initializers.</span></span>  
+ <span data-ttu-id="7675f-106">Niejawnie wpisane tablice są zazwyczaj używane w wyrażeniach zapytań oraz typy anonimowe i inicjatory obiektów i kolekcji.</span><span class="sxs-lookup"><span data-stu-id="7675f-106">Implicitly-typed arrays are usually used in query expressions together with anonymous types and object and collection initializers.</span></span>  
   
- <span data-ttu-id="30733-107">W poniższych przykładach pokazano, jak utworzyć tablicę niejawnie wpisany:</span><span class="sxs-lookup"><span data-stu-id="30733-107">The following examples show how to create an implicitly-typed array:</span></span>  
+ <span data-ttu-id="7675f-107">W poniższych przykładach pokazano, jak utworzyć tablicę niejawnie wpisany:</span><span class="sxs-lookup"><span data-stu-id="7675f-107">The following examples show how to create an implicitly-typed array:</span></span>  
   
  [!code-csharp[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_1.cs)]  
   
- <span data-ttu-id="30733-108">W poprzednim przykładzie należy zauważyć, że z niejawnie wpisane tablice żadne nawiasy kwadratowe są używane po lewej stronie instrukcji inicjowania.</span><span class="sxs-lookup"><span data-stu-id="30733-108">In the previous example, notice that with implicitly-typed arrays, no square brackets are used on the left side of the initialization statement.</span></span> <span data-ttu-id="30733-109">Należy zauważyć, że Tablice nieregularne są inicjowane za pomocą `new []` podobnie jak w przypadku tablic jednego wymiaru.</span><span class="sxs-lookup"><span data-stu-id="30733-109">Note also that jagged arrays are initialized by using `new []` just like single-dimension arrays.</span></span>  
+ <span data-ttu-id="7675f-108">W poprzednim przykładzie należy zauważyć, że z niejawnie wpisane tablice żadne nawiasy kwadratowe są używane po lewej stronie instrukcji inicjowania.</span><span class="sxs-lookup"><span data-stu-id="7675f-108">In the previous example, notice that with implicitly-typed arrays, no square brackets are used on the left side of the initialization statement.</span></span> <span data-ttu-id="7675f-109">Należy zauważyć, że Tablice nieregularne są inicjowane za pomocą `new []` podobnie jak w przypadku tablic jednego wymiaru.</span><span class="sxs-lookup"><span data-stu-id="7675f-109">Note also that jagged arrays are initialized by using `new []` just like single-dimension arrays.</span></span>  
   
-## <a name="implicitly-typed-arrays-in-object-initializers"></a><span data-ttu-id="30733-110">Niejawnie wpisane tablice w inicjatorach obiektu</span><span class="sxs-lookup"><span data-stu-id="30733-110">Implicitly-typed Arrays in Object Initializers</span></span>
+## <a name="implicitly-typed-arrays-in-object-initializers"></a><span data-ttu-id="7675f-110">Niejawnie wpisane tablice w inicjatorach obiektu</span><span class="sxs-lookup"><span data-stu-id="7675f-110">Implicitly-typed Arrays in Object Initializers</span></span>
 
- <span data-ttu-id="30733-111">Podczas tworzenia typu anonimowego, które zawiera tablicę tablicy musi być wpisana niejawnie w inicjatorze obiektu typu.</span><span class="sxs-lookup"><span data-stu-id="30733-111">When you create an anonymous type that contains an array, the array must be implicitly typed in the type's object initializer.</span></span> <span data-ttu-id="30733-112">W poniższym przykładzie `contacts` jest niejawnie wpisany tablicą typów anonimowych, z których każdy zawiera tablicę o nazwie `PhoneNumbers`.</span><span class="sxs-lookup"><span data-stu-id="30733-112">In the following example, `contacts` is an implicitly-typed array of anonymous types, each of which contains an array named `PhoneNumbers`.</span></span> <span data-ttu-id="30733-113">Należy pamiętać, że `var` — słowo kluczowe nie jest używany w inicjatorach obiektów.</span><span class="sxs-lookup"><span data-stu-id="30733-113">Note that the `var` keyword is not used inside the object initializers.</span></span>  
+ <span data-ttu-id="7675f-111">Podczas tworzenia typu anonimowego, które zawiera tablicę tablicy musi być wpisana niejawnie w inicjatorze obiektu typu.</span><span class="sxs-lookup"><span data-stu-id="7675f-111">When you create an anonymous type that contains an array, the array must be implicitly typed in the type's object initializer.</span></span> <span data-ttu-id="7675f-112">W poniższym przykładzie `contacts` jest niejawnie wpisany tablicą typów anonimowych, z których każdy zawiera tablicę o nazwie `PhoneNumbers`.</span><span class="sxs-lookup"><span data-stu-id="7675f-112">In the following example, `contacts` is an implicitly-typed array of anonymous types, each of which contains an array named `PhoneNumbers`.</span></span> <span data-ttu-id="7675f-113">Należy pamiętać, że `var` — słowo kluczowe nie jest używany w inicjatorach obiektów.</span><span class="sxs-lookup"><span data-stu-id="7675f-113">Note that the `var` keyword is not used inside the object initializers.</span></span>  
   
  [!code-csharp[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_2.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="30733-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="30733-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7675f-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7675f-114">See Also</span></span>
 
-- [<span data-ttu-id="30733-115">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="30733-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="30733-116">Jawnie wpisane zmienne lokalne</span><span class="sxs-lookup"><span data-stu-id="30733-116">Implicitly Typed Local Variables</span></span>](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)  
-- [<span data-ttu-id="30733-117">Tablice</span><span class="sxs-lookup"><span data-stu-id="30733-117">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
-- [<span data-ttu-id="30733-118">Typy anonimowe</span><span class="sxs-lookup"><span data-stu-id="30733-118">Anonymous Types</span></span>](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
-- [<span data-ttu-id="30733-119">Inicjatory obiektów i kolekcji</span><span class="sxs-lookup"><span data-stu-id="30733-119">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [<span data-ttu-id="30733-120">var</span><span class="sxs-lookup"><span data-stu-id="30733-120">var</span></span>](../../../csharp/language-reference/keywords/var.md)  
-- [<span data-ttu-id="30733-121">Wyrażenia zapytań LINQ</span><span class="sxs-lookup"><span data-stu-id="30733-121">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [<span data-ttu-id="7675f-115">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="7675f-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="7675f-116">Jawnie wpisane zmienne lokalne</span><span class="sxs-lookup"><span data-stu-id="7675f-116">Implicitly Typed Local Variables</span></span>](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)  
+- [<span data-ttu-id="7675f-117">Tablice</span><span class="sxs-lookup"><span data-stu-id="7675f-117">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
+- [<span data-ttu-id="7675f-118">Typy anonimowe</span><span class="sxs-lookup"><span data-stu-id="7675f-118">Anonymous Types</span></span>](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [<span data-ttu-id="7675f-119">Inicjatory obiektów i kolekcji</span><span class="sxs-lookup"><span data-stu-id="7675f-119">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [<span data-ttu-id="7675f-120">var</span><span class="sxs-lookup"><span data-stu-id="7675f-120">var</span></span>](../../../csharp/language-reference/keywords/var.md)  
+- [<span data-ttu-id="7675f-121">Wyrażenia zapytań LINQ</span><span class="sxs-lookup"><span data-stu-id="7675f-121">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)

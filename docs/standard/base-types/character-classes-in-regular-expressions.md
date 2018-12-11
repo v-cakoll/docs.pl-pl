@@ -1,5 +1,6 @@
 ---
-title: Klasy znaków w wyrażeniach regularnych
+title: Klasy znaków w wyrażeniach regularnych programu .NET
+description: Dowiedz się, jak używać klas znaków do reprezentowania zestawu znaków w wyrażeniach regularnych programu .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1a40c5c178f87bb5037ce356d345a2f3db997a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: seodec18
+ms.openlocfilehash: c82d4aac75fb31ec7741338fde046daefc754394
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180153"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131472"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
 <a name="Top"></a> Klasa znaków definiuje zestaw znaków, z którego każdy jeden może wystąpić w ciągu wejściowym, aby dopasowanie zakończyło się sukcesem. Język wyrażeń regularnych w programie .NET obsługuje następujące klasy znaków:  

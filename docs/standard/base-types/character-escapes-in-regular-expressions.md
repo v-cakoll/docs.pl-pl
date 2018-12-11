@@ -1,5 +1,6 @@
 ---
-title: Znaki specjalne w wyrażeniach regularnych
+title: Znaki specjalne w wyrażeniach regularnych programu .NET
+description: Więcej informacji na temat znaki specjalne i znaki ucieczki w wyrażeniach regularnych programu .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837170"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152369"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Znaki specjalne w wyrażeniach regularnych
 Ukośnik odwrotny (\\) w wyrażeniu regularnym wskazuje jedną z następujących czynności:  
@@ -50,7 +52,7 @@ Ukośnik odwrotny (\\) w wyrażeniu regularnym wskazuje jedną z następujących
 |`\` *nnn*|Dopasowuje znak ASCII gdzie *nnn* składa się z dwóch lub trzech cyfr, które reprezentują ósemkowy kod znaku. Na przykład `\040` reprezentuje znak spacji. Ta konstrukcja jest interpretowany jako odwołanie wsteczne, jeśli ma on tylko jedna cyfra (na przykład `\2`) lub jeśli odnosi się do liczby grupa przechwytywania. (Zobacz [konstrukcje dopasowywania wstecznego](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
 |`\x` *nn*|Dopasowuje znak ASCII gdzie *nn* jest dwucyfrową szesnastkowego kodu znaku.|  
 |`\c` *X*|Dopasowuje znak kontrolny ASCII, gdzie X jest literą znaku kontrolnego. Na przykład `\cC` to CTRL-C.|  
-|`\u` *nnnn*|Dopasowuje jednostkę kodu UTF-16, którego wartością jest *nnnn* szesnastkowe. **Uwaga:** znak ucieczki Perl 5, który jest używany do określenia Unicode nie jest obsługiwana przez platformy .NET. Znak ucieczki Perl 5 ma postać `\x{` *####* `…}`, gdzie *####* `…` to seria cyfr szesnastkowych. Zamiast tego należy użyć `\u` *nnnn*.|  
+|`\u` *nnnn*|Dopasowuje jednostkę kodu UTF-16, którego wartością jest *nnnn* szesnastkowe. **Uwaga:**  Znak ucieczki Perl 5, który jest używany do określenia Unicode nie jest obsługiwana przez platformy .NET. Znak ucieczki Perl 5 ma postać `\x{` *####* `…}`, gdzie *####* `…` to seria cyfr szesnastkowych. Zamiast tego należy użyć `\u` *nnnn*.|  
 |`\`|Gdy następuje znak, który nie jest rozpoznawany jako znak ucieczki, dopasowuje ten znak. Na przykład `\*` dopasowuje znak gwiazdki (*) i jest taka sama jak `\x2A`.|  
   
 ## <a name="an-example"></a>Przykład  

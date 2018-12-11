@@ -1,5 +1,6 @@
 ---
-title: Śledzenie wsteczne w wyrażeniach regularnych
+title: Śledzenie wsteczne w wyrażeniach regularnych programu .NET
+description: Dowiedz się, jak kontrolować śledzenie wsteczne w dopasowywania do wzorca wyrażenia regularnego.
 ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,13 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.custom: seodec18
+ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297364"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130094"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
 <a name="top"></a> Wycofywanie ma miejsce, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), i aparat wyrażeń regularnych wraca do poprzedniego zapisanego stanu w celu kontynuowania jego wyszukiwane dopasowania. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
@@ -133,7 +135,7 @@ ms.locfileid: "52297364"
 > [!IMPORTANT]
 >  Zalecane jest, aby zawsze ustawić interwał limitu czasu, jeśli w wyrażeniu regularnym jest stosowane wycofywanie.  
   
- A <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> wyjątku wskazuje, że aparat wyrażeń regularnych nie mógł znaleźć dopasowania w interwale określonym limicie czasu, ale nie wskazuje przyczyny zgłoszenia wyjątku. Przyczyną może być nadmierne wycofywanie, ale możliwe jest też, że ustawiono zbyt krótki interwał limitu czasu w stosunku do obciążenia systemu w chwili zgłoszenia wyjątku. Podczas obsługi tego wyjątku można określić, że nie mają być wykonywane kolejne porównania z ciągiem wejściowym, albo zwiększyć interwał limitu czasu i ponowić próbę wykonania operacji dopasowywania.  
+ A <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> wyjątku wskazuje, że aparat wyrażeń regularnych nie mógł znaleźć dopasowania w ciągu określonego interwału limitu czasu, ale nie wskazuje przyczyny zgłoszenia wyjątku. Przyczyną może być nadmierne wycofywanie, ale możliwe jest też, że ustawiono zbyt krótki interwał limitu czasu w stosunku do obciążenia systemu w chwili zgłoszenia wyjątku. Podczas obsługi tego wyjątku można określić, że nie mają być wykonywane kolejne porównania z ciągiem wejściowym, albo zwiększyć interwał limitu czasu i ponowić próbę wykonania operacji dopasowywania.  
   
  Na przykład, poniższy kod wywoła <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> Konstruktor do tworzenia wystąpienia <xref:System.Text.RegularExpressions.Regex> obiekt z wartością limitu czasu równą jedną sekundę. Definicję wzorca wyrażenia regularnego `(a+)+$`, który dopasowuje co najmniej jeden sekwencje co najmniej jeden znaki "a" na końcu wiersza, podlega nadmiernemu wycofywaniu. Jeśli <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> jest zgłaszany, przykład zwiększa wartość limitu czasu do maksymalnego interwału równego trzy sekundy. Po upływie tego czasu nie będą już podejmowane próby dopasowania wzorca.  
   

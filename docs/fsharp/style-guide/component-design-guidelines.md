@@ -74,7 +74,7 @@ Poniższa tabela jest zgodna z konwencjami nazewnictwa i wielkości liter, platf
 |-----------|------|------|----------|-------|
 | Typów konkretnych | PascalCase | Rzeczownik / przymiotników | Lista, Double, złożone | Konkretne typy są struktur, klas, wyliczeń, delegatów, rekordy i Unii. Chociaż nazwy typów są zazwyczaj pisane małymi literami w OCaml, F# przyjęła schemat nazewnictwa platformy .NET dla typów.
 | biblioteki DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Tagi Unii     | PascalCase | Rzeczownik | Niektóre z nich, Dodaj sukces | Nie używaj prefiksu w publicznych interfejsów API. Opcjonalnie użyj prefiksu, gdy wewnętrznych, takich jak "wpisz zespołów = TAlpha | TBeta | TDelta. " |
+| Tagi Unii     | PascalCase | Rzeczownik | Niektóre z nich, Dodaj sukces | Nie używaj prefiksu w publicznych interfejsów API. Opcjonalnie użyj prefiksu, gdy wewnętrznych, takich jak `wpisz zespołów = TAlpha | TBeta | TDelta.` |
 | Zdarzenie          | PascalCase | zlecenia | ValueChanged / ValueChanging |  |
 | Wyjątki     | PascalCase |      | Klasa WebException | Nazwa powinna kończyć "Wyjątki". |
 | Pole          | PascalCase | Rzeczownik | CurrentName  | |

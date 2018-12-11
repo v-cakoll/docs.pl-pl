@@ -2,12 +2,12 @@
 title: Konfigurowanie usług WCF w kodzie
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: abd75e514d698e73c2297a5dc2e511f89f0534b1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 96bd9af7fcf22789b95b2efabbed6a19401b2d97
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582440"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242415"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurowanie usług WCF w kodzie
 Windows Communication Foundation (WCF) umożliwia deweloperom konfigurowanie usług za pomocą plików konfiguracji lub kodu.  Pliki konfiguracyjne są przydatne, gdy usługa musi zostać skonfigurowane po wdrożeniu. Korzystając z plików konfiguracji, specjalistów IT wystarczy zaktualizować plik konfiguracji, nie ponownej kompilacji jest wymagana. Pliki konfiguracyjne, może jednak być złożone i trudne w utrzymaniu. Brak obsługi debugowania plików konfiguracji i elementy konfiguracji odwołują się nazwy, co sprawia, że pliki konfiguracji tworzenia podatne na błędy i trudne. WCF umożliwia również skonfigurowanie usługi w kodzie. We wcześniejszych wersjach, konfigurowanie usług WCF (4.0 i starszych) w kodzie jest łatwe w scenariuszach Self-Hosted <xref:System.ServiceModel.ServiceHost> klasa dozwolona można skonfigurować punkty końcowe i zachowania przed wywołaniem ServiceHost.Open. W scenariuszach hostowanych w sieci web, ale nie masz bezpośredni dostęp do <xref:System.ServiceModel.ServiceHost> klasy. Aby skonfigurować sieci web hostowanych usług, które są wymagane do utworzenia `System.ServiceModel.ServiceHostFactory` utworzonego <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać wszelkie wymagane konfiguracji. Począwszy od .NET 4.5 programu WCF zapewnia łatwiejszy sposób skonfigurować zarówno może być samodzielnie hostowane i sieci web hostowanej usługi w kodzie.  
@@ -38,7 +38,7 @@ public class Service1 : IService1
   
         public string GetData(int value)  
         {  
-            return string.Format("You entered: {0}", value);  
+            return $"You entered: {value}";
         }  
   
         public CompositeType GetDataUsingDataContract(CompositeType composite)  
@@ -101,7 +101,7 @@ public class Service1 : IService1
  [Aktywacja oparta na konfiguracji w usługach IIS i WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
  [Konfiguracja i obsługa metadanych](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  
  [Konfiguracja](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
- [Instrukcje: określanie powiązania usługi w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
- [Instrukcje: tworzenie punktu końcowego usługi w konfiguracji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
- [Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [Instrukcje: określanie powiązań klienta w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+ [Instrukcje: Określanie wiązań usługi w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
+ [Instrukcje: Tworzenie punktu końcowego usługi w konfiguracji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Instrukcje: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Instrukcje: Określanie wiązania klienta w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

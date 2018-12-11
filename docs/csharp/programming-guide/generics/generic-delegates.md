@@ -1,16 +1,17 @@
 ---
-title: Delegaty ogólne (Przewodnik programowania w języku C#)
+title: Delegaty ogólne — C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 7596ace0ea404cc345d73c0979fa7bd03a26b047
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 56e715aa0be91c250e243a3a37195e7ee037de82
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857539"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241077"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Delegaty ogólne (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) można zdefiniować własne parametry typu. Kod, że odwołania Delegat ogólny można określić argument typu w celu utworzenia zamknięte skonstruowanego typu, podobnie jak podczas tworzenia wystąpienia klasy ogólnej lub wywoływania metody rodzajowej, jak pokazano w poniższym przykładzie:  
@@ -41,5 +42,5 @@ A [delegować](../../../csharp/language-reference/keywords/delegate.md) można z
 - [Metody ogólne](../../../csharp/programming-guide/generics/generic-methods.md)  
 - [Klasy ogólne](../../../csharp/programming-guide/generics/generic-classes.md)  
 - [Interfejsy ogólne](../../../csharp/programming-guide/generics/generic-interfaces.md)  
-- [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)  
 - [Typy ogólne](~/docs/standard/generics/index.md)

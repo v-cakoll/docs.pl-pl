@@ -1,5 +1,6 @@
 ---
-title: '&lt;Uwagi&gt; (C# Programming Guide)'
+title: '&lt;Uwagi&gt; - C# Programming Guide'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - remarks
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: 10d8dbe7862514ff2417054b6c1c5e9ef15e20ff
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75324cbe380b577481b5e8e03f486aa3ef0d5996
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514204"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243793"
 ---
 # <a name="ltremarksgt-c-programming-guide"></a>&lt;Uwagi&gt; (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  

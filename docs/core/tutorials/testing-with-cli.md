@@ -4,12 +4,12 @@ description: W tym samouczku wyjaśniono, jak organizowanie i testowanie projekt
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: 960d6e98f39b1d1d07c980c021b1029201f1f631
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169663"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242726"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 
@@ -103,19 +103,19 @@ Meow!
 
 `NewTypes` Projektu w miejscu, a ułożone ją, przechowując typy związane z zwierzęta w folderze. Następnie utwórz projekt testu i zacząć pisać testy z [xUnit](https://xunit.github.io/) struktury testowej. Testy jednostkowe umożliwia automatyczne sprawdzenie dostępności zachowanie pet typów, aby upewnić się, że są one działających prawidłowo.
 
-Tworzenie *test* folder z *NewTypesTests* folder znajdujący się w nim. W wierszu polecenia z *NewTypesTests* folderu wykonaj `dotnet new xunit`. To tworzy dwa pliki: *NewTypesTests.csproj* i *UnitTest1.cs*.
+Przejdź z powrotem do *src* folder i utworzyć *test* folder z *NewTypesTests* folder znajdujący się w nim. W wierszu polecenia z *NewTypesTests* folderu wykonaj `dotnet new xunit`. To tworzy dwa pliki: *NewTypesTests.csproj* i *UnitTest1.cs*.
 
 Projekt testowy nie może obecnie testowanie typów w `NewTypes` i wymaga odwołania projektu do `NewTypes` projektu. Aby dodać odwołanie do projektu, należy użyć [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
 
 ```
-dotnet add reference ../../src/NewTypes/NewTypes.csproj
+dotnet add reference ../../NewTypes/NewTypes.csproj
 ```
 
-Istnieje również opcja ręcznego dodawania odwołania projektu, dodając `<ItemGroup>` węzeł *NewTypesTests.csproj* pliku:
+Lub masz również możliwość ręcznego dodawania odwołania projektu, dodając `<ItemGroup>` węzeł *NewTypesTests.csproj* pliku:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 

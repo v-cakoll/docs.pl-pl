@@ -3,12 +3,12 @@ title: Zapis w bezpieczny i skuteczny C# kodu
 description: Najnowsze ulepszenia C# języka umożliwiają pisanie weryfikowalny kod bezpieczny, że wydajność była poprzednio skojarzona z niebezpieczny kod.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 2f0bd616a7af6e23a93e18240e30749ed7d1e32c
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 35d9cf89d8ba2ddb673554a76eb33ae59b178b42
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "50201590"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245686"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Zapis w bezpieczny i skuteczny C# kodu
 
@@ -97,7 +97,7 @@ public struct Point3D
 {
     private static Point3D origin = new Point3D(0,0,0);
 
-    public ref readonly Point3D Origin => ref origin;
+    public static ref readonly Point3D Origin => ref origin;
 
     // other members removed for space
 }
@@ -179,7 +179,7 @@ Zamiast tego, jeśli obliczeń odległość używa struktury niezmienne `Readonl
 
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
-Kompilator generuje kod bardziej efektywne, gdy wywołujesz członkowie `readonly struct`: `this` odwołanie, zamiast kopii receiver, jest zawsze `in` parametr przekazywany przez odwołanie do elementu członkowskiego. Tego rodzaju optymalizacji zapisywanie, kopiowanie, gdy używasz `readonly struct` jako `in` argumentu.
+Kompilator generuje kod bardziej efektywne, gdy wywołujesz członkowie `readonly struct`: `this` Odwołanie, zamiast kopii receiver, jest zawsze `in` parametr przekazywany przez odwołanie do elementu członkowskiego. Tego rodzaju optymalizacji zapisywanie, kopiowanie, gdy używasz `readonly struct` jako `in` argumentu.
 
 Możesz zobaczyć program przykładu, który ilustruje różnice wydajności przy użyciu [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) w naszym [repozytorium przykładów](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) w witrynie GitHub. Porównuje się sukcesem, struktura mutable według wartości i według odwołania przekazywanie struktury niezmienne według wartości i według odwołania. Korzystanie z niezmiennego struktury i — dostęp próbny przez odwołanie jest najszybszy.
 

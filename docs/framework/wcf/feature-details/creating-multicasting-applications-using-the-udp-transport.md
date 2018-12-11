@@ -2,12 +2,12 @@
 title: Tworzenie aplikacji multiemisji za pomocą transportu UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324756"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241856"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Tworzenie aplikacji multiemisji za pomocą transportu UDP
 Aplikacje korzystające z multiemisji wysyłać małych dużej liczby odbiorców w tym samym czasie, bez konieczności ustanawiania połączeń punkt-punkt. Szczególnym takich aplikacji to szybkość niezawodności. Innymi słowy jest niezwykle ważne wysłać aktualnych danych niż aby upewnić się, że faktycznie odebraniu szczegółowy komunikat o błędzie. Usługi WCF teraz obsługuje pisanie aplikacji multiemisji za pomocą <xref:System.ServiceModel.UdpBinding>. Tego transportu jest przydatne w scenariuszach, gdzie usługa musi wysyłać małych komunikatów do wielu klientów jednocześnie. Aplikacja giełdowej jest przykładem takiej usługi.  
@@ -15,7 +15,7 @@ Aplikacje korzystające z multiemisji wysyłać małych dużej liczby odbiorców
 ## <a name="implementing-a-multicast-application"></a>Wdrażanie aplikacji multiemisji  
  Aby wdrożyć aplikację multiemisji, definiowanie kontraktu usługi i dla poszczególnych składników oprogramowania, wymagającego odpowiada na komunikaty multiemisji, należy zaimplementować kontrakt usługi. Na przykład aplikacja giełdowej może definiowanie kontraktu usługi:  
   
-```  
+```csharp
 // Shared contracts between the client and the service  
 [ServiceContract]
 interface IStockTicker
@@ -43,7 +43,7 @@ class StockInfo
   
  Każda aplikacja, która chce odbierać komunikaty multiemisji musi być hostem usługi, który udostępnia ten interfejs.  Na przykład poniżej przedstawiono przykładowy kod, który ilustruje, jak odbierać komunikaty multiemisji:  
   
-```  
+```csharp
 // Service Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 // Binding
@@ -63,7 +63,7 @@ Console.ReadLine();
   
  W tego rodzaju scenariusza jest klient, który faktycznie wysyła komunikaty multiemisji. Każda usługa, która nasłuchuje na prawidłowy adres protokołu UDP będzie odbierać komunikaty multiemisji. Poniżej przedstawiono przykładowy klient, który wysyła komunikaty multiemisji:  
   
-```  
+```csharp
 // Multicast Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 
@@ -82,7 +82,7 @@ while (true)
 {
     // This will continue to mulicast stock information
     proxy.SendStockInfo(GetStockInfo());
-    Console.WriteLine(String.Format("sent stock info at {0}", DateTime.Now));
+    Console.WriteLine($"sent stock info at {DateTime.Now}");
     // Wait for one second before sending another update
     System.Threading.Thread.Sleep(new TimeSpan(0, 0, 1));
 }
@@ -96,7 +96,7 @@ while (true)
 ### <a name="two-way-multicast-messaging"></a>Dwukierunkowe komunikaty multiemisji  
  Komunikaty multiemisji są zazwyczaj jednokierunkowe, UdpBinding obsługuje żądanie/nietypizowana odpowiedź wymianę komunikatów. Komunikaty wysyłane za pomocą transportu UDP zawierają zarówno od adresów. Należy zachować ostrożność podczas przy użyciu adresu From, ponieważ może to być złośliwie zmienione na trasie.  Adres można sprawdzić, używając następującego kodu:  
   
-```  
+```csharp
 if (address.AddressFamily == AddressFamily.InterNetwork)
 {
     // IPv4

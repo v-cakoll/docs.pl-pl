@@ -1,19 +1,20 @@
 ---
-title: 'Porady: wykonywanie czyszczenia kodu za pomocą instrukcji finally (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Wykonywanie czyszczenia kodu za pomocą instrukcji finally - C# Programming Guide'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - try/finally blocks [C#]
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 47e9bb368deb077ef10ce474683d81e0cb56cef8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 67ef164232a27b8110dfcd108a0345d9d63e8f91
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183788"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244950"
 ---
-# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Porady: wykonywanie czyszczenia kodu za pomocą instrukcji finally (Przewodnik programowania w języku C#)
+# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Instrukcje: Wykonywanie czyszczenia kodu za pomocą instrukcji finally (C# Programming Guide)
 Celem `finally` instrukcji jest zapewnienie, niezbędne czyszczenia obiektów, zazwyczaj te obiekty, które są zawierający zasoby zewnętrzne, następuje natychmiast, nawet wtedy, gdy zostanie zgłoszony wyjątek. Przykładem takiego oczyszczania jest wywołanie <xref:System.IO.Stream.Close%2A> na <xref:System.IO.FileStream> natychmiast po ich użyciu, zamiast czekać, aż obiekt jest bezużyteczne przez środowisko uruchomieniowe języka wspólnego, w następujący sposób:  
   
  [!code-csharp[csProgGuideExceptions#16](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_1.cs)]  

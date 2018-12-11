@@ -1,15 +1,16 @@
 ---
-title: Wyjątki generowane przez kompilator (Przewodnik programowania w języku C#)
+title: Wyjątki — generowane przez kompilator C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: 476f5940b0b93d0c28bcd2bc9ca73147bc7bf3eb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e21b75e5b7e338bda54ca00abaa733775865fdb9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749969"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238393"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Wyjątki generowane przez kompilator (Przewodnik programowania w języku C#)
 Niektóre wyjątki są zgłaszane w automatycznie przez .NET Framework środowisko uruchomieniowe języka wspólnego (CLR), gdy podstawowe operacje kończą się niepowodzeniem. W poniższej tabeli wymieniono te wyjątki i ich warunków błędów.  

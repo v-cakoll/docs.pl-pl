@@ -1,5 +1,6 @@
 ---
-title: globalne kontekstowe słowo kluczowe (odwołanie w C#)
+title: Global — słowo kluczowe kontekstowe - C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - global
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 8932c16a-6959-42c2-86e7-2c4221ab788b
-ms.openlocfilehash: 837245e31a9a795aa2f13cfc6c33fefb6402801d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b9273feb38b14dce61facc0f59b0890c431b9a7a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664478"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240798"
 ---
 # <a name="global-c-reference"></a>global (odwołanie w C#)
 
-`global` Kontekstowego słowa kluczowego, gdy znajduje się przed [:: operator](../operators/namespace-alias-qualifer.md), odwołuje się do globalnej przestrzeni nazw, która jest domyślny obszar nazw dla dowolnego programu C#, a w przeciwnym razie jest bez nazwy. Aby uzyskać więcej informacji, zobacz [porady: użycie globalnych aliasów Namespace](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
+`global` Kontekstowego słowa kluczowego, gdy znajduje się przed [:: operator](../operators/namespace-alias-qualifer.md), odwołuje się do globalnej przestrzeni nazw, która jest domyślny obszar nazw dla dowolnego programu C#, a w przeciwnym razie jest bez nazwy. Aby uzyskać więcej informacji, zobacz [jak: Użycie globalnych aliasów Namespace](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
 
 ## <a name="example"></a>Przykład
 

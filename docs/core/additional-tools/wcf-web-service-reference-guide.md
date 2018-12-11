@@ -2,15 +2,14 @@
 title: Dodaj odwołanie do usługi sieci Web WCF
 description: Przegląd Microsoft WCF Web Service Reference Provider narzędzie które dodaje funkcje dla projektów .NET Core i ASP.NET Core, podobne do Dodaj odwołanie do usługi dla projektów programu .NET Framework.
 author: mlacouture
-ms.author: johalex
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3e1080dcb65eb3b08df44b36274e3da8d943982b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168627"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245577"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Użyj narzędzia dostawcy odwołanie do usługi sieci Web WCF
 

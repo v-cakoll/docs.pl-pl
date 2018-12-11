@@ -1,16 +1,16 @@
 ---
 title: Testowanie jednostek w .NET Core i .NET Standard
-description: Testowanie jednostek w projektach .NET Core i .NET Standard.
+description: Ten artykuł zawiera krótkie omówienie testów jednostkowych dla projektów .NET Core i .NET Standard.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170018"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243985"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testowanie jednostek w .NET Core i .NET Standard
 
@@ -30,6 +30,8 @@ Ponadto należy pamiętać, są najlepsze rozwiązania dotyczące pisania testó
 > Poniżej zespołu ASP.NET [tych konwencji](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) pomagające deweloperom pozwoli uzyskać dobrą nazwy metod i klas testów.
 
 Nie należy wprowadzać zależności w infrastrukturze podczas pisania testów jednostkowych. Te upewnij testy powolne i kruchy i powinna być zarezerwowana dla testów integracji. Można uniknąć tych zależności w aplikacji, postępując zgodnie z [jawne zależności zasady](https://deviq.com/explicit-dependencies-principle/) i przy użyciu [wstrzykiwanie zależności](/aspnet/core/fundamentals/dependency-injection). Testy jednostkowe można również przechowywać w osobnym projekcie z testów integracji. Dzięki temu projektu testu jednostkowego nie ma odwołań do lub zależności w pakietach infrastruktury.
+
+## <a name="next-steps"></a>Następne kroki
 
 Więcej informacji na temat testowanie jednostek w projektach .NET Core:
 

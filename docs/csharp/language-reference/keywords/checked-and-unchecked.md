@@ -1,5 +1,6 @@
 ---
-title: checked i unchecked (odwołanie w C#)
+title: Checked i Unchecked — C# odwołania
+ms.custom: seodec18
 ms.date: 05/15/2018
 helpviewer_keywords:
 - operators [C#], checked and unchecked
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 04f603905690497bcd4249f73c7296be2c269a60
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ba4ddd7fa87eb200de0de3aea6f0bc056a40f0e5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741935"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235811"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>checked i unchecked (odwołanie w C#)
 Instrukcje języka C# można wykonać w kontekście zaznaczony lub niezaznaczony. W kontekście sprawdzanym przepełnienie arytmetyczne zgłasza wyjątek. W kontekście niesprawdzanym przepełnienie arytmetyczne jest ignorowana, a wynik został obcięty przez odrzucenie wszelkich najbardziej znaczących bitów, które nie mieszczą się w typie docelowym.  

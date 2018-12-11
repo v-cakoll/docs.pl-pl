@@ -1,5 +1,6 @@
 ---
-title: Explicit — słowo kluczowe (odwołanie w C#)
+title: Explicit — słowo kluczowe - C# odwołania
+ms.custom: seodec18
 ms.date: 08/24/2018
 f1_keywords:
 - explicit_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 3567a2c5aa549aa3141ed59c3e93e7b07975da70
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b5e03ffa0f956d7404c7c41f04aef1bfd8769df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525464"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238562"
 ---
 # <a name="explicit-c-reference"></a>explicit (odwołanie w C#)
 
@@ -55,5 +56,5 @@ W poniższym przykładzie zdefiniowano struktury, `Digit`, który reprezentuje p
 - [Słowa kluczowe języka C#](index.md)  
 - [implicit](implicit.md)  
 - [Operator (odwołanie w C#)](operator.md)  
-- [Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Instrukcje: Implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
 - [Tworzenie łańcucha zdefiniowanych przez użytkownika Konwersje jawne w języku C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  

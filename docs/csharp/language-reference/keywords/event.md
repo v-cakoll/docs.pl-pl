@@ -1,5 +1,6 @@
 ---
-title: event (odwołanie w C#)
+title: zdarzenia — C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - event
@@ -9,18 +10,18 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 35a42692bc87da63c69d7ccbce1b49396a84f5a2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: a0729324131c5b3d5c49618c715fc4081af40964
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259704"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240531"
 ---
 # <a name="event-c-reference"></a>event (odwołanie w C#)
 `event` — Słowo kluczowe jest używane do deklarowania zdarzenie w klasie wydawcy.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak zadeklarować i wywołać zdarzenie, które używa <xref:System.EventHandler> jako podstawowego typu delegowanego. Na przykład kompletny kod, który ilustruje również musieli używać ogólnych <xref:System.EventHandler%601> delegować uprawnienia do typu i subskrybować zdarzenie i Utwórz metodę programu obsługi zdarzeń, zobacz [porady: publikowanie zdarzeń tej metody Dostosuj dotyczącymi .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
+ Poniższy przykład pokazuje, jak zadeklarować i wywołać zdarzenie, które używa <xref:System.EventHandler> jako podstawowego typu delegowanego. Na przykład kompletny kod, który ilustruje również musieli używać ogólnych <xref:System.EventHandler%601> delegować uprawnienia do typu i subskrybować zdarzenie i Utwórz metodę programu obsługi zdarzeń, zobacz [jak: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
   
  [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
   
@@ -53,4 +54,4 @@ ms.locfileid: "44259704"
 - [add](../../../csharp/language-reference/keywords/add.md)  
 - [remove](../../../csharp/language-reference/keywords/remove.md)  
 - [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
-- [Porady: łączenie obiektów delegowanych (obiekty delegowane multiemisji)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Instrukcje: Łączenie obiektów delegowanych (obiekty delegowane multiemisji)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

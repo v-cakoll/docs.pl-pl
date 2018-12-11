@@ -1,15 +1,16 @@
 ---
-title: using — Instrukcja (odwołanie w C#)
+title: za pomocą instrukcji - C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: ec4849dda0f28ad1f0e0ebb2c493a33005107db4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9569b04e4d4f7bfca90390bfd803cdd02b3f3632
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500975"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244599"
 ---
 # <a name="using-statement-c-reference"></a>using — Instrukcja (odwołanie w C#)
 Miejsce wygodnej składni, która zapewnia prawidłowe użycie <xref:System.IDisposable> obiektów.  

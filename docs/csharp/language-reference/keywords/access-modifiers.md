@@ -1,15 +1,16 @@
 ---
-title: Modyfikatory dostępu (odwołanie w C#)
+title: Dostęp do modyfikatorów - C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: ff313df9683dbc76bab684ff484b746ad05e065a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0fb435a35b928cb78511d8969f1dfce9f94869eb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988195"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242025"
 ---
 # <a name="access-modifiers-c-reference"></a>Modyfikatory dostępu (odwołanie w C#)
 Modyfikatory dostępu są słowami kluczowymi, używany do określenia deklarowaną dostępność składowej lub typu. Ta sekcja wprowadza modyfikatory dostępu cztery:  
@@ -35,11 +36,11 @@ Modyfikatory dostępu są słowami kluczowymi, używany do określenia deklarowa
   
  Ta sekcja wprowadza również następujące czynności:  
   
--   [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md): za pomocą modyfikatorów dostępu cztery do deklarowania sześciu poziomów ułatwień dostępu.  
+-   [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md): Za pomocą modyfikatorów dostępu cztery do deklarowania sześciu poziomów ułatwień dostępu.  
   
 -   [Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md): Określa, gdzie, w sekcjach program członka mogą być przywoływane.  
   
--   [Ograniczenia dotyczące poziomów ułatwień dostępu przy użyciu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Podsumowanie ograniczenia dotyczące używania zadeklarowana poziomów ułatwień dostępu.  
+-   [Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Podsumowanie ograniczenia dotyczące używania zadeklarowany poziomów ułatwień dostępu.  
   
 ## <a name="see-also"></a>Zobacz też  
 - [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  

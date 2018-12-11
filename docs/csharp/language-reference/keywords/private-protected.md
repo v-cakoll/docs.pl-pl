@@ -1,13 +1,14 @@
 ---
-title: prywatny chroniony (odwołanie w C#)
+title: prywatny chroniony - C# odwołania
+ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 4a4ee999fe932674e854b1428ab33b33bc71d2ad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0b89580b6ff88aafb56d206dd4ee0848507a40b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518454"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240570"
 ---
 # <a name="private-protected-c-reference"></a>prywatny chroniony (odwołanie w C#)
 

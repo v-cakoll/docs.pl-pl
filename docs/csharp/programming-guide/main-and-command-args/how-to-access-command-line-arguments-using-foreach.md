@@ -1,17 +1,18 @@
 ---
-title: 'Porady: uzyskiwanie dostępu do argumentów wiersza poleceń za pomocą instrukcji foreach (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Dostęp do argumentów wiersza polecenia za pomocą foreach - C# Programming Guide'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 89c3e335-3f5b-4e24-8c5a-b8036561fe8a
-ms.openlocfilehash: 811ee09aec7afac70f3f2c2fe5fb002232935028
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79c798bb6ec16fc639d37defc40da5af770e5bba
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511339"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242441"
 ---
-# <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Porady: uzyskiwanie dostępu do argumentów wiersza poleceń za pomocą instrukcji foreach (Przewodnik programowania w języku C#)
+# <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Instrukcje: Dostęp do argumentów wiersza polecenia za pomocą foreach (C# Programming Guide)
 Iterowanie po tablicy na innym sposobem jest użycie [foreach](../../../csharp/language-reference/keywords/foreach-in.md) instrukcji, jak pokazano w poniższym przykładzie. `foreach` Instrukcja może być używana do iteracji przez tablicę, klasy kolekcji .NET Framework lub dowolnej klasy lub struktury, która implementuje <xref:System.Collections.IEnumerable> interfejsu.  
   
 > [!NOTE]
@@ -32,5 +33,5 @@ Iterowanie po tablicy na innym sposobem jest użycie [foreach](../../../csharp/l
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
 - [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Instrukcje: wyświetlanie argumentów wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Instrukcje: Wyświetlanie argumentów wiersza poleceń](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
 - [Main() — zwracane wartości](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

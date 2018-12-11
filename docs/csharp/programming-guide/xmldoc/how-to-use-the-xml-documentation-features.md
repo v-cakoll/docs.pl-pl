@@ -1,18 +1,19 @@
 ---
-title: 'Porady: użycie funkcji dokumentacji XML (C# Programming Guide)'
+title: 'Instrukcje: Użycie funkcji dokumentacji XML — C# Programming Guide'
+ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 48654968e5099164874bae8a00767d12c8fe4582
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: ce14de1f5aef4703a0c9b3868852104dc313e728
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514447"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241671"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>Porady: użycie funkcji dokumentacji XML
+# <a name="how-to-use-the-xml-documentation-features"></a>Instrukcje: Użycie funkcji dokumentacji XML
 
 Poniższy przykład zawiera omówienie podstawowych typów, które zostały opisane.
 

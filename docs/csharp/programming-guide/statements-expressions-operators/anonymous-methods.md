@@ -1,17 +1,18 @@
 ---
-title: Metody anonimowe (Przewodnik programowania w języku C#)
+title: Metody anonimowe - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous methods [C#]
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 26d4b7f46783b9aa41035775928a4fe322d0af44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f7eb71b6208b1991044b770a3c42cc05d8fb721
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506660"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243984"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Metody anonimowe (Przewodnik programowania w języku C#)
 W wersjach C# przed 2.0, jedynym sposobem, aby zadeklarować [delegować](../../../csharp/language-reference/keywords/delegate.md) było jednoczesne używanie [o nazwie metody](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# w wersji 2.0 wprowadzono metod anonimowych, a w języku C# 3.0 i nowszych wyrażenia lambda zastępują metody anonimowe jako preferowanym sposobem pisania kodu wbudowanego. Jednak informacje dotyczące metod anonimowych, w tym temacie dotyczą także wyrażeń lambda. Istnieje jeden przypadek, w którym metoda anonimowa udostępnia funkcje, nie można odnaleźć w wyrażeniach lambda. Metody anonimowe umożliwiają pominąć listę parametrów. Oznacza to, że metoda anonimowa mogą być konwertowane na obiektów delegowanych z różnymi podpisami. Nie jest to możliwe za pomocą wyrażenia lambda. Aby uzyskać konkretne informacje na temat wyrażeń lambda, zobacz [wyrażeń Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -60,7 +61,7 @@ W wersjach C# przed 2.0, jedynym sposobem, aby zadeklarować [delegować](../../
 
 - [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)  
 - [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
 - [Niebezpieczny kod i wskaźniki](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
 - [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  

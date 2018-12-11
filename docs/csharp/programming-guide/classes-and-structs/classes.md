@@ -1,17 +1,18 @@
 ---
-title: Klasy (Przewodnik programowania w języku C#)
+title: Klasy — C# przewodnik programowania
+ms.custom: seodec18
 description: Dowiedz się więcej o typach klasy i jak je utworzyć
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 656e16352e8a88cc2c95483551dd71600f3fec0e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 614b70562954fee99c6de3e66b54bbdd1134f553
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126292"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242295"
 ---
 # <a name="classes-c-programming-guide"></a>Klasy (Przewodnik programowania w języku C#)
 

@@ -1,15 +1,16 @@
 ---
-title: Argumenty wiersza poleceń (Przewodnik programowania w języku C#)
+title: Argumenty wiersza polecenia — C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 5bc73ece0560abfde7966678518ff57a8af3733f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083952"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236079"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumenty wiersza poleceń (Przewodnik programowania w języku C#)
 Możesz wysyłać argumenty do `Main` metoda definiując metodę na jeden z następujących sposobów:  
@@ -71,14 +72,14 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  Podczas uruchamiania aplikacji w programie Visual Studio, można określić argumenty wiersza poleceń w [strona debugowania, Projektant projektu](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Aby uzyskać więcej przykładów użycia argumentów wiersza polecenia, zobacz [jak: utworzyć i używać zestawów przy użyciu wiersza polecenia](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Aby uzyskać więcej przykładów użycia argumentów wiersza polecenia, zobacz [jak: Tworzenie i używanie zestawów przy użyciu wiersza polecenia](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Environment?displayProperty=nameWithType>  
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Instrukcje: wyświetlanie argumentów wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [Instrukcje: uzyskiwanie dostępu do argumentów wiersza polecenia za pomocą instrukcji foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Instrukcje: Wyświetlanie argumentów wiersza poleceń](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Instrukcje: Dostęp do argumentów wiersza polecenia za pomocą foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
 - [Main() — zwracane wartości](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
 - [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)

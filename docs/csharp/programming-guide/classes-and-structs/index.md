@@ -1,5 +1,6 @@
 ---
-title: Klasy i struktury (Przewodnik programowania w języku C#)
+title: Klasy i struktury - C# przewodnik programowania
+ms.custom: seodec18
 description: W tym artykule opisano korzystanie z klas i struktur (struktury) w języku C#.
 ms.date: 01/17/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 8860b519ece14a13e2a3350d299aa67598eadcc2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9380a06b733546cdf5af959868fcdfdcc7189ded
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513988"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242558"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klasy i struktury (Przewodnik programowania w języku C#)
 Klasy i struktury są dwoma podstawowymi konstrukcjami wspólnego systemu typu W.NET Framework. Każdy jest zasadniczo strukturą danych, która hermetyzuje zestaw danych i zachowania, które należą ze sobą jako jednostki logicznej. Dane i zachowania są *członków* klasy lub struktury, i obejmują one metody, właściwości i zdarzenia i tak dalej, zgodnie z opisem w dalszej części tego tematu.  

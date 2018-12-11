@@ -1,5 +1,6 @@
 ---
-title: 'Porady: deklarowanie właściwości odczyt/zapis (C# Programming Guide) oraz'
+title: 'Instrukcje: Deklarowanie i użycie właściwości odczyt/zapis - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 77db2841d6ef9af21d38736f39e6041699ca13d5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 348fcf6605030396095a2d94970ffe46e8d19357
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180265"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241843"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Porady: deklarowanie właściwości odczyt/zapis (C# Programming Guide) oraz
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Instrukcje: Deklarowanie i użycie właściwości odczyt/zapis (C# Programming Guide)
 Właściwości zapewniają wygodne publiczne elementy członkowskie danych bez ryzyka związane z niechronionych, niekontrolowane i niezweryfikowanych dostęp do danych obiektu. Jest to realizowane za pośrednictwem *Akcesory*: specjalne metody, które przypisać i pobierania wartości z bazowego elementu danych. [Ustaw](../../../csharp/language-reference/keywords/set.md) dostępu umożliwia członkom danych można przypisać i [uzyskać](../../../csharp/language-reference/keywords/get.md) akcesor pobiera wartości elementów członkowskich danych.  
   
  W tym przykładzie pokazano `Person` klasy, która ma dwie właściwości: `Name` (ciąg) i `Age` (int). Obie te właściwości zapewniają `get` i `set` metod dostępu, dzięki czemu są one traktowane jako właściwości odczytu/zapisu.  

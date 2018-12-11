@@ -1,5 +1,6 @@
 ---
-title: group — Klauzula (odwołanie w C#)
+title: Group — klauzula - C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c28f9f4cdcb2ec2d84f299dddb13dc821c1739a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584354"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238172"
 ---
 # <a name="group-clause-c-reference"></a>group — Klauzula (odwołanie w C#)
 
@@ -53,7 +54,7 @@ Poniższy przykład pokazuje użycie wartość bool klawisz aby podzielić wynik
 
 ### <a name="grouping-by-numeric-range"></a>Grupowanie według zakresu liczbowego
 
-W następnym przykładzie użyto wyrażenia, aby utworzyć klucze grupy numeryczne, które reprezentują zakres percentyl. Zwróć uwagę na użycie [umożliwiają](let-clause.md) jako wygodną lokalizację do przechowywania metodę wywołania wynik, dzięki czemu nie trzeba wywoływać metodę dwa razy w `group` klauzuli. Aby uzyskać więcej informacji o tym, jak bezpiecznie używać metod w wyrażeniach zapytań, zobacz [porady: obsługa wyjątków w wyrażeniach zapytań](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+W następnym przykładzie użyto wyrażenia, aby utworzyć klucze grupy numeryczne, które reprezentują zakres percentyl. Zwróć uwagę na użycie [umożliwiają](let-clause.md) jako wygodną lokalizację do przechowywania metodę wywołania wynik, dzięki czemu nie trzeba wywoływać metodę dwa razy w `group` klauzuli. Aby uzyskać więcej informacji o tym, jak bezpiecznie używać metod w wyrażeniach zapytań, zobacz [jak: Obsługa wyjątków w wyrażeniach zapytań](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -65,7 +66,7 @@ Umożliwia grupowanie elementów według więcej niż jeden klucz za pomocą klu
 group person by new {name = person.surname, city = person.city};
 ```
 
-Jeśli zmienna zapytania musi pomyślnie przejść do innej metody, należy użyć typu nazwanego. Utwórz klasę specjalnych kluczy przy użyciu automatycznie implementowanych właściwości, a następnie zastąpić <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A> metody. Można również użyć struktury, w którym to przypadku ściśle trzeba zastąpić te metody. Aby uzyskać więcej informacji, zobacz [porady: Implementowanie klasy Lightweight przy użyciu implemented Properties](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) i [porady: zapytanie o zduplikowane pliki w drzewie katalogu](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Ostatni artykuł zawiera przykładowy kod, który demonstruje sposób skorzystania z kluczem złożonym z typem nazwanym.
+Jeśli zmienna zapytania musi pomyślnie przejść do innej metody, należy użyć typu nazwanego. Utwórz klasę specjalnych kluczy przy użyciu automatycznie implementowanych właściwości, a następnie zastąpić <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A> metody. Można również użyć struktury, w którym to przypadku ściśle trzeba zastąpić te metody. Aby uzyskać więcej informacji, zobacz [jak: Implementowanie klasy Lightweight przy użyciu automatycznie implementowanych właściwości](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) i [jak: Zapytanie o zduplikowane pliki w drzewie katalogu](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Ostatni artykuł zawiera przykładowy kod, który demonstruje sposób skorzystania z kluczem złożonym z typem nazwanym.
 
 ## <a name="example"></a>Przykład
 

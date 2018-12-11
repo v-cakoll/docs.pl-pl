@@ -1,17 +1,18 @@
 ---
-title: 'Porady: publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework — C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 9a17aaec20b03325abadfcc168f7ac4653f300df
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8269c976f161ba6ae11bee8cbef44b2f7c878e61
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030608"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242896"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Porady: publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework (Przewodnik programowania w języku C#)
+# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework (C# Programming Guide)
 W poniższej procedurze przedstawiono sposób dodawania zdarzenia, które są zgodne ze standardem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wzorzec do klas i struktur. Wszystkie zdarzenia w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteki klas są oparte na <xref:System.EventHandler> delegować, która została zdefiniowana w następujący sposób:  
   
 ```csharp  
@@ -78,4 +79,4 @@ public delegate void EventHandler(object sender, EventArgs e);
 - <xref:System.Delegate>  
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
-- [Delegaci](../../../csharp/programming-guide/delegates/index.md)
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)

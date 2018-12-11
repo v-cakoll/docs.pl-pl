@@ -1,5 +1,6 @@
 ---
-title: Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
+title: Argumenty nazwane i opcjonalne — C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: df590cf9d18b6de81caccfb77e544451da9ee0df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857985"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244911"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] wprowadza argumentów nazwanych i opcjonalnych. *Argumenty nazwane* umożliwiają określenie argumentu dla parametru określonego argumentu można skojarzyć z nazwą parametru, a nie za pomocą parametru pozycji na liście parametrów. *Argumenty opcjonalne* umożliwia pominięcie argumentów dla niektórych parametrów. Obu tych technik może służyć za pomocą metod, indeksatorów, konstruktorów i delegatów.  
@@ -114,7 +115,7 @@ Autoformat — parametry
   
  [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
- Aby uzyskać więcej informacji i przykładów, zobacz [porady: stosowanie nazwanych i argumentów opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) i [jak: obiektów międzyoperacyjności pakietu Office dostęp za pomocą funkcji Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
+ Aby uzyskać więcej informacji i przykładów, zobacz [jak: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) i [jak: Dostęp do obiektów międzyoperacyjności pakietu Office przy użyciu Visual C# funkcji](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Rozpoznanie przeciążenia  
  Użycie argumentów nazwanych i opcjonalnych wpływa na rozpoznanie przeciążenia w następujący sposób:  
@@ -130,7 +131,7 @@ Autoformat — parametry
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+- [Instrukcje: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
 - [Używanie typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md)  
 - [Używanie konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
 - [Używanie indeksatorów](../../../csharp/programming-guide/indexers/using-indexers.md)

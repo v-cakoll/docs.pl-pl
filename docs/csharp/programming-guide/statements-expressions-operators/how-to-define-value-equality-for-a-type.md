@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: Definiowanie równości wartości dla typu (C# Programming Guide)'
+title: 'Instrukcje: Definiowanie równości wartości dla typu - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126786"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244430"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Instrukcje: Definiowanie równości wartości dla typu (C# Programming Guide)
 Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć niestandardowych definicji równości wartość (lub odpowiednik) dla typu. Zazwyczaj równość wartości zaimplementować w sytuacji, gdy oczekiwano obiektów tego typu do dodania do kolekcji jakieś lub w przypadku, gdy ich głównym celem jest zapisanie zestawu pól lub właściwości. Swojej definicji równości wartość można oprzeć na porównanie wszystkie pola i właściwości w typie lub można utworzyć definicję na podzbiorze. Jednak w obu przypadkach, a w klas i struktur, implementacji należy wykonać pięć gwarancje równoważności:  

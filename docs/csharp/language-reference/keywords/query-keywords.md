@@ -1,16 +1,17 @@
 ---
-title: Słowa kluczowe zapytania (odwołanie w C#)
+title: Słowa kluczowe — zapytania C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 9ec163e1de018bd87348a5b39a1f34654d7d6d84
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e5010c7e9f3550c79c86c6cab4579a0fb15eef10
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028735"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239488"
 ---
 # <a name="query-keywords-c-reference"></a>Słowa kluczowe zapytania (odwołanie w C#)
 

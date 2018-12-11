@@ -3,16 +3,28 @@ title: Historia języka C# — Przewodnik po języku C#
 description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145335"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245603"
 ---
 # <a name="the-history-of-c"></a>Historia języka C# #
 
-Język jak wygląda w jego Najwcześniejsza incarnations? I jak go powstała w latach od?
+Ten artykuł zawiera historię każdej wersji głównej programu C# języka. C# Zespół jest w dalszym ciągu wprowadzanie innowacji i dodania nowych funkcji. Szczegóły stanów funkcji języka, w tym funkcje uznane za dla przyszłych wydaniach można znaleźć [w repozytorium dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) w witrynie GitHub.
+
+> [!IMPORTANT]
+> C# Języka zależy od typów i metod, co C# specyfikacja definiuje się jako *biblioteki standardowej* dla niektórych funkcji. Platforma .NET dostarcza tych typów i metod w wielu pakietów. Przykładem jest wyjątek podczas przetwarzania. Każdy `throw` instrukcję lub wyrażenie jest zaznaczone, aby upewnić się, obiekt jest zgłaszana jest tworzony na podstawie <xref:System.Exception>. Podobnie co `catch` jest sprawdzany w celu zapewnienia, że typ wciągnięcia jest tworzony na podstawie <xref:System.Exception>. Każda wersja może dodawać nowych wymagań. Aby korzystać z najnowszych funkcji języków, w środowiskach starsze, może być konieczne zainstalowanie określonych bibliotek. Te zależności są udokumentowane na stronie informacjach dotyczących określonej wersji. Możesz dowiedzieć się więcej [relacje między językiem a biblioteki](relationships-between-language-and-library.md) tła na tę zależność.
+
+C# Narzędzia do kompilacji należy wziąć pod uwagę najnowszej wersji języka głównych domyślną wersję językową. Może to być punktowe między głównymi wersjami, szczegółowo opisanych w innych artykułach w tej sekcji. Korzystanie z najnowszych funkcji w wersji punktu należy [skonfigurować wersję językową kompilatora](../language-reference/configure-language-version.md) i wybierz wersję. Zostały trzy punktowe od C# 7.0:
+
+* [C#7.3](csharp-7-3.md):
+  - C#7.3 jest obecnie dostępna w [Visual Studio 2017 w wersji 15.7](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [zestawu SDK platformy .NET Core 2.1 2.1.300 RC1](../../core/whats-new/index.md).
+* [C#7.2](csharp-7-2.md):
+  - C#7.2 jest obecnie dostępna w [programu Visual Studio 2017 w wersji 15.5](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
+* [C#7.1](csharp-7-1.md):
+  - Te funkcje zostały dodane w [programu Visual Studio 2017 w wersji 15.3](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
 
 ## <a name="c-version-10"></a>C# w wersji 1.0
 

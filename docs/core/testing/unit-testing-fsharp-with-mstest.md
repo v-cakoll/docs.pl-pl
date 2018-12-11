@@ -1,5 +1,5 @@
 ---
-title: Testy jednostkowe F# bibliotek w programie .NET Core za pomocą polecenia dotnet test i struktury MSTest
+title: Testy jednostkowe F# platformie .NET Core za pomocą polecenia dotnet test i struktury MSTest
 description: Informacje na temat testów jednostek dla F# platformy .NET Core za pomocą interaktywnych doświadczenia przykładowe rozwiązanie krok po kroku za pomocą polecenia dotnet test i struktury MSTest.
 author: billwagner
 ms.author: wiwagn
@@ -7,12 +7,12 @@ ms.date: 08/30/2017
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 9b83146afc24baa582f198200bc931dc8adaf90a
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: dacf820e8e49a337792fa927838fe4b262712e41
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170343"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240089"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Testy jednostkowe F# bibliotek w programie .NET Core za pomocą polecenia dotnet test i struktury MSTest
 

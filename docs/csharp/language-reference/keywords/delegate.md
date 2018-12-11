@@ -1,5 +1,6 @@
 ---
-title: delegate (odwołanie w C#)
+title: Delegowanie — C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - delegate_CSharpKeyword
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: 7a5f46d137e22da01b2ab6cd3eee57d66c411e8f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cbc81f8a9db3b2f637f9c6faabc8b533d2965b0d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45648463"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241947"
 ---
 # <a name="delegate-c-reference"></a>delegate (odwołanie w C#)
 
@@ -49,7 +50,7 @@ Za pomocą metody lub wyrażenia lambda zgodne zwracany typ i parametry wejścio
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
 - [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)  
-- [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)  
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
 - [Delegaci z metodami nazwanymi lub anonimowymi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
 - [Metody anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)

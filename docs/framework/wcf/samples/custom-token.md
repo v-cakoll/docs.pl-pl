@@ -2,12 +2,12 @@
 title: Token niestandardowy
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 03a1f8bd6a5f2ec57e7af865d2aadde77b40326d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 8aa41a1f9651d0a385836178bc791c14706c17e4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261527"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243052"
 ---
 # <a name="custom-token"></a>Token niestandardowy
 Niniejszy przykład pokazuje, jak dodać niestandardową implementację tokenu w aplikacji Windows Communication Foundation (WCF). W przykładzie użyto `CreditCardToken` można bezpiecznie przekazać informacje o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowane przy użyciu elementu powiązania zabezpieczeń symetryczne, wraz z treści wiadomości i innych nagłówków wiadomości. Jest to przydatne w przypadkach, gdzie wbudowany tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczającego niestandardowe z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".
@@ -28,7 +28,7 @@ Niniejszy przykład pokazuje, jak dodać niestandardową implementację tokenu w
 ## <a name="client-authentication-using-a-custom-security-token"></a>Uwierzytelnianie klienta przy użyciu tokenu zabezpieczającego niestandardowe
  Usługa udostępnia pojedynczy punkt końcowy, który programowo jest tworzony przy użyciu `BindingHelper` i `EchoServiceHost` klasy. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane z niestandardowego powiązania za pomocą `SymmetricSecurityBindingElement` i `HttpTransportBindingElement`. W tym przykładzie ustawia `SymmetricSecurityBindingElement` do użycia certyfikatu X.509 usługi ochrony klucza symetrycznego podczas przesyłania i przekazać niestandardową `CreditCardToken` w nagłówku wiadomości WS-Security jako token zabezpieczający podpisane i zaszyfrowane. Zachowanie Określa poświadczenia usługi, które mają być używane do uwierzytelniania klienta, a także informacje o certyfikacie X.509.
 
-```
+```csharp
 public static class BindingHelper
 {
     public static Binding CreateCreditCardBinding()
@@ -49,7 +49,7 @@ public static class BindingHelper
 
  Korzystanie z kartą kredytową tokenu w wiadomości, w przykładzie użyto niestandardowego poświadczenia do tej funkcji. Klasa poświadczenia usługi znajduje się w `CreditCardServiceCredentials` klasy i jest dodawany do kolekcji zachowań usługi hosta w `EchoServiceHost.InitializeRuntime` metody.
 
-```
+```csharp
 class EchoServiceHost : ServiceHost
 {
     string creditCardFile;
@@ -64,7 +64,6 @@ class EchoServiceHost : ServiceHost
         }
 
         creditCardFile = String.Format("{0}\\{1}", System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath, creditCardFile);
-
     }
 
     override protected void InitializeRuntime()
@@ -86,13 +85,12 @@ class EchoServiceHost : ServiceHost
 
  Punkt końcowy klienta skonfigurowano w podobny sposób jak punkt końcowy usługi. Klient używa tych samych `BindingHelper` klasy, aby utworzyć powiązanie. Pozostała konfiguracja zostanie znajduje się w `Client` klasy. Klient ustawia również informacje zawarte w `CreditCardToken` i informacji o certyfikacie X.509 usługi w kodzie Instalatora, dodając `CreditCardClientCredentials` wystąpienia odpowiednie dane do kolekcji zachowań punktu końcowego klienta. W przykładzie użyto certyfikatu X.509 z nazwą podmiotu równa `CN=localhost` jako certyfikat usługi.
 
-```
+```csharp
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();
 EndpointAddress serviceAddress = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
 
 // Create a client with given client endpoint configuration
-channelFactory =
-new ChannelFactory<IEchoService>(creditCardBinding, serviceAddress);
+channelFactory = new ChannelFactory<IEchoService>(creditCardBinding, serviceAddress);
 
 // configure the credit card credentials on the channel factory
 CreditCardClientCredentials credentials =
@@ -119,7 +117,7 @@ channelFactory.Close();
 
  W następnej sekcji opisano, co musi być wykonane, aby umożliwić niestandardowy token mają być przekazywane przewodowo i używane przez punkt końcowy usługi WCF.
 
-```
+```csharp
 class CreditCardToken : SecurityToken
 {
     CreditCardInfo cardInfo;
@@ -161,7 +159,7 @@ class CreditCardToken : SecurityToken
 
  Na komputerze klienckim `CreditCardSecurityTokenSerializer` klasy zapisuje informacji zawartych w reprezentacji obiektu tokenu zabezpieczeń do edytora XML.
 
-```
+```csharp
 public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 {
     public CreditCardSecurityTokenSerializer(SecurityTokenVersion version) : base() { }
@@ -257,7 +255,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  W usłudze funkcji znajduje się w `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` i `CreditCardTokenAuthorizationPolicy` klasy.
 
-```
+```csharp
     public class CreditCardClientCredentials : ClientCredentials
     {
         CreditCardInfo creditCardInfo;
@@ -287,7 +285,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
         }
     }
 
-public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentialsSecurityTokenManager
+    public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
         CreditCardClientCredentials creditCardClientCredentials;
 
@@ -342,7 +340,7 @@ public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentials
         }
     }
 
-public class CreditCardServiceCredentials : ServiceCredentials
+    public class CreditCardServiceCredentials : ServiceCredentials
     {
         string creditCardFile;
 
@@ -371,8 +369,8 @@ public class CreditCardServiceCredentials : ServiceCredentials
         }
     }
 
-public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentialsSecurityTokenManager
-{
+    public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentialsSecurityTokenManager
+    {
         CreditCardServiceCredentials creditCardServiceCredentials;
 
         public CreditCardServiceCredentialsSecurityTokenManager(CreditCardServiceCredentials creditCardServiceCredentials)
@@ -502,12 +500,11 @@ public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentia
 ## <a name="displaying-the-callers-information"></a>Wyświetlanie informacji o wywołującym
  Aby wyświetlić informacje o wywołującym, użyj `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` jak pokazano w poniższym przykładowym kodzie. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Zawiera autoryzacji oświadczenia skojarzone z bieżącego obiektu wywołującego. Oświadczenia są dostarczane przez `CreditCardToken` klasy w jego `AuthorizationPolicies` kolekcji.
 
-```
+```csharp
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)
 {
     claimValue = null;
-    IEnumerable<Claim> matchingClaims = claimSet.FindClaims(claimType,
-        Rights.PossessProperty);
+    IEnumerable<Claim> matchingClaims = claimSet.FindClaims(claimType, Rights.PossessProperty);
     if (matchingClaims == null)
         return false;
     IEnumerator<Claim> enumerator = matchingClaims.GetEnumerator();
@@ -532,9 +529,7 @@ string GetCallerCreditCardNumber()
                  {
                      issuer = "Unknown";
                  }
-                 return String.Format(
-                   "Credit card '{0}' issued by '{1}'",
-                   creditCardNumber, issuer);
+                 return $"Credit card '{creditCardNumber}' issued by '{issuer}'";
         }
     }
     return "Credit card is not known";

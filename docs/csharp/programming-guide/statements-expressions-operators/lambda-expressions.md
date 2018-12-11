@@ -1,5 +1,6 @@
 ---
-title: Wyrażenia lambda (Przewodnik programowania w języku C#)
+title: Wyrażenia lambda - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 03/03/2017
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 85fdaad86095319ebcb6ac4484a18ee8a517d45b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0feff32f3a2264b8e6cbd4746fdeaaaad728b8e5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150515"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241291"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (Przewodnik programowania w języku C#)
 

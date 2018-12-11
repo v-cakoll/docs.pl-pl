@@ -1,5 +1,6 @@
 ---
-title: ushort (odwołanie w C#)
+title: ushort — C# odwołania
+ms.custom: seodec18
 ms.date: 03/14/2017
 f1_keywords:
 - ushort
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ushort keyword [C#]
 ms.assetid: 1a7dbaae-b7a0-4111-872a-c88a6d3981ac
-ms.openlocfilehash: fa7f80f8f0fd6efa92242949ef16963213d0a28e
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: e70964802aa6d67cdf8ae46aff7f35a26fbf7ea4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50744486"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245158"
 ---
 # <a name="ushort-c-reference"></a>ushort (odwołanie w C#)
 

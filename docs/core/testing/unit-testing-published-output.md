@@ -1,16 +1,16 @@
 ---
 title: Opublikowane dane wyjściowe za pomocą polecenia dotnet vstest testowania
-description: Dowiedz się, jak uruchomić testy na opublikowane dane wyjściowe za pomocą polecenia dotnet vstest.
+description: Dowiedz się, jak uruchomić testy na opublikowane bibliotek, zamiast w kodzie źródłowym, za pomocą polecenia dotnet vstest.
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8930ec5c19254423fcdc9f0790ccf6748c595d6b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9d842f26336d0ddf5375d49676523086bb632684
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170304"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239530"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Opublikowane dane wyjściowe za pomocą polecenia dotnet vstest testowania
 
@@ -22,7 +22,9 @@ dotnet vstest <MyPublishedTests>.dll
 
 gdzie `<MyPublishedTests>` jest nazwą projektu testowego opublikowane.
 
-## <a name="example-of-running-tests-on-a-published-dll"></a>Przykład uruchamiania testów na opublikowane biblioteki DLL
+## <a name="example"></a>Przykład
+
+Poniższe polecenia pokazują, Uruchamianie testów w opublikowanej pliku DLL.
 
 ```
 dotnet new mstest -o MyProject.Tests

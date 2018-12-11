@@ -1,17 +1,18 @@
 ---
-title: Usuń kontekstowe słowo kluczowe (odwołanie w C#)
+title: Usuń kontekstowego słowa kluczowego - C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - remove_CSharpKeyword
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-ms.openlocfilehash: 70b324b8bca09701ead398eb6586ad181826e5f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fc6f310e17841349d476f35214ac17100e81d76f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527234"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236729"
 ---
 # <a name="remove-c-reference"></a>remove (odwołanie w C#)
 
@@ -19,7 +20,7 @@ ms.locfileid: "43527234"
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano zdarzenia niestandardowe [Dodaj](add.md) i `remove` metod dostępu. Aby uzyskać pełny przykład, zobacz [porady: Implementowanie zdarzenia interfejsu](../../programming-guide/events/how-to-implement-interface-events.md).
+W poniższym przykładzie pokazano zdarzenia niestandardowe [Dodaj](add.md) i `remove` metod dostępu. Pełny przykład można znaleźć [jak:  Zdarzenia implementowania interfejsu](../../programming-guide/events/how-to-implement-interface-events.md).
 
  [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
 

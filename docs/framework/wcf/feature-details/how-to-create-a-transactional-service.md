@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie usługi transakcyjnej'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: bba3a1f9c1d08e882cd5e4117c97f9f84d0c2be8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c4d2db0ca912be8840788bc363f86d621fa76e34
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509870"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245642"
 ---
 # <a name="how-to-create-a-transactional-service"></a>Instrukcje: Tworzenie usługi transakcyjnej
 Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i użycie transakcji zainicjowanych przez klienta do koordynowania operacji usługi.  
@@ -16,7 +16,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
   
 1.  Tworzenie kontraktu usługi i dodawanie adnotacji do operacji z odpowiednie ustawienie z <xref:System.ServiceModel.TransactionFlowOption> wyliczenia przychodzących wymagania dotyczące transakcji. Należy zauważyć, że możesz również umieścić <xref:System.ServiceModel.TransactionFlowAttribute> w klasie usługi wdrażane. Dzięki temu dla pojedynczej implementacji interfejsu, użyj tych ustawień transakcji, zamiast każdego wdrożenia.  
   
-    ```  
+    ```csharp
     [ServiceContract]  
     public interface ICalculator  
     {  
@@ -33,7 +33,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
   
 2.  Tworzenie klasy implementacji i używanie <xref:System.ServiceModel.ServiceBehaviorAttribute> aby opcjonalnie określić <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> i <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>. Należy zauważyć, że w wielu przypadkach domyślna <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 60 sekund, a wartość domyślna <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> z `Unspecified` są odpowiednie. Dla każdej operacji, można użyć <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutu, aby określić, czy praca wykonywana w metodzie powinny być wykonywane w ramach zakresu zakres transakcji, zgodnie z wartością <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> atrybutu. W tym przypadku transakcji używane dla `Add` metody jest taka sama jak obowiązkowe transakcji przychodzących, która przepływa między klientem i umożliwiający transakcji `Subtract` metoda jest taki sam jak transakcji, jeśli jeden zostało przekazane klient lub niejawnie, jak i lokalnie utworzono nową transakcję.  
   
-    ```  
+    ```csharp
     [ServiceBehavior(  
         TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable,  
         TransactionTimeout = "00:00:45")]  
@@ -43,7 +43,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
         public double Add(double n1, double n2)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Adding {0} to {1}", n1, n2));  
+            RecordToLog($"Adding {n1} to {n2}");
             return n1 + n2;  
         }  
   
@@ -51,7 +51,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
         public double Subtract(double n1, double n2)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Subtracting {0} from {1}", n2, n1));  
+            RecordToLog($"Subtracting {n2} from {n1}");
             return n1 - n2;  
         }  
   
@@ -128,7 +128,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
   
 1.  Domyślnie operacji WCF automatycznego ukończenia transakcji, jeśli nie nieobsłużone wyjątki są zgłaszane. To zachowanie można zmienić za pomocą <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwości i <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> metody. Podczas operacji musi występować w tej samej transakcji jako inna operacja (na przykład dla operacji debetowych i środków), można wyłączyć zachowanie automatycznego uzupełniania, ustawiając <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwość `false` jak pokazano w następującym `Debit` przykład operacji. Transakcji `Debit` używa operacja zakończy się aż do metody z <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwością `true` nosi nazwę, jak pokazano w operacji `Credit1`, lub gdy <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> metoda jest wywoływana, aby wyraźnie oznaczyć jako ukończony, jak pokazano w operacji transakcji `Credit2`. Należy pamiętać, że operacje dwóch środki są wyświetlane w celach ilustracyjnych i że pojedynczy środki operacji byłoby bardziej typowego.  
   
-    ```  
+    ```csharp
     [ServiceBehavior]  
     public class CalculatorService : IAccount  
     {  
@@ -164,7 +164,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
   
 2.  Na potrzeby korelacji transakcji, ustawienie <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> właściwość `false` wymaga użycia sesji powiązania. Wymóg ten jest określony za pomocą `SessionMode` właściwość <xref:System.ServiceModel.ServiceContractAttribute>.  
   
-    ```  
+    ```csharp
     [ServiceContract(SessionMode = SessionMode.Required)]  
     public interface IAccount  
     {  
@@ -184,7 +184,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
   
 1.  Korzysta z usługi WCF <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwości w celu określenia, czy podstawowe wystąpienie usługi jest wydane po zakończeniu transakcji. Ponieważ jest to `true`, chyba że skonfigurowano inaczej, zachowanie aktywacji programu WCF wystawach efektywne i przewidywalne "just-in-time". Wywołań do usługi kolejnych transakcji zapewnione zostaną nowe wystąpienie usługi z nie pozostałości transakcji poprzedniego stanu. Chociaż często jest to przydatne, czasami możesz chcieć zarządzania stanem w wystąpieniu usługi poza ukończenia transakcji. Przykłady tego byłoby w przypadku stanu wymagane lub dojścia do zasobów kosztowne można pobrać lub odtworzenia. Można to zrobić, ustawiając <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> właściwość `false`. Z tym ustawieniem wystąpienie i każdy stan skojarzony będą dostępne w kolejnych wywołaniach. Korzystając z tego, dokładnie rozważyć do kiedy i jak stanu i transakcje zostaną wyczyszczone i zakończone. W poniższym przykładzie pokazano, jak to zrobić poprzez utrzymywanie wystąpienie z `runningTotal` zmiennej.  
   
-    ```  
+    ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
         ReleaseServiceInstanceOnTransactionComplete = false)]  
     public class CalculatorService : ICalculator  
@@ -195,7 +195,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
         public double Add(double n)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Adding {0} to {1}", n, runningTotal));  
+            RecordToLog($"Adding {n} to {runningTotal}");
             runningTotal = runningTotal + n;  
             return runningTotal;  
         }  
@@ -204,7 +204,7 @@ Niniejszy przykład pokazuje różne aspekty Tworzenie usługi transakcyjnej i u
         public double Subtract(double n)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Subtracting {0} from {1}", n, runningTotal));  
+            RecordToLog($"Subtracting {n} from {runningTotal}");
             runningTotal = runningTotal - n;  
             return runningTotal;  
         }  

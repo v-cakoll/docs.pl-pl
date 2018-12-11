@@ -1,15 +1,16 @@
 ---
-title: Zwracane wartości Main() (Przewodnik programowania w języku C#)
+title: Main() — zwracane wartości - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: ea63bedd207a9904a5f6aa656ed19469394290fa
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8337303f97a3a654f5a3718bf0714ee876a7dc9f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205219"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242654"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() — zwracane wartości (C# Programming Guide)
 
@@ -96,5 +97,5 @@ Gdy zwraca punkt wejścia aplikacji `Task` lub `Task<int>`, kompilator generuje 
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Dokumentacja języka C#](../index.md)
 - [Main() i argumenty wiersza polecenia](index.md)
-- [Instrukcje: wyświetlanie argumentów wiersza polecenia](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Instrukcje: uzyskiwanie dostępu do argumentów wiersza polecenia za pomocą instrukcji foreach](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [Instrukcje: Wyświetlanie argumentów wiersza poleceń](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Instrukcje: Dostęp do argumentów wiersza polecenia za pomocą foreach](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

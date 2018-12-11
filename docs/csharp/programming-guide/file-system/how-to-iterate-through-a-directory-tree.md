@@ -1,18 +1,19 @@
 ---
-title: 'Porady: iterowanie drzewa katalogów (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Iterowanie drzewa katalogu - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: a6725463b042d51e20e5b293d7177903d2d35956
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 22d3883470f1435a50ae27f9d633ef566fec2913
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123634"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237080"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Porady: iterowanie drzewa katalogów (Przewodnik programowania w języku C#)
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Instrukcje: Iteracyjne przeglądanie drzewa katalogów (C# Programming Guide)
 Wyrażenie "Iterowanie drzewa katalogów" oznacza, że dostęp do każdego pliku w każdej zagnieżdżonej podkatalogu w folderze określonym katalogu głównym, na dowolnym poziomie. Zawsze, nie trzeba otwierać każdego pliku. Możesz po prostu pobrać nazwę pliku lub podkatalog jako `string`, lub można pobrać dodatkowe informacje w formie <xref:System.IO.FileInfo?displayProperty=nameWithType> lub <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> obiektu.  
   
 > [!NOTE]

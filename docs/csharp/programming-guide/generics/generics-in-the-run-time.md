@@ -1,15 +1,16 @@
 ---
-title: Typy ogólne w czasie wykonywania (Przewodnik programowania w języku C#)
+title: Typy ogólne w czasie wykonywania - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: e5eb0ed02b1462aa126e55d688f4166aa741353a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 81e506a8b2528b6e3fa783ecd90aa4aa8987bbe5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513809"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239189"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Typy ogólne w czasie wykonywania (Przewodnik programowania w języku C#)
 W przypadku typu ogólnego lub metody jest kompilowany na język Microsoft intermediate language (MSIL), zawiera metadane, które identyfikuje go jako parametrów typu. Jak kod w języku MSIL dla typu ogólnego jest używany różni się w oparciu czy parametr typu podana jest wartość typu lub typów referencyjnych.  

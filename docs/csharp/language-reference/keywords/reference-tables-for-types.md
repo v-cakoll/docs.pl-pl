@@ -1,5 +1,6 @@
 ---
-title: Tabele odwołań dla typów (odwołanie w C#)
+title: Odwoływać się do tabel dla typów - C# odwołania
+ms.custom: seodec18
 ms.date: 09/21/2018
 f1_keywords:
 - cs.referencetables
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - types [C#], reference tables
 - C# language, data types
 ms.assetid: 1d2b6a9b-31fd-4fa6-a7b2-bfd9c806ac8a
-ms.openlocfilehash: f75a1cf0b118becd940bd1aa8ac66550d0852773
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ef924c6dd092947f0ec05c770a2cfbe12f48000a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035847"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239422"
 ---
 # <a name="reference-tables-for-types-c-reference"></a>Tabele odwołań dla typów (odwołanie w C#)
 

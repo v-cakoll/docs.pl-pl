@@ -1,5 +1,6 @@
 ---
-title: ++ — Operator (odwołanie w C#)
+title: ++ — Operator - C# odwołania
+ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
 - ++_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - increment operator (++) [C#]
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
-ms.openlocfilehash: b29f4f1ab00c0f8026f118cb72b090e3b728bfc5
-ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
+ms.openlocfilehash: db716f0d8cfe252462abeee9c80baaab880e212b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "48030473"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235647"
 ---
 # <a name="-operator-c-reference"></a>++ — Operator (odwołanie w C#)
 

@@ -1,16 +1,17 @@
 ---
-title: Przechowywanie wersji przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
+title: Przechowywanie wersji przesłonięć i nowych słów kluczowych — C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 5dfed1c4a7e68bbe112a136260bf95ba0826392d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ddb34fd32d13224faed92bd8ba01933ca19c04a9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178380"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241538"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Przechowywanie wersji przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 Zaprojektowano w języku C#, aby versioning między [podstawowy](../../../csharp/language-reference/keywords/base.md) i klasy pochodne w różnych bibliotek mogą ewoluować i zachować zgodność z poprzednimi wersjami. Oznacza to, na przykład, że wprowadzenie nowego członka w podstawowym [klasy](../../../csharp/language-reference/keywords/class.md) z taką samą nazwę jak element członkowski w klasie pochodnej jest w pełni obsługiwane w języku C# i nie prowadzi do nieoczekiwanego zachowania. Oznacza to również, że klasy musi jawnie określać, czy metoda jest przeznaczona do zastępowania metody dziedziczonej, lub czy metoda jest nowa metoda, która ukrywa o podobnej nazwie dziedziczone metody.  

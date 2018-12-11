@@ -1,5 +1,6 @@
 ---
-title: Operator || (odwołanie w C#)
+title: '|| Operator - C# odwołania'
+ms.custom: seodec18
 ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: f4bb7ada12fbcebcb90fb7cd22d6e6bccad5fb57
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "42925543"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244573"
 ---
 # <a name="-operator-c-reference"></a>Operator || (odwołanie w C#)
 
@@ -25,7 +26,7 @@ Operator logiczny OR warunkowe `||`, znany także jako "zwarcie" logicznego oper
 
 ## <a name="operator-overloadability"></a>Overloadability — operator
 
-Typ zdefiniowany przez użytkownika nie można przeciążyć operator logiczny OR warunkowe. Jednak jeśli typ zdefiniowany przez użytkownika przeciążenia [logiczne OR](or-operator.md), [true](../keywords/true-operator.md), i [false](../keywords/false-operator.md) operatorów w określony sposób, `||` operacja może zostać obliczone dla Operandy typu. Aby uzyskać więcej informacji, zobacz [zdefiniowanych przez użytkownika operatorów logicznych warunkowych](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) części [ C# specyfikacji języka](../language-specification/index.md).
+Typ zdefiniowany przez użytkownika nie można przeciążyć operator logiczny OR warunkowe. Jednak jeśli typ zdefiniowany przez użytkownika przeciążenia [logiczne OR](or-operator.md) i [operatory true i false](../keywords/true-false-operators.md) w określony sposób, `||` operacji mogą być obliczane w przypadku argumentów operacji typu. Aby uzyskać więcej informacji, zobacz [zdefiniowanych przez użytkownika operatorów logicznych warunkowych](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) części [ C# specyfikacji języka](../language-specification/index.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -37,5 +38,5 @@ Aby uzyskać więcej informacji, zobacz [warunkowego operatorów logicznych](~/_
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Operatory języka C#](index.md)
 - [& & — operator](conditional-and-operator.md)
-- [! operator](logical-negation-operator.md)
+- [\! operator](logical-negation-operator.md)
 - [| operator](or-operator.md)

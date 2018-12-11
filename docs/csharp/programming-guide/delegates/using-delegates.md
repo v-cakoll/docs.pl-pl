@@ -1,15 +1,16 @@
 ---
-title: Używanie delegatów (Przewodnik programowania w języku C#)
+title: Używanie delegatów - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 07bc0e38455335e068719137c349daf65f8fab6b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 71285057a465cd7fa09ae8290a7b74a3c6d6407c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042208"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238848"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Używanie delegatów (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, który hermetyzuje bezpiecznie metody, podobne do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji języka C obiekty delegowane są zorientowane obiektowo, typu, bezpieczeństwa i bezpieczne. Typ obiektu delegowanego jest definiowany przez nazwę obiektu delegowanego. Poniższy przykład deklaruje delegat o nazwie `Del` który umożliwiająca Hermetyzowanie metody, która przyjmuje [ciąg](../../../csharp/language-reference/keywords/string.md) jako argument i zwraca [void](../../../csharp/language-reference/keywords/void.md):  
@@ -67,7 +68,7 @@ A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, 
 ## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Delegaci](../../../csharp/programming-guide/delegates/index.md)
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)
 - [Korzystanie z wariancji w delegatach](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
 - [Wariancje w delegatach](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
 - [Korzystanie z wariancji dla delegatów ogólnych Func i Action](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

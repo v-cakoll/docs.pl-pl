@@ -1,5 +1,6 @@
 ---
-title: 'Porady: konwertowanie ciągu na liczbę (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Konwertowanie ciągu na liczbę — C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#]
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 1f11ba3981b219d3b3a7817afd75fa78f2ccf78a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a75d6dd5fdb74ca3cb6fe28db7415aeb478e2237
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521756"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243221"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Porady: konwertowanie ciągu na liczbę (Przewodnik programowania w języku C#)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Instrukcje: Konwertowanie ciągu na liczbę (C# Programming Guide)
 Można przekonwertować [ciąg](../../../csharp/language-reference/keywords/string.md) do liczby przy użyciu metod w <xref:System.Convert> klasy lub przy użyciu `TryParse` znaleźć metodę na różne typy liczbowe (int, long, float, itp.).  
   
  Jeśli masz ciąg, jest nieco bardziej efektywne i prostego do wywołania `TryParse` — metoda (na przykład [ `int.TryParse("11", out number)` ](xref:System.Int32.TryParse%2A)).  Za pomocą <xref:System.Convert> metoda jest bardziej użyteczna w przypadku ogólnych obiekty, które implementują <xref:System.IConvertible>.  
@@ -56,5 +57,5 @@ Można przekonwertować [ciąg](../../../csharp/language-reference/keywords/stri
 ## <a name="see-also"></a>Zobacz też
 
 - [Typy](../../../csharp/programming-guide/types/index.md)  
-- [Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+- [Instrukcje: Określanie, czy ciąg reprezentuje wartość numeryczną](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
 - [Narzędzie formatowania programu .NET framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

@@ -1,17 +1,18 @@
 ---
-title: Klasy częściowe i metody (Przewodnik programowania w języku C#)
+title: Klasy częściowe i metody - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 2975b9e79824560c711e96382a9ccc03bdc72810
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 222a47989537f09fd78c4a3b17fa8c1a5478d73f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43521172"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243468"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Klasy częściowe i metody (Przewodnik programowania w języku C#)
 Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywords/class.md), [struktury](../../../csharp/language-reference/keywords/struct.md), [interfejsu](../../../csharp/language-reference/keywords/interface.md) lub metody za pośrednictwem dwóch lub więcej plików źródłowych. Każdy plik źródłowy zawiera sekcję definicji typu lub metody, a wszystkie elementy są łączone, podczas kompilowania aplikacji.  

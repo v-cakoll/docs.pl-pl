@@ -1,5 +1,6 @@
 ---
-title: Klasy statyczne i statyczni członkowie klas (Przewodnik programowania w języku C#)
+title: Klasy statyczne i statyczni członkowie klas - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 6709344002ebc433c8d13d9cfa48a179fae9991b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ef1b5262e8cb9906fb0e0d0e8cfef9257f1223a4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125996"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243204"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Klasy statyczne i statyczni członkowie klas (Przewodnik programowania w języku C#)
 A [statyczne](../../../csharp/language-reference/keywords/static.md) klasy jest zasadniczo taki sam jak niestatycznych klas, ale ma jedną różnicą: nie można utworzyć wystąpienia klasy statycznej. Innymi słowy, nie można użyć [nowe](../../../csharp/language-reference/keywords/new.md) — słowo kluczowe, aby utworzyć zmienną typu klasy. Ponieważ nie ma żadnej zmiennej wystąpienia, uzyskujesz dostęp do członków klasy statycznej za pomocą sama nazwa klasy. Na przykład jeśli masz statyczna klasy, która jest o nazwie `UtilityClass` który posiada publiczną metodę o nazwie `MethodA`, należy wywołać metodę, jak pokazano w poniższym przykładzie:  

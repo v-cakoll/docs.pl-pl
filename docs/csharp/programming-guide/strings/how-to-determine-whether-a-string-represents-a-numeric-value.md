@@ -1,19 +1,20 @@
 ---
-title: 'Porady: określanie, czy ciąg reprezentuje wartość numeryczną (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Określanie, czy ciąg reprezentuje wartość liczbową - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: b3eed35180b38236498f241fed59d71262946c37
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a20850e6fc34b28975dbb2b6be819bf2e88f1f27
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509070"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244560"
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Porady: określanie, czy ciąg reprezentuje wartość numeryczną (Przewodnik programowania w języku C#)
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Instrukcje: Określanie, czy ciąg reprezentuje wartość numeryczną (C# Programming Guide)
 Aby ustalić, czy ciąg jest prawidłową reprezentacją określonego typu liczbowego, używa się statycznej `TryParse` metodę, która jest zaimplementowana przez wszystkich pierwotnych typów liczbowych, a także typy takie jak <xref:System.DateTime> i <xref:System.Net.IPAddress>. Poniższy przykład pokazuje, jak ustalić, czy jest nieprawidłowy "108" warunki [int](../../../csharp/language-reference/keywords/int.md).  
   
 ```  
@@ -40,8 +41,8 @@ bool result = int.TryParse(s, out i); //i now = 108
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Instrukcje: konwertowanie tablicy typu Byte na liczbę całkowitą](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)  
-- [Instrukcje: konwertowanie ciągu na liczbę](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)  
-- [Instrukcje: konwertowanie ciągów szestnastkowych na typy liczbowe](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)  
+- [Instrukcje: Konwertowanie tablicy typu byte na liczbę całkowitą](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)  
+- [Instrukcje: Konwertowanie ciągu na liczbę](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)  
+- [Instrukcje: Konwertowanie ciągów szesnastkowych, które typy liczbowe](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)  
 - [Analizowanie ciągów liczbowych](../../../standard/base-types/parsing-numeric.md)  
 - [Formatowanie typów](../../../standard/base-types/formatting-types.md)

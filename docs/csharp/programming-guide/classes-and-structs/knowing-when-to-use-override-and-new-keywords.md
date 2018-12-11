@@ -1,17 +1,18 @@
 ---
-title: Użycie przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
+title: Użycie przesłonięć i nowych słów kluczowych — C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 5b13ee695ef2a63332b01b504458453885160039
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d44d8d0143d366117a24495df3fa8a18f893ebb3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513822"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244742"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Użycie przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 W języku C# metody w klasie pochodnej może mieć taką samą nazwę jak metody w klasie bazowej. Można określić sposób interakcji metody przy użyciu [nowe](../../../csharp/language-reference/keywords/new.md) i [zastąpienia](../../../csharp/language-reference/keywords/override.md) słów kluczowych. `override` Modyfikator *rozszerza* metody klasy bazowej i `new` modyfikator *ukrywa* go. Różnica jest przedstawionych w przykładach w tym temacie.  

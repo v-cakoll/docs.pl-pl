@@ -1,5 +1,6 @@
 ---
-title: do (odwołanie w C#)
+title: do — C# odwołania
+ms.custom: seodec18
 ms.date: 05/28/2018
 f1_keywords:
 - do_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 4dd5f4034bcd60b714071eb7eb9518e66ac0c848
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4bdbd1c8efac0b7ba95d4c8d16dae3101fe6bcb0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129028"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239543"
 ---
 # <a name="do-c-reference"></a>do (odwołanie w C#)
 

@@ -1,17 +1,18 @@
 ---
-title: 'Porady: deklarowanie, tworzenie wystąpień i użycie delegowania (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Deklarowanie, tworzenie wystąpień i użycie delegowania - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 6c53d7572074db44976494e5eed596bf95aaf456
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bc9fc81a74d438aca57779fa565fdbeba3968087
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858863"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237067"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Porady: deklarowanie, tworzenie wystąpień i użycie delegowania (Przewodnik programowania w języku C#)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Instrukcje: Deklarowanie, tworzenie wystąpień i użycie delegowania (C# Programming Guide)
 W języku C# 1.0 lub nowszy można zadeklarować delegatów, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
@@ -75,4 +76,4 @@ W języku C# 1.0 lub nowszy można zadeklarować delegatów, jak pokazano w poni
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
-- [Delegaci](../../../csharp/programming-guide/delegates/index.md)
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)

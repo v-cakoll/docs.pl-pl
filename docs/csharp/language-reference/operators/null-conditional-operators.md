@@ -1,17 +1,18 @@
 ---
-title: Operatory warunkowe null (C# odwołania)
+title: Operatory warunkowe null — C# odwołania
+ms.custom: seodec18
 ms.date: 04/03/2015
 helpviewer_keywords:
 - null-conditional operators [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 823b9dc886bf2448ca9da4ac640bfe56f90d3ff3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4189b07fd280192a4cb39400e4e77cef702c9d08
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194855"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239556"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. Operatory warunkowe null ?. oraz ? [] (C# i Visual Basic)
 Testuje, czy wartość lewego argumentu operacji to „null”, zanim przeprowadzi operację dostępu do elementu (`?.`) lub indeksowania (`?[]`). Zwraca `null`, jeśli wartość lewego argumentu operacji to `null`. 
@@ -49,7 +50,8 @@ PropertyChanged?.Invoke(…)
  Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod, aby sprawdzić stan `PropertyChanged` tylko jeden raz, a następnie zapisuje wynik w zmiennej tymczasowej. Metodę `Invoke`trzeba wywołać jawnie, ponieważ nie istnieje składnia `PropertyChanged?(e)` do wywołania delegata przy użyciu operatora warunkowego „null”.  
   
 ## <a name="language-specifications"></a>Specyfikacje języka  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Aby uzyskać więcej informacji, zobacz [operatorów warunkowych działających z wartością Null](~/_csharplang/spec/expressions.md#null-conditional-operator) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,5 +1,6 @@
 ---
-title: abstract (odwołanie w C#)
+title: abstract — C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - abstract
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: d0a51afe61e75b750ed8bf336ca4636cb58dfbba
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 43497d3680917917894f1d904852d787fce0888c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742248"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240453"
 ---
 # <a name="abstract-c-reference"></a>abstract (odwołanie w C#)
 `abstract` Modyfikator oznacza, że rzecz modyfikowanego ma implementacji brakujące lub niekompletne. Abstrakcyjna modyfikatora można używać z klas, metod, właściwości, indeksatorów i zdarzeń. Użyj `abstract` modyfikatora w deklaracji klasy, aby wskazać, że klasa jest przeznaczona do użycia wyłącznie jako klasa bazowa innych klas. Elementy członkowskie oznaczony jako abstrakcyjny lub zawarte w klasie abstrakcyjnej, muszą być zaimplementowane przez klasy, które pochodzą z klasy abstrakcyjnej.  

@@ -1,15 +1,16 @@
 ---
-title: Ograniczenia dotyczące używania poziomów ułatwień dostępu (odwołanie w C#)
+title: Ograniczenia dotyczące używania ułatwień dostępu poziomy - C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 2bcf2b12d1aa1488e6d3e46f5b37ac9535b138dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ef1c0a93da2a53f1e199627fb7f83894d01e714a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208844"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239332"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Ograniczenia dotyczące używania poziomów ułatwień dostępu (odwołanie w C#)
 
@@ -26,7 +27,7 @@ W poniższej tabeli podsumowano ograniczenia dotyczące poziomów deklarowana do
 |-------------|-------------|
 |[Klasy](../../programming-guide/classes-and-structs/classes.md)|Bezpośrednie klasy bazowej typu klasy musi być co najmniej tak samo dostępna jak samego typu klasy.|
 |[Interfejsy](../../programming-guide/interfaces/index.md)|Jawne interfejsy podstawowe typu interfejsu, musi być co najmniej tak samo dostępna jak samego typu interfejsu.|
-|[Delegaci](../../programming-guide/delegates/index.md)|Typ zwracany i typy parametrów typu delegowanego musi być co najmniej tak samo dostępna jak samego typu delegata.|
+|[Delegaty](../../programming-guide/delegates/index.md)|Typ zwracany i typy parametrów typu delegowanego musi być co najmniej tak samo dostępna jak samego typu delegata.|
 |[Stałe](../../programming-guide/classes-and-structs/constants.md)|Typ stałej musi być co najmniej tak samo dostępna jak stała się.|
 |[Pola](../../programming-guide/classes-and-structs/fields.md)|Typ pola musi być co najmniej tak samo dostępna jak samo pole.|
 |[Metody](../../programming-guide/classes-and-structs/methods.md)|Typ zwracany i typy parametrów metody muszą być co najmniej tak samo dostępna jak sama metoda.|

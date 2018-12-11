@@ -1,5 +1,6 @@
 ---
-title: Operator %= (odwołanie w C#)
+title: '% = — Operator - C# odwołania'
+ms.custom: seodec18
 ms.date: 09/04/2018
 f1_keywords:
 - '%=_CSharpKeyword'
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - remainder assignment operator (%=) [C#]
 - '%= assignment operator (remainder assignment) [C#]'
 ms.assetid: 47e5f068-1d97-4010-bd3b-e21b5d3a77f5
-ms.openlocfilehash: ab3a6a8d5cbfeb4d527ca1f9c233ddfaba3d35ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0732f9578b64c894ecc1d3bb15cee11a8d5b6a3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188719"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245564"
 ---
 # <a name="-operator-c-reference"></a>Operator %= (odwołanie w C#)
 

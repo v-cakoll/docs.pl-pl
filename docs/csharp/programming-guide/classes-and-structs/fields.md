@@ -1,15 +1,16 @@
 ---
-title: Pola (Przewodnik programowania w języku C#)
+title: Pola - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 708bd4e768e795397624bcac6e5bc2594bff93f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: af5a342b83608d6a149879de8dec80a1e1746b76
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210341"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242723"
 ---
 # <a name="fields-c-programming-guide"></a>Pola (Przewodnik programowania w języku C#)
 A *pola* jest zmienna dowolnego typu, który jest zadeklarowany bezpośrednio w [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md). Pola są *członków* z ich typem zawierającym.  

@@ -1,5 +1,6 @@
 ---
-title: 'Porady: odczyt z pliku tekstowego (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Odczyt z pliku tekstowego — C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - StreamReader.ReadToEnd
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: cb7f5c0239273c04f9f89b4e63335e67fdf5419a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 67e98750af589a3deb5e9d0d51f8b1204fdaad84
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084120"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240310"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Porady: odczyt z pliku tekstowego (Przewodnik programowania w języku C#)
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Instrukcje: Odczyt z pliku tekstowego (C# Programming Guide)
 Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod statycznych <xref:System.IO.File.ReadAllText%2A> i <xref:System.IO.File.ReadAllLines%2A> z <xref:System.IO.File?displayProperty=nameWithType> klasy.  
   
- Aby uzyskać przykład, który używa <xref:System.IO.StreamReader>, zobacz [porady: Odczyt jeden wiersz pliku tekstowego w danym momencie](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
+ Aby uzyskać przykład, który używa <xref:System.IO.StreamReader>, zobacz [jak: Odczyt pliku jednego wiersza tekstu w danym momencie](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
   
 > [!NOTE]
->  Pliki, które są używane w tym przykładzie są tworzone w temacie [porady: zapis do pliku tekstowego](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
+>  Pliki, które są używane w tym przykładzie są tworzone w temacie [jak: Zapis do pliku tekstowego](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
@@ -30,7 +31,7 @@ Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod statyczn
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Skopiuj kod i wklej go w aplikacji konsolowej C#.  
   
- Jeśli nie używasz plików tekstowych z [porady: zapis do pliku tekstowego](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), Zastąp argument `ReadAllText` i `ReadAllLines` z odpowiednią ścieżkę i nazwę pliku na komputerze.  
+ Jeśli nie używasz plików tekstowych z [jak: Zapis do pliku tekstowego](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), Zastąp argument `ReadAllText` i `ReadAllLines` z odpowiednią ścieżkę i nazwę pliku na komputerze.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  

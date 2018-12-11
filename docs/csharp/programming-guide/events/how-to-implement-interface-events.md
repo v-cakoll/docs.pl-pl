@@ -1,18 +1,19 @@
 ---
-title: 'Porady: zdarzenia implementowania interfejsu (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Zdarzenia implementowania interfejsu - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 3620a3e11553bdd6878126388b612113b5722e89
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d52d4d5140e96f81377733e39d1c36886718b706
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863664"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236443"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Porady: zdarzenia implementowania interfejsu (Przewodnik programowania w języku C#)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Instrukcje: Zdarzenia implementowania interfejsu (C# Programming Guide)
 [Interfejsu](../../../csharp/language-reference/keywords/interface.md) można zadeklarować [zdarzeń](../../../csharp/language-reference/keywords/event.md). Poniższy przykład pokazuje, jak zdarzenia implementowania interfejsu w klasie. Zasadniczo reguły są takie same, jak podczas implementowania metody interfejsu dowolnej właściwości.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Aby zaimplementować interfejs zdarzenia w klasie  
@@ -61,6 +62,6 @@ Podając własne metody dostępu, można określić, czy dwa zdarzenia są repre
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
-- [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)  
 - [Implementacja interfejsu jawnego](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
-- [Instrukcje: wywoływanie zdarzeń klasy podstawowej w klasach pochodnych](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+- [Instrukcje: Wywoływanie zdarzeń klasy podstawowej w klasach pochodnych](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

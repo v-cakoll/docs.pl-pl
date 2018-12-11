@@ -1,16 +1,17 @@
 ---
-title: Delegaty z nazwanymi lub. Metody anonimowe (Przewodnik programowania w języku C#)
+title: Delegaty z nazwanymi lub. Metody anonimowe - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 6d7dcb3c7c6fa8f1d55237504c23cf468aa0e79d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 586ad5a59eebb03ed9ed6bea68d232a6b249c3c9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678525"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241495"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegaty z nazwanymi lub. Metody anonimowe (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) mogą być skojarzone z metodę o nazwie. Podczas tworzenia wystąpienia delegata za pomocą metodę o nazwie metoda jest przekazywana jako parametr, na przykład:  
@@ -39,7 +40,7 @@ A [delegować](../../../csharp/language-reference/keywords/delegate.md) mogą by
 ## <a name="see-also"></a>Zobacz też
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)  
 - [Metody anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [Porady: łączenie obiektów delegowanych (obiekty delegowane multiemisji)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [Instrukcje: Łączenie obiektów delegowanych (obiekty delegowane multiemisji)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)

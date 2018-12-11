@@ -1,5 +1,6 @@
 ---
-title: / — Operator (odwołanie w C#)
+title: / — Operator - C# odwołania
+ms.custom: seodec18
 ms.date: 04/04/2018
 f1_keywords:
 - /_CSharpKeyword
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - / operator [C#]
 - division operator [C#]
 ms.assetid: d155e496-678f-4efa-bebe-2bd08da2c5af
-ms.openlocfilehash: bddf6d234f3536ad64f0cd876cc7ade4494916d9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c77d9264baac05f2212db37fe50490516359e96e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800758"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242324"
 ---
 # <a name="-operator-c-reference"></a>/ — Operator (odwołanie w C#)
 Operator dzielenia (`/`) dzieli pierwszy argument operacji za drugim argumentem. Wszystkie typy liczbowe zostały wstępnie zdefiniowane operatory dzielenia.
   
 ## <a name="remarks"></a>Uwagi  
- Typy definiowane przez użytkownika mogą przeciążać operator `/` — (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)). Przeciążenia `/` niejawnie przeciążenia [/ = — operator](division-assignment-operator.md).  
+ W typach definiowanych przez użytkownika można przeciążać operator `/` (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)). Przeciążenia `/` niejawnie przeciążenia [/ = — operator](division-assignment-operator.md).  
   
  Dzielenia dwóch liczb całkowitych, wynik jest zawsze liczbą całkowitą. Na przykład wynikiem 7 / 3 to 2. Nie należy mylić z dzielenia floored jako `/` operator Zaokrągla wartość w kierunku zera: -7 / 3 -2.  
   

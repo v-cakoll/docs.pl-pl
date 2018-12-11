@@ -1,17 +1,18 @@
 ---
-title: '#region (odwołanie w C#)'
+title: '#region — C# odwołania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#region'
 helpviewer_keywords:
 - '#region directive [C#]'
 ms.assetid: 672c87d1-9771-4f64-ab3f-0ad3d4ffb2b4
-ms.openlocfilehash: 3edc4fe757ab1f5cbf42e67ab74cd8032a82d853
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c306511ad8133d0063ccf8b70f2d34d25d2ad3fa
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518281"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244287"
 ---
 # <a name="region-c-reference"></a>#region (odwołanie w C#)
 Dyrektywa `#region` pozwala określić blok kodu, który można rozwinąć lub zwinąć przy użyciu funkcji [tworzenia konspektu](/visualstudio/ide/outlining) w edytorze kodu programu Visual Studio. W dłuższych plikach z kodem wygodniejsze jest zwinięcie lub ukrycie jednego lub kilku regionów, aby móc skupić się na tej części pliku, nad którą się obecnie pracuje. Poniższy przykład przedstawia sposób definiowania regionu:  

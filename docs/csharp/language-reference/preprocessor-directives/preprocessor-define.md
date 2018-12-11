@@ -1,17 +1,18 @@
 ---
-title: '#Zdefiniuj (odwołanie w C#)'
+title: '#Zdefiniuj - C# odwołania'
+ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#define'
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 305d52c26fb2592874d06f2c9a75ec63b472a812
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7be2a2d00e96b4b734e1a68f6dc63180bcbe5e82
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387259"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244976"
 ---
 # <a name="define-c-reference"></a>#define (odwołanie w C#)
 Dyrektywa `#define` umożliwia zdefiniowanie symbolu. Jeżeli używasz symbolu jako wyrażenia, które jest przekazywane do dyrektywy [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), wyrażenie zostanie oszacowane jako `true`, jak pokazano na poniższym przykładzie:  

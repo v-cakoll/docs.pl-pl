@@ -2,12 +2,12 @@
 title: Przykład współużytkowania portów Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: db4cd5be73e3c170f2feaa1e76f275eb7d9cd226
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ddfb3340c010b57b78fa913601451b6a2af3674
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089740"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235140"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Przykład współużytkowania portów Net.TCP
 Protokół TCP/IP używa 16-bitową liczbę o nazwie portu do rozróżniania połączeń z wieloma aplikacjami sieciowymi uruchomione na tym samym komputerze. Jeśli aplikacja nasłuchuje na porcie, cały ruch TCP dla tego portu przechodzi do tej aplikacji. Inne aplikacje nie może nasłuchiwać na tym porcie w tym samym czasie.  
@@ -25,7 +25,7 @@ Protokół TCP/IP używa 16-bitową liczbę o nazwie portu do rozróżniania po�
   
  Udostępnianie portów NetTcp jest funkcją Windows Communication Foundation (WCF), która podobnie umożliwia wielu aplikacjom sieci współużytkować jeden port. Usługi udostępniania portów NetTcp akceptuje połączenia przy użyciu protokołu net.tcp i przekazuje komunikaty na podstawie ich adresu docelowego.  
   
- Nie włączono usługi udostępniania portów NetTcp domyślnie. Przed uruchomieniem tego przykładu, należy ręcznie włączyć tę usługę. Aby uzyskać więcej informacji, zobacz [porady: Włączanie usługi udostępniania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Jeśli usługa jest wyłączona, wyjątek jest generowany po uruchomieniu aplikacji serwera.  
+ Nie włączono usługi udostępniania portów NetTcp domyślnie. Przed uruchomieniem tego przykładu, należy ręcznie włączyć tę usługę. Aby uzyskać więcej informacji, zobacz [jak: Włączanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Jeśli usługa jest wyłączona, wyjątek jest generowany po uruchomieniu aplikacji serwera.  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
@@ -44,8 +44,7 @@ binding.PortSharingEnabled = true;
 // Start a service on a fixed TCP port  
 ServiceHost host = new ServiceHost(typeof(CalculatorService));  
 ushort salt = (ushort)new Random().Next();  
-string address =  
-   String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
+string address = $"net.tcp://localhost:9000/calculator/{salt}";
 host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
 host.Open();  
 ```
@@ -66,7 +65,7 @@ class client
    {  
       Console.Write("Enter the service number to test: ");  
       ushort salt = ushort.Parse(Console.ReadLine());  
-      string address = String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
+      string address = $"net.tcp://localhost:9000/calculator/{salt}";
       ChannelFactory<ICalculator> factory = new ChannelFactory<ICalculator>(new NetTcpBinding());  
       ICalculator proxy = factory.CreateChannel(new EndpointAddress(address));  
   

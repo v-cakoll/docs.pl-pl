@@ -1,5 +1,5 @@
 ---
-title: Testowanie jednostek za pomocą języka Visual Basic w programie .NET Core za pomocą polecenia dotnet test i struktury xUnit
+title: Testowanie jednostek kodu języka Visual Basic w .NET Core za pomocą polecenia dotnet test i struktury xUnit
 description: Pojęcia dotyczące jednostek testów platformie .NET Core za pomocą środowisko interaktywne tworzenie rozwiązania języka Visual Basic przykładowe instrukcje krok po kroku za pomocą polecenia dotnet test i struktury xUnit.
 author: billwagner
 ms.author: wiwagn
@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: eae5f0727d2d75044c072e8cc1d9a1c6faf53a9a
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 47964fa27ca3b8cbc509467a9b21f942bfc7cc75
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170538"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239959"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Jednostki testowania bibliotek języka Visual Basic .NET Core za pomocą polecenia dotnet test i struktury xUnit
 

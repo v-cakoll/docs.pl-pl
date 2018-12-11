@@ -2,12 +2,12 @@
 title: Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 91d126eb75c9cac2823b756010351dd692b2e24e
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a5dae1479c9be7954b9eec1eed197f358eb48e4f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453219"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239517"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 Windows Communication Foundation (WCF) uwidacznia dane inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy Instrumentacji zarządzania Windows (WMI) WCF.  
@@ -172,8 +172,7 @@ Whoami /user
  Można również przejść zdalnego wystąpień WMI programowo przy użyciu klas dostarczonych przez <xref:System.Management> przestrzeni nazw. Poniższy przykład kodu pokazuje, jak to zrobić.  
   
 ```csharp
-String wcfNamespace = String.Format(@"\\{0}\Root\ServiceModel",      
-   this.serviceMachineName);  
+String wcfNamespace = $@"\\{this.serviceMachineName}\Root\ServiceModel");
   
 ConnectionOptions connection = new ConnectionOptions();  
 connection.Authentication = AuthenticationLevel.PacketPrivacy;  

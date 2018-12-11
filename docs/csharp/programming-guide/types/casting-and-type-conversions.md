@@ -1,5 +1,6 @@
 ---
-title: Rzutowanie i konwersje typów (Przewodnik programowania w języku C#)
+title: Rzutowanie i konwersje typów - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type conversion [C#]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 6b691939d2592cc72a232a09ab2a7e950b810281
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c7200f9d99eea8364d290b54efc514217f2b2dad
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086780"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245470"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Rzutowanie i konwersje typów (Przewodnik programowania w języku C#)
 
@@ -27,13 +28,13 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  Jednak czasami może być konieczne Kopiowanie wartości do zmiennej lub metoda parametr innego typu. Na przykład, Niewykluczone, że zmienna typu Liczba całkowita, który chcesz przekazać do metody, w której parametr jest wpisana jako `double`. Można też przypisać zmiennej klasy do zmiennej typu interfejsu. Te rodzaje operacji są nazywane *konwersje typów*. W języku C# należy wykonać następujące rodzaje konwersje:  
   
--   **Niejawne konwersje**: nie specjalnej składni jest wymagany, ponieważ konwersja jest bezpiecznym typem, a żadne dane nie zostaną utracone. Przykłady obejmują konwersji z mniejszych na większych typów całkowitych i konwersje z klasy podstawowej w klasach pochodnych.  
+-   **Niejawne konwersje**: Nie specjalnej składni jest wymagana, ponieważ konwersja jest bezpiecznym typem, a żadne dane nie zostaną utracone. Przykłady obejmują konwersji z mniejszych na większych typów całkowitych i konwersje z klasy podstawowej w klasach pochodnych.  
   
--   **Konwersje jawne (rzutowania)**: jawne konwersje wymaga operatora rzutowania. Rzutowanie jest wymagane, gdy informacji może zostać utracone podczas konwersji, lub gdy Konwersja może się nie powieść z innych przyczyn.  Typowe przykłady obejmują numerycznej konwersji do typu, który ma mniejszą dokładność i mniejszy zakres i konwersja wystąpienia klasy bazowej do klasy pochodnej.  
+-   **Konwersje jawne (rzutowania)**: Konwersje jawne wymaga operatora rzutowania. Rzutowanie jest wymagane, gdy informacji może zostać utracone podczas konwersji, lub gdy Konwersja może się nie powieść z innych przyczyn.  Typowe przykłady obejmują numerycznej konwersji do typu, który ma mniejszą dokładność i mniejszy zakres i konwersja wystąpienia klasy bazowej do klasy pochodnej.  
   
--   **Konwersje zdefiniowane przez użytkownika**: zdefiniowane przez użytkownika konwersje są wykonywane przez specjalne metody, które można zdefiniować umożliwia jawne i niejawne konwersje między typami niestandardowych, które nie mają relacji — Klasa pochodna klasy bazowej. Aby uzyskać więcej informacji, zobacz [operatory konwersji](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
+-   **Konwersje zdefiniowane przez użytkownika**: Konwersje zdefiniowane przez użytkownika są wykonywane przez specjalne metody, które można zdefiniować umożliwia jawne i niejawne konwersje między typami niestandardowych, które nie mają relacji — Klasa pochodna klasy bazowej. Aby uzyskać więcej informacji, zobacz [operatory konwersji](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
   
--   **Konwersje z klas pomocniczych**: do konwersji między typami niezgodnych, takich jak liczby całkowite i <xref:System.DateTime?displayProperty=nameWithType> obiektów, lub ciągów szesnastkowych i tablice typu byte, możesz użyć <xref:System.BitConverter?displayProperty=nameWithType> klasy <xref:System.Convert?displayProperty=nameWithType> klasy i `Parse`metod typu liczbowego wbudowanych typów, takich jak <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [instrukcje: Konwertowanie tablicy typu byte na liczbę całkowitą](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [jak: konwertowanie ciągu na liczbę](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md), i [instrukcje: konwertowanie między ciągów szesnastkowych, które i typy liczbowe](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+-   **Konwersje z klas pomocniczych**: Do konwersji między typami niezgodnych, takich jak liczby całkowite i <xref:System.DateTime?displayProperty=nameWithType> obiektów, lub ciągów szesnastkowych i tablice typu byte, możesz użyć <xref:System.BitConverter?displayProperty=nameWithType> klasy <xref:System.Convert?displayProperty=nameWithType> klasy i `Parse` metod typu liczbowego wbudowanych typów, takich jak <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [jak: Konwertowanie tablicy typu byte na liczbę całkowitą](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [jak: Konwertowanie ciągu na liczbę](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md), i [jak: Konwertowanie ciągów szesnastkowych, które typy liczbowe](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Niejawne konwersje  
  Dla wbudowanych typów liczbowych można wprowadzić niejawną konwersję, gdy wartość ma być przechowywany można dopasować do zmiennej bez są obcięte lub zaokrąglony. Na przykład zmienna typu [długie](../../../csharp/language-reference/keywords/long.md) (64-bitowa liczba całkowita) można przechowywać wszystkie wartości [int](../../../csharp/language-reference/keywords/int.md) (32-bitowa liczba całkowita) można przechowywać. W poniższym przykładzie, kompilator niejawnie konwertuje wartość `num` po prawej stronie na typ `long` przed przypisaniem go do `bigNum`.  
@@ -79,7 +80,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
- C# zawiera [jest](../../../csharp/language-reference/keywords/is.md) i [jako](../../../csharp/language-reference/keywords/as.md) operatorów umożliwiających testowanie zgodności przed wykonaniem faktycznie rzutowania. Aby uzyskać więcej informacji, zobacz [porady: bezpieczne rzutowanie za pomocą dopasowywania do wzorca, jak i operatory](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
+ C# zawiera [jest](../../../csharp/language-reference/keywords/is.md) i [jako](../../../csharp/language-reference/keywords/as.md) operatorów umożliwiających testowanie zgodności przed wykonaniem faktycznie rzutowania. Aby uzyskać więcej informacji, zobacz [jak: Bezpieczne rzutowanie za pomocą dopasowywania do wzorca, jak i operatory](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -94,4 +95,4 @@ Giraffe g2 = (Giraffe) a;
 - [Operatory konwersji](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
 - [Konwersja uogólnionych typów](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
 - [Konwersja typu wyeksportowanego](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
-- [Instrukcje: konwertowanie ciągu na liczbę](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+- [Instrukcje: Konwertowanie ciągu na liczbę](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

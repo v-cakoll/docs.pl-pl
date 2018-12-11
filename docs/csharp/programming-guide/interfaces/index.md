@@ -1,16 +1,17 @@
 ---
-title: Interfejsy (Przewodnik programowania w języku C#)
+title: Interfejsy - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 33e3feb874b8ddb13788a2a3a2bb69a199335e54
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181517"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245444"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfejsy (Przewodnik programowania w języku C#)
 
@@ -61,17 +62,17 @@ Interfejs ma następujące właściwości:
 [Implementacja interfejsu jawnego](explicit-interface-implementation.md)  
  Wyjaśnia, jak utworzyć element członkowski klasy, które są specyficzne dla interfejsu.  
   
- [Instrukcje: jawne implementowanie elementów interfejsu](how-to-explicitly-implement-interface-members.md)  
+ [Instrukcje: Jawne Implementowanie elementów interfejsu](how-to-explicitly-implement-interface-members.md)  
  Zawiera przykład sposobu jawne Implementowanie elementów interfejsów.  
   
- [Instrukcje: jawne implementowanie elementów dwóch interfejsów](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Instrukcje: Jawne Implementowanie elementów dwóch interfejsów](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Zawiera przykład sposobu jawne Implementowanie elementów współpracuje z dziedziczenia.  
   
 ##  <a name="BKMK_RelatedSections"></a> Sekcje pokrewne
 
 - [Właściwości interfejsu](../classes-and-structs/interface-properties.md)  
 - [Indeksatory w interfejsach](../indexers/indexers-in-interfaces.md)  
-- [Porady: zdarzenia implementowania interfejsu](../events/how-to-implement-interface-events.md)  
+- [Instrukcje:  Zdarzenia implementowania interfejsu](../events/how-to-implement-interface-events.md)  
 - [Klasy i struktury](../classes-and-structs/index.md)  
 - [Dziedziczenie](../classes-and-structs/inheritance.md)  
 - [Metody](../classes-and-structs/methods.md)  
@@ -83,7 +84,7 @@ Interfejs ma następujące właściwości:
   
 ## <a name="featured-book-chapter"></a>polecany rozdział książki
 
-[Interfejsy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) w [Nauka języka C# 3.0: Opanuj podstawy języka C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
+[Interfejsy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) w [uczenia C# 3.0: Opanowanie podstaw C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
 
 ## <a name="see-also"></a>Zobacz też
 

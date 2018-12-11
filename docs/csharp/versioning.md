@@ -3,12 +3,12 @@ title: C# Versioning — Przewodnik po języku C#
 description: Zrozumienie sposobu działania przechowywanie wersji w języku C# i .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183233"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243494"
 ---
 # <a name="versioning-in-c"></a>Przechowywanie wersji w języku C# #
 
@@ -38,12 +38,12 @@ Nową wersję biblioteki jest zgodna z poprzednią wersją kod, który jest zale
 
 Oto kilka rzeczy, które należy uwzględnić podczas próby utrzymania wstecznej zgodności z poprzednimi wersjami biblioteki:
 
-* Metody wirtualne: po ustawieniu metodę wirtualną niewirtualną w nowej wersji oznacza, że projekty, które zastępują tej metody do zaktualizowania. To jest ogromna istotnej zmiany i jest zdecydowanie odradzane.
-* Podpisy metod: podczas aktualizowania zachowanie metody wymaga zmień jej sygnaturę tak dobrze, należy zamiast tego utworzyć przeciążenia tak, aby kod wywoływanie tej metody będą nadal działać.
+* Metody wirtualne: Po wprowadzeniu metodą wirtualną innego niż maszyny wirtualnej w nowej wersji, oznacza to, że projekty, które zastępują tej metody do zaktualizowania. To jest ogromna istotnej zmiany i jest zdecydowanie odradzane.
+* Podpisy metod: Podczas aktualizowania zachowanie metody wymaga zmień jej sygnaturę tak dobrze, zamiast tego należy utworzyć przeciążenia, tak, aby kod wywoływanie tej metody będą nadal działać.
 Zawsze możesz manipulować stary podpis metody do wywołania w podpisie metody nowy, aby implementacji pozostanie spójna.
-* [Atrybut przestarzałe](programming-guide/concepts/attributes/common-attributes.md#Obsolete): w kodzie można użyć tego atrybutu, aby określić klas lub składowych klasy, które są przestarzałe i może być usunięte w przyszłych wersjach.
+* [Atrybut przestarzałe](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Tego atrybutu w kodzie służy do określania, że klas lub składowych klasy, które są przestarzałe i może być usunięte w przyszłych wersjach.
 Dzięki temu deweloperzy przy użyciu biblioteki lepiej są przygotowywane na temat przełomowych zmian.
-* Argumenty opcjonalne. metoda: Po wprowadzić obowiązkowe argumenty metody wcześniej opcjonalne lub zmienić ich wartości domyślne, a następnie cały kod, który nie dostarcza tych argumentów należy do zaktualizowania.
+* Argumenty opcjonalne metody: Jeśli wprowadzić obowiązkowe argumenty metody wcześniej opcjonalne lub zmienić ich wartości domyślne, a następnie cały kod, który dostarcza te argumenty będą musiały zostać zaktualizowane.
 > [!NOTE]
 > Tworzenie obowiązkowe Argumenty opcjonalne powinny mieć bardzo niewielkim stopniu wpływa, zwłaszcza, jeśli go nie zmienia zachowanie metody.
 
@@ -62,7 +62,7 @@ Szczęście dla Ciebie języka C# i ekosystemu .NET jest powiązana z funkcji i 
 
 ### <a name="assembly-binding-redirection"></a>Przekierowanie powiązań zestawów
 
-Możesz użyć `app.config` plik, aby zaktualizować wersję biblioteki używany przez aplikację. Dodając tak zwany [ *przekierowanie powiązania* ](../framework/configure-apps/redirect-assembly-versions.md) usługi można użyć nowej wersji biblioteki, bez konieczności ponownego kompilowania aplikacji. W poniższym przykładzie pokazano, jak należy zaktualizować aplikacji `app.config` plik do użycia `1.0.1` wersję poprawki `ReferencedLibrary` zamiast `1.0.0` pierwotnie został skompilowany przy użyciu wersji.
+Możesz użyć `app.config` plik, aby zaktualizować wersję biblioteki używany przez aplikację. Dodając tak zwany [ *przekierowanie powiązania* ](../framework/configure-apps/redirect-assembly-versions.md) nowej wersji biblioteki można używać bez konieczności ponownego kompilowania aplikacji. W poniższym przykładzie pokazano, jak należy zaktualizować aplikacji `app.config` plik do użycia `1.0.1` wersję poprawki `ReferencedLibrary` zamiast `1.0.0` pierwotnie został skompilowany przy użyciu wersji.
 
 ```xml
 <dependentAssembly>

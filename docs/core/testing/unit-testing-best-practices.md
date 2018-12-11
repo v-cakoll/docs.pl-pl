@@ -1,24 +1,24 @@
 ---
 title: Najlepsze rozwiązania dotyczące pisania testów jednostkowych
-description: Poznaj najlepsze rozwiązania dotyczące pisania testów jednostkowych, które Dbaj o jakość kodu i odporności na błędy
+description: Poznaj najlepsze rozwiązania dotyczące pisania testów jednostkowych, które Dbaj o jakość kodu i odporności dla projektów .NET Core i .NET Standard.
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 60baa533a8f4dc2fb715b813018f8f84000777d7
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169628"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240726"
 ---
-# <a name="unit-testing-best-practices"></a>Najlepsze rozwiązania testy jednostkowe
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Najlepsze rozwiązania przy użyciu platformy .NET Core i .NET Standard testy jednostkowe
 
-Przez [John Reese](http://reesespieces.io) ze specjalnymi dzięki [Roy Osherove](http://osherove.com/)
-
-Istnieje wiele korzyści, do pisania testów jednostkowych; pomagają przy użyciu regresji, zapewniają dostęp do dokumentacji i ułatwienia dobrego projektowania. Jednak testy jednostkowe trudne do odczytu i kruchy można spustoszyć bazy kodu.
+Istnieje wiele korzyści, do pisania testów jednostkowych; pomagają przy użyciu regresji, zapewniają dostęp do dokumentacji i ułatwienia dobrego projektowania. Jednak testy jednostkowe trudne do odczytu i kruchy można spustoszyć bazy kodu. W tym artykule opisano najlepsze rozwiązania dotyczące projektowania testów jednostkowych dla projektów .NET Core i .NET Standard.
 
 W tym przewodniku dowiesz się najważniejsze wskazówki podczas pisania testów jednostkowych, aby zachować testów, odporne i łatwe do zrozumienia.
+
+Przez [John Reese](http://reesespieces.io) ze specjalnymi dzięki [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>Dlaczego test jednostkowy?
 

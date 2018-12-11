@@ -1,5 +1,6 @@
 ---
-title: Witaj Świecie — pierwszy program (Przewodnik programowania w języku C#)
+title: Witaj świecie — Pierwszy Program - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.program
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 40c869d267dcabf4bd209b2ee86085f899a93231
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593052"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236391"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Witaj Świecie — pierwszy program (Przewodnik programowania w języku C#)
 Poniższa procedura tworzy wersję języka C# tradycyjny "Hello World!" program. Ten program wyświetla ciąg `Hello World!`  
@@ -78,7 +79,7 @@ Poniższa procedura tworzy wersję języka C# tradycyjny "Hello World!" program.
   
  Wartość parametru `Main` metody `args`, jest `string` tablica zawierająca argumenty wiersza polecenia używane do wywołania programu. W przeciwieństwie do języka C++, tablica nie zawiera nazwę pliku wykonywalnego (exe).  
   
- Aby uzyskać więcej informacji o tym, jak używać argumentów wiersza polecenia, zobacz przykłady w [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md) i [jak: utworzyć i używać zestawów przy użyciu wiersza polecenia](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Aby uzyskać więcej informacji o tym, jak używać argumentów wiersza polecenia, zobacz przykłady w [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md) i [jak: Tworzenie i używanie zestawów przy użyciu wiersza polecenia](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
  Wywołanie <xref:System.Console.ReadKey%2A> na końcu `Main` metoda uniemożliwia zamknięcie, zanim użytkownik zdąży odczytać dane wyjściowe, gdy uruchamiasz program w trybie debugowania, naciskając klawisz F5 okna konsoli.  
   
@@ -110,7 +111,7 @@ Poniższa procedura tworzy wersję języka C# tradycyjny "Hello World!" program.
   
     -   Włącz kompilację wiersza polecenia od standardowego okna wiersza polecenia.  
   
-         Zobacz [porady: Ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
+         Zobacz [jak: Ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
   
 3.  W oknie wiersza polecenia przejdź do folderu, który zawiera Twoje `Hello.cs` pliku.  
   

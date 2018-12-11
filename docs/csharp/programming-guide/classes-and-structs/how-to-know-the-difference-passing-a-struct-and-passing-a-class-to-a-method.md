@@ -1,19 +1,20 @@
 ---
-title: 'Porady: różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Różnica między przekazywaniem struktury a przekazywaniem klasę odwołanie do metody - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], passing as method parameter
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 670dfad3b9fc22709a0ad7f8048a0468bce54a2e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c5963f45ee233f4413c4281a063c9c3d2a4c2a93
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594727"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245457"
 ---
-# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Porady: różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody (Przewodnik programowania w języku C#)
+# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Instrukcje: Różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody (C# Programming Guide)
 W poniższym przykładzie pokazano, jak przekazywanie [struktury](../../../csharp/language-reference/keywords/struct.md) do metody różni się od przekazywanie [klasy](../../../csharp/language-reference/keywords/class.md) wystąpienia do metody. W tym przykładzie oba argumenty (wystąpienia struktury i klasy) są przekazywane przez wartość, a obie metody Zmień wartość pola jednego argumentu. Jednak wyniki z dwóch metod nie są takie same ponieważ przekazywana jest, jeśli przekazujesz struktury różni się od co to jest przekazywana, jeśli przekazujesz wystąpienia klasy.  
   
  Ponieważ struktura jest [typu wartości](../../../csharp/language-reference/keywords/value-types.md), gdy użytkownik [przekazać wartość do struktury](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md) do metody, metody odbiera i przetwarza kopię argumentu struktury. Metoda nie ma dostępu do oryginalnej struktury w przypadku wywoływania metody i w związku z tym nie można go zmienić w dowolny sposób. Metoda można zmienić tylko kopii.  

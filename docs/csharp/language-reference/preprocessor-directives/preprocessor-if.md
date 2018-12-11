@@ -1,17 +1,18 @@
 ---
-title: '#Jeśli dyrektywa preprocesora (odwołanie w C#)'
+title: '#Jeśli dyrektywa preprocesora - C# odwołania'
+ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df1b26b0e06d4fff81627ec633ce97f9d6ca036f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510235"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239634"
 ---
 # <a name="if-c-reference"></a>#if (odwołanie w C#)
 
@@ -91,4 +92,4 @@ public class MyClass
 - [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [Dyrektywy preprocesora C#](index.md)  
-- [Porady: kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).
+- [Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).

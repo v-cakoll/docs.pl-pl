@@ -1,5 +1,6 @@
 ---
-title: Komentarze dokumentacji XML (Przewodnik programowania w języku C#)
+title: Komentarze dokumentacji XML — C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.xml
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: ab4f8fae748455f96ca5ea0255658cc76dd14f97
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a2957150ace7dbf342047e88451e1e76e097f941
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046685"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235569"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>Komentarze dokumentacji XML (Przewodnik programowania w języku C#)
 W języku Visual C# można tworzyć dokumentację kodu, umieszczając elementy XML w specjalnych polach komentarzy (wskazywanych przez potrójne ukośniki) w kodzie źródłowym bezpośrednio przed blokiem kodu, do którego odwołują się komentarze, na przykład:  
@@ -43,7 +44,7 @@ public class MyClass {}
   
 -   [Ograniczniki tagów dokumentacji](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
   
--   [Instrukcje: użycie funkcji dokumentacji XML](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
+-   [Instrukcje: Użycie funkcji dokumentacji XML](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Aby uzyskać więcej informacji, zobacz:  

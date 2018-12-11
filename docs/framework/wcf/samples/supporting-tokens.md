@@ -2,12 +2,12 @@
 title: Obsługa tokenów
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: b5834a0ae8fa987f243617fdf291223725ed5f6d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b1fda39903c39811187fe3701d2a4c143b637544
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261605"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237704"
 ---
 # <a name="supporting-tokens"></a>Obsługa tokenów
 Przykładowe tokenów pomocniczych pokazuje, jak dodać dodatkowe tokeny na komunikat, który korzysta z protokołu WS-Security. W przykładzie dodano tokenu zabezpieczeń binarnych X.509, oprócz nazwy użytkownika tokenu zabezpieczającego. Token jest przekazywany w nagłówku wiadomości WS-Security od klienta do usługi i część komunikatu jest podpisany przy użyciu klucza prywatnego skojarzonego z tokenem zabezpieczającym X.509 potwierdzenie posiadania certyfikatu X.509 do odbiorcy. Jest to przydatne w przypadku, gdy istnieje wymóg posiadania wielu oświadczeń skojarzonych z wiadomością uwierzytelniania lub autoryzacji nadawcy. Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".
@@ -27,7 +27,7 @@ Przykładowe tokenów pomocniczych pokazuje, jak dodać dodatkowe tokeny na komu
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>Klient uwierzytelnia się za pomocą Token nazwy użytkownika i obsłudze Token zabezpieczający X.509
  Usługa udostępnia jeden punkt końcowy do komunikacji utworzonego programowo przy użyciu `BindingHelper` i `EchoServiceHost` klasy. Punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane z niestandardowego powiązania za pomocą `SymmetricSecurityBindingElement` i `HttpTransportBindingElement`. W tym przykładzie ustawia `SymmetricSecurityBindingElement` do użycia certyfikat X.509 usługi ochrony klucza symetrycznego podczas przesyłania i przekazać `UserNameToken` wraz z towarzyszące `X509SecurityToken` w nagłówku wiadomości WS-Security. Klucz symetryczny jest używany do szyfrowania treści komunikatu i token zabezpieczający nazwy użytkownika. Token pomocniczy jest przekazywany jako dodatkowy binarnego tokenu zabezpieczającego w nagłówku wiadomości WS-Security. Autentyczności token pomocniczy jest okazały się w, rejestrując część wiadomości przy użyciu klucza prywatnego skojarzonego z pomocniczych zabezpieczeń X.509 tokenu.
 
-```
+```csharp
 public static Binding CreateMultiFactorAuthenticationBinding()
 {
     HttpTransportBindingElement httpTransport = new HttpTransportBindingElement();
@@ -55,7 +55,7 @@ public static Binding CreateMultiFactorAuthenticationBinding()
 
  Zachowanie Określa poświadczenia usługi, które mają być używane do uwierzytelniania klienta, a także informacje o certyfikacie X.509. W przykładzie użyto `CN=localhost` jako nazwę podmiotu w certyfikacie X.509.
 
-```
+```csharp
 override protected void InitializeRuntime()
 {
     // Extract the ServiceCredentials behavior or create one.
@@ -88,7 +88,7 @@ This setting is less secure than the default, ChainTrust. The security implicati
 
  Kod obsługi:
 
-```
+```csharp
 [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
 public class EchoService : IEchoService
 {
@@ -100,8 +100,7 @@ public class EchoService : IEchoService
             OperationContext.Current.ServiceSecurityContext,
             out userName,
             out certificateSubjectName);
-            return String.Format("Hello {0}, {1}",
-                    userName, certificateSubjectName);
+            return $"Hello {userName}, {certificateSubjectName}";
     }
 
     public void Dispose()
@@ -174,7 +173,7 @@ public class EchoService : IEchoService
 
  Punkt końcowy klienta jest skonfigurowany w sposób podobny do punktu końcowego usługi. Klient używa tych samych `BindingHelper` klasy, aby utworzyć powiązanie. Pozostała konfiguracja zostanie znajduje się w `Client` klasy. Klient ustawia informacje dotyczące tokenu zabezpieczeń nazwę użytkownika, pomocnicze token zabezpieczający X.509 i informacje o certyfikacie X.509 w kodu konfiguracji do kolekcji zachowań punktu końcowego klienta.
 
-```
+```csharp
  static void Main()
  {
      // Create the custom binding and an endpoint address for
@@ -285,7 +284,7 @@ public class EchoService : IEchoService
 ## <a name="displaying-callers-information"></a>Wyświetlanie informacji o wywołującym
  Aby wyświetlić informacje dotyczące obiektu wywołującego, można użyć `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` jak pokazano w poniższym kodzie. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Zawiera autoryzacji oświadczenia skojarzone z bieżącego obiektu wywołującego. Te oświadczenia są dostarczane automatycznie przez Windows Communication Foundation (WCF) dla każdego tokenu otrzymane w wiadomości.
 
-```
+```csharp
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
                          claimType, out TClaimResource resourceValue)
     where TClaimResource : class
@@ -465,6 +464,6 @@ iisreset
 -   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
 > [!NOTE]
->  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykłady WCF, które używają certyfikatów na maszynach, pamiętaj wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+>  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykłady WCF, które używają certyfikatów na maszynach, pamiętaj wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="see-also"></a>Zobacz też

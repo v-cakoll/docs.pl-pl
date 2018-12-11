@@ -1,5 +1,6 @@
 ---
-title: '&lt;zobacz&gt; (C# Programming Guide)'
+title: '&lt;zobacz&gt; - C# Programming Guide'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <see>
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: c37ad869b3eb904377cd4470a85cd557f6560290
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1e799c975fe21dd2dd0354a9d658a271ded5fc2c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749677"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235694"
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;zobacz&gt; (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  

@@ -1,5 +1,6 @@
 ---
-title: '&lt;obejmują&gt; (C# Programming Guide)'
+title: '&lt;obejmują&gt; - C# Programming Guide'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 854c8b61fa8164bccfc9451f2f163dab4a56388f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 05c671f029e9597db05fe2104424545d0ee2b98f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035191"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239419"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;obejmują&gt; (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
@@ -66,7 +67,7 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>Dane wyjściowe programu  
- Następujących danych wyjściowych jest generowany, gdy kompilujesz z klas testowych i Test2 za pomocą następującego polecenia: `/doc:DocFileName.xml.` w programie Visual Studio, określasz opcję Komentarze dokumentacji XML w okienku kompilacji w Projektancie projektu. Gdy kompilator języka C# widzi \<obejmują > tag, przeszukiwane są przeznaczone do komentarzy dokumentacji w xml_include_tag.doc zamiast bieżącego pliku źródłowego. Kompilator generuje następnie DocFileName.xml i to jest plik, który jest używany przez narzędzia, dokumentację, takich jak [Sandcastle](https://github.com/EWSoftware/SHFB) do produkcji dokumentację.  
+ Następujące dane wyjściowe są generowane podczas kompilowania z klas testowych i Test2 za pomocą następującego polecenia: `/doc:DocFileName.xml.` W programie Visual Studio określasz XML dokumentacji opcja komentarze w okienku kompilacji w Projektancie projektu. Gdy C# widzi kompilator \<obejmują > tag, przeszukiwane są przeznaczone do komentarzy dokumentacji w xml_include_tag.doc zamiast bieżącego pliku źródłowego. Kompilator generuje następnie DocFileName.xml i to jest plik, który jest używany przez narzędzia, dokumentację, takich jak [Sandcastle](https://github.com/EWSoftware/SHFB) do produkcji dokumentację.  
   
 ```xml  
 <?xml version="1.0"?>   

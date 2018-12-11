@@ -1,17 +1,18 @@
 ---
-title: Using static, dyrektywa (odwołanie w C#)
+title: Using static, dyrektywa - C# odwołania
+ms.custom: seodec18
 ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c17f74fc16e8c9774086c5270a66e9e9d7cc425b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506675"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237782"
 ---
 # <a name="using-static-directive-c-reference"></a>Using static, dyrektywa (odwołanie w C#)
 
@@ -21,7 +22,7 @@ ms.locfileid: "43506675"
 using static <fully-qualified-type-name>;
 ```
 
-gdzie *w pełni kwalifikowana nazwa--typ* jest nazwa typu, którego statycznych elementów członkowskich i typy zagnieżdżone może znajdować się bez określania nazwy typu. Jeśli nie podasz w pełni kwalifikowana nazwa typu (nazwa przestrzeni nazw pełnej wraz z nazwą typu), C# generuje błąd kompilatora [CS0246](../compiler-messages/cs0246.md): "nie można odnaleźć nazwy typu lub przestrzeni nazw"/ przestrzeń nazw typu"(Brak using — dyrektywa lub odwołanie do zestawu?) ".
+gdzie *w pełni kwalifikowana nazwa--typ* jest nazwa typu, którego statycznych elementów członkowskich i typy zagnieżdżone może znajdować się bez określania nazwy typu. Jeśli nie podasz w pełni kwalifikowana nazwa typu (pełna nazwa przestrzeni nazw wraz z nazwą typu), C# generuje błąd kompilatora [CS0246](../compiler-messages/cs0246.md): "Nie można odnaleźć nazwy typu lub przestrzeni nazw"/ przestrzeń nazw typu"(Brak przy użyciu dyrektywy lub odwołania do zestawu?)".
 
 `using static` Dyrektywa odnosi się do dowolnego typu, który ma statyczne elementy członkowskie (lub zagnieżdżone typy), nawet wtedy, gdy w nim również elementy członkowskie wystąpień. Jednak składowych wystąpienia może być wywoływany przez wystąpienie typu.
 
@@ -37,7 +38,7 @@ Dzięki wyeliminowaniu konieczności, aby jawnie odwołać <xref:System.Math> kl
 
 [!code-csharp[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
 
-`using static` Importuje tylko dostępne statyczne elementy członkowskie i zagnieżdżone typy zadeklarowane w określonym typie.  Dziedziczone elementy członkowskie nie są importowane.  Można importować z dowolnego typu o nazwie z za pomocą dyrektywy statyczne, w tym moduły języka Visual Basic.  Jeśli funkcji najwyższego poziomu F # są wyświetlane w metadanych jako statyczne elementy członkowskie typu nazwanego, którego nazwa jest prawidłowym identyfikatorem języka C#, F # funkcje mogą zostać zaimportowane.  
+`using static` Importuje tylko dostępne statyczne elementy członkowskie i zagnieżdżone typy zadeklarowane w określonym typie.  Dziedziczone elementy członkowskie nie są importowane.  Można importować z dowolnego typu o nazwie z za pomocą dyrektywy statyczne, w tym moduły języka Visual Basic.  Jeśli F# funkcji najwyższego poziomu są wyświetlane w metadanych jako statyczne elementy członkowskie typu nazwanego, którego nazwa jest prawidłowym C# identyfikator, a następnie F# funkcje mogą być importowane.  
   
  `using static` sprawia, że metody rozszerzenia zadeklarowana w określonego typu dostępne do przeszukiwania metody rozszerzenia.  Nazwy metody rozszerzenia nie są importowane w zakresie niekwalifikowanej odwołania w kodzie.  
   

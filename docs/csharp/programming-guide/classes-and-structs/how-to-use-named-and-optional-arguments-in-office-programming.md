@@ -1,19 +1,20 @@
 ---
-title: 'Porady: użycie argumentów nazwanych i opcjonalnych w programowaniu Office (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office — C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: f86509b7257f25e8faaadfc107ad70ca794aeee0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 20228886cabd47b976506509a29f6cfd50137e5f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190978"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243806"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Porady: użycie argumentów nazwanych i opcjonalnych w programowaniu Office (Przewodnik programowania w języku C#)
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Instrukcje: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office (C# Programming Guide)
 Nazwy argumentów i argumenty opcjonalne, wprowadzona w [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], zwiększenia wygody, elastyczność i czytelności w programowaniu w języku C#. Ponadto funkcje te znacznie ułatwiają dostęp do interfejsów COM, takich jak interfejsów API automatyzacji programu Microsoft Office.  
   
  W poniższym przykładzie metoda [ConvertToTable](<xref:Microsoft.Office.Interop.Word.Range.ConvertToTable%2A>) ma szesnastu parametrów, które reprezentują cech tabeli, takie jak liczba kolumn i wierszy, formatowanie, obramowania, czcionki i kolory. Wszystkie parametry szesnastu są opcjonalne, ponieważ w większości przypadków nie chcesz określać wartości określonej dla wszystkich z nich. Jednak bez argumenty nazwane i opcjonalne, wartość lub wartość symbolu zastępczego musi zostać dostarczona dla każdego parametru. Argumenty nazwane i opcjonalne należy określić tylko wartości parametrów, które są wymagane dla projektu.  

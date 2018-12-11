@@ -1,15 +1,16 @@
 ---
-title: FALSE — literał (odwołanie w C#)
+title: FALSE — literał - C# odwołania
+ms.custom: seodec18
 ms.date: 12/03/2018
 helpviewer_keywords:
 - false literal keyword [C#]
 ms.assetid: fcc1c1a5-0e42-4226-a128-81492a9bf719
-ms.openlocfilehash: 62329e40abb709b047d60fc2be27ef0d2c92d8ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f47c9cab7b0b3813f59faa8be0110e0c6318f36e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147901"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241210"
 ---
 # <a name="false-literal-c-reference"></a>FALSE — literał (odwołanie w C#)
 
@@ -22,6 +23,6 @@ Reprezentuje [bool](bool.md) wartość `false`:
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [FALSE — operator](false-operator.md)
 - [true](true.md)
+- [Operatory true i false](true-false-operators.md)
 - [?: operator](../operators/conditional-operator.md)

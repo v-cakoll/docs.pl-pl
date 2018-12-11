@@ -1,5 +1,6 @@
 ---
-title: '?: — Operator (odwołanie w C#)'
+title: '?: Operator - C# odwołania'
+ms.custom: seodec18
 ms.date: 11/20/2018
 f1_keywords:
 - ?:_CSharpKeyword
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: cc9bde1d60a3272e2f24cfc05761171a31029c75
-ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
+ms.openlocfilehash: ca61ee323d98ece1236d9072e14d02385fbdf9f8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "50980625"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241791"
 ---
-# <a name="-operator-c-reference"></a>?: — Operator (odwołanie w C#)
+# <a name="-operator-c-reference"></a>?: Operator (odwołanie w C#)
 
 Operator warunkowy `?:`, powszechnie znane jako operator warunkowy trójargumentowy ocenia wyrażenie logiczne i zwraca wynik obliczania wartości jednego z dwóch wyrażeń w zależności od tego, czy wyrażenie logiczne daje w wyniku `true` lub `false`. Począwszy od C# 7.2, [wyrażenie warunkowe ref](#conditional-ref-expression) zwraca odwołanie do wyniku jednego z dwóch wyrażeń.
 

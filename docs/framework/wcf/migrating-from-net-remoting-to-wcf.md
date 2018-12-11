@@ -2,12 +2,12 @@
 title: Migrowanie z programu .NET Remoting do programu WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200101"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245681"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrowanie z programu .NET Remoting do programu WCF
 W tym artykule opisano sposób migrowania aplikacji korzystającej z wywołaniem funkcji zdalnych .NET do użycia usług Windows Communication Foundation (WCF). Jego porównuje podobne pojęcia między tymi produktami, a następnie w tym artykule opisano sposób wykonywania kilku typowych scenariuszy komunikacji zdalnej programu WCF.  
@@ -89,8 +89,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
     serviceHost.AddServiceEndpoint(typeof(IWCFServer), binding, baseAddress);  
     serviceHost.Open();  
   
-    Console.WriteLine(String.Format("The WCF server is ready at {0}.",  
-                                    baseAddress));  
+    Console.WriteLine($"The WCF server is ready at {baseAddress}.");
     Console.WriteLine("Press <ENTER> to terminate service...");  
     Console.WriteLine();  
     Console.ReadLine();  
@@ -102,7 +101,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  Istnieje wiele sposobów konfigurowania oraz obsługi usług WCF. Jest to tylko jeden przykład, znane jako "może być samodzielnie hostowane". Więcej informacji znajduje się w następujących tematach:  
   
--   [Instrukcje: definiowanie kontraktu usługi](how-to-define-a-wcf-service-contract.md)  
+-   [Instrukcje: Definiowanie kontraktu usługi](how-to-define-a-wcf-service-contract.md)  
   
 -   [Konfigurowanie usług za pomocą plików konfiguracji](configuring-services-using-configuration-files.md)  
   
@@ -121,8 +120,7 @@ RemotingServer server = (RemotingServer)Activator.GetObject(
                             "tcp://localhost:8080/RemotingServer");  
   
 RemotingCustomer customer = server.GetCustomer(42);  
-Console.WriteLine(String.Format("Customer {0} {1} received.",   
-                                 customer.FirstName, customer.LastName));  
+Console.WriteLine($"Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
  Wystąpienie RemotingServer zwróciło Activator.GetObject() jest nazywany "przezroczystym serwerem proxy." Implementuje publicznego interfejsu API dla typu RemotingServer na komputerze klienckim, ale wszystkie metody wywołania obiektu serwera uruchomionego w inny proces lub komputera.  
@@ -139,15 +137,14 @@ ChannelFactory<IWCFServer> channelFactory =
 IWCFServer server = channelFactory.CreateChannel();  
   
 Customer customer = server.GetCustomer(42);  
-Console.WriteLine(String.Format("  Customer {0} {1} received.",  
-                    customer.FirstName, customer.LastName));  
+Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
  Ten przykład przedstawia, programowanie na poziomie kanału, ponieważ jest najbardziej podobne do komunikacji zdalnej. Dostępne jest również **Dodaj odwołanie do usługi** podejście w programie Visual Studio generuje kod, aby uprościć programowanie klienta. Więcej informacji znajduje się w następujących tematach:  
   
 -   [Programowanie na poziomie kanału klienta](./extending/client-channel-level-programming.md)  
   
--   [Porady: Dodawanie, aktualizowanie lub usuwanie odwołań usługi](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+-   [Instrukcje: Dodawanie, aktualizowanie lub usuwanie odwołań usługi](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>Sposób użycia serializacji  
  Wywołaniem funkcji zdalnych .NET i usługi WCF umożliwia wysyłanie obiektów między klientem i serwerem serializacji, ale różnią się w tych ważnymi względami:  
@@ -269,8 +266,7 @@ try
 }  
 catch (FaultException<CustomerServiceFault> fault)  
 {  
-    Console.WriteLine(String.Format("Fault received: {0}",  
-    fault.Detail.ErrorMessage));  
+    Console.WriteLine($"Fault received: {fault.Detail.ErrorMessage}");
 }  
 ```  
   
@@ -307,7 +303,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **Utworzyć kontrakt błędu (opcjonalnie).** Tworzenie typów, które będą wymieniane między serwerem a klientem, gdy wystąpią błędy. Należy oznaczyć te typy z [DataContract] i [DataMember] były możliwe do serializacji. Dla wszystkich operacji usługi, które zostały oznaczone za pomocą elementu [OperationContract] również oznacz je za pomocą [FaultContract] do sygnalizowania błędów, które zwracają może.  
   
--   **Skonfiguruj i obsługi usługi.** Po utworzeniu kontraktu usługi, następnym krokiem jest skonfigurować powiązanie, aby udostępnić usługę w punkcie końcowym. Aby uzyskać więcej informacji, zobacz [punkty końcowe: adresy, powiązania i kontrakty](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
+-   **Skonfiguruj i obsługi usługi.** Po utworzeniu kontraktu usługi, następnym krokiem jest skonfigurować powiązanie, aby udostępnić usługę w punkcie końcowym. Aby uzyskać więcej informacji, zobacz [punktów końcowych: Adresy, powiązania i kontrakty](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
   
  Po migracji aplikacji usług zdalnych do programu WCF jest nadal ważne usunąć zależności między wywołaniem funkcji zdalnych .NET. Daje to gwarancję, że wszystkie luki w zabezpieczeniach z wywołaniem funkcji zdalnych są usuwane z aplikacji. Kroki te obejmują następujące czynności:  
   
@@ -442,7 +438,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     Aby uzyskać więcej informacji o korzystaniu z **Dodaj odwołanie do usługi**, zobacz [porady: Dodawanie, aktualizowanie lub usuwanie odwołań usługi](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).  
+     Aby uzyskać więcej informacji o korzystaniu z **Dodaj odwołanie do usługi**, zobacz [jak: Dodawanie, aktualizowanie lub usuwanie odwołań usługi](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).  
   
 7.  Teraz możemy wywołać usługi WCF z klienta. Możemy to zrobić, tworząc fabryki kanałów dla tej usługi, o kanału i bezpośrednio wywołać metodę, którą chcemy, aby w tym kanale. Możemy to zrobić, ponieważ implementuje interfejs usługi w kanale i obsługuje podstawowej logiki żądanie/nietypizowana odpowiedź dla nas. Wartość zwrócona przez wywołanie tej metody jest zdeserializowany kopię odpowiedź serwera.  
   
@@ -451,8 +447,7 @@ public class RemotingServer : MarshalByRefObject
        new ChannelFactory<ICustomerService>("customerservice");  
    ICustomerService service = factory.CreateChannel();  
    Customer customer = service.GetCustomer(42);  
-   Console.WriteLine(String.Format("  Customer {0} {1} received.",  
-           customer.FirstName, customer.LastName));  
+   Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
    ```  
   
  Obiekty zwrócone przez architekturę WCF z serwera do klienta są zawsze przez wartość. Obiekty są zdeserializowany kopie danych wysłanych przez serwer. Klient może wywoływać metody te kopiami lokalnymi bez zagrożenia wywoływania kod serwera za pomocą wywołania zwrotne.  
@@ -657,7 +652,7 @@ public class RemotingServer : MarshalByRefObject
    CustomerId = 43,   
    AccountId = 99};  
    bool success = service.UpdateCustomer(customer);  
-   Console.WriteLine(String.Format("  Server returned {0}.", success));  
+   Console.WriteLine($"  Server returned {success}.");
    ```  
   
      Obiekt klienta będą serializowane i wysyłane do serwera, gdzie jest ona przeprowadzona deserializacja nową kopię tego obiektu.  

@@ -1,5 +1,6 @@
 ---
-title: Klasy abstrakcyjne i zapieczętowane oraz członkowie klas (Przewodnik programowania w języku C#)
+title: Klasy abstrakcyjne i zapieczętowane oraz członkowie klas - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract classes [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 0e80357a51bde270d5ed012f16f7b2e821f084c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8c0b8e9814bf692e486624dd8a4a99d98337bca9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517345"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235858"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Klasy abstrakcyjne i zapieczętowane oraz członkowie klas (Przewodnik programowania w języku C#)
 [Abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md) — słowo kluczowe pozwala na tworzenie klas i [klasy](../../../csharp/language-reference/keywords/class.md) elementów członkowskich, które są niekompletne i muszą być zaimplementowane w klasie pochodnej.  
@@ -54,4 +55,4 @@ ms.locfileid: "43517345"
 - [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
 - [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
 - [Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)  
-- [Instrukcje: definiowanie właściwości abstrakcyjnych](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+- [Instrukcje: Definiowanie właściwości abstrakcyjnych](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
